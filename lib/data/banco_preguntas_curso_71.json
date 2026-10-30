@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el decreto supremo peruano que establece específicamente el reglamento de seguridad y salud ocupacional en el sector minero?",
+    "opciones": [
+      {
+        "text": "Decreto Supremo 024-2016-EM",
+        "isCorrect": true,
+        "rationale": "Esta norma constituye el reglamento técnico nacional vigente que regula de forma específica la seguridad y salud ocupacional en las actividades mineras."
+      },
+      {
+        "text": "Decreto Supremo 040-2014-EM",
+        "isCorrect": false,
+        "rationale": "Esta normativa se enfoca en el reglamento de protección y gestión ambiental para las actividades mineras, no en la seguridad ocupacional."
+      },
+      {
+        "text": "Decreto Supremo 055-2010-EM",
+        "isCorrect": false,
+        "rationale": "Este decreto reglamenta específicamente el uso, almacenamiento y transporte de explosivos de uso civil."
+      },
+      {
+        "text": "Decreto Supremo 021-2008-MTC",
+        "isCorrect": false,
+        "rationale": "Esta disposición pertenece al Ministerio de Transportes y Comunicaciones y regula el transporte terrestre de materiales peligrosos."
+      },
+      {
+        "text": "Ley 28271",
+        "isCorrect": false,
+        "rationale": "Esta ley regula la identificación y gestión de los pasivos ambientales de la actividad minera."
+      }
+    ],
+    "hint": "Considere la normativa emitida por el Ministerio de Energía y Minas en el año 2016.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ley peruana regula la identificación, actualización y gestión de los pasivos ambientales de la actividad minera?",
+    "opciones": [
+      {
+        "text": "Ley 28271",
+        "isCorrect": true,
+        "rationale": "Rige el marco legal peruano para regular, inventariar y normar el cierre de los pasivos ambientales originados por la actividad minera."
+      },
+      {
+        "text": "Ley 29783",
+        "isCorrect": false,
+        "rationale": "Esta es la Ley General de Seguridad y Salud en el Trabajo aplicable a todos los sectores económicos del Perú, no específica de pasivos mineros."
+      },
+      {
+        "text": "Decreto Supremo 024-2016-EM",
+        "isCorrect": false,
+        "rationale": "Corresponde al reglamento de seguridad y salud ocupacional minera, más no a la ley de pasivos ambientales."
+      },
+      {
+        "text": "ISO 45001",
+        "isCorrect": false,
+        "rationale": "Es un estándar internacional voluntario de gestión de seguridad y salud, no una ley estatal sobre pasivos ambientales."
+      },
+      {
+        "text": "Decreto Supremo 021-2008-MTC",
+        "isCorrect": false,
+        "rationale": "Es la regulación nacional aplicable al transporte de materiales y residuos peligrosos por carretera."
+      }
+    ],
+    "hint": "Esta norma establece el marco legal para el cierre de minas y la actualización periódica del inventario de pasivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes normas internacionales forman parte habitual de los sistemas de gestión integrados en las empresas de logística minera?",
+    "opciones": [
+      {
+        "text": "ISO 45001 para la gestión de seguridad y salud en el trabajo.",
+        "isCorrect": true,
+        "rationale": "Aporta el estándar internacional para identificar y mitigar los riesgos laborales en las operaciones e inventarios mineros."
+      },
+      {
+        "text": "ISO 14001 para la gestión ambiental.",
+        "isCorrect": true,
+        "rationale": "Proporciona los requisitos para establecer un sistema de control ambiental efectivo en el manejo de materiales e insumos."
+      },
+      {
+        "text": "ISO 9001 para la gestión de calidad.",
+        "isCorrect": true,
+        "rationale": "Estandariza la calidad en los procesos logísticos y operativos para garantizar consistencia en los servicios."
+      },
+      {
+        "text": "ISO 31000 aplicada exclusivamente al cálculo de tributos mineros.",
+        "isCorrect": false,
+        "rationale": "La norma ISO 31000 aborda la gestión integral de riesgos organizacionales y no la liquidación de impuestos estables."
+      },
+      {
+        "text": "ISO 27001 como norma obligatoria de construcción de carreteras.",
+        "isCorrect": false,
+        "rationale": "La norma ISO 27001 se enfoca en la seguridad de la información y sistemas informáticos, no en obras de infraestructura vial."
+      }
+    ],
+    "hint": "Piense en las tres normas trinorma más conocidas para calidad, ambiente y seguridad ocupacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una medida de control recomendada para almacenar insumos químicos críticos como el ácido sulfúrico de forma segura?",
+    "opciones": [
+      {
+        "text": "Segregar las sustancias según su nivel de incompatibilidad y mantener sistemas de ventilación continua en áreas restringidas.",
+        "isCorrect": true,
+        "rationale": "Evita reacciones químicas peligrosas al separar productos incompatibles y disipa vapores mediante la ventilación y el control de acceso."
+      },
+      {
+        "text": "Mezclar combustibles y ácidos en un mismo depósito cerrado para optimizar el espacio físico.",
+        "isCorrect": false,
+        "rationale": "Juntar materiales combustibles y reactivos ácidos incrementa exponencialmente el riesgo de corrosión acelerada e incendios."
+      },
+      {
+        "text": "Eliminar los diques de contención y bandejas de retención de derrames para agilizar las maniobras.",
+        "isCorrect": false,
+        "rationale": "Sin estructuras de contención, cualquier fuga o derrame químico contaminaría directamente el suelo y los acuíferos."
+      },
+      {
+        "text": "Aumentar la humedad relativa y la temperatura ambiental en el depósito de gases tóxicos.",
+        "isCorrect": false,
+        "rationale": "El calor y la humedad excesivos deterioran los envases de contención y pueden aumentar la presión interna de los recipientes."
+      },
+      {
+        "text": "Disminuir las inspecciones de mantenimiento preventivo a una frecuencia quinquenal.",
+        "isCorrect": false,
+        "rationale": "Realizar mantenimientos cada cinco años imposibilita la detección oportuna de fisuras o fallas en las instalaciones de custodia."
+      }
+    ],
+    "hint": "El almacenamiento seguro requiere prevenir reacciones involuntarias mediante la separación física de reactivos no compatibles y un ambiente controlado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tecnología automatizada se utiliza frecuentemente en las operaciones mineras para realizar levantamientos topográficos precisos e inspeccionar áreas peligrosas o de difícil acceso?",
+    "opciones": [
+      {
+        "text": "Drones",
+        "isCorrect": true,
+        "rationale": "Ofrecen la capacidad de sobrevolar zonas de riesgo, realizar topografía en tres dimensiones e inspeccionar infraestructuras sin exponer vidas humanas."
+      },
+      {
+        "text": "Simuladores operacionales fijados en aulas",
+        "isCorrect": false,
+        "rationale": "Los simuladores son módulos virtuales orientados a la capacitación de operadores antes del manejo de maquinaria real."
+      },
+      {
+        "text": "Sensores inclinómetros subterráneos",
+        "isCorrect": false,
+        "rationale": "Son instrumentos geomecánicos fijos que miden deformaciones estructurales en el macizo rocoso, no dispositivos aéreos topográficos."
+      },
+      {
+        "text": "Piezómetros portátiles de mano",
+        "isCorrect": false,
+        "rationale": "Se emplean para medir la presión de poros y niveles de agua subterránea, no para mapeo aéreo o inspección visual."
+      },
+      {
+        "text": "Tiras reactivas de pH",
+        "isCorrect": false,
+        "rationale": "Son insumos químicos de laboratorio utilizados para determinar la acidez o alcalinidad de soluciones acuosas."
+      }
+    ],
+    "hint": "Son equipos aéreos no tripulados que permiten capturar imágenes y datos de terreno sin exponer a los trabajadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué tipos de auditorías se llevan a cabo en las operaciones mineras para verificar el cumplimiento operativo, financiero y normativo?",
+    "opciones": [
+      {
+        "text": "Auditorías internas realizadas por el propio personal para evaluar la eficiencia del control interno.",
+        "isCorrect": true,
+        "rationale": "Permiten a la propia organización revisar sus procesos y asegurar el cumplimiento de las políticas institucionales de manera continua."
+      },
+      {
+        "text": "Auditorías externas ejecutadas por firmas independientes para validar estados financieros y certificaciones.",
+        "isCorrect": true,
+        "rationale": "Aportan imparcialidad para certificar normas ISO o validar los balances contables ante inversionistas y bancos."
+      },
+      {
+        "text": "Auditorías regulatorias conducidas por entidades estatales para verificar el cumplimiento de leyes.",
+        "isCorrect": true,
+        "rationale": "Garantizan que la unidad minera cumpla con los marcos legales exigidos por entes fiscalizadores como SUNAFIL u OSINERGMIN."
+      },
+      {
+        "text": "Auditorías informales no registradas ejecutadas por vecinos de la zona sin pauta técnica.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones requieren acreditación técnica y legal, por lo que las opiniones informales no constituyen un tipo de auditoría formal."
+      },
+      {
+        "text": "Auditorías satelitales obligatorias sin revisión de documentación ni inspección de campo.",
+        "isCorrect": false,
+        "rationale": "Toda auditoría formal exige la revisión técnica de registros, documentación física/digital y verificación presencial de estándares."
+      }
+    ],
+    "hint": "Considere quiénes ejecutan la evaluación, divididos entre la propia empresa, firmas independientes y organismos del Estado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito principal de gestionar e identificar oportunamente la obsolescencia de los inventarios en los almacenes mineros?",
+    "opciones": [
+      {
+        "text": "Minimizar los costos de almacenamiento y evitar mantener activos paralizados que pierden valor con el tiempo.",
+        "isCorrect": true,
+        "rationale": "Depurar o liquidar existencias sin rotación libera espacio físico y reduce los gastos asociados a su mantenimiento y custodia."
+      },
+      {
+        "text": "Incrementar los niveles de stock máximo acumulado sin importar la demanda real.",
+        "isCorrect": false,
+        "rationale": "Acumular materiales desfasados incrementa innecesariamente el capital inmovilizado y los costos del almacén."
+      },
+      {
+        "text": "Reemplazar el conteo físico cíclico por estimaciones al azar.",
+        "isCorrect": false,
+        "rationale": "El control de obsolescencia no sustituye los conteos físicos, sino que se nutre de ellos para clasificar el estado de los insumos."
+      },
+      {
+        "text": "Eliminar el uso de software de gestión como SAP en la cadena de suministro.",
+        "isCorrect": false,
+        "rationale": "Los sistemas ERP son herramientas indispensables para detectar precisamente cuáles ítems no registran movimientos."
+      },
+      {
+        "text": "Justificar la compra reiterada de materiales no requeridos en la operación.",
+        "isCorrect": false,
+        "rationale": "El análisis de obsolescencia busca detener la adquisición de ítems obsoletos en lugar de promover compras innecesarias."
+      }
+    ],
+    "hint": "Mantener repuestos o insumos desusados durante muchos años genera sobrecostos de custodia y pérdida de valor financiero.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso práctico de la Unidad Minera San Miguel, ¿cuál fue una de las faltas graves identificadas durante la inspección del polvorín por las autoridades?",
+    "opciones": [
+      {
+        "text": "Almacenar detonadores junto con explosivos y registrar 32 cartuchos sin justificación documental.",
+        "isCorrect": true,
+        "rationale": "El almacenamiento conjunto viola el reglamento de explosivos (DS 055-2010-EM) y la falta de registro compromete el control de insumos críticos."
+      },
+      {
+        "text": "Implementar un control biométrico en la puerta de acceso al polvorín.",
+        "isCorrect": false,
+        "rationale": "Instalar controles biométricos es una buena práctica de seguridad que restringe el paso solo a personal autorizado."
+      },
+      {
+        "text": "Contar con personal certificado en el manejo de materiales peligrosos (MATPEL).",
+        "isCorrect": false,
+        "rationale": "Tener trabajadores certificados cumple con las exigencias normativas y no representa una infracción."
+      },
+      {
+        "text": "Integrar el sistema de trazabilidad RFID con el software ERP de la empresa.",
+        "isCorrect": false,
+        "rationale": "La integración tecnológica asegura la trazabilidad exacta en tiempo real, constituyendo una medida correctiva deseable."
+      },
+      {
+        "text": "Disponer de señalización clara sobre los riesgos de detonación.",
+        "isCorrect": false,
+        "rationale": "Colocar carteles de advertencia de peligro es un requisito obligatorio de seguridad en instalaciones de polvorines."
+      }
+    ],
+    "hint": "La normativa prohíbe estrictamente almacenar juntos los elementos de iniciación y las mezclas explosivas, además de exigir un registro exacto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Para corregir las deficiencias de control en el almacenamiento de explosivos de la Minera San Miguel, ¿qué medida tecnológica se implementó?",
+    "opciones": [
+      {
+        "text": "Integración del sistema RFID con el sistema ERP (SAP).",
+        "isCorrect": true,
+        "rationale": "Automatizó la actualización de las entradas y salidas de explosivos al asociar las lecturas por radiofrecuencia con el sistema informático central."
+      },
+      {
+        "text": "Eliminación total de los registros digitales para reemplazarlos por fichas de papel.",
+        "isCorrect": false,
+        "rationale": "Regresar a registros manuales incrementa el riesgo de desaciertos administrativos y la lentitud en la fiscalización."
+      },
+      {
+        "text": "Instalación de cámaras fotográficas análogas sin conexión a red.",
+        "isCorrect": false,
+        "rationale": "Los dispositivos análogos sin conectividad no aportan datos en tiempo real a los sistemas de inventario."
+      },
+      {
+        "text": "Cancelación del uso de códigos de barras en los empaques de insumos.",
+        "isCorrect": false,
+        "rationale": "Retirar los códigos de barras dificulta la trazabilidad y la identificación rápida de lotes de insumos críticos."
+      },
+      {
+        "text": "Uso exclusivo de radiocontrol manual para el conteo semanal.",
+        "isCorrect": false,
+        "rationale": "El conteo por voz vía radio no sustituye los sistemas informáticos de trazabilidad automatizada."
+      }
+    ],
+    "hint": "Se combinó la identificación por radiofrecuencia en cada producto con la base de datos central de planificación empresarial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la preparación de agentes de voladura para minería a tajo abierto, ¿cuál es el papel que cumple el nitrato de amonio de baja densidad?",
+    "opciones": [
+      {
+        "text": "Actuar como una sal porosa que absorbe el combustible para constituir la mezcla explosiva.",
+        "isCorrect": true,
+        "rationale": "Su elevada porosidad interna le permite retener el combustible líquido (diésel) para conformar agentes de voladura como el ANFO."
+      },
+      {
+        "text": "Funcionar como reactivo inerte para apagar incendios en los taladros.",
+        "isCorrect": false,
+        "rationale": "El nitrato de amonio es un oxidante fuerte destinado a generar la detonación y no un agente extintor de incendios."
+      },
+      {
+        "text": "Servir como taco de retención de roca en la parte superior del pozo.",
+        "isCorrect": false,
+        "rationale": "El taco de retención se elabora con detritos o grava inerte para confinar la energía, no con nitrato de amonio."
+      },
+      {
+        "text": "Neutralizar la emanación de gases de nitrógeno durante la voladura.",
+        "isCorrect": false,
+        "rationale": "Durante su reacción química produce precisamente gases nitrosos, por lo que no actúa como un neutralizador."
+      },
+      {
+        "text": "Reducir la fricción mecánica de las brocas de perforación.",
+        "isCorrect": false,
+        "rationale": "No es un fluido ni lubricante de perforación, sino una materia prima para la elaboración de explosivos."
+      }
+    ],
+    "hint": "Su estructura física de porosidad abierta le permite absorber el combustible necesario para la detonación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Durante los controles de calidad de las mezclas explosivas elaboradas en camiones fábrica, ¿qué parámetros se deben medir rigurosamente en campo?",
+    "opciones": [
+      {
+        "text": "La densidad de la mezcla explosiva obtenida.",
+        "isCorrect": true,
+        "rationale": "Medir la densidad asegura que la mezcla alcance la energía de detonación proyectada en el diseño de voladura."
+      },
+      {
+        "text": "El porcentaje de finos en el nitrato de amonio recibido.",
+        "isCorrect": true,
+        "rationale": "Verificar los finos permite detectar la degradación física del prill que podría alterar la absorción de combustible."
+      },
+      {
+        "text": "La fragancia agregada al combustible diésel.",
+        "isCorrect": false,
+        "rationale": "El aroma o fragancia del combustible es un factor irrelevante para el rendimiento técnico de las mezclas de voladura."
+      },
+      {
+        "text": "La viscosidad del agua potable de consumo en los campamentos.",
+        "isCorrect": false,
+        "rationale": "El agua potable de consumo humano no forma parte de los parámetros de control del camión fábrica en la malla de voladura."
+      },
+      {
+        "text": "El índice de refracción solar en la superficie del camión.",
+        "isCorrect": false,
+        "rationale": "El reflejo solar sobre la carrocería del vehículo no incide en la calidad química ni física de la mezcla explosiva."
+      }
+    ],
+    "hint": "Se evalúa tanto la masa por unidad de volumen de la mezcla como las características de granulometría de la materia prima.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué dispositivo portátil se utiliza en el proceso de amarre de voladura para registrar detonadores electrónicos, asignar tiempos de retardo y verificar fugas de corriente?",
+    "opciones": [
+      {
+        "text": "Dispositivo móvil de programación o scanner de logueo.",
+        "isCorrect": true,
+        "rationale": "Permite verificar individualmente la comunicación con cada detonador, asignar las secuencia de retardo e identificar posibles fugas de corriente en la malla."
+      },
+      {
+        "text": "Piezómetro geotécnico de cuerda vibrante.",
+        "isCorrect": false,
+        "rationale": "Este instrumento se instala en taladros para medir presiones de agua subterránea, no para programar detonadores."
+      },
+      {
+        "text": "Anemómetro de tubo Pitot para mangas de ventilación.",
+        "isCorrect": false,
+        "rationale": "Se emplea para medir la velocidad del flujo de aire en galerías subterráneas."
+      },
+      {
+        "text": "Inclinómetro manual para paredes del tajo.",
+        "isCorrect": false,
+        "rationale": "Es una herramienta geomecánica utilizada para medir la inclinación de los taludes de la mina."
+      },
+      {
+        "text": "Balanza de plataforma para camiones de acarreo.",
+        "isCorrect": false,
+        "rationale": "Se destina al pesaje del tonelaje de mineral extraído por los camiones mineros."
+      }
+    ],
+    "hint": "Es una herramienta electrónica de mano utilizada durante la fase de prelogueo e inspección del circuito de detonación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué norma peruana regula específicamente el transporte terrestre de materiales y residuos peligrosos?",
+    "opciones": [
+      {
+        "text": "Decreto Supremo 021-2008-MTC",
+        "isCorrect": true,
+        "rationale": "Establece el reglamento nacional para el transporte terrestre de materiales y residuos peligrosos en la red vial peruana."
+      },
+      {
+        "text": "Decreto Supremo 024-2016-EM",
+        "isCorrect": false,
+        "rationale": "Regula la seguridad y salud ocupacional dentro de las instalaciones mineras, no el transporte público terrestre."
+      },
+      {
+        "text": "Decreto Supremo 040-2014-EM",
+        "isCorrect": false,
+        "rationale": "Corresponde al reglamento ambiental para las actividades de explotación y gestión minera."
+      },
+      {
+        "text": "Ley 28271",
+        "isCorrect": false,
+        "rationale": "Aborda la gestión y el marco regulatorio de los pasivos ambientales mineros."
+      },
+      {
+        "text": "Decreto Supremo 055-2010-EM",
+        "isCorrect": false,
+        "rationale": "Corresponde al reglamento de explosivos de uso civil en el territorio nacional."
+      }
+    ],
+    "hint": "Fue emitida por el Ministerio de Transportes y Comunicaciones (MTC) en el año 2008.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la clasificación de características peligrosas (CCRET), ¿cómo se define la 'corrosividad' de una sustancia?",
+    "opciones": [
+      {
+        "text": "Propiedad química de corroer o desgastar sólidos y causar lesiones en tejidos vivos al contacto.",
+        "isCorrect": true,
+        "rationale": "La corrosividad implica la capacidad de destruir o desgastar materiales inorgánicos y causar daños irreversibles en la piel o mucosas."
+      },
+      {
+        "text": "Capacidad de emitir radiaciones ionizantes alfa, beta o gamma de forma espontánea.",
+        "isCorrect": false,
+        "rationale": "Esta descripción corresponde a la característica de radiactividad."
+      },
+      {
+        "text": "Tendencia de un líquido a evaporarse a temperaturas bajo cero sin generar reacción.",
+        "isCorrect": false,
+        "rationale": "La volatilidad o evaporación a bajas temperaturas describe el comportamiento de fase, no la acción corrosiva."
+      },
+      {
+        "text": "Presencia de organismos vivos patógenos capaces de contagiar virus o bacterias.",
+        "isCorrect": false,
+        "rationale": "Corresponde a la característica de patogenicidad o riesgo biológico infeccioso."
+      },
+      {
+        "text": "Habilidad para generar detonaciones mecánicas sin necesidad de oxígeno.",
+        "isCorrect": false,
+        "rationale": "Describe la propiedad de explosividad o reactividad violenta."
+      }
+    ],
+    "hint": "Esta propiedad física o química provoca el desgaste progresivo de superficies sólidas y daños severos en tejidos vivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuántas secciones obligatorias y estandarizadas posee una Hoja de Datos de Seguridad (SDS / MSDS)?",
+    "opciones": [
+      {
+        "text": "16 secciones",
+        "isCorrect": true,
+        "rationale": "La estructura estandarizada internacional del Sistema Globalmente Armonizado fija exactamente 16 secciones informativas."
+      },
+      {
+        "text": "8 secciones",
+        "isCorrect": false,
+        "rationale": "Ocho secciones resulta un número insuficiente respecto al estándar internacional de 16 capítulos obligatorios."
+      },
+      {
+        "text": "10 secciones",
+        "isCorrect": false,
+        "rationale": "El modelo internacional no utiliza diez apartados, sino dieciséis categorías detalladas."
+      },
+      {
+        "text": "12 secciones",
+        "isCorrect": false,
+        "rationale": "Aunque existen antiguos formatos reducidos, el estándar global exige 16 secciones."
+      },
+      {
+        "text": "24 secciones",
+        "isCorrect": false,
+        "rationale": "Veinticuatro apartados excede la norma estandarizada de 16 secciones para las fichas SDS."
+      }
+    ],
+    "hint": "El formato internacional unificado divide el documento de seguridad en un número específico de apartados informativos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En una Hoja de Datos de Seguridad de Materiales (SDS), ¿qué información crítica se encuentra detallada en la Sección 4?",
+    "opciones": [
+      {
+        "text": "Medidas de primeros auxilios.",
+        "isCorrect": true,
+        "rationale": "Específica la respuesta inmediata ante exposición accidental por inhalación, ingestión o contacto con la piel u ojos."
+      },
+      {
+        "text": "Precios de venta del insumo químico.",
+        "isCorrect": false,
+        "rationale": "Las fichas SDS son documentos puramente técnicos y de seguridad que omiten información comercial o valores monetarios."
+      },
+      {
+        "text": "Contratos de transporte y peajes de carretera.",
+        "isCorrect": false,
+        "rationale": "Los términos contractuales y peajes son datos administrativos ajenos al contenido de la ficha SDS."
+      },
+      {
+        "text": "Tiempos de garantía comercial del fabricante.",
+        "isCorrect": false,
+        "rationale": "Los términos de garantía comercial no forman parte de los apartados de seguridad del producto."
+      },
+      {
+        "text": "Planos arquitectónicos de los almacenes de la mina.",
+        "isCorrect": false,
+        "rationale": "La infraestructura del comprador no forma parte del documento estandarizado elaborado por el fabricante de la sustancia."
+      }
+    ],
+    "hint": "Indica las acciones inmediatas a tomar en caso de que una persona sufra contacto, inhalación o ingestión del producto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el rombo de identificación de riesgos NFPA 704, ¿qué tipo de peligro representa el cuadrante de color azul y en qué escala numérica se mide?",
+    "opciones": [
+      {
+        "text": "Riesgo para la salud, en una escala de 0 (sin riesgo) a 4 (mortal).",
+        "isCorrect": true,
+        "rationale": "El cuadrante azul indica el nivel de peligro a la salud que representa la sustancia para las personas expuestas."
+      },
+      {
+        "text": "Riesgo de inflamabilidad, en una escala de 1 a 10.",
+        "isCorrect": false,
+        "rationale": "La inflamabilidad se ubica en el cuadrante de color rojo y utiliza un rango estandarizado de 0 a 4."
+      },
+      {
+        "text": "Inestabilidad reactiva, en una escala de 0 a 100.",
+        "isCorrect": false,
+        "rationale": "La reactividad se asigna al cuadrante amarillo y se valora exclusivamente en una escala de 0 a 4."
+      },
+      {
+        "text": "Riesgos especiales de reacción con agua, medido de A a Z.",
+        "isCorrect": false,
+        "rationale": "Los riesgos especiales van en el cuadrante blanco e identifican características mediante símbolos como W cruzada u OX, no letras consecutivas."
+      },
+      {
+        "text": "Toxicidad ambiental acuática, medida de 1 a 5.",
+        "isCorrect": false,
+        "rationale": "El rombo NFPA 704 se enfoca en la respuesta a emergencias para las personas y no mide toxicidad ecológica en escala de 1 a 5."
+      }
+    ],
+    "hint": "Este cuadrante advierte sobre los efectos nocivos en el cuerpo humano, graduado desde la ausencia de riesgo hasta el peligro mortal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la simbología del rombo NFPA 704, ¿qué indica la presencia de la cifra 4 en el cuadrante rojo?",
+    "opciones": [
+      {
+        "text": "Material altamente inflamable que se vaporiza y arde con extrema facilidad a temperatura ambiente.",
+        "isCorrect": true,
+        "rationale": "El nivel 4 en inflamabilidad advierte que la sustancia entra en combustión de forma inmediata bajo condiciones climáticas normales."
+      },
+      {
+        "text": "Sustancia inerte incapaz de arder en presencia de fuego.",
+        "isCorrect": false,
+        "rationale": "La cifra 0 en el cuadrante rojo es la que indica que el producto no se quema."
+      },
+      {
+        "text": "Producto que solo se inflama al calentarse por encima de los 93 °C.",
+        "isCorrect": false,
+        "rationale": "Materiales que requieren temperaturas elevadas para arder reciben clasificaciones de inflamabilidad de nivel 1."
+      },
+      {
+        "text": "Gas no inflamable almacenado a alta presión.",
+        "isCorrect": false,
+        "rationale": "Un gas no inflamable se clasifica con nivel 0 en el rombo de inflamabilidad."
+      },
+      {
+        "text": "Material corrosivo que no reacciona ante chispas o llamas.",
+        "isCorrect": false,
+        "rationale": "La corrosividad es una propiedad de destrucción química y no se evalúa dentro del cuadrante rojo de inflamabilidad."
+      }
+    ],
+    "hint": "El cuadrante rojo mide la inflamabilidad y el valor máximo señala materiales que arden de manera extrema a temperatura ambiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En el Sistema Globalmente Armonizado (SGA / GHS), ¿cuáles de los siguientes pictogramas advierten explícitamente sobre peligros para la salud humana?",
+    "opciones": [
+      {
+        "text": "Calavera y tibias cruzadas (toxicidad aguda grave).",
+        "isCorrect": true,
+        "rationale": "Representa sustancias que pueden causar envenenamiento o la muerte ante bajas dosis de exposición."
+      },
+      {
+        "text": "Signo de exclamación (irritación cutánea o toxicidad de menor gravedad).",
+        "isCorrect": true,
+        "rationale": "Advierte sobre efectos nocivos moderados como irritación en la piel, ojos o sensibilización alérgica."
+      },
+      {
+        "text": "Llama sobre un círculo (agente comburente).",
+        "isCorrect": false,
+        "rationale": "Indica peligros físicos de sustancias oxidantes que avivan incendios, no efectos directos en la salud."
+      },
+      {
+        "text": "Botella de gas (gas a presión).",
+        "isCorrect": false,
+        "rationale": "Avisa sobre el peligro físico de recipientes que contienen gases comprimidos o licuados."
+      },
+      {
+        "text": "Bomba explotando (peligro de explosión).",
+        "isCorrect": false,
+        "rationale": "Señala el peligro físico de materias o reactivos con capacidad explosiva."
+      }
+    ],
+    "hint": "Considere el símbolo de alta toxicidad severa y el símbolo que señala irritación cutánea o toxicidad moderada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En las etiquetas del Sistema Globalmente Armonizado (SGA / GHS), ¿cuál es la función de las frases codificadas con la letra 'H'?",
+    "opciones": [
+      {
+        "text": "Describir la naturaleza y gravedad de los peligros físicos, para la salud o el medio ambiente (Indicaciones de peligro).",
+        "isCorrect": true,
+        "rationale": "Las frases H (Hazard Statements) estandarizan la descripción del tipo específico de peligro que entraña la sustancia."
+      },
+      {
+        "text": "Ofrecer recomendaciones sobre cómo lavar la ropa del trabajador.",
+        "isCorrect": false,
+        "rationale": "Las instrucciones preventivas y de lavado corresponden a las frases P de prudencia."
+      },
+      {
+        "text": "Detallar el número de lote y fecha de vencimiento del envase.",
+        "isCorrect": false,
+        "rationale": "La información de lote y vencimiento son datos de trazabilidad comercial, no frases de peligro H."
+      },
+      {
+        "text": "Asignar los turnos de trabajo a los operadores del almacén.",
+        "isCorrect": false,
+        "rationale": "La programación de personal es una tarea de gestión operativa ajena a los códigos normativos de etiquetado SGA."
+      },
+      {
+        "text": "Indicar el costo de flete del transporte terrestre.",
+        "isCorrect": false,
+        "rationale": "Las etiquetas de seguridad SGA no contienen valores comerciales o costos de flete."
+      }
+    ],
+    "hint": "Provienen del término 'Hazard Statements' e indican la naturaleza concreta de los peligros que presenta el producto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la rotulación SGA / GHS, ¿qué tipo de código o frase brinda recomendaciones operativas sobre la prevención, almacenamiento y eliminación segura de la sustancia?",
+    "opciones": [
+      {
+        "text": "Frases P (Consejos de prudencia).",
+        "isCorrect": true,
+        "rationale": "Las frases P (Precautionary Statements) detallan los consejos prácticos para manipular, almacenar y desechar el producto con seguridad."
+      },
+      {
+        "text": "Frases H (Indicaciones de peligro).",
+        "isCorrect": false,
+        "rationale": "Las frases H comunican la amenaza o peligro, pero no indican las acciones de prudencia o prevención a seguir."
+      },
+      {
+        "text": "Frases R (Evaluación de riesgos).",
+        "isCorrect": false,
+        "rationale": "Las antiguas frases R pertenecían a la normativa europea previa al SGA."
+      },
+      {
+        "text": "Frases S (Supervisión ambiental).",
+        "isCorrect": false,
+        "rationale": "No forman parte de la nomenclatura estandarizada del Sistema Globalmente Armonizado."
+      },
+      {
+        "text": "Frases C (Control de volumen).",
+        "isCorrect": false,
+        "rationale": "La letra C no identifica la categoría de consejos de prudencia en el etiquetado SGA."
+      }
+    ],
+    "hint": "Estas frases inician con la letra 'P' y se refieren a las medidas de cautela y cuidado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta tecnológica se instala en los camiones de transporte de concentrado minero para rastrear su posición geográfica en tiempo real a lo largo de la ruta?",
+    "opciones": [
+      {
+        "text": "Sistema de Posicionamiento Global (GPS).",
+        "isCorrect": true,
+        "rationale": "Permite monitorear continuamente la velocidad, ubicación geográfica y desviaciones de ruta de las unidades de transporte."
+      },
+      {
+        "text": "Piezómetro de pozo profundo.",
+        "isCorrect": false,
+        "rationale": "Se utiliza para medir la presión hidrostática en perforaciones del terreno, no para rastreo vehicular."
+      },
+      {
+        "text": "Viscosímetro de rotación.",
+        "isCorrect": false,
+        "rationale": "Es un instrumento de laboratorio para medir la fluidez de líquidos y emulsiones."
+      },
+      {
+        "text": "Balanza analítica de precisión.",
+        "isCorrect": false,
+        "rationale": "Se utiliza en laboratorios para medir masas pequeñas con alto grado de exactitud."
+      },
+      {
+        "text": "Dique pasivo de contención.",
+        "isCorrect": false,
+        "rationale": "Es una estructura física permanente para retener derrames de líquidos, no un dispositivo de rastreo satelital."
+      }
+    ],
+    "hint": "Utiliza señales satelitales para enviar las coordenadas geográficas de la unidad a un centro de control.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la arquitectura tecnológica de la logística minera, ¿cuál es la función principal de un sistema WMS (Warehouse Management System)?",
+    "opciones": [
+      {
+        "text": "Optimizar y controlar la gestión operativa interna de los almacenes e inventarios.",
+        "isCorrect": true,
+        "rationale": "Un WMS administra las recepciones, ubicaciones, recuentos e inventarios físicos dentro de las instalaciones de almacenamiento."
+      },
+      {
+        "text": "Planificar el plan de minado y voladura en el tajo abierto.",
+        "isCorrect": false,
+        "rationale": "El plan de minado es gestionado mediante software especializado en ingeniería geológica y minera, no mediante un WMS."
+      },
+      {
+        "text": "Controlar la velocidad de los vehículos en las carreteras públicas.",
+        "isCorrect": false,
+        "rationale": "El seguimiento de velocidad de vehículos en ruta lo ejecutan los sistemas TMS y rastreo GPS."
+      },
+      {
+        "text": "Medir la calidad del aire alrededor del campamento minero.",
+        "isCorrect": false,
+        "rationale": "El monitoreo de calidad del aire corresponde a estaciones de monitoreo ambiental y sensores meteorológicos."
+      },
+      {
+        "text": "Elaborar los contratos colectivos con el sindicato.",
+        "isCorrect": false,
+        "rationale": "La negociación laboral es competencia del área de recursos humanos y relaciones comunitarias."
+      }
+    ],
+    "hint": "Se enfoca en la administración y control de las operaciones dentro de los almacenes físicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Ante un escenario de derrame accidental de concentrado mineral en una vía pública, ¿cuál debe ser la primera acción según los protocolos de respuesta a emergencias?",
+    "opciones": [
+      {
+        "text": "Detener el vehículo inmediatamente y señalizar la zona del accidente.",
+        "isCorrect": true,
+        "rationale": "Frenar la unidad interrumpe el vertido continuo y señalizar el área previene colisiones secundarias y protege a la población."
+      },
+      {
+        "text": "Ocultar el concentrado derramado utilizando vegetación local.",
+        "isCorrect": false,
+        "rationale": "Cubrir el mineral no soluciona la contaminación y agrava la falta ambiental al intentar ocultar el incidente."
+      },
+      {
+        "text": "Aumentar la velocidad para llegar rápidamente a la planta de destino.",
+        "isCorrect": false,
+        "rationale": "Continuar en marcha dispersaría el concentrado contaminante a lo largo de muchos kilómetros de vía pública."
+      },
+      {
+        "text": "Verter agua a presión sobre el derrame para lavarlo hacia los ríos cercanos.",
+        "isCorrect": false,
+        "rationale": "Lavar el material hacia fuentes de agua expande masivamente la contaminación ambiental hacia las cuencas hidrográficas."
+      },
+      {
+        "text": "Abandonar el camión en la carretera sin notificar al centro de control.",
+        "isCorrect": false,
+        "rationale": "Abandonar la unidad viola las leyes de transporte y deja un riesgo crítico activo sin ningún tipo de contención."
+      }
+    ],
+    "hint": "La máxima prioridad inmediata es detener la fuente de movimiento y asegurar la zona para evitar que terceros ingresen al área afectada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En la formulación de un plan de logística minera segura para el transporte terrestre de insumos y minerales, ¿cuáles son pilares indispensables para garantizar la seguridad operacional y ambiental?",
+    "opciones": [
+      {
+        "text": "Establecimiento de rutas seguras con puntos de control de velocidad e inspección.",
+        "isCorrect": true,
+        "rationale": "Permite fiscalizar el paso de las unidades y verificar el estado mecánico durante el trayecto."
+      },
+      {
+        "text": "Capacitación obligatoria a los conductores en el manejo de materiales peligrosos (MATPEL).",
+        "isCorrect": true,
+        "rationale": "Asegura que el personal transportista conozca la peligrosidad de la carga y actúe adecuadamente ante un evento imprevisto."
+      },
+      {
+        "text": "Monitoreo continuo mediante GPS y sensores de condición en la flota.",
+        "isCorrect": true,
+        "rationale": "Otorga visibilidad en tiempo real para detectar desviaciones de ruta o variaciones que afecten la carga."
+      },
+      {
+        "text": "Supresión total de las brigadas de emergencia para abaratar costos.",
+        "isCorrect": false,
+        "rationale": "Prescindir de equipos de respuesta elimina la capacidad operativa para contener derrames o accidentes en carretera."
+      },
+      {
+        "text": "Contratación de transportistas sin verificación de inspección técnica vehicular.",
+        "isCorrect": false,
+        "rationale": "Operar con vehículos no inspeccionados vulnera la ley y eleva drásticamente la probabilidad de fallas mecánicas graves."
+      }
+    ],
+    "hint": "Considere la planificación de rutas supervisadas, la instrucción específica del personal y la adopción de herramientas tecnológicas de rastreo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el marco normativo nacional peruano que regula específicamente los aspectos de seguridad y salud ocupacional en el sector minero, a diferencia del que rige el reglamento ambiental para la gestión de materiales o el de explosivos de uso civil?",
+    "opciones": [
+      {
+        "text": "Decreto Supremo 024-2016-EM",
+        "isCorrect": true,
+        "rationale": "Este reglamento establece las normas técnicas y legales obligatorias para garantizar la protección de la vida, salud e integridad física de los trabajadores en la actividad minera peruana."
+      },
+      {
+        "text": "Decreto Supremo 040-2014-EM",
+        "isCorrect": false,
+        "rationale": "Esta norma abarca específicamente el reglamento de protección y gestión ambiental para las actividades de explotación, beneficio, labor general, transporte y almacenamiento minero."
+      },
+      {
+        "text": "Decreto Supremo 055-2010-EM",
+        "isCorrect": false,
+        "rationale": "Este decreto regula el almacenamiento, custodia, transporte y uso seguro de los explosivos de uso civil gestionados por la logística minera."
+      },
+      {
+        "text": "Decreto Supremo 021-2008-MTC",
+        "isCorrect": false,
+        "rationale": "Corresponde al Reglamento Nacional de Transporte Terrestre de Materiales y Residuos Peligrosos emitido por el Ministerio de Transportes y Comunicaciones."
+      },
+      {
+        "text": "Ley 28271",
+        "isCorrect": false,
+        "rationale": "Esta ley regula los pasivos ambientales de la actividad minera y fija las obligaciones para su identificación, inventario y plan de cierre."
+      }
+    ],
+    "hint": "Considera el decreto emitido por el Ministerio de Energía y Minas en el año 2016 enfocado en la protección física y bienestar del trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con la Ley 28271 y la Resolución Ministerial 056-25 que norman los pasivos ambientales mineros (PAM), ¿cuáles de las siguientes disposiciones son obligatorias para el control y actualización de sus inventarios?",
+    "opciones": [
+      {
+        "text": "Realizar la actualización y valorización del inventario de pasivos ambientales con una periodicidad anual.",
+        "isCorrect": true,
+        "rationale": "La resolución ministerial impone la actualización anual del valor financiero y del estado físico de los componentes registrados en el inventario minero."
+      },
+      {
+        "text": "Ejecutar auditorías anuales para verificar el estado actualizado de los componentes del inventario.",
+        "isCorrect": true,
+        "rationale": "El marco legal requiere auditorías periódicas para asegurar que la información reportada al Estado concuerde con las condiciones reales del terreno."
+      },
+      {
+        "text": "Efectuar una auditoría de seguimiento a los seis meses de ejecutado el inventario inicial.",
+        "isCorrect": true,
+        "rationale": "La reglamentación sugiere una revisión intermedia semestral para monitorear el avance de las medidas de mitigación o variaciones en los pasivos."
+      },
+      {
+        "text": "Mantener la misma escala de inventario operativo constante sin importar si la mina entra en etapa de cierre.",
+        "isCorrect": false,
+        "rationale": "Al entrar en etapa de cierre bajo la Ley 28271, los volúmenes de materiales e inventarios operativos deben reducirse y liquidarse progresivamente."
+      },
+      {
+        "text": "Eximir del registro de pasivos ambientales a las áreas que correspondan a bosques o caminos adyacentes a la concesión.",
+        "isCorrect": false,
+        "rationale": "El inventario del sector minero debe incluir y registrar obligatoriamente elementos naturales como áreas mineras, bosques, ríos, viviendas y caminos afectados."
+      }
+    ],
+    "hint": "Piensa en las exigencias temporales para la actualización, auditoría y revisión de seguimiento del inventario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el almacenamiento a gran escala de insumos críticos dentro de la logística minera, ¿qué concentración de ácido sulfúrico es la utilizada habitualmente en las operaciones de lixiviación en planta, en comparación con la empleada para muestras de laboratorio?",
+    "opciones": [
+      {
+        "text": "$52\\%$ para operaciones de lixiviación y $25\\%$ a $30\\%$ para análisis de laboratorio.",
+        "isCorrect": true,
+        "rationale": "La industria minera trabaja con concentraciones industriales de ácido sulfúrico al $52\\%$ para sus procesos principales de lixiviación de minerales, reservando soluciones diluidas del $25\\%$ al $30\\%$ para ensayos metalúrgicos."
+      },
+      {
+        "text": "$98\\%$ para operaciones de lixiviación y $52\\%$ para análisis de laboratorio.",
+        "isCorrect": false,
+        "rationale": "Estas concentraciones no corresponden a la escala operativa de proceso ni a la estándar de laboratorio citada en los protocolos mineros de control."
+      },
+      {
+        "text": "$30\\%$ para operaciones de lixiviación y $42\\%$ para análisis de laboratorio.",
+        "isCorrect": false,
+        "rationale": "Invierte y desajusta las proporciones técnicas requeridas para el ataque químico en pilas de lixiviación masiva."
+      },
+      {
+        "text": "$42\\%$ para operaciones de lixiviación y $10\\%$ para análisis de laboratorio.",
+        "isCorrect": false,
+        "rationale": "No se alinea con la fuerza ácida requerida industrialmente en la minería de cobre u oro para mantener la eficiencia del proceso."
+      },
+      {
+        "text": "$25\\%$ para operaciones de lixiviación y $52\\%$ para análisis de laboratorio.",
+        "isCorrect": false,
+        "rationale": "Confunde la aplicación al asignar una concentración menor al proceso masivo y una mayor a las muestras puntuales de laboratorio."
+      }
+    ],
+    "hint": "Compara el porcentaje de alta pureza requerido para procesos industriales masivos frente a la solución más diluida para análisis químicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Un coordinador de logística minera debe diseñar las medidas de control para el almacenamiento seguro de insumos químicos críticos y materiales peligrosos. ¿Qué acciones físicas y operativas se deben implementar según la normativa técnica?",
+    "opciones": [
+      {
+        "text": "Construir las instalaciones con materiales incombustibles, sistemas de ventilación continua y revestimientos que no generen chispas.",
+        "isCorrect": true,
+        "rationale": "El diseño de la infraestructura debe prevenir incendios por ignición accidental y evitar la acumulación de vapores orgánicos o gases tóxicos."
+      },
+      {
+        "text": "Implementar sistemas de contención secundaria mediante bandejas y diques diseñados para retener posibles fugas o derrames.",
+        "isCorrect": true,
+        "rationale": "La contención secundaria garantiza que cualquier rotura de estanque o fisura de envase sea confinada sin infiltrar el suelo o cursos de agua."
+      },
+      {
+        "text": "Segregar los insumos en áreas independientes y bien ventiladas, alejando los combustibles de los gases o ácidos.",
+        "isCorrect": true,
+        "rationale": "La separación física entre sustancias incompatibles evita reacciones químicas violentas, emanaciones tóxicas o explosiones en cadena."
+      },
+      {
+        "text": "Almacenar conjuntamente los combustibles fósiles y los cilindros de gases comprimidos en una sola nave para optimizar espacio.",
+        "isCorrect": false,
+        "rationale": "Mezclar combustibles y cilindros presurizados incrementa drásticamente el peligro de incendio generalizado y detonación por corrosión o fuga."
+      },
+      {
+        "text": "Mantener los almacenes de insumos críticos abiertos de forma permanente sin cerraduras para facilitar el acceso libre de cualquier trabajador.",
+        "isCorrect": false,
+        "rationale": "Las normas exigen señalización clara, control estricto de accesos y mantener las áreas de insumos críticos cerradas bajo llave únicamente para personal capacitado."
+      }
+    ],
+    "hint": "Evalúa los requisitos de infraestructura edilicia, segregación de reactivos incompatibles y contención física de derrames.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la fase operativa de una unidad minera, se busca optimizar el levantamiento topográfico de precisión y la vigilancia en zonas de alto riesgo o de difícil acceso. ¿Qué tecnología de automatización es la indicada para cumplir esta función específica?",
+    "opciones": [
+      {
+        "text": "Drones (Vehículos aéreos no tripulados)",
+        "isCorrect": true,
+        "rationale": "Los drones son la herramienta tecnológica que permite cartografiar volúmenes de acopio, inspeccionar tajos inaccesibles y vigilar áreas extensas de forma rápida y segura."
+      },
+      {
+        "text": "Sensores IoT de calidad de aire",
+        "isCorrect": false,
+        "rationale": "Estos dispositivos monitorean concentraciones de gases y material particulado en tiempo real dentro de galerías o talleres, pero no realizan topografía."
+      },
+      {
+        "text": "Simuladores de operación",
+        "isCorrect": false,
+        "rationale": "Son módulos virtuales de entrenamiento utilizados para capacitar a los operadores en la conducción de maquinaria pesada antes de abordar el equipo real."
+      },
+      {
+        "text": "Robótica de perforación",
+        "isCorrect": false,
+        "rationale": "Se emplea para automatizar el labrado de taladros o muestreo físico de rocas sin exponer a los operadores a caída de rocas."
+      },
+      {
+        "text": "Sistemas de localización RTLS",
+        "isCorrect": false,
+        "rationale": "Se utilizan para rastrear el posicionamiento en tiempo real de vehículos de transporte de mineral y personal, no para fotogrametría aérea."
+      }
+    ],
+    "hint": "Identifica el dispositivo aéreo no tripulado utilizado ampliamente para inspección remota y cartografía 3D en minería.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco del control de gestión minera, ¿cuáles de las siguientes caracterizaciones describen correctamente los objetivos y ejecutores de las auditorías internas y regulatorias?",
+    "opciones": [
+      {
+        "text": "Las auditorías internas son ejecutadas por personal de la propia empresa con el fin de evaluar la eficiencia del control interno y el cumplimiento de políticas.",
+        "isCorrect": true,
+        "rationale": "El equipo propio evalúa los procesos operativos, identifica no conformidades y propone medidas correctivas antes de inspecciones oficiales."
+      },
+      {
+        "text": "Las auditorías regulatorias son realizadas por entidades estatales (como SUNAFIL, SUNAT o MINEM) para verificar el estricto cumplimiento de la legislación vigente.",
+        "isCorrect": true,
+        "rationale": "Las inspecciones públicas velan por el acatamiento de las leyes tributarias, laborales, de seguridad minera y ambientales de cumplimiento obligatorio."
+      },
+      {
+        "text": "Las auditorías regulatorias ambientales evalúan el cumplimiento de marcos legales como la Ley General del Ambiente (Ley 28611).",
+        "isCorrect": true,
+        "rationale": "Fiscalizan que la gestión de efluentes, efluentes mineros y manejo de residuos peligrosos se ajuste a los límites máximos permisibles de la ley ambiental."
+      },
+      {
+        "text": "Las auditorías internas son dirigidas exclusivamente por firmas independientes de contabilidad para certificar balances ante los accionistas.",
+        "isCorrect": false,
+        "rationale": "La validación independiente de balances contables para accionistas o entidades bancarias corresponde a la auditoría financiera externa."
+      },
+      {
+        "text": "Las auditorías regulatorias tienen como único propósito validar los estados financieros del CAPEX y OPEX para entidades bancarias.",
+        "isCorrect": false,
+        "rationale": "El propósito de las auditorías gubernamentales o regulatorias es verificar la legalidad y el cumplimiento normativo, no evaluar presupuestos de inversión privada."
+      }
+    ],
+    "hint": "Diferencia entre las revisiones ejecutadas por el propio personal de la empresa para eficiencia interna y aquellas llevadas a cabo por organismos del Estado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En las auditorías externas de certificación e inspección (como las realizadas por SGS o Bureau Veritas) a los almacenes e inventarios mineros, ¿cuál es el puntaje mínimo de aprobación en la escala de 100 puntos y qué política se recomienda respecto a los costos de obsolescencia?",
+    "opciones": [
+      {
+        "text": "Un puntaje mínimo de 70 puntos y la liquidación de existencias obsoletas dentro de un periodo máximo de 5 años.",
+        "isCorrect": true,
+        "rationale": "Las certificadoras fijan una nota mínima aprobatoria de 70/100, recomendando liquidar o depurar el inventario sin rotación en ciclos no mayores a 5 años para evitar sobrecostos."
+      },
+      {
+        "text": "Un puntaje mínimo de 50 puntos y la acumulación indefinida de inventario obsoleto para no reducir activos.",
+        "isCorrect": false,
+        "rationale": "Un puntaje de 50 no alcanza el estándar aprobatorio y retener existencias obsoletas distorsiona el valor real del inventario al generar costos de almacenamiento ineficientes."
+      },
+      {
+        "text": "Un puntaje mínimo de 85 puntos y la eliminación semestral obligatoria de todos los repuestos sin rotación.",
+        "isCorrect": false,
+        "rationale": "La nota estándar requerida es de 70 puntos y desechar repuestos críticos cada seis meses desabastecería las mantenciones estratégicas de la planta."
+      },
+      {
+        "text": "Un puntaje mínimo de 60 puntos y la revalorización ascendente periódica del stock dañado.",
+        "isCorrect": false,
+        "rationale": "El puntaje mínimo es 70 y los productos dañados o inservibles deben castigarse o ser liquidados en lugar de aumentar su valor contable."
+      },
+      {
+        "text": "Un puntaje mínimo de 95 puntos y la liquidación decenal de mermas únicamente ante fiscalización de SUNAT.",
+        "isCorrect": false,
+        "rationale": "Aunque grandes mineras alcanzan más de 80 o 90 puntos, la exigencia aprobatoria base es 70, y esperar 10 años para gestionar mermas arruina la rotación logística."
+      }
+    ],
+    "hint": "Identifica la nota mínima aprobatoria requerida por las certificadoras y el periodo máximo recomendado para liquidar existencias obsoletas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la unidad minera San Miguel se detectó un almacenamiento inadecuado al encontrar detonadores junto con explosivos en el polvorín (violando el DS 055-2010-EM) y un faltante de 32 cartuchos. ¿Qué conjunto de medidas correctivas aplicó la empresa para levantar la sanción de SUCAMEC y el MINEM?",
+    "opciones": [
+      {
+        "text": "Integración del ERP (SAP) con tecnología RFID, reestructuración física del polvorín, control biométrico de acceso y capacitación en DS 055-2010 e ISO 45001.",
+        "isCorrect": true,
+        "rationale": "La combinación de la separación física de accesorios, la automatización del kárdex mediante RFID-ERP, la restricción biométrica y el reentrenamiento normativo resolvió la causa raíz del hallazgo."
+      },
+      {
+        "text": "Sustitución de los explosivos por dinamita sintética, eliminación de los registros contables manuales y contratación de mayor personal de seguridad sin acreditación.",
+        "isCorrect": false,
+        "rationale": "No atiende la segregación física requerida legalmente entre accesorios de iniciación y altos explosivos ni garantiza la trazabilidad exigida por SUCAMEC."
+      },
+      {
+        "text": "Traslado del polvorín a una comunidad vecina, desmantelamiento del sistema RFID y auditorías anuales externas exclusivas.",
+        "isCorrect": false,
+        "rationale": "Ubicar el polvorín cerca de la población vulnera las distancias de seguridad y quitar la tecnología RFID destruye el control de existencias."
+      },
+      {
+        "text": "Tercerización completa de las voladuras sin registro de ingreso, cambio del jefe de almacén y uso libre de llaves digitales.",
+        "isCorrect": false,
+        "rationale": "La tercerización no exime a la titular minera del control de kárdex ni de implementar acceso restringido biométrico a las instalaciones del polvorín."
+      },
+      {
+        "text": "Pago de la multa de 50 UIT manteniendo la misma distribución del polvorín y realizando conteos periódicos manuales sin RFID.",
+        "isCorrect": false,
+        "rationale": "Cancelar la multa financiera sin subsanar las deficiencias físicas y tecnológicas mantiene suspendida la autorización de almacenamiento."
+      }
+    ],
+    "hint": "Revisa las soluciones tecnológicas, físicas, de control biométrico y formativas que permitieron la reapertura del permiso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Durante la manipulación y almacenamiento del nitrato de amonio de baja densidad y la emulsión matriz en una operación minera de voladura, ¿qué controles de calidad operativos deben realizarse obligatoriamente?",
+    "opciones": [
+      {
+        "text": "Medición de la densidad y verificación del porcentaje de finos del nitrato de amonio al momento del arribo a la mina.",
+        "isCorrect": true,
+        "rationale": "Permite verificar si el insumo sufrió degradación física por manipuleo o si llegó con desviaciones desde la planta del proveedor."
+      },
+      {
+        "text": "Control de la fecha de fabricación y administración de la rotación en los silos según el principio de antigüedad (FIFO/PEPS).",
+        "isCorrect": true,
+        "rationale": "Garantiza el consumo del material más antiguo evitando la cristalización de la emulsión o el apelmazamiento del nitrato en el silo."
+      },
+      {
+        "text": "Verificación de los certificados de calidad emitidos por la planta manufacturera conforme a la ficha técnica de la emulsión.",
+        "isCorrect": true,
+        "rationale": "Asegura que los parámetros porcentuales de fase oxidante y combustible cumplan con los requerimientos metalúrgicos y de seguridad."
+      },
+      {
+        "text": "Mezclado deliberado de lotes antiguos con nuevos dentro del silo para promediar la viscosidad sin registro de fechas.",
+        "isCorrect": false,
+        "rationale": "Esta práctica induce deflagraciones imprevistas, descomposición acelerada y la consecuente generación perjudicial de gases nitrosos tóxicos."
+      },
+      {
+        "text": "Omisión de la toma de muestras en la parte superior de la cisterna para evitar el contacto con el aire.",
+        "isCorrect": false,
+        "rationale": "La toma de muestra en la parte superior de la cisterna al ingresar a la mina es un requisito clave no afectado por el proceso de vaciado al silo."
+      }
+    ],
+    "hint": "Considera las pruebas físicas a la llegada del insumo para determinar si las desviaciones ocurren dentro o fuera de la mina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el proceso de preparación de mezclas explosivas pesadas (Heavy ANFO / Heavy Emulsion), ¿cuál es la función técnica de la solución de nitrito de sodio ($NaNO_2$) inyectada por el camión fábrica?",
+    "opciones": [
+      {
+        "text": "Actuar como solución gasificante que sensibiliza la mezcla explosiva mediante la formación de burbujas y la reducción de la densidad.",
+        "isCorrect": true,
+        "rationale": "El nitrito de sodio reacciona químicamente en la matriz generando microburbujas de gas que ajustan la densidad final y otorgan la sensibilidad requerida para ser detonada."
+      },
+      {
+        "text": "Funcionar como un retardante químico para evitar la detonación accidental del cianuro de sodio.",
+        "isCorrect": false,
+        "rationale": "No interactúa con el cianuro de sodio; se utiliza exclusivamente dentro del sistema de carguío de agentes de voladura en minería a tajo abierto."
+      },
+      {
+        "text": "Aumentar la humedad relativa del taladro para evitar la dispersión de polvo de carbón.",
+        "isCorrect": false,
+        "rationale": "Añadir humedad no es el objetivo de la solución de nitrito, ya que el agua en exceso desensibiliza y destruye la mezcla explosiva."
+      },
+      {
+        "text": "Neutralizar la presencia de agua ácida dentro de los taladros profundos mediante precipitación de sulfatos.",
+        "isCorrect": false,
+        "rationale": "El reactivo se dosifica para la reacción interna de gasificación de la emulsión y no para tratamiento ambiental del agua del pozo."
+      },
+      {
+        "text": "Solidificar la emulsión matriz para convertirla en cartuchos rígidos de alto poder rompedor.",
+        "isCorrect": false,
+        "rationale": "La gasificación modifica la densidad manteniendo una textura bombeable o vertible, sin convertir el producto en un explosivo encartuchado rígido."
+      }
+    ],
+    "hint": "Reflexiona sobre el agente químico que genera microburbujas para sensibilizar la mezcla y reducir su densidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Durante el armado y control del circuito de detonación electrónica en mallas de voladura complejas a tajo abierto, ¿cuáles de los siguientes ensayos o diagnósticos del sistema son críticos antes de autorizar el disparo?",
+    "opciones": [
+      {
+        "text": "Ejecución del prelogueo para validar la comunicación de cada detonador e identificar fugas de corriente o daños en el cable.",
+        "isCorrect": true,
+        "rationale": "El prelogueo verifica la integridad eléctrica individual de cada detonador tras el tapado de los taladros con el taco."
+      },
+      {
+        "text": "Realización del test de control periódico (cada 20 minutos) para monitorear el comportamiento de la malla de voladura.",
+        "isCorrect": true,
+        "rationale": "Las revisiones sistemáticas aseguran que el circuito no sufra desconexiones por tránsito de equipos o movimientos de terreno antes de la iniciación."
+      },
+      {
+        "text": "Detección y corrección del \"detonador intruso\" mediante búsqueda binaria cuando un dispositivo está conectado sin tiempo de retardo asignado.",
+        "isCorrect": true,
+        "rationale": "Localizar y aislar un detonador sin retardo evita fallos de lectura, errores de detonación fuera de secuencia o detonaciones no deseadas."
+      },
+      {
+        "text": "Ignorar las caídas de voltaje de la red siempre que el controlador principal encienda la pantalla.",
+        "isCorrect": false,
+        "rationale": "Las fugas de corriente o caídas de voltaje generan fallos de encendido que provocan tiros cortados extremadamente peligrosos."
+      },
+      {
+        "text": "Realizar las pruebas de señal RF directamente al lado del taladro cargado a menos de un metro de distancia sin prueba previa de equipo.",
+        "isCorrect": false,
+        "rationale": "Las pruebas de señal de radiofrecuencia deben realizarse guardando las distancias de seguridad y tras haber aprobado el autotest del hardware."
+      }
+    ],
+    "hint": "Identifica las pruebas de comunicación, fuga de corriente e identificación de detonadores no asignados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al evaluar la curva de gasificación de una mezcla explosiva cargada por un camión fábrica, se observa que en el minuto 0 la densidad mide $1.32\\text{ g/cm}^3$ y tras transcurrir 30 minutos desciende a $1.20\\text{ g/cm}^3$. Si el rango especificado de densidad objetivo es de $1.25$ a $1.27\\text{ g/cm}^3$, ¿qué acción operativa debe requerir el supervisor al operador del camión?",
+    "opciones": [
+      {
+        "text": "Ajustar el porcentaje de inyección de la solución gasificante para calibrar la densidad de la mezcla dentro del intervalo regulatorio objetivo de $1.25$ a $1.27\\text{ g/cm}^3$.",
+        "isCorrect": true,
+        "rationale": "Dado que la densidad cayó por debajo del intervalo tolerado tras los 30 minutos, se requiere recalibrar la tasa de inyección de nitrito para estabilizar la mezcla en el valor deseado."
+      },
+      {
+        "text": "Detener la voladura por completo y desechar toda la emulsión del camión por considerarse inutilizable.",
+        "isCorrect": false,
+        "rationale": "Una desviación menor en la velocidad de gasificación se resuelve ajustando los parámetros mecánicos del camión fábrica sin desechar la matriz."
+      },
+      {
+        "text": "Agregar agua directamente al taladro para forzar la reducción de densidad por dilución química.",
+        "isCorrect": false,
+        "rationale": "Añadir agua destruye las propiedades de la emulsión, desensibilizando la carga y generando un fallo de detonación."
+      },
+      {
+        "text": "Reducir el tiempo de mezclado a cero segundos para evitar que la densidad vuelva a cambiar.",
+        "isCorrect": false,
+        "rationale": "Omite la homogenización indispensable para que la reacción de las microburbujas se distribuya uniformemente en la columna."
+      },
+      {
+        "text": "Incrementar la carga de tacos de piedra pesada para comprimir mecánicamente la densidad hasta $1.40\\text{ g/cm}^3$.",
+        "isCorrect": false,
+        "rationale": "La densificación excesiva invalida la sensibilización de la mezcla impidiendo que detone adecuadamente al paso de la onda de choque."
+      }
+    ],
+    "hint": "Analiza si la densidad a los 5 minutos o en el tiempo intermedio está por encima o por debajo del límite permitido y cómo ajustar la dosificación del agente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En voladuras de alta complejidad en minería a tajo abierto con problemas de cresta o sobretamaños superficiales, ¿qué propósito técnico cumple la colocación de un taco intermedio con emulsión encartuchada en la zona superior (collar) del taladro?",
+    "opciones": [
+      {
+        "text": "Distribuir eficientemente la energía explosiva en la zona del collar para mejorar la fragmentación superficial y evitar bloques de gran tamaño.",
+        "isCorrect": true,
+        "rationale": "Ubicar una carga de emulsión encartuchada en la parte superior rompe la masa rocosa del collar sin eyectar el taco inerte, reduciendo los bolones o sobretamaños."
+      },
+      {
+        "text": "Sellar herméticamente el taladro para evitar que los gases de nitrógeno salgan por la parte inferior del banco.",
+        "isCorrect": false,
+        "rationale": "El taco del collar no influye en la base del banco, sino en la distribución de energía en la masa rocosa superior."
+      },
+      {
+        "text": "Reducir el costo del explosivo sustituyendo la emulsión a granel por dinamita agrícola de baja potencia.",
+        "isCorrect": false,
+        "rationale": "Su aplicación responde a un diseño geotécnico de fragmentación y no a un reemplazo por insumos no autorizados."
+      },
+      {
+        "text": "Evitar el uso de detonadores electrónicos permitiendo el encendido por mecha lenta en el collar.",
+        "isCorrect": false,
+        "rationale": "Las operaciones complejas utilizan iniciación electrónica precisa en toda la columna para controlar la vibración y fragmentación."
+      },
+      {
+        "text": "Disminuir la densidad final de la columna de agua ácida acumulada en el fondo del pozo.",
+        "isCorrect": false,
+        "rationale": "El collar se encuentra en la parte superior del taladro y no modifica la presencia ni acidez del agua en la cuña de fondo."
+      }
+    ],
+    "hint": "Piensa en cómo se distribuye la energía en la parte superior del banco para fragmentar rocas grandes sin pulverizar el taco final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el transporte terrestre de materiales peligrosos (HazMat) dentro de la logística minera peruana, ¿cuál es el marco legal regulatorio emitido por el MTC que fija los requisitos de señalización, hojas de ruta y licencias especiales para las flotas?",
+    "opciones": [
+      {
+        "text": "Decreto Supremo 021-2008-MTC",
+        "isCorrect": true,
+        "rationale": "Este decreto regula las condiciones operativas, rótulos, planes de contingencia y requisitos de los conductores para el transporte de materiales peligrosos por vía terrestre."
+      },
+      {
+        "text": "Decreto Supremo 055-2010-EM",
+        "isCorrect": false,
+        "rationale": "Esta norma es el Reglamento de Explosivos de Uso Civil administrado por el Ministerio de Energía y Minas."
+      },
+      {
+        "text": "Ley 28611",
+        "isCorrect": false,
+        "rationale": "Corresponde a la Ley General del Ambiente que fija los principios de la política ambiental nacional."
+      },
+      {
+        "text": "Decreto Supremo 040-2014-EM",
+        "isCorrect": false,
+        "rationale": "Regula la gestión de protección ambiental dentro del ámbito de los proyectos y operaciones mineras del MINEM."
+      },
+      {
+        "text": "Decreto Supremo 024-2016-EM",
+        "isCorrect": false,
+        "rationale": "Establece el Reglamento de Seguridad y Salud Ocupacional en Minería, enfocado en el entorno laboral de la unidad."
+      }
+    ],
+    "hint": "Identifica el Decreto Supremo expedido por el Ministerio de Transportes y Comunicaciones en el año 2008.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Las sustancias peligrosas utilizadas en los procesos mineros presentan características intrínsecas que determinan su nivel de riesgo operativo. ¿Cuáles de las siguientes características corresponden a la clasificación técnica de peligrosidad de insumos químicos?",
+    "opciones": [
+      {
+        "text": "Corrosividad: capacidad de desgastar sólidos y producir lesiones en tejidos vivos mediante acción química.",
+        "isCorrect": true,
+        "rationale": "Describe el ataque químico que destruye metales, estanques y causa quemaduras graves en la piel u ojos."
+      },
+      {
+        "text": "Inflamabilidad: capacidad de iniciar combustión provocada por la elevación de temperatura o fuentes de ignición.",
+        "isCorrect": true,
+        "rationale": "Corresponde a los insumos líquidos o gaseosos que arden fácilmente liberando calor en presencia de una llama o chispa."
+      },
+      {
+        "text": "Toxicidad: capacidad de causar efectos nefastos o letales en la salud a bajas concentraciones.",
+        "isCorrect": true,
+        "rationale": "Abarca sustancias como el cianuro o el ácido sulfhídrico ($H_2S$) que provocan intoxicaciones graves o paros sistémicos."
+      },
+      {
+        "text": "Inercia química: imposibilidad absoluta de reaccionar ante calor, humedad o fricción.",
+        "isCorrect": false,
+        "rationale": "La inercia química indica ausencia de peligro de reactividad, lo cual es opuesto a la clasificación de reactividad peligrosa."
+      },
+      {
+        "text": "Biodegradabilidad inmediata: propiedad de transformarse en agua limpia en menos de dos segundos tras un derrame.",
+        "isCorrect": false,
+        "rationale": "Los insumos químicos peligrosos mineros no se degradan instantáneamente y generan contaminación de suelos si no son contenidos."
+      }
+    ],
+    "hint": "Recuerda las propiedades que forman el acrónimo de peligrosidad ambiental y laboral (corrosión, reactividad, toxicidad, etc.).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un contenedor ubicado en el almacén central de una mina exhibe el Rombo NFPA 704 con los siguientes valores: Azul = 3, Rojo = 4, Amarillo = 0, Blanco = $W$ con una barra horizontal. ¿Cómo se interpreta correctamente este nivel de peligro?",
+    "opciones": [
+      {
+        "text": "Sustancia muy peligrosa para la salud (3), extremada y rápidamente inflamable a temperatura ambiente (4), estable (0) y que reacciona de manera peligrosa con el agua ($W$ cruzada).",
+        "isCorrect": true,
+        "rationale": "El valor 3 en azul indica peligro severo para la salud, el 4 en rojo señala máxima inflamabilidad, el 0 en amarillo estabilidad química y la W tachada prohíbe el uso de agua."
+      },
+      {
+        "text": "Sustancia sin riesgo para la salud (0), que no se inflama (0), altamente explosiva al choque (3) y corrosiva (COR).",
+        "isCorrect": false,
+        "rationale": "Intercambia erróneamente las posiciones y códigos numéricos de los cuadrantes del rombo de la NFPA."
+      },
+      {
+        "text": "Sustancia mortal por inhalación (4), con punto de inflamación sobre los $93^\\circ\\text{C}$ (1), inestable al calentamiento (1) y oxidante (OX).",
+        "isCorrect": false,
+        "rationale": "Asigna un nivel de salud de 4 en lugar del 3 indicado y reduce falsamente la categoría de inflamabilidad."
+      },
+      {
+        "text": "Sustancia poco peligrosa (1), inflamable debajo de $37^\\circ\\text{C}$ (3), que sufre cambio químico violento (2) y radioactiva.",
+        "isCorrect": false,
+        "rationale": "Confunde la escala numérica estándar asignando valores bajos a la salud y alterando el cuadrante de reactividad."
+      },
+      {
+        "text": "Sustancia corrosiva en estado gaseoso (3), no inflamable (0), inestable (4) y compatible con sistemas de extinción a base de agua.",
+        "isCorrect": false,
+        "rationale": "La letra W con una barra horizontal exige explícitamente evitar el agua debido a reacciones violentas o peligrosas."
+      }
+    ],
+    "hint": "Analiza la gravedad numérica de salud (azul), inflamabilidad (rojo), reactividad (amarillo) y la advertencia especial sobre el agua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la inspección de transporte de combustibles y lubricantes en una ruta minera, se deben verificar las placas Naranja con el Número de las Naciones Unidas (Código UN). ¿Qué código UN corresponde correctamente al Gas Licuado de Petróleo (GLP) y a la Gasolina respectivamente?",
+    "opciones": [
+      {
+        "text": "UN 1075 para GLP y UN 1203 para Gasolina.",
+        "isCorrect": true,
+        "rationale": "La clasificación del Libro Naranja de la ONU establece el código UN 1075 para hidrocarburos licuados/GLP y el código UN 1203 para combustibles líquidos de gasolina."
+      },
+      {
+        "text": "UN 1993 para GLP y UN 1270 para Gasolina.",
+        "isCorrect": false,
+        "rationale": "UN 1993 corresponde a combustible diésel o líquidos inflamables no especificados, mientras que UN 1270 identifica aceites lubricantes de petróleo."
+      },
+      {
+        "text": "UN 1203 para GLP y UN 1075 para Gasolina.",
+        "isCorrect": false,
+        "rationale": "Invierte la asignación oficial de los números de la ONU entre el gas licuado presurizado y la gasolina líquida."
+      },
+      {
+        "text": "UN 1270 para GLP y UN 1993 para Gasolina.",
+        "isCorrect": false,
+        "rationale": "Asigna el código de aceites lubricantes de baja inflamabilidad al GLP y el del diésel a la gasolina."
+      },
+      {
+        "text": "UN 1111 para GLP y UN 2222 para Gasolina.",
+        "isCorrect": false,
+        "rationale": "Corresponden a combinaciones numéricas inventadas que no existen en la tabla oficial de mercancías peligrosas MTC/ONU."
+      }
+    ],
+    "hint": "Recuerda la codificación numérica de mercancías peligrosas asignada para hidrocarburos volátiles y gases licuados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Las Hojas de Datos de Seguridad (HDS / MSDS) estructuradas bajo el Sistema Globalmente Armonizado (SGA) constan de 16 secciones estandarizadas. ¿Cuáles de las siguientes secciones contienen la información operativa crítica requerida para la manipulación, almacenamiento y actuación ante emergencias de fuego?",
+    "opciones": [
+      {
+        "text": "Sección 4: Medidas de primeros auxilios ante exposición o contacto accidental.",
+        "isCorrect": true,
+        "rationale": "Detalla los procedimientos inmediatos de atención médica, lavados de ojos o antídotos ante inhalación o contacto físico."
+      },
+      {
+        "text": "Sección 5: Medidas de lucha contra incendios y agentes de extinción recomendados.",
+        "isCorrect": true,
+        "rationale": "Especifica el tipo de extintor adecuado (A, B, C, D) y los EPP especiales exigidos para combatir el fuego de esa sustancia."
+      },
+      {
+        "text": "Sección 7: Manipulación y almacenamiento seguro de las sustancias.",
+        "isCorrect": true,
+        "rationale": "Instruye al personal logístico sobre las condiciones de segregación, ventilación, temperatura e incompatibilidades químicas."
+      },
+      {
+        "text": "Sección 17: Estimación de costos de venta y proveedores alternativos.",
+        "isCorrect": false,
+        "rationale": "Las Hojas HDS constan estrictamente de 16 secciones y no abordan variables comerciales ni precios de compra."
+      },
+      {
+        "text": "Sección 20: Registro de firmas de asistencia a charlas de seguridad.",
+        "isCorrect": false,
+        "rationale": "El formato internacional SGA finaliza en la sección 16 y los registros de asistencia no forman parte del documento técnico del reactivo."
+      }
+    ],
+    "hint": "Revisa los apartados específicos dedicados a procedimientos de primeros auxilios, medidas contra incendios y almacenamiento seguro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el etiquetado de reactivos mineros bajo el Sistema Globalmente Armonizado (SGA), ¿cuál es la diferencia visual y conceptual entre el pictograma de una sustancia \"Inflamable\" y el de una sustancia \"Comburente\"?",
+    "opciones": [
+      {
+        "text": "El pictograma de Inflamable muestra solo una llama, mientras que el de Comburente muestra una llama sobre un círculo (anillo), indicando que este último aporta oxígeno y aviva el fuego de otros materiales.",
+        "isCorrect": true,
+        "rationale": "El símbolo de comburente incorpora el círculo de oxígeno en la base de la llama para advertir que el producto provoca o agrava la combustión de terceros."
+      },
+      {
+        "text": "El pictograma de Inflamable tiene fondo amarillo con una calavera, mientras que el Comburente es una bomba explotando.",
+        "isCorrect": false,
+        "rationale": "Confunde el peligro con los pictogramas de toxicidad aguda (calavera) y explosividad (bomba en detonación)."
+      },
+      {
+        "text": "El pictograma de Comburente muestra un cilindro de gas de color verde, mientras que el Inflamable es un signo de exclamación.",
+        "isCorrect": false,
+        "rationale": "Mezcla los símbolos de gas a presión (cilindro) e irritación cutánea/toxicidad (signo de exclamación)."
+      },
+      {
+        "text": "Ambas etiquetas son idénticas y la única diferencia es la palabra de advertencia impresa en la parte inferior.",
+        "isCorrect": false,
+        "rationale": "El SGA mantiene gráficos diferenciados para distinguir sustancias que arden por sí mismas de aquellas que oxidan a otros combustibles."
+      },
+      {
+        "text": "El pictograma de Inflamable se aplica solo a sólidos, mientras que el Comburente se usa exclusivamente para corrosivos líquidos.",
+        "isCorrect": false,
+        "rationale": "Ambas clasificaciones aplican a sólidos, líquidos o gases dependiendo de sus propiedades termoquímicas y no de su estado físico."
+      }
+    ],
+    "hint": "Observa el detalle gráfico en la base de la llama dentro del rombo con borde rojo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "El apéndice C y D del Sistema Globalmente Armonizado (SGA) definen la codificación de advertencias para sustancias químicas. ¿Qué significados corresponden a las Frases H y Frases P en las etiquetas?",
+    "opciones": [
+      {
+        "text": "Las Frases H (Hazard statements) indican la naturaleza y gravedad de los peligros físicos y para la salud que presenta la sustancia.",
+        "isCorrect": true,
+        "rationale": "Describen el riesgo intrínseco como la inflamabilidad o la toxicidad mediante frases estandarizadas numeradas."
+      },
+      {
+        "text": "Las Frases P (Precautionary statements) aconsejan las medidas de prudencia para prevenir o minimizar los efectos adversos durante el manejo, almacenamiento y eliminación.",
+        "isCorrect": true,
+        "rationale": "Proporcionan instrucciones operativas de actuación y prevención de accidentes para el operador que manipula el producto."
+      },
+      {
+        "text": "Los dígitos numéricos de las frases H200 a H300 clasifican peligros de explosividad e inflamabilidad de forma consecutiva.",
+        "isCorrect": true,
+        "rationale": "El rango H200-H299 agrupa los peligros físicos del reactivo químico bajo el estándar armonizado."
+      },
+      {
+        "text": "Las Frases H corresponden exclusivamente a la lista de precios e impuestos de la SUNAT para insumos fiscalizados.",
+        "isCorrect": false,
+        "rationale": "Son códigos técnicos de comunicación de peligro químico y no tienen ninguna relación con regulaciones tributarias o arancelarias."
+      },
+      {
+        "text": "Las Frases P representan el número de placa obligatorio del vehículo escolta de transporte.",
+        "isCorrect": false,
+        "rationale": "Corresponden a declaraciones de prudencia preventiva (Precaution) y no a patentes de transporte terrestre."
+      }
+    ],
+    "hint": "Asocia la letra H a las indicaciones de peligro (Hazard) y la letra P a los consejos de prudencia (Precaution).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una minera desea implementar un sistema de trazabilidad integral en tiempo real para rastrear la ubicación, peso y despacho del concentrado de mineral transportado en camiones desde la mina hasta el puerto de embarque. ¿Qué combinación tecnológica permite registrar cada evento de forma inmutable y automática en la cadena de suministro?",
+    "opciones": [
+      {
+        "text": "Dispositivos RFID para identificación automática conectados con tecnología Blockchain y software TMS/ERP.",
+        "isCorrect": true,
+        "rationale": "El RFID automatiza la lectura en garita, el GPS/TMS monitorea la ruta y la tecnología Blockchain registra las transacciones de custodia de forma inmutable."
+      },
+      {
+        "text": "Hojas de cálculo locales compartidas por correo electrónico al final de cada semana.",
+        "isCorrect": false,
+        "rationale": "El registro manual en archivos locales no brinda inmutabilidad, carece de actualización en tiempo real y es altamente susceptible a errores."
+      },
+      {
+        "text": "Radios de comunicación de onda corta sin respaldo de datos digitales.",
+        "isCorrect": false,
+        "rationale": "La radio verbal no permite automatizar lecturas de peso, kárdex ni garantiza la trazabilidad digital no modificable."
+      },
+      {
+        "text": "Tacógrafos análogos de papel impreso guardados en la cabina del camión.",
+        "isCorrect": false,
+        "rationale": "Los tacógrafos físicos no se integran a la red logística corporativa ni evitan el extravío de información de carga en ruta."
+      },
+      {
+        "text": "Formularios impresos escaneados en formato PDF una vez al mes en el puerto.",
+        "isCorrect": false,
+        "rationale": "El procesamiento extemporáneo destruye la capacidad de respuesta inmediata ante desviaciones o mermas durante el transporte."
+      }
+    ],
+    "hint": "Piensa en la tecnología de identificación por radiofrecuencia combinada con un libro de registro digital descentralizado e inalterable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Ante un evento de derrame accidental de concentrado de mineral de cobre en una carretera pública rural, ¿qué acciones inmediatas exige el protocolo de respuesta ante emergencias logísticas?",
+    "opciones": [
+      {
+        "text": "Detener el vehículo inmediatamente y señalizar el área afectada para prevenir accidentes adicionales de tránsito.",
+        "isCorrect": true,
+        "rationale": "Garantiza la seguridad vial en la carretera impidiendo que otros vehículos pasen sobre el material disperso."
+      },
+      {
+        "text": "Notificar inmediatamente al centro de control interno y a las autoridades competentes (OEFA, PNP y MINEM).",
+        "isCorrect": true,
+        "rationale": "El reporte normativo a la OEFA y al MINEM es obligatorio para coordinar la fiscalización y la respuesta institucional."
+      },
+      {
+        "text": "Desplegar la brigada de contingencia utilizando geomembranas para contener el concentrado y evitar la dispersión al suelo o fuentes de agua.",
+        "isCorrect": true,
+        "rationale": "La barrera física detiene la infiltración de metales en el terreno o en cursos hídricos comunitarios."
+      },
+      {
+        "text": "Continuar la marcha del camión a alta velocidad para descargar el remanente en el puerto antes de reportar el incidente.",
+        "isCorrect": false,
+        "rationale": "Abandonar la zona del derrame dispersa más contaminación en la ruta y constituye un delito ambiental grave."
+      },
+      {
+        "text": "Ocultar el concentrado derramado cubriéndolo con vegetación local sin realizar descontaminación ni informe técnico.",
+        "isCorrect": false,
+        "rationale": "Incurre en negligencia ambiental y acarrea sanciones administrativas y penales severas para la titular minera."
+      }
+    ],
+    "hint": "Considera las medidas secuenciales de detención, aislamiento físico, reporte a organismos reguladores y remediación del suelo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso práctico de la empresa Minera del Sur (transporte de concentrado de Cuzco a Matarani, 480 km), ¿qué impacto cuantitativo en la seguridad y eficiencia se logró tras la implementación del Plan de Logística Segura?",
+    "opciones": [
+      {
+        "text": "Reducción de accidentes graves (de 7 a 1 sin derrame), disminución de incidentes ambientales a 0, reducción del tiempo de viaje de 22 a 19 horas y aumento de la eficiencia de combustible de $2.8$ a $3.2\\text{ km/gal}$.",
+        "isCorrect": true,
+        "rationale": "El monitoreo satelital, la capacitación de conductores y los controles de ruta redujeron drásticamente la accidentabilidad y mejoraron el rendimiento de la flota."
+      },
+      {
+        "text": "Aumento del tiempo de transporte a 48 horas, incremento de fugas ambientales a 12 casos y pérdida total del permiso de transitar por Arequipa.",
+        "isCorrect": false,
+        "rationale": "Representa un deterioro operativo opuesto a las métricas reales del plan de logística minera aplicadas en el caso."
+      },
+      {
+        "text": "Mantenimiento exacto de la misma tasa de 7 accidentes anuales y reducción del rendimiento de diésel a $1.0\\text{ km/gal}$.",
+        "isCorrect": false,
+        "rationale": "Ignora las mejoras reales obtenidas mediante la matriz IPERC y el control de velocidad en la ruta del concentrado."
+      },
+      {
+        "text": "Eliminación completa de los camiones sustituyéndolos por un canal submarino de transporte de concentrado.",
+        "isCorrect": false,
+        "rationale": "Propone una infraestructura técnicamente inviable para cubrir el trayecto terrestre de alta montaña entre Cuzco y Matarani."
+      },
+      {
+        "text": "Reducción del tiempo de viaje a 2 horas sobrepasando los límites de velocidad permitidos sin control de GPS.",
+        "isCorrect": false,
+        "rationale": "Manejar a velocidad desmedida vulnera el DS 021-2008-MTC e incrementa el riesgo de vuelco de las tolvas."
+      }
+    ],
+    "hint": "Observa la reducción de los accidentes de tránsito, la eliminación de derrames ambientales y la mejora en el rendimiento de combustible.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Según los estándares internacionales y protocolos de seguridad para áreas de almacenamiento y manipulación de materiales peligrosos (HazMat), ¿cuáles de las siguientes restricciones para el personal son de cumplimiento estricto y obligatorio?",
+    "opciones": [
+      {
+        "text": "Prohibición estricta de fumar, comer o beber dentro de los espacios donde se manipulen o almacenen sustancias peligrosas.",
+        "isCorrect": true,
+        "rationale": "Evita la ignición de atmósferas combustibles y la ingestión accidental de trazas tóxicas depositas en alimentos."
+      },
+      {
+        "text": "Prohibición absoluta de retirar de las instalaciones industriales la ropa de trabajo o equipos de protección personal (EPP) contaminados.",
+        "isCorrect": true,
+        "rationale": "Previene la contaminación cruzada hacia los hogares de los trabajadores y el entorno comunitario externo."
+      },
+      {
+        "text": "Obligación del personal de informar de inmediato a su supervisor directo si sus aptitudes físicas o medicamentos disminuyen su capacidad operativa.",
+        "isCorrect": true,
+        "rationale": "Asegura que solo personal plenamente apto opere maniobras críticas de alto riesgo con reactivos o reactores."
+      },
+      {
+        "text": "Permitir el uso de la ropa de trabajo contaminada con ácido en eventos comunitarios fuera de la mina.",
+        "isCorrect": false,
+        "rationale": "Exponer vestimenta con residuos corrosivos fuera de la unidad vulnera los principios de higiene industrial y salud comunitaria."
+      },
+      {
+        "text": "Autorizar el almacenamiento de almuerzos y bebidas dentro de los armarios de almacenamiento de cianuro de sodio.",
+        "isCorrect": false,
+        "rationale": "Guardar alimentos junto a sales tóxicas representa una condición subestándar grave que provoca fatalidades directas."
+      }
+    ],
+    "hint": "Evalúa las prohibiciones referidas al consumo de alimentos, tabaco y el manejo de ropa de trabajo contaminada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-71",
+    "diplomado": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso de la unidad minera Los Bronces (Anglo American) en Chile, ¿qué medida estratégica de mediano y largo plazo se propuso para resolver el conflicto social por el tránsito de camiones con cal y sustancias peligrosas en la ruta G21?",
+    "opciones": [
+      {
+        "text": "Restricción nocturna de camiones mayores a 10 metros, certificación de conductores élite y sustitución paulatina del transporte terrestre por mineroductos y tuberías confinadas para ácido y diésel.",
+        "isCorrect": true,
+        "rationale": "El plan combinó restricciones operativas inmediatas con proyectos de ingeniería a largo plazo para desplazar los insumos líquidos de la red vial pública hacia mineroductos confinados."
+      },
+      {
+        "text": "Cancelación definitiva del procesamiento de cal y cierre de la planta de molienda de forma inmediata.",
+        "isCorrect": false,
+        "rationale": "La compañía no suspendió el procesamiento, sino que optimizó la logística mediante transferencias neumáticas y la mesa tripartita."
+      },
+      {
+        "text": "Aumento del flujo de camionetas ligeras durante el día sin coordinación con la mesa tripartita de la comunidad.",
+        "isCorrect": false,
+        "rationale": "El acuerdo exigía reducir drásticamente el número de camionetas y consolidar el transporte en buses y camiones de mayor capacidad."
+      },
+      {
+        "text": "Pavimentación de la ruta con capas de plástico desechable sin implementar escoltas ni cámaras LED.",
+        "isCorrect": false,
+        "rationale": "La minera aportó millones en infraestructura vial real y equipó a los vehículos escolta con cámaras y señalización LED avanzada."
+      },
+      {
+        "text": "Obligar a la comunidad a evacuar la zona de la ruta G21 sin ofrecer alternativas de transporte ni diálogo.",
+        "isCorrect": false,
+        "rationale": "La estrategia buscó licencias sociales mediante mesas de diálogo tripartito y compromisos ambientales compartidos."
+      }
+    ],
+    "hint": "Revisa las soluciones tecnológicas y de transporte confinada diseñadas para sacar el transporte pesado de la vía pública comunitariamente sensible.",
+    "activo": true
+  }
+]

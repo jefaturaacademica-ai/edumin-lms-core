@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste fundamentalmente la gestión de la cadena de suministro según lo expuesto en el curso?",
+    "opciones": [
+      {
+        "text": "Integrar y sincronizar los flujos físicos, financieros y de información de la organización.",
+        "isCorrect": true,
+        "rationale": "La gestión de la cadena de suministro busca coordinar eficientemente los flujos de materiales, información y finanzas entre los actores involucrados."
+      },
+      {
+        "text": "Supervisar exclusivamente el despacho final de los productos a través de medios de transporte terrestre.",
+        "isCorrect": false,
+        "rationale": "El transporte final es solo un eslabón del proceso integral y no representa la totalidad de la gestión."
+      },
+      {
+        "text": "Administrar únicamente los contratos de trabajo del personal del área de logística.",
+        "isCorrect": false,
+        "rationale": "La administración de contratos laborales pertenece al área de recursos humanos y no a la integración operativa de la cadena."
+      },
+      {
+        "text": "Eliminar de forma permanente el uso de inventarios y almacenes en la empresa.",
+        "isCorrect": false,
+        "rationale": "La cadena de suministro busca optimizar el almacenamiento y los inventarios, no eliminarlos de manera absoluta."
+      },
+      {
+        "text": "Realizar la contabilidad financiera anual y la auditoría tributaria de la empresa.",
+        "isCorrect": false,
+        "rationale": "Estas tareas corresponden al departamento contable y fiscal, no a la sincronización logística de bienes y servicios."
+      }
+    ],
+    "hint": "Piensa en el proceso integral que abarca desde los proveedores de materias primas hasta la entrega al cliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal hacia el cual se orientan las decisiones en la cadena de suministro?",
+    "opciones": [
+      {
+        "text": "Satisfacer las necesidades del cliente en tiempo y forma.",
+        "isCorrect": true,
+        "rationale": "El cliente es el eje central y el objetivo fundamental hacia el cual se dirigen todos los esfuerzos operativos de la cadena."
+      },
+      {
+        "text": "Maximizar la cantidad de productos almacenados en bodegas.",
+        "isCorrect": false,
+        "rationale": "El exceso de almacenamiento genera costos innecesarios y riesgo de obsolescencia."
+      },
+      {
+        "text": "Reducir la velocidad del transporte para evitar costos de combustible.",
+        "isCorrect": false,
+        "rationale": "Retrasar deliberadamente las entregas afecta la satisfacción del usuario y la eficiencia general."
+      },
+      {
+        "text": "Sustituir la mano de obra humana en un cien por ciento inmediatamente.",
+        "isCorrect": false,
+        "rationale": "La tecnología busca complementar y optimizar los procesos, no reemplazar de manera irrazonable el factor humano."
+      },
+      {
+        "text": "Limitar las ventas únicamente al mercado local más cercano.",
+        "isCorrect": false,
+        "rationale": "La cadena de suministro puede abarcar mercados regionales, nacionales o globales según la estrategia de la empresa."
+      }
+    ],
+    "hint": "Considera cuál es la parte interesada fundamental al final del proceso comercial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué característica distingue a la 'estrategia de respuesta' en la cadena de suministro frente a perturbaciones del mercado?",
+    "opciones": [
+      {
+        "text": "La flexibilidad para realizar ajustes rápidos ante cambios en la demanda.",
+        "isCorrect": true,
+        "rationale": "La estrategia de respuesta se basa en reaccionar con agilidad y flexibilidad ante las fluctuaciones del mercado."
+      },
+      {
+        "text": "La acumulación masiva de existencias adicionales como amortiguador.",
+        "isCorrect": false,
+        "rationale": "Acumular reservas masivas de inventario corresponde a la estrategia de absorción, no de respuesta."
+      },
+      {
+        "text": "El mantenimiento riguroso de procesos rígidos e inalterables.",
+        "isCorrect": false,
+        "rationale": "La rigidez impide responder rápidamente a los choques e imprevistos de la oferta o demanda."
+      },
+      {
+        "text": "El cierre temporal de operaciones hasta que la demanda se estabilice.",
+        "isCorrect": false,
+        "rationale": "Detener las actividades paraliza el negocio y destruye la competitividad en el mercado."
+      },
+      {
+        "text": "La cancelación de todos los pedidos a proveedores extranjeros.",
+        "isCorrect": false,
+        "rationale": "Cancelar pedidos no es una estrategia de flexibilidad, sino un quiebre en la planificación de suministros."
+      }
+    ],
+    "hint": "Piensa en la capacidad de adaptarse velozmente versus crear colchones de inventario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes tecnologías emergentes se destacan en la Clase 1 para mejorar y optimizar los procesos logísticos?",
+    "opciones": [
+      {
+        "text": "Inteligencia Artificial (IA)",
+        "isCorrect": true,
+        "rationale": "Permite planificar rutas, predecir la demanda y tomar decisiones predictivas avanzadas."
+      },
+      {
+        "text": "Gemelos Digitales (Digital Twins)",
+        "isCorrect": true,
+        "rationale": "Facilitan la creación de simulaciones virtuales 3D para probar escenarios operativos sin riesgo real."
+      },
+      {
+        "text": "Blockchain",
+        "isCorrect": true,
+        "rationale": "Proporciona cifrado descentralizado y trazabilidad transparente en los contratos y envíos."
+      },
+      {
+        "text": "Libros contables físicos en papel",
+        "isCorrect": false,
+        "rationale": "El registro físico en papel es un método tradicional que genera demoras y no constituye una tecnología emergente digital."
+      },
+      {
+        "text": "Calculadoras mecánicas analógicas",
+        "isCorrect": false,
+        "rationale": "Las calculadoras analógicas son herramientas obsoletas superadas por el procesamiento digital y de Big Data."
+      }
+    ],
+    "hint": "Selecciona las herramientas tecnológicas digitales y avanzadas mencionadas en la lección inicial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define el concepto de 'gemelo digital' (Digital Twin) aplicado a la logística?",
+    "opciones": [
+      {
+        "text": "Una simulación virtual en 3D que modela objetos, almacenes y procesos para probar escenarios sin riesgos.",
+        "isCorrect": true,
+        "rationale": "Los gemelos digitales replican digitalmente infraestructuras y operaciones para prever fallas y probar diseños de manera segura."
+      },
+      {
+        "text": "Una copia impresa de respaldo de todas las facturas del almacén.",
+        "isCorrect": false,
+        "rationale": "Un duplicado en papel es simplemente un archivo físico y no una representación computacional interactiva."
+      },
+      {
+        "text": "El trabajo en equipo realizado por dos operarios con las mismas funciones.",
+        "isCorrect": false,
+        "rationale": "El término no hace referencia al personal humano, sino a modelos informáticos de simulación."
+      },
+      {
+        "text": "Un tipo de vehículo de carga que transporta dos contenedores idénticos.",
+        "isCorrect": false,
+        "rationale": "No se trata de un vehículo de transporte doble, sino de un modelo informático virtual."
+      },
+      {
+        "text": "Un contrato duplicado firmado con dos proveedores diferentes.",
+        "isCorrect": false,
+        "rationale": "Un contrato paralelo es una herramienta jurídica, no un modelo digital simulado de procesos."
+      }
+    ],
+    "hint": "Asocia el término con representaciones computacionales virtuales para hacer experimentos sin peligro operativo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es uno de los beneficios clave de automatizar almacenes con robots de selección y carros guiados (AGVs)?",
+    "opciones": [
+      {
+        "text": "Minimizar los errores en el manejo de mercancías y acelerar la productividad.",
+        "isCorrect": true,
+        "rationale": "La automatización del almacén agiliza el movimiento de productos y reduce significativamente las equivocaciones humanas en el conteo."
+      },
+      {
+        "text": "Aumentar los costos de almacenamiento por unidad producida.",
+        "isCorrect": false,
+        "rationale": "El objetivo de incorporar robótica es precisamente reducir los costos unitarios y operativos a largo plazo."
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar software de control de existencias.",
+        "isCorrect": false,
+        "rationale": "Los robots requieren de un software integrado (como el WMS) para funcionar correctamente."
+      },
+      {
+        "text": "Hacer más lentas las entregas de última milla a los clientes.",
+        "isCorrect": false,
+        "rationale": "La eficiencia en almacén se traduce en despachos más rápidos, no más lentos."
+      },
+      {
+        "text": "Evitar la realización de auditorías de inventario.",
+        "isCorrect": false,
+        "rationale": "Las auditorías siguen siendo necesarias para contrastar la información física y digital."
+      }
+    ],
+    "hint": "Piensa en el impacto de la robótica en la velocidad de las operaciones y la precisión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué busca determinar el modelo clásico de Cantidad Económica de Pedido (EOQ)?",
+    "opciones": [
+      {
+        "text": "La cantidad de pedido que minimiza la suma de los costos de ordenar y mantener inventario.",
+        "isCorrect": true,
+        "rationale": "El EOQ busca un equilibrio matemático entre los costos generados al pedir mercancía y los costos de almacenarla."
+      },
+      {
+        "text": "El número total de empleados requeridos en el almacén de distribución.",
+        "isCorrect": false,
+        "rationale": "El EOQ es un modelo de inventarios, no una fórmula para el cálculo de la plantilla de personal."
+      },
+      {
+        "text": "La ruta de transporte marítimo más rápida entre dos continentes.",
+        "isCorrect": false,
+        "rationale": "La planificación de rutas de transporte es distinta al cálculo de la dimensión del pedido de compra."
+      },
+      {
+        "text": "El precio de venta final que se debe cobrar al consumidor en tienda.",
+        "isCorrect": false,
+        "rationale": "El precio de comercialización se define mediante márgenes comerciales y análisis del mercado, no por la fórmula EOQ."
+      },
+      {
+        "text": "La fecha exacta de caducidad de los productos perecederos.",
+        "isCorrect": false,
+        "rationale": "Las fechas de caducidad dependen de las características biológicas o químicas del producto, no del lote económico de compra."
+      }
+    ],
+    "hint": "Se trata de encontrar el lote óptimo de compra equilibrando dos tipos de costos financieros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la clasificación de inventarios del Análisis ABC, ¿cuál es la característica principal de los artículos de 'Categoría A'?",
+    "opciones": [
+      {
+        "text": "Representan una alta proporción del valor total del inventario y requieren un control riguroso.",
+        "isCorrect": true,
+        "rationale": "Los productos A son los más valiosos económicamente o los más críticos para la empresa, demandando supervisión estricta."
+      },
+      {
+        "text": "Son los productos más baratos y de menor consumo en la organización.",
+        "isCorrect": false,
+        "rationale": "Esa descripción corresponde a los artículos de categoría C, que tienen un bajo valor relativo."
+      },
+      {
+        "text": "Son artículos desechados que ya no tienen ninguna utilidad operativa.",
+        "isCorrect": false,
+        "rationale": "El análisis ABC clasifica existencias útiles según su importancia, no residuos o mermas irrecuperables."
+      },
+      {
+        "text": "Representan siempre el noventa por ciento del volumen físico almacenado.",
+        "isCorrect": false,
+        "rationale": "Los artículos A suelen representar un porcentaje bajo en cantidad física (20%), pero alto en valor monetario (80%)."
+      },
+      {
+        "text": "Son productos que no necesitan controles de reposición.",
+        "isCorrect": false,
+        "rationale": "Debido a su alto valor, los productos A son los que requieren las políticas de control más sofisticadas."
+      }
+    ],
+    "hint": "Recuerda la regla de Pareto (80/20) aplicada al valor monetario de las existencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes representan ventajas del uso de drones con escáneres en la administración de inventarios?",
+    "opciones": [
+      {
+        "text": "Reducción considerable del tiempo dedicado a las auditorías de existencias.",
+        "isCorrect": true,
+        "rationale": "Los drones pueden volar a través de los pasillos del almacén y escanear códigos a gran velocidad."
+      },
+      {
+        "text": "Acceso ágil a productos ubicados en alturas elevadas del almacén.",
+        "isCorrect": true,
+        "rationale": "Permiten registrar mercancía en estanterías de varios metros sin necesidad de elevar a personal en montacargas."
+      },
+      {
+        "text": "Captura rápida y automatizada de datos de códigos de barra o RFID.",
+        "isCorrect": true,
+        "rationale": "Optimizan la lectura masiva de datos reduciendo la intervención manual repetitiva."
+      },
+      {
+        "text": "Eliminación total del costo de energía eléctrica en la empresa.",
+        "isCorrect": false,
+        "rationale": "Los drones requieren recarga de baterías eléctricas, por lo que no eliminan el consumo energético."
+      },
+      {
+        "text": "Reemplazo completo de las inspecciones de calidad de los productos.",
+        "isCorrect": false,
+        "rationale": "El dron escanea datos de ubicación y código, pero no reemplaza las pruebas de funcionamiento o estado físico."
+      }
+    ],
+    "hint": "Identifica cómo la tecnología aérea no tripulada optimiza el conteo y escaneo en grandes alturas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia sustancial entre la estrategia de inventario Just in Time (JIT) y la de Just in Case (JIC)?",
+    "opciones": [
+      {
+        "text": "JIT busca tener el stock mínimo necesario solicitando según la demanda, mientras JIC mantiene existencias de seguridad preventivas.",
+        "isCorrect": true,
+        "rationale": "JIT minimiza el almacenamiento recibiendo productos justo cuando se necesitan, mientras que JIC guarda un colchón de stock preventivo."
+      },
+      {
+        "text": "JIT se aplica únicamente para alimentos perecederos y JIC exclusivamente para productos electrónicos.",
+        "isCorrect": false,
+        "rationale": "Ambos modelos de gestión de existencias se pueden adaptar a diversos sectores industriales según la estrategia elegida."
+      },
+      {
+        "text": "JIT requiere almacenes gigantescos, mientras JIC elimina por completo el uso de bodegas.",
+        "isCorrect": false,
+        "rationale": "La relación es inversa: JIT reduce el espacio de bodega requerido al disminuir las existencias almacenadas."
+      },
+      {
+        "text": "JIT no utiliza tecnología digital y JIC funciona exclusivamente de forma automatizada.",
+        "isCorrect": false,
+        "rationale": "JIT requiere una sincronización tecnológica muy alta con proveedores para funcionar eficazmente."
+      },
+      {
+        "text": "JIT aumenta los costos de almacenamiento al máximo y JIC los reduce a cero.",
+        "isCorrect": false,
+        "rationale": "Al contrario, JIT apunta a minimizar el costo de mantenimiento en bodega."
+      }
+    ],
+    "hint": "Compara la idea de 'producir/pedir solo lo necesario al instante' frente a 'guardar por si ocurre una contingencia'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué beneficios aporta la implementación de tecnología de radiofrecuencia (RFID) junto a sensores de Internet de las Cosas (IoT) en los inventarios?",
+    "opciones": [
+      {
+        "text": "Monitoreo de existencias y ubicación en tiempo real.",
+        "isCorrect": true,
+        "rationale": "La combinación de RFID e IoT transmite constantemente datos sobre la presencia y posición exacta de los artículos."
+      },
+      {
+        "text": "Control automatizado de condiciones ambientales como temperatura y humedad.",
+        "isCorrect": true,
+        "rationale": "Los sensores IoT miden parámetros físicos críticos para proteger la mercancía sensible."
+      },
+      {
+        "text": "Disminución del margen de pérdidas por extravío o mala ubicación de mercancía.",
+        "isCorrect": true,
+        "rationale": "La trazabilidad continua evita la pérdida de productos dentro de grandes bodegas."
+      },
+      {
+        "text": "Garantía de que los proveedores venderán su materia prima sin cobrar.",
+        "isCorrect": false,
+        "rationale": "La tecnología optimiza la trazabilidad, pero no modifica los compromisos de pago comerciales."
+      },
+      {
+        "text": "Alteración física de los insumos para evitar su caducidad.",
+        "isCorrect": false,
+        "rationale": "Los sensores y etiquetas rastrean y miden variables, pero no cambian la composición química del insumo."
+      }
+    ],
+    "hint": "Considera las ventajas de tener rastreo digital constante e información del estado físico de las cargas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué indica el 'Punto de Reorden' (ROP) dentro de la administración de existencias?",
+    "opciones": [
+      {
+        "text": "El nivel límite de inventario que señala el momento exacto en que debe emitirse un nuevo pedido de reposición.",
+        "isCorrect": true,
+        "rationale": "El punto de reorden establece la cantidad mínima en stock que activa una orden de compra para no caer en desabastecimiento."
+      },
+      {
+        "text": "La velocidad máxima a la que los camiones de reparto deben transitar en carretera.",
+        "isCorrect": false,
+        "rationale": "Las regulaciones de tránsito vehicular no guardan relación con los umbrales de reabastecimiento en almacén."
+      },
+      {
+        "text": "La cantidad total de estantes físicos que se deben construir en la bodega.",
+        "isCorrect": false,
+        "rationale": "El ROP es una métrica de volumen de existencias para ordenar, no un indicador de infraestructura civil."
+      },
+      {
+        "text": "El porcentaje de descuento que se solicitará al proveedor por compras masivas.",
+        "isCorrect": false,
+        "rationale": "Los descuentos comerciales se acuerdan en la negociación de compras y no definen el momento de reordenar."
+      },
+      {
+        "text": "La hora del día en que el personal del almacén debe tomar su descanso.",
+        "isCorrect": false,
+        "rationale": "El punto de reorden es una medida cuantitativa de existencias, no un horario laboral de los trabajadores."
+      }
+    ],
+    "hint": "Piensa en la señal o umbral numérico que le dice a compras: 'es hora de pedir más mercancía'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la estrategia de almacenamiento conocida como Cross-Docking?",
+    "opciones": [
+      {
+        "text": "Transferir los productos directamente desde la recepción hasta el despacho con un almacenamiento mínimo o nulo.",
+        "isCorrect": true,
+        "rationale": "El Cross-Docking busca consolidar y mover la mercancía de entrada de inmediato a los transportes de salida, evitando guardar el stock."
+      },
+      {
+        "text": "Guardar mercancía en contenedores estancos debajo del agua para ahorrar espacio.",
+        "isCorrect": false,
+        "rationale": "El término no guarda relación con almacenamiento marítimo sumergido, sino con el paso directo entre muelles de carga."
+      },
+      {
+        "text": "Prohibir el ingreso de vehículos de carga pesada a las instalaciones de la empresa.",
+        "isCorrect": false,
+        "rationale": "Esta estrategia requiere el flujo constante de camiones de recepción y despacho para transferir las cargas."
+      },
+      {
+        "text": "Acumular productos durante más de un año en el almacén para esperar mejores precios.",
+        "isCorrect": false,
+        "rationale": "El objetivo del Cross-Docking es precisamente eliminar la permanencia prolongada del producto en la bodega."
+      },
+      {
+        "text": "Clasificar los insumos únicamente por el color de sus empaques externos.",
+        "isCorrect": false,
+        "rationale": "La clasificación se basa en destinos de envío y despachos rápidos, no en criterios estéticos de empaque."
+      }
+    ],
+    "hint": "Imagina mercancía que cruza el muelle de llegada al muelle de salida casi de forma directa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función primordial de los programas informáticos especializados en la planificación de rutas (como Route4Me, PTV o Waze)?",
+    "opciones": [
+      {
+        "text": "Calcular los trayectos más eficientes para reducir tiempos de viaje, consumo de combustible y costos.",
+        "isCorrect": true,
+        "rationale": "El software de rutas analiza distancias, tráfico y horarios para estructurar el itinerario óptimo de la flota de reparto."
+      },
+      {
+        "text": "Disminuir automáticamente el salario de los conductores de los vehículos.",
+        "isCorrect": false,
+        "rationale": "La planificación de itinerarios optimiza variables operativas, no modifica las condiciones salariales de los empleados."
+      },
+      {
+        "text": "Diseñar los empaques de cartón que protegerán a las mercancías.",
+        "isCorrect": false,
+        "rationale": "El diseño de empaques es parte de la ingeniería de producto y embalaje, no del trazado informático de rutas de transporte."
+      },
+      {
+        "text": "Reemplazar los contratos de compraventa de la empresa.",
+        "isCorrect": false,
+        "rationale": "Un sistema de rutas es una herramienta de navegación y logística, no un documento legal de transacción."
+      },
+      {
+        "text": "Supervisar el pago de impuestos corporativos de fin de año.",
+        "isCorrect": false,
+        "rationale": "Las obligaciones tributarias son gestionadas por sistemas contables, no por plataformas de planificación de itinerarios."
+      }
+    ],
+    "hint": "Asocia la herramienta con la optimización de trayectos, el tráfico y las distancias terrestres.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes corresponden a etapas estratégicas en el proceso de manejo y gestión de proveedores?",
+    "opciones": [
+      {
+        "text": "Identificación y selección basada en criterios de calidad y competitividad.",
+        "isCorrect": true,
+        "rationale": "Implica buscar en el mercado las opciones que cumplan con las necesidades técnicas y económicas requeridas."
+      },
+      {
+        "text": "Evaluación y homologación mediante auditorías y certificaciones.",
+        "isCorrect": true,
+        "rationale": "Permite verificar que el proveedor cumple con normativas (como las normas ISO) y estándares de calidad."
+      },
+      {
+        "text": "Negociación contractual de precios, plazos de entrega y garantías.",
+        "isCorrect": true,
+        "rationale": "Define las bases comerciales y las responsabilidades operativas entre ambas empresas."
+      },
+      {
+        "text": "Destrucción inmediata de materias primas recibidas de buena calidad.",
+        "isCorrect": false,
+        "rationale": "Desechar insumos conformes genera pérdidas financieras graves e irrazonables."
+      },
+      {
+        "text": "Ocultamiento de datos de entrega a la propia dirección de la empresa.",
+        "isCorrect": false,
+        "rationale": "La gestión de proveedores exige transparencia e indicadores medibles para la toma de decisiones."
+      }
+    ],
+    "hint": "Selecciona las acciones ordenadas que permiten elegir, validar y contratar a un suministrador confiable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo opera la tecnología de identificación por radiofrecuencia (RFID) en el control de mercancías?",
+    "opciones": [
+      {
+        "text": "Mediante ondas electromagnéticas que transmiten datos entre una etiqueta adherida al producto y un lector.",
+        "isCorrect": true,
+        "rationale": "El RFID no requiere contacto visual directo, capturando la información del producto a través de señales de radiofrecuencia."
+      },
+      {
+        "text": "A través de llamadas telefónicas manuales realizadas por los operarios de bodega.",
+        "isCorrect": false,
+        "rationale": "El RFID es un sistema de lectura digital de datos y no una comunicación de voz por teléfono."
+      },
+      {
+        "text": "Utilizando señales de humo generadas en los centros de acopio.",
+        "isCorrect": false,
+        "rationale": "Es una tecnología digital basada en señales electromagnéticas, no un método rudimentario analógico."
+      },
+      {
+        "text": "Mediante la pesaje físico en balanzas mecánicas manuales únicamente.",
+        "isCorrect": false,
+        "rationale": "El RFID transmite códigos de identificación digitales y no se limita al peso físico del paquete."
+      },
+      {
+        "text": "Por medio de inspecciones de grabado manual con buril en las cajas.",
+        "isCorrect": false,
+        "rationale": "Las etiquetas RFID son chips o dispositivos electrónicos, no grabados mecánicos artesanales."
+      }
+    ],
+    "hint": "Recuerda que utiliza la transmisión inalámbrica mediante ondas para leer datos sin necesidad de visión directa cableada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué caracteriza a los 'cobots' o robots colaborativos en el entorno de la automatización de almacenes?",
+    "opciones": [
+      {
+        "text": "Están diseñados para trabajar de manera directa y segura junto a los operarios humanos.",
+        "isCorrect": true,
+        "rationale": "A diferencia de la robótica industrial pesada aislada, los cobots interactúan en un espacio compartido apoyando al trabajador."
+      },
+      {
+        "text": "Funcionan de forma totalmente aislada dentro de celdas cerradas sin presencia humana.",
+        "isCorrect": false,
+        "rationale": "Los robots tradicionales rígidos requieren celdas cerradas, mientras los cobots colaboran directamente con personas."
+      },
+      {
+        "text": "Son juguetes a escala que se utilizan para decorar las oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "Son equipos industriales automatizados diseñados para la manipulación y apoyo operativo real."
+      },
+      {
+        "text": "Son vehículos que únicamente pueden conducirse de forma manual en carreteras.",
+        "isCorrect": false,
+        "rationale": "Son brazos o asistentes robóticos programados para tareas operativas dentro de plantas y almacenes."
+      },
+      {
+        "text": "Son sistemas operativos obsoletos que ya no reciben actualización de software.",
+        "isCorrect": false,
+        "rationale": "Representan avances de vanguardia en la automatización interactiva e industrial."
+      }
+    ],
+    "hint": "Observa el prefijo 'co-' que evoca cooperación y trabajo asistido al lado de las personas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son objetivos esenciales perseguidos por la metodología Lean Manufacturing cuando se aplica a la logística?",
+    "opciones": [
+      {
+        "text": "Eliminar actividades que no aportan valor añadido (desperdicios).",
+        "isCorrect": true,
+        "rationale": "El principio central de Lean es la reducción sistemática del despilfarro en tiempo, materiales y movimientos."
+      },
+      {
+        "text": "Optimizar los tiempos de flujo y espera en los procesos de almacén.",
+        "isCorrect": true,
+        "rationale": "Busca hacer más fluida la operación eliminando cuellos de botella innecesarios."
+      },
+      {
+        "text": "Estandarizar las operaciones para aumentar la eficiencia operativa.",
+        "isCorrect": true,
+        "rationale": "Establecer métodos claros y repetibles disminuye la variabilidad y el error humano."
+      },
+      {
+        "text": "Duplicar la cantidad de desperdicios generados en las plantas.",
+        "isCorrect": false,
+        "rationale": "El objetivo de Lean es erradicar los desperdicios, jamás incrementarlos."
+      },
+      {
+        "text": "Fomentar desplazamientos innecesarios del personal por toda la bodega.",
+        "isCorrect": false,
+        "rationale": "Los desplazamientos sin sentido se consideran desperdicio de movimiento y Lean busca erradicarlos."
+      }
+    ],
+    "hint": "Enfócate en los conceptos de eliminación del desperdicio, estandarización y eficiencia en los flujos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de las funciones estratégicas del almacenamiento, ¿en qué consiste la 'custodia y conservación'?",
+    "opciones": [
+      {
+        "text": "Proteger las mercancías contra daños, deterioros y condiciones ambientales inadecuadas.",
+        "isCorrect": true,
+        "rationale": "La custodia busca preservar la integridad física y el valor de los productos durante su permanencia en bodega."
+      },
+      {
+        "text": "Vender los bienes al menor precio posible antes de ser inspeccionados.",
+        "isCorrect": false,
+        "rationale": "La venta o liquidación comercial no forma parte de la función física de resguardo en bodega."
+      },
+      {
+        "text": "Fabricar los productos desde cero utilizando maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "La manufactura es la etapa de transformación previa al ingreso al almacén de producto terminado."
+      },
+      {
+        "text": "Modificar el empaque original para cambiar la marca del fabricante.",
+        "isCorrect": false,
+        "rationale": "Alterar marcas no corresponde a la conservación segura de los bienes bajo resguardo."
+      },
+      {
+        "text": "Transportar los pedidos directamente hacia otros países.",
+        "isCorrect": false,
+        "rationale": "El transporte internacional forma parte de la distribución externa y no del resguardo dentro de la infraestructura del almacén."
+      }
+    ],
+    "hint": "Piensa en el cuidado, la protección del estado físico de los bienes y la seguridad de la mercancía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se fundamenta el método de preparación de pedidos denominado 'Pick by Zone'?",
+    "opciones": [
+      {
+        "text": "Dividir el almacén en sectores delimitados asignando a operarios específicos a cada área para reducir desplazamientos.",
+        "isCorrect": true,
+        "rationale": "Cada trabajador recolecta solo los productos correspondientes a su zona delimitada, haciendo más rápida la selección."
+      },
+      {
+        "text": "Permitir que todos los empleados recorran todo el almacén sin ningún orden específico.",
+        "isCorrect": false,
+        "rationale": "Eso provocaría cruces innecesarios, largas distancias recorridas y congestión en los pasillos."
+      },
+      {
+        "text": "Enviar las ordenes de compra por correo postal tradicional sin usar computadoras.",
+        "isCorrect": false,
+        "rationale": "El Pick by Zone es una técnica de organización física de picking en bodega, no un canal postal de envíos."
+      },
+      {
+        "text": "Mezclar productos peligrosos con alimentos para optimizar el espacio.",
+        "isCorrect": false,
+        "rationale": "Mezclar cargas incompatibles viola las normas de seguridad y buenas prácticas de almacenamiento."
+      },
+      {
+        "text": "Apilar toda la mercancía en la entrada del establecimiento sin estanterías.",
+        "isCorrect": false,
+        "rationale": "La técnica requiere zonificación estructurada y estanterías para agilizar la preparación de pedidos."
+      }
+    ],
+    "hint": "Asocia el concepto con la división del mapa del almacén en sectores delimitados para cada operario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a factores (internos o externos) que impactan en la planificación de la demanda?",
+    "opciones": [
+      {
+        "text": "Temporadas y festividades anuales.",
+        "isCorrect": true,
+        "rationale": "Fechas como la Navidad o el verano generan alzas previsibles en el consumo de ciertos artículos."
+      },
+      {
+        "text": "Cambios en las tendencias y preferencias del consumidor.",
+        "isCorrect": true,
+        "rationale": "Las modas y hábitos del público modifican el volumen de compra de los artículos."
+      },
+      {
+        "text": "Decisiones internas de promociones, descuentos y cambios de precio.",
+        "isCorrect": true,
+        "rationale": "Las estrategias comerciales propias impulsan o reducen la velocidad de compra de los clientes."
+      },
+      {
+        "text": "El movimiento de la velocidad de rotación de la Tierra alrededor del Sol en segundos exactos.",
+        "isCorrect": false,
+        "rationale": "Las variables astronómicas no son indicadores operativos que determinen los patrones de compra comerciales."
+      },
+      {
+        "text": "La cantidad de páginas escritas en la libreta personal del gerente.",
+        "isCorrect": false,
+        "rationale": "No constituye una variable del mercado ni una estrategia interna que modifique las compras de los consumidores."
+      }
+    ],
+    "hint": "Busca elementos que alteren el volumen de ventas que solicitarán los clientes en un período determinado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la finalidad estratégica de contar con un 'stock de seguridad' en el almacén?",
+    "opciones": [
+      {
+        "text": "Proteger a la empresa contra fluctuaciones imprevistas de la demanda o retrasos en el suministro de proveedores.",
+        "isCorrect": true,
+        "rationale": "El inventario de seguridad actúa como un amortiguador para evitar rupturas de stock cuando el entorno varía de forma inesperada."
+      },
+      {
+        "text": "Aumentar voluntariamente la cantidad de productos vencidos en la bodega.",
+        "isCorrect": false,
+        "rationale": "Tener reservas busca respaldar las ventas, no provocar el vencimiento deliberado de los productos."
+      },
+      {
+        "text": "Llenar los pasillos de circulación hasta impedir el paso de montacargas.",
+        "isCorrect": false,
+        "rationale": "Obstruir pasillos pone en riesgo la seguridad y desacelera las operaciones."
+      },
+      {
+        "text": "Ocultar mercancía de las inspecciones tributarias oficiales.",
+        "isCorrect": false,
+        "rationale": "El stock de seguridad es una medida de planificación logística legal y no una maniobra de ocultamiento."
+      },
+      {
+        "text": "Evitar tener que realizar despachos a los clientes finales.",
+        "isCorrect": false,
+        "rationale": "Las reservas existen precisamente para asegurar que siempre se puedan atender las solicitudes de los clientes."
+      }
+    ],
+    "hint": "Considera un colchón de inventario que protege el servicio cuando ocurren demoras inesperadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En las técnicas de mejora de atención al cliente, ¿qué implica poner en práctica la 'escucha activa'?",
+    "opciones": [
+      {
+        "text": "Comprender con atención las necesidades reales del cliente para brindar respuestas asertivas y precisas.",
+        "isCorrect": true,
+        "rationale": "La escucha activa implica concentrarse totalmente en el mensaje del usuario para resolver su solicitud de manera efectiva."
+      },
+      {
+        "text": "Interrumpir constantemente al usuario mientras expone sus reclamos.",
+        "isCorrect": false,
+        "rationale": "Interrumpir genera frustración en el usuario e impide captar la información completa de su requerimiento."
+      },
+      {
+        "text": "Responder llamadas telefónicas utilizando mensajes grabados acelerados.",
+        "isCorrect": false,
+        "rationale": "La escucha activa es un proceso de interacción comprensiva y no la reproducción mecánica de grabaciones."
+      },
+      {
+        "text": "Ignorar la solicitud del cliente y transferir la llamada inmediatamente a otra área sin responder.",
+        "isCorrect": false,
+        "rationale": "Transferir al usuario sin atenderlo demuestra falta de compromiso con el servicio e insatisfacción."
+      },
+      {
+        "text": "Anotar únicamente el nombre del cliente y colgar la llamada de inmediato.",
+        "isCorrect": false,
+        "rationale": "Colgar la comunicación sin escuchar ni brindar respuesta destruye la relación comercial."
+      }
+    ],
+    "hint": "Piensa en el acto consciente de atender, procesar y entender las palabras del cliente antes de dar una solución.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes representan tecnologías utilizadas para mejorar la experiencia y satisfacción del cliente en la entrega de productos?",
+    "opciones": [
+      {
+        "text": "Sistemas de seguimiento en tiempo real del estado del pedido.",
+        "isCorrect": true,
+        "rationale": "Brindan visibilidad y tranquilidad al cliente al saber exactamente dónde se encuentra su envío."
+      },
+      {
+        "text": "Lockers inteligentes para retiro de compras a conveniencia del usuario.",
+        "isCorrect": true,
+        "rationale": "Permiten retirar paquetes de forma automatizada sin depender de horarios de repartidores a domicilio."
+      },
+      {
+        "text": "Chatbots para soporte automatizado 24/7.",
+        "isCorrect": true,
+        "rationale": "Facilitan la resolución inmediata de consultas frecuentes en cualquier momento del día."
+      },
+      {
+        "text": "Envío de telegramas en clave morse para confirmar la recepción.",
+        "isCorrect": false,
+        "rationale": "El uso del telégrafo morse es obsoleto y no brinda la inmediatez ni practicidad de los canales digitales."
+      },
+      {
+        "text": "Uso exclusivo de cartas enviadas en mensajería a caballo.",
+        "isCorrect": false,
+        "rationale": "El correo tradicional a caballo no responde a los estándares modernos de rapidez en la logística actual."
+      }
+    ],
+    "hint": "Selecciona las herramientas tecnológicas e inteligentes que ofrecen rapidez, rastreo e inmediatez al comprador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué utilidad tiene la recolección de 'feedback' o retroalimentación del cliente para la gestión empresarial?",
+    "opciones": [
+      {
+        "text": "Identificar oportunidades de mejora continua en los servicios e implementar correcciones rápidas.",
+        "isCorrect": true,
+        "rationale": "La retroalimentación revela los puntos débiles percibidos por el cliente, permitiendo ajustar los procesos operativos."
+      },
+      {
+        "text": "Sancionar económicamente a todos los clientes que emitan opiniones negativas.",
+        "isCorrect": false,
+        "rationale": "Castigar las opiniones destruye la reputación de la empresa y aleja a los consumidores."
+      },
+      {
+        "text": "Eliminar de manera permanente los departamentos de atención al cliente.",
+        "isCorrect": false,
+        "rationale": "El feedback sirve para fortalecer los canales de atención, no para desmantelar la comunicación con el cliente."
+      },
+      {
+        "text": "Aumentar automáticamente el tiempo necesario para preparar los despachos.",
+        "isCorrect": false,
+        "rationale": "La retroalimentación busca hacer los despachos más ágiles y eficientes, no dilatarlos."
+      },
+      {
+        "text": "Justificar la falta de inversión en tecnología de la empresa.",
+        "isCorrect": false,
+        "rationale": "Al contrario, el feedback suele evidenciar la necesidad de adoptar mejores herramientas tecnológicas."
+      }
+    ],
+    "hint": "Considéralo como un insumo valioso que detecta fallas y orienta los cambios positivos en el negocio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de los componentes clave de la cadena de suministro, ¿cuál es la función principal de la gestión de la demanda?",
+    "opciones": [
+      {
+        "text": "Planificar la cantidad necesaria de productos mediante predicciones para satisfacer las necesidades del mercado.",
+        "isCorrect": true,
+        "rationale": "La gestión de la demanda utiliza proyecciones estadísticas y de mercado para determinar las cantidades de bienes requeridos, evitando desabastecimientos o excesos de inventario."
+      },
+      {
+        "text": "Supervisar exclusivamente el cumplimiento de los tiempos de entrega por parte de los proveedores estratégicos.",
+        "isCorrect": false,
+        "rationale": "El seguimiento de los proveedores corresponde a la etapa de abastecimiento y gestión de compras, no a la proyección de la demanda del mercado."
+      },
+      {
+        "text": "Transformar las materias primas en productos terminados mediante procesos industriales estandarizados.",
+        "isCorrect": false,
+        "rationale": "La transformación de insumos es el núcleo de la fase de producción u operaciones industriales."
+      },
+      {
+        "text": "Garantizar la disponibilidad de espacio físico en las instalaciones de almacenamiento regional.",
+        "isCorrect": false,
+        "rationale": "La administración del espacio físico es una tarea operativa del área de almacenamiento y gestión de inventarios."
+      },
+      {
+        "text": "Atender de forma directa las devoluciones y reclamos presentados por los consumidores finales.",
+        "isCorrect": false,
+        "rationale": "La atención de reclamos y devoluciones forma parte de la logística inversa y del servicio al cliente postventa."
+      }
+    ],
+    "hint": "Se enfoca en estimar el consumo futuro antes de que este ocurra en el mercado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de cadenas de suministro resilientes frente a perturbaciones, ¿en qué consiste primordialmente la 'estrategia de absorción'?",
+    "opciones": [
+      {
+        "text": "En crear colchones o reservas estratégicas de inventario e infraestructura para asimilar los impactos en la oferta y demanda.",
+        "isCorrect": true,
+        "rationale": "La absorción añade capacidad o inventario adicional como amortiguador para tolerar choques sin interrumpir las operaciones, aunque incremente costos."
+      },
+      {
+        "text": "En modificar de forma acelerada las líneas de producción para cambiar de producto en tiempo real.",
+        "isCorrect": false,
+        "rationale": "La adaptación rápida en tiempo real mediante flexibilidad operativa define a la estrategia de respuesta, no a la de absorción."
+      },
+      {
+        "text": "En eliminar completamente la reserva de stock para operar únicamente bajo un modelo de producción ajustada.",
+        "isCorrect": false,
+        "rationale": "Eliminar reservas de stock es característico de modelos lean o Just-in-Time, los cuales minimizan amortiguadores."
+      },
+      {
+        "text": "En transferir el riesgo operativo a proveedores de logística de terceras partes (3PL) mediante cláusulas punitivas.",
+        "isCorrect": false,
+        "rationale": "La estrategia de absorción no se trata de tercerización ni de penalizaciones, sino de crear capacidad sobrante interna."
+      },
+      {
+        "text": "En subcontratar de inmediato flotas de transporte externas cuando se detecta congestión vehicular.",
+        "isCorrect": false,
+        "rationale": "La subcontratación rápida es una táctica de flexibilidad operativa asociada con la estrategia de respuesta."
+      }
+    ],
+    "hint": "Piensa en el uso de buffers o inventarios de reserva para amortiguar impactos inesperados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes constituyen ventajas directas derivadas de la implementación de tecnología Blockchain en la cadena de suministro?",
+    "opciones": [
+      {
+        "text": "Trazabilidad crítica e inalterable a lo largo de todo el proceso logístico.",
+        "isCorrect": true,
+        "rationale": "El registro descentralizado y cifrado permite rastrear el origen y trayectoria exacta de los lotes sin riesgo de manipulación de datos."
+      },
+      {
+        "text": "Ejecución automatizada de contratos inteligentes para agilizar autorizaciones y pagos.",
+        "isCorrect": true,
+        "rationale": "Los contratos inteligentes activan reglas predefinidas de forma automática al cumplirse los hilos de control logístico."
+      },
+      {
+        "text": "Transparencia de transacciones entre los diferentes actores de la red de suministros.",
+        "isCorrect": true,
+        "rationale": "Al compartir un libro contable distribuido, las partes interesadas acceden a la misma información verificada en tiempo real."
+      },
+      {
+        "text": "Sustitución completa del almacenamiento físico por archivos de datos digitales.",
+        "isCorrect": false,
+        "rationale": "El Blockchain gestiona flujos de información y datos, pero los bienes físicos requieren infraestructura de almacenamiento real."
+      },
+      {
+        "text": "Eliminación automática de cualquier tipo de arancel aduanero en envíos internacionales.",
+        "isCorrect": false,
+        "rationale": "La tecnología de cadena de bloques no exime el pago de tributos o aranceles establecidos por las normativas gubernamentales."
+      }
+    ],
+    "hint": "Considera la seguridad de los registros compartidos y la automatización de acuerdos contractuales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumplen los 'Gemelos Digitales' (Digital Twins) en la optimización de procesos logísticos y de almacén?",
+    "opciones": [
+      {
+        "text": "Crear modelos de simulación virtual en 3D para probar escenarios operativos y de diseño sin asumir riesgos reales.",
+        "isCorrect": true,
+        "rationale": "Los gemelos digitales replican entornos y activos físicos en software para experimentar cambios de diseño y predecir fallos sin detener ni arriesgar la operación real."
+      },
+      {
+        "text": "Duplicar físicamente las instalaciones de producción en dos regiones geográficas distintas.",
+        "isCorrect": false,
+        "rationale": "Un gemelo digital es una representación en software, no una réplica física de infraestructura o plantas."
+      },
+      {
+        "text": "Reemplazar los sistemas ERP tradicionales mediante lectores de radiofrecuencia integrados.",
+        "isCorrect": false,
+        "rationale": "No sustituyen a los ERP, sino que se integran con datos operativos para realizar analítica predictiva y simulaciones."
+      },
+      {
+        "text": "Generar automáticamente la facturación electrónica al momento de la salida del transporte.",
+        "isCorrect": false,
+        "rationale": "La facturación transaccional es una tarea propia de los sistemas contables y administrativos, no de la simulación digital."
+      },
+      {
+        "text": "Eliminar la necesidad de personal humano en la supervisión de rutas de distribución.",
+        "isCorrect": false,
+        "rationale": "La herramienta apoya la toma de decisiones humana proporcionando analítica, pero no prescinde por sí sola de la supervisión."
+      }
+    ],
+    "hint": "Su beneficio principal radica en la representación virtual y prueba de hipótesis sin riesgo operacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el modelo de la Cantidad Económica de Pedido ($EOQ$), expresado matemáticamente como $EOQ = \\sqrt{\\frac{2DS}{H}}$, ¿qué representa la variable $H$?",
+    "opciones": [
+      {
+        "text": "El costo de mantener una unidad de inventario almacenada durante un período determinado.",
+        "isCorrect": true,
+        "rationale": "En la ecuación $EOQ$, $H$ (Holding cost) representa el costo unitario de mantenimiento o almacenamiento del producto."
+      },
+      {
+        "text": "La demanda anual estimada del artículo en unidades.",
+        "isCorrect": false,
+        "rationale": "La demanda anual está representada por la variable $D$ (Demand)."
+      },
+      {
+        "text": "El costo fijo incurrido al emitir cada orden de compra o pedido.",
+        "isCorrect": false,
+        "rationale": "El costo fijo por pedido o preparación se representa con la variable $S$ (Setup/Order cost)."
+      },
+      {
+        "text": "El tiempo de espera o lead time requerido por el proveedor para entregar el insumo.",
+        "isCorrect": false,
+        "rationale": "El tiempo de reposición ($L$) se utiliza para determinar el punto de reorden, no forma parte del denominador básico del $EOQ$."
+      },
+      {
+        "text": "El porcentaje de merma histórica permitido en el almacén central.",
+        "isCorrect": false,
+        "rationale": "La tasa de merma no se representa directamente con la variable $H$ en la formulación clásica del $EOQ$."
+      }
+    ],
+    "hint": "Corresponde al gasto asociado a conservar el stock en bodega.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del Análisis ABC para la clasificación de inventarios, ¿qué característica define a los artículos catalogados en la 'Categoría A'?",
+    "opciones": [
+      {
+        "text": "Representan una alta proporción del valor monetario total del inventario y exigen un control riguroso.",
+        "isCorrect": true,
+        "rationale": "Los productos A constituyen típicamente un porcentaje bajo en volumen físico pero concentran la mayor parte del valor financiero, requiriendo seguimiento estricto."
+      },
+      {
+        "text": "Son artículos de baja rotación y valor insignificante que se compran en volúmenes masivos.",
+        "isCorrect": false,
+        "rationale": "Los productos de bajo valor monetario y baja criticidad suelen pertenecer a la Categoría C."
+      },
+      {
+        "text": "Son insumos descartables que no requieren registro en el sistema informático de la empresa.",
+        "isCorrect": false,
+        "rationale": "Todos los elementos del inventario deben registrarse, especialmente si impactan en la continuidad operativa."
+      },
+      {
+        "text": "Constituyen más del $80\\%$ del volumen físico acumulado en los anaqueles del almacén.",
+        "isCorrect": false,
+        "rationale": "En volumen físico, los productos A representan generalmente solo entre el $10\\%$ y $20\\%$ del total de ítems."
+      },
+      {
+        "text": "Poseen políticas de reposición flexibles e informales sin auditorías periódicas.",
+        "isCorrect": false,
+        "rationale": "Al concentrar el valor económico, los productos A exigen políticas de revisión continua y strictly medidas de seguridad."
+      }
+    ],
+    "hint": "Piensa en el principio de Pareto respecto al impacto financiero del inventario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son las diferencias operativas fundamentales entre los modelos de inventario Just-in-Time (JIT) y Just-in-Case?",
+    "opciones": [
+      {
+        "text": "JIT busca minimizar los inventarios al recibir productos solo cuando se necesitan, reduciendo costos de almacenamiento.",
+        "isCorrect": true,
+        "rationale": "El enfoque JIT sincroniza las entregas con la producción o venta para mantener el nivel de stock lo más cercano a cero."
+      },
+      {
+        "text": "Just-in-Case mantiene inventarios de seguridad adicionales para amortiguar posibles interrupciones en la cadena de suministro.",
+        "isCorrect": true,
+        "rationale": "El modelo Just-in-Case privilegia la disponibilidad sobre la eficiencia en costos mediante la acumulación de colchones de stock."
+      },
+      {
+        "text": "JIT requiere una sincronización y colaboración extremadamente alta con los proveedores.",
+        "isCorrect": true,
+        "rationale": "Cualquier falla en los tiempos del proveedor interrumpe de inmediato el flujo JIT al no existir inventarios de reserva."
+      },
+      {
+        "text": "Just-in-Case elimina la necesidad de contar con almacenes o centros de distribución.",
+        "isCorrect": false,
+        "rationale": "Por el contrario, Just-in-Case demanda mayor capacidad física de almacenamiento para resguardar los volúmenes de reserva."
+      },
+      {
+        "text": "JIT es inmune a las crisis globales de transporte o desabastecimiento de materias primas.",
+        "isCorrect": false,
+        "rationale": "JIT es sumamente vulnerable ante interrupciones de la cadena de suministro debido a la ausencia de buffers de seguridad."
+      }
+    ],
+    "hint": "Contrata el enfoque de cero stock frente a la estrategia de acumular reservas preventivas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera contribuye el uso de aeronaves no tripuladas (drones) a la eficiencia en la gestión interna de almacenes?",
+    "opciones": [
+      {
+        "text": "Acelerando la realización de auditorías de inventario mediante escaneo automatizado de códigos a gran altura.",
+        "isCorrect": true,
+        "rationale": "Los drones equipados con lectores ópticos o RFID recorren pasillos verticales y elevados rápidamente, reduciendo los tiempos de conteo e inspección."
+      },
+      {
+        "text": "Sustituyendo el uso de montacargas pesados en el traslado de paletas de más de dos toneladas.",
+        "isCorrect": false,
+        "rationale": "La capacidad de carga de los drones industriales es limitada y está orientada al escaneo e inspección, no al transporte de carga pesada."
+      },
+      {
+        "text": "Procesando de forma autónoma los pagos y facturación al cliente mediante enlaces satelitales.",
+        "isCorrect": false,
+        "rationale": "La conciliación de facturas y pagos es una función del software de gestión comercial o ERP, no de los drones físicos."
+      },
+      {
+        "text": "Eliminando la necesidad de utilizar etiquetas de código de barras o dispositivos RFID.",
+        "isCorrect": false,
+        "rationale": "Los drones dependen precisamente de capturar etiquetas ópticas o digitales para registrar la existencia y ubicación del stock."
+      },
+      {
+        "text": "Sustituyendo por completo la ventilación e iluminación de las naves industriales.",
+        "isCorrect": false,
+        "rationale": "El dron es un dispositivo de captura de datos y monitoreo, no una infraestructura para el acondicionamiento ambiental del edificio."
+      }
+    ],
+    "hint": "Su ventaja principal en pasillos altos es la velocidad de lectura e inspección visual.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representa el Punto de Reorden (ROP, por sus siglas en inglés) en la administración de inventarios?",
+    "opciones": [
+      {
+        "text": "El nivel mínimo de existencias en el cual debe emitirse un nuevo pedido de reabastecimiento.",
+        "isCorrect": true,
+        "rationale": "El ROP establece el umbral de stock que activa una nueva orden de compra para garantizar la llegada del pedido antes del agotamiento."
+      },
+      {
+        "text": "El valor financiero total acumulado por productos obsoletos en el almacén.",
+        "isCorrect": false,
+        "rationale": "El valor del stock obsoleto se determina mediante contabilidad de inventario y depreciación de activos."
+      },
+      {
+        "text": "La cantidad máxima de paletas que físicamente pueden caber en un estante de doble profundidad.",
+        "isCorrect": false,
+        "rationale": "La capacidad física de las estanterías responde a un diseño estático de distribución en planta (layout)."
+      },
+      {
+        "text": "El porcentaje de descuento otorgado por un proveedor al comprar al por mayor.",
+        "isCorrect": false,
+        "rationale": "Los descuentos comerciales forman parte de la estructura de precios negociada en compras."
+      },
+      {
+        "text": "El tiempo total que tarda la aduana en liberar una importación marítima.",
+        "isCorrect": false,
+        "rationale": "El tiempo aduanero es un componente del tiempo de ciclo o lead time de importación, no el punto de activación del pedido."
+      }
+    ],
+    "hint": "Es la señal cuantitativa del stock que gatilla la emisión de una orden de compra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué funcionalidades clave ofrece la integración de software ERP y WMS basados en la nube para la logística de inventarios?",
+    "opciones": [
+      {
+        "text": "Acceso y control remoto de la información operativa en tiempo real desde múltiples ubicaciones.",
+        "isCorrect": true,
+        "rationale": "Al estar alojados en la nube, los sistemas facilitan la visualización inmediata de datos desde cualquier nodo conectado a la red."
+      },
+      {
+        "text": "Escalabilidad del sistema sin requerir altas inversiones iniciales en infraestructura física de servidores.",
+        "isCorrect": true,
+        "rationale": "El modelo SaaS en la nube permite ajustar licencias y recursos informáticos según el crecimiento operativo sin hardware local costoso."
+      },
+      {
+        "text": "Integración fluida con otras plataformas digitales como marketplaces y sistemas de transporte.",
+        "isCorrect": true,
+        "rationale": "Las arquitecturas en la nube mediante APIs facilitan el intercambio automatizado de datos entre vendedores, almacenes y flotas."
+      },
+      {
+        "text": "Garantía absoluta de inmunidad frente a fallas de conexión a internet local.",
+        "isCorrect": false,
+        "rationale": "Las soluciones en la nube dependen de la conectividad a red para la transmisión contínua de datos entre dispositivos y servidores."
+      },
+      {
+        "text": "Eliminación permanente del empaque y embalaje físico de los pedidos enviables.",
+        "isCorrect": false,
+        "rationale": "El software gestiona la información y los procesos lógicos, pero la logística requiere empaque físico para el transporte."
+      }
+    ],
+    "hint": "Considera los beneficios de visibilidad descentralizada, flexibilidad informática e interconexión de sistemas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la estrategia logística de 'Cross-docking' dentro del proceso de distribución?",
+    "opciones": [
+      {
+        "text": "En transferir la mercancía directamente desde la recepción hasta el despacho, reduciendo o eliminando el tiempo de almacenamiento.",
+        "isCorrect": true,
+        "rationale": "El Cross-docking elimina la etapa de guardado prolongado en anaqueles, consolidando y reenviando los pedidos de forma casi inmediata."
+      },
+      {
+        "text": "En almacenar bienes durante periodos superiores a un año para especular con el alza de precios en el mercado.",
+        "isCorrect": false,
+        "rationale": "La especulación o almacenamiento prolongado es totalmente opuesto a la dinámica de flujo continuo que busca el Cross-docking."
+      },
+      {
+        "text": "En procesar devoluciones de productos defectuosos para su desensamblaje y reciclaje de componentes.",
+        "isCorrect": false,
+        "rationale": "El manejo de devoluciones y reacondicionamiento corresponde al ámbito de la logística inversa."
+      },
+      {
+        "text": "En desarmar las materias primas importadas en aduana para evitar el pago de aranceles de entrada.",
+        "isCorrect": false,
+        "rationale": "El procesamiento aduanero o zonas francas obedece a reglamentaciones fiscales, no a la técnica operativa de Cross-docking."
+      },
+      {
+        "text": "En subcontratar la fabricación del producto final a un taller artesanal secundario.",
+        "isCorrect": false,
+        "rationale": "La externalización de la manufactura es un acuerdo de maquila o subcontratación de producción."
+      }
+    ],
+    "hint": "Su meta es lograr un flujo continuo donde el producto apenas transita por la plataforma logística.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al evaluar y homologar proveedores bajo marcos internacionales de gestión, ¿qué aspecto específico audita la norma ISO 9001?",
+    "opciones": [
+      {
+        "text": "El sistema de gestión de la calidad en los procesos y productos del proveedor.",
+        "isCorrect": true,
+        "rationale": "La norma ISO 9001 certifica la estandarización y mejora continua de los sistemas de gestión de calidad en las organizaciones."
+      },
+      {
+        "text": "El desempeño en la reducción del impacto ambiental y la huella de carbono.",
+        "isCorrect": false,
+        "rationale": "La gestión y mitigación de aspectos ambientales es evaluada por la norma ISO 14001."
+      },
+      {
+        "text": "Las condiciones de seguridad, salud ocupacional y prevención de riesgos laborales.",
+        "isCorrect": false,
+        "rationale": "La seguridad y salud en el trabajo se rige bajo el estándar ISO 45001."
+      },
+      {
+        "text": "La solidez crediticia y el balance financiero de los últimos diez ejercicios fiscales.",
+        "isCorrect": false,
+        "rationale": "Los indicadores financieros se revisan en auditorías contables independientes, no bajo el alcance de las normas ISO mencionadas."
+      },
+      {
+        "text": "El cumplimiento estricto de las leyes de privacidad de datos digitales de los usuarios.",
+        "isCorrect": false,
+        "rationale": "La seguridad de la información y privacidad se audita principalmente mediante marcos como ISO/IEC 27001."
+      }
+    ],
+    "hint": "Es el estándar internacional por excelencia enfocado en la satisfacción del cliente y la calidad de los procesos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son los beneficios operativos asociados a la implementación de software de planificación y optimización de rutas (TMS)?",
+    "opciones": [
+      {
+        "text": "Disminución del consumo de combustible mediante el cálculo de las trayectorias más cortas y descongestionadas.",
+        "isCorrect": true,
+        "rationale": "Los algoritmos de ruteo seleccionan caminos eficientes reduciendo el kilometraje y los tiempos de ralentí del motor."
+      },
+      {
+        "text": "Monitoreo en tiempo real de la flota para ajustar entregas ante contingencias de tráfico.",
+        "isCorrect": true,
+        "rationale": "El rastreo GPS integrado permite reorientar a los conductores dinámicamente si se detectan bloqueos o accidentes."
+      },
+      {
+        "text": "Incremento en la tasa de cumplimiento de las ventanas horarias pactadas con el cliente.",
+        "isCorrect": true,
+        "rationale": "La programación precisa basada en datos de velocidad e historial reduce las demoras no planificadas en el punto de entrega."
+      },
+      {
+        "text": "Reducción del desgaste mecánico prematuro de la flota vehicular.",
+        "isCorrect": true,
+        "rationale": "Al evitar rutas degradadas o recorridos innecesarios, se prolonga la vida útil de componentes clave del transporte."
+      },
+      {
+        "text": "Exención total del mantenimiento preventivo del sistema de frenos y neumáticos.",
+        "isCorrect": false,
+        "rationale": "El software optimiza los trayectos, pero los componentes mecánicos de la flota exigen mantenimiento riguroso continuo."
+      }
+    ],
+    "hint": "Enfócate en las mejoras en eficiencia de combustible, puntualidad, rastreo y preservación de flota.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la automatización industrial, ¿cuál es la característica distintiva de la 'automatización programada' frente a la 'automatización rígida'?",
+    "opciones": [
+      {
+        "text": "Permite reconfigurar el software y las secuencias del equipo para adaptar la maquinaria a distintas tareas o productos.",
+        "isCorrect": true,
+        "rationale": "A diferencia de la rígida (diseñada para una sola tarea masiva invariable), la automatización programada acepta reajustes de instrucciones para procesar variaciones en los productos."
+      },
+      {
+        "text": "No requiere consumo de energía eléctrica ni conexiones digitales para operar.",
+        "isCorrect": false,
+        "rationale": "Toda automatización industrial requiere fuentes de energía y controladores lógicos o informáticos."
+      },
+      {
+        "text": "Exige la reconstrucción física y mecánica completa de la estructura de la planta en cada cambio.",
+        "isCorrect": false,
+        "rationale": "Su ventaja es precisamente evitar la sustitución mecánica intensiva cambiando secuencias mediante programación de control."
+      },
+      {
+        "text": "Está diseñada única y exclusivamente para operaciones manuales realizadas por operarios humanos.",
+        "isCorrect": false,
+        "rationale": "La automatización busca ejecutar tareas con mínima o nula intervención humana directa."
+      },
+      {
+        "text": "Garantiza un costo de instalación inicial nulo para pequeñas microempresas.",
+        "isCorrect": false,
+        "rationale": "La automatización industrial involucra costos de adquisición, software de control e integración de hardware."
+      }
+    ],
+    "hint": "Piensa en la capacidad de reprogramar comandos de software para fabricar diferentes variantes de un producto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué atributos caracterizan a las fábricas inteligentes ('Smart Factories') en el marco de la Industria 4.0?",
+    "opciones": [
+      {
+        "text": "Interconexión masiva de máquinas y sistemas mediante el Internet Industrial de las Cosas (IIoT).",
+        "isCorrect": true,
+        "rationale": "Las redes de sensores e instrumentos transmiten datos operativos continuamente a través de protocolos IIoT."
+      },
+      {
+        "text": "Uso de Inteligencia Artificial para el mantenimiento predictivo de la maquinaria.",
+        "isCorrect": true,
+        "rationale": "Los algoritmos identifican patrones anómalos de vibración o temperatura antes de que ocurra una falla catastrófica."
+      },
+      {
+        "text": "Integración de robots colaborativos (Cobots) que operan con seguridad junto al personal humano.",
+        "isCorrect": true,
+        "rationale": "Los cobots cuentan con sensores de proximidad y fuerza que evitan impactos, permitiendo trabajar en codo a codo con operarios."
+      },
+      {
+        "text": "Retorno exclusivo al uso de libros contables en formato impreso para prevenir ciberataques.",
+        "isCorrect": false,
+        "rationale": "La Industria 4.0 fomenta la digitalización de procesos y el almacenamiento en bases de datos integradas, no el papel manual."
+      },
+      {
+        "text": "Incapacidad total de adaptar el ritmo de producción a la demanda del mercado.",
+        "isCorrect": false,
+        "rationale": "La agilidad y adaptabilidad en la producción ante cambios en la demanda es una de las mayores fortalezas de una Smart Factory."
+      }
+    ],
+    "hint": "Identifica los pilares tecnológicos como sensorización, analítica predictiva y robótica segura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función del 'KPI de entregas completas y a tiempo' (OTIF: On-Time In-Full) en la evaluación del desempeño de proveedores?",
+    "opciones": [
+      {
+        "text": "Mide el porcentaje de pedidos que el proveedor entrega respetando tanto las cantidades acordadas como los plazos estipulados.",
+        "isCorrect": true,
+        "rationale": "El indicador OTIF evalúa simultáneamente dos variables operativas clave: la exactitud de las cantidades y la puntualidad en la recepción."
+      },
+      {
+        "text": "Calcula el costo marginal de almacenamiento de insumos defectuosos en el almacén de materia prima.",
+        "isCorrect": false,
+        "rationale": "Esa métrica corresponde a la contabilidad de costos de no calidad o desperdicio de almacenamiento."
+      },
+      {
+        "text": "Establece la cuota de impuestos aduaneros a reembolsar tras una exportación fallida.",
+        "isCorrect": false,
+        "rationale": "Los tributos y reembolsos aduaneros son tramitaciones fiscales y reglamentarias del comercio exterior."
+      },
+      {
+        "text": "Mide el nivel de consumo energético por tonelada de mercancía fabricada.",
+        "isCorrect": false,
+        "rationale": "El consumo energético es un indicador de sostenibilidad y eficiencia en planta, no de cumplimiento logístico de entregas."
+      },
+      {
+        "text": "Determina el número total de vehículos que posee la empresa transportista en su flota.",
+        "isCorrect": false,
+        "rationale": "El tamaño de la flota mide la capacidad física instalada, pero no la efectividad real en las entregas."
+      }
+    ],
+    "hint": "Evalúa al mismo tiempo la puntualidad del despacho y que no falte ningún producto de la orden.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión estratégica de almacenamiento, ¿cuál es el objetivo principal de realizar la actividad de 'Picking'?",
+    "opciones": [
+      {
+        "text": "Recolectar y preparar eficientemente los artículos individuales que componen las órdenes de los clientes.",
+        "isCorrect": true,
+        "rationale": "El picking consiste en la extracción consolidada de ítems desde sus ubicaciones para conformar los pedidos específicos antes del despacho."
+      },
+      {
+        "text": "Realizar el mantenimiento correctivo de las grúas de elevación y montacargas del almacén.",
+        "isCorrect": false,
+        "rationale": "La reparación de maquinaria es responsabilidad del área de mantenimiento industrial."
+      },
+      {
+        "text": "Negociar las tarifas de flete internacional con líneas navieras.",
+        "isCorrect": false,
+        "rationale": "La negociación de fletes marítimos es competencia del departamento de compras o logística de comercio exterior."
+      },
+      {
+        "text": "Diseñar los planos arquitectónicos de una nueva nave industrial.",
+        "isCorrect": false,
+        "rationale": "El diseño de infraestructura corresponde a la ingeniería civil y de plantas logísticas."
+      },
+      {
+        "text": "Destruir la mercancía que ha superado su fecha de caducidad sin registro previo.",
+        "isCorrect": false,
+        "rationale": "El desecho de productos vencidos es un procedimiento de mermas y bajas de inventario, no la preparación de pedidos."
+      }
+    ],
+    "hint": "Es la fase operativa de selección de unidades para armar la orden del comprador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes son considerados factores externos que influyen directamente en la variación de la demanda de un producto?",
+    "opciones": [
+      {
+        "text": "Cambios en las preferencias y tendencias del consumidor final.",
+        "isCorrect": true,
+        "rationale": "Los hábitos de consumo se modifican por modas, cultura o concientización, escapando al control directo interno de la empresa."
+      },
+      {
+        "text": "Condiciones macroeconómicas como tasas de inflación o recesión.",
+        "isCorrect": true,
+        "rationale": "El poder adquisitivo del mercado se ve afectado por el entorno económico general, alterando la demanda global."
+      },
+      {
+        "text": "Factores climáticos y estacionales inesperados o severos.",
+        "isCorrect": true,
+        "rationale": "Eventos climáticos o variaciones de temperatura impactan drásticamente el consumo de ciertos bienes sin que la empresa pueda modificar el clima."
+      },
+      {
+        "text": "Ajuste deliberado del precio de venta realizado por la junta directiva de la empresa.",
+        "isCorrect": false,
+        "rationale": "La estrategia de precios es una decisión táctica interna tomada por la propia organización."
+      },
+      {
+        "text": "Lanzamiento de una campaña publicitaria diseñada por el departamento de marketing propio.",
+        "isCorrect": false,
+        "rationale": "Las promociones y publicidad internas son palancas controlables por la empresa para estimular la demanda."
+      }
+    ],
+    "hint": "Diferencia entre las variables que provienen del entorno del mercado y las decisiones internas que toma la gerencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la técnica de 'almacenamiento caótico' asistida por un sistema de gestión WMS?",
+    "opciones": [
+      {
+        "text": "Asignar ubicaciones dinámicas y variables a los productos según el espacio disponible en tiempo real, rastreado por software.",
+        "isCorrect": true,
+        "rationale": "En el almacenamiento caótico no hay estantes fijos por producto; el WMS optimiza el espacio colocando la mercancía donde haya huecos libres y guardando la coordenada exacta."
+      },
+      {
+        "text": "Apilar la mercancía sin ningún registro en el suelo para ahorrar costos de estantería.",
+        "isCorrect": false,
+        "rationale": "El sistema es 'caótico' solo en apariencia visual física, pero estrictamente ordenado y controlado de forma digital mediante software."
+      },
+      {
+        "text": "Mezclar productos químicos peligrosos con alimentos para acelerar la rotación.",
+        "isCorrect": false,
+        "rationale": "Las incompatibilidades de carga y normas de seguridad se programan en el WMS para impedir la colocación adyacente de insumos incompatibles."
+      },
+      {
+        "text": "Permitir que los operarios decidan libremente dónde colocar los productos sin notificar al sistema.",
+        "isCorrect": false,
+        "rationale": "El operario sigue fielmente las instrucciones de ubicación provistas por el terminal que responde al WMS."
+      },
+      {
+        "text": "Cambiar diariamente de proveedores para evitar crear relaciones a largo plazo.",
+        "isCorrect": false,
+        "rationale": "Esta práctica se refiere a la gestión de proveedores, no a la metodología física de asignación de espacios en almacén."
+      }
+    ],
+    "hint": "Se basa en maximizar la ocupación usando posiciones variables asignadas por un algoritmo informático.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué beneficios aporta el método Lean Manufacturing cuando se aplica a las operaciones de almacenamiento y logística?",
+    "opciones": [
+      {
+        "text": "Identificación y eliminación de desperdicios como movimientos e itinerarios innecesarios dentro del almacén.",
+        "isCorrect": true,
+        "rationale": "Lean analiza los flujos de trabajo para suprimir los desplazamientos improductivos del personal o la maquinaria."
+      },
+      {
+        "text": "Reducción de los tiempos muertos o de espera durante la carga y descarga de mercancías.",
+        "isCorrect": true,
+        "rationale": "La estandarización de procesos minimiza las demoras en muelles e intermedios del flujo logístico."
+      },
+      {
+        "text": "Optimización de la distribución del espacio en planta mediante metodologías de ordenamiento como 5S.",
+        "isCorrect": true,
+        "rationale": "La técnica 5S crea espacios de trabajo limpios, organizados y seguros, elevando la eficiencia operativa general."
+      },
+      {
+        "text": "Aumento deliberado de las actividades que no agregan valor para emplear a más personal.",
+        "isCorrect": false,
+        "rationale": "El objetivo de Lean es precisamente reducir o eliminar todas las tareas que no añaden valor al producto o servicio final."
+      },
+      {
+        "text": "Abolición de los estándares de seguridad para agilizar la velocidad de los montacargas.",
+        "isCorrect": false,
+        "rationale": "Lean impulsa la estandarización y la seguridad como requisito indispensable para eliminar variabilidades y errores."
+      }
+    ],
+    "hint": "Enfócate en la eliminación de despilfarros, estandarización y supresión de tiempos muertos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo apoya la automatización mediante Vehículos de Guiado Automático (AGV) en la optimización del almacén?",
+    "opciones": [
+      {
+        "text": "Transportando materiales internamente de forma autónoma a lo largo de rutas predefinidas sin la conducción humana.",
+        "isCorrect": true,
+        "rationale": "Los AGV desplazan cargas pesadas o paletas de manera constante y segura siguiendo líneas magnéticas, láser o mapas digitales sin chofer."
+      },
+      {
+        "text": "Reemplazando a los gerentes de logística en la negociación de contratos anuales.",
+        "isCorrect": false,
+        "rationale": "Los AGV son equipos físicos de manipulación de carga, no software de toma de decisiones tácticas ni negociación."
+      },
+      {
+        "text": "Eliminando la necesidad de contar con sistemas de iluminación y climatización en las oficinas corporativas.",
+        "isCorrect": false,
+        "rationale": "Los AGV operan en las áreas de flujo de carga del almacén y no influyen en el acondicionamiento de las oficinas administrativas."
+      },
+      {
+        "text": "Imprimiendo las facturas físicas que deben adjuntarse a cada caja despachada.",
+        "isCorrect": false,
+        "rationale": "La impresión de documentación es gestionada por periféricos integrados al WMS o ERP."
+      },
+      {
+        "text": "Incrementando el riesgo de accidentes fatales mediante la eliminación de sensores de impacto.",
+        "isCorrect": false,
+        "rationale": "Los AGV incorporan sensores de seguridad avanzados que detienen el vehículo inmediatamente ante la presencia de un obstáculo o persona."
+      }
+    ],
+    "hint": "Son vehículos industriales que mueven mercancía dentro de la planta siguiendo trayectorias guiadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes acciones contribuyen directamente a mejorar la experiencia y satisfacción del cliente en la entrega de pedidos logísticos?",
+    "opciones": [
+      {
+        "text": "Proporcionar visibilidad y trazabilidad en tiempo real sobre el estado del envío.",
+        "isCorrect": true,
+        "rationale": "La transparencia mediante enlaces de seguimiento reduce la ansiedad del comprador y genera certeza sobre la llegada de su compra."
+      },
+      {
+        "text": "Cumplir de manera consistente con las ventanas horarias de entrega acordadas.",
+        "isCorrect": true,
+        "rationale": "La puntualidad es la métrica clave para que el cliente perciba la fiabilidad del servicio ofrecido."
+      },
+      {
+        "text": "Ofrecer un proceso ágil, claro y simplificado para el manejo de devoluciones o cambios.",
+        "isCorrect": true,
+        "rationale": "Una logística inversa amigable fomenta la confianza en la marca al eliminar fricciones si el producto no satisface las expectativas."
+      },
+      {
+        "text": "Modificar unilateralmente la dirección del domicilio de entrega sin notificar al comprador.",
+        "isCorrect": false,
+        "rationale": "Modificar datos sin el consentimiento del cliente causa entregas erróneas y un alto grado de insatisfacción."
+      },
+      {
+        "text": "Ocultar los retrasos en el transporte esperando que el cliente no los perciba.",
+        "isCorrect": false,
+        "rationale": "La falta de comunicación sobre demoras destruye la confianza del cliente; se debe notificar preventivamente cualquier contingencia."
+      }
+    ],
+    "hint": "Piensa en visibilidad del paquete, puntualidad y facilidades para devoluciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la 'escucha activa' y la retroalimentación (feedback) son fundamentales para la mejora continua del servicio al cliente en empresas de logística?",
+    "opciones": [
+      {
+        "text": "Permiten identificar las causas raíz de las fallas operativas y ajustar los procesos basándose en la experiencia real del usuario.",
+        "isCorrect": true,
+        "rationale": "El análisis sistemático de reclamos y sugerencias proporciona la información requerida para corregir procesos deficientes en la cadena."
+      },
+      {
+        "text": "Sirven exclusivamente para justificar legalmente la imposibilidad de devolver el dinero al cliente.",
+        "isCorrect": false,
+        "rationale": "El objetivo del feedback no es bloquear reclamos, sino detectar oportunidades de mejora en el servicio."
+      },
+      {
+        "text": "Permiten transferir la responsabilidad del transporte al propio consumidor final.",
+        "isCorrect": false,
+        "rationale": "La recolección de comentarios busca perfeccionar la operación propia de la empresa, no deslindar sus deberes logísticos."
+      },
+      {
+        "text": "Sustituyen la necesidad de capacitar al personal en competencias de atención y resolución de conflictos.",
+        "isCorrect": false,
+        "rationale": "La información del feedback debe complementarse con capacitación constante para que los empleados sepan resolver los problemas identificados."
+      },
+      {
+        "text": "Garantizan que no vuelva a ser necesario realizar auditorías de calidad en el almacén.",
+        "isCorrect": false,
+        "rationale": "Las auditorías internas y el feedback del cliente son herramientas complementarias para el control integral de la calidad."
+      }
+    ],
+    "hint": "Consiste en aprovechar la voz del usuario para detectar errores en el proceso y corregirlos de origen.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son etapas sistemáticas requeridas para una correcta gestión y desarrollo de relaciones estratégicas con proveedores?",
+    "opciones": [
+      {
+        "text": "Definición rigurosa de las especificaciones técnicas y requerimientos del insumo o servicio deseado.",
+        "isCorrect": true,
+        "rationale": "Antes de cotizar, la organización debe detallar formalmente los criterios de calidad que debe cumplir la compra."
+      },
+      {
+        "text": "Evaluación de la capacidad técnica, solidez y certificaciones de los postulantes mediante auditorías.",
+        "isCorrect": true,
+        "rationale": "Verificar las instalaciones y certificaciones del proveedor asegura que este pueda sostener los volúmenes requeridos con calidad."
+      },
+      {
+        "text": "Monitoreo continuo del cumplimiento mediante indicadores clave de desempeño (KPI) y reuniones de retroalimentación.",
+        "isCorrect": true,
+        "rationale": "El seguimiento de métricas permite realizar ajustes preventivos y fomentar proyectos conjuntos de mejora continua a largo plazo."
+      },
+      {
+        "text": "Selección del proveedor basándose únicamente en la propuesta de menor precio sin auditar la calidad.",
+        "isCorrect": false,
+        "rationale": "Elegir exclusivamente por costo inicial sin validar la calidad o solvencia genera fallas catastróficas por no conformidad."
+      },
+      {
+        "text": "Cancelación arbitraria de contratos vigentes sin previa notificación ni análisis de las cláusulas contractuales.",
+        "isCorrect": false,
+        "rationale": "Las relaciones estratégicas se basan en la confianza, el cumplimiento de contratos y la comunicación formal entre las partes."
+      }
+    ],
+    "hint": "Involucra desde la especificación técnica inicial y auditoría de capacidad hasta la medición continua por KPIs.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-28",
+    "diplomado": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué rol cumple el uso de asistentes virtuales y chatbots automatizados en la fase postventa de la logística?",
+    "opciones": [
+      {
+        "text": "Atender de forma inmediata y estandarizada consultas recurrentes de rastreo de pedidos y horarios durante las 24 horas.",
+        "isCorrect": true,
+        "rationale": "Los asistentes virtuales resuelven solicitudes repetitivas de baja complejidad al instante, liberando al personal humano para atender casos críticos."
+      },
+      {
+        "text": "Efectuar la conducción remota de los camiones de reparto en las carreteras nacionales.",
+        "isCorrect": false,
+        "rationale": "Los chatbots son interfaces de software para la comunicación de texto o voz con usuarios, no sistemas de pilotaje vehicular."
+      },
+      {
+        "text": "Inspeccionar físicamente el estado mecánico del motor de los buques de carga.",
+        "isCorrect": false,
+        "rationale": "La inspección de transporte marítimo requiere ingenieros navales e instrumental especializado."
+      },
+      {
+        "text": "Sustituir por completo a toda la directiva ejecutiva de la compañía logística.",
+        "isCorrect": false,
+        "rationale": "Son herramientas de nivel operativo para el soporte a clientes, no sistemas para la toma de decisiones estratégicas corporativas."
+      },
+      {
+        "text": "Fabricar las materias primas necesarias para los centros de ensamblaje.",
+        "isCorrect": false,
+        "rationale": "La manufactura es un proceso de transformación de insumos físicos, completamente ajeno a los canales informáticos de atención al cliente."
+      }
+    ],
+    "hint": "Ofrecen respuesta automática continua a dudas frecuentes sobre el estado de las entregas.",
+    "activo": true
+  }
+]

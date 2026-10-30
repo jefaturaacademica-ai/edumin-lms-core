@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el principio o paradigma fundamental que promueve la gestión moderna respecto a la inversión en seguridad y salud en el trabajo?",
+    "opciones": [
+      {
+        "text": "La seguridad laboral representa una inversión estratégica que protege vidas y resguarda la reputación empresarial.",
+        "isCorrect": true,
+        "rationale": "Considerar la seguridad como una inversión evita pérdidas de horas hombre, demandas legales y daños a la marca, superando la visión obsoleta de verla como un gasto puro."
+      },
+      {
+        "text": "La seguridad es un gasto operativo innecesario impuesto únicamente para cumplir con exigencias burocráticas.",
+        "isCorrect": false,
+        "rationale": "Ver la seguridad como un gasto administrativo es un enfoque reactivo tradicional que ignora la reducción de costos y riesgos a largo plazo."
+      },
+      {
+        "text": "La implementación de normas de seguridad debe ejecutarse solo si la empresa alcanza un alto nivel de rentabilidad anual.",
+        "isCorrect": false,
+        "rationale": "La protección de la vida humana está por encima de la rentabilidad o el ánimo de lucro, por lo que su cumplimiento no es facultativo."
+      },
+      {
+        "text": "Las medidas de seguridad constituyen una responsabilidad exclusiva de los sindicatos y no de la alta gerencia.",
+        "isCorrect": false,
+        "rationale": "La legislación asigna la responsabilidad legal, civil y penal de brindar condiciones de trabajo seguras a los empleadores y líderes de la organización."
+      },
+      {
+        "text": "La prevención de riesgos solo debe aplicarse en áreas administrativas para evitar multas de inspección.",
+        "isCorrect": false,
+        "rationale": "La gestión de riesgos abarca todas las áreas operativas e industriales, especialmente aquellas de mayor peligrosidad o trabajo de campo."
+      }
+    ],
+    "hint": "Reflexione sobre si proteger la integridad física de los trabajadores genera valor o constituye simplemente una pérdida económica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto económico peruano, ¿qué porcentaje aproximado del Producto Bruto Interno (PBI) nacional aporta la actividad minera?",
+    "opciones": [
+      {
+        "text": "14%",
+        "isCorrect": true,
+        "rationale": "El sector minero actúa como el motor económico principal del Perú, representando aproximadamente el 14% del PBI nacional."
+      },
+      {
+        "text": "5%",
+        "isCorrect": false,
+        "rationale": "Un valor del 5% subestima el peso real que tiene la minería extractiva en la economía y en la recaudación fiscal del país."
+      },
+      {
+        "text": "28%",
+        "isCorrect": false,
+        "rationale": "Aunque es una industria clave y altamente generadora de divisas, no alcanza casi un tercio del PBI total."
+      },
+      {
+        "text": "45%",
+        "isCorrect": false,
+        "rationale": "Esta cifra es excesivamente elevada para representar de manera individual al PBI minero del país."
+      },
+      {
+        "text": "60%",
+        "isCorrect": false,
+        "rationale": "Un porcentaje del 60% sobrepasa la contribución económica de todo el sector primario combinado."
+      }
+    ],
+    "hint": "Considere la contribución directa de esta industria extractiva al PBI mencionada durante las ponencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la norma reglamentaria específica expedida por el Ministerio de Energía y Minas que rige la seguridad y salud ocupacional en el sector minero peruano?",
+    "opciones": [
+      {
+        "text": "Decreto Supremo 024-2016-EM",
+        "isCorrect": true,
+        "rationale": "Este decreto supremo aprueba el Reglamento de Seguridad y Salud Ocupacional en Minería, el cual fue posteriormente modificado por el DS 023-2017-EM."
+      },
+      {
+        "text": "Decreto Supremo 005-2012-TR",
+        "isCorrect": false,
+        "rationale": "Esta norma aprueba el reglamento general de la Ley de Seguridad y Salud en el Trabajo aplicable al sector trabajo general, pero no es el específico de minería."
+      },
+      {
+        "text": "Ley 29783",
+        "isCorrect": false,
+        "rationale": "Es la Ley Ley General de Seguridad y Salud en el Trabajo, sobre la cual se basan los reglamentos sectoriales, pero la norma técnica minera específica es el reglamento sectorial."
+      },
+      {
+        "text": "ISO 45001",
+        "isCorrect": false,
+        "rationale": "Se trata de una norma internacional voluntaria de certificación de sistemas de gestión, no de un decreto supremo emitido por el Estado."
+      },
+      {
+        "text": "Ley 28611",
+        "isCorrect": false,
+        "rationale": "Esta norma corresponde a la Ley General del Ambiente y no al reglamento específico de seguridad minera."
+      }
+    ],
+    "hint": "Identifique el decreto supremo emitido específicamente por el sector Energía y Minas para la prevención de riesgos mineros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el desarrollo de sistemas de gestión normalizados, ¿cuál de las siguientes certificaciones ISO es considerada la columna vertebral sobre la cual se construyen los demás sistemas?",
+    "opciones": [
+      {
+        "text": "ISO 9001",
+        "isCorrect": true,
+        "rationale": "El sistema de gestión de calidad ISO 9001 sirve como esqueleto y estructura base para implementar eficazmente certificaciones como la ambiental o la de seguridad."
+      },
+      {
+        "text": "ISO 14001",
+        "isCorrect": false,
+        "rationale": "Esta norma se enfoca específicamente en la gestión ambiental y suele implementarse sobre la base ya estructurada del sistema de calidad."
+      },
+      {
+        "text": "ISO 45001",
+        "isCorrect": false,
+        "rationale": "Es la certificación especializada en seguridad y salud ocupacional que reemplazó a OHSAS 18001, requiriendo idealmente una base previa de gestión."
+      },
+      {
+        "text": "OHSAS 18001",
+        "isCorrect": false,
+        "rationale": "Era el estándar antiguo de seguridad y salud en el trabajo, el cual no constituye la norma inicial sobre la que se articula la estructura de procesos."
+      },
+      {
+        "text": "ISO 31000",
+        "isCorrect": false,
+        "rationale": "Es una guía orientada a la gestión general de riesgos corporativos, no el estándar inicial del esqueleto operacional de calidad."
+      }
+    ],
+    "hint": "Piense en la norma internacional orientada a los Sistemas de Gestión de la Calidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al analizar las estadísticas de accidentes fatales en la actividad minera en el Perú, ¿qué grupo de trabajadores registra históricamente la mayor proporción de decesos?",
+    "opciones": [
+      {
+        "text": "Trabajadores de empresas contratistas mineras",
+        "isCorrect": true,
+        "rationale": "Los datos estadísticos demuestran que el personal contratista sufre la mayoría de los accidentes fatales, reflejando a menudo brechas en capacitación o estándares respecto a la titular."
+      },
+      {
+        "text": "Personal directo en planilla de la empresa titular minera",
+        "isCorrect": false,
+        "rationale": "El personal propio de la titular suele contar con mayor nivel de inducción y supervisión directa, registrando un porcentaje menor de fatalidades."
+      },
+      {
+        "text": "Trabajadores de empresas conexas de servicios generales",
+        "isCorrect": false,
+        "rationale": "Aunque están expuestos a riesgos, las estadísticas señalan un porcentaje considerablemente menor de accidentes fatales frente a los contratistas de extracción."
+      },
+      {
+        "text": "Inspectores de organismos fiscalizadores del Estado",
+        "isCorrect": false,
+        "rationale": "Los fiscalizadores efectúan visitas puntuales y no están involucrados de forma continua en las tareas operativas de alto riesgo."
+      },
+      {
+        "text": "Personal administrativo de las oficinas centrales",
+        "isCorrect": false,
+        "rationale": "El personal administrativo se encuentra expuesto a niveles de riesgo operacional significativamente menores que los trabajadores de campo."
+      }
+    ],
+    "hint": "Recuerde qué tipo de empresas prestadoras de servicios sufren con mayor frecuencia estos lamentables eventos en las unidades operativas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la seguridad laboral y la matriz IPERC, ¿cuál es la definición correcta del término 'Peligro'?",
+    "opciones": [
+      {
+        "text": "Fuente, situación o acto con el potencial de causar daño en términos de lesiones o enfermedades ocupacionales.",
+        "isCorrect": true,
+        "rationale": "El peligro representa la condición extrínseca o intrínseca presente en el entorno laboral capaz de provocar un impacto negativo en la salud o integridad."
+      },
+      {
+        "text": "La combinación entre la probabilidad de que ocurra un evento y la severidad del daño que este pueda causar.",
+        "isCorrect": false,
+        "rationale": "Esta descripción corresponde a la definición formal de 'Riesgo' y no a la de 'Peligro'."
+      },
+      {
+        "text": "El resultado final o consecuencia irreparable sufrida por el trabajador tras un accidente.",
+        "isCorrect": false,
+        "rationale": "La consecuencia es la manifestación del daño producido, no la fuente o situación latente."
+      },
+      {
+        "text": "El equipo de protección personal suministrado para aislar al trabajador del entorno.",
+        "isCorrect": false,
+        "rationale": "El equipo de protección es una medida de control de riesgos y no el elemento que genera el daño."
+      },
+      {
+        "text": "La evaluación cuantitativa del nivel de pérdida económica sufrida por la empresa.",
+        "isCorrect": false,
+        "rationale": "La valoración económica de pérdidas se asocia con el impacto financiero y no con la presencia de una condición peligrosa."
+      }
+    ],
+    "hint": "Diferencie el factor o condición que ostenta la capacidad inherente de provocar un daño de la probabilidad con la que este ocurre.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la jerarquía de controles de la matriz IPERC, ¿cuál es la medida menos efectiva para gestionar un riesgo?",
+    "opciones": [
+      {
+        "text": "Uso de Equipos de Protección Personal (EPP)",
+        "isCorrect": true,
+        "rationale": "Los EPP se ubican en la base del triángulo invertido; atenúan el impacto del evento en el trabajador pero no eliminan ni reducen la presencia de la amenaza en el entorno."
+      },
+      {
+        "text": "Sustitución del insumo o proceso peligroso",
+        "isCorrect": false,
+        "rationale": "La sustitución es una de las medidas más eficaces al reemplazar un agente de alto peligro por uno de menor severidad."
+      },
+      {
+        "text": "Implementación de controles de ingeniería",
+        "isCorrect": false,
+        "rationale": "Los controles de ingeniería modifican la infraestructura o los equipos para aislar el peligro, ubicándose por encima del uso de EPP."
+      },
+      {
+        "text": "Eliminación física del peligro",
+        "isCorrect": false,
+        "rationale": "La eliminación representa la medida de mayor efectividad dentro de la jerarquía de controles."
+      },
+      {
+        "text": "Aplicación de controles administrativos",
+        "isCorrect": false,
+        "rationale": "Los procedimientos, capacitaciones y permisos de trabajo se consideran controles organizativos que se sitúan por encima de la mera protección individual."
+      }
+    ],
+    "hint": "Piense en la barrera que actúa únicamente sobre el cuerpo del trabajador y no modifica el entorno ni la fuente del problema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la jerarquía de controles de riesgos, ¿cuál de las siguientes opciones constituye la medida más eficaz para erradicar una amenaza?",
+    "opciones": [
+      {
+        "text": "Eliminación del peligro",
+        "isCorrect": true,
+        "rationale": "Erradicar físicamente la fuente o condición peligrosa suprime de forma completa la probabilidad de ocurrencia de un accidente."
+      },
+      {
+        "text": "Sustitución por una sustancia menos peligrosa",
+        "isCorrect": false,
+        "rationale": "La sustitución disminuye el nivel del riesgo pero mantiene la existencia de una amenaza sustituta en el proceso."
+      },
+      {
+        "text": "Implementación de señalización y advertencias",
+        "isCorrect": false,
+        "rationale": "Los avisos y alertas corresponden a controles administrativos que dependen del comportamiento humano para ser efectivos."
+      },
+      {
+        "text": "Dotación de EPP de última generación",
+        "isCorrect": false,
+        "rationale": "Los EPP son la última línea de defensa y resultan ser la alternativa de menor efectividad en la jerarquía."
+      },
+      {
+        "text": "Reducción de las horas de la jornada de trabajo",
+        "isCorrect": false,
+        "rationale": "Reducir la exposición es un control administrativo que disminuye el tiempo de contacto pero no erradica la fuente de peligro."
+      }
+    ],
+    "hint": "Considere la cúspide de la pirámide de controles, cuyo objetivo es remover completamente el peligro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes situaciones corresponden a factores de riesgo ergonómico en el entorno laboral?",
+    "opciones": [
+      {
+        "text": "Adopción de posturas forzadas o inadecuadas durante largos periodos.",
+        "isCorrect": true,
+        "rationale": "Las posturas incorrectas generan desequilibrio biomecánico e inician trastornos musculoesqueléticos en la columna y cuello."
+      },
+      {
+        "text": "Manipulación manual de cargas que exceden los límites de peso normativos.",
+        "isCorrect": true,
+        "rationale": "Exceder el peso máximo permitido fuerza las estructuras articulares y musculares provocando fatiga o lesiones lumbares."
+      },
+      {
+        "text": "Ejecución de movimientos repetitivos y prolongados de extremidades superiores.",
+        "isCorrect": true,
+        "rationale": "La iteración continua de movimientos sin pausas lesiona tendones y nervios en articulaciones como la muñeca."
+      },
+      {
+        "text": "Exposición continua a radiaciones ionizantes como los rayos gamma.",
+        "isCorrect": false,
+        "rationale": "La radiación ionizante se clasifica strictly como un riesgo físico y no como un factor ergonómico."
+      },
+      {
+        "text": "Inhalación accidental de polvos de sílice o gases tóxicos en socavón.",
+        "isCorrect": false,
+        "rationale": "La inhalación de polvos y sustancias nocivas forma parte de la categoría de riesgos químicos."
+      }
+    ],
+    "hint": "Seleccione las alternativas asociadas con la adaptación física del puesto de trabajo, el esfuerzo osteomuscular y la postura del trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la reglamentación ergonómica nacional mencionada en el curso, ¿cuál es el límite máximo recomendado para el levantamiento manual de cargas en varones?",
+    "opciones": [
+      {
+        "text": "25 kg",
+        "isCorrect": true,
+        "rationale": "La norma establece un límite estándar de 25 kg para la manipulación manual de cargas en hombres para prevenir daños en la columna."
+      },
+      {
+        "text": "15 kg",
+        "isCorrect": false,
+        "rationale": "Los 15 kg corresponden al límite legal máximo establecido para la manipulación manual de cargas en mujeres."
+      },
+      {
+        "text": "35 kg",
+        "isCorrect": false,
+        "rationale": "Cargar 35 kg de manera individual sobrepasa el límite normativo de protección de la salud lumbar masculina."
+      },
+      {
+        "text": "50 kg",
+        "isCorrect": false,
+        "rationale": "Un peso de 50 kg requiere obligatoriamente auxilio mecánico o trabajo en equipo, estando prohibido para una sola persona."
+      },
+      {
+        "text": "10 kg",
+        "isCorrect": false,
+        "rationale": "Esta cantidad es inferior al umbral normativo regulado para el levantamiento estándar en varones adultos."
+      }
+    ],
+    "hint": "Recuerde la cifra en kilogramos que fija la norma antes de exigir el uso de ayudas mecánicas o levantamiento compartido en varones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué documento técnico resulta obligatorio para conocer la peligrosidad, medidas de manipulación, almacenamiento y primeros auxilios ante el contacto con un producto químico?",
+    "opciones": [
+      {
+        "text": "Ficha de Datos de Seguridad (SDS / MSDS)",
+        "isCorrect": true,
+        "rationale": "La Ficha de Datos de Seguridad especifica la composición, reactividad, protección necesaria y protocolos de primeros auxilios ante sustancias químicas."
+      },
+      {
+        "text": "Matriz IPERC",
+        "isCorrect": false,
+        "rationale": "La matriz IPERC identifica riesgos de forma general en los puestos de trabajo, pero no contiene las especificaciones detalladas de cada reactivo químico."
+      },
+      {
+        "text": "Permiso Escrito para Trabajo Seguro (PETS)",
+        "isCorrect": false,
+        "rationale": "El PETS autoriza una tarea específica de alto riesgo en un tiempo determinado, pero no es la hoja técnica del fabricante del químico."
+      },
+      {
+        "text": "Reglamento Interno de Seguridad y Salud en el Trabajo (RISST)",
+        "isCorrect": false,
+        "rationale": "El RISST contiene los lineamientos y políticas generales de la empresa, no los datos técnicos de productos o insumos peligrosos."
+      },
+      {
+        "text": "Examen Médico Ocupacional (EMO)",
+        "isCorrect": false,
+        "rationale": "El EMO evalúa el estado de salud del trabajador a su ingreso o salida, mas no las propiedades del insumo químico."
+      }
+    ],
+    "hint": "Busque la hoja de datos provista por los fabricantes químicos para detallar los componentes y controles del producto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos forman parte de los riesgos psicosociales presentes en el entorno de trabajo?",
+    "opciones": [
+      {
+        "text": "Estrés elevado por exceso de carga laboral o plazos de entrega ajustados.",
+        "isCorrect": true,
+        "rationale": "La presión constante y el volumen de trabajo desmedido sobrepasan la capacidad de adaptación mental, generando cuadros de estrés."
+      },
+      {
+        "text": "Hostigamiento o acoso laboral dentro de la organización.",
+        "isCorrect": true,
+        "rationale": "El maltrato o la violencia psicológica deterioran gravemente la salud emocional y la seguridad del trabajador."
+      },
+      {
+        "text": "Desequilibrio continuo y severo entre la vida laboral y la vida familiar.",
+        "isCorrect": true,
+        "rationale": "La falta de tiempo para el descanso y la interacción familiar genera fatiga crónica y problemas de salud mental."
+      },
+      {
+        "text": "Exposición continuada a ruido superior a los 85 decibeles.",
+        "isCorrect": false,
+        "rationale": "El ruido excesivo es un agente físico causante de hipoacusia, no un factor psicosocial."
+      },
+      {
+        "text": "Contacto directo de la piel con ácidos o reactivos corrosivos.",
+        "isCorrect": false,
+        "rationale": "El contacto con reactivos peligrosos es un riesgo químico de afectación física directa."
+      }
+    ],
+    "hint": "Identifique las condiciones organizativas y relacionales que afectan la salud mental y emocional del personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En las operaciones de minería subterránea, ¿qué regla de oro geomecánica exige sostener el terreno de forma inmediata tras realizar un avance de excavación?",
+    "opciones": [
+      {
+        "text": "Labor avanza, labor sostenida.",
+        "isCorrect": true,
+        "rationale": "Este principio obliga a instalar el sostenimiento sistemático en el frente antes de continuar la perforación para evitar derrumbes de roca."
+      },
+      {
+        "text": "Perforación profunda, fortificación semanal.",
+        "isCorrect": false,
+        "rationale": "Postponer el sostenimiento del terreno a periodos semanales genera un alto riesgo de caída de rocas inminente."
+      },
+      {
+        "text": "Avance acelerado a prioridad del supervisor.",
+        "isCorrect": false,
+        "rationale": "Acelerar el avance priorizando la producción por encima del sostenimiento viola los reglamentos de seguridad minera."
+      },
+      {
+        "text": "Sostenimiento exclusivo al término de la guardia.",
+        "isCorrect": false,
+        "rationale": "Esperar al final de la jornada para fortificar expone al personal a trabajar bajo techos inestables no protegidos."
+      },
+      {
+        "text": "Explotación continua sin evaluación geomecánica.",
+        "isCorrect": false,
+        "rationale": "Toda labor subterránea requiere estudios geomecánicos permanentes para determinar el tipo de sostenimiento adecuado."
+      }
+    ],
+    "hint": "Recuerde el lema que vincula el progreso físico del túnel con su inmediata estabilización.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el Reglamento de Seguridad Minera, ¿cuál es el número mínimo obligatorio de personas que deben realizar la tarea de desatado manual de rocas sueltas en una labor subterránea?",
+    "opciones": [
+      {
+        "text": "Dos personas (una ejecuta el desatado y otra observa e indica los riesgos).",
+        "isCorrect": true,
+        "rationale": "La norma prohíbe taxativamente que una sola persona desate rocas; se exige un compañero que vigile continuamente el área y alerte ante desprendimientos."
+      },
+      {
+        "text": "Una sola persona calificada con experiencia.",
+        "isCorrect": false,
+        "rationale": "El reglamento prohíbe de forma expresa que esta tarea sea ejecutada de manera en solitario por el alto riesgo de aplastamiento."
+      },
+      {
+        "text": "Tres personas (dos desatando y una manipulando el vehículo).",
+        "isCorrect": false,
+        "rationale": "El requisito mínimo operativo regulado es de dos personas dedicadas a la labor manual de desatado de rocas."
+      },
+      {
+        "text": "Cuatro personas coordinadas por un brigadista.",
+        "isCorrect": false,
+        "rationale": "Cuatro personas superan la dotación mínima estipulada y pueden congestionar el espacio reducido del frente de trabajo."
+      },
+      {
+        "text": "No requiere personal si la zona se encuentra iluminada.",
+        "isCorrect": false,
+        "rationale": "La iluminación no elimina el riesgo de caída de roca suelta, haciendo obligatoria la presencia de la pareja de trabajo."
+      }
+    ],
+    "hint": "Piense en la necesidad de contar con un 'vigía' que acompañe a quien manipula la barretilla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En cuanto a las condiciones de ventilación en minería subterránea, ¿cuál es el porcentaje mínimo legal de oxígeno que debe mantenerse en la atmósfera de trabajo?",
+    "opciones": [
+      {
+        "text": "19.5%",
+        "isCorrect": true,
+        "rationale": "El reglamento exige garantizar al menos 19.5% de concentración de oxígeno en el aire para evitar la asfixia del personal."
+      },
+      {
+        "text": "15.0%",
+        "isCorrect": false,
+        "rationale": "Una concentración de 15% de oxígeno ocasiona deficiencias físicas graves, mareos y un alto riesgo de desmayo o muerte."
+      },
+      {
+        "text": "21.0%",
+        "isCorrect": false,
+        "rationale": "El 21% representa la concentración normal de oxígeno a nivel del mar, pero el límite mínimo legal permitido en socavón es de 19.5%."
+      },
+      {
+        "text": "25.0%",
+        "isCorrect": false,
+        "rationale": "Un nivel superior al 23.5% genera una atmósfera enriquecida en oxígeno con un elevado peligro de incendio o explosión."
+      },
+      {
+        "text": "12.5%",
+        "isCorrect": false,
+        "rationale": "Cualquier nivel por debajo de 16% es de peligro extremo e incompatible con la vida humana a corto plazo."
+      }
+    ],
+    "hint": "Recuerde el límite ambiental mínimo requerido por la normativa antes de considerar la atmósfera como deficiente en oxígeno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal y la restricción del respirador de autorescatado utilizado por los mineros en labores subterráneas?",
+    "opciones": [
+      {
+        "text": "Es de uso único para la evacuación en incendios contra monóxido de carbono y requiere un mínimo de 19.5% de oxígeno en el aire.",
+        "isCorrect": true,
+        "rationale": "El autorescatador transforma el monóxido de carbono en dióxido de carbono para permitir el escape, pero no genera oxígeno por lo que exige un ambiente respirable."
+      },
+      {
+        "text": "Es un equipo reutilizable de circuito cerrado que genera su propio oxígeno por tiempo indefinido.",
+        "isCorrect": false,
+        "rationale": "El autorescatador es de un solo uso y no suministra oxígeno, sino que purifica el aire de monóxido de carbono durante el escape."
+      },
+      {
+        "text": "Sirve como protección permanente contra polvos de sílice durante toda la jornada laboral.",
+        "isCorrect": false,
+        "rationale": "Para el polvo de sílice se emplean respiradores con filtros para material particulado, no el equipo de autorescate de emergencia."
+      },
+      {
+        "text": "Permite bucear o ingresar a galerías totalmente inundadas sin oxígeno ambiental.",
+        "isCorrect": false,
+        "rationale": "El equipo no es un tanque autónomo de buceo ni sustituye la ausencia total de oxígeno en el ambiente."
+      },
+      {
+        "text": "Protege eficazmente contra cualquier gas tóxico en atmósferas con menos del 10% de oxígeno.",
+        "isCorrect": false,
+        "rationale": "El autorescatador es ineficaz y peligroso si la concentración de oxígeno en la mina cae por debajo de 19.5%."
+      }
+    ],
+    "hint": "Identifique el gas específico que purifica este equipo de escape de emergencia y su limitación respecto al oxígeno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con las estadísticas oficiales de salud ocupacional en la minería peruana, ¿cuál es la enfermedad profesional con mayor número de casos registrados?",
+    "opciones": [
+      {
+        "text": "Hipoacusia (sordera ocupacional)",
+        "isCorrect": true,
+        "rationale": "La hipoacusia representa aproximadamente el 90% de los casos totales de enfermedades ocupacionales reportadas en el sector minero."
+      },
+      {
+        "text": "Neumoconiosis",
+        "isCorrect": false,
+        "rationale": "Aunque es una enfermedad pulmonar emblemática en minería, ocupa el segundo lugar con cerca del 5% de los casos."
+      },
+      {
+        "text": "Intoxicación crónica por mercurio",
+        "isCorrect": false,
+        "rationale": "Los casos de intoxicación por mercurio en la minería formal se han reducido a porcentajes mínimos inferiores al 0.1%."
+      },
+      {
+        "text": "Dermatitis de contacto por químicos",
+        "isCorrect": false,
+        "rationale": "Afecciones cutáneas suceden con menor prevalencia comparadas con el impacto masivo del ruido operacional."
+      },
+      {
+        "text": "Estrés térmico extremo",
+        "isCorrect": false,
+        "rationale": "Representa un factor de riesgo físico relevante, pero no encabeza el volumen de registros médicos certificados frente al daño auditivo."
+      }
+    ],
+    "hint": "Piense en la afección irreversible provocada por la exposición prolongada a altos niveles de ruido de maquinarias y perforadoras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes agentes se clasifican como riesgos físicos en una mina subterránea?",
+    "opciones": [
+      {
+        "text": "Niveles elevados de ruido originados por el uso de perforadoras neumáticas.",
+        "isCorrect": true,
+        "rationale": "El ruido procedente de la maquinaria es una forma de energía acústica que daña la audición y se clasifica como riesgo físico."
+      },
+      {
+        "text": "Vibraciones continuas transmitidas por el manejo de martillos de perforación.",
+        "isCorrect": true,
+        "rationale": "Las oscilaciones mecánicas sobre las manos o cuerpo entero constituyen un agente físico con impacto articular y nervioso."
+      },
+      {
+        "text": "Iluminación deficiente o tenue dentro de las galerías de trabajo.",
+        "isCorrect": false,
+        "rationale": "La ausencia de luz o iluminación inadecuada es un factor físico ambiental que incrementa la fatiga visual y el riesgo de accidentes."
+      },
+      {
+        "text": "Inhalación de monóxido de carbono emitido por motores diésel.",
+        "isCorrect": false,
+        "rationale": "Los gases de combustión como el monóxido de carbono pertenecen a la categoría de agentes químicos."
+      },
+      {
+        "text": "Presencia de polvo de sílice o carbón en el ambiente.",
+        "isCorrect": false,
+        "rationale": "El material particulado en suspensión es un peligro de carácter químico por su composición de sustancias nocivas."
+      }
+    ],
+    "hint": "Seleccione las formas de energía o condiciones ambientales (acústicas, mecánicas, lumínicas) presentes en el entorno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el Perú, según la modificación del Código Penal (Art. 168-A), si un empleador no adopta las medidas de seguridad y esto causa un accidente con resultado de muerte, ¿cuál es la sanción penal establecida?",
+    "opciones": [
+      {
+        "text": "Pena privativa de la libertad de 5 a 10 años.",
+        "isCorrect": true,
+        "rationale": "Si la inobservancia de las normas de seguridad causa la muerte o lesiones graves de un trabajador, la sanción contempla prisión efectiva de 5 a 10 años."
+      },
+      {
+        "text": "Pena privativa de la libertad no mayor a 2 años con trabajo comunitario.",
+        "isCorrect": false,
+        "rationale": "Una pena menor a dos años no corresponde a los casos donde el resultado directo de la negligencia ha sido la muerte de un trabajador."
+      },
+      {
+        "text": "Únicamente una sanción económica o multa de la autoridad de trabajo.",
+        "isCorrect": false,
+        "rationale": "La norma contempla la vía penal con pena privativa de libertad, además de las sanciones administrativas o multas laborales."
+      },
+      {
+        "text": "Inhabilitación comercial de la empresa por un plazo fijo de tres meses.",
+        "isCorrect": false,
+        "rationale": "El artículo penal sanciona directamente la responsabilidad personal de los directivos y encargados mediante penas de cárcel."
+      },
+      {
+        "text": "Amonestación escrita al comité de seguridad y salud en el trabajo.",
+        "isCorrect": false,
+        "rationale": "La consecuencia ante un accidente fatal por negligencia del empleador no se limita a un apercibimiento administrativo interno."
+      }
+    ],
+    "hint": "Considere la gravedad de la pena de cárcel efectiva fijada para los directivos cuando ocurren fatalidades evitables por falta de prevención.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la definición formal de los 'Primeros Auxilios' en la atención de siniestros o enfermedades en el trabajo?",
+    "opciones": [
+      {
+        "text": "Procedimientos inmediatos y temporales brindados a un accidentado antes de que reciba atención médica especializada.",
+        "isCorrect": true,
+        "rationale": "Los primeros auxilios buscan estabilizar de forma inmediata y provisional a la víctima para preservar su vida mientras llega la asistencia médica."
+      },
+      {
+        "text": "Tratamiento médico definitivo y quirúrgico practicado en la zona del accidente.",
+        "isCorrect": false,
+        "rationale": "Los primeros auxilios no sustituyen el tratamiento médico profesional definitivo ni incluyen intervenciones complejas."
+      },
+      {
+        "text": "Suministro de medicamentos especializados autorizados por el supervisor de área.",
+        "isCorrect": false,
+        "rationale": "La administración de fármacos especializados corresponde exclusivamente al personal médico profesional y no a socorristas básicos."
+      },
+      {
+        "text": "Exámenes médicos ocupacionales de rutina practicados en la unidad minera.",
+        "isCorrect": false,
+        "rationale": "Los exámenes médicos son actividades preventivas de evaluación diagnóstica, no acciones de respuesta ante una emergencia."
+      },
+      {
+        "text": "Auditorías de cumplimiento del Plan de Respuesta a Emergencias.",
+        "isCorrect": false,
+        "rationale": "Una auditoría es una evaluación documental del sistema y no una atención directa brindada a una persona lesionada."
+      }
+    ],
+    "hint": "Tenga en cuenta el carácter inicial, provisional y de asistencia rápida previa al traslado hospitalario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la ejecución de la maniobra de Reanimación Cardiopulmonar (RCP) para adultos, ¿cuál es la relación estándar entre compresiones torácicas e insuflaciones por cada ciclo?",
+    "opciones": [
+      {
+        "text": "30 compresiones y 2 insuflaciones",
+        "isCorrect": true,
+        "rationale": "La relación estándar internacional de RCP contempla aplicar 30 compresiones torácicas seguidas de 2 ventilaciones de rescate."
+      },
+      {
+        "text": "15 compresiones y 5 insuflaciones",
+        "isCorrect": false,
+        "rationale": "Esta proporción no mantiene la presión de perfusión coronaria adecuada durante la reanimación en adultos."
+      },
+      {
+        "text": "50 compresiones y 1 insuflación",
+        "isCorrect": false,
+        "rationale": "Un número de 50 compresiones continuas altera la secuencia estándar de los ciclos de insuflación recomendados."
+      },
+      {
+        "text": "10 compresiones y 10 insuflaciones",
+        "isCorrect": false,
+        "rationale": "Esta relación hiperventila a la víctima y no genera el bombeo sanguíneo necesario en el tórax."
+      },
+      {
+        "text": "20 compresiones y 4 insuflaciones",
+        "isCorrect": false,
+        "rationale": "Dicha cantidad no se ajusta al estándar de 30:2 promovido en la capacitación de reanimación cardiopulmonar."
+      }
+    ],
+    "hint": "Recuerde la regla numérica habitual aplicable a las compresiones sobre el pecho frente a las respiraciones boca a boca.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes acciones corresponden a las funciones operativas de la Brigada de Evacuación en un plan de emergencia?",
+    "opciones": [
+      {
+        "text": "Guiar de forma ordenada y rápida al personal hacia los puntos de reunión seguros.",
+        "isCorrect": true,
+        "rationale": "La brigada debe dirigir la salida de las personas para evitar el pánico y garantizar el flujo hacia las zonas de seguridad."
+      },
+      {
+        "text": "Verificar continuamente que las rutas de escape permanezcan libres de obstáculos.",
+        "isCorrect": true,
+        "rationale": "Mantener las vías despejadas es crucial para asegurar que la evacuación no sufra tropiezos ni demoras peligrosas."
+      },
+      {
+        "text": "Pasar lista al personal en el punto de reunión utilizando el censo actualizado.",
+        "isCorrect": true,
+        "rationale": "Contar a las personas en la zona segura permite identificar de inmediato si alguien quedó atrapado en el área del siniestro."
+      },
+      {
+        "text": "Realizar intervenciones quirúrgicas de emergencia en el puesto de socorro.",
+        "isCorrect": false,
+        "rationale": "Las cirugías o procedimientos invasivos no forman parte de las tareas de la brigada de evacuación ni de primeros auxilios."
+      },
+      {
+        "text": "Reparar la red de alta tensión o subestaciones eléctricas dañadas.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento o reparación de sistemas eléctricos requiere técnicos especialistas y no a la brigada de guía de rutas."
+      }
+    ],
+    "hint": "Marque las opciones referidas a la conducción de personas, revisión de pasillos y comprobación de sobrevivientes en la zona segura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tipo de mantenimiento debe aplicarse de forma prioritaria a los equipos e infraestructura minera para prevenir accidentes imprevistos por fallas mecánicas?",
+    "opciones": [
+      {
+        "text": "Mantenimiento preventivo",
+        "isCorrect": true,
+        "rationale": "El mantenimiento preventivo programa revisiones periódicas para corregir el desgaste antes de que ocurra la falla que origine accidentes."
+      },
+      {
+        "text": "Mantenimiento reactivo",
+        "isCorrect": false,
+        "rationale": "Esperar a que el equipo falle para intervenirlo aumenta la probabilidad de accidentes graves y paralizaciones no programadas."
+      },
+      {
+        "text": "Mantenimiento puramente estético",
+        "isCorrect": false,
+        "rationale": "La mejora visual del equipo no garantiza el buen funcionamiento mecánico ni los sistemas de freno o hidráulicos."
+      },
+      {
+        "text": "Mantenimiento correctivo de emergencia",
+        "isCorrect": false,
+        "rationale": "Intervenir únicamente ante la avería confirmada es una práctica de alto riesgo en la industria minera o pesada."
+      },
+      {
+        "text": "Mantenimiento informal según disponibilidad",
+        "isCorrect": false,
+        "rationale": "Carecer de un programa de mantenimiento normado vulnera los reglamentos y expone a fallas estructurales."
+      }
+    ],
+    "hint": "Piense en el enfoque de mantenimiento planificado que se anticipa a la avería o ruptura del componente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la Responsabilidad Social Empresarial (RSE), ¿cuáles son los tres ejes pilares que deben articularse en forma simultánea en todo proyecto minero o industrial?",
+    "opciones": [
+      {
+        "text": "Eje económico, eje social y eje ambiental.",
+        "isCorrect": true,
+        "rationale": "La RSE moderna busca la sostenibilidad uniendo el desarrollo rentable (económico), el bienestar comunitario y laboral (social) y el cuidado del entorno (ambiental)."
+      },
+      {
+        "text": "Eje legal, eje político y eje tributario.",
+        "isCorrect": false,
+        "rationale": "Aunque son aspectos del cumplimiento corporativo, no abarcan el concepto de desarrollo sostenible de la RSE."
+      },
+      {
+        "text": "Eje comercial, eje logístico y eje financiero.",
+        "isCorrect": false,
+        "rationale": "Estos corresponden a áreas operativas internas del negocio y omiten el impacto ambiental y social comunitario."
+      },
+      {
+        "text": "Eje tecnológico, eje productivo y eje sindical.",
+        "isCorrect": false,
+        "rationale": "Estos componentes se centran en la producción interna e ignoran el pilar ecológico y el desarrollo social con la comunidad."
+      },
+      {
+        "text": "Eje penal, eje administrativo y eje judicial.",
+        "isCorrect": false,
+        "rationale": "Representan mecanismos de fiscalización legal y sanción, mas no los ejes éticos de la sostenibilidad empresarial."
+      }
+    ],
+    "hint": "Piense en la triple hélice que equilibra las ganancias, el entorno natural y el desarrollo de las personas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes enunciados corresponden a Reglas de Oro de Seguridad en la prevención de riesgos laborales?",
+    "opciones": [
+      {
+        "text": "Realizar tareas únicamente cuando se esté capacitado, autorizado y se disponga de los recursos adecuados.",
+        "isCorrect": true,
+        "rationale": "Esta regla asegura que el trabajador no improvise labores de alto riesgo sin contar con el entrenamiento o las herramientas exigidas."
+      },
+      {
+        "text": "Ingresar a espacios confinados solo tras contar con la evaluación de atmósfera y el Permiso Escrito de Trabajo Seguro (PETS).",
+        "isCorrect": true,
+        "rationale": "Los espacios confinados conllevan riesgo de asfixia o intoxicación por lo que requieren autorización escrita y medición previa de gases."
+      },
+      {
+        "text": "Utilizar de forma obligatoria sistemas de protección contra caídas al realizar trabajos en altura.",
+        "isCorrect": true,
+        "rationale": "El uso de arnés, líneas de vida y puntos de anclaje evita caídas fatales a distinto nivel durante tareas elevadas."
+      },
+      {
+        "text": "Intervenir tableros o instalaciones eléctricas energizadas sin aplicar bloqueo y etiquetado.",
+        "isCorrect": false,
+        "rationale": "Manipular líneas energizadas sin bloqueo y etiquetado (LOTO) vulnera gravemente las normas y ocasiona electrocución."
+      },
+      {
+        "text": "Superar la capacidad nominal de carga de los equipos de izaje en maniobras urgentes.",
+        "isCorrect": false,
+        "rationale": "Exceder el límite de tonelaje en una grúa o tecle genera el colapso de la estructura y la caída inmediata del material."
+      }
+    ],
+    "hint": "Seleccione las prácticas seguras asociadas con la autorización de tareas, permisos de espacios reducidos y trabajo en altura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Desde la perspectiva moderna de la gestión de riesgos en seguridad y salud ocupacional, ¿cuál es el cambio de paradigma fundamental respecto a la inversión en seguridad por parte de las empresas?",
+    "opciones": [
+      {
+        "text": "La seguridad debe ser considerada una inversión estratégica que protege el capital reputacional y evita costos por horas hombre perdidas y demandas.",
+        "rationale": "El enfoque moderno establece que la seguridad no es un gasto que reduce la rentabilidad, sino una inversión que evita costos incalculables por accidentes, sanciones y daño reputacional.",
+        "isCorrect": true
+      },
+      {
+        "text": "La seguridad es un gasto operativo obligatorio impuesto por el Estado que reduce directamente el margen de ganancia de los accionistas.",
+        "rationale": "Esta postura refleja la visión arcaica de la industria que percibe las exigencias legales como una pérdida de dinero en lugar de una protección integral.",
+        "isCorrect": false
+      },
+      {
+        "text": "Los costos de seguridad solo se justifican si la empresa registra una alta tasa de accidentes mortales en el periodo anterior.",
+        "rationale": "Esta es una visión reactiva; la gestión de riesgos moderna se basa fundamentalmente en la prevención antes de que ocurra cualquier evento lamentable.",
+        "isCorrect": false
+      },
+      {
+        "text": "La inversión en equipos de protección personal (EPP) reemplaza la necesidad de modificar la infraestructura o cambiar procesos operativos.",
+        "rationale": "El uso de EPP es el nivel menos efectivo en la jerarquía de controles y no debe sustituir las medidas de control en la fuente o ingeniería.",
+        "isCorrect": false
+      },
+      {
+        "text": "El cumplimiento de las normativas de seguridad debe pausarse cuando la rentabilidad operativa de la empresa cae por debajo del 20%.",
+        "rationale": "La ley y la filosofía de la seguridad en el trabajo priorizan la vida humana por encima de cualquier ganancia económica o ánimo de lucro.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considere la diferencia entre ver la prevención como un costo financiero inmediato o como un resguardo de la rentabilidad y la imagen de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con las estadísticas de accidentes mortales en el sector minero presentadas en el curso, ¿cuál fue el grupo de trabajadores que concentró la mayor cantidad de decesos en el año 2023?",
+    "opciones": [
+      {
+        "text": "Los trabajadores de las empresas contratistas mineras.",
+        "rationale": "Las estadísticas muestran que las empresas contratistas concentran la mayoría de fatalidades, evidenciando falencias en capacitación y adopción real de estándares de seguridad en comparación con la empresa titular.",
+        "isCorrect": true
+      },
+      {
+        "text": "El personal administrativo y gerencial de la empresa titular.",
+        "rationale": "El personal administrativo realiza labores de oficina que implican un nivel de riesgo sustancialmente menor que las operaciones de campo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Los trabajadores directos en planilla de la compañía minera titular.",
+        "rationale": "Aunque sufren accidentes, los trabajadores directos de la titular registraron una cifra significativamente menor de decesos que el personal contratista.",
+        "isCorrect": false
+      },
+      {
+        "text": "Los inspectores de los organismos fiscalizadores del Estado (Osinergmin y Sunafil).",
+        "rationale": "Los fiscalizadores realizan visitas técnicas eventuales y no constituyen la población con mayor índice de accidentabilidad mortal operativa.",
+        "isCorrect": false
+      },
+      {
+        "text": "Los practicantes y personal en formación universitaria de la unidad minera.",
+        "rationale": "Este grupo no representa la fuerza laboral operativa principal ni el grueso de las estadísticas de mortalidad reportadas.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Analice la diferencia de capacitación y estándares entre el personal directo de la titular minera y las empresas externas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la metodología IPERC, ¿cuál de los siguientes enunciados distingue correctamente el concepto de 'peligro' del concepto de 'riesgo'?",
+    "opciones": [
+      {
+        "text": "El peligro es la fuente o situación con potencial de causar daño, mientras que el riesgo es la combinación de la probabilidad de que ocurra un evento peligroso y la severidad del daño.",
+        "rationale": "El peligro define la condición inherente capaz de causar lesión, mientras que el riesgo matematiza la probabilidad de ocurrencia multiplicada por la gravedad de la consecuencia.",
+        "isCorrect": true
+      },
+      {
+        "text": "El peligro se refiere a la consecuencia médica del accidente, mientras que el riesgo es el equipo que falló durante la operación.",
+        "rationale": "Las consecuencias médicas son lesiones o enfermedades, y los equipos son herramientas o insumos, no las definiciones formales de peligro y riesgo.",
+        "isCorrect": false
+      },
+      {
+        "text": "El peligro es una estimación matemática de accidentes, mientras que el riesgo es cualquier objeto físico presente en la mina.",
+        "rationale": "La estimación matemática corresponde a la evaluación del riesgo, no al peligro en sí mismo.",
+        "isCorrect": false
+      },
+      {
+        "text": "El peligro se puede eliminar usando EPP, mientras que el riesgo solo se controla mediante capacitaciones teóricas.",
+        "rationale": "El EPP no elimina el peligro; únicamente mitiga el impacto de la exposición al riesgo en el trabajador.",
+        "isCorrect": false
+      },
+      {
+        "text": "El peligro y el riesgo son términos sinónimos que se utilizan indistintamente para catalogar las multas impuestas por la fiscalización.",
+        "rationale": "En la gestión de seguridad ocupacional, ambos términos corresponden a conceptos técnicos estrictamente diferenciados.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerde que uno es una propiedad o situación inherente con potencial de daño, mientras que el otro combina la probabilidad con la severidad del evento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes aspectos son objetivos expresos del Reglamento de Seguridad y Salud Ocupacional en Minería (D.S. 024-2016-EM y su modificatoria D.S. 023-2017-EM)?",
+    "opciones": [
+      {
+        "text": "Prevenir la ocurrencia de incidentes, incidentes peligrosos, accidentes de trabajo y enfermedades ocupacionales.",
+        "rationale": "Es el objetivo primordial estipulado en el Artículo 1 de la norma regulatoria para proteger la integridad del trabajador.",
+        "isCorrect": true
+      },
+      {
+        "text": "Promover una cultura de prevención de riesgos laborales en las actividades mineras a cielo abierto y subterráneas.",
+        "rationale": "La norma busca implantar una cultura proactiva de prevención en lugar de un enfoque puramente reactivo o punitivo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Garantizar la máxima rentabilidad financiera de los inversionistas privados reduciendo los estándares de infraestructura.",
+        "rationale": "El reglamento prioriza la seguridad y salud ocupacional; jamás autoriza rebajar estándares para aumentar ganancias.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminar la obligación de realizar exámenes médicos ocupacionales de salida a los trabajadores de contratistas.",
+        "rationale": "La ley exige los exámenes médicos ocupacionales tanto de ingreso como de retiro para evaluar daños a largo plazo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Establecer la responsabilidad legal del titular de la actividad minera en la identificación permanente de peligros y evaluación de riesgos.",
+        "rationale": "El reglamento exige que el titular minero lidere la identificación continua de peligros con la participación de los trabajadores.",
+        "isCorrect": true
+      }
+    ],
+    "hint": "Considere los fines de prevención, cultura laboral y responsabilidad legal señalados en el Artículo 1 del reglamento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "A nivel industrial y minero, ¿cuáles son considerados las cuatro categorías de eventos o peligros más comunes que concentran cerca del 90% de los accidentes graves?",
+    "opciones": [
+      {
+        "text": "Incendios/explosiones, descargas eléctricas, derrames químicos y accidentes con maquinaria pesada.",
+        "rationale": "Estas cuatro situaciones abarcan la inmensa mayoría de accidentes críticos de alto impacto en entornos industriales y mineros.",
+        "isCorrect": true
+      },
+      {
+        "text": "Picaduras de insectos, tropezones en oficinas, estrés por correo electrónico y cortes con papel.",
+        "rationale": "Estos corresponden a incidentes menores o de tipo administrativo, no a los cuatro peligros industriales críticos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Silicosis, hipoacusia, miopía y fatiga muscular crónica.",
+        "rationale": "Estas son enfermedades u afecciones ocupacionales de desarrollo paulatino, no categorías de eventos de accidentes agudos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Inundaciones marinas, caídas de meteoritos, erupciones volcánicas e insolation.",
+        "rationale": "Son fenómenos naturales extremos u otros eventos de origen geológico/climático no categorizados como la causa industrial estándar.",
+        "isCorrect": false
+      },
+      {
+        "text": "Robo de minerales, fallas de software contable, huelgas sindicales y retrasos de proveedores.",
+        "rationale": "Estos son riesgos operativos o financieros comerciales, no categorías de peligros físicos de seguridad industrial.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considere los eventos asociados a energía térmica/química, electricidad, fluidos peligrosos y transporte/desplazamiento de carga pesada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la pirámide invertida de la jerarquía de controles de riesgos, ¿cuál es el orden correcto de las medidas desde la MÁS EFECTIVA hasta la MENOS EFECTIVA?",
+    "opciones": [
+      {
+        "text": "Eliminación, Sustitución, Controles de Ingeniería, Controles Administrativos, Equipos de Protección Personal (EPP).",
+        "rationale": "Eliminar el peligro es el control más eficaz, mientras que proveer EPP es la última barrera y la menos efectiva para la gestión del riesgo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Equipos de Protección Personal (EPP), Controles Administrativos, Controles de Ingeniería, Sustitución, Eliminación.",
+        "rationale": "Este orden invierte totalmente la jerarquía, colocando el EPP (menos efectivo) como si fuera la medida superior.",
+        "isCorrect": false
+      },
+      {
+        "text": "Sustitución, Eliminación, Equipos de Protección Personal (EPP), Controles Administrativos, Controles de Ingeniería.",
+        "rationale": "La eliminación debe preceder a la sustitución, y los controles de ingeniería preceden al EPP.",
+        "isCorrect": false
+      },
+      {
+        "text": "Controles Administrativos, Controles de Ingeniería, Eliminación, Sustitución, Equipos de Protección Personal (EPP).",
+        "rationale": "Los controles administrativos se encuentran en el nivel inferior previo al EPP, no por encima de la eliminación e ingeniería.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminación, Equipos de Protección Personal (EPP), Sustitución, Controles de Ingeniería, Controles Administrativos.",
+        "rationale": "El EPP está ubicado incorrectamente en el segundo lugar en vez de ocupar el último escalón de efectividad.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerde que intervenir en la existencia misma del peligro es superior a colocar barreras físicas en el individuo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué efecto sobre la salud a largo plazo puede sufrir un trabajador expuesto de forma continua a niveles de ruido industrial superiores a los umbrales permisibles sin la debida protección auditiva?",
+    "opciones": [
+      {
+        "text": "Hipoacusia o sordera profesional irreparable.",
+        "rationale": "La exposición prolongada a ruido continuo destruye progresivamente las células ciliadas del oído interno, provocando hipoacusia irreversible.",
+        "isCorrect": true
+      },
+      {
+        "text": "Neumoconiosis del carbón o silicosis pulmonar.",
+        "rationale": "Estas afecciones son causadas por la inhalación de material particulado y polvo de sílice/carbón, no por ondas sonoras.",
+        "isCorrect": false
+      },
+      {
+        "text": "Síndrome del túnel carpiano por vibración.",
+        "rationale": "El túnel carpiano y alteraciones neuromusculares se relacionan con movimientos repetitivos y vibraciones biomecánicas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Golpe de calor o hipotermia severa.",
+        "rationale": "Estos cuadros son desencadenados por riesgos térmicos extremos de temperatura, no por el agente físico ruido.",
+        "isCorrect": false
+      },
+      {
+        "text": "Dermatitis por contacto y quemaduras químicas.",
+        "rationale": "Las afecciones cutáneas son provocadas por agentes químicos corrosivos o irritantes, no por contaminación acústica.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considere la enfermedad ocupacional que representa cerca del 90% de los casos reportados en las estadísticas mineras del Perú.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con la normativa ergonómica y las buenas prácticas descritas en el curso, ¿cuáles de las siguientes directrices deben cumplirse respecto a la manipulación manual de cargas y la ergonomía en el puesto de trabajo?",
+    "opciones": [
+      {
+        "text": "El límite máximo de carga manual permitido por norma es de 25 kg para hombres y 15 kg para mujeres.",
+        "rationale": "Estas cifras representan los límites máximos estipulados para evitar lesiones en la columna y la zona lumbar.",
+        "isCorrect": true
+      },
+      {
+        "text": "Para levantar una carga pesada del suelo, se deben doblar las caderas y rodillas manteniendo la espalda recta.",
+        "rationale": "Levantar la carga flexionando las extremidades inferiores utiliza la fuerza de las piernas y protege la columna vertebral.",
+        "isCorrect": true
+      },
+      {
+        "text": "Es obligatorio realizar pausas activas durante la jornada laboral para liberar el estrés muscular y la fatiga.",
+        "rationale": "Las pausas activas permiten relajar la musculatura sometida a posturas estáticas o repetitivas durante largas horas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Una trabajadora mujer puede cargar hasta 30 kg si utiliza una faja lumbar de cuero sintético.",
+        "rationale": "La faja no autoriza a sobrepasar el límite legal de 15 kg fijado para el personal femenino.",
+        "isCorrect": false
+      },
+      {
+        "text": "El monitor de una computadora debe colocarse por encima del nivel de la cabeza para estirar los músculos del cuello.",
+        "rationale": "La pantalla debe posicionarse a la altura de los ojos; colocarla más arriba genera severo sobreesfuerzo en las vértebras cervicales.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considere los límites de peso por género, la técnica de levantamiento con piernas y el uso de pausas activas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué el riesgo psicosocial en las organizaciones es considerado uno de los más peligrosos e invisibles en la gestión ocupacional?",
+    "opciones": [
+      {
+        "text": "Porque afecta directamente la salud mental y emocional del trabajador, pudiendo somatizarse en infartos, cuadros de depresión o errores humanos graves.",
+        "rationale": "Los factores psicosociales (estrés, acoso, sobrecarga) no se ven fácilmente como un cable pelado, pero generan enfermedades crónicas o distracciones mortales.",
+        "isCorrect": true
+      },
+      {
+        "text": "Porque es un riesgo que solo afecta a los trabajadores jóvenes catalogados como 'generación de cristal'.",
+        "rationale": "El riesgo psicosocial afecta a cualquier ser humano independientemente de su edad o generación si es expuesto a un entorno tóxico.",
+        "isCorrect": false
+      },
+      {
+        "text": "Porque se resuelve únicamente incrementando los sueldos de los supervisores sin cambiar las jornadas de trabajo.",
+        "rationale": "Aumentar el salario no elimina la carga mental, el trato inadecuado ni las jornadas extenuantes que generan el riesgo psicosocial.",
+        "isCorrect": false
+      },
+      {
+        "text": "Porque sus efectos desaparecen por completo en cuanto el trabajador cruza la puerta de salida de la empresa.",
+        "rationale": "El estrés crónico altera el sistema nervioso de forma acumulativa y sus secuelas fisiológicas acompañan a la persona fuera del trabajo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Porque no genera ningún costo económico ni pérdida de productividad para las compañías mineras.",
+        "rationale": "El estrés y el mal clima incrementan la rotación de personal, las ausencias laborales y los errores operativos highly costosos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Reflexione sobre la dificultad de medir los estados mentales y el impacto que el estrés continuo tiene sobre la salud física del individuo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el manejo e identificación de riesgos químicos en el trabajo, ¿cuáles de las siguientes medidas son indispensables para evitar accidentes o intoxicaciones severas?",
+    "opciones": [
+      {
+        "text": "Contar de manera obligatoria con la Ficha de Datos de Seguridad (MSDS) de cada producto químico en el área.",
+        "rationale": "La hoja MSDS proporciona la información clave para conocer los componentes, riesgos, antídotos y primeros auxilios del producto.",
+        "isCorrect": true
+      },
+      {
+        "text": "Almacenar y separar adecuadamente los productos químicos que sean incompatibles entre sí.",
+        "rationale": "Mezclar o almacenar juntos productos reactivos o incompatibles puede desencadenar explosiones o emanación de gases tóxicos.",
+        "isCorrect": true
+      },
+      {
+        "text": "Capacitar al personal en la señalización por colores según la rombo NFPA (Salud, Inflamabilidad, Reactividad y Especial).",
+        "rationale": "El rombo NFPA permite identificar rápidamente el tipo y nivel de peligro que representa una sustancia en una emergencia.",
+        "isCorrect": true
+      },
+      {
+        "text": "Limpiar inmediatamente cualquier derrame de ácido utilizando trapos comunes y agua de caño sin usar epp respiratorio.",
+        "rationale": "Limpiar ácidos sin EPP específico ni el kit antiderrame profesional expone al trabajador a vapores mortales y quemaduras graves.",
+        "isCorrect": false
+      },
+      {
+        "text": "Soplar con la boca los tubos de ensayo o mangueras de transferencia cuando exista una obstrucción por químicos tóxicos.",
+        "rationale": "Usar la boca para succionar o soplar sustancias químicas es una práctica prohibida por alto riesgo de ingestión e inhalación directa.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considere el uso de hojas MSDS, la segregación por incompatibilidad y la señalización mediante el rombo NFPA.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En las operaciones mineras a Tajo Abierto, ¿cuál es el objetivo primordial de implementar sistemas tecnológicos como ADAS o monitores de somnolencia tipo smartwatch en los operadores de maquinaria pesada?",
+    "opciones": [
+      {
+        "text": "Detectar de forma temprana episodios de fatiga y microsueño para prevenir colisiones o volcaduras de camiones.",
+        "rationale": "Los sistemas de monitoreo analizan variables fisiológicas y patrones de manejo para alertar al operador sobre la fatiga antes de que cause un evento fatal.",
+        "isCorrect": true
+      },
+      {
+        "text": "Verificar que el conductor no realice paradas para usar los servicios higiénicos durante sus 12 horas de turno.",
+        "rationale": "Estos sistemas buscan prevenir riesgos de salud y accidentes por sueño, no restringir necesidades fisiológicas básicas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Calcular el consumo exacto de combustible para descontárselo del sueldo al operador.",
+        "rationale": "El objetivo de las tecnologías ADAS y Hexagon es estrictamente la seguridad y la vigilancia de la fatiga, no la auditoría de combustible.",
+        "isCorrect": false
+      },
+      {
+        "text": "Reemplazar la necesidad de construir carreteras de alivio o rampas de emergencia en la mina.",
+        "rationale": "Las alertas de somnolencia no eliminan la exigencia legal de contar con infraestructura vial de emergencia.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminar la obligación legal de otorgar días de descanso atípicos a los trabajadores de mina.",
+        "rationale": "Los dispositivos tecnológicos son medidas complementarias y no anulan las leyes laborales de descanso físico.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considere la causa de los accidentes durante largas jornadas nocturnas de transporte de mineral en camiones de gran tonelaje.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el Artículo 262 del Reglamento de Seguridad Minera, ¿cuál es la dimensión mínima obligatoria del ancho de una rampa o vía de circulación para camiones en minería a Tajo Abierto cuando la vía es de DOBLE SENTIDO?",
+    "opciones": [
+      {
+        "text": "No menos de tres (3) veces el ancho del vehículo más grande que transite por la vía.",
+        "rationale": "La norma exige expresamente que en vías de doble sentido el ancho de la rampa sea como mínimo tres veces el ancho del vehículo de mayor tamaño.",
+        "isCorrect": true
+      },
+      {
+        "text": "Exactamente el mismo ancho del camión más grande sin margen adicional.",
+        "rationale": "Esa dimensión provocaría choques laterales o desbarrancamientos al no dejar espacio de maniobra entre vehículos cruzados.",
+        "isCorrect": false
+      },
+      {
+        "text": "No menos de dos (2) veces el ancho del vehículo más grande.",
+        "rationale": "La medida de dos veces el ancho corresponde a las vías diseñadas para un solo sentido de circulación, no para doble sentido.",
+        "isCorrect": false
+      },
+      {
+        "text": "Cinco (5) metros fijos sin importar el tamaño o modelo de los camiones de extracción.",
+        "rationale": "La regla no establece una medida fija en metros, sino una dimensión proporcional al tamaño del equipo más grande de la operación.",
+        "isCorrect": false
+      },
+      {
+        "text": "Diez (10) veces el ancho de una camioneta 4x4 de supervisión.",
+        "rationale": "El cálculo se realiza tomando en cuenta la maquinaria pesada de mayor envergadura (como camiones mineros), no vehículos livianos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considere la proporción respecto al vehículo de mayor dimensión que transita por esa vía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el desarrollo de labores mineras subterráneas, ¿a qué se refiere el principio operativo e imperativo técnico de 'labor avanza, labor sostenida' estipulado en la normativa?",
+    "opciones": [
+      {
+        "text": "A la obligación de realizar el sostenimiento o fortificación geomecánica de inmediato conforme avanza la excavación antes de continuar con la perforación.",
+        "rationale": "Para evitar el colapso del techo o paredes, el principio exige fijar pernos, mallas o shotcrete en el tramo excavado antes de seguir avanzando el frente.",
+        "isCorrect": true
+      },
+      {
+        "text": "A la indicación de duplicar la velocidad de detonación de explosivos si el terreno muestra grietas profundas.",
+        "rationale": "Aumentar los explosivos en un terreno inestable incrementa exponencialmente el riesgo de un colapso catastrófico.",
+        "isCorrect": false
+      },
+      {
+        "text": "Al permiso legal para trabajar debajo de techos de roca suelta sin fortificar si los obreros usan casco de carbono.",
+        "rationale": "Ningún epp como el casco protege a un trabajador ante la caída de grandes bloques de roca sin desatar o fortificar.",
+        "isCorrect": false
+      },
+      {
+        "text": "A la norma que exige extraer todo el mineral disponible en 24 horas sin detener las máquinas de acarreo.",
+        "rationale": "El principio es una medida de seguridad geomecánica contra caídas de roca, no un indicador de velocidad de producción.",
+        "isCorrect": false
+      },
+      {
+        "text": "A la práctica de abandonar los socavones antiguos sin sellar ni colocar señalización de peligro.",
+        "rationale": "Abandonar galerías inestables viola los reglamentos de cierre de labores y control de accesos no autorizados.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piense en la secuencia entre la perforación/voladura de un frente y la colocación de elementos de soporte estructural en la masa rocosa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el Artículo 246 del reglamento minero sobre ventilación en minas subterráneas, ¿cuáles de las siguientes condiciones operativas son de estricto cumplimiento?",
+    "opciones": [
+      {
+        "text": "Proporcionar una atmósfera que contenga un nivel mínimo del $19.5\\%$ de oxígeno en el aire.",
+        "rationale": "El estándar legal mínimo de oxígeno para garantizar la respiración segura y evitar asfixias en socavón es del $19.5\\%$.",
+        "isCorrect": true
+      },
+      {
+        "text": "Las labores de entrada de aire limpio y salida de aire viciado deben ser absolutamente independientes.",
+        "rationale": "Garantizar vías independientes evita la recirculación del aire viciado con monóxido o gases nocivos hacia los frentes de trabajo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Realizar mediciones obligatorias de gases (CO, $CO_2$, $NO_2$, $O_2$) antes de ingresar a labores ciegas como chimeneas o piques.",
+        "rationale": "Evaluar la concentración de gases tóxicos antes del ingreso de personal previene casos fatales de intoxicación o sofocación repentina.",
+        "isCorrect": true
+      },
+      {
+        "text": "Permitir la recirculación continua del aire viciado si la temperatura interior cae por debajo de los $0^\\circ C$.",
+        "rationale": "La norma prohíbe expresamente la recirculación de aire contaminado en el circuito general de ventilación.",
+        "isCorrect": false
+      },
+      {
+        "text": "Usar el mismo ducto subterráneo para extraer gases de voladura e inyectar oxígeno comprimido a alta presión.",
+        "rationale": "La inyección y extracción deben operar por vías y sistemas independientes para asegurar el flujo unidireccional de aire fresco.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Evalúe los requerimientos mínimos de oxígeno, la independencia de circuitos de aire y las mediciones previas de gases.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el Artículo 234 para el desatado manual de rocas sueltas en minería subterránea, ¿cuál es la regla de seguridad imperativa e infranqueable respecto al personal asignado?",
+    "opciones": [
+      {
+        "text": "La labor debe ser realizada obligatoriamente por dos personas: una desata con la barretilla y la otra vigila el área alertando riesgos.",
+        "rationale": "El reglamento prohíbe terminantemente que una sola persona desate rocas, exigiendo siempre una pareja para vigilar la estabilidad del techo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Un solo trabajador puede realizar la tarea si cuenta con más de diez años de experiencia en la mina.",
+        "rationale": "La norma no contempla excepciones por antigüedad; el desatado solitario está strictly prohibido por ley.",
+        "isCorrect": false
+      },
+      {
+        "text": "Debe realizarse por un equipo de cinco ingenieros de minas supervisados por el gerente general.",
+        "rationale": "Es una tarea operativa ejecutada por la pareja de mineros capacitados, no por la plana directiva completa.",
+        "isCorrect": false
+      },
+      {
+        "text": "No se requieren barretillas si se aplica agua a presión directamente sobre las grietas del techo.",
+        "rationale": "El desatado físico manual exige el uso de juegos de barretillas de diferentes medidas según la dimensión de la galería.",
+        "isCorrect": false
+      },
+      {
+        "text": "La tarea puede omitirse si la voladura se realizó utilizando dinamita de bajo poder de ruptura.",
+        "rationale": "Cualquier disparo genera grietas y rocas colgadas que deben ser inspeccionadas y desatadas sin excepción.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Analice las funciones divididas entre quien opera la barretilla y quien vigila permanentemente el entorno de la labor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes afecciones o peligros biológicos e higiénicos son comunes en los entornos de minería subterránea?",
+    "opciones": [
+      {
+        "text": "Exposición a sílice cristalina que genera el riesgo de silicosis y fibrosis pulmonar.",
+        "rationale": "El polvo de roca con contenido de sílice inhalado por largos periodos causa una enfermedad irreversible en los alvéolos pulmonares.",
+        "isCorrect": true
+      },
+      {
+        "text": "Presencia de gases tóxicos o asfixiantes como monóxido de carbono (CO), dióxido de nitrógeno ($NO_2$) y metano ($CH_4$).",
+        "rationale": "La voladura y las condiciones biológicas/geológicas subterráneas acumulan gases peligrosos capaces de desplazar el oxígeno o explotar.",
+        "isCorrect": true
+      },
+      {
+        "text": "Afecciones como la neumoconiosis producida por la acumulación prolongada de polvos de carbón en los pulmones.",
+        "rationale": "Es una de las principales enfermedades ocupacionales en minería subterránea de carbón y minerales pesados.",
+        "isCorrect": true
+      },
+      {
+        "text": "Desarrollo de quemaduras solares severas en el rostro debido a la radiación ultravioleta de los socavones.",
+        "rationale": "En las labores subterráneas existe ausencia total de luz solar y radiación UV directa.",
+        "isCorrect": false
+      },
+      {
+        "text": "Intoxicación masiva por radiación gamma emitida por el casco de plástico de seguridad.",
+        "rationale": "Los cascos de seguridad industrial están fabricados con polímeros no radiactivos de alta resistencia e impacto.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifique aquellos polvos inorgánicos y gases nocivos asociados al trabajo en socavones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según las estadísticas oficiales presentadas en el curso sobre enfermedades ocupacionales en la minería peruana (2011-2020), ¿cuál es la enfermedad que abarca aproximadamente el 90% de los casos totales registradas?",
+    "opciones": [
+      {
+        "text": "Hipoacusia provocada por ruido de maquinaria y perforación.",
+        "rationale": "La hipoacusia representa aproximadamente el 90% de todos los casos de enfermedades ocupacionales notificadas en dicho periodo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Silicosis agudizada por polvo de cuarzo.",
+        "rationale": "La neumoconiosis/silicosis representa alrededor del 4.94% de los casos, siendo la segunda pero muy lejos de la hipoacusia.",
+        "isCorrect": false
+      },
+      {
+        "text": "Intoxicación crónica por mercurio.",
+        "rationale": "El envenenamiento por mercurio cuenta con un porcentaje mínimo ($0.03\\%$) en la minería formal moderna.",
+        "isCorrect": false
+      },
+      {
+        "text": "Estrés postraumático por claustrofobia.",
+        "rationale": "Aunque existe como factor psicosocial, no ocupa la cifra estadística dominante del 90% de reportes médicos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Dermatitis alérgica por contacto con oro purificado.",
+        "rationale": "El oro refinado es un metal químicamente inerte que raramente produce patologías dermatológicas masivas.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerde cuál agente físico (ruido masivo de perforadoras y explosiones) genera la afección más predominante en los trabajadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco legal peruano, ¿cuál es la sanción penal estipulada en el Artículo 168-A del Código Penal si un empleador no adopta las medidas de seguridad y, como consecuencia de esta inobservancia, se produce un accidente de trabajo con consecuencia de MUERTE?",
+    "opciones": [
+      {
+        "text": "Pena privativa de la libertad no menor de cinco (5) ni mayor de diez (10) años.",
+        "rationale": "Si la falta de medidas de seguridad legalmente obligatorias resulta en muerte o lesiones graves, la pena es de 5 a 10 años de prisión efectiva.",
+        "isCorrect": true
+      },
+      {
+        "text": "Una amonestación escrita y el pago de una multa administrativa equivalente a media UIT.",
+        "rationale": "Un accidente fatal por negligencia legal traspasa el ámbito administrativo e incurre en responsabilidad penal con prisión.",
+        "isCorrect": false
+      },
+      {
+        "text": "Pena privativa de la libertad de solo 30 días reemplazable por trabajo comunitario los fines de semana.",
+        "rationale": "La ley sanciona la pérdida de vidas humanas por inobservancia con penas privativas de libertad efectivas de gravedad severa.",
+        "isCorrect": false
+      },
+      {
+        "text": "Inhabilitación de tres días para el supervisor de turno sin responsabilidad para los gerentes.",
+        "rationale": "La ley establece responsabilidad legal, civil y penal solidaria que alcanza a las cabezas directivas de las compañías.",
+        "isCorrect": false
+      },
+      {
+        "text": "Pena de cadena perpetua sin derecho a revisión para todo el personal del sindicato.",
+        "rationale": "La pena legal máxima establecida por la modificación del código penal para este delito específico está acotada entre 5 y 10 años.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Diferencie las penas por simple puesta en peligro de aquellas que resultan en consecuencias fatales o lesiones graves con cárcel efectiva.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro de las 'Reglas de Oro en Minería' explicadas en el curso, ¿cuáles de las siguientes directrices son de cumplimiento obligatorio para actividades específicas de alto riesgo?",
+    "opciones": [
+      {
+        "text": "Para trabajos con energía eléctrica (LOTO), se debe bloquear la alimentación, rotular, colocar candado de seguridad y probar la ausencia de energía antes de intervenir.",
+        "rationale": "El protocolo de Bloqueo y Etiquetado (LOTO) exige verificar la cero energía residual antes de realizar el mantenimiento de equipos.",
+        "isCorrect": true
+      },
+      {
+        "text": "Para ingresar a espacios confinados, se debe contar con un procedimiento escrito, medición de atmósfera respirable y permisos especiales.",
+        "rationale": "Los espacios confinados conllevan riesgo de acumulación de gases o deficiencia de oxígeno, requiriendo autorización y prueba previa.",
+        "isCorrect": true
+      },
+      {
+        "text": "Para trabajos en caliente (soldadura o corte), se requiere permiso de trabajo, retirar combustibles del área y contar con extintor operativo.",
+        "rationale": "Las tareas que generan chispas o llamas abiertas exigen controles estrictos para evitar incendios en infraestructuras industriales.",
+        "isCorrect": true
+      },
+      {
+        "text": "Se permite realizar maniobras de izaje con grúas sobrepasando en un $50\\%$ la capacidad nominal máxima del equipo si la maniobra es rápida.",
+        "rationale": "Sobrepasar la capacidad de izaje establecida por el fabricante genera colapsos de plumas o volcaduras mortales.",
+        "isCorrect": false
+      },
+      {
+        "text": "En trabajos cerca o sobre agua, no se requiere chaleco salvavidas si el trabajador sabe nadar estilo libre.",
+        "rationale": "El chaleco salvavidas es obligatorio independientemente de la habilidad individual de natación del trabajador.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considere los procedimientos para bloqueo de energías (LOTO), ingreso a espacios confinados y trabajos en caliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el protocolo estándar de primeros auxilios ante una persona inconsciente que no respira en el área de trabajo, ¿cuál es la relación correcta de compresiones y insuflaciones que se debe aplicar en la Reanimación Cardiopulmonar (RCP)?",
+    "opciones": [
+      {
+        "text": "30 compresiones torácicas por 2 ventilaciones (durante 5 ciclos antes de reevaluar).",
+        "rationale": "La técnica estándar internacional de RCP para adultos consiste en aplicar 30 compresiones seguidas de 2 ventilaciones de rescate.",
+        "isCorrect": true
+      },
+      {
+        "text": "1 compresión por cada 10 ventilaciones rítmicas.",
+        "rationale": "Esta proporción no genera el bombeo sanguíneo necesario en el corazón para mantener la perfusión cerebral.",
+        "isCorrect": false
+      },
+      {
+        "text": "100 ventilaciones boca a boca continuas sin tocar el tórax de la víctima.",
+        "rationale": "Sin compresiones mecánicas sobre el esternón, la sangre oxigenada no circulará hacia los órganos vitales.",
+        "isCorrect": false
+      },
+      {
+        "text": "5 compresiones abdominales rápidas seguidas de abundante suero oral.",
+        "rationale": "Las compresiones abdominales corresponden a la maniobra de Heimlich para atragantamiento por cuerpo extraño, no a RCP por paro cardíaco.",
+        "isCorrect": false
+      },
+      {
+        "text": "Mantener al paciente de pie apoyado en una pared durante 20 minutos sin hacer maniobras.",
+        "rationale": "Un paciente inconsciente en paro cardio-respiratorio requiere colocarse boca arriba en superficie firme para iniciar RCP inmediata.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerde el ciclo básico de compresiones torácicas profundas combinadas con respiraciones de rescate.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes funciones corresponden específicamente a la Brigada de Evacuación dentro de un plan de emergencias minero?",
+    "opciones": [
+      {
+        "text": "Verificar continuamente que las rutas de evacuación estén despejadas y correctamente señalizadas.",
+        "rationale": "Es responsabilidad de esta brigada garantizar que las vías de escape no presenten obstáculos en caso de un evento real.",
+        "isCorrect": true
+      },
+      {
+        "text": "Conducir al personal y a los visitantes de manera ordenada hacia los puntos de reunión seguros fijados en el mapa.",
+        "rationale": "Guiar a la población laboral hacia las zonas de seguridad es la tarea central de la brigada durante una alarma.",
+        "isCorrect": true
+      },
+      {
+        "text": "Pasar lista mediante el censo de personal en el punto de reunión para verificar que nadie haya quedado atrapado.",
+        "rationale": "El conteo final contrasta el personal ingresado con el evacuado para alertar a los equipos de rescate si falta algún trabajador.",
+        "isCorrect": true
+      },
+      {
+        "text": "Operar los camiones de extracción para retirar mineral mientras el resto del personal evacúa.",
+        "rationale": "Ante una alarma de evacuación, todas las máquinas deben apagarse y el personal debe dirigirse a las zonas seguras.",
+        "isCorrect": false
+      },
+      {
+        "text": "Ingresar a los focos de incendio sin epp de bombero para reparar las tuberías de agua rotas.",
+        "rationale": "El combate de incendios profundos corresponde a la brigada contra incendios con el equipamiento técnico especializado.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Enfóquese en la revisión de vías de escape, el guiado de personal hacia zonas de seguridad y el censo de evacuados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el riesgo operativo e ético al que se expone una empresa cuando realiza el denominado 'mantenimiento de papel' (firmar registros de mantenimiento sin ejecutar las revisiones reales en los equipos)?",
+    "opciones": [
+      {
+        "text": "Genera una falsa seguridad operacional que desemboca en fallas catastróficas inesperadas, accidentes fatales y responsabilidad penal criminal para los administradores.",
+        "rationale": "El mantenimiento de papel oculta el deterioro real de frenos, cables o estructuras, desencadenando tragedias operativas y procesos penales.",
+        "isCorrect": true
+      },
+      {
+        "text": "Optimiza los indicadores de eficiencia de la empresa sin incrementar ningún tipo de riesgo real.",
+        "rationale": "Falsificar informes de mantenimiento no optimiza nada; expone la vida de los trabajadores a fallas mecánicas inminentes.",
+        "isCorrect": false
+      },
+      {
+        "text": "Garantiza que las máquinas duren el doble de tiempo sin necesidad de cambiar aceite ni filtros.",
+        "rationale": "Omitir los cambios de repuestos desgastados acelera la destrucción interna de los motores y sistemas de seguridad.",
+        "isCorrect": false
+      },
+      {
+        "text": "Sustituye legalmente a los exámenes médicos ocupacionales de los trabajadores.",
+        "rationale": "El mantenimiento de equipos es una actividad preventiva técnica totalmente independiente de las evaluaciones médicas del personal.",
+        "isCorrect": false
+      },
+      {
+        "text": "Es una práctica recomendada formalmente por las certificaciones internacionales ISO 45001.",
+        "rationale": "Las normas ISO exigen trazabilidad real, auditorías rigurosas y evidencia objetiva, penalizando severamente la falsificación documental.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considere la falsa sensación de seguridad que se genera y el riesgo inminente de catástrofes por fallas mecánicas no detectadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto actual del desarrollo minero e industrial, ¿cuáles son los tres ejes interdependientes que componen el principio de Responsabilidad Social Empresarial (RSE) o Sostenibilidad?",
+    "opciones": [
+      {
+        "text": "Eje Económico, Eje Social y Eje Medioambiental.",
+        "rationale": "La sostenibilidad moderna exige que una empresa sea económicamente viable, socialmente responsable con su entorno y respetuosa con el medio ambiente.",
+        "isCorrect": true
+      },
+      {
+        "text": "Eje Político, Eje Sindicato y Eje Abogacía.",
+        "rationale": "Estos corresponden a actores o disciplinas de negociación, no a los tres pilares universales del desarrollo sostenible.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eje Publicidad, Eje Marketing y Eje Ventas Internacionales.",
+        "rationale": "Estos son componentes comerciales y de posicionamiento corporativo, no las dimensiones de la RSE.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eje Importación, Eje Exportación y Eje Tipo de Cambio.",
+        "rationale": "Variables macroeconómicas y de comercio exterior que no estructuran la definición de responsabilidad social.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eje Penal, Eje Tributario y Eje Judicial.",
+        "rationale": "Son marcos regulatorios de cumplimiento normativo punitivo, no las dimensiones de sostenibilidad corporativa.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considere la ecuación que equilibra la rentabilidad del capital, la protección de las comunidades y el cuidado de la naturaleza.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según las Reglas de Oro sobre maniobras de izaje con grúas en operaciones mineras, ¿cuál de las siguientes afirmaciones establece la norma de seguridad crítica durante el levantamiento de cargas?",
+    "opciones": [
+      {
+        "text": "Está estrictamente prohibido que cualquier persona permanezca o transite debajo de una carga suspendida.",
+        "rationale": "El fallo del cable, del gancho o del freno de la grúa provoca la caída violenta de la carga, aplastando instantáneamente a quien esté debajo.",
+        "isCorrect": true
+      },
+      {
+        "text": "El rigger o maniobrista debe sujetarse con las manos del gancho de la grúa para guiar el movimiento en el aire.",
+        "rationale": "Sujetarse del gancho expondría al trabajador a atrapamientos entre poleas o caídas a diferente nivel.",
+        "isCorrect": false
+      },
+      {
+        "text": "Se permite elevar personas sobre palés de madera sueltos si el operador de la grúa tiene prisa.",
+        "rationale": "El izaje de personal requiere canastillas certificadas especiales y procedimientos de seguridad extremadamente rigurosos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Las grúas pueden operar sin estabilizadores si el terreno es de inclinación superior a 45 grados.",
+        "rationale": "Operar sin estabilizadores sobre terreno inclinado garantiza la volcadura inmediata del equipo de izaje.",
+        "isCorrect": false
+      },
+      {
+        "text": "Cualquier trabajador sin capacitación puede operar la grúa si el operador titular salió a almorzar.",
+        "rationale": "La operación de equipos de izaje requiere certificación técnica obligatoria y autorización formal previa.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Reflexione sobre la ubicación prohibida para el personal durante la suspensión de estructuras pesadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-15",
+    "diplomado": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Respecto a la manipulación de materiales peligrosos (MATPEL/HAZMAT) y la realización de trabajos en caliente, ¿cuáles de los siguientes requerimientos son indispensables para garantizar la seguridad en la planta?",
+    "opciones": [
+      {
+        "text": "Consultar la Hoja de Datos de Seguridad (MSDS) antes de manipular, almacenar o disponer sustancias químicas peligrosas.",
+        "rationale": "La hoja MSDS dicta los epps requeridos, la compatibilidad de almacenamiento y la respuesta frente a emergencias con dicha sustancia.",
+        "isCorrect": true
+      },
+      {
+        "text": "Obtener el Permiso Escrito de Trabajo de Alto Riesgo (PETAR) correspondiente antes de iniciar tareas de soldadura o corte con oxicorte.",
+        "rationale": "El PETAR asegura que la zona ha sido inspeccionada, ventilada y declarada libre de atmósferas explosivas antes de generar chispas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Inspeccionar el área de trabajo en caliente y colocar biombos o mantas ignífugas para contener las proyecciones de chispas.",
+        "rationale": "Las mantas ignífugas evitan que las escorias incandescentes alcancen materiales inflamables ubicados en las cercanías.",
+        "isCorrect": true
+      },
+      {
+        "text": "Almacenar cilindros de acetileno y oxígeno tumbados horizontalmente junto a tanques de gasolina abierta.",
+        "rationale": "Los cilindros de gas comprimido deben almacenarse en posición vertical, asegurados y separados por tipo de gas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Verter los residuos de aceites usados e hidrocarburos directamente en las canaletas de agua de lluvia del campamento.",
+        "rationale": "Arrojar hidrocarburos a los cursos de agua viola gravemente las leyes ambientales y genera contaminación hídrica severa.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considere el uso de fichas de seguridad (MSDS), los permisos PETAR para soldadura y la protección mediante mantas ignífugas.",
+    "activo": true
+  }
+]

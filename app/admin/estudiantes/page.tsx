@@ -3,7 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Users, Search, RefreshCw, Eye, ShieldCheck, 
-  CheckCircle2, AlertTriangle, UserCheck, GraduationCap, Download
+  CheckCircle2, AlertTriangle, UserCheck, GraduationCap, Download,
+  UserPlus, Plus, Sparkles, BookOpen, CreditCard, AlertCircle, ArrowRight,
+  Check, Mail, Phone, Hash, DollarSign, Calendar
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import AdminHeader from '@/components/admin/admin-header';
@@ -13,7 +15,33 @@ import EditarCronogramaModal from '@/components/admin/editar-cronograma-modal';
 import Ficha360Modal from '@/components/admin/ficha-360-modal';
 import { EstudianteCompleto } from '@/lib/data/mockStudents';
 
+const DIPLOMADOS_EDUMIN = [
+  "DIPLOMADO EN DERECHO MINERO",
+  "ESPECIALISTA EN COMERCIO INTERNACIONAL: GESTIÓN ADUANERA Y LOGÍSTICA",
+  "DIPLOMADO EN GEOLOGÍA MINERA",
+  "DIPLOMADO EN GEOMETALURGIA",
+  "DIPLOMADO EN GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL",
+  "DIPLOMADO EN GEOTECNIA MINERA",
+  "DIPLOMADO EN GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
+  "DIPLOMADO EN GERENCIA ESTRATÉGICA Y LIDERAZGO DE EQUIPOS EN LA MINERÍA",
+  "DIPLOMADO EN GESTIÓN AMBIENTAL PARA EL SECTOR MINERO E INDUSTRIAL",
+  "DIPLOMADO EN GESTIÓN DE CONTROL OPERATIVO EN PROCESOS MINEROS",
+  "DIPLOMADO EN GESTIÓN DE OPERACIONES INDUSTRIALES",
+  "DIPLOMADO EN GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
+  "DIPLOMADO EN GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
+  "DIPLOMADO EN GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
+  "DIPLOMADO EN GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
+  "DIPLOMADO EN GESTIÓN MINERA",
+  "DIPLOMADO EN LEGISLACIÓN LABORAL Y ELABORACIÓN DE PLANILLAS",
+  "DIPLOMADO EN MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
+  "DIPLOMADO EN PREVENCIÓN DE LA CONFLICTIVIDAD, RIESGOS SOCIALES Y RESPONSABILIDAD SOCIAL",
+  "DIPLOMADO EN SEGURIDAD INDUSTRIAL",
+  "DIPLOMADO EN SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
+  "DIPLOMADO EN SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA"
+];
+
 export default function AdminEstudiantesPage() {
+  const [activeTab, setActiveTab] = useState<'directorio' | 'nuevo'>('directorio');
   const [estudiantes, setEstudiantes] = useState<EstudianteCompleto[]>([]);
   const [cargando, setCargando] = useState(true);
   
@@ -27,10 +55,59 @@ export default function AdminEstudiantesPage() {
 
   const [catalogoFull, setCatalogoFull] = useState<any[]>([]);
 
+  // Estados Formulario Nuevo Estudiante
+  const [nuevoDni, setNuevoDni] = useState('');
+  const [nuevoNombres, setNuevoNombres] = useState('');
+  const [nuevoApellidos, setNuevoApellidos] = useState('');
+  const [nuevoEmail, setNuevoEmail] = useState('');
+  const [nuevoTelefono, setNuevoTelefono] = useState('');
+  const [nuevoPaquete, setNuevoPaquete] = useState<'COMPLETO' | 'FULL' | 'ILIMITADO'>('COMPLETO');
+  const [nuevoTipoPago, setNuevoTipoPago] = useState<'CONTADO' | 'CUOTAS'>('CUOTAS');
+  const [nuevoCuotasTotales, setNuevoCuotasTotales] = useState(3);
+  const [nuevoMontoTotal, setNuevoMontoTotal] = useState(540);
+  const [nuevoMontoCuota, setNuevoMontoCuota] = useState(180);
+  const [nuevoDiplomado1, setNuevoDiplomado1] = useState(DIPLOMADOS_EDUMIN[0]);
+  const [guardandoNuevo, setGuardandoNuevo] = useState(false);
+  const [mensajeNuevo, setMensajeNuevo] = useState<{ texto: string; tipo: 'exito' | 'error' } | null>(null);
+
   useEffect(() => {
     cargarEstudiantes();
     cargarCatalogo();
   }, []);
+
+  // Actualizar montos por defecto según paquete y tipo de pago
+  const handleCambioPaquete = (pkg: 'COMPLETO' | 'FULL' | 'ILIMITADO') => {
+    setNuevoPaquete(pkg);
+    if (pkg === 'COMPLETO') {
+      setNuevoMontoTotal(540);
+      setNuevoMontoCuota(nuevoTipoPago === 'CONTADO' ? 540 : 180);
+      setNuevoCuotasTotales(nuevoTipoPago === 'CONTADO' ? 1 : 3);
+    } else if (pkg === 'FULL') {
+      setNuevoMontoTotal(900);
+      setNuevoMontoCuota(nuevoTipoPago === 'CONTADO' ? 900 : 180);
+      setNuevoCuotasTotales(nuevoTipoPago === 'CONTADO' ? 1 : 3);
+    } else if (pkg === 'ILIMITADO') {
+      setNuevoMontoTotal(1500);
+      setNuevoMontoCuota(nuevoTipoPago === 'CONTADO' ? 1500 : 300);
+      setNuevoCuotasTotales(nuevoTipoPago === 'CONTADO' ? 1 : 5);
+    }
+  };
+
+  const handleCambioTipoPago = (tipo: 'CONTADO' | 'CUOTAS') => {
+    setNuevoTipoPago(tipo);
+    if (tipo === 'CONTADO') {
+      setNuevoCuotasTotales(1);
+      setNuevoMontoCuota(nuevoMontoTotal);
+    } else {
+      if (nuevoPaquete === 'ILIMITADO') {
+        setNuevoCuotasTotales(5);
+        setNuevoMontoCuota(300);
+      } else {
+        setNuevoCuotasTotales(3);
+        setNuevoMontoCuota(180);
+      }
+    }
+  };
 
   const cargarCatalogo = async () => {
     try {
@@ -62,6 +139,67 @@ export default function AdminEstudiantesPage() {
       console.error('Error cargando estudiantes:', e);
     } finally {
       setCargando(false);
+    }
+  };
+
+  const handleCrearEstudianteSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!nuevoDni.trim() || !nuevoNombres.trim() || !nuevoApellidos.trim() || !nuevoEmail.trim()) {
+      setMensajeNuevo({ texto: 'Por favor complete todos los campos obligatorios (*).', tipo: 'error' });
+      return;
+    }
+
+    setGuardandoNuevo(true);
+    setMensajeNuevo(null);
+
+    try {
+      const res = await fetch('/api/admin/estudiantes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          dni_ce: nuevoDni.trim(),
+          nombres: nuevoNombres.trim(),
+          apellidos: nuevoApellidos.trim(),
+          email: nuevoEmail.trim(),
+          telefono: nuevoTelefono.trim(),
+          paquete_adquirido: nuevoPaquete,
+          tipo_pago: nuevoTipoPago,
+          cuotas_totales: nuevoCuotasTotales,
+          monto_total: nuevoMontoTotal,
+          monto_cuota: nuevoMontoCuota,
+          diplomado_1: nuevoDiplomado1
+        })
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        setMensajeNuevo({
+          texto: `¡Estudiante ${nuevoNombres} ${nuevoApellidos} creado exitosamente! Credenciales por defecto: DNI ${nuevoDni.trim()}`,
+          tipo: 'exito'
+        });
+
+        // Limpiar formulario
+        setNuevoDni('');
+        setNuevoNombres('');
+        setNuevoApellidos('');
+        setNuevoEmail('');
+        setNuevoTelefono('');
+
+        await cargarEstudiantes();
+
+        // Regresar a la pestaña directorio tras 2 segundos
+        setTimeout(() => {
+          setActiveTab('directorio');
+          setMensajeNuevo(null);
+        }, 2200);
+      } else {
+        setMensajeNuevo({ texto: data.error || 'Error al registrar estudiante.', tipo: 'error' });
+      }
+    } catch (err: any) {
+      setMensajeNuevo({ texto: `Error de conexión: ${err.message}`, tipo: 'error' });
+    } finally {
+      setGuardandoNuevo(false);
     }
   };
 
@@ -100,13 +238,15 @@ export default function AdminEstudiantesPage() {
         descuento: Number(descuento)
       };
 
-      if (cuotaIdxParam !== undefined) {
-        payload.cuota_index = cuotaIdxParam;
-      }
-
       if (cargoExtraParam) {
         payload.is_cargo_extra = true;
-        payload.concepto = cargoExtraParam.concepto;
+        payload.concepto_cargo = cargoExtraParam.concepto;
+      } else {
+        const creditoActual = alumnoSeleccionado.creditos?.[selectedCreditoIdx] || alumnoSeleccionado.creditos?.[0];
+        payload.num_credito = creditoActual?.num_credito || 1;
+        if (cuotaIdxParam !== undefined) {
+          payload.cuota_index = cuotaIdxParam;
+        }
       }
 
       const res = await fetch('/api/admin/pagos', {
@@ -115,88 +255,68 @@ export default function AdminEstudiantesPage() {
         body: JSON.stringify(payload)
       });
       const data = await res.json();
-      
       if (res.ok) {
         setMensaje({ 
-          texto: cargoExtraParam 
-            ? `¡Cargo extra "${cargoExtraParam.concepto}" (S/ ${cargoExtraParam.monto.toFixed(2)}) registrado en Supabase para ${alumnoSeleccionado.nombres}!`
-            : `¡Cuota validada y webhook enviado a n8n para ${alumnoSeleccionado.nombres}!`, 
+          texto: data.mensaje || '¡Pago registrado exitosamente en el cronograma!', 
           tipo: 'exito',
           webhookStatus: data.webhookStatus
         });
-        
-        setPagoIdParaValidar(null);
         await cargarEstudiantes();
       } else {
-        setMensaje({ texto: `Error: ${data.error || 'No se pudo procesar la solicitud'}`, tipo: 'error' });
+        setMensaje({ texto: data.error || 'Error al registrar el pago.', tipo: 'error' });
       }
-    } catch {
-      setMensaje({ texto: 'Error de conexión con el servidor local.', tipo: 'error' });
+    } catch (e: any) {
+      setMensaje({ texto: 'Error de conexión al procesar el pago.', tipo: 'error' });
     } finally {
       setCargandoPago(false);
     }
   };
 
-  const handleAnularPagoSubmit = async (motivo: string) => {
-    if (!pagoParaAnular || !motivo.trim()) return;
-
+  const handleAnularPagoSubmit = async () => {
+    if (!alumnoSeleccionado || !pagoParaAnular) return;
     setCargandoAnulacion(true);
     try {
       const res = await fetch('/api/admin/pagos', {
-        method: 'PATCH',
+        method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          action: 'anular',
+          dni_ce: alumnoSeleccionado.dni_ce,
           pago_id: pagoParaAnular.id,
-          dni_ce: pagoParaAnular.dni_ce || alumnoSeleccionado?.dni_ce,
           cuota_index: pagoParaAnular.cuota_index,
-          motivo_anulacion: motivo.trim()
+          num_credito: pagoParaAnular.num_credito || 1,
+          is_cargo_extra: Boolean(pagoParaAnular.is_cargo_extra)
         })
       });
 
       const data = await res.json();
+
       if (res.ok) {
-        alert(`¡Pago anulado exitosamente! Motivo registrado: "${motivo.trim()}". Notificación enviada a n8n.`);
         setPagoParaAnular(null);
         await cargarEstudiantes();
+        alert('Pago o cuota anulada exitosamente en el cronograma.');
       } else {
-        alert(`Error al anular pago: ${data.error}`);
+        alert(`Error al anular el pago: ${data.error || 'Error imprevisto'}`);
       }
-    } catch (err: any) {
-      alert(`Error de conexión: ${err.message}`);
+    } catch (e: any) {
+      alert(`Error de conexión: ${e.message}`);
     } finally {
       setCargandoAnulacion(false);
     }
   };
 
-  const handleGuardarCronogramaSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleGuardarCronogramaSubmit = async () => {
     if (!alumnoSeleccionado) return;
-
-    const creditos = (alumnoSeleccionado as any).creditos || [];
-    const creditoActual = creditos[selectedCreditoIdx] || creditos[0];
-    const cuotasArray = editCuotas6.map(item => item.val || 'no corresponde');
-
-    const sumaCuotas = cuotasArray.reduce((acc, val) => {
-      return val !== 'no corresponde' ? acc + (Number(val) || 0) : acc;
-    }, 0);
-
-    if (Math.abs(sumaCuotas - editMontoTotal) > 0.01) {
-      alert(`⚠️ Error de Validación: La suma de las cuotas (S/ ${sumaCuotas.toFixed(2)}) debe ser igual al total del programa (S/ ${editMontoTotal.toFixed(2)}). Por favor ajusta los montos antes de guardar el cronograma.`);
-      return;
-    }
-
     try {
+      const creditoActual = alumnoSeleccionado.creditos?.[selectedCreditoIdx] || alumnoSeleccionado.creditos?.[0];
       const res = await fetch('/api/admin/pagos', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          action: 'editar_cronograma',
-          pago_id: creditoActual?.id,
           dni_ce: alumnoSeleccionado.dni_ce,
-          num_credito: creditoActual?.num_credito || (selectedCreditoIdx + 1),
+          pago_id: creditoActual?.id,
+          num_credito: creditoActual?.num_credito || 1,
           monto_total: editMontoTotal,
-          cuotas: cuotasArray
+          cuotas: editCuotas6.map(c => c.val)
         })
       });
 
@@ -233,7 +353,7 @@ export default function AdminEstudiantesPage() {
           }
         })
       });
-      alert(`¡Alerta de Retención (Deserción Cero) enviada a n8n para notificar vía WhatsApp a ${alumnoSeleccionado.nombres}!`);
+      alert(`¡Alerta de Retención enviada a n8n para notificar vía WhatsApp a ${alumnoSeleccionado.nombres}!`);
     } catch (e) {
       console.error(e);
     } finally {
@@ -265,188 +385,553 @@ export default function AdminEstudiantesPage() {
 
       {/* Contenido Principal con Header Superior */}
       <div className="flex-1 flex flex-col overflow-hidden min-w-0 h-full">
-        <AdminHeader breadcrumb="Estudiantes y Secretaría" />
+        <AdminHeader breadcrumb="Estudiantes" />
         <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
           <div className="max-w-7xl mx-auto space-y-6">
           
           {/* Encabezado */}
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 border-b border-slate-200 dark:border-slate-800 pb-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
-              <div className="flex items-center gap-2">
-                <span className="bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">
-                  Sincronizado Supabase
-                </span>
-                <span className="text-slate-400 text-xs tabular-nums">• public.profiles</span>
-              </div>
-              <h1 className="text-3xl font-bold text-slate-900 dark:text-white mt-1 flex items-center gap-2">
-                <Users className="w-8 h-8 text-indigo-600 dark:text-indigo-400" /> 
-                Directorio y Secretaría de Estudiantes
+              <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mt-1 tracking-tight">
+                Directorio y secretaría de estudiantes
               </h1>
-              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                Administra inscripciones, asignación de diplomados, notas por módulo y Ficha 360° en tiempo real.
-              </p>
             </div>
 
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => setActiveTab('nuevo')}
+                className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs shadow-md transition flex items-center gap-2 cursor-pointer"
+              >
+                <UserPlus className="w-4 h-4" />
+                + Nuevo estudiante
+              </button>
+
+              <button
+                onClick={cargarEstudiantes}
+                disabled={cargando}
+                className="bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-800 px-4 py-2.5 rounded-xl font-bold text-xs shadow-sm transition flex items-center gap-2 cursor-pointer disabled:opacity-50"
+              >
+                <RefreshCw className={`w-4 h-4 ${cargando ? 'animate-spin' : ''}`} />
+                Actualizar lista ({estudiantes.length})
+              </button>
+            </div>
+          </div>
+
+          {/* Navegación por pestañas principales */}
+          <div className="flex border-b border-slate-200 dark:border-slate-800 gap-2 overflow-x-auto">
+            {/* Pestaña 1: Directorio de estudiantes */}
             <button
-              onClick={cargarEstudiantes}
-              disabled={cargando}
-              className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs shadow-md transition flex items-center gap-2 cursor-pointer disabled:opacity-50"
+              onClick={() => setActiveTab('directorio')}
+              className={`pb-3 px-5 font-bold text-xs sm:text-sm transition border-b-2 cursor-pointer flex items-center gap-2 whitespace-nowrap ${
+                activeTab === 'directorio' 
+                  ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400' 
+                  : 'border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
+              }`}
             >
-              <RefreshCw className={`w-4 h-4 ${cargando ? 'animate-spin' : ''}`} />
-              Actualizar Lista {cargando && estudiantes.length === 0 ? '' : `(${estudiantes.length})`}
+              <Users className="w-4 h-4 text-indigo-600" />
+              Directorio de estudiantes ({estudiantes.length})
+            </button>
+
+            {/* Pestaña 2: Nuevo estudiante */}
+            <button
+              onClick={() => setActiveTab('nuevo')}
+              className={`pb-3 px-5 font-bold text-xs sm:text-sm transition border-b-2 cursor-pointer flex items-center gap-2 whitespace-nowrap ${
+                activeTab === 'nuevo' 
+                  ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400' 
+                  : 'border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
+              }`}
+            >
+              <UserPlus className="w-4 h-4 text-emerald-600" /> 
+              Nuevo estudiante
             </button>
           </div>
 
-          {/* Filtros de Búsqueda */}
-          <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm grid grid-cols-1 sm:grid-cols-12 gap-4">
-            <div className="sm:col-span-6 relative">
-              <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">
-                <Search className="size-4" />
-              </span>
-              <input 
-                type="text"
-                placeholder="Buscar por DNI, Nombres, Apellidos o Correo..."
-                value={busqueda}
-                onChange={(e) => setBusqueda(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600 text-slate-900 dark:text-slate-100"
-              />
-            </div>
+          {/* CONTENIDO PESTAÑA 1: DIRECTORIO DE ESTUDIANTES */}
+          {activeTab === 'directorio' && (
+            <div className="space-y-6">
+              {/* Filtros de búsqueda */}
+              <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm grid grid-cols-1 sm:grid-cols-12 gap-4">
+                <div className="sm:col-span-6 relative">
+                  <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">
+                    <Search className="size-4" />
+                  </span>
+                  <input 
+                    type="text"
+                    placeholder="Buscar por DNI, nombres, apellidos o correo..."
+                    value={busqueda}
+                    onChange={(e) => setBusqueda(e.target.value)}
+                    className="w-full pl-10 pr-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600 text-slate-900 dark:text-slate-100"
+                  />
+                </div>
 
-            <div className="sm:col-span-3">
-              <select
-                value={filtroEstado}
-                onChange={(e) => setFiltroEstado(e.target.value)}
-                className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-800 dark:text-slate-200"
-              >
-                <option value="todos">Todos los Estados de Deuda</option>
-                <option value="Al Día">Al Día</option>
-                <option value="Deuda Activa">Deuda Activa</option>
-                <option value="Constancia de no adeudo">Constancia de no adeudo</option>
-                <option value="Bloqueado por Sistema">Bloqueado por Sistema</option>
-              </select>
-            </div>
+                <div className="sm:col-span-3">
+                  <select
+                    value={filtroEstado}
+                    onChange={(e) => setFiltroEstado(e.target.value)}
+                    className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-800 dark:text-slate-200"
+                  >
+                    <option value="todos">Todos los estados de deuda</option>
+                    <option value="Al Día">Al día</option>
+                    <option value="Deuda Activa">Deuda activa</option>
+                    <option value="Constancia de no adeudo">Constancia de no adeudo</option>
+                    <option value="Bloqueado por Sistema">Bloqueado por sistema</option>
+                  </select>
+                </div>
 
-            <div className="sm:col-span-3">
-              <select
-                value={filtroRiesgo}
-                onChange={(e) => setFiltroRiesgo(e.target.value)}
-                className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-800 dark:text-slate-200"
-              >
-                <option value="todos">Todos los Niveles de Riesgo</option>
-                <option value="BAJO">Riesgo Bajo</option>
-                <option value="MEDIO">Riesgo Medio</option>
-                <option value="ALTO">Riesgo Alto</option>
-                <option value="CRÍTICO">Riesgo Crítico</option>
-              </select>
-            </div>
-          </div>
+                <div className="sm:col-span-3">
+                  <select
+                    value={filtroRiesgo}
+                    onChange={(e) => setFiltroRiesgo(e.target.value)}
+                    className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-800 dark:text-slate-200"
+                  >
+                    <option value="todos">Todos los niveles de riesgo</option>
+                    <option value="BAJO">Riesgo bajo</option>
+                    <option value="MEDIO">Riesgo medio</option>
+                    <option value="ALTO">Riesgo alto</option>
+                    <option value="CRÍTICO">Riesgo crítico</option>
+                  </select>
+                </div>
+              </div>
 
-          {/* Tabla de Estudiantes */}
-          <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 text-slate-400 text-[10px] uppercase tracking-wider font-bold">
-                    <th className="py-3 px-4">DNI / CE</th>
-                    <th className="py-3 px-4">Estudiante</th>
-                    <th className="py-3 px-4">Paquete & Diplomado Actual</th>
-                    <th className="py-3 px-4 text-center">Avance Real</th>
-                    <th className="py-3 px-4">Estado Pago</th>
-                    <th className="py-3 px-4 text-center">Riesgo</th>
-                    <th className="py-3 px-4 text-right">Ficha 360°</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60 text-xs">
-                  {cargando && estudiantes.length === 0 ? (
-                    Array.from({ length: 5 }).map((_, i) => (
-                      <tr key={`skeleton-${i}`} className="animate-pulse">
-                        <td className="py-4 px-4"><div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-20"></div></td>
-                        <td className="py-4 px-4 space-y-1.5">
-                          <div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-36"></div>
-                          <div className="h-3 bg-slate-100 dark:bg-slate-800/60 rounded w-48"></div>
-                        </td>
-                        <td className="py-4 px-4"><div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-32"></div></td>
-                        <td className="py-4 px-4 text-center"><div className="h-5 bg-slate-200 dark:bg-slate-800 rounded-md w-12 mx-auto"></div></td>
-                        <td className="py-4 px-4"><div className="h-5 bg-slate-200 dark:bg-slate-800 rounded-full w-24"></div></td>
-                        <td className="py-4 px-4 text-center"><div className="h-5 bg-slate-200 dark:bg-slate-800 rounded-full w-16 mx-auto"></div></td>
-                        <td className="py-4 px-4 text-right"><div className="h-7 bg-slate-200 dark:bg-slate-800 rounded-xl w-24 ml-auto"></div></td>
+              {/* Tabla de estudiantes */}
+              <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left border-collapse">
+                    <thead>
+                      <tr className="border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 text-slate-400 text-[10px] uppercase tracking-wider font-bold">
+                        <th className="py-3 px-4">DNI / CE</th>
+                        <th className="py-3 px-4">Estudiante</th>
+                        <th className="py-3 px-4">Programa principal</th>
+                        <th className="py-3 px-4">Paquete y créditos</th>
+                        <th className="py-3 px-4 text-center">Avance</th>
+                        <th className="py-3 px-4 text-center">Estado de deuda</th>
+                        <th className="py-3 px-4 text-center">Acciones</th>
                       </tr>
-                    ))
-                  ) : estudiantesFiltrados.length > 0 ? (
-                    estudiantesFiltrados.map((est) => (
-                      <tr key={est.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
-                        <td className="py-4 px-4 tabular-nums font-bold text-indigo-600 dark:text-indigo-400">{est.dni_ce}</td>
-                        <td className="py-4 px-4 font-bold text-slate-800 dark:text-slate-100">
-                          <div>{est.nombres} {est.apellidos}</div>
-                          <div className="text-[10px] font-normal text-slate-400">{est.email}</div>
-                        </td>
-                        <td className="py-4 px-4">
-                          <span className="bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-bold px-2 py-0.5 rounded text-[10px] mr-2">
-                            {est.paquete_adquirido || 'FULL'}
-                          </span>
-                          <span className="font-semibold text-slate-700 dark:text-slate-300">
-                            {est.diplomado_actual || 'DERECHO MINERO'}
-                          </span>
-                        </td>
-                        <td className="py-4 px-4 text-center">
-                          <span className="font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950 px-2 py-1 rounded-md text-[11px]">
-                            {est.avance_porcentaje ?? 50}%
-                          </span>
-                        </td>
-                        <td className="py-4 px-4">
-                          <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold ${
-                            est.estado === 'Constancia de no adeudo' ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300' :
-                            est.estado === 'Deuda Activa' ? 'bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300' :
-                            'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300'
-                          }`}>
-                            {est.estado}
-                          </span>
-                        </td>
-                        <td className="py-4 px-4 text-center">
-                          <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold ${
-                            est.nivel_riesgo_churn === 'CRÍTICO' ? 'bg-rose-600 text-white' :
-                            est.nivel_riesgo_churn === 'ALTO' ? 'bg-amber-500 text-white' :
-                            'bg-emerald-600 text-white'
-                          }`}>
-                            {est.nivel_riesgo_churn}
-                          </span>
-                        </td>
-                        <td className="py-4 px-4 text-right">
-                          <button
-                            onClick={() => setAlumnoSeleccionado(est)}
-                            className="bg-indigo-600 hover:bg-indigo-700 text-white px-3.5 py-1.5 rounded-xl font-bold text-xs transition inline-flex items-center gap-1.5 shadow-sm cursor-pointer"
-                          >
-                            <Eye className="size-3.5" /> Abrir Ficha
-                          </button>
-                        </td>
-                      </tr>
-                    ))
+                    </thead>
+                    <tbody className="divide-y divide-slate-100 dark:divide-slate-800 text-xs font-medium">
+                      {cargando ? (
+                        <tr>
+                          <td colSpan={7} className="py-12 text-center text-slate-400">
+                            <RefreshCw className="w-6 h-6 animate-spin mx-auto mb-2 text-indigo-600" />
+                            Cargando estudiantes desde Supabase...
+                          </td>
+                        </tr>
+                      ) : estudiantesFiltrados.length === 0 ? (
+                        <tr>
+                          <td colSpan={7} className="py-12 text-center text-slate-400">
+                            No se encontraron estudiantes registrados con los filtros aplicados.
+                          </td>
+                        </tr>
+                      ) : (
+                        estudiantesFiltrados.map((est) => (
+                          <tr key={est.id || est.dni_ce} className="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition">
+                            <td className="py-3 px-4 font-mono font-bold text-slate-900 dark:text-white">
+                              {est.dni_ce}
+                            </td>
+                            <td className="py-3 px-4">
+                              <div className="font-bold text-slate-900 dark:text-white">
+                                {est.nombres} {est.apellidos}
+                              </div>
+                              <div className="text-[11px] text-slate-400 font-normal">
+                                {est.email}
+                              </div>
+                            </td>
+                            <td className="py-3 px-4 max-w-[200px] truncate text-slate-700 dark:text-slate-300">
+                              {est.diplomado_actual || 'DIPLOMADO EN DERECHO MINERO'}
+                            </td>
+                            <td className="py-3 px-4">
+                              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+                                {est.paquete_adquirido}
+                              </span>
+                              <div className="text-[10px] text-slate-400 mt-0.5">
+                                Cuotas: {est.cuotas_pagadas || 1}/{est.cuotas_totales || 3}
+                              </div>
+                            </td>
+                            <td className="py-3 px-4 text-center">
+                              <div className="inline-flex items-center gap-1 font-bold text-slate-800 dark:text-slate-200">
+                                <span>{est.avance_porcentaje || 0}%</span>
+                              </div>
+                              <div className="w-16 bg-slate-100 dark:bg-slate-800 rounded-full h-1.5 mx-auto mt-1 overflow-hidden">
+                                <div 
+                                  className="bg-indigo-600 h-1.5 rounded-full" 
+                                  style={{ width: `${Math.min(100, est.avance_porcentaje || 0)}%` }}
+                                />
+                              </div>
+                            </td>
+                            <td className="py-3 px-4 text-center">
+                              <span className={`inline-block px-2.5 py-1 rounded-full text-[10px] font-bold ${
+                                est.estado === 'Constancia de no adeudo'
+                                  ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300'
+                                  : est.estado === 'Deuda Activa'
+                                  ? 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300'
+                                  : est.estado === 'Bloqueado por Sistema'
+                                  ? 'bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300'
+                                  : 'bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300'
+                              }`}>
+                                {est.estado}
+                              </span>
+                            </td>
+                            <td className="py-3 px-4 text-center">
+                              <button
+                                onClick={() => setAlumnoSeleccionado(est)}
+                                className="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-indigo-50 dark:bg-slate-800 dark:hover:bg-indigo-950 text-indigo-600 dark:text-indigo-400 px-3 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer"
+                              >
+                                <Eye className="w-3.5 h-3.5" />
+                                Ficha 360°
+                              </button>
+                            </td>
+                          </tr>
+                        ))
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* CONTENIDO PESTAÑA 2: NUEVO ESTUDIANTE (FORMULARIO MANUAL) */}
+          {activeTab === 'nuevo' && (
+            <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-10 shadow-sm max-w-4xl mx-auto space-y-8">
+              
+              <div className="border-b border-slate-100 dark:border-slate-800 pb-5">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-bold mb-2">
+                  <UserPlus className="w-3.5 h-3.5" /> Formulario de alta y matrícula directa
+                </div>
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
+                  Registrar nuevo estudiante
+                </h2>
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  Crea la cuenta en Supabase Auth y el perfil en la base de datos. La contraseña inicial será automáticamente su número de DNI o carnet.
+                </p>
+              </div>
+
+              {mensajeNuevo && (
+                <div className={`p-4 rounded-2xl flex items-center gap-3 text-xs font-semibold ${
+                  mensajeNuevo.tipo === 'exito' 
+                    ? 'bg-emerald-50 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-200 border border-emerald-200 dark:border-emerald-800'
+                    : 'bg-rose-50 dark:bg-rose-950 text-rose-800 dark:text-rose-200 border border-rose-200 dark:border-rose-800'
+                }`}>
+                  {mensajeNuevo.tipo === 'exito' ? (
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0" />
                   ) : (
-                    <tr>
-                      <td colSpan={7} className="text-center py-12 text-slate-400 font-medium">
-                        No se encontraron estudiantes para la búsqueda.
-                      </td>
-                    </tr>
+                    <AlertCircle className="w-5 h-5 text-rose-600 flex-shrink-0" />
                   )}
-                </tbody>
-              </table>
+                  <span>{mensajeNuevo.texto}</span>
+                </div>
+              )}
+
+              <form onSubmit={handleCrearEstudianteSubmit} className="space-y-6">
+                
+                {/* Sección 1: Datos personales */}
+                <div>
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
+                    <UserCheck className="w-4 h-4 text-indigo-500" /> 1. Datos personales del estudiante
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                        DNI / Carnet de extranjería *
+                      </label>
+                      <div className="relative">
+                        <Hash className="w-4 h-4 text-slate-400 absolute left-3 top-3 pointer-events-none" />
+                        <input 
+                          type="text" 
+                          required
+                          placeholder="Ej: 71234567"
+                          value={nuevoDni}
+                          onChange={(e) => setNuevoDni(e.target.value)}
+                          className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                        Correo electrónico *
+                      </label>
+                      <div className="relative">
+                        <Mail className="w-4 h-4 text-slate-400 absolute left-3 top-3 pointer-events-none" />
+                        <input 
+                          type="email" 
+                          required
+                          placeholder="alumno@correo.com"
+                          value={nuevoEmail}
+                          onChange={(e) => setNuevoEmail(e.target.value)}
+                          className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                        Nombres *
+                      </label>
+                      <input 
+                        type="text" 
+                        required
+                        placeholder="Ej: Juan Carlos"
+                        value={nuevoNombres}
+                        onChange={(e) => setNuevoNombres(e.target.value)}
+                        className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                        Apellidos *
+                      </label>
+                      <input 
+                        type="text" 
+                        required
+                        placeholder="Ej: Quispe Ramos"
+                        value={nuevoApellidos}
+                        onChange={(e) => setNuevoApellidos(e.target.value)}
+                        className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                      />
+                    </div>
+
+                    <div className="sm:col-span-2">
+                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                        Teléfono / WhatsApp (opcional)
+                      </label>
+                      <div className="relative">
+                        <Phone className="w-4 h-4 text-slate-400 absolute left-3 top-3 pointer-events-none" />
+                        <input 
+                          type="text" 
+                          placeholder="+51 987654321"
+                          value={nuevoTelefono}
+                          onChange={(e) => setNuevoTelefono(e.target.value)}
+                          className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Sección 2: Paquete y créditos EDUMIN */}
+                <div className="border-t border-slate-100 dark:border-slate-800 pt-6">
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-amber-500" /> 2. Paquete comercial y créditos EDUMIN
+                  </h3>
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+                    <button
+                      type="button"
+                      onClick={() => handleCambioPaquete('COMPLETO')}
+                      className={`p-4 rounded-2xl border text-left transition cursor-pointer ${
+                        nuevoPaquete === 'COMPLETO'
+                          ? 'border-indigo-600 bg-indigo-50/50 dark:bg-indigo-950/40 ring-2 ring-indigo-600'
+                          : 'border-slate-200 dark:border-slate-800 hover:border-slate-300'
+                      }`}
+                    >
+                      <div className="font-bold text-xs text-slate-900 dark:text-white">COMPLETO</div>
+                      <div className="text-lg font-black text-indigo-600 dark:text-indigo-400 mt-1">S/ 540.00</div>
+                      <div className="text-[11px] text-slate-500 mt-2 space-y-0.5">
+                        <div>• 1 crédito de diplomado</div>
+                        <div>• 3 créditos de cursos</div>
+                        <div className="font-bold text-indigo-600 dark:text-indigo-300 pt-1">Total: 4 créditos EDUMIN</div>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => handleCambioPaquete('FULL')}
+                      className={`p-4 rounded-2xl border text-left transition cursor-pointer ${
+                        nuevoPaquete === 'FULL'
+                          ? 'border-indigo-600 bg-indigo-50/50 dark:bg-indigo-950/40 ring-2 ring-indigo-600'
+                          : 'border-slate-200 dark:border-slate-800 hover:border-slate-300'
+                      }`}
+                    >
+                      <div className="font-bold text-xs text-slate-900 dark:text-white">FULL</div>
+                      <div className="text-lg font-black text-indigo-600 dark:text-indigo-400 mt-1">S/ 900.00</div>
+                      <div className="text-[11px] text-slate-500 mt-2 space-y-0.5">
+                        <div>• 1 crédito de diplomado</div>
+                        <div>• 5 créditos de cursos</div>
+                        <div className="font-bold text-indigo-600 dark:text-indigo-300 pt-1">Total: 6 créditos EDUMIN</div>
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => handleCambioPaquete('ILIMITADO')}
+                      className={`p-4 rounded-2xl border text-left transition cursor-pointer ${
+                        nuevoPaquete === 'ILIMITADO'
+                          ? 'border-indigo-600 bg-indigo-50/50 dark:bg-indigo-950/40 ring-2 ring-indigo-600'
+                          : 'border-slate-200 dark:border-slate-800 hover:border-slate-300'
+                      }`}
+                    >
+                      <div className="font-bold text-xs text-slate-900 dark:text-white">ILIMITADO</div>
+                      <div className="text-lg font-black text-indigo-600 dark:text-indigo-400 mt-1">S/ 1,500.00</div>
+                      <div className="text-[11px] text-slate-500 mt-2 space-y-0.5">
+                        <div>• 3 créditos de diplomados (base)</div>
+                        <div>• 15 créditos de cursos</div>
+                        <div className="font-bold text-indigo-600 dark:text-indigo-300 pt-1">Total: 18 créditos EDUMIN</div>
+                      </div>
+                    </button>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      Diplomado inicial de ingreso (elegido en ventas) *
+                    </label>
+                    <div className="relative">
+                      <BookOpen className="w-4 h-4 text-slate-400 absolute left-3 top-3 pointer-events-none" />
+                      <select
+                        value={nuevoDiplomado1}
+                        onChange={(e) => setNuevoDiplomado1(e.target.value)}
+                        className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                      >
+                        {DIPLOMADOS_EDUMIN.map((dip, idx) => (
+                          <option key={idx} value={dip}>{dip}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <p className="text-[11px] text-slate-400 mt-1">
+                      Este diplomado consumirá el primer crédito de diplomado asignado. Los créditos de cursos libres quedarán disponibles para que el alumno se autogestione desde su módulo de canje.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Sección 3: Modalidad financiera y cuotas */}
+                <div className="border-t border-slate-100 dark:border-slate-800 pt-6">
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
+                    <CreditCard className="w-4 h-4 text-emerald-500" /> 3. Modalidad financiera y cronograma
+                  </h3>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                        Forma de pago
+                      </label>
+                      <div className="grid grid-cols-2 gap-2">
+                        <button
+                          type="button"
+                          onClick={() => handleCambioTipoPago('CUOTAS')}
+                          className={`py-2 text-xs font-bold rounded-xl border transition cursor-pointer ${
+                            nuevoTipoPago === 'CUOTAS'
+                              ? 'bg-indigo-600 text-white border-indigo-600 shadow-sm'
+                              : 'bg-slate-50 dark:bg-slate-950 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800'
+                          }`}
+                        >
+                          En cuotas
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleCambioTipoPago('CONTADO')}
+                          className={`py-2 text-xs font-bold rounded-xl border transition cursor-pointer ${
+                            nuevoTipoPago === 'CONTADO'
+                              ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
+                              : 'bg-slate-50 dark:bg-slate-950 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800'
+                          }`}
+                        >
+                          Al contado
+                        </button>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                        Número de cuotas
+                      </label>
+                      <select
+                        disabled={nuevoTipoPago === 'CONTADO'}
+                        value={nuevoCuotasTotales}
+                        onChange={(e) => setNuevoCuotasTotales(Number(e.target.value))}
+                        className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100 disabled:opacity-50"
+                      >
+                        {nuevoTipoPago === 'CONTADO' ? (
+                          <option value={1}>1 cuota única (al contado)</option>
+                        ) : (
+                          <>
+                            <option value={2}>2 cuotas</option>
+                            <option value={3}>3 cuotas (estándar)</option>
+                            <option value={4}>4 cuotas</option>
+                            <option value={5}>5 cuotas (ilimitado)</option>
+                          </>
+                        )}
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                        Monto total (S/)
+                      </label>
+                      <input 
+                        type="number"
+                        step="0.01"
+                        value={nuevoMontoTotal}
+                        onChange={(e) => setNuevoMontoTotal(Number(e.target.value))}
+                        className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                        Monto de cuota inicial / pagada al ingresar (S/)
+                      </label>
+                      <input 
+                        type="number"
+                        step="0.01"
+                        value={nuevoMontoCuota}
+                        onChange={(e) => setNuevoMontoCuota(Number(e.target.value))}
+                        className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="p-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl text-[11px] text-slate-600 dark:text-slate-400 flex items-center justify-between">
+                    <span>
+                      Saldo pendiente al ingresar: <strong className="text-slate-900 dark:text-white">S/ {Math.max(0, nuevoMontoTotal - nuevoMontoCuota).toFixed(2)}</strong>
+                    </span>
+                    <span className="font-bold text-indigo-600 dark:text-indigo-400">
+                      {nuevoTipoPago === 'CONTADO' ? 'Constancia de no adeudo inmediata' : 'Cuota 01 pagada'}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Botón de Envío */}
+                <div className="pt-4 flex items-center justify-end gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab('directorio')}
+                    className="px-5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
+                  >
+                    Cancelar
+                  </button>
+
+                  <button
+                    type="submit"
+                    disabled={guardandoNuevo}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-xl font-bold text-xs shadow-md transition flex items-center gap-2 cursor-pointer disabled:opacity-50"
+                  >
+                    {guardandoNuevo ? (
+                      <>
+                        <RefreshCw className="w-4 h-4 animate-spin" /> Creando cuenta...
+                      </>
+                    ) : (
+                      <>
+                        <Check className="w-4 h-4" /> Matricular y crear estudiante
+                      </>
+                    )}
+                  </button>
+                </div>
+              </form>
+
             </div>
+          )}
+
           </div>
+        </main>
+      </div>
 
-        </div>
-      </main>
-    </div>
-
-      {/* Modal Ficha 360° */}
+      {/* Modal Ficha 360° del Alumno */}
       {alumnoSeleccionado && (
         <Ficha360Modal
           alumnoSeleccionado={alumnoSeleccionado}
           catalogoDiplomados={catalogoFull}
           onClose={() => setAlumnoSeleccionado(null)}
-          onOpenEditCronograma={() => {
-            if (!alumnoSeleccionado) return;
-            const creditos = (alumnoSeleccionado as any).creditos || [];
-            const cred = creditos[selectedCreditoIdx] || creditos[0];
+          onAbrirCronograma={(cred: any) => {
             if (cred) {
               setEditMontoTotal(cred.monto_total || alumnoSeleccionado.monto_total_programa || 1500);
               if (cred.cuotas_desglose && cred.cuotas_desglose.length > 0) {

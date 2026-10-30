@@ -163,19 +163,19 @@ export default function AlumnosRiesgoPage() {
 
       {/* Contenido Principal con Header Superior */}
       <div className="flex-1 flex flex-col overflow-hidden min-w-0 h-full">
-        <AdminHeader breadcrumb="Alumnos en Riesgo (Deserción)" />
+        <AdminHeader breadcrumb="Alumnos en riesgo" />
         <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
           <div className="max-w-7xl mx-auto">
           
           <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
-              <h1 className="text-3xl font-bold text-slate-900">Base & Alumnos en Riesgo</h1>
-              <p className="text-slate-500 mt-1">Control de estudiantes, deudas por meses y prórrogas temporales automatizadas.</p>
+              <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mt-1 tracking-tight">Base y alumnos en riesgo</h1>
+
             </div>
             <div className="bg-amber-50 border border-amber-200 text-amber-900 px-4 py-3 rounded-2xl flex items-center gap-3 shadow-sm">
               <Calendar className="w-5 h-5 text-amber-600 shrink-0" />
               <div className="text-xs">
-                <span className="font-bold block">Corte Automático Programado</span>
+                <span className="font-bold block">Corte automático programado</span>
                 <span>Bloqueo masivo el <strong className="tabular-nums underline">24/09/2026</strong></span>
               </div>
             </div>

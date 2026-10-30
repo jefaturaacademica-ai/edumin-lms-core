@@ -10,7 +10,8 @@ interface Ficha360ModalProps {
   alumnoSeleccionado: any;
   catalogoDiplomados: any[];
   onClose: () => void;
-  onOpenEditCronograma: () => void;
+  onOpenEditCronograma?: () => void;
+  onAbrirCronograma?: (cred?: any) => void;
   onSetPagoParaAnular: (pag: any) => void;
   onRegistrarPago: (cuotaIdxParam?: number, cargoExtraParam?: { concepto: string; monto: number }) => Promise<void>;
   montoPago: string;
@@ -35,6 +36,7 @@ export default function Ficha360Modal({
   catalogoDiplomados,
   onClose,
   onOpenEditCronograma,
+  onAbrirCronograma,
   onSetPagoParaAnular,
   onRegistrarPago,
   montoPago,

@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica principal que distingue a un proyecto de las operaciones continuas dentro de una empresa minera?",
+    "opciones": [
+      {
+        "text": "Es una labor temporal, única y gradual que tiene un inicio y un fin definidos.",
+        "isCorrect": true,
+        "rationale": "Los proyectos se definen por su naturaleza temporal y singularidad, diferenciándose de las actividades permanentes y repetitivas de la empresa."
+      },
+      {
+        "text": "Es una actividad repetitiva que se ejecuta de manera idéntica todos los días.",
+        "isCorrect": false,
+        "rationale": "Las tareas continuas y repetitivas corresponden al área de operaciones, no a la definición de un proyecto."
+      },
+      {
+        "text": "Es un proceso permanente enfocado únicamente en mantener la producción diaria.",
+        "isCorrect": false,
+        "rationale": "Mantener la producción diaria es la función central de operaciones y no posee la temporalidad que caracteriza a un proyecto."
+      },
+      {
+        "text": "Es un trabajo que no requiere planificación previa ni asignación de recursos.",
+        "isCorrect": false,
+        "rationale": "Todo proyecto exige esfuerzo, recursos y una cuidadosa planificación para alcanzar sus objetivos establecidos."
+      },
+      {
+        "text": "Es una tarea indefinida que carece de entregables específicos.",
+        "isCorrect": false,
+        "rationale": "Los proyectos están orientados a crear productos o resultados únicos mediante entregables delimitados."
+      }
+    ],
+    "hint": "Piensa en el carácter finito y singular que diferencia la construcción de una planta de la extracción diaria de mineral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son las tres variables fundamentales que integran la llamada 'triple restricción' en la gestión tradicional de proyectos?",
+    "opciones": [
+      {
+        "text": "Alcance, tiempo y costo.",
+        "isCorrect": true,
+        "rationale": "La gestión básica de todo proyecto equilibra qué se va a hacer (alcance), cuánto demorará (tiempo) y cuánto invertirá (costo)."
+      },
+      {
+        "text": "Calidad, riesgos y recursos humanos.",
+        "isCorrect": false,
+        "rationale": "Aunque son áreas de conocimiento clave del PMBOK, no constituyen los tres vértices del triángulo de restricción básica."
+      },
+      {
+        "text": "Seguridad, medio ambiente y producción.",
+        "isCorrect": false,
+        "rationale": "Estos elementos corresponden a la gestión operativa e integrada de mina, no a los pilares de la triple restricción de proyectos."
+      },
+      {
+        "text": "Adquisiciones, proveedores e interesados.",
+        "isCorrect": false,
+        "rationale": "Son áreas complementarias en la gestión de contratos, pero no forman el triángulo clásico de gestión."
+      },
+      {
+        "text": "Integración, comunicación y tecnología.",
+        "isCorrect": false,
+        "rationale": "Representan procesos de soporte y ejecución, mas no las restricciones de límites en el plan del proyecto."
+      }
+    ],
+    "hint": "Recuerda los elementos de un triángulo donde si modificas lo que vas a hacer, impactas la duración y el presupuesto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la guía metodológica de referencia internacional para la gestión de proyectos publicada por el Project Management Institute (PMI)?",
+    "opciones": [
+      {
+        "text": "PMBOK (Project Management Body of Knowledge).",
+        "isCorrect": true,
+        "rationale": "Es el estándar global del PMI que reúne las buenas prácticas, conceptos y áreas de conocimiento en administración de proyectos."
+      },
+      {
+        "text": "PRINCE2.",
+        "isCorrect": false,
+        "rationale": "Es una metodología orientada al gobierno de proyectos desarrollada en el Reino Unido, no emitida por el PMI."
+      },
+      {
+        "text": "Guía Scrum.",
+        "isCorrect": false,
+        "rationale": "Es el marco de trabajo para desarrollo ágil, enfocado en iteraciones rápidas y no en el estándar tradicional del PMI."
+      },
+      {
+        "text": "ISO 9001.",
+        "isCorrect": false,
+        "rationale": "Corresponde a la norma internacional de sistemas de gestión de calidad, no a la guía de proyectos del PMI."
+      },
+      {
+        "text": "COBIT.",
+        "isCorrect": false,
+        "rationale": "Es un marco de trabajo enfocado en el gobierno y gestión de tecnologías de información empresariales."
+      }
+    ],
+    "hint": "Considera las siglas del libro considerado la 'Biblia de la gestión de proyectos' que respalda la certificación PMP.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a principios o características representativas de las metodologías ágiles como Scrum o Kanban?",
+    "opciones": [
+      {
+        "text": "Organizan el trabajo en ciclos cortos e iterativos de desarrollo denominados sprints.",
+        "isCorrect": true,
+        "rationale": "Las iteraciones rápidas permiten incorporar mejoras continuas y adaptar el producto a requisitos cambiantes."
+      },
+      {
+        "text": "Utilizan tableros visuales para clasificar tareas en estados como 'Por hacer', 'En proceso' y 'Hecho'.",
+        "isCorrect": true,
+        "rationale": "Los tableros Kanban facilitan la visibilidad del flujo de trabajo y la colaboración del equipo en tiempo real."
+      },
+      {
+        "text": "Exigen definir de forma rígida e inalterable el plan a 10 años sin posibilidad de cambios.",
+        "isCorrect": false,
+        "rationale": "La inflexibilidad es opuesta al enfoque ágil, el cual promueve la adaptación al cambio frente a planes estáticos."
+      },
+      {
+        "text": "Eliminan la necesidad de interacción o colaboración entre los miembros del equipo.",
+        "isCorrect": false,
+        "rationale": "El trabajo colaborativo y la comunicación constante son pilares esenciales de los marcos ágiles."
+      },
+      {
+        "text": "Se aplican únicamente a la construcción de infraestructura pesada como catedrales o carreteras.",
+        "isCorrect": false,
+        "rationale": "Surgieron principalmente en el desarrollo de software y se han extendido a pequeñas mejoras operativas y proyectos adaptativos."
+      }
+    ],
+    "hint": "Identifica los marcos que destacan por sus ciclos iterativos de trabajo y el seguimiento visual mediante notas adhesivas o tarjetas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué diferencia técnica orienta la elección entre el software MS Project y Primavera P6 de Oracle para la planificación minera?",
+    "opciones": [
+      {
+        "text": "MS Project es más amigable para proyectos pequeños o medianos, mientras que Primavera P6 administra proyectos complejos con análisis avanzado.",
+        "isCorrect": true,
+        "rationale": "Primavera P6 destaca por su capacidad de manejar proyectos de gran escala, configuraciones avanzadas y comparaciones complejas."
+      },
+      {
+        "text": "MS Project solo funciona en dispositivos móviles y Primavera P6 requiere servidores en la nube.",
+        "isCorrect": false,
+        "rationale": "Ambos sistemas cuentan con versiones de escritorio y arquitecturas de red tradicionales según la instalación."
+      },
+      {
+        "text": "Primavera P6 no permite crear diagramas de Gantt, mientras que MS Project se limita al diseño en 3D.",
+        "isCorrect": false,
+        "rationale": "Ambos softwares tienen como función principal la programación basada en diagramas de Gantt y gestión de recursos."
+      },
+      {
+        "text": "MS Project es de código abierto y gratuito, mientras que Primavera P6 no permite asignar costos.",
+        "isCorrect": false,
+        "rationale": "MS Project es un producto comercial de Microsoft y Primavera P6 gestiona costos de manera rigurosa."
+      },
+      {
+        "text": "Primavera P6 se usa exclusivamente para la liquidación de impuestos y MS Project para redes de sensores.",
+        "isCorrect": false,
+        "rationale": "Ninguno de los dos programas está diseñado para finanzas corporativas o gestión de red de sensores."
+      }
+    ],
+    "hint": "Evalúa el nivel de complejidad del proyecto y la capacidad de realizar análisis avanzados o simulaciones entre ambas herramientas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis del cronograma de un proyecto, ¿qué representa la 'ruta crítica' o 'camino crítico'?",
+    "opciones": [
+      {
+        "text": "La secuencia de actividades encadenadas que determina la duración total mínima del proyecto.",
+        "isCorrect": true,
+        "rationale": "Cualquier retraso en una de las tareas del camino crítico pospone directamente la fecha final de entrega del proyecto."
+      },
+      {
+        "text": "El conjunto de tareas con holgura que se pueden posponer sin alterar el plazo final.",
+        "isCorrect": false,
+        "rationale": "Las tareas con holgura pertenecen a rutas no críticas que admiten cierto margen de demora."
+      },
+      {
+        "text": "La lista de actividades que no consumen presupuesto ni recursos humanos.",
+        "isCorrect": false,
+        "rationale": "Todas las actividades del camino crítico requieren recursos y tiempo para su ejecución."
+      },
+      {
+        "text": "El grupo de adquisiciones que presentan menor costo dentro del presupuesto.",
+        "isCorrect": false,
+        "rationale": "El camino crítico se calcula con base en dependencias temporales y no en montos financieros."
+      },
+      {
+        "text": "El porcentaje de imprevistos reservados para accidentes de trabajo.",
+        "isCorrect": false,
+        "rationale": "El camino crítico es una herramienta de programación de tiempo, no una reserva de contingencia."
+      }
+    ],
+    "hint": "Identifica el ramal de tareas en un diagrama de precedencias donde un día de retraso retrasa todo el proyecto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son las cuatro variables físicas fundamentales supervisadas en el control y automatización de procesos minero-industriales?",
+    "opciones": [
+      {
+        "text": "Temperatura, presión, caudal y nivel.",
+        "isCorrect": true,
+        "rationale": "Son las cuatro variables clásicas del control de procesos industriales sobre las que se basa la instrumentación de plantas."
+      },
+      {
+        "text": "Voltaje, corriente, potencia y frecuencia.",
+        "isCorrect": false,
+        "rationale": "Estas representan magnitudes de sistemas de potencia eléctrica, no las variables principales de proceso."
+      },
+      {
+        "text": "Velocidad, aceleración, masa y volumen.",
+        "isCorrect": false,
+        "rationale": "Corresponden a propiedades cinemáticas y físicas mecánicas de objetos discretos."
+      },
+      {
+        "text": "Humedad, viscosidad, dureza y densidad.",
+        "isCorrect": false,
+        "rationale": "Son variables analíticas o secundarias de laboratorio, no las cuatro magnitudes principales de control en la industria."
+      },
+      {
+        "text": "Luz, sonido, radiación y magnetismo.",
+        "isCorrect": false,
+        "rationale": "Representan fenómenos físicos ambientales o de prueba no destructiva, no las variables de control de fluidos y tanques."
+      }
+    ],
+    "hint": "Piensa en las mediciones básicas requeridas para controlar fluidos dentro de tanques y tuberías en plantas concentradoras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el pesaje continuo de mineral sobre fajas transportadoras, ¿qué tipo de sensor mide la deformación estructural mediante variaciones eléctricas?",
+    "opciones": [
+      {
+        "text": "Galga extensiométrica.",
+        "isCorrect": true,
+        "rationale": "Las galgas miden microdeformaciones mecánicas causadas por el peso sobre la estructura para transformarlas en una señal eléctrica."
+      },
+      {
+        "text": "Termómetro bimetálico.",
+        "isCorrect": false,
+        "rationale": "Su función es medir temperatura mediante la dilatación de metales, no fuerzas ni pesaje mecánico."
+      },
+      {
+        "text": "Tubo de Bourdon.",
+        "isCorrect": false,
+        "rationale": "Es un elemento mecánico diseñado para medir presión de fluidos en manómetros."
+      },
+      {
+        "text": "Canal Parshall.",
+        "isCorrect": false,
+        "rationale": "Es una estructura hidráulica empleada para medir el caudal en canales abiertos."
+      },
+      {
+        "text": "Sensor fotoeléctrico discreto.",
+        "isCorrect": false,
+        "rationale": "Detecta la presencia o ausencia de objetos mediante haces de luz, pero no mide peso continuo."
+      }
+    ],
+    "hint": "Considera el dispositivo de celda de carga que se dobla imperceptiblemente bajo toneladas de peso para cambiar su capacitancia o resistencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de los sistemas informáticos conocidos como 'Dispatch' en minería a Tajo Abierto?",
+    "opciones": [
+      {
+        "text": "Optimizar la asignación, rutas y monitoreo en tiempo real de la flota de camiones y palas.",
+        "isCorrect": true,
+        "rationale": "El dispatch gestiona el movimiento eficiente de la flota de acarreo para maximizar el material transportado hacia la chancadora o botaderos."
+      },
+      {
+        "text": "Controlar el pago de salarios y vacaciones del personal del campamento.",
+        "isCorrect": false,
+        "rationale": "Esa tarea corresponde a los módulos de gestión humana del software ERP empresarial."
+      },
+      {
+        "text": "Diseñar los planos arquitectónicos de las oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "El diseño de infraestructura física se realiza mediante programas de arquitectura o ingeniería CAD."
+      },
+      {
+        "text": "Facturar las ventas de concentrado de mineral a los compradores internacionales.",
+        "isCorrect": false,
+        "rationale": "Las transacciones comerciales y exportaciones corresponden al área comercial y contable."
+      },
+      {
+        "text": "Medir manualmente la pureza del agua en los pozos subterráneos.",
+        "isCorrect": false,
+        "rationale": "El análisis de agua se realiza con sensores analíticos o muestreos de laboratorio de medio ambiente."
+      }
+    ],
+    "hint": "Enfócate en la herramienta empleada por los operadores para asignar y despachar volquetes gigantes hacia los puntos de carga y descarga.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones representan ventajas clave de implementar Centros de Operaciones Remotas (IROC o CORE) en minería?",
+    "opciones": [
+      {
+        "text": "Permiten monitorear y supervisar procesos a larga distancia sin requerir la presencia física diaria del personal en el yacimiento.",
+        "isCorrect": true,
+        "rationale": "Al integrar redes de datos y sistemas SCADA, los especialistas operan desde las ciudades reduciendo viajes hacia la mina."
+      },
+      {
+        "text": "Mejoran la seguridad laboral al alejar a los trabajadores de zonas de alto riesgo operativo.",
+        "isCorrect": true,
+        "rationale": "La operación a distancia minimiza la exposición del personal a condiciones climáticas extremas o peligros de la mina."
+      },
+      {
+        "text": "Garantizan que las máquinas mineras no requieran ningún mantenimiento mecánico.",
+        "isCorrect": false,
+        "rationale": "Los componentes físicos y mecánicos exigen mantenimiento preventivo independientemente de dónde se ubique el centro de control."
+      },
+      {
+        "text": "Hacen que los sensores de campo dejen de necesitar energía eléctrica o señal de comunicación.",
+        "isCorrect": false,
+        "rationale": "Los sistemas remotos dependen más que nunca de sensores energizados y redes de comunicación estables."
+      },
+      {
+        "text": "Eliminan por completo las fases de chancado y molienda del procesamiento de mineral.",
+        "isCorrect": false,
+        "rationale": "Los procesos físicos de conminución siguen siendo indispensables para liberar el mineral valioso."
+      }
+    ],
+    "hint": "Busca beneficios vinculados a la ubicación del personal lejos del yacimiento y a la reducción del riesgo operativo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué protocolo de comunicación ligero e idóneo para entornos IoT se utiliza para transmitir datos de sensores a la nube?",
+    "opciones": [
+      {
+        "text": "MQTT.",
+        "isCorrect": true,
+        "rationale": "MQTT es un protocolo ligero basado en publicación y suscripción, ideal para la conexión de sensores y bajo ancho de banda."
+      },
+      {
+        "text": "FTP.",
+        "isCorrect": false,
+        "rationale": "Es un protocolo diseñado para la transferencia de archivos completos, no para mensajería ligera de sensores."
+      },
+      {
+        "text": "HTTP/2.",
+        "isCorrect": false,
+        "rationale": "Aunque es un estándar web, genera mayor sobrecarga de datos en comparación con protocolos optimizados para sensores."
+      },
+      {
+        "text": "Profibus DP.",
+        "isCorrect": false,
+        "rationale": "Es un bus de campo industrial por cable para automatización local, no un protocolo ligero de nube."
+      },
+      {
+        "text": "SMTP.",
+        "isCorrect": false,
+        "rationale": "Se utiliza exclusivamente para la transmisión de correo electrónico, no para telemetría de sensores."
+      }
+    ],
+    "hint": "Recuerda el protocolo abierto apodado popularmente 'mosquito' por su bajo consumo de ancho de banda y mensajes breves.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la medición de caudal en tuberías mediante placa de orificio o tobera, ¿cuál es el principio físico aplicado?",
+    "opciones": [
+      {
+        "text": "Generación de una presión diferencial al colocar una restricción en el paso del fluido.",
+        "isCorrect": true,
+        "rationale": "Al reducir el área del conducto aumenta la velocidad y disminuye la presión, creando una diferencia de presión proporcional al caudal."
+      },
+      {
+        "text": "Emisión de rayos gamma para contar la cantidad de moléculas en tránsito.",
+        "isCorrect": false,
+        "rationale": "La radiación se aplica en densímetros nucleares, no en el método primario de restricción por orificio."
+      },
+      {
+        "text": "Dilatación de una lámina metálica en función de la temperatura del líquido.",
+        "isCorrect": false,
+        "rationale": "Ese principio corresponde a los termómetros bimetálicos utilizados para medir calor, no flujo volumétrico."
+      },
+      {
+        "text": "Cambio en la conductividad eléctrica mediante la adición de colorantes artificiales.",
+        "isCorrect": false,
+        "rationale": "Las placas de orificio no alteran la composición química del fluido ni usan colorantes."
+      },
+      {
+        "text": "Atracción magnética del fluido hacia un núcleo de hierro dentro de la tubería.",
+        "isCorrect": false,
+        "rationale": "No requiere propiedades magnéticas en el líquido; se fundamenta en principios puramente hidráulicos de presión."
+      }
+    ],
+    "hint": "Aplica la analogía de colocar el pulgar en el extremo de una manguera de jardín para alterar la velocidad y la presión del agua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ventaja operativa ofrece un dron de ala fija frente a un dron multirotor (quadcopter) en levantamientos topográficos extenso?",
+    "opciones": [
+      {
+        "text": "Posee mayor autonomía de vuelo y alcance para cubrir extensas áreas de terreno.",
+        "isCorrect": true,
+        "rationale": "Su sustentación aerodinámica mediante alas le otorga mayor eficiencia energética y tiempo de vuelo que los rotores giratorios."
+      },
+      {
+        "text": "Capacidad de mantenerse estático suspendido exactamente en un solo punto.",
+        "isCorrect": false,
+        "rationale": "El vuelo estacionario es propio de los drones multirotores o helicópteros, mientras que la ala fija requiere avance continuo."
+      },
+      {
+        "text": "Facilidad para despegar y aterrizar en espacios reducidos sin pista alguna.",
+        "isCorrect": false,
+        "rationale": "Los drones de ala fija requieren un área de despegue o lanzamiento y espacio para planear al aterrizar."
+      },
+      {
+        "text": "Costo de adquisición inferior al de un juguete de radio control básico.",
+        "isCorrect": false,
+        "rationale": "Los drones profesionales de ala fija equipados con sensores especializados representan inversiones industriales elevadas."
+      },
+      {
+        "text": "Capacidad para transportar más de diez toneladas de carga útil.",
+        "isCorrect": false,
+        "rationale": "Su capacidad de carga está limitada a sensores ligeros, cámaras o dispositivos LiDAR pequeños."
+      }
+    ],
+    "hint": "Considera la diferencia de diseño aerodinámico que le permite volar largas distancias como un avión convencional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tecnología basada en la emisión de pulsos de luz láser se instala en drones para generar modelos 3D y topografía precisa?",
+    "opciones": [
+      {
+        "text": "LiDAR.",
+        "isCorrect": true,
+        "rationale": "El sistema LiDAR calcula distancias midiendo el tiempo que tardan los haces de luz láser en rebotar sobre la superficie."
+      },
+      {
+        "text": "RADAR.",
+        "isCorrect": false,
+        "rationale": "El radar utiliza ondas de radio electromagnéticas en lugar de haces de luz láser."
+      },
+      {
+        "text": "Sonar.",
+        "isCorrect": false,
+        "rationale": "El sonar emplea ondas acústicas o de sonido, utilizadas habitualmente bajo el agua."
+      },
+      {
+        "text": "GPS pasivo.",
+        "isCorrect": false,
+        "rationale": "El GPS sirve para ubicación satelital global, pero no emite haces de luz para modelar relieves."
+      },
+      {
+        "text": "Infrarrojo bimetálico.",
+        "isCorrect": false,
+        "rationale": "Es un concepto inexistente que combina medición térmica puntual con mecanismos dilatables."
+      }
+    ],
+    "hint": "Piensa en el acrónimo derivado de 'Laser Detection and Ranging' utilizado para mapear terrenos y detectar vegetación o relieves.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la supervisión de depósitos de relaves, ¿qué vehículo no tripulado y qué técnica se aplican para medir la profundidad bajo el agua?",
+    "opciones": [
+      {
+        "text": "Un vehículo de superficie no tripulado (USV) aplicando batimetría.",
+        "isCorrect": true,
+        "rationale": "Los usv son pequeñas embarcaciones robóticas equipadas con ecosondas o sonares para mapear el fondo acuático (batimetría)."
+      },
+      {
+        "text": "Un dron aéreo multirotor (UAV) aplicando fotogrametría térmica.",
+        "isCorrect": false,
+        "rationale": "La luz de las cámaras aéreas no penetra las aguas turbias de los relaves para medir el fondo acumulado."
+      },
+      {
+        "text": "Un robot terrestre (UGV) aplicando perforación diamantina.",
+        "isCorrect": false,
+        "rationale": "Los vehículos terrestres no flotan sobre lagunas de relaves ni realizan prospección por batimetría."
+      },
+      {
+        "text": "Un satélite de órbita baja aplicando fotografía oblicua.",
+        "isCorrect": false,
+        "rationale": "Las imágenes satelitales ópticas no miden la profundidad submarina dentro de la poza."
+      },
+      {
+        "text": "Un camión autónomo aplicando balanzas de galgas extensiométricas.",
+        "isCorrect": false,
+        "rationale": "Los camiones realizan acarreo de roca en tierra firme y no intervienen en el monitoreo acuático de la poza."
+      }
+    ],
+    "hint": "Identifica el bote robótico acuático que utiliza sonar para medir la acumulación de sedimentos bajo el agua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a aplicaciones directas de los drones aéreos (UAV) en la minería?",
+    "opciones": [
+      {
+        "text": "Supervisión y control de la estabilidad de taludes en minas a Tajo Abierto.",
+        "isCorrect": true,
+        "rationale": "Los drones capturan imágenes periódicas del estado del Tajo para evaluar posibles deslizamientos o fallas geológicas."
+      },
+      {
+        "text": "Vigilancia ambiental y seguridad de activos en áreas remotas o de difícil acceso.",
+        "isCorrect": true,
+        "rationale": "Permiten patrullar infraestructuras distantes evitando el envío continuo de personal a pie o en vehículos."
+      },
+      {
+        "text": "Acarreo masivo de toneladas de roca minada desde el fondo del Tajo hasta la chancadora.",
+        "isCorrect": false,
+        "rationale": "La capacidad de carga de los UAV es muy reducida y no reemplaza a los camiones gigantes de transporte."
+      },
+      {
+        "text": "Sustitución definitiva de las fajas transportadoras de mineral mediante acarreo volador.",
+        "isCorrect": false,
+        "rationale": "Los drones se emplean para inspección y captura de datos, no para el transporte masivo de materiales."
+      },
+      {
+        "text": "Fundición y refinación instantánea de mineral mediante rayos térmicos en vuelo.",
+        "isCorrect": false,
+        "rationale": "Los procesos pirometalúrgicos exigen hornos industriales en plantas concentradoras y refinerías en tierra."
+      }
+    ],
+    "hint": "Enfócate en el uso de drones para la captura de datos visuales, inspecciones de talud y patrullaje de zonas distantes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué categoría corresponden los robots móviles no tripulados que se desplazan sobre ruedas u orugas para inspeccionar túneles subterráneos?",
+    "opciones": [
+      {
+        "text": "UGV (Unmanned Ground Vehicle).",
+        "isCorrect": true,
+        "rationale": "Los UGV son vehículos robóticos terrestres adaptados para movilizarse en galerías y túneles en minería subterránea."
+      },
+      {
+        "text": "UAV (Unmanned Aerial Vehicle).",
+        "isCorrect": false,
+        "rationale": "UAV hace referencia exclusiva a vehículos aéreos no tripulados (drones de vuelo)."
+      },
+      {
+        "text": "USV (Unmanned Surface Vehicle).",
+        "isCorrect": false,
+        "rationale": "USV se refiere a embarcaciones que navegan sobre la superficie del agua."
+      },
+      {
+        "text": "RPAS (Remotely Piloted Aircraft System).",
+        "isCorrect": false,
+        "rationale": "RPAS es la denominación formal para el sistema completo de aeronaves pilotadas a distancia."
+      },
+      {
+        "text": "VTS (Vessel Traffic System).",
+        "isCorrect": false,
+        "rationale": "Es un sistema de gestión del tráfico marítimo en puertos, no un vehículo robótico terrestre."
+      }
+    ],
+    "hint": "Considera el acrónimo que identifica a los vehículos robóticos que operan sobre el suelo (Ground) en entornos terrestres o subterráneos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué caracteriza a una aeronave no tripulada con tecnología VTOL?",
+    "opciones": [
+      {
+        "text": "Despega y aterriza de manera vertical como un helicóptero, pero se desplaza horizontalmente mediante alas fijas.",
+        "isCorrect": true,
+        "rationale": "VTOL (Vertical Take-off and Landing) combina la flexibilidad de espacio de un multirotor con la autonomía del vuelo planeado."
+      },
+      {
+        "text": "Navega sumergida dentro de tuberías de agua ácida de manera autónoma.",
+        "isCorrect": false,
+        "rationale": "Las aeronaves VTOL son de ámbito aéreo y no están diseñadas para inmersión acuática."
+      },
+      {
+        "text": "Opera exclusivamente conectada mediante un cable de alta tensión a la estación de tierra.",
+        "isCorrect": false,
+        "rationale": "Los drones cautivos usan cable, mientras que las plataformas VTOL vuelan con baterías o motores integrados."
+      },
+      {
+        "text": "Es un robot terrestre de orugas especializado en la colocación de explosivos.",
+        "isCorrect": false,
+        "rationale": "VTOL define una categoría de aeronaves voladoras, no de maquinaria terrestre."
+      },
+      {
+        "text": "Es un satélite comercial que orbita a miles de kilómetros fuera de la atmósfera.",
+        "isCorrect": false,
+        "rationale": "Son drones que operan dentro de la atmósfera terrestre para proyectos locales."
+      }
+    ],
+    "hint": "Asocia las siglas en inglés 'Vertical Take-Off and Landing' con un vehículo que despega verticalmente pero viaja como un avión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia conceptual entre la simulación de eventos discretos y la simulación de procesos continuos?",
+    "opciones": [
+      {
+        "text": "La simulación discreta analiza cambios en puntos específicos del tiempo, mientras la continua evalúa variables que cambian constantemente.",
+        "isCorrect": true,
+        "rationale": "Eventos como la llegada de camiones son puntuales (discretos), mientras que la temperatura en un tanque evoluciona de forma ininterrumpida (continua)."
+      },
+      {
+        "text": "La simulación discreta calcula presupuestos financieros y la continua elabora mapas de carreteras.",
+        "isCorrect": false,
+        "rationale": "Ambas modalidades pueden aplicar a distintas áreas de ingeniería sin limitarse a finanzas o mapas."
+      },
+      {
+        "text": "La simulación continua no utiliza fórmulas matemáticas y la discreta requiere computadoras cuánticas.",
+        "isCorrect": false,
+        "rationale": "Ambos tipos de simulación se basan en formulaciones matemáticas rigurosas procesadas en computadoras estándar."
+      },
+      {
+        "text": "La simulación discreta se aplica únicamente a geología y la continua al pago de impuestos.",
+        "isCorrect": false,
+        "rationale": "Los enfoques continuo y discreto son aplicables a múltiples campos de la ingeniería operativa y química."
+      },
+      {
+        "text": "La simulación continua se realiza a mano en papel y la discreta mediante gafas de realidad virtual.",
+        "isCorrect": false,
+        "rationale": "Ambas metodologías requieren software especializado para ejecutar sus cálculos numéricos."
+      }
+    ],
+    "hint": "Diferencia entre eventos que ocurren de forma puntual en momentos determinados frente a variables que varían en todo instante de tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué software se emplea para el diseño y simulación de patrones de perforación y detonación de explosivos en minería?",
+    "opciones": [
+      {
+        "text": "JKSimBlast.",
+        "isCorrect": true,
+        "rationale": "Es una herramienta especializada en modelar y simular secuencias de perforación y voladura para evaluar la fragmentación."
+      },
+      {
+        "text": "VentSim.",
+        "isCorrect": false,
+        "rationale": "Es un programa diseñado para simular redes de ventilación y flujos de aire subterráneo."
+      },
+      {
+        "text": "Bizagi.",
+        "isCorrect": false,
+        "rationale": "Se orienta al modelado gráfico de procesos de negocio e itinerarios de trabajo bajo el estándar BPMN."
+      },
+      {
+        "text": "FlexSim.",
+        "isCorrect": false,
+        "rationale": "Es un entorno de simulación 3D de eventos discretos enfocado en logística y flujos de producción industrial."
+      },
+      {
+        "text": "MS Project.",
+        "isCorrect": false,
+        "rationale": "Es una herramienta para la planificación de tareas y asignación de cronogramas en proyectos."
+      }
+    ],
+    "hint": "Busca el programa cuyo nombre combina la ingeniería de voladura con el término 'Blast'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En minería subterránea, ¿cuál es la función central de un software especializado como VentSim?",
+    "opciones": [
+      {
+        "text": "Simular y optimizar las redes de ventilación y flujos de aire en las galerías subterráneas.",
+        "isCorrect": true,
+        "rationale": "Permite diseñar el flujo de aire, capacidad de ventiladores y dilución de gases para garantizar la seguridad respiratoria bajo tierra."
+      },
+      {
+        "text": "Programar el mantenimiento mecánico preventivo de las camionetas del campamento.",
+        "isCorrect": false,
+        "rationale": "La gestión de flotas y mantenimiento vehicular se realiza mediante sistemas de gestión de activos o Dispatch."
+      },
+      {
+        "text": "Calcular la factura de venta de concentrado en el puerto de embarque.",
+        "isCorrect": false,
+        "rationale": "Las facturaciones comerciales y finanzas son llevadas por el software ERP corporativo."
+      },
+      {
+        "text": "Efectuar la liquidación mensual de salarios y beneficios del personal operario.",
+        "isCorrect": false,
+        "rationale": "Es una función puramente administrativa correspondiente a la gestión de recursos humanos."
+      },
+      {
+        "text": "Medir el tonelaje en las fajas transportadoras mediante celdas de carga.",
+        "isCorrect": false,
+        "rationale": "El pesaje en fajas utiliza galgas extensiométricas e instrumentación en tiempo real."
+      }
+    ],
+    "hint": "Piensa en el monitoreo indispensable para evitar la acumulación de gases nocivos y asegurar oxígeno en labores subterráneas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones describen adecuadamente los objetivos del software de modelado geológico 3D (como Leapfrog, Datamine o Vulcan)?",
+    "opciones": [
+      {
+        "text": "Representar tridimensionalmente las estructuras rocosas y los cuerpos mineralizados a partir de datos de perforación.",
+        "isCorrect": true,
+        "rationale": "Modelan la geometría subterránea interpretando las muestras obtenidas mediante sondajes y muestras de campo."
+      },
+      {
+        "text": "Facilitar la estimación de recursos y el diseño de la secuencia óptima de extracción del mineral.",
+        "isCorrect": true,
+        "rationale": "Permiten calcular las leyes del yacimiento y planificar el orden en que se explotará la mina para mayor rentabilidad."
+      },
+      {
+        "text": "Sustituir el uso de elementos de protección personal como casco o botas en el campo.",
+        "isCorrect": false,
+        "rationale": "El software no elimina el cumplimiento de los estándares físicos de seguridad en el trabajo presencial."
+      },
+      {
+        "text": "Procesar automáticamente el pago de planillas e impuestos de la empresa.",
+        "isCorrect": false,
+        "rationale": "Estas herramientas están orientadas a la geología e ingeniería de minas, no a la administración contable."
+      },
+      {
+        "text": "Emitir la señal de televisión pública para el entretenimiento de las comunidades vecinas.",
+        "isCorrect": false,
+        "rationale": "Su objetivo es strictly técnico-minero y no guardan relación con servicios de telecomunicaciones masivas."
+      }
+    ],
+    "hint": "Enfócate en la interpretación tridimensional de sondajes y la estimación de recursos de mineral dentro del yacimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representa la plataforma GeoCatMin / GEOPROM dentro de la minería en el Perú?",
+    "opciones": [
+      {
+        "text": "Un sistema de información geográfica (GIS) oficial desarrollado por INGEMMET para consultar información geológica y catastral.",
+        "isCorrect": true,
+        "rationale": "GeoCatMin permite a los usuarios acceder en línea de manera gratuita a mapas de derechos mineros, geología y catastros del Perú."
+      },
+      {
+        "text": "Un modelo de camión minero eléctrico de fabricación peruana.",
+        "isCorrect": false,
+        "rationale": "GeoCatMin es una plataforma de datos de información geográfica, no un vehículo minero."
+      },
+      {
+        "text": "Un tipo de explosivo plástico formulado para voladuras subterráneas.",
+        "isCorrect": false,
+        "rationale": "No es un insumo químico ni comercial para voladuras."
+      },
+      {
+        "text": "Un software comercial privado de diseño asistido para chancadoras primarias.",
+        "isCorrect": false,
+        "rationale": "Es un portal público e interactivo administrado por el Estado Peruano mediante el INGEMMET."
+      },
+      {
+        "text": "Un dron militar diseñado para la cartografía submarina.",
+        "isCorrect": false,
+        "rationale": "Se trata de un software de geoinformación en línea, no de un hardware o aeronave no tripulada."
+      }
+    ],
+    "hint": "Identifica el portal interactivo del organismo público estatal (INGEMMET) para revisar concesiones y mapas geológicos peruanos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué estándar gráfico estandarizado se utiliza para diagramar procesos de negocio e itinerarios operativos en programas como Bizagi?",
+    "opciones": [
+      {
+        "text": "BPMN (Business Process Model and Notation).",
+        "isCorrect": true,
+        "rationale": "BPMN proporciona un lenguaje visual estandarizado internacionalmente para modelar flujos de trabajo de forma comprensible."
+      },
+      {
+        "text": "WGS84.",
+        "isCorrect": false,
+        "rationale": "Es el sistema geodésico mundial estándar utilizado para coordenadas y localización GPS."
+      },
+      {
+        "text": "MQTT.",
+        "isCorrect": false,
+        "rationale": "Es un protocolo de red orientado al envío de mensajes livianos en el Internet de las Cosas."
+      },
+      {
+        "text": "HTML5.",
+        "isCorrect": false,
+        "rationale": "Es un lenguaje de marcado orientado al diseño y estructuración de contenido en páginas web."
+      },
+      {
+        "text": "PMBOK.",
+        "isCorrect": false,
+        "rationale": "Es la guía metodológica del PMI que contiene buenas prácticas de gestión, no una notación gráfica de procesos."
+      }
+    ],
+    "hint": "Recuerda las siglas del estándar de modelado cuyos símbolos expresan eventos, actividades y compuertas en un diagrama de flujo profesional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué método numérico se emplea en herramientas tipo SolidWorks para evaluar el esfuerzo y la deformación en piezas o macizos rocosos?",
+    "opciones": [
+      {
+        "text": "Análisis de elementos finitos (FEA).",
+        "isCorrect": true,
+        "rationale": "El análisis de elementos finitos divide estructuras complejas en una malla de partes pequeñas para resolver ecuaciones de esfuerzo mecánico."
+      },
+      {
+        "text": "Transformada rápida de Fourier.",
+        "isCorrect": false,
+        "rationale": "Se utiliza en el procesamiento numérico de señales para convertir datos del dominio del tiempo al de la frecuencia."
+      },
+      {
+        "text": "Método de Monte Carlo discreto.",
+        "isCorrect": false,
+        "rationale": "Es una técnica probabilística empleada para evaluar el riesgo en proyectos o modelos matemáticos estadísticos."
+      },
+      {
+        "text": "Análisis de regresión lineal simple.",
+        "isCorrect": false,
+        "rationale": "Es una prueba estadística que modela la relación entre dos variables mediante una recta."
+      },
+      {
+        "text": "Algoritmo de Dijkstra.",
+        "isCorrect": false,
+        "rationale": "Se utiliza en ciencias de la computación para hallar el camino más corto entre vértices de un grafo."
+      }
+    ],
+    "hint": "Piensa en el análisis mecánico que divide geométricamente un modelo 3D en mallas para detectar concentraciones de tensión o fracturas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de una unidad minera, ¿cuál de las siguientes características distingue fundamentalmente a una actividad de 'proyecto' frente a una actividad de 'operaciones'?",
+    "opciones": [
+      {
+        "text": "Un proyecto es de naturaleza temporal, singular y gradual, mientras que las operaciones son continuas y repetitivas.",
+        "isCorrect": true,
+        "rationale": "Los proyectos tienen un inicio y fin definidos con un resultado único (como construir una planta concentradora), a diferencia de los procesos operativos (como el acarreo diario) que se repiten indefinidamente."
+      },
+      {
+        "text": "Los proyectos únicamente requieren recursos financieros, mientras que las operaciones dependen en su totalidad de mano de obra.",
+        "isCorrect": false,
+        "rationale": "Tanto los proyectos como las operaciones requieren recursos humanos, financieros, materiales y temporales para llevarse a cabo."
+      },
+      {
+        "text": "Las operaciones son temporales y se enfocan en la exploración, mientras que los proyectos representan la producción continua.",
+        "isCorrect": false,
+        "rationale": "La relación es opuesta: los proyectos son la fase temporal con inicio y fin, mientras que la producción continua es parte de las operaciones."
+      },
+      {
+        "text": "Un proyecto no requiere planificación previa a diferencia de la producción en planta concentradora.",
+        "isCorrect": false,
+        "rationale": "Todo proyecto requiere una rigurosa fase de planificación para definir alcance, tiempos y costos antes de ser ejecutado."
+      },
+      {
+        "text": "Las operaciones generan entregables singulares únicos, mientras que los proyectos generan resultados idénticos estandarizados.",
+        "isCorrect": false,
+        "rationale": "Son los proyectos los que producen resultados singulares e irrepetibles, mientras que las operaciones generan salidas estandarizadas."
+      }
+    ],
+    "hint": "Considere la permanencia en el tiempo y la repetitividad del trabajo dentro de la empresa minera.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de proyectos bajo la triple restricción (Alcance, Tiempo y Costo), si un cliente exige incorporar cuatro nuevas estaciones de monitoreo ambiental sin modificar el presupuesto asignado, ¿cuál es el impacto directo esperado en la restricción restante?",
+    "opciones": [
+      {
+        "text": "El tiempo total requerido para la ejecución del proyecto deberá incrementarse.",
+        "isCorrect": true,
+        "rationale": "Al aumentar el alcance (más estaciones) manteniendo constante el costo, la geometría de la triple restricción obliga a aumentar la duración temporal para compensar la carga adicional."
+      },
+      {
+        "text": "El tiempo de ejecución del proyecto disminuirá automáticamente por eficiencia de escala.",
+        "isCorrect": false,
+        "rationale": "Añadir más trabajo sin presupuesto adicional para contratar más personal o acelerar turnos no reduce el tiempo, sino que lo prolonga."
+      },
+      {
+        "text": "El costo global del proyecto se reducirá de forma proporcional.",
+        "isCorrect": false,
+        "rationale": "El enunciado establece que el presupuesto permanece fijo, por lo que el costo no disminuye ni aumenta, afectando la variable tiempo."
+      },
+      {
+        "text": "La calidad y el alcance del proyecto original se eliminarán por completo.",
+        "isCorrect": false,
+        "rationale": "El alcance aumenta al agregar estaciones, no se elimina; la adaptación técnica ajusta el cronograma de ejecución."
+      },
+      {
+        "text": "Las tres variables de la restricción permanecerán inalteradas debido a la holgura total del proyecto.",
+        "isCorrect": false,
+        "rationale": "La restricción triple actúa de forma interdependiente; cambiar una de las variables obliga a modificar al menos una de las otras dos."
+      }
+    ],
+    "hint": "Piense en la relación interdependiente del 'triángulo' de gestión de proyectos al modificar uno de sus lados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la secuenciación de actividades en un cronograma de minería mediante la Metodología del Camino Crítico (CPM), ¿qué representa específicamente la ruta crítica hallada?",
+    "opciones": [
+      {
+        "text": "La secuencia de actividades dependientes que determina la duración total mínima posible del proyecto.",
+        "isCorrect": true,
+        "rationale": "La ruta crítica es la cadena de tareas continuas sin holgura cuya duración total define la fecha de finalización más temprana del proyecto completo."
+      },
+      {
+        "text": "El conjunto de tareas con mayor margen de holgura que pueden retrasarse sin afectar el proyecto.",
+        "isCorrect": false,
+        "rationale": "Las actividades en la ruta crítica se caracterizan por tener holgura cero; un retraso en cualquiera de ellas posterga el proyecto."
+      },
+      {
+        "text": "La lista exclusiva de adquisiciones de mayor costo dentro del presupuesto de capital.",
+        "isCorrect": false,
+        "rationale": "La ruta crítica analiza la dependencia lógica temporal de las actividades, no el impacto o monto económico de las adquisiciones."
+      },
+      {
+        "text": "El plan alternativo de contingencia utilizado únicamente cuando ocurre un desastre ambiental.",
+        "isCorrect": false,
+        "rationale": "CPM es una herramienta primaria de planificación de tiempo de actividades, no un plan de respuesta a riesgos ambientales."
+      },
+      {
+        "text": "El diagrama que incluye únicamente tareas administrativas y contables de la oficina de proyectos.",
+        "isCorrect": false,
+        "rationale": "La ruta crítica abarca todas las actividades de ingeniería, procura, construcción y puesta en marcha del proyecto."
+      }
+    ],
+    "hint": "Analice qué sucede con el plazo final del proyecto si una tarea de este camino sufre un retraso de un solo día.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis de la Gestión del Valor Ganado (EVM), un proyecto de montaje electromecánico reporta un Índice de Desempeño del Costo $CPI = 1.15$ y un Índice de Desempeño del Cronograma $SPI = 0.85$. ¿Cuál es el diagnóstico correcto sobre el estado del proyecto?",
+    "opciones": [
+      {
+        "text": "El proyecto está ejecutándose por debajo del presupuesto planificado, pero se encuentra retrasado en su cronograma.",
+        "isCorrect": true,
+        "rationale": "Un $CPI > 1$ indica eficiencia en costos (gasto menor al valor producido), mientras que un $SPI < 1$ señala que se ha avanzado a un ritmo más lento de lo programado."
+      },
+      {
+        "text": "El proyecto presenta sobrecostos significativos, pero avanza adelantado conforme al cronograma.",
+        "isCorrect": false,
+        "rationale": "Un $CPI > 1$ descarta el sobrecosto y un $SPI < 1$ descarta el adelanto en el tiempo de ejecución."
+      },
+      {
+        "text": "El proyecto sobrepasa el presupuesto y presenta retrasos graves en todas sus actividades.",
+        "isCorrect": false,
+        "rationale": "Aunque existe retraso ($SPI = 0.85$), los costos están rindiendo eficientemente ($CPI = 1.15$)."
+      },
+      {
+        "text": "El proyecto se encuentra exactamente en la línea base de tiempo y costo sin variaciones.",
+        "isCorrect": false,
+        "rationale": "El estado conforme a la línea base requeriría que ambos índices ($CPI$ y $SPI$) fuesen exactamente iguales a $1.00$."
+      },
+      {
+        "text": "El proyecto ha terminado antes del tiempo estimado pero consumió la totalidad de la reserva de contingencia.",
+        "isCorrect": false,
+        "rationale": "El índice $SPI = 0.85$ denota un avance menor al planificado a la fecha de corte, confirmando que el trabajo está atrasado."
+      }
+    ],
+    "hint": "Recuerde que el valor $1.00$ es el punto de referencia neutro para ambos índices en el método EVM.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al aplicar la estimación de costos por tres puntos (técnica PERT) para el hincado de pilotes en una estructura minera, se obtienen los siguientes valores: Estimación Optimista ($O$) = $10,000, Estimación Pesimista ($P$) = $22,000 y Estimación Más Probable ($M$) = $13,000. ¿Cuál es el costo estimado PERT ($E$)?",
+    "opciones": [
+      {
+        "text": "$14,000",
+        "isCorrect": true,
+        "rationale": "Aplicando la fórmula ponderada $E = \\frac{O + 4M + P}{6} = \\frac{10000 + 4(13000) + 22000}{6} = \\frac{10000 + 52000 + 22000}{6} = \\frac{84000}{6} = 14000$."
+      },
+      {
+        "text": "$15,000",
+        "isCorrect": false,
+        "rationale": "Este valor proviene de realizar un promedio aritmético simple $\\frac{O + M + P}{3} = \\frac{45000}{3} = 15000$, omitiendo la ponderación estadística PERT."
+      },
+      {
+        "text": "$13,000",
+        "isCorrect": false,
+        "rationale": "Este resultado corresponde únicamente al valor de la estimación Más Probable ($M$), ignorando los escenarios extremos."
+      },
+      {
+        "text": "$16,000",
+        "isCorrect": false,
+        "rationale": "Es resultado de un error de cálculo al ponderar incorrectamente los valores pesimistas y optimistas en la media."
+      },
+      {
+        "text": "$18,000",
+        "isCorrect": false,
+        "rationale": "Corresponde a calcular el promedio entre la estimación pesimista y la más probable, omitiendo el valor optimista."
+      }
+    ],
+    "hint": "Utilice la fórmula estandarizada de la distribución beta ponderada $E = \\frac{O + 4M + P}{6}$.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco del software de gestión de proyectos para la industria minera, ¿cuáles de las siguientes aseveraciones respecto al uso de herramientas tradicionales (MS Project / Primavera P6) frente a marcos ágiles (Kanban / Scrum) son correctas?",
+    "opciones": [
+      {
+        "text": "Primavera P6 ofrece mayor capacidad de análisis, flexibilidad y programación avanzada para proyectos altamente complejos en comparación con MS Project.",
+        "isCorrect": true,
+        "rationale": "Primavera P6 destaca en mega-proyectos de minería e ingeniería pesada por su robusta capacidad de gestionar bases de datos complejas y simular múltiples proyectos interrelacionados."
+      },
+      {
+        "text": "Las metodologías tradicionales son ideales para proyectos de construcción de infraestructura minera con alcance bien definido y secuencial.",
+        "isCorrect": true,
+        "rationale": "La metodología en cascada o tradicional gestiona eficientemente proyectos donde las etapas de diseño, procura y construcción siguen un orden lógico rígido."
+      },
+      {
+        "text": "Tableros colaborativos como Trello o Kanban permiten estructurar flujos de trabajo visuales divididos en 'Por hacer' (To Do), 'En proceso' (Doing) y 'Hecho' (Done).",
+        "isCorrect": true,
+        "rationale": "Los tableros Kanban facilitan la gestión visual y ágil de tareas de menor escala o soporte operativo mediante columnas de estado."
+      },
+      {
+        "text": "Scrum reemplaza por completo la necesidad de llevar presupuestos y cronogramas en grandes proyectos de infraestructura minera.",
+        "isCorrect": false,
+        "rationale": "Scrum no elimina la gestión de costos ni la necesidad de controlar cronogramas maestros exigidos en contrataciones mineras."
+      },
+      {
+        "text": "MS Project requiere obligatoriamente que el usuario programe en lenguajes de código abierto para poder trazar un diagrama de Gantt.",
+        "isCorrect": false,
+        "rationale": "MS Project utiliza una interfaz comercial intuitiva sin necesidad de desarrollar código para construir diagramas de Gantt."
+      }
+    ],
+    "hint": "Considere la aplicabilidad de los métodos según la complejidad de la construcción física frente a la flexibilidad operacional de tareas cortas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la instrumentación industrial de una planta concentradora, ¿cuáles de los siguientes componentes representan las cuatro variables físicas/químicas fundamentales ('los cuatro grandes') de la automatización de procesos?",
+    "opciones": [
+      {
+        "text": "Temperatura, Presión, Caudal y Nivel.",
+        "isCorrect": true,
+        "rationale": "Son las cuatro variables universales que dominan la automatización de procesos en el procesamiento térmico, hidráulico y químico de minerales."
+      },
+      {
+        "text": "Voltaje, Amperaje, Resistencia y Frecuencia.",
+        "isCorrect": false,
+        "rationale": "Estos corresponden a parámetros eléctricos de alimentación y control, no a las variables físicas primarias del proceso químico/mineralúrgico."
+      },
+      {
+        "text": "pH, Turbidez, Densidad y Conductividad.",
+        "isCorrect": false,
+        "rationale": "Aunque son variables analíticas muy importantes en minería, se consideran variables secundarias o de caracterización fisicoquímica específica."
+      },
+      {
+        "text": "Masa, Volumen, Granulometría y Dureza.",
+        "isCorrect": false,
+        "rationale": "Representan propiedades físicas de la roca en molienda o carguío, no el grupo clásico estandarizado de control de procesos en tuberías y tanques."
+      },
+      {
+        "text": "Velocidad, Aceleración, Torque y Vibración.",
+        "isCorrect": false,
+        "rationale": "Son variables mecánicas de monitoreo de condición de maquinaria rotativa, distinción propia del mantenimiento analítico."
+      }
+    ],
+    "hint": "Piense en las variables termodinámicas e hidráulicas básicas que se regulan en tuberías, calderas y tanques.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En las fajas transportadoras de mineral pesado, ¿cuál es el principio físico de funcionamiento que emplean las galgas extensiométricas para la medición de peso?",
+    "opciones": [
+      {
+        "text": "La variación de la capacitancia o resistencia eléctrica al deformarse elásticamente una estructura metálica bajo carga.",
+        "isCorrect": true,
+        "rationale": "Al someter la celda de carga al peso del mineral, el bloque metálico sufre una deformación física mínima que altera la resistencia/capacitancia interna de forma proporcional al peso ejercido."
+      },
+      {
+        "text": "El cambio en la velocidad del sonido reflejado sobre la superficie de la roca en movimiento.",
+        "isCorrect": false,
+        "rationale": "El eco o reflejo del sonido describe el principio de medición ultrasónica de nivel o distancia, no el pesaje estructural."
+      },
+      {
+        "text": "La dilatación térmica de dos láminas metálicas unidas en forma de espiral.",
+        "isCorrect": false,
+        "rationale": "La dilatación de espirales bimetálicas corresponde al principio de funcionamiento de los termómetros bimetálicos de temperatura."
+      },
+      {
+        "text": "La diferencia de potencial químico generada por la fricción del mineral con la faja.",
+        "isCorrect": false,
+        "rationale": "La fricción genera electricidad estática indeseada, la cual no es proporcional ni adecuada para medir peso de forma precisa."
+      },
+      {
+        "text": "La desviación magnética inducida por el contenido de hierro en la pulpa de mineral.",
+        "isCorrect": false,
+        "rationale": "El principio de inducción magnética se utiliza en flujómetros electromagnéticos, no en balanzas integradas en polínes de faja."
+      }
+    ],
+    "hint": "Considere cómo la fuerza de gravedad altera la geometría o las propiedades eléctricas internas de un sensor sólido acoplado al bastidor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al utilizar una placa orificio o tubo de Venturi para medir el caudal de agua de proceso en una tubería minera, ¿qué fenómeno físico se mide directamente para calcular el flujo volumétrico?",
+    "opciones": [
+      {
+        "text": "La diferencia de presión ejercida por el fluido antes y después de una restricción en el conducto.",
+        "isCorrect": true,
+        "rationale": "Al restringir el paso, la velocidad del fluido aumenta y la presión cae; midiendo la presión diferencial entre ambos puntos se calcula el caudal según el principio de Bernoulli."
+      },
+      {
+        "text": "El tiempo de viaje de pulsos de luz láser a través del fluido en movimiento.",
+        "isCorrect": false,
+        "rationale": "Los pulsos de luz láser no se utilizan dentro de tuberías opacas de agua industrial; corresponde a mediciones LiDAR en espacio abierto."
+      },
+      {
+        "text": "El nivel de atenuación de ondas de radiofrecuencia a lo largo de la pared metálica.",
+        "isCorrect": false,
+        "rationale": "La atenuación de radiofrecuencia se relaciona con radares de penetración o guías de onda, no con medidores de caudal por restricción."
+      },
+      {
+        "text": "La temperatura absoluta alcanzada por el líquido al rozar la restricción mecánica.",
+        "isCorrect": false,
+        "rationale": "El cambio de temperatura por fricción en una restricción hidráulica común es despreciable y no se usa para calcular caudal."
+      },
+      {
+        "text": "El recuento del número de burbujas de gas atrapadas dentro de la corriente del fluido.",
+        "isCorrect": false,
+        "rationale": "Las burbujas de gas suelen distorsionar la medición de caudal por presión diferencial; el método requiere fluidos monofásicos o corregidos."
+      }
+    ],
+    "hint": "Piense en el principio de Bernoulli y lo que le ocurre a la presión cuando se estrecha el paso de un fluido (como poner el pulgar en una manguera).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para la integración masiva de sensores en la arquitectura IoT de una planta de procesamiento o flota de soporte, ¿cuál es la característica principal que hace destacar al protocolo MQTT (Mosquito)?",
+    "opciones": [
+      {
+        "text": "Es un protocolo ligero de código abierto basado en publicación/suscripción, ideal para transmitir datos con bajo consumo de ancho de banda.",
+        "isCorrect": true,
+        "rationale": "MQTT destaca en IoT industrial porque su arquitectura de broker (publicador/subscriptor) minimiza el tamaño de los paquetes de datos y optimiza la conectividad en redes remotas."
+      },
+      {
+        "text": "Requiere cableado físico directo de fibra óptica entre cada sensor y el servidor central sin usar TCP/IP.",
+        "isCorrect": false,
+        "rationale": "MQTT es un protocolo de capa de aplicación inalámbrico o cableado que funciona sobre la pila estándar TCP/IP."
+      },
+      {
+        "text": "Es un software de pago exclusivo desarrollado únicamente para la marca de controladores PLC Siemens.",
+        "isCorrect": false,
+        "rationale": "MQTT es un estándar de código abierto interoperable adoptado por múltiples marcas de la industria global."
+      },
+      {
+        "text": "Sirve únicamente para transmitir señales de video de alta definición desde cámaras de vigilancia.",
+        "isCorrect": false,
+        "rationale": "MQTT está optimizado para datos de telemetría numéricos y mensajes estructurados ligeros (JSON/text), no para streaming continuo de video pesado."
+      },
+      {
+        "text": "Inhabilita el acceso a la nube para garantizar que los datos se almacenen solo de forma local en el sensor.",
+        "isCorrect": false,
+        "rationale": "El propósito central de MQTT es facilitar la conexión eficiente de sensores con servicios localizados en la nube."
+      }
+    ],
+    "hint": "Considere la necesidad de enviar pequeñas lecturas numéricas de sensores a través de redes celulares o satelitales con ancho de banda limitado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la ventaja operativa y de seguridad decisiva que aportan los Centros de Operaciones Remotas (IROC / CORE) en las grandes unidades mineras?",
+    "opciones": [
+      {
+        "text": "Permiten supervisar y controlar los sistemas SCADA y la maquinaria a distancia desde centros urbanos, reduciendo la exposición del personal a riesgos en mina.",
+        "isCorrect": true,
+        "rationale": "Los IROC centralizan la toma de decisiones en oficinas ubicadas en la ciudad, disminuyendo el traslape de personal al yacimiento, ahorrando costos logísticos y mejorando la seguridad laboral."
+      },
+      {
+        "text": "Eliminan por completo la necesidad de contar con personal técnico de mantenimiento en el campo minero.",
+        "isCorrect": false,
+        "rationale": "Aunque la operación de control se traslada a la ciudad, la mina requiere indispensablemente personal físico para mantenimiento de campo, mecánica y reparaciones."
+      },
+      {
+        "text": "Sustituyen los sensores de las plantas concentradoras por inspectores visuales guiados por radio.",
+        "isCorrect": false,
+        "rationale": "Los IROC dependen críticamente de una sensorización masiva y datos en tiempo real, no de inspecciones manuales."
+      },
+      {
+        "text": "Evitan la necesidad de utilizar redes de internet o fibra óptica para interconectar la mina.",
+        "isCorrect": false,
+        "rationale": "La operación remota exige enlaces de telecomunicaciones redundantes y de alta velocidad entre el asiento minero y la ciudad."
+      },
+      {
+        "text": "Garantizan que la voladura de rocas se ejecute de manera manual sin necesidad de permisos ni monitoreo.",
+        "isCorrect": false,
+        "rationale": "Los procesos críticos como voladuras mantienen rigurosos protocolos de seguridad supervisados digitalmente."
+      }
+    ],
+    "hint": "Piense en el beneficio de ubicar a los operadores de planta y despacho en una oficina en la ciudad en lugar de trasladarlos diariamente al yacimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Respecto a los sistemas de gestión de flotas en minería (conocidos genéricamente como 'Dispatch') y el monitoreo de maquinaria pesada, ¿cuáles de las siguientes afirmaciones son correctas?",
+    "opciones": [
+      {
+        "text": "Optimizan la asignación de camiones hacia las palas o chancadoras para maximizar el tonelaje transportado y reducir tiempos muertos.",
+        "isCorrect": true,
+        "rationale": "El objetivo algorítmico del Dispatch es dirigir dinámicamente cada camión a la pala más conveniente según la distancia, congestión y calidad de mineral."
+      },
+      {
+        "text": "Permiten recopilar datos de telemetría de motores para efectuar mantenimiento predictivo y aumentar la disponibilidad de los equipos.",
+        "isCorrect": true,
+        "rationale": "La integración de sensores en tiempo real permite detectar fallas incipientes en componentes clave antes de que ocurra una avería catastrófica."
+      },
+      {
+        "text": "El término 'Dispatch' es originalmente una marca registrada por la empresa Modular Mining que se convirtió en un nombre coloquial para la industria.",
+        "isCorrect": true,
+        "rationale": "Al igual que ocurrió con otros productos pioneros, el nombre comercial 'DISPATCH' de Modular Mining pasó a denominar la categoría general de control de flotas."
+      },
+      {
+        "text": "Los sistemas de monitoreo de flotas solo pueden ser instalados en camionetas ligeras, siendo incompatibles con camiones gigantes de extracción.",
+        "isCorrect": false,
+        "rationale": "Los grandes camiones de acarreo (Cat, Komatsu) fueron precisamente los primeros equipos mineros en implementar estos sistemas por su alto costo operativo."
+      },
+      {
+        "text": "Un sistema Dispatch cancela automáticamente la señal de GPS cuando el camión ingresa a las rutas principales de la mina.",
+        "isCorrect": false,
+        "rationale": "El posicionamiento GPS permanente es el requisito fundamental sobre el cual la plataforma grafica la posición y velocidad de cada unidad."
+      }
+    ],
+    "hint": "Piense en cómo se asigna el tráfico de camiones gigantes y la recolección proactiva de fallas mecánicas en tiempo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si una empresa minera requiere realizar un mapeo topográfico detallado de una concesión de gran extensión (más de $100\\text{ km}^2$) en el menor tiempo posible, ¿qué tipo de aeronave no tripulada (dron) es técnicamente la más adecuada?",
+    "opciones": [
+      {
+        "text": "Dron de ala fija.",
+        "isCorrect": true,
+        "rationale": "Las aeronaves de ala fija ofrecen mayor eficiencia aerodinámica, velocidad y autonomía de vuelo (alcance), permitiendo cubrir grandes extensiones en una sola misión a diferencia de los multi-rotores."
+      },
+      {
+        "text": "Quad-copter pequeño de consumo recreativo.",
+        "isCorrect": false,
+        "rationale": "Los quad-copters pequeños carecen de la autonomía de batería y estabilidad de carga útil necesaria para mapear más de $100\\text{ km}^2$."
+      },
+      {
+        "text": "Dron subacuático con hélices estancas.",
+        "isCorrect": false,
+        "rationale": "Los drones subacuáticos (ROV/USV) están diseñados para cuerpos de agua, no para prospección aérea fotogramétrica de terrenos secos."
+      },
+      {
+        "text": "Tri-copter experimental sin estabilización por computadora.",
+        "isCorrect": false,
+        "rationale": "Los tri-copters son difíciles de estabilizar y carecen de la eficiencia de cobertura de área que caracteriza a los aviones de ala fija."
+      },
+      {
+        "text": "Globo aerostático cautivo conectado por cable a un camión.",
+        "isCorrect": false,
+        "rationale": "Un globo cautivo es estacional y carece de la velocidad de desplazamiento necesaria para ejecutar líneas de vuelo topográficas dinámicas."
+      }
+    ],
+    "hint": "Considere la diferencia de sustentación aerodinámica entre sustentarse por empuje puro de hélice o mediante el perfil de una ala convencional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la ventaja fundamental de la tecnología LiDAR integrada en drones topográficos en comparación con la fotogrametría convencional mediante cámaras fotográficas RGB?",
+    "opciones": [
+      {
+        "text": "El pulso láser de LiDAR puede penetrar la cubierta vegetal y medir directamente la superficie real del suelo.",
+        "isCorrect": true,
+        "rationale": "A diferencia de las fotos ópticas que se detienen en las copas de árboles o arbustos, los múltiples retornos del láser LiDAR permiten filtrar la vegetación y obtener el Modelo Digital de Terreno (MDT) real."
+      },
+      {
+        "text": "El sensor LiDAR es mucho más económico y liviano que cualquier cámara fotográfica digital.",
+        "isCorrect": false,
+        "rationale": "La tecnología LiDAR es significativamente más costosa y suele requerir drones con mayor capacidad de carga útil debido a su peso."
+      },
+      {
+        "text": "LiDAR no requiere de coordenadas GPS ni georreferenciación para generar modelos 3D.",
+        "isCorrect": false,
+        "rationale": "LiDAR depende críticamente de un sistema de navegación inercial (IMU) y GPS de alta precisión para ubicar cada punto láser reflejado."
+      },
+      {
+        "text": "La fotogrametría fotográfica solo funciona de noche, mientras que LiDAR solo opera bajo sol radiante.",
+        "isCorrect": false,
+        "rationale": "La fotogrametría óptica requiere luz solar de día; en cambio, LiDAR es un sensor activo que emite su propia luz láser y puede operar incluso en la oscuridad."
+      },
+      {
+        "text": "LiDAR genera imágenes de video a color de alta fidelidad sin necesidad de procesamiento computacional.",
+        "isCorrect": false,
+        "rationale": "LiDAR genera nubes de puntos tridimensionales numéricas, no imágenes de video a color directamente."
+      }
+    ],
+    "hint": "Piense en qué sucede cuando el área a levantar topográficamente tiene matorrales o vegetación que cubre el suelo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el monitoreo de pozas de relaves mineros, ¿cuál es la función principal de los vehículos no tripulados de superficie (USV / barquitos autónomos)?",
+    "opciones": [
+      {
+        "text": "Realizar levantamientos batimétricos para medir la profundidad y el volumen de sedimentos acumulados.",
+        "isCorrect": true,
+        "rationale": "Equipados con sonares o ecosondas, los USV navegan de forma autónoma la superficie de las pozas para mapear la geometría del fondo sin arriesgar vidas humanas en embarcaciones manuales."
+      },
+      {
+        "text": "Evaporar el agua residual mediante la inyección de aire caliente desde el fondo.",
+        "isCorrect": false,
+        "rationale": "Los USV son plataformas de monitoreo y sensorización móvil, no plantas térmicas de tratamiento o evaporación."
+      },
+      {
+        "text": "Comprimir la roca circundante para evitar filtraciones hacia los acuíferos subterráneos.",
+        "isCorrect": false,
+        "rationale": "El revestimiento e impermeabilización estructural de la poza se realiza durante la construcción civil mediante geomembranas."
+      },
+      {
+        "text": "Sustituir las tuberías de transporte de relaves llevando el lodo dentro de su cascos.",
+        "isCorrect": false,
+        "rationale": "Los USV son embarcaciones ligeras de medición que no tienen capacidad de carga masiva para transportar pulpa de relave."
+      },
+      {
+        "text": "Perforar la pared del depósito de relaves para liberar presión hidráulica de forma continua.",
+        "isCorrect": false,
+        "rationale": "Perforar el dique de contención destruiría la estructura del depósito causando un desastre ambiental."
+      }
+    ],
+    "hint": "Recuerde el término 'batimetría' y la necesidad de conocer la capacidad útil restante en la poza sin exponer operadores en un bote.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué entorno operacional minero destaca el uso de vehículos terrestres no tripulados (UGV / robots móviles sobre ruedas u orugas)?",
+    "opciones": [
+      {
+        "text": "En la inspección y mapeo de labores colapsadas o de alto riesgo en minería subterránea.",
+        "isCorrect": true,
+        "rationale": "Los UGV permiten ingresar a galerías o caserones inestables en minería subterránea para escanear el entorno e inspeccionar gases sin arriesgar al personal."
+      },
+      {
+        "text": "En el transporte masivo de $300\\text{ toneladas}$ de mineral a través de carreteras nacionales.",
+        "isCorrect": false,
+        "rationale": "El acarreo masivo a gran escala lo efectúan camiones de extracción, no los UGV de inspección de menor escala."
+      },
+      {
+        "text": "En la navegación por satélite a $10,000\\text{ metros}$ de altitud para pronósticos meteorológicos.",
+        "isCorrect": false,
+        "rationale": "La altitud de vuelo aéreo es dominio de aviones o satélites; los UGV son plataformas exclusivamente terrestres."
+      },
+      {
+        "text": "En la supresión de polvo en vías principales mediante el riego masivo de agua.",
+        "isCorrect": false,
+        "rationale": "El riego de carreteras se realiza mediante camiones cisterna de la flota mediana."
+      },
+      {
+        "text": "En la sustitución total de los cables de energía eléctrica de la planta concentradora.",
+        "isCorrect": false,
+        "rationale": "Los UGV son unidades robóticas mecánicas y electrónicas, no componentes de conducción de energía de planta."
+      }
+    ],
+    "hint": "Considere la 'G' en las siglas UGV (*Unmanned Ground Vehicle*) y los peligros de zonas confinadas bajo tierra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para lograr que los modelos 3D y ortomosaicos generados por un dron tengan precisión centimétrica apta para ingeniería de minas, ¿cuál es el procedimiento técnico indispensable que se debe ejecutar en tierra?",
+    "opciones": [
+      {
+        "text": "Establecer puntos de control en el terreno (GCP) georreferenciados mediante GPS diferencial/RTK acoplados a una estación base.",
+        "isCorrect": true,
+        "rationale": "Las fotos aéreas requieren corregirse mediante puntos conocidos en tierra medidos con equipos GNSS/RTK de alta precisión para ajustar el modelo digital al sistema de coordenadas de la mina."
+      },
+      {
+        "text": "Pintar la superficie del dron con colores fluorescentes para aumentar la reflectividad de la cámara.",
+        "isCorrect": false,
+        "rationale": "El color del fuselaje del dron no afecta en absoluto el cálculo matemático de las coordenadas fotogramétricas."
+      },
+      {
+        "text": "Aumentar la velocidad del viento durante el vuelo para estabilizar las hélices.",
+        "isCorrect": false,
+        "rationale": "El viento fuerte desestabiliza el dron, degrada la calidad de la foto por vibración e incrementa el consumo de batería."
+      },
+      {
+        "text": "Volar a la mayor altura posible rozando el límite de la atmósfera para abarcar toda la Tierra.",
+        "isCorrect": false,
+        "rationale": "A mayor altura de vuelo, disminuye la resolución espacial (GSD), haciendo perder detalle geométrico en el terreno."
+      },
+      {
+        "text": "Tomar las fotografías desenfocadas para que el software de procesamiento las fusione más rápido.",
+        "isCorrect": false,
+        "rationale": "El desenfoque de imagen arruina la identificación de características compartidas imposibilitando la reconstrucción 3D."
+      }
+    ],
+    "hint": "Piense en las siglas GCP (*Ground Control Points*) y la corrección mediante posicionamiento satelital de alta precisión en superficie.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes aplicaciones representan casos de uso reales de inspección y monitoreo con drones en minas a tajo abierto?",
+    "opciones": [
+      {
+        "text": "Revisión previa a la detonación para asegurar que no permanezca personal ni equipos en el área de influencia de la voladura.",
+        "isCorrect": true,
+        "rationale": "El dron sobrevuela rápidamente el polígono de voladura verificando la evacuación total antes de autorizar la chispa de disparo."
+      },
+      {
+        "text": "Monitoreo de fauna protegida en las inmediaciones del asiento minero para cumplir compromisos de la evaluación ambiental.",
+        "isCorrect": true,
+        "rationale": "Permiten el seguimiento no invasivo de poblaciones de animales silvestres en zonas de influencia minera."
+      },
+      {
+        "text": "Inspección térmica de líneas de alta tensión e infraestructura remota para identificar puntos calientes o fallas.",
+        "isCorrect": true,
+        "rationale": "Mediante cámaras termográficas, los drones detectan sobrecalentamientos en aisladores o conductores eléctricos de difícil acceso."
+      },
+      {
+        "text": "Extracción directa de bloques de mineral de $50\\text{ toneladas}$ volando desde el fondo del Tajo hasta la chancadora.",
+        "isCorrect": false,
+        "rationale": "Los drones no poseen la capacidad de carga requerida para el acarreo masivo de mineral, tarea propia de los camiones gigantestos."
+      },
+      {
+        "text": "Refinación química instantánea del cobre mediante el calor emitido por las baterías de litio del dron.",
+        "isCorrect": false,
+        "rationale": "La refinación es un proceso electrometalúrgico complejo de planta y no se realiza mediante componentes térmicos de aeronaves."
+      }
+    ],
+    "hint": "Considere las tareas de seguridad visual previa a eventos peligrosos, monitoreo ecológico y mantenimiento preventivo por termografía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al clasificar los tipos de simulación computacional utilizados en minería, ¿cuál es la diferencia fundamental entre la simulación de 'eventos discretos' y la simulación de 'sistemas continuos'?",
+    "opciones": [
+      {
+        "text": "En eventos discretos las variables cambian solo en puntos específicos en el tiempo debido a eventos puntuales, mientras que en sistemas continuos las variables cambian constantemente en el tiempo.",
+        "isCorrect": true,
+        "rationale": "Un proceso logístico (llegada de un camión) cambia el estado del sistema en instantes definidos (discreto), mientras que la cinética de flotación o la dinámica de fluidos evoluciona mediante ecuaciones diferenciales continuas."
+      },
+      {
+        "text": "Eventos discretos se aplica únicamente a la geología, mientras que sistemas continuos se utiliza solo para calcular impuestos.",
+        "isCorrect": false,
+        "rationale": "Ambas metodologías de modelamiento se aplican transversalmente a diversos procesos de ingeniería, logística y física minera."
+      },
+      {
+        "text": "La simulación continua no requiere el uso de computadoras, a diferencia de los eventos discretos que exigen supercomputadores.",
+        "isCorrect": false,
+        "rationale": "Ambos tipos de simulación requieren código y procesamiento en computadoras modernas."
+      },
+      {
+        "text": "Eventos discretos simula el pasado histórico, mientras que sistemas continuos predice el futuro lejano.",
+        "isCorrect": false,
+        "rationale": "Ambas técnicas son prospectivas y sirven para predecir el comportamiento futuro de escenarios bajo distintas variables."
+      },
+      {
+        "text": "No existe diferencia matemática entre ambas, siendo términos sinónimos en la industria de software.",
+        "isCorrect": false,
+        "rationale": "Representan los dos paradigmas principales y matemáticamente opuestos de la teoría general de modelamiento y simulación."
+      }
+    ],
+    "hint": "Piense en la diferencia entre el conteo de la llegada intermitente de camiones versus la variación ininterrumpida de la temperatura de un horno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Para qué se utiliza el Análisis de Elementos Finitos (FEA) en la ingeniería geotécnica aplicada a la minería?",
+    "opciones": [
+      {
+        "text": "Para dividir estructuras complejas de rocas o taludes en una malla de pequeños elementos numéricos y calcular esfuerzos, deformaciones y puntos de falla.",
+        "isCorrect": true,
+        "rationale": "FEA discretiza sólidos en mallas finas para resolver ecuaciones de elasticidad/plasticidad, permitiendo predecir grietas, desplazamientos o colapsos estructurales en bancos y subterránea."
+      },
+      {
+        "text": "Para proyectar las ventas anuales de concentrado en la bolsa de valores de Londres.",
+        "isCorrect": false,
+        "rationale": "Los pronósticos financieros bursátiles corresponden a modelos econométricos, no a análisis de esfuerzo físico mecánico de sólidos."
+      },
+      {
+        "text": "Para contar automáticamente la cantidad de trabajadores que ingresan al comedor de la mina.",
+        "isCorrect": false,
+        "rationale": "El control de asistencia se maneja con sistemas de molinetes RFID o visión artificial básica, no con mecánica de sólidos FEA."
+      },
+      {
+        "text": "Para medir la concentración exacta de reactivos en el laboratorio de análisis químico.",
+        "isCorrect": false,
+        "rationale": "El análisis químico de laboratorio utiliza titulaciones o espectrofotometría, no cálculo numérico de esfuerzos mecánicos estructurales."
+      },
+      {
+        "text": "Para determinar el diseño estético de los uniformes del personal técnico de mina.",
+        "isCorrect": false,
+        "rationale": "El diseño textil no se relaciona con la simulación geotécnica del comportamiento de macizos rocosos."
+      }
+    ],
+    "hint": "Considere la fragmentación de una geometría física sólida en una 'malla' para resolver ecuaciones de resistencia de materiales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de un software especializado de modelado geológico tridimensional como Leapfrog o Datamine?",
+    "opciones": [
+      {
+        "text": "Interpolar datos de sondajes para interpretar la geometría del cuerpo mineralizado, leyes y estimación de recursos subterráneos.",
+        "isCorrect": true,
+        "rationale": "Estos paquetes analizan las muestras de perforación diamantina (sondajes) y construyen volúmenes 3D del yacimiento calculando las toneladas y leyes de mineral aprovechable."
+      },
+      {
+        "text": "Gestionar el pago de planillas y la programación de vacaciones de la gerencia general.",
+        "isCorrect": false,
+        "rationale": "La administración de recursos humanos utiliza sistemas ERP generales tipo SAP, no software geológico espacial."
+      },
+      {
+        "text": "Diseñar la campaña publicitaria de la empresa en redes sociales.",
+        "isCorrect": false,
+        "rationale": "El modelado geológico es una disciplina técnica minera sin vinculación con el marketing digital corporativo."
+      },
+      {
+        "text": "Controlar el encendido de los faros de los camiones de acarreo durante la noche.",
+        "isCorrect": false,
+        "rationale": "Las luces de vehículos se gestionan por relés o controladores automotrices locales."
+      },
+      {
+        "text": "Reemplazar los estudios de impacto ambiental exigidos por las autoridades reguladoras.",
+        "isCorrect": false,
+        "rationale": "El modelado geológico aporta datos técnicos al estudio, pero no exime del marco legal y regulatorio ambiental completo."
+      }
+    ],
+    "hint": "Piense en lo que ocurre cuando se extraen los 'testigos' de perforación (sondajes) y se quiere reconstruir la forma del depósito bajo tierra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el diseño de minería subterránea, ¿qué variable crítica simula un software especializado de simulación termodinámica de fluidos como Ventsim?",
+    "opciones": [
+      {
+        "text": "La distribución de flujos de aire, presiones, temperaturas y concentraciones de gases nocivos a través de la red de labores subterráneas.",
+        "isCorrect": true,
+        "rationale": "Ventsim modela la red de galerías como ductos hidráulicos calculando la potencia requerida en ventiladores para garantizar aire respirable y evacuar CO2/gases de mina."
+      },
+      {
+        "text": "La trayectoria de los aviones comerciales que cruzan sobre el campamento minero.",
+        "isCorrect": false,
+        "rationale": "El tráfico aéreo comercial lo gestionan las autoridades de aviación civil mediante radares de control aéreo de largo alcance."
+      },
+      {
+        "text": "El grado de desgaste cromático de la pintura exterior de los edificios administrativos.",
+        "isCorrect": false,
+        "rationale": "El deterioro cosmético no requiere software de simulación aerodinámica y termodinámica subterránea."
+      },
+      {
+        "text": "La dureza Vickers de las bolas de acero utilizadas en el molino SAG de superficie.",
+        "isCorrect": false,
+        "rationale": "La dureza de medios de molienda se prueba en laboratorio metalúrgico destructivo o mediante ensayos de impacto."
+      },
+      {
+        "text": "La tarifa de facturación eléctrica enviada por la empresa distribuidora de energía.",
+        "isCorrect": false,
+        "rationale": "Los costos de facturación son cálculos tarifarios contables que se gestionan en las oficinas financieras."
+      }
+    ],
+    "hint": "Considere el requerimiento indispensable de llevar oxígeno y remover el humo de los explosivos en túneles cerrados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para optimizar el proceso de perforación y voladura en minería, ¿qué parámetro simulan herramientas informáticas como JKSimBlast?",
+    "opciones": [
+      {
+        "text": "La distribución de la energía del explosivo, el tiempo de retardo entre pozos y la granulometría resultante de la fragmentación de la roca.",
+        "isCorrect": true,
+        "rationale": "JKSimBlast modela cómo la onda de choque y los gases del explosivo interactúan con la masa rocosa, prediciendo el tamaño del mineral roto ($P_{80}$) y minimizando la vibración del terreno."
+      },
+      {
+        "text": "La velocidad a la cual crece el césped en los jardines de las oficinas centrales.",
+        "isCorrect": false,
+        "rationale": "El software de diseño de voladura no incluye modelos botánicos de jardinería."
+      },
+      {
+        "text": "El consumo de combustible de los automóviles particulares del personal contratista fuera de la mina.",
+        "isCorrect": false,
+        "rationale": "Las simulaciones de detonación se restringen estrictamente al diseño técnico de pozos y masa rocosa en el Tajo o galería."
+      },
+      {
+        "text": "La viscosidad del aceite lubricante utilizado en las computadoras de la oficina de proyectos.",
+        "isCorrect": false,
+        "rationale": "Las computadoras estándar no emplean aceites de lubricación mecánica activa de alta viscosidad como los motores pesados."
+      },
+      {
+        "text": "La resistencia a la tensión del cable de fibra óptica que conecta la mina con la ciudad.",
+        "isCorrect": false,
+        "rationale": "La tracción de cables de telecomunicaciones se analiza mediante ingeniería de redes y tendido de líneas."
+      }
+    ],
+    "hint": "Piense en los resultados deseados al detonar una malla de pozos: fragmentar la roca al tamaño adecuado ($P_{80}$) con la menor vibración.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al utilizar el catastro minero público en plataformas GIS como Geocatmin (o Geprom), ¿cuál es una función clave que permite evaluar la viabilidad territorial de un nuevo petitorio?",
+    "opciones": [
+      {
+        "text": "Visualizar superposiciones de capas entre concesiones mineras existentes, áreas protegidas, comunidades y mapas de metalogenia.",
+        "isCorrect": true,
+        "rationale": "Los GIS catastrales combinan capas vectoriales para identificar si un área de interés está libre de denuncios previos, si intersecta reservas naturales o qué potencial geológico presenta."
+      },
+      {
+        "text": "Transferir fondos bancarios automáticamente para comprar acciones de la mina en bolsa.",
+        "isCorrect": false,
+        "rationale": "Las herramientas GIS son plataformas de consulta e interpretación espacial geocientífica, no pasarelas de pago ni de trading financiero."
+      },
+      {
+        "text": "Modificar de forma unilateral los límites fronterizos del país ante las Naciones Unidas.",
+        "isCorrect": false,
+        "rationale": "La delimitación fronteriza internacional corresponde a tratados diplomáticos de las cancillerías, no a usuarios de software catastral."
+      },
+      {
+        "text": "Apagar los motores de las dragas ilegales de forma remota a través del satélite.",
+        "isCorrect": false,
+        "rationale": "Geocatmin es una plataforma informativa de consulta catastral y geológica, no un centro de interrupción de maquinaria."
+      },
+      {
+        "text": "Generar licencias de conducir internacionales para operadores de maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "La emisión de licencias de conducir compete a los ministerios de transporte según trámites administrativos específicos."
+      }
+    ],
+    "hint": "Considere el concepto de 'capas' superpuestas en un plano mapa para verificar si el terreno está libre o restringido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-34",
+    "diplomado": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones son ventajas reconocidas del empleo de simuladores de cabina y realidad virtual (VR) en el entrenamiento de operadores de maquinaria pesada minera?",
+    "opciones": [
+      {
+        "text": "Permiten entrenar maniobras de emergencia de alto riesgo sin exponer al alumno ni al equipo a accidentes reales.",
+        "isCorrect": true,
+        "rationale": "Un simulador puede recrear la falla repentina de frenos en una pendiente acentuada sin riesgo alguno de pérdida humana o daños en un equipo de millones de dólares."
+      },
+      {
+        "text": "Reducen el consumo de combustible diésel y el desgaste mecánico asociados al entrenamiento en máquinas reales.",
+        "isCorrect": true,
+        "rationale": "Al instruir al personal en cabinas virtuales, las unidades de producción reales se mantienen operando en acarreo efectivo sin quemar combustible en instrucción inicial."
+      },
+      {
+        "text": "Permiten medir cuantitativamente los tiempos de reacción, errores de maniobra y malos hábitos del operador durante las sesiones.",
+        "isCorrect": true,
+        "rationale": "Los software de simulación registran telemetría precisa de cada pedalada, viraje y frenada para emitir informes objetivos de desempeño del alumno."
+      },
+      {
+        "text": "Garantizan que el operador nunca más necesite dormir ni descansar durante sus turnos de trabajo en mina.",
+        "isCorrect": false,
+        "rationale": "La simulación entrena habilidades pero no altera la fisiología humana que exige descansos normados para prevenir la fatiga."
+      },
+      {
+        "text": "Convierten automáticamente los camiones diésel en vehículos propulsados por energía eólica mediante un software.",
+        "isCorrect": false,
+        "rationale": "El software de entrenamiento en cabina no altera el sistema de propulsión ni la mecánica física del camión real en terreno."
+      }
+    ],
+    "hint": "Piense en la seguridad del operario aprendiz, el ahorro de combustible en equipos reales y la medición objetiva de métricas de manejo.",
+    "activo": true
+  }
+]

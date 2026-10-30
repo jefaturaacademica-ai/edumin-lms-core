@@ -27,7 +27,8 @@ import { useTheme } from '@/context/theme-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
 
-import { parseCursosFromProfile } from '@/lib/utils/profileParser';
+import { parseCursosFromProfile, parseDiplomadosFromProfile } from '@/lib/utils/profileParser';
+import { obtenerTallerParaDiplomado, TALLER_SOFT_SKILLS, TALLER_SEGURIDAD_BASADA } from '@/lib/utils/tallerAsignado';
 
 export default function CursosPage() {
   const [paquete, setPaquete] = useState<string>('FULL');
@@ -217,10 +218,12 @@ export default function CursosPage() {
     { titulo: "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO", categoria: "Mantenimiento industrial", duracion: "25 Horas Académicas", precio: 159, estado: "Especial", nivel: "Intermedio", imagen: "/assets/images/cursos/cur-58-seguridad-y-control-ambiental-en-el-mantenimiento.jpg" },
     { titulo: "GERENCIA DE PROYECTOS DEL MANTENIMIENTO", categoria: "Mantenimiento industrial", duracion: "35 Horas Académicas", precio: 159, estado: "Más vendido", nivel: "Avanzado", imagen: "/assets/images/cursos/cur-59-gerencia-de-proyectos-del-mantenimiento.jpg" },
     { titulo: "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0", categoria: "Mantenimiento industrial", duracion: "30 Horas Académicas", precio: 159, estado: "Nuevo", nivel: "Intermedio", imagen: "/assets/images/cursos/cur-60-gestion-de-costos-del-mantenimiento-en-la-industria-4-0.jpg" },
-    { titulo: "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES", categoria: "Operaciones y procesos", duracion: "30 Horas Académicas", precio: 159, estado: "Más vendido", nivel: "Intermedio", imagen: "/assets/images/cursos/cur-73-implementacion-de-lean-manufacturing-en-procesos-industriales.jpg" }
+    { titulo: "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES", categoria: "Operaciones y procesos", duracion: "30 Horas Académicas", precio: 159, estado: "Más vendido", nivel: "Intermedio", imagen: "/assets/images/cursos/cur-73-implementacion-de-lean-manufacturing-en-procesos-industriales.jpg" },
+    { titulo: "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA", categoria: "Talleres", duracion: "20 Horas Académicas", precio: 0, estado: "Especial", nivel: "Práctico", imagen: "/assets/images/cursos/tal-01-taller-de-soft-skills-en-la-industria-y-mineria.jpg" },
+    { titulo: "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO", categoria: "Talleres", duracion: "20 Horas Académicas", precio: 0, estado: "Especial", nivel: "Práctico", imagen: "/assets/images/cursos/tal-02-taller-de-seguridad-basada-en-el-comportamiento.jpg" }
   ];
 
-  const listaCategorias = ["Todas","Seguridad y prevención","Legislación y normativa","Logística y almacenes","Inteligencia de datos","Tecnología e innovación","Operaciones y procesos","Comercio exterior","Mantenimiento industrial","Medio ambiente"];
+  const listaCategorias = ["Todas", "Talleres", "Seguridad y prevención", "Legislación y normativa", "Logística y almacenes", "Inteligencia de datos", "Tecnología e innovación", "Operaciones y procesos", "Comercio exterior", "Mantenimiento industrial", "Medio ambiente"];
   const listaEstados = ['Todos', 'Más vendido', 'Nuevo', 'Especial'];
   const listaNiveles = ['Todos', 'Principiante', 'Intermedio', 'Avanzado'];
 
@@ -278,39 +281,34 @@ export default function CursosPage() {
               }
             });
 
-            // 2. Si no tiene cursos específicos canjeados aún en la BD, derivar automáticamente los cursos acordes a su diplomado asignado
-            if (cursosEnrolados.length === 0 && prof.diplomado_1) {
-              const dipNombre = prof.diplomado_1.toLowerCase();
-              let categoriaPrincipal = 'Seguridad & SSOMA';
-              if (dipNombre.includes('derecho') || dipNombre.includes('tierra') || dipNombre.includes('legal')) {
-                categoriaPrincipal = 'Minería & Operaciones';
-              } else if (dipNombre.includes('geologia') || dipNombre.includes('yacimiento') || dipNombre.includes('exploracion')) {
-                categoriaPrincipal = 'Minería & Operaciones';
-              } else if (dipNombre.includes('digital') || dipNombre.includes('4.0') || dipNombre.includes('automatizacion')) {
-                categoriaPrincipal = 'Tecnología & Minería 4.0';
-              } else if (dipNombre.includes('logistica') || dipNombre.includes('almacen')) {
-                categoriaPrincipal = 'Logística & Suministro';
+            // 3. Garantizar la asignación del taller de regalo por cada diplomado del estudiante
+            const diplomadosEstudiante: string[] = [];
+            if (prof.diplomado_1) diplomadosEstudiante.push(prof.diplomado_1);
+            if (prof.diplomado_2) diplomadosEstudiante.push(prof.diplomado_2);
+            const diplomadosJson = parseDiplomadosFromProfile(prof);
+            diplomadosJson.forEach((d: any) => {
+              const tit = d.titulo || d.slug || d.id;
+              if (tit && !diplomadosEstudiante.includes(tit)) {
+                diplomadosEstudiante.push(tit);
               }
+            });
 
-              const cursosDeSubcategoria = catalogoGeneralCursos
-                .filter(c => c.categoria === categoriaPrincipal)
-                .slice(0, 4);
-
-              cursosDeSubcategoria.forEach((cItem, idx) => {
-                const cSlug = cItem.titulo.toLowerCase().replace(/[^a-z0-9]/g, '-');
-                if (!idsAgregados.has(cSlug)) {
-                  idsAgregados.add(cSlug);
-                  cursosEnrolados.push({
-                    id: cSlug,
-                    titulo: cItem.titulo,
-                    categoria: cItem.categoria,
-                    duracion: cItem.duracion,
-                    avance: idx === 0 ? 75 : (idx === 1 ? 40 : (idx === 2 ? 20 : 0)),
-                    imagen: cItem.imagen
-                  });
-                }
-              });
-            }
+            diplomadosEstudiante.forEach((dipTitulo) => {
+              const tallerRegalo = obtenerTallerParaDiplomado(dipTitulo);
+              const idSlug = tallerRegalo.id;
+              if (!idsAgregados.has(idSlug)) {
+                idsAgregados.add(idSlug);
+                cursosEnrolados.push({
+                  id: idSlug,
+                  titulo: tallerRegalo.titulo,
+                  categoria: 'Talleres',
+                  duracion: tallerRegalo.duracion,
+                  avance: 0,
+                  imagen: tallerRegalo.imagen,
+                  esTaller: true
+                });
+              }
+            });
 
             if (cursosEnrolados.length > 0) {
               setCursosEstudianteReal(cursosEnrolados);
@@ -552,13 +550,10 @@ export default function CursosPage() {
                       <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                         <div className="space-y-3">
                           <div className="h-12 flex items-start overflow-hidden">
-                            <h3 className={`text-base font-bold leading-snug line-clamp-2 text-balance ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                              {curso.titulo}
+                            <h3 className={`text-base font-bold leading-snug line-clamp-2 text-balance uppercase ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                              {curso.titulo.toUpperCase()}
                             </h3>
                           </div>
-                          <p className={`text-xs flex items-center gap-1.5 font-medium ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                            <Clock className={`w-4 h-4 ${infoEstado.duracionIconColor}`} /> {curso.duracion}
-                          </p>
                         </div>
 
                         {/* BLOQUE DE AVANCE CON PORCENTAJE ARRIBA DE LA BARRA (FONT-BOLD UNIFICADO) */}

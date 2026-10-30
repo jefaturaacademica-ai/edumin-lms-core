@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es uno de los factores geográficos críticos que incrementa la dificultad de la gestión de residuos mineros en el Perú?",
+    "opciones": [
+      {
+        "text": "La topografía superabrupta de la cordillera de los Andes.",
+        "isCorrect": true,
+        "rationale": "La geografía andina presenta desniveles extremos y terrenos complejos que desafían directamente la ingeniería y construcción de depósitos de relaves."
+      },
+      {
+        "text": "La ausencia total de actividad telúrica en la costa del Pacífico.",
+        "isCorrect": false,
+        "rationale": "El Perú se ubica en el cinturón de fuego del Pacífico, por lo que la sismicidad es alta y constante, no ausente."
+      },
+      {
+        "text": "La uniformidad de un clima templado sin precipitaciones en todo el país.",
+        "isCorrect": false,
+        "rationale": "El país presenta climas extremos que van desde la hiperaridez costera hasta lluvias intensas en la Amazonía."
+      },
+      {
+        "text": "La baja altitud generalizada de los principales yacimientos mineros.",
+        "isCorrect": false,
+        "rationale": "Muchas de las operaciones mineras más importantes se ubican a altitudes superiores a los 4000 metros sobre el nivel del mar."
+      },
+      {
+        "text": "La disponibilidad ilimitada de fuentes de agua dulce en el desierto costero.",
+        "isCorrect": false,
+        "rationale": "El agua en la costa árida es un recurso extremadamente escaso y estratégico, lo que exige su máximo reciclaje."
+      }
+    ],
+    "hint": "Piensa en el desafío físico de ingeniería que representa la elevación y relieve de la gran cordillera peruana.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia física fundamental entre los relaves y el desmonte de mina?",
+    "opciones": [
+      {
+        "text": "Los relaves son lodos de partículas muy finas, mientras que el desmonte consta de rocas gruesas y fragmentadas.",
+        "isCorrect": true,
+        "rationale": "Los relaves resultan de la molienda del mineral y forman una pulpa fina, a diferencia de la roca estéril acumulada como desmonte."
+      },
+      {
+        "text": "Los relaves provienen de excavaciones subterráneas y el desmonte únicamente de tajos abiertos.",
+        "isCorrect": false,
+        "rationale": "Ambos tipos de residuos pueden generarse independientemente de si la extracción es subterránea o a tajo abierto."
+      },
+      {
+        "text": "El desmonte presenta riesgo de licuación sísmica y los relaves sufren principalmente deslizamientos secos.",
+        "isCorrect": false,
+        "rationale": "La licuación sísmica es el riesgo físico característico de los relaves finos saturados de agua, no del desmonte de roca gruesa."
+      },
+      {
+        "text": "Los relaves carecen de cualquier componente químico activo y el desmonte siempre es altamente ácido.",
+        "isCorrect": false,
+        "rationale": "La reactividad química depende de los minerales presentes (como sulfuros) y no de la clasificación física del residuo."
+      },
+      {
+        "text": "El desmonte es un residuo líquido y los relaves constituyen bloques sólidos compactados.",
+        "isCorrect": false,
+        "rationale": "Físicamente, el desmonte es roca sólida suelta y los relaves convencionales se manejan como una pulpa fluida o lodo."
+      }
+    ],
+    "hint": "Considera el tamaño de partícula resultantes del proceso de molienda frente a la excavación de roca suelta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el fenómeno conocido como Drenaje Ácido de Roca (DAR)?",
+    "opciones": [
+      {
+        "text": "Es un proceso reactivo donde minerales de sulfuro expuestos al aire y al agua generan ácido y disuelven metales pesados.",
+        "isCorrect": true,
+        "rationale": "El DAR ocurre por la oxidación de sulfuros como la pirita en presencia de humedad y oxígeno, generando efluentes ácidos."
+      },
+      {
+        "text": "Es la evaporación acelerada de agua en lagunas de relaves debido a la radiación solar en zonas áridas.",
+        "isCorrect": false,
+        "rationale": "La evaporación es un proceso físico de pérdida de agua, no una reacción química de acidificación de la roca."
+      },
+      {
+        "text": "Es un método mecánico para compactar rocas y evitar el deslizamiento de taludes en las presas.",
+        "isCorrect": false,
+        "rationale": "El DAR es un riesgo geoquímico, no una técnica de ingeniería de compactación de suelos."
+      },
+      {
+        "text": "Es la disolución instantánea de calizas al entrar en contacto con reactivos orgánicos de la planta concentradora.",
+        "isCorrect": false,
+        "rationale": "Las calizas neutralizan el ácido en lugar de ser la fuente primaria de la generación ácida del DAR."
+      },
+      {
+        "text": "Es una reacción neutra que detiene la descomposición de los minerales de hierro de forma permanente.",
+        "isCorrect": false,
+        "rationale": "El DAR es un ciclo reactivo autorreforzante que acelera la degradación y acidez ambiental por siglos si no se controla."
+      }
+    ],
+    "hint": "Recuerda qué le sucede a una roca con minerales sulfurados cuando entra en contacto con el ambiente exterior.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son los tres componentes esenciales que deben converger para desencadenar el Drenaje Ácido de Roca (DAR)?",
+    "opciones": [
+      {
+        "text": "Minerales de sulfuro (como la pirita).",
+        "isCorrect": true,
+        "rationale": "Actúan como el reactivo químico primario que libera acidez e iones al oxidarse."
+      },
+      {
+        "text": "Oxígeno del aire.",
+        "isCorrect": true,
+        "rationale": "Aporta el agente oxidante necesario para que ocurra la transformación química del azufre y del hierro."
+      },
+      {
+        "text": "Agua de lluvia o humedad ambiental.",
+        "isCorrect": true,
+        "rationale": "Funciona como medio de reacción y como vehículo de transporte de los productos ácidos resultantes."
+      },
+      {
+        "text": "Altas presiones subterráneas sin contacto atmosférico.",
+        "isCorrect": false,
+        "rationale": "El DAR requiere precisamente la exposición superficial o el acceso al oxígeno y agua exterior."
+      },
+      {
+        "text": "Aditivos de cemento Portland en grandes proporciones.",
+        "isCorrect": false,
+        "rationale": "El cemento es un agente estabilizador de neutralización y no un ingrediente reactivo desencadenante del DAR."
+      }
+    ],
+    "hint": "Identifica los dos elementos naturales más comunes del ambiente junto con el tipo de mineral azufrado característico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué mineral presente en los residuos mineros es reconocido por iniciar la reacción en cadena que genera el Drenaje Ácido de Roca?",
+    "opciones": [
+      {
+        "text": "Pirita.",
+        "isCorrect": true,
+        "rationale": "La pirita es un disulfuro de hierro muy común cuyo contacto con aire y agua inicia la liberación primaria de acidez."
+      },
+      {
+        "text": "Caliza.",
+        "isCorrect": false,
+        "rationale": "La caliza es un carbonato de calcio con capacidad de neutralizar el ácido, aportando potencial de neutralización."
+      },
+      {
+        "text": "Cuarzo.",
+        "isCorrect": false,
+        "rationale": "El cuarzo es un silicato químicamente inerte que no genera acidez bajo condiciones ambientales normales."
+      },
+      {
+        "text": "Magnetita.",
+        "isCorrect": false,
+        "rationale": "La magnetita es un óxido de hierro que no contiene azufre reactivo para iniciar el DAR."
+      },
+      {
+        "text": "Yeso.",
+        "isCorrect": false,
+        "rationale": "El yeso es un sulfato de calcio hidratado y no participa como reactivo oxidable primario de la acidez."
+      }
+    ],
+    "hint": "Se trata de un mineral compuesto de hierro y azufre, conocido comúnmente como el 'oro de los tontos'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Por qué se considera que el Drenaje Ácido de Roca (DAR) representa un 'doble peligro' ambiental?",
+    "opciones": [
+      {
+        "text": "Genera una elevada acidez por sí mismo.",
+        "isCorrect": true,
+        "rationale": "El pH extremadamente bajo de las soluciones ácidas altera directamente la calidad del agua y quema tejidos vivos."
+      },
+      {
+        "text": "Actúa como solvente disolviendo y movilizando metales pesados tóxicos.",
+        "isCorrect": true,
+        "rationale": "La acidez disuelve elementos como arsénico, plomo y cadmio, transportándolos hacia cuencas hídricas."
+      },
+      {
+        "text": "Incrementa la resistencia estructural del hormigón en puentes.",
+        "isCorrect": false,
+        "rationale": "El agua ácida deteriora y corroe el concreto y acero de la infraestructura en lugar de fortalecerlos."
+      },
+      {
+        "text": "Elimina de forma inmediata la proliferación de bacterias oxidantes.",
+        "isCorrect": false,
+        "rationale": "Ciertas bacterias extremófilas se multiplican en ambientes ácidos y aceleran la reacción hasta un millón de veces."
+      },
+      {
+        "text": "Sustituye completamente la necesidad de monitoreo sísmico en presas.",
+        "isCorrect": false,
+        "rationale": "El DAR es un riesgo químico perpetuo que no elimina ni reemplaza el monitoreo físico-estructural."
+      }
+    ],
+    "hint": "Considera tanto la acidez directa de la solución como su capacidad para transportar elementos nocivos retenidos en la roca.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el principio central de la Ley de Cierre de Minas respecto a la responsabilidad de los titulares mineros en el Perú?",
+    "opciones": [
+      {
+        "text": "La responsabilidad de la empresa es perpetua y exige garantías financieras reales desde el inicio.",
+        "isCorrect": true,
+        "rationale": "La norma impide que la empresa abandone el sitio tras cesar operaciones, exigiendo fondos asegurados para el cierre y monitoreo ambiental."
+      },
+      {
+        "text": "La responsabilidad concluye el día exacto en que cesa la extracción de minerales comerciales.",
+        "isCorrect": false,
+        "rationale": "El marco legal extiende las obligaciones al poscierre para prevenir pasivos ambientales."
+      },
+      {
+        "text": "El Estado asume todos los costos financieros del cierre desde la etapa de exploración del proyecto.",
+        "isCorrect": false,
+        "rationale": "Es el titular privado quien debe respaldar financieramente su plan de cierre mediante garantías e instrumentos fiduciarios."
+      },
+      {
+        "text": "Las garantías económicas solo son requeridas si el proyecto opera en zonas libres de sismicidad.",
+        "isCorrect": false,
+        "rationale": "El plan de cierre y sus garantías financieras son obligatorios para todas las operaciones mineras en el país."
+      },
+      {
+        "text": "El plan de cierre es un documento estático que no puede modificarse durante la vida útil de la mina.",
+        "isCorrect": false,
+        "rationale": "La ley contempla que el plan de cierre sea un documento vivo que se actualiza y audita periódicamente."
+      }
+    ],
+    "hint": "La ley busca evitar que los pasivos ambientales queden desamparados tras el fin de la extracción minera.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué define a un Pasivo Ambiental Minero (PAM) en el contexto legal y ambiental peruano?",
+    "opciones": [
+      {
+        "text": "Instalaciones, efluentes o depósitos abandonados de minas antiguas que representan un riesgo y carecen de un titular activo.",
+        "isCorrect": true,
+        "rationale": "Los PAM son legados de la minería histórica abandonada sin responsable que pueda asumir el costo inmediato de remediación."
+      },
+      {
+        "text": "Las ganancias financieras reservadas exclusivamente para la contratación de ingenieros de registro.",
+        "isCorrect": false,
+        "rationale": "Un PAM es una afectación o residuo abandonado, no un fondo de reserva ni un activo contable."
+      },
+      {
+        "text": "Nuevas presas de relaves filtrados construidas con autorización de tolerancia cero.",
+        "isCorrect": false,
+        "rationale": "Las presas de relaves filtrados actuales son infraestructura moderna y activa, no pasivos históricos abandonados."
+      },
+      {
+        "text": "Procesos de auditoría tributaria aplicados a la importación de maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "El término corresponde a la gestión de impactos socioambientales territoriales, no a fiscalización impositiva."
+      },
+      {
+        "text": "Lagunas artificiales construidas para la recreación comunitaria en zonas desérticas.",
+        "isCorrect": false,
+        "rationale": "Los PAM constituyen fuentes potenciales de contaminación y riesgo geomecánico, no zonas turísticas autorizadas."
+      }
+    ],
+    "hint": "Piensa en las minas viejas o huérfanas que quedaron sin limpiar antes de la existencia de las leyes modernas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué fenómeno físico crítico se busca prevenir en los relaves finos y saturados de agua durante un terremoto?",
+    "opciones": [
+      {
+        "text": "Licuación sísmica.",
+        "isCorrect": true,
+        "rationale": "Bajo vibraciones intensas, la presión de poro aumenta y hace que el relave fino pierda resistencia, comportándose como un líquido."
+      },
+      {
+        "text": "Combustión espontánea.",
+        "isCorrect": false,
+        "rationale": "Los relaves son pulpas minerales incombustibles; la combustión espontánea ocurre en depósitos de carbón."
+      },
+      {
+        "text": "Sublimación acelerada.",
+        "isCorrect": false,
+        "rationale": "La sublimación es el cambio de estado sólido a gaseoso, impropio del comportamiento mecánico geotécnico del suelo."
+      },
+      {
+        "text": "Vitrificación galvánica.",
+        "isCorrect": false,
+        "rationale": "La vitrificación es la transformación en vidrio por calor extremo, sin relación con el comportamiento sísmico."
+      },
+      {
+        "text": "Congelamiento hidrogeomorfológico.",
+        "isCorrect": false,
+        "rationale": "No es un fenómeno asociado a sacudidas telúricas ni a la presión de agua de poros."
+      }
+    ],
+    "hint": "Ocurre cuando las partículas pierden contacto entre sí y el terreno se comporta de forma semejante a 'arenas movedizas'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el Estándar Global de la Industria sobre Gestión de Relaves (GISTM), ¿cuál es la exigencia de diseño para presas clasificadas en categoría de consecuencia 'extrema'?",
+    "opciones": [
+      {
+        "text": "Resistir el peor escenario imaginable, como el sismo máximo creíble o eventos con retornos de miles de años.",
+        "isCorrect": true,
+        "rationale": "Para evitar pérdidas humanas masivas, la estructura debe ser diseñada para colapso cero ante los eventos más extremos posibles."
+      },
+      {
+        "text": "Diseñar la estructura únicamente para soportar lluvias moderadas de frecuencia anual.",
+        "isCorrect": false,
+        "rationale": "Las presas de riesgo extremo exigen criterios de resiliencia ante eventos raros de hasta 10,000 años de periodo de retorno."
+      },
+      {
+        "text": "Permitir deformaciones que causen el vertido directo de residuos a los ríos cercanos.",
+        "isCorrect": false,
+        "rationale": "El principio rector del GISTM en categorías extremas es garantizar la contención total y el daño cero a las personas."
+      },
+      {
+        "text": "Delegar la aprobación estructural exclusivamente a operadores de campo sin supervisión externa.",
+        "isCorrect": false,
+        "rationale": "El GISTM impone auditorías independientes y supervisión directa al más alto nivel ejecutivo."
+      },
+      {
+        "text": "Utilizar únicamente presas de contención de agua convencional construidas aguas arriba.",
+        "isCorrect": false,
+        "rationale": "El estándar promueve metodologías seguras y limita o restringe diseños vulnerables a la licuación."
+      }
+    ],
+    "hint": "Esta exigencia protege la vida humana en comunidades aguas abajo ante el colapso catastrófico de la infraestructura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se ordena la evolución tecnológica en la disposición de relaves, desde el menor contenido de sólidos hasta el estado más seco?",
+    "opciones": [
+      {
+        "text": "Relaves convencionales → Relaves espesados → Relaves en pasta → Relaves filtrados.",
+        "isCorrect": true,
+        "rationale": "Esta secuencia refleja la progresiva remoción de agua, aumentando el porcentaje de sólidos desde cerca del 30% hasta superar el 85%."
+      },
+      {
+        "text": "Relaves filtrados → Relaves en pasta → Relaves espesados → Relaves convencionales.",
+        "isCorrect": false,
+        "rationale": "Esta lista presenta el orden inverso, comenzando por el método con menor contenido de agua."
+      },
+      {
+        "text": "Relaves en pasta → Relaves convencionales → Relaves filtrados → Relaves espesados.",
+        "isCorrect": false,
+        "rationale": "Los relaves convencionales son la fase inicial con más contenido de agua, no una intermedia."
+      },
+      {
+        "text": "Relaves espesados → Relaves filtrados → Relaves convencionales → Relaves en pasta.",
+        "isCorrect": false,
+        "rationale": "Los relaves filtrados constituyen la tecnología más avanzada de secado y no preceden al lodo convencional."
+      },
+      {
+        "text": "Relaves convencionales → Relaves filtrados → Relaves espesados → Relaves en pasta.",
+        "isCorrect": false,
+        "rationale": "Los relaves espesados y en pasta corresponden a etapas intermedias antes de alcanzar el filtrado o 'dry stacking'."
+      }
+    ],
+    "hint": "Comienza con la mezcla de mayor contenido de agua (lodo tradicional) y finaliza con las 'tortas' secas de material apilable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el período de retorno de eventos naturales extremos utilizado para definir el Sismo Máximo Creíble (MCE) en el diseño de presas a perpetuidad?",
+    "opciones": [
+      {
+        "text": "Hasta 10,000 años.",
+        "isCorrect": true,
+        "rationale": "El MCE evalúa la peor sacudida sísmica teórica posible con períodos de retorno de hasta 10,000 años para garantizar la no falla catastrófica."
+      },
+      {
+        "text": "5 años.",
+        "isCorrect": false,
+        "rationale": "5 años corresponde a eventos operativos cotidianos y no a escenarios extremos de diseño de estabilidad."
+      },
+      {
+        "text": "50 años.",
+        "isCorrect": false,
+        "rationale": "50 años es una escala de vida útil típica para estructuras civiles convencionales, no para contención de relaves perpetua."
+      },
+      {
+        "text": "100 años.",
+        "isCorrect": false,
+        "rationale": "El criterio para riesgos de colapso ambiental en minería supera ampliamente las escalas centenarias estándar."
+      },
+      {
+        "text": "475 años.",
+        "isCorrect": false,
+        "rationale": "475 años es el período de retorno típico del Sismo Base de Operación (OBE), no del Sismo Máximo Creíble (MCE)."
+      }
+    ],
+    "hint": "Representa un intervalo milenario diseñado para evaluar fenómenos extremadamente raros pero devastadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo de implementar un Plan de Respuesta con Criterios de Activación (TARP)?",
+    "opciones": [
+      {
+        "text": "Traducir los datos del monitoreo instrumental en acciones correctivas o de emergencia inmediatas y predefinidas.",
+        "isCorrect": true,
+        "rationale": "El TARP establece niveles de alerta (verde, amarillo, naranja, rojo) para que los operadores actúen sin demoras ni burocracia."
+      },
+      {
+        "text": "Reducir los salarios del personal cuando la instrumentación marca niveles normales.",
+        "isCorrect": false,
+        "rationale": "El TARP es un protocolo geotécnico de seguridad de campo y no una herramienta administrativa de recursos humanos."
+      },
+      {
+        "text": "Ocultar la información de las presas para evitar la supervisión regulatoria del Estado.",
+        "isCorrect": false,
+        "rationale": "El sistema promueve la transparencia y la velocidad de respuesta ante anomalías físicas o hídricas detectadas."
+      },
+      {
+        "text": "Reemplazar los estudios geotécnicos por inspecciones visuales ocasionales.",
+        "isCorrect": false,
+        "rationale": "Se basa explícitamente en datos instrumentales continuos (como la piezometría o presión de poros)."
+      },
+      {
+        "text": "Aumentar la cantidad de agua almacenada en la laguna de la presa en épocas de lluvia.",
+        "isCorrect": false,
+        "rationale": "El TARP desencadena acciones específicas (como bombeo de emergencia) para controlar o vaciar excesos hídricos peligrosos."
+      }
+    ],
+    "hint": "Busca vincular lecturas numéricas de sensores de presión con respuestas operativas automáticas (como semáforos de alerta).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son los tres pilares del paradigma moderno para la gestión sostenible de residuos mineros?",
+    "opciones": [
+      {
+        "text": "Gobernanza y cumplimiento normativo estricto.",
+        "isCorrect": true,
+        "rationale": "Asegura la responsabilidad legal, la fiscalización continua y el cumplimiento de estándares como el GISTM."
+      },
+      {
+        "text": "Transición tecnológica hacia relaves más secos.",
+        "isCorrect": true,
+        "rationale": "Reduce el uso de agua y minimiza los riesgos de inestabilidad física y licuación sísmica."
+      },
+      {
+        "text": "Innovación y economía circular para transformar residuos en recursos.",
+        "isCorrect": true,
+        "rationale": "Promueve el reuso de relaves en productos con valor agregado o la remediación mediante biotecnología."
+      },
+      {
+        "text": "Maximización del almacenamiento ilimitado de lodos líquidos sin tratamiento.",
+        "isCorrect": false,
+        "rationale": "El paradigma actual descarta las lagunas masivas líquidas por su elevado riesgo ambiental y sísmico."
+      },
+      {
+        "text": "Eliminación de las auditorías e inspecciones externas e independientes.",
+        "isCorrect": false,
+        "rationale": "La gobernanza moderna exige la presencia de evaluadores externos para garantizar la seguridad."
+      }
+    ],
+    "hint": "Enfócate en la combinación de normativas/reglas, evolución de ingeniería deshidratada y aprovechamiento de desechos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué modificación clave introduce la regulación ambiental minera peruana sobre el proceso de cierre de operaciones?",
+    "opciones": [
+      {
+        "text": "Exige la ejecución de un cierre progresivo en paralelo a la fase de operación.",
+        "isCorrect": true,
+        "rationale": "La ley exige que la remediación y estabilización de áreas se realice paulatinamente mientras la mina está activa."
+      },
+      {
+        "text": "Permite postergar todas las tareas de remediación hasta 50 años después del abandono del sitio.",
+        "isCorrect": false,
+        "rationale": "El marco legal prohibe el abandono y la postergación indefinida de las labores de recuperación ambiental."
+      },
+      {
+        "text": "Prohíbe la utilización de fideicomisos o garantías financieras en entidades bancarias.",
+        "isCorrect": false,
+        "rationale": "La normativa obliga al depósito de garantías financieras auditables para respaldar los costos del cierre."
+      },
+      {
+        "text": "Establece que el cierre solo aplica a los proyectos ubicados en la selva baja.",
+        "isCorrect": false,
+        "rationale": "La exigencia de cierre de minas rige para todo el territorio nacional peruano sin excepción."
+      },
+      {
+        "text": "Exime a las grandes mineras de presentar instrumentos de gestión ambiental ante el gobierno.",
+        "isCorrect": false,
+        "rationale": "Los requisitos de evaluación y fiscalización son estrictos para todos los estratos de la minería formal."
+      }
+    ],
+    "hint": "Piensa en el principio de remediar paulatinamente durante la vida operativa en lugar de dejar todo para el final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué figuras integran la estructura de 'doble control' exigida por el estándar GISTM para garantizar la seguridad en la alta dirección?",
+    "opciones": [
+      {
+        "text": "Un ejecutivo responsable de la empresa con autoridad para detener la operación ante un riesgo.",
+        "isCorrect": true,
+        "rationale": "Garantiza que la rendición de cuentas directa recaiga sobre un alto directivo con poder de decisión corporativa."
+      },
+      {
+        "text": "Un ingeniero de registro (EoR), que actúa como un experto calificado independiente.",
+        "isCorrect": true,
+        "rationale": "Aporta una evaluación técnica externa y continua sin sesgos causados por la presión de producción."
+      },
+      {
+        "text": "Un representante no calificado designado de forma aleatoria entre la población local.",
+        "isCorrect": false,
+        "rationale": "Si bien la comunidad participa en monitoreos, el rol técnico de control requiere especialistas calificados e independientes."
+      },
+      {
+        "text": "Un comité exclusivo de accionistas financieros sin conocimientos de ingeniería geotécnica.",
+        "isCorrect": false,
+        "rationale": "El control directivo exige conocimientos especializados de ingeniería de presas para avalar la estabilidad."
+      },
+      {
+        "text": "Un inspector comercial de aduanas marítimas.",
+        "isCorrect": false,
+        "rationale": "El ámbito del GISTM es la gestión geotécnica y socioambiental de presas de relaves, no el comercio exterior."
+      }
+    ],
+    "hint": "Involucra tanto a un alto directivo con poder de decisión interna como a un consultor geotécnico calificado e independiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué porcentaje aproximado de sólidos caracteriza a los relaves filtrados (conocidos como 'dry stacking')?",
+    "opciones": [
+      {
+        "text": "Más del 85% de sólidos.",
+        "isCorrect": true,
+        "rationale": "Al remover la mayor parte del agua mediante prensas, el material adquiere la consistencia de un suelo húmedo apilable."
+      },
+      {
+        "text": "Entre 10% y 20% de sólidos.",
+        "isCorrect": false,
+        "rationale": "Un porcentaje tan bajo corresponde a pulpas extremadamente diluidas o agua de transporte no espesada."
+      },
+      {
+        "text": "Entre 30% y 40% de sólidos.",
+        "isCorrect": false,
+        "rationale": "Es el rango típico de los relaves convencionales que forman lagunas fluidas con alto riesgo de liquidez."
+      },
+      {
+        "text": "Exactamente 50% de sólidos.",
+        "isCorrect": false,
+        "rationale": "50% de sólidos sigue comportándose como una pulpa fluida de manejo en embalses tradicionales."
+      },
+      {
+        "text": "0% de sólidos.",
+        "isCorrect": false,
+        "rationale": "Un 0% de sólidos representa agua pura sin ningún contenido de partícula mineral."
+      }
+    ],
+    "hint": "Esta cifra representa la tecnología más avanzada de deshidratación donde el residuo se maneja casi como un suelo sólido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son las dos ventajas principales de la implementación de relaves filtrados en zonas de alta sismicidad y escasez hídrica?",
+    "opciones": [
+      {
+        "text": "Eliminación del riesgo de licuación sísmica catastrófica.",
+        "isCorrect": true,
+        "rationale": "Al no existir exceso de agua ni laguna en el depósito, el suelo no pierde resistencia durante un terremoto."
+      },
+      {
+        "text": "Recuperación de más del 90% del agua del proceso minero.",
+        "isCorrect": true,
+        "rationale": "El filtrado con prensas exprime el lodo permitiendo recircular casi la totalidad del recurso hídrico a la planta."
+      },
+      {
+        "text": "Reducción a cero de los costos de inversión en plantas industriales de filtrado.",
+        "isCorrect": false,
+        "rationale": "Los relaves filtrados requieren una inversión inicial de capital elevada en equipos y prensa de gran tamaño."
+      },
+      {
+        "text": "Inmunidad total frente al impacto de precipitaciones o lluvias extremas.",
+        "isCorrect": false,
+        "rationale": "El apilamiento seco exige un diseño riguroso de drenaje superficial para evitar que las lluvias rehumedezcan el depósito."
+      },
+      {
+        "text": "Conversión directa del residuo en metales preciosos refinados.",
+        "isCorrect": false,
+        "rationale": "El filtrado es una separación física de agua y sólido, no un proceso metalúrgico de extracción adicional."
+      }
+    ],
+    "hint": "Considera la estabilidad del depósito ante terremotos y la reutilización del recurso más preciado en el desierto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el beneficio principal de utilizar relaves en pasta en minería subterránea?",
+    "opciones": [
+      {
+        "text": "Rellenar las cavidades o caserones explotados para dar soporte geomecánico y reducir la huella en superficie.",
+        "isCorrect": true,
+        "rationale": "La mezcla de pasta con cemento se solidifica en el interior de los túneles, estabilizando la mina y retornando el residuo bajo tierra."
+      },
+      {
+        "text": "Aumentar el volumen de agua almacenada en presas abiertas sobre ríos.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la pasta es justamente reducir la necesidad de depósitos líquidos en la superficie."
+      },
+      {
+        "text": "Evitar la necesidad de moler la roca dentro de la planta concentradora.",
+        "isCorrect": false,
+        "rationale": "El relave en pasta se produce después del proceso habitual de molienda y flotación."
+      },
+      {
+        "text": "Eliminar por completo el uso de energía eléctrica en las bombas de transporte.",
+        "isCorrect": false,
+        "rationale": "Mover material de alta viscosidad como la pasta requiere bombas de desplazamiento positivo de alta potencia."
+      },
+      {
+        "text": "Garantizar que el 100% de los residuos generados se evaporen a la atmósfera.",
+        "isCorrect": false,
+        "rationale": "La pasta es una mezcla densa de sólidos que se transporta hidroneumáticamente, no una fase gaseosa."
+      }
+    ],
+    "hint": "Piensa en cómo se aprovechan los túneles vacíos de donde ya se extrajo el mineral para devolver el material sobrante.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la creación de 'tecnosuelos' para la restauración de ecosistemas, ¿qué función cumple la adición de 'biochar'?",
+    "opciones": [
+      {
+        "text": "Neutralizar la acidez del sustrato y actuar como esponja para inmovilizar metales pesados.",
+        "isCorrect": true,
+        "rationale": "El biochar eleva el pH y posee una porosidad que atrapa tóxicos, facilitando el crecimiento de vegetación sobre relaves."
+      },
+      {
+        "text": "Aumentar la concentración de ácido sulfúrico para disolver calizas rápidamente.",
+        "isCorrect": false,
+        "rationale": "El biochar se utiliza para reducir la acidez y fijar contaminantes, no para acidificar el terreno."
+      },
+      {
+        "text": "Acelerar la oxidación de la pirita mediante bacterias extremófilas.",
+        "isCorrect": false,
+        "rationale": "Oxidar la pirita incrementa el Drenaje Ácido de Roca, lo opuesto a la meta de la remediación con tecnosuelos."
+      },
+      {
+        "text": "Licuar las partículas finas para que fluyan hacia los arroyos.",
+        "isCorrect": false,
+        "rationale": "Los tecnosuelos buscan dar estabilidad química y física para la revegetación, previniendo la erosión o dispersión."
+      },
+      {
+        "text": "Sustituir el uso de cemento en la fabricación de ladrillos de alta resistencia.",
+        "isCorrect": false,
+        "rationale": "El biochar es una enmienda orgánica para remediación de suelos y no un aglomerante estructural industrial."
+      }
+    ],
+    "hint": "Funciona como un modificador del pH y como un filtro que fija los contaminantes impidiendo que las plantas los absorban.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué nivel de resistencia mecánica pueden alcanzar los materiales de construcción (como ladrillos) fabricados a partir de relaves mineros?",
+    "opciones": [
+      {
+        "text": "Más de 35 MPa, superando los estándares normativos para uso estructural.",
+        "isCorrect": true,
+        "rationale": "Las pruebas universitarias en Perú demuestran que estos bloques alcanzan resistencias elevadas, idóneas para edificación segura."
+      },
+      {
+        "text": "Menos de 1 MPa, por lo que solo se usan como relleno decorativo.",
+        "isCorrect": false,
+        "rationale": "El material validado técnicamente posee altas propiedades mecánicas que permiten su uso en estructuras de alta exigencia."
+      },
+      {
+        "text": "Exactamente 0 MPa, ya que se deshacen al entrar en contacto con el aire.",
+        "isCorrect": false,
+        "rationale": "La matriz de cemento logra encapsular el relave y genera un bloque sólido resistente y duradero."
+      },
+      {
+        "text": "500 GPa, siendo más resistentes que el diamante industrial.",
+        "isCorrect": false,
+        "rationale": "Es una cifra físicamente inverosímil para materiales cerámicos o de construcción a base de cemento y relave."
+      },
+      {
+        "text": "Un nivel variable que impide la certificación por parte de laboratorios.",
+        "isCorrect": false,
+        "rationale": "Los prototipos desarrollados cumplen las normas técnicas vigentes de edificación en el país."
+      }
+    ],
+    "hint": "Soporta cargas estructurales exigentes con cifras de resistencia a la compresión superiores a los 30 megapascales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el beneficio ambiental directo de la minería secundaria o reprocesamiento de depósitos de relaves antiguos?",
+    "opciones": [
+      {
+        "text": "Eliminar pasivos ambientales inseguros y depositarlos en instalaciones modernas y estables.",
+        "isCorrect": true,
+        "rationale": "Permite limpiar depósitos históricos vulnerables remediando el sitio y confinando el desecho sobrante con tecnología actual."
+      },
+      {
+        "text": "Duplicar la cantidad de agua dulce extraída de las cuencas comunitarias.",
+        "isCorrect": false,
+        "rationale": "El reprocesamiento moderno aplica recirculación de agua y no busca incrementar la captación en cuencas."
+      },
+      {
+        "text": "Garantizar la acidificación inmediata de las aguas subterráneas cercanas.",
+        "isCorrect": false,
+        "rationale": "La remoción y neutralización de depósitos viejos busca precisamente detener la acidificación e impacto hídrico."
+      },
+      {
+        "text": "Aumentar el riesgo sísmico del territorio mediante la excavación a tajo abierto.",
+        "isCorrect": false,
+        "rationale": "Retirar un depósito inestable reemplazándolo por apilamiento seco o controlado disminuye el riesgo sísmico regional."
+      },
+      {
+        "text": "Evitar la recuperación de cualquier metal valioso presente en el residuo.",
+        "isCorrect": false,
+        "rationale": "La minería secundaria aprovecha la eficiencia de plantas modernas para extraer metales no recuperados en el pasado."
+      }
+    ],
+    "hint": "Esta práctica permite transformar un riesgo histórico abandonado en un residuo controlado mediante estándares actuales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo abordó la operación Cerro Verde el desafío de la escasez hídrica en el desierto de Arequipa?",
+    "opciones": [
+      {
+        "text": "Implementó un ciclo de agua cerrado con alta recirculación de relaves espesados y tratamiento de aguas servidas urbanas.",
+        "isCorrect": true,
+        "rationale": "Consiguió expandir su producción masiva desacoplando su crecimiento del consumo de fuentes de agua dulce naturales."
+      },
+      {
+        "text": "Detuvo por completo el procesamiento de minerales durante los meses de verano.",
+        "isCorrect": false,
+        "rationale": "La planta opera de manera continua gracias a la eficiencia de su sistema de gestión hídrica."
+      },
+      {
+        "text": "Construyó un canal abierto para trasvasar agua potable desde la Amazonía.",
+        "isCorrect": false,
+        "rationale": "La solución técnica se basó en el reuso industrial y el tratamiento de aguas residuales de la ciudad de Arequipa."
+      },
+      {
+        "text": "Utilizó relaves líquidos sin espesar vertidos libremente sobre el terreno.",
+        "isCorrect": false,
+        "rationale": "Cerro Verde utiliza espesadores de alta eficiencia para recuperar más del 85% del agua antes de depositar el residuo."
+      },
+      {
+        "text": "Sustituyó el agua por solventes orgánicos volátiles e inflamables.",
+        "isCorrect": false,
+        "rationale": "El proceso de concentración sigue requiriendo medio acuoso, optimizado mediante recirculación extrema."
+      }
+    ],
+    "hint": "La mina aprovechó las aguas residuales de la ciudad cercana y recicló la mayor parte del fluido de sus propios espesadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál fue la estrategia de ingeniería y gestión aplicada por Antamina para manejar una gran presa de relaves en la cabecera de cuenca?",
+    "opciones": [
+      {
+        "text": "Adoptar el estándar GISTM, implementar monitoreo geotécnico en tiempo real y diseñar para daño cero.",
+        "isCorrect": true,
+        "rationale": "La empresa fortaleció la gobernanza e instrumentación de una de las presas más altas del mundo en entornos de alta montaña."
+      },
+      {
+        "text": "Abandonar el monitoreo de la presa una vez alcanzados los 100 metros de altura.",
+        "isCorrect": false,
+        "rationale": "El estándar exige la supervisión continua a perpetuidad mediante instrumentación automatizada."
+      },
+      {
+        "text": "Descargar los relaves finos directamente sobre el lecho del río en época de lluvia.",
+        "isCorrect": false,
+        "rationale": "El diseño garantiza la contención total y evita cualquier vertido no controlado que afecte la cuenca."
+      },
+      {
+        "text": "Reemplazar las evaluaciones geotécnicas por encuestas de opinión telefónicas.",
+        "isCorrect": false,
+        "rationale": "La estabilidad de la presa se fundamenta en rigurosos análisis numéricos, estudios posismo e instrumentación de campo."
+      },
+      {
+        "text": "Operar sin un Plan de Respuesta con Criterios de Activación (TARP).",
+        "isCorrect": false,
+        "rationale": "El cumplimiento del GISTM obliga a mantener protocolos TARP activos y actualizados."
+      }
+    ],
+    "hint": "Combinó el marco regulatorio global más exigente del mundo con instrumentación técnica en tiempo real en la cordillera.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué innovación social y técnica implementó Yanacocha para recuperar la confianza comunitaria en la gestión del agua?",
+    "opciones": [
+      {
+        "text": "Purificación mediante ósmosis inversa y monitoreo hídrico participativo y transparente con la comunidad.",
+        "isCorrect": true,
+        "rationale": "Involucró a los ciudadanos en la toma de muestras y análisis en laboratorios independientes para validar la calidad del agua liberada."
+      },
+      {
+        "text": "Clasificación como secreta de toda la información sobre la calidad de las vertientes de agua.",
+        "isCorrect": false,
+        "rationale": "La confianza se basó en el principio opuesto: la transparencia radical e información pública accesible."
+      },
+      {
+        "text": "Eliminación de las plantas de tratamiento de agua ácida para reducir costos.",
+        "isCorrect": false,
+        "rationale": "La empresa instaló tecnología avanzada como la ósmosis inversa para entregar agua más limpia que la del estado natural."
+      },
+      {
+        "text": "Prohibición del ingreso de la población a las asambleas de información ambiental.",
+        "isCorrect": false,
+        "rationale": "Se abrieron las puertas a comités participativos para que la propia comunidad auditara los datos de monitoreo."
+      },
+      {
+        "text": "Sustitución de laboratorios certificados por estimaciones visuales de campo.",
+        "isCorrect": false,
+        "rationale": "Las muestras recogidas en conjunto son enviadas a laboratorios acreditados e independientes elegidos por las partes."
+      }
+    ],
+    "hint": "Asoció el tratamiento de agua de alta tecnología con la participación directa de la población local en la toma de muestras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental en el riesgo físico inmediato entre los relaves mineros y el desmonte de mina según sus características físicas?",
+    "opciones": [
+      {
+        "text": "Los relaves presentan riesgo de licuación sísmica debido a su granulometría fina y saturación, mientras que el desmonte presenta riesgo de deslizamiento de talud.",
+        "isCorrect": true,
+        "rationale": "Los relaves son lodos extremadamente finos propensos a comportarse como un fluido durante un sismo (licuación), a diferencia del desmonte, compuesto por rocas gruesas angulosas cuyo mayor riesgo físico es la inestabilidad de ladera o colapso por gravedad."
+      },
+      {
+        "text": "Los relaves generan deslizamientos de rocas angulosas, mientras que el desmonte sufre de licuación espontánea por vibraciones lejanas.",
+        "isCorrect": false,
+        "rationale": "Invierte la naturaleza física de los materiales, ya que el desmonte está constituido por fragmentos rocosos gruesos y no por partículas finas saturadas susceptibles a fluir por licuación."
+      },
+      {
+        "text": "Los relaves representan un riesgo exclusivo de corrosión de infraestructura, mientras que el desmonte no genera riesgos de origen físico.",
+        "isCorrect": false,
+        "rationale": "Ignora el peligro físico real de colapso catastrófico por licuación sísmica que poseen los depósitos de relaves."
+      },
+      {
+        "text": "Ambos residuos poseen exactamente el mismo comportamiento geomecánico ante un evento sísmico de gran magnitud.",
+        "isCorrect": false,
+        "rationale": "Omite las marcadas diferencias texturales y de contenido de agua entre la pulpa fina de relave y la montaña de roca acumulada del desmonte."
+      },
+      {
+        "text": "El desmonte colapsa mediante licuación sísmica instantánea, mientras que los relaves permanecen estables por su alta cohesión seca.",
+        "isCorrect": false,
+        "rationale": "Confunde las propiedades de los materiales, dado que el desmonte no sufre licuación por falta de humedad y baja densidad relativa de pulpa, mientras que el relave sí la presenta."
+      }
+    ],
+    "hint": "Considere la textura física y el contenido de agua de un lodo fino en comparación con una pila de rocas angulosas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto geográfico y geológico de los Andes peruanos, ¿cuáles son los tres factores críticos particulares que elevan la complejidad del manejo de residuos mineros?",
+    "opciones": [
+      {
+        "text": "Topografía superabrupta, alta sismicidad por la placa de Nazca y climas extremos que van de la hiperaridez a lluvias amazónicas.",
+        "isCorrect": true,
+        "rationale": "Estos tres condicionantes geográficos y tectónicos específicos imponen restricciones geotécnicas, hidrológicas y de diseño sumamente exigentes para la infraestructura de contención en Perú."
+      },
+      {
+        "text": "Altitud extrema superior a 5000 m s.n.m., falta de red vial nacional y heladas continuas durante todo el año.",
+        "isCorrect": false,
+        "rationale": "Aunque la altitud y el clima influyen, no representan la tríada técnica crítica de geodinámica y variabilidad climática señalada como el desafío estructural central."
+      },
+      {
+        "text": "Presencia de vulcanismo activo continuo, suelos kársticos solubles e inundaciones marinas en la cordillera.",
+        "isCorrect": false,
+        "rationale": "Menciona fenómenos no representativos del desafío geodinámico y geotécnico general de los depósitos de residuos en la cordillera andina."
+      },
+      {
+        "text": "Escasez general de mano de obra calificada, ausencia de energía eléctrica e inestabilidad eólica costera.",
+        "isCorrect": false,
+        "rationale": "Se enfoca en factores logísticos u operacionales generales en lugar de los condicionantes naturales geológicos y climáticos del territorio."
+      },
+      {
+        "text": "Hiperacidez atmosférica natural, sismicidad volcánica profunda y presencia constante de permafrost expansivo.",
+        "isCorrect": false,
+        "rationale": "Atribuye características geofísicas no correspondientes al entorno geotécnico y tectónico peruano dominado por la subducción de la placa de Nazca."
+      }
+    ],
+    "hint": "Piense en el relieve de la cordillera, el proceso tectónico de la costa del Pacífico y los contrastes meteorológicos del país.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante el proceso geoquímico de formación del Drenaje Ácido de Roca (DAR), ¿cuál es el rol determinante que cumplen ciertas bacterias en el ciclo de reacción?",
+    "opciones": [
+      {
+        "text": "Actúan como catalizadores biológicos que aceleran el paso lento de oxidación del hierro hasta un millón de veces, desencadenando un ciclo fuera de control.",
+        "isCorrect": true,
+        "rationale": "Determinadas bacterias acidófilas metabolizan e incrementan exponencialmente la velocidad de reoxidación del hierro ($Fe^{2+}$ a $Fe^{3+}$), multiplicando de forma drástica la generación ácida continua."
+      },
+      {
+        "text": "Consumen el ácido libre presente en los poros de la roca, actuando como un neutralizante natural de la acidez.",
+        "isCorrect": false,
+        "rationale": "Atribuye un comportamiento alcalinizante o mitigador a microorganismos que en realidad prosperan en ambientes ácidos y potencian la reacción."
+      },
+      {
+        "text": "Precipitan los metales pesados disueltos transformándolos en minerales inofensivos e insolubles.",
+        "isCorrect": false,
+        "rationale": "Confunde la aceleración de la lixiviación ácida con procesos microbiológicos de inmovilización o fitorremediación."
+      },
+      {
+        "text": "Forman una película impermeable sobre la pirita que impide el contacto directo con el oxígeno del aire.",
+        "isCorrect": false,
+        "rationale": "Describe una función pasivante o protectora que contradice la naturaleza destructiva y aceleradora del proceso bacteriano."
+      },
+      {
+        "text": "Inhiben la reacción en cadena al consumir el oxígeno disuelto necesario para la formación de sulfatos.",
+        "isCorrect": false,
+        "rationale": "Sostiene erróneamente que la presencia bacteriana frena la cinética química cuando en realidad la acelera cuantitativamente de forma masiva."
+      }
+    ],
+    "hint": "Recuerde el efecto multiplicador que sufren las reacciones lentas de oxidación del hierro en presencia de microorganismos acidófilos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué impactos sistémicos y ambientales se desatan cuando el Drenaje Ácido de Roca (DAR) solubiliza metales pesados en una cuenca hídrica? (Seleccione todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Corrosión acelerada del concreto y acero presente en la infraestructura de puentes, canales y tuberías.",
+        "isCorrect": true,
+        "rationale": "La alta acidez ataca químicamente los materiales de construcción convencionales, destruyendo su integridad física."
+      },
+      {
+        "text": "Aniquilación de la vida acuática debido a la quemadura de branquias por pH bajo y la asfixia por depósitos de lodo naranja de hierro en el fondo.",
+        "isCorrect": true,
+        "rationale": "El agua ácida destruye los tejidos respiratorios de los peces y los precipitados férricos cubren los bentos destruyendo el hábitat acuático."
+      },
+      {
+        "text": "Bioacumulación de metales tóxicos (arsénico, plomo, cadmio) a través de la cadena trófica hasta representar un riesgo para la salud humana.",
+        "isCorrect": true,
+        "rationale": "Los metales solubilizados son absorbidos por organismos primarios y se concentran a medida que avanzan hacia los niveles superiores de la red alimentaria."
+      },
+      {
+        "text": "Enriquecimiento nutricional de los lechos fluviales favoreciendo el crecimiento sostenido de flora nativa de agua dulce.",
+        "isCorrect": false,
+        "rationale": "Asume erróneamente que la carga ácida y metálica funciona como fertilizante, cuando en realidad destruye la flora y fauna fluvial."
+      },
+      {
+        "text": "Alcalinización masiva de las cuencas receptoras provocando la cristalización de sales no tóxicas.",
+        "isCorrect": false,
+        "rationale": "Contradice la naturaleza fundamentalmente ácida ($pH$ bajo) del efluente de minería que contiene minerales sulfurados."
+      }
+    ],
+    "hint": "Considere las repercusiones físicas en las estructuras mecánicas, la degradación de ecosistemas acuáticos y la transferencia de contaminantes disueltos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al realizar la caracterización geoquímica de un residuo minero, ¿cuál es la condición necesaria para concluir que la generación de Drenaje Ácido de Roca (DAR) es inevitable?",
+    "opciones": [
+      {
+        "text": "Que el Potencial de Acidificación (AP) generado por los sulfuros supere la Capacidad o Potencial de Neutralización (NP) de los minerales carbonatados.",
+        "isCorrect": true,
+        "rationale": "El veredicto geoquímico depende del balance entre los minerales que generan ácido (como la pirita) y los que pueden consumirlo (como las calizas); si el AP es mayor al NP, el DAR ocurrirá inevitablemente."
+      },
+      {
+        "text": "Que la humedad relativa del aire supere el 90% independientemente de la presencia de minerales sulfurados.",
+        "isCorrect": false,
+        "rationale": "La humedad atmosférica por sí sola no genera ácido si la roca carece de reactivos químicos clave como los sulfuros."
+      },
+      {
+        "text": "Que el volumen total de relaves almacenados supere el millón de toneladas métricas en la presa.",
+        "isCorrect": false,
+        "rationale": "Confunde una variable cuantitativa de volumen físico con el balance y la capacidad geoquímica intrínseca del material."
+      },
+      {
+        "text": "Que el Potencial de Neutralización (NP) duplique en valor al Potencial de Acidificación (AP) de la muestra.",
+        "isCorrect": false,
+        "rationale": "Si la capacidad de neutralización duplica al potencial de acidificación, la roca posee suficiente amortiguación para prevenir el DAR."
+      },
+      {
+        "text": "Que el material contenga concentraciones masivas de sílice inerte e hidróxidos de aluminio.",
+        "isCorrect": false,
+        "rationale": "La sílice inerte no reacciona para formar acidez sulfurada, por lo que su presencia no desencadena el fenómeno."
+      }
+    ],
+    "hint": "Piense en la balanza química entre minerales generadores de ácido y minerales amortiguadores o neutralizantes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Bajo la Ley de Cierre de Minas y la regulación peruana vigente, ¿cuál es el principio legal estructurante que rige la responsabilidad sobre los pasivos y residuos mineros?",
+    "opciones": [
+      {
+        "text": "La responsabilidad de la empresa es perpetua y va más allá del cierre de operaciones, exigiendo garantías financieras constituidas desde el inicio.",
+        "isCorrect": true,
+        "rationale": "El marco legal elimina la posibilidad de abandonar la operación al terminar la extracción, obligando a asegurar fondos auditables para el monitoreo y mantenimiento a perpetuidad."
+      },
+      {
+        "text": "La responsabilidad ambiental prescribe automáticamente transcurridos 5 años del cese de la fase de procesamiento.",
+        "isCorrect": false,
+        "rationale": "Desconoce el concepto de responsabilidad no prescriptible y perpetua instituido en el marco regulatorio para evitar pasivos huérfanos."
+      },
+      {
+        "text": "El Estado asume la responsabilidad financiera total del cierre a cambio de un canon operativo anual durante la explotación.",
+        "isCorrect": false,
+        "rationale": "Muestra una transferencia de cargas que la ley peruana prohíbe explícitamente, responsabilizando al titular minero directo."
+      },
+      {
+        "text": "La empresa queda liberada de obligaciones si demuestra haber seguido estándares internacionales voluntarios no auditables.",
+        "isCorrect": false,
+        "rationale": "Confunde compromisos voluntarios con el cumplimiento obligatorio de las garantías financieras fijadas por la ley peruana."
+      },
+      {
+        "text": "La responsabilidad legal expira una vez levantado el muro definitivo de la presa de relaves.",
+        "isCorrect": false,
+        "rationale": "Limita la responsabilidad a una etapa de construcción, obviando la exigencia de control del comportamiento físico y químico a largo plazo."
+      }
+    ],
+    "hint": "Considere la extensión temporal de las obligaciones del titular minero y la exigencia de liquidez financiera garantizada para la fase poscierre.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son exigencias técnicas y operativas clave introducidas por el Estándar Global de la Industria sobre Gestión de Relaves (GISTM)? (Seleccione todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Nombramiento directo de un directivo de alto nivel corporativo como responsable final de la seguridad de las instalaciones de relaves.",
+        "isCorrect": true,
+        "rationale": "El GISTM eleva la gobernanza asignando la máxima responsabilidad sobre la seguridad a la alta dirección corporativa con responsabilidad explícita."
+      },
+      {
+        "text": "Exigencia de supervisión y validación continua por parte de expertos independientes externos a la empresa operadora.",
+        "isCorrect": true,
+        "rationale": "Establece un esquema de revisión independiente para garantizar la integridad técnica objetiva de las decisiones geotécnicas."
+      },
+      {
+        "text": "Diseño de presas de categoría de consecuencia extrema orientadas a resistir el peor escenario imaginable (sismo y crecida máxima).",
+        "isCorrect": true,
+        "rationale": "Prioriza el análisis en función de las consecuencias humanas y ambientales posibles, exigiendo resiliencia frente a eventos de retorno extremos."
+      },
+      {
+        "text": "Permiso para almacenar relaves en estado líquido convencional sin monitoreo instrumental directo en áreas de alta altitud.",
+        "isCorrect": false,
+        "rationale": "Contradice el objetivo de riesgo cero y rigor geotécnico que impulsa el estándar tras desastres internacionales."
+      },
+      {
+        "text": "Clasificación confidencial y secreta de los estudios de rotura de presa para evitar alarma pública.",
+        "isCorrect": false,
+        "rationale": "Se opone directamente al principio de transparencia radical y acceso público a la información de seguridad promovido por el GISTM."
+      }
+    ],
+    "hint": "Piense en la rendición de cuentas ejecutiva, las auditorías de terceros neutrales y el enfoque en las consecuencias de una falla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la evolución tecnológica hacia un manejo más seguro de los residuos, ¿por qué la tecnología de relaves filtrados (dry stacking) es considerada la más robusta ante amenazas sísmicas?",
+    "opciones": [
+      {
+        "text": "Porque al remover el agua libre hasta lograr más del 85% de sólidos, el material adquiere comportamiento de suelo seco compactable, eliminando el riesgo de licuación.",
+        "isCorrect": true,
+        "rationale": "La eliminación mecánica del agua intersiticial mediante prensas evita que ante un sismo aumente la presión de poros, garantizando que el material no actúe como un líquido."
+      },
+      {
+        "text": "Porque sustituye el uso de rocas por polímeros elásticos que absorben la energía de las ondas telúricas.",
+        "isCorrect": false,
+        "rationale": "Introduce un mecanismo químico ajeno al principio real de deshidratación mecánica y compactación física por capas."
+      },
+      {
+        "text": "Porque requiere la construcción de presas hidráulicas con muros tres veces más altos que los convencionales.",
+        "isCorrect": false,
+        "rationale": "Menciona estructuras de retención masiva que son innecesarias para apilar material sólido deshidratado compactado."
+      },
+      {
+        "text": "Porque reduce el costo energético de transporte al diluir la pulpa a niveles de flujo laminar.",
+        "isCorrect": false,
+        "rationale": "Confunde la deshidratación seca con procesos de dilución hidráulica que aumentan el volumen de agua en el depósito."
+      },
+      {
+        "text": "Porque permite almacenar los relaves en forma de lodo líquido confinado dentro de geomembranas sumergidas.",
+        "isCorrect": false,
+        "rationale": "Invierte la naturaleza técnica del residuo filtrado, el cual es una torta sólida y no una pulpa líquida."
+      }
+    ],
+    "hint": "Evalúe el impacto que tiene la remoción masiva de agua en la presión de poros cuando el depósito se somete a sacudimiento telúrico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función geomecánica y ambiental de utilizar relaves en pasta para el relleno de galerías en minería subterránea?",
+    "opciones": [
+      {
+        "text": "Ocupar cavidades explotadas para estabilizar estructuralmente el macizo rocoso y confinar de 40% a 60% del residuo bajo tierra, reduciendo la huella en superficie.",
+        "isCorrect": true,
+        "rationale": "Esta técnica combina el cemento con la pasta para crear pilares de soporte geomecánico interno que garantizan seguridad minera y mitigan el volumen de residuo a almacenar externamente."
+      },
+      {
+        "text": "Diluir los minerales no extraídos para prevenir derrumbes por explosión de rocas.",
+        "isCorrect": false,
+        "rationale": "Confunde el relleno geotécnico endurecido con un proceso de dilución o voladura en el tajo."
+      },
+      {
+        "text": "Aumentar la permeabilidad del suelo subterráneo para favorecer la infiltración de agua ácida hacia acuíferos profundos.",
+        "isCorrect": false,
+        "rationale": "Plantea un impacto ambiental nocivo que contradice la finalidad de confinamiento y estabilización que persigue la tecnología."
+      },
+      {
+        "text": "Evitar el uso de cualquier tipo de aglomerante o cemento en la preparación del material de soporte.",
+        "isCorrect": false,
+        "rationale": "Omite el uso de fraguantes necesarios para aportar la resistencia a la compresión requerida en el rellenado subterráneo."
+      },
+      {
+        "text": "Generar capas de aislamiento térmico para evitar el ingreso de humedad hacia los túneles activos.",
+        "isCorrect": false,
+        "rationale": "Atribuye un objetivo secundario de climatización en lugar de la función geotécnica y ambiental de soporte de carga y disposición interna de residuos."
+      }
+    ],
+    "hint": "Considere cómo el reingreso del residuo denso procesado apoya la estabilidad de los túneles vacíos y libera espacio exterior.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el diseño de presas de relaves, ¿cuál es el criterio diferenciador entre el Sismo Base de Operación (OBE) y el Sismo Máximo Creíble (MCE)?",
+    "opciones": [
+      {
+        "text": "El OBE exige operatividad continua ante eventos de periodo de retorno cercano a 475 años; el MCE admite deformaciones pero exige cero colapso estructural ante eventos de hasta 10,000 años.",
+        "isCorrect": true,
+        "rationale": "El OBE garantiza que la infraestructura no sufra interrupciones tras un sismo moderado durante la vida útil, mientras que el MCE exige estabilidad extrema posismo para evitar catástrofes ante el máximo choque posible."
+      },
+      {
+        "text": "El OBE evalúa solo el riesgo de tsunami, mientras que el MCE se enfoca exclusivamente en la erosión eólica del muro.",
+        "isCorrect": false,
+        "rationale": "Desvía la naturaleza de las aceleraciones sísmicas del terreno hacia fenómenos climáticos u oceánicos ajenos a la geotecnia de la presa."
+      },
+      {
+        "text": "El MCE se aplica en la fase de construcción inicial, mientras que el OBE se utiliza únicamente tras el cierre definitivo de la mina.",
+        "isCorrect": false,
+        "rationale": "Invierte o distorsiona la aplicación temporal, ya que ambos escenarios de amenaza sísmica se evalúan durante todo el ciclo de vida del proyecto."
+      },
+      {
+        "text": "Ambos estándares representan el mismo nivel de aceleración sísmica, pero difieren en el volumen de agua almacenada en la laguna.",
+        "isCorrect": false,
+        "rationale": "Desconoce que el MCE posee un periodo de retorno y magnitud considerablemente superiores al OBE."
+      },
+      {
+        "text": "El MCE permite la falla total de la presa siempre que exista un plan de evacuación, mientras que el OBE prohíbe las evacuaciones.",
+        "isCorrect": false,
+        "rationale": "Afirma erróneamente que el MCE admite el colapso del muro, cuando su exigencia fundamental es la contención física estricta para evitar desastres."
+      }
+    ],
+    "hint": "Contraste la continuidad del negocio durante sismos esperados frente a la contención estructural absoluta para evitar colapsos en eventos telúricos milenarios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son los tres análisis geotécnicos progresivos obligatorios para validar la seguridad física de una presa de relaves ante un evento sísmico? (Seleccione todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Análisis estático para verificar la estabilidad de la estructura bajo la acción exclusiva de las cargas por peso propio.",
+        "isCorrect": true,
+        "rationale": "Constituye la evaluación geotécnica base de equilibrio límite sin fuerzas telúricas actuantes."
+      },
+      {
+        "text": "Análisis pseudoestático para simular la fuerza inercial del movimiento sísmico mediante un coeficiente de aceleración.",
+        "isCorrect": true,
+        "rationale": "Permite aproximar de manera simplificada las fuerzas horizontales inducidas por el sismo sobre los taludes."
+      },
+      {
+        "text": "Análisis posismo para confirmar que la presa permanece estable asumiendo la condición de licuación de los materiales desencadenada por el sismo.",
+        "isCorrect": true,
+        "rationale": "Verifica que la presa mantenga su contención aun cuando el material retenido o el cimiento hayan perdido resistencia por licuefacción parcial o total."
+      },
+      {
+        "text": "Análisis pluviométrico instantáneo para determinar la variación del pH por radiación ultravioleta durante el sismo.",
+        "isCorrect": false,
+        "rationale": "Mezcla variables meteorológicas y geoquímicas que no forman parte de la secuencia geotécnica de estabilidad física de taludes."
+      },
+      {
+        "text": "Análisis de asentamiento térmico por fricción eólica de las partículas sobre el muro exterior.",
+        "isCorrect": false,
+        "rationale": "Introduce variables inexistentes en la práctica estándar de ingeniería sísmica de estructuras de contención de residuos."
+      }
+    ],
+    "hint": "Considere la evaluación por peso propio, la simulación de fuerzas inerciales y la estabilidad posterior a la pérdida de resistencia del material.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la utilidad técnica decisiva de desarrollar un Análisis de Rotura de Presa (Dam Breach Analysis - DBA)?",
+    "opciones": [
+      {
+        "text": "Modelar numéricamente el comportamiento y trayectoria del flujo de relaves ante una falla hipotética, identificando zonas de inundación para diseñar planes de emergencia y evacuación.",
+        "isCorrect": true,
+        "rationale": "El DBA no busca predecir si ocurrirá la falla, sino delimitar con precisión la mancha de inundación, tiempos de arribo y calados del flujo para proteger vidas humanas mediante planificación territorial preventiva."
+      },
+      {
+        "text": "Determinar el costo financiero exacto de la póliza de seguro ambiental que la minera debe pagar anualmente al gobierno.",
+        "isCorrect": false,
+        "rationale": "Confunde un estudio geotécnico e hidrodinámico de modelación de flujos con un cálculo actuarial o administrativo comercial."
+      },
+      {
+        "text": "Demostrar que es imposible que ocurra cualquier tipo de infiltración ácida hacia los cursos de agua subterráneos.",
+        "isCorrect": false,
+        "rationale": "Asocia el análisis de rotura física con estudios hidrogeológicos de calidad química de aguas subterráneas."
+      },
+      {
+        "text": "Calcular la cantidad exacta de reactivos necesarios para neutralizar la laguna de relaves en un lapso de 24 horas.",
+        "isCorrect": false,
+        "rationale": "Atribuye al DBA objetivos de tratamiento químico del efluente en lugar de la simulación física de la falla estructural."
+      },
+      {
+        "text": "Reemplazar la necesidad de monitorear la presión de poros mediante piezómetros en el cuerpo de la presa.",
+        "isCorrect": false,
+        "rationale": "Trata un modelo predictivo como sustituto de la instrumentación geotécnica real en campo."
+      }
+    ],
+    "hint": "Piense en la generación de mapas de inundación, tiempos de transporte de la huella de barro y la delimitación de zonas seguras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión operativa en tiempo real de una presa, ¿cómo interactúa el sistema TARP (Trigger Action Response Plan) con los datos del monitoreo instrumental?",
+    "opciones": [
+      {
+        "text": "Traduce las lecturas del instrumental en niveles de alerta (verde, amarillo, naranja, rojo) e instruye respuestas correctivas automáticas y predefinidas sin requerir burocracia jerárquica.",
+        "isCorrect": true,
+        "rationale": "El TARP elimina la duda operativa en momentos críticos al asociar umbrales físicos (ej. presión de poros o deformación) con acciones inmediatas previamente aprobadas para el personal en campo."
+      },
+      {
+        "text": "Genera reportes financieros trimestrales para los inversionistas sobre la cantidad de agua reciclada.",
+        "isCorrect": false,
+        "rationale": "Desvía la función de respuesta a alertas operativas hacia reportes de contabilidad o sostenibilidad empresarial."
+      },
+      {
+        "text": "Envía notificaciones a los proveedores de reactivos cuando la concentración de cal desciende en la planta.",
+        "isCorrect": false,
+        "rationale": "Confunde un sistema de control de riesgos geotécnicos con la gestión de inventarios de la planta concentradora."
+      },
+      {
+        "text": "Calcula de forma automática la ley del metal retenido en los lodos para su posterior reprocesamiento.",
+        "isCorrect": false,
+        "rationale": "Atribuye funciones de caracterización metalúrgica a una herramienta diseñada estrictamente para la gestión del riesgo geotécnico."
+      },
+      {
+        "text": "Sustituye los planes de cierre de minas aprobados por el Estado mediante un algoritmo digital.",
+        "isCorrect": false,
+        "rationale": "Equipara una guía de respuesta operativa de campo con un documento de planificación legal a largo plazo."
+      }
+    ],
+    "hint": "Considere la rápida toma de decisiones en campo mediante código de colores según umbrales de presión o deformación medidos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el paradigma actual expuesto para la minería en el Perú, ¿cuáles son los ejes estratégicos que definen la viabilidad operativa de un proyecto minero? (Seleccione todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Alineamiento con el marco legal estricto, incluyendo leyes de cierre progresivo y constitución de garantías financieras reales.",
+        "isCorrect": true,
+        "rationale": "Garantiza la legalidad y la cobertura económica necesaria para remediar y cerrar las instalaciones de residuos."
+      },
+      {
+        "text": "Adopción de estándares internacionales de gobernanza como el GISTM para el diseño y supervisión basado en consecuencias.",
+        "isCorrect": true,
+        "rationale": "Asegura la integración de las mejores prácticas globales en el control de riesgos de catástrofes."
+      },
+      {
+        "text": "Gestión proactiva del legado histórico mediante la intervención o reprocesamiento de pasivos ambientales mineros (PAMs).",
+        "isCorrect": true,
+        "rationale": "Transforma riesgos heredados sin dueño en oportunidades de remediación mediante la aplicación de economía circular."
+      },
+      {
+        "text": "Mantenimiento de presas de relaves convencionales en estado líquido para reducir costos operacionales directos.",
+        "isCorrect": false,
+        "rationale": "Contradice la tendencia irreversible hacia relaves más secos impulsada por motivos de seguridad y escasez hídrica."
+      },
+      {
+        "text": "Reserva confidencial de la información de seguridad geotécnica frente a las comunidades colindantes.",
+        "isCorrect": false,
+        "rationale": "Se opone al requisito de transparencia radical necesario para construir la licencia social para operar."
+      }
+    ],
+    "hint": "Identifique las dimensiones legales, estándares de gobernanza y manejo de la historia de los desechos en el país.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la exigencia legal del 'cierre progresivo' dentro del ciclo de vida de una operación minera peruana?",
+    "opciones": [
+      {
+        "text": "En ejecutar de forma simultánea actividades de rehabilitación y confinamiento de residuos a medida que avanza la explotación, sin esperar al cese definitivo de la mina.",
+        "isCorrect": true,
+        "rationale": "El cierre progresivo distribuye el esfuerzo ambiental y reduce la acumulación de áreas perturbadas durante la etapa operativa de la mina."
+      },
+      {
+        "text": "En clausurar temporalmente la planta de procesamiento durante la estación de lluvias cada tres años.",
+        "isCorrect": false,
+        "rationale": "Confunde la remediación paralela continua con suspensiones operativas de carácter estacional o hidrológico."
+      },
+      {
+        "text": "En transferir la propiedad legal del depósito de relaves al municipio local de forma gradual durante la producción.",
+        "isCorrect": false,
+        "rationale": "Desconoce que la titularidad y la responsabilidad ambiental permanecen en la empresa minera sin posibilidad de delegación gubernamental."
+      },
+      {
+        "text": "En reducir en un 10% anual la cantidad de agua tratada vertida al medio ambiente.",
+        "isCorrect": false,
+        "rationale": "Asocia el concepto de cierre progresivo con metas fijas de vertimiento hídrico en lugar de la estabilización física y química de componentes mineros."
+      },
+      {
+        "text": "En posponer la elaboración de los planes de ingeniería de detalle para la etapa posterior al agotamiento de reservas.",
+        "isCorrect": false,
+        "rationale": "Plantea el enfoque antiguo donde la planificación del cierre se postergaba hasta el final, la cual ha sido corregida por la ley."
+      }
+    ],
+    "hint": "Piense en la realización de labores de estabilización y remediación de forma paralela a la producción comercial de mineral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al incorporar relaves mineros deshidratados en la fabricación de ladrillos y bloques de edificación ecoamigables, ¿cuál es el mecanismo químico que asegura la inmovilización de contaminantes?",
+    "opciones": [
+      {
+        "text": "Encapsulamiento físico-químico de los metales pesados dentro de la matriz cristalina hidratada del cemento durante el fraguado.",
+        "isCorrect": true,
+        "rationale": "Las reacciones de hidratación del cemento atrapan estructuralmente las fases metálicas, impidiendo que el agua o la intemperie lixivien los elementos contaminantes."
+      },
+      {
+        "text": "Evaporación térmica de los metales pesados en hornos de baja temperatura durante el proceso de secado.",
+        "isCorrect": false,
+        "rationale": "Los metales pesados no se volatilizan a bajas temperaturas de secado y su dispersión gaseosa generaría contaminación atmosférica."
+      },
+      {
+        "text": "Adición de bacterias neutralizantes que devoran la masa metálica transformándola en materia orgánica.",
+        "isCorrect": false,
+        "rationale": "Sostiene una transformación elemental biológica imposible en la matriz alcalina del fraguado del concreto."
+      },
+      {
+        "text": "Aplicación de una pintura plástica exterior que recubre temporalmente la superficie del bloque.",
+        "isCorrect": false,
+        "rationale": "Menciona una barrera superficial superficial e inestable que no garantiza la retención química a largo plazo requerida por la norma de construcción."
+      },
+      {
+        "text": "Disolución completa de los sulfuros mediante la adición masiva de ácidos fuertes antes del moldeado.",
+        "isCorrect": false,
+        "rationale": "Incurre en un procedimiento contradictorio que generaría efluentes tóxicos y destruiría las propiedades aglomerantes de la mezcla."
+      }
+    ],
+    "hint": "Considere lo que ocurre con las partículas pesadas cuando la mezcla cementicia reacciona y endurece formando cristales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la biotecnología de rehabilitación mediante 'Tecnosuelos' aplicados a relaves (como en el proyecto Los Rosales), ¿cuáles son los roles principales que cumple la adición de biochar? (Seleccione todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Elevar el pH del sustrato actuando como un neutralizante contra la acidez intrínseca.",
+        "isCorrect": true,
+        "rationale": "El biochar posee propiedades alcalinizantes que corrigen la hiperacidez del residuo minero."
+      },
+      {
+        "text": "Actuar como una esponja porosa de alta superficie específica que inmoviliza y adsorbe metales pesados.",
+        "isCorrect": true,
+        "rationale": "Su estructura microscópica atrapa los metales disueltos, evitando que sean absorbidos en niveles tóxicos por las raíces o transportados por el agua."
+      },
+      {
+        "text": "Transformar un sustrato minero inerte en un suelo fértil capaz de sostener cobertura vegetal estable.",
+        "isCorrect": true,
+        "rationale": "Mejora la retención de agua y nutrientes, permitiendo que la vegetación colonice el antiguo pasivo."
+      },
+      {
+        "text": "Acelerar la tasa de oxidación de pirita para disolver el material rocoso sobrante.",
+        "isCorrect": false,
+        "rationale": "Plantea un efecto contrario a la rehabilitación, ya que acelerar la oxidación de la pirita empeoraría la acidez."
+      },
+      {
+        "text": "Impermeabilizar la superficie formando una capa vítrea que impide el paso de la luz solar.",
+        "isCorrect": false,
+        "rationale": "Contradice la formación de un suelo fértil para el crecimiento de vegetación al bloquear la fotosíntesis e infiltración favorable."
+      }
+    ],
+    "hint": "Especule sobre el comportamiento de la materia orgánica pirolizada respecto a la acidez, la retención de metales disueltos y la fertilidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la ventaja económica y ambiental de la Minería Secundaria aplicada sobre depósitos de relaves antiguos o pasivos ambientales mineros (PAMs)?",
+    "opciones": [
+      {
+        "text": "Permite extraer minerales valiosos no recuperados en el pasado con costo cero de molienda, reemplazando al mismo tiempo depósitos inestables por instalaciones modernas deshidratadas.",
+        "isCorrect": true,
+        "rationale": "Aprovecha que la roca ya está molida para reducir los costos operacionales de conminución y utiliza las ganancias para reestructurar el residuo con estándares actuales de seguridad."
+      },
+      {
+        "text": "Elimina la obligación de contar con Estudio de Impacto Ambiental al tratarse de material extraído en el pasado.",
+        "isCorrect": false,
+        "rationale": "Cualquier actividad de re-procesamiento o explotación secundaria requiere la aprobación de instrumentos ambientales según la ley."
+      },
+      {
+        "text": "Inactiva la reactividad del arsénico de forma automática mediante la exposición al aire libre.",
+        "isCorrect": false,
+        "rationale": "La exposición directa al aire libre de minerales sulfurados incrementa la lixiviación ácida si no se aplican controles de ingeniería."
+      },
+      {
+        "text": "Garantiza que la concentración de metales pesados en el efluente remanente sea nula sin necesidad de tratamiento hídrico.",
+        "isCorrect": false,
+        "rationale": "Omite la necesidad de seguir tratando las aguas de proceso aun durante el reprocesamiento de antiguos depósitos."
+      },
+      {
+        "text": "Permite utilizar métodos de disposición hidráulica convencional sin requerir la presencia de un Ingeniero de Registro.",
+        "isCorrect": false,
+        "rationale": "Desconoce que el reprocesamiento debe adoptar las normativas contemporáneas que prohíben prácticas obsoletas e imponen estricta gobernanza."
+      }
+    ],
+    "hint": "Considere el ahorro energético derivado de no tener que romper la roca desde cero y el beneficio de limpiar una amenaza del pasado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la operación Cerro Verde (Arequipa), ¿cuál fue la estrategia tecnológica clave para gestionar relaves en un entorno hiperárido con riesgo sísmico y alta demanda de procesamiento?",
+    "opciones": [
+      {
+        "text": "Implementación de espesadores de alta eficiencia para recircular más de 85% del agua de relave, combinada con el uso de aguas servidas urbanas tratadas en un circuito cerrado.",
+        "isCorrect": true,
+        "rationale": "La operación logró desvincular el crecimiento productivo del consumo de agua fresca mediante un balance de reutilización interna agresivo y el aprovechamiento de efluentes municipales de la ciudad."
+      },
+      {
+        "text": "Uso exclusivo de agua de mar desalinizada transportada mediante un acueducto a presión de 300 kilómetros.",
+        "isCorrect": false,
+        "rationale": "Aunque es una opción tecnológica en el sector, la innovación central de Cerro Verde se basó en el tratamiento de aguas servidas urbanas y la alta recirculación de su propia pulpa espesada."
+      },
+      {
+        "text": "Disposición de relaves líquidos en depresión natural desértica sin compactación ni espesamiento.",
+        "isCorrect": false,
+        "rationale": "Contradice el esfuerzo de ingeniería geotécnica e hídrica de la operación que cuenta con una de las presas de arenas de relave más grandes y monitoreadas del mundo."
+      },
+      {
+        "text": "Filtrado térmico mediante evaporación por antorchas de gas natural en la misma planta.",
+        "isCorrect": false,
+        "rationale": "Menciona una alternativa inexistente e inviable energéticamente para procesar cientos de miles de toneladas diarias de pulpa."
+      },
+      {
+        "text": "Inyección a alta presión de los residuos fluidos en fallas tectónicas inactivas del desierto.",
+        "isCorrect": false,
+        "rationale": "Plantea una práctica irresponsable e ilegal que incrementaría el riesgo sísmico inducido y la contaminación de acuíferos."
+      }
+    ],
+    "hint": "Piense en el acoplamiento con la ciudad vecina para el aprovechamiento de efluentes domésticos y la recuperación interna masiva en la planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el caso de estudio de Antamina (cabecera de cuenca a más de 4300 m s.n.m.), ¿qué elementos garantizan la seguridad e integridad de la presa de relaves más alta del país? (Seleccione todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Implementación estricta y adopción integral del Estándar Global de la Industria sobre Gestión de Relaves (GISTM).",
+        "isCorrect": true,
+        "rationale": "Permite adoptar los niveles de gobernanza y control de riesgo por consecuencias más exigentes del sector."
+      },
+      {
+        "text": "Sistema de monitoreo geotécnico e instrumentalización avanzada con transmisión de datos en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Garantiza la supervisión continua del comportamiento interno de la estructura (deformaciones, presiones de agua) para la prevención temprana de fallas."
+      },
+      {
+        "text": "Enfoque de diseño y operación orientado a la meta de Cero Daño a personas y medio ambiente.",
+        "isCorrect": true,
+        "rationale": "Establece la contención física y química absoluta como criterio no negociable al estar ubicada aguas arriba de poblaciones e infraestructuras."
+      },
+      {
+        "text": "Uso de sistemas de descarga libre de relaves no tratados hacia la cuenca hidrográfica durante periodos de tormenta.",
+        "isCorrect": false,
+        "rationale": "Incurre en una violación ambiental crítica que contraviene la meta de cero daño y el marco legal peruano."
+      },
+      {
+        "text": "Sustitución de la supervisión de ingeniería independiente por autoevaluaciones informales del personal operativo.",
+        "isCorrect": false,
+        "rationale": "Viola el principio de revisión independiente obligatoria impuesto por el estándar global GISTM."
+      }
+    ],
+    "hint": "Considere la aplicación del estándar GISTM, el seguimiento instrumental continuo y la orientación al cero daño en una zona ecológicamente sensible.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la mina subterránea San Rafael (Minsur), ¿de qué manera el uso de relaves en pasta genera un beneficio integral tanto técnico como ambiental?",
+    "opciones": [
+      {
+        "text": "Devuelve entre 40% y 60% del residuo bajo tierra como relleno consolidado, reduciendo la superficie del depósito exterior y permitiendo la recuperación segura de casi 100% del mineral.",
+        "isCorrect": true,
+        "rationale": "Maximiza la extracción del recurso sin desestabilizar la mina, al tiempo que reduce significativamente la huella física y el volumen de residuo expuesto al ambiente en la superficie."
+      },
+      {
+        "text": "Aumenta la fluidez del agua subterránea para arrastrar los minerales no deseados directamente hacia los ríos.",
+        "isCorrect": false,
+        "rationale": "Plantea la dispersión irresponsable de contaminantes, lo que entra en conflicto directo con las metas de sostenibilidad."
+      },
+      {
+        "text": "Sustituye por completo el uso de energía eléctrica en la planta mediante la reacción geotérmica del relleno.",
+        "isCorrect": false,
+        "rationale": "Atribuye propiedades de generación energética infundadas al relleno con pasta cementada."
+      },
+      {
+        "text": "Elimina la necesidad de monitorear la calidad del agua de los efluentes en la cuenca.",
+        "isCorrect": false,
+        "rationale": "El uso de relleno en pasta no exime a la empresa de monitorear efluentes de acuerdo con la norma de vertimientos."
+      },
+      {
+        "text": "Permite el vertido de pulpa líquida dentro de galerías en uso activo sin necesidad de aglomerantes de fraguado.",
+        "isCorrect": false,
+        "rationale": "Ingresar pulpa líquida sin fraguar a minas subterráneas activas generaría un riesgo mortal por soplamiento o inundación impredecible."
+      }
+    ],
+    "hint": "Evalúe cómo el rellenado denso con cemento ayuda a soportar las cavidades minadas y achica la huella de acumulación exterior.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la operación Yanacocha (Cajamarca), ¿qué combinación de medidas innovadoras permitió transformar una dinámica de desconfianza social respecto al recurso hídrico en un modelo de transparencia?",
+    "opciones": [
+      {
+        "text": "Tratamiento de efluentes con tecnología de ósmosis inversa de alta eficiencia combinado con un esquema de monitoreo hídrico participativo directo con las comunidades.",
+        "isCorrect": true,
+        "rationale": "La alta tecnología de purificación garantiza un efluente de calidad impecable, mientras que la inclusión comunitaria en el muestreo y selección de laboratorios construye confianza sólida."
+      },
+      {
+        "text": "Clasificación confidencial de los datos de calidad de agua y entrega de reportes anuales cerrados a las autoridades.",
+        "isCorrect": false,
+        "rationale": "La reserva de información fomenta la sospecha social y destruye la confianza comunitaria en lugar de fortalecerla."
+      },
+      {
+        "text": "Desviación definitiva de los cauces de ríos locales para evitar que pasen cerca de las áreas habitadas.",
+        "isCorrect": false,
+        "rationale": "Alterar geográficamente los ríos de una cuenca no resuelve el problema de la confianza ni la calidad del efluente de minería."
+      },
+      {
+        "text": "Sustitución de las plantas de tratamiento de agua por contribuciones económicas directas a los poblados.",
+        "isCorrect": false,
+        "rationale": "El marco ambiental prohíbe reemplazar el tratamiento adecuado del agua por compensaciones financieras directas."
+      },
+      {
+        "text": "Construcción de depósitos de relaves hidráulicos convencionales no impermeabilizados en las partes bajas del valle.",
+        "isCorrect": false,
+        "rationale": "Aumentaría el riesgo de contaminación de los acuíferos y agravaría el conflicto social existente."
+      }
+    ],
+    "hint": "Piense en el proceso de filtración por membranas de nivel molecular sumado a la participación abierta de los pobladores en la toma de muestras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del espectro de deshidratación de residuos mineros, ¿qué características diferencian a la tecnología de relaves en pasta respecto a la tecnología de relaves filtrados? (Seleccione todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Los relaves en pasta se transportan mediante bombeo de alta presión en tuberías debido a su comportamiento de fluido no newtoniano (70%-80% sólidos).",
+        "isCorrect": true,
+        "rationale": "La pasta posee suficiente contenido hídrico para fluir bajo presión hidráulica continua en conductos cerrados."
+      },
+      {
+        "text": "Los relaves filtrados se trasladan en camiones o fajas transportadoras al presentar consistencia sólida tipo 'torta' (>85% sólidos).",
+        "isCorrect": true,
+        "rationale": "Al eliminar casi toda el agua libre mediante prensado, el residuo no puede ser bombeado por tubería y se maneja como movimiento de tierras mecánicamente."
+      },
+      {
+        "text": "Los relaves filtrados requieren procesos de compactación mecánica por capas en el depósito final (dry stacking).",
+        "isCorrect": true,
+        "rationale": "Se esparce y compacta mecánicamente con rodillos para garantizar la densidad geotécnica y estabilidad del depósito."
+      },
+      {
+        "text": "Los relaves en pasta forman depósitos secos sin requerir contención ni espesadores previos.",
+        "isCorrect": false,
+        "rationale": "Los relaves en pasta requieren espesamiento de alto rendimiento previo y retienen aún humedad considerable en comparación al filtrado."
+      },
+      {
+        "text": "Los relaves filtrados poseen mayor volumen de agua libre en la superficie del embalse que los relaves convencionales.",
+        "isCorrect": false,
+        "rationale": "La tecnología de relaves filtrados no forma ninguna laguna de agua libre sobre el depósito."
+      }
+    ],
+    "hint": "Compare los porcentajes de sólidos, la consistencia física resultante y los métodos de transporte (bombeo por tubería frente a camiones o fajas).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo opera la estructura de doble control en la gobernanza de depósitos de relaves promovida por los estándares internacionales?",
+    "opciones": [
+      {
+        "text": "Mediante la articulación de un Ejecutivo Responsable interno con poder decisorio sobre la operación y un Ingeniero de Registro independiente que convalida técnicamente la seguridad.",
+        "isCorrect": true,
+        "rationale": "Asegura un equilibrio de poder donde la prioridad productiva interna es fiscalizada externamente por un experto de registro sin conflictos de interés comercial."
+      },
+      {
+        "text": "Asignando el control operativo diario a dos empresas mineras competidoras simultáneamente en la misma presa.",
+        "isCorrect": false,
+        "rationale": "Plantea una duplicación operativa impráctica que diluye la responsabilidad legal y de gestión."
+      },
+      {
+        "text": "Exigiendo la aprobación técnica de los informes geotécnicos mediante votación popular en asamblea comunal.",
+        "isCorrect": false,
+        "rationale": "Confunde la participación social transparente con las decisiones de validación de ingeniería especializada."
+      },
+      {
+        "text": "Requiriendo la firma de dos ministerios diferentes para autorizar cada descarga diaria de relaves.",
+        "isCorrect": false,
+        "rationale": "Confunde el esquema de gobernanza y aseguramiento técnico interno/externo con la burocracia de permisos del Estado."
+      },
+      {
+        "text": "Implementando dos presas de almacenamiento idénticas para alternar su uso de forma semanal.",
+        "isCorrect": false,
+        "rationale": "Describe una redundancia física de infraestructura en lugar de una estructura de gobernanza y supervisión técnica."
+      }
+    ],
+    "hint": "Considere la separación entre el líder corporativo con autoridad de presupuesto/parada y el especialista de ingeniería independiente que valida la estructura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-76",
+    "diplomado": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el diseño de depósitos de relaves orientados a la resiliencia geotécnica a largo plazo, ¿qué implica el principio de 'diseñar para la incertidumbre y a perpetuidad'?",
+    "opciones": [
+      {
+        "text": "Proyectar estructuras capaces de resistir eventos naturales extremos (sismos y crecidas) con periodos de retorno de hasta 10,000 años, manteniendo la estabilidad mucho tiempo después del cierre de la mina.",
+        "isCorrect": true,
+        "rationale": "Al entender que los relaves permanecerán en el sitio por siglos, el diseño geotécnico no puede limitarse a la vida útil comercial de la mina y debe resistir la máxima variabilidad geodinámica futura."
+      },
+      {
+        "text": "Asumir que la infraestructura puede colapsar de forma segura cada 50 años siempre que existan fondos de reparación.",
+        "isCorrect": false,
+        "rationale": "Admite la falla catastrófica periódica, lo cual está descartado en los principios modernos de contención permanente."
+      },
+      {
+        "text": "Diseñar las presas basándose únicamente en el promedio de lluvias de los últimos cinco años de operación.",
+        "isCorrect": false,
+        "rationale": "Utiliza ventanas estadísticas breves e inadecuadas que ignoran los eventos hidrológicos extremos y el cambio climático a largo plazo."
+      },
+      {
+        "text": "Confiar en que las tecnologías futuras eliminarán mecánicamente el depósito antes de que ocurra un sismo grave.",
+        "isCorrect": false,
+        "rationale": "Traspasa la responsabilidad geotécnica actual a especulaciones tecnológicas inciertas en el futuro."
+      },
+      {
+        "text": "Construir presas temporales de baja resistencia que puedan ser lavadas de forma controlada por las crecidas del río.",
+        "isCorrect": false,
+        "rationale": "Promueve la descarga del residuo al ambiente, lo cual constituye una catástrofe ambiental prohibida por la regulación."
+      }
+    ],
+    "hint": "Considere la escala de tiempo secular de los residuos mineros frente a eventos hidrológicos y telúricos milenarios.",
+    "activo": true
+  }
+]

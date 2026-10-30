@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el núcleo distintivo de la Industria 4.0 en comparación con las revoluciones industriales anteriores?",
+    "opciones": [
+      {
+        "text": "La fusión de tecnologías físicas, digitales y biológicas mediante la interconexión e intercambio de datos en tiempo real.",
+        "isCorrect": true,
+        "rationale": "La Industria 4.0 se caracteriza por la integración de sistemas ciberfísicos, computación en la nube y Big Data para crear un entorno industrial hiperconectado e inteligente."
+      },
+      {
+        "text": "La invención de la máquina de vapor y el telar mecánico para la mecanización del trabajo manual.",
+        "isCorrect": false,
+        "rationale": "La introducción de la máquina de vapor y el telar mecánico definió la Primera Revolución Industrial, centrada en la mecanización básica."
+      },
+      {
+        "text": "La introducción de la electricidad y las líneas de ensamblaje para la producción en masa.",
+        "isCorrect": false,
+        "rationale": "El uso masivo de energía eléctrica y las líneas de producción en cadena iniciadas por Henry Ford corresponden a la Segunda Revolución Industrial."
+      },
+      {
+        "text": "La incorporación inicial de computadoras aisladas para automatizar tareas individuales sin conexión a la red.",
+        "isCorrect": false,
+        "rationale": "La automatización digital de tareas individuales mediante computadoras aisladas fue la marca clave de la Tercera Revolución Industrial."
+      },
+      {
+        "text": "El uso exclusivo de la fuerza humana asistida únicamente por herramientas mecánicas sencillas.",
+        "isCorrect": false,
+        "rationale": "La manufactura artesanal previa a la mecanización no constituye una revolución industrial basada en automatización o tecnología digital."
+      }
+    ],
+    "hint": "Piensa en cómo se conectan los sistemas físicos con las redes digitales para intercambiar información en tiempo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el material del curso, ¿cuál es el pilar fundamental que incorpora la Quinta Revolución Industrial?",
+    "opciones": [
+      {
+        "text": "El medio ambiente y la sostenibilidad.",
+        "isCorrect": true,
+        "rationale": "La Quinta Revolución Industrial coloca al medio ambiente y la sostenibilidad como el pilar de cierre para equilibrar el desarrollo tecnológico con los recursos naturales."
+      },
+      {
+        "text": "El reemplazo definitivo del trabajo humano por algoritmos de Machine Learning.",
+        "isCorrect": false,
+        "rationale": "El Machine Learning es una herramienta de la Industria 4.0 y no define el propósito ético y ambiental de la quinta revolución."
+      },
+      {
+        "text": "El incremento ilimitado de la extracción minera sin regulación.",
+        "isCorrect": false,
+        "rationale": "La extracción sin regulación contradice el principio de responsabilidad ambiental introducido en la nueva etapa industrial."
+      },
+      {
+        "text": "El retorno a la producción manual para eliminar los sistemas cibernéticos.",
+        "isCorrect": false,
+        "rationale": "La evolución tecnológica no busca eliminar los avances cibernéticos, sino orientarlos hacia el cuidado del entorno ecológico."
+      },
+      {
+        "text": "El uso exclusivo de combustibles fósiles en las plantas industriales.",
+        "isCorrect": false,
+        "rationale": "El uso de combustibles fósiles genera desgaste ambiental, lo cual contradice el objetivo de sostenibilidad de la Quinta Revolución."
+      }
+    ],
+    "hint": "Se relaciona con la preservación de los recursos naturales y la sostenibilidad dentro del ciclo tecnológico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la explicación brindada sobre la innovación en los procesos operativos, ¿cómo se define el concepto de innovar?",
+    "opciones": [
+      {
+        "text": "Hacer las cosas más sencillas y reducir el tiempo y esfuerzo requeridos para lograr un resultado eficaz.",
+        "isCorrect": true,
+        "rationale": "La innovación busca optimizar procesos eliminando complejidad, lo que permite alcanzar los objetivos con menor gasto de tiempo y recursos."
+      },
+      {
+        "text": "Aumentar el número de pasos burocráticos para asegurar el control de calidad.",
+        "isCorrect": false,
+        "rationale": "Aumentar la burocracia incrementa el tiempo y esfuerzo operacional, lo que representa una ineficiencia en lugar de una innovación."
+      },
+      {
+        "text": "Reemplazar inmediatamente toda la maquinaria sin evaluar los costos ni los procesos existentes.",
+        "isCorrect": false,
+        "rationale": "Cambiar tecnología de forma precipitada sin análisis previo de retorno o necesidad no constituye una innovación rentable ni estratégica."
+      },
+      {
+        "text": "Mantener los mismos procedimientos manuales antiguos contratando más personal.",
+        "isCorrect": false,
+        "rationale": "Sumar mano de obra para replicar tareas manuales lentas perpetúa la ineficiencia sin modificar la forma de trabajar."
+      },
+      {
+        "text": "Realizar tareas en mayor tiempo para garantizar la ausencia total de errores humanos.",
+        "isCorrect": false,
+        "rationale": "La innovación no busca ralentizar las operaciones, sino aplicar tecnología que reduzca errores mientras acelera los tiempos de respuesta."
+      }
+    ],
+    "hint": "Considera la relación entre la simplificación de tareas, el ahorro de esfuerzo y la reducción del tiempo empleado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función esencial que realiza un sensor en un entorno de automatización industrial?",
+    "opciones": [
+      {
+        "text": "Absorber información del medio ambiente y convertirla en señales eléctricas para su monitoreo y control.",
+        "isCorrect": true,
+        "rationale": "Los sensores convierten variables físicas o químicas externas (como temperatura o presión) en señales eléctricas o digitales legibles para los sistemas de control."
+      },
+      {
+        "text": "Ejecutar movimientos mecánicos directos como el cierre de válvulas o el frenado de motores.",
+        "isCorrect": false,
+        "rationale": "La ejecución física de movimientos mecánicos es tarea de los actuadores y no de los elementos de medición o sensores."
+      },
+      {
+        "text": "Almacenar grandes volúmenes de datos históricos en servidores remotos.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento masivo de datos es una función de los servidores y bases de datos, no de los dispositivos de campo que captan variables."
+      },
+      {
+        "text": "Reemplazar el software de gestión para tomar decisiones financieras de manera autónoma.",
+        "isCorrect": false,
+        "rationale": "Los sensores no toman decisiones de gestión ni reemplazan los sistemas de planificación de recursos empresariales."
+      },
+      {
+        "text": "Suministrar la potencia eléctrica requerida para mover maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "Los sensores operan con señales de baja potencia para la medición y no proveen la fuerza motriz a la maquinaria industrial."
+      }
+    ],
+    "hint": "Piensa en cómo se capturan las magnitudes físicas del entorno y en qué tipo de señal se convierten.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes tecnologías constituyen pilares clave de la Industria 4.0 aplicados a la minería moderna?",
+    "opciones": [
+      {
+        "text": "Internet Industrial de las Cosas (IoT).",
+        "isCorrect": true,
+        "rationale": "El IoT permite interconectar maquinaria y sensores para transmitir datos operativos de manera continua y en tiempo real."
+      },
+      {
+        "text": "Análisis de Big Data y computación en la nube.",
+        "isCorrect": true,
+        "rationale": "Ofrece la infraestructura necesaria para almacenar, procesar e interpretar volúmenes masivos de datos recopilados en las operaciones."
+      },
+      {
+        "text": "Inteligencia Artificial y aprendizaje automático.",
+        "isCorrect": true,
+        "rationale": "Facilita la identificación de patrones, el mantenimiento predictivo y la toma de decisiones autónomas en la producción."
+      },
+      {
+        "text": "Registro manual de variables exclusivamente en libros impresos.",
+        "isCorrect": false,
+        "rationale": "El registro manual en papel imposibilita el análisis automatizado e interconectado característico de la industria moderna."
+      },
+      {
+        "text": "Uso exclusivo de herramientas operadas manualmente sin conectividad.",
+        "isCorrect": false,
+        "rationale": "Las herramientas aisladas carecen de la capacidad de intercambiar información en tiempo real requerida por los sistemas integrados."
+      }
+    ],
+    "hint": "Selecciona las tecnologías que permiten la conectividad de dispositivos, el análisis masivo de información y la predicción inteligente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el ejemplo presentado en la clase, ¿cuál es la diferencia entre ser eficaz y ser eficiente en un proyecto?",
+    "opciones": [
+      {
+        "text": "Ser eficaz es cumplir el objetivo fijado, mientras que ser eficiente es cumplirlo utilizando menos tiempo y recursos que los previstos.",
+        "isCorrect": true,
+        "rationale": "La eficacia mide el grado de cumplimiento de una meta, mientras que la eficiencia evalúa la optimización en la utilización de los recursos empleados."
+      },
+      {
+        "text": "La eficacia busca reducir los costos, mientras que la eficiencia ignora por completo el presupuesto disponible.",
+        "isCorrect": false,
+        "rationale": "La eficiencia es precisamente la métrica que busca la reducción y optimización del gasto de recursos e insumos."
+      },
+      {
+        "text": "Ser eficaz implica no completar el trabajo, mientras que ser eficiente significa superar los plazos fijados.",
+        "isCorrect": false,
+        "rationale": "Ser eficaz exige completar la meta; superar los plazos sin justificación representa una falla en la planificación."
+      },
+      {
+        "text": "Ambos conceptos son idénticos y se aplican sin distinción en la gestión de proyectos.",
+        "isCorrect": false,
+        "rationale": "Existe una distinción clara en administración entre alcanzar un resultado (eficacia) y optimizar los insumos empleados (eficiencia)."
+      },
+      {
+        "text": "La eficacia requiere el uso de Inteligencia Artificial, mientras que la eficiencia se aplica solo al trabajo manual.",
+        "isCorrect": false,
+        "rationale": "Ambos términos son conceptos de gestión operacional aplicables a cualquier proceso, con o sin uso de tecnología digital."
+      }
+    ],
+    "hint": "Relaciona el logro del objetivo con la optimización de los recursos de tiempo y presupuesto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se diferencia fundamentalmente el mantenimiento predictivo del mantenimiento preventivo tradicional?",
+    "opciones": [
+      {
+        "text": "El predictivo monitorea variables constantes en tiempo real mediante sensores para intervenir antes de que ocurra la falla, mientras que el preventivo se realiza en lapsos fijos de tiempo.",
+        "isCorrect": true,
+        "rationale": "El mantenimiento predictivo evalúa la condición real del equipo para anticipar averías, a diferencia del preventivo que sigue un calendario o uso predeterminado."
+      },
+      {
+        "text": "El predictivo se ejecuta solo después de que el equipo ha sufrido una avería total en la planta.",
+        "isCorrect": false,
+        "rationale": "Intervenir tras la rotura total corresponde al mantenimiento correctivo y no al enfoque predictivo."
+      },
+      {
+        "text": "El predictivo no utiliza ningún tipo de dato ni sensor para diagnosticar las máquinas.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento predictivo depende indispensablemente de la captura de datos mediante sensores y análisis estadístico."
+      },
+      {
+        "text": "El preventivo es más costoso y requiere siempre el uso de modelos de Machine Learning.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento preventivo se basa en rutinas estandarizadas por tiempo y no requiere modelos complejos de aprendizaje automático."
+      },
+      {
+        "text": "El predictivo se aplica únicamente a herramientas portátiles sencillas de bajo valor.",
+        "isCorrect": false,
+        "rationale": "Debido a su costo de implementación, el mantenimiento predictivo se aplica prioritariamente a equipos industriales críticos y de alto valor."
+      }
+    ],
+    "hint": "Uno se programa por intervalos fijos de tiempo o uso, mientras que el otro monitorea variables constantes en tiempo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de operaciones y activos mineros, ¿qué define a un \"equipo crítico\"?",
+    "opciones": [
+      {
+        "text": "Es aquel equipo del cual dependen múltiples operaciones clave y cuya parada paraliza la producción general de la planta.",
+        "isCorrect": true,
+        "rationale": "Un equipo es crítico cuando no posee un reemplazo inmediato y su inactividad interrumpe el flujo continuo de la cadena productiva."
+      },
+      {
+        "text": "Cualquier herramienta secundaria que se utiliza de forma ocasional durante las limpiezas generales.",
+        "isCorrect": false,
+        "rationale": "Las herramientas secundarias no paralizan el proceso principal y, por ende, no se clasifican como activos críticos."
+      },
+      {
+        "text": "Un componente electrónico de bajo costo fácil de sustituir en pocos minutos.",
+        "isCorrect": false,
+        "rationale": "Los componentes de bajo impacto y rápida sustitución no ponen en riesgo la continuidad operativa global."
+      },
+      {
+        "text": "Una computadora de oficina destinada únicamente a tareas administrativas de rutina.",
+        "isCorrect": false,
+        "rationale": "Las computadoras administrativas no intervienen directamente en la línea de procesamiento físico de mineral."
+      },
+      {
+        "text": "Un vehículo de transporte que solo opera fuera del recinto de la mina.",
+        "isCorrect": false,
+        "rationale": "Los vehículos ajenos al proceso de extracción y procesamiento no determinan la viabilidad operativa directa de la planta."
+      }
+    ],
+    "hint": "Considera las consecuencias que tendría la detención imprevista de esa máquina sobre la cadena de producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representa un \"cuello de botella\" en una línea de procesamiento industrial?",
+    "opciones": [
+      {
+        "text": "Una etapa o máquina que trabaja a menor velocidad que las demás, acumulando trabajo y restringiendo el rendimiento global.",
+        "isCorrect": true,
+        "rationale": "El cuello de botella determina la capacidad máxima de la línea productiva al ser la fase más lenta del flujo de trabajo."
+      },
+      {
+        "text": "Un conducto físico utilizado para transportar sustancias químicas líquidas hacia los tanques.",
+        "isCorrect": false,
+        "rationale": "La definición operacional de cuello de botella se refiere a una restricción de velocidad en el proceso, no a una tubería física."
+      },
+      {
+        "text": "El punto del proceso donde se logra la mayor rentabilidad económica del proyecto.",
+        "isCorrect": false,
+        "rationale": "Un punto de restricción de flujo genera demoras e ineficiencias, en lugar de maximizar las ganancias directas."
+      },
+      {
+        "text": "El software encargado de la gestión de contrataciones en el área de recursos humanos.",
+        "isCorrect": false,
+        "rationale": "Un cuello de botella operativo describe una limitación en la capacidad productiva de una secuencia de trabajo."
+      },
+      {
+        "text": "Una zona de descanso destinada al personal durante los cambios de turno.",
+        "isCorrect": false,
+        "rationale": "Las áreas de descanso no forman parte del flujo de procesamiento físico de insumos o materiales."
+      }
+    ],
+    "hint": "Identifica la fase del proceso que limita la velocidad máxima y acumula retrasos en toda la producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes son beneficios clave de optimizar la producción mediante el análisis de datos en minería?",
+    "opciones": [
+      {
+        "text": "Reducción sustancial de los tiempos de inactividad no planificados.",
+        "isCorrect": true,
+        "rationale": "El monitoreo en tiempo real permite detectar anomalías a tiempo y programar detenciones sin interrumpir imprevistamente la planta."
+      },
+      {
+        "text": "Disminución del consumo de combustible en las flotas de transporte.",
+        "isCorrect": true,
+        "rationale": "La optimización de rutas y la gestión de velocidad reducen el gasto innecesario de energía y diésel en camiones mineros."
+      },
+      {
+        "text": "Mejora de la seguridad laboral al teleoperar equipos en zonas de riesgo.",
+        "isCorrect": true,
+        "rationale": "Retirar al personal de entornos peligrosos mediante la operación remota disminuye la tasa de accidentes fatales."
+      },
+      {
+        "text": "Incremento de la cantidad de desperdicios y reprocesos en la planta.",
+        "isCorrect": false,
+        "rationale": "El análisis de datos busca precisamente minimizar el desperdicio y evitar volver a procesar material defectuoso."
+      },
+      {
+        "text": "Aumento del riesgo de accidentes laborales por falta de supervisión.",
+        "isCorrect": false,
+        "rationale": "La digitalización y el monitoreo mediante datos fortalecen la detección preventiva de condiciones de riesgo."
+      }
+    ],
+    "hint": "Selecciona los impactos positivos relacionados con tiempos de parada, eficiencia de combustible y protección del personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una ventaja fundamental de emplear plataformas en la nube como Google Cloud para el procesamiento de datos mineros?",
+    "opciones": [
+      {
+        "text": "Ofrecer escalabilidad y flexibilidad para procesar grandes volúmenes de información y entrenar modelos de IA.",
+        "isCorrect": true,
+        "rationale": "Las plataformas en la nube permiten aumentar o reducir la capacidad de cómputo de forma dinámica sin realizar grandes inversiones en hardware físico local."
+      },
+      {
+        "text": "Eliminar por completo la necesidad de instalar sensores en los equipos de campo.",
+        "isCorrect": false,
+        "rationale": "La nube procesa los datos recopilados, pero sigue requiriendo sensores de campo para capturar la información primaria."
+      },
+      {
+        "text": "Evitar el desgaste mecánico de las piezas metálicas en la maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "El software en la nube analiza datos, pero no impide el desgaste físico inevitable por fricción en los componentes mecánicos."
+      },
+      {
+        "text": "Permitir la operación de los sistemas sin necesidad de redes de transmisión de datos.",
+        "isCorrect": false,
+        "rationale": "El uso de la nube exige indispensablemente redes de comunicación para transmitir los datos desde la mina hacia los servidores."
+      },
+      {
+        "text": "Reducir a cero el consumo de energía eléctrica de la planta procesadora.",
+        "isCorrect": false,
+        "rationale": "Las herramientas de procesamiento analítico optimizan el uso energético, pero no eliminan la demanda eléctrica de la maquinaria."
+      }
+    ],
+    "hint": "Piensa en la capacidad de ajustar el volumen de cómputo y almacenamiento según las necesidades operativas de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la evaluación de proyectos de tecnología e innovación, ¿cuál es el propósito del análisis financiero?",
+    "opciones": [
+      {
+        "text": "Evaluar la rentabilidad, el retorno de inversión (ROI) y la viabilidad económica de implementar una tecnología.",
+        "isCorrect": true,
+        "rationale": "El análisis financiero fundamenta las decisiones justificando cuantitativamente si la inversión genera ganancias superiores a su costo."
+      },
+      {
+        "text": "Diseñar los esquemas de circuitos integrados para los sensores de campo.",
+        "isCorrect": false,
+        "rationale": "El diseño de circuitos corresponde a la ingeniería electrónica y no al estudio de viabilidad económica."
+      },
+      {
+        "text": "Elaborar los turnos de trabajo del personal sin revisar el presupuesto disponible.",
+        "isCorrect": false,
+        "rationale": "La asignación de turnos es una tarea operativa de recursos humanos que debe ceñirse al marco financiero establecido."
+      },
+      {
+        "text": "Garantizar que la empresa funcione con pérdidas económicas continuas.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la gestión financiera es asegurar la sostenibilidad económica y evitar la quiebra o pérdida de capital."
+      },
+      {
+        "text": "Sustituir la certificación de seguridad operacional por trámites tributarios.",
+        "isCorrect": false,
+        "rationale": "El análisis financiero complementa la gestión operativa, pero no reemplaza las normativas de seguridad e higiene industrial."
+      }
+    ],
+    "hint": "Se orienta a determinar la rentabilidad y el retorno de la inversión realizada frente a escenarios alternativos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal del modelado predictivo en la ciencia de datos?",
+    "opciones": [
+      {
+        "text": "Pronosticar valores o comportamientos futuros de variables utilizando datos históricos y modelos matemáticos.",
+        "isCorrect": true,
+        "rationale": "El modelado predictivo analiza patrones pasados para estimar la probabilidad de eventos venideros en un proceso."
+      },
+      {
+        "text": "Eliminar la base de datos histórica para liberar espacio en los discos duros.",
+        "isCorrect": false,
+        "rationale": "El modelado predictivo depende esencialmente del historial de datos para entrenarse, por lo que borrarlo impediría su funcionamiento."
+      },
+      {
+        "text": "Diseñar gráficos publicitarios para promocionar la empresa en redes sociales.",
+        "isCorrect": false,
+        "rationale": "La creación de material publicitario corresponde al área de marketing y no al modelado estadístico predictivo."
+      },
+      {
+        "text": "Registrar valores únicamente en tiempo real sin posibilidad de proyección futura.",
+        "isCorrect": false,
+        "rationale": "Monitorear solo el presente sin proyecciones corresponde a la supervisión reactiva y no al enfoque predictivo."
+      },
+      {
+        "text": "Sustituir las mediciones de los sensores por estimaciones subjetivas del operador.",
+        "isCorrect": false,
+        "rationale": "Los modelos predictivos se fundamentan en datos cuantitativos rigurosos, evitando especulaciones sin respaldo de información."
+      }
+    ],
+    "hint": "Considera la utilización de datos históricos para anticipar eventos o valores futuros mediante algoritmos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes etapas son esenciales para llevar a cabo un proceso de modelado predictivo?",
+    "opciones": [
+      {
+        "text": "Recolección y consolidación de datos de diversas fuentes.",
+        "isCorrect": true,
+        "rationale": "Consiste en reunir los registros relevantes provenientes de sensores, sistemas SCADA o bases de datos históricas."
+      },
+      {
+        "text": "Limpieza de datos para eliminar registros nulos o errores.",
+        "isCorrect": true,
+        "rationale": "Garantiza que la información procesada esté depurada de inconsistencias que puedan sesgar el aprendizaje del modelo."
+      },
+      {
+        "text": "Selección del algoritmo y entrenamiento del modelo.",
+        "isCorrect": true,
+        "rationale": "Implica aplicar técnicas estadísticas o de Machine Learning adaptadas al tipo de variable que se desea pronosticar."
+      },
+      {
+        "text": "Alteración intencional de variables para generar diagnósticos falsos.",
+        "isCorrect": false,
+        "rationale": "Modificar deliberadamente los datos destruye la precisión y la validez analítica del modelo predictivo."
+      },
+      {
+        "text": "Eliminación aleatoria de registros sin criterio técnico comprobado.",
+        "isCorrect": false,
+        "rationale": "Descartar datos de forma arbitraria degrada la calidad de la muestra y perjudica la capacidad de proyección."
+      }
+    ],
+    "hint": "Selecciona los pasos que abarcan desde la obtención de datos brutos hasta la creación y verificación del algoritmo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué busca realizar el Análisis Exploratorio de Datos (EDA) en una investigación preliminar?",
+    "opciones": [
+      {
+        "text": "Describir, resumir y visualizar los datos de forma preliminar para descubrir patrones y detectar valores atípicos.",
+        "isCorrect": true,
+        "rationale": "El EDA permite evaluar la calidad inicial del conjunto de datos y comprender la relación entre sus variables antes de aplicar modelos complejos."
+      },
+      {
+        "text": "Ejecutar comandos físicos inmediatos sobre las válvulas de control en la mina.",
+        "isCorrect": false,
+        "rationale": "La ejecución física sobre válvulas es una función operativa de los actuadores y no una técnica de exploración analítica."
+      },
+      {
+        "text": "Vender la información confidencial de producción a la competencia.",
+        "isCorrect": false,
+        "rationale": "El análisis de datos busca optimizar las operaciones internas y se rige por protocolos estricto de ciberseguridad."
+      },
+      {
+        "text": "Generar automáticamente la declaración contable de impuestos de la empresa.",
+        "isCorrect": false,
+        "rationale": "El EDA explora comportamientos estadísticos de variables operativas o de negocio, no realiza trámites fiscales."
+      },
+      {
+        "text": "Descartar la fase de recolección de información primaria.",
+        "isCorrect": false,
+        "rationale": "El análisis exploratorio requiere indispensables datos recolectados para poder estructurar sus gráficos y métricas de tendencia."
+      }
+    ],
+    "hint": "Se orienta a examinar y resumir la estructura de los datos para identificar patrones, valores atípicos e inconsistencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis de series temporales, ¿a qué se refiere el concepto de \"estacionalidad\"?",
+    "opciones": [
+      {
+        "text": "A fluctuaciones periódicas y regulares que se repiten en intervalos fijos de tiempo.",
+        "isCorrect": true,
+        "rationale": "La estacionalidad representa patrones repetitivos en ciclos conocidos (diarios, mensuales o anuales) dentro de una serie temporal."
+      },
+      {
+        "text": "A la tendencia de crecimiento constante e indefinido de una variable.",
+        "isCorrect": false,
+        "rationale": "El crecimiento o decrecimiento a largo plazo define la tendencia de la serie, no su comportamiento estacional repetitivo."
+      },
+      {
+        "text": "A cambios completamente aleatorios causados por ruido no medible en los sensores.",
+        "isCorrect": false,
+        "rationale": "Los cambios aleatorios e impredecibles corresponden a componentes de ruido o eventos fortuitos, no a la estacionalidad."
+      },
+      {
+        "text": "A la detención permanente del procesamiento de datos en el servidor central.",
+        "isCorrect": false,
+        "rationale": "La estacionalidad describe la forma de los datos en el tiempo, no la interrupción del sistema que los procesa."
+      },
+      {
+        "text": "Al costo de licenciamiento anual del software de análisis estadístico.",
+        "isCorrect": false,
+        "rationale": "El costo de software es una variable financiera de soporte y no un componente de la estructura de una serie de datos."
+      }
+    ],
+    "hint": "Son variaciones que se repiten con una frecuencia regular o periódica a lo largo del tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el aprendizaje automático por refuerzo (Reinforcement Learning), ¿cuál es la forma principal en que el algoritmo perfecciona sus respuestas?",
+    "opciones": [
+      {
+        "text": "A través de la prueba y error, ajustando su comportamiento mediante recompensas o penalizaciones.",
+        "isCorrect": true,
+        "rationale": "El algoritmo explora acciones y utiliza la retroalimentación de recompensas para maximizar los aciertos y minimizar decisiones erróneas."
+      },
+      {
+        "text": "Memorizando un manual rígido en papel que no se modifica con la experiencia.",
+        "isCorrect": false,
+        "rationale": "El aprendizaje por refuerzo es dinámico y adaptable, lo que contrasta con la memorización estática de reglas prefijadas."
+      },
+      {
+        "text": "Copiando sin verificación una tabla de datos que contiene errores de origen.",
+        "isCorrect": false,
+        "rationale": "El refuerzo no se limita a replicar tablas fijas, sino que evalúa las consecuencias de sus acciones para corregirse."
+      },
+      {
+        "text": "Recibiendo siempre supervisión humana directa en cada cálculo matemático individual.",
+        "isCorrect": false,
+        "rationale": "En este esquema, el agente aprende de forma autónoma a través del sistema de recompensas, sin necesidad de etiquetado constante."
+      },
+      {
+        "text": "Ignorando las penalizaciones para mantener la misma respuesta original.",
+        "isCorrect": false,
+        "rationale": "El modelo utiliza precisamente las penalizaciones para corregir su trayectoria y evitar repetir resultados insatisfactorios."
+      }
+    ],
+    "hint": "Aprende mediante interacción dinámica con el entorno, recibiendo estímulos según cometa errores o aciertos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función del bucle de retroalimentación (feedback) en la ingeniería de control y análisis de datos?",
+    "opciones": [
+      {
+        "text": "Monitorear la salida del sistema y compararla con el valor deseado para aplicar correcciones dinámicas.",
+        "isCorrect": true,
+        "rationale": "El feedback permite ajustar las entradas en función de las desviaciones detectadas con respecto al punto de consigna (set point)."
+      },
+      {
+        "text": "Incrementar el margen de error del proceso hasta detener la planta.",
+        "isCorrect": false,
+        "rationale": "El bucle de retroalimentación busca reducir y corregir los errores, no ampliarlos de forma incontrolada."
+      },
+      {
+        "text": "Desconectar los sensores cuando se detecta un cambio en las variables de campo.",
+        "isCorrect": false,
+        "rationale": "Los sensores deben mantenerse conectados para enviar la lectura constante que requiere el bucle de corrección."
+      },
+      {
+        "text": "Impedir la comunicación entre las estaciones remotas y los servidores centrales.",
+        "isCorrect": false,
+        "rationale": "La retroalimentación depende directamente de la transmisión continua de datos entre el proceso y el controlador."
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar controladores lógicos programables.",
+        "isCorrect": false,
+        "rationale": "Los controladores (como los PLC) son los encargados de procesar la lógica del bucle de retroalimentación."
+      }
+    ],
+    "hint": "Compara la salida alcanzada con el valor objetivo para realizar ajustes continuos en los parámetros del sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica estructural principal de las bases de datos relacionales (SQL)?",
+    "opciones": [
+      {
+        "text": "Organizan la información en esquemas estructurados basados en tablas compuestas por filas y columnas.",
+        "isCorrect": true,
+        "rationale": "Las bases de datos relacionales utilizan estructuras tabulares rígidas conectadas mediante claves relacionales bien definidas."
+      },
+      {
+        "text": "Almacenan únicamente archivos de video sin posibilidades de indexación.",
+        "isCorrect": false,
+        "rationale": "Los archivos de video no estructurados se gestionan habitualmente en repositorios no relacionales o de objetos."
+      },
+      {
+        "text": "Guardan datos exclusivamente en formato de texto libre sin relación entre registros.",
+        "isCorrect": false,
+        "rationale": "El modelo relacional exige que los registros mantengan relaciones lógicas estrictas entre sus tablas."
+      },
+      {
+        "text": "No permiten la realización de consultas complejas mediante lenguajes estructurados.",
+        "isCorrect": false,
+        "rationale": "El lenguaje SQL está diseñado específicamente para efectuar consultas estructuradas complejas de manera eficiente."
+      },
+      {
+        "text": "Se utilizan únicamente para guardar documentos impresos en formato de imagen.",
+        "isCorrect": false,
+        "rationale": "Las bases de datos SQL procesan información alfanumérica estructurada y no se limitan a la reserva de imágenes estáticas."
+      }
+    ],
+    "hint": "Organizan la información en esquemas fijos formados por tablas con filas y columnas interconectadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Para qué tipo de escenarios o datos resultan más convenientes las bases de datos NoSQL (no relacionales)?",
+    "opciones": [
+      {
+        "text": "Para manejar grandes volúmenes de datos no estructurados con alta escalabilidad horizontal y flexibilidad.",
+        "isCorrect": true,
+        "rationale": "Las bases NoSQL (como Cassandra o MongoDB) permiten almacenar volúmenes masivos de datos variados distribuidos en múltiples servidores."
+      },
+      {
+        "text": "Exclusivamente para pequeñas listas contables personales de baja complejidad.",
+        "isCorrect": false,
+        "rationale": "Las listas pequeñas y sencillas se abordan eficientemente con hojas de cálculo o bases relacionales tradicionales."
+      },
+      {
+        "text": "Para reemplazar los sensores de campo por lecturas manuales en papel.",
+        "isCorrect": false,
+        "rationale": "NoSQL es una tecnología de almacenamiento digital de alto rendimiento y no sustituye el hardware de medición."
+      },
+      {
+        "text": "Únicamente para sistemas que prohíben la transmisión de datos a través de redes.",
+        "isCorrect": false,
+        "rationale": "Los entornos NoSQL están diseñados para operar en arquitecturas de red altamente distribuidas."
+      },
+      {
+        "text": "Para reducir la velocidad de procesamiento de las consultas en tiempo real.",
+        "isCorrect": false,
+        "rationale": "Uno de los principales atributos de NoSQL es la alta velocidad en el procesamiento de Big Data en tiempo real."
+      }
+    ],
+    "hint": "Son idóneas para gestionar Big Data no estructurado con necesidad de alta escalabilidad horizontal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes características corresponden a propiedades esenciales de un software de gestión de datos?",
+    "opciones": [
+      {
+        "text": "Integridad y exactitud de la información.",
+        "isCorrect": true,
+        "rationale": "Asegura que los datos almacenados sean correctos, consistentes y estén libres de duplicados o errores de registro."
+      },
+      {
+        "text": "Escalabilidad operacional.",
+        "isCorrect": true,
+        "rationale": "Garantiza que el sistema mantenga su rendimiento óptimo aun cuando el volumen de datos o usuarios crezca significativamente."
+      },
+      {
+        "text": "Seguridad e interoperabilidad.",
+        "isCorrect": true,
+        "rationale": "Protege los registros mediante autenticación e intercambio seguro de información con otras plataformas mediante APIs."
+      },
+      {
+        "text": "Degradación deliberada de la velocidad de consulta.",
+        "isCorrect": false,
+        "rationale": "Un software eficiente busca optimizar y acelerar las respuestas a las consultas, no reducir su desempeño."
+      },
+      {
+        "text": "Permisividad absoluta ante accesos no autorizados sin autenticación.",
+        "isCorrect": false,
+        "rationale": "La falta de seguridad expone los datos a robos o manipulaciones que vulneran la confiabilidad de la empresa."
+      }
+    ],
+    "hint": "Piensa en aspectos que garantizan la corrección de los datos, la capacidad de crecimiento y la integración entre plataformas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función específica que cumple un actuador en un sistema de automatización industrial?",
+    "opciones": [
+      {
+        "text": "Ejecutar una acción física o mecánica en respuesta a una señal transmitida por el sistema de control.",
+        "isCorrect": true,
+        "rationale": "Los actuadores convierten señales eléctricas o neumáticas en trabajo mecánico (como mover pistones, girar motores o cerrar válvulas)."
+      },
+      {
+        "text": "Captar la temperatura ambiental para convertirla en señal eléctrica.",
+        "isCorrect": false,
+        "rationale": "La captación de magnitudes físicas y su conversión en señales es la tarea del sensor y no del actuador."
+      },
+      {
+        "text": "Almacenar registros históricos de ventas en servidores distribuidos.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento de datos comerciales es una función de los repositorios de información y servidores."
+      },
+      {
+        "text": "Elaborar la interfaz gráfica que visualiza el operador en la pantalla.",
+        "isCorrect": false,
+        "rationale": "La elaboración visual de paneles corresponde al software HMI y no a los dispositivos mecánicos de acción."
+      },
+      {
+        "text": "Realizar auditorías contables sobre los estados financieros del proyecto.",
+        "isCorrect": false,
+        "rationale": "Las auditorías contables son tareas administrativas ejecutadas por especialistas en finanzas."
+      }
+    ],
+    "hint": "Recibe órdenes del sistema de control y las transforma en una respuesta física o mecánica sobre la planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué significan las siglas del sistema de control industrial conocido como SCADA?",
+    "opciones": [
+      {
+        "text": "Supervisory Control and Data Acquisition (Control Supervisorio y Adquisición de Datos).",
+        "isCorrect": true,
+        "rationale": "SCADA integra software y hardware para supervisar, adquirir datos de campo y controlar procesos industriales a distancia."
+      },
+      {
+        "text": "System for Computerized Automated Data Analysis (Sistema para Análisis Computarizado Automático de Datos).",
+        "isCorrect": false,
+        "rationale": "Aunque analiza datos, este nombre no corresponde a la sigla técnica estandarizada industrialmente."
+      },
+      {
+        "text": "Safety Control and Digital Actuator System (Control de Seguridad y Sistema de Actuadores Digitales).",
+        "isCorrect": false,
+        "rationale": "Esta denominación inventada no refleja las funciones integrales de supervisión y adquisición de datos que caracterizan al SCADA."
+      },
+      {
+        "text": "Sequential Calculation and Data Architecture (Cálculo Secuencial y Arquitectura de Datos).",
+        "isCorrect": false,
+        "rationale": "SCADA abarca supervisión gráfica y control distribuido, no solo la ejecución secuencial de cálculos analíticos."
+      },
+      {
+        "text": "Standard Control for Automated Drilling Applications (Control Estándar para Aplicaciones Automatizadas de Perforación).",
+        "isCorrect": false,
+        "rationale": "El sistema SCADA es aplicable a múltiples sectores industriales y no se limita exclusivamente a la perforación minera."
+      }
+    ],
+    "hint": "Corresponde al acrónimo en inglés para Control Supervisorio y Adquisición de Datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la arquitectura de un sistema SCADA, ¿cuál es el rol de la interfaz HMI (Human Machine Interface)?",
+    "opciones": [
+      {
+        "text": "Proporcionar un entorno gráfico interactivo para que el operador visualice y controle el proceso en tiempo real.",
+        "isCorrect": true,
+        "rationale": "El HMI traduce los datos complejos del proceso en diagramas legibles, alarmas y botones táctiles para la gestión humana."
+      },
+      {
+        "text": "Suministrar la presión hidráulica requerida por los brazos mecánicos.",
+        "isCorrect": false,
+        "rationale": "La presión hidráulica la entregan las bombas y centrales de potencia hidráulica, no el software de interfaz visual."
+      },
+      {
+        "text": "Transformar las rocas brutas en concentrado de mineral dentro del molino.",
+        "isCorrect": false,
+        "rationale": "La trituración y molienda son operaciones físicas ejecutadas por maquinaria pesada de conminución."
+      },
+      {
+        "text": "Sustituir los cables de red por transmisiones analógicas de baja frecuencia.",
+        "isCorrect": false,
+        "rationale": "El HMI es una capa de software de visualización y no modifica la infraestructura física de cableado de red."
+      },
+      {
+        "text": "Ejecutar la encriptación física de los discos duros del servidor.",
+        "isCorrect": false,
+        "rationale": "La seguridad de discos es gestionada por protocolos de ciberseguridad del sistema operativo, no por la interfaz de usuario."
+      }
+    ],
+    "hint": "Conecta al operador humano con el sistema informático mediante pantallas gráficas e indicadores táctiles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes componentes forman parte de la arquitectura de campo y control de un sistema SCADA?",
+    "opciones": [
+      {
+        "text": "Unidad Terminal Maestra (MTU) o servidor central.",
+        "isCorrect": true,
+        "rationale": "Recopila la información enviada desde el campo, procesa los algoritmos principales y distribuye los datos al HMI."
+      },
+      {
+        "text": "Controladores Lógicos Programables (PLC) y Unidades Terminales Remotas (RTU).",
+        "isCorrect": true,
+        "rationale": "Actúan como dispositivos intermedios que leen señales analógicas/digitales locales de los sensores y transmiten comandos."
+      },
+      {
+        "text": "Sensores e instrumentos de medición de campo.",
+        "isCorrect": true,
+        "rationale": "Capturan las variables físicas del entorno industrial (como presión, flujo o nivel) para alimentar al sistema."
+      },
+      {
+        "text": "Archivadores físicos de carpetas de papel.",
+        "isCorrect": false,
+        "rationale": "Los sistemas SCADA operan de forma digital automatizada y no dependen de soporte físico en papel para su control."
+      },
+      {
+        "text": "Herramientas mecánicas manuales sin instrumentos de medición.",
+        "isCorrect": false,
+        "rationale": "Las herramientas manuales no integran dispositivos electrónicos capaces de interconectarse con una red SCADA."
+      }
+    ],
+    "hint": "Selecciona los dispositivos encargados del procesamiento central, la conversión de señales locales y la interacción física.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la gestión de proyectos de automatización e innovación industrial, ¿cuál es la diferencia conceptual fundamental entre ser eficaz y ser eficiente?",
+    "opciones": [
+      {
+        "text": "La eficacia mide el porcentaje de tareas automatizadas, mientras que la eficiencia mide la cantidad de trabajadores reemplazados por tecnología.",
+        "isCorrect": false,
+        "rationale": "La eficacia y la eficiencia evalúan la consecución de objetivos y el uso de recursos, no el nivel de reemplazo de mano de obra."
+      },
+      {
+        "text": "La eficacia se alcanza cumpliendo el objetivo planificado en el tiempo y presupuesto asignados, mientras que la eficiencia consiste en lograr dicho objetivo minimizando el tiempo o los recursos utilizados.",
+        "isCorrect": true,
+        "rationale": "Ser eficaz implica cumplir las metas establecidas en las condiciones dadas, mientras que la eficiencia añade el valor de optimizar y reducir el gasto de recursos."
+      },
+      {
+        "text": "La eficacia se refiere al uso de modelos estadísticos avanzados, mientras que la eficiencia se limita al uso de sensores físicos en planta.",
+        "isCorrect": false,
+        "rationale": "Ambos términos son conceptos de desempeño de gestión y no se restringen a herramientas tecnológicas específicas."
+      },
+      {
+        "text": "La eficacia evalúa la calidad de los datos de entrada, mientras que la eficiencia mide la velocidad de procesamiento del servidor.",
+        "isCorrect": false,
+        "rationale": "Estos aspectos corresponden a la gobernanza y rendimiento computacional, no a las definiciones organizacionales de eficacia y eficiencia."
+      },
+      {
+        "text": "La eficacia y la eficiencia son términos sinónimos que describen el retorno financiero directo de cualquier inversión industrial.",
+        "isCorrect": false,
+        "rationale": "No son sinónimos; existe una distinción clara entre cumplir un objetivo y optimizar los recursos empleados para alcanzarlo."
+      }
+    ],
+    "hint": "Considera cómo se evalúa el cumplimiento de metas en comparación con el uso óptimo de recursos como el presupuesto y el tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con los fundamentos de la Industria 4.0, ¿cuáles de las siguientes características la diferencian de las revoluciones industriales anteriores?",
+    "opciones": [
+      {
+        "text": "Interconexión de máquinas y dispositivos en tiempo real a través del Internet Industrial de las Cosas (IIoT).",
+        "isCorrect": true,
+        "rationale": "El IIoT permite la comunicación constante de datos entre equipos físicos para la toma de decisiones inmediata."
+      },
+      {
+        "text": "Integración de sistemas ciberfísicos que combinan componentes físicos con redes digitales para monitoreo continuo.",
+        "isCorrect": true,
+        "rationale": "Los sistemas ciberfísicos unen la infraestructura física operacional con capacidades analíticas en entornos digitales."
+      },
+      {
+        "text": "Capacidad de tomar decisiones descentralizadas permitiendo que los sistemas operen con autonomía.",
+        "isCorrect": true,
+        "rationale": "La automatización inteligente faculta a las máquinas para coordinarse y ajustar procesos sin intervención humana constante."
+      },
+      {
+        "text": "Sustitución completa del almacenamiento en red por registros físicos en papel para evitar ciberataques.",
+        "isCorrect": false,
+        "rationale": "La Industria 4.0 promueve la digitalización masiva y la computación en la nube, no el retorno a documentación analógica."
+      },
+      {
+        "text": "Operación aislada de cada máquina sin necesidad de compartir datos con la línea de producción.",
+        "isCorrect": false,
+        "rationale": "La integración y comunicación entre todos los puntos del proceso es precisamente el pilar del modelo ciberfísico."
+      }
+    ],
+    "hint": "Piensa en cómo la interconexión digital en tiempo real transforma la toma de decisiones y la integración de las máquinas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En operaciones mineras subterráneas, ¿cuál es el beneficio principal de implementar sistemas de teleoperación y vehículos autónomos o semiautónomos?",
+    "opciones": [
+      {
+        "text": "Eliminar por completo la necesidad de mantener redes de comunicación en la mina.",
+        "isCorrect": false,
+        "rationale": "La teleoperación requiere redes de comunicación muy estables, como redes privadas o 5G, para transmitir datos y señales."
+      },
+      {
+        "text": "Retirar al personal de zonas de alto riesgo con gases tóxicos o peligro de derrumbe, operando la maquinaria a distancia.",
+        "isCorrect": true,
+        "rationale": "La teleoperación prioriza la seguridad humana permitiendo que los operadores controlen los equipos pesados desde salas remotas seguras."
+      },
+      {
+        "text": "Evitar el desgaste mecánico de las llantas y brocas de perforación.",
+        "isCorrect": false,
+        "rationale": "Los componentes mecánicos se siguen desgastando por la fricción del trabajo duro, requiriendo el mismo monitoreo."
+      },
+      {
+        "text": "Reducir a cero el consumo de energía eléctrica de la infraestructura subterránea.",
+        "isCorrect": false,
+        "rationale": "Los sistemas remotos y vehículos autónomos siguen consumiendo energía eléctrica o combustible para operar."
+      },
+      {
+        "text": "Aumentar el peso de carga útil de los camiones por encima del límite del fabricante.",
+        "isCorrect": false,
+        "rationale": "La teleoperación busca eficiencia y seguridad dentro de las especificaciones mecánicas del equipo, no sobrecargarlo."
+      }
+    ],
+    "hint": "Relaciona el uso de controles remotos y sensores con la seguridad del personal en socavones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la automatización industrial, ¿cuál es la función técnica fundamental de un sensor?",
+    "opciones": [
+      {
+        "text": "Ejecutar movimientos mecánicos de apertura y cierre en válvulas de tuberías.",
+        "isCorrect": false,
+        "rationale": "La ejecución de movimientos mecánicos corresponde a los actuadores, no a los sensores."
+      },
+      {
+        "text": "Capturar magnitudes físicas o químicas del entorno y convertirlas en señales eléctricas o digitales controlables.",
+        "isCorrect": true,
+        "rationale": "Los sensores traducen variables del mundo real (temperatura, presión, vibración) en datos procesables por los sistemas de control."
+      },
+      {
+        "text": "Almacenar grandes volúmenes de bases de datos relacionales en la nube.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento en la nube es función de servidores y bases de datos, no del componente físico de captación."
+      },
+      {
+        "text": "Generar la energía eléctrica requerida para mover las bandas transportadoras.",
+        "isCorrect": false,
+        "rationale": "Los sensores son dispositivos de medición que consumen mínima energía, no generadores de potencia industrial."
+      },
+      {
+        "text": "Escribir el código de programación para los controladores lógicos del sistema.",
+        "isCorrect": false,
+        "rationale": "La programación es realizada por ingenieros de automatización; el sensor solo emite señales según su construcción."
+      }
+    ],
+    "hint": "Enfócate en la transformación que sufre una variable física cuando interactúa con un dispositivo electrónico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "A diferencia de la Industria 4.0 centrada en la digitalización e interconexión, ¿cuál es el pilar esencial que incorpora la denominada 'Quinta Revolución Industrial' (Industria 5.0)?",
+    "opciones": [
+      {
+        "text": "El retorno exclusivo al trabajo de perforación manual sin intervención tecnológica.",
+        "isCorrect": false,
+        "rationale": "La Industria 5.0 no reniega de la tecnología, sino que busca un equilibrio armónico entre humanos, máquinas y ambiente."
+      },
+      {
+        "text": "La sostenibilidad ambiental como eje para cerrar el ciclo de implementación tecnológica y reducir el desgaste de recursos.",
+        "isCorrect": true,
+        "rationale": "La Industria 5.0 sitúa al medio ambiente, la resiliencia y el bienestar humano en el centro del desarrollo tecnológico."
+      },
+      {
+        "text": "La eliminación total del uso de redes de internet en los procesos logísticos.",
+        "isCorrect": false,
+        "rationale": "Las redes siguen siendo vitales para la coordinación y eficiencia en esta nueva fase industrial."
+      },
+      {
+        "text": "La prohibición de utilizar Inteligencia Artificial en tareas de mantenimiento de equipos.",
+        "isCorrect": false,
+        "rationale": "La Inteligencia Artificial se sigue aprovechando e integrando de forma más ética y colaborativa."
+      },
+      {
+        "text": "El reemplazo de la energía eléctrica por combustibles fósiles tradicionales.",
+        "isCorrect": false,
+        "rationale": "La evolución industrial impulsa la transición hacia energías limpias y sostenibles, no el regreso a fuentes fósiles."
+      }
+    ],
+    "hint": "Piensa en el impacto ambiental y el consumo sostenible de los recursos naturales durante el ciclo productivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al diseñar un *prompt* técnico para consultar a herramientas de Inteligencia Artificial (como Dixi o ChatGPT), ¿cuál es la estructura recomendada en clase para obtener respuestas precisas?",
+    "opciones": [
+      {
+        "text": "Comando de programación + Código fuente + Archivo adjunto.",
+        "isCorrect": false,
+        "rationale": "Esta combinación es para compilación de software, no para la estructura narrativa estándar de un prompt conversacional."
+      },
+      {
+        "text": "Protagonista (rol) + Contexto (historia/entorno) + Solicitud clara.",
+        "isCorrect": true,
+        "rationale": "Definir quién debe actuar la IA, en qué situación se encuentra y qué se le pide exactamente orienta con alta precisión al modelo."
+      },
+      {
+        "text": "Pregunta abierta de una palabra + Datos sin procesar + Firma digital.",
+        "isCorrect": false,
+        "rationale": "Las preguntas de una sola palabra son demasiado ambiguas para que el modelo entregue un análisis profundo."
+      },
+      {
+        "text": "Resumen ejecutivo + Presupuesto financiero + Lista de despedida.",
+        "isCorrect": false,
+        "rationale": "Esta estructura corresponde a una propuesta comercial o reporte, no al diseño de una instrucción para la IA."
+      },
+      {
+        "text": "Salud inicial + Código de error del servidor + Agradecimiento.",
+        "isCorrect": false,
+        "rationale": "Falta la asignación de rol y el contexto operativo necesarios para guiar el razonamiento del modelo."
+      }
+    ],
+    "hint": "Recuerda la analogía utilizada con la estructura de las películas (un personaje principal, una situación y el pedido).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre el mantenimiento predictivo y el mantenimiento preventivo en maquinaria pesada minera?",
+    "opciones": [
+      {
+        "text": "El preventivo repara el equipo tras ocurrir la falla, mientras que el predictivo lo descarta por completo.",
+        "isCorrect": false,
+        "rationale": "Reparar tras la falla es mantenimiento correctivo; el predictivo busca intervenir antes del fallo sin desechar el equipo innecesariamente."
+      },
+      {
+        "text": "El predictivo monitorea constantemente variables clave mediante sensores para anticipar averías, mientras que el preventivo sigue calendarios o horas de uso fijas.",
+        "isCorrect": true,
+        "rationale": "El mantenimiento predictivo se basa en la condición real del equipo leída por sensores, superando la rigidez de los intervalos fijos del preventivo."
+      },
+      {
+        "text": "El preventivo utiliza Inteligencia Artificial avanzada y el predictivo depende solo de revisiones visuales manuales.",
+        "isCorrect": false,
+        "rationale": "Es el mantenimiento predictivo el que requiere análisis de datos e IA para procesar las lecturas de los sensores."
+      },
+      {
+        "text": "El predictivo es más económico de instalar inicialmente que cualquier otra estrategia de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "El predictivo suele requerir una inversión inicial mayor en instrumentación y sensores avanzados."
+      },
+      {
+        "text": "Ambos métodos son idénticos en su ejecución y solo varían en la marca comercial del software utilizado.",
+        "isCorrect": false,
+        "rationale": "Son filosofías distintas: una se basa en el tiempo transcurrido o ciclo de uso estimado y la otra en el monitoreo directo de condición."
+      }
+    ],
+    "hint": "Considera la diferencia entre intervenir un equipo según un calendario fijo frente a hacerlo basándose en parámetros medidos en tiempo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué los 'equipos críticos' de una planta de procesamiento minero son los candidatos prioritarios para implementar un sistema de mantenimiento predictivo?",
+    "opciones": [
+      {
+        "text": "Porque son los componentes más baratos de la planta y requieren poca atención.",
+        "isCorrect": false,
+        "rationale": "Los equipos críticos suelen ser los de mayor costo de capital y mayor impacto en la producción."
+      },
+      {
+        "text": "Porque una falla inesperada en ellos paraliza toda la línea de producción, justificando la inversión en sensores y monitoreo continuo.",
+        "isCorrect": true,
+        "rationale": "La alta costosidad de una detención no programada en un equipo crítico hace rentable la instalación de instrumentación predictiva."
+      },
+      {
+        "text": "Porque los fabricantes prohíben realizarles mantenimientos preventivos tradicionales.",
+        "isCorrect": false,
+        "rationale": "Los fabricantes sugieren pautas preventivas, pero la empresa decide aplicar predictivo para maximizar disponibilidad."
+      },
+      {
+        "text": "Porque no requieren energía eléctrica para funcionar ni emitir datos.",
+        "isCorrect": false,
+        "rationale": "Los equipos críticos y sus sensores requieren suministro constante de energía para operar y transmitir datos."
+      },
+      {
+        "text": "Porque el mantenimiento predictivo sustituye por completo la presencia de ingenieros en la planta.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento predictivo apoya la toma de decisiones del personal técnico, no elimina su supervisión experta."
+      }
+    ],
+    "hint": "Piensa en el impacto económico que genera una parada no planificada en los componentes centrales de la producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el monitoreo predictivo de motores y sistemas rotativos industriales, ¿cuáles de las siguientes técnicas y variables son comúnmente empleadas?",
+    "opciones": [
+      {
+        "text": "Análisis de vibraciones mecánicas para detectar desalineaciones, holguras o daño en rodamientos.",
+        "isCorrect": true,
+        "rationale": "El estudio de espectros de vibración revela problemas mecánicos internos en equipos rotativos antes de que fallen."
+      },
+      {
+        "text": "Termografía e inspección infrarroja para identificar puntos de calor anómalos o sobrecargas eléctricas.",
+        "isCorrect": true,
+        "rationale": "Las imágenes térmicas permiten detectar sobrecalentamientos por fricción o fallas en conexiones eléctricas sin contacto."
+      },
+      {
+        "text": "Análisis tribológico de lubricantes para identificar presencia de partículas de desgaste metálico.",
+        "isCorrect": true,
+        "rationale": "Analizar el aceite permite evaluar el nivel de degradación interna y la acumulación de contaminantes o virutas metálicas."
+      },
+      {
+        "text": "Medición de la presión atmosférica en las oficinas administrativas del campamento.",
+        "isCorrect": false,
+        "rationale": "La presión del ambiente administrativo no provee información sobre el estado mecánico del motor en planta."
+      },
+      {
+        "text": "Conteo manual de las revoluciones mediante observación directa a simple vista.",
+        "isCorrect": false,
+        "rationale": "Los motores industriales giran a altas velocidades que imposibilitan la medición o inspección visual directa sin instrumentos."
+      }
+    ],
+    "hint": "Identifica los métodos analíticos que detectan fricción, desalineación o sobrecalentamiento en componentes móviles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la optimización de procesos industriales, ¿en qué consiste la aplicación de la programación lineal?",
+    "opciones": [
+      {
+        "text": "En instalar cables de comunicación en línea recta entre los sensores y el servidor central.",
+        "isCorrect": false,
+        "rationale": "El término hace referencia a una técnica de optimización matemática, no al tendido físico de cables de red."
+      },
+      {
+        "text": "En utilizar modelos de ecuaciones matemáticas para encontrar la combinación óptima de recursos limitados que maximice la producción o minimice costos.",
+        "isCorrect": true,
+        "rationale": "La programación lineal resuelve problemas cuantitativos asignando recursos eficientemente para cumplir una función objetivo."
+      },
+      {
+        "text": "En programar las computadoras en un solo lenguaje lineal sin usar funciones estructuradas.",
+        "isCorrect": false,
+        "rationale": "No se refiere al estilo de codificación de software, sino a la formulación de restricciones matemáticas."
+      },
+      {
+        "text": "En medir la velocidad rectilínea a la que se desplaza un camión minero por la rampa.",
+        "isCorrect": false,
+        "rationale": "Ese es un cálculo cinemático puntual, no la disciplina de optimización de recursos productivos."
+      },
+      {
+        "text": "En listar secuencialmente los nombres de los trabajadores por orden alfabético.",
+        "isCorrect": false,
+        "rationale": "El ordenamiento de listas es una tarea administrativa simple que no involucra optimización lineal matemática."
+      }
+    ],
+    "hint": "Relaciona el uso de fórmulas matemáticas con la búsqueda de la combinación ideal entre insumos, maquinarias y mano de obra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al utilizar plataformas avanzadas de Inteligencia Artificial como Dixi o Key One (Qwen), ¿qué ventaja aporta activar la función de 'pensamiento' o razonamiento profundo (modo *Thinking* / R1)?",
+    "opciones": [
+      {
+        "text": "Reduce la velocidad del procesador de la computadora personal del usuario.",
+        "isCorrect": false,
+        "rationale": "El procesamiento de razonamiento de la IA se ejecuta en la nube en los servidores del proveedor, no en el hardware local."
+      },
+      {
+        "text": "Evalúa y sintetiza internamente múltiples rutas de razonamiento y comparaciones antes de generar una respuesta estructurada de mayor calidad.",
+        "isCorrect": true,
+        "rationale": "El modo de pensamiento profundo ejecuta iteraciones lógicas internas para entregar respuestas más certeras y elaboradas."
+      },
+      {
+        "text": "Traduce automáticamente todo el texto ingresado al idioma latín antiguo.",
+        "isCorrect": false,
+        "rationale": "La función busca rigor analítico y resolución de problemas complejos, no la traducción a idiomas antiguos."
+      },
+      {
+        "text": "Elimina la necesidad de conectar la herramienta a una fuente de energía eléctrica.",
+        "isCorrect": false,
+        "rationale": "Los servidores de IA requieren energía constante para realizar el cómputo de las consultas."
+      },
+      {
+        "text": "Garantiza que el resultado siempre sea un código de programación en lenguaje ensamblador.",
+        "isCorrect": false,
+        "rationale": "El formato de salida depende de la solicitud del usuario (pudiendo ser texto, tablas, diagnósticos o código en cualquier lenguaje)."
+      }
+    ],
+    "hint": "Considera cómo el modelo procesa internamente la información mediante refuerzos antes de desplegar el texto final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el criterio financiero fundamental que debe demostrar un analista para justificar la aprobación de un proyecto de automatización ante la gerencia?",
+    "opciones": [
+      {
+        "text": "Demostrar que la tecnología es la más costosa disponible en el mercado internacional.",
+        "isCorrect": false,
+        "rationale": "Seleccionar la tecnología más cara no garantiza rentabilidad ni eficiencia operativa."
+      },
+      {
+        "text": "Presentar un retorno de inversión (ROI) favorable y superior al costo de oportunidad del capital o tasa bancaria de referencia.",
+        "isCorrect": true,
+        "rationale": "Financieramente, un proyecto se justifica si demuestra que generará más valor económico que dejar el dinero en alternativas sin riesgo."
+      },
+      {
+        "text": "Asegurar que el proyecto no requerirá ningún tipo de mantenimiento durante diez años.",
+        "isCorrect": false,
+        "rationale": "Todo sistema industrial o de automatización requiere presupuesto y actividades periódicas de mantenimiento."
+      },
+      {
+        "text": "Garantizar que no se utilizarán sensores en ninguna etapa del proceso.",
+        "isCorrect": false,
+        "rationale": "La automatización moderna requiere sensores para recopilar datos; eliminarlos contradice la propuesta técnica."
+      },
+      {
+        "text": "Aumentar el número de horas extras pagadas al personal operativo.",
+        "isCorrect": false,
+        "rationale": "La automatización busca reducir ineficiencias y gastos operativos sobrantes, no incrementar sobrecostos laborales."
+      }
+    ],
+    "hint": "Piensa en el indicador económico que compara las ganancias netas generadas frente al capital invertido en la tecnología.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la secuencia lógica correcta de etapas para desarrollar un modelo predictivo en ciencia de datos aplicada?",
+    "opciones": [
+      {
+        "text": "Validación del modelo -> Visualización -> Recolección -> Limpieza de datos.",
+        "isCorrect": false,
+        "rationale": "No se puede validar un modelo sin haber recolectado y procesado los datos previamente."
+      },
+      {
+        "text": "Recolección de datos -> Limpieza y combinación de datos -> Selección de variables e ingeniería -> Desarrollo del modelo/algoritmo -> Validación.",
+        "isCorrect": true,
+        "rationale": "Esta secuencia garantiza que el algoritmo se entrene únicamente con datos de calidad organizados y validados metodológicamente."
+      },
+      {
+        "text": "Desarrollo del algoritmo -> Compra de sensores -> Recolección de datos -> Limpieza.",
+        "isCorrect": false,
+        "rationale": "El algoritmo no se puede desarrollar adecuadamente si no se conoce primero la naturaleza de los datos capturados."
+      },
+      {
+        "text": "Limpieza de datos -> Desarrollo del modelo -> Recolección de datos -> Eliminación de variables.",
+        "isCorrect": false,
+        "rationale": "La limpieza requiere necesariamente que los datos ya hayan sido recopilados."
+      },
+      {
+        "text": "Visualización en HMI -> Eliminación de base de datos -> Recolección -> Entrenamiento.",
+        "isCorrect": false,
+        "rationale": "La visualización es el producto final para la toma de decisiones, no la primera etapa del flujo analítico."
+      }
+    ],
+    "hint": "Identifica el orden desde la obtención inicial de los datos brutos hasta la puesta a punto del algoritmo en producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la fase de Análisis Exploratorio de Datos (EDA), ¿cuáles son las tareas principales que deben realizarse con el conjunto de datos recopilado?",
+    "opciones": [
+      {
+        "text": "Detectar valores atípicos (*outliers*) y mediciones anómalas fuera del rango operativo habitual.",
+        "isCorrect": true,
+        "rationale": "Identificar valores atípicos evita que errores de lectura desvíen las métricas del modelo."
+      },
+      {
+        "text": "Evaluar la proporción y naturaleza de los datos faltantes o ausentes para decidir su imputación o eliminación.",
+        "isCorrect": true,
+        "rationale": "Gestionar vacíos de información es fundamental para que los algoritmos matemáticos puedan procesar las matrices."
+      },
+      {
+        "text": "Analizar la calidad general e inconsistencias de los datos para evitar sesgar el aprendizaje del modelo.",
+        "isCorrect": true,
+        "rationale": "La exploración técnica garantiza que los patrones identificados correspondan a la realidad del proceso y no a errores de lectura."
+      },
+      {
+        "text": "Reemplazar la infraestructura física de motores por simuladores de realidad virtual en planta.",
+        "isCorrect": false,
+        "rationale": "El EDA es una técnica analítica de datos, no un proceso de reemplazo de activos mecánicos."
+      },
+      {
+        "text": "Duplicar intencionalmente las filas con errores para aumentar el volumen total del archivo.",
+        "isCorrect": false,
+        "rationale": "Duplicar registros erróneos contamina la base de datos y destruye la confiabilidad del análisis."
+      }
+    ],
+    "hint": "Enfócate en la preparación previa requerida para asegurar que la información no contenga anomalías o sesgos que arruinen el aprendizaje.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el estudio de series temporales de datos industriales, ¿qué describe el concepto de 'estacionalidad'?",
+    "opciones": [
+      {
+        "text": "Un error aleatorio e impredecible causado por interferencias electromagnéticas.",
+        "isCorrect": false,
+        "rationale": "Las variaciones impredecibles se denominan ruido aleatorio o componentes fortuitos, no estacionalidad."
+      },
+      {
+        "text": "Fluctuaciones periódicas y regulares que se repiten en intervalos de tiempo identificables (diarios, semanales o estacionales).",
+        "isCorrect": true,
+        "rationale": "La estacionalidad captura comportamientos cíclicos constantes (como aumentos de temperatura en verano o picos de carga a ciertas horas)."
+      },
+      {
+        "text": "La tendencia sostenida a largo plazo de crecimiento o decrecimiento de una variable.",
+        "isCorrect": false,
+        "rationale": "El comportamiento sostenido a largo plazo se define strictly como la tendencia de la serie."
+      },
+      {
+        "text": "La desconexión total de todos los sensores de la red durante el invierno.",
+        "isCorrect": false,
+        "rationale": "La estacionalidad analiza la variación de los datos registrados, no la falla de comunicación técnica."
+      },
+      {
+        "text": "El tiempo que tarda un servidor en reiniciar sus bases de datos SQL.",
+        "isCorrect": false,
+        "rationale": "El tiempo de reinicio es un parámetro de infraestructura de TI, no una propiedad estadística de las series de tiempo."
+      }
+    ],
+    "hint": "Piensa en patrones o fluctuaciones del proceso que se repiten con regularidad en periodos fijos del año, mes o día.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una diferencia metodológica clave entre el *Machine Learning* supervisado tradicional y el *Deep Learning*?",
+    "opciones": [
+      {
+        "text": "El *Machine Learning* requiere computadoras cuánticas, mientras que el *Deep Learning* funciona en calculadoras de mano.",
+        "isCorrect": false,
+        "rationale": "Es el *Deep Learning* el que requiere mayor poder computacional (GPUs) debido a la complejidad de las redes neuronales."
+      },
+      {
+        "text": "El *Machine Learning* utiliza algoritmos sobre datos estructurados con reglas/características predefinidas, mientras que el *Deep Learning* emplea redes neuronales profundas para aprender patrones complejos de datos masivos no estructurados.",
+        "isCorrect": true,
+        "rationale": "El *Deep Learning* imita arquitecturas neuronales para extraer características automáticamente de datos no estructurados como video o audio."
+      },
+      {
+        "text": "El *Machine Learning* solo sirve para finanzas y el *Deep Learning* solo para mantenimiento automotriz.",
+        "isCorrect": false,
+        "rationale": "Ambas disciplinas de IA son transversales y se aplican en minería, medicina, finanzas y manufactura."
+      },
+      {
+        "text": "El *Deep Learning* no utiliza datos de entrenamiento de ningún tipo para generar predicciones.",
+        "isCorrect": false,
+        "rationale": "El *Deep Learning* requiere volúmenes masivos de datos para entrenar sus redes neuronales."
+      },
+      {
+        "text": "El *Machine Learning* genera siempre respuestas erróneas y el *Deep Learning* nunca comete errores.",
+        "isCorrect": false,
+        "rationale": "Todos los modelos probabilísticos tienen márgenes de error que dependen de la calidad del entrenamiento y los datos."
+      }
+    ],
+    "hint": "Considera el tipo de estructura de datos de entrada y la presencia de capas de redes neuronales profundas para la extracción de características.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En los esquemas de aprendizaje automático, ¿en qué se basa el principio del 'aprendizaje por refuerzo'?",
+    "opciones": [
+      {
+        "text": "En la lectura manual de libros técnicos por parte de los ingenieros de planta.",
+        "isCorrect": false,
+        "rationale": "El aprendizaje por refuerzo es un algoritmo computacional, no la capacitación humana analógica."
+      },
+      {
+        "text": "En un método donde un agente aprende a tomar decisiones mediante prueba y error, recibiendo recompensas o penalizaciones según se acerque al objetivo deseado.",
+        "isCorrect": true,
+        "rationale": "El algoritmo ajusta sus parámetros reduciendo las acciones que generan valores negativos (errores) y potenciando las positivas."
+      },
+      {
+        "text": "En memorizar un conjunto fijo de datos de tablas SQL sin realizar cálculos.",
+        "isCorrect": false,
+        "rationale": "Memorizar datos estáticos corresponde a tablas de búsqueda, no a un proceso dinámico de aprendizaje."
+      },
+      {
+        "text": "En apagar los servidores cada vez que el sistema detecta un dato positivo.",
+        "isCorrect": false,
+        "rationale": "Apagar los servidores interrumpe el procesamiento y la capacidad de aprendizaje del sistema."
+      },
+      {
+        "text": "En reemplazar todos los sensores digitales por termómetros de mercurio.",
+        "isCorrect": false,
+        "rationale": "Esta acción retrocedería la instrumentación y no tiene relación con los algoritmos de IA por refuerzo."
+      }
+    ],
+    "hint": "Recuerda la analogía de aprender mediante penalizaciones por errores y premios por decisiones correctas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué característica analítica avanzada ofrecen motores de búsqueda de IA como Perplexity o Qwen (modo web) que facilita la validación de la información técnica frente a respuestas generadas a ciegas?",
+    "opciones": [
+      {
+        "text": "Garantizan la entrega de muestras físicas de mineral a domicilio.",
+        "isCorrect": false,
+        "rationale": "Los modelos de lenguaje procesan y entregan información digital, no muestras físicas de laboratorio."
+      },
+      {
+        "text": "Proporcionan explícitamente las fuentes, enlaces y referencias web de donde extrajeron los datos sintetizados.",
+        "isCorrect": true,
+        "rationale": "Citar las fuentes permite al usuario auditar el origen bibliográfico o técnico de la respuesta generada."
+      },
+      {
+        "text": "Impiden que el usuario pueda volver a realizar preguntas sobre el mismo tema.",
+        "isCorrect": false,
+        "rationale": "Estas herramientas permiten conversaciones iterativas profundas y aclaraciones ilimitadas."
+      },
+      {
+        "text": "Generan contenido que no se puede copiar ni exportar a ningún formato.",
+        "isCorrect": false,
+        "rationale": "El texto generado por estas plataformas está diseñado para ser copiado, exportado y reutilizado fácilmente."
+      },
+      {
+        "text": "Eliminan automáticamente todos los archivos de la computadora del usuario tras responder.",
+        "isCorrect": false,
+        "rationale": "Estas aplicaciones operan en la nube de forma segura y no eliminan información local del usuario."
+      }
+    ],
+    "hint": "Piensa en el respaldo documental que le permite al usuario verificar el origen de los datos expresados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia estructural fundamental entre las bases de datos relacionales (SQL) y las bases de datos no relacionales (NoSQL)?",
+    "opciones": [
+      {
+        "text": "Las relacionales solo funcionan en teléfonos móviles y las NoSQL en grandes calculadoras estáticas.",
+        "isCorrect": false,
+        "rationale": "Ambas arquitecturas de bases de datos operan en servidores y entornos corporativos diversos."
+      },
+      {
+        "text": "Las bases de datos relacionales organizan la información en tablas estrictas con filas y columnas ligadas entre sí, mientras que las NoSQL utilizan esquemas flexibles como documentos (JSON), grafos o columnas anchas.",
+        "isCorrect": true,
+        "rationale": "Las bases de datos NoSQL permiten almacenar datos masivos no estructurados o de variada naturaleza, ideales para Big Data en tiempo real."
+      },
+      {
+        "text": "Las bases de datos NoSQL prohíben el almacenamiento de números enteros.",
+        "isCorrect": false,
+        "rationale": "NoSQL maneja cualquier tipo de dato primitivo, incluidos enteros, flotantes, cadenas y binarios."
+      },
+      {
+        "text": "Las relacionales no pueden ser consultadas mediante ningún lenguaje informático.",
+        "isCorrect": false,
+        "rationale": "Las bases relacionales se consultan mediante el estándar SQL (Structured Query Language)."
+      },
+      {
+        "text": "No existe ninguna diferencia técnica entre ellas y los términos se usan al azar.",
+        "isCorrect": false,
+        "rationale": "Representan dos paradigmas de arquitectura de software totalmente distintos en gestión de datos."
+      }
+    ],
+    "hint": "Compara la rigidez de las tablas con filas y columnas frente a esquemas flexibles en bloques, documentos o columnas anchas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de infraestructura de servidores para Big Data, ¿en qué se diferencia la escalabilidad vertical de la escalabilidad horizontal?",
+    "opciones": [
+      {
+        "text": "La vertical consiste en pintar los servidores de arriba a abajo y la horizontal de lado a lado.",
+        "isCorrect": false,
+        "rationale": "La escalabilidad se refiere al rendimiento del hardware y arquitectura de red, no al acabado estético del gabinete."
+      },
+      {
+        "text": "La escalabilidad vertical aumenta los recursos de hardware (CPU, RAM) de un único servidor, mientras que la horizontal añade más nodos o servidores interconectados a un clúster.",
+        "isCorrect": true,
+        "rationale": "Añadir más nodos (horizontal) permite procesar volúmenes masivos de Big Data de forma distribuida y rentable."
+      },
+      {
+        "text": "La horizontal solo admite datos en papel y la vertical solo señales de radio.",
+        "isCorrect": false,
+        "rationale": "Ambas formas de escalabilidad son digitales e involucran servidores computacionales."
+      },
+      {
+        "text": "La vertical apaga los equipos durante la noche y la horizontal los mantiene encendidos.",
+        "isCorrect": false,
+        "rationale": "Los esquemas de escalabilidad abordan la capacidad de procesamiento ante el incremento de carga, no el horario de encendido."
+      },
+      {
+        "text": "La escalabilidad horizontal está prohibida en sistemas de Big Data como Apache Spark.",
+        "isCorrect": false,
+        "rationale": "Apache Spark y Hadoop se fundamentan precisamente en la escalabilidad horizontal para operar en clústeres."
+      }
+    ],
+    "hint": "Diferencia entre repotenciar un solo servidor existente frente a agregar más computadores interconectados a un clúster.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del marco integral del *Data Management*, ¿cuáles son las responsabilidades respectivas de la Gobernanza de Datos (*Data Governance*) y la Integración de Datos (*Data Integration*)?",
+    "opciones": [
+      {
+        "text": "La Gobernanza de Datos establece las políticas, estándares y normas que garantizan la calidad, privacidad y seguridad de la información.",
+        "isCorrect": true,
+        "rationale": "La gobernanza asegura el cumplimiento normativo y la confiabilidad del dato a nivel organizacional."
+      },
+      {
+        "text": "La Integración de Datos combina y transforma datos provenientes de múltiples fuentes heterogéneas para ofrecer una vista unificada.",
+        "isCorrect": true,
+        "rationale": "Integrar datos permite reunir sensores, archivos planos y bases de datos en una misma tubería o *pipeline* analítico."
+      },
+      {
+        "text": "La Gobernanza de Datos se encarga de cambiar físicamente los aceites de los motores mineros.",
+        "isCorrect": false,
+        "rationale": "El cambio de aceites es mantenimiento mecánico, no una función de gestión de datos informáticos."
+      },
+      {
+        "text": "La Integración de Datos elimina todos los accesos de red de la empresa para evitar consultas.",
+        "isCorrect": false,
+        "rationale": "La integración busca conectar y disponibilizar la información, no aislarla o bloquearla."
+      },
+      {
+        "text": "Ambas disciplinas buscan sustituir los servidores por carpetas físicas archivadas en bodegas.",
+        "isCorrect": false,
+        "rationale": "La gestión moderna de datos impulsa la digitalización y el procesamiento eficiente en la nube."
+      }
+    ],
+    "hint": "Diferencia el establecimiento de normativas, políticas de calidad y seguridad de la tarea técnica de unificar fuentes heterogéneas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la cadena de automatización de una planta minera, ¿cuál es la diferencia de rol entre un sensor y un actuador?",
+    "opciones": [
+      {
+        "text": "El actuador mide la temperatura y el sensor apaga el motor eléctrico.",
+        "isCorrect": false,
+        "rationale": "Los roles están invertidos; el sensor capta la variable física (temperatura) y el actuador realiza la acción física (apagar/encender)."
+      },
+      {
+        "text": "El sensor capta la variable del entorno y la traduce a señal eléctrica, mientras que el actuador recibe la orden de control y ejecuta una acción física o mecánica.",
+        "isCorrect": true,
+        "rationale": "El sensor actúa como la entrada del sistema de control y el actuador como el elemento final de acción física sobre el proceso."
+      },
+      {
+        "text": "Ambos son programas informáticos abstractos que no existen físicamente en la planta.",
+        "isCorrect": false,
+        "rationale": "Sensores y actuadores son dispositivos de hardware instalados físicamente en las líneas de proceso."
+      },
+      {
+        "text": "El sensor genera movimiento hidráulico y el actuador almacena archivos de texto.",
+        "isCorrect": false,
+        "rationale": "El movimiento hidráulico es generado por actuadores hidráulicos; el almacenamiento corresponde a servidores de base de datos."
+      },
+      {
+        "text": "El actuador transmite información a la nube y el sensor es la pantalla donde mira el operador.",
+        "isCorrect": false,
+        "rationale": "La pantalla de visualización es el HMI, mientras que el sensor realiza la medición inicial de campo."
+      }
+    ],
+    "hint": "Identifica cuál dispositivo cumple el rol de 'oído/ojo' midiendo la variable y cuál el de 'músculo' ejecutando el cambio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la arquitectura de supervisión de un sistema SCADA industrial, ¿cuáles son las funciones técnicas que desempeñan las Unidades Terminales Remotas (RTU / PLC) y la Unidad Terminal Maestra (MTU)?",
+    "opciones": [
+      {
+        "text": "Las RTU o PLC reciben señales analógicas de los sensores en campo, las convierten a datos digitales y ejecutan control local.",
+        "isCorrect": true,
+        "rationale": "Los PLC y RTU son la interfaz de control directo cercana a la maquinaria en la planta."
+      },
+      {
+        "text": "La MTU (servidor/ordenador central) recibe los datos de los PLC/RTU, los procesa, gestiona las alarmas y alimenta las pantallas HMI.",
+        "isCorrect": true,
+        "rationale": "La MTU centraliza la inteligencia global del sistema SCADA y coordina el almacenamiento de datos e interfaz de usuario."
+      },
+      {
+        "text": "Las RTU se colocan en las ruedas de los camiones para servir como frenos mecánicos de mano.",
+        "isCorrect": false,
+        "rationale": "Las RTU son procesadores electrónicos de señales, no dispositivos mecánicos de frenado."
+      },
+      {
+        "text": "La MTU es una herramienta manual que usa el operador para ajustar las tuercas de la chancadora.",
+        "isCorrect": false,
+        "rationale": "La MTU (Master Terminal Unit) es un computador/servidor central de procesamiento informático."
+      },
+      {
+        "text": "Ambos componentes eliminan la necesidad de contar con sistemas de energía eléctrica en la fábrica.",
+        "isCorrect": false,
+        "rationale": "Todos los componentes electrónicos de un sistema SCADA requieren alimentación eléctrica estable."
+      }
+    ],
+    "hint": "Considera el dispositivo que interactúa directamente con los sensores de campo frente al ordenador central que procesa la visualización global.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En una planta de trituración minera supervisada por un sistema SCADA, ¿qué secuencia de eventos automatizados ocurre si un sensor detecta una sobretemperatura crítica en la chancadora?",
+    "opciones": [
+      {
+        "text": "El sensor se destruye intencionalmente y se borra todo el historial de datos de la planta.",
+        "isCorrect": false,
+        "rationale": "Los sistemas de automatización están diseñados para proteger los componentes y registrar el evento en el historial, no para destruir evidencia."
+      },
+      {
+        "text": "La señal es procesada por el PLC/MTU, se activa una alarma visual/sonora en el HMI del operador y los actuadores pueden encender el sistema de refrigeración o detener la carga de mineral.",
+        "isCorrect": true,
+        "rationale": "El SCADA responde en tiempo real alertando al humano y ejecutando acciones de mitigación mediante actuadores para salvaguardar el activo."
+      },
+      {
+        "text": "El sistema SCADA se apaga y requiere tres días para volver a encender las pantallas.",
+        "isCorrect": false,
+        "rationale": "El SCADA debe ser altamente disponible e informar de inmediato la falla para corregirla sin demoras prolongadas."
+      },
+      {
+        "text": "Se emite una orden automática para incrementar la velocidad de trituración al máximo.",
+        "isCorrect": false,
+        "rationale": "Aumentar la velocidad ante una sobretemperatura destruiría catastróficamente la maquinaria."
+      },
+      {
+        "text": "El sensor envía un correo postal físico al fabricante de la máquina en otro país antes de alertar a la planta.",
+        "isCorrect": false,
+        "rationale": "Las alertas SCADA se procesan en milisegundos a nivel local para prevenir daños inminentes."
+      }
+    ],
+    "hint": "Sigue el flujo de información desde la captación de la anomalía hasta la respuesta en el panel del operador y en el equipo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-57",
+    "diplomado": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué utilidad funcional ofrece la herramienta de Inteligencia Artificial 'Nakin' demostrada al finalizar el curso para la documentación de procesos operativos?",
+    "opciones": [
+      {
+        "text": "Diseña planos arquitectónicos en tres dimensiones de motores diésel.",
+        "isCorrect": false,
+        "rationale": "Nakin es una herramienta de diagramación y flujo visual de texto, no un software de diseño asistido por computadora (CAD) industrial."
+      },
+      {
+        "text": "Convierte texto plano de procedimientos o flujos operativos en diagramas de flujo, esquemas e infografías visuales editables de forma instantánea.",
+        "isCorrect": true,
+        "rationale": "Nakin procesa la sintaxis lógica de un procedimiento y genera automáticamente diagramas visuales estructurados para reportes y diapositivas."
+      },
+      {
+        "text": "Reemplaza los cables de fibra óptica por señales de radio analógicas.",
+        "isCorrect": false,
+        "rationale": "Nakin no realiza intervenciones en la infraestructura física de telecomunicaciones."
+      },
+      {
+        "text": "Mide directamente la presión hidráulica de los camiones mineros en la mina.",
+        "isCorrect": false,
+        "rationale": "Esa tarea corresponde a los sensores de presión instalados en el vehículo y conectados al sistema telemático."
+      },
+      {
+        "text": "Sirve exclusivamente para reproducir archivos de música en la sala de control.",
+        "isCorrect": false,
+        "rationale": "Es una herramienta de productividad basada en IA para la estructuración gráfica de información técnica."
+      }
+    ],
+    "hint": "Piensa en cómo transforma un texto descriptivo o un flujo de pasos en elementos gráficos estructurados para presentaciones.",
+    "activo": true
+  }
+]

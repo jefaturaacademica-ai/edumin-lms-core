@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del informe de inventarios en la gestión logística de una empresa?",
+    "opciones": [
+      {
+        "text": "Proporcionar datos clave y actualizados sobre el estado, la trazabilidad y la ubicación de las existencias para la toma de decisiones.",
+        "isCorrect": true,
+        "rationale": "El informe de inventarios recopila el estado real, la ubicación y el historial del stock, permitiendo a los planificadores y responsables logísticos tomar decisiones estratégicas de compra y distribución."
+      },
+      {
+        "text": "Registrar exclusivamente las horas extras trabajadas por los operarios en el área de recepción.",
+        "isCorrect": false,
+        "rationale": "El registro de horas extras corresponde al área de gestión humana o nómina, no al control directo de las existencias logísticas."
+      },
+      {
+        "text": "Sustituir de forma definitiva la necesidad de realizar auditorías físicas periódicas en el almacén.",
+        "isCorrect": false,
+        "rationale": "Los informes de inventario dependen de verificaciones periódicas para contrastar los datos del sistema con las existencias reales."
+      },
+      {
+        "text": "Establecer la política salarial de los compradores y asistentes de almacén.",
+        "isCorrect": false,
+        "rationale": "La política salarial es una función administrativa e institucional, totalmente ajena al propósito de control de materiales del informe de inventarios."
+      },
+      {
+        "text": "Eliminar por completo los costos fijos asociados al alquiler de la infraestructura del almacén.",
+        "isCorrect": false,
+        "rationale": "El informe documenta y optimiza el uso del inventario, pero no elimina los costos contractuales de infraestructura como los alquileres."
+      }
+    ],
+    "hint": "Piensa en cómo este documento ayuda a conocer la situación exacta y localización de los materiales para coordinar las compras y la distribución.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con lo expuesto en el curso, ¿cuál es la diferencia conceptual entre un \"pedido\" y una \"solicitud\"?",
+    "opciones": [
+      {
+        "text": "El pedido es la acción general de requerir bienes, mientras que la solicitud especifica el destino, proyecto o área concreta que justifica dicha necesidad.",
+        "isCorrect": true,
+        "rationale": "El pedido representa la transacción o requerimiento de materiales en sí, mientras que la solicitud es el sustento específico que justifica para qué y para quién se requieren esos materiales."
+      },
+      {
+        "text": "La solicitud la emite exclusivamente el proveedor externo y el pedido lo realiza el cliente final.",
+        "isCorrect": false,
+        "rationale": "Tanto los pedidos como las solicitudes son instrumentos de gestión interna en la cadena de suministros dirigidos a abastecer la operación."
+      },
+      {
+        "text": "El pedido se refiere únicamente a servicios intangibles y la solicitud se aplica solo a insumos tangibles.",
+        "isCorrect": false,
+        "rationale": "Ambos conceptos aplican indistintamente para la adquisición y requerimiento de insumos tangibles y servicios en la logística."
+      },
+      {
+        "text": "La solicitud implica una transacción pagada al contado y el pedido se gestiona obligatoriamente a crédito.",
+        "isCorrect": false,
+        "rationale": "Las condiciones de pago contractuales no definen la distinción conceptual entre pedido y solicitud interna."
+      },
+      {
+        "text": "No existe ninguna diferencia, ambos términos son sinónimos idénticos en la operación del SAP.",
+        "isCorrect": false,
+        "rationale": "En el flujo operativo logístico, la solicitud fundamenta la necesidad específica que da origen al pedido u orden de compra."
+      }
+    ],
+    "hint": "Considera que uno representa el acto general de requerir materiales mientras el otro detalla la justificación y destino del requerimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión logísticas de compras, ¿cómo se diferencian los términos \"abastecimiento\" y \"aprovisionamiento\"?",
+    "opciones": [
+      {
+        "text": "El abastecimiento atiende necesidades puntuales e inmediatas de operación, mientras que el aprovisionamiento es una decisión estratégica integral a mayor escala que considera costos y previsiones en el tiempo.",
+        "isCorrect": true,
+        "rationale": "El abastecimiento responde al suministro rápido para mantener la operación del día a día, en tanto que el aprovisionamiento involucra un análisis estratégico de mercado, proveedores y costos a largo plazo."
+      },
+      {
+        "text": "El aprovisionamiento se realiza solo para productos perecederos y el abastecimiento para herramientas duraderas.",
+        "isCorrect": false,
+        "rationale": "La categoría física del producto no determina si la gestión se enfoca como abastecimiento o aprovisionamiento."
+      },
+      {
+        "text": "El abastecimiento requiere la aprobación de la Junta de Accionistas y el aprovisionamiento solo del operario de turno.",
+        "isCorrect": false,
+        "rationale": "Las aprobaciones dependen del valor monetario de la compra y la estructura jerárquica, no de esta clasificación de suministro."
+      },
+      {
+        "text": "El aprovisionamiento es la compra de combustible y el abastecimiento es la contratación de fletes.",
+        "isCorrect": false,
+        "rationale": "Ambos términos abarcan todo tipo de materiales y recursos necesarios dentro de la cadena logistica."
+      },
+      {
+        "text": "El abastecimiento invalida los contratos con proveedores y el aprovisionamiento los renueva automáticamente.",
+        "isCorrect": false,
+        "rationale": "Ninguno de los dos conceptos actúa como un mecanismo jurídico de anulación automática de contratos."
+      }
+    ],
+    "hint": "Evalúa la escala temporal, la planificación económica y la complejidad operacional que distingue a cada término.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Si una empresa registra una tasa de rotación de inventario de 5 en un año comercial de 360 días, ¿cuántos días tarda en promedio en vender la totalidad de su mercancía?",
+    "opciones": [
+      {
+        "text": "72 días.",
+        "isCorrect": true,
+        "rationale": "Al dividir los 360 días del año comercial entre la tasa de rotación (360 / 5), se obtiene que la mercancía tarda en promedio 72 días en rotar o venderse."
+      },
+      {
+        "text": "50 días.",
+        "isCorrect": false,
+        "rationale": "Un promedio de 50 días correspondería a una tasa de rotación anual de 7.2 veces, no de 5."
+      },
+      {
+        "text": "90 días.",
+        "isCorrect": false,
+        "rationale": "Dividir 360 entre 90 resultaría en una tasa de rotación de 4 veces al año."
+      },
+      {
+        "text": "60 días.",
+        "isCorrect": false,
+        "rationale": "Un periodo de 60 días implicaría una rotación de 6 veces en el año comercial."
+      },
+      {
+        "text": "120 días.",
+        "isCorrect": false,
+        "rationale": "Un indicador de 120 días significaría que la empresa rota su inventario únicamente 3 veces al año."
+      }
+    ],
+    "hint": "Aplica la relación matemática de dividir los días del periodo comercial entre la tasa de rotación obtenida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes tipos de informes fueron presentados en la clase 1 como reportes clave para el control de inventarios?",
+    "opciones": [
+      {
+        "text": "Informe de inventarios valorizado.",
+        "isCorrect": true,
+        "rationale": "Detalla las existencias físicas asociándolas directamente con su valor monetario de adquisición o contable."
+      },
+      {
+        "text": "Informe de productos críticos o de reposición.",
+        "isCorrect": true,
+        "rationale": "Identifica los materiales de baja disponibilidad o alta demanda que requieren reabastecimiento urgente."
+      },
+      {
+        "text": "Informe de rendimiento del inventario.",
+        "isCorrect": true,
+        "rationale": "Mide la eficiencia económica y el dinamismo del capital invertido en los productos almacenados."
+      },
+      {
+        "text": "Informe de clima laboral y desempeño psicosocial.",
+        "isCorrect": false,
+        "rationale": "Este documento es propio de la gestión de talento humano y no analiza el volumen o valor de las existencias."
+      },
+      {
+        "text": "Informe de mantenimiento de vías públicas externas.",
+        "isCorrect": false,
+        "rationale": "Corresponde a la gestión municipal o de infraestructura pública, no al control financiero de almacenes."
+      }
+    ],
+    "hint": "Selecciona los reportes enfocados en la valoración monetaria del stock, la reposición prioritaria y la rentabilidad del material.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué el rol del comprador logístico exige un nivel elevado de minuciosidad técnica en comparación con otras funciones operativas?",
+    "opciones": [
+      {
+        "text": "Porque compromete directamente el capital de la empresa al definir especificaciones, condiciones de pago y selección precisa de proveedores.",
+        "isCorrect": true,
+        "rationale": "El comprador gestiona desembolsos de capital significativos; cualquier error en la especificación o condición de compra genera inventario inmovilizado o costos ocultos elevados."
+      },
+      {
+        "text": "Porque es el único empleado autorizado para conducir los montacargas en el centro de distribución.",
+        "isCorrect": false,
+        "rationale": "La operación de equipos de muelle es tarea de los operarios de almacén calificados, no del comprador."
+      },
+      {
+        "text": "Porque debe calcular diariamente los impuestos de importación sin apoyo del sistema informático.",
+        "isCorrect": false,
+        "rationale": "La liquidación tributaria es gestionada por el área contable/comercio exterior a través de software especializado o agentes aduaneros."
+      },
+      {
+        "text": "Porque su única función es redactar los manuales de seguridad e higiene industrial.",
+        "isCorrect": false,
+        "rationale": "El diseño de manuales de seguridad corresponde al área de SST (Seguridad y Salud en el Trabajo)."
+      },
+      {
+        "text": "Porque supervisa presencialmente el turno nocturno de transporte en todas las sedes.",
+        "isCorrect": false,
+        "rationale": "La supervisión de ruta y flota es competencia de la jefatura de distribución y transporte."
+      }
+    ],
+    "hint": "Reflexiona sobre la responsabilidad directa que tiene esta función al comprometer el presupuesto corporativo mediante fichas y contratos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis financiero de la clase 2, ¿cuál es la distinción fundamental entre \"costo\" y \"gasto\"?",
+    "opciones": [
+      {
+        "text": "El costo está vinculado a la producción o adquisición de bienes y genera un retorno económico, mientras que el gasto es un desembolso operativo necesario pero sin retorno directo.",
+        "isCorrect": true,
+        "rationale": "El costo se incorpora al valor del producto o activo recuperándose con la venta, mientras que el gasto respalda la operación general sin reflejarse en un retorno monetario directo."
+      },
+      {
+        "text": "El costo representa desembolsos en efectivo y el gasto se paga obligatoriamente mediante trueque.",
+        "isCorrect": false,
+        "rationale": "Ambas variables financieras se contabilizan y liquidan ordinariamente en unidades monetarias."
+      },
+      {
+        "text": "El gasto aumenta el valor comercial del inventario y el costo reduce las utilidades netas inmediatamente.",
+        "isCorrect": false,
+        "rationale": "Es el costo de adquisición el que integra la valorización del inventario, no el gasto operativo."
+      },
+      {
+        "text": "Los costos son decididos por los proveedores y los gastos son fijados por el gobierno.",
+        "isCorrect": false,
+        "rationale": "Ambos conceptos son categorías contables e internas gestionadas por la estructura financiera de la empresa."
+      },
+      {
+        "text": "No existe diferencia, en contabilidad de almacenes ambos términos se calculan exactamente igual.",
+        "isCorrect": false,
+        "rationale": "La distinción entre costo y gasto es un pilar básico de la contabilidad de costos para determinar márgenes y precios."
+      }
+    ],
+    "hint": "Observa la relación directa de cada desembolso con la producción o inventario y la expectativa de recuperar dicho dinero.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del análisis financiero de almacenes, ¿qué representa el concepto de depreciación de activos y productos?",
+    "opciones": [
+      {
+        "text": "La pérdida progresiva de valor económico y vida útil de las máquinas, infraestructura o bienes debido al uso, obsolescencia o paso del tiempo.",
+        "isCorrect": true,
+        "rationale": "La depreciación refleja contable y físicamente cómo un activo pierde valor y eficiencia operativa a lo largo de su periodo de vida útil."
+      },
+      {
+        "text": "El incremento automático del precio de venta debido a la inflación acumulada del mes.",
+        "isCorrect": false,
+        "rationale": "El ajuste por inflación es un mecanismo de actualización de precios, opuesto al desgaste expresado por la depreciación."
+      },
+      {
+        "text": "La comisión que cobra el banco por realizar transferencias internacionales a proveedores.",
+        "isCorrect": false,
+        "rationale": "Las comisiones bancarias se clasifican como gastos financieros, no como depreciación de activos."
+      },
+      {
+        "text": "El descuento otorgado a los clientes que compran productos al contado.",
+        "isCorrect": false,
+        "rationale": "Ese concepto corresponde a los descuentos comerciales o financieros sobre ventas."
+      },
+      {
+        "text": "El margen bruto de ganancia obtenido tras la liquidación anual de saldos.",
+        "isCorrect": false,
+        "rationale": "El margen bruto es la diferencia entre ingresos netos y costo de ventas, sin relación conceptual directa con la pérdida de valor del activo."
+      }
+    ],
+    "hint": "Relaciona este término con la pérdida de valor económico y desgaste físico que sufren los bienes a lo largo del tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el procedimiento adecuado para calcular el costo fijo unitario de un producto en un periodo determinado?",
+    "opciones": [
+      {
+        "text": "Dividir el costo fijo total del periodo entre la cantidad total de unidades producidas o procesadas.",
+        "isCorrect": true,
+        "rationale": "El costo fijo unitario se obtiene distribuyendo equitativamente la suma acumulada de los costos fijos entre el número de unidades resultantes."
+      },
+      {
+        "text": "Multiplicar el costo variable unitario por el número de operarios del almacén.",
+        "isCorrect": false,
+        "rationale": "Multiplicar variables por el número de trabajadores no arroja el costo fijo unitario del producto."
+      },
+      {
+        "text": "Sumar el alquiler del almacén con el costo del flete aéreo internacional.",
+        "isCorrect": false,
+        "rationale": "Sumar rubros de distinta naturaleza sin dividirlos entre el volumen producido no determina un costo unitario."
+      },
+      {
+        "text": "Restar el precio de venta comercial del costo indirecto de fabricación.",
+        "isCorrect": false,
+        "rationale": "La resta entre precio de venta y costos determina el margen de utilidad, no el costo fijo por unidad."
+      },
+      {
+        "text": "Dividir el total de ventas netas entre la tasa de interés bancario vigente.",
+        "isCorrect": false,
+        "rationale": "Esta operación carece de sentido lógico en la formulación del costo unitario de producto."
+      }
+    ],
+    "hint": "Piensa en la distribución de la suma fija total de costos entre el volumen total de unidades producidas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el sistema de costeo basado en actividades (Costeo ABC), ¿cómo se define la \"tasa de actividad\"?",
+    "opciones": [
+      {
+        "text": "El cociente entre el costo total asignado a una actividad y la cantidad total de su base de actividad (o inductor de costo).",
+        "isCorrect": true,
+        "rationale": "La tasa de actividad mide cuánto cuesta cada unidad del inductor (ej. costo por orden de compra o costo por movimiento), dividiendo el costo total de la actividad entre su consumo total."
+      },
+      {
+        "text": "La velocidad promedio en metros por segundo a la que un montacargas traslada un pallet.",
+        "isCorrect": false,
+        "rationale": "Esa es una métrica física de velocidad o desempeño operativo, no una tasa financiera de costeo ABC."
+      },
+      {
+        "text": "El porcentaje de descuento que exige el área de compras al proveedor principal.",
+        "isCorrect": false,
+        "rationale": "El porcentaje de descuento es una condición de negociación comercial."
+      },
+      {
+        "text": "La suma del costo fijo y el costo variable dividida entre las horas extras trabajadas.",
+        "isCorrect": false,
+        "rationale": "Esta fórmula no corresponde a la asignación de costos por inductores en la metodología ABC."
+      },
+      {
+        "text": "El valor impositivo aplicado por la aduana al momento de nacionalizar mercancía.",
+        "isCorrect": false,
+        "rationale": "Los aranceles aduaneros son tributos de importación, no una tasa de actividad interna de gestión."
+      }
+    ],
+    "hint": "Considera la división entre el costo acumulado en un centro de actividad y el volumen total de su generador o inductor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a costos variables habituales dentro del departamento de logística y operaciones?",
+    "opciones": [
+      {
+        "text": "Consumo de combustible de las unidades de transporte de reparto.",
+        "isCorrect": true,
+        "rationale": "El gasto en combustible fluctúa de forma directa con el kilometraje recorrido y la cantidad de entregas realizadas."
+      },
+      {
+        "text": "Materia prima utilizada directamente en la elaboración de productos.",
+        "isCorrect": true,
+        "rationale": "A mayor volumen de producción, mayor será la cantidad y el costo acumulado de materia prima requerida."
+      },
+      {
+        "text": "Comisiones pagadas a los vendedores en función del volumen de ventas alcanzado.",
+        "isCorrect": true,
+        "rationale": "Las comisiones varían de forma proporcional al nivel de facturación o unidades comercializadas en el periodo."
+      },
+      {
+        "text": "Alquiler mensual fijo estipulado en el contrato del almacén central.",
+        "isCorrect": false,
+        "rationale": "El canon de arrendamiento firmado por contrato mensual permanece constante sin importar el volumen depositado."
+      },
+      {
+        "text": "Sueldo básico del jefe permanente de administración de inventarios.",
+        "isCorrect": false,
+        "rationale": "La remuneración básica fija del personal en planilla es un costo fijo para la empresa."
+      }
+    ],
+    "hint": "Identifica los desembolsos que aumentan o disminuyen directamente según el nivel de producción, transporte o ventas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre \"ser rentable\" y \"ser productivo\" en la gestión de una empresa?",
+    "opciones": [
+      {
+        "text": "Ser productivo implica optimizar el uso de recursos para generar mayor volumen operacional, mientras que ser rentable asegura que los ingresos superen holgadamente a los costos.",
+        "isCorrect": true,
+        "rationale": "Una empresa puede ser altamente productiva fabricando o moviendo muchos productos, pero si sus costos superan los ingresos, no será rentable."
+      },
+      {
+        "text": "Ser rentable se aplica solo a empresas públicas y ser productivo a pequeñas mipes informales.",
+        "isCorrect": false,
+        "rationale": "Ambos indicadores financieros y operacionales aplican a todo tipo de organización independientemente de su titularidad."
+      },
+      {
+        "text": "Ser productivo significa eliminar por completo el pago de impuestos y ser rentable acumular deudas.",
+        "isCorrect": false,
+        "rationale": "Esa afirmación contradice los principios contables y legales del funcionamiento corporativo."
+      },
+      {
+        "text": "Ser rentable es rotar el stock una vez al año y ser productivo mantener el almacén lleno de residuos.",
+        "isCorrect": false,
+        "rationale": "Mantener residuos o baja rotación atenta contra la eficiencia y la rentabilidad logística."
+      },
+      {
+        "text": "No existe diferencia; si una empresa aumenta su producción, automáticamente es rentable.",
+        "isCorrect": false,
+        "rationale": "Producir más sin controlar la estructura de costos ni asegurar la venta con margen conduce a pérdidas financieras."
+      }
+    ],
+    "hint": "Distingue entre la eficiencia en la cantidad de producción alcanzada y la capacidad final de generar beneficios económicos netos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el control de acceso a instalaciones logísticas, ¿cuál es la ventaja clave de un sistema de acceso en red frente a uno autónomo?",
+    "opciones": [
+      {
+        "text": "Permite el monitoreo remoto centralizado en tiempo real y la trazabilidad de autorizaciones e ingresos vinculados a sistemas como el SAP.",
+        "isCorrect": true,
+        "rationale": "Los sistemas en red registran en una base de datos centralizada quién, cuándo y con qué autorización se ingresa o retira material, a diferencia de un control autónomo local."
+      },
+      {
+        "text": "No requiere suministro eléctrico ni conectividad para almacenar la información de los usuarios.",
+        "isCorrect": false,
+        "rationale": "Un sistema en red depende indispensablemente de conectividad de datos e infraestructura eléctrica o de respaldo."
+      },
+      {
+        "text": "Elimina la necesidad de usar contraseñas, tarjetas o registros biológicos en toda la empresa.",
+        "isCorrect": false,
+        "rationale": "Los sistemas en red utilizan activamente mecanismos digitales de identificación como tarjetas RFID, biometría o credenciales."
+      },
+      {
+        "text": "Garantiza que los materiales pesados no sufran daños físicos por caídas.",
+        "isCorrect": false,
+        "rationale": "El control de acceso gestiona la seguridad de entrada/salida de personal y datos, no la manipulación física de la carga."
+      },
+      {
+        "text": "Es completamente gratuito y no requiere configuración ni software especializado.",
+        "isCorrect": false,
+        "rationale": "Su implementación requiere inversión en servidores, licencias de software de control y equipos de red."
+      }
+    ],
+    "hint": "Enfócate en la capacidad de monitoreo centralizado en tiempo real y el registro completo de autorizaciones en el sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal de aplicar controles de ciberseguridad a los datos de inventario y almacén?",
+    "opciones": [
+      {
+        "text": "Proteger la información estratégica de existencias, SKUs, costos y proveedores contra filtraciones que puedan ser aprovechadas por la competencia.",
+        "isCorrect": true,
+        "rationale": "Los datos de inventarios y costos representan ventajas competitivas clave; su filtración o alteración cibersegura compromete la estabilidad comercial del negocio."
+      },
+      {
+        "text": "Evitar que los camiones de reparto se queden sin combustible en la carretera.",
+        "isCorrect": false,
+        "rationale": "La gestión de combustible corresponde al mantenimiento preventivo y control de flota vehicular."
+      },
+      {
+        "text": "Aumentar el peso volumétrico de las cajas en los envíos aéreos.",
+        "isCorrect": false,
+        "rationale": "El peso volumétrico es una medida física y tarifaria del transporte, no un parámetro informático de seguridad."
+      },
+      {
+        "text": "Reemplazar el etiquetado físico de los productos por pintura acrílica.",
+        "isCorrect": false,
+        "rationale": "El etiquetado físico es un procedimiento de identificación en anaquel que no guarda relación con la ciberseguridad."
+      },
+      {
+        "text": "Reducir la jornada laboral del personal operativo de 8 a 2 horas diarias.",
+        "isCorrect": false,
+        "rationale": "La ciberseguridad resguarda la integridad de la información, no modifica los regímenes legales de jornada laboral."
+      }
+    ],
+    "hint": "Piensa en la protección de información estratégica de existencias, SKUs y costos frente a competidores o accesos no autorizados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué abarca el concepto de \"condición de almacenamiento\" en un centro de distribución o almacén?",
+    "opciones": [
+      {
+        "text": "Las prácticas de preservación física, ambiental e higiénica que aseguran que el producto mantenga sus características y vida útil original.",
+        "isCorrect": true,
+        "rationale": "La condición de almacenamiento garantiza que agentes ambientales, físicos o químicos no degraden las propiedades y la calidad del producto guardado."
+      },
+      {
+        "text": "El precio de venta final acordado entre el comprador y el vendedor en el contrato.",
+        "isCorrect": false,
+        "rationale": "El precio de venta es un término comercial financiero, no una condición física de almacenamiento."
+      },
+      {
+        "text": "La velocidad a la que el contador aprueba los estados financieros al cierre de año.",
+        "isCorrect": false,
+        "rationale": "Esa es una métrica de gestión contable/administrativa."
+      },
+      {
+        "text": "El tipo de moneda extranjera utilizado para pagar los fletes marítimos.",
+        "isCorrect": false,
+        "rationale": "La divisa monetaria es una condición financiera de la transacción internacional."
+      },
+      {
+        "text": "La cantidad de seguidores que tiene la empresa en sus redes sociales corporativas.",
+        "isCorrect": false,
+        "rationale": "Las métricas de redes sociales pertenecen al área de marketing digital."
+      }
+    ],
+    "hint": "Considera las medidas requeridas para preservar el estado físico, químico y la vida útil original del producto en custodia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de equipos e infraestructura de almacén, ¿cuál es la diferencia entre \"depreciación\" y \"viabilidad\"?",
+    "opciones": [
+      {
+        "text": "La depreciación mide la pérdida de valor financiero contable del activo, mientras que la viabilidad evalúa si el equipo está en condiciones operativas de funcionar correctamente.",
+        "isCorrect": true,
+        "rationale": "Un equipo puede estar completamente depreciado contablemente (valor contable cercano a cero) pero continuar siendo técnicamente viable para la operación diaria si se mantiene adecuadamente."
+      },
+      {
+        "text": "La viabilidad mide el peso en toneladas de la máquina y la depreciación su color exterior.",
+        "isCorrect": false,
+        "rationale": "Ninguna de estas dos categorías hace referencia al color o al peso bruto de un equipo."
+      },
+      {
+        "text": "La depreciación la evalúa el mecánico y la viabilidad la aprueba el sindicato de choferes.",
+        "isCorrect": false,
+        "rationale": "La depreciación es una métrica contable-financiera y la viabilidad es un diagnóstico técnico-operativo de ingeniería o mantenimiento."
+      },
+      {
+        "text": "La viabilidad exige vender la máquina en su primer mes de uso y la depreciación conservarla para siempre.",
+        "isCorrect": false,
+        "rationale": "La viabilidad promueve mantener el activo en óptimas condiciones de uso, no venderlo prematuramente."
+      },
+      {
+        "text": "Ambos términos significan exactamente lo mismo y se calculan con la misma tasa bancaria.",
+        "isCorrect": false,
+        "rationale": "Confundir el valor financiero contable con la capacidad técnica operativa es un error de gestión de activos."
+      }
+    ],
+    "hint": "Una categoría mide la pérdida de valor económico en libros contables mientras que la otra evalúa la capacidad de operación del equipo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son características esenciales que definen a una auditoría logística profesional?",
+    "opciones": [
+      {
+        "text": "Debe ser objetiva, basada en evidencias reales, documentadas y verificables.",
+        "isCorrect": true,
+        "rationale": "Toda conclusión de auditoría requiere respaldo documental y constatación en campo sin basarse en suposiciones."
+      },
+      {
+        "text": "Debe ser sistemática, ejecutándose a través de etapas estructuradas de planificación, examen e informe.",
+        "isCorrect": true,
+        "rationale": "Mantiene una metodología rigurosa con fases definidas para garantizar un diagnóstico integral del almacén."
+      },
+      {
+        "text": "Debe ser imparcial y transparente, conducida por personal calificado sin conflictos de interés.",
+        "isCorrect": true,
+        "rationale": "La ética y la neutralidad del auditor garantizan que las observaciones y desviaciones identificadas sean veraces."
+      },
+      {
+        "text": "Debe ser informal y sustentarse únicamente en opiniones verbales no verificadas.",
+        "isCorrect": false,
+        "rationale": "La informalidad anula la validez técnica de un proceso de auditoría profesional."
+      },
+      {
+        "text": "Debe ocultar los faltantes de inventario para no alterar los presupuestos del área.",
+        "isCorrect": false,
+        "rationale": "Ocultar inconsistencias viola el principio ético básico de transparencia y objetividad de la auditoría."
+      }
+    ],
+    "hint": "Elige los atributos relacionados con la fundamentación en hechos comprobables, el rigor metodológico y la transparencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de realizar una auditoría interna antes de recibir una auditoría externa en el almacén?",
+    "opciones": [
+      {
+        "text": "Verificar de forma preventiva el cumplimiento de procesos y registros para detectar y corregir desviaciones con anticipación.",
+        "isCorrect": true,
+        "rationale": "La auditoría interna actúa como un mecanismo de autocontrol para corregir fallas operativas o documentales antes del examen externo formal."
+      },
+      {
+        "text": "Anular los contratos de trabajo de los operarios que cometieron errores en el mes.",
+        "isCorrect": false,
+        "rationale": "El propósito de la auditoría interna es la mejora continua de procesos, no la aplicación de sanciones laborales inmediatas."
+      },
+      {
+        "text": "Aumentar artificialmente el valor en libros del inventario dañado.",
+        "isCorrect": false,
+        "rationale": "Alterar el valor contable constituye una práctica fraudulenta contraria a los principios de auditoría."
+      },
+      {
+        "text": "Aprobar el presupuesto publicitario del departamento de ventas.",
+        "isCorrect": false,
+        "rationale": "El presupuesto publicitario es evaluado por la gerencia comercial y financiera, no por la auditoría interna de almacén."
+      },
+      {
+        "text": "Evitar que los productos del almacén se vendan a clientes locales.",
+        "isCorrect": false,
+        "rationale": "La auditoría busca optimizar la rotación y el cumplimiento, jamás detener las operaciones comerciales legítimas."
+      }
+    ],
+    "hint": "Piensa en la verificación previa del cumplimiento de estándares para detectar y corregir inconsistencias anticipadamente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la valorización de mercancías, ¿qué caracteriza al método de valoración NIFO (*Next-In, First-Out*)?",
+    "opciones": [
+      {
+        "text": "Valora las salidas de almacén utilizando el costo de reposición de la próxima unidad que se adquirirá en el mercado.",
+        "isCorrect": true,
+        "rationale": "NIFO (*Next-In, First-Out*) asigna a los productos que salen del almacén el precio estimado de reposición futura, lo que resulta útil para entornos inflacionarios o de alta rotación."
+      },
+      {
+        "text": "Obliga a vender primero los productos con la fecha de caducidad más lejana.",
+        "isCorrect": false,
+        "rationale": "El control por fechas de vencimiento corresponde al método FEFO (*First-Expired, First-Out*)."
+      },
+      {
+        "text": "Asigna un costo cero a todas las mercancías que entran por importación.",
+        "isCorrect": false,
+        "rationale": "Toda mercancía ingresada debe valorizarse obligatoriamente con su valor de adquisición y costos asociados."
+      },
+      {
+        "text": "Calcula el costo sumando las edades de todos los trabajadores del almacén.",
+        "isCorrect": false,
+        "rationale": "Esa premisa no tiene ningún sustento en la valoración de inventarios."
+      },
+      {
+        "text": "Prohíbe emitir órdenes de compra a proveedores nacionales.",
+        "isCorrect": false,
+        "rationale": "NIFO es un método contable de valoración de costos de salida, independientemente del origen del proveedor."
+      }
+    ],
+    "hint": "Asocia este método con el uso del costo de reposición de la próxima unidad para fijar el valor de salida del inventario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es fundamental la colaboración entre logística y contabilidad al realizar el cierre periódico de inventarios?",
+    "opciones": [
+      {
+        "text": "Porque contabilidad requiere conciliar las existencias físicas reportadas por logística con su correspondiente valorización monetaria en los estados financieros.",
+        "isCorrect": true,
+        "rationale": "La coincidencia entre las unidades físicas verificadas por logística y los saldos monetarios registrados por contabilidad garantiza estados financieros fidedignos."
+      },
+      {
+        "text": "Porque logística debe liquidar los salarios semanales del personal contable.",
+        "isCorrect": false,
+        "rationale": "El procesamiento de planillas es responsabilidad de recursos humanos/tesorería."
+      },
+      {
+        "text": "Porque contabilidad se encarga de empaquetar físicamente los pedidos en el área de despacho.",
+        "isCorrect": false,
+        "rationale": "El embalaje y despacho son tareas puramente operativas del personal de almacén."
+      },
+      {
+        "text": "Porque permite eliminar el uso de software informático en toda la empresa.",
+        "isCorrect": false,
+        "rationale": "La integración contable-logística se apoya firmemente en sistemas ERP integrados para agilizar el flujo de información."
+      },
+      {
+        "text": "Porque los contadores son los únicos autorizados para realizar el transporte nocturno.",
+        "isCorrect": false,
+        "rationale": "El transporte es ejecutado por transportistas y conductores autorizados."
+      }
+    ],
+    "hint": "Reflexiona sobre la necesidad de hacer coincidir las cantidades físicas en anaquel con las cifras monetarias en los estados contables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la meta central de implementar la filosofía *Just in Time* (JIT) en la gestión de almacenes?",
+    "opciones": [
+      {
+        "text": "Minimizar las existencias retenidas en almacén haciendo coincidir el arribo de materiales con el momento exacto de su consumo o venta.",
+        "isCorrect": true,
+        "rationale": "JIT busca eliminar el desperdicio y los costos de almacenamiento disponiendo del material strictly necesario en el momento preciso."
+      },
+      {
+        "text": "Acumular la mayor cantidad posible de materia prima para cubrir diez años de producción.",
+        "isCorrect": false,
+        "rationale": "Acumular inventarios excesivos es opuesto a los principios de esbeltez y eliminación de desperdicios del JIT."
+      },
+      {
+        "text": "Comprar materiales sin exigir especificaciones de calidad al proveedor.",
+        "isCorrect": false,
+        "rationale": "El JIT exige altos estándares de calidad en los proveedores, ya que no hay stock excesivo de amortiguación para tolerar insumos defectuosos."
+      },
+      {
+        "text": "Sustituir el uso de camiones por transporte traccionado a sangre.",
+        "isCorrect": false,
+        "rationale": "JIT requiere sistemas de transporte altamente eficientes y confiables para cumplir con las ventanas de entrega."
+      },
+      {
+        "text": "Aumentar el tiempo de espera de los clientes finales a más de seis meses.",
+        "isCorrect": false,
+        "rationale": "JIT busca acortar los tiempos de ciclo y responder con agilidad a las solicitudes del mercado."
+      }
+    ],
+    "hint": "Busca la minimización de existencias inactivas haciendo coincidir la llegada del material con el instante exacto de su uso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el modelo de Cantidad Económica de Pedido (EOQ), ¿qué indica el denominado \"Punto de Pedido\" (*Reorder Point*)?",
+    "opciones": [
+      {
+        "text": "El nivel límite de stock que señala el momento exacto en que debe emitirse una nueva orden de compra para evitar el desabastecimiento.",
+        "isCorrect": true,
+        "rationale": "El punto de reorden calcula la cantidad de inventario restante que cubre la demanda esperada durante el tiempo de entrega (*Lead Time*) del proveedor."
+      },
+      {
+        "text": "La hora del día en que el personal de limpieza ingresa al almacén.",
+        "isCorrect": false,
+        "rationale": "Ese es un horario de servicio operativo de mantenimiento de la sede."
+      },
+      {
+        "text": "El precio máximo que el cliente final está dispuesto a pagar por una unidad.",
+        "isCorrect": false,
+        "rationale": "Ese es el precio máximo de reserva en la evaluación de la demanda comercial."
+      },
+      {
+        "text": "La cantidad de facturas archivadas en la oficina de contabilidad al cierre del mes.",
+        "isCorrect": false,
+        "rationale": "El volumen de facturas es un indicador administrativo sin relación con el umbral de reorden de stock."
+      },
+      {
+        "text": "El costo fijo del flete aéreo internacional contratado para emergencias.",
+        "isCorrect": false,
+        "rationale": "Es una tarifa de transporte, no un nivel de inventario que activa una compra."
+      }
+    ],
+    "hint": "Identifica el nivel de existencias que desencadena la emisión de una nueva orden de compra para no romper stock.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En el esquema de un estado de resultados para el control de inventarios, ¿qué conceptos se restan de las ventas totales para obtener las \"ventas netas\"?",
+    "opciones": [
+      {
+        "text": "Descuentos concedidos sobre ventas.",
+        "isCorrect": true,
+        "rationale": "Las reducciones o bonificaciones otorgadas sobre el precio de lista disminuyen el ingreso bruto recaudado."
+      },
+      {
+        "text": "Devoluciones o rebajas sobre ventas.",
+        "isCorrect": true,
+        "rationale": "Los productos devueltos por los clientes o rebajados por inconformidad reducen directamente el monto neto vendido."
+      },
+      {
+        "text": "Gastos de propaganda y publicidad institucional.",
+        "isCorrect": false,
+        "rationale": "La publicidad se clasifica como un gasto operativo de ventas, no como una deducción directa de las ventas brutas."
+      },
+      {
+        "text": "Gastos de alquiler de las oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "El alquiler de oficinas forma parte de los gastos administrativos del periodo."
+      },
+      {
+        "text": "Compras netas realizadas durante el ejercicio.",
+        "isCorrect": false,
+        "rationale": "Las compras netas integran el cálculo del costo de mercancías disponibles, no la deducción de las ventas brutas."
+      }
+    ],
+    "hint": "Identifica las deducciones comerciales aplicadas directamente al valor bruto facturado que disminuyen el ingreso de ventas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la segmentación ABC de inventarios, ¿qué distingue a los productos pertenecientes a la categoría A?",
+    "opciones": [
+      {
+        "text": "Representan el mayor porcentaje del valor monetario acumulado del inventario, requiriendo un control estricto y prioridad de gestión.",
+        "isCorrect": true,
+        "rationale": "Los artículos A concentran típicamente entre el 70% y 80% del valor financiero del almacén con un número reducido de artículos, exigiendo el máximo control."
+      },
+      {
+        "text": "Son productos obsoletos que deben desecharse de inmediato sin registro.",
+        "isCorrect": false,
+        "rationale": "La categoría A alberga los artículos de mayor valor y prioridad estratégica, no material mermado u obsoleto."
+      },
+      {
+        "text": "Constituyen el 95% del volumen físico del almacén pero solo el 1% de su valor.",
+        "isCorrect": false,
+        "rationale": "Esa descripción corresponde habitualmente a los artículos de categoría C (alto volumen físico, bajo valor monetario)."
+      },
+      {
+        "text": "Son insumos cuyo almacenamiento no genera ningún tipo de costo fijos ni variables.",
+        "isCorrect": false,
+        "rationale": "Todo producto guardado en almacén incurre en costos de mantenimiento, espacio y capital inmovilizado."
+      },
+      {
+        "text": "Son materiales que solo se compran una vez cada diez años.",
+        "isCorrect": false,
+        "rationale": "Los artículos tipo A suelen tener alta rotación e impacto financiero en el ciclo constante del negocio."
+      }
+    ],
+    "hint": "Piensa en los bienes que concentran la mayor porción de capital e inversión en el almacén, requiriendo estricta prioridad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el estado de resultados enfocado en el control financiero de almacenes, ¿cuál es la fórmula para determinar la \"utilidad bruta\"?",
+    "opciones": [
+      {
+        "text": "Restar el costo de ventas de las ventas netas.",
+        "isCorrect": true,
+        "rationale": "La utilidad bruta se obtiene descontando el costo directo de las mercancías vendidas de los ingresos netos de venta."
+      },
+      {
+        "text": "Sumar los gastos administrativos con los impuestos de importación.",
+        "isCorrect": false,
+        "rationale": "Esa suma consolida rubros de gasto y tributos, sin reflejar el margen bruto de ventas."
+      },
+      {
+        "text": "Multiplicar las compras totales por la cantidad de montacargas disponibles.",
+        "isCorrect": false,
+        "rationale": "Esa operación no posee sentido dentro de la estructura formal del estado de resultados."
+      },
+      {
+        "text": "Dividir el inventario inicial entre el número total de clientes de la empresa.",
+        "isCorrect": false,
+        "rationale": "Esta división no corresponde a la determinación contable de márgenes de utilidad."
+      },
+      {
+        "text": "Restar los sueldos de gerencia del valor del inventario final.",
+        "isCorrect": false,
+        "rationale": "Los sueldos administrativos forman parte de los gastos de administración y se deducen más abajo en el estado financiero."
+      }
+    ],
+    "hint": "Considera la diferencia fundamental entre los ingresos netos obtenidos por facturación y el costo directo de los bienes vendidos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de la trazabilidad en un informe de inventarios dentro de la cadena logística?",
+    "opciones": [
+      {
+        "text": "Rastrear el origen, lote de producción, proveedor y recorrido del material a lo largo de toda la cadena.",
+        "isCorrect": true,
+        "rationale": "La trazabilidad permite identificar el historial completo del producto, desde la materia prima y el lote del fabricante hasta su entrega al cliente final."
+      },
+      {
+        "text": "Calcular automáticamente el precio de venta comercial ajustado según la inflación del mercado.",
+        "isCorrect": false,
+        "rationale": "El cálculo del precio de venta ajustado corresponde a la política financiera y de márgenes comerciales, no al rastreo del historial del producto."
+      },
+      {
+        "text": "Garantizar que el valor contable del inventario no sufra depreciación física en el almacén.",
+        "isCorrect": false,
+        "rationale": "La trazabilidad rastrea el origen y movimiento del lote, pero no evita de forma directa la depreciación física que sufren los bienes por el paso del tiempo."
+      },
+      {
+        "text": "Determinar exclusivamente el horario de entrada y salida del personal operativo de custodia.",
+        "isCorrect": false,
+        "rationale": "El registro de horarios de personal es un control de asistencia o acceso, mientras que la trazabilidad se enfoca en la historia y localización del producto o lote."
+      },
+      {
+        "text": "Reemplazar el uso de sistemas informáticos de gestión de almacenes como los ERP.",
+        "isCorrect": false,
+        "rationale": "La trazabilidad es un principio o atributo de control que suele integrarse dentro de un sistema ERP, no una herramienta que lo sustituya."
+      }
+    ],
+    "hint": "Piensa en el seguimiento integral del historial de un lote desde su origen hasta el consumidor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué el puesto de comprador en el departamento de logística requiere una persona highly minuciosa en la gestión de costos?",
+    "opciones": [
+      {
+        "text": "Porque administra directamente el capital de trabajo de la empresa al fijar las condiciones, especificaciones y compromisos financieros de adquisición.",
+        "isCorrect": true,
+        "rationale": "El comprador decide bajo qué términos técnicos y financieros se adquieren los insumos, evitando comprometer liquidez en materiales incorrectos o costosos."
+      },
+      {
+        "text": "Porque es el único profesional capacitado para realizar el mantenimiento correctivo de la maquinaria de planta.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento de maquinaria corresponde al área técnica o de mantenimiento, no a las funciones directas del comprador logístico."
+      },
+      {
+        "text": "Porque reemplaza completamente la función del planificador de producción (planner) en el layout.",
+        "isCorrect": false,
+        "rationale": "El comprador y el planificador tienen roles complementarios pero distintos: el planner define requerimientos y programas, y el comprador gestiona el proceso de adquisición."
+      },
+      {
+        "text": "Porque debe calcular diariamente los impuestos nacionales aplicables a la planilla del personal de despacho.",
+        "isCorrect": false,
+        "rationale": "La liquidación de impuestos de planilla es competencia del departamento de contabilidad o recursos humanos."
+      },
+      {
+        "text": "Porque su única tarea consiste en auditar las puertas de acceso biométrico en los centros de distribución.",
+        "isCorrect": false,
+        "rationale": "El control de accesos es una función de seguridad patrimonial o infraestructura, ajena a la negociación de compras."
+      }
+    ],
+    "hint": "Considera el impacto económico que tienen los contratos y especificaciones de compra sobre el capital de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto del control operativo de almacenes, ¿cuál es la distinción conceptual correcta entre 'pedido' y 'solicitud'?",
+    "opciones": [
+      {
+        "text": "El pedido es la acción operativa derivada de un requerimiento, mientras que la solicitud es la razón de ser o causa específica que justifica dicho requerimiento.",
+        "isCorrect": true,
+        "rationale": "El pedido representa la manifestación de una necesidad general de abastecerse, mientras que la solicitud formaliza el motivo, área de destino y especificación exacta del requerimiento."
+      },
+      {
+        "text": "El pedido proviene únicamente de clientes externos y la solicitud es un documento emitido exclusivamente por la SUNAT.",
+        "isCorrect": false,
+        "rationale": "Ambos términos se utilizan internamente en la gestión logística y no se restringen a entidades fiscales."
+      },
+      {
+        "text": "El pedido representa un valor contable depreciado, mientras que la solicitud es el costo directo de importación.",
+        "isCorrect": false,
+        "rationale": "Ninguno de los dos términos hace referencia a un método de depreciación o cálculo de aranceles de importación."
+      },
+      {
+        "text": "Ambos términos son idénticos y se aplican sin distinción formal en la gestión de compras globales.",
+        "isCorrect": false,
+        "rationale": "Existe una diferencia de alcance y especificidad entre solicitar la atención de una necesidad y generar la orden de pedido correspondiente."
+      },
+      {
+        "text": "La solicitud se realiza al finalizar el año fiscal y el pedido se ejecuta diariamente al cierre de caja.",
+        "isCorrect": false,
+        "rationale": "La periodicidad depende de las operaciones diarias de la empresa y no de una distinción fija anual versus diaria."
+      }
+    ],
+    "hint": "Analiza cuál término describe la causa de la necesidad y cuál la acción de requerir los bienes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre los términos 'abastecimiento' y 'aprovisionamiento'?",
+    "opciones": [
+      {
+        "text": "El abastecimiento atiende necesidades puntuales e inmediatas de operación, mientras que el aprovisionamiento implica decisiones estratégicas, análisis de costos y previsiones de largo plazo.",
+        "isCorrect": true,
+        "rationale": "El abastecimiento satisface una demanda operativa a corto plazo, mientras que el aprovisionamiento evalúa proveedores, condiciones contractuales y almacenamiento futuro."
+      },
+      {
+        "text": "El abastecimiento se refiere solo a productos perecederos y el aprovisionamiento a bienes de capital de minería.",
+        "isCorrect": false,
+        "rationale": "Ambos procesos pueden aplicarse a cualquier tipo de material o industria, sin importar la perecibilidad del bien."
+      },
+      {
+        "text": "El aprovisionamiento es gratuito mientras que el abastecimiento siempre requiere pago al contado inmediato.",
+        "isCorrect": false,
+        "rationale": "Ambos procesos involucran erogaciones de capital y gestión de costos para la empresa."
+      },
+      {
+        "text": "El abastecimiento se gestiona en la nube y el aprovisionamiento únicamente mediante guías físicas en papel.",
+        "isCorrect": false,
+        "rationale": "La herramienta tecnológica empleada no define la naturaleza conceptual de ninguno de los dos procesos."
+      },
+      {
+        "text": "El aprovisionamiento elimina la necesidad de contar con almacenes o centros de distribución.",
+        "isCorrect": false,
+        "rationale": "Al contrario, el aprovisionamiento planifica el almacenamiento y la capacidad instalada para sostener la operación."
+      }
+    ],
+    "hint": "Considera el alcance temporal y el nivel de planificación estratégica involucrado en cada concepto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa registra un costo de mercancías vendidas de $2,500,000 en un año y mantiene un inventario promedio de $500,000. Considerando un año laboral de 360 días, ¿cuántos días tarda la empresa en rotar su mercancía?",
+    "opciones": [
+      {
+        "text": "72 días.",
+        "isCorrect": true,
+        "rationale": "La tasa de rotación es $2,500,000 / $500,000 = 5 veces al año. Los días de rotación se calculan dividiendo 360 / 5 = 72 días."
+      },
+      {
+        "text": "5 días.",
+        "isCorrect": false,
+        "rationale": "Cinco representa el número de veces que el inventario se renueva al año (tasa de rotación), no la cantidad de días de permanencia."
+      },
+      {
+        "text": "50 días.",
+        "isCorrect": false,
+        "rationale": "Este valor es un cálculo erróneo que resulta de dividir el inventario promedio entre un factor incorrecto."
+      },
+      {
+        "text": "120 días.",
+        "isCorrect": false,
+        "rationale": "Ese resultado se obtendría si la rotación anual fuera de solo 3 veces al año."
+      },
+      {
+        "text": "36 días.",
+        "isCorrect": false,
+        "rationale": "Corresponde a considerar una tasa de rotación de 10 veces al año, lo cual no coincide con los datos brindados."
+      }
+    ],
+    "hint": "Primero divide el costo de ventas entre el inventario promedio para hallar las veces que rota al año, y luego divide los días del año comercial entre esa tasa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes reportes constituyen tipos de informes de inventario utilizados para la toma de decisiones en logística?",
+    "opciones": [
+      {
+        "text": "Informe de inventario valorizado.",
+        "isCorrect": true,
+        "rationale": "Detalla la cantidad física de existencias combinada con su valor monetario de adquisición o costo contable."
+      },
+      {
+        "text": "Informe de productos de stock crítico o de reposición urgente.",
+        "isCorrect": true,
+        "rationale": "Permite identificar los artículos próximos a agotarse para priorizar las órdenes de compra y evitar rupturas de stock."
+      },
+      {
+        "text": "Reporte de rendimiento y rotación del capital inmovilizado.",
+        "isCorrect": true,
+        "rationale": "Evalúa la velocidad con la que el dinero invertido en existencias se convierte en liquidez para la organización."
+      },
+      {
+        "text": "Registro público de nómina de personal de auditoría externa.",
+        "isCorrect": false,
+        "rationale": "Corresponde a un documento administrativo o legal de recursos humanos, no a un reporte de gestión de materiales de almacén."
+      },
+      {
+        "text": "Licencia municipal de funcionamiento del local comercial.",
+        "isCorrect": false,
+        "rationale": "Es un trámite de regulación legal de la propiedad o establecimiento, ajeno a los reportes de control del inventario."
+      }
+    ],
+    "hint": "Selecciona los documentos que evalúan cantidades, valores monetarios o la velocidad de movimiento de las existencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia sustancial entre 'costo' y 'gasto' desde la perspectiva del análisis financiero en logística?",
+    "opciones": [
+      {
+        "text": "El costo es una inversión directamente vinculada a la producción o adquisición que genera un retorno económico, mientras que el gasto no regresa directamente pero es necesario para la operación.",
+        "isCorrect": true,
+        "rationale": "El costo se incorpora al valor del producto o servicio y se recupera mediante la venta, mientras que el gasto soporta la estructura operativa sin capitalizarse en el bien."
+      },
+      {
+        "text": "El costo representa desembolsos en efectivo y el gasto se paga exclusivamente mediante pagarés bancarios.",
+        "isCorrect": false,
+        "rationale": "El medio de pago utilizado no define la clasificación financiera entre costo y gasto."
+      },
+      {
+        "text": "El gasto incrementa el valor activo en el balance general y el costo disminuye el patrimonio neto.",
+        "isCorrect": false,
+        "rationale": "Ocurre lo contrario: los costos inventariables forman parte de los activos (existencias), mientras que los gastos afectan directamente el estado de resultados."
+      },
+      {
+        "text": "Ambos conceptos son idénticos en la contabilidad de costos de almacenes industriales.",
+        "isCorrect": false,
+        "rationale": "Existe una rigurosa separación contable entre ambos para determinar los márgenes de utilidad bruta y operativa."
+      },
+      {
+        "text": "El costo se aplica solo a empresas públicas y el gasto a pequeñas empresas informales.",
+        "isCorrect": false,
+        "rationale": "La distinción entre costo y gasto aplica a todo tipo de organización independientemente de su naturaleza jurídica o tamaño."
+      }
+    ],
+    "hint": "Piensa en cuál de los dos desembolsos se recupera directamente a través del precio de venta del producto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si una empresa registra costos fijos totales de $119,000 al mes en su centro de distribución y proyecta una producción mensual de 20,000 unidades, ¿cuál es el costo fijo unitario asignado a cada producto?",
+    "opciones": [
+      {
+        "text": "$5.95",
+        "isCorrect": true,
+        "rationale": "El costo fijo unitario se obtiene dividiendo el costo fijo total ($119,000) entre la cantidad producida (20,000 unidades), lo que resulta en $5.95."
+      },
+      {
+        "text": "$4.00",
+        "isCorrect": false,
+        "rationale": "Este valor suele representar un componente estimado de costo variable, no la división del costo fijo proyectado."
+      },
+      {
+        "text": "$9.95",
+        "isCorrect": false,
+        "rationale": "Corresponde a la suma hipotética del costo fijo unitario y un costo variable de $4.00, no al costo fijo unitario aislado."
+      },
+      {
+        "text": "$0.17",
+        "isCorrect": false,
+        "rationale": "Se obtiene erróneamente invirtiendo la división: 20,000 / 119,000."
+      },
+      {
+        "text": "$11.90",
+        "isCorrect": false,
+        "rationale": "Resulta de asumir una producción de solo 10,000 unidades en lugar de las 20,000 indicadas."
+      }
+    ],
+    "hint": "Divide el monto total de los costos fijos entre el volumen total de unidades proyectadas para el periodo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la depreciación de maquinaria y equipos en el almacén debe ser considerada minuciosamente en el análisis de costos?",
+    "opciones": [
+      {
+        "text": "Porque representa la pérdida gradual de valor y capacidad operativa del activo a lo largo del tiempo, requiriendo un fondo de reserva para su mantenimiento o reemplazo.",
+        "isCorrect": true,
+        "rationale": "Ignorar la depreciación genera una falsa sensación de rentabilidad al no contabilizar el desgaste del activo ni prever su renovación antes de la falla."
+      },
+      {
+        "text": "Porque es un gasto variable que se paga en efectivo de forma semanal a los proveedores de transporte.",
+        "isCorrect": false,
+        "rationale": "La depreciación es una cuenta no monetaria (no implica salida inmediata de caja en cada periodo) y se clasifica generalmente como costo o gasto fijo."
+      },
+      {
+        "text": "Porque elimina el pago de impuestos de importación para repuestos mecánicos.",
+        "isCorrect": false,
+        "rationale": "La depreciación es un concepto contable de desgaste de activos y no exonera del pago de tributos aduaneros."
+      },
+      {
+        "text": "Porque garantiza que el combustible utilizado por las montacargas mantenga un precio constante.",
+        "isCorrect": false,
+        "rationale": "El precio del combustible fluctúa según variables de mercado externo y no guarda relación con la depreciación contable de la máquina."
+      },
+      {
+        "text": "Porque es la única variable que utiliza el método ABC para clasificar los materiales en stock.",
+        "isCorrect": false,
+        "rationale": "El método ABC utiliza volúmenes de consumo, valores monetarios o frecuencias de actividad, no la depreciación individual del equipo."
+      }
+    ],
+    "hint": "Reflexiona sobre qué le ocurre al valor y a la vida útil de una máquina a medida que pasan los años de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En un estudio de costeo por actividades (ABC), la actividad de 'Compras' presenta un costo total de $150,000. Si la empresa registra 700 órdenes de compra para la línea A y 500 para la línea B, ¿cuál es la tasa de costo por cada orden de compra?",
+    "opciones": [
+      {
+        "text": "$125 por orden.",
+        "isCorrect": true,
+        "rationale": "El total de generadores de costo (órdenes) es 700 + 500 = 1,200. La tasa de actividad se calcula dividiendo $150,000 / 1,200 = $125."
+      },
+      {
+        "text": "$214.28 por orden.",
+        "isCorrect": false,
+        "rationale": "Resulta de dividir el costo total solo entre las 700 órdenes de la línea A, omitiendo las órdenes de la línea B."
+      },
+      {
+        "text": "$300 por orden.",
+        "isCorrect": false,
+        "rationale": "Se obtiene de dividir el costo total entre solo 500 órdenes correspondientes a la línea B."
+      },
+      {
+        "text": "$150 por orden.",
+        "isCorrect": false,
+        "rationale": "Corresponde a asumir erróneamente un volumen total de 1,000 órdenes de compra."
+      },
+      {
+        "text": "$50 por orden.",
+        "isCorrect": false,
+        "rationale": "Es un valor que coincide con otras tasas de movimiento de materiales, pero no con los datos del generador de compras."
+      }
+    ],
+    "hint": "Suma el total de órdenes de compra de ambas líneas de producción y divide el costo total de la actividad entre esa suma.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "A partir del cálculo de la tasa de actividad de compras ($125 por orden), si la línea de producción de 'Hornos' utilizó 700 órdenes de compra en el periodo, ¿cuál es el costo total por la actividad de compras imputable a esta línea?",
+    "opciones": [
+      {
+        "text": "$87,500",
+        "isCorrect": true,
+        "rationale": "Multiplicando la tasa de la actividad ($125) por la cantidad de inducciones o bases consumidas por la línea (700 órdenes): $125 * 700 = $87,500."
+      },
+      {
+        "text": "$62,500",
+        "isCorrect": false,
+        "rationale": "Este monto se obtiene al imputar la actividad a la línea B (500 órdenes * $125), no a la línea de Hornos."
+      },
+      {
+        "text": "$150,000",
+        "isCorrect": false,
+        "rationale": "Representa el costo global del pool de compras para todas las líneas de producción combinadas."
+      },
+      {
+        "text": "$35,000",
+        "isCorrect": false,
+        "rationale": "Resulta de multiplicar las 700 órdenes por un costo unitario arbitrario de $50."
+      },
+      {
+        "text": "$105,000",
+        "isCorrect": false,
+        "rationale": "Es un cálculo que presupone un consumo de 840 órdenes de compra a la tasa evaluada."
+      }
+    ],
+    "hint": "Multiplica la tasa asignada a la actividad por el número específico de órdenes generadas para esa línea.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes afirmaciones describen correctamente la relación entre la rentabilidad, la productividad y el costo de oportunidad del personal operativo?",
+    "opciones": [
+      {
+        "text": "Trabajar horas extras de forma desmedida puede provocar fatiga en el personal, incrementando errores y reduciendo la productividad real a largo plazo.",
+        "isCorrect": true,
+        "rationale": "El desgaste físico y mental disminuye la eficiencia por hora trabajada y genera mayores mermas o reprocesos que encarecen la operación."
+      },
+      {
+        "text": "La rentabilidad evalúa la ganancia neta en relación con los recursos invertidos, mientras que ser productivo implica hacer más unidades en un tiempo determinado.",
+        "isCorrect": true,
+        "rationale": "Se puede ser altamente productivo fabricando productos no demandados, pero eso genera inventario inmovilizado y perjudica la rentabilidad."
+      },
+      {
+        "text": "El costo de oportunidad representa el beneficio que se deja de percibir al asignar recursos a una alternativa en lugar de otra.",
+        "isCorrect": true,
+        "rationale": "Evalúa los ingresos perdidos cuando el capital de trabajo o el tiempo del personal se detienen en tareas no óptimas."
+      },
+      {
+        "text": "El pago de horas extras siempre garantiza un incremento proporcional en la utilidad financiera neta de la empresa.",
+        "isCorrect": false,
+        "rationale": "El costo recargado por horas extras (con sobrecostos del 25% o 35%) puede superar el beneficio de producción si no está estrictamente planificado."
+      },
+      {
+        "text": "La productividad se mide únicamente restando los costos fijos de las ventas netas anuales.",
+        "isCorrect": false,
+        "rationale": "Esta resta calcula la utilidad bruta u operativa; la productividad mide la eficiencia de producción en relación a los insumos utilizados."
+      }
+    ],
+    "hint": "Diferencia la eficiencia operativa de la ganancia monetaria final y evalúa los efectos de la sobrecarga laboral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la principal ventaja operativa de un sistema de control de accesos en red en comparación con un sistema autónomo dentro de un almacén?",
+    "opciones": [
+      {
+        "text": "Permite el monitoreo y autorización en tiempo real con trazabilidad centralizada de usuarios, horarios y transacciones a través de un software o ERP.",
+        "isCorrect": true,
+        "rationale": "El sistema en red vincula las credenciales electrónicas directamente con la base de datos central, ofreciendo auditoría instantánea de cada apertura o solicitud de existencias."
+      },
+      {
+        "text": "No requiere suministro eléctrico ni conexión a servidores o bases de datos.",
+        "isCorrect": false,
+        "rationale": "Esta es una característica de cerraduras mecánicas tradicionales o sistemas autónomos simples de batería, no de sistemas en red."
+      },
+      {
+        "text": "Garantiza que ningún producto sufra depreciación por el paso del tiempo.",
+        "isCorrect": false,
+        "rationale": "El control de acceso resguarda la seguridad física, pero no altera el envejecimiento ni el ciclo de vida del material."
+      },
+      {
+        "text": "Elimina de forma definitiva la necesidad de contar con un jefe de almacén.",
+        "isCorrect": false,
+        "rationale": "Los sistemas automatizados son herramientas de control que apoyan la gestión, pero la supervisión operativa sigue siendo indispensable."
+      },
+      {
+        "text": "Es el único método aceptado para realizar el costo de ventas en el estado de resultados.",
+        "isCorrect": false,
+        "rationale": "El control de acceso es una medida de seguridad patrimonial y no un método contable de valuación de inventarios."
+      }
+    ],
+    "hint": "Enfócate en la conectividad centralizada y la capacidad de registrar datos instantáneamente en un servidor central.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la ciberseguridad y la protección de datos en la nube se han vuelto críticas para la gestión de existencias y los códigos SKU?",
+    "opciones": [
+      {
+        "text": "Porque la filtración o alteración de datos de SKUs y volúmenes de stock por parte de competidores o atacantes puede arruinar estrategias comerciales y desproteger la cadena de suministro.",
+        "isCorrect": true,
+        "rationale": "La información sobre capacidad de abasto, recetas, clientes y costos en la nube es un activo estratégico cuya pérdida o manipulación expone a la empresa al boicot o a pérdidas millonarias."
+      },
+      {
+        "text": "Porque las normativas aduaneras prohíben estrictamente almacenar descripciones de productos en formato electrónico.",
+        "isCorrect": false,
+        "rationale": "Al contrario, el comercio internacional exige la digitalización y transmisión electrónica de datos aduaneros y manifiestos de carga."
+      },
+      {
+        "text": "Porque un ataque cibernético provoca la rotura física e inmediata de los anaqueles del almacén.",
+        "isCorrect": false,
+        "rationale": "Los ataques informáticos comprometen la integridad de la información y el software, no la estructura física de los estantes."
+      },
+      {
+        "text": "Porque reemplaza las inspecciones físicas de las Buenas Prácticas de Almacenamiento (BPA).",
+        "isCorrect": false,
+        "rationale": "Las inspecciones físicas de salubridad y almacenamiento son complementarias a la seguridad digital y ambas se deben cumplir."
+      },
+      {
+        "text": "Porque la nube es un espacio físico de custodia donde el riesgo de incendio es totalmente cero.",
+        "isCorrect": false,
+        "rationale": "La nube hace referencia a infraestructura de servidores de datos; los inventarios físicos siguen almacenados en depósitos vulnerables a riesgos ambientales."
+      }
+    ],
+    "hint": "Piensa en el valor estratégico de los datos de inventario y los riesgos comerciales de que la competencia acceda a ellos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Las Buenas Prácticas de Almacenamiento (BPA) buscan preservar las condiciones óptimas de las existencias. ¿Cuál es el impacto financiero directo de un fallo en la conservación del condicionamiento ambiental?",
+    "opciones": [
+      {
+        "text": "Incremento de mermas y productos vencidos o dañados, lo que se traduce en pérdidas directas de capital inmovilizado e incrementos en los costos de mantenimiento.",
+        "isCorrect": true,
+        "rationale": "Si un bien perecedero o sensible se expone a humedad o calor indebido, pierde su vida útil, destruyendo el valor del inventario antes de su comercialización."
+      },
+      {
+        "text": "Reducción automática de los impuestos municipales por concepto de arbitrios de serenazgo.",
+        "isCorrect": false,
+        "rationale": "La pérdida de existencias por mal manejo no genera beneficios de reducción en arbitrios municipales."
+      },
+      {
+        "text": "Aumento inmediato de la tasa de rotación en el reporte de compras netas.",
+        "isCorrect": false,
+        "rationale": "El deterioro del material bloquea su rotación comercial o lo convierte en baja por merma, perdiendo la oportunidad de venta."
+      },
+      {
+        "text": "Eliminación del pago de seguro obligatorio para la flota de vehículos de la empresa.",
+        "isCorrect": false,
+        "rationale": "Las pólizas de seguros de flota son independientes de las condiciones higiénicas o térmicas de los depósitos internos."
+      },
+      {
+        "text": "Aumento del valor comercial de los bienes obsoletos archivados en el Kardex.",
+        "isCorrect": false,
+        "rationale": "Un bien deteriorado o vencido pierde su valor realizable, reduciendo o anulando su precio de venta."
+      }
+    ],
+    "hint": "Analiza qué le ocurre al valor del producto y a la liquidez de la empresa cuando una mercancía se echa a perder en el depósito.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica distintiva del mantenimiento predictivo frente al mantenimiento preventivo en la gestión de flotas y equipos del almacén?",
+    "opciones": [
+      {
+        "text": "El predictivo monitorea variables operativas en tiempo real (sensores, software) para intervenir justo antes de la falla, maximizando la vida útil disponible del activo.",
+        "isCorrect": true,
+        "rationale": "A diferencia del preventivo, que sigue intervalos fijos de tiempo o kilometraje, el predictivo evalúa el estado real del equipo mediante diagnóstico sistemático."
+      },
+      {
+        "text": "El predictivo solo se ejecuta cuando la máquina se rompe por completo durante la jornada productiva.",
+        "isCorrect": false,
+        "rationale": "Intervenir tras la rotura se denomina mantenimiento correctivo, el cual interrumpe imprevistamente la operación."
+      },
+      {
+        "text": "El preventivo es más avanzado ya que utiliza inteligencia artificial para anticipar el desgaste del motor.",
+        "isCorrect": false,
+        "rationale": "La inteligencia artificial y el monitoreo por sensores son herramientas avanzadas aplicadas específicamente en esquemas predictivos."
+      },
+      {
+        "text": "El predictivo elimina completamente la necesidad de comprar repuestos mecánicos o lubricantes.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento predictivo programa las compras de repuestos con precisión, pero el consumo de componentes sigue siendo necesario."
+      },
+      {
+        "text": "Ambos tipos de mantenimiento representan un gasto superfluo que no influye en la rentabilidad de la empresa.",
+        "isCorrect": false,
+        "rationale": "Preservar los activos mediante un mantenimiento adecuado previene paradas críticas de planta que generan grandes pérdidas económicas."
+      }
+    ],
+    "hint": "Piensa en el uso de datos y sensores en tiempo real para determinar el momento exacto en que un componente debe ser reemplazado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el rol principal de un auditor interno dentro del proceso de control de un almacén en comparación con un auditor externo?",
+    "opciones": [
+      {
+        "text": "El auditor interno es designado por la empresa para revisar sistemáticamente el cumplimiento de procesos y corregir desviaciones antes de las auditorías de certificación o fiscalización.",
+        "isCorrect": true,
+        "rationale": "Su objetivo es preventivo y de mejora continua interna, asegurando que los registros y procedimientos estén listos y alineados a las políticas corporativas."
+      },
+      {
+        "text": "El auditor interno emite dictámenes tributarios con valor de fe pública nacional ante el Ministerio de Trabajo.",
+        "isCorrect": false,
+        "rationale": "La validación con fe pública sobre estados financieros ante entes fiscalizadores externos corresponde a auditores independientes e instituciones reguladoras."
+      },
+      {
+        "text": "El auditor externo depende jerárquicamente del jefe de compras y le ayuda a descargar materiales.",
+        "isCorrect": false,
+        "rationale": "El auditor externo es una entidad o profesional independiente que evalúa objetivamente la organización sin subordinación a jefaturas operativas."
+      },
+      {
+        "text": "El auditor interno realiza únicamente la limpieza de herramientas y calibración de montacargas.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento técnico de equipos es una función operativa, distinta a la labor de verificación documental y formal de la auditoría."
+      },
+      {
+        "text": "Ambos auditores tienen estrictamente prohibido revisar la evidencia documental física o digital.",
+        "isCorrect": false,
+        "rationale": "El sustento de cualquier auditoría radica precisamente en la revisión rigurosa de las evidencias objetivas y registros."
+      }
+    ],
+    "hint": "Considera qué profesional realiza la preparación y revisión previa de los procesos desde dentro de la propia organización.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En un plan de auditoría logística basada en estándares internacionales (como las normas ISO), ¿cuáles de los siguientes constituyen criterios de evaluación y hallazgos críticos de auditoría?",
+    "opciones": [
+      {
+        "text": "Verificación del cumplimiento de las cláusulas de seguridad, salud e identificación de peligros en la zona de almacenamiento.",
+        "isCorrect": true,
+        "rationale": "Auditar normas como ISO 45001 implica contrastar que los riesgos ocupacionales y sustancias peligrosas estén debidamente controlados y señalizados."
+      },
+      {
+        "text": "Contrastación de la evidencia física de inventario frente a los registros en el sistema informático (Kardex/ERP).",
+        "isCorrect": true,
+        "rationale": "La discrepancia entre la existencia física observada y el saldo del libro contable constituye un hallazgo clásico de auditoría."
+      },
+      {
+        "text": "Evaluación del registro de capacitaciones al personal sobre el uso y mantenimiento de las herramientas de trabajo.",
+        "isCorrect": true,
+        "rationale": "La falta de registros documentados de capacitación es un no cumplimiento normativo en los sistemas de gestión de calidad y procesos."
+      },
+      {
+        "text": "Comprobación del menú alimenticio preferido por los proveedores internacionales durante su estancia turística.",
+        "isCorrect": false,
+        "rationale": "Las preferencias personales o turísticas de los proveedores no constituyen un criterio normativo auditable de la cadena logística."
+      },
+      {
+        "text": "Revisión obligatoria del historial de redes sociales personales de todos los operarios de montacargas.",
+        "isCorrect": false,
+        "rationale": "Las redes sociales privadas de los empleados no forman parte del alcance de una auditoría técnica de almacenes."
+      }
+    ],
+    "hint": "Identifica aquellos elementos que aportan evidencia objetiva sobre la seguridad, precisión del inventario y la capacitación en el trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el método de valoración de inventarios NIFO (Next-In, First-Out) y en qué contexto resulta adecuado su uso operativo?",
+    "opciones": [
+      {
+        "text": "Valora la salida de existencias al costo de reposición futuro de la mercancía, utilizándose para ajustar precios en periodos de alta inflación o rápida rotación.",
+        "isCorrect": true,
+        "rationale": "A diferencia de FIFO o LIFO, NIFO asigna a las existencias vendidas el valor que costará volver a adquirirlas en el mercado inmediato, preservando el margen de reposición."
+      },
+      {
+        "text": "Obliga a vender los bienes más antiguos del depósito al precio del costo histórico original sin incluir margen.",
+        "isCorrect": false,
+        "rationale": "Esta descripción se acerca más al principio de valoración FIFO tradicional bajo costos de adquisición pasados."
+      },
+      {
+        "text": "Consiste en ignorar todas las entradas de inventario y registrar únicamente las donaciones de activos.",
+        "isCorrect": false,
+        "rationale": "NIFO es una metodología técnica de valoración contable y de gestión, no un procedimiento de bajas o donaciones."
+      },
+      {
+        "text": "Es un método exclusivamente diseñado para bienes raíces que no se pueden mover del sitio de fabricación.",
+        "isCorrect": false,
+        "rationale": "NIFO se aplica activamente a bienes muebles de alta rotación, supermercados y productos de consumo masivo."
+      },
+      {
+        "text": "Prohíbe el uso de pistolas de radiofrecuencia (RFID) en el proceso de recepción.",
+        "isCorrect": false,
+        "rationale": "El método NIFO se beneficia enormemente del uso de herramientas tecnológicas como RFID para la actualización ágil de datos."
+      }
+    ],
+    "hint": "Relaciona la sigla 'Next-In' con el costo que tendrá la siguiente orden de compra para reponer el producto vendido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al comparar los métodos FIFO (PEPS) y Costo Medio Ponderado (CMP) durante un periodo de precios de compra ascendentes (inflación), ¿qué efecto financiero produce el uso de FIFO en los estados financieros?",
+    "opciones": [
+      {
+        "text": "Asigna los costos más antiguos (más bajos) al costo de ventas, lo que genera una mayor utilidad bruta y un valor de inventario final más actualizado en el balance.",
+        "isCorrect": true,
+        "rationale": "Al salir primero los bienes comprados a menor costo previo, el costo de venta disminuye y la utilidad contable bruta se incrementa, dejando el stock final a precios de mercado recientes."
+      },
+      {
+        "text": "Reduce la utilidad bruta a cero y genera de inmediato una pérdida neta no computable.",
+        "isCorrect": false,
+        "rationale": "El método FIFO no anula las utilidades ni causa automáticamente pérdidas contables en contextos de inflación."
+      },
+      {
+        "text": "Provoca que el valor del inventario final esté subvaluado a costos antiguos de hace diez años.",
+        "isCorrect": false,
+        "rationale": "Eso sucedería con el método LIFO (UEPS), el cual retiene los precios más antiguos en el inventario final."
+      },
+      {
+        "text": "Genera exactamente el mismo resultado matemático que el método LIFO en todos los ejercicios.",
+        "isCorrect": false,
+        "rationale": "FIFO y LIFO producen resultados opuestos en el costo de ventas y en la valoración final del stock en contextos de variabilidad de precios."
+      },
+      {
+        "text": "Impide calcular las ventas netas de la empresa al cierre del periodo fiscal.",
+        "isCorrect": false,
+        "rationale": "Las ventas netas dependen de las facturas emitidas y descuentos concedidos, independientemente del método de valoración del costo de venta utilizado."
+      }
+    ],
+    "hint": "Considera qué mercancías salen primero con FIFO y qué costo (antiguo o reciente) se imputa a la cuenta de costo de ventas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo central de implementar la filosofía Just-In-Time (JIT) en la administración financiera de inventarios?",
+    "opciones": [
+      {
+        "text": "Reducir el inventario inmovilizado al mínimo necesario mediante entregas sincronizadas de proveedores, disminuyendo drásticamente el costo de mantenimiento y espacio.",
+        "isCorrect": true,
+        "rationale": "JIT busca que las materias primas lleguen al almacén justo cuando van a ingresar a producción o despacho, evitando costos de almacenamiento masivo."
+      },
+      {
+        "text": "Acumular la mayor cantidad posible de stock de seguridad para dos años de producción ininterrumpida.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento masivo de respaldo contradice el principio JIT, que califica el exceso de stock como un desperdicio de capital."
+      },
+      {
+        "text": "Eliminar la necesidad de comunicarse con los proveedores de materias primas.",
+        "isCorrect": false,
+        "rationale": "El éxito de JIT exige una comunicación constante, transparente y altamente integrada con proveedores confiables."
+      },
+      {
+        "text": "Sustituir los sistemas ERP por hojas de anotaciones en libretas manuales de papel.",
+        "isCorrect": false,
+        "rationale": "JIT requiere sistemas informáticos ágiles de monitoreo de demanda para coordinar los reabastecimientos exactos."
+      },
+      {
+        "text": "Aumentar al máximo los días de permanencia del producto dentro de los anaqueles.",
+        "isCorrect": false,
+        "rationale": "JIT busca minimizar el tiempo de permanencia en depósito, acelerando al máximo la tasa de rotación."
+      }
+    ],
+    "hint": "Piensa en el significado de 'Justo a tiempo' y en la eliminación del capital estancado en el almacén.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el modelo de la Cantidad Económica de Pedido (EOQ), ¿qué representa el punto de reorden y cómo influye el tiempo de entrega (Lead Time)?",
+    "opciones": [
+      {
+        "text": "Es el nivel de existencias al cual se debe emitir un nuevo pedido, calculado en función del consumo diario y del tiempo que tarda el proveedor en entregar el lote.",
+        "isCorrect": true,
+        "rationale": "El punto de reorden indica el nivel crítico de stock que garantiza cubrir la demanda esperada durante los días que toma la atención del pedido (Lead Time)."
+      },
+      {
+        "text": "Es el precio máximo de descuento comercial que la empresa exige al vender todo su stock.",
+        "isCorrect": false,
+        "rationale": "El punto de reorden se enfoca en una cantidad física o umbral de stock en almacén, no en un porcentaje de descuento de venta."
+      },
+      {
+        "text": "Es el momento exacto en que la empresa se declara en quiebra por falta de auditorías.",
+        "isCorrect": false,
+        "rationale": "Es un mecanismo operativo para reponer inventarios a tiempo y evitar la paralización del servicio."
+      },
+      {
+        "text": "Representa el costo fijo de la planilla del departamento de sistemas.",
+        "isCorrect": false,
+        "rationale": "Los sueldos administrativos forman parte de los gastos fijos operativos de la empresa y no del indicador cuantitativo de reorden de un SKU."
+      },
+      {
+        "text": "Es una constante matemática fija que equivale siempre a cero unidades en todas las industrias.",
+        "isCorrect": false,
+        "rationale": "Si el punto de reorden fuera cero, la empresa sufriría desabastecimiento continuo durante los días que el proveedor tarda en despachar."
+      }
+    ],
+    "hint": "Ubica el umbral de existencias que alerta a la empresa para comprar antes de quedarse sin stock mientras espera al proveedor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Se presentan los siguientes datos de una empresa: Ventas brutas = $1,000,000; Descuentos sobre ventas = $30,000; Inventario inicial = $800,000; Compras netas = $598,000; e Inventario final = $755,040. ¿A cuánto asciende la utilidad bruta?",
+    "opciones": [
+      {
+        "text": "$327,040",
+        "isCorrect": true,
+        "rationale": "Ventas netas = $1,000,000 - $30,000 = $970,000. Mercancía disponible = $800,000 + $598,000 = $1,398,000. Costo de ventas = $1,398,000 - $755,040 = $642,960. Utilidad Bruta = Ventas netas ($970,000) - Costo de Ventas ($642,960) = $327,040."
+      },
+      {
+        "text": "$139,000",
+        "isCorrect": false,
+        "rationale": "Es un valor que resulta de omisiones en el cálculo del costo de ventas o de utilizar compras brutas sin descontar las variaciones."
+      },
+      {
+        "text": "$970,000",
+        "isCorrect": false,
+        "rationale": "Este valor representa únicamente las Ventas Netas antes de sustraer el Costo de Ventas."
+      },
+      {
+        "text": "$642,960",
+        "isCorrect": false,
+        "rationale": "Corresponde al Costo de Ventas calculated, el cual debe ser restado de las ventas netas para llegar a la utilidad bruta."
+      },
+      {
+        "text": "$217,000",
+        "isCorrect": false,
+        "rationale": "Es una cifra que resulta de restar gastos de administración arbitrarios de la cifra de ventas."
+      }
+    ],
+    "hint": "Obtén las ventas netas, calcula la mercancía disponible sumando el inventario inicial y las compras netas, resta el inventario final para hallar el costo de ventas y réstalo de las ventas netas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes acciones forman parte de las estrategias efectivas para mitigar el riesgo de obsolescencia y reducir costos en la gestión de stock?",
+    "opciones": [
+      {
+        "text": "Uso de matrices de categorización de compras y gestión estratégica de proveedores como la matriz de Kraljic.",
+        "isCorrect": true,
+        "rationale": "Clasifica los productos según su riesgo de suministro e impacto financiero para aplicar la estrategia de adquisición adecuada."
+      },
+      {
+        "text": "Ajuste continuo y revisión periódica de los niveles del stock de seguridad basados en la demanda real.",
+        "isCorrect": true,
+        "rationale": "Evita sostener volúmenes de reserva excesivos de artículos con baja rotación, liberando capital de trabajo."
+      },
+      {
+        "text": "Implementación de promociones, remates o acuerdos de devolución con proveedores para los productos de baja rotación.",
+        "isCorrect": true,
+        "rationale": "Permite evacuar las existencias antes de que pierdan su valor realizable por vencimiento o cambio tecnológico."
+      },
+      {
+        "text": "Aumentar indefinidamente las compras de productos tipo C sin consultar los históricos de venta.",
+        "isCorrect": false,
+        "rationale": "Comprar sin respaldo de demanda en artículos no críticos genera sobrestock e inmoviliza liquidez inútilmente."
+      },
+      {
+        "text": "Ocultar la información del kardex de almacén al departamento de finanzas y ventas.",
+        "isCorrect": false,
+        "rationale": "La falta de visibilidad del estado real del inventario impide tomar medidas preventivas para vender o liquidar bienes."
+      }
+    ],
+    "hint": "Elige las prácticas que optimizan la visibilidad, ajustan el inventario a la demanda real y evacúan el material de baja rotación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-19",
+    "diplomado": "CONTROL FINANCIERO EN ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al analizar el Estado de Resultados de una empresa comercializadora, si los gastos operativos (gastos de venta y gastos administrativos) y financieros superan la utilidad bruta del periodo, ¿cuáles son las consecuencias e interpretaciones financieras correctas?",
+    "opciones": [
+      {
+        "text": "La empresa genera una Pérdida Neta en el ejercicio, reduciendo su patrimonio contable.",
+        "isCorrect": true,
+        "rationale": "Si el margen bruto no logra cubrir la carga de la estructura operativa y los intereses de deuda, el resultado final es negativo."
+      },
+      {
+        "text": "Existe una ineficiencia en la estructura de costos operativos o de financiamiento que exige revisar gastos de administración o vender inventario inmovilizado.",
+        "isCorrect": true,
+        "rationale": "La pérdida operativa o neta alerta sobre la necesidad urgente de reestructurar costos fijos o dinamizar la fuerza de ventas."
+      },
+      {
+        "text": "El flujo de caja debe ser evaluado para evitar problemas de liquidez y compromisos de pago con terceros.",
+        "isCorrect": true,
+        "rationale": "Mantener resultados deficitarios prolongadamente compromete la capacidad de la empresa para cumplir con proveedores y entidades financieras."
+      },
+      {
+        "text": "Significa automáticamente que las ventas netas fueron iguales a cero durante todos los meses del año.",
+        "isCorrect": false,
+        "rationale": "Puede haber un volumen muy alto de ventas netas, pero si los gastos operativos son desmedidos, la empresa igual incurrirá en pérdida."
+      },
+      {
+        "text": "Garantiza que la SUNAT devuelva inmediatamente el 100% de las compras netas realizadas en efectivo.",
+        "isCorrect": false,
+        "rationale": "Incurrir en pérdidas no implica una devolución directa de las compras realizadas a proveedores."
+      }
+    ],
+    "hint": "Analiza la relación cuando los egresos administrativos, comerciales y financieros rebasan el margen bruto de ventas.",
+    "activo": true
+  }
+]

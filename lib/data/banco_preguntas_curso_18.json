@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal de determinar el Lote Económico de Compra (EOQ) en la gestión de inventarios?",
+    "opciones": [
+      {
+        "text": "Encontrar el punto de equilibrio entre los costos de pedido y de almacenamiento para evitar desabastecimiento y exceso.",
+        "isCorrect": true,
+        "rationale": "El lote económico busca equilibrar el costo de pedir con el costo de mantener en almacén, identificando la cantidad óptima de compra."
+      },
+      {
+        "text": "Maximizar el volumen físico ocupado en las instalaciones para aprovechar todo el espacio disponible.",
+        "isCorrect": false,
+        "rationale": "Llenar el almacén sin considerar la demanda incrementa drásticamente los costos de mantención y genera sobrestock."
+      },
+      {
+        "text": "Comprar siempre la mayor cantidad posible de productos para obtener descuentos sin evaluar el almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Aunque comprar a gran volumen reduce el costo unitario de compra, eleva los costos de almacenamiento si no existe rotación adecuada."
+      },
+      {
+        "text": "Eliminar por completo el personal de picking y recepción dentro de las operaciones del almacén.",
+        "isCorrect": false,
+        "rationale": "El EOQ es un modelo matemático de gestión de inventarios y no busca la eliminación directa de mano de obra en el almacén."
+      },
+      {
+        "text": "Aumentar al máximo los costos de mantención de inventario para asegurar reservas permanentes.",
+        "isCorrect": false,
+        "rationale": "El objetivo financiero de la empresa es reducir y optimizar costos, no incrementarlos intencionalmente."
+      }
+    ],
+    "hint": "Piensa en el balance entre la compra masiva y el costo que implica guardar productos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la representación gráfica del Lote Económico de Compra, ¿qué comportamiento presenta el costo de mantenimiento conforme aumenta la cantidad almacenada?",
+    "opciones": [
+      {
+        "text": "A mayor cantidad de productos almacenados, mayor es el costo de mantenimiento.",
+        "isCorrect": true,
+        "rationale": "A medida que se incrementan las existencias físicas, se requiere mayor espacio, recursos y supervisión, aumentando directamente el costo de mantención."
+      },
+      {
+        "text": "A mayor cantidad de productos almacenados, menor es el costo de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Este comportamiento corresponde al costo unitario de compra o pedido, no al costo de almacenamiento o mantención."
+      },
+      {
+        "text": "El costo de mantenimiento permanece constante e independiente del volumen de inventario.",
+        "isCorrect": false,
+        "rationale": "El costo de mantenimiento es variable respecto al volumen total de bienes guardados."
+      },
+      {
+        "text": "A menor cantidad de productos almacenados, mayor es el costo de mantención y almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Guardar menos unidades disminuye la necesidad de espacio y recursos, por lo que el costo de mantención baja."
+      },
+      {
+        "text": "El costo de mantenimiento depende únicamente del precio del proveedor y no del espacio ocupado.",
+        "isCorrect": false,
+        "rationale": "El costo de mantenimiento abarca aspectos físicos y logísticos como infraestructura, seguros y energía, no solo el precio del producto."
+      }
+    ],
+    "hint": "Considera qué ocurre con el gasto de espacio y conservación cuando guardas más mercancía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define la cobertura de stock en la planificación de inventarios?",
+    "opciones": [
+      {
+        "text": "Como el número de días que una empresa puede atender la demanda promedio con sus existencias actuales.",
+        "isCorrect": true,
+        "rationale": "La cobertura mide el tiempo (días o semanas) en que el stock disponible satisface las ventas esperadas sin reabastecimiento."
+      },
+      {
+        "text": "Como el porcentaje de productos defectuosos o mermados durante el periodo de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Esa definición corresponde al índice de merma o pérdida de calidad, no a la cobertura de stock."
+      },
+      {
+        "text": "Como la cantidad física en metros cuadrados que ocupa un lote dentro del rack del almacén.",
+        "isCorrect": false,
+        "rationale": "El espacio en metros cuadrados mide la capacidad de almacenamiento o la densidad, no la cobertura en tiempo."
+      },
+      {
+        "text": "Como el número de proveedores estratégicos registrados en la cadena de suministro.",
+        "isCorrect": false,
+        "rationale": "El registro de proveedores es un indicador de compras y aprovisionamiento, no de disponibilidad del stock existente."
+      },
+      {
+        "text": "Como el costo total de los productos obsoletos retenidos durante el año fiscal.",
+        "isCorrect": false,
+        "rationale": "El costo de obsolescencia evalúa la pérdida monetaria de mercancía no vendida, no la capacidad de atención a la demanda."
+      }
+    ],
+    "hint": "Relaciona las existencias actuales con el ritmo de consumo o venta diario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica principal del flujo logístico de tipo \"Pull\"?",
+    "opciones": [
+      {
+        "text": "La orden de reposición o producción se inicia únicamente ante una demanda o pedido real del cliente.",
+        "isCorrect": true,
+        "rationale": "En el sistema Pull, el consumo del cliente 'jala' la producción y la reposición de existencias de manera reactiva y precisa."
+      },
+      {
+        "text": "La mercancía se fabrica masivamente con base en pronósticos estimados a largo plazo.",
+        "isCorrect": false,
+        "rationale": "Fabricar anticipadamente según proyecciones corresponde a la estrategia de flujo 'Push'."
+      },
+      {
+        "text": "Se mantiene un stock elevado de manera fija sin importar la fluctuación de ventas.",
+        "isCorrect": false,
+        "rationale": "El modelo Pull busca reducir al mínimo las existencias retenidas adaptándose al consumo real."
+      },
+      {
+        "text": "Los productos se fabrican y distribuyen sin considerar los requerimientos específicos del cliente.",
+        "isCorrect": false,
+        "rationale": "El enfoque Pull está centrado completamente en las especificaciones y solicitudes reales del cliente."
+      },
+      {
+        "text": "Se prioriza el almacenamiento prolongado antes de habilitar la salida al mercado.",
+        "isCorrect": false,
+        "rationale": "Retener mercancía incrementa costos de inventario, lo cual contradice la agilidad del flujo Pull."
+      }
+    ],
+    "hint": "Piensa en cuál es el detonante inicial para comenzar a producir o reponer mercancía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué persigue principalmente la estrategia de inventario de \"flujo tenso\" (Just in Time)?",
+    "opciones": [
+      {
+        "text": "Suministrar las materias primas y productos justo cuando se necesitan para minimizar las existencias retenidas.",
+        "isCorrect": true,
+        "rationale": "El Just in Time busca eliminar inventarios innecesarios recibiendo insumos en el momento exacto en que se van a consumir."
+      },
+      {
+        "text": "Acumular grandes volúmenes de inventario de seguridad ante posibles aumentos de precios.",
+        "isCorrect": false,
+        "rationale": "Acumular inventarios masivos genera sobrestock, lo cual es opuesto al principio de reducción de existencias del Just in Time."
+      },
+      {
+        "text": "Generar interrupciones deliberadas en el proceso para inspeccionar minuciosamente el stock.",
+        "isCorrect": false,
+        "rationale": "El flujo tenso busca continuidad y fluidez constante sin interrupciones en la cadena de suministro."
+      },
+      {
+        "text": "Aumentar los tiempos de espera del cliente para consolidar lotes de envío más grandes.",
+        "isCorrect": false,
+        "rationale": "El objetivo es satisfacer al cliente rápidamente reduciendo tiempos de respuesta."
+      },
+      {
+        "text": "Fabricar bienes continuos de manera independiente a si existen solicitudes activas.",
+        "isCorrect": false,
+        "rationale": "Producir sin demanda activa genera productos almacenados sin vender, algo que combate el Just in Time."
+      }
+    ],
+    "hint": "Considera el objetivo de sincronizar la llegada de insumos con la producción inmediata.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Según el enfoque de Crosby para lograr cero defectos en la gestión operativa, ¿cuáles de las siguientes medidas son fundamentales?",
+    "opciones": [
+      {
+        "text": "Contar con el compromiso explícito de la alta dirección y la gerencia.",
+        "isCorrect": true,
+        "rationale": "El liderazgo y compromiso directivo son indispensables para priorizar la calidad en toda la organización."
+      },
+      {
+        "text": "Establecer metas claras, tales como la planificación de jornadas orientadas a cero defectos.",
+        "isCorrect": true,
+        "rationale": "Fijar metas concretas crea concientización y compromiso colectivo para prevenir fallos."
+      },
+      {
+        "text": "Capacitar constantemente a los supervisores y al personal involucrado en los procesos.",
+        "isCorrect": true,
+        "rationale": "La formación capacita al equipo para reaccionar adecuadamente ante no conformidades y prevenir errores."
+      },
+      {
+        "text": "Ignorar la causa raíz de los errores para no detener el ritmo de trabajo operativo.",
+        "isCorrect": false,
+        "rationale": "Crosby promueve la identificación y eliminación sistemática de las causas raíz del error."
+      },
+      {
+        "text": "Ocultar las incidencias detectadas para mantener métricas superficialmente altas.",
+        "isCorrect": false,
+        "rationale": "Transparencia y medidas correctivas inmediatas son esenciales para el objetivo de cero defectos."
+      }
+    ],
+    "hint": "Considera las acciones orientadas al compromiso directivo, metas y capacitación continua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué categoría corresponde el inventario de materiales no cuantificables de forma exacta en el producto final, como lubricantes, pintura o tuercas?",
+    "opciones": [
+      {
+        "text": "Inventario de suministros de fábrica.",
+        "isCorrect": true,
+        "rationale": "Los suministros de fábrica registran elementos auxiliares necesarios para la operatividad del proceso productivo y mantenimiento."
+      },
+      {
+        "text": "Inventario de materias primas.",
+        "isCorrect": false,
+        "rationale": "La materia prima corresponde a los insumos directos y principales que se transforman en el producto final."
+      },
+      {
+        "text": "Inventario de productos terminados.",
+        "isCorrect": false,
+        "rationale": "Los productos terminados son bienes que han completado todo su proceso de fabricación y están listos para venta."
+      },
+      {
+        "text": "Inventario de mercancías.",
+        "isCorrect": false,
+        "rationale": "El inventario de mercancías abarca bienes adquiridos para reventa directa sin transformación previa."
+      },
+      {
+        "text": "Inventario en proceso de fabricación.",
+        "isCorrect": false,
+        "rationale": "Los productos en proceso son aquellos bienes semielaborados que están a medio transformar en la línea de producción."
+      }
+    ],
+    "hint": "Son elementos necesarios para la producción y mantenimiento pero que no constituyen el ingrediente principal directo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la relación principal entre el inventario final de un ejercicio fiscal y el inventario inicial del periodo siguiente?",
+    "opciones": [
+      {
+        "text": "El inventario final de un periodo contable determina y constituye el inventario inicial del siguiente periodo.",
+        "isCorrect": true,
+        "rationale": "Existe una continuidad contable donde las existencias con las que se cierra un periodo son las mismas con las que se inicia el nuevo."
+      },
+      {
+        "text": "El inventario final se descarta en la contabilidad y el inicial se calcula siempre desde cero.",
+        "isCorrect": false,
+        "rationale": "Las existencias físicas no desaparecen al cambiar de año fiscal; se trasladan contablemente al nuevo periodo."
+      },
+      {
+        "text": "El inventario inicial representa el doble del saldo contable registrado en el inventario final.",
+        "isCorrect": false,
+        "rationale": "No existe una duplicación del valor; las cifras de cierre e inicio deben coincidir exactamente."
+      },
+      {
+        "text": "El inventario inicial solo mide materias primas y el final mide únicamente productos terminados.",
+        "isCorrect": false,
+        "rationale": "Ambos inventarios pueden registrar cualquier categoría de activos según el tipo de empresa."
+      },
+      {
+        "text": "No existe ninguna relación contable ni operativa entre el inventario final e inicial.",
+        "isCorrect": false,
+        "rationale": "La trazabilidad contable exige el empalme directo entre el saldo final de un periodo y el inicial del siguiente."
+      }
+    ],
+    "hint": "Analiza la continuidad contable entre el cierre de un ciclo y la apertura del próximo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué caracteriza al inventario de tipo cíclico o rotativo?",
+    "opciones": [
+      {
+        "text": "Se realizan recuentos regulares distribuidos durante el año, priorizando ciertas referencias según su valor o rotación.",
+        "isCorrect": true,
+        "rationale": "El inventario cíclico realiza conteos periódicos por grupos de SKUs sin detener la operación completa del almacén."
+      },
+      {
+        "text": "Se realiza únicamente una vez al año al cierre del ejercicio contable.",
+        "isCorrect": false,
+        "rationale": "Realizar un conteo global una vez al año describe al inventario anual, no al cíclico."
+      },
+      {
+        "text": "Exige detener por completo las operaciones comerciales durante varias semanas consecuentes.",
+        "isCorrect": false,
+        "rationale": "Una de las ventajas del conteo cíclico es evitar el cierre temporal de las actividades de la empresa."
+      },
+      {
+        "text": "Se aplica solamente cuando se sospecha de un robo de gran magnitud en el almacén.",
+        "isCorrect": false,
+        "rationale": "El inventario cíclico es una práctica preventiva programada, no un procedimiento forense de emergencia."
+      },
+      {
+        "text": "Evalúa únicamente los activos fijos de la empresa como maquinaria e inmuebles.",
+        "isCorrect": false,
+        "rationale": "El inventario cíclico se aplica a las existencias y productos almacenados para la venta o producción."
+      }
+    ],
+    "hint": "Implica conteos parciales y programados a lo largo del año enfocados en grupos específicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define una demanda de tipo determinística?",
+    "opciones": [
+      {
+        "text": "Es una demanda variable pero conocida o predecible con alta precisión, como los repuestos para mantenimiento predictivo.",
+        "isCorrect": true,
+        "rationale": "La demanda determinística se puede calcular previamente a partir de programas o planes de requerimiento conocidos."
+      },
+      {
+        "text": "Es una demanda totalmente impredecible que no sigue ningún patrón computable.",
+        "isCorrect": false,
+        "rationale": "Una demanda completamente impredecible se considera aleatoria, no determinística."
+      },
+      {
+        "text": "Es aquella que permanece absolutamente idéntica y fija durante todos los días del año.",
+        "isCorrect": false,
+        "rationale": "Una demanda completamente fija se califica como constante."
+      },
+      {
+        "text": "Es la demanda de productos terminados afectada únicamente por campañas de publicidad externas.",
+        "isCorrect": false,
+        "rationale": "La demanda influenciada por la publicidad suele presentar comportamiento estacional o aleatorio."
+      },
+      {
+        "text": "Es aquella que no requiere de la compra de ningún tipo de insumo para ser atendida.",
+        "isCorrect": false,
+        "rationale": "Toda demanda de bienes exige un nivel correspondiente de recursos para su atención."
+      }
+    ],
+    "hint": "Se trata de un requerimiento que, aunque pueda variar, se conoce con precisión previa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En un análisis de clasificación ABC de inventario por ventas o costo, ¿qué porcentaje aproximado del valor acumulado suelen representar las existencias de Categoría A?",
+    "opciones": [
+      {
+        "text": "Aproximadamente hasta el 80% del valor total acumulado.",
+        "isCorrect": true,
+        "rationale": "Según el principio de Pareto, los productos A suelen representar cerca del 80% del valor financiero acumulado del inventario."
+      },
+      {
+        "text": "Menos del 5% del valor financiero total de la empresa.",
+        "isCorrect": false,
+        "rationale": "Un porcentaje tan bajo corresponde habitualmente a los artículos de menor prioridad o categoría C."
+      },
+      {
+        "text": "Exactamente el 100% del volumen físico de unidades del almacén.",
+        "isCorrect": false,
+        "rationale": "La categoría A representa una fracción pequeña en volumen físico de unidades (generalmente 10-20%)."
+      },
+      {
+        "text": "Un valor arbitrario que no se puede calcular numéricamente.",
+        "isCorrect": false,
+        "rationale": "La clasificación ABC se calcula objetivamente mediante datos cuantitativos de costo y volumen."
+      },
+      {
+        "text": "Alrededor del 50% de la cantidad física y el 5% del valor monetario.",
+        "isCorrect": false,
+        "rationale": "Eso describe a ítems de baja concentración de valor respecto a su cantidad."
+      }
+    ],
+    "hint": "Son pocos artículos en cantidad, pero representan la mayor parte de la inversión monetaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes representan ventajas operativas de implementar la estrategia Just in Time (JIT) en los inventarios?",
+    "opciones": [
+      {
+        "text": "Reducción de los costos de almacenamiento por mantener un menor nivel de stock.",
+        "isCorrect": true,
+        "rationale": "Menor cantidad de existencias guardadas reduce el uso de espacio físico y sus costos asociados."
+      },
+      {
+        "text": "Disminución del riesgo de que los productos se mermen o se vuelvan obsoletos.",
+        "isCorrect": true,
+        "rationale": "Al rotar la mercancía rápidamente, se reduce la probabilidad de deterioro o caducidad en estantería."
+      },
+      {
+        "text": "Mejora continua en la agilidad y eficiencia global del proceso productivo.",
+        "isCorrect": true,
+        "rationale": "Fomenta procesos sincronizados que responden rápidamente a la demanda sin cuellos de botella."
+      },
+      {
+        "text": "Dependencia nula respecto a los plazos de entrega del proveedor.",
+        "isCorrect": false,
+        "rationale": "El JIT aumenta la dependencia de la puntualidad de los proveedores, siendo una de sus principales vulnerabilidades."
+      },
+      {
+        "text": "Necesidad de ampliar masivamente las dimensiones físicas del almacén.",
+        "isCorrect": false,
+        "rationale": "El JIT busca reducir el requerimiento de espacio físico de almacenamiento."
+      }
+    ],
+    "hint": "Piensa en el impacto sobre los costos de almacenamiento, merma y fluidez operativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una ventaja operativa distintiva del sistema de inventario perpetuo frente al periódico?",
+    "opciones": [
+      {
+        "text": "Registra y actualiza de forma automática el stock disponible en tiempo real tras cada transacción.",
+        "isCorrect": true,
+        "rationale": "El sistema perpetuo mantiene saldos actualizados al instante mediante tecnología como lecturas de código de barras o WMS."
+      },
+      {
+        "text": "Exige pausar completamente las operaciones de despacho para contabilizar físicamente.",
+        "isCorrect": false,
+        "rationale": "La interrupción total de operaciones es una desventaja del inventario periódico, no del perpetuo."
+      },
+      {
+        "text": "Es un método completamente gratuito que no requiere software ni infraestructura digital.",
+        "isCorrect": false,
+        "rationale": "El inventario perpetuo requiere inversiones en software especializado (ERP/WMS) y equipos."
+      },
+      {
+        "text": "Se ejecuta únicamente de forma manual al finalizar el año fiscal.",
+        "isCorrect": false,
+        "rationale": "El registro continuo contrasta con los recuentos anuales o manuales característicos del sistema periódico."
+      },
+      {
+        "text": "Evita el uso de lectores de código de barras o tecnología PDA.",
+        "isCorrect": false,
+        "rationale": "Por el contrario, el inventario perpetuo aprovecha herramientas tecnológicas para automatizar el ingreso de datos."
+      }
+    ],
+    "hint": "Considera la inmediatez de los datos reflejados al realizar movimientos de stock.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es uno de los principales inconvenientes o desventajas asociados al sistema de inventario periódico?",
+    "opciones": [
+      {
+        "text": "Las actividades comerciales normales suelen suspenderse o verse afectadas durante el recuento físico.",
+        "isCorrect": true,
+        "rationale": "Realizar el conteo global exige detener la operación de recepción y despacho, afectando el ritmo comercial."
+      },
+      {
+        "text": "Brinda una visibilidad precisa y constante del stock las 24 horas del día.",
+        "isCorrect": false,
+        "rationale": "La visibilidad en tiempo real es una ventaja del inventario perpetuo, no del periódico."
+      },
+      {
+        "text": "Requiere una inversión millonaria obligatoria en servidores locales para su inicio.",
+        "isCorrect": false,
+        "rationale": "El inventario periódico es comúnmente usado por ser sencillo y requerir poca inversión tecnológica inicial."
+      },
+      {
+        "text": "Actualiza el sistema informático inmediatamente tras el escaneo de cada paquete.",
+        "isCorrect": false,
+        "rationale": "El inventario periódico actualiza los datos únicamente al concluir los conteos programados."
+      },
+      {
+        "text": "Impide por completo la realización de auditorías contables al final del año.",
+        "isCorrect": false,
+        "rationale": "El inventario periódico sirve precisamente para respaldar los ejercicios contables anuales."
+      }
+    ],
+    "hint": "Piensa en el impacto que tiene realizar recuentos globales físicos en el funcionamiento habitual de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué problema operativo busca mitigar el control estricto de inventarios apoyado en sistemas automatizados en la nube?",
+    "opciones": [
+      {
+        "text": "El robo hormiga y las mermas de mercancía no registradas.",
+        "isCorrect": true,
+        "rationale": "Tener registros precisos de entradas y salidas impide la sustracción no autorizada y la merma sin justificar."
+      },
+      {
+        "text": "El aumento natural en la demanda de los clientes durante temporadas altas.",
+        "isCorrect": false,
+        "rationale": "El incremento de demanda es un factor de mercado, no un problema interno de seguridad u operatividad."
+      },
+      {
+        "text": "El descuento por volumen otorgado por los proveedores estratégicos.",
+        "isCorrect": false,
+        "rationale": "Los descuentos de proveedores son incentivos comerciales y no un fallo o problema operativo."
+      },
+      {
+        "text": "La necesidad de capacitar al personal en normas de seguridad y salud en el trabajo.",
+        "isCorrect": false,
+        "rationale": "La capacitación laboral es un requerimiento regulatorio preventivo, no un tipo de pérdida de stock."
+      },
+      {
+        "text": "La rotación acelerada de productos de alta demanda.",
+        "isCorrect": false,
+        "rationale": "Una alta rotación de productos es un indicador positivo de ventas para el negocio."
+      }
+    ],
+    "hint": "Piensa en pérdidas no justificadas causadas por extracciones no autorizadas dentro del almacén.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito central de la metodología Kaizen aplicada a la cadena de suministro e inventarios?",
+    "opciones": [
+      {
+        "text": "Garantizar la capacidad de reaccionar y adaptarse continuamente para eliminar desperdicios y evitar roturas de stock.",
+        "isCorrect": true,
+        "rationale": "Kaizen persigue la mejora continua reduciendo brechas, desperdicios y tiempos de respuesta en la cadena logística."
+      },
+      {
+        "text": "Mantener inalterables y rígidos todos los procesos operativos sin importar cambios en el entorno.",
+        "isCorrect": false,
+        "rationale": "Kaizen promueve la flexibilidad y la adaptación, oponiéndose a la rigidez operativa."
+      },
+      {
+        "text": "Incrementar deliberadamente los tiempos de ciclo (lead times) para reducir costos de transporte.",
+        "isCorrect": false,
+        "rationale": "El enfoque Kaizen busca acortar tiempos de entrega y aumentar la agilidad."
+      },
+      {
+        "text": "Eliminar la comunicación entre el área de compras y los clientes finales.",
+        "isCorrect": false,
+        "rationale": "Kaizen requiere un flujo de información transparente e integrado impulsado por la demanda."
+      },
+      {
+        "text": "Sustituir el software de almacenamiento por registros manuales en papel.",
+        "isCorrect": false,
+        "rationale": "Kaizen impulsa la optimización de procesos mediante mejores herramientas, no el retroceso tecnológico."
+      }
+    ],
+    "hint": "Enfócate en la filosofía de mejora continua y capacidad de adaptación rápida sin acumular desperdicios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la gestión Lean, ¿qué significa 'analizar el flujo en sentido inverso'?",
+    "opciones": [
+      {
+        "text": "Iniciar el análisis desde el punto más cercano al cliente final y avanzar hacia atrás hasta el origen del proceso.",
+        "isCorrect": true,
+        "rationale": "Analizar en sentido inverso permite entender la demanda real del cliente para estructurar los procesos previos."
+      },
+      {
+        "text": "Evaluar únicamente el departamento de compras ignorando los requerimientos de entrega.",
+        "isCorrect": false,
+        "rationale": "Ignorar al cliente contradice el enfoque fundamental del pensamiento Lean."
+      },
+      {
+        "text": "Desestimar las devoluciones de clientes para no alterar los reportes finales.",
+        "isCorrect": false,
+        "rationale": "Lean considera la voz del cliente y los flujos inversos para identificar fallas y mejorar."
+      },
+      {
+        "text": "Empezar la auditoría en la etapa de materia prima sin revisar el producto terminado.",
+        "isCorrect": false,
+        "rationale": "Analizar de insumo a producto terminado es el sentido convencional (Push), no el sentido inverso Lean."
+      },
+      {
+        "text": "Revisar primero los productos obsoletos antes que el material operativo activo.",
+        "isCorrect": false,
+        "rationale": "El análisis en sentido inverso se refiere a la secuencia de la cadena de valor guiada por el cliente, no al estado de uso del bien."
+      }
+    ],
+    "hint": "Considera desde qué punto de la cadena de valor se empieza a construir el análisis.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes acciones forman parte de los pasos clave para la implementación de Lean en inventarios?",
+    "opciones": [
+      {
+        "text": "Identificar y eliminar los residuos o actividades que no agregan valor al proceso.",
+        "isCorrect": true,
+        "rationale": "La eliminación de desperdicios (muda) es la base fundamental de la filosofía Lean."
+      },
+      {
+        "text": "Aprovechar la automatización y la tecnología para hacer procesos más ágiles.",
+        "isCorrect": true,
+        "rationale": "La tecnología bien aplicada reduce errores y acelera el flujo de información y materiales."
+      },
+      {
+        "text": "Establecer métricas claras (KPIs) para evaluar la eficiencia y el desempeño.",
+        "isCorrect": true,
+        "rationale": "Medir el rendimiento es indispensable para guiar las acciones de mejora continua."
+      },
+      {
+        "text": "Aumentar masivamente los niveles de stock retenido 'por si acaso'.",
+        "isCorrect": false,
+        "rationale": "Lean combate el sobrestock por considerarlo una de las principales fuentes de desperdicio."
+      },
+      {
+        "text": "Prohibir el monitoreo en tiempo real de los pedidos en tránsito.",
+        "isCorrect": false,
+        "rationale": "Lean busca maximizar la visibilidad y trazabilidad a lo largo de toda la cadena."
+      }
+    ],
+    "hint": "Enfócate en la eliminación de desperdicios, la tecnología y la medición mediante KPIs.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el beneficio principal de aplicar tecnologías de control remoto en maquinaria de operaciones mineras?",
+    "opciones": [
+      {
+        "text": "Permiten operar equipos desde ubicaciones seguras, disminuyendo la exposición del personal a entornos peligrosos.",
+        "isCorrect": true,
+        "rationale": "El control remoto distancia al trabajador de zonas de riesgo físico como frentes de extracción o áreas inestables."
+      },
+      {
+        "text": "Reemplazan completamente la necesidad de suministrar energía o combustible a los equipos.",
+        "isCorrect": false,
+        "rationale": "Las máquinas operadas remotamente continúan requiriendo energía eléctrica o combustible para operar."
+      },
+      {
+        "text": "Eliminan la necesidad de programar mantenimientos preventivos a la flota.",
+        "isCorrect": false,
+        "rationale": "Toda maquinaria pesada requiere mantenimiento periódico independientemente de si es teleoperada."
+      },
+      {
+        "text": "Aumentan la generación de residuos sólidos durante la perforación.",
+        "isCorrect": false,
+        "rationale": "La teleoperación busca optimizar la precisión operativa y no aumentar el desperdicio."
+      },
+      {
+        "text": "Inhabilitan la comunicación mediante redes inalámbricas en la mina.",
+        "isCorrect": false,
+        "rationale": "Por el contrario, el control remoto exige redes inalámbricas robustas para transmitir señales de mando."
+      }
+    ],
+    "hint": "Considera la protección de la integridad física de los operarios al trabajar en áreas de alto riesgo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué aporte estratégico brinda la tecnología de fabricación aditiva o impresión 3D en los frentes de trabajo mineros?",
+    "opciones": [
+      {
+        "text": "Permite fabricar repuestos personalizados en el propio sitio, reduciendo tiempos de espera y costos de transporte.",
+        "isCorrect": true,
+        "rationale": "La impresión 3D in situ permite producir refacciones rápidamente sin depender del envío desde centros urbanos distantes."
+      },
+      {
+        "text": "Sustituye por completo el uso de explosives en los procesos de voladura subterránea.",
+        "isCorrect": false,
+        "rationale": "La impresión 3D se usa para fabricar componentes mecánicos y repuestos, no como técnica de voladura."
+      },
+      {
+        "text": "Remplaza la necesidad de camiones para el acarreo de minerales masivos.",
+        "isCorrect": false,
+        "rationale": "La tecnología aditiva no es un medio de transporte de carga pesada de mineral."
+      },
+      {
+        "text": "Incrementa el peso de las piezas mecánicas para hacerlas más difíciles de mover.",
+        "isCorrect": false,
+        "rationale": "La impresión 3D permite optimizar diseños para fabricar componentes más ligeros y duraderos."
+      },
+      {
+        "text": "Obliga a importar todas las refacciones mecánicas desde el extranjero.",
+        "isCorrect": false,
+        "rationale": "Precisamente la fabricación aditiva evita la dependencia de importaciones lejanas al fabricar localmente."
+      }
+    ],
+    "hint": "Piensa en la solución para reponer piezas rotas cuando las fábricas de suministros están muy lejanas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera contribuye la simulación 3D en la etapa de procesamiento de minerales dentro de una planta concentradora?",
+    "opciones": [
+      {
+        "text": "Permite optimizar procesos como trituración y molienda, mejorando las tasas de recuperación y reduciendo costos.",
+        "isCorrect": true,
+        "rationale": "La simulación modela virtualmente el comportamiento del mineral en el procesamiento para maximizar la recuperación eficiente."
+      },
+      {
+        "text": "Genera minerales sintéticos en laboratorio para evitar la extracción en mina.",
+        "isCorrect": false,
+        "rationale": "La simulación es una herramienta de software que modela procesos reales, no un creador de materia mineral."
+      },
+      {
+        "text": "Duplica deliberadamente el consumo de energía eléctrica de los molinos.",
+        "isCorrect": false,
+        "rationale": "Uno de los objetivos del modelado es optimizar el consumo energético, haciéndolo más eficiente."
+      },
+      {
+        "text": "Elimina la necesidad de cumplir con las regulaciones ambientales locales.",
+        "isCorrect": false,
+        "rationale": "La simulación ayuda a prever impactos ambientales para asegurar el cumplimiento regulatorio."
+      },
+      {
+        "text": "Impide el uso de sensores de monitoreo de calidad del agua.",
+        "isCorrect": false,
+        "rationale": "La simulación se nutre de datos reales captados por sensores para refinar sus modelos informáticos."
+      }
+    ],
+    "hint": "Se orienta a probar escenarios virtuales de molienda y concentración para mejorar indicadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la principal ventaja operativa de la automatización de flotas (como camiones y perforadoras autónomas) en la minería?",
+    "opciones": [
+      {
+        "text": "Permite una operación continua y segura de los equipos sin necesidad de intervención humana directa en zonas de riesgo.",
+        "isCorrect": true,
+        "rationale": "Los equipos autónomos pueden operar de manera continua, reduciendo costos operativos y protegiendo a los trabajadores."
+      },
+      {
+        "text": "Exige duplicar la cantidad de choferes dentro de la cabina de cada vehículo.",
+        "isCorrect": false,
+        "rationale": "La automatización elimina la presencia de choferes dentro de la cabina del vehículo."
+      },
+      {
+        "text": "Inhabilita la supervisión del estado del motor en tiempo real desde salas de control.",
+        "isCorrect": false,
+        "rationale": "Los sistemas autónomos transmiten constantemente telemetría en tiempo real a centros de control centralizados."
+      },
+      {
+        "text": "Aumenta los paros no programados de la maquinaria durante los turnos nocturnos.",
+        "isCorrect": false,
+        "rationale": "La automatización busca maximizar el tiempo operativo útil de los equipos reduciendo paradas no planificadas."
+      },
+      {
+        "text": "Reduce la vida útil de los componentes mecánicos al descalibrar los sistemas.",
+        "isCorrect": false,
+        "rationale": "La conducción autónoma opera dentro de parámetros optimizados que extienden la vida útil de neumáticos y motores."
+      }
+    ],
+    "hint": "Considera la continuidad de la operación durante largos periodos sin requerir un conductor físico a bordo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumplen las tecnologías de Inteligencia Artificial y Machine Learning aplicada al mantenimiento de maquinaria minera?",
+    "opciones": [
+      {
+        "text": "Prever fallas en equipos mediante análisis predictivo y optimizar el consumo de energía y recursos.",
+        "isCorrect": true,
+        "rationale": "Machine Learning identifica patrones anómalos en sensores para predecir cuándo fallará un componente antes de que ocurra la avería."
+      },
+      {
+        "text": "Ocultar la información de desgaste de componentes para no detener la producción.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la IA es brindar alertas tempranas y transparentes para evitar catástrofes mecánicas."
+      },
+      {
+        "text": "Sustituir por completo las inspecciones geológicas de campo y la toma de muestras.",
+        "isCorrect": false,
+        "rationale": "La IA procesa datos geológicos pero requiere de la recopilación de muestras físicas de campo."
+      },
+      {
+        "text": "Generar facturas de compra manualmente una vez al año sin usar datos digitales.",
+        "isCorrect": false,
+        "rationale": "La IA trabaja con volúmenes de datos digitales automatizados en tiempo real, no con procesos manuales en papel."
+      },
+      {
+        "text": "Eliminar la base de datos histórica acumulada para evitar el uso de servidores.",
+        "isCorrect": false,
+        "rationale": "El Machine Learning requiere datos históricos para entrenar y refinar la precisión de sus algoritmos."
+      }
+    ],
+    "hint": "Analizan patrones históricos y sensores en tiempo real para anticiparse a averías graves.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué beneficio aporta la integración de plataformas de Big Data con herramientas de inteligencia de negocios (como Power BI) en la gestión de logística minera?",
+    "opciones": [
+      {
+        "text": "Visualizar indicadores claves e información de existencias en tiempo real para una toma de decisiones precisa.",
+        "isCorrect": true,
+        "rationale": "Big Data y Power BI consolidan datos de múltiples fuentes en tableros dinámicos para tomar decisiones fundamentadas al instante."
+      },
+      {
+        "text": "Restringir la consulta de movimientos de stock únicamente a las auditorías anuales.",
+        "isCorrect": false,
+        "rationale": "Estas herramientas buscan ofrecer información continua y accesible diariamente, no restringida a un evento anual."
+      },
+      {
+        "text": "Obligar al registro de guías y despachos mediante llamadas telefónicas no grabadas.",
+        "isCorrect": false,
+        "rationale": "La integración tecnológica promueve el registro digital automático y elimina la dependencia de canales verbales."
+      },
+      {
+        "text": "Aumentar los errores de tipeo manual al procesar grandes volúmenes de guías.",
+        "isCorrect": false,
+        "rationale": "La automatización de datos reduce drásticamente los errores humanos de digitación."
+      },
+      {
+        "text": "Eliminar la trazabilidad de los paquetes despachados hacia las unidades operativas.",
+        "isCorrect": false,
+        "rationale": "El uso de Big Data fortalece y garantiza la trazabilidad completa en la cadena de suministros."
+      }
+    ],
+    "hint": "Piensa en cómo se muestran los datos dispersos a los tomadores de decisiones de forma clara e inmediata.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes son beneficios clave demostrados al implementar herramientas tecnológicas de gestión en operaciones mineras?",
+    "opciones": [
+      {
+        "text": "Aumento en la eficiencia operativa y reducción de costos.",
+        "isCorrect": true,
+        "rationale": "La tecnología optimiza procesos, reduciendo tiempos muertos y minimizando el uso innecesario de recursos."
+      },
+      {
+        "text": "Mejora de la seguridad laboral al mitigar riesgos directos en el campo de trabajo.",
+        "isCorrect": true,
+        "rationale": "El monitoreo y la automatización alejan a los trabajadores de entornos peligrosos."
+      },
+      {
+        "text": "Contribución a la sostenibilidad ambiental mediante un consumo eficiente de energía.",
+        "isCorrect": true,
+        "rationale": "El control inteligente de procesos reduce desperdicios y la huella ecológica."
+      },
+      {
+        "text": "Obligatoriedad de mantener conteos físicos totalmente manuales en papel.",
+        "isCorrect": false,
+        "rationale": "La tecnología busca digitalizar y automatizar los registros para reemplazar los métodos manuales."
+      },
+      {
+        "text": "Incremento de tiempos inactivos por falta de alertas de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Las herramientas predictivas reducen la inactividad al avisar de fallos antes de que paralicen la máquina."
+      }
+    ],
+    "hint": "Piensa en las mejoras en eficiencia, seguridad y sostenibilidad ambiental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa minera analiza la relación entre los costos de ordenamiento de pedido y los costos de mantenimiento de inventario. Según el modelo del Lote Económico de Compra (EOQ), ¿qué ocurre con estos costos a medida que aumenta la cantidad pedida por lote?",
+    "opciones": [
+      {
+        "text": "El costo de compra/pedido por unidad se reduce mientras que el costo total de almacenamiento o mantenimiento se incrementa.",
+        "isCorrect": true,
+        "rationale": "Al realizar pedidos de mayor volumen se logran economías de escala y menores costos fijos por orden, pero mantener un volumen guardado más grande eleva proporcionalmente los costos de almacenamiento."
+      },
+      {
+        "text": "Tanto el costo de mantenimiento como el costo de pedido disminuyen de manera lineal.",
+        "isCorrect": false,
+        "rationale": "Ambos costos varían en sentido opuesto en relación con el tamaño del lote, por lo que no pueden disminuir simultáneamente de forma lineal."
+      },
+      {
+        "text": "El costo de mantenimiento disminuye debido a la rotación acelerada, mientras que el costo de ordenamiento aumenta.",
+        "isCorrect": false,
+        "rationale": "Guardar lotes más grandes requiere mayor espacio y capital, lo cual incrementa el costo de mantenimiento en lugar de reducirlo."
+      },
+      {
+        "text": "El costo total de compra se eleva exponencialmente mientras que el costo de mantenimiento permanece completamente estático.",
+        "isCorrect": false,
+        "rationale": "El costo de mantenimiento depende directamente de la cantidad almacenada y no permanece constante frente a cambios en el tamaño del lote."
+      },
+      {
+        "text": "Ambos costos se vuelven independientes del volumen y dependen únicamente del costo de oportunidad del capital.",
+        "isCorrect": false,
+        "rationale": "El modelo EOQ demuestra explícitamente que la cantidad pedida altera la relación de equilibrios entre el costo de mantener y el costo de pedir."
+      }
+    ],
+    "hint": "Considere cómo cambia la necesidad de espacio físico y los fletes cuando se compran lotes de gran tamaño.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una operación tiene una demanda diaria promedio de 15 unidades de un insumo crítico. Si la bodega sostiene un volumen de existencias actual de 450 unidades, ¿cuál es el periodo de cobertura de stock disponible para atender la operación?",
+    "opciones": [
+      {
+        "text": "30 días",
+        "isCorrect": true,
+        "rationale": "La cobertura de stock se calcula dividiendo el volumen de existencias (450) entre la demanda diaria promedio (15), lo que resulta en 30 días de disponibilidad."
+      },
+      {
+        "text": "15 días",
+        "isCorrect": false,
+        "rationale": "Este resultado proviene de dividir de manera incorrecta la demanda entre el número de días del mes o cometer un error aritmético de división."
+      },
+      {
+        "text": "45 días",
+        "isCorrect": false,
+        "rationale": "Esta cifra confunde la proporción al multiplicar o estimar incorrectamente la demanda requerida por período."
+      },
+      {
+        "text": "60 días",
+        "isCorrect": false,
+        "rationale": "Este cálculo asumiría el doble de existencias o la mitad del consumo medio diario."
+      },
+      {
+        "text": "90 días",
+        "isCorrect": false,
+        "rationale": "Un horizonte de 90 días requeriría un stock de 1350 unidades para la misma demanda promedio."
+      }
+    ],
+    "hint": "Aplique la fórmula de cobertura dividiendo el stock total entre el consumo medio por día.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la distribución física del layout de un almacén, ¿cuál es la característica principal del flujo de mercancías en forma de 'U'?",
+    "opciones": [
+      {
+        "text": "La recepción y la expedición de productos se realizan en el mismo lado del almacén, facilitando la zonificación y la flexibilidad de muelles.",
+        "isCorrect": true,
+        "rationale": "El diseño en U unifica la zona de entrada y salida en la misma fachada, optimizando el transporte interno y la reutilización de equipos de carga."
+      },
+      {
+        "text": "El flujo obliga a que los productos recorran todo el almacén desde un extremo completamente opuesto al de salida en línea recta.",
+        "isCorrect": false,
+        "rationale": "El recorrido en línea recta desde extremos opuestos describe un flujo de tipo lineal, no un flujo en forma de U."
+      },
+      {
+        "text": "Las actividades de almacenamiento se suprimen y los productos pasan directo de descarga a embarque en menos de 10 minutos.",
+        "isCorrect": false,
+        "rationale": "La forma en U es una distribución física del almacén y no implica la ausencia de estanterías o zonas de almacenamiento intermedio."
+      },
+      {
+        "text": "La mercadería se almacena exclusivamente en niveles aéreos mediante elevadores automatizados en un recorrido circular.",
+        "isCorrect": false,
+        "rationale": "La denominación en U refiere al trayecto de entrada y salida de materiales, no al mecanismo de elevación vertical."
+      },
+      {
+        "text": "Requiere muelles separados por zonas geográficas donde los vehículos deben rodear todo el perímetro exterior del almacén.",
+        "isCorrect": false,
+        "rationale": "Las zonas de acceso están unificadas o contiguas en el mismo frente de la instalación, evitando desplazamientos exteriores innecesarios."
+      }
+    ],
+    "hint": "Reflexione sobre la ubicación de las puertas de carga y descarga en comparación con el recorrido lineal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro de la gestión operativa de flujos logísticos, ¿cuáles de las siguientes afirmaciones caracterizan adecuadamente a las estrategias Pull y Push?",
+    "opciones": [
+      {
+        "text": "El flujo Pull inicia la orden de fabricación o reposición únicamente en respuesta a una demanda real o pedido confirmado.",
+        "isCorrect": true,
+        "rationale": "La metodología Pull reacciona al consumo efectivo, minimizando el almacenamiento anticipado innecesario."
+      },
+      {
+        "text": "El flujo Push fabrica o abastece productos basándose en previsiones y estimaciones de la demanda futura.",
+        "isCorrect": true,
+        "rationale": "En la estrategia Push, la producción impulsa el inventario hacia el almacén con base en pronósticos de planificación."
+      },
+      {
+        "text": "El flujo Push requiere necesariamente que el cliente personalice su producto antes de iniciar cualquier proceso productivo.",
+        "isCorrect": false,
+        "rationale": "La personalización por encargo es típica de los sistemas impulsados por demanda real (Pull) y no de la fabricación por pronóstico (Push)."
+      },
+      {
+        "text": "En el flujo Pull, los inventarios de seguridad se maximizan permanentemente para evitar cualquier ajuste en la línea de producción.",
+        "isCorrect": false,
+        "rationale": "El enfoque Pull busca mantener inventarios esbeltos que respondan ágilmente, en lugar de acumular stock de seguridad masivo."
+      },
+      {
+        "text": "Ambos flujos eliminan por completo la necesidad de contar con muelles de recepción y expedición en las plantas industriales.",
+        "isCorrect": false,
+        "rationale": "La estrategia de flujo gestiona la lógica de activación del pedido, pero las instalaciones físicas siguen requiriendo infraestructura de carga y descarga."
+      }
+    ],
+    "hint": "Identifique cuál estrategia se orienta por predicciones de mercado y cuál se activa mediante el consumo real del cliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el cálculo del Lote Económico de Compra ($EOQ$), si la demanda anual de un repuesto ($D$) es de 1000 unidades, el costo por emitir una orden ($S$) es de 50 soles y el costo anual de mantener una unidad en inventario ($H$) es de 10 soles, ¿cuál es la cantidad óptima a pedir por orden?",
+    "opciones": [
+      {
+        "text": "100 unidades",
+        "isCorrect": true,
+        "rationale": "Aplicando la fórmula $EOQ = \\sqrt{\\frac{2 \\cdot 1000 \\cdot 50}{10}} = \\sqrt{\\frac{100000}{10}} = \\sqrt{10000} = 100$ unidades."
+      },
+      {
+        "text": "50 unidades",
+        "isCorrect": false,
+        "rationale": "Este valor resulta de olvidar multiplicar por 2 la demanda y el costo de pedido dentro del radicando antes de dividir."
+      },
+      {
+        "text": "200 unidades",
+        "isCorrect": false,
+        "rationale": "Se obtiene si se duplica erróneamente el resultado final o si no se extrae la raíz cuadrada de la operación."
+      },
+      {
+        "text": "500 unidades",
+        "isCorrect": false,
+        "rationale": "Resulta de realizar la operación sin calcular la raíz cuadrada sobre el cociente obtenido."
+      },
+      {
+        "text": "10 unidades",
+        "isCorrect": false,
+        "rationale": "Proviene de dividir directamente la demanda entre el costo de emisión sin aplicar la estructura matemática del modelo."
+      }
+    ],
+    "hint": "Recuerde aplicar la raíz cuadrada a la razón entre el doble del producto de la demanda por el costo de orden y el costo de mantenimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Philip Crosby propuso un enfoque de 'Cero Defectos' para la gestión de la calidad operativa. ¿Cuál es el pilar fundamental que sostiene este principio dentro de los inventarios y la producción?",
+    "opciones": [
+      {
+        "text": "La prevención proactiva de los errores desde la planificación y el compromiso de la dirección, en lugar de la simple inspección posterior.",
+        "isCorrect": true,
+        "rationale": "El modelo de Crosby establece que la calidad se logra planificando correctamente las actividades para evitar fallas, reduciendo retrabajos y mermas."
+      },
+      {
+        "text": "Aceptar una tasa fija de tolerancia de mermas e inventarios dañados como un costo inevitable de la operación.",
+        "isCorrect": false,
+        "rationale": "El principio de Cero Defectos rechaza la idea de niveles 'aceptables' de error o pérdidas toleradas."
+      },
+      {
+        "text": "Delegar la responsabilidad total del control de materiales a los proveedores externos sin supervisión interna.",
+        "isCorrect": false,
+        "rationale": "Aunque involucra a la cadena de valor, la dirección y el personal interno deben liderar el compromiso con la calidad."
+      },
+      {
+        "text": "Eliminar todos los conteos de auditoría física para acelerar el ritmo del picking en los almacenes.",
+        "isCorrect": false,
+        "rationale": "Crosby no propone eliminar controles, sino asegurar que los procesos se ejecuten correctamente sin generar discrepancias."
+      },
+      {
+        "text": "Aumentar exponencialmente el stock de repuestos para sustituir rápidamente las piezas defectuosas sin reparar la causa raíz.",
+        "isCorrect": false,
+        "rationale": "Sustituir piezas sin corregir la causa raíz contradice la eliminación del error en el origen propuesto por Crosby."
+      }
+    ],
+    "hint": "Piense en la diferencia entre evitar que una falla ocurra desde el diseño frente a detectar los daños cuando la mercancía ya se arruinó.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto industrial y minero, ¿cómo se definen los productos en proceso (semielaborados) dentro de la clasificación por naturaleza del producto?",
+    "opciones": [
+      {
+        "text": "Bienes que han incorporado mano de obra y recursos en la cadena de transformación pero aún requieren etapas adicionales para ser comercializables.",
+        "isCorrect": true,
+        "rationale": "Los productos en proceso están dentro de la línea de fabricación y han acumulado valor agregado, pero no han alcanzado el estado final de producto terminado."
+      },
+      {
+        "text": "Insumos en estado natural que no han recibido ningún tipo de modificación física ni química.",
+        "isCorrect": false,
+        "rationale": "Esta descripción corresponde a las materias primas brutas, no a los productos en proceso."
+      },
+      {
+        "text": "Materiales auxiliares como lubricantes o pintura que no se cuantifican de forma directa en el costo unitario del producto.",
+        "isCorrect": false,
+        "rationale": "Estos elementos se categorizan como suministros de fábrica o consumibles mecánicos."
+      },
+      {
+        "text": "Artículos adquiridos de terceros listos para ser despachados inmediatamente al cliente final sin alteración.",
+        "isCorrect": false,
+        "rationale": "Los bienes comprados para reventa inmediata reciben la denominación de mercancías o productos terminados de comercialización."
+      },
+      {
+        "text": "Equipos de protección personal y herramientas livianas destinadas al uso diario de los operarios de planta.",
+        "isCorrect": false,
+        "rationale": "Los EPP y herramientas se consideran inventario de suministros operativos o materiales de seguridad, no parte del flujo de transformación del mineral."
+      }
+    ],
+    "hint": "Considere aquellos insumos que ya entraron a la línea de ensamblaje o procesamiento pero que todavía no son el bien final listo para la venta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa minera concluye su ejercicio contable anual en el mes de diciembre. ¿Qué función cumple el valor del inventario final registrado al cierre de dicho período?",
+    "opciones": [
+      {
+        "text": "Determina contablemente el saldo inicial con el cual se abrirá el inventario del siguiente período fiscal.",
+        "isCorrect": true,
+        "rationale": "El inventario final de un ciclo fiscal se convierte automáticamente en el inventario inicial del período contable subsiguiente."
+      },
+      {
+        "text": "Invalida de forma automática todas las órdenes de compra emitidas a los proveedores durante el año lectivo.",
+        "isCorrect": false,
+        "rationale": "El saldo de inventario es un registro de existencias y valoración contable, no un anulador contractual de órdenes comerciales."
+      },
+      {
+        "text": "Elimina la necesidad de registrar las compras y ventas ejecutadas a lo largo del año siguiente.",
+        "isCorrect": false,
+        "rationale": "Cada período requiere el registro continuo de transacciones, independientemente de la cifra de cierre anterior."
+      },
+      {
+        "text": "Establece el límite máximo de almacenamiento permitido por los organismos reguladores ambientales.",
+        "isCorrect": false,
+        "rationale": "El valor del inventario final es una métrica contable y de gestión, no un límite de capacidad legal ni ambiental."
+      },
+      {
+        "text": "Garantiza que la demanda del mercado permanezca constante durante los primeros seis meses del nuevo ciclo.",
+        "isCorrect": false,
+        "rationale": "El inventario de cierre refleja los saldos físicos y financieros, pero no tiene la capacidad de controlar ni estandarizar la demanda externa."
+      }
+    ],
+    "hint": "Piense en la continuidad contable entre el último día de un ejercicio y el primer día del siguiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al realizar una clasificación ABC de inventario basada en el principio de Pareto, ¿qué características definen a las referencias categorizadas dentro de la Zona A?",
+    "opciones": [
+      {
+        "text": "Representan un porcentaje menor de los artículos en stock (aprox. 10-20%), pero concentran la mayor parte del valor monetario total o de la rotación (aprox. 70-80%).",
+        "isCorrect": true,
+        "rationale": "La categoría A engloba los artículos prioritarios por su alto impacto económico o crítico en la operación, requiriendo un control de inventario estricto."
+      },
+      {
+        "text": "Son la gran mayoría de los productos almacenados en volumen (aprox. 80%), pero solo representan el 5% del valor invertido.",
+        "isCorrect": false,
+        "rationale": "Esa descripción corresponde a los productos de la categoría C, caracterizados por su bajo impacto económico pese a su alto volumen de unidades."
+      },
+      {
+        "text": "Corresponden exclusivamente a productos obsoletos con tasa de salida nula que deben darse de baja de forma inmediata.",
+        "isCorrect": false,
+        "rationale": "Los artículos A son los más valiosos y de mayor movimiento estratégico, opuestos a las mercancías obsoletas o sin rotación."
+      },
+      {
+        "text": "Agrupan únicamente materiales cuyo costo unitario es inferior a un sol y se consumen en cantidades imprecisas.",
+        "isCorrect": false,
+        "rationale": "Los productos de valor marginal inconmensurable se agrupan en las categorías inferiores (B o C), no en la zona de mayor relevancia valorizada."
+      },
+      {
+        "text": "Poseen un comportamiento de demanda estrictamente constante durante un periodo de 10 años sin variación de precios.",
+        "isCorrect": false,
+        "rationale": "La clasificación ABC evalúa la importancia relativa del valor o rotación actual, independientemente de si su demanda es constante o aleatoria."
+      }
+    ],
+    "hint": "Recuerde la regla del 80/20 y dónde se ubica la mayor concentración de capital invertido en el almacén.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Con respecto a la dependencia de la demanda, ¿cuáles de las siguientes alternativas constituyen ejemplos correctos de demanda independiente y demanda dependiente?",
+    "opciones": [
+      {
+        "text": "Los repuestos para camiones de extracción colocados en el mercado de posventa presentan una demanda independiente, impulsada por las fallas del mercado.",
+        "isCorrect": true,
+        "rationale": "Los repuestos directos para consumidores o mantenimiento no programado responden a variables externas y aleatorias no ligadas directamente a un plan de ensamblaje interno."
+      },
+      {
+        "text": "La demanda de insumos químicos para la lixiviación es dependiente, ya que se calcula directamente en función del tonelaje de mineral que se planifica procesar.",
+        "isCorrect": true,
+        "rationale": "La necesidad de reactivos o materias primas se deriva explícitamente del programa de producción y procesamiento establecido."
+      },
+      {
+        "text": "Los productos terminados destinados a la exportación poseen demanda dependiente de las materias primas guardadas en la planta.",
+        "isCorrect": false,
+        "rationale": "Los productos terminados se rigen por las solicitudes y compras de los clientes en el mercado final (demanda independiente)."
+      },
+      {
+        "text": "Las llantas de repuesto para vehículos de la mina son de demanda dependiente porque su valor unitario es elevado.",
+        "isCorrect": false,
+        "rationale": "La clasificación de demanda dependiente o independiente radica en la relación con el plan de producción, no en el costo unitario del ítem."
+      },
+      {
+        "text": "El consumo de energía eléctrica de las oficinas administrativas es una demanda dependiente derivada del ensamblaje de motores diésel.",
+        "isCorrect": false,
+        "rationale": "El gasto energético general no forma parte de la estructura de componentes de un producto y se considera un costo directo o suministro, no una demanda dependiente MRP."
+      }
+    ],
+    "hint": "Diferencie entre los productos que se venden directamente al cliente según el mercado y aquellos insumos cuyo cálculo depende de un plan de producción interno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa minera utiliza la estrategia de inventario Justo a Tiempo (JIT). ¿Cuál es el principal beneficio operativo y financiero de implementar este modelo en la gestión de materiales?",
+    "opciones": [
+      {
+        "text": "Minimiza los niveles de inventario en almacenamiento, reduciendo los costos de mantención y liberando capital de trabajo.",
+        "isCorrect": true,
+        "rationale": "El enfoque JIT persigue contar con las existencias mínimas indispensables en el momento preciso, evitando la inmovilización de recursos económicos en stock."
+      },
+      {
+        "text": "Elimina la necesidad de coordinar tiempos de entrega con los proveedores de materias primas.",
+        "isCorrect": false,
+        "rationale": "El JIT exige una sincronización y comunicación extremadamente precisa y rigurosa con la cadena de abastecimiento."
+      },
+      {
+        "text": "Permite realizar compras masivas de especulación sin importar las proyecciones de consumo real.",
+        "isCorrect": false,
+        "rationale": "La compra especulativa en gran volumen es diametralmente opuesta a la filosofía de producción ajustada y sin sobrestock que promueve JIT."
+      },
+      {
+        "text": "Protege a la empresa ante interrupciones severas de transporte al almacenar stock para más de dos años.",
+        "isCorrect": false,
+        "rationale": "Una desventaja del JIT es precisamente su vulnerabilidad ante quiebres de transporte al no contar con amortiguadores de existencias masivas."
+      },
+      {
+        "text": "Aumenta la merma de productos caducados al renovar lotes únicamente cuando la bodega está llena.",
+        "isCorrect": false,
+        "rationale": "Al trabajar con volúmenes bajos y alta rotación, el JIT disminuye el riesgo de obsolescencia o caducidad de inventarios."
+      }
+    ],
+    "hint": "Piense en la consecuencia directa de no acumular materiales innecesarios en las estanterías de la bodega.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el control de existencias cíclico o rotativo, ¿cuál es el criterio metodológico para seleccionar qué productos contar en cada jornada?",
+    "opciones": [
+      {
+        "text": "Se asigna mayor frecuencia de conteo a los artículos de mayor valor o rotación (Clase A), mientras los artículos C se cuentan con menor frecuencia.",
+        "isCorrect": true,
+        "rationale": "El inventario cíclico prioriza la revisión constante de los artículos críticos para garantizar la precisión sin detener la operación global."
+      },
+      {
+        "text": "Se realiza un conteo aleatorio de todo el almacén suspendiendo las actividades de despacho durante tres semanas.",
+        "isCorrect": false,
+        "rationale": "El conteo cíclico busca evitar la paralización operativa dividiendo el trabajo de recuento en grupos durante el transcurso del año."
+      },
+      {
+        "text": "Se auditante únicamente los insumos que hayan caducado hace más de doce meses.",
+        "isCorrect": false,
+        "rationale": "Auditar solo bienes caducados no aporta al control sistemático de las existencias operativas y disponibles."
+      },
+      {
+        "text": "Se requiere que el 100% de los códigos del catálogo se cuenten diariamente en un solo turno de trabajo.",
+        "isCorrect": false,
+        "rationale": "Contar la totalidad de las referencias a diario es físicamente inviable e ineficiente en almacenes de mediano y gran tamaño."
+      },
+      {
+        "text": "Se descartan las lecturas por sistema informático y solo se registran los productos que no figuran en las guías de remisión.",
+        "isCorrect": false,
+        "rationale": "El recuento rotativo busca reconciliar lo que físicamente existe contra los saldos informáticos del WMS o ERP."
+      }
+    ],
+    "hint": "Recuerde cómo se aplica la importancia por clasificación de valor para definir la frecuencia de auditoría.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la gestión moderna de almacenamiento, ¿cuál es la ventaja clave que ofrece un Sistema de Gestión de Almacenes (WMS) integrado frente al registro manual de existencias?",
+    "opciones": [
+      {
+        "text": "Proporciona visibilidad en tiempo real del nivel de stock y las ubicaciones exactas, automatizando las entradas y salidas mediante dispositivos de escaneo.",
+        "isCorrect": true,
+        "rationale": "Un WMS conectado mediante terminales portátiles (PDAs o lectores) descuenta e ingresa materiales al instante, eliminando errores de transcripción."
+      },
+      {
+        "text": "Garantiza que los costos de flete internacional disminuyan automáticamente a cero.",
+        "isCorrect": false,
+        "rationale": "El software gestiona la información interna del almacén, pero no determina las tarifas de los transportistas externos."
+      },
+      {
+        "text": "Sustituye por completo la necesidad de contar con personal operativo en las áreas de picking y empaque.",
+        "isCorrect": false,
+        "rationale": "El WMS guía al operador para optimizar sus rutas y movimientos, pero no elimina el recurso humano en bodegas tradicionales o semi-automatizadas."
+      },
+      {
+        "text": "Genera compras automáticas de productos obsoletos para mantener la bodega a máxima capacidad.",
+        "isCorrect": false,
+        "rationale": "Los sistemas buscan evitar la acumulación de obsoletos mediante reglas de rotación y reposición eficiente."
+      },
+      {
+        "text": "Evita tener que realizar revisiones físicas anuales o auditorías internas de contraste de inventario.",
+        "isCorrect": false,
+        "rationale": "A pesar de la precisión del WMS, las auditorías e inventarios físicos periódicos o anuales siguen siendo necesarios para detectar mermas o robos."
+      }
+    ],
+    "hint": "Considere la inmediatez de la actualización de saldos cuando un operador lee un código de barras en el pasillo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un inconveniente operativo notable en la implementación de inventarios periódicos masivos es que:",
+    "opciones": [
+      {
+        "text": "Suelen requerir la suspensión temporal de las actividades normales del almacén, lo que puede causar retrasos o apuros durante el recuento.",
+        "isCorrect": true,
+        "rationale": "Detener la operación obliga al personal a realizar el conteo en ventanas de tiempo reducidas, incrementando el riesgo de error humano por fatiga o prisa."
+      },
+      {
+        "text": "Exigen una inversión permanente en licencias de software en la nube de altísimo costo comercial.",
+        "isCorrect": false,
+        "rationale": "Los sistemas periódicos son típicamente empleados en esquemas sencillos que dependen de recuentos físicos periódicos en lugar de plataformas WMS complejas."
+      },
+      {
+        "text": "Actualizan los datos de existencias cada segundo sin intervención del personal de la planta.",
+        "isCorrect": false,
+        "rationale": "La actualización en tiempo real es una propiedad del inventario permanente/perpetuo, no del inventario periódico."
+      },
+      {
+        "text": "Previenen cualquier tipo de discrepancia o robo hormiga de manera inmediata en la jornada diaria.",
+        "isCorrect": false,
+        "rationale": "Al realizar recuentos distanciados en el tiempo, las mermas y robos quedan ocultos hasta el momento del conteo masivo."
+      },
+      {
+        "text": "Generan alertas automáticas cuando un producto entra en zona de caducidad crítica antes de despacharse.",
+        "isCorrect": false,
+        "rationale": "Las alertas de caducidad requieren trazabilidad digital continua propia de sistemas avanzados (SGA/WMS) e inventario perpetuo."
+      }
+    ],
+    "hint": "Reflexione sobre las condiciones de trabajo y detención de despacho que ocurren cuando se cierra un almacén para hacer recuento total.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la metodología Kaizen aplicada a la cadena de suministro, ¿a qué se refiere el principio de analizar el flujo en sentido inverso (End-to-End)?",
+    "opciones": [
+      {
+        "text": "Iniciar la evaluación logísitica desde el punto de entrega al cliente final y mapear el proceso hacia atrás hasta el proveedor inicial.",
+        "isCorrect": true,
+        "rationale": "Examinar el flujo desde el cliente hacia la fuente permite identificar desperdicios, cuellos de botella y actividades que no añaden valor real a la entrega final."
+      },
+      {
+        "text": "Devolver todo el material almacenado a los proveedores al inicio de cada mes de trabajo.",
+        "isCorrect": false,
+        "rationale": "El flujo inverso Kaizen es un enfoque de diagnóstico analítico de procesos, no una devolución física masiva de existencias."
+      },
+      {
+        "text": "Eliminar la etapa de planificación de la demanda para fabricar únicamente lo que sobra de materia prima.",
+        "isCorrect": false,
+        "rationale": "El método busca sincronización con el consumo real del cliente, no la acumulación aleatoria basada en retazos de insumos."
+      },
+      {
+        "text": "Modificar los códigos SKU de los productos al momento del embarque para evitar trazabilidad del cliente.",
+        "isCorrect": false,
+        "rationale": "Kaizen impulsa la transparencia y la máxima trazabilidad en cada eslabón del flujo de valor."
+      },
+      {
+        "text": "Priorizar el reabastecimiento por pronósticos a largo plazo ignorando la tasa de consumo de la operación.",
+        "isCorrect": false,
+        "rationale": "Kaizen fomenta los modelos impulsados por la demanda (Pull) en lugar de depender ciegamente de previsiones infladas (Push)."
+      }
+    ],
+    "hint": "Piense en la perspectiva de diseñar procesos teniendo como destino principal las necesidades y experiencia del destinatario final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del marco del pensamiento Lean (Lean Logistics), ¿cuáles de los siguientes pasos contribuyen directamente a la optimización de la gestión de inventarios?",
+    "opciones": [
+      {
+        "text": "Identificar y eliminar los residuos y actividades sobrantes que no aportan valor al proceso logístico.",
+        "isCorrect": true,
+        "rationale": "El núcleo de la filosofía Lean radica en la erradicación metódica de mermas, tiempos muertos y manipulación innecesaria."
+      },
+      {
+        "text": "Establecer métricas e indicadores de rendimiento (KPIs) claros para medir la eficiencia en el picking y la rotación.",
+        "isCorrect": true,
+        "rationale": "La medición continua del desempeño permite evaluar objetivamente el progreso e identificar desviaciones en el flujo operativo."
+      },
+      {
+        "text": "Reevaluar periódicamente los puntos de reorden y los niveles mínimos recomendados para evitar el sobrestock.",
+        "isCorrect": true,
+        "rationale": "Ajustar los puntos de reorden según las variaciones operativas previene la acumulación de inventarios obsoletos o excesivos."
+      },
+      {
+        "text": "Aumentar al máximo el volumen de cada lote de compra para llenar todos los espacios libres del almacén independientemente del uso.",
+        "isCorrect": false,
+        "rationale": "Acumular sobrestock únicamente para abarrotar estanterías genera desperdicio de espacio y capital inmovilizado, contrariando los principios Lean."
+      },
+      {
+        "text": "Prohibir la automatización y el uso de escáneres tecnológicos para mantener los registros totalmente manuscritos.",
+        "isCorrect": false,
+        "rationale": "Lean apoya el uso de tecnología que aporte fluidez, trazabilidad y precisión, eliminando el retrabajo de registros manuales."
+      }
+    ],
+    "hint": "Seleccione las prácticas enfocadas en erradicar desperdicios, medir la operación y mantener existencias ajustadas a la demanda real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo previene la implementación de un sistema ERP/WMS en la nube la problemática del denominado 'robo hormiga' en los almacenes?",
+    "opciones": [
+      {
+        "text": "Al registrar de forma estricta y transparente cada entrada, salida, ubicación y usuario responsable en tiempo real.",
+        "isCorrect": true,
+        "rationale": "La trazabilidad por usuario e ítem en sistemas digitales incrementa la responsabilidad y elimina los vacíos de control donde proliferan las sustracciones."
+      },
+      {
+        "text": "Al sustituir las puertas de acceso por barreras de alta tensión conectadas al sistema de compras.",
+        "isCorrect": false,
+        "rationale": "Los sistemas informáticos gestionan datos y permisos de trazabilidad, no reemplazan las infraestructuras de seguridad física perimetral mediante cercas eléctricas."
+      },
+      {
+        "text": "Al ocultar las cantidades físicas disponibles a los supervisores generales para que nadie conozca el saldo.",
+        "isCorrect": false,
+        "rationale": "La seguridad se logra mediante la visibilidad precisa del inventario para los responsables, no mediante la opacidad de los datos."
+      },
+      {
+        "text": "Al permitir que cualquier operario edite los datos contables del almacén sin dejar registro de auditoría.",
+        "isCorrect": false,
+        "rationale": "La ausencia de registros de auditoría facilitaría el fraude; los sistemas ERP restringen permisos y auditan cada modificación de stock."
+      },
+      {
+        "text": "Al duplicar automáticamente en el sistema el saldo de mercancías ante la pérdida imprevista de un paquete.",
+        "isCorrect": false,
+        "rationale": "Falsificar saldos contables encubriría la pérdida en lugar de alertar sobre discrepancias operativas."
+      }
+    ],
+    "hint": "Considere el impacto de contar con una bitácora digital inmutable que identifique qué operador movió cada artículo y cuándo lo hizo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la gestión de pedidos para clientes finales, ¿qué se entiende por brindar 'trazabilidad del pedido'?",
+    "opciones": [
+      {
+        "text": "Proporcionar visibilidad continua sobre el estado y la localización del paquete en cada etapa de la cadena desde el almacén hasta la entrega final.",
+        "isCorrect": true,
+        "rationale": "La trazabilidad (tracking) permite a los usuarios e intermediarios rastrear los eventos de procesamiento, despacho, tránsito y entrega de un despacho."
+      },
+      {
+        "text": "Garantizar que el precio comercial final de un despacho se reduzca a la mitad durante el trayecto de envío.",
+        "isCorrect": false,
+        "rationale": "La trazabilidad se refiere al rastreo de la ubicación y estado del paquete, no a alteraciones en la tarifa del producto."
+      },
+      {
+        "text": "Transferir la responsabilidad de empaque directamente al conductor del vehículo de reparto urbano.",
+        "isCorrect": false,
+        "rationale": "Las labores de acondicionamiento son operativas de la bodega, independientes de los sistemas informáticos de trazabilidad."
+      },
+      {
+        "text": "Obligar al cliente a retirar de forma presencial su compra en la fábrica de procesamiento primario.",
+        "isCorrect": false,
+        "rationale": "La trazabilidad aplica a cualquier modalidad de despacho (entrega a domicilio, retirado en punto o distribución a mina)."
+      },
+      {
+        "text": "Reemplazar los códigos de seguimiento por llamadas telefónicas manuales realizadas cada diez minutos.",
+        "isCorrect": false,
+        "rationale": "Las llamadas manuales son ineficientes; la trazabilidad moderna se soporta en plataformas digitales integradas."
+      }
+    ],
+    "hint": "Relacione el término con el número de rastreo (tracking) que permite saber si un pedido está en preparación, en tránsito o entregado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la industria minera, los sistemas de monitoreo y control remoto permiten operar maquinaria pesada a distancia. ¿Cuál es la ventaja primordial de esta tecnología en entornos de alto riesgo?",
+    "opciones": [
+      {
+        "text": "Retira al personal operativo de zonas peligrosas dentro del socavón o tajo abierto, incrementando sustancialmente la seguridad laboral.",
+        "isCorrect": true,
+        "rationale": "Manejar equipos de manera remota aísla a los operarios de riesgos de derrumbes, polvo nocivo, gases tóxicos y ruido extremo."
+      },
+      {
+        "text": "Aumenta la necesidad de contratar diez mecánicos adicionales en el frente de perforación por cada camión.",
+        "isCorrect": false,
+        "rationale": "El control remoto optimiza el uso de personal y reduce la presencia humana en el frente de trabajo, no la incrementa."
+      },
+      {
+        "text": "Garantiza que la maquinaria funcione sin necesidad de suministro eléctrico ni combustible diésel.",
+        "isCorrect": false,
+        "rationale": "El control remoto altera el método de teleoperación y mando, pero los motores requieren la misma fuente energética de potencia."
+      },
+      {
+        "text": "Elimina la obligación de realizar mantenimientos preventivos a los motores de los camiones autónomos.",
+        "isCorrect": false,
+        "rationale": "Los componentes mecánicos e hidráulicos continúan desgastándose y requieren mantenimiento preventivo programado."
+      },
+      {
+        "text": "Permite que los vehículos mineros operen a velocidades superiores a la del sonido dentro de los túneles.",
+        "isCorrect": false,
+        "rationale": "Los límites de velocidad en mina se regulan por física de adherencia, masa y diseño estructural de vías, no por la presencia del control remoto."
+      }
+    ],
+    "hint": "Reflexione sobre la protección de la integridad física de los trabajadores ante condiciones ambientales críticas subterráneas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una unidad minera ubicada a gran altitud utiliza tecnología de fabricación aditiva (impresión 3D). ¿Cuál es la aplicación más estratégica de esta herramienta dentro del mantenimiento operativo de la mina?",
+    "opciones": [
+      {
+        "text": "Producir repuestos personalizados críticos in situ, reduciendo el tiempo de parada de planta y la dependencia de fletes distantes.",
+        "isCorrect": true,
+        "rationale": "La impresión 3D fabrica componentes específicos en el campamento minero sin tener que esperar semanas por el envío marítimo o terrestre desde el fabricante internacional."
+      },
+      {
+        "text": "Imprimir directamente toneladas de mineral concentrado para cumplir los contratos de venta internacional.",
+        "isCorrect": false,
+        "rationale": "El mineral de valor se extrae de la corteza terrestre; la impresión 3D fabrica componentes estructurales o poliméricos/metálicos, no commodities geológicos."
+      },
+      {
+        "text": "Reemplazar el uso de combustible diésel en las calderas de fundición mediante modelos de plástico impreso.",
+        "isCorrect": false,
+        "rationale": "Las impresoras 3D elaboran piezas mecánicas o repuestos, no sirven como fuente alternativa de energía térmica para procesos de pirometallurgia."
+      },
+      {
+        "text": "Construir las carreteras principales de la mina inyectando concreto sintético desde una laptop.",
+        "isCorrect": false,
+        "rationale": "La infraestructura vial requiere maquinaria pesada de obras civiles; la fabricación aditiva de repuestos opera a escala de piezas mecánicas."
+      },
+      {
+        "text": "Sustituir de manera permanente la exploración geológica en terreno por modelos de resina impresos a escala.",
+        "isCorrect": false,
+        "rationale": "La impresión 3D ayuda a visualizar maquetas, pero no sustituye la perforación diamantina ni el ensaye químico de muestras de roca."
+      }
+    ],
+    "hint": "Considere lo que ocurre con la disponibilidad de la maquinaria cuando una pieza pequeña se rompe y el proveedor está a miles de kilómetros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la simulación de procesos mineros en 3D, los ingenieros evalúan diferentes escenarios antes de iniciar la extracción física. ¿Cuál es el beneficio de esta herramienta en la toma de decisiones?",
+    "opciones": [
+      {
+        "text": "Permite modelar y predecir cuellos de botella, optimizar secuencias de voladura y calcular costos sin arriesgar recursos ni la seguridad en el mundo real.",
+        "isCorrect": true,
+        "rationale": "La simulación computacional genera un entorno virtual representativo donde se pueden probar alternativas operativas de bajo costo antes de llevarlas a ejecución física."
+      },
+      {
+        "text": "Asegura que el mineral extraído de la mina posea una pureza del 100% de metal refinado al primer impacto.",
+        "isCorrect": false,
+        "rationale": "La simulación es un software de modelamiento y predicción analítica; la concentración metalúrgica física depende de procesos químicos y mecánicos reales."
+      },
+      {
+        "text": "Elimina la normativa ambiental vigente aplicable al depósito minero en explotación.",
+        "isCorrect": false,
+        "rationale": "Al contrario, la simulación ayuda a predecir e impactar positivamente en el cumplimiento regulatorio al estimar huellas ecológicas."
+      },
+      {
+        "text": "Modifica la composición química y geológica de las rocas mediante algoritmos virtuales de transformación.",
+        "isCorrect": false,
+        "rationale": "Las propiedades naturales del terreno son datos de entrada inmutables que el modelo simula para adaptar el método de minado."
+      },
+      {
+        "text": "Garantiza que no se requiera consumo eléctrico en la planta de procesamiento.",
+        "isCorrect": false,
+        "rationale": "El modelamiento ayuda a prever e intentar minimizar el consumo de energía, pero la maquinaria física de molienda continuará requiriendo potencia real."
+      }
+    ],
+    "hint": "Piense en el valor de experimentar y equivocarse en un modelo digital antes de excavar toneladas de terreno con maquinaria pesada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Respecto al análisis de Big Data e Inteligencia Artificial en operaciones mineras modernas, ¿cuáles de las siguientes alternativas corresponden a aplicaciones reales de estas tecnologías?",
+    "opciones": [
+      {
+        "text": "Anticipar fallas mecánicas en componentes críticos de camiones mediante modelos de mantenimiento predictivo basados en sensores de vibración y temperatura.",
+        "isCorrect": true,
+        "rationale": "Los algoritmos de aprendizaje automático procesan la telemetría enviada por los sensores para predecir averías antes de que ocurran interrupciones catastróficas."
+      },
+      {
+        "text": "Optimizar el consumo energético y la tasa de recuperación de mineral en la planta concentradora mediante modelos analíticos de datos continuos.",
+        "isCorrect": true,
+        "rationale": "El procesamiento de grandes volúmenes de datos permite ajustar automáticamente las variables operativas para maximizar el rendimiento metalúrgico."
+      },
+      {
+        "text": "Predecir la estabilidad de taludes y variaciones ambientales procesando información de sensores de presión e imágenes satelitales.",
+        "isCorrect": true,
+        "rationale": "Big Data integra múltiples fuentes de datos de detección remota para monitorear riesgos geotécnicos en tiempo real."
+      },
+      {
+        "text": "Alterar la gravedad dentro del socavón para que la carga pesada flote directo a la superficie sin esfuerzo.",
+        "isCorrect": false,
+        "rationale": "Las tecnologías de análisis de datos procesan información digital para tomar decisiones, sin violar las leyes físicas de la gravedad."
+      },
+      {
+        "text": "Reemplazar las leyes de ensaye químico de laboratorio por adivinaciones automatizadas sin tomar muestras de roca real.",
+        "isCorrect": false,
+        "rationale": "El Big Data utiliza resultados analíticos de laboratorio comprobados como datos de entrada para correlaciones, no para prescindir de la certeza científica de campo."
+      }
+    ],
+    "hint": "Identifique aquellas soluciones orientadas a procesar grandes volúmenes de datos provenientes de sensores para el mantenimiento predictivo, la geotecnia y la optimización de procesos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para poder desplegar exitosamente una red de dispositivos Internet de las Cosas (IoT) y sistemas de control remoto en el interior de una mina subterránea, ¿cuál es el requisito de infraestructura técnica indispensable?",
+    "opciones": [
+      {
+        "text": "Implementar redes inalámbricas de comunicación robustas (como Wi-Fi industrial o LTE/5G dedicadas) adaptadas al entorno confinado subterráneo.",
+        "isCorrect": true,
+        "rationale": "Sin una conectividad inalámbrica confiable que penetre los socavones, los sensores IoT y las ordenes de control remoto no pueden transmitir datos hacia los servidores centralizados."
+      },
+      {
+        "text": "Instalar torres de señal satelital dentro de las galerías sin ventilación.",
+        "isCorrect": false,
+        "rationale": "Las ondas satelitales no atraviesan la masa rocosa profunda; la comunicación subterránea requiere cableado de fibra y antenas repetidoras internas de Wi-Fi/LTE."
+      },
+      {
+        "text": "Aumentar el uso de papel en los registros de control para respaldar manualmente cada paquete de datos emitido.",
+        "isCorrect": false,
+        "rationale": "El ecosistema IoT busca la digitalización directa de flujos sin depender de la anotación física en papel."
+      },
+      {
+        "text": "Eliminar la presencia de servidores centrales de procesamiento y trabajar únicamente con computadoras aisladas sin conexión entre sí.",
+        "isCorrect": false,
+        "rationale": "La filosofía de IoT radica precisamente en la interconexión de nodos y dispositivos con plataformas de datos centralizadas."
+      },
+      {
+        "text": "Utilizar únicamente cables telefónicos analógicos de cobre instalados el siglo pasado.",
+        "isCorrect": false,
+        "rationale": "El ancho de banda requerido por el video en tiempo real de la teleoperación y sensores masivos supera con creces la capacidad del cobre telefónico tradicional."
+      }
+    ],
+    "hint": "Piense en la necesidad de cobertura inalámbrica de alta velocidad necesaria dentro de un túnel de roca para conectar sensores y máquinas en movimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la función de supervisión de un 'Sistema de Control de Procesos' instalado en una planta de procesamiento de minerales?",
+    "opciones": [
+      {
+        "text": "En monitorear en tiempo real variables de operación (como presión, flujo, granulometría y reactivos) para realizar ajustes automáticos y optimizar el rendimiento.",
+        "isCorrect": true,
+        "rationale": "Los sistemas de control de procesos en planta utilizan bucles de retroalimentación en tiempo real para mantener la producción dentro de parámetros eficientes sin fluctuaciones drásticas."
+      },
+      {
+        "text": "En controlar la nómina de salarios y los contratos de seguros de vida del personal administrativo.",
+        "isCorrect": false,
+        "rationale": "La nómina y seguros de vida corresponden a la gestión de recursos humanos y finanzas, no al control industrial de procesamiento de minerales."
+      },
+      {
+        "text": "En apagar de forma definitiva todas las fajas transportadoras cada vez que ingresa una camioneta a la instalación.",
+        "isCorrect": false,
+        "rationale": "Un sistema de control ajusta parámetros continuos para no interrumpir la producción innecesariamente, gestionando la continuidad operativa."
+      },
+      {
+        "text": "En modificar aleatoriamente las dimensiones de los molinos durante las horas de descanso de la cuadrilla.",
+        "isCorrect": false,
+        "rationale": "Las dimensiones físicas de la maquinaria son fijas; lo que se regula automáticamente son los parámetros de operación como velocidad, carga y adición de insumos."
+      },
+      {
+        "text": "En enviar encuestas informativas a los compradores finales sobre el color estético del empaque del concentrado.",
+        "isCorrect": false,
+        "rationale": "El control de procesos metalúrgicos monitorea variables fisicoquímicas internas de la planta y no estudios de mercadeo final."
+      }
+    ],
+    "hint": "Relacione el concepto con la regulación automatizada de variables físicas y químicas durante la molienda o flotación del mineral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-18",
+    "diplomado": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la toma de decisiones basada en analítica predictiva en minería, ¿cuál es el riesgo principal de basar la planificación estratégica únicamente en registros manuales y discontinuos?",
+    "opciones": [
+      {
+        "text": "Incurrir en inconsistencias de datos, retrasar la detección de fallas críticas y tomar decisiones sobre información obsoleta o errónea.",
+        "isCorrect": true,
+        "rationale": "Los datos manuales sufren de sesgos, omisiones, tardanza y posible error de transcripción, impidiendo una reacción predictiva antes de que ocurran eventos desfavorables."
+      },
+      {
+        "text": "Generar un exceso inmediato de liquidez en las cuentas bancarias de la empresa minera.",
+        "isCorrect": false,
+        "rationale": "La inexactitud de los datos operacionales no genera mayor liquidez; por el contrario, provoca sobrecostos por fallas no previstas."
+      },
+      {
+        "text": "Garantizar el cumplimiento automático del 100% de las normas internacionales ambientales sin requerir auditorías.",
+        "isCorrect": false,
+        "rationale": "El cumplimiento normativo exige trazabilidad y evidencia de datos precisos en tiempo real, lo cual se dificulta con controles manuales inconsistentes."
+      },
+      {
+        "text": "Duplicar la vida útil de los motores diésel de la flota sin necesidad de lubricantes.",
+        "isCorrect": false,
+        "rationale": "La falta de monitoreo continuo incrementa el riesgo de desgaste prematuro de los motores al no alertar sobre sobrecalentamiento."
+      },
+      {
+        "text": "Aumentar automáticamente la velocidad de la banda ancha de las redes inalámbricas de la región.",
+        "isCorrect": false,
+        "rationale": "La naturaleza del registro administrativo no tiene relación con la capacidad de ancho de banda físico de la infraestructura de telecomunicaciones."
+      }
+    ],
+    "hint": "Reflexione sobre lo que sucede cuando una falla en un motor no se detecta a tiempo debido a que la hoja de inspección en papel se revisa una vez por semana.",
+    "activo": true
+  }
+]

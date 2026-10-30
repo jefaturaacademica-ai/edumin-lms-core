@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué porcentaje de los costos operativos totales de una mina puede llegar a representar la energía en la industria minera?",
+    "opciones": [
+      {
+        "text": "Entre un 15% y un 40%",
+        "isCorrect": true,
+        "rationale": "Esta cifra representa la proporción considerable que ocupa la energía dentro de la estructura general de costos operativos de una unidad minera."
+      },
+      {
+        "text": "Entre un 1% y un 5%",
+        "isCorrect": false,
+        "rationale": "Un porcentaje tan bajo no reflejaría la alta intensidad energética requerida para los procesos de acarreo y procesamiento de minerales."
+      },
+      {
+        "text": "Entre un 50% y un 70%",
+        "isCorrect": false,
+        "rationale": "Aunque la energía es un costo estratégico masivo, los costos combinados de mano de obra, reactivos y capital superan este rango elevado."
+      },
+      {
+        "text": "Entre un 75% y un 90%",
+        "isCorrect": false,
+        "rationale": "Esta proporción es excesivamente alta y dejaría sin margen operativo el resto de los insumos clave de la operación."
+      },
+      {
+        "text": "Exactamente el 10%",
+        "isCorrect": false,
+        "rationale": "Aunque es una cifra redonda común en estimaciones presupuestales generales, no refleja el rango real de consumo energético minero."
+      }
+    ],
+    "hint": "Considere el rango porcentual clave mencionado al inicio del análisis de la estructura de costos operativos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la norma internacional adoptada por la industria minera como estándar global para implementar sistemas de gestión de la energía?",
+    "opciones": [
+      {
+        "text": "ISO 50001",
+        "isCorrect": true,
+        "rationale": "Es el estándar mundial diseñado específicamente para establecer marcos de trabajo y sistemas de gestión de eficiencia energética."
+      },
+      {
+        "text": "ISO 9001",
+        "isCorrect": false,
+        "rationale": "Esta norma se enfoca en los sistemas de gestión de la calidad general de una organización y no específicamente en la energía."
+      },
+      {
+        "text": "ISO 14001",
+        "isCorrect": false,
+        "rationale": "Esta norma regula los sistemas de gestión ambiental integral, pero no constituye el manual específico de eficiencia energética."
+      },
+      {
+        "text": "ISO 45001",
+        "isCorrect": false,
+        "rationale": "Esta norma está dedicada a la salud y seguridad en el trabajo, no al desempeño energético de las operaciones."
+      },
+      {
+        "text": "ISO 27001",
+        "isCorrect": false,
+        "rationale": "Corresponde a la seguridad de la información y ciberseguridad, no a los sistemas energéticos industriales."
+      }
+    ],
+    "hint": "Identifique el estándar normativo de cuatro ceros y un uno orientado a la eficiencia de energía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el ciclo de mejora continua que sirve como motor metodológico de la norma ISO 50001?",
+    "opciones": [
+      {
+        "text": "Planificar, hacer, verificar y actuar",
+        "isCorrect": true,
+        "rationale": "Constituye la rueda de gestión iterativa que permite fijar metas, implementar acciones, medir resultados y realizar ajustes sistemáticos."
+      },
+      {
+        "text": "Comprar, instalar, operar y mantener",
+        "isCorrect": false,
+        "rationale": "Este conjunto describe las etapas de adquisición de equipos, pero no el ciclo metodológico de un sistema de gestión energética."
+      },
+      {
+        "text": "Diseñar, financiar, construir y vender",
+        "isCorrect": false,
+        "rationale": "Representa las fases de desarrollo de un proyecto inmobiliario o de capital, no un ciclo de mejora continua de eficiencia."
+      },
+      {
+        "text": "Medir, cortar, ensamblar y distribuir",
+        "isCorrect": false,
+        "rationale": "Son pasos típicos de manufactura ligera, desvinculados de la metodología de gestión normalizada de la energía."
+      },
+      {
+        "text": "Evaluar, presupuestar, auditar y clausurar",
+        "isCorrect": false,
+        "rationale": "Describe un proceso de control financiero y cierre, no el ciclo dinámico y permanente de optimización operativa."
+      }
+    ],
+    "hint": "Recuerde las cuatro fases iterativas que garantizan que el ahorro energético no sea un hecho aislado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué fuente de energía domina la matriz de consumo de las minas, representando aproximadamente el 75% del total?",
+    "opciones": [
+      {
+        "text": "Electricidad",
+        "isCorrect": true,
+        "rationale": "Sostiene la operación de la planta de procesamiento y los sistemas de fuerza de la mina, constituyendo las tres cuartas partes del consumo."
+      },
+      {
+        "text": "Diésel",
+        "isCorrect": false,
+        "rationale": "Aunque es fundamental para el transporte y la flota de acarreo, representa cerca del 17% de la dieta energética total."
+      },
+      {
+        "text": "Gas natural",
+        "isCorrect": false,
+        "rationale": "Se utiliza en ciertos procesos térmicos o generación secundaria, pero no domina la matriz operativa principal de una mina."
+      },
+      {
+        "text": "Carbón",
+        "isCorrect": false,
+        "rationale": "No es una fuente de consumo directo primario en la matriz operativa de las minas modernas analizadas."
+      },
+      {
+        "text": "Hidrógeno verde",
+        "isCorrect": false,
+        "rationale": "Es una tecnología emergente proyectada para el futuro y no representa la fracción dominante actual del consumo."
+      }
+    ],
+    "hint": "Piense en la fuente energética que alimenta directamente la planta concentradora y la red principal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de una planta concentradora, ¿qué proceso específico puede llegar a absorber hasta el 70% de la energía eléctrica consumida en la planta?",
+    "opciones": [
+      {
+        "text": "La conminución (chancado y molienda)",
+        "isCorrect": true,
+        "rationale": "La trituración y molienda de la roca es el proceso intensivo de fuerza bruta que demanda la mayor parte de la electricidad de la planta."
+      },
+      {
+        "text": "La flotación de minerales",
+        "isCorrect": false,
+        "rationale": "La flotación requiere agitación y reactivos, pero su demanda eléctrica es considerablemente menor que la fractura mecánica de la roca."
+      },
+      {
+        "text": "El espesamiento y filtrado de relaves",
+        "isCorrect": false,
+        "rationale": "Es un proceso de separación sólido-líquido que consume energía en bombeo, pero no alcanza magnitudes tan altas como la molienda."
+      },
+      {
+        "text": "El alumbrado de instalaciones",
+        "isCorrect": false,
+        "rationale": "El consumo del sistema de iluminación representa un porcentaje mínimo en comparación con los motores industriales del proceso."
+      },
+      {
+        "text": "El transporte en fajas de concentrado seco",
+        "isCorrect": false,
+        "rationale": "Aunque requiere motores eléctricos para mover material, la energía consumida es baja comparada con la ruptura de la roca dura."
+      }
+    ],
+    "hint": "Piense en la etapa física donde se requiere reducir el tamaño de las rocas mediante fuerza bruta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué reducción porcentual en el consumo energético de la molienda se puede obtener mediante el uso de la tecnología HPGR?",
+    "opciones": [
+      {
+        "text": "Hasta un 25%",
+        "isCorrect": true,
+        "rationale": "Los rodillos de molienda de alta presión utilizan compresión en lugar de impacto, logrando disminuir el consumo energético en ese porcentaje."
+      },
+      {
+        "text": "Hasta un 50%",
+        "isCorrect": false,
+        "rationale": "Este porcentaje de ahorro corresponde a la optimización de sistemas de ventilación inteligente subterránea, no a la molienda HPGR."
+      },
+      {
+        "text": "Hasta un 90%",
+        "isCorrect": false,
+        "rationale": "Ese nivel de reducción corresponde al ahorro de diésel logrado en rampas específicas mediante el sistema Trolley Assist."
+      },
+      {
+        "text": "Hasta un 5%",
+        "isCorrect": false,
+        "rationale": "Es un porcentaje demasiado bajo para justificar la alta inversión de capital que requiere reemplazar molinos tradicionales por HPGR."
+      },
+      {
+        "text": "Exactamente el 100%",
+        "isCorrect": false,
+        "rationale": "Ningún proceso mecánico de molienda puede eliminar por completo el consumo energético requerido para romper la roca."
+      }
+    ],
+    "hint": "Asocie esta tecnología de compresión de roca con el porcentaje de ahorro que bordea la cuarta parte del consumo en molienda.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el beneficio principal de implementar el sistema Trolley Assist en los camiones de acarreo en minas a tajo abierto?",
+    "opciones": [
+      {
+        "text": "Reducir más del 90% del consumo de diésel en rampas y duplicar la velocidad de subida",
+        "isCorrect": true,
+        "rationale": "Al conectar los camiones directamente a una línea eléctrica en las pendientes, se elimina el consumo diésel en el tramo más exigente y se aumenta la productividad."
+      },
+      {
+        "text": "Eliminar la necesidad de usar neumáticos de repuesto en la flota",
+        "isCorrect": false,
+        "rationale": "El sistema Trolley electrifica la tracción en rampas, pero no altera el desgaste ni la necesidad de neumáticos en los camiones."
+      },
+      {
+        "text": "Reemplazar los molinos de la planta concentradora por motores diésel",
+        "isCorrect": false,
+        "rationale": "Trolley Assist es una solución para el transporte de superficie, sin relación con los equipos de molienda en planta."
+      },
+      {
+        "text": "Convertir el agua subterránea en combustible diésel sintético",
+        "isCorrect": false,
+        "rationale": "Esta tecnología no genera combustible, sino que alimenta eléctricamente el motor del camión mediante catenaria."
+      },
+      {
+        "text": "Reducir a la mitad la fuerza de gravedad en el tajo de la mina",
+        "isCorrect": false,
+        "rationale": "Es una imposibilidad física; la tecnología contrarresta la resistencia de la pendiente aplicando tracción eléctrica."
+      }
+    ],
+    "hint": "Recuerde los dos impactos directos del sistema de catenaria en rampas: ahorro de combustible líquido y ganancia de velocidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la minería subterránea, ¿qué proporción de la factura total de electricidad puede ser consumida únicamente por el sistema de ventilación?",
+    "opciones": [
+      {
+        "text": "Entre un 40% y un 50%",
+        "isCorrect": true,
+        "rationale": "Mantener la calidad del aire y diluir gases bajo tierra exige un flujo de aire constante que consume casi la mitad de la potencia eléctrica minera."
+      },
+      {
+        "text": "Menos del 5%",
+        "isCorrect": false,
+        "rationale": "La potencia requerida para mover grandes volúmenes de aire subterráneo es inmensamente superior a esta cifra marginal."
+      },
+      {
+        "text": "Alrededor del 15%",
+        "isCorrect": false,
+        "rationale": "Este valor subestima el enorme desafío energético que representa la ventilación subterránea continua."
+      },
+      {
+        "text": "Más del 85%",
+        "isCorrect": false,
+        "rationale": "Ese porcentaje dejaría a la minería subterránea sin energía suficiente para el bombeo de agua, perforación y extracción."
+      },
+      {
+        "text": "Exactamente el 100%",
+        "isCorrect": false,
+        "rationale": "Una mina subterránea requiere electricidad para múltiples procesos esenciales además de los ventiladores mecánicos."
+      }
+    ],
+    "hint": "Identifique la fracción que equivale prácticamente a la mitad de la cuenta de luz en operaciones bajo tierra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se llama la solución tecnológica inteligente que regula la ventilación subterránea enviando aire solo a las áreas con personal o equipos activos?",
+    "opciones": [
+      {
+        "text": "Ventilación bajo demanda (VOD)",
+        "isCorrect": true,
+        "rationale": "Utiliza sensores y automatización para dirigir el flujo de aire únicamente donde y cuando se requiere, logrando ahorros significativos."
+      },
+      {
+        "text": "Ventilación estática natural",
+        "isCorrect": false,
+        "rationale": "La ventilación estática no utiliza sensores inteligentes ni regulación automatizada activa según demanda."
+      },
+      {
+        "text": "Inyección continua forzada",
+        "isCorrect": false,
+        "rationale": "Este enfoque tradicional mantiene los ventiladores al máximo de forma ininterrumpida, generando un consumo ineficiente."
+      },
+      {
+        "text": "Compresión centrífuga en vacío",
+        "isCorrect": false,
+        "rationale": "Es un término conceptualmente erróneo que no corresponde a la tecnología de gestión de flujos de aire mineros."
+      },
+      {
+        "text": "Refrigeración por convección pasiva",
+        "isCorrect": false,
+        "rationale": "No utiliza control digital de demanda ni es suficiente para garantizar aire respirable en labores subterráneas profundas."
+      }
+    ],
+    "hint": "Busque el concepto que imita a un sistema de climatización inteligente que responde a la ubicación real de usuarios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes rubros forman parte de la estructura de la factura eléctrica de un 'cliente libre' en el sector minero peruano?",
+    "opciones": [
+      {
+        "text": "Potencia (capacidad reservada en el sistema)",
+        "isCorrect": true,
+        "rationale": "Corresponde al cargo por la capacidad máxima de generación y transmisión que la mina reserva para su operación."
+      },
+      {
+        "text": "Energía (consumo real medido en kilowatt-horas)",
+        "isCorrect": true,
+        "rationale": "Refleja el volumen de electricidad efectivamente utilizado por los equipos e instalaciones durante el período de facturación."
+      },
+      {
+        "text": "Peajes (cobros por el uso de la red de transmisión)",
+        "isCorrect": true,
+        "rationale": "Representa el pago por transportar la electricidad desde las centrales generadoras hasta el punto de entrega de la mina."
+      },
+      {
+        "text": "Impuesto obligatorio a las emisiones territoriales de carbono",
+        "isCorrect": false,
+        "rationale": "En el marco normativo peruano actual no existe un impuesto específico directo a las emisiones de carbono cobrado en la factura."
+      },
+      {
+        "text": "Subsidio directo reembolsable de la entidad CORFO",
+        "isCorrect": false,
+        "rationale": "CORFO es una agencia estatal chilena y no forma parte del esquema de facturación ni del mercado eléctrico en Perú."
+      }
+    ],
+    "hint": "Seleccione los tres elementos que componen el desglose tarifario del mercado libre comparado analógicamente con un plan telefónico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué porcentaje aproximado de la electricidad total producida en el Perú es consumido por el sector minero?",
+    "opciones": [
+      {
+        "text": "Casi el 30%",
+        "isCorrect": true,
+        "rationale": "Esta cifra demuestra la magnitud e impacto que tiene la demanda energética de la minería sobre la red eléctrica nacional."
+      },
+      {
+        "text": "Alrededor del 5%",
+        "isCorrect": false,
+        "rationale": "Es una cifra demasiado pequeña que ignora el rol de la minería como el principal consumidor industrial del país."
+      },
+      {
+        "text": "Exactamente el 50%",
+        "isCorrect": false,
+        "rationale": "Aunque es un consumidor gigante, el sector minero no llega a absorber la mitad de toda la generación del país."
+      },
+      {
+        "text": "Cerca del 75%",
+        "isCorrect": false,
+        "rationale": "Este porcentaje corresponde a la participación de la electricidad dentro de la dieta energética interna de la mina, no al consumo nacional."
+      },
+      {
+        "text": "El 100%",
+        "isCorrect": false,
+        "rationale": "La red nacional abastece a sectores urbanos, comerciales e industriales diversos, por lo que la minería no consume la totalidad."
+      }
+    ],
+    "hint": "Busque la cifra que representa casi un tercio del consumo eléctrico nacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es un contrato de compra de energía conocido como 'PPA verde' en la industria minera?",
+    "opciones": [
+      {
+        "text": "Un acuerdo a largo plazo para asegurar el suministro de electricidad proveniente 100% de fuentes renovables certificadas",
+        "isCorrect": true,
+        "rationale": "Permite a la minera garantizar electricidad limpia por periodos prolongados (15 a 17 años) protegiéndose de la volatilidad tarifaria."
+      },
+      {
+        "text": "Un permiso municipal temporal para transportar combustible diésel",
+        "isCorrect": false,
+        "rationale": "No es una autorización de transporte ni está vinculado a combustibles fósiles líquidos."
+      },
+      {
+        "text": "Un subsidio gubernamental para cubrir los costos de agua potable",
+        "isCorrect": false,
+        "rationale": "Un PPA es un contrato comercial privado de compraventa de electricidad, no un subsidio público de agua."
+      },
+      {
+        "text": "Una penalización financiera por exceder los límites de ruido ambiental",
+        "isCorrect": false,
+        "rationale": "El término no refiere a una multa o sanción, sino a un instrumento contractual de abastecimiento energético."
+      },
+      {
+        "text": "Un impuesto verde que grava el volumen de roca triturada",
+        "isCorrect": false,
+        "rationale": "No constituye un tributo fiscal sobre la producción minera, sino un contrato de energía de origen renovable."
+      }
+    ],
+    "hint": "Piense en el compromiso comercial a largo plazo que firma una empresa para abastecerse de energía limpia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué proyecto de autogeneración solar desarrollado por una compañía minera en Perú destaca por alcanzar una capacidad de 200 MW?",
+    "opciones": [
+      {
+        "text": "El proyecto solar de Sociedad Minera Cerro Verde",
+        "isCorrect": true,
+        "rationale": "Es una iniciativa de autogeneración renovable de gran escala que compite en tamaño con plantas generadoras nacionales."
+      },
+      {
+        "text": "El parque fotovoltaico de Minera Yanacocha",
+        "isCorrect": false,
+        "rationale": "Yanacocha evalúa proyectos de energía limpia para la fase de cierre, pero la iniciativa de 200 MW se atribuye a Cerro Verde."
+      },
+      {
+        "text": "La planta eólica de Antamina",
+        "isCorrect": false,
+        "rationale": "El proyecto mencionado de 200 MW en el material es de tecnología solar fotovoltaica y pertenece a Cerro Verde."
+      },
+      {
+        "text": "La central térmica de Toromocho",
+        "isCorrect": false,
+        "rationale": "Toromocho es conocida por sus avances en digitalización e IROC, no por construir una planta fotovoltaica de 200 MW."
+      },
+      {
+        "text": "El complejo hidroeléctrico de Quellaveco",
+        "isCorrect": false,
+        "rationale": "Quellaveco es referente en minería digital y gemelos digitales, no en el desarrollo de este proyecto solar específico."
+      }
+    ],
+    "hint": "Identifique la gran operación de cobre ubicada en Arequipa que impulsa este megaproyecto solar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué categoría de emisiones corresponden los gases de efecto invernadero generados directamente por los camiones de acarreo que queman diésel?",
+    "opciones": [
+      {
+        "text": "Emisiones de Alcance 1",
+        "isCorrect": true,
+        "rationale": "Corresponden a las emisiones directas provenientes de fuentes que son propiedad o están controladas por la empresa, como la combustión de diésel."
+      },
+      {
+        "text": "Emisiones de Alcance 2",
+        "isCorrect": false,
+        "rationale": "Las emisiones de Alcance 2 provienen del consumo de electricidad importada o comprada a la red eléctrica."
+      },
+      {
+        "text": "Emisiones de Alcance 3",
+        "isCorrect": false,
+        "rationale": "Abarcan las emisiones indirectas de la cadena de valor extendida (proveedores, viajes, uso final del producto)."
+      },
+      {
+        "text": "Emisiones de Alcance 4",
+        "isCorrect": false,
+        "rationale": "Esta categoría no forma parte de los tres estándares normativos universales de contabilidad de carbono."
+      },
+      {
+        "text": "Emisiones de Alcance Cero",
+        "isCorrect": false,
+        "rationale": "La combustión de diésel genera gases contaminantes directos, por lo que no puede considerarse nula."
+      }
+    ],
+    "hint": "Recuerde la clasificación de emisiones según si son generadas in situ por combustión directa o compradas de la red.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el número de la ley peruana promulada para declarar de interés nacional el fomento del desarrollo del hidrógeno verde?",
+    "opciones": [
+      {
+        "text": "Ley 31969",
+        "isCorrect": true,
+        "rationale": "Es la norma legal específica emitida para promover el hidrógeno verde y establecer marcos de certificación en Perú."
+      },
+      {
+        "text": "Ley 30309",
+        "isCorrect": false,
+        "rationale": "La Ley 30309 otorga incentivos tributarios a la investigación, desarrollo e innovación (I+D+i), no al hidrógeno verde directamente."
+      },
+      {
+        "text": "Ley 50001",
+        "isCorrect": false,
+        "rationale": "50001 corresponde a la norma técnica internacional ISO para la gestión energética, no a una ley del Congreso peruano."
+      },
+      {
+        "text": "Ley 2026",
+        "isCorrect": false,
+        "rationale": "No es la numeración de la ley promulgada para la promoción del hidrógeno verde."
+      },
+      {
+        "text": "Ley 27444",
+        "isCorrect": false,
+        "rationale": "Esta norma corresponde a la Ley del Procedimiento Administrativo General en Perú, sin vínculo con el hidrógeno."
+      }
+    ],
+    "hint": "Seleccione la norma con la numeración que comienza con '319...' dedicada a este vector energético.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta de la Industria 4.0 consiste en una copia virtual exacta y viva de la mina que permite simular procesos sin gastar energía real?",
+    "opciones": [
+      {
+        "text": "Gemelo digital",
+        "isCorrect": true,
+        "rationale": "Permite modelar y predecir el comportamiento de los procesos industriales en un entorno informático antes de ejecutar operaciones reales."
+      },
+      {
+        "text": "Red de sensores fotovoltaicos",
+        "isCorrect": false,
+        "rationale": "Es un conjunto de hardware para captar energía solar, no un modelo informático de simulación en tiempo real."
+      },
+      {
+        "text": "Base de datos estática en hojas de cálculo",
+        "isCorrect": false,
+        "rationale": "Una hoja de cálculo estática carece de la capacidad de simulación viva, bidireccional y predictiva de la operación."
+      },
+      {
+        "text": "Impresora 3D de alta definición",
+        "isCorrect": false,
+        "rationale": "Sirve para la fabricación aditiva de piezas físicas, no para simular digitalmente el comportamiento energético integral."
+      },
+      {
+        "text": "Sistema de gestión de nóminas en la nube",
+        "isCorrect": false,
+        "rationale": "Es una herramienta administrativa de recursos humanos sin aplicación en la optimización de física y energía minera."
+      }
+    ],
+    "hint": "Piense en el concepto de réplica o 'duplicado' informático de una instalación física completa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué infraestructura de control remoto utiliza la mina Toromocho para coordinar equipos desde Lima y eliminar silos de información?",
+    "opciones": [
+      {
+        "text": "Centro Integrado de Operaciones Remotas (CIOR / IROC)",
+        "isCorrect": true,
+        "rationale": "Centraliza la toma de decisiones y el monitoreo en tiempo real de la mina, optimizando la interacción entre procesos."
+      },
+      {
+        "text": "Sistema VOD de ventilación autónoma",
+        "isCorrect": false,
+        "rationale": "VOD es una tecnología específica para regular aire subterráneo, no la sala centralizada de control de toda la mina."
+      },
+      {
+        "text": "Estación de intercambio de baterías de tracción",
+        "isCorrect": false,
+        "rationale": "Es la infraestructura para cambiar baterías en camiones eléctricos, no la central de monitoreo de operaciones."
+      },
+      {
+        "text": "Parque eólico de generación aislada",
+        "isCorrect": false,
+        "rationale": "Representa una instalación de generación limpia, no una sala de control digital remoto de la producción."
+      },
+      {
+        "text": "Comité comunitario de desarrollo sostenible",
+        "isCorrect": false,
+        "rationale": "Es un espacio de diálogo social con actores locales, desvinculado del control técnico remoto de la planta."
+      }
+    ],
+    "hint": "Identifique las siglas en inglés (IROC) o español (CIOR) que designan a las salas de control unificado a distancia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué operación minera en Perú fue destacada por operar una flota de camiones de acarreo de 90 toneladas 100% eléctricos con intercambio de baterías?",
+    "opciones": [
+      {
+        "text": "Minera La Arena",
+        "isCorrect": true,
+        "rationale": "Demostró la viabilidad técnica de utilizar vehículos pesados 100% eléctricos con recarga por intercambio de baterías en condiciones andinas."
+      },
+      {
+        "text": "Sociedad Minera Cerro Verde",
+        "isCorrect": false,
+        "rationale": "Cerro Verde destaca por su contrato PPA verde y proyecto solar de 200 MW, pero no por la flota de 90 toneladas mencionada."
+      },
+      {
+        "text": "Compañía Minera Antamina",
+        "isCorrect": false,
+        "rationale": "Antamina es una de las mayores minas del país, pero la prueba pionera de camiones eléctricos citada fue en La Arena."
+      },
+      {
+        "text": "Las Bambas",
+        "isCorrect": false,
+        "rationale": "Las Bambas participa en iniciativas de hidrógeno con H2 Perú, no en la flota eléctrica pionera de 90 toneladas mencionada."
+      },
+      {
+        "text": "Minera Yanacocha",
+        "isCorrect": false,
+        "rationale": "Yanacocha lidera conceptos de cierre circular renovable, no la implementación de esta flota de camiones a batería."
+      }
+    ],
+    "hint": "Busque la unidad minera cuyo nombre hace referencia a una superficie de arena o grano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué cantidad de certificaciones de la norma ISO 50001 destaca Perú, posicionándose a la cabeza de la región latinoamericana?",
+    "opciones": [
+      {
+        "text": "330 certificaciones",
+        "isCorrect": true,
+        "rationale": "Esta cifra demuestra un liderazgo destacado en la adopción voluntaria de estándares formales de gestión energética."
+      },
+      {
+        "text": "10 certificaciones",
+        "isCorrect": false,
+        "rationale": "Esta cantidad es sumamente reducida y no reflejaría un liderazgo regional frente a países como Brasil o Chile."
+      },
+      {
+        "text": "50 certificaciones",
+        "isCorrect": false,
+        "rationale": "Es una cifra inferior al registro real alcanzado por las organizaciones e industrias en Perú."
+      },
+      {
+        "text": "1,000 certificaciones",
+        "isCorrect": false,
+        "rationale": "Sobreestima el volumen de certificaciones actuales registrado en las fuentes para esta norma específica."
+      },
+      {
+        "text": "5,000 certificaciones",
+        "isCorrect": false,
+        "rationale": "Representa un número desproporcionado para el mercado nacional de certificaciones energéticas ISO 50001."
+      }
+    ],
+    "hint": "Identifique el número de tres dígitos que inicia y concluye con el número tres.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué incentivo tributario establece la Ley 30309 en Perú para las empresas mineras que invierten en investigación, desarrollo e innovación (I+D+i)?",
+    "opciones": [
+      {
+        "text": "Una deducción tributaria de hasta el 190% sobre los gastos en proyectos calificados",
+        "isCorrect": true,
+        "rationale": "Permite reducir el pago del impuesto a la renta deduciendo un porcentaje significativamente mayor al monto efectivamente invertido."
+      },
+      {
+        "text": "La exoneración total de pagar la factura de luz durante cinco años",
+        "isCorrect": false,
+        "rationale": "La ley no condona los pagos de consumo eléctrico a las empresas generadoras de energía."
+      },
+      {
+        "text": "Un subsidio en efectivo entregado mensualmente por el Ministerio de Energía y Minas",
+        "isCorrect": false,
+        "rationale": "No constituye una subvención monetaria directa, sino una deducción en el cálculo del impuesto a la renta."
+      },
+      {
+        "text": "La eliminación permanente de las regalías mineras",
+        "isCorrect": false,
+        "rationale": "Las regalías mineras se regulan bajo su propio régimen tributario y no se eliminan con la Ley de I+D+i."
+      },
+      {
+        "text": "La entrega gratuita de camiones eléctricos por parte del Estado",
+        "isCorrect": false,
+        "rationale": "El Estado no provee bienes ni maquinaria física a las empresas privadas mediante esta ley fiscal."
+      }
+    ],
+    "hint": "Piense en el beneficio fiscal que permite deducir casi el doble de lo invertido en el proyecto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué organismo público técnico en Perú es el encargado de evaluar y calificar los proyectos de I+D+i para acceder a los beneficios de la Ley 30309?",
+    "opciones": [
+      {
+        "text": "CONCYTEC",
+        "isCorrect": true,
+        "rationale": "Es el Consejo Nacional de Ciencia, Tecnología e Innovación Tecnológica, responsable de certificar los proyectos de innovación."
+      },
+      {
+        "text": "SUNAT",
+        "isCorrect": false,
+        "rationale": "SUNAT recauda los tributos, pero no realiza la evaluación científica ni técnica de los proyectos de innovación."
+      },
+      {
+        "text": "OEFA",
+        "isCorrect": false,
+        "rationale": "Es el organismo de evaluación y fiscalización ambiental, no el ente evaluador de ciencia y tecnología."
+      },
+      {
+        "text": "OSINERGMIN",
+        "isCorrect": false,
+        "rationale": "Supervisa la seguridad en energía y minería, pero no evalúa los proyectos de I+D+i para la deducción tributaria."
+      },
+      {
+        "text": "INACAL",
+        "isCorrect": false,
+        "rationale": "Regula los estándares de calidad y acreditación nacional, pero no administra la calificación de la Ley 30309."
+      }
+    ],
+    "hint": "Identifique las siglas de la entidad estatal que promueve la ciencia y la tecnología en el país.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A cuánto asciende el monto de la cartera de proyectos del mecanismo Obras por Impuestos (OxI) impulsado por el sector minero para infraestructura como electrificación rural?",
+    "opciones": [
+      {
+        "text": "703 millones de soles",
+        "isCorrect": true,
+        "rationale": "Representa el capital adelantado por las empresas mineras para financiar proyectos de desarrollo e infraestructura en sus zonas de influencia."
+      },
+      {
+        "text": "10 millones de soles",
+        "isCorrect": false,
+        "rationale": "Es un monto significativamente menor al volumen total movilizado por la cartera de proyectos mineros en OxI."
+      },
+      {
+        "text": "100 mil soles",
+        "isCorrect": false,
+        "rationale": "Esta cifra no cubre los costos de proyectos de electrificación o infraestructura regional de envergadura."
+      },
+      {
+        "text": "50,000 millones de dólares",
+        "isCorrect": false,
+        "rationale": "Exagera la escala financiera del mecanismo de Obras por Impuestos para el rubro específico analizado."
+      },
+      {
+        "text": "Zero soles",
+        "isCorrect": false,
+        "rationale": "El sector minero utiliza activamente la herramienta de OxI para cerrar brechas sociales e infraestructura."
+      }
+    ],
+    "hint": "Seleccione la cifra en soles que supera los 700 millones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el nuevo enfoque de 'cierre circular' para los componentes de una mina al concluir su vida útil?",
+    "opciones": [
+      {
+        "text": "Convertir los terrenos y presas de relave en centrales de energía limpia que financien el mantenimiento ambiental a perpetuidad",
+        "isCorrect": true,
+        "rationale": "Transforma un pasivo ambiental y costo continuo en un activo energético generador de ingresos para el tratamiento ambiental de largo plazo."
+      },
+      {
+        "text": "Abandonar las instalaciones sin realizar actividades de remediación ni monitoreo",
+        "isCorrect": false,
+        "rationale": "El abandono contraviene los marcos legales ambientales y la filosofía de sostenibilidad económica del cierre circular."
+      },
+      {
+        "text": "Inundar el tajo abierto con diésel para evitar la formación de polvo",
+        "isCorrect": false,
+        "rationale": "Es una acción ecológicamente inviable que generaría un desastre ambiental en lugar de una solución limpia."
+      },
+      {
+        "text": "Vender toda la roca triturada a los pobladores locales como material de construcción",
+        "isCorrect": false,
+        "rationale": "No aborda la sostenibilidad del pasivo minero ni la generación de energía renovable para el mantenimiento continuo del sitio."
+      },
+      {
+        "text": "Construir centros comerciales urbanos dentro de los túneles subterráneos",
+        "isCorrect": false,
+        "rationale": "Las labores subterráneas clausuradas no son idóneas para desarrollo comercial urbano de consumo masivo."
+      }
+    ],
+    "hint": "Piense en la transformación de un pasivo ambiental en una fuente de generación de energía renovable continua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes mineras fueron citadas explícitamente por contar con certificados o contratos firmados para asegurar que el 100% de su electricidad sea de origen renovable?",
+    "opciones": [
+      {
+        "text": "Compañía Minera Antapaccay",
+        "isCorrect": true,
+        "rationale": "Certifica que el 100% de su consumo eléctrico procede de fuentes renovables respaldado por certificados internacionales IREC."
+      },
+      {
+        "text": "Sociedad Minera Cerro Verde",
+        "isCorrect": true,
+        "rationale": "Ha firmado contratos de suministro para garantizar que todo su consumo masivo de electricidad sea 100% renovable a partir de 2026."
+      },
+      {
+        "text": "Minera Las Bambas",
+        "isCorrect": false,
+        "rationale": "Se cita por su integración en la alianza H2 Perú para hidrógeno, pero no en los ejemplos específicos de certificación 100% renovable contractual citados."
+      },
+      {
+        "text": "Codelco Norte",
+        "isCorrect": false,
+        "rationale": "Es una empresa estatal chilena que no forma parte de los casos de mineras operativas en Perú examinados."
+      },
+      {
+        "text": "Compañía Minera Antamina",
+        "isCorrect": false,
+        "rationale": "Aunque es un actor de gran escala, no es el ejemplo citado específicamente para los contratos 100% renovables con IREC o compromiso a 2026."
+      }
+    ],
+    "hint": "Seleccione las dos operaciones mineras peruanas resaltadas en las fuentes por sus acuerdos y certificaciones de electricidad 100% limpia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes herramientas forman parte del ecosistema de la Industria 4.0 aplicado a la gestión energética minera?",
+    "opciones": [
+      {
+        "text": "Gemelos digitales para la simulación de procesos",
+        "isCorrect": true,
+        "rationale": "Permiten modelar virtualmente la planta y optimizar el consumo de energía antes de operar los equipos reales."
+      },
+      {
+        "text": "Sistemas de Inteligencia Artificial para Ventilación bajo Demanda (VOD)",
+        "isCorrect": true,
+        "rationale": "Procesan datos de sensores para regular automáticamente los ventiladores y reducir hasta un 50% el gasto eléctrico bajo tierra."
+      },
+      {
+        "text": "Centros Integrados de Operaciones Remotas (CIOR / IROC)",
+        "isCorrect": true,
+        "rationale": "Coordinan la flota y la planta desde un punto centralizado eliminando tiempos muertos y consumos en vacío."
+      },
+      {
+        "text": "Generadores mecánicos de manivela manual para molinos SAG",
+        "isCorrect": false,
+        "rationale": "Los molinos mecánicos industriales requieren decenas de megavatios y no pueden alimentarse por tracción humana manual."
+      },
+      {
+        "text": "Redes de transmisión por cable de cobre sin sensores ni automatización",
+        "isCorrect": false,
+        "rationale": "La ausencia de sensores y automatización representa el esquema analógico tradicional que la Industria 4.0 busca reemplazar."
+      }
+    ],
+    "hint": "Marque las tres tecnologías digitales de vanguardia que integran el 'cerebro', los 'reflejos' y el sistema de control de la mina inteligente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué rango del costo operativo total (OPEX) de una mina representa típicamente el consumo energético y cuál es la principal implicancia estratégica de esta cifra?",
+    "opciones": [
+      {
+        "text": "Entre 15% y 40%, lo que convierte a la gestión energética en un pilar directo de competitividad y supervivencia económica.",
+        "isCorrect": true,
+        "rationale": "El consumo energético representa hasta cuatro de cada diez dólares gastados en la operación, por lo que su optimización impacta drásticamente los márgenes operativos y la viabilidad del negocio."
+      },
+      {
+        "text": "Entre 5% y 10%, clasificándose como un gasto menor enfocado exclusivamente en metas ambientales.",
+        "isCorrect": false,
+        "rationale": "Un porcentaje tan bajo reduciría la energía a un aspecto secundario, ignorando su peso crítico dentro de los costos de molienda y acarreo."
+      },
+      {
+        "text": "Entre 50% y 75%, desplazando por completo los costos de mano de obra y mantenimiento en la minería subterránea.",
+        "isCorrect": false,
+        "rationale": "Aunque la factura eléctrica es muy elevada, afirmar que representa tres cuartas partes del OPEX total sobreestima la proporción de la energía frente al resto de los costos de producción."
+      },
+      {
+        "text": "Entre 25% y 60%, dependiendo de si la mina exporta concentrado o cátodos de cobre procesados en refinería.",
+        "isCorrect": false,
+        "rationale": "El límite superior del 60% excede el rango máximo documentado para operaciones mineras extractivas y de concentradora."
+      },
+      {
+        "text": "Exactamente un 30% en tajo abierto y un 10% en subterránea, debido a la diferencia de tamaño entre ambos tipos de yacimiento.",
+        "isCorrect": false,
+        "rationale": "Asignar valores fijos e inferiores para la minería subterránea desconoce el enorme consumo de electricidad derivado del bombeo de agua y la ventilación continua."
+      }
+    ],
+    "hint": "Considere la fracción de cada diez dólares que una mina destina a pagar combustible y electricidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del sistema de gestión de la energía bajo la norma ISO 5001, ¿cuál es el principio metodológico central que asegura un ahorro sistemático y continuo en las operaciones mineras?",
+    "opciones": [
+      {
+        "text": "El ciclo de mejora continua PHVA (Planificar, Hacer, Verificar, Actuar).",
+        "isCorrect": true,
+        "rationale": "Este ciclo garantiza que la gestión energética sea un proceso recurrente de medición, ajuste e implementación de metas, evitando depender de iniciativas aisladas."
+      },
+      {
+        "text": "La sustitución obligatoria de la flota diésel por equipos 100% eléctricos en un plazo fijo.",
+        "isCorrect": false,
+        "rationale": "La norma define un estándar de gestión y control de procesos, no una prescripción técnica sobre el tipo de maquinaria utilizada."
+      },
+      {
+        "text": "El pago diferido de tarifas eléctricas ajustables mediante empresas de servicios energéticos.",
+        "isCorrect": false,
+        "rationale": "Esa descripción corresponde a un modelo de financiamiento comercial (como ESCO) y no al estándar internacional de sistemas de gestión."
+      },
+      {
+        "text": "La auditoría anual obligatoria orientada únicamente al cálculo de la huella de agua.",
+        "isCorrect": false,
+        "rationale": "La ISO 5001 se enfoca específicamente en el desempeño energético global y no exclusivamente en la gestión del recurso hídrico."
+      },
+      {
+        "text": "La implementación de sanciones económicas internas por exceder las cuotas de potencia contratada.",
+        "isCorrect": false,
+        "rationale": "La norma busca la optimización sistemática mediante metas operativas y revisión constante, no mediante un esquema punitivo interno."
+      }
+    ],
+    "hint": "Recuerde el marco iterativo en cuatro pasos que evita que el ahorro sea solo un golpe de suerte.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al analizar la dieta energética de una operación minera promedio en el Perú, ¿cuáles de las siguientes afirmaciones caracterizan con precisión la relación entre las fuentes energéticas empleadas?",
+    "opciones": [
+      {
+        "text": "La electricidad domina la matriz, representando aproximadamente el 75% del consumo energético total.",
+        "isCorrect": true,
+        "rationale": "La planta de procesamiento requiere un aporte eléctrico masivo y continuo, convirtiendo a la red eléctrica en el eje clave de la competitividad."
+      },
+      {
+        "text": "El diésel es la segunda fuente principal y alimenta prioritariamente la flota de acarreo y transporte masivo.",
+        "isCorrect": true,
+        "rationale": "Los camiones de extracción ultra pesados dependen críticamente del diésel para vencer la gravedad en las rampas del tajo."
+      },
+      {
+        "text": "El gas natural representa el 50% del consumo directo en las labores de excavación subterránea.",
+        "isCorrect": false,
+        "rationale": "El gas natural no es la fuente primaria directa utilizada en equipos móviles subterráneos debido a restricciones logísticas y de combustión en socavón."
+      },
+      {
+        "text": "El diésel genera emisiones directas de Alcance 1 que constituyen el frente más complejo para la descarbonización.",
+        "isCorrect": true,
+        "rationale": "La sustitución del diésel en maquinaria pesada representa el mayor reto técnico del sector debido a requerimientos de densidad energética."
+      },
+      {
+        "text": "La electricidad consumida en mina proviene en un 90% de sistemas de almacenamiento con baterías distribuidas en el tajo.",
+        "isCorrect": false,
+        "rationale": "Los sistemas de baterías a gran escala aún están en fase de adopción y no suministran la mayor parte de la carga total del yacimiento."
+      }
+    ],
+    "hint": "Considere la diferencia entre la energía necesaria para triturar roca y el combustible para mover grandes volúmenes de tierra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En una planta concentradora a tajo abierto, la conminución es el proceso con mayor demanda de fuerza eléctrica. ¿Qué porcentaje de la energía de la planta absorbe este proceso y cuál es su principal ineficiencia física?",
+    "opciones": [
+      {
+        "text": "Consume hasta el 70% de la energía de la planta, perdiéndose la mayor parte como calor y ruido durante la fractura de la roca.",
+        "isCorrect": true,
+        "rationale": "La molienda convencional por impacto desperdicia casi toda la energía aplicada en formas de disipación térmica y acústica, destinando solo una fracción mínima a la rotura real del mineral."
+      },
+      {
+        "text": "Consume el 25% de la energía, perdiéndose principalmente por la fricción de los líquidos de flotación.",
+        "isCorrect": false,
+        "rationale": "Un 25% subestima dramáticamente la intensidad energética de los molinos SAG y de bolas dentro de la concentradora."
+      },
+      {
+        "text": "Consume el 90% de la energía, debido a la potencia necesaria para mantener encendidas las celdas mecánicas de lixiviación.",
+        "isCorrect": false,
+        "rationale": "La lixiviación y flotación consumen energía, pero la conminución es la etapa que absorbe la mayor parte del suministro."
+      },
+      {
+        "text": "Consume el 50% de la energía de la planta, disipándose como energía potencial electrostática no recuperable.",
+        "isCorrect": false,
+        "rationale": "Aunque el valor de 50% es alto, las pérdidas físicas principales en chancado y molienda se deben al calor y la deformación plástica, no a cargas electrostáticas."
+      },
+      {
+        "text": "Consume el 15% de la energía de la mina, transformándose el resto íntegramente en trabajo mecánico cinético.",
+        "isCorrect": false,
+        "rationale": "La molienda es uno de los procesos industriales más ineficientes del planeta, no existiendo una conversión casi perfecta en energía cinética."
+      }
+    ],
+    "hint": "Piense en la proporción de energía aplicada a golpear roca que realmente se aprovecha frente a la que se disipa como temperatura o sonido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el mecanismo operativo distintivo de los rodillos de molienda de alta presión (HPGR) en comparación con los molinos tradicionales y qué nivel de ahorro energético permite alcanzar?",
+    "opciones": [
+      {
+        "text": "Utilizan compresión controlada en lugar de impacto a granel, reduciendo el consumo de energía en molienda hasta en un 25%.",
+        "isCorrect": true,
+        "rationale": "Al presionar el mineral en vez de golpearlo violentamente al azar, la tecnología HPGR transfiere la fuerza de forma mucho más eficiente al lecho de roca."
+      },
+      {
+        "text": "Inyectan aire comprimido caliente para debilitar químicamente la roca, reduciendo el consumo eléctrico en un 50%.",
+        "isCorrect": false,
+        "rationale": "Los HPGR operan mecánicamente mediante presión entre rodillos y no aplican térmicamente aire comprimido para fracturar el mineral."
+      },
+      {
+        "text": "Giran a ultra alta velocidad para generar resonancia acústica, reduciendo el costo de diésel en un 90%.",
+        "isCorrect": false,
+        "rationale": "La conminución por HPGR es un proceso eléctrico directo de compresión mecánica, no una técnica de resonancia acústica ni sustituto de diésel."
+      },
+      {
+        "text": "Sustituyen el agua por reactivos sintéticos en los molinos, ahorrando un 10% de la potencia del sistema.",
+        "isCorrect": false,
+        "rationale": "La tecnología HPGR reconfigura el modo de aplicación de la fuerza mecánica sobre la roca seca/húmeda, no el tipo de reactivo de proceso."
+      },
+      {
+        "text": "Utilizan campos magnéticos para fragmentar sulfuros masivos, logrando un ahorro exacto del 40%.",
+        "isCorrect": false,
+        "rationale": "Los HPGR aplican fuerzas de compresión hidráulica sobre los rodillos, no campos magnéticos de separación o fragmentación."
+      }
+    ],
+    "hint": "Identifique la diferencia entre aplastar el mineral mediante presión versus impactarlo por caída libre.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "El sistema Trolley Assist se utiliza en rampas de minas a tajo abierto para abordar el consumo de diésel en el transporte. ¿Cuáles de los siguientes resultados operacionales caracterizan esta tecnología?",
+    "opciones": [
+      {
+        "text": "Logra una reducción superior al 90% en el consumo de diésel durante el tramo conectado a la catenaria en rampa.",
+        "isCorrect": true,
+        "rationale": "Al conectar los motores eléctricos de las ruedas directamente a una red de catenaria, el motor diésel pasa a régimen mínimo o se apaga durante el ascenso."
+      },
+      {
+        "text": "Duplica la velocidad de subida de los camiones de acarreo en las rampas ascendentes.",
+        "isCorrect": true,
+        "rationale": "La alimentación eléctrica continua desde la red externa entrega mayor potencia inmediata que la generada por el motor diésel a bordo."
+      },
+      {
+        "text": "Permite eliminar por completo la necesidad de mantenimiento en las llantas de la flota.",
+        "isCorrect": false,
+        "rationale": "El Trolley Assist optimiza la tracción y el consumo de combustible, pero no elimina el desgaste mecánico y térmico de los neumáticos pesados."
+      },
+      {
+        "text": "Incrementa la productividad operativa al disminuir los tiempos de ciclo de acarreo.",
+        "isCorrect": true,
+        "rationale": "Al subir la rampa al doble de velocidad, los camiones completan el circuito de acarreo en menos tiempo, aumentando las toneladas movidas por hora."
+      },
+      {
+        "text": "Sustituye la planta concentradora al procesar el mineral en el balde del camión durante el trayecto.",
+        "isCorrect": false,
+        "rationale": "El sistema Trolley es exclusivamente una solución para el sistema de propulsión del vehículo de transporte."
+      }
+    ],
+    "hint": "Piense en los efectos simultáneos sobre el uso de combustible diésel en subida y sobre el tiempo de ciclo del camión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En minería subterránea, la ventilación representa entre el 40% y 50% de la facturación eléctrica. De acuerdo con las leyes físicas aplicadas a la ingeniería de ventilación, ¿cómo escala la demanda de potencia al incrementar el flujo de aire suministrado?",
+    "opciones": [
+      {
+        "text": "La potencia requerida para mover el aire es proporcional al cubo del flujo volumétrico.",
+        "isCorrect": true,
+        "rationale": "Duplicar el flujo de aire necesario en la mina no requiere el doble de energía, sino multiplicar por ocho ($2^3$) la potencia demandada por los ventiladores."
+      },
+      {
+        "text": "La potencia aumenta de forma lineal; el doble de aire requiere exactamente el doble de energía.",
+        "isCorrect": false,
+        "rationale": "La relación lineal ignora la fricción hidrodinámica y la pérdida de carga en los ductos subterráneos, las cuales crecen de forma no lineal."
+      },
+      {
+        "text": "La potencia disminuye inversamente con el cuadrado de la profundidad del socavón.",
+        "isCorrect": false,
+        "rationale": "A mayor profundidad y longitud de galerías, la resistencia aerodinámica aumenta, incrementando la energía demandada."
+      },
+      {
+        "text": "La potencia varía proporcionalmente a la temperatura media de la superficie sin depender del caudal.",
+        "isCorrect": false,
+        "rationale": "Aunque la temperatura influye en la densidad del aire, la variable motriz crítica en la ley de ventiladores es el caudal demandado."
+      },
+      {
+        "text": "La potencia se mantiene constante si se utilizan ventiladores axiales de paso fijo.",
+        "isCorrect": false,
+        "rationale": "Aumentar el caudal a través de un ventilador axial de velocidad variable o ajustar la resistencia del circuito incrementa exponencialmente el consumo."
+      }
+    ],
+    "hint": "Recuerde el comportamiento exponencial de las pérdidas de carga hidráulicas y aerodinámicas frente a la velocidad del fluido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera la tecnología de Ventilación Bajo Demanda (VOD) asistida por sensores e inteligencia artificial logra reducir hasta un 50% los costos energéticos en minas subterráneas?",
+    "opciones": [
+      {
+        "text": "Redirige el flujo de aire fresco en tiempo real únicamente hacia los frentes de trabajo donde hay personal o maquinaria en operación.",
+        "isCorrect": true,
+        "rationale": "En lugar de mantener ventiladores funcionando al máximo en toda la red de túneles, el sistema monitorea la ubicación exacta de los requerimientos y modula el flujo."
+      },
+      {
+        "text": "Comprime el gases de escape de los equipos diésel y los recircula indefinidamente en la mina.",
+        "isCorrect": false,
+        "rationale": "La recirculación no controlada de gases de escape compromete la seguridad respirable e infringe los estándares operativos."
+      },
+      {
+        "text": "Enfría el aire subterráneo utilizando agua congelada de lluvia para apagar los ventiladores principales durante el día.",
+        "isCorrect": false,
+        "rationale": "El sistema VOD regula el volumen y dirección del caudal de ventilación mediante automatización, no mediante refrigeración pasiva con hielo."
+      },
+      {
+        "text": "Aumenta la velocidad del aire a niveles supersónicos para despejar los gases de voladura en segundos.",
+        "isCorrect": false,
+        "rationale": "Velocidades extremas generarían turbulencias peligrosas, levantamiento de polvo nocivo y consumos energéticos insostenibles."
+      },
+      {
+        "text": "Apaga totalmente la ventilación cuando los camiones diésel ingresan a las galerías principales.",
+        "isCorrect": false,
+        "rationale": "El ingreso de maquinaria diésel exige maximizar el suministro de aire limpio para diluir los gases contaminantes, no detenerlo."
+      }
+    ],
+    "hint": "Compare el uso de un termostato inteligente zonal frente a mantener el aire acondicionado encendido en toda una edificación desocupada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el mercado eléctrico peruano, las grandes mineras operan bajo el régimen de 'Cliente Libre'. ¿Cuáles de las siguientes opciones representan componentes directos de la facturación o gestión que deben estructurar en sus contratos?",
+    "opciones": [
+      {
+        "text": "El pago por potencia firmada o reserva de capacidad mensual.",
+        "isCorrect": true,
+        "rationale": "Las mineras deben abonar un cargo fijo por garantizar la disponibilidad continua de un nivel determinado de megavatios en la red."
+      },
+      {
+        "text": "El pago por consumo real de energía medido en megavatios-hora (MWh).",
+        "isCorrect": true,
+        "rationale": "Representa el componente variable de la factura, ligado directamente al volumen de electricidad consumido en el periodo."
+      },
+      {
+        "text": "Los peajes de transmisión por el uso de la red de alta tensión nacional.",
+        "isCorrect": true,
+        "rationale": "Corresponde al costo de transportar la energía desde los centros de generación remotos hasta el punto de entrega en la subestación de la mina."
+      },
+      {
+        "text": "El subsidio gubernamental directo para la compra de combustible diésel de exportación.",
+        "isCorrect": false,
+        "rationale": "Las tarifas de clientes libres se negocian en el mercado privado y no incluyen subsidios estatales para la adquisición de diésel."
+      },
+      {
+        "text": "La tarifa fija domiciliaria regulada por el pliego del servicio público local.",
+        "isCorrect": false,
+        "rationale": "Los clientes libres pactan condiciones bilaterales no reguladas, a diferencia de los usuarios residenciales o conexiones pequeñas."
+      }
+    ],
+    "hint": "Considere la analogía con un plan comercial que cobra por capacidad reservada, datos consumidos y peajes de acceso al sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante períodos de sequía severa en el Perú, como el caso registrado en el año 2023, ¿cuál es el mecanismo que genera un alza sustancial en los costos energéticos para los usuarios del mercado libre?",
+    "opciones": [
+      {
+        "text": "El sistema eléctrico incrementa el despacho de centrales térmicas a diésel o gas, elevando los costos marginales y de liquidación.",
+        "isCorrect": true,
+        "rationale": "Al reducirse la generación hídrica (que es económica), el sistema recurre a la generación térmica de respaldo, incrementando sensiblemente el costo promedio de la electricidad."
+      },
+      {
+        "text": "Las redes de transmisión colapsan automáticamente debido a la condensación del vapor en las líneas de alta tensión.",
+        "isCorrect": false,
+        "rationale": "Las sequías reducen la disponibilidad de agua en embalses hydroeléctricos, pero no causan condensación física que colapse el cableado de transmisión."
+      },
+      {
+        "text": "El gobierno prohíbe el uso de motores eléctricos en las plantas concentradoras para priorizar el consumo urbano.",
+        "isCorrect": false,
+        "rationale": "No existen registros de racionamiento administrativo que fuercen el apagado selectivo de los motores de proceso minero."
+      },
+      {
+        "text": "Las mineras quedan obligadas a importar electricidad en barcos metaneros directamente desde Chile.",
+        "isCorrect": false,
+        "rationale": "El sistema interconectado nacional resuelve el déficit mediante su propia matriz térmica de respaldo, no mediante barcos de importación eléctrica."
+      },
+      {
+        "text": "Se suspenden los contratos a largo plazo y las tarifas se convierten automáticamente en subsidios hídricos.",
+        "isCorrect": false,
+        "rationale": "Los contratos del mercado libre se mantienen vigentes, pero la exposición a precios spot o cláusulas de reajuste térmico incrementa la factura final."
+      }
+    ],
+    "hint": "Analice qué ocurre con el costo marginal del sistema cuando la fuente hidroeléctrica más económica disminuye su producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al integrar motores de alta eficiencia junto con Variadores de Velocidad (VSD) en aplicaciones mineras pesadas como el bombeo de agua, ¿cuál es el porcentaje máximo de ahorro energético reportado y su principio técnico?",
+    "opciones": [
+      {
+        "text": "Ahorros de hasta un 60%, al regular la velocidad del motor según la demanda real del flujo sin desperdiciar energía en estrangulamiento de válvulas.",
+        "isCorrect": true,
+        "rationale": "El variador acelera o desacelera el motor electrónicamente de acuerdo con la carga requerida, eliminando las pérdidas causadas por válvulas o frenos mecánicos."
+      },
+      {
+        "text": "Ahorros exactos del 10%, debido a que los motores de velocidad constante pierden calor únicamente al arrancar.",
+        "isCorrect": false,
+        "rationale": "Un 10% subestima el impacto operacional de los variadores en sistemas donde el caudal demandado oscila continuamente."
+      },
+      {
+        "text": "Ahorro del 100%, convirtiendo el bombeo en un sistema de generación hídrica de perpetuidad.",
+        "isCorrect": false,
+        "rationale": "Ningún sistema físico alcanza una eficiencia perfecta o neutra debido a las pérdidas termodinámicas del bombeo."
+      },
+      {
+        "text": "Ahorros del 80%, únicamente si los motores son alimentados por paneles solares portátiles.",
+        "isCorrect": false,
+        "rationale": "El ahorro del variador proviene de la modulación de frecuencia y potencia eléctrica, independientemente de si la fuente es solar o de red."
+      },
+      {
+        "text": "Ahorros del 30%, restringido exclusivamente a bandas transportadoras de material seco.",
+        "isCorrect": false,
+        "rationale": "Los VSD generan ahorros masivos también en fluidos (bombas y ventiladores), donde la ley de afinidad de fluidos potencia la reducción energética."
+      }
+    ],
+    "hint": "Considere la analogía de acelerar o desacelerar el motor de un vehículo en lugar de presionar el freno con el acelerador a fondo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera el modelo de negocio estructurado a través de una empresa ESCO (Energy Service Company) permite a una mina modernizar sus instalaciones de alta demanda energética?",
+    "opciones": [
+      {
+        "text": "La ESCO asume la inversión inicial (CAPEX) en la tecnología eficiente y cobra sus servicios a través de un porcentaje del ahorro energético generado.",
+        "isCorrect": true,
+        "rationale": "Este mecanismo permite a la minera renovar equipamiento crítico sin utilizar su propio capital inicial, pagando la infraestructura con los flujos del propio ahorro."
+      },
+      {
+        "text": "La ESCO adquiere la propiedad del yacimiento minero y paga regalías al Estado para reducir impuestos.",
+        "isCorrect": false,
+        "rationale": "Las empresas ESCO se especializan en eficiencia y servicios energéticos, no en la propiedad o explotación de concesiones mineras."
+      },
+      {
+        "text": "La minera financia el 100% de la infraestructura y cede a la ESCO la comercialización del concentrado de cobre.",
+        "isCorrect": false,
+        "rationale": "Las ESCO no participan en el negocio de minería ni en el trading de metales comerciales."
+      },
+      {
+        "text": "El Estado peruano asume el costo de la ESCO mediante subsidios directos tomados del canon minero regional.",
+        "isCorrect": false,
+        "rationale": "Se trata de una relación contractual de financiamiento privado entre la mina y la empresa proveedora de servicios de eficiencia."
+      },
+      {
+        "text": "La ESCO garantiza la exención total de las normas ISO para el cliente a cambio de la venta de diésel sintético.",
+        "isCorrect": false,
+        "rationale": "Las ESCO buscan cumplir o certificar estándares como ISO 5001 y se enfocan en la optimización del consumo, no en omitir normativas."
+      }
+    ],
+    "hint": "Piense en un contrato donde los pagos se amortizan directamente a partir de la reducción registrada en la factura de la luz.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Empresas como Antapaccay y Sociedad Minera Cerro Verde han implementado estrategias avanzadas de gestión energética. ¿Cuáles de las siguientes iniciativas representan hitos concretos ejecutados por estas compañías?",
+    "opciones": [
+      {
+        "text": "Antapaccay incorporó buses eléctricos para el transporte de su personal, registrando reducciones de costo cercanas al 80%.",
+        "isCorrect": true,
+        "rationale": "La electrificación del transporte de personal reemplaza el uso de combustible fósil por una alternativa de menor costo operativo y cero emisiones directas."
+      },
+      {
+        "text": "Antapaccay certificó que el 100% de su consumo eléctrico proviene de fuentes renovables mediante el estándar internacional IREC.",
+        "isCorrect": true,
+        "rationale": "El uso de certificados IREC permite auditar e independizar la trazabilidad limpia de la energía consumida de la red nacional."
+      },
+      {
+        "text": "Cerro Verde aseguró contratos PPA para abastecer su operación con energía 100% renovable a partir del año 2026.",
+        "isCorrect": true,
+        "rationale": "La compañía utilizó su escala para negociar la transición total de su suministro eléctrico hacia fuentes limpias en su horizonte de mediano plazo."
+      },
+      {
+        "text": "Cerro Verde detuvo el procesamiento de mineral de cobre para dedicar sus instalaciones a la venta de energía solar a Bolivia.",
+        "isCorrect": false,
+        "rationale": "Cerro Verde mantiene récords de procesamiento minero y no ha reconvertido su giro industrial hacia la exportación eléctrica transfronteriza."
+      },
+      {
+        "text": "Antapaccay convirtió sus molinos SAG para que funcionen directamente quemando carbón piedra en el sitio.",
+        "isCorrect": false,
+        "rationale": "Los molinos SAG operan con motores eléctricos masivos y no mediante la combustión interna o directa de carbón."
+      }
+    ],
+    "hint": "Identifique las acciones vinculadas a la electrificación del transporte de personal, certificaciones de origen limpio e hitos de contratación renovable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La suscripción de Contratos de Compra de Energía Verdes (PPA verdes) a largo plazo (15 a 17 años) posiciona a las mineras como 'clientes ancla'. ¿Qué consecuencias tiene esta dinámica en el mercado energético peruano?",
+    "opciones": [
+      {
+        "text": "Garantiza la demanda financiera necesaria para que desarrolladores construyan nuevos parques solares y eólicos a gran escala.",
+        "isCorrect": true,
+        "rationale": "Al asegurar un comprador bancable por más de una década, los desarrolladores logran cerrar el financiamiento de proyectos renovables de alta capacidad."
+      },
+      {
+        "text": "Protege a la operación minera de la volatilidad tarifaria asociada a los combustibles fósiles del mercado spot.",
+        "isCorrect": true,
+        "rationale": "Los contratos de largo plazo fijan condiciones de precio estables, blindando los presupuestos operativos de variaciones exógenas."
+      },
+      {
+        "text": "Reduce drásticamente las emisiones indirectas de gases de efecto invernadero (Alcance 2) del sector minero.",
+        "isCorrect": true,
+        "rationale": "Garantizar que la electricidad consumida provenga de fuentes renovables neutraliza la huella de carbono asociada al suministro de la red."
+      },
+      {
+        "text": "Prohíbe a otras industrias nacionales conectarse a la red nacional de transmisión interconectada.",
+        "isCorrect": false,
+        "rationale": "Los PPA verdes son contratos comerciales privados de suministro que no otorgan exclusividad ni bloquean el acceso de terceros a la red nacional."
+      },
+      {
+        "text": "Obliga a la minera a operar sus concentradoras únicamente durante las horas de sol radiante.",
+        "isCorrect": false,
+        "rationale": "Los PPA modernos combinan distintas fuentes y esquemas de suministro garantizado para mantener el servicio continuo las 24 horas."
+      }
+    ],
+    "hint": "Considere la certidumbre que brinda un gran comprador comercial para viabilizar inversiones en infraestructura limpia a largo plazo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Además de la compra de energía mediante contratos PPA, las megaminas están impulsando proyectos de autogeneración renovable en sus propios yacimientos. ¿Cuál es una ventaja operativa clave de esta estrategia?",
+    "opciones": [
+      {
+        "text": "Aumenta la resiliencia operativa de la mina ante cortes o apagones de la red eléctrica nacional y evita pérdidas por transmisión a larga distancia.",
+        "isCorrect": true,
+        "rationale": "Al generar energía en la misma ubicación del consumo, la operación minimiza las pérdidas por transporte en cables y mantiene respaldos activos ante fallas de la red externa."
+      },
+      {
+        "text": "Elimina la necesidad de utilizar agua en los procesos de flotación química de concentrados.",
+        "isCorrect": false,
+        "rationale": "La autogeneración renovable suministra potencia eléctrica, pero no altera los requerimientos hidrometalúrgicos de procesamiento de minerales."
+      },
+      {
+        "text": "Exime a la empresa minera de presentar estudios de impacto ambiental (EIA) para nuevas expansiones.",
+        "isCorrect": false,
+        "rationale": "Las plantas de autogeneración requieren sus propios permisos ambientales y no eliminan la regulación aplicable a la mina."
+      },
+      {
+        "text": "Permite transformar el mineral de baja ley en barras de oro de forma instantánea sin molienda.",
+        "isCorrect": false,
+        "rationale": "La fuente de energía no modifica la ley del mineral ni obvia las etapas físicas de extracción y conminución."
+      },
+      {
+        "text": "Reduce la dureza geológica de las rocas antes de ser extraídas del tajo abierto.",
+        "isCorrect": false,
+        "rationale": "Las propiedades geomecánicas de la roca dependen de la naturaleza del yacimiento, no del origen de la electricidad producida en superficie."
+      }
+    ],
+    "hint": "Piense en los beneficios de generar la electricidad en el mismo punto donde se ubican las plantas concentradoras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco del 'dilema del diésel', la descarbonización del acarreo pesando evalúa el uso de Hidrógeno Verde. ¿Cuáles de las siguientes características técnicas justifican la preferencia del hidrógeno verde sobre las baterías puras en camiones de ultra gran tonelaje?",
+    "opciones": [
+      {
+        "text": "Posee una alta densidad energética que permite mantener la capacidad de carga útil del camión sin penalización masiva de peso.",
+        "isCorrect": true,
+        "rationale": "Las baterías requeridas para mover 400 toneladas agregarían un peso muerto excesivo, restando capacidad real de acarreo al vehículo."
+      },
+      {
+        "text": "Ofrece tiempos de recarga o abastecimiento sustancialmente más rápidos en comparación con los largos tiempos de carga de baterías gigantes.",
+        "isCorrect": true,
+        "rationale": "El repostaje de hidrógeno es un proceso de transferencia de fluido que toma minutos, permitiendo operar en esquemas continuos de 24/7."
+      },
+      {
+        "text": "Genera únicamente vapor de agua como subproducto directo en su proceso de combustión o celda de combustible.",
+        "isCorrect": true,
+        "rationale": "A diferencia del diésel, el uso de hidrógeno verde elimina por completo las emisiones directas de dióxido de carbono y material particulado."
+      },
+      {
+        "text": "Cuesta diez veces menos que el diésel en el mercado minorista actual sin requerir infraestructura especial.",
+        "isCorrect": false,
+        "rationale": "El costo del hidrógeno verde es actualmente uno de sus principales desafíos económicos y requiere inversiones cuantiosas en producción y almacenamiento."
+      },
+      {
+        "text": "Permite que los camiones funcionen sin necesidad de lubricantes ni mantenimiento de suspensión.",
+        "isCorrect": false,
+        "rationale": "El tipo de combustible sustituye el sistema motriz térmico, pero los componentes mecánicos de desgaste pesado siguen requiriendo lubricación."
+      }
+    ],
+    "hint": "Considere las limitaciones de peso extra, tiempos de parada para recarga e impacto operacional que imponen las baterías de gran escala en maquinaria pesada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En minas avanzadas como Quellaveco, se implementan 'Gemelos Digitales' (Digital Twins). ¿Cuál es la función operativa directa de esta herramienta para optimizar la eficiencia energética?",
+    "opciones": [
+      {
+        "text": "Simula digitalmente el comportamiento del mineral y de los equipos para preajustar las variables de molienda antes de procesar la roca en el mundo real.",
+        "isCorrect": true,
+        "rationale": "Al predecir la dureza y respuesta del mineral en una réplica virtual viva, los operadores ajustan los parámetros del molino en tiempo real, evitando picos inútiles de consumo de energía."
+      },
+      {
+        "text": "Imprime piezas de repuesto en plástico reciclado para sustituir las bolas de acero de los molinos.",
+        "isCorrect": false,
+        "rationale": "Un Gemelo Digital es una plataforma de software de modelado dinámico y análisis de datos, no un equipo de fabricación aditiva de insumos mecánicos."
+      },
+      {
+        "text": "Reemplaza al personal de campo transmitiendo holografías del tajo a las comunidades vecinas.",
+        "isCorrect": false,
+        "rationale": "Su objetivo principal es la simulación, control y optimización de procesos industriales complejos, no la proyección holográfica comunitaria."
+      },
+      {
+        "text": "Aumenta la tensión eléctrica de la red nacional mediante algoritmos de encriptación.",
+        "isCorrect": false,
+        "rationale": "El software optimiza las decisiones de operación dentro de la planta, pero no altera los parámetros físicos de transmisión eléctrica de la red pública."
+      },
+      {
+        "text": "Elimina la necesidad de utilizar sensores físicos en las fajas transportadoras de concentrado.",
+        "isCorrect": false,
+        "rationale": "El gemelo digital requiere alimentarse de redes densas de sensores de campo en tiempo real para mantener actualizada su réplica virtual."
+      }
+    ],
+    "hint": "Piense en un entorno virtual que permite ensayar y corregir parámetros operacionales antes de mover la maquinaria real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La centralización del monitoreo a través de Centros Integrados de Operaciones Remotas (CIOR / IROC), como el operado por Chinalco para Toromocho desde Lima, genera eficiencias energéticas específicas. ¿Cuáles de los siguientes mecanismos explican estas mejoras?",
+    "opciones": [
+      {
+        "text": "Elimina los silos de información, permitiendo coordinar de forma precisa la velocidad de acarreo con la disponibilidad de las chancadoras.",
+        "isCorrect": true,
+        "rationale": "La visibilidad integral previene que los camiones hagan filas con los motores encendidos en ralentí o que las chancadoras operen en vacío."
+      },
+      {
+        "text": "Permite ajustar parámetros operativos en tiempo real ante variaciones inesperadas en la dureza del mineral procesado.",
+        "isCorrect": true,
+        "rationale": "El control remoto unificado reacciona instantáneamente ante alertas de sobrecarga o ineficiencia energética en la planta."
+      },
+      {
+        "text": "Reduce la necesidad de trasladar diariamente a cientos de supervisores hasta el yacimiento a más de 4500 msnm.",
+        "isCorrect": true,
+        "rationale": "La supervisión remota disminuye los requerimientos logísticos de transporte, campamento y servicios asociados en la unidad minera."
+      },
+      {
+        "text": "Transmite energía inalámbrica de alta frecuencia desde Lima hacia los camiones ubicados en la mina.",
+        "isCorrect": false,
+        "rationale": "El CIOR transmite datos e instrucciones de control digital, no energía eléctrica de potencia a través de la atmósfera."
+      },
+      {
+        "text": "Sustituye el uso de reactivos químicos mediante el envío de señales de radiofrecuencia a la celda de flotación.",
+        "isCorrect": false,
+        "rationale": "La flotación requiere reactivos físico-químicos reales; el centro remoto gestiona la dosificación óptima pero no reemplaza la química del proceso."
+      }
+    ],
+    "hint": "Evalúe cómo la visión global de la cadena de valor evita paradas en vacío, congestión de vehículos y logística innecesaria en sitio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La adopción de flota pesada 100% eléctrica (como la experiencia de camiones de 90 toneladas en Minera La Arena o equipos en Nexa Resources) genera un 'efecto multiplicador' en minería subterránea. ¿En qué consiste este efecto?",
+    "opciones": [
+      {
+        "text": "Al no emitir gases de combustión diésel, reduce sustancialmente la necesidad de caudal de ventilación, generando un ahorro doble en combustible y electricidad.",
+        "isCorrect": true,
+        "rationale": "Eliminar la fuente de gases nocivos subterráneos permite disminuir el flujo de aire requerido, recortando la factura eléctrica asociada a los grandes ventiladores axiales."
+      },
+      {
+        "text": "Multiplica por diez el peso total del mineral que puede ser triturado en los chancadores primarios.",
+        "isCorrect": false,
+        "rationale": "La propulsión del vehículo de acarreo modifica la fuente de transporte, pero no altera la capacidad física máxima del chancador."
+      },
+      {
+        "text": "Permite perforar rocas utilizando la energía electromagnética disipada por los frenos del camión.",
+        "isCorrect": false,
+        "rationale": "La energía de frenado regenerativo se almacena en la batería del propio camión para su desplazamiento, no para operar perforadoras externas."
+      },
+      {
+        "text": "Genera oxígeno puro de forma continua a través de los tubos de escape del vehículo eléctrico.",
+        "isCorrect": false,
+        "rationale": "Los vehículos eléctricos a batería no emiten gases; simplemente no producen combustión ni liberan subproductos gaseosos."
+      },
+      {
+        "text": "Eleva la temperatura interior de la mina eliminando la necesidad de bombeo de agua salobre.",
+        "isCorrect": false,
+        "rationale": "Los motores eléctricos generan menos calor que los diésel y no influyen en la hidrogeología de las infiltraciones de agua en socavón."
+      }
+    ],
+    "hint": "Analice la relación directa entre la calidad del aire dentro del socavón y la cantidad de energía requerida para mover ese aire.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Con más de 330 organizaciones certificadas en la norma ISO 5001 y un crecimiento del 44% en un año, Perú lidera la región en este estándar. Sin embargo, ¿cuál es la paradoja del marco energético peruano señalada en el sector?",
+    "opciones": [
+      {
+        "text": "Aunque Perú tiene costos energéticos competitivos hoy, la falta de incentivos o penalizaciones al carbono podría restar competitividad a sus minerales en mercados exigentes del mañana.",
+        "isCorrect": true,
+        "rationale": "La ventaja histórica de costos bajos basados en gas y recursos hídricos puede convertirse en una desventaja comercial si los mercados internacionales exigen certificaciones estrictas de trazabilidad verde."
+      },
+      {
+        "text": "A pesar del liderazgo en certificaciones, el 90% de las minas peruanas no cuenta con acceso a la red eléctrica y funciona con leña.",
+        "isCorrect": false,
+        "rationale": "La gran minería peruana está conectada al Sistema Interconectado Nacional (SEIN) o utiliza sistemas avanzados de autogeneración industrial."
+      },
+      {
+        "text": "Las certificaciones ISO 5001 prohíben legalmente la firma de contratos de venta de cobre a largo plazo con Asia.",
+        "isCorrect": false,
+        "rationale": "Las normas ISO de gestión energética son estándares voluntarios que mejoran la reputación comercial y no imponen restricciones de comercio exterior."
+      },
+      {
+        "text": "Los países vecinos han prohibido la entrada de ingenieros peruanos por exceso de especialización en eficiencia.",
+        "isCorrect": false,
+        "rationale": "Esta afirmación carece de fundamento regulatorio o comercial dentro de la integración regional."
+      },
+      {
+        "text": "El estándar ISO 5001 exige por ley que las mineras regalen el 50% de su electricidad a las ciudades circunvecinas.",
+        "isCorrect": false,
+        "rationale": "La ISO 5001 es una norma técnica interna de gestión energética empresarial sin mandato de cesión gratuita de potencia eléctrica."
+      }
+    ],
+    "hint": "Piense en la diferencia entre gozar de precios reducidos en el presente versus cumplir con los requerimientos medioambientales futuros de los compradores de metales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al comparar el marco normativo sobre energía y descarbonización de Perú con los de Chile y Australia, ¿qué diferencias estructurales destacan en las políticas de incentivo e imposición fiscal?",
+    "opciones": [
+      {
+        "text": "Perú no cuenta actualmente con un mecanismo de impuesto al carbono o penalización directa por tonelada de $CO_2$ emitida.",
+        "isCorrect": true,
+        "rationale": "A diferencia de jurisdicciones con mercados de carbono activos, el sistema peruano no aplica un gravamen directo sobre las emisiones industriales directas."
+      },
+      {
+        "text": "Chile otorga apoyo a la innovación energética mediante subsidios y fondos directos gestionados por organismos como CORFO.",
+        "isCorrect": true,
+        "rationale": "El modelo chileno combina señales de precio (impuesto verde) con coinversión y subsidios directos para madurar tecnologías."
+      },
+      {
+        "text": "Australia utiliza fondos especializados (como ARENA) para mitigar el riesgo financiero de empresas que prueban tecnologías limpias pioneras.",
+        "isCorrect": true,
+        "rationale": "El esquema australiano aporta capital gubernamental para absorber parte del riesgo en el escalamiento de proyectos de innovación energética."
+      },
+      {
+        "text": "Perú cobra el impuesto al carbono más alto del mundo a la generación hidroeléctrica.",
+        "isCorrect": false,
+        "rationale": "Perú no aplica impuestos al carbono sobre fuentes limpias hidroeléctricas ni mantiene las tasas más elevadas a nivel global."
+      },
+      {
+        "text": "Chile exige que todas las minas funcionen exclusivamente con vapor de agua extraído de géiseres.",
+        "isCorrect": false,
+        "rationale": "La matriz chilena incorpora energía solar, eólica e hídrica mediante contratos PPA, no obligatoriedad de geotermia directa exclusiva."
+      }
+    ],
+    "hint": "Examine la existencia de impuestos a las emisiones contaminantes y las modalidades de subsidio o cofinanciamiento directo a la innovación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La Ley 30309 en Perú ofrece un beneficio tributario de hasta un 190% de deducción para proyectos de I+D+i en eficiencia energética. ¿Cuál ha sido la principal barrera operativa para un aprovechamiento masivo por parte de las mineras?",
+    "opciones": [
+      {
+        "text": "Los cuellos de botella administrativos y la complejidad burocrática en los procesos de aprobación previa ante entidades como el CONCYTEC.",
+        "isCorrect": true,
+        "rationale": "A pesar de la generosidad del incentivo fiscal en el papel, los tiempos y requisitos formales de calificación limitan la agilidad de implementación de los proyectos."
+      },
+      {
+        "text": "La ley prohíbe explícitamente que las empresas del sector minero participen en la deducción.",
+        "isCorrect": false,
+        "rationale": "La norma está diseñada para aplicar de forma transversal a empresas de diversos sectores productivos, incluyendo la minería."
+      },
+      {
+        "text": "El beneficio fue derogado inmediatamente después de su publicación en el Diario Oficial.",
+        "isCorrect": false,
+        "rationale": "El mecanismo ha permanecido vigente como la herramienta fiscal central del país para estimular la innovación privada."
+      },
+      {
+        "text": "El incentivo obliga a las empresas a pagar un tributo adicional del 300% si el proyecto resulta exitoso.",
+        "isCorrect": false,
+        "rationale": "Se trata de un beneficio de deducción sobre la base imponible del Impuesto a la Renta, no de una penalización sobre el éxito del desarrollo."
+      },
+      {
+        "text": "Las empresas mineras prefieren no ahorrar dinero para mantener elevados sus gastos de operación.",
+        "isCorrect": false,
+        "rationale": "Las mineras buscan activamente reducir su costo unitario por tonelada; las trabas burocráticas son la restricción real."
+      }
+    ],
+    "hint": "Considere las fricciones y la velocidad de respuesta en los trámites de evaluación gubernamental de proyectos científicos y tecnológicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dada la topografía andina del Perú, existe un nexo crítico entre el consumo de agua y la demanda energética en las operaciones situadas a gran altitud. ¿Cuáles de las siguientes soluciones mitigan el impacto energético del suministro hídrico?",
+    "opciones": [
+      {
+        "text": "La implementación de tecnologías como la flotación de partículas gruesas para incrementar la recuperación y reciclaje de agua en planta.",
+        "isCorrect": true,
+        "rationale": "Al recuperar más agua dentro del mismo circuito de proceso, se reduce el volumen de agua nueva que requiere ser bombeada desde la costa o cuencas bajas."
+      },
+      {
+        "text": "El reuso directo de agua clarificada extraída desde los depósitos de relaves.",
+        "isCorrect": true,
+        "rationale": "Reciclar el agua contenida en relaves disminuye la energía consumida en impulsar agua fresca a través de miles de metros de desnivel vertical."
+      },
+      {
+        "text": "La optimización hidrodinámica de las estaciones de bombeo de agua desalada desde el nivel del mar hasta más de 4000 msnm.",
+        "isCorrect": true,
+        "rationale": "El uso de tuberías y bombas de alta eficiencia reduce la enorme carga eléctrica demandada para vencer la presión atmosférica y geométrica."
+      },
+      {
+        "text": "La evaporación obligatoria del 100% del agua del yacimiento mediante quemadores de gas licuado.",
+        "isCorrect": false,
+        "rationale": "Evaporar el agua aumentaría drásticamente el consumo de combustible en lugar de optimizar la eficiencia del recurso y la energía."
+      },
+      {
+        "text": "El transporte de agua limpia en helicópteros impulsados por motores de combustión de aviación.",
+        "isCorrect": false,
+        "rationale": "El transporte aéreo de fluidos a escala masiva es energéticamente inviable y económicamente insostenible para el volumen industrial requerido."
+      }
+    ],
+    "hint": "Piense en las metodologías que reducen la necesidad de elevar agua desde la costa o que aumentan el recirculado interno en la concentradora.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco del ciclo de vida de una mina, el concepto de 'Cierre Circular' propone una transformación en la gestión de pasivos ambientales de post-cierre. ¿De qué manera iniciativas evaluadas en operaciones como Yanacocha o Pierina aplican este principio?",
+    "opciones": [
+      {
+        "text": "Reconversión de terrenos y presas de relaves en parques de energía solar o eólica para generar electricidad que pague el tratamiento perpetuo de aguas.",
+        "isCorrect": true,
+        "rationale": "Esta estrategia convierte una infraestructura en desuso (un pasivo con costo continuo) en un activo generador de energía limpia que autofinancia la remediación ambiental ambiental a largo plazo."
+      },
+      {
+        "text": "Abandono total del tajo para que se llene naturalmente de agua de lluvia sin supervisión energética.",
+        "isCorrect": false,
+        "rationale": "El cierre circular exige una planificación activa y sustentable, evitando dejar pasivos huérfanos sin tratamiento."
+      },
+      {
+        "text": "Venta de la maquinaria vieja como chatarra para pagar los impuestos municipales del último año.",
+        "isCorrect": false,
+        "rationale": "El enfoque circular busca crear una solución energética renovable sostenible a largo plazo, no simplemente una liquidación de activos físicos."
+      },
+      {
+        "text": "Construcción de centrales nucleares subterráneas dentro de los túneles colapsados.",
+        "isCorrect": false,
+        "rationale": "Las evaluaciones de cierre en el Perú se enfocan en energías renovables de superficie (solar y eólica), no en energía nuclear en socavón."
+      },
+      {
+        "text": "Cubrir el tajo abierto con paneles de concreto para evitar el paso del viento y la luz solar.",
+        "isCorrect": false,
+        "rationale": "Sellar el tajo con concreto no genera energía ni recursos financieros para los procesos continuos de tratamiento hídrico."
+      }
+    ],
+    "hint": "Analice cómo un terreno remediado puede utilizarse para producir energía limpia que cubra sus propios costos de mantenimiento hídrico futuro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-69",
+    "diplomado": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante las fases iniciales de exploración y construcción de un proyecto minero, las empresas pueden utilizar el mecanismo de Obras por Impuestos para infraestructura energética. ¿Cuál es el beneficio de esta herramienta?",
+    "opciones": [
+      {
+        "text": "Adelanta el pago de futuros impuestos para financiar proyectos de electrificación rural en zonas de influencia, fortaleciendo la red local y la licencia social.",
+        "isCorrect": true,
+        "rationale": "El mecanismo permite dotar de infraestructura eléctrica útil a las comunidades vecinas, consolidando la aceptación social y fortaleciendo el sistema eléctrico regional antes de operar."
+      },
+      {
+        "text": "Permite a la minera eximirse por completo de pagar regalías mineras durante los siguientes 50 años.",
+        "isCorrect": false,
+        "rationale": "Obras por Impuestos adelanta y aplica parte del impuesto a la renta a proyectos de desarrollo, pero no invalida el régimen de regalías mineras."
+      },
+      {
+        "text": "Obliga a las comunidades locales a pagar la factura eléctrica de las oficinas administrativas de la mina.",
+        "isCorrect": false,
+        "rationale": "La herramienta financia obras públicas para las comunidades, no traslada los costos operativos de la empresa a los pobladores."
+      },
+      {
+        "text": "Transfiere la titularidad del yacimiento minero a las empresas eléctricas distribuidoras estatales.",
+        "isCorrect": false,
+        "rationale": "La propiedad de la concesión minera se mantiene intacta bajo el titular privado del proyecto."
+      },
+      {
+        "text": "Financia la importación de combustible diésel libre de aranceles para uso en vehículos particulares.",
+        "isCorrect": false,
+        "rationale": "El mecanismo está acotado por ley al desarrollo de infraestructura pública aprobada y no al abastecimiento de combustible privado."
+      }
+    ],
+    "hint": "Piense en la relación entre el financiamiento de infraestructura eléctrica pública previa y la obtención de la licencia social para operar.",
+    "activo": true
+  }
+]

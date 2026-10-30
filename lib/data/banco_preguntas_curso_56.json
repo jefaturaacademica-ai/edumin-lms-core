@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la gestión sostenible de residuos sólidos, ¿cuál se considera la estrategia prioritaria y más importante del concepto de las 3R?",
+    "opciones": [
+      {
+        "text": "Reducir la generación de residuos desde el origen.",
+        "isCorrect": true,
+        "rationale": "Evitar la creación del residuo desde su origen disminuye significativamente el volumen global de desechos que requieren tratamiento posterior."
+      },
+      {
+        "text": "Reciclar la totalidad de los materiales descartados.",
+        "isCorrect": false,
+        "rationale": "Aunque el reciclaje transforma materiales, requiere energía y procesos adicionales, por lo que es preferible evitar la generación del residuo."
+      },
+      {
+        "text": "Reutilizar los productos dándoles una segunda vida sin transformarlos.",
+        "isCorrect": false,
+        "rationale": "La reutilización aprovecha productos existentes, pero no elimina la generación primaria de nuevos desechos en el mercado."
+      },
+      {
+        "text": "Compostar los residuos orgánicos para fertilización de suelos.",
+        "isCorrect": false,
+        "rationale": "El compostaje es una forma específica de reciclaje orgánico, útil pero secundaria frente a la minimización en el origen."
+      },
+      {
+        "text": "Incinera residuos peligrosos para recuperar energía térmica.",
+        "isCorrect": false,
+        "rationale": "La incineración es un método de tratamiento o valorización energética final, no una medida de prevención inicial."
+      }
+    ],
+    "hint": "Considere qué acción previene la creación del desecho antes de tener que gestionarlo o transformarlo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes condiciones corresponden a los pilares fundamentales que debe asegurar un Plan de Cierre de Minas según la normativa ambiental?",
+    "opciones": [
+      {
+        "text": "Estabilidad geoquímica de los componentes de la mina.",
+        "isCorrect": true,
+        "rationale": "Garantiza que los materiales expuestos no generen lixiviados ni acidez que contaminen el suelo o el agua a largo plazo."
+      },
+      {
+        "text": "Estabilidad física de estructuras y taludes.",
+        "isCorrect": true,
+        "rationale": "Asegura que los relieves, tajos y depósitos permanezcan seguros estructuralmente sin riesgo de derrumbe."
+      },
+      {
+        "text": "Estabilidad hidrológica del entorno hídrico.",
+        "isCorrect": true,
+        "rationale": "Evita la alteración o contaminación de los cauces y cuerpos de agua superficiales y subterráneos adyacentes."
+      },
+      {
+        "text": "Restablecimiento de las condiciones preoperacionales del área.",
+        "isCorrect": true,
+        "rationale": "Busca devolver el terreno a un estado similar o compatible con su entorno natural preexistente a la explotación."
+      },
+      {
+        "text": "Mantener las instalaciones operativas para turismo industrial permanente.",
+        "isCorrect": false,
+        "rationale": "El objetivo ambiental prioritario es la rehabilitación ecológica y la seguridad física, no la conservación turística comercial."
+      }
+    ],
+    "hint": "Piense en las cuatro estabilidades y condiciones del terreno que garantizan la seguridad ambiental definitiva.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué organismo público en el Perú es el encargado de revisar y aprobar el Estudio de Impacto Ambiental (EIA) detallado antes del inicio de un proyecto minero?",
+    "opciones": [
+      {
+        "text": "SENACE",
+        "isCorrect": true,
+        "rationale": "El Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles evalúa y aprueba los EIA detallados de gran envergadura."
+      },
+      {
+        "text": "OSINERGMIN",
+        "isCorrect": false,
+        "rationale": "OSINERGMIN es el organismo supervisor de la inversión en energía y minería, enfocado en la fiscalización operativa y de seguridad."
+      },
+      {
+        "text": "SUNAFIL",
+        "isCorrect": false,
+        "rationale": "SUNAFIL supervisa el cumplimiento de los derechos laborales y las normas de seguridad e higiene ocupacional."
+      },
+      {
+        "text": "OEFA",
+        "isCorrect": false,
+        "rationale": "El OEFA se encarga del fiscalizar, sancionar y evaluar el cumplimiento ambiental, pero no aprueba los EIA iniciales."
+      },
+      {
+        "text": "MINSA",
+        "isCorrect": false,
+        "rationale": "El Ministerio de Salud establece políticas sanitarias generales, pero no otorga la certificación ambiental para proyectos mineros."
+      }
+    ],
+    "hint": "Esta entidad técnica del MINAM certifica ambientalmente las grandes inversiones sostenibles en el Perú.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tipo de energía renovable aprovecha directamente el calor interno del subsuelo terrestre para producir vapor y generar electricidad?",
+    "opciones": [
+      {
+        "text": "Energía geotérmica",
+        "isCorrect": true,
+        "rationale": "Aprovecha la alta temperatura presente en capas profundas de la tierra o fluidos subterráneos calientes."
+      },
+      {
+        "text": "Energía de biomasa",
+        "isCorrect": false,
+        "rationale": "La biomasa utiliza materia orgánica o residuos vegetales y animales mediante combustión o descomposición."
+      },
+      {
+        "text": "Energía mareomotriz",
+        "isCorrect": false,
+        "rationale": "La energía mareomotriz genera electricidad a partir del movimiento de las mareas en el océano."
+      },
+      {
+        "text": "Energía solar fotovoltaica",
+        "isCorrect": false,
+        "rationale": "La energía fotovoltaica convierte directamente la radiación de la luz solar en electricidad mediante celdas solares."
+      },
+      {
+        "text": "Energía eólica offshore",
+        "isCorrect": false,
+        "rationale": "La energía eólica offshore aprovecha la fuerza de los vientos marinos en estructuras instaladas en el agua."
+      }
+    ],
+    "hint": "El prefijo de este término proviene del griego para 'tierra' y 'calor'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la ley marco peruana que regula específicamente la elaboración y ejecución del Plan de Cierre de Minas?",
+    "opciones": [
+      {
+        "text": "Ley N° 28090",
+        "isCorrect": true,
+        "rationale": "Esta norma legal aprobada en 2003 establece la obligación y lineamientos para el cierre programado de instalaciones mineras."
+      },
+      {
+        "text": "Ley N° 29783",
+        "isCorrect": false,
+        "rationale": "La Ley N° 29783 es la Ley General de Seguridad y Salud en el Trabajo aplicable a todos los sectores laborales."
+      },
+      {
+        "text": "Ley N° 28271",
+        "isCorrect": false,
+        "rationale": "La Ley N° 28271 regula expresamente la identificación y remediación de pasivos ambientales mineros abandonados."
+      },
+      {
+        "text": "Decreto Supremo 024-2016-EM",
+        "isCorrect": false,
+        "rationale": "Este decreto corresponde al Reglamento de Seguridad y Salud Ocupacional en Minería, no a los cierres ambientales."
+      },
+      {
+        "text": "Decreto Supremo 003-2010-MINAM",
+        "isCorrect": false,
+        "rationale": "Este decreto fija los Límites Máximos Permisibles para efluentes de plantas de tratamiento de aguas residuales."
+      }
+    ],
+    "hint": "Es la norma específica aprobada a inicios de los 2000 que exige a las mineras constituir garantías ambientales de cierre.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En la delimitación ambiental de un proyecto minero, ¿cuáles son las dos categorías de áreas de influencia utilizadas para evaluar los impactos?",
+    "opciones": [
+      {
+        "text": "Área de influencia ambiental directa",
+        "isCorrect": true,
+        "rationale": "Corresponde al espacio contiguo donde las operaciones mineras generan impactos inmediatos y perceptibles."
+      },
+      {
+        "text": "Área de influencia ambiental indirecta",
+        "isCorrect": true,
+        "rationale": "Abarca el territorio más amplio donde los efectos ambientales o sociales se manifiestan de forma secundaria o diferida."
+      },
+      {
+        "text": "Área de concesión minera ilimitada",
+        "isCorrect": false,
+        "rationale": "La concesión es un derecho legal de exploración/explotación, no un área delimitada según impactos evaluados."
+      },
+      {
+        "text": "Área de reserva nacional protegida",
+        "isCorrect": false,
+        "rationale": "Son zonas intangibles administradas por el Estado y no una categoría metodológica del estudio ambiental."
+      },
+      {
+        "text": "Zona de exclusión fronteriza",
+        "isCorrect": false,
+        "rationale": "Constituye una demarcación geopolítica nacional, totalmente ajena a la metodología de los estudios socioambientales."
+      }
+    ],
+    "hint": "Piense en las dos escalas territoriales (inmediata y secundaria) donde interactúa el proyecto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el reglamento específico del sector minero peruano en materia de Seguridad y Salud Ocupacional?",
+    "opciones": [
+      {
+        "text": "Decreto Supremo 024-2016-EM",
+        "isCorrect": true,
+        "rationale": "Es la norma técnica y legal de cumplimiento obligatorio que rige la seguridad ocupacional en las actividades mineras en Perú."
+      },
+      {
+        "text": "Decreto Supremo 005-2012-TR",
+        "isCorrect": false,
+        "rationale": "Este es el reglamento general de la Ley N° 29783 de Seguridad y Salud en el Trabajo para el sector laboral general."
+      },
+      {
+        "text": "ISO 45001",
+        "isCorrect": false,
+        "rationale": "Es un estándar de certificación internacional voluntario, no un reglamento del ejecutivo peruano."
+      },
+      {
+        "text": "Ley N° 28611",
+        "isCorrect": false,
+        "rationale": "Corresponde a la Ley General del Ambiente del Perú, enfocada en la gestión ambiental general."
+      },
+      {
+        "text": "Decreto Supremo 004-2017-MINAM",
+        "isCorrect": false,
+        "rationale": "Este decreto regula los Estándares de Calidad Ambiental (ECA) para Agua, no temas de seguridad en mina."
+      }
+    ],
+    "hint": "Esta norma emitida por el Ministerio de Energía y Minas en 2016 fue modificada al año siguiente por el DS 023-2017-EM.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la respuesta básica ante emergencias, ¿qué significan las siglas del protocolo de actuación P-A-S?",
+    "opciones": [
+      {
+        "text": "Proteger, Avisar, Socorrer",
+        "isCorrect": true,
+        "rationale": "Establece el orden correcto de actuación: primero asegurar la zona, luego activar la alerta y finalmente atender al herido."
+      },
+      {
+        "text": "Prevenir, Auxiliar, Señalizar",
+        "isCorrect": false,
+        "rationale": "Confunde los términos de actuación inicial en una emergencia real ya desencadenada."
+      },
+      {
+        "text": "Proteger, Analizar, Salvar",
+        "isCorrect": false,
+        "rationale": "Alterar el orden elimina el paso crucial de comunicar la emergencia a los equipos especializados."
+      },
+      {
+        "text": "Parar, Atender, Solucionar",
+        "isCorrect": false,
+        "rationale": "No refleja la secuencia estandarizada internacionalmente para la primera atención de emergencias."
+      },
+      {
+        "text": "Precaución, Alerta, Seguridad",
+        "isCorrect": false,
+        "rationale": "Son conceptos preventivos generales, pero no describen los pasos de acción inmediata ante un accidente."
+      }
+    ],
+    "hint": "Recuerde las tres acciones secuenciales esenciales: la primera regla es la autoprotección y la segunda es pedir ayuda.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué diferencia sustancial existe entre una matriz de requisitos legales y una matriz de cumplimiento legal?",
+    "opciones": [
+      {
+        "text": "La de requisitos solo lista las normas aplicables; la de cumplimiento evalúa artículo por artículo, evidencias y planes de acción.",
+        "isCorrect": true,
+        "rationale": "La matriz de cumplimiento realiza un seguimiento detallado del grado de implementación y evidencias reales de cada norma."
+      },
+      {
+        "text": "La matriz de requisitos es obligatoria para la SUNAFIL y la de cumplimiento solo sirve para auditorías ISO.",
+        "isCorrect": false,
+        "rationale": "Ambas herramientas ayudan a la gestión interna y la fiscalización, sin que una esté prohibida legalmente."
+      },
+      {
+        "text": "La matriz de requisitos la elabora el médico ocupacional y la de cumplimiento el área de logística.",
+        "isCorrect": false,
+        "rationale": "La gestión legal es responsabilidad del área de SST, asesoría legal o gerencia corporativa."
+      },
+      {
+        "text": "La de cumplimiento sólo abarca aspectos ambientales y la de requisitos se limita a temas tributarios.",
+        "isCorrect": false,
+        "rationale": "Ambas matrices integran materias de seguridad, salud ocupacional, medio ambiente y temas operacionales."
+      },
+      {
+        "text": "No existe ninguna diferencia, ambos términos son sinónimos exactos en la normativa.",
+        "isCorrect": false,
+        "rationale": "Son instrumentos distintos: listar la norma aplicable no garantiza haber evaluado su grado de cumplimiento."
+      }
+    ],
+    "hint": "Una es un inventario normativo pasivo, mientras que la otra comprueba la aplicación práctica de cada artículo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de las siguientes evaluaciones médicas ocupacionales se realiza como buena práctica voluntaria para verificar que el trabajador egresa sin afecciones atribuibles al trabajo?",
+    "opciones": [
+      {
+        "text": "Examen médico de retiro",
+        "isCorrect": true,
+        "rationale": "Comprueba el estado de salud al finalizar el vínculo laboral y previene futuros reclamos por enfermedades preexistentes o no registradas."
+      },
+      {
+        "text": "Examen médico preocupacional",
+        "isCorrect": false,
+        "rationale": "Se realiza antes del ingreso del trabajador para determinar su aptitud inicial al puesto de trabajo."
+      },
+      {
+        "text": "Examen médico periódico",
+        "isCorrect": false,
+        "rationale": "Se efectúa de manera anual o regular para monitorear la salud durante la permanencia en la empresa."
+      },
+      {
+        "text": "Examen por cambio de puesto",
+        "isCorrect": false,
+        "rationale": "Se ejecuta cuando el colaborador es trasladado a una tarea con nuevos riesgos o exigencias físicas."
+      },
+      {
+        "text": "Examen por reincorporación tras ausencia prolongada",
+        "isCorrect": false,
+        "rationale": "Se aplica tras un descanso médico largo para confirmar que el trabajador está apto para retomar funciones."
+      }
+    ],
+    "hint": "Es la evaluación que se efectúa justo al terminar el contrato o relación laboral del colaborador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos corresponden a categorías de agentes de riesgo ocupacional en el ambiente laboral?",
+    "opciones": [
+      {
+        "text": "Agentes físicos (como ruido o vibración).",
+        "isCorrect": true,
+        "rationale": "Factores ambientales mecánicos o de energía que pueden alterar la salud física del trabajador."
+      },
+      {
+        "text": "Agentes químicos (como polvos o vapores).",
+        "isCorrect": true,
+        "rationale": "Sustancias orgánicas e inorgánicas que pueden ingresar al organismo por inhalación, ingestión o contacto."
+      },
+      {
+        "text": "Agentes biológicos (como bacterias o virus).",
+        "isCorrect": true,
+        "rationale": "Microorganismos capaces de causar infecciones, alergias o toxicidad en los trabajadores expuestos."
+      },
+      {
+        "text": "Agentes disergonómicos (relacionados con posturas o esfuerzo).",
+        "isCorrect": true,
+        "rationale": "Factores de diseño del puesto, movimientos repetitivos o sobrecargas que generan trastornos musculoesqueléticos."
+      },
+      {
+        "text": "Agentes geológicos lunares.",
+        "isCorrect": false,
+        "rationale": "Es una categoría inexistente en el campo de la higiene y la salud ocupacional terrestre."
+      }
+    ],
+    "hint": "Considere las cuatro grandes familias de agentes evaluados en la monitorización de higiene ocupacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta visual de seguridad debe estar exhibida obligatoriamente en el ingreso de las instalaciones para advertir a los trabajadores sobre los peligros del área?",
+    "opciones": [
+      {
+        "text": "Mapa de riesgos",
+        "isCorrect": true,
+        "rationale": "Es la representación gráfica sobre el plano del centro de trabajo que ubica los peligros y riesgos presentes."
+      },
+      {
+        "text": "Matriz IPERC en formato A4 guardada en archivo.",
+        "isCorrect": false,
+        "rationale": "La matriz IPERC es el documento analítico de origen, pero el gráfico expuesto al público es el mapa de riesgos."
+      },
+      {
+        "text": "Ficha de datos de seguridad (SDS) de productos.",
+        "isCorrect": false,
+        "rationale": "Las fichas SDS son documentos técnicos específicos de sustancias químicas, no planos generales del área."
+      },
+      {
+        "text": "Reglamento Interno de Trabajo impreso.",
+        "isCorrect": false,
+        "rationale": "El reglamento interno dicta normas de conducta y sanción general, no la distribución física de riesgos en planta."
+      },
+      {
+        "text": "Organigrama de la gerencia de seguridad.",
+        "isCorrect": false,
+        "rationale": "Muestra la estructura jerárquica del personal, pero no proporciona información sobre los peligros del centro de trabajo."
+      }
+    ],
+    "hint": "Es un croquis o plano donde se colocan los pictogramas de advertencia de los peligros del lugar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué significan las siglas PETAR en el ámbito de la ingeniería y gestión ambiental?",
+    "opciones": [
+      {
+        "text": "Planta de Tratamiento de Aguas Residuales",
+        "isCorrect": true,
+        "rationale": "Designa la infraestructura destinada a depurar efluentes líquidos contaminados antes de su reuso o vertido."
+      },
+      {
+        "text": "Permiso Escrito para Trabajos de Alto Riesgo",
+        "isCorrect": false,
+        "rationale": "Con la letra 'E' intermedia (PETAR en seguridad), se refiere a autorizaciones de trabajo, no a plantas de agua (PETAR sin 'e' es planta de tratamiento)."
+      },
+      {
+        "text": "Programa Evaluativo de Toxicidad en Aguas y Lechos",
+        "isCorrect": false,
+        "rationale": "Es una denominación ficticia que no se corresponde con el acrónimo ambiental oficial."
+      },
+      {
+        "text": "Plan Técnico de Almacenamiento de Residuos",
+        "isCorrect": false,
+        "rationale": "No guarda relación con el tratamiento de efluentes hídricos."
+      },
+      {
+        "text": "Proceso Extractor de Tierras y Aguas Reutilizables",
+        "isCorrect": false,
+        "rationale": "Nombre inexacto formulado con términos al azar."
+      }
+    ],
+    "hint": "Se refiere a una instalación física para la depuración de efluentes líquidos domésticos o industriales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito esencial del pretratamiento en una planta PETAR?",
+    "opciones": [
+      {
+        "text": "Remover sólidos de gran tamaño como plásticos, piedras y basura para no dañar los equipos.",
+        "isCorrect": true,
+        "rationale": "Utiliza rejas, desarenadores o tamices para evitar obstrucciones o averías en bombas e instalaciones posteriores."
+      },
+      {
+        "text": "Eliminar la totalidad de las bacterias mediante cloración de alta presión.",
+        "isCorrect": false,
+        "rationale": "La desinfección de bacterias es un proceso químico que se efectúa en la etapa terciaria final."
+      },
+      {
+        "text": "Inyectar nutrientes sintéticos para acelerar la evaporación del agua.",
+        "isCorrect": false,
+        "rationale": "No se busca la evaporación del agua, sino su depuración física, biológica y química."
+      },
+      {
+        "text": "Inmovilizar metales pesados mediante bacterias especializadas.",
+        "isCorrect": false,
+        "rationale": "La acción bacteriana es propia del tratamiento secundario biológico, no de la filtración gruesa inicial."
+      },
+      {
+        "text": "Elevar la temperatura del agua para inactivar virus resistentes.",
+        "isCorrect": false,
+        "rationale": "El pretratamiento no utiliza calentamiento térmico, sino métodos de separación física de sólidos voluminosos."
+      }
+    ],
+    "hint": "Piense en la primera barrera con rejas o coladores que detiene la basura voluminosa a la entrada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes procesos se utilizan habitualmente dentro del tratamiento primario de una PETAR para separar sólidos en suspensión?",
+    "opciones": [
+      {
+        "text": "Coagulación y floculación química.",
+        "isCorrect": true,
+        "rationale": "Agrupa partículas coloidales finas en flóculos de mayor tamaño para facilitar su separación del agua."
+      },
+      {
+        "text": "Sedimentación lamelar.",
+        "isCorrect": true,
+        "rationale": "Utiliza placas inclinadas para acelerar la decantación de sólidos suspendidos hacia el fondo."
+      },
+      {
+        "text": "Flotación por aire disuelto (DAF).",
+        "isCorrect": true,
+        "rationale": "Inyecta microburbujas de aire para hacer flotar grasas y sólidos hacia la superficie para su raspado."
+      },
+      {
+        "text": "Incinera térmica de gases a 1000 °C.",
+        "isCorrect": false,
+        "rationale": "La incineración no forma parte de los procesos de separación líquida en el tratamiento primario."
+      },
+      {
+        "text": "Enriquecimiento con plaguicidas agrícolas.",
+        "isCorrect": false,
+        "rationale": "Los plaguicidas son contaminantes nocivos y nunca un reactivo de tratamiento hídrico."
+      }
+    ],
+    "hint": "Seleccione las técnicas físico-químicas que ayudan a aglomerar, decantar o hacer flotar partículas en el agua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el principio fundamental del tratamiento secundario en una planta de tratamiento de aguas residuales?",
+    "opciones": [
+      {
+        "text": "En un proceso biológico donde microorganismos consumen la materia orgánica disuelta.",
+        "isCorrect": true,
+        "rationale": "Aprovecha la acción metabólica de bacterias (aeróbicas o anaeróbicas) para degradar la contaminación orgánica disuelta."
+      },
+      {
+        "text": "En la retención de troncos y rocas gruesas mediante rejillas de acero.",
+        "isCorrect": false,
+        "rationale": "Esta es la función del pretratamiento físico de la planta."
+      },
+      {
+        "text": "En la adición masiva de cloro licuado para esterilizar el efluente.",
+        "isCorrect": false,
+        "rationale": "La adición de desinfectantes como el cloro ocurre en el tratamiento terciario."
+      },
+      {
+        "text": "En la destilación por ebullición industrial de todo el volumen hídrico.",
+        "isCorrect": false,
+        "rationale": "La ebullición no es un tratamiento secundario estándar debido al altísimo costo energético que implicaría."
+      },
+      {
+        "text": "En la extracción por magnetismo de partículas férricas.",
+        "isCorrect": false,
+        "rationale": "La separación magnética no es el método secundario de depuración orgánica de efluentes."
+      }
+    ],
+    "hint": "Involucra 'dar de comer' la materia orgánica contaminante a bacterias y microorganismos en reactores aireados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué norma peruana aprobada por el MINAM fija los Límites Máximos Permisibles (LMP) para efluentes de plantas PETAR domésticas o municipales?",
+    "opciones": [
+      {
+        "text": "Decreto Supremo N° 003-2010-MINAM",
+        "isCorrect": true,
+        "rationale": "Es la norma legal específica que fija los parámetros obligatorios (aceites, coliformes, DBO, pH) para efluentes de PETAR."
+      },
+      {
+        "text": "Decreto Supremo N° 004-2017-MINAM",
+        "isCorrect": false,
+        "rationale": "Establece los Estándares de Calidad Ambiental (ECA) para Agua en cuerpos receptores, no los LMP directos del efluente."
+      },
+      {
+        "text": "Ley N° 29783",
+        "isCorrect": false,
+        "rationale": "Es la Ley de Seguridad y Salud en el Trabajo."
+      },
+      {
+        "text": "Ley N° 28090",
+        "isCorrect": false,
+        "rationale": "Corresponde a la Ley que regula el Cierre de Minas."
+      },
+      {
+        "text": "Decreto Supremo 024-2016-EM",
+        "isCorrect": false,
+        "rationale": "Es el reglamento de Seguridad y Salud Ocupacional en Minería."
+      }
+    ],
+    "hint": "Fue emitido en el año 2010 por el Ministerio del Ambiente específicamente para normar las aguas de las PETAR.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función del tratamiento terciario en una PETAR antes de disponer o reutilizar el agua?",
+    "opciones": [
+      {
+        "text": "Desinfectar el agua (mediante cloro, ozono o UV) para eliminar patógenos remanentes.",
+        "isCorrect": true,
+        "rationale": "Elimina los microorganismos patógenos y afina la calidad del efluente para que sea seguro según el uso previsto."
+      },
+      {
+        "text": "Filtrar únicamente llantas y residuos sólidos voluminosos.",
+        "isCorrect": false,
+        "rationale": "La separación de elementos voluminosos se realiza al inicio en el pretratamiento."
+      },
+      {
+        "text": "Mezclar el agua limpia con lodos contaminados no tratados.",
+        "isCorrect": false,
+        "rationale": "Esta mezcla echaría a perder todo el proceso de depuración previamente realizado."
+      },
+      {
+        "text": "Reducir el nivel de oxígeno a cero para acidificar el agua.",
+        "isCorrect": false,
+        "rationale": "No se busca acidificar el efluente, sino mantener un pH neutro y un nivel de pureza controlado."
+      },
+      {
+        "text": "Congelar el agua para extraer los minerales mediante condensación seca.",
+        "isCorrect": false,
+        "rationale": "La congelación no constituye un proceso terciario habitual en las plantas de tratamiento."
+      }
+    ],
+    "hint": "Esta etapa se enfoca en la desinfección final del efluente clarificado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué año fueron adoptados internacionalmente los 17 Objetivos de Desarrollo Sostenible (ODS) marco de la Agenda 2030?",
+    "opciones": [
+      {
+        "text": "2015",
+        "isCorrect": true,
+        "rationale": "Los 17 ODS y sus 169 metas fueron adoptados por los Estados miembros de la ONU en septiembre de 2015."
+      },
+      {
+        "text": "2000",
+        "isCorrect": false,
+        "rationale": "En el año 2000 se adoptaron los Objetivos de Desarrollo del Milenio (ODM), antecedentes de los ODS."
+      },
+      {
+        "text": "2010",
+        "isCorrect": false,
+        "rationale": "Corresponde a un periodo intermedio previo a la aprobación formal de la Agenda 2030."
+      },
+      {
+        "text": "2020",
+        "isCorrect": false,
+        "rationale": "En 2020 los ODS ya llevaban 5 años de implementación global."
+      },
+      {
+        "text": "2005",
+        "isCorrect": false,
+        "rationale": "En 2005 entró en vigor el Protocolo de Kioto, pero no se redactó la Agenda 2030."
+      }
+    ],
+    "hint": "Fue en la Cumbre de las Naciones Unidas celebrada a mediados de la década del 2010.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la norma de certificación internacional de referencia utilizada para estructurar e implementar un Sistema de Gestión Ambiental (SGA)?",
+    "opciones": [
+      {
+        "text": "ISO 14001",
+        "isCorrect": true,
+        "rationale": "Es el estándar internacionalmente aceptado que establece los requisitos para un sistema de gestión ambiental eficaz."
+      },
+      {
+        "text": "ISO 9001",
+        "isCorrect": false,
+        "rationale": "La norma ISO 9001 se enfoca de manera exclusiva en los Sistemas de Gestión de la Calidad."
+      },
+      {
+        "text": "ISO 45001",
+        "isCorrect": false,
+        "rationale": "La ISO 45001 establece los requisitos para los Sistemas de Gestión de Seguridad y Salud en el Trabajo."
+      },
+      {
+        "text": "ISO 26000",
+        "isCorrect": false,
+        "rationale": "La ISO 26000 provee una guía sobre responsabilidad social empresarial, pero no es una norma certificable de SGA."
+      },
+      {
+        "text": "ISO 50001",
+        "isCorrect": false,
+        "rationale": "Esta norma se enfoca de manera específica en la Gestión de la Energía."
+      }
+    ],
+    "hint": "Esta famosa norma técnica pertenece a la familia ISO de la serie 14000.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste esencialmente el mecanismo financiero de los bonos o créditos de carbono?",
+    "opciones": [
+      {
+        "text": "En adquirir certificados de proyectos ambientales para compensar las emisiones de $CO_2$ no reducidas.",
+        "isCorrect": true,
+        "rationale": "Permite a empresas que emiten $CO_2$ financiar proyectos de conservación o energía limpia para neutralizar su huella."
+      },
+      {
+        "text": "En la compra de licencias estatales para poder verter basura en ríos de forma libre.",
+        "isCorrect": false,
+        "rationale": "Los bonos de carbono no autorizan la contaminación de efluentes ni eliminan las sanciones ambientales regulatorias."
+      },
+      {
+        "text": "En un préstamo bancario tradicional para la compra de vehículos de diésel.",
+        "isCorrect": false,
+        "rationale": "No es un crédito bancario convencional ni financia la compra de equipos basados en combustibles fósiles."
+      },
+      {
+        "text": "En pagar un impuesto directo al municipio sin ningún proyecto ambiental asociado.",
+        "isCorrect": false,
+        "rationale": "Los bonos respaldan proyectos auditables de absorción o reducción efectiva de $CO_2$."
+      },
+      {
+        "text": "En un subsidio estatal que regala carbón vegetal a la pequeña minería.",
+        "isCorrect": false,
+        "rationale": "Confunde el elemento químico carbono con la comercialización del mineral carbón."
+      }
+    ],
+    "hint": "Es un incentivo donde cada bono equivale a una tonelada de dióxido de carbono neutralizada o evitada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son los tres pilares o ejes de acción esenciales que debe integrar un Plan Maestro de Sostenibilidad corporativo según la Agenda 2030?",
+    "opciones": [
+      {
+        "text": "Gestión e impacto medioambiental.",
+        "isCorrect": true,
+        "rationale": "Aborda el cuidado de los recursos naturales, biodiversidad, residuos y mitigación del cambio climático."
+      },
+      {
+        "text": "Desarrollo y responsabilidad social con las comunidades.",
+        "isCorrect": true,
+        "rationale": "Incluye el bienestar de los trabajadores, la equidad, los derechos humanos y el progreso de la población local."
+      },
+      {
+        "text": "Gobernanza corporativa y transparencia.",
+        "isCorrect": true,
+        "rationale": "Asegura la ética en la administración, cumplimiento legal, políticas justas e integridad en los negocios."
+      },
+      {
+        "text": "Explotación acelerada sin evaluaciones de impacto.",
+        "isCorrect": false,
+        "rationale": "Esta práctica es contraria a los principios de la sostenibilidad ambiental."
+      },
+      {
+        "text": "Monopolización exclusiva de mercados internacionales.",
+        "isCorrect": false,
+        "rationale": "Las prácticas comerciales restrictivas no constituyen un pilar de la gestión sostenible."
+      }
+    ],
+    "hint": "Piense en el triple balance clásico: ambiental, social y de gobierno corporativo (ESG).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el marco internacional estandarizado de reporte (GRI) más utilizado por las grandes empresas para comunicar sus informes de sostenibilidad?",
+    "opciones": [
+      {
+        "text": "Global Reporting Initiative",
+        "isCorrect": true,
+        "rationale": "El GRI provee los estándares globales más difundidos para elaborar memorias y reportes de sostenibilidad."
+      },
+      {
+        "text": "Global Risk Inspection",
+        "isCorrect": false,
+        "rationale": "Es un nombre técnico inventado que no se corresponde con las siglas del estándar ambiental."
+      },
+      {
+        "text": "General Regulation of Industry",
+        "isCorrect": false,
+        "rationale": "Designación inexacta que no representa la institución que redacta estas memorias internacionales."
+      },
+      {
+        "text": "Green Resources Implementation",
+        "isCorrect": false,
+        "rationale": "Acrónimo erróneo que no coincide con la organización internacional GRI."
+      },
+      {
+        "text": "Geothermal Research Institute",
+        "isCorrect": false,
+        "rationale": "Se refiere de manera errónea a la investigación de energía geotérmica."
+      }
+    ],
+    "hint": "Sus siglas corresponden a la 'Iniciativa de Reporte Global' fundada para promover memorias de desempeño ESG.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la tecnología de Captura y Almacenamiento de Carbono (CCS)?",
+    "opciones": [
+      {
+        "text": "En atrapar el $CO_2$ en la fuente o del aire para inyectarlo y aislarlo permanentemente en capas subterráneas o rocas.",
+        "isCorrect": true,
+        "rationale": "Separa el $CO_2$ de las emisiones industriales y lo almacena geológicamente para evitar que llegue a la atmósfera."
+      },
+      {
+        "text": "En quemar bosques para producir ceniza de carbón industrial de rápido uso.",
+        "isCorrect": false,
+        "rationale": "La deforestación y la quema liberan grandes cantidades de $CO_2$, generando el efecto contrario al deseado."
+      },
+      {
+        "text": "En disolver gases de efecto invernadero dentro del agua potable de consumo directo.",
+        "isCorrect": false,
+        "rationale": "El $CO_2$ capturado no se inyecta en redes de agua potable."
+      },
+      {
+        "text": "En liberar metano a la atmósfera para neutralizar el dióxido de carbono de forma química.",
+        "isCorrect": false,
+        "rationale": "El metano es un gas de efecto invernadero aún más potente y nocivo que el propio $CO_2$."
+      },
+      {
+        "text": "En empaquetar humo en bolsas plásticas descartables depositadas en botaderos comunitarios.",
+        "isCorrect": false,
+        "rationale": "Los gases requieren compresión e inyección geológica profunda, no empaquetamiento superficial en bolsas."
+      }
+    ],
+    "hint": "Esta técnica evita que los gases salgan de las chimeneas industriales capturándolos para confinarlos bajo tierra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes son beneficios tangibles de implementar un Plan Maestro de Sostenibilidad en un campamento o empresa minera?",
+    "opciones": [
+      {
+        "text": "Ahorro económico y rentabilidad operativa a largo plazo.",
+        "isCorrect": true,
+        "rationale": "La eficiencia en recursos, el ahorro de energía y la prevención de multas reducen los costos de la empresa."
+      },
+      {
+        "text": "Mejora sustancial de la reputación e imagen corporativa.",
+        "isCorrect": true,
+        "rationale": "Fortalece la confianza con inversionistas, clientes, autoridades y la sociedad en general."
+      },
+      {
+        "text": "Alineamiento y cumplimiento de metas de la Agenda 2030.",
+        "isCorrect": true,
+        "rationale": "Permite a la compañía contribuir activamente con los compromisos globales de sostenibilidad de las Naciones Unidas."
+      },
+      {
+        "text": "Garantía de nulidad absoluta de todo riesgo operacional.",
+        "isCorrect": false,
+        "rationale": "Ningún plan elimina al 100% los riesgos inherentes de una operación, solo los mitiga y gestiona de forma responsable."
+      },
+      {
+        "text": "Exoneración de pagar salarios al personal capacitado en seguridad.",
+        "isCorrect": false,
+        "rationale": "La sostenibilidad promueve el trabajo decente y el pago justo de salarios."
+      }
+    ],
+    "hint": "Considere los beneficios económicos, reputacionales y de alineación internacional que obtiene la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión sostenible de residuos sólidos para campamentos mineros, la estrategia prioritaria dentro de la jerarquía operativa es la reducción en la fuente. ¿Cuál es el fundamento técnico principal de esta prioridad frente al reciclaje o la reutilización?",
+    "opciones": [
+      {
+        "text": "Evita la generación del residuo desde el diseño y consumo, disminuyendo la demanda de recursos, logística de manejo y disposición final.",
+        "isCorrect": true,
+        "rationale": "Minimizar la generación inicial reduce el volumen total de materiales que requieren recolección, transporte, tratamiento y almacenamiento, optimizando la eficiencia ambiental en todo el ciclo de vida."
+      },
+      {
+        "text": "Elimina la necesidad de cumplir con la normativa de transporte de residuos peligrosos mediante la eliminación de empaques.",
+        "isCorrect": false,
+        "rationale": "Aunque reduce empaques, las operaciones industriales siguen generando residuos peligrosos que exigen estricto cumplimiento normativo independientemente del nivel de reducción."
+      },
+      {
+        "text": "Sustituye por completo la necesidad de contar con botaderos e infraestructuras de disposición final en la mina.",
+        "isCorrect": false,
+        "rationale": "Incluso con tasas altas de reducción, siempre existe una fracción de residuos no aprovechables que requiere infraestructura autorizada para su disposición final."
+      },
+      {
+        "text": "Transforma automáticamente los residuos orgánicos en insumos energéticos sin requerir tratamientos biológicos.",
+        "isCorrect": false,
+        "rationale": "La reducción previene la generación de residuos, pero no convierte físicamente la materia orgánica en energía sin procesos de biotransformación o incineración."
+      },
+      {
+        "text": "Permite comercializar los excedentes de materiales no utilizados directamente con la población local sin regulación.",
+        "isCorrect": false,
+        "rationale": "La transferencia o venta de materiales sobrantes está sujeta a regulaciones fiscales y ambientales, y no constituye el propósito técnico de la reducción en la fuente."
+      }
+    ],
+    "hint": "Piensa en cuál de las alternativas actúa antes de que el residuo sea físicamente creado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El manejo fuera de la unidad minera, el transporte y la disposición final de los residuos peligrosos generados en el campamento exigen estándares estrictos. ¿Qué requisito legal e institucional es indispensable para la entidad que realiza este servicio?",
+    "opciones": [
+      {
+        "text": "Contar con autorización formal como Empresa Operadora de Residuos Sólidos (EO-RS) registrada ante la autoridad ambiental competente.",
+        "isCorrect": true,
+        "rationale": "La legislación exige que la recolección, transporte y disposición de residuos peligrosos fuera de la mina sean ejecutados exclusivamente por empresas registradas y fiscalizadas oficialmente."
+      },
+      {
+        "text": "Acreditar la aprobación directa del estudio de impacto ambiental por parte del municipio distrital adyacente.",
+        "isCorrect": false,
+        "rationale": "Los municipios distritales no aprueban Estudios de Impacto Ambiental ni autorizan operaciones de manejo de residuos peligrosos de alcance minero."
+      },
+      {
+        "text": "Disponer de camiones de carga convencionales siempre que el personal cuente con inducción interna de la mina.",
+        "isCorrect": false,
+        "rationale": "El transporte de residuos peligrosos requiere unidades vehiculares con equipamiento, señalización y permisos especiales, no siendo suficientes los vehículos convencionales."
+      },
+      {
+        "text": "Comercializar la totalidad de los residuos peligrosos reciclables en mercados informales locales.",
+        "isCorrect": false,
+        "rationale": "La entrega de residuos peligrosos a comerciantes informales constituye un delito ambiental y una falta grave a las leyes de gestión integral de residuos."
+      },
+      {
+        "text": "Operar únicamente bajo la modalidad de voluntariado ambiental sin fiscalización de organismos estatales.",
+        "isCorrect": false,
+        "rationale": "La gestión de residuos peligrosos es una actividad fiscalizada por entidades como el OEFA o el MINAM y no puede basarse en voluntariados sin registro legal."
+      }
+    ],
+    "hint": "Considera la denominación técnica oficial que otorga el Estado a las empresas legalmente habilitadas para gestionar residuos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la fase de cierre de una operación minera, la estabilidad geoquímica es un componente esencial de la remediación ambiental. ¿En qué consiste fundamentalmente esta estabilidad?",
+    "opciones": [
+      {
+        "text": "En aislar o neutralizar los componentes minerales con potencial de generación de acidez para evitar la lixiviación y migración de metales pesados.",
+        "isCorrect": true,
+        "rationale": "El control geoquímico evita reacciones de oxidación y drenaje ácido de mina que podrían contaminar suelos y fuentes de agua subsuperficiales a largo plazo."
+      },
+      {
+        "text": "En perfilar y rellenar topográficamente la totalidad de los tajos abiertos para igualar la cota original del terreno.",
+        "isCorrect": false,
+        "rationale": "El perfilado topográfico y remodelado de pendientes corresponde a la estabilidad física del terreno, no a los procesos químicos de los minerales."
+      },
+      {
+        "text": "En canalizar hidráulicamente los ríos principales para que rodeen las instalaciones sin entrar en contacto con el aire.",
+        "isCorrect": false,
+        "rationale": "El desvío y canalización de cauces forma parte de la gestión de estabilidad hidrológica y drenaje superficial."
+      },
+      {
+        "text": "En sembrar especies arbóreas nativas sobre las canteras para acelerar la absorción atmosférica de nitrógeno.",
+        "isCorrect": false,
+        "rationale": "La reforestación y revegetación contribuyen al retorno de condiciones biológicas y preoperacionales, pero no resuelven de forma directa la reactividad geoquímica."
+      },
+      {
+        "text": "En retirar la totalidad de los campamentos de madera para evitar la putrefacción de materia orgánica en el subsuelo.",
+        "isCorrect": false,
+        "rationale": "El desmantelamiento de infraestructura civil es una tarea de cierre físico y ambiental general, no un tratamiento de estabilidad geoquímica del yacimiento."
+      }
+    ],
+    "hint": "Relaciona el término geoquímico con las reacciones del drenaje ácido y los minerales reactivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "El desarrollo de un Plan de Cierre de Minas exige garantizar aspectos específicos para asegurar la seguridad ambiental a largo plazo. ¿Cuáles de los siguientes componentes representan objetivos obligatorios en este proceso?",
+    "opciones": [
+      {
+        "text": "Garantizar la estabilidad física de taludes, tajos y depósitos de relaves.",
+        "isCorrect": true,
+        "rationale": "El aseguramiento de estructuras geotécnicas evita colapsos mecánicos y deslizamientos de materiales remediados."
+      },
+      {
+        "text": "Asegurar la estabilidad geoquímica de los efluentes y desmontes reactivos.",
+        "isCorrect": true,
+        "rationale": "Previene la contaminación por drenaje ácido de roca y liberación de metales a los acuíferos."
+      },
+      {
+        "text": "Preservar o restituir la estabilidad hidrológica en las cuencas de la zona de influencia.",
+        "isCorrect": true,
+        "rationale": "Mantiene el equilibrio de las correntías superficiales y subterráneas sin alterar el flujo hídrico natural."
+      },
+      {
+        "text": "Restablecer las condiciones preoperacionales compatibles con la flora y fauna local.",
+        "isCorrect": true,
+        "rationale": "Permite que el ecosistema intervenido retorne a un estado ecológico funcional similar al previo a la explotación."
+      },
+      {
+        "text": "Demoler y erradicar las vías de transporte público pavimentadas por el Estado fuera del asiento minero.",
+        "isCorrect": false,
+        "rationale": "La infraestructura vial pública de uso regional o nacional permanece bajo control estatal y no forma parte del compromiso de desmantelamiento minero."
+      }
+    ],
+    "hint": "Evalúa cuáles de estas metas abordan las estabilidades geotécnica, química, hídrica y ambiental del sitio minero.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la evaluación de impactos ambientales para un proyecto minero, ¿qué define técnicamente al Área de Influencia Directa (AID)?",
+    "opciones": [
+      {
+        "text": "El espacio geográfico donde los impactos ambientales y sociales causados por las actividades mineras se perciben de manera directa e inmediata.",
+        "isCorrect": true,
+        "rationale": "El AID abarca el sitio de las operaciones y las zonas adyacentes donde los cambios físicos, biológicos o sociales son atribución directa de la actividad."
+      },
+      {
+        "text": "El territorio nacional comprendido fuera del departamento o región donde se ubica el asiento minero.",
+        "isCorrect": false,
+        "rationale": "El ámbito geográfico fuera de la región no recibe impactos directos y no se clasifica como área de influencia directa."
+      },
+      {
+        "text": "Únicamente el perímetro cerrado donde se instalan las oficinas administrativas y comedores del campamento.",
+        "isCorrect": false,
+        "rationale": "El AID no se limita al campamento civil; incluye el tajos, relaveras, plantas de procesamiento y comunidades adyacentes afectadas."
+      },
+      {
+        "text": "La franja marina dedicada al transporte transoceánico de minerales refinados hacia otros continentes.",
+        "isCorrect": false,
+        "rationale": "Las rutas de navegación internacional no se delimitan como el área de influencia directa ambiental de un proyecto minero terrestre."
+      },
+      {
+        "text": "Las zonas urbanas donde residen los accionistas mayoritarios de la titular minera.",
+        "isCorrect": false,
+        "rationale": "La residencia de inversionistas no guarda relación con la delimitación técnica de las variables ambientales y sociales en el territorio de la mina."
+      }
+    ],
+    "hint": "Céntrate en la proximidad y causa-efecto inmediata sobre el entorno físico y social.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco legal minero peruano, existe un reglamento técnico obligatorio específico para la gestión de la seguridad y salud ocupacional. ¿Qué norma legal regula detalladamente estos aspectos sectoriales?",
+    "opciones": [
+      {
+        "text": "Decreto Supremo 024-2016-EM y su modificatoria el Decreto Supremo 023-2017-EM.",
+        "isCorrect": true,
+        "rationale": "Es el Reglamento de Seguridad y Salud Ocupacional en Minería dictado por el Ministerio de Energía y Minas que establece los estándares sectoriales obligatorios."
+      },
+      {
+        "text": "Ley General del Ambiente 28611.",
+        "isCorrect": false,
+        "rationale": "Esta ley establece los principios de la gestión ambiental nacional, pero no constituye el reglamento específico de seguridad minera."
+      },
+      {
+        "text": "Decreto Supremo 003-2010-MINAM.",
+        "isCorrect": false,
+        "rationale": "Esta norma aprueba los Límites Máximos Permisibles para efluentes de plantas de tratamiento de aguas residuales, no temas de seguridad ocupacional."
+      },
+      {
+        "text": "Ley 28090 de Cierre de Minas.",
+        "isCorrect": false,
+        "rationale": "Regula los planes de cierre y las garantías ambientales de unidades mineras, sin abordar el reglamento operativo de seguridad del personal."
+      },
+      {
+        "text": "Norma Técnica Peruana de Señalización NTP 399.010 exclusivamente.",
+        "isCorrect": false,
+        "rationale": "La NTP proporciona códigos de colores e iconos para señales, pero no abarca el reglamento general de seguridad y salud en minería."
+      }
+    ],
+    "hint": "Busca el decreto supremo expedido por el sector Energía y Minas que norma las operaciones mineras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al gestionar la seguridad y el medio ambiente, se suelen emplear instrumentos legales. ¿Cuál es la diferencia fundamental entre una matriz de requisitos legales y una matriz de cumplimiento legal?",
+    "opciones": [
+      {
+        "text": "La de requisitos enuncia la normativa aplicable, mientras que la de cumplimiento evalúa la interpretación, estado de aplicación y evidencia objetiva.",
+        "isCorrect": true,
+        "rationale": "La matriz de cumplimiento va más allá de identificar la ley: analiza el nivel de acatamiento de cada artículo, identifica hallazgos y formula planes de acción."
+      },
+      {
+        "text": "La de requisitos se aplica a contratistas y la de cumplimiento únicamente al personal de planilla directa.",
+        "isCorrect": false,
+        "rationale": "Ambas matrices deben cubrir la totalidad de la operación e involucrar los requisitos aplicables tanto a la titular como a sus contratistas."
+      },
+      {
+        "text": "La matriz de requisitos es confidencial y la de cumplimiento debe publicarse obligatoriamente en el diario oficial.",
+        "isCorrect": false,
+        "rationale": "Ninguna de estas matrices se publica en diarios oficiales; son documentos internos de gestión auditables por la autoridad competente."
+      },
+      {
+        "text": "La de cumplimiento aborda normas internacionales ISO y la de requisitos solo leyes distritales.",
+        "isCorrect": false,
+        "rationale": "Ambas matrices integran la legislación nacional vigente aplicable a la actividad minera, independientemente de los estándares voluntarios."
+      },
+      {
+        "text": "No existe ninguna diferencia técnica, siendo ambos términos sinónimos en las auditorías de SUNAFIL.",
+        "isCorrect": false,
+        "rationale": "Los auditores distinguen entre el inventario de normas (requisitos) y la verificación documental/física de su acatamiento efectivo (cumplimiento)."
+      }
+    ],
+    "hint": "Considera qué documento verifica de manera práctica las evidencias objetivas respecto a las leyes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Ante una situación de emergencia con personal lesionado en un campamento minero, el protocolo de primera respuesta universalmente aceptado se resume en las siglas PAS. ¿Cuál es la secuencia operativa correcta?",
+    "opciones": [
+      {
+        "text": "Proteger la escena y al rescatista, Avisar a las centrales o brigadas de emergencia, y Socorrer al afectado si es seguro.",
+        "isCorrect": true,
+        "rationale": "El protocolo PAS establece que la prioridad absoluta es garantizar la seguridad personal para no generar más víctimas, comunicar el evento y finalmente brindar auxilio."
+      },
+      {
+        "text": "Prevenir el pánico social, Analizar los costos del evento, y Sancionar al responsable de la maniobra.",
+        "isCorrect": false,
+        "rationale": "Estas acciones no forman parte del protocolo de respuesta médica inmediata en el lugar del accidente."
+      },
+      {
+        "text": "Socorrer inmediatamente a la víctima, Avisar al supervisor al final del turno, y Proteger los equipos operativos.",
+        "isCorrect": false,
+        "rationale": "Socorrer sin asegurar primero el área puede causar que el rescatista también resulte accidentado; además, el aviso debe ser inmediato."
+      },
+      {
+        "text": "Paralizar la planta entera, Evacuar hacia la ciudad más cercana, y Subsanar los registros del IPERC.",
+        "isCorrect": false,
+        "rationale": "Modificar registros o evacuar sin coordinar altera el protocolo de respuesta ante lesionados."
+      },
+      {
+        "text": "Probar equipos de reanimación, Fotografiar las heridas, y Trasladar al herido en cualquier vehículo disponible.",
+        "isCorrect": false,
+        "rationale": "Fotografiar la escena atrasa la atención y el traslado inadecuado puede agravar lesiones medulares o estructurales."
+      }
+    ],
+    "hint": "Asegurar la zona primero, dar la alarma después y finalmente atender a la persona herida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el seguimiento médico ocupacional de un campamento minero, si los monitoreos detectan que un trabajador ha superado los Límites Máximos Permisibles de exposición a un agente biológico o químico, ¿qué medidas inmediatas del programa preventivo deben ejecutarse?",
+    "opciones": [
+      {
+        "text": "Realizar exámenes médicos de confirmación y monitoreos biológicos de seguimiento.",
+        "isCorrect": true,
+        "rationale": "Permite descartar errores de muestra y evaluar la evolución médica real de la concentración del contaminante en el organismo."
+      },
+      {
+        "text": "Evaluar la restricción temporal de tareas o la reubicación preventiva del colaborador a un puesto sin exposición.",
+        "isCorrect": true,
+        "rationale": "Detiene la exposición al agente nocivo para evitar el avance de una enfermedad ocupacional irreversible."
+      },
+      {
+        "text": "Verificar y auditar los controles de ingeniería e higiene ocupacional en la fuente generadora del contaminante.",
+        "isCorrect": true,
+        "rationale": "Revisa si los sistemas de extracción, ventilación o confinamiento técnico están fallando en el área de trabajo."
+      },
+      {
+        "text": "Tramitar el despido disciplinario del trabajador para evitar acumular estadísticas de salud en el historial corporativo.",
+        "isCorrect": false,
+        "rationale": "El despido de un trabajador con sobreexposición es ilegal y constituye una transgresión grave a los derechos laborales e higiénicos."
+      },
+      {
+        "text": "Obligar al trabajador a firmar una declaración jurada deslindando de responsabilidad a la empresa.",
+        "isCorrect": false,
+        "rationale": "Las responsabilidades en salud ocupacional son irrenunciables por ley y no pueden anularse mediante acuerdos privados."
+      }
+    ],
+    "hint": "Selecciona las acciones destinadas a proteger al colaborador, confirmar el diagnóstico y corregir el ambiente de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El Mapa de Riesgos es una herramienta de seguridad que debe permanecer visible en el ingreso de las áreas de trabajo. ¿Cuál es la función técnica de este documento gráfico?",
+    "opciones": [
+      {
+        "text": "Representar mediante simbología estandarizada la distribución del área e identificar los peligros y riesgos presentes.",
+        "isCorrect": true,
+        "rationale": "Informa de forma visual e inmediata a los trabajadores y visitantes sobre los peligros específicos a los que se exponen al ingresar a una zona."
+      },
+      {
+        "text": "Mostrar las rutas de transporte comercial utilizadas para distribuir los minerales hacia los puertos de exportación.",
+        "isCorrect": false,
+        "rationale": "Las rutas logísticas externas no forman parte del mapa de riesgos de una planta o instalación específica."
+      },
+      {
+        "text": "Detallar los salarios y cargos administrativos de todo el personal que labora en la unidad operativa.",
+        "isCorrect": false,
+        "rationale": "La información salarial es confidencial y ajena a los instrumentos gráficos de seguridad e higiene."
+      },
+      {
+        "text": "Servir como plano topográfico oficial para la tramitación de licencias de edificación municipal.",
+        "isCorrect": false,
+        "rationale": "Aunque se basa en la distribución del área, su propósito es la prevención de riesgos y no la arquitectura urbana."
+      },
+      {
+        "text": "Sustituir la elaboración diaria del IPERC Continuo en las tareas de alto riesgo.",
+        "isCorrect": false,
+        "rationale": "El Mapa de Riesgos es una herramienta informativa estática y no reemplaza la evaluación dinámica del IPERC Continuo antes de cada labor."
+      }
+    ],
+    "hint": "Visualiza el esquema con iconos de advertencia que se coloca a la entrada de una planta o taller.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Las Plantas de Tratamiento de Aguas Residuales (PETAR) domésticas en campamentos mineros deben verter sus efluentes respetando límites legales. ¿Qué norma peruana establece los Limites Máximos Permisibles (LMP) para efluentes de PETAR domésticas o municipales?",
+    "opciones": [
+      {
+        "text": "Decreto Supremo 003-2010-MINAM.",
+        "isCorrect": true,
+        "rationale": "Es el decreto emitido por el Ministerio del Ambiente que fija los LMP para parámetros como DBO, DQO, aceites y grasas, coliformes fecales y pH en efluentes de PETAR."
+      },
+      {
+        "text": "Decreto Supremo 004-2017-MINAM.",
+        "isCorrect": false,
+        "rationale": "Este decreto aprueba los Estándares de Calidad Ambiental (ECA) para Agua en cuerpos receptores, no los LMP directos en el tubo de salida de la PETAR."
+      },
+      {
+        "text": "Ley 29783 de Seguridad y Salud en el Trabajo.",
+        "isCorrect": false,
+        "rationale": "Esta ley norma la prevención de riesgos laborales para las personas, sin fijar parámetros químicos de efluentes de agua."
+      },
+      {
+        "text": "Decreto Supremo 055-2010-EM.",
+        "isCorrect": false,
+        "rationale": "Fue el antiguo reglamento de seguridad minera, derogado y sustituido por el DS 024-2016-EM, y no establecía LMP de aguas domésticas."
+      },
+      {
+        "text": "Norma Técnica de Edificación IS.010 de Instalaciones Sanitarias.",
+        "isCorrect": false,
+        "rationale": "Esta norma regula el diseño de tuberías y fontanería interna en edificaciones, pero no aprueba los LMP ambientales de efluentes sanitarios."
+      }
+    ],
+    "hint": "Diferencia entre los Estándares de Calidad Ambiental (ECA) y el Decreto Supremo específico del MINAM para efluentes de PETAR.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el esquema de operación de una PETAR, se incluye una etapa de Pretratamiento. ¿Cuál es el objetivo principal de los sistemas mecánicos de rejas, desarenadores y tamices en esta etapa?",
+    "opciones": [
+      {
+        "text": "Retener y remover sólidos de gran tamaño, plásticos, gravas y arenas para evitar obstrucciones y daños en las bombas y unidades posteriores.",
+        "isCorrect": true,
+        "rationale": "El pretratamiento realiza la separación física gruesa para proteger la maquinaria rotativa y acondicionar el flujo previo a los tratamientos químicos o biológicos."
+      },
+      {
+        "text": "Inyectar cloro u ozono a alta presión para eliminar el 100% de las bacterias patógenas y coliformes fecales.",
+        "isCorrect": false,
+        "rationale": "La desinfección mediante agentes químicos como el cloro se realiza al final de la planta, en la etapa de tratamiento terciario."
+      },
+      {
+        "text": "Fomentar el crecimiento de colonias bacterianas aeróbicas mediante difusores de aire de burbuja fina.",
+        "isCorrect": false,
+        "rationale": "La degradación biológica aeróbica corresponde al tratamiento secundario (lodos activados, MBBR, MBR) y no al pretratamiento."
+      },
+      {
+        "text": "Añadir sulfato de aluminio para coagular los metales pesados disueltos en el efluente industrial.",
+        "isCorrect": false,
+        "rationale": "La dosificación de coagulantes químicos para remover coloides disueltos se ejecuta en el tratamiento primario o físico-químico."
+      },
+      {
+        "text": "Evaporar el agua por calentamiento térmico para dejar únicamente un fango seco al fondo del canal.",
+        "isCorrect": false,
+        "rationale": "El secado de fango se realiza mediante lechos de secado o deshidratadores mecánicos en la línea de lodos, no en la entrada de la planta."
+      }
+    ],
+    "hint": "Céntrate en la remoción mecánica de objetos voluminosos y partículas pesadas en el punto de ingreso del agua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el tratamiento primario de aguas residuales mediante Flotación por Aire Disuelto (DAF), ¿cuál es el principio físico-químico clave para separar los contaminantes?",
+    "opciones": [
+      {
+        "text": "Inyectar microburbujas de aire que se adhieren a los flóculos químicos formados, haciéndolos flotar hacia la superficie para su retiro por rascado.",
+        "isCorrect": true,
+        "rationale": "El sistema DAF reduce la densidad aparente de los flóculos mediante burbujas microscópicas de aire, logrando que asciendan rápidamente a la superficie."
+      },
+      {
+        "text": "Hacer pasar el agua a través de membranas impermeables accionadas por evaporación solar.",
+        "isCorrect": false,
+        "rationale": "La evaporación no utiliza membranas impermeables ni aire disuelto; las membranas de filtración física actúan por presión hidráulica."
+      },
+      {
+        "text": "Sedimentar las partículas pesadas exclusivamente por acción de la gravedad en pozas de reposo de largo tiempo de retención.",
+        "isCorrect": false,
+        "rationale": "La sedimentación por gravedad es el principio opuesto a la flotación asistida por microburbujas del sistema DAF."
+      },
+      {
+        "text": "Añadir bacterias anaeróbicas para que consuman el gas metano disuelto en la fase líquida.",
+        "isCorrect": false,
+        "rationale": "El sistema DAF es una unidad físico-química de flotación que no se basa en el consumo biológico de metano por bacterias."
+      },
+      {
+        "text": "Filtrar el efluente mediante un lecho profundo de grava sintética sin adición de reactivos.",
+        "isCorrect": false,
+        "rationale": "El DAF requiere dosificación previa de coagulantes/floculantes y un sistema de saturación de aire a presión, no un filtro de grava estático."
+      }
+    ],
+    "hint": "Identifica la alternativa que describe el ascenso de partículas facilitado por pequeñas burbujas gaseosas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el tratamiento secundario biológico de aguas residuales se aplican tecnologías como el MBBR (Reactor Biológico de Lecho Móvil) y el MBR (Reactor Biológico de Membrana). ¿Qué características técnicas distinguen a estos sistemas?",
+    "opciones": [
+      {
+        "text": "El MBBR utiliza soporte plástico en suspensión (biocarriers) sobre los cuales se fija la biomasa bacteriana.",
+        "isCorrect": true,
+        "rationale": "Los biocarriers proporcionan una alta superficie específica dentro del reactor para el crecimiento de la biopelícula degradadora."
+      },
+      {
+        "text": "El MBR sustituye al clarificador secundario tradicional utilizando membranas de filtración de poro fino.",
+        "isCorrect": true,
+        "rationale": "La separación física por membranas en el MBR retiene completamente los sólidos suspendidos y bacterias, produciendo un efluente de alta clarificación."
+      },
+      {
+        "text": "Ambos sistemas requieren habitualmente aireación continua para suministrar oxígeno a los microorganismos aeróbicos.",
+        "isCorrect": true,
+        "rationale": "El proceso de biodegradación aeróbica en MBBR y MBR exige la inyección constante de aire para mantener el metabolismo bacteriano."
+      },
+      {
+        "text": "El MBBR opera exclusivamente sin presencia de oxígeno, produciendo gas sulfhídrico puro.",
+        "isCorrect": false,
+        "rationale": "El MBBR es un sistema aeróbico diseñado para degradar materia orgánica mediante aireación y no un digestor anaeróbico estricto."
+      },
+      {
+        "text": "Las membranas del MBR deben desecharse e incinerarse diariamente tras cada ciclo de filtrado.",
+        "isCorrect": false,
+        "rationale": "Las membranas del MBR son elementos duraderos que se limpian mediante contralavados automáticos y limpiezas químicas periódicas."
+      }
+    ],
+    "hint": "Analiza las particularidades del soporte móvil en el MBBR, la filtración por membranas en el MBR y la necesidad de oxígeno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una PETAR completa incluye una fase de tratamiento terciario antes de la descarga o reúso final del agua. ¿Cuál es la función técnica primordial de este tratamiento?",
+    "opciones": [
+      {
+        "text": "Desinfectar y pulir el efluente mediante cloración, ozonización, radiación UV o filtración fina para eliminar patógenos remanentes.",
+        "isCorrect": true,
+        "rationale": "El tratamiento terciario proporciona una barrera final de desinfección y refinamiento para garantizar la inocuidad microbiológica del agua."
+      },
+      {
+        "text": "Separar rocas y troncos mediante rejas mecánicas de entrada a la planta.",
+        "isCorrect": false,
+        "rationale": "La retención de sólidos voluminosos mediante rejas corresponde a la fase de pretratamiento."
+      },
+      {
+        "text": "Reducir la velocidad de flujo del canal de entrada mediante compuertas de madera.",
+        "isCorrect": false,
+        "rationale": "El control de caudal a la entrada es una operación hidráulica de pretratamiento o regulación, no una etapa terciaria."
+      },
+      {
+        "text": "Mezclar el agua limpia con grasas minerales para evitar que se congele en zonas de alta montaña.",
+        "isCorrect": false,
+        "rationale": "Introducir grasas al efluente final contaminaría el agua y contravendría la normativa ambiental de vertimientos."
+      },
+      {
+        "text": "Almacenar los lodos crudos sin deshidratar en pozos abiertos para su fermentación libre.",
+        "isCorrect": false,
+        "rationale": "La gestión de lodos se efectúa en la línea de fangos mediante espesamiento y deshidratación, no como tratamiento terciario del efluente."
+      }
+    ],
+    "hint": "Considera qué proceso final asegura que el agua esté libre de bacterias perjudiciales para la salud antes del reúso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la actividad minera metalúrgica, se generan en ocasiones drenajes ácidos por la oxidación de sulfuros. ¿Cuál es la ruta de tratamiento químico aplicada en las plantas para neutralizar estos efluentes?",
+    "opciones": [
+      {
+        "text": "Dosificar reactivos alcalinos como la cal para elevar el pH del agua y precipitar los metales disueltos en forma de hidróxidos.",
+        "isCorrect": true,
+        "rationale": "La neutralización con cal eleva el pH, volviendo insolubles los metales pesados (como fierro, cobre o zinc) para que sedimenten como lodos estables."
+      },
+      {
+        "text": "Adicionar ácido sulfúrico concentrado para solubilizar totalmente los sólidos residuales.",
+        "isCorrect": false,
+        "rationale": "Agregar más ácido incrementaría drásticamente la acidez y la toxicidad del efluente, agravando el problema ambiental."
+      },
+      {
+        "text": "Inyectar gas nitrógeno gaseoso hasta congelar el efluente y extraer el hielo de los tanques.",
+        "isCorrect": false,
+        "rationale": "La congelación criogénica por nitrógeno no es un método viable de neutralización de drenajes ácidos a escala industrial."
+      },
+      {
+        "text": "Filtrar el drenaje a través de sacos de arena sílica sin añadir ningún reactivo químico.",
+        "isCorrect": false,
+        "rationale": "La filtración por arena retiene sólidos en suspensión, pero no modifica el pH ácido ni remueve metales pesados disueltos."
+      },
+      {
+        "text": "Someter el efluente a radiación solar directa sin confinamiento para evaporar los ácidos.",
+        "isCorrect": false,
+        "rationale": "La evaporación sin neutralizar concentra los ácidos y puede generar vapores peligrosos o lixiviados altamente contaminantes."
+      }
+    ],
+    "hint": "Piensa en el compuesto alcalino de bajo costo económico utilizado habitualmente para subir el pH.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Los lodos resultantes de los procesos de clarificación y tratamiento de aguas residuales industriales en la mina deben ser gestionados de forma segura. ¿Cuál es la disposición final adecuada para estos lodos si concentran contaminantes o sustancias peligrosas?",
+    "opciones": [
+      {
+        "text": "Someterlos a deshidratación e inactivación para luego ser transportados por una EO-RS a un relleno de seguridad autorizado.",
+        "isCorrect": true,
+        "rationale": "Los lodos peligrosos exigen secado/deshidratación previo y disposición en confinamientos impermeabilizados (rellenos de seguridad) registrados."
+      },
+      {
+        "text": "Esparcirlos directamente sobre las vías públicas del campamento para controlar el polvo seco.",
+        "isCorrect": false,
+        "rationale": "El uso de lodos industriales o peligrosos en carreteras contamina el entorno por escorrentía y dispersión de polvo tóxico."
+      },
+      {
+        "text": "Descargarlos durante la noche en los ríos cercanos cuando se incremente el caudal hídrico.",
+        "isCorrect": false,
+        "rationale": "El vertido directo de lodos peligrosos a ríos constituye un vertimiento ilegal sancionado penalmente."
+      },
+      {
+        "text": "Mezclarlos con el compost doméstico destinado a los huertos de verduras del campamento.",
+        "isCorrect": false,
+        "rationale": "Los lodos con contenido metálico o químico peligroso no son aptos para la producción agrícola o compost de uso alimentario."
+      },
+      {
+        "text": "Incinerarlos a cielo abierto en recipientes plásticos sin filtros de gases.",
+        "isCorrect": false,
+        "rationale": "La quema abierta de lodos peligrosos y plásticos emite tóxicos como dioxinas y furanos a la atmósfera."
+      }
+    ],
+    "hint": "Ubica la opción que contempla la deshidratación y disposición final mediante infraestructura de confinamiento autorizada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El Plan Maestro de Sostenibilidad de un campamento minero se articula frecuentemente con la iniciativa global de las Naciones Unidas denominada Agenda 2030. ¿Cuántos Objetivos de Desarrollo Sostenible (ODS) estructuran esta agenda internacional?",
+    "opciones": [
+      {
+        "text": "17 Objetivos de Desarrollo Sostenible con 169 metas asociadas.",
+        "isCorrect": true,
+        "rationale": "La Agenda 2030 contempla 17 ODS integrados que abarcan aspectos ambientales, sociales, económicos y de gobernanza."
+      },
+      {
+        "text": "5 Objetivos enfocado únicamente en la conservación de la fauna marina.",
+        "isCorrect": false,
+        "rationale": "La Agenda 2030 va más allá de la fauna marina; abarca la erradicación de la pobreza, salud, energía, clima y gobernanza."
+      },
+      {
+        "text": "100 Objetivos regulados por las ordenanzas distritales del Perú.",
+        "isCorrect": false,
+        "rationale": "Los ODS son un marco de alcance global definido por la ONU en 2015, no un listado de 100 normas distritales."
+      },
+      {
+        "text": "3 Objetivos orientados a la producción metálica minera exclusivamente.",
+        "isCorrect": false,
+        "rationale": "Los ODS son aplicables a todas las naciones y sectores de la sociedad, no únicamente a la minería."
+      },
+      {
+        "text": "24 Objetivos técnicos aprobados en el reglamento de Osinergmin.",
+        "isCorrect": false,
+        "rationale": "Osinergmin es un organismo regulador nacional y no el ente que formuló los 17 ODS globales."
+      }
+    ],
+    "hint": "Recuerda la cifra de metas internacionales adoptadas por la ONU en el año 2015.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La sostenibilidad corporativa bajo el enfoque de criterios ESG incluye la Gobernanza y la Gestión Social como ejes esenciales del Plan Maestro. ¿Cuáles de las siguientes acciones corresponden a estas dimensiones en una empresa minera?",
+    "opciones": [
+      {
+        "text": "Implementar políticas de equidad, anticorrupción y ética en las decisiones directivas.",
+        "isCorrect": true,
+        "rationale": "Constituye la base del buen gobierno corporativo (Gobernanza) asegurando transparencia y cumplimiento legal."
+      },
+      {
+        "text": "Promover la contratación de proveedores y mano de obra de las comunidades del área de influencia.",
+        "isCorrect": true,
+        "rationale": "Fomenta el desarrollo económico local y fortalece la licencia social de la operación (Dimensión Social)."
+      },
+      {
+        "text": "Desarrollar programas de salud mental, manejo de estrés laboral y ambiente seguro para los trabajadores.",
+        "isCorrect": true,
+        "rationale": "Garantiza la protección integral y el bienestar del capital humano dentro de la organización (Dimensión Social/Laboral)."
+      },
+      {
+        "text": "Ocultar la información de los monitoreos de efluentes a las autoridades locales para no alarmar a la población.",
+        "isCorrect": false,
+        "rationale": "La falta de transparencia viola las prácticas de gobernanza e infringe la normativa ambiental obligatoria."
+      },
+      {
+        "text": "Sustituir la totalidad de los contratos de trabajo por acuerdos verbales sin beneficios de ley.",
+        "isCorrect": false,
+        "rationale": "La precarización laboral vulnera los ODS de Trabajo Decente y contraviene la gobernanza corporativa."
+      }
+    ],
+    "hint": "Selecciona las prácticas vinculadas al buen gobierno directivo, la integración comunitaria y la salud del trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El estándar ISO 14001 es la referencia internacional más difundida para implementar un Sistema de Gestión Ambiental (SGA). ¿En qué ciclo metodológico de gestión se basa la estructura de esta norma?",
+    "opciones": [
+      {
+        "text": "El ciclo de mejora continua PHVA (Planificar, Hacer, Verificar y Actuar).",
+        "isCorrect": true,
+        "rationale": "La ISO 14001 se estructura sobre el ciclo PHVA (Deming), garantizando una revisión sistemática y el perfeccionamiento continuo del desempeño ambiental."
+      },
+      {
+        "text": "La metodología de ensayo y error aleatorio sin documentación de procesos.",
+        "isCorrect": false,
+        "rationale": "Un SGA certificado requiere rigor documental, trazabilidad y planificación estructurada, descartando la improvisación."
+      },
+      {
+        "text": "El sistema de fiscalización y sanción monetaria inmediata del OEFA.",
+        "isCorrect": false,
+        "rationale": "El OEFA es la entidad fiscalizadora del Estado, mientras que la ISO 14001 es un estándar voluntario de gestión interna."
+      },
+      {
+        "text": "El ciclo estático de diseño único sin posibilidad de revisión futura.",
+        "isCorrect": false,
+        "rationale": "El SGA exige dinamismo y revisiones periódicas por la dirección para adaptarse a nuevos contextos y metas."
+      },
+      {
+        "text": "El modelo financiero de cotización diaria de minerales en la bolsa de valores.",
+        "isCorrect": false,
+        "rationale": "El ciclo del SGA atiende a la gestión de impactos ambientales y no a los indicadores del mercado de valores."
+      }
+    ],
+    "hint": "Identifica las cuatro etapas fundamentales del proceso gerencial continuo conocido también como Ciclo de Deming.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al publicar un Reporte de Sostenibilidad bajo los estándares internacionales del Global Reporting Initiative (GRI), ¿cuál es el objetivo técnico fundamental que persigue la organización?",
+    "opciones": [
+      {
+        "text": "Divulgar de forma transparente, estandarizada y comparable los impactos y el desempeño ambiental, social y de gobernanza de la empresa.",
+        "isCorrect": true,
+        "rationale": "Los estándares GRI facilitan un lenguaje común internacional para reportar el desempeño ESG permitiendo la evaluación por parte de grupos de interés e inversionistas."
+      },
+      {
+        "text": "Sustituir la presentación oficial del Estudio de Impacto Ambiental ante el SENACE.",
+        "isCorrect": false,
+        "rationale": "El reporte GRI es un informe corporativo voluntario y no reemplaza los instrumentos de gestión ambiental legalmente exigibles por el Estado."
+      },
+      {
+        "text": "Eximirse del pago de impuestos a la renta y regalías mineras durante el ejercicio fiscal.",
+        "isCorrect": false,
+        "rationale": "Publicar un reporte GRI no otorga exenciones tributarias respecto a las obligaciones fiscales nacionales."
+      },
+      {
+        "text": "Garantizar que la empresa no generará ningún tipo de residuo sólido ni efluente en sus operaciones.",
+        "isCorrect": false,
+        "rationale": "El reporte comunica con transparencia el desempeño real de la empresa, pero no invalida las leyes de la termodinámica ni elimina la generación física de residuos."
+      },
+      {
+        "text": "Certificar que el personal directivo posee inmunidad frente a fiscalizaciones laborales de SUNAFIL.",
+        "isCorrect": false,
+        "rationale": "Las auditorías estatales de trabajo se aplican con independencia de si la empresa emite informes voluntarios de sostenibilidad."
+      }
+    ],
+    "hint": "Considera el valor de la transparencia estandarizada para comunicar los resultados ESG a la sociedad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la evaluación y gestión de la variable ambiental dentro de una mina, es clave diferenciar conceptos. ¿Qué diferencia conceptual existe entre un 'aspecto ambiental' y un 'impacto ambiental'?",
+    "opciones": [
+      {
+        "text": "El aspecto es el elemento de las actividades que interactúa con el medio ambiente, mientras que el impacto es la alteración o cambio que se produce en el entorno.",
+        "isCorrect": true,
+        "rationale": "El aspecto es la causa (ej. generación de efluentes, consumo de agua) y el impacto es el efecto resultante (ej. modificación de la calidad del agua)."
+      },
+      {
+        "text": "El aspecto ambiental es una multa económica y el impacto es la ley que aprueba el ministerio.",
+        "isCorrect": false,
+        "rationale": "Las multas y leyes son instrumentos administrativos y normativos, no la definición operativa de causa y efecto ambiental."
+      },
+      {
+        "text": "El aspecto se refiere exclusivamente al aire y el impacto únicamente a los residuos sólidos peligrosos.",
+        "isCorrect": false,
+        "rationale": "Ambos conceptos aplican a todos los componentes del entorno (agua, aire, suelo, flora, fauna, aspecto social)."
+      },
+      {
+        "text": "No existe diferencia; en la norma ISO 14001 ambos términos se usan como sinónimos intercambiables.",
+        "isCorrect": false,
+        "rationale": "La norma ISO 14001 define rigurosamente ambos términos por separado en sus cláusulas conceptuales para elaborar la matriz de identificación."
+      },
+      {
+        "text": "El impacto es la causa operativa y el aspecto es la consecuencia biológica sobre las comunidades.",
+        "isCorrect": false,
+        "rationale": "Esta afirmación invierte las definiciones: el aspecto ambiental es la causa operativa y el impacto es la consecuencia sobre el medio."
+      }
+    ],
+    "hint": "Asocia la relación causa-efecto: uno representa la actividad o insumo y el otro la consecuencia en el ecosistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el desarrollo de tecnologías de Captura, Uso y Almacenamiento de Carbono (CCUS), el proyecto Carbfix aplica un método de mineralización en rocas basálticas. ¿En qué consiste fundamentalmente esta técnica?",
+    "opciones": [
+      {
+        "text": "Disolver el $CO_2$ en agua e inyectarlo en formaciones de basalto profundo, donde reacciona químicamente transformándose en minerales carbonatados sólidos.",
+        "isCorrect": true,
+        "rationale": "El proceso acelera la reacción natural del $CO_2$ disuelto con los cationes de calcio y magnesio de las rocas basálticas, fijándolo de forma permanente como piedra."
+      },
+      {
+        "text": "Congelar el gas $CO_2$ en cubos de hielo seco para almacenarlo en almacenes refrigerados de la superficie.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento de hielo seco en superficie requiere un insostenible consumo energético continuo y no constituye una fijación geológica permanente."
+      },
+      {
+        "text": "Quemar el $CO_2$ capturado con diésel industrial para convertirlo en oxígeno puro.",
+        "isCorrect": false,
+        "rationale": "El $CO_2$ es un producto combustionado que no puede quemarse de nuevo con combustible para producir oxígeno."
+      },
+      {
+        "text": "Liberar el carbono a la atmósfera durante las horas de la noche para que las plantas lo absorban por fotosíntesis nocturna.",
+        "isCorrect": false,
+        "rationale": "Liberar $CO_2$ a la atmósfera anula el propósito de las tecnologías de captura y almacenamiento (CCUS)."
+      },
+      {
+        "text": "Mezclar el dióxido de carbono con efluentes cianurados para neutralizar la acidez de los estanques de relave.",
+        "isCorrect": false,
+        "rationale": "Esta mezcla no forma parte del proceso de mineralización basáltica y generaría riesgos químicos innecesarios."
+      }
+    ],
+    "hint": "Recuerda la técnica que transforma el dióxido de carbono disuelto en roca sólida al reaccionar con formaciones basálticas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de las alternativas para compensar las emisiones de gases de efecto invernadero, existen los mercados de créditos de carbono. ¿Qué caracteriza técnicamente al Mercado Voluntario de Carbono?",
+    "opciones": [
+      {
+        "text": "Permite a empresas adquirir créditos de carbono por responsabilidad social corporativa para compensar su huella sin una obligación legal impuesta.",
+        "isCorrect": true,
+        "rationale": "A diferencia de los mercados regulados con topes obligatorios por ley, el mercado voluntario opera impulsado por metas corporativas de sostenibilidad y prestigio."
+      },
+      {
+        "text": "Es un mercado exclusivo donde el Estado impone multas penales a las empresas que compran créditos de carbono.",
+        "isCorrect": false,
+        "rationale": "Los créditos de carbono en el mercado voluntario son incentivos de compensación y no constituyen sanciones pecuniarias o penales."
+      },
+      {
+        "text": "Prohíbe la participación de proyectos de reforestación o conservación de bosques tropicales.",
+        "isCorrect": false,
+        "rationale": "Los proyectos forestales (como REDD+) representan una de las principales fuentes generadoras de créditos en el mercado voluntario."
+      },
+      {
+        "text": "Obliga a que todos los bonos sean comercializados únicamente en monedas locales de distritos mineros.",
+        "isCorrect": false,
+        "rationale": "Los créditos de carbono voluntario se cotizan e intercambian internacionalmente en divisas convertibles bajo estándares globales."
+      },
+      {
+        "text": "Exige que el $CO_2$ compensado sea liberado en cilindros dentro de las oficinas del ministerio.",
+        "isCorrect": false,
+        "rationale": "Los bonos representan la remoción o prevención de toneladas de $CO_2$ equivalente en la atmósfera, no la entrega física del gas."
+      }
+    ],
+    "hint": "Céntrate en la motivación de responsabilidad social no regulada por topes legales obligatorios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-56",
+    "diplomado": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la estrategia de descarbonización de un campamento minero, se diferencia entre la 'reducción directa de emisiones' y la 'compensación mediante bonos de carbono'. ¿En qué se diferencian conceptualmente?",
+    "opciones": [
+      {
+        "text": "La reducción directa modifica los procesos internos para emitir menos $CO_2$, mientras que la compensación financia proyectos externos que capturan una cantidad equivalente.",
+        "isCorrect": true,
+        "rationale": "La reducción directa actúa sobre la eficiencia energética propia (ej. electrificación de flota), mientras que la compensación adquiere créditos de proyectos ajenos (ej. reforestación)."
+      },
+      {
+        "text": "La reducción directa es ilegal en el Perú y la compensación es obligatoria para todas las PYMES.",
+        "isCorrect": false,
+        "rationale": "La reducción directa de emisiones es la máxima prioridad de la gestión ambiental y no constituye una práctica ilegal."
+      },
+      {
+        "text": "La compensación elimina el $CO_2$ de las chimeneas mediante filtros y la reducción directa compra hectáreas de bosque en Europa.",
+        "isCorrect": false,
+        "rationale": "Esta alternativa invierte y deforma los conceptos: la filtración en chimeneas es reducción directa/captura y la compra de bosques externos es compensación."
+      },
+      {
+        "text": "No existe ninguna diferencia; ambos términos se refieren exclusivamente al reciclaje de papel en las oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "Reducir la huella de carbono operacional mediante ingeniería difiere de la compra financiera de certificados de carbono externos."
+      },
+      {
+        "text": "La reducción directa genera un incremento de la huella de carbono y la compensación reduce la eficiencia de la planta.",
+        "isCorrect": false,
+        "rationale": "La reducción directa busca disminuir activamente la huella de carbono mediante mejoras en la eficiencia y uso de energías limpias."
+      }
+    ],
+    "hint": "Diferencia la acción aplicada a la propia infraestructura minera frente al financiamiento de iniciativas ambientales de terceros.",
+    "activo": true
+  }
+]

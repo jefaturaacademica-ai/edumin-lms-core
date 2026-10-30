@@ -127,14 +127,14 @@ export default function ReportesPage() {
 
       {/* Contenido Principal con Header Superior */}
       <div className="flex-1 flex flex-col overflow-hidden min-w-0 h-full">
-        <AdminHeader breadcrumb="Reportes y Datos (CSV)" />
+        <AdminHeader breadcrumb="Reportes" />
         <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
           <div className="max-w-7xl mx-auto space-y-8">
           
           <div className="flex justify-between items-center">
             <div>
-              <h1 className="text-3xl font-bold text-slate-900">Centro de Reportes & Analítica Data</h1>
-              <p className="text-slate-500 mt-1">Exportación masiva de estados financieros, morosidad y catálogo académico directamente de Supabase.</p>
+              <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mt-1 tracking-tight">Centro de reportes y analítica de datos</h1>
+
             </div>
             <button 
               onClick={cargarReportesData}

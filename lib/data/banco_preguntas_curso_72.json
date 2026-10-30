@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con las estadísticas presentadas sobre la realidad peruana, ¿qué porcentaje de trabajadores vive con estrés crónico?",
+    "opciones": [
+      {
+        "text": "50%",
+        "isCorrect": false,
+        "rationale": "Esta cifra es inferior a los datos emitidos por el Instituto Nacional de Salud Mental para la fuerza laboral en Perú."
+      },
+      {
+        "text": "60%",
+        "isCorrect": false,
+        "rationale": "Aunque representa a la mayoría, no alcanza el porcentaje oficial registrado de trabajadores expuestos a tensión constante."
+      },
+      {
+        "text": "70%",
+        "isCorrect": true,
+        "rationale": "El Instituto Nacional de Salud Mental señala que siete de cada diez trabajadores peruanos sufren de estrés crónico en su entorno laboral."
+      },
+      {
+        "text": "82%",
+        "isCorrect": false,
+        "rationale": "Este porcentaje corresponde específicamente a los índices reportados de agotamiento extremo o burnout, no al estrés crónico general."
+      },
+      {
+        "text": "90%",
+        "isCorrect": false,
+        "rationale": "Esta proporción excede las mediciones epidemiológicas reportadas por los organismos de salud ocupacional en el país."
+      }
+    ],
+    "hint": "Representa a la gran mayoría equivalente a siete de cada diez colaboradores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco legal peruano de seguridad y salud en el trabajo, ¿qué equiparación establece la ley ante un daño a la salud mental derivado del entorno laboral?",
+    "opciones": [
+      {
+        "text": "Tiene un peso legal menor que el de un accidente físico ligero.",
+        "isCorrect": false,
+        "rationale": "La normativa vigente no minimiza las secuelas psicológicas frente a las lesiones corporales."
+      },
+      {
+        "text": "Tiene exactamente el mismo peso legal que un accidente físico, como una fractura.",
+        "isCorrect": true,
+        "rationale": "Bajo la legislación peruana (Ley 29783), las afecciones a la salud mental de origen ocupacional conllevan la misma responsabilidad e implicancia legal que una lesión física."
+      },
+      {
+        "text": "Se considera una falta administrativa optativa sin sanción económica.",
+        "isCorrect": false,
+        "rationale": "La ley contempla fiscalización y penalizaciones severas por parte de la Sunafil ante el incumplimiento de estas garantías."
+      },
+      {
+        "text": "Se clasifica exclusivamente como un problema de salud común ajeno a la empresa.",
+        "isCorrect": false,
+        "rationale": "Cuando la causa se origina en factores de la organización, se cataloga directamente como un evento de salud ocupacional."
+      },
+      {
+        "text": "Solo genera responsabilidad si el trabajador tiene un diagnóstico psiquiátrico previo.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad de la empresa se enfoca en las condiciones del entorno de trabajo que causan o gatillan el daño."
+      }
+    ],
+    "hint": "Compara el valor jurídico de una afección emocional por trabajo con el de una lesión corporal visible.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el Instituto Nacional de Salud Mental en el Perú, ¿cuál es identificado como el principal enemigo y mayor obstáculo para abordar la salud mental?",
+    "opciones": [
+      {
+        "text": "La falta de herramientas tecnológicas en las oficinas.",
+        "isCorrect": false,
+        "rationale": "La tecnología facilita procesos pero no constituye la principal barrera social y cultural identificada."
+      },
+      {
+        "text": "El estigma y el miedo a ser juzgado o etiquetado.",
+        "isCorrect": true,
+        "rationale": "El temor al juicio social, a ser encasillado o a perder el empleo impide que los trabajadores admitan sus dificultades y busquen ayuda oportuna."
+      },
+      {
+        "text": "La ausencia total de leyes y normativas laborales.",
+        "isCorrect": false,
+        "rationale": "El país cuenta con un marco legal sólido como la Ley General de Salud Mental y la Ley de Seguridad y Salud en el Trabajo."
+      },
+      {
+        "text": "El exceso de capacitaciones presenciales.",
+        "isCorrect": false,
+        "rationale": "La formación en riesgos psicosociales es un requerimiento preventivo obligatorio y no el obstáculo principal."
+      },
+      {
+        "text": "La erradicación de las horas extras en el trabajo.",
+        "isCorrect": false,
+        "rationale": "La cultura del trabajo desmedido promueve el desgaste, pero no es el factor reputacional que silencia a las personas."
+      }
+    ],
+    "hint": "Se relaciona con el temor de los colaboradores a sufrir prejuicios o perder el empleo si piden apoyo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal que debe asumir un líder frente a la salud mental de su equipo de trabajo?",
+    "opciones": [
+      {
+        "text": "Diagnosticar trastornos psicológicos y emitir terapias.",
+        "isCorrect": false,
+        "rationale": "El rol directivo no requiere competencias clínicas ni reemplaza la labor de un profesional de la psicología."
+      },
+      {
+        "text": "Desarrollar una agudeza observacional para detectar señales de alerta y facilitar el apoyo.",
+        "isCorrect": true,
+        "rationale": "La tarea del líder consiste en identificar variaciones en la conducta de sus colaboradores, promover un espacio seguro y canalizar la ayuda profesional."
+      },
+      {
+        "text": "Ignorar los cambios de conducta mientras se cumplan las metas cuantitativas.",
+        "isCorrect": false,
+        "rationale": "Desatender las alertas conductuales incrementa el riesgo de crisis severas y el deterioro del clima laboral."
+      },
+      {
+        "text": "Sancionar inmediatamente a quienes muestren cansancio o fatiga.",
+        "isCorrect": false,
+        "rationale": "Penalizar el cansancio refuerza la cultura del sacrificio y desincentiva la comunicación transparente."
+      },
+      {
+        "text": "Asumir la responsabilidad de resolver los problemas personales íntimos de cada empleado.",
+        "isCorrect": false,
+        "rationale": "El líder debe actuar como un puente de derivación y contención profesional, no como un terapeuta o consejero personal."
+      }
+    ],
+    "hint": "Implica prestar atención a los cambios de conducta sin actuar como profesional de la salud mental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se diferencia el estrés positivo (eustrés) del estrés negativo o perjudicial (distrés)?",
+    "opciones": [
+      {
+        "text": "El eustrés paraliza totalmente a la persona y el distrés aumenta la motivación.",
+        "isCorrect": false,
+        "rationale": "Ocurre lo contrario: la activación positiva impulsa la acción, mientras que la sobrecarga prolongada genera agotamiento."
+      },
+      {
+        "text": "El distrés es una alarma continua que no da oportunidad de recuperación al cuerpo.",
+        "isCorrect": true,
+        "rationale": "A diferencia del impulso temporal del eustrés para cumplir un reto, el distrés mantiene al sistema biológico en alerta permanente sin pausas."
+      },
+      {
+        "text": "El eustrés solo se presenta fuera del ámbito laboral en actividades recreativas.",
+        "isCorrect": false,
+        "rationale": "El estrés positivo también se manifiesta en el trabajo ante desafíos estimulantes y metas alcanzables."
+      },
+      {
+        "text": "El distrés se cura únicamente aumentando la cantidad de tareas cognitivas.",
+        "isCorrect": false,
+        "rationale": "Añadir exigencias a un sistema sobrecargado agrava el estado de distrés y acelera el burnout."
+      },
+      {
+        "text": "Ambos tipos de estrés producen exactamente los mismos daños físicos a largo plazo.",
+        "isCorrect": false,
+        "rationale": "El eustrés es una respuesta adaptativa temporal, mientras que el distrés crónico desgasta la salud integral."
+      }
+    ],
+    "hint": "Piensa en cuál de los dos estados mantiene encendida la señal de peligro de forma ininterrumpida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto del entorno laboral, ¿qué síntoma define de manera central a la depresión más allá de la tristeza convencional?",
+    "opciones": [
+      {
+        "text": "La hiperactividad y búsqueda de urgencias constantes.",
+        "isCorrect": false,
+        "rationale": "La hiperactividad y el estado de alerta permanente están más vinculados a la respuesta inicial de estrés."
+      },
+      {
+        "text": "La anedonia o incapacidad de sentir placer o interés por actividades que antes agradaban.",
+        "isCorrect": true,
+        "rationale": "La anedonia apaga el interés y el disfrute en el trabajo y la vida personal, afectando la motivación profunda."
+      },
+      {
+        "text": "La obsesión por planificar escenarios del futuro distante.",
+        "isCorrect": false,
+        "rationale": "La rumiación hacia eventos futuros desastrosos es el rasgo característico de la ansiedad."
+      },
+      {
+        "text": "El cumplimiento estricto de los horarios sin variaciones.",
+        "isCorrect": false,
+        "rationale": "La depresión suele alterar las rutinas habituales y derivar en ausentismo o presentismo no funcional."
+      },
+      {
+        "text": "El incremento notable en la velocidad de toma de decisiones.",
+        "isCorrect": false,
+        "rationale": "Esta condición dificulta la concentración y el procesamiento cognitivo, ralentizando el desempeño."
+      }
+    ],
+    "hint": "Se refiere al desinterés profundo y la pérdida de satisfacción en tareas rutinarias o placenteras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Para determinar si un cambio de conducta en un colaborador representa una alerta real y no solo un 'mal día', ¿cuál es la regla de oro sugerida sobre su duración?",
+    "opciones": [
+      {
+        "text": "Un cambio repentino que dure únicamente un par de horas.",
+        "isCorrect": false,
+        "rationale": "Las oscilaciones breves de ánimo pueden responder a eventos puntuales sin constituir un patrón alterado."
+      },
+      {
+        "text": "Una alteración notoria en el patrón de comportamiento que persiste por más de dos semanas.",
+        "isCorrect": true,
+        "rationale": "La persistencia del cambio respecto a la conducta habitual durante al menos catorce días indica una desviación importante de la línea base."
+      },
+      {
+        "text": "Una variación en el rendimiento que se mantenga por más de seis meses ininterrumpidos.",
+        "isCorrect": false,
+        "rationale": "Esperar medio año implica reaccionar demasiado tarde frente a un problema que requiere prevención temprana."
+      },
+      {
+        "text": "Cualquier falta puntual de asistencia a una reunión matutina.",
+        "isCorrect": false,
+        "rationale": "Un evento aislado debe evaluarse con prudencia antes de catalogarse como una crisis de salud mental."
+      },
+      {
+        "text": "Cuestionar una indicación directiva en una única oportunidad.",
+        "isCorrect": false,
+        "rationale": "El desacuerdo ocasional forma parte del intercambio profesional de ideas y no necesariamente de un trastorno."
+      }
+    ],
+    "hint": "Se establece un marco temporal mínimo de catorce días de observación sostenida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere el concepto de 'línea base' al evaluar el comportamiento de un colaborador?",
+    "opciones": [
+      {
+        "text": "Al nivel mínimo de ventas estipulado en el contrato laboral.",
+        "isCorrect": false,
+        "rationale": "Este término no hace referencia a indicadores de rendimiento comercial o metas operativas."
+      },
+      {
+        "text": "Al comportamiento habitual y forma de ser normal propia de cada persona.",
+        "isCorrect": true,
+        "rationale": "La línea base es el punto de referencia individual; permite notar cuándo una conducta difiere de lo que es usual en ese colaborador específico."
+      },
+      {
+        "text": "Al horario de ingreso y salida fijado por el departamento de Recursos Humanos.",
+        "isCorrect": false,
+        "rationale": "La línea base describe patrones actitudinales y relacionales, no parámetros de marcación de asistencia."
+      },
+      {
+        "text": "Al puntaje promedio obtenido en las evaluaciones de desempeño anuales.",
+        "isCorrect": false,
+        "rationale": "Aunque se relaciona con el rendimiento, la línea base abarca la conducta social, emocional y cognitiva cotidiana."
+      },
+      {
+        "text": "A la norma estándar de vestimenta aplicable a toda la organización.",
+        "isCorrect": false,
+        "rationale": "El concepto se centra en la singularidad del comportamiento individual y no en códigos formales corporativos."
+      }
+    ],
+    "hint": "Es el patrón de conducta habitual que sirve de comparación para detectar cambios significativos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a dimensiones de riesgo psicosocial en el entorno laboral? (Seleccione todas las que apliquen)",
+    "opciones": [
+      {
+        "text": "Carga de trabajo excesiva y exigencias emocionales intensas.",
+        "isCorrect": true,
+        "rationale": "Las presiones cuantitativas y la necesidad de gestionar constantemente emociones complejas constituyen factores de riesgo directos."
+      },
+      {
+        "text": "Falta de control y escasa autonomía sobre las tareas asignadas.",
+        "isCorrect": true,
+        "rationale": "La incapacidad de influir en cómo y cuándo se ejecuta el trabajo incrementa la sensación de indefensión y estrés."
+      },
+      {
+        "text": "Aislamiento social y relaciones interpersonales deficientes en el equipo.",
+        "isCorrect": true,
+        "rationale": "El ambiente relacional tóxico o la carencia de apoyo entre pares socava la red de seguridad emocional en la empresa."
+      },
+      {
+        "text": "El color utilizado en las paredes de las salas de reuniones.",
+        "isCorrect": false,
+        "rationale": "Los elementos estéticos menores no forman parte de las dimensiones principales de la evaluación del riesgo psicosocial."
+      },
+      {
+        "text": "El tipo de entidad financiera elegida voluntariamente por el colaborador para su sueldo.",
+        "isCorrect": false,
+        "rationale": "La elección personal del banco depositaric no constituye una variable del diseño u organización del trabajo."
+      }
+    ],
+    "hint": "Considera tanto las demandas cognitivas/emocionales como el grado de autonomía y el apoyo relacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el modelo 'Demanda-Control', ¿en qué combinación de factores se genera el estrés laboral más perjudicial y tóxico?",
+    "opciones": [
+      {
+        "text": "Altas exigencias laborales combinadas con un bajo control o autonomía sobre el trabajo.",
+        "isCorrect": true,
+        "rationale": "El estrés nocivo surge al enfrentar presiones elevadas sin tener el poder de tomar decisiones sobre cómo resolverlas."
+      },
+      {
+        "text": "Bajas exigencias laborales junto a un alto nivel de autonomía.",
+        "isCorrect": false,
+        "rationale": "Esta combinación suele generar confort o desinterés, pero no desencadena estrés tóxico por sobrecarga."
+      },
+      {
+        "text": "Exigencias equilibradas con capacitaciones técnicas constantes.",
+        "isCorrect": false,
+        "rationale": "Brindar recursos y entrenamiento adecuado mitiga la aparición de riesgos psicológicos."
+      },
+      {
+        "text": "Horarios de trabajo flexibles con retroalimentación frecuente de los líderes.",
+        "isCorrect": false,
+        "rationale": "La flexibilidad y la comunicación fluida actúan como escudos protectores del bienestar."
+      },
+      {
+        "text": "Tareas simplificadas sin límite de tiempo para su entrega.",
+        "isCorrect": false,
+        "rationale": "La ausencia de urgencia y presión no produce la hiperactivación característica del distrés nocivo."
+      }
+    ],
+    "hint": "Imagina conducir a máxima velocidad sin poder maniobrar el volante de tu vehículo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la práctica conocida como 'presentismo' en el ámbito de la salud ocupacional?",
+    "opciones": [
+      {
+        "text": "Asistir de manera impecable y puntual a todas las reuniones de la empresa.",
+        "isCorrect": false,
+        "rationale": "La asistencia puntual no define por sí misma un estado de desconexión cognitiva o disfunción."
+      },
+      {
+        "text": "Estar físicamente en el puesto de trabajo pero con la mente ausente y sin capacidad funcional.",
+        "isCorrect": true,
+        "rationale": "El trabajador acude a la oficina por temor a sanciones pero su capacidad productiva y de concentración está severamente disminuida."
+      },
+      {
+        "text": "Faltar de forma injustificada y continua durante varias semanas.",
+        "isCorrect": false,
+        "rationale": "El ausentismo implica la no presencia física, mientras que el presentismo involucra estar presente sin estar operativo."
+      },
+      {
+        "text": "Realizar trabajo remoto desde diferentes ciudades del país.",
+        "isCorrect": false,
+        "rationale": "La ubicación geográfica del teletrabajo no se relaciona de manera directa con este fenómeno disfuncional."
+      },
+      {
+        "text": "Participar activamente en todas las actividades de integración corporativa.",
+        "isCorrect": false,
+        "rationale": "La involucración activa refleja compromiso, a diferencia de la desconexión mental del presentismo."
+      }
+    ],
+    "hint": "Implica una presencia corporal en el escritorio mientras la mente está completamente ausente por malestar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al seguir el protocolo de cinco pasos para líderes al documentar señales de alerta, ¿en qué tipo de información se debe enfocar el registro?",
+    "opciones": [
+      {
+        "text": "En comentarios y rumores compartidos por otros miembros del equipo.",
+        "isCorrect": false,
+        "rationale": "Basar el registro en chismes resta objetividad y destruye la confianza entre el líder y el colaborador."
+      },
+      {
+        "text": "En hechos, datos observables y conductas concretas sin emitir juicios de valor.",
+        "isCorrect": true,
+        "rationale": "La documentación objetiva (ej. retrasos específicos o errores verificables) permite abordar la conversación desde el desempeño real y no desde la especulación."
+      },
+      {
+        "text": "En diagnósticos clínicos elaborados por el propio líder.",
+        "isCorrect": false,
+        "rationale": "El líder debe evitar etiquetar las afecciones mentales con nombres de trastornos psiquiátricos."
+      },
+      {
+        "text": "En suposiciones sobre los hábitos privados del colaborador en su hogar.",
+        "isCorrect": false,
+        "rationale": "La observación debe restringirse estrictamente al ámbito laboral y a sus manifestaciones visibles."
+      },
+      {
+        "text": "En impresiones subjetivas sobre la personalidad o moral del individuo.",
+        "isCorrect": false,
+        "rationale": "Escribir frases como 'tiene mala actitud' invalida el protocolo al introducir sesgos personales."
+      }
+    ],
+    "hint": "Debes anotar únicamente eventos medibles y objetivos, evitando opiniones o etiquetas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según las estadísticas de la Clase 2 sobre el impacto del desgaste ocupacional en Perú, ¿qué porcentaje de trabajadores reporta sufrir de burnout?",
+    "opciones": [
+      {
+        "text": "50%",
+        "isCorrect": false,
+        "rationale": "Este valor se encuentra notablemente por debajo del registro de agotamiento laboral reportado en el país."
+      },
+      {
+        "text": "65%",
+        "isCorrect": false,
+        "rationale": "Aunque es una cifra alta, la tasa peruana supera este número situándose como la más elevada de la región."
+      },
+      {
+        "text": "82%",
+        "isCorrect": true,
+        "rationale": "Ocho de cada diez trabajadores en el Perú afirman sufrir de burnout, marcando un récord crítico a nivel regional."
+      },
+      {
+        "text": "95%",
+        "isCorrect": false,
+        "rationale": "Esta cantidad sobrepasa la medición oficial expresada en las estadísticas del curso."
+      },
+      {
+        "text": "40%",
+        "isCorrect": false,
+        "rationale": "Representa menos de la mitad del índice real registrado de colaboradores quemados por el trabajo."
+      }
+    ],
+    "hint": "Supera el 80% y sitúa a Perú con la tasa de agotamiento más alta de la región.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la meta fundamental de la Prevención Primaria en la gestión de la salud mental organizacional?",
+    "opciones": [
+      {
+        "text": "Otorgar tratamiento médico una vez que la enfermedad está avanzada.",
+        "isCorrect": false,
+        "rationale": "Atender el daño ya consolidado forma parte de las acciones reactivas o terciarias."
+      },
+      {
+        "text": "Eliminar o modificar las fuentes organizacionales que generan el riesgo de raíz.",
+        "isCorrect": true,
+        "rationale": "La prevención primaria busca intervenir en el diseño, la carga y la estructura del trabajo para evitar que las personas se enfermen."
+      },
+      {
+        "text": "Enseñar técnicas de meditación para que los empleados toleren la sobrecarga laboral.",
+        "isCorrect": false,
+        "rationale": "Las herramientas individuales para sobrellevar la presión pertenecen al nivel de prevención secundaria."
+      },
+      {
+        "text": "Gestionar licencias médicas prolongadas y sustitución de personal.",
+        "isCorrect": false,
+        "rationale": "La tramitación de bajas por enfermedad ocurre cuando la prevención primaria y secundaria no evitaron el daño."
+      },
+      {
+        "text": "Realizar auditorías sancionadoras a los trabajadores con bajo rendimiento.",
+        "isCorrect": false,
+        "rationale": "La prevención primaria no busca castigar el rendimiento, sino corregir el entorno de trabajo."
+      }
+    ],
+    "hint": "Apunta a intervenir en el sistema y en el diseño del puesto antes de que aparezca el malestar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la herramienta oficial de diagnóstico de riesgos psicosociales referente en el marco peruano citada en la clase?",
+    "opciones": [
+      {
+        "text": "La encuesta informal de satisfacción de clima laboral.",
+        "isCorrect": false,
+        "rationale": "Las encuestas informales carecen de respaldo metodológico auditable para medir riesgos psicosociales."
+      },
+      {
+        "text": "La metodología CoPsoQ (o metodología CC).",
+        "isCorrect": true,
+        "rationale": "Es la herramienta validada y auditable que ofrece una radiografía de los riesgos psicosociales comparando datos a nivel nacional."
+      },
+      {
+        "text": "El test de personalidad de Myers-Briggs.",
+        "isCorrect": false,
+        "rationale": "Los test de personalidad miden rasgos individuales, no los factores de riesgo presentes en la organización."
+      },
+      {
+        "text": "La evaluación de desempeño de 360 grados.",
+        "isCorrect": false,
+        "rationale": "Su objetivo es medir competencias laborales individuales, no diagnosticar la salud del sistema de trabajo."
+      },
+      {
+        "text": "El examen médico de capacidad física laboral.",
+        "isCorrect": false,
+        "rationale": "Las pruebas clínicas físicas no evalúan las dimensiones de riesgo psicológico u ocupacional de fondo."
+      }
+    ],
+    "hint": "Es un instrumento estandarizado, auditable y de aplicación científica para evaluar el entorno de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En una red de seguridad escalonada, ¿cuál es la función central del Nivel 1 (Apoyo Proactivo)?",
+    "opciones": [
+      {
+        "text": "Atender emergencias médicas con riesgo inminente de vida.",
+        "isCorrect": false,
+        "rationale": "Las situaciones de riesgo vital corresponden estrictamente al protocolo de emergencia del Nivel 3."
+      },
+      {
+        "text": "Ofrecer recursos y servicios cotidianos para prevenir que los problemas personales o laborales se conviertan en crisis.",
+        "isCorrect": true,
+        "rationale": "El Nivel 1 actúa diariamente proporcionando soporte confidencial (emocional, legal, financiero) antes de que la tensión escale."
+      },
+      {
+        "text": "Aplicar contención inmediata ante ataques de pánico en la oficina.",
+        "isCorrect": false,
+        "rationale": "La respuesta inicial y estabilización ante una crisis en curso forma parte de las acciones del Nivel 2."
+      },
+      {
+        "text": "Elaborar planes de reincorporación gradual tras licencias psiquiátricas.",
+        "isCorrect": false,
+        "rationale": "La reintegración posterior a una baja médica pertenece al plano de la prevención terciaria o reactiva."
+      },
+      {
+        "text": "Fiscalizar el cumplimiento del horario de descanso de los empleados.",
+        "isCorrect": false,
+        "rationale": "Las medidas de control horario son normas operativas y no programas proactivos de apoyo integral."
+      }
+    ],
+    "hint": "Se enfoca en la asistencia diaria previa a cualquier episodio de crisis grave.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué programa es considerado la herramienta pilar del Nivel 1 de apoyo proactivo en las empresas?",
+    "opciones": [
+      {
+        "text": "El Protocolo de Código Rojo.",
+        "isCorrect": false,
+        "rationale": "Este protocolo es una guía de actuación para emergencias críticas con peligro de autolesión o muerte."
+      },
+      {
+        "text": "El PAE (Programa de Asistencia al Empleado).",
+        "isCorrect": true,
+        "rationale": "El PAE brinda asesoría profesional (psicológica, legal, financiera) confidencial e integral las 24 horas a los colaboradores."
+      },
+      {
+        "text": "El manual de Primeros Auxilios Psicológicos (PAP).",
+        "isCorrect": false,
+        "rationale": "Los PAP son una intervención de contención inmediata aplicada en el Nivel 2 ante crisis repentinas."
+      },
+      {
+        "text": "La junta disciplinaria de Recursos Humanos.",
+        "isCorrect": false,
+        "rationale": "Los órganos administrativos de sanción no constituyen herramientas de soporte al bienestar."
+      },
+      {
+        "text": "El examen médico ocupacional anual.",
+        "isCorrect": false,
+        "rationale": "El examen anual es un hito de diagnóstico puntual y no una plataforma de asistencia continua."
+      }
+    ],
+    "hint": "Utiliza un formato confidencial, habitualmente externo, accesible las 24 horas para diversos temas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes condiciones son indispensables para que un Programa de Asistencia al Empleado (PAE) sea utilizado eficazmente por el personal? (Seleccione todas las que apliquen)",
+    "opciones": [
+      {
+        "text": "Garantía de confidencialidad 100% absoluta sin excepciones.",
+        "isCorrect": true,
+        "rationale": "Los usuarios deben tener la certeza de que su información personal no será revelada a sus superiores ni a Recursos Humanos."
+      },
+      {
+        "text": "Facilidad y accesibilidad inmediata para su uso (vía app, llamadas o mensajes).",
+        "isCorrect": true,
+        "rationale": "Reducir las fricciones de acceso permite que las personas soliciten ayuda en el momento que la necesitan."
+      },
+      {
+        "text": "Comunicación constante que recuerde su disponibilidad periódicamente.",
+        "isCorrect": true,
+        "rationale": "Promocionar el servicio continuamente asegura que el equipo lo recuerde durante periodos de alta tensión."
+      },
+      {
+        "text": "Obligación de notificar al jefe directo antes de agendar una consulta.",
+        "isCorrect": false,
+        "rationale": "Exigir permisos o avisos a la jefatura destruye la privacidad y desanima el uso del servicio."
+      },
+      {
+        "text": "Uso exclusivo reservado únicamente para cargos de alta gerencia.",
+        "isCorrect": false,
+        "rationale": "Un sistema de soporte efectivo debe estar disponible para la totalidad de los colaboradores en todos los niveles."
+      }
+    ],
+    "hint": "Involucra la privacidad total, la facilidad de contacto y la difusión abierta y continua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial al aplicar los Primeros Auxilios Psicológicos (PAP) en el Nivel 2 de contención en crisis?",
+    "opciones": [
+      {
+        "text": "Brindar una sesión completa de terapia psicológica clínica.",
+        "isCorrect": false,
+        "rationale": "Los PAP no representan un espacio terapéutico ni pretenden resolver conflictos psíquicos de fondo."
+      },
+      {
+        "text": "Estabilizar emocionalmente a la persona, reducir el estrés agudo y conectarla con la ayuda adecuada.",
+        "isCorrect": true,
+        "rationale": "Los PAP buscan calmar la activación emocional de momento, brindar seguridad y enlazar al colaborador con los recursos profesionales."
+      },
+      {
+        "text": "Analizar la infancia del colaborador para entender su trauma.",
+        "isCorrect": false,
+        "rationale": "El protocolo se centra de forma práctica en la situación presente y en las necesidades inmediatas."
+      },
+      {
+        "text": "Determinar si la persona debe ser despedida por interrumpir la jornada.",
+        "isCorrect": false,
+        "rationale": "Los PAP son una respuesta humana e integrada de ayuda, no una medida punitiva o fiscalizadora."
+      },
+      {
+        "text": "Obligar al trabajador a retomar de inmediato sus funciones habituales.",
+        "isCorrect": false,
+        "rationale": "Forzar la reincorporación sin contención previa puede descompensar severamente a la persona."
+      }
+    ],
+    "hint": "No busca hacer psicoterapia, sino calmar el momento agudo y ser un puente hacia el apoyo especializado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son las tres acciones clave que resumen el protocolo de Primeros Auxilios Psicológicos (PAP)?",
+    "opciones": [
+      {
+        "text": "Diagnosticar, recetar y evaluar.",
+        "isCorrect": false,
+        "rationale": "Prescribir fármacos y emitir juicios clínicos corresponde al ámbito médico especializado."
+      },
+      {
+        "text": "Observar, escuchar y conectar.",
+        "isCorrect": true,
+        "rationale": "El protocolo internacional de los PAP indica evaluar la seguridad (observar), atender de forma empática (escuchar) y vincular con redes de apoyo (conectar)."
+      },
+      {
+        "text": "Juzgar, corregir y sancionar.",
+        "isCorrect": false,
+        "rationale": "Cuestionar o penalizar la vulnerabilidad de la persona empeora la situación de crisis."
+      },
+      {
+        "text": "Aislar, interrogar y archivar.",
+        "isCorrect": false,
+        "rationale": "Forzar un interrogatorio resulta contraproducente y viola la naturaleza de apoyo del protocolo."
+      },
+      {
+        "text": "Ignorar, derivar y olvidar.",
+        "isCorrect": false,
+        "rationale": "La indiferencia contraviene el compromiso de contención y seguridad psicológica."
+      }
+    ],
+    "hint": "Involucra tres pasos secuenciales desde la percepción del entorno hasta el enlace con el apoyo final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En una situación de emergencia de 'Código Rojo' donde la vida o integridad de una persona está en riesgo inminente, ¿cuál es la regla de oro que jamás debe romperse?",
+    "opciones": [
+      {
+        "text": "Dejar a la persona sola en una oficina para que se tranquilice.",
+        "isCorrect": false,
+        "rationale": "Abandonar a una persona en riesgo extremo incrementa sustancialmente el peligro de que se haga daño."
+      },
+      {
+        "text": "No dejar a la persona sola bajo ningún concepto y acompañarla permanentemente.",
+        "isCorrect": true,
+        "rationale": "La supervisión continua y el acompañamiento empático hasta la llegada de personal médico o familiares es la norma esencial de seguridad."
+      },
+      {
+        "text": "Darle un sermón sobre por qué sus pensamientos están equivocados.",
+        "isCorrect": false,
+        "rationale": "Discutir racionalmente o emitir juicios morales incrementa la angustia y el aislamiento emocional del afectado."
+      },
+      {
+        "text": "Exigirle que firme un compromiso de productividad antes de irse.",
+        "isCorrect": false,
+        "rationale": "En una crisis vital, los aspectos laborales o contractuales quedan totalmente desplazados."
+      },
+      {
+        "text": "Enviar a la persona a su domicilio mediante transporte público sin compañía.",
+        "isCorrect": false,
+        "rationale": "Permitir que alguien en crisis viaje sin supervisión vulnera el protocolo básico de protección."
+      }
+    ],
+    "hint": "Garantiza la supervisión continua para salvaguardar la vida en todo momento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con las estadísticas de liderazgo expuestas, ¿qué porcentaje de los casos extremos de agotamiento (burnout) está directamente vinculado al trato recibido por parte del jefe directo?",
+    "opciones": [
+      {
+        "text": "5%",
+        "isCorrect": false,
+        "rationale": "Esta cifra infravalora sustancialmente el impacto de los estilos de supervisión en el estrés laboral."
+      },
+      {
+        "text": "17%",
+        "isCorrect": true,
+        "rationale": "Casi uno de cada cinco casos de burnout severo no proviene de la cantidad de tareas, sino del estilo relacional y trato de los mandos directos."
+      },
+      {
+        "text": "35%",
+        "isCorrect": false,
+        "rationale": "Aunque el impacto directivo es alto, el 35% no concuerda con la medición específica citada en el texto."
+      },
+      {
+        "text": "50%",
+        "isCorrect": false,
+        "rationale": "Ese valor no refleja la distribución de causas presentada en los gráficos del curso."
+      },
+      {
+        "text": "80%",
+        "isCorrect": false,
+        "rationale": "Esta proporción se aproxima al total de personas con burnout, no a la cuota específica atribuible al trato directivo."
+      }
+    ],
+    "hint": "Equivale a casi uno de cada cinco casos de desgaste severo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué estilo de comunicación es considerado el 'estándar de oro' para un liderazgo que construye seguridad psicológica?",
+    "opciones": [
+      {
+        "text": "Pasividad.",
+        "isCorrect": false,
+        "rationale": "La pasividad impide fijar límites claros y genera incertidumbre sobre las expectativas en el equipo."
+      },
+      {
+        "text": "Agresividad.",
+        "isCorrect": false,
+        "rationale": "La comunicación agresiva impone posturas mediante el miedo, inundando de cortisol el sistema del colaborador."
+      },
+      {
+        "text": "Asertividad.",
+        "isCorrect": true,
+        "rationale": "Permite expresar necesidades, pensamientos y límites de forma clara y firme, manteniendo siempre el respeto hacia la otra persona."
+      },
+      {
+        "text": "Autoritarismo.",
+        "isCorrect": false,
+        "rationale": "El autoritarismo restringe el diálogo transparente y destruye la confianza necesaria para pedir ayuda."
+      },
+      {
+        "text": "Condescendencia.",
+        "isCorrect": false,
+        "rationale": "Aparentar acuerdo sin abordar los problemas reales enmascara los conflictos y retrasa su solución."
+      }
+    ],
+    "hint": "Se ubica en el punto medio exacto entre la inhibición pasiva y la imposición violenta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son los componentes de la estructura básica para formular un 'Mensaje Yo' en la comunicación asertiva? (Seleccione todas las que apliquen)",
+    "opciones": [
+      {
+        "text": "Expresar la emoción propia hablándo desde la primera persona ('Yo me siento...').",
+        "isCorrect": true,
+        "rationale": "Aclarar el impacto emotivo propio evita que la otra persona perciba el mensaje como un ataque personal."
+      },
+      {
+        "text": "Describir el comportamiento concreto y observable sin juzgar ('Cuando sucede esto...').",
+        "isCorrect": true,
+        "rationale": "Enfocarse en hechos objetivos previene que el interlocutor reaccione de manera defensiva."
+      },
+      {
+        "text": "Explicar el impacto específico que produce la conducta ('Porque esto afecta de esta manera...').",
+        "isCorrect": true,
+        "rationale": "Mostrar las consecuencias prácticas ayuda a comprender la necesidad de cambio sin culpar."
+      },
+      {
+        "text": "Realizar una acusación sobre la personalidad del interlocutor ('Eres un irresponsable...').",
+        "isCorrect": false,
+        "rationale": "Las acusaciones personales colocan a la otra persona a la defensiva y bloquean la resolución del problema."
+      },
+      {
+        "text": "Amenazar con consecuencias laborales severas si no cambia de inmediato.",
+        "isCorrect": false,
+        "rationale": "Utilizar la amenaza contraviene la búsqueda de diálogo y cooperación propia de la asertividad."
+      }
+    ],
+    "hint": "Consiste en tres partes: la emoción sentida, el hecho objetivo observado y la consecuencia que genera.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco propuesto por la Organización Mundial de la Salud (OMS) para el rol de la gestión de talento como 'Arquitecto de Organizaciones Sanas', ¿cuáles son los tres pilares de acción estratégica?",
+    "opciones": [
+      {
+        "text": "Diagnosticar, castigar y reemplazar.",
+        "isCorrect": false,
+        "rationale": "Un enfoque sancionador ignora el bienestar y perjudica la retención del talento."
+      },
+      {
+        "text": "Proteger, promover y abordar.",
+        "isCorrect": true,
+        "rationale": "Este marco integral propone proteger la salud mental reduciendo riesgos, promover el bienestar potenciando capacidades y abordar las afecciones acompañando los casos existentes."
+      },
+      {
+        "text": "Contratar, capacitar y despedir.",
+        "isCorrect": false,
+        "rationale": "Esta secuencia describe procesos administrativos tradicionales de personal y no una estrategia de salud mental."
+      },
+      {
+        "text": "Controlar, vigilar y fiscalizar.",
+        "isCorrect": false,
+        "rationale": "Las labores puramente fiscalizadoras no crean una cultura de seguridad psicológica."
+      },
+      {
+        "text": "Ignorar, derivar y sustituir.",
+        "isCorrect": false,
+        "rationale": "Desentenderse de los factores organizacionales perpetúa el ciclo de burnout y fuga de talento."
+      }
+    ],
+    "hint": "Son tres verbos de acción enfocados en resguardar el entorno, impulsar capacidades y gestionar el apoyo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la implicancia legal de mayor impacto que establece la Ley de Seguridad y Salud en el Trabajo (Ley 29783) en el Perú respecto a la salud mental en el entorno laboral?",
+    "opciones": [
+      {
+        "text": "Equipara legalmente un daño a la salud mental derivado del trabajo con un accidente físico como una fractura.",
+        "isCorrect": true,
+        "rationale": "La norma establece que las afecciones psicológicas generadas por factores organizacionales tienen exactamente el mismo peso y responsabilidad legal que las lesiones físicas."
+      },
+      {
+        "text": "Exime a las organizaciones de responsabilidad económica si demuestran una condición psicológica preexistente en el trabajador.",
+        "isCorrect": false,
+        "rationale": "La normativa imputa la responsabilidad a la empresa si el entorno de trabajo genera o agrava el daño psicosocial, sin eximirla por antecedentes."
+      },
+      {
+        "text": "Considera la protección de la salud mental como una recomendación de buenas prácticas sin capacidad sancionadora.",
+        "isCorrect": false,
+        "rationale": "La fiscalización de la salud mental es de carácter obligatorio y está sujeta a sanciones severas por parte de la Sunafil."
+      },
+      {
+        "text": "Establece que los riesgos psicosociales solo deben evaluarse durante estados de emergencia sanitaria nacional.",
+        "isCorrect": false,
+        "rationale": "El monitoreo y prevención de riesgos psicosociales es un requisito permanente en la gestión de seguridad y salud ocupacional."
+      },
+      {
+        "text": "Exige que el diagnóstico de trastornos mentales sea realizado exclusivamente por inspectores de trabajo.",
+        "isCorrect": false,
+        "rationale": "Los inspectores fiscalizan el cumplimiento normativo, pero el diagnóstico médico o psicológico corresponde a profesionales de la salud capacitados."
+      }
+    ],
+    "hint": "Considera cómo equipara la ley la gravedad de las enfermedades producidas por el entorno laboral frente a los incidentes físicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La Ley 30947 marcó un hito en el Perú en materia de salud mental laboral al declarar formalmente que:",
+    "opciones": [
+      {
+        "text": "La salud mental es un derecho fundamental y prioritario en la sociedad y en los centros de trabajo.",
+        "isCorrect": true,
+        "rationale": "Esta ley consagró el acceso a la salud mental como un derecho humano prioritario, eliminando ambigüedades sobre la obligación del Estado y los empleadores."
+      },
+      {
+        "text": "El diagnóstico de burnout otorga automáticamente el beneficio de pensión por incapacidad laboral permanente.",
+        "isCorrect": false,
+        "rationale": "El burnout es reconocido como un fenómeno ocupacional, pero no genera automáticamente una jubilación permanente sin evaluación médica especializada."
+      },
+      {
+        "text": "Las capacitaciones sobre prevención psicosocial son facultativas según el presupuesto de la empresa.",
+        "isCorrect": false,
+        "rationale": "La formación en todos los niveles sobre riesgos psicosociales es un mandato legal obligatorio y fiscalizable."
+      },
+      {
+        "text": "El tratamiento psicoterapéutico de los colaboradores debe ser costeado en su totalidad por el Comité de SST.",
+        "isCorrect": false,
+        "rationale": "El comité supervisa y gestiona la prevención, pero el financiamiento o cobertura de salud depende de los seguros y la estructura prestadora del sistema."
+      },
+      {
+        "text": "Las evaluaciones psicológicas deben reemplazar por completo a los exámenes médicos ocupacionales físicos.",
+        "isCorrect": false,
+        "rationale": "La salud ocupacional moderna busca un modelo integral que complemente y proteja tanto el cuerpo como la mente, sin eliminar los exámenes físicos."
+      }
+    ],
+    "hint": "Piensa en la jerarquía jurídica que se le otorga a la salud mental dentro de la protección de los derechos de los ciudadanos en Perú.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un colaborador acude a la oficina diariamente a cumplir su horario pero, debido a un agotamiento severo o problema emocional, su mente está ausente y su productividad se encuentra completamente paralizada. ¿Qué fenómeno cultural y ocupacional describe esta conducta?",
+    "opciones": [
+      {
+        "text": "Presentismo.",
+        "isCorrect": true,
+        "rationale": "El presentismo consiste en estar físicamente en el puesto de trabajo pero funcionalmente desconectado, lo que genera una pérdida masiva de productividad."
+      },
+      {
+        "text": "Eustrés.",
+        "isCorrect": false,
+        "rationale": "El eustrés representa el estrés positivo que estimula el enfoque y la productividad, no un estado de parálisis funcional."
+      },
+      {
+        "text": "Anedonia.",
+        "isCorrect": false,
+        "rationale": "La anedonia es la incapacidad clínica de sentir placer o interés, un síntoma de la depresión pero no el nombre del comportamiento laboral de estar presente sin rendir."
+      },
+      {
+        "text": "Labilidad emocional.",
+        "isCorrect": false,
+        "rationale": "La labilidad hace referencia a cambios bruscos en las respuestas emocionales, no a la presencia física con ausencia mental en el trabajo."
+      },
+      {
+        "text": "Desconexión digital.",
+        "isCorrect": false,
+        "rationale": "La desconexión digital es una política preventiva orientada al descanso fuera de la jornada, no un estado disfuncional dentro del horario de trabajo."
+      }
+    ],
+    "hint": "Enfócate en el concepto que describe estar presente físicamente pero incapacitado o desconectado mentalmente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes afirmaciones explican correctamente las diferencias entre eustrés y distrés en el ámbito laboral?",
+    "opciones": [
+      {
+        "text": "El eustrés es una respuesta positiva que brinda energía para concentrarse y cumplir objetivos demandantes.",
+        "isCorrect": true,
+        "rationale": "El eustrés moviliza los recursos cognitivos y fisiológicos del trabajador de manera adaptativa frente a un desafío puntual."
+      },
+      {
+        "text": "El distrés surge cuando la alarma biológica de presión permanece encendida continuamente sin dar espacio a la recuperación.",
+        "isCorrect": true,
+        "rationale": "El distrés es el estrés nocivo que se cronifica y desgasta sistemáticamente el bienestar psicológico y físico del colaborador."
+      },
+      {
+        "text": "El distrés se manifiesta frecuentemente con hiperactividad, sentido de urgencia constante e irritabilidad.",
+        "isCorrect": true,
+        "rationale": "La sobreactivación sostenida en el distrés altera la regulación emocional del trabajador frente a estímulos cotidianos."
+      },
+      {
+        "text": "El eustrés es un trastorno mental que requiere descanso médico prolongado.",
+        "isCorrect": false,
+        "rationale": "El eustrés no es un trastorno ni una condición patológica, sino un estado de activación funcional y provechoso."
+      },
+      {
+        "text": "El distrés es provocado exclusivamente por factores genéticos individuales del colaborador.",
+        "isCorrect": false,
+        "rationale": "El distrés laboral tiene su origen principal en las condiciones, sobrecargas y factores de riesgo del entorno organizacional."
+      }
+    ],
+    "hint": "Distingue entre el estrés positivo que motiva el desempeño y la activación prolongada que agota la capacidad de recuperación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El desarrollo del síndrome de burnout o agotamiento laboral se produce de forma paulatina a través de tres fases. ¿Cuál es la secuencia lógica descrita en este proceso?",
+    "opciones": [
+      {
+        "text": "Agotamiento emocional $\\rightarrow$ Cinismo y despersonalización $\\rightarrow$ Sensación de ineficacia profesional.",
+        "isCorrect": true,
+        "rationale": "El proceso inicia al consumirse la energía emocional, sigue con una desconexión fría o cínica como mecanismo de defensa y termina en la percepción de inutilidad del trabajo."
+      },
+      {
+        "text": "Cinismo $\\rightarrow$ Sensación de ineficacia profesional $\\rightarrow$ Agotamiento emocional.",
+        "isCorrect": false,
+        "rationale": "El cinismo no es la causa inicial sino una respuesta defensiva que aparece después de que la persona ha quedado exhausta emocionalmente."
+      },
+      {
+        "text": "Sensación de ineficacia profesional $\\rightarrow$ Agotamiento emocional $\\rightarrow$ Cinismo y despersonalización.",
+        "isCorrect": false,
+        "rationale": "La pérdida de confianza en la propia eficacia es el desenlace de la espiral del burnout, no su punto de partida."
+      },
+      {
+        "text": "Agotamiento emocional $\\rightarrow$ Anedonia $\\rightarrow$ Presentismo pasivo.",
+        "isCorrect": false,
+        "rationale": "Aunque la anedonia y el presentismo se relacionan con la salud mental, no representan las tres fases canónicas del burnout."
+      },
+      {
+        "text": "Catastrofismo $\\rightarrow$ Evitación $\\rightarrow$ Agotamiento emocional.",
+        "isCorrect": false,
+        "rationale": "El catastrofismo y la evitación son respuestas características de los cuadros de ansiedad, no las fases de desarrollo del burnout."
+      }
+    ],
+    "hint": "Recuerda el recorrido desde la fatiga emocional inicial hasta la desconexión protectora y la pérdida final de eficacia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia cualitativa fundamental entre la vivencia del estrés laboral y la del burnout?",
+    "opciones": [
+      {
+        "text": "El estrés es un problema de 'demasiado' (excesso de demanda y urgencia), mientras que el burnout es un problema de 'insuficiente' (falta de motivación, energía y esperanza).",
+        "isCorrect": true,
+        "rationale": "El estrés mantiene a la persona en un estado de hiperactivación, mientras que el burnout provoca un apagón emocional de los recursos del individuo."
+      },
+      {
+        "text": "El estrés es un fallo de personalidad individual, mientras que el burnout depende de la regulación de Sunafil.",
+        "isCorrect": false,
+        "rationale": "Ninguna de las dos condiciones es un fallo personal; ambas son respuestas a factores y condiciones del entorno de trabajo."
+      },
+      {
+        "text": "El estrés se soluciona únicamente con medicamentos psiquiátricos y el burnout con vacaciones cortas.",
+        "isCorrect": false,
+        "rationale": "El burnout no se resuelve simplemente con vacaciones debido a que su raíz estructural es un entorno laboral insostenible."
+      },
+      {
+        "text": "El estrés afecta únicamente el rendimiento intelectual y el burnout solo genera malestar físico.",
+        "isCorrect": false,
+        "rationale": "Ambas condiciones tienen manifestaciones complejas que afectan el ámbito cognitivo, emocional, conductual y físico."
+      },
+      {
+        "text": "El estrés provoca la renuncia inmediata del trabajador y el burnout genera hiperactividad.",
+        "isCorrect": false,
+        "rationale": "Es el burnout el que se vincula estrechamente a intenciones de renuncia y apatía, mientras que el estrés genera hiperactividad."
+      }
+    ],
+    "hint": "Compara la hiperactivación por exceso de exigencias frente al \"apagón\" motivacional por falta de recursos y reconocimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto del rendimiento laboral, la depresión se manifiesta de forma muy característica mediante la 'anedonia'. ¿Cómo se define este síntoma?",
+    "opciones": [
+      {
+        "text": "La pérdida del interés o de la capacidad de sentir placer en tareas y actividades que antes resultaban motivadoras.",
+        "isCorrect": true,
+        "rationale": "La anedonia se caracteriza por la extinción de la satisfacción y la motivación intrínseca, haciendo que el trabajo pierda significado."
+      },
+      {
+        "text": "El miedo irracional a la evaluación de los superiores y la constante postergación de entregas.",
+        "isCorrect": false,
+        "rationale": "La postergación o procrastinación vinculada al miedo al juicio es más representativa de la ansiedad que de la anedonia."
+      },
+      {
+        "text": "La oscilación constante entre estados de euforia e impulsividad en las reuniones de equipo.",
+        "isCorrect": false,
+        "rationale": "La inestabilidad anímica brusca se asocia con labilidad emocional o alteraciones afectivas, no con la definición de anedonia."
+      },
+      {
+        "text": "La tendencia a interpretar cualquier sugerencia de corrección como una agresión personal.",
+        "isCorrect": false,
+        "rationale": "La reatividad a la defensiva está relacionada con la irritabilidad o el distrés, no con la anedonia."
+      },
+      {
+        "text": "La somatización de tensiones laborales exclusivamente en forma de migrañas o mareos.",
+        "isCorrect": false,
+        "rationale": "Los síntomas físicos son respuestas somáticas del cuerpo, distintas de la alteración afectiva de la anedonia."
+      }
+    ],
+    "hint": "Reflexiona sobre el término clínico que define la incapacidad de disfrutar de las actividades habituales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando la ansiedad se manifiesta en el trabajo, suele alimentarse de dos dinámicas psicológicas que frenan el avance del colaborador. ¿Cuáles son estas dinámicas?",
+    "opciones": [
+      {
+        "text": "El catastrofismo y la evitación.",
+        "isCorrect": true,
+        "rationale": "La mente ansiosa anticipa el peor escenario posible (catastrofismo) y, para reducir el malestar inmediato, posterga o evita tareas y decisiones (evitación)."
+      },
+      {
+        "text": "El cinismo y la sobreimplicación.",
+        "isCorrect": false,
+        "rationale": "El cinismo es propio de las etapas intermedias del burnout, no el motor directo de los estados de ansiedad."
+      },
+      {
+        "text": "La anedonia y la hiperactividad.",
+        "isCorrect": false,
+        "rationale": "La anedonia se vincula prioritariamente a cuadros depresivos, no al motor conductual de la ansiedad."
+      },
+      {
+        "text": "El presentismo y la labilidad.",
+        "isCorrect": false,
+        "rationale": "El presentismo es una consecuencia conductual general y la labilidad es una alteración del estado de ánimo, no la combinación motora de la ansiedad."
+      },
+      {
+        "text": "La procrastinación por pereza y la apatía.",
+        "isCorrect": false,
+        "rationale": "En la ansiedad, la postergación de tareas no se debe a la pereza, sino a un miedo paralizante sobre el resultado futuro."
+      }
+    ],
+    "hint": "Analiza los dos componentes clave: la expectativa del peor escenario posible y la conducta de posponer conversaciones o tareas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el modelo de Demanda-Control de Karasek, ¿cuáles de las siguientes condiciones generan el tipo de estrés laboral más nocivo para la salud mental?",
+    "opciones": [
+      {
+        "text": "Altas exigencias en la carga o ritmo de trabajo (demandas elevadas).",
+        "isCorrect": true,
+        "rationale": "Las demandas excesivas incrementan la carga mental, emocional y cuantitativa exigida al colaborador."
+      },
+      {
+        "text": "Bajo nivel de autonomía o poder de decisión sobre cómo y cuándo realizar las tareas.",
+        "isCorrect": true,
+        "rationale": "La falta de margen de control imposibilita que el trabajador regule su propio esfuerzo para hacer frente a las exigencias."
+      },
+      {
+        "text": "Sensación de indefensión al no poder influir en los procesos organizacionales.",
+        "isCorrect": true,
+        "rationale": "La combinación de altas exigencias y nulo control deriva en indefensión aprendida, el núcleo del distrés más dañino."
+      },
+      {
+        "text": "Existencia de objetivos retadores acompañados de alta libertad para elegir la metodología de trabajo.",
+        "isCorrect": false,
+        "rationale": "Esta combinación (alta demanda con alto control) genera trabajo activo y aprendizaje, no el estrés más nocivo."
+      },
+      {
+        "text": "Acceso constante a programas de capacitación en competencias técnicas.",
+        "isCorrect": false,
+        "rationale": "El desarrollo de capacidades incrementa el control del trabajador, disminuyendo el impacto tóxico del estrés."
+      }
+    ],
+    "hint": "Identifica la combinación entre un nivel de exigencia alto y la imposibilidad del trabajador para tomar decisiones sobre su labor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El modelo de esfuerzo-recompensa explica la importancia del contrato psicológico en las empresas. ¿Qué consecuencia produce un desequilibrio sostenido en este contrato?",
+    "opciones": [
+      {
+        "text": "Genera distrés y resentimiento cuando el trabajador siente que su alto esfuerzo no es compensado de forma justa con salario, estima o estabilidad.",
+        "isCorrect": true,
+        "rationale": "La asimetría percibida entre lo que se entrega y la retribución económica o afectiva recibida quebranta la confianza y vulnera la salud mental."
+      },
+      {
+        "text": "Incentiva automáticamente un incremento en el eustrés para alcanzar los objetivos de la empresa.",
+        "isCorrect": false,
+        "rationale": "La falta de recompensa justa destruye la motivación y transforma el estrés en distrés tóxico, no en eustrés."
+      },
+      {
+        "text": "Anula la responsabilidad legal de la empresa frente a fiscalizaciones de Sunafil.",
+        "isCorrect": false,
+        "rationale": "Las obligaciones legales de prevención psicosocial se mantienen vigentes e independientes del nivel de recompensa otorgado."
+      },
+      {
+        "text": "Desarrolla en los líderes una alta agudeza observacional para prevenir crisis.",
+        "isCorrect": false,
+        "rationale": "El desequilibrio en el contrato psicológico genera malestar en los colaboradores, no el desarrollo directo de competencias directivas."
+      },
+      {
+        "text": "Disminuye las exigencias cognitivas y emocionales del puesto de trabajo.",
+        "isCorrect": false,
+        "rationale": "Las exigencias del puesto dependen del diseño organizacional, no de la percepción del trabajador sobre su recompensa."
+      }
+    ],
+    "hint": "Relaciona la percepción de esfuerzo invertido frente al reconocimiento, retribución y estabilidad laboral percibidos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para que un líder distinga un mal día pasajero de una señal de alerta real en la salud mental de un colaborador, ¿cuál es el criterio clave respecto a la 'línea base'?",
+    "opciones": [
+      {
+        "text": "Observar una desviación clara del comportamiento habitual de la persona que se mantenga por más de dos semanas.",
+        "isCorrect": true,
+        "rationale": "La regla de oro requiere constatar que el cambio respecto al patrón de conducta normal sea persistente durante al menos dos semanas."
+      },
+      {
+        "text": "Identificar si el trabajador comete un error grave en un día de alta demanda de entregas.",
+        "isCorrect": false,
+        "rationale": "Un error aislado durante un momento de presión puede ser un hecho puntual y no necesariamente un indicador de alteración sostenida."
+      },
+      {
+        "text": "Comprobar si la persona es introvertida en comparación con la media del equipo.",
+        "isCorrect": false,
+        "rationale": "La introversión puede ser la 'línea base' o normalidad de la persona y no implica ningún problema de salud mental."
+      },
+      {
+        "text": "Verificar si el trabajador ha solicitado días de vacaciones de forma anticipada.",
+        "isCorrect": false,
+        "rationale": "El uso de vacaciones es un derecho regular y no constituye en sí mismo una desviación del patrón conductual de alerta."
+      },
+      {
+        "text": "Esperar a que exista una queja formal redactada por escrito por sus compañeros.",
+        "isCorrect": false,
+        "rationale": "El rol del líder preventivo busca intervenir mediante la observación temprana antes de que la situación escale a conflictos o denuncias."
+      }
+    ],
+    "hint": "Recuerda el parámetro de tiempo sostenido y el concepto de desviación del comportamiento habitual de la persona.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a cambios observables en los canales de manifestación del bienestar de un colaborador?",
+    "opciones": [
+      {
+        "text": "Canal cognitivo: caída inusual de la productividad, errores en tareas antes dominadas y presentismo pasivo.",
+        "isCorrect": true,
+        "rationale": "Muestra las dificultades de la mente para mantener la concentración, procesar información y desempeñarse eficientemente."
+      },
+      {
+        "text": "Canal emocional: labilidad emocional, reatividad a la defensiva y aislamiento de las dinámicas del equipo.",
+        "isCorrect": true,
+        "rationale": "Refleja la pérdida de regulación afectiva y la dificultad para gestionar las relaciones interpersonales cotidianas."
+      },
+      {
+        "text": "Canal físico: fatiga persistente que no cede con el descanso, descuido en la apariencia personal y molestias somáticas recurrentes.",
+        "isCorrect": true,
+        "rationale": "Evidencia cómo el cansancio y el malestar psicológico terminan expresándose a través del propio cuerpo."
+      },
+      {
+        "text": "Canal normativo: cambios en el tipo de contrato laboral y régimen de pensiones del colaborador.",
+        "isCorrect": false,
+        "rationale": "Los aspectos contractuales y administrativos no constituyen canales de somatización o manifestación conductual del individuo."
+      },
+      {
+        "text": "Canal punitivo: incremento del número de amonestaciones emitidas formalmente por la gerencia.",
+        "isCorrect": false,
+        "rationale": "Las sanciones formales son medidas administrativas y no un canal propio de manifestación sintomática del colaborador."
+      }
+    ],
+    "hint": "Considera las tres dimensiones en las que se somatizan y manifiestan las dificultades psicológicas en la rutina de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el protocolo de 5 pasos para abordar a un colaborador con señales de malestar, ¿cuál es la pauta correcta a seguir en la fase de documentación?",
+    "opciones": [
+      {
+        "text": "Registrar hechos observables y concretos (fechas, demoras específicas, errores), evitando juicios de valor sobre la actitud.",
+        "isCorrect": true,
+        "rationale": "Basarse estrictamente en datos neutros u observables garantiza una conversación objetiva sobre el desempeño sin generar confrontación personal."
+      },
+      {
+        "text": "Anotar apreciaciones personales sobre la debilidad de carácter o falta de resiliencia de la persona.",
+        "isCorrect": false,
+        "rationale": "Incluir opiniones o calificar la personalidad del colaborador sesga la intervención y destruye la confianza."
+      },
+      {
+        "text": "Redactar un diagnóstico preliminar señalando el trastorno psicológico que parece sufrir la persona.",
+        "isCorrect": false,
+        "rationale": "El líder no debe actuar como psicólogo ni poner etiquetas clínicas o diagnósticas en ningún documento."
+      },
+      {
+        "text": "Recopilar impresiones informales y comentarios compartidos por otros compañeros en los pasillos.",
+        "isCorrect": false,
+        "rationale": "Basar la documentación en rumores vulnera la confidencialidad y la ética que requiere el proceso de apoyo."
+      },
+      {
+        "text": "Solicitar al departamento legal una sanción preventiva antes de hablar con el colaborador.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la conversación es el apoyo preventivo y la contención, no la vía disciplinaria o sancionadora."
+      }
+    ],
+    "hint": "Piensa en la diferencia entre registrar datos medibles y objetivos frente a emitir suposiciones sobre el carácter o actitud.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el Perú, ¿cuál es la herramienta o metodología oficial utilizada para diagnosticar y auditar los riesgos psicosociales en las organizaciones?",
+    "opciones": [
+      {
+        "text": "La Metodología CoPsoQ / CC.",
+        "isCorrect": true,
+        "rationale": "Es la herramienta oficial aprobada que permite evaluar los riesgos psicosociales con significancia estadística y comparabilidad nacional."
+      },
+      {
+        "text": "El test abreviado de personalidad e inteligencia emocional.",
+        "isCorrect": false,
+        "rationale": "Las pruebas de personalidad individuales no miden las condiciones psicosociales del entorno de trabajo ni son el instrumento oficial."
+      },
+      {
+        "text": "La encuesta tradicional de clima y satisfacción laboral.",
+        "isCorrect": false,
+        "rationale": "Una encuesta general de clima mide percepciones de satisfacción, pero carece del rigor técnico e indicador auditable de riesgos psicosociales."
+      },
+      {
+        "text": "La matriz de auditoría de indicadores de rotación de personal.",
+        "isCorrect": false,
+        "rationale": "Los datos de rotación son indicadores reactivos de gestión, no la metodología oficial de diagnóstico preventivo."
+      },
+      {
+        "text": "El registro anual de accidentes físicos e incapacidades temporales.",
+        "isCorrect": false,
+        "rationale": "El registro de accidentes mide eventos físicos ya ocurridos y no constituye la radiografía diagnóstica del riesgo psicosocial."
+      }
+    ],
+    "hint": "Identifica la metodología estandarizada y auditable mencionada específicamente para medir factores de riesgo psicosocial en Perú.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión preventiva de riesgos psicosociales organizacionales, ¿cuál es la característica distintiva de las acciones de Prevención Primaria?",
+    "opciones": [
+      {
+        "text": "Atacan la raíz del problema modificando el diseño del trabajo, los procesos, la claridad de roles y las cargas de trabajo.",
+        "isCorrect": true,
+        "rationale": "La prevención primaria busca eliminar o controlar el riesgo directamente en el sistema organizacional antes de que afecte a las personas."
+      },
+      {
+        "text": "Se enfocan en entrenar al colaborador en manejo de la ansiedad a través de talleres de mindfulness.",
+        "isCorrect": false,
+        "rationale": "Los talleres de afrontamiento personal pertenecen a la prevención secundaria, la cual fortalece los recursos del individuo."
+      },
+      {
+        "text": "Consisten en protocolos para reincorporar paulatinamente a trabajadores con descanso médico prolongado.",
+        "isCorrect": false,
+        "rationale": "La reinserción y el manejo de casos con diagnóstico o secuelas corresponden a la prevención terciaria."
+      },
+      {
+        "text": "Ofrecen atención psicoterapéutica de urgencia ante llamadas a líneas de asistencia.",
+        "isCorrect": false,
+        "rationale": "La atención individualizada reactiva se sitúa en las estrategias secundarias de contención o terciarias de tratamiento."
+      },
+      {
+        "text": "Se aplican únicamente cuando el 80% del equipo ya muestra síntomas claros de burnout.",
+        "isCorrect": false,
+        "rationale": "La prevención primaria es proactiva y se diseña desde el inicio, sin esperar a que explote una crisis colectiva."
+      }
+    ],
+    "hint": "Piensa en el nivel de prevención que modifica las causas organizacionales de raíz en lugar de enfocarse solo en el individuo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos son fundamentales para el funcionamiento efectivo de un Programa de Asistencia al Empleado (PAE) en el Nivel 1 de apoyo?",
+    "opciones": [
+      {
+        "text": "Confidencialidad 100% garantizada, operando a través de un proveedor externo a la organización.",
+        "isCorrect": true,
+        "rationale": "Garantiza la privacidad del colaborador, permitiendo que solicite ayuda sin miedo a ser juzgado o que se vulnere su estabilidad laboral."
+      },
+      {
+        "text": "Enfoque integral 360°, brindando apoyo no solo psicológico, sino también legal, financiero y nutricional.",
+        "isCorrect": true,
+        "rationale": "Aborda de manera holística factores externos como deudas o problemas legales que impactan la salud mental en el trabajo."
+      },
+      {
+        "text": "Disponibilidad y acceso sencillo y continuo (24/7) a través de canales diversos como apps o llamadas.",
+        "isCorrect": true,
+        "rationale": "Asegura que el servicio esté al alcance inmediato del colaborador en cualquier momento en que se presente una dificultad."
+      },
+      {
+        "text": "Requisito obligatorio de contar con la aprobación previa del jefe directo para acceder al servicio.",
+        "isCorrect": false,
+        "rationale": "Exigir aprobación previa destruye la confidencialidad e inhibe completamente el uso del programa por parte de los trabajadores."
+      },
+      {
+        "text": "Entrega periódica a la gerencia de informes detallados con los nombres de las personas atendidas.",
+        "isCorrect": false,
+        "rationale": "Compartir identidades o diagnósticos individuales viola la ética médica y la confidencialidad que sostiene la confianza en el PAE."
+      }
+    ],
+    "hint": "Evalúa las propiedades operativas que garantizan la confianza, cobertura multidisciplinaria y disponibilidad del servicio PAE.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Frente a un ataque de pánico o crisis emocional aguda de un colaborador en la oficina (Nivel 2 de intervención), ¿cuál es el objetivo central de aplicar Primeros Auxilios Psicológicos (PAP)?",
+    "opciones": [
+      {
+        "text": "Ofrecer contención, reducir el estrés agudo, estabilizar a la persona y conectarla con la ayuda que necesita, sin hacer terapia.",
+        "isCorrect": true,
+        "rationale": "Los PAP son una respuesta humana inmediata para calmar y resguardar a la persona en crisis, conectándola de forma segura con profesionales."
+      },
+      {
+        "text": "Identificar el origen infantil del trauma y prescribir un fármaco ansiolítico de emergencia.",
+        "isCorrect": false,
+        "rationale": "Los PAP no constituyen una sesión terapéutica ni facultan para realizar diagnósticos profundos o medicación."
+      },
+      {
+        "text": "Exigirle a la persona que describa en detalle el problema doloroso para desahogarse de inmediato.",
+        "isCorrect": false,
+        "rationale": "Forzar a la persona a hablar de detalles traumáticos durante la crisis puede revictimizarla o empeorar el cuadro de ansiedad."
+      },
+      {
+        "text": "Minimizar la situación utilizando frases concluyentes como 'todo va a estar bien' o 'no es para tanto'.",
+        "isCorrect": false,
+        "rationale": "Minimizar o descalificar el dolor del trabajador invalida sus sentimientos y destruye la contención emocional que busca el protocolo."
+      },
+      {
+        "text": "Confrontar sus ideas para demostrarle lógicamente que su reacción es exagerada.",
+        "isCorrect": false,
+        "rationale": "La confrontación lógica durante una crisis de angustia eleva la resistencia fisiológica y dificulta la estabilización."
+      }
+    ],
+    "hint": "Enfócate en el objetivo inmediato de estabilización emocional y contención sin sobrepasar el rol hacia el tratamiento clínico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si se detecta un riesgo inminente de autodaño o ideación suicida en un colaborador (Nivel 3 - Código Rojo), ¿cuáles son las reglas de oro inmediatas del protocolo de emergencia?",
+    "opciones": [
+      {
+        "text": "No dejar a la persona sola en ningún momento, retirar discretamente objetos peligrosos a su alcance y contactar de inmediato a emergencias médicas/familiares.",
+        "isCorrect": true,
+        "rationale": "La prioridad absoluta de una emergencia crítica es salvaguardar la vida mediante el acompañamiento permanente y la derivación médica profesional."
+      },
+      {
+        "text": "Enviar al colaborador a su domicilio en transporte público para que descanse a solas.",
+        "isCorrect": false,
+        "rationale": "Dejar sola a una persona con riesgo suicida inminente incrementa drásticamente la vulnerabilidad y la posibilidad de que ocurra una tragedia."
+      },
+      {
+        "text": "Iniciar un proceso de negociación para que complete sus pendientes del día antes de retirarse.",
+        "isCorrect": false,
+        "rationale": "Ante un riesgo inminente de vida, cualquier aspecto o tarea laboral pasa a un plano irrelevante."
+      },
+      {
+        "text": "Pedirle que firme un documento formal de compromiso de no autodañarse.",
+        "isCorrect": false,
+        "rationale": "Los compromisos contractuales o por escrito carecen de efectividad clínica ante una crisis de ideación o intento suicida."
+      },
+      {
+        "text": "Solicitar al resto del equipo que intente convencer a la persona de cambiar de opinión mediante sermones morales.",
+        "isCorrect": false,
+        "rationale": "Los juicios de valor o debates morales desbordan el cuadro emocional de la persona y carecen de validez en el manejo de crisis."
+      }
+    ],
+    "hint": "Prioriza la seguridad física, el acompañamiento permanente y la activación de los canales de ayuda médica especializada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Después de haber gestionado una crisis crítica de salud mental en la empresa, ¿en qué consiste la fase de 'postvención'?",
+    "opciones": [
+      {
+        "text": "En dar soporte al resto del equipo para procesar lo sucedido, acompañar el duelo, evitar el efecto contagio y restaurar la seguridad psicológica.",
+        "isCorrect": true,
+        "rationale": "La postvención atiende el impacto emocional secundario en los compañeros de trabajo, estabilizando el entorno social de la organización."
+      },
+      {
+        "text": "En sancionar disciplinariamente al colaborador que sufrió la crisis por interrumpir las operaciones.",
+        "isCorrect": false,
+        "rationale": "Aplicar medidas disciplinarias por emergencias de salud mental es ilegal, falto de ética y destructivo para la cultura organizacional."
+      },
+      {
+        "text": "En ocultar por completo el incidente mediante cláusulas de confidencialidad y prohibir cualquier mención del tema.",
+        "isCorrect": false,
+        "rationale": "Ignorar o silenciar el hecho impide procesar la crisis colectiva y alimenta el estigma y la incertidumbre en el equipo."
+      },
+      {
+        "text": "En aplicar pruebas masivas de polígrafo para evaluar la lealtad de los trabajadores.",
+        "isCorrect": false,
+        "rationale": "El polígrafo no se relaciona con la atención psicosocial y vulnera los derechos y la tranquilidad de los colaboradores."
+      },
+      {
+        "text": "En cancelar todos los servicios del Programa de Asistencia al Empleado (PAE).",
+        "isCorrect": false,
+        "rationale": "Es justamente en las fases posteriores a una crisis cuando los servicios de asistencia deben reforzarse y comunicarse con mayor énfasis."
+      }
+    ],
+    "hint": "Piensa en las acciones dirigidas al grupo de trabajo tras vivenciar un evento traumático o de emergencia psicológica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Fisiológicamente, ¿cómo influye un liderazgo estresante, hostil o autoritario en la salud de los miembros del equipo?",
+    "opciones": [
+      {
+        "text": "Inunda el organismo con cortisol de forma prolongada, deteriorando el sistema nervioso, inmunológico y la regulación emocional.",
+        "isCorrect": true,
+        "rationale": "La amenaza constante percibida activa la respuesta endocrina del cortisol, produciendo desgaste físico y psicológico crónico."
+      },
+      {
+        "text": "Incrementa la producción de oxitocina, favoreciendo el trabajo colaborativo en momentos de presión.",
+        "isCorrect": false,
+        "rationale": "El miedo y la hostilidad bloquean la oxitocina y promueven actitudes defensivas o de aislamiento en los trabajadores."
+      },
+      {
+        "text": "Inhíbe el funcionamiento del sistema parasimpático de forma irreversible en las primeras 24 horas.",
+        "isCorrect": false,
+        "rationale": "El impacto es paulatino y acumulativo; el sistema nervioso reacciona continuamente adaptándose según la presencia de estresores."
+      },
+      {
+        "text": "Genera eustrés metabólico que optimiza la memoria a largo plazo a pesar del cansancio.",
+        "isCorrect": false,
+        "rationale": "El trato hostil causa distrés nocivo, el cual perjudica la concentración, la memoria de trabajo y la toma de decisiones."
+      },
+      {
+        "text": "Aumenta la tolerancia inmunológica frente a infecciones virales.",
+        "isCorrect": false,
+        "rationale": "El estrés crónico por mal liderazgo suprime la respuesta del sistema inmunológico, haciendo al colaborador más vulnerable a enfermar."
+      }
+    ],
+    "hint": "Identifica la hormona del estrés que se libera de manera continua ante estilos de gestión basados en la amenaza o la presión constante.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La técnica del 'Mensaje Yo' es fundamental para la comunicación asertiva en líderes. ¿Cuál es la estructura de tres partes recomendada para su formulación?",
+    "opciones": [
+      {
+        "text": "1. Expresar la emoción ('Yo me siento...'), 2. Describir la conducta objetiva ('Cuando sucede...'), 3. Explicar el impacto ('Porque afecta...').",
+        "isCorrect": true,
+        "rationale": "Estructura la conversación desde la vivencia propia del interlocutor y los hechos concretos, evitando hacer acusaciones personales que activen la defensividad."
+      },
+      {
+        "text": "1. Señalar la falla del colaborador ('Tú hiciste...'), 2. Exigir el cambio ('Debes arreglar...'), 3. Imponer una sanción ('O atente a...').",
+        "isCorrect": false,
+        "rationale": "Iniciar atacando la conducta del otro ('Tú hiciste') es la estructura típica del lenguaje acusatorio o agresivo que cierra el diálogo."
+      },
+      {
+        "text": "1. Halagar al colaborador ('Eres el mejor...'), 2. Soltar la crítica ('Pero fallaste en...'), 3. Retirarse de la reunión.",
+        "isCorrect": false,
+        "rationale": "La técnica del 'sándwich' mal aplicada o confusa le resta claridad a la retroalimentación y genera desconfianza."
+      },
+      {
+        "text": "1. Citar la norma escrita ('La empresa dice...'), 2. Evaluar el carácter ('Tu actitud es...'), 3. Asignar un castigo.",
+        "isCorrect": false,
+        "rationale": "Calificar la actitud o personalidad del trabajador genera rechazo e invalida la comunicación asertiva."
+      },
+      {
+        "text": "1. Disculparse por el problema ('Lamento molestarte...'), 2. Asumir la culpa ('Fue mi error...'), 3. Cancelar la entrega.",
+        "isCorrect": false,
+        "rationale": "La pasividad en la comunicación cede la responsabilidad y no aborda con claridad el problema que debe resolverse."
+      }
+    ],
+    "hint": "Recuerda la secuencia que inicia con la perspectiva propia, describe la conducta observada y explica la consecuencia del hecho.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la técnica de comunicación conocida como 'Banco de Niebla' ante una crítica hostil o desproporcionada?",
+    "opciones": [
+      {
+        "text": "Aceptar una parte de verdad objetiva en la crítica formulada, sin ceder en el punto central ni reaccionar con agresividad.",
+        "isCorrect": true,
+        "rationale": "Desarma la hostilidad del interlocutor al validar la pequeña fracción de hecho real, manteniendo la calma y la compostura sin iniciar una discusión."
+      },
+      {
+        "text": "Ignorar al interlocutor de forma prolongada hasta que este decida abandonar la sala.",
+        "isCorrect": false,
+        "rationale": "La evitación pasiva o ley del hielo no es una técnica asertiva y suele escalar el conflicto subyacente."
+      },
+      {
+        "text": "Responder con una lista de los errores pasados cometidos por la persona que emite la crítica.",
+        "isCorrect": false,
+        "rationale": "Atacar de vuelta es una respuesta agresiva que amplifica la confrontación en lugar de desarmarla."
+      },
+      {
+        "text": "Aceptar completamente la culpa de todo lo sucedido aunque se sepa que la acusación es falsa.",
+        "isCorrect": false,
+        "rationale": "Someterse a acusaciones falsas corresponde a un estilo de comunicación pasivo que vulnera los propios derechos."
+      },
+      {
+        "text": "Cambiar drásticamente de tema mediante chistes para desviar la atención de la audiencia.",
+        "isCorrect": false,
+        "rationale": "La evasión humorística en momentos tensos suele interpretarse como una falta de respeto o falta de profesionalismo."
+      }
+    ],
+    "hint": "Considera la metáfora de absorber un impacto aceptando un fragmento de verdad sin perder la calma ni entrar en confrontación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la retroalimentación constructiva, ¿cuáles son los pasos del modelo de 6 fases orientados a encauzar la conversación hacia la solución de cara al futuro?",
+    "opciones": [
+      {
+        "text": "Visualizar un resultado positivo, mover el foco del problema hacia las soluciones y cerrar con acuerdos y próximos pasos claros.",
+        "isCorrect": true,
+        "rationale": "Las últimas tres fases transforman la conversación tensa en un plan de desarrollo orientado a la mejora continua y el compromiso mutuo."
+      },
+      {
+        "text": "Revisar los fallos históricos, señalar las debilidades del colaborador y notificar la reducción salarial.",
+        "isCorrect": false,
+        "rationale": "Rumiar en las faltas pasadas y aplicar castigos unilaterales destruye la motivación e hiere la seguridad psicológica."
+      },
+      {
+        "text": "Documentar la sesión ante Notario, suspender las labores del trabajador y contratar un reemplazo.",
+        "isCorrect": false,
+        "rationale": "El objetivo del feedback es potenciar y recuperar el talento, no ejecutar un despido en esa misma reunión."
+      },
+      {
+        "text": "Pedir la opinión del resto del equipo sobre el desempeño del colaborador frente a él.",
+        "isCorrect": false,
+        "rationale": "Exponer al colaborador a juicios públicos vulnera la privacidad y el respeto que deben regir la retroalimentación."
+      },
+      {
+        "text": "Asumir la ejecución personal de las tareas fallidas por parte del líder para evitar demoras.",
+        "isCorrect": false,
+        "rationale": "Que el líder asuma el trabajo del colaborador no promueve el desarrollo de capacidades ni resuelve la causa de origen."
+      }
+    ],
+    "hint": "Piensa en las etapas del modelo que transforman la conversación tensa en compromisos hacia adelante y soluciones compartidas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el marco estratégico de la Organización Mundial de la Salud (OMS) para la gestión de la salud mental en el trabajo, ¿cuáles son los tres pilares fundamentales que deben implementarse?",
+    "opciones": [
+      {
+        "text": "Proteger la salud mental reduciendo los riesgos psicosociales presentes en el entorno laboral.",
+        "isCorrect": true,
+        "rationale": "Apunta a eliminar o mitigar los factores organizacionales de peligro, como sobrecargas o dinámicas tóxicas."
+      },
+      {
+        "text": "Promover la salud mental desarrollando capacidades, alfabetismo emocional y entornos de trabajo positivos.",
+        "isCorrect": true,
+        "rationale": "Fomenta el fortalecimiento de competencias individuales y colectivas para la resiliencia y el bienestar."
+      },
+      {
+        "text": "Abordar las condiciones de salud mental apoyando a las personas afectadas para que prosperen o se reincorporen.",
+        "isCorrect": true,
+        "rationale": "Garantiza el acompañamiento, tratamiento y ajustes necesarios para quienes sufren afecciones psicológicas."
+      },
+      {
+        "text": "Prescribir medicación preventiva directamente desde el área de Gestión del Talento.",
+        "isCorrect": false,
+        "rationale": "El área de gestión humana no posee facultades médicas ni psiquiátricas para recetar fármacos."
+      },
+      {
+        "text": "Despedir paulatinamente a aquellos trabajadores que manifiesten altos niveles de estrés.",
+        "isCorrect": false,
+        "rationale": "Despedir a colaboradores por motivos de salud contraviene la ley, profundiza el estigma y daña el activo de la empresa."
+      }
+    ],
+    "hint": "Revisa los tres verbos rectores propuestos por el organismo internacional para la gestión integral de la salud mental ocupacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-72",
+    "diplomado": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para actuar como un verdadero 'Arquitecto Organizacional', el área de Gestión del Talento debe monitorear un tablero de control preventivo. ¿Qué indicadores clave reflejan objetivamente la salud mental de la empresa?",
+    "opciones": [
+      {
+        "text": "Tasa de ausentismo por motivos de salud mental e índice de burnout medido trimestralmente.",
+        "isCorrect": true,
+        "rationale": "Ofrecen datos duros sobre el impacto del entorno laboral en las ausencias y el nivel de agotamiento del personal, permitiendo decisiones estratégicas."
+      },
+      {
+        "text": "Número de interacciones en redes sociales personales realizadas durante el horario de almuerzo.",
+        "isCorrect": false,
+        "rationale": "El uso personal de redes sociales no es un indicador directo del estado de riesgo psicosocial de la organización."
+      },
+      {
+        "text": "Porcentaje de colaboradores que consumen suplementos o bebidas energizantes.",
+        "isCorrect": false,
+        "rationale": "Los hábitos de consumo individual no constituyen un indicador estandarizado ni auditable de la salud organizacional."
+      },
+      {
+        "text": "Cantidad de amonestaciones disciplinarias redactadas al mes por tardanzas cortas.",
+        "isCorrect": false,
+        "rationale": "Las amonestaciones miden el cumplimiento de normas de puntualidad, pero no evalúan las causas psicosociales subyacentes."
+      },
+      {
+        "text": "Índice de velocidad de actualización del hardware de la oficina.",
+        "isCorrect": false,
+        "rationale": "La renovación de equipos informáticos es una métrica de TI que no mide la salud psicosocial del talento humano."
+      }
+    ],
+    "hint": "Identifica los datos cuantitativos recurrentes que evalúan tanto la salud del clima como la pérdida de jornadas laborales por malestar psicológico.",
+    "activo": true
+  }
+]

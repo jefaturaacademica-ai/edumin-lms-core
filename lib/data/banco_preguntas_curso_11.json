@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son los tres tipos de responsabilidad jurídica que puede asumir un empleador ante un accidente laboral mortal dentro de la actividad minera?",
+    "opciones": [
+      {
+        "text": "Responsabilidad penal, responsabilidad civil y responsabilidad administrativa.",
+        "isCorrect": true,
+        "rationale": "Ante la muerte de un trabajador por accidente laboral, se configuran sanciones administrativas (multas de SUNAFIL), civiles (indemnización por daños a los deudos) y penales (penas privativas de libertad)."
+      },
+      {
+        "text": "Responsabilidad tributaria, responsabilidad comercial y responsabilidad penal.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad comercial y tributaria regulan las obligaciones fiscales y de mercado, pero no la reparación de daños a trabajadores ni la fiscalización de condiciones de trabajo."
+      },
+      {
+        "text": "Responsabilidad constitucional, responsabilidad tributaria y responsabilidad arbitral.",
+        "isCorrect": false,
+        "rationale": "El arbitraje y las garantías constitucionales son vías o mecanismos procesales, no los tipos de responsabilidad directa derivados de accidentes laborales mortales."
+      },
+      {
+        "text": "Responsabilidad administrativa, responsabilidad fiscal y responsabilidad disciplinaria interna únicamente.",
+        "isCorrect": false,
+        "rationale": "Aunque existe la vía administrativa y la sanción interna, la muerte de un trabajador trasciende la esfera privada al generar responsabilidades penales y civiles obligatorias."
+      },
+      {
+        "text": "Responsabilidad corporativa, responsabilidad gremial y responsabilidad ambiental.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad gremial o corporativa son compromisos éticos u organizacionales, no los tres pilares de sanción jurídica aplicables ante la muerte de un trabajador."
+      }
+    ],
+    "hint": "Recuerda las consecuencias mencionadas: prisión, pago de dinero a los deudos y multas impuestas por el órgano fiscalizador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué organismo público es la autoridad competente encargada de fiscalizar e inspeccionar el cumplimiento de las condiciones de trabajo y seguridad laboral en el Perú?",
+    "opciones": [
+      {
+        "text": "SUNAFIL (Superintendencia Nacional de Fiscalización Laboral).",
+        "isCorrect": true,
+        "rationale": "SUNAFIL es el ente rector en el Perú encargado de vigilar el cumplimiento de las normas sociolaborales y de seguridad y salud en el trabajo."
+      },
+      {
+        "text": "SUNAT (Superintendencia Nacional de Aduanas y de Administración Tributaria).",
+        "isCorrect": false,
+        "rationale": "La SUNAT se encarga exclusivamente de la recaudación de tributos y la fiscalización aduanera, no de las condiciones de seguridad del personal."
+      },
+      {
+        "text": "INDECOPI (Instituto Nacional de Defensa de la Competencia y de la Protección de la Propiedad Intelectual).",
+        "isCorrect": false,
+        "rationale": "INDECOPI protege los derechos de los consumidores y la libre competencia, no las relaciones entre empleadores y trabajadores."
+      },
+      {
+        "text": "MINEM (Ministerio de Energía y Minas).",
+        "isCorrect": false,
+        "rationale": "Aunque el MINEM regula la actividad minera, la inspección específica de las condiciones laborales de seguridad recae en la autoridad de inspección del trabajo."
+      },
+      {
+        "text": "OSINERGMIN (Organismo Supervisor de la Inversión en Energía y Minería).",
+        "isCorrect": false,
+        "rationale": "OSINERGMIN supervisa los aspectos técnicos y de seguridad de la infraestructura operativa e energética, mas no las inspecciones laborales sociolaborales del personal."
+      }
+    ],
+    "hint": "Esta entidad puede imponer multas administrativas muy altas por infracciones en seguridad y salud en el trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la responsabilidad civil por un accidente de trabajo mortal, ¿cuál es el objetivo principal de la demanda por indemnización de daños y perjuicios?",
+    "opciones": [
+      {
+        "text": "Otorgar una compensación económica a los familiares o deudos para resarcir el daño sufrido.",
+        "isCorrect": true,
+        "rationale": "La responsabilidad civil busca cuantificar e indemnizar el menoscabo económico y moral causado a los familiares directos a causa de la pérdida del trabajador."
+      },
+      {
+        "text": "Imponer una pena privativa de libertad al gerente general de la empresa.",
+        "isCorrect": false,
+        "rationale": "La pena de cárcel corresponde exclusivamente a la vía penal, no a la vía civil de daños y perjuicios."
+      },
+      {
+        "text": "Clausurar definitivamente las operaciones de la unidad minera.",
+        "isCorrect": false,
+        "rationale": "La paralización de labores o clausura es una medida administrativa decretada por la autoridad fiscalizadora, no el fin directo de la reparación civil."
+      },
+      {
+        "text": "Transferir las acciones de la empresa minera a favor del sindicato.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad civil no contempla la expropiación ni transferencia patrimonial accionaria a las organizaciones sindicales."
+      },
+      {
+        "text": "Cobrar una multa coactiva destinada al presupuesto del Poder Judicial.",
+        "isCorrect": false,
+        "rationale": "El dinero de las indemnizaciones civiles se destina directamente a los deudos afectados, no al presupuesto de las instituciones estatales."
+      }
+    ],
+    "hint": "Se enfoca en la restitución monetaria o reparación del daño patrimonial y extrapatrimonial a los familiares afectados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el artículo 168-A del Código Penal peruano, ¿qué elemento se requiere en la conducta del empleador para que se configure el delito de atentado contra las condiciones de seguridad y salud en el trabajo?",
+    "opciones": [
+      {
+        "text": "La infracción deliberada de las normas de seguridad y salud estando legalmente obligado a adoptarlas.",
+        "isCorrect": true,
+        "rationale": "El tipo penal exige que el sujeto activo infrinja de forma deliberada y consciente las normas preventivas de riesgo laboral poniendo en peligro o causando la muerte o lesiones."
+      },
+      {
+        "text": "Un error involuntario e impredecible en el mantenimiento de los equipos.",
+        "isCorrect": false,
+        "rationale": "Los accidentes imprevisibles o por mera negligencia fortuita sin infracción deliberada de normas no cumplen con la exigencia del tipo penal doloso/deliberado previsto en la norma."
+      },
+      {
+        "text": "La aprobación previa por escrito de la SUNAFIL para iniciar el proceso penal.",
+        "isCorrect": false,
+        "rationale": "Aunque el informe de la SUNAFIL es un elemento de prueba clave, la norma penal especifica que no se requiere un emplazamiento previo administrativo para la acción penal."
+      },
+      {
+        "text": "Que el trabajador accidentado haya tenido menos de un mes de antigüedad en el puesto.",
+        "isCorrect": false,
+        "rationale": "La antigüedad del trabajador no es un elemento condicionante ni un requisito del tipo penal estipulado en la ley."
+      },
+      {
+        "text": "Que el hecho ocurra exclusivamente durante un día festivo o domingo.",
+        "isCorrect": false,
+        "rationale": "El momento calendario de la jornada no influye en la configuración de la responsabilidad penal del empleador."
+      }
+    ],
+    "hint": "El tipo penal sanciona el incumplimiento consciente y voluntario de la normativa de prevención de riesgos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Quiénes pueden ser considerados sujetos activos (responsables) en la comisión de delitos de atentado contra las condiciones de seguridad e higiene laboral dentro de una organización?",
+    "opciones": [
+      {
+        "text": "Gerentes generales o representantes legales de la empresa.",
+        "isCorrect": true,
+        "rationale": "Quienes ostentan la representación legal y la toma de decisiones sobre los recursos de seguridad pueden responder penalmente si omitieron deliberadamente las medidas preventivas."
+      },
+      {
+        "text": "Supervisores de seguridad y salud en el trabajo.",
+        "isCorrect": true,
+        "rationale": "Los encargados directos del área de prevención que incumplan deliberadamente sus funciones de control de riesgos son pasibles de responsabilidad."
+      },
+      {
+        "text": "Jefes inmediatos o directores de planta.",
+        "isCorrect": true,
+        "rationale": "Las jefaturas inmediatas con poder de mando sobre el personal y las instalaciones responden si imponen condiciones peligrosas violando la ley."
+      },
+      {
+        "text": "Los familiares de las víctimas del accidente laboral.",
+        "isCorrect": false,
+        "rationale": "Los familiares o deudos actúan como parte agraviada o demandante, nunca como sujetos activos del delito."
+      },
+      {
+        "text": "Inspectores de trabajo de la SUNAFIL que realizaron la inspección técnica.",
+        "isCorrect": false,
+        "rationale": "Los inspectores ejercen función pública de fiscalización; el delito sanciona la conducta del empleador o personal directivo de la empresa."
+      }
+    ],
+    "hint": "Aplica a las personas dentro de la empresa que poseen la autoridad y el deber de velar por la seguridad de los trabajadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Si una empresa se niega a pagar las multas impuestas por la SUNAFIL por infracciones graves de seguridad, ¿qué medida ejecuta la administración para hacer efectivo el cobro?",
+    "opciones": [
+      {
+        "text": "Inicia un procedimiento de cobranza coactiva mediante el embargo de bienes o cuentas bancarias.",
+        "isCorrect": true,
+        "rationale": "La SUNAFIL cuenta con su propia área de ejecutoría coactiva, la cual exige el pago reteniendo o embargando los activos y cuentas de la empresa."
+      },
+      {
+        "text": "Solicita inmediatamente la detención policial de todos los empleados de la empresa.",
+        "isCorrect": false,
+        "rationale": "La cobranza coactiva es un procedimiento administrativo patrimonial, no una orden de detención masiva de los trabajadores subordinados."
+      },
+      {
+        "text": "Deriva la deuda a la municipalidad local para que la convierta en arbitrios.",
+        "isCorrect": false,
+        "rationale": "Las multas de la SUNAFIL son de ámbito estatal socio-laboral y no se transfieren al sistema tributario municipal de arbitrios."
+      },
+      {
+        "text": "Anula de forma automática el Registro Nacional de Identificación y Estado Civil (RENIEC) de los accionistas.",
+        "isCorrect": false,
+        "rationale": "Las multas administrativas afectan el patrimonio comercial de la entidad infractora, sin alterar la identidad personal ante la RENIEC."
+      },
+      {
+        "text": "Cede la titularidad de las maquinarias a favor de los sindicatos regionales de forma directa.",
+        "isCorrect": false,
+        "rationale": "Las multas impuestas por entidades públicas no transfieren propiedad de activos a los sindicatos."
+      }
+    ],
+    "hint": "Consiste en la ejecución forzosa sobre el patrimonio o las cuentas corrientes de la entidad deudora.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué entidad es el organismo técnico especializado encargado de la fiscalización y sanción en materia ambiental en el Perú?",
+    "opciones": [
+      {
+        "text": "OEFA (Organismo de Evaluación y Fiscalización Ambiental).",
+        "isCorrect": true,
+        "rationale": "El OEFA es el ente rector del SINEFA encargado de evaluar, supervisar, fiscalizar y sancionar el cumplimiento de la normativa ambiental en el Perú."
+      },
+      {
+        "text": "SERNANP (Servicio Nacional de Áreas Naturales Protegidas por el Estado).",
+        "isCorrect": false,
+        "rationale": "El SERNANP dirige la conservación de las Áreas Naturales Protegidas, pero no es el ente rector general de la fiscalización ambiental de las industrias."
+      },
+      {
+        "text": "SERFOR (Servicio Nacional Forestal y de Fauna Silvestre).",
+        "isCorrect": false,
+        "rationale": "El SERFOR gestiona de manera específica los recursos de flora y fauna silvestre, mas no la fiscalización ambiental minera e industrial ambiental integral."
+      },
+      {
+        "text": "INGEMMET (Instituto Geológico, Minero y Metalúrgico).",
+        "isCorrect": false,
+        "rationale": "INGEMMET otorga los títulos de concesiones mineras y administra el catastral minero nacional, sin facultades de fiscalización ambiental general."
+      },
+      {
+        "text": "SUNAT (Superintendencia Nacional de Aduanas y de Administración Tributaria).",
+        "isCorrect": false,
+        "rationale": "La SUNAT ejerce labores tributarias y de control de insumos químicos, pero no es la autoridad ambiental del país."
+      }
+    ],
+    "hint": "Adscrito al Ministerio del Ambiente, aplica sanciones e inspecciones sobre los estándares de calidad ambiental e impacto industrial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del SENACE en la fase previa al desarrollo de proyectos mineros de gran envergadura?",
+    "opciones": [
+      {
+        "text": "Evaluar y aprobar los Estudios de Impacto Ambiental detallados (EIA-d).",
+        "isCorrect": true,
+        "rationale": "El SENACE es la entidad pública encargada de revisar y aprobar los Estudios de Impacto Ambiental detallados para grandes proyectos de inversión."
+      },
+      {
+        "text": "Conceder los títulos de propiedad de los terrenos superficiales a las mineras.",
+        "isCorrect": false,
+        "rationale": "La propiedad de los terrenos se gestiona con particulares o comunidades campesinas mediante acuerdos de compraventa o servidumbre, no mediante el SENACE."
+      },
+      {
+        "text": "Otorgar la licencia de uso de armas de fuego al personal de seguridad privada.",
+        "isCorrect": false,
+        "rationale": "El control de armas y explosivos es potestad exclusiva de la SUCAMEC."
+      },
+      {
+        "text": "Fijar el valor comercial de exportación del gramo de oro en el mercado internacional.",
+        "isCorrect": false,
+        "rationale": "El precio de las materias primas se regula por los mercados financieros globales y la oferta/demanda."
+      },
+      {
+        "text": "Patrocinar la defensa jurídica penal de los empresarios mineros en juicio.",
+        "isCorrect": false,
+        "rationale": "El SENACE es un organismo evaluador técnico del Estado y no presta servicios de asesoría penal a privados."
+      }
+    ],
+    "hint": "Esta entidad revisa los instrumentos de gestión ambiental para determinar cómo la empresa mitigará el impacto en la naturaleza.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el Código Penal peruano, ¿cuál es la pena privativa de libertad básica establecida para el delito de minería ilegal?",
+    "opciones": [
+      {
+        "text": "No menor de 4 ni mayor de 8 años de prisión.",
+        "isCorrect": true,
+        "rationale": "La norma tipifica el delito básico de minería ilegal sancionando las actividades no autorizadas de exploración, extracción o explotación con penas de 4 a 8 años."
+      },
+      {
+        "text": "No menor de 6 meses ni mayor de 1 año de prisión.",
+        "isCorrect": false,
+        "rationale": "Esta penalidad es demasiado leve y no corresponde a la gravedad con la que el Código Penal sanciona el delito ambiental de minería ilegal."
+      },
+      {
+        "text": "Cadena perpetua en todos los casos de extracción.",
+        "isCorrect": false,
+        "rationale": "La cadena perpetua no está prevista en la legislación penal peruana para la minería ilegal en su tipo básico."
+      },
+      {
+        "text": "Trabajo comunitario obligatorio por un máximo de 2 semanas.",
+        "isCorrect": false,
+        "rationale": "El delito de minería ilegal tiene pena privativa de libertad efectiva dada la grave alteración que genera al ecosistema."
+      },
+      {
+        "text": "De 15 a 25 años de prisión suspendida de manera automática.",
+        "isCorrect": false,
+        "rationale": "Las penas mayores a 4 años son de carácter efectivo y la horquilla básica no alcanza los 25 años salvo agravantes complejas o concurso de delitos."
+      }
+    ],
+    "hint": "Se trata de una pena privativa de la libertad de carácter efectivo que supera los 3 años de prisión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes situaciones constituyen circunstancias agravantes en la comisión del delito de minería ilegal?",
+    "opciones": [
+      {
+        "text": "Realizar la actividad de extracción dentro de Áreas Naturales Protegidas.",
+        "isCorrect": true,
+        "rationale": "Operar en zonas de alta fragilidad ecológica como las ANP incrementa la severidad del delito y su pena."
+      },
+      {
+        "text": "Utilizar a menores de edad para la realización de las actividades ilícitas.",
+        "isCorrect": true,
+        "rationale": "La explotación o uso de menores de edad agrava la responsabilidad penal del agente delictivo."
+      },
+      {
+        "text": "Afectar sistemas de irrigación o fuentes de agua destinadas al consumo humano.",
+        "isCorrect": true,
+        "rationale": "Poner en riesgo la salud pública y el suministro de agua para la población se contempla explícitamente como agravante."
+      },
+      {
+        "text": "Contar con la aprobación formal del Estudio de Impacto Ambiental por el SENACE.",
+        "isCorrect": false,
+        "rationale": "Contar con autorización e instrumentos ambientales aprobados elimina la ilegalidad de la actividad minera."
+      },
+      {
+        "text": "Pagar puntualmente los impuestos sobre la renta de quinta categoría.",
+        "isCorrect": false,
+        "rationale": "El cumplimiento tributario no constituye un elemento agravante de la tipificación penal ambiental."
+      }
+    ],
+    "hint": "Considera aquellas acciones que aumentan el peligro para la salud humana, la infancia y zonas ecológicamente protegidas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué entidad pública tiene la función específica de aprobar los instrumentos de gestión ambiental dentro de las Áreas Naturales Protegidas (ANP)?",
+    "opciones": [
+      {
+        "text": "SERNANP (Servicio Nacional de Áreas Naturales Protegidas por el Estado).",
+        "isCorrect": true,
+        "rationale": "El SERNANP es la autoridad que vela por la conservación de las ANP y aprueba las compatibilidades e instrumentos de gestión en dichas zonas."
+      },
+      {
+        "text": "Ministerio de Trabajo y Promoción del Empleo (MTPE).",
+        "isCorrect": false,
+        "rationale": "El MTPE regula la política sociolaboral y el empleo nacional, sin competencias ecológicas en Áreas Naturales Protegidas."
+      },
+      {
+        "text": "Defensoría del Pueblo.",
+        "isCorrect": false,
+        "rationale": "La Defensoría supervisa los deberes de la administración estatal y derechos fundamentales, no emite licencias ni aprueba instrumentos ambientales."
+      },
+      {
+        "text": "SUNAFIL.",
+        "isCorrect": false,
+        "rationale": "SUNAFIL se restringe al campo laboral de las condiciones de trabajo, no a la gestión biológica de parques o reservas protegidas."
+      },
+      {
+        "text": "Poder Judicial.",
+        "isCorrect": false,
+        "rationale": "El Poder Judicial imparte justicia penal, civil y laboral, pero no aprueba administrativamente planes de gestión ambiental."
+      }
+    ],
+    "hint": "Es el organismo estatal especializado en la tutela y preservación de la biodiversidad de parques nacionales y reservas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de los delitos ambientales, ¿quién actúa formalmente como sujeto pasivo (agraviado) en la representación jurídica ante un juzgado?",
+    "opciones": [
+      {
+        "text": "El Estado peruano, representado por la Procuraduría Pública Especializada en Delitos Ambientales.",
+        "isCorrect": true,
+        "rationale": "Al ser los recursos naturales un patrimonio de la Nación, el Estado asume la condición de titular o agraviado representado por su procuraduría."
+      },
+      {
+        "text": "Las empresas multinacionales comercializadoras de maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "Las empresas vendedoras de insumos o maquinaria no ostentan la titularidad de los bienes biológicos afectados."
+      },
+      {
+        "text": "Los sindicatos de trabajadores de la SUNAT.",
+        "isCorrect": false,
+        "rationale": "Los gremios de trabajadores tributarios no son los titulares del bien jurídico medio ambiente."
+      },
+      {
+        "text": "El Ministerio de Economía y Finanzas de forma exclusiva como persona natural.",
+        "isCorrect": false,
+        "rationale": "La defensa procesal del medio ambiente corresponde a la Procuraduría Ambiental y no a funcionarios del MEF a título personal."
+      },
+      {
+        "text": "Las bancas privadas internacionales que financian proyectos mineros.",
+        "isCorrect": false,
+        "rationale": "Las entidades bancarias son actores financieros privados, no los representantes legales de la soberanía ambiental del país."
+      }
+    ],
+    "hint": "Recuerda que los recursos naturales son patrimonio de la Nación y la defensa del bien común recae en el sistema estatal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el primer trámite ambiental indispensable que debe tramitarse antes de iniciar labores de exploración o explotación minera formal?",
+    "opciones": [
+      {
+        "text": "Obtener la Certificación Ambiental aprobada mediante el estudio ambiental correspondiente.",
+        "isCorrect": true,
+        "rationale": "La legislación exige la Certificación Ambiental como paso fundacional para evaluar e identificar los impactos previstos antes de autorizar las actividades."
+      },
+      {
+        "text": "Comprar legalmente un lote de explosivos ante la SUCAMEC sin requerir estudios previos.",
+        "isCorrect": false,
+        "rationale": "La adquisición de explosivos exige permisos ambientales y autorizaciones operativas previas; no se realiza en primer lugar."
+      },
+      {
+        "text": "Solicitar la jubilación anticipada de todo el personal administrativo.",
+        "isCorrect": false,
+        "rationale": "La jubilación anticipada es un derecho previsional de los trabajadores calificados y no un trámite corporativo minero."
+      },
+      {
+        "text": "Firmar un contrato exclusivo de exportación de oro con refinerías extranjeras.",
+        "isCorrect": false,
+        "rationale": "Los contratos comerciales de venta no sustituyen ni anteceden los permisos administrativos y ambientales del Estado."
+      },
+      {
+        "text": "Pagar las multas por desacato interpuestas por el Poder Judicial.",
+        "isCorrect": false,
+        "rationale": "El pago de sanciones procesales no constituye el inicio del procedimiento administrativo de licenciamiento minero."
+      }
+    ],
+    "hint": "Se trata del documento que evalúa preventivamente el impacto que causará el proyecto en el ecosistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es el REINFO dentro del marco regulatorio de la pequeña minería y minería artesanal en el Perú?",
+    "opciones": [
+      {
+        "text": "El Registro Integral de Formalización Minera para mineros informales en proceso de formalización.",
+        "isCorrect": true,
+        "rationale": "El REINFO es el padrón administrado por el Estado que acoge a los mineros informales que buscan adecuarse a la legalidad."
+      },
+      {
+        "text": "Un sistema de sanciones privativas de libertad administrado por el Poder Judicial.",
+        "isCorrect": false,
+        "rationale": "El REINFO no es un código de penas penales sino un registro administrativo de formalización."
+      },
+      {
+        "text": "Un sindicato obligatorio para todos los ingenieros de minas del país.",
+        "isCorrect": false,
+        "rationale": "No constituye una organización sindical ni un colegio profesional."
+      },
+      {
+        "text": "Un impuesto especial que cobra la SUNAT por la venta ilícita de insumos químicos.",
+        "isCorrect": false,
+        "rationale": "No es una tasa ni una sanción tributaria, sino un instrumento legal de ordenamiento minero."
+      },
+      {
+        "text": "Un tratado internacional firmado entre Perú y la Unión Europea para la compra de oro.",
+        "isCorrect": false,
+        "rationale": "Es una herramienta de derecho interno peruano y no un convenio de comercio exterior."
+      }
+    ],
+    "hint": "Es un padrón de la administración pública diseñado para canalizar el paso de la informalidad a la legalidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una diferencia sustancial entre la minería informal y la minería ilegal según el ordenamiento legal peruano?",
+    "opciones": [
+      {
+        "text": "La minería informal opera en zonas permitidas y está en vías de formalización, mientras que la ilegal opera en áreas prohibidas.",
+        "isCorrect": true,
+        "rationale": "La ley distingue la minería informal (ubicada en zonas no prohibidas y con intención de formalizarse mediante el REINFO) de la ilegal, que usa medios prohibidos o se ubica en zonas excluidas."
+      },
+      {
+        "text": "La minería informal siempre utiliza dragas marinas y la minería ilegal solo usa picos manuales.",
+        "isCorrect": false,
+        "rationale": "El uso de maquinaria pesada o prohibida como dragas en cauces de ríos configura minería ilegal, no informal."
+      },
+      {
+        "text": "La minería ilegal paga impuestos a la SUNAT y la informal se niega a inscribirse en el RUC.",
+        "isCorrect": false,
+        "rationale": "La minería ilegal no tributa ni se somete al fisco, mientras que la informal busca regularizar su situación contable."
+      },
+      {
+        "text": "La minería informal es un delito penal castigado con cadena perpetua y la ilegal es una falta leve.",
+        "isCorrect": false,
+        "rationale": "La minería informal no constituye un delito tipificado, mientras que la minería ilegal sí es un delito penal severo."
+      },
+      {
+        "text": "La minería ilegal es exclusiva de grandes multinacionales y la informal solo de Gobiernos Regionales.",
+        "isCorrect": false,
+        "rationale": "La distinción legal responde al cumplimiento de requisitos y zonas de operación, no al volumen corporativo o estatal."
+      }
+    ],
+    "hint": "Observa el factor geográfico y la prohibición de las áreas donde se realiza la extracción de minerales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes afecciones a la salud corresponden a enfermedades profesionales típicas sufridas por trabajadores mineros expuestos a polvos e insumos nocivos?",
+    "opciones": [
+      {
+        "text": "Silicosis.",
+        "isCorrect": true,
+        "rationale": "Es una enfermedad pulmonar incurable causada por la inhalación prolongada de polvo de sílice libre en minas."
+      },
+      {
+        "text": "Neumoconiosis.",
+        "isCorrect": true,
+        "rationale": "Constituye la enfermedad ocupacional respiratoria de mayor prevalencia en las actividades extractivas subterráneas."
+      },
+      {
+        "text": "Fibrosis pulmonar por exposición a polvos minerales.",
+        "isCorrect": true,
+        "rationale": "El depósito e inhalación continua de partículas minerales causa cicatrización y pérdida de capacidad pulmonar."
+      },
+      {
+        "text": "Miopía hereditaria de nacimiento.",
+        "isCorrect": false,
+        "rationale": "La miopía genética o congénita no es una patología provocada por la inhalación o exposición a agentes químicos o físicos mineros."
+      },
+      {
+        "text": "Gastritis nerviosa por estrés académico.",
+        "isCorrect": false,
+        "rationale": "No está catalogada como la afección pulmonar incapacitante característica del trabajo operativo minero."
+      }
+    ],
+    "hint": "Son afecciones crónicas del sistema respiratorio asociadas a la inhalación continuada de partículas de sílice y minerales en el socavón.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué entidad técnica del Estado peruano se encarga de regular, controlar y autorizar el uso de explosivos en la actividad minera?",
+    "opciones": [
+      {
+        "text": "SUCAMEC (Superintendencia Nacional de Control de Servicios de Seguridad, Armas, Municiones y Explosivos de Uso Civil).",
+        "isCorrect": true,
+        "rationale": "La SUCAMEC norma y fiscaliza el almacenamiento, traslado y uso de material explosivo de uso civil e industrial."
+      },
+      {
+        "text": "SUNAFIL.",
+        "isCorrect": false,
+        "rationale": "La SUNAFIL supervisa la prevención de riesgos laborales del personal, pero no emite las licencias de insumos y explosivos de uso civil."
+      },
+      {
+        "text": "OEFA.",
+        "isCorrect": false,
+        "rationale": "El OEFA evalúa el impacto ambiental, no el registro o tenencia de dinamita y armamento."
+      },
+      {
+        "text": "RENIEC.",
+        "isCorrect": false,
+        "rationale": "RENIEC emite los documentos de identidad para personas naturales y gestiona el estado civil."
+      },
+      {
+        "text": "INABIF.",
+        "isCorrect": false,
+        "rationale": "El INABIF es un organismo de desarrollo y protección social a familias vulnerables."
+      }
+    ],
+    "hint": "Sus siglas abarcan el control de servicios de seguridad, armas, municiones y productos explosivos civiles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué edad mínima establecida por el régimen especial previsional minero pueden jubilarse anticipadamente los trabajadores que realizan labores operativas en mina subterránea con exposición a riesgos?",
+    "opciones": [
+      {
+        "text": "55 años de edad.",
+        "isCorrect": true,
+        "rationale": "La ley de jubilación minera permite el retiro anticipado a los 55 años de edad debido al desgaste físico y exposición a enfermedades profesionales."
+      },
+      {
+        "text": "70 años de edad.",
+        "isCorrect": false,
+        "rationale": "70 años es una edad avanzada que excede tanto el régimen ordinario (65 años) como el de jubilación anticipada."
+      },
+      {
+        "text": "30 años de edad de forma obligatoria.",
+        "isCorrect": false,
+        "rationale": "30 años es una edad muy temprana que no se corresponde con los años de aportación y límites previsionales exigidos."
+      },
+      {
+        "text": "65 años sin excepción en ningún régimen.",
+        "isCorrect": false,
+        "rationale": "65 años es el límite del régimen general ordinario del sistema nacional de pensiones, no la pensión especial minera."
+      },
+      {
+        "text": "80 años previa autorización médica.",
+        "isCorrect": false,
+        "rationale": "Ningún régimen legal en el Perú fija la jubilación ordinaria o de riesgo a los 80 años."
+      }
+    ],
+    "hint": "Representa una reducción de 10 años en comparación con la edad ordinaria de jubilación del régimen general (65 años).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el derecho individual del trabajo en el Perú, ¿cuál es la presunción o regla general sobre la duración de todo contrato de trabajo?",
+    "opciones": [
+      {
+        "text": "Se presume celebrado a tiempo indeterminado (indefinido).",
+        "isCorrect": true,
+        "rationale": "Por el principio de continuidad laboral, la regla general en el Perú es la contratación a tiempo indeterminado; las modalidades sujetas a plazo son la excepción."
+      },
+      {
+        "text": "Se presume siempre de carácter temporal por máximo una semana.",
+        "isCorrect": false,
+        "rationale": "La temporalidad exige causa objetiva demostrable; no se presume legalmente de manera predeterminada a corto plazo."
+      },
+      {
+        "text": "Se presume como un contrato de locación de servicios comerciales sin derechos.",
+        "isCorrect": false,
+        "rationale": "La locación de servicios es de naturaleza civil no subordinada; en materia laboral la presencia de subordinación presume contrato de trabajo."
+      },
+      {
+        "text": "Se considera automáticamente un contrato voluntario no remunerado.",
+        "isCorrect": false,
+        "rationale": "El contrato laboral es oneroso por definición, garantizando el pago de una remuneración."
+      },
+      {
+        "text": "Se rige como una pasantía escolar sin beneficios sociolaborales.",
+        "isCorrect": false,
+        "rationale": "Las modalidades formativas tienen un régimen distinto que no se confunde con el contrato de trabajo de la actividad privada."
+      }
+    ],
+    "hint": "De acuerdo con el principio de continuidad laboral, el Estado protege la estabilidad en el empleo por tiempo indefinido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la duración máxima legal establecida por la Constitución y la ley laboral para la jornada ordinaria de trabajo en el Perú?",
+    "opciones": [
+      {
+        "text": "8 horas diarias o 48 horas semanales como máximo.",
+        "isCorrect": true,
+        "rationale": "La normativa constitucional y legal impone el límite máximo de 8 horas al día o un tope de 48 horas a la semana."
+      },
+      {
+        "text": "12 horas diarias sin pago de horas extras.",
+        "isCorrect": false,
+        "rationale": "Laborar 12 horas ordinarias sobrepasa la jornada máxima permitida sin el reconocimiento del sobretiempo compensado."
+      },
+      {
+        "text": "20 horas semanales distribuidas en dos días.",
+        "isCorrect": false,
+        "rationale": "20 horas semanales corresponde a una jornada a tiempo parcial (part-time), no al tope máximo permitido para el régimen general."
+      },
+      {
+        "text": "60 horas semanales obligatorias de lunes a domingo.",
+        "isCorrect": false,
+        "rationale": "Superar las 48 horas semanales vulnera los límites legales imperativos y los descansos remunerados."
+      },
+      {
+        "text": "15 horas diarias únicamente en turnos nocturnos.",
+        "isCorrect": false,
+        "rationale": "Los turnos nocturnos están sujetos a topes legales y sobretasa, prohibiéndose jornadas excesivas que pongan en peligro al trabajador."
+      }
+    ],
+    "hint": "Corresponde al estándar laboral clásico reconocido constitucionalmente de 8 horas de labor al día.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué seguro obligatorio debe contratar el empleador desde el primer día de trabajo para proteger al personal que realiza actividades operativas de alto riesgo (como la minería)?",
+    "opciones": [
+      {
+        "text": "SCTR (Seguro Complementario de Trabajo de Riesgo).",
+        "isCorrect": true,
+        "rationale": "El SCTR brinda cobertura médica y prestaciones económicas por accidentes de trabajo y enfermedades profesionales a quienes laboran en actividades de alto riesgo."
+      },
+      {
+        "text": "SOAT (Seguro Obligatorio de Accidentes de Tránsito).",
+        "isCorrect": false,
+        "rationale": "El SOAT cubre únicamente accidentes derivados de tránsito vehicular en vías públicas, no riesgos dentro de la operación minera."
+      },
+      {
+        "text": "Seguro de Desgravamen Hipotecario.",
+        "isCorrect": false,
+        "rationale": "Es un seguro de carácter bancario/financiero que cubre saldos deudores de créditos ante el fallecimiento del cliente."
+      },
+      {
+        "text": "Seguro agrario catastrófico.",
+        "isCorrect": false,
+        "rationale": "El seguro agrario cubre pérdidas en cultivos o crianza por fenómenos climáticos a favor del sector agrícola."
+      },
+      {
+        "text": "Seguro vehicular de responsabilidad civil contra terceros.",
+        "isCorrect": false,
+        "rationale": "Protege los daños materiales de vehículos particulares, sin cubrir de forma integral la salud ocupacional del trabajador."
+      }
+    ],
+    "hint": "Cubre la atención médica especializada y pensiones por invalidez o fallecimiento derivadas de labores de alto riesgo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué documento legal derivado de la SUNAT está obligado a entregar el empleador al trabajador como constancia formal de su alta en la planilla electrónica?",
+    "opciones": [
+      {
+        "text": "La constancia del T-Registro.",
+        "isCorrect": true,
+        "rationale": "El empleador debe entregar la constancia del T-Registro acreditando la inscripción formal del trabajador en la planilla electrónica del Estado."
+      },
+      {
+        "text": "El pasaporte diplomático del Ministerio de Relaciones Exteriores.",
+        "isCorrect": false,
+        "rationale": "El pasaporte diplomático es exclusivo para funcionarios de la Cancillería y del servicio exterior."
+      },
+      {
+        "text": "La libreta militar de las Fuerzas Armadas.",
+        "isCorrect": false,
+        "rationale": "Es un documento de registro militar ajeno a la relación de trabajo privada o al sistema laboral tributario."
+      },
+      {
+        "text": "La copia del estatuto social fundacional de la empresa del siglo pasado.",
+        "isCorrect": false,
+        "rationale": "La minuta o estatuto fundacional no acredita la relación laboral individual ni el alta en la planilla electrónica."
+      },
+      {
+        "text": "La licencia de conducir de clase A-III profesional.",
+        "isCorrect": false,
+        "rationale": "Es un permiso emitido por el MTC para conducir vehículos y no una constancia laboral de registro ante la SUNAT."
+      }
+    ],
+    "hint": "Es el comprobante de registro en la plataforma virtual de planillas administrada conjuntamente con la SUNAT.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes beneficios están cubiertos y garantizados a favor de los deudos por el Seguro de Vida Ley desde el inicio de la relación laboral?",
+    "opciones": [
+      {
+        "text": "Indemnización económica a los beneficiarios en caso de muerte natural del trabajador.",
+        "isCorrect": true,
+        "rationale": "El seguro de Vida Ley indemniza con un número fijo de remuneraciones a los beneficiarios tras la muerte natural del empleado."
+      },
+      {
+        "text": "Indemnización económica por muerte accidental del trabajador.",
+        "isCorrect": true,
+        "rationale": "En caso de accidente mortal, la cobertura del seguro otorga un pago equivalente a 32 remuneraciones a sus herederos legales."
+      },
+      {
+        "text": "Indemnización por invalidez total y permanente originada por un accidente.",
+        "isCorrect": true,
+        "rationale": "La invalidez permanente devenida de un accidente habilita el cobro directo de la póliza de Vida Ley al propio trabajador."
+      },
+      {
+        "text": "Financiamiento de viajes turísticos internacionales anuales.",
+        "isCorrect": false,
+        "rationale": "Las pólizas de seguro de vida laboral no financian paquetes vacacionales ni pasajes de ocio."
+      },
+      {
+        "text": "Pago de multas por infracciones de tránsito cometidas por los hijos del trabajador.",
+        "isCorrect": false,
+        "rationale": "Las infracciones administrativas personales de los familiares no forman parte de las coberturas previsionales o de vida."
+      }
+    ],
+    "hint": "Protege económicamente a los familiares directos mediante indemnizaciones monetarias ante el fallecimiento o la invalidez del trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A partir de cuántos trabajadores en planilla exige la legislación peruana que una empresa apruebe y cuente obligatoriamente con un Reglamento Interno de Seguridad y Salud en el Trabajo (RISST)?",
+    "opciones": [
+      {
+        "text": "A partir de 20 o más trabajadores.",
+        "isCorrect": true,
+        "rationale": "La Ley N° 29783 dispone que las empresas con 20 o más trabajadores deben elaborar obligatoriamente su Reglamento Interno de SST."
+      },
+      {
+        "text": "Únicamente cuando superen los 10,000 trabajadores.",
+        "isCorrect": false,
+        "rationale": "Este volumen es excesivo y dejaría sin reglamento preventivo a casi la totalidad de empresas del país."
+      },
+      {
+        "text": "A partir de 2 trabajadores en total.",
+        "isCorrect": false,
+        "rationale": "Para empresas con menos de 20 trabajadores se exige la designación de un Supervisor de SST, pero no la elaboración formal obligatoria del RISST."
+      },
+      {
+        "text": "A partir de 500 trabajadores únicamente si están sindicalizados.",
+        "isCorrect": false,
+        "rationale": "El umbral legal de 20 trabajadores no depende de la existencia previa de un sindicato de empresa."
+      },
+      {
+        "text": "No existe ningún límite y siempre es facultativo.",
+        "isCorrect": false,
+        "rationale": "El ordenamiento peruano establece mandatos de obligatorio cumplimiento según el número de personal contratado."
+      }
+    ],
+    "hint": "Es la cifra mínima de personal que también determina la obligación de constituir un Comité Paritario de SST.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes constituyen obligaciones legales directas del empleador en materia de seguridad y salud en el trabajo según la normativa vigente?",
+    "opciones": [
+      {
+        "text": "Entregar gratuitamente a los trabajadores los Equipos de Protección Personal (EPP) adecuados.",
+        "isCorrect": true,
+        "rationale": "Los EPP deben ser suministrados sin costo por el empleador atendiendo a los riesgos específicos de la labor."
+      },
+      {
+        "text": "Realizar los exámenes médicos ocupacionales correspondientes al personal.",
+        "isCorrect": true,
+        "rationale": "Es obligación de la empresa evaluar el estado de salud de sus trabajadores mediante exámenes de ingreso, periódicos y de retiro."
+      },
+      {
+        "text": "Brindar capacitaciones en materia de prevención de riesgos (mínimo 4 al año).",
+        "isCorrect": true,
+        "rationale": "La ley exige al menos cuatro capacitaciones al año en materia de seguridad y salud adaptadas al puesto."
+      },
+      {
+        "text": "Cobrar mensualmente el costo del casco y botas de seguridad en la boleta del trabajador.",
+        "isCorrect": false,
+        "rationale": "Está expresamente prohibido descontar o trasladar el costo del equipamiento de protección personal al salario del trabajador."
+      },
+      {
+        "text": "Obligar al trabajador a contratar a su propio médico particular para los exámenes de ingreso.",
+        "isCorrect": false,
+        "rationale": "La financiación y organización de los exámenes médicos ocupacionales es responsabilidad económica exclusiva del empleador."
+      }
+    ],
+    "hint": "Garantizan la gratuidad de los implementos de protección y la evaluación técnica periódica de la salud en la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando ocurre un accidente laboral fatal dentro de una operación minera en el Perú por inobservancia de la normativa de seguridad, ¿cuáles son los tres tipos de responsabilidad jurídica que se configuran de manera independiente y concurrente?",
+    "opciones": [
+      {
+        "text": "Responsabilidad penal (privación de libertad), civil (indemnización por daños y perjuicios) y administrativa (multas y sanciones impuestas por la SUNAFIL).",
+        "isCorrect": true,
+        "rationale": "El ordenamiento jurídico peruano contempla que un evento fatal por negligencia o infracción de normas de seguridad genera sanciones administrativas frente a la autoridad de fiscalización, la obligación civil de reparar económicamente a los deudos y la sanción penal para los responsables."
+      },
+      {
+        "text": "Responsabilidad penal, responsabilidad política y responsabilidad comercial frente a los gremios.",
+        "isCorrect": false,
+        "rationale": "Las responsabilidades políticas o comerciales no constituyen vías jurídicas formales de sanción o resarcimiento por accidentes laborales."
+      },
+      {
+        "text": "Únicamente responsabilidad civil contractual y responsabilidad disciplinaria corporativa interna.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad ante un accidente mortal no se limita al ámbito interno de la empresa, sino que activa de oficio las esferas penal, civil y administrativa del Estado."
+      },
+      {
+        "text": "Responsabilidad tributaria ante la SUNAT y responsabilidad gremial ante el Colegio de Ingenieros.",
+        "isCorrect": false,
+        "rationale": "La SUNAT y los colegios profesionales no tienen competencia en la determinación de responsabilidades jurídicas por siniestros laborales mortales."
+      },
+      {
+        "text": "Responsabilidad contractual exclusiva cubierta en su totalidad por la póliza del SCTR.",
+        "isCorrect": false,
+        "rationale": "El SCTR cubre prestaciones médicas y pensionarias de la seguridad social, pero no exime ni sustituye la responsabilidad penal, civil ni administrativa de la empresa o directivos."
+      }
+    ],
+    "hint": "Considera los tres ámbitos jurídicos: la sanción punitiva del Estado, la reparación económica a los familiares y la multa de la autoridad inspectiva del trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Conforme al artículo 168-A del Código Penal peruano, ¿cuál es el elemento subjetivo e imprescindible para configurar la tipicidad penal agravada (pena de 4 a 8 años) en casos de accidentes de trabajo mortales?",
+    "opciones": [
+      {
+        "text": "La infracción deliberada a las normas de seguridad y salud en el trabajo a las que se está legalmente obligado, causando la muerte del trabajador.",
+        "isCorrect": true,
+        "rationale": "El tipo penal exige intencionalidad o inobservancia deliberada en el incumplimiento de las medidas preventivas obligatorias que desencadenen el resultado fatal."
+      },
+      {
+        "text": "El simple descuido o error involuntario no calificado en la supervisión de campo.",
+        "isCorrect": false,
+        "rationale": "La culpa levísima o el error involuntario no configuran la tipicidad dolosa o deliberada exigida por el artículo 168-A del Código Penal."
+      },
+      {
+        "text": "Haber contratado a un trabajador sin experiencia previa en el sector minero.",
+        "isCorrect": false,
+        "rationale": "La falta de experiencia del trabajador no constituye de por sí el elemento subjetivo de dolo o infracción deliberada atribuible al empleador."
+      },
+      {
+        "text": "La ocurrencia imprevista de un fenómeno de fuerza mayor o desastre natural en la mina.",
+        "isCorrect": false,
+        "rationale": "Los eventos de fuerza mayor o caso fortuito son causas eximentes de responsabilidad que descartan la infracción deliberada de normas de seguridad."
+      },
+      {
+        "text": "La omisión del pago puntual de la póliza de seguros privados de salud de la empresa.",
+        "isCorrect": false,
+        "rationale": "El tipo penal del 168-A sanciona la inobservancia deliberada de normas preventivas de seguridad e higiene, no faltas administrativas de pagos a aseguradoras."
+      }
+    ],
+    "hint": "El tipo penal evalúa si la omisión de las medidas de seguridad por parte del responsable fue consciente e intencional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En un proceso judicial civil interpuesto por los familiares de un trabajador fallecido en un accidente minero, ¿qué conceptos indemnizatorios pueden ser amparados por el juez?",
+    "opciones": [
+      {
+        "text": "Lucro cesante, correspondiente a los ingresos probables que el trabajador hubiese generado durante su vida laboral proyectada.",
+        "isCorrect": true,
+        "rationale": "El lucro cesante busca cuantificar y resarcir la ganancia patrimonial neta que la víctima dejó de percibir a causa de su deceso prematuro."
+      },
+      {
+        "text": "Daño emergente, referido a los gastos inmediatos y directos ocasionados a consecuencia del evento fatal.",
+        "isCorrect": true,
+        "rationale": "El daño emergente abarca los perjuicios patrimoniales directos e inmediatos derivados del accidente, tales como gastos médicos o sepelio."
+      },
+      {
+        "text": "Daño moral, correspondiente a la afectación emocional y el sufrimiento causado a los deudos por la pérdida del familiar.",
+        "isCorrect": true,
+        "rationale": "La indemnización por daño moral compensa el dolor, la aflicción y el menoscabo afectivo sufrido por los deudos del trabajador."
+      },
+      {
+        "text": "Multa coercitiva administrativa de carácter punitivo a favor del tesoro público.",
+        "isCorrect": false,
+        "rationale": "Las multas administrativas corresponden al derecho público sancionador (SUNAFIL) y no forman parte de las pretensiones indemnizatorias de los deudos en la vía civil."
+      },
+      {
+        "text": "Sanción pecuniaria penal por concepto de reparación civil automática sin acreditación probatoria.",
+        "isCorrect": false,
+        "rationale": "En la vía civil, los demandantes deben acreditar el nexo causal y la cuantía o magnitud de los daños alegados para obtener sentencia favorable."
+      }
+    ],
+    "hint": "Diferencia entre los daños patrimoniales (pérdidas directas o futuras), los extracontractuales no patrimoniales y las sanciones administrativas estatales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Ante la detección de una condición de riesgo grave e inminente para la vida de los trabajadores durante una inspección en una unidad minera, ¿qué medida cautelar inmediata puede disponer el inspector de trabajo de la SUNAFIL?",
+    "opciones": [
+      {
+        "text": "Ordenar la paralización inmediata de las tareas o el cierre temporal del área de trabajo afectada.",
+        "isCorrect": true,
+        "rationale": "La Ley General de Inspección del Trabajo faculta al inspector a paralizar operaciones o cerrar unidades cuando identifique un riesgo grave e inminente para la salud o vida de los trabajadores."
+      },
+      {
+        "text": "Emitir una amonestación escrita otorgando un plazo improrrogable de 60 días para subsanar.",
+        "isCorrect": false,
+        "rationale": "Frente a un riesgo inminente para la vida no procede otorgar plazos prolongados, sino medidas inmediatas de aseguramiento y paralización."
+      },
+      {
+        "text": "Solicitar la intervención de la fuerza pública para la detención preventiva del residente de obra.",
+        "isCorrect": false,
+        "rationale": "Los inspectores de la SUNAFIL carecen de facultades penales para ordenar detenciones corporales; su competencia es estrictamente laboral y preventiva."
+      },
+      {
+        "text": "Suspender de oficio el Registro Único de Contribuyentes (RUC) de la titular minera.",
+        "isCorrect": false,
+        "rationale": "La suspensión de tributos o RUC es competencia exclusiva de la administración tributaria (SUNAT), no de la autoridad inspectiva del trabajo."
+      },
+      {
+        "text": "Exigir la renuncia inmediata del Comité de Seguridad y Salud en el Trabajo de la empresa.",
+        "isCorrect": false,
+        "rationale": "La SUNAFIL no puede destituir a los miembros del CSST, órgano paritario elegido conforme al procedimiento legal establecido."
+      }
+    ],
+    "hint": "Enfócate en las facultades administrativas inmediatas de la autoridad inspectiva para salvaguardar la integridad física en el lugar de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Mientras se ejecuta una medida de paralización temporal de labores ordenada por la SUNAFIL debido a condiciones de trabajo peligrosas, ¿cuál es la obligación legal del empleador respecto a los trabajadores afectados?",
+    "opciones": [
+      {
+        "text": "Continuar pagando las remuneraciones y beneficios sociales correspondientes sin perjudicar la jornada ordinaria ni imputar el periodo a vacaciones.",
+        "isCorrect": true,
+        "rationale": "La normativa prohíbe que la paralización imputable al empleador perjudique económicamente al trabajador, impidiendo el descuento de salarios o la imposición de vacaciones."
+      },
+      {
+        "text": "Suspender el pago de las remuneraciones aplicando la figura de suspensión perfecta de labores.",
+        "isCorrect": false,
+        "rationale": "La ley prohíbe aplicar suspensión perfecta cuando la causa de la paralización sea imputable al incumplimiento de seguridad por parte del empleador."
+      },
+      {
+        "text": "Descontar los días no laborados de los salarios ordinarios de la semana siguiente.",
+        "isCorrect": false,
+        "rationale": "Cualquier descuento salarial por paralizaciones ordenadas por la inspección de trabajo es ilegal y sancionable como falta muy grave."
+      },
+      {
+        "text": "Exigir a los trabajadores compensar las horas no laboradas con sobretiempo en sus días de descanso.",
+        "isCorrect": false,
+        "rationale": "No procede la recuperación de horas de trabajo perdidas por medidas cautelares motivadas por la negligencia de la propia empresa."
+      },
+      {
+        "text": "Imputar obligatoriamente los días de paralización al descanso vacacional pendiente del personal.",
+        "isCorrect": false,
+        "rationale": "Las vacaciones deben gozarse efectivamente conforme a ley y no pueden ser sustituidas unilateralmente por periodos de clausura preventiva."
+      }
+    ],
+    "hint": "Analiza quién asume la carga económica cuando la interrupción de actividades se debe al incumplimiento de medidas de seguridad de la propia empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la jurisprudencia peruana que condenó penalmente a un gerente general por la muerte de un trabajador debido a un choque eléctrico en instalaciones no acondicionadas, ¿qué elemento probatorio acreditó la mala fe o infracción deliberada del directivo?",
+    "opciones": [
+      {
+        "text": "La existencia de observaciones previas notificadas por la SUNAFIL sobre deficiencias en tableros eléctricos que no fueron subsanadas dentro del plazo asignado.",
+        "isCorrect": true,
+        "rationale": "El apercibimiento y fiscalización previas por la autoridad administrativa demuestran que el empleador conocía el riesgo latente y decidió deliberadamente no corregirlo."
+      },
+      {
+        "text": "Una declaración jurada verbal del comité de seguridad asegurando que el equipo era nuevo.",
+        "isCorrect": false,
+        "rationale": "Las declaraciones verbales sin respaldo probatorio documental carecen de peso frente a actas de fiscalización previas del regulador."
+      },
+      {
+        "text": "El simple testimonio de un proveedor externo de mantenimiento mecánico.",
+        "isCorrect": false,
+        "rationale": "Los testimonios aislados no acreditan el dolo o deliberada omisión si no existe constancia de notificación y desatención formal."
+      },
+      {
+        "text": "La ausencia de un protocolo de emergencias médicas en el campamento minero.",
+        "isCorrect": false,
+        "rationale": "La falta de un protocolo de auxilio constituye infracción genérica, pero la reincidencia ante notificaciones específicas fue el hecho determinante de la imputación penal."
+      },
+      {
+        "text": "Haber adquirido materiales con factura electrónica emitida fuera del horario laboral.",
+        "isCorrect": false,
+        "rationale": "Los aspectos contables y horarios de emisión tributaria carecen de relevancia para acreditar la tipicidad penal en accidentes laborales."
+      }
+    ],
+    "hint": "Busca la prueba que demuestra el conocimiento expreso de la falla de seguridad por parte de la empresa previo a la tragedia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del marco institutional ambiental en el Perú, ¿qué función técnica cumple el Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles (Senace)?",
+    "opciones": [
+      {
+        "text": "Revisar y aprobar los Estudios de Impacto Ambiental detallados (EIA-d) de los grandes proyectos de inversión.",
+        "isCorrect": true,
+        "rationale": "El Senace es el organismo público especializado encargado de evaluar y aprobar los Estudios de Impacto Ambiental detallados (EIA-d) en el país."
+      },
+      {
+        "text": "Fiscalizar el uso de explosivos civiles y armamento de seguridad en el campamento.",
+        "isCorrect": false,
+        "rationale": "El control de armas y explosivos corresponde a la SUCAMEC, no al Senace."
+      },
+      {
+        "text": "Imponer multas y sanciones a las empresas mineras por incumplimiento ambiental.",
+        "isCorrect": false,
+        "rationale": "La potestad sancionadora y de fiscalización ambiental corresponde al OEFA, no al Senace."
+      },
+      {
+        "text": "Resolver los conflictos laborales y huelgas colectivas entre el sindicato y la mina.",
+        "isCorrect": false,
+        "rationale": "La mediación laboral en conflictos colectivos es atribución del Ministerio de Trabajo (MTPE)."
+      },
+      {
+        "text": "Otorgar la concesión minera y delimitar las cuadrículas catastrales en el territorio.",
+        "isCorrect": false,
+        "rationale": "El otorgamiento de títulos de concesión y catastro minero es competencia exclusiva del INGEMMET."
+      }
+    ],
+    "hint": "Esta entidad se enfoca específicamente en la evaluación previa de los instrumentos de gestión ambiental para grandes proyectos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el Sistema Nacional de Evaluación y Fiscalización Ambiental, ¿cuál es el rol asignado al Organismo de Evaluación y Fiscalización Ambiental (OEFA)?",
+    "opciones": [
+      {
+        "text": "Ejercer la fiscalización, supervisión, control y potestad sancionadora administrativa en materia ambiental sobre las actividades económicas reguladas.",
+        "isCorrect": true,
+        "rationale": "El OEFA es el ente rector de la fiscalización ambiental encargado de supervisar que las empresas cumplan con sus obligaciones ambientales y de sancionar sus infracciones."
+      },
+      {
+        "text": "Elaborar y aprobar las normas tributarias aplicables al canon y regalías mineras.",
+        "isCorrect": false,
+        "rationale": "Las normas tributarias y recaudación del canon corresponden al MEF y la SUNAT."
+      },
+      {
+        "text": "Aprobar los estudios de factibilidad financiera de las operaciones mineras privadas.",
+        "isCorrect": false,
+        "rationale": "El Estado no califica la rentabilidad financiera ni comercial de las inversiones privadas."
+      },
+      {
+        "text": "Intervenir penalmente y juzgar en juicio oral a los directivos de las mineras infractoras.",
+        "isCorrect": false,
+        "rationale": "El juzgamiento penal es potestad exclusiva del Poder Judicial a través de sus jueces penales."
+      },
+      {
+        "text": "Otorgar las licencias de uso de suelo urbano para viviendas residenciales.",
+        "isCorrect": false,
+        "rationale": "El uso del suelo urbano es potestad de las municipalidades distritales y provinciales."
+      }
+    ],
+    "hint": "Piensa en el organismo técnico del MINAM que actúa de forma análoga a la SUNAFIL, pero en el ámbito de la protección del medio ambiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el delito de minería ilegal tipificado en el Código Penal peruano, ¿cuál de los siguientes casos constituye una circunstancia agravante específica que eleva la pena privativa de libertad a un rango de 8 a 10 años?",
+    "opciones": [
+      {
+        "text": "Realizar la actividad minera en áreas naturales protegidas o empleando dragas u otros artefactos similares.",
+        "isCorrect": true,
+        "rationale": "El Código Penal sanciona con penas severas de 8 a 10 años cuando la actividad ilegal devasta zonas protegidas o utiliza maquinaria prohibida como las dragas."
+      },
+      {
+        "text": "Extraer mineral en una zona rural sin contar con un sindicato de trabajadores constituido.",
+        "isCorrect": false,
+        "rationale": "La falta de sindicato no configura agravante penal de minería ilegal según el artículo 307-A del Código Penal."
+      },
+      {
+        "text": "Comercializar el mineral obtenido con una tasa de ganancia superior al promedio del mercado.",
+        "isCorrect": false,
+        "rationale": "Los márgenes de comercialización no constituyen elementos de agravación del tipo penal ambiental."
+      },
+      {
+        "text": "Operar con maquinarias alquiladas en lugar de utilizar equipos de propiedad exclusiva.",
+        "isCorrect": false,
+        "rationale": "La modalidad contractual de tenencia de la maquinaria no altera la tipicidad penal agravada."
+      },
+      {
+        "text": "Realizar la actividad sin haber tramitado la licencia municipal de funcionamiento distrital.",
+        "isCorrect": false,
+        "rationale": "Las licencias municipales son faltas administrativas urbanas y no la causal agravante penal de 8 a 10 años."
+      }
+    ],
+    "hint": "Identifica la conducta que ocasiona un daño ecológico irreparable mediante el uso de equipos prohibidos o afectación de zonas de máxima reserva biológica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Además de la extracción no autorizada, ¿cuáles de las siguientes conductas se encuentran tipificadas como delitos autónomos o conexos a la minería ilegal en el Código Penal?",
+    "opciones": [
+      {
+        "text": "Financiamiento de la minería ilegal mediante el aporte de bienes, recursos o capitales para su realización.",
+        "isCorrect": true,
+        "rationale": "El Código Penal sanciona de forma autónoma a quien provee financiamiento económico o material para la cadena de minería ilegal."
+      },
+      {
+        "text": "Obstaculización de la fiscalización administrativa destinada a impedir las labores de evaluación y control de las autoridades.",
+        "isCorrect": true,
+        "rationale": "Se penaliza expresamente la traba o impedimento violento/fraudulento contra los funcionarios de fiscalización ambiental o minera."
+      },
+      {
+        "text": "Tráfico ilícito de insumos químicos y maquinarias destinadas a la minería ilegal.",
+        "isCorrect": true,
+        "rationale": "La comercialización, transporte o almacenamiento de insumos químicos o maquinaria a sabiendas de su destino ilegal es conducta sancionada penalmente."
+      },
+      {
+        "text": "Contratar servicios de publicidad y marketing en redes sociales para la venta de joyas.",
+        "isCorrect": false,
+        "rationale": "La publicidad no constituye de por sí un delito penal autónomo conexo a la minería ilegal."
+      },
+      {
+        "text": "Exportar productos artesanales que contengan minerales ornamentales no metálicos autorizados.",
+        "isCorrect": false,
+        "rationale": "La exportación legítima de artesanías con permisos no está tipificada penalmente como delito de minería ilegal."
+      }
+    ],
+    "hint": "Considera las conductas delictivas asociadas al soporte logístico, económico y de impedimento a la autoridad en la cadena de la minería ilegal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué consecuencia dogmática e inconveniente de persecución penal generó la modificación legislativa que cambió la 'o' disyuntiva por la 'y' copulativa en el texto 'extraiga recursos minerales metálicos [y/o] no metálicos'?",
+    "opciones": [
+      {
+        "text": "Generó una redacción que técnicamente exige probar la extracción simultánea de minerales metálicos y no metálicos, dificultando la tipificación cuando solo se extrae un tipo.",
+        "isCorrect": true,
+        "rationale": "Al exigir el conector 'y', procesalmente la defensa puede alegar que no se cumple el tipo penal si solo se incauta un mineral metálico (como oro) sin acreditar la extracción no metálica."
+      },
+      {
+        "text": "Obligó a los jueces a dictar sentencias condenatorias de forma automática sin escuchar a los peritos.",
+        "isCorrect": false,
+        "rationale": "Ninguna norma puede vulnerar la tutela procesal efectiva ni ordenar condenas automáticas."
+      },
+      {
+        "text": "Eximió de responsabilidad penal a todos los extractores de minerales metálicos del territorio.",
+        "isCorrect": false,
+        "rationale": "La norma no despenalizó la minería metálica, sino que creó una traba probatoria procesal al requerir probar ambos tipos."
+      },
+      {
+        "text": "Prohibió a la fiscalía incautar maquinarias utilizadas en la extracción de arena y grava.",
+        "isCorrect": false,
+        "rationale": "Las medidas de incautación siguen vigentes con autorización judicial o en flagrancia."
+      },
+      {
+        "text": "Trasladó la persecución de la minería ilegal a los juzgados de paz letrados distritales.",
+        "isCorrect": false,
+        "rationale": "La competencia en delitos ambientales corresponde a los juzgados penales especializados, no a la justicia de paz."
+      }
+    ],
+    "hint": "Reflexiona sobre cómo el uso del conector copulativo 'y' obliga al fiscal a probar que el minero extraía ambos tipos de recursos a la vez.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la persecución multisectorial de los delitos de minería ilegal, ¿cuál es el rol asignado a la Unidad de Inteligencia Financiera del Perú (UIF-Perú)?",
+    "opciones": [
+      {
+        "text": "Analizar, detectar y reportar operaciones financieras sospechosas vinculadas al lavado de activos provenientes de la minería ilegal.",
+        "isCorrect": true,
+        "rationale": "La UIF analiza la información financiera para identificar esquemas de blanqueo de capitales generados por la venta clandestina de mineral."
+      },
+      {
+        "text": "Intervenir directamente en las operaciones con patrullas armadas para custodiar los campamentos.",
+        "isCorrect": false,
+        "rationale": "La custodia armada es función exclusiva de las Fuerzas Armadas y la Policía Nacional del Perú."
+      },
+      {
+        "text": "Calcular y liquidar el canon minero correspondiente a los gobiernos regionales.",
+        "isCorrect": false,
+        "rationale": "La distribución del canon es función de la Dirección General de Presupuesto Público del MEF."
+      },
+      {
+        "text": "Fijar el precio oficial de compra y venta de la onza troy de oro en el mercado nacional.",
+        "isCorrect": false,
+        "rationale": "El precio del oro se determina por el mercado internacional y la cotización bursátil."
+      },
+      {
+        "text": "Administrar y ejecutar el pago de las indemnizaciones por enfermedades profesionales.",
+        "isCorrect": false,
+        "rationale": "Las prestaciones de invalidez las gestionan las aseguradoras de riesgo (SCTR / EsSalud / ONP)."
+      }
+    ],
+    "hint": "Esta entidad pertenece a la SBS y sigue la huella del dinero para desarticular el flujo de ganancias ilícitas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la enfermedad profesional de mayor prevalencia histórica en los trabajadores de minería subterránea, provocada por la inhalación prolongada de polvo de sílice?",
+    "opciones": [
+      {
+        "text": "Neumoconiosis o silicosis.",
+        "isCorrect": true,
+        "rationale": "La silicosis es una enfermedad pulmonar irreversible causada por la inhalación continua de partículas de sílice cristalina en labores mineras."
+      },
+      {
+        "text": "Cáncer de piel por exposición a la radiación solar en labores a cielo abierto.",
+        "isCorrect": false,
+        "rationale": "Aunque es un riesgo en superficie, la patología pulmonar histórica por excelencia en interior mina es la silicosis."
+      },
+      {
+        "text": "Hipoacusia neurosensorial bilateral por ruidos de molienda y perforación.",
+        "isCorrect": false,
+        "rationale": "La sordera es frecuente por ruido, pero la enfermedad provocada por polvo de sílice es la neumoconiosis."
+      },
+      {
+        "text": "Dermatitis de contacto alérgica por manipulación de reactivos de flotación.",
+        "isCorrect": false,
+        "rationale": "La dermatitis es afección dermatológica, mientras que la sílice afecta al sistema respiratorio alveolar."
+      },
+      {
+        "text": "Lumbalgia mecánica crónica por sobreesfuerzo en traslado de herramientas.",
+        "isCorrect": false,
+        "rationale": "Es un trastorno musculoesquelético ergonómico, no una enfermedad fibrosante pulmonar."
+      }
+    ],
+    "hint": "Identifica la afección pulmonar fibrosante producida por la acumulación de residuo mineral en los alvéolos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el régimen previsional peruano, ¿cuál es uno de los beneficios especiales reconocidos a los trabajadores mineros debido al desgaste físico y la exposición a riesgos para la salud?",
+    "opciones": [
+      {
+        "text": "Acceder a un régimen de jubilación anticipada con menores requisitos de edad y años de aportación respecto al régimen general.",
+        "isCorrect": true,
+        "rationale": "La legislación prevé regímenes especiales de jubilación anticipada para los mineros debido a la penosidad y riesgo intrínseco de su labor."
+      },
+      {
+        "text": "La exoneración permanente y vitalicia del pago de cualquier impuesto a la renta.",
+        "isCorrect": false,
+        "rationale": "Los trabajadores mineros pagan impuesto a la renta conforme a las escalas generales de quinta categoría."
+      },
+      {
+        "text": "El pago mensual de un subsidio económico equivalente al triple de la remuneración mínima vital.",
+        "isCorrect": false,
+        "rationale": "No existe subsidio estatal mensual de esa naturaleza para el personal minero activo."
+      },
+      {
+        "text": "La duplicación automática de los días de vacaciones anuales remuneradas a 60 días.",
+        "isCorrect": false,
+        "rationale": "El descanso vacacional ordinario en el régimen común es de 30 días calendario por año laborado."
+      },
+      {
+        "text": "La entrega gratuita de una vivienda propia construida por el Estado al cumplir 10 años de servicio.",
+        "isCorrect": false,
+        "rationale": "No existe beneficio legal de adjudicación inmobiliaria gratuita por antigüedad minera."
+      }
+    ],
+    "hint": "Recuerda el beneficio que reduce el tiempo de vida laboral exigido para el retiro en función de la penosidad de las labores mineras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para dar inicio legal a las labores de **exploración** minera en el Perú, ¿cuáles de los siguientes requisitos administrativos deben tramitarse obligatoriamente?",
+    "opciones": [
+      {
+        "text": "Obtención de la Certificación Ambiental emitida por la autoridad competente aprobando el instrumento de gestión ambiental.",
+        "isCorrect": true,
+        "rationale": "Ninguna actividad minera puede iniciar exploración sin contar previamente con un instrumento de gestión ambiental aprobado."
+      },
+      {
+        "text": "Realización del proceso de consulta previa en caso de que el proyecto se superponga con territorios de pueblos indígenas u originarios.",
+        "isCorrect": true,
+        "rationale": "La consulta previa es un mandato legal para salvaguardar los derechos colectivos de pueblos originarios antes de emitir la autorización."
+      },
+      {
+        "text": "Obtención del Certificado de Inexistencia de Restos Arqueológicos (CIRA) otorgado por el Ministerio de Cultura.",
+        "isCorrect": true,
+        "rationale": "El CIRA garantiza que la intervención del terreno no destruirá ni afectará el patrimonio arqueológico de la nación."
+      },
+      {
+        "text": "Inscripción en el Registro de Proveedores del Estado (RCE) ante el OSCE.",
+        "isCorrect": false,
+        "rationale": "El RCE es un requisito para contratar con el Estado, no para iniciar exploración minera privada."
+      },
+      {
+        "text": "Constancia de aprobación del Plan de Cierre Definitivo de Minas para post-operación.",
+        "isCorrect": false,
+        "rationale": "El plan de cierre para explotación y post-minado se exige para la etapa de explotación comercial y cierre final, no al iniciar exploraciones básicas."
+      }
+    ],
+    "hint": "Considera los permisos vinculados a la certificación ambiental, la protección del patrimonio cultural e indígena de forma previa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué entidad tiene la función de regular, autorizar y fiscalizar el uso, almacenamiento y manipulación de explosivos civiles en las operaciones mineras?",
+    "opciones": [
+      {
+        "text": "SUCAMEC (Superintendencia Nacional de Control de Servicios de Seguridad, Armas, Municiones y Explosivos de Uso Civil).",
+        "isCorrect": true,
+        "rationale": "La SUCAMEC es el ente estatal encargado de emitir autorizaciones para la adquisición y uso de explosivos en el territorio nacional."
+      },
+      {
+        "text": "OSINERGMIN (Organismo Supervisor de la Inversión en Energía y Minería).",
+        "isCorrect": false,
+        "rationale": "OSINERGMIN supervisa la seguridad de la infraestructura y operaciones mineras, pero la autorización de explosivos civiles es competencia de la SUCAMEC."
+      },
+      {
+        "text": "SUNAFIL (Superintendencia Nacional de Fiscalización Laboral).",
+        "isCorrect": false,
+        "rationale": "SUNAFIL fiscaliza las condiciones sociolaborales y el cumplimiento de la Ley 29783, no el polvorín ni los explosivos."
+      },
+      {
+        "text": "INGEMMET (Instituto Geológico, Minero y Metalúrgico).",
+        "isCorrect": false,
+        "rationale": "INGEMMET otorga concesiones mineras y administra el catastro minero nacional."
+      },
+      {
+        "text": "OEFA (Organismo de Evaluación y Fiscalización Ambiental).",
+        "isCorrect": false,
+        "rationale": "El OEFA fiscaliza el cumplimiento de compromisos ambientales, no el transporte o uso de explosivos."
+      }
+    ],
+    "hint": "Esta superintendencia está vinculada al sector interior y supervisa las armas, municiones y explosivos de uso civil.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco normativo peruano, ¿cuál es el rasgo jurídico distintivo que diferencia al minero **informal** del minero **ilegal**?",
+    "opciones": [
+      {
+        "text": "El minero informal opera en zonas donde la minería no está prohibida y se encuentra inscrito en el REINFO en proceso de formalización.",
+        "isCorrect": true,
+        "rationale": "La informalidad radica en la falta de permisos completos en zonas permitidas mediando un proceso de formalización (REINFO), lo que suspende la persecución penal."
+      },
+      {
+        "text": "El minero informal utiliza únicamente mano de obra extranjera no calificada.",
+        "isCorrect": false,
+        "rationale": "La nacionalidad del personal no define el estatus de legalidad ni formalidad minera."
+      },
+      {
+        "text": "El minero informal cuenta con Estudio de Impacto Ambiental detallado (EIA-d) totalmente aprobado.",
+        "isCorrect": false,
+        "rationale": "Quien cuenta con EIA-d aprobado y título habilitante es un minero formal ordinario, no informal."
+      },
+      {
+        "text": "El minero informal tiene derecho a explotar áreas reservadas y parques nacionales.",
+        "isCorrect": false,
+        "rationale": "La actividad en áreas naturales protegidas o de reserva está terminantemente prohibida y tipifica como minería ilegal."
+      },
+      {
+        "text": "El minero informal está exento del pago del canon y de fiscalizaciones de la SUNAFIL.",
+        "isCorrect": false,
+        "rationale": "La normativa laboral y tributaria no otorga inmunidad fiscalizadora a los operadores en formalización."
+      }
+    ],
+    "hint": "Enfócate en la ubicación geográfica (zonas no prohibidas) y la adscripción al proceso administrativo de formalización estatal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el principal riesgo sanitario derivado del uso ineficiente del mercurio en el procesamiento de oro en la minería aluvial?",
+    "opciones": [
+      {
+        "text": "La emanación de vapores tóxicos en la quema de la amalgama y la bioacumulación del metilmercurio en los peces de la cuenca hídrica.",
+        "isCorrect": true,
+        "rationale": "El mercurio se volatiliza afectando las vías respiratorias y se deposita en los ríos transformándose en metilmercurio, el cual ingresa a la cadena alimenticia a través de los peces."
+      },
+      {
+        "text": "La producción de radiación ionizante que destruye los tejidos celulares de la flora adyacente.",
+        "isCorrect": false,
+        "rationale": "El mercurio es un metal pesado tóxico químico, no una fuente de radiaciones nucleares o ionizantes."
+      },
+      {
+        "text": "El incremento acelerado de la salinidad en las aguas freáticas subterráneas.",
+        "isCorrect": false,
+        "rationale": "El impacto directo del mercurio en aluviales no radica en la salinización, sino en su alta toxicidad por metilmercurio."
+      },
+      {
+        "text": "La generación de lluvia ácida sulfurosa por combustión del gas natural en los hornos.",
+        "isCorrect": false,
+        "rationale": "La lluvia ácida deriva de óxidos de azufre en fundiciones industriales, no de la amalgamación de oro aluvial."
+      },
+      {
+        "text": "La pérdida de fertilidad del suelo por la absorción de nitratos y fosfatos orgánicos.",
+        "isCorrect": false,
+        "rationale": "Los nitratos corresponden a fertilizantes agrícolas; el mercurio es un bioacumulable neurotóxico."
+      }
+    ],
+    "hint": "Analiza las dos fases de contaminación del mercurio: por inhalación al quemar la mezcla y por ingestión a través de la fauna hídrica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la legislación laboral peruana, ¿cuál es la presunción legal que rige respecto a la duración del contrato de trabajo si no se acredita una causa objetiva de temporalidad?",
+    "opciones": [
+      {
+        "text": "Se presume que el contrato de trabajo ha sido celebrado a tiempo indeterminado.",
+        "isCorrect": true,
+        "rationale": "El principio de continuidad laboral establece que la regla general es la contratación a tiempo indeterminado, siendo la temporalidad una excepción motivada."
+      },
+      {
+        "text": "Se presume que el trabajador fue contratado bajo locación de servicios civiles sin vínculo laboral.",
+        "isCorrect": false,
+        "rationale": "El principio de primacía de la realidad presume laboralidad cuando hay subordinación y prestación personal remunerada."
+      },
+      {
+        "text": "Se presume que el vínculo es de suplencia temporal por un plazo improrrogable de 6 meses.",
+        "isCorrect": false,
+        "rationale": "Los contratos modales de suplencia no se presumen; deben celebrarse por escrito justificando la causa objetiva."
+      },
+      {
+        "text": "Se presume que el contrato vence automáticamente al cumplirse el primer año de labores.",
+        "isCorrect": false,
+        "rationale": "No existe caducidad automática al año; la falta de causa objetiva convierte el vínculo en indeterminado."
+      },
+      {
+        "text": "Se presume que el contrato corresponde a un régimen de formación laboral juvenil no remunerado.",
+        "isCorrect": false,
+        "rationale": "Las modalidades formativas exigen convenios escritos específicos; no se presumen ante relaciones laborales ordinarias."
+      }
+    ],
+    "hint": "Recuerda el principio del derecho del trabajo que favorece la estabilidad e indefinición del vínculo frente a la contratación modal sin sustento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el régimen de contratación a tiempo parcial (part-time), ¿cuál es el requisito legal máximo sobre la jornada laboral para que la empresa no esté obligada al pago de la CTS y de la indemnización por despido arbitrario?",
+    "opciones": [
+      {
+        "text": "Que la jornada efectiva del trabajador sea en promedio inferior a cuatro horas diarias.",
+        "isCorrect": true,
+        "rationale": "La legislación excluye del beneficio de CTS y de la protección contra el despido arbitrario a quienes laboran menos de cuatro horas diarias en promedio."
+      },
+      {
+        "text": "Que la jornada semanal sea exactamente de 24 horas acumuladas en un único turno de trabajo.",
+        "isCorrect": false,
+        "rationale": "La regla no exige un bloque único de 24 horas, sino que el promedio diario de la jornada sea inferior a 4 horas."
+      },
+      {
+        "text": "Que el trabajador labore únicamente los fines de semana (sábados y domingos).",
+        "isCorrect": false,
+        "rationale": "El trabajo part-time puede ejecutarse en cualquier día de la semana mientras se respete el promedio menor a cuatro horas."
+      },
+      {
+        "text": "Que el salario percibido sea superior al 50% de la Remuneración Mínima Vital del sector.",
+        "isCorrect": false,
+        "rationale": "El monto remunerativo no es el criterio legal; la exclusión se fundamenta en la duración de la jornada diaria promedio."
+      },
+      {
+        "text": "Que el personal cuente con contrato notarial visado por la dirección de empleo del MTPE.",
+        "isCorrect": false,
+        "rationale": "El registro del contrato es formalidad administrativa, pero el límite de fondo es no superar las cuatro horas diarias en promedio."
+      }
+    ],
+    "hint": "Aplica el criterio de la regla horaria promedio que marca la frontera de acceso a ciertos beneficios sociales de la legislación laboral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al iniciar la relación laboral con un nuevo trabajador, ¿cuáles de las siguientes constituyen obligaciones legales directas e ineludibles a cargo del empleador?",
+    "opciones": [
+      {
+        "text": "Registrar al trabajador en la planilla electrónica (T-Registro) y entregarle la constancia de alta formal.",
+        "isCorrect": true,
+        "rationale": "El empleador está obligado a dar de alta al trabajador en la planilla electrónica y entregarle el documento oficial expedido por la SUNAT."
+      },
+      {
+        "text": "Entregar el boletín informativo que contenga las características del sistema de pensiones (AFP y ONP) para su libre elección.",
+        "isCorrect": true,
+        "rationale": "Es imperativo informar al trabajador sobre las alternativas del sistema previsional dentro de los plazos iniciales de su contratación."
+      },
+      {
+        "text": "Brindar la información y capacitación específica sobre los riesgos laborales asociados al puesto de trabajo.",
+        "isCorrect": true,
+        "rationale": "En el marco de la seguridad laboral, el empleador debe capacitar e informar detalladamente al trabajador sobre los peligros concretos de su labor."
+      },
+      {
+        "text": "Pagar por adelantado la totalidad de las gratificaciones legales de julio y diciembre.",
+        "isCorrect": false,
+        "rationale": "Las gratificaciones legales se devengan semestralmente y se pagan en la quincena de julio y diciembre, no al ingresar."
+      },
+      {
+        "text": "Afiliar obligatoriamente al trabajador al sindicato mayoritario de la empresa.",
+        "isCorrect": false,
+        "rationale": "La afiliación sindical es un derecho voluntario del trabajador y no una imposición unilateral del empleador."
+      }
+    ],
+    "hint": "Enfócate en los mandatos referidos al alta en planillas, la elección previsional y la inducción de seguridad laboral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia sustancial entre el Seguro Complementario de Trabajo de Riesgo (SCTR) y el Seguro de Vida Ley?",
+    "opciones": [
+      {
+        "text": "El SCTR brinda cobertura médica de salud y pensiones de invalidez por accidentes de trabajo en labores peligrosas, mientras que el Seguro de Vida Ley brinda un capital indemnizatorio a los beneficiarios ante el fallecimiento o invalidez total del trabajador.",
+        "isCorrect": true,
+        "rationale": "El SCTR atiende la emergencia médica y la invalidez profesional de las actividades riesgosas, mientras que el Vida Ley protege el patrimonio familiar otorgando una suma fija ante la muerte o incapacidad."
+      },
+      {
+        "text": "El SCTR es de aporte voluntario del trabajador, mientras que el Vida Ley lo asume el Estado peruano.",
+        "isCorrect": false,
+        "rationale": "Tanto el SCTR como el Seguro de Vida Ley son de financiamiento y costo 100% a cargo exclusivo del empleador."
+      },
+      {
+        "text": "El SCTR cubre únicamente a trabajadores administrativos y el Vida Ley al personal de interior mina.",
+        "isCorrect": false,
+        "rationale": "El SCTR está dirigido precisamente a las actividades de alto riesgo (como interior mina) y el Vida Ley a todo trabajador registrado."
+      },
+      {
+        "text": "El SCTR reemplaza el pago de la CTS y el Vida Ley cancela las deudas bancarias del trabajador.",
+        "isCorrect": false,
+        "rationale": "Ningún seguro sustituye el fondo de CTS ni cancela acreencias bancarias personales no estipuladas."
+      },
+      {
+        "text": "El SCTR es administrado por la SUNAT y el Vida Ley es fiscalizado por el Banco de la Nación.",
+        "isCorrect": false,
+        "rationale": "Ambos son contratados con empresas privadas de seguros o EsSalud/ONP en el caso del SCTR, no entidades recaudadoras."
+      }
+    ],
+    "hint": "Compara la naturaleza prestacional asistencial de salud y pensiones del SCTR versus el beneficio indemnizatorio monetario del Vida Ley ante el cese definitivo por muerte.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si un trabajador incurre en falta grave que causa un perjuicio económico directo al empleador, ¿cuál es el mecanismo legal que tiene la empresa respecto al fondo de la Compensación por Tiempos de Servicios (CTS)?",
+    "opciones": [
+      {
+        "text": "Solicitar la retención de la CTS al depositario e interponer la demanda judicial de indemnización por daños y perjuicios dentro de los 30 días posteriores al cese.",
+        "isCorrect": true,
+        "rationale": "La ley autoriza al empleador a solicitar la retención del fondo de CTS comunicando al banco, pero exige entablar la demanda indemnizatoria en un plazo de 30 días bajo sanción de caducidad."
+      },
+      {
+        "text": "Apropiarse de forma directa y definitiva del saldo total de la CTS sin notificar al juzgado.",
+        "isCorrect": false,
+        "rationale": "La retención es una medida precautoria temporal; el empleador no puede confiscar el dinero sin sentencia judicial firme."
+      },
+      {
+        "text": "Solicitar a la SUNAT que descuente el perjuicio económico de las devoluciones de impuestos del trabajador.",
+        "isCorrect": false,
+        "rationale": "La SUNAT no tiene facultades para indemnizar daños privados laborales entre particulares."
+      },
+      {
+        "text": "Exigir a los deudos o garantes del trabajador el desembolso en efectivo en un plazo de 48 horas.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad por faltas laborales es personalísima y no puede cobrarse arbitrariamente a terceros."
+      },
+      {
+        "text": "Tramitar ante la comisaría distrital una orden de embargo preventivo sobre los bienes del extrabajador.",
+        "isCorrect": false,
+        "rationale": "Las comisarías carecen de competencia para emitir mandatos de embargo; dicha facultad es exclusiva del Poder Judicial."
+      }
+    ],
+    "hint": "El procedimiento exige comunicar la retención a la entidad financiera y acudir a la vía judicial en un plazo estricto para probar el daño.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el límite máximo ordinario establecido por la Constitución y la ley peruana para la jornada de trabajo?",
+    "opciones": [
+      {
+        "text": "8 horas diarias o 48 horas semanales.",
+        "isCorrect": true,
+        "rationale": "La Constitución Política del Perú fija la jornada ordinaria de trabajo en un máximo de 8 horas diarias o 48 horas semanales."
+      },
+      {
+        "text": "7 horas diarias o 35 horas semanales.",
+        "isCorrect": false,
+        "rationale": "El estándar ordinario de jornada máxima legal en el Perú es de 8 horas diarias o 48 horas semanales."
+      },
+      {
+        "text": "9 horas diarias o 45 horas semanales.",
+        "isCorrect": false,
+        "rationale": "La jornada diaria máxima de 9 horas solo es viable bajo esquemas atípicos o acumulativos compensatorios sin exceder el promedio legal."
+      },
+      {
+        "text": "10 horas diarias o 50 horas semanales.",
+        "isCorrect": false,
+        "rationale": "Una jornada ordinaria de 50 horas semanales excede el tope constitucional de 48 horas establecido en el artículo 25."
+      },
+      {
+        "text": "6 horas diarias o 36 horas semanales.",
+        "isCorrect": false,
+        "rationale": "La jornada de 6 horas puede aplicar a regímenes especiales para menores o minas subterráneas extremas, pero la regla general máxima es de 8 horas o 48 semanales."
+      }
+    ],
+    "hint": "Aplica el estándar máximo consagrado en el artículo 25 de la Constitución Política del Perú.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-11",
+    "diplomado": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el supuesto de que una empresa incumpla con el pago de multas administrativas firmes impuestas por la SUNAFIL, ¿qué facultad ejecutiva ejerce esta entidad administrativa para requerir el cobro de la deuda?",
+    "opciones": [
+      {
+        "text": "Iniciar el procedimiento de cobranza coactiva mediante la traba de medidas cautelares como el embargo de cuentas bancarias y activos.",
+        "isCorrect": true,
+        "rationale": "La SUNAFIL cuenta con su propia área de ejecutoría coactiva encargada de trabar embargos para efectivizar las multas impuestas."
+      },
+      {
+        "text": "Interponer una denuncia penal inmediata por delito de desacato con captura internacional de directivos.",
+        "isCorrect": false,
+        "rationale": "El cobro de multas administrativas sigue la vía económico-coactiva civil, no procesos penales automáticos de captura."
+      },
+      {
+        "text": "Declarar la quiebra judicial forzosa y liquidación patrimonial de la sociedad mercantil en INDECOPI.",
+        "isCorrect": false,
+        "rationale": "El procedimiento concursal de quiebra es un trámite mercantil independiente y no la vía ejecutiva de SUNAFIL."
+      },
+      {
+        "text": "Solicitar la intervención de las Fuerzas Armadas para la custodia de las instalaciones de la mina.",
+        "isCorrect": false,
+        "rationale": "Las Fuerzas Armadas no intervienen en el cobro de obligaciones tributarias o administrativas laborales ordinarias."
+      },
+      {
+        "text": "Anular de oficio los certificados de estudios emitidos por el Ministerio de Educación a los gerentes.",
+        "isCorrect": false,
+        "rationale": "La autoridad laboral carece de atribuciones sobre los grados o títulos académicos emitidos por las universidades o el MINEDU."
+      }
+    ],
+    "hint": "Considera la vía ejecutiva propia con la que cuentan los organismos públicos para exigir el cobro forzoso de acreencias estatales.",
+    "activo": true
+  }
+]

@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué se entiende por gestión de mantenimiento en un entorno industrial?",
+    "opciones": [
+      {
+        "text": "El conjunto de actividades organizadas y sistemáticas para asegurar que equipos e instalaciones funcionen de manera eficiente, segura y rentable.",
+        "isCorrect": true,
+        "rationale": "Sintetiza la función primordial de la gestión de mantenimiento, la cual busca garantizar la disponibilidad operativa de los activos físicos cumpliendo con los estándares de seguridad, costo y productividad."
+      },
+      {
+        "text": "La reparación de urgencia de la maquinaria únicamente cuando esta ha sufrido una avería o parada intempestiva.",
+        "isCorrect": false,
+        "rationale": "Describe un enfoque exclusivamente reactivo o correctivo, lo cual contraviene el carácter organizado y planificado que define a la gestión integral del mantenimiento."
+      },
+      {
+        "text": "El reemplazo automático y continuo de maquinarias viejas por equipos nuevos para evitar la necesidad de revisiones.",
+        "isCorrect": false,
+        "rationale": "Confunde la conservación y optimización de los activos existentes con una política de reposición continua que resultaría económicamente inviable."
+      },
+      {
+        "text": "La supervisión administrativa centrada únicamente en la compra y venta de repuestos dentro del almacén.",
+        "isCorrect": false,
+        "rationale": "Limita la gestión a una tarea logística de inventarios, omitiendo la planificación, ejecución y control de las tareas técnicas en la planta."
+      },
+      {
+        "text": "Un proceso de control financiero destinado exclusivamente a recortar los sueldos del personal de planta.",
+        "isCorrect": false,
+        "rationale": "Asocia erróneamente la gestión de activos con una medida de recorte salarial sin relación con la continuidad operacional y técnica de los equipos."
+      }
+    ],
+    "hint": "Considere el conjunto estructurado de acciones destinadas a garantizar la operatividad continua y segura de los activos físicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de mantenimiento, ¿cómo se define un 'activo'?",
+    "opciones": [
+      {
+        "text": "Cualquier equipo, máquina, instalación o recurso físico utilizado directamente en el proceso productivo.",
+        "isCorrect": true,
+        "rationale": "Define correctamente los elementos físicos de la empresa sobre los cuales se aplican las estrategias de mantenimiento para sostener la productividad."
+      },
+      {
+        "text": "Únicamente el capital financiero y las reservas de dinero en efectivo que posee la empresa.",
+        "isCorrect": false,
+        "rationale": "Hace referencia a activos líquidos de carácter financiero, mientras que el mantenimiento se centra en los activos físicos operativos."
+      },
+      {
+        "text": "Los productos terminados que se encuentran almacenados y listos para su distribución comercial.",
+        "isCorrect": false,
+        "rationale": "Corresponde al inventario comercial de ventas, no a los medios de producción o infraestructura requeridos para procesarlos."
+      },
+      {
+        "text": "Las herramientas desechables de bajo costo que no requieren ningún tipo de registro técnico.",
+        "isCorrect": false,
+        "rationale": "Representa consumibles menores de planta que habitualmente no son categorizados como activos físicos sujetos a un plan de mantenimiento."
+      },
+      {
+        "text": "Exclusivamente la documentación contable y los contratos legales firmados por la alta gerencia.",
+        "isCorrect": false,
+        "rationale": "Alude a bienes intangibles o administrativos, alejándose de las maquinarias e instalaciones operativas objeto del mantenimiento."
+      }
+    ],
+    "hint": "Piense en los recursos físicos, máquinas e instalaciones utilizados directamente para elaborar el producto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representa el término 'falla' en el contexto del mantenimiento industrial?",
+    "opciones": [
+      {
+        "text": "La incapacidad parcial o total de un equipo o sistema para cumplir con sus funciones esperadas.",
+        "isCorrect": true,
+        "rationale": "Expresa la pérdida de la capacidad de un activo para operar según las especificaciones operativas requeridas."
+      },
+      {
+        "text": "El incremento planificado en el rendimiento y la velocidad de producción de una máquina.",
+        "isCorrect": false,
+        "rationale": "Describe una mejora o incremento en el rendimiento del equipo, lo opuesto a una degradación o pérdida de función."
+      },
+      {
+        "text": "La parada programada de un equipo para realizar la sustitución periódica de lubricantes.",
+        "isCorrect": false,
+        "rationale": "Hace referencia a una parada planificada por mantenimiento preventivo, no a la pérdida imprevista de la función esperada."
+      },
+      {
+        "text": "El cumplimiento estricto de las metas diarias de producción fijadas por operaciones.",
+        "isCorrect": false,
+        "rationale": "Representa una condición de éxito operativo que difiere completamente del concepto de falla técnica."
+      },
+      {
+        "text": "La inspección visual que efectúa el operador antes de iniciar su turno de trabajo.",
+        "isCorrect": false,
+        "rationale": "Se refiere a un procedimiento rutinario de verificación preventiva y no al evento en que el equipo pierde su funcionalidad."
+      }
+    ],
+    "hint": "Reflexione sobre lo que ocurre cuando un equipo pierde la capacidad de realizar la tarea para la cual fue instalado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica principal del mantenimiento tradicional de carácter reactivo?",
+    "opciones": [
+      {
+        "text": "Intervenir los equipos e instalaciones únicamente cuando se presenta una avería o parada inesperada.",
+        "isCorrect": true,
+        "rationale": "Refleja la naturaleza del mantenimiento antiguo o tradicional, donde no existía planificación y se actuaba respondiendo a la falla manifestada."
+      },
+      {
+        "text": "Monitorear permanentemente los niveles de vibración mediante sensores ultrasónicos.",
+        "isCorrect": false,
+        "rationale": "Corresponde a las técnicas modernas de monitoreo de condición propias del mantenimiento predictivo."
+      },
+      {
+        "text": "Programar las intervenciones basándose estrictamente en el número de horas trabajadas.",
+        "isCorrect": false,
+        "rationale": "Se trata de un enfoque preventivo planificado, que supera la postura meramente reactiva del modelo tradicional."
+      },
+      {
+        "text": "Determinar la causa raíz del fallo mediante análisis de datos y ciclos de mejora continua.",
+        "isCorrect": false,
+        "rationale": "Define la metodología del mantenimiento proactivo, enfocado en eliminar el origen profundo de los problemas."
+      },
+      {
+        "text": "Realizar mantenimientos preventivos anuales aprobados por los términos de referencia del cliente.",
+        "isCorrect": false,
+        "rationale": "Implica una planificación sistemática previa, en contraste con la acción impulsiva posterior al fallo del método reactivo."
+      }
+    ],
+    "hint": "Asocie este enfoque con la ausencia de prevención y la actuación en el instante en que la máquina colapsa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué momento se ejecuta un mantenimiento de tipo correctivo?",
+    "opciones": [
+      {
+        "text": "Posteriormente a la manifestación de una falla en el equipo, con el objetivo de restaurar su funcionalidad.",
+        "isCorrect": true,
+        "rationale": "Se enfoca en reparar la máquina después de que ha perdido la capacidad de funcionar correctamente en el flujo de producción."
+      },
+      {
+        "text": "Antes de poner en marcha una máquina nueva durante la etapa de montaje en planta.",
+        "isCorrect": false,
+        "rationale": "Forma parte del proceso de comisión o puesta en servicio, no de la corrección de un fallo surgido en operación."
+      },
+      {
+        "text": "En intervalos de tiempo fijos y programados antes de que la máquina presente desgaste.",
+        "isCorrect": false,
+        "rationale": "Define la intervención bajo el esquema preventivo, cuyo propósito es precisamente evitar llegar a la etapa correctiva."
+      },
+      {
+        "text": "Únicamente durante las paradas mayores de planta planificadas con un año de anticipación.",
+        "isCorrect": false,
+        "rationale": "Las paradas mayores corresponden a un mantenimiento programado sistemático y no a correcciones imprevistas tras una avería."
+      },
+      {
+        "text": "Cuando los análisis de aceite indican que el viscosímetro está dentro de los parámetros normales.",
+        "isCorrect": false,
+        "rationale": "Un estado óptimo en las pruebas predictivas indica que el equipo opera bien y no requiere intervenciones correctivas."
+      }
+    ],
+    "hint": "Identifique la condición operativa que desencadena la labor de reparación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué factores externos pueden originar la falla de un equipo obligando a realizar un mantenimiento correctivo a pesar de contar con un plan preventivo previa ejecución?",
+    "opciones": [
+      {
+        "text": "Variaciones inesperadas en la calidad, abrasividad o composición de la materia prima procesada.",
+        "isCorrect": true,
+        "rationale": "Cambios en la materia prima, como un aumento en el contenido de minerales abrasivos o corrosivos, aceleran el desgaste de las piezas de forma imprevista."
+      },
+      {
+        "text": "Mala manipulación o exigencia excesiva sobre el equipo por parte de operadores poco capacitados.",
+        "isCorrect": true,
+        "rationale": "La mala operación somete al equipo a esfuerzos fuera de las especificaciones de diseño, desatando averías no contempladas en el programa de mantenimiento."
+      },
+      {
+        "text": "Condiciones ambientales extremas o imprevistas en el entorno de trabajo.",
+        "isCorrect": true,
+        "rationale": "Factores como lluvias intensas, humedad extrema o presencia de gases corrosivos externos pueden alterar el funcionamiento del activo de forma acelerada."
+      },
+      {
+        "text": "La estricta ejecución de los manuales y planes de inspección técnica aprobados.",
+        "isCorrect": false,
+        "rationale": "Seguir fielmente las pautas y especificaciones técnicas disminuye el riesgo de fallas en lugar de provocarlas."
+      },
+      {
+        "text": "El uso de repuestos originales homologados y certificados por el fabricante.",
+        "isCorrect": false,
+        "rationale": "El empleo de repuestos certificados preserva la confiabilidad del activo y previene desgastes anómalos."
+      }
+    ],
+    "hint": "Piense en elementos ajenos a la maquinaria misma, como las características del material ingresado, el manejo humano o el entorno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la desventaja principal de recurrir al mantenimiento correctivo no planificado?",
+    "opciones": [
+      {
+        "text": "Ocasiona costos elevados debido a paradas de producción no programadas y riesgos de daños mayores.",
+        "isCorrect": true,
+        "rationale": "Detener intempestivamente la línea de producción interrumpe las metas operativas e incrementa los costos por inactividad y reparaciones de emergencia."
+      },
+      {
+        "text": "Exige realizar una inversión inicial sumamente alta en sensores de ultrasonido y termografía.",
+        "isCorrect": false,
+        "rationale": "La adquisición de instrumentos tecnológicos de monitoreo corresponde a la implementación del mantenimiento predictivo, no del correctivo."
+      },
+      {
+        "text": "Obliga a redactar planes de mantenimiento complejos con varios meses de anticipación.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento correctivo imprevisto carece de planificación previa, lo que constituye precisamente parte de su problemática."
+      },
+      {
+        "text": "Requiere la presencia permanente de ingenieros nucleares en la planta de producción.",
+        "isCorrect": false,
+        "rationale": "La certificación especializada en energía nuclear aplica a pruebas predictivas específicas con sensores radiactivos, no al trabajo correctivo básico."
+      },
+      {
+        "text": "Garantiza que el equipo funcione al cien por ciento de su capacidad antes de ser reparado.",
+        "isCorrect": false,
+        "rationale": "Una máquina que requiere mantenimiento correctivo ha colapsado o perdido su capacidad operacional adecuada."
+      }
+    ],
+    "hint": "Piense en las consecuencias económicas y logísticas de detener la producción sin previo aviso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el mantenimiento preventivo?",
+    "opciones": [
+      {
+        "text": "En realizar intervenciones programadas en intervalos regulares de tiempo o uso para evitar fallas.",
+        "isCorrect": true,
+        "rationale": "Su propósito central es adelantarse a la avería ejecutando tareas de inspección, limpieza, lubricación y cambio de partes bajo un cronograma establecido."
+      },
+      {
+        "text": "En reparar el equipo únicamente cuando este se detiene por completo a mitad de la producción.",
+        "isCorrect": false,
+        "rationale": "Esta descripción corresponde al mantenimiento correctivo no planificado."
+      },
+      {
+        "text": "En modificar el diseño estructural de las máquinas tras investigar las causas estadísticas de quiebra.",
+        "isCorrect": false,
+        "rationale": "Representa un enfoque de reingeniería derivado del mantenimiento proactivo, no del preventivo rutinario."
+      },
+      {
+        "text": "En la evaluación permanente de imágenes térmicas e infrarrojas sin detener el funcionamiento del motor.",
+        "isCorrect": false,
+        "rationale": "Se refiere a una técnica específica de monitoreo de condición característica del mantenimiento predictivo."
+      },
+      {
+        "text": "En operar la maquinaria al máximo de su capacidad hasta que las piezas se desgasten por completo.",
+        "isCorrect": false,
+        "rationale": "Llevar el equipo al límite sin intervenirlo periódicamente es la antítesis de la conservación preventiva."
+      }
+    ],
+    "hint": "Recuerde el uso de intervenciones programadas periódicamente para evitar llegar al colapso del activo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son parámetros habitualmente utilizados para determinar la frecuencia de un mantenimiento preventivo?",
+    "opciones": [
+      {
+        "text": "Horas de funcionamiento acumuladas por el equipo.",
+        "isCorrect": true,
+        "rationale": "El conteo de horas de operación permite programar las intervenciones en función del trabajo efectivo que ha realizado el motor o máquina."
+      },
+      {
+        "text": "Kilometraje recorrido en el caso de unidades móviles y vehículos.",
+        "isCorrect": true,
+        "rationale": "En la flota de transporte o equipo móvil, el kilometraje es el indicador estándar para ejecutar renovaciones de fluidos y revisiones de frenos."
+      },
+      {
+        "text": "Intervalos calendáricos definidos (diario, semanal, mensual, anual).",
+        "isCorrect": true,
+        "rationale": "Establecer fechas fijas en el calendario ayuda a estructurar los planes de inspección rutinaria de instalaciones y activos."
+      },
+      {
+        "text": "La ruptura imprevista de un eje de transmisión en la faja.",
+        "isCorrect": false,
+        "rationale": "La fractura no planificada de un componente da lugar a una reparación correctiva, no a un criterio de programación preventiva."
+      },
+      {
+        "text": "El reporte de una fuga masiva de lubricante sobre el piso de la planta.",
+        "isCorrect": false,
+        "rationale": "Representa un evento anómalo o incidente que requiere atención inmediata no programada."
+      }
+    ],
+    "hint": "Considere las variables cuantitativas de uso acumulado o tiempo estandarizado que se registran en los programas de mantenimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es un beneficio directo de la implementación de un plan de mantenimiento preventivo?",
+    "opciones": [
+      {
+        "text": "Aumenta la confiabilidad del equipo y disminuye la ocurrencia de paradas imprevistas.",
+        "isCorrect": true,
+        "rationale": "Al reemplazar componentes desgastados antes de que fallen, se asegura que el activo permanezca disponible y operable durante la producción."
+      },
+      {
+        "text": "Elimina totalmente la necesidad de contratar personal técnico especializado en la empresa.",
+        "isCorrect": false,
+        "rationale": "Ejecutar actividades preventivas requiere personal capacitado que conozca las pautas y pormenores de la maquinaria."
+      },
+      {
+        "text": "Permite que los equipos operen indefinidamente sin requerir repuestos ni lubricantes.",
+        "isCorrect": false,
+        "rationale": "Todo activo sufre desgaste mecánico; el mantenimiento preventivo gestiona dicho desgaste, no lo desaparece físicamente."
+      },
+      {
+        "text": "Garantiza que la materia prima nunca sufra variaciones en su composición mineralógica.",
+        "isCorrect": false,
+        "rationale": "La calidad de la materia prima proviene de procesos geológicos o de abastecimiento externos a la rutina de mantenimiento del equipo."
+      },
+      {
+        "text": "Evita el uso de Equipos de Protección Personal (EPP) en las instalaciones de la planta.",
+        "isCorrect": false,
+        "rationale": "Las medidas de seguridad e higiene laboral siguen siendo obligatorias independientemente de la estrategia de mantenimiento empleada."
+      }
+    ],
+    "hint": "Considere el impacto positivo sobre la continuidad operacional y la reducción de sorpresas mecánicas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la industria minera e industrial, ¿cuántas paradas mayores de planta se suelen programar al año y de qué duración aproximada son?",
+    "opciones": [
+      {
+        "text": "Dos paradas mayores al año (frecuentemente en enero y julio/agosto), con una duración de 5 a 6 días.",
+        "isCorrect": true,
+        "rationale": "Coincide con la programación estandarizada descrita en las ponencias para realizar cambios estructurales y reparaciones integrales."
+      },
+      {
+        "text": "Una sola parada mayor al año realizada en diciembre con una duración de 30 días continuos.",
+        "isCorrect": false,
+        "rationale": "Detener una planta industrial durante un mes completo generaría pérdidas de producción incompatibles con las metas operativas habituales."
+      },
+      {
+        "text": "Doce paradas mayores al año programadas al cierre de cada mes con una duración de 10 días.",
+        "isCorrect": false,
+        "rationale": "Una frecuencia mensual de parada mayor paralizaría las operaciones durante un tercio del año, destruyendo la rentabilidad."
+      },
+      {
+        "text": "Cuatro paradas mayores al año, una al inicio de cada estación, de solo 12 horas de duración.",
+        "isCorrect": false,
+        "rationale": "Las intervenciones de 12 horas o pocos días corresponden a paradas menores, no a paradas mayores integrales."
+      },
+      {
+        "text": "No se programan paradas mayores, solo se interrumpe la planta cuando los molinos se bloquean.",
+        "isCorrect": false,
+        "rationale": "Ignorar las paradas programadas obligaría a la planta a operar bajo un riesgoso régimen puramente reactivo."
+      }
+    ],
+    "hint": "Piense en las dos grandes paradas anuales de menos de una semana de duración descritas en las clases.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el principio fundamental del mantenimiento predictivo?",
+    "opciones": [
+      {
+        "text": "El monitoreo y seguimiento del estado real del equipo para anticipar la ocurrencia de una falla.",
+        "isCorrect": true,
+        "rationale": "Se basa en evaluar variables físicas (vibración, temperatura, estado del aceite) para intervenir la máquina justo antes de que el fallo se consolide."
+      },
+      {
+        "text": "El cambio obligatorio de piezas en fechas fijas sin importar si están en buen estado.",
+        "isCorrect": false,
+        "rationale": "Corresponde al mantenimiento preventivo programado por calendario, no a la evaluación de la condición real del activo."
+      },
+      {
+        "text": "La reparación de urgencia de los componentes una vez que se ha producido la ruptura mecánica.",
+        "isCorrect": false,
+        "rationale": "Esta descripción define el comportamiento del mantenimiento correctivo tradicional."
+      },
+      {
+        "text": "La redacción de procedimientos administrativos sin realizar mediciones físicas sobre la máquina.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento predictivo requiere necesariamente mediciones e inspecciones instrumentadas para predecir fallas."
+      },
+      {
+        "text": "El uso exclusivo de lubricación manual por parte del operador al inicio de cada turno.",
+        "isCorrect": false,
+        "rationale": "Representa una labor preventiva básica o de primer nivel, distinta de la evaluación instrumentada del predictivo."
+      }
+    ],
+    "hint": "Considere el uso de herramientas de diagnóstico para medir la salud del activo sin necesidad de desarmarlo o esperar a que se rompa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes son técnicas ampliamente utilizadas dentro del mantenimiento predictivo?",
+    "opciones": [
+      {
+        "text": "Análisis de vibraciones mecánicas.",
+        "isCorrect": true,
+        "rationale": "Permite identificar desalineaciones, desequilibrios o holguras en ejes y rodamientos midiendo la amplitud y frecuencia de vibración."
+      },
+      {
+        "text": "Termografía infrarroja para detectar puntos calientes.",
+        "isCorrect": true,
+        "rationale": "Ayuda a detectar fricciones excesivas o sobrecargas eléctricas registrando patrones de temperatura en la superficie del equipo."
+      },
+      {
+        "text": "Análisis de aceite y presencia de partículas de desgaste.",
+        "isCorrect": true,
+        "rationale": "Evalúa la degradación del lubricante y la presencia de limaduras metálicas para determinar el estado interno de los componentes."
+      },
+      {
+        "text": "Inspección por ultrasonido.",
+        "isCorrect": true,
+        "rationale": "Utiliza ondas sonoras de alta frecuencia para detectar fugas de presión, fallas en rodamientos o fisuras internas no visibles."
+      },
+      {
+        "text": "Sustitución intempestiva de motores tras sufrir un cortocircuito.",
+        "isCorrect": false,
+        "rationale": "Corresponde a una acción de reemplazo correctivo ejecutada con posterioridad al colapso eléctrico."
+      }
+    ],
+    "hint": "Identifique los métodos tecnológicos de monitoreo no destructivo empleados para medir vibraciones, calor, sonido y fluidos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el Perú, ¿qué institución gubernamental regula y certifica al personal que realiza mediciones predictivas utilizando equipos con fuentes radiactivas (como densímetros o analizadores en línea)?",
+    "opciones": [
+      {
+        "text": "IPEN (Instituto Peruano de Energía Nuclear).",
+        "isCorrect": true,
+        "rationale": "Es la autoridad competente en el Perú encargada de normar, capacitar y certificar a quienes operan instrumental con emisión de radiaciones ionizantes."
+      },
+      {
+        "text": "OEFA (Organismo de Evaluación y Fiscalización Ambiental).",
+        "isCorrect": false,
+        "rationale": "Se encarga de la fiscalización ambiental general, pero no de la homologación técnica para el manejo de fuentes radiactivas."
+      },
+      {
+        "text": "SUNAFIL (Superintendencia Nacional de Fiscalización Laboral).",
+        "isCorrect": false,
+        "rationale": "Supervisa el cumplimiento de la normativa laboral y de seguridad y salud, pero no emite la licencia especializada en energía nuclear."
+      },
+      {
+        "text": "INDECI (Instituto Nacional de Defensa Civil).",
+        "isCorrect": false,
+        "rationale": "Su función se enfoca en la gestión del riesgo de desastres naturales o emergencias civiles, no en la tecnología nuclear industrial."
+      },
+      {
+        "text": "OSINERGMIN (Organismo Supervisor de la Inversión en Energía y Minería).",
+        "isCorrect": false,
+        "rationale": "Fiscaliza la infraestructura energética y minera, pero la certificación de competencias en material nuclear recae de forma exclusiva en el IPEN."
+      }
+    ],
+    "hint": "Identifique la entidad técnica peruana especializada en el ámbito nuclear y radiactivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una limitación o desventaja asociada al mantenimiento predictivo?",
+    "opciones": [
+      {
+        "text": "Requiere la adquisición de instrumentos costosos y la contratación de personal altamente especializado.",
+        "isCorrect": true,
+        "rationale": "Las herramientas de diagnóstico avanzado (termógrafos, analizadores de espectro, fuentes radiactivas) y la capacitación especializada exigen una elevada inversión inicial."
+      },
+      {
+        "text": "Provoca paradas de planta involuntarias con mayor frecuencia que el mantenimiento reactivo.",
+        "isCorrect": false,
+        "rationale": "El objetivo del predictivo es precisamente evitar las paradas no programadas mediante la intervención oportuna."
+      },
+      {
+        "text": "Impide conocer la condición de temperatura y vibración del motor antes de que este se destruya.",
+        "isCorrect": false,
+        "rationale": "La meta central del predictivo es medir continuamente esas variables para actuar antes del colapso."
+      },
+      {
+        "text": "Obliga a desarmar por completo la maquinaria para poder medir el nivel de fricción.",
+        "isCorrect": false,
+        "rationale": "Las técnicas predictivas son predominantemente no destructivas y se efectúan con el equipo en pleno funcionamiento."
+      },
+      {
+        "text": "Genera un incremento desmedido en el consumo de insumos y repuestos sin necesidad.",
+        "isCorrect": false,
+        "rationale": "Al intervenir únicamente cuando los datos lo justifican, se optimiza el uso de repuestos evitando cambios innecesarios."
+      }
+    ],
+    "hint": "Considere los requerimientos de inversión económica en tecnología y el nivel de competencia técnica exigido al personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal del mantenimiento proactivo?",
+    "opciones": [
+      {
+        "text": "Identificar y eliminar la causa raíz de los fallos para evitar su repetición en el futuro.",
+        "isCorrect": true,
+        "rationale": "Va más allá de corregir o prevenir el síntoma; analiza el origen del problema (diseño, material, manipulación) para erradicarlo definitivamente."
+      },
+      {
+        "text": "Sustituir piezas únicamente cuando el operador reporta un ruido extraño al final del turno.",
+        "isCorrect": false,
+        "rationale": "Se trata de un reporte intuitivo del operador que suele derivar en intervenciones correctivas o preventivas básicas."
+      },
+      {
+        "text": "Comprar maquinarias de repuesto para sustituir los equipos en cuanto muestren el primer fallo.",
+        "isCorrect": false,
+        "rationale": "Representa una estrategia de reemplazo costosa que ignora el análisis del origen técnico de la avería."
+      },
+      {
+        "text": "Aumentar la frecuencia de paradas sin revisar el comportamiento de las variables físicas del activo.",
+        "isCorrect": false,
+        "rationale": "Incrementar paradas sin justificación técnica deteriora la productividad en lugar de mejorar la confiabilidad."
+      },
+      {
+        "text": "Limitar el mantenimiento a la aplicación de pintura y limpieza exterior de los motores.",
+        "isCorrect": false,
+        "rationale": "La preservación estética no aborda el análisis sistemático de fallas mecánicas, eléctricas o de proceso."
+      }
+    ],
+    "hint": "Busque el enfoque orientado a erradicar la causa profunda de los problemas mecánicos o de proceso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué metodología es utilizada comúnmente en el mantenimiento proactivo para investigar el origen de los problemas repetitivos?",
+    "opciones": [
+      {
+        "text": "Análisis de Causa Raíz (RCA / RCI).",
+        "isCorrect": true,
+        "rationale": "Proporciona una estructura lógica para determinar qué factores desencadenaron la falla repetitiva y establecer acciones correctivas permanentes."
+      },
+      {
+        "text": "Checklist de verificación visual de limpieza diaria.",
+        "isCorrect": false,
+        "rationale": "Es un formato operativo de inspección básica, no una herramienta de investigación analítica de causas profundas."
+      },
+      {
+        "text": "Orden de compra de emergencia de repuestos.",
+        "isCorrect": false,
+        "rationale": "Constituye un documento administrativo para la adquisición rápida de componentes durante una contingencia."
+      },
+      {
+        "text": "Cronograma de turnos y rotación de personal.",
+        "isCorrect": false,
+        "rationale": "Corresponde a la gestión de recursos humanos y horarios, no a la investigación técnica de fallas en activos."
+      },
+      {
+        "text": "Kardex de almacenamiento de combustibles.",
+        "isCorrect": false,
+        "rationale": "Es un registro de control de existencias de insumos que no analiza la causa física de averías en maquinarias."
+      }
+    ],
+    "hint": "Piense en la herramienta analítica estructurada conocida por sus siglas en inglés como RCA o RCI.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se vincula el área de mantenimiento con la gerencia de operaciones en una planta industrial?",
+    "opciones": [
+      {
+        "text": "Mantenimiento es el brazo derecho de operaciones; la confiabilidad de los equipos asegura el cumplimiento de las metas de producción.",
+        "isCorrect": true,
+        "rationale": "Ambas áreas trabajan coordinadamente: si los equipos fallan por mal mantenimiento, la producción disminuye y no se alcanzan las metas."
+      },
+      {
+        "text": "Mantenimiento trabaja de forma autónoma sin relación ni comunicación con los planes de producción.",
+        "isCorrect": false,
+        "rationale": "Desvincular ambas áreas genera paradas no coordinadas y pérdidas de producción incompatibles con la rentabilidad."
+      },
+      {
+        "text": "Operaciones asume la reparación técnica pesada y mantenimiento únicamente gestiona las compras.",
+        "isCorrect": false,
+        "rationale": "La ejecución técnica de las intervenciones mecánicas y eléctricas es responsabilidad del personal de mantenimiento."
+      },
+      {
+        "text": "Mantenimiento tiene la facultad de detener la planta en cualquier momento sin avisar a operaciones.",
+        "isCorrect": false,
+        "rationale": "Toda parada debe ser planificada y coordinada para minimizar el impacto en las metas del proceso productivo."
+      },
+      {
+        "text": "Operaciones evalúa a mantenimiento únicamente en función del presupuesto gastado en herramientas.",
+        "isCorrect": false,
+        "rationale": "La evaluación principal de operaciones hacia mantenimiento se mide en términos de disponibilidad y confiabilidad de los equipos."
+      }
+    ],
+    "hint": "Considere cómo la disponibilidad operacional de las máquinas soporta directamente el volumen de producción planeado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple un software CMM (o GMAO) en la gestión moderna del mantenimiento?",
+    "opciones": [
+      {
+        "text": "Ayuda a planificar, programar y realizar el seguimiento de las tareas y órdenes de trabajo de mantenimiento.",
+        "isCorrect": true,
+        "rationale": "Un sistema computarizado informatiza la programación de intervenciones, el historial de equipos, los repuestos y el control de costos."
+      },
+      {
+        "text": "Controla de forma automática la velocidad de los motores sin requerir programación.",
+        "isCorrect": false,
+        "rationale": "El control de velocidad recae en variadores de frecuencia o sistemas SCADA/PLC, no en un software de gestión CMM."
+      },
+      {
+        "text": "Sustituye las inspecciones físicas que deben realizar Los mecánicos en el taller.",
+        "isCorrect": false,
+        "rationale": "El software gestiona y registra la información, pero la inspección y el trabajo de campo requieren acción humana."
+      },
+      {
+        "text": "Calcula de forma exclusiva los impuestos y planillas salariales de la empresa.",
+        "isCorrect": false,
+        "rationale": "Esta tarea contable pertenece a los sistemas ERP generales o de recursos humanos, no al módulo específico de mantenimiento."
+      },
+      {
+        "text": "Diseña los planos de ingeniería de detalle de las estructuras civiles de la planta.",
+        "isCorrect": false,
+        "rationale": "El diseño de planos se efectúa mediante programas de CAD, no con sistemas informatizados de gestión de mantenimiento."
+      }
+    ],
+    "hint": "Se trata de la herramienta informática enfocada en la planificación, programación y trazabilidad de las órdenes de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la utilidad de instalar sensores de monitoreo remoto en equipos críticos de una planta?",
+    "opciones": [
+      {
+        "text": "Permiten detectar anomalías en variables operativas (como calor o vibración) en tiempo real a distancia.",
+        "isCorrect": true,
+        "rationale": "La sensorización constante transmite datos en tiempo real, alertando sobre variaciones anómalas sin necesidad de presencia física permanente."
+      },
+      {
+        "text": "Efectúan la reparación automática de las piezas fracturadas mientras el equipo está marchando.",
+        "isCorrect": false,
+        "rationale": "Los sensores captan y transmiten variables físicas; la sustitución o reparación de piezas exige la intervención del mantenedor."
+      },
+      {
+        "text": "Registran la asistencia y el horario de ingreso de los trabajadores a la planta.",
+        "isCorrect": false,
+        "rationale": "El control de asistencia se lleva a cabo mediante marcadores biométricos en los accesos, no con sensores instalados en los activos."
+      },
+      {
+        "text": "Aumentan la potencia máxima del motor por encima de los límites del fabricante.",
+        "isCorrect": false,
+        "rationale": "Los sensores monitorean el estado del activo, pero no alteran la capacidad mecánica de diseño de la máquina."
+      },
+      {
+        "text": "Reemplazan la necesidad de lubricar periódicamente los rodamientos de los motores.",
+        "isCorrect": false,
+        "rationale": "Monitorear la condición no elimina el desgaste natural ni la necesidad de aplicar lubricante."
+      }
+    ],
+    "hint": "Piense en la captación continua de datos técnicos como temperatura o nivel de vibración sin desplazarse hasta el equipo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera el deterioro de un equipo por falta de mantenimiento afecta la seguridad y salud del trabajador?",
+    "opciones": [
+      {
+        "text": "Genera ruido excesivo, vibraciones anómalas o fugas de gases y vapores que pueden causar accidentes o enfermedades ocupacionales.",
+        "isCorrect": true,
+        "rationale": "Un activo en mal estado incrementa sus decibeles de ruido (provocando hipoacusia), vibra descontroladamente o emite contaminantes dañinos para la salud."
+      },
+      {
+        "text": "Reduce automáticamente la duración del turno de trabajo para proteger al operador.",
+        "isCorrect": false,
+        "rationale": "Las fallas mecánicas no reprograman automáticamente las jornadas laborales establecidas por la administración."
+      },
+      {
+        "text": "Incentiva al trabajador a prescindir de los equipos de protección personal en planta.",
+        "isCorrect": false,
+        "rationale": "Al aumentar los riesgos por fallas del equipo, se exige mayor rigor y protección, no la eliminación del EPP."
+      },
+      {
+        "text": "Elimina de inmediato la presencia de agentes contaminantes en el aire de la planta.",
+        "isCorrect": false,
+        "rationale": "Un equipo averiado suele liberar mayores cantidades de polvos, gases o fluidos al ambiente."
+      },
+      {
+        "text": "Garantiza que el nivel de ruido en el área de trabajo disminuya por debajo de los 80 decibeles.",
+        "isCorrect": false,
+        "rationale": "El desgaste en rodamientos, engranajes o fajas incrementa sensiblemente los niveles de sonido en el entorno."
+      }
+    ],
+    "hint": "Considere factores de peligro como el incremento súbito del ruido, vibraciones estructurales o escape de sustancias nocivas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco legal peruano citado en las clases, ¿cuál es la Ley General de Seguridad y Salud en el Trabajo que rige para todas las organizaciones?",
+    "opciones": [
+      {
+        "text": "Ley Nº 29783.",
+        "isCorrect": true,
+        "rationale": "Es la ley marco de Seguridad y Salud en el Trabajo en el Perú, aplicable a todos los sectores económicos del país."
+      },
+      {
+        "text": "Ley Nº 28611.",
+        "isCorrect": false,
+        "rationale": "Corresponde a la Ley General del Ambiente en el Perú, no a la norma matriz de seguridad y salud laboral."
+      },
+      {
+        "text": "Decreto Supremo 024-2016-EM.",
+        "isCorrect": false,
+        "rationale": "Es el Reglamento de Seguridad y Salud Ocupacional específico para el sector Minería, no la ley general de aplicación transversal."
+      },
+      {
+        "text": "Norma Técnica G.050.",
+        "isCorrect": false,
+        "rationale": "Es la norma del Reglamento Nacional de Edificaciones enfocada en la seguridad durante la construcción."
+      },
+      {
+        "text": "Ley Nº 30222.",
+        "isCorrect": false,
+        "rationale": "Es una ley modificatoria de artículos específicos de la Ley 29783, pero la ley matriz original es la 29783."
+      }
+    ],
+    "hint": "Recuerde la norma principal de 5 dígitos aprobada en el Perú que regula la prevención de riesgos laborales a nivel general.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son las cuatro etapas ordenadas del Ciclo de Deming (PHVA / PDCA) empleadas en la mejora continua del mantenimiento?",
+    "opciones": [
+      {
+        "text": "Planificar, Hacer, Verificar y Actuar.",
+        "isCorrect": true,
+        "rationale": "Constituye la secuencia metodológica lógica (Plan, Do, Check, Act) enfocada en la mejora continua sostenida de los procesos."
+      },
+      {
+        "text": "Presupuestar, Historiar, Validar y Acreditar.",
+        "isCorrect": false,
+        "rationale": "Mezcla términos financieros y administrativos que no corresponden a las fases del modelo dinámico de Deming."
+      },
+      {
+        "text": "Proyectar, Herramentar, Variar y Analizar.",
+        "isCorrect": false,
+        "rationale": "Utiliza verbos incoherentes con el ciclo estandarizado de calidad y mejora de procesos."
+      },
+      {
+        "text": "Prevenir, Homologar, Vigilar y Autorizar.",
+        "isCorrect": false,
+        "rationale": "Aunque contiene términos vinculados al mantenimiento, no sigue las cuatro fases normadas del ciclo PHVA."
+      },
+      {
+        "text": "Programar, Habilitar, Visitar y Auditar.",
+        "isCorrect": false,
+        "rationale": "Alteran las etapas clásicas del ciclo de Deming reemplazando conceptos fundamentales como la planificación y la actuación de mejora."
+      }
+    ],
+    "hint": "Piense en el acrónimo PHVA derivado de las palabras en español correspondientes a Plan, Do, Check, Act.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En el contexto de la mejora continua del mantenimiento, ¿a qué corresponden las etapas de 'Planificar' y 'Verificar' dentro del ciclo PHVA?",
+    "opciones": [
+      {
+        "text": "Planificar: Definir objetivos, programas y requerimientos técnicos exigidos por el cliente para el mantenimiento.",
+        "isCorrect": true,
+        "rationale": "En la fase de planificación se formulan las metas, estrategias, secuencias de trabajo e indicadores (KPIs) en función de los requerimientos."
+      },
+      {
+        "text": "Verificar: Medir y evaluar los resultados obtenidos comparándolos con los objetivos e indicadores previstos.",
+        "isCorrect": true,
+        "rationale": "La verificación consiste en comprobar cuantitativa y cualitativamente si las acciones ejecutadas lograron la disponibilidad y calidad planificadas."
+      },
+      {
+        "text": "Planificar: Ejecutar los cambios de repuestos en el taller de reparación sin registrar datos.",
+        "isCorrect": false,
+        "rationale": "La ejecución física del trabajo en el taller pertenece a la etapa de 'Hacer', no a la fase conceptual de planificación."
+      },
+      {
+        "text": "Verificar: Ignorar las variaciones encontradas en los KPIs para no alterar los reportes finales.",
+        "isCorrect": false,
+        "rationale": "Ocultar o ignorar desviaciones contradice el propósito de la verificación, el cual es detectar brechas para corregirlas."
+      },
+      {
+        "text": "Planificar: Adquirir herramientas de manera impulsiva sin revisar los requerimientos de la planta.",
+        "isCorrect": false,
+        "rationale": "Comprar sin sustento técnico contraviene la planificación estructurada basada en términos de referencia y necesidades reales."
+      }
+    ],
+    "hint": "Seleccione las definiciones que describen adecuadamente la preparación de objetivos por un lado, y la comprobación de resultados por el otro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la conclusión general respecto a articular una gestión de mantenimiento adecuada con los estándares de calidad y seguridad?",
+    "opciones": [
+      {
+        "text": "Optimiza el rendimiento de los activos, reduce costos por paradas, incrementa la productividad y asegura un entorno laboral seguro.",
+        "isCorrect": true,
+        "rationale": "Engloba la meta final de la gestión integrada de mantenimiento: asegurar la máxima rentabilidad y disponibilidad cuidando la integridad del personal."
+      },
+      {
+        "text": "Incrementa los costos operativos pero elimina totalmente la necesidad de capacitar al personal de planta.",
+        "isCorrect": false,
+        "rationale": "Una adecuada gestión busca optimizar costos, y la capacitación permanente es un pilar indispensable para sostener la calidad."
+      },
+      {
+        "text": "Permite que el área de mantenimiento trabaje sin coordinar con la gerencia de operaciones.",
+        "isCorrect": false,
+        "rationale": "La alineación permanente entre mantenimiento y operaciones es imprescindible para alcanzar los volúmenes de producción requeridos."
+      },
+      {
+        "text": "Asegura la producción máxima aun cuando ocurran accidentes graves o mortales en las instalaciones.",
+        "isCorrect": false,
+        "rationale": "Un principio clave de la gestión industrial moderna es que la productividad no puede lograrse a costa de accidentes laborales."
+      },
+      {
+        "text": "Elimina definitivamente la necesidad de realizar paradas de planta menores o mayores.",
+        "isCorrect": false,
+        "rationale": "Las paradas programadas siguen siendo necesarias para abordar desgastes estructurales que no pueden repararse con la planta en marcha."
+      }
+    ],
+    "hint": "Piense en el equilibrio perfecto entre alta disponibilidad de equipos, reducción de costos, competitividad y protección de la salud del trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál era la característica definitoria del mantenimiento tradicional durante las primeras etapas de la industrialización en comparación con las metodologías modernas?",
+    "opciones": [
+      {
+        "text": "Actuaba de manera exclusivamente reactiva, intervenido los equipos únicamente cuando la falla o avería ya se había producido.",
+        "isCorrect": true,
+        "rationale": "En la etapa tradicional el mantenimiento no contemplaba la prevención ni la predicción, por lo que la intervención se ejecutaba inmediatamente después del paro o rotura del equipo."
+      },
+      {
+        "text": "Aplicaba monitoreos periódicos de vibración para predecir cuándo la maquinaria dejaría de funcionar.",
+        "isCorrect": false,
+        "rationale": "El monitoreo de parámetros físicos como la vibración corresponde al mantenimiento predictivo, técnica desarrollada mucho después."
+      },
+      {
+        "text": "Se estructuraba sobre la base de TDRs y órdenes de trabajo digitales para programar cambios de repuestos.",
+        "isCorrect": false,
+        "rationale": "El uso de términos de referencia y órdenes de trabajo sistematizadas es propio de los enfoques modernos de gestión preventiva."
+      },
+      {
+        "text": "Priorizaba la eliminación de la causa raíz mediante la aplicación sistemática del ciclo de Deming.",
+        "isCorrect": false,
+        "rationale": "La búsqueda y eliminación de la causa raíz es el fundamento del mantenimiento proactivo moderno, no del enfoque tradicional."
+      },
+      {
+        "text": "Requería que el personal estuviera certificado por entidades reguladoras nucleares antes de manipular la maquinaria.",
+        "isCorrect": false,
+        "rationale": "Las certificaciones especializadas para monitoreo nuclear son un requisito moderno para equipos específicos de medición en línea."
+      }
+    ],
+    "hint": "Considera el momento en que se realizaba la intervención técnica respecto al estado de funcionamiento de la máquina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Ocasionalmente se requiere realizar un mantenimiento correctivo aun cuando el equipo ha recibido su mantenimiento preventivo programado. Según el material del curso, ¿a qué factor externo se atribuye principalmente esta situación?",
+    "opciones": [
+      {
+        "text": "A variaciones críticas en la materia prima, como un alto contenido de sulfuros o hierro que incrementa la corrosión y el desgaste prematuro.",
+        "isCorrect": true,
+        "rationale": "Las propiedades físico-químicas no planificadas de la materia prima actúan como un factor externo que acelera el desgaste e imponen fallas prematuras no previstas por el plan preventivo."
+      },
+      {
+        "text": "A la falta de repuestos en el almacén central durante las paradas menores de la planta.",
+        "isCorrect": false,
+        "rationale": "La disponibilidad de repuestos en almacén es un factor logístico interno de gestión, no una variable externa del proceso o materia prima."
+      },
+      {
+        "text": "A la ausencia de un software CMMS para el registro de horas de operación del equipo.",
+        "isCorrect": false,
+        "rationale": "El software CMMS es una herramienta tecnológica administrativa cuya ausencia afecta la planificación, pero no causa corrosión o desgaste directo en campo."
+      },
+      {
+        "text": "A la cancelación de las paradas mayores de planta en los meses de enero y julio.",
+        "isCorrect": false,
+        "rationale": "Las paradas mayores son eventos programados en el calendario anual y su modificación responde a decisiones estratégicas de la gerencia."
+      },
+      {
+        "text": "Al uso exclusivo de sensores fijos de temperatura en lugar de inspecciones manuales.",
+        "isCorrect": false,
+        "rationale": "Los sensores fijos proporcionan datos continuos para la predicción de fallas y no representan una causa de avería en la maquinaria."
+      }
+    ],
+    "hint": "Piensa en la variabilidad de los insumos o materiales que ingresan a la planta de procesamiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del mantenimiento correctivo existen dos modalidades operativas. ¿Cuáles son las características que distinguen al mantenimiento correctivo planificado del no planificado?",
+    "opciones": [
+      {
+        "text": "El correctivo planificado se anticipa a fallas conocidas que ocurren en intervalos esperados, permitiendo alistar repuestos con anterioridad.",
+        "isCorrect": true,
+        "rationale": "Esta modalidad permite preparar los insumos necesarios para la intervención aun cuando el evento termine en una corrección."
+      },
+      {
+        "text": "El correctivo no planificado resulta de fallas intempestivas o fatiga de material imprevista, provocando parálisis operativas y sobrecostos por compras de emergencia.",
+        "isCorrect": true,
+        "rationale": "Las averías inesperadas generan paros no programados que obligan a realizar adquisiciones o reparaciones de urgencia con mayor costo operacional."
+      },
+      {
+        "text": "El correctivo no planificado es la técnica recomendada por el cliente para maximizar la rentabilidad de la planta.",
+        "isCorrect": false,
+        "rationale": "Las fallas no planificadas deterioran la rentabilidad y aumentan los costos, por lo que son evitadas por la supervisión y los clientes."
+      },
+      {
+        "text": "El correctivo planificado prescinde completamente de las órdenes de trabajo (OT) para acelerar la reparación.",
+        "isCorrect": false,
+        "rationale": "Toda intervención planificada formal requiere la emisión de una Orden de Trabajo para autorizar y registrar las actividades."
+      },
+      {
+        "text": "El correctivo no planificado utiliza exclusivamente análisis de aceites y termografía para programar la intervención.",
+        "isCorrect": false,
+        "rationale": "El análisis de aceites y la termografía son herramientas de diagnóstico asociadas al mantenimiento predictivo."
+      }
+    ],
+    "hint": "Analiza la previsibilidad del evento de falla y la preparación previa de recursos frente a roturas imprevistas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gran y mediana minería, las paradas de planta se dividen en paradas mayores y menores. ¿Cuál es el esquema temporal y de duración típico para estas paradas programadas?",
+    "opciones": [
+      {
+        "text": "Dos paradas mayores al año (en enero y julio/agosto) con duración de 5 a 6 días, y dos paradas menores de aproximadamente 3 días.",
+        "isCorrect": true,
+        "rationale": "Este esquema estándar permite realizar mantenimientos integrales de gran envergadura semestralmente, complementados con intervenciones menores intermedias."
+      },
+      {
+        "text": "Una parada mayor anual de 15 días en diciembre y paradas menores mensuales de 12 horas.",
+        "isCorrect": false,
+        "rationale": "Una sola parada de 15 días al año no se ajusta al ciclo habitual de desgaste de componentes críticos como los liners de molinos."
+      },
+      {
+        "text": "Cuatro paradas mayores trimestrales de 2 días y paradas menores semanales sin detención de planta.",
+        "isCorrect": false,
+        "rationale": "Las paradas mayores requieren entre 5 y 6 días debido a la complejidad del desmontaje y montaje de grandes activos."
+      },
+      {
+        "text": "Paradas mayores exclusivas para la temporada de verano de 10 días y paradas menores en cada cambio de turno.",
+        "isCorrect": false,
+        "rationale": "Las paradas menores no se realizan por cambio de turno, sino que se programan estratégicamente en meses intermedios como abril/mayo y septiembre/octubre."
+      },
+      {
+        "text": "Dos paradas mayores en mayo y septiembre de 1 día cada una, sin contemplar paradas menores.",
+        "isCorrect": false,
+        "rationale": "Un día resulta insuficiente para completar los trabajos de una parada mayor en una planta minera o industrial."
+      }
+    ],
+    "hint": "Considera los meses del año señalados para el mantenimiento mayor y la cantidad de días asignados a cada tipo de parada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué elementos son fundamentales para estructurar un programa formal de mantenimiento preventivo presentado al cliente?",
+    "opciones": [
+      {
+        "text": "Las especificaciones de los Términos de Referencia (TDR) y la emisión de Órdenes de Trabajo (OT) por parte del cliente.",
+        "isCorrect": true,
+        "rationale": "Los TDR establecen los requisitos contractuales y las OT autorizan la ejecución de las rutinas de mantenimiento."
+      },
+      {
+        "text": "La programación regular de intervenciones basada en el tiempo, horas de funcionamiento o kilometraje recorrido.",
+        "isCorrect": true,
+        "rationale": "El mantenimiento preventivo requiere métricas operativas estandarizadas para definir los intervalos de servicio de cada activo."
+      },
+      {
+        "text": "La espera sistemática de que los componentes alcancen la rotura total antes de solicitar el repuesto.",
+        "isCorrect": false,
+        "rationale": "Esperar la falla total es la definición de mantenimiento correctivo no planificado, lo opuesto a la prevención."
+      },
+      {
+        "text": "La planificación detallada enviada en matrices o programas técnicos para aprobación previa a las operaciones.",
+        "isCorrect": true,
+        "rationale": "El programa formal debe presentarse y aprobarse mediante matrices de planificación antes de iniciar los periodos operacionales."
+      },
+      {
+        "text": "La ejecución improvisada de tareas de lubricación únicamente cuando el operador reporta ruidos extraños.",
+        "isCorrect": false,
+        "rationale": "Intervenir ante ruidos extraños responde a una acción reactiva o de diagnóstico puntual, no a un programa estructurado."
+      }
+    ],
+    "hint": "Reflexiona sobre la documentación de origen del cliente y las unidades físicas que determinan la periodicidad de los servicios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "A pesar de sus amplios beneficios para garantizar la disponibilidad, el mantenimiento preventivo presenta ciertas desventajas cuando no existe un control adecuado. ¿Cuál es una de esas desventajas?",
+    "opciones": [
+      {
+        "text": "El aumento de costos por el uso de recursos y tiempo en intervenciones o tareas que no siempre eran requeridas en ese momento exacto.",
+        "isCorrect": true,
+        "rationale": "Al basarse en intervalos fijos de tiempo u horas, se corre el riesgo de reemplazar componentes o intervenir equipos que aún conservan vida útil apta."
+      },
+      {
+        "text": "La imposibilidad de programar Órdenes de Trabajo (OT) con la gerencia de operaciones.",
+        "isCorrect": false,
+        "rationale": "Las órdenes de trabajo son la herramienta básica para ejecutar el mantenimiento preventivo, por lo que su programación es perfectamente viable."
+      },
+      {
+        "text": "La elevación drástica de los accidentes fatales por el exceso de inspecciones programadas.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones programadas bajo procedimientos estandarizados buscan mejorar las condiciones de seguridad y reducir el riesgo de fallas peligrosas."
+      },
+      {
+        "text": "La pérdida inmediata de la certificación otorgada por el Instituto Peruano de Energía Nuclear (IPEN).",
+        "isCorrect": false,
+        "rationale": "La certificación del IPEN está vinculada al manejo seguro de fuentes radiactivas y no a la aplicación de calendarios preventivos generales."
+      },
+      {
+        "text": "La obligación legal de detener todas las líneas de producción simultáneamente de manera imprevista.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento preventivo se caracteriza por programar las paradas de forma coordinada, evitando la paralización imprevista de la planta."
+      }
+    ],
+    "hint": "Piensa en el impacto económico de reemplazar piezas o intervenir equipos según calendario sin evaluar su estado real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una planta industrial desea detectar desalineamientos en motores y desgaste interno en rodamientos antes de que ocurra una parada. ¿Qué técnica del mantenimiento predictivo es la más adecuada para este propósito específico?",
+    "opciones": [
+      {
+        "text": "El análisis de vibraciones mecánicas para evaluar el comportamiento dinámico y ajustar pernos o rodamientos.",
+        "isCorrect": true,
+        "rationale": "El estudio de las amplitudes y frecuencias de vibración permite identificar desalineaciones, desbalanceos y fallas incipientes en componentes rotativos."
+      },
+      {
+        "text": "La medición del kilometraje acumulado en la unidad móvil.",
+        "isCorrect": false,
+        "rationale": "El kilometraje es una variable cuantitativa utilizada para programar mantenimientos preventivos, no una técnica de monitoreo de condición dinámica."
+      },
+      {
+        "text": "El cambio preventivo programado de los liners del molino.",
+        "isCorrect": false,
+        "rationale": "El reemplazo de liners por calendario es una tarea preventiva de sustitución, no una técnica de análisis predictivo."
+      },
+      {
+        "text": "La aplicación del diagrama de causa-raíz mediante espina de pescado.",
+        "isCorrect": false,
+        "rationale": "El análisis de causa raíz es una metodología analítica propia del mantenimiento proactivo para investigar fallas ya detectadas o recurrentes."
+      },
+      {
+        "text": "La revisión visual de la pintura exterior del chasis de los equipos.",
+        "isCorrect": false,
+        "rationale": "La inspección estética de la pintura no proporciona información sobre el estado interno de rodamientos ni la alineación de ejes."
+      }
+    ],
+    "hint": "Relaciona el síntoma de holgura mecánica o rodamientos defectuosos con la técnica física de medición de movimiento oscilatorio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para el monitoreo y mantenimiento predictivo de equipos especializados como dosificadores, densímetros o analizadores en línea que utilizan tecnología nuclear, ¿qué requisito específico debe cumplir el personal técnico?",
+    "opciones": [
+      {
+        "text": "Estar capacitado, acreditado y homologado por el Instituto Peruano de Energía Nuclear (IPEN).",
+        "isCorrect": true,
+        "rationale": "La manipulación e inspección de instrumental que contiene fuentes radiactivas exige la certificación legal y técnica expedida por el IPEN."
+      },
+      {
+        "text": "Contar únicamente con una licencia de conducir para vehículos de Línea Amarilla.",
+        "isCorrect": false,
+        "rationale": "Las licencias de conducir para maquinaria pesada no habilitan al personal para la gestión ni inspección de equipos con emisión de radiación ionizante."
+      },
+      {
+        "text": "Poseer un certificado básico de primeros auxilios emitido por el Ministerio de Trabajo.",
+        "isCorrect": false,
+        "rationale": "Aunque el auxilio médico es general, el manejo de equipos nucleares requiere especialización técnica en protección radiológica."
+      },
+      {
+        "text": "Tener la aprobación exclusiva del supervisor de mina sin requerir formación externa.",
+        "isCorrect": false,
+        "rationale": "La autorización de un supervisor interno no reemplaza el marco legal regulatorio nacional para el uso de energía nuclear."
+      },
+      {
+        "text": "Haber realizado pasantías en talleres de mantenimiento correctivo automotriz tradicional.",
+        "isCorrect": false,
+        "rationale": "La experiencia automotriz convencional no proporciona los conocimientos necesarios en física nuclear ni seguridad radiológica."
+      }
+    ],
+    "hint": "Identifica la entidad estatal reguladora en el Perú encargada de la energía nuclear y la competencia técnica requerida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la principal barrera económica asociada con la implementación de un sistema de mantenimiento predictivo en una planta industrial?",
+    "opciones": [
+      {
+        "text": "Requiere una alta inversión inicial en equipos de monitoreo sofisticados y la contratación de personal altamente especializado.",
+        "isCorrect": true,
+        "rationale": "La adquisición de tecnología de diagnóstico (termógrafos, analizadores de vibración, ultrasonido) y los honorarios del personal especialista representan un costo elevado de entrada."
+      },
+      {
+        "text": "Genera un incremento exponencial en las paradas no programadas de las líneas en standby.",
+        "isCorrect": false,
+        "rationale": "El objetivo del predictivo es justamente minimizar las paradas no programadas mediante la detección oportuna de anomalías."
+      },
+      {
+        "text": "Obliga a realizar mantenimientos correctivos diarios por disposición de la gerencia de operaciones.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento predictivo busca reducir la necesidad de ejecutar correcciones de emergencia."
+      },
+      {
+        "text": "Reduce de manera drástica la vida útil garantizada de los activos físicos de la empresa.",
+        "isCorrect": false,
+        "rationale": "La detección temprana de fallas preserva la integridad de los equipos, aumentando o asegurando su vida útil."
+      },
+      {
+        "text": "Invalida el uso de programas computarizados de gestión tipo CMMS.",
+        "isCorrect": false,
+        "rationale": "Los datos obtenidos mediante técnicas predictivas se integran en el CMMS para optimizar la programación del mantenimiento."
+      }
+    ],
+    "hint": "Considera el tipo de instrumentos requeridos (termógrafos, ultrasonido, medidores nucleares) y la tarifa del personal calificado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El mantenimiento proactivo difiere de los otros tipos de mantenimiento porque su enfoque principal se orienta a:",
+    "opciones": [
+      {
+        "text": "Identificar y eliminar la causa raíz de las fallas mediante análisis de datos y la mejora continua.",
+        "isCorrect": true,
+        "rationale": "El mantenimiento proactivo busca rebasar el simple arreglo o prevención cíclica, erradicando el origen fundamental del problema para evitar su repetición."
+      },
+      {
+        "text": "Intervenir el equipo inmediatamente después de que se ha producido una avería catastrófica.",
+        "isCorrect": false,
+        "rationale": "Reaccionar tras la avería catastrófica es la definición operativa del mantenimiento correctivo."
+      },
+      {
+        "text": "Cambiar el aceite de los motores estrictamente cada 5,000 kilómetros.",
+        "isCorrect": false,
+        "rationale": "Sustituir fluidos a intervalos fijos de distancia o tiempo corresponde a una pauta de mantenimiento preventivo."
+      },
+      {
+        "text": "Reemplazar los componentes mecánicos únicamente durante las paradas mayores de enero.",
+        "isCorrect": false,
+        "rationale": "Aprovechar las ventanas fijas de paradas mayores representa una estrategia de oportunidad o mantenimiento preventivo programado."
+      },
+      {
+        "text": "Medir la temperatura de las carcasas con termómetros ambientales de mercurio.",
+        "isCorrect": false,
+        "rationale": "El monitoreo de parámetros físicos para diagnóstico de condición es propio de la metodología predictiva."
+      }
+    ],
+    "hint": "Piensa en el análisis sistemático que busca el origen primario del fallo para evitar que vuelva a repetirse.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es un beneficio directo de la correcta aplicación del mantenimiento proactivo en la gestión de activos industriales?",
+    "opciones": [
+      {
+        "text": "Reduce la frecuencia de fallas recurrentes y extiende la vida útil operativa de los activos.",
+        "isCorrect": true,
+        "rationale": "Al eliminar definitivamente las causas raíz de los fallos, se evita la degradación repetida del equipo, prolongando su funcionamiento seguro."
+      },
+      {
+        "text": "Elimina la necesidad de contar con personal capacitado en seguridad y salud ocupacional.",
+        "isCorrect": false,
+        "rationale": "El cumplimiento de los estándares de seguridad es obligatorio independientemente del modelo de mantenimiento aplicado."
+      },
+      {
+        "text": "Permite prescindir por completo del mantenimiento preventivo programado.",
+        "isCorrect": false,
+        "rationale": "El enfoque proactivo complementa y optimiza los planes preventivos, pero no elimina tareas básicas de lubricación ni ajustes rutinarios."
+      },
+      {
+        "text": "Desplaza la responsabilidad legal de las instalaciones hacia el área de contabilidad.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad técnica y legal de los activos físicos recae en las jefaturas y gerencias de mantenimiento y operaciones."
+      },
+      {
+        "text": "Garantiza que no se requerirá cambiar refacciones mecánicas durante diez años.",
+        "isCorrect": false,
+        "rationale": "Los componentes sufren desgaste natural imperativo por fricción u operación, por lo que requerirán recambios en algún momento de su ciclo de vida."
+      }
+    ],
+    "hint": "Piensa en cómo afecta eliminar el origen del problema al tiempo de vida útil de los equipos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un supervisor escucha un ruido anómalo en una bomba y utiliza un termógrafo para registrar un sobrecalentamiento por fricción antes de decidir la parada programada. ¿Qué tipo de mantenimiento está ejecutando en la etapa de detección?",
+    "opciones": [
+      {
+        "text": "Mantenimiento predictivo.",
+        "isCorrect": true,
+        "rationale": "El uso de instrumentación termográfica para evaluar la condición física en tiempo real y diagnosticar una anomalía antes de la falla constituye mantenimiento predictivo."
+      },
+      {
+        "text": "Mantenimiento correctivo no planificado.",
+        "isCorrect": false,
+        "rationale": "No es correctivo no planificado porque la bomba aún se encuentra funcionando y no se ha producido el paro intempestivo del equipo."
+      },
+      {
+        "text": "Mantenimiento tradicional.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento tradicional no empleaba tecnología de diagnóstico infrarrojo para anticipar sobrecalentamientos."
+      },
+      {
+        "text": "Mantenimiento proactivo exclusivo.",
+        "isCorrect": false,
+        "rationale": "Aunque la información puede alimentar un análisis proactivo, la medición puntual de temperatura mediante termografía es una técnica predictiva."
+      },
+      {
+        "text": "Mantenimiento reactivo directo.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento reactivo se ejecuta únicamente cuando el equipo ya no puede continuar operando debido a una rotura."
+      }
+    ],
+    "hint": "Identifica el mantenimiento que se apoya en la evaluación de la condición física en tiempo real para anticipar el fallo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la organización de una planta industrial, la gerencia de mantenimiento se considera el 'brazo derecho' de la gerencia de operaciones. ¿A qué se debe esta relación de dependencia mutua?",
+    "opciones": [
+      {
+        "text": "A que la rentabilidad y la productividad operacional dependen directamente de la disponibilidad y confiabilidad de los equipos.",
+        "isCorrect": true,
+        "rationale": "Las metas de producción no se pueden alcanzar si los equipos sufren paradas imprevistas o rinden por debajo de su capacidad nominal."
+      },
+      {
+        "text": "A que ambas gerencias comparten la misma firma de homologación ante el IPEN.",
+        "isCorrect": false,
+        "rationale": "La acreditación del IPEN es requerida únicamente para el personal involucrado en el manejo de fuentes radiactivas."
+      },
+      {
+        "text": "A que el mantenimiento correctivo sustituye las metas de producción en el reporte anual.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento correctivo representa un costo e ineficiencia, por lo que nunca sustituye ni representa una meta deseable de producción."
+      },
+      {
+        "text": "A que los supervisores de operaciones son los encargados de realizar el cambio de aceite de las bombas.",
+        "isCorrect": false,
+        "rationale": "La ejecución técnica de cambios de aceite y servicios mecánicos le corresponde al personal de mantenimiento, no a los supervisores de operaciones."
+      },
+      {
+        "text": "A que las paradas no programadas aumentan el valor de la empresa en el mercado competitivo.",
+        "isCorrect": false,
+        "rationale": "Las paradas no programadas reducen la competitividad y merman la rentabilidad de la empresa."
+      }
+    ],
+    "hint": "Considera el impacto que tiene el estado operativo de los equipos en las metas de volumen de producción e ingresos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Muchas plantas mineras e industriales disponen de cuatro líneas de producción, manteniendo habitualmente tres en operación y una en reserva (standby). ¿Cuál es la finalidad operativa de esta configuración?",
+    "opciones": [
+      {
+        "text": "Permitir la detención e intervención de una línea con fallas sin reducir la capacidad productiva total de la planta.",
+        "isCorrect": true,
+        "rationale": "Al rotar la línea en reserva hacia operaciones, se puede intervenir la línea con problemas sin afectar la meta global de procesamiento."
+      },
+      {
+        "text": "Cumplir con la norma de seguridad que exige tener un 25% de la planta desenergizada de forma permanente.",
+        "isCorrect": false,
+        "rationale": "No existe una exigencia legal que obligue a mantener un porcentaje fijo de planta apagado de forma continua."
+      },
+      {
+        "text": "Reservar equipos para ser utilizados únicamente en situaciones de emergencia ambiental.",
+        "isCorrect": false,
+        "rationale": "La línea en standby está integrada al flujo del proceso productivo regular y se conmuta para continuidad operativa."
+      },
+      {
+        "text": "Evitar la compra de software informático tipo CMMS para el control de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "La disposición de líneas en standby requiere una gestión más rigurosa mediante software para controlar los ciclos de trabajo de cada equipo."
+      },
+      {
+        "text": "Reducir los costos de personal contratando mecánicos solo para la línea de reserva.",
+        "isCorrect": false,
+        "rationale": "El personal de mantenimiento atiende de forma global todos los activos de las líneas operativas y de reserva según la programación."
+      }
+    ],
+    "hint": "Piensa en cómo se mantiene el nivel de producción continuo cuando un equipo en una línea activa requiere intervención.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple un sistema CMMS (Computerized Maintenance Management System) dentro de la gestión moderna del mantenimiento?",
+    "opciones": [
+      {
+        "text": "Es un software especializado que facilita la planificación, programación y seguimiento sistemático de las tareas de mantenimiento.",
+        "isCorrect": true,
+        "rationale": "El CMMS centraliza la información de inventarios, historial de fallas, calendarios de trabajo y órdenes de servicio para optimizar la gestión."
+      },
+      {
+        "text": "Es un dispositivo físico encargado de medir la radiación en los densímetros de pulpa.",
+        "isCorrect": false,
+        "rationale": "El CMMS no es un instrumento de medición física, sino una plataforma de software de administración."
+      },
+      {
+        "text": "Es un procedimiento manual en papel para el reporte de incidentes ambientales.",
+        "isCorrect": false,
+        "rationale": "Corresponde a un sistema informático computarizado, lo opuesto a un registro manual en papel."
+      },
+      {
+        "text": "Es una herramienta exclusiva para realizar ensayos destructivos por ultrasonido.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones por ultrasonido corresponden a ensayos no destructivos de diagnóstico y no a un software integral de gestión."
+      },
+      {
+        "text": "Es un protocolo de comunicación radial entre el operador de la pala y el supervisor de mina.",
+        "isCorrect": false,
+        "rationale": "Las comunicaciones por radio son canales operativos de campo y no forman parte del software CMMS."
+      }
+    ],
+    "hint": "Relaciona las siglas con la administración digitalizada de tareas, calendarios, recursos y seguimiento de activos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Respecto al uso de sensores para el monitoreo remoto en la gestión de mantenimiento, ¿cuáles de las siguientes afirmaciones son correctas?",
+    "opciones": [
+      {
+        "text": "Existen sensores fijos instalados en puntos estratégicos de la planta que recopilan información de condición en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Los sensores fijos alimentan los sistemas de control centralizados registrando variables críticas como temperatura y presión de forma continua."
+      },
+      {
+        "text": "Se utilizan dispositivos y sensores portátiles que el personal especialista de mantenimiento traslada para realizar inspecciones en campo.",
+        "isCorrect": true,
+        "rationale": "Los monitores portátiles permiten llevar a cabo rutinas periódicas de diagnóstico en equipos que no cuentan con instrumentación fija."
+      },
+      {
+        "text": "Los sensores remotos eliminan automáticamente la causa raíz de cualquier falla mecánica sin intervención humana.",
+        "isCorrect": false,
+        "rationale": "Los sensores detectan y transmiten datos sobre variables físicas, pero la eliminación de la causa raíz requiere análisis humano y modificaciones técnicas."
+      },
+      {
+        "text": "Estas tecnologías permiten detectar variaciones críticas de calor o vibración para anticipar eventos de falla.",
+        "isCorrect": true,
+        "rationale": "El propósito del monitoreo con sensores es advertir anomalías dinámicas antes de que deriven en una parada catastrófica."
+      },
+      {
+        "text": "La norma legal peruana prohíbe el uso de sensores de monitoreo remoto en instalaciones de concentración minera.",
+        "isCorrect": false,
+        "rationale": "No existe prohibición legal sobre la sensorización; al contrario, su uso es ampliamente promovido para incrementar la seguridad y eficiencia."
+      }
+    ],
+    "hint": "Distingue entre la instalación fija en puntos críticos de proceso y los dispositivos portátiles llevados por los mantenedores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de las mejores prácticas de gestión se utilizan indicadores clave de desempeño (KPIs). ¿A qué se refieren las métricas conocidas como MTTR y MTBF?",
+    "opciones": [
+      {
+        "text": "Son indicadores que miden el Tiempo Medio de Reparación (MTTR) y el Tiempo Medio Entre Fallas (MTBF) para evaluar mantenibilidad y confiabilidad.",
+        "isCorrect": true,
+        "rationale": "El MTTR evalúa la rapidez de respuesta técnica ante una avería y el MTBF mide la continuidad operacional esperada sin interrupciones."
+      },
+      {
+        "text": "Son coeficientes para calcular la cantidad de insumos químicos que se deben dosificar en las celdas de flotación.",
+        "isCorrect": false,
+        "rationale": "La dosificación de reactivos se calcula según la ley de mineral y el tonelaje de pulpa, no mediante índices de mantenibilidad."
+      },
+      {
+        "text": "Son registros de horas de capacitación del personal en materia de primeros auxilios y evacuación.",
+        "isCorrect": false,
+        "rationale": "Las horas de formación se contabilizan en los KPIs de seguridad y gestión de talento humano."
+      },
+      {
+        "text": "Son índices financieros que miden exclusivamente el costo de adquisición de repuestos importados.",
+        "isCorrect": false,
+        "rationale": "El costo de repuestos forma parte de los presupuestos contables de compra y no define los tiempos de reparación o falla del equipo."
+      },
+      {
+        "text": "Son parámetros de calibración aplicados únicamente a camionetas y unidades de transporte de personal.",
+        "isCorrect": false,
+        "rationale": "El MTTR y el MTBF se aplican de forma universal a cualquier activo físico, tanto maquinaria fija de planta como equipos móviles."
+      }
+    ],
+    "hint": "Observa las siglas en inglés relacionadas con el tiempo medio para reparar y el tiempo medio entre fallas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La mejora continua aplicada al sistema de gestión de calidad en mantenimiento se basa en el ciclo de Deming o PHVA. ¿Cuál es la secuencia correcta de sus cuatro etapas?",
+    "opciones": [
+      {
+        "text": "Planificar, Hacer, Verificar y Actuar.",
+        "isCorrect": true,
+        "rationale": "Esta es la secuencia lógica estándar del ciclo PHVA que orienta la mejora sistemática de los procesos de mantenimiento."
+      },
+      {
+        "text": "Programar, Homologar, Validar y Auditar.",
+        "isCorrect": false,
+        "rationale": "Aun cuando son términos administrativos válidos, no constituyen la estructura formal del ciclo de Deming."
+      },
+      {
+        "text": "Predecir, Herir, Verificar y Almacenar.",
+        "isCorrect": false,
+        "rationale": "La secuencia presentada contiene verbos no acordes al estándar metodológico de calidad."
+      },
+      {
+        "text": "Proyectar, Hacer, Variar y Analizar.",
+        "isCorrect": false,
+        "rationale": "Sustituye la verificación formal y el actuar correctivo por variaciones que no corresponden al PHVA."
+      },
+      {
+        "text": "Prevenir, Hacer, Visualizar y Acreditar.",
+        "isCorrect": false,
+        "rationale": "Visualizar y acreditar son actividades secundarias que no representan los pilares del modelo de Deming."
+      }
+    ],
+    "hint": "Recuerda el orden lógico que comienza con la preparación previa y culmina con las acciones de corrección o ajuste.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se describe la dinámica de funcionamiento del ciclo PHVA (Deming) en la gestión diaria de una planta industrial?",
+    "opciones": [
+      {
+        "text": "Como un proceso continuo y recurrente en forma de bucle (similar a un reloj) que no se detiene al finalizar la última etapa.",
+        "isCorrect": true,
+        "rationale": "Al culminar la fase de 'Actuar', las correcciones se reincorporan a la fase de 'Planificar', generando una espiral ininterrumpida de optimización."
+      },
+      {
+        "text": "Como una secuencia lineal rígida que se ejecuta una sola vez al fundar la empresa.",
+        "isCorrect": false,
+        "rationale": "El ciclo no es de ejecución única; su utilidad radica precisamente en su repetición constante."
+      },
+      {
+        "text": "Como un protocolo de emergencia que solo se activa durante las paradas mayores de planta.",
+        "isCorrect": false,
+        "rationale": "La mejora continua se aplica en el trabajo cotidiano regular y no exclusivamente durante eventos mayores."
+      },
+      {
+        "text": "Como un reporte financiero estático que se entrega trimestralmente al cliente.",
+        "isCorrect": false,
+        "rationale": "El ciclo es una metodología operativa dinámica de trabajo y no un simple informe contable de cierre."
+      },
+      {
+        "text": "Como un examen de certificación individual que realiza el operador antes de operar la pala.",
+        "isCorrect": false,
+        "rationale": "Las evaluaciones al operador son controles de personal, mientras que el PHVA es un modelo de gestión de procesos."
+      }
+    ],
+    "hint": "Piensa en la analogía del reloj que gira de forma ininterrumpida para optimizar constantemente los procesos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un equipo mecánico desalineado o con rodamientos desgastados genera niveles de ruido superiores a los 85-90 decibeles. ¿Qué impacto directo tiene esta condición de falla en la seguridad y salud ocupacional del trabajador?",
+    "opciones": [
+      {
+        "text": "Incrementa el riesgo de que el personal desarrolle enfermedades ocupacionales irreversibles como la hipoacusia inducida por ruido.",
+        "isCorrect": true,
+        "rationale": "El deterioro mecánico incrementa las vibraciones y la presión sonora, superando los límites permisibles y exponiendo al personal a sordera profesional."
+      },
+      {
+        "text": "Provoca una pérdida inmediata de la certificación de la empresa ante el IPEN.",
+        "isCorrect": false,
+        "rationale": "La certificación IPEN abarca la seguridad radiológica y no la emisión de ruido de componentes mecánicos convencionales."
+      },
+      {
+        "text": "Causa de forma directa un aumento en la corrosión interna de las tuberías de transporte de pulpa.",
+        "isCorrect": false,
+        "rationale": "El ruido excesivo es un agente físico que afecta a las personas; no altera químicamente la tasa de corrosión de los fluidos."
+      },
+      {
+        "text": "Obliga a detener de manera permanente el uso del sistema informático CMMS.",
+        "isCorrect": false,
+        "rationale": "Las condiciones de ruido en campo no impiden el funcionamiento del software de gestión informático."
+      },
+      {
+        "text": "Reduce automáticamente el consumo de energía eléctrica del motor afectado.",
+        "isCorrect": false,
+        "rationale": "El desgaste en rodamientos genera mayor fricción, lo que incrementa el consumo eléctrico en lugar de reducirlo."
+      }
+    ],
+    "hint": "Considera el efecto biológico de la exposición continuada a niveles elevados de presión sonora sin el control adecuado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el contexto industrial y minero peruano citado en el curso, ¿cuáles constituyen marcos normativos clave de Seguridad y Salud Ocupacional aplicables a las labores de mantenimiento?",
+    "opciones": [
+      {
+        "text": "La Ley N° 29783, Ley de Seguridad y Salud en el Trabajo en el Perú.",
+        "isCorrect": true,
+        "rationale": "Es la legislación marco nacional que rige la prevención de riesgos laborales para todas las actividades económicas en el Perú."
+      },
+      {
+        "text": "El Reglamento de Seguridad y Salud Ocupacional en Minería (D.S. 024-2016-EM y su modificatoria D.S. 023-2017-EM).",
+        "isCorrect": true,
+        "rationale": "Regula de manera específica los estándares técnicos y permisos para trabajos de alto riesgo en instalaciones mineras e industriales afines."
+      },
+      {
+        "text": "La Ley General de Sociedades Mercantiles para contratistas de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Esta ley regula la constitución comercial de empresas, pero no establece lineamientos de seguridad y salud en el trabajo."
+      },
+      {
+        "text": "La Norma Técnica de Edificación G.050 (Seguridad durante la construcción) aplicable a trabajos de montaje e infraestructura.",
+        "isCorrect": true,
+        "rationale": "Aplica a actividades de construcción, montaje electromecánico e infraestructura en obras industriales."
+      },
+      {
+        "text": "El Código Civil Peruano en su apartado exclusivo de diseño de molinos de bolas.",
+        "isCorrect": false,
+        "rationale": "El Código Civil regula relaciones de derecho privado y contratos, sin abordar especificaciones técnicas de diseño de molinos."
+      }
+    ],
+    "hint": "Identifica la ley general de seguridad y salud en el trabajo en Perú y el reglamento específico del sector minero.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué documento o instrumento emite formalmente el cliente como autorización e instrucción específica para que el equipo de mantenimiento intervenga un equipo determinado en planta?",
+    "opciones": [
+      {
+        "text": "La Orden de Trabajo (OT).",
+        "isCorrect": true,
+        "rationale": "La OT es el documento oficial mediante el cual se programa, autoriza y registra la ejecución de una tarea sobre un activo."
+      },
+      {
+        "text": "El Certificado de Homologación IPEN.",
+        "isCorrect": false,
+        "rationale": "Es una credencial personal requerida para operar con fuentes radiactivas, no un permiso de trabajo para una tarea específica."
+      },
+      {
+        "text": "El Informe de Análisis de Causa Raíz (RCA).",
+        "isCorrect": false,
+        "rationale": "Es un documento de investigación posterior a la falla y no un instrumento de autorización de trabajo."
+      },
+      {
+        "text": "El Registro de Indicadores KPI mensual.",
+        "isCorrect": false,
+        "rationale": "Los KPIs son métricas consolidadas de gestión que evalúan el desempeño global del área de mantenimiento."
+      },
+      {
+        "text": "El Plan de Contingencia por Lluvia Intensa.",
+        "isCorrect": false,
+        "rationale": "Es un procedimiento de respuesta a emergencias ambientales climáticas y no un documento de trabajo mecánico."
+      }
+    ],
+    "hint": "Piensa en la orden formal de trabajo que deriva de los términos de referencia (TDR).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la operación de los molinos de bolas y SAG en plantas concentradoras, las placas internas de protección sufren un severo desgaste por la fricción del mineral y las bolas de molienda. ¿Cómo se denominan estos elementos que deben reemplazarse periódicamente en paradas programadas?",
+    "opciones": [
+      {
+        "text": "Liners o chaquetas internas.",
+        "isCorrect": true,
+        "rationale": "Los liners o chaquetas protegen el casco metálico del molino y deben ser reemplazados de forma preventiva debido al desgaste por molienda."
+      },
+      {
+        "text": "Polines antirretorno.",
+        "isCorrect": false,
+        "rationale": "Los polines son componentes de soporte de la faja transportadora y no forman parte del revestimiento interno de los molinos."
+      },
+      {
+        "text": "Chutes de transferencia de aire.",
+        "isCorrect": false,
+        "rationale": "Los chutes son canaletas para la transferencia de material a granel entre fajas o equipos, no placas internas de molinos."
+      },
+      {
+        "text": "Densímetros de pulpa nuclear.",
+        "isCorrect": false,
+        "rationale": "Los densímetros son instrumentos de medición en línea instalados en tuberías para registrar el porcentaje de sólidos."
+      },
+      {
+        "text": "Celdas de flotación primaria.",
+        "isCorrect": false,
+        "rationale": "Las celdas de flotación son tanques de proceso físico-químico ubicados en etapas posteriores a la molienda."
+      }
+    ],
+    "hint": "Identifica el término técnico utilizado para referirse a las chaquetas o revestimientos protectores internos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Cuando se detecta que el mineral extraído en mina contiene un exceso de sulfuros o hierro que afecta la flotabilidad y acelera la corrosión de los equipos, ¿qué acciones de coordinación operacional descritas en el curso deben ejecutarse?",
+    "opciones": [
+      {
+        "text": "El supervisor de planta comunica la desviación a la supervisión de mina o geología para ajustar el tipo de mineral enviado.",
+        "isCorrect": true,
+        "rationale": "La comunicación directa permite informar a la mina que la calidad del insumo está afectando la estabilidad operacional y los activos de planta."
+      },
+      {
+        "text": "Se realiza la mezcla o 'cabeceo' de mineral en la mina, combinando material con alto contenido de hierro con mineral rico en carbonatos.",
+        "isCorrect": true,
+        "rationale": "El 'cabeceo' compensa las características químicas de la carga para atenuar la agresividad corrosiva y mejorar la respuesta en flotación."
+      },
+      {
+        "text": "Se procede a la parálisis total y definitiva de la planta concentradora durante tres meses.",
+        "isCorrect": false,
+        "rationale": "Detener la producción por tres meses resulta inviable económicamente y no resuelve el problema de coordinación en la alimentación de mineral."
+      },
+      {
+        "text": "En planta, se ajusta temporalmente la dosificación de reactivos químicos (como xantatos) para mantener el proceso mientras se regulariza el insumo.",
+        "isCorrect": true,
+        "rationale": "El área de procesos adapta la dosificación de reactivos para gestionar el mineral complejo de forma transitoria."
+      },
+      {
+        "text": "Se despide inmediatamente al operador de la pala eléctrica por la composición química del yacimiento.",
+        "isCorrect": false,
+        "rationale": "La composición del yacimiento es una variable geológica y no responsabilidad operativa del chofer de la pala."
+      }
+    ],
+    "hint": "Reflexiona sobre la comunicación radial entre la supervisión de planta y la de mina, y el ajuste en el cargamento de mineral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-50",
+    "diplomado": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para estructurar un Sistema de Gestión de Mantenimiento que asegure la calidad del servicio y la conformidad técnica, ¿cuáles de los siguientes componentes deben incluirse?",
+    "opciones": [
+      {
+        "text": "Objetivos claros de mantenimiento, definición de responsabilidades y estructura organizacional.",
+        "isCorrect": true,
+        "rationale": "Define la ruta estratégica del área y la asignación precisa de funciones para el equipo de trabajo."
+      },
+      {
+        "text": "Procedimientos operativos estandarizados y programas específicos de formación y competencia del personal.",
+        "isCorrect": true,
+        "rationale": "Garantiza que el trabajo se ejecute con criterios uniformes de calidad y por técnicos debidamente calificados."
+      },
+      {
+        "text": "La eliminación total de las inspecciones de seguridad en trabajos de alto riesgo.",
+        "isCorrect": false,
+        "rationale": "La seguridad en tareas críticas es un pilar obligatorio dentro de la gestión integral de mantenimiento."
+      },
+      {
+        "text": "Mecanismos de medición, análisis de indicadores (KPIs) y seguimiento para la satisfacción del cliente.",
+        "isCorrect": true,
+        "rationale": "Permite auditar el rendimiento del sistema y aplicar acciones de mejora continua según la percepción del usuario."
+      },
+      {
+        "text": "El compromiso de ejecutar exclusivamente mantenimientos correctivos no planificados.",
+        "isCorrect": false,
+        "rationale": "Base del éxito de un sistema de gestión de calidad es reducir los eventos correctivos no planificados a su mínima expresión."
+      }
+    ],
+    "hint": "Piensa en los elementos organizativos, procedimentales y de formación exigidos por el estándar.",
+    "activo": true
+  }
+]

@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal de la eficiencia operacional en la gestión de operaciones mineras?",
+    "opciones": [
+      {
+        "text": "Maximizar la producción reduciendo al mínimo el uso de recursos y los costos operativos.",
+        "isCorrect": true,
+        "rationale": "La eficiencia operacional busca extraer el mayor valor posible garantizando un uso óptimo y austero de insumos y capital."
+      },
+      {
+        "text": "Aumentar el volumen de extracción sin importar el incremento en los costos de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Ignorar el control de costos perjudica la rentabilidad económica general y la viabilidad de la empresa."
+      },
+      {
+        "text": "Extender indefinidamente la fase de exploración para evitar el inicio de la explotación.",
+        "isCorrect": false,
+        "rationale": "La exploración es solo una fase inicial previa a la generación real de valor mediante la extracción."
+      },
+      {
+        "text": "Sustituir en su totalidad la mano de obra humana por procesos manuales no mecanizados.",
+        "isCorrect": false,
+        "rationale": "La falta de mecanización o tecnología reduce drásticamente la productividad y eleva los riesgos laborales."
+      },
+      {
+        "text": "Priorizar el volumen de material estéril sobre la ley del mineral extraído.",
+        "isCorrect": false,
+        "rationale": "El valor del recurso proviene de la ley del mineral y no del volumen de material estéril retirado."
+      }
+    ],
+    "hint": "Piensa en la relación entre el uso de insumos, los costos involucrados y los niveles de producción alcanzados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la planificación y diseño de una mina, ¿qué finalidad persigue la etapa de evaluación geológica y exploración?",
+    "opciones": [
+      {
+        "text": "Determinar las características del yacimiento, la ley del mineral y su viabilidad económica.",
+        "isCorrect": true,
+        "rationale": "La exploración recopila información técnica y económica sólida sobre las reservas antes de construir la mina."
+      },
+      {
+        "text": "Realizar el cierre definitivo del proyecto y devolver los terrenos a la comunidad.",
+        "isCorrect": false,
+        "rationale": "El cierre de mina es la etapa final del ciclo de vida operativo y no la fase inicial exploratoria."
+      },
+      {
+        "text": "Procesar el mineral extraído en plantas concentradoras para obtener metal fino.",
+        "isCorrect": false,
+        "rationale": "El procesamiento ocurre durante la fase de explotación y concentración, posterior a la exploración."
+      },
+      {
+        "text": "Negociar la venta directa del producto final en la bolsa de valores internacional.",
+        "isCorrect": false,
+        "rationale": "La comercialización ocurre cuando el mineral ya ha sido extraído, procesado y refinado."
+      },
+      {
+        "text": "Construir los campamentos y vías de acceso permanentes para la maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "La construcción de infraestructura principal corresponde a la etapa de desarrollo y diseño detallado."
+      }
+    ],
+    "hint": "Se enfoca en conocer la calidad, ubicación y viabilidad del depósito mineral antes de invertir en infraestructura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Según lo presentado en el curso, ¿cuáles de los siguientes pilares son fundamentales para enmarcar una operación minera responsable?",
+    "opciones": [
+      {
+        "text": "Cumplimiento de la seguridad laboral.",
+        "isCorrect": true,
+        "rationale": "Proteger la integridad física de los trabajadores es una prioridad ética y operativa indispensable en mina."
+      },
+      {
+        "text": "Cumplimiento ambiental estricto.",
+        "isCorrect": true,
+        "rationale": "La protección del entorno natural previene la contaminación y asegura la sostenibilidad legal de la operación."
+      },
+      {
+        "text": "Relacionamiento transparente con las comunidades locales.",
+        "isCorrect": true,
+        "rationale": "El diálogo activo con la población vecina permite obtener y mantener la licencia social para operar."
+      },
+      {
+        "text": "Fomento de la minería ilegal e informal en la zona.",
+        "isCorrect": false,
+        "rationale": "La minería ilegal causa severa deforestación, contaminación irremediable y genera graves conflictos sociales."
+      },
+      {
+        "text": "Ocultamiento de los datos de impacto ambiental a la población.",
+        "isCorrect": false,
+        "rationale": "La falta de transparencia destruye la confianza y mina la legitimidad social indispensable para operar."
+      }
+    ],
+    "hint": "Considera los aspectos éticos, legales y comunitarios que aseguran la legitimidad operativa diaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué beneficio clave aporta la adopción de drones autónomos en operaciones como las de la mina Antamina?",
+    "opciones": [
+      {
+        "text": "Monitorear el flujo de camiones para evitar tiempos muertos en palas y mejorar la seguridad.",
+        "isCorrect": true,
+        "rationale": "Los drones permiten identificar embotellamientos o demoras operativas para maximizar el uso eficiente de la flota pesada."
+      },
+      {
+        "text": "Reemplazar por completo el trabajo de los ingenieros químicos en las plantas concentradoras.",
+        "isCorrect": false,
+        "rationale": "Los drones realizan tareas de inspección aerotransportada y monitoreo, no reacciones o análisis químicos de laboratorio."
+      },
+      {
+        "text": "Efectuar voladuras subterráneas sin necesidad de usar explosivos ni perforaciones.",
+        "isCorrect": false,
+        "rationale": "La fragmentación de roca sigue requiriendo técnicas de perforación y voladura físicamente adecuadas."
+      },
+      {
+        "text": "Eliminar el uso de sensores de red celular y satelitales en todo el campamento minero.",
+        "isCorrect": false,
+        "rationale": "Los drones autónomos dependen críticamente de la conectividad y redes de datos para transmitir información en tiempo real."
+      },
+      {
+        "text": "Incrementar el consumo de combustible de los vehículos de transporte de mineral.",
+        "isCorrect": false,
+        "rationale": "La optimización de rutas y tiempos con drones busca precisamente reducir el desgaste y el consumo ineficiente de combustible."
+      }
+    ],
+    "hint": "Reflexiona sobre la supervisión del tráfico de vehículos pesados y la optimización del tiempo de uso de la maquinaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el verdadero objetivo del cierre de mina en la minería moderna?",
+    "opciones": [
+      {
+        "text": "Rehabilitar el espacio intervenido para dejarlo en condiciones iguales o mejores a las iniciales.",
+        "isCorrect": true,
+        "rationale": "El cierre responsable busca restaurar el terreno, mitigar pasivos y poner en valor el área para beneficio comunitario."
+      },
+      {
+        "text": "Abandonar de forma inmediata las instalaciones apenas disminuya la ley del mineral.",
+        "isCorrect": false,
+        "rationale": "El abandono sin plan de cierre genera graves pasivos ambientales y riesgos de seguridad para las poblaciones vecinas."
+      },
+      {
+        "text": "Colocar un cartel de cerrado y suspender todo monitoreo del agua y del suelo.",
+        "isCorrect": false,
+        "rationale": "El monitoreo post-cierre es fundamental para garantizar la estabilidad física y química del terreno a largo plazo."
+      },
+      {
+        "text": "Vender toda la maquinaria usada a la comunidad local sin ofrecer capacitación.",
+        "isCorrect": false,
+        "rationale": "La transferencia de infraestructura requiere planificación técnica y sostenibilidad social, no una simple venta de activos."
+      },
+      {
+        "text": "Convertir la zona del tajo abierto en un depósito informal de residuos urbanos.",
+        "isCorrect": false,
+        "rationale": "La rehabilitación busca recuperar ecosistemas o darle usos productivos seguros al suelo, no contaminarlo más."
+      }
+    ],
+    "hint": "Se trata de rehabilitar el entorno para dejar un impacto positivo duradero en la zona intervenida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es fundamental obtener la licencia social antes de iniciar actividades de exploración o explotación?",
+    "opciones": [
+      {
+        "text": "Porque la oposición comunitaria puede paralizar un proyecto legalmente autorizado durante años.",
+        "isCorrect": true,
+        "rationale": "La legitimidad social otorga estabilidad operativa y previene conflictos sociales prolongados como los vistos en Tía María."
+      },
+      {
+        "text": "Porque sustituye formalmente los permisos emitidos por el Ministerio de Energía y Minas.",
+        "isCorrect": false,
+        "rationale": "La licencia social complementa el marco legal, pero no reemplaza los permisos gubernamentales obligatorios."
+      },
+      {
+        "text": "Porque exonera a la empresa del pago de impuestos y del canon minero estatal.",
+        "isCorrect": false,
+        "rationale": "La tributación ambiental y económica es un mandato legal independiente de los acuerdos comunitarios."
+      },
+      {
+        "text": "Porque garantiza que el mineral extraído no requiera ningún procesamiento metalúrgico.",
+        "isCorrect": false,
+        "rationale": "Las características metalúrgicas dependen de la geología del yacimiento, no del relacionamiento social."
+      },
+      {
+        "text": "Porque obliga a la comunidad a asumir los costos financieros de la exploración.",
+        "isCorrect": false,
+        "rationale": "La inversión en exploración y desarrollo es responsabilidad financiera exclusiva de la empresa promotora."
+      }
+    ],
+    "hint": "Un proyecto técnicamente viable puede detenerse por completo si no cuenta con la aceptación de la población local.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la minería 4.0, ¿qué es un \"gemelo digital\" (digital twin)?",
+    "opciones": [
+      {
+        "text": "Una representación en software de un proceso físico alimentada con datos en tiempo real.",
+        "isCorrect": true,
+        "rationale": "El gemelo digital permite modelar la operación física y simular variaciones mediante inteligencia artificial para optimizarla."
+      },
+      {
+        "text": "Una copia exacta de un vehículo minero construida a escala para exhibiciones.",
+        "isCorrect": false,
+        "rationale": "No es una maqueta física, sino un modelo computacional analítico y dinámico de la planta o proceso."
+      },
+      {
+        "text": "Un duplicado de la nómina de trabajadores para el pago de salarios dobles.",
+        "isCorrect": false,
+        "rationale": "El concepto está ligado a la simulación e ingeniería de procesos, no a la administración de planillas."
+      },
+      {
+        "text": "Una segunda planta física idéntica construida al lado de la principal por respaldo.",
+        "isCorrect": false,
+        "rationale": "Construir una planta idéntica físicamente sería inviable económicamente; la duplicación es estrictamente digital."
+      },
+      {
+        "text": "Un archivo digital estático que almacena únicamente los planos arquitectónicos iniciales.",
+        "isCorrect": false,
+        "rationale": "Un gemelo digital es dinámico y recibe flujo continuo de datos de sensores para análisis interactivo."
+      }
+    ],
+    "hint": "Consiste en una réplica virtual de la planta que procesa datos en tiempo real para simular distintos escenarios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la principal diferencia entre el mantenimiento preventivo tradicional y el mantenimiento predictivo asistido por IA?",
+    "opciones": [
+      {
+        "text": "El predictivo anticipa fallas analizando tendencias de variables en tiempo real antes de que la máquina se detenga.",
+        "isCorrect": true,
+        "rationale": "El análisis avanzado de algoritmos sobre vibración, temperatura o presión detecta anomalías antes del fallo definitivo."
+      },
+      {
+        "text": "El preventivo se realiza solo cuando la maquinaria ya ha sufrido una rotura catastrófica.",
+        "isCorrect": false,
+        "rationale": "Reparar tras la rotura se clasifica como mantenimiento correctivo, no preventivo."
+      },
+      {
+        "text": "El predictivo requiere apagar la planta por completo de forma obligatoria cada mes.",
+        "isCorrect": false,
+        "rationale": "Precisamente el mantenimiento predictivo evita paradas no programadas ni innecesarias de la planta."
+      },
+      {
+        "text": "El preventivo utiliza sensores inteligentes y redes 5G mientras que el predictivo es totalmente manual.",
+        "isCorrect": false,
+        "rationale": "El uso de sensores y algoritmos de análisis masivo de datos es característico del enfoque predictivo."
+      },
+      {
+        "text": "No existe ninguna diferencia; ambos conceptos significan exactamente lo mismo en la práctica.",
+        "isCorrect": false,
+        "rationale": "Difieren en su metodología: programación por calendario versus análisis continuo basado en la condición operativa."
+      }
+    ],
+    "hint": "Uno se realiza en intervalos fijos de tiempo; el otro analiza tendencias continuas de datos de sensores para anticipar fallas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes metodologías forman parte del enfoque de mejora continua aplicado en las operaciones mineras?",
+    "opciones": [
+      {
+        "text": "Filosofía Lean (Lean Mining).",
+        "isCorrect": true,
+        "rationale": "Se enfoca en maximizar el valor reduciendo actividades que no aportan al cliente final."
+      },
+      {
+        "text": "Seis Sigma (Six Sigma).",
+        "isCorrect": true,
+        "rationale": "Utiliza herramientas estadísticas para minimizar la variabilidad y reducir los defectos en el proceso."
+      },
+      {
+        "text": "Filosofía Kaizen.",
+        "isCorrect": true,
+        "rationale": "Promueve mejoras continuas e incrementales con la participación activa de todo el personal."
+      },
+      {
+        "text": "Modelo Taylorista rígido tradicional.",
+        "isCorrect": false,
+        "rationale": "Las filosofías modernas de mejora continua difieren de la rigidez y división tajante del taylorismo clásico."
+      },
+      {
+        "text": "Metodología de despilfarro acumulativo.",
+        "isCorrect": false,
+        "rationale": "La meta de estas filosofías es erradicar el desperdicio, no acumularlo."
+      }
+    ],
+    "hint": "Incluyen filosofías enfocadas en la eliminación de desperdicios, reducción de variabilidad y pequeñas mejoras constantes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el beneficio directo de aplicar mantenimiento predictivo en plantas concentradoras de alta escala?",
+    "opciones": [
+      {
+        "text": "Maximizar el tiempo de operación continua (uptime) y evitar paradas no programadas.",
+        "isCorrect": true,
+        "rationale": "Mantener las máquinas funcionando de forma segura evita pérdidas millonarias por horas de inactividad de la planta."
+      },
+      {
+        "text": "Reducir la calidad y ley del mineral producido al final de la línea.",
+        "isCorrect": false,
+        "rationale": "Garantizar la disponibilidad del equipo busca estabilizar y optimizar el proceso, no desmejorarlo."
+      },
+      {
+        "text": "Aumentar el consumo de reactivos químicos sin ningún tipo de control.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento enfocado en la eficiencia busca optimizar también el uso austero de los insumos."
+      },
+      {
+        "text": "Desactivar los protocolos de seguridad durante las inspecciones de campo.",
+        "isCorrect": false,
+        "rationale": "La seguridad del personal de mantenimiento es una condición no negociable en la industria."
+      },
+      {
+        "text": "Reemplazar los sistemas de control lógico programable (PLC) por comandos manuales.",
+        "isCorrect": false,
+        "rationale": "La automatización y los PLC son esenciales para recopilar los datos que alimentan las predicciones."
+      }
+    ],
+    "hint": "Piensa en el costo financiero que representa detener la producción por una falla mecánica inesperada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué componentes son esenciales para consolidar una cultura de seguridad laboral sólida en un campamento minero?",
+    "opciones": [
+      {
+        "text": "Capacitación continua del personal.",
+        "isCorrect": true,
+        "rationale": "Las charlas diarias y cursos periódicos mantienen a los trabajadores alertas y actualizados en prevención."
+      },
+      {
+        "text": "Uso obligatorio y correcto de equipos de protección personal (EPP).",
+        "isCorrect": true,
+        "rationale": "Los EPP constituyen la última barrera física contra lesiones e incidentes en el lugar de trabajo."
+      },
+      {
+        "text": "Protocolos claros y bien difundidos para casos de emergencia.",
+        "isCorrect": true,
+        "rationale": "Saber cómo reaccionar ordenadamente ante un incidente evita desenlaces graves o mortales."
+      },
+      {
+        "text": "Ocultamiento de cuasi-accidentes para mantener indicadores limpios.",
+        "isCorrect": false,
+        "rationale": "Reportar los cuasi-accidentes es vital para corregir condiciones inseguras antes de que causen daño real."
+      },
+      {
+        "text": "Eliminación de las reuniones diarias de seguridad de 15 minutos.",
+        "isCorrect": false,
+        "rationale": "Dichas reuniones son el pilar cotidiano para planificar trabajos de forma segura al inicio del turno."
+      }
+    ],
+    "hint": "Implica entrenamiento frecuente, equipamiento adecuado y procedimientos definidos para actuar ante contingencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito de gestionar adecuadamente la \"adaptación al cambio\" cuando se introducen nuevas tecnologías en la mina?",
+    "opciones": [
+      {
+        "text": "Superar la resistencia del personal mediante capacitación y fomento de competencias digitales.",
+        "isCorrect": true,
+        "rationale": "Apoyar a los trabajadores en la transición tecnológica garantiza la adopción exitosa y aumenta la productividad."
+      },
+      {
+        "text": "Despedir de inmediato a todo trabajador que no domine herramientas de IA en su primer día.",
+        "isCorrect": false,
+        "rationale": "La gestión del talento busca capacitar y desarrollar habilidades en el personal existente."
+      },
+      {
+        "text": "Prohibir el uso de software moderno para mantener los procesos 100% manuales.",
+        "isCorrect": false,
+        "rationale": "Evitar la modernización estanca la competitividad y la eficiencia operativa de la mina."
+      },
+      {
+        "text": "Ocultar los nuevos equipos tecnológicos para que los empleados no se enteren del cambio.",
+        "isCorrect": false,
+        "rationale": "La transparencia y comunicación efectiva son indispensables para lograr la adaptabilidad."
+      },
+      {
+        "text": "Imponer metas inalcanzables sin brindar instrucción sobre las nuevas herramientas.",
+        "isCorrect": false,
+        "rationale": "Generar sobrecarga sin entrenamiento refuerza la resistencia al cambio y provoca frustración."
+      }
+    ],
+    "hint": "Se busca reducir el temor de los colaboradores y guiarlos para que adopten la tecnología como una herramienta de productividad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En el análisis externo de la organización minera, ¿cuáles de las siguientes dimensiones corresponden a la herramienta PESTEL?",
+    "opciones": [
+      {
+        "text": "Factores Políticos y Económicos.",
+        "isCorrect": true,
+        "rationale": "Evalúan el clima gubernamental, impuestos, inflación, tipo de cambio y precios internacionales."
+      },
+      {
+        "text": "Factores Sociales y Tecnológicos.",
+        "isCorrect": true,
+        "rationale": "Analizan la demografía, la cultura local, la educación y la adopción de innovaciones."
+      },
+      {
+        "text": "Factores Ecológicos y Legales.",
+        "isCorrect": true,
+        "rationale": "Examinen la normativa ambiental, la gestión de residuos y el marco regulatorio laboral."
+      },
+      {
+        "text": "Factores Metafísicos y Astronómicos.",
+        "isCorrect": false,
+        "rationale": "Estas dimensiones no forman parte de ningún análisis estratégico empresarial o industrial."
+      },
+      {
+        "text": "Factores Individuales y Psicoanalíticos.",
+        "isCorrect": false,
+        "rationale": "El marco PESTEL evalúa dimensiones macroambientales y no aspectos de psicología individual."
+      }
+    ],
+    "hint": "Identifica los factores políticos, económicos, sociales, tecnológicos, ecológicos y legales que configuran el entorno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el caso visto en clase sobre la minería en China, ¿cuál es el beneficio principal de implementar redes 5G e Inteligencia Artificial en minas subterráneas?",
+    "opciones": [
+      {
+        "text": "Reducir la presencia humana en zonas de alto riesgo mediante la operación remota y robótica.",
+        "isCorrect": true,
+        "rationale": "Controlar excavadoras o martillos hidráulicos desde la superficie protege la vida del trabajador y disminuye la siniestralidad."
+      },
+      {
+        "text": "Reemplazar el consumo de energía eléctrica por combustión no controlada de carbón.",
+        "isCorrect": false,
+        "rationale": "Las soluciones inteligentes buscan mayor eficiencia energética y control ecológico, no contaminación desmedida."
+      },
+      {
+        "text": "Aumentar el número de accidentes fatales bajo tierra para acelerar los turnos.",
+        "isCorrect": false,
+        "rationale": "El objetivo central de la minería inteligente es erradicar los accidentes mortales subterráneos."
+      },
+      {
+        "text": "Desconectar los sensores de monitoreo de gases peligrosos como el metano.",
+        "isCorrect": false,
+        "rationale": "Las redes 5G permiten conectar miles de sensores para alertar al instante sobre concentraciones de gas."
+      },
+      {
+        "text": "Evitar la transmisión de datos e imágenes en tiempo real hacia la sala de despacho.",
+        "isCorrect": false,
+        "rationale": "La transmisión continua de video y datos es el corazón de la gestión inteligente remota."
+      }
+    ],
+    "hint": "Piensa en la posibilidad de operar maquinaria pesada a distancia desde una sala en la superficie.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representa el concepto de *Life of Mine* (LOM) o Planeamiento del Minado Integral?",
+    "opciones": [
+      {
+        "text": "La planificación estratégica de la operación desde el inicio de la extracción hasta el cierre definitivo.",
+        "isCorrect": true,
+        "rationale": "El LOM proyecta las reservas, inversiones, volúmenes de producción y rentabilidad a lo largo de toda la existencia de la mina."
+      },
+      {
+        "text": "El tiempo que tarda un camión de acarreo en completar una sola vuelta de carga y descarga.",
+        "isCorrect": false,
+        "rationale": "Eso corresponde a un indicador del ciclo de acarreo, no a la vida útil total del proyecto minero."
+      },
+      {
+        "text": "La duración de la jornada laboral diaria de ocho horas de los mineros.",
+        "isCorrect": false,
+        "rationale": "Eso define el turno de trabajo, un concepto operativo de cortísimo plazo."
+      },
+      {
+        "text": "El periodo de vigencia del contrato de seguro de transporte de repuestos.",
+        "isCorrect": false,
+        "rationale": "Corresponde a un trámite administrativo específico y no a la planificación integral del yacimiento."
+      },
+      {
+        "text": "La fecha límite para entregar el informe mensual de contabilidad financiera.",
+        "isCorrect": false,
+        "rationale": "Es una meta contable periódica, mientras que el LOM abarca la vida del yacimiento a largo plazo."
+      }
+    ],
+    "hint": "Es la proyección técnica y financiera global que abarca la vida útil completa del yacimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Según la metodología Lean analizada en el curso, ¿cuáles de los siguientes ítems se clasifican como \"desperdicios\" (muda) en los procesos?",
+    "opciones": [
+      {
+        "text": "Tiempos de espera innecesarios por falta de material o instrucciones.",
+        "isCorrect": true,
+        "rationale": "El tiempo detenido sin producir no genera valor y retrasa el flujo de trabajo."
+      },
+      {
+        "text": "Exceso de inventario y sobreproducción de materiales.",
+        "isCorrect": true,
+        "rationale": "Almacenar material de más genera costos de custodia, espacio y riesgo de deterioro."
+      },
+      {
+        "text": "Defectos en los productos y movimientos innecesarios de personal o equipos.",
+        "isCorrect": true,
+        "rationale": "Reprocesar fallas y realizar desplazamientos sin propósito malgastan tiempo y energía."
+      },
+      {
+        "text": "Trabajos de mantenimiento preventivo correctamente programados.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento programado preserva los activos y evita paradas no planificadas, por lo que aporta valor."
+      },
+      {
+        "text": "Capacitación de seguridad alineada con los estándares requeridos.",
+        "isCorrect": false,
+        "rationale": "Capacitar al personal asegura el cumplimiento normativo y reduce accidentes, siendo una inversión indispensable."
+      }
+    ],
+    "hint": "Incluyen actividades o situaciones que consumen recursos sin agregar valor para el cliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la metodología Six Sigma aplicada a la optimización de procesos, ¿qué significan las siglas DMAIC?",
+    "opciones": [
+      {
+        "text": "Definir, Medir, Analizar, Mejorar (Improve) y Controlar.",
+        "isCorrect": true,
+        "rationale": "Es la estructura metódica para eliminar la variabilidad y corregir las causas raíz de los fallos."
+      },
+      {
+        "text": "Diseñar, Mover, Almacenar, Inspeccionar y Comprar.",
+        "isCorrect": false,
+        "rationale": "Es una secuencia arbitraria de logística que no corresponde a la sigla de Seis Sigma."
+      },
+      {
+        "text": "Duplicar, Mezclar, Alterar, Imprimir y Cancelar.",
+        "isCorrect": false,
+        "rationale": "Son términos inconexos que no representan la metodología de gestión de calidad DMAIC."
+      },
+      {
+        "text": "Delegar, Monitorizar, Asignar, Invertir y Cobrar.",
+        "isCorrect": false,
+        "rationale": "Describe pasos de gestión administrativa o financiera general, no las fases de DMAIC."
+      },
+      {
+        "text": "Disminuir, Manejar, Aislar, Incrementar y Cortar.",
+        "isCorrect": false,
+        "rationale": "No refleja la secuencia lógica estandarizada para proyectos de mejora de procesos Six Sigma."
+      }
+    ],
+    "hint": "Describe las cinco fases secuenciales para resolver problemas en un proceso existente: Definir, Medir, Analizar, Mejorar y Controlar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la utilidad del modelo de las Cinco Fuerzas de Porter en la planificación estratégica de una empresa minera?",
+    "opciones": [
+      {
+        "text": "Evaluar el atractivo y la intensidad competitiva de la industria en la que opera la empresa.",
+        "isCorrect": true,
+        "rationale": "Porter ayuda a analizar competidores, poder de proveedores, poder de clientes, amenaza de sustitutos y nuevos competidores."
+      },
+      {
+        "text": "Determinar la profundidad exacta a la que se deben realizar las voladuras subterráneas.",
+        "isCorrect": false,
+        "rationale": "Eso se determina mediante diseño de ingeniería de minas y geomecánica, no con modelos de estrategia de negocios."
+      },
+      {
+        "text": "Medir el nivel de pH exacto del agua en las celdas de flotación de minerales.",
+        "isCorrect": false,
+        "rationale": "Corresponde al control químico del proceso metalúrgico y no al análisis de la estructura del mercado."
+      },
+      {
+        "text": "Calcular la cantidad de horas extras trabajadas por los conductores de camionetas.",
+        "isCorrect": false,
+        "rationale": "Es un dato de control de asistencia de recursos humanos, ajeno al modelo de Porter."
+      },
+      {
+        "text": "Reemplazar la necesidad de contar con una evaluación de impacto ambiental.",
+        "isCorrect": false,
+        "rationale": "Las normativas ambientales son exigencias legales que no se suplen con herramientas de análisis comercial."
+      }
+    ],
+    "hint": "Evalúa las presiones competitivas del entorno, incluyendo proveedores, clientes y competidores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante un análisis interno de una organización minera, ¿qué elemento clave debe ser evaluado dentro de los recursos intangibles?",
+    "opciones": [
+      {
+        "text": "El *know-how* y las competencias del capital humano.",
+        "isCorrect": true,
+        "rationale": "La experiencia, capacidades técnicas y patentes de la organización son activos intangibles determinantes."
+      },
+      {
+        "text": "El número total de camiones de acarreo de 300 toneladas en flota.",
+        "isCorrect": false,
+        "rationale": "La flota de camiones constituye un recurso físico e infraestructura tangible."
+      },
+      {
+        "text": "El número de toneladas de mineral almacenadas en el stock de la planta.",
+        "isCorrect": false,
+        "rationale": "El mineral en stock es inventario físico, por ende, un recurso tangible."
+      },
+      {
+        "text": "Las hectáreas de terreno compradas para los botaderos de desmonte.",
+        "isCorrect": false,
+        "rationale": "La propiedad inmobiliaria y los terrenos son activos fijos tangibles."
+      },
+      {
+        "text": "El valor monetario de los edificios de las oficinas corporativas.",
+        "isCorrect": false,
+        "rationale": "Las edificaciones e infraestructura física forman parte de los activos tangibles."
+      }
+    ],
+    "hint": "Corresponde al conocimiento acumulado, la experiencia técnica y la capacidad intelectual del personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo de aplicar la norma ISO 31000 en la gestión de operaciones mineras?",
+    "opciones": [
+      {
+        "text": "Establecer un marco de trabajo estandarizado para la gestión integral de riesgos.",
+        "isCorrect": true,
+        "rationale": "La ISO 31000 guía a las empresas a anticipar contingencias operacionales, financieras y ambientales."
+      },
+      {
+        "text": "Garantizar que todos los vehículos utilicen únicamente combustible biodiésel.",
+        "isCorrect": false,
+        "rationale": "La norma aborda la metodología general de gestión del riesgo, no especificaciones de combustibles."
+      },
+      {
+        "text": "Fijar el precio de venta internacional del kilo de cobre fino.",
+        "isCorrect": false,
+        "rationale": "Los precios de los metales se fijan por oferta y demanda en bolsas internacionales."
+      },
+      {
+        "text": "Eliminar la necesidad de realizar auditorías internas periódicas en la empresa.",
+        "isCorrect": false,
+        "rationale": "La ISO 31000 exige el monitoreo continuo y la revisión periódica para ser efectiva."
+      },
+      {
+        "text": "Otorgar licencias de conducir vehículos pesados dentro del campamento.",
+        "isCorrect": false,
+        "rationale": "Los permisos de manejo interno son gestionados por el área de seguridad operativa de la mina."
+      }
+    ],
+    "hint": "Proporciona directrices estándar para la identificación, evaluación y mitigación de riesgos de manera sistemática.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes acciones son consideradas mejores prácticas en la optimización de recursos hídricos en la minería?",
+    "opciones": [
+      {
+        "text": "Recirculación y reutilización del agua en los procesos concentradores.",
+        "isCorrect": true,
+        "rationale": "Permite reducir sustancialmente la captación de agua fresca de fuentes naturales."
+      },
+      {
+        "text": "Tratamiento continuo de aguas residuales e industriales.",
+        "isCorrect": true,
+        "rationale": "Limpia los efluentes para cumplir con los estándares de calidad ambiental antes de su vertimiento o reúso."
+      },
+      {
+        "text": "Monitoreo constante de la calidad del agua en la cuenca hidrográfica.",
+        "isCorrect": true,
+        "rationale": "Garantiza que las actividades mineras no alteren los parámetros químicos ni biológicos de los ríos."
+      },
+      {
+        "text": "Vertimiento directo de aguas con ácidos a los ríos sin tratar.",
+        "isCorrect": false,
+        "rationale": "Es una práctica ilegal y severamente contaminante que destruye los ecosistemas acuáticos."
+      },
+      {
+        "text": "Consumo ilimitado de agua potable comunitaria sin pagar tarifa alguna.",
+        "isCorrect": false,
+        "rationale": "Afecta gravemente a la población vecina y destruye la licencia social del proyecto."
+      }
+    ],
+    "hint": "Buscan reutilizar el recurso, tratar efluentes y evitar el desabastecimiento de comunidades vecinas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes corresponden a Indicadores Clave de Desempeño (KPIs) comúnmente monitoreados en la operación minera?",
+    "opciones": [
+      {
+        "text": "Toneladas de mineral extraídas por hora.",
+        "isCorrect": true,
+        "rationale": "Mide el rendimiento operativo directo de los equipos de excavación y carguío."
+      },
+      {
+        "text": "Costo operativo por tonelada extraída.",
+        "isCorrect": true,
+        "rationale": "Es un indicador financiero crucial para evaluar la eficiencia en el control de costos."
+      },
+      {
+        "text": "Índice de frecuencia de accidentes laborales.",
+        "isCorrect": true,
+        "rationale": "Refleja el desempeño de la gestión de seguridad y salud ocupacional en la mina."
+      },
+      {
+        "text": "Número de publicaciones hechas por los empleados en sus redes sociales personales.",
+        "isCorrect": false,
+        "rationale": "Es un aspecto personal sin vinculación con el desempeño operativo de la mina."
+      },
+      {
+        "text": "Cantidad de lluvias registradas en otros continentes.",
+        "isCorrect": false,
+        "rationale": "Carece de relación causal o relevancia para el control de la planta minera local."
+      }
+    ],
+    "hint": "Incluyen métricas de productividad, costos unitarios y niveles de accidentabilidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito central de la gestión eficiente y segura de depósitos de relaves?",
+    "opciones": [
+      {
+        "text": "Almacenar de forma mecánicamente estable los residuos del proceso, previniendo filtraciones y derrames.",
+        "isCorrect": true,
+        "rationale": "La geomembrana y el diseño estructural adecuado de las presas de relave evitan desastres ambientales."
+      },
+      {
+        "text": "Arrojar los residuos directamente en los campos agrícolas vecinos para fertilizarlos.",
+        "isCorrect": false,
+        "rationale": "Los relaves contienen reactivos y metales que contaminan el suelo agrícola."
+      },
+      {
+        "text": "Mezclar los relaves con el mineral de alta ley antes de venderlo.",
+        "isCorrect": false,
+        "rationale": "Diluiría la ley del mineral e incumpliría los requerimientos del comprador."
+      },
+      {
+        "text": "Reemplazar los sistemas de ventilación en los socabones subterráneos.",
+        "isCorrect": false,
+        "rationale": "La ventilación abastece de aire limpio a los socabones, mientras que el relave es un residuo de planta."
+      },
+      {
+        "text": "Aumentar el contenido de agua no tratada en los acuíferos subterráneos.",
+        "isCorrect": false,
+        "rationale": "La gestión de relaves busca justamente impermeabilizar el suelo para proteger el agua subterránea."
+      }
+    ],
+    "hint": "Se enfoca en almacenar los desechos del procesamiento de forma estable para evitar colapsos y contaminación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la etapa de post-cierre de mina, ¿qué acción ayuda a dejar un legado positivo en la zona de influencia?",
+    "opciones": [
+      {
+        "text": "Desarrollar programas de reforestación, restauración ecológica y proyectos económicos sostenibles.",
+        "isCorrect": true,
+        "rationale": "Restaurar el hábitat y capacitar a la población en actividades independientes garantiza la sostenibilidad futura."
+      },
+      {
+        "text": "Destruir toda la infraestructura vial construida que conectaba a los pueblos.",
+        "isCorrect": false,
+        "rationale": "Las vías de comunicación pueden transferirse a la comunidad para favorecer su desarrollo comercial."
+      },
+      {
+        "text": "Quemar los residuos industriales al aire libre antes de retirarse.",
+        "isCorrect": false,
+        "rationale": "La quema abierta contamina el aire y va en contra de la normativa de gestión ambiental."
+      },
+      {
+        "text": "Dejar abiertas las bocaminas subterráneas sin sellado de seguridad.",
+        "isCorrect": false,
+        "rationale": "Las labores abandonadas sin sellar representan un peligro mortal de derrumbe o caídas."
+      },
+      {
+        "text": "Prohibir a los pobladores el desarrollo de actividades agrícolas o ganaderas.",
+        "isCorrect": false,
+        "rationale": "La meta del cierre es precisamente habilitar terrenos seguros para el uso productivo comunal."
+      }
+    ],
+    "hint": "Involucra la revegetación del terreno intervenido y el impulso a proyectos productivos autosostenibles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Para que una minería sea catalogada como verdaderamente sostenible y rentable a largo plazo, ¿qué cuatro pilares deben converger de forma integrada?",
+    "opciones": [
+      {
+        "text": "Operaciones seguras en el ambiente laboral.",
+        "isCorrect": true,
+        "rationale": "La protección de la vida de los trabajadores es la premisa ética indiscutible de la producción."
+      },
+      {
+        "text": "Eficiencia operativa y rentabilidad económica.",
+        "isCorrect": true,
+        "rationale": "Garantiza la viabilidad comercial y la capacidad de financiar inversiones e impuestos."
+      },
+      {
+        "text": "Responsabilidad ambiental estricta.",
+        "isCorrect": true,
+        "rationale": "Protege los recursos naturales asegurando la permanencia del ecosistema intervenido."
+      },
+      {
+        "text": "Participación e integración comunitaria activa.",
+        "isCorrect": true,
+        "rationale": "Otorga legitimidad social y promueve el desarrollo compartido de la zona de influencia."
+      },
+      {
+        "text": "Explotación ilegal sin permisos ni fiscalización.",
+        "isCorrect": false,
+        "rationale": "La informalidad e ilegalidad destruyen la sostenibilidad y operan al margen del marco regulatorio."
+      }
+    ],
+    "hint": "Requiere combinar eficiencia productiva, seguridad del personal, cuidado del entorno y buena convivencia social.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito central de integrar los factores económicos, sociales y ambientales desde la etapa inicial de planificación y diseño de una mina?",
+    "opciones": [
+      {
+        "text": "Garantizar la rentabilidad financiera reduciendo la inversión inicial en exploración geológica.",
+        "isCorrect": false,
+        "rationale": "La reducción arbitraria en exploración afecta la certeza del yacimiento y no aborda la sostenibilidad ni la aceptación comunitaria."
+      },
+      {
+        "text": "Maximizar el valor de los recursos minerales a lo largo de su ciclo de vida equilibrando el beneficio económico con la responsabilidad social y ambiental.",
+        "isCorrect": true,
+        "rationale": "Este enfoque holístico busca optimizar la recuperación del recurso y asegurar la viabilidad comercial protegiendo a los trabajadores, comunidades y medio ambiente."
+      },
+      {
+        "text": "Eliminar por completo la necesidad de tramitar permisos y licencias ambientales ante el ministerio correspondiente.",
+        "isCorrect": false,
+        "rationale": "Los requisitos legales de licenciamiento ambiental son obligatorios independientemente del modelo de planificación interna de la mina."
+      },
+      {
+        "text": "Sustituir el uso de tecnología avanzada por mano de obra local para bajar los costos operativos.",
+        "isCorrect": false,
+        "rationale": "La integración de factores promueve el empleo local calificado y la adopción tecnológica en lugar de reemplazar la tecnología para abaratar costos."
+      },
+      {
+        "text": "Acelerar la fase de explotación acortando los tiempos de licenciamiento social mediante pagos directos a líderes de la zona.",
+        "isCorrect": false,
+        "rationale": "El licenciamiento social legítimo se logra mediante desarrollo sostenible y diálogo transparente, no con transacciones informales."
+      }
+    ],
+    "hint": "Piensa en el equilibrio necesario para que un proyecto minero sea viable y aceptado sin comprometer el entorno ni las comunidades.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué actividades son indispensables durante la etapa de evaluación geológica y viabilidad económica en la exploración minera?",
+    "opciones": [
+      {
+        "text": "Ejecución de perforaciones, muestreos y estudios geofísicos para determinar la ley y extensión del mineral.",
+        "isCorrect": true,
+        "rationale": "Estas actividades técnicas permiten cuantificar las reservas utilizables y verificar la calidad económica del yacimiento."
+      },
+      {
+        "text": "Acercamiento temprano y diálogo con las comunidades locales para obtener el licenciamiento social.",
+        "isCorrect": true,
+        "rationale": "Establecer la contención y comunicación social desde la fase exploratoria previene paralizaciones o conflictos futuros."
+      },
+      {
+        "text": "Construcción definitiva de la planta concentradora y la infraestructura de procesamiento pesado.",
+        "isCorrect": false,
+        "rationale": "La infraestructura definitiva se diseña y construye en etapas posteriores, una vez probada la viabilidad económica del proyecto."
+      },
+      {
+        "text": "Implementación de planes de cierre de mina y remediación post-operativa final.",
+        "isCorrect": false,
+        "rationale": "Aunque se contemplan criterios de cierre en el diseño, la remediación física final ocurre al término de la vida útil de la mina."
+      },
+      {
+        "text": "Análisis de la viabilidad económica considerando los costos proyectados de extracción y la ley de la mena.",
+        "isCorrect": true,
+        "rationale": "Determinar la rentabilidad futura exige contrastar la estimación de reservas de alta ley contra los costos de capital y operación requeridos."
+      }
+    ],
+    "hint": "Considera las acciones orientadas a delimitar la riqueza de la veta y asegurar el consentimiento del entorno antes de extraer.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el modelo metodológico integral presentado por SGS para optimizar procesos mineros, ¿cuál es la ventaja de integrar la consultoría tradicional, el control avanzado de procesos y la ciencia de datos?",
+    "opciones": [
+      {
+        "text": "Permite resolver problemas estructurales e históricos del proceso en lugar de aplicar solo parches acotados en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Unir la fenomenología del proceso con el análisis de datos pasados y el control en tiempo real brinda certezas y soluciona cuellos de botella trascendentales."
+      },
+      {
+        "text": "Reemplaza por completo el trabajo de los ingenieros metalúrgicos en la toma de decisiones dentro de la planta concentradora.",
+        "isCorrect": false,
+        "rationale": "La metodología busca guiar al consultor y al ingeniero experto con mejores herramientas analíticas, no sustituir la supervisión experta."
+      },
+      {
+        "text": "Garantiza la eliminación del 100% del consumo de insumos de molienda desde el primer mes de implementación.",
+        "isCorrect": false,
+        "rationale": "La optimización reduce el desgaste y mejora la eficiencia hídrica y energética, pero no elimina el uso de medios de molienda como bolas o revestimientos."
+      },
+      {
+        "text": "Limita el análisis de datos a un horizonte exclusivo de corto plazo de máximo 24 horas de operación.",
+        "isCorrect": false,
+        "rationale": "Una de las críticas al control avanzado aislado era limitarse al 'aquí y ahora'; la integración agrega perspectiva histórica y predictiva."
+      },
+      {
+        "text": "Evita realizar diagnósticos previos por operaciones unitarias para enfocarse directamente en el producto final.",
+        "isCorrect": false,
+        "rationale": "El roadmap metodológico inicia justamente identificando brechas individuales en chancado, molienda y flotación para luego ver su impacto global."
+      }
+    ],
+    "hint": "Identifica cómo se conectan el análisis del fenómeno físico, la optimización en tiempo real y el procesamiento de grandes volúmenes de datos históricos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la experiencia operativa descrita por Antamina, ¿cuál fue la razón principal para migrar de drones comerciales a una solución de drones autónomos especializados?",
+    "opciones": [
+      {
+        "text": "Los drones comerciales no podían grabar video en alta definición durante las noches.",
+        "isCorrect": false,
+        "rationale": "La limitación técnica principal no era la resolución de imagen, sino la sustentación aerodinámica y el alcance operativo en altitud."
+      },
+      {
+        "text": "La baja densidad del aire a más de 4000 m.s.n.m. reducía el tiempo de vuelo y exigía presencia física constante de un piloto.",
+        "isCorrect": true,
+        "rationale": "La menor densidad del aire en altura incrementa el consumo energético del dron comercial, haciendo indispensables unidades autónomas con hangares de carga remotos."
+      },
+      {
+        "text": "El Ministerio de Transportes prohibió el uso de cualquier dron que utilice frecuencias de radiofrecuencia estándar.",
+        "isCorrect": false,
+        "rationale": "La razón del cambio responde a retos de productividad y severidad climática en mina, no a regulaciones de espectro radioeléctrico."
+      },
+      {
+        "text": "Los drones comerciales incrementaban excesivamente la cola de espera de los camiones en las palas de cargado.",
+        "isCorrect": false,
+        "rationale": "Los drones se utilizan precisamente para detectar y corregir las colas de camiones en las palas, no para generarlas."
+      },
+      {
+        "text": "Las estaciones de carga de los drones comerciales requerían conexión directa a la red eléctrica subterránea.",
+        "isCorrect": false,
+        "rationale": "El problema clave era la autonomía de vuelo bajo condiciones de altitud extrema y la dependencia de un piloto en el frente de trabajo."
+      }
+    ],
+    "hint": "Reflexiona sobre las condiciones geográficas severas de la alta montaña y la necesidad de prescindir de un operador en campo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué elementos definen el concepto operativo de 'cierre de mina' en la gestión de minería formal sostenible?",
+    "opciones": [
+      {
+        "text": "Rehabilitación física y ambiental del área intervenida para devolverle valor al territorio.",
+        "isCorrect": true,
+        "rationale": "El cierre formal exige la estabilización física y química del terreno para su integración armónica con el entorno ambiental."
+      },
+      {
+        "text": "Abandono inmediato de las instalaciones sin realizar monitoreo de efluentes residuales.",
+        "isCorrect": false,
+        "rationale": "El abandono sin control ambiental genera pasivos ambientales, lo cual contraviene los principios de la minería legal."
+      },
+      {
+        "text": "Transferencia de infraestructura útil o áreas rehabilitadas en condiciones óptimas a la comunidad.",
+        "isCorrect": true,
+        "rationale": "Bajo la visión moderna, los activos reconfigurados y los espacios recuperados pueden generar valor social y económico duradero tras la extracción."
+      },
+      {
+        "text": "Aseguramiento de la estabilidad física y química a largo plazo para evitar la contaminación de aguas y suelos.",
+        "isCorrect": true,
+        "rationale": "Garantizar la contención de residuos y evitar la generación de drenaje ácido es un requisito indispensable del post-cierre."
+      },
+      {
+        "text": "Cese temporal de operaciones condicionado únicamente a la fluctuación a corto plazo del precio del metal.",
+        "isCorrect": false,
+        "rationale": "La suspensión por precios del mercado corresponde a un cuidado operacional o mantenimiento, no al plan integral de cierre de mina."
+      }
+    ],
+    "hint": "Piensa en el proceso de restitución del terreno que va mucho más allá de poner un letrero de clausura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la planificación estratégica operacional, ¿cuál es la función primordial de los Indicadores Clave de Desempeño (KPI)?",
+    "opciones": [
+      {
+        "text": "Medir y monitorear el valor adicional que suma cada etapa del proceso operativo para guiar las decisiones de mejora.",
+        "isCorrect": true,
+        "rationale": "Los KPI permiten visualizar el rendimiento real frente al planificado, identificando brechas en operaciones unitarias de extracción y procesamiento."
+      },
+      {
+        "text": "Garantizar que el 100% del mineral extraído sea considerado de alta ley sin pasar por el laboratorio.",
+        "isCorrect": false,
+        "rationale": "La ley del mineral se determina mediante análisis geológicos y ensayos químicos, no mediante la imposición de un KPI."
+      },
+      {
+        "text": "Reemplazar los estudios de impacto ambiental mediante informes estadísticos de producción diaria.",
+        "isCorrect": false,
+        "rationale": "Los KPI operativos evalúan la eficiencia del proceso y no eximen a la empresa de cumplir con el instrumento de gestión ambiental."
+      },
+      {
+        "text": "Sustituir los protocolos de seguridad laboral por evaluaciones puramente financieras de la mina.",
+        "isCorrect": false,
+        "rationale": "La seguridad laboral cuenta con sus propios KPI específicos para prevenir accidentes y promover un entorno de cero incidentes."
+      },
+      {
+        "text": "Determinar el valor de cotización internacional de los metales en la bolsa de valores.",
+        "isCorrect": false,
+        "rationale": "El precio de los commodities se fija por oferta y demanda en mercados globales, no por los KPI internos de una operación minera."
+      }
+    ],
+    "hint": "Considera cómo la supervisión cuantificable de los procesos ayuda a identificar desvíos y evaluar el valor agregado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la cultura de seguridad de una compañía minera, ¿cuál es el rol prioritario del personal denominado 'punta estrella'?",
+    "opciones": [
+      {
+        "text": "Supervisar la cotización internacional de las acciones de la mina en tiempo real.",
+        "isCorrect": false,
+        "rationale": "Esa tarea financiera corresponde al área corporativa y no a los brigadistas de seguridad operativa en planta o campamento."
+      },
+      {
+        "text": "Actuar como especialista de primera respuesta capacitado en prevención, evaluación de riesgos y protocolos de emergencia.",
+        "isCorrect": true,
+        "rationale": "El 'punta estrella' es un colaborador formado por entidades como la Cruz Roja o Defensa Civil para gestionar emergencias y promover la prevención."
+      },
+      {
+        "text": "Fiscalizar el cumplimiento de las cuotas de venta de concentrado de mineral a los compradores externos.",
+        "isCorrect": false,
+        "rationale": "Esta función pertenece al departamento comercial y comercialización, no a la estructura de seguridad y salud ocupacional."
+      },
+      {
+        "text": "Sustituir al gerente de operaciones durante las reuniones de directorio sin necesidad de delegación formal.",
+        "isCorrect": false,
+        "rationale": "La figura del punta estrella está ligada a la cultura de prevención operativa en el campo de trabajo y no al gobierno corporativo."
+      },
+      {
+        "text": "Operar de manera exclusiva los vehículos autónomos dentro del tajo abierto durante alertas rojas.",
+        "isCorrect": false,
+        "rationale": "En alertas rojas por tormentas eléctricas la indicación general es la inmovilización segura del personal, no la asignación de choferes especiales."
+      }
+    ],
+    "hint": "Recuerda la figura del trabajador con insignias distintivas capacitado para liderar la primera respuesta frente a un incidente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según lo explicado por IBM Chile, ¿cuál es la característica fundamental de un 'gemelo digital' aplicado a una planta de procesamiento minero?",
+    "opciones": [
+      {
+        "text": "Una réplica idéntica a escala física construida en un laboratorio universitario para ensayos de laboratorio.",
+        "isCorrect": false,
+        "rationale": "Un gemelo digital es una representación en software alimentada por datos reales, no una estructura física de laboratorio."
+      },
+      {
+        "text": "Una representación en software de un proceso físico alimentada con datos de sensores en tiempo real para simular y optimizar operaciones.",
+        "isCorrect": true,
+        "rationale": "Permite generar datos sintéticos, probar escenarios 'qué pasa si' y aplicar algoritmos de analítica para aumentar la eficiencia sin riesgo operativo."
+      },
+      {
+        "text": "Un sistema robótico que duplica físicamente los movimientos del operador de la excavadora en socavón.",
+        "isCorrect": false,
+        "rationale": "Esa tecnología se denomina teleoperación o comando remoto, mientras que el gemelo digital analiza la dinámica del proceso completo."
+      },
+      {
+        "text": "Un archivo estático de planos en formato CAD utilizado únicamente en la fase de factibilidad inicial del proyecto.",
+        "isCorrect": false,
+        "rationale": "A diferencia de un plano estático, el gemelo digital se actualiza e interactúa dinámicamente con los datos operacionales de la planta en marcha."
+      },
+      {
+        "text": "Un algoritmo diseñado para ocultar las desviaciones de costos operativos durante las auditorías financieras.",
+        "isCorrect": false,
+        "rationale": "El objetivo del gemelo digital es transparente y técnico: optimizar variables de proceso para mejorar la productividad real."
+      }
+    ],
+    "hint": "Visualiza un modelo virtual que recibe datos continuos del proceso real para simular escenarios sin alterar la planta física.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera el mantenimiento predictivo asistido por Inteligencia Artificial supera las limitaciones del mantenimiento preventivo tradicional?",
+    "opciones": [
+      {
+        "text": "Elimina la necesidad de reparar los componentes mecánicos al hacerlos inmunes al desgaste físico.",
+        "isCorrect": false,
+        "rationale": "Las piezas mecánicas sufren desgaste inevitable; el mantenimiento predictivo anticipa la falla para intervenir a tiempo, no evita el desgaste."
+      },
+      {
+        "text": "Analiza patrones complejos y correlaciones en miles de datos por segundo (vibración, temperatura) para anticipar fallas no programadas.",
+        "isCorrect": true,
+        "rationale": "El modelo detecta sutiles desviaciones combinadas que el ojo humano no percibe a tiempo, evitando paradas intempestivas que cuestan millones de dólares."
+      },
+      {
+        "text": "Permite que la planta funcione sin personal de mantenimiento de forma permanente.",
+        "isCorrect": false,
+        "rationale": "La IA complementa al equipo humano entregando alertas e instrucciones precisas para que los técnicos ejecuten el trabajo de manera eficiente."
+      },
+      {
+        "text": "Extiende la vida útil de los equipos fijando fechas rígidas de revisión cada cierto número de meses sin importar su uso real.",
+        "isCorrect": false,
+        "rationale": "La fijación rígida por calendario es la característica del mantenimiento preventivo tradicional, el cual el enfoque predictivo vuelve más dinámico."
+      },
+      {
+        "text": "Sustituye los repuestos originales por piezas de menor calidad sin afectar la productividad del equipo.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento predictivo busca la confiabilidad de los activos, no la disminución de estándares en los componentes de reemplazo."
+      }
+    ],
+    "hint": "Enfócate en la capacidad de la IA para correlacionar variaciones simultáneas en múltiples sensores antes de que la falla ocurra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué beneficios estratégicos aporta el licenciamiento social mediante modelos de inversión comunitaria (como fundaciones o convenios marco) en la minería?",
+    "opciones": [
+      {
+        "text": "Construcción de legitimidad social e integración del entorno comunitario como un stakeholder clave del negocio.",
+        "isCorrect": true,
+        "rationale": "El compromiso sostenido genera confianza mutua y previene conflictos que podrían paralizar las operaciones."
+      },
+      {
+        "text": "Exención total del pago del canon minero e impuestos a la renta ante el gobierno central.",
+        "isCorrect": false,
+        "rationale": "La inversión social privada o voluntaria es complementaria y no sustituye las obligaciones tributarias y legales del Estado."
+      },
+      {
+        "text": "Fomento del empleo local calificado y fortalecimiento de cadenas productivas regionales (p. ej., ganadería, educación).",
+        "isCorrect": true,
+        "rationale": "Impulsar proyectos socioeconómicos locales diversifica la economía de la zona e incrementa la calidad de vida de las familias vecinas."
+      },
+      {
+        "text": "Aseguramiento de la continuidad operativa mediante el respaldo y la colaboración directa de la población vecina.",
+        "isCorrect": true,
+        "rationale": "La población que percibe beneficios tangibles y respeto ambiental defiende la estabilidad del proyecto del cual se siente socia."
+      },
+      {
+        "text": "Sustitución permanente de las Fuerzas Armadas mediante la creación de milicias comunitarias privadas.",
+        "isCorrect": false,
+        "rationale": "El ejercicio del orden público corresponde exclusivamente al Estado, no a convenios de responsabilidad social privada."
+      }
+    ],
+    "hint": "Considera cómo las intervenciones más allá de la obligación legal aseguran la convivencia pacífica y el desarrollo local.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al implementar soluciones de IA generativa u operacional en industrias tradicionales como la minería, ¿cuál suele ser el principal obstáculo según los análisis de gestión de cambio?",
+    "opciones": [
+      {
+        "text": "La imposibilidad física de conectar los centros operacionales a redes de internet de alta velocidad.",
+        "isCorrect": false,
+        "rationale": "Aunque existen retos de conectividad, hoy en día se disponen de redes satelitales y nubes que superan ampliamente la barrera técnica."
+      },
+      {
+        "text": "La resistencia cultural al cambio y la falta de una mentalidad orientada a la innovación y al aprendizaje continuo.",
+        "isCorrect": true,
+        "rationale": "Las culturas corporativas tradicionales y fijas suelen temer el riesgo o la pérdida del puesto, dificultando la adopción fluida de nuevas herramientas."
+      },
+      {
+        "text": "El costo prohibitivo e inalcanzable de las suscripciones a servicios de computación en la nube.",
+        "isCorrect": false,
+        "rationale": "La tecnología de nube se ha democratizado en costos y permite esquemas de pago por consumo accesibles incluso para pequeñas empresas."
+      },
+      {
+        "text": "La prohibición internacional del uso de algoritmos en el procesamiento de recursos minerales.",
+        "isCorrect": false,
+        "rationale": "No existe prohibición legal; por el contrario, los gobiernos impulsan la eficiencia y la seguridad digital en la industria extractiva."
+      },
+      {
+        "text": "La pérdida inmediata del 100% de los puestos de trabajo operativos desde el inicio de las pruebas piloto.",
+        "isCorrect": false,
+        "rationale": "La IA busca aumentar la productividad y el valor agregado del personal existente, no eliminar de golpe la planilla completa."
+      }
+    ],
+    "hint": "Reflexiona sobre la mentalidad cultural del personal ante métodos de trabajo centenarios frente a la adopción tecnológica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué pilares componen la gestión ambiental moderna aplicable a todo el ciclo de vida de la operación minera?",
+    "opciones": [
+      {
+        "text": "Minimización y mitiga del impacto sobre los ecosistemas circundantes.",
+        "isCorrect": true,
+        "rationale": "Controlar las emisiones, el polvo y el ruido evita la degradación de los hábitats naturales cercanos al yacimiento."
+      },
+      {
+        "text": "Protección, tratamiento y recirculación eficiente del recurso hídrico.",
+        "isCorrect": true,
+        "rationale": "Evitar la contaminación de fuentes de agua y maximizar el reúso en planta resguarda el insumo más crítico para la vida y la minería."
+      },
+      {
+        "text": "Rehabilitación paulatina y final de los terrenos intervenidos durante la explotación.",
+        "isCorrect": true,
+        "rationale": "La reconformación morfológica y la revegetación garantizan la estabilidad física y ambiental del terreno tras la extracción."
+      },
+      {
+        "text": "Descarga directa de efluentes no tratados a los ríos durante las temporadas de lluvias intensas.",
+        "isCorrect": false,
+        "rationale": "Verter efluentes sin tratamiento contraviene la normativa ambiental e inflige severos daños a los ecosistemas y comunidades."
+      },
+      {
+        "text": "Ocultamiento de datos de monitoreo ambiental para evitar multas de los organismos reguladores.",
+        "isCorrect": false,
+        "rationale": "La transparencia y la auditoría constante de la huella ambiental son obligatorias dentro de la minería responsable."
+      }
+    ],
+    "hint": "Identifica las acciones fundamentales destinadas a resguardar los recursos vitales del entorno natural.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso de la transformación digital de la minería en China (Huawei / 5G), ¿cuál es el beneficio primario de conectar sensores subterráneos y maquinaria con redes 5G y Wi-Fi 6?",
+    "opciones": [
+      {
+        "text": "Permitir que los trabajadores jueguen en línea durante los descansos dentro del socavón.",
+        "isCorrect": false,
+        "rationale": "La conectividad industrial de ultra baja latencia se instala con fines estrictamente operativos, de seguridad y de automatización."
+      },
+      {
+        "text": "Retirar progresivamente al personal del entorno peligroso bajo tierra mediante la teleoperación de maquinaria en tiempo real.",
+        "isCorrect": true,
+        "rationale": "El ancho de banda y la baja latencia del 5G permiten controlar jumbos y camiones a distancia, reduciendo drásticamente la tasa de accidentes mortales."
+      },
+      {
+        "text": "Aumentar la cantidad de gas metano acumulado mediante la ventilación digitalizada.",
+        "isCorrect": false,
+        "rationale": "La sensorización busca precisamente detectar de inmediato las fugas de gas para activar extractores y prevenir explosiones."
+      },
+      {
+        "text": "Sustituir los estudios geológicos de superficie por transmisiones de video en redes sociales.",
+        "isCorrect": false,
+        "rationale": "Las transmisiones internas analizan parámetros técnicos del yacimiento y se gestionan en centros de mando cerrados."
+      },
+      {
+        "text": "Incrementar el costo de la planilla al requerir un conductor por cada sensor instalado.",
+        "isCorrect": false,
+        "rationale": "Por el contrario, la automatización ha permitido reducir hasta en un 40% el número de trabajadores en socavón y bajar los costos laborales."
+      }
+    ],
+    "hint": "Considera cómo la transmisión instantánea de datos al centro de comando impacta en la exposición de las personas en el socavón.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a desperdicios (muda) que la filosofía Lean busca eliminar en los procesos operacionales?",
+    "opciones": [
+      {
+        "text": "Exceso de transporte y movimientos innecesarios de insumos o maquinaria.",
+        "isCorrect": true,
+        "rationale": "El desplazamiento innecesario consume combustible, tiempo y genera desgaste sin aportar ningún valor al producto final."
+      },
+      {
+        "text": "Tiempos de espera por falta de material, instrucciones o avería de equipos.",
+        "isCorrect": true,
+        "rationale": "Los periodos de inactividad de la planta o de la flota reducen la productividad global e incrementan el costo unitario."
+      },
+      {
+        "text": "Sobreproducción y acumulación excesiva de inventarios no requeridos.",
+        "isCorrect": true,
+        "rationale": "Producir más de lo demandado o mantener sobrestock inmoviliza capital y corre el riesgo de deterioro o costo de almacenamiento."
+      },
+      {
+        "text": "Capacitación constante y desarrollo de competencias en el personal clave.",
+        "isCorrect": false,
+        "rationale": "El desarrollo del talento humano es una inversión estratégica de alto valor y no un desperdicio del proceso."
+      },
+      {
+        "text": "Alineación de los estándares operacionales con los protocolos de seguridad.",
+        "isCorrect": false,
+        "rationale": "Cumplir estándares de seguridad garantiza la continuidad operativa y protege la vida, siendo pilar básico del proceso."
+      }
+    ],
+    "hint": "Aplica el acrónimo TIMWOODS enfocado en actividades que generan costo o demora pero no agregan valor real al cliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la metodología Six Sigma y su ciclo DMAIC, ¿qué objetivo específico se persigue durante la etapa de 'Analizar'?",
+    "opciones": [
+      {
+        "text": "Definir formalmente el acta de constitución del proyecto y los objetivos finales para el cliente.",
+        "isCorrect": false,
+        "rationale": "Ese enunciado corresponde a la etapa inicial de 'Definir' (Define)."
+      },
+      {
+        "text": "Estudiar los datos recopilados para descubrir las causas raíz de los defectos o variaciones en el proceso.",
+        "isCorrect": true,
+        "rationale": "En 'Analizar' (Analyze) se procesa la información recopilada para comprender por qué se originan las desviaciones y cuellos de botella."
+      },
+      {
+        "text": "Recopilar los primeros datos crudos del rendimiento actual sin aplicar ningún método estadístico.",
+        "isCorrect": false,
+        "rationale": "La recolección sistemática de métricas del proceso corresponde a la fase de 'Medir' (Measure)."
+      },
+      {
+        "text": "Establecer planes de monitoreo permanente a largo plazo para consolidar las mejoras logradas.",
+        "isCorrect": false,
+        "rationale": "El seguimiento continuo de las soluciones implementadas corresponde a la fase final de 'Controlar' (Control)."
+      },
+      {
+        "text": "Rediseñar por completo el producto final sin considerar las demandas del mercado objetivo.",
+        "isCorrect": false,
+        "rationale": "Six Sigma busca optimizar el proceso para satisfacer con precisión las especificaciones y necesidades requeridas por el cliente."
+      }
+    ],
+    "hint": "Pensar en el paso clave que ocurre justo después de medir las variaciones y justo antes de implementar la solución.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el rasgo distintivo de la metodología Kaizen frente a los proyectos de reingeniería radical?",
+    "opciones": [
+      {
+        "text": "Exige la sustitución inmediata del 100% de las máquinas de la planta en un solo evento estratégico.",
+        "isCorrect": false,
+        "rationale": "Las sustituciones totales e intempestivas corresponden a reingenierías o transformaciones de gran escala, no a Kaizen."
+      },
+      {
+        "text": "Se fundamenta en la mejora continua mediante pequeñas acciones incrementales sostenidas involucrando a todo el personal.",
+        "isCorrect": true,
+        "rationale": "Kaizen promueve cambios pequeños, constantes y de bajo costo propuestos por los mismos trabajadores para perfeccionar su entorno de trabajo."
+      },
+      {
+        "text": "Se aplica exclusivamente en la fase de exploración minera antes de iniciar la extracción.",
+        "isCorrect": false,
+        "rationale": "Kaizen es transversal y se aplica diariamente en cualquier etapa productiva de la operación en marcha."
+      },
+      {
+        "text": "Rechaza la estandarización de procesos por considerarla un obstáculo para la creatividad laboral.",
+        "isCorrect": false,
+        "rationale": "La estandarización es la base del Kaizen, pues solo sobre un proceso estandarizado se pueden consolidar mejoras progresivas."
+      },
+      {
+        "text": "Aumenta los niveles de variación en los KPI para probar la resistencia de la cadena de suministro.",
+        "isCorrect": false,
+        "rationale": "La metodología busca reducir variaciones y desperdicios, incrementando la previsibilidad y calidad del proceso."
+      }
+    ],
+    "hint": "Considera la frecuencia y magnitud de las modificaciones involucradas en el día a día por parte de los propios operarios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera el indicador Life of Mine (LOM) impacta en las decisiones estratégicas de inversión y en el diseño del Plan Maestro de una operación?",
+    "opciones": [
+      {
+        "text": "Determina la tarifa de transporte de carga pesada que se cobrará a los proveedores locales.",
+        "isCorrect": false,
+        "rationale": "LOM mide la vida útil del depósito, no las tarifas de contratación comercial de servicios de terceros."
+      },
+      {
+        "text": "Define el horizonte temporal total de extracción y el ritmo sustentable de recuperación para justificar las inversiones de capital.",
+        "isCorrect": true,
+        "rationale": "Conocer la extensión y duración proyectada del yacimiento permite estructurar la escala de producción, el financiamiento y la rentabilidad integral a largo plazo."
+      },
+      {
+        "text": "Calcula el número exacto de accidentes menores que ocurrirán durante el ciclo operativo de la mina.",
+        "isCorrect": false,
+        "rationale": "Los accidentes se previenen mediante gestión de riesgos y seguridad; el LOM no presupone cuotas de accidentabilidad."
+      },
+      {
+        "text": "Establece el precio máximo garantizado al que se venderá la tonelada de metal en los próximos 50 años.",
+        "isCorrect": false,
+        "rationale": "Los precios futuros dependen del mercado mundial; el LOM proyecta volúmenes físicos de reserva y vida operacional."
+      },
+      {
+        "text": "Sustituye la necesidad de elaborar planes de mitigación de impactos ambientales en la zona.",
+        "isCorrect": false,
+        "rationale": "Un mayor horizonte de LOM requiere planes ambientales de largo plazo más sólidos y auditables."
+      }
+    ],
+    "hint": "Relaciona la estimación de la reserva explotable a lo largo de los años con la amortización del capital invertido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el caso reportado sobre minas inteligentes en China, ¿qué resultados directos se obtuvieron al implementar la minería robótica no tripulada y la automatización 5G?",
+    "opciones": [
+      {
+        "text": "Reducción sustancial del número de trabajadores expuestos en áreas de alto riesgo en socavón.",
+        "isCorrect": true,
+        "rationale": "En minas como Xudong y Hongyulin se redujo entre un 18% y un 42% el personal en el interior de las galerías sin perder capacidad extractiva."
+      },
+      {
+        "text": "Aumento significativo en los niveles de producción y en la eficiencia económica anual.",
+        "isCorrect": true,
+        "rationale": "La operación remota continua incrementó la producción de carbón y oro, generando récords en beneficios netos."
+      },
+      {
+        "text": "Incremento proporcional de los accidentes mortales debido a fallas en la red eléctrica.",
+        "isCorrect": false,
+        "rationale": "El objetivo principal del proyecto fue precisamente revertir las alarmantes tasas de mortalidad mediante la eliminación del factor humano en zonas críticas."
+      },
+      {
+        "text": "Control de operaciones pesadas (como triturado y perforación jumbo) ejecutado a distancia desde la superficie.",
+        "isCorrect": true,
+        "rationale": "Jóvenes operadores en salas climatizadas de superficie manipulan palancas y pantallas para triturar y perforar a cientos de metros bajo tierra."
+      },
+      {
+        "text": "Eliminación total del uso de energía eléctrica para operar exclusivamente a base de vapor.",
+        "isCorrect": false,
+        "rationale": "La minería inteligente requiere mayor suministro eléctrico estable y redes de transmisión digital para alimentar sensores y robots."
+      }
+    ],
+    "hint": "Reflexiona sobre las cifras de productividad, reducción de exposición laboral en socavón y desempeño operativo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función estratégica del Plan Maestro (Master Plan) dentro de la gestión de operaciones de una unidad minera?",
+    "opciones": [
+      {
+        "text": "Servir como un registro exclusivo de asistencia diaria para el personal de contratistas.",
+        "isCorrect": false,
+        "rationale": "Ese es un control administrativo menor y no la hoja de ruta estratégica de la operación."
+      },
+      {
+        "text": "Integrar la alineación estratégica, el diseño de infraestructura, la secuenciación de extracción y la reducción integral de riesgos.",
+        "isCorrect": true,
+        "rationale": "El Plan Maestro consolida los objetivos del Negocio a largo plazo con la ejecución táctica en campo, maximizando márgenes de forma segura."
+      },
+      {
+        "text": "Sustituir el análisis PESTEL mediante la eliminación de las variables de entorno legal y político.",
+        "isCorrect": false,
+        "rationale": "El Plan Maestro se nutre activamente de las variables del entorno PESTEL para prever contingencias en el diseño minero."
+      },
+      {
+        "text": "Fijar el sueldo de todos los ejecutivos mineros de manera independiente del desempeño operacional.",
+        "isCorrect": false,
+        "rationale": "La escala salarial se gestiona por políticas de recursos humanos y no constituye el propósito del Plan Maestro."
+      },
+      {
+        "text": "Garantizar que no se requieran auditorías de seguridad ambiental durante los primeros diez años.",
+        "isCorrect": false,
+        "rationale": "El Plan Maestro contempla el cumplimiento constante y riguroso de las normas de seguridad y medio ambiente en todo su desarrollo."
+      }
+    ],
+    "hint": "Visualiza la carta de navegación central que articula la visión a largo plazo con la programación operacional y la infraestructura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del análisis PESTEL aplicado al sector minero, ¿qué elementos corresponden a la evaluación de los 'Factores Políticos' y 'Legales'?",
+    "opciones": [
+      {
+        "text": "Dureza de la rocas, nivel de granulometría y eficiencia de los reactivos de flotación en celda.",
+        "isCorrect": false,
+        "rationale": "Estos son parámetros puramente técnicos y metalúrgicos del procesamiento del mineral."
+      },
+      {
+        "text": "Estabilidad del gobierno, normativas de seguridad laboral, impuestos, regalías y grado de certeza jurídica en las concesiones.",
+        "isCorrect": true,
+        "rationale": "Evalúan cómo el marco institucional, las leyes tributarias y el clima político del país de acogida afectan el riesgo de la inversión minera."
+      },
+      {
+        "text": "Velocidad del procesador del computador y capacidad de memoria RAM del servidor principal.",
+        "isCorrect": false,
+        "rationale": "Corresponden a especificaciones de hardware y no a los factores políticos y legales del entorno exterior."
+      },
+      {
+        "text": "Hábitos de consumo recreativo y preferencias de entretenimiento en las zonas urbanas.",
+        "isCorrect": false,
+        "rationale": "Dichas variables corresponden a factores socio-culturales y de estilo de vida en el análisis PESTEL."
+      },
+      {
+        "text": "Volumen de lluvias anuales e índice de radiación solar sobre el tajo abierto.",
+        "isCorrect": false,
+        "rationale": "Estos elementos corresponden a la categoría de factores ambientales u operacionales climáticos."
+      }
+    ],
+    "hint": "Enfócate en la estabilidad gubernamental, la permisología fiscal, el derecho laboral y el riesgo país.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco del modelo de las Cinco Fuerzas de Porter, ¿qué logra una gran empresa minera cuando exige certificaciones de calidad (ISO) y homologación rigurosa a sus proveedores de servicios?",
+    "opciones": [
+      {
+        "text": "Aumentar el poder de negociación de los proveedores para que fijen precios elevados de forma unilateral.",
+        "isCorrect": false,
+        "rationale": "Homologar proveedores reduce la dependencia de proveedores informales o de bajo desempeño, fortaleciendo el control de la mina."
+      },
+      {
+        "text": "Ejercer una integración eficiente de la cadena de suministro hacia atrás, imponiendo su cultura organizacional y estándares de calidad.",
+        "isCorrect": true,
+        "rationale": "Establecer estándares exigentes alinea a los proveedores con las metas de eficiencia, seguridad y cumplimiento normativo de la compañía principal."
+      },
+      {
+        "text": "Fomentar la aparición inmediata de productos sustitutos directos para el cobre o el oro extraído.",
+        "isCorrect": false,
+        "rationale": "La homologación de proveedores busca asegurar la continuidad de insumos operativos, sin relación directa con la amenaza de sustitutos comerciales del metal."
+      },
+      {
+        "text": "Transferir la responsabilidad legal de los efluentes contaminantes a la comunidad local.",
+        "isCorrect": false,
+        "rationale": "La titularidad de la mina mantiene la responsabilidad legal y ambiental total de sus efluentes e instalaciones."
+      },
+      {
+        "text": "Eliminar la competencia internacional reduciendo el precio global del metal en bolsa.",
+        "isCorrect": false,
+        "rationale": "La gestión interna de proveedores busca eficiencia operativa interna y no determina el precio internacional de commodities."
+      }
+    ],
+    "hint": "Considera cómo la imposición de estándares de la mina hacia su cadena de suministro disminuye la vulnerabilidad operativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes acciones son indispensables dentro de un sistema integral de gestión de riesgos basado en la norma ISO 31000 para operaciones mineras?",
+    "opciones": [
+      {
+        "text": "Identificación exhaustiva de riesgos operacionales, ambientales, sociales y financieros.",
+        "isCorrect": true,
+        "rationale": "Catalogar todos los peligros potenciales en cada área garantiza una visión completa de la exposición del proyecto."
+      },
+      {
+        "text": "Evaluación cuantitativa y cualitativa del impacto y la probabilidad de ocurrencia de cada evento.",
+        "isCorrect": true,
+        "rationale": "Medir la severidad y frecuencia permite priorizar los recursos hacia la atención de las contingencias de mayor gravedad."
+      },
+      {
+        "text": "Diseño e implementación de medidas de control, mitigación y contingencia claras.",
+        "isCorrect": true,
+        "rationale": "Tener planes de acción definidos asegura una respuesta rápida frente a desvíos o emergencias de seguridad."
+      },
+      {
+        "text": "Supresión de las auditorías internas para evitar el hallazgo de desviaciones en los registros.",
+        "isCorrect": false,
+        "rationale": "ISO 31000 exige auditorías periódicas y revisiones sistemáticas para validar la efectividad de los controles."
+      },
+      {
+        "text": "Asunción ciega de todos los riesgos sin importar el impacto en la seguridad de las personas.",
+        "isCorrect": false,
+        "rationale": "El principio de la gestión de riesgos es prevenir y reducir a niveles aceptables la exposición, priorizando la vida."
+      }
+    ],
+    "hint": "Piensa en el proceso continuo que abarca desde la detección temprana de eventos no deseados hasta su seguimiento sistemático.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión sostenible de depósitos de relaves y recursos hídricos, ¿cuál es la función de emplear geomembranas y sistemas de recirculación de agua en la planta?",
+    "opciones": [
+      {
+        "text": "Aumentar la viscosidad del relave para imposibilitar su bombeo a las áreas de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Las geomembranas actúan como recubrimiento impermeable, no como aditivo para alterar la viscosidad del fluido."
+      },
+      {
+        "text": "Prevenir la infiltración de lixiviados hacia las napas freáticas y reducir el consumo de agua fresca mediante el reciclaje en circuito.",
+        "isCorrect": true,
+        "rationale": "La geomembrana aísla químicamente el relave del suelo subyacente, mientras que la recirculación maximiza la eficiencia hídrica comunitaria y operacional."
+      },
+      {
+        "text": "Acelerar la evaporación del agua para liberar polvo seco contaminante hacia la atmósfera.",
+        "isCorrect": false,
+        "rationale": "Se busca precisamente controlar el material particulado y recuperar la mayor cantidad de agua clarified para el proceso."
+      },
+      {
+        "text": "Sustituir las pruebas de laboratorio mediante la inspección estéticamente agradable del depósito.",
+        "isCorrect": false,
+        "rationale": "El control de relaves requiere monitoreo piezométrico, químico y estructural constante por normativa."
+      },
+      {
+        "text": "Inundar las comunidades vecina en épocas de sequía para limpiar el terreno circundante.",
+        "isCorrect": false,
+        "rationale": "El manejo de relaves exige contención absoluta y vertido cero de aguas no tratadas hacia el exterior."
+      }
+    ],
+    "hint": "Considera la barrera física necesaria para evitar filtraciones profundas y la reutilización del recurso en el circuito cerrado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué requisito debe cumplir la redacción de un objetivo operacional para ser considerado válido bajo la metodología SMART?",
+    "opciones": [
+      {
+        "text": "Ser redactado de manera abstracta para permitir múltiples interpretaciones según el turno de trabajo.",
+        "isCorrect": false,
+        "rationale": "SMART exige especificidad (Specific) para eliminar la ambigüedad en la meta perseguida."
+      },
+      {
+        "text": "Ser específico, medible, alcanzable, relevante y delimitado en un tiempo definido.",
+        "isCorrect": true,
+        "rationale": "Ese conjunto de atributos (Specific, Measurable, Achievable, Relevant, Time-bound) garantiza que la meta sea auditable y ejecutable con claridad."
+      },
+      {
+        "text": "Depender exclusivamente de variables externas incontrolables por la gerencia de la mina.",
+        "isCorrect": false,
+        "rationale": "Los objetivos operacionales SMART se enfocan en variables de desempeño donde el equipo puede actuar e influir directamente."
+      },
+      {
+        "text": "Fijar metas imposibles de cumplir para presionar al personal más allá de la capacidad teórica de los equipos.",
+        "isCorrect": false,
+        "rationale": "El objetivo SMART debe ser alcanzable (Achievable) y realista bajo los parámetros de diseño y seguridad."
+      },
+      {
+        "text": "Carecer de métricas numéricas o fechas límite para evitar auditorías de rendimiento al cierre de año.",
+        "isCorrect": false,
+        "rationale": "La ausencia de métricas numéricas y plazo cronológico invalida el principio de medibilidad y temporalidad de SMART."
+      }
+    ],
+    "hint": "Recuerda las siglas que exigen especificidad, posibilidad de medición, factibilidad, relevancia y un tiempo límite explícito.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-46",
+    "diplomado": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué pilares fundamentales garantizan que una unidad minera mantenga la sostenibilidad integral y la rentabilidad operacional a largo plazo?",
+    "opciones": [
+      {
+        "text": "Operaciones seguras enfocadas en la prevención y cero accidentes mortales.",
+        "isCorrect": true,
+        "rationale": "Proteger la vida de los colaboradores asegura la estabilidad operativa y refuerza la cultura de excelencia."
+      },
+      {
+        "text": "Eficiencia operativa mediante la optimización de procesos y el control de costos.",
+        "isCorrect": true,
+        "rationale": "Producir a costo competitivo protege el margen del negocio ante las caídas de precios en la bolsa internacional."
+      },
+      {
+        "text": "Responsabilidad ambiental y gestión adecuada de residuos y agua.",
+        "isCorrect": true,
+        "rationale": "Prevenir pasivos ambientales garantiza la vigencia del permiso ambiental y cuida los recursos compartidos."
+      },
+      {
+        "text": "Participación comunitaria y construcción permanente de la licencia social.",
+        "isCorrect": true,
+        "rationale": "El entendimiento mutuo con las comunidades vecinas previene paros o huelgas que pongan en peligro la viabilidad del proyecto."
+      },
+      {
+        "text": "Maximización de la extracción ignorando las normativas de seguridad y los límites de la geomembrana.",
+        "isCorrect": false,
+        "rationale": "Ignorar la seguridad o los límites ambientales desencadena desastres físicos, demandas y el cierre definitivo de la operación."
+      }
+    ],
+    "hint": "Selecciona las condiciones convergentes que combinan excelencia técnica, protección del colaborador, respeto ambiental y armonía social.",
+    "activo": true
+  }
+]

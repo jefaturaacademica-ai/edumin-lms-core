@@ -48,6 +48,24 @@ export async function POST(request: NextRequest) {
 
     // Soporte para importación en lote de preguntas
     if (Array.isArray(body)) {
+      if (body.length === 0) {
+        return NextResponse.json({ success: false, error: 'El lote de preguntas está vacío' }, { status: 400 });
+      }
+
+      // Validación estricta: cada pregunta debe tener exactamente 5 alternativas
+      for (let i = 0; i < body.length; i++) {
+        const p = body[i];
+        const opciones = p.opciones || p.answerOptions;
+        if (!Array.isArray(opciones) || opciones.length !== 5) {
+          const numOpts = Array.isArray(opciones) ? opciones.length : 0;
+          const previewPregunta = (p.pregunta || p.question || '').substring(0, 50);
+          return NextResponse.json({
+            success: false,
+            error: `Error de validación en pregunta #${i + 1} ("${previewPregunta}..."): tiene ${numOpts} alternativas. Todas las preguntas deben tener exactamente 5 alternativas.`
+          }, { status: 400 });
+        }
+      }
+
       const resultados = [];
       for (const p of body) {
         const guardada = await guardarPreguntaBanco(p);
@@ -58,6 +76,15 @@ export async function POST(request: NextRequest) {
         mensaje: `${resultados.length} preguntas guardadas correctamente`,
         total: resultados.length
       });
+    }
+
+    // Validación para guardado de pregunta individual
+    const opcionesIndiv = body.opciones || body.answerOptions;
+    if (opcionesIndiv && (!Array.isArray(opcionesIndiv) || opcionesIndiv.length !== 5)) {
+      return NextResponse.json({
+        success: false,
+        error: `La pregunta debe tener exactamente 5 alternativas (tiene ${Array.isArray(opcionesIndiv) ? opcionesIndiv.length : 0}).`
+      }, { status: 400 });
     }
 
     // Guardado de pregunta individual

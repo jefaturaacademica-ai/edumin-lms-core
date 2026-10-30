@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre una variable y una constante en la programación con Python según lo explicado en el curso?",
+    "opciones": [
+      {
+        "text": "Una variable almacena un dato cuyo valor puede cambiar durante la ejecución del programa, mientras que una constante mantiene un valor fijo.",
+        "isCorrect": true,
+        "rationale": "Las variables actúan como contenedores dinámicos cuyo contenido puede reasignarse, a diferencia de valores fijos como pi que se mantienen constantes."
+      },
+      {
+        "text": "Una variable solo puede contener números enteros, mientras que una constante está restringida a texto.",
+        "isCorrect": false,
+        "rationale": "El tipo de dato almacenado (entero, flotante, cadena) depende del valor asignado y no define la naturaleza variable o constante del identificador."
+      },
+      {
+        "text": "Las variables no requieren un nombre identificador, a diferencia de las constantes que sí lo necesitan.",
+        "isCorrect": false,
+        "rationale": "Tanto las variables como las constantes requieren identificadores con nombre para ser referenciadas y utilizadas en el código."
+      },
+      {
+        "text": "Las constantes se modifican libremente dentro de un bucle, mientras que las variables son inmutables.",
+        "isCorrect": false,
+        "rationale": "Conceptualmente es la variable la que varía dentro de estructuras de control o iteraciones, mientras que la constante permanece invariable."
+      },
+      {
+        "text": "Una constante se define únicamente con corchetes, mientras que la variable utiliza paréntesis.",
+        "isCorrect": false,
+        "rationale": "Los paréntesis y corchetes se utilizan para delimitar funciones, tuplas o listas, no para definir la variabilidad de una variable o constante."
+      }
+    ],
+    "hint": "Piensa en el comportamiento del valor almacenado durante la ejecución del código.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según las reglas de sintaxis de Python presentadas en la Clase 1, ¿cuál de los siguientes identificadores es un nombre de variable válido?",
+    "opciones": [
+      {
+        "text": "nombre_principal",
+        "isCorrect": true,
+        "rationale": "Utiliza letras minúsculas y un guion bajo para separar palabras sin incluir espacios ni caracteres especiales prohibidos."
+      },
+      {
+        "text": "1er_nombre",
+        "isCorrect": false,
+        "rationale": "Los nombres de variables en Python no pueden comenzar con dígitos numéricos."
+      },
+      {
+        "text": "nombre principal",
+        "isCorrect": false,
+        "rationale": "Python no permite espacios en blanco dentro de los nombres de identificadores."
+      },
+      {
+        "text": "numero#1",
+        "isCorrect": false,
+        "rationale": "El carácter numeral (#) se utiliza para iniciar comentarios en Python y genera un error de sintaxis si se incluye en una variable."
+      },
+      {
+        "text": "salario-total!",
+        "isCorrect": false,
+        "rationale": "Los signos de exclamación y guiones medios no son caracteres válidos para definir nombres de variables."
+      }
+    ],
+    "hint": "Recuerda que los nombres válidos no llevan espacios, no inician con números y usan guion bajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En Python, ¿qué operador aritmético se utiliza para elevar un número a una potencia determinada?",
+    "opciones": [
+      {
+        "text": "**",
+        "isCorrect": true,
+        "rationale": "El doble asterisco representa el operador de potenciación o elevación en Python."
+      },
+      {
+        "text": "^",
+        "isCorrect": false,
+        "rationale": "En Python el símbolo circunflejo es un operador a nivel de bits (XOR) y no realiza la potenciación aritmética."
+      },
+      {
+        "text": "*",
+        "isCorrect": false,
+        "rationale": "Un único asterisco realiza la multiplicación simple entre dos valores."
+      },
+      {
+        "text": "%",
+        "isCorrect": false,
+        "rationale": "El símbolo de porcentaje calcula el módulo o residuo de una división entera."
+      },
+      {
+        "text": "//",
+        "isCorrect": false,
+        "rationale": "La doble barra diagonal realiza una división entera descartando la parte decimal."
+      }
+    ],
+    "hint": "Observa el operador que duplica la notación habitual de la multiplicación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué número de índice comienzan las listas y arreglos secuenciales en Python?",
+    "opciones": [
+      {
+        "text": "0",
+        "isCorrect": true,
+        "rationale": "En Python la indexación de listas e iterables sigue la convención de base cero, donde el primer elemento ocupa la posición 0."
+      },
+      {
+        "text": "1",
+        "isCorrect": false,
+        "rationale": "Aunque en el conteo humano habitual se inicia en uno, las estructuras secuenciales en Python comienzan en cero."
+      },
+      {
+        "text": "-1",
+        "isCorrect": false,
+        "rationale": "El índice -1 en Python se utiliza para acceder al último elemento de una lista, no al primero."
+      },
+      {
+        "text": "2",
+        "isCorrect": false,
+        "rationale": "La tercera posición de una lista corresponde al índice 2 debido a la indexación que parte de cero."
+      },
+      {
+        "text": "En cualquier número configurado arbitrariamente por el usuario al crear la lista.",
+        "isCorrect": false,
+        "rationale": "Las listas estándar de Python imponen una indexación entera consecutiva que empieza estrictamente desde cero."
+      }
+    ],
+    "hint": "Aplica la regla de indexación de base cero propia de la mayoría de lenguajes de programación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes métodos son utilizados para modificar o gestionar los elementos de una lista en Python?",
+    "opciones": [
+      {
+        "text": ".append()",
+        "isCorrect": true,
+        "rationale": "Agrega un nuevo elemento al final de la lista existente."
+      },
+      {
+        "text": ".remove()",
+        "isCorrect": true,
+        "rationale": "Busca y elimina la primera aparición del elemento especificado en la lista."
+      },
+      {
+        "text": ".sort()",
+        "isCorrect": true,
+        "rationale": "Ordena los elementos contenidos en la lista según un criterio alfabético o numérico."
+      },
+      {
+        "text": ".reverse()",
+        "isCorrect": true,
+        "rationale": "Invierte el orden en el que se encuentran colocados los elementos de la lista."
+      },
+      {
+        "text": ".compile()",
+        "isCorrect": false,
+        "rationale": "No es un método de listas en Python; se relaciona con la compilación de expresiones regulares o código."
+      }
+    ],
+    "hint": "Selecciona las funciones nativas que manipularon el contenido del inventario en las demostraciones de código.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué estructura de datos en Python se define mediante llaves `{}` y almacena elementos bajo una relación de clave y valor?",
+    "opciones": [
+      {
+        "text": "Diccionario",
+        "isCorrect": true,
+        "rationale": "Los diccionarios utilizan llaves para encerrar pares únicos de clave y valor asociando la información."
+      },
+      {
+        "text": "Lista",
+        "isCorrect": false,
+        "rationale": "Las listas se definen mediante corchetes y almacenan elementos ordenados de manera secuencial."
+      },
+      {
+        "text": "Tupla",
+        "isCorrect": false,
+        "rationale": "Las tuplas se delimitan mediante paréntesis y corresponden a secuencias inmutables de datos."
+      },
+      {
+        "text": "Arreglo de NumPy",
+        "isCorrect": false,
+        "rationale": "Los arreglos multidimensionales de NumPy se construyen invocando la función np.array() sobre secuencias delimitadas por corchetes."
+      },
+      {
+        "text": "DataFrame de Pandas",
+        "isCorrect": false,
+        "rationale": "Un DataFrame representa una estructura bidimensional matricial basada en tablas y se crea invocando la clase pd.DataFrame()."
+      }
+    ],
+    "hint": "Estructura que utiliza asociatividad del tipo 'nombre': 'laptop'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto del procesamiento y transformación de datos, ¿qué significan las siglas del proceso ETL?",
+    "opciones": [
+      {
+        "text": "Extract, Transform, Load (Extraer, Transformar, Cargar)",
+        "isCorrect": true,
+        "rationale": "Describe la secuencia técnica de extraer información de fuentes, transformarla para análisis y cargarla en un repositorio final."
+      },
+      {
+        "text": "Evaluate, Transfer, Lock (Evaluar, Transferir, Bloquear)",
+        "isCorrect": false,
+        "rationale": "No responde a las fases estándar de la canalización de datos en ingeniería de datos."
+      },
+      {
+        "text": "Export, Translate, List (Exportar, Traducir, Listar)",
+        "isCorrect": false,
+        "rationale": "Traducción e inclusión en listas no representan los términos de la arquitectura etl."
+      },
+      {
+        "text": "Execute, Test, Launch (Ejecutar, Probar, Lanzar)",
+        "isCorrect": false,
+        "rationale": "Son etapas ligadas al ciclo de desarrollo de software, no a la integración de datos."
+      },
+      {
+        "text": "Encode, Track, Log (Codificar, Rastrear, Registrar)",
+        "isCorrect": false,
+        "rationale": "Acciones orientadas a la seguridad y auditoría de eventos, no al pipeline de integración de datos."
+      }
+    ],
+    "hint": "Corresponde a los tres pasos secuenciales desde los orígenes de datos hasta el destino final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la librería Pandas, ¿qué atributo de un DataFrame permite obtener las dimensiones en forma del número total de filas y columnas?",
+    "opciones": [
+      {
+        "text": ".shape",
+        "isCorrect": true,
+        "rationale": "Devuelve una tupla indicando la cantidad de filas y columnas que componen la estructura de la tabla."
+      },
+      {
+        "text": ".size",
+        "isCorrect": false,
+        "rationale": "Devuelve la cantidad total de elementos multiplicando filas por columnas, no la dimensión individual de cada eje."
+      },
+      {
+        "text": ".info()",
+        "isCorrect": false,
+        "rationale": "Es un método que imprime un resumen sintético sobre el tipo de columnas, memoria y valores no nulos."
+      },
+      {
+        "text": ".count()",
+        "isCorrect": false,
+        "rationale": "Devuelve el conteo de registros válidos no nulos para cada columna."
+      },
+      {
+        "text": ".dtypes",
+        "isCorrect": false,
+        "rationale": "Muestra los tipos de datos asignados a cada una de las columnas del DataFrame."
+      }
+    ],
+    "hint": "Atributo que retorna una tupla como (filas, columnas).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al filtrar datos en un DataFrame de Pandas bajo múltiples condiciones simultáneas, ¿qué operador se debe utilizar para la condición lógica AND (Y)?",
+    "opciones": [
+      {
+        "text": "&",
+        "isCorrect": true,
+        "rationale": "En Pandas las operaciones lógicas vectorizadas requieren el operador ampersand (&) para evaluar la conjunción lógica elemento a elemento."
+      },
+      {
+        "text": "&&",
+        "isCorrect": false,
+        "rationale": "El doble ampersand no es un operador sintácticamente válido en Python ni en Pandas."
+      },
+      {
+        "text": "|",
+        "isCorrect": false,
+        "rationale": "El operador de tubería (pipe) representa la disyunción lógica OR en lugar de AND."
+      },
+      {
+        "text": "and",
+        "isCorrect": false,
+        "rationale": "La palabra reservada 'and' evalúa la verdad de un objeto completo y no funciona vectorialmente sobre Series de Pandas."
+      },
+      {
+        "text": "~",
+        "isCorrect": false,
+        "rationale": "La virgulilla se utiliza para la operación de negación lógica (NOT)."
+      }
+    ],
+    "hint": "Pandas utiliza operadores símbolo a nivel de bits para evaluar arreglos booleanos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes formatos de archivo fueron destacados en la Clase 2 como orígenes válidos para la importación de datos en Pandas?",
+    "opciones": [
+      {
+        "text": "CSV",
+        "isCorrect": true,
+        "rationale": "Formatos delimitados por comas ampliamente procesados mediante lectura directa."
+      },
+      {
+        "text": "JSON",
+        "isCorrect": true,
+        "rationale": "Estructura basada en notación de objetos comúnmente parseada en DataFrames."
+      },
+      {
+        "text": "XML",
+        "isCorrect": true,
+        "rationale": "Lenguaje de marcado utilizable como origen de repositorios de datos."
+      },
+      {
+        "text": "Excel",
+        "isCorrect": true,
+        "rationale": "Hojas de cálculo tradicionales procesadas habitualmente para la ingesta de tablas."
+      },
+      {
+        "text": "MP3",
+        "isCorrect": false,
+        "rationale": "Es un formato de compresión de audio digital no estructurado en tablas de datos."
+      }
+    ],
+    "hint": "Selecciona las estructuras estructuradas o semiestructuradas de texto o tablas mencionadas en la presentación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función de la librería NumPy se utiliza para calcular la media aritmética o promedio de los elementos contenidos en un arreglo?",
+    "opciones": [
+      {
+        "text": "np.mean()",
+        "isCorrect": true,
+        "rationale": "La función mean() de NumPy suma todos los valores del arreglo y los divide por la cantidad de elementos."
+      },
+      {
+        "text": "np.median()",
+        "isCorrect": false,
+        "rationale": "Calcula el valor central o mediana de los datos ordenados, no la media aritmética."
+      },
+      {
+        "text": "np.std()",
+        "isCorrect": false,
+        "rationale": "Calcula la desviación estándar para medir la dispersión respecto al promedio."
+      },
+      {
+        "text": "np.sum()",
+        "isCorrect": false,
+        "rationale": "Realiza la acumulación o suma total de los elementos sin dividir por el conteo."
+      },
+      {
+        "text": "np.max()",
+        "isCorrect": false,
+        "rationale": "Extrae exclusivamente el valor máximo dentro del grupo de datos."
+      }
+    ],
+    "hint": "Utiliza el término en inglés para hacer referencia al promedio estadístico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En Pandas, ¿qué combinación de métodos permite identificar y sumar la cantidad total de valores nulos o faltantes presentes en cada columna?",
+    "opciones": [
+      {
+        "text": ".isnull().sum()",
+        "isCorrect": true,
+        "rationale": "Mapea los valores nulos con booleanos True y luego acumula la cantidad total de verdaderos por columna."
+      },
+      {
+        "text": ".dropna().count()",
+        "isCorrect": false,
+        "rationale": "Elimina las filas que contienen valores nulos y luego cuenta los elementos restantes válidos."
+      },
+      {
+        "text": ".fillna().sum()",
+        "isCorrect": false,
+        "rationale": "Sustituye los valores nulos por un valor dado antes de realizar cualquier conteo."
+      },
+      {
+        "text": ".unique().sum()",
+        "isCorrect": false,
+        "rationale": "Extrae los elementos no repetidos y no realiza una detección de datos ausentes."
+      },
+      {
+        "text": ".dtypes.sum()",
+        "isCorrect": false,
+        "rationale": "Suma tipos de datos de las columnas provocando un error de tipo."
+      }
+    ],
+    "hint": "Combina la detección booleana de ausentes con el método de agregación de suma.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal de aplicar un proceso de normalización o escalamiento sobre variables numéricas en el análisis de datos?",
+    "opciones": [
+      {
+        "text": "Homogeneizar las escalas de características con distintas magnitudes (como salario vs. número de autos) para evitar sesgos en el algoritmo.",
+        "isCorrect": true,
+        "rationale": "Garantiza que variables con rangos numéricos elevados no opaquen injustificadamente la contribución de variables con rangos pequeños."
+      },
+      {
+        "text": "Eliminar de forma permanente todas las filas que contengan nombres duplicados.",
+        "isCorrect": false,
+        "rationale": "La limpieza de duplicados se realiza mediante métodos específicos como drop_duplicates y no mediante normalización."
+      },
+      {
+        "text": "Convertir todas las columnas de números en cadenas de texto legibles.",
+        "isCorrect": false,
+        "rationale": "Convertir números a texto imposibilitaría el cálculo numérico dentro de los modelos matemáticos."
+      },
+      {
+        "text": "Duplicar la cantidad total de filas en la tabla para simular más registros.",
+        "isCorrect": false,
+        "rationale": "La normalización modifica el rango de los valores numéricos existentes pero no altera el número de registros o filas."
+      },
+      {
+        "text": "Cambiar el formato de fecha del estándar gringo al estándar latinoamericano.",
+        "isCorrect": false,
+        "rationale": "El parseo de fechas es una tarea de estandarización de tipos de datos diferente del escalamiento numérico."
+      }
+    ],
+    "hint": "Busca equilibrar el peso visual y matemático entre datos de rangos muy dispares.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con lo visto en la Clase 3, ¿qué transformador de Scikit-Learn escala las características para situar sus valores estrictamente en un rango de 0 a 1?",
+    "opciones": [
+      {
+        "text": "MinMaxScaler",
+        "isCorrect": true,
+        "rationale": "Transforma los datos restando el mínimo y dividiendo por el rango dinámico para acotarlos entre 0 y 1."
+      },
+      {
+        "text": "StandardScaler",
+        "isCorrect": false,
+        "rationale": "Estandariza centrando la media en 0 y escalando a varianza unitaria sin acotar entre 0 y 1."
+      },
+      {
+        "text": "RobustScaler",
+        "isCorrect": false,
+        "rationale": "Utiliza la mediana y el rango intercuartílico para reducir el impacto de valores atípicos."
+      },
+      {
+        "text": "LabelEncoder",
+        "isCorrect": false,
+        "rationale": "Codifica etiquetas de texto en números enteros ordinales sin escalar rangos continuos."
+      },
+      {
+        "text": "Normalizer",
+        "isCorrect": false,
+        "rationale": "Normaliza muestras individualmente a longitud unitaria aplicando normas de vectores (L1 o L2)."
+      }
+    ],
+    "hint": "El nombre del transformador deriva del uso explícito de los valores mínimos y máximos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En cuántas partes iguales dividen la distribución de un conjunto de datos los 'cuartiles' en estadística?",
+    "opciones": [
+      {
+        "text": "4 partes",
+        "isCorrect": true,
+        "rationale": "Los cuartiles dividen una distribución ordenada en cuatro tramos iguales conteniendo cada uno el 25% de los datos."
+      },
+      {
+        "text": "2 partes",
+        "isCorrect": false,
+        "rationale": "La mediana es la encargada de dividir los datos en dos partes iguales (50% cada una)."
+      },
+      {
+        "text": "3 partes",
+        "isCorrect": false,
+        "rationale": "La división en tres bloques proporcionales corresponde a los terciles."
+      },
+      {
+        "text": "5 partes",
+        "isCorrect": false,
+        "rationale": "La división en cinco tramos iguales corresponde a los quintiles."
+      },
+      {
+        "text": "10 partes",
+        "isCorrect": false,
+        "rationale": "Los deciles dividen la distribución en diez partes iguales conteniendo el 10% cada una."
+      }
+    ],
+    "hint": "Relaciona el término con bloques porcentuales de 25% cada uno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes parámetros se emplean en la función `pd.merge()` de Pandas para gestionar la combinación de dos DataFrames?",
+    "opciones": [
+      {
+        "text": "on",
+        "isCorrect": true,
+        "rationale": "Especifica el nombre de la columna clave presente en ambos DataFrames para realizar el cruce."
+      },
+      {
+        "text": "left_on",
+        "isCorrect": true,
+        "rationale": "Indica el campo clave a tomar en cuenta ubicado en la tabla izquierda cuando los nombres difieren."
+      },
+      {
+        "text": "right_on",
+        "isCorrect": true,
+        "rationale": "Indica la columna clave a utilizar correspondiente a la tabla derecha."
+      },
+      {
+        "text": "suffixes",
+        "isCorrect": true,
+        "rationale": "Permite añadir sufijos personalizados a las columnas con nombres coincidentes que no son claves."
+      },
+      {
+        "text": "drop_database",
+        "isCorrect": false,
+        "rationale": "No es un parámetro válido de merge ya que corresponde a un comando DDL de SQL para borrar bases de datos."
+      }
+    ],
+    "hint": "Selecciona los parámetros que sirven para definir claves de cruce y evitar solapamiento de nombres.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué método de Pandas combina y fusiona DataFrames basándose en una columna o clave compartida de forma equivalente a un JOIN de SQL?",
+    "opciones": [
+      {
+        "text": "pd.merge()",
+        "isCorrect": true,
+        "rationale": "Combina conjuntos de datos mediante operaciones relacionales de tipo inner, left, right o outer."
+      },
+      {
+        "text": "pd.concat()",
+        "isCorrect": false,
+        "rationale": "Apila DataFrames a lo largo de un eje (filas o columnas) sin realizar emparejamientos por claves relacionales."
+      },
+      {
+        "text": "pd.split()",
+        "isCorrect": false,
+        "rationale": "No es una función nativa de Pandas para combinar DataFrames; se asocia a división de cadenas."
+      },
+      {
+        "text": "pd.pivot()",
+        "isCorrect": false,
+        "rationale": "Remodela la estructura de la tabla pasando valores de filas a encabezados de columna."
+      },
+      {
+        "text": "pd.drop()",
+        "isCorrect": false,
+        "rationale": "Elimina filas o columnas especificadas de un DataFrame."
+      }
+    ],
+    "hint": "Es la función principal empleada para la combinación relacional de tablas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Si el coeficiente de correlación de Pearson entre dos variables da un resultado cercano a 0, ¿qué conclusión se extrae sobre su relación?",
+    "opciones": [
+      {
+        "text": "No existe una correlación lineal significativa entre ambas variables.",
+        "isCorrect": true,
+        "rationale": "Un valor de correlación próximo a cero demuestra ausencia de una relación lineal directa o inversa entre los datos."
+      },
+      {
+        "text": "Existe una relación lineal positiva perfecta.",
+        "isCorrect": false,
+        "rationale": "La correlación positiva perfecta se representa con un coeficiente exactamente igual a +1."
+      },
+      {
+        "text": "Existe una relación lineal negativa perfecta.",
+        "isCorrect": false,
+        "rationale": "La correlación negativa perfecta se representa con un coeficiente exactamente igual a -1."
+      },
+      {
+        "text": "La segunda variable aumenta al doble cuando la primera disminuye.",
+        "isCorrect": false,
+        "rationale": "Una relación de aumento inverso perfecto reflejaría una correlación negativa cercana a -1."
+      },
+      {
+        "text": "El modelo matemáticamente se rompe por presencia de divisiones entre cero.",
+        "isCorrect": false,
+        "rationale": "El valor cero es un resultado estadístico válido dentro del rango continuo de -1 a +1."
+      }
+    ],
+    "hint": "Recuerda que la escala varía entre -1 y +1, donde 0 representa el punto neutro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué librería de Python basada en Matplotlib ofrece funciones avanzadas para construir gráficos estadísticos como mapas de calor (`heatmap`)?",
+    "opciones": [
+      {
+        "text": "seaborn",
+        "isCorrect": true,
+        "rationale": "Es la biblioteca especializada en visualización estadística de alto nivel construida sobre Matplotlib."
+      },
+      {
+        "text": "numpy",
+        "isCorrect": false,
+        "rationale": "Es una librería orientada al cálculo numérico algebraico y manejo de matrices, no a la representación gráfica."
+      },
+      {
+        "text": "scikit-learn",
+        "isCorrect": false,
+        "rationale": "Es la librería utilizada para el aprendizaje automático y minería de datos."
+      },
+      {
+        "text": "joblib",
+        "isCorrect": false,
+        "rationale": "Se utiliza para la serialización y guardado de modelos entrenados en el disco."
+      },
+      {
+        "text": "streamlit",
+        "isCorrect": false,
+        "rationale": "Se emplea para el despliegue de aplicaciones web interactivas."
+      }
+    ],
+    "hint": "Librería importada tradicionalmente con el alias sns.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el ejercicio práctico de la Clase 4, ¿qué algoritmo de aprendizaje supervisado se utilizó para predecir si un pasajero sobrevivía o no?",
+    "opciones": [
+      {
+        "text": "Regresión Logística (LogisticRegression)",
+        "isCorrect": true,
+        "rationale": "Se utilizó LogisticRegression para modelar la probabilidad de la variable objetivo binaria (0 = no sobrevive, 1 = sobrevive)."
+      },
+      {
+        "text": "Regresión Lineal Simple (LinearRegression)",
+        "isCorrect": false,
+        "rationale": "La regresión lineal predice resultados numéricos continuos, no clasificaciones categóricas binarias."
+      },
+      {
+        "text": "K-Means",
+        "isCorrect": false,
+        "rationale": "Es un algoritmo de aprendizaje no supervisado utilizado para agrupamiento o clustering."
+      },
+      {
+        "text": "Análisis de Componentes Principales (PCA)",
+        "isCorrect": false,
+        "rationale": "Es una técnica de reducción de dimensionalidad no de clasificación supervisada."
+      },
+      {
+        "text": "K-Neighbors Regressor",
+        "isCorrect": false,
+        "rationale": "Es un modelo destinado a estimar valores continuos y no etiquetas categóricas de clasificación."
+      }
+    ],
+    "hint": "Algoritmo clásico para resolver problemas de clasificación binaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al dividir el conjunto de datos para entrenar y evaluar el modelo predictivo, ¿cuál fue la proporción estándar aplicada en la Clase 4?",
+    "opciones": [
+      {
+        "text": "80% para entrenamiento (train) y 20% para prueba (test)",
+        "isCorrect": true,
+        "rationale": "Es la proporción estándar utilizada para permitir un entrenamiento robusto dejando una porción para validación."
+      },
+      {
+        "text": "50% para entrenamiento (train) y 50% para prueba (test)",
+        "isCorrect": false,
+        "rationale": "Dejar la mitad de datos fuera del entrenamiento restaría capacidad de aprendizaje al modelo."
+      },
+      {
+        "text": "10% para entrenamiento (train) y 90% para prueba (test)",
+        "isCorrect": false,
+        "rationale": "Asignar solo el 10% provocaría un subajuste severo por falta de datos de entrenamiento."
+      },
+      {
+        "text": "100% para entrenamiento (train) y 0% para prueba (test)",
+        "isCorrect": false,
+        "rationale": "No dejar datos de prueba impide evaluar la capacidad de generalización del modelo ante datos nuevos."
+      },
+      {
+        "text": "5% para entrenamiento (train) y 95% para prueba (test)",
+        "isCorrect": false,
+        "rationale": "Proporción inviable para el aprendizaje supervisado de patrones."
+      }
+    ],
+    "hint": "Se reserva la mayor parte del conjunto para el entrenamiento y una quinta parte para evaluación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la librería Scikit-Learn, ¿qué método se ejecuta sobre la instancia del modelo para iniciar el entrenamiento con los datos?",
+    "opciones": [
+      {
+        "text": ".fit()",
+        "isCorrect": true,
+        "rationale": "Ajusta los parámetros del modelo analizando las variables de entrada y la variable objetivo."
+      },
+      {
+        "text": ".predict()",
+        "isCorrect": false,
+        "rationale": "Genera las estimaciones o predicciones una vez que el modelo ha sido previamente entrenado."
+      },
+      {
+        "text": ".score()",
+        "isCorrect": false,
+        "rationale": "Evalúa el rendimiento o precisión del modelo ya ajustado."
+      },
+      {
+        "text": ".transform()",
+        "isCorrect": false,
+        "rationale": "Aplica transformaciones de escalamiento o codificación sobre las características."
+      },
+      {
+        "text": ".save()",
+        "isCorrect": false,
+        "rationale": "No es un método nativo de los estimadores de Scikit-Learn para entrenar algoritmos."
+      }
+    ],
+    "hint": "Método que en inglés significa 'ajustar' o 'encajar' los datos al modelo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué librería se utilizó para guardar y guardar en disco el modelo entrenado en un archivo de extensión `.pkl`?",
+    "opciones": [
+      {
+        "text": "joblib",
+        "isCorrect": true,
+        "rationale": "Facilita la persistencia de objetos Python y modelos de Scikit-Learn exportándolos a formato binario .pkl."
+      },
+      {
+        "text": "matplotlib",
+        "isCorrect": false,
+        "rationale": "Librería dedicada a la generación de gráficos de líneas y barras."
+      },
+      {
+        "text": "seaborn",
+        "isCorrect": false,
+        "rationale": "Librería orientada exclusivamente a la visualización estadística de datos."
+      },
+      {
+        "text": "pandas",
+        "isCorrect": false,
+        "rationale": "Librería dedicada a la manipulación y análisis de estructuras tabulares."
+      },
+      {
+        "text": "openpyxl",
+        "isCorrect": false,
+        "rationale": "Librería para la lectura y escritura de archivos de hojas de cálculo Excel."
+      }
+    ],
+    "hint": "Herramienta empleada para la serialización de modelos predictivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta de Python se utilizó en el proyecto final para construir una interfaz web interactiva que pida datos al usuario y muestre las predicciones?",
+    "opciones": [
+      {
+        "text": "streamlit",
+        "isCorrect": true,
+        "rationale": "Permite desplegar cuadros de mando y aplicaciones web interactivas directamente desde scripts de Python."
+      },
+      {
+        "text": "flask",
+        "isCorrect": false,
+        "rationale": "Framework web para desarrollo backend general que requiere plantillas HTML y más líneas de configuración."
+      },
+      {
+        "text": "django",
+        "isCorrect": false,
+        "rationale": "Framework web full-stack complejo no utilizado en la demostración directa de la clase."
+      },
+      {
+        "text": "tkinter",
+        "isCorrect": false,
+        "rationale": "Librería estándar de Python para interfaces gráficas de escritorio nativas, no orientada a la web."
+      },
+      {
+        "text": "dash",
+        "isCorrect": false,
+        "rationale": "Framework alternativo de visualización no utilizado en la sesión práctica del curso."
+      }
+    ],
+    "hint": "Librería ejecutada desde la consola mediante el comando streamlit run main.py.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes pasos formaron parte de la preparación de datos realizada sobre el dataset del Titanic antes del modelado?",
+    "opciones": [
+      {
+        "text": "Mapeo de la variable categórica de género a valores numéricos enteros (0 y 1).",
+        "isCorrect": true,
+        "rationale": "Transformó cadenas de texto en valores enteros legibles para el algoritmo numérico."
+      },
+      {
+        "text": "Imputación de valores ausentes en la columna de edad utilizando el valor promedio.",
+        "isCorrect": true,
+        "rationale": "Rellenó los registros vacíos en edad para evitar la pérdida de registros útiles."
+      },
+      {
+        "text": "Eliminación de columnas con baja relevancia predictiva como el nombre y número de ticket.",
+        "isCorrect": true,
+        "rationale": "Descartó campos identificadores que no aportaban patrones de supervivencia."
+      },
+      {
+        "text": "Recodificación de rangos de edad en categorías numéricas comparables.",
+        "isCorrect": true,
+        "rationale": "Estandarizó las edades en grupos numéricos para alimentar las variables del modelo."
+      },
+      {
+        "text": "Conversión de todo el dataset a archivos de audio en formato MP3.",
+        "isCorrect": false,
+        "rationale": "Los modelos tabular-predictivos operan sobre matrices de enteros y flotantes, no sobre audio."
+      }
+    ],
+    "hint": "Selecciona las tareas de limpieza, imputación y eliminación de columnas no relevantes expuestas en el flujo práctico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En Python, ¿cuál de las siguientes opciones representa una declaración de variable sintácticamente válida según las reglas de nomenclatura del lenguaje explicadas en el curso?",
+    "opciones": [
+      {
+        "text": "1er_registro = 500",
+        "isCorrect": false,
+        "rationale": "En Python, los nombres de variables no pueden comenzar con un número, lo que genera un error de sintaxis."
+      },
+      {
+        "text": "nombre principal = \"Carlos\"",
+        "isCorrect": false,
+        "rationale": "Los nombres de variables no pueden contener espacios en blanco; se debe utilizar guion bajo o notación camello."
+      },
+      {
+        "text": "num#integral = 100",
+        "isCorrect": false,
+        "rationale": "El carácter '#' se utiliza exclusivamente para iniciar comentarios en línea, interrumpiendo la interpretación del identificador."
+      },
+      {
+        "text": "indicador_numero_1 = 750",
+        "isCorrect": true,
+        "rationale": "Sigue las reglas de sintaxis al comenzar con letras y utilizar guiones bajos para separar palabras e incluir números."
+      },
+      {
+        "text": "import = 20",
+        "isCorrect": false,
+        "rationale": "'import' es una palabra reservada del lenguaje utilizada para cargar módulos y no puede reasignarse como variable."
+      }
+    ],
+    "hint": "Recuerda las restricciones sobre caracteres especiales, palabras reservadas y el carácter inicial permitido para definir identificadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al realizar operaciones aritméticas en Python, si aplicamos el operador de residuo `%` en la expresión `15 % 2`, ¿cuál es el resultado esperado y qué representa?",
+    "opciones": [
+      {
+        "text": "7.5, representa la división flotante exacta.",
+        "isCorrect": false,
+        "rationale": "La división flotante exacta se realiza con el operador `/`, no con `%`."
+      },
+      {
+        "text": "7, representa la parte entera de la división.",
+        "isCorrect": false,
+        "rationale": "La cociente entero o división entera se calcula utilizando el operador `//`."
+      },
+      {
+        "text": "1, representa el residuo o resto de la división entera.",
+        "isCorrect": true,
+        "rationale": "El operador `%` devuleve el sobrante exacto de dividir un entero entre otro ($15 = 2 \\times 7 + 1$)."
+      },
+      {
+        "text": "0, indica que la división es perfectamente exacta.",
+        "isCorrect": false,
+        "rationale": "El resultado sería 0 solo si el dividendo fuera un múltiplo exacto del divisor."
+      },
+      {
+        "text": "2, representa el divisor utilizado en la operación.",
+        "isCorrect": false,
+        "rationale": "El operador módulo retorna el resto del cálculo, no el divisor de la operación."
+      }
+    ],
+    "hint": "Piensa en el número sobrante después de realizar una división entera paso a paso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dada la lista `herramientas = ['martillo', 'pala', 'taladro', 'casco']`, si ejecutamos en secuencia `herramientas.append('linterna')` y luego `herramientas.sort()`, ¿cuál será el elemento ubicado en el índice `0` de la lista resultante?",
+    "opciones": [
+      {
+        "text": "'martillo'",
+        "isCorrect": false,
+        "rationale": "Aunque 'martillo' era un elemento inicial, la ordenación alfabética modifica la secuencia de los índices."
+      },
+      {
+        "text": "'casco'",
+        "isCorrect": true,
+        "rationale": "Al ordenar alfabéticamente la lista modificada, 'casco' se posiciona primero en el índice 0 por orden lexicográfico."
+      },
+      {
+        "text": "'linterna'",
+        "isCorrect": false,
+        "rationale": "'linterna' se agrega al final con `.append()`, pero tras ejecutar `.sort()` se posiciona en el índice 1."
+      },
+      {
+        "text": "'pala'",
+        "isCorrect": false,
+        "rationale": "En orden alfabético, 'pala' se ubica después de 'martillo' y 'linterna'."
+      },
+      {
+        "text": "'taladro'",
+        "isCorrect": false,
+        "rationale": "'taladro' comienza con 't' y se coloca al final de la lista tras la ordenación."
+      }
+    ],
+    "hint": "Considera cómo afecta el orden alfabético ascendente a cada una de las cadenas contenidas en la lista.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En Python, los diccionarios permiten estructurar datos mediante pares clave-valor. ¿Qué ocurre si intentamos actualizar el valor de una clave existente mediante la sintaxis `producto['precio'] = 9100`?",
+    "opciones": [
+      {
+        "text": "Se genera un error de sintaxis porque los diccionarios son inmutables.",
+        "isCorrect": false,
+        "rationale": "Los diccionarios son estructuras de datos mutables que permiten la modificación de sus valores."
+      },
+      {
+        "text": "Se crea una nueva clave duplicada llamada 'precio' al final del diccionario.",
+        "isCorrect": false,
+        "rationale": "Los diccionarios no permiten claves duplicadas; las claves deben ser únicas."
+      },
+      {
+        "text": "Se reemplaza el valor previo asociado a la clave 'precio' por el nuevo valor 9100.",
+        "isCorrect": true,
+        "rationale": "Asignar un valor a una clave existente sobreescribe el valor almacenado previamente de forma directa."
+      },
+      {
+        "text": "Se elimina la clave 'precio' del diccionario.",
+        "isCorrect": false,
+        "rationale": "Para eliminar una clave se requiere usar instrucciones específicas como `del` o el método `.pop()`."
+      },
+      {
+        "text": "El diccionario convierte automáticamente el valor a una cadena de texto (String).",
+        "isCorrect": false,
+        "rationale": "Los valores en los diccionarios conservan su tipo de dato original, en este caso un entero."
+      }
+    ],
+    "hint": "Analiza cómo manejan los diccionarios la unicidad de sus claves cuando se utiliza la asignación directa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Suponga que desea eliminar elementos duplicados de una lista de datos en Python sin depender de librerías externas. ¿Cuáles de las siguientes aproximaciones son operativamente válidas para lograr este objetivo?",
+    "opciones": [
+      {
+        "text": "Iterar sobre la lista original con un bucle `for` y agregar elementos a una nueva lista vacía verificando con la condición `not in`.",
+        "isCorrect": true,
+        "rationale": "Permite construir manualmente una colección filtrada asegurando la presencia única de cada elemento."
+      },
+      {
+        "text": "Convertir la lista original a una estructura de tipo `set` (conjunto).",
+        "isCorrect": true,
+        "rationale": "Los conjuntos por definición no admiten elementos duplicados y eliminan repeticiones automáticamente al castear la estructura."
+      },
+      {
+        "text": "Aplicar directamente el método `.remove()` sobre la lista sin ningún argumento.",
+        "isCorrect": false,
+        "rationale": "El método `.remove()` exige especificar el valor exacto a eliminar y solo remueve su primera aparición."
+      },
+      {
+        "text": "Utilizar el método `.append()` dentro de un bucle `while` sin validar la existencia previa del elemento.",
+        "isCorrect": false,
+        "rationale": "Agregar elementos sin validación previa mantendrá o incrementará la cantidad de duplicados existentes."
+      },
+      {
+        "text": "Multiplicar la lista por un entero negativo para reinicializar los datos.",
+        "isCorrect": false,
+        "rationale": "Multiplicar una lista por enteros negativos o cero resulta en una lista vacía y no limpia duplicados selectivamente."
+      }
+    ],
+    "hint": "Evalúa tanto la lógica de filtrado explícito mediante iteración como el uso de estructuras nativas no duplicadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la introducción a las herramientas del entorno de desarrollo de Big Data, ¿cuál es la distinción operativa principal expuesta en la clase respecto al uso de Jupyter Notebooks frente a RStudio?",
+    "opciones": [
+      {
+        "text": "Jupyter solo permite ejecutar código en lenguaje Java, mientras que RStudio es exclusivo de Python.",
+        "isCorrect": false,
+        "rationale": "Jupyter es ampliamente utilizado para Python y Julia, mientras que RStudio es el entorno clásico para R."
+      },
+      {
+        "text": "Jupyter Notebooks se utiliza comúnmente para cálculos, simulaciones e inicios en minería de datos, mientras que RStudio está más orientado a análisis estadístico profundo.",
+        "isCorrect": true,
+        "rationale": "Refleja el enfoque pedagógico del curso donde Jupyter facilita la interacción y prototipado inicial, y RStudio profundiza en modelos estadísticos."
+      },
+      {
+        "text": "RStudio no requiere un entorno de ejecución y no soporta procesamiento numérico.",
+        "isCorrect": false,
+        "rationale": "RStudio es un entorno de desarrollo avanzado enfocado específicamente en el cálculo estadístico y numérico."
+      },
+      {
+        "text": "Jupyter es una herramienta exclusivamente de pago para servidores bancarios, a diferencia de RStudio que solo corre en la web.",
+        "isCorrect": false,
+        "rationale": "Ambas son herramientas de código abierto disponibles tanto localmente como en la nube."
+      },
+      {
+        "text": "RStudio únicamente sirve para crear páginas web con HTML/CSS sin capacidades de procesamiento de datos.",
+        "isCorrect": false,
+        "rationale": "RStudio es un IDE especializado en análisis de datos y computación estadística."
+      }
+    ],
+    "hint": "Piensa en las aplicaciones principales asociadas al análisis exploratorio interactivo frente al modelado estadístico avanzado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al inspeccionar un DataFrame de Pandas de $891$ filas mediante el método `df.info()`, el reporte muestra que una columna específica posee $714$ valores no nulos ('non-null'). ¿Qué conclusión técnica se deriva de esta observación?",
+    "opciones": [
+      {
+        "text": "La columna contiene 714 valores duplicados que deben eliminarse.",
+        "isCorrect": false,
+        "rationale": "La cuenta de valores no nulos no indica duplicación, sino presencia de datos válidos."
+      },
+      {
+        "text": "La columna tiene exactamente 177 celdas con valores faltantes o nulos (NaN).",
+        "isCorrect": true,
+        "rationale": "La diferencia entre el total de registros ($891$) y los registros no nulos ($714$) determina la cantidad de datos faltantes ($177$)."
+      },
+      {
+        "text": "El archivo se encuentra corrupto y no se puede procesar con la librería Pandas.",
+        "isCorrect": false,
+        "rationale": "La presencia de valores nulos es habitual en el procesamiento de datos y no implica corrupción de archivo."
+      },
+      {
+        "text": "714 filas son de tipo objeto y 177 filas son de tipo entero.",
+        "isCorrect": false,
+        "rationale": "Una columna de Pandas tiene un único tipo de dato general (`dtype`) para toda la serie."
+      },
+      {
+        "text": "La columna carece por completo de un nombre de encabezado.",
+        "isCorrect": false,
+        "rationale": "El resumen de `df.info()` lista explícitamente los nombres de cada columna junto a su conteo."
+      }
+    ],
+    "hint": "Calcula la diferencia aritmética entre el conteo total de filas esperadas y las celdas efectivamente pobladas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para filtrar un DataFrame llamado `df` conservando únicamente los registros donde la columna 'edad' sea mayor a 30 Y la columna 'pais' sea igual a 'Canadá', ¿cuál es la sintaxis correcta utilizando operadores lógicos a nivel de elementos en Pandas?",
+    "opciones": [
+      {
+        "text": "df[df['edad'] > 30 and df['pais'] == 'Canada']",
+        "isCorrect": false,
+        "rationale": "El operador reservado `and` evalúa la verdad del objeto completo y no opera a nivel vectorial en Pandas."
+      },
+      {
+        "text": "df[(df['edad'] > 30) & (df['pais'] == 'Canada')]",
+        "isCorrect": true,
+        "rationale": "Pandas requiere el operador bit a bit `&` para evaluaciones lógicas vectoriales, junto con paréntesis para asegurar la precedencia."
+      },
+      {
+        "text": "df[(df['edad'] > 30) | (df['pais'] == 'Canada')]",
+        "isCorrect": false,
+        "rationale": "El operador `|` representa la disyunción lógica (O), lo que devolvería registros que cumplan cualquiera de las dos condiciones."
+      },
+      {
+        "text": "df[df['edad'] > 30 && df['pais'] == 'Canada']",
+        "isCorrect": false,
+        "rationale": "El operador `&&` no existe en la sintaxis nativa de Python ni en la librería Pandas."
+      },
+      {
+        "text": "df.filter(edad > 30, pais == 'Canada')",
+        "isCorrect": false,
+        "rationale": "El método `.filter()` en Pandas se utiliza principalmente para filtrar etiquetas de ejes (columnas o filas), no para expresiones booleanas complejas."
+      }
+    ],
+    "hint": "Recuerda el operador vectorial requerido por Pandas para la conjunción y la importancia del uso de paréntesis en cada condición.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si deseamos seleccionar de un DataFrame todas las filas donde la columna de texto 'nombre' comience con la letra 'W', ¿qué método de la propiedad `.str` de Pandas se debe invocar?",
+    "opciones": [
+      {
+        "text": "df[df['nombre'].str.contains('W$')]",
+        "isCorrect": false,
+        "rationale": "El símbolo `$` en expresiones regulares evalúa la posición final de la cadena, no el inicio."
+      },
+      {
+        "text": "df[df['nombre'].str.startswith('W')]",
+        "isCorrect": true,
+        "rationale": "El método `.str.startswith()` evalúa de forma vectorial si cada elemento de la serie inicia con el prefijo indicado."
+      },
+      {
+        "text": "df[df['nombre'].str.endswith('W')]",
+        "isCorrect": false,
+        "rationale": "El método `.str.endswith()` evalúa si la cadena finaliza con la letra especificada."
+      },
+      {
+        "text": "df[df['nombre'].str.find_all('W')]",
+        "isCorrect": false,
+        "rationale": "Ese método no existe con esa sintaxis para filtrado booleano directo en Pandas."
+      },
+      {
+        "text": "df[df['nombre'].str.match_exact('W')]",
+        "isCorrect": false,
+        "rationale": "Ese nombre de función no pertenece a los métodos accesores de cadenas `.str` en Pandas."
+      }
+    ],
+    "hint": "Identifica la función vectorial cuyo nombre en inglés se traduce literalmente como 'comienza con'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "A diferencia de las listas nativas de Python (donde el operador `+` concatena los elementos), ¿cuál es el resultado de sumar dos arreglos unidimensionales de NumPy del mismo tamaño (`array1 + array2`)?",
+    "opciones": [
+      {
+        "text": "Se unen ambos arreglos formando una secuencia de doble longitud.",
+        "isCorrect": false,
+        "rationale": "Ese comportamiento de concatenación ocurre en las listas nativas de Python, no en NumPy."
+      },
+      {
+        "text": "Se realiza una adición elemento a elemento (vectorizada) entre ambos arreglos.",
+        "isCorrect": true,
+        "rationale": "NumPy sobrecarga los operadores aritméticos para ejecutar operaciones numéricas vectorizadas posición por posición."
+      },
+      {
+        "text": "Se genera un error de tipo TypeError porque NumPy prohíbe la suma con operadores convencionales.",
+        "isCorrect": false,
+        "rationale": "NumPy soporta nativamente la aritmética elemental entre arreglos de formas compatibles."
+      },
+      {
+        "text": "Se calcula el producto escalar de ambos vectores.",
+        "isCorrect": false,
+        "rationale": "El producto escalar requiere funciones dedicadas como `np.dot()` o el operador `@`."
+      },
+      {
+        "text": "Se devuelven únicamente los valores impares de la combinación de ambos arreglos.",
+        "isCorrect": false,
+        "rationale": "El operador suma no aplica ningún filtro condicional sobre los valores retenidos."
+      }
+    ],
+    "hint": "Considera la propiedad fundamental de los arreglos numéricos en NumPy conocida como operaciones vectorizadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la etapa de preparación de datos con Pandas, ¿cuáles de las siguientes funciones o métodos permiten identificar, verificar o contabilizar celdas con valores faltantes o nulos dentro de una columna?",
+    "opciones": [
+      {
+        "text": "df['columna'].isna().sum()",
+        "isCorrect": true,
+        "rationale": "Devuelve una máscara booleana y suma las coincidencias 'True' correspondientes a valores nulos."
+      },
+      {
+        "text": "df['columna'].isnull().sum()",
+        "isCorrect": true,
+        "rationale": "Es un alias equivalente a `.isna()` que permite contabilizar la cantidad total de nulos acumulados."
+      },
+      {
+        "text": "df['columna'].notnull()",
+        "isCorrect": true,
+        "rationale": "Devuelve la serie booleana indicando con 'False' las posiciones donde existen valores nulos, permitiendo identificarlos por inversión."
+      },
+      {
+        "text": "df['columna'].clear_all()",
+        "isCorrect": false,
+        "rationale": "Esa instrucción no existe en el API de Series o DataFrames de Pandas."
+      },
+      {
+        "text": "df['columna'].to_sql()",
+        "isCorrect": false,
+        "rationale": "Es un método de exportación de datos hacia bases de datos relacionales, no una función de diagnóstico."
+      }
+    ],
+    "hint": "Busca métodos que devuelvan máscaras booleanas para detectar nulos o su opuesto lógico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la arquitectura del proceso de datos explicada en el curso, ¿a qué corresponden exactamente las siglas del proceso ETL y cuál es su secuencia operativa?",
+    "opciones": [
+      {
+        "text": "Evaluate, Transfer, Load (Evaluar, Transferir, Cargar)",
+        "isCorrect": false,
+        "rationale": "No corresponde a las siglas ni al flujo estándar de integración de datos."
+      },
+      {
+        "text": "Extract, Transform, Load (Extraer, Transformar, Cargar)",
+        "isCorrect": true,
+        "rationale": "Define el pipeline estándar de captura desde orígenes, procesamiento/limpieza e ingesta en un destino objetivo."
+      },
+      {
+        "text": "Export, Translate, Link (Exportar, Traducir, Enlazar)",
+        "isCorrect": false,
+        "rationale": "Es una terminología ajena al concepto estándar de ingeniería y análisis de datos."
+      },
+      {
+        "text": "Execute, Train, Log (Ejecutar, Entrenar, Registrar)",
+        "isCorrect": false,
+        "rationale": "Describe pasos eventuales de ejecución de modelos, pero no la ingesta y preparación de datos."
+      },
+      {
+        "text": "Erase, Tabulate, Locate (Borrar, Tabular, Localizar)",
+        "isCorrect": false,
+        "rationale": "No coincide con el marco técnico de ingeniería de datos."
+      }
+    ],
+    "hint": "Piensa en las tres etapas consecutivas: obtener datos del origen, limpiarlos/ajustarlos y guardarlos en el repositorio final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la preparación de variables para algoritmos de Machine Learning, ¿cuál es la diferencia conceptual entre la normalización `MinMaxScaler` y la estandarización `StandardScaler`?",
+    "opciones": [
+      {
+        "text": "MinMaxScaler ajusta los datos a una media de 0 y varianza de 1, mientras que StandardScaler acota los datos entre -100 y 100.",
+        "isCorrect": false,
+        "rationale": "Las definiciones están invertidas y la escala de acotamiento es incorrecta."
+      },
+      {
+        "text": "MinMaxScaler escala los datos fijándolos comúnmente en un rango acotado entre 0 y 1, mientras que StandardScaler transforma la distribución para que tenga media 0 y desviación estándar 1.",
+        "isCorrect": true,
+        "rationale": "Establece la distinción matemática clave: rango fijo $[0, 1]$ frente a reajuste basado en puntuación z (z-score)."
+      },
+      {
+        "text": "MinMaxScaler elimina filas con valores nulos, mientras que StandardScaler reemplaza los nulos con la media.",
+        "isCorrect": false,
+        "rationale": "Ninguno de los dos escaladores imputa ni elimina valores nulos de forma automática."
+      },
+      {
+        "text": "MinMaxScaler solo procesa cadenas de texto, mientras que StandardScaler es exclusivo para enteros.",
+        "isCorrect": false,
+        "rationale": "Ambas técnicas requieren strictly variables de tipo numérico continuo o discreto."
+      },
+      {
+        "text": "MinMaxScaler se aplica únicamente en la fase de visualización y StandardScaler en la exportación SQL.",
+        "isCorrect": false,
+        "rationale": "Ambos son métodos de preprocesamiento de características dentro del pipeline de modelado numérico."
+      }
+    ],
+    "hint": "Contrata el uso de un rango límite prefijado ($[0,1]$) frente al centrado en torno a la media y la desviación estándar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el preprocesamiento para Machine Learning, ¿por qué es fundamental escalar características numéricas de magnitudes dispares, como el 'salario' (p. ej. de 5,000 a 30,000) y el 'número de autos' (p. ej. de 0 a 3)?",
+    "opciones": [
+      {
+        "text": "Para convertir todas las columnas numéricas en variables de texto categórico no estructurado.",
+        "isCorrect": false,
+        "rationale": "El escalamiento preserva la naturaleza numérica de las variables, no las convierte a texto."
+      },
+      {
+        "text": "Para evitar que los algoritmos otorguen una importancia sesgada a la variable con valores numéricos de mayor escala.",
+        "isCorrect": true,
+        "rationale": "Variables con rangos numéricos elevados pueden dominar los cálculos de distancia u optimización, opacando variables igualmente informativas de menor rango."
+      },
+      {
+        "text": "Porque los modelos de aprendizaje de máquina no pueden realizar operaciones con números menores a 10.",
+        "isCorrect": false,
+        "rationale": "Los algoritmos procesan números en cualquier rango matemático real."
+      },
+      {
+        "text": "Para eliminar automáticamente los registros duplicados en el DataFrame.",
+        "isCorrect": false,
+        "rationale": "El escalamiento modifica los valores de las columnas pero no elimina filas ni evalúa duplicados."
+      },
+      {
+        "text": "Para asegurar que el archivo se pueda exportar a formato XML sin errores.",
+        "isCorrect": false,
+        "rationale": "El formateo o exportación de archivos es independiente de la magnitud relativa de las variables."
+      }
+    ],
+    "hint": "Reflexiona sobre el efecto que tienen las diferencias de magnitud en los algoritmos basados en distancias o gradientes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al combinar dos DataFrames (`df1` y `df2`) mediante la función `pd.merge(df1, df2, on='empleado')`, ¿cuál es el tipo de combinación (`how`) que se aplica por defecto si no se especifica dicho parámetro?",
+    "opciones": [
+      {
+        "text": "how='left'",
+        "isCorrect": false,
+        "rationale": "La combinación 'left' debe declararse explícitamente si se desea conservar todas las filas del conjunto izquierdo."
+      },
+      {
+        "text": "how='outer'",
+        "isCorrect": false,
+        "rationale": "La combinación 'outer' requiere declaración explícita para realizar la unión completa."
+      },
+      {
+        "text": "how='inner'",
+        "isCorrect": true,
+        "rationale": "Por defecto, `pd.merge` realiza una intersección ('inner join'), reteniendo solo las filas cuyas claves coinciden en ambos DataFrames."
+      },
+      {
+        "text": "how='cross'",
+        "isCorrect": false,
+        "rationale": "El producto cartesiano ('cross') exige especificar dicho parámetro."
+      },
+      {
+        "text": "how='right'",
+        "isCorrect": false,
+        "rationale": "La conservación exclusiva del DataFrame derecho requiere el argumento 'right'."
+      }
+    ],
+    "hint": "Recuerda cuál es el tipo de unión en teoría de conjuntos que conserva únicamente la intersección común entre ambos lados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si ejecutamos la fusión `pd.merge(df1, df2, on='id_cliente', how='left')` y existen clientes en `df1` que no poseen registros correspondientes en `df2`, ¿cómo se rellenan las columnas provenientes de `df2` para esos registros?",
+    "opciones": [
+      {
+        "text": "Las filas de df1 que no encuentran coincidencia son eliminadas del resultado final.",
+        "isCorrect": false,
+        "rationale": "Un 'left join' preserva todas las filas del DataFrame izquierdo de forma obligatoria."
+      },
+      {
+        "text": "Los campos faltantes se rellenan automáticamente con el entero 0.",
+        "isCorrect": false,
+        "rationale": "Pandas no asume ceros numéricos, ya que esto alteraría estadísticas como la media."
+      },
+      {
+        "text": "Los campos faltantes se completan con valores nulos (NaN).",
+        "isCorrect": true,
+        "rationale": "Pandas asigna `NaN` en las columnas del DataFrame derecho cuando no hay correspondencia para mantener la estructura."
+      },
+      {
+        "text": "La ejecución se detiene arrojando un error de violación de clave foránea.",
+        "isCorrect": false,
+        "rationale": "Pandas no exige integridad referencial estricta y maneja discrepancias asignando nulos."
+      },
+      {
+        "text": "Se copia el nombre de la columna clave en todas las celdas vacías.",
+        "isCorrect": false,
+        "rationale": "No se duplican nombres de columna dentro de las celdas de datos."
+      }
+    ],
+    "hint": "Piensa en la representación estándar utilizada por Pandas para señalar la ausencia de datos en una unión de tablas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando se realiza un `merge` entre dos DataFrames que contienen columnas con el mismo nombre que NO forman parte de la clave de unión, ¿qué parámetro de `pd.merge()` permite personalizar las etiquetas agregadas a dichas columnas para diferenciarlas?",
+    "opciones": [
+      {
+        "text": "rename_cols=('izq', 'der')",
+        "isCorrect": false,
+        "rationale": "Ese argumento no existe en la firma de la función `pd.merge()`."
+      },
+      {
+        "text": "suffixes=('_x', '_y')",
+        "isCorrect": true,
+        "rationale": "El parámetro `suffixes` recibe una tupla con las cadenas que se añadirán al final de los nombres de columnas duplicadas."
+      },
+      {
+        "text": "overlap_labels=True",
+        "isCorrect": false,
+        "rationale": "Pandas no utiliza esa propiedad para resolver colisiones de nombres."
+      },
+      {
+        "text": "column_fix=('1', '2')",
+        "isCorrect": false,
+        "rationale": "Ese parámetro es sintácticamente inválido en Pandas."
+      },
+      {
+        "text": "axis_names=('A', 'B')",
+        "isCorrect": false,
+        "rationale": "Los nombres de los ejes no se manipulan mediante ese argumento en la fusión."
+      }
+    ],
+    "hint": "Identifica el parámetro en inglés que hace referencia a la terminación o sufijo de las variables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Respecto a la partición de distribuciones numéricas mediante cuantiles explicada en la clase, ¿cuáles de las siguientes afirmaciones son conceptualmente correctas?",
+    "opciones": [
+      {
+        "text": "Los cuartiles dividen la distribución ordenada de los datos en 4 partes proporcionales (25% de la muestra cada una).",
+        "isCorrect": true,
+        "rationale": "Define exactamente el concepto de cuartil sobre una muestra ordenada."
+      },
+      {
+        "text": "La mediana equivale exactamente al percentil 50 de la distribución.",
+        "isCorrect": true,
+        "rationale": "El percentil 50 separa el 50% inferior del 50% superior, coincidiendo con la mediana."
+      },
+      {
+        "text": "Los deciles dividen la distribución de los datos en 10 partes iguales.",
+        "isCorrect": true,
+        "rationale": "Los deciles representan los cortes correspondientes a cada 10% acumulado de la distribución."
+      },
+      {
+        "text": "El percentil 100 equivale siempre al valor mínimo registrado en la serie de datos.",
+        "isCorrect": false,
+        "rationale": "El percentil 100 representa el valor máximo de la muestra, no el mínimo."
+      },
+      {
+        "text": "Los terciles dividen la muestra exactamente en 100 partes iguales.",
+        "isCorrect": false,
+        "rationale": "Los terciles dividen la distribución en 3 partes (33.3% cada una); los percentiles son los que la dividen en 100."
+      }
+    ],
+    "hint": "Revisa la equivalencia matemática entre los nombres de los cuantiles (cuartiles, deciles, percentiles) y el número de partes en que dividen la muestra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la preparación del pipeline de Machine Learning sobre el conjunto de datos del Titanic, ¿cuál es la finalidad de analizar la matriz de correlación (`df.corr()`) con respecto a la variable objetivo ('survived')?",
+    "opciones": [
+      {
+        "text": "Convertir automáticamente los datos numéricos a texto no estructurado.",
+        "isCorrect": false,
+        "rationale": "La correlación mide relaciones lineales o de rango entre variables numéricas, no modifica sus tipos de datos."
+      },
+      {
+        "text": "Identificar y seleccionar las características predictoras que muestran mayor grado de asociación con la supervivencia, descartando las irrilevantes.",
+        "isCorrect": true,
+        "rationale": "Permite realizar selección de características (feature selection), reduciendo el ruido e identificando qué variables influyen más en la meta."
+      },
+      {
+        "text": "Generar directamente la interfaz web interactiva en Streamlit.",
+        "isCorrect": false,
+        "rationale": "El desarrollo de la interfaz de usuario se realiza en la etapa de despliegue con librerías específicas."
+      },
+      {
+        "text": "Dividir el conjunto de datos en un 50% de entrenamiento y 50% de prueba.",
+        "isCorrect": false,
+        "rationale": "La división de datos se hace mediante funciones de partición como `train_test_split`."
+      },
+      {
+        "text": "Exportar la base de datos a un servidor SQL remoto.",
+        "isCorrect": false,
+        "rationale": "`df.corr()` calcula valores numéricos de asociación, no realiza operaciones de red o bases de datos."
+      }
+    ],
+    "hint": "Considera el concepto de 'selección de características' para conservar solo las variables con suficiente poder explicativo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al entrenar un modelo predictivo supervisado, ¿por qué se recomienda dividir los datos en conjuntos de entrenamiento (`X_train`, `y_train`) y prueba (`X_test`, `y_test`), asignando por ejemplo 80% y 20% respectivamente?",
+    "opciones": [
+      {
+        "text": "Porque Pandas prohíbe procesar más del 80% de las filas en un solo bloque de memoria.",
+        "isCorrect": false,
+        "rationale": "Pandas puede procesar el 100% de la memoria disponible sin imponer restricciones porcentuales."
+      },
+      {
+        "text": "Para evaluar la capacidad del modelo de generalizar sobre datos no vistos y detectar problemas de sobreajuste (overfitting).",
+        "isCorrect": true,
+        "rationale": "Validar el rendimiento en un conjunto retenido de prueba demuestra si el algoritmo aprendió patrones verdaderos o si solo memorizó el entrenamiento."
+      },
+      {
+        "text": "Para reducir el peso del archivo `.pkl` al momento de guardarlo en disco.",
+        "isCorrect": false,
+        "rationale": "El tamaño del archivo guardado depende de los parámetros e hiperparámetros del modelo, no de la partición de prueba."
+      },
+      {
+        "text": "Porque la Regresión Logística solo funciona si el conjunto de prueba tiene menos de 100 filas.",
+        "isCorrect": false,
+        "rationale": "La Regresión Logística escala a cualquier cantidad de observaciones en el conjunto de prueba."
+      },
+      {
+        "text": "Para garantizar que todas las cadenas de texto se conviertan automáticamente en flotantes.",
+        "isCorrect": false,
+        "rationale": "La división de arreglos no altera los tipos de datos de las columnas."
+      }
+    ],
+    "hint": "Pensar en el objetivo de probar el modelo con 'datos no vistos' para verificar que funcionará correctamente en producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En Scikit-Learn, tras instanciar el clasificador `model = LogisticRegression()`, ¿cuál es el método que se debe invocar para ejecutar el entrenamiento del algoritmo pasándole los datos?",
+    "opciones": [
+      {
+        "text": "model.predict(X_train, y_train)",
+        "isCorrect": false,
+        "rationale": "El método `.predict()` se utiliza para generar inferencias una vez que el modelo ya ha sido entrenado."
+      },
+      {
+        "text": "model.fit(X_train, y_train)",
+        "isCorrect": true,
+        "rationale": "El método `.fit()` ajusta los coeficientes y parámetros del modelo a partir del conjunto de entrenamiento especificado."
+      },
+      {
+        "text": "model.transform(X_train)",
+        "isCorrect": false,
+        "rationale": "El método `.transform()` se aplica en objetos de preprocesamiento (como escaladores) no en estimadores de clasificación."
+      },
+      {
+        "text": "model.score(X_train)",
+        "isCorrect": false,
+        "rationale": "El método `.score()` evalúa la métrica por defecto del estimador pero requiere que ya esté entrenado."
+      },
+      {
+        "text": "model.compile(X_train, y_train)",
+        "isCorrect": false,
+        "rationale": "El método `.compile()` es utilizado en frameworks de Deep Learning como Keras/TensorFlow, no en Scikit-Learn básico."
+      }
+    ],
+    "hint": "Recuerda la palabra en inglés utilizada en Scikit-Learn para 'ajustar' o entrenar los parámetros del modelo a los datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una vez entrenado y evaluado nuestro modelo en Python, ¿qué función de la librería `joblib` se utiliza para serializarlo y guardarlo en un archivo ejecutable `.pkl`?",
+    "opciones": [
+      {
+        "text": "joblib.export(model, 'modelo.pkl')",
+        "isCorrect": false,
+        "rationale": "Esa función no existe dentro de la API de la librería `joblib`."
+      },
+      {
+        "text": "joblib.dump(model, 'modelo.pkl')",
+        "isCorrect": true,
+        "rationale": "La función `joblib.dump()` persiste el objeto Python en un archivo binario en disco."
+      },
+      {
+        "text": "joblib.save_json(model, 'modelo.pkl')",
+        "isCorrect": false,
+        "rationale": "Los modelos serializados con `.pkl` son binarios, no archivos de texto plano JSON."
+      },
+      {
+        "text": "joblib.write_binary(model, 'modelo.pkl')",
+        "isCorrect": false,
+        "rationale": "Nombre de función inexistente en la librería `joblib`."
+      },
+      {
+        "text": "joblib.store_dataframe(model, 'modelo.pkl')",
+        "isCorrect": false,
+        "rationale": "No es una función de la librería `joblib` para almacenamiento de objetos."
+      }
+    ],
+    "hint": "Busca la función cuyo nombre se traduce como 'volcar' o 'descargar' el objeto en disco.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al construir la aplicación web interactiva con Streamlit para desplegar el modelo predictivo, ¿cuál es el componente utilizado para capturar opciones categóricas mediante un menú desplegable en la barra lateral?",
+    "opciones": [
+      {
+        "text": "st.sidebar.text_input()",
+        "isCorrect": false,
+        "rationale": "El componente `text_input` genera un campo de entrada para texto libre, no un menú de selección predefinido."
+      },
+      {
+        "text": "st.sidebar.selectbox()",
+        "isCorrect": true,
+        "rationale": "El componente `selectbox` renderiza una lista desplegable permitiendo seleccionar una alternativa entre un conjunto de opciones."
+      },
+      {
+        "text": "st.sidebar.slider_range()",
+        "isCorrect": false,
+        "rationale": "Los deslizadores se utilizan para valores numéricos continuos o rangos de enteros."
+      },
+      {
+        "text": "st.sidebar.write_matrix()",
+        "isCorrect": false,
+        "rationale": "Ese método no existe dentro de la API de widgets de Streamlit."
+      },
+      {
+        "text": "st.sidebar.checkbox_group()",
+        "isCorrect": false,
+        "rationale": "No es la sintaxis nativa utilizada en Streamlit para menús desplegables."
+      }
+    ],
+    "hint": "Identifica el widget cuyo nombre hace referencia explícita a una 'caja de selección' desplegable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el análisis exploratorio y visualización de datos en Python, ¿cuáles de las siguientes funciones pertenecientes a `seaborn` (`sns`) o `matplotlib.pyplot` (`plt`) permiten generar gráficos estadísticos reconocidos?",
+    "opciones": [
+      {
+        "text": "sns.heatmap() para construir mapas de calor que representan matrices de correlación o pivotes.",
+        "isCorrect": true,
+        "rationale": "Es la función estándar en Seaborn para renderizar matrices numéricas codificadas por color."
+      },
+      {
+        "text": "plt.scatter() o sns.scatterplot() para evaluar la relación de dispersión entre dos variables continuas.",
+        "isCorrect": true,
+        "rationale": "Permiten graficar pares de puntos para identificar asociaciones o agrupaciones espaciales."
+      },
+      {
+        "text": "plt.pie() para generar diagramas de sectores (torta) representando proporciones categóricas.",
+        "isCorrect": true,
+        "rationale": "Es la función nativa de Matplotlib para representar porcentajes relativos mediante sectores circulares."
+      },
+      {
+        "text": "st.deploy_web() para compilar gráficos directamente en hardware dedicado.",
+        "isCorrect": false,
+        "rationale": "No es una función de visualización gráfica en Python."
+      },
+      {
+        "text": "pd.to_sql_chart() para renderizar imágenes en la base de datos.",
+        "isCorrect": false,
+        "rationale": "Pandas no posee ese método para la generación automática de gráficos SQL."
+      }
+    ],
+    "hint": "Selecciona las funciones auténticas de las librerías Seaborn y Matplotlib empleadas a lo largo de las demostraciones prácticas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-24",
+    "diplomado": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al evaluar el desempeño de un clasificador binario de Regresión Logística, si calculamos la métrica de exactitud (`accuracy_score(y_test, y_pred)`), ¿qué evalúa exactamente dicho indicador?",
+    "opciones": [
+      {
+        "text": "La proporción total de predicciones correctas (tanto verdaderos positivos como verdaderos negativos) sobre el total de casos evaluados.",
+        "isCorrect": true,
+        "rationale": "Define cuantitativamente la exactitud global ($\n\\text{Accuracy} = \\frac{TP + TN}{TP + TN + FP + FN}\n$)."
+      },
+      {
+        "text": "El tiempo en milisegundos que tarda la computadora en procesar la instrucción en la interfaz web.",
+        "isCorrect": false,
+        "rationale": "Las métricas de rendimiento estadístico no miden la latencia de cómputo del hardware."
+      },
+      {
+        "text": "El porcentaje de columnas nulas que fueron eliminadas con la función drop().",
+        "isCorrect": false,
+        "rationale": "Las métricas de evaluación miden la calidad del modelo sobre las etiquetas, no el volumen de limpieza del dataset."
+      },
+      {
+        "text": "La desviación estándar de los salarios escalados mediante puntuación z.",
+        "isCorrect": false,
+        "rationale": "Ese concepto corresponde al preprocesamiento con `StandardScaler`, no a la matriz de confusión."
+      },
+      {
+        "text": "El número total de coeficientes negativos calculados en la optimización.",
+        "isCorrect": false,
+        "rationale": "`accuracy_score` devuelve un escalar acotado entre 0 y 1 referente a aciertos sobre casos reales."
+      }
+    ],
+    "hint": "Piensa en el porcentaje de acertijos totales (tanto positivos como negativos) respecto a la totalidad de las muestras comprobadas.",
+    "activo": true
+  }
+]

@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define la medición dentro del contexto de los procesos industriales mineros?",
+    "opciones": [
+      {
+        "text": "La determinación de un valor cuantitativo en función de un estándar para controlar y asegurar la calidad del producto.",
+        "isCorrect": true,
+        "rationale": "Medir implica comparar la variable del proceso contra un patrón de referencia definido para garantizar que la transformación cumpla con las especificaciones de calidad requeridas."
+      },
+      {
+        "text": "El pesaje exclusivo de la materia prima únicamente al momento de ingresar a la mina.",
+        "isCorrect": false,
+        "rationale": "La medición en procesos abarca la evaluación continua de múltiples variables físicas y químicas a lo largo de toda la transformación, no únicamente el peso inicial."
+      },
+      {
+        "text": "La estimación visual y empírica del volumen de mineral acumulado en los depósitos.",
+        "isCorrect": false,
+        "rationale": "El control de procesos requiere instrumentos y patrones estandarizados precisos, alejándose de estimaciones subjetivas o puramente visuales."
+      },
+      {
+        "text": "La inspección manual de la maquinaria pesada al finalizar la jornada laboral.",
+        "isCorrect": false,
+        "rationale": "La inspección mecánica forma parte del mantenimiento preventivo, mientras que la medición del proceso evalúa los flujos y parámetros del mineral durante la operación."
+      },
+      {
+        "text": "El cálculo presupuestario de las ventas esperadas de concentrado de mineral.",
+        "isCorrect": false,
+        "rationale": "La planificación financiera es una actividad de gestión administrativa y no constituye la definición de medición técnica de variables físicas dentro del proceso."
+      }
+    ],
+    "hint": "Consiste en comparar un valor obtenido frente a un patrón estandarizado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el método de muestreo aleatorio simple aplicado en la exploración y evaluación de mineral?",
+    "opciones": [
+      {
+        "text": "En la selección de muestras a intervalos de tiempo fijados de manera estrictamente constante.",
+        "isCorrect": false,
+        "rationale": "La toma de muestras a intervalos fijos responde al esquema de muestreo sistemático, no al aleatorio simple."
+      },
+      {
+        "text": "En la extracción de porciones donde cada unidad del conjunto tiene la misma probabilidad de ser escogida sin priorizar ninguna zona.",
+        "isCorrect": true,
+        "rationale": "El principio estadístico del muestreo aleatorio simple garantiza equidad en la probabilidad de elección de cualquier punto del lote o yacimiento."
+      },
+      {
+        "text": "En el análisis continuo de todo el volumen de mineral mediante fajas automatizadas sin tomar porciones.",
+        "isCorrect": false,
+        "rationale": "Ese procedimiento corresponde a la medición en línea o muestreo continuo y no al muestreo discreto o por selecciones discretas."
+      },
+      {
+        "text": "En tomar muestras únicamente de las zonas que presentan la mayor concentración visible de metal.",
+        "isCorrect": false,
+        "rationale": "Seleccionar zonas específicas con mayor contenido introduce un sesgo favorable que invalida la representación objetiva de la muestra."
+      },
+      {
+        "text": "En la recolección manual de residuos al final del circuito de flotación.",
+        "isCorrect": false,
+        "rationale": "La recolección de desperdicios en un punto específico responde a un control puntual de efluentes y no al principio de aleatoriedad simple en el lote."
+      }
+    ],
+    "hint": "Cada elemento o punto tiene exactamente la misma probabilidad de ser seleccionado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de las siguientes opciones describe el propósito principal de un sistema SCADA en una planta minera?",
+    "opciones": [
+      {
+        "text": "Supervisar, controlar y adquirir datos de los procesos en tiempo real desde una interfaz gráfica centralizada.",
+        "isCorrect": true,
+        "rationale": "La arquitectura SCADA integra señales de campo para permitir a los operadores monitorizar y comandar las variables de la planta desde pantallas centralizadas."
+      },
+      {
+        "text": "Reemplazar la totalidad de los sensores físicos mediante algoritmos de inteligencia artificial.",
+        "isCorrect": false,
+        "rationale": "El sistema SCADA necesita recibir directamente los datos de los sensores e instrumentos físicos para poder operar y mostrar la información."
+      },
+      {
+        "text": "Diseñar piezas mecánicas en tres dimensiones para las chancadoras y molinos.",
+        "isCorrect": false,
+        "rationale": "El modelado e ingeniería de piezas en 3D se realiza mediante software CAD y no mediante sistemas de supervisión SCADA."
+      },
+      {
+        "text": "Administrar exclusivamente las nóminas y contratos del personal administrativo de la empresa.",
+        "isCorrect": false,
+        "rationale": "La gestión de recursos humanos se maneja mediante sistemas ERP corporativos y no a través del sistema de control industrial SCADA."
+      },
+      {
+        "text": "Generar detonaciones automáticas en la fase de voladura sin intervención de personal.",
+        "isCorrect": false,
+        "rationale": "Las voladuras requieren estrictos protocolos de seguridad física e iniciadores específicos, excediendo la función estándar de visualización y supervisión SCADA."
+      }
+    ],
+    "hint": "Integra la adquisición de datos y la supervisión remota en tiempo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es un soft sensor (o sensor virtual) en el contexto de la automatización industrial?",
+    "opciones": [
+      {
+        "text": "Un modelo matemático o algoritmo computacional que estima en tiempo real variables complejas utilizando datos de sensores físicos existentes.",
+        "isCorrect": true,
+        "rationale": "Los soft sensors combinan mediciones de variables secundarias y modelos matemáticos para inferir parámetros que son difíciles o costosos de medir de manera directa."
+      },
+      {
+        "text": "Un dispositivo electrónico físico que se conecta manualmente al tablero de la maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "Los soft sensors no son hardware físico adicional, sino programas informáticos que procesan señales de instrumentos ya instalados."
+      },
+      {
+        "text": "Un software de diseño gráfico utilizado para dibujar planos de instalaciones eléctricas.",
+        "isCorrect": false,
+        "rationale": "La función del soft sensor no es el dibujo o diseño técnico, sino la estimación y predicción en tiempo real de magnitudes del proceso."
+      },
+      {
+        "text": "Un lente óptico especial instalado en las cámaras de seguridad para detectar humo en la mina.",
+        "isCorrect": false,
+        "rationale": "Los sensores virtuales operan a nivel de software de procesamiento de datos y no como componentes ópticos de cámaras."
+      },
+      {
+        "text": "Un instrumento mecánico de laboratorio destinado a la medición manual del pH.",
+        "isCorrect": false,
+        "rationale": "Un medidor manual de laboratorio es un instrumento físico directo, lo opuesto a un sensor computacional estimativo en línea."
+      }
+    ],
+    "hint": "Utiliza algoritmos y datos existentes para calcular variables difíciles de medir físicamente de forma directa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el material del curso, ¿cuáles son factores críticos que afectan la confiabilidad del muestreo en un proceso minero?",
+    "opciones": [
+      {
+        "text": "La homogeneidad del material recolectado.",
+        "isCorrect": true,
+        "rationale": "La falta de homogeneidad en la mezcla puede causar que una pequeña muestra no represente las características reales de todo el volumen."
+      },
+      {
+        "text": "La frecuencia con la que se toman las muestras.",
+        "isCorrect": true,
+        "rationale": "Si el intervalo entre muestreos es muy amplio, las fluctuaciones rápidas e imprevistas del proceso pueden pasar desapercibidas."
+      },
+      {
+        "text": "Las condiciones ambientales como temperatura y humedad del entorno.",
+        "isCorrect": true,
+        "rationale": "Factores climáticos extremos pueden alterar químicamente o evaporar componentes de las muestras antes de su análisis."
+      },
+      {
+        "text": "La contaminación cruzada entre distintas muestras.",
+        "isCorrect": true,
+        "rationale": "El contacto no deseado con residuos de muestras anteriores deforma los datos e introduce errores graves en los resultados de laboratorio."
+      },
+      {
+        "text": "El color del casco de seguridad utilizado por el técnico de muestra.",
+        "isCorrect": false,
+        "rationale": "El color de la indumentaria de seguridad no altera la composición ni la precisión estadística de las muestras físicas recolectadas."
+      }
+    ],
+    "hint": "Considere tanto las características físicas de la muestra como el entorno y el procedimiento operacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la principal ventaja operativa de utilizar analizadores en línea en una planta concentradora frente a los métodos de laboratorio tradicionales?",
+    "opciones": [
+      {
+        "text": "Ofrecer lecturas continuas y en tiempo real sin necesidad de pausar la marcha del proceso ni esperar resultados diferidos.",
+        "isCorrect": true,
+        "rationale": "Los analizadores en línea envían datos constantemente al sistema de control, lo que permite realizar ajustes inmediatos en la operación sin retrasos por transporte de muestras."
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar energía eléctrica en la planta minera.",
+        "isCorrect": false,
+        "rationale": "Los analizadores en línea son equipos electrónicos de alta precisión que requieren suministro eléctrico y de comunicaciones constante."
+      },
+      {
+        "text": "Garantizar que el mineral extraído quede completamente procesado sin pasar por molienda.",
+        "isCorrect": false,
+        "rationale": "Los analizadores se encargan de medir y monitorear las propiedades del mineral, pero no sustituyen el trabajo físico de reducción de tamaño de los molinos."
+      },
+      {
+        "text": "Reducir a cero el costo de inversión inicial de los proyectos mineros.",
+        "isCorrect": false,
+        "rationale": "La adquisición e instalación de tecnología de análisis en línea requiere una inversión de capital inicial considerable."
+      },
+      {
+        "text": "Reemplazar definitivamente a los ingenieros y gerentes en la toma de decisiones estratégicas.",
+        "isCorrect": false,
+        "rationale": "Estas herramientas tecnológicas brindan información procesada para respaldar y facilitar la decisión humana, no para suprimir el nivel directivo."
+      }
+    ],
+    "hint": "Permiten obtener información de manera ininterrumpida sin detener la operación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué significan las siglas PID en el contexto de los controladores y diagramas de instrumentación industrial?",
+    "opciones": [
+      {
+        "text": "Proporcional, Integrativo y Derivativo.",
+        "isCorrect": true,
+        "rationale": "Corresponde a la combinación de las tres respuestas matemáticas utilizadas para calcular la corrección exacta en los sistemas de control de procesos."
+      },
+      {
+        "text": "Presión, Inyección y Densidad.",
+        "isCorrect": false,
+        "rationale": "Aunque representan variables físicas comunes en procesos, no corresponden al nombre del algoritmo ni al estándar del diagrama PID."
+      },
+      {
+        "text": "Proceso Industrial Digital.",
+        "isCorrect": false,
+        "rationale": "Es una denominación genérica inventada que no guarda relación con la definición técnica del controlador proporcional, integrativo y derivativo."
+      },
+      {
+        "text": "Planta, Insumo y Distribución.",
+        "isCorrect": false,
+        "rationale": "Se trata de términos logísticos genéricos que no describen las funciones de instrumentación y control automático."
+      },
+      {
+        "text": "Programación, Inspección y Diagnóstico.",
+        "isCorrect": false,
+        "rationale": "Representan etapas de mantenimiento o gestión, no el algoritmo de control de realimentación de variables en lazos cerrados."
+      }
+    ],
+    "hint": "Hace referencia a las tres acciones matemáticas empleadas para corregir el error en un lazo de control.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función específica de un transmisor de caudal en un circuito de tuberías?",
+    "opciones": [
+      {
+        "text": "Medir el flujo volumétrico o velocidad con la que se desplaza un fluido a través de la conducción.",
+        "isCorrect": true,
+        "rationale": "El transmisor de caudal se encarga de cuantificar la velocidad o el volumen por unidad de tiempo de líquidos o pulpas en las tuberías."
+      },
+      {
+        "text": "Evaluar únicamente la temperatura interna del motor eléctrico que impulsa la bomba.",
+        "isCorrect": false,
+        "rationale": "La temperatura del motor se cuantifica mediante transmisores de temperatura o sensores resistivos específicos, no de caudal."
+      },
+      {
+        "text": "Determinar la altura física del líquido almacenado en el interior de un tanque vertical.",
+        "isCorrect": false,
+        "rationale": "La medición del nivel en depósitos y tanques se realiza mediante transmisores de nivel específicos."
+      },
+      {
+        "text": "Modificar químicamente el porcentaje de acidez o pH del reactivo suministrado.",
+        "isCorrect": false,
+        "rationale": "Los transmisores son instrumentos de medición y señalización, no dispositivos de transformación química de las sustancias."
+      },
+      {
+        "text": "Detener mecánicamente la rotación de los molinos de bolas cuando ocurre una sobrecarga.",
+        "isCorrect": false,
+        "rationale": "El paro de molinos se coordina a través de variadores de velocidad o sistemas de protección del motor, no directamente mediante el transmisor de flujo."
+      }
+    ],
+    "hint": "Mide la velocidad o volumen de un fluido que atraviesa una sección en un tiempo determinado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué diferencia fundamental existe entre un lazo de control abierto y un lazo de control cerrado?",
+    "opciones": [
+      {
+        "text": "El lazo cerrado utiliza la retroalimentación de la variable medida para corregir desviaciones, mientras que el lazo abierto actúa sin medir el resultado real.",
+        "isCorrect": true,
+        "rationale": "La presencia de un sensor que mide la salida y la compara con la referencia para aplicar una corrección automática caracteriza al lazo cerrado."
+      },
+      {
+        "text": "El lazo abierto requiere computadoras avanzadas y el lazo cerrado solo funciona con interruptores manuales.",
+        "isCorrect": false,
+        "rationale": "Ambos lazos pueden implementarse con tecnología digital; la distinción radica en la existencia de señal de retroalimentación de la variable."
+      },
+      {
+        "text": "El lazo cerrado solo se utiliza en sistemas hidráulicos y el lazo abierto en sistemas puramente eléctricos.",
+        "isCorrect": false,
+        "rationale": "La clasificación de lazos de control se aplica por igual a sistemas eléctricos, neumáticos, térmicos e hidráulicos."
+      },
+      {
+        "text": "El lazo abierto garantiza una precisión perfecta libre de cualquier margen de error operativo.",
+        "isCorrect": false,
+        "rationale": "Al no medir la variable de salida, el lazo abierto no puede detectar ni corregir perturbaciones externas, siendo menos preciso."
+      },
+      {
+        "text": "El lazo cerrado no permite la instalación de transmisores ni sensores en la tubería.",
+        "isCorrect": false,
+        "rationale": "Un lazo cerrado exige obligatoriamente la presencia de sensores y transmisores para generar la señal de retroalimentación."
+      }
+    ],
+    "hint": "Uno de los lazos recibe información constante del resultado de la salida para hacer autocorrecciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Seleccione los tipos de transmisores de instrumentación explicados en la clase para el monitoreo de variables en plantas mineras e industriales.",
+    "opciones": [
+      {
+        "text": "Transmisor de temperatura.",
+        "isCorrect": true,
+        "rationale": "Permite vigilar el nivel térmico de fluidos y equipos para garantizar condiciones seguras de operación."
+      },
+      {
+        "text": "Transmisor de presión.",
+        "isCorrect": true,
+        "rationale": "Mide la fuerza ejercida por gases o líquidos dentro de conductos y recipientes cerrados."
+      },
+      {
+        "text": "Transmisor de caudal.",
+        "isCorrect": true,
+        "rationale": "Cuantifica el flujo volumétrico que circula a través de las líneas de transporte de pulpa o agua."
+      },
+      {
+        "text": "Transmisor de nivel.",
+        "isCorrect": true,
+        "rationale": "Controla la cantidad o altura acumulada de sustancia almacenada en los tanques del proceso."
+      },
+      {
+        "text": "Transmisor de fricción geológica.",
+        "isCorrect": false,
+        "rationale": "No constituye una denominación ni categoría de instrumento estándar abordada para el control de procesos en tuberías."
+      }
+    ],
+    "hint": "Corresponden a los parámetros físicos más comunes monitoreados en tuberías y tanques.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la técnica de aprendizaje supervisado utilizada en el contexto de machine learning para el análisis de datos?",
+    "opciones": [
+      {
+        "text": "En entrenar al algoritmo utilizando datos de entrada que ya cuentan con las respuestas o etiquetas correctas conocidas.",
+        "isCorrect": true,
+        "rationale": "El aprendizaje supervisado aprende a mapear entradas y salidas basándose en ejemplos etiquetados por un supervisor humano o un registro previo."
+      },
+      {
+        "text": "En permitir que el sistema tome decisiones sin haber recibido ningún dato de entrenamiento histórico.",
+        "isCorrect": false,
+        "rationale": "Los modelos de machine learning requieren siempre datos históricos; actuar sin entrenamiento previo no corresponde al aprendizaje supervisado."
+      },
+      {
+        "text": "En la supervisión física directa de un operario sobre el teclado de la computadora a cada segundo.",
+        "isCorrect": false,
+        "rationale": "El término hace referencia a la condición lógica de los datos de entrenamiento (etiquetados) y no a la presencia física del humano junto al hardware."
+      },
+      {
+        "text": "En agrupar datos de manera totalmente espontánea sin conocer ninguna variable de salida previa.",
+        "isCorrect": false,
+        "rationale": "La agrupación espontánea de datos no etiquetados corresponde al paradigma de aprendizaje no supervisado (clustering)."
+      },
+      {
+        "text": "En borrar automáticamente la base de datos de la planta al final de cada turno.",
+        "isCorrect": false,
+        "rationale": "La eliminación de registros elimina el historial operativo e impide el desarrollo de modelos predictivos de machine learning."
+      }
+    ],
+    "hint": "El modelo se entrena utilizando un conjunto de datos previa y explícitamente etiquetado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representa la interacción HMI en un panel de control industrial?",
+    "opciones": [
+      {
+        "text": "La interfaz gráfica que permite la comunicación e interacción visual entre el operador humano y la máquina o proceso.",
+        "isCorrect": true,
+        "rationale": "El HMI (Human-Machine Interface) ofrece la representación visual necesaria para que el operario comprenda el estado del proceso y envíe comandos."
+      },
+      {
+        "text": "Un motor hidráulico de alta velocidad instalado en los camiones de acarreo.",
+        "isCorrect": false,
+        "rationale": "El HMI es un componente informático y de visualización electrónica, no un elemento de fuerza hidráulica."
+      },
+      {
+        "text": "El manual impreso en papel que contiene las normas de seguridad e higiene.",
+        "isCorrect": false,
+        "rationale": "Corresponde a una interfaz digital en pantalla y no a documentación física impresa."
+      },
+      {
+        "text": "Un tipo de cable de fibra óptica empleado únicamente en instalaciones subterráneas.",
+        "isCorrect": false,
+        "rationale": "La fibra óptica es el medio físico de transmisión de datos, mientras que el HMI es la pantalla de interacción final."
+      },
+      {
+        "text": "La prueba química realizada en laboratorio para medir el porcentaje de cobre.",
+        "isCorrect": false,
+        "rationale": "Las pruebas de ensaye químico son procedimientos analíticos y no interfaces de interacción hombre-máquina."
+      }
+    ],
+    "hint": "Es la pantalla o gráfico que permite la comunicación directa entre el operario humano y la máquina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué nivel de la pirámide de automatización se ubican físicamente los sensores y actuadores?",
+    "opciones": [
+      {
+        "text": "Nivel de campo.",
+        "isCorrect": true,
+        "rationale": "El nivel de campo es el primer escalón de la pirámide, donde residen los instrumentos que captan magnitudes físicas y ejecutan acciones sobre el proceso."
+      },
+      {
+        "text": "Nivel de gestión corporativa (ERP).",
+        "isCorrect": false,
+        "rationale": "El nivel de gestión representa la cúspide directiva de la pirámide y maneja datos administrativos e inversiones a largo plazo."
+      },
+      {
+        "text": "Nivel de planificación de operaciones (MES).",
+        "isCorrect": false,
+        "rationale": "El nivel de operación coordina la programación de la producción y el mantenimiento, un peldaño por encima del control directo."
+      },
+      {
+        "text": "Nivel de supervisión SCADA.",
+        "isCorrect": false,
+        "rationale": "El nivel SCADA recolecta y grafica las señales enviadas desde los controladores del nivel inferior."
+      },
+      {
+        "text": "Nivel de estrategia de ventas.",
+        "isCorrect": false,
+        "rationale": "El área comercial se sitúa totalmente al margen de la infraestructura física de medición y actuación en la planta."
+      }
+    ],
+    "hint": "Corresponde a la base más baja de la pirámide, donde se realiza la medición directa y la acción física.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del Procesador o CPU dentro de un Controlador Lógico Programable (PLC)?",
+    "opciones": [
+      {
+        "text": "Ejecutar la lógica del programa leyendo el estado de las entradas para calcular y actualizar las salidas.",
+        "isCorrect": true,
+        "rationale": "La CPU actúa como el cerebro del PLC, procesando de forma continua las instrucciones lógicas cargadas según la información proveniente de los sensores."
+      },
+      {
+        "text": "Transformar la energía eléctrica trifásica de alta tensión en energía hidráulica.",
+        "isCorrect": false,
+        "rationale": "El PLC opera con señales lógicas y voltajes bajos continuos, sin realizar transformaciones de potencia hidráulica."
+      },
+      {
+        "text": "Servir como estructura metálica para sujetar las tuberías de agua en la planta.",
+        "isCorrect": false,
+        "rationale": "El procesador es un componente microelectrónico de cómputo y no un elemento de soporte mecánico estructural."
+      },
+      {
+        "text": "Enfriar mecánicamente las fajas transportadoras cuando sobrepasan los 100 grados Celsius.",
+        "isCorrect": false,
+        "rationale": "El enfriamiento requiere sistemas de ventilación o aspersión operados por actuadores, no por la CPU directamente."
+      },
+      {
+        "text": "Imprimir los reportes semanales en formato físico para la gerencia.",
+        "isCorrect": false,
+        "rationale": "La impresión de reportes la gestionan los servidores del nivel de operación o supervisión, no el procesador interno del PLC."
+      }
+    ],
+    "hint": "Ejecuta de manera cíclica el programa de control interno leyendo entradas y ordenando salidas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la tarea fundamental que realiza un actuador en la automatización de procesos?",
+    "opciones": [
+      {
+        "text": "Convertir señales de control en una acción física como abrir una válvula o encender un motor.",
+        "isCorrect": true,
+        "rationale": "Los actuadores son la contraparte de los sensores: reciben la orden lógica del controlador y modifican físicamente el estado del equipo."
+      },
+      {
+        "text": "Capturar la temperatura del ambiente y enviarla a la base de datos.",
+        "isCorrect": false,
+        "rationale": "La captación de magnitudes físicas es la función del sensor, no del actuador."
+      },
+      {
+        "text": "Almacenar archivos digitales en formato PDF para el archivo administrativo.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento de documentos es propio de sistemas de cómputo de oficina o servidores."
+      },
+      {
+        "text": "Generar ondas de radio para la comunicación entre los cascos de los mineros.",
+        "isCorrect": false,
+        "rationale": "La transmisión de radiofrecuencia corresponde a los sistemas de telecomunicación e infraestructura de red."
+      },
+      {
+        "text": "Disolver directamente los minerales nobles mediante el uso de ácidos concentrados.",
+        "isCorrect": false,
+        "rationale": "La disolución de minerales ocurre dentro de tanques de lixiviación mediante reacciones químicas, no por un actuador de manera aislada."
+      }
+    ],
+    "hint": "Convierte una señal eléctrica de control en una acción física o mecánica concreta sobre la planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Seleccione los componentes esenciales que forman parte de la arquitectura de un Controlador Lógico Programable (PLC).",
+    "opciones": [
+      {
+        "text": "Fuente de alimentación.",
+        "isCorrect": true,
+        "rationale": "Suministra el voltaje continuo requerido para el funcionamiento interno de las tarjetas electrónicas."
+      },
+      {
+        "text": "Procesador o CPU.",
+        "isCorrect": true,
+        "rationale": "Contiene el microcontrolador encargado de resolver el ciclo de instrucciones de control."
+      },
+      {
+        "text": "Módulo de interfaz de entrada.",
+        "isCorrect": true,
+        "rationale": "Recibe y acondiciona las señales eléctricas que provienen de los sensores de campo."
+      },
+      {
+        "text": "Módulo de interfaz de salida.",
+        "isCorrect": true,
+        "rationale": "Envía los niveles de voltaje o corriente hacia los actuadores y elementos finales de control."
+      },
+      {
+        "text": "Neumático de repuesto de maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "Un componente mecánico vehicular no guarda relación con la estructura electrónica interna del controlador programable."
+      }
+    ],
+    "hint": "Considere las etapas necesarias para alimentar el equipo, recibir información, procesarla y enviar órdenes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la función de la plataforma ERP en el nivel más alto de la pirámide de automatización?",
+    "opciones": [
+      {
+        "text": "Integrar la información del negocio, gestionando finanzas, compras, inventarios y planificación estratégica global.",
+        "isCorrect": true,
+        "rationale": "El sistema ERP (Enterprise Resource Planning) consolida la información corporativa para vincular el rendimiento de la planta con las decisiones financieras y de negocio."
+      },
+      {
+        "text": "Regular únicamente la presión hidráulica dentro de las tuberías de agua.",
+        "isCorrect": false,
+        "rationale": "El control de presión en tuberías es gestionado en el nivel de campo y control por instrumentos y PLCs."
+      },
+      {
+        "text": "Emitir ondas de ultrasonido para romper las rocas sin usar explosivos.",
+        "isCorrect": false,
+        "rationale": "La fragmentación primaria de roca se logra mediante perforación y voladura, o chancadoras en superficie."
+      },
+      {
+        "text": "Manejar físicamente las palas excavadoras en el frente de mina.",
+        "isCorrect": false,
+        "rationale": "La operación de palas es realizada por operadores en cabina o mediante sistemas de teleoperación en tiempo real."
+      },
+      {
+        "text": "Reemplazar los sensores de temperatura de los motores por válvulas manuales.",
+        "isCorrect": false,
+        "rationale": "Un software ERP no sustituye los componentes físicos de instrumentación instalados en la maquinaria."
+      }
+    ],
+    "hint": "Integra datos operativos con la gestión financiera, comercial y de recursos de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es uno de los beneficios clave de emplear tecnología de teledetección mediante drones en la seguridad e impacto ambiental minero?",
+    "opciones": [
+      {
+        "text": "Mapear cambios topográficos y estabilidad de terrenos de forma remota sin exponer físicamente a los trabajadores.",
+        "isCorrect": true,
+        "rationale": "La teledetección aérea recolecta imágenes y datos precisos sobre fallas o desprendimientos en zonas peligrosas reduciendo el riesgo humano."
+      },
+      {
+        "text": "Incrementar el consumo total de combustibles fósiles en las flotas de transporte.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la teledetección es optimizar el control y reducir costos, no elevar el consumo de combustible."
+      },
+      {
+        "text": "Sustituir de manera definitiva el proceso de chancado primario de mineral.",
+        "isCorrect": false,
+        "rationale": "Los drones ejecutan tareas de inspección y topografía, pero no pueden triturar físicamente las rocas."
+      },
+      {
+        "text": "Desactivar la red de fibra óptica instalada en el interior de la mina subterránea.",
+        "isCorrect": false,
+        "rationale": "Los sistemas de supervisión moderna requieren afianzar y ampliar la infraestructura de comunicaciones, no eliminarla."
+      },
+      {
+        "text": "Eliminar la necesidad de presentar declaraciones de impacto ambiental a las autoridades.",
+        "isCorrect": false,
+        "rationale": "El uso de tecnología mejora el monitoreo pero no exime a las empresas de cumplir estrictamente con las leyes y normativas ambientales."
+      }
+    ],
+    "hint": "Permite monitorear amplias áreas y zonas de difícil acceso sin exponer directamente al personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la etapa minera de Flotación para la concentración de minerales?",
+    "opciones": [
+      {
+        "text": "En mezclar el mineral pulverizado con agua y reactivos, creando burbujas a las que se adhieren de forma selectiva las partículas valiosas.",
+        "isCorrect": true,
+        "rationale": "La flotación es un proceso físico-químico donde las partículas minerales de interés se fijan a burbujas de aire ascendentes para separarlas de la ganga."
+      },
+      {
+        "text": "En triturar rocas gigantes mediante el impacto directo de martillos hidráulicos en seco.",
+        "isCorrect": false,
+        "rationale": "La trituración de rocas grandes corresponde a la etapa de chancado primario o secundario."
+      },
+      {
+        "text": "En disolver completamente el metal mediante el riego continuo de ácido sulfúrico sobre pilas de lixiviación.",
+        "isCorrect": false,
+        "rationale": "El riego con ácido sobre pilas es la definición del proceso hidrometalúrgico de lixiviación, distinto a la flotación en celdas."
+      },
+      {
+        "text": "En transportar el mineral mediante camiones de 300 toneladas desde el tajo hasta la planta.",
+        "isCorrect": false,
+        "rationale": "El traslado en camiones gigantes corresponde a la fase logística de acarreo."
+      },
+      {
+        "text": "En fundir el concentrado en un horno a más de 1000 grados Celsius para obtener ánodos.",
+        "isCorrect": false,
+        "rationale": "La fusión en hornos a altas temperaturas pertenece a la etapa de pirometalurgia y fundición."
+      }
+    ],
+    "hint": "Utiliza agua, reactivos y burbujas de aire a las que se adhieren las partículas valiosas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son las cuatro etapas consecutivas del ciclo de mejora continua PHVA?",
+    "opciones": [
+      {
+        "text": "Planificar, Hacer, Verificar y Actuar.",
+        "isCorrect": true,
+        "rationale": "Corresponde al ciclo estándar (Deming) que guía la implementación estructurada de cambios y mejoras operacionales."
+      },
+      {
+        "text": "Procesar, Homogeneizar, Variar y Almacenar.",
+        "isCorrect": false,
+        "rationale": "Son acciones operativas diversas, pero no conforman la metodología reconocida de mejora continua."
+      },
+      {
+        "text": "Perforar, Hincarse, Volar y Acarrear.",
+        "isCorrect": false,
+        "rationale": "Son verbos asociados a la extracción minera en campo, no a los pasos del ciclo de gestión de calidad."
+      },
+      {
+        "text": "Pagar, Presupuestar, Vender y Adquirir.",
+        "isCorrect": false,
+        "rationale": "Describen transacciones financieras y comerciales, no el marco sistemático de calidad de procesos."
+      },
+      {
+        "text": "Programar, Hidratar, Ventilar y Aumentar.",
+        "isCorrect": false,
+        "rationale": "Es una mezcla incoherente de términos técnicos que no responde a la metodología PHVA."
+      }
+    ],
+    "hint": "Son las siglas de la metodología de gestión para estructurar y verificar proyectos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué promueve la filosofía japonesa Kaisen en la gestión operativa de una planta?",
+    "opciones": [
+      {
+        "text": "La mejora continua gradual e ininterrumpida con la participación activa de todo el personal de la empresa.",
+        "isCorrect": true,
+        "rationale": "Kaisen sostiene que las optimizaciones pequeñas y constantes propuestas por operarios y supervisores generan un gran impacto acumulado."
+      },
+      {
+        "text": "La renovación total y abrupta de toda la maquinaria pesada cada seis meses.",
+        "isCorrect": false,
+        "rationale": "Kaisen rechaza la dependencia exclusiva de cambios drásticos y costosos, promoviendo en su lugar la optimización constante del sistema existente."
+      },
+      {
+        "text": "El despido inmediato del personal que reporte fallas o errores en el proceso.",
+        "isCorrect": false,
+        "rationale": "La filosofía promueve un ambiente de confianza donde los colaboradores puedan proponer ideas libremente sin temor a represalias."
+      },
+      {
+        "text": "La suspensión completa del mantenimiento preventivo para ahorrar dinero.",
+        "isCorrect": false,
+        "rationale": "Eliminar el mantenimiento preventivo incrementa las paradas no programadas, contraviniendo el principio de eliminar desperdicios."
+      },
+      {
+        "text": "El uso exclusivo de herramientas manuales rechazando cualquier automatización.",
+        "isCorrect": false,
+        "rationale": "Kaisen fomenta la adopción e integración eficiente de la tecnología siempre que contribuya a perfeccionar el flujo de trabajo."
+      }
+    ],
+    "hint": "Se basa en realizar pequeños cambios constantes e involucrar a todos los trabajadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el enfoque diferenciador que introduce la Industria 5.0 en comparación con la Industria 4.0?",
+    "opciones": [
+      {
+        "text": "Poner nuevamente al ser humano, la sostenibilidad ambiental y la resiliencia en el centro de la producción inteligente.",
+        "isCorrect": true,
+        "rationale": "Mientras la Industria 4.0 se enfocó en la interconectividad y digitalización masiva, la 5.0 busca que la tecnología colabore armónicamente con el ser humano y respete el medio ambiente."
+      },
+      {
+        "text": "Eliminar por completo el acceso a internet y el uso de computadoras en las minas.",
+        "isCorrect": false,
+        "rationale": "La Industria 5.0 aprovecha las bases digitales de la 4.0, sin eliminar la conectividad ni las tecnologías avanzadas."
+      },
+      {
+        "text": "Prohibir la participación de los trabajadores en la toma de decisiones operativas.",
+        "isCorrect": false,
+        "rationale": "Uno de los pilares de la Industria 5.0 es revalorizar el talento, creatividad y juicio del trabajador humano."
+      },
+      {
+        "text": "Aumentar al máximo la contaminación de CO2 para acelerar el volumen de extracción.",
+        "isCorrect": false,
+        "rationale": "La sostenibilidad ambiental y la reducción del impacto de carbono son metas prioritarias de la evolución a la Industria 5.0."
+      },
+      {
+        "text": "Sustituir los motores eléctricos por máquinas accionadas puramente a vapor.",
+        "isCorrect": false,
+        "rationale": "Las máquinas a vapor corresponden a la Primera Revolución Industrial, no al paradigma moderno de producción inteligente."
+      }
+    ],
+    "hint": "Vuelve a colocar al ser humano, la sostenibilidad ambiental y la resiliencia en el centro del sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la principal ventaja en materia de seguridad y salud ocupacional que ofrece la teleoperación de maquinaria pesada en minería?",
+    "opciones": [
+      {
+        "text": "Distanciar al operador de las zonas de alto riesgo de derrumbe o exposición a gases mediante el control remoto.",
+        "isCorrect": true,
+        "rationale": "La teleoperación permite comandar excavadoras o perforadoras desde salas de control seguras, preservando la vida e integridad física del colaborador."
+      },
+      {
+        "text": "Garantizar que los camiones de acarreo no necesiten mantenimiento ni combustible.",
+        "isCorrect": false,
+        "rationale": "Los camiones conducidos a distancia siguen requiriendo consumo energético y mantenimiento de sus sistemas mecánicos."
+      },
+      {
+        "text": "Permitir que el mineral se convierta en lingotes de oro de forma automática en la misma pala.",
+        "isCorrect": false,
+        "rationale": "El proceso de concentración y refinación requiere etapas metalúrgicas completas independientes del modo de conducción de la maquinaria."
+      },
+      {
+        "text": "Aumentar el nivel de vibración directo sobre la columna vertebral del conductor.",
+        "isCorrect": false,
+        "rationale": "Al operar desde un sillón ergonómico remoto, el trabajador queda libre de las vibraciones físicas destructivas del terreno."
+      },
+      {
+        "text": "Evitar el uso de cascos y chalecos en todas las áreas administrativas de la ciudad.",
+        "isCorrect": false,
+        "rationale": "Los equipos de protección personal se rigen por normativas específicas del área de trabajo y no por el uso de teleoperación."
+      }
+    ],
+    "hint": "Permite retirar al operario de la cabina física en zonas peligrosas y distanciarlo del riesgo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Seleccione los beneficios directos asociados a la implementación del monitoreo y control en tiempo real en una operación minera.",
+    "opciones": [
+      {
+        "text": "Prevención oportuna de incidentes y fallas catastróficas en los equipos.",
+        "isCorrect": true,
+        "rationale": "La lectura continua de sensores permite detectar anomalías a tiempo para detener o reparar un equipo antes de una rotura grave."
+      },
+      {
+        "text": "Gestión eficiente e integral de los recursos insumidos en la planta.",
+        "isCorrect": true,
+        "rationale": "Permite ajustar la dosificación exacta de agua, reactivos y energía según el flujo real del mineral."
+      },
+      {
+        "text": "Cumplimiento ambiental ajustado a normativas y estándares de sostenibilidad.",
+        "isCorrect": true,
+        "rationale": "Facilita la verificación continua de efluentes y emisiones evitando sobrepasar los límites legales contaminantes."
+      },
+      {
+        "text": "Optimización de la continuidad operativa del proceso global.",
+        "isCorrect": true,
+        "rationale": "Sincroniza las etapas desde la extracción hasta la concentración para evitar cuellos de botella e interrupciones no programadas."
+      },
+      {
+        "text": "Incremento irrestricto en las horas de exposición del personal a gases tóxicos.",
+        "isCorrect": false,
+        "rationale": "El monitoreo busca precisamente reducir o eliminar la presencia humana en atmósferas contaminadas o peligrosas."
+      }
+    ],
+    "hint": "Piense en las ventajas integrales que abordan la seguridad, la continuidad del proceso y el medio ambiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el contenido del curso, ¿cuáles de los siguientes corresponden a procesos u operaciones unitarias en la minería?",
+    "opciones": [
+      {
+        "text": "Perforación y Voladura.",
+        "isCorrect": true,
+        "rationale": "Son las operaciones primarias para fragmentar el macizo rocoso en la mina."
+      },
+      {
+        "text": "Acarreo.",
+        "isCorrect": true,
+        "rationale": "Corresponde al transporte del material desde el frente de trabajo hacia la planta o botaderos."
+      },
+      {
+        "text": "Chancado y Molienda.",
+        "isCorrect": true,
+        "rationale": "Son las etapas mecánicas de reducción consecutiva de tamaño del mineral extraído."
+      },
+      {
+        "text": "Lixiviación o Flotación.",
+        "isCorrect": true,
+        "rationale": "Constituyen los métodos de separación y recuperación de las especies metálicas valiosas."
+      },
+      {
+        "text": "Teleportación de rocas.",
+        "isCorrect": false,
+        "rationale": "Es una tecnología de ciencia ficción inexistente en la minería real."
+      }
+    ],
+    "hint": "Incluye tanto las actividades de extracción en mina como las de procesamiento y reducción de tamaño en planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto del monitoreo de procesos minero-metalúrgicos, ¿cuál es la diferencia conceptual fundamental entre un muestreo aleatorio simple y un muestreo sistemático?",
+    "opciones": [
+      {
+        "text": "El muestreo aleatorio simple selecciona muestras a intervalos constantes de tiempo o distancia, mientras que el sistemático elige puntos de forma completamente azarosa sin un patrón definido.",
+        "isCorrect": false,
+        "rationale": "Esta descripción invierte las definiciones de ambos métodos, atribuible a una confusión común sobre la regularidad temporal del muestreo."
+      },
+      {
+        "text": "El muestreo aleatorio simple otorga la misma probabilidad de selección a cada unidad del conjunto, mientras que el sistemático fija un intervalo constante a partir de una primera muestra elegida al azar.",
+        "isCorrect": true,
+        "rationale": "El muestreo aleatorio garantiza equidad estadística simple, mientras que el sistemático establece una frecuencia constante y predeterminada tras el punto inicial aleatorio."
+      },
+      {
+        "text": "El muestreo aleatorio simple se utiliza exclusivamente en líneas de chancado continuo, mientras que el sistemático se reserva para la evaluación geológica de yacimientos.",
+        "isCorrect": false,
+        "rationale": "Ambos métodos pueden aplicarse en diversas etapas, como exploración geológica o control de calidad, sin estar restringidos a un único tipo de proceso."
+      },
+      {
+        "text": "El muestreo aleatorio simple elimina la necesidad de contar con análisis de laboratorio, mientras que el sistemático exige el uso de sensores en línea.",
+        "isCorrect": false,
+        "rationale": "La técnica de selección de la muestra no determina si el análisis posterior se realiza en laboratorio o mediante instrumentación automatizada."
+      },
+      {
+        "text": "El muestreo aleatorio simple prioriza las zonas con mayor ley mineral, mientras que el sistemático busca únicamente minimizar el volumen de la muestra.",
+        "isCorrect": false,
+        "rationale": "Ninguno de los dos métodos busca priorizar zonas de alta ley intencionalmente; de hecho, hacerlo introduciría un sesgo no deseado en la representatividad."
+      }
+    ],
+    "hint": "Considera cómo influye la presencia o ausencia de un intervalo de tiempo o espacio constante en la selección de las muestras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la evaluación de una pila de mineral concentrado, la presencia de una mezcla heterogénea de minerales de diferente densidad y tamaño representa un desafío técnico. ¿A qué factor crítico del muestreo corresponde esta dificultad?",
+    "opciones": [
+      {
+        "text": "Frecuencia del muestreo",
+        "isCorrect": false,
+        "rationale": "La frecuencia se refiere a la periodicidad o intervalos temporales con que se toman las muestras, no a las propiedades físicas del material."
+      },
+      {
+        "text": "Homogeneidad del material",
+        "isCorrect": true,
+        "rationale": "La variación en la composición o densidad del mineral atenta contra la homogeneidad, requiriendo protocolos específicos para asegurar que la muestra sea representativa."
+      },
+      {
+        "text": "Contaminación cruzada",
+        "isCorrect": false,
+        "rationale": "La contaminación cruzada ocurre por la introducción no deseada de agentes externos o residuos de muestras anteriores, no por la composición interna del lote."
+      },
+      {
+        "text": "Variación de la presión atmosférica",
+        "isCorrect": false,
+        "rationale": "Aunque el entorno afecta ciertos procesos químicos, la distribución heterogénea de minerales es un factor propio de la física de la materia y la mezcla."
+      },
+      {
+        "text": "Intervención manual del operador",
+        "isCorrect": false,
+        "rationale": "La intervención humana es una fuente de error procedimental, pero la heterogeneidad es una propiedad física inherente al mineral procesado."
+      }
+    ],
+    "hint": "Piensa en la uniformidad física y química de las partículas dentro de la masa global del mineral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones describen ventajas de integrar analizadores en línea (online) en comparación con el muestreo manual tradicional en plantas mineras?",
+    "opciones": [
+      {
+        "text": "Permiten obtener datos de manera continua y en tiempo real sin necesidad de detener la operación o interrumpir el flujo.",
+        "isCorrect": true,
+        "rationale": "La captura continua de variables operativas facilita el ajuste inmediato de los procesos sin interferir con la producción."
+      },
+      {
+        "text": "Reducen la exposición de los trabajadores a zonas de riesgo y disminuyen los errores por manipulación humana.",
+        "isCorrect": true,
+        "rationale": "La automatización del monitoreo minimiza el sesgo operativo y protege al personal de entornos peligrosos o reactivos."
+      },
+      {
+        "text": "Garantizan la eliminación total de los costos de inversión inicial en instrumentación y redes de comunicación.",
+        "isCorrect": false,
+        "rationale": "Al contrario, la implementación de analizadores en línea y sensores avanzados requiere una inversión de capital inicial considerable."
+      },
+      {
+        "text": "Transmiten sus mediciones de forma directa hacia plataformas de análisis y sistemas de supervisión como el SCADA.",
+        "isCorrect": true,
+        "rationale": "La conectividad digital integra los datos de campo con las salas de control para respaldar la toma de decisiones informada."
+      },
+      {
+        "text": "Eximen al personal técnico de realizar tareas de calibración y mantenimiento preventivo en los instrumentos.",
+        "isCorrect": false,
+        "rationale": "Los instrumentos automatizados requieren calibraciones y verificaciones periódicas para conservar la precisión y confiabilidad de sus mediciones."
+      }
+    ],
+    "hint": "Evalúa el impacto de la automatización en el flujo de información, la seguridad laboral y la eficiencia operativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el control avanzado de procesos, ¿cómo se define conceptualmente un soft sensor (o sensor virtual)?",
+    "opciones": [
+      {
+        "text": "Un componente físico recubierto de elastómero diseñado para amortiguar vibraciones en molinos de bolas.",
+        "isCorrect": false,
+        "rationale": "Confunde la palabra 'soft' (software/virtual) con un recubrimiento o propiedad física de protección mecánica."
+      },
+      {
+        "text": "Un algoritmo o modelo matemático que estima en tiempo real variables de difícil medición directa a partir de datos capturados por otros sensores físicos.",
+        "isCorrect": true,
+        "rationale": "Un soft sensor utiliza redes neuronales o modelos matemáticos para calcular magnitudes de interés que no pueden medirse de manera directa o continua con hardware convencional."
+      },
+      {
+        "text": "Un pirómetro óptico portátil que los operadores utilizan para medir la temperatura de los neumáticos en camiones.",
+        "isCorrect": false,
+        "rationale": "Un pirómetro es un instrumento físico de medición directa, no una estimación computacional basada en software."
+      },
+      {
+        "text": "Una interfaz gráfica dentro de la pantalla SCADA que emite alarmas sonoras cuando se desvía la presión.",
+        "isCorrect": false,
+        "rationale": "El soft sensor es el modelo de estimación subyacente, no la pantalla o el elemento de señalización de alarmas."
+      },
+      {
+        "text": "Un transmisor mecánico electromagnético que sustituye la necesidad de utilizar controladores lógicos programables.",
+        "isCorrect": false,
+        "rationale": "El soft sensor complementa los sistemas de control existentes mediante software y no reemplaza el hardware del PLC."
+      }
+    ],
+    "hint": "Relaciona el concepto con el uso de modelos computacionales y datos existentes para calcular variables complejas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al utilizar herramientas de Inteligencia Artificial para el análisis prospectivo en mantenimiento de equipos, ¿cuál es la estructura recomendada para construir un prompt (instrucción) efectivo?",
+    "opciones": [
+      {
+        "text": "Introducción teórica + Código de programación en lenguaje ensamblador + Conclusión ejecutiva.",
+        "isCorrect": false,
+        "rationale": "Esta estructura omite la definición del rol del modelo y las restricciones del escenario real del proceso."
+      },
+      {
+        "text": "Protagonista (rol del experto) + Contexto (datos e información del entorno) + Solicitud (tarea o requerimiento puntual).",
+        "isCorrect": true,
+        "rationale": "Esta combinación delimita la perspectiva analítica de la IA, le otorga los datos de fondo necesarios y especifica con claridad el entregable requerido."
+      },
+      {
+        "text": "Saludo formal + Pregunta amplia e indeterminada + Petición de resumen bibliográfico.",
+        "isCorrect": false,
+        "rationale": "Un prompt ambiguo y genérico produce respuestas redundantes y poco útiles para problemas técnicos específicos."
+      },
+      {
+        "text": "Definición de variables + Comandos de base de datos SQL + Formato de impresión de etiquetas.",
+        "isCorrect": false,
+        "rationale": "Esta secuencia se limita a comandos de consulta de datos pero no guía la capacidad de razonamiento contextualmente."
+      },
+      {
+        "text": "Nombre de la empresa minera + Lista de repuestos en stock + Presupuesto financiero asignado.",
+        "isCorrect": false,
+        "rationale": "Aportar datos de compras sin asignar una función de análisis o una tarea específica impide obtener una recomendación estructurada."
+      }
+    ],
+    "hint": "Recuerda la regla de tres elementos que emula el encargo de una tarea a un especialista dentro de un escenario definido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos constituyen fuentes comunes de sesgo o error que comprometen la representatividad en el muestreo de minerales?",
+    "opciones": [
+      {
+        "text": "Depósito no controlado de partículas metálicas en suspensión sobre los recipientes de muestra (contaminación cruzada).",
+        "isCorrect": true,
+        "rationale": "El polvo ambiental adiciona elementos no pertenecientes a la muestra original, alterando el resultado del análisis."
+      },
+      {
+        "text": "Ejecución del muestreo manual sin protocolos estandarizados frente a variaciones extremas de temperatura o humedad.",
+        "isCorrect": true,
+        "rationale": "La falta de estandarización y la intervención humana en condiciones fluctuantes introducen inconsistencias operativas."
+      },
+      {
+        "text": "Selección de frecuencias de muestreo distanciadas que omiten las variaciones abruptas en la ley del mineral.",
+        "isCorrect": true,
+        "rationale": "Un intervalo de muestreo demasiado amplio impide detectar cambios rápidos en el flujo de alimentación del proceso."
+      },
+      {
+        "text": "Uso de cortadores mecánicos automatizados programados a intervalos constantes en fajas transportadoras.",
+        "isCorrect": false,
+        "rationale": "El muestreo mecánico automatizado y programado es una práctica estandarizada que busca reducir el sesgo humano."
+      },
+      {
+        "text": "Empleo de contenedores herméticos para transportar las muestras hacia el laboratorio in situ.",
+        "isCorrect": false,
+        "rationale": "El uso de recipientes sellados es una medida preventiva que conserva las condiciones originales y evita la contaminación o pérdida de humedad."
+      }
+    ],
+    "hint": "Identifica los factores que introducen perturbaciones externas o fallas en la captura de datos representativos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la simbología y representación esquemática de diagramas de tuberías e instrumentación (P&ID), la sigla PID hace referencia al modelo de control denominado:",
+    "opciones": [
+      {
+        "text": "Proporcional, Integral y Derivativo.",
+        "isCorrect": true,
+        "rationale": "Es el algoritmo de control por realimentación ampliamente utilizado en la industria para corregir errores entre el valor medido y el punto de consigna."
+      },
+      {
+        "text": "Presión, Intensidad y Densidad.",
+        "isCorrect": false,
+        "rationale": "Confunde la sigla del controlador con la yuxtaposición de tres variables físicas independientes."
+      },
+      {
+        "text": "Proceso de Inspección Digital.",
+        "isCorrect": false,
+        "rationale": "Asocia la terminología con una actividad de aseguramiento de calidad y no con la estrategia de control automático."
+      },
+      {
+        "text": "Programación, Integración y Diagnóstico.",
+        "isCorrect": false,
+        "rationale": "Utiliza términos del ámbito informático que no corresponden al significado del algoritmo de control de procesos."
+      },
+      {
+        "text": "Protocolo Industrial de Datos.",
+        "isCorrect": false,
+        "rationale": "Hace referencia errónea a un estándar de comunicación o red en lugar del mecanismo de regulación analógico/digital."
+      }
+    ],
+    "hint": "Corresponde a la combinación de tres acciones matemáticas aplicadas a la señal de error en un lazo de control.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué instrumento de medición se instala en las tuberías de transporte de pulpa mineral para regular la alimentación y calcular la velocidad del volumen desplazado hacia los molinos?",
+    "opciones": [
+      {
+        "text": "Transmisor de nivel",
+        "isCorrect": false,
+        "rationale": "El transmisor de nivel mide la altura de líquido o sólido dentro de tanques o tolvas, no la velocidad del flujo dentro de una conducción cerrada."
+      },
+      {
+        "text": "Transmisor de caudal",
+        "isCorrect": true,
+        "rationale": "Permite cuantificar el flujo volumétrico o másico de la pulpa que circula por una tubería en un intervalo de tiempo."
+      },
+      {
+        "text": "Transmisor de humedad",
+        "isCorrect": false,
+        "rationale": "Mide el porcentaje de agua retenida en sólidos secos o en aire, pero no el volumen desplazado en una tubería."
+      },
+      {
+        "text": "Transmisor de temperatura",
+        "isCorrect": false,
+        "rationale": "Mide la energía térmica del fluido, parámetro distinto al volumen de pulpa por unidad de tiempo."
+      },
+      {
+        "text": "Transmisor de pH",
+        "isCorrect": false,
+        "rationale": "Evalúa la acidez o alcalinidad de la solución para la dosificación de reactivos, sin determinar el caudal de paso."
+      }
+    ],
+    "hint": "Asocia la variable requerida con la medición de volumen o masa en movimiento por unidad de tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica operativa que distingue a un sistema de control de lazo cerrado de uno de lazo abierto?",
+    "opciones": [
+      {
+        "text": "El lazo abierto requiere controladores lógicos de alta velocidad, mientras que el lazo cerrado funciona de forma puramente mecánica.",
+        "isCorrect": false,
+        "rationale": "Ambos lazos pueden implementarse con tecnología electrónica o digital; la diferencia radica en la estructura de la señal y la medición de la salida."
+      },
+      {
+        "text": "El lazo cerrado utiliza la realimentación (feedback) de la variable de salida para ajustar la acción de control, mientras que el lazo abierto actúa sin medir el resultado real.",
+        "isCorrect": true,
+        "rationale": "La presencia de un sensor que mide la salida e informa al controlador para corregir la desviación define al lazo cerrado."
+      },
+      {
+        "text": "El lazo abierto mide continuamente la temperatura del proceso, mientras que el lazo cerrado solo se utiliza en válvulas manuales.",
+        "isCorrect": false,
+        "rationale": "El lazo cerrado es el que mide continuamente la variable para ajustar la válvula o elemento final de control."
+      },
+      {
+        "text": "El lazo cerrado se aplica exclusivamente a motores de combustión, mientras que el abierto domina las refinerías de petróleo.",
+        "isCorrect": false,
+        "rationale": "Los sistemas de proceso complejo como las refinerías dependen indispensablemente del control en lazo cerrado."
+      },
+      {
+        "text": "El lazo abierto elimina las perturbaciones externas, mientras que el lazo cerrado genera inestabilidad continua.",
+        "isCorrect": false,
+        "rationale": "El lazo abierto no puede responder ante perturbaciones externas porque no mide la desviación en la salida."
+      }
+    ],
+    "hint": "Enfócate en la existencia de un retorno de información desde la salida hacia la entrada para la corrección del error.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el refinado de petróleo, el crudo se somete a diversas etapas de separación y transformación. ¿Cuáles de las siguientes unidades o procesos tienen como función fraccionar o romper cadenas pesadas de hidrocarburos para obtener combustibles más livianos?",
+    "opciones": [
+      {
+        "text": "Torre de destilación atmosférica (Topping).",
+        "isCorrect": true,
+        "rationale": "Separa los componentes del crudo por sus puntos de ebullición, iniciando el fraccionamiento de las distintas fracciones de hidrocarburos."
+      },
+      {
+        "text": "Unidad de destilación al vacío.",
+        "isCorrect": true,
+        "rationale": "Extrae fracciones livianas adicionales de los residuos pesados a presiones reducidas para evitar la degradación térmica."
+      },
+      {
+        "text": "Unidad de craqueo térmico o coque.",
+        "isCorrect": true,
+        "rationale": "Somete los residuos pesados a altas temperaturas para romper las moléculas de cadena larga en compuestos de menor peso molecular."
+      },
+      {
+        "text": "Unidad de craqueo catalítico.",
+        "isCorrect": true,
+        "rationale": "Utiliza un catalizador para romper el gasóleo pesado en moléculas más cortas de alto valor comercial, como gasolina y GLP."
+      },
+      {
+        "text": "Lixiviación por aspersión con ácido sulfúrico.",
+        "isCorrect": false,
+        "rationale": "Es un proceso hidrometalúrgico para la extracción de metales en minería, no una operación de refinación de hidrocarburos."
+      }
+    ],
+    "hint": "Diferencia los procesos de la refinación petroquímica de las técnicas químicas de extracción hidrometalúrgica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el desarrollo de modelos de aprendizaje automático aplicados a la Industria 4.0, el aprendizaje supervisado se diferencia por:",
+    "opciones": [
+      {
+        "text": "Procesar colecciones de datos sin etiquetas para descubrir patrones o agrupamientos de forma autónoma.",
+        "isCorrect": false,
+        "rationale": "La identificación de patrones en datos no etiquetados define al aprendizaje no supervisado."
+      },
+      {
+        "text": "Entrenar al algoritmo utilizando un conjunto de datos etiquetados donde se conocen previamente las entradas y las salidas deseadas.",
+        "isCorrect": true,
+        "rationale": "El aprendizaje supervisado requiere ejemplos etiquetados para que el modelo aprenda la relación matemática entre las variables de entrada y el resultado."
+      },
+      {
+        "text": "Eliminar la necesidad de usar datos históricos, aprendiendo únicamente de instrucciones escritas por el operador.",
+        "isCorrect": false,
+        "rationale": "Los modelos de aprendizaje automático dependen indispensablemente de datos de entrenamiento para ajustar sus parámetros."
+      },
+      {
+        "text": "Ejecutarse exclusivamente cuando los equipos físicos se encuentran apagados durante paradas de planta.",
+        "isCorrect": false,
+        "rationale": "El entrenamiento o inferencia de un modelo supervisado puede realizarse con datos históricos o en tiempo real durante la operación."
+      },
+      {
+        "text": "Desplegar modelos tridimensionales en pantalla sin realizar cálculos estadísticos o de regresión.",
+        "isCorrect": false,
+        "rationale": "La visualización 3D es una función del software de modelado o CAD, distinta de los procesos de inferencia del aprendizaje automático."
+      }
+    ],
+    "hint": "Piensa en el rol que cumplen las variables de salida conocidas (etiquetas) durante la fase de entrenamiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función operativa cumple la implementación de un sistema SCADA en la gestión de una red de distribución de agua o pulpa en planta?",
+    "opciones": [
+      {
+        "text": "Reemplazar la infraestructura de tuberías físicas por enlaces de comunicación inalámbrica.",
+        "isCorrect": false,
+        "rationale": "El SCADA monitorea y controla el transporte fluido pero no sustituye las conducciones físicas por las que circula el material."
+      },
+      {
+        "text": "Adquirir datos en tiempo real de presiones y caudales, alertar desviaciones mediante alarmas y permitir el accionar remoto de electroválvulas.",
+        "isCorrect": true,
+        "rationale": "El sistema centraliza la supervisión de las variables operativas y permite efectuar maniobras de control a distancia sobre los activos de campo."
+      },
+      {
+        "text": "Garantizar el refinado químico del mineral mediante impulsos magnéticos desde las pantallas del centro de control.",
+        "isCorrect": false,
+        "rationale": "Las fases de refinación requieren procesos químicos o electrometalúrgicos físicos; el SCADA se limita a la supervisión y control del equipo."
+      },
+      {
+        "text": "Eliminar la necesidad de ejecutar planes de mantenimiento en las bombas y motores de impulsión.",
+        "isCorrect": false,
+        "rationale": "El monitoreo aporta información para optimizar el mantenimiento, pero no elimina la degradación física de los equipos ni la necesidad de intervenir."
+      },
+      {
+        "text": "Generar energía eléctrica autónoma para alimentar los molinos de molienda primaria.",
+        "isCorrect": false,
+        "rationale": "El SCADA es un sistema informático y de automatización, no una planta de generación o conversión de energía eléctrica."
+      }
+    ],
+    "hint": "Considera las siglas en inglés que componen el término: Supervisión, Control y Adquisición de Datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la pirámide de la automatización industrial, ¿cuál es el nivel encargado de interactuar directamente con el proceso mediante la captura de magnitudes físicas y la ejecución de acciones mecánicas?",
+    "opciones": [
+      {
+        "text": "Nivel de Gestión (ERP)",
+        "isCorrect": false,
+        "rationale": "El nivel ERP administra los recursos empresariales, finanzas y planificación global, ubicado en la cúspide de la pirámide."
+      },
+      {
+        "text": "Nivel de Campo",
+        "isCorrect": true,
+        "rationale": "Ubicado en la base de la pirámide, integra a los sensores que miden el entorno y a los actuadores que ejecutan cambios físicos."
+      },
+      {
+        "text": "Nivel de Supervisión (SCADA)",
+        "isCorrect": false,
+        "rationale": "Se sitúa por encima del nivel de control para centralizar la visualización y adquisición de datos de múltiples subsistemas."
+      },
+      {
+        "text": "Nivel de Control (PLC)",
+        "isCorrect": false,
+        "rationale": "Procesa las señales lógicas provenientes del nivel de campo para determinar las acciones, pero no es la capa física de detección/ejecución propiamente dicha."
+      },
+      {
+        "text": "Nivel de Planificación de la Producción (MES)",
+        "isCorrect": false,
+        "rationale": "Coordina la programación de lotes y el seguimiento de la producción, operando en capas intermedias-altas de la jerarquía."
+      }
+    ],
+    "hint": "Identifica la capa situada en la base física donde se localizan los instrumentos mecánicos y de medición puntual.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a componentes de hardware esenciales que conforman la estructura interna de un Controlador Lógico Programable (PLC)?",
+    "opciones": [
+      {
+        "text": "Módulo o interfaz de entradas para la recepción de señales analógicas y digitales.",
+        "isCorrect": true,
+        "rationale": "Permite al controlador acondicionar y leer las señales eléctricas enviadas por los sensores del proceso."
+      },
+      {
+        "text": "Unidad Central de Procesamiento (CPU) que almacena la memoria y ejecuta la lógica del programa.",
+        "isCorrect": true,
+        "rationale": "Constituye el núcleo del equipo, donde se procesan las instrucciones lógicas basadas en el estado de las entradas."
+      },
+      {
+        "text": "Módulo o interfaz de salidas hacia los elementos finales de control (actuadores, relés).",
+        "isCorrect": true,
+        "rationale": "Convierte las decisiones tomadas por la CPU en señales eléctricas para accionar válvulas, motores o indicadores."
+      },
+      {
+        "text": "Fuente de alimentación para suministrar la energía requerida por los módulos internos.",
+        "isCorrect": true,
+        "rationale": "Regula y provee el nivel de tensión continua adecuado para el funcionamiento seguro de los circuitos del autómata."
+      },
+      {
+        "text": "Celdas de flotación galvánica autónomas.",
+        "isCorrect": false,
+        "rationale": "Corresponden a equipos del proceso metalúrgico en planta y no forma parte del hardware interno de un PLC."
+      }
+    ],
+    "hint": "Diferencia los módulos electrónicos que componen la arquitectura interna del autómata de la maquinaria del proceso industrial exterior.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tipo de señal procesa una tarjeta de entrada digital en un controlador PLC?",
+    "opciones": [
+      {
+        "text": "Una señal continua de corriente comprendida entre $4\\text{ mA}$ y $20\\text{ mA}$ que representa el nivel de un tanque.",
+        "isCorrect": false,
+        "rationale": "El rango de $4\\text{ mA}$ a $20\\text{ mA}$ es el estándar para señales de entrada analógicas de variación continua."
+      },
+      {
+        "text": "Una señal discreta que adopta únicamente dos estados lógicos bien definidos ($0$ o $1$, abierto o cerrado).",
+        "isCorrect": true,
+        "rationale": "Las entradas digitales detectan estados binarios como la activación de un final de carrera o un pulsador."
+      },
+      {
+        "text": "Una forma de onda senoidal de frecuencia variable proveniente de un sensor de aceleración.",
+        "isCorrect": false,
+        "rationale": "Las señales de frecuencia o forma de onda compleja requieren módulos de procesamiento analógico o de alta velocidad especializados."
+      },
+      {
+        "text": "Un valor de temperatura medido en $0^\\circ\\text{C}$ a $500^\\circ\\text{C}$ con precisión decimal.",
+        "isCorrect": false,
+        "rationale": "La medición de un rango continuo de temperatura requiere un canal de entrada analógico (RTD o termocople)."
+      },
+      {
+        "text": "Un archivo estructurado de comandos de texto en lenguaje de marcas HTML.",
+        "isCorrect": false,
+        "rationale": "El HTML es un lenguaje de marcado web que no representa el estándar de señales eléctricas de un módulo de entrada de PLC."
+      }
+    ],
+    "hint": "Enfócate en la distinción entre variables de variación continua y señales de estado binario (presencia/ausencia).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la ventaja operativa de integrar el sistema de monitoreo de seguridad industrial con la plataforma de respuesta ante emergencias de la planta?",
+    "opciones": [
+      {
+        "text": "Aumentar los tiempos de espera del sistema antes de enviar una señal a las brigadas de rescate.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la integración es reducir el tiempo de respuesta y no retrasar la alerta a los equipos de emergencia."
+      },
+      {
+        "text": "Automatizar la interrupción de flujos, parada de motores y activación de alarmas de evacuación al detectar eventos como fuga de gases o incendios.",
+        "isCorrect": true,
+        "rationale": "La integración permite que la detección de una condición de peligro desencadene protocolos de protección automática sin depender de la intervención humana manual."
+      },
+      {
+        "text": "Eliminar la necesidad de instalar detectores de gases tóxicos en las labores subterráneas.",
+        "isCorrect": false,
+        "rationale": "Los detectores son los sensores primarios indispensables para alimentar al sistema de monitoreo e integración."
+      },
+      {
+        "text": "Alterar de forma automática los estados de cuenta contables en el software ERP sin supervisión.",
+        "isCorrect": false,
+        "rationale": "La integración de seguridad se enfoca en la protección del personal y activos en tiempo real, no en la contabilidad financiera."
+      },
+      {
+        "text": "Incrementar la velocidad de bombeo de pulpa durante caídas de tensión en la red eléctrica.",
+        "isCorrect": false,
+        "rationale": "Frente a fallas o emergencias, la prioridad es llevar el proceso a un estado seguro, no forzar el incremento de producción."
+      }
+    ],
+    "hint": "Piensa en el beneficio de reducir los segundos de reacción mediante la acción automática de barreras de protección.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la configuración de modelos de lenguaje para asistencia técnica en ingeniería, ¿qué propósito cumple personalizar las instrucciones del sistema (system prompt) especificando el perfil y requerimientos del usuario?",
+    "opciones": [
+      {
+        "text": "Inhabilitar la capacidad del modelo para procesar scripts de programación en Python o comandos de consola.",
+        "isCorrect": false,
+        "rationale": "Personalizar el rol no busca limitar capacidades técnicas, sino ajustar el enfoque y profundidad de la respuesta."
+      },
+      {
+        "text": "Obligar a la herramienta a responder siempre con frases genéricas de una sola palabra.",
+        "isCorrect": false,
+        "rationale": "La delimitación de contexto pretende evitar respuestas vagas e incrementar el nivel de detalle técnico entregado."
+      },
+      {
+        "text": "Orientar al modelo para que aplique rigor técnico, terminología especializada y el nivel de detalle adecuado al perfil del profesional.",
+        "isCorrect": true,
+        "rationale": "Definir el perfil y reglas contextuales permite que la IA filtre su base de datos y estructure la información con el nivel analítico requerido por el especialista."
+      },
+      {
+        "text": "Permitir que la plataforma opere sin requerir una conexión activa a las redes de datos.",
+        "isCorrect": false,
+        "rationale": "La personalización es una instrucción lógica sobre el procesamiento del modelo en la nube y no modifica los requerimientos de conectividad."
+      },
+      {
+        "text": "Bloquear la exportación de tablas informativas hacia hojas de cálculo o editores de texto.",
+        "isCorrect": false,
+        "rationale": "El formateo estructurado busca facilitar la integración con herramientas como Excel o Word, no bloquear su exportación."
+      }
+    ],
+    "hint": "Considera cómo influye la definición del rol del interlocutor en la precisión y profundidad terminológica de las respuestas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La integración vertical de la información desde los sensores de campo hasta el sistema de gestión ERP en una operación minera aporta diversos beneficios. ¿Cuáles de los siguientes son ejemplos de esta integración?",
+    "opciones": [
+      {
+        "text": "Correlación entre las horas de parada no programada detectadas por el SCADA y su impacto en los costos del periodo.",
+        "isCorrect": true,
+        "rationale": "Conectar el nivel de supervisión con la gestión financiera permite cuantificar con precisión el impacto económico de las fallas operativas."
+      },
+      {
+        "text": "Generación automática de solicitudes de pedido de repuestos en el ERP basada en las horas de funcionamiento registradas por el PLC.",
+        "isCorrect": true,
+        "rationale": "La lectura en tiempo real del desgaste o ciclo de trabajo desencadena la gestión logística de inventarios sin demoras burocráticas."
+      },
+      {
+        "text": "Disponibilidad de indicadores de desempeño (KPIs) de producción actualizados en tiempo real para la toma de decisiones gerenciales.",
+        "isCorrect": true,
+        "rationale": "La gerencia obtiene visibilidad inmediata del cumplimiento de metas operativas a partir de los datos consolidados de la planta."
+      },
+      {
+        "text": "Sustitución automática del mineral extraído por insumos sintéticos en las fajas sin modificar la receta del proceso.",
+        "isCorrect": false,
+        "rationale": "Es una propuesta inverosímil que no corresponde al concepto de gestión de datos ni al procesamiento metalúrgico real."
+      },
+      {
+        "text": "Eliminación de la obligación de auditar los registros de cumplimiento ambiental y de seguridad.",
+        "isCorrect": false,
+        "rationale": "La integración digital facilita el acceso a los registros para las auditorías, pero no exime del cumplimiento de las normativas legales."
+      }
+    ],
+    "hint": "Identifica los casos donde la información técnica del piso de planta fluye para optimizar decisiones de negocio y mantenimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del diagrama de flujo de procesamiento de minerales sulfurados, ¿en qué consiste la etapa de flotación?",
+    "opciones": [
+      {
+        "text": "En la fragmentación mecánica de rocas mediante el impacto de chancadoras giratorias primarias.",
+        "isCorrect": false,
+        "rationale": "Esta descripción corresponde a la etapa de chancado primario, proceso de reducción de tamaño puramente mecánico en seco."
+      },
+      {
+        "text": "En el riego por aspersión del mineral acumulado en pilas mediante una solución diluida de ácido sulfúrico.",
+        "isCorrect": false,
+        "rationale": "Describe el proceso de lixiviación de minerales oxidados, distinto a la concentración por flotación."
+      },
+      {
+        "text": "En la mezcla de la pulpa mineralizada con agua y reactivos en celdas agitadas, donde el aire genera burbujas que colectan las partículas valiosas hacia la superficie.",
+        "isCorrect": true,
+        "rationale": "La flotación aprovecha la fisicoquímica de superficies para adherir los sulfuros valiosos a las burbujas de aire y separarlos de la ganga."
+      },
+      {
+        "text": "En el tratamiento térmico a altas temperaturas en hornos para obtener ánodos de cobre de alta pureza.",
+        "isCorrect": false,
+        "rationale": "Corresponde al proceso pirometalúrgico de fundición, etapa posterior a la obtención del concentrado de flotación."
+      },
+      {
+        "text": "En la disolución selectiva de metales preciosos mediante el uso de soluciones de cianuro de sodio en tanques agitados.",
+        "isCorrect": false,
+        "rationale": "Describe la lixiviación o cianuración de metales preciosos, no el proceso físico-químico de flotación por espumas."
+      }
+    ],
+    "hint": "Enfócate en el proceso físico-químico que utiliza burbujas de aire y reactivos para separar partículas en una pulpa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el ámbito de la mejora continua, ¿cuál es la relación conceptual entre la filosofía Kaizen y el ciclo PHVA (Planificar-Hacer-Verificar-Actuar)?",
+    "opciones": [
+      {
+        "text": "Kaizen se aplica únicamente a la compra de activos fijos, mientras que el PHVA se limita a trámites administrativos.",
+        "isCorrect": false,
+        "rationale": "Ambos conceptos son de aplicación transversal a cualquier proceso operativo, técnico o de gestión dentro de la organización."
+      },
+      {
+        "text": "Kaizen representa la cultura de cambio gradual e ininterrumpido con participación de todo el personal, mientras que el PHVA es la metodología estructurada de cuatro pasos para ejecutar cada ciclo de mejora.",
+        "isCorrect": true,
+        "rationale": "Kaizen aporta el enfoque cultural de mejora continua permanente, mientras que el PHVA constituye la herramienta metodológica sistemática para implementar y validar dichas mejoras."
+      },
+      {
+        "text": "Kaizen requiere la parada total de la planta durante periodos extensos, mientras que el PHVA opera sin recopilar datos.",
+        "isCorrect": false,
+        "rationale": "Kaizen busca pequeñas mejoras progresivas sin interrumpir la operación, y el PHVA depende indispensablemente de datos en la fase de verificación."
+      },
+      {
+        "text": "Kaizen deshabilita la evaluación de indicadores de desempeño, mientras que el PHVA prohíbe la participación del personal operativo.",
+        "isCorrect": false,
+        "rationale": "Kaizen fomenta el involucramiento activo de la fuerza laboral de primera línea, y el PHVA utiliza indicadores para la verificación."
+      },
+      {
+        "text": "Kaizen aborda únicamente costos financieros, mientras que el PHVA se restringe a inspecciones de seguridad laboral.",
+        "isCorrect": false,
+        "rationale": "Ninguna de las dos herramientas está restringida a un solo departamento; se aplican a calidad, seguridad, productividad y medio ambiente."
+      }
+    ],
+    "hint": "Diferencia la visión cultural de cambio incremental continuo del marco metodológico de cuatro etapas usado para ejecutarlo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el paradigma conceptual que diferencia la propuesta de la Industria 5.0 respecto a la Industria 4.0?",
+    "opciones": [
+      {
+        "text": "La Industria 5.0 promueve la eliminación total de la energía eléctrica en los procesos productivos.",
+        "isCorrect": false,
+        "rationale": "La Industria 5.0 mantiene la electrificación y la tecnología avanzada, pero cambia el enfoque hacia la sostenibilidad y el bienestar humano."
+      },
+      {
+        "text": "La Industria 5.0 reemplaza los algoritmos informáticos por inspecciones puramente visuales y manuales.",
+        "isCorrect": false,
+        "rationale": "No descarta la digitalización ni la inteligencia artificial, sino que las reorienta para apoyar el talento humano."
+      },
+      {
+        "text": "La Industria 5.0 reubica al ser humano, la sostenibilidad ambiental y la resiliencia en el centro de la producción, promoviendo la colaboración entre personas y máquinas.",
+        "isCorrect": true,
+        "rationale": "A diferencia del enfoque puramente enfocado en la eficiencia y automatización de la Industria 4.0, la 5.0 integra la sostenibilidad, el valor humano y la resiliencia del entorno."
+      },
+      {
+        "text": "La Industria 5.0 prohíbe el uso de sistemas robóticos en minería subterránea.",
+        "isCorrect": false,
+        "rationale": "Fomenta el uso de robótica colaborativa (cobots) para proteger y asistir a los trabajadores en entornos peligrosos."
+      },
+      {
+        "text": "La Industria 5.0 prioriza la producción masiva sin considerar el consumo de recursos naturales.",
+        "isCorrect": false,
+        "rationale": "La economía circular y el uso eficiente de los recursos son pilares fundamentales de la Industria 5.0."
+      }
+    ],
+    "hint": "Considera el factor ético, ambiental y la centralidad del trabajador en la nueva revolución industrial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco del monitoreo ambiental en minería, ¿cuáles de las siguientes opciones corresponden a herramientas de teledetección y sensores IOT utilizados para evaluar impactos en el entorno?",
+    "opciones": [
+      {
+        "text": "Imágenes satelitales multispectrales para monitorear variaciones en la vegetación o desplazamientos en taludes.",
+        "isCorrect": true,
+        "rationale": "La teledetección satelital permite supervisar amplias extensiones geográficas para detectar alteraciones topográficas o ambientales sin contacto directo."
+      },
+      {
+        "text": "Drones con sensores ópticos e infrarrojos para inspeccionar chimeneas de ventilación y zonas de difícil acceso.",
+        "isCorrect": true,
+        "rationale": "Los vehículos aéreos no tripulados capturan datos térmicos y de calidad de aire en tiempo real en áreas peligrosas."
+      },
+      {
+        "text": "Sensores IOT distribuidos en efluentes líquidos para medir pH, turbidez y conductividad en tiempo real.",
+        "isCorrect": true,
+        "rationale": "La red de sensores interconectados transmite mediciones ambientales continuas hacia las plataformas de monitoreo."
+      },
+      {
+        "text": "Válvulas de purga manual accionadas mediante palancas mecánicas sin instrumentación.",
+        "isCorrect": false,
+        "rationale": "Las válvulas mecánicas manuales carecen de capacidad de medición o transmisión remota de datos ambientales."
+      },
+      {
+        "text": "Cuadernos de anotaciones en papel como único registro primario de emisiones atmosféricas.",
+        "isCorrect": false,
+        "rationale": "El registro manual en papel no constituye una tecnología de teledetección ni un sensor IOT de monitoreo continuo."
+      }
+    ],
+    "hint": "Selecciona las tecnologías digitales que recopilan datos del entorno a distancia o mediante redes interconectadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el beneficio directo prioritario de implementar equipos de perforación y acarreo teleoperados o autónomos en minería subterránea?",
+    "opciones": [
+      {
+        "text": "La reducción inmediata de la cantidad de octanos requerida por los motores diésel.",
+        "isCorrect": false,
+        "rationale": "La autonomía o teleoperación no altera la química de los combustibles utilizados por la flota."
+      },
+      {
+        "text": "La minimización de la exposición directa de los trabajadores a zonas de alto riesgo de caída de rocas o atmósferas con gases nocivos.",
+        "isCorrect": true,
+        "rationale": "Al retirar al operador de la cabina física y ubicarlo en una sala de control remota, se elimina su exposición al peligro de la labor subterránea."
+      },
+      {
+        "text": "La supresión total de las etapas de molienda y clasificación en la planta concentradora.",
+        "isCorrect": false,
+        "rationale": "La automatización del minado no modifica las necesidades de reducción de tamaño del mineral en la planta de beneficio."
+      },
+      {
+        "text": "La transformación instantánea del mineral de mina en cátodos comerciales de cobre sin requerir procesamiento hidrometalúrgico.",
+        "isCorrect": false,
+        "rationale": "El transporte autónomo es una operación de manejo de materiales y no un proceso químico de extracción metálica."
+      },
+      {
+        "text": "La eliminación del cumplimiento de los planes de mantenimiento preventivo de la maquinaria.",
+        "isCorrect": false,
+        "rationale": "Los equipos autónomos continúan requiriendo rutinas de mantenimiento mecánico y eléctrico rigurosas."
+      }
+    ],
+    "hint": "Asocia la distancia física entre el operador y el frente de extracción con la preservación de la vida y la salud.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Conforme a los marcos internacionales de sostenibilidad (como el GRI y los principios del ICMM), ¿qué dimensiones deben auditar y reportar las empresas mineras?",
+    "opciones": [
+      {
+        "text": "Gestión del impacto ambiental (uso eficiente del agua, manejo seguro de depósitos de relaves y control de emisiones).",
+        "isCorrect": true,
+        "rationale": "Evalúa el desempeño de la compañía en la preservación de los ecosistemas y el cumplimiento de las normativas ambientales."
+      },
+      {
+        "text": "Salud, seguridad ocupacional e integridad física de los trabajadores en las operaciones.",
+        "isCorrect": true,
+        "rationale": "Monitorea la reducción de la siniestralidad y la implementación de sistemas de gestión de riesgos laborales."
+      },
+      {
+        "text": "Desempeño social, gestión de relaciones comunitarias y desarrollo local en la zona de influencia.",
+        "isCorrect": true,
+        "rationale": "Mide el impacto socioeconómico positivo y el respeto a los derechos de las poblaciones aledañas."
+      },
+      {
+        "text": "Ocultamiento de datos sobre el volumen de gases de efecto invernadero emitidos.",
+        "isCorrect": false,
+        "rationale": "Los marcos internacionales exigen transparencia estricta en la divulgación de emisiones, castigando la ocultación de información."
+      },
+      {
+        "text": "Eliminación de auditorías externas independientes sobre las operaciones de campo.",
+        "isCorrect": false,
+        "rationale": "La verificación y auditoría por parte de terceros independientes es un requisito central de la rendición de cuentas según estos estándares."
+      }
+    ],
+    "hint": "Considera los tres pilares del desarrollo sostenible: ambiental, social y de seguridad/gobernanza.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-55",
+    "diplomado": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la aplicación de técnicas de programación lineal en la gestión de flotas y operaciones mineras?",
+    "opciones": [
+      {
+        "text": "En una técnica manual de trazado geométrico utilizada para delimitar físicamente el contorno de los bancos en mina.",
+        "isCorrect": false,
+        "rationale": "Confunde el término matemático con labores de topografía o marcado físico de bancos en el tajo."
+      },
+      {
+        "text": "En un método matemático de optimización que asigna recursos limitados (como camiones o tiempos de cargamento) para maximizar la producción o minimizar costos bajo restricciones operativas.",
+        "isCorrect": true,
+        "rationale": "Permite resolver problemas complejas de asignación óptima de camiones a palas considerando distancias, capacidades y tiempos de ciclo."
+      },
+      {
+        "text": "En una secuencia rígida de instrucciones en papel que los operadores deben memorizar para encender la maquinaria.",
+        "isCorrect": false,
+        "rationale": "Asocia la frase con un procedimiento operativo estándar de arranque, no con un modelo de optimización matemática."
+      },
+      {
+        "text": "En un módulo informático exclusivo para la elaboración de contratos de personal temporal.",
+        "isCorrect": false,
+        "rationale": "La programación lineal es un método cuantitativo de investigación de operaciones, no un editor de documentos de gestión humana."
+      },
+      {
+        "text": "En una reacción química en seco para separar concentrados sin utilizar agua.",
+        "isCorrect": false,
+        "rationale": "Confunde un modelo de optimización algorítmica con una operación pirometalúrgica o física de concentración."
+      }
+    ],
+    "hint": "Relaciona el término con un modelo matemático enfocado en la maximización de beneficios o minimización de costos bajo restricciones.",
+    "activo": true
+  }
+]

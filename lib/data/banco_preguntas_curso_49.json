@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal del mantenimiento preventivo en la industria?",
+    "opciones": [
+      {
+        "text": "Realizar tareas programadas de inspección, ajuste y lubricación antes de que ocurra una falla.",
+        "rationale": "Este enfoque busca intervenir los equipos de manera planificada y regular para preservar su estado operativo y prevenir paradas no programadas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Intervenir el equipo únicamente cuando este ya ha sufrido una avería que detiene la producción.",
+        "rationale": "Esta descripción corresponde al mantenimiento de tipo correctivo o reactivo, el cual actúa una vez presentada la falla.",
+        "isCorrect": false
+      },
+      {
+        "text": "Modificar el diseño original de la maquinaria para corregir defectos provenientes de fábrica.",
+        "rationale": "La modificación del diseño o rediseño estructural responde a proyectos de ingeniería o mejora proactiva, no al mantenimiento preventivo sistemático.",
+        "isCorrect": false
+      },
+      {
+        "text": "Sustituir por completo todo el parque de máquinas de la planta en cada parada programada.",
+        "rationale": "El reemplazo total de maquinaria no es viable ni rentable de forma rutinaria; el mantenimiento preventivo busca justamente alargar la vida útil de los activos existentes.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminar la necesidad de capacitar al personal técnico encargando las tareas al área comercial.",
+        "rationale": "La ejecución del mantenimiento preventivo exige personal técnico competente y capacitado para garantizar intervenciones de calidad.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en las acciones planificadas que se efectúan con anticipación a la aparición de una avería.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué técnicas se utilizan habitualmente dentro del mantenimiento predictivo para monitorear la condición de los equipos?",
+    "opciones": [
+      {
+        "text": "Análisis de vibraciones, termografía y análisis de aceites.",
+        "rationale": "Estas técnicas de diagnóstico no destructivo permiten evaluar el estado interno de la máquina sin detenerla para anticipar posibles fallas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Limpieza superficial de la pintura externa y lavado del chasis.",
+        "rationale": "La limpieza externa forma parte de las rutinas básicas de conservación o mantenimiento preventivo elemental, no del diagnóstico predictivo tecnológico.",
+        "isCorrect": false
+      },
+      {
+        "text": "Sustitución inmediata de componentes únicamente tras su rotura definitiva.",
+        "rationale": "Sustituir piezas tras la rotura es propio del mantenimiento correctivo y no involucra el monitoreo de condición.",
+        "isCorrect": false
+      },
+      {
+        "text": "Registro manual de la asistencia de los operadores a la planta.",
+        "rationale": "El control de asistencia es una tarea administrativa de recursos humanos sin relación con la condición mecánica de los activos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Calibración aleatoria de instrumentos sin tomar en cuenta datos físicos previa parada.",
+        "rationale": "El mantenimiento predictivo se fundamenta estrictamente en la medición continua de parámetros físicos reales y no en ajustes al azar.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Incluye métodos que miden parámetros físicos del estado operativo sin desarmar la máquina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes afirmaciones corresponden a ventajas o características del mantenimiento preventivo?",
+    "opciones": [
+      {
+        "text": "Mejora la disponibilidad operativa de los activos en planta.",
+        "rationale": "Al programar las paradas e inspecciones, se minimizan las interrupciones inesperadas, manteniendo los activos operativos por más tiempo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Requiere una planificación previa aprobada en un cronograma.",
+        "rationale": "La gestión del mantenimiento preventivo se basa en un plan estructurado y coordinado con operaciones antes de intervenir el equipo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ayuda a reducir el riesgo de fallas imprevistas durante el proceso productivo.",
+        "rationale": "Identificar el desgaste mediante revisiones sistemáticas evita que las averías sorprendan a la línea de producción en pleno trabajo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Se ejecuta únicamente cuando el equipo queda totalmente inactivo debido a una rotura.",
+        "rationale": "Esperar a la inactividad por rotura define al mantenimiento de carácter reaccionario o correctivo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Elimina la necesidad de contar con personal capacitado en la industria.",
+        "rationale": "Planificar y ejecutar inspecciones preventivas exige contar con técnicos e ingenieros debidamente capacitados para detectar anomalías.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera los beneficios directos de planificar intervenciones en lugar de reaccionar ante averías.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una desventaja característica del mantenimiento correctivo no planificado?",
+    "opciones": [
+      {
+        "text": "Costos elevados debido a tiempos de inactividad no programados.",
+        "rationale": "Las paradas intempestivas paralizan la línea de producción, generando pérdidas económicas cuantiosas por horas no trabajadas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Exceso de planificación previa requerida antes de intervenir el equipo.",
+        "rationale": "El mantenimiento correctivo carece de planificación previa, ya que actúa como respuesta inmediata ante la falla repentina.",
+        "isCorrect": false
+      },
+      {
+        "text": "Obligación de instalar sistemas de monitoreo remoto ultracostosos.",
+        "rationale": "El monitoreo remoto mediante sensores está vinculado a estrategias predictivas e Industria 4.0, no a la reparación de emergencia.",
+        "isCorrect": false
+      },
+      {
+        "text": "Aumento involuntario en la duración de la garantía comercial otorgada por el fabricante.",
+        "rationale": "Las averías imprevistas y la falta de mantenimiento no amplían las garantías; por el contrario, pueden invalidarlas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Necesidad de detener las operaciones comerciales de toda la corporación durante meses.",
+        "rationale": "Aunque una falla afecta la línea involucrada, el correctivo busca reparar la máquina para reanudar el trabajo a la brevedad, no cerrar la empresa por meses.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Ocurre cuando el equipo falla inesperadamente en medio del proceso productivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se enfoca principalmente el mantenimiento proactivo?",
+    "opciones": [
+      {
+        "text": "En identificar y eliminar la causa raíz de las fallas para evitar que se repitan.",
+        "rationale": "A través de metodologías como el análisis de causa raíz (RCA), busca erradicar el origen del problema y no solo corregir el síntoma.",
+        "isCorrect": true
+      },
+      {
+        "text": "En corregir la avería de forma reactiva una vez consumado el paro de planta.",
+        "rationale": "Atender la falla solo después de ocurrida corresponde a un enfoque puramente correctivo.",
+        "isCorrect": false
+      },
+      {
+        "text": "En ignorar las especificaciones técnicas del fabricante para reducir costos inmediatos.",
+        "rationale": "Omitir los manuales y especificaciones del fabricante suele incrementar las fallas en lugar de solucionarlas.",
+        "isCorrect": false
+      },
+      {
+        "text": "En comprar repuestos sin ningún tipo de control o filtro presupuestario.",
+        "rationale": "La gestión eficiente exige controlar el inventario y los costos, no adquirir componentes de manera desmedida.",
+        "isCorrect": false
+      },
+      {
+        "text": "En sustituir al personal técnico por supervisores exclusivamente administrativos.",
+        "rationale": "El mantenimiento proactivo requiere de la alta especialización técnica del personal de campo para diagnosticar las causas fundamentales.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Busca ir más allá del síntoma para solucionar el origen básico del problema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes acciones contribuyen a la seguridad y salud ocupacional durante las tareas de mantenimiento industrial?",
+    "opciones": [
+      {
+        "text": "Realizar el procedimiento de aislamiento y bloqueo de energías peligrosas (LOTO).",
+        "rationale": "Cortar el flujo de energía y colocar candados o etiquetas asegura que el equipo no se reenergice accidentalmente mientras es intervenido.",
+        "isCorrect": true
+      },
+      {
+        "text": "Retirar o proteger materiales inflamables como empaques de jebe antes de realizar trabajos en caliente.",
+        "rationale": "Despejar elementos combustibles previene la iniciación de incendios al trabajar con soldadura o amoladoras.",
+        "isCorrect": true
+      },
+      {
+        "text": "Utilizar los Equipos de Protección Personal (EPP) adecuados a la tarea específica.",
+        "rationale": "El uso correcto de casco, lentes, guantes y protección respiratoria o auditiva mitiga el impacto de los peligros presentes en el área.",
+        "isCorrect": true
+      },
+      {
+        "text": "Omitir los permisos de trabajo de alto riesgo para agilizar la entrega del equipo a producción.",
+        "rationale": "Saltarse los permisos de trabajo (PETAR) elimina los controles críticos e incrementa drásticamente la probabilidad de accidentes graves.",
+        "isCorrect": false
+      },
+      {
+        "text": "Operar maquinaria con fallas detectadas a su máxima capacidad hasta que se detenga sola.",
+        "rationale": "Forzar un equipo dañado pone en riesgo inminente la integridad física de los trabajadores cercanos y destruye el activo.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Evalúa las buenas prácticas preventivas mencionadas para prevenir accidentes graves e incendios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué normas internacionales conforman habitualmente la estructura de un Sistema Integrado de Gestión (trinorma)?",
+    "opciones": [
+      {
+        "text": "ISO 9001 (Calidad), ISO 14001 (Medio Ambiente) y ISO 45001 / OHSAS 18001 (Seguridad y Salud Ocupacional).",
+        "rationale": "Estas tres normas combinan los estándares internacionales para gestionar la excelencia operativa, la sostenibilidad ambiental y la protección del trabajador.",
+        "isCorrect": true
+      },
+      {
+        "text": "ISO 27001 (Seguridad de la Información), ISO 50001 (Energía) y CODEX Alimentarius.",
+        "rationale": "Aunque existen, esta combinación no corresponde al esquema trinorma tradicional aplicado en la gestión industrial básica.",
+        "isCorrect": false
+      },
+      {
+        "text": "Reglamento de Tránsito, Código Penal y Normas Gramaticales.",
+        "rationale": "Estos son reglamentos legales y del lenguaje general, no estándares internacionales de gestión empresarial certificables.",
+        "isCorrect": false
+      },
+      {
+        "text": "ISO 14224, IEEE 802.11 y normas de dibujo técnico industrial.",
+        "rationale": "La ISO 14224 abarca recolección de datos de mantenimiento, pero el conjunto listado no conforma un Sistema Integrado de Gestión trinorma.",
+        "isCorrect": false
+      },
+      {
+        "text": "Reglamento interno de trabajo y manual de funciones de la empresa únicamente.",
+        "rationale": "Los documentos internos de una compañía no constituyen una certificación trinorma internacional estandarizada.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Combina los tres pilares tradicionales de calidad, entorno ambiental y protección del trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representa la letra 'M' dentro de la metodología de formulación de objetivos SMART?",
+    "opciones": [
+      {
+        "text": "Medible.",
+        "rationale": "Indica que el objetivo debe poder cuantificarse numéricamente mediante indicadores concretos para verificar su cumplimiento.",
+        "isCorrect": true
+      },
+      {
+        "text": "Manual.",
+        "rationale": "La metodología SMART no exige que los procesos o metas se realicen de forma manual, sino que se puedan cuantificar.",
+        "isCorrect": false
+      },
+      {
+        "text": "Mantenible.",
+        "rationale": "Aunque es un concepto propio del mantenimiento, no es el significado correspondiente a la letra M en el acrónimo SMART.",
+        "isCorrect": false
+      },
+      {
+        "text": "Monetario.",
+        "rationale": "Los objetivos pueden medirse en diversas unidades (porcentaje, tiempo, cantidad) y no se limitan únicamente a dinero.",
+        "isCorrect": false
+      },
+      {
+        "text": "Mínimo.",
+        "rationale": "SMART busca definir metas retadoras y realistas, no establecer únicamente parámetros mínimos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Se refiere a la capacidad de expresar el objetivo mediante indicadores numéricos concretos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué significado tienen las siglas CMMS (o GMAO en español) en la gestión de mantenimiento?",
+    "opciones": [
+      {
+        "text": "Computerized Maintenance Management System (Sistema de Gestión de Mantenimiento Asistido por Computadora).",
+        "rationale": "Hace referencia al software diseñado para organizar, programar y rastrear las actividades de mantenimiento y los activos de una empresa.",
+        "isCorrect": true
+      },
+      {
+        "text": "Control de Motores y Sensores Hidráulicos.",
+        "rationale": "Describe un conjunto de componentes de hardware y no una plataforma de gestión computarizada.",
+        "isCorrect": false
+      },
+      {
+        "text": "Centro de Mecanizado e Ingeniería de Soldadura.",
+        "rationale": "Corresponde a un área de fabricación o taller físico, no a un programa informático de gestión.",
+        "isCorrect": false
+      },
+      {
+        "text": "Software exclusivo para el diseño gráfico de planos arquitectónicos.",
+        "rationale": "Los programas de diseño de planos se conocen como CAD, no como sistemas CMMS de mantenimiento.",
+        "isCorrect": false
+      },
+      {
+        "text": "Protocolo de seguridad para el trabajo en espacios confinados.",
+        "rationale": "Los protocolos de seguridad son procedimientos operativos (PETAR), no herramientas de software informático.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Es el nivel básico informatizado enfocado en la administración de órdenes de trabajo y activos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes constituyen pasos recomendados para la implementación de un Sistema Integrado de Gestión en el área de mantenimiento?",
+    "opciones": [
+      {
+        "text": "Evaluación de las necesidades y del nivel tecnológico inicial de la empresa.",
+        "rationale": "Analizar la línea base técnica y organizativa permite diseñar un sistema adecuado al contexto real de la planta.",
+        "isCorrect": true
+      },
+      {
+        "text": "Definición clara de objetivos de mantenimiento alineados con la estrategia corporativa.",
+        "rationale": "Establecer metas claras orienta las decisiones técnicas hacia la rentabilidad y la disponibilidad requerida.",
+        "isCorrect": true
+      },
+      {
+        "text": "Capacitación y formación continua del personal involucrado.",
+        "rationale": "Educar a los trabajadores asegura que conozcan los procedimientos, las herramientas de software y las normas de seguridad.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ocultamiento deliberado de los registros de fallas para evitar observaciones en las auditorías.",
+        "rationale": "Ocultar información atenta contra la transparencia e impide implementar mejoras reales en el proceso.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminación total de los supervisores de campo para acelerar las reparaciones.",
+        "rationale": "La supervisión adecuada garantiza que el trabajo se ejecute con estándares de calidad y seguridad exigidos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera las fases estructuradas desde el diagnóstico inicial hasta la preparación del talento humano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la práctica de benchmarking aplicada a la gestión industrial?",
+    "opciones": [
+      {
+        "text": "En comparar y tomar como referencia los mejores procesos de empresas líderes para mejorar el desempeño propio.",
+        "rationale": "Consiste en analizar a referentes del sector para adaptar e imitar sus estándares de excelencia en la propia organización.",
+        "isCorrect": true
+      },
+      {
+        "text": "En aplicar sanciones económicas a los técnicos que reporten averías en las máquinas.",
+        "rationale": "Penalizar el reporte de averías desincentiva la transparencia y empeora la condición de los activos.",
+        "isCorrect": false
+      },
+      {
+        "text": "En reemplazar todos los programas informáticos por registros en cuadernos de papel.",
+        "rationale": "El benchmarking promueve la modernización tecnológica y la optimización, no el retroceso a sistemas analógicos desfasados.",
+        "isCorrect": false
+      },
+      {
+        "text": "En detener la planta de manera indefinida hasta recibir quejas de los clientes.",
+        "rationale": "La gestión industrial moderna busca adelantarse a los problemas y asegurar el suministro continuo al cliente.",
+        "isCorrect": false
+      },
+      {
+        "text": "En comprar únicamente maquinaria usada sin realizar inspecciones técnicas previas.",
+        "rationale": "Adquirir equipos sin inspección previa incrementa el riesgo operativo y contraría los principios de confiabilidad.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Consiste en evaluar a los referentes del mercado para aprender de sus aciertos e imitar estándares de excelencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué beneficios se obtienen al integrar un Sistema Integrado de Gestión (SIG) con las operaciones de mantenimiento?",
+    "opciones": [
+      {
+        "text": "Aumento en la eficiencia operativa y en la calidad de las intervenciones.",
+        "rationale": "Estandarizar procedimientos bajo la ISO 9001 reduce los trabajos repetidos y asegura la calidad desde la primera intervención.",
+        "isCorrect": true
+      },
+      {
+        "text": "Reducción de costos derivados de incidentes laborales e interrupciones.",
+        "rationale": "Aplicar normas de seguridad y prevención evita accidentes que generan egresos económicos e inactividad laboral.",
+        "isCorrect": true
+      },
+      {
+        "text": "Control adecuado de los impactos ambientales y manejo sostenido de residuos.",
+        "rationale": "Alinear los procesos con la norma ambiental permite gestionar aceites, lubricantes y piezas usadas sin contaminar.",
+        "isCorrect": true
+      },
+      {
+        "text": "Garantía de que los motores funcionarán de forma perpetua sin consumir ningún tipo de energía.",
+        "rationale": "Ningún sistema de gestión elimina las leyes físicas ni el consumo energético de la maquinaria.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminación completa de la necesidad de almacenar repuestos críticos en bodega.",
+        "rationale": "Los repuestos críticos siempre son necesarios; el SIG ayuda a gestionar el inventario de manera óptima, no a eliminarlo por completo.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en los resultados positivos asociados a los pilares de calidad, seguridad y medio ambiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué significan las siglas KPI en el ámbito de la gestión del mantenimiento y la producción?",
+    "opciones": [
+      {
+        "text": "Key Performance Indicator (Indicador Clave de Desempeño).",
+        "rationale": "Es una métrica cuantitativa que evalúa la efectividad y el rendimiento de un proceso clave en la organización.",
+        "isCorrect": true
+      },
+      {
+        "text": "Known Process Inspection (Inspección de Proceso Conocido).",
+        "rationale": "No es la traducción ni el concepto correspondiente al acrónimo KPI en la gestión empresarial.",
+        "isCorrect": false
+      },
+      {
+        "text": "Key Plan Integration (Integración del Plan Clave).",
+        "rationale": "Aunque la integración de planes existe, estas siglas no corresponden al término estandarizado para métricas de desempeño.",
+        "isCorrect": false
+      },
+      {
+        "text": "Knowledge Program Index (Índice del Programa de Conocimiento).",
+        "rationale": "Esta frase no representa la definición técnica de los indicadores claves de gestión utilizados en la industria.",
+        "isCorrect": false
+      },
+      {
+        "text": "Keep Preventive Maintenance (Mantener el Mantenimiento Preventivo).",
+        "rationale": "No es una sigla válida de la gestión industrial, sino un enunciado en inglés relacionado con el mantenimiento preventivo.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Es un término en inglés utilizado para nombrar las métricas fundamentales que miden el rendimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué mide principalmente el indicador MTBF (Mean Time Between Failures)?",
+    "opciones": [
+      {
+        "text": "El tiempo promedio de operación transcurrido entre las fallas de un equipo reparable.",
+        "rationale": "Mide el intervalo medio de tiempo en que un activo funciona correctamente antes de sufrir una parada por falla.",
+        "isCorrect": true
+      },
+      {
+        "text": "El costo económico total invertido en cambiar un rodamiento dañado.",
+        "rationale": "El MTBF es una métrica de tiempo y confiabilidad, no un indicador expresado en unidades monetarias.",
+        "isCorrect": false
+      },
+      {
+        "text": "La cantidad de horas que el personal dedica a reuniones de seguridad al mes.",
+        "rationale": "El indicador se enfoca en el comportamiento operativo de las máquinas, no en las horas de capacitación humana.",
+        "isCorrect": false
+      },
+      {
+        "text": "El tiempo en días que tarda un repuesto importado en llegar al almacén.",
+        "rationale": "El tiempo de llegada de un repuesto se conoce como tiempo de reabastecimiento o lead time logístico.",
+        "isCorrect": false
+      },
+      {
+        "text": "El número de herramientas prestadas en el taller durante un turno de trabajo.",
+        "rationale": "La entrega de herramientas es un control de inventario básico que no mide la confiabilidad del equipo en operación.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Es una métrica de confiabilidad que cuantifica el intervalo de operación continua entre averías.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representa el indicador MTTR (Mean Time To Repair)?",
+    "opciones": [
+      {
+        "text": "El tiempo promedio necesario para reparar un equipo e interrupción tras la ocurrencia de una falla.",
+        "rationale": "Cuantifica la efectividad y velocidad del equipo técnico para diagnosticar y solucionar una avería hasta devolver la operatividad.",
+        "isCorrect": true
+      },
+      {
+        "text": "El tiempo máximo que un equipo puede estar almacenado sin ser utilizado.",
+        "rationale": "El tiempo de almacenamiento sin uso se relaciona con inventarios o preservación de activos, no con el tiempo de reparación.",
+        "isCorrect": false
+      },
+      {
+        "text": "La cantidad total de litros de aceite lubricante consumidos por una bomba.",
+        "rationale": "El consumo de lubricante se mide en volumen e indica gasto de insumos, no tiempo de reparación de fallas.",
+        "isCorrect": false
+      },
+      {
+        "text": "La tasa anual de accidentes laborales reportados en el área de taller.",
+        "rationale": "Los accidentes se miden mediante tasas de frecuencia o severidad en seguridad, no con el tiempo técnico de reparación.",
+        "isCorrect": false
+      },
+      {
+        "text": "El volumen total de producción vendido por el departamento comercial.",
+        "rationale": "El volumen de ventas es un indicador de ingresos comerciales ajeno a las tareas de intervención mecánica.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Mide la rapidez o eficiencia del equipo de mantenimiento para solucionar una avería.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes características corresponden al Principio de Pareto (o regla 80/20) aplicado al análisis de fallas?",
+    "opciones": [
+      {
+        "text": "Sostiene que aproximadamente el 20% de las causas produce el 80% de los problemas o costos de parada.",
+        "rationale": "El principio demuestra que una minoría de factores es responsable de la gran mayoría de los efectos negativos en la planta.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ayuda a priorizar cuáles problemas críticos se deben atacar primero para obtener el mayor impacto positivo.",
+        "rationale": "Permite concentrar los recursos y esfuerzos del equipo de mantenimiento en resolver los 'pocos vitales'.",
+        "isCorrect": true
+      },
+      {
+        "text": "Se representa gráficamente mediante un diagrama que combina barras descendentes y una curva acumulada.",
+        "rationale": "El diagrama de Pareto ordena los problemas de mayor a menor frecuencia y traza el porcentaje acumulado para facilitar su análisis.",
+        "isCorrect": true
+      },
+      {
+        "text": "Establece que se debe corregir el 100% de los detalles insignificantes antes de tocar las causas principales.",
+        "rationale": "El principio busca exactamente lo contrario: no perder tiempo en detalles triviales sin antes solucionar los problemas con mayor impacto.",
+        "isCorrect": false
+      },
+      {
+        "text": "Fue desarrollado exclusivamente para medir temperaturas extremas en hornos siderúrgicos.",
+        "rationale": "Es un principio estadístico de aplicación universal en gestión, economía y calidad, no una herramienta de medición de temperatura.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica la regla porcentual que distingue los 'pocos vitales' de los 'muchos triviales'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representa el concepto de Backlog dentro de la planificación del mantenimiento?",
+    "opciones": [
+      {
+        "text": "La carga de trabajo acumulada expresada en tiempo que representa las tareas de mantenimiento pendientes de ejecución.",
+        "rationale": "Muestra la cantidad de horas-hombre de trabajo aprobadas y programadas que aún no han sido ejecutadas por el equipo.",
+        "isCorrect": true
+      },
+      {
+        "text": "La lista completa de proveedores nacionales e internacionales autorizados para compras.",
+        "rationale": "El registro de proveedores es una base de datos logitudinal del área de compras, no una métrica de trabajo acumulado.",
+        "isCorrect": false
+      },
+      {
+        "text": "El conteo físico de las herramientas manuales existentes en el almacén principal.",
+        "rationale": "El conteo de herramientas es una auditoría de inventario de activos fijos del taller.",
+        "isCorrect": false
+      },
+      {
+        "text": "El consumo total de energía eléctrica registrado durante las horas pico de producción.",
+        "rationale": "El consumo eléctrico es un parámetro de eficiencia energética y costo operativo, no de horas pendientes de mantenimiento.",
+        "isCorrect": false
+      },
+      {
+        "text": "El historial de las pólizas de seguro vigentes para los vehículos de la compañía.",
+        "rationale": "El control de pólizas es un trámite administrativo y legal, sin relación con el trabajo técnico acumulado.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Es una métrica de tiempo o volumen que indica el trabajo programado aún no realizado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes variables son necesarias para calcular la disponibilidad operacional de un equipo?",
+    "opciones": [
+      {
+        "text": "Horas totales planeadas o laborales del periodo evaluado.",
+        "rationale": "Representa el tiempo base total en el cual se esperaba que el equipo estuviera listo para operar.",
+        "isCorrect": true
+      },
+      {
+        "text": "Tiempo total acumulado de paradas por mantenimiento preventivo programado.",
+        "rationale": "Las paradas planificadas se descuentan del tiempo disponible total al evaluar la operatividad real.",
+        "isCorrect": true
+      },
+      {
+        "text": "Tiempo total acumulado de paradas por mantenimiento correctivo no programado.",
+        "rationale": "Las fallas imprevistas restan tiempo útil de operación y deben contabilizarse para determinar la disponibilidad final.",
+        "isCorrect": true
+      },
+      {
+        "text": "Número de publicaciones realizadas por la empresa en redes sociales.",
+        "rationale": "La actividad en plataformas de comunicación digital no influye en las horas mecánicas de operación de la planta.",
+        "isCorrect": false
+      },
+      {
+        "text": "Marca comercial de las llantas utilizadas por los vehículos de los gerentes.",
+        "rationale": "El modelo de neumáticos de la flota administrativa carece de relevancia para medir la disponibilidad de los equipos de línea.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Relaciona el tiempo total operativo previsto con las pérdidas de tiempo acumuladas por intervención.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una característica central que define a la Industria 4.0?",
+    "opciones": [
+      {
+        "text": "La integración de sistemas ciberfísicos, automatización avanzada, Big Data e Internet de las Cosas (IoT).",
+        "rationale": "Combina el mundo físico de la producción con tecnologías digitales conectadas para la toma de decisiones en tiempo real.",
+        "isCorrect": true
+      },
+      {
+        "text": "La invención de la máquina de vapor impulsada por carbón para reemplazar el trabajo animal.",
+        "rationale": "La máquina de vapor y el carbón fueron los motores de la Primera Revolución Industrial a finales del siglo XVIII.",
+        "isCorrect": false
+      },
+      {
+        "text": "La adopción del trabajo puramente artesanal sin el uso de computadoras o sensores.",
+        "rationale": "El trabajo artesanal precedió a la industrialización; la Industria 4.0 se basa intensivamente en computación y sensores.",
+        "isCorrect": false
+      },
+      {
+        "text": "El abandono de las redes de comunicación inalámbricas para regresar al uso exclusivo del cableado básico.",
+        "rationale": "La Industria 4.0 impulsa la conectividad inalámbrica masiva y no el retroceso a infraestructuras limitadas.",
+        "isCorrect": false
+      },
+      {
+        "text": "La eliminación completa de la energía eléctrica en los talleres de mecanizado.",
+        "rationale": "La energía eléctrica es la base fundamental sobre la que se apoya la automatización y la digitalización actual.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Representa la era de la transformación digital, conectividad masiva y datos en tiempo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de los sensores de Internet de las Cosas (IoT) instalados en la maquinaria industrial?",
+    "opciones": [
+      {
+        "text": "Capturar variables físicas (como temperatura o vibración) y transmitirlas en tiempo real para su análisis.",
+        "rationale": "Miden continuamente parámetros clave de operación y envían los datos a plataformas digitales para monitorear la salud del activo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Limpiar físicamente el polvo de la superficie de las fajas transportadoras de forma autónoma.",
+        "rationale": "Un sensor se encarga de medir y transmitir datos; la limpieza física requiere de actuadores o sistemas de limpieza dedicados.",
+        "isCorrect": false
+      },
+      {
+        "text": "Redactar los contratos laborales del personal técnico de la empresa.",
+        "rationale": "La elaboración de contratos es un procedimiento legal de recursos humanos que no realiza un sensor mecánico.",
+        "isCorrect": false
+      },
+      {
+        "text": "Bloquear intencionadamente las señales de internet para evitar la fuga de datos.",
+        "rationale": "Los sensores IoT necesitan conectarse a la red para transmitir información, no inhibir las señales de comunicación.",
+        "isCorrect": false
+      },
+      {
+        "text": "Incrementar manualmente el peso de las piezas dentro del proceso de molienda.",
+        "rationale": "Los sensores miden las condiciones del proceso pero no alteran la masa o densidad física de los materiales.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Consiste en recopilar datos físicos del entorno y enviarlos continuamente para monitoreo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes 'V' corresponden a las características fundamentales que definen al concepto de Big Data?",
+    "opciones": [
+      {
+        "text": "Volumen (gran cantidad o masa de datos generados).",
+        "rationale": "Alude a la escala masiva de datos recolectados que supera la capacidad de las herramientas informáticas tradicionales.",
+        "isCorrect": true
+      },
+      {
+        "text": "Velocidad (rapidez con la que se generan y procesan los datos).",
+        "rationale": "Hace referencia al flujo constante e inmediato en que la información es capturada y requiere ser analizada.",
+        "isCorrect": true
+      },
+      {
+        "text": "Variedad (diversidad de formatos, estructurados y no estructurados).",
+        "rationale": "Abarca los múltiples tipos de datos que se reciben, desde números y textos hasta señales de audio y video.",
+        "isCorrect": true
+      },
+      {
+        "text": "Veracidad (calidad, fiabilidad y limpieza de los datos recolectados).",
+        "rationale": "Asegura que la información sea exacta y confiable para que los análisis cuantitativos generen conclusiones válidas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Venganza (capacidad del software para sancionar los descuidos del operador).",
+        "rationale": "No forma parte de las dimensiones analíticas del Big Data; los datos son neutrales y orientados a la optimización de procesos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera las 'V' analíticas que describen la escala, velocidad, tipos y confiabilidad de los datos masivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el mantenimiento inteligente (o Mantenimiento 5.0)?",
+    "opciones": [
+      {
+        "text": "En combinar herramientas digitales, análisis de datos y robótica en colaboración simbiótica con el ser humano.",
+        "rationale": "Busca potenciar el trabajo del personal técnico mediante la integración de sensores, inteligencia artificial y automatización proactiva.",
+        "isCorrect": true
+      },
+      {
+        "text": "En suspender todo mantenimiento hasta que la fábrica se detenga por completo.",
+        "rationale": "Esperar al colapso total destruye el valor de los activos e incrementa drásticamente los costos operativos.",
+        "isCorrect": false
+      },
+      {
+        "text": "En prohibir el uso de programas de cómputo y usar únicamente ficheros físicos de papel.",
+        "rationale": "El mantenimiento inteligente impulsa la transformación digital y prescinde de los registros manuales en papel.",
+        "isCorrect": false
+      },
+      {
+        "text": "En ceder la responsabilidad de la reparación de los motores a los clientes de la empresa.",
+        "rationale": "Las labores de mantenimiento son responsabilidad técnica de la planta y no se transfieren a los compradores del producto.",
+        "isCorrect": false
+      },
+      {
+        "text": "En forzar los equipos a operar por encima de sus límites térmicos tolerables de forma continua.",
+        "rationale": "Operar fuera de los límites operacionales acelera el desgaste destructivo y elimina la confiabilidad del activo.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Es una combinación simbiótica entre tecnología, datos, software y la supervisión del mantenedor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la principal característica distintiva del mantenimiento prescriptivo frente a otros enfoques?",
+    "opciones": [
+      {
+        "text": "Además de predecir la falla, proporciona recomendaciones y opciones de acciones operativas concretas.",
+        "rationale": "Va un paso más allá de la predicción, proponiendo la receta técnica o solución específica que el mantenedor debe ejecutar.",
+        "isCorrect": true
+      },
+      {
+        "text": "Se ejecuta exclusivamente mediante el llenado de planillas manuscritas en papel.",
+        "rationale": "El enfoque prescriptivo utiliza algoritmos avanzados e inteligencia artificial, no formatos analógicos manuales.",
+        "isCorrect": false
+      },
+      {
+        "text": "Desecha la información histórica recopilada por los sensores de condición.",
+        "rationale": "Se fundamenta profundamente en los datos históricos y en tiempo real para generar sus prescripciones analíticas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Exige reemplazar la máquina completa cada vez que inicia un nuevo turno de trabajo.",
+        "rationale": "Sustituir máquinas en cada turno resulta astronómicamente costoso e inviable en cualquier industria.",
+        "isCorrect": false
+      },
+      {
+        "text": "Se aplica únicamente después de que el equipo ha sufrido una explosión o siniestro total.",
+        "rationale": "Actúa de manera proactiva e inteligente antes de que ocurra la falla o desastre mecánico.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Actúa como un médico especialista que no solo diagnostica, sino que receta la solución idónea.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes son aplicaciones directas de la Inteligencia Artificial (IA) en la gestión moderna del mantenimiento?",
+    "opciones": [
+      {
+        "text": "Identificación de patrones anómalos mediante modelos analíticos predictivos.",
+        "rationale": "Los algoritmos evalúan millones de datos para encontrar desviaciones imperceptibles al ojo humano antes de que causen una avería.",
+        "isCorrect": true
+      },
+      {
+        "text": "Optimización de la programación y asignación inteligente de tareas al personal.",
+        "rationale": "La IA analiza la disponibilidad de repuestos, la criticidad del equipo y la carga de trabajo para generar la programación óptima.",
+        "isCorrect": true
+      },
+      {
+        "text": "Proyección y cálculo automatizado de las curvas de confiabilidad de los activos.",
+        "rationale": "Procesa la historia de fallas para estimar matemáticamente la probabilidad de funcionamiento continuo sin interrupciones.",
+        "isCorrect": true
+      },
+      {
+        "text": "Generación artesanal de combustible sintético dentro de las oficinas administrativas.",
+        "rationale": "La IA procesa datos e información; no produce físicamente químicos o combustibles en un entorno de oficina.",
+        "isCorrect": false
+      },
+      {
+        "text": "Sustitución inmediata del oxígeno en socavones mineros por gases comprimidos.",
+        "rationale": "La ventilación en mina busca suministrar aire respirable seguro; alterar la atmósfera atentaría contra la vida de los trabajadores.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en algoritmos capaces de procesar grandes volúmenes de datos para proyectar comportamiento operativo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué componente de una solución de Internet de las Cosas (IoT) corresponde a los dispositivos físicos encargados de tomar las mediciones del activo?",
+    "opciones": [
+      {
+        "text": "Hardware / Sensores.",
+        "rationale": "Son los elementos físicos tangibles adheridos al equipo que detectan las variaciones de vibración, temperatura, presión o sonido.",
+        "isCorrect": true
+      },
+      {
+        "text": "Interfaz gráfica de mercadeo.",
+        "rationale": "Las interfaces de marketing están orientadas a la difusión comercial y no a la captura física de parámetros mecánicos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Protocolo administrativo de jubilación.",
+        "rationale": "Es un trámite legal de gestión de recursos humanos sin relación con los dispositivos físicos de medición.",
+        "isCorrect": false
+      },
+      {
+        "text": "Informe impreso de auditoría contable.",
+        "rationale": "Es un documento en papel con resultados financieros pasados, no un dispositivo electrónico de adquisición de datos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Manual de convivencia y conducta empresarial.",
+        "rationale": "Es un código normativo de comportamiento interno que no cumple ninguna función de captura electrónica de señales.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Se refiere a los componentes tangibles o dispositivos físicos de adquisición de datos colocados sobre el activo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la evolución histórica de la gestión del mantenimiento, ¿cuál es la diferencia fundamental entre el enfoque tradicional de principios del siglo XX y el enfoque predictivo?",
+    "opciones": [
+      {
+        "text": "El enfoque tradicional intervenía los equipos únicamente tras la manifestación de la falla, mientras que el predictivo utiliza monitoreo de condición para detectar anomalías antes de que el fallo ocurra.",
+        "isCorrect": true,
+        "rationale": "El paradigma tradicional era puramente reactivo ante averías visibles, mientras que las técnicas predictivas analizan parámetros físicos en tiempo real para anticipar el fallo."
+      },
+      {
+        "text": "El enfoque tradicional se basaba en análisis de causa raíz (RCA), mientras que el predictivo elimina el monitoreo continuo para reducir costos.",
+        "isCorrect": false,
+        "rationale": "El análisis de causa raíz caracteriza al mantenimiento proactivo, no al tradicional reactivo, y el predictivo intensifica el monitoreo en lugar de eliminarlo."
+      },
+      {
+        "text": "El enfoque tradicional utilizaba inspecciones basadas en sensores avanzados, mientras que el predictivo depende de paradas imprevistas no programadas.",
+        "isCorrect": false,
+        "rationale": "Los sensores avanzados son propios del mantenimiento predictivo moderno, mientras que las paradas no programadas caracterizan las fallas del modelo tradicional."
+      },
+      {
+        "text": "El enfoque tradicional programaba paradas basadas en el tiempo de recorrido, mientras que el predictivo interviene las máquinas de forma reactiva ante emergencias.",
+        "isCorrect": false,
+        "rationale": "La programación basada en intervalos de tiempo o uso corresponde al mantenimiento preventivo, no al reactivo tradicional."
+      },
+      {
+        "text": "El enfoque tradicional reemplazaba activos de manera continua sin usar la máquina, mientras que el predictivo efectúa arreglos en caliente sin evaluación técnica.",
+        "isCorrect": false,
+        "rationale": "Ninguna estrategia industrial reemplaza activos de manera continua sin operar, y el predictivo requiere de evaluaciones técnicas rigurosas de la condición."
+      }
+    ],
+    "hint": "Considera el momento en que se efectúa la intervención operativa y las herramientas tecnológicas utilizadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una consecuencia operativa crítica de abusar del mantenimiento correctivo en comparación con la implementación de un plan de mantenimiento preventivo?",
+    "opciones": [
+      {
+        "text": "Genera elevados costos por tiempos de inactividad no planificados y riesgos de paradas de planta no programadas.",
+        "isCorrect": true,
+        "rationale": "Esperar a que el equipo falle interrumpe intempestivamente la cadena de producción, elevando los costos por pérdida de productividad y daños secundarios."
+      },
+      {
+        "text": "Incrementa innecesariamente la frecuencia de lubricación y calibración programada en las máquinas.",
+        "isCorrect": false,
+        "rationale": "Las tareas rutinarias de lubricación y calibración son elementos característicos de un esquema preventivo, no del correctivo."
+      },
+      {
+        "text": "Exige la compra anticipada de repuestos que no se utilizarán en el corto ni mediano plazo.",
+        "isCorrect": false,
+        "rationale": "La planificación e inventario anticipado de repuestos corresponde a la gestión preventiva organizada, mientras que el correctivo suele generar compras de emergencia."
+      },
+      {
+        "text": "Eleva la disponibilidad operacional de los activos físicos por encima de los estándares esperados.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento correctivo reactivo degrada la disponibilidad operacional debido a paradas imprevistas prolongadas."
+      },
+      {
+        "text": "Reduce la necesidad de realizar bloqueos y etiquetados de seguridad (LOTO) durante la intervención.",
+        "isCorrect": false,
+        "rationale": "Los protocolos de aislamiento de energía (LOTO) son obligatorios ante cualquier intervención, independientemente de si es preventiva o correctiva."
+      }
+    ],
+    "hint": "Analiza cómo afecta la falta de programación a los costos operativos y a la continuidad del proceso productivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes técnicas diagnósticas forman parte de las herramientas empleadas en el mantenimiento predictivo para evaluar el estado real de un equipo sin desarmarlo?",
+    "opciones": [
+      {
+        "text": "Análisis de vibraciones mecánicas.",
+        "isCorrect": true,
+        "rationale": "Permite identificar desalineaciones, desbalances o desgaste en rodamientos al monitorear las frecuencias asociadas."
+      },
+      {
+        "text": "Termografía infrarroja.",
+        "isCorrect": true,
+        "rationale": "Detecta puntos calientes anómalos causados por fricción excesiva o fallas eléctricas antes de la avería."
+      },
+      {
+        "text": "Análisis físico-químico de aceites y lubricantes.",
+        "isCorrect": true,
+        "rationale": "Mide la degradación del fluido y la presencia de partículas metálicas de desgaste en los componentes."
+      },
+      {
+        "text": "Inspección por ultrasonido.",
+        "isCorrect": true,
+        "rationale": "Captura emisiones acústicas de alta frecuencia para detectar fugas de fluidos o fallas tempranas en elementos rotativos."
+      },
+      {
+        "text": "Corrección reactiva tras la ruptura de componentes.",
+        "isCorrect": false,
+        "rationale": "Esta acción se realiza cuando el daño ya ocurrió, perteneciendo al mantenimiento correctivo y no al monitoreo predictivo."
+      }
+    ],
+    "hint": "Identifica métodos no destructivos de monitoreo de condición física y química del activo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un equipo de mantenimiento busca erradicar fallas recurrentes analizando los problemas desde su origen y rediseñando componentes. ¿A qué tipo de mantenimiento corresponde este enfoque?",
+    "opciones": [
+      {
+        "text": "Mantenimiento proactivo.",
+        "isCorrect": true,
+        "rationale": "Esta estrategia aplica metodologías como el análisis de causa raíz (RCA) para eliminar la causa origen de las fallas e integrar mejoras continuas."
+      },
+      {
+        "text": "Mantenimiento correctivo de emergencia.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento correctivo reactivo repara la avería del momento sin solucionar necesariamente la causa raíz subyacente."
+      },
+      {
+        "text": "Mantenimiento autónomo nivel 1.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento autónomo involucra tareas operativas básicas desarrolladas por los usuarios de la máquina, como limpieza y lubricación."
+      },
+      {
+        "text": "Mantenimiento preventivo sistemático.",
+        "isCorrect": false,
+        "rationale": "El preventivo sistemático ejecuta tareas a intervalos fijos predeterminados pero no necesariamente rediseña o analiza la causa raíz del fallo."
+      },
+      {
+        "text": "Mantenimiento tradicional reactivo.",
+        "isCorrect": false,
+        "rationale": "El enfoque tradicional reactivo actúa tras la interrupción operativa sin buscar eliminar sistemáticamente la causa primaria."
+      }
+    ],
+    "hint": "Se enfoca en la mejora continua y en el análisis de causa raíz (RCA) para prevenir reincidencias futuras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Antes de realizar la intervención mecánica de un equipo en una línea de producción, ¿cuál es el procedimiento de seguridad indispensable que garantiza el aislamiento seguro de energía?",
+    "opciones": [
+      {
+        "text": "Aplicación del procedimiento de bloqueo y etiquetado de seguridad (LOTO).",
+        "isCorrect": true,
+        "rationale": "Garantiza la desenergización total del equipo y evita su rearranque accidental mediante dispositivos físicos de bloqueo y candados de seguridad."
+      },
+      {
+        "text": "Evaluación mediante termografía en caliente durante la operación.",
+        "isCorrect": false,
+        "rationale": "La termografía en caliente es una técnica de diagnóstico predictivo y no constituye un procedimiento de aislamiento de seguridad previo a la intervención."
+      },
+      {
+        "text": "Ejecución de un análisis de aceite en estado de marcha.",
+        "isCorrect": false,
+        "rationale": "Tomar muestras de aceite es un monitoreo de condición, no un protocolo de corte seguro de energía antes de desmontar piezas."
+      },
+      {
+        "text": "Calibración directa del sensor de aceleración del motor.",
+        "isCorrect": false,
+        "rationale": "La calibración de instrumentación no previene la liberación accidental de energía mecánica, eléctrica o hidráulica."
+      },
+      {
+        "text": "Solicitud de incremento de velocidad en el variador de frecuencia.",
+        "isCorrect": false,
+        "rationale": "Aumentar la velocidad del motor incrementa la energía operativa y el riesgo para el personal en lugar de aislarlo."
+      }
+    ],
+    "hint": "Se refiere al protocolo estandarizado de aislamiento de energías peligrosas ampliamente usado en la industria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿De qué manera una estrategia de mantenimiento bien planificada protege la rentabilidad y productividad global de una planta industrial?",
+    "opciones": [
+      {
+        "text": "Minimiza los tiempos muertos por paradas no programadas en las líneas operativas.",
+        "isCorrect": true,
+        "rationale": "Evita la inactividad de las líneas de producción, manteniendo constante el flujo operativo."
+      },
+      {
+        "text": "Permite operar con líneas en reserva (standby) para asumir la carga mientras se realiza el preventivo de otras.",
+        "isCorrect": true,
+        "rationale": "Facilita la continuidad del proceso sin sacrificar la tasa global de producción requerida por la planta."
+      },
+      {
+        "text": "Extiende la vida útil operativa de los activos físicos de la empresa.",
+        "isCorrect": true,
+        "rationale": "Conserva la integridad mecánica de los equipos, retrasando las inversiones de capital por reemplazo prematuro."
+      },
+      {
+        "text": "Garantiza que la tasa de producción no caiga por fallas mecánicas imprevistas.",
+        "isCorrect": true,
+        "rationale": "Mantiene el rendimiento volumétrico previsto dentro de los márgenes planificados."
+      },
+      {
+        "text": "Permite prescindir completamente del uso de repuestos y componentes de cambio.",
+        "isCorrect": false,
+        "rationale": "Cualquier programa de mantenimiento requiere la gestión óptima de insumos y repuestos para reemplazar elementos desgastados."
+      }
+    ],
+    "hint": "Evalúa cómo afecta el estado de los equipos a la disponibilidad de las líneas de producción y a los activos de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué normas internacionales integran comúnmente un Sistema Integrado de Gestión (SIG) trinorma en el ámbito industrial?",
+    "opciones": [
+      {
+        "text": "ISO 9001, ISO 14001 y OHSAS 18001 / ISO 45001.",
+        "isCorrect": true,
+        "rationale": "Engloba los tres pilares estándar: Gestión de la Calidad (ISO 9001), Gestión Ambiental (ISO 14001) y Seguridad y Salud Ocupacional (OHSAS 18001/ISO 45001)."
+      },
+      {
+        "text": "ISO 14224, ISO 31000 e ISO 27001.",
+        "isCorrect": false,
+        "rationale": "Estas normas regulan la recolección de datos de confiabilidad, gestión de riesgos e informática, pero no constituyen el SIG trinorma clásico."
+      },
+      {
+        "text": "ASME B30.5, ANSI Z359 e ISO 50001.",
+        "isCorrect": false,
+        "rationale": "Corresponden a estándares técnicos específicos para grúas, protección contra caídas y gestión de energía, respectivamente."
+      },
+      {
+        "text": "ISO 17025, ISO 22000 y OHSAS 18001.",
+        "isCorrect": false,
+        "rationale": "La norma ISO 17025 aplica a laboratorios de ensayo y la ISO 22000 a inocuidad alimentaria, no al marco industrial general."
+      },
+      {
+        "text": "ISO 9001, AWS D1.1 e ISO 14224.",
+        "isCorrect": false,
+        "rationale": "AWS D1.1 es un código de soldadura estructural y no una norma de sistema de gestión organizacional."
+      }
+    ],
+    "hint": "Agrupa los tres pilares fundamentales: calidad, gestión ambiental, y seguridad y salud en el trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al establecer un objetivo dentro del plan de gestión de mantenimiento bajo la metodología SMART, ¿qué ejemplo demuestra el criterio de ser 'Realista'?",
+    "opciones": [
+      {
+        "text": "Fijar una meta de disponibilidad alcanzable, como un $95\\%$, en lugar de exigir un impracticable $100\\%$ de disponibilidad operacional.",
+        "isCorrect": true,
+        "rationale": "Contempla paradas inevitables por servicio o imprevistos de operación, estableciendo un parámetro alcanzable y realista."
+      },
+      {
+        "text": "Exigir la eliminación total de la necesidad de lubricación y mantenimiento en todos los activos mecánicos.",
+        "isCorrect": false,
+        "rationale": "Eliminar la degradación física y la fricción por completo atenta contra los principios mecánicos, resultando irreal."
+      },
+      {
+        "text": "Redactar el objetivo de manera vaga sin indicar métricas concretas ni tiempos de ejecución.",
+        "isCorrect": false,
+        "rationale": "La falta de métricas contradice la esencia de los criterios SMART, en especial lo Específico (S) y Medible (M)."
+      },
+      {
+        "text": "Asignar la responsabilidad del cumplimiento de la disponibilidad exclusivamente a los contratistas externos.",
+        "isCorrect": false,
+        "rationale": "Asignar toda la responsabilidad a externos ignora el control operativo del usuario interno y no garantiza la viabilidad de la meta."
+      },
+      {
+        "text": "Medir el cumplimiento del indicador únicamente al finalizar un horizonte irrestricto de 10 años.",
+        "isCorrect": false,
+        "rationale": "Los objetivos SMART requieren límites de tiempo acotados (T) para la evaluación continua y oportuna del desempeño."
+      }
+    ],
+    "hint": "Distingue entre metas alcanzables basadas en la realidad operativa e imposiciones irrealizables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se diferencia principalmente un Sistema de Gestión de Activos Empresarial (EAM) respecto a un Sistema de Gestión de Mantenimiento Asistido por Computadora (CMMS) básico?",
+    "opciones": [
+      {
+        "text": "El EAM engloba la gestión del activo interactuando con finanzas, compras, almacén y RR.HH., mientras que el CMMS se centra en el control técnico de órdenes de trabajo.",
+        "isCorrect": true,
+        "rationale": "El EAM gestiona el ciclo de vida estratégico e interdepartamental del activo, superando el alcance de la administración de órdenes operativas del CMMS."
+      },
+      {
+        "text": "El EAM se ejecuta únicamente en hojas de cálculo locales, mientras que el CMMS requiere servidores corporativos dedicados.",
+        "isCorrect": false,
+        "rationale": "El EAM es una solución de software empresarial compleja y no se limita al uso de hojas de cálculo aisladas."
+      },
+      {
+        "text": "El CMMS gestiona la planificación financiera global de la empresa, mientras que el EAM solo registra listas de verificación manuales.",
+        "isCorrect": false,
+        "rationale": "La planificación financiera es alcance corporativo del EAM o ERP, no de un software de mantenimiento básico."
+      },
+      {
+        "text": "El EAM excluye la gestión de repuestos e inventarios, dejando esa función únicamente al CMMS.",
+        "isCorrect": false,
+        "rationale": "Una característica distintiva del EAM es su integración nativa con la cadena de suministro y la logística de repuestos."
+      },
+      {
+        "text": "El CMMS automatiza la toma de datos mediante sensores IoT, mientras que el EAM elimina el uso de software informático.",
+        "isCorrect": false,
+        "rationale": "Ambos sistemas requieren software informático, y la integración IoT aplica a arquitecturas avanzadas de ambas plataformas."
+      }
+    ],
+    "hint": "El EAM aborda el ciclo de vida completo del activo interaccionando con múltiples áreas organizacionales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes fases son etapas fundamentales en la implementación ordenada de un Sistema Integrado de Gestión (SIG) enfocado en mantenimiento?",
+    "opciones": [
+      {
+        "text": "Evaluación inicial de necesidades operativas y nivel tecnológico.",
+        "isCorrect": true,
+        "rationale": "Establece la línea base para comprender la madurez de los procesos e infraestructura actual."
+      },
+      {
+        "text": "Definición de objetivos e indicadores de desempeño SMART.",
+        "isCorrect": true,
+        "rationale": "Define las metas cuantitativas y alineadas con la estrategia que guiarán el sistema de gestión."
+      },
+      {
+        "text": "Selección y parametrización de la herramienta tecnológica o software de soporte.",
+        "isCorrect": true,
+        "rationale": "Permite estructurar los flujos de datos y automatizar el control de las tareas programadas."
+      },
+      {
+        "text": "Capacitación continua del personal e involucramiento de equipos naturales de trabajo.",
+        "isCorrect": true,
+        "rationale": "Garantiza las competencias técnicas, mitiga la resistencia al cambio y compromete a la organización."
+      },
+      {
+        "text": "Omisión de auditorías periódicas y eliminación de registros documentales.",
+        "isCorrect": false,
+        "rationale": "La falta de trazabilidad y auditorías destruye el principio de mejora continua en cualquier sistema de gestión."
+      }
+    ],
+    "hint": "Revisa el proceso secuencial desde la preparación inicial hasta la verificación continua del desempeño.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión moderna del mantenimiento, ¿en qué consiste la práctica del Benchmarking?",
+    "opciones": [
+      {
+        "text": "En estudiar y comparar los procesos e indicadores propios con los de las empresas líderes de la industria para adoptar e implementar mejoras.",
+        "isCorrect": true,
+        "rationale": "Toma como referencia los estándares de excelencia de las mejores organizaciones para ajustar y optimizar las prácticas internas."
+      },
+      {
+        "text": "En reemplazar todos los equipos mecánicos por componentes de fabricación artesanal sin certificación.",
+        "isCorrect": false,
+        "rationale": "Utilizar componentes sin certificación técnica eleva el riesgo de falla y degrada la confiabilidad de los activos."
+      },
+      {
+        "text": "En realizar intervenciones correctivas únicamente cuando el equipo sufra una falla catastrófica.",
+        "isCorrect": false,
+        "rationale": "Esperar a la falla catastrófica es una postura reactiva y no una herramienta estratégica de gestión comparativa."
+      },
+      {
+        "text": "En registrar manualmente en un libreta personal todas las intervenciones ejecutadas sin compartir la información.",
+        "isCorrect": false,
+        "rationale": "Centralizar la información de manera informal impide la estandarización y la mejora sistemática de la empresa."
+      },
+      {
+        "text": "En medir exclusivamente el tiempo de inactividad de la maquinaria sin analizar las causas raíz de la falla.",
+        "isCorrect": false,
+        "rationale": "El análisis comparativo evalúa los métodos y causas, no únicamente el registro aislado del tiempo improductivo."
+      }
+    ],
+    "hint": "Se enfoca en el análisis comparativo con organizaciones referentes para adaptar e implementar las mejores prácticas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Por qué es crucial mantener un historial detallado y una documentación técnica rigurosa de los activos según estándares como la ISO 14224?",
+    "opciones": [
+      {
+        "text": "Permite realizar un análisis de causa raíz efectivo al correlacionar fallas actuales con eventos pasados.",
+        "isCorrect": true,
+        "rationale": "Proporciona la trazabilidad cualitativa y cronológica necesaria para diagnosticar problemas recurrentes."
+      },
+      {
+        "text": "Facilita la elaboración de planes de repuestos basados en la confiabilidad de los componentes.",
+        "isCorrect": true,
+        "rationale": "Permite estimar la tasa de consumo de insumos en base a la frecuencia histórica de fallos."
+      },
+      {
+        "text": "Proporciona evidencia objetiva durante las auditorías de los sistemas de gestión.",
+        "isCorrect": true,
+        "rationale": "Comprueba ante entes calificadores o reguladores el cumplimiento estricto de los procedimientos aprobados."
+      },
+      {
+        "text": "Ayuda a calcular con mayor precisión métricas de confiabilidad como el MTBF y el MTTR.",
+        "isCorrect": true,
+        "rationale": "Alimenta las bases de datos con los tiempos exactos de operación y tiempos fuera de servicio."
+      },
+      {
+        "text": "Garantiza que la empresa no tenga que invertir jamás en capacitación para su personal.",
+        "isCorrect": false,
+        "rationale": "La documentación complementa y respalda la capacitación técnica del personal, pero nunca la sustituye."
+      }
+    ],
+    "hint": "Piensa en el valor de la trazabilidad para los diagnósticos de falla y la construcción de bases de datos de confiabilidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el criterio técnico principal para aplicar la métrica de Tiempo Medio Para la Falla (MTTF) en lugar del Tiempo Medio Entre Fallas (MTBF)?",
+    "opciones": [
+      {
+        "text": "El MTTF se aplica a elementos o sistemas no reparables que son descartados y reemplazados tras el fallo.",
+        "isCorrect": true,
+        "rationale": "Mide el tiempo acumulado hasta que ocurre la falla única de un componente que no se repara, como un foco incandescente."
+      },
+      {
+        "text": "El MTTF se aplica exclusivamente a sistemas complejos cuyo tiempo de reparación toma más de 100 horas.",
+        "isCorrect": false,
+        "rationale": "Para sistemas complejos reparables se utiliza el MTBF, integrando además el tiempo de reparación (MTTR)."
+      },
+      {
+        "text": "El MTBF se utiliza únicamente para calcular costos de energía eléctrica en plantas procesadoras.",
+        "isCorrect": false,
+        "rationale": "El MTBF evalúa el tiempo promedio de operación continua entre fallas mecánicas o eléctricas, no el consumo energético."
+      },
+      {
+        "text": "El MTTF mide el tiempo que un técnico tarda en trasladarse al área de trabajo tras una llamada de emergencia.",
+        "isCorrect": false,
+        "rationale": "El tiempo de traslado del personal forma parte de la logística de atención y se contabiliza en el MTTR."
+      },
+      {
+        "text": "El MTBF excluye las horas operativas del cálculo y solo considera los días no laborables.",
+        "isCorrect": false,
+        "rationale": "El MTBF requiere explícitamente contabilizar el total de horas netas de operación de los activos."
+      }
+    ],
+    "hint": "Observa la naturaleza del componente y si este puede ser reparado o si se sustituye tras la falla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un equipo acumuló un total de 50 horas en reparaciones correctivas distribuidas en exactamente 5 intervenciones por falla. ¿Cuál es el valor del Tiempo Medio Para Reparar (MTTR)?",
+    "opciones": [
+      {
+        "text": "10 horas por reparación.",
+        "isCorrect": true,
+        "rationale": "El cálculo del MTTR se obtiene dividiendo las 50 horas totales de intervención entre las 5 paradas correctivas ($50 / 5 = 10$)."
+      },
+      {
+        "text": "250 horas por reparación.",
+        "isCorrect": false,
+        "rationale": "Este resultado es producto de multiplicar el tiempo de reparación por el número de fallas en lugar de dividirlo."
+      },
+      {
+        "text": "0.1 horas por reparación.",
+        "isCorrect": false,
+        "rationale": "Esta cifra se obtiene invirtiendo erróneamente el dividendo y el divisor ($5 / 50$)."
+      },
+      {
+        "text": "55 horas por reparación.",
+        "isCorrect": false,
+        "rationale": "Suma erróneamente la cantidad de eventos con el total de horas en lugar de calcular el promedio."
+      },
+      {
+        "text": "5 horas por reparación.",
+        "isCorrect": false,
+        "rationale": "Confunde la cantidad de eventos de falla ocurridos con el promedio de duración de la intervención."
+      }
+    ],
+    "hint": "El MTTR se calcula dividiendo el tiempo total acumulado de reparación correctiva entre el número de fallas atendidas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define matemáticamente la Disponibilidad Inherente ($A_i$) de un equipo evaluada estrictamente desde la efectividad del mantenimiento?",
+    "opciones": [
+      {
+        "text": "$A_i = \\frac{\\text{MTBF}}{\\text{MTBF} + \\text{MTTR}}$",
+        "isCorrect": true,
+        "rationale": "Expresa la proporción del tiempo en que el equipo está operativo considerando únicamente el tiempo medio entre fallas y el tiempo medio de reparación."
+      },
+      {
+        "text": "$A_i = \\frac{\\text{MTTR}}{\\text{MTBF} - \\text{MTTR}}$",
+        "isCorrect": false,
+        "rationale": "Esta expresión resta en el denominador el tiempo de reparación e invierte la relación lógica de la disponibilidad."
+      },
+      {
+        "text": "$A_i = \\frac{\\text{MTBF} \\times \\text{MTTR}}{100}$",
+        "isCorrect": false,
+        "rationale": "Multiplica los indicadores de confiabilidad y mantenibilidad, lo cual no representa una fracción adimensional de tiempo útil."
+      },
+      {
+        "text": "$A_i = \\frac{\\text{Horas Laborales}}{\\text{Paradas Programadas}}$",
+        "isCorrect": false,
+        "rationale": "Compara horas de calendario comercial contra intervenciones planificadas, aproximándose más a la disponibilidad operacional."
+      },
+      {
+        "text": "$A_i = \\text{MTTR} + \\text{MTBF}$",
+        "isCorrect": false,
+        "rationale": "Suma las variables temporales obteniendo el ciclo medio total de falla, no un porcentaje de disponibilidad."
+      }
+    ],
+    "hint": "Relaciona el tiempo medio entre fallas (MTBF) y el tiempo medio de reparación (MTTR).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes métricas son indicadores financieros o de gestión de recursos utilizados para evaluar la efectividad del departamento de mantenimiento?",
+    "opciones": [
+      {
+        "text": "Costo de mantenimiento por facturación de la empresa.",
+        "isCorrect": true,
+        "rationale": "Mide qué porcentaje de los ingresos totales generados por ventas es absorbido por el gasto de mantenimiento."
+      },
+      {
+        "text": "Costo de mantenimiento sobre el valor de reposición de los activos (RAV).",
+        "isCorrect": true,
+        "rationale": "Compara el gasto anual de mantenimiento frente a la inversión requerida para comprar los equipos totalmente nuevos."
+      },
+      {
+        "text": "Porcentaje del costo de inventario de repuestos inmovilizado en almacén.",
+        "isCorrect": true,
+        "rationale": "Monitorea la eficiencia del capital de trabajo atrapado en componentes de reserva."
+      },
+      {
+        "text": "Relación de costos de servicios contratados a terceros respecto al presupuesto total de mantenimiento.",
+        "isCorrect": true,
+        "rationale": "Evalúa la dependencia financiera e intensidad del uso de personal especializado externo."
+      },
+      {
+        "text": "Índice de masa corporal promedio del personal técnico del taller.",
+        "isCorrect": false,
+        "rationale": "Corresponde a un dato antropométrico de salud ocupacional y no a un indicador de costo o desempeño financiero del mantenimiento."
+      }
+    ],
+    "hint": "Busca indicadores que relacionen los costos de mantenimiento con las ventas, inventarios o valor de reposición.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de la programación de trabajos, ¿qué representa técnicamente el indicador denominado Backlog?",
+    "opciones": [
+      {
+        "text": "La acumulación de trabajo de mantenimiento planificado y aprobado que aún no ha sido ejecutado, expresado en unidades de tiempo.",
+        "isCorrect": true,
+        "rationale": "Mide el volumen de horas-hombre de trabajo pendiente por realizar, reflejando la capacidad del equipo para absorber la carga de trabajo."
+      },
+      {
+        "text": "El tiempo total que un equipo permanece operando en condiciones óptimas sin requerir lubricación.",
+        "isCorrect": false,
+        "rationale": "El período de operación continua sin intervención es medido por la métrica de MTBF."
+      },
+      {
+        "text": "El costo financiero derivado de la compra de herramientas de taller que no han sido utilizadas.",
+        "isCorrect": false,
+        "rationale": "El valor de herramientas inactivas representa una inmovilización de capital de inventario, no la carga de trabajo pendiente."
+      },
+      {
+        "text": "La velocidad de traslación de una faja transportadora operando a plena capacidad.",
+        "isCorrect": false,
+        "rationale": "La velocidad cinemática es una variable de proceso físico y no una métrica de gestión de órdenes de mantenimiento."
+      },
+      {
+        "text": "La suma acumulada del tiempo asignado a descansos médicos en un mes.",
+        "isCorrect": false,
+        "rationale": "El ausentismo por salud es un indicador de gestión de talento humano y no la carga de tareas mecánicas en cola."
+      }
+    ],
+    "hint": "Es la acumulación de trabajo planificado y pendiente expresado en unidades de tiempo (horas o semanas).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo apoya la aplicación del Principio de Pareto (regla 80/20) en la priorización de decisiones de mantenimiento?",
+    "opciones": [
+      {
+        "text": "Permite identificar el $20\\%$ de los activos o modos de falla responsables del $80\\%$ de los costos o paradas para focalizar allí los recursos.",
+        "isCorrect": true,
+        "rationale": "Discrimina los pocos elementos vitales de los muchos triviales, maximizando el impacto económico de las intervenciones."
+      },
+      {
+        "text": "Dictamina que el $80\\%$ del presupuesto debe gastarse obligatoriamente en repuestos para motores eléctricos.",
+        "isCorrect": false,
+        "rationale": "La regla no impone porcentajes fijos de gasto por categoría de repuesto, sino que evalúa la distribución real de frecuencias y costos."
+      },
+      {
+        "text": "Establece que cada equipo debe recibir mantenimiento correctivo exactamente el $20\\%$ de los días del año.",
+        "isCorrect": false,
+        "rationale": "No es una pauta de programación de intervenciones, sino una herramienta analítica de distribución de causas e impactos."
+      },
+      {
+        "text": "Demuestra que el $80\\%$ del personal técnico debe dedicarse exclusivamente a tareas administrativas de oficina.",
+        "isCorrect": false,
+        "rationale": "La metodología busca optimizar la asignación del trabajo operativo en campo, no desplazar el personal hacia la burocracia."
+      },
+      {
+        "text": "Asegura que el $100\\%$ de las fallas mecánicas se resuelven asignando el $20\\%$ de las herramientas disponibles.",
+        "isCorrect": false,
+        "rationale": "El principio se enfoca en la relación causa-efecto de eventos indeseados y no en la cantidad física de herramientas por tarea."
+      }
+    ],
+    "hint": "Permite identificar el $20\\%$ de las causas críticas que generan el $80\\%$ de los costos o fallas acumuladas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el rasgo distintivo de la Industria 4.0 frente a las revoluciones industriales precedentes?",
+    "opciones": [
+      {
+        "text": "La integración de sistemas ciberfísicos, interconectividad masiva en tiempo real mediante IIoT, Big Data e Inteligencia Artificial.",
+        "isCorrect": true,
+        "rationale": "Fusiona las tecnologías digitales, físicas y analíticas permitiendo la toma de decisiones descentralizada e inteligente."
+      },
+      {
+        "text": "La introducción por primera vez de la máquina de vapor en procesos de manufactura.",
+        "isCorrect": false,
+        "rationale": "La adopción de la máquina de vapor y la mecanización con carbón caracterizó a la Primera Revolución Industrial."
+      },
+      {
+        "text": "La implementación inicial de la producción en masa mediante líneas de ensamble alimentadas por energía eléctrica.",
+        "isCorrect": false,
+        "rationale": "La electrificación y las líneas de ensamblaje en serie dieron origen a la Segunda Revolución Industrial."
+      },
+      {
+        "text": "El uso exclusivo de registros manuales en papel para el seguimiento de las operaciones de taller.",
+        "isCorrect": false,
+        "rationale": "La digitalización busca erradicar la dependencia de archivos en papel promoviendo la captación electrónica directa."
+      },
+      {
+        "text": "El reemplazo total del acero por componentes plásticos en la fabricación de maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "La composición de materiales de estructura pesada no define la transformación digital ciberfísica de la Industria 4.0."
+      }
+    ],
+    "hint": "Destaca la integración masiva de sistemas ciberfísicos, interconectividad en tiempo real y análisis inteligente de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes tipos de sensores industriales son utilizados para capturar parámetros físicos en el mantenimiento de activos inteligentes?",
+    "opciones": [
+      {
+        "text": "Sensores piezoeléctricos para medición de vibraciones mecánicas.",
+        "isCorrect": true,
+        "rationale": "Capturan aceleración y dinámicas estructurales en elementos rotativos como motores y bombas."
+      },
+      {
+        "text": "Sensores infrarrojos para detección de temperatura en superficies.",
+        "isCorrect": true,
+        "rationale": "Transmiten lecturas térmicas continuas para diagnosticar sobrecalentamientos por fricción o fallas eléctricas."
+      },
+      {
+        "text": "Transductores de presión y caudal para circuitos hidráulicos.",
+        "isCorrect": true,
+        "rationale": "Monitorean el comportamiento dinámico de los fluidos de trabajo en tuberías y bombas."
+      },
+      {
+        "text": "Sensores de ultrasonido y emisión acústica.",
+        "isCorrect": true,
+        "rationale": "Registran frecuencias fuera del rango audible humano para identificar arcos eléctricos o microfugas."
+      },
+      {
+        "text": "Manómetros analógicos de carátula sin capacidad de transmisión digital.",
+        "isCorrect": false,
+        "rationale": "Las carátulas puramente analógicas no transmiten señales electrónicas en tiempo real hacia las plataformas ciberfísicas."
+      }
+    ],
+    "hint": "Considera sensores que miden magnitudes mecánicas, térmicas, acústicas y de fluidos en los equipos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la arquitectura del Internet Industrial de las Cosas (IIoT), ¿cuál es la función primordial de los dispositivos de borde (edge devices) y sensores?",
+    "opciones": [
+      {
+        "text": "Capturar variables físicas del activo en tiempo real y transmitirlas hacia redes y plataformas en la nube para su procesamiento.",
+        "isCorrect": true,
+        "rationale": "Sirven como el enlace primario de adquisición de datos operativos directamente en la máquina para su flujo hacia los servidores."
+      },
+      {
+        "text": "Generar facturas de pago de forma autónoma hacia los proveedores de energía eléctrica.",
+        "isCorrect": false,
+        "rationale": "La facturación comercial es un proceso corporativo y no la función técnica de la instrumentación de borde."
+      },
+      {
+        "text": "Reemplazar las bancadas de acero en la instalación mecánica de los motores de inducción.",
+        "isCorrect": false,
+        "rationale": "Los componentes mecánicos estructurales son soportes estáticos, no instrumentos de captura electrónica de variables."
+      },
+      {
+        "text": "Redactar manuales de seguridad ocupacional e imprimirlos físicamente.",
+        "isCorrect": false,
+        "rationale": "Los sensores recopilan señales físicas en tiempo real y no realizan la edición ni impresión de documentos de texto."
+      },
+      {
+        "text": "Interrumpir la alimentación eléctrica del servidor central sin procesar señales predeterminadas.",
+        "isCorrect": false,
+        "rationale": "Su función es la recolección y transmisión continua de variables, no el apagado repentino e incontrolado de la red."
+      }
+    ],
+    "hint": "Se encargan de la captación directa de las variables físicas operativas para enviarlas a las plataformas de procesamiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere la dimensión de 'Veracidad' dentro de las características clave del Big Data aplicado a la gestión de activos?",
+    "opciones": [
+      {
+        "text": "A la confiabilidad, exactitud y calidad de los datos filtrados, asegurando eliminar lecturas erróneas o ruido de los sensores.",
+        "isCorrect": true,
+        "rationale": "Garantiza que el análisis y los modelos predictivos se construyan sobre información verídica y libre de distorsiones térmicas u operativas."
+      },
+      {
+        "text": "A la cantidad total de Terabytes de información que pueden ser almacenados en discos duros locales.",
+        "isCorrect": false,
+        "rationale": "La cantidad o escala física del almacenamiento corresponde a la dimensión de Volumen, no a la Veracidad de los datos."
+      },
+      {
+        "text": "A la velocidad en milisegundos con la que la fibra óptica transmite un paquete de datos.",
+        "isCorrect": false,
+        "rationale": "La rapidez de flujo y transmisión de información define la métrica de Velocidad dentro del Big Data."
+      },
+      {
+        "text": "A la diversidad de formatos no estructurados recibidos en el servidor, como imágenes o audios.",
+        "isCorrect": false,
+        "rationale": "La heterogeneidad de formatos de datos entrantes se clasifica bajo la dimensión de Variedad."
+      },
+      {
+        "text": "Al costo comercial por Gigabyte cobrado por los proveedores de servicios en la nube.",
+        "isCorrect": false,
+        "rationale": "Las tarifas de infraestructura tecnológica corresponden a costos operativos de TI y no a las dimensiones analíticas del dato."
+      }
+    ],
+    "hint": "Se relaciona con la calidad, exactitud y confiabilidad de los datos recolectados antes de ser analizados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el avance fundamental del Mantenimiento Prescriptivo en comparación con el Mantenimiento Predictivo convencional?",
+    "opciones": [
+      {
+        "text": "No solo anticipa la ocurrencia del fallo, sino que prescribe acciones específicas y ajustes operativos sugeridos para mitigar la anomalía.",
+        "isCorrect": true,
+        "rationale": "Supera la mera detección temprana al sugerir e intervenir prescriptivamente el procedimiento adecuado para corregir la condición identificada."
+      },
+      {
+        "text": "Elimina la necesidad de utilizar datos históricos y algoritmos de aprendizaje automático (Machine Learning).",
+        "isCorrect": false,
+        "rationale": "El enfoque prescriptivo intensifica el uso de algoritmos analíticos avanzados y modelos históricos para elaborar sus recomendaciones."
+      },
+      {
+        "text": "Vuelve a utilizar inspecciones exclusivamente visuales ejecutadas al final de cada periodo anual.",
+        "isCorrect": false,
+        "rationale": "Las revisiones visuales anuales representan una técnica obsoleta y no el nivel de analítica avanzada que caracteriza al mantenimiento prescriptivo."
+      },
+      {
+        "text": "Exige que todas las reparaciones físicas de taller sean ejecutadas exclusivamente por robots sin supervisión.",
+        "isCorrect": false,
+        "rationale": "Prescribir se refiere a recomendar la acción óptima, la cual puede ser ejecutada por técnicos o sistemas automatizados bajo supervisión."
+      },
+      {
+        "text": "Se aplica únicamente en componentes estáticos que no contienen partes móviles ni energía hidráulica.",
+        "isCorrect": false,
+        "rationale": "Se aplica prioritariamente en activos críticos e instalaciones dinámicas de alta complejidad operacional."
+      }
+    ],
+    "hint": "Además de predecir la falla antes de que ocurra, sugiere la acción correctiva o ajuste operativo específico a realizar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué beneficios aporta la integración de la Inteligencia Artificial y el aprendizaje automático (Machine Learning) en los sistemas de gestión de activos?",
+    "opciones": [
+      {
+        "text": "Identificación de patrones complejos de comportamiento anómalo en las curvas de condición.",
+        "isCorrect": true,
+        "rationale": "Procesa múltiples variables simultáneamente identificando correlaciones imperceptibles al ojo humano."
+      },
+      {
+        "text": "Optimización en la programación de tareas priorizando los activos de mayor criticidad.",
+        "isCorrect": true,
+        "rationale": "Organiza las intervenciones basándose en la probabilidad real de falla e impacto en la producción."
+      },
+      {
+        "text": "Reducción de tiempos de inactividad no planificados mediante análisis prescriptivos.",
+        "isCorrect": true,
+        "rationale": "Disminuye la frecuencia e impacto de las paradas imprevistas mediante intervenciones oportunas."
+      },
+      {
+        "text": "Reducción en la tasa de falsas alarmas al correlacionar variables complejas.",
+        "isCorrect": true,
+        "rationale": "Filtra perturbaciones transitorias o ruido operativo mediante modelos estadísticos avanzados."
+      },
+      {
+        "text": "Garantía de que los motores nunca sufrirán desgaste mecánico sin importar la lubricación.",
+        "isCorrect": false,
+        "rationale": "La analítica de software no elimina la degradación ni la tribología física subyacente al contacto mecánico."
+      }
+    ],
+    "hint": "Piensa en la detección automática de patrones anómalos, la optimización de recursos y la precisión en la programación de tareas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-49",
+    "diplomado": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera la combinación de tecnología Cloud Computing y sistemas SCADA facilita el mantenimiento inteligente en plantas industrializadas?",
+    "opciones": [
+      {
+        "text": "Permite centralizar datos de supervisión en tiempo real de múltiples instalaciones en una plataforma escalable para su análisis global.",
+        "isCorrect": true,
+        "rationale": "Integra señales locales de control operacionales (SCADA) en repositorios flexibles en la nube accesible para la toma de decisiones corporativa."
+      },
+      {
+        "text": "Obliga a que los técnicos trabajen físicamente al lado de los servidores centrales de la planta.",
+        "isCorrect": false,
+        "rationale": "La computación en la nube promueve precisamente la accesibilidad remota a los datos sin exigir presencia en la sala de servidores."
+      },
+      {
+        "text": "Elimina las conexiones de red inalámbricas reemplazándolas por sistemas mecánicos de contrapeso.",
+        "isCorrect": false,
+        "rationale": "La infraestructura en la nube requiere el fortalecimiento de redes de conectividad digital y no el retorno a mecanismos análogos."
+      },
+      {
+        "text": "Evita que los software ERP y EAM reciban actualizaciones del inventario de repuestos.",
+        "isCorrect": false,
+        "rationale": "La integración en la nube agiliza el flujo bidireccional de datos de stock entre las operaciones y el software de gestión."
+      },
+      {
+        "text": "Restringe la visualización del estado de los equipos a un solo computador sin acceso a red.",
+        "isCorrect": false,
+        "rationale": "El Cloud Computing descentraliza el acceso permitiendo la visualización segura desde múltiples dispositivos conectados."
+      }
+    ],
+    "hint": "Permite centralizar datos operativos de múltiples instalaciones dispersas y procesarlos de forma escalable e integrada.",
+    "activo": true
+  }
+]

@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica fundamental que define al aprendizaje supervisado en Inteligencia Artificial?",
+    "opciones": [
+      {
+        "text": "Utiliza exclusivamente redes neuronales biológicas para la toma de decisiones autónoma.",
+        "isCorrect": false,
+        "rationale": "Las redes biologicas pertenecen a organismos vivos; los modelos computacionales imitan su estructura mediante redes neuronales artificiales, pero la supervisión radica en la presencia de datos etiquetados."
+      },
+      {
+        "text": "Trabaja con datos etiquetados donde se le entregan al sistema las entradas y sus respectivas salidas correctas.",
+        "isCorrect": true,
+        "rationale": "El aprendizaje supervisado se fundamenta en guiar al algoritmo proporcionándole datos de entrada ordenados junto a las respuestas o etiquetas esperadas para que reconozca patrones."
+      },
+      {
+        "text": "Opera únicamente a través del método de ensayo y error recibiendo recompensas o castigos.",
+        "isCorrect": false,
+        "rationale": "El mecanismo basado en interactuar con un entorno cambiante para recibir recompensas o castigos describe al aprendizaje por refuerzo."
+      },
+      {
+        "text": "Agrupa automáticamente conjuntos de datos sin clasificación ni etiquetas previas.",
+        "isCorrect": false,
+        "rationale": "Encontrar agrupaciones o patrones en datos no clasificados sin etiquetas previas es la función propia del aprendizaje no supervisado."
+      },
+      {
+        "text": "Requiere prescindir por completo de un algoritmo de programación previo.",
+        "isCorrect": false,
+        "rationale": "Todo modelo de aprendizaje supervisado en Machine Learning requiere de un algoritmo que estructure las reglas de análisis sobre la información presentada."
+      }
+    ],
+    "hint": "Piensa en el rol de un profesor que le enseña al sistema entregando ejemplos con su clasificación o resultado conocido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Un sistema de optimización de rutas para camiones mineros aprende evaluando rutas alternativas y recibiendo 'recompensas' por menor tiempo de viaje y menor consumo de combustible. ¿A qué tipo de aprendizaje corresponde este comportamiento?",
+    "opciones": [
+      {
+        "text": "Aprendizaje supervisado estático.",
+        "isCorrect": false,
+        "rationale": "El aprendizaje supervisado exige conjuntos de datos fijos con etiquetas de entrada y salida, no un sistema de premiación dinámica basado en acciones continuas."
+      },
+      {
+        "text": "Aprendizaje no supervisado por agrupación.",
+        "isCorrect": false,
+        "rationale": "La agrupación no supervisada busca similitudes entre datos sin medir el éxito mediante recompensas del entorno."
+      },
+      {
+        "text": "Aprendizaje por refuerzo.",
+        "isCorrect": true,
+        "rationale": "Este paradigma se caracteriza por realizar acciones en entornos dinámicos y aprender progresivamente mediante prueba y error tras recibir incentivos o recompensas."
+      },
+      {
+        "text": "Aprendizaje por regresión lineal simple.",
+        "isCorrect": false,
+        "rationale": "La regresión lineal es una técnica matemática para predecir valores continuos, no un proceso de toma de decisiones por recompensa."
+      },
+      {
+        "text": "Aprendizaje por procesamiento de lenguaje natural.",
+        "isCorrect": false,
+        "rationale": "El procesamiento de lenguaje natural se enfoca en la interpretación y generación de texto o habla humana."
+      }
+    ],
+    "hint": "Considere la metodología de aprendizaje orientada a probar alternativas en un entorno cambiante para maximizar incentivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En el ámbito minero, ¿cuáles de las siguientes opciones describen ventajas directas de utilizar datos etiquetados en un modelo de aprendizaje supervisado?",
+    "opciones": [
+      {
+        "text": "Generan resultados más específicos y con mayor precisión en las predicciones.",
+        "isCorrect": true,
+        "rationale": "La guía directa de las etiquetas le otorga al modelo referencias claras para responder de manera concreta ante datos nuevos."
+      },
+      {
+        "text": "Permiten establecer con claridad criterios de entrada y salida conocidos para clasificar elementos como minerales o fallas.",
+        "isCorrect": true,
+        "rationale": "Al definir explícitamente lo que representa cada dato (por ejemplo, asociar un valor de vibración a una falla), la IA aprende los límites operativos precisos."
+      },
+      {
+        "text": "Eliminan la necesidad de contar con expertos humanos para la clasificación previa de la información.",
+        "isCorrect": false,
+        "rationale": "El etiquetado de datos suele requerir tiempo y conocimiento experto especializado para clasificar adecuadamente las muestras antes de entrenar el modelo."
+      },
+      {
+        "text": "Tienen un costo de obtención y preparación significativamente menor que los datos no etiquetados.",
+        "isCorrect": false,
+        "rationale": "La preparación de datos etiquetados suele ser más costosa debido a la mano de obra y el tiempo requerido para clasificar la información."
+      },
+      {
+        "text": "Reducen la ambigüedad al guiar al algoritmo sobre el significado exacto de los datos procesados.",
+        "isCorrect": true,
+        "rationale": "Proporcionar etiquetas minimiza las interpretaciones libres del sistema, orientándolo exactamente hacia el resultado objetivo deseado."
+      }
+    ],
+    "hint": "Recuerde cómo influye el trabajo previo de clasificación sobre la exactitud de los resultados finales y la definición de objetivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según lo presentado en el curso, ¿cuál es la diferencia principal en la forma en que procesan la información el Machine Learning convencional y el Deep Learning?",
+    "opciones": [
+      {
+        "text": "El Machine Learning utiliza redes neuronales profundas mientras que el Deep Learning utiliza listas de texto simple.",
+        "isCorrect": false,
+        "rationale": "Las redes neuronales estructuradas en capas forman la arquitectura del Deep Learning, no del Machine Learning convencional."
+      },
+      {
+        "text": "El Machine Learning procesa datos mediante algoritmos estructurados, mientras que el Deep Learning utiliza estructuras de redes neuronales.",
+        "isCorrect": true,
+        "rationale": "La diferencia fundamental radica en que Machine Learning recurre a algoritmos para interpretar datos estructurados, mientras que Deep Learning procesa información compleja imitando al cerebro mediante redes neuronales."
+      },
+      {
+        "text": "El Deep Learning requiere estrictamente que todos los datos estén etiquetados manualmente por un operador humano.",
+        "isCorrect": false,
+        "rationale": "El Deep Learning puede procesar volúmenes masivos de datos en bruto no etiquetados (como videos o audios) de forma autónoma a través de sus capas ocultas."
+      },
+      {
+        "text": "El Machine Learning solo funciona con imágenes satelitales y el Deep Learning solo funciona con hojas de cálculo.",
+        "isCorrect": false,
+        "rationale": "Ambas metodologías pueden aplicarse a múltiples tipos de datos; de hecho, las imágenes satelitales suelen procesarse mediante redes neuronales de Deep Learning."
+      },
+      {
+        "text": "No existe diferencia metodológica; ambos términos describen exactamente el mismo algoritmo matemático.",
+        "isCorrect": false,
+        "rationale": "Aunque el Deep Learning es una rama dentro del Machine Learning, poseen mecanismos de procesamiento y niveles de complejidad de abstracción distintos."
+      }
+    ],
+    "hint": "Concentre su atención en la diferencia entre usar algoritmos diseñados para tablas/atributos y usar capas inspiradas en la biología humana.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el paso inicial que se debe realizar al estructurar un proceso de optimización mediante Inteligencia Artificial?",
+    "opciones": [
+      {
+        "text": "Entrenar inmediatamente el algoritmo con datos sin filtrar.",
+        "isCorrect": false,
+        "rationale": "El entrenamiento requiere datos organizados y objetivos claros; no se puede entrenar un modelo sin saber qué problema se desea resolver."
+      },
+      {
+        "text": "Implementar directamente el sistema a escala completa en la operación minera.",
+        "isCorrect": false,
+        "rationale": "La implementación es una fase avanzada que ocurre después de haber identificado problemas, preparado datos y validado el modelo."
+      },
+      {
+        "text": "Definir el problema, identificar las oportunidades y establecer los objetivos del proceso.",
+        "isCorrect": true,
+        "rationale": "Todo ciclo de optimización comienza por delimitar con claridad el problema operativo y establecer metas medibles antes de recolectar o procesar información."
+      },
+      {
+        "text": "Realizar pruebas esporádicas de validación en tiempo real.",
+        "isCorrect": false,
+        "rationale": "Las pruebas de validación ocurren al final de la etapa de entrenamiento para comprobar la efectividad del sistema."
+      },
+      {
+        "text": "Comprar licencias de software comercial de Big Data.",
+        "isCorrect": false,
+        "rationale": "La adquisición de herramientas tecnológicas debe responder a las necesidades planteadas tras la definición inicial de los objetivos."
+      }
+    ],
+    "hint": "Reflexione sobre la fase lógica de diagnóstico que precede a cualquier recolección o tratamiento informático de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Si se diseña un modelo de IA supervisada para clasificar rocas en una cinta transportadora, ¿qué rol cumplen las imágenes clasificadas como 'cobre', 'oro' o 'ganga'?",
+    "opciones": [
+      {
+        "text": "Funcionan como los sensores físicos de velocidad de la cinta.",
+        "isCorrect": false,
+        "rationale": "Los sensores físicos de la cinta miden variables electromecánicas de desplazamiento, no etiquetas de clasificación geológica."
+      },
+      {
+        "text": "Constituyen las etiquetas que enseñan al sistema a reconocer los patrones asociados a cada mineral.",
+        "isCorrect": true,
+        "rationale": "Las imágenes previamente clasificadas le sirven al modelo supervisado como la referencia 'correcta' para aprender características visuales de cada tipo de roca."
+      },
+      {
+        "text": "Actúan como los recompresores de datos de la red neuronal.",
+        "isCorrect": false,
+        "rationale": "Las categorías de los minerales no son mecanismos de compresión de archivos, sino clases de salida para el entrenamiento."
+      },
+      {
+        "text": "Representan las entradas no estructuradas de un modelo por refuerzo.",
+        "isCorrect": false,
+        "rationale": "Asignar nombres específicos a imágenes corresponde a la supervisión mediante datos etiquetados, no a recompensas por prueba y error."
+      },
+      {
+        "text": "Son algoritmos genéticos diseñados para medir la temperatura de molienda.",
+        "isCorrect": false,
+        "rationale": "Las muestras identificadas son datos etiquetados de entrada/salida y no algoritmos de optimización térmica."
+      }
+    ],
+    "hint": "Piense en el elemento que le indica a la Inteligencia Artificial qué nombre le corresponde a cada muestra visual durante su instrucción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis de información geoespacial para la minería, ¿qué representa el formato de datos tipo 'Raster'?",
+    "opciones": [
+      {
+        "text": "Una lista de comandos de programación en lenguaje Python.",
+        "isCorrect": false,
+        "rationale": "Un comando de programación es parte del código fuente de un algoritmo, no una estructura de representación geográfica."
+      },
+      {
+        "text": "Un conjunto de puntos, líneas o polígonos que delimitan coordenadas vectoriales.",
+        "isCorrect": false,
+        "rationale": "La delimitación mediante puntos, líneas o polígonos corresponde al formato vectorial."
+      },
+      {
+        "text": "Una estructura basada en imágenes o grillas de píxeles donde cada píxel contiene atributos como reflectancia o temperatura.",
+        "isCorrect": true,
+        "rationale": "El formato raster organiza la información en celdas o píxeles ordenados en grillas, donde cada celda registra valores o atributos específicos de la superficie terrestre."
+      },
+      {
+        "text": "Un archivo de audio grabado por sensores acústicos en perforadoras.",
+        "isCorrect": false,
+        "rationale": "Los archivos de audio capturan frecuencias sonoras operativas y no constituyen capas de mapas de imágenes por píxel."
+      },
+      {
+        "text": "Una tabla exclusiva de costos de mantenimiento preventivo.",
+        "isCorrect": false,
+        "rationale": "Las tablas presupuestarias son datos alfanuméricos administrativos y no datos de representación geoespacial."
+      }
+    ],
+    "hint": "Relacione este concepto con la estructura de una imagen digital satelital subdividida en pequeñas celdas de información.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes programas o entornos se mencionaron en el curso como herramientas utilizadas para el desarrollo de modelos predictivos de depósitos o yacimientos minerales?",
+    "opciones": [
+      {
+        "text": "RapidMiner",
+        "isCorrect": true,
+        "rationale": "Plataforma que permite construir modelos predictivos importando datos geológicos y aplicándoles algoritmos de decisión."
+      },
+      {
+        "text": "scikit-learn",
+        "isCorrect": true,
+        "rationale": "Biblioteca de aprendizaje automático basada en Python utilizada para clasificaciones y predicciones de yacimientos."
+      },
+      {
+        "text": "H2O.ai",
+        "isCorrect": true,
+        "rationale": "Plataforma especializada en el procesamiento de grandes volúmenes de datos (Big Data) mediante redes neuronales profundas para modelar distribuciones minerales."
+      },
+      {
+        "text": "Microsoft Excel básico",
+        "isCorrect": false,
+        "rationale": "Aunque maneja tablas simples, no es un entorno especializado de IA para la construcción de modelos predictivos avanzados de yacimientos."
+      },
+      {
+        "text": "Adobe Photoshop",
+        "isCorrect": false,
+        "rationale": "Es un programa dedicado al diseño y edición gráfica, ajeno al desarrollo de algoritmos predictivos geofísicos."
+      }
+    ],
+    "hint": "Identifique las plataformas de Machine Learning y Big Data diseñadas específicamente para el análisis y modelado de datos geológicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo obtiene la información espacial la tecnología LiDAR aplicada a la minería?",
+    "opciones": [
+      {
+        "text": "Capturando únicamente fotografías en blanco y negro desde satélites geoestacionarios.",
+        "isCorrect": false,
+        "rationale": "El LiDAR no es una fotografía satelital pasiva; utiliza emisores activos de luz montados en aeronaves, drones o vehículos."
+      },
+      {
+        "text": "Emitiendo impulsos de luz láser y midiendo el tiempo que tarda cada impulso en reflejarse y regresar al sensor.",
+        "isCorrect": true,
+        "rationale": "La tecnología LiDAR funciona mediante el envío de pulsos de luz láser hacia una superficie y el cálculo preciso del tiempo de retorno de la señal para modelar distancias y elevaciones."
+      },
+      {
+        "text": "Utilizando sensores químicos sumergidos en la pulpa de molienda.",
+        "isCorrect": false,
+        "rationale": "La medición de la pulpa se realiza con sensores de densidad o reactividad, no con pulsos aerotransportados de luz."
+      },
+      {
+        "text": "Registrando exclusivamente las ondas de sonido emitidas por los camiones en movimiento.",
+        "isCorrect": false,
+        "rationale": "El registro de ondas sonoras corresponde a los sensores acústicos y no a los dispositivos ópticos tipo láser."
+      },
+      {
+        "text": "Midiendo la temperatura ambiental mediante termopares colocados en la superficie.",
+        "isCorrect": false,
+        "rationale": "Los termopares miden temperatura por contacto o resistencia, a diferencia del cálculo de distancia mediante luz activa."
+      }
+    ],
+    "hint": "Considere el principio físico basado en el disparo de haces de luz enfocados y el cronometraje del rebote de su señal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué software de simulación fue destacado en el curso para modelar la estabilidad geomecánica de taludes y prevenir derrumbes en proyectos mineros?",
+    "opciones": [
+      {
+        "text": "ANSYS",
+        "isCorrect": true,
+        "rationale": "Es un software de simulación avanzada utilizado para evaluar respuestas del terreno, modelar esfuerzos mecánicos y analizar la estabilidad de estructuras geológicas y taludes."
+      },
+      {
+        "text": "ChatGPT",
+        "isCorrect": false,
+        "rationale": "ChatGPT es un modelo de lenguaje de procesamiento de texto, no un simulador de esfuerzo estructural geomecánico."
+      },
+      {
+        "text": "Google Maps",
+        "isCorrect": false,
+        "rationale": "Google Maps es una plataforma de navegación comercial y geolocalización urbana, no un software de cálculo estructural minero."
+      },
+      {
+        "text": "Microsoft Word",
+        "isCorrect": false,
+        "rationale": "Es un procesador de texto utilizado para la redacción de documentos."
+      },
+      {
+        "text": "Paint 3D",
+        "isCorrect": false,
+        "rationale": "Es un programa básico de ilustración e imágenes, sin capacidad de cálculo numérico de esfuerzos ni mecánica de rocas."
+      }
+    ],
+    "hint": "Identifique la herramienta de software enfocada en el análisis de esfuerzos mecánicos y simulación geotécnica estructural.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la preparación de imágenes satelitales antes de ser procesadas por redes neuronales, ¿por qué es necesario realizar un reprocesamiento o corrección inicial?",
+    "opciones": [
+      {
+        "text": "Para modificar la composición química real del yacimiento explorado.",
+        "isCorrect": false,
+        "rationale": "La corrección de imágenes no altera las características físicas del terreno real, sino la calidad técnica de la imagen capturada."
+      },
+      {
+        "text": "Para eliminar interferencias como nubes y normalizar los valores espectrales de la superficie.",
+        "isCorrect": true,
+        "rationale": "El reprocesamiento permite limpiar obstáculos atmosféricos como la nubosidad y estandarizar la luz/reflectancia para que la IA interprete datos exactos."
+      },
+      {
+        "text": "Para transformar las imágenes satelitales en código genético de plantas.",
+        "isCorrect": false,
+        "rationale": "La corrección busca la fidelidad espectral del terreno y no tiene relación con secuencias genéticas biológicas."
+      },
+      {
+        "text": "Para reemplazar las imágenes de satélite por modelos CAD hechos a mano.",
+        "isCorrect": false,
+        "rationale": "El objetivo es utilizar las propias imágenes reales mejoradas digitalmente, no sustituirlas por dibujos manuales."
+      },
+      {
+        "text": "Para evitar el uso de coordenadas de latitud y longitud.",
+        "isCorrect": false,
+        "rationale": "Los datos satelitales requieren mantener de forma estricta sus referencias geográficas y coordenadas de ubicación."
+      }
+    ],
+    "hint": "Piense en los elementos atmosféricos que pueden obstaculizar la visión limpia desde el espacio e interferir con la luz recibida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el aporte principal de herramientas como Data Mine, IBM Watson o Deswik en la etapa de perforación exploratoria?",
+    "opciones": [
+      {
+        "text": "Operar físicamente los taladros sin requerir energía eléctrica ni combustible.",
+        "isCorrect": false,
+        "rationale": "Las máquinas físicas de perforación siguen requiriendo fuentes de energía motriz para operar mecánicamente."
+      },
+      {
+        "text": "Procesar modelos predictivos para determinar la ubicación, orientación y profundidad óptima de los taladros.",
+        "isCorrect": true,
+        "rationale": "Estas herramientas analizan información previa para definir con precisión dónde, con qué inclinación y a qué profundidad perforar, reduciendo costos e incertidumbre."
+      },
+      {
+        "text": "Elaborar los informes financieros consolidados para la bolsa de valores.",
+        "isCorrect": false,
+        "rationale": "Dichas plataformas se especializan en planificación geológica y técnica de minas, no en contabilidad bursátil."
+      },
+      {
+        "text": "Fabricar las brocas de perforación mediante impresión 3D en tiempo real.",
+        "isCorrect": false,
+        "rationale": "Son sistemas de software analítico y modelado, no equipos de manufactura aditiva industrial."
+      },
+      {
+        "text": "Sustituir los mapas geológicos por encuestas de opinión a la comunidad.",
+        "isCorrect": false,
+        "rationale": "Los datos que alimentan a estos programas son strictly geofísicos, geoquímicos y geológicos."
+      }
+    ],
+    "hint": "Reflexione sobre la necesidad de tomar decisiones informadas sobre la disposición geométrica eficiente de los pozos de prueba.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de las siguientes opciones describe de manera correcta la función de los equipos mineros autónomos?",
+    "opciones": [
+      {
+        "text": "Son vehículos manejados permanentemente por un conductor sentado dentro de la cabina.",
+        "isCorrect": false,
+        "rationale": "La característica central de la autonomía es eliminar la presencia y conducción directa del humano dentro del equipo."
+      },
+      {
+        "text": "Son máquinas impulsadas manualmente mediante cables y poleas desde el exterior.",
+        "isCorrect": false,
+        "rationale": "No son mecanismos mecánicos pasivos, sino unidades dotadas de procesadores e inteligencia digital."
+      },
+      {
+        "text": "Son equipos capaces de tomar decisiones operativas en tiempo real a partir de sensores, cámaras y algoritmos de IA.",
+        "isCorrect": true,
+        "rationale": "Los equipos autónomos recopilan información de su entorno mediante sensores y cámaras para evaluar rutas, ajustar velocidades o detenerse por sí mismos."
+      },
+      {
+        "text": "Son juguetes a radiocontrol simple que no procesan ningún tipo de dato ni variable.",
+        "isCorrect": false,
+        "rationale": "A diferencia de un juguete por radiocontrol, las unidades autónomas no responden a mandos ciegos, sino que analizan datos y razonan patrones de navegación."
+      },
+      {
+        "text": "Son sistemas mecánicos rígidos que no pueden detenerse ante un obstáculo en su ruta.",
+        "isCorrect": false,
+        "rationale": "Los algoritmos de visión y proximidad permiten a la máquina reaccionar y frenar de forma independiente para evitar colisiones."
+      }
+    ],
+    "hint": "Concentre su análisis en la capacidad de la máquina para procesar información ambiental y responder de forma independiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos son componentes fundamentales para el funcionamiento de un sistema de transporte autónomo en minería?",
+    "opciones": [
+      {
+        "text": "Sensores de velocidad, carga, vibración y temperatura instalados en el equipo.",
+        "isCorrect": true,
+        "rationale": "Proveen las mediciones físicas en tiempo real requeridas para monitorear la salud operacional y el movimiento del vehículo."
+      },
+      {
+        "text": "Cámaras de visión robotizada / 360 grados para la detección del entorno.",
+        "isCorrect": true,
+        "rationale": "Hacen la función de inspección visual identificando el camino, los bordes y posibles obstáculos en el trayecto."
+      },
+      {
+        "text": "Algoritmos de Inteligencia Artificial para el procesamiento de datos y toma de decisiones.",
+        "isCorrect": true,
+        "rationale": "Procesan la información proveniente de sensores y cámaras para calcular y ordenar las acciones de la máquina de forma independiente."
+      },
+      {
+        "text": "Redes de comunicación en tiempo real para la transmisión continua de datos a un centro de control.",
+        "isCorrect": true,
+        "rationale": "Garantizan que la información del estado del vehículo se comparta continuamente con las salas de supervisión y otros equipos."
+      },
+      {
+        "text": "Trabajo de palanca manual constante por parte de un operador a bordo del camión.",
+        "isCorrect": false,
+        "rationale": "El propósito primario de la automatización autónoma es evitar el pilotaje manual abordo por parte de operadores."
+      }
+    ],
+    "hint": "Piense en la combinación de dispositivos de recolección de datos, capacidad analítica, visión y conectividad sin cables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tipo de cámara especializada se utiliza para capturar datos en diferentes longitudes de onda, como el espectro visible, infrarrojo y térmico?",
+    "opciones": [
+      {
+        "text": "Cámara web analógica estándar.",
+        "isCorrect": false,
+        "rationale": "Las cámaras sencillas solo registran la luz del espectro visible básico para el ojo humano."
+      },
+      {
+        "text": "Cámara multiespectral.",
+        "isCorrect": true,
+        "rationale": "Están diseñadas para captar información en bandas espectrales variadas al mismo tiempo (como luz visible, térmico e infrarrojo), permitiendo análisis complejos."
+      },
+      {
+        "text": "Cámara fotográfica estenopeica.",
+        "isCorrect": false,
+        "rationale": "Es una herramienta fotográfica primitiva basada en un agujero pequeño sin lentes ni capacidad de análisis espectral."
+      },
+      {
+        "text": "Cámara monocromática básica.",
+        "isCorrect": false,
+        "rationale": "Captura imágenes en una sola tonalidad o escala de grises, careciendo de la división espectral requerida."
+      },
+      {
+        "text": "Lente de microscopio óptico simple.",
+        "isCorrect": false,
+        "rationale": "Su fin es magnificar objetos diminutos en un plano de laboratorio cercano y no registrar diferentes franjas del espectro a distancia."
+      }
+    ],
+    "hint": "El término clave se compone de un prefijo que significa 'múltiples' o 'varios' unido a la palabra relacionada con las bandas de luz.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ventaja operativa presentan los drones de 'ala fija' frente a los de tipo multirotor en las operaciones mineras?",
+    "opciones": [
+      {
+        "text": "Pueden mantenerse suspendidos en un punto fijo dentro de un túnel muy estrecho sin avanzar.",
+        "isCorrect": false,
+        "rationale": "El vuelo estacionario en espacios reducidos es la fortaleza técnica de los drones multirotor, no de los de ala fija."
+      },
+      {
+        "text": "Son ideales para cubrir grandes extensiones de terreno, como tajos abiertos o líneas de transporte extensas.",
+        "isCorrect": true,
+        "rationale": "Su diseño similar al de un avión les permite recorrer mayores distancias con mayor autonomía de vuelo, siendo idóneos para mapear grandes áreas."
+      },
+      {
+        "text": "No requieren ningún tipo de sensor para volar ni procesar información.",
+        "isCorrect": false,
+        "rationale": "Todo dron utilizado para levantamientos geográficos requiere sensores, GPS y sistemas de vuelo para recolectar información."
+      },
+      {
+        "text": "Utilizan exclusivamente motores de combustión a carbón.",
+        "isCorrect": false,
+        "rationale": "Los drones modernos utilizan motores eléctricos o sistemas de propulsión avanzada, no calderas de carbón."
+      },
+      {
+        "text": "Tienen menor autonomía de vuelo y solo pueden volar por dos minutos.",
+        "isCorrect": false,
+        "rationale": "Al contrario, su capacidad aerodinámica les concede tiempos de vuelo extendidos en comparación a los multirrotores."
+      }
+    ],
+    "hint": "Compare la aerodinámica de un avión pequeño diseñado para largos recorridos con la de un helicóptero enfocado en precisión puntual.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el contenido del curso, ¿cuál es una diferencia clave entre los sistemas SCADA tradicionales y las plataformas modernas de monitoreo centralizado con IA?",
+    "opciones": [
+      {
+        "text": "Las plataformas con IA integran Big Data y análisis predictivo en tiempo real, mientras que el SCADA tradicional está más enfocado en el control y visualización de procesos específicos puntuales.",
+        "isCorrect": true,
+        "rationale": "A diferencia del SCADA que muestra datos locales de control directo en planta, las plataformas centralizadas usan IA para procesar grandes volúmenes de datos y generar análisis predictivo para toda la operación."
+      },
+      {
+        "text": "El SCADA tradicional utiliza aprendizaje profundo (Deep Learning) y las plataformas modernas solo usan papel.",
+        "isCorrect": false,
+        "rationale": "El SCADA es una tecnología previa de control directo sin IA avanzada, mientras que las plataformas modernas son 100% digitales e inteligentes."
+      },
+      {
+        "text": "Las plataformas de monitoreo no permiten ver gráficos ni recibir alertas de ningún tipo.",
+        "isCorrect": false,
+        "rationale": "Dichas plataformas poseen paneles interactivos altamente sofisticados dedicados a mostrar gráficos y alarmas en tiempo real."
+      },
+      {
+        "text": "El SCADA reemplaza la necesidad de usar sensores físicos en la maquinaria.",
+        "isCorrect": false,
+        "rationale": "Tanto el SCADA como las plataformas avanzadas dependen estrictamente de sensores físicos para capturar datos del entorno."
+      },
+      {
+        "text": "No existe diferencia alguna; el término SCADA es simplemente el nombre comercial de una marca de drones.",
+        "isCorrect": false,
+        "rationale": "SCADA es una arquitectura de control industrial bien definida y no la marca de un vehículo aéreo no tripulado."
+      }
+    ],
+    "hint": "Evalúe el alcance de la toma de decisiones: controlar un proceso puntual local versus anticipar escenarios futuros mediante Big Data.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tipo de sensor se instala en los equipos mineros para detectar tempranamente problemas de desequilibrio y desgaste mecánico en componentes rotativos?",
+    "opciones": [
+      {
+        "text": "Sensor de gas tóxico.",
+        "isCorrect": false,
+        "rationale": "Su cometido es medir concentraciones de sustancias químicas peligrosas presentes en el aire del ambiente."
+      },
+      {
+        "text": "Sensor de vibración.",
+        "isCorrect": true,
+        "rationale": "Miden la frecuencia y amplitud del movimiento oscilatorio en componentes mecánicos, permitiendo identificar anomalías y desgaste antes de una rotura."
+      },
+      {
+        "text": "Sensor de nivel de líquidos.",
+        "isCorrect": false,
+        "rationale": "Miden la altura de fluido disponible dentro de depósitos, pozos o tanques de almacenamiento."
+      },
+      {
+        "text": "Sensor de humedad relativa del aire.",
+        "isCorrect": false,
+        "rationale": "Evalúan la cantidad de vapor de agua en el ambiente y no las oscilaciones mecánicas de las piezas de un motor."
+      },
+      {
+        "text": "Sensor de PH químico.",
+        "isCorrect": false,
+        "rationale": "Determinan el grado de acidez o alcalinidad de soluciones acuosas."
+      }
+    ],
+    "hint": "Asocie los síntomas de un motor o rodamiento defectuoso con el movimiento anómalo repetitivo que genera.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la 'planificación dinámica de la extracción' respaldada por Inteligencia Artificial en comparación con la planificación tradicional?",
+    "opciones": [
+      {
+        "text": "En elaborar un único plan rígido al inicio del proyecto que no se modifica durante la vida útil de la mina.",
+        "isCorrect": false,
+        "rationale": "Esa metodología rígida y a largo plazo corresponde precisamente al enfoque clásico o tradicional de mina."
+      },
+      {
+        "text": "En adaptar continuamente las estrategias y secuencias de extracción en tiempo real según las variaciones del terreno, calidad del mineral y mercado.",
+        "isCorrect": true,
+        "rationale": "La planificación dinámica utiliza datos en tiempo real provenientes de sensores e IA para reajustar los planes de minado ante cualquier cambio en el entorno u operación."
+      },
+      {
+        "text": "En suspender la extracción de mineral y reemplazarla por modelos puramente teóricos.",
+        "isCorrect": false,
+        "rationale": "El fin de la planificación dinámica es ejecutar la producción real con la mayor rentabilidad técnica posible."
+      },
+      {
+        "text": "En eliminar el uso de computadoras y depender únicamente de mapas impresos en papel.",
+        "isCorrect": false,
+        "rationale": "Al contrario, requiere la integración de algoritmos de Machine Learning, sensores IoT y Big Data."
+      },
+      {
+        "text": "En cambiar el tipo de mineral extraído mediante transformaciones químicas artificiales en campo.",
+        "isCorrect": false,
+        "rationale": "No modifica la naturaleza geológica de los elementos, sino la decisión de cómo y cuándo extraer cada bloque."
+      }
+    ],
+    "hint": "Concentre su atención en la capacidad de realizar ajustes inmediatos y continuos ante datos recopilados en el instante.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es un 'gemelo digital' en el contexto de la minería 4.0?",
+    "opciones": [
+      {
+        "text": "Dos camiones mineros idénticos comprados al mismo fabricante.",
+        "isCorrect": false,
+        "rationale": "Tener dos equipos físicos iguales es una duplicación de maquinaria, no un gemelo virtual."
+      },
+      {
+        "text": "Una réplica virtual en tiempo real de un activo físico, proceso o sistema minero que permite simular y optimizar operaciones.",
+        "isCorrect": true,
+        "rationale": "Consiste en un modelo informático que reproduce fielmente las condiciones y comportamientos del activo real para probar escenarios y tomar decisiones sin riesgos."
+      },
+      {
+        "text": "Un operador humano que realiza exactamente el mismo trabajo que su supervisor.",
+        "isCorrect": false,
+        "rationale": "Hace referencia a un concepto de software y simulación, no al personal de trabajo de la mina."
+      },
+      {
+        "text": "Un duplicado en papel de la licencia de funcionamiento ambiental.",
+        "isCorrect": false,
+        "rationale": "Es un entorno dinámico digital interactivo, totalmente ajeno a una fotocopia de un documento formal."
+      },
+      {
+        "text": "Un tipo de mineral sintético producido en laboratorio para pruebas de molienda.",
+        "isCorrect": false,
+        "rationale": "Se trata de un modelo computacional de datos y no de un compuesto químico físico."
+      }
+    ],
+    "hint": "Considere la creación de un reflejo computacional que simula el comportamiento de las operaciones reales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes tecnologías o métodos basados en IA se utilizan para optimizar la gestión de inventarios y repuestos en minería?",
+    "opciones": [
+      {
+        "text": "Modelos de Machine Learning para predecir patrones de fallo y calcular niveles óptimos de stock.",
+        "isCorrect": true,
+        "rationale": "Permiten calcular qué piezas se van a requerir y en qué fecha exacta, ajustando existencias sin generar sobreabastecimiento."
+      },
+      {
+        "text": "Procesamiento de Lenguaje Natural (PLN / LLM) para interpretar órdenes de compra e interactuar en la gestión de pedidos.",
+        "isCorrect": true,
+        "rationale": "Facilita la lectura automática de solicitudes, presupuestos y órdenes escritas, agilizando las interacciones con proveedores."
+      },
+      {
+        "text": "Algoritmos genéticos para optimizar la distribución física y distribución del almacén.",
+        "isCorrect": true,
+        "rationale": "Ayudan a ubicar espacialmente los repuestos dentro de las instalaciones para minimizar los tiempos de búsqueda e itinerario."
+      },
+      {
+        "text": "Drones con visión computacional para auditar e inspeccionar el stock físico en almacenes.",
+        "isCorrect": true,
+        "rationale": "Escanean estanterías mediante reconocimiento de imagen para verificar de forma rápida las existencias disponibles."
+      },
+      {
+        "text": "Eliminación total de registros digitales reemplazándolos por fichas de cartón manuales.",
+        "isCorrect": false,
+        "rationale": "Regresar a fichas físicas de papel contradice el principio de automatización e integración digital propia de la IA."
+      }
+    ],
+    "hint": "Seleccione aquellas herramientas digitales que automatizan el cálculo de necesidades, el procesamiento de texto, la organización física y el conteo de existencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué beneficio aporta la aplicación de Inteligencia Artificial en la optimización del transporte dentro de la cadena de suministro minera?",
+    "opciones": [
+      {
+        "text": "Aumentar el consumo de combustible de los camiones de carga.",
+        "isCorrect": false,
+        "rationale": "Uno de los fines principales de la optimización es justamente la reducción de gastos energéticos e insumos."
+      },
+      {
+        "text": "Reducir costos de logística, optimizar las rutas de transporte y planificar mejor las entregas de insumos.",
+        "isCorrect": true,
+        "rationale": "Al analizar datos geoespaciales y condiciones en tiempo real, la IA selecciona las rutas más cortas y eficientes, acortando tiempos y costos operativos."
+      },
+      {
+        "text": "Evitar que los vehículos utilicen tecnología GPS o sistemas de navegación.",
+        "isCorrect": false,
+        "rationale": "La optimización con IA depende de la señal GPS continua para rastrear la flota en el mapa."
+      },
+      {
+        "text": "Obligar a que todos los traslados se realicen exclusivamente a pie.",
+        "isCorrect": false,
+        "rationale": "La IA gestiona vehículos pesados, trenes y flotas de transporte industrial de alto volumen."
+      },
+      {
+        "text": "Eliminar la necesidad de monitorear el estado de las vías de tránsito.",
+        "isCorrect": false,
+        "rationale": "Evaluar el estado del camino es un dato vital utilizado por el algoritmo para recalcular la mejor ruta."
+      }
+    ],
+    "hint": "Piense en las mejoras de eficiencia asociadas a hacer itinerarios más inteligentes y reducir gastos de combustible.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo ayuda la 'visión por computadora' en el control de calidad dentro de la planta de procesamiento o transporte de minerales?",
+    "opciones": [
+      {
+        "text": "Realizando inspecciones visuales automatizadas para detectar contaminantes o clasificar la pureza del mineral en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Utiliza cámaras avanzadas y algoritmos de reconocimiento de imagen para examinar el mineral en la banda, identificando anomalías o variaciones de calidad al instante."
+      },
+      {
+        "text": "Reemplazando los sensores de presión hidráulica de los motores eléctricos.",
+        "isCorrect": false,
+        "rationale": "La visión por computadora procesa imágenes ópticas y no mide la presión interna de los fluidos."
+      },
+      {
+        "text": "Generando facturas de venta manuscritas para los compradores.",
+        "isCorrect": false,
+        "rationale": "El análisis visual está diseñado para evaluar la calidad física del material y no para labores de facturación comercial."
+      },
+      {
+        "text": "Apagando automáticamente las luces del almacén durante el día.",
+        "isCorrect": false,
+        "rationale": "El control de luces es una función domótica básica y no un sistema de inspección de calidad mineral."
+      },
+      {
+        "text": "Midiendo el nivel de ruido producido por las oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "La medición de decibelios corresponde a sensores de sonido y no al análisis de calidad mediante cámaras."
+      }
+    ],
+    "hint": "Relacione el uso de cámaras inteligentes con la capacidad de observar la cinta de minerales sin detener el flujo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de pedidos y compras de repuestos mineros, ¿cuál es el papel principal del Procesamiento de Lenguaje Natural (PLN)?",
+    "opciones": [
+      {
+        "text": "Medir la densidad de la pulpa dentro del circuito SAG.",
+        "isCorrect": false,
+        "rationale": "La densidad de la pulpa se mide con densímetros e instrumentos físicos en la tubería."
+      },
+      {
+        "text": "Analizar e interpretar documentos, órdenes de compra y solicitudes de proveedores en texto de forma automatizada e interactiva.",
+        "isCorrect": true,
+        "rationale": "El PLN se especializa en comprender la estructura del lenguaje humano escrito o hablado, permitiendo tramitar requerimientos, pedidos y contratos digitalmente."
+      },
+      {
+        "text": "Reparar mecánicamente las piezas desgastadas mediante soldadura láser.",
+        "isCorrect": false,
+        "rationale": "La reparación de piezas es un procedimiento industrial mecánico y no un tratamiento computacional de texto."
+      },
+      {
+        "text": "Controlar la trayectoria de los satélites en órbita baja.",
+        "isCorrect": false,
+        "rationale": "La guía de satélites corresponde a la física aeroespacial y sistemas de navegación orbital."
+      },
+      {
+        "text": "Diseñar la malla de voladura en minas subterráneas.",
+        "isCorrect": false,
+        "rationale": "El diseño de perforación y voladura es competencia del software geomecánico y de minado."
+      }
+    ],
+    "hint": "Enfóquese en la capacidad tecnológica diseñada para leer, comprender y responder al texto escrito por personas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la finalidad principal de implementar modelos predictivos respaldados por IA y sensores IoT en la maquinaria minera?",
+    "opciones": [
+      {
+        "text": "Esperar a que la máquina sufra una rotura total antes de revisar su estado.",
+        "isCorrect": false,
+        "rationale": "Esperar a la ruptura es propio del mantenimiento correctivo tradicional, el cual resulta costoso e ineficiente."
+      },
+      {
+        "text": "Anticipar posibles fallos mecánicos y programar mantenimientos antes de que ocurran paradas no planificadas.",
+        "isCorrect": true,
+        "rationale": "El enfoque predictivo busca detectar pequeños patrones anómalos de vibración o temperatura para reparar la máquina preventivamente antes de que colapse."
+      },
+      {
+        "text": "Incrementar los costos de repuestos comprando piezas sin verificar su necesidad.",
+        "isCorrect": false,
+        "rationale": "La predictividad ayuda justamente a evitar compras innecesarias comprando únicamente lo requerimiento exacto."
+      },
+      {
+        "text": "Desconectar los sistemas de alerta para evitar interrupciones en la pantalla del operador.",
+        "isCorrect": false,
+        "rationale": "Las alertas en pantalla son el canal clave mediante el cual el modelo le avisa al personal sobre anomalías detectadas."
+      },
+      {
+        "text": "Reducir la vida útil de los componentes de transmisión.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento oportuno extiende la duración de los equipos evitando que operen en condiciones dañinas."
+      }
+    ],
+    "hint": "Piense en la ventaja de adelantarse en el tiempo a un desperfecto para evitar que una máquina se detenga por sorpresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre el aprendizaje automático (Machine Learning) y el aprendizaje profundo (Deep Learning) en el procesamiento de datos de Inteligencia Artificial?",
+    "opciones": [
+      {
+        "text": "Machine Learning procesa datos mediante algoritmos que requieren datos estructurados o etiquetados, mientras que Deep Learning utiliza redes neuronales capaces de procesar datos no estructurados como video e imágenes.",
+        "isCorrect": true,
+        "rationale": "Machine Learning se apoya en algoritmos estructurados con características predefinidas o etiquetadas, mientras que Deep Learning imita la estructura cerebral con redes neuronales complejas para extraer patrones directamente de datos sin estructurar."
+      },
+      {
+        "text": "Machine Learning requiere únicamente redes neuronales ocultas, mientras que Deep Learning solo procesa tablas estadísticas mediante el lenguaje R.",
+        "isCorrect": false,
+        "rationale": "Las redes neuronales con capas ocultas son la base del Deep Learning, no del Machine Learning convencional."
+      },
+      {
+        "text": "Machine Learning opera exclusivamente mediante prueba y error con recompensas, mientras que Deep Learning requiere la supervisión constante de un docente humano.",
+        "isCorrect": false,
+        "rationale": "El aprendizaje por prueba y error con recompensas define al aprendizaje por refuerzo, no al Machine Learning en general."
+      },
+      {
+        "text": "Machine Learning elimina la necesidad de algoritmos de programación, mientras que Deep Learning depende únicamente de datos etiquetados manualmente.",
+        "isCorrect": false,
+        "rationale": "Machine Learning requiere explícitamente algoritmos estructurados para interpretar y clasificar la información recibida."
+      },
+      {
+        "text": "Machine Learning solo se aplica a la visión por computadora, mientras que Deep Learning se limita al cálculo predictivo de precios y costos.",
+        "isCorrect": false,
+        "rationale": "La visión por computadora se beneficia principalmente de arquitecturas de Deep Learning debido al análisis de imágenes y video."
+      }
+    ],
+    "hint": "Considere el tipo de representación de entrada (tablas frente a archivos de medios) y el mecanismo interno de procesamiento (algoritmos vs. capas neuronales).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En las aplicaciones mineras prácticas, ¿cuáles de las siguientes características distinguen al aprendizaje supervisado frente al aprendizaje no supervisado?",
+    "opciones": [
+      {
+        "text": "El aprendizaje supervisado requiere datos de entrada debidamente etiquetados con sus respectivas respuestas o clasificaciones conocidas.",
+        "isCorrect": true,
+        "rationale": "El etiquetado explícito de los datos actúa como la guía que orienta al modelo durante su entrenamiento inicial."
+      },
+      {
+        "text": "El aprendizaje no supervisado busca identificar similitudes, agrupamientos y patrones anómalos en conjuntos de datos sin etiquetas previas.",
+        "isCorrect": true,
+        "rationale": "Al carecer de respuestas predeterminadas, el modelo explora de forma autónoma la estructura subyacente para agrupar datos afines."
+      },
+      {
+        "text": "El aprendizaje supervisado se utiliza típicamente para la clasificación precisa de minerales mediante algoritmos previamente guiados.",
+        "isCorrect": true,
+        "rationale": "Al proporcionar imágenes asociadas a etiquetas específicas como cobre u oro, el modelo aprende a clasificar correctamente muestras futuras."
+      },
+      {
+        "text": "El aprendizaje no supervisado requiere la intervención directa del operador para definir el resultado esperado de cada variable.",
+        "isCorrect": false,
+        "rationale": "La ausencia de orientación u operador definiendo el resultado esperado es precisamente lo que define al enfoque no supervisado."
+      },
+      {
+        "text": "El aprendizaje supervisado ajusta sus respuestas mediante un sistema continuo de recompensas y penalizaciones del entorno.",
+        "isCorrect": false,
+        "rationale": "El esquema de recompensas y penalizaciones pertenece al aprendizaje por refuerzo y no al aprendizaje supervisado."
+      }
+    ],
+    "hint": "Piense en la presencia o ausencia de etiquetas previas en las entradas de datos y en los objetivos del modelo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante el proceso de optimización de un circuito de molienda mediante Inteligencia Artificial supervisada, ¿cuál es la secuencia metodológica correcta que debe seguirse tras la identificación de metas y problemas?",
+    "opciones": [
+      {
+        "text": "Recolección de datos, organización/limpieza de datos, entrenamiento del sistema, prueba/validación e implementación con mejora continua.",
+        "isCorrect": true,
+        "rationale": "Esta secuencia garantiza que los datos se filtren de inconsistencias antes de alimentar los algoritmos de entrenamiento, validando la precisión previa a la puesta en marcha."
+      },
+      {
+        "text": "Implementación directa del modelo, recolección de datos, eliminación de sensores, prueba de campo y reporte final.",
+        "isCorrect": false,
+        "rationale": "Desplegar un modelo antes de recolectar datos y entrenar el sistema genera decisiones erróneas e ineficiencias operativas."
+      },
+      {
+        "text": "Generación de redes neuronales, compra de licencias, entrenamiento no supervisado, filtrado manual y cierre operativo.",
+        "isCorrect": false,
+        "rationale": "El filtrado y organización de datos debe realizarse antes del entrenamiento y no al final del proceso metodológico."
+      },
+      {
+        "text": "Limpieza de datos, implementación de Deep Learning, calibración de sensores térmicos, recolección de muestras y pruebas esporádicas.",
+        "isCorrect": false,
+        "rationale": "No se pueden limpiar ni estructurar datos sin haber realizado primero la recolección sistemática de los mismos."
+      },
+      {
+        "text": "Prueba del sistema en laboratorio, recolección de datos históricos, sustitución de algoritmos, implementación técnica y auditoría.",
+        "isCorrect": false,
+        "rationale": "Las pruebas de validación requieren que la Inteligencia Artificial ya haya sido entrenada con datos previamente recopilados y limpios."
+      }
+    ],
+    "hint": "Identifique el orden lógico que va desde la obtención de insumos informativos hasta el despliegue y perfeccionamiento del sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué ventajas técnicas presenta el uso de datos etiquetados en comparación con los datos no etiquetados en aplicaciones de supervisión minera?",
+    "opciones": [
+      {
+        "text": "Ofrecen una mayor precisión y resultados más específicos orientados a objetivos operativos concretos.",
+        "isCorrect": true,
+        "rationale": "Al asociar entradas con resultados objetivo validados, el modelo minimiza la ambigüedad en sus predicciones finales."
+      },
+      {
+        "text": "Permiten guiar al modelo de Inteligencia Artificial para la detección exacta de fallas mecánicas e identificación de minerales.",
+        "isCorrect": true,
+        "rationale": "Las etiquetas proporcionan ejemplos claros de 'falla' o 'tipo de mineral' que permiten establecer reglas estrictas de clasificación."
+      },
+      {
+        "text": "Eliminan la necesidad de contar con expertos humanos o tiempo dedicado al proceso previo de clasificación.",
+        "isCorrect": false,
+        "rationale": "La preparación de datos etiquetados es precisamente más costosa porque requiere la intervención de expertos y tiempo de clasificación."
+      },
+      {
+        "text": "Requieren un menor costo de obtención y almacenamiento al no estructurar las variables de entrada.",
+        "isCorrect": false,
+        "rationale": "Los datos no etiquetados son los que resultan menos costosos de obtener al no requerir un procesamiento humano previo."
+      },
+      {
+        "text": "Generan interpretaciones totalmente independientes sin necesidad de definir un algoritmo de entrenamiento previo.",
+        "isCorrect": false,
+        "rationale": "Los datos etiquetados requieren necesariamente un algoritmo de aprendizaje supervisado que interprete las reglas de asociación."
+      }
+    ],
+    "hint": "Evalúe los beneficios en términos de exactitud diagnóstica e impacto operativo en la toma de decisiones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto del mantenimiento predictivo de maquinaria pesada, ¿cómo se diferencia el enfoque de aprendizaje por refuerzo respecto al aprendizaje supervisado?",
+    "opciones": [
+      {
+        "text": "El aprendizaje por refuerzo aprende de manera dinámica mediante la interacción con el entorno, prueba-error y recompensas, mientras que el supervisado depende de un conjunto predeterminado de datos etiquetados.",
+        "isCorrect": true,
+        "rationale": "El aprendizaje por refuerzo adapta sus políticas operativas evaluando constantemente las consecuencias de sus acciones en un entorno dinámico."
+      },
+      {
+        "text": "El aprendizaje por refuerzo utiliza etiquetas estáticas para predecir la temperatura del motor, mientras que el supervisado modifica el código base automáticamente.",
+        "isCorrect": false,
+        "rationale": "El uso de etiquetas estáticas para predicciones es la característica central del aprendizaje supervisado."
+      },
+      {
+        "text": "El aprendizaje por refuerzo solo analiza imágenes satelitales en tiempo real, mientras que el supervisado se limita al análisis de archivos de texto.",
+        "isCorrect": false,
+        "rationale": "Ambos tipos de aprendizaje pueden aplicarse a múltiples modalidades de datos, no existiendo tal restricción de formato."
+      },
+      {
+        "text": "El aprendizaje por refuerzo requiere que un programador defina los límites máximos de vibración en cada ciclo de trabajo.",
+        "isCorrect": false,
+        "rationale": "La definición manual de parámetros límite se vincula al diseño de algoritmos de supervisión o reglas de control estáticas."
+      },
+      {
+        "text": "El aprendizaje por refuerzo carece de capacidad para optimizar rutas de transporte o consumo de combustible en camiones.",
+        "isCorrect": false,
+        "rationale": "La optimización de rutas dinámicas mediante recompensas de menor tiempo o combustible es un uso emblemático del aprendizaje por refuerzo."
+      }
+    ],
+    "hint": "Considere la presencia de retroalimentación en tiempo real en función de acciones tomadas frente a la comparación con datos históricos explícitos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para clasificar muestras minerales en una cinta transportadora mediante Inteligencia Artificial supervisada, ¿qué elementos son indispensables durante la fase de desarrollo del modelo?",
+    "opciones": [
+      {
+        "text": "Un conjunto de datos de entrada que incluya imágenes o lecturas espectrales de las rocas.",
+        "isCorrect": true,
+        "rationale": "Constituye el insumo primario que el modelo analiza para capturar propiedades físicas como textura, brillo o color."
+      },
+      {
+        "text": "Etiquetas asociadas a cada muestra, tales como 'cobre', 'oro' o 'ganga'.",
+        "isCorrect": true,
+        "rationale": "Proporcionan la referencia correcta contra la cual la Inteligencia Artificial ajusta sus parámetros de reconocimientos de patrones."
+      },
+      {
+        "text": "Un algoritmo que procese las entradas para aprender a reconocer patrones de textura, brillo y color.",
+        "isCorrect": true,
+        "rationale": "Es el marco computacional que traduce la relación entre los datos de entrada y sus respectivas etiquetas de salida."
+      },
+      {
+        "text": "La desconexión total de sensores para permitir que la máquina deduzca el mineral de forma completamente autónoma.",
+        "isCorrect": false,
+        "rationale": "Los sensores son indispensables para capturar los datos físicos que alimentan al algoritmo de clasificación."
+      },
+      {
+        "text": "La implementación exclusiva de simuladores de física de fluidos en lugar de procesamiento de imágenes.",
+        "isCorrect": false,
+        "rationale": "La clasificación visual en cintas requiere técnicas de procesamiento de imágenes o espectrometría, no dinámica de fluidos."
+      }
+    ],
+    "hint": "Piense en la triada fundamental que requiere un entrenamiento supervisado para la visión computacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del análisis de datos geoespaciales aplicados a la exploración minera, ¿qué caracteriza a una estructura de datos tipo Raster?",
+    "opciones": [
+      {
+        "text": "Es una representación mediante una cuadrícula de píxeles donde cada unidad contiene atributos específicos como reflectancia o temperatura.",
+        "isCorrect": true,
+        "rationale": "Los datos raster estructuran la información espacial en mallas continuas donde cada celda registra valores numéricos de propiedades físicas o espectrales."
+      },
+      {
+        "text": "Es un conjunto de entidades geométricas compuestas exclusivamente por puntos, líneas y polígonos vectoriales.",
+        "isCorrect": false,
+        "rationale": "La representación mediante puntos, líneas y polígonos corresponde a la estructura de datos vectoriales."
+      },
+      {
+        "text": "Es una tabla de texto no estructurada que recopila únicamente registros financieros del proyecto exploratorio.",
+        "isCorrect": false,
+        "rationale": "Las imágenes raster son representaciones espaciales matriciales y no registros contables no estructurados."
+      },
+      {
+        "text": "Es un modelo matemático tridimensional derivado únicamente de sensores piezoeléctricos de contacto.",
+        "isCorrect": false,
+        "rationale": "Aunque puede representar elevaciones, la naturaleza raster se define por su matriz de píxeles y no por sensores de contacto."
+      },
+      {
+        "text": "Es un protocolo de comunicación inalámbrica diseñado para transmitir alertas de gases en minería subterránea.",
+        "isCorrect": false,
+        "rationale": "Raster es un formato de representación de datos geoespaciales, no un protocolo de telecomunicaciones."
+      }
+    ],
+    "hint": "Piense en la forma en que las imágenes satelitales representan gráficamente la superficie terrestre dividida en pequeñas celdas discretas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al procesar imágenes satelitales para la detección de anomalías geológicas e identificación de yacimientos, ¿qué funciones cumple la etapa de preprocesamiento de datos?",
+    "opciones": [
+      {
+        "text": "Eliminar la interferencia producida por nubes para evitar la distorsión de la señal reflejada hacia el satélite.",
+        "isCorrect": true,
+        "rationale": "Las nubes bloquean o refractan la señal óptica e infrarroja, introduciendo datos erróneos que deben ser removidos."
+      },
+      {
+        "text": "Normalizar los valores espectrales obtenibles para garantizar la coherencia en las firmas de reflectancia.",
+        "isCorrect": true,
+        "rationale": "Ajusta las variaciones de iluminación y respuesta de los sensores para comparar imágenes de diferentes fechas o satélites."
+      },
+      {
+        "text": "Corregir las variaciones atmosféricas y geométricas que afectan la precisión del análisis espacial.",
+        "isCorrect": true,
+        "rationale": "Asegura que los datos espectrales se correspondan con las propiedades reales de la superficie y se alineen con coordenadas geográficas exactas."
+      },
+      {
+        "text": "Alterar artificialmente la ley del mineral calculada antes de entrenar la red neuronal.",
+        "isCorrect": false,
+        "rationale": "Falsificar las leyes minerales destruye la integridad técnica del modelo exploratorio."
+      },
+      {
+        "text": "Sustituir completamente las imágenes satelitales por levantamientos topográficos manuales.",
+        "isCorrect": false,
+        "rationale": "El preprocesamiento busca limpiar y optimizar los datos satelitales existentes, no descartarlos por métodos manuales."
+      }
+    ],
+    "hint": "Considere las correcciones físicas y ambientales requeridas para limpiar imágenes capturadas desde la atmósfera superior.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "A la hora de desarrollar modelos de aprendizaje profundo en minería, ¿qué relación operativa existe entre el marco TensorFlow y el lenguaje Python?",
+    "opciones": [
+      {
+        "text": "TensorFlow proporciona un marco de trabajo y bibliotecas optimizadas para construir y entrenar redes neuronales, mientras que Python es el lenguaje de programación utilizado para estructurar las instrucciones y llamar a dichas bibliotecas.",
+        "isCorrect": true,
+        "rationale": "Python actúa como la interfaz flexible de programación que permite invocar las operaciones matemáticas y de grafos optimizadas que ejecuta TensorFlow."
+      },
+      {
+        "text": "TensorFlow es una base de datos geoquímica estática, mientras que Python es un sistema operativo para drones.",
+        "isCorrect": false,
+        "rationale": "TensorFlow es un framework para desarrollo de modelos de aprendizaje automático y Python un lenguaje interpretado de propósito general."
+      },
+      {
+        "text": "TensorFlow solo procesa datos vectoriales de GIS, mientras que Python ejecuta exclusivamente simulaciones geotécnicas.",
+        "isCorrect": false,
+        "rationale": "Ambas herramientas son sumamente versátiles y no están limitadas a subcampos de GIS o geotecnia rígidos."
+      },
+      {
+        "text": "TensorFlow reemplaza la necesidad de usar imágenes satelitales, mientras que Python es un hardware de radar.",
+        "isCorrect": false,
+        "rationale": "TensorFlow y Python son componentes de software y programación, no sensores de hardware o fuentes de datos primarios."
+      },
+      {
+        "text": "TensorFlow requiere licencias comerciales obligatorias, mientras que Python es exclusivo de sistemas embebidos en camiones.",
+        "isCorrect": false,
+        "rationale": "TensorFlow es una biblioteca de código abierto y Python se ejecuta de forma nativa en casi cualquier entorno computacional."
+      }
+    ],
+    "hint": "Diferencie entre la herramienta específica para diseño de redes neuronales y el lenguaje de alto nivel que la controla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la predicción de yacimientos y modelado de datos geofísicos a gran escala, ¿qué plataformas o bibliotecas avanzadas de Inteligencia Artificial son comúnmente empleadas?",
+    "opciones": [
+      {
+        "text": "RapidMiner, para la construcción de modelos predictivos y flujo de datos sin necesidad de programación compleja desde cero.",
+        "isCorrect": true,
+        "rationale": "Ofrece un entorno visual que facilita la integración y análisis de datos geológicos mediante analítica predictiva."
+      },
+      {
+        "text": "Scikit-learn, para la implementación de algoritmos de clasificación y regresión como Random Forest en lenguaje Python.",
+        "isCorrect": true,
+        "rationale": "Es una biblioteca de Python estándar para aprendizaje automático que permite entrenar clasificadores eficientes sobre datos exploratorios."
+      },
+      {
+        "text": "H2O.ai, para el procesamiento masivo de Big Data y entrenamiento de redes neuronales profundas en geofísica.",
+        "isCorrect": true,
+        "rationale": "Permite procesar grandes volúmenes de datos distribuidos en entornos Big Data ejecutando modelos de Deep Learning en tiempo real."
+      },
+      {
+        "text": "SCADA local, como el único motor de analítica predictiva de escala regional en exploración.",
+        "isCorrect": false,
+        "rationale": "Los sistemas SCADA están enfocados en el control operativo local e industrial, no en el procesamiento predictivo regional de yacimientos."
+      },
+      {
+        "text": "Microsoft Excel, como la plataforma principal para el procesamiento no supervisado de imágenes satelitales multiespectrales.",
+        "isCorrect": false,
+        "rationale": "Las hojas de cálculo convencionales carecen de la capacidad computacional para procesar datos raster multiespectrales y redes neuronales."
+      }
+    ],
+    "hint": "Identifique las soluciones orientadas a la analítica predictiva, aprendizaje automático y procesamiento masivo de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo funciona operativamente la tecnología LiDAR (Light Detection and Ranging) cuando se integra en plataformas aéreas para levantamientos mineros?",
+    "opciones": [
+      {
+        "text": "Emite pulsos de luz láser hacia la superficie y mide el tiempo que tarda cada impulso en reflejarse y regresar al sensor para reconstruir la topografía en 3D.",
+        "isCorrect": true,
+        "rationale": "Al calcular el tiempo de vuelo de los pulsos láser, LiDAR genera una nube de puntos tridimensional de muy alta precisión geométrica."
+      },
+      {
+        "text": "Mide la resistencia eléctrica del subsuelo mediante la inyección directa de corriente continua desde la aeronave.",
+        "isCorrect": false,
+        "rationale": "La medición de resistividad eléctrica requiere contacto físico de electrodos con el terreno y no se realiza mediante láser electromagnético aéreo."
+      },
+      {
+        "text": "Captura únicamente fotografías térmicas en el espectro visible para identificar variaciones de pH en la vegetación.",
+        "isCorrect": false,
+        "rationale": "LiDAR es un sistema activo basado en distancia de pulsos de luz, no un sensor pasivo de radiación térmica o fotografías espectrales."
+      },
+      {
+        "text": "Utiliza ondas de radio submarinas para calcular la viscosidad de la pulpa mineral en tanques de lixiviación.",
+        "isCorrect": false,
+        "rationale": "Esta tecnología se utiliza en mapeos topográficos y geológicos de superficie, no para reometría de pulpas dentro de plantas."
+      },
+      {
+        "text": "Genera campos magnéticos inducidos para detectar partículas de oro a profundidades mayores a 5 kilómetros.",
+        "isCorrect": false,
+        "rationale": "El láser de LiDAR recopila la superficie tridimensional externa o terreno expuesto, no mide campos magnéticos profundos."
+      }
+    ],
+    "hint": "Piense en el principio del tiempo de vuelo de una emisión de luz dirigida desde el sensor hacia el terreno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para la simulación y evaluación de riesgos geomecánicos como la inestabilidad de taludes y derrumbes en labores mineras, ¿cuáles de los siguientes entornos computacionales son utilizados?",
+    "opciones": [
+      {
+        "text": "ANSYS, para el modelado de esfuerzos mecánicos, respuesta del terreno y estabilidad de estructuras frente a voladuras.",
+        "isCorrect": true,
+        "rationale": "Permite realizar simulaciones complejas por elementos finitos de la respuesta mecánica y estructural del macizo rocoso."
+      },
+      {
+        "text": "MATLAB, para simulaciones numéricas avanzadas de deformación de rocas, flujos de agua en macizos y análisis de tensiones.",
+        "isCorrect": true,
+        "rationale": "Proporciona capacidades de cálculo científico y modelado matemático diferencial para analizar estabilidad física en túneles y taludes."
+      },
+      {
+        "text": "Azure Machine Learning, para la predicción de fallas e integración de datos de sensores geotécnicos y de vibración en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Facilita el entrenamiento de modelos predictivos que analizan continuamente las lecturas de sensores de vibración y deformación."
+      },
+      {
+        "text": "Google Maps estándar, como la herramienta primaria de simulación de esfuerzos tridimensionales en macizos rocosos.",
+        "isCorrect": false,
+        "rationale": "Google Maps es una plataforma de navegación comercial y cartografía 2D, carente de motores de física o cálculo geomecánico."
+      },
+      {
+        "text": "Canva, para el cálculo estocástico de resistencia a la compresión simple en rocas alteradas.",
+        "isCorrect": false,
+        "rationale": "Canva es una herramienta de diseño gráfico y no un software de cálculo o ingeniería geotécnica."
+      }
+    ],
+    "hint": "Seleccione las plataformas enfocadas en ingeniería estructural, cálculo numérico avanzado y aprendizaje automático predictivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la automatización de maquinarias pesadas mineras, ¿cuál es el flujo de procesamiento que permite a un equipo operar de manera autónoma en zonas de alto riesgo?",
+    "opciones": [
+      {
+        "text": "Captura de datos mediante sensores y cámaras -> Procesamiento y análisis mediante algoritmos de IA -> Ejecución de comandos en el sistema de control autónomo -> Comunicación y monitoreo en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Los sensores recopilan datos del entorno, los algoritmos deciden la acción óptima, el sistema de control ejecuta la orden física y la red transmite la telemetría a la central."
+      },
+      {
+        "text": "Recepción de señales manuales del operador -> Desconexión de sensores -> Procesamiento en hojas de cálculo -> Apagado del motor.",
+        "isCorrect": false,
+        "rationale": "Un sistema autónomo no requiere un operador manual continuo ni debe desconectar sus sensores de percepción."
+      },
+      {
+        "text": "Transmisión por radio analógica -> Digitalización en laboratorio -> Corrección manual de ruta -> Carga de combustible.",
+        "isCorrect": false,
+        "rationale": "El procesamiento autónomo requiere computación a bordo e Inteligencia Artificial en tiempo real, no análisis manual en laboratorios diferidos."
+      },
+      {
+        "text": "Generación de imágenes LiDAR -> Envío por correo postal -> Evaluación por el comité de seguridad -> Arranque de maquinaria.",
+        "isCorrect": false,
+        "rationale": "La latencia en las decisiones autónomas debe ser de milisegundos a través de redes inalámbricas de alta velocidad."
+      },
+      {
+        "text": "Activación de válvulas mecánicas -> Lectura visual de manómetros -> Calibración de neumáticos -> Operación por GPS pasivo.",
+        "isCorrect": false,
+        "rationale": "Las lecturas mecánicas manuales previenen la implementación de ciclos de decisión dinámicos por Inteligencia Artificial."
+      }
+    ],
+    "hint": "Siga el camino lógico de la información desde que se percibe el entorno hasta que el vehículo ejecuta una maniobra técnica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué tipos de inteligencias artificiales o arquitecturas especializadas se aplican directamente en los sistemas de navegación y percepción de los equipos mineros autónomos?",
+    "opciones": [
+      {
+        "text": "Visión por computadora, para procesar imágenes 360° e identificar obstáculos, grietas o irregularidades en la vía.",
+        "isCorrect": true,
+        "rationale": "Permite interpretar la radiación visible e infrarroja captada por las cámaras para reconocer límites físicos y objetos en el trayecto."
+      },
+      {
+        "text": "Redes Neuronales Convencionales (CNN), para la interpretación y clasificación de video e imágenes del entorno en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Su arquitectura convolucional es idónea para extraer características visuales complejas en secuencias de video a alta velocidad."
+      },
+      {
+        "text": "Algoritmos de optimización, para ajustar continuamente las rutas, la aceleración y los tiempos de ciclo de acarreo.",
+        "isCorrect": true,
+        "rationale": "Calculan la trayectoria matemáticamente más eficiente y segura reduciendo desgaste operacional y consumo de combustible."
+      },
+      {
+        "text": "Sistemas de control predictivo, para anticipar comportamientos de la máquina y prevenir colisiones o volcaduras.",
+        "isCorrect": true,
+        "rationale": "Modelan la dinámica del vehículo para ajustar el frenado y la dirección antes de ingresar a condiciones de peligro extremo."
+      },
+      {
+        "text": "Modelos de lenguaje LLM sin conexión a sensores, como el único motor de dirección hidráulica de la máquina.",
+        "isCorrect": false,
+        "rationale": "Los LLM están diseñados para el procesamiento de texto e interacción lingüística, no para el control cibernético-físico de la dirección."
+      }
+    ],
+    "hint": "Considere las tecnologías responsables del procesamiento sensorial visual, la optimización geométrica y el control físico anticipatorio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre un sistema SCADA tradicional y una plataforma integral de monitoreo centralizado impulsada por Inteligencia Artificial?",
+    "opciones": [
+      {
+        "text": "El SCADA tradicional se limita al control y visualización de procesos específicos en tiempo real con reglas fijas, mientras que la plataforma con IA integra análisis predictivo, Big Data y toma de decisiones automatizada en toda la operación.",
+        "isCorrect": true,
+        "rationale": "Mientras el SCADA muestra datos en tiempo real bajo límites prefijados, la plataforma con IA utiliza analítica avanzada para predecir fallas y optimizar globalmente el proceso."
+      },
+      {
+        "text": "El SCADA opera exclusivamente en la nube pública, mientras que las plataformas con IA no requieren conexión a Internet ni bases de datos.",
+        "isCorrect": false,
+        "rationale": "El SCADA opera comúnmente en redes locales de planta (OT) y las plataformas de IA suelen depender fuertemente de la nube y grandes bases de datos."
+      },
+      {
+        "text": "El SCADA utiliza redes neuronales profundas para predecir leyes de mineral, mientras que la plataforma con IA es un temporizador analógico.",
+        "isCorrect": false,
+        "rationale": "Las redes neuronales predictivas son una característica distintiva de las plataformas avanzadas de IA, no del SCADA tradicional."
+      },
+      {
+        "text": "El SCADA solo recopila datos de drones, mientras que las plataformas centralizadas se instalan únicamente en los camiones de extracción.",
+        "isCorrect": false,
+        "rationale": "Los sistemas SCADA se conectan a PLC e instrumentación industrial fija de proceso, no se limitan a drones."
+      },
+      {
+        "text": "El SCADA no permite el uso de sensores de temperatura, mientras que las plataformas con IA sustituyen el mantenimiento físico de motores.",
+        "isCorrect": false,
+        "rationale": "Los sensores de temperatura son una de las entradas primarias más comunes registradas por los sistemas SCADA de planta."
+      }
+    ],
+    "hint": "Compare el alcance de un sistema de control local con lógica determinista estática frente a un ecosistema informático predictivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes sensores son indispensables para el monitoreo de condición e integridad mecánica en palas, camiones y molinos dentro de un esquema de mantenimiento predictivo?",
+    "opciones": [
+      {
+        "text": "Sensores de vibración, para detectar desalineaciones, desequilibrios y desgaste en rodamientos o ejes.",
+        "isCorrect": true,
+        "rationale": "Las variaciones en las amplitudes y frecuencias de vibración son los primeros síntomas de falla en componentes rotativos."
+      },
+      {
+        "text": "Sensores de temperatura y termografía, para identificar puntos de sobrecalentamiento en reductores y motores.",
+        "isCorrect": true,
+        "rationale": "Registran la fricción anómala o fallas en los sistemas de refrigeración antes de que ocurra un evento catastrófico."
+      },
+      {
+        "text": "Sensores de análisis de aceite/partículas, para medir la presencia de residuos metálicos y degradación del lubricante.",
+        "isCorrect": true,
+        "rationale": "Monitorean el desgaste interno en componentes cerrados midiendo la concentración de virutas de metal en el fluido."
+      },
+      {
+        "text": "Sensores de presión e hidráulica, para verificar la eficiencia del sistema y detectar fugas o cavitación.",
+        "isCorrect": true,
+        "rationale": "Permiten prevenir caídas bruscas de potencia hidráulica y fallas en las bombas principales de los equipos."
+      },
+      {
+        "text": "Sensores barométricos de humedad superficial exclusivamente orientados al color de la pintura exterior del chasis.",
+        "isCorrect": false,
+        "rationale": "El color de la pintura exterior no ofrece información técnica relevante para el diagnóstico preventivo de componentes internos."
+      }
+    ],
+    "hint": "Piense en las variables físicas directamente vinculadas con el desgaste termodinámico, tribológico y mecánico de los motores e infraestructuras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al integrar sensores LiDAR en drones para inspecciones en minería a tajo abierto o subterránea, ¿cuál es la ventaja principal frente a la fotogrametría convencional con cámaras ópticas?",
+    "opciones": [
+      {
+        "text": "Permite penetrar vegetación densa y capturar directamente la geometría del terreno mediante pulsos láser activos, independientemente de las condiciones de iluminación.",
+        "isCorrect": true,
+        "rationale": "Como la señal de LiDAR es un pulso emisor activo, atraviesa huecos en la vegetación y no depende de la luz solar o sombras para medir elevaciones."
+      },
+      {
+        "text": "Elimina por completo la necesidad de utilizar bases de datos o software de procesamiento tridimensional.",
+        "isCorrect": false,
+        "rationale": "Los datos de LiDAR generan millones de puntos en una nube 3D que exigen un software computacional especializado para su procesamiento."
+      },
+      {
+        "text": "Mide de forma directa la composición química y la ley de oro presente en las rocas sin necesidad de ensayos.",
+        "isCorrect": false,
+        "rationale": "LiDAR mide distancias geométricas superficiales, no determina análisis químicos de la roca ni ley de metales."
+      },
+      {
+        "text": "Modifica la trayectoria del dron automáticamente mediante motores de combustión interna integrados en el sensor.",
+        "isCorrect": false,
+        "rationale": "LiDAR es un sensor de medición geoespacial y no un sistema de propulsión mecánica para la aeronave."
+      },
+      {
+        "text": "Sustituye las pruebas geomecánicas de laboratorio al cambiar el color de la pared de la labor.",
+        "isCorrect": false,
+        "rationale": "La medición dimensional de la superficie mediante LiDAR complementa pero no reemplaza los ensayos mecánicos de rotura de rocas."
+      }
+    ],
+    "hint": "Considere la naturaleza de la fuente de iluminación (activa por láser vs. pasiva por luz ambiental) y su capacidad de atravesar obstáculos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Análisis de entorno: ¿Qué plataformas comerciales de gestión minera integran soluciones de automatización de flotas, monitoreo en tiempo real y mantenimiento predictivo basadas en Inteligencia Artificial?",
+    "opciones": [
+      {
+        "text": "Caterpillar MineStar System.",
+        "isCorrect": true,
+        "rationale": "Es una suite integral diseñada para la asignación dinámica de flotas, control autónomo y analítica de salud de los equipos."
+      },
+      {
+        "text": "Hexagon Mining (Hexagon MineOperate / MineProtect).",
+        "isCorrect": true,
+        "rationale": "Proporciona herramientas de optimización operacional, asistencia al operador y control de seguridad en flota basada en analítica predictiva."
+      },
+      {
+        "text": "Hitachi / Wenco Fleet Management System.",
+        "isCorrect": true,
+        "rationale": "Ofrece despacho inteligente de unidades, rastreo GPS en tiempo real y monitoreo predictivo del rendimiento del motor."
+      },
+      {
+        "text": "Adobe Photoshop Lightroom.",
+        "isCorrect": false,
+        "rationale": "Es un programa de edición y revelado fotográfico digital para creadores de contenido, no una plataforma minera industrial."
+      },
+      {
+        "text": "Microsoft Word 365.",
+        "isCorrect": false,
+        "rationale": "Es un procesador de texto comercial que no posee módulos para la gestión industrial de flotas o telemetría de minería."
+      }
+    ],
+    "hint": "Identifique los ecosistemas de software industrial específicamente desarrollados por fabricantes de maquinaria y tecnología geotécnica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la minería moderna, ¿en qué consiste la planificación dinámica de la extracción impulsada por Inteligencia Artificial a diferencia de la planificación tradicional?",
+    "opciones": [
+      {
+        "text": "En ajustar continuamente la secuencia y estrategia de extracción en tiempo real según variaciones en la ley del mineral, estabilidad de taludes, capacidad operativa y precios de mercado.",
+        "isCorrect": true,
+        "rationale": "Aprovecha datos en tiempo real recopilados por sensores para recalcular continuamente las rutas óptimas de minado y maximizar el valor presente neto."
+      },
+      {
+        "text": "En establecer un plan de minado rígido e inalterable al inicio del proyecto que debe cumplirse estrictamente durante toda la vida útil de la mina.",
+        "isCorrect": false,
+        "rationale": "El enfoque estático e inalterable corresponde a la planificación tradicional previa al uso de sensores e IA en tiempo real."
+      },
+      {
+        "text": "En delegar la toma de decisiones financieras exclusivamente a los operadores de camiones de acarreo en la mina.",
+        "isCorrect": false,
+        "rationale": "Las decisiones de minado se procesan centralizadamente mediante modelos algorítmicos respaldados por la gerencia técnica."
+      },
+      {
+        "text": "En eliminar la necesidad de actualizar los modelos geológicos y sustituir las pruebas de laboratorio por estimaciones visuales.",
+        "isCorrect": false,
+        "rationale": "La planificación dinámica actualiza continuamente los modelos geológicos con nuevos datos cuantitativos de sondajes y sensores."
+      },
+      {
+        "text": "En detener las operaciones de extracción cada vez que se detecte un cambio menor en el clima externo.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la planificación dinámica es adaptar las operaciones eficientemente, no paralizar la mina innecesariamente."
+      }
+    ],
+    "hint": "Piense en el concepto de flexibilidad y reevaluación constante de variables operativas y económicas frente a un plan estático de vida útil.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes herramientas de software y plataformas son reconocidas por su capacidad para generar modelados geológicos 3D y optimización de secuencias de minado?",
+    "opciones": [
+      {
+        "text": "Seequent (Leapfrog).",
+        "isCorrect": true,
+        "rationale": "Es un estándar en modelado implícito 3D que actualiza continuamente las interpretaciones geológicas al ingresar nuevos datos de perforación."
+      },
+      {
+        "text": "Dassault Systèmes GEOVIA (Surpac / Whittle).",
+        "isCorrect": true,
+        "rationale": "Plataforma clave para la estimación de recursos, diseño de tajos y optimización económica de envolventes de minado."
+      },
+      {
+        "text": "Datamine (Studio RM / NPV Scheduler).",
+        "isCorrect": true,
+        "rationale": "Ofrece módulos especializados para la planificación estratégica y cálculo óptimo de la secuencia de bloques de extracción."
+      },
+      {
+        "text": "Maptek Deswik.",
+        "isCorrect": true,
+        "rationale": "Proporciona herramientas integradas para la planificación, diseño de labores y secuenciamiento operacional minero en 3D."
+      },
+      {
+        "text": "Windows Media Player.",
+        "isCorrect": false,
+        "rationale": "Es un reproductor multimedia de uso doméstico sin funciones para ingeniería o modelado geológico."
+      }
+    ],
+    "hint": "Seleccione las soluciones de software especializadas en geología computacional, planificación minera e ingeniería de minas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de la creación de un Gemelo Digital (Digital Twin) en la gestión de operaciones e infraestructuras mineras?",
+    "opciones": [
+      {
+        "text": "Replicar virtualmente un activo, proceso o sistema físico en tiempo real mediante datos de sensores e IA para simular escenarios, predecir fallas y optimizar el rendimiento.",
+        "isCorrect": true,
+        "rationale": "Un Gemelo Digital integra datos en tiempo real de instrumentación IoT con analítica para evaluar cambios operativos en la maqueta virtual antes de aplicarlos en el mundo real."
+      },
+      {
+        "text": "Duplicar físicamente las dimensiones de un camión de extracción para duplicar la carga transportada en cada viaje.",
+        "isCorrect": false,
+        "rationale": "Un Gemelo Digital es un modelo computacional o software y no una modificación o fabricación de maquinaria física."
+      },
+      {
+        "text": "Almacenar impresiones en papel de todos los planos topográficos antiguos en un archivo físico secundario.",
+        "isCorrect": false,
+        "rationale": "Trata de la digitalización viva de datos en tiempo real, totalmente opuesta al archivo físico estático en papel."
+      },
+      {
+        "text": "Reemplazar la red de fibra óptica por cables analógicos de cobre para reducir el consumo energético de la planta.",
+        "isCorrect": false,
+        "rationale": "El Gemelo Digital exige mayor ancho de banda y redes modernas de alta velocidad para transmitir la telemetría del sistema."
+      },
+      {
+        "text": "Automatizar la facturación contable de la empresa mediante el escaneo de recibos de pago manuales.",
+        "isCorrect": false,
+        "rationale": "Aunque se pueden digitalizar facturas, el Gemelo Digital minero se enfoca en la simulación técnica operacional y física de los activos."
+      }
+    ],
+    "hint": "Considere la interacción continua entre un activo físico real e instrumentado y su representación virtual sincronizada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué técnicas y algoritmos de Inteligencia Artificial se emplean para optimizar la gestión de inventarios y repuestos críticos en operaciones mineras?",
+    "opciones": [
+      {
+        "text": "Machine Learning (como Random Forest y redes neuronales), para predecir la demanda de repuestos según el desgaste histórico y horas de uso de los equipos.",
+        "isCorrect": true,
+        "rationale": "Permiten calcular con precisión el momento en que se requerirá un repuesto según el régimen de trabajo de la flota."
+      },
+      {
+        "text": "Algoritmos genéticos y metaheurísticas, para optimizar la distribución física (layout) y ubicación de repuestos en el almacén reduciendo tiempos de búsqueda.",
+        "isCorrect": true,
+        "rationale": "Resuelven problemas de optimización combinatoria para ubicar los componentes de mayor rotación en las zonas más accesibles."
+      },
+      {
+        "text": "Procesamiento de Lenguaje Natural (PLN / LLM), para interpretar órdenes de compra, contratos de proveedores y automatizar la gestión de requerimientos.",
+        "isCorrect": true,
+        "rationale": "Facilita la lectura automatizada de documentos no estructurados, cotizaciones y especificaciones técnicas de repuestos."
+      },
+      {
+        "text": "Visión computacional con drones, para auditar el stock físico de repuestos mediante escaneo de códigos e identificación visual en los racks.",
+        "isCorrect": true,
+        "rationale": "Automatiza la toma de inventarios físicos en almacenes de gran altura sin exponer al personal a riesgos de caída."
+      },
+      {
+        "text": "Métodos de estimación adivinatoria basados en fechas del calendario festivo local.",
+        "isCorrect": false,
+        "rationale": "La gestión industrial de activos críticos se basa en datos rigurosos y modelos cuantitativos, no en adivinación."
+      }
+    ],
+    "hint": "Piense en las distintas etapas de la gestión de almacenes: predicción de demanda, ubicación espacial, procesamiento de órdenes y conteo físico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la cadena de suministro minera, ¿de qué manera contribuyen los modelos predictivos de aprendizaje automático (Machine Learning) a la gestión de abastecimiento?",
+    "opciones": [
+      {
+        "text": "Analizan patrones históricos de consumo y factores operativos para proyectar la demanda de insumos, previniendo el sobrestock y las compras de emergencia.",
+        "isCorrect": true,
+        "rationale": "Al prever las necesidades con base en la programación de producción, minimizan el capital inmovilizado en bodega y evitan paradas no planificadas."
+      },
+      {
+        "text": "Fijan de manera arbitraria la tarifa de los transportistas independientes sin considerar la distancia del viaje.",
+        "isCorrect": false,
+        "rationale": "Los modelos de IA buscan optimizar costos mediante cálculos logísticos fundamentados, no mediante decisiones arbitrarias."
+      },
+      {
+        "text": "Eliminan el uso de contratos legales y órdenes de compra en las transacciones con proveedores internacionales.",
+        "isCorrect": false,
+        "rationale": "Los contratos y la trazabilidad formal son normativas obligatorias que la Inteligencia Artificial optimiza pero no elimina."
+      },
+      {
+        "text": "Obligan a almacenar repuestos no utilizados durante más de 20 años para garantizar el valor del activo.",
+        "isCorrect": false,
+        "rationale": "La acumulación de inventario obsoleto genera costos de almacenamiento indeseados que la IA intenta erradicar."
+      },
+      {
+        "text": "Reemplazan el mantenimiento preventivo por la reparación improvisada de piezas rotas en la labor.",
+        "isCorrect": false,
+        "rationale": "Machine Learning promueve el mantenimiento predictivo para reparar fallas antes de que la pieza se rompa por completo."
+      }
+    ],
+    "hint": "Considere la relación entre los datos de uso pasado, la programación futura de minado y la optimización del capital de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el control de calidad del mineral extraído y procesamiento en planta, ¿qué tecnologías basadas en Inteligencia Artificial mejoran la caracterización en tiempo real?",
+    "opciones": [
+      {
+        "text": "Sistemas de visión por computadora integrados en cintas transportadoras para clasificar granulometría y detectar fragmentos no deseados (ganga).",
+        "isCorrect": true,
+        "rationale": "Analizan continuamente el tamaño de fragmentación y el color de las rocas en movimiento para alertar sobre desviaciones."
+      },
+      {
+        "text": "Espectrometría y sensores multiespectrales combinados con Deep Learning para estimar la composición química y ley del mineral al instante.",
+        "isCorrect": true,
+        "rationale": "Identifican firmas espectrales que las redes neuronales asocian a leyes específicas de cobre o metales valiosos."
+      },
+      {
+        "text": "Modelos predictivos de Machine Learning para correlacionar parámetros de flotación/molienda y ajustar reactivos de manera automatizada.",
+        "isCorrect": true,
+        "rationale": "Optimizan el uso de reactivos químicos evaluando constantemente la respuesta metalúrgica calculada del mineral alimentado."
+      },
+      {
+        "text": "Inspección manual de cada tonelada de roca por un equipo de muestreadores con lupas de mano exclusivamente.",
+        "isCorrect": false,
+        "rationale": "El muestreo manual con lupa es inviable para caracterizar miles de toneladas continuas en plantas modernas de alta capacidad."
+      },
+      {
+        "text": "Calibración de reactivos químicos mediante la observación visual de la espuma por operadores en turnos rotativos sin instrumentación.",
+        "isCorrect": false,
+        "rationale": "La dosificación empírica sin instrumentación ni algoritmos resulta en pérdidas de recuperación metalúrgica y variabilidad de calidad."
+      }
+    ],
+    "hint": "Piense en las herramientas que automatizan el análisis físico (tamaño de roca), químico (ley de mineral) y metalúrgico (dosificación).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-26",
+    "diplomado": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué rol cumple la infraestructura de Big Data cuando se integra con modelos de Inteligencia Artificial en un centro de control operativo minero?",
+    "opciones": [
+      {
+        "text": "Permite ingestar, almacenar y procesar masivamente volúmenes heterogéneos de datos en tiempo real provenientes de miles de sensores, GPS, drones y equipos para alimentar los algoritmos de decisión.",
+        "isCorrect": true,
+        "rationale": "Big Data proporciona el entorno escalable necesario para gestionar las '3V' (Volumen, Velocidad y Variedad) de los datos que la Inteligencia Artificial requiere para realizar predicciones."
+      },
+      {
+        "text": "Reduce la velocidad de procesamiento de los servidores para obligar a los ingenieros a revisar los datos manualmente.",
+        "isCorrect": false,
+        "rationale": "El objetivo principal de Big Data es acelerar el procesamiento y la analítica automatizada a gran escala."
+      },
+      {
+        "text": "Limita la recolección de información a un máximo de 10 datos numéricos por día para evitar el sobrecalentamiento de la red.",
+        "isCorrect": false,
+        "rationale": "Big Data está diseñado para gestionar millones de registros por segundo y no para restringir severamente el volumen informativo."
+      },
+      {
+        "text": "Reemplaza los algoritmos de analítica por hojas de cálculo estáticas guardadas en discos locales desconectados.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento en Big Data utiliza sistemas distribuidos y bases de datos avanzadas, muy superiores a archivos locales estáticos."
+      },
+      {
+        "text": "Bloquea el flujo de comunicación entre los sensores de campo y las salas de control centralizadas.",
+        "isCorrect": false,
+        "rationale": "La infraestructura de Big Data se encarga de habilitar la integración del flujo de información, no de aislar los sensores."
+      }
+    ],
+    "hint": "Enfóquese en la capacidad requerida para gestionar la masividad, diversidad y velocidad de la información generada por la mina conectada.",
+    "activo": true
+  }
+]

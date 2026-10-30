@@ -90,13 +90,13 @@ export default function AuditoriaWebhooksPage() {
 
       {/* Contenido Principal con Header Superior */}
       <div className="flex-1 flex flex-col overflow-hidden min-w-0 h-full">
-        <AdminHeader breadcrumb="Auditoría y Webhooks n8n" />
+        <AdminHeader breadcrumb="Auditoría" />
         <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
           <div className="max-w-7xl mx-auto space-y-8">
           
           <div>
-            <h1 className="text-3xl font-bold text-slate-900">Auditoría & Centro de Webhooks</h1>
-            <p className="text-slate-500 mt-1">Registro inmutable de eventos administrativos y monitoreo de integraciones con n8n.</p>
+            <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mt-1 tracking-tight">Auditoría y centro de webhooks</h1>
+
           </div>
 
           {/* Tarjeta de Webhooks n8n */}

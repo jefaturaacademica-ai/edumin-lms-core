@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define el concepto de gestión de la calidad al combinar sus dos componentes clave?",
+    "opciones": [
+      {
+        "text": "El conjunto de acciones, soluciones y actividades enfocadas en mejorar los procesos para lograr la satisfacción del cliente.",
+        "isCorrect": true,
+        "rationale": "La gestión integra la toma de medidas y soluciones con el propósito esencial de la calidad, que es satisfacer las expectativas y necesidades del cliente a través de procesos mejorados."
+      },
+      {
+        "text": "La inspección final y rigurosa de cada producto terminado antes de ser entregado al comprador.",
+        "isCorrect": false,
+        "rationale": "La gestión de la calidad se enfoca en el control y la mejora continua de los procesos operativos completos, no únicamente en la revisión del producto final."
+      },
+      {
+        "text": "El cumplimiento estricto de los reglamentos sancionadores fijados por las entidades estatales.",
+        "isCorrect": false,
+        "rationale": "Aunque se deben cumplir requisitos legales pertinentes, la gestión de calidad busca principalmente la optimización del proceso organizativo orientado al cliente."
+      },
+      {
+        "text": "La certificación obligatoria del producto físico bajo estándares internacionales de fabricación.",
+        "isCorrect": false,
+        "rationale": "La norma ISO 9001 no certifica productos físicos directamente, sino los procesos organizativos que llevan a la elaboración de bienes o servicios."
+      },
+      {
+        "text": "La reducción automatizada de costos operativos en el área comercial de una empresa.",
+        "isCorrect": false,
+        "rationale": "La reducción de costos puede ser un beneficio derivado, pero no constituye la definición fundamental de lo que es la gestión de la calidad."
+      }
+    ],
+    "hint": "Relaciona la unión del término 'gestión' (acciones y soluciones) con 'calidad' (satisfacción de expectativas).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué elemento o aspecto de una organización es el que se certifica al implementar la norma ISO 9001:2015?",
+    "opciones": [
+      {
+        "text": "Los procesos organizativos que permiten llegar al producto o servicio final.",
+        "isCorrect": true,
+        "rationale": "La certificación ISO 9001 se otorga a los procesos de la empresa que garantizan el cumplimiento de los requisitos de calidad, y no a los bienes o bienes materiales en sí."
+      },
+      {
+        "text": "El producto físico o bien material comercializado por la empresa.",
+        "isCorrect": false,
+        "rationale": "Los productos no reciben la certificación ISO 9001; son los procesos operativos que los generan los que se someten a evaluación y certificación."
+      },
+      {
+        "text": "Exclusivamente el personal directivo y la junta de accionistas.",
+        "isCorrect": false,
+        "rationale": "Las personas reciben capacitaciones y competencias, pero la certificación del sistema evalúa la estructura de procesos de la organización."
+      },
+      {
+        "text": "Las herramientas informáticas y software contables utilizados en la sede.",
+        "isCorrect": false,
+        "rationale": "El software es un recurso de apoyo dentro de la infraestructura, pero no el objeto global de certificación del sistema de gestión."
+      },
+      {
+        "text": "Los bienes inmuebles y la infraestructura física del local principal.",
+        "isCorrect": false,
+        "rationale": "Los inmuebles forman parte de la infraestructura requerida, pero la auditoría de certificación evalúa el desempeño de los procesos."
+      }
+    ],
+    "hint": "Recuerda la distinción entre lo que se fabrica o entrega y la secuencia de actividades para lograrlo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Al analizar el contexto de la organización bajo la cláusula 4.1 de la ISO 9001:2015, ¿cuáles de los siguientes aspectos se consideran cuestiones internas?",
+    "opciones": [
+      {
+        "text": "La cultura organizacional y los valores de la empresa.",
+        "isCorrect": true,
+        "rationale": "Los valores y la cultura compartida son factores inherentes a la propia estructura y al ambiente de trabajo dentro de la organización."
+      },
+      {
+        "text": "El conocimiento acumulado y el desempeño interno de la organización.",
+        "isCorrect": true,
+        "rationale": "El grado de capacitación y los niveles de rendimiento propios forman parte de los activos intangibles y las capacidades internas."
+      },
+      {
+        "text": "Los cambios tecnológicos y tendencias del mercado global.",
+        "isCorrect": false,
+        "rationale": "Las innovaciones del mercado y las tendencias tecnológicas corresponden al entorno externo que rodea a la organización."
+      },
+      {
+        "text": "Las regulaciones legales y normativas gubernamentales vigentes.",
+        "isCorrect": false,
+        "rationale": "El marco normativo legal es un factor impuesto por el entorno externo de un país o sector determinado."
+      },
+      {
+        "text": "Las condiciones económicas y sociales del entorno regional.",
+        "isCorrect": false,
+        "rationale": "Los indicadores macroeconómicos y el clima social son factores del contexto externo a la empresa."
+      }
+    ],
+    "hint": "Identifica los factores que son propios y controlables directamente dentro del ámbito interno de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de la declaración del alcance del sistema de gestión de la calidad según la cláusula 4.3?",
+    "opciones": [
+      {
+        "text": "Delimitar los límites, procesos, productos, servicios y ubicaciones que abarca el sistema de gestión.",
+        "isCorrect": true,
+        "rationale": "El alcance establece con claridad las fronteras aplicables del sistema, señalando qué productos, sedes, actividades y requisitos están cubiertos o justificadamente excluidos."
+      },
+      {
+        "text": "Enumerar únicamente el listado completo de trabajadores de la planta principal.",
+        "isCorrect": false,
+        "rationale": "El registro de empleados corresponde a la gestión de talento humano y no al propósito estratégico de definir los límites del sistema de gestión."
+      },
+      {
+        "text": "Sustituir el análisis foda y la identificación de las partes interesadas.",
+        "isCorrect": false,
+        "rationale": "El alcance toma en cuenta el contexto y las partes interesadas, pero no reemplaza a estas herramientas fundamentales de la cláusula 4."
+      },
+      {
+        "text": "Fijar los precios de venta de los bienes comercializados por la compañía.",
+        "isCorrect": false,
+        "rationale": "Las decisiones comerciales de fijación de precios no forman parte del objeto de definición del alcance del sistema ISO 9001."
+      },
+      {
+        "text": "Describir con detalle cada uno de los pasos de mantenimiento del software interno.",
+        "isCorrect": false,
+        "rationale": "Esa descripción detallada corresponde a procedimientos e instructivos de trabajo específicos, no a la declaración general del alcance."
+      }
+    ],
+    "hint": "Piensa en el documento formal que establece las fronteras de lo que incluye e incluye justificadamente el sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué rol fundamental debe asumir la alta dirección en relación con el sistema de gestión de la calidad según el capítulo 5?",
+    "opciones": [
+      {
+        "text": "Demostrar liderazgo, compromiso y asegurar la disponibilidad de los recursos necesarios.",
+        "isCorrect": true,
+        "rationale": "La alta dirección actúa como el motor del sistema, garantizando los recursos, promoviendo el enfoque a procesos y asegurando que se alcancen los objetivos."
+      },
+      {
+        "text": "Delegar la totalidad de las responsabilidades de calidad en un consultor externo.",
+        "isCorrect": false,
+        "rationale": "Aunque se puede contar con asesores, la responsabilidad del liderazgo y el compromiso con el sistema no se puede delegar fuera de la alta dirección."
+      },
+      {
+        "text": "Ejecutar personalmente las calibraciones periódicas de los equipos de medición.",
+        "isCorrect": false,
+        "rationale": "Las tareas operativas técnicas corresponden al personal técnico o proveedores especializados, no a la función estratégica del liderazgo directivo."
+      },
+      {
+        "text": "Redactar de forma exclusiva todos los formatos operativos de cada área de trabajo.",
+        "isCorrect": false,
+        "rationale": "Los formatos son elaborados por los líderes y dueños de proceso correspondientes, no centralizados en la gerencia general."
+      },
+      {
+        "text": "Aprobar únicamente las partidas presupuestarias del departamento comercial.",
+        "isCorrect": false,
+        "rationale": "El compromiso del liderazgo exige la asignación equilibrada de recursos para todo el sistema de gestión de la calidad, no solo un área."
+      }
+    ],
+    "hint": "Considera la analogía del 'cerebro' dentro del cuerpo organizativo para impulsar el sistema de gestión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de los siguientes es un requisito indispensable respecto a la Política de la Calidad dentro de la organización?",
+    "opciones": [
+      {
+        "text": "Estar disponible como información documentada y ser comunicada a las partes interesadas.",
+        "isCorrect": true,
+        "rationale": "La política debe mantenerse por escrito y difundirse activamente tanto al personal interno como a las partes interesadas pertinentes."
+      },
+      {
+        "text": "Mantenerse en estricta confidencialidad reservada solo para la junta directiva.",
+        "isCorrect": false,
+        "rationale": "La política de calidad debe ser ampliamente comunicada y entendida dentro de la organización y estar disponible para el público o partes interesadas."
+      },
+      {
+        "text": "Tener una extensión mínima obligatoria de cinco páginas de redactado técnico.",
+        "isCorrect": false,
+        "rationale": "La norma no exige una longitud específica; la política puede ser breve siempre que exprese claramente los compromisos de calidad y mejora."
+      },
+      {
+        "text": "Ser modificada obligatoriamente todas las semanas por el responsable de calidad.",
+        "isCorrect": false,
+        "rationale": "La política debe ser pertinente y actualizarse cuando el contexto lo exija, pero no requiere cambios semanales sistemáticos."
+      },
+      {
+        "text": "Redactarse en un idioma extranjero para obtener validez internacional.",
+        "isCorrect": false,
+        "rationale": "La política debe estar redactada en el idioma oficial y comprensible para el personal de la empresa que la aplicará en su día a día."
+      }
+    ],
+    "hint": "Busca la condición que exige la norma para que los compromisos de calidad sean conocidos y comprendidos por todos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la norma ISO 9001:2015, ¿cómo se define un riesgo?",
+    "opciones": [
+      {
+        "text": "Un efecto de incertidumbre o probabilidad de un suceso que puede impactar negativamente los resultados.",
+        "isCorrect": true,
+        "rationale": "El riesgo representa la incertidumbre ante eventos potenciales que podrían obstaculizar el logro de los objetivos del sistema de gestión."
+      },
+      {
+        "text": "Una certidumbre absoluta de falla inminente en la maquinaria de producción.",
+        "isCorrect": false,
+        "rationale": "El riesgo implica probabilidad o incertidumbre, no un suceso que ya ha ocurrido con total certeza como una falla consumada."
+      },
+      {
+        "text": "Un evento positivo que genera ganancias financieras automáticas para la empresa.",
+        "isCorrect": false,
+        "rationale": "Los sucesos con impacto favorable o potencial de beneficio se definen propiamente como oportunidades dentro del marco ISO."
+      },
+      {
+        "text": "El incumplimiento directo y sancionado de un requisito normativo en una auditoría.",
+        "isCorrect": false,
+        "rationale": "El incumplimiento constatado de un requisito formal se clasifica como una no conformidad, no como la evaluación previa de un riesgo."
+      },
+      {
+        "text": "La lista fija de precios otorgada por los proveedores de insumos.",
+        "isCorrect": false,
+        "rationale": "Una lista de precios es una información comercial y no un factor de incertidumbre que evalúa el desempeño del sistema."
+      }
+    ],
+    "hint": "Piensa en el concepto de probabilidad asociada a eventos imprevistos que afectan el desempeño esperado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En la evaluación cuantitativa de riesgos mediante la metodología ANFE (Análisis Modal de Fallos y Efectos), ¿cuáles son los tres criterios evaluados?",
+    "opciones": [
+      {
+        "text": "El nivel o severidad del impacto.",
+        "isCorrect": true,
+        "rationale": "Mide la gravedad de la consecuencia si el fallo o riesgo llegara a materializarse."
+      },
+      {
+        "text": "La probabilidad o frecuencia de ocurrencia.",
+        "isCorrect": true,
+        "rationale": "Evalúa qué tan seguido o con qué frecuencia se puede presentar la causa del potencial fallo."
+      },
+      {
+        "text": "La capacidad o facilidad de detección previa.",
+        "isCorrect": true,
+        "rationale": "Analiza las probabilidades de identificar el defecto antes de que afecte al cliente o al proceso final."
+      },
+      {
+        "text": "El margen de ganancia neta del producto.",
+        "isCorrect": false,
+        "rationale": "Los indicadores financieros de utilidad no forman parte de los parámetros analizados en la matriz ANFE de riesgos operacionales."
+      },
+      {
+        "text": "El número total de competidores directos en el mercado.",
+        "isCorrect": false,
+        "rationale": "La cantidad de competidores es un factor del entorno externo (pestel/porter), no una variable matemática de la fórmula ANFE."
+      }
+    ],
+    "hint": "Recuerda las tres variables iniciales del producto de multiplicación en la matriz de análisis modal de fallos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se debe enfocar la formulación de una acción para mitigar de manera efectiva un riesgo identificado?",
+    "opciones": [
+      {
+        "text": "En abordar la causa raíz que genera la probabilidad del problema.",
+        "isCorrect": true,
+        "rationale": "Atacar la causa origen o causa raíz elimina la fuente del riesgo y evita que el evento no deseado se produzca o se repita."
+      },
+      {
+        "text": "En actuar únicamente sobre el resultado final cuando la falla ya ocurrió.",
+        "isCorrect": false,
+        "rationale": "Tratar solo el síntoma final no elimina la causa generadora, lo que provoca la recurrencia continua del riesgo."
+      },
+      {
+        "text": "En ignorar las probabilidades hasta que se presente una queja formal.",
+        "isCorrect": false,
+        "rationale": "La norma exige un enfoque preventivo basado en riesgos, no una actitud puramente reactiva ante reclamos."
+      },
+      {
+        "text": "En sancionar administrativamente al personal operativo involucrado.",
+        "isCorrect": false,
+        "rationale": "Las sanciones no resuelven las deficiencias metodológicas ni las causas técnicas del proceso."
+      },
+      {
+        "text": "En eliminar por completo el proceso operativo que contiene el riesgo.",
+        "isCorrect": false,
+        "rationale": "No siempre es viable ni aconsejable eliminar el proceso; el objetivo es controlar y reducir el riesgo a niveles aceptables."
+      }
+    ],
+    "hint": "Considera la analogía de 'cortar la maleza desde la raíz' para prevenir que vuelva a brotar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la metodología SMART para la formulación de objetivos de calidad, ¿qué característica indica la letra 'S' (Specific)?",
+    "opciones": [
+      {
+        "text": "El objetivo debe ser claro, concreto y estar bien definido sin ambigüedades.",
+        "isCorrect": true,
+        "rationale": "Lo específico garantiza que todos entiendan exactamente qué resultado exacto se busca alcanzar sin espacio a confusiones."
+      },
+      {
+        "text": "El objetivo debe basarse en sensaciones subjetivas de la gerencia.",
+        "isCorrect": false,
+        "rationale": "Los objetivos Smart evitan la subjetividad exigiendo criterios concretos y medibles."
+      },
+      {
+        "text": "El objetivo debe ser siempre un número superior al 99%.",
+        "isCorrect": false,
+        "rationale": "El porcentaje o valor numérico depende de la meta trazada y corresponde a la característica 'medible' (M)."
+      },
+      {
+        "text": "El objetivo debe mantenerse en secreto durante los primeros seis meses.",
+        "isCorrect": false,
+        "rationale": "Los objetivos deben comunicarse abiertamente a los involucrados para enfocar los esfuerzos en su logro."
+      },
+      {
+        "text": "El objetivo debe redactarse obligatoriamente sin utilizar verbos de acción.",
+        "isCorrect": false,
+        "rationale": "Todo objetivo debe iniciar con un verbo en infinitivo que exprese la acción a realizar (aumentar, reducir, implementar)."
+      }
+    ],
+    "hint": "Se refiere a evitar metas vagas e imprecisas, delimitando con exactitud qué se desea lograr.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando una organización planifica cambios en su sistema de gestión de la calidad (cláusula 6.3), ¿cuál de los siguientes elementos debe ser considerado obligatoriamente?",
+    "opciones": [
+      {
+        "text": "El propósito de los cambios y sus potenciales consecuencias en la integridad del sistema.",
+        "isCorrect": true,
+        "rationale": "Cualquier modificación requiere evaluar sus fines, la disponibilidad de recursos, la reasignación de responsabilidades y el impacto en el sistema."
+      },
+      {
+        "text": "La paralización completa e indefinida de las operaciones comerciales.",
+        "isCorrect": false,
+        "rationale": "La planificación de cambios busca mantener la continuidad del negocio de forma ordenada y controlada, no detener las actividades."
+      },
+      {
+        "text": "El despido automático del personal involucrado en el área a modificar.",
+        "isCorrect": false,
+        "rationale": "Los cambios organizacionales deben gestionar la transición y competencia del personal, no promover despidos injustificados."
+      },
+      {
+        "text": "La eliminación inmediata de toda la política de calidad previamente aprobada.",
+        "isCorrect": false,
+        "rationale": "Un cambio en un proceso no invalida la política global de calidad salvo que sea una reestructuración estratégica completa."
+      },
+      {
+        "text": "La duplicación del costo final de los servicios para los clientes.",
+        "isCorrect": false,
+        "rationale": "El costo al cliente es una variable comercial que no constituye un requisito obligatorio de control de cambios del sistema."
+      }
+    ],
+    "hint": "Pensar en evaluar los fines buscados y asegurar que el sistema no pierda su coherencia ni sufra distorsiones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la finalidad principal de abordar tanto los riesgos como las oportunidades según la cláusula 6.1?",
+    "opciones": [
+      {
+        "text": "Asegurar que el sistema de gestión pueda lograr los resultados previstos y prevenir efectos no deseados.",
+        "isCorrect": true,
+        "rationale": "Gestionar proactivamente riesgos y oportunidades permite maximizar los efectos positivos y mitigar o evitar impactos negativos."
+      },
+      {
+        "text": "Reemplazar de forma total los programas de mantenimiento de equipos.",
+        "isCorrect": false,
+        "rationale": "La gestión de riesgos complementa el control operacional pero no sustituye el mantenimiento de infraestructura."
+      },
+      {
+        "text": "Eliminar la necesidad de realizar auditorías internas anuales.",
+        "isCorrect": false,
+        "rationale": "Las auditorías internas son un requisito de evaluación independiente obligatorio de la cláusula 9.2."
+      },
+      {
+        "text": "Garantizar que no existan quejas de clientes bajo ninguna circunstancia.",
+        "isCorrect": false,
+        "rationale": "Aunque ayuda a prevenirlas, la gestión de riesgos no elimina milagrosamente la posibilidad de cualquier desviación."
+      },
+      {
+        "text": "Evitar la elaboración de la información documentada dentro de las áreas.",
+        "isCorrect": false,
+        "rationale": "Las acciones ante riesgos y oportunidades deben estar debidamente documentadas según lo determine la organización."
+      }
+    ],
+    "hint": "Considera el propósito preventivo de planificar para lograr lo esperado y prevenir fallos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la norma ISO 9001:2015, el concepto de 'infraestructura' (cláusula 7.1.3) incluye elementos como:",
+    "opciones": [
+      {
+        "text": "Edificios, servicios asociados, equipos, hardware, software y recursos de transporte.",
+        "isCorrect": true,
+        "rationale": "La infraestructura abarca tanto las instalaciones físicas como las herramientas tecnológicas, programas informáticos y medios de transporte necesarios."
+      },
+      {
+        "text": "Unicamente la estructura física de concreto y ladrillo de las oficinas.",
+        "isCorrect": false,
+        "rationale": "Limitar la infraestructura solo a las paredes físicas ignora las herramientas tecnológicas y de transporte indispensables."
+      },
+      {
+        "text": "Exclusivamente el capital social y las cuentas bancarias de la empresa.",
+        "isCorrect": false,
+        "rationale": "Los fondos líquidos forman parte de los recursos financieros generales, no de la infraestructura operativa."
+      },
+      {
+        "text": "Las encuestas de clima laboral respondidas por los colaboradores.",
+        "isCorrect": false,
+        "rationale": "Las encuestas de clima miden el ambiente para la operación de los procesos, no la infraestructura propiamente dicha."
+      },
+      {
+        "text": "Las licencias de conducir personales de los familiares de los trabajadores.",
+        "isCorrect": false,
+        "rationale": "Esa documentación no constituye infraestructura ni recurso directo asignado a la operación de la empresa."
+      }
+    ],
+    "hint": "Recuerda que no solo abarca el edificio, sino todo el conjunto de equipos informáticos, vehículos y servicios de apoyo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro de los recursos de seguimiento y medición, ¿cuáles de los siguientes equipos requieren típicamente someterse a procesos de calibración?",
+    "opciones": [
+      {
+        "text": "Balanzas electrónicas de precisión.",
+        "isCorrect": true,
+        "rationale": "Las balanzas miden peso y requieren ser trazables contra patrones de medición conocidos para dar resultados fiables."
+      },
+      {
+        "text": "Termómetros e instrumentos de control de temperatura.",
+        "isCorrect": true,
+        "rationale": "Miden magnitudes físicas donde la incertidumbre debe ser conocida y ajustada frente a valores estándar."
+      },
+      {
+        "text": "Cintas métricas o huinchas de medición utilizadas para tolerancias exigentes.",
+        "isCorrect": true,
+        "rationale": "Los instrumentos de medición de longitud de precisión deben certificar su exactitud periódica."
+      },
+      {
+        "text": "Computadoras portátiles de uso exclusivo en oficina administrativa.",
+        "isCorrect": false,
+        "rationale": "Las computadoras requieren mantenimiento preventivo de software/hardware, pero no miden magnitudes físicas que requieran calibración."
+      },
+      {
+        "text": "Escritorios y sillas ergonómicas de la planta.",
+        "isCorrect": false,
+        "rationale": "El mobiliario forma parte de las condiciones físicas del ambiente de trabajo, no de los recursos de seguimiento de medición."
+      }
+    ],
+    "hint": "Diferencia entre los equipos que efectúan mediciones cuantitativas trazables y aquellos que solo requieren mantenimiento operacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se evidencia principalmente la competencia del personal según lo establecido en la cláusula 7.2?",
+    "opciones": [
+      {
+        "text": "Mediante la conservación de información documentada como hojas de vida (CV) respaldadas con certificados y constancias.",
+        "isCorrect": true,
+        "rationale": "La evidencia objetiva de la competencia en educación, formación y experiencia se demuestra mediante títulos, constancias y certificados reales."
+      },
+      {
+        "text": "A través de declaraciones verbales no sustentadas durante la entrevista de auditoría.",
+        "isCorrect": false,
+        "rationale": "El testimonio verbal sin soporte documental no constituye evidencia objetiva suficiente ante una auditoría."
+      },
+      {
+        "text": "Con la presentación únicamente de la lista de asistencia del primer día de trabajo.",
+        "isCorrect": false,
+        "rationale": "Una lista de asistencia de inducción no demuestra por sí sola el cumplimiento del perfil de educación y experiencia requeridos."
+      },
+      {
+        "text": "Mediante la firma de un compromiso de permanencia por cinco años.",
+        "isCorrect": false,
+        "rationale": "Un acuerdo contractual de permanencia no acredita los conocimientos ni la idoneidad técnica del trabajador para el puesto."
+      },
+      {
+        "text": "Con el registro de marcación diaria de tarjeta de asistencia a la sede.",
+        "isCorrect": false,
+        "rationale": "El control de puntualidad o asistencia no es un indicador que demuestre las habilidades o competencias técnicas aprendidas."
+      }
+    ],
+    "hint": "Busca el expediente o respaldo documental que demuestra con documentos la educación, formación y experiencia del trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de la comunicación interna y externa (cláusula 7.4), ¿cuáles son las cinco preguntas básicas que debe responder la matriz o plan de comunicación?",
+    "opciones": [
+      {
+        "text": "Qué comunicar, cuándo comunicar, a quién comunicar, cómo comunicar y quién comunica.",
+        "isCorrect": true,
+        "rationale": "Estos cinco cuestionamientos constituyen el estándar mínimo para definir con claridad el flujo de información dentro de un sistema de gestión."
+      },
+      {
+        "text": "Dónde comprar, cuánto pagar, a qué precio vender, a quién denunciar y cuándo sancionar.",
+        "isCorrect": false,
+        "rationale": "Estas preguntas corresponden a la gestión financiera y comercial, no al esquema de comunicación institucional de la ISO 9001."
+      },
+      {
+        "text": "Qué fabricar, cuántas horas trabajar, a qué hora almorzar, cuándo descansar y cuánto ganar.",
+        "isCorrect": false,
+        "rationale": "Dichas interrogantes están ligadas a acuerdos laborales operacionales, desconociendo la estructura de comunicación requerida."
+      },
+      {
+        "text": "Por qué auditar, cuántos errores ocultar, cómo justificar fallas, a quién culpar y cuándo firmar.",
+        "isCorrect": false,
+        "rationale": "Es una formulación contraria a los principios de transparencia, transparencia de datos e integridad exigidos por la norma."
+      },
+      {
+        "text": "Qué software comprar, cuántas licencias pedir, a qué servidor conectar, quién repara y cuánto cuesta.",
+        "isCorrect": false,
+        "rationale": "Esta lista aborda aspectos técnicos de sistemas de información pero carece de la estructura global de comunicación del SGC."
+      }
+    ],
+    "hint": "Piensa en las interrogantes esenciales sobre el contenido, tiempo, receptor, canal y emisor del mensaje.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de ISO 9001:2015, ¿qué significado tiene la expresión 'mantener información documentada'?",
+    "opciones": [
+      {
+        "text": "Establecer y conservar procedimientos, instructivos o documentos marco que definen cómo operar.",
+        "isCorrect": true,
+        "rationale": "La frase 'mantener información documentada' hace referencia directa a documentos vivos como políticas, manuales, mapas de proceso o procedimientos."
+      },
+      {
+        "text": "Guardar registros históricos impresos en una caja de archivo pasivo.",
+        "isCorrect": false,
+        "rationale": "Guardar registros que sirven como evidencia objetiva de actividades pasadas se denomina 'conservar información documentada'."
+      },
+      {
+        "text": "Eliminar periódicamente todos los archivos digitales cada tres meses.",
+        "isCorrect": false,
+        "rationale": "La norma exige el control y conservación adecuada de la documentación, no su destrucción sistemática prematura."
+      },
+      {
+        "text": "Publicar todos los datos financieros confidenciales de la empresa en internet.",
+        "isCorrect": false,
+        "rationale": "La información documentada debe protegerse contra pérdidas de confidencialidad o uso inadecuado."
+      },
+      {
+        "text": "Memorizar oralmente las funciones sin dejar registros por escrito.",
+        "isCorrect": false,
+        "rationale": "La información documentada exige soporte escrito, digital o físico accesible, no meros recuerdos orales."
+      }
+    ],
+    "hint": "Diferencia entre los documentos marco que dicen cómo hacer las cosas y los registros que demuestran lo que ya se hizo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Para que un documento, procedimiento o política tenga validez y pueda difundirse dentro del sistema de gestión, ¿qué requisito formal debe cumplirse?",
+    "opciones": [
+      {
+        "text": "Haber sido revisado y aprobado formalmente por el personal autorizado.",
+        "isCorrect": true,
+        "rationale": "Todo documento del SGC debe contar con la validación, revisión y firma del responsable designado para tener carácter oficial."
+      },
+      {
+        "text": "Estar impreso únicamente en papel membretado de color amarillo.",
+        "isCorrect": false,
+        "rationale": "El soporte físico o color del papel es irrelevante; lo indispensable es el control y la aprobación formal del contenido."
+      },
+      {
+        "text": "Contar con la firma notarial legalizada de cada uno de los clientes.",
+        "isCorrect": false,
+        "rationale": "La aprobación de los procedimientos internos corresponde a las autoridades designadas dentro de la organización, no a firmas notariales externas."
+      },
+      {
+        "text": "Haber sido redactado por una única persona sin revisión de nadie más.",
+        "isCorrect": false,
+        "rationale": "Se desaconseja que la misma persona elabore, revise y apruebe en solitario para evitar la pérdida de objetividad y la falta de control."
+      },
+      {
+        "text": "Tener una antigüedad mínima comprobada de más de diez años.",
+        "isCorrect": false,
+        "rationale": "La validez depende de la aprobación y actualización correcta del documento, independientemente de su fecha de creación inicial."
+      }
+    ],
+    "hint": "Considera el paso donde el documento recibe la verificación y firma de autoridad antes de su puesta en marcha.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define una auditoría del sistema de gestión de la calidad según los estándares ISO?",
+    "opciones": [
+      {
+        "text": "Un proceso sistemático, independiente y documentado para obtener y evaluar evidencias objetivas.",
+        "isCorrect": true,
+        "rationale": "Define la naturaleza metódica de la auditoría, donde evaluadores imparciales verifican el nivel de cumplimiento mediante evidencias reales."
+      },
+      {
+        "text": "Una inspección policíaca orientada a sancionar económicamente a los empleados.",
+        "isCorrect": false,
+        "rationale": "El propósito de la auditoría es determinar la conformidad e identificar mejoras, no imponer sanciones punitivas o de carácter policial."
+      },
+      {
+        "text": "Una charla informal sin agenda previa ni registros por escrito.",
+        "isCorrect": false,
+        "rationale": "La auditoría es un proceso totalmente estructurado que requiere planificación formal, metodologías de muestreo e informes documentados."
+      },
+      {
+        "text": "Un examen teórico de cultura general tomado a la gerencia.",
+        "isCorrect": false,
+        "rationale": "La auditoría evalúa evidencias operativas y documentales del desempeño del sistema, no exámenes teóricos de conocimientos generales."
+      },
+      {
+        "text": "La revisión exclusiva de los balances contables por parte de la entidad tributaria.",
+        "isCorrect": false,
+        "rationale": "Esa descripción corresponde a una auditoría fiscal o contable, diferente a la evaluación de procesos de calidad bajo norma ISO 9001."
+      }
+    ],
+    "hint": "Busca la definición compuesta por tres adjetivos clave: sistemático, independiente y documentado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre una auditoría de primera parte (interna) y una auditoría de tercera parte (externa)?",
+    "opciones": [
+      {
+        "text": "La auditoría interna la realiza o encarga la propia empresa para automedirse; la de tercera parte la realiza un organismo certificador independiente.",
+        "isCorrect": true,
+        "rationale": "La primera parte busca evaluar internamente el propio sistema, mientras que la tercera parte persigue la certificación formal mediante una entidad acreditada externa."
+      },
+      {
+        "text": "La auditoría interna solo dura diez minutos y la externa dura varios meses seguidos.",
+        "isCorrect": false,
+        "rationale": "La duración depende del tamaño y complejidad de los procesos organizativos, no de una regla fija de minutos o meses."
+      },
+      {
+        "text": "La auditoría interna es obligatoria por ley estatal y la externa es opcional para los empleados.",
+        "isCorrect": false,
+        "rationale": "La adopción de ISO 9001 es generalmente voluntaria, y las auditorías internas son un requisito propio de la norma, no una imposición del código penal."
+      },
+      {
+        "text": "La auditoría interna evalúa productos y la externa evalúa únicamente escritorios.",
+        "isCorrect": false,
+        "rationale": "Ambas modalidades evalúan la conformidad global de los procesos e información documentada del SGC."
+      },
+      {
+        "text": "En la auditoría interna no se pueden señalar fallas y en la externa no se revisan documentos.",
+        "isCorrect": false,
+        "rationale": "Ambas auditorías identifican hallazgos y ambas basan su evaluación en la revisión estricta de documentos y evidencias."
+      }
+    ],
+    "hint": "Enfócate en la entidad que promueve la auditoría y el objetivo final (evaluación interna vs. certificación externa).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En una auditoría externa de certificación, ¿cuáles de los siguientes documentos son típicamente solicitados y revisados durante la Fase 1 (fase documental)?",
+    "opciones": [
+      {
+        "text": "La Política de la Calidad y los Objetivos de Calidad.",
+        "isCorrect": true,
+        "rationale": "Constituyen la base estratégica declarada del sistema y el auditor debe verificar su adecuada estructura antes de la visita in situ."
+      },
+      {
+        "text": "El alcance del sistema de gestión y las justificaciones de exclusión.",
+        "isCorrect": true,
+        "rationale": "Permiten al auditor conocer los límites aplicables, sedes cubiertas y requisitos que no aplican a la empresa."
+      },
+      {
+        "text": "El informe de la última auditoría interna y la revisión por la dirección.",
+        "isCorrect": true,
+        "rationale": "Demuestran que el sistema ha completado un ciclo previo de automedición y evaluación gerencial antes de recibir a la certificadora."
+      },
+      {
+        "text": "Los contratos de arrendamiento personal de las viviendas de los trabajadores.",
+        "isCorrect": false,
+        "rationale": "La información privada sobre la vivienda de los colaboradores no tiene relevancia operacional dentro del SGC."
+      },
+      {
+        "text": "La lista de recetas de cocina del comedor de la planta.",
+        "isCorrect": false,
+        "rationale": "Salvo que el negocio sea un servicio gastronómico, las recetas del comedor interno no constituyen documentos del sistema de calidad auditado."
+      }
+    ],
+    "hint": "Identifica los documentos estratégicos de la estructura ISO que el auditor necesita revisar antes de la evaluación presencial en planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la ejecución in situ de una auditoría, ¿cuál es la conducta correcta que debe seguir el auditor al identificar una no conformidad?",
+    "opciones": [
+      {
+        "text": "Comunicar el hallazgo de la no conformidad al auditado en el momento exacto en que se detecta.",
+        "isCorrect": true,
+        "rationale": "La transparencia exige informar al auditado inmediatamente para confirmar la evidencia, evitar malentendidos y garantizar el derecho a aclaración."
+      },
+      {
+        "text": "Ocultar el hallazgo y revelarlo por sorpresa al año siguiente.",
+        "isCorrect": false,
+        "rationale": "Guardar hallazgos rompe los principios de comunicación oportuna e impide la pronta corrección de las desviaciones."
+      },
+      {
+        "text": "Modificar el procedimiento en secreto sin avisar al dueño del proceso.",
+        "isCorrect": false,
+        "rationale": "El auditor evalúa la evidencia objetiva existente; no está facultado para alterar ni modificar la documentación del cliente."
+      },
+      {
+        "text": "Discutir acaloradamente imponiendo sanciones disciplinarias verbales.",
+        "isCorrect": false,
+        "rationale": "El auditor debe mantener una conducta profesional, ética e imparcial sin asumir roles disciplinarios o punitivos."
+      },
+      {
+        "text": "Ignorar la falla por completo para no incomodar al equipo auditado.",
+        "isCorrect": false,
+        "rationale": "El compromiso con la exactitud y la veracidad obliga al auditor a registrar todo incumplimiento comprobado frente a los requisitos."
+      }
+    ],
+    "hint": "Aplica el principio de retroalimentación oportuna e inmediata para dar claridad sobre las evidencias encontradas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco del sistema de gestión ISO 9001, ¿qué constituye propiamente una 'no conformidad'?",
+    "opciones": [
+      {
+        "text": "El incumplimiento directo de un requisito especificado de la norma, de la organización o del cliente.",
+        "isCorrect": true,
+        "rationale": "Toda desviación comprobada frente a un punto exigido por la norma ISO, los procedimientos internos o los contratos se clasifica como no conformidad."
+      },
+      {
+        "text": "Una sugerencia informal otorgada por un cliente en redes sociales.",
+        "isCorrect": false,
+        "rationale": "Las opiniones o comentarios informales representan retroalimentación que puede analizarse, pero no constituyen un incumplimiento verificado."
+      },
+      {
+        "text": "La sugerencia del auditor para mejorar la estética de un formato impreso.",
+        "isCorrect": false,
+        "rationale": "Las oportunidades de mejora o sugerencias estéticas no implican la violación de ningún requisito normativo formal."
+      },
+      {
+        "text": "Un error tipográfico menor en un documento no controlado.",
+        "isCorrect": false,
+        "rationale": "Un fallo ortográfico menor generalmente no afecta el desempeño del proceso ni representa el incumplimiento de un requisito de gestión."
+      },
+      {
+        "text": "El retraso de cinco minutos en el inicio de la reunión de apertura.",
+        "isCorrect": false,
+        "rationale": "Ajustes de minutos en la agenda de la auditoría son incidencias de tiempo y no constituyen no conformidades contra el sistema de calidad."
+      }
+    ],
+    "hint": "Aplica la definición formal que relaciona la falta de cumplimiento con un requisito previamente establecido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la meta fundamental al diseñar e implementar una acción correctiva tras una no conformidad?",
+    "opciones": [
+      {
+        "text": "Eliminar la causa raíz del problema detectado para prevenir su reincidencia.",
+        "isCorrect": true,
+        "rationale": "La acción correctiva busca erradicar el origen profundo de la falla, asegurando que el mismo incumplimiento no vuelva a suceder en el futuro."
+      },
+      {
+        "text": "Sancionar económicamente al responsable directo del error de inmediato.",
+        "isCorrect": false,
+        "rationale": "Las medidas punitivas hacia las personas no corrigen los fallos metodológicos ni previenen la repetición técnica del problema."
+      },
+      {
+        "text": "Borrar el registro de la no conformidad del informe final de auditoría.",
+        "isCorrect": false,
+        "rationale": "Los hallazgos deben conservarse documentadamente como prueba de evaluación y seguimiento transparente del SGC."
+      },
+      {
+        "text": "Aplicar un arreglo superficial y temporal sobre el resultado visible.",
+        "isCorrect": false,
+        "rationale": "Una solución cosmética temporal no ataca el origen y provoca que la no conformidad reaparezca en el tiempo."
+      },
+      {
+        "text": "Contratar un nuevo software sin analizar el origen del fallo.",
+        "isCorrect": false,
+        "rationale": "Adquirir herramientas sin comprender la causa raíz puede generar costos innecesarios sin resolver la falla del proceso."
+      }
+    ],
+    "hint": "Apunta a la solución estructural que elimina el origen del fallo para evitar que vuelva a ocurrir.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Tras aprobar con éxito una auditoría de certificación inicial, ¿cuál es la vigencia habitual del certificado ISO 9001 otorgado?",
+    "opciones": [
+      {
+        "text": "Tres años, sujeto a auditorías anuales de seguimiento o mantenimiento.",
+        "isCorrect": true,
+        "rationale": "El certificado se otorga por un ciclo de tres años, durante el cual la entidad certificadora realiza revisiones anuales para verificar la continuidad."
+      },
+      {
+        "text": "Un mes únicamente, teniendo que certificar de nuevo cada 30 días.",
+        "isCorrect": false,
+        "rationale": "Un ciclo de un mes resultaría inviable operativa y económicamente para cualquier organización y entidad auditora."
+      },
+      {
+        "text": "Cincuenta años sin necesidad de revisiones ni auditorías posteriores.",
+        "isCorrect": false,
+        "rationale": "El certificado vencería y perdería vigencia sin el control periódico de la mejora continua y mantenimiento del sistema."
+      },
+      {
+        "text": "Vigencia permanente e vitalicia de por vida una vez pagada la tarifa.",
+        "isCorrect": false,
+        "rationale": "No existen las certificaciones vitalicias en sistemas ISO; requieren renovación sistemática cada tres años."
+      },
+      {
+        "text": "Diez años continuos sin realizar auditorías intermedias de seguimiento.",
+        "isCorrect": false,
+        "rationale": "El periodo estándar internacional es de tres años con evaluaciones intermedias anuales obligatorias."
+      }
+    ],
+    "hint": "Piensa en el ciclo estándar que se complementa con evaluaciones de seguimiento cada 12 meses.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la estructura y principios de la norma ISO 9001:2015, ¿cuál de los siguientes enunciados define adecuadamente el alcance de la certificación de un Sistema de Gestión de la Calidad (SGC)?",
+    "opciones": [
+      {
+        "text": "Garantiza la calidad técnica individual e intrínseca de cada producto físico fabricado por la empresa.",
+        "isCorrect": false,
+        "rationale": "La certificación bajo ISO 9001 no certifica un producto final en sí mismo, sino los procesos desarrollados para llegar a él."
+      },
+      {
+        "text": "Se aplica exclusivamente a empresas del sector privado comercial, excluyendo entidades públicas y PyMEs.",
+        "isCorrect": false,
+        "rationale": "La norma es aplicable a cualquier tipo de organización, sea pública o privada, independientemente de su tamaño o sector."
+      },
+      {
+        "text": "Certifica los procesos organizativos de la empresa y no sus productos o servicios de forma directa.",
+        "isCorrect": true,
+        "rationale": "El estándar internacional certifica los procesos que interactúan para lograr la conformidad, no el objeto físico o producto entregado."
+      },
+      {
+        "text": "Aplica de forma automática a todas las sucursales globales de una corporación tras auditar solo la sede central.",
+        "isCorrect": false,
+        "rationale": "Cada sucursal o sede física debe estar expresamente definida en el alcance e incluida en la auditoría para ser certificada."
+      },
+      {
+        "text": "Exige la aplicación obligatoria e irrestricta de la totalidad de los requisitos normativos sin excepción.",
+        "isCorrect": false,
+        "rationale": "La norma permite la declaración de no aplicabilidad de ciertos requisitos (como trazabilidad o diseño) si están debidamente justificados en el alcance."
+      }
+    ],
+    "hint": "Recuerda la distinción entre evaluar el objeto entregado al cliente y evaluar las actividades organizacionales que lo producen.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para realizar una correcta comprensión del contexto de la organización según el requisito 4.1 de la ISO 9001:2015, ¿cuáles de los siguientes elementos se consideran cuestiones internas y externas a evaluar?",
+    "opciones": [
+      {
+        "text": "El clima de cultura organizacional, valores y desempeño interno.",
+        "isCorrect": true,
+        "rationale": "La cultura organizacional y los valores internos constituyen factores propios de la empresa que influyen directamente en el desempeño del SGC."
+      },
+      {
+        "text": "El entorno legal, tecnológico, competitivo y económico del mercado.",
+        "isCorrect": true,
+        "rationale": "El entorno legal y competitivo externo configura el marco de condiciones donde opera la empresa y condiciona sus resultados."
+      },
+      {
+        "text": "Las fortalezas y debilidades identificadas dentro del análisis FODA.",
+        "isCorrect": true,
+        "rationale": "Las dimensiones internas del FODA (fortalezas y debilidades) permiten systematizar los factores propios de la organización."
+      },
+      {
+        "text": "La lista nominal completa de proveedores aprobados en el catálogo corporativo.",
+        "isCorrect": false,
+        "rationale": "La lista de proveedores aprobados es un registro operativo de compras y no una cuestión del contexto general de la organización."
+      },
+      {
+        "text": "Las amenazas y oportunidades provenientes del entorno exterior.",
+        "isCorrect": true,
+        "rationale": "Las dimensiones externas del FODA (amenazas y oportunidades) capturan los eventos externos que pueden impactar el propósito de la empresa."
+      }
+    ],
+    "hint": "Distingue entre los factores estratégicos del entorno global y los registros operativos de compras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al determinar los requisitos de las partes interesadas según el requisito 4.2 de la norma ISO 9001:2015, ¿cuál es la distinción fundamental entre una necesidad y una expectativa legalmente obligatoria?",
+    "opciones": [
+      {
+        "text": "Las necesidades son de cumplimiento optativo, mientras que las expectativas siempre conllevan sanciones legales.",
+        "isCorrect": false,
+        "rationale": "Las necesidades legales son mandatorios por ley, mientras que las expectativas pueden ser aspiraciones normativamente no obligatorias."
+      },
+      {
+        "text": "Las expectativas legales están respaldadas por un marco normativo imperativo, como la legislación de seguridad y salud en el trabajo.",
+        "isCorrect": true,
+        "rationale": "Ciertos requisitos de las partes interesadas, como las condiciones de trabajo seguras, están tipificados por leyes imperativas que la empresa debe cumplir."
+      },
+      {
+        "text": "Las necesidades se refieren únicamente a los clientes externos, mientras que las expectativas atañen solo al personal interno.",
+        "isCorrect": false,
+        "rationale": "Tanto necesidades como expectativas aplican de forma cruzada a partes interesadas internas y externas."
+      },
+      {
+        "text": "Las expectativas legalmente obligatorias son establecidas libremente por el comité de calidad sin revisar leyes vigentes.",
+        "isCorrect": false,
+        "rationale": "Las obligaciones legales provienen del marco regulatorio del país o sector, no de decisiones arbitrarias del comité interno."
+      },
+      {
+        "text": "No existe distinción operativa entre ambas, ya que toda expectativa de un colaborador es un mandato por ley.",
+        "isCorrect": false,
+        "rationale": "La norma diferencia entre lo exigible por ley u homologación y los deseos o expectativas adicionales de los colaboradores."
+      }
+    ],
+    "hint": "Considera el papel que juegan las leyes nacionales imperativas frente a los deseos no reglamentados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de las siguientes situaciones justifica de manera válida la declaración de no aplicabilidad de una cláusula dentro del alcance del SGC según el requisito 4.3 de ISO 9001:2015?",
+    "opciones": [
+      {
+        "text": "Excluir el contexto de la organización porque la empresa es una PyME con menos de 10 trabajadores.",
+        "isCorrect": false,
+        "rationale": "El análisis del contexto es un requisito obligatorio para toda organización sin importar su tamaño o número de trabajadores."
+      },
+      {
+        "text": "Omitir la trazabilidad de las mediciones (7.1.5.2) en una empresa de desarrollo de software que no utiliza equipos de calibración.",
+        "isCorrect": true,
+        "rationale": "Si la naturaleza de las operaciones no requiere mediciones físicas ni calibración de instrumentos, la no aplicabilidad de la trazabilidad es técnicamente justificada."
+      },
+      {
+        "text": "Declarar no aplicable el liderazgo de la alta dirección debido a que el gerente general delega la calidad en un asistente.",
+        "isCorrect": false,
+        "rationale": "El liderazgo de la alta dirección es un pilar fundamental no exclucible en ningún Sistema de Gestión de la Calidad."
+      },
+      {
+        "text": "Suprimir el control de información documentada por considerar que genera excesiva carga burocrática.",
+        "isCorrect": false,
+        "rationale": "La información documentada requerida por la norma no se puede excluir por preferencia o evitar burocracia."
+      },
+      {
+        "text": "Omitir la evaluación del desempeño porque los indicadores comerciales se revisan de forma verbal no documentada.",
+        "isCorrect": false,
+        "rationale": "La evaluación del desempeño es una cláusula obligatoria para demostrar la eficacia y la mejora continua del sistema."
+      }
+    ],
+    "hint": "Piensa en qué requisito se refiere a mediciones físicas y calibración cuando la empresa opera de forma puramente digital.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el enfoque basado en procesos exigido por la cláusula 4.4 de ISO 9001:2015, ¿cuáles son las características que distinguen a un mapa de procesos estructurado correctamente?",
+    "opciones": [
+      {
+        "text": "Clasifica los procesos en tres niveles típicos: estratégicos, operacionales/misionales y de soporte/apoyo.",
+        "isCorrect": true,
+        "rationale": "La estructura estándar de un mapa de procesos agrupa las actividades en niveles jerárquicos según su función estratégica, operativa o de apoyo."
+      },
+      {
+        "text": "Agrupa los procesos en compartimentos estancos y aislados para evitar la interacción entre áreas.",
+        "isCorrect": false,
+        "rationale": "Los procesos deben interactuar sistemáticamente; tratarlos como islas aisladas contraviene el principio de enfoque por procesos."
+      },
+      {
+        "text": "Representa las interrelaciones y flujos de entradas y salidas entre las distintas actividades organizacionales.",
+        "isCorrect": true,
+        "rationale": "Un mapa de procesos efectivo mapea de qué manera las salidas de un proceso se transforman en las entradas de otro."
+      },
+      {
+        "text": "Garantiza que el proceso de mantenimiento tenga siempre la misma categoría operacional en cualquier tipo de empresa.",
+        "isCorrect": false,
+        "rationale": "La clasificación de un proceso (como mantenimiento) depende del modelo de negocio; puede ser operativo en transporte o de soporte en servicios."
+      },
+      {
+        "text": "Permite que la caracterización de procesos detalle las entradas, salidas, recursos y controles de cada actividad.",
+        "isCorrect": true,
+        "rationale": "Las fichas o caracterizaciones detallan los elementos de transformación, recursos y métricas específicas que componen cada proceso individual."
+      }
+    ],
+    "hint": "Analiza cómo se agrupan funcionalmente las actividades y la necesidad de que compartan entradas y salidas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al formular la Política de la Calidad conforme al requisito 5.2 de la ISO 9001:2015, ¿cuál es un requisito obligatorio que debe cumplir la organización para su correcta gestión?",
+    "opciones": [
+      {
+        "text": "Redactar un documento formal con una extensión mínima obligatoria de tres páginas completas.",
+        "isCorrect": false,
+        "rationale": "La norma no impone un límite o exigencia de páginas; la política debe ser concisa, clara y alineada al propósito del negocio."
+      },
+      {
+        "text": "Mantener la política guardada bajo confidencialidad estricta para uso exclusivo de la alta dirección.",
+        "isCorrect": false,
+        "rationale": "La Política de Calidad debe estar disponible y ser comunicada a todos los colaboradores y partes interesadas pertinentes."
+      },
+      {
+        "text": "Incluir compromisos explícitos con la satisfacción del cliente, el cumplimiento normativo y la mejora continua.",
+        "isCorrect": true,
+        "rationale": "Debe proporcionar un marco de referencia para los objetivos de calidad e incluir explícitamente compromisos de cumplimiento y mejora continua."
+      },
+      {
+        "text": "Actualizar la política de forma obligatoria cada trimestre sin importar el contexto del negocio.",
+        "isCorrect": false,
+        "rationale": "La revisión debe realizarse cuando el contexto cambie o en la revisión por la dirección, no necesariamente de forma trimestral."
+      },
+      {
+        "text": "Eximir a los proveedores y partes interesadas externas de tener acceso o disponibilidad a ella.",
+        "isCorrect": false,
+        "rationale": "La política debe estar disponible para las partes interesadas pertinentes según corresponda a la organización."
+      }
+    ],
+    "hint": "Repasa los compromisos obligatorios que la alta dirección debe formalizar públicamente ante sus partes interesadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el enfoque basado en riesgos de la cláusula 6.1 de ISO 9001:2015, ¿cuál es la diferencia fundamental entre el concepto de 'riesgo' y el de 'oportunidad'?",
+    "opciones": [
+      {
+        "text": "El riesgo es una certeza matemática comprobada, mientras que la oportunidad es un hecho del pasado.",
+        "isCorrect": false,
+        "rationale": "Tanto el riesgo como la oportunidad se basan en la incertidumbre sobre eventos futuros, no en certezas absolutas ni hechos pasados."
+      },
+      {
+        "text": "El riesgo es la incertidumbre con un potencial impacto negativo, mientras que la oportunidad representa un efecto potencial positivo.",
+        "isCorrect": true,
+        "rationale": "El riesgo se asocia a la probabilidad de que un evento afecte negativamente los resultados, mientras que la oportunidad impulsa mejoras deseables."
+      },
+      {
+        "text": "La oportunidad aplica únicamente a la gestión ambiental, mientras que el riesgo atañe a la parte financiera.",
+        "isCorrect": false,
+        "rationale": "Ambos conceptos son transversales y fundamentales dentro de la planificación de un Sistema de Gestión de la Calidad bajo ISO 9001."
+      },
+      {
+        "text": "El riesgo se debe eliminar por completo en todos los casos sin evaluar el costo de su mitigación.",
+        "isCorrect": false,
+        "rationale": "Algunos riesgos son asumidos o tolerados mediante decisiones informadas cuando el costo de eliminación supera el beneficio."
+      },
+      {
+        "text": "No existe diferencia operativa; ambos términos se tratan cuantitativamente con las mismas acciones inmediatas.",
+        "isCorrect": false,
+        "rationale": "La estrategia para abordar un riesgo (mitigar, evitar, compartir) difiere conceptualmente de la adopción de una oportunidad (explotar, potenciar)."
+      }
+    ],
+    "hint": "Compara el efecto hacia un resultado no deseable con el potencial de un efecto positivo en el desempeño.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la evaluación cuantitativa de riesgos mediante la metodología AMEF (Análisis Modal de Fallos y Efectos), ¿cuáles son las tres variables fundamentales que se multiplican para obtener el Número de Prioridad de Riesgo?",
+    "opciones": [
+      {
+        "text": "Probabilidad, Costo financiero y Gravedad legal.",
+        "isCorrect": false,
+        "rationale": "Aunque el costo o la gravedad legal influyen en la severidad, el modelo AMEF no utiliza la probabilidad ni el costo directamente en esa tríada."
+      },
+      {
+        "text": "Impacto (Severidad), Ocurrencia (Frecuencia) y Detección.",
+        "isCorrect": true,
+        "rationale": "El valor de prioridad de riesgo en AMEF se calcula multiplicando las puntuaciones de Severidad/Impacto, Frecuencia/Ocurrencia y la capacidad de Detección."
+      },
+      {
+        "text": "Competencia del personal, Infraestructura y Clima laboral.",
+        "isCorrect": false,
+        "rationale": "Estos elementos corresponden a recursos de apoyo de la cláusula 7, no a los factores del cálculo AMEF."
+      },
+      {
+        "text": "Tiempo de respuesta, Satisfacción del cliente y Costo de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Son métricas operativas de desempeño y servicio, no los parámetros estandarizados de la fórmula de riesgo AMEF."
+      },
+      {
+        "text": "Nivel de liderazgo, Cantidad de no conformidades y Cobertura de auditoría.",
+        "isCorrect": false,
+        "rationale": "Corresponden a elementos de evaluación del sistema y auditoría, ajenos a la estructura cuantitativa del AMEF."
+      }
+    ],
+    "hint": "Recuerda los tres factores cuantitativos que miden la gravedad del daño, su probabilidad y la facilidad de ser descubierto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Un equipo de calidad formula planes para abordar los riesgos identificados en los procesos. De acuerdo con las notas explicativas de la norma ISO 9001:2015, ¿cuáles de las siguientes constituyen estrategias válidas para el tratamiento de riesgos?",
+    "opciones": [
+      {
+        "text": "Evitar el riesgo decidiendo no iniciar o discontinuar la actividad que lo origina.",
+        "isCorrect": true,
+        "rationale": "Evitar el riesgo eliminando la actividad generadora es una alternativa válida de tratamiento reconocida por las directrices de la norma."
+      },
+      {
+        "text": "Asumir el riesgo mediante una decisión informada para perseguir una oportunidad.",
+        "isCorrect": true,
+        "rationale": "La norma contempla la aceptación informada del riesgo si el beneficio de aprovechar una oportunidad estratégica lo justifica."
+      },
+      {
+        "text": "Eliminar completamente la fuente del riesgo mediante cambios en el proceso.",
+        "isCorrect": true,
+        "rationale": "La erradicación de la causa o fuente del riesgo mediante modificaciones operativas elimina la probabilidad de ocurrencia."
+      },
+      {
+        "text": "Compartir el riesgo con terceros mediante seguros o subcontratación contractual.",
+        "isCorrect": true,
+        "rationale": "La transferencia o participación del riesgo con otras entidades (como aseguradoras) es una estrategia de mitigación aceptada."
+      },
+      {
+        "text": "Ignorar sistemáticamente los riesgos de baja detección para no generar planes de acción.",
+        "isCorrect": false,
+        "rationale": "Ignorar deliberadamente riesgos vulnera el principio de gestión proactiva y control continuo exigido por la norma."
+      }
+    ],
+    "hint": "Considera las diversas alternativas estratégicas contempladas para modificar, transferir o evitar la exposición a una amenaza.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para cumplir con los requisitos del numeral 6.2 sobre los Objetivos de la Calidad, la organización establece un objetivo redactado así: 'Incrementar la satisfacción del cliente'. ¿Por qué esta formulación resulta deficiente según los criterios normativos y la metodología SMART?",
+    "opciones": [
+      {
+        "text": "Porque los objetivos de calidad no pueden relacionarse con la satisfacción del cliente.",
+        "isCorrect": false,
+        "rationale": "La satisfacción del cliente es uno de los propósitos esenciales sobre los cuales se deben construir objetivos de calidad."
+      },
+      {
+        "text": "Porque carece de una meta cuantitativa medible, un plazo temporal definido y un indicador claro de evaluación.",
+        "isCorrect": true,
+        "rationale": "Un objetivo debe ser medible y delimitado en el tiempo (cuánto y cuándo), pues de lo contrario resulta imposible evaluar su grado de cumplimiento."
+      },
+      {
+        "text": "Porque utiliza un verbo en infinitivo al inicio de la frase, lo cual está prohibido por la ISO 9001.",
+        "isCorrect": false,
+        "rationale": "Todo objetivo correctamente estructurado debe iniciar con un verbo en infinitivo (-ar, -er, -ir) para expresar la acción proyectada."
+      },
+      {
+        "text": "Porque los objetivos deben redactarse únicamente por el auditor externo durante la fase de certificación.",
+        "isCorrect": false,
+        "rationale": "Los objetivos son formulados y establecidos por la propia organización, no por la entidad certificadora."
+      },
+      {
+        "text": "Porque los objetivos no requieren estar alineados con la Política de la Calidad.",
+        "isCorrect": false,
+        "rationale": "La norma exige expresamente que los objetivos de calidad sean coherentes y estén alineados con la Política de la Calidad."
+      }
+    ],
+    "hint": "Aplica los criterios metodológicos que exigen responder con precisión a las preguntas de 'cuánto' y 'cuándo'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Según la norma ISO 9001:2015, ¿cuáles de los siguientes requisitos deben cumplir obligatoriamente los Objetivos de la Calidad establecidos en el numeral 6.2?",
+    "opciones": [
+      {
+        "text": "Ser coherentes con la Política de la Calidad.",
+        "isCorrect": true,
+        "rationale": "La alineación entre la política estratégica y los objetivos operativos es un mandato explícito del estándar."
+      },
+      {
+        "text": "Ser medibles y objeto de seguimiento periódico.",
+        "isCorrect": true,
+        "rationale": "Los objetivos deben ser cuantificables o evaluables a través de indicadores para verificar la eficacia de las acciones."
+      },
+      {
+        "text": "Ser comunicados formalmente al personal relevante.",
+        "isCorrect": true,
+        "rationale": "La difusión al personal asegura que los colaboradores comprendan su contribución directa al logro de las metas."
+      },
+      {
+        "text": "Permanecer estáticos e inalterables sin importar cambios en el contexto del negocio.",
+        "isCorrect": false,
+        "rationale": "La norma exige actualizar los objetivos según las necesidades cambiantes del contexto y la estrategia de la empresa."
+      },
+      {
+        "text": "Ser actualizados según sea apropiado conforme evolucione la organización.",
+        "isCorrect": true,
+        "rationale": "Adaptar y ajustar las metas permite mantener la relevancia y la búsqueda permanente de la mejora continua."
+      }
+    ],
+    "hint": "Piensa en el principio de dinamismo operacional frente a la necesidad de mantener metas rígidas en el tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al planificar un cambio significativo en el SGC conforme a la cláusula 6.3 (por ejemplo, la implementación de un nuevo software ERP), ¿cuál de los siguientes aspectos debe evaluar formalmente la organización antes de su ejecución?",
+    "opciones": [
+      {
+        "text": "La cancelación de la Política de Calidad vigente para redactar una completamente opuesta.",
+        "isCorrect": false,
+        "rationale": "Un cambio operativo no requiere anular la política estratégica, sino verificar que el cambio siga siendo coherente con ella."
+      },
+      {
+        "text": "El propósito del cambio, sus consecuencias potenciales y la integridad del SGC.",
+        "isCorrect": true,
+        "rationale": "La norma exige analizar el propósito, los impactos potenciales, la disponibilidad de recursos y la asignación de responsabilidades para no comprometer el SGC."
+      },
+      {
+        "text": "La sustitución de la auditoría interna por una encuesta informal en redes sociales.",
+        "isCorrect": false,
+        "rationale": "Los cambios del sistema no facultan la omisión del requisito obligatorio de auditoría interna."
+      },
+      {
+        "text": "El despido preventivo de todo el personal que manifieste resistencia inicial al cambio.",
+        "isCorrect": false,
+        "rationale": "La gestión del cambio requiere capacitación y concientización, no medidas punitivas ni despidos intempestivos."
+      },
+      {
+        "text": "La eliminación del mapa de procesos para simplificar la transición informática.",
+        "isCorrect": false,
+        "rationale": "La implementación de un ERP exige ajustar o alinear la documentación de los procesos, nunca suprimir la gestión por procesos."
+      }
+    ],
+    "hint": "Evalúa qué análisis previo exige la norma para garantizar que una modificación no desestabilice el sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del requisito 7.1.3 de la ISO 9001:2015, la organización debe determinar, proporcionar y mantener la infraestructura necesaria. ¿Cuáles de los siguientes elementos forman parte conceptual de la infraestructura?",
+    "opciones": [
+      {
+        "text": "Exclusivamente los edificios de las oficinas administrativas principales.",
+        "isCorrect": false,
+        "rationale": "La infraestructura abarca mucho más que los inmuebles físicos; incluye herramientas, sistemas e instalaciones operativas."
+      },
+      {
+        "text": "Edificios, equipos (hardware y software), recursos de transporte y tecnologías de información.",
+        "isCorrect": true,
+        "rationale": "La norma define la infraestructura de forma amplia, integrando edificaciones, servicios asociados, equipos informáticos, software y transporte."
+      },
+      {
+        "text": "Únicamente la masa salarial y la estructura de comisiones financieras de los vendedores.",
+        "isCorrect": false,
+        "rationale": "Los esquemas salariales forman parte de la gestión humana/compensaciones, no de la infraestructura física o tecnológica."
+      },
+      {
+        "text": "Las leyes y reglamentos nacionales promulgados por el poder legislativo.",
+        "isCorrect": false,
+        "rationale": "Las normas legales constituyen el marco regulatorio y de cumplimiento, no recursos de infraestructura operativa."
+      },
+      {
+        "text": "Los certificados de competencia emitidos por la entidad acreditadora internacional.",
+        "isCorrect": false,
+        "rationale": "Las certificaciones son evidencias documentadas de competencia o conformidad, no infraestructura."
+      }
+    ],
+    "hint": "Considera la definición amplia que abarca tanto los espacios físicos como las herramientas tecnológicas y de comunicación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de recursos de seguimiento y medición (7.1.5), ¿cuál es la distinción técnica entre el 'mantenimiento' y la 'calibración' de un equipo?",
+    "opciones": [
+      {
+        "text": "El mantenimiento compara la lectura con un patrón nacional, mientras que la calibración solo limpia el instrumento.",
+        "isCorrect": false,
+        "rationale": "Es la calibración la que establece la relación de medición frente a un patrón estandarizado, no el mantenimiento preventivo."
+      },
+      {
+        "text": "El mantenimiento preserva o restaura las condiciones físicas del equipo, mientras que la calibración compara sus mediciones con un patrón de trazabilidad conocido.",
+        "isCorrect": true,
+        "rationale": "El mantenimiento busca conservar el funcionamiento mecánico/eléctrico, mientras que la calibración determina la exactitud de lectura de un equipo frente a un patrón."
+      },
+      {
+        "text": "La calibración se aplica únicamente a laptops corporativas y el mantenimiento a balanzas de precisión.",
+        "isCorrect": false,
+        "rationale": "Las balanzas requieren calibración por medir magnitudes físicas; los equipos de cómputo requieren mantenimiento lógico o físico."
+      },
+      {
+        "text": "Ambos términos son idénticos y se aplican indistintamente sin importar el tipo de instrumento de medición.",
+        "isCorrect": false,
+        "rationale": "Confundir mantenimiento y calibración es un error operativo común; cada procedimiento responde a requisitos normativos y técnicos diferentes."
+      },
+      {
+        "text": "La calibración es un proceso estético externo y el mantenimiento invalida los certificados de fábrica.",
+        "isCorrect": false,
+        "rationale": "La calibración es un procedimiento técnico esencial de metrología que valida la trazabilidad y precisión, no un ajuste estético."
+      }
+    ],
+    "hint": "Diferencia la preservación del estado operativo de un equipo de la comparación de sus lecturas contra un estándar verificado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para demostrar la competencia del personal que realiza trabajos que afectan el desempeño del SGC conforme a la cláusula 7.2, ¿cuáles de las siguientes evidencias documentadas debe recopilar y conservar la organización?",
+    "opciones": [
+      {
+        "text": "El perfil de puesto o Manual de Organización y Funciones (MOF) con los requisitos definidos.",
+        "isCorrect": true,
+        "rationale": "El perfil de puesto establece el estándar o la vara de medir respecto a la educación, formación y experiencia exigidas."
+      },
+      {
+        "text": "El currículum vitae documentado del colaborador con certificados de educación, formación y experiencia.",
+        "isCorrect": true,
+        "rationale": "El CV documentado proporciona las pruebas verificables de que la persona seleccionada cumple con las exigencias definidas."
+      },
+      {
+        "text": "Registros de evaluación de la eficacia de las capacitaciones brindadas al personal.",
+        "isCorrect": true,
+        "rationale": "Evaluar la eficacia demuestra que la formación impartida cerró la brecha de competencia identificada en el colaborador."
+      },
+      {
+        "text": "El comprobante de pago de la membresía anual del club recreativo corporativo.",
+        "isCorrect": false,
+        "rationale": "Las actividades recreativas o beneficios sociales no constituyen evidencias técnicas de la competencia laboral requerida por el SGC."
+      },
+      {
+        "text": "La constancia de asistencia a inducciones o cursos requeridos para el puesto.",
+        "isCorrect": true,
+        "rationale": "Las constancias de capacitación sustentan formalmente la adquisición de nuevos conocimientos o competencias requeridas."
+      }
+    ],
+    "hint": "Piensa en las evidencias que demuestran la formación previa, la definición del puesto y la validación del aprendizaje adquirido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En una matriz de comunicaciones elaborada bajo el requisito 7.4 de ISO 9001:2015, ¿cuáles son las cinco preguntas clave que deben estar claramente definidas para asegurar un flujo de información eficaz?",
+    "opciones": [
+      {
+        "text": "¿Por qué?, ¿Para qué?, ¿A qué costo?, ¿En qué moneda? y ¿Quién paga?",
+        "isCorrect": false,
+        "rationale": "Corresponden a criterios de viabilidad presupuestaria y financiera, no al estándar de comunicación interna y externa del SGC."
+      },
+      {
+        "text": "¿Qué comunicar?, ¿Cuándo comunicar?, ¿A quién comunicar?, ¿Cómo comunicar? y ¿Quién comunica?",
+        "isCorrect": true,
+        "rationale": "El numeral 7.4 establece explícitamente que la organización debe determinar qué, cuándo, a quién, cómo y quién es el responsable de comunicar."
+      },
+      {
+        "text": "¿Dónde auditar?, ¿Cuántas no conformidades buscar?, ¿A quién sancionar?, ¿Cuándo despedir? y ¿Por qué?",
+        "isCorrect": false,
+        "rationale": "Refleja una concepción punitiva e incorrecta de la auditoría, ajena a los requisitos de comunicación."
+      },
+      {
+        "text": "¿Qué comprar?, ¿A qué proveedor?, ¿Con qué descuento?, ¿Cuándo cotizar? y ¿Quién aprueba la factura?",
+        "isCorrect": false,
+        "rationale": "Representan pasos del proceso operativo de compras y abastecimiento, no los atributos de la matriz de comunicaciones."
+      },
+      {
+        "text": "¿Cuál es el código?, ¿Cuántas páginas tiene?, ¿Quién lo imprimió?, ¿En qué estante guardarlo? y ¿Cuándo destruirlo?",
+        "isCorrect": false,
+        "rationale": "Corresponden a lineamientos de archivo o gestión documental, no a la estructura del plan de comunicación."
+      }
+    ],
+    "hint": "Recuerda la estructura estándar de interrogantes que define el emisor, el mensaje, la frecuencia, el canal y el receptor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del lenguaje normativo de la ISO 9001:2015, ¿qué significado técnico operativo tienen, respectivamente, las expresiones 'mantener información documentada' y 'conservar información documentada'?",
+    "opciones": [
+      {
+        "text": "Mantener se refiere a guardar archivos físicos; conservar se aplica solo a documentos digitales en la nube.",
+        "isCorrect": false,
+        "rationale": "La diferencia radica en la naturaleza del documento (lineamiento vs. registro de evidencia), no en el soporte físico o digital utilizado."
+      },
+      {
+        "text": "Mantener implica contar con procedimientos, instructivos o manuales actualizados; conservar exige guardar registros como evidencia de resultados.",
+        "isCorrect": true,
+        "rationale": "En la terminología ISO 9001, 'mantener' hace referencia a documentos estructurados (procesos, manuales) y 'conservar' alude a mantener registros que prueben la ejecución."
+      },
+      {
+        "text": "Ambas frases obligan a imprimir en papel todos los correos electrónicos de la empresa diariamente.",
+        "isCorrect": false,
+        "rationale": "La norma promueve la eficiencia documental y no exige la impresión en papel ni la duplicación burocrática e innecesaria."
+      },
+      {
+        "text": "Mantener se refiere exclusivamente a la Política de Calidad; conservar aplica solo a las facturas contables.",
+        "isCorrect": false,
+        "rationale": "La distinción aplica transversalmente a todas las cláusulas de la norma donde se soliciten documentos o registros."
+      },
+      {
+        "text": "No existe diferencia formal; ambas indican que el documento debe destruirse al cabo de un mes.",
+        "isCorrect": false,
+        "rationale": "Ambas expresiones establecen obligaciones de preservación y control durante el ciclo de vida del Sistema de Gestión."
+      }
+    ],
+    "hint": "Relaciona las instrucciones de trabajo estandarizadas con las evidencias que demuestran la ejecución de una tarea.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al crear y actualizar información documentada según la cláusula 7.5.2, la organización debe garantizar que los documentos presenten ciertos atributos de control. ¿Cuáles de los siguientes elementos son indispensables?",
+    "opciones": [
+      {
+        "text": "Identificación y descripción clara (código, título, fecha y número de versión).",
+        "isCorrect": true,
+        "rationale": "La identificación mediante títulos, códigos y versiones es indispensable para rastrear el origen y vigencia de un documento."
+      },
+      {
+        "text": "Formato adecuado (idioma, versión de software, diseño gráfico y medio de soporte).",
+        "isCorrect": true,
+        "rationale": "Definir el formato y soporte asegura que la información sea legible, accesible y comprensible para sus usuarios."
+      },
+      {
+        "text": "Revisión y aprobación formal por parte del personal autorizado antes de su emisión.",
+        "isCorrect": true,
+        "rationale": "La revisión y aprobación garantiza la validez técnica y el respaldo formal de la dirección antes de su divulgación."
+      },
+      {
+        "text": "Firma de autorización extendida obligatoriamente por una notaría pública externa.",
+        "isCorrect": false,
+        "rationale": "El SGC se gestiona de manera interna y autónoma; no requiere validación ni firmas notariales para sus procedimientos."
+      },
+      {
+        "text": "Control del estado de revisión para evitar el uso de documentos obsoletos.",
+        "isCorrect": true,
+        "rationale": "Controlar las versiones evita que los colaboradores ejecuten tareas utilizando instrucciones de trabajo desactualizadas."
+      }
+    ],
+    "hint": "Considera los elementos de trazabilidad y gobernanza necesarios antes de autorizar la difusión de un documento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la definición técnica de una auditoría del Sistema de Gestión de la Calidad según los principios normativos presentados en el curso?",
+    "opciones": [
+      {
+        "text": "Un proceso policial e inopinado destinado a sancionar económicamente a los empleados con bajo rendimiento.",
+        "isCorrect": false,
+        "rationale": "La auditoría no es una herramienta punitiva o policial; busca verificar la conformidad de los procesos y la mejora continua."
+      },
+      {
+        "text": "Un proceso sistemático, independiente y documentado para obtener evidencias y evaluarlas de manera objetiva.",
+        "isCorrect": true,
+        "rationale": "La auditoría se define formalmente como un proceso metódico, imparcial y documentado para evaluar de forma objetiva los criterios establecidos."
+      },
+      {
+        "text": "Una revisión informal realizada de forma verbal por el gerente general sin dejar registros escritos.",
+        "isCorrect": false,
+        "rationale": "Las auditorías deben ser planificadas y basarse en información documentada y evidencias objetivas verificables."
+      },
+      {
+        "text": "Una inspección visual rápida que se enfoca únicamente en el estado de pintura de las oficinas.",
+        "isCorrect": false,
+        "rationale": "Su propósito es evaluar el cumplimiento global del SGC y sus procesos, no limitarse a aspectos cosméticos o de pintura."
+      },
+      {
+        "text": "Un examen académico teórico aplicado mediante pruebas escritas a los clientes de la empresa.",
+        "isCorrect": false,
+        "rationale": "Corresponde a una confusión conceptual; la auditoría examina los procesos internos y su evidencia frente a los requisitos de la norma."
+      }
+    ],
+    "hint": "Enfócate en la naturaleza metódica e imparcial que busca verificar evidencias objetivas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Durante la realización de una auditoría de certificación por una tercera parte (realizada por casas certificadoras como SGS o Bureau Veritas), ¿cuáles son las dos fases consecutivas en las que se divide el proceso evaluador?",
+    "opciones": [
+      {
+        "text": "Fase 1: Auditoría documental para revisar la estructura del SGC y el grado de preparación.",
+        "isCorrect": true,
+        "rationale": "La Fase 1 evalúa la información documentada previa, el alcance y la preparación para determinar si la empresa está lista para la siguiente etapa."
+      },
+      {
+        "text": "Fase de homologación inicial de proveedores internacionales.",
+        "isCorrect": false,
+        "rationale": "La homologación de proveedores es una actividad operativa de compras o auditoría de segunda parte, no la etapa de certificación del SGC."
+      },
+      {
+        "text": "Fase 2: Auditoría in situ o de campo para verificar la implementación y eficacia operativa de los procesos.",
+        "isCorrect": true,
+        "rationale": "La Fase 2 evalúa la aplicación práctica in situ de lo documentado, verificando la conformidad operativa de todos los procesos."
+      },
+      {
+        "text": "Fase de calibración física de las computadoras del equipo auditor.",
+        "isCorrect": false,
+        "rationale": "Corresponde a una actividad de mantenimiento o soporte, no a una etapa metodológica de la auditoría de certificación."
+      },
+      {
+        "text": "Fase de recálculo del presupuesto de ventas del cliente.",
+        "isCorrect": false,
+        "rationale": "El recálculo financiero de ventas no forma parte del ciclo metodológico de evaluación de conformidad en la certificación ISO."
+      }
+    ],
+    "hint": "Distingue entre la etapa de revisión documental y la etapa de verificación operacional en las instalaciones del cliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un auditor interno observa que en el área de almacén se utilizan tres versiones distintas y desactualizadas del procedimiento de despacho. Al no haberse garantizado la versión vigente, ¿cómo debe clasificar formalmente este hallazgo?",
+    "opciones": [
+      {
+        "text": "Como una felicitación por la diversidad de criterios aplicados en la bodega.",
+        "isCorrect": false,
+        "rationale": "Utilizar versiones obsoletas genera inconsistencia e incumplimiento, lo cual es un fallo y no un motivo de felicitación."
+      },
+      {
+        "text": "Como una no conformidad por incumplimiento de los controles de información documentada (7.5.3).",
+        "isCorrect": true,
+        "rationale": "La presencia de documentos obsoletos sin control de versión representa un incumplimiento directo de las exigencias del control documental."
+      },
+      {
+        "text": "Como una salida no conforme directamente atribuible al fabricante del empaque.",
+        "isCorrect": false,
+        "rationale": "La falla en el control documental es un problema interno del sistema, no una deficiencia del proveedor o fabricante de empaques."
+      },
+      {
+        "text": "Como un logro de la alta dirección en el cumplimiento de los objetivos de calidad.",
+        "isCorrect": false,
+        "rationale": "El descontrol documental demuestra fallas en el seguimiento del SGC, oponiéndose al cumplimiento de objetivos organizados."
+      },
+      {
+        "text": "Como un riesgo positivo derivado de la metodología AMEF de procesos.",
+        "isCorrect": false,
+        "rationale": "El uso de versiones desactualizadas es un fallo operativo real y un hallazgo negativo, no un riesgo positivo o una oportunidad."
+      }
+    ],
+    "hint": "Identifica la cláusula que exige asegurar que el personal trabaje únicamente con la versión vigente aprobada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para garantizar un proceso de auditoría ético y profesional conforme a la norma ISO 19011, ¿cuáles de los siguientes constituyen principios fundamentales que debe respetar todo auditor?",
+    "opciones": [
+      {
+        "text": "Integridad y desempeño profesional con debido cuidado.",
+        "isCorrect": true,
+        "rationale": "El auditor debe actuar con honestidad, diligencia y responsabilidad técnica durante la evaluación."
+      },
+      {
+        "text": "Presentación imparcial e información veraz de los hallazgos.",
+        "isCorrect": true,
+        "rationale": "La obligación de reportar los hallazgos con veracidad y exactitud asegura el valor técnico del informe final."
+      },
+      {
+        "text": "Confidencialidad y protección de la información recopilada.",
+        "isCorrect": true,
+        "rationale": "El auditor tiene el deber de resguardar los datos sensibles o secretos comerciales de la empresa evaluada."
+      },
+      {
+        "text": "Independencia e imparcialidad respecto a las actividades auditadas.",
+        "isCorrect": true,
+        "rationale": "La independencia garantiza que el auditor no evalúe su propio trabajo, asegurando la objetividad de los juicios."
+      },
+      {
+        "text": "Subjetividad deliberada basada en corazonadas o prejuicios personales.",
+        "isCorrect": false,
+        "rationale": "Toda conclusión de auditoría debe basarse en evidencia objetiva y verificable, nunca en corazonadas o prejuicios."
+      }
+    ],
+    "hint": "Considera los valores éticos y metodológicos que garantizan una evaluación objetiva e imparcial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la reunión de apertura de una auditoría in situ, ¿cuál es el propósito principal que debe cumplir el auditor líder con el equipo auditado?",
+    "opciones": [
+      {
+        "text": "Redactar inmediatamente el informe final de auditoría antes de revisar las instalaciones.",
+        "isCorrect": false,
+        "rationale": "El informe final solo se elabora tras recopilar y analizar las evidencias objetivas durante la auditoría."
+      },
+      {
+        "text": "Presentar al equipo auditor, confirmar el plan de auditoría, explicar la metodología y establecer los canales de comunicación.",
+        "isCorrect": true,
+        "rationale": "La reunión de apertura formaliza el inicio, confirma los horarios y alcance planificados, y establece un marco de confianza profesional."
+      },
+      {
+        "text": "Negociar la venta de productos informáticos entre la casa certificadora y la empresa.",
+        "isCorrect": false,
+        "rationale": "Un auditor tiene prohibido comercializar bienes o prestar servicios que comprometan su independencia e imparcialidad."
+      },
+      {
+        "text": "Sancionar disciplinariamente al personal que no recuerde de memoria la Política de Calidad.",
+        "isCorrect": false,
+        "rationale": "La auditoría evalúa la eficacia del sistema y el conocimiento general, no aplica amonestaciones ni sanciones de personal."
+      },
+      {
+        "text": "Modificar el alcance del SGC excluyendo los procesos que tengan problemas conocidos.",
+        "isCorrect": false,
+        "rationale": "El alcance solo se modifica mediante la revisión previa de la organización, no de forma improvisada en la apertura para ocultar fallas."
+      }
+    ],
+    "hint": "Piensa en el momento inicial donde se alinean las agendas, los participantes y las reglas del proceso de evaluación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Tras identificarse una No Conformidad durante una auditoría, ¿cuál es el paso técnico inmediato que debe realizar la organización antes de proponer una acción correctiva conforme a la cláusula 10.2?",
+    "opciones": [
+      {
+        "text": "Cerrar la no conformidad inmediatamente cambiando la fecha del registro antiguo.",
+        "isCorrect": false,
+        "rationale": "Alterar fechas o registros enmascara el fallo y constituye una mala práctica que invalida la integridad del SGC."
+      },
+      {
+        "text": "Realizar un análisis de causa raíz para identificar el origen o factor generador del problema.",
+        "isCorrect": true,
+        "rationale": "Para que una acción correctiva sea eficaz debe eliminar la causa raíz del problema, impidiendo que vuelva a ocurrir."
+      },
+      {
+        "text": "Asumir el impacto económico transfiriendo la culpa directamente al cliente final.",
+        "isCorrect": false,
+        "rationale": "La gestión de calidad exige asumir la responsabilidad y buscar la solución interna, no trasladar la culpa al cliente."
+      },
+      {
+        "text": "Destruir toda la información documentada asociada al proceso donde ocurrió el fallo.",
+        "isCorrect": false,
+        "rationale": "Ocultar o eliminar evidencias impide aprender del error y vulnera el principio de transparencia y mejora continua."
+      },
+      {
+        "text": "Contratar un nuevo auditor externo para que anule el hallazgo del informe previo.",
+        "isCorrect": false,
+        "rationale": "Las no conformidades deben gestionarse internamente mediante acciones correctivas, no anulándose mediante compras de dictámenes."
+      }
+    ],
+    "hint": "Recuerda el paso analítico indispensable para evitar que un problema detectado vuelva a repetirse.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-42",
+    "diplomado": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Respecto al ciclo de validez de la certificación de un Sistema de Gestión de la Calidad bajo ISO 9001:2015, ¿cuáles de las siguientes afirmaciones son correctas?",
+    "opciones": [
+      {
+        "text": "El certificado emitido por una casa certificadora acreditada tiene una vigencia típica de 3 años.",
+        "isCorrect": true,
+        "rationale": "El estándar y las reglas de acreditación fijan en tres años el periodo de validez de los certificados de calidad ISO."
+      },
+      {
+        "text": "Durante el periodo de 3 años se deben realizar auditorías anuales de seguimiento para mantener la certificación.",
+        "isCorrect": true,
+        "rationale": "Las auditorías de seguimiento anuales son obligatorias para verificar que el sistema no se haya degradado."
+      },
+      {
+        "text": "Al finalizar el ciclo de 3 años, la empresa debe someterse a una auditoría de recertificación para renovar el certificado.",
+        "isCorrect": true,
+        "rationale": "La recertificación al tercer año evalúa el desempeño global del trienio para otorgar un nuevo certificado por otro periodo."
+      },
+      {
+        "text": "La certificación otorgada en el primer año es vitalicia e indefinida sin necesidad de evaluaciones posteriores.",
+        "isCorrect": false,
+        "rationale": "La idea de la certificación vitalicia es falsa; sin auditorías anuales de seguimiento el certificado pierde su validez."
+      },
+      {
+        "text": "Las auditorías de seguimiento anuales verifican que el SGC mantenga su eficacia y la mejora continua.",
+        "isCorrect": true,
+        "rationale": "El seguimiento continuo garantiza que las acciones correctivas y los procesos sigan siendo eficaces en el tiempo."
+      }
+    ],
+    "hint": "Analiza la duración estándar del certificado y los mecanismos de seguimiento periódico para mantener su vigencia.",
+    "activo": true
+  }
+]

@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define la investigación de mercado en el ámbito del análisis empresarial e internacional?",
+    "opciones": [
+      {
+        "text": "Un método sistemático de recopilación, análisis y presentación de datos para respaldar la toma de decisiones comerciales.",
+        "isCorrect": true,
+        "rationale": "La investigación de mercado es un proceso estructurado enfocado en obtener información relevante que reduzca el riesgo en las decisiones de la organización."
+      },
+      {
+        "text": "La transacción directa de compra y venta de bienes en puertos de aduana internacionales.",
+        "isCorrect": false,
+        "rationale": "Esta opción describe una operación del comercio exterior o logística aduanera, no el proceso analítico de investigación."
+      },
+      {
+        "text": "El diseño de campañas publicitarias exclusivas para medios impresos y televisión abierta.",
+        "isCorrect": false,
+        "rationale": "El diseño publicitario es una aplicación o consecuencia del marketing, no el proceso sistemático de investigación de mercado."
+      },
+      {
+        "text": "El cálculo automático de impuestos arancelarios aplicados a la importación de materia prima.",
+        "isCorrect": false,
+        "rationale": "El cálculo de impuestos tributarios y aranceles corresponde a la gestión aduanera y financiera de la empresa."
+      },
+      {
+        "text": "La contratación masiva de personal de ventas telefónicas para la captación de clientes corporativos.",
+        "isCorrect": false,
+        "rationale": "La contratación de fuerza de ventas es parte de la gestión operacional de recursos humanos y ventas, no de la investigación."
+      }
+    ],
+    "hint": "Considere el propósito principal de obtener datos de manera ordenada antes de actuar comercialmente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a fuentes primarias de recolección de datos en un estudio de mercado?",
+    "opciones": [
+      {
+        "text": "Encuestas estructuradas aplicadas directamente a los consumidores del público objetivo.",
+        "isCorrect": true,
+        "rationale": "Las encuestas directas recaban información original de primera mano generada específicamente para la investigación actual."
+      },
+      {
+        "text": "Entrevistas en profundidad realizadas a clientes potenciales o expertos del sector.",
+        "isCorrect": true,
+        "rationale": "Las entrevistas permiten obtener testimonios y datos cualitativos directly recolectados en el marco del estudio en curso."
+      },
+      {
+        "text": "Censos de población publicados anteriormente por instituciones públicas estadísticas.",
+        "isCorrect": false,
+        "rationale": "Los censos gubernamentales ya existentes corresponden a fuentes secundarias, pues los datos fueron recopilados con otro fin previo."
+      },
+      {
+        "text": "Reportes históricos de ventas de años pasados almacenados en el sistema interno de la empresa.",
+        "isCorrect": false,
+        "rationale": "Los registros internos de ventas pasadas constituyen información secundaria ya elaborada y preexistente."
+      },
+      {
+        "text": "Artículos de revistas académicas y estudios publicados por terceros en años anteriores.",
+        "isCorrect": false,
+        "rationale": "Las publicaciones de terceros son documentos secundarios porque la información no se generó para el estudio presente."
+      }
+    ],
+    "hint": "Identifique las técnicas que implican obtener datos originales directamente de la fuente en el momento presente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta gratuita ofrece Google para comparar la frecuencia y volumen de búsqueda de términos específicos a lo largo del tiempo y por regiones?",
+    "opciones": [
+      {
+        "text": "Google Trends",
+        "isCorrect": true,
+        "rationale": "Google Trends permite explorar qué conceptos e intereses están en tendencia en diferentes ubicaciones geográficas y periodos históricos."
+      },
+      {
+        "text": "Google Analytics",
+        "isCorrect": false,
+        "rationale": "Google Analytics se centra en monitorear el tráfico y comportamiento de los usuarios dentro de un sitio web o aplicación específica."
+      },
+      {
+        "text": "Google Market Finder",
+        "isCorrect": false,
+        "rationale": "Market Finder analiza la viabilidad global de expansión hacia nuevos mercados internacionales, no solo la comparación de búsquedas de términos."
+      },
+      {
+        "text": "YouTube Analytics",
+        "isCorrect": false,
+        "rationale": "YouTube Analytics mide las métricas de rendimiento y reproducción exclusivas del contenido en formato de video de un canal de YouTube."
+      },
+      {
+        "text": "Google Keyword Planner",
+        "isCorrect": false,
+        "rationale": "Keyword Planner está orientado principalmente a la estimación de palabras clave para campañas de anuncios publicitarios y posicionamiento SEO."
+      }
+    ],
+    "hint": "Piense en la herramienta que mide el interés y la popularidad de términos de búsqueda en el tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de la herramienta Google Market Finder en la investigación de mercados?",
+    "opciones": [
+      {
+        "text": "Evaluar la viabilidad de expandir un negocio a mercados internacionales examinando datos de demanda y búsquedas globales.",
+        "isCorrect": true,
+        "rationale": "Market Finder orienta a las empresas sobre qué destinos internacionales ofrecen mejores oportunidades de mercado según su oferta."
+      },
+      {
+        "text": "Medir en tiempo real el porcentaje de rebote y tiempo de permanencia dentro de una tienda virtual.",
+        "isCorrect": false,
+        "rationale": "El monitoreo de permanencia y tasa de rebote en sitios web corresponde a las funciones de Google Analytics."
+      },
+      {
+        "text": "Automatizar la creación de diseños gráficos y textos de anuncios publicitarios para redes sociales.",
+        "isCorrect": false,
+        "rationale": "El diseño y creación de contenidos creativos requiere herramientas de diseño o plataformas de pauta publicitaria, no Market Finder."
+      },
+      {
+        "text": "Calcular los tributos de importación y gestionar el despacho aduanero de mercancías físicas.",
+        "isCorrect": false,
+        "rationale": "Los cálculos tributarios y despachos físicos corresponden a plataformas de agencias aduaneras y de comercio exterior."
+      },
+      {
+        "text": "Realizar llamadas telefónicas automatizadas para encuestar a usuarios de dispositivos móviles.",
+        "isCorrect": false,
+        "rationale": "Las llamadas telefónicas automatizadas no forman parte de las herramientas analíticas web provistas por Google Market Finder."
+      }
+    ],
+    "hint": "Relacione el nombre de la herramienta con la búsqueda de nuevos destinos comerciales en el extranjero.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto del marketing moderno centrado en datos, ¿cuál es el pilar fundamental para lograr una conexión efectiva con los clientes?",
+    "opciones": [
+      {
+        "text": "El uso adecuado de la información real del consumidor para entender sus necesidades precisas.",
+        "isCorrect": true,
+        "rationale": "El marketing moderno se basa en recopilar y analizar información para personalizar y satisfacer de manera real al cliente."
+      },
+      {
+        "text": "La intuición y experiencia empírica acumulada por la gerencia a lo largo de los años.",
+        "isCorrect": false,
+        "rationale": "Confiar únicamente en la intuición o presuposiciones tradicionales puede distanciar a la empresa de la demanda cambiante del mercado."
+      },
+      {
+        "text": "La aplicación indiscriminada de descuentos masivos a todos los productos del catálogo de forma semanal.",
+        "isCorrect": false,
+        "rationale": "Las rebajas continuas sin estrategia reducen el margen y no construyen una conexión fundamentada en la información del cliente."
+      },
+      {
+        "text": "La imitación inmediata y directa de las campañas lanzadas por los competidores locales.",
+        "isCorrect": false,
+        "rationale": "Copiar a los competidores ignora las necesidades particulares de la propia cartera de clientes de la empresa."
+      },
+      {
+        "text": "La inversión concentrada exclusivamente en comerciales emitidos por medios de comunicación masivos tradicionales.",
+        "isCorrect": false,
+        "rationale": "Los medios masivos tradicionales carecen de la precisión de segmentación que otorga el análisis moderno de datos del consumidor."
+      }
+    ],
+    "hint": "Recuerde el concepto que se opone a actuar a ciegas o guiado puramente por la intuición.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué herramientas de análisis digital permiten evaluar específicamente métricas de interacción e impacto de contenidos web o audiovisuales?",
+    "opciones": [
+      {
+        "text": "Google Analytics",
+        "isCorrect": true,
+        "rationale": "Google Analytics mide el comportamiento del usuario, fuentes de tráfico e interacción dentro de plataformas y sitios web."
+      },
+      {
+        "text": "YouTube Analytics",
+        "isCorrect": true,
+        "rationale": "YouTube Analytics recopila tiempo de reproducción, demografía e interacción de la audiencia en contenidos en formato de video."
+      },
+      {
+        "text": "Google Surveys",
+        "isCorrect": false,
+        "rationale": "Google Surveys es una herramienta enfocada en la recolección de respuestas a través de cuestionarios en línea, no en la analítica web."
+      },
+      {
+        "text": "Google Market Finder",
+        "isCorrect": false,
+        "rationale": "Market Finder es una herramienta de prospección de mercados internacionales, no una plataforma de analítica de tráfico de contenidos."
+      },
+      {
+        "text": "Google Keyword Planner",
+        "isCorrect": false,
+        "rationale": "Keyword Planner orienta la planificación de pauta en motores de búsqueda, no la analítica de interacción de contenidos audiovisuales."
+      }
+    ],
+    "hint": "Seleccione las opciones que se especializan en analizar datos de tráfico e interacción en sitios o canales de video.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la segmentación demográfica de un mercado?",
+    "opciones": [
+      {
+        "text": "En dividir la población consumidora en función de variables cuantificables como edad, género, ingresos y nivel educativo.",
+        "isCorrect": true,
+        "rationale": "La segmentación demográfica utiliza criterios estadísticos descriptivos y medibles de la población objetivo."
+      },
+      {
+        "text": "En clasificar a las personas según sus rasgos de personalidad, valores morales y creencias religiosas.",
+        "isCorrect": false,
+        "rationale": "Los valores, personalidad y creencias corresponden a la segmentación de carácter psicográfico."
+      },
+      {
+        "text": "En agrupar a los consumidores de acuerdo con la frecuencia de uso del producto y su nivel de lealtad a la marca.",
+        "isCorrect": false,
+        "rationale": "La frecuencia de consumo y lealtad forman parte de los criterios de la segmentación conductual."
+      },
+      {
+        "text": "En organizar a los clientes basándose en el país, la región geográfica, el clima o la densidad poblacional.",
+        "isCorrect": false,
+        "rationale": "La división por países, regiones o clima pertenece al ámbito de la segmentación geográfica."
+      },
+      {
+        "text": "En categorizar a los usuarios según el sistema operativo de sus dispositivos móviles y velocidad de internet.",
+        "isCorrect": false,
+        "rationale": "La categorización por tecnología o conectividad es un criterio técnico o de comportamiento digital, no demográfico tradicional."
+      }
+    ],
+    "hint": "Piense en variables cuantificables obtenidas comúnmente mediante censos poblacionales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué tipo de segmentación corresponde el agrupamiento de consumidores basándose en estilos de vida, actitudes, motivaciones y valores?",
+    "opciones": [
+      {
+        "text": "Segmentación psicográfica",
+        "isCorrect": true,
+        "rationale": "La segmentación psicográfica examina aspectos intrínsecos del individuo como sus opiniones, intereses y formas de vida."
+      },
+      {
+        "text": "Segmentación demográfica",
+        "isCorrect": false,
+        "rationale": "La segmentación demográfica se limita a variables objetivas y cuantificables como edad, género e ingresos."
+      },
+      {
+        "text": "Segmentación geográfica",
+        "isCorrect": false,
+        "rationale": "La segmentación geográfica se basa puramente en factores de ubicación espacial y entorno territorial."
+      },
+      {
+        "text": "Segmentación conductual",
+        "isCorrect": false,
+        "rationale": "La segmentación conductual evalúa la respuesta directa frente al producto, patrones de compra y uso del bien."
+      },
+      {
+        "text": "Segmentación económica",
+        "isCorrect": false,
+        "rationale": "El término segmentación económica suele incluirse dentro de las variables de ingreso de la segmentación demográfica."
+      }
+    ],
+    "hint": "Asocie el concepto con los aspectos psicológicos y el estilo de vida del individuo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la utilidad principal de la plataforma Euromonitor (Passport) en el análisis de mercados?",
+    "opciones": [
+      {
+        "text": "Proporcionar bases de datos globales, informes sectoriales y proyecciones cualitativas y cuantitativas sobre la demanda de industrias.",
+        "isCorrect": true,
+        "rationale": "Euromonitor ofrece inteligencia de mercado detallada e informes globales sobre diversos sectores industriales y comerciales."
+      },
+      {
+        "text": "Generar pautas publicitarias automatizadas para ser transmitidas en emisoras de radio locales.",
+        "isCorrect": false,
+        "rationale": "Euromonitor es una fuente de investigación de mercados, no un gestor de pauta para medios publicitarios radiales."
+      },
+      {
+        "text": "Administrar la facturación electrónica y el cobro mensual a clientes minoristas de una tienda.",
+        "isCorrect": false,
+        "rationale": "La facturación electrónica corresponde a softwares de gestión empresarial (ERP) o punto de venta, no a bases de datos de investigación."
+      },
+      {
+        "text": "Imprimir códigos de barras y etiquetas de embalaje para los paquetes de exportación.",
+        "isCorrect": false,
+        "rationale": "La impresión de rotulado pertenece al proceso operativo de embalaje e imprenta industrial."
+      },
+      {
+        "text": "Supervisar vía GPS las rutas de transporte terrestre de la flota vehicular de la empresa.",
+        "isCorrect": false,
+        "rationale": "El rastreo de flotas es una tarea de la gestión logística de distribución mediante plataformas satelitales."
+      }
+    ],
+    "hint": "Considere la función de una base de datos internacional de inteligencia comercial y tendencias globales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes herramientas de software están orientadas al análisis cuantitativo, procesamiento o visualización de datos de mercado?",
+    "opciones": [
+      {
+        "text": "Tableau",
+        "isCorrect": true,
+        "rationale": "Tableau se especializa en la conexión, procesamiento visual e interactivo de grandes volúmenes de datos."
+      },
+      {
+        "text": "Power BI",
+        "isCorrect": true,
+        "rationale": "Power BI es una herramienta de inteligencia de negocios enfocada en el análisis, creación de tableros y visualización de métricas."
+      },
+      {
+        "text": "SPSS",
+        "isCorrect": true,
+        "rationale": "SPSS es un software estadístico avanzado muy utilizado en la investigación social y analítica cuantitativa de mercados."
+      },
+      {
+        "text": "Google Docs",
+        "isCorrect": false,
+        "rationale": "Google Docs es un procesador de textos en la nube, no un software especializado en analítica estadística o visualización de datos."
+      },
+      {
+        "text": "Canva",
+        "isCorrect": false,
+        "rationale": "Canva es una plataforma de diseño gráfico simplificado, no un programa de procesamiento o análisis de datos cuantitativos."
+      }
+    ],
+    "hint": "Elija las herramientas reconocidas por su capacidad de generar modelos estadísticos, tableros interactivos (dashboards) o gráficos analíticos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué resulta relevante para una empresa realizar un monitoreo continuo de las redes sociales?",
+    "opciones": [
+      {
+        "text": "Permite identificar percepciones sobre la marca, detectar problemas tempranos y evaluar el impacto de las pautas comerciales.",
+        "isCorrect": true,
+        "rationale": "El monitoreo en redes ayuda a medir el sentimiento del público y captar comentarios para ajustar la estrategia a tiempo."
+      },
+      {
+        "text": "Asegura la exención total del pago de aranceles al momento de exportar mercancías.",
+        "isCorrect": false,
+        "rationale": "Los aranceles dependen de los tratados comerciales y regulaciones aduaneras de cada Estado, no del monitoreo digital."
+      },
+      {
+        "text": "Garantiza la eliminación completa de los costos de producción y empaque de los bienes.",
+        "isCorrect": false,
+        "rationale": "Los costos de producción responden a la eficiencia operativa e insumos físicos, no al análisis de redes sociales."
+      },
+      {
+        "text": "Sustituye por completo los libros contables y auditorías financieras obligatorias por ley.",
+        "isCorrect": false,
+        "rationale": "La contabilidad financiera es un requerimiento normativo independiente de la presencia y monitoreo en redes sociales."
+      },
+      {
+        "text": "Incrementa de forma automática la capacidad máxima de almacenamiento del almacén central.",
+        "isCorrect": false,
+        "rationale": "La capacidad de inventario es un factor de infraestructura física que no cambia por monitorear comentarios en internet."
+      }
+    ],
+    "hint": "Considere los beneficios de escuchar la opinión de los usuarios en plataformas digitales para proteger y posicionar la marca.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué variables analiza principalmente la segmentación de tipo conductual?",
+    "opciones": [
+      {
+        "text": "El comportamiento manifiesto del usuario, como la frecuencia de compra, la fidelidad a la marca y la sensibilidad al precio.",
+        "isCorrect": true,
+        "rationale": "La segmentación conductual mide las acciones y hábitos concretos del consumidor frente a un producto o servicio específico."
+      },
+      {
+        "text": "El nivel de ingresos familiares y la profesión u ocupación desempeñada por el jefe de hogar.",
+        "isCorrect": false,
+        "rationale": "Los ingresos y la ocupación laboral pertenecen al grupo de criterios de la segmentación demográfica."
+      },
+      {
+        "text": "La delimitación exacta del distrito, la ciudad o las condiciones climáticas del lugar de residencia.",
+        "isCorrect": false,
+        "rationale": "Las condiciones del territorio de residencia forman parte de los criterios geográficos."
+      },
+      {
+        "text": "Los rasgos psicológicos heredados y el temperamento individual del consumidor.",
+        "isCorrect": false,
+        "rationale": "El estudio de la personalidad y rasgos psicológicos se agrupa en la segmentación psicográfica."
+      },
+      {
+        "text": "El tipo de moneda oficial utilizada para el intercambio comercial en el país de destino.",
+        "isCorrect": false,
+        "rationale": "La moneda oficial es una variable del contexto económico nacional o financiero macro, no un criterio conductual del cliente."
+      }
+    ],
+    "hint": "Piense en las acciones de uso, tasa de recompra y lealtad expresadas por el cliente hacia el producto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define el concepto de \"Big Data\" en el contexto del análisis de mercados?",
+    "opciones": [
+      {
+        "text": "El almacenamiento, gestión y procesamiento de volúmenes masivos y diversos de datos a gran velocidad.",
+        "isCorrect": true,
+        "rationale": "Big Data involucra grandes conjuntos de datos estructurados y no estructurados que superan el software analítico tradicional."
+      },
+      {
+        "text": "Un método de archivo manual de encuestas impresas dentro de carpetas físicas.",
+        "isCorrect": false,
+        "rationale": "El archivo físico manual es un proceso tradicional e individual, opuesto al concepto masivo y digital de Big Data."
+      },
+      {
+        "text": "La venta de productos tecnológicos exclusivamente a través de catálogos impresos.",
+        "isCorrect": false,
+        "rationale": "El catálogo impreso es un canal publicitario o de venta tradicional, desconectado del procesamiento de datos."
+      },
+      {
+        "text": "Un trámite aduanero utilizado para declarar el peso de contenedores marítimos.",
+        "isCorrect": false,
+        "rationale": "La declaración de peso en aduanas es un trámite regulatorio y logístico del comercio exterior."
+      },
+      {
+        "text": "La contratación de servicios de mensajería postal para el envío de muestras gratuitas.",
+        "isCorrect": false,
+        "rationale": "El envío postal de muestras de productos es una táctica de promoción física, no una infraestructura de analítica de datos."
+      }
+    ],
+    "hint": "Enfóquese en la gran escala, diversidad y rapidez para procesar información digital masiva.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del \"Machine Learning\" o aprendizaje automático aplicado al análisis de mercado?",
+    "opciones": [
+      {
+        "text": "Analizar patrones en conjuntos de datos para generar modelos predictivos sobre tendencias y conductas futuras de consumo.",
+        "isCorrect": true,
+        "rationale": "Machine Learning usa algoritmos que aprenden autónomamente de los datos para predecir comportamientos y optimizar decisiones."
+      },
+      {
+        "text": "Diseñar empaques de cartón reciclado para reducir el impacto ambiental del transporte.",
+        "isCorrect": false,
+        "rationale": "El diseño de empaques sostenibles pertenece a la ingeniería de materiales y ecodiseño de producto."
+      },
+      {
+        "text": "Emitir facturas y boletas impresas de venta en las cajas registradoras físicas.",
+        "isCorrect": false,
+        "rationale": "La emisión de facturas es un proceso operativo transaccional estándar de los sistemas contables."
+      },
+      {
+        "text": "Supervisar de forma presencial el marcado de asistencia diaria del personal operativo.",
+        "isCorrect": false,
+        "rationale": "El control de asistencia de personal es un procedimiento operativo rutinario de gestión de talento humano."
+      },
+      {
+        "text": "Reemplazar las inspecciones sanitarias realizadas por las autoridades en los puertos.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones sanitarias son requerimientos normativos ejecutados por funcionarios públicos acreditados."
+      }
+    ],
+    "hint": "Asocie el concepto con la capacidad de los algoritmos para aprender de los datos y predecir eventos futuros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una de las principales fortalezas operativas de la tecnología Blockchain en las cadenas de suministro e investigaciones comerciales?",
+    "opciones": [
+      {
+        "text": "Proporcionar un registro distribuido e inmutable que asegura la trazabilidad, seguridad y transparencia de la información.",
+        "isCorrect": true,
+        "rationale": "Blockchain garantiza la integridad de los registros impidiendo su alteración sin el consenso de los participantes."
+      },
+      {
+        "text": "Aumentar automáticamente la velocidad de descarga de archivos de audio en redes móviles.",
+        "isCorrect": false,
+        "rationale": "La velocidad de transmisión de datos móviles corresponde a las infraestructuras de telecomunicaciones como 4G o 5G."
+      },
+      {
+        "text": "Eliminar la necesidad de empaquetar físicamente los productos antes de exportarlos.",
+        "isCorrect": false,
+        "rationale": "El embalaje físico es indispensable para proteger la mercancía durante la distribución, independientemente de la tecnología de datos."
+      },
+      {
+        "text": "Diseñar comerciales en video de alta calidad sin intervención humana.",
+        "isCorrect": false,
+        "rationale": "La creación publicitaria de videos involucra herramientas de edición o IA generativa, no el registro distribuido Blockchain."
+      },
+      {
+        "text": "Reducir a cero los costos de transporte marítimo internacional.",
+        "isCorrect": false,
+        "rationale": "Los fletes marítimos dependen del combustible, flota y logística global, factores ajenos a los sistemas informáticos de trazabilidad."
+      }
+    ],
+    "hint": "Recuerde el valor de la seguridad, la descentralización y la imposibilidad de falsificar datos registrados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿En cuáles de las siguientes áreas se aplica el Internet de las Cosas (IoT) para optimizar procesos?",
+    "opciones": [
+      {
+        "text": "Industria 4.0, mediante el monitoreo inteligente y mantenimiento predictivo de maquinaria.",
+        "isCorrect": true,
+        "rationale": "El IoT industrial conecta sensores en máquinas para anticipar fallas y automatizar cadenas productivas."
+      },
+      {
+        "text": "Agricultura de precisión, a través de sistemas de riego automatizado y medición de variables ambientales.",
+        "isCorrect": true,
+        "rationale": "Los sensores de humedad y clima automatizan el uso eficiente del agua y fertilizantes en los cultivos."
+      },
+      {
+        "text": "Salud y medicina, con la implementación de dispositivos de monitoreo remoto de pacientes.",
+        "isCorrect": true,
+        "rationale": "Los dispositivos de salud interconectados transmiten datos médicos del paciente en tiempo real a los especialistas."
+      },
+      {
+        "text": "Impresión de estampillas de correos en papel tradicional.",
+        "isCorrect": false,
+        "rationale": "La impresión tradicional de papel es un proceso analógico desprovisto de sensores o interconexión IoT."
+      },
+      {
+        "text": "Emisión manual de pasaportes físicos en ventanillas de aduanas.",
+        "isCorrect": false,
+        "rationale": "El trámite en ventanilla es un proceso administrativo convencional que no hace uso directo de redes IoT."
+      }
+    ],
+    "hint": "Identifique las opciones que implican dispositivos o sensores físicos conectados a una red para recopilar datos autónomamente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué utilidad ofrece la plataforma Facebook Audience Insights en la etapa de investigación de audiencias?",
+    "opciones": [
+      {
+        "text": "Analizar variables demográficas, intereses, cargos laborales y lugares del público objetivo para la planificación de estrategias.",
+        "isCorrect": true,
+        "rationale": "Audience Insights agrega datos de los usuarios de la red para entender el perfil y aficiones del público en una ubicación dada."
+      },
+      {
+        "text": "Revelar el saldo exacto en las cuentas bancarias de los usuarios de redes sociales.",
+        "isCorrect": false,
+        "rationale": "La información financiera privada está protegida por ley y no está disponible en las herramientas publicitarias de la red."
+      },
+      {
+        "text": "Mostrar los costos de producción y contratos confidenciales de las empresas competidoras.",
+        "isCorrect": false,
+        "rationale": "Los datos confidenciales de costos de la competencia son ajenos a la herramienta de análisis de audiencias."
+      },
+      {
+        "text": "Auditar el cumplimiento de obligaciones tributarias de los compradores en línea.",
+        "isCorrect": false,
+        "rationale": "La auditoría fiscal es competencia de los organismos tributarios estatales, no de herramientas de marketing digital."
+      },
+      {
+        "text": "Garantizar que todas las personas que vean un anuncio compren el producto inmediatamente.",
+        "isCorrect": false,
+        "rationale": "Ninguna herramienta analítica puede asegurar conversiones de venta del 100% en los usuarios."
+      }
+    ],
+    "hint": "Considere la información útil para construir el perfil del cliente ideal (Buyer Persona) según sus interacciones digitales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué hace referencia el modelo de \"Industria 4.0\" apoyado en herramientas de tecnología avanzada?",
+    "opciones": [
+      {
+        "text": "A la integración de sistemas ciberfísicos, automatización e interconexión en los procesos industriales y logísticos.",
+        "isCorrect": true,
+        "rationale": "La Industria 4.0 combina la automatización, datos en tiempo real e IoT para transformar la producción industrial."
+      },
+      {
+        "text": "Al retorno exclusivo al trabajo artesanal sin uso de electricidad ni computadoras.",
+        "isCorrect": false,
+        "rationale": "La producción puramente artesanal representa la etapa previa a la revolución industrial, opuesta a la Industria 4.0."
+      },
+      {
+        "text": "A la eliminación total de las ventas por internet para volver únicamente a tiendas físicas.",
+        "isCorrect": false,
+        "rationale": "La Industria 4.0 potencia la integración digital y el comercio electrónico, no promueve el abandono del entorno digital."
+      },
+      {
+        "text": "Uso de libros contables en formato de papel impreso para el registro de inventarios.",
+        "isCorrect": false,
+        "rationale": "El registro contable en papel es un método tradicional sustituido por sistemas computarizados integrados."
+      },
+      {
+        "text": "A la prohibición del uso de dispositivos móviles dentro de los centros comerciales.",
+        "isCorrect": false,
+        "rationale": "La restricción de dispositivos no guarda relación con la transformación tecnológica de los entornos de fabricación."
+      }
+    ],
+    "hint": "Piense en la cuarta revolución industrial donde las máquinas se conectan a redes y toman decisiones automatizadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué significan las siglas KPI en el ámbito de la gestión y análisis empresarial?",
+    "opciones": [
+      {
+        "text": "Key Performance Indicators (Indicadores Clave de Desempeño).",
+        "isCorrect": true,
+        "rationale": "Los KPIs son métricas utilizadas para sintetizar la efectividad y rendimiento de los procesos o metas operativas."
+      },
+      {
+        "text": "Key Product Integration (Integración Clave de Producto).",
+        "isCorrect": false,
+        "rationale": "Aunque suena técnico, no es el término correspondiente a las siglas KPI en la gestión estratégica."
+      },
+      {
+        "text": "Known Public Interests (Intereses Públicos Conocidos).",
+        "isCorrect": false,
+        "rationale": "El concepto de intereses públicos no corresponde a las siglas estandarizadas de medición de desempeño empresarial."
+      },
+      {
+        "text": "Knowledge Process Information (Información del Proceso de Conocimiento).",
+        "isCorrect": false,
+        "rationale": "Es una traducción literal errónea que no define la métrica de rendimiento gerencial."
+      },
+      {
+        "text": "Key Purchasing Inflation (Inflación Clave de Compra).",
+        "isCorrect": false,
+        "rationale": "La inflación de compra es un concepto económico ajeno a las siglas de los indicadores de gestión interna."
+      }
+    ],
+    "hint": "Asocie las siglas con la medición del éxito o cumplimiento de los objetivos de un proceso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes acciones son fundamentales para definir correctamente los indicadores de gestión (KPIs) en una organización?",
+    "opciones": [
+      {
+        "text": "Establecer objetivos claros que sirvan como referente directo para la medición.",
+        "isCorrect": true,
+        "rationale": "Un indicador requiere un objetivo bien delimitado para determinar qué se va a medir y evaluar."
+      },
+      {
+        "text": "Asignar los recursos necesarios para hacer factible el cumplimiento de las metas.",
+        "isCorrect": true,
+        "rationale": "Las metas sin asignación de recursos humanos, financieros o técnicos difícilmente pueden materializarse."
+      },
+      {
+        "text": "Definir las variables y la fórmula matemática de cálculo del indicador.",
+        "isCorrect": true,
+        "rationale": "La fórmula clara y autoexplicativa garantiza que el resultado sea preciso y comprobable en el tiempo."
+      },
+      {
+        "text": "Ocultar la información de los resultados al personal involucrado en el proceso.",
+        "isCorrect": false,
+        "rationale": "Comunicar los resultados al equipo es esencial para la retroalimentación y toma de decisiones correctivas."
+      },
+      {
+        "text": "Modificar los objetivos diariamente sin justificación técnica.",
+        "isCorrect": false,
+        "rationale": "Cambiar las metas constantemente impide comparar el desempeño de forma consistente."
+      }
+    ],
+    "hint": "Elija los pasos metodológicos necesarios para asegurar que la medición sea objetiva, clara y realizable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre el enfoque de investigación cuantitativo y el cualitativo?",
+    "opciones": [
+      {
+        "text": "El cuantitativo mide fenómenos asignando valores numéricos y estadísticos; el cualitativo busca comprender significados y motivaciones.",
+        "isCorrect": true,
+        "rationale": "El enfoque cuantitativo cuantifica variables para proyectar resultados, mientras el cualitativo explora percepciones y comportamientos."
+      },
+      {
+        "text": "El cuantitativo utiliza únicamente imágenes y el cualitativo se basa solo en ecuaciones estadísticas.",
+        "isCorrect": false,
+        "rationale": "La relación es opuesta: el análisis cuantitativo es el que utiliza el rigor de las ecuaciones numéricas."
+      },
+      {
+        "text": "El cuantitativo solo es aplicable en pequeñas empresas y el cualitativo en grandes multinacionales.",
+        "isCorrect": false,
+        "rationale": "Ambos enfoques se aplican independientemente del tamaño de la empresa según el problema de investigación."
+      },
+      {
+        "text": "El cuantitativo analiza siempre eventos pasados y el cualitativo predice siempre el futuro lejano.",
+        "isCorrect": false,
+        "rationale": "Ambos enfoques pueden analizar situaciones presentes, pasadas o formular proyecciones."
+      },
+      {
+        "text": "El cuantitativo no requiere recolección de datos y el cualitativo se basa en censos obligatorios.",
+        "isCorrect": false,
+        "rationale": "Tanto el estudio cuantitativo como el cualitativo requieren la recolección rigurosa de datos en campo."
+      }
+    ],
+    "hint": "Diferencie entre la medición objetiva mediante números y la exploración profunda de las razones subjetivas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué caracteriza a un diseño de investigación de mercado de corte transversal?",
+    "opciones": [
+      {
+        "text": "La recolección de datos en un único momento específico para ofrecer una fotografía del estado actual del mercado.",
+        "isCorrect": true,
+        "rationale": "El estudio transversal captura la información de la muestra en un punto del tiempo determinado."
+      },
+      {
+        "text": "El seguimiento continuo de los mismos sujetos de estudio a lo largo de varios años.",
+        "isCorrect": false,
+        "rationale": "El seguimiento de una misma muestra de forma repetida en el tiempo corresponde a un diseño longitudinal."
+      },
+      {
+        "text": "La aplicación de experimentos de laboratorio donde se manipulan intencionalmente las variables.",
+        "isCorrect": false,
+        "rationale": "La manipulación intencional de variables para medir relaciones de causa-efecto pertenece al diseño experimental."
+      },
+      {
+        "text": "La revisión exclusiva de documentos históricos elaborados en décadas anteriores.",
+        "isCorrect": false,
+        "rationale": "La revisión de archivos pasados es una investigación documental o histórica, no necesariamente un diseño transversal primario."
+      },
+      {
+        "text": "La medición realizada únicamente durante los periodos de liquidación de fin de año.",
+        "isCorrect": false,
+        "rationale": "Un diseño transversal se puede realizar en cualquier momento del año, no se limita a eventos de liquidación."
+      }
+    ],
+    "hint": "Piense en una captura estática o foto instantánea del mercado en un momento dado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la investigación de mercados internacionales, ¿cuál es una ventaja de las encuestas en línea en comparación con las encuestas presenciales?",
+    "opciones": [
+      {
+        "text": "Permiten reducir costos de desplazamiento, obtener mayor rapidez en la recolección y alcanzar amplia cobertura geográfica.",
+        "isCorrect": true,
+        "rationale": "Las encuestas digitales facilitan encuestar a públicos lejanos de forma ágil sin costos de transporte o entrevistadores."
+      },
+      {
+        "text": "Garantizan una tasa de respuesta del 100% en todos los segmentos poblacionales.",
+        "isCorrect": false,
+        "rationale": "Las encuestas digitales suelen presentar tasas de respuesta variables y problemas de desinterés si no están bien dirigidas."
+      },
+      {
+        "text": "Permiten evaluar con precisión el lenguaje corporal y la expresión facial no verbal del encuestado.",
+        "isCorrect": false,
+        "rationale": "La observación del comportamiento no verbal solo es realizable de forma óptima en encuestas presenciales cara a cara."
+      },
+      {
+        "text": "Eliminan por completo la necesidad de traducir el cuestionario a diferentes idiomas.",
+        "isCorrect": false,
+        "rationale": "Al investigar mercados internacionales, la adaptación lingüística y cultural sigue siendo indispensable."
+      },
+      {
+        "text": "Son el único método de encuesta aceptado legalmente en aduanas internacionales.",
+        "isCorrect": false,
+        "rationale": "Las aduanas regulan el paso de mercancías y no condicionan los métodos de investigación de mercados."
+      }
+    ],
+    "hint": "Considere el ahorro en viáticos y la velocidad para obtener datos a través de internet.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la investigación internacional de mercados, ¿qué es un \"panel internacional\" de consumidores?",
+    "opciones": [
+      {
+        "text": "Una muestra estructurada de consumidores en distintos países gestionada por empresas para hacer estudios comparativos continuos.",
+        "isCorrect": true,
+        "rationale": "Los paneles internacionales proveen grupos prediseñados de usuarios representativos en varias naciones para investigar tendencias."
+      },
+      {
+        "text": "Un letrero publicitario luminoso de gran tamaño instalado en las fronteras de un país.",
+        "isCorrect": false,
+        "rationale": "Las vallas o letreros son formatos publicitarios físicos de vía pública, no paneles de investigación."
+      },
+      {
+        "text": "Un grupo de científicos dedicados a medir la temperatura en zonas de embarque marítimo.",
+        "isCorrect": false,
+        "rationale": "La medición de temperatura física en puertos es una labor de control ambiental o técnico de la carga."
+      },
+      {
+        "text": "Una comisión de autoridades del gobierno encargada de fijar la tarifa arancelaria nacional.",
+        "isCorrect": false,
+        "rationale": "Las comisiones arancelarias son entidades públicas dedicadas a la política comercial del Estado."
+      },
+      {
+        "text": "Un software de almacenamiento exclusivo para fotografías de productos de exportación.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento de archivos fotográficos es una tarea de gestión documental o servidores digitales."
+      }
+    ],
+    "hint": "Piense en grupos permanentes de personas encuestables coordinados para comparar países de forma homogénea.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué aspectos de contexto deben evaluarse al seleccionar el método de encuesta para un estudio de mercado internacional?",
+    "opciones": [
+      {
+        "text": "Las diferencias lingüísticas, modismos y barreras culturales en los países de destino.",
+        "isCorrect": true,
+        "rationale": "Traducir y adaptar culturalmente las preguntas evita sesgos de comprensión en los participantes extranjeros."
+      },
+      {
+        "text": "El presupuesto, el tiempo disponible y los recursos económicos para la investigación.",
+        "isCorrect": true,
+        "rationale": "El costo por encuesta y los tiempos de entrega determinan la viabilidad técnica del método elegido."
+      },
+      {
+        "text": "La penetración de internet y el acceso a tecnologías en la población objetivo.",
+        "isCorrect": true,
+        "rationale": "El nivel de conectividad del país determina si es factible usar métodos digitales o si requiere encuestas presenciales."
+      },
+      {
+        "text": "El color de la vestimenta preferido por los investigadores del equipo.",
+        "isCorrect": false,
+        "rationale": "Las preferencias estéticas del vestuario del personal no alteran la validez metodológica de los datos."
+      },
+      {
+        "text": "La distancia entre las estrellas en el sistema solar durante el periodo de estudio.",
+        "isCorrect": false,
+        "rationale": "Los factores astronómicos no ejercen ninguna influencia sobre la factibilidad del estudio de mercado."
+      }
+    ],
+    "hint": "Seleccione los factores económicos, culturales y de infraestructura tecnológica que condicionan la toma de datos en el extranjero.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito fundamental de la investigación de mercado en el ámbito del comercio internacional?",
+    "opciones": [
+      {
+        "text": "Garantizar la exención total de aranceles de importación en todos los países de destino.",
+        "rationale": "La investigación de mercado analiza las regulaciones y aspectos tributarios, pero no elimina las obligaciones fiscales arancelarias impuestas por los gobiernos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Recopilar y analizar datos de forma sistemática para minimizar riesgos comerciales, optimizar costos y atender las necesidades del consumidor.",
+        "rationale": "El objetivo estratégico del estudio de mercado es aportar información sistemática para una toma de decisiones eficaz que reduzca la incertidumbre y aumente la competitividad.",
+        "isCorrect": true
+      },
+      {
+        "text": "Asegurar un margen de rentabilidad del 100% durante el primer mes de lanzamiento de un producto.",
+        "rationale": "Las expectativas de penetración inicial de mercado son graduales y la investigación no puede garantizar un porcentaje fijo e inmediato de margen neto.",
+        "isCorrect": false
+      },
+      {
+        "text": "Sustituir la logística de distribución física por plataformas de comercio electrónico de forma obligatoria.",
+        "rationale": "El análisis de mercado evalúa los canales digitales, pero la distribución física de bienes materiales sigue siendo indispensable en el comercio transfronterizo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminar la competencia local mediante la fijación unilateral de precios de exportación.",
+        "rationale": "El estudio busca conocer a los competidores para ajustar estrategias, no para erradicarlos mediante prácticas de control monopólico.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Enfócate en la función de la información cuantitativa y cualitativa para reducir la incertidumbre estratégica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la fase inicial de definición del problema de investigación de mercado, ¿en qué consiste la técnica de los 'cinco porqués'?",
+    "opciones": [
+      {
+        "text": "Un método estadístico inferencial para validar hipótesis de mercado con un nivel de confianza del 95%.",
+        "rationale": "Los cinco porqués constituyen una herramienta analítica cualitativa y de diagnóstico, no una prueba de hipótesis estadística basada en muestras.",
+        "isCorrect": false
+      },
+      {
+        "text": "Una serie de encuestas aplicadas a cinco segmentos demográficos diferentes de forma simultánea.",
+        "rationale": "La técnica es un procedimiento de indagación sobre la causa raíz de una situación problemática, no una encuesta a grupos poblacionales.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un proceso analítico de preguntas consecutivas que indaga sobre cada respuesta previa para llegar a la causa raíz de una dificultad.",
+        "rationale": "Al preguntar sucesivamente 'por qué' ante cada respuesta recibida, la organización desglosa un problema complejo hasta descubrir la causa fundamental que requiere solución.",
+        "isCorrect": true
+      },
+      {
+        "text": "Un requerimiento normativo ISO necesario para presupuestar la producción de nuevos bienes de consumo.",
+        "rationale": "Es un enfoque estratégico de resolución de problemas, no una norma contable o de presupuesto de producción.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un filtro logarítmico para seleccionar palabras clave dentro de campañas publicitarias de Google.",
+        "rationale": "El término hace referencia al análisis lógico de problemas de negocio y no a un algoritmo de selección publicitaria.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el mecanismo secuencial de causa y efecto utilizado para descubrir el origen real de una falla comercial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué distingue principalmente a un estudio de mercado causal respecto a uno descriptivo?",
+    "opciones": [
+      {
+        "text": "El estudio causal mide variables demográficas, mientras que el descriptivo cuantifica únicamente ingresos económicos.",
+        "rationale": "Ambos estudios pueden utilizar variables demográficas o cuantitativas; la diferencia radica en la relación analítica que establecen entre variables.",
+        "isCorrect": false
+      },
+      {
+        "text": "El estudio causal evalúa relaciones de causa y efecto entre variables, mientras que el descriptivo busca cuantificar características de una población.",
+        "rationale": "El enfoque causal pretende comprobar hipótesis de impacto (como el efecto de la publicidad en las ventas), mientras que el descriptivo detalla perfiles y patrones.",
+        "isCorrect": true
+      },
+      {
+        "text": "El estudio causal se realiza únicamente con fuentes secundarias y el descriptivo solo mediante encuestas primarias.",
+        "rationale": "Tanto las fuentes primarias como las secundarias son aplicables en ambos tipos de investigación según las necesidades del diseño.",
+        "isCorrect": false
+      },
+      {
+        "text": "El estudio causal analiza datos históricos del censo y el descriptivo predice fluctuaciones bursátiles.",
+        "rationale": "La distinción metodológica no radica en el uso de censos o bolsa, sino en el análisis de causalidad versus la caracterización poblacional.",
+        "isCorrect": false
+      },
+      {
+        "text": "El estudio causal es cualitativo y exploratorio, mientras que el descriptivo es exclusivamente experimental.",
+        "rationale": "Los estudios causales suelen recurrir a diseños experimentales cuantitativos, mientras que los exploratorios son los que abordan fenómenos poco conocidos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera cuál de los enfoques busca determinar el impacto directo de una acción comercial sobre una variable de resultado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la recolección de información de mercado, ¿cuál de los siguientes ejemplos corresponde adecuadamente a una fuente de datos secundaria?",
+    "opciones": [
+      {
+        "text": "Una serie de entrevistas en profundidad realizadas a clientes potenciales en un punto de venta.",
+        "rationale": "Las entrevistas directas generan información de primera mano, lo cual define a las fuentes primarias.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un cuestionario estructurado aplicado a una muestra representativa de consumidores urbanos.",
+        "rationale": "Las encuestas levantadas por el investigador constituyen datos primarios diseñados para el estudio actual.",
+        "isCorrect": false
+      },
+      {
+        "text": "Registros de censos poblacionales o estadísticas oficiales publicadas por instituciones gubernamentales en años anteriores.",
+        "rationale": "Las fuentes secundarias consisten en datos previamente recopilados, procesados y publicados por entidades u organizaciones ajenas al estudio presente.",
+        "isCorrect": true
+      },
+      {
+        "text": "Un grupo focal (focus group) organizado para probar el prototipo de un nuevo equipo móvil.",
+        "rationale": "Los grupos focales recopilan información primaria directa de los participantes expuestos al producto.",
+        "isCorrect": false
+      },
+      {
+        "text": "Una prueba de degustación en supermercados para medir la preferencia inmediata de sabor.",
+        "rationale": "Las pruebas de producto de campo recopilan evidencia primaria obtenida al instante.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica la opción donde los datos ya existían y fueron procesados con anterioridad por un tercero.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de la herramienta Google Keyword Planner en la fase de investigación publicitaria y de demanda potencial?",
+    "opciones": [
+      {
+        "text": "Monitorear el tráfico en tiempo real y la tasa de rebote dentro de una aplicación móvil corporativa.",
+        "rationale": "El monitoreo de tráfico interno y tasa de rebote corresponde a Google Analytics, no al planificador de palabras clave.",
+        "isCorrect": false
+      },
+      {
+        "text": "Estimar volúmenes de búsqueda, identificar nivel de competencia por términos clave y explorar nichos de mercado con demanda potencial.",
+        "rationale": "Google Keyword Planner permite analizar las frases y términos que buscan los usuarios, estimando volúmenes de demanda y nivel competitivo para campañas publicitarias o SEO.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ejecutar encuestas de satisfacción dirigidas a paneles de consumidores segmentados por geolocalización.",
+        "rationale": "El levantamiento de encuestas estructuradas a audiencias específicas es la función de Google Surveys.",
+        "isCorrect": false
+      },
+      {
+        "text": "Evaluar los costos logísticos y aranceles legales para la exportación de mercancías físicas.",
+        "rationale": "Esta herramienta publicitaria no procesa datos aduaneros, normativos o de costos de flete internacional.",
+        "isCorrect": false
+      },
+      {
+        "text": "Generar tablas dinámicas automatizadas a partir de bases de datos internas procesadas en Python.",
+        "rationale": "El procesamiento de bases de datos internas se realiza en softwares estadísticos o de BI, no en la plataforma publicitaria de Google.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerda qué herramienta de Google ayuda a medir la intensidad con la que los usuarios buscan palabras asociadas a un producto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes herramientas pertenecientes al ecosistema de Google facilitan la identificación de tendencias globales de búsqueda y la evaluación de la expansión internacional de negocios?",
+    "opciones": [
+      {
+        "text": "Google Trends",
+        "rationale": "Permite visualizar la evolución del interés de búsqueda a lo largo del tiempo y comparar patrones geográficos y estacionales entre regiones.",
+        "isCorrect": true
+      },
+      {
+        "text": "Google Market Finder",
+        "rationale": "Analiza la viabilidad de internacionalización evaluando la demanda potencial del negocio, tendencias de búsqueda y datos del mercado de destino.",
+        "isCorrect": true
+      },
+      {
+        "text": "YouTube Analytics",
+        "rationale": "Aporta métricas de consumo audiovisual y demografía de audiencias, permitiendo analizar la interacción en contenidos digitales de marca.",
+        "isCorrect": true
+      },
+      {
+        "text": "SPSS Data Modeler",
+        "rationale": "Es un software estadístico desarrollado por IBM para análisis avanzado de datos, ajeno al paquete nativo de herramientas digitales de Google.",
+        "isCorrect": false
+      },
+      {
+        "text": "Tableau Desktop",
+        "rationale": "Es una plataforma independiente de inteligencia de negocios para visualización de datos, no forma parte del ecosistema corporativo de Google.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Selecciona únicamente las plataformas digitales desarrolladas por Google que han sido mencionadas para el análisis de audiencia, tendencias e internacionalización.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa de prendas textiles decide clasificar a su mercado objetivo según los hábitos de vida, valores, actitudes y motivaciones personales de sus clientes. ¿A qué tipo de segmentación corresponde esta estrategia?",
+    "opciones": [
+      {
+        "text": "Segmentación Demográfica",
+        "rationale": "La segmentación demográfica utiliza datos objetivos y cuantitativos como edad, género, ocupación o nivel de ingresos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Segmentación Psicográfica",
+        "rationale": "La segmentación psicográfica agrupa a los consumidores basándose en sus estilos de vida, personalidad, valores, intereses y motivaciones psicológicas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Segmentación Geográfica",
+        "rationale": "La segmentación geográfica se delimita por la ubicación física como países, regiones, ciudades o densidad poblacional.",
+        "isCorrect": false
+      },
+      {
+        "text": "Segmentación Arancelaria",
+        "rationale": "La clasificación arancelaria responde a regulaciones aduaneras de mercancías, no a variables de comportamiento o perfil del consumidor.",
+        "isCorrect": false
+      },
+      {
+        "text": "Segmentación Macroeconómica",
+        "rationale": "Los factores macroeconómicos analizan agregados a nivel país como el PBI, no las motivaciones psicológicas individuales.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Diferencia entre las variables cuantificables externas (edad o espacio) y aquellas ligadas a la personalidad y el estilo de vida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la segmentación conductual dentro del análisis de mercados?",
+    "opciones": [
+      {
+        "text": "En dividir el mercado basándose estrictamente en el nivel educativo y la densidad urbana de la población.",
+        "rationale": "El nivel educativo y la densidad urbana corresponden a criterios demográficos y geográficos, respectivamente.",
+        "isCorrect": false
+      },
+      {
+        "text": "En agrupar a los consumidores según su comportamiento de compra, tasa de uso del producto, sensibilidad al precio y lealtad a la marca.",
+        "rationale": "La segmentación conductual se enfoca en las respuestas de los consumidores frente al producto, analizando la frecuencia de consumo, beneficios buscados y fidelidad.",
+        "isCorrect": true
+      },
+      {
+        "text": "En establecer aranceles diferenciados de acuerdo a la distancia del transporte logístico.",
+        "rationale": "Los aranceles son regulaciones del comercio exterior y no forman parte de la clasificación conductual de los clientes.",
+        "isCorrect": false
+      },
+      {
+        "text": "En clasificar las empresas exportadoras únicamente por su volumen global de ventas en dólares.",
+        "rationale": "El volumen de ventas de las empresas exportadoras es un criterio de tamaño corporativo B2B, no de comportamiento de consumo.",
+        "isCorrect": false
+      },
+      {
+        "text": "En evaluar el Producto Bruto Interno (PBI) per cápita de las naciones compradoras.",
+        "rationale": "El PBI per cápita es un indicador macroeconómico de nivel de desarrollo, no un indicador de conducta individual de consumo.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Enfócate en la relación práctica entre el usuario y el patrón de uso o fidelidad que manifiesta hacia el bien o servicio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al aplicar la técnica de Análisis Cluster (o conglomerados) para la segmentación de clientes, ¿cuál es el resultado operativo que busca el investigador?",
+    "opciones": [
+      {
+        "text": "Establecer una relación de causalidad determinista mediante ecuaciones lineales estrictas.",
+        "rationale": "El análisis de causalidad se realiza mediante modelos de regresión u experimentos causales, no mediante técnicas de agrupamiento cluster.",
+        "isCorrect": false
+      },
+      {
+        "text": "Agrupar a individuos u observaciones en segmentos de manera que compartan la máxima similitud interna en sus variables y sean heterogéneos entre grupos.",
+        "rationale": "El análisis cluster es un método multivariado que forma grupos (conglomerados) maximizando la homogeneidad intragrupo y la heterogeneidad intergrupo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Proyectar de forma exacta la inflación macroeconómica del próximo año mediante promedios móviles.",
+        "rationale": "El agrupamiento cluster analiza perfiles de datos, no series de tiempo macroeconómicas para estimar la inflación.",
+        "isCorrect": false
+      },
+      {
+        "text": "Validar si una encuesta requiere la eliminación de preguntas sobre datos cualitativos.",
+        "rationale": "El análisis de consistencia de cuestionarios se realiza mediante coeficientes de fiabilidad (como Alfa de Cronbach), no mediante agrupamiento cluster.",
+        "isCorrect": false
+      },
+      {
+        "text": "Determinar el costo directo de transporte marítimo por contenedor congelado.",
+        "rationale": "El cálculo de fletes marítimos es una operación logística y no una técnica estadística multivariada de segmentación.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el principio estadístico de formar grupos homogéneos por dentro pero bien diferenciados entre sí.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tipo de datos e información estratégica aporta principalmente la plataforma especializada Euromonitor (Passport) a las empresas internacionales?",
+    "opciones": [
+      {
+        "text": "Código fuente ejecutable para programar aplicaciones en lenguajes Python y R.",
+        "rationale": "Passport es una base de datos de inteligencia de mercados y no un repositorio de código de programación.",
+        "isCorrect": false
+      },
+      {
+        "text": "Información sobre tamaño de mercado, pronósticos cuantitativos de demanda, perfiles competitivos y análisis entorno socioeconómico global.",
+        "rationale": "Euromonitor International provee informes de investigación detallados sobre industrias, participación de marcas, proyecciones de volumen y variables macroeconómicas a nivel mundial.",
+        "isCorrect": true
+      },
+      {
+        "text": "Servicio de transporte de mensajería urgente y monitoreo satelital de contenedores aduaneros.",
+        "rationale": "La plataforma es una herramienta de consulta analítica y de inteligencia comercial, no una empresa de logística física o courier.",
+        "isCorrect": false
+      },
+      {
+        "text": "Certificados digitales de autenticidad para transacciones exclusivamente en criptomonedas.",
+        "rationale": "Euromonitor no emite certificados de pagos ni opera redes de validación criptográfica.",
+        "isCorrect": false
+      },
+      {
+        "text": "Creación automatizada de campañas publicitarias en redes sociales mediante algoritmos de pago por clic.",
+        "rationale": "La gestión publicitaria por clic se lleva a cabo en ad-servers (como Google Ads o Meta Ads), no en sistemas de investigación de mercado de Euromonitor.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica la opción que resalta el valor de los reportes sectoriales sobre industrias, competidores y volúmenes de mercado a nivel internacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una característica destacada del portal de estadísticas Statista en la toma de decisiones comerciales es su capacidad para:",
+    "opciones": [
+      {
+        "text": "Modificar directamente las bases de datos censales oficiales de los gobiernos de forma remota.",
+        "rationale": "Statista recopila y presenta datos de terceros, pero no tiene la potestad ni el acceso para alterar registros públicos o estatales.",
+        "isCorrect": false
+      },
+      {
+        "text": "Sintetizar y consolidar datos e informes estadísticos procedentes de miles de fuentes primarias, agencias oficiales e institutos de investigación en reportes visuales.",
+        "rationale": "Statista destaca por agregar datos dispersos de múltiples sectores, presentándolos mediante gráficos, infografías y tablas estandarizadas listas para análisis.",
+        "isCorrect": true
+      },
+      {
+        "text": "Eximir del pago de aranceles a las mercancías notificadas en su plataforma.",
+        "rationale": "El portal no posee facultades regulatorias o tributarias para modificar aranceles aduaneros.",
+        "isCorrect": false
+      },
+      {
+        "text": "Reemplazar los estudios de investigación primaria presencial de forma indefinida en todos los países.",
+        "rationale": "Aunque es una fuente secundaria muy potente, no elimina la necesidad de realizar estudios primarios ad hoc ante problemas específicos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Garantizar que un producto tecnológico sea aceptado sin rechazo en cualquier mercado emergente.",
+        "rationale": "Los datos estadísticos reducen la incertidumbre, pero no garantizan comercialmente la aceptación absoluta de un producto.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera cómo este agregador facilita la visualización consolidada de datos e investigaciones secundarias dispersas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes herramientas tecnológicas están diseñadas para el procesamiento analítico, la creación de dashboards interactivos y el análisis avanzado de datos en la inteligencia de negocios?",
+    "opciones": [
+      {
+        "text": "Tableau",
+        "rationale": "Ofrece capacidades de conexión a diversas fuentes de datos y la creación de dashboards interactivos dinámicos para identificar tendencias de consumo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Microsoft Power BI",
+        "rationale": "Es una herramienta de inteligencia de negocios que permite modelar grandes volúmenes de datos y transformarlos en paneles analíticos visuales para la toma de decisiones.",
+        "isCorrect": true
+      },
+      {
+        "text": "IBM SPSS Statistics",
+        "rationale": "Es un software ampliamente extendido en el ámbito académico y corporativo para realizar análisis estadístico descriptivo e inferencial complejo a partir de encuestas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Google Translate",
+        "rationale": "Es un servicio de traducción lingüística automatizada y no un entorno de análisis estadístico o inteligencia de negocios.",
+        "isCorrect": false
+      },
+      {
+        "text": "WhatsApp Messenger",
+        "rationale": "Es un canal de mensajería instantánea para comunicación, carente de motores de análisis estadístico multivariado de datos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica las plataformas especializadas en la elaboración de gráficos dinámicos, paneles de control (dashboards) y tratamiento estadístico de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la innovación tecnológica orientada al análisis de mercado, ¿a qué se refiere el término 'Big Data'?",
+    "opciones": [
+      {
+        "text": "A la impresión física en gran formato de cuestionarios en papel para censos rurales.",
+        "rationale": "Big Data es un concepto digital y tecnológico ligado a la capacidad de cómputo, completamente opuesto a la impresión física de encuestas.",
+        "isCorrect": false
+      },
+      {
+        "text": "A la acumulación, gestión y procesamiento de volúmenes masivos de datos heterogéneos generados a gran velocidad por diversas fuentes digitales.",
+        "rationale": "Big Data abarca el tratamiento de enormes conjuntos de datos (provenientes de sensores, transacciones, redes sociales, etc.) que superan las capacidades del software tradicional.",
+        "isCorrect": true
+      },
+      {
+        "text": "Al uso exclusivo de hojas de cálculo básicas para registrar ventas semanales de una pequeña tienda.",
+        "rationale": "Las hojas de cálculo convencionales no están diseñadas para manejar las dimensiones de volumen, velocidad y variedad del Big Data.",
+        "isCorrect": false
+      },
+      {
+        "text": "A la contratación masiva de personal para realizar llamadas telefónicas de cobranza.",
+        "rationale": "El término define una infraestructura y capacidad analítica de datos, no un centro operativo de llamadas de cobranza.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un protocolo legal de aduanas que exige almacenar documentos físicos durante más de veinte años.",
+        "rationale": "No es una norma de archivo documental legal, sino un paradigma de procesamiento analítico avanzado de datos masivos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el volumen masivo, la velocidad y la variedad de información producida por las interacciones digitales modernas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo complementa el Aprendizaje Automático (Machine Learning) a la infraestructura de Big Data en el estudio del consumidor?",
+    "opciones": [
+      {
+        "text": "Reemplazando los servidores físicos por archivadores metálicos de alta seguridad.",
+        "rationale": "El Machine Learning es un desarrollo de inteligencia artificial orientado al análisis de datos y no a la custodia de archivos físicos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Aportando algoritmos supervisados y no supervisados capaces de identificar patrones complejos, inferir tendencias y predecir comportamientos futuros.",
+        "rationale": "El Machine Learning procesa la gran cantidad de datos recopilados por el Big Data mediante algoritmos que aprenden para realizar predicciones y clasificaciones automatizadas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Garantizando que las encuestas telefónicas no tengan costo de marcado internacional.",
+        "rationale": "El Machine Learning no influye en las tarifas de interconexión telefónica fijadas por operadores de telecomunicaciones.",
+        "isCorrect": false
+      },
+      {
+        "text": "Reduciendo automáticamente el impuesto a la renta de las empresas que exportan materias primas.",
+        "rationale": "Las tasas tributarias responden a leyes fiscales aprobadas por el congreso de cada país y no a algoritmos analíticos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminando la necesidad de utilizar nombres de marca en los productos comerciales.",
+        "rationale": "La estrategia de marca es clave para el posicionamiento y no se suprime por la implementación de modelos predictivos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Enfócate en la función de los algoritmos para detectar patrones ocultos en grandes volúmenes de datos sin intervención humana constante.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis de redes sociales (Social Network Analysis) aplicado al marketing, ¿qué mide la métrica de 'centralidad'?",
+    "opciones": [
+      {
+        "text": "La distancia en kilómetros entre las oficinas principales de la empresa y la fábrica de producción.",
+        "rationale": "La centralidad es una medida topológica de la red de relaciones informáticas o sociales, no una distancia geográfica en kilómetros.",
+        "isCorrect": false
+      },
+      {
+        "text": "La identificación de nodos clave u opiniones dentro de una estructura de red que actúan como puentes e influenciadores de información.",
+        "rationale": "La centralidad en redes sociales ayuda a encontrar los actores más conectados o influyentes (líderes de opinión/influencers) que propagan mensajes estratégicos.",
+        "isCorrect": true
+      },
+      {
+        "text": "El tiempo promedio que tarda un servidor en procesar un pago con tarjeta de crédito.",
+        "rationale": "La métrica de velocidad de transacción bancaria es un indicador de pasarela de pago, no de posición estructural en una red social.",
+        "isCorrect": false
+      },
+      {
+        "text": "El nivel de analfabetismo digital registrado en un censo de población rural.",
+        "rationale": "El nivel de analfabetismo digital es una variable socio-demográfica del censo, no una métrica de centralidad en grafos de redes.",
+        "isCorrect": false
+      },
+      {
+        "text": "La cantidad de papel utilizada en la fabricación de empaques para exportación.",
+        "rationale": "Es una variable de insumos de empaque dentro de la producción, sin relación con el análisis estructural de redes.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera cómo se detecta a los actores que ocupan posiciones estratégicas de conexión o liderazgo de opinión en una red.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el valor operativo que aporta la tecnología Blockchain a la gestión de la cadena de suministro internacional?",
+    "opciones": [
+      {
+        "text": "Aumentar la velocidad de transporte físico de los buques portacontenedores mediante energía electromagnética.",
+        "rationale": "Blockchain es un registro de información digital y descentralizado; no modifica la velocidad de propulsión de los buques.",
+        "isCorrect": false
+      },
+      {
+        "text": "Ofrecer un registro descentralizado, inmutable y transparente que garantiza la trazabilidad e integridad de los datos de cada transacción.",
+        "rationale": "Mediante bloques criptográficamente enlazados, Blockchain asegura que las partes involucradas en el comercio internacional compartan datos verificados sin riesgo de alteración maliciosa.",
+        "isCorrect": true
+      },
+      {
+        "text": "Eliminar la necesidad de pagar empaques o embalajes de protección para la mercancía.",
+        "rationale": "La seguridad física de la carga requiere embalaje adecuado, independientemente de cómo se registren digitalmente las operaciones.",
+        "isCorrect": false
+      },
+      {
+        "text": "Hacer que todos los consumidores compartan exactamente las mismas preferencias de consumo de forma uniforme.",
+        "rationale": "Blockchain no homogeneiza ni controla las preferencias psicológicas o culturales del consumidor final.",
+        "isCorrect": false
+      },
+      {
+        "text": "Reducir a cero el consumo de energía eléctrica en los centros de datos masivos.",
+        "rationale": "De hecho, la infraestructura blockchain basada en pruebas de consenso suele requerir una cantidad sustancial de procesamiento computacional y energía.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en la seguridad criptográfica que evita la manipulación indebida del historial de transacciones y documentos en el comercio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco del Internet de las Cosas (IoT), ¿cuál de los siguientes casos ejemplifica la aplicación de la telemetría inteligente en la logística de distribución?",
+    "opciones": [
+      {
+        "text": "La redacción manual de guías de remisión impresas en papel carbón.",
+        "rationale": "La documentación manual en papel es el procedimiento tradicional sin componentes de interconexión digital de objetos.",
+        "isCorrect": false
+      },
+      {
+        "text": "El seguimiento automatizado en tiempo real de la temperatura y ubicación de contenedores refrigerados mediante sensores conectados a la red.",
+        "rationale": "IoT implica que dispositivos físicos (sensores en contenedores) recopilen y transmitan datos mediante protocolos de red para un monitoreo predictivo y autónomo.",
+        "isCorrect": true
+      },
+      {
+        "text": "La transmisión de comerciales de televisión nacional en horarios de máxima audiencia.",
+        "rationale": "La pauta publicitaria en televisión abierta es un canal masivo tradicional de comunicación, ajeno al IoT.",
+        "isCorrect": false
+      },
+      {
+        "text": "El diseño de logotipos de marca utilizando programas de dibujo vectorial en dos dimensiones.",
+        "rationale": "El diseño gráfico de logotipos es una tarea creativa de marketing visual, no una aplicación de IoT.",
+        "isCorrect": false
+      },
+      {
+        "text": "La aplicación de encuestas cara a cara en centros comerciales céntricos.",
+        "rationale": "Las encuestas cara a cara constituyen un método de recolección de datos primario presencial sin sensores o dispositivos IoT de teledetección.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Busca la opción que describa objetos físicos equipados con sensores que transmiten datos operativos sin intervención humana directa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿En cuáles de los siguientes sectores productivos y sociales la implementación del Internet de las Cosas (IoT) aporta valor operativo directo a través de la sensorización y la automatización?",
+    "opciones": [
+      {
+        "text": "Agricultura de precisión, mediante sensores ambientales que regulan el riego y la aplicación de nutrientes de forma automatizada.",
+        "rationale": "Los sensores de IoT miden la humedad y composición del suelo, optimizando el consumo de agua y la productividad del cultivo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ciudades inteligentes (Smart Cities), optimizando la gestión del tráfico urbano, el alumbrado público y la videovigilancia interconectada.",
+        "rationale": "Las ciudades inteligentes integran redes de sensores para gestionar eficientemente la energía, mejorar el tránsito vehicular y elevar la seguridad ciudadana.",
+        "isCorrect": true
+      },
+      {
+        "text": "Salud y medicina, mediante la monitorización remota de constantes vitales en pacientes usando dispositivos médicos interconectados.",
+        "rationale": "Los dispositivos vestibles (wearables) y sensores médicos transmiten datos en tiempo real al personal de salud para diagnósticos y alertas oportunas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Redacción legislativa, sustituyendo por completo la función de debate de los miembros del congreso.",
+        "rationale": "El proceso legislativo es una función política y jurídica humana no automatizable por redes de sensores de IoT.",
+        "isCorrect": false
+      },
+      {
+        "text": "Fijación estática de tipos de cambio internacionales en bancos centrales.",
+        "rationale": "La política monetaria y cambiaria es potestad de las autoridades financieras y no un proceso industrial automatizado por IoT.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Selecciona las áreas donde la tecnología de objetos conectados y monitoreo por sensores mejora directamente la eficiencia operativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con las mejores prácticas en la gestión de sistemas corporativos, ¿cuál es el primer paso indispensable para formular indicadores clave de desempeño (KPIs) efectivos?",
+    "opciones": [
+      {
+        "text": "Comprar licencias de software de Inteligencia Artificial antes de definir la estrategia.",
+        "rationale": "Adquirir tecnología sin metas claras genera gastos innecesarios y no garantiza la validez del sistema de medición.",
+        "isCorrect": false
+      },
+      {
+        "text": "Establecer objetivos organizacionales o de proceso claros, medibles y viables que servirán de referencia para la medición.",
+        "rationale": "Un KPI carece de sentido si no existe un objetivo previo que defina la meta esperada y sirva de contraste para evaluar el desempeño real.",
+        "isCorrect": true
+      },
+      {
+        "text": "Diseñar el folleto publicitario para el consumidor final.",
+        "rationale": "El diseño del material promocional es una tarea operativa de marketing que depende de la estrategia general y no precede a la creación de KPIs.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminar todos los controles presupuestarios de la empresa para acelerar los procesos.",
+        "rationale": "Sin asignación adecuada de recursos ni controles contables no se pueden respaldar las actividades necesarias para alcanzar los objetivos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Cambiar el nombre comercial de la empresa en los registros de la propiedad intelectual.",
+        "rationale": "La identidad de marca o razón social es independiente de la metodología sistemática para establecer KPIs operativos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerda que para poder medir el grado de cumplimiento de una meta, primero debe existir la meta claramente establecida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el proceso de validación de los indicadores de un sistema de gestión, ¿qué implica la condición de que un KPI sea 'útil y rentable'?",
+    "opciones": [
+      {
+        "text": "Que genere ingresos financieros directos por cada vez que es calculado por los empleados.",
+        "rationale": "Un indicador provee información para gestionar procesos, pero no es un activo transaccional que genere cobros directos por su uso.",
+        "isCorrect": false
+      },
+      {
+        "text": "Que provea información oportuna para la toma de decisiones certera y que el costo de recolectar los datos no supere el beneficio de la medición.",
+        "rationale": "La utilidad se manifiesta en su capacidad para respaldar decisiones correctas, mientras que la rentabilidad implica que el costo de captura de datos sea razonable y justificado.",
+        "isCorrect": true
+      },
+      {
+        "text": "Que se mantenga exactamente igual sin ser modificado durante más de tres décadas consecutivas.",
+        "rationale": "Los indicadores deben adaptarse a la evolución de los procesos organizacionales mediante iniciativas de mejora continua.",
+        "isCorrect": false
+      },
+      {
+        "text": "Que sea comprendido únicamente por el director general de la empresa y no por los operadores del proceso.",
+        "rationale": "Los indicadores deben ser claros, precisos y autoexplicativos para todo el personal involucrado en la ejecución del proceso.",
+        "isCorrect": false
+      },
+      {
+        "text": "Que elimine la necesidad de realizar auditorías internas o externas en la empresa.",
+        "rationale": "Los KPIs aportan evidencia cuantitativa que complementa y facilita las auditorías de calidad, pero no las sustituyen.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Sopesa el valor del conocimiento aportado para decidir frente al esfuerzo económico y operativo necesario para capturar el dato.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la evaluación de instrumentos de medición dentro de una investigación de mercado, ¿cómo se diferencia la 'fiabilidad' de la 'validez'?",
+    "opciones": [
+      {
+        "text": "La fiabilidad mide la opinión personal del investigador, mientras que la validez determina el costo económico del cuestionario.",
+        "rationale": "La fiabilidad y la validez son propiedades psicométricas/metodológicas objetivas de la medición, independientes de opiniones o costos de impresión.",
+        "isCorrect": false
+      },
+      {
+        "text": "La fiabilidad refiere a la consistencia interna y repetibilidad de los resultados del instrumento, mientras que la validez evalúa si el instrumento mide realmente el constructo que pretende evaluar.",
+        "rationale": "Un instrumento es fiable si arroja datos consistentes en mediciones repetidas, y es válido si mide con precisión el fenómeno que se desea investigar y no otro.",
+        "isCorrect": true
+      },
+      {
+        "text": "La fiabilidad aplica únicamente a estudios cualitativos, mientras que la validez se utiliza exclusivamente en censos gubernamentales.",
+        "rationale": "Ambas propiedades son indispensables en investigaciones cuantitativas de mercado para garantizar el rigor de la medición.",
+        "isCorrect": false
+      },
+      {
+        "text": "La fiabilidad indica la velocidad de descarga en internet del cuestionario, mientras que la validez mide el número de páginas impresas.",
+        "rationale": "Estas características describen la precisión metodológica del instrumento y no variables técnicas de infraestructura digital o física.",
+        "isCorrect": false
+      },
+      {
+        "text": "Ambos conceptos son idénticos y se refieren únicamente al uso de la traducción lingüística exacta en la encuesta.",
+        "rationale": "Aunque se complementan, constituyen conceptos metodológicos diferentes; la traducción lingüística asegura la equivalencia transcultural, que forma parte de la validez de contenido.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Asocia un término a la constancia/estabilidad de las mediciones y el otro al grado de ajuste con el concepto que se desea medir.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco metodológico de la investigación de mercados, ¿cuál de las siguientes características corresponde a un enfoque cuantitativo de investigación?",
+    "opciones": [
+      {
+        "text": "La recopilación de datos abiertos sin estructura fija mediante observaciones fenomenológicas sin uso de estadística.",
+        "rationale": "Los enfoques no estructurados u observacionales reflexivos son típicos de metodologías cualitativas exploratorias.",
+        "isCorrect": false
+      },
+      {
+        "text": "El uso de cuestionarios estructurados, muestras representativas y técnicas de análisis estadístico inferencial para medir numéricamente fenómenos.",
+        "rationale": "El enfoque cuantitativo se basa en el paradigma positivista, midiendo variables estructuradas estadísticamente para contrastar hipótesis en poblaciones amplias.",
+        "isCorrect": true
+      },
+      {
+        "text": "El análisis exclusivo del lenguaje gestual en dos o tres consumidores sin realizar ninguna medición numérica.",
+        "rationale": "El estudio profundo del lenguaje no verbal en muestras pequeñas se encuadra en la investigación cualitativa exploratoria.",
+        "isCorrect": false
+      },
+      {
+        "text": "La imposibilidad de generalizar los hallazgos a una población objetivo bajo ningún criterio.",
+        "rationale": "El enfoque cuantitativo busca precisamente la generalización de resultados apoyándose en el muestreo probabilístico.",
+        "isCorrect": false
+      },
+      {
+        "text": "La redacción de ensayos filosóficos sin presentar evidencia empírica ni datos del mercado.",
+        "rationale": "La investigación de mercados requiere sustento en evidencias empíricas (datos), diferenciándose de las especulaciones no contrastadas.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica las variables ligadas a la precisión matemática, estructuración formal del dato y capacidad de generalización estadística.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una corporación automotriz desea evaluar el efecto directo que tiene la variación del precio de venta sobre la cantidad demandada de vehículos deportivos mediante un experimento de mercado controlado. ¿Qué diseño de investigación debe aplicar?",
+    "opciones": [
+      {
+        "text": "Diseño Exploratorio",
+        "rationale": "El diseño exploratorio se aplica ante problemas poco definidos o fenómenos novedosos para generar las primeras hipótesis.",
+        "isCorrect": false
+      },
+      {
+        "text": "Diseño Causal o Explicativo",
+        "rationale": "Los diseños causales o experimentales aíslan variables independientes (como el precio) para medir su efecto directo sobre variables dependientes (como la cantidad demandada).",
+        "isCorrect": true
+      },
+      {
+        "text": "Diseño Transversal puramente descriptivo",
+        "rationale": "Un diseño transversal descriptivo toma una captura fotográfica momentánea del mercado sin manipular deliberadamente la variable precio.",
+        "isCorrect": false
+      },
+      {
+        "text": "Diseño Histórico-Documental del siglo pasado",
+        "rationale": "Los análisis documentales históricos no permiten manipular de forma controlada variables de mercado en el contexto presente.",
+        "isCorrect": false
+      },
+      {
+        "text": "Estudio cualitativo mediante etnografía visual",
+        "rationale": "La etnografía explora pautas culturales en su entorno natural, no el control experimental de precios para estimar la elasticidad de la demanda.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Enfócate en la estrategia diseñada para aislar relaciones de causa y efecto mediante la manipulación controlada de variables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se diferencia un estudio de mercado transversal (cross-sectional) de un estudio longitudinal?",
+    "opciones": [
+      {
+        "text": "El estudio transversal recolecta datos en un único punto en el tiempo, mientras que el longitudinal realiza mediciones repetidas a la misma muestra a lo largo de un período.",
+        "rationale": "El estudio transversal actúa como una fotografía en un momento único; el estudio longitudinal sigue la evolución de una muestra fija (panel) a lo largo del tiempo.",
+        "isCorrect": true
+      },
+      {
+        "text": "El estudio transversal solo utiliza entrevistas telefónicas y el longitudinal se realiza de forma presencial.",
+        "rationale": "El canal de recolección (telefónico, presencial u online) no define la dimensión temporal de un diseño de investigación.",
+        "isCorrect": false
+      },
+      {
+        "text": "El estudio transversal mide únicamente la inflación y el longitudinal analiza el empaque de productos.",
+        "rationale": "Cualquier variable comercial o técnica puede ser analizada bajo un enfoque transversal o longitudinal según el diseño adoptado.",
+        "isCorrect": false
+      },
+      {
+        "text": "El estudio transversal requiere obligatoriamente el uso de Blockchain y el longitudinal de Google Trends.",
+        "rationale": "Las plataformas tecnológicas son herramientas analíticas independientes del diseño temporal de investigación.",
+        "isCorrect": false
+      },
+      {
+        "text": "No existe ninguna diferencia, ambos términos son sinónimos en la metodología de la investigación.",
+        "rationale": "Constituyen dos aproximaciones temporales bien definidas con objetivos y métodos de recolección diferenciados.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en la diferencia analítica entre tomar una 'fotografía de un momento dado' o 'grabar un video que sigue la evolución' del mercado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-43",
+    "diplomado": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al aplicar encuestas cuantitativas en estudios de mercados internacionales, ¿cuáles de los siguientes aspectos representan retos metodológicos y operativos que deben ser gestionados por el investigador?",
+    "opciones": [
+      {
+        "text": "Adaptación transcultural y traducción lingüística rigurosa del cuestionario para asegurar la equivalencia de conceptos entre países.",
+        "rationale": "Es clave evitar que las preguntas pierdan su significado original o introduzcan sesgos debido a modismos locales al traducirlas a distintos idiomas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Existencia de brechas de acceso a infraestructura digital e internet en determinados segmentos o regiones en desarrollo.",
+        "rationale": "Las encuestas en línea pueden sesgar la muestra si se excluye a poblaciones rurales o de menores recursos con acceso limitado a internet.",
+        "isCorrect": true
+      },
+      {
+        "text": "Consideración de regulaciones de protección de datos personales y privacidad vigentes en cada jurisdicción internacional.",
+        "rationale": "El cumplimiento de normativas de protección de datos (como el GDPR en Europa) es obligatorio al recopilar y almacenar información privada de consumidores.",
+        "isCorrect": true
+      },
+      {
+        "text": "Imposición legal de contratar obligatoriamente a los mismos encuestadores en todos los continentes.",
+        "rationale": "No existen leyes globales que exijan utilizar al mismo personal de campo en diferentes países.",
+        "isCorrect": false
+      },
+      {
+        "text": "Obligatoriedad de cobrar las encuestas a los participantes para garantizar la validez del estudio.",
+        "rationale": "A los encuestados no se les cobra dinero por responder un estudio de mercado; por el contrario, en ocasiones se les otorga un pequeño incentivo por su tiempo.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Selecciona los factores culturales, normativos y de infraestructura técnica que pueden distorsionar la calidad de los datos recopilados internacionalmente.",
+    "activo": true
+  }
+]

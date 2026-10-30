@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son las cuatro operaciones básicas que componen la estructura tradicional de la logística?",
+    "opciones": [
+      {
+        "text": "Compras y abastecimiento, almacén e inventarios, transporte y distribución.",
+        "isCorrect": true,
+        "rationale": "Estas cuatro actividades constituyen la columna vertebral operativa de la logística básica para asegurar el flujo continuo de insumos y productos."
+      },
+      {
+        "text": "Marketing, ventas, servicio al cliente y facturación electrónica.",
+        "isCorrect": false,
+        "rationale": "Aunque estas actividades interactúan con la cadena comercial, corresponden al área de ventas y mercadotecnia, no a las operaciones operativas básicas de logística."
+      },
+      {
+        "text": "Diseño de producto, ensamblaje, control ambiental y recursos humanos.",
+        "isCorrect": false,
+        "rationale": "Estas funciones pertenecen al ámbito de manufactura, desarrollo industrial y administración general de la organización."
+      },
+      {
+        "text": "Contabilidad financiera, auditoría interna, desarrollo de software y mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Corresponden a áreas de soporte administrativo y tecnológico dentro de la empresa, ajenas a las operaciones logísticas esenciales."
+      },
+      {
+        "text": "Prospección de mercado, negociación bancaria, comercio exterior e importación.",
+        "isCorrect": false,
+        "rationale": "Estas corresponden a la gestión comercial internacional y financiera, y no a las cuatro operaciones fundamentales internas de la logística."
+      }
+    ],
+    "hint": "Piensa en las tareas que van desde la adquisición inicial de bienes hasta su almacenamiento y entrega final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito central de la gestión estratégica de materias primas dentro de la logística minera e industrial?",
+    "opciones": [
+      {
+        "text": "Garantizar el suministro continuo, optimizar costos, asegurar la calidad y mejorar la eficiencia.",
+        "isCorrect": true,
+        "rationale": "El cumplimiento de estos cuatro pilares asegura la continuidad operativa, minimiza desperdicios y satisface la demanda sin comprometer la rentabilidad."
+      },
+      {
+        "text": "Eliminar por completo el uso de proveedores externos para la extracción.",
+        "isCorrect": false,
+        "rationale": "La gestión de materias primas busca administrar eficazmente las relaciones con proveedores y el flujo de materiales, no la integración vertical absoluta."
+      },
+      {
+        "text": "Reducir a cero el almacenamiento de insumos mediante la cancelación de compras por adelantado.",
+        "isCorrect": false,
+        "rationale": "Cancelar las compras sin planificación genera riesgo severo de desabastecimiento, en lugar de una optimización equilibrada del inventario."
+      },
+      {
+        "text": "Sustituir todo el transporte terrestre por transporte exclusivamente aéreo.",
+        "isCorrect": false,
+        "rationale": "El transporte aéreo es costoso e inviable para el traslado masivo de la mayoría de materias primas e insumos mineros."
+      },
+      {
+        "text": "Maximizar el inventario en almacén sin considerar los costos de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Acumular exceso de materiales incrementa significativamente los costos operativos y el riesgo de obsolescencia."
+      }
+    ],
+    "hint": "Considera los objetivos orientados a evitar el desabastecimiento mientras se cuida la rentabilidad y el estándar de los insumos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué prácticas son recomendadas para lograr una gestión estratégica efectiva de materias primas?",
+    "opciones": [
+      {
+        "text": "Realizar un análisis constante del mercado para identificar oportunidades y riesgos.",
+        "isCorrect": true,
+        "rationale": "Estudiar el mercado permite anticiparse a variaciones de precios, tendencias de oferta y riesgos en la cadena de suministro."
+      },
+      {
+        "text": "Diversificar la red de proveedores para mitigar los riesgos de desabastecimiento.",
+        "isCorrect": true,
+        "rationale": "Contar con múltiples fuentes de suministro evita la dependencia de un único proveedor en caso de contingencias o fallas en las entregas."
+      },
+      {
+        "text": "Priorizar la sostenibilidad incorporando materiales reciclados o promoviendo la logística verde.",
+        "isCorrect": true,
+        "rationale": "Las prácticas sostenibles responden a las regulaciones actuales y optimizan el ciclo de vida de los materiales."
+      },
+      {
+        "text": "Depender exclusivamente de un único proveedor de cabecera para concentrar las compras.",
+        "isCorrect": false,
+        "rationale": "Trabajar con un solo proveedor incrementa la vulnerabilidad y el riesgo de interrupción total ante cualquier fallo de dicho tercero."
+      },
+      {
+        "text": "Evitar el uso de indicadores clave de desempeño (KPIs) en el proceso de adquisición.",
+        "isCorrect": false,
+        "rationale": "Los KPIs son indispensables para medir el rendimiento, la eficiencia y realizar la mejora continua en la gestión logística."
+      }
+    ],
+    "hint": "Identifica las acciones proactivas que ayudan a evaluar el entorno, reducir la vulnerabilidad operativa y cuidar el medio ambiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se definen las materias primas críticas en el contexto de la minería y la industria global?",
+    "opciones": [
+      {
+        "text": "Materiales de gran importancia económica que presentan un alto riesgo de interrupción en su suministro.",
+        "isCorrect": true,
+        "rationale": "Las materias primas críticas, como el litio o el cobalto, son fundamentales para la industria tecnológica y la transición ecológica, pero su disponibilidad global es escasa o geopolíticamente vulnerable."
+      },
+      {
+        "text": "Insumos secundarios de bajo valor comercial que se adquieren únicamente en el mercado local.",
+        "isCorrect": false,
+        "rationale": "Las materias primas críticas poseen un valor económico elevado y un papel clave en industrias avanzadas, no son insumos menores."
+      },
+      {
+        "text": "Productos terminados empaquetados listos para ser distribuidos al consumidor final.",
+        "isCorrect": false,
+        "rationale": "Se trata de insumos o minerales de origen que alimentan la transformación industrial, no de productos procesados finales."
+      },
+      {
+        "text": "Suministros de oficina y papelería indispensables para las tareas administrativas de la planta.",
+        "isCorrect": false,
+        "rationale": "Los suministros administrativos son bienes indirectos y no forman parte de las materias primas procesadas o extraídas en minería."
+      },
+      {
+        "text": "Combustibles derivados del petróleo consumidos exclusivamente en el área de comedores.",
+        "isCorrect": false,
+        "rationale": "Esta categoría se refiere a minerales y recursos estratégicos para la manufactura global y la transición energética."
+      }
+    ],
+    "hint": "Piensa en elementos como el litio, que son escasos globalmente pero esenciales para el desarrollo tecnológico e industrial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son las tres fases principales que estructuran un proceso de producción genérico?",
+    "opciones": [
+      {
+        "text": "Acopio, producción y procesamiento.",
+        "isCorrect": true,
+        "rationale": "Estas etapas comprenden desde la recolección inicial de insumos (acopio), la transformación física o química (producción) y la adecuación final al requerimiento específico del cliente (procesamiento)."
+      },
+      {
+        "text": "Cotización, facturación y cobranza.",
+        "isCorrect": false,
+        "rationale": "Dichos pasos corresponden al ciclo administrativo y contable de ventas, no a las fases operativas de la fabricación de productos."
+      },
+      {
+        "text": "Importación, aduana y liquidación de impuestos.",
+        "isCorrect": false,
+        "rationale": "Constituyen fases del trámite de comercio exterior y nacionalización de bienes, no de la línea de producción."
+      },
+      {
+        "text": "Selección de personal, capacitación y evaluación de desempeño.",
+        "isCorrect": false,
+        "rationale": "Son subprocesos pertenecientes al área de gestión del talento humano."
+      },
+      {
+        "text": "Investigación, solicitud de patentes y marketing de lanzamiento.",
+        "isCorrect": false,
+        "rationale": "Se relacionan con la investigación, desarrollo comercial y legal de un nuevo producto, no con su manufactura recurrente."
+      }
+    ],
+    "hint": "Incluye la reunión de los insumos, su transformación directa y la adaptación final según los requerimientos solicitados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la estrategia de distribución multicanal de productos terminados?",
+    "opciones": [
+      {
+        "text": "En utilizar diversos canales de venta y entrega, como tiendas físicas, plataformas en línea y redes sociales.",
+        "isCorrect": true,
+        "rationale": "La distribución multicanal integra vías físicas y digitales para maximizar el alcance y la conveniencia de compra para los clientes."
+      },
+      {
+        "text": "En vender exclusivamente mediante intermediarios mayoristas que controlan todo el precio.",
+        "isCorrect": false,
+        "rationale": "Esta opción describe un canal indirecto tradicional de nivel único, no una aproximación multicanal."
+      },
+      {
+        "text": "En despachar mercancías únicamente desde la fábrica hasta la puerta del cliente sin ningún canal digital.",
+        "isCorrect": false,
+        "rationale": "El envío exclusivo directo de fábrica a cliente es una distribución directa sin diversidad de canales de atención."
+      },
+      {
+        "text": "En comercializar productos únicamente durante las ferias comerciales internacionales anuales.",
+        "isCorrect": false,
+        "rationale": "Es una táctica puntual de promoción en un evento específico y no una red integrada de distribución multicanal."
+      },
+      {
+        "text": "En subcontratar todo el proceso de ventas a una sola empresa competidora del sector.",
+        "isCorrect": false,
+        "rationale": "Ceder la comercialización a un competidor no constituye una estrategia propia de diversificación de canales de distribución."
+      }
+    ],
+    "hint": "Piensa en el impacto del e-commerce combinado con los establecimientos comerciales tradicionales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la meta fundamental del proceso de distribución de mercancías y transporte de materiales?",
+    "opciones": [
+      {
+        "text": "Llevar el producto adecuado, en la cantidad requerida, al lugar acordado y al menor costo total para lograr la satisfacción del cliente.",
+        "isCorrect": true,
+        "rationale": "Esta regla clásica de la distribución sintetiza el equilibrio entre nivel de servicio, oportunidad y costos logísticos."
+      },
+      {
+        "text": "Trasladar mercancías a la mayor velocidad posible sin importar el presupuesto asignado.",
+        "isCorrect": false,
+        "rationale": "Priorizar la velocidad sobre el costo puede destruir la rentabilidad del proceso logístico de la empresa."
+      },
+      {
+        "text": "Mantener las unidades de transporte permanentemente estacionadas para evitar su desgaste mecánico.",
+        "isCorrect": false,
+        "rationale": "El transporte requiere movimiento eficiente para movilizar los productos hacia los puntos de consumo de forma oportuna."
+      },
+      {
+        "text": "Sustituir los controles de inventario por envíos masivos e imprevistos a los almacenes.",
+        "isCorrect": false,
+        "rationale": "Los envíos imprevistos generan saturación en los almacenes e incrementan innecesariamente los costos de manutención."
+      },
+      {
+        "text": "Priorizar únicamente las rutas marítimas ignorando las exigencias de tiempo del usuario.",
+        "isCorrect": false,
+        "rationale": "El modo de transporte debe elegirse en función del tipo de carga y la urgencia del cliente, no de manera rígida e inflexible."
+      }
+    ],
+    "hint": "Enfócate en la máxima que combina el lugar correcto, la cantidad exacta, la eficiencia financiera y la respuesta al consumidor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué criterios técnicos y operativos son evaluados al seleccionar un sistema de transporte para la minería e industria?",
+    "opciones": [
+      {
+        "text": "Velocidad de circulación y tiempos de tránsito del medio de transporte.",
+        "isCorrect": true,
+        "rationale": "Evaluar la velocidad y los tiempos de entrega permite determinar el nivel de respuesta y la idoneidad para cargas urgentes."
+      },
+      {
+        "text": "Capacidad de carga y tonelaje máximo soportado por la unidad vehicular.",
+        "isCorrect": true,
+        "rationale": "Verificar la capacidad garantiza que se puedan mover los volúmenes requeridos sin sobrepasar los límites legales o mecánicos."
+      },
+      {
+        "text": "Seguridad en el uso y confiabilidad para el tipo de mercancía transportada.",
+        "isCorrect": true,
+        "rationale": "La seguridad reduce sustancialmente los riesgos de accidentes, mermas, robos o pérdidas durante el trayecto."
+      },
+      {
+        "text": "Color exterior de la carrocería de los camiones de carga.",
+        "isCorrect": false,
+        "rationale": "El aspecto estético de la carrocería no representa un factor técnico u operativo determinante en la selección del transporte."
+      },
+      {
+        "text": "Nivel de popularidad de la marca de transporte en redes sociales.",
+        "isCorrect": false,
+        "rationale": "La presencia mediática no garantiza capacidad técnica, cumplimiento de tiempos ni seguridad en el transporte logístico."
+      }
+    ],
+    "hint": "Selecciona los factores relacionados con la capacidad física del vehículo, su desempeño en ruta y el resguardo de la carga.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una de las principales ventajas del transporte terrestre de mercancías respecto a otros medios como el marítimo o aéreo?",
+    "opciones": [
+      {
+        "text": "Brinda una gran versatilidad y facilidad para ofrecer un servicio directo 'puerta a puerta'.",
+        "isCorrect": true,
+        "rationale": "El transporte terrestre por carretera es el único medio capaz de conectar el punto exacto de origen con el destino final sin intermediarios de infraestructura masiva."
+      },
+      {
+        "text": "Es el medio con mayor capacidad de carga por unidad movilizada a nivel mundial.",
+        "isCorrect": false,
+        "rationale": "El transporte marítimo supera ampliamente al terrestre en cuanto a la capacidad de volumen y tonelaje por buque."
+      },
+      {
+        "text": "Posee una inmunidad total ante las condiciones meteorológicas adversas y congestión vial.",
+        "isCorrect": false,
+        "rationale": "El transporte por carretera es vulnerable al clima (lluvias, nevadas) y a la congestión de las vías."
+      },
+      {
+        "text": "Ofrece las velocidades de desplazamiento más altas del mercado en distancias intercontinentales.",
+        "isCorrect": false,
+        "rationale": "El transporte aéreo es considerablemente más rápido en tramos de larga distancia e intercontinentales."
+      },
+      {
+        "text": "No requiere de ningún documento aduanero ni permiso oficial de circulación.",
+        "isCorrect": false,
+        "rationale": "Requiere guías de remisión, manifiestos de carga y licencias especiales, sobre todo para mercancías peligrosas o cruces fronterizos."
+      }
+    ],
+    "hint": "Considera la capacidad que tienen los camiones de llegar a las instalaciones finales sin necesidad de cambiar de medio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representa el inventario dentro de la gestión de una empresa industrial o minera?",
+    "opciones": [
+      {
+        "text": "Un registro de bienes y materiales disponibles que representa parte sustancial del capital de trabajo.",
+        "isCorrect": true,
+        "rationale": "Los inventarios son recursos económicos almacenados que garantizan el flujo de la producción o la venta, reflejando inversión activa."
+      },
+      {
+        "text": "Un gasto a fondo perdido que no genera ningún valor financiero para la organización.",
+        "isCorrect": false,
+        "rationale": "El inventario constituye un activo corriente de la empresa y representa capital susceptible de convertirse en flujo operativo."
+      },
+      {
+        "text": "El listado de deudas pendientes de pago con los proveedores de servicios.",
+        "isCorrect": false,
+        "rationale": "Las deudas pendientes corresponden al pasivo exigible o cuentas por pagar, no al registro físico y valorizado de bienes."
+      },
+      {
+        "text": "El conjunto de contrataciones de personal temporal en la planta de manufactura.",
+        "isCorrect": false,
+        "rationale": "El registro de contrataciones forma parte del departamento de gestión humana y nómina."
+      },
+      {
+        "text": "Un archivo histórico de facturas anuladas durante periodos pasados.",
+        "isCorrect": false,
+        "rationale": "Es una herramienta de control físico de activos actuales, no un archivo de documentos contables anulados."
+      }
+    ],
+    "hint": "Piensa en el significado monetario de los productos y materiales almacenados en los almacenes de la compañía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la clasificación de inventarios por el método ABC (basado en la Ley de Pareto), ¿qué caracteriza a los productos clasificados en la categoría A?",
+    "opciones": [
+      {
+        "text": "Representan un porcentaje pequeño del volumen total de ítems (aprox. 20%), pero acumulan la mayor parte del valor monetario (aprox. 80%).",
+        "isCorrect": true,
+        "rationale": "El principio 80/20 identifica los artículos prioritarios sobre los cuales se debe ejercer el control de inventario más estricto debido a su peso financiero."
+      },
+      {
+        "text": "Son los productos de menor costo unitario que representan el 80% de la cantidad de mercancía en stock.",
+        "isCorrect": false,
+        "rationale": "Esta descripción corresponde habitualmente a los artículos de clase C, de bajo costo y elevado volumen físico."
+      },
+      {
+        "text": "Corresponden exclusivamente a materiales inservibles u obsoletos destinados al chatarreo.",
+        "isCorrect": false,
+        "rationale": "La clasificación ABC categoriza inventario activo por su importancia monetaria y rotación, no por su nivel de desecho."
+      },
+      {
+        "text": "Representan el 50% de los ítems del almacén y exactamente el 50% del valor del inventario.",
+        "isCorrect": false,
+        "rationale": "La distribución ABC es asimétrica; una relación 50/50 contradice el análisis de concentración de Pareto."
+      },
+      {
+        "text": "Son insumos que no requieren de ningún control ni registro contable en el sistema.",
+        "isCorrect": false,
+        "rationale": "Los productos de tipo A exigen el control más riguroso precisamente por representar la mayor inversión de capital."
+      }
+    ],
+    "hint": "Aplica la regla del 80/20 al valor del catálogo de mercancías.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué buenas prácticas y requisitos normativos se aplican en el almacenamiento de materiales peligrosos (Matpel) e reactivos en minería?",
+    "opciones": [
+      {
+        "text": "Disponer de hojas de datos de seguridad (MSDS) actualizadas y accesibles para cada producto.",
+        "isCorrect": true,
+        "rationale": "Las hojas MSDS contienen la información indispensable sobre toxicidad, manipulación segura y primeros auxilios ante emergencias."
+      },
+      {
+        "text": "Identificar y etiquetar los recipientes mediante la rotulación normalizada (como el rombo NFPA 704).",
+        "isCorrect": true,
+        "rationale": "El etiquetado estandarizado advierte sobre los niveles de inflamabilidad, salud, reactividad y riesgos específicos del material."
+      },
+      {
+        "text": "Almacenar los productos incompatibles en zonas separadas o provistas de contención para evitar reacciones involuntarias.",
+        "isCorrect": true,
+        "rationale": "La segregación física evita mezclas accidentales de reactivos que podrían derivar en incendios, explosiones o gases tóxicos."
+      },
+      {
+        "text": "Mezclar todos los líquidos químicos en un solo estanque para reducir el uso de espacio en planta.",
+        "isCorrect": false,
+        "rationale": "Mezclar químicos sin control provoca reacciones peligrosas e invalida las propiedades técnicas de los insumos."
+      },
+      {
+        "text": "Retirar los extintores y la ventilación del almacén de reactivos para evitar corrientes de aire.",
+        "isCorrect": false,
+        "rationale": "La ventilación adecuada y los equipos de extinción son exigencias obligatorias para mitigar la acumulación de vapores y atender emergencias."
+      }
+    ],
+    "hint": "Enfócate en las medidas destinadas a la identificación del riesgo, contención de reactivos incompatibles e información sobre manipulación segura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el análisis de la demanda dentro de la microeconomía y la planificación logística?",
+    "opciones": [
+      {
+        "text": "En estudiar las necesidades y patrones de consumo de los clientes para proyectar los requerimientos de bienes y servicios.",
+        "isCorrect": true,
+        "rationale": "Comprender la demanda permite ajustar las compras, los ritmos de producción y los niveles de inventario para responder eficientemente al mercado."
+      },
+      {
+        "text": "En calcular el impuesto predial que deben pagar las instalaciones de la empresa al municipio.",
+        "isCorrect": false,
+        "rationale": "Esta tarea corresponde a las obligaciones tributarias y de contabilidad fiscal corporativa."
+      },
+      {
+        "text": "En medir la velocidad máxima a la que pueden desplazarse las carretillas dentro del almacén.",
+        "isCorrect": false,
+        "rationale": "Es una medida de seguridad industrial y de tiempos operativos en la manipulación interna, no un estudio de demanda."
+      },
+      {
+        "text": "En determinar la antigüedad promedio de la maquinaria pesada en una mina.",
+        "isCorrect": false,
+        "rationale": "Corresponde a la gestión de mantenimiento y activos fijos de la compañía."
+      },
+      {
+        "text": "En redactar los contratos laborales del personal administrativo recién contratado.",
+        "isCorrect": false,
+        "rationale": "Forma parte de las actividades del área de recursos humanos y asesoría legal."
+      }
+    ],
+    "hint": "Se relaciona con el estudio de cuánto están dispuestos a requerir o comprar los clientes internos y externos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué factores influyen directamente en la variación de la demanda de productos dentro del mercado?",
+    "opciones": [
+      {
+        "text": "El precio del producto o servicio ofrecido.",
+        "isCorrect": true,
+        "rationale": "El precio condiciona la accesibilidad y el interés de compra de los consumidores bajo las leyes de la oferta y la demanda."
+      },
+      {
+        "text": "El nivel de ingresos y el poder adquisitivo de los consumidores.",
+        "isCorrect": true,
+        "rationale": "La capacidad económica del público determina su presupuesto disponible para adquirir bienes o servicios."
+      },
+      {
+        "text": "Las preferencias, gustos y tendencias de los clientes.",
+        "isCorrect": true,
+        "rationale": "Las tendencias y preferencias moldean la elección del consumidor hacia determinados bienes en detrimento de otros."
+      },
+      {
+        "text": "El código de colores asignado internamente a los estantes del almacén.",
+        "isCorrect": false,
+        "rationale": "El pintado o codificación física del mobiliario del almacén no afecta la demanda de consumo en el mercado."
+      },
+      {
+        "text": "El número de páginas que contiene el catálogo físico impreso de la empresa.",
+        "isCorrect": false,
+        "rationale": "La extensión del catálogo impreso no representa un factor macro o microeconómico determinante de la demanda."
+      }
+    ],
+    "hint": "Considera las variables económicas y psicológicas que afectan las decisiones de compra del usuario o cliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la disponibilidad de recursos para operar, ¿cuáles son los recursos clave que debe coordinar una empresa?",
+    "opciones": [
+      {
+        "text": "Recursos humanos, financieros, tecnológicos y naturales.",
+        "isCorrect": true,
+        "rationale": "El equilibrio entre la fuerza laboral capacitada, el capital de inversión, la tecnología y las materias primas del entorno garantiza la viabilidad operativa."
+      },
+      {
+        "text": "Unicamente recursos de publicidad en medios impresos.",
+        "isCorrect": false,
+        "rationale": "La publicidad impresa es solo una herramienta de mercadeo y resulta insuficiente para sostener la operación física y logística."
+      },
+      {
+        "text": "Edificios vacíos sin personal ni maquinaria asignada.",
+        "isCorrect": false,
+        "rationale": "La infraestructura sin equipamiento, personal ni capital no permite ejecutar procesos productivos."
+      },
+      {
+        "text": "Licencias de conducir vencidas para la flota vehicular.",
+        "isCorrect": false,
+        "rationale": "Las licencias vencidas constituyen una falta regulatoria, no un recurso utilizable para la operación eficiente."
+      },
+      {
+        "text": "Informes históricos de ventas sin procesar archivados en papel.",
+        "isCorrect": false,
+        "rationale": "La información aislada y no procesada no sustituye la necesidad de capital, tecnología o personal operativo."
+      }
+    ],
+    "hint": "Abarca al personal capacitado, el dinero disponible, las herramientas modernas y la materia fuente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué se entiende por infraestructura logística en el marco industrial y minero?",
+    "opciones": [
+      {
+        "text": "El conjunto de instalaciones físicas, plataformas, sistemas de transporte y tecnologías que permiten el movimiento y almacenamiento de bienes.",
+        "isCorrect": true,
+        "rationale": "La infraestructura logística engloba los almacenes, centros de distribución, vías y herramientas operativas que soportan el flujo de materiales."
+      },
+      {
+        "text": "La red de oficinas bancarias donde la empresa mantiene sus cuentas corrientes.",
+        "isCorrect": false,
+        "rationale": "Las agencias bancarias forman parte del sistema financiero externo y no de la plataforma operativa de almacenamiento y distribución."
+      },
+      {
+        "text": "El reglamento interno de trabajo y el manual de organización y funciones.",
+        "isCorrect": false,
+        "rationale": "Corresponde a la estructura normativa y administrativa de gestión humana, no a la infraestructura física y tecnológica."
+      },
+      {
+        "text": "El presupuesto asignado a eventos de agasajo para el personal.",
+        "isCorrect": false,
+        "rationale": "Los gastos de integración no forman parte de las instalaciones y activos físicos dedicados a la cadena de suministro."
+      },
+      {
+        "text": "Las cuentas de redes sociales utilizadas por la empresa para responder comentarios.",
+        "isCorrect": false,
+        "rationale": "Las redes sociales son canales de comunicación digital o mercadeo, no infraestructura operativa para la distribución de carga."
+      }
+    ],
+    "hint": "Incluye los edificios de depósitos, las redes de transporte, la maquinaria de carga y los sistemas de información aplicados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple un 'Hub Logístico' dentro de una red de distribución a gran escala?",
+    "opciones": [
+      {
+        "text": "Actúa como un centro neurálgico o punto focal de operaciones donde se concentran, consolidan y distribuyen cargas masivas.",
+        "isCorrect": true,
+        "rationale": "Un Hub articula múltiples rutas y medios de transporte, centralizando el flujo operativo para redistribuirlo eficientemente hacia distintos nodos regionales."
+      },
+      {
+        "text": "Funciona exclusivamente como una tienda minorista de venta directa al público.",
+        "isCorrect": false,
+        "rationale": "El Hub es un nodo industrial de transferencia masiva y no un punto de venta al detalle o 'retail'."
+      },
+      {
+        "text": "Es un taller dedicado únicamente al lavado de vehículos livianos de la gerencia.",
+        "isCorrect": false,
+        "rationale": "Las funciones de servicio menor para vehículos no abarcan la envergadura de un nodo concentrador de carga masiva."
+      },
+      {
+        "text": "Es una oficina administrativa donde únicamente se procesan planillas de sueldos.",
+        "isCorrect": false,
+        "rationale": "Un Hub exige infraestructura operativa para la recepción, almacenamiento y despacho masivo de carga."
+      },
+      {
+        "text": "Es un puerto exclusivo para embarcaciones pesqueras artesanales de recreo.",
+        "isCorrect": false,
+        "rationale": "La naturaleza de un Hub es conectar eficientemente cadenas de suministros industriales, comerciales o mineras a gran escala."
+      }
+    ],
+    "hint": "Considéralo como un gran nodo central articulador desde donde se conecta el transporte a nivel nacional o internacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué prácticas contribuyen a la sostenibilidad e implementación de la 'logística verde' en la infraestructura actual?",
+    "opciones": [
+      {
+        "text": "Uso de fuentes de energía renovable, como paneles solares, en centros de distribución y plantas.",
+        "isCorrect": true,
+        "rationale": "La autogeneración limpia en instalaciones reduce la huella de carbono y el consumo de combustibles fósiles."
+      },
+      {
+        "text": "Incorporación de vehículos y montacargas eléctricos en las operaciones.",
+        "isCorrect": true,
+        "rationale": "La electrificación de los equipos de manipulación y transporte disminuye significativamente la emisión de gases contaminantes."
+      },
+      {
+        "text": "Uso de embalajes, cajas y palés fabricados con materiales reciclados y reciclables.",
+        "isCorrect": true,
+        "rationale": "Promover la economía circular en el empaque disminuye la generación de residuos sólidos industriales."
+      },
+      {
+        "text": "Incineración a cielo abierto de los palés de madera deteriorados dentro de la planta.",
+        "isCorrect": false,
+        "rationale": "La quema no controlada emite gases tóxicos a la atmósfera, contraviniendo los principios básicos de sostenibilidad."
+      },
+      {
+        "text": "Aumento ininterrumpido del uso de plásticos no biodegradables de un solo uso.",
+        "isCorrect": false,
+        "rationale": "Incrementar plásticos no reciclables aumenta el impacto ambiental negativo de la actividad logística."
+      }
+    ],
+    "hint": "Elige las opciones que promueven la reducción de la huella de carbono, el reciclaje de empaques y la movilidad limpia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define una ruta logística en el ámbito del transporte?",
+    "opciones": [
+      {
+        "text": "Es el itinerario o recorrido planificado que realiza un medio de transporte para atender la entrega o recolección de mercancías.",
+        "isCorrect": true,
+        "rationale": "La ruta traza la secuencia ordenada de puntos geográficos que el transporte debe seguir para cumplir con la programación pactada."
+      },
+      {
+        "text": "Es el carril exclusivo dentro de un taller para el cambio de aceite de motor.",
+        "isCorrect": false,
+        "rationale": "Esa definición corresponde a una estación de servicio técnico en mantenimiento de flota."
+      },
+      {
+        "text": "Es el trayecto peatonal que siguen los trabajadores desde el comedor hacia los baños.",
+        "isCorrect": false,
+        "rationale": "Esta es una vía de tránsito peatonal de seguridad y salud en el trabajo, no una ruta logística de transporte."
+      },
+      {
+        "text": "Es la lista de precios que publica una aerolínea comercial para vuelos de pasajeros.",
+        "isCorrect": false,
+        "rationale": "Un tarifario publicitario no constituye el diseño ni el trayecto geográfico de distribución de carga."
+      },
+      {
+        "text": "Es la distancia entre dos escritorios ubicados en la misma oficina administrativa.",
+        "isCorrect": false,
+        "rationale": "El concepto de ruta logística se aplica al movimiento físico exterior o interior de mercancías entre nodos de distribución."
+      }
+    ],
+    "hint": "Se refiere al camino o itinerario establecido para llevar productos de un origen a uno o varios destinos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el beneficio directo de realizar una adecuada planificación y optimización de rutas?",
+    "opciones": [
+      {
+        "text": "Reducir el consumo de combustible, recortar tiempos de entrega y garantizar la satisfacción del cliente.",
+        "isCorrect": true,
+        "rationale": "Optimizar recorridos elimina kilómetros innecesarios, minimiza horas improductivas en tráfico y asegura entregas puntuales."
+      },
+      {
+        "text": "Garantizar que todos los vehículos transiten siempre a la velocidad máxima permitida sin detenerse.",
+        "isCorrect": false,
+        "rationale": "La optimización busca eficiencia, seguridad y cumplimiento normativo, no incentivar excesos de velocidad peligrosos."
+      },
+      {
+        "text": "Aumentar obligatoriamente la cantidad de peajes a pagar en cada viaje.",
+        "isCorrect": false,
+        "rationale": "Una adecuada optimización busca justamente reducir o racionalizar los peajes y costos operativos superfluos."
+      },
+      {
+        "text": "Forzar al conductor a realizar el trayecto sin efectuar pausas de descanso reglamentarias.",
+        "isCorrect": false,
+        "rationale": "La planificación debe respetar las leyes laborales y las horas de descanso para prevenir la fatiga y accidentes."
+      },
+      {
+        "text": "Multiplicar el número de viajes vacíos de retorno al centro de distribución.",
+        "isCorrect": false,
+        "rationale": "Los viajes de retorno vacíos representan ineficiencia; la planificación busca consolidar cargas de retorno."
+      }
+    ],
+    "hint": "Enfócate en los ahorros operativos de energía, la puntualidad en el despacho y el ahorro monetario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué variables deben evaluarse obligatoriamente al diseñar y planificar una ruta de transporte de mercancías?",
+    "opciones": [
+      {
+        "text": "Naturaleza y tipo de la mercancía (líquida, seca, peligrosa, sobredimensionada).",
+        "isCorrect": true,
+        "rationale": "El tipo de carga define las restricciones físicas, legales y de velocidad necesarias para transitar por determinadas vías."
+      },
+      {
+        "text": "Unidad de carga utilizada (palés, contenedores, granel, cilindros).",
+        "isCorrect": true,
+        "rationale": "Determina el tipo de vehículo y la infraestructura requerida para la estiba, carga y descarga en los nodos."
+      },
+      {
+        "text": "Horarios permitidos de circulación, restricciones urbanas y ubicación de origen/destino.",
+        "isCorrect": true,
+        "rationale": "Las normativas municipales y de tránsito condicionan las ventanas de tiempo en las que los camiones pueden ingresar o descargar."
+      },
+      {
+        "text": "La marca de neumáticos preferida por el conductor del vehículo.",
+        "isCorrect": false,
+        "rationale": "Las preferencias personales del chofer sobre repuestos no constituyen una variable operativa de planificación de ruta."
+      },
+      {
+        "text": "La estación del año en la que nació el encargado de logística.",
+        "isCorrect": false,
+        "rationale": "Es un dato personal completamente irrelevante para la ingeniería del transporte y la programación logística."
+      }
+    ],
+    "hint": "Piensa en las características físicas de la carga, la forma en que está empaquetada y las normativas de la vía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el proceso de consolidación de carga en el transporte de mercancías?",
+    "opciones": [
+      {
+        "text": "En agrupar envíos pequeños de múltiples clientes en un solo contenedor o vehículo para compartir y reducir costos de flete.",
+        "isCorrect": true,
+        "rationale": "Permite que usuarios con menor volumen aprovechen las economías de escala al pagar únicamente por el espacio que ocupa su mercancía."
+      },
+      {
+        "text": "En aplastar mecánicamente las cajas para reducir su volumen dentro del almacén.",
+        "isCorrect": false,
+        "rationale": "La consolidación es una técnica de agrupación de carga en transporte, no la destrucción o compactación de empaques."
+      },
+      {
+        "text": "En enviar un camión de gran capacidad con una sola caja pequeña dentro.",
+        "isCorrect": false,
+        "rationale": "Mover unidades grandes con volúmenes insignificantes es una práctica ineficiente de carga suelta no consolidada."
+      },
+      {
+        "text": "En cancelar todas las entregas regionales para enfocarse únicamente en envíos locales.",
+        "isCorrect": false,
+        "rationale": "Consolidar no significa limitar el territorio, sino optimizar el llenado del transporte hacia un destino común."
+      },
+      {
+        "text": "En reemplazar el uso de contenedores por sacos de tela no protegidos.",
+        "isCorrect": false,
+        "rationale": "La consolidación utiliza contenedores, pallets u otros empaques estándar para proteger el envío agrupado."
+      }
+    ],
+    "hint": "Involucra juntar lotes menores de diferentes usuarios para completar la capacidad del contenedor o camión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué caracteriza a la denominable 'Logística 4.0' en el contexto industrial moderno?",
+    "opciones": [
+      {
+        "text": "La integración intensiva de tecnologías de la información como el IoT, Big Data, Inteligencia Artificial y la automatización.",
+        "isCorrect": true,
+        "rationale": "La Logística 4.0 utiliza herramientas digitales avanzadas para intercomunicar procesos, analizar datos en tiempo real y automatizar operaciones."
+      },
+      {
+        "text": "El retorno a la gestión manual de inventarios utilizando carpetas de papel y archivos físicos.",
+        "isCorrect": false,
+        "rationale": "La Logística 4.0 busca eliminar la dependencia del papel mediante la transformación digital de la información."
+      },
+      {
+        "text": "La prohibición absoluta del uso de computadoras en las labores de almacén.",
+        "isCorrect": false,
+        "rationale": "Este enfoque promueve la adopción masiva de tecnología informática y no su restricción."
+      },
+      {
+        "text": "El uso exclusivo de tracción animal para el traslado de minerales en la mina.",
+        "isCorrect": false,
+        "rationale": "Es una descripción de métodos de acarreo arcaicos y no de la cuarta revolución industrial."
+      },
+      {
+        "text": "La eliminación del rastreo por GPS para reducir el consumo de baterías.",
+        "isCorrect": false,
+        "rationale": "La visibilidad y trazabilidad por GPS en tiempo real son pilares fundamentales de la gestión logística 4.0."
+      }
+    ],
+    "hint": "Asocialo con la cuarta revolución industrial, la toma de decisiones basada en datos y el uso de sensores interconectados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de la tecnología RFID (Identificación por Radiofrecuencia) en la gestión de almacenes e inventarios?",
+    "opciones": [
+      {
+        "text": "Permitir la identificación y rastreo automático de productos mediante etiquetas electrónicas y ondas de radio sin contacto visual directo.",
+        "isCorrect": true,
+        "rationale": "A diferencia del código de barras tradicional, el RFID puede leer múltiples etiquetas de forma masiva y remota, agilizando el control del stock."
+      },
+      {
+        "text": "Emitir música ambiental para amenizar la jornada de los operadores de montacargas.",
+        "isCorrect": false,
+        "rationale": "El RFID es un sistema de captura automática de datos e identificación, no un equipo de entretenimiento auditivo."
+      },
+      {
+        "text": "Aumentar el peso físico de las cajas para que no se caigan de los estantes.",
+        "isCorrect": false,
+        "rationale": "Las etiquetas RFID son chips ultraligeros que no alteran ni tienen por función incrementar el peso del producto."
+      },
+      {
+        "text": "Reemplazar los motores diésel de los camiones por sistemas hidráulicos.",
+        "isCorrect": false,
+        "rationale": "El RFID se aplica a la identificación y transmisión de datos, no al sistema de propulsión mecánica de los vehículos."
+      },
+      {
+        "text": "Imprimir facturas comerciales en papel continuo a gran velocidad.",
+        "isCorrect": false,
+        "rationale": "La tecnología RFID lee y almacena datos codificados en microchips mediante radiofrecuencia, no es una impresora de documentos."
+      }
+    ],
+    "hint": "Permite capturar la información de las etiquetas sin necesidad de escanear directamente una por una con un lector óptico lineal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define el concepto de 'e-Logistic' (Logística del comercio electrónico)?",
+    "opciones": [
+      {
+        "text": "El conjunto de operaciones logísticas adaptadas para responder a los requerimientos de compras realizadas a través de plataformas digitales.",
+        "isCorrect": true,
+        "rationale": "Abarca todo el flujo operativo desde que el cliente hace clic en 'comprar' en línea hasta que recibe el producto en su puerta (incluyendo el rastreo y devoluciones)."
+      },
+      {
+        "text": "El envío de correspondencia mediante cartas de papel por correo postal tradicional.",
+        "isCorrect": false,
+        "rationale": "La e-Logistic administra flujos físicos derivados del comercio electrónico digital, no servicios postales de cartas impresas."
+      },
+      {
+        "text": "La venta exclusiva de repuestos usados en puestos de venta informales.",
+        "isCorrect": false,
+        "rationale": "Representa la gestión estructurada del e-commerce y los negocios integrados en red."
+      },
+      {
+        "text": "Un programa informático que únicamente sirve para diseñar logotipos publicitarios.",
+        "isCorrect": false,
+        "rationale": "No es un software de diseño gráfico, sino la gestión operativa de la cadena de suministro en entornos de comercio electrónico."
+      },
+      {
+        "text": "El almacenamiento de energía en baterías de plomo dentro de subestaciones.",
+        "isCorrect": false,
+        "rationale": "Es un concepto de la cadena de suministro digital y no un término de ingeniería eléctrica."
+      }
+    ],
+    "hint": "Se enfoca en la preparación, transporte y entrega ágil de los pedidos generados por e-commerce.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del marco conceptual expuesto en el curso, ¿cuál es la relación y diferencia fundamental entre la gestión de la logística y la gestión de la cadena de suministros?",
+    "opciones": [
+      {
+        "text": "La logística abarca únicamente la compra de materias primas, mientras que la cadena de suministros se enfoca de manera exclusiva en el transporte internacional de productos.",
+        "isCorrect": false,
+        "rationale": "Esta afirmación limita erróneamente la logística a la función de compras y reduce la cadena de suministros solo al flete internacional, obviando las operaciones internas de almacenamiento e inventarios."
+      },
+      {
+        "text": "La logística engloba las operaciones internas de abastecimiento, almacenamiento e inventarios, y transporte, mientras que la cadena de suministros integra estas funciones con la planificación previa, el servicio posventa y la logística inversa.",
+        "isCorrect": true,
+        "rationale": "La cadena de suministros contempla un alcance estratégico más amplio que integra el antes, durante y después de los flujos de materiales e información, posicionando a la logística tradicional como uno de sus componentes clave."
+      },
+      {
+        "text": "La gestión logística y la cadena de suministros son términos exactamente idénticos que abordan sin distinción el mismo alcance operacional en las empresas mineras.",
+        "isCorrect": false,
+        "rationale": "En la evolución disciplinar expuesta en la clase, la logística representa un núcleo operacional integrado dentro del ecosistema más amplio y transversal de la cadena de suministros."
+      },
+      {
+        "text": "La cadena de suministros se limita strictly a la gestión de almacenes e inventarios, dejando el aprovisionamiento y la distribución bajo la responsabilidad de la logística.",
+        "isCorrect": false,
+        "rationale": "Invertir la jerarquía operacional atribuyendo un alcance menor a la cadena de suministros contradice el principio de que esta abarca el flujo completo de valor."
+      },
+      {
+        "text": "La logística solo opera en el sector comercial minorista, mientras que la cadena de suministros es un concepto exclusivo de la industria minera extractiva.",
+        "isCorrect": false,
+        "rationale": "Ambos conceptos son aplicables a diversos sectores económicos, incluyendo la industria de transformación, la agroexportación y la minería a gran escala."
+      }
+    ],
+    "hint": "Considere qué concepto abarca el ciclo completo de información y materiales antes, durante y después de la producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con los parámetros internacionales y la industria minera, ¿cómo se definen técnicamente las materias primas críticas y cuál es su rol en las transiciones tecnológicas?",
+    "opciones": [
+      {
+        "text": "Son insumos abundantes de bajo valor comercial que se utilizan para sustituir combustibles fósiles en operaciones mineras pequeñas.",
+        "isCorrect": false,
+        "rationale": "Las materias primas críticas no son abundantes ni de bajo valor; su denominación responde justamente a su escasez o elevado riesgo de suministro global."
+      },
+      {
+        "text": "Son materiales identificados de alto riesgo de suministro y cruciales económicamente, indispensables para las transiciones verde y digital.",
+        "isCorrect": true,
+        "rationale": "La definición de la Unión Europea destaca que estos recursos (como el litio) poseen una gran importancia económica estratégica y presentan vulnerabilidades de desabastecimiento que impactan la transformación limpia."
+      },
+      {
+        "text": "Son componentes químicos sintéticos fabricados exclusivamente por países sin tradición minera para reemplazar al cobre.",
+        "isCorrect": false,
+        "rationale": "Las materias primas críticas corresponden a elementos extraídos o procesados de la naturaleza (como minerales) y no a reemplazos sintéticos exclusivos de países no mineros."
+      },
+      {
+        "text": "Son residuos industriales que se desechan durante el proceso de concentración minera sin valor estratégico acumulado.",
+        "isCorrect": false,
+        "rationale": "Confundir insumos críticos con desechos operativos contradice su carácter fundamental en la cadena global de valor tecnológico."
+      },
+      {
+        "text": "Son materiales de construcción civil empleados únicamente en la fase de infraestructura de almacenes primarios.",
+        "isCorrect": false,
+        "rationale": "Su ámbito de aplicación sobrepasa las obras civiles convencionales, enfocándose en tecnologías avanzadas de energía y digitalización."
+      }
+    ],
+    "hint": "Piense en elementos como el litio y la evaluación de riesgo de suministro realizada por la Unión Europea.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la gestión de materias primas para la producción industrial, la fase de procesamiento se distingue de la producción primaria porque:",
+    "opciones": [
+      {
+        "text": "Consiste exclusivamente en la recolección física del insumo en el campo o yacimiento.",
+        "isCorrect": false,
+        "rationale": "La recolección física en el origen corresponde a la fase inicial de acopio y no al procesamiento final."
+      },
+      {
+        "text": "Adapta el producto transformado a las especificaciones, empaques y requerimientos particulares del cliente final.",
+        "isCorrect": true,
+        "rationale": "A diferencia de la fabricación masiva básica, el procesamiento adecua el bien (marcado, empaquetado, especificaciones técnicas) para cumplir exactamente con la demanda del comprador."
+      },
+      {
+        "text": "Se encarga de la homologación técnica y financiera de los proveedores de insumos.",
+        "isCorrect": false,
+        "rationale": "La evaluación y homologación de proveedores corresponde a las etapas estratégicas de compras y aprovisionamiento, no a la fase productiva del procesamiento."
+      },
+      {
+        "text": "Corresponde al almacenamiento prolongado de minerales en silos de cuarentena sin ningún tipo de modificación.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento pasivo no genera valor de adaptación; el procesamiento involucra una acción concreta de personalización o ajuste del producto."
+      },
+      {
+        "text": "Elimina por completo la necesidad de realizar pruebas de calidad o análisis químicos finales.",
+        "isCorrect": false,
+        "rationale": "En el procesamiento, el control de calidad es indispensable para garantizar que las adecuaciones cumplan con los estándares requeridos."
+      }
+    ],
+    "hint": "Enfóquese en el paso donde el producto terminado se acondiciona con presentaciones o logotipos específicos exigidos por el comprador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Una empresa minera busca implementar una gestión estratégica de sus materias primas e insumos. ¿Cuáles de las siguientes acciones forman parte de las buenas prácticas y objetivos para este propósito?",
+    "opciones": [
+      {
+        "text": "Diversificar la red de proveedores para mitigar los riesgos de desabastecimiento.",
+        "isCorrect": true,
+        "rationale": "Ampliar la base de suministradores evita la vulnerabilidad de depender de un único proveedor en caso de fallas o interrupciones operativas."
+      },
+      {
+        "text": "Implementar prácticas de logística verde y priorizar materiales sostenibles o reciclados.",
+        "isCorrect": true,
+        "rationale": "El enfoque de sostenibilidad moderna promueve la reducción del impacto ambiental y la integración de la logística inversa."
+      },
+      {
+        "text": "Establecer la dependencia exclusiva en un solo proveedor monopólico para simplificar el proceso de facturación.",
+        "isCorrect": false,
+        "rationale": "Concentrar las compras en una sola fuente incrementa drásticamente el riesgo operacional ante cualquier contingencia del suplidor."
+      },
+      {
+        "text": "Optimizar los costos operativos reduciendo gastos innecesarios de almacenamiento y minimizando desperdicios.",
+        "isCorrect": true,
+        "rationale": "Alinear la gestión con metodologías como Lean Supply Chain busca eliminar costos ocultos y sobrestock en los almacenes."
+      },
+      {
+        "text": "Eliminar la evaluación de riesgos de mercado para acelerar las órdenes de compra directas.",
+        "isCorrect": false,
+        "rationale": "Ignorar el análisis de mercado impide identificar fluctuaciones de precios o escasez crítica de insumos a tiempo."
+      }
+    ],
+    "hint": "Seleccione las prácticas que reducen la vulnerabilidad operativa, recortan desperdicios y promueven la sostenibilidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un fabricante de maquinaria pesada bajo pedido requiere producir unidades altamente personalizadas con especificaciones únicas para un proyecto minero específico. ¿Qué tipo de proceso productivo debe aplicar?",
+    "opciones": [
+      {
+        "text": "Producción continua.",
+        "isCorrect": false,
+        "rationale": "La producción continua se utiliza para bienes estandarizados que se fabrican sin interrupción en volúmenes masivos, no para piezas personalizadas."
+      },
+      {
+        "text": "Producción bajo pedido (fabricación única y personalizada).",
+        "isCorrect": true,
+        "rationale": "Este tipo de proceso se ajusta a requerimientos exclusivos donde cada unidad se diseña y construye según las solicitudes específicas del cliente."
+      },
+      {
+        "text": "Producción en masa idéntica.",
+        "isCorrect": false,
+        "rationale": "La fabricación en masa busca economías de escala produciendo miles de artículos exactamente iguales, perdiendo flexibilidad de personalización."
+      },
+      {
+        "text": "Producción estacional de alta rotación.",
+        "isCorrect": false,
+        "rationale": "La producción estacional responde a picos de demanda según la época del año y no a la fabricación a medida de bienes de capital complejos."
+      },
+      {
+        "text": "Proceso por lotes estandarizados rígidos.",
+        "isCorrect": false,
+        "rationale": "Aunque el lote permite cierta variedad, no ofrece el nivel de personalización individualizada que exige la fabricación única bajo pedido."
+      }
+    ],
+    "hint": "Considere la modalidad productiva orientada a proyectos únicos que no se repiten masivamente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la distribución de productos terminados, la estrategia multicanal se caracteriza primordialmente por:",
+    "opciones": [
+      {
+        "text": "Utilizar un único canal físico directo de fábrica al cliente, eliminando cualquier opción digital.",
+        "isCorrect": false,
+        "rationale": "Limitarse a un solo medio físico corresponde a una distribución directa tradicional y no a un enfoque multicanal."
+      },
+      {
+        "text": "Utilizar de forma combinada diversos canales de atención y comercialización, tales como tiendas físicas, plataformas e-commerce y redes sociales.",
+        "isCorrect": true,
+        "rationale": "La multicanalidad busca diversificar los puntos de contacto y venta para adaptarse a los hábitos de compra modernos del cliente."
+      },
+      {
+        "text": "Subcontratar exclusivamente intermediarios mayoristas internacionales en zonas fronterizas.",
+        "isCorrect": false,
+        "rationale": "El empleo exclusivo de intermediarios mayoristas define la distribución indirecta, no la integración de múltiples canales propios y digitales."
+      },
+      {
+        "text": "Restringir las entregas al despacho directo mediante embarques marítimos exclusivamente.",
+        "isCorrect": false,
+        "rationale": "El tipo de transporte empleado no define por sí solo la estrategia de comercialización multicanal."
+      },
+      {
+        "text": "Prohibir la venta a clientes finales para operar únicamente en modelos B2B estrictos.",
+        "isCorrect": false,
+        "rationale": "La multicanalidad no restringe el segmento de mercado, sino que amplía las vías mediante las cuales se comercializa el producto."
+      }
+    ],
+    "hint": "Piense en la integración del comercio electrónico moderno con los puntos de venta físicos tradicionales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al seleccionar la modalidad de transporte para enviar suministros mineros desde el Callao hasta un yacimiento en la sierra sur del Perú, se opta por un sistema multimodal. ¿Cuál es la ventaja operativa principal de esta elección?",
+    "opciones": [
+      {
+        "text": "Requiere mayor manipulación de la carga en cada punto intermedio de la ruta.",
+        "isCorrect": false,
+        "rationale": "Una mayor manipulación incrementa costos y riesgos; el multimodalismo busca precisamente optimizar y agilizar los transbordos."
+      },
+      {
+        "text": "Combina de forma eficiente distintos modos de transporte (como marítimo, ferroviario y terrestre) optimizando plazos, costos y reduciendo tiempos de trasbordo.",
+        "isCorrect": true,
+        "rationale": "El transporte multimodal aprovecha las fortalezas de cada modo para conectar orígenes y destinos complejos con mayor velocidad y menor costo global."
+      },
+      {
+        "text": "Elimina la necesidad de utilizar contratos de transporte o pólizas de seguro de carga.",
+        "isCorrect": false,
+        "rationale": "El transporte de mercancías valiosas mediante múltiples medios exige una formalización rigurosa de contratos y coberturas de seguro."
+      },
+      {
+        "text": "Incrementa drásticamente las inspecciones aduaneras repetitivas en cada tramo regional.",
+        "isCorrect": false,
+        "rationale": "El empleo de unidades unitarizadas y precintos en el transporte multimodal busca reducir la burocracia aduanera y los controles innecesarios."
+      },
+      {
+        "text": "Es el único medio que no se ve afectado por la geografía de las carreteras.",
+        "isCorrect": false,
+        "rationale": "El tramo terrestre dentro del esquema multimodal sigue sujeto a la calidad y condiciones de la infraestructura vial existente."
+      }
+    ],
+    "hint": "Considere la articulación de más de un medio de transporte bajo un esquema articulado para tramos lejanos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el transporte terrestre de insumos y equipos para la gran minería, la movilización de cargas sobredimensionadas (como componentes de maquinaria o llantas gigantes) exige un procedimiento técnico especial debido a que:",
+    "opciones": [
+      {
+        "text": "Pueden trasladarse en cualquier plataforma convencional sin acondicionamiento de atrinque.",
+        "isCorrect": false,
+        "rationale": "Las dimensiones y pesos elevados hacen imposible el uso de plataformas simples sin sistemas de sujeción o atrinque diseñados por ingeniería."
+      },
+      {
+        "text": "Requieren un estudio previo de carga, evaluación de ruta crítica (puentes, túneles, gálibos) y acondicionamiento mediante unidades especiales.",
+        "isCorrect": true,
+        "rationale": "Las cargas sobredimensionadas imponen limitaciones físicas en la vía pública, requiriendo permisos, verificación de capacidades de puentes y convoyes de seguridad."
+      },
+      {
+        "text": "Tienen prohibido transitar por vías terrestres y solo pueden enviarse mediante carga aérea.",
+        "isCorrect": false,
+        "rationale": "El volumen y peso de las grandes cargas mineras imposibilitan el transporte aéreo, haciendo obligatoria la vía terrestre especializada."
+      },
+      {
+        "text": "No están sujetas a ningún límite de velocidad ni regulación del Ministerio de Transportes.",
+        "isCorrect": false,
+        "rationale": "Estas cargas están estrictamente fiscalizadas y deben circular a velocidades reducidas para evitar accidentes estructurales en la vía."
+      },
+      {
+        "text": "Se trasladan únicamente durante horarios de alto tráfico urbano para aprovechar escoltas civiles.",
+        "isCorrect": false,
+        "rationale": "Suelen movilizarse en horarios programados de bajo tráfico para no colapsar la red vial ni exponer a riesgo a terceros."
+      }
+    ],
+    "hint": "Piense en las restricciones físicas que imponen los puentes y túneles al peso y volumen extraordinario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Existe un conflicto clásico entre los objetivos de gestión de inventarios de las áreas de Finanzas, Mercadotecnia y Producción. ¿Cuál es la postura típica del área de Finanzas respecto al nivel de inventario?",
+    "opciones": [
+      {
+        "text": "Exige mantener un nivel muy alto de inventario para asegurar ventas ilimitadas en cualquier momento.",
+        "isCorrect": false,
+        "rationale": "Mantener altos inventarios responde al objetivo de Mercadotecnia, no al de Finanzas, que busca limitar la inmovilización de recursos."
+      },
+      {
+        "text": "Busca mantener un nivel bajo de inventario para conservar capital de trabajo y minimizar costos de almacenamiento.",
+        "isCorrect": true,
+        "rationale": "Finanzas prioriza la liquidez de la empresa y la reducción del costo de oportunidad del dinero invertido en existencias retenidas."
+      },
+      {
+        "text": "Solicita acumular materia prima excesiva para evitar que la planta se detenga.",
+        "isCorrect": false,
+        "rationale": "Garantizar la continuidad operativa mediante el acopio masivo es la meta del área de Producción."
+      },
+      {
+        "text": "Desconoce el impacto monetario del inventario en el balance general de la compañía.",
+        "isCorrect": false,
+        "rationale": "Finanzas monitorea directamente el valor del inventario como un componente del activo circulante y capital de trabajo."
+      },
+      {
+        "text": "Promueve la compra de insumos obsoletos debido a su bajo costo impositivo.",
+        "isCorrect": false,
+        "rationale": "Comprar material obsoleto genera pérdidas directas por desvalorización, lo cual contradice la gestión financiera eficiente."
+      }
+    ],
+    "hint": "Identifique el área que cuida el flujo de caja, la liquidez y la reducción de costos financieros por capital inmovilizado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "El método de clasificación de inventarios ABC se basa en el principio de Pareto (regla del 80/20). ¿Qué características definen correctamente a la Categoría A dentro de este análisis?",
+    "opciones": [
+      {
+        "text": "Representa habitualmente un porcentaje reducido de los artículos del catálogo (entorno al 15%-20%).",
+        "isCorrect": true,
+        "rationale": "En la distribución de Pareto, un número pequeño de ítems concentra la mayor proporción del valor monetario acumulado."
+      },
+      {
+        "text": "Concentra la mayor parte del valor monetario total del inventario (cercano al 70%-80%).",
+        "isCorrect": true,
+        "rationale": "Los artículos 'A' son los de mayor impacto financiero, requiriendo un control rigoroso de existencias."
+      },
+      {
+        "text": "Agrupa al 80% de los productos con un costo monetario inferior al 5% del valor total.",
+        "isCorrect": false,
+        "rationale": "Esta descripción corresponde a la Categoría C, que abarca muchos artículos de escasa significancia monetaria individual."
+      },
+      {
+        "text": "Requiere el control más estricto y frecuente debido a la alta inversión de capital que representa.",
+        "isCorrect": true,
+        "rationale": "Dado su alto valor, una desviación en los ítems 'A' genera descalces financieros significativos en la organización."
+      },
+      {
+        "text": "Se compone exclusivamente de materiales obsoletos listos para la baja contable.",
+        "isCorrect": false,
+        "rationale": "La categoría ABC clasifica existencias operativas en función de su valor e importancia, no por su nivel de obsolescencia."
+      }
+    ],
+    "hint": "Recuerde qué grupo de artículos abarca la mayor inversión de capital con el menor número de unidades físicas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el almacenamiento de Materiales Peligrosos (MATPEL) e insumos para la minería, ¿qué organismos estatales fiscalizan respectivamente el uso de explosivos y el control de insumos químicos potencialmente desviables?",
+    "opciones": [
+      {
+        "text": "MINAM para explosivos y MTC para reactivos químicos.",
+        "isCorrect": false,
+        "rationale": "El Ministerio del Ambiente y el de Transportes tienen competencias normativas generales, pero no el registro directo de explosivos o insumos fiscalizados."
+      },
+      {
+        "text": "SUCAMEC para el almacenamiento/uso de explosivos y SUNAT para los insumos químicos y bienes fiscalizados.",
+        "isCorrect": true,
+        "rationale": "La SUCAMEC regula el polvorín y material explosivo, mientras que la SUNAT controla los insumos químicos que podrían desviarse hacia fines ilícitos."
+      },
+      {
+        "text": "OSINERGMIN para empaques de cartón e INDECOPI para cisternas de agua.",
+        "isCorrect": false,
+        "rationale": "Estas entidades supervisan regulación energética y protección al consumidor, no el control de insumos críticos ni explosivos mineros."
+      },
+      {
+        "text": "SERNANP para productos perecederos y PNP para el registro de inventario ABC.",
+        "isCorrect": false,
+        "rationale": "SERNANP gestiona áreas protegidas y la PNP brinda apoyo en seguridad, pero no administran los registros fiscales de esos insumos."
+      },
+      {
+        "text": "MNC para repuestos mecánicos y SUNAFIL para valuación FIFO.",
+        "isCorrect": false,
+        "rationale": "SUNAFIL fiscaliza las relaciones laborales y seguridad en el trabajo, no los métodos contables de existencias o químicos."
+      }
+    ],
+    "hint": "Asocie las entidades encargadas del control de armas/explosivos civiles y la administración tributaria que controla insumos restringidos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al recepcionar un lote de insumos químicos o repuestos en un almacén minero y detectar que viene con golpes o daño estructural que invalida su conformidad, el procedimiento estandarizado exige:",
+    "opciones": [
+      {
+        "text": "Ingresarlo de inmediato al stock disponible para despacho rápido antes de que venza.",
+        "isCorrect": false,
+        "rationale": "Ingresar material defectuoso al inventario disponible expone las operaciones mineras a fallas graves o riesgos de seguridad."
+      },
+      {
+        "text": "Ubicar el producto en una zona segregada de cuarentena u observación, señalizándolo con etiqueta o tarjeta roja hasta la resolución del problema.",
+        "isCorrect": true,
+        "rationale": "La segregación física en cuarentena evita el uso accidental de material no conforme y formaliza el reclamo al proveedor o aseguradora."
+      },
+      {
+        "text": "Desecharlo inmediatamente en la vía pública sin registro documental.",
+        "isCorrect": false,
+        "rationale": "Eliminar insumos sin procedimiento de baja ni control ambiental infringe normativas de seguridad e higiene."
+      },
+      {
+        "text": "Mezclar el producto con la categoría A de inventarios para diluir la pérdida.",
+        "isCorrect": false,
+        "rationale": "La clasificación ABC responde al valor de los ítems y no a un mecanismo para ocultar mermas o productos dañados."
+      },
+      {
+        "text": "Ocultar el daño al área de supervisión para no alterar los KPI del mes.",
+        "isCorrect": false,
+        "rationale": "Falsificar el estado de las existencias vulnera la trazabilidad y la transparencia en la gestión de inventarios."
+      }
+    ],
+    "hint": "Piense en la zona física de aislamiento destinada a productos pendientes de inspección o reclamo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la Logística 4.0, ¿cuál es la función de lenguajes como SQL en el análisis de la demanda y la gestión de bases de datos masivas (Big Data)?",
+    "opciones": [
+      {
+        "text": "Sustituir los camiones de transporte físico por distribución virtual de datos.",
+        "isCorrect": false,
+        "rationale": "SQL es un lenguaje de software para bases de datos y no reemplaza la logística del transporte físico de mercancías."
+      },
+      {
+        "text": "Consultar, filtrar y procesar grandes volúmenes de datos históricos para la estructuración y limpieza de información previa al modelado de la demanda.",
+        "isCorrect": true,
+        "rationale": "SQL permite extraer registros específicos de servidores masivos para alimentar modelos estadísticos de previsión de compras."
+      },
+      {
+        "text": "Manejar montacargas automatizados mediante radiofrecuencia de forma directa.",
+        "isCorrect": false,
+        "rationale": "La manipulación física de montacargas corresponde a sistemas de ejecución de almacén (WMS) e IoT, no a consultas en bases de datos relacionales."
+      },
+      {
+        "text": "Reemplazar los sistemas de señalización de seguridad NFPA 704.",
+        "isCorrect": false,
+        "rationale": "El código NFPA es una norma visual de identificación de peligros químicos y no tiene relación con el software de análisis de datos."
+      },
+      {
+        "text": "Generar empaques biodegradables de forma automática en la línea de producción.",
+        "isCorrect": false,
+        "rationale": "SQL procesa información digital; no fabrica materiales físicos de empaque."
+      }
+    ],
+    "hint": "Considere la herramienta utilizada para extraer, filtrar y limpiar datos almacenados en servidores relacionales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Se observa que la demanda de helados o panetones aumenta exponencialmente en temporadas específicas del año y cae drásticamente en otras. Técnicamente, esta variación se clasifica como:",
+    "opciones": [
+      {
+        "text": "Demanda ausente.",
+        "isCorrect": false,
+        "rationale": "Demanda ausente implica que el mercado no muestra ningún interés por el producto en ningún momento del año."
+      },
+      {
+        "text": "Demanda irregular o estacional.",
+        "isCorrect": true,
+        "rationale": "La demanda irregular o estacional cambia de forma predecible según factores de temporalidad, clima o festividades."
+      },
+      {
+        "text": "Demanda negativa permanente.",
+        "isCorrect": false,
+        "rationale": "La demanda negativa ocurre cuando el consumidor rechaza deliberadamente un bien o servicio para evitarlo."
+      },
+      {
+        "text": "Demanda plena inalterable.",
+        "isCorrect": false,
+        "rationale": "La demanda plena se mantiene estable al nivel deseado de producción sin variaciones estacionales marcadas."
+      },
+      {
+        "text": "Sobredemanda continua e ilimitada.",
+        "isCorrect": false,
+        "rationale": "La sobredemanda supera constantemente la capacidad de oferta durante todo el año, lo cual no aplica a productos estacionales."
+      }
+    ],
+    "hint": "Piense en el comportamiento comercial influenciado por las estaciones o épocas festivas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Las infraestructuras logísticas permiten articular el almacenamiento y transporte a gran escala. ¿Cuáles de las siguientes opciones corresponden a instalaciones especializadas de este tipo?",
+    "opciones": [
+      {
+        "text": "Hub Logístico: Centro neurálgico o punto focal para operaciones de distribución a gran escala con conexiones multimodales.",
+        "isCorrect": true,
+        "rationale": "El Hub concentra grandes flujos de carga para consolidar y redistribuir hacia múltiples nodos regionales o internacionales."
+      },
+      {
+        "text": "Zona de Actividad Logística (ZAL): Infraestructura situada en el entorno portuario dedicada a servicios logísticos del comercio marítimo.",
+        "isCorrect": true,
+        "rationale": "Las ZAL facilitan el trasbordo y servicios de valor añadido directamente ligados a los puertos o terminales marítimos."
+      },
+      {
+        "text": "Polígono o Parque Industrial: Espacio adaptado con infraestructura para albergar actividades de producción, manufactura y almacenamiento masivo.",
+        "isCorrect": true,
+        "rationale": "Agrupa a empresas fabriles y almacenes en áreas periféricas acondicionadas con servicios pesados."
+      },
+      {
+        "text": "Tienda minorista local: Establecimiento de venta directa sin capacidad de almacenamiento ni conexión de transporte regional.",
+        "isCorrect": false,
+        "rationale": "Un comercio minorista local de escala pequeña no constituye una infraestructura logística nodal estratégica."
+      },
+      {
+        "text": "Oficina administrativa central sin espacio físico de carga.",
+        "isCorrect": false,
+        "rationale": "Las sedes puramente administrativas carecen de plataformas físicas para el manipuleo y almacenamiento de bienes."
+      }
+    ],
+    "hint": "Identifique las instalaciones físicas diseñadas para concentrar, transformar o transferir volúmenes de carga a nivel industrial o portuario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gran minería, al decidir la ubicación de un almacén central o punto de acopio para minerales e insumos, ¿por qué algunas empresas prefieren ubicar sus centros de consolidación en la costa o cerca de un puerto?",
+    "opciones": [
+      {
+        "text": "Porque así se reduce el costo de transporte marítimo para insumos de importación y se centraliza la salida de concentrados hacia el exterior.",
+        "isCorrect": true,
+        "rationale": "Ubicar nodos logísticos estratégicamente cerca del puerto reduce tramos terrestres innecesarios para la carga pesada que ingresa o sale del país."
+      },
+      {
+        "text": "Porque en la costa está prohibido el uso de sistemas de gestión ERP.",
+        "isCorrect": false,
+        "rationale": "Los sistemas ERP son aplicables en cualquier ubicación geográfica sin restricciones normativas."
+      },
+      {
+        "text": "Para evitar cumplir con las regulaciones ambientales del Ministerio del Ambiente.",
+        "isCorrect": false,
+        "rationale": "La legislación ambiental aplica rigurosamente en todo el territorio nacional, independiente de la altitud o cercanía al mar."
+      },
+      {
+        "text": "Porque las mineras operan exclusivamente en zonas costeras a nivel del mar.",
+        "isCorrect": false,
+        "rationale": "La gran mayoría de yacimientos mineros extractivos se ubican en zonas andinas alejadas de la costa."
+      },
+      {
+        "text": "Para eliminar la necesidad de contar con seguridad e higiene en el trabajo.",
+        "isCorrect": false,
+        "rationale": "La normativa de seguridad y salud en el trabajo es obligatoria en todas las sedes operativas de la minería."
+      }
+    ],
+    "hint": "Considere la cercanía al punto de entrada de suministros importados y salida de embarques de exportación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La 'Logística Verde' en la infraestructura moderna promueve prácticas sostenibles tales como:",
+    "opciones": [
+      {
+        "text": "Aumentar el uso de embalajes plásticos no reciclables de un solo uso.",
+        "isCorrect": false,
+        "rationale": "Aumentar residuos de plástico no reciclable contraviene de manera directa la ética de la logística sostenible."
+      },
+      {
+        "text": "Uso de montacargas eléctricos, paneles solares en centros de distribución y empleo de parihuelas/palets reciclados.",
+        "isCorrect": true,
+        "rationale": "La logística verde busca disminuir la huella de carbono y optimizar el ciclo de vida de los materiales de empaque y transporte."
+      },
+      {
+        "text": "Quema de residuos peligrosos dentro del almacén para generar calor casero.",
+        "isCorrect": false,
+        "rationale": "Incinerar residuos peligrosos sin control genera emisiones tóxicas graves y viola las leyes ambientales."
+      },
+      {
+        "text": "Operar camiones con diésel de alta emisión sin ningún control ambiental.",
+        "isCorrect": false,
+        "rationale": "El transporte verde busca sustituir o mitigar el uso de combustibles highly contaminantes."
+      },
+      {
+        "text": "Eliminar la medición de la huella de carbono en la cadena de suministros.",
+        "isCorrect": false,
+        "rationale": "Medir y monitorear la huella de carbono es la base técnica para planificar la sostenibilidad logística."
+      }
+    ],
+    "hint": "Busque opciones orientadas a la eficiencia energética, reciclaje y electromovilidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la distribución urbana y e-commerce, el tramo conocido como 'última milla' (Last Mile) presenta como su desafío principal:",
+    "opciones": [
+      {
+        "text": "El transporte masivo de minerales en trenes de carga desde la mina al puerto.",
+        "isCorrect": false,
+        "rationale": "El transporte masivo primario es logística de gran volumen, no el tramo capilar urbano de entrega final."
+      },
+      {
+        "text": "Llegar de forma rápida, eficiente y sostenible al consumidor final en áreas urbanas congestionadas, manteniendo costos operativos controlados.",
+        "isCorrect": true,
+        "rationale": "La última milla es el tramo más costoso y complejo debido al tráfico, atomización de entregas y altas expectativas del comprador."
+      },
+      {
+        "text": "La fabricación de componentes mecánicos para motores diésel pesados.",
+        "isCorrect": false,
+        "rationale": "La fabricación de partes es un proceso productivo industrial y no forma parte de la logística de distribución final."
+      },
+      {
+        "text": "La erradicación total del comercio electrónico para volver a catálogos impresos.",
+        "isCorrect": false,
+        "rationale": "La última milla se ha desarrollado precisamente para dar soporte al crecimiento del comercio electrónico."
+      },
+      {
+        "text": "El almacenamiento prolongado por más de cinco años en silos de reserva.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento de resguardo a largo plazo se opone a la velocidad y agilidad que exige la última milla."
+      }
+    ],
+    "hint": "Piense en el tramo final de la entrega que va desde el almacén de distribución hasta la puerta del cliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para realizar el traslado terrestre de material explosivo hacia una operación minera, la regulación técnica peruana exige obligatoriamente:",
+    "opciones": [
+      {
+        "text": "Utilizar vehículos particulares descapotables sin ningún tipo de permiso estatal.",
+        "isCorrect": false,
+        "rationale": "Transportar explosivos sin autorización ni blindaje adecuado representa un delito grave y un peligro severo."
+      },
+      {
+        "text": "Contar con autorización de SUCAMEC y MTC, usar vehículos homologados y ser escoltados por unidades 'liebre' con custodia policial.",
+        "isCorrect": true,
+        "rationale": "El transporte de explosivos requiere un estricto protocolo de seguridad vial y resguardo policial permanente desde el origen hasta el polvorín."
+      },
+      {
+        "text": "Movilizar la carga exclusivamente los días feriados sin informar a las autoridades.",
+        "isCorrect": false,
+        "rationale": "Las rutas y fechas de traslado de explosivos deben ser aprobadas y monitoreadas formalmente por las entidades reguladoras."
+      },
+      {
+        "text": "Mezclar el explosivo con reactivos inflamables en la misma cisterna para ahorrar espacio.",
+        "isCorrect": false,
+        "rationale": "La compatibilidad química prohíbe terminantemente juntar materiales reactivos o inflamables con componentes explosivos."
+      },
+      {
+        "text": "Enviar el material por servicio postal express de correspondencia civil.",
+        "isCorrect": false,
+        "rationale": "El servicio postal público restringe estrictamente el envío de cualquier sustancia peligrosa o explosiva."
+      }
+    ],
+    "hint": "Considere los requerimientos de escolta de seguridad, custodia armada y permisos especiales para polvorines.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al planificar la ruta de transporte para un convoy minero con exceso de peso o dimensión, se identifica un puente cuya capacidad máxima de carga es inferior al peso del convoy. La decisión técnica correcta es:",
+    "opciones": [
+      {
+        "text": "Aumentar la velocidad del convoy para cruzar el puente antes de que ceda.",
+        "isCorrect": false,
+        "rationale": "Aumentar la velocidad incrementa la fuerza de impacto dinámico sobre la estructura del puente, acelerando su colapso."
+      },
+      {
+        "text": "Identificar en el estudio de ruta crítica una vía alternativa segura o adaptar la distribución de ejes/repartición de carga de forma autorizada.",
+        "isCorrect": true,
+        "rationale": "La optimización de rutas críticas exige evitar riesgos estructurales cambiando la ruta o utilizando modulares especiales de distribución de peso."
+      },
+      {
+        "text": "Ignorar la señalización del puente por ser solo una sugerencia visual.",
+        "isCorrect": false,
+        "rationale": "Las restricciones de tonelaje en puentes son límites físicos imperativos fijados para evitar catástrofes de infraestructura."
+      },
+      {
+        "text": "Descargar el insumo directamente en el río para reducir el peso.",
+        "isCorrect": false,
+        "rationale": "Verter materiales en cauces de agua constituye un delito ambiental grave y genera pérdidas del activo."
+      },
+      {
+        "text": "Forzar el paso de todos los camiones al mismo tiempo agrupados sobre el puente.",
+        "isCorrect": false,
+        "rationale": "Agrupar el peso sobre la infraestructura concentra la carga puntual, garantizando la falla estructural de la vía."
+      }
+    ],
+    "hint": "En el análisis de ruta crítica, las restricciones insuperables obligan a desvíos planificados o redistribución física del peso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La consolidación de carga (grupaje) es una estrategia logística muy utilizada. ¿Qué beneficios aporta a los pequeños o medianos compradores que no completan un contenedor entero (LCL)?",
+    "opciones": [
+      {
+        "text": "Permite compartir los costos del flete marítimo o terrestre proporcionalmente con otros usuarios.",
+        "isCorrect": true,
+        "rationale": "Dividir el costo de la capacidad del contenedor reduce la barrera económica para envíos de volumen menor."
+      },
+      {
+        "text": "Evita pagar la tarifa completa de alquiler de un contenedor exclusivo cuando solo se usa una fracción de su espacio.",
+        "isCorrect": true,
+        "rationale": "El flete consolidado permite pagar únicamente por el volumen ($m^3$) o peso ($kg$) efectivamente utilizado."
+      },
+      {
+        "text": "Facilita la inspección y verificación de la carga en las instalaciones del agente consolidador antes del embarque.",
+        "isCorrect": true,
+        "rationale": "El almacén del consolidador actúa como un punto intermedio de control documental y estado físico de los bultos agrupados."
+      },
+      {
+        "text": "Garantiza que la carga viajará completamente sola sin ningún otro tipo de producto en el transporte.",
+        "isCorrect": false,
+        "rationale": "El principio del grupaje es precisamente compartir la unidad de transporte entre múltiples generadores de carga."
+      },
+      {
+        "text": "Elimina totalmente los trámites aduaneros de importación o exportación.",
+        "isCorrect": false,
+        "rationale": "Toda mercancía que cruza fronteras debe someterse a declaración y control aduanero, independientemente de estar consolidada."
+      }
+    ],
+    "hint": "Piense en el ahorro de costos al dividir el alquiler de un contenedor entre varios clientes que envían volúmenes pequeños.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al formular el problema de la 'ruta más corta' mediante programación lineal en herramientas como Solver de Excel, las variables de decisión suelen configurarse como valores binarios ($0$ y $1$). ¿Qué representa un valor de $1$ en dicho modelo?",
+    "opciones": [
+      {
+        "text": "Que el tramo entre los dos nodos ha sido seleccionado para formar parte de la ruta óptima recorrible.",
+        "isCorrect": true,
+        "rationale": "En modelos binarios de red, la variable adopta el valor de 1 si el arco o tramo específico se activa en la solución óptima."
+      },
+      {
+        "text": "Que el vehículo se ha quedado sin combustible en ese punto exacto.",
+        "isCorrect": false,
+        "rationale": "El modelo de optimización matemática presupone continuidad operativa y no modela fallas de combustible mediante binarios de selección de arco."
+      },
+      {
+        "text": "Que la distancia entre esos dos nodos es exactamente de un kilómetro.",
+        "isCorrect": false,
+        "rationale": "Las distancias de los arcos son parámetros fijos (costos) y no el valor que toma la variable de decisión binaria."
+      },
+      {
+        "text": "Que la ruta debe descartarse por completo de la simulación.",
+        "isCorrect": false,
+        "rationale": "En lógica binaria de optimización, el valor de 0 representa el descarte o no activación de un tramo, mientras que el 1 lo incluye."
+      },
+      {
+        "text": "Que la capacidad de la tolva se encuentra reducida al 1%.",
+        "isCorrect": false,
+        "rationale": "El modelo de ruta más corta evalúa distancias/costos de conexión entre nodos, no porcentajes de llenado de tolvas."
+      }
+    ],
+    "hint": "Recuerde cómo la lógica matemática binaria indica la inclusión (activación) de un arco de red dentro de la solución.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la clasificación de las Tecnologías de Información (TI) aplicadas a la logística, las herramientas como los sistemas ERP (ej. SAP, Oracle) se encuadran en la Categoría 1 porque:",
+    "opciones": [
+      {
+        "text": "Son etiquetas físicas que emiten señales satelitales directamente desde los insumos.",
+        "isCorrect": false,
+        "rationale": "Las etiquetas emisoras corresponden a hardware de identificación (RFID) en la Categoría 4 de comunicación y trazabilidad."
+      },
+      {
+        "text": "Son plataformas integrales de planificación de recursos empresariales que administran las transacciones de compras, inventarios y finanzas corporativas.",
+        "isCorrect": true,
+        "rationale": "Los ERP constituyen el núcleo de planificación e integración transaccional de la empresa, fundamentando la Categoría 1 de recursos empresariales."
+      },
+      {
+        "text": "Sirven exclusivamente para que los choferes visualicen mapas viales en sus teléfonos.",
+        "isCorrect": false,
+        "rationale": "Los mapas de navegación en cabina son herramientas operativas de ruteo o GPS (Categoría 2 o 4), no sistemas ERP empresariales."
+      },
+      {
+        "text": "Son un tipo de camión eléctrico para la distribución urbana.",
+        "isCorrect": false,
+        "rationale": "Un ERP es una solución de software y no un vehículo de transporte físico."
+      },
+      {
+        "text": "Son algoritmos de Inteligencia Artificial dedicados únicamente al pintado de almacenes.",
+        "isCorrect": false,
+        "rationale": "Los ERP gestionan bases de datos empresariales relacionales de negocio y no actividades de mantenimiento civil edilicio."
+      }
+    ],
+    "hint": "Piense en el software corporativo que integra contabilidad, abastecimiento y recursos a nivel gerencial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La Categoría 4 de TI en logística abarca sistemas de comunicación y trazabilidad en tiempo real. ¿Cuáles de las siguientes opciones forman parte de este grupo tecnológico?",
+    "opciones": [
+      {
+        "text": "Identificación por Radiofrecuencia (RFID): Microchips instalados en bienes o palets para lecturas automatizadas masivas a distancia.",
+        "isCorrect": true,
+        "rationale": "El RFID permite capturar la presencia y datos del producto sin contacto visual directo, acelerando inventarios."
+      },
+      {
+        "text": "Sistema de Posicionamiento Global (GPS): Dispositivos de rastreo satelital para monitorear la ubicación en tiempo real de flotas.",
+        "isCorrect": true,
+        "rationale": "El GPS otorga visibilidad geográfica continua sobre el avance de los vehículos en carretera."
+      },
+      {
+        "text": "Internet de las Cosas (IoT): Sensores interconectados que transmiten variables de estado (temperatura, impactos, presión).",
+        "isCorrect": true,
+        "rationale": "El IoT sensoriza la carga y los activos, enviando alertas inmediatas de desviación ambiental o física."
+      },
+      {
+        "text": "Formularios físicos de papel escritos a mano por el chofer.",
+        "isCorrect": false,
+        "rationale": "Los registros manuales en papel son métodos analógicos antiguos que carecen de conectividad digital en tiempo real."
+      },
+      {
+        "text": "Calculadoras mecánicas de escritorio sin conexión a red.",
+        "isCorrect": false,
+        "rationale": "Los dispositivos de cálculo aislados no ofrecen transmisión ni captura digital automática de datos de trazabilidad."
+      }
+    ],
+    "hint": "Seleccione las tecnologías electrónicas que emiten datos geográficos, lecturas automáticas o estados de la carga en tiempo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-07",
+    "diplomado": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la 'Logística Electrónica' (E-logistics) vinculada al comercio electrónico, ¿qué reto operacional crítico se presenta tras el momento en que el cliente hace 'clic' en comprar?",
+    "opciones": [
+      {
+        "text": "Prohibir el envío de notificaciones digitales al comprador.",
+        "isCorrect": false,
+        "rationale": "El e-commerce requiere transparencia y comunicación continua del estado del paquete mediante tracking digital."
+      },
+      {
+        "text": "Asegurar la sincronización perfecta entre el stock visible online, la preparación rápida del pedido (picking/packing) y la gestión de devoluciones (logística inversa).",
+        "isCorrect": true,
+        "rationale": "El éxito de la E-logistics depende de la exactitud entre el inventario del portal, la velocidad de despacho físico y la capacidad de atender cambios o retornos."
+      },
+      {
+        "text": "Obligar al cliente a recoger personalmente el producto en la fábrica del fabricante extranjero.",
+        "isCorrect": false,
+        "rationale": "El e-commerce busca facilitar la entrega mediante distribución directa al hogar o puntos convenientes de recogida."
+      },
+      {
+        "text": "Eliminar la necesidad de contar con almacenes físicos de preparación.",
+        "isCorrect": false,
+        "rationale": "Aunque la compra sea virtual, el producto físico requiere de centros de distribución para su custodia y empaque."
+      },
+      {
+        "text": "Aumentar los tiempos de despacho a un mínimo de 6 meses por envío.",
+        "isCorrect": false,
+        "rationale": "El comercio electrónico exige ciclos de entrega cada vez más cortos, buscando incluso despachos el mismo día."
+      }
+    ],
+    "hint": "Considere la coordinación exigida para cumplir la promesa de entrega y gestionar los posibles cambios o retornos de productos.",
+    "activo": true
+  }
+]

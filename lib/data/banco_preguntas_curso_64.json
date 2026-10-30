@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la utilidad práctica fundamental de clasificar los yacimientos minerales en la minería profesional?",
+    "opciones": [
+      {
+        "text": "Funciona como una guía o mapa estratégico para orientar la exploración, predecir el contenido mineral y determinar la viabilidad económica.",
+        "isCorrect": true,
+        "rationale": "Una clasificación adecuada actúa como brújula operativa, permitiendo estimar el potencial del depósito y evaluar si la inversión resulta rentable."
+      },
+      {
+        "text": "Sirve para determinar con exactitud la edad cronológica absoluta de la Tierra mediante datación por radioisótopos.",
+        "isCorrect": false,
+        "rationale": "La datación geocronológica mide la edad absoluta de las rocas mediante física nuclear, lo cual es distinto a categorizar yacimientos para fines de exploración económica."
+      },
+      {
+        "text": "Permite establecer las tarifas de tributación e impuestos a cobrarse a las empresas mineras internacionales.",
+        "isCorrect": false,
+        "rationale": "Los marcos tributarios son definidos por leyes fiscales de cada país y no por las características geológicas de clasificación de los yacimientos."
+      },
+      {
+        "text": "Sustituye por completo los trabajos de campo y muestreo directo mediante simulaciones puramente teóricas.",
+        "isCorrect": false,
+        "rationale": "La clasificación sistematiza el conocimiento pero no elimina la necesidad de exploración directa, perforación y muestreo de campo."
+      },
+      {
+        "text": "Sintetiza nuevos elementos químicos en laboratorio para alterar la pureza del mineral extraído.",
+        "isCorrect": false,
+        "rationale": "La clasificación organiza los depósitos naturales existentes; no es un proceso de síntesis ni alteración química artificial de elementos."
+      }
+    ],
+    "hint": "Considere cómo esta herramienta ayuda a los geólogos a tomar decisiones sobre dónde explorar y si el proyecto será rentable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué variables físicas basó Waldemar Lindgren su propuesta clásica de clasificación de yacimientos minerales?",
+    "opciones": [
+      {
+        "text": "En la temperatura y la presión del ambiente durante la formación mineral.",
+        "isCorrect": true,
+        "rationale": "Lindgren fundamentó su clasificación en las condiciones termodinámicas (presión y temperatura) que actúan como la 'receta de cocina' para la cristalización de minerales."
+      },
+      {
+        "text": "En la densidad relativa de la roca de caja y su color superficial.",
+        "isCorrect": false,
+        "rationale": "Aunque la densidad es importante en placeres, Lindgren no basó su sistema general en el color o la densidad de la roca hospedante."
+      },
+      {
+        "text": "En la velocidad de transporte de los ríos en las cuencas sedimentarias.",
+        "isCorrect": false,
+        "rationale": "La velocidad del flujo de agua es relevante para la dinámica de depósitos de placer, no para la clasificación termodinámica global de Lindgren."
+      },
+      {
+        "text": "En la antigüedad tectónica medida en miles de millones de años.",
+        "isCorrect": false,
+        "rationale": "La escala de tiempo geológico no fue el parámetro central de Lindgren, quien priorizó las variables físicocuímicas del ambiente mineralizador."
+      },
+      {
+        "text": "En el tipo de maquinaria pesada necesaria para triturar la roca.",
+        "isCorrect": false,
+        "rationale": "El equipamiento minero corresponde a la fase de explotación de ingeniería, no a los criterios geológicos de formación mineral."
+      }
+    ],
+    "hint": "Este geólogo analizó las condiciones termodinámicas que determinan la formación de los minerales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes enfoques teóricos identifican correctamente las propuestas de Niggli y Smirnov para clasificar yacimientos?",
+    "opciones": [
+      {
+        "text": "Niggli basó su clasificación principalmente en el origen o génesis de los yacimientos.",
+        "isCorrect": true,
+        "rationale": "Niggli se enfocó en los procesos genéticos iniciales que dan origen a las concentraciones minerales."
+      },
+      {
+        "text": "Smirnov asoció la formación de yacimientos a los procesos y ambientes tectónicos.",
+        "isCorrect": true,
+        "rationale": "Smirnov vinculó la distribución y tipo de depósitos a la evolución tectónica de la corteza."
+      },
+      {
+        "text": "Niggli clasificó los depósitos únicamente según la dureza de los minerales en la escala de Mohs.",
+        "isCorrect": false,
+        "rationale": "La escala de Mohs mide la resistencia al rayado individual del mineral, no la génesis geológica global del yacimiento planteada por Niggli."
+      },
+      {
+        "text": "Smirnov sostuvo que los procesos magmáticos no participan en la concentración de metales.",
+        "isCorrect": false,
+        "rationale": "Smirnov no negó la relevancia magmática, sino que la integró dentro del marco de la tectónica de placas."
+      },
+      {
+        "text": "Ambos autores descartaron las propiedades físico-químicas en la formación de rocas.",
+        "isCorrect": false,
+        "rationale": "Tanto la génesis como la tectónica comprenden y dependen profundamente de procesos físico-químicos."
+      }
+    ],
+    "hint": "Diferencie el enfoque basado en la génesis de la roca del enfoque centrado en la estructura geotectónica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son los dos caminos o fuentes principales de donde provienen casi todos los yacimientos minerales?",
+    "opciones": [
+      {
+        "text": "Procesos magmáticos y procesos sedimentarios.",
+        "isCorrect": true,
+        "rationale": "El enfriamiento del magma en el interior (fuego) y la acumulación/alteración de materiales en la superficie (sedimentos) representan las dos vías fundamentales de origen mineral."
+      },
+      {
+        "text": "Meteorización atmosférica y erupciones solares.",
+        "isCorrect": false,
+        "rationale": "Las erupciones solares son fenómenos astronómicos que no participan en la concentración mineral de la corteza terrestre."
+      },
+      {
+        "text": "Evaporación oceánica profunda y metamorfismo sintético.",
+        "isCorrect": false,
+        "rationale": "El metamorfismo sintético no es un proceso geológico natural de la Tierra."
+      },
+      {
+        "text": "Desintegración atómica y cristalización en el vacío.",
+        "isCorrect": false,
+        "rationale": "Estos fenómenos no describen los mecanismos geológicos endógenos ni exógenos que forman yacimientos terrestres."
+      },
+      {
+        "text": "Subducción de manto inferior e impactos de cometas.",
+        "isCorrect": false,
+        "rationale": "Aunque la subducción genera magma, los impactos de cometas no constituyen una de las dos vías genéricas principales de depósitos."
+      }
+    ],
+    "hint": "Piense en la distinción entre los procesos generados por el calor interno de la Tierra y los ocurridos por acción ambiental en la superficie.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué proporción aproximada del platino y paladio a nivel mundial proviene de depósitos de sulfuros magmáticos?",
+    "opciones": [
+      {
+        "text": "Más del 96%.",
+        "isCorrect": true,
+        "rationale": "Casi la totalidad de las reservas globales de estos metales del grupo del platino se concentran en yacimientos de sulfuros de origen magmático."
+      },
+      {
+        "text": "Aproximadamente el 50%.",
+        "isCorrect": false,
+        "rationale": "Esta cifra subestima considerablemente la abrumadora dominancia que poseen los depósitos magmáticos sobre estos metales específicos."
+      },
+      {
+        "text": "Alrededor del 25%.",
+        "isCorrect": false,
+        "rationale": "Un porcentaje del 25% no refleja la alta concentración mundial que depende de estos eventos magmáticos."
+      },
+      {
+        "text": "Menos del 10%.",
+        "isCorrect": false,
+        "rationale": "Esa proporción es errónea, ya que las fuentes no magmáticas de platino son marginales."
+      },
+      {
+        "text": "El 75%.",
+        "isCorrect": false,
+        "rationale": "Aunque es una cifra alta, la contribución real documentada supera holgadamente el 90%."
+      }
+    ],
+    "hint": "Se trata de un porcentaje extremadamente alto que representa casi la totalidad de la producción mundial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué propiedad estructural de las rocas carbonatadas, como la caliza, las convierte en excelentes reservorios subterráneos de agua, petróleo o gas?",
+    "opciones": [
+      {
+        "text": "Su porosidad interna, que les permite comportarse como una esponja para almacenar fluidos.",
+        "isCorrect": true,
+        "rationale": "Los espacios vacíos o poros en la matriz de las rocas carbonatadas ofrecen el espacio físico necesario para acumular y retener fluidos de valor económico."
+      },
+      {
+        "text": "Su densidad extrema que impide el paso de cualquier tipo de sustancia.",
+        "isCorrect": false,
+        "rationale": "Una roca impermeable o excesivamente densa actuaría como sello y no como reservorio de fluidos."
+      },
+      {
+        "text": "Su capacidad para disolverse totalmente al contacto con el agua pura.",
+        "isCorrect": false,
+        "rationale": "La disolución total destruye la estructura de la roca en lugar de actuar como un recipiente poroso estable."
+      },
+      {
+        "text": "Su composición vítrea sin espacios intergranulares.",
+        "isCorrect": false,
+        "rationale": "Una textura vítrea carece de la porosidad requerida para albergar recursos hídricos u de hidrocarburos."
+      },
+      {
+        "text": "Su elasticidad que deforma los hidrocarburos transformándolos en metales.",
+        "isCorrect": false,
+        "rationale": "Las rocas no transforman químicamente los hidrocarburos en metales por elasticidad."
+      }
+    ],
+    "hint": "Reflexione sobre la característica física que permite a una roca contener líquidos dentro de su estructura interna.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el principio geológico fundamental que explica cómo se forman los yacimientos de tipo placer?",
+    "opciones": [
+      {
+        "text": "Un proceso de selección y concentración natural por densidad mediante la acción del agua o el viento.",
+        "isCorrect": true,
+        "rationale": "Los minerales de alta densidad son separados físicamente de los minerales más livianos por el flujo del agua o viento, concentrándose acumulativamente."
+      },
+      {
+        "text": "La cristalización violenta de fluidos magmáticos dentro de fracturas de origen tectónico.",
+        "isCorrect": false,
+        "rationale": "Ese mecanismo describe la formación de vetas hidrotermales, no el transporte y acumulación sedimentaria de un placer."
+      },
+      {
+        "text": "La evaporación total de grandes masas de agua salada en cuencas cerradas.",
+        "isCorrect": false,
+        "rationale": "La evaporación genera depósitos de evaporitas (como la sal gema), no depósitos de placer por densidad."
+      },
+      {
+        "text": "La fusión por fricción entre dos placas tectónicas en zonas de subducción.",
+        "isCorrect": false,
+        "rationale": "La fusión tectónica genera magma en profundidad y no la selección mecánica de sedimentos en superficie."
+      },
+      {
+        "text": "La transformación química de granito en minerales preciosos por acción bacteriana.",
+        "isCorrect": false,
+        "rationale": "Los placeres son fruto de procesos mecánicos de separación física y no de alquimia o transformación bacteriana."
+      }
+    ],
+    "hint": "Piense en cómo las corrientes de agua separan de manera natural los materiales pesados de la arena común.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes etapas corresponden a la secuencia secuencial de tres actos en la formación de un placer?",
+    "opciones": [
+      {
+        "text": "Meteorización, donde la roca madre original se rompe o desintegra.",
+        "isCorrect": true,
+        "rationale": "La meteorización es el primer paso necesario para liberar los minerales atrapados en la roca dura."
+      },
+      {
+        "text": "Transporte, donde el agua o el viento movilizan los fragmentos liberados.",
+        "isCorrect": true,
+        "rationale": "El fluido de transporte moviliza las partículas iniciando el proceso de separación por peso."
+      },
+      {
+        "text": "Deposición, donde los minerales pesados se asientan debido a su alta densidad.",
+        "isCorrect": true,
+        "rationale": "La disminución de energía en la corriente provoca la sedimentación selectiva de los minerales más densos."
+      },
+      {
+        "text": "Metamorfismo de contacto, donde el magma funde las arenas del lecho.",
+        "isCorrect": false,
+        "rationale": "El metamorfismo implica alteración térmica/de presión profunda y no participa en la dinámica exógena del placer."
+      },
+      {
+        "text": "Subducción, donde los sedimentos se hunden hasta el manto terrestre.",
+        "isCorrect": false,
+        "rationale": "La subducción destruye las rocas en el manto y no forma depósitos superficiales de placer."
+      }
+    ],
+    "hint": "Identifique la secuencia que inicia con la ruptura del material, sigue con su movimiento y termina con su asentamiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué propiedades físicas de minerales como el oro son clave para su concentración en un depósito de placer?",
+    "opciones": [
+      {
+        "text": "Alta densidad o peso específico.",
+        "isCorrect": true,
+        "rationale": "La elevada densidad hace que el mineral caiga rápidamente al fondo cuando disminuye la fuerza de la corriente."
+      },
+      {
+        "text": "Alta durabilidad o resistencia al desgaste mecánico durante el transporte.",
+        "isCorrect": true,
+        "rationale": "La dureza y resistencia evitan que el mineral se pulverice o destruya durante el arrastre hídrico."
+      },
+      {
+        "text": "Elevada solubilidad en agua dulce.",
+        "isCorrect": false,
+        "rationale": "Si un mineral fuera soluble en agua, se disolvería durante el transporte en lugar de acumularse como grano sólido."
+      },
+      {
+        "text": "Alta volatilidad al entrar en contacto con el aire.",
+        "isCorrect": false,
+        "rationale": "Un mineral volátil se evaporaría en la superficie impidiendo la formación de un depósito de placer."
+      },
+      {
+        "text": "Bajo punto de fusión bajo condiciones ambientales.",
+        "isCorrect": false,
+        "rationale": "El punto de fusión abarca cambios térmicos de estado y no influye en la separación mecánica en un río."
+      }
+    ],
+    "hint": "Recuerde las dos características que evitan que el mineral se rompa y permiten que se hunda rápido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué los yacimientos de placer reducen drásticamente los costos de operación en la pequeña minería?",
+    "opciones": [
+      {
+        "text": "Porque el mineral ya se encuentra suelto y concentrado por los procesos naturales, evitando la trituración compleja de rocas.",
+        "isCorrect": true,
+        "rationale": "La naturaleza realiza el trabajo pesado de liberar y concentrar los granos valiosos, eliminado la necesidad de voladura y molienda industrial pesada."
+      },
+      {
+        "text": "Porque eliminan la necesidad de utilizar agua en los procesos de lavado.",
+        "isCorrect": false,
+        "rationale": "El procesamiento de placeres suele requerir bastante agua para lavar y separar gravas mediante gravimetría."
+      },
+      {
+        "text": "Porque están exentos de leyes de densidad y gravedad durante su extracción.",
+        "isCorrect": false,
+        "rationale": "Las leyes de la gravedad son precisamente las que hacen posible la separación de los placeres."
+      },
+      {
+        "text": "Porque convierten instantáneamente el mineral en lingotes procesados.",
+        "isCorrect": false,
+        "rationale": "El placer concentra las pepitas o granos sueltos, pero sigue requiriendo una etapa de recolección y fundición básica."
+      },
+      {
+        "text": "Porque se ubican siempre dentro de minas subterráneas de fácil acceso.",
+        "isCorrect": false,
+        "rationale": "Los placeres son mayoritariamente depósitos superficiales o aluviales, no labores subterráneas complejas."
+      }
+    ],
+    "hint": "Considere qué etapas de fragmentación y trituración de roca madre son ahorradas gracias al trabajo del río.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia principal entre un placer eluvial y un placer fluvial?",
+    "opciones": [
+      {
+        "text": "El placer eluvial se queda cerca de la roca de origen, mientras que el fluvial es transportado y clasificado por el río.",
+        "isCorrect": true,
+        "rationale": "Los placeres eluviales sufren escaso transporte acumulándose sobre o junto a la fuente, a diferencia de los fluviales que recorren distancias en el sistema hídrico."
+      },
+      {
+        "text": "El eluvial contiene metales líquidos y el fluvial contiene metales gaseosos.",
+        "isCorrect": false,
+        "rationale": "Ambos tipos de placeres contienen partículas minerales sólidas de alta densidad."
+      },
+      {
+        "text": "El eluvial se forma en volcanes y el fluvial en el fondo marino profundo.",
+        "isCorrect": false,
+        "rationale": "Ambos son procesos sedimentarios exógenos en la superficie continental."
+      },
+      {
+        "text": "El eluvial es producto del viento y el fluvial del impacto de glaciares.",
+        "isCorrect": false,
+        "rationale": "Los placeres formados por el viento se denominan eólicos, no eluviales."
+      },
+      {
+        "text": "El eluvial carece de valor económico y el fluvial es el único explotable en el mundo.",
+        "isCorrect": false,
+        "rationale": "Aunque los fluviales suelen ser más relevantes económicamente, los eluviales también pueden ser explotados."
+      }
+    ],
+    "hint": "Tenga en cuenta el grado de desplazamiento del mineral con respecto al lugar de donde se desprendió.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué zona de la trayectoria de un río se crean las trampas naturales ideales para la deposición de mineral pesado en un placer fluvial?",
+    "opciones": [
+      {
+        "text": "En las curvas o meandros, donde la corriente desacelera su velocidad.",
+        "isCorrect": true,
+        "rationale": "En la parte interna de los meandros la energía del agua cae, impidiendo sostener el transporte de sedimentos densos como el oro."
+      },
+      {
+        "text": "En las caídas de agua y zonas de rápida aceleración del flujo.",
+        "isCorrect": false,
+        "rationale": "La alta velocidad de la corriente en las cascadas arrastra las partículas e impide su asentamiento estable."
+      },
+      {
+        "text": "En la zona central más profunda del cauce directo de alta velocidad.",
+        "isCorrect": false,
+        "rationale": "El flujo central veloz mantiene los minerales en suspensión o arrastre activo sin permitir su concentración pasiva."
+      },
+      {
+        "text": "En la cima de las colinas adyacentes a la cuenca hidrográfica.",
+        "isCorrect": false,
+        "rationale": "Las zonas elevadas fuera del cauce no reciben el flujo de sedimentos transportados por el río."
+      },
+      {
+        "text": "En la capa superior de espuma flotante del río.",
+        "isCorrect": false,
+        "rationale": "Debido a su elevada densidad, los minerales pesados se hunden al fondo en lugar de flotar."
+      }
+    ],
+    "hint": "Busque el lugar del curso hídrico donde el agua pierde velocidad de transporte.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el tipo de yacimiento considerado el pilar de la producción masiva de cobre en el Perú?",
+    "opciones": [
+      {
+        "text": "Pórfidos cupríferos.",
+        "isCorrect": true,
+        "rationale": "Los pórfidos de cobre constituyen la columna vertebral de la minería de gran escala en el Perú por sus volúmenes gigantescos de reserva."
+      },
+      {
+        "text": "Placeres aluviales.",
+        "isCorrect": false,
+        "rationale": "Los placeres son relevantes para el oro secundario, pero no representan la fuente principal de producción industrial de cobre."
+      },
+      {
+        "text": "Evaporitas marinos.",
+        "isCorrect": false,
+        "rationale": "Las evaporitas son depósitos no metálicos (sales) y no generan cobre."
+      },
+      {
+        "text": "Carbonatitas estratiformes.",
+        "isCorrect": false,
+        "rationale": "Las carbonatitas se asocian principalmente a elementos de tierras raras o niobio, no a los grandes yacimientos de cobre peruanos."
+      },
+      {
+        "text": "Vetas de cuarzo de baja presión atmosférica.",
+        "isCorrect": false,
+        "rationale": "Las vetas estrechas no alcanzan los volúmenes de producción masiva característicos de los sistemas porfídicos."
+      }
+    ],
+    "hint": "Son depósitos gigantescos de ley media a baja que posicionan al Perú como potencia cuprífera mundial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué otros metales se extraen comúnmente como subproductos valiosos dentro de los pórfidos cupríferos peruanos?",
+    "opciones": [
+      {
+        "text": "Molibdeno.",
+        "isCorrect": true,
+        "rationale": "El molibdeno es un subproducto metálico clásico recuperado en el procesamiento de pórfidos de cobre."
+      },
+      {
+        "text": "Oro.",
+        "isCorrect": true,
+        "rationale": "Muchos sistemas porfídicos contienen concentraciones significativas de oro recuperable junto al cobre."
+      },
+      {
+        "text": "Mercurio nativo abundante.",
+        "isCorrect": false,
+        "rationale": "El mercurio no es un subproducto primario extraído a gran escala comercial en los pórfidos de cobre."
+      },
+      {
+        "text": "Níquel puro estratificado.",
+        "isCorrect": false,
+        "rationale": "El níquel suele asociarse a rocas ultramáficas magmáticas y no es la firma representativa de los pórfidos andinos."
+      },
+      {
+        "text": "Aluminio elemental.",
+        "isCorrect": false,
+        "rationale": "El aluminio comercial se extrae de la bauxita sedimentaria/residual y no de subproductos en pórfidos."
+      }
+    ],
+    "hint": "Piense en los metales asociados que incrementan el valor económico de las megaminas de cobre.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes operaciones mineras en el Perú son ejemplos representativos de yacimientos de tipo pórfido?",
+    "opciones": [
+      {
+        "text": "Las Bambas.",
+        "isCorrect": true,
+        "rationale": "Las Bambas es una megaoperación basada en sistemas porfídicos/skarn de cobre."
+      },
+      {
+        "text": "Cerro Verde.",
+        "isCorrect": true,
+        "rationale": "Cerro Verde es uno de los depósitos porfídicos de cobre más grandes del sur peruano."
+      },
+      {
+        "text": "Toquepala.",
+        "isCorrect": true,
+        "rationale": "Toquepala representa un ejemplo histórico y clásico de pórfido de cobre en el Perú."
+      },
+      {
+        "text": "Yanacocha.",
+        "isCorrect": false,
+        "rationale": "Yanacocha es un yacimiento de tipo epitermal de oro/plata y no un pórfido de cobre principal."
+      },
+      {
+        "text": "Shahuindo.",
+        "isCorrect": false,
+        "rationale": "Shahuindo corresponde a un sistema epitermal de metales preciosos."
+      }
+    ],
+    "hint": "Identifique las minas famosas reconocidas internacionalmente por sus masivas reservas de cobre.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué metales preciosos son el objetivo principal de exploración y extracción en los yacimientos de tipo epitermal en el Perú?",
+    "opciones": [
+      {
+        "text": "Oro y plata.",
+        "isCorrect": true,
+        "rationale": "Los depósitos epitermales formados cerca de la superficie volcánica son la principal fuente de producción de oro y plata en el país."
+      },
+      {
+        "text": "Hierro y cobalto.",
+        "isCorrect": false,
+        "rationale": "El hierro se asocia a yacimientos de reemplazamiento o de tipo IOCG y no a los epitermales de metales preciosos."
+      },
+      {
+        "text": "Cobre y estaño exclusivamente.",
+        "isCorrect": false,
+        "rationale": "Aunque puede haber trazas de cobre, el sello económico clave de los epitermales son los metales preciosos (oro y plata)."
+      },
+      {
+        "text": "Plomo y uranio.",
+        "isCorrect": false,
+        "rationale": "El uranio no es el recurso característico de la franja epitermal andina peruana."
+      },
+      {
+        "text": "Litio y potasio.",
+        "isCorrect": false,
+        "rationale": "El litio se encuentra en salares o tufas volcánicas alteradas, no en el modelo epitermal clásico de oro/plata."
+      }
+    ],
+    "hint": "Son dos metales preciosos de gran valor histórico vinculados a sistemas volcánicos someros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué características e intocables referentes corresponden a los yacimientos epitermales en el contexto peruano?",
+    "opciones": [
+      {
+        "text": "Se forman en zonas someras cercanas a la superficie, ligados a la actividad volcánica.",
+        "isCorrect": true,
+        "rationale": "El término epitermal se refiere precisamente a ambientes de baja temperatura y baja presión cercanos a la superficie volcánica."
+      },
+      {
+        "text": "Yanacocha ha sido un ejemplo emblemático a nivel latinoamericano para este tipo de depósitos.",
+        "isCorrect": true,
+        "rationale": "Yanacocha en Cajamarca es conocida mundialmente como uno de los distritos epitermales de oro más grandes de la región."
+      },
+      {
+        "text": "La Arena y Shahuindo son ejemplos que complementan la importancia del oro en estos sistemas.",
+        "isCorrect": true,
+        "rationale": "Ambas minas constituyen depósitos epitermales activos de metales preciosos."
+      },
+      {
+        "text": "Requieren presiones del manto profundo superiores a los 50 kilómetros de profundidad.",
+        "isCorrect": false,
+        "rationale": "Los yacimientos epitermales se forman a muy poca profundidad (generalmente a menos de 1 ó 2 km de la superficie)."
+      },
+      {
+        "text": "Son la fuente primaria del 100% del platino extraído en Sudamérica.",
+        "isCorrect": false,
+        "rationale": "El platino proviene predominantemente de sulfuros magmáticos ultrabásicos y no de epitermales."
+      }
+    ],
+    "hint": "Recuerde el entorno magmático-volcánico somero y las minas de oro icónicas del norte del Perú.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el proceso geológico distintivo que origina un yacimiento de tipo Skarn?",
+    "opciones": [
+      {
+        "text": "La reacción química entre magma a altas temperaturas y rocas calcáreas o carbonatadas.",
+        "isCorrect": true,
+        "rationale": "El contacto entre una intrusión magmática caliente y la roca de caja rica en carbonatos genera un metasomatismo que concentra múltiples metales."
+      },
+      {
+        "text": "El asentamiento de gravas pesadas en el lecho seco de un río estacional.",
+        "isCorrect": false,
+        "rationale": "Eso describe la mecánica de un placer fluvial y no la alteración metasomática de un skarn."
+      },
+      {
+        "text": "La evaporación de fluidos en lagunas altoandinas durante miles de años.",
+        "isCorrect": false,
+        "rationale": "Ese proceso da lugar a salares o depósitos evaporíticos no metálicos."
+      },
+      {
+        "text": "La caída de ceniza volcánica sobre cuencas de agua dulce helada.",
+        "isCorrect": false,
+        "rationale": "La ceniza genera depósitos piroclásticos, no la zonificación mineralizada reactiva de un skarn."
+      },
+      {
+        "text": "El impacto térmico de meteoritos sobre capas de carbón puro.",
+        "isCorrect": false,
+        "rationale": "Los impactos de meteoritos no forman los cuerpos mineralizados de tipo skarn descritos en la geología regional."
+      }
+    ],
+    "hint": "Piense en la interacción química de 'cocina geológica' entre intrusivos magmáticos y rocas calizas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la mina Antamina es calificada en geología como un depósito complejo o híbrido?",
+    "opciones": [
+      {
+        "text": "Porque reúne características de mineralización correspondientes tanto a pórfidos como a skarn.",
+        "isCorrect": true,
+        "rationale": "Antamina posee áreas mineralizadas con comportamiento de pórfido y otras zonas formadas por fuerte reemplazamiento metasomático de tipo skarn."
+      },
+      {
+        "text": "Porque alterna la extracción de metales con la producción de petróleo líquido.",
+        "isCorrect": false,
+        "rationale": "Antamina es una operación strictly de minería metálica (cobre, zinc, molibdeno, plata) y no produce hidrocarburos."
+      },
+      {
+        "text": "Porque el mineral se extrae exclusivamente mediante barcos en un lago subterráneo.",
+        "isCorrect": false,
+        "rationale": "Se trata de un tajo abierto convencional a gran escala en la cordillera, no de una labor lacustre subterránea."
+      },
+      {
+        "text": "Porque fue creada artificialmente mediante explosiones nucleares de prueba.",
+        "isCorrect": false,
+        "rationale": "Es un depósito geológico natural formado por procesos geotectónicos andinos."
+      },
+      {
+        "text": "Porque cambia su composición de metales pesados a gas natural según la estación.",
+        "isCorrect": false,
+        "rationale": "La composición geológica de un yacimiento no cambia estacionalmente."
+      }
+    ],
+    "hint": "Considere la combinación de los dos modelos de yacimientos más importantes de alta temperatura en un mismo distrito.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué objeto de estudio define a la ciencia de la Metalogenia?",
+    "opciones": [
+      {
+        "text": "La relación espacial, temporal y tectónica que explica el origen y distribución de los yacimientos minerales.",
+        "isCorrect": true,
+        "rationale": "La metalogenia analiza 'el chisme completo': cómo, cuándo y por qué los minerales se concentraron en zonas específicas vinculadas a la evolución terrestre."
+      },
+      {
+        "text": "Las fórmulas químicas para sintetizar aleaciones metálicas en la industria automotriz.",
+        "isCorrect": false,
+        "rationale": "La síntesis de aleaciones es campo de la ingeniería de materiales y metalurgia de transformación, no de la metalogenia geológica."
+      },
+      {
+        "text": "La medición de la resistencia mecánica de los cables de acero en puentes.",
+        "isCorrect": false,
+        "rationale": "La resistencia de cables es un estudio de ingeniería civil y mecánica de materiales."
+      },
+      {
+        "text": "La clasificación botánica de árboles que crecen en suelos ricos en hierro.",
+        "isCorrect": false,
+        "rationale": "Eso corresponde a la biogeobotánica o geobotánica de prospección, no a la metalogenia."
+      },
+      {
+        "text": "El diseño de leyes contables para la venta de joyas en el mercado minorista.",
+        "isCorrect": false,
+        "rationale": "Las leyes contables y comerciales no son el objeto de estudio de las ciencias geológicas metalogenéticas."
+      }
+    ],
+    "hint": "Esta disciplina conecta la formación de minerales con los grandes movimientos y la historia tectónica del planeta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la estructura geológica que funciona como el gran motor y la fábrica mineralizadora del territorio peruano?",
+    "opciones": [
+      {
+        "text": "La Cordillera de los Andes.",
+        "isCorrect": true,
+        "rationale": "Toda la actividad magmática, tectónica y de fluidos que creó los yacimientos del Perú está directamente ligada a la formación y evolución de los Andes."
+      },
+      {
+        "text": "El Escudo Brasileño.",
+        "isCorrect": false,
+        "rationale": "El Escudo Brasileño es un cratón antiguo ubicado al este del continente y no la cordillera magmática activa del Perú."
+      },
+      {
+        "text": "La Llanura Costera del Pacífico.",
+        "isCorrect": false,
+        "rationale": "La llanura costera es una franja sedimentaria y no el motor geotectónico magmático de la cordillera."
+      },
+      {
+        "text": "La Fosa de Puerto Rico.",
+        "isCorrect": false,
+        "rationale": "Es una estructura oceánica del Caribe, ajena a la orogénesis andina peruana."
+      },
+      {
+        "text": "La Placa Antártica.",
+        "isCorrect": false,
+        "rationale": "La Placa Antártica interactúa en el extremo sur del continente, no en el margen convergente central peruano."
+      }
+    ],
+    "hint": "Se trata de la principal cadena montañosa de Sudamérica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué pasos resumen la 'receta de tres pasos' que dio origen a las franjas metalogenéticas andinas en el Perú?",
+    "opciones": [
+      {
+        "text": "El choque o subducción entre la Placa de Nazca y la Placa Sudamericana.",
+        "isCorrect": true,
+        "rationale": "El margen convergente de placas es la fuerza tectónica primaria que inicia todo el proceso."
+      },
+      {
+        "text": "La generación masiva de magma a lo largo de millones de años por dicho choque.",
+        "isCorrect": true,
+        "rationale": "La fusión parcial asociada a la subducción genera inmensos volúmenes de magma cargados de metales."
+      },
+      {
+        "text": "El alineamiento de la mineralización en franjas o provincias paralelas a la cordillera.",
+        "isCorrect": true,
+        "rationale": "El ascenso del magma y la deformación tectónica acomodaron los minerales en franjas longitudinales específicas."
+      },
+      {
+        "text": "La congelación global de la superficie oceánica durante el Pleistoceno.",
+        "isCorrect": false,
+        "rationale": "Los eventos glaciares superficiales no generan el magma ni la arquitectura metalogenética profunda."
+      },
+      {
+        "text": "La apertura de un rift continental que dividió al Perú en dos islas separadas.",
+        "isCorrect": false,
+        "rationale": "La geología andina peruana está dominada por subducción continental convergente y no por la separación de un rift continental activo."
+      }
+    ],
+    "hint": "Piense en la interacción de placas, la producción de magma y la distribución ordenada de yacimientos en franjas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos representan los principales frenos no geológicos para el desarrollo de proyectos mineros en el Perú?",
+    "opciones": [
+      {
+        "text": "Conflictos sociales y falta de confianza en el entorno comunitario.",
+        "isCorrect": true,
+        "rationale": "La oposición social y las disputas por beneficios locales paralizan numerosos proyectos aprobados."
+      },
+      {
+        "text": "Exceso de trámites burocráticos y demoras administrativas (tramitología).",
+        "isCorrect": true,
+        "rationale": "La tramitología puede postergar el inicio operativo de una mina durante décadas."
+      },
+      {
+        "text": "Percepción de inseguridad y elevado riesgo país.",
+        "isCorrect": true,
+        "rationale": "La incertidumbre política e institucional desanima la llegada de capitales internacionales a largo plazo."
+      },
+      {
+        "text": "Inexistencia total de reservas minerales de cobre en el subsuelo.",
+        "isCorrect": false,
+        "rationale": "Las reservas geológicas están ampliamente comprobadas y son gigantescas; el problema de fondo no es la falta de recurso."
+      },
+      {
+        "text": "Una prohibición global emitida por la ONU sobre la compra de metales.",
+        "isCorrect": false,
+        "rationale": "No existe tal prohibición; al contrario, la demanda mundial de metales va en aumento."
+      }
+    ],
+    "hint": "Considere la paradoja de tener una enorme riqueza geológica atrapada por barreras de carácter humano, social y político.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué minerales del portafolio del Perú son considerados estratégicos para la transición energética y el futuro verde mundial?",
+    "opciones": [
+      {
+        "text": "Cobre, necesario para el cableado, electrificación y tecnologías renovables.",
+        "isCorrect": true,
+        "rationale": "El cobre es el metal conductor fundamental sobre el que se apoya la electrificación masiva."
+      },
+      {
+        "text": "Litio, esencial para el desarrollo de baterías de vehículos eléctricos.",
+        "isCorrect": true,
+        "rationale": "El litio recien hallado en el país es crítico para el almacenamiento de energía en movilidad limpia."
+      },
+      {
+        "text": "Plata y Zinc, clave para componentes solares y baterías de almacenamiento.",
+        "isCorrect": true,
+        "rationale": "La plata se usa masivamente en paneles fotovoltaicos y el zinc en tecnologías de recubrimiento y almacenamiento energético."
+      },
+      {
+        "text": "Mercurio, indispensable para alimentar turbinas eólicas continentales.",
+        "isCorrect": false,
+        "rationale": "El mercurio es un metal tóxico que está siendo eliminado de los procesos industriales y no impulsa las energías verdes."
+      },
+      {
+        "text": "Asbesto, utilizado como catalizador no contaminante en motores diésel.",
+        "isCorrect": false,
+        "rationale": "El asbesto es un material nocivo prohibido y carece de rol en las tecnologías limpias de la transición energética."
+      }
+    ],
+    "hint": "Identifique los metales indispensables para reemplazar los combustibles fósiles por sistemas eléctricos y renovables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ventaja económica estratégica le otorga al Perú contar con una amplia variedad de yacimientos minerales (pórfidos, epitermales, skarns)?",
+    "opciones": [
+      {
+        "text": "Funciona como un portafolio de inversión diversificado que otorga solidez ante la fluctuación de precios internacionales.",
+        "isCorrect": true,
+        "rationale": "Contar con múltiples metales y tipos de depósito evita depender de la cotización de un único recurso, protegiendo la economía nacional."
+      },
+      {
+        "text": "Entorpece la minería al requerir ingenieros de países diferentes para cada depósito.",
+        "isCorrect": false,
+        "rationale": "La diversidad mineral no es un obstáculo técnico, sino una fortaleza económica y geológica."
+      },
+      {
+        "text": "Obliga al país a vender sus reservas a precios reducidos por falta de especialización.",
+        "isCorrect": false,
+        "rationale": "Tener riqueza diversificada incrementa el atractivo para distintos perfiles de inversionistas globales."
+      },
+      {
+        "text": "Impide la explotación a gran escala debido a la mezcla de metales en la misma Roca.",
+        "isCorrect": false,
+        "rationale": "Los yacimientos están distribuidos geográficamente en franjas bien definidas que se explotan según su propia naturaleza."
+      },
+      {
+        "text": "Garantiza la eliminación automática de toda la burocracia administrativa.",
+        "isCorrect": false,
+        "rationale": "La variedad geológica no resuelve por sí misma los problemas administrativos o la burocracia estatal."
+      }
+    ],
+    "hint": "Considere el concepto financiero de 'no poner todos los huevos en la misma canasta' aplicado a la riqueza minera.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál fue el criterio genético determinante propuesto por Waldemar Lindgren para clasificar los yacimientos minerales, a diferencia del enfoque tectónico de Smirnov o del enfoque centrado en el origen de Niggli?",
+    "opciones": [
+      {
+        "text": "La combinación de presión y temperatura prevalecientes durante la formación.",
+        "isCorrect": true,
+        "rationale": "Lindgren propuso una clasificación físico-química basada en el rango termodinámico (temperatura y presión) en el que se precipitan los minerales."
+      },
+      {
+        "text": "La posición geotectónica respecto al margen continental en subducción.",
+        "isCorrect": false,
+        "rationale": "El entorno tectónico y su relación con la geodinámica cortical fue la base del modelo conceptual propuesto por Smirnov, no por Lindgren."
+      },
+      {
+        "text": "El ambiente sedimentario de deposición y la litología de la roca hospedante.",
+        "isCorrect": false,
+        "rationale": "Lindgren no limitó su modelo a ambientes sedimentarios ni al tipo de roca caja, sino a los parámetros termodinámicos de la solución mineralizadora."
+      },
+      {
+        "text": "La edad radiométrica y el grado de enfriamiento del cuerpo plutónico.",
+        "isCorrect": false,
+        "rationale": "Aunque el enfriamiento magmático influye en la temperatura, el sistema de Lindgren no se estructuró a partir de edades geológicas radiométricas."
+      },
+      {
+        "text": "La relación volumétrica entre minerales metálicos refractarios y volátiles.",
+        "isCorrect": false,
+        "rationale": "Niggli prestó especial atención a las fases magmáticas y volátiles según su origen, mientras que Lindgren formalizó las condiciones de $P$ y $T$."
+      }
+    ],
+    "hint": "Piensa en las condiciones físicas de temperatura y presión que actúan durante la cristalización mineral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Los yacimientos de sulfuros magmáticos destacan por su extraordinaria relevancia económica global. ¿Qué proporción aproximada del platino y paladio del mundo proviene de este tipo genético?",
+    "opciones": [
+      {
+        "text": "Más del 96%.",
+        "isCorrect": true,
+        "rationale": "Los depósitos magmáticos de sulfuros constituyen la fuente dominante a nivel global para los metales del grupo del platino, superando el 96% de la producción mundial."
+      },
+      {
+        "text": "Aproximadamente el 50%.",
+        "isCorrect": false,
+        "rationale": "Esta cifra subestima fuertemente la concentración real del suministro mundial proveniente de depósitos de sulfuros magmáticos."
+      },
+      {
+        "text": "Cercana al 75%.",
+        "isCorrect": false,
+        "rationale": "Aunque representa una mayoría significativa, la cifra documentada en la geología económica para estos metales específicos supera el 96%."
+      },
+      {
+        "text": "Alrededor del 30%.",
+        "isCorrect": false,
+        "rationale": "Un porcentaje del 30% no refleja el dominio casi monopolítico de los procesos magmáticos en la concentración de platino y paladio."
+      },
+      {
+        "text": "Menos del 15%.",
+        "isCorrect": false,
+        "rationale": "Los yacimientos secundarios o sedimentarios solo aportan una fracción marginal de estos metales, no la mayoría."
+      }
+    ],
+    "hint": "Este tipo de yacimiento concentra la abrumadora mayoría de los elementos del grupo del platino a nivel mundial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de los depósitos sedimentarios, las rocas carbonatadas como las calizas desempeñan un doble rol. ¿A qué propiedad de su estructura interna se debe su capacidad de almacenar recursos como agua, petróleo o gas?",
+    "opciones": [
+      {
+        "text": "A su porosidad interna, la cual les permite funcionar de manera análoga a una esponja.",
+        "isCorrect": true,
+        "rationale": "La porosidad y permeabilidad de las rocas carbonatadas crean espacios intersticiales capaces de almacenar y transmitir fluidos de alto valor económico."
+      },
+      {
+        "text": "A su elevada dureza superficial frente a los procesos de abrasión mecánica.",
+        "isCorrect": false,
+        "rationale": "La dureza influye en la resistencia a la intemperie, pero no determina la capacidad de almacenamiento de fluidos dentro de la matriz rocosa."
+      },
+      {
+        "text": "A su baja reactividad ante soluciones hidrotermales ácidas.",
+        "isCorrect": false,
+        "rationale": "Las calizas son altamente reactivas ante fluidos ácidos, lo que de hecho facilita la disolución y creación de porosidad secundaria, más no su inercia."
+      },
+      {
+        "text": "A su alta densidad relativa frente a los clastos terrígenos continentales.",
+        "isCorrect": false,
+        "rationale": "La densidad de la roca no interviene en el volumen de poro disponible para el entrampamiento de hidrocarburos o acuíferos."
+      },
+      {
+        "text": "A su textura foliada imperneable que impide el flujo horizontal.",
+        "isCorrect": false,
+        "rationale": "Las calizas sedimentarias no poseen foliación metabólica; por el contrario, requieren vías permeables para albergar fluidos."
+      }
+    ],
+    "hint": "Considera el atributo del espacio intersticial que permite la acumulación y retención de fluidos dentro de la roca.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "El proceso geológico de formación de un yacimiento de tipo placer se desarrolla de manera secuencial. ¿Cuáles de los siguientes procesos forman parte de esta secuencia en tres actos?",
+    "opciones": [
+      {
+        "text": "Meteorización y rotura de la roca matriz original.",
+        "isCorrect": true,
+        "rationale": "Constituye el primer acto, donde la alteración física y química libera las partículas minerales pesadas de la roca fuente."
+      },
+      {
+        "text": "Transporte de los fragmentos por acción del agua o del viento.",
+        "isCorrect": true,
+        "rationale": "Representa el segundo acto, en el cual el agente de transporte moviliza la mezcla de sedimentos a lo largo del sistema de drenaje."
+      },
+      {
+        "text": "Deposición y acumulación selectiva basada en la densidad.",
+        "isCorrect": true,
+        "rationale": "Corresponde al tercer acto, donde las partículas más densas precipitan al disminuir la energía del fluido portador."
+      },
+      {
+        "text": "Metamorfismo de contacto de alta presión y temperatura.",
+        "isCorrect": false,
+        "rationale": "El metamorfismo implica transformaciones recristalinas profundas por calor y presión endógena, ajenas al origen exógeno de los placeres."
+      },
+      {
+        "text": "Lixiviación bacteriana profunda en ambiente anóxico.",
+        "isCorrect": false,
+        "rationale": "La lixiviación biológica es un proceso de alteración química solubilizante, opuesto a la concentración física mecánica de un placer."
+      }
+    ],
+    "hint": "Revisa la secuencia evolutiva que sufren los materiales desde su descomposición en la roca fuente hasta su acumulación física.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué propiedad física fundamental de minerales como el oro permite su separación y concentración natural frente a la ganga de menor peso en los placeres?",
+    "opciones": [
+      {
+        "text": "Su elevada densidad y peso específico en comparación con los silicatos ordinarios.",
+        "isCorrect": true,
+        "rationale": "La diferencia de gravedad específica hace que los minerales densos hidroodinámicamente sedimenten rápido en cuanto baja la energía del fluido."
+      },
+      {
+        "text": "Su alta solubilidad en medios acuosos alcalinos de escorrentía.",
+        "isCorrect": false,
+        "rationale": "Si el mineral fuera soluble en agua de río, se disolvería en fase acuosa en lugar de concentrarse como grano detrítico sólido."
+      },
+      {
+        "text": "Su remanencia magnética natural frente a corrientes fluviales.",
+        "isCorrect": false,
+        "rationale": "La segregación en placeres es un fenómeno gravitacional e hidrodinámico, no magnético."
+      },
+      {
+        "text": "Su bajo coeficiente de fricción interna en medios viscosos.",
+        "isCorrect": false,
+        "rationale": "El factor determinante no es el rozamiento interno, sino la masa por unidad de volumen que reacciona a la gravedad."
+      },
+      {
+        "text": "Su susceptibilidad a la alteración argílica en ambientes de intemperismo.",
+        "isCorrect": false,
+        "rationale": "Los minerales de placer (como el oro) destacan por su inercia química; la alteración argílica degrada feldespatos, no al oro."
+      }
+    ],
+    "hint": "Enfócate en la característica física que causa que el mineral se hunda rápidamente mientras la corriente arrastra los materiales más livianos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al comparar los placeres eluviales con los placeres fluviales, ¿cuál es la diferencia principal respecto a su transporte y selección mecánica?",
+    "opciones": [
+      {
+        "text": "Los placeres eluviales permanecen contiguos a la roca madre, mientras que los fluviales sufren un transporte acuoso que los clasifica por energía.",
+        "isCorrect": true,
+        "rationale": "Los eluviales experimentan un desplazamiento mínimo sin clasificación hidráulica avanzada, a diferencia de los fluviales donde la corriente fluvial actúa como un clasificador dinámico."
+      },
+      {
+        "text": "Los placeres eluviales son transportados miles de kilómetros por ríos y los fluviales se forman por gravedad en laderas seco-áridas.",
+        "isCorrect": false,
+        "rationale": "La relación es inversa: los eluviales se quedan junto a la fuente de ladera y los fluviales son transportados por redes de drenaje."
+      },
+      {
+        "text": "Los placeres eluviales se concentran en deltas marinos y los fluviales en zonas cársticas profundas.",
+        "isCorrect": false,
+        "rationale": "Los placeres de playa o deltas son depósitos marinos/litorales, distintivos de los eluviales de pendiente y los fluviales de río."
+      },
+      {
+        "text": "Los placeres eluviales carecen de minerales pesados debido a la lixiviación ácida continua.",
+        "isCorrect": false,
+        "rationale": "Los eluviales sí contienen minerales pesados liberados in situ, aunque no presentan el alto grado de clasificación de los depósitos fluviales."
+      },
+      {
+        "text": "Los placeres fluviales se caracterizan por acumular exclusivamente minerales blandos y quebradizos.",
+        "isCorrect": false,
+        "rationale": "El transporte fluvial destruye los minerales frágiles o blandos por abrasión, preservando únicamente los más duros y densos."
+      }
+    ],
+    "hint": "Piensa en la distancia que recorre el material desde su fuente primaria y la acción ordenadora del agua en movimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la dinámica de un sistema fluvial, ¿en qué punto de las curvas o meandros se generan las trampas naturales idóneas para la deposición de granos de oro?",
+    "opciones": [
+      {
+        "text": "En las zonas internas de las curvas donde la velocidad de la corriente disminuye.",
+        "isCorrect": true,
+        "rationale": "Al reducirse la velocidad del flujo en la margen interna del meandro, la energía hidrodinámica cae y precipitan los minerales más densos."
+      },
+      {
+        "text": "En el centro del canal principal de máxima velocidad de flujo.",
+        "isCorrect": false,
+        "rationale": "En el centro del canal la velocidad es alta, manteniendo los sedimentos en suspensión o arrastre activo sin permitir su asentamiento."
+      },
+      {
+        "text": "En la margen externa del meandro donde ocurre la erosión socavante.",
+        "isCorrect": false,
+        "rationale": "La margen externa experimenta la mayor fuerza erosiva del río, removiendo material en lugar de depositar sedimentos densos."
+      },
+      {
+        "text": "En las zonas de rápidos con régimen hidráulico altamente turbulento.",
+        "isCorrect": false,
+        "rationale": "La alta turbulencia impide la acumulación gravitacional, arrastrando las partículas denso-detríticas aguas abajo."
+      },
+      {
+        "text": "En la desembocadura superior donde la pendiente del terreno es máxima.",
+        "isCorrect": false,
+        "rationale": "A mayor pendiente hay mayor energía cinética y transporte cinemático, inhibiendo la deposición de pesados."
+      }
+    ],
+    "hint": "Reflexiona sobre qué ocurre con la capacidad de transporte de sedimentos pesados cuando disminuye la velocidad del agua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La explotación de placeres fluviales presenta importantes particularidades técnico-económicas respecto a la minería subterránea en roca dura. ¿Cuáles de las siguientes representan ventajas de los placeres?",
+    "opciones": [
+      {
+        "text": "El mineral de interés ya se encuentra liberado mecánicamente de la ganga.",
+        "isCorrect": true,
+        "rationale": "La erosión natural desintegra la roca matriz, dejando los granos metálicos libres sin requerir chancado previo."
+      },
+      {
+        "text": "Reducción sustancial de costos al no requerir perforación ni voladura intensiva.",
+        "isCorrect": true,
+        "rationale": "Al tratarse de sedimentos no consolidados o sueltos, se elimina la necesidad de explosivos para la fragmentación primaria."
+      },
+      {
+        "text": "Baja complejidad en la extracción, siendo altamente accesible para la pequeña minería.",
+        "isCorrect": true,
+        "rationale": "Las técnicas gravitacionales simples permiten procesar el material con menor requerimiento de capital inicial."
+      },
+      {
+        "text": "Necesidad de complejas plantas de flotación selectiva a altas presiones y temperaturas.",
+        "isCorrect": false,
+        "rationale": "Los placeres se benefician de la separación física por gravedad, prescindiendo por lo general de flotación físico-química compleja."
+      },
+      {
+        "text": "Ausencia total de requisitos de estudios de impacto ambiental debido a su origen natural.",
+        "isCorrect": false,
+        "rationale": "Cualquier actividad de extracción minera, incluidos los placeres, está sujeta a normativas y regulaciones ambientales estrictas."
+      }
+    ],
+    "hint": "Considera cómo la energía del transporte natural reduce la necesidad de procesos industriales de conminución mecánica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El marco teórico propuesto por Smirnov organizó el estudio de los yacimientos minerales articulándolo con un concepto de escala global. ¿Cuál es dicho eje conceptual?",
+    "opciones": [
+      {
+        "text": "La evolución geodinámica y los procesos tectónicos globales.",
+        "isCorrect": true,
+        "rationale": "Smirnov relacionó la génesis y distribución de yacimientos con las diferentes etapas del desarrollo evolutivo de cinturones tectónicos."
+      },
+      {
+        "text": "La química de los volátiles presentes en magmas basálticos primarios.",
+        "isCorrect": false,
+        "rationale": "El comportamiento de las fases volátiles magmáticas fue objeto prioritario de estudio en los esquemas litogénicos de Niggli."
+      },
+      {
+        "text": "La acidez del pH en sistemas freáticos de cuencas exorreicas.",
+        "isCorrect": false,
+        "rationale": "Los factores de pH hidrotermal son variables fisicoquímicas locales, no el marco geotectónico macroscópico de Smirnov."
+      },
+      {
+        "text": "El grado de redondeamiento de los clastos en cuencas detríticas.",
+        "isCorrect": false,
+        "rationale": "La granulometría sedimentaria es un parámetro textural local, ajeno al marco tectónico propuesto por Smirnov."
+      },
+      {
+        "text": "La velocidad de evaporación en depósitos salinos lacustres.",
+        "isCorrect": false,
+        "rationale": "Las cuencas evaporíticas representan un ambiente sedimentario específico, no el criterio tectónico global del autor."
+      }
+    ],
+    "hint": "Relaciona a este autor con la influencia de las grandes fuerzas endógenas y deformaciones de la litosfera.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la premisa fundamental sobre el origen litogenético de la abrumadora mayoría de los yacimientos minerales explorados?",
+    "opciones": [
+      {
+        "text": "Derivan predominantemente de dos vías: procesos magmáticos (endógenos) o procesos sedimentarios (exógenos).",
+        "isCorrect": true,
+        "rationale": "La inmensa mayoría de los depósitos minerales se forman por la acción del calor endógeno (magmatismo/hidrotermalismo) o por dinámicas exógenas en la superficie (sedimentación/intemperismo)."
+      },
+      {
+        "text": "Se originan de forma exclusiva por impactos de meteoritos metálicos durante el Hadeano.",
+        "isCorrect": false,
+        "rationale": "Los impactos extraterrestres son eventos puntuales y extraordinarios, no la causa de la generalidad de los yacimientos terrestres."
+      },
+      {
+        "text": "Provienen en su totalidad de la evaporación directa del agua del océano global primitivo.",
+        "isCorrect": false,
+        "rationale": "La precipitación evaporítica es solo una subclase dentro del amplio espectro de depósitos sedimentarios y magmáticos."
+      },
+      {
+        "text": "Son generados únicamente por el decaimiento radiactivo de elementos pesados en el manto.",
+        "isCorrect": false,
+        "rationale": "El decaimiento genera calor térmico interno, pero no es la vía de diferenciación litológica directa de las menas metálicas."
+      },
+      {
+        "text": "Dependen en un 100% de la actividad metabólica de bacterias anaeróbicas profundas.",
+        "isCorrect": false,
+        "rationale": "Aunque la biogénesis contribuye en ciertos depósitos sedimentarios, no explica el origen de los yacimientos magmáticos e hidrotermales."
+      }
+    ],
+    "hint": "Recuerda los dos grandes dominios descritos: el proveniente de las entrañas térmicas de la Tierra y el generado por la dinámica de superficie.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La eficacia del proceso de concentración gravitatoria en un depósito de placer depende de propiedades intrínsecas de las especies minerales. ¿Qué propiedades son determinantes para su preservación y acumulación?",
+    "opciones": [
+      {
+        "text": "Elevada densidad relativa para asentarse contra la corriente.",
+        "isCorrect": true,
+        "rationale": "Permite que la gravedad venza la fuerza de arrastre del fluido, provocando la sedimentación del mineral pesados."
+      },
+      {
+        "text": "Alta dureza y resistencia a la abrasión mecánica durante el transporte.",
+        "isCorrect": true,
+        "rationale": "Garantiza que el mineral soporte la atrición y el impacto con otros clastos sin desintegrarse en finos no recuperables."
+      },
+      {
+        "text": "Alta reactividad química con el agua para formar complejos solubles.",
+        "isCorrect": false,
+        "rationale": "La alta reactividad provocaría la disolución del mineral, impidiendo su acumulación como partícula detrítica en el placer."
+      },
+      {
+        "text": "Bajo punto de fusión para consolidarse a temperatura ambiente.",
+        "isCorrect": false,
+        "rationale": "Las propiedades térmicas de fusión son irrelevantes en procesos mecánicos de sedimentación exógena a temperatura ambiente."
+      },
+      {
+        "text": "Alta exfoliación micácea que incremente la superficie de flotabilidad.",
+        "isCorrect": false,
+        "rationale": "La exfoliación en láminas favorece la flotabilidad y el arrastre por el agua, dificultando la concentración por peso."
+      }
+    ],
+    "hint": "Considera las propiedades físicas que evitan que el mineral se destruya por colisión o sea arrastrado fácilmente por el agua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la evolución de un fundido magmático que asciende a través de la corteza, ¿qué mecanismo fisicoquímico causa la formación de yacimientos magmáticos de sulfuros?",
+    "opciones": [
+      {
+        "text": "La disminución de temperatura promueve la inmiscibilidad de líquidos sulfurados y su separación por cristalización fraccionada.",
+        "isCorrect": true,
+        "rationale": "Al enfriarse el magma, los sulfuros líquidos se separan de la fase silicatada por inmiscibilidad, acumulándose por diferencia de densidad."
+      },
+      {
+        "text": "La evaporación completa de la fase silicatada, dejando un residuo sólido de metales puros.",
+        "isCorrect": false,
+        "rationale": "Los silicatos no se evaporan en la corteza; forman las rocas ígneas que hospedan o se asocian a las segregaciones metálicas."
+      },
+      {
+        "text": "La disolución instantánea de la roca encajonante sin intercambio de calor.",
+        "isCorrect": false,
+        "rationale": "La asimilación de la roca encajonante requiere un intercambio térmico severo y no es el mecanismo de inmiscibilidad directa."
+      },
+      {
+        "text": "El aumento indefinido de la temperatura que impide la solidificación de las especies metálicas.",
+        "isCorrect": false,
+        "rationale": "Es el enfriamiento (descenso térmico) lo que gatilla la saturación y precipitación de fases minerales en el magma."
+      },
+      {
+        "text": "La transformación directa e instantánea del fundido en sedimento detrítico.",
+        "isCorrect": false,
+        "rationale": "El paso de magma a roca o depósito magmático involucra procesos plutónicos o volcánicos, no sedimentación exógena directa."
+      }
+    ],
+    "hint": "Piensa en qué ocurre a medida que el magma pierde energía térmica y ciertos componentes se inmiscibilizan o cristalizan.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco del estudio de los recursos geológicos en el Perú, ¿cómo se define formalmente la disciplina de la metalogenia?",
+    "opciones": [
+      {
+        "text": "Es el estudio de la génesis, distribución espacial y relaciones temporales de los yacimientos minerales en el contexto tectónico regional.",
+        "isCorrect": true,
+        "rationale": "La metalogenia analiza cómo, cuándo y por qué se distribuyen los depósitos minerales relacionándolos con la evolución geodinámica de la corteza."
+      },
+      {
+        "text": "Es el análisis financiero exclusivo destinado a calcular el valor presente neto de una concesión minera.",
+        "isCorrect": false,
+        "rationale": "Eso corresponde a la evaluación económica de proyectos, no a la ciencia geológica de la metalogenia."
+      },
+      {
+        "text": "Es la disciplina de laboratorio enfocada únicamente en el diseño de reactivos de flotación.",
+        "isCorrect": false,
+        "rationale": "Esa área pertenece al procesamiento de minerales y a la metalurgia extractiva, no a la geología metalogenética."
+      },
+      {
+        "text": "Es la ciencia ambiental que monitorea la calidad del aire alrededor de los tajos abiertos.",
+        "isCorrect": false,
+        "rationale": "El monitoreo ambiental es una rama de la ingeniería ambiental, ajena al estudio del origen geológico de las menas."
+      },
+      {
+        "text": "Es la técnica petrográfica para medir el tamaño de cristal en rocas ornamentales.",
+        "isCorrect": false,
+        "rationale": "La petrología descriptiva evalúa texturas en rocas, pero la metalogenia integra el contexto tectónico y la génesis de metales."
+      }
+    ],
+    "hint": "Busca la definición holística que conecta el origen espacial, temporal y tectónico de las acumulaciones minerales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Los pórfidos cupríferos representan el pilar económico de la minería del cobre en el Perú. ¿Qué otros metales importantes acompañan con frecuencia a esta tipología de yacimientos?",
+    "opciones": [
+      {
+        "text": "Molibdeno y oro.",
+        "isCorrect": true,
+        "rationale": "Los pórfidos de cobre frecuentemente contienen molibdeno ($\\text{Cu-Mo}$) u oro ($\\text{Cu-Au}$) como subproductos de gran valor económico."
+      },
+      {
+        "text": "Estaño y níquel.",
+        "isCorrect": false,
+        "rationale": "El estaño suele asociarse a granitos reducidos y el níquel a complejas intrusiones ultramáficas, no al ambiente típico de pórfidos cupríferos."
+      },
+      {
+        "text": "Platino y aluminio.",
+        "isCorrect": false,
+        "rationale": "El aluminio proviene de bauxitas lateríticas y el platino de sulfuros magmáticos ultramáficos, no de pórfidos calcoalcalinos."
+      },
+      {
+        "text": "Uranio y cobalto.",
+        "isCorrect": false,
+        "rationale": "Aunque pueden existir trazas, no constituyen la asociación económica metálica característica de los sistemas porfídicos andinos."
+      },
+      {
+        "text": "Litio y bario.",
+        "isCorrect": false,
+        "rationale": "El litio se asocia a salmueras y pegmatitas, mientras que la baritina es un mineral ganga/sedimentario o de vetas tardías."
+      }
+    ],
+    "hint": "Identifica los subproductos o metales secundarios típicamente asociados a estos grandes sistemas magmáticos de cobre.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica geológica y la asociación metálica principal de los yacimientos de tipo epitermal?",
+    "opciones": [
+      {
+        "text": "Se forman a escasa profundidad vinculados a sistemas volcánicos, emplazando principalmente oro y plata.",
+        "isCorrect": true,
+        "rationale": "Los depósitos epitermales cristalizan cerca de la superficie ($<2\\text{ km}$) a partir de fluidos hidrotermales ligados a vulcanismo, siendo fuentes clave de $\\text{Au}$ y $\\text{Ag}$."
+      },
+      {
+        "text": "Se originan en la corteza profunda por acumulación de cromita en rocas ultramáficas stratiformes.",
+        "isCorrect": false,
+        "rationale": "Esa descripción corresponde a yacimientos magmáticos cumulares de cromita, no a sistemas hidrotermales epitermales."
+      },
+      {
+        "text": "Se generan por alteración hidrotermal de depósitos de carbón a temperaturas superiores a $800^\\circ\\text{C}$.",
+        "isCorrect": false,
+        "rationale": "Los sistemas epitermales operan a rangos de temperatura más bajos ($100^\\circ\\text{C}-300^\\circ\\text{C}$) y no dependen del carbón."
+      },
+      {
+        "text": "Son grandes cuencas sedimentarias evaporíticas formadas por la desecación de mares interiores.",
+        "isCorrect": false,
+        "rationale": "Eso describe un ambiente de evaporitas, ajeno a la actividad volcánico-hidrotermal epitermal."
+      },
+      {
+        "text": "Son brechas de impacto compuestas exclusivamente por sulfuros de hierro no auríferos.",
+        "isCorrect": false,
+        "rationale": "Los epitermales no son generados por impactos meteóricos y destacan por su alto valor en metales preciosos ($\\text{Au-Ag}$)."
+      }
+    ],
+    "hint": "Recuerda el significado del prefijo 'epi-' y su cercanía con sistemas volcánicos someros para metales preciosos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "El Perú cuenta con diversos depósitos de nivel mundial que corresponden a la categoría de pórfidos cupríferos. ¿Cuáles de los siguientes nombres corresponden a este grupo?",
+    "opciones": [
+      {
+        "text": "Las Bambas.",
+        "isCorrect": true,
+        "rationale": "Es uno de los megayacimientos de cobre en el sur del Perú clasificado dentro de la familia de los pórfidos."
+      },
+      {
+        "text": "Cerro Verde.",
+        "isCorrect": true,
+        "rationale": "Representa una operación histórica y de clase mundial para la extracción de cobre de un sistema porfídico."
+      },
+      {
+        "text": "Quellaveco.",
+        "isCorrect": true,
+        "rationale": "Es uno de los desarrollos mineros recientes más importantes emplazado en un pórfido cuprífero."
+      },
+      {
+        "text": "Toquepala.",
+        "isCorrect": true,
+        "rationale": "Es un pórfido de cobre clásico del sur peruano con larga trayectoria de explotación a tajo abierto."
+      },
+      {
+        "text": "Yanacocha.",
+        "isCorrect": false,
+        "rationale": "Yanacocha es el ejemplo emblemático de un yacimiento de tipo epitermal de oro de alta sulfuración, no un pórfido de cobre."
+      }
+    ],
+    "hint": "Selecciona las minas masivas de cobre mencionadas en la clase 06, excluyendo las dedicadas a epitermales de oro puro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el mecanismo petrogenético fundamental que da origen a un depósito mineral de tipo Skarn?",
+    "opciones": [
+      {
+        "text": "El metasomatismo y reacción química entre intrusivos magmáticos calientes y rocas encajonantes carbonatadas.",
+        "isCorrect": true,
+        "rationale": "Un Skarn se forma por la interacción hidrotermal-metasomática entre un magma y rocas calcáreas o dolomíticas, provocando recristalización y reemplazo metálico."
+      },
+      {
+        "text": "La concentración gravitatoria de pepitas pesadas en los meandros de un río.",
+        "isCorrect": false,
+        "rationale": "Ese proceso describe la génesis de un placer fluvial sedimentario, no un Skarn metasomático."
+      },
+      {
+        "text": "El enfriamiento rápido de basaltos submarinos en dorsales meso-oceánicas.",
+        "isCorrect": false,
+        "rationale": "Los basaltos submarinos forman yacimientos de sulfuros masivos vulcanogénicos ($\\text{VMS}$), no Skarns."
+      },
+      {
+        "text": "La evaporación de fluidos en cuencas salinas de altiplano.",
+        "isCorrect": false,
+        "rationale": "Las salmueras evaporíticas producen depósitos no metálicos (sales, boratos), sin involucrar reacciones de metasomatismo magmático."
+      },
+      {
+        "text": "La meteorización intemperizante de basaltos para generar lateritas de níquel.",
+        "isCorrect": false,
+        "rationale": "Las lateritas se forman por enriquecimiento supergénico exógeno, a diferencia del metasomatismo endógeno del Skarn."
+      }
+    ],
+    "hint": "Imagina la interacción entre un magma incandescente y rocas encajonantes ricas en carbonato de calcio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El yacimiento de Antamina es un ejemplo geológico singular dentro del territorio peruano. ¿A qué se debe su clasificación como un sistema 'híbrido' o complejo?",
+    "opciones": [
+      {
+        "text": "Combina rasgos estructurales y genéticos de pórfido y de skarn, produciendo una mineralización polimetálica enriquecida.",
+        "isCorrect": true,
+        "rationale": "Antamina posee zonas con características de pórfido de cobre-molibdeno y amplias aureolas de reemplazo tipo Skarn enriquecidas en cobre, zinc y plata."
+      },
+      {
+        "text": "Alterna capas de placeres fluviales en superficie con diques kimberlíticos con diamante en profundidad.",
+        "isCorrect": false,
+        "rationale": "Antamina no es un yacimiento diamantífero ni se define por placeres de superficie, sino por un complejo sistema magmático-hidrotermal."
+      },
+      {
+        "text": "Es un sulfuro masivo vulcanogénico que fue transformado por evaporación salina.",
+        "isCorrect": false,
+        "rationale": "No responde al modelo de sulfuros masivos ni involucra génesis evaporítica sedimentaria."
+      },
+      {
+        "text": "Se compone de intrusiones ultramáficas ricas exclusivamente en elementos del grupo del platino.",
+        "isCorrect": false,
+        "rationale": "Antamina no es un complejo ultramáfico plutónico, sino un sistema hidrotermal asociado a intrusivos félsicos/intermedios y calizas."
+      },
+      {
+        "text": "Combina mantos de carbón antracítico con vetas epitermales de baja temperatura.",
+        "isCorrect": false,
+        "rationale": "Su interés económico no radica en combustibles fósiles sino en su compleja concentración polimetálica de $\\text{Cu, Zn, Ag, Mo}$."
+      }
+    ],
+    "hint": "Piensa en cómo este megayacimiento integra tanto la intrusión porfídica como la zona de metasomatismo con rocas calcáreas adyacentes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La Cordillera de los Andes actúa como el motor tectónico de la riqueza minera en Perú. ¿Cuáles de las siguientes etapas explican la secuencia metalogenética andina?",
+    "opciones": [
+      {
+        "text": "Subducción de la placa de Nazca por debajo de la placa Sudamericana.",
+        "isCorrect": true,
+        "rationale": "El proceso tectónico continuo de subducción provee el marco geodinámico necesario para la fusión parcial y generación de magma."
+      },
+      {
+        "text": "Generación e inyección magmática sostenida a lo largo de millones de años.",
+        "isCorrect": true,
+        "rationale": "El magmatismo recurrente transporta metales y fluidos hidrotermales desde la profundidad hacia niveles superiores de la corteza."
+      },
+      {
+        "text": "Alineamiento de yacimientos en franjas o provincias metalogenéticas paralelas a la fosa.",
+        "isCorrect": true,
+        "rationale": "El control estructural y el arco volcánico posicionan los depósitos en cinturones paralelos a la cadena andina."
+      },
+      {
+        "text": "Apertura de un rift oceánico profundo en la zona de la sierra peruana.",
+        "isCorrect": false,
+        "rationale": "Los Andes peruanos representan un margen continental activo por subducción, no una zona de rifting o divergencia de placas."
+      },
+      {
+        "text": "Desplazamiento transformante divergente de la placa del Caribe.",
+        "isCorrect": false,
+        "rationale": "La tectónica principal que rige la metalogenia peruana es la interacción frontal de Nazca y Sudamérica, no la placa del Caribe."
+      }
+    ],
+    "hint": "Piensa en la interacción entre placas litosféricas, la fusión parcial subduccional y la distribución de metales en la corteza.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué define conceptualmente a una 'provincia metalogenética' en el contexto de la geología andina?",
+    "opciones": [
+      {
+        "text": "Una franja o cinturón geográfico donde se concentran yacimientos de tipología y época de formación similares.",
+        "isCorrect": true,
+        "rationale": "Una provincia o cinturón metalogenético agrupa depósitos alineados espacialmente que responden a eventos tectono-magmáticos comunes en el tiempo."
+      },
+      {
+        "text": "La delimitación política y administrativa en la cual se recauda el canon minero.",
+        "isCorrect": false,
+        "rationale": "Las provincias metalogenéticas son entidades geológico-estructurales, no divisiones político-administrativas de un gobierno."
+      },
+      {
+        "text": "El área de una cuenca hidrográfica donde está prohibida la actividad extractiva.",
+        "isCorrect": false,
+        "rationale": "El término no es una figura de zonificación ambiental o restrictiva, sino una unidad de clasificación geológica."
+      },
+      {
+        "text": "Un área de concesión otorgada en exclusiva a una única compañía minera.",
+        "isCorrect": false,
+        "rationale": "Las provincias metalogenéticas abarcan cientos de kilómetros y contienen múltiples yacimientos de distintos operadores."
+      },
+      {
+        "text": "La zona costera donde se instalan las plantas de procesamiento portuario.",
+        "isCorrect": false,
+        "rationale": "No se refiere a la ubicación de infraestructura industrial, sino a la distribución natural de los recursos en la corteza."
+      }
+    ],
+    "hint": "Relaciona el término con la distribución en cinturones de yacimientos que comparten una tipología y época de formación similar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "A pesar de poseer un enorme potencial de reservas geológicas, el desarrollo de proyectos mineros en Perú enfrenta demoras significativas. ¿A qué se refiere el término 'tramitología' abordado en clase?",
+    "opciones": [
+      {
+        "text": "Al exceso de carga burocrática y permisos requeridos que pueden extender el inicio de un proyecto entre 40 y 60 años.",
+        "isCorrect": true,
+        "rationale": "La 'tramitología' alude a los dilatados procesos de permisología y burocracia que retrasan la ejecución de proyectos viables."
+      },
+      {
+        "text": "Al procedimiento técnico de perforación diamantina en la fase de exploración inicial.",
+        "isCorrect": false,
+        "rationale": "La perforación diamantina es una operación técnica de campo, no una traba de carácter burocrático."
+      },
+      {
+        "text": "Al protocolo de caracterización petrográfica mediante cortes transparentes.",
+        "isCorrect": false,
+        "rationale": "Corresponde a una técnica de laboratorio geológico, no a la carga permisiva del Estado."
+      },
+      {
+        "text": "Al trámite aduanero exclusivo de exportación de minerales en los puertos.",
+        "isCorrect": false,
+        "rationale": "Aunque es un trámite, la problemática de la 'tramitología' se refiere al desarrollo integral de permisos previa construcción de la mina."
+      },
+      {
+        "text": "Al cálculo de reservas probables mediante algoritmos de geoestadística.",
+        "isCorrect": false,
+        "rationale": "La estimación de reservas es un procedimiento de ingeniería de yacimientos, ajeno a los retrasos burocráticos gubernamentales."
+      }
+    ],
+    "hint": "Piensa en el freno administrativo generado por la permisología y requisitos burocráticos excesivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Frente a la transición energética global hacia tecnologías limpias, Perú posee minerales estratégicos indispensables. ¿Cuáles de los siguientes minerales destacan por este rol?",
+    "opciones": [
+      {
+        "text": "Cobre para la infraestructura de cableado y redes renovables.",
+        "isCorrect": true,
+        "rationale": "Es el conductor eléctrico por excelencia necesario para electrificar la matriz energética mundial."
+      },
+      {
+        "text": "Litio para la fabricación de baterías de almacenamiento y vehículos eléctricos.",
+        "isCorrect": true,
+        "rationale": "Elemento crítico descubierto en el sur del Perú indispensable para la electro-movilidad."
+      },
+      {
+        "text": "Plata empleada en los componentes de paneles solares fotovoltaicos.",
+        "isCorrect": true,
+        "rationale": "Su alta conductividad eléctrica y térmica la hace esencial en las celdas fotovoltaicas de energía solar."
+      },
+      {
+        "text": "Zinc utilizado en tecnologías de almacenamiento y protección de estructuras.",
+        "isCorrect": true,
+        "rationale": "El zinc cumple un rol clave en galvanización y en baterías emergentes de almacenamiento energético."
+      },
+      {
+        "text": "Mercurio como fluido de refrigeración en turbinas eólicas.",
+        "isCorrect": false,
+        "rationale": "El mercurio es altamente tóxico y no se emplea como refrigerante en la tecnología eólica moderna."
+      }
+    ],
+    "hint": "Identifica los cuatro metales citados en la clase 06 requeridos para electrificación, baterías, paneles solares y almacenamiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de las siguientes afirmaciones describe con precisión la aplicación tecnológica del litio y de la plata en el contexto del cambio energético verde?",
+    "opciones": [
+      {
+        "text": "El litio es la materia prima clave para las baterías de vehículos eléctricos y la plata es fundamental en celdas fotovoltaicas.",
+        "isCorrect": true,
+        "rationale": "Ambos metales desempeñan roles industriales insustituibles en el almacenamiento electroquímico y en la generación solar."
+      },
+      {
+        "text": "El litio sirve para sintetizar polímeros geotérmicos y la plata para construir las aspas de generadores eólicos.",
+        "isCorrect": false,
+        "rationale": "Las aspas eólicas se fabrican con fibra de vidrio/carbono y el litio no se usa para polímeros geotérmicos."
+      },
+      {
+        "text": "El litio se utiliza en el blindaje de reactores nucleares y la plata para asfaltar carreteras ecológicas.",
+        "isCorrect": false,
+        "rationale": "Estas aplicaciones son erróneas y ajenas a las propiedades electroquímicas y óptico-conductoras de estos metales."
+      },
+      {
+        "text": "Ambos metales se emplean exclusivamente como aditivos en la fabricación de cemento sostenible.",
+        "isCorrect": false,
+        "rationale": "Ninguno de los dos se utiliza como aditivo masivo en la industria del cemento."
+      },
+      {
+        "text": "La plata reemplaza al cobre en las líneas de alta tensión subterráneas y el litio es un combustible térmico.",
+        "isCorrect": false,
+        "rationale": "El litio no es un combustible fósil/térmico y el costo de la plata impide su uso masivo en cableado de alta tensión."
+      }
+    ],
+    "hint": "Relaciona el litio con la movilidad eléctrica y la plata con la captación de radiación solar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Desde la perspectiva de la estrategia económica nacional, ¿cuál es la ventaja clave de que Perú posea una amplia diversidad de yacimientos (pórfidos, epitermales, skarns)?",
+    "opciones": [
+      {
+        "text": "Funciona como un portafolio de inversión diversificado, otorgando resiliencia frente a las variaciones de precios de mercado.",
+        "isCorrect": true,
+        "rationale": "La variedad de metales y tipologías amortigua el impacto si la cotización internacional de un metal específico cae."
+      },
+      {
+        "text": "Asegura que los costos de extracción e infraestructura sean siempre idénticos en cualquier región.",
+        "isCorrect": false,
+        "rationale": "Cada tipología de yacimiento y ubicación geográfica exige métodos y costos operacionales completamente distintos."
+      },
+      {
+        "text": "Garantiza la eliminación automática de la burocracia y de los estudios de impacto ambiental.",
+        "isCorrect": false,
+        "rationale": "La diversidad geológica no modifica el marco legal ni elimina los trámites de permisología."
+      },
+      {
+        "text": "Permite prescindir totalmente de recursos hídricos en la etapa de concentración de minerales.",
+        "isCorrect": false,
+        "rationale": "El procesamiento de minerales sigue requiriendo agua e infraestructura hidrometalúrgica independiente del tipo de depósito."
+      },
+      {
+        "text": "Permite concentrar toda la producción nacional en una sola mina para reducir la huella territorial.",
+        "isCorrect": false,
+        "rationale": "Al contrario, la diversidad implica yacimientos distribuidos en distintas regiones y cinturones a lo largo del país."
+      }
+    ],
+    "hint": "Aplica la analogía financiera sobre la reducción de riesgos al no depender de un único activo o metal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-64",
+    "diplomado": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Existe una paradoja en el sector minero peruano: pese a contar con abundantes reservas comprobadas, múltiples proyectos de gran escala se encuentran postergados. ¿Qué factores explican esta situación?",
+    "opciones": [
+      {
+        "text": "Conflictos sociales y desconfianza en la distribución de los beneficios del canon minero.",
+        "isCorrect": true,
+        "rationale": "Las tensiones comunitarias y la percepción de una inadecuada redistribución frena la aceptación social de los proyectos."
+      },
+      {
+        "text": "Procesos burocráticos y administrativos sumamente dilatados ('tramitología').",
+        "isCorrect": true,
+        "rationale": "La complejidad permisiva entrampa las inversiones extendiendo sustancialmente los plazos de ejecución."
+      },
+      {
+        "text": "Incertidumbre en la percepción del riesgo país e inseguridad para la inversión de largo plazo.",
+        "isCorrect": true,
+        "rationale": "La inestabilidad institucional eleva la percepción de riesgo, congelando capitales destinados a minería de gran escala."
+      },
+      {
+        "text": "Agotamiento total y probado de las reservas geológicas de cobre en todo el territorio.",
+        "isCorrect": false,
+        "rationale": "Perú mantiene reservas gigantescas comprobadas; el freno no se debe a la escasez del recurso en el subsuelo."
+      },
+      {
+        "text": "Prohibición del uso de cobre en los países industrializados.",
+        "isCorrect": false,
+        "rationale": "La demanda global de cobre va en aumento continuo debido a la transición hacia tecnologías sostenibles."
+      }
+    ],
+    "hint": "Considera los aspectos sociales, de permisología y de percepción de riesgo identificados en el análisis del curso.",
+    "activo": true
+  }
+]

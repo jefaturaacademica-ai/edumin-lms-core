@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la definición principal de la robótica industrial en el contexto de la gestión de operaciones?",
+    "opciones": [
+      {
+        "text": "Una rama de la ingeniería que diseña y programa robots capaces de ejecutar tareas de manufactura con rapidez, precisión y autonomía.",
+        "isCorrect": true,
+        "rationale": "La robótica industrial reemplaza o complementa el trabajo manual mediante dispositivos programados para realizar tareas repetitivas y de alta precisión en las líneas de producción."
+      },
+      {
+        "text": "Un sistema exclusivo para el almacenamiento de registros contables y financieros de las empresas manufactureras.",
+        "isCorrect": false,
+        "rationale": "La robótica industrial se enfoca en la automatización de procesos físicos y operacionales de producción, no en la contabilidad."
+      },
+      {
+        "text": "Un software de gestión administrativa utilizado únicamente para reemplazar la toma de decisiones directivas.",
+        "isCorrect": false,
+        "rationale": "Los robots industriales son dispositivos electromecánicos programables para operaciones físicas, no programas administrativos directivos."
+      },
+      {
+        "text": "Una metodología enfocada únicamente en el ordenamiento y limpieza del puesto de trabajo.",
+        "isCorrect": false,
+        "rationale": "El ordenamiento y limpieza corresponden a metodologías como las 5S, no al campo de la robótica industrial."
+      },
+      {
+        "text": "Un conjunto de sensores de presión utilizado exclusivamente para medir fluidos en tuberías hidráulicas.",
+        "isCorrect": false,
+        "rationale": "Los sensores de presión son componentes de medición, mientras que la robótica abarca manipuladores mecánicos y brazos programables."
+      }
+    ],
+    "hint": "Piensa en dispositivos mecánicos programables encargados de la manipulación y ensamble automatizado de productos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de los Controladores Lógicos Programables (PLC) en la automatización industrial?",
+    "opciones": [
+      {
+        "text": "Regular y gestionar el funcionamiento de la maquinaria mediante dispositivos electrónicos programables.",
+        "isCorrect": true,
+        "rationale": "Los PLC son dispositivos electrónicos diseñados para controlar secuencialmente la maquinaria y los procesos industriales según una lógica programada."
+      },
+      {
+        "text": "Visualizar la interfaz gráfica de usuario para la televisión interactiva del personal.",
+        "isCorrect": false,
+        "rationale": "La interacción gráfica visual es función del HMI, no la lógica de control del PLC."
+      },
+      {
+        "text": "Diseñar campañas de mercadotecnia automatizada para productos de exportación.",
+        "isCorrect": false,
+        "rationale": "El PLC opera a nivel operacional en planta, sin relación con el área de mercadotecnia."
+      },
+      {
+        "text": "Realizar la contabilidad analítica de costos al cierre de cada periodo fiscal.",
+        "isCorrect": false,
+        "rationale": "Las funciones contables se manejan en sistemas ERP y no en los controladores lógicos de planta."
+      },
+      {
+        "text": "Reemplazar la visión artificial y los sensores ópticos de inspección de calidad.",
+        "isCorrect": false,
+        "rationale": "El PLC procesa las señales enviadas por los sensores, pero no sustituye la función física de la visión artificial."
+      }
+    ],
+    "hint": "Considera el dispositivo electrónico que ejecuta instrucciones lógicas para mandar señales directas a los actuadores de la maquinaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué papel desempeña el sistema SCADA en el control automatizado de la industria?",
+    "opciones": [
+      {
+        "text": "Supervisar, monitorear y controlar de forma remota los procesos industriales recolectando datos en tiempo real.",
+        "isCorrect": true,
+        "rationale": "SCADA integra software y hardware para capturar datos de sensores y supervisar las plantas industriales remotamente."
+      },
+      {
+        "text": "Proporcionar soporte físico y arneses de protección para los operarios de planta.",
+        "isCorrect": false,
+        "rationale": "El sistema SCADA es un software de supervisión y datos, no un equipo físico de protección personal."
+      },
+      {
+        "text": "Ejecutar manualmente la limpieza y mantenimiento mecánico de los motores de alta tensión.",
+        "isCorrect": false,
+        "rationale": "SCADA monitorea el estado del sistema, pero el mantenimiento físico lo realiza el personal técnico."
+      },
+      {
+        "text": "Sustituir por completo la toma de decisiones estratégicas de los ingenieros industriales.",
+        "isCorrect": false,
+        "rationale": "SCADA facilita datos para la supervisión y control, pero las decisiones estratégicas de fondo las toman los seres humanos."
+      },
+      {
+        "text": "Programar la red de distribución comercial y logística de exportación de los bienes.",
+        "isCorrect": false,
+        "rationale": "La gestión comercial y logística de exportación se administra en sistemas como ERP o WMS, no en la supervisión industrial SCADA."
+      }
+    ],
+    "hint": "Relaciona este software con las siglas de Supervisión, Control y Adquisición de Datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes son tipos de sensores comúnmente integrados para el monitoreo y eficiencia en la industria?",
+    "opciones": [
+      {
+        "text": "Sensores de temperatura.",
+        "isCorrect": true,
+        "rationale": "Monitorean variables térmicas indispensables en hornos, calderas y sistemas de refrigeración industrial."
+      },
+      {
+        "text": "Sensores de proximidad.",
+        "isCorrect": true,
+        "rationale": "Permiten detectar la presencia u ordenamiento de objetos en la línea de ensamble sin contacto directo."
+      },
+      {
+        "text": "Sensores de presión.",
+        "isCorrect": true,
+        "rationale": "Evalúan los niveles de fuerza por unidad de área en sistemas hidráulicos y tuberías de procesos."
+      },
+      {
+        "text": "Sensores de vibración.",
+        "isCorrect": true,
+        "rationale": "Resultan fundamentales para el monitoreo predictivo del estado mecánico en motores y maquinaria pesada."
+      },
+      {
+        "text": "Sensores de presupuesto financiero.",
+        "isCorrect": false,
+        "rationale": "El presupuesto financiero es una métrica administrativa y no una variable física medible mediante sensores."
+      }
+    ],
+    "hint": "Selecciona todas las opciones que correspondan a dispositivos electrónicos capaces de medir variables físicas en planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple la interfaz HMI (Human-Machine Interface) en los entornos industriales?",
+    "opciones": [
+      {
+        "text": "Brindar un panel visual interactivo que permite al operario humano comunicarse directamente con la máquina.",
+        "isCorrect": true,
+        "rationale": "La HMI presenta información gráfica del estado del sistema y permite al usuario ingresar comandos hacia los controladores."
+      },
+      {
+        "text": "Escribir el código en lenguaje ensamblador para la tarjeta madre del PLC.",
+        "isCorrect": false,
+        "rationale": "La HMI es la capa de interfaz de usuario gráfica, no el entorno de programación de bajo nivel del controlador."
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar sensores en la línea de producción.",
+        "isCorrect": false,
+        "rationale": "La HMI requiere de los datos captados por los sensores para poder mostrarlos al operario."
+      },
+      {
+        "text": "Garantizar que no existan cuellos de botella mediante simulaciones matemáticas avanzadas.",
+        "isCorrect": false,
+        "rationale": "El diagnóstico de cuellos de botella se realiza con software de simulación o teorías de gestión, no mediante la simple pantalla HMI."
+      },
+      {
+        "text": "Sustituir las redes de comunicación Ethernet industrial por enlaces mecánicos.",
+        "isCorrect": false,
+        "rationale": "La HMI depende de las redes industriales de datos para conectarse con los equipos, no las sustituye."
+      }
+    ],
+    "hint": "Piensa en la pantalla o consola gráfica que utiliza el trabajador para supervisar y operar el equipo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es uno de los beneficios clave de la integración de sensores en la manufactura moderna?",
+    "opciones": [
+      {
+        "text": "Recopilar datos en tiempo real para optimizar los procesos y permitir una toma de decisiones oportuna.",
+        "isCorrect": true,
+        "rationale": "La integración de sensores brinda visibilidad continua sobre las variables del proceso, facilitando la detección de fallas e ineficiencias."
+      },
+      {
+        "text": "Desactivar de forma permanente los sistemas de seguridad de las máquinas.",
+        "isCorrect": false,
+        "rationale": "Los sensores incrementan y complementan la seguridad operacional en lugar de desactivarla."
+      },
+      {
+        "text": "Aumentar el consumo de insumos sin generar reportes de control.",
+        "isCorrect": false,
+        "rationale": "El monitoreo con sensores busca precisamente el uso eficiente de recursos y materias primas."
+      },
+      {
+        "text": "Eliminar la necesidad de realizar mantenimiento preventivo o predictivo.",
+        "isCorrect": false,
+        "rationale": "Los sensores son la base fundamental para poder ejecutar mantenimiento predictivo eficiente."
+      },
+      {
+        "text": "Sustituir toda la estrategia de la empresa por un sistema de almacenamiento estático.",
+        "isCorrect": false,
+        "rationale": "Los sensores aportan a la eficiencia operacional del proceso activo, no reemplazan la estrategia global."
+      }
+    ],
+    "hint": "Enfócate en la ventaja de capturar información constante directamente desde el área de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo central de la filosofía Lean Manufacturing?",
+    "opciones": [
+      {
+        "text": "Eliminar desperdicios en los procesos y maximizar el valor entregado al cliente con el mínimo de recursos.",
+        "isCorrect": true,
+        "rationale": "Lean Manufacturing se enfoca en identificar y remover actividades que no agregan valor (muda), optimizando el flujo continuo."
+      },
+      {
+        "text": "Aumentar la sobreproducción para mantener saturados los almacenes de producto terminado.",
+        "isCorrect": false,
+        "rationale": "La sobreproducción es considerada uno de los principales desperdicios a eliminar según el pensamiento Lean."
+      },
+      {
+        "text": "Aumentar los tiempos muertos entre las etapas del ensamble industrial.",
+        "isCorrect": false,
+        "rationale": "Lean busca reducir las esperas y tiempos muertos para agilizar el tiempo de ciclo del proceso."
+      },
+      {
+        "text": "Sustituir el trabajo en equipo por inspecciones al 100% al final de la línea.",
+        "isCorrect": false,
+        "rationale": "Lean promueve la calidad en la fuente y la participación activa del personal, no solo la inspección final."
+      },
+      {
+        "text": "Incrementar los niveles de variabilidad tolerada en las dimensiones de los productos.",
+        "isCorrect": false,
+        "rationale": "La variabilidad se combate activamente tanto en Lean como en Six Sigma para mantener la estandarización."
+      }
+    ],
+    "hint": "Piensa en la eliminación de actividades que no añaden valor y en el desperdicio en la producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes herramientas o metodologías forman parte del enfoque de Lean Manufacturing?",
+    "opciones": [
+      {
+        "text": "Metodología de las 5S.",
+        "isCorrect": true,
+        "rationale": "Permite clasificar, ordenar, limpiar, estandarizar y mantener la disciplina en el puesto de trabajo."
+      },
+      {
+        "text": "Sistema Kanban.",
+        "isCorrect": true,
+        "rationale": "Es un método visual para el control de flujo de producción y gestión del inventario según la demanda."
+      },
+      {
+        "text": "Mecanismo Poka-Yoke.",
+        "isCorrect": true,
+        "rationale": "Consiste en dispositivos o métodos a prueba de errores diseñados para prevenir equivocaciones humanas."
+      },
+      {
+        "text": "Filosofía Kaizen.",
+        "isCorrect": true,
+        "rationale": "Promueve la cultura de la mejora continua incremental con la participación de todos los colaboradores."
+      },
+      {
+        "text": "Contabilidad por absorción tradicional.",
+        "isCorrect": false,
+        "rationale": "La contabilidad por absorción es un método contable tradicional cuestionado por Lean y TOC por fomentar el exceso de inventario."
+      }
+    ],
+    "hint": "Identifica las herramientas operacionales de origen japonés orientadas al orden, control visual, prevención de errores y mejora continua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la meta primordial de la metodología Six Sigma (Seis Sigma)?",
+    "opciones": [
+      {
+        "text": "Reducir la variabilidad de los procesos para lograr niveles mínimos de defectos o fallas por millón de oportunidades.",
+        "isCorrect": true,
+        "rationale": "Six Sigma utiliza métodos estadísticos rigurosos para estabilizar los procesos y asegurar la calidad requerida por el cliente."
+      },
+      {
+        "text": "Eliminar la necesidad de medir la satisfacción del cliente.",
+        "isCorrect": false,
+        "rationale": "Six Sigma coloca la voz del cliente y sus requerimientos críticos de calidad en el centro del análisis."
+      },
+      {
+        "text": "Incrementar el margen de tolerancia permitida para aceptar piezas fuera de especificación.",
+        "isCorrect": false,
+        "rationale": "La metodología busca estrechar la variabilidad para estar bien dentro de las especificaciones, no ampliar las tolerancias de fallo."
+      },
+      {
+        "text": "Reemplazar los datos numéricos por opiniones intuitivas de la gerencia.",
+        "isCorrect": false,
+        "rationale": "Six Sigma se caracteriza por la toma de decisiones basada estrictamente en datos y análisis estadístico."
+      },
+      {
+        "text": "Evitar la capacitación del personal mediante niveles de certificación.",
+        "isCorrect": false,
+        "rationale": "Six Sigma estructura un esquema de aprendizaje mediante cinturones (Yellow, Green, Black Belt) para capacitar al personal."
+      }
+    ],
+    "hint": "Recuerda que este enfoque se fundamenta en el análisis estadístico para lograr la precisión y eliminar defectos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué fases componen la metodología estructurada DMAIC en Six Sigma?",
+    "opciones": [
+      {
+        "text": "Definir, Medir, Analizar, Mejorar (Improve) y Controlar.",
+        "isCorrect": true,
+        "rationale": "DMAIC es la secuencia lógica de 5 pasos para solucionar problemas y optimizar procesos en Six Sigma."
+      },
+      {
+        "text": "Diseñar, Modelar, Asignar, Integrar y Calcular.",
+        "isCorrect": false,
+        "rationale": "Estas actividades no representan la sigla oficial del ciclo de mejora continua en Six Sigma."
+      },
+      {
+        "text": "Diagnosticar, Manejar, Automatizar, Inspeccionar y Comercializar.",
+        "isCorrect": false,
+        "rationale": "Aunque corresponden a conceptos industriales, no constituyen las fases estándar del ciclo DMAIC."
+      },
+      {
+        "text": "Determinar, Modificar, Adaptar, Innovar y Centralizar.",
+        "isCorrect": false,
+        "rationale": "Las siglas reales de DMAIC se enfocan en definir el problema, medir el estado, analizar causas, mejorar y controlar."
+      },
+      {
+        "text": "Desarrollar, Mover, Almacenar, Importar y Cotizar.",
+        "isCorrect": false,
+        "rationale": "Esta serie de verbos describe más bien actividades logísticas de comercio exterior y no el método Six Sigma."
+      }
+    ],
+    "hint": "Corresponde al acrónimo en inglés de 5 pasos que inicia identificando el problema y termina garantizando la sostenibilidad de la solución.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la Teoría de las Restricciones (TOC), ¿en qué debe enfocarse prioritariamente la empresa para mejorar su rendimiento?",
+    "opciones": [
+      {
+        "text": "En el cuello de botella o factor limitante que impide al sistema alcanzar su máximo nivel de producción.",
+        "isCorrect": true,
+        "rationale": "TOC sostiene que el rendimiento global de una cadena productiva está determinado por la capacidad de su eslabón más débil."
+      },
+      {
+        "text": "En comprar maquinaria nueva para todas las áreas que no tienen problemas de velocidad.",
+        "isCorrect": false,
+        "rationale": "Invertir en áreas que no son restricciones no incrementa la capacidad total del sistema y genera costos innecesarios."
+      },
+      {
+        "text": "En acelerar los procesos de las etapas no restrictivas sin importar el flujo global.",
+        "isCorrect": false,
+        "rationale": "Aumentar la velocidad en etapas no restrictivas solo acumula inventario antes del cuello de botella."
+      },
+      {
+        "text": "En eliminar las mediciones de tiempo en el área de ensamble final.",
+        "isCorrect": false,
+        "rationale": "Medir y monitorear los tiempos es indispensable para identificar y gestionar los cuellos de botella."
+      },
+      {
+        "text": "En trabajar de manera aislada por departamentos sin coordinar la capacidad global.",
+        "isCorrect": false,
+        "rationale": "TOC rechaza la visión fragmentada y promueve la gestión sistémica e integrada de la empresa."
+      }
+    ],
+    "hint": "Enfócate en la idea del 'eslabón más débil' del sistema productivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes forman parte de los 5 pasos del ciclo de mejora continua en la Teoría de las Restricciones (TOC)?",
+    "opciones": [
+      {
+        "text": "Identificar la restricción del sistema.",
+        "isCorrect": true,
+        "rationale": "Es el paso inicial donde se localiza el recurso que limita la capacidad total del proceso."
+      },
+      {
+        "text": "Explotar la restricción del sistema.",
+        "isCorrect": true,
+        "rationale": "Consiste en obtener el máximo rendimiento posible del cuello de botella con los recursos existentes."
+      },
+      {
+        "text": "Subordinar todo lo demás a la restricción.",
+        "isCorrect": true,
+        "rationale": "Alinea la velocidad y ritmo de trabajo de los demás eslabones con la capacidad del cuello de botella."
+      },
+      {
+        "text": "Elevar la restricción del sistema.",
+        "isCorrect": true,
+        "rationale": "Implica realizar inversiones o cambios estructurales para ampliar la capacidad del recurso restrictivo."
+      },
+      {
+        "text": "Generar inventario masivo en los procesos previos.",
+        "isCorrect": false,
+        "rationale": "La acumulación masiva de inventario es un desperdicio que no contribuye a resolver la restricción."
+      }
+    ],
+    "hint": "Selecciona los pasos secuenciales que van desde encontrar el cuello de botella hasta aumentar su capacidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué significan las siglas APS en el contexto de las operaciones industriales avanzadas?",
+    "opciones": [
+      {
+        "text": "Planificación y Programación Avanzada de la Producción (Advanced Planning and Scheduling).",
+        "isCorrect": true,
+        "rationale": "APS abarca las herramientas informáticas orientadas a sincronizar y optimizar dinámicamente el uso de recursos productivos."
+      },
+      {
+        "text": "Automatización Principal de Sistemas de Almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Estas siglas inventadas no describen la metodología de planificación avanzada planteada en la disciplina de operaciones."
+      },
+      {
+        "text": "Análisis Predictivo de Seguridad e Higiene Industrial.",
+        "isCorrect": false,
+        "rationale": "Aunque el análisis predictivo se utiliza en seguridad, las siglas APS refieren a la programación de la producción."
+      },
+      {
+        "text": "Arquitectura Procesal de Sensores Automáticos.",
+        "isCorrect": false,
+        "rationale": "No corresponde al concepto de sistemas avanzados de programación de manufactura."
+      },
+      {
+        "text": "Aplicación Presupuestaria de Servicios e Insumos.",
+        "isCorrect": false,
+        "rationale": "La gestión presupuestaria forma parte del ERP financiero y no de la herramienta de programación APS."
+      }
+    ],
+    "hint": "Piensa en el sistema estratégico que utiliza algoritmos para secuenciar pedidos y optimizar recursos en tiempo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes herramientas tecnológicas o softwares se aplican en la planificación avanzada y simulación industrial?",
+    "opciones": [
+      {
+        "text": "SAP ERP / Oracle APS.",
+        "isCorrect": true,
+        "rationale": "Plataformas de planificación empresarial que integran datos de producción, logística y finanzas."
+      },
+      {
+        "text": "FlexSim.",
+        "isCorrect": true,
+        "rationale": "Software especializado en la simulación y visualización 3D de líneas de producción y sistemas de manufactura."
+      },
+      {
+        "text": "AnyLogic.",
+        "isCorrect": true,
+        "rationale": "Herramienta de simulación de entornos dinámicos basada en múltiples enfoques como eventos discretos y agentes."
+      },
+      {
+        "text": "Camstar / Preactor (Opcenter).",
+        "isCorrect": true,
+        "rationale": "Sistemas de secuenciación avanzada de la producción utilizando algoritmos para resolver problemas complejos de planta."
+      },
+      {
+        "text": "Microsoft Paint.",
+        "isCorrect": false,
+        "rationale": "Es una aplicación básica de dibujo en dos dimensiones, sin capacidades de simulación o planificación industrial."
+      }
+    ],
+    "hint": "Elige los sistemas computacionales diseñados para integrar datos de gestión, optimizar secuenciación o crear modelos virtuales 3D.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de la Programación Lineal (PL) en la gestión de producción?",
+    "opciones": [
+      {
+        "text": "Optimizar la asignación de recursos escasos mediante la formulación de modelos matemáticos cuantitativos.",
+        "isCorrect": true,
+        "rationale": "La Programación Lineal busca maximizar beneficios o minimizar costos resolviendo ecuaciones de decisión sujetas a restricciones."
+      },
+      {
+        "text": "Elaborar de forma manual bocetos artísticos para el empaque de productos.",
+        "isCorrect": false,
+        "rationale": "PL es una técnica matemática cuantitativa, no una actividad de dibujo manual."
+      },
+      {
+        "text": "Diseñar arneses y equipos físicos de protección contra caídas.",
+        "isCorrect": false,
+        "rationale": "El diseño de equipos de protección personal atañe a la ingeniería de seguridad, no a la optimización matemática de producción."
+      },
+      {
+        "text": "Monitorear la temperatura en la caldera por medio de termocopresores.",
+        "isCorrect": false,
+        "rationale": "La medición térmica corresponde al campo de la instrumentación y sensores, no a la programación lineal."
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar planes de mantenimiento preventivo.",
+        "isCorrect": false,
+        "rationale": "La optimización matemática no reemplaza la ejecución física del mantenimiento operacional."
+      }
+    ],
+    "hint": "Considera la técnica matemática que ayuda a decidir cuantitativamente cómo usar materias primas y horas-máquina al menor costo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una característica fundamental de la Planificación Dinámica en la producción?",
+    "opciones": [
+      {
+        "text": "Capacidad de adaptar y reconfigurar el plan de producción continuamente en respuesta a cambios en tiempo real.",
+        "isCorrect": true,
+        "rationale": "A diferencia de la programación estática, la planificación dinámica reajusta secuencias ante fluctuaciones imprevistas de la demanda o suministros."
+      },
+      {
+        "text": "Mantenimiento riguroso de una secuencia fija sin importar las fallas de maquinaria.",
+        "isCorrect": false,
+        "rationale": "Ignorar imprevistos y mantener el plan fijo es característico de un enfoque estático e ineficiente."
+      },
+      {
+        "text": "Dependencia exclusiva del trabajo en papel sin la utilización de software informático.",
+        "isCorrect": false,
+        "rationale": "La planificación dinámica moderna requiere el procesamiento en tiempo real mediante algoritmos y software informático."
+      },
+      {
+        "text": "Incapacidad para procesar datos provenientes de la demanda del mercado.",
+        "isCorrect": false,
+        "rationale": "La demanda del mercado es precisamente una de las entradas clave que procesa la planificación dinámica."
+      },
+      {
+        "text": "Prohibición explícita de realizar turnos de trabajo nocturnos.",
+        "isCorrect": false,
+        "rationale": "La asignación de turnos depende de la estrategia operacional y no constituye una restricción conceptual de la planificación dinámica."
+      }
+    ],
+    "hint": "Piensa en la habilidad del sistema para reaccionar flexiblemente ante imprevistos como retrasos de proveedores o averías.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito esencial de la simulación de procesos dentro de la manufactura?",
+    "opciones": [
+      {
+        "text": "Replicar virtualmente el comportamiento de un sistema productivo para evaluar escenarios sin poner en riesgo la operación real.",
+        "isCorrect": true,
+        "rationale": "La simulación permite experimentar con distintas configuraciones y prever problemas sin incurrir en costos ni detener la planta real."
+      },
+      {
+        "text": "Sustituir por completo a los colaboradores del área de diseño e ingeniería.",
+        "isCorrect": false,
+        "rationale": "La simulación es una herramienta de apoyo para los ingenieros, no su reemplazo analítico."
+      },
+      {
+        "text": "Aumentar intencionalmente la acumulación de inventario en proceso.",
+        "isCorrect": false,
+        "rationale": "Uno de los fines de simular es precisamente reducir inventarios innecesarios identificando congestiones."
+      },
+      {
+        "text": "Generar retrasos deliberados en la entrega de órdenes a los clientes.",
+        "isCorrect": false,
+        "rationale": "El objetivo de simular es optimizar los tiempos de entrega, no incrementarlos."
+      },
+      {
+        "text": "Evitar la recopilación de datos estadísticos sobre los tiempos de producción.",
+        "isCorrect": false,
+        "rationale": "Las herramientas de simulación se nutren y generan datos estadísticos detallados sobre el desempeño."
+      }
+    ],
+    "hint": "Considera la ventaja de crear un 'gemelo digital' o modelo computacional antes de hacer cambios físicos en la fábrica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes se consideran beneficios directos de la simulación de procesos industriales?",
+    "opciones": [
+      {
+        "text": "Reducción de costos y riesgos operacionales.",
+        "isCorrect": true,
+        "rationale": "Permite probar modificaciones en entornos digitales sin desperdiciar insumos reales ni detener operaciones."
+      },
+      {
+        "text": "Detección oportuna de cuellos de botella.",
+        "isCorrect": true,
+        "rationale": "Visualiza puntos de congestión en la línea virtual antes de que se presenten en la producción física."
+      },
+      {
+        "text": "Optimización del uso de maquinaria y materias primas.",
+        "isCorrect": true,
+        "rationale": "Ayuda a balancear adecuadamente las cargas de trabajo e insumos para evitar desperdicios."
+      },
+      {
+        "text": "Evaluación del impacto ante variaciones en la demanda.",
+        "isCorrect": true,
+        "rationale": "Proporciona análisis predictivos sobre cómo responderá la planta ante picos o caídas en las ventas."
+      },
+      {
+        "text": "Incremento de accidentes laborales en la planta física.",
+        "isCorrect": false,
+        "rationale": "La simulación previene situaciones de riesgo y ayuda a diseñar entornos de trabajo más seguros."
+      }
+    ],
+    "hint": "Elige los resultados positivos que aporta el análisis virtual previo a la toma de decisiones en planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la finalidad principal del Análisis de Riesgos Operacionales en la industria?",
+    "opciones": [
+      {
+        "text": "Identificar, evaluar y mitigar los peligros que afecten la seguridad humana, las instalaciones y la continuidad operativa.",
+        "isCorrect": true,
+        "rationale": "El análisis de riesgos busca prevenir activamente incidentes que causen daños a las personas, la infraestructura o el ambiente."
+      },
+      {
+        "text": "Sustituir los programas de mantenimiento preventivo por inspecciones puramente visuales.",
+        "isCorrect": false,
+        "rationale": "El análisis de riesgos complementa y exige planes rigurosos de mantenimiento, sin reemplazarlos por atajos."
+      },
+      {
+        "text": "Reducir los salarios del personal expuesto a actividades de alto riesgo.",
+        "isCorrect": false,
+        "rationale": "El análisis de riesgos busca proteger la integridad física del trabajador, sin estar orientado a penalizaciones salariales."
+      },
+      {
+        "text": "Aumentar el número de accidentes para validar la efectividad de las pólizas.",
+        "isCorrect": false,
+        "rationale": "La gestión de riesgos es eminentemente preventiva y su meta es reducir a cero la tasa de accidentes."
+      },
+      {
+        "text": "Ocultar la información sobre condiciones inseguras a las auditorías internacionales.",
+        "isCorrect": false,
+        "rationale": "El análisis de riesgos exige transparencia, documentación y cumplimiento de estándares normativos como ISO."
+      }
+    ],
+    "hint": "Piensa en el proceso sistemático para prevenir accidentes y proteger tanto a las personas como a los activos de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes corresponden a metodologías o herramientas para el análisis de riesgos operacionales?",
+    "opciones": [
+      {
+        "text": "Estudio HAZOP (Análisis de Peligros y Operabilidad).",
+        "isCorrect": true,
+        "rationale": "Técnica cualitativa para identificar desviaciones peligrosas en variables de proceso como presión o temperatura."
+      },
+      {
+        "text": "AMEF / FMEA (Análisis Modal de Fallos y Efectos).",
+        "isCorrect": true,
+        "rationale": "Herramienta estructurada para evaluar la severidad, ocurrencia y detección de fallas potenciales en sistemas."
+      },
+      {
+        "text": "Matriz IPERC (Identificación de Peligros, Evaluación de Riesgos y Control).",
+        "isCorrect": true,
+        "rationale": "Matriz obligatoria en seguridad ocupacional para priorizar riesgos y determinar sus respectivos controles."
+      },
+      {
+        "text": "Modelo Corbata de Moño (Bowtie).",
+        "isCorrect": true,
+        "rationale": "Esquema gráfico que conecta las causas preventivas de un evento no deseado con sus consecuencias y barreras de protección."
+      },
+      {
+        "text": "Matriz de presupuesto de mercadotecnia.",
+        "isCorrect": false,
+        "rationale": "Es un instrumento administrativo comercial, no una técnica de análisis de riesgo de seguridad industrial."
+      }
+    ],
+    "hint": "Selecciona las herramientas de ingeniería de seguridad utilizadas para mapear fallas, peligros y controles de mitigación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función específica de la Matriz IPERC en el área de seguridad y salud en el trabajo?",
+    "opciones": [
+      {
+        "text": "Identificar los peligros presentes en las tareas, evaluar el nivel de riesgo y establecer los controles preventivos requeridos.",
+        "isCorrect": true,
+        "rationale": "IPERC representa el instrumento base en prevención para clasificar riesgos por probabilidad/severidad y asignar controles en el puesto de trabajo."
+      },
+      {
+        "text": "Calcular la velocidad óptima de corte en máquinas herramientas.",
+        "isCorrect": false,
+        "rationale": "La velocidad de corte se calcula con parámetros de manufactura mecánica, no con la matriz de riesgos IPERC."
+      },
+      {
+        "text": "Establecer la estrategia de ventas de producto terminado a nivel internacional.",
+        "isCorrect": false,
+        "rationale": "Las estrategias comerciales externas corresponden a las áreas de ventas y marketing."
+      },
+      {
+        "text": "Programar las rutas de los camiones de reparto en el área logística.",
+        "isCorrect": false,
+        "rationale": "El ruteo de vehículos se optimiza en sistemas de gestión de transporte (TMS), no mediante la matriz IPERC."
+      },
+      {
+        "text": "Reemplazar la provisión de Equipos de Protección Personal (EPP).",
+        "isCorrect": false,
+        "rationale": "La Matriz IPERC identifica la necesidad del uso de EPP como medida de control, no lo sustituye."
+      }
+    ],
+    "hint": "Observa lo que significan las siglas: Identificación de Peligros, Evaluación de Riesgos y Control.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de crisis industriales, ¿cuál es el objetivo de la fase de Precrisis o Prevención?",
+    "opciones": [
+      {
+        "text": "Desarrollar planes de respuesta, capacitaciones y simulacros para anticipar eventos de emergencia y mitigar sus efectos.",
+        "isCorrect": true,
+        "rationale": "La precrisis abarca todas las acciones proactivas de preparación destinadas a evitar la ocurrencia de emergencias o saber reaccionar ante ellas."
+      },
+      {
+        "text": "Contabilizar el dinero perdido únicamente después de que ocurra una catástrofe.",
+        "isCorrect": false,
+        "rationale": "El recuento de pérdidas posteriores corresponde a la fase poscrisis de evaluación de daños."
+      },
+      {
+        "text": "Desactivar de forma definitiva los sensores de detección temprana.",
+        "isCorrect": false,
+        "rationale": "La instalación y mantenimiento de detectores de alerta temprana es un pilar fundamental de la preparación."
+      },
+      {
+        "text": "Evitar la realización de simulacros con el personal operativo.",
+        "isCorrect": false,
+        "rationale": "Los simulacros periódicos son esenciales en la precrisis para entrenar las brigadas de respuesta."
+      },
+      {
+        "text": "Ocultar los protocolos de evacuación a los nuevos trabajadores.",
+        "isCorrect": false,
+        "rationale": "La capacitación y difusión de las rutas de evacuación es un requisito preventivo básico."
+      }
+    ],
+    "hint": "Relaciona esta etapa con las acciones de preparación previa antes de que suceda una situación de emergencia real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué norma ISO establece los estándares internacionales para la Gestión de la Continuidad del Negocio ante emergencias y crisis?",
+    "opciones": [
+      {
+        "text": "ISO 22301.",
+        "isCorrect": true,
+        "rationale": "La norma ISO 22301 especifica los requisitos para planificar, mantener y mejorar un sistema de gestión de continuidad del negocio."
+      },
+      {
+        "text": "ISO 9001.",
+        "isCorrect": false,
+        "rationale": "La norma ISO 9001 establece los requisitos orientados exclusivamente a los Sistemas de Gestión de la Calidad."
+      },
+      {
+        "text": "ISO 14001.",
+        "isCorrect": false,
+        "rationale": "ISO 14001 es la norma internacional centrada en los Sistemas de Gestión Ambiental."
+      },
+      {
+        "text": "ISO 50001.",
+        "isCorrect": false,
+        "rationale": "ISO 50001 se enfoca en la Gestión de la Eficiencia Energética en las organizaciones."
+      },
+      {
+        "text": "ISO 27001.",
+        "isCorrect": false,
+        "rationale": "ISO 27001 regula los Sistemas de Gestión de la Seguridad de la Información."
+      }
+    ],
+    "hint": "Es la norma específica enfocada en la resiliencia operativa para que la empresa siga funcionando tras un desastre.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Para qué se utilizan los simuladores de escenarios de riesgo en las operaciones industriales?",
+    "opciones": [
+      {
+        "text": "Para entrenar a los equipos y probar la efectividad de los planes de contingencia en entornos controlados y seguros.",
+        "isCorrect": true,
+        "rationale": "Los simuladores permiten recrear condiciones peligrosas (incendios, fugas, colapsos) para evaluar la respuesta sin poner en riesgo vidas humanas."
+      },
+      {
+        "text": "Para reemplazar la contratación de personal médico y prevencionistas.",
+        "isCorrect": false,
+        "rationale": "Los simuladores son herramientas de capacitación, no sustitutos del personal calificado de salud y seguridad."
+      },
+      {
+        "text": "Para aumentar las horas de paro no planificado de las líneas de producción.",
+        "isCorrect": false,
+        "rationale": "El propósito del entrenamiento simulado es justamente reducir las interrupciones operativas al saber actuar con eficacia."
+      },
+      {
+        "text": "Para omitir el cumplimiento de la ley de seguridad y salud en el trabajo.",
+        "isCorrect": false,
+        "rationale": "El uso de simuladores ayuda al cumplimiento riguroso de las leyes de seguridad vigentes."
+      },
+      {
+        "text": "Para eliminar la necesidad de contar con rutas y mapas de evacuación.",
+        "isCorrect": false,
+        "rationale": "Las simulaciones ponen a prueba y validan las rutas de evacuación físicas trazadas en la planta."
+      }
+    ],
+    "hint": "Recuerda que estos entornos virtuales o de práctica permiten experimentar la emergencia sin peligro real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes representan categorías de eventos capaces de desencadenar una crisis industrial?",
+    "opciones": [
+      {
+        "text": "Eventos internos como explosiones, incendios o fugas de sustancias tóxicas.",
+        "isCorrect": true,
+        "rationale": "Constituyen incidentes críticos originados dentro de la instalación operacional debido a fallas físicas o químicas."
+      },
+      {
+        "text": "Eventos externos como sismos, tsunamis o actos de sabotaje.",
+        "isCorrect": true,
+        "rationale": "Son amenazas originadas fuera del control directo de la planta que pueden impactar gravemente las instalaciones."
+      },
+      {
+        "text": "Errores humanos atribuibles a negligencia o incumplimiento de protocolos.",
+        "isCorrect": true,
+        "rationale": "Representan fallas de origen operacional directo derivadas de decisiones o maniobras inadecuadas del personal."
+      },
+      {
+        "text": "Ciberataques o fallos graves en los sistemas informáticos de control (p. ej. SCADA).",
+        "isCorrect": true,
+        "rationale": "Las vulnerabilidades digitales pueden paralizar los sistemas automatizados y generar condiciones de peligro físico en la planta."
+      },
+      {
+        "text": "Cambios de color en la pintura decorativa de las oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "Las modificaciones estéticas menores no comprometen la continuidad del negocio ni representan una crisis industrial."
+      }
+    ],
+    "hint": "Selecciona las opciones que describan incidentes graves derivados de fallas operacionales, desastres naturales, fallas digitales o equivocaciones del personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la automatización e integración de robots industriales en líneas de ensamblaje, ¿cuál es el beneficio operativo primario que justifica la sustitución de tareas repetitivas humanas por brazos robóticos programados?",
+    "opciones": [
+      {
+        "text": "Aumento drástico de la variabilidad funcional sin necesidad de reprogramación técnica.",
+        "isCorrect": false,
+        "rationale": "Los robots industriales requieren reprogramación o software específico como SCARA o articulados para cambiar sus rutinas, por lo que no eliminan la necesidad de configuración técnica."
+      },
+      {
+        "text": "Incremento de la velocidad de ejecución, precisión y reducción de riesgos en entornos peligrosos.",
+        "isCorrect": true,
+        "rationale": "La robótica industrial destaca por ejecutar tareas repetitivas con alta precisión matemática, menor tiempo de ciclo y aislar al personal de entornos laborales de alto riesgo."
+      },
+      {
+        "text": "Eliminación total del mantenimiento preventivo y de la supervisión por parte de personal especializado.",
+        "isCorrect": false,
+        "rationale": "Los sistemas robóticos demandan un mantenimiento riguroso y la intervención de ingenieros o técnicos capacitados para supervisar su rendimiento."
+      },
+      {
+        "text": "Reducción a cero de los costos fijos de capital inicial asociados al despliegue tecnológico.",
+        "isCorrect": false,
+        "rationale": "La incorporación de robótica industrial involucra una inversión inicial significativa en infraestructura, licencias de software e integración."
+      },
+      {
+        "text": "Sustitución completa de la toma de decisiones estratégicas de la planta sin intervención del operador.",
+        "isCorrect": false,
+        "rationale": "La toma de decisiones estratégicas y de nivel gerencial sigue recayendo en el ser humano, mientras que el robot ejecuta instrucciones lógicas previamente programadas."
+      }
+    ],
+    "hint": "Considere la relación entre el tiempo de ciclo, la repetibilidad de la tarea y la seguridad ocupacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué componentes y tecnologías forman la arquitectura de un sistema de control automatizado industrial según lo expuesto en la gestión de operaciones?",
+    "opciones": [
+      {
+        "text": "Controladores Lógicos Programables (PLC) para la gestión directa de maquinaria.",
+        "isCorrect": true,
+        "rationale": "El PLC actúa como el dispositivo electrónico base programable para ejecutar la lógica de control de los activos físicos en tiempo real."
+      },
+      {
+        "text": "Sistemas SCADA para la supervisión y control remoto de procesos industriales complejos.",
+        "isCorrect": true,
+        "rationale": "El software SCADA proporciona una capa de monitoreo centralizado y adquisición de datos en tiempo real a escala industrial."
+      },
+      {
+        "text": "Interfaces Hombre-Máquina (HMI) para la interacción gráfica entre el operador y el sistema.",
+        "isCorrect": true,
+        "rationale": "El HMI permite al usuario visualizar el estado del proceso y realizar ajustes operativos mediante representaciones gráficas interactivas."
+      },
+      {
+        "text": "Hojas de cálculo manuales para la regulación de presión en calderas de alta temperatura.",
+        "isCorrect": false,
+        "rationale": "El control de variables críticas como la presión requiere sistemas automatizados en tiempo real y no registros manuales estáticos."
+      },
+      {
+        "text": "Sistemas de visión artificial integrados para la inspección automatizada de calidad.",
+        "isCorrect": true,
+        "rationale": "La visión artificial y los sensores avanzados capturan datos visuales del producto para tomar decisiones inmediatas sobre su conformidad."
+      }
+    ],
+    "hint": "Identifique las tecnologías electrónicas y de software que conectan físicamente la máquina con la supervisión operativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la arquitectura típica de un sistema de sensores industriales integrados, ¿cuál es la función de la capa de percepción?",
+    "opciones": [
+      {
+        "text": "Transmitir los datos procesados a los servidores centrales a través de redes industriales.",
+        "isCorrect": false,
+        "rationale": "La transmisión de datos a los sistemas centrales corresponde a la capa de red del sistema."
+      },
+      {
+        "text": "Recopilar directamente los datos físicos de variables como temperatura, presión y vibración.",
+        "isCorrect": true,
+        "rationale": "La capa de percepción comprende la instrumentación primaria que está en contacto físico con el proceso para capturar datos analógicos o digitales."
+      },
+      {
+        "text": "Presentar tableros de control ejecutivos para la toma de decisiones estratégicas.",
+        "isCorrect": false,
+        "rationale": "La visualización gerencial e indicadores clave se ubican en la capa de aplicación."
+      },
+      {
+        "text": "Filtrar y analizar matemáticamente grandes volúmenes de datos mediante algoritmos.",
+        "isCorrect": false,
+        "rationale": "El procesamiento y filtrado de la información capturada es tarea de la capa de procesamiento."
+      },
+      {
+        "text": "Ejecutar la compra automatizada de insumos de repuesto sin validación de inventario.",
+        "isCorrect": false,
+        "rationale": "Las transacciones de compras e inventarios son funciones de un sistema ERP y no de la capa física de sensores."
+      }
+    ],
+    "hint": "Piense en el nivel más bajo de la pirámide de automatización, donde los dispositivos detectan el entorno físico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son los tipos de sensores industriales utilizados para el monitoreo predictivo y el control de calidad en las líneas de producción?",
+    "opciones": [
+      {
+        "text": "Sensores de vibración para el monitoreo continuo de motores y maquinaria pesada.",
+        "isCorrect": true,
+        "rationale": "Los sensores de vibración permiten detectar anomalías mecánicas tempranas antes de que ocurra una falla catastrófica en el motor."
+      },
+      {
+        "text": "Sensores ópticos para la inspección automática de conformidad y calidad en productos.",
+        "isCorrect": true,
+        "rationale": "Los sensores ópticos verifican dimensiones, defectos superficiales y presencia de componentes en líneas a alta velocidad."
+      },
+      {
+        "text": "Sensores de presión ubicados en tuberías de sistemas hidráulicos.",
+        "isCorrect": true,
+        "rationale": "La medición de presión garantiza la estabilidad de fluidos de proceso y la prevención de sobrepresiones peligrosas."
+      },
+      {
+        "text": "Relojes mecánicos analógicos sin conexión a la red de control.",
+        "isCorrect": false,
+        "rationale": "Los dispositivos analógicos desconectados no permiten la integración en tiempo real exigida por la industria 4.0."
+      },
+      {
+        "text": "Barómetros manuales de uso doméstico instalados en el área administrativa.",
+        "isCorrect": false,
+        "rationale": "Los instrumentos de uso doméstico carecen del rango, precisión y certificación requeridos para entornos industriales pesados."
+      }
+    ],
+    "hint": "Seleccione aquellos dispositivos capaces de medir variables físicas críticas e integrar la información a los sistemas digitales de la planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la interconexión industrial, ¿qué característica define el concepto de 'procesamiento en el borde' (Edge Processing) en la arquitectura de sensores?",
+    "opciones": [
+      {
+        "text": "Almacenar la totalidad de los datos históricos en cintas magnéticas fuera de la planta.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento fuera de sitio en medios pasivos se refiere al respaldo histórico y no al procesamiento activo cercano a la fuente."
+      },
+      {
+        "text": "Reducir la latencia procesando los datos capturados cerca de su origen físico.",
+        "isCorrect": true,
+        "rationale": "El Edge Processing analiza la información localmente en el sensor o controlador cercano, reduciendo tiempos de respuesta de la red y cuellos de botella de ancho de banda."
+      },
+      {
+        "text": "Reemplazar los controladores lógicos por interfaces de usuario manuales.",
+        "isCorrect": false,
+        "rationale": "El procesamiento en el borde busca mayor automatización y rapidez computacional, no el retorno a controles manuales."
+      },
+      {
+        "text": "Eliminar la necesidad de usar protocolos de seguridad y cifrado en redes industriales.",
+        "isCorrect": false,
+        "rationale": "Procesar datos en el borde exige reforzar la ciberseguridad industrial debido a la descentralización de los puntos de cómputo."
+      },
+      {
+        "text": "Centralizar todo el cálculo algorítmico exclusivamente en servidores en la nube distantes.",
+        "isCorrect": false,
+        "rationale": "El cálculo exclusivo en la nube es el enfoque opuesto al Edge Processing, el cual precisamente busca evitar la dependencia absoluta de la nube lejana."
+      }
+    ],
+    "hint": "Considere la ubicación física del procesamiento computacional en relación con el lugar donde se genera el dato.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de una interfaz HMI (Human-Machine Interface) en un entorno de manufactura automatizado?",
+    "opciones": [
+      {
+        "text": "Ejecutar el código binario de control de bajo nivel para los servotores.",
+        "isCorrect": false,
+        "rationale": "El código de bajo nivel y el control de movimiento es ejecutado internamente por el PLC o drive, no por la pantalla HMI."
+      },
+      {
+        "text": "Facilitar la conexión y visualización gráfica interactiva entre el operador humano y la máquina.",
+        "isCorrect": true,
+        "rationale": "El HMI traduce los datos del proceso industrial en representaciones visuales comprensibles para que los operadores puedan supervisar y enviar comandos."
+      },
+      {
+        "text": "Gestionar la contabilidad financiera y el pago de nómina de la empresa.",
+        "isCorrect": false,
+        "rationale": "Las operaciones de contabilidad y recursos humanos se realizan mediante un software ERP corporativo."
+      },
+      {
+        "text": "Convertir señales analógicas de temperatura directamente en energía mecánica.",
+        "isCorrect": false,
+        "rationale": "La conversión de energía es función de actuadores o transductores, no de una interfaz gráfica de monitoreo."
+      },
+      {
+        "text": "Reemplazar permanentemente a los sensores físicos instalados en la tubería.",
+        "isCorrect": false,
+        "rationale": "La HMI no genera ni captura datos primarios; requiere obligatoriamente de los sensores físicos para mostrar información."
+      }
+    ],
+    "hint": "Piense en el puente visual necesario para que un técnico entienda lo que ocurre dentro de una máquina cerrada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la filosofía Lean Manufacturing, ¿cómo se define el desperdicio denominado 'Muda' relacionado con la sobreproducción?",
+    "opciones": [
+      {
+        "text": "Procesar piezas con estándares de calidad superiores a los exigidos por el diseño.",
+        "isCorrect": false,
+        "rationale": "Esta descripción corresponde al desperdicio por sobreprocesamiento o procesamiento innecesario."
+      },
+      {
+        "text": "Fabricar productos antes de que sean requeridos o en cantidades superiores a la demanda real.",
+        "isCorrect": true,
+        "rationale": "La sobreproducción es considerada el peor desperdicio en Lean porque genera inventario innecesario y oculta otros problemas operativos."
+      },
+      {
+        "text": "El tiempo que los operadores permanecen inactivos esperando materias primas.",
+        "isCorrect": false,
+        "rationale": "El tiempo inactivo de personal o máquinas se clasifica dentro del desperdicio por espera."
+      },
+      {
+        "text": "El traslado de insumos entre almacenes distantes dentro de la planta industrial.",
+        "isCorrect": false,
+        "rationale": "El transporte no necesario de insumos pertenece a la categoría de desperdicio por transporte."
+      },
+      {
+        "text": "La realización de movimientos corporales ineficientes por parte del trabajador.",
+        "isCorrect": false,
+        "rationale": "Los desplazamientos físicos o ergonomía deficiente del trabajador corresponden al desperdicio por movimientos innecesarios."
+      }
+    ],
+    "hint": "Reflexione sobre la producción realizada en exceso o a destiempo frente al ritmo real de pedidos del cliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes herramientas pertenecen metodológicamente al sistema Lean Manufacturing para la eliminación de desperdicios?",
+    "opciones": [
+      {
+        "text": "Metodología 5S para la organización, orden y estandarización del puesto de trabajo.",
+        "isCorrect": true,
+        "rationale": "Las 5S establecen la disciplina operativa y la limpieza visual como base para detectar anomalías en la planta."
+      },
+      {
+        "text": "Sistema Kanban para el control visual del flujo de producción pull.",
+        "isCorrect": true,
+        "rationale": "Kanban utiliza tarjetas o señales visuales para autorizar la producción basándose exclusivamente en el consumo real."
+      },
+      {
+        "text": "Dispositivos Poka-Yoke diseñados para prevenir errores humanos involuntarios.",
+        "isCorrect": true,
+        "rationale": "Los mecanismos Poka-Yoke evitan que se cometan equivocaciones mecánicas o de ensamblaje en el origen de la tarea."
+      },
+      {
+        "text": "Pruebas destructivas aleatorias sin registro de datos cuantitativos.",
+        "isCorrect": false,
+        "rationale": "El desperdiciar material sin análisis de datos no constituye una herramienta Lean de optimización."
+      },
+      {
+        "text": "Aumento deliberado del tamaño de lote para saturar los almacenes de producto terminado.",
+        "isCorrect": false,
+        "rationale": "Aumentar los lotes contraviene los principios Lean que promueven el flujo continuo y la reducción de inventarios."
+      }
+    ],
+    "hint": "Identifique las técnicas enfocadas en el orden visual, la producción tirada por el cliente y la prevención de fallas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la metodología Six Sigma, ¿cuál es el objetivo central del ciclo estructurado DMAIC (Definir, Medir, Analizar, Mejorar, Controlar)?",
+    "opciones": [
+      {
+        "text": "Incrementar la variabilidad geométrica en las piezas de alta precisión.",
+        "isCorrect": false,
+        "rationale": "Six Sigma busca reducir la variabilidad en los procesos, no incrementarla."
+      },
+      {
+        "text": "Reducir de forma sistemática los defectos y variaciones críticas para alcanzar niveles de calidad óptimos.",
+        "isCorrect": true,
+        "rationale": "El ciclo DMAIC utiliza análisis estadístico riguroso para eliminar las causas raíz de la variabilidad y asegurar menos de 3.4 defectos por millón de oportunidades."
+      },
+      {
+        "text": "Sustituir el departamento de finanzas por supervisores de planta.",
+        "isCorrect": false,
+        "rationale": "Six Sigma no reemplaza funciones corporativas, sino que proporciona metodologías de mejora aplicables a todas las áreas."
+      },
+      {
+        "text": "Aumentar el gasto en reprocesos para garantizar que la inspección final sea exhaustiva.",
+        "isCorrect": false,
+        "rationale": "La metodología pretende eliminar los reprocesos mediante la calidad desde la fuente, reduciendo el costo de inspección."
+      },
+      {
+        "text": "Diseñar campañas publicitarias para disimular las fallas mecánicas entregadas al cliente.",
+        "isCorrect": false,
+        "rationale": "Six Sigma se enfoca en resolver técnicamente la calidad del producto y proceso, rechazando encubrir defectos."
+      }
+    ],
+    "hint": "Considere la métrica estadística del nivel Sigma y su impacto en la tasa de defectos por millón de oportunidades.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué roles y niveles de certificación estructuran la jerarquía de competencias en la metodología Six Sigma?",
+    "opciones": [
+      {
+        "text": "Green Belt, responsable de liderar proyectos de mejora en su área operativa.",
+        "isCorrect": true,
+        "rationale": "El Green Belt posee capacitación analítica para ejecutar proyectos locales aplicando herramientas DMAIC."
+      },
+      {
+        "text": "Black Belt, experto dedicado a liderar proyectos estratégicos de alto impacto.",
+        "isCorrect": true,
+        "rationale": "El Black Belt domina la estadística avanzada y lidera la transformación de procesos complejos a tiempo completo."
+      },
+      {
+        "text": "Master Black Belt, consultor técnico y mentor de la metodología en la organización.",
+        "isCorrect": true,
+        "rationale": "El Master Black Belt asesora a la alta dirección y entrena a los Black Belts y Green Belts en la estrategia global."
+      },
+      {
+        "text": "Auditor Externo Financiero sin formación en calidad.",
+        "isCorrect": false,
+        "rationale": "La estructura de cinturones Six Sigma requiere capacitación específica en la metodología analítica y estadística de calidad."
+      },
+      {
+        "text": "Operador Temporal sin entrenamiento en análisis estadístico.",
+        "isCorrect": false,
+        "rationale": "Los niveles formales de certificación Six Sigma exigen la aprobación de programas técnicos de entrenamiento y proyectos validados."
+      }
+    ],
+    "hint": "Piense en la analogía de cinturones inspirada en artes marciales que clasifica el dominio estadístico de la metodología.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la Teoría de las Restricciones (TOC) desarrollada por Goldratt, ¿cuál es el primer paso metodológico del proceso de mejora continua?",
+    "opciones": [
+      {
+        "text": "Subordinar todo el resto del sistema a las decisiones tomadas.",
+        "isCorrect": false,
+        "rationale": "Subordinar corresponde al tercer paso, una vez que la restricción ha sido identificada y se ha decidido cómo explotarla."
+      },
+      {
+        "text": "Identificar la restricción o cuello de botella del sistema.",
+        "isCorrect": true,
+        "rationale": "TOC establece que antes de intentar cualquier mejora se debe localizar exactamente el factor limitante que frena el desempeño global."
+      },
+      {
+        "text": "Comprar inmediatamente maquinaria nueva de alta velocidad.",
+        "isCorrect": false,
+        "rationale": "Elevar la restricción mediante inversión financiera es el cuarto paso, solo si la explotación inicial no es suficiente."
+      },
+      {
+        "text": "Reducir los precios de venta en el mercado de manera indiscriminada.",
+        "isCorrect": false,
+        "rationale": "La política de precios no constituye la identificación operativa del cuello de botella en el proceso productivo."
+      },
+      {
+        "text": "Ignorar la máquina más lenta y acelerar las máquinas más rápidas.",
+        "isCorrect": false,
+        "rationale": "Acelerar procesos no restrictivos genera acumulación masiva de inventario de trabajo en proceso sin aumentar las ventas."
+      }
+    ],
+    "hint": "Antes de optimizar o invertir en un proceso, debe localizar dónde se genera el atascamiento principal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta estadística de calidad se basa en el principio 80/20 para priorizar las causas principales de los problemas operativos?",
+    "opciones": [
+      {
+        "text": "Diagrama de dispersión.",
+        "isCorrect": false,
+        "rationale": "El diagrama de dispersión evalúa la relación matemática o correlación entre dos variables continuas."
+      },
+      {
+        "text": "Diagrama de Pareto.",
+        "isCorrect": true,
+        "rationale": "El Diagrama de Pareto clasifica los problemas mostrando que aproximadamente el 80% de los defectos provienen del 20% de las causas vitales."
+      },
+      {
+        "text": "Espina de Pescado o Diagrama de Ishikawa.",
+        "isCorrect": false,
+        "rationale": "El diagrama de Ishikawa cualifica las causas potenciales agrupándolas en categorías (6M), pero no aplica directamente el principio 80/20 cuantitativo."
+      },
+      {
+        "text": "Gráfico de Gantt.",
+        "isCorrect": false,
+        "rationale": "El gráfico de Gantt es una herramienta de planificación temporal de tareas en proyectos."
+      },
+      {
+        "text": "Matriz ANOVA de un solo factor.",
+        "isCorrect": false,
+        "rationale": "ANOVA es una prueba de hipótesis estadística para comparar medias de múltiples grupos, no un gráfico de priorización 80/20."
+      }
+    ],
+    "hint": "Nombre del economista italiano cuyo principio ayuda a separar los 'pocos vitales' de los 'muchos triviales'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de los sistemas APS (Advanced Planning and Scheduling) en la gestión moderna de la producción industrial?",
+    "opciones": [
+      {
+        "text": "Registrar exclusivamente las asistencias diarias del personal administrativo.",
+        "isCorrect": false,
+        "rationale": "La asistencia del personal es gestionada por sistemas de gestión de recursos humanos y no por un motor APS."
+      },
+      {
+        "text": "Optimizar la planificación y secuenciación detallada de producción mediante algoritmos matemáticos en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Los sistemas APS sincronizan restricciones de capacidad, materiales y demanda usando algoritmos avanzados para generar programas de producción factibles y óptimos."
+      },
+      {
+        "text": "Reemplazar los sensores físicos de vibración en las bombas hidráulicas.",
+        "isCorrect": false,
+        "rationale": "El APS es un sistema de software de planificación jerárquica y no sustituye la instrumentación física de planta."
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar bases de datos o sistemas ERP.",
+        "isCorrect": false,
+        "rationale": "Los sistemas APS se integran y complementan con los ERP (como SAP u Oracle), alimentándose de sus datos maestros."
+      },
+      {
+        "text": "Emitir facturas tributarias de venta al cliente final automáticamente.",
+        "isCorrect": false,
+        "rationale": "La facturación comercial es un módulo estándar del ERP y no la función central de un APS."
+      }
+    ],
+    "hint": "Piense en el software que va más allá del cálculo estático de requerimientos y resuelve la secuenciación con restricciones finitas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué modelos matemáticos y algorítmicos son utilizados en la programación avanzada de la producción para la asignación de recursos?",
+    "opciones": [
+      {
+        "text": "Programación Lineal (PL) para la optimización cuantitativa con restricciones de recursos.",
+        "isCorrect": true,
+        "rationale": "La PL permite maximizar ganancias o minimizar costos mediante ecuaciones lineales que representan limitaciones de capacidad."
+      },
+      {
+        "text": "Programación Entera Mixta (MIP) para variables discretas como turnos, máquinas y lotes.",
+        "isCorrect": true,
+        "rationale": "MIP resuelve problemas donde ciertas decisiones deben ser representadas necesariamente por valores enteros o binarios."
+      },
+      {
+        "text": "Algoritmos Genéticos y heurísticas para resolver problemas complejos de secuenciación.",
+        "isCorrect": true,
+        "rationale": "Las heurísticas y metaheurísticas encuentran soluciones eficientes y cercanas al óptimo en problemas combinatorialmente complejos en tiempos razonables."
+      },
+      {
+        "text": "Horóscopos operativos y predicciones empíricas sin sustento cuantitativo.",
+        "isCorrect": false,
+        "rationale": "La programación avanzada se basa estrictamente en rigor matemático, ciencia de datos y algoritmos computacionales."
+      },
+      {
+        "text": "Listas de tareas manuscritas no sincronizadas con la capacidad de la planta.",
+        "isCorrect": false,
+        "rationale": "Las anotaciones informales carecen del soporte algorítmico necesario para balancear restricciones finitas en plantas complejas."
+      }
+    ],
+    "hint": "Seleccione las técnicas cuantitativas que combinan optimización matemática exacta y metaheurísticas computationales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué característica distingue a la planificación dinámica de producción frente a la planificación tradicional estática?",
+    "opciones": [
+      {
+        "text": "Fija los programas de trabajo al inicio del año sin permitir modificaciones bajo ninguna circunstancia.",
+        "isCorrect": false,
+        "rationale": "La rigidez absoluta ante imprevistos es la deficiencia del enfoque tradicional estático."
+      },
+      {
+        "text": "Ajusta y reconfigura los planes de producción continuamente en tiempo real ante variaciones de la demanda o imprevistos.",
+        "isCorrect": true,
+        "rationale": "La planificación dinámica monitorea eventos reales como averías o cambios de pedido para recalcular de inmediato la programación óptima."
+      },
+      {
+        "text": "Funciona exclusivamente mediante la intuición diaria del supervisor de turno.",
+        "isCorrect": false,
+        "rationale": "La planificación dinámica aprovecha la analítica de datos y software especializado, no la improvisación informal."
+      },
+      {
+        "text": "Incrementa deliberadamente los tiempos inactivos para evitar el desgaste de los equipos.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la planificación dinámica es minimizar el tiempo improductivo mediante la reconfiguración inteligente."
+      },
+      {
+        "text": "Requiere la paralización total de la planta antes de reprogramar un pedido.",
+        "isCorrect": false,
+        "rationale": "El software dinámico busca mantener la fluidez de la operación reasignando cargas sin detener toda la fábrica."
+      }
+    ],
+    "hint": "Piense en la capacidad de respuesta inmediata del sistema cuando un proveedor se retrasa o falla una máquina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son los beneficios clave derivados de la simulación computacional de procesos en la manufactura industrial?",
+    "opciones": [
+      {
+        "text": "Evaluación de escenarios 'qué pasaría si' (what-if) sin alterar ni arriesgar la operación real.",
+        "isCorrect": true,
+        "rationale": "La simulación permite experimentar con modificaciones del proceso en un entorno virtual seguro antes de realizar inversiones físicas."
+      },
+      {
+        "text": "Identificación de cuellos de botella y cuellos de congestión en el flujo de materiales.",
+        "isCorrect": true,
+        "rationale": "Los modelos de simulación revelan dónde se acumula el trabajo en proceso según diferentes niveles de demanda."
+      },
+      {
+        "text": "Optimización del dimensionamiento de flota, personal e inventarios.",
+        "isCorrect": true,
+        "rationale": "Permite calcular con precisión la cantidad de recursos necesarios para responder a la variabilidad sin sobredimensionar costos."
+      },
+      {
+        "text": "Garantía de que las máquinas nunca requerirán mantenimiento en el futuro.",
+        "isCorrect": false,
+        "rationale": "La simulación no evita el desgaste físico de los activos, aunque sí ayuda a planificar el mantenimiento predictivo."
+      },
+      {
+        "text": "Aumento del desperdicio de materia prima durante las fases de prueba en la computadora.",
+        "isCorrect": false,
+        "rationale": "Las pruebas virtuales consumen recursos computacionales pero no gastan materia prima física."
+      }
+    ],
+    "hint": "Considere la ventaja de probar cambios en software informático antes de modificar físicamente la planta de producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de modelado y simulación, ¿qué enfoque se utiliza en la simulación de eventos discretos (DES)?",
+    "opciones": [
+      {
+        "text": "Representar el comportamiento del sistema como una secuencia de acontecimientos separados en puntos específicos del tiempo.",
+        "isCorrect": true,
+        "rationale": "La simulación discreta cambia los estados del sistema en momentos puntuales cuando ocurren eventos clave como la llegada de una pieza o la finalización de un maquinado."
+      },
+      {
+        "text": "Calcular ecuaciones diferenciales fluidas sin considerar la presencia de piezas individuales.",
+        "isCorrect": false,
+        "rationale": "El cálculo diferencial continuo se utiliza en dinámica de sistemas o mecánica de fluidos, no en eventos discretos."
+      },
+      {
+        "text": "Analizar la personalidad psicológica de los gerentes corporativos.",
+        "isCorrect": false,
+        "rationale": "La simulación de eventos discretos se aplica a flujos de trabajo, logística y capacidad de procesos industriales."
+      },
+      {
+        "text": "Crear videojuegos entretenidos desvinculados de los datos cuantitativos de la planta.",
+        "isCorrect": false,
+        "rationale": "Aunque utiliza gráficos 3D, la simulación discreta industrial se sustenta estrictamente en distribuciones de probabilidad y datos operativos reales."
+      },
+      {
+        "text": "Eliminar la variabilidad matemática para asumir que todos los tiempos de ciclo son idénticos.",
+        "isCorrect": false,
+        "rationale": "La simulación de eventos discretos destaca precisamente por incorporar la estocasticidad y variabilidad real de los tiempos."
+      }
+    ],
+    "hint": "Piense en cómo avanzan las piezas en una línea de producción: llegada de lote, inicio de proceso, fin de inspección.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera contribuye la simulación de procesos a la estrategia de producción Just-in-Time (JIT)?",
+    "opciones": [
+      {
+        "text": "Permite determinar los niveles mínimos de inventario y amortiguadores (buffers) requeridos para mantener el flujo sin interrupciones.",
+        "isCorrect": true,
+        "rationale": "La simulación ayuda a calibrar los amortiguadores necesarios para absorber la variabilidad manteniendo el inventario lo más bajo posible."
+      },
+      {
+        "text": "Justifica el almacenamiento masivo de materia prima durante varios años.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento masivo es lo opuesto al principio Just-in-Time, el cual busca reducir existencias."
+      },
+      {
+        "text": "Obliga a la empresa a fabricar productos sin contar con pedidos confirmados.",
+        "isCorrect": false,
+        "rationale": "El enfoque JIT funciona bajo un sistema Pull impulsado por la demanda real, no por especulación masiva."
+      },
+      {
+        "text": "Desconecta la logística de almacén del programa maestro de producción.",
+        "isCorrect": false,
+        "rationale": "La simulación busca integrar y sincronizar la logística con la producción para asegurar entregas a tiempo."
+      },
+      {
+        "text": "Aumenta los tiempos de cambio de herramental (setup) en las líneas de trabajo.",
+        "isCorrect": false,
+        "rationale": "El enfoque JIT exige la reducción drástica de tiempos de preparación (SMED), objetivo apoyado por los análisis de simulación."
+      }
+    ],
+    "hint": "Relacione el modelado de escenarios virtuales con la búsqueda de sincronización perfecta con cero inventario improductivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del análisis de riesgos operacionales en la industria, ¿cuál es el propósito de realizar un estudio de Operabilidad y Peligro (HAZOP)?",
+    "opciones": [
+      {
+        "text": "Calcular la nómina salarial según las horas extra trabajadas.",
+        "isCorrect": false,
+        "rationale": "La nómina administrativa no es objeto de un estudio de ingeniería de seguridad operacional."
+      },
+      {
+        "text": "Identificar sistemáticamente desviaciones en las variables del proceso (presión, temperatura, caudal) que puedan generar riesgos o problemas operativos.",
+        "isCorrect": true,
+        "rationale": "HAZOP es una técnica rigurosa multidisciplinaria que utiliza palabras guía para evaluar qué ocurre si una variable del proceso se desvía de su intención de diseño."
+      },
+      {
+        "text": "Diseñar logotipos comerciales para el empaque secundario.",
+        "isCorrect": false,
+        "rationale": "El diseño gráfico de empaques es una función de marketing, ajena a la evaluación de riesgos de proceso HAZOP."
+      },
+      {
+        "text": "Sustituir el mantenimiento preventivo por inspecciones puramente visuales ocasionales.",
+        "isCorrect": false,
+        "rationale": "El HAZOP fundamenta las rutinas de salvaguardas y mantenimiento, reforzando los controles técnicos necesarios."
+      },
+      {
+        "text": "Certificar que el personal no requiera utilizar equipos de protección personal.",
+        "isCorrect": false,
+        "rationale": "El HAZOP evalúa el riesgo intrínseco del proceso y frecuentemente determina el EPP necesario si las salvaguardas de ingeniería no eliminan el peligro."
+      }
+    ],
+    "hint": "Piense en el método estructurado que analiza palabras guía como 'Más de', 'Menos de' o 'Flujo inverso' en tuberías e reactores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué aspectos abarca la evaluación de riesgos mediante la Matriz IPERC (Identificación de Peligros, Evaluación de Riesgos y Medidas de Control)?",
+    "opciones": [
+      {
+        "text": "La identificación clara de todos los peligros inherentes a las tareas operativas.",
+        "isCorrect": true,
+        "rationale": "IPERC exige listar cada peligro físico, químico, ergonómico o psicosocial presente en el puesto de trabajo."
+      },
+      {
+        "text": "La estimación de la probabilidad de ocurrencia y la severidad del daño potencial.",
+        "isCorrect": true,
+        "rationale": "El nivel de riesgo se evalúa cuantitativa o cualitativamente multiplicando o cruzando índices de probabilidad y severidad."
+      },
+      {
+        "text": "La definición de la jerarquía de controles (eliminación, sustitución, ingeniería, administrativos y EPP).",
+        "isCorrect": true,
+        "rationale": "Una matriz IPERC válida debe establecer medidas concretas respetando el orden normativo de preferencia de controles."
+      },
+      {
+        "text": "La asignación aleatoria de culpabilidad financiera ante accidentes pasados.",
+        "isCorrect": false,
+        "rationale": "IPERC es una herramienta preventiva orientada a la gestión de la seguridad, no un mecanismo de sanción o culpabilidad."
+      },
+      {
+        "text": "La eliminación formal de los seguros de salud ocupacional para reducir costos.",
+        "isCorrect": false,
+        "rationale": "La implementación de IPERC complementa y respalda la salud ocupacional, sin eximir la cobertura de seguros legales."
+      }
+    ],
+    "hint": "Seleccione los elementos esenciales que componen el ciclo: peligro, nivel de riesgo y barra de contención o control.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la estructura de la gestión de crisis industriales, ¿cuál es la característica fundamental de la fase de 'precrisis'?",
+    "opciones": [
+      {
+        "text": "Efectuar la limpieza de escombros de una infraestructura colapsada.",
+        "isCorrect": false,
+        "rationale": "La remoción de escombros y reconstrucción pertenece a la fase de postcrisis o recuperación."
+      },
+      {
+        "text": "Implementar acciones proactivas, planes de respuesta, capacitaciones y simulacros antes de que ocurra el evento.",
+        "isCorrect": true,
+        "rationale": "La precrisis se enfoca en la preparación, la identificación de vulnerabilidades y la mitigación proactiva para reducir el impacto de emergencias potenciales."
+      },
+      {
+        "text": "Atender inmediatamente la emergencia en medio de la explosión o fuga.",
+        "isCorrect": false,
+        "rationale": "La intervención inmediata durante el suceso forma parte de la fase de crisis activa o respuesta."
+      },
+      {
+        "text": "Pagar las indemnizaciones financieras fijadas por los tribunales.",
+        "isCorrect": false,
+        "rationale": "Las indemnizaciones y aspectos legales posteriores al evento son tramitados en la etapa posterior a la emergencia."
+      },
+      {
+        "text": "Ocultar la información sobre fallas mecánicas a los organismos reguladores.",
+        "isCorrect": false,
+        "rationale": "La preparación busca corregir fallas de forma transparente conforme al cumplimiento normativo, evitando el encubrimiento."
+      }
+    ],
+    "hint": "Enfoque su respuesta en la etapa de preparación previa al desencadenamiento de una emergencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué marcos normativos e instrumentos técnicos respaldan la continuidad del negocio y la seguridad ocupacional en las industrias?",
+    "opciones": [
+      {
+        "text": "Norma ISO 22301 para los sistemas de gestión de la continuidad del negocio (BCM).",
+        "isCorrect": true,
+        "rationale": "La ISO 22301 especifica los requisitos para planificar, establecer y operar un sistema documentado de continuidad ante interrupciones."
+      },
+      {
+        "text": "Norma ISO 45001 para la gestión de la seguridad y salud en el trabajo.",
+        "isCorrect": true,
+        "rationale": "ISO 45001 proporciona el marco para proteger a los trabajadores, reducir riesgos laborales y crear condiciones seguras."
+      },
+      {
+        "text": "Norma ISO 31000 que establece las directrices para la gestión integral del riesgo.",
+        "isCorrect": true,
+        "rationale": "ISO 31000 guía la identificación, análisis y tratamiento estructurado de riesgos en cualquier organización."
+      },
+      {
+        "text": "Manuales informales no documentados transmitidos únicamente de forma oral.",
+        "isCorrect": false,
+        "rationale": "Los sistemas de gestión auditables requieren documentación formal, procedimientos estandarizados y registros verificables."
+      },
+      {
+        "text": "Reglamentos de juego de mesa sin aplicación al sector industrial.",
+        "isCorrect": false,
+        "rationale": "Las regulaciones industriales son estándares técnicos de ingeniería y gestión legalmente aplicables."
+      }
+    ],
+    "hint": "Identifique los estándares internacionales ISO de las familias de Seguridad Ocupacional, Gestión de Riesgos y Continuidad Operativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el entrenamiento de brigadas y personal operativo, ¿qué ventaja ofrece el uso de simuladores virtuales frente a los simulacros puramente físicos?",
+    "opciones": [
+      {
+        "text": "Obligan a destruir instalaciones reales para comprobar la resistencia del fuego.",
+        "isCorrect": false,
+        "rationale": "La simulación virtual busca precisamente evitar el daño a instalaciones reales durante la capacitación."
+      },
+      {
+        "text": "Permiten recrear escenarios extremos de alto riesgo sin exponer físicamente al personal al peligro real.",
+        "isCorrect": true,
+        "rationale": "Los entornos virtuales o modelos computacionales permiten poner a prueba las decisiones del personal en situaciones catastróficas reduciendo a cero el riesgo de lesiones durante la práctica."
+      },
+      {
+        "text": "Garantizan que la empresa reciba subsidios estatales sin necesidad de auditorías.",
+        "isCorrect": false,
+        "rationale": "Los simuladores son herramientas técnicas de preparación, no exenciones administrativas de auditoría."
+      },
+      {
+        "text": "Sustituyen la necesidad de contar con brigadas humanas de emergencia.",
+        "isCorrect": false,
+        "rationale": "El simulador entrena al factor humano; no reemplaza la acción física de los brigadistas en una emergencia real."
+      },
+      {
+        "text": "Eliminan la necesidad de actualizar los planes de evacuación en la planta.",
+        "isCorrect": false,
+        "rationale": "Los resultados de las simulaciones se utilizan para alimentar y actualizar de forma continua los planes de respuesta."
+      }
+    ],
+    "hint": "Considere la seguridad del participante al recrear accidentes graves como explosiones o incendios químicos masivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la consecuencia directa de no aplicar medidas de prevención y control de riesgos operacionales en plantas petroquímicas o mineras?",
+    "opciones": [
+      {
+        "text": "Aumento de la reputación corporativa en los mercados financieros globales.",
+        "isCorrect": false,
+        "rationale": "La falta de seguridad degrada la reputación de la empresa y genera desconfianza en los inversionistas."
+      },
+      {
+        "text": "Ocurrencia de accidentes graves, pérdidas humanas, sanciones legales severas e interrupción de las operaciones.",
+        "isCorrect": true,
+        "rationale": "La omisión de controles de riesgo acarrea consecuencias catastróficas como fatalidades, daños ambientales, multas multimillonarias y paralización de la planta."
+      },
+      {
+        "text": "Reducción automática de los costos de prima de seguros de la planta.",
+        "isCorrect": false,
+        "rationale": "Las aseguradoras incrementan drásticamente el costo de las primas a las industrias que muestran deficientes indicadores de seguridad."
+      },
+      {
+        "text": "Obtención inmediata de certificaciones internacionales de sostenibilidad.",
+        "isCorrect": false,
+        "rationale": "Las certificaciones de sostenibilidad e ISO exigen la demostración rigurosa del cumplimiento en prevención de riesgos."
+      },
+      {
+        "text": "Eliminación total del desgaste mecánico en los componentes de la maquinaria.",
+        "isCorrect": false,
+        "rationale": "La gestión de riesgos no altera las leyes de la física ni detiene la fricción o corrosión natural de los materiales."
+      }
+    ],
+    "hint": "Piense en el impacto combinado sobre las personas, el medio ambiente, la legalidad y la viabilidad económica de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-39",
+    "diplomado": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué actividades son fundamentales durante la fase de 'postcrisis' o evaluación posterior a un incidente industrial?",
+    "opciones": [
+      {
+        "text": "Inspección técnica de la infraestructura y evaluación detallada de los daños.",
+        "isCorrect": true,
+        "rationale": "Tras contener la emergencia, se realiza el peritaje técnico para verificar las condiciones estructurales de seguridad."
+      },
+      {
+        "text": "Elaboración del informe de lecciones aprendidas para identificar las fallas en el protocolo.",
+        "isCorrect": true,
+        "rationale": "Analizar la respuesta permite comprender qué funcionó y qué falló para actualizar la estrategia preventiva."
+      },
+      {
+        "text": "Actualización y optimización de los planes de emergencia ante futuras crisis.",
+        "isCorrect": true,
+        "rationale": "La mejora continua exige incorporar los hallazgos del evento en los manuales de procedimientos actualizados."
+      },
+      {
+        "text": "Destrucción inmediata de los registros y evidencia del accidente antes de la inspección.",
+        "isCorrect": false,
+        "rationale": "Alterar o destruir evidencia es una infracción legal grave que impide realizar la investigación de causa raíz."
+      },
+      {
+        "text": "Cancelación permanente de todas las capacitaciones de seguridad para el personal.",
+        "isCorrect": false,
+        "rationale": "Posterior a una crisis, las actividades de capacitación deben reforzarse y no eliminarse."
+      }
+    ],
+    "hint": "Seleccione las acciones enfocadas en el aprendizaje organizacional, el análisis técnico de causas y la revisión de planes.",
+    "activo": true
+  }
+]

@@ -19,6 +19,7 @@ export interface EstudianteCompleto {
   estado: string;
   bloqueado: boolean;
   prorroga_hasta: string | null;
+  creditos?: any[];
   solicitud_cip?: string;
   solicitud_datos?: string;
   // Métricas 360° Académicas, Marketing y Churn

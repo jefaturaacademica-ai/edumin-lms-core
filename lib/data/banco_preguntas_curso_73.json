@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal de la metodología Lean Manufacturing en el sector industrial y minero según lo expuesto en el curso?",
+    "opciones": [
+      {
+        "text": "Eliminar desperdicios en todo el ámbito de trabajo para maximizar la rentabilidad y eficiencia de los procesos.",
+        "isCorrect": true,
+        "rationale": "Lean busca erradicar las actividades que no agregan valor para reducir tiempos y costos, optimizando así la rentabilidad operacional."
+      },
+      {
+        "text": "Aumentar los niveles de inventario de repuestos para prevenir cualquier eventualidad en el mantenimiento.",
+        "isCorrect": false,
+        "rationale": "El exceso de inventario se considera uno de los desperdicios principales dentro del enfoque Lean que debe ser controlado y no incrementado desmedidamente."
+      },
+      {
+        "text": "Sustituir completamente la mano de obra operativa mediante la automatización total a corto plazo.",
+        "isCorrect": false,
+        "rationale": "Lean no busca reemplazar a las personas, sino desarrollar equipos de trabajo eficientes y eliminar actividades improductivas."
+      },
+      {
+        "text": "Incrementar los costos fijos para garantizar una percepción de alta calidad ante el cliente final.",
+        "isCorrect": false,
+        "rationale": "El principio esbelto apunta a garantizar la calidad reduciendo costos no necesarios, en lugar de aumentar los costos fijos."
+      },
+      {
+        "text": "Aclarar únicamente las discrepancias contables que surgen entre los departamentos de finanzas y ventas.",
+        "isCorrect": false,
+        "rationale": "Lean es una metodología integral de procesos productivos e industriales y no una simple herramienta contable."
+      }
+    ],
+    "hint": "Piensa en la filosofía operacional orientada a la eliminación de actividades improductivas y al uso eficiente de recursos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de los desperdicios tradicionales en la gestión minera e industrial, ¿cuál se relaciona directamente con fabricar más producto del requerido o antes de tiempo?",
+    "opciones": [
+      {
+        "text": "Sobreproducción",
+        "isCorrect": true,
+        "rationale": "La sobreproducción implica procesar o generar un volumen mayor al demandado, lo que genera costos de almacenamiento e inversión no recuperable a corto plazo."
+      },
+      {
+        "text": "Defecto",
+        "isCorrect": false,
+        "rationale": "Los defectos se refieren a productos o procesos mal ejecutados que requieren retrabajo o generan merma, no al volumen adelantado."
+      },
+      {
+        "text": "Transporte",
+        "isCorrect": false,
+        "rationale": "El transporte corresponde al traslado innecesario de materiales de un punto a otro dentro del flujo productivo."
+      },
+      {
+        "text": "Espera",
+        "isCorrect": false,
+        "rationale": "Las esperas son tiempos muertos producidos por la falta de material, repuestos o demoras en la línea de trabajo."
+      },
+      {
+        "text": "Movimiento",
+        "isCorrect": false,
+        "rationale": "El movimiento se refiere a los desplazamientos innecesarios que realizan los trabajadores en su puesto de trabajo."
+      }
+    ],
+    "hint": "Se relaciona con generar un volumen de producción que sobrepasa la demanda o disponibilidad inmediata del cliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión operacional minera, ¿cuál de las siguientes áreas se identifica de forma recurrente como uno de los principales cuellos de botella del proceso?",
+    "opciones": [
+      {
+        "text": "Mantenimiento",
+        "isCorrect": true,
+        "rationale": "Las paradas no programadas, la falta de repuestos oportunos y las fallas de maquinaria convierten al mantenimiento en el cuello de botella más crítico."
+      },
+      {
+        "text": "Recursos Humanos",
+        "isCorrect": false,
+        "rationale": "Aunque es vital para la contratación, no constituye el cuello de botella productivo directo dentro del ciclo de extracción e industrialización."
+      },
+      {
+        "text": "Relaciones Comunitarias",
+        "isCorrect": false,
+        "rationale": "Corresponde a la gestión del entorno social de la mina, pero no es la etapa operativa donde se traba el flujo físico diario de producción."
+      },
+      {
+        "text": "Contabilidad General",
+        "isCorrect": false,
+        "rationale": "Es un proceso administrativo de soporte y no representa la restricción física principal de la cadena de valor minera."
+      },
+      {
+        "text": "Marketing y Comercialización",
+        "isCorrect": false,
+        "rationale": "Se encarga de la negociación y venta del concentrado o metal, pero no determina la restricción en la planta o mina."
+      }
+    ],
+    "hint": "Es el área responsable de la disponibilidad técnica y reparación de la maquinaria pesada y equipos industriales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes herramientas pertenecen al conjunto metodológico básico abordado para la implementación de Lean Manufacturing?",
+    "opciones": [
+      {
+        "text": "Value Stream Mapping (VSM)",
+        "isCorrect": true,
+        "rationale": "Permite visualizar y mapear el flujo de valor actual y futuro para detectar cuellos de botella y desperdicios en el proceso."
+      },
+      {
+        "text": "Metodología de las 5S",
+        "isCorrect": true,
+        "rationale": "Ofrece una estructura de orden, clasificación y limpieza base para estandarizar los lugares de trabajo industriales."
+      },
+      {
+        "text": "Sistema Kanban",
+        "isCorrect": true,
+        "rationale": "Es una herramienta de control visual que gestiona la reabastecimiento de materiales y el flujo de trabajo en tiempo real."
+      },
+      {
+        "text": "Diagrama de Venn presupuestario",
+        "isCorrect": false,
+        "rationale": "No constituye una herramienta propia de la metodología Lean Manufacturing para la optimización de procesos."
+      },
+      {
+        "text": "Análisis de regresión cuadrática multivariable",
+        "isCorrect": false,
+        "rationale": "Es una técnica estadística avanzada de modelado de datos, no una herramienta Lean fundamental tratada en el curso."
+      }
+    ],
+    "hint": "Considera las metodologías de mapeo de flujo, organización visual del puesto de trabajo y gestión de reposición de materiales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la elaboración de un Value Stream Mapping (VSM), ¿qué representa el ícono del triángulo intercalado en el diagrama de flujo?",
+    "opciones": [
+      {
+        "text": "La condición de almacenamiento o la acumulación de inventario en proceso.",
+        "isCorrect": true,
+        "rationale": "En la iconografía estándar del BCM o VSM, el triángulo simboliza un punto donde el material o producto se detiene en forma de inventario o espera."
+      },
+      {
+        "text": "El transporte en camión del mineral procesado hacia el puerto de embarque.",
+        "isCorrect": false,
+        "rationale": "El transporte de mercancías o materias primas se representa comúnmente con íconos de vehículos o flechas de transporte."
+      },
+      {
+        "text": "La realización de una reunión de coordinación de inicio de turno.",
+        "isCorrect": false,
+        "rationale": "Las coordinaciones e intercambios de información se representan con líneas de flujo de información manual o electrónica."
+      },
+      {
+        "text": "La parada definitiva de una máquina defectuosa en la planta.",
+        "isCorrect": false,
+        "rationale": "Las paradas o fallas de máquina se documentan en los bloques de datos del proceso y no mediante el triángulo de inventario."
+      },
+      {
+        "text": "Una operación de voladura mediante el uso de explosivos en el tajo.",
+        "isCorrect": false,
+        "rationale": "Las operaciones productivas específicas se grafican con cajas de proceso dentro de la estructura del VSM."
+      }
+    ],
+    "hint": "Se refiere a una zona del diagrama donde el flujo continuo se detiene y se genera acumulación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la metodología de las 5S, ¿a qué principio u objetivo operacional corresponde el término *Seiri*?",
+    "opciones": [
+      {
+        "text": "Clasificar y separar los elementos necesarios de los innecesarios en la zona de trabajo.",
+        "isCorrect": true,
+        "rationale": "Seiri busca retirar del área laboral todo aquello que no se requiere para ejecutar las actividades presentes, dejando únicamente lo útil."
+      },
+      {
+        "text": "Ordenar los objetos asignando una ubicación visual definida a cada uno.",
+        "isCorrect": false,
+        "rationale": "La acción de ordenar y asignar una ubicación predeterminada a cada objeto corresponde a la segunda S (*Seiton*)."
+      },
+      {
+        "text": "Limpiar las instalaciones y prevenir la acumulación de suciedad.",
+        "isCorrect": false,
+        "rationale": "El concepto de limpieza e inspección de los equipos pertenece a la tercera S (*Seiso*)."
+      },
+      {
+        "text": "Estandarizar los procedimientos visuales para mantener el orden logrado.",
+        "isCorrect": false,
+        "rationale": "Mantenimiento del estado de limpieza mediante normas visuales se vincula a la cuarta S (*Seiketsu*)."
+      },
+      {
+        "text": "Fomentar la autodisciplina y el hábito del cumplimiento continuo.",
+        "isCorrect": false,
+        "rationale": "El sostenimiento de la conducta y hábitos es el propósito de la quinta S (*Shitsuke*)."
+      }
+    ],
+    "hint": "Consiste en la primera etapa donde se discrimina qué herramientas u objetos deben quedarse en el área y cuáles deben ser retirados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la metodología de las 5S, ¿qué lema expresa de manera directa el concepto de *Seiton*?",
+    "opciones": [
+      {
+        "text": "\"Un lugar para cada cosa y cada cosa en su lugar.\"",
+        "isCorrect": true,
+        "rationale": "Seiton se fundamenta en la disposición organizada y rápida identificación de todos los recursos requeridos para el trabajo."
+      },
+      {
+        "text": "\"No es más limpio el que más limpia, sino el que menos ensucia.\"",
+        "isCorrect": false,
+        "rationale": "Esta máxima describe el enfoque preventivo de la tercera etapa (*Seiso*), enfocada en combatir las fuentes de suciedad."
+      },
+      {
+        "text": "\"Eliminar inmediatamente todo objeto que no genere ganancia monetaria.\"",
+        "isCorrect": false,
+        "rationale": "La metodología no promueve la desestimación arbitraria por valor contable, sino la funcionalidad operativa."
+      },
+      {
+        "text": "\"Realizar tareas de mantenimiento únicamente bajo supervisión directa.\"",
+        "isCorrect": false,
+        "rationale": "Las 5S promueven la autonomía del personal en lugar de la dependencia de supervisores."
+      },
+      {
+        "text": "\"Estandarizar las jornadas de trabajo reduciendo los descansos operativos.\"",
+        "isCorrect": false,
+        "rationale": "Seiton no se relaciona con la duración de las jornadas de trabajo, sino con la organización del entorno físico."
+      }
+    ],
+    "hint": "Esta etapa se centra en la ubicación visible, ordenada y accesible de cada herramienta o recurso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal de la etapa *Seiso* dentro del programa de las 5S?",
+    "opciones": [
+      {
+        "text": "Integrar la limpieza como una forma de inspección para identificar anomalías y prevenir averías.",
+        "isCorrect": true,
+        "rationale": "Seiso implica limpiar los puestos y maquinarias no como un acto estético, sino para detectar fugas, fisuras o anomalías de forma temprana."
+      },
+      {
+        "text": "Sustituir herramientas usadas por equipos totalmente nuevos de forma periódica.",
+        "isCorrect": false,
+        "rationale": "La limpieza busca prolongar la vida útil de los equipos existentes y no reemplazarlos de manera precipitada."
+      },
+      {
+        "text": "Implementar tableros virtuales de control de tareas en la oficina central.",
+        "isCorrect": false,
+        "rationale": "Los tableros visuales de tareas o Kanban son herramientas complementarias y no constituyen la esencia de Seiso."
+      },
+      {
+        "text": "Aumentar el gasto en insumos químicos de limpieza profunda cada mes.",
+        "isCorrect": false,
+        "rationale": "Seiso busca erradicar la fuente de contaminación para disminuir la necesidad de limpieza exhaustiva."
+      },
+      {
+        "text": "Reducir la frecuencia del mantenimiento preventivo formal en la planta.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento autónomo derivado de Seiso complementa y fortalece el preventivo en lugar de cancelarlo."
+      }
+    ],
+    "hint": "La tercera S busca que la acción de limpiar funcione también como un examen de la condición técnica de los equipos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "La cuarta etapa de las 5S, llamada *Seiketsu*, se caracteriza principalmente por:",
+    "opciones": [
+      {
+        "text": "Estandarizar las mejores prácticas e higiene visual para mantener los logros de las primeras tres S.",
+        "isCorrect": true,
+        "rationale": "Seiketsu crea las normas, listas de chequeo y controles visuales para asegurar que la clasificación, orden y limpieza se consoliden rutinariamente."
+      },
+      {
+        "text": "Desechar el inventario antiguo acumulado durante los últimos tres años.",
+        "isCorrect": false,
+        "rationale": "La eliminación de objetos o insumos que no se necesitan es una labor asociada a la primera S (*Seiri*)."
+      },
+      {
+        "text": "Diseñar maquetas de distribución física para futuras ampliaciones de la mina.",
+        "isCorrect": false,
+        "rationale": "El diseño de proyectos de infraestructura supera el alcance de la estandarización operacional que busca Seiketsu."
+      },
+      {
+        "text": "Asignar salarios diferenciados según el grado de limpieza del trabajador.",
+        "isCorrect": false,
+        "rationale": "Seiketsu establece estándares operacionales y hábitos de puesto de trabajo, no políticas salariales."
+      },
+      {
+        "text": "Realizar la voladura en mina subterránea respetando el mapa topográfico.",
+        "isCorrect": false,
+        "rationale": "Las operaciones de voladura forman parte del proceso extractivo y no del estándar de control visual 5S."
+      }
+    ],
+    "hint": "Se encarga de sistematizar y visibilizar los procedimientos acordados para que el orden y la limpieza no se pierdan con el tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función operativa básica de las tarjetas en un sistema Kanban físico?",
+    "opciones": [
+      {
+        "text": "Autorizar y señalar visualmente el flujo de trabajo, la reposición de componentes y las paradas.",
+        "isCorrect": true,
+        "rationale": "Las tarjetas Kanban sirven como señales que autorizan la producción o el movimiento de un lote exacto de insumos sólo cuando es necesario."
+      },
+      {
+        "text": "Registrar el pago de horas extra del personal de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Kanban es un sistema de gestión visual de materiales y tareas operativas, no una boleta de control de nómina."
+      },
+      {
+        "text": "Sustituir la señalización de seguridad para materiales peligrosos.",
+        "isCorrect": false,
+        "rationale": "Las normas de seguridad para sustancias peligrosas están reguladas por normativas específicas y no son reemplazadas por Kanban."
+      },
+      {
+        "text": "Sancionar económicamente a los trabajadores por falta de orden en el almacén.",
+        "isCorrect": false,
+        "rationale": "Las tarjetas son mecanismos de flujo y control del proceso, no herramientas punitivas."
+      },
+      {
+        "text": "Servir como guía de remisión para la exportación marítima del mineral.",
+        "isCorrect": false,
+        "rationale": "El control de aduanas y exportación requiere documentación legal ajena a las tarjetas visuales internas de la planta."
+      }
+    ],
+    "hint": "Funcionan como un dispositivo de control visual que ordena la tracción (pull) de materiales o tareas entre procesos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con lo expuesto en el curso, ¿cuáles son los tres factores que constituyen el indicador de Eficiencia General de los Equipos (OEE)?",
+    "opciones": [
+      {
+        "text": "Disponibilidad",
+        "isCorrect": true,
+        "rationale": "Representa la proporción de tiempo que el equipo está apto y operativo para funcionar en comparación con el tiempo planificado."
+      },
+      {
+        "text": "Rendimiento",
+        "isCorrect": true,
+        "rationale": "Mide la velocidad real de operación del equipo frente a su velocidad de diseño o capacidad teórica."
+      },
+      {
+        "text": "Calidad",
+        "isCorrect": true,
+        "rationale": "Indica la proporción de unidades o material producido que cumple con las especificaciones sin requerir retrabajo o ser merma."
+      },
+      {
+        "text": "Depreciación contable",
+        "isCorrect": false,
+        "rationale": "Es un término financiero sobre la pérdida de valor comercial del activo y no un componente del indicador OEE."
+      },
+      {
+        "text": "Costo unitario del combustible",
+        "isCorrect": false,
+        "rationale": "El precio de compra del insumo energético no forma parte de la fórmula del OEE, la cual evalúa desempeño físico."
+      }
+    ],
+    "hint": "Este indicador integra el tiempo apto del equipo, su velocidad de producción efectiva y la tasa de productos no defectuosos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso práctico de Antamina revisado en la primera sesión, ¿qué combinación de herramientas fue fundamental para mitigar los tiempos muertos en el mantenimiento de fajas transportadoras?",
+    "opciones": [
+      {
+        "text": "La reorganización del almacén con 5S y el uso de Kanban para repuestos críticos.",
+        "isCorrect": true,
+        "rationale": "Permitió localizar con rapidez las refacciones necesarias y mantener un stock estratégico para que la faja no quedara detenida por horas."
+      },
+      {
+        "text": "La contratación de servicios externos de seguridad y la eliminación de manuales.",
+        "isCorrect": false,
+        "rationale": "El problema principal residía en la demora para hallar repuestos y no en la seguridad patrimonial del recinto."
+      },
+      {
+        "text": "El cambio semanal obligatorio de todas las bandas transportadoras de la mina.",
+        "isCorrect": false,
+        "rationale": "Reemplazar las bandas de forma semanal no es económicamente factible ni Lean; se aplica mantenimiento predictivo y preventivo."
+      },
+      {
+        "text": "La sustitución total del sistema de fajas por camiones de acarreo eléctrico.",
+        "isCorrect": false,
+        "rationale": "El caso se enfocó en optimizar la disponibilidad operacional del sistema de fajas existente y no en cambiar la infraestructura."
+      },
+      {
+        "text": "La suspensión de las labores de extracción subterránea durante tres meses.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la intervención Lean es reducir el tiempo muerto sin detener la productividad de la mina."
+      }
+    ],
+    "hint": "Se enfocó en ordenar el almacén de componentes críticos y crear alertas visuales de reposición.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la metodología de implementación Lean presentada en la segunda sesión, ¿cuál es el objetivo central de la Fase 1?",
+    "opciones": [
+      {
+        "text": "Realizar el diagnóstico del estado actual, mapear procesos e identificar desperdicios y brechas.",
+        "isCorrect": true,
+        "rationale": "La primera etapa sienta las bases mediante el análisis del sistema, la medición inicial y la delimitación de oportunidades de mejora."
+      },
+      {
+        "text": "Auditar la certificación bajo normas ISO internacionales antes de operar.",
+        "isCorrect": false,
+        "rationale": "Las auditorías formales de certificación ocurren en fases de control avanzado o cierre y no en el diagnóstico inicial."
+      },
+      {
+        "text": "Efectuar la liquidación financiera de los equipos obsoletos de la mina.",
+        "isCorrect": false,
+        "rationale": "La venta o baja contable de activos no es el propósito de la fase de diagnóstico e identificación Lean."
+      },
+      {
+        "text": "Sustituir a todo el personal técnico por consultores externos temporales.",
+        "isCorrect": false,
+        "rationale": "Lean requiere el involucramiento directo del personal interno desde la fase inicial en lugar de su reemplazo."
+      },
+      {
+        "text": "Rediseñar completamente la marca corporativa y el logotipo de la compañía.",
+        "isCorrect": false,
+        "rationale": "El enfoque es estrictamente operativo e industrial y no un proyecto de mercadeo corporativo."
+      }
+    ],
+    "hint": "Esta fase se dedica a comprender el flujo actual e identificar los puntos donde existen ineficiencias o mermas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué actividad caracteriza fundamentalmente a la Fase 2 del proceso de implementación esbelta?",
+    "opciones": [
+      {
+        "text": "La ejecución y estandarización mediante el despliegue de herramientas como 5S, Kanban o Kaizen.",
+        "isCorrect": true,
+        "rationale": "En la Fase 2 se aplican directamente las herramientas seleccionadas y se redactan las normas operativas que guiarán el trabajo diario."
+      },
+      {
+        "text": "La elaboración del presupuesto financiero anual para la adquisición de yacimientos.",
+        "isCorrect": false,
+        "rationale": "La prospección de yacimientos es una actividad de desarrollo minero y no parte de la ejecución Lean en planta o mina."
+      },
+      {
+        "text": "El cierre formal de la unidad minera y restauración ambiental de la zona.",
+        "isCorrect": false,
+        "rationale": "El cierre de mina es la etapa final de la vida de un yacimiento, opuesta a la implementación de estándares de producción."
+      },
+      {
+        "text": "La toma de fotografías aéreas sin realizar cambios en los procedimientos.",
+        "isCorrect": false,
+        "rationale": "La Fase 2 exige una intervención activa en el proceso mediante el uso práctico de herramientas Lean."
+      },
+      {
+        "text": "La negociación exclusiva de los contratos de venta de mineral a futuro.",
+        "isCorrect": false,
+        "rationale": "Las ventas de minerales corresponden a la división comercial y no a la fase de ejecución de estándares en los procesos."
+      }
+    ],
+    "hint": "Se trata de llevar a la práctica las mejoras diseñadas y establecer las reglas estandarizadas de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de las fases metodológicas de implementación Lean, ¿cuál es el enfoque predominante de la Fase 3?",
+    "opciones": [
+      {
+        "text": "El control, el seguimiento de los KPIs y el aseguramiento de la mejora continua.",
+        "isCorrect": true,
+        "rationale": "La tercera etapa se asegura de auditar la adherencia al sistema, evaluar los indicadores y garantizar que las mejoras se mantengan."
+      },
+      {
+        "text": "El mapeo inicial de los procesos para conocer la empresa por primera vez.",
+        "isCorrect": false,
+        "rationale": "El levantamiento y conocimiento inicial corresponde a la Fase 1 (Diagnóstico) y no al control posterior."
+      },
+      {
+        "text": "La compra de nuevos terrenos para la expansión de las oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "Las decisiones de bienes raíces no están contempladas dentro del ciclo de sostenibilidad e indicadores Lean."
+      },
+      {
+        "text": "La contratación aleatoria de personal operativo sin revisión de perfil.",
+        "isCorrect": false,
+        "rationale": "Lean demanda el desarrollo ordenado del talento humano, contraria a la contratación no calificada."
+      },
+      {
+        "text": "La interrupción de la comunicación entre la gerencia y los trabajadores.",
+        "isCorrect": false,
+        "rationale": "El control y la mejora requieren reforzar los canales de diálogo operacional en lugar de aislarlos."
+      }
+    ],
+    "hint": "Se orienta a la sostenibilidad del modelo a través de la medición constante y las auditorías de seguimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En el Modelo de Excelencia Operacional presentado, ¿cuáles de las siguientes opciones corresponden a estándares indispensables para estructurar la gestión Lean?",
+    "opciones": [
+      {
+        "text": "Estándar de Gestión del Desempeño",
+        "isCorrect": true,
+        "rationale": "Sistematiza el seguimiento de metas, indicadores (KPIs) y los diálogos de desempeño en todos los niveles."
+      },
+      {
+        "text": "Estándar de Resolución de Problemas",
+        "isCorrect": true,
+        "rationale": "Define la metodología formal para analizar y erradicar las causas raíz de las variaciones o fallas."
+      },
+      {
+        "text": "Estándar de Desarrollo de Equipos",
+        "isCorrect": true,
+        "rationale": "Establece la pauta para la capacitación, entrenamiento e involucramiento activo del personal operativo."
+      },
+      {
+        "text": "Estándar de Negociación Arbitral Minera",
+        "isCorrect": false,
+        "rationale": "Es una herramienta de ámbito estrictamente legal y no un pilar del modelo operativo interno."
+      },
+      {
+        "text": "Estándar de Cotización Internacional de Metales",
+        "isCorrect": false,
+        "rationale": "Las cotizaciones bursátiles son fijadas por los mercados internacionales y no forman parte de los estándares operacionales internos."
+      }
+    ],
+    "hint": "Selecciona aquellos pilares dedicados al control de KPIs, análisis de causas raíz de fallas y fortalecimiento del personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión del desempeño mediante un tablero de control (*scorecard*), ¿qué representa la asignación del color verde en un KPI?",
+    "opciones": [
+      {
+        "text": "Que el resultado se ha alcanzado o está muy cercano al parámetro objetivo fijado.",
+        "isCorrect": true,
+        "rationale": "El semáforo verde valida que el proceso se encuentra dentro de los límites de desempeño aceptables y alineado a la meta."
+      },
+      {
+        "text": "Que el proceso ha sufrido una parada crítica y requiere intervención de emergencia.",
+        "isCorrect": false,
+        "rationale": "Las desviaciones severas o paradas críticas se representan con el color rojo dentro de los tableros de control."
+      },
+      {
+        "text": "Que existe una desviación moderada que requiere monitoreo preventivo.",
+        "isCorrect": false,
+        "rationale": "Una desviación intermedia que aún no llega a estado crítico se simboliza habitualmente con el color amarillo."
+      },
+      {
+        "text": "Que el indicador carece de datos o la fórmula de cálculo es incorrecta.",
+        "isCorrect": false,
+        "rationale": "La falta de información suele identificarse con espacios en blanco o códigos sin color asignado."
+      },
+      {
+        "text": "Que la operación debe suspenderse por sobrepasar el presupuesto de gastos.",
+        "isCorrect": false,
+        "rationale": "El color verde es una señal positiva de cumplimiento y no una orden de detención operacional."
+      }
+    ],
+    "hint": "En el código de colores tipo semáforo, representa una condición favorable de cumplimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la estandarización operacional minera, ¿cuál es el propósito de la llamada \"tarja de perforación\"?",
+    "opciones": [
+      {
+        "text": "Registrar de forma manual y precisa los datos operativos del equipo, tiempos, lugares e interferencias por turno.",
+        "isCorrect": true,
+        "rationale": "Es el documento donde el operador reporta las actividades de perforación, demoras e insumos, sirviendo de fuente primaria de datos."
+      },
+      {
+        "text": "Servir como recibo de pago salarial para los contratistas de transporte.",
+        "isCorrect": false,
+        "rationale": "La tarja es un instrumento de control de procesos operativos en campo y no un documento de pago contable."
+      },
+      {
+        "text": "Autorizar la compra de nueva maquinaria a proveedores extranjeros.",
+        "isCorrect": false,
+        "rationale": "Las compras de bienes de capital se gestionan mediante órdenes de compra del área de abastecimiento."
+      },
+      {
+        "text": "Reemplazar los planos geológicos en el diseño de las galerías.",
+        "isCorrect": false,
+        "rationale": "La tarja toma datos de la operación diaria, pero no sustituye el trabajo ni los planos elaborados por geología."
+      },
+      {
+        "text": "Sustituir el examen médico ocupacional de los trabajadores.",
+        "isCorrect": false,
+        "rationale": "Es un registro exclusivamente enfocado en variables operativas del turno y del equipo de perforación."
+      }
+    ],
+    "hint": "Consiste en una planilla en la que el operador anota los avances físicos, tiempos y eventos ocurridos durante la guardia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante un turno productivo en minería subterránea, ¿a qué evento se refiere el concepto de \"primera baldada\" o \"primera vuelta\"?",
+    "opciones": [
+      {
+        "text": "Al momento en que se efectúa el primer cargado y acarreo de mineral efectivo tras las actividades iniciales del turno.",
+        "isCorrect": true,
+        "rationale": "Representa el inicio real del flujo productivo después de completar las charlas de seguridad, inspecciones y traslados iniciales."
+      },
+      {
+        "text": "Al lavado inicial del bus que transporta a los trabajadores a la mina.",
+        "isCorrect": false,
+        "rationale": "El término corresponde strictly al movimiento de mineral con los equipos de cargado (como LHD o palas)."
+      },
+      {
+        "text": "A la primera reunión del comité directivo en las oficinas centrales.",
+        "isCorrect": false,
+        "rationale": "Se trata de un hito operacional en la frente de trabajo y no de un evento administrativo gerencial."
+      },
+      {
+        "text": "Al cierre y desactivación completa de los ventiladores al final de la guardia.",
+        "isCorrect": false,
+        "rationale": "El concepto ocurre cerca al comienzo del trabajo efectivo y no durante la etapa de cierre o evacuación del turno."
+      },
+      {
+        "text": "A la prueba de resistencia química realizada a las muestras de agua de la planta.",
+        "isCorrect": false,
+        "rationale": "Es un término ligado al acarreo de roca/mineral mediante equipos de carga pesada en la operación minera."
+      }
+    ],
+    "hint": "Marca el hito donde el equipo de carga realiza su primera extracción física de roca o mineral útil en el turno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la metodología de resolución de problemas revisada en la clase 2, ¿qué herramienta analítica permite desglosar un fallo (como fugas o roturas) hacia sus causas inmediatas y fundamentales?",
+    "opciones": [
+      {
+        "text": "El Árbol de Problemas",
+        "isCorrect": true,
+        "rationale": "El árbol de problemas ayuda a estructurar visualmente el problema central en el tronco, las causas en las raíces y los efectos en las ramas."
+      },
+      {
+        "text": "El Histograma de cotizaciones mineras",
+        "isCorrect": false,
+        "rationale": "Muestra variaciones de precios en el tiempo y no permite analizar causas físicas de fallas mecánicas en equipos."
+      },
+      {
+        "text": "La Matriz Ansoff de mercado",
+        "isCorrect": false,
+        "rationale": "Es un modelo de estrategia comercial de productos y mercados, totalmente ajeno al análisis operativo de fallas."
+      },
+      {
+        "text": "El Balance General Consolidado",
+        "isCorrect": false,
+        "rationale": "Es un estado financiero corporativo que no detalla causas técnicas u operacionales de los eventos en mina."
+      },
+      {
+        "text": "El Diagrama de Gantt de reclutamiento",
+        "isCorrect": false,
+        "rationale": "Grafica el cronograma de un proceso de selección de personal, sin utilidad para el diagnóstico de fallas en componentes."
+      }
+    ],
+    "hint": "Es un esquema lógico que organiza en forma de 'raíces' las causas que originan una falla técnica determinada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la experiencia de implementación de Minera Esmeralda, ¿cuál fue una de las principales ventajas de implementar reportes automáticos diarios y semanales?",
+    "opciones": [
+      {
+        "text": "Proporcionar visibilidad objetiva y en tiempo real de los KPIs sin requerir intervención manual constante.",
+        "isCorrect": true,
+        "rationale": "La automatización de reportes evita la manipulación de datos y entrega información transparente para la toma rápida de decisiones."
+      },
+      {
+        "text": "Ocultar la información de las demoras de los equipos a la gerencia de operaciones.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la metodología Lean es visibilizar los problemas para resolverlos, nunca esconder la ineficiencia."
+      },
+      {
+        "text": "Aumentar el uso de formatos impresos en papel dentro de las galerías subterráneas.",
+        "isCorrect": false,
+        "rationale": "La reportabilidad automática busca reducir el papeleo burocrático y priorizar el flujo de información digital."
+      },
+      {
+        "text": "Eliminar la necesidad de realizar mantenimiento en los camiones de acarreo.",
+        "isCorrect": false,
+        "rationale": "Los reportes miden el estado del proceso pero no sustituyen las tareas físicas de mantenimiento."
+      },
+      {
+        "text": "Reducir la meta de extracción de toneladas a la mitad para evitar el desgaste.",
+        "isCorrect": false,
+        "rationale": "La visibilidad de KPIs busca optimizar el rendimiento para alcanzar o superar las metas, no disminuirlas por comodidad."
+      }
+    ],
+    "hint": "Busca garantizar que los datos de producción lleguen a los supervisores de manera transparente, rápida y confiable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso práctico de la mina Las Bambas, ¿cuál era la principal ineficiencia identificada en la sección de molienda antes de la intervención esbelta?",
+    "opciones": [
+      {
+        "text": "Un elevado tiempo de paradas no programadas en los molinos, alcanzando cerca de 15 horas semanales.",
+        "isCorrect": true,
+        "rationale": "Las detenciones no planificadas en la molienda generaban cuellos de botella severos en todo el flujo de procesamiento de mineral."
+      },
+      {
+        "text": "Falta total de suministro de agua potable para los campamentos de trabajadores.",
+        "isCorrect": false,
+        "rationale": "El problema central analizado en el caso pertenecía directamente al proceso operativo de molienda en la planta concentradora."
+      },
+      {
+        "text": "Insuficiencia de camiones para transportar a los ejecutivos desde la capital.",
+        "isCorrect": false,
+        "rationale": "Las Bambas enfocó el proyecto en el rediseño del proceso técnico de molienda y no en el transporte corporativo."
+      },
+      {
+        "text": "Exceso de espacio disponible en las áreas de almacenamiento de repuestos.",
+        "isCorrect": false,
+        "rationale": "El inconveniente radica en el exceso o mala gestión de inventario y paradas de equipo, no en la sobreabundancia de espacio."
+      },
+      {
+        "text": "Ausencia de yacimientos mineros en la zona de concesión.",
+        "isCorrect": false,
+        "rationale": "El yacimiento estaba en plena producción; la restricción provenía de las fallas no programadas en los molinos."
+      }
+    ],
+    "hint": "Se relaciona con el tiempo de inactividad involuntario que sufrían los equipos principales de trituración y molienda.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Para acelerar el cambio de revestimientos y componentes en los molinos de Las Bambas, ¿qué metodología Lean de origen automotriz fue aplicada de forma decisiva?",
+    "opciones": [
+      {
+        "text": "SMED (Single-Minute Exchange of Die)",
+        "isCorrect": true,
+        "rationale": "SMED se enfoca en reducir drásticamente los tiempos de preparación y cambio de herramientas o revestimientos en la maquinaria."
+      },
+      {
+        "text": "Poka-Yoke financiero",
+        "isCorrect": false,
+        "rationale": "Poka-Yoke se refiere al diseño a prueba de errores operativos y no es un método específico para acortar tiempos de cambio."
+      },
+      {
+        "text": "Matriz Ansoff",
+        "isCorrect": false,
+        "rationale": "Es una herramienta de estrategia de negocios para crecimiento de mercado, sin relación con el mantenimiento de molinos."
+      },
+      {
+        "text": "Just In Time publicitario",
+        "isCorrect": false,
+        "rationale": "Just in time es una técnica de flujo de materiales; el término publicitario no aplica a la mantención de revestimientos."
+      },
+      {
+        "text": "Análisis DuPont de rentabilidad",
+        "isCorrect": false,
+        "rationale": "Es un indicador financiero sintético y no una técnica de taller para acelerar cambios mecánicos."
+      }
+    ],
+    "hint": "Esta técnica nació orientada a realizar cambios de herramientas y componentes en tiempo récord, inspirada en los *pit-stops*.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Como resultado de la implementación Lean en el área de molienda de Las Bambas, ¿cómo evolucionó el indicador OEE de los molinos?",
+    "opciones": [
+      {
+        "text": "Aumentó desde un 68% inicial hasta alcanzar un 86%.",
+        "isCorrect": true,
+        "rationale": "Al mitigar las paradas no programadas y reducir los tiempos de cambio mediante SMED, la efectividad global saltó al 86%."
+      },
+      {
+        "text": "Disminuyó de un 68% a un 35% por la sobrecarga de trabajo.",
+        "isCorrect": false,
+        "rationale": "La correcta aplicación de herramientas Lean incrementa la eficiencia global en lugar de reducirla."
+      },
+      {
+        "text": "Se mantuvo completamente estancado en un 50% de rendimiento.",
+        "isCorrect": false,
+        "rationale": "Las intervenciones permitieron mejoras significativas medibles en la disponibilidad y productividad de la molienda."
+      },
+      {
+        "text": "Subió al 100% de manera permanente sin requerir ningún mantenimiento adicional.",
+        "isCorrect": false,
+        "rationale": "Llegar a un 100% continuo es prácticamente imposible debido a las paradas programadas por desgaste natural."
+      },
+      {
+        "text": "Cayó a cero debido a la falla catastrófica de los componentes de reemplazo.",
+        "isCorrect": false,
+        "rationale": "El proyecto fue un caso de éxito con incrementos cuantificables en los indicadores operacionales."
+      }
+    ],
+    "hint": "La eficiencia global del equipo registró una subida importante tras la eliminación de cuellos de botella y demoras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué el liderazgo visible y activo de los jefes de planta resulta imprescindible durante una implementación Lean?",
+    "opciones": [
+      {
+        "text": "Porque impulsa el compromiso del personal, modela la conducta y evita la resistencia al cambio o retroceso cultural.",
+        "isCorrect": true,
+        "rationale": "Sin el involucramiento diario y apoyo de los líderes en campo, los trabajadores tienden a regresar a los viejos hábitos e ineficiencias."
+      },
+      {
+        "text": "Porque permite eliminar todas las reuniones y delegar las decisiones en los practicantes.",
+        "isCorrect": false,
+        "rationale": "El liderazgo esbelto requiere presencia y guía constante por parte de las jefaturas y no el abandono de responsabilidades."
+      },
+      {
+        "text": "Porque evita tener que medir los KPIs operacionales de las distintas áreas.",
+        "isCorrect": false,
+        "rationale": "Los líderes deben ser los primeros en promover el seguimiento disciplinado de los KPIs en los tableros de gestión."
+      },
+      {
+        "text": "Porque hace innecesaria la capacitación técnica continuada de los operadores.",
+        "isCorrect": false,
+        "rationale": "El líder Lean se convierte en un facilitador y entrenador del equipo, haciendo aún más relevante la capacitación."
+      },
+      {
+        "text": "Porque autoriza el aumento indefinido del gasto presupuestario de la planta.",
+        "isCorrect": false,
+        "rationale": "El rol del líder es velar por el cumplimiento de los estándares y la eliminación de desperdicios de recursos."
+      }
+    ],
+    "hint": "La sostenibilidad de una transformación cultural requiere el ejemplo constante y acompañamiento de las jefaturas en el terreno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre el enfoque tradicional y el enfoque Lean Manufacturing respecto a la estructura de costos y la generación de valor en el sector industrial y minero?",
+    "opciones": [
+      {
+        "text": "El enfoque tradicional busca incrementar el valor no agregado mediante costos fijos, mientras que Lean elimina la ganancia esperada.",
+        "isCorrect": false,
+        "rationale": "El enfoque Lean no busca reducir las ganancias, sino aumentarlas mediante la eliminación sistemática de actividades que no agregan valor."
+      },
+      {
+        "text": "El enfoque tradicional asume el valor no agregado como costos fijos y variables absorbedores, mientras que Lean expande el valor agregado al reducir los desperdicios operativos.",
+        "isCorrect": true,
+        "rationale": "El enfoque Lean incrementa el margen de ganancia operativa identificando y erradicando desperdicios en los costos directos e indirectos sin traspasar ineficiencias al cliente."
+      },
+      {
+        "text": "El enfoque tradicional elimina los desperdicios en toda la cadena, mientras que Lean solo se enfoca en reducir los costos directos de mano de obra.",
+        "isCorrect": false,
+        "rationale": "Lean abarca la totalidad del ámbito de trabajo y la cadena de valor, no únicamente la mano de obra directa."
+      },
+      {
+        "text": "El enfoque tradicional calcula el valor agregado únicamente a partir de programas sociales, mientras que Lean se limita al aumento del precio de venta.",
+        "isCorrect": false,
+        "rationale": "Los precios en minería suelen estar regulados por mercados internacionales, por lo cual Lean actúa internamente sobre los costos y mermas."
+      },
+      {
+        "text": "El enfoque tradicional prioriza el mantenimiento predictivo, mientras que Lean ignora los costos indirectos de fabricación.",
+        "isCorrect": false,
+        "rationale": "Lean considera y busca optimizar tanto los costos directos como los indirectos de fabricación a través del control del flujo."
+      }
+    ],
+    "hint": "Analiza cómo influye la reducción de costos y desperdicios internos en el margen final de ganancia según cada modelo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro de la gestión logística y productiva en minería, ¿cuáles de los siguientes eventos constituyen desperdicios directamente asociados a cuellos de botella operativos?",
+    "opciones": [
+      {
+        "text": "Tiempos muertos de maquinaria por demoras en la llegada de repuestos importados o complejos.",
+        "isCorrect": true,
+        "rationale": "La falta oportuna de componentes críticos detiene la disponibilidad de equipos, generando pérdidas por tiempos de espera."
+      },
+      {
+        "text": "Exceso de inventario acumulado por compras compulsivas o falta de predictibilidad en mantenimientos.",
+        "isCorrect": true,
+        "rationale": "El sobreinventario inmoviliza capital de trabajo y dificulta la gestión logística en los almacenes mineros."
+      },
+      {
+        "text": "Movimientos e itinerarios innecesarios de maquinaria pesada entre frentes de trabajo.",
+        "isCorrect": true,
+        "rationale": "El desplazamiento no planificado consume combustible y tiempo de ciclo sin aportar avance directo en la extracción."
+      },
+      {
+        "text": "Uso de sistemas de riego por goteo que reducen el consumo de ácido sulfúrico en lixiviación.",
+        "isCorrect": false,
+        "rationale": "Esta práctica representa una optimización de recursos y reducción de costos, no un desperdicio."
+      },
+      {
+        "text": "Ejecución periódica de tareas de mantenimiento autónomo por parte de los operadores.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento autónomo es una disciplina clave dentro de Lean para prevenir averías mayores."
+      }
+    ],
+    "hint": "Identifica las actividades o acumulaciones que generan paradas no programadas o gastos innecesarios de recursos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la elaboración de un Value Stream Mapping (VSM), si una línea de montaje dispone de un tiempo neto de 27,000 segundos por turno y la demanda diaria es de 341 unidades, ¿qué representa el cálculo resultante de $79\\text{ segundos/pieza}$?",
+    "opciones": [
+      {
+        "text": "El tiempo de ciclo mínimo requerido en la estación de empaque.",
+        "isCorrect": false,
+        "rationale": "El tiempo de ciclo es la velocidad real a la que procesa una estación específica, no el requerimiento de la demanda."
+      },
+      {
+        "text": "El Takt time o ritmo de producción al cual se debe fabricar para satisfacer al cliente.",
+        "isCorrect": true,
+        "rationale": "El Takt time establece la cadencia exacta requerida dividiendo el tiempo disponible entre la demanda del cliente."
+      },
+      {
+        "text": "El tiempo de espera total en el inventario de producto en proceso.",
+        "isCorrect": false,
+        "rationale": "El tiempo de inventario representa la permanencia en días o horas del stock acumulado entre estaciones."
+      },
+      {
+        "text": "La disponibilidad mecánica mínima exigida para las perforadoras.",
+        "isCorrect": false,
+        "rationale": "La disponibilidad es un indicador porcentual del tiempo operativo frente al tiempo planificado."
+      },
+      {
+        "text": "El costo estándar unitario de producción por cada tablero.",
+        "isCorrect": false,
+        "rationale": "El valor obtenido está expresado en unidades de tiempo por pieza, no en términos monetarios."
+      }
+    ],
+    "hint": "Piensa en el indicador que sincroniza el ritmo de trabajo de la planta con la velocidad de compra del cliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito primario de mapear el flujo de valor mediante un Value Stream Mapping (VSM) frente a un Diagrama de Operaciones de Proceso (DOP) convencional?",
+    "opciones": [
+      {
+        "text": "Calcular únicamente la contabilidad de costos fijos directos.",
+        "isCorrect": false,
+        "rationale": "El VSM contempla los flujos de información y tiempos, yendo más allá de la contabilidad unitaria de costos."
+      },
+      {
+        "text": "Visualizar el flujo completo de información y materiales para identificar y erradicar actividades que no agregan valor.",
+        "isCorrect": true,
+        "rationale": "El VSM permite analizar cuellos de botella, tiempos de espera e inventarios intermedios a lo largo de toda la cadena."
+      },
+      {
+        "text": "Reemplazar el uso de sistemas ERP como SAP o WMS en la unidad minera.",
+        "isCorrect": false,
+        "rationale": "El VSM es una herramienta metodológica de diagnóstico y diseño, no un software transaccional."
+      },
+      {
+        "text": "Determinar los precios fijos de exportación del mineral en el mercado de destino.",
+        "isCorrect": false,
+        "rationale": "Los precios de commodities se fijan por cotizaciones internacionales y no por diagramación interna."
+      },
+      {
+        "text": "Eliminar la necesidad de realizar mantenimiento preventivo en los equipos.",
+        "isCorrect": false,
+        "rationale": "El VSM ayuda a evidenciar problemas de mantenimiento, pero no elimina la necesidad de ejecutarlo."
+      }
+    ],
+    "hint": "Considera qué herramienta permite integrar los tiempos con valor y sin valor añadido junto con el flujo informativo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al aplicar la primera 'S' (Seiri / Clasificar) dentro de un almacén o taller de mantenimiento minero, ¿cuáles de los siguientes pasos y beneficios son directos de esta fase?",
+    "opciones": [
+      {
+        "text": "Separar los elementos necesarios de los innecesarios y retirar lo excesivo del área de trabajo.",
+        "isCorrect": true,
+        "rationale": "La esencia de Seiri radica en descartar todo aquello que no se requiere para la tarea inmediata."
+      },
+      {
+        "text": "Liberar espacio útil y reducir tiempos de búsqueda de repuestos y herramientas.",
+        "isCorrect": true,
+        "rationale": "Al despejar los puestos operativos, se elimina el desorden que dificulta la localización de insumos."
+      },
+      {
+        "text": "Despertar el análisis crítico del personal sobre el uso de los recursos de trabajo.",
+        "isCorrect": true,
+        "rationale": "La clasificación fuerza al trabajador a evaluar la utilidad real de cada objeto en su entorno."
+      },
+      {
+        "text": "Demarcar con pintura las zonas de tránsito peatonal y de montacargas.",
+        "isCorrect": false,
+        "rationale": "La delimitación y señalización gráfica corresponde a la segunda 'S' (Seiton / Ordenar)."
+      },
+      {
+        "text": "Establecer la auditoría de cumplimiento permanente y la cultura del hábito.",
+        "isCorrect": false,
+        "rationale": "La cultura del hábito y autodisciplina pertenece a la quinta 'S' (Shitsuke)."
+      }
+    ],
+    "hint": "Enfócate en las acciones de descarte, selección y optimización del espacio físico inicial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la implementación de Seiton (Ordenar) en la gestión de almacenes mineros, ¿cuál es la regla fundamental que debe regir la ubicación de materiales y repuestos?",
+    "opciones": [
+      {
+        "text": "Guardar los insumos por orden de llegada sin codificación previa.",
+        "isCorrect": false,
+        "rationale": "Ubicaciones aleatorias sin catálogo aumentan los tiempos de búsqueda y generan extravíos."
+      },
+      {
+        "text": "Un lugar para cada cosa y cada cosa en su lugar, con identificación clara y accesibilidad visual.",
+        "isCorrect": true,
+        "rationale": "Seiton busca la estandarización del almacenamiento mediante la asignación y marcación fija de espacios."
+      },
+      {
+        "text": "Mantener los componentes más costosos almacenados en oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "El material debe estar resguardado pero disponible en las zonas logísticas designadas según su flujo."
+      },
+      {
+        "text": "Apilar libremente el material en los pasillos para acelerar el despacho.",
+        "isCorrect": false,
+        "rationale": "Obstruir pasillos viola los principios de orden y representa un riesgo grave de seguridad."
+      },
+      {
+        "text": "Clasificar los materiales según el criterio diario cambiante de cada operador.",
+        "isCorrect": false,
+        "rationale": "El orden requiere reglas estándar fijas para que cualquier persona pueda localizar un insumo."
+      }
+    ],
+    "hint": "Aplica la máxima clásica del orden que garantiza control visual y rápida localización.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se integra la tercera 'S' (Seiso / Limpieza) con la gestión de mantenimiento en equipos industriales y mineros de alta complejidad?",
+    "opciones": [
+      {
+        "text": "Reemplazando las rutinas de lubricación por barrido de áreas comunes.",
+        "isCorrect": false,
+        "rationale": "La limpieza no sustituye las tareas técnicas de lubricación ni ajuste mecánico."
+      },
+      {
+        "text": "Asumiendo la limpieza como una forma de inspección para detectar fugas, fisuras y averías de manera temprana.",
+        "isCorrect": true,
+        "rationale": "Al limpiar el equipo, el operador examina visualmente el estado de las piezas, facilitando el mantenimiento autónomo."
+      },
+      {
+        "text": "Delegando toda la limpieza de maquinaria pesada exclusivamente a terceros al final de año.",
+        "isCorrect": false,
+        "rationale": "El enfoque Lean exige inspección y limpieza diaria a cargo de los mismos operadores."
+      },
+      {
+        "text": "Limpiando únicamente los componentes electrónicos tras producirse una falla grave.",
+        "isCorrect": false,
+        "rationale": "La limpieza preventiva busca evitar la falla, no actuar únicamente de forma reactiva."
+      },
+      {
+        "text": "Eliminando el uso de equipos de protección personal durante la jornada de aseo.",
+        "isCorrect": false,
+        "rationale": "Las tareas de limpieza deben realizarse bajo estrictos protocolos de seguridad operacional."
+      }
+    ],
+    "hint": "Piensa en el rol del operador al limpiar un equipo y cómo esto ayuda a diagnosticar fallas incipientes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para asegurar un flujo de trabajo controlado mediante el sistema Kanban, ¿cuáles de las siguientes reglas operativas deben cumplirse estrictamente?",
+    "opciones": [
+      {
+        "text": "Ningún proceso retira componentes del proceso anterior sin una tarjeta Kanban que lo autorice.",
+        "isCorrect": true,
+        "rationale": "Esta regla garantiza el funcionamiento del sistema Pull, donde la demanda real tira de la producción."
+      },
+      {
+        "text": "No se deben fabricar ni transportar piezas en cantidades superiores a las especificadas en la tarjeta.",
+        "isCorrect": true,
+        "rationale": "Limitar la producción al número expresado en la tarjeta evita la sobreproducción y el exceso de stock."
+      },
+      {
+        "text": "Todo lote de material o repuesto debe estar acompañado siempre de su tarjeta correspondiente.",
+        "isCorrect": true,
+        "rationale": "La tarjeta actúa como la orden de trabajo física o virtual e identificación del producto en tránsito."
+      },
+      {
+        "text": "El número de tarjetas emitidas en el sistema debe ser el mayor posible para sobreabastecer la línea.",
+        "isCorrect": false,
+        "rationale": "Lean establece claramente que el número de tarjetas debe ser el mínimo posible para mantener acotado el WIP."
+      },
+      {
+        "text": "Se pueden enviar piezas defectuosas al siguiente proceso si hay tarjetas de parada rojas.",
+        "isCorrect": false,
+        "rationale": "Una regla de oro de Kanban es no pasar jamás un producto defectuoso al siguiente eslabón."
+      }
+    ],
+    "hint": "Recuerda las premisas del sistema Pull y la prohibición de generar sobreproducción o avanzar piezas defectuosas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El indicador compuesto OEE (Overall Equipment Effectiveness) es clave para medir la productividad global. ¿Cuáles son los tres factores matemáticos que lo integran?",
+    "opciones": [
+      {
+        "text": "Costo Fijo, Costo Variable y Margen Operativo.",
+        "isCorrect": false,
+        "rationale": "Estos términos pertenecen al ámbito de la contabilidad de costos y finanzas."
+      },
+      {
+        "text": "Disponibilidad, Rendimiento y Calidad.",
+        "isCorrect": true,
+        "rationale": "El OEE resulta de multiplicar la tasa de disponibilidad del equipo, su tasa de rendimiento operacional y el porcentaje de productos conformes."
+      },
+      {
+        "text": "Takt Time, Tiempo de Ciclo y Lead Time.",
+        "isCorrect": false,
+        "rationale": "Son métricas de tiempo de flujo pero no constituyen los componentes del cálculo de OEE."
+      },
+      {
+        "text": "Horas Hombre, Consumo de Diésel y Metros de Avance.",
+        "isCorrect": false,
+        "rationale": "Son variables de insumos e hitos operacionales específicos de minería, no la fórmula del OEE."
+      },
+      {
+        "text": "Fallas Atendidas, Stock de Seguridad y Tiempo de Entrega.",
+        "isCorrect": false,
+        "rationale": "Corresponden a indicadores de inventario y mantenibilidad, no al OEE."
+      }
+    ],
+    "hint": "Considera el producto entre el tiempo de uso efectivo, la velocidad real de operación y el porcentaje de piezas sin defecto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso práctico de las fajas transportadoras críticas (IPCC) de Antamina presentado en la Clase 1, ¿cuál era la causa raíz de la pérdida significativa de horas operativas?",
+    "opciones": [
+      {
+        "text": "Tiempos muertos prolongados (3 a 6 horas) por fallas menores previo al inicio real de las reparaciones.",
+        "isCorrect": true,
+        "rationale": "La falta de coordinación logística y desorden en repuestos extendía excesivamente el tiempo de espera antes de intervenir la faja."
+      },
+      {
+        "text": "Desgaste total e irreparable de los motores principales cada tres semanas.",
+        "isCorrect": false,
+        "rationale": "El problema no residía en fallas catastróficas del motor, sino en la gestión de fallas menores."
+      },
+      {
+        "text": "Ausencia total de suministro de energía eléctrica en toda la región de Áncash.",
+        "isCorrect": false,
+        "rationale": "La problemática analizada era de carácter logístico e interno de mantenimiento, no por interrupción eléctrica externa."
+      },
+      {
+        "text": "Uso ininterrumpido de fajas sin detenerlas durante más de 20 años consecutivos.",
+        "isCorrect": false,
+        "rationale": "Las fajas contaban con paradas de mantenimiento pero sus tiempos de intervención eran ineficientes."
+      },
+      {
+        "text": "Rechazo de los clientes internacionales a recibir el mineral transportado.",
+        "isCorrect": false,
+        "rationale": "El cuello de botella era puramente operativo en el transporte interno del yacimiento."
+      }
+    ],
+    "hint": "Busca la ineficiencia logística que ocurría entre la detección del problema leve y el comienzo de la reparación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Tras la reestructuración Lean en el mantenimiento de fajas de Antamina mediante VSM, 5S y Kanban, ¿qué logros cuantitativos se obtuvieron?",
+    "opciones": [
+      {
+        "text": "Reducción del tiempo de espera de 4 horas a 2.6 horas (35% de disminución).",
+        "isCorrect": true,
+        "rationale": "Se optimizó el tiempo previo a la reparación organizando herramientas y repuestos."
+      },
+      {
+        "text": "Incremento de la disponibilidad operativa de las fajas del 88% al 96%.",
+        "isCorrect": true,
+        "rationale": "Al disminuir los tiempos muertos de parada, las fajas permanecieron más tiempo operativas."
+      },
+      {
+        "text": "Reducción de fallas no atendidas del programa mensual de 20 a 12.",
+        "isCorrect": true,
+        "rationale": "La estandarización y planificación redujeron los imprevistos no abordados en el mes."
+      },
+      {
+        "text": "Eliminación absoluta de las existencias de fajas y rodillos en los almacenes.",
+        "isCorrect": false,
+        "rationale": "Lean no elimina el stock de repuestos críticos; establece stocks mínimos de seguridad calculados."
+      },
+      {
+        "text": "Aumento del costo por hora de parada a más de $100,000 por faja.",
+        "isCorrect": false,
+        "rationale": "El proyecto buscó mitigar las pérdidas financieras reduciendo las horas improductivas."
+      }
+    ],
+    "hint": "Selecciona las mejoras registradas en disponibilidad, reducción de horas de espera y disminución de fallas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son las tres fases del modelo de metodología de implementación Lean presentadas en la Clase 2?",
+    "opciones": [
+      {
+        "text": "Fase 1: Contratación, Fase 2: Capacitación, Fase 3: Operación.",
+        "isCorrect": false,
+        "rationale": "Esta secuencia describe etapas generales de recursos humanos, no la metodología de transformación Lean."
+      },
+      {
+        "text": "Fase 1: Diagnóstico y Planificación, Fase 2: Ejecución y Estandarización, Fase 3: Control y Mejora.",
+        "isCorrect": true,
+        "rationale": "El proceso estructurado inicia evaluando la situación actual, pasa a la aplicación de herramientas estándar y culmina con el control y auditoría continua."
+      },
+      {
+        "text": "Fase 1: Automatización, Fase 2: Digitalización, Fase 3: Terciarización.",
+        "isCorrect": false,
+        "rationale": "Corresponden a iniciativas tecnológicas o estratégicas, no a las tres fases metodológicas del modelo Lean."
+      },
+      {
+        "text": "Fase 1: Levantamiento Financiero, Fase 2: Compra de Equipos, Fase 3: Venta de Activos.",
+        "isCorrect": false,
+        "rationale": "Son actividades de gestión patrimonial y financiera, distantes del flujo metodológico Lean."
+      },
+      {
+        "text": "Fase 1: Mapeo DOP, Fase 2: Reducción de Personal, Fase 3: Liquidación.",
+        "isCorrect": false,
+        "rationale": "Lean busca la eficiencia del proceso y desarrollo de las personas, no el recorte sistemático de plantilla."
+      }
+    ],
+    "hint": "Recuerda la secuencia lógica: evaluar primero, aplicar herramientas después y finalmente asegurar la sostenibilidad del sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco del Estándar de Gestión del Desempeño, ¿qué representaciones y criterios operacionales aplican a la evaluación por semáforos en los Scorecards?",
+    "opciones": [
+      {
+        "text": "El color verde indica que el KPI está cumpliendo la meta o se encuentra en los parámetros deseados.",
+        "isCorrect": true,
+        "rationale": "Refleja estabilidad operacional conforme al plan trazado."
+      },
+      {
+        "text": "El color amarillo advierte una desviación moderada que requiere atención antes de volverse crítica.",
+        "isCorrect": true,
+        "rationale": "Funciona como una alerta temprana para corregir tendencias negativas a tiempo."
+      },
+      {
+        "text": "El color rojo exige activar formalmente la herramienta de resolución de problemas e investigar la causa raíz.",
+        "isCorrect": true,
+        "rationale": "Frente a incumplimientos graves, se debe estructurar un análisis de causas para evitar la recurrencia."
+      },
+      {
+        "text": "Las metas deben mantenerse ocultas para los operadores de turno a fin de evitar la presión laboral.",
+        "isCorrect": false,
+        "rationale": "Lean promueve la gestión visual transparente donde todos los trabajadores conocen las metas diarias y semanales."
+      },
+      {
+        "text": "Un indicador en rojo se corrige automáticamente cambiando la meta mensual a un valor más bajo.",
+        "isCorrect": false,
+        "rationale": "Ajustar las metas ante un mal desempeño desvirtúa el estándar y enmascara las pérdidas operativas."
+      }
+    ],
+    "hint": "Analiza la función visual de los colores verde, amarillo y rojo en el control de desviaciones de indicadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito del Estándar de Resolución de Problemas en el modelo Lean aplicado a la minería?",
+    "opciones": [
+      {
+        "text": "Asignar sanciones económicas inmediatas al operador responsable de la avería.",
+        "isCorrect": false,
+        "rationale": "Lean fomenta la búsqueda de fallas en el sistema y no la penalización punitiva individual."
+      },
+      {
+        "text": "Analizar rigurosamente la causa raíz de las desviaciones en los KPIs para aplicar medidas correctivas que garanticen la no ocurrencia.",
+        "isCorrect": true,
+        "rationale": "La resolución de problemas busca erradicar el origen técnico o de proceso para evitar que el fallo vuelva a repetirse."
+      },
+      {
+        "text": "Sustituir las revisiones de mantenimiento preventivo por inspecciones visuales informales.",
+        "isCorrect": false,
+        "rationale": "El análisis de problemas fortalece el mantenimiento, no elimina la planificación preventiva."
+      },
+      {
+        "text": "Modificar los flujos de proceso sin requerir confirmación ni datos de campo.",
+        "isCorrect": false,
+        "rationale": "La metodología exige datos reales de campo para sustentar cualquier cambio en el estándar."
+      },
+      {
+        "text": "Reducir la frecuencia de los diálogos de desempeño entre supervisores.",
+        "isCorrect": false,
+        "rationale": "Las sesiones de diálogo son el foro clave para dar seguimiento a los problemas detectados."
+      }
+    ],
+    "hint": "Enfócate en la búsqueda sistemática del origen del fallo para erradicarlo definitivamente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el diagrama de árbol de problemas presentado para mantenimiento de transmisiones y diferenciales en minería subterránea, ¿a qué causa raíz se atribuye la fuga por manchón de acoplamiento?",
+    "opciones": [
+      {
+        "text": "Uso inadecuado de bombas de agua en los frentes de avance.",
+        "isCorrect": false,
+        "rationale": "El circuito de bombeo no tiene relación mecánica directa con el manchón de acoplamiento del diferencial."
+      },
+      {
+        "text": "Impactos severos provocados por deficiencias en la capacitación de operadores y falta de limpieza en las vías (calles).",
+        "isCorrect": true,
+        "rationale": "El estado irregular de las pistas y maniobras bruscas generan impactos que dañan los sellos y causan fugas."
+      },
+      {
+        "text": "Falta de automatización en las subestaciones eléctricas de superficie.",
+        "isCorrect": false,
+        "rationale": "Las subestaciones eléctricas no originan desgastes mecánicos en las transmisiones de los equipos móviles."
+      },
+      {
+        "text": "Utilización excesiva de dinamita de baja potencia en la voladura.",
+        "isCorrect": false,
+        "rationale": "La potencia del explosivo afecta la fragmentación del mineral, no directamente el manchón de acoplamiento."
+      },
+      {
+        "text": "Falla de conectividad en el software de control de flota.",
+        "isCorrect": false,
+        "rationale": "Las fallas de software inciden en el rastreo de datos, pero no provocan la fuga física del fluido."
+      }
+    ],
+    "hint": "Revisa los factores operativos y de la vía de tránsito que generan golpes mecánicos en el tren de mando.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Durante el despliegue del sistema Lean en Minera Esmeralda, ¿cuáles de las siguientes iniciativas formaron parte de los estándares operacionales y de gestión?",
+    "opciones": [
+      {
+        "text": "Estandarización del inicio y fin de turno, fijando horarios estrictos para charlas de seguridad, cambios de postura y transporte.",
+        "isCorrect": true,
+        "rationale": "Controlar las variaciones en los tiempos de cambio de turno recuperó horas efectivas de operación."
+      },
+      {
+        "text": "Diseño e implementación de la tarja de perforación radial para equipos Jumbo.",
+        "isCorrect": true,
+        "rationale": "Permitió capturar datos operativos precisos de perforación y demoras en el frente de trabajo."
+      },
+      {
+        "text": "Instauración de reuniones diarias de diálogo de desempeño operacional para análisis de desvíos.",
+        "isCorrect": true,
+        "rationale": "Creó la rutina de revisión de indicadores entre supervisión y mantenimiento."
+      },
+      {
+        "text": "Desconexión total de las cámaras operativas y sistemas de control de tráfico de trenes.",
+        "isCorrect": false,
+        "rationale": "Al contrario, los sistemas de tráfico como Interflow se integraron activamente al monitoreo Lean."
+      },
+      {
+        "text": "Eliminación de la capacitación a los operadores en herramientas de resolución de problemas.",
+        "isCorrect": false,
+        "rationale": "La capacitación del personal operativo fue un pilar indispensable para afianzar el modelo."
+      }
+    ],
+    "hint": "Selecciona las acciones enfocadas en el control estricto del tiempo de turno, el registro de datos e indicadores y la rutina de gestión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función operativa directa de la 'tarja de perforación radial' implementada en los equipos Jumbo de Minera Esmeralda?",
+    "opciones": [
+      {
+        "text": "Servir como guía de facturación para el cobro de regalías mineras.",
+        "isCorrect": false,
+        "rationale": "La tarja es un documento de control operativo de mina, no de gestión tributaria."
+      },
+      {
+        "text": "Registrar manualmente en cada turno los tiempos operacionales, paradas, secciones, planos y metros barrenados.",
+        "isCorrect": true,
+        "rationale": "Facilita la consolidación de datos primarios de rendimiento del Jumbo y las causas de retraso en el frente."
+      },
+      {
+        "text": "Monitorear la temperatura del motor del camión de transporte diésel.",
+        "isCorrect": false,
+        "rationale": "El estado del camión se registra en sus checklist específicos y no en la tarja del Jumbo radial."
+      },
+      {
+        "text": "Reemplazar los estudios topográficos de la mina subterránea.",
+        "isCorrect": false,
+        "rationale": "La topografía se valida con instrumental especializado y no mediante la tarja manual del operador."
+      },
+      {
+        "text": "Controlar el flujo de agua en las bombas de drenaje principal.",
+        "isCorrect": false,
+        "rationale": "El drenaje de agua corresponde a la infraestructura de servicios auxiliares."
+      }
+    ],
+    "hint": "Piensa en el registro de campo que llena el perforista para detallar el avance físico y las demoras de su máquina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el proceso de extracción subterránea de Minera Esmeralda, ¿por qué es fundamental monitorear los estados de los equipos LHD mediante la plataforma de control de flota?",
+    "opciones": [
+      {
+        "text": "Para restringir la velocidad del equipo a 5 km/h en todas las galerías.",
+        "isCorrect": false,
+        "rationale": "El objetivo principal del control de flota no es limitar la velocidad, sino optimizar el ciclo productivo."
+      },
+      {
+        "text": "Para visibilizar en tiempo real el tiempo efectivo, demoras y estados de standby para maximizar la productividad por baldadas.",
+        "isCorrect": true,
+        "rationale": "El seguimiento preciso del LHD permite reducir tiempos muertos y optimizar la secuencia de cargado y vaciado."
+      },
+      {
+        "text": "Para eliminar la necesidad de contar con personal de mantenimiento en el interior de la mina.",
+        "isCorrect": false,
+        "rationale": "El monitoreo ayuda a programar la intervención técnica pero no elimina al personal de taller."
+      },
+      {
+        "text": "Para apagar el motor del equipo automáticamente cada 30 minutos.",
+        "isCorrect": false,
+        "rationale": "Apagados arbitrarios interrumpirían el flujo productivo de extracción."
+      },
+      {
+        "text": "Para cambiar la ruta del mineral hacia fajas de superficie sin autorización.",
+        "isCorrect": false,
+        "rationale": "Las rutas están predeterminadas por el plan de acarreo y control de tráfico."
+      }
+    ],
+    "hint": "Enfócate en la necesidad de medir la eficiencia en tiempo real del ciclo de acarreo del cargador frontal subterráneo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro de los estándares operacionales de llenado y vaciado en piques de Minera Esmeralda, ¿cuáles de las siguientes normas garantizan la continuidad y seguridad de la descarga?",
+    "opciones": [
+      {
+        "text": "Mantener el pique con un nivel mínimo de carga (por ejemplo, debajo de 6 metros o con cámara de protección) antes de golpear con baldadas.",
+        "isCorrect": true,
+        "rationale": "Dejar un colchón de mineral amortigua el impacto de las rocas y protege la estructura del pique."
+      },
+      {
+        "text": "Coordinar la descarga del despachador respetando un límite máximo controlado de carros por tren.",
+        "isCorrect": true,
+        "rationale": "Evita sobrecargar el sistema de transporte sobre rieles y reduce riesgos de descarrilamiento."
+      },
+      {
+        "text": "Utilizar martillos picadores coordinados con semaforización automatizada en los puntos de vaciado.",
+        "isCorrect": true,
+        "rationale": "Permite fragmentar colpas trancadas indicando mediante luces la presencia de operaciones de picado."
+      },
+      {
+        "text": "Efectuar descargas masivas ignorando las señaIes en rojo del semáforo del pique.",
+        "isCorrect": false,
+        "rationale": "Ignorar el semáforo provocaría atoros severos o daños al personal y equipos de nivel inferior."
+      },
+      {
+        "text": "Vaciar mineral con presencia de trancamientos sin operar la reducción secundaria.",
+        "isCorrect": false,
+        "rationale": "Descargar sobre un atoro no resuelto genera colapsos operacionales y detención prolongada."
+      }
+    ],
+    "hint": "Considera las medidas de protección de la infraestructura del pique y la coordinación con la reducción secundaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál fue el avance clave logrado en Minera Esmeralda en materia de captura y consolidación de información tras integrar la metodología Lean?",
+    "opciones": [
+      {
+        "text": "Eliminación de la elaboración de reportes de gestión.",
+        "isCorrect": false,
+        "rationale": "La reportabilidad es indispensable para el control de la mejora continua."
+      },
+      {
+        "text": "Generación automática de reportes diarios, semanales y mensuales de KPIs sin manipulación manual de datos.",
+        "isCorrect": true,
+        "rationale": "La automatización del reporte garantiza datos confiables, en tiempo real y sin sesgos de transcripción."
+      },
+      {
+        "text": "Sustitución de todas las métricas por encuestas de opinión cualitativas.",
+        "isCorrect": false,
+        "rationale": "El control Lean se basa en datos numéricos objetivos y medibles de los procesos."
+      },
+      {
+        "text": "Contratación de digitadores para transcribir tarjas en forma manual al final del mes.",
+        "isCorrect": false,
+        "rationale": "La transcripción manual tardía incrementa el riesgo de error y destruye la inmediatez de la información."
+      },
+      {
+        "text": "Restricción del acceso a los KPIs únicamente para el área financiera.",
+        "isCorrect": false,
+        "rationale": "Lean requiere que la información sea pública y visible para el personal de operaciones."
+      }
+    ],
+    "hint": "Piensa en el beneficio de conectar los sistemas de control de flota con tableros automáticos sin sesgo humano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso práctico de la concentradora de Minera Las Bambas expuesto en la Clase 2, ¿qué deficiencias operativas afectaban severamente la molienda primaria y secundaria?",
+    "opciones": [
+      {
+        "text": "Paradas no programadas de hasta 15 horas/semana en el molino y un exceso del 10% en el consumo energético.",
+        "isCorrect": true,
+        "rationale": "Las paradas imprevistas del molino reducían drásticamente el tonelaje tratado y disparaban el costo de energía."
+      },
+      {
+        "text": "Falta de espacio para almacenar el concentrado de cobre en los almacenes del puerto.",
+        "isCorrect": false,
+        "rationale": "El problema analizado se concentraba en la etapa interna de molienda en la planta concentradora."
+      },
+      {
+        "text": "Rotura continua de las tuberías de agua potable de los campamentos.",
+        "isCorrect": false,
+        "rationale": "Era una ineficiencia propia del proceso productivo concentrador y no de los servicios generales."
+      },
+      {
+        "text": "Desgaste nulo en las bolas de molienda que impedía la trituración del mineral.",
+        "isCorrect": false,
+        "rationale": "El problema identificado con las bolas era el sobreinventario y falta de control, no la ausencia de desgaste."
+      },
+      {
+        "text": "Imposibilidad absoluta de transportar mineral desde la mina hacia la planta chancadora.",
+        "isCorrect": false,
+        "rationale": "El cuello de botella crítico bajo estudio se localizaba en el circuito de molienda."
+      }
+    ],
+    "hint": "Identifica las horas de detención semanal del equipo principal y la ineficiencia en el uso de energía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para optimizar el proceso de molienda y el cambio de revestimientos de molinos en Las Bambas, ¿qué herramientas Lean se aplicaron de forma combinada?",
+    "opciones": [
+      {
+        "text": "Value Stream Mapping (VSM) para mapear el flujo y detectar cuellos de botella en la molienda.",
+        "isCorrect": true,
+        "rationale": "Permitió visualizar dónde se concentraban las demoras en el flujo de alimentación y mantenimiento."
+      },
+      {
+        "text": "SMED (Single-Minute Exchange of Die) para reducir los tiempos de cambio de revestimientos en los molinos.",
+        "isCorrect": true,
+        "rationale": "SMED permitió estandarizar y paralelizar tareas para minimizar la parada por mantenimiento."
+      },
+      {
+        "text": "TPM (Mantenimiento Productivo Total) para elevar la disponibilidad mecánica del equipo.",
+        "isCorrect": true,
+        "rationale": "El TPM fortaleció la confiabilidad operativa mediante el involucramiento del personal en la conservación del molino."
+      },
+      {
+        "text": "Acumulación masiva e ininterrumpida de inventario de bolas de molienda sin catalogar.",
+        "isCorrect": false,
+        "rationale": "El sobreinventario de bolas era un desperdicio a corregir, no una herramienta de optimización."
+      },
+      {
+        "text": "Desmontaje definitivo de las paradas programadas de mantenimiento preventivo.",
+        "isCorrect": false,
+        "rationale": "Lean busca optimizar las paradas programadas mediante SMED, no eliminarlas de forma imprudente."
+      }
+    ],
+    "hint": "Selecciona las metodologías enfocadas en mapeo de valor, reducción de tiempos de cambio de piezas y confiabilidad de maquinaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles fueron los resultados finales en el OEE, las horas de parada y el costo unitario de molienda en Minera Las Bambas tras implementar la metodología Lean?",
+    "opciones": [
+      {
+        "text": "El OEE bajó al 50% y los costos aumentaron a $10 por tonelada.",
+        "isCorrect": false,
+        "rationale": "La implementación fue exitosa y logró incrementar la eficiencia y reducir los costos."
+      },
+      {
+        "text": "El OEE se incrementó del 68% al 86%, las paradas cayeron de 15 a 6 horas/semana y el costo batió de $6.4 a $5.3 por tonelada.",
+        "isCorrect": true,
+        "rationale": "Se demostró una mejora contundente en confiabilidad, disponibilidad y ahorro directo en el costo por tonelada procesada."
+      },
+      {
+        "text": "Las paradas no programadas aumentaron a 25 horas por semana pero la energía se redujo un 50%.",
+        "isCorrect": false,
+        "rationale": "Las horas de parada se redujeron más de la mitad, no aumentaron."
+      },
+      {
+        "text": "El costo de molienda se mantuvo idéntico pero se redujo la plantilla de trabajadores en un 80%.",
+        "isCorrect": false,
+        "rationale": "El costo por tonelada disminuyó en $1.1 y los logros se consiguieron con la capacitación del equipo existente."
+      },
+      {
+        "text": "El OEE llegó al 100% permanente sin requerir ningún tipo de parada en todo el año.",
+        "isCorrect": false,
+        "rationale": "Un OEE del 100% continuo es irreal; el estándar alcanzado del 86% representa un nivel de clase mundial."
+      }
+    ],
+    "hint": "Busca el incremento del OEE por encima del 80%, la reducción sustancial de horas de parada y la disminución en $1.1 por tonelada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el cierre del curso, ¿cuál es el factor determinante en la gestión del cambio para evitar el fracaso de una transformación Lean?",
+    "opciones": [
+      {
+        "text": "Comprar software de simulación sin involucrar al personal de planta.",
+        "isCorrect": false,
+        "rationale": "La tecnología aislada sin adopción cultural genera rechazo y abandono del sistema."
+      },
+      {
+        "text": "El liderazgo visible de los jefes de planta junto con el involucramiento y capacitación continua del personal operativo.",
+        "isCorrect": true,
+        "rationale": "La sostenibilidad de Lean depende de que la jefatura lidere en el terreno y los trabajadores entiendan y apliquen los estándares."
+      },
+      {
+        "text": "Aplicar sanciones punitivas inmediatas ante la primera falla de un KPI.",
+        "isCorrect": false,
+        "rationale": "Un entorno punitivo destruye la confianza e impide que los operarios reporten los problemas reales."
+      },
+      {
+        "text": "Reemplazar periódicamente a la totalidad del personal cada tres meses.",
+        "isCorrect": false,
+        "rationale": "La rotación excesiva destruye el conocimiento acumulado y la curva de aprendizaje de los procesos."
+      },
+      {
+        "text": "Delegar la responsabilidad del sistema Lean únicamente a practicantes o consultores externos.",
+        "isCorrect": false,
+        "rationale": "Si la línea de mando no se adueña de la metodología, el sistema se evapora gradualmente."
+      }
+    ],
+    "hint": "Reflexiona sobre el rol de la jefatura en terreno y la necesidad de empoderar a los trabajadores del área operativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-73",
+    "diplomado": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Por qué se sostiene que la implementación Lean en operaciones mineras debe mantenerse como un ciclo continuo y no como un proyecto aislado de única vez?",
+    "opciones": [
+      {
+        "text": "Porque la tendencia humana al acostumbramiento y la procrastinación exige auditorías, disciplina (Shitsuke) y seguimiento permanente.",
+        "isCorrect": true,
+        "rationale": "Sin mantenimiento ni auditorías de adherencia, las organizaciones tienden a recaer en los viejos hábitos desordenados."
+      },
+      {
+        "text": "Porque las variaciones en las condiciones del yacimiento y de los equipos requieren adaptar constantemente los estándares.",
+        "isCorrect": true,
+        "rationale": "La minería es cambiante; por ello, los mapas de flujo y estándares deben ajustarse al entorno operativo."
+      },
+      {
+        "text": "Porque el principio de mejora continua (Kaizen) busca perseguir la perfección mediante pequeñas revisiones sostenidas.",
+        "isCorrect": true,
+        "rationale": "La excelencia operacional no se alcanza en un solo hito, sino mediante la iteración ininterrumpida del ciclo PDCA."
+      },
+      {
+        "text": "Porque el sistema Lean caduca automáticamente cada 30 días si no se reinician los tableros.",
+        "isCorrect": false,
+        "rationale": "Lean no es un producto con fecha de caducidad administrativa, sino una filosofía de trabajo permanente."
+      },
+      {
+        "text": "Porque el objetivo final de Lean es automatizar el 100% de la mina expulsando a todos los trabajadores.",
+        "isCorrect": false,
+        "rationale": "Lean utiliza la tecnología para potenciar la eficiencia, manteniendo al ser humano como centro de la resolución de problemas."
+      }
+    ],
+    "hint": "Piensa en el desafío de la autodisciplina humana, la variabilidad de la mina y la naturaleza del ciclo PDCA.",
+    "activo": true
+  }
+]

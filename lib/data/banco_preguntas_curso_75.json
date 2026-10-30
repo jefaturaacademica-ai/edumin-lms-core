@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la planificación de una parada de planta industrial, ¿qué porcentaje del esfuerzo total de gestión de seguridad se recomienda dedicar a la etapa de planificación previa para alcanzar el objetivo de cero daños?",
+    "opciones": [
+      {
+        "text": "20%",
+        "isCorrect": false,
+        "rationale": "Asignar solo una quinta parte del esfuerzo a la preparación previa deja la mayor parte de la gestión en un estado reactivo durante la ejecución."
+      },
+      {
+        "text": "50%",
+        "isCorrect": false,
+        "rationale": "Dividir el esfuerzo en partes iguales subestima la complejidad de la fase de preparación para mitigar riesgos exponenciales antes del inicio del trabajo."
+      },
+      {
+        "text": "80%",
+        "isCorrect": true,
+        "rationale": "Invertir la gran mayoría del esfuerzo en la planificación permite integrar la seguridad en el cronograma maestro y controlar los peligros antes de que aparezcan en campo."
+      },
+      {
+        "text": "95%",
+        "isCorrect": false,
+        "rationale": "Un porcentaje excesivamente alto no deja el margen de recurso necesario para la supervisión activa y el control operacional durante la ejecución en terreno."
+      },
+      {
+        "text": "30%",
+        "isCorrect": false,
+        "rationale": "Esta proporción es insuficiente para abordar la homologación de contratistas, la logística y la evaluación proactiva de riesgos."
+      }
+    ],
+    "hint": "Piensa en la relación entre el tiempo invertido antes del evento y la prevención proactiva frente a la reacción en el terreno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Análisis de riesgos: ¿Cuál es la diferencia fundamental entre el IPERC de línea base y el IPERC continuo?",
+    "opciones": [
+      {
+        "text": "El IPERC de línea base se realiza diariamente en campo, mientras que el continuo define los presupuestos anuales de la empresa.",
+        "isCorrect": false,
+        "rationale": "Esta opción invierte el alcance de ambas herramientas, asignando la tarea diaria al estudio macro previo."
+      },
+      {
+        "text": "El IPERC de línea base se enfoca en la visión estratégica y macro a largo plazo, mientras que el continuo evalúa riesgos específicos al inicio de cada turno.",
+        "isCorrect": true,
+        "rationale": "El proceso de línea base establece el panorama general y recursos meses antes, mientras que la versión continua aborda el entorno cambiante del día a día."
+      },
+      {
+        "text": "El IPERC de línea base es obligatorio solo para empresas contratistas, mientras que el continuo aplica únicamente al personal propio.",
+        "isCorrect": false,
+        "rationale": "La gestión de riesgos no discrimina el tipo de contratación del personal; ambas herramientas aplican a todos los trabajadores por igual."
+      },
+      {
+        "text": "El IPERC de línea base se efectúa al finalizar la parada de planta, mientras que el continuo se realiza antes de apagar los equipos.",
+        "isCorrect": false,
+        "rationale": "El análisis de línea base es una herramienta previa de planificación estratégica, no una evaluación posterior a la finalización de los trabajos."
+      },
+      {
+        "text": "El IPERC de línea base reemplaza el uso del permiso de trabajo (PETAR), mientras que el continuo autoriza la tarea.",
+        "isCorrect": false,
+        "rationale": "Ningún nivel de IPERC sustituye la función del permiso escrito de trabajo de alto riesgo para tareas críticas."
+      }
+    ],
+    "hint": "Compara la planificación estratégica previa a gran escala con la revisión táctica inmediata antes de iniciar la jornada laboral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son los factores agudos que convergen durante una parada de planta para multiplicar el riesgo y generar un entorno de peligro extremo?",
+    "opciones": [
+      {
+        "text": "Cuadruplicación de la población laboral y severa congestión en áreas de trabajo.",
+        "isCorrect": true,
+        "rationale": "El incremento masivo de trabajadores en espacios reducidos sobrecarga la logística y eleva el potencial de interferencias operativas."
+      },
+      {
+        "text": "Dilución de la competencia técnica general por la altísima demanda de personal especializado.",
+        "isCorrect": true,
+        "rationale": "La escasez de mano de obra calificada obliga a incorporar personal con heterogéneos niveles de experiencia y conocimiento del sitio."
+      },
+      {
+        "text": "Presión extrema del tiempo debido a las elevadas pérdidas financieras por cada hora inactiva.",
+        "isCorrect": true,
+        "rationale": "La urgencia por reiniciar las operaciones crea un incentivo peligroso para omitir pasos de seguridad o tomar atajos."
+      },
+      {
+        "text": "Desactivación temporal de sistemas de protección habituales como guardas y sensores de seguridad.",
+        "isCorrect": true,
+        "rationale": "El mantenimiento directo exige desarmar protecciones físicas, dejando la seguridad dependiente de controles administrativos."
+      },
+      {
+        "text": "Reducción de operaciones simultáneas debido a la automatización de los procesos de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "En una parada de planta las tareas simultáneas se multiplican de forma crítica en lugar de reducirse."
+      }
+    ],
+    "hint": "Considera las condiciones operativas cambiantes que alteran la estabilidad habitual de una planta industrial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el marco legal aplicable en seguridad y salud en el trabajo (como la Ley 29783), ¿qué implica el principio de solidaridad para la empresa principal titular de la planta?",
+    "opciones": [
+      {
+        "text": "Permite delegar la responsabilidad legal total de las emergencias en las empresas contratistas seleccionadas.",
+        "isCorrect": false,
+        "rationale": "La normativa establece expresamente que la responsabilidad final por la seguridad dentro de la instalación es indelegable por parte del titular."
+      },
+      {
+        "text": "Establece que la empresa principal asume responsabilidad compartida si un contratista incumple las normas de seguridad e higiene.",
+        "isCorrect": true,
+        "rationale": "El principio de solidaridad garantiza que la entidad titular responda ante fallos preventivos o accidentes ocurridos a los trabajadores de empresas contratistas."
+      },
+      {
+        "text": "Exime a las empresas contratistas de presentar un plan de seguridad antes de iniciar la parada.",
+        "isCorrect": false,
+        "rationale": "La ley exige que todo contratista cuente con planes aprobados alineados a los estándares de la planta principal."
+      },
+      {
+        "text": "Autoriza el uso de estándares de seguridad diferenciados y menos exigentes para el personal externo.",
+        "isCorrect": false,
+        "rationale": "El marco legal prohíbe explícitamente el doble estándar entre trabajadores propios y contratistas."
+      },
+      {
+        "text": "Faculta a la gerencia a suspender las funciones del Comité de Seguridad durante la ejecución de los trabajos.",
+        "isCorrect": false,
+        "rationale": "El Comité de Seguridad y Salud mantiene sus facultades de fiscalización y aprobación de planes en todo momento."
+      }
+    ],
+    "hint": "Recuerda que la responsabilidad final de la seguridad en el sitio de trabajo no se puede transferir a terceros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la matriz de compatibilidad para la gestión de Operaciones Simultáneas (SIMOPS), ¿qué restricción establece la asignación del color rojo a la intersección de dos actividades?",
+    "opciones": [
+      {
+        "text": "La actividad es totalmente compatible y puede realizarse sin supervisión.",
+        "isCorrect": false,
+        "rationale": "El color verde es el que representa la compatibilidad sin restricciones especiales entre tareas."
+      },
+      {
+        "text": "La tarea requiere únicamente el uso de equipos de protección personal adicionales.",
+        "isCorrect": false,
+        "rationale": "Las precauciones o controles adicionales se señalan habitualmente con el código de color amarillo."
+      },
+      {
+        "text": "Representa una prohibición absoluta de ejecutar ambas actividades al mismo tiempo en la misma zona.",
+        "isCorrect": true,
+        "rationale": "El color rojo determina un conflicto insostenible de riesgos que exige reprogramar una de las tareas para evitar eventos catastróficos."
+      },
+      {
+        "text": "Indica que la actividad solo puede ser realizada por personal propio de la planta.",
+        "isCorrect": false,
+        "rationale": "La matriz SIMOPS gestiona la interacción física de peligros, no el tipo de contrato laboral del personal."
+      },
+      {
+        "text": "Señala que la tarea requiere la aprobación previa del Comité de Seguridad en sesión plenaria.",
+        "isCorrect": false,
+        "rationale": "El control de SIMOPS es una herramienta operativa visual diaria gestionada por la supervisión de campo."
+      }
+    ],
+    "hint": "Asocia la codificación de colores de tránsito con el nivel máximo de restricción operativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al monitorear el factor humano en turnos de 12 horas durante una parada de planta, ¿después de cuántos días consecutivos se observa un punto de inflexión con caída severa del rendimiento cognitivo?",
+    "opciones": [
+      {
+        "text": "2 días.",
+        "isCorrect": false,
+        "rationale": "En los primeros días el nivel de alerta suele mantenerse elevado debido al inicio reciente de la operación."
+      },
+      {
+        "text": "5 días.",
+        "isCorrect": false,
+        "rationale": "A los cinco días el cuerpo aún conserva reservas de resistencia física y mental en la mayoría de los casos."
+      },
+      {
+        "text": "10 días.",
+        "isCorrect": true,
+        "rationale": "Cerca del décimo día de trabajo ininterrumpido en turnos extensos la fatiga acumulada ralentiza los tiempos de reacción y dispara la probabilidad de error humano."
+      },
+      {
+        "text": "20 días.",
+        "isCorrect": false,
+        "rationale": "Esperar a los 20 días implica ignorar que el deterioro cognitivo grave aparece mucho antes en este tipo de jornadas."
+      },
+      {
+        "text": "30 días.",
+        "isCorrect": false,
+        "rationale": "Las paradas de planta no suelen programar turnos continuos tan extensos sin descansos obligatorios por el riesgo extremo que conlleva."
+      }
+    ],
+    "hint": "Piensa en el punto de inflexión acumulativo de fatiga tras una semana y media de trabajo ininterrumpido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Cultura y prevención: ¿Cuál es la regla de oro que define el ADN del procedimiento de Bloqueo y Etiquetado (LOTO)?",
+    "opciones": [
+      {
+        "text": "Un candado maestro para todo el grupo de trabajo controlado por el gerente.",
+        "isCorrect": false,
+        "rationale": "Depender de un solo candado no individualiza la protección de cada especialista expuesto al riesgo energético."
+      },
+      {
+        "text": "Un candado, una llave, una persona.",
+        "isCorrect": true,
+        "rationale": "Esta regla garantiza que la única persona facultada para retirar el bloqueo físico sea el propio trabajador cuya vida depende de ese aislamiento."
+      },
+      {
+        "text": "Dos candados por equipo y llaves guardadas en la oficina central de seguridad.",
+        "isCorrect": false,
+        "rationale": "Guardar las llaves fuera del alcance o control del trabajador vulnera el principio de protección personal e inmediata."
+      },
+      {
+        "text": "Un candado digital supervisado exclusivamente por la sala de control de procesos.",
+        "isCorrect": false,
+        "rationale": "El bloqueo requiere una interrupción física comprobable sobre la cual el trabajador mantiene posesión directa."
+      },
+      {
+        "text": "Un sistema de etiquetas visuales sin necesidad de traba mecánica.",
+        "isCorrect": false,
+        "rationale": "Las etiquetas son controles de advertencia informativa que no impiden físicamente la reconexión de una fuente de energía."
+      }
+    ],
+    "hint": "Considera la máxima expresión de control individual en la que nadie más puede retirar la protección de un trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En la homologación de empresas contratistas previa a una parada de planta, ¿qué dimensiones deben auditarse de forma rigurosa?",
+    "opciones": [
+      {
+        "text": "Dimensión legal y laboral.",
+        "isCorrect": true,
+        "rationale": "Evalúa el cumplimiento de obligaciones contractuales, previsionales y el marco normativo vigente."
+      },
+      {
+        "text": "Dimensión de seguridad y salud en el trabajo.",
+        "isCorrect": true,
+        "rationale": "Analiza el historial de accidentabilidad, la madurez de los sistemas de gestión y los planes preventivos de la contrata."
+      },
+      {
+        "text": "Dimensión técnica.",
+        "isCorrect": true,
+        "rationale": "Valida las certificaciones vigentes de los equipos pesados y las competencias probadas del personal capacitado."
+      },
+      {
+        "text": "Dimensión de salud ocupacional.",
+        "isCorrect": true,
+        "rationale": "Verifica los exámenes médicos aptitudinales y los registros de vigilancia médica de los trabajadores."
+      },
+      {
+        "text": "Dimensión de estrategia publicitaria y comercial.",
+        "isCorrect": false,
+        "rationale": "El posicionamiento de marca no influye en la capacidad operativa segura del contratista en la planta."
+      }
+    ],
+    "hint": "Piensa en los aspectos normativos, operativos, preventivos y médicos requeridos para validar la capacidad segura de un socio estratégico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la secuencia estándar de siete pasos del procedimiento LOTO, ¿cuál es el paso final indispensable para confirmar la energía cero?",
+    "opciones": [
+      {
+        "text": "Colocar la etiqueta de advertencia personal sobre el punto de aislamiento.",
+        "isCorrect": false,
+        "rationale": "El etiquetado precede a la comprobación final de que el sistema ha quedado completamente inerte."
+      },
+      {
+        "text": "Verificar el aislamiento intentando encender o arrancar el equipo a propósito.",
+        "isCorrect": true,
+        "rationale": "El paso de prueba o arranque intencional es la única acción que demuestra sin lugar a dudas que no existe energía residual o reconexión involuntaria."
+      },
+      {
+        "text": "Notificar verbalmente a los trabajadores adyacentes que la máquina está aislada.",
+        "isCorrect": false,
+        "rationale": "La comunicación es un paso inicial del proceso, no la prueba física final de desenergización."
+      },
+      {
+        "text": "Firmar la bitácora de permisos en la oficina del supervisor del área.",
+        "isCorrect": false,
+        "rationale": "El registro administrativo es necesario pero no prueba mecánicamente el estado de la energía en el equipo."
+      },
+      {
+        "text": "Retirar los fusibles principales de la celda eléctrica.",
+        "isCorrect": false,
+        "rationale": "El retiro de fusibles forma parte de las acciones de aislamiento, las cuales deben verificarse mediante la prueba posterior."
+      }
+    ],
+    "hint": "Identifica la acción comprobatoria que asegura, de manera práctica, que la máquina no responderá ni liberará energía residual.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el trabajo dentro de espacios confinados, ¿cuál es la regla de oro que rige la conducta del vigía asignado en el exterior?",
+    "opciones": [
+      {
+        "text": "Ingresar al espacio confinado inmediatamente si observa que el trabajador adentro sufre una desmayo.",
+        "isCorrect": false,
+        "rationale": "Entrar sin protección desencadena fatalidades múltiples al exponer al vigía a la misma atmósfera peligrosa."
+      },
+      {
+        "text": "Apagar el sistema de ventilación forzada si detecta niveles elevados de ruido exterior.",
+        "isCorrect": false,
+        "rationale": "Interrumpir la ventilación degrada rápidamente la calidad del aire interior y pone en riesgo vital al equipo."
+      },
+      {
+        "text": "Permanecer siempre fuera del espacio confinado sin ingresar bajo ninguna circunstancia y activar el protocolo de emergencia.",
+        "isCorrect": true,
+        "rationale": "La función vital del vigía es mantener el monitoreo continuo desde el exterior y activar a las brigadas especializadas en caso de evento."
+      },
+      {
+        "text": "Intercambiar funciones con el trabajador del interior a mitad de la jornada sin registrar la rotación.",
+        "isCorrect": false,
+        "rationale": "El rol de vigía requiere atención dedicada y continua sin descuidar la supervisión de la entrada."
+      },
+      {
+        "text": "Realizar mediciones atmosféricas únicamente al concluir la tarea programada.",
+        "isCorrect": false,
+        "rationale": "El monitoreo de gases en un espacio confinado debe ser continuo durante toda la permanencia del personal."
+      }
+    ],
+    "hint": "Piensa en la norma diseñada para evitar que el personal de vigilancia se convierta en una víctima adicional dentro del recinto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos constituyen los pilares de la llamada 'Fortaleza de Seguridad' para la respuesta a emergencias en paradas de planta?",
+    "opciones": [
+      {
+        "text": "Plan específico de respuesta estructurado en tres niveles de emergencia.",
+        "isCorrect": true,
+        "rationale": "Establece criterios claros de escalamiento desde incidentes locales hasta crisis mayores que superan la capacidad interna."
+      },
+      {
+        "text": "Sistema de Comando de Incidentes con una cadena de mando única e inquebrantable.",
+        "isCorrect": true,
+        "rationale": "Elimina la confusión directiva durante un evento crítico definiendo con claridad la autoridad de toma de decisiones."
+      },
+      {
+        "text": "Brigadas de emergencia multidisciplinarias con cobertura 24/7 en todos los turnos.",
+        "isCorrect": true,
+        "rationale": "Asegura la capacidad de primera respuesta inmediata con personal entrenado en los riesgos específicos del trabajo."
+      },
+      {
+        "text": "Protocolo MedEvac y verificación constante de rutas de evacuación médicas en terreno.",
+        "isCorrect": true,
+        "rationale": "Garantiza el traslado eficiente y sin obstrucciones de un paciente lesionado hacia centros médicos especializados."
+      },
+      {
+        "text": "Cancelación de simulacros para evitar desviaciones en el cronograma de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Un plan de emergencia no validado mediante pruebas prácticas resulta inoperante durante una crisis real."
+      }
+    ],
+    "hint": "Revisa los pilares fundamentales que sostienen la resiliencia operativa y la respuesta ante situaciones críticas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Monitoreo y métricas: ¿Cuál de las siguientes opciones corresponde a un indicador de seguridad de carácter proactivo o de liderazgo (leading indicator)?",
+    "opciones": [
+      {
+        "text": "Índice de frecuencia de accidentes con pérdida de tiempo.",
+        "isCorrect": false,
+        "rationale": "Mide el resultado de eventos dañinos ocurridos en el pasado, funcionando como un indicador reactivo."
+      },
+      {
+        "text": "Número total de días perdidos por incapacidades médicas.",
+        "isCorrect": false,
+        "rationale": "Contabiliza la gravedad de los accidentes registrados previamente."
+      },
+      {
+        "text": "Porcentaje de cumplimiento del programa de inspecciones preventivas e interacciones de liderazgo.",
+        "isCorrect": true,
+        "rationale": "Evalúa el desempeño de las actividades destinadas a identificar y corregir condiciones peligrosas antes de que generen accidentes."
+      },
+      {
+        "text": "Monto de las pérdidas económicas sufridas por daños a activos.",
+        "isCorrect": false,
+        "rationale": "Es una métrica financiera consecuencia de fallos en el sistema de gestión ya consumados."
+      },
+      {
+        "text": "Tasa de severidad acumulada durante el año fiscal.",
+        "isCorrect": false,
+        "rationale": "Refleja el impacto directo de lesiones ocurridas históricamente."
+      }
+    ],
+    "hint": "Diferencia los indicadores que miden la eficacia de las acciones preventivas en tiempo real de aquellos que registran eventos desfavorables ya consumados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la analogía entre 'hardware' y 'software' aplicada a la gestión de seguridad industrial, ¿qué elemento representa el 'software' organizacional?",
+    "opciones": [
+      {
+        "text": "Los equipos de protección personal y sistemas anticaídas.",
+        "isCorrect": false,
+        "rationale": "Los elementos físicos y equipos forman parte del equipamiento visible o 'hardware'."
+      },
+      {
+        "text": "Los procedimientos operativos impresos y los reglamentos internos.",
+        "isCorrect": false,
+        "rationale": "La documentación en papel constituye la estructura rígida o 'hardware' del sistema."
+      },
+      {
+        "text": "La cultura de seguridad, la confianza interpersonal y la calidad de la comunicación.",
+        "isCorrect": true,
+        "rationale": "El 'software' abarca la dimensión humana e intangible que determina cómo el personal ejecuta las normas en la práctica diaria."
+      },
+      {
+        "text": "Las herramientas mecánicas y los andamios modulares.",
+        "isCorrect": false,
+        "rationale": "Son activos materiales e infraestructura empleados en la labor de ingeniería."
+      },
+      {
+        "text": "Los dispositivos tecnológicos como sensores de gas y drones.",
+        "isCorrect": false,
+        "rationale": "Corresponden a herramientas e instrumentos tecnológicos físicos utilizados en la inspección."
+      }
+    ],
+    "hint": "Identifica el componente intangible relacionado con el comportamiento humano y la dinámica organizacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la curva de madurez cultural de seguridad, ¿cuál es el rasgo distintivo de un equipo operando en el nivel 'interdependiente'?",
+    "opciones": [
+      {
+        "text": "La seguridad se cumple únicamente cuando el supervisor está presente en el área.",
+        "isCorrect": false,
+        "rationale": "Este comportamiento corresponde a un nivel dependiente regido por el control externo."
+      },
+      {
+        "text": "Se asume que los accidentes son inevitables y producto de la mala suerte.",
+        "isCorrect": false,
+        "rationale": "Refleja una cultura reactiva donde no existe convicción sobre la prevención."
+      },
+      {
+        "text": "Cada trabajador cuida su propia seguridad personal sin intervenir en las acciones de los demás.",
+        "isCorrect": false,
+        "rationale": "Es la característica central del nivel independiente, enfocado exclusivamente en el autocuidado individual."
+      },
+      {
+        "text": "Los integrantes del equipo se cuidan mutuamente bajo la premisa 'yo te cuido y tú me cuidas'.",
+        "isCorrect": true,
+        "rationale": "La interdependencia logra que la seguridad sea un compromiso colectivo donde el grupo no tolera desviaciones en ninguno de sus miembros."
+      },
+      {
+        "text": "La gestión preventiva se delega completamente al departamento de seguridad y salud.",
+        "isCorrect": false,
+        "rationale": "Transferir la responsabilidad a un área especializada denota falta de integración operacional del cuidado."
+      }
+    ],
+    "hint": "Piensa en la fase más avanzada donde el cuidado mutuo y la responsabilidad compartida son colectivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Técnicas de comunicación: ¿En qué consiste la estructura de la técnica del 'Sándwich' para brindar retroalimentación correctiva sobre un acto inseguro?",
+    "opciones": [
+      {
+        "text": "Exponer el fallo cometido, aplicar una sanción formal e informar a la gerencia.",
+        "isCorrect": false,
+        "rationale": "Este enfoque punitivo genera actitud defensiva en el trabajador y destruye la confianza."
+      },
+      {
+        "text": "Acomodar una corrección directa y clara entre dos afirmaciones positivas o de reconocimiento.",
+        "isCorrect": true,
+        "rationale": "Usa el elogio inicial para bajar las defensas del receptor, comunica el aspecto a corregir y concluye reforzando la confianza."
+      },
+      {
+        "text": "Enviar tres observaciones por escrito antes de hablar personalmente con el trabajador.",
+        "isCorrect": false,
+        "rationale": "Priorizar la burocracia documental limita la efectividad del diálogo presencial en el terreno."
+      },
+      {
+        "text": "Discutir la falta cometida públicamente durante la charla de inicio de turno.",
+        "isCorrect": false,
+        "rationale": "La retroalimentación individual debe realizarse de forma privada para no avergonzar a la persona."
+      },
+      {
+        "text": "Escribir la advertencia en el formato del permiso de trabajo sin comentarla verbalmente.",
+        "isCorrect": false,
+        "rationale": "Omitir la conversación directa impide clarificar las causas que motivaron la desviación."
+      }
+    ],
+    "hint": "Recuerda la analogía de la estructura del bocadillo, donde el contenido principal se ubica al centro de dos capas favorables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Liderazgo en campo: ¿Qué acción por parte de la alta gerencia valida de forma irrefutable la efectividad de la 'Autoridad para Detener el Trabajo'?",
+    "opciones": [
+      {
+        "text": "Descontar el tiempo perdido de las horas facturables a la contrata.",
+        "isCorrect": false,
+        "rationale": "Penalizar económicamente desincentiva la intervención temprana ante riesgos inminentes."
+      },
+      {
+        "text": "Reconocer y agradecer públicamente al trabajador que paralizó una labor insegura.",
+        "isCorrect": true,
+        "rationale": "El respaldo público demuestra a la organización que la vida de las personas está por encima del avance del cronograma."
+      },
+      {
+        "text": "Exigir que la detención sea autorizada previamente por un comité técnico.",
+        "isCorrect": false,
+        "rationale": "Imponer trámites burocráticos anula la inmediatez necesaria para evitar un accidente inminente."
+      },
+      {
+        "text": "Reemplazar de inmediato al personal que ejerció el derecho de parar la tarea.",
+        "isCorrect": false,
+        "rationale": "Sustituir al personal envía un mensaje de intimidación que liquida la cultura preventiva."
+      },
+      {
+        "text": "Transferir la responsabilidad de evaluar el peligro exclusivamente al supervisor de turno.",
+        "isCorrect": false,
+        "rationale": "El empoderamiento debe pertenecer a cada persona en el sitio sin importar su jerarquía."
+      }
+    ],
+    "hint": "Identifica la acción de liderazgo que valida la seguridad por encima de la producción y elimina el temor a represalias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis de causación de accidentes mediante el Modelo del Queso Suizo de James Reason, ¿qué representan los 'agujeros' en las rebanadas?",
+    "opciones": [
+      {
+        "text": "Las lesiones físicas sufridas directamente por los trabajadores.",
+        "isCorrect": false,
+        "rationale": "Las lesiones son las consecuencias del evento desintencionado, no las fallas estructurales."
+      },
+      {
+        "text": "Debilidades o fallas latentes presentes en los sistemas de control y barreras de seguridad.",
+        "isCorrect": true,
+        "rationale": "Los agujeros simbolizan vacíos normativos, falta de mantenimiento o errores de diseño que, al alinearse, permiten que el peligro alcance al blanco."
+      },
+      {
+        "text": "Los costos financieros no contemplados en el presupuesto inicial.",
+        "isCorrect": false,
+        "rationale": "El modelo analiza la efectividad de las defensas operativas, no los impactos económicos del proyecto."
+      },
+      {
+        "text": "Los turnos de descanso no tomados por el personal administrativo.",
+        "isCorrect": false,
+        "rationale": "Aunque la fatiga influye, los agujeros del modelo abarcan sistémicamente todo tipo de barreras defectuosas."
+      },
+      {
+        "text": "Las interrupciones en la cadena de suministro de insumos.",
+        "isCorrect": false,
+        "rationale": "Corresponden a problemas de gestión logística fuera del enfoque directo de barreras preventivas del modelo."
+      }
+    ],
+    "hint": "Visualiza la teoría que explica cómo los fallos latentes se alinean a través de barreras protectoras vulnerables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Investigación de incidentes: ¿Cuál es el objetivo primordial al aplicar el modelo del Iceberg en la evaluación de una falla operativa?",
+    "opciones": [
+      {
+        "text": "Identificar al trabajador culpable para aplicarle la sanción correspondiente.",
+        "isCorrect": false,
+        "rationale": "Buscar culpables detiene la investigación en la superficie e impide corregir las causas de fondo."
+      },
+      {
+        "text": "Bucear por debajo de la superficie para desenterrar las causas raíz organizacionales y condiciones del entorno.",
+        "isCorrect": true,
+        "rationale": "Permite ir más allá del acto inseguro visible para corregir las deficiencias del sistema que generaron el escenario de riesgo."
+      },
+      {
+        "text": "Calcular la indemnización que se pagará al centro médico.",
+        "isCorrect": false,
+        "rationale": "El enfoque de la herramienta es preventivo e investigativo, no administrativo-contable."
+      },
+      {
+        "text": "Determinar qué marca de equipo tiene la menor tasa de fallas mecánicas.",
+        "isCorrect": false,
+        "rationale": "Aunque evalúa equipos, el modelo analiza el sistema integral incluyendo factores organizacionales y humanos."
+      },
+      {
+        "text": "Justificar la contratación de un nuevo equipo de supervisión externa.",
+        "isCorrect": false,
+        "rationale": "El propósito es fortalecer el sistema de gestión existente identificando sus fallas latentes."
+      }
+    ],
+    "hint": "Considera la analogía de la masa sumergida que sostiene lo que a simple vista se logra observar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En las reuniones postmortem estructuradas bajo la metodología 'Mantener, Parar, Empezar' (Keep, Stop, Start), ¿cuáles son los propósitos de estas categorías?",
+    "opciones": [
+      {
+        "text": "'Mantener': Consolidar y estandarizar las prácticas operativas que funcionaron de manera excelente.",
+        "isCorrect": true,
+        "rationale": "Asegura que los aciertos preventivos y eficiencias logradas se conviertan en normas para futuras paradas."
+      },
+      {
+        "text": "'Parar': Erradicar procedimientos, hábitos o herramientas ineficientes o inseguras que generaron desviaciones.",
+        "isCorrect": true,
+        "rationale": "Permite discontinuar explícitamente acciones que expusieron al personal o ralentizaron el trabajo."
+      },
+      {
+        "text": "'Empezar': Incorporar nuevas metodologías, tecnologías o controles que no se aplicaron pero aportarían valor.",
+        "isCorrect": true,
+        "rationale": "Fomenta la innovación y la adopción de nuevas medidas preventivas en la planificación del siguiente ciclo."
+      },
+      {
+        "text": "'Mantener': Amonestar formalmente a los supervisores con menor índice de desempeño.",
+        "isCorrect": false,
+        "rationale": "Las reuniones postmortem deben centrarse en el aprendizaje del proceso y no en medidas disciplinarias individuales."
+      },
+      {
+        "text": "'Parar': Suspender de forma indefinida todos los mantenimientos de la planta industrial.",
+        "isCorrect": false,
+        "rationale": "La categoría busca eliminar prácticas defectuosas específicas, no cancelar las operaciones del complejo."
+      }
+    ],
+    "hint": "Examina la función constructiva de esta herramienta para organizar las lecciones aprendidas sin buscar culpables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué fenómeno organizacional se refiere el término 'amnesia organizacional' en el contexto del mantenimiento industrial?",
+    "opciones": [
+      {
+        "text": "A la pérdida de concentración atribuible a la exposición continua a altos niveles de ruido.",
+        "isCorrect": false,
+        "rationale": "El término describe un fallo del sistema de gestión del conocimiento, no una condición médica física."
+      },
+      {
+        "text": "A la repetición sistemática de errores pasados por no documentar e integrar las lecciones aprendidas en la memoria corporativa.",
+        "isCorrect": true,
+        "rationale": "Ocurre cuando la experiencia ganada se desvanece al finalizar el evento, obligando a la empresa a cometer las mismas fallas en el siguiente mantenimiento."
+      },
+      {
+        "text": "A la falta de inducción obligatoria para el personal contratista de primer ingreso.",
+        "isCorrect": false,
+        "rationale": "La falta de inducción es una falla de capacitación específica, no el olvido institucional de lecciones previas."
+      },
+      {
+        "text": "A la falla en los sistemas informáticos al almacenar los Permisos Escritos de Trabajo de Alto Riesgo.",
+        "isCorrect": false,
+        "rationale": "Un fallo tecnológico en servidores no equivale a la falta de aprendizaje organizacional continuo."
+      },
+      {
+        "text": "A la rotación natural de los representantes del Comité de Seguridad al concluir su mandato.",
+        "isCorrect": false,
+        "rationale": "La rotación de personal es un proceso administrativo que no debería causar la pérdida de los estándares establecidos."
+      }
+    ],
+    "hint": "Piensa en la consecuencia de no documentar ni consultar el conocimiento adquirido en eventos anteriores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Supervisión y control: ¿Por qué la práctica denominada 'firmas de escritorio' en los permisos PETAR destruye la cadena de seguridad?",
+    "opciones": [
+      {
+        "text": "Porque incrementa significativamente el consumo de papel administrativo en la planta.",
+        "isCorrect": false,
+        "rationale": "El impacto ambiental del papel es secundario frente al riesgo mortal de no inspeccionar el terreno."
+      },
+      {
+        "text": "Porque invalida la verificación presencial en campo de las condiciones de seguridad, exponiendo al firmante a responsabilidad penal en caso de accidente.",
+        "isCorrect": true,
+        "rationale": "Aprobar un permiso a distancia sin constatar los controles en el sitio convierte el documento en una formalidad falsa que vulnera la protección del trabajador."
+      },
+      {
+        "text": "Porque desacelera la velocidad de respuesta de las ambulancias en una emergencia.",
+        "isCorrect": false,
+        "rationale": "La firma de escritorios afecta la validación preventiva de la tarea, no la logística del vehículo médico directamente."
+      },
+      {
+        "text": "Porque impide que el Comité de Seguridad se reúna de forma mensual.",
+        "isCorrect": false,
+        "rationale": "No influye en el calendario de sesiones ordinarias del organismo paritario."
+      },
+      {
+        "text": "Porque invalida automáticamente la póliza de seguro de la empresa principal.",
+        "isCorrect": false,
+        "rationale": "Las implicaciones legales inmediatas son la vulneración de controles operativos y la responsabilidad administrativa y penal directas."
+      }
+    ],
+    "hint": "Reflexiona sobre la falta de inspección presencial cara a cara en el lugar exacto donde se ejecutará la labor crítica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Tecnología en supervisión: ¿Cuál es la ventaja principal de integrar inspecciones mediante drones y monitoreo con sensores remotos en zonas críticas?",
+    "opciones": [
+      {
+        "text": "Permite omitir la tramitación de permisos de trabajo para tareas en altura.",
+        "isCorrect": false,
+        "rationale": "El uso de tecnología apoya la supervisión pero no exime de contar con autorizaciones formales."
+      },
+      {
+        "text": "Retira al ser humano de la línea de fuego y proporciona lecturas atmosféricas y visuales continuas en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Elimina la necesidad de exponer físicamente a inspectores dentro de espacios confinados o estructuras elevadas peligrosas."
+      },
+      {
+        "text": "Elimina por completo la necesidad de contar con brigadas de rescate en la planta.",
+        "isCorrect": false,
+        "rationale": "Los equipos tecnológicos detectan riesgos pero no ejecutan maniobras de rescate físico ante una crisis."
+      },
+      {
+        "text": "Sustituye la obligación legal de realizar la homologación a los contratistas.",
+        "isCorrect": false,
+        "rationale": "La auditoría contractual y legal de las empresas contratistas sigue siendo un requisito ineludible."
+      },
+      {
+        "text": "Reducte a cero el presupuesto requerido para equipos de protección personal.",
+        "isCorrect": false,
+        "rationale": "El personal en campo sigue requiriendo sus equipos de protección individual correspondientes."
+      }
+    ],
+    "hint": "Asocia la innovación tecnológica con la reducción de la exposición directa del trabajador a peligros mortales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Mejora continua: De acuerdo con el ciclo PHBA (Planificar, Hacer, Verificar, Actuar) normado en ISO 45001, ¿cuál es la función de la etapa 'Actuar' al finalizar la parada?",
+    "opciones": [
+      {
+        "text": "Escribir la visión y misión corporativa de la organización para el próximo quinquenio.",
+        "isCorrect": false,
+        "rationale": "Definir declaraciones estratégicas no forma parte del cierre operativo de un ciclo de mantenimiento."
+      },
+      {
+        "text": "Sancionar al personal que no alcanzó los objetivos de producción fijados.",
+        "isCorrect": false,
+        "rationale": "El propósito del ciclo es la mejora de los procesos preventivos, no la aplicación de medidas punitivas."
+      },
+      {
+        "text": "Tomar las lecciones aprendidas en la verificación e incorporarlas en los procedimientos para actualizar el sistema.",
+        "isCorrect": true,
+        "rationale": "Cierra el círculo convirtiendo la experiencia vivida en nuevos estándares y correcciones operativas para el futuro."
+      },
+      {
+        "text": "Ejecutar las órdenes de trabajo que quedaron pendientes en el cronograma.",
+        "isCorrect": false,
+        "rationale": "La ejecución de tareas atrasadas pertenece a la fase de 'Hacer' o reprogramación, no al cierre sistemático de la mejora."
+      },
+      {
+        "text": "Realizar los pagos pendientes a las empresas contratistas homologadas.",
+        "isCorrect": false,
+        "rationale": "Las transacciones comerciales son procesos administrativos ajenos a la estructura del ciclo de gestión preventivo."
+      }
+    ],
+    "hint": "Identifica el paso que toma las evaluaciones postmortem para convertirlas en mejoras y estándares aplicables al siguiente ciclo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Respuesta a emergencias: ¿Por qué es obligatorio inspeccionar físicamente las rutas de evacuación médica (MedEvac) al inicio de cada turno?",
+    "opciones": [
+      {
+        "text": "Para asegurar que las ambulancias mantengan el tanque de combustible lleno.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento del vehículo es responsabilidad del área médica o transporte, no de la inspección de la vía."
+      },
+      {
+        "text": "Para garantizar que no existan materiales, andamios o maquinarias bloqueando el trayecto hacia el centro asistencial.",
+        "isCorrect": true,
+        "rationale": "Un obstáculo imprevisto en la ruta transforma una ambulancia equipada en una estructura inútil al perder minutos vitales."
+      },
+      {
+        "text": "Para verificar la limpieza y pintura del asfaltado de la planta.",
+        "isCorrect": false,
+        "rationale": "El enfoque de la inspección es la despejada transitabilidad ante una emergencia y no el ornato."
+      },
+      {
+        "text": "Para contabilizar cuántos trabajadores caminan hacia los comedores.",
+        "isCorrect": false,
+        "rationale": "El monitoreo de tránsito peatonal rutinario no corresponde a la preparación de las vías de rescate."
+      },
+      {
+        "text": "Para verificar que los sensores de gas de la ruta estén desconectados.",
+        "isCorrect": false,
+        "rationale": "Los equipos de detección ambiental deben permanecer operativos y nunca desactivarse indebidamente."
+      }
+    ],
+    "hint": "Considera que un camino bloqueado invalida la función de rescate de una ambulancia lista para intervenir.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a indicadores proactivos (leading KPIs) en la gestión de una parada de planta?",
+    "opciones": [
+      {
+        "text": "Porcentaje de charlas de seguridad de 5 minutos ejecutadas al inicio de cada turno.",
+        "isCorrect": true,
+        "rationale": "Mide el cumplimiento de la comunicación directa de riesgos antes de arrancar las labores."
+      },
+      {
+        "text": "Cantidad de reportes de casi accidentes (near-misses) registrados por los trabajadores.",
+        "isCorrect": true,
+        "rationale": "Un alto volumen de reportes refleja una cultura atenta que identifica peligros antes de que causen daños."
+      },
+      {
+        "text": "Tasa de auditorías de permisos de trabajo (PETAR) efectuadas en terreno.",
+        "isCorrect": true,
+        "rationale": "Evalúa la calidad y rigurosidad en la aplicación de los controles administrativos en campo."
+      },
+      {
+        "text": "Número total de trabajadores lesionados trasladados a centros médicos.",
+        "isCorrect": false,
+        "rationale": "Contabiliza daños consumados, constituyendo una métrica de desempeño reactiva."
+      },
+      {
+        "text": "Costo total acumulado por indemnizaciones de accidentes graves.",
+        "isCorrect": false,
+        "rationale": "Mide el impacto económico posterior al fallo de los sistemas preventivos."
+      }
+    ],
+    "hint": "Identifica aquellas métricas que evalúan esfuerzos de prevención e intervenciones tempranas antes de que ocurra una pérdida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante una parada de planta industrial, el entorno operativo sufre una transformación drástica que incrementa exponencialmente el nivel de peligro. ¿Cuál de las siguientes combinaciones representa los cuatro factores de riesgo agudo descritos en la planificación previa?",
+    "opciones": [
+      {
+        "text": "Duplicación de personal, falta de presupuesto, retraso logístico y fallas en equipos de protección personal.",
+        "isCorrect": false,
+        "rationale": "Aunque el presupuesto y la logística influyen en la gestión general, el incremento demográfico observado es mucho mayor y la desactivación de protecciones mecánicas es el factor crítico específico."
+      },
+      {
+        "text": "Población laboral cuadruplicada, dilución de la competencia técnica, brutal presión del tiempo y desactivación de protecciones normales.",
+        "isCorrect": true,
+        "rationale": "Estos cuatro factores convergen simultáneamente durante la parada de planta, transformando un entorno estable en un escenario de peligro extremo."
+      },
+      {
+        "text": "Aumento de inspecciones, falta de espacio en campamentos, fallas en la red eléctrica y rotación de jefaturas.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones y la logística de campamentos son consecuencias operativas secundarias, no los factores agudos directos que disparan el riesgo en los equipos."
+      },
+      {
+        "text": "Sobrepoblación de supervisores, exceso de permisos de trabajo, falta de herramientas y sanciones legales.",
+        "isCorrect": false,
+        "rationale": "El desafío demográfico radica en la afluencia masiva de técnicos contratistas con variados niveles de experiencia, no en un exceso de supervisión."
+      },
+      {
+        "text": "Incremento de trabajo nocturno, falta de insumos médicos, interferencia comunitaria y fallas de comunicación en radio.",
+        "isCorrect": false,
+        "rationale": "Estos elementos corresponden a contingencias de campo específicas y no a los cuatro pilares de riesgo agudo identificados en la planificación inicial."
+      }
+    ],
+    "hint": "Piensa en cómo cambian drásticamente la demografía, la experiencia del personal, la urgencia de reanudación y las defensas mecánicas de los equipos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la Ley de Seguridad y Salud en el Trabajo (Ley 29783) y normativas afines aplicables a paradas de planta, ¿cuál es el alcance del principio de responsabilidad y solidaridad de la empresa principal hacia los contratistas?",
+    "opciones": [
+      {
+        "text": "La empresa principal puede delegar completamente la responsabilidad final de la seguridad si el contratista está homologado.",
+        "isCorrect": false,
+        "rationale": "La legislación prohíbe explícitamente que la empresa titular se desentienda de su rol como garante final de la seguridad dentro de sus instalaciones."
+      },
+      {
+        "text": "La empresa principal mantiene una responsabilidad ineludible y solidaria, prohibiéndose el doble estándar entre personal propio y contratista.",
+        "isCorrect": true,
+        "rationale": "El marco legal establece que la responsabilidad final no se delega y exige aplicar exactamente el mismo estándar de seguridad para trabajadores propios y de terceros."
+      },
+      {
+        "text": "Los contratistas asumen el 100% de la responsabilidad legal administrativa, dejando a la empresa titular libre de auditorías.",
+        "isCorrect": false,
+        "rationale": "El principio de solidaridad estipula que las fallas del contratista comprometen legalmente a la empresa titular ante las autoridades fiscalizadoras."
+      },
+      {
+        "text": "El principio de solidaridad aplica únicamente en caso de accidentes mortales, eximiendo incidentes menores.",
+        "isCorrect": false,
+        "rationale": "El principio de prevención y solidaridad abarca la protección de todos los trabajadores sin excepción, independientemente de la severidad del evento."
+      },
+      {
+        "text": "Se permite exigir estándares menores a contratistas temporales para acelerar el cronograma de ejecución.",
+        "isCorrect": false,
+        "rationale": "El marco regulatorio prohíbe expresamente el doble estándar en materias de seguridad y salud ocupacional."
+      }
+    ],
+    "hint": "Evalúa si la legislación permite transferir totalmente la gestión de riesgos a empresas de terceros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la arquitectura de gestión de riesgos para paradas de planta, el IPERC opera en dos niveles complementarios (Línea Base y Continuo). ¿Cuáles de las siguientes características corresponden específicamente al IPERC Continuo?",
+    "opciones": [
+      {
+        "text": "Se realiza con meses de anticipación para definir presupuestos y recursos generales.",
+        "isCorrect": false,
+        "rationale": "Esta planificación estratégica macro corresponde al IPERC de Línea Base y no al monitoreo diario."
+      },
+      {
+        "text": "Se ejecuta de manera táctica e inmediata justo al inicio de cada turno de trabajo.",
+        "isCorrect": true,
+        "rationale": "El IPERC Continuo opera como una herramienta táctica diaria para evaluar las condiciones específicas del inicio del turno."
+      },
+      {
+        "text": "Constituye la visión estratégica macro de toda la instalación industrial.",
+        "isCorrect": false,
+        "rationale": "La visión global y estructurada del panorama general de la planta es la función del IPERC de Línea Base."
+      },
+      {
+        "text": "Evalúa los riesgos cambiantes e inmediatos del entorno en el 'aquí y ahora'.",
+        "isCorrect": true,
+        "rationale": "El IPERC Continuo se enfoca en detectar peligros emergentes y fluctuaciones puntuales del terreno antes de iniciar las tareas."
+      },
+      {
+        "text": "Se elabora en gabinete por la gerencia antes de la contratación de empresas de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Las evaluaciones de gabinete pre-ejecución forman parte de la planificación estratégica del IPERC de Línea Base."
+      }
+    ],
+    "hint": "Considera la escala temporal, la inmediatez operativa y la frecuencia con la que se aplica en el campo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando se ejecutan actividades simultáneas en un área reducida durante una parada de planta, los riesgos no solo se suman, sino que se multiplican. ¿Cómo gestiona la matriz de compatibilidad SIMOPS estos conflictos operativos?",
+    "opciones": [
+      {
+        "text": "Eliminando automáticamente la necesidad de supervisión directa en tareas en caliente.",
+        "isCorrect": false,
+        "rationale": "Las actividades de alto riesgo en operaciones simultáneas requieren mayor supervisión y controles estrictos, nunca su eliminación."
+      },
+      {
+        "text": "Asignando códigos de color (verde, amarillo y rojo) para definir compatibilidad, controles adicionales o prohibición absoluta.",
+        "isCorrect": true,
+        "rationale": "La matriz SIMOPS cruza actividades y áreas mediante una convención gráfica de colores para determinar la viabilidad operativa y sus restricciones."
+      },
+      {
+        "text": "Autorizando cualquier combinación de tareas siempre que se cuente con un EPP especial.",
+        "isCorrect": false,
+        "rationale": "El EPP no resuelve la incompatibilidad física o la superposición de peligros críticos como un izaje sobre trabajos en caliente."
+      },
+      {
+        "text": "Priorizando siempre las tareas de la ruta crítica sin importar la interferencia de riesgos.",
+        "isCorrect": false,
+        "rationale": "La gestión de SIMOPS prohíbe la ejecución de tareas rojas (incompatibles) aun cuando pertenezcan al cronograma prioritario."
+      },
+      {
+        "text": "Transfiriendo la decisión de ejecución al criterio individual del operario en turno.",
+        "isCorrect": false,
+        "rationale": "El control SIMOPS exige una evaluación formal e institucionalizada y no depende de apreciaciones individuales desarticuladas."
+      }
+    ],
+    "hint": "Piensa en la herramienta visual que clasifica la viabilidad de cruzar dos tareas mediante un código de señalización.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Los estudios sobre el factor humano en paradas de planta continuas (24/7) muestran que el rendimiento cognitivo disminuye drásticamente con el tiempo. ¿Cuál es el punto de inflexión donde el error humano pasa de ser una posibilidad a una alta probabilidad?",
+    "opciones": [
+      {
+        "text": "A las 24 horas de haber iniciado el primer turno de trabajo.",
+        "isCorrect": false,
+        "rationale": "Las primeras 24 horas no representan el umbral de acumulación de fatiga crónica que dispara el error probabilístico sistémico."
+      },
+      {
+        "text": "Tras aproximadamente 10 días consecutivos de trabajo con turnos de 12 horas.",
+        "isCorrect": true,
+        "rationale": "A partir de los 10 días sostenidos de turnos prolongados de 12 horas, la fatiga acumulada provoca una caída en picado de la atención y el tiempo de reacción."
+      },
+      {
+        "text": "Inmediatamente al quinto día de trabajo en turno diurno.",
+        "isCorrect": false,
+        "rationale": "El punto de inflexión crítico de degradación cognitiva severa se ubica más adelante en el ciclo de trabajo intensivo."
+      },
+      {
+        "text": "Únicamente durante la última hora de cada turno individual.",
+        "isCorrect": false,
+        "rationale": "Si bien el cansancio aumenta al final del turno, el verdadero riesgo de fallo cognitivo proviene de la fatiga acumulada tras múltiples jornadas continuas."
+      },
+      {
+        "text": "Después de 30 días continuos de operaciones de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "El deterioro cognitivo grave ocurre mucho antes de alcanzar un mes continuo de trabajo sin descanso."
+      }
+    ],
+    "hint": "Observa el período de días acumulados con jornadas de 12 horas continuas sin descanso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Antes de que un socio contratista ingrese a la planta para ejecutar trabajos durante una parada, se requiere una auditoría de homologación integral. ¿Cuáles de las siguientes dimensiones son evaluadas en esta auditoría de 360 grados?",
+    "opciones": [
+      {
+        "text": "Dimensión legal y laboral para asegurar el cumplimiento normativo.",
+        "isCorrect": true,
+        "rationale": "Verifica el cumplimiento de contratos, aportes previsionales y estatus regulatorio del personal externo."
+      },
+      {
+        "text": "Dimensión de seguridad y salud en el trabajo, analizando el historial de accidentes.",
+        "isCorrect": true,
+        "rationale": "Evalúa el desempeño histórico en prevención, planes de gestión e índices de siniestralidad de la empresa contratista."
+      },
+      {
+        "text": "Dimensión técnica, certificando la competencia de personal y equipos.",
+        "isCorrect": true,
+        "rationale": "Garantiza que el personal posea las acreditaciones vigentes y los equipos cumplan con las especificaciones técnicas requeridas."
+      },
+      {
+        "text": "Dimensión de salud ocupacional de los trabajadores involucrados.",
+        "isCorrect": true,
+        "rationale": "Confirma los aptos médicos de los trabajadores para desempeñar labores exigentes o de alto riesgo."
+      },
+      {
+        "text": "Dimensión de rentabilidad bursátil y margen comercial del contratista.",
+        "isCorrect": false,
+        "rationale": "Los márgenes financieros comerciales no forman parte de los criterios de la auditoría de homologación en seguridad industrial."
+      }
+    ],
+    "hint": "Recuerda que la auditoría revisa aspectos legales, preventivos, de capacidad de ejecución y de estado físico de los trabajadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El PETAR es un control crítico para tareas de alto riesgo. ¿Cuál es el paso fundamental dentro de su ciclo de vida que valida ética y legalmente la emisión del permiso?",
+    "opciones": [
+      {
+        "text": "La firma remota por correo electrónico desde la oficina de la jefatura.",
+        "isCorrect": false,
+        "rationale": "Las firmas administrativas o 'de escritorio' invalidan el propósito del PETAR e incurren en graves responsabilidades penales."
+      },
+      {
+        "text": "La verificación en terreno realizada conjuntamente por el supervisor y el dueño del área.",
+        "isCorrect": true,
+        "rationale": "La inspección cara a cara en el punto exacto de trabajo por parte de los responsables valida que las condiciones son 100% seguras antes de autorizar."
+      },
+      {
+        "text": "La revisión de la vigencia del contrato comercial con la empresa de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "La validez comercial del contrato es un trámite administrativo previo que no garantiza la seguridad física del área de trabajo."
+      },
+      {
+        "text": "La aprobación verbal mediante radio de comunicación sin requerir firma en el documento.",
+        "isCorrect": false,
+        "rationale": "El PETAR es un documento formal que exige constatación física y firmas presenciales de los involucrados."
+      },
+      {
+        "text": "La inclusión del permiso en la carpeta de archivo al finalizar la parada de planta.",
+        "isCorrect": false,
+        "rationale": "El archivo posterior del documento es una etapa de cierre documental y no la validación operativa previa."
+      }
+    ],
+    "hint": "Reflexiona sobre el significado de la presencia física obligatoria en el lugar exacto de la tarea antes de firmar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el procedimiento de Bloqueo y Etiquetado (LOTO) para lograr la 'energía cero', existe un paso crítico final que garantiza sin margen de duda que el aislamiento fue efectivo. ¿Cuál es este paso?",
+    "opciones": [
+      {
+        "text": "La colocación de la tarjeta de advertencia en el tablero principal.",
+        "isCorrect": false,
+        "rationale": "La señalización mediante tarjeta advierte la condición, pero no comprueba mecánicamente la ausencia total de energía residual."
+      },
+      {
+        "text": "El paso número siete: verificar intentando encender el equipo a propósito.",
+        "isCorrect": true,
+        "rationale": "La prueba de arranque o verificación intencionada del equipo es la única garantía de que la energía acumulada o secundaria ha sido completamente neutralizada."
+      },
+      {
+        "text": "El aviso verbal a todo el personal de la planta por el sistema de perifoneo.",
+        "isCorrect": false,
+        "rationale": "La comunicación es un paso previo necesario, pero no constituye una prueba técnica del aislamiento energético."
+      },
+      {
+        "text": "El retiro de los fusibles principales del centro de control de motores.",
+        "isCorrect": false,
+        "rationale": "Remover fusibles es una acción de aislamiento de energía eléctrica, pero no verifica si persisten energías residuales hidráulicas o neumáticas."
+      },
+      {
+        "text": "La purga inicial de fluidos sin verificar la reacumulación de presión.",
+        "isCorrect": false,
+        "rationale": "Drenar fluidos no es suficiente si no se confirma la despresurización comprobada mediante el paso de verificación."
+      }
+    ],
+    "hint": "Es la acción deliberada de poner a prueba el sistema antes de iniciar cualquier contacto con la máquina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Cuando múltiples trabajadores intervienen un mismo equipo, se utiliza una caja de bloqueo grupal y un código de colores estandarizado para los candados. ¿Cuáles de las siguientes correspondencias de color y rol son correctas?",
+    "opciones": [
+      {
+        "text": "Candado Rojo: Candado personal e intransferible de cada trabajador.",
+        "isCorrect": true,
+        "rationale": "El color rojo identifica la protección individual y única de cada técnico intervencionista."
+      },
+      {
+        "text": "Candado Dorado: Candado del supervisor que realiza el bloqueo principal.",
+        "isCorrect": true,
+        "rationale": "El candado dorado o amarillo maestro es utilizado por la supervisión para asegurar el bloqueo base de la máquina."
+      },
+      {
+        "text": "Candado Azul: Candado utilizado para bloqueos a nivel general de departamento.",
+        "isCorrect": true,
+        "rationale": "El color azul asigna la custodia del aislamiento a nivel de la jerarquía del departamento operativo."
+      },
+      {
+        "text": "Candado Verde: Candado exclusivo para visitas y contratistas no homologados.",
+        "isCorrect": false,
+        "rationale": "El personal no homologado o las visitas no realizan intervenciones directas ni disponen de candados en la caja grupal."
+      },
+      {
+        "text": "Candado Amarillo: Candado temporal que se puede compartir entre compañeros de turno.",
+        "isCorrect": false,
+        "rationale": "El principio fundamental de LOTO prohíbe prestar o compartir candados personales o de bloqueo."
+      }
+    ],
+    "hint": "Identifica los roles específicos asignados al candado personal, al supervisor de bloqueo principal y a la jerarquía departamental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La gestión de espacios confinados durante una parada se basa en tres pilares: monitoreo atmosférico, ventilación forzada y la presencia del vigía. ¿Cuál es la regla de oro inquebrantable que rige la función del vigía?",
+    "opciones": [
+      {
+        "text": "Ingresar inmediatamente al espacio confinado para socorrer al trabajador en caso de desmayo.",
+        "isCorrect": false,
+        "rationale": "Ingresar a rescatar a una víctima sin equipo autónomo convierte al vigía en una víctima adicional por deficiencia de oxígeno o gases tóxicos."
+      },
+      {
+        "text": "Permanecer afuera y bajo ninguna circunstancia ingresar, limitándose a activar el plan de emergencia.",
+        "isCorrect": true,
+        "rationale": "La función vital del vigía es mantener la custodia externa permanente y activar a las brigadas especializadas sin ingresar jamás al recinto."
+      },
+      {
+        "text": "Operar las herramientas de trabajo desde la boca del tanque para acelerar la tarea.",
+        "isCorrect": false,
+        "rationale": "El vigía no debe distraer su atención realizando actividades operativas ajenas a la vigilancia atmosférica y humana."
+      },
+      {
+        "text": "Turnarse con el trabajador del interior para realizar labores de soldadura.",
+        "isCorrect": false,
+        "rationale": "El rol de vigilancia requiere dedicación exclusiva y continua en el exterior del espacio confinado."
+      },
+      {
+        "text": "Suspender la medición de gases una vez que el trabajo ha iniciado sin contratiempos.",
+        "isCorrect": false,
+        "rationale": "El monitoreo atmosférico debe mantenerse constante o periódico durante toda la permanencia del personal en el interior."
+      }
+    ],
+    "hint": "Considera el comportamiento que debe mantener la persona de custodia externa ante una emergencia dentro del recinto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante una parada de planta, los planes de respuesta a emergencia habituales quedan obsoletos. En el pilar de diseño del plan específico, ¿cómo se categoriza una emergencia de 'Nivel 2'?",
+    "opciones": [
+      {
+        "text": "Un incidente menor que puede ser controlado localmente por el personal del área afectada.",
+        "isCorrect": false,
+        "rationale": "Los incidentes manejables por el personal local con sus propios medios corresponden al Nivel 1 de emergencia."
+      },
+      {
+        "text": "Un evento serio que supera la capacidad del área local y requiere la intervención de la brigada central.",
+        "isCorrect": true,
+        "rationale": "El Nivel 2 define contingencias donde la severidad exige la movilización de la brigada de emergencia central de la planta."
+      },
+      {
+        "text": "Una crisis mayor o catástrofe que supera la capacidad interna y requiere ayuda externa de la comunidad.",
+        "isCorrect": false,
+        "rationale": "Las crisis catastróficas que sobrepasan la respuesta interna y requieren ayuda ciudadana o gubernamental corresponden al Nivel 3."
+      },
+      {
+        "text": "Un simulacro programado sin afectación a la continuidad de los trabajos.",
+        "isCorrect": false,
+        "rationale": "Los simulacros son actividades de validación y entrenamiento, no una categoría de clasificación de emergencia real."
+      },
+      {
+        "text": "Una falla en el cronograma maestro que causa pérdidas financieras sin riesgo físico.",
+        "isCorrect": false,
+        "rationale": "Las desviaciones del cronograma operativo son problemas de gestión del proyecto y no emergencias de seguridad física."
+      }
+    ],
+    "hint": "Analiza el alcance de la contingencia y la capacidad de respuesta requerida entre el personal local y la brigada central.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un error común en emergencias durante paradas de planta es descuidar las rutas de evacuación médica (MedEvac). ¿Cuál es la indicación operativa obligatoria respecto a estas rutas?",
+    "opciones": [
+      {
+        "text": "Bloquear la ruta con andamios temporales mientras no haya lesionados reportados.",
+        "isCorrect": false,
+        "rationale": "Obstruir las vías de escape con materiales o andamios invalida la capacidad de respuesta de la ambulancia y pone en peligro vidas humanas."
+      },
+      {
+        "text": "Inspeccionar físicamente la ruta al inicio de cada turno como pieza crítica del equipo de rescate.",
+        "isCorrect": true,
+        "rationale": "La ruta MedEvac debe ser tratada como un componente activo del equipo de rescate y ser verificada visualmente antes de iniciar el turno."
+      },
+      {
+        "text": "Utilizar la ruta exclusivamente para el transporte de materiales pesados durante el día.",
+        "isCorrect": false,
+        "rationale": "El uso de la vía MedEvac para maniobras de carga interrumpe el libre tránsito en caso de un código rojo."
+      },
+      {
+        "text": "Asumir que la ruta está despejada si no se ha recibido ninguna alerta por radio.",
+        "isCorrect": false,
+        "rationale": "La gestión proactiva exige inspecciones físicas preventivas en lugar de presunciones basadas en la ausencia de reportes."
+      },
+      {
+        "text": "Modificar la ruta en cada turno sin informar al centro de control de emergencias.",
+        "isCorrect": false,
+        "rationale": "Alterar los itinerarios de evacuación sin coordinación paraliza la respuesta médica centralizada."
+      }
+    ],
+    "hint": "Piensa en el control preventivo que evita que la ambulancia quede bloqueada por maquinaria o insumos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para dirigir la seguridad con visibilidad y agilidad durante una parada de planta, se implementa un ciclo dinámico continuo de control en tiempo real. ¿Cuáles son las tres fases que integran este ciclo virtuoso?",
+    "opciones": [
+      {
+        "text": "Detener, Sancionar y Reemplazar.",
+        "isCorrect": false,
+        "rationale": "Un enfoque punitivo desincentiva el reporte proactivo de peligros y bloquea la mejora operacional."
+      },
+      {
+        "text": "Ver, Actuar y Mejorar.",
+        "isCorrect": true,
+        "rationale": "Este ciclo permite transformar los datos en claridad visual, integrar la seguridad en el ritmo diario e incorporar lecciones aprendidas."
+      },
+      {
+        "text": "Planificar, Cotizar y Contratar.",
+        "isCorrect": false,
+        "rationale": "Estas actividades corresponden a la fase administrativa y logística pre-parada, no al ciclo de control dinámico de la seguridad."
+      },
+      {
+        "text": "Auditar, Reportar y Archivar.",
+        "isCorrect": false,
+        "rationale": "El archivo de datos sin un proceso activo de modificación de conductas limita el control en tiempo real."
+      },
+      {
+        "text": "Medir, Cortar y Pegar.",
+        "isCorrect": false,
+        "rationale": "Es una secuencia ajena a la gestión de riesgos industriales y control operativo."
+      }
+    ],
+    "hint": "El ciclo se basa en observar el entorno con datos, ejecutar las acciones diarias y capitalizar el aprendizaje.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el monitoreo de desempeño de seguridad, la organización busca balancear métricas del pasado con indicadores de futuro. ¿Cuáles de las siguientes opciones corresponden a indicadores proactivos (leading indicators)?",
+    "opciones": [
+      {
+        "text": "Porcentaje de cumplimiento de inspecciones de seguridad planificadas.",
+        "isCorrect": true,
+        "rationale": "Mide el nivel de ejecución de las actividades preventivas diseñadas para evitar incidentes."
+      },
+      {
+        "text": "Cantidad de interacciones de liderazgo visible realizadas en campo.",
+        "isCorrect": true,
+        "rationale": "Cuantifica el compromiso directo de la supervisión en el terreno de trabajo antes de que ocurran fallas."
+      },
+      {
+        "text": "Número de reportes de casi-accidentes (near-misses) registrados por los trabajadores.",
+        "isCorrect": true,
+        "rationale": "Un alto volumen de reportes refleja una cultura madura que identifica y corrige fallas antes de que generen lesiones."
+      },
+      {
+        "text": "Índice de frecuencia de accidentes con pérdida de tiempo.",
+        "isCorrect": false,
+        "rationale": "Representa una métrica reactiva (lagging) que contabiliza eventos dañinos consolidados en el pasado."
+      },
+      {
+        "text": "Costo total acumulado por indemnizaciones médicas de la parada.",
+        "isCorrect": false,
+        "rationale": "Es un indicador financiero reactivo derivado de lesiones y pérdidas ya producidas."
+      }
+    ],
+    "hint": "Distingue los indicadores que miden actividades de prevención y participación de aquellos que contabilizan daños ya ocurridos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del ecosistema de gestión de paradas de planta, se utiliza la analogía del 'hardware' y el 'software'. ¿Qué elementos constituyen el 'software' de la seguridad industrial?",
+    "opciones": [
+      {
+        "text": "Los equipos de protección personal y los arneses de seguridad.",
+        "isCorrect": false,
+        "rationale": "Los componentes físicos y equipamientos tangibles son clasificados dentro de la analogía como el hardware de seguridad."
+      },
+      {
+        "text": "La cultura organizacional, la comunicación eficaz y la confianza del equipo.",
+        "isCorrect": true,
+        "rationale": "El software representa el sistema operativo humano: la cultura, las conversaciones del día a día y las relaciones de confianza."
+      },
+      {
+        "text": "Los procedimientos redactados en papel y los permisos PETAR.",
+        "isCorrect": false,
+        "rationale": "Los documentos y normas estáticas forman parte de la infraestructura documental (hardware procedural)."
+      },
+      {
+        "text": "Las plataformas informáticas de monitoreo de kilometraje.",
+        "isCorrect": false,
+        "rationale": "Los programas informáticos de soporte son herramientas auxiliares y no el sistema de valores humanos del equipo."
+      },
+      {
+        "text": "Las barreras físicas y los candados de bloqueo LOTO.",
+        "isCorrect": false,
+        "rationale": "Las barreras mecánicas y dispositivos de candado corresponden a controles de ingeniería (hardware)."
+      }
+    ],
+    "hint": "Busca los componentes intangibles vinculados al comportamiento humano, la confianza y la toma de decisiones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el mapa de evolución cultural de la seguridad, ¿cuál es el estado óptimo (interdependiente) al que aspira llegar una organización de clase mundial?",
+    "opciones": [
+      {
+        "text": "El estado donde cada trabajador atiende únicamente su propia seguridad personal sin intervenir en otros.",
+        "isCorrect": false,
+        "rationale": "El cuidado exclusivo de uno mismo caracteriza a la etapa independiente pero no alcanza la cooperación colectiva."
+      },
+      {
+        "text": "La etapa donde el equipo se cuida mutuamente bajo la premisa 'yo te cuido a ti y tú me cuidas a mí'.",
+        "isCorrect": true,
+        "rationale": "La cultura interdependiente se basa en el cuidado mutuo, la responsabilidad compartida y la cohesión del equipo."
+      },
+      {
+        "text": "El nivel donde la seguridad es impuesta estrictamente mediante sanciones del supervisor.",
+        "isCorrect": false,
+        "rationale": "El cumplimiento por supervisión externa y miedo a sanciones define la etapa dependiente."
+      },
+      {
+        "text": "La condición donde los accidentes se atribuyen exclusivamente a la mala suerte inevitable.",
+        "isCorrect": false,
+        "rationale": "Atribuir los eventos al azar o la suerte es el rasgo distintivo de una cultura reactiva e inmadura."
+      },
+      {
+        "text": "La fase donde no se requieren procedimientos escritos debido a la experiencia acumulada.",
+        "isCorrect": false,
+        "rationale": "La interdependencia fortalece y respeta el cumplimiento de normas sin prescindir de la disciplina operativa."
+      }
+    ],
+    "hint": "Se caracteriza por el paso de la supervisión obligatoria o el cuidado individual hacia una responsabilidad colectiva compartida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para corregir conductas de riesgo en terreno sin generar una actitud defensiva, se recomiendan estructuras de retroalimentación asertiva. ¿Cuáles de las siguientes opciones están alineadas con los métodos Sándwich o DESC?",
+    "opciones": [
+      {
+        "text": "Envolver el feedback correctivo entre dos comentarios positivos de reconocimiento.",
+        "isCorrect": true,
+        "rationale": "Es la premisa de la técnica del Sándwich para rebajar la guardia del interlocutor y facilitar la recepción del mensaje."
+      },
+      {
+        "text": "Describir el comportamiento observado de forma 100% objetiva sin juicios de valor.",
+        "isCorrect": true,
+        "rationale": "Representa la 'D' del método DESC, asegurando que la conversación se apoye en hechos comprobables."
+      },
+      {
+        "text": "Especificar con claridad el cambio de conducta esperado y señalar las consecuencias positivas.",
+        "isCorrect": true,
+        "rationale": "Corresponde a la 'E' y 'C' del método DESC para guiar al trabajador hacia la solución deseada."
+      },
+      {
+        "text": "Criticar públicamente la actitud del trabajador delante de su cuadrilla para sentar un precedente.",
+        "isCorrect": false,
+        "rationale": "Las críticas públicas humillan al personal, destruyen la confianza e inhiben el compromiso con la seguridad."
+      },
+      {
+        "text": "Enfocar la corrección en atacar los rasgos de personalidad del trabajador.",
+        "isCorrect": false,
+        "rationale": "La corrección debe dirigirse siempre hacia la conducta o acción específica y nunca hacia la persona."
+      }
+    ],
+    "hint": "Revisa las secuencias que combinan validación previa, descripción objetiva de hechos y definición clara de expectativas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para que la 'Autoridad para Detener el Trabajo' (SWA) sea efectiva y no quede en un enunciado teórico, ¿cuál es la acción de liderazgo más determinante para respaldar a los trabajadores?",
+    "opciones": [
+      {
+        "text": "Reprimir al trabajador por retrasar la ruta crítica del proyecto.",
+        "isCorrect": false,
+        "rationale": "Las represalias por paralizaciones de seguridad destruyen el software cultural y provocan la ocultación de peligros mortales."
+      },
+      {
+        "text": "Celebrar y reconocer públicamente la detención del trabajo realizada por motivos de seguridad válidos.",
+        "isCorrect": true,
+        "rationale": "El reconocimiento público de una detención legítima demuestra a toda la organización que la vida es un valor no negociable sobre la producción."
+      },
+      {
+        "text": "Aplicar descuentos salariales por las horas de producción perdidas.",
+        "isCorrect": false,
+        "rationale": "Penalizar financieramente el ejercicio de la seguridad incentiva la adopción de atajos peligrosos."
+      },
+      {
+        "text": "Transferir la autoridad de detención exclusivamente a los gerentes generales.",
+        "isCorrect": false,
+        "rationale": "La autoridad para detener labores debe ser descentralizada para que cualquier persona en campo pueda actuar al instante."
+      },
+      {
+        "text": "Exigir que cada detención sea aprobada previamente por el departamento legal.",
+        "isCorrect": false,
+        "rationale": "La consulta burocrática previa impide detener un riesgo inminente en el momento exacto en que se detecta."
+      }
+    ],
+    "hint": "Piensa en la reacción de la alta gerencia cuando un operario paraliza una tarea crítica por motivos de riesgo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Los modelos de investigación modernos (como el Queso Suizo y el Iceberg) transforman la manera de analizar los accidentes. ¿Cuáles de los siguientes principios corresponden a estos enfoques sistémicos?",
+    "opciones": [
+      {
+        "text": "El error humano directo es solo la punta del iceberg o el último agujero que se alinea en el sistema.",
+        "isCorrect": true,
+        "rationale": "Considera que las fallas humanas inmediatas son síntomas de deficiencias más profundas en la organización."
+      },
+      {
+        "text": "Detrás de un acto inseguro existen condiciones de trabajo y factores organizacionales subyacentes.",
+        "isCorrect": true,
+        "rationale": "Examina cómo la presión de tiempo, la falta de herramientas o decisiones de gestión desencadenan el incidente."
+      },
+      {
+        "text": "La investigación debe ser rigurosa con las causas raíz sistémicas y justa con las personas.",
+        "isCorrect": true,
+        "rationale": "Promueve buscar las fallas de los procesos sin centrarse en culpar al eslabón final de la cadena."
+      },
+      {
+        "text": "Todos los accidentes son causados por la negligencia individual del trabajador afectado.",
+        "isCorrect": false,
+        "rationale": "Atribuir la culpa en exclusiva al individuo ignora las fallas de ingeniería y gestión que propiciaron el entorno de riesgo."
+      },
+      {
+        "text": "Basta con sancionar al operario involucrado para garantizar que el accidente no vuelva a ocurrir.",
+        "isCorrect": false,
+        "rationale": "Sancionar sin corregir la causa raíz del sistema garantiza que otro trabajador cometerá el mismo error bajo idénticas condiciones."
+      }
+    ],
+    "hint": "Identifica los conceptos que atribuyen los fallos a debilidades latentes del sistema en lugar de culpar únicamente al eslabón final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la industria de alto riesgo, la metodología ICAM se utiliza para la investigación integral de incidentes. ¿Cuál es la premisa central de esta metodología?",
+    "opciones": [
+      {
+        "text": "Determinar la responsabilidad penal inmediata del supervisor del área.",
+        "isCorrect": false,
+        "rationale": "La metodología busca comprender las fallas del sistema preventivo y no sustituir a un tribunal de justicia."
+      },
+      {
+        "text": "Realizar un análisis 360° para identificar fallas en las defensas del sistema y evitar la recurrencia.",
+        "isCorrect": true,
+        "rationale": "ICAM proporciona un proceso estructurado para desentrañar los factores organizacionales y corregir las causas raíz subyacentes."
+      },
+      {
+        "text": "Elaborar un informe rápido para cerrar el caso ante la autoridad minera sin modificar procesos.",
+        "isCorrect": false,
+        "rationale": "Un análisis superficial orientado únicamente al trámite documental impide fortalecer las defensas de la planta."
+      },
+      {
+        "text": "Culpar al fabricante de los equipos por no prever el mal uso de los mismos.",
+        "isCorrect": false,
+        "rationale": "El método evalúa integralmente todos los factores del contexto operativo y no busca desviaciones exculpatorias automáticas."
+      },
+      {
+        "text": "Justificar el incremento de costos operativos tras una falla mecánica.",
+        "isCorrect": false,
+        "rationale": "La finalidad primaria de ICAM es el aprendizaje situacional para la protección humana y operativa, no el reajuste financiero."
+      }
+    ],
+    "hint": "Considera el propósito final del análisis en relación a las barreras organizacionales versus la búsqueda de culpables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Conforme a la norma ISO 45001, el modelo PHBA (Planificar, Hacer, Verificar, Actuar) rige la mejora continua. ¿Qué etapa específica es considerada el 'motor' que evita la amnesia organizacional tras una parada de planta?",
+    "opciones": [
+      {
+        "text": "La etapa de Hacer, durante la ejecución acelerada de trabajos.",
+        "isCorrect": false,
+        "rationale": "La fase de ejecución está orientada a la acción operativa directa, no a la consolidación post-evento del conocimiento."
+      },
+      {
+        "text": "La etapa de Actuar, donde se realiza el análisis post-mortem y se consolida el conocimiento.",
+        "isCorrect": true,
+        "rationale": "La fase de Actuar cierra el ciclo al transformar las experiencias vividas en aprendizajes institucionales para las siguientes paradas."
+      },
+      {
+        "text": "La etapa de Planificar, mediante la contratación de seguros de riesgo.",
+        "isCorrect": false,
+        "rationale": "La planificación inicial diseña el evento, pero requiere del análisis post-mortem para incorporar las lecciones aprendidas reales."
+      },
+      {
+        "text": "La etapa de Verificar, únicamente cuando se aplican auditorías financieras.",
+        "isCorrect": false,
+        "rationale": "Verificar mide el desempeño actual, pero es la fase Actuar la que reajusta el sistema preventivo a futuro."
+      },
+      {
+        "text": "La fase de diseño de planos de ingeniería de detalle.",
+        "isCorrect": false,
+        "rationale": "La ingeniería de detalle suministra las especificaciones técnicas, pero no gestiona la memoria operacional de la seguridad."
+      }
+    ],
+    "hint": "Es la fase post-ejecución dedicada al análisis, cierre y captura de lecciones aprendidas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el riesgo principal de omitir el ritual de la reunión post-mortem al finalizar una parada de planta?",
+    "opciones": [
+      {
+        "text": "Incurrir en multas inmediatas por parte de las entidades tributarias.",
+        "isCorrect": false,
+        "rationale": "Las reuniones post-mortem son herramientas de gestión de conocimiento operacional y no trámites impositivos."
+      },
+      {
+        "text": "Sufrir de amnesia organizacional, repitiendo los mismos errores y pérdidas en paradas futuras.",
+        "isCorrect": true,
+        "rationale": "Sin el análisis posterior, las lecciones aprendidas se desvanecen, condenando a la empresa a cometer repetidamente los mismos fallos."
+      },
+      {
+        "text": "Perder la certificación técnica de la maquinaria recién reparada.",
+        "isCorrect": false,
+        "rationale": "La garantía de los equipos reparados depende de los protocolos de pruebas mecánicas y no de la reunión de cierre de seguridad."
+      },
+      {
+        "text": "Provocar la renuncia automática de la gerencia de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "La ausencia de reuniones de lecciones aprendidas degrada el sistema preventivo, pero no causa por sí misma dimisiones contractuales automáticas."
+      },
+      {
+        "text": "Duplicar el salario del personal contratista en la siguiente operación.",
+        "isCorrect": false,
+        "rationale": "Los honorarios de contratistas dependen del mercado laboral y licitaciones, no del análisis post-mortem interno."
+      }
+    ],
+    "hint": "Es el fenómeno por el cual la empresa pierde el conocimiento adquirido y vuelve a cometer errores costosos en el futuro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para estructurar el taller de lecciones aprendidas de forma práctica, se utiliza el método Mantener, Parar y Empezar (Keep, Stop, Start). ¿Qué tipo de decisiones se ubican correctamente en estas categorías?",
+    "opciones": [
+      {
+        "text": "Mantener: Convertir en estándar prácticas exitosas como el uso de drones para inspección en altura.",
+        "isCorrect": true,
+        "rationale": "Identifica los procedimientos eficientes y seguros que deben consolidarse dentro de las normas de la empresa."
+      },
+      {
+        "text": "Parar: Eliminar procesos ineficientes o peligrosos como la entrega manual de EPP con cuellos de botella.",
+        "isCorrect": true,
+        "rationale": "Agrupa aquellas conductas o metodologías que demostraron generar riesgos o demoras injustificadas y deben prohibirse."
+      },
+      {
+        "text": "Empezar: Implementar innovaciones como kioscos digitales para inducciones agilizadas.",
+        "isCorrect": true,
+        "rationale": "Contempla nuevas tecnologías o ideas de mejora a probar e integrar en los siguientes proyectos."
+      },
+      {
+        "text": "Mantener: Mantener las firmas de escritorio para agilizar la entrega de permisos PETAR.",
+        "isCorrect": false,
+        "rationale": "Las firmas sin verificación presencial son prácticas aberrantes que deben eliminarse en la categoría 'Parar'."
+      },
+      {
+        "text": "Parar: Suspender el uso de sensores atmosféricos continuos en espacios confinados.",
+        "isCorrect": false,
+        "rationale": "Los monitoreos continuos representan controles críticos de ingeniería que deben conservarse dentro de 'Mantener'."
+      }
+    ],
+    "hint": "Evalúa las prácticas exitosas que deben estandarizarse, los procesos ineficientes que deben eliminarse y las innovaciones a probar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para que una base de datos de lecciones aprendidas agregue valor real a la empresa, ¿cuándo debe consultarse obligatoriamente dentro del ciclo de proyectos futuros?",
+    "opciones": [
+      {
+        "text": "Al momento de cerrar el contrato comercial al final de la parada.",
+        "isCorrect": false,
+        "rationale": "Consultar la base de datos al finalizar la parada resulta extemporáneo para prevenir los riesgos de esa ejecución."
+      },
+      {
+        "text": "Como el 'Paso Cero', obligatoriamente antes de iniciar la planificación de la siguiente parada.",
+        "isCorrect": true,
+        "rationale": "Revisar las lecciones previas antes de concebir el nuevo plan garantiza que las fallas del pasado queden corregidas desde el diseño inicial."
+      },
+      {
+        "text": "Únicamente cuando ocurra un accidente grave durante la ejecución.",
+        "isCorrect": false,
+        "rationale": "Utilizar la base de datos solo tras una desgracia confirma la persistencia de un enfoque reactivo desfasado."
+      },
+      {
+        "text": "Durante el proceso de auditoría legal externa de fin de año.",
+        "isCorrect": false,
+        "rationale": "Las auditorías legales verifican el cumplimiento documental, pero no reemplazan la planificación técnica operativa."
+      },
+      {
+        "text": "Mientras se efectúa el arranque de las máquinas en el último día.",
+        "isCorrect": false,
+        "rationale": "En la etapa de puesta en marcha, las decisiones de planificación e ingeniería ya han sido ejecutadas."
+      }
+    ],
+    "hint": "Piensa en el momento inicial en el que se empieza a concebir la siguiente parada de planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-75",
+    "diplomado": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La tecnología moderna está transformando la supervisión de seguridad en paradas de planta actuando como centinelas avanzados. ¿Cuáles de las siguientes aplicaciones tecnológicas eliminan o reducen la exposición directa del ser humano a la línea de fuego?",
+    "opciones": [
+      {
+        "text": "Drones para inspección interna de tanques y estructuras elevadas sin ingreso humano.",
+        "isCorrect": true,
+        "rationale": "Reemplazan la presencia física del trabajador en alturas o espacios confinados durante las fases de diagnóstico."
+      },
+      {
+        "text": "Sensores fijos e inalámbricos para monitoreo atmosférico continuo 24/7 en espacios confinados.",
+        "isCorrect": true,
+        "rationale": "Sustituyen las lecturas puntuales discontinuas por mediciones en tiempo real que alertan de inmediato sobre atmósferas peligrosas."
+      },
+      {
+        "text": "Dispositivos wearables para alertar sobre la fatiga física y estrés térmico del trabajador.",
+        "isCorrect": true,
+        "rationale": "Monitorean variables fisiológicas para retirar al trabajador del área antes de que sufra un colapso físico o un fallo de atención."
+      },
+      {
+        "text": "Cámaras de alta resolución con inteligencia artificial para detección de desvío de uso de EPP.",
+        "isCorrect": true,
+        "rationale": "Supervisan continuamente extensas zonas de trabajo para detectar la ausencia de protecciones antes de que se produzca una lesión."
+      },
+      {
+        "text": "Interruptores manuales sin bloqueo situados en la línea de alta tensión.",
+        "isCorrect": false,
+        "rationale": "Los dispositivos de manipulación manual sin aislamiento LOTO incrementan el riesgo de exposición directa del trabajador."
+      }
+    ],
+    "hint": "Selecciona los dispositivos y sistemas tecnológicos que realizan inspecciones remotas, monitoreo continuo de gases o medición fisiológica de cansancio.",
+    "activo": true
+  }
+]

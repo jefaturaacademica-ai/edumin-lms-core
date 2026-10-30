@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la disposición fundamental del Principio de Prevención según la Ley N° 29783 de Seguridad y Salud en el Trabajo?",
+    "opciones": [
+      {
+        "text": "Garantizar la existencia de medios y condiciones que protejan la vida y la salud de los trabajadores en el centro de trabajo.",
+        "isCorrect": true,
+        "rationale": "Este principio establece la obligación primaria del empleador de asegurar un entorno laboral seguro para todos los trabajadores y visitantes."
+      },
+      {
+        "text": "Trasladar toda la responsabilidad de la seguridad a los comités paritarios y a la autoridad fiscalizadora.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad primaria de la prevención recae directamente en el empleador y no puede ser delegada en su totalidad a terceros o autoridades."
+      },
+      {
+        "text": "Sancionar económicamente a los trabajadores que reporten condiciones inseguras en sus áreas de trabajo.",
+        "isCorrect": false,
+        "rationale": "El principio busca fomentar la prevención y el reporte abierto, no castigar la identificación activa de peligros por parte del personal."
+      },
+      {
+        "text": "Eximir al empleador de contratar seguros complementarios de trabajo de riesgo si provee equipos de protección personal.",
+        "isCorrect": false,
+        "rationale": "La provisión de equipos de protección individual no anula los compromisos legales ni las coberturas de seguro exigidas por la norma."
+      },
+      {
+        "text": "Limitar el alcance de la protección únicamente a los empleados con contrato indefinido dentro de la sede principal.",
+        "isCorrect": false,
+        "rationale": "El principio de prevención se extiende a todas las personas en el centro laboral, incluyendo contratistas, visitantes y personal temporal."
+      }
+    ],
+    "hint": "Considera quién es el responsable principal de garantizar un entorno laboral seguro dentro de la organización.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En caso de discrepancia entre lo consignado en los documentos del sistema de gestión y lo constatado en el centro laboral, ¿qué principio se aplica?",
+    "opciones": [
+      {
+        "text": "Principio de Primacía de la Realidad.",
+        "isCorrect": true,
+        "rationale": "Este principio determina que las autoridades e inspectores deben dar prioridad a los hechos reales observados en el terreno sobre los registros documentales."
+      },
+      {
+        "text": "Principio de Cooperación.",
+        "isCorrect": false,
+        "rationale": "Este principio promueve el trabajo conjunto entre el Estado, empleadores y trabajadores, pero no resuelve discrepancias probatorias en inspecciones."
+      },
+      {
+        "text": "Principio de Presunción de Veracidad de la Empresa.",
+        "isCorrect": false,
+        "rationale": "La normativa prioriza los hallazgos fácticos constatados en la inspección sobre las declaraciones formalizadas en papel."
+      },
+      {
+        "text": "Principio de Flexibilidad Contractual.",
+        "isCorrect": false,
+        "rationale": "Este concepto pertenece al derecho laboral general y no aborda la resolución de contradicciones entre la documentación de SST y los hechos reales."
+      },
+      {
+        "text": "Principio de Autonomía de la Voluntad.",
+        "isCorrect": false,
+        "rationale": "Las normas de seguridad y salud en el trabajo son de orden público y prevalecen los hechos constatados sobre los acuerdos privados o registros."
+      }
+    ],
+    "hint": "Piensa en el principio que hace prevalecer los hechos constatados en el terreno por sobre el papel.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué cambios relevantes introdujo la Ley N° 30222 con respecto a los exámenes médicos ocupacionales estipulados originalmente en la Ley N° 29783?",
+    "opciones": [
+      {
+        "text": "Los exámenes médicos obligatorios para actividades no de alto riesgo se realizan cada dos años.",
+        "isCorrect": true,
+        "rationale": "La modificación fijó una periodicidad bianual para actividades de riesgo convencional, reduciendo la exigencia de exámenes anuales."
+      },
+      {
+        "text": "Los exámenes médicos de salida son obligatorios únicamente si son solicitados por el trabajador o si se trata de actividades de alto riesgo.",
+        "isCorrect": true,
+        "rationale": "Se flexibilizó la obligatoriedad del examen de retiro haciéndolo facultativo para el trabajador en labores ordinarias, manteniendo su rigor en alto riesgo."
+      },
+      {
+        "text": "Para trabajos de alto riesgo, los exámenes médicos se mantienen obligatorios antes, durante y al término de la relación laboral.",
+        "isCorrect": true,
+        "rationale": "La norma conserva la exigencia estricta de evaluaciones médicas en las tres etapas laborales cuando se trata de actividades de alto riesgo."
+      },
+      {
+        "text": "El costo total de todos los exámenes médicos ocupacionales debe ser asumido íntegramente por el trabajador.",
+        "isCorrect": false,
+        "rationale": "El financiamiento de las evaluaciones médicas ocupacionales es responsabilidad económica exclusiva del empleador."
+      },
+      {
+        "text": "Se eliminó por completo la exigencia de realizar exámenes médicos para los trabajadores mineros.",
+        "isCorrect": false,
+        "rationale": "El sector minero exige vigilancia médica obligatoria dada la naturaleza de sus operaciones de alto riesgo."
+      }
+    ],
+    "hint": "Identifica las modificaciones sobre la periodicidad bianual y las condiciones del examen de salida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la normativa de SST, ¿cuál es la obligación del empleador respecto a las capacitaciones de sus trabajadores (Artículo 27)?",
+    "opciones": [
+      {
+        "text": "Garantizar capacitaciones oportunas y adecuadas dentro de la jornada laboral, adaptadas a los cambios tecnológicos y de puesto.",
+        "isCorrect": true,
+        "rationale": "La ley exige que la formación se realice durante el horario de trabajo y sea específica a los riesgos y tecnologías del puesto."
+      },
+      {
+        "text": "Descontar del salario del trabajador las horas destinadas a las capacitaciones de seguridad.",
+        "isCorrect": false,
+        "rationale": "Las horas dedicadas a la instrucción de seguridad son consideradas tiempo de trabajo efectivo remunerado."
+      },
+      {
+        "text": "Exigir que todas las capacitaciones sean realizadas fuera del horario laboral y asumidas económicamente por el empleado.",
+        "isCorrect": false,
+        "rationale": "Las capacitaciones de SST deben dictarse durante la jornada de trabajo y sin costo alguno para el personal."
+      },
+      {
+        "text": "Brindar únicamente una capacitación general al inicio de la relación laboral sin realizar actualizaciones posteriores.",
+        "isCorrect": false,
+        "rationale": "La formación debe ser continua y actualizarse ante cambios en las funciones, tecnologías o identificación de nuevos peligros."
+      },
+      {
+        "text": "Transferir la responsabilidad de capacitar al personal exclusivamente al sindicato o a los propios compañeros.",
+        "isCorrect": false,
+        "rationale": "El empleador es el responsable legal indelegable de planificar y ejecutar el programa de capacitación del personal."
+      }
+    ],
+    "hint": "Recuerda en qué momento de la jornada de trabajo deben realizarse las capacitaciones y quién asume los costos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el Decreto Supremo N° 002-2014-TR, ¿cuál es el plazo máximo para que el empleador notifique un accidente de trabajo mortal a la autoridad competente?",
+    "opciones": [
+      {
+        "text": "Dentro de las 24 horas de ocurrido el suceso.",
+        "isCorrect": true,
+        "rationale": "La notificación de accidentes mortales o incidentes peligrosos exige un reporte inmediato no mayor a 24 horas."
+      },
+      {
+        "text": "Hasta el último día hábil del mes siguiente.",
+        "isCorrect": false,
+        "rationale": "Este plazo aplica a la consolidación de reportes por parte de centros asistenciales, no a la notificación directa de muertes por el empleador."
+      },
+      {
+        "text": "Dentro de los 5 días hábiles posteriores al hecho.",
+        "isCorrect": false,
+        "rationale": "Cinco días hábiles es el lapso para notificar diagnósticos de enfermedades ocupacionales, no accidentes fatales."
+      },
+      {
+        "text": "En un plazo no mayor a 15 días calendarios.",
+        "isCorrect": false,
+        "rationale": "Un plazo de 15 días resulta extemporáneo dada la urgencia que requiere la investigación de un accidente mortal."
+      },
+      {
+        "text": "No existe plazo límite mientras se notifique antes del cierre del ejercicio anual.",
+        "isCorrect": false,
+        "rationale": "Existe un límite temporal estricto de 24 horas dispuesto por la normativa para dar aviso inmediato a las autoridades."
+      }
+    ],
+    "hint": "Piensa en el tiempo inmediato (medido en horas) exigido para emergencias con consecuencias fatales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿En qué supuestos NO aplica el beneficio de amnistía o reducción de sanciones durante una inspección de trabajo?",
+    "opciones": [
+      {
+        "text": "Cuando se cometen infracciones muy graves que atentan contra la vida, la salud o la integridad física de los trabajadores.",
+        "isCorrect": true,
+        "rationale": "Las faltas de extrema gravedad que vulneran la vida e integridad quedan fuera de los incentivos de subsanación reducida."
+      },
+      {
+        "text": "Cuando el accidente de trabajo origina la muerte o invalidez permanente de un trabajador.",
+        "isCorrect": true,
+        "rationale": "Los sucesos fatales o con secuelas permanentes inhabilitan la aplicación de medidas punitivas benevolentes."
+      },
+      {
+        "text": "Cuando la empresa incurre en actos de obstrucción a la labor inspectiva de la autoridad laboral.",
+        "isCorrect": true,
+        "rationale": "Impedir la labor de supervisión de los inspectores anula los beneficios de reducción o archivo de sanciones."
+      },
+      {
+        "text": "Cuando se trata del primer incumplimiento subsanable sobre señalización en pasillos de tránsito.",
+        "isCorrect": false,
+        "rationale": "Las faltas menores o subsanables por primera vez sí pueden acogerse a los periodos de requerimiento previo."
+      },
+      {
+        "text": "Cuando la empresa cuenta con un comité paritario de SST legalmente constituido.",
+        "isCorrect": false,
+        "rationale": "Contar con un comité constituido es una obligación general y no constituye un supuesto de exclusión frente a faltas graves."
+      }
+    ],
+    "hint": "Elige las opciones que representan consecuencias fatales, obstaculización a la autoridad o faltas de extrema gravedad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es el Análisis de Trabajo Seguro (ATS) en la gestión minera?",
+    "opciones": [
+      {
+        "text": "Una herramienta de gestión para determinar el procedimiento seguro en tareas no rutinarias o no identificadas en el IPERC de línea base.",
+        "isCorrect": true,
+        "rationale": "El ATS analiza paso a paso tareas no estandarizadas o eventuales para identificar peligros y establecer controles antes de ejecutar la labor."
+      },
+      {
+        "text": "El contrato legal que firma el trabajador al ingresar a la unidad minera.",
+        "isCorrect": false,
+        "rationale": "El ATS es un instrumento operativo de prevención de riesgos y no un documento contractual de contratación."
+      },
+      {
+        "text": "Una auditoría financiera que evalúa los costos de implementación del sistema de seguridad.",
+        "isCorrect": false,
+        "rationale": "Se trata de una evaluación técnica de peligros en tareas operativas, no de una revisión contable."
+      },
+      {
+        "text": "Un permiso exclusivo para autorizar trabajos de soldadura en áreas fijas de taller.",
+        "isCorrect": false,
+        "rationale": "Las labores de soldadura en talleres fijos suelen operar bajo permisos específicos o procedimientos estandarizados, no con un ATS genérico."
+      },
+      {
+        "text": "La memoria anual presentada al Ministerio de Energía y Minas al final de cada ejercicio fiscal.",
+        "isCorrect": false,
+        "rationale": "El ATS es un registro diario u operativo a nivel de campo, no un informe corporativo de fin de año."
+      }
+    ],
+    "hint": "Se enfoca en actividades no rutinarias que no cuentan con un procedimiento escrito preexistente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del Permiso Escrito para Trabajo de Alto Riesgo (PETAR)?",
+    "opciones": [
+      {
+        "text": "Autorizar la ejecución de trabajos en zonas peligrosas o de alto riesgo mediante la firma formal de los supervisores y responsables del área.",
+        "isCorrect": true,
+        "rationale": "El PETAR certifica que se han verificado los controles de seguridad necesarios antes de iniciar tareas críticas en cada turno."
+      },
+      {
+        "text": "Reemplazar de manera definitiva al IPERC de línea base de la empresa minera.",
+        "isCorrect": false,
+        "rationale": "El PETAR es un permiso específico para un turno y tarea concreta, mientras que el IPERC de línea base es el diagnóstico estratégico general."
+      },
+      {
+        "text": "Servir como constancia de la entrega de ropa de trabajo y equipos de protección personal.",
+        "isCorrect": false,
+        "rationale": "La entrega de EPP se valida mediante el formato de registro de entrega, distinto al documento de autorización de labores críticas."
+      },
+      {
+        "text": "Validar la compra de insumos químicos controlados y explosivos con el proveedor.",
+        "isCorrect": false,
+        "rationale": "La adquisición de insumos regulados responde a trámites comerciales y administrativos ajenos al PETAR."
+      },
+      {
+        "text": "Sustituir el examen médico ocupacional de ingreso del trabajador asignado.",
+        "isCorrect": false,
+        "rationale": "El examen médico evalúa la Aptitud de salud del trabajador y no autoriza de forma directa un trabajo de alto riesgo específico."
+      }
+    ],
+    "hint": "Es un documento firmado para cada turno que valida la implementación de controles en tareas peligrosas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define un Procedimiento Escrito de Trabajo Seguro (PETS)?",
+    "opciones": [
+      {
+        "text": "Documento que contiene la descripción específica de los pasos consecutivos para desarrollar una tarea de manera correcta y segura.",
+        "isCorrect": true,
+        "rationale": "El PETS guía en detalle la ejecución estándar de una labor paso a paso para minimizar errores y evitar accidentes."
+      },
+      {
+        "text": "Un esquema gráfico utilizado únicamente en la señalización de evacuación ante sismos.",
+        "isCorrect": false,
+        "rationale": "Los planos de evacuación muestran rutas de salida, mientras que el PETS detalla procedimientos operativos paso a paso."
+      },
+      {
+        "text": "Un reporte estadístico mensual sobre el índice de frecuencia de accidentes de la empresa.",
+        "isCorrect": false,
+        "rationale": "Las estadísticas miden el desempeño del sistema, a diferencia de los PETS que norman la forma de realizar los trabajos."
+      },
+      {
+        "text": "Un certificado médico emitido por el centro asistencial tras una evaluación médica.",
+        "isCorrect": false,
+        "rationale": "El certificado médico dictamina la salud individual, mientras que el PETS establece la secuencia técnica de una tarea."
+      },
+      {
+        "text": "La lista de asistencia a las reuniones del comité paritario de seguridad.",
+        "isCorrect": false,
+        "rationale": "Las actas y listas del comité verifican quórum y acuerdos, no la metódica operativa de las actividades de campo."
+      }
+    ],
+    "hint": "Responde a la pregunta de cómo realizar una tarea de principio a fin respetando los estándares.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a elementos que debe incluir un Programa Anual de Capacitación en SST?",
+    "opciones": [
+      {
+        "text": "Inducción general e inducción específica según el puesto de trabajo.",
+        "isCorrect": true,
+        "rationale": "El programa capacita tanto en aspectos generales de la empresa como en las particularidades operativas del puesto asignado."
+      },
+      {
+        "text": "Definición de temas, fechas programadas y responsables de impartir la instrucción.",
+        "isCorrect": true,
+        "rationale": "La planificación requiere un cronograma claro con materias específicas y docentes o encargados asignados."
+      },
+      {
+        "text": "Capacitaciones enfocadas en la respuesta ante emergencias y primeros auxilios.",
+        "isCorrect": true,
+        "rationale": "La preparación del personal frente a eventos imprevistos y de socorro forma parte de los contenidos obligatorios."
+      },
+      {
+        "text": "Mecanismos de evaluación del aprendizaje y registros firmados por los participantes.",
+        "isCorrect": true,
+        "rationale": "Se exige verificar la asimilación de conocimientos y respaldar la ejecución con registros firmados auditables."
+      },
+      {
+        "text": "Cláusulas de sanción económica directa con descuento por planilla por reprobar un examen.",
+        "isCorrect": false,
+        "rationale": "El objetivo del programa es formativo y preventivo, sin considerar penalizaciones monetarias sobre el salario del trabajador."
+      }
+    ],
+    "hint": "Piensa en los aspectos de planificación, temas obligatorios, inducciones y formas de verificación del aprendizaje.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el Reglamento de Seguridad y Salud Ocupacional en Minería (D.S. N° 024-2016-EM), ¿quiénes deben firmar obligatoriamente el PETAR antes de iniciar una labor de alto riesgo?",
+    "opciones": [
+      {
+        "text": "El supervisor y el jefe de área donde se realiza el trabajo, además del visado del ingeniero de seguridad.",
+        "isCorrect": true,
+        "rationale": "La norma exige la autorización expresa de la supervisión operativa y del responsable del área, validada por la supervisión de seguridad."
+      },
+      {
+        "text": "Únicamente el trabajador más antiguo de la cuadrilla que ejecutará la labor.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad de autorizar un PETAR recae en la línea de mando y supervisión, no en los operarios."
+      },
+      {
+        "text": "Exclusivamente el inspector externo de la SUNAFIL presente en la mina.",
+        "isCorrect": false,
+        "rationale": "Los inspectores fiscalizan el cumplimiento pero no firman permisos operativos diarios en las empresas."
+      },
+      {
+        "text": "El médico ocupacional de la unidad minera y el representante del sindicato.",
+        "isCorrect": false,
+        "rationale": "Aunque cumplen funciones de soporte o comités, la firma del PETAR exige la validación de los supervisores a cargo de la tarea."
+      },
+      {
+        "text": "Solamente el proveedor externo que vendió los equipos de protección individual.",
+        "isCorrect": false,
+        "rationale": "Los fabricantes o proveedores ajenos a la operación no intervienen en las autorizaciones de trabajo internas."
+      }
+    ],
+    "hint": "Considera a los responsables operativos del área y de la supervisión de seguridad en el turno correspondiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del marco del Decreto Supremo N° 024-2016-EM, ¿cuáles son obligaciones directas del trabajador en materia de SST?",
+    "opciones": [
+      {
+        "text": "Mantener el orden y la limpieza en el lugar de trabajo.",
+        "isCorrect": true,
+        "rationale": "El mantenimiento del orden y la limpieza es un deber básico del trabajador para prevenir condiciones inseguras."
+      },
+      {
+        "text": "Cumplir con los estándares, PETS y prácticas de trabajo seguro establecidos por el empleador.",
+        "isCorrect": true,
+        "rationale": "Acatar las normas técnicas y procedimentales es una obligación directa para salvaguardar la propia vida y la de sus compañeros."
+      },
+      {
+        "text": "Usar correctamente el equipo de protección personal (EPP) asignado a sus labores.",
+        "isCorrect": true,
+        "rationale": "El trabajador está obligado a dar un uso adecuado y cuidar los elementos de protección individual que se le hayan provisto."
+      },
+      {
+        "text": "Participar obligatoriamente en las capacitaciones programadas por la empresa.",
+        "isCorrect": true,
+        "rationale": "La asistencia y participación activa en las actividades formativas constituyes una obligación legal del trabajador."
+      },
+      {
+        "text": "Comprar con su propio dinero los equipos de protección colectiva de su área.",
+        "isCorrect": false,
+        "rationale": "La provisión y adquisición de barreras o sistemas colectivos de seguridad es responsabilidad exclusiva del empleador."
+      }
+    ],
+    "hint": "Elige aquellas responsabilidades vinculadas a la conducta personal, el orden, el uso de EPP y el cumplimiento normativo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el Reglamento de Seguridad y Salud Ocupacional en Minería, ¿a partir de qué altura se considera obligatoriamente que una labor es un 'trabajo en altura'?",
+    "opciones": [
+      {
+        "text": "A partir de 1.80 metros sobre el nivel del suelo o piso base.",
+        "isCorrect": true,
+        "rationale": "El umbral normativo general en minería exige la aplicación del estándar de trabajos en altura al alcanzar o superar 1.80 metros."
+      },
+      {
+        "text": "Únicamente cuando se superan los 5.00 metros de desnivel.",
+        "isCorrect": false,
+        "rationale": "Esperar a los 5.00 metros dejaría desprotegidas caídas a menor altura que presentan alto potencial de causar lesiones graves."
+      },
+      {
+        "text": "A partir de los 0.50 metros en cualquier tipo de superficie plana.",
+        "isCorrect": false,
+        "rationale": "Aunque existen medidas preventivas menores, el estándar legal específico para la obligación de anclaje inicia a 1.80 metros."
+      },
+      {
+        "text": "Solo cuando se trabaja sobre los 3.00 metros y sobre agua.",
+        "isCorrect": false,
+        "rationale": "El factor determinante principal en la norma es el desnivel de 1.80 metros, independientemente del tipo de superficie inferior."
+      },
+      {
+        "text": "A partir de los 10.00 metros únicamente si no hay estructuras metálicas.",
+        "isCorrect": false,
+        "rationale": "Un límite de 10.00 metros es incorrecto y contraviene el umbral de protección estipulado por el reglamento minero."
+      }
+    ],
+    "hint": "Es la medida estandarizada a nivel nacional en el reglamento minero (1.80 m).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la fórmula de cálculo de distancia requerida de caída libre, ¿cuál es la función del absorbedor de impacto (shock absorber)?",
+    "opciones": [
+      {
+        "text": "Disipar la energía cinética desplegada en la caída, desacelerando al trabajador y reduciendo la fuerza de impacto sobre su cuerpo.",
+        "isCorrect": true,
+        "rationale": "El disipador se elonga progresivamente para limitar la fuerza de desaceleración que recibe el cuerpo del trabajador por debajo de los límites críticos."
+      },
+      {
+        "text": "Aumentar la resistencia mecánica del punto de anclaje a más de 10,000 libras.",
+        "isCorrect": false,
+        "rationale": "El absorbedor actúa en la línea de vida para frenar al trabajador, no modifica la capacidad de resistencia física de la estructura de anclaje."
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar un arnés de cuerpo completo durante la labor.",
+        "isCorrect": false,
+        "rationale": "El absorbedor es un componente complementario de la línea de conexión que requiere imperativamente estar unido a un arnés de cuerpo completo."
+      },
+      {
+        "text": "Proporcionar iluminación automática al detectar una desaceleración repentina.",
+        "isCorrect": false,
+        "rationale": "El dispositivo opera mediante principios de desgarro de costuras sintéticas para frenar, sin cumplir funciones de alumbrado."
+      },
+      {
+        "text": "Evitar que la cuerda se moje o deteriore por la radiación solar.",
+        "isCorrect": false,
+        "rationale": "La protección contra la intemperie depende de las cubiertas o materiales sintéticos de las telas, no del mecanismo de desaceleración."
+      }
+    ],
+    "hint": "Considera cómo actúa este componente textil arrugado o cosido al desplegarse para reducir el frenazo brusco.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos corresponden a un sistema de protección PASIVA contra caídas?",
+    "opciones": [
+      {
+        "text": "Mallas de seguridad instaladas debajo de la plataforma de trabajo.",
+        "isCorrect": true,
+        "rationale": "Las mallas detienen la caída de personas u objetos sin requerir la intervención activa o enganche directo del usuario."
+      },
+      {
+        "text": "Barandas perimétricas fijas instaladas alrededor de los bordes abiertos.",
+        "isCorrect": true,
+        "rationale": "Las barandas constituyen una barrera física estática que previene la caída sin necesidad de manipulación por el trabajador."
+      },
+      {
+        "text": "Cubiertas o tapas resistentes colocadas sobre las aberturas del piso.",
+        "isCorrect": true,
+        "rationale": "Cubrir las aberturas impide físicamente el ingreso o caída en huecos sin depender del equipo individual del operario."
+      },
+      {
+        "text": "Arnés de cuerpo completo enganchado a un punto de anclaje.",
+        "isCorrect": false,
+        "rationale": "El arnés y las líneas de conexión son componentes de protección activa que requieren la acción consciente de conectar por parte del usuario."
+      },
+      {
+        "text": "Línea de vida retráctil sujetada al anillo dorsal del trabajador.",
+        "isCorrect": false,
+        "rationale": "El uso de bloques retráctiles e individuales forma parte de los sistemas de protección activa."
+      }
+    ],
+    "hint": "Busca las medidas colectivas o estructurales que previenen o detienen caídas sin necesidad de que el trabajador se enganche individualmente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es un Plan de Izaje (Rigging Plan) en maniobras con grúas?",
+    "opciones": [
+      {
+        "text": "Documento técnico y operativo que evalúa el peso de la carga, capacidad del equipo, elementos de maniobra y radio de trabajo antes del izaje.",
+        "isCorrect": true,
+        "rationale": "El plan de izaje calcula las variables críticas y ángulos de maniobra para garantizar que el levantamiento se mantenga dentro de los límites de estabilidad."
+      },
+      {
+        "text": "La factura comercial de compra de los grilletes y eslingas.",
+        "isCorrect": false,
+        "rationale": "El plan es un estudio de ingeniería de seguridad operacional y no un comprobante mercantil."
+      },
+      {
+        "text": "El manual del fabricante del vehículo que indica las presiones de aire de los neumáticos.",
+        "isCorrect": false,
+        "rationale": "Las especificaciones de neumáticos forman parte del mantenimiento del vehículo, no del cálculo de la maniobra de elevación."
+      },
+      {
+        "text": "Un permiso otorgado por el municipio para el tránsito de camiones en la vía pública.",
+        "isCorrect": false,
+        "rationale": "Los permisos viales regulan el transporte en carreteras, no los factores técnicos de elevación de cargas con grúa."
+      },
+      {
+        "text": "El cronograma de vacaciones anuales del personal de maniobras.",
+        "isCorrect": false,
+        "rationale": "La programación de descansos es un tema de gestión humana ajeno a los cálculos cinemáticos del levantamiento de cargas."
+      }
+    ],
+    "hint": "Consiste en la planificación técnica que calcula capacidades de grúa, pesos, radios y accesorios para levantar una carga.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la responsabilidad principal del Rigger o Maniobrista durante una operación de izaje?",
+    "opciones": [
+      {
+        "text": "Guia de manera exclusiva al operador de la grúa mediante el código estandarizado de señales de mano o radio, y verificar el correcto estrobado de la carga.",
+        "isCorrect": true,
+        "rationale": "El Rigger dirige la maniobra asegurando el enganche correcto de la carga y comunicando las instrucciones precisas de movimiento al operador."
+      },
+      {
+        "text": "Operar la palanca principal del motor hidráulico dentro de la cabina de la grúa.",
+        "isCorrect": false,
+        "rationale": "La manipulación de los controles dentro de la cabina es competencia única y exclusiva del operador certificado de la grúa."
+      },
+      {
+        "text": "Sitiarse directamente debajo de la carga suspendida para sostenerla con las manos.",
+        "isCorrect": false,
+        "rationale": "Permanecer bajo cargas suspendidas o tocarlas con las manos está prohibido por el riesgo de aplastamiento."
+      },
+      {
+        "text": "Reparar los sistemas eléctricos dañados de la grúa mientras la carga permanece en el aire.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento debe realizarse con el equipo detenido y sin cargas suspendidas por personal técnico mecánico calificado."
+      },
+      {
+        "text": "Conducir el camión escolta en la carretera nacional sin intervenir en la maniobra.",
+        "isCorrect": false,
+        "rationale": "El Rigger desempeña un rol activo y presente en el área delimitada donde se ejecuta el izaje de la carga."
+      }
+    ],
+    "hint": "Es la persona calificada que dirige la maniobra mediante señales de mano o comunicación por radio desde el terreno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes condiciones clasifican a un izaje como 'Izaje Crítico'?",
+    "opciones": [
+      {
+        "text": "Cuando la carga supera el 70% u 80% de la capacidad nominal de la grúa según su tabla de carga.",
+        "isCorrect": true,
+        "rationale": "Aproximarse a la capacidad máxima del equipo exige controles rigurosos al ser clasificado como izaje crítico."
+      },
+      {
+        "text": "Cuando se efectúa el levantamiento utilizando dos o más grúas en simultáneo (izaje en tándem).",
+        "isCorrect": true,
+        "rationale": "La elevación combinada con múltiples grúas incrementa la complejidad del cálculo de distribución de fuerzas."
+      },
+      {
+        "text": "When la maniobra se realiza cerca de líneas eléctricas energizadas.",
+        "isCorrect": true,
+        "rationale": "El riesgo de arco eléctrico o contacto accidental transforma la maniobra en una operación de alto peligro."
+      },
+      {
+        "text": "When se realiza el izaje de personas mediante canastillas autorizadas (man basket).",
+        "isCorrect": true,
+        "rationale": "El traslado de personal mediante grúas requiere la aplicación de protocolos de severidad crítica."
+      },
+      {
+        "text": "When la carga pesa 10 kilogramos y se levanta en un taller a medio metro del piso.",
+        "isCorrect": false,
+        "rationale": "El izaje de cargas muy livianas a baja altura y en condiciones estandarizadas corresponde a maniobras rutinarias no críticas."
+      }
+    ],
+    "hint": "Considera factores como el porcentaje alto de capacidad, uso de dos grúas, cercanía a redes eléctricas o elevación de personas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define un 'trabajo en caliente' en las operaciones industriales y mineras?",
+    "opciones": [
+      {
+        "text": "Aquella actividad que involucra la presencia de llama abierta, generación de chispas o calor con potencial de actuar como fuente de ignición.",
+        "isCorrect": true,
+        "rationale": "Los trabajos como soldadura, oxicorte o esmerilado generan energía térmica o chispas capaces de encender materiales inflamables cercanos."
+      },
+      {
+        "text": "Cualquier trabajo que se realice al aire libre durante las horas de mayor radiación solar en verano.",
+        "isCorrect": false,
+        "rationale": "La exposición al calor ambiental es un factor de estrés térmico, pero no define a las operaciones técnicas de oxicorte o esmerilado."
+      },
+      {
+        "text": "La preparación de alimentos calientes en los comedores del campamento minero.",
+        "isCorrect": false,
+        "rationale": "Las labores culinarias pertenecen a servicios de catering y no a los procesos industriales de alto riesgo normados por el estándar."
+      },
+      {
+        "text": "El transporte de agua limpia en tanques cisterna a temperatura ambiente.",
+        "isCorrect": false,
+        "rationale": "El traslado de agua potable no genera chispas ni utiliza fuentes térmicas de llama abierta."
+      },
+      {
+        "text": "La pintura con brocha sobre bases de concreto secas en áreas ventiladas.",
+        "isCorrect": false,
+        "rationale": "Pintar manualmente no involucra puntos incandescentes ni chisporroteo técnico de ignición."
+      }
+    ],
+    "hint": "Incluye labores como soldadura, esmerilado o corte que generan fuego, chispas o altas temperaturas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función del 'vigía de fuego' u 'observador de fuego' en un trabajo en caliente?",
+    "opciones": [
+      {
+        "text": "Permanecer en constante observación de la zona durante el trabajo y por al menos 30 minutos después para detectar y extinguir cualquier amago de incendio.",
+        "isCorrect": true,
+        "rationale": "El vigía monitorea las chispas durante la tarea y vigila la zona posteriormente para asegurar que no queden orígenes de ignición latentes."
+      },
+      {
+        "text": "Ejecutar directamente la soldadura mientras sostiene el extintor con los pies.",
+        "isCorrect": false,
+        "rationale": "El vigía no realiza la tarea de soldadura; su función exclusiva es la observación dedicada y la prevención de incendios."
+      },
+      {
+        "text": "Revisar las redes sociales en el teléfono celular mientras el soldador realiza su labor.",
+        "isCorrect": false,
+        "rationale": "La distracción del vigía de fuego representa una falta grave al comprometer la detección inmediata de amagos."
+      },
+      {
+        "text": "Retirarse inmediatamente del área apenas el soldador apaga el equipo de corte.",
+        "isCorrect": false,
+        "rationale": "Debe permanecer durante el tiempo normado de post-vigilancia (mínimo 30 minutos) para descartar ignición retardada."
+      },
+      {
+        "text": "Sustituir al ingeniero de seguridad en la firma de las valorizaciones contables.",
+        "isCorrect": false,
+        "rationale": "El vigía cumple una función strictly operativa de control de incendios en el campo."
+      }
+    ],
+    "hint": "Vigila la proyección de chispas y debe permanecer un tiempo posterior al término del trabajo para prevenir incendios latentes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes son peligros químicos derivados directamente de las actividades de soldadura u oxicorte?",
+    "opciones": [
+      {
+        "text": "Humos metálicos que contienen partículas de zinc, plomo, cromo o manganeso.",
+        "isCorrect": true,
+        "rationale": "La volatilización de metales durante la soldadura genera partículas finas tóxicas suspendidas en el aire."
+      },
+      {
+        "text": "Gases nocivos como el monóxido de carbono (CO) o dióxido de nitrógeno.",
+        "isCorrect": true,
+        "rationale": "La combustión de gases combustibles o la ionización del aire produce compuestos gaseosos tóxicos."
+      },
+      {
+        "text": "Vapores producidos por la descomposición de recubrimientos o pinturas sobre el metal.",
+        "isCorrect": true,
+        "rationale": "El calor extremo quema las capas superficiales del metal liberando vapores orgánicos dañinos."
+      },
+      {
+        "text": "Ruido producido por el impacto de martillos neumáticos.",
+        "isCorrect": false,
+        "rationale": "El ruido es considerado un peligro físico y no un agente o sustancia de carácter químico."
+      },
+      {
+        "text": "Bajas temperaturas producidas por el uso de hielo seco en la estructura.",
+        "isCorrect": false,
+        "rationale": "El enfriamiento por hielo seco no es un subproducto químico común generado por la antorcha o el arco de soldar."
+      }
+    ],
+    "hint": "Selecciona las opciones que involucren gases, vapores de pinturas quemadas y humos de metales fundidos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica principal que define a un 'espacio confinado'?",
+    "opciones": [
+      {
+        "text": "Tiene medios limitados o restringidos para la entrada y salida, no está diseñado para la ocupación continua y puede presentar atmósfera peligrosa.",
+        "isCorrect": true,
+        "rationale": "La geometría restringida, sumada a la mala ventilación natural y al riesgo atmosférico, caracteriza a los espacios confinados."
+      },
+      {
+        "text": "Es una oficina administrativa iluminada que cuenta con tres puertas abiertas al exterior.",
+        "isCorrect": false,
+        "rationale": "Las oficinas cuentan con ventilación diseñada para permanencia continua y accesos libres de restricción."
+      },
+      {
+        "text": "Una cancha deportiva de fútbol sin techo durante el día.",
+        "isCorrect": false,
+        "rationale": "Los espacios abiertos disponen de ventilación natural ilimitada y facilidades de tránsito totalmente despejadas."
+      },
+      {
+        "text": "Cualquier lugar donde trabajen más de cincuenta personas simultáneamente.",
+        "isCorrect": false,
+        "rationale": "La cantidad de personal no define al espacio confinado, sino sus restricciones de acceso y de ventilación natural."
+      },
+      {
+        "text": "Un pasillo ancho de tránsito peatonal en la entrada de un campamento.",
+        "isCorrect": false,
+        "rationale": "Los pasillos de tránsito general son zonas diseñadas para el movimiento libre de personas sin atrapamiento atmosférico."
+      }
+    ],
+    "hint": "Piensa en recintos con accesos reducidos, mala ventilación natural y no diseñados para estancia continua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el rango porcentual seguro de concentración de oxígeno ($O_2$) requerido para ingresar a un espacio confinado sin equipo de suministro de aire?",
+    "opciones": [
+      {
+        "text": "Entre 19.5% y 23.5% de oxígeno en el aire.",
+        "isCorrect": true,
+        "rationale": "Por debajo del 19.5% se considera deficiencia de oxígeno (asfixia) y por encima de 23.5% enriquecimiento (riesgo elevado de combustión)."
+      },
+      {
+        "text": "Entre 5.0% y 10.0% de oxígeno en el aire.",
+        "isCorrect": false,
+        "rationale": "Concentraciones inferiores al 10% producen pérdida de conocimiento inmediata y muerte por asfixia en minutos."
+      },
+      {
+        "text": "Exactamente 50.0% de oxígeno libre en el aire.",
+        "isCorrect": false,
+        "rationale": "Un nivel de 50% de oxígeno crea una atmósfera hiperóxica con peligro crítico de explosión e incendio violento."
+      },
+      {
+        "text": "Cualquier porcentaje mientras no se perciba mal olor con el olfato.",
+        "isCorrect": false,
+        "rationale": "El oxígeno es un gas inodoro; la medición de su nivel requiere obligatoriamente detectores multigas calibrados."
+      },
+      {
+        "text": "Entre 80.0% y 99.0% de nitrógeno puro sin oxígeno.",
+        "isCorrect": false,
+        "rationale": "Una atmósfera compuesta casi exclusivamente de nitrógeno provoca asfixia inmediata al ingresar."
+      }
+    ],
+    "hint": "El rango normal aceptado comprende desde un mínimo de 19.5% hasta un tope seguro de 23.5%.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el rol exclusivo del vigía de espacio confinado?",
+    "opciones": [
+      {
+        "text": "Permanecer continuamente fuera del espacio confinado, monitorear a los ingresantes, controlar el registro de entradas y activar el plan de rescate sin ingresar.",
+        "isCorrect": true,
+        "rationale": "El vigía nunca debe ingresar al recinto durante una emergencia; su misión es mantener la comunicación y convocar a los brigadistas."
+      },
+      {
+        "text": "Entrar al tanque a ciegas para rescatar a un compañero desmayado sin usar equipo de respiración.",
+        "isCorrect": false,
+        "rationale": "Ingresar sin equipo de protección ante una atmósfera peligrosa suele desencadenar fatalidades adicionales en los rescatistas."
+      },
+      {
+        "text": "Abandona el puesto para ir a buscar herramientas al almacén principal mientras el personal trabaja dentro.",
+        "isCorrect": false,
+        "rationale": "El vigía debe mantener presencia permanente fuera de la entrada sin interrumpir la supervisión en ningún momento."
+      },
+      {
+        "text": "Apagar los ventiladores mecánicos para ahorrar energía de las baterías.",
+        "isCorrect": false,
+        "rationale": "Interrumpir la ventilación forzada degrada rápidamente la calidad del aire provocando acumulación de gases tóxicos."
+      },
+      {
+        "text": "Realizar labores de pintura en el exterior dándole la espalda al acceso del tanque.",
+        "isCorrect": false,
+        "rationale": "El vigía debe dedicar su atención de manera exclusiva al control y la comunicación con el personal autorizado que está dentro."
+      }
+    ],
+    "hint": "Permanece en el exterior manteniendo la vigilancia del personal y nunca debe ingresar al interior durante una emergencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes métodos se utilizan para la renovación o acondicionamiento del aire en un espacio confinado?",
+    "opciones": [
+      {
+        "text": "Ventilación mecánica por presión positiva (introduciendo aire limpio del exterior).",
+        "isCorrect": true,
+        "rationale": "Inyectar aire fresco eleva la presión interior y desplaza los contaminantes hacia las aberturas de salida."
+      },
+      {
+        "text": "Ventilación por extracción o presión negativa (extrayendo el aire contaminado del interior).",
+        "isCorrect": true,
+        "rationale": "Extraer los contaminantes genera una presión menor que fuerza la entrada de aire fresco desde las aberturas de acceso."
+      },
+      {
+        "text": "Inertización o purgado previo con gases cuando se requiere eliminar atmósferas explosivas antes del ingreso.",
+        "isCorrect": true,
+        "rationale": "El purgado desplaza vapores inflamables mediante gases inertes como paso previo al lavado y ventilación con aire respirable."
+      },
+      {
+        "text": "Uso de botellas de oxígeno medicinal abiertas directamente sobre el piso sin control.",
+        "isCorrect": false,
+        "rationale": "Liberar oxígeno puro en un recinto confinado genera atmósferas hiperóxicas con riesgo extremo de fuego."
+      },
+      {
+        "text": "Sellar herméticamente todas las entradas y salidas mientras haya personas en el interior.",
+        "isCorrect": false,
+        "rationale": "Cerrar los accesos interrumpe la renovación del aire provocando el consumo del oxígeno y la acumulación de contaminantes."
+      }
+    ],
+    "hint": "Incluye métodos como la inyección de aire fresco (presión positiva), extracción de aire viciado o el purgado previo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del marco normativo general de la Ley $29783$, ¿cuál de los siguientes principios establece que, ante cualquier discrepancia entre lo registrado en documentos o contratos y lo que se observa directamente en las operaciones de campo, las autoridades deben priorizar la situación real detectada?",
+    "opciones": [
+      {
+        "text": "Principio de Prevención",
+        "isCorrect": false,
+        "rationale": "Este principio se enfoca en la obligación del empleador de garantizar condiciones que protejan la vida y salud de los trabajadores de manera anticipada."
+      },
+      {
+        "text": "Principio de Primacía de la Realidad",
+        "isCorrect": true,
+        "rationale": "Este principio determina que la evidencia constatada directamente en el terreno prevalece sobre cualquier documento o registro administrativo que sostenga algo distinto."
+      },
+      {
+        "text": "Principio de Protección",
+        "isCorrect": false,
+        "rationale": "Este principio consagra el derecho de todos los trabajadores a que el Estado y los empleadores garanticen condiciones de trabajo dignas y seguras."
+      },
+      {
+        "text": "Principio de Responsabilidad",
+        "isCorrect": false,
+        "rationale": "Este principio estipula que el empleador asume las implicancias económicas y legales ante la ocurrencia de un accidente o enfermedad ocupacional."
+      },
+      {
+        "text": "Principio de Cooperación",
+        "isCorrect": false,
+        "rationale": "Este principio promueve la colaboración conjunta entre el Estado, los empleadores y los trabajadores para el funcionamiento del sistema de SST."
+      }
+    ],
+    "hint": "Este criterio legal evalúa la veracidad de los hechos observables por encima de lo que declaran los papeles firmados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Según la modificación introducida por la Ley $30222$ al artículo $49$ de la Ley $29783$, ¿cuáles de las siguientes afirmaciones respecto a la gestión de los exámenes médicos ocupacionales son correctas en el marco legal peruano?",
+    "opciones": [
+      {
+        "text": "Los exámenes médicos obligatorios se deben realizar cada dos años en actividades no consideradas de alto riesgo.",
+        "isCorrect": true,
+        "rationale": "La modificatoria flexibilizó la periodicidad para actividades no de alto riesgo, fijándola formalmente cada dos años durante la relación laboral."
+      },
+      {
+        "text": "En operaciones de alto riesgo, los exámenes médicos son obligatorios antes, durante y al término de la relación laboral.",
+        "isCorrect": true,
+        "rationale": "Debido a la exposición a peligros críticos en sectores como minería, se exige la evaluación médica en las tres etapas laborales sin excepción."
+      },
+      {
+        "text": "El costo íntegro de todos los exámenes médicos ocupacionales obligatorios es asumido por el empleador.",
+        "isCorrect": true,
+        "rationale": "La ley prohíbe trasladar cualquier costo derivado de los controles médicos preventivos o de monitoreo al trabajador."
+      },
+      {
+        "text": "Los exámenes médicos de salida son estrictamente obligatorios en todos los sectores, independientemente de la solicitud del trabajador.",
+        "isCorrect": false,
+        "rationale": "La Ley $30222$ estableció que en actividades que no son de alto riesgo, el examen de retiro es facultativo y se efectúa a solicitud del trabajador o empleador."
+      },
+      {
+        "text": "El costo del examen médico de retiro debe ser financiado en partes iguales entre el empleador y el trabajador.",
+        "isCorrect": false,
+        "rationale": "Cualquier evaluación médica ocupacional regulada por la normativa debe ser financiada en su totalidad por la entidad empleadora."
+      }
+    ],
+    "hint": "Diferencie entre las exigencias para actividades generales y las de alto riesgo, así como el carácter facultativo del examen de egreso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la modificación del Reglamento de la Ley $29783$ mediante el Decreto Supremo $006-2014-TR$, ¿cuál es la disposición oficial respecto a la ejecución de las capacitaciones en materia de seguridad y salud en el trabajo?",
+    "opciones": [
+      {
+        "text": "Las capacitaciones pueden impartirse fuera de la jornada laboral siempre que se pague un bono económico compensatorio.",
+        "isCorrect": false,
+        "rationale": "La legislación exige que las actividades formativas obligatorias de SST se lleven a cabo obligatoriamente dentro de la jornada de trabajo."
+      },
+      {
+        "text": "Las capacitaciones deben realizarse dentro de la jornada laboral, pudiendo contar con la Autoridad Administrativa de Trabajo como proveedora de estos servicios.",
+        "isCorrect": true,
+        "rationale": "La norma ratifica el desarrollo de las charlas dentro del horario de trabajo e incorpora a la autoridad laboral como una opción para impartir o apoyar dichas capacitaciones."
+      },
+      {
+        "text": "El costo de las capacitaciones es asumido en un $50\\%$ por el trabajador cuando se trate de la introducción de cambios tecnológicos.",
+        "isCorrect": false,
+        "rationale": "El financiamiento de la formación y entrenamiento en prevención es responsabilidad exclusiva y total de la empresa empleadora."
+      },
+      {
+        "text": "La capacitación solo es obligatoria cuando un trabajador ingresa por primera vez a la empresa, quedando prohibido capacitar en reasignaciones.",
+        "isCorrect": false,
+        "rationale": "La norma exige capacitaciones continuas, incluyendo situaciones de cambio de puesto de trabajo o de función."
+      },
+      {
+        "text": "Las empresas quedan eximidas de capacitar a su personal si contratan a una firma de tercerización para la gestión de riesgos.",
+        "isCorrect": false,
+        "rationale": "La subcontratación de servicios de SST no exime al titular del deber de garantizar que todo el personal reciba las capacitaciones exigidas."
+      }
+    ],
+    "hint": "Considere el impacto en la jornada de trabajo y los actores habilitados por el Ministerio de Trabajo para brindar apoyo en la formación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según las modificaciones al Artículo $168-A$ del Código Penal introducidas por la Ley $30222$, ¿en qué circunstancia se excluye la responsabilidad penal del empleador tras un accidente de trabajo mortal o grave?",
+    "opciones": [
+      {
+        "text": "Cuando el trabajador accidentado tenga una antigüedad menor a tres meses en la empresa.",
+        "isCorrect": false,
+        "rationale": "El tiempo de servicio del trabajador no es un eximente legal frente a la responsabilidad penal por negligencia en SST."
+      },
+      {
+        "text": "Cuando el evento sea consecuencia directa de la inobservancia consciente y deliberada de las normas de seguridad por parte del propio trabajador.",
+        "isCorrect": true,
+        "rationale": "La modificatoria tipifica que no habrá responsabilidad penal si la causa determinante del evento fatal o grave fue el incumplimiento propio de las instrucciones de seguridad por parte del colaborador."
+      },
+      {
+        "text": "Cuando la empresa califique formalmente como micro o pequeña empresa (MYPE).",
+        "isCorrect": false,
+        "rationale": "El tamaño o categoría empresarial no exime del cumplimiento de la ley penal en materia de vida y salud de los trabajadores."
+      },
+      {
+        "text": "Cuando la empresa mantenga contratada una póliza de Seguro Complementario de Trabajo de Riesgo (SCTR).",
+        "isCorrect": false,
+        "rationale": "El SCTR brinda cobertura económica y asistencial, pero no invalida ni reemplaza la responsabilidad penal por omisión del deber de prevención."
+      },
+      {
+        "text": "Cuando el supervisor de seguridad del área no haya recibido una notificación previa de Sunafil en el último año.",
+        "isCorrect": false,
+        "rationale": "La ausencia de inspecciones previas de la autoridad de trabajo no anula la tipificación penal si existió omisión de controles obligatorios."
+      }
+    ],
+    "hint": "Analice la causa raíz del suceso cuando proviene de la conducta individual que vulnera los procedimientos establecidos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco del Artículo $22-A$ incorporado al Reglamento de la Ley $29783$, si una empresa titular contrata a una entidad especializada para la gestión e implementación del sistema de SST, ¿cuál es el alcance legal de su responsabilidad?",
+    "opciones": [
+      {
+        "text": "El titular se exime totalmente de toda responsabilidad administrativa y penal ante las autoridades competentes.",
+        "isCorrect": false,
+        "rationale": "La norma expresamente prohíbe la transferencia de la responsabilidad principal hacia terceros contratados."
+      },
+      {
+        "text": "La responsabilidad legal recae de forma exclusiva sobre el gerente general de la empresa contratista tercerizada.",
+        "isCorrect": false,
+        "rationale": "Las autoridades fiscalizadoras sancionan a la empresa principal por los incumplimientos que ocurran en sus instalaciones."
+      },
+      {
+        "text": "El titular mantiene la responsabilidad ante la autoridad competente y no puede delegar ni tercerizar la participación en el Comité de SST.",
+        "isCorrect": true,
+        "rationale": "El artículo $22-A$ establece que el empleador principal conserva la responsabilidad legal y prohíbe delegar el rol del empleador en el Comité paritario."
+      },
+      {
+        "text": "La responsabilidad legal se transfiere de manera íntegra al Comité de Seguridad de la empresa subcontratada.",
+        "isCorrect": false,
+        "rationale": "El Comité de SST es un órgano bipartito interno de consulta y no un ente que asuma la responsabilidad penal o administrativa del titular."
+      },
+      {
+        "text": "El titular asume responsabilidad únicamente si la contratista cuenta con menos de $20$ trabajadores.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad de la empresa principal se mantiene inalterable sin importar la cantidad de personal que emplee la contratista."
+      }
+    ],
+    "hint": "Recuerde qué rol institucional indelegable conserva la alta dirección del titular minero o industrial frente al Comité paritario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Respecto a la notificación de accidentes de trabajo mortales e incidentes peligrosos a la autoridad competente (MTPE/MEM), ¿cuál es el plazo máximo obligatorio que establece la normativa para el empleador?",
+    "opciones": [
+      {
+        "text": "Dentro de los 5 días hábiles del mes siguiente a la ocurrencia del suceso.",
+        "isCorrect": false,
+        "rationale": "Ese plazo suele aplicar para el reporte consolidado de enfermedades ocupacionales por parte de los centros médicos, no para emergencias graves del empleador."
+      },
+      {
+        "text": "Dentro de las 24 horas de ocurrido el accidente mortal o incidente peligroso.",
+        "isCorrect": true,
+        "rationale": "La normativa estipula que todo evento fatal o incidente de alto potencial debe ser informado oficialmente en un plazo no mayor a 24 horas."
+      },
+      {
+        "text": "Al término de la relación laboral del personal afectado o en un máximo de 72 horas.",
+        "isCorrect": false,
+        "rationale": "Un plazo de tres días es excesivo e incumple la exigencia de alerta inmediata para la fiscalización preventiva."
+      },
+      {
+        "text": "En un plazo máximo de 12 horas posterior a la entrega del informe final del Comité de SST.",
+        "isCorrect": false,
+        "rationale": "La notificación inicial a la autoridad debe realizarse sin esperar a la culminación de la investigación interna del Comité."
+      },
+      {
+        "text": "Hasta el último día hábil del mes calendario en que sucedió el evento.",
+        "isCorrect": false,
+        "rationale": "Los reportes mensuales corresponden a estadísticas acumuladas y no a la alerta urgente de un accidente fatal."
+      }
+    ],
+    "hint": "Piense en el tiempo estandarizado de respuesta inmediata que exige la ley para que la autoridad disponga una inspección de campo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la jerarquía de controles de riesgos en el trabajo, ¿cuál de las siguientes opciones representa una \"barrera dura\" enfocada en el diseño o aislamiento físico del peligro?",
+    "opciones": [
+      {
+        "text": "Colocar carteles de señalización y demarcación con cinta amarilla en el área de trabajo.",
+        "isCorrect": false,
+        "rationale": "La señalización forma parte de los controles administrativos, considerados barreras blandas por depender de la conducta humana."
+      },
+      {
+        "text": "Suministrar respiradores con cartuchos de carbón activado al personal expuesto a vapores.",
+        "isCorrect": false,
+        "rationale": "Los equipos de protección personal (EPP) constituyen la última línea de defensa y corresponden a barreras blandas."
+      },
+      {
+        "text": "Instalar un sistema mecanizado de extracción localizada de humos o guardas físicas interbloqueadas.",
+        "isCorrect": true,
+        "rationale": "Los controles de ingeniería modifican la infraestructura o los equipos para aislar mecánicamente el peligro, actuando como una barrera dura."
+      },
+      {
+        "text": "Redactar un nuevo Procedimiento Escrito de Trabajo Seguro (PETS) para la labor.",
+        "isCorrect": false,
+        "rationale": "La elaboración de procedimientos y estándares es un control administrativo enfocado en la gestión documental y conductual."
+      },
+      {
+        "text": "Dictar una charla de cinco minutos previa al inicio del turno de trabajo.",
+        "isCorrect": false,
+        "rationale": "La capacitación y las charlas de seguridad son medidas administrativas destinadas a influir en el comportamiento del trabajador."
+      }
+    ],
+    "hint": "Identifique la medida que modifica físicamente la instalación o la maquinaria sin depender de la conducta del colaborador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En las operaciones mineras reguladas por el DS $024-2016-EM$, ¿en qué situación específica se exige obligatoriamente la elaboración de un Análisis de Trabajo Seguro (ATS) en lugar de emplear únicamente un PETS?",
+    "opciones": [
+      {
+        "text": "Cuando la tarea sea de carácter rutinario pero deba ejecutarse durante el turno nocturno.",
+        "isCorrect": false,
+        "rationale": "El turno de trabajo no cambia la condición de procedimiento estandarizado si la tarea rutinaria ya cuenta con un PETS."
+      },
+      {
+        "text": "Cuando la tarea no sea rutinaria, no esté identificada en el IPERC de Línea Base y no cuente con un PETS preestablecido.",
+        "isCorrect": true,
+        "rationale": "El ATS es la herramienta de gestión diseñada específicamente para analizar paso a paso labores no rutinarias o imprevistas antes de su ejecución."
+      },
+      {
+        "text": "Cuando el trabajo requiera únicamente el uso de herramientas manuales no eléctricas en talleres permanentes.",
+        "isCorrect": false,
+        "rationale": "Las labores en talleres permanentes suelen ser rutinarias y estar cubiertas por estándares e IPERC de Línea Base."
+      },
+      {
+        "text": "Cada vez que se efectúe un trabajo en altura, sin importar si existe un PETS aprobado para la infraestructura.",
+        "isCorrect": false,
+        "rationale": "Si el trabajo en altura es rutinario y tiene un PETS operativo, se aplica dicho PETS junto con su respectivo PETAR."
+      },
+      {
+        "text": "Exclusivamente cuando la autoridad inspectiva (Sunafil) esté presente en la zona de trabajo.",
+        "isCorrect": false,
+        "rationale": "El ATS es una herramienta preventiva de uso diario interno y no un requisito condicionado a inspecciones externas."
+      }
+    ],
+    "hint": "Evalúe el grado de predictibilidad y frecuencia de la tarea en la planificación operativa diaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Conforme al Reglamento de Seguridad y Salud Ocupacional en Minería (DS $024-2016-EM$), ¿cuáles de las siguientes premisas son correctas respecto a la constitución y funciones del Comité de Seguridad y Salud en el Trabajo?",
+    "opciones": [
+      {
+        "text": "Está conformado de manera paritaria con igual número de representantes del empleador y de los trabajadores.",
+        "isCorrect": true,
+        "rationale": "La paridad garantiza el equilibrio de voto y representatividad entre ambas partes en la toma de decisiones preventivas."
+      },
+      {
+        "text": "El Presidente del Comité es elegido por los propios miembros con voto de la mayoría en la sesión de instalación.",
+        "isCorrect": true,
+        "rationale": "La normativa dispone que la elección de los cargos internos (Presidente y Secretario) se defina por votación de los integrantes electos."
+      },
+      {
+        "text": "Tiene entre sus atribuciones aprobar el Programa Anual de Seguridad y Salud en el Trabajo (PASST).",
+        "isCorrect": true,
+        "rationale": "Aprobar los planes, programas e IPERC de línea base forma parte de las facultades legales del Comité paritario."
+      },
+      {
+        "text": "Los representantes de los trabajadores ante el Comité son designados directamente por el Gerente de Operaciones.",
+        "isCorrect": false,
+        "rationale": "Los representantes de los trabajadores deben ser elegidos democráticamente mediante voto secreto y universal."
+      },
+      {
+        "text": "Las empresas con menos de $20$ trabajadores deben constituir obligatoriamente un Comité de al menos $6$ miembros.",
+        "isCorrect": false,
+        "rationale": "Con menos de $20$ trabajadores no se conforma un Comité, sino que se elige a un Supervisor de Seguridad y Salud en el Trabajo."
+      }
+    ],
+    "hint": "Recuerde el carácter paritario, el mecanismo democrático de elección y el límite de personal para nombrar un Supervisor en lugar de un Comité.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de las herramientas de gestión de riesgos, ¿cuál es la diferencia sustancial entre la matriz IPERC de Línea Base y la evaluación IPERC Continuo?",
+    "opciones": [
+      {
+        "text": "El IPERC de Línea Base se completa a diario en la labor, mientras que el IPERC Continuo se revisa cada 5 años.",
+        "isCorrect": false,
+        "rationale": "La relación temporal está invertida; la Línea Base es el mapa general y el Continuo se aplica diariamente en el frente."
+      },
+      {
+        "text": "El IPERC de Línea Base mapea institucionalmente los peligros y riesgos de todos los procesos, mientras que el IPERC Continuo lo aplican diariamente los trabajadores antes de cada tarea.",
+        "isCorrect": true,
+        "rationale": "La Línea Base es la matriz estructural y de diagnóstico global de la empresa, en tanto el IPERC Continuo es la herramienta operativa de campo en tiempo real."
+      },
+      {
+        "text": "El IPERC Continuo solo es validado por la gerencia general, en tanto el IPERC de Línea Base solo lo firman los operarios.",
+        "isCorrect": false,
+        "rationale": "El IPERC Continuo requiere la firma del equipo de trabajo y el supervisor del turno en el área operativa."
+      },
+      {
+        "text": "El IPERC de Línea Base aplica únicamente a oficinas administrativas y el IPERC Continuo es exclusivo de contratistas.",
+        "isCorrect": false,
+        "rationale": "Ambas matrices abarcan tanto áreas operativas como administrativas y aplican a personal propio y tercero."
+      },
+      {
+        "text": "El IPERC Continuo elimina la obligación de contar con un Permiso Escrito para Trabajos de Alto Riesgo (PETAR).",
+        "isCorrect": false,
+        "rationale": "El IPERC Continuo es un requisito previo complementario y no reemplaza la emisión de un PETAR para tareas críticas."
+      }
+    ],
+    "hint": "Considere la escala de planificación (estratégica e institucional versus operativa y diaria en la labor).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el modelo de causalidad y la pirámide de Frank Bird, ¿cuál es la acción preventiva más efectiva para evitar la ocurrencia de accidentes fatales en una organización?",
+    "opciones": [
+      {
+        "text": "Concentrar los recursos de investigación exclusivamente en los accidentes con pérdida humana o incapacidad permanente.",
+        "isCorrect": false,
+        "rationale": "Investigar solo cuando ocurre la tragedia es un enfoque reactivo que no ataca las causas origen en la base de la pirámide."
+      },
+      {
+        "text": "Aumentar únicamente el presupuesto de compra de Equipos de Protección Personal (EPP).",
+        "isCorrect": false,
+        "rationale": "El EPP no disminuye la probabilidad de ocurrencia de un evento, solo mitiga la severidad de la lesión en el trabajador."
+      },
+      {
+        "text": "Reportar, gestionar y corregir oportunamente los actos y condiciones subestándar e incidentes menores situados en la base de la pirámide.",
+        "isCorrect": true,
+        "rationale": "Al erradicar las anomalías, incidentes y desvíos de la base, se reduce proporcionalmente la probabilidad de que la cadena causal progrese hacia una fatalidad."
+      },
+      {
+        "text": "Sustituir las capacitaciones operativas por revisiones de estados financieros trimestrales.",
+        "isCorrect": false,
+        "rationale": "Las auditorías financieras no reemplazan el control operacional ni la instrucción en seguridad en el lugar de trabajo."
+      },
+      {
+        "text": "Suspender los reportes de incidentes para evitar la acumulación de datos estadísticos.",
+        "isCorrect": false,
+        "rationale": "Ocultar o dejar de registrar eventos menores impide identificar las fallas del sistema de gestión antes de un colapso grave."
+      }
+    ],
+    "hint": "Piense en la relación numérica entre la cantidad de desvíos menores en la base y los eventos catastróficos en la cúspide.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco del Reglamento de Seguridad Minera, ¿qué define técnicamente a un \"Estándar de Trabajo\"?",
+    "opciones": [
+      {
+        "text": "Un listado cronológico de pasos operativos ejecutados exclusivamente de forma verbal durante el turno.",
+        "isCorrect": false,
+        "rationale": "Un estándar es un documento formalizado y normado, no una instrucción verbal circunstancial."
+      },
+      {
+        "text": "Los parámetros, modelos o pautas que contienen los requisitos mínimos aceptables de medida, cantidad, calidad o valor establecidos por la empresa y la norma.",
+        "isCorrect": true,
+        "rationale": "El estándar fija los parámetros de referencia obligatorios que definen cómo debe ser o estar una condición o proceso seguro."
+      },
+      {
+        "text": "Un permiso temporal de trabajo firmado únicamente por el operador de un equipo de izaje.",
+        "isCorrect": false,
+        "rationale": "Los permisos temporales corresponden a formatos como el PETAR y no a estándares institucionales permanentes."
+      },
+      {
+        "text": "Un informe de investigación redactado por las autoridades tras una fiscalización ambiental.",
+        "isCorrect": false,
+        "rationale": "Los informes de fiscalización son documentos emitidos por entes reguladores y no estándares operativos internos."
+      },
+      {
+        "text": "La estimación cuantitativa de la probabilidad de daño que se anexa al contrato de trabajo.",
+        "isCorrect": false,
+        "rationale": "La valoración de probabilidad y daño es parte de la metodología IPERC y no la definición de un estándar."
+      }
+    ],
+    "hint": "Busque la opción que hace referencia a los valores o parámetros de control de referencia mínimos aceptables para una condición o tarea.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el Reglamento de Seguridad y Salud Ocupacional en Minería (DS $024-2016-EM$), ¿a partir de qué altura sobre el nivel del suelo o piso inferior se considera obligatoriamente una tarea como \"trabajo en altura\"?",
+    "opciones": [
+      {
+        "text": "$1.20\\text{ metros}$",
+        "isCorrect": false,
+        "rationale": "Aunque algunas empresas aplican internamente este umbral más estricto, no es la cifra mínima fijada formalmente por el reglamento minero."
+      },
+      {
+        "text": "$1.50\\text{ metros}$",
+        "isCorrect": false,
+        "rationale": "Esta medida se utiliza como referencia en otros sectores de la industria general, pero no es la cifra oficial de la norma minera."
+      },
+      {
+        "text": "$1.80\\text{ metros}$",
+        "isCorrect": true,
+        "rationale": "El artículo $129$ del reglamento minero establece expresamente los $1.80\\text{ metros}$ como la altura a partir de la cual es obligatorio el sistema de prevención de caídas."
+      },
+      {
+        "text": "$2.10\\text{ metros}$",
+        "isCorrect": false,
+        "rationale": "Esta cota supera el umbral normativo peruano, dejando sin cobertura preventiva obligatoria el tramo comprendido desde $1.80\\text{ m}$."
+      },
+      {
+        "text": "$2.50\\text{ metros}$",
+        "isCorrect": false,
+        "rationale": "Es una altura excesiva para fijar el inicio de la obligatoriedad de los equipos anticaídas de acuerdo con la ley."
+      }
+    ],
+    "hint": "Recuerde la medida estándar estipulada en el artículo de trabajos de alto riesgo del reglamento minero peruano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para determinar el margen de caída libre seguro (distancia total requerida) usando una línea de vida con absorbedor de impacto, ¿cuáles de las siguientes variables deben sumarse desde el punto de anclaje?",
+    "opciones": [
+      {
+        "text": "Únicamente la longitud inicial del estrobo y la altura de las barandas fijas.",
+        "isCorrect": false,
+        "rationale": "Ignora factores críticos de deformación y las dimensiones físicas del trabajador tras la activación del sistema."
+      },
+      {
+        "text": "La longitud de la línea de vida, la elongación del absorbedor, el estiramiento del arnés, la estatura del operario y un factor de seguridad.",
+        "isCorrect": true,
+        "rationale": "La distancia total de caída requiere contabilizar el despliegue mecánico completo del sistema más la altura del cuerpo y un margen libre al suelo."
+      },
+      {
+        "text": "El peso total del trabajador multiplicado por el diámetro del conector en D.",
+        "isCorrect": false,
+        "rationale": "Multiplicar peso por diámetro es una operación dimensionalmente incorrecta que no determina una distancia física en metros."
+      },
+      {
+        "text": "La distancia del piso al techo dividida entre la resistencia nominal del punto de anclaje ($5000\\text{ lbs}$).",
+        "isCorrect": false,
+        "rationale": "La resistencia estructural en libras no se divide geométricamente para hallar el espacio libre de caída."
+      },
+      {
+        "text": "La distancia del suelo a la cintura dividida entre el coeficiente de fricción del arnés.",
+        "isCorrect": false,
+        "rationale": "Los coeficientes de fricción del tejido no forman parte de la ecuación de cálculo de distancia libre de caída."
+      }
+    ],
+    "hint": "Considere la extensión física total que alcanza el conjunto cuando el dispositivo de absorción se abre por completo durante el frenado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Durante la inspección técnica previa de un sistema anticaídas a $4\\text{ metros}$ de altura, ¿cuáles de los siguientes hallazgos obligan a retirar inmediatamente de servicio y destruir un arnés o línea de vida?",
+    "opciones": [
+      {
+        "text": "Presencia de fibras cortadas, quemaduras por soldadura o deshilachado en las cintas de poliéster.",
+        "isCorrect": true,
+        "rationale": "El daño térmico o mecánico en el tejido compromete severamente la resistencia a la tracción del material ante un impacto."
+      },
+      {
+        "text": "Evidencia de que el paquete absorbedor de impacto (shock absorber) ha sido activado o desplegado previamente.",
+        "isCorrect": true,
+        "rationale": "El absorbedor de energía es de un solo uso; una vez abierto, pierde su capacidad de desacelerar una nueva caída."
+      },
+      {
+        "text": "Deformación plástica, fisuras o corrosión en los anillos en \"D\" y conectores metálicos.",
+        "isCorrect": true,
+        "rationale": "Cualquier alteración estructural en la herrería del arnés invalida la capacidad de retención de la carga normada."
+      },
+      {
+        "text": "Superación de la fecha de caducidad o vida útil de almacenamiento establecida por el fabricante o estándar.",
+        "isCorrect": true,
+        "rationale": "El envejecimiento sintético del polímero degrada la resistencia química e industrial del arnés aunque no se haya usado."
+      },
+      {
+        "text": "Presencia de una etiqueta original del fabricante con la certificación ANSI legible.",
+        "isCorrect": false,
+        "rationale": "Tener la etiqueta legible de certificación es un requisito de conformidad y no un motivo de descarte."
+      }
+    ],
+    "hint": "Identifique los signos de deterioro estructural, activación previa de componentes o degradación del polímero sintético.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para garantizar la estabilidad y prevenir el deslizamiento al utilizar una escalera recta portátil apoyada sobre una superficie vertical, ¿cuál es la relación de inclinación recomendada respecto a la altura (regla de la base a la altura de apoyo)?",
+    "opciones": [
+      {
+        "text": "Proporción 1:2 (la base se separa a la mitad de la altura de apoyo).",
+        "isCorrect": false,
+        "rationale": "Una separación de la mitad de la altura genera un ángulo muy abierto que favorece el deslizamiento de la base."
+      },
+      {
+        "text": "Proporción 1:4 (la distancia de la base a la pared equivale a un cuarto de la altura hasta el punto de apoyo).",
+        "isCorrect": true,
+        "rationale": "La regla $1:4$ (un paso afuera por cada cuatro de altura, aprox. $75^\\circ$) otorga el equilibrio óptimo entre estabilidad vertical y agarre de la base."
+      },
+      {
+        "text": "Proporción 1:1 (un ángulo de $45^\\circ$ respecto a la vertical).",
+        "isCorrect": false,
+        "rationale": "Un ángulo de $45^\\circ$ somete a los largueros a un esfuerzo de flexión excesivo y provoca el colapso de la escalera."
+      },
+      {
+        "text": "Proporción 1:6 (la base se ubica muy pegada a la pared).",
+        "isCorrect": false,
+        "rationale": "Colocar la base demasiado cerca de la pared provoca que la escalera pierda equilibrio y se vuelque hacia atrás durante el ascenso."
+      },
+      {
+        "text": "Posición de $90^\\circ$ perfectamente vertical sin separación en la base.",
+        "isCorrect": false,
+        "rationale": "Una escalera apoyada a $90^\\circ$ es completamente inestable y se caerá al intentar escalarla."
+      }
+    ],
+    "hint": "Piense en la regla del 'cuarto de la altura' para calcular la distancia segura de separación de la pata del apoyo vertical.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del procedimiento de maniobras de izaje, ¿en cuál de las siguientes condiciones la operación se clasifica obligatoriamente como un \"Izaje Crítico\", requiriendo un Rigging Plan y un PETAR de izaje específico?",
+    "opciones": [
+      {
+        "text": "Cuando la carga a izar equivale al $25\\%$ de la capacidad nominal de la grúa a un radio determinado.",
+        "isCorrect": false,
+        "rationale": "Un izaje por debajo del $50\\%$ de la capacidad de la grúa en condiciones normales se considera una maniobra estándar."
+      },
+      {
+        "text": "Cuando la maniobra utiliza una sola grúa hidráulica en un terreno plano y sin presencia de personal alrededor.",
+        "isCorrect": false,
+        "rationale": "Izar con un solo equipo en terreno nivelado dentro de los márgenes bajos de la tabla de carga constituye un izaje rutinario."
+      },
+      {
+        "text": "Cuando se realiza el traslado de personas mediante canastilla, o el peso supera el $70\\% - 80\\%$ de la capacidad de la grúa, o se trabaja cerca de líneas eléctricas.",
+        "isCorrect": true,
+        "rationale": "La elevación de personal, la alta utilización del límite de la grúa o la proximidad a cables energizados definen la maniobra como crítica."
+      },
+      {
+        "text": "Cuando la maniobra se efectúa utilizando un montacargas en un almacén techado sobre un piso de concreto.",
+        "isCorrect": false,
+        "rationale": "Las operaciones habituales de almacén mediante montacargas están reguladas por sus PETS de rutina sin ser izajes críticos con grúa."
+      },
+      {
+        "text": "Cuando la carga a levantar consiste únicamente en herramientas ligeras de menos de $15\\text{ kg}$.",
+        "isCorrect": false,
+        "rationale": "Las cargas livianas no comprometen los factores de vuelco ni la capacidad estructural de una grúa pesada."
+      }
+    ],
+    "hint": "Identifique las variables donde un pequeño error puede derivar en fatalidad inmediata, vuelco del equipo o choque eléctrico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con los estándares internacionales (como ANSI Z359) y la normativa de seguridad laboral, ¿cuál es la resistencia mínima a la tensión que deben certificar los puntos de anclaje y conectores por cada trabajador conectado?",
+    "opciones": [
+      {
+        "text": "$1000\\text{ libras}$ ($454\\text{ kg}$)",
+        "isCorrect": false,
+        "rationale": "Esa resistencia es insuficiente para soportar la fuerza de impacto generada por una persona en caída libre."
+      },
+      {
+        "text": "$2250\\text{ libras}$ ($1020\\text{ kg}$)",
+        "isCorrect": false,
+        "rationale": "Es un valor por debajo del margen estandarizado para puntos de anclaje rígidos anticaídas."
+      },
+      {
+        "text": "$5000\\text{ libras}$ ($2268\\text{ kg}$ o $22.2\\text{ kN}$)",
+        "isCorrect": true,
+        "rationale": "La norma internacional exige que todo punto de anclaje o conector estructural soporte al menos $5000\\text{ lbs}$ por persona conectada."
+      },
+      {
+        "text": "$10000\\text{ libras}$ ($4536\\text{ kg}$)",
+        "isCorrect": false,
+        "rationale": "Es una capacidad requerida para aparejos de izaje pesado de carga, no la exigencia mínima por individuo en detención de caídas."
+      },
+      {
+        "text": "$15000\\text{ libras}$ ($6804\\text{ kg}$)",
+        "isCorrect": false,
+        "rationale": "Representa una capacidad sobredimensionada en comparación con la especificación estandarizada para equipos anticaídas individuales."
+      }
+    ],
+    "hint": "Recuerde la cifra de resistencia en libras estandarizada mundialmente para conectores y conectores de anclaje anticaídas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la ejecución de una maniobra de izaje con grúa móvil, ¿cuál es el rol y responsabilidad exclusiva que cumple el Rigger (maniobrista) en el frente de trabajo?",
+    "opciones": [
+      {
+        "text": "Operar las palancas hidráulicas dentro de la cabina de la grúa durante la maniobra.",
+        "isCorrect": false,
+        "rationale": "La operación de los mandos de la máquina es competencia exclusiva del operador de la grúa."
+      },
+      {
+        "text": "Guiar la maniobra mediante el código estandarizado de señales, habiendo verificado previamente el aparejamiento y el área de izaje.",
+        "isCorrect": true,
+        "rationale": "El Rigger es la única persona autorizada para dirigir las señales al operador, tras validar el correcto estrobado y la delimitación del radio."
+      },
+      {
+        "text": "Firmar la autorización final de voladura en las zonas aledañas al radio de giro.",
+        "isCorrect": false,
+        "rationale": "La autorización de voladuras corresponde a los ingenieros especialistas en explosivos y no al Rigger de izajes."
+      },
+      {
+        "text": "Realizar las pruebas hidrostáticas a los motores diésel del camión grúa.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento mecánico del motor es función del personal técnico mecánico especializado."
+      },
+      {
+        "text": "Retirar las cintas de demarcación y autorizar el tránsito de peatones debajo de la carga suspendida.",
+        "isCorrect": false,
+        "rationale": "Queda estrictamente prohibido permitir el paso de personas bajo una carga suspendida o retirar la demarcación protectora."
+      }
+    ],
+    "hint": "Piense en la persona dedicada a conectar la carga y comunicarse mediante gestos técnicos directos con el conductor dentro de la cabina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Se define como trabajo en caliente a toda labor que genera chispa, llama abierta o calor de ignición. ¿Cuál es la función fundamental del Observador o Vigía de Fuego (Fire Watch) durante y después de la tarea?",
+    "opciones": [
+      {
+        "text": "Realizar la soldadura de la tubería metálica manipulando la antorcha de oxicorte.",
+        "isCorrect": false,
+        "rationale": "El vigía de fuego no debe ejecutar la labor de soldadura ni distraer su atención del monitoreo del riesgo de incendio."
+      },
+      {
+        "text": "Inspeccionar continuamente el área, retirar materiales combustibles en un radio seguro, contar con extintor y vigilar la zona hasta $30$ minutos después de terminada la labor.",
+        "isCorrect": true,
+        "rationale": "El vigía debe concentrarse exclusivamente en prevenir focos de incendio y monitorear escorias incandescentes durante la labor y durante el periodo de enfriamiento posterior."
+      },
+      {
+        "text": "Operar el camión grúa encendido dentro de la zona de confinamiento de chispas.",
+        "isCorrect": false,
+        "rationale": "El operador de grúa realiza la maniobra de carga y no ejerce el rol de vigía de fuego del soldador."
+      },
+      {
+        "text": "Redactar las pólizas de seguro médico de los trabajadores involucrados.",
+        "isCorrect": false,
+        "rationale": "La emisión de pólizas de seguro es una función administrativa ajena al control operacional de seguridad en campo."
+      },
+      {
+        "text": "Reemplazar los tableros eléctricos principales de la planta concentradora.",
+        "isCorrect": false,
+        "rationale": "La manipulación de tableros de potencia es responsabilidad exclusiva de electricistas calificados."
+      }
+    ],
+    "hint": "Considere la tarea de vigilancia dedicada a evitar que una chispa vuele y genere un amago de fuego mientras se suelda o esmerila.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el almacenamiento y manipulación de cilindros de gases comprimidos para oxicorte (oxígeno y acetileno), ¿cuáles de las siguientes normas técnicas son obligatorias para prevenir explosiones e incendios?",
+    "opciones": [
+      {
+        "text": "Almacenar los cilindros de oxígeno separados de los de acetileno por una distancia mínima (p. ej., $6\\text{ metros}$) o mediante un muro cortafuego.",
+        "isCorrect": true,
+        "rationale": "Separar el comburente (oxígeno) del combustible (acetileno) previene reacciones catastróficas en caso de fugas simultáneas."
+      },
+      {
+        "text": "Mantener los cilindros en posición vertical, asegurados con cadenas y con su capuchón de protección de válvula en su lugar cuando no se usan.",
+        "isCorrect": true,
+        "rationale": "Asegurar la verticalidad evita caídas que puedan romper la válvula convirtiendo el cilindro en un proyectil a alta presión."
+      },
+      {
+        "text": "Instalar válvulas antirretorno de llama (arrestallamas) tanto en el mazo de la antorcha como en las salidas de los reguladores.",
+        "isCorrect": true,
+        "rationale": "Las válvulas antirretorno impiden que una retroexplosión de la llama ingrese a través de las mangueras hacia los cilindros."
+      },
+      {
+        "text": "Transportar los cilindros haciéndolos rodar acostados de forma horizontal en el piso.",
+        "isCorrect": false,
+        "rationale": "Está totalmente prohibido rodar o arrastrar los cilindros en posición horizontal; deben trasladarse en carretillas porta-cilindros verticales."
+      },
+      {
+        "text": "Lubricar las roscas y manómetros de oxígeno con aceite o grasa hidrocarburada para facilitar su ajuste.",
+        "isCorrect": false,
+        "rationale": "El contacto del oxígeno a alta presión con grasas u aceites derivados del petróleo genera una reacción de combustión violenta y explosiva."
+      }
+    ],
+    "hint": "Evalúe las medidas que evitan el contacto entre combustible y comburente, previenen caídas y bloquean el retroceso de llama.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con los estándares de seguridad, ¿cuáles son los tres criterios universales que definen formalmente a un recinto como un \"Espacio Confinado\"?",
+    "opciones": [
+      {
+        "text": "Cuenta con aire acondicionado central, iluminación LED de alta potencia y acceso mediante escaleras mecánicas.",
+        "isCorrect": false,
+        "rationale": "Estas características pertenecen a edificaciones diseñadas para la permanencia continua de personas."
+      },
+      {
+        "text": "No está diseñado para la ocupación continua de trabajadores, posee medios limitados o restringidos de ingreso/salida y presenta ventilación natural deficiente.",
+        "isCorrect": true,
+        "rationale": "Estas tres condiciones combinadas definen técnicamente la condición de espacio confinado y sus riesgos asociados."
+      },
+      {
+        "text": "Posee una altura de más de $15\\text{ metros}$, tiene barandas rígidas perimetrales y está ubicado completamente al aire libre.",
+        "isCorrect": false,
+        "rationale": "Una estructura abierta y ventilada al aire libre con barandas no cumple con los criterios de confinamiento."
+      },
+      {
+        "text": "Es una zona donde se almacenan exclusivamente materiales radiactivos dentro de cajas plásticas selladas.",
+        "isCorrect": false,
+        "rationale": "El tipo de material almacenado no define la geometría ni las restricciones de accesibilidad o ventilación de un recinto confinado."
+      },
+      {
+        "text": "Tiene un volumen mayor a $500\\text{ m}^3$ y se utiliza como comedor principal de la unidad minera.",
+        "isCorrect": false,
+        "rationale": "Un comedor es una instalación diseñada para la ocupación continua de personas y cuenta con ingresos amplios."
+      }
+    ],
+    "hint": "Piense en las restricciones geométricas de ingreso/salida, la falta de renovación de aire y la falta de diseño para permanencia humana.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Antes de ingresar a un espacio confinado (como un tanque o chancadora), se debe medir la atmósfera interna con un multigas. ¿Cuál es el rango permisible de concentración de oxígeno ($O_2$) para autorizar el ingreso seguro sin equipo autocontenido?",
+    "opciones": [
+      {
+        "text": "Entre $12.0\\%$ y $16.0\\%$",
+        "isCorrect": false,
+        "rationale": "Una concentración menor a $19.5\\%$ se considera una atmósfera deficiente en oxígeno que causa pérdida de conocimiento e hipoxia."
+      },
+      {
+        "text": "Entre $16.5\\%$ y $18.5\\%$",
+        "isCorrect": false,
+        "rationale": "Aunque permite la supervivencia breve, está por debajo del rango normal e induce fatiga mental y falla respiratoria."
+      },
+      {
+        "text": "Entre $19.5\\%$ y $23.5\\%$",
+        "isCorrect": true,
+        "rationale": "El rango $19.5\\% - 23.5\\%$ es el intervalo estándar de seguridad; por debajo de $19.5\\%$ hay deficiencia y por encima de $23.5\\%$ hay enriquecimiento e inflamabilidad."
+      },
+      {
+        "text": "Entre $25.0\\%$ y $30.0\\%$",
+        "isCorrect": false,
+        "rationale": "Un nivel superior a $23.5\\%$ representa un grave riesgo de enriquecimiento de oxígeno que favorece incendios y explosiones violentas."
+      },
+      {
+        "text": "Mayor a $40.0\\%$ en todo momento.",
+        "isCorrect": false,
+        "rationale": "Valores tan altos incrementan de forma extrema la reactividad de materiales combustibles volviéndolos hiperinflamables."
+      }
+    ],
+    "hint": "Recuerde el porcentaje normal de oxígeno en el aire ambiente ($21\\%$) y los márgenes de tolerancia inferior y superior permitidos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En espacios confinados sin ventilación adecuada, la acumulación de monóxido de carbono ($CO$) representa un peligro letal e imperceptible. ¿Cuál es el mecanismo de toxicidad que vuelve al $CO$ tan peligroso para el cuerpo humano?",
+    "opciones": [
+      {
+        "text": "Es un gas irritante de color verde que quema los alveolos pulmonares al contacto superficial.",
+        "isCorrect": false,
+        "rationale": "El monóxido de carbono es un gas incoloro, inodoro e insípido, que no presenta coloración ni acción corrosiva directa."
+      },
+      {
+        "text": "Es incoloro e inodoro, y se une a la hemoglobina de la sangre con una afinidad mucho mayor que el oxígeno, impidiendo el transporte de oxígeno a los tejidos.",
+        "isCorrect": true,
+        "rationale": "El $CO$ se desplaza en el torrente sanguíneo formando carboxihemoglobina, bloqueando el transporte de oxígeno y provocando asfixia química celular sin dar señales de olor."
+      },
+      {
+        "text": "Reacciona con la humedad de la piel convirtiéndose en ácido sulfúrico concentrado.",
+        "isCorrect": false,
+        "rationale": "El ácido sulfúrico proviene de óxidos de azufre, no del monóxido de carbono."
+      },
+      {
+        "text": "Aumenta la concentración de oxígeno en la sangre provocando hiperoxia inmediata.",
+        "isCorrect": false,
+        "rationale": "El monóxido de carbono priva al organismo del oxígeno en lugar de incrementarlo."
+      },
+      {
+        "text": "Solidifica los fluidos digestivos impidiendo la circulación renal.",
+        "isCorrect": false,
+        "rationale": "El efecto fisiológico principal del $CO$ ocurre en el sistema respiratorio y cardiovascular al fijarse a la hemoglobina."
+      }
+    ],
+    "hint": "Piense en la incapacidad de detectar este gas por los sentidos y su efecto sobre el transporte de oxígeno en los glóbulos rojos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-10",
+    "diplomado": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al acondicionar la atmósfera de un espacio confinado mediante ventilación mecánica, ¿cómo opera un sistema de ventilación por \"presión positiva\"?",
+    "opciones": [
+      {
+        "text": "Extrae el aire contaminado del interior del recinto succionándolo directamente hacia el exterior mediante un extractor.",
+        "isCorrect": false,
+        "rationale": "La succión directa para crear vacío interno corresponde al principio de la ventilación por presión negativa o extracción."
+      },
+      {
+        "text": "Inyecta continuamente aire limpio y fresco desde el exterior hacia el interior, generando una presión mayor a la atmosférica que empuja los contaminantes hacia afuera.",
+        "isCorrect": true,
+        "rationale": "La ventilación positiva introduce aire limpio a presión para diluir la atmósfera interna y forzar la salida de los gases peligrosos por las aberturas."
+      },
+      {
+        "text": "Inyecta gas nitrógeno a alta presión para desplazar los gases inflamables mediante sofocación.",
+        "isCorrect": false,
+        "rationale": "Inyectar nitrógeno elimina el oxígeno y genera una atmósfera letal de asfixia para los trabajadores que van a ingresar."
+      },
+      {
+        "text": "Sella de forma hermética las aberturas del estanque para detener la circulación de corrientes de aire.",
+        "isCorrect": false,
+        "rationale": "Completar un sellado hermético impide la renovación del aire e incrementa la acumulación de contaminantes tóxicos."
+      },
+      {
+        "text": "Eleva la temperatura interna a más de $100^\\circ\\text{C}$ para descomponer térmicamente los gases orgánicos.",
+        "isCorrect": false,
+        "rationale": "Calentar el recinto volvería imposible el trabajo humano y aumentaría el riesgo de explosión de vapores combustibles."
+      }
+    ],
+    "hint": "Considere la acción de 'soplar aire fresco' hacia adentro para desplazar los gases nocivos hacia las salidas naturales.",
+    "activo": true
+  }
+]

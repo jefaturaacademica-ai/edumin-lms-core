@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué año se promulgó el Texto Único Ordenado de la Ley General de Minería que marcó un hito en la regulación de la minería moderna en el Perú?",
+    "opciones": [
+      {
+        "text": "1992",
+        "isCorrect": true,
+        "rationale": "En este año se consolidó el marco legal que promovió la inversión privada y estableció bases para la gestión ambiental en el sector minero peruano."
+      },
+      {
+        "text": "1980",
+        "isCorrect": false,
+        "rationale": "En esta década regían marcos normativos previos, anteriores a las reformas de promoción de inversiones y sostenibilidad ambiental de los noventa."
+      },
+      {
+        "text": "2005",
+        "isCorrect": false,
+        "rationale": "En este año ya estaba vigente el Texto Único Ordenado dictado más de una década atrás, aunque se emitieron reglamentos complementarios."
+      },
+      {
+        "text": "1997",
+        "isCorrect": false,
+        "rationale": "Corresponde a la promulgación de la Ley Orgánica para el aprovechamiento sostenible de los recursos naturales, no a la Ley General de Minería."
+      },
+      {
+        "text": "2012",
+        "isCorrect": false,
+        "rationale": "En esta fecha se realizaron modificaciones reglamentarias en temas ambientales y de seguridad, pero la ley matriz se promulgated en 1992."
+      }
+    ],
+    "hint": "Ocurrió a inicios de la década de los noventa, coincidiendo con la apertura a las inversiones privadas en el país.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la Constitución Política del Perú y la legislación minera, ¿quién ostenta la soberanía y dominio sobre los recursos naturales del subsuelo?",
+    "opciones": [
+      {
+        "text": "El Estado peruano",
+        "isCorrect": true,
+        "rationale": "El artículo 66 constitucional establece que los recursos naturales son patrimonio de la Nación y el Estado es soberano en su aprovechamiento."
+      },
+      {
+        "text": "El titular de la concesión minera",
+        "isCorrect": false,
+        "rationale": "El concesionario recibe únicamente el derecho de exploración o explotación, no la propiedad del recurso o del subsuelo."
+      },
+      {
+        "text": "El propietario del terreno superficial",
+        "isCorrect": false,
+        "rationale": "En el derecho peruano existe una separación legal entre la propiedad del suelo superficial y el dominio estatal sobre el subsuelo."
+      },
+      {
+        "text": "Las comunidades campesinas aledañas",
+        "isCorrect": false,
+        "rationale": "Las comunidades tienen derechos sobre sus tierras de propiedad superficial y consulta previa, pero el dominio originario del recurso es del Estado."
+      },
+      {
+        "text": "El primer inversionista que registre el hallazgo",
+        "isCorrect": false,
+        "rationale": "El hallazgo da derecho a solicitar una concesión bajo el trámite formal, pero no otorga propiedad originaria sobre los recursos."
+      }
+    ],
+    "hint": "Piensa en la entidad que representa el patrimonio de toda la Nación según el artículo 66 constitucional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes actividades mineras son clasificadas como libres en el Perú y NO requieren el otorgamiento de un título de concesión minera para ejecutarse?",
+    "opciones": [
+      {
+        "text": "Cateo",
+        "isCorrect": true,
+        "rationale": "Consiste en la búsqueda elemental de indicios de mineralización mediante observación visual o análisis sencillos y es de libre ejercicio en áreas no prohibidas."
+      },
+      {
+        "text": "Prospección",
+        "isCorrect": true,
+        "rationale": "Es la investigación de datos geológicos para ubicar yacimientos mediante técnicas físicas o químicas primarias y no requiere de un título concesional."
+      },
+      {
+        "text": "Explotación",
+        "isCorrect": false,
+        "rationale": "La extracción efectiva de los minerales requiere obligatoriamente de un título de concesión minera otorgado por el Estado."
+      },
+      {
+        "text": "Beneficio minero",
+        "isCorrect": false,
+        "rationale": "El procesamiento físico o químico de minerales exige una concesión de beneficio específica aprobada por la autoridad competente."
+      },
+      {
+        "text": "Transporte minero",
+        "isCorrect": false,
+        "rationale": "El traslado masivo de minerales mediante sistemas continuos o especiales requiere de una concesión de transporte minero."
+      }
+    ],
+    "hint": "Identifica las etapas iniciales de búsqueda e investigación básica previas al desarrollo y extracción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué rasgo distingue fundamentalmente a la minería ilegal de la minería informal según la definición legal expuesta en el curso?",
+    "opciones": [
+      {
+        "text": "Se realiza en zonas prohibidas como ríos o áreas protegidas usando maquinaria no permitida",
+        "isCorrect": true,
+        "rationale": "La minería ilegal viola prohibiciones expresas de ubicación y herramientas, sin posibilidad alguna de ser formalizada."
+      },
+      {
+        "text": "Es realizada por empresas constituidas que olvidaron pagar el derecho de vigencia un año",
+        "isCorrect": false,
+        "rationale": "El no pago del derecho de vigencia genera la caducidad de la concesión, no la clasificación automática como actividad ilegal."
+      },
+      {
+        "text": "Inicia actividades económicas con autorización previa pero sin presentar el estudio ambiental",
+        "isCorrect": false,
+        "rationale": "Operar sin instrumentos ambientales aprobados constituye una infracción administrativa en la minería formal o en proceso de formalización."
+      },
+      {
+        "text": "Se limita exclusivamente al procesamiento y refinación de metales en plantas autorizadas",
+        "isCorrect": false,
+        "rationale": "La refinación en plantas autorizadas es una actividad de beneficio formal debidamente regulada por el Estado."
+      },
+      {
+        "text": "Cuenta con concesión otorgada pero no tiene trabajadores inscritos en la planilla electrónica",
+        "isCorrect": false,
+        "rationale": "El incumplimiento laboral configura una falta ante la autoridad de trabajo, pero no convierte automáticamente la operación en minería ilegal."
+      }
+    ],
+    "hint": "Considera la imposibilidad legal de formalización por realizarse en ecosistemas frágiles o cuerpos de agua prohibidos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la etapa minera denominada 'beneficio' según la Ley General de Minería?",
+    "opciones": [
+      {
+        "text": "En el conjunto de procesos físicos y químicos para extraer o concentrar la parte valiosa de los minerales",
+        "isCorrect": true,
+        "rationale": "Comprende operaciones como la trituración, molienda, flotación, fundición y refinación para transformar el mineral extraído."
+      },
+      {
+        "text": "En la distribución de las utilidades económicas de la empresa entre la población local",
+        "isCorrect": false,
+        "rationale": "Esta descripción corresponde al reparto de ganancias o responsabilidad social, no a la etapa técnica de transformación mineral."
+      },
+      {
+        "text": "En la labor de perforación profunda para determinar la forma y volumen del yacimiento",
+        "isCorrect": false,
+        "rationale": "Esa actividad define a la etapa de exploración minera, previa a la extracción y al procesamiento del mineral."
+      },
+      {
+        "text": "En el retiro y reforestación de la vegetación superficial antes de iniciar las excavaciones",
+        "isCorrect": false,
+        "rationale": "Forma parte del plan de preparación o manejo ambiental, no del procesamiento industrial del mineral."
+      },
+      {
+        "text": "En el pago anual que realiza el titular minero para mantener vigente su título administrativo",
+        "isCorrect": false,
+        "rationale": "Dicho pago se denomina derecho de vigencia o patente, no beneficio minero."
+      }
+    ],
+    "hint": "Relaciona el término con el procesamiento industrial de molienda, fundición o refinación del metal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una causal legal para que se declare la caducidad de una concesión minera?",
+    "opciones": [
+      {
+        "text": "El no pago consecutivo del derecho de vigencia o el incumplimiento de la producción mínima requerida",
+        "isCorrect": true,
+        "rationale": "El sistema de amparo por el trabajo exige el pago del derecho anual y la efectiva explotación productiva dentro de los plazos fijados."
+      },
+      {
+        "text": "El cambio de la directiva o de los representantes legales del titular de la concesión",
+        "isCorrect": false,
+        "rationale": "Las modificaciones en el directorio son trámites societarios que no afectan la vigencia del derecho minero otorgado."
+      },
+      {
+        "text": "La contratación de empresas contratistas externas para la realización de las labores mineras",
+        "isCorrect": false,
+        "rationale": "La Ley de Minería permite expresamente la contratación de empresas especializadas para el desarrollo de actividades."
+      },
+      {
+        "text": "La solicitud de evaluación de un nuevo Estudio de Impacto Ambiental ante la autoridad",
+        "isCorrect": false,
+        "rationale": "Presentar o actualizar un instrumento ambiental forma parte del cumplimiento de las obligaciones legales del titular."
+      },
+      {
+        "text": "La exportación del concentrado mineral a mercados de países con los que no hay TLC",
+        "isCorrect": false,
+        "rationale": "El comercio de minerales es libre a nivel internacional y no depende de la existencia de tratados bilaterales específicos."
+      }
+    ],
+    "hint": "Recuerda qué sucede si se deja de abonar la patente anual o no se cumple con la obligación de poner en producción el yacimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la norma marco en el Perú que ordena la gestión ambiental y reconoce el derecho a un ambiente saludable?",
+    "opciones": [
+      {
+        "text": "Ley General del Ambiente (Ley N° 28611)",
+        "isCorrect": true,
+        "rationale": "Es la norma ordenadora que establece los principios básicos para la protección ambiental y el desarrollo sostenible en el país."
+      },
+      {
+        "text": "Ley de Concesiones Eléctricas",
+        "isCorrect": false,
+        "rationale": "Regula el marco específico de la generación, transmisión y distribución de energía eléctrica, no la gestión ambiental general."
+      },
+      {
+        "text": "Ley General de Hidrocarburos",
+        "isCorrect": false,
+        "rationale": "Se enfoca exclusivamente en la exploración, explotación y comercialización de petróleo y gas natural."
+      },
+      {
+        "text": "Código Penal Peruano",
+        "isCorrect": false,
+        "rationale": "Tipifica delitos y sanciones punitivas, pero no constituye la norma administrativa marco de gestión ambiental."
+      },
+      {
+        "text": "Ley de Seguridad y Salud en el Trabajo",
+        "isCorrect": false,
+        "rationale": "Regula las condiciones de prevención de riesgos ocupacionales para los trabajadores, no la calidad del ambiente general."
+      }
+    ],
+    "hint": "Busca la ley marco con número 28611 que rige a todas las actividades humanas en el ámbito del medio ambiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué entidad pública adscrita al MINAM es responsable de revisar y aprobar los Estudios de Impacto Ambiental detallados (EIA-d) para grandes proyectos?",
+    "opciones": [
+      {
+        "text": "Senace",
+        "isCorrect": true,
+        "rationale": "El Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles evalúa y aprueba los EIA-d de mayor envergadura."
+      },
+      {
+        "text": "Sunafil",
+        "isCorrect": false,
+        "rationale": "Su función es la inspección y fiscalización del cumplimiento de las normas sociolaborales y de seguridad en el trabajo."
+      },
+      {
+        "text": "Osinergmin",
+        "isCorrect": false,
+        "rationale": "Fiscaliza la seguridad en la infraestructura minera y el cumplimiento de las actividades energéticas."
+      },
+      {
+        "text": "OEFA",
+        "isCorrect": false,
+        "rationale": "Se encarga de la evaluación, supervisión y fiscalización ambiental ex posterior, no de aprobar los EIA de gran envergadura."
+      },
+      {
+        "text": "PerúPetro",
+        "isCorrect": false,
+        "rationale": "Es la empresa estatal encargada de promocionar y negociar contratos de exploración y explotación de hidrocarburos."
+      }
+    ],
+    "hint": "Es el organismo de 'certificación ambiental' para inversiones sostenibles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del Organismo de Evaluación y Fiscalización Ambiental (OEFA)?",
+    "opciones": [
+      {
+        "text": "Fiscalizar y sancionar el incumplimiento de la normativa y los compromisos ambientales",
+        "isCorrect": true,
+        "rationale": "OEFA ejerce la supervisión, fiscalización directa y potestad sancionadora en materia ambiental sobre las empresas mineras."
+      },
+      {
+        "text": "Otorgar los títulos de concesión minera a las personas naturales y jurídicas",
+        "isCorrect": false,
+        "rationale": "El otorgamiento de las concesiones mineras le corresponde al Ingemmet o a los gobiernos regionales según la escala."
+      },
+      {
+        "text": "Administrar el fondo de pensiones de los trabajadores del sector minero",
+        "isCorrect": false,
+        "rationale": "La administración pensional corresponde a las AFP o a la ONP, no a un organismo de fiscalización ambiental."
+      },
+      {
+        "text": "Aprobar los convenios internacionales sobre la reducción de gases de efecto invernadero",
+        "isCorrect": false,
+        "rationale": "La aprobación de tratados internacionales es competencia del Congreso de la República y el Ministerio de Relaciones Exteriores."
+      },
+      {
+        "text": "Diseñar los planos topográficos para la delimitación de petitorios mineros",
+        "isCorrect": false,
+        "rationale": "Esa tarea técnica de delimitación y catastro minero nacional es competencia exclusiva del Ingemmet."
+      }
+    ],
+    "hint": "Enfócate en la entidad sancionadora que acude a las instalaciones para verificar si se respeta la normativa ecológica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el principio ambiental de 'internalización de costos' o 'contaminador-pagador'?",
+    "opciones": [
+      {
+        "text": "El generador del impacto ambiental debe asumir los costos de las medidas de prevención, humectación y remediación",
+        "isCorrect": true,
+        "rationale": "Obliga a que quien realiza la actividad económica asuma financieramente la reparación o mitigación del daño que produce."
+      },
+      {
+        "text": "El Estado debe pagar todas las indemnizaciones a los pobladores mediante los impuestos generales",
+        "isCorrect": false,
+        "rationale": "El principio busca que la empresa privada internalice sus costos y no traslade la carga económica al erario público."
+      },
+      {
+        "text": "Las comunidades locales deben financiar las auditorías ambientales de las empresas mineras",
+        "isCorrect": false,
+        "rationale": "Los costos de auditorías e instrumentos de gestión ambiental deben ser asumidos íntegramente por el titular del proyecto."
+      },
+      {
+        "text": "Pagar una multa exonerante autoriza a la empresa a continuar contaminando el ecosistema",
+        "isCorrect": false,
+        "rationale": "Las multas son sanciones administrativas y no eximen al titular de la obligación legal de remediar el daño causado."
+      },
+      {
+        "text": "Las mineras informales quedan exentas de toda responsabilidad pecuniaria si venden a precio de costo",
+        "isCorrect": false,
+        "rationale": "La responsabilidad ambiental se aplica a todo generador de daño, sin excepciones fundadas en esquemas comerciales."
+      }
+    ],
+    "hint": "Considera quién debe asumir el costo financiero de prevenir o reparar la contaminación generada por la operación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes órganos forman parte del marco institucional rector y fiscalizador del medio ambiente en el Perú?",
+    "opciones": [
+      {
+        "text": "MINAM (Ministerio del Ambiente)",
+        "isCorrect": true,
+        "rationale": "Es el ente rector del sector ambiental encargado de diseñar y supervisar la Política Nacional del Ambiente."
+      },
+      {
+        "text": "OEFA (Organismo de Evaluación y Fiscalización Ambiental)",
+        "isCorrect": true,
+        "rationale": "Es el organismo técnico especializado a cargo de la fiscalización, supervisión y sanción en materia ambiental."
+      },
+      {
+        "text": "Sernanp (Servicio Nacional de Áreas Naturales Protegidas)",
+        "isCorrect": true,
+        "rationale": "Gestiona y conserva el Sistema Nacional de Áreas Naturales Protegidas por el Estado."
+      },
+      {
+        "text": "Senace (Servicio Nacional de Certificación Ambiental)",
+        "isCorrect": true,
+        "rationale": "Evalúa y aprueba los estudios ambientales detallados de los proyectos de inversión pública y privada."
+      },
+      {
+        "text": "Sunat (Superintendencia Nacional de Aduanas y de Administración Tributaria)",
+        "isCorrect": false,
+        "rationale": "Es la entidad encargada de la recaudación tributaria y el control aduanero, no de la gestión ambiental de recursos."
+      }
+    ],
+    "hint": "Selecciona los ministerios y organismos especializados adscritos que se encargan directamente de políticas, licencias y fiscalización ecológica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es el Estándar de Calidad Ambiental (ECA)?",
+    "opciones": [
+      {
+        "text": "La concentración de elementos físicos, químicos o biológicos en el aire, agua o suelo que no representa riesgo para la salud ni el ambiente",
+        "isCorrect": true,
+        "rationale": "El ECA mide la presencia de contaminantes en el cuerpo receptor (ambiente) para garantizar una calidad de vida adecuada."
+      },
+      {
+        "text": "El límite máximo de emisión que sale directamente del tubo de escape o chimenea de una fábrica",
+        "isCorrect": false,
+        "rationale": "Esa medición directa en la fuente emisora se denomina Límite Máximo Permisible (LMP), no ECA."
+      },
+      {
+        "text": "El precio de venta acordado para comercializar los concentrados de cobre en el extranjero",
+        "isCorrect": false,
+        "rationale": "Corresponde a un indicador comercial o cotización de mercado, no a una norma de calidad ambiental."
+      },
+      {
+        "text": "El número de trabajadores que pueden laborar simultáneamente dentro de una galería subterránea",
+        "isCorrect": false,
+        "rationale": "Ese concepto pertenece a las normas de aforo y seguridad operacional en socavón."
+      },
+      {
+        "text": "El impuesto que cobran las municipalidades a las empresas por extraer minerales no metálicos",
+        "isCorrect": false,
+        "rationale": "Es un tributo municipal, totalmente ajeno a las métricas científicas de calidad del entorno natural."
+      }
+    ],
+    "hint": "Piensa en el nivel máximo aceptable de un elemento presente en el medio receptor (como el aire que respiramos o el agua de un río).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la norma general que regula la prevención de accidentes y enfermedades ocupacionales en el Perú?",
+    "opciones": [
+      {
+        "text": "Ley de Seguridad y Salud en el Trabajo (Ley N° 29783)",
+        "isCorrect": true,
+        "rationale": "Es la norma marco aplicable a todos los sectores económicos para promover la cultura de prevención de riesgos laborales."
+      },
+      {
+        "text": "Ley General de Minería (TUO de 1992)",
+        "isCorrect": false,
+        "rationale": "Regula los derechos de concesión y las etapas mineras, contando con reglamentos sectoriales específicos para la seguridad."
+      },
+      {
+        "text": "Ley Orgánica de Aprovechamiento Sostenible",
+        "isCorrect": false,
+        "rationale": "Establece las condiciones de dominio y concesión de los recursos naturales, no el régimen de seguridad laboral."
+      },
+      {
+        "text": "Ley del Sistema Nacional de Gestión Ambiental",
+        "isCorrect": false,
+        "rationale": "Coordina las políticas públicas ambientales entre entidades del Estado, no la protección física de los trabajadores."
+      },
+      {
+        "text": "Ley Marco del Empleo Público",
+        "isCorrect": false,
+        "rationale": "Aplica al personal administrativo del Estado, sin constituir la ley marco de prevención de accidentes laborales."
+      }
+    ],
+    "hint": "Identifica la norma numerada como 29783 que aplica transversalmente a empleadores y trabajadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo debe estar conformado el Comité de Seguridad y Salud en el Trabajo (SST) en empresas que tienen 20 o más trabajadores?",
+    "opciones": [
+      {
+        "text": "De forma paritaria, con igual número de representantes del empleador y de los trabajadores",
+        "isCorrect": true,
+        "rationale": "La ley exige una representación igualitaria (50% nombrados por la gerencia y 50% elegidos por los trabajadores)."
+      },
+      {
+        "text": "Exclusivamente por ingenieros de minas colegiados designados por el gerente general",
+        "isCorrect": false,
+        "rationale": "El comité exige participación directa de los trabajadores elegidos democráticamente, no solo personal directivo."
+      },
+      {
+        "text": "Únicamente por los delegados sindicales sin participación de la parte empleadora",
+        "isCorrect": false,
+        "rationale": "Un comité puramente sindical violaría el principio de paridad y cooperación con la dirección de la empresa."
+      },
+      {
+        "text": "Por fiscalizadores externos designados de manera permanente por la Sunafil",
+        "isCorrect": false,
+        "rationale": "La Sunafil es el órgano externo de inspección estatal y no integra los comités internos de las empresas."
+      },
+      {
+        "text": "Por los contratistas de servicios que visiten ocasionalmente las instalaciones de la unidad",
+        "isCorrect": false,
+        "rationale": "Los miembros del comité deben ser trabajadores permanentes elegidos por el personal de la empresa o designados por el empleador."
+      }
+    ],
+    "hint": "Recuerda el principio de paridad (50% y 50%) entre ambas partes del vínculo laboral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuántas capacitaciones presenciales u obligatorias en materia de seguridad y salud en el trabajo debe realizar el empleador como mínimo al año?",
+    "opciones": [
+      {
+        "text": "Mínimo 4 capacitaciones al año",
+        "isCorrect": true,
+        "rationale": "La Ley N° 29783 establece como estándar mínimo obligatorio la realización de al menos cuatro capacitaciones anuales."
+      },
+      {
+        "text": "Mínimo 1 capacitación al año",
+        "isCorrect": false,
+        "rationale": "Una sola capacitación al año incumple el estándar legal de prevención continua fijado por la norma."
+      },
+      {
+        "text": "Mínimo 12 capacitaciones al año",
+        "isCorrect": false,
+        "rationale": "Aunque las empresas pueden realizar más talleres, doce no es el mínimo legal dispuesto en la Ley 29783."
+      },
+      {
+        "text": "Únicamente al momento de contratar al trabajador",
+        "isCorrect": false,
+        "rationale": "La inducción inicial es obligatoria, pero debe complementarse con las cuatro capacitaciones mínimas anuales durante la relación laboral."
+      },
+      {
+        "text": "Solo cuando ocurra un accidente mortal en la unidad operativa",
+        "isCorrect": false,
+        "rationale": "La capacitación es preventiva y periódica, no una medida que se aplique de forma puramente reactiva tras una tragedia."
+      }
+    ],
+    "hint": "Piensa en el número de trimestres que tiene un año comercial para recordar el mínimo exigido por ley.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el principio de 'primacía de la realidad' aplicable en las inspecciones de seguridad y salud en el trabajo?",
+    "opciones": [
+      {
+        "text": "En dar preferencia a lo que ocurre en los hechos cuando existe contradicción con los documentos presentados",
+        "isCorrect": true,
+        "rationale": "Si los documentos dicen que se entregaron EPP o se capacitó, pero en la práctica el trabajador carece de ello, el inspector sanciona la realidad observada."
+      },
+      {
+        "text": "En asumir que todas las declaraciones firmadas por el empleador son verdaderas sin requerir verificación",
+        "isCorrect": false,
+        "rationale": "Esa postura contradice la facultad inspectiva, la cual busca constatar los hechos reales en el centro de trabajo."
+      },
+      {
+        "text": "En dar validez únicamente a los contratos que han sido formalizados ante un notario público",
+        "isCorrect": false,
+        "rationale": "El principio laboral no se refiere a formalidades notariales, sino a la prevalencia de los hechos reales sobre las formas escritas."
+      },
+      {
+        "text": "En priorizar el pago de multas administrativas sobre la reparación de las deficiencias de seguridad",
+        "isCorrect": false,
+        "rationale": "La finalidad del sistema es corregir la condición insegura en la realidad para evitar lesiones al personal."
+      },
+      {
+        "text": "En aplicar el reglamento interno solamente cuando el trabajador haya cometido una falta de conducta grave",
+        "isCorrect": false,
+        "rationale": "El reglamento rige permanentemente y el principio de primacía evalúa el cumplimiento efectivo de las medidas de protección."
+      }
+    ],
+    "hint": "Si un documento afirma algo pero la práctica física evidencia lo contrario, ¿a qué le da prioridad la autoridad laboral?",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es la matriz IPERC dentro del Sistema de Gestión de Seguridad y Salud en el Trabajo?",
+    "opciones": [
+      {
+        "text": "La herramienta técnica para la Identificación de Peligros, Evaluación de Riesgos y Medidas de Control",
+        "isCorrect": true,
+        "rationale": "El IPERC permite mapear los riesgos de cada puesto de trabajo y establecer barreras de protección eficaces."
+      },
+      {
+        "text": "El comprobante tributario que emite la empresa para pagar el Canon Minero",
+        "isCorrect": false,
+        "rationale": "El Canon es una distribución de la recaudación del impuesto a la renta y no tiene relación con las matrices de riesgo operacional."
+      },
+      {
+        "text": "El contrato suscrito con el Sindicato para fijar las escalas salariales del año",
+        "isCorrect": false,
+        "rationale": "Ese acuerdo corresponde a una negociación colectiva de condiciones de trabajo y remuneración."
+      },
+      {
+        "text": "La solicitud presentada ante el Ministerio de Energía y Minas para pedir un petitorio",
+        "isCorrect": false,
+        "rationale": "El procedimiento administrativo de petitorio minero tramita derechos de concesión, no la prevención de riesgos internos."
+      },
+      {
+        "text": "El carné de identificación emitido por la policía para ingresar a la mina subterránea",
+        "isCorrect": false,
+        "rationale": "Se trata de un fotocheck o pase de ingreso, no del instrumento técnico de gestión preventiva."
+      }
+    ],
+    "hint": "Observa las siglas: I (Identificación), P (Peligros), E (Evaluación), R (Riesgos), C (Controles).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes son obligaciones directas e ineludibles del empleador en materia de seguridad y salud en el trabajo?",
+    "opciones": [
+      {
+        "text": "Proporcionar Equipos de Protección Personal (EPP) adecuados al puesto de trabajo",
+        "isCorrect": true,
+        "rationale": "El empleador debe dotar de los EPP específicos y sin costo alguno para el trabajador."
+      },
+      {
+        "text": "Garantizar la supervisión e inspección constante del uso correcto de los EPP",
+        "isCorrect": true,
+        "rationale": "No basta con entregar los equipos; el empleador mantiene el deber de vigilancia activa para que se utilicen."
+      },
+      {
+        "text": "Entregar copia del Reglamento Interno de Seguridad y Salud en el Trabajo a cada trabajador",
+        "isCorrect": true,
+        "rationale": "Es obligatorio poner en conocimiento formal de todo el personal las normas internas de prevención."
+      },
+      {
+        "text": "Financiar íntegramente las evaluaciones médicas ocupacionales",
+        "isCorrect": true,
+        "rationale": "Los exámenes médicos obligatorios (ingreso, periódico y retiro) son asumidos económicamente por la empresa."
+      },
+      {
+        "text": "Trasladar el costo de las multas de la Sunafil a los salarios de los operarios lesionados",
+        "isCorrect": false,
+        "rationale": "Las multas administrativas impuestas por incumplimiento patronal no pueden descontarse de las remuneraciones."
+      }
+    ],
+    "hint": "Selecciona las medidas preventivas que implican dotación, supervisión, reglamentación e inversión en salud a cargo exclusivo de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Aproximadamente, ¿qué porcentaje de las exportaciones totales del Perú representa el sector minero según los datos expuestos en el curso?",
+    "opciones": [
+      {
+        "text": "Alrededor del 60% al 64%",
+        "isCorrect": true,
+        "rationale": "Los minerales constituyen cerca de las dos terceras partes de las exportaciones totales, siendo el pilar de la balanza comercial."
+      },
+      {
+        "text": "Menos del 10%",
+        "isCorrect": false,
+        "rationale": "Un porcentaje tan bajo no reflejaría el carácter predominantemente minero de la canasta exportadora peruana."
+      },
+      {
+        "text": "Alrededor del 25%",
+        "isCorrect": false,
+        "rationale": "La minería supera ampliamente ese porcentaje, duplicando esa cifra en el total de envíos al extranjero."
+      },
+      {
+        "text": "Casi el 95%",
+        "isCorrect": false,
+        "rationale": "Aunque es la actividad dominante, existen otros sectores agroexportadores, pesqueros e industriales que completan el total."
+      },
+      {
+        "text": "Exactamente el 40%",
+        "isCorrect": false,
+        "rationale": "La participación real de los productos mineros en la canasta de exportación supera sustancialmente el 50%."
+      }
+    ],
+    "hint": "Representa cerca de dos tercios de la canasta total de ventas del Perú al exterior.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son los dos minerales que concentran el mayor valor dentro de las exportaciones mineras del Perú?",
+    "opciones": [
+      {
+        "text": "Cobre y oro",
+        "isCorrect": true,
+        "rationale": "El cobre y el oro representan los mayores ingresos divisas por exportación en la balanza comercial peruana."
+      },
+      {
+        "text": "Hierro y carbón",
+        "isCorrect": false,
+        "rationale": "Aunque el hierro se produce en volumen, el valor total exportado del cobre y oro es inmensamente superior."
+      },
+      {
+        "text": "Litio y uranio",
+        "isCorrect": false,
+        "rationale": "Son recursos en fase de exploración o desarrollo y no constituyen los productos tradicionales de exportación mayoritaria."
+      },
+      {
+        "text": "Plata y mercurio",
+        "isCorrect": false,
+        "rationale": "La plata es un producto importante, pero el cobre encabeza las cifras de valor económico de exportación."
+      },
+      {
+        "text": "Estaño y plomo",
+        "isCorrect": false,
+        "rationale": "Son metales secundarios en el volumen total comparados con las cifras millonarias del cobre y el oro."
+      }
+    ],
+    "hint": "Se trata del metal rojo usado masivamente en electricidad y del metal precioso de cobertura financiera.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué se entiende por 'commodity' en el contexto del comercio internacional de minerales?",
+    "opciones": [
+      {
+        "text": "Un producto básico estandarizado que se cotiza en mercados internacionales con precios globales",
+        "isCorrect": true,
+        "rationale": "Los minerales como el cobre o el oro son commodities porque su calidad es uniforme y su precio se fija en bolsas mundiales."
+      },
+      {
+        "text": "Un impuesto especial que se cobra en la aduana de entrada de un país comprador",
+        "isCorrect": false,
+        "rationale": "Ese concepto define a un arancel aduanero, no a la naturaleza del producto comerciado."
+      },
+      {
+        "text": "Un acuerdo firmado exclusivamente entre dos sindicatos de distintas naciones",
+        "isCorrect": false,
+        "rationale": "Las negociaciones sindicales internacionales no se denominan commodities."
+      },
+      {
+        "text": "Un certificado que garantiza que la mina opera sin emitir ningún tipo de polvo",
+        "isCorrect": false,
+        "rationale": "Es una certificación ambiental u operacional, ajena a la categoría económico-comercial del bien."
+      },
+      {
+        "text": "Un subsidio gubernamental otorgado para rebajar el costo de la gasolina de los camiones",
+        "isCorrect": false,
+        "rationale": "Constituye un estímulo o subvención estatal, no un producto básico de exportación mundial."
+      }
+    ],
+    "hint": "Se refiere a bienes primarios e insumos estándar cuyos precios se determinan en las bolsas de valores internacionales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es uno de los objetivos esenciales del Convenio sobre la Diversidad Biológica?",
+    "opciones": [
+      {
+        "text": "Promover la conservación y el uso sostenible de los recursos biológicos y la participación justa en sus beneficios",
+        "isCorrect": true,
+        "rationale": "El convenio busca evitar la extinción de especies y garantizar el desarrollo sostenible en armonía con el entorno."
+      },
+      {
+        "text": "Aumentar el cobro de aranceles al transporte de concentrados mineros",
+        "isCorrect": false,
+        "rationale": "El convenio es un tratado ecológico y de biodiversidad, no un acuerdo tributario o comercial de aduanas."
+      },
+      {
+        "text": "Fijar una tarifa única para el pago de salarios a ingenieros en todo el mundo",
+        "isCorrect": false,
+        "rationale": "La regulación salarial es un tema de legislación laboral interna o convenios de la OIT, no de diversidad biológica."
+      },
+      {
+        "text": "Prohibir la firma de Tratados de Libre Comercio entre continentes",
+        "isCorrect": false,
+        "rationale": "El tratado de biodiversidad es compatible con el comercio internacional siempre que se respeten los estándares ambientales."
+      },
+      {
+        "text": "Transferir las concesiones mineras privadas a la administración exclusiva de la ONU",
+        "isCorrect": false,
+        "rationale": "Cada Estado mantiene su soberanía territorial sobre sus recursos naturales con arreglo a sus leyes."
+      }
+    ],
+    "hint": "Enfócate en la protección de los ecosistemas, fauna, flora y el aprovechamiento de recursos genéticos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué finalidad central persiguen acuerdos internacionales sobre el clima como el Protocolo de Kyoto y el Acuerdo de París?",
+    "opciones": [
+      {
+        "text": "Reducir las emisiones de gases de efecto invernadero para frenar el calentamiento global",
+        "isCorrect": true,
+        "rationale": "Ambos instrumentos imponen o promueven compromisos de mitigación de gases para evitar el aumento de la temperatura mundial."
+      },
+      {
+        "text": "Determinar qué empresas mineras pueden cotizar en la bolsa de valores de Nueva York",
+        "isCorrect": false,
+        "rationale": "La cotización bursátil depende de los organismos de regulación financiera y de los mercados de valores."
+      },
+      {
+        "text": "Garantizar el cobro del IGV a la venta de minerales en los puertos de embarque",
+        "isCorrect": false,
+        "rationale": "La recaudación de impuestos indirectos responde a la legislación tributaria nacional de cada país."
+      },
+      {
+        "text": "Establecer la jornada de trabajo máxima en socavón a nivel internacional",
+        "isCorrect": false,
+        "rationale": "Las condiciones de jornada laboral pertenecen al ámbito sociolaboral y a la Organización Internacional del Trabajo (OIT)."
+      },
+      {
+        "text": "Exonerar a las empresas mineras del cumplimiento de las fiscalizaciones de la Sunafil",
+        "isCorrect": false,
+        "rationale": "Ningún acuerdo climático internacional anula la potestad de inspección laboral de las autoridades nacionales."
+      }
+    ],
+    "hint": "Piensa en el objetivo global de controlar gases como el CO2 para evitar el cambio climático.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es un beneficio directo que busca un Tratado de Libre Comercio (TLC) para la exportación de bienes?",
+    "opciones": [
+      {
+        "text": "La reducción o eliminación gradual de aranceles e impuestos aduaneros entre los países firmantes",
+        "isCorrect": true,
+        "rationale": "Los TLC buscan otorgar preferencias arancelarias para que los productos ingresen al mercado destino con mayor competitividad."
+      },
+      {
+        "text": "La eliminación obligatoria del pago del Canon Minero en las zonas de producción",
+        "isCorrect": false,
+        "rationale": "El Canon es un mecanismo de redistribución tributaria interna del Perú y no depende de los convenios comerciales externos."
+      },
+      {
+        "text": "La prohibición de realizar evaluaciones ambientales en los proyectos de inversión",
+        "isCorrect": false,
+        "rationale": "Los TLC modernos exigen expresamente el respeto de la legislación ambiental y la no relajación de estándares."
+      },
+      {
+        "text": "El traspaso de la propiedad del yacimiento minero al gobierno del país comprador",
+        "isCorrect": false,
+        "rationale": "Los TLC promueven reglas de inversión pero no transfieren la soberanía ni la propiedad del subsuelo nacional."
+      },
+      {
+        "text": "La condonación de todas las deudas tributarias acumuladas ante la Sunat",
+        "isCorrect": false,
+        "rationale": "Las deudas fiscales locales no se condonan mediante la suscripción de acuerdos de comercio internacional."
+      }
+    ],
+    "hint": "Piensa en las barreras o impuestos de aduana que se rebajan para vender productos entre naciones socias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes acuerdos o convenios de relevancia ambiental y comercial han sido ratificados por el Perú según lo expuesto?",
+    "opciones": [
+      {
+        "text": "Protocolo de Kyoto",
+        "isCorrect": true,
+        "rationale": "El Perú se adhirió a este protocolo internacional para asumir compromisos de reducción de gases de efecto invernadero."
+      },
+      {
+        "text": "Acuerdo de París",
+        "isCorrect": true,
+        "rationale": "El Perú ratificó este tratado climático global para implementar medidas de adaptación y mitigación hacia el 2030."
+      },
+      {
+        "text": "Convenio sobre la Diversidad Biológica",
+        "isCorrect": true,
+        "rationale": "Fue adoptado para proteger el patrimonio de biodiversidad biológica y promover el uso sostenible de recursos."
+      },
+      {
+        "text": "Tratados de Libre Comercio (TLC) con socios como la Unión Europea y EE. UU.",
+        "isCorrect": true,
+        "rationale": "Son acuerdos bilaterales y multilaterales que fijan condiciones de desgravación arancelaria para las exportaciones."
+      },
+      {
+        "text": "Tratado de Exoneración Total de Normas de Seguridad para la Minería Ilegal",
+        "isCorrect": false,
+        "rationale": "No existe ningún tratado internacional que legitime ni desregule la minería ilegal o la exima de normas."
+      }
+    ],
+    "hint": "Elige los tratados marco de conservación del clima, diversidad biológica y facilitación del comercio internacional vigentes en el país.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo define la Ley General de Minería y el Artículo 66 de la Constitución Política del Perú el dominio originario del Estado sobre los recursos minerales?",
+    "opciones": [
+      {
+        "text": "El Estado es propietario absoluto de los yacimientos e Inmuebles mineros, impidiendo cualquier transferencia de su aprovechamiento a empresas privadas.",
+        "isCorrect": false,
+        "rationale": "El ordenamiento constitucional permite el otorgamiento de derechos de aprovechamiento a particulares manteniendo el dominio soberano de la Nación."
+      },
+      {
+        "text": "Los recursos naturales pertenecen al titular del suelo o terreno superficial donde se encuentra ubicado el yacimiento mineral.",
+        "isCorrect": false,
+        "rationale": "En la legislación peruana se aplica el principio de separación de dominios, donde la propiedad del terreno superficial es independiente de la concesión minera."
+      },
+      {
+        "text": "Los recursos naturales son patrimonio de la Nación y el Estado es soberano en su aprovechamiento, otorgando derechos mediante el sistema de concesiones.",
+        "isCorrect": true,
+        "rationale": "El mandato constitucional establece la titularidad de la Nación sobre los recursos y faculta al Estado para otorgar su uso sostenible a particulares sin transferir la propiedad originaria del yacimiento."
+      },
+      {
+        "text": "La propiedad del recurso mineral se transfiere de forma perpetua e irrestricta al titular minero desde el momento en que inicia los trabajos de cateo.",
+        "isCorrect": false,
+        "rationale": "El cateo no otorga derechos exclusivos ni propiedad sobre el yacimiento, y la concesión no otorga propiedad absoluta sobre la sustancia in situ."
+      },
+      {
+        "text": "El Estado ejerce un dominio privado sobre los minerales, pudiendo comercializarlos directamente sin requerir leyes orgánicas reguladoras.",
+        "isCorrect": false,
+        "rationale": "El dominio del Estado es de carácter público y soberano como patrimonio de la Nación, regulado expresamente por ley orgánica."
+      }
+    ],
+    "hint": "Considera la distinción constitucional entre el patrimonio de la Nación y el mecanismo administrativo para otorgar su uso a terceros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el criterio técnico-jurídico fundamental que diferencia a la minería informal de la minería ilegal en el Perú?",
+    "opciones": [
+      {
+        "text": "La minería informal utiliza maquinaria pesada en zonas urbanas, mientras que la ilegal opera exclusivamente en socavones subterráneos de la sierra.",
+        "isCorrect": false,
+        "rationale": "La delimitación legal no se basa en la topografía ni en la ubicación urbana o de socavón, sino en el cumplimiento normativo y la prohibición geográfica."
+      },
+      {
+        "text": "La minería ilegal opera vulnerando prohibiciones explícitas o en zonas prohibidas (como lechos de ríos o reservas), mientras que la informal no se ubica en zonas prohibidas pero carece de permisos e inició un proceso de formalización.",
+        "isCorrect": true,
+        "rationale": "La ilegalidad radica en operar en ecosistemas protegidos o vedados por ley sin posibilidad de formalización, a diferencia de la informalidad que busca adecuarse al marco normativo."
+      },
+      {
+        "text": "La minería informal no paga ningún tipo de tributo al Estado, mientras que la minería ilegal paga aranceles reducidos de exportación.",
+        "isCorrect": false,
+        "rationale": "Ninguna actividad fuera del marco legal paga tributos regulares; de hecho, la ilegalidad implica una violación gravosa de prohibiciones administrativas y penales."
+      },
+      {
+        "text": "La minería ilegal se limita a la extracción de metales no metálicos, mientras que la informal abarca únicamente la minería aurífera a gran escala.",
+        "isCorrect": false,
+        "rationale": "El tipo de sustancia extraída no define la condición de ilegalidad o informalidad de la actividad minera."
+      },
+      {
+        "text": "Ambos conceptos son legalmente idénticos y reciben exactamente las mismas sanciones administrativas y penales sin distinción alguna.",
+        "isCorrect": false,
+        "rationale": "El marco jurídico sanciona con mayor severidad la minería ilegal debido a la invasión de zonas vedadas y delitos conexos."
+      }
+    ],
+    "hint": "Piensa en el lugar geográfico donde se realiza la actividad y si la norma permite o prohíbe formalmente su desarrollo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el Texto Único Ordenado de la Ley General de Minería, ¿cuáles de las siguientes actividades mineras son de libre ejercicio en el territorio nacional y no requieren el otorgamiento previo de una concesión?",
+    "opciones": [
+      {
+        "text": "El cateo minero.",
+        "isCorrect": true,
+        "rationale": "Consiste en la búsqueda elemental de indicios de mineralización y es libre en todo el territorio nacional, salvo en zonas prohibidas o con derechos de terceros."
+      },
+      {
+        "text": "La prospección minera.",
+        "isCorrect": true,
+        "rationale": "Es la investigación técnica para ubicar yacimientos mediante indicaciones físicas o químicas y no exige título de concesión para ejecutarse."
+      },
+      {
+        "text": "La comercialización de sustancias minerales.",
+        "isCorrect": true,
+        "rationale": "Es libre internamente y externamente, requiriendo el cumplimiento de las normas tributarias y aduaneras generales pero no una concesión extractiva."
+      },
+      {
+        "text": "La explotación minera masiva.",
+        "isCorrect": false,
+        "rationale": "Requiere obligatoriamente de una concesión minera aprobada y del cumplimiento de permisos ambientales para la extracción de los minerales."
+      },
+      {
+        "text": "El proceso de beneficio de minerales.",
+        "isCorrect": false,
+        "rationale": "El beneficio para concentrar o fundir minerales se realiza estrictamente bajo el sistema de concesiones de beneficio."
+      }
+    ],
+    "hint": "Identifica las actividades preliminares de búsqueda e intercambio comercial que no implican la modificación sustancial del yacimiento ni la extracción a escala industrial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Bajo qué condición específica se produce la caducidad de una concesión minera según la normativa vigente en el Perú?",
+    "opciones": [
+      {
+        "text": "Por la sola presentación de una denuncia ambiental ante la OEFA por parte de una comunidad vecina.",
+        "isCorrect": false,
+        "rationale": "Las denuncias ambientales generan procesos de fiscalización y sanción administrativa, pero no provocan automáticamente la caducidad del título minero."
+      },
+      {
+        "text": "Por el no pago continuo del derecho de vigencia o de la penalidad durante dos años consecutivos.",
+        "isCorrect": true,
+        "rationale": "El incumplimiento del pago del derecho de vigencia o la penalidad por dos años consecutivos constituye causal legal expresa para declarar la caducidad de la concesión."
+      },
+      {
+        "text": "Por la venta o cesión de los derechos de la concesión a una empresa extranjera registrada en el país.",
+        "isCorrect": false,
+        "rationale": "La transferencia de derechos concesionales a favor de terceros está permitida bajo los procedimientos del marco jurídico minero."
+      },
+      {
+        "text": "Por la modificación del estudio de impacto ambiental durante el quinto año de exploración.",
+        "isCorrect": false,
+        "rationale": "La actualización o modificación de instrumentos ambientales es un procedimiento regular y no una causal de extinción del título de la concesión."
+      },
+      {
+        "text": "Por haber contratado personal extranjero para la dirección técnica de las labores de campo.",
+        "isCorrect": false,
+        "rationale": "La contratación de personal calificado no afecta la validez o vigencia de los títulos de concesión minera otorgados por el Estado."
+      }
+    ],
+    "hint": "Enfócate en la obligación tributaria o económica anual requerida para mantener vigente el título concedido por el Estado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué facultad otorga al titular minero la concesión de beneficio en el desarrollo de la industria minera?",
+    "opciones": [
+      {
+        "text": "El derecho exclusivo de extraer minerales de socavón sin necesidad de tramitar permisos de agua.",
+        "isCorrect": false,
+        "rationale": "La extracción de minerales corresponde a la concesión de explotación, y el uso de agua requiere licencias hídricas específicas."
+      },
+      {
+        "text": "El derecho de someter los minerales extraídos a procesos físicos, químicos o fisicoquímicos como trituración, concentración, fundición o refinación.",
+        "isCorrect": true,
+        "rationale": "La concesión de beneficio ampara el procesamiento industrial del mineral para la obtención de productos refinados o concentrados comercializables."
+      },
+      {
+        "text": "La potestad de comercializar maquinaria pesada sin pagar impuestos de importación en fronteras.",
+        "isCorrect": false,
+        "rationale": "La importación de maquinaria se rige por la legislación aduanera general y no por las facultades de una concesión de beneficio."
+      },
+      {
+        "text": "La propiedad definitiva e inalienable sobre las cuencas hidrográficas adyacentes a la planta concentradora.",
+        "isCorrect": false,
+        "rationale": "El recurso hídrico es de dominio público y las plantas de beneficio solo obtienen autorizaciones de uso sin propiedad del bien público."
+      },
+      {
+        "text": "La exención total de presentar estudios ambientales ante el Ministerio del Ambiente durante 30 años.",
+        "isCorrect": false,
+        "rationale": "Toda instalación de plantas de beneficio debe contar con la certificación ambiental previa y someterse a la fiscalización ambiental."
+      }
+    ],
+    "hint": "Diferencia la etapa de extracción primaria en el yacimiento del proceso industrial de transformación y mejora del mineral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el Sistema de Amparo por el Trabajo aplicable a los titulares de concesiones mineras?",
+    "opciones": [
+      {
+        "text": "En la obligación estatal de financiar el 50% de los salarios de los mineros en épocas de baja de precios internacionales.",
+        "isCorrect": false,
+        "rationale": "El amparo no se refiere a subsidios estatales, sino a la exigencia de inversión y trabajo productivo por parte del concesionario."
+      },
+      {
+        "text": "En el requerimiento legal de explorar y explotar efectivamente la concesión minera alcanzando niveles mínimos de producción previstos por ley para evitar fines especulativos.",
+        "isCorrect": true,
+        "rationale": "El marco normativo exige que el titular invierta y produzca en la concesión otorgada, sancionando la inactividad mediante penalidades o caducidad."
+      },
+      {
+        "text": "En el derecho del concesionario a suspender las labores indefinidamente sin incurrir en costos ni penalidades.",
+        "isCorrect": false,
+        "rationale": "La paralización sin justificación ni pago de penalidades contraviene el principio del uso productivo de las concesiones otorgadas."
+      },
+      {
+        "text": "En la garantía constitucional que impide la sindicalización de los trabajadores en campamentos mineros alejados.",
+        "isCorrect": false,
+        "rationale": "El sistema de amparo es una figura del derecho minero sobre la producción y no afecta los derechos colectivos laborales."
+      },
+      {
+        "text": "En la potestad de expropiar terrenos agrícolas sin indemnización previa cuando se descubra un yacimiento de cobre.",
+        "isCorrect": false,
+        "rationale": "La servidumbre u obtención de tierras requiere acuerdo entre partes o procedimiento formal con la respectiva compensación económica."
+      }
+    ],
+    "hint": "Recuerda que la norma busca evitar que los particulares mantengan terrenos mineros inactivos con intenciones puramente especulativas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo central de la Ley Orgánica para el Aprovechamiento Sostenible de los Recursos Naturales (Ley 26821)?",
+    "opciones": [
+      {
+        "text": "Prohibir de manera absoluta la participación de capitales privados en la extracción de minerales y petróleo.",
+        "isCorrect": false,
+        "rationale": "La Ley 26821 promueve la inversión privada garantizando el marco de sostenibilidad y cumplimiento del interés público."
+      },
+      {
+        "text": "Establecer el marco general para la gestión ambiental y el uso equilibrado de los componentes de la naturaleza susceptibles de valoración económica.",
+        "isCorrect": true,
+        "rationale": "La Ley 26821 regula las condiciones de aprovechamiento de los recursos naturales renovables y no renovables con valor actual o potencial en el mercado."
+      },
+      {
+        "text": "Transferir a las municipalidades la potestad exclusiva de otorgar concesiones petroleras e hídricas.",
+        "isCorrect": false,
+        "rationale": "El otorgamiento de derechos sobre recursos naturales se realiza a través de las autoridades sectoriales y del Gobierno Central mediante leyes especiales."
+      },
+      {
+        "text": "Fijar unilateralmente los precios de venta del cobre y del oro en las Bolsas de Valores internacionales.",
+        "isCorrect": false,
+        "rationale": "Los precios de exportación dependen de los mercados globales (commodities) y no son fijados por la norma orgánica interna."
+      },
+      {
+        "text": "Eximir a las empresas mineras de realizar evaluaciones de impacto ambiental si demuestran rentabilidad social.",
+        "isCorrect": false,
+        "rationale": "El uso sostenible exige obligatoriamente la evaluación y el cumplimiento de los instrumentos de gestión ambiental."
+      }
+    ],
+    "hint": "Analiza cómo la ley orienta el equilibrio entre la explotación económica de los recursos y la conservación para las futuras generaciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes entidades del Estado peruano forman parte del ecosistema de fiscalización y certificación ambiental en el sector minero?",
+    "opciones": [
+      {
+        "text": "El Organismo de Evaluación y Fiscalización Ambiental (OEFA).",
+        "isCorrect": true,
+        "rationale": "Es el ente adscrito al MINAM encargado del seguimiento, supervisión, fiscalización y sanción en materia ambiental para la gran y mediana minería."
+      },
+      {
+        "text": "El Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles (SENACE).",
+        "isCorrect": true,
+        "rationale": "Organismo encargado de evaluar y aprobar los Estudios de Impacto Ambiental detallados (EIA-d) de los proyectos mineros de gran envergadura."
+      },
+      {
+        "text": "El Servicio Nacional de Áreas Naturales Protegidas por el Estado (SERNANP).",
+        "isCorrect": true,
+        "rationale": "Emite opiniones técnicas vinculantes sobre proyectos que se pretendan desarrollar en Áreas Naturales Protegidas o sus zonas de amortiguamiento."
+      },
+      {
+        "text": "El Fondo Monetario Internacional (FMI).",
+        "isCorrect": false,
+        "rationale": "Es una entidad financiera internacional sin competencias regulatorias ni de fiscalización ambiental en el Perú."
+      },
+      {
+        "text": "La Corte Interamericana de Derechos Humanos (Corte IDH).",
+        "isCorrect": false,
+        "rationale": "Es un órgano jurisdiccional internacional de derechos humanos, no un organismo administrativo de evaluación ambiental sectorial."
+      }
+    ],
+    "hint": "Selecciona los organismos públicos descentralizados e instituciones técnicas del Estado peruano con funciones de control, aprobación de estudios e inspección ambiental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la gestión ambiental minera, ¿qué define formalmente al Estándar de Calidad Ambiental (ECA)?",
+    "opciones": [
+      {
+        "text": "Es el volumen exacto de mineral que una planta concentradora puede procesar por hora sin generar ruido.",
+        "isCorrect": false,
+        "rationale": "La capacidad operativa de una planta es una variable técnica de producción, no una medida de calidad ambiental."
+      },
+      {
+        "text": "Es la concentración máxima permisible de elementos físicos, químicos o biológicos en el cuerpo receptor (aire, agua o suelo) que no representa riesgo para la salud o el ambiente.",
+        "isCorrect": true,
+        "rationale": "El ECA mide la calidad del cuerpo receptor ambiental en su conjunto, sirviendo como meta de calidad e indicador de referencia."
+      },
+      {
+        "text": "Es la sanción pecuniaria en Unidades Impositivas Tributarias (UIT) que aplica el MINAM por vertimientos ilegales.",
+        "isCorrect": false,
+        "rationale": "Las sanciones pecuniarias son multas administrativas derivadas de infracciones, no parámetros de calidad ambiental."
+      },
+      {
+        "text": "Es el plan financiero utilizado por las empresas para presupuestar el pago del Canon Minero.",
+        "isCorrect": false,
+        "rationale": "El Canon Minero es un mecanismo de redistribución fiscal y tributario, totalmente independiente del parámetro técnico del ECA."
+      },
+      {
+        "text": "Es un permiso emitido por la municipalidad provincial para habilitar el transporte terrestre de concentrados.",
+        "isCorrect": false,
+        "rationale": "Las habilitaciones vehiculares son tramitadas ante el sector transportes y no corresponden a la definición de un ECA."
+      }
+    ],
+    "hint": "Ten en cuenta que este parámetro evalúa directamente el estado de los elementos naturales en el entorno y no la emisión en el tubo de escape o tubería de descarga.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se diferencia la responsabilidad administrativa de la responsabilidad penal en casos de delitos o infracciones ambientales mineras?",
+    "opciones": [
+      {
+        "text": "La responsabilidad administrativa impone multas y medidas correctivas dictadas por entidades como el OEFA, mientras que la responsabilidad penal imputa sanciones privativas de la libertad dictadas por el Poder Judicial.",
+        "isCorrect": true,
+        "rationale": "El fuero administrativo sanciona a la persona jurídica con multas o clausuras, en tanto el fuero penal persigue a la persona natural con penas de cárcel por tipificación ilícita."
+      },
+      {
+        "text": "La responsabilidad penal solo aplica para mineros artesanales, en tanto la administrativa rige únicamente para multinacionales.",
+        "isCorrect": false,
+        "rationale": "La ley penal y administrativa aplica a cualquier estrato o titular sin distinción del tamaño de la operación si se vulnera la norma."
+      },
+      {
+        "text": "La responsabilidad administrativa es determinada por la Policía Nacional, mientras que la penal la imponen los inspectores de la SUNAFIL.",
+        "isCorrect": false,
+        "rationale": "Las competencias sancionadoras administrativas recaen en organismos ambientales (OEFA) y las penales en jueces del Poder Judicial tras acusación fiscal."
+      },
+      {
+        "text": "Ambas responsabilidades son procesadas y resueltas exclusivamente en el Ministerio de Energía y Minas.",
+        "isCorrect": false,
+        "rationale": "El MINEM promueve y otorga concesiones, pero la fiscalización ambiental penal corresponde al Ministerio Público y Poder Judicial."
+      },
+      {
+        "text": "La responsabilidad administrativa prescribe a las 24 horas, mientras que la penal exige indemnización voluntaria.",
+        "isCorrect": false,
+        "rationale": "Los plazos de prescripción administrativa responden a la Ley del Procedimiento Administrativo General y no a un lapso tan breve."
+      }
+    ],
+    "hint": "Diferencia la sanción económica/institucional ejercida por el órgano fiscalizador del Estado frente a la sanción punitiva personal ejercida por un juez penal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Con relación a la evaluación de impacto ambiental requerida para proyectos de inversión minera, ¿cuáles de los siguientes enunciados caracterizan las fases e instrumentos aplicables?",
+    "opciones": [
+      {
+        "text": "La Declaración de Impacto Ambiental (DIA) aplica a proyectos cuyos impactos negativos se consideran leves.",
+        "isCorrect": true,
+        "rationale": "Es la categoría I del Sistema Nacional de Evaluación del Impacto Ambiental (SEIA) reservada para proyectos con impactos ambientales de baja severidad."
+      },
+      {
+        "text": "El Estudio de Impacto Ambiental detallado (EIA-d) se exige para proyectos de gran envergadura con impactos negativos significativos.",
+        "isCorrect": true,
+        "rationale": "La categoría III requiere una evaluación exhaustiva e integral a cargo del SENACE debido a la magnitud de las modificaciones ambientales previstas."
+      },
+      {
+        "text": "Los Términos de Referencia constituyen las guías de contenido técnico para la elaboración adecuada de los estudios ambientales.",
+        "isCorrect": true,
+        "rationale": "Son los lineamientos normativos que la autoridad fija para que el titular elabore el documento técnico con todos los requisitos exigidos."
+      },
+      {
+        "text": "Los proyectos mineros en etapa de exploración no requieren presentar ningún instrumento de gestión ambiental.",
+        "isCorrect": false,
+        "rationale": "Toda actividad extractiva o de exploración requiere contar con la certificación ambiental correspondiente según su categoría de impacto."
+      },
+      {
+        "text": "El estudio de impacto ambiental puede presentarse 5 años después de haber finalizado la etapa de producción comercial.",
+        "isCorrect": false,
+        "rationale": "La evaluación ambiental es de carácter estrictamente preventivo y debe aprobarse obligatoriamente antes de iniciar las obras e inversiones."
+      }
+    ],
+    "hint": "Enfócate en la naturaleza preventiva del instrumento y la gradación de los estudios según la gravedad de los impactos potenciales identificados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se aplica el principio de remediación ambiental y cierre de minas al término de la concesión o vida útil del yacimiento?",
+    "opciones": [
+      {
+        "text": "El titular minero puede abandonar el área sin realizar labores de reacondicionamiento si pagó puntualmente el Canon Minero.",
+        "isCorrect": false,
+        "rationale": "El pago de tributos o cánones no exime de la obligación legal y operativa de ejecutar el Plan de Cierre de Minas aprobado."
+      },
+      {
+        "text": "El titular minero está obligado a ejecutar un Plan de Cierre que garantice la estabilidad física y química del terreno para su restauración de acuerdo a normas ambientales.",
+        "isCorrect": true,
+        "rationale": "La ley exige la rehabilitación de las áreas afectadas para evitar pasivos ambientales y riesgos a la salud tras el término de las operaciones."
+      },
+      {
+        "text": "El Estado asume con fondos públicos el 100% de los costos de remediación ambiental de las empresas privadas formales.",
+        "isCorrect": false,
+        "rationale": "Bajo el principio de responsabilidad ambiental, el titular privado debe constituir garantías financieras y asumir la totalidad de los costos de su cierre."
+      },
+      {
+        "text": "Los terrenos intervenidos por la minería deben venderse obligatoriamente a comunidades extranjeras de conservación.",
+        "isCorrect": false,
+        "rationale": "La ley no exige la venta ni transferencia de tierras a terceros, sino su adecuada rehabilitación técnica y ambiental."
+      },
+      {
+        "text": "La remediación exige únicamente la reforestación con árboles exóticos sin importar la presencia de aguas ácidas en socavones.",
+        "isCorrect": false,
+        "rationale": "El Plan de Cierre abarca la estabilidad hidrológica, física y química global, evitando expresamente la generación de efluentes contaminantes o drenajes ácidos."
+      }
+    ],
+    "hint": "Recuerda que el concesionario debe devolver las condiciones del terreno intervenido de forma segura para las personas y el ecosistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se estructura la composición del Comité de Seguridad y Salud en el Trabajo (SST) en una unidad minera que cuenta con más de 20 trabajadores?",
+    "opciones": [
+      {
+        "text": "Se conforma íntegramente por personal administrativo designado por el gerente general sin voto del personal operativo.",
+        "isCorrect": false,
+        "rationale": "El comité exige representación paritaria entre trabajadores y empleador de forma obligatoria."
+      },
+      {
+        "text": "Se conforma de manera paritaria, con un 50% de representantes elegidos por el empleador y un 50% de representantes elegidos por los trabajadores.",
+        "isCorrect": true,
+        "rationale": "La normativa de SST (Ley 29783) ordena que el órgano de gestión sea tripartito/paritario para asegurar la participación real de la fuerza laboral."
+      },
+      {
+        "text": "Está integrado exclusivamente por fiscalizadores externos pertenecientes a la SUNAFIL y al Ministerio de Energía y Minas.",
+        "isCorrect": false,
+        "rationale": "Los fiscalizadores son autoridades estatales externas y no miembros internos del comité de la empresa."
+      },
+      {
+        "text": "Es presidido obligatoriamente por el dirigente del sindicato sin requerir elección mediante voto directo.",
+        "isCorrect": false,
+        "rationale": "Los miembros representantes de los trabajadores deben ser elegidos democráticamente mediante voto secreto y directo."
+      },
+      {
+        "text": "Se compone únicamente por consultores contratados por la aseguradora del Seguro Complementario de Trabajo de Riesgo (SCTR).",
+        "isCorrect": false,
+        "rationale": "Las entidades aseguradoras brindan cobertura financiera y médica, pero no integran el comité de SST del centro de trabajo."
+      }
+    ],
+    "hint": "Busca la opción que refleje el principio de paridad y equilibrio en la representación de las partes dentro de la unidad de producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco del Decreto Supremo 024-2016-EM y la Ley 29783, ¿cuáles constituyen obligaciones legales sustantivas del empleador en materia de SST en minería?",
+    "opciones": [
+      {
+        "text": "Garantizar la realización de al menos cuatro (4) capacitaciones al año en materia de seguridad y salud en el trabajo.",
+        "isCorrect": true,
+        "rationale": "Es una exigencia legal mínima y obligatoria para capacitar al personal en la prevención de los riesgos de su puesto."
+      },
+      {
+        "text": "Elaborar, implementar y difundir el Reglamento Interno de Seguridad y Salud en el Trabajo (RISST).",
+        "isCorrect": true,
+        "rationale": "Todo empleador con 20 o más trabajadores debe entregar una copia del RISST a cada trabajador al inicio de la relación laboral."
+      },
+      {
+        "text": "Elaborar y mantener actualizada la matriz de Identificación de Peligros, Evaluación de Riesgos y Medidas de Control (IPERC).",
+        "isCorrect": true,
+        "rationale": "La matriz IPERC constituye la herramienta técnica de gestión medular para diagnosticar y controlar los riesgos en cada puesto operativo."
+      },
+      {
+        "text": "Retener el 10% del sueldo de los trabajadores para el financiamiento de los Equipos de Protección Personal (EPP).",
+        "isCorrect": false,
+        "rationale": "Los equipos de protección personal deben ser entregados de forma totalmente gratuita por el empleador sin costo alguno para el trabajador."
+      },
+      {
+        "text": "Eximir de exámenes médicos ocupacionales a los trabajadores que laboran en socavones de alto riesgo.",
+        "isCorrect": false,
+        "rationale": "Los exámenes médicos ocupacionales (de ingreso, periódicos y de retiro) son estrictamente obligatorios en actividades de alto riesgo."
+      }
+    ],
+    "hint": "Identifica aquellas medidas de gestión preventiva que la ley imponible al empleador sin trasladar costos económicos al trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se delimitan las competencias de fiscalización en el sector minero entre la SUNAFIL y OSINERGMIN?",
+    "opciones": [
+      {
+        "text": "SUNAFIL fiscaliza las condiciones laborales y la SST de los trabajadores, mientras que OSINERGMIN supervisa la seguridad técnica de la infraestructura e instalaciones mineras.",
+        "isCorrect": true,
+        "rationale": "La ley asigna a SUNAFIL la protección socio-laboral del trabajador y a OSINERGMIN el control técnico de la seguridad de las instalaciones y operaciones."
+      },
+      {
+        "text": "OSINERGMIN fiscaliza el pago de remuneraciones, mientras que SUNAFIL otorga las licencias de uso de explosivos.",
+        "isCorrect": false,
+        "rationale": "Las remuneraciones son materia socio-laboral de la SUNAFIL y el uso de explosivos compete a la SUCAMEC y al sector minero-técnico."
+      },
+      {
+        "text": "SUNAFIL se encarga de fijar las tarifas de electricidad en los campamentos, y OSINERGMIN sanciona el acoso laboral.",
+        "isCorrect": false,
+        "rationale": "El acoso laboral es un incumplimiento laboral vigilado por la SUNAFIL, mientras que las tarifas eléctricas generales no corresponden a inspecciones de trabajo."
+      },
+      {
+        "text": "Ambas entidades ejecutan las mismas inspecciones en forma simultánea sin distinción de especialidad técnica.",
+        "isCorrect": false,
+        "rationale": "Las leyes orgánicas sectoriales distribuyen claramente las materias laborales de las estrictamente normativo-técnicas mineras."
+      },
+      {
+        "text": "Ninguna de las dos tiene potestad de sancionar empresas mineras, actuando únicamente como órganos consultivos informativos.",
+        "isCorrect": false,
+        "rationale": "Tanto SUNAFIL como OSINERGMIN gozan de plena facultad sancionadora y de imposición de medidas cautelares o multas."
+      }
+    ],
+    "hint": "Diferencia la protección directa a la persona y sus derechos de trabajo de la supervisión técnica sobre las estructuras, maquinaria e instalaciones físicas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera opera el Principio de Primacía de la Realidad durante una inspección de trabajo por seguridad laboral en mina?",
+    "opciones": [
+      {
+        "text": "Si los contratos y registros afirman que se entregaron los EPP pero en la inspección se constata que el minero labora desprotegido, la autoridad determina el incumplimiento sobre la base de lo observado en los hechos.",
+        "isCorrect": true,
+        "rationale": "Este principio ordena que ante discrepancias entre los documentos formales presentados y la realidad de los hechos constatados, prevalece siempre la realidad."
+      },
+      {
+        "text": "El inspector debe dar fe absoluta a las firmas impresas en los documentos sin verificar las condiciones reales en el socavón.",
+        "isCorrect": false,
+        "rationale": "Dar prioridad al papel por encima del hecho directo vulneraría la naturaleza y el objeto del Principio de Primacía de la Realidad."
+      },
+      {
+        "text": "Las declaraciones verbales del gerente general prevalecen legalmente sobre los informes técnicos presentados por los trabajadores.",
+        "isCorrect": false,
+        "rationale": "El principio no otorga jerarquía a la versión patronal, sino a la verdad objetiva observada o probada empíricamente en el centro de trabajo."
+      },
+      {
+        "text": "El principio permite anular de oficio las leyes aprobadas por el Congreso en caso de conflicto con el sindicato.",
+        "isCorrect": false,
+        "rationale": "La primacía de la realidad es un principio de valoración probatoria en el ámbito laboral y no un mecanismo de derogación de leyes."
+      },
+      {
+        "text": "Se aplica únicamente para perdonar las faltas de los trabajadores que se negaron voluntariamente a usar su casco de seguridad.",
+        "isCorrect": false,
+        "rationale": "El principio evalúa la veracidad de las condiciones laborales objetivas y la responsabilidad de las partes sin ser un perdón administrativo."
+      }
+    ],
+    "hint": "Considera qué prevalece en el derecho laboral cuando las actas o papeles presentados por la empresa contradicen las condiciones físicas reales en el área de labores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son los requisitos legales estipulados para postular como candidato a representante de los trabajadores ante el Comité de SST?",
+    "opciones": [
+      {
+        "text": "Tener como mínimo 18 años de edad.",
+        "isCorrect": true,
+        "rationale": "La normativa exige la mayoría de edad legal para asumir la responsabilidad representativa en el comité."
+      },
+      {
+        "text": "Ser trabajador en planilla del empleador y estar en servicio activo.",
+        "isCorrect": true,
+        "rationale": "Es requisito indispensable mantener un vínculo laboral directo para representar legítimamente a los trabajadores de la empresa."
+      },
+      {
+        "text": "No ser personal de dirección ni de confianza del empleador.",
+        "isCorrect": true,
+        "rationale": "Se excluye al personal de dirección o confianza en la parte de los trabajadores para evitar conflictos de interés y preservar la paridad."
+      },
+      {
+        "text": "Poseer un título profesional universitario registrado en SUNEDU de Ingeniero de Minas obligatoriamente.",
+        "isCorrect": false,
+        "rationale": "No se requiere una profesión técnica específica; cualquier trabajador obrero o empleado no cualificado como de confianza puede postular."
+      },
+      {
+        "text": "Contar con más de 20 años de antigüedad continuada en la misma unidad minera.",
+        "isCorrect": false,
+        "rationale": "La norma no exige décadas de antigüedad para ejercer el derecho a la postulación democrática."
+      }
+    ],
+    "hint": "Revisa los elementos que garantizan una representación auténtica del personal operativo sin sesgos con el equipo de dirección de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué supuesto la omisión de las medidas de SST por parte del empleador o sus directivos puede acarrear responsabilidad penal según el Código Penal peruano?",
+    "opciones": [
+      {
+        "text": "Cuando se verifique que la inobservancia deliberada o negligente de las normas de SST ocasionó directamente la muerte o lesiones graves de un trabajador.",
+        "isCorrect": true,
+        "rationale": "El artículo 168-A del Código Penal sanciona la infracción de las normas de SST cuando cause accidentes mortales o invalidez por no adoptar las medidas preventivas."
+      },
+      {
+        "text": "Cuando el trabajador sufra un rasguño menor que no amerite descanso médico.",
+        "isCorrect": false,
+        "rationale": "Incidentes menores sin daño grave no constituyen el tipo penal agravado que exige la lesión grave o la muerte del trabajador."
+      },
+      {
+        "text": "Únicamente cuando el empleador no haya realizado el pago de la cuota sindical del mes correspondiente.",
+        "isCorrect": false,
+        "rationale": "Las retenciones tributarias o de cuotas sindicales son materia penal de otra índole (retención indebida) y no un delito contra la seguridad laboral."
+      },
+      {
+        "text": "Cuando la empresa decida cerrar sus oficinas administrativas por motivos de remodelación.",
+        "isCorrect": false,
+        "rationale": "Las decisiones comerciales u operativas de infraestructura no configuran el delito de negligencia con resultado de muerte en SST."
+      },
+      {
+        "text": "Siempre que la SUNAFIL imponga una multa administrativa superior a las 50 UIT sin necesidad de que exista lesión o daño a un ser humano.",
+        "isCorrect": false,
+        "rationale": "La multa por sí sola es de carácter administrativo; la vía penal exige la existencia del tipo de peligro concreto o resultado de muerte/lesión grave."
+      }
+    ],
+    "hint": "Piensa en el nexo de causalidad grave entre la falta de prevención y la pérdida de la vida o la integridad física irreparable de la persona.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el peso aproximado de la exportación de minerales en la balanza comercial y en el Producto Interno Bruto (PIB) del Perú según los datos del sector?",
+    "opciones": [
+      {
+        "text": "Representa cerca del 1% de las exportaciones totales y aporta menos del 0.5% al PIB nacional.",
+        "isCorrect": false,
+        "rationale": "Estos valores subestiman drásticamente la relevancia histórica y la estructura macroeconómica del sector minero nacional."
+      },
+      {
+        "text": "Representa aproximadamente el 64% de las exportaciones totales del país y aporta alrededor del 8.5% al PIB nacional.",
+        "isCorrect": true,
+        "rationale": "La minería es el sector hegemónico en las exportaciones peruanas y un pilar fundamental del crecimiento económico y generación de divisas."
+      },
+      {
+        "text": "Corresponde exactamente al 100% de la producción agrícola e industrial consolidada de la selva peruana.",
+        "isCorrect": false,
+        "rationale": "La cifra no engloba otros sectores económicos ni refleja la geografía de los principales asentamientos mineros del país."
+      },
+      {
+        "text": "Aporta el 50% de las divisas pero no figura en los registros de exportación del Banco Central de Reserva.",
+        "isCorrect": false,
+        "rationale": "La exportación minera se halla debidamente contabilizada en la balanza comercial del BCR como el mayor componente de envíos al exterior."
+      },
+      {
+        "text": "Es una actividad marginal que ha sido superada en un 90% por las exportaciones de la industria textil.",
+        "isCorrect": false,
+        "rationale": "Si bien la industria textil es importante, las exportaciones de metales como el cobre y oro superan ampliamente los valores del sector manufacturero."
+      }
+    ],
+    "hint": "Recuerda el rasgo predominantemente extractivo-minero de la canasta exportadora tradicional del Perú frente al total nacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué metales como el oro y el cobre son clasificados y comercializados bajo la denominación de \"commodities\" en los mercados mundiales?",
+    "opciones": [
+      {
+        "text": "Porque son productos perecibles que deben ser consumidos dentro de las 48 horas posteriores a su extracción de socavón.",
+        "isCorrect": false,
+        "rationale": "Los minerales son bienes imperecederos y no sufren degradación biológica a corto plazo."
+      },
+      {
+        "text": "Porque son bienes estandarizados, masivos e intercambiables cuyas cotizaciones y precios de referencia se fijan en las Bolsas de Valores mundiales.",
+        "isCorrect": true,
+        "rationale": "Un commodity es una mercancía uniforme donde las características del producto son homogéneas a nivel global, cotizando en bolsas internacionales."
+      },
+      {
+        "text": "Porque son artesanías fabricadas a mano por comunidades locales cuyo precio es fijado por el municipio local.",
+        "isCorrect": false,
+        "rationale": "Las artesanías son bienes diferenciados y no commodities estandarizados de comercio bursátil masivo."
+      },
+      {
+        "text": "Porque su venta está estrictamente prohibida entre países que mantienen tratados de libre comercio.",
+        "isCorrect": false,
+        "rationale": "Los commodities mineros constituyen el volumen principal de intercambio comercial amparado en los tratados multilaterales."
+      },
+      {
+        "text": "Porque se utilizan exclusivamente como moneda de cambio de curso legal dentro del territorio comunal.",
+        "isCorrect": false,
+        "rationale": "Su uso abarca aplicaciones industriales y reservas financieras globales, cotizando en dólares estadounidenses."
+      }
+    ],
+    "hint": "Analiza las características de un producto básico cuyo estándar de pureza es igual sin importar qué país o mina lo haya extraído.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco de la gestión ambiental global, ¿cuáles son las metas u objetivos asumidos por el Perú en el Acuerdo de París y el Protocolo de Kioto para la mitigación del cambio climático?",
+    "opciones": [
+      {
+        "text": "Asumir compromisos de reducción de emisiones de Gases de Efecto Invernadero (GEI) de aproximadamente el 30% al 31% para el año 2030.",
+        "isCorrect": true,
+        "rationale": "Perú estableció su Contribución Determinada a Nivel Nacional (NDC) comprometiendo una reducción sustancial de sus emisiones proyectadas al 2030."
+      },
+      {
+        "text": "Promover acciones de adaptación para reducir la vulnerabilidad frente al cambio climático en sectores prioritarios como energía, transporte y uso de suelo.",
+        "isCorrect": true,
+        "rationale": "Las estrategias nacionales buscan incrementar la resiliencia en áreas críticas vulnerables a fenómenos hidrometeorológicos y desglaciación."
+      },
+      {
+        "text": "Incrementar en un 80% el consumo de carbón piedra en las ciudades costeras como fuente primaria de energía doméstica.",
+        "isCorrect": false,
+        "rationale": "Aumentar el uso de combustibles fósiles altamente contaminantes contraviene los compromisos de descarbonización firmados por el Perú."
+      },
+      {
+        "text": "Renunciar a la fiscalización del vertimiento de gases industriales en las plantas de beneficio de la selva.",
+        "isCorrect": false,
+        "rationale": "Los tratados exigen mayor control y medición del inventario de emisiones de gases contaminantes y de efecto invernadero."
+      },
+      {
+        "text": "Obligar a que el 100% del transporte de minerales se realice en aeronaves de propulsión nuclear de bajo costo.",
+        "isCorrect": false,
+        "rationale": "El acuerdo de París promueve tecnologías limpias sostenibles y viables, no la imposición de tecnologías inexistentes o inviables en el transporte de carga."
+      }
+    ],
+    "hint": "Identifica las metas de reducción porcentual de emisiones contaminantes y las políticas de fortalecimiento de la resiliencia ambiental del país.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la finalidad sustantiva del Convenio sobre la Diversidad Biológica (CBD) firmado por el Perú en relación con las industrias extractivas?",
+    "opciones": [
+      {
+        "text": "Obligar al reemplazo total del uso de agua por productos químicos sintéticos en las minas de socavón.",
+        "isCorrect": false,
+        "rationale": "El CBD no establece metodologías químicas operativas de procesamiento, sino principios para proteger la vida biológica."
+      },
+      {
+        "text": "Garantizar la conservación de la diversidad biológica, la utilización sostenible de sus componentes y la participación justa de los beneficios derivados del uso de recursos genéticos.",
+        "isCorrect": true,
+        "rationale": "Son los tres pilares del CBD para equilibrar las actividades humanas y de inversión con la integridad de los ecosistemas y comunidades."
+      },
+      {
+        "text": "Declarar a todas las zonas mineras del país como territorios exentos de normas ambientales internacionales.",
+        "isCorrect": false,
+        "rationale": "El convenio impulsa la conservación e integración del cuidado ambiental en las políticas del sector extractivo de cada Estado parte."
+      },
+      {
+        "text": "Proscribir la exportación de harina de pescado y de madera certificada a países de la Unión Europea.",
+        "isCorrect": false,
+        "rationale": "El aprovechamiento sostenible ampara el comercio responsable de recursos bajo planes de manejo aprobados."
+      },
+      {
+        "text": "Aumentar la deforestación de bosques primarios en un 5% anual para ampliar las fronteras agrícolas y de concesión.",
+        "isCorrect": false,
+        "rationale": "Evitar la degradación de los hábitats y luchar contra la pérdida masiva de especies constituyen el espíritu básico del convenio."
+      }
+    ],
+    "hint": "Piensa en el triple objetivo internacional que combina conservación, sostenibilidad en la explotación y equidad en el reparto de beneficios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué impacto directo genera la cláusula de desgravación arancelaria contemplada en los Tratados de Libre Comercio (TLC) para las exportaciones mineras peruanas?",
+    "opciones": [
+      {
+        "text": "Obliga al pago de un impuesto doble a la salida del puerto peruano y al ingreso del país comprador.",
+        "isCorrect": false,
+        "rationale": "La desgravación elimina o reduce aranceles para evitar la doble imposición y reducir sobrecostos aduaneros."
+      },
+      {
+        "text": "Elimina o reduce gradualmente los aranceles aduaneros para la venta e ingreso de productos minerales a los mercados de los países firmantes, mejorando la competitividad.",
+        "isCorrect": true,
+        "rationale": "La desgravación arancelaria reduce las barreras de entrada impositivas haciendo más competitivas y atractivas las exportaciones nacionales."
+      },
+      {
+        "text": "Prohíbe que los inversionistas extranjeros transfieran sus utilidades a sus casas matrices en el exterior.",
+        "isCorrect": false,
+        "rationale": "Los TLC protegen la libertad de transferencia de capitales e inversiones de los inversionistas extranjeros de los países firmantes."
+      },
+      {
+        "text": "Impone la obligación de transformar el 100% de los minerales en joyas refinadas dentro de la zona de frontera.",
+        "isCorrect": false,
+        "rationale": "Las reglas del comercio amparan la libre circulación tanto de concentrados como de productos refinados según lo negociado."
+      },
+      {
+        "text": "Exige que el pago por las exportaciones de cobre se realice únicamente en monedas locales no convertibles.",
+        "isCorrect": false,
+        "rationale": "El comercio internacional regulado por TLC permite el uso de divisas de libre convertibilidad como el dólar estadounidense o el euro."
+      }
+    ],
+    "hint": "Relaciona la palabra desgravación con el beneficio tributario de fronteras de reducir o anular las tasas de importación/exportación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco del derecho comercial internacional, ¿cuáles son ventajas y salvaguardas que otorgan los Tratados de Libre Comercio (TLC) suscritos por el Perú?",
+    "opciones": [
+      {
+        "text": "Brindar previsibilidad y seguridad jurídica a las inversiones mediante reglas estables y trato no discriminatorio.",
+        "isCorrect": true,
+        "rationale": "Los TLC incorporan capítulos de inversión que garantizan trato nacional y de nación más favorecida, protegiendo contra expropiaciones arbitrarias."
+      },
+      {
+        "text": "Establecer mecanismos claros y transparentes para la solución de controversias entre Inversionista y Estado mediante arbitrajes internacionales.",
+        "isCorrect": true,
+        "rationale": "Permiten recurrir a tribunales arbitrales como el CIADI para resolver disputas relativas a contratos ley o vulneración de garantías de inversión."
+      },
+      {
+        "text": "Facilitar el acceso de insumos y bienes de capital de alta tecnología sin sobrecostos para modernizar la industria nacional.",
+        "isCorrect": true,
+        "rationale": "La eliminación de aranceles de importación permite a las unidades productivas adquirir maquinaria especializada con menor carga tributaria."
+      },
+      {
+        "text": "Garantizar que los pequeños productores locales siempre superen en ventas a las multinacionales sin requerir innovación técnica.",
+        "isCorrect": false,
+        "rationale": "El TLC promueve la libre competencia, lo cual exige competitividad; los actores locales pequeños pueden verse expuestos a mayor competencia."
+      },
+      {
+        "text": "Anular la vigencia de la Constitución Política del Perú dentro de los campamentos mineros con capital extranjero.",
+        "isCorrect": false,
+        "rationale": "Los tratados internacionales se integran al ordenamiento nacional respetando el marco constitucional del Estado soberano."
+      }
+    ],
+    "hint": "Selecciona los beneficios de estabilidad regulatoria, acceso a mercados globales de insumos y mecanismos de arbitraje para resolver litigios internacionales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-04",
+    "diplomado": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función de los planes de adaptación y resiliencia en el marco del compromiso asumido por el Perú al ratificar el Acuerdo de París?",
+    "opciones": [
+      {
+        "text": "Aumentar el uso de plásticos de un solo uso en las zonas de amortiguamiento de la Amazonía.",
+        "isCorrect": false,
+        "rationale": "Los planes climáticos buscan reducir los residuos y contaminantes no biodegradables en el ecosistema."
+      },
+      {
+        "text": "Implementar medidas preventivas en sectores clave para mitigar los efectos del calentamiento global y proteger a las poblaciones e infraestructuras vulnerables.",
+        "isCorrect": true,
+        "rationale": "La adaptación ambiental procura anticipar los impactos del cambio climático (sequías, huaycos, desglaciación) para minimizar los daños sociales y económicos."
+      },
+      {
+        "text": "Suprimir todas las competencias del Ministerio del Ambiente en materia de fiscalización del aire y suelo.",
+        "isCorrect": false,
+        "rationale": "El Acuerdo de París exige fortalecer la institucionalidad ambiental nacional y el control de los entes reguladores."
+      },
+      {
+        "text": "Exigir que las empresas mineras paguen sus tributos mediante la entrega directa de toneladas de carbón mineral.",
+        "isCorrect": false,
+        "rationale": "Las obligaciones fiscales se pagan en moneda de curso legal y no mediante daciones en pago de combustibles fósiles."
+      },
+      {
+        "text": "Garantizar la congelación total de las temperaturas oceánicas mediante la inyección masiva de hielo artificial.",
+        "isCorrect": false,
+        "rationale": "Los compromisos abordan políticas públicas de descarbonización y reducción de emisiones, no intervenciones geoingenieriles inviables."
+      }
+    ],
+    "hint": "Considera la necesidad de preparar la infraestructura y a las comunidades locales frente a eventos climáticos extremos recurrentes.",
+    "activo": true
+  }
+]

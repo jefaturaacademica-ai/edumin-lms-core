@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el período de validez estándar del certificado emitido bajo la norma ISO 45001:2018 antes de requerir un proceso de recertificación?",
+    "opciones": [
+      {
+        "text": "3 años",
+        "rationale": "Las normas internacionales de sistemas de gestión establecen una validez máxima de tres años para la certificación, requiriendo auditorías de seguimiento anuales.",
+        "isCorrect": true
+      },
+      {
+        "text": "1 año",
+        "rationale": "Este lapso corresponde a la periodicidad habitual de las auditorías de seguimiento, no a la vigencia total del certificado emitido.",
+        "isCorrect": false
+      },
+      {
+        "text": "5 años",
+        "rationale": "Este período excede el ciclo estándar de tres años establecido formalmente para la vigencia del certificado de certificación.",
+        "isCorrect": false
+      },
+      {
+        "text": "10 años",
+        "rationale": "Ningún sistema de gestión internacional otorga certificaciones por una década sin requerir una evaluación completa de renovación.",
+        "isCorrect": false
+      },
+      {
+        "text": "Vigencia indefinida",
+        "rationale": "Las certificaciones internacionales no son perpetuas y exigen renovarse periódicamente para respaldar la mejora continua.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el ciclo habitual de las auditorías de seguimiento anuales que conducen al vencimiento final de la certificación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el rol principal de la Alta Dirección en la implementación y mantenimiento del sistema de gestión ISO 45001:2018?",
+    "opciones": [
+      {
+        "text": "Liderar el sistema de gestión, asumir la rendición de cuentas y proveer los recursos necesarios.",
+        "rationale": "La Alta Dirección actúa como el motor y cerebro del sistema, garantizando recursos, asignando roles y demostrando un compromiso activo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Realizar personalmente las auditorías de certificación externas a las empresas competidoras.",
+        "rationale": "Las auditorías externas son ejecutadas por casas certificadoras independientes y auditores líderes acreditados.",
+        "isCorrect": false
+      },
+      {
+        "text": "Reemplazar las funciones técnicas del área de supervisión de seguridad en el trabajo de campo.",
+        "rationale": "La Alta Dirección delega autoridad y asigna roles a personal competente para las tareas operativas de campo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Redactar los procedimientos operativos de manera aislada sin consultar a los trabajadores.",
+        "rationale": "La norma exige la participación y consulta activa de los trabajadores en la elaboración de elementos clave del sistema.",
+        "isCorrect": false
+      },
+      {
+        "text": "Asumir la responsabilidad exclusiva de usar todos los equipos de protección personal en la planta.",
+        "rationale": "El uso de EPP es una obligación individual de cada trabajador en su puesto de trabajo, respaldada por la provisión de la gerencia.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera la analogía presentada en el curso donde se compara a la gerencia con el cerebro del cuerpo humano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ventaja principal ofrece la denominada 'Estructura de Alto Nivel' (HLS) adoptada por las normas ISO como la 9001, 14001 y 45001?",
+    "opciones": [
+      {
+        "text": "Facilita la integración de múltiples normas internacionales al compartir una estructura y cláusulas comunes.",
+        "rationale": "La Estructura de Alto Nivel estandariza los capítulos clave en las normas ISO, haciendo más sencilla la implementación de sistemas integrados.",
+        "isCorrect": true
+      },
+      {
+        "text": "Deroga automáticamente las leyes y decretos de seguridad laboral del país donde opera la empresa.",
+        "rationale": "Las normas ISO son estándares voluntarios que se suman al cumplimiento de la legislación nacional aplicable, sin sustituirla.",
+        "isCorrect": false
+      },
+      {
+        "text": "Garantiza de forma absoluta que la empresa nunca sufra ningún accidente o incidente de trabajo.",
+        "rationale": "Ningún sistema de gestión garantiza la perfección absoluta, sino la capacidad de respuesta y mejora continua ante eventos no deseados.",
+        "isCorrect": false
+      },
+      {
+        "text": "Exime a la gerencia de involucrarse en las capacitaciones obligatorias en materia de seguridad.",
+        "rationale": "El liderazgo gerencial es un requisito central en la Estructura de Alto Nivel que requiere un compromiso visible.",
+        "isCorrect": false
+      },
+      {
+        "text": "Permite obtener la certificación internacional sin someterse a evaluaciones ni auditorías documentales.",
+        "rationale": "La certificación exige evidenciar documental y prácticamente el cumplimiento de los requisitos mediante auditorías formalizadas.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerda el beneficio de compartir cláusulas estandarizadas (como Contexto y Liderazgo) entre distintas normas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo fundamental que persigue la norma internacional ISO 45001:2018?",
+    "opciones": [
+      {
+        "text": "Prevenir lesiones y deterioro de la salud relacionados con el trabajo, proporcionando lugares de trabajo seguros.",
+        "rationale": "El propósito central de la norma es proteger la seguridad y salud de los empleados mediante la reducción proactiva de riesgos.",
+        "isCorrect": true
+      },
+      {
+        "text": "Otorgar de forma directa licencias de funcionamiento municipales e impuestos preferenciales.",
+        "rationale": "Las licencias municipales e impuestos corresponden a trámites gubernamentales ajenos a la certificación ISO.",
+        "isCorrect": false
+      },
+      {
+        "text": "Reemplazar la necesidad de contratar seguro complementario de trabajo de riesgo (SCTR) para el personal.",
+        "rationale": "La norma exige cumplir la normativa legal vigente, la cual incluye las coberturas de seguro obligatorias.",
+        "isCorrect": false
+      },
+      {
+        "text": "Asegurar que la organización no vuelva a ser inspeccionada por las autoridades laborales gubernamentales.",
+        "rationale": "Las entidades estatales como Sunafil mantienen la facultad legal de inspeccionar a cualquier empresa, esté o no certificada.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminar el uso de procedimientos documentados para acelerar las tareas operativas en campo.",
+        "rationale": "La norma requiere mantener y conservar información documentada para asegurar el control de los procesos clave.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el enfoque preventivo orientado al bienestar físico y mental de los colaboradores en sus puestos de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué documento formal sintetiza los compromisos generales de la organización hacia la prevención de riesgos y la mejora continua en seguridad y salud?",
+    "opciones": [
+      {
+        "text": "La Política de Seguridad y Salud en el Trabajo.",
+        "rationale": "La Política expresa la intención y dirección formal de la Alta Dirección, resumiendo los compromisos del sistema de gestión.",
+        "isCorrect": true
+      },
+      {
+        "text": "El certificado de calibración del equipo de monitoreo de aire.",
+        "rationale": "Los certificados de calibración son registros técnicos que demuestran la precisión de instrumentos específicos.",
+        "isCorrect": false
+      },
+      {
+        "text": "El informe anual de utilidades financieras entregado al directorio.",
+        "rationale": "El informe de utilidades aborda la contabilidad corporativa y no constituye la declaración de principios de seguridad.",
+        "isCorrect": false
+      },
+      {
+        "text": "La lista de asistencia a la charla de inducción de personal nuevo.",
+        "rationale": "Las listas de asistencia son evidencias que respaldan el cumplimiento de las actividades de capacitación.",
+        "isCorrect": false
+      },
+      {
+        "text": "El catálogo comercial de productos y servicios de la empresa.",
+        "rationale": "El catálogo de productos es un documento promocional para clientes, no una política de gestión de riesgos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Es un pilar del liderazgo gerencial que debe ser comunicado a todo el personal y estar disponible para partes interesadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos forman parte del compromiso activo y liderazgo exigido a la Alta Dirección según la ISO 45001:2018?",
+    "opciones": [
+      {
+        "text": "Proporcionar los recursos financieros, humanos y tecnológicos necesarios para el sistema.",
+        "rationale": "Garantizar la disponibilidad de recursos es un requisito explícito de liderazgo gerencial para la viabilidad del sistema.",
+        "isCorrect": true
+      },
+      {
+        "text": "Establecer, implementar y mantener una política y objetivos de seguridad y salud compatibles.",
+        "rationale": "La definición y alineamiento estratégico de la política y metas de seguridad corresponden directamente a la dirección.",
+        "isCorrect": true
+      },
+      {
+        "text": "Promover la cultura de seguridad y la participación activa de los trabajadores.",
+        "rationale": "Fomentar un entorno inclusivo donde el personal pueda reportar y participar en seguridad es pilar del liderazgo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ejecutar personalmente las labores operativas de limpieza y mantenimiento de maquinaria en planta.",
+        "rationale": "La Alta Dirección lidera y asigna roles a personal competente para las labores operativas diarias.",
+        "isCorrect": false
+      },
+      {
+        "text": "Ocultar los accidentes leves a los auditores para evitar hallazgos o no conformidades.",
+        "rationale": "La transparencia y la investigación honesta de incidentes son fundamentales para la mejora continua del sistema.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica las acciones estratégicas de apoyo, asignación de medios y desarrollo de competencias descritas en la norma.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la terminología revisada en la norma y la legislación aplicable, ¿qué es un 'peligro'?",
+    "opciones": [
+      {
+        "text": "Una situación o característica intrínseca de algo capaz de ocasionar daños a personas, equipos, procesos y ambiente.",
+        "rationale": "El peligro es la fuente o condición inherente con potencial de causar lesiones o daños a los recursos de la organización.",
+        "isCorrect": true
+      },
+      {
+        "text": "La probabilidad combinada con la severidad de que un evento dañino se materialice.",
+        "rationale": "Esta definición corresponde al concepto de 'riesgo', el cual mide la probabilidad y severidad de la materialización de un peligro.",
+        "isCorrect": false
+      },
+      {
+        "text": "Una sanción de suspensión impuesta por el Ministerio de Trabajo tras una inspección.",
+        "rationale": "Las sanciones son medidas administrativas aplicadas por incumplimientos de normativas legales.",
+        "isCorrect": false
+      },
+      {
+        "text": "El costo monetario que invierte la empresa en comprar cascos y lentes de seguridad.",
+        "rationale": "Los costos de adquisición de EPP representan una inversión financiera dentro del presupuesto operativo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un certificado otorgado por un laboratorio acreditado que valida la calibración de un instrumento.",
+        "rationale": "Un certificado de calibración es una constancia documental del estado métrico de un equipo.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerda la propiedad propia o inherente que posee un objeto, sustancia o situación con capacidad de generar daño.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la jerarquía de controles de seguridad laboral, ¿cuál es la medida más eficaz para gestionar un riesgo?",
+    "opciones": [
+      {
+        "text": "Eliminación.",
+        "rationale": "La eliminación suprime físicamente la fuente del peligro, siendo la medida de control de mayor eficacia en la jerarquía.",
+        "isCorrect": true
+      },
+      {
+        "text": "Equipos de Protección Personal (EPP).",
+        "rationale": "El uso de EPP es el último nivel de la jerarquía y el menos eficaz, pues no elimina el peligro sino que mitiga la exposición.",
+        "isCorrect": false
+      },
+      {
+        "text": "Controles Administrativos.",
+        "rationale": "Los controles administrativos reducen la exposición mediante señales, capacitaciones y procedimientos, pero mantienen el peligro presente.",
+        "isCorrect": false
+      },
+      {
+        "text": "Controles de Ingeniería.",
+        "rationale": "Los controles de ingeniería aíslan el peligro de las personas, pero tienen menor eficacia que suprimir la fuente por completo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Sustitución.",
+        "rationale": "La sustitución reemplaza un insumo o proceso por uno menos peligroso, situándose por debajo de la eliminación completa.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Ubicada en el nivel superior de la pirámide de controles, busca erradicar la fuente del peligro por completo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué nivel dentro de la jerarquía de controles representa la última barrera de defensa y la menos eficaz para la protección del trabajador?",
+    "opciones": [
+      {
+        "text": "Equipos de Protección Personal (EPP).",
+        "rationale": "El EPP se sitúa en la base de la jerarquía por depender directamente del comportamiento humano y no alterar la fuente del riesgo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Controles de Ingeniería.",
+        "rationale": "Los controles de ingeniería modifican la infraestructura o maquinaria para aislar el peligro de forma más eficaz que el EPP.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminación del Peligro.",
+        "rationale": "La eliminación es la medida más eficaz posible al extirpar completamente el peligro del entorno laboral.",
+        "isCorrect": false
+      },
+      {
+        "text": "Sustitución de Insumos.",
+        "rationale": "La sustitución cambia el peligro por una alternativa de menor gravedad, ubicándose por encima del uso de EPP.",
+        "isCorrect": false
+      },
+      {
+        "text": "Redacción de Procedimientos Operativos.",
+        "rationale": "La elaboración de procedimientos forma parte de los controles administrativos, situados un peldaño por encima del EPP.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Se enfoca en colocar una protección directa sobre la persona en lugar de modificar el entorno o el proceso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de las siguientes herramientas es ampliamente reconocida como un método generalizado para la identificación de peligros y evaluación de riesgos?",
+    "opciones": [
+      {
+        "text": "La matriz IPERC.",
+        "rationale": "La matriz IPERC (Identificación de Peligros, Evaluación de Riesgos y Medidas de Control) es la herramienta genérica más difundida y validada.",
+        "isCorrect": true
+      },
+      {
+        "text": "El balance contable de pérdidas y ganancias.",
+        "rationale": "El balance contable analiza la situación financiera de la empresa y no la prevención de riesgos laborales.",
+        "isCorrect": false
+      },
+      {
+        "text": "El diagrama de flujo del proceso de selección de personal.",
+        "rationale": "El diagrama de selección organiza la contratación laboral en Recursos Humanos.",
+        "isCorrect": false
+      },
+      {
+        "text": "La lista de precios de proveedores de insumos químicos.",
+        "rationale": "La lista de precios es un documento comercial de compras que no evalúa riesgos ocupacionales.",
+        "isCorrect": false
+      },
+      {
+        "text": "El organigrama jerárquico del área de marketing.",
+        "rationale": "El organigrama representa la estructura jerárquica de cargos, no los peligros presentes en las tareas operativas.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Es una matriz estándar utilizada comúnmente en diversos sectores industriales y mineros para sistematizar la prevención.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el control de 'Sustitución' en el marco de la gestión de riesgos laborales?",
+    "opciones": [
+      {
+        "text": "Reemplazar un elemento o proceso peligroso por otro que represente un nivel de riesgo inferior.",
+        "rationale": "La sustitución disminuye la severidad del riesgo al reemplazar un insumo o equipo por una opción más segura.",
+        "isCorrect": true
+      },
+      {
+        "text": "Proporcionar cascos y guantes nuevos al personal de mantenimiento.",
+        "rationale": "La entrega de elementos de protección individual constituye un control de EPP.",
+        "isCorrect": false
+      },
+      {
+        "text": "Diseñar una cabina insonorizada para aislar el ruido de un motor.",
+        "rationale": "Aislar la fuente mediante barreras físicas corresponde a un control de ingeniería.",
+        "isCorrect": false
+      },
+      {
+        "text": "Modificar el horario de trabajo mediante rotación de turnos.",
+        "rationale": "Alterar tiempos de exposición mediante políticas organizativas es un control administrativo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Suprimir la actividad del plan de producción anual.",
+        "rationale": "Eliminar la actividad por completo se clasifica dentro de la categoría de eliminación.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Busca reemplazar una sustancia, proceso o equipo peligroso por uno que presente menor riesgo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes criterios deben evaluarse para determinar el nivel de riesgo según metodologías prácticas como la RM 050-2013-TR?",
+    "opciones": [
+      {
+        "text": "Nivel de Probabilidad.",
+        "rationale": "Mide qué tan factible es que el peligro se materialice en un evento no deseado.",
+        "isCorrect": true
+      },
+      {
+        "text": "Nivel de Consecuencia o Severidad.",
+        "rationale": "Evalúa la gravedad de las lesiones o daños a la salud que causaría la materialización del peligro.",
+        "isCorrect": true
+      },
+      {
+        "text": "Nivel de Exposición.",
+        "rationale": "Determina la frecuencia y el tiempo de permanencia del trabajador en la zona con presencia del peligro.",
+        "isCorrect": true
+      },
+      {
+        "text": "El margen de ganancia líquida del proyecto minero.",
+        "rationale": "Los márgenes financieros del proyecto no determinan el grado de severidad o frecuencia de un riesgo laboral.",
+        "isCorrect": false
+      },
+      {
+        "text": "La distancia geográfica a la sede principal de la empresa.",
+        "rationale": "La ubicación geográfica de la sede central no condiciona la valoración de riesgos específicos de un puesto operativo.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Selecciona los parámetros que evalúan la frecuencia de ocurrencia, la severidad del daño y la permanencia en la zona de peligro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué norma técnica internacional de la familia ISO 45000 proporciona las directrices generales para la aplicación práctica de la ISO 45001:2018?",
+    "opciones": [
+      {
+        "text": "ISO 45002:2023.",
+        "rationale": "La ISO 45002:2023 brinda orientación paso a paso y directrices prácticas para implementar la ISO 45001:2018.",
+        "isCorrect": true
+      },
+      {
+        "text": "ISO 9001:2015.",
+        "rationale": "La ISO 9001:2015 es la norma internacional correspondiente al sistema de gestión de la calidad.",
+        "isCorrect": false
+      },
+      {
+        "text": "ISO 14001:2015.",
+        "rationale": "La ISO 14001:2015 establece los requisitos para un sistema de gestión ambiental.",
+        "isCorrect": false
+      },
+      {
+        "text": "ISO 31000:2018.",
+        "rationale": "La ISO 31000:2018 brinda directrices generales sobre la gestión del riesgo organizacional integral.",
+        "isCorrect": false
+      },
+      {
+        "text": "ISO 19011:2018.",
+        "rationale": "La ISO 19011:2018 orienta los procesos de auditoría interna y externa de sistemas de gestión.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Es la norma guía publicada en 2023 que complementa a la norma certificable especificando cómo cumplir sus requisitos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera contribuye directamente la reducción de accidentes a la disminución de costos en una empresa minera?",
+    "opciones": [
+      {
+        "text": "Reduce los gastos médicos, pagos por indemnizaciones y pérdidas económicas por paradas de planta.",
+        "rationale": "Evitar accidentes reduce costes inmediatos en atención médica, litigios legales e interrupciones en la producción.",
+        "isCorrect": true
+      },
+      {
+        "text": "Exime a la empresa de realizar el pago de impuestos sobre las utilidades anuales.",
+        "rationale": "Las obligaciones tributarias corporativas se rigen por la ley fiscal nacional y no por la accidentalidad.",
+        "isCorrect": false
+      },
+      {
+        "text": "Elimina el presupuesto destinado a realizar mantenimientos a la maquinaria pesada.",
+        "rationale": "El presupuesto de mantenimiento es imprescindible para la operatividad y no debe suprimirse.",
+        "isCorrect": false
+      },
+      {
+        "text": "Permite recortar el salario de los trabajadores con mayor antigüedad en la mina.",
+        "rationale": "La implementación de seguridad busca proteger y motivar al personal, sin afectar sus derechos laborales.",
+        "isCorrect": false
+      },
+      {
+        "text": "Duplica la velocidad de extracción mineral sin requerir nuevos equipos.",
+        "rationale": "La productividad segura optimiza tiempos, pero no altera los límites físicos de extracción de las máquinas.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera los desembolsos económicos directos que se evitan al prevenir daños a la salud y paradas de la operación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial de estandarizar las tareas mediante procedimientos operativos documentados?",
+    "opciones": [
+      {
+        "text": "Asegurar que las actividades se desarrollen de forma uniforme, predecible y segura por todo el personal.",
+        "rationale": "La estandarización reduce la variabilidad y la improvisación, garantizando que cada trabajador ejecute la tarea de forma segura.",
+        "isCorrect": true
+      },
+      {
+        "text": "Evitar que los colaboradores planteen propuestas de mejora sobre su trabajo.",
+        "rationale": "La mejora continua promueve que los trabajadores propongan optimizaciones a los procedimientos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminar la obligación de brindar inducción de seguridad a los trabajadores nuevos.",
+        "rationale": "Los procedimientos sirven de soporte precisamente para fortalecer la inducción y entrenamiento de personal nuevo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Reemplazar la necesidad de contar con supervisores de campo en la planta.",
+        "rationale": "Los procedimientos respaldan la labor del supervisor, pero no reemplazan la supervisión presencial requerida.",
+        "isCorrect": false
+      },
+      {
+        "text": "Aumentar la cantidad de registros físicos guardados en almacenes documentales.",
+        "rationale": "La documentación debe ser funcional y aportar valor, no buscar la sobrecarga burocrática innecesaria.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Busca que todo el personal ejecute las labores siguiendo el mismo método seguro y validado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia conceptual clave entre el 'mantenimiento' y la 'calibración' de los equipos operativos?",
+    "opciones": [
+      {
+        "text": "El mantenimiento conserva la capacidad operativa del equipo, mientras la calibración compara sus lecturas contra un patrón de referencia.",
+        "rationale": "El mantenimiento repara y conserva la parte física; la calibración asegura la precisión métrica comparando contra estándares.",
+        "isCorrect": true
+      },
+      {
+        "text": "El mantenimiento se aplica a computadoras de oficina y la calibración únicamente a camiones mineros.",
+        "rationale": "Ambos conceptos aplican a diversos equipos e instrumentos según sus componentes mecánicos o de medición.",
+        "isCorrect": false
+      },
+      {
+        "text": "La calibración elimina todos los riesgos laborales y el mantenimiento previene multas tributarias.",
+        "rationale": "Ninguna de las dos técnicas erradica por sí sola todos los riesgos ni se vincula a trámites impuestos.",
+        "isCorrect": false
+      },
+      {
+        "text": "El mantenimiento es una exigencia legal y la calibración está expresamente prohibida en minería.",
+        "rationale": "Tanto el mantenimiento como la calibración son controles obligatorios exigidos en la normativa minera.",
+        "isCorrect": false
+      },
+      {
+        "text": "Ambos términos expresan la misma acción técnica de reparación sin distinción alguna.",
+        "rationale": "Constituyen actividades técnicas distintas: una es preventiva/correctiva funcional y la otra es metrológica.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Uno preserva el estado físico y funcionamiento de la máquina, mientras el otro verifica la exactitud de sus mediciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo impacta la percepción de un ambiente laboral seguro en el desempeño y comportamiento del personal?",
+    "opciones": [
+      {
+        "text": "Eleva la moral y motivación, reduciendo el ausentismo laboral y la rotación no deseada.",
+        "rationale": "Sentirse protegido por la empresa fortalece la motivación, el compromiso y la permanencia del colaborador.",
+        "isCorrect": true
+      },
+      {
+        "text": "Provoca el aumento del ausentismo injustificado por exceso de confianza.",
+        "rationale": "Un entorno seguro y estructurado disminuye las ausencias asociadas a lesiones o desmotivación.",
+        "isCorrect": false
+      },
+      {
+        "text": "Genera rechazo en los trabajadores debido a la obligación de reportar incidentes.",
+        "rationale": "Una adecuada cultura preventiva hace que el personal reporte incidentes activamente sin temor.",
+        "isCorrect": false
+      },
+      {
+        "text": "Incrementa las sanciones administrativas aplicadas por las entidades reguladoras.",
+        "rationale": "Aumentar la seguridad reduce los incumplimientos que ocasionan sanciones e inspecciones desfavorables.",
+        "isCorrect": false
+      },
+      {
+        "text": "Desincentiva el cumplimiento de las metas de producción establecidas.",
+        "rationale": "La seguridad alineada a los procesos promueve el cumplimiento eficiente y oportuno de las metas organizacionales.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el efecto psicológico positivo que genera sentirse protegido por la organización.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes decretos supremos forman parte del marco regulatorio legal de seguridad aplicable al sector minero peruano citados en el curso?",
+    "opciones": [
+      {
+        "text": "Decreto Supremo 024-2016-EM (Reglamento de Seguridad y Salud Ocupacional en Minería).",
+        "rationale": "Es la norma sectorial minera fundamental que regula las condiciones de seguridad en minería en Perú.",
+        "isCorrect": true
+      },
+      {
+        "text": "Decreto Supremo 014-92-EM (Texto Único Ordenado de la Ley General de Minería).",
+        "rationale": "Constituye el marco legal primario que rige las actividades y concesiones mineras en el país.",
+        "isCorrect": true
+      },
+      {
+        "text": "Decreto Supremo 005-2012-TR (Reglamento de la Ley N° 29783 de Seguridad y Salud en el Trabajo).",
+        "rationale": "Es el reglamento general aplicable a todos los sectores económicos para la implementación de la Ley de SST.",
+        "isCorrect": true
+      },
+      {
+        "text": "Decreto Supremo 001-2005-MTC (Reglamento Nacional de Tránsito Urbano Comercial).",
+        "rationale": "Regula el transporte y tránsito vial público, no la seguridad ocupacional dentro de operaciones mineras.",
+        "isCorrect": false
+      },
+      {
+        "text": "Decreto Supremo 007-2020-PCM (Reglamento de Licencias de Edificación).",
+        "rationale": "Rige las licencias de habilitación urbana y construcción civil municipal, ajenas al reglamento de minería.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica el reglamento sectorial minero, la ley general de minería y el reglamento de la ley de SST.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según lo expuesto en el módulo sobre auditorías, ¿cuál es la definición formal de una auditoría de sistema de gestión?",
+    "opciones": [
+      {
+        "text": "Un proceso sistemático, independiente y documentado para obtener evidencias y evaluarlas objetivamente.",
+        "rationale": "La auditoría se define como un examen metódico e independiente fundamentado en evidencias verificables.",
+        "isCorrect": true
+      },
+      {
+        "text": "Una reunión informal del personal de planta para discutir aumentos salariales.",
+        "rationale": "Las negociaciones salariales corresponden a reuniones de relaciones laborales y no a evaluaciones de gestión.",
+        "isCorrect": false
+      },
+      {
+        "text": "Una inspección punitiva sorpresa orientada a aplicar sanciones económicas a los operarios.",
+        "rationale": "La auditoría busca la evaluación de conformidad y la mejora continua, no la sanción destructiva individual.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un examen médico obligatorio que realiza el área de salud ocupacional de forma trimestral.",
+        "rationale": "Los exámenes médicos evalúan la aptitud física de los trabajadores, no la conformidad del sistema de gestión.",
+        "isCorrect": false
+      },
+      {
+        "text": "El procedimiento de compra de insumos de protección personal en el área de logística.",
+        "rationale": "La adquisición de insumos es una actividad operativa de la cadena de suministros.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Es un proceso estructurado, imparcial y basado en pruebas para verificar el grado de cumplimiento de estándares.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué caracteriza a una auditoría de 'primera parte' dentro de la clasificación de auditorías?",
+    "opciones": [
+      {
+        "text": "Es realizada por o en nombre de la propia organización para fines internos de evaluación y mejora.",
+        "rationale": "La auditoría de primera parte o interna es conducida por la propia empresa para diagnosticar y mejorar su sistema.",
+        "isCorrect": true
+      },
+      {
+        "text": "Es ejecutada de forma exclusiva por las autoridades estatales de inspección del trabajo.",
+        "rationale": "Las inspecciones de autoridades públicas son evaluaciones legales obligatorias, no auditorías de primera parte.",
+        "isCorrect": false
+      },
+      {
+        "text": "Es realizada por clientes interesados en verificar el cumplimiento de contratos comerciales.",
+        "rationale": "Las auditorías conducidas por clientes o partes interesadas externas corresponden a auditorías de segunda parte.",
+        "isCorrect": false
+      },
+      {
+        "text": "Concluye necesariamente con la emisión de un certificado internacional válido por tres años.",
+        "rationale": "Las auditorías de certificación internacional corresponden a auditorías de tercera parte.",
+        "isCorrect": false
+      },
+      {
+        "text": "No requiere el uso de listas de verificación ni revisión de evidencias documentadas.",
+        "rationale": "Todas las auditorías formales exigen fundamentarse en evidencias y herramientas de verificación comprobables.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "También llamada auditoría interna, la ejecuta la propia empresa para revisar la eficacia de sus propios procesos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué norma internacional proporciona las directrices para la auditoría de sistemas de gestión de la calidad, ambiental y de SST?",
+    "opciones": [
+      {
+        "text": "ISO 19011:2018.",
+        "rationale": "La ISO 19011:2018 es el estándar internacional de referencia sobre directrices para auditar sistemas de gestión.",
+        "isCorrect": true
+      },
+      {
+        "text": "ISO 45001:2018.",
+        "rationale": "La ISO 45001:2018 es la norma certificable que contiene los requisitos del sistema de gestión de SST.",
+        "isCorrect": false
+      },
+      {
+        "text": "ISO 9001:2015.",
+        "rationale": "La ISO 9001:2015 establece los requisitos para el sistema de gestión de la calidad.",
+        "isCorrect": false
+      },
+      {
+        "text": "ISO 14001:2015.",
+        "rationale": "La ISO 14001:2015 norma los requisitos para el sistema de gestión ambiental.",
+        "isCorrect": false
+      },
+      {
+        "text": "ISO 31000:2018.",
+        "rationale": "La ISO 31000:2018 aporta directrices para la gestión integral de riesgos en las organizaciones.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Es el estándar que orienta los principios de auditoría, la gestión de programas y la competencia de auditores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la finalidad principal de la 'reunión de apertura' al iniciar la fase presencial de una auditoría?",
+    "opciones": [
+      {
+        "text": "Presentar al equipo auditor, confirmar el plan, alcance y acordar los canales de comunicación.",
+        "rationale": "La reunión de apertura establece el marco de trabajo formal, ratifica el plan y aclara dudas iniciales entre las partes.",
+        "isCorrect": true
+      },
+      {
+        "text": "Entregar de manera inmediata la recomendación de certificación al gerente general.",
+        "rationale": "La recomendación de certificación solo se emite al cierre, tras evaluar las evidencias durante toda la auditoría.",
+        "isCorrect": false
+      },
+      {
+        "text": "Modificar la política de seguridad laboral previamente aprobada por la empresa.",
+        "rationale": "El auditor evalúa la política existente, no posee la facultad de alterarla durante la reunión.",
+        "isCorrect": false
+      },
+      {
+        "text": "Aplicar un examen escrito eliminatorio a todo el personal técnico de la mina.",
+        "rationale": "La auditoría evalúa la conformidad del sistema mediante muestreos e entrevistas, no pruebas masivas de aula.",
+        "isCorrect": false
+      },
+      {
+        "text": "Clausurar temporalmente las áreas que presenten desorden operativo.",
+        "rationale": "Los auditores de sistemas de gestión no tienen potestad legal para suspender o clausurar operaciones de la empresa.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Sirve para presentar al equipo auditor, repasar el plan de trabajo y fijar los canales de comunicación formal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se diferencia una 'no conformidad menor' de una 'no conformidad mayor' en la evaluación cualitativa de hallazgos?",
+    "opciones": [
+      {
+        "text": "La menor representa un incumplimiento parcial o aislado, mientras que la mayor implica un incumplimiento total o grave de un requisito.",
+        "rationale": "La no conformidad menor es puntual y no compromete el sistema; la mayor afecta significativamente la eficacia del sistema.",
+        "isCorrect": true
+      },
+      {
+        "text": "La menor deriva en una multa económica inmediata y la mayor solo requiere un compromiso verbal.",
+        "rationale": "Las no conformidades en auditorías de gestión requieren planes de acción correctiva, no cobro de multas.",
+        "isCorrect": false
+      },
+      {
+        "text": "La menor la detecta el auditor interno y la mayor la emite exclusivamente el gerente corporativo.",
+        "rationale": "Tanto auditores internos como externos pueden clasificar hallazgos menores o mayores según su gravedad objetiva.",
+        "isCorrect": false
+      },
+      {
+        "text": "La menor aplica únicamente a personal contratista y la mayor a los trabajadores permanentes.",
+        "rationale": "La clasificación del hallazgo se basa en la falla del requisito, independientemente del vínculo laboral.",
+        "isCorrect": false
+      },
+      {
+        "text": "No existe ninguna diferencia funcional; ambas tienen exactamente el mismo impacto en el dictamen final.",
+        "rationale": "Una no conformidad mayor impide la certificación hasta ser subsanada, mientras que la menor permite planes de cierre.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Analiza el grado de afectación al sistema: el fallo parcial de un requisito versus la ausencia o colapso total del mismo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo debe proceder el auditor al identificar una no conformidad durante la ejecución de las entrevistas y revisiones?",
+    "opciones": [
+      {
+        "text": "Comunicar el hallazgo de manera oportuna y transparente al auditado durante el desarrollo de la auditoría.",
+        "rationale": "Informar de inmediato evita sorpresas al cierre y permite al auditado comprender con claridad la evidencia encontrada.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ocultar el hallazgo y revelarlo por sorpresa al finalizar el período de vigencia de 3 años.",
+        "rationale": "El principio de transparencia exige comunicar las observaciones y hallazgos en la misma auditoría.",
+        "isCorrect": false
+      },
+      {
+        "text": "Alterar los registros del cliente para disimular la falta observada en campo.",
+        "rationale": "El auditor debe actuar con estricta integridad y objetividad, sin modificar la evidencia real.",
+        "isCorrect": false
+      },
+      {
+        "text": "Imponer una sanción salarial directa al trabajador entrevistado en ese momento.",
+        "rationale": "El auditor no tiene autoridad ni función disciplinaria sobre el personal de la empresa auditada.",
+        "isCorrect": false
+      },
+      {
+        "text": "Cancelar inmediatamente el proceso de auditoría y ordenar la evacuación de la planta.",
+        "rationale": "La presencia de hallazgos se documenta en el informe para su tratamiento, sin interrumpir intempestivamente la auditoría.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "La transparencia inmediata en el hallazgo permite al auditado entender la falla y presentar descargos si aplican.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes principios profesionales deben guiar el actuar de un auditor según la norma ISO 19011:2018?",
+    "opciones": [
+      {
+        "text": "Integridad y desempeño ético de sus funciones.",
+        "rationale": "La honestidad, profesionalismo y rectitud son la base del comportamiento de todo auditor.",
+        "isCorrect": true
+      },
+      {
+        "text": "Presentación imparcial e informe veraz de los hallazgos.",
+        "rationale": "El auditor tiene la obligación de reflejar con veracidad y exactitud los resultados encontrados.",
+        "isCorrect": true
+      },
+      {
+        "text": "Independencia e imparcialidad respecto a las actividades auditadas.",
+        "rationale": "El auditor debe estar libre de sesgos y no haber participado en el diseño del proceso que evalúa.",
+        "isCorrect": true
+      },
+      {
+        "text": "Garantizar por escrito antes de empezar que la empresa no obtendrá ningún hallazgo negativo.",
+        "rationale": "Un auditor no puede prometer resultados por adelantado, ya que violaría la imparcialidad y la veracidad.",
+        "isCorrect": false
+      },
+      {
+        "text": "Divulgar los datos confidenciales de la empresa en redes sociales para libre consulta.",
+        "rationale": "El principio de confidencialidad obliga al auditor a resguardar estrictamente la información sensible obtenida.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Selecciona los principios éticos que aseguran la objetividad, veracidad y confidencialidad durante la evaluación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito fundamental de la denominada Estructura de Alto Nivel (HLS) adoptada por las normas internacionales ISO como la 9001, 14001 y 45001?",
+    "opciones": [
+      {
+        "text": "Facilitar la integración de múltiples normas internacionales en un único sistema integrado de gestión.",
+        "isCorrect": true,
+        "rationale": "La Estructura de Alto Nivel estandariza la numeración, títulos de cláusulas y texto básico en las normas ISO para simplificar su alineación e integración organizacional."
+      },
+      {
+        "text": "Sustituir la normativa legal aplicable de cada país por un marco técnico de cumplimiento obligatorio universal.",
+        "isCorrect": false,
+        "rationale": "Las normas ISO son voluntarias y se posicionan por debajo de las leyes de cada país, exigiendo el cumplimiento legal aplicable sin reemplazarlo."
+      },
+      {
+        "text": "Exigir que todas las organizaciones generen exactamente la misma documentación técnica en auditorías.",
+        "isCorrect": false,
+        "rationale": "La estructura busca compatibilidad entre estándares, pero permite que cada organización adapte la extensión y formato de su documentación a sus características."
+      },
+      {
+        "text": "Garantizar que las auditorías externas sean realizadas de forma idéntica por cualquier entidad certificadora.",
+        "isCorrect": false,
+        "rationale": "El propósito principal es la coherencia interna de la norma para la gestión de la empresa, no homologar la metodología particular de cada casa certificadora."
+      },
+      {
+        "text": "Eliminar la necesidad de que la alta dirección participe activamente en las revisiones del sistema.",
+        "isCorrect": false,
+        "rationale": "Por el contrario, la Estructura de Alto Nivel refuerza el liderazgo y compromiso activo de la alta dirección como requisito central."
+      }
+    ],
+    "hint": "Piensa en cómo se relacionan entre sí las cláusulas comunes de la trinorma para formar un sistema unificado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Respecto a la validez de la certificación en la norma ISO 45001:2018, ¿cuál es el periodo oficial de vigencia del certificado emitido por una entidad acreditada?",
+    "opciones": [
+      {
+        "text": "3 años, sujeto a auditorías anuales de seguimiento.",
+        "isCorrect": true,
+        "rationale": "La certificación en normas ISO de sistemas de gestión se otorga por un ciclo de tres años, requiriendo evaluaciones de seguimiento en el primer y segundo año."
+      },
+      {
+        "text": "Indefinido, siempre que no ocurran accidentes mortales en la organización.",
+        "isCorrect": false,
+        "rationale": "Las certificaciones de sistemas de gestión no son perpetuas; vence el certificado tras tres años y debe recertificarse formalmente."
+      },
+      {
+        "text": "1 año, requiriendo recertificación completa al finalizar cada periodo anual.",
+        "isCorrect": false,
+        "rationale": "El proceso anual corresponde a auditorías de seguimiento dentro de un ciclo trienal, no a una recertificación completa."
+      },
+      {
+        "text": "5 años, con evaluaciones semestrales obligatorias por el organismo acreditador.",
+        "isCorrect": false,
+        "rationale": "El periodo estandarizado internacionalmente para la vigencia del certificado no es de cinco años sino de tres."
+      },
+      {
+        "text": "2 años, sin necesidad de realizar auditorías intermedias de control.",
+        "isCorrect": false,
+        "rationale": "El ciclo contempla tres años con auditorías intermedias obligatorias de seguimiento para verificar el mantenimiento del sistema."
+      }
+    ],
+    "hint": "Considera la duración del ciclo estandarizado antes de requerir una recertificación formal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de un Sistema de Gestión de Seguridad y Salud en el Trabajo (SGSST) bajo la norma ISO 45001, ¿qué función cumple la Alta Dirección como líder del sistema?",
+    "opciones": [
+      {
+        "text": "Asignar recursos necesarios, delegar roles y demostrar un compromiso visible en la prevención.",
+        "isCorrect": true,
+        "rationale": "La Alta Dirección actúa como el motor estratégico del sistema, proporcionando recursos financieros, humanos e impulsando la política preventiva."
+      },
+      {
+        "text": "Realizar directamente todas las inspecciones de campo y completar las matrices de riesgo operativas.",
+        "isCorrect": false,
+        "rationale": "Estas tareas corresponden a los supervisores, operarios y especialistas del área de SST, no al rol estratégico de la Alta Dirección."
+      },
+      {
+        "text": "Reemplazar al comité de seguridad en la investigación técnica de todos los accidentes ocurridos.",
+        "isCorrect": false,
+        "rationale": "El análisis e investigación técnica de accidentes cuenta con la participación del comité paritario y especialistas, sin ser asumido exclusivamente por la dirección."
+      },
+      {
+        "text": "Aprobar las compras operativas diarias de equipos de protección personal sin requerir evaluación previa.",
+        "isCorrect": false,
+        "rationale": "La gestión operativa de compras requiere especificaciones técnicas del área especializada y no la gestión directa diaria del directorio."
+      },
+      {
+        "text": "Encargarse de dictar personalmente la totalidad de las capacitaciones técnicas a los operarios.",
+        "isCorrect": false,
+        "rationale": "La capacitación debe impartirse por personal competente o especialistas, mientras que la dirección promueve los recursos y espacios para su ejecución."
+      }
+    ],
+    "hint": "Considera el rol equivalente al órgano estratégico central que direcciona y provee medios para el funcionamiento del sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué diferencia sustancial existe entre las expresiones 'mantener información documentada' y 'conservar información documentada' en la norma ISO 45001:2018?",
+    "opciones": [
+      {
+        "text": "La primera se refiere a establecer procedimientos y documentos de trabajo, mientras que la segunda exige guardar registros como evidencia de resultados.",
+        "isCorrect": true,
+        "rationale": "'Mantener' aplica a documentación descriptiva y operativa actualizada (procedimientos), mientras que 'conservar' exige el resguardo inalterable de registros históricos."
+      },
+      {
+        "text": "La primera es aplicable solo a la Alta Dirección, mientras que la segunda corresponde únicamente a las áreas operativas.",
+        "isCorrect": false,
+        "rationale": "Ambos términos se aplican transversalmente a todos los niveles de la organización según el requisito específico de la norma."
+      },
+      {
+        "text": "La primera exige archivos en formato físico impreso, mientras que la segunda acepta exclusivamente almacenamiento digital.",
+        "isCorrect": false,
+        "rationale": "La norma no restringe el soporte de la información documentada; ambos tipos pueden ser conservados en medios físicos o electrónicos."
+      },
+      {
+        "text": "La primera se aplica durante la fase de auditoría externa, y la segunda se utiliza de forma exclusiva en auditorías internas.",
+        "isCorrect": false,
+        "rationale": "La distinción es conceptual respecto a la naturaleza del documento (procedimiento vs. registro) y no depende del tipo de auditoría."
+      },
+      {
+        "text": "Ambas expresiones son totalmente equivalentes y no imponen obligaciones distintas sobre el control documental.",
+        "isCorrect": false,
+        "rationale": "En la redacción de la norma ISO, cada verbo modal y término estandarizado posee una implicación técnica diferenciada entre procedimientos e historial."
+      }
+    ],
+    "hint": "Relaciona una acción con los manuales/instrucciones de proceso y la otra con los históricos comprobables de cumplimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes afirmaciones describen correctamente el alcance y enfoque de la norma internacional ISO 45001:2018?",
+    "opciones": [
+      {
+        "text": "Posee un enfoque preventivo destinado a evitar que los incidentes y enfermedades laborales ocurran.",
+        "isCorrect": true,
+        "rationale": "El objetivo esencial de la norma es anticiparse a la materialización de los riesgos mediante la prevención proactiva."
+      },
+      {
+        "text": "Puede ser implementada en empresas públicas y privadas de cualquier sector económico y tamaño.",
+        "isCorrect": true,
+        "rationale": "La norma es de aplicación universal y no discrimina por tipo de propiedad, rubro comercial ni número de trabajadores."
+      },
+      {
+        "text": "Proporciona las herramientas necesarias para responder eficazmente ante la materialización imprevista de un riesgo.",
+        "isCorrect": true,
+        "rationale": "A pesar de ser preventiva, exige mecanismos de preparación y respuesta ante emergencias para mitigar impactos si ocurren eventos."
+      },
+      {
+        "text": "Garantiza que la empresa certificada alcance la perfección absoluta y quede completamente exenta de incidentes.",
+        "isCorrect": false,
+        "rationale": "Un sistema certificado no asegura la infalibilidad total, sino la existencia de mecanismos organizados de control y mejora continua."
+      },
+      {
+        "text": "Limita su aplicación exclusivamente al sector minero e industrial pesado por la alta peligrosidad de sus operaciones.",
+        "isCorrect": false,
+        "rationale": "La ISO 45001 es aplicable a servicios, comercio, agricultura, pesca y cualquier otra actividad económica."
+      }
+    ],
+    "hint": "Analiza la flexibilidad del estándar para adaptarse a diversos rubros y el principio de mejora continua frente a la falsa promesa de cero defectos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué medida debe adoptar una organización cuando identifica que un postulante a un puesto operativo cumple con la mayoría del perfil pero carece de una competencia específica?",
+    "opciones": [
+      {
+        "text": "Proporcionarle la capacitación y formación necesaria para cerrar la brecha de competencia identificada.",
+        "isCorrect": true,
+        "rationale": "La norma promueve que las brechas de competencia sean subsanadas mediante programas estructurados de formación para habilitar al trabajador."
+      },
+      {
+        "text": "Descalificar inmediatamente al postulante por incumplimiento estricto del perfil de puesto sin opción a formación.",
+        "isCorrect": false,
+        "rationale": "El estándar de SST busca brindar oportunidades de capacitación para desarrollar el perfil requerido antes de asumir el riesgo en la operación."
+      },
+      {
+        "text": "Modificar el manual de organización y funciones para eliminar dicho requisito del perfil del puesto.",
+        "isCorrect": false,
+        "rationale": "Reducir arbitrariamente las exigencias del perfil sin sustento de seguridad compromete la idoneidad técnica en el puesto."
+      },
+      {
+        "text": "Eximir al trabajador del cumplimiento de las tareas que requieran esa competencia técnica no cubierta.",
+        "isCorrect": false,
+        "rationale": "Fragmentar responsabilidades críticas de seguridad en un mismo puesto operativo crea vacíos de control operacional."
+      },
+      {
+        "text": "Contratar a una empresa externa para que realice la labor de manera permanente en su lugar.",
+        "isCorrect": false,
+        "rationale": "La subcontratación no exime a la empresa de asegurar las competencias necesarias en el personal que opera sus procesos."
+      }
+    ],
+    "hint": "Piensa en el propósito de la gestión de la capacitación como puente para desarrollar las habilidades requeridas en el puesto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con las definiciones de la gestión de riesgos en SST, ¿cuál es la distinción fundamental entre el concepto de 'Peligro' y el concepto de 'Riesgo'?",
+    "opciones": [
+      {
+        "text": "El peligro es una situación o característica intrínseca capaz de ocasionar daño, mientras que el riesgo es la probabilidad de que dicho peligro se materialice y cause daño.",
+        "isCorrect": true,
+        "rationale": "El peligro es la fuente o condición inherente de riesgo, mientras que el riesgo combina la probabilidad de ocurrencia con la severidad potencial del daño."
+      },
+      {
+        "text": "El peligro es una métrica cuantitativa calculada por el comité, mientras que el riesgo es una característica puramente cualitativa del ambiente.",
+        "isCorrect": false,
+        "rationale": "Ambos conceptos pueden ser analizados mediante enfoques tanto cualitativos como cuantitativos dentro del sistema."
+      },
+      {
+        "text": "El peligro aparece únicamente tras ocurrir un accidente, mientras que el riesgo existe antes de iniciar las operaciones diarias.",
+        "isCorrect": false,
+        "rationale": "El peligro está presente de manera previa e inherente en las actividades e instalaciones, no surge a causa del accidente."
+      },
+      {
+        "text": "El peligro se controla exclusivamente con EPP, mientras que el riesgo solo puede ser eliminado mediante ingeniería.",
+        "isCorrect": false,
+        "rationale": "Tanto los peligros como los riesgos se abordan aplicando de forma jerárquica las diversas medidas de control disponibles."
+      },
+      {
+        "text": "El peligro se aplica al personal operativo, mientras que el riesgo abarca únicamente al personal administrativo.",
+        "isCorrect": false,
+        "rationale": "Ambos términos aplican a todas las áreas, procesos y personal de la organización sin distinción del puesto."
+      }
+    ],
+    "hint": "Identifica cuál término representa la condición o fuente inherente y cuál expresa la posibilidad de materialización del daño.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al aplicar la jerarquía de controles de seguridad para mitigar un riesgo identificado, ¿cuál de las siguientes medidas representa la acción de mayor eficacia?",
+    "opciones": [
+      {
+        "text": "La eliminación completa del peligro de la fuente operativa.",
+        "isCorrect": true,
+        "rationale": "En la cúspide de la jerarquía de controles, la eliminación suprime la fuente de riesgo en su totalidad, siendo la medida más efectiva."
+      },
+      {
+        "text": "La sustitución del insumo peligroso por uno de menor severidad.",
+        "isCorrect": false,
+        "rationale": "La sustitución es el segundo nivel de eficacia; reduce el riesgo pero no remueve por completo el proceso o elemento."
+      },
+      {
+        "text": "El diseño e instalación de controles de ingeniería como barreras fijas.",
+        "isCorrect": false,
+        "rationale": "Los controles de ingeniería aíslan al trabajador del peligro, pero ocupan el tercer nivel de efectividad en la jerarquía."
+      },
+      {
+        "text": "La implementación de señalización y procedimientos administrativos de trabajo.",
+        "isCorrect": false,
+        "rationale": "Los controles administrativos dependen del comportamiento humano, por lo que tienen menor eficacia que la modificación física del proceso."
+      },
+      {
+        "text": "La entrega y uso obligatorio de equipos de protección personal (EPP) certificados.",
+        "isCorrect": false,
+        "rationale": "El EPP se ubica en la base de la jerarquía por ser la barrera final que no elimina ni reduce la existencia del peligro en el ambiente."
+      }
+    ],
+    "hint": "Observa el nivel superior dentro de la pirámide invertida de efectividad en el control de riesgos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué norma nacional peruana aprueba los formatos referenciales que contienen la información mínima obligatoria para los registros del Sistema de Gestión de SST?",
+    "opciones": [
+      {
+        "text": "Resolución Ministerial 050-2013-TR.",
+        "isCorrect": true,
+        "rationale": "Esta resolución aprueba los formatos de registros obligatorios y las guías metodológicas para la gestión de SST en el Perú."
+      },
+      {
+        "text": "Decreto Supremo 005-2012-TR.",
+        "isCorrect": false,
+        "rationale": "Este decreto aprueba el Reglamento general de la Ley 29783 de Seguridad y Salud en el Trabajo, no los formatos específicos de registros."
+      },
+      {
+        "text": "Ley 29783.",
+        "isCorrect": false,
+        "rationale": "Es la Ley marco de Seguridad y Salud en el Trabajo que establece los principios generales, delegando la aprobación de formatos a normas ministeriales."
+      },
+      {
+        "text": "ISO 31000:2018.",
+        "isCorrect": false,
+        "rationale": "Es un estándar internacional para la gestión del riesgo en general y no una norma legal peruana de registros."
+      },
+      {
+        "text": "Decreto Supremo 024-2016-EM.",
+        "isCorrect": false,
+        "rationale": "Corresponde al Reglamento de Seguridad y Salud Ocupacional en Minería, el cual incluye disposiciones del sector pero no los formatos generales del MTPE."
+      }
+    ],
+    "hint": "Corresponde a una resolución del Ministerio de Trabajo expedida en el año 2013 que estandariza los registros obligatorios del sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes criterios componen la evaluación técnica del nivel de probabilidad según la metodología estandarizada del sector?",
+    "opciones": [
+      {
+        "text": "Índice de personas expuestas a las condiciones del puesto.",
+        "isCorrect": true,
+        "rationale": "A mayor número de personas expuestas en la tarea, aumenta la probabilidad proporcional de ocurrencia de un evento."
+      },
+      {
+        "text": "Índice de procedimientos de trabajo existentes y su aplicabilidad.",
+        "isCorrect": true,
+        "rationale": "La existencia y claridad de los procedimientos operativos estandarizados disminuye la probabilidad de fallas en la tarea."
+      },
+      {
+        "text": "Índice de capacitación y entrenamiento recibido por el personal.",
+        "isCorrect": true,
+        "rationale": "El nivel de competencia y adiestramiento de los trabajadores influye de forma directa en la frecuencia de errores operativos."
+      },
+      {
+        "text": "Monto económico de las multas impuestas por la autoridad reguladora.",
+        "isCorrect": false,
+        "rationale": "El costo sancionador es un impacto legal/económico posterior y no un factor operativo que determine la probabilidad física del accidente."
+      },
+      {
+        "text": "Calificación tributaria de la empresa ante el ente fiscalizador.",
+        "isCorrect": false,
+        "rationale": "El estado tributario de la empresa es ajeno a las condiciones técnicas y operativas que configuran la probabilidad de un riesgo en el trabajo."
+      }
+    ],
+    "hint": "Piensa en las variables internas relacionadas con las personas, la existencia de pautas de trabajo y la capacitación técnica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la elaboración participativa de la matriz IPERC, ¿cuál es un error común que suele generar observaciones o no conformidades en auditorías y fiscalizaciones?",
+    "opciones": [
+      {
+        "text": "Elaborar la matriz de manera aislada desde un escritorio sin consultar ni involucrar a los trabajadores operativos expuestos al riesgo.",
+        "isCorrect": true,
+        "rationale": "La normativa y las mejores prácticas exigen que la IPERC se elabore en consulta con los trabajadores que conocen la realidad operativa de sus tareas."
+      },
+      {
+        "text": "Incluir el análisis de riesgos disergonómicos y psicosociales en el puesto administrativo.",
+        "isCorrect": false,
+        "rationale": "La evaluación integral del puesto exige contemplar riesgos físicos, disergonómicos y psicosociales en todas las áreas de la empresa."
+      },
+      {
+        "text": "Actualizar la matriz cuando ocurren cambios en los procesos o tras la ocurrencia de un incidente.",
+        "isCorrect": false,
+        "rationale": "Revisar y actualizar la IPERC ante modificaciones operativas o eventos no deseados es un requisito obligatorio del sistema."
+      },
+      {
+        "text": "Utilizar métodos cuantitativos complementarios junto a la metodología estandarizada genérica.",
+        "isCorrect": false,
+        "rationale": "Integrar herramientas o metodologías cuantitativas adicionales refuerza la solidez de la evaluación técnica de los riesgos."
+      },
+      {
+        "text": "Clasificar los riesgos en niveles de severidad alta, media y baja utilizando códigos de colores.",
+        "isCorrect": false,
+        "rationale": "El uso de escalas de severidad categorizadas por colores es el estándar aceptado para la jerarquización gráfica del riesgo."
+      }
+    ],
+    "hint": "Recuerda la importancia de la consulta participativa con los trabajadores frente al trabajo de gabinete desvinculado de la realidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la matriz de evaluación de riesgos 6x6, si un evento presenta un impacto de consecuencias muy graves pero con una probabilidad de ocurrencia extremadamente baja, ¿cómo se clasifica el riesgo resultante sin controles adecuados?",
+    "opciones": [
+      {
+        "text": "Como un riesgo de atención moderada o intermedia que requiere controles monitoreados.",
+        "isCorrect": true,
+        "rationale": "En la intersección matricial, una severidad alta atenuada por una probabilidad muy baja arroja una valoración intermedia o moderada."
+      },
+      {
+        "text": "Como un riesgo trivial o insignificante que no requiere ninguna acción documental.",
+        "isCorrect": false,
+        "rationale": "Las consecuencias muy graves impiden que un riesgo sea categorizado como trivial, incluso cuando la probabilidad es baja."
+      },
+      {
+        "text": "Como un riesgo totalmente eliminado que no debe incluirse en la matriz IPERC.",
+        "isCorrect": false,
+        "rationale": "Que la probabilidad sea muy baja no implica que el peligro haya sido eliminado de las instalaciones u operaciones."
+      },
+      {
+        "text": "Como una no conformidad mayor automática sobre la gestión del proceso.",
+        "isCorrect": false,
+        "rationale": "La evaluación del riesgo es una etapa técnica diagnóstica y no constituye por sí misma un incumplimiento normativo o no conformidad."
+      },
+      {
+        "text": "Como una falta laboral grave cometida por el supervisor de la zona.",
+        "isCorrect": false,
+        "rationale": "La matriz valora las condiciones objetivas del puesto y no la imputación de faltas disciplinarias al personal."
+      }
+    ],
+    "hint": "Considera el cruce gráfico entre una severidad en extremo alta y una baja frecuencia de ocurrencia en los ejes de la matriz.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple la norma ISO 31000:2018 dentro del diseño e implementación del sistema de gestión de riesgos?",
+    "opciones": [
+      {
+        "text": "Proporcionar directrices generales no certificables sobre cómo estructurar la gestión del riesgo en cualquier tipo de organización.",
+        "isCorrect": true,
+        "rationale": "La ISO 31000 es una norma de orientación que establece principios y un marco de referencia general para gestionar riesgos sin fines de auditoría de certificación."
+      },
+      {
+        "text": "Certificar de manera obligatoria a los profesionales encargados de auditar la matriz IPERC.",
+        "isCorrect": false,
+        "rationale": "La ISO 31000 no se utiliza para certificar competencias individuales de personas ni otorga diplomas de auditor."
+      },
+      {
+        "text": "Sustituir el reglamento sectorial de seguridad e higiene minera de cumplimiento legal.",
+        "isCorrect": false,
+        "rationale": "Un estándar de directrices voluntarias ISO no reemplaza los reglamentos jurídicos de carácter obligatorio dictados por los ministerios."
+      },
+      {
+        "text": "Determinar los costos unitarios de las multas por infracciones laborales en seguridad.",
+        "isCorrect": false,
+        "rationale": "La cuantificación de sanciones administrativas es potestad de los órganos de fiscalización laboral de cada país."
+      },
+      {
+        "text": "Establecer los requisitos mínimos documentales para auditar los sistemas de gestión ambiental.",
+        "isCorrect": false,
+        "rationale": "La gestión ambiental se rige por la norma ISO 14001, mientras que la 31000 abarca la arquitectura general del riesgo."
+      }
+    ],
+    "hint": "Identifica la norma de la familia ISO que sirve como guía técnica marco de directrices no certificables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el sector minero peruano, ¿cuál ha sido históricamente una de las causas principales de accidentes mortales según las estadísticas analizadas en el curso?",
+    "opciones": [
+      {
+        "text": "Desprendimiento o caída de rocas en operaciones subterráneas.",
+        "isCorrect": true,
+        "rationale": "Las estadísticas oficiales de fiscalización minera ubican al desprendimiento de rocas como el mecanismo predominante en la mortalidad del sector."
+      },
+      {
+        "text": "Choque y colisión entre vehículos ligeros en transporte de personal.",
+        "isCorrect": false,
+        "rationale": "Aunque es un riesgo crítico importante, los accidentes vehiculares se ubican estadísticamente por debajo de los eventos geotécnicos."
+      },
+      {
+        "text": "Asfixia por sumergimiento en pozas de lixiviación.",
+        "isCorrect": false,
+        "rationale": "Representa una probabilidad menor en la distribución histórica de fatalidades registradas en los reportes anuales."
+      },
+      {
+        "text": "Descargas de energía eléctrica por mantenimiento no autorizado.",
+        "isCorrect": false,
+        "rationale": "El riesgo eléctrico figura en las estadísticas, pero su frecuencia histórica de fatalidades es inferior a los colapsos rocosos."
+      },
+      {
+        "text": "Contacto con productos químicos en laboratorios de análisis.",
+        "isCorrect": false,
+        "rationale": "Los incidentes por manipulación química suelen registrar menor tasa de mortalidad en comparación con las operaciones de socavón."
+      }
+    ],
+    "hint": "Identifica el tipo de evento geotécnico de mayor recurrencia en los reportes estadísticos mineros en socavón.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función clave de la norma ISO 45002:2023 con relación a la ISO 45001:2018?",
+    "opciones": [
+      {
+        "text": "Servir como una guía técnica de directrices generales que explica detalladamente cómo implementar los requisitos de la ISO 45001.",
+        "isCorrect": true,
+        "rationale": "La ISO 45002 complementa a la 45001 proporcionando explicaciones prácticas, ejemplos e instrucciones para la aplicación efectiva de cada cláusula."
+      },
+      {
+        "text": "Reemplazar por completo a la versión 2018 de la norma ISO 45001 en los procesos de certificación.",
+        "isCorrect": false,
+        "rationale": "La ISO 45001 sigue siendo la única norma certificable del sistema, mientras que la 45002 cumple un rol puramente orientativo."
+      },
+      {
+        "text": "Normar de forma exclusiva los pagos e indemnizaciones por accidentes de trabajo en minería.",
+        "isCorrect": false,
+        "rationale": "El cálculo de indemnizaciones y seguros de accidentes es materia regulada por el marco legal de cada país."
+      },
+      {
+        "text": "Sancionar los incumplimientos legales detectados durante las fiscalizaciones laborales.",
+        "isCorrect": false,
+        "rationale": "Las normas internacionales carecen de carácter coercitivo o sancionador; esa función corresponde a los entes fiscalizadores gubernamentales."
+      },
+      {
+        "text": "Certificar únicamente a las empresas subcontratistas que prestan servicios de alto riesgo.",
+        "isCorrect": false,
+        "rationale": "La ISO 45002 no es un estándar certificable para ninguna empresa, sino un manual de buenas prácticas de implementación."
+      }
+    ],
+    "hint": "Analiza el rol complementario de orientación técnica que posee esta guía frente al estándar certificable principal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De las siguientes opciones, ¿cuáles representan beneficios económicos e intangibles directos derivados de la implementación del SGSST bajo la norma ISO 45001 en una empresa minera?",
+    "opciones": [
+      {
+        "text": "Reducción de costos por atención médica, indemnizaciones y procesos judiciales.",
+        "isCorrect": true,
+        "rationale": "Evitar incidentes disminuye los desembolsos por siniestralidad, pasivos laborales y defensa legal."
+      },
+      {
+        "text": "Disminución del ausentismo laboral y de la rotación involuntaria de personal capacitado.",
+        "isCorrect": true,
+        "rationale": "Un entorno seguro protege la salud de la fuerza de trabajo, asegurando la continuidad laboral y reteniendo el talento técnico."
+      },
+      {
+        "text": "Protección de la reputación institucional y continuidad operativa frente a paralizaciones.",
+        "isCorrect": true,
+        "rationale": "Prevenir fatalidades evita la clausura temporal de operaciones por la autoridad y el rechazo de inversionistas o clientes."
+      },
+      {
+        "text": "Aumento automático del precio internacional de venta de los minerales extraídos.",
+        "isCorrect": false,
+        "rationale": "La cotización bursátil de los commodities mineros depende de factores de mercado global ajenos a la gestión interna de SST."
+      },
+      {
+        "text": "Exención total del pago de impuestos y contribuciones mineras al estado.",
+        "isCorrect": false,
+        "rationale": "La certificación ISO no libera a la empresa de sus obligaciones tributarias ni del pago de regalías fijadas por ley."
+      }
+    ],
+    "hint": "Distingue los impactos positivos en el desempeño laboral, financiero interno y legal de los factores macroeconómicos o tributarios ajenos a la gestión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la calibración y el mantenimiento programado de equipos de medición y herramientas operativas impactan directamente en la seguridad y productividad?",
+    "opciones": [
+      {
+        "text": "Garantizan que los equipos operen dentro de parámetros precisos y seguros, previniendo fallas imprevistas, lecturas erróneas y accidentes.",
+        "isCorrect": true,
+        "rationale": "Instrumentos confiables y maquinarias en óptimo estado evitan decisiones erróneas sobre controles de riesgo e interrupciones de proceso."
+      },
+      {
+        "text": "Permiten eliminar la necesidad de realizar capacitaciones sobre el uso seguro de dichas herramientas.",
+        "isCorrect": false,
+        "rationale": "Aunque el equipo esté calibrado, el personal requiere capacitación obligatoria para operarlo correctamente."
+      },
+      {
+        "text": "Reemplazan la obligación legal de contar con un supervisor de seguridad en el área operativa.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento técnico de equipos no exime la presencia de la supervisión de campo prescrita por la legislación."
+      },
+      {
+        "text": "Aseguran que los equipos nunca requieran renovación de componentes durante su vida útil.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento previene fallas prematuras pero no evita el desgaste natural y sustitución periódica de piezas."
+      },
+      {
+        "text": "Eximen a la empresa de incluir el uso de las herramientas en la matriz de evaluación de riesgos.",
+        "isCorrect": false,
+        "rationale": "Toda herramienta o equipo en uso debe estar correctamente caracterizado dentro de la matriz IPERC del puesto."
+      }
+    ],
+    "hint": "Considera el efecto de contar con mediciones confiables y equipos aptos sobre las condiciones de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de contratistas y proveedores bajo la ISO 45001, ¿qué criterio debe aplicar la organización para asegurar la continuidad de la homologación y desempeño?",
+    "opciones": [
+      {
+        "text": "Realizar evaluaciones periódicas de seguimiento al desempeño del proveedor para verificar el cumplimiento sostenido de los estándares acordados.",
+        "isCorrect": true,
+        "rationale": "La evaluación continua asegura que el contratista mantenga los estándares de seguridad requeridos a lo largo de la prestación del servicio."
+      },
+      {
+        "text": "Confiar indefinidamente en la propuesta comercial inicial presentada por el proveedor sin hacer auditorías de seguimiento.",
+        "isCorrect": false,
+        "rationale": "El desempeño en seguridad tiende a degradarse si no existen revisiones periódicas que fiscalicen el cumplimiento en campo."
+      },
+      {
+        "text": "Exigir que los proveedores asuman la responsabilidad legal exclusiva de todos los accidentes ocurridos en la mina.",
+        "isCorrect": false,
+        "rationale": "La empresa titular minera mantiene responsabilidad solidaria y compartida sobre la SST en sus instalaciones ante la ley."
+      },
+      {
+        "text": "Evaluar a los contratistas únicamente cuando cometan una infracción laboral que resulte en una multa firme.",
+        "isCorrect": false,
+        "rationale": "Esperar a la infracción es un enfoque reactivo contrario al principio preventivo y de monitoreo proactivo de la norma."
+      },
+      {
+        "text": "Transferir el control documental de la matriz IPERC directamente a la empresa subcontratada.",
+        "isCorrect": false,
+        "rationale": "La empresa principal debe supervisar y validar que las matrices de los contratistas se alineen a sus estándares del sistema."
+      }
+    ],
+    "hint": "Compara la gestión de proveedores con el monitoreo constante de la calidad en las relaciones operativas clave.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo influye la estandarización de procesos mediante procedimientos e instructivos de trabajo en la productividad organizacional?",
+    "opciones": [
+      {
+        "text": "Reduce variabilidades y tiempos muertos, facilitando que el personal nuevo y antiguo ejecute las tareas con calidad y seguridad homogénea.",
+        "isCorrect": true,
+        "rationale": "Tener procedimientos claros unifica la forma de trabajo, minimizando errores, renegociaciones y demoras por falta de orientación."
+      },
+      {
+        "text": "Incrementa la burocracia operativa garantizando que las tareas tomen el doble de tiempo en ser ejecutadas.",
+        "isCorrect": false,
+        "rationale": "Un procedimiento bien diseñado busca la fluidez eficiente y la prevención, no la generación de burocracia innecesaria."
+      },
+      {
+        "text": "Permite reemplazar la totalidad de la mano de obra operativa por sistemas de automatización en el corto plazo.",
+        "isCorrect": false,
+        "rationale": "El objetivo documental es guiar las acciones de las personas, no justificar su prescindencia o sustitución automatizada."
+      },
+      {
+        "text": "Evita que la autoridad fiscalizadora realice inspecciones de campo al mostrar los documentos firmados.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones de la autoridad fiscalizadora verifican la ejecución real en campo independientemente de la existencia del papel."
+      },
+      {
+        "text": "Oculta las causas raíz de los incidentes previos al estandarizar los formatos de reporte.",
+        "isCorrect": false,
+        "rationale": "La estandarización busca transparentar y hacer sistemática la identificación de fallas para evitar su repetición."
+      }
+    ],
+    "hint": "Piensa en los beneficios de la uniformidad operativa tanto para el aprendizaje ágil como para la eficiencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según los principios fundamentales de auditoría (ISO 19011), ¿por qué una auditoría debe ser un proceso independiente?",
+    "opciones": [
+      {
+        "text": "Para garantizar la imparcialidad y la objetividad de las conclusiones, asegurando que el auditor no audite su propio trabajo.",
+        "isCorrect": true,
+        "rationale": "El principio de independencia garantiza que la evaluación esté libre de sesgos, conflictos de interés y presiones de los auditados."
+      },
+      {
+        "text": "Para permitir que el auditor modifique los procedimientos de la empresa según su criterio personal sin consultar.",
+        "isCorrect": false,
+        "rationale": "El auditor evalúa el cumplimiento de criterios, pero no tiene la potestad de rehacer o alterar la documentación del auditado."
+      },
+      {
+        "text": "Para asegurar que la auditoría sea realizada únicamente por fiscalizadores del ministerio de trabajo.",
+        "isCorrect": false,
+        "rationale": "Las auditorías del SGSST pueden ser internas o de certificación privada, no estando restringidas a la autoridad estatal."
+      },
+      {
+        "text": "Para evitar que la Alta Dirección tenga acceso a los informes finales y hallazgos detectados.",
+        "isCorrect": false,
+        "rationale": "El informe de auditoría se elabora justamente para informar a la Alta Dirección sobre el estado real del sistema."
+      },
+      {
+        "text": "Para garantizar que las auditorías se efectúen sin necesidad de revisar documentación escrita previamente.",
+        "isCorrect": false,
+        "rationale": "La auditoría es un proceso obligatoriamente documentado que requiere el contraste permanente contra registros e instrucciones."
+      }
+    ],
+    "hint": "Recuerda la regla fundamental que impide a un evaluador actuar como 'juez y parte' en el análisis de un proceso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia sustancial entre una no conformidad menor y una no conformidad mayor durante una auditoría del SGSST?",
+    "opciones": [
+      {
+        "text": "La menor es un incumplimiento parcial o puntual de un requisito, mientras que la mayor implica un incumplimiento total o la falla sistémica de un requisito normativo.",
+        "isCorrect": true,
+        "rationale": "La no conformidad menor no pone en riesgo global al sistema, mientras que la mayor evidencia la ausencia o colapso del control de un requisito completo."
+      },
+      {
+        "text": "La menor ocasiona sanciones económicas inmediatas, mientras que la mayor solo genera recomendaciones verbales.",
+        "isCorrect": false,
+        "rationale": "Los auditores de certificación no imponen multas monetarias; evalúan el grado de cumplimiento normativo."
+      },
+      {
+        "text": "La menor es detectada en auditorías externas, mientras que la mayor solo se identifica en auditorías internas.",
+        "isCorrect": false,
+        "rationale": "Ambas categorías de hallazgos pueden ser identificadas tanto en auditorías de primera como de tercera parte."
+      },
+      {
+        "text": "La menor se aplica al personal de limpieza, y la mayor aplica exclusivamente al gerente general.",
+        "isCorrect": false,
+        "rationale": "La severidad del hallazgo depende del grado de fallo del requisito de la norma y no del puesto de la persona involucrada."
+      },
+      {
+        "text": "La menor requiere 3 años para subsanarse, mientras que la mayor debe ser resuelta en 24 horas.",
+        "isCorrect": false,
+        "rationale": "Los plazos de subsanación de no conformidades dependen de la casa certificadora y suelen tramitarse en semanas, no en años."
+      }
+    ],
+    "hint": "Evalúa el alcance y la gravedad del fallo en la aplicación de la cláusula de la norma.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la ejecución de una auditoría, ¿cuáles de los siguientes pasos forman parte del proceso de recopilación y verificación de evidencias?",
+    "opciones": [
+      {
+        "text": "Entrevistar al personal de distintos niveles jerárquicos sobre sus actividades y conocimientos del sistema.",
+        "isCorrect": true,
+        "rationale": "Las entrevistas permiten contrastar si el personal aplica los procedimientos y comprende los compromisos de seguridad."
+      },
+      {
+        "text": "Revisar registros físicos y digitales para comprobar el cumplimiento de los procedimientos.",
+        "isCorrect": true,
+        "rationale": "El examen documental de registros proporciona evidencia objetiva e inalterable sobre la ejecución de los controles."
+      },
+      {
+        "text": "Realizar observaciones directas e inspecciones en el lugar donde se ejecutan las actividades operativas.",
+        "isCorrect": true,
+        "rationale": "La constatación in situ permite verificar en la práctica si la realidad operativa concuerda con lo descrito en los documentos."
+      },
+      {
+        "text": "Imponer multas económicas inmediatas al personal que cometa un error durante la entrevista.",
+        "isCorrect": false,
+        "rationale": "El auditor no ejerce función sancionadora disciplinaria ni monetaria sobre los trabajadores examinados."
+      },
+      {
+        "text": "Redactar los procedimientos operativos de la empresa en caso de que no existan al momento de la revisión.",
+        "isCorrect": false,
+        "rationale": "El auditor no debe elaborar la documentación del auditado para mantener su estricta independencia técnica."
+      }
+    ],
+    "hint": "Distingue la labor objetiva de constatación y levantamiento de datos que realiza el auditor frente a funciones operativas o sancionadoras que no le corresponden.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la reunión de apertura de una auditoría externa de certificación, ¿cuál es el objetivo principal de la intervención del auditor líder?",
+    "opciones": [
+      {
+        "text": "Presentar al equipo auditor, confirmar el plan y alcance de la auditoría, establecer canales de comunicación y aclarar dudas del proceso.",
+        "isCorrect": true,
+        "rationale": "La reunión de apertura formaliza el inicio de las actividades, revalida la agenda acordada y establece las reglas de la evaluación."
+      },
+      {
+        "text": "Entregar de manera definitiva el certificado de conformidad ISO 45001 a la Alta Dirección.",
+        "isCorrect": false,
+        "rationale": "El certificado se emite meses después, solo tras concluir la auditoría y aprobar el cierre de los hallazgos."
+      },
+      {
+        "text": "Notificar el listado completo de las sanciones económicas que se impondrán al finalizar el día.",
+        "isCorrect": false,
+        "rationale": "Al inicio de la auditoría no se conocen aún los hallazgos, y los auditores no imponen sanciones financieras."
+      },
+      {
+        "text": "Exigir el despido inmediato de los trabajadores que no recuerden la política de seguridad.",
+        "isCorrect": false,
+        "rationale": "La auditoría evalúa la conformidad de los procesos, sin tener atribuciones sobre despidos de personal."
+      },
+      {
+        "text": "Modificar la política de seguridad y salud en el trabajo redactando un nuevo texto consensuado.",
+        "isCorrect": false,
+        "rationale": "La política es responsabilidad exclusiva de la organización auditada y no del equipo evaluador externo."
+      }
+    ],
+    "hint": "Se trata del primer contacto formal donde se fijan las pautas, cronogramas y expectativas del examen de auditoría.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué consecuencia ocurre si durante una auditoría de seguimiento una empresa presenta la misma no conformidad menor identificada en la auditoría del año anterior sin haberla subsanado?",
+    "opciones": [
+      {
+        "text": "La no conformidad menor se escala automáticamente a una no conformidad mayor por falta de acción correctiva eficaz.",
+        "isCorrect": true,
+        "rationale": "La recurrencia no tratada evidencia la falla en el proceso de mejora continua y acción correctiva, agravando la falta a nivel mayor."
+      },
+      {
+        "text": "La no conformidad se anula automáticamente por haber transcurrido un año desde su detección.",
+        "isCorrect": false,
+        "rationale": "Los hallazgos no prescriben con el tiempo; deben ser subsanados formalmente mediante evidencia demostrable."
+      },
+      {
+        "text": "El auditor la convierte en una recomendación positiva debido al tiempo transcurrido sin accidentes.",
+        "isCorrect": false,
+        "rationale": "No corregir una desviación identificada constituye un retroceso en la gestión, imposibilitando su calificación como aspecto positivo."
+      },
+      {
+        "text": "Se otorga un periodo de gracia adicional de tres años sin evaluar ese proceso en particular.",
+        "isCorrect": false,
+        "rationale": "No existen exenciones que excluyan del control procesos con fallas persistentes durante el ciclo de seguimiento."
+      },
+      {
+        "text": "Se le suspende la certificación a la entidad certificadora por no haber dado capacitación.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad del levantamiento de la acción correctiva recae en la empresa auditada, no en la casa certificadora."
+      }
+    ],
+    "hint": "Analiza qué sucede cuando se evidencia inacción o falta de efectividad en la corrección de un hallazgo previo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-16",
+    "diplomado": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué norma internacional proporciona las directrices y orientación para la auditoría de sistemas de gestión, incluyendo los principios y la gestión de programas de auditoría?",
+    "opciones": [
+      {
+        "text": "ISO 19011:2018.",
+        "isCorrect": true,
+        "rationale": "La norma ISO 19011 es el estándar internacional de directrices para la auditoría de sistemas de gestión de cualquier especialidad."
+      },
+      {
+        "text": "ISO 45001:2018.",
+        "isCorrect": false,
+        "rationale": "La ISO 45001 especifica los requisitos para el sistema de SST, pero delega los principios de auditoría a la 19011."
+      },
+      {
+        "text": "ISO 9001:2015.",
+        "isCorrect": false,
+        "rationale": "Es el estándar dedicado exclusivamente a los requisitos de los Sistemas de Gestión de la Calidad."
+      },
+      {
+        "text": "ISO 14001:2015.",
+        "isCorrect": false,
+        "rationale": "Es el estándar dedicado exclusivamente a los requisitos de los Sistemas de Gestión Ambiental."
+      },
+      {
+        "text": "ISO 31000:2018.",
+        "isCorrect": false,
+        "rationale": "Es la guía marco orientada a la Gestión del Riesgo en las organizaciones y no a la técnica de auditorías."
+      }
+    ],
+    "hint": "Corresponde al estándar de orientación transversal diseñado específicamente para guiar los procesos de auditoría ISO.",
+    "activo": true
+  }
+]

@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito principal del desarrollo de habilidades blandas (soft skills) en los sectores de minería e industria?",
+    "opciones": [
+      {
+        "text": "Permitir resolver conflictos, mejorar la comunicación efectiva y aumentar la productividad y colaboración en equipos.",
+        "isCorrect": true,
+        "rationale": "Las habilidades blandas integran la inteligencia emocional y la comunicación para facilitar la resolución de problemas comunitarios e internos, fortaleciendo la colaboración."
+      },
+      {
+        "text": "Sustituir la capacitación técnica y operacional de los trabajadores por aspectos puramente emocionales.",
+        "isCorrect": false,
+        "rationale": "Las habilidades blandas complementan las competencias técnicas (hard skills) y no buscan reemplazarlas en la operación."
+      },
+      {
+        "text": "Eliminar por completo la necesidad de establecer normativas de seguridad en las operaciones.",
+        "isCorrect": false,
+        "rationale": "Las habilidades blandas fortalecen la cultura de seguridad, pero en ningún caso reemplazan los reglamentos y protocolos operativos."
+      },
+      {
+        "text": "Asegurar que los líderes no tengan que negociar acuerdos con las comunidades locales.",
+        "isCorrect": false,
+        "rationale": "El desarrollo de soft skills dota a los líderes de herramientas para negociar de manera más efectiva con el entorno social, no para evadir el diálogo."
+      },
+      {
+        "text": "Garantizar la automatización total de los procesos productivos en planta.",
+        "isCorrect": false,
+        "rationale": "La automatización se relaciona con la tecnología y digitalización, mientras que las habilidades blandas se enfocar en la interacción humana y gestión interpersonal."
+      }
+    ],
+    "hint": "Piensa en el impacto relacional y de trabajo en equipo que generan estas competencias en entornos complejos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el análisis de los conflictos sociales comunitarios, ¿cuál es el factor inicial que frecuentemente detona la desconfianza y la escalada hacia el conflicto?",
+    "opciones": [
+      {
+        "text": "La falta de información clara, oportuna y la desinformación entre la empresa, el Estado y la comunidad.",
+        "isCorrect": true,
+        "rationale": "La ausencia de canales de comunicación transparentes desde el inicio genera incertidumbre y promueve que las partes actúen bajo supuestos o temor."
+      },
+      {
+        "text": "La implementación inmediata de mesas de diálogo participativas.",
+        "isCorrect": false,
+        "rationale": "Las mesas de diálogo son herramientas de prevención y resolución, no detonantes de desconfianza."
+      },
+      {
+        "text": "El exceso de presencia policial antes de iniciar cualquier estudio previo.",
+        "isCorrect": false,
+        "rationale": "La presencia policial suele ser una consecuencia del escalamiento del conflicto cuando este llega a etapas de crisis, no la causa raíz inicial."
+      },
+      {
+        "text": "La firma formal de convenios aprobados por todas las asambleas comunales.",
+        "isCorrect": false,
+        "rationale": "La aprobación en asamblea comunal representa la consolidación exitosa de un acuerdo y no el inicio de una disputa."
+      },
+      {
+        "text": "El cumplimiento riguroso de la responsabilidad social desde el primer día.",
+        "isCorrect": false,
+        "rationale": "El cumplimiento de compromisos sociales fortalece las relaciones positivas y previene enfrentamientos."
+      }
+    ],
+    "hint": "Considera qué ocurre cuando los pobladores y las organizaciones no comparten datos precisos sobre el proyecto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Para evitar que un conflicto social alcance etapas de crisis o violencia, ¿qué mecanismo se considera fundamental e institucional?",
+    "opciones": [
+      {
+        "text": "La institucionalización del diálogo mediante mesas de conversación y la prevención informada.",
+        "isCorrect": true,
+        "rationale": "Abordar el conflicto oportunamente mediante el diálogo estructurado permite transformar las diferencias en oportunidades de desarrollo equitativo."
+      },
+      {
+        "text": "El uso de la fuerza pública para resguardar las instalaciones desde el inicio.",
+        "isCorrect": false,
+        "rationale": "El uso de la fuerza tiende a intensificar la violencia y empeorar las relaciones a largo plazo en lugar de resolver las causas del conflicto."
+      },
+      {
+        "text": "La paralización definitiva de cualquier inversión minera o industrial en el país.",
+        "isCorrect": false,
+        "rationale": "El objetivo del manejo de conflictos es encontrar puntos de acuerdo sostenibles para el desarrollo comunal y empresarial, no cancelar la inversión."
+      },
+      {
+        "text": "La delegación exclusiva de las soluciones a los medios de comunicación masivos.",
+        "isCorrect": false,
+        "rationale": "Los medios informan sobre la situación, pero la resolución requiere el trabajo directo entre los actores involucrados."
+      },
+      {
+        "text": "La ignorancia deliberada de las peticiones locales hasta que concluya el proyecto.",
+        "isCorrect": false,
+        "rationale": "Ignorar los reclamos incrementa la molestia social y acelera la escalada violenta."
+      }
+    ],
+    "hint": "Identifica la herramienta preventiva basada en la comunicación abierta que construye acuerdos de paz.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a componentes fundamentales de la Inteligencia Emocional?",
+    "opciones": [
+      {
+        "text": "Autoconciencia o autoconocimiento.",
+        "isCorrect": true,
+        "rationale": "Permite reconocer las propias emociones, fortalezas y puntos de quiebre bajo diversas situaciones."
+      },
+      {
+        "text": "Autorregulación emocional.",
+        "isCorrect": true,
+        "rationale": "Facilita el control de impulsos y emociones bajo escenarios de alta presión o estrés."
+      },
+      {
+        "text": "Conciencia social y empatía.",
+        "isCorrect": true,
+        "rationale": "Permite comprender las necesidades, emociones y contextos culturales de otras personas o comunidades."
+      },
+      {
+        "text": "Gestión de las relaciones e influencia interpersonal.",
+        "isCorrect": true,
+        "rationale": "Es la capacidad de guiar, negociar y mantener vínculos saludables y colaborativos con el entorno."
+      },
+      {
+        "text": "Control autocrítico e imposición jerárquica.",
+        "isCorrect": false,
+        "rationale": "La imposición autoritaria contraviene el principio de la empatía y la gestión regulada de las relaciones humanas."
+      }
+    ],
+    "hint": "Recuerda los cuatro pilares personales y sociales que conforman el modelo de inteligencia emocional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de los componentes de la Inteligencia Emocional, ¿cuál es el que actualmente resulta altamente demandado por las corporaciones debido a la necesidad de practicar la empatía y la escucha activa?",
+    "opciones": [
+      {
+        "text": "Conciencia social.",
+        "isCorrect": true,
+        "rationale": "Las organizaciones buscan líderes capaces de ponerse en el lugar del otro, entender el entorno comunitario y fomentar la motivación."
+      },
+      {
+        "text": "Rigidez técnica.",
+        "isCorrect": false,
+        "rationale": "La rigidez dificulta la adaptación al entorno y no forma parte de los componentes emocionales."
+      },
+      {
+        "text": "Dominio autocrático.",
+        "isCorrect": false,
+        "rationale": "El dominio basado en la autoridad rígida aleja a los equipos y bloquea la comunicación efectiva."
+      },
+      {
+        "text": "Aislamiento individual.",
+        "isCorrect": false,
+        "rationale": "El aislamiento perjudica el trabajo en equipo y la construcción de confianza interpersonal."
+      },
+      {
+        "text": "Reactividad emocional.",
+        "isCorrect": false,
+        "rationale": "La reactividad implica la falta de control sobre los impulsos, lo opuesto a la autorregulación deseada."
+      }
+    ],
+    "hint": "Se refiere a la habilidad de conectar con el entorno externo, la comunidad y las necesidades de los colaboradores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué desafíos comunicativos son característicos del entorno operacional minero e industrial?",
+    "opciones": [
+      {
+        "text": "Manejo de jergas y vocabulario técnico especializado.",
+        "isCorrect": true,
+        "rationale": "El uso de terminología técnica compleja requiere ser adaptado para lograr la comprensión de audiencias no especializadas."
+      },
+      {
+        "text": "Existencia de jerarquías rígidas y cadenas de mando verticales.",
+        "isCorrect": true,
+        "rationale": "Las estructuras tradicionales pueden obstaculizar el flujo bidireccional de información entre niveles operativos y directivos."
+      },
+      {
+        "text": "Convivencia en entornos de alto riesgo y condiciones de estrés operativo.",
+        "isCorrect": true,
+        "rationale": "El peligro latente en las operaciones demanda mensajes precisos para prevenir accidentes bajo presión."
+      },
+      {
+        "text": "Diversidad multicultural y presencia de dialectos o lenguas nativas.",
+        "isCorrect": true,
+        "rationale": "La interacción entre profesionales de distintas regiones y comunidades locales exige sensibilidad intercultural."
+      },
+      {
+        "text": "Ausencia total de presión temporal en las entregas y metas de producción.",
+        "isCorrect": false,
+        "rationale": "Los entornos industriales están caracterizados precisamente por altas urgencias operativas y plazos estrictos."
+      }
+    ],
+    "hint": "Piensa en las condiciones físicas, sociales y estructurales propias de los campamentos y plantas industriales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué consecuencias negativas puede generar una comunicación deficiente en un entorno minero o industrial?",
+    "opciones": [
+      {
+        "text": "Incremento en las tasas de rotación de personal y absentismo.",
+        "isCorrect": true,
+        "rationale": "El malestar comunicativo y el descuido emocional provocan la pérdida de talento y ausencias laborales repetidas."
+      },
+      {
+        "text": "Aumento del riesgo y ocurrencia de incidentes de seguridad.",
+        "isCorrect": true,
+        "rationale": "Las instrucciones mal entendidas entre turnos o áreas operativas derivan directamente en fallas de seguridad."
+      },
+      {
+        "text": "Deterioro significativo del clima laboral y desmotivación.",
+        "isCorrect": true,
+        "rationale": "La falta de claridad y el trato distante desgastan la confianza y el compromiso de los colaboradores."
+      },
+      {
+        "text": "Reducción generalizada de la productividad operacional.",
+        "isCorrect": true,
+        "rationale": "Los malentendidos causan reprocesos, demoras y falta de alineamiento en los objetivos de producción."
+      },
+      {
+        "text": "Maximización inmediata del rendimiento y cohesión del equipo.",
+        "isCorrect": false,
+        "rationale": "Una mala comunicación desintegra a los equipos y merma su rendimiento global."
+      }
+    ],
+    "hint": "Considera los impactos tanto en las personas (clima, permanencia) como en la operación (seguridad, producción).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se diferencia la comunicación basada en la Inteligencia Emocional frente a la comunicación tradicional?",
+    "opciones": [
+      {
+        "text": "Es bidireccional, participativa y equilibra los datos técnicos con el análisis de las emociones y personas.",
+        "isCorrect": true,
+        "rationale": "Integra la escucha activa y la comprensión del factor humano junto a los requerimientos cuantitativos del trabajo."
+      },
+      {
+        "text": "Se centra únicamente en la emisión unidireccional de órdenes jerárquicas sin recibir retroalimentación.",
+        "isCorrect": false,
+        "rationale": "Esa es una característica típica de la comunicación tradicional o autoritaria."
+      },
+      {
+        "text": "Se enfoca de forma exclusiva en los datos cuantitativos omitiendo cualquier aspecto humano.",
+        "isCorrect": false,
+        "rationale": "La Inteligencia Emocional busca equilibrar la información técnica con la percepción y sentimientos de las personas."
+      },
+      {
+        "text": "Promueve la reacción impulsiva ante los errores sin analizar las causas raíz.",
+        "isCorrect": false,
+        "rationale": "La inteligencia emocional impulsa la autorregulación y el análisis colaborativo, rechazando las reacciones impulsivas."
+      },
+      {
+        "text": "Evita cualquier tipo de adaptación al contexto o necesidades de la audiencia.",
+        "isCorrect": false,
+        "rationale": "La adaptación continua al receptor es un principio básico de la comunicación empática."
+      }
+    ],
+    "hint": "Enfócate en cómo se da la interacción y la importancia concedida al factor humano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Antes de iniciar un proceso de diálogo o negociación con una comunidad local, ¿por qué es indispensable realizar un diagnóstico situacional previo?",
+    "opciones": [
+      {
+        "text": "Permite comprender el contexto sociocultural, económico e identificar las necesidades e intereses reales de los actores locales.",
+        "isCorrect": true,
+        "rationale": "Aporta la información clave para acudir a la negociación con herramientas fundamentadas y respeto a las dinámicas locales."
+      },
+      {
+        "text": "Garantiza que la empresa no tenga que realizar ningún tipo de inversión social en la zona.",
+        "isCorrect": false,
+        "rationale": "El diagnóstico orienta las inversiones sociales de manera más estratégica y no busca evitarlas."
+      },
+      {
+        "text": "Facilita la imposición de las condiciones de la empresa sin requerir reuniones informativas.",
+        "isCorrect": false,
+        "rationale": "El objetivo del análisis previo es construir diálogo, no imponer unilateralmente las condiciones."
+      },
+      {
+        "text": "Sirve para reemplazar el marco legal nacional por las costumbres locales.",
+        "isCorrect": false,
+        "rationale": "Busca articular y conciliar la operación con el entorno respetando las normas vigentes y la legalidad."
+      },
+      {
+        "text": "Asegura que el proceso de negociación se concluya en menos de cinco minutos.",
+        "isCorrect": false,
+        "rationale": "El diagnóstico prepara el terreno para discusiones profundas; la duración depende de la complejidad de los acuerdos."
+      }
+    ],
+    "hint": "Piensa en la necesidad de estudiar el terreno sociocultural antes de entablar un acuerdo de beneficio mutuo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué rol juega el área de Gestión o Responsabilidad Social en la prevención de conflictos con la comunidad?",
+    "opciones": [
+      {
+        "text": "Actúa como el nexo que promueve la transparencia, escucha las necesidades locales y construye estrategias de desarrollo compartido.",
+        "isCorrect": true,
+        "rationale": "Es el puente de contacto continuo para transmitir la postura empresarial y entender de cerca el sentir comunal."
+      },
+      {
+        "text": "Se encarga de aplicar sanciones legales directas a los pobladores que muestren desacuerdo.",
+        "isCorrect": false,
+        "rationale": "Gestión Social busca la conciliación y el relacionamiento positivo, no cumple funciones punitivas o legales represivas."
+      },
+      {
+        "text": "Sustituye las funciones operativas de producción y mantenimiento de la planta.",
+        "isCorrect": false,
+        "rationale": "Su enfoque se centra en las relaciones comunitarias y el desarrollo social, no en la operación productiva."
+      },
+      {
+        "text": "Transmite información únicamente a las autoridades gubernamentales excluyendo a los pobladores.",
+        "isCorrect": false,
+        "rationale": "Su labor requiere la interacción directa y abierta con la población local y sus líderes legítimos."
+      },
+      {
+        "text": "Gestiona la contratación exclusiva de proveedores extranjeros para la operación.",
+        "isCorrect": false,
+        "rationale": "Suele promover el desarrollo de proveedores e mano de obra local para dinamizar la economía de la zona."
+      }
+    ],
+    "hint": "Considera el papel integrador de esta área corporativa para tender puentes entre la operación y el entorno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al evaluar el impacto de las iniciativas de diálogo o capacitación en una organización, ¿por qué es importante utilizar indicadores (KPIs u OKRs)?",
+    "opciones": [
+      {
+        "text": "Permiten medir cuantitativamente y cualitativamente la efectividad de las estrategias e identificar si se logran los objetivos planteados.",
+        "isCorrect": true,
+        "rationale": "Lo que no se mide no se puede mejorar; las métricas permiten comprobar si los esfuerzos de comunicación están rindiendo fruto."
+      },
+      {
+        "text": "Ayudan a sancionar económicamente a los trabajadores que expresen dudas en las reuniones.",
+        "isCorrect": false,
+        "rationale": "Los indicadores evalúan la efectividad de los procesos y metas, no se usan para castigar la libre expresión de inquietudes."
+      },
+      {
+        "text": "Garantizan que las capacitaciones se realicen únicamente una vez cada diez años.",
+        "isCorrect": false,
+        "rationale": "La medición continua impulsa el perfeccionamiento constante y el seguimiento periódico."
+      },
+      {
+        "text": "Eliminan la necesidad de realizar un seguimiento posterior a los acuerdos alcanzados.",
+        "isCorrect": false,
+        "rationale": "Al contrario, proporcionan el marco para monitorear el cumplimiento sostenido de los acuerdos."
+      },
+      {
+        "text": "Reemplazan la formulación de planes de seguridad y salud en el trabajo.",
+        "isCorrect": false,
+        "rationale": "Los indicadores complementan y miden el desempeño de los planes, no los sustituyen."
+      }
+    ],
+    "hint": "Recuerda la premisa de gestión que sostiene que las métricas permiten verificar el avance hacia una meta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué efecto produce la autoconfianza en un profesional al momento de participar en una mesa de negociación?",
+    "opciones": [
+      {
+        "text": "Otorga firmeza, seguridad y proyección de liderazgo al expresar argumentos bien fundamentados.",
+        "isCorrect": true,
+        "rationale": "Permite comunicarse con convicción, manejar la presión y transmitir credibilidad frente a la contraparte."
+      },
+      {
+        "text": "Provoca una actitud agresiva e inflexible ante las propuestas de la contraparte.",
+        "isCorrect": false,
+        "rationale": "La verdadera autoconfianza no se traduce en agresión, sino en seguridad serena y apertura al diálogo estructurado."
+      },
+      {
+        "text": "Garantiza que la contraparte acepte todas las condiciones sin realizar preguntas.",
+        "isCorrect": false,
+        "rationale": "La negociación siempre implica interacción y posibles objeciones que deben ser trabajadas en conjunto."
+      },
+      {
+        "text": "Hace innecesario el conocimiento técnico sobre el tema a tratar.",
+        "isCorrect": false,
+        "rationale": "La autoconfianza debe respaldarse en información certera y preparación previa."
+      },
+      {
+        "text": "Sustituye la necesidad de preparar una agenda de trabajo clara.",
+        "isCorrect": false,
+        "rationale": "Tener confianza no exonera al profesional de planificar de manera ordenada los puntos a discutir."
+      }
+    ],
+    "hint": "Enfócate en la percepción de seguridad personal que influye positivamente en el mensaje transmitido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Según las mediciones de impacto de programas de comunicación con Inteligencia Emocional, ¿qué mejoras específicas se observan en las organizaciones?",
+    "opciones": [
+      {
+        "text": "Reducción en los tiempos de resolución de problemas.",
+        "isCorrect": true,
+        "rationale": "Al comunicar con mayor claridad y empatía, los malentendidos se destraban con rapidez."
+      },
+      {
+        "text": "Mayor claridad y efectividad en la transmisión de mensajes.",
+        "isCorrect": true,
+        "rationale": "Disminuye la distorsión del mensaje y asegura que el receptor comprenda las instrucciones."
+      },
+      {
+        "text": "Incremento en la colaboración e integración del equipo.",
+        "isCorrect": true,
+        "rationale": "Se afianza el trabajo conjunto entre áreas multidisciplinarias."
+      },
+      {
+        "text": "Elevación de los niveles de satisfacción del personal.",
+        "isCorrect": true,
+        "rationale": "Los colaboradores se sienten respetados, escuchados y respaldados en sus puestos."
+      },
+      {
+        "text": "Aumento exponencial en la frecuencia de conflictos laborales no resueltos.",
+        "isCorrect": false,
+        "rationale": "La aplicación de estas herramientas disminuye precisamente la tasa de conflictos sin resolver."
+      }
+    ],
+    "hint": "Identifica los cambios positivos esperados tanto en el tiempo de respuesta como en el clima de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el ámbito de la empatía en entornos culturales, ¿a qué se refiere la construcción de \"puentes interculturales\"?",
+    "opciones": [
+      {
+        "text": "A la capacidad de interpretar códigos de comunicación y adaptar el mensaje respetando dialectos, costumbres y valores de la comunidad.",
+        "isCorrect": true,
+        "rationale": "Significa entablar relaciones basadas en la validación recíproca de las raíces culturales y formas de expresión locales."
+      },
+      {
+        "text": "A la edificación de infraestructura física dentro de los campamentos mineros.",
+        "isCorrect": false,
+        "rationale": "Se trata de un concepto simbólico enfocado en la relación humana y comunicativa, no en obras civiles."
+      },
+      {
+        "text": "A la imposición de la cultura corporativa sobre las tradiciones de la localidad.",
+        "isCorrect": false,
+        "rationale": "La imposición destruye el puente comunicativo e incrementa la resistencia social."
+      },
+      {
+        "text": "Al uso exclusivo de términos técnicos en idiomas extranjeros durante las asambleas.",
+        "isCorrect": false,
+        "rationale": "Utilizar tecnicismos incomprensibles desconecta a la audiencia y dificulta la empatía."
+      },
+      {
+        "text": "A la sustitución de los líderes comunitarios por representantes de la empresa.",
+        "isCorrect": false,
+        "rationale": "Es vital respetar y reconocer la representatividad de los voceros legítimos de la población."
+      }
+    ],
+    "hint": "Piensa en el acercamiento respetuoso entre diferentes formas de ver el mundo e interactuar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del botiquín de emergencia emocional, ¿en qué consiste la técnica de desactivación emocional mediante la respiración (por ejemplo, el patrón 3-2-1 o 4-7-8)?",
+    "opciones": [
+      {
+        "text": "En un protocolo de pausas de respiración consciente que ayuda a reducir la tensión física, desconectar del estrés y recobrar la calma.",
+        "isCorrect": true,
+        "rationale": "Inhalar, sostener y exhalar de manera regulada disminuye la respuesta de sobresalto fisiológico en momentos de alta exigencia."
+      },
+      {
+        "text": "En hiperventilar rápidamente para aumentar la adrenalina durante una discusión.",
+        "isCorrect": false,
+        "rationale": "Aumentar la adrenalina incrementa la reactividad e impulso agresivo, perdiendo la autorregulación."
+      },
+      {
+        "text": "En contener el aire indefinidamente hasta ignorar la situación conflictiva.",
+        "isCorrect": false,
+        "rationale": "No se trata de la sofocación ni de ignorar los problemas, sino de estabilizar el sistema nervioso."
+      },
+      {
+        "text": "En realizar ejercicios de alta intensidad física en medio de una reunión técnica.",
+        "isCorrect": false,
+        "rationale": "Las técnicas de respiración son pausadas y discreta para retomar la concentración initu."
+      },
+      {
+        "text": "En reprimir las emociones evitando cualquier manifestación de pensamiento.",
+        "isCorrect": false,
+        "rationale": "La autorregulación enseña a sentir y encauzar la emoción, no a reprimirla de manera dañina."
+      }
+    ],
+    "hint": "Asocia este recurso a un ejercicio fisiológico breve que busca oxigenar la mente y reducir el cortisol.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Diversos estudios en el sector industrial señalan que los supervisores que ejercen una escucha activa logran:",
+    "opciones": [
+      {
+        "text": "Disminuir de manera considerable la cantidad de conflictos laborales en sus áreas de trabajo.",
+        "isCorrect": true,
+        "rationale": "Al hacer sentir escuchados y valorados a los trabajadores, la fricción cotidiana baja radicalmente."
+      },
+      {
+        "text": "Eliminar la necesidad de realizar mantenimientos preventivos en la planta.",
+        "isCorrect": false,
+        "rationale": "La escucha activa mejora las relaciones interpersonales, pero los procedimientos técnicos mecánicos siguen siendo obligatorios."
+      },
+      {
+        "text": "Incrementar las horas extra no planificadas de su personal a cargo.",
+        "isCorrect": false,
+        "rationale": "La meta de una comunicación eficiente es optimizar la jornada normal y evitar reprocesos innecesarios."
+      },
+      {
+        "text": "Evitar la entrega de informes de desempeño a la gerencia.",
+        "isCorrect": false,
+        "rationale": "Los reportes formales de gestión se mantienen independientemente del estilo comunicativo."
+      },
+      {
+        "text": "Reemplazar el uso de equipos de protección personal por charlas informales.",
+        "isCorrect": false,
+        "rationale": "La seguridad física exige el cumplimiento riguroso del uso de EPP junto con la concientización verbal."
+      }
+    ],
+    "hint": "Considera cómo la atención oportuna a las preocupaciones del personal previene desacuerdos mayores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la comunicación no verbal (postura, gestos, miradas) requiere especial cuidado en contextos multiculturales e industriales?",
+    "opciones": [
+      {
+        "text": "Porque un gesto o postura impositiva puede interpretarse como una falta de respeto o desconfianza según el contexto cultural de la contraparte.",
+        "isCorrect": true,
+        "rationale": "El lenguaje corporal transmite emociones subconscientes y puede malinterpretarse si no se consideran los códigos locales."
+      },
+      {
+        "text": "Porque sustituye completamente la necesidad de utilizar el lenguaje verbal en cualquier reunión.",
+        "isCorrect": false,
+        "rationale": "La comunicación verbal y no verbal son complementarias; una no elimina a la otra."
+      },
+      {
+        "text": "Porque carece de impacto en la percepción de los trabajadores y comunidades.",
+        "isCorrect": false,
+        "rationale": "El lenguaje no verbal representa una parte crítica de la percepción del mensaje."
+      },
+      {
+        "text": "Porque las leyes laborales prohíben el uso de gestos corporales en reuniones de trabajo.",
+        "isCorrect": false,
+        "rationale": "No existen normas legales que prohíban la gesticulación natural, pero se sugiere auto-controlarla por cortesía y profesionalismo."
+      },
+      {
+        "text": "Porque los lenguajes no verbales son exactamente idénticos en todas las culturas del mundo.",
+        "isCorrect": false,
+        "rationale": "Existen importantes variaciones culturales en el significado del contacto visual, los dejos o la postura corporal."
+      }
+    ],
+    "hint": "Piensa en el impacto que causa cruzar los brazos, fruncir el ceño o la forma de mirar al interlocutor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes afirmaciones describen adecuadamente los estilos de comunicación pasiva y agresiva?",
+    "opciones": [
+      {
+        "text": "El estilo pasivo tiende a guardar opiniones o aceptar condiciones por temor al conflicto, pudiendo acumular frustración.",
+        "isCorrect": true,
+        "rationale": "Refleja la dificultad para expresar los propios derechos, derivando en estallidos posteriores."
+      },
+      {
+        "text": "El estilo agresivo busca imponer la propia postura sin respetar las perspectivas o sentimientos de los demás.",
+        "isCorrect": true,
+        "rationale": "Se caracteriza por la imposición, el tono elevado y el desinterés por la postura del interlocutor."
+      },
+      {
+        "text": "La comunicación pasiva puede generar un estallido emocional posterior debido a la acumulación de emociones no expresadas.",
+        "isCorrect": true,
+        "rationale": "Reprimir comentarios de forma continua suele culminar en reacciones desmedidas a futuro."
+      },
+      {
+        "text": "El estilo agresivo deteriora el clima laboral y dificulta la obtención de consensos genuinos.",
+        "isCorrect": true,
+        "rationale": "Provoca actitudes defensivas en el equipo en lugar de incentivar la cooperación."
+      },
+      {
+        "text": "Ambos estilos garantizan una negociación equilibrada donde todas las partes resultan beneficiadas.",
+        "isCorrect": false,
+        "rationale": "Solamente la comunicación asertiva promueve negociaciones sustentables y equitativas."
+      }
+    ],
+    "hint": "Diferencia los comportamientos que se van a los extremos del sometimiento o de la imposición.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué pautas favorecen el desarrollo de una comunicación efectiva y asertiva en entornos de trabajo?",
+    "opciones": [
+      {
+        "text": "Pensar cuidadosamente las ideas antes de expresarlas y mantener un tono respetuoso.",
+        "isCorrect": true,
+        "rationale": "Ayuda a estructurar el mensaje de forma lógica y sin sesgos emocionales negativos."
+      },
+      {
+        "text": "Aclarar la información o reconocer errores de forma oportuna sin temor a la descalificación.",
+        "isCorrect": true,
+        "rationale": "Demuestra honestidad, profesionalismo y mantiene la fluidez de la operación."
+      },
+      {
+        "text": "Evitar discusiones sobre temas altamente sensibles e irrelevantes para el objetivo de trabajo.",
+        "isCorrect": true,
+        "rationale": "Previene desviar la atención hacia temas de controversia personal que dañan la cohesión."
+      },
+      {
+        "text": "Mantener coherencia entre el lenguaje verbal y las expresiones faciales o corporales.",
+        "isCorrect": true,
+        "rationale": "Refuerza la autenticidad del mensaje transmitido al interlocutor."
+      },
+      {
+        "text": "Interrumpir constantemente a la contraparte para corregir de inmediato sus apreciaciones.",
+        "isCorrect": false,
+        "rationale": "Interrumpir vulnera la escucha activa e impone barreras a la conversación."
+      }
+    ],
+    "hint": "Selecciona las prácticas que construyen respeto, veracidad y objetividad durante el diálogo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En una negociación de estilo cooperativo (integrativo), ¿cuál es the meta fundamental que buscan las partes involucradas?",
+    "opciones": [
+      {
+        "text": "Alcanzar un acuerdo mutuo que satisfaga los intereses de ambas partes mediante la reciprocidad y la credibilidad.",
+        "isCorrect": true,
+        "rationale": "Busca el beneficio compartido (ganar-ganar) sosteniendo una relación sólida y duradera en el tiempo."
+      },
+      {
+        "text": "Lograr la victoria absoluta de una parte sobre la otra a cualquier costo.",
+        "isCorrect": false,
+        "rationale": "Buscar la victoria a costa del otro es propio del enfoque puramente confrontativo."
+      },
+      {
+        "text": "Prolongar indefinidamente las conversaciones sin llegar a compromisos concretos.",
+        "isCorrect": false,
+        "rationale": "La negociación cooperativa pretende concretar resoluciones eficientes y funcionales."
+      },
+      {
+        "text": "Utilizar amenazas e intimidaciones para forzar la aceptación de los términos.",
+        "isCorrect": false,
+        "rationale": "Las amenazas quebrantan la confianza y son tácticas de presión agresiva."
+      },
+      {
+        "text": "Ceder incondicionalmente ante todas las exigencias sin analizar la viabilidad.",
+        "isCorrect": false,
+        "rationale": "Cooperar no significa sumisión; implica conciliar intereses con firmeza y realismo."
+      }
+    ],
+    "hint": "Apunta a la filosofía de beneficio mutuo sostenible (\"ganar-ganar\").",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué característica define a la negociación de tipo confrontacional o competitiva?",
+    "opciones": [
+      {
+        "text": "Se orienta al triunfo de una de las partes sobre la otra, utilizando presiones, firmeza rígida o posturas inflexibles.",
+        "isCorrect": true,
+        "rationale": "Asume el escenario como un juego de suma cero (ganar-perder), donde ceder se percibe como debilidad."
+      },
+      {
+        "text": "Prioriza la empatía y la búsqueda constante de beneficios compartidos a largo plazo.",
+        "isCorrect": false,
+        "rationale": "La negociación confrontativa no prioriza las necesidades de la contraparte a largo plazo."
+      },
+      {
+        "text": "Promueve un ambiente de confianza total donde ambas partes comparten toda su información.",
+        "isCorrect": false,
+        "rationale": "En este estilo suele predominar el celo por la información y la desconfianza recíproca."
+      },
+      {
+        "text": "Busca que todas las partes cedan por igual desde el primer minuto de la reunión.",
+        "isCorrect": false,
+        "rationale": "Las partes suelen sostener posturas iniciales duras y se resisten a realizar concesiones."
+      },
+      {
+        "text": "Elimina el uso de argumentos técnicos para enfocarse en relaciones personales.",
+        "isCorrect": false,
+        "rationale": "Se apoya en presiones o argumentos rígidos independientemente del matiz interpersonal."
+      }
+    ],
+    "hint": "Identifica la dinámica basada en la disputa directa donde un participante pretende imponer su postura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "La negociación de tipo mixta se caracteriza principalmente por:",
+    "opciones": [
+      {
+        "text": "Combinar elementos de cooperación y confrontación, requiriendo un constante equilibrio entre firmeza y flexibilidad.",
+        "isCorrect": true,
+        "rationale": "Exige alternar momentos de apertura y conciliación con momentos de firmeza defensiva según la situación."
+      },
+      {
+        "text": "Aplicarse únicamente cuando no existen desacuerdos entre los participantes.",
+        "isCorrect": false,
+        "rationale": "Surge precisamente en escenarios complejos donde conviven puntos de coincidencia y fuertes diferencias."
+      },
+      {
+        "text": "Rechazar el uso de cualquier estrategia o táctica durante las conversaciones.",
+        "isCorrect": false,
+        "rationale": "Al contrario, demanda un manejo táctico cuidadoso para saber cuándo ceder y cuándo presionar."
+      },
+      {
+        "text": "Garantizar que la reunión concluya en menos de diez minutos sin discusiones.",
+        "isCorrect": false,
+        "rationale": "Suele requerir sesiones de debate prolongadas debido a la fricción de estilos presentes."
+      },
+      {
+        "text": "Depender exclusivamente de la intervención de fuerzas policiales.",
+        "isCorrect": false,
+        "rationale": "Es una modalidad de mesa de negociación y no un operativo de seguridad."
+      }
+    ],
+    "hint": "Considera la fusión de estrategias duras y blandas empleadas según evolucione el debate.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro de las tácticas de negociación, ¿cuáles de las siguientes corresponden a métodos reconocidos en el manejo de acuerdos?",
+    "opciones": [
+      {
+        "text": "Método del MAN (Mejor Alternativa a un Acuerdo Negociado).",
+        "isCorrect": true,
+        "rationale": "Representa el límite aceptable que maneja un negociador si la conversación no prospera."
+      },
+      {
+        "text": "Táctica de la Gran Muralla (mantener una posición inamovible).",
+        "isCorrect": true,
+        "rationale": "Consiste en cerrar la postura sobre un punto insalvable para demostrar inflexibilidad."
+      },
+      {
+        "text": "Método del Salami (fragmentar los temas o ir paso a paso).",
+        "isCorrect": true,
+        "rationale": "Trata de dividir el pliego o temas complejos en pequeños puntos parciales."
+      },
+      {
+        "text": "Uso de Recesos para analizar propuestas y calmar tensiones.",
+        "isCorrect": true,
+        "rationale": "Permite hacer pausas estratégicas para evaluar la posición y evitar decisiones apresuradas bajo estrés."
+      },
+      {
+        "text": "Imposición unilateral sin escuchar a los actores involucrados.",
+        "isCorrect": false,
+        "rationale": "La imposición autoritaria no constituye una táctica legítima dentro de un proceso estructurado de negociación."
+      }
+    ],
+    "hint": "Recuerda las diversas herramientas estratégicas utilizadas para estructurar la conversación o hacer pausas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define la cultura organizacional dentro de una empresa del sector industrial o minero?",
+    "opciones": [
+      {
+        "text": "Como el conjunto de valores, creencias, normas, tradiciones y prácticas compartidas que guían el comportamiento de los colaboradores.",
+        "isCorrect": true,
+        "rationale": "Constituye la personalidad distintiva de la empresa y marca la pauta de actuación frente a la seguridad y las relaciones humanas."
+      },
+      {
+        "text": "Como el reglamento de sanciones económicas aplicable exclusivamente a proveedores externos.",
+        "isCorrect": false,
+        "rationale": "La cultura abarca la identidad colectiva de la empresa y sus colaboradores, no es un mero código de sanciones para terceros."
+      },
+      {
+        "text": "Como la cantidad de mineral o productos procesados durante un turno de trabajo.",
+        "isCorrect": false,
+        "rationale": "Eso corresponde a la métrica de producción o rendimiento operativo, no a la cultura de la organización."
+      },
+      {
+        "text": "Como el inventario físico de herramientas de protección personal archivado en almacén.",
+        "isCorrect": false,
+        "rationale": "El inventario es un recurso físico; la cultura comprende cómo las personas valoran y usan la seguridad."
+      },
+      {
+        "text": "Como la estructura de contratos bancarios suscritos por la alta gerencia.",
+        "isCorrect": false,
+        "rationale": "Los contratos responden a aspectos financieros y legales, no a la identidad y principios compartidos."
+      }
+    ],
+    "hint": "Apunta al ADN normativo y valórico que determina el modo en que se vive el trabajo diariamente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En una empresa industrial, ¿cómo influyen las subculturas de áreas como Ingeniería, Operaciones, Mantenimiento y Gestión Humana en la comunicación interna?",
+    "opciones": [
+      {
+        "text": "Ingeniería suele priorizar la precisión técnica y la planificación detallada.",
+        "isCorrect": true,
+        "rationale": "Se enfoca en el rigor analítico, diseños y especificaciones exactas."
+      },
+      {
+        "text": "Operaciones tiende a enfocarse en los resultados inmediatos y el cumplimiento de metas de producción.",
+        "isCorrect": true,
+        "rationale": "Busca la ejecución fluida del turno y el cumplimiento de la meta de tonelaje o volumen."
+      },
+      {
+        "text": "Mantenimiento busca una cultura preventiva y la reducción de tiempos de parada técnica.",
+        "isCorrect": true,
+        "rationale": "Centra su labor en la disponibilidad de equipos y la confiabilidad operacional."
+      },
+      {
+        "text": "Gestión Humana procura el cumplimiento normativo, la seguridad psicológica y la cohesión del equipo.",
+        "isCorrect": true,
+        "rationale": "Vela por el clima organizacional, las competencias y la protección integral de las personas."
+      },
+      {
+        "text": "Todas las áreas operan de forma idéntica sin presentar diferencias en sus prioridades comunicativas.",
+        "isCorrect": false,
+        "rationale": "Cada departamento posee prioridades y lenguajes particulares que requieren ser alineados mediante puentes de comunicación."
+      }
+    ],
+    "hint": "Identifica los enfoques o prioridades cotidianas que caracterizan la labor técnica, operativa y humana.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la causa raíz que desencadena la escalada de un conflicto social desde la incertidumbre inicial hasta las protestas violentas en el entorno extractivo e industrial?",
+    "opciones": [
+      {
+        "text": "La falta de información transparente y oportuna entre el Estado, la empresa y la comunidad desde las etapas iniciales del proyecto.",
+        "isCorrect": true,
+        "rationale": "La ausencia de una comunicación preventiva e inclusiva genera vacíos de desinformación y desconfianza, provocando que pequeñas inquietudes escalen hasta etapas de crisis y violencia."
+      },
+      {
+        "text": "La negativa absoluta e inherente de las comunidades locales a aceptar cualquier forma de inversión económica en sus territorios.",
+        "isCorrect": false,
+        "rationale": "Las poblaciones suelen estar abiertas a oportunidades de desarrollo local, siempre que se respeten sus costumbres, sus preocupaciones ambientales y sus modos de vida."
+      },
+      {
+        "text": "El rechazo inmediato de las licencias de funcionamiento por parte de las autoridades ambientales locales.",
+        "isCorrect": false,
+        "rationale": "En muchos conflictos sociales la empresa cuenta con autorizaciones legales aprobadas, pero carece de licencia social por un mal manejo del relacionamiento comunitario."
+      },
+      {
+        "text": "La intervención de las fuerzas policiales al momento de realizar los primeros estudios topográficos de campo.",
+        "isCorrect": false,
+        "rationale": "La presencia policial suele ser una medida reactiva ante la escalada del conflicto y el bloqueo de vías, no la causa detonante original del malestar social."
+      },
+      {
+        "text": "La ausencia total de regulaciones de seguridad y salud en el trabajo dentro del marco normativo nacional.",
+        "isCorrect": false,
+        "rationale": "Los conflictos socioambientales responden a temas de percepción de impacto, desconfianza y falta de diálogo, no a la falta de normatividad laboral de seguridad."
+      }
+    ],
+    "hint": "Analiza qué elemento comunicativo previo faltó entre las partes antes de que comenzaran las protestas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué habilidades blandas resultan indispensables en los líderes para evitar que una disputa comunitaria o interdepartamental se transforme en un enfrentamiento destructivo?",
+    "opciones": [
+      {
+        "text": "Escucha activa para comprender las preocupaciones genuinas y expectativas no expresadas de la contraparte.",
+        "isCorrect": true,
+        "rationale": "Permite captar el fondo del malestar sin juzgar precipitadamente, validando la postura del interlocutor antes de formular soluciones."
+      },
+      {
+        "text": "Empatía para situarse en la realidad sociocultural del otro y entender sus temores.",
+        "isCorrect": true,
+        "rationale": "Facilita la conexión humana al reconocer que la otra parte actúa motivada por la protección de sus medios de subsistencia o sus intereses."
+      },
+      {
+        "text": "Comunicación asertiva para transmitir de manera clara, respetuosa y transparente los riesgos y beneficios reales.",
+        "isCorrect": true,
+        "rationale": "Garantiza que la información se entregue con honestidad y firmeza, evitando falsas promesas o mensajes confusos que destruyan la confianza."
+      },
+      {
+        "text": "Imposición jerárquica para acelerar la toma de decisiones sin la interferencia de grupos de interés.",
+        "isCorrect": false,
+        "rationale": "La imposición unilateral incrementa el resentimiento y acelera el rechazo social, vulnerando el principio de diálogo participativo."
+      },
+      {
+        "text": "Uso intensivo de tecnicismos para demostrar superioridad académica e inhabilitar los reclamos locales.",
+        "isCorrect": false,
+        "rationale": "El exceso de vocabulario especializado crea barreras de comprensión y es percibido como una falta de respeto o intento de engaño."
+      }
+    ],
+    "hint": "Considera las competencias enfocadas en el entendimiento mutuo, el respeto y la claridad comunicativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de los componentes principales de la inteligencia emocional, ¿en qué consiste la 'conciencia social'?",
+    "opciones": [
+      {
+        "text": "En la capacidad de reconocer, comprender y conectarse empáticamente con las emociones, necesidades y perspectivas de las demás personas.",
+        "isCorrect": true,
+        "rationale": "Se fundamenta en captar el entorno emocional y la dinámica de los grupos para responder con sensibilidad, respeto y efectividad comunicativa."
+      },
+      {
+        "text": "En la represión absoluta e inhibición total de cualquier impulso emocional durante las jornadas de trabajo.",
+        "isCorrect": false,
+        "rationale": "La inteligencia emocional busca gestionar y autorregular las emociones de manera constructiva, no reprimirlas de forma destructiva."
+      },
+      {
+        "text": "En el análisis autocrítico enfocado exclusivamente en las fortalezas y debilidades de la propia personalidad.",
+        "isCorrect": false,
+        "rationale": "Esa descripción corresponde a la autoconciencia personal, mientras que la conciencia social se orienta hacia el exterior y los demás."
+      },
+      {
+        "text": "En la habilidad exclusiva de negociar montos de indemnización presupuestaria con contratistas.",
+        "isCorrect": false,
+        "rationale": "Constituye una aplicación práctica o técnica de negociación, pero no la definición conceptual de esta dimensión emocional."
+      },
+      {
+        "text": "En el dominio de programas informáticos para el control cuantitativo de riesgos físicos.",
+        "isCorrect": false,
+        "rationale": "Se trata de una habilidad dura o técnica de gestión, desligada de la competencia emocional interpersonal."
+      }
+    ],
+    "hint": "Piensa en la dimensión que conecta al individuo con el sentir y las necesidades del colectivo que lo rodea.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el sector industrial y minero, ¿cuál es una consecuencia operativa directa de mantener un esquema comunicativo deficiente y poco empático entre los mandos de supervisión y el personal de campo?",
+    "opciones": [
+      {
+        "text": "Un incremento en las tasas de incidentes de seguridad y errores operativos por fallas en la interpretación de instrucciones.",
+        "isCorrect": true,
+        "rationale": "La falta de claridad, la ausencia de escucha y la tensión comunicativa provocan malentendidos técnicos que derivan directamente en accidentes en áreas de riesgo."
+      },
+      {
+        "text": "Un aumento sostenido en los niveles de retención de personal técnico calificado.",
+        "isCorrect": false,
+        "rationale": "Un clima comunicativo deficiente deteriora el ambiente de trabajo, incrementando el descontento y la rotación voluntaria."
+      },
+      {
+        "text": "La eliminación automatizada de la fatiga en los turnos nocturnos de operaciones.",
+        "isCorrect": false,
+        "rationale": "La fatiga es un factor fisiológico que se agrava con el estrés causado por una mala comunicación, no algo que se elimine por ella."
+      },
+      {
+        "text": "Una aceleración sistemática en la aprobación de permisos ambientales por parte del Estado.",
+        "isCorrect": false,
+        "rationale": "La comunicación interna entre supervisión y campo no influye de manera directa en los trámites burocráticos de licenciamiento regulatorio."
+      },
+      {
+        "text": "La reducción inmediata de la diversidad cultural dentro de las cuadrillas de trabajo.",
+        "isCorrect": false,
+        "rationale": "La multiculturalidad es una realidad del entorno laboral que exige adaptación comunicativa, no una variable que desaparezca por fallas de gestión."
+      }
+    ],
+    "hint": "Relaciona la falla en la transmisión de órdenes claras con la ejecución física de tareas de alto riesgo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera se distingue la comunicación basada en la inteligencia emocional frente a la comunicación corporativa tradicional?",
+    "opciones": [
+      {
+        "text": "Es bidireccional, participativa y busca equilibrar los objetivos del proceso con el bienestar de las personas.",
+        "isCorrect": true,
+        "rationale": "Integra la empatía y la retroalimentación continua para que el mensaje no sea una imposición, sino un acuerdo adaptado al contexto socioemocional."
+      },
+      {
+        "text": "Se centra únicamente en transmitir instrucciones verticales de arriba hacia abajo sin admitir preguntas.",
+        "isCorrect": false,
+        "rationale": "Ese enfoque autoritario corresponde a la comunicación tradicional unidireccional, donde se ignora el sentir del receptor."
+      },
+      {
+        "text": "Prioriza exclusivamente las métricas de producción, descartando la dimensión humana de los equipos.",
+        "isCorrect": false,
+        "rationale": "La comunicación inteligente evalúa tanto los datos cuantitativos como las percepciones cualitativas del factor humano."
+      },
+      {
+        "text": "Evita el uso de cualquier tipo de indicador para medir la claridad del mensaje enviado.",
+        "isCorrect": false,
+        "rationale": "La gestión basada en inteligencia emocional promueve la medición de su impacto mediante indicadores de claridad, clima y tiempos de resolución."
+      },
+      {
+        "text": "Inhibe la adaptación del discurso ante contextos de diversidad cultural o geográfica.",
+        "isCorrect": false,
+        "rationale": "La flexibilidad y adaptabilidad según la audiencia son pilares fundamentales de la comunicación inteligente."
+      }
+    ],
+    "hint": "Busca la opción que resalte la apertura al diálogo y el valor que se le otorga al factor humano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Durante un proceso de diálogo en una mesa de negociación, ¿qué expresiones de la comunicación no verbal pueden indicar tensión, rechazo o falta de apertura?",
+    "opciones": [
+      {
+        "text": "Mantener los brazos cruzados firmemente y el torso retirado hacia atrás.",
+        "isCorrect": true,
+        "rationale": "Refleja una postura defensiva o de cierre emocional frente a las propuestas expuestas por el interlocutor."
+      },
+      {
+        "text": "Fruncir el ceño de forma prolongada y evitar el contacto visual directo al escuchar.",
+        "isCorrect": true,
+        "rationale": "Denota desacuerdo, desconfianza o malestar hacia la persona que se encuentra haciendo uso de la palabra."
+      },
+      {
+        "text": "Utilizar un tono de voz tajante, acelerado o con volumen excesivamente alto al responder.",
+        "isCorrect": true,
+        "rationale": "Suele transmitir agresividad e impaciencia, elevando la tensión ambiental en la mesa de trabajo."
+      },
+      {
+        "text": "Inclinar levemente la cabeza y la espalda hacia adelante mientras la otra parte argumenta.",
+        "isCorrect": false,
+        "rationale": "Esta corporalidad comunica atención activa, interés y apertura para procesar la información recibida."
+      },
+      {
+        "text": "Mantener las palmas de las manos visibles sobre la mesa con una postura relajada.",
+        "isCorrect": false,
+        "rationale": "Suele asociarse culturalmente con la transparencia, la honestidad y la predisposición a la conciliación."
+      }
+    ],
+    "hint": "Selecciona aquellas conductas gestuales y tonales que transmiten barreras o distancia hacia el interlocutor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un profesional detecta un pico de tensión emocional antes de ingresar a una reunión conflictiva. ¿En qué consiste la técnica de autorregulación física y respiratoria '3-2-1'?",
+    "opciones": [
+      {
+        "text": "Inhalar aire profundamente durante 3 segundos, retenerlo 2 segundos y exhalar lentamente durante 1 tiempo prolongado.",
+        "isCorrect": true,
+        "rationale": "Esta secuencia busca desacelerar el ritmo cardíaco y oxigenar el sistema nervioso para recuperar la calma antes de actuar."
+      },
+      {
+        "text": "Expresar 3 críticas al equipo, pausar 2 minutos e imponer 1 solución unilateral.",
+        "isCorrect": false,
+        "rationale": "Esa conducta representa una reacción agresiva de comunicación, contraria a la autorregulación emocional."
+      },
+      {
+        "text": "Contar en voz alta de 3 a 1 para interrumpir abruptamente la intervención del interlocutor.",
+        "isCorrect": false,
+        "rationale": "Interrumpir mediante conteos destruye la escucha activa y eleva la confrontación en el grupo."
+      },
+      {
+        "text": "Realizar 3 llamadas telefónicas, esperar 2 horas y postergar la decisión 1 día.",
+        "isCorrect": false,
+        "rationale": "Se trata de un patrón de evitación del problema, no de una técnica de desactivación fisiológica inmediata."
+      },
+      {
+        "text": "Redactar 3 acuerdos, descartar 2 y elegir 1 sin validación previa con la contraparte.",
+        "isCorrect": false,
+        "rationale": "Corresponde a un procedimiento procedimental arbitrario, sin relación con el control de picos de estrés."
+      }
+    ],
+    "hint": "Recuerda el orden temporal de los tiempos respiratorios para volver al estado presente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué factor representa uno de los desafíos comunicativos más complejos en operaciones mineras e industriales desarrolladas en zonas rurales o altoandinas?",
+    "opciones": [
+      {
+        "text": "La brecha en los códigos gestuales, dialectos y concepciones culturales sobre la tierra y el tiempo entre el personal externo y las comunidades.",
+        "isCorrect": true,
+        "rationale": "Las diferencias en la interpretación del lenguaje y el choque de valores culturales exigen un esfuerzo continuo de traducción empática y adaptación."
+      },
+      {
+        "text": "La absoluta homogeneidad cultural que presentan todos los trabajadores e inversionistas en la zona.",
+        "isCorrect": false,
+        "rationale": "Las operaciones extractivas destacan por su diversidad de actores (extranjeros, profesionales de capital y pobladores locales), no por su homogeneidad."
+      },
+      {
+        "text": "La preferencia exclusiva de las asambleas comunales por comunicarse únicamente a través de medios digitales corporativos.",
+        "isCorrect": false,
+        "rationale": "Las comunidades valoran profundamente la comunicación presencial, las reuniones de campo y las asambleas comunales directas."
+      },
+      {
+        "text": "La completa coincidencia en los ritmos de toma de decisiones entre las directivas de las empresas y las asambleas locales.",
+        "isCorrect": false,
+        "rationale": "Las empresas suelen buscar soluciones rápidas por urgencia operativa, mientras que las comunidades requieren procesos deliberativos más pausados."
+      },
+      {
+        "text": "La inexistencia de jerarquías dentro de las estructuras organizacionales de los proyectos de inversión.",
+        "isCorrect": false,
+        "rationale": "Las empresas mineras suelen caracterizarse por estructuras jerárquicas rígidas que deben aprender a dialogar con organizaciones comunitarias horizontales."
+      }
+    ],
+    "hint": "Enfócate en la coexistencia de distintas visiones del mundo, lenguajes y tradiciones en un mismo territorio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al evaluar el impacto de un programa de formación en inteligencia emocional dentro de una empresa industrial, ¿qué indicadores demuestran una mejora real en la gestión de la comunicación?",
+    "opciones": [
+      {
+        "text": "Disminución en el tiempo promedio requerido para resolver desacuerdos interdepartamentales.",
+        "isCorrect": true,
+        "rationale": "Muestra que los equipos abordan las fricciones con mayor agilidad, colaboración y enfoque en soluciones."
+      },
+      {
+        "text": "Incremento en las métricas de claridad del mensaje percibidas por los colaboradores de campo.",
+        "isCorrect": true,
+        "rationale": "Evidencia que los supervisores han adaptado su lenguaje y aseguran la comprensión efectiva de las instrucciones."
+      },
+      {
+        "text": "Aumento de los niveles de satisfacción general con el clima laboral y el trabajo colaborativo.",
+        "isCorrect": true,
+        "rationale": "Demuestra un entorno caracterizado por la empatía, el respeto mutuo y la reducción del desgaste socioemocional."
+      },
+      {
+        "text": "Elevación en las tasas de ausentismo sin justificación médica dentro de los turnos clave.",
+        "isCorrect": false,
+        "rationale": "El aumento del ausentismo indica desmotivación y clima laboral deteriorado, lo opuesto a un avance en gestión emocional."
+      },
+      {
+        "text": "Multiplicación de quejas formales por maltrato verbal registradas en el área de recursos humanos.",
+        "isCorrect": false,
+        "rationale": "Un incremento en las denuncias refleja fallas de autocontrol y comunicación agresiva en la supervisión."
+      }
+    ],
+    "hint": "Selecciona las opciones que reflejen eficiencia operativa, comprensión clara y bienestar en el clima interno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el pilar fundamental que define a la comunicación asertiva en la relación entre supervisores y colaboradores técnicos?",
+    "opciones": [
+      {
+        "text": "Expresar opiniones, requerimientos y desacuerdos con claridad, directateza y firmeza, respetando la dignidad del interlocutor.",
+        "isCorrect": true,
+        "rationale": "Busca defender los objetivos o normas de seguridad sin caer en el sometimiento pasivo ni en la agresión verbal hacia el trabajador."
+      },
+      {
+        "text": "Aceptar todas las demandas del personal sin evaluar la viabilidad técnica o económica de las mismas.",
+        "isCorrect": false,
+        "rationale": "Ceder ante todo sin criterio técnico es una manifestación de pasividad o complacencia, no de asertividad equilibrada."
+      },
+      {
+        "text": "Elevar el tono de voz para infundir temor y asegurar el cumplimiento inmediato de las metas de producción.",
+        "isCorrect": false,
+        "rationale": "El uso de la intimidación constituye un estilo de comunicación agresivo que destruye la confianza del equipo."
+      },
+      {
+        "text": "Delegar la responsabilidad de las fallas operativas en los colaboradores de menor antigüedad.",
+        "isCorrect": false,
+        "rationale": "Evadir la responsabilidad propia en el mensaje evidencia falta de madurez y liderazgo, alejándose de la asertividad."
+      },
+      {
+        "text": "Guardar silencio ante actos inseguros observados en el terreno para evitar discusiones acaloradas.",
+        "isCorrect": false,
+        "rationale": "El silencio o la omisión ante el riesgo representa una postura pasiva peligrosa en entornos de alto riesgo."
+      }
+    ],
+    "hint": "Piensa en el equilibrio entre defender una postura firme y mantener el respeto mutuo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un colaborador recurre de manera constante a la comunicación pasiva callando sus desacuerdos sobre las jornadas de trabajo. ¿Qué consecuencia individual y organizacional suele generar este estilo a largo plazo?",
+    "opciones": [
+      {
+        "text": "Acumulación de frustración y resentimiento interno que desencadena eventuales explosiones emocionales o síndrome de desgaste profesional (burnout).",
+        "isCorrect": true,
+        "rationale": "Al contener sistemáticamente sus opiniones y tensiones, el individuo sufre un deterioro en su salud mental que termina impactando su desempeño de forma intempestiva."
+      },
+      {
+        "text": "Desarrollo acelerado de competencias de liderazgo inspirador y promovible dentro de la estructura empresarial.",
+        "isCorrect": false,
+        "rationale": "La incapacidad de expresar ideas de manera clara debilita la percepción de liderazgo y criterio propio frente a los superiores."
+      },
+      {
+        "text": "Eliminación automática de las fallas en los procedimientos operacionales del área.",
+        "isCorrect": false,
+        "rationale": "El silencio pasivo impida que se reporten errores o cuellos de botella técnicos, perpetuando las fallas operativas."
+      },
+      {
+        "text": "Consolidación de una cultura de innovación abierta basada en la aportación crítica de ideas.",
+        "isCorrect": false,
+        "rationale": "La innovación requiere que las personas expresen libremente sus puntos de vista, lo cual se inhibe bajo la pasividad."
+      },
+      {
+        "text": "Aumento en la efectividad para negociar incrementos salariales durante las revisiones de desempeño.",
+        "isCorrect": false,
+        "rationale": "Quien adopta una postura pasiva tiende a someterse a las condiciones impuestas sin defender sus pretensiones."
+      }
+    ],
+    "hint": "Reflexiona sobre lo que sucede en la salud mental de una persona cuando guarda repetidamente sus emociones y quejas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco de una conducta de negociación cooperativa (integrativa o ganar-ganar), ¿qué premisas deben guiar las acciones de las partes involucradas?",
+    "opciones": [
+      {
+        "text": "Construcción de credibilidad fundamentada en el cumplimiento estricto de las promesas pactadas.",
+        "isCorrect": true,
+        "rationale": "La confianza mutua se sostiene a lo largo del tiempo cuando la palabra dada se traduce en hechos tangibles."
+      },
+      {
+        "text": "Búsqueda activa de intereses reales y complementarios más allá de las posiciones iniciales declaradas.",
+        "isCorrect": true,
+        "rationale": "Permite explorar soluciones creativas que satisfagan las verdaderas necesidades subyacentes de ambos actores."
+      },
+      {
+        "text": "Generación de un ambiente seguro que facilite el intercambio recíproco de información transparente.",
+        "isCorrect": true,
+        "rationale": "La fluidez informativa reduce las sospechas de engaño y permite construir acuerdos sobre bases sólidas."
+      },
+      {
+        "text": "Aplicación de tácticas de presión e intimidación para forzar la renuncia total de las pretensiones de la contraparte.",
+        "isCorrect": false,
+        "rationale": "El uso de coerciones corresponde a esquemas confrontacionales ganar-perder que destruyen las relaciones a largo plazo."
+      },
+      {
+        "text": "Ocultamiento deliberado de los costos y riesgos técnicos para acelerar la firma del acuerdo marco.",
+        "isCorrect": false,
+        "rationale": "La falta de transparencia destruye la credibilidad en cuanto los riesgos no informados salen a la luz durante la ejecución."
+      }
+    ],
+    "hint": "Identifica las opciones orientadas a la sostenibilidad del acuerdo, la confianza y el beneficio mutuo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de las negociaciones de estilo confrontacional (distributivas o ganar-perder), ¿en qué consiste la táctica denominada 'Asalto Directo'?",
+    "opciones": [
+      {
+        "text": "En presionar de entrada mediante argumentos de gran impacto o posturas de fuerza para descolocar e intimidar a la otra parte.",
+        "isCorrect": true,
+        "rationale": "Busca minar la seguridad del interlocutor desde el primer momento, forzándolo a asumir una posición defensiva o de sometimiento."
+      },
+      {
+        "text": "En conceder pequeñas peticiones de manera gradual para ganar la simpatía del equipo oponente.",
+        "isCorrect": false,
+        "rationale": "Esa conducta responde a una lógica de concesiones recíprocas propia de la negociación cooperativa."
+      },
+      {
+        "text": "En fraccionar una demanda principal en múltiples reclamos menores e imperceptibles.",
+        "isCorrect": false,
+        "rationale": "Esta estrategia fragmentada se conoce formalmente como el Método del Salami."
+      },
+      {
+        "text": "En proponer recesos prolongados para agotar el tiempo disponible de la delegación visitante.",
+        "isCorrect": false,
+        "rationale": "Corresponde a una táctica dilatoria de gestión del tiempo, no a un ataque frontal mediante posturas de poder."
+      },
+      {
+        "text": "En solicitar la mediación de un tercero neutral para que dicte un arbitraje vinculante.",
+        "isCorrect": false,
+        "rationale": "La mediación es una herramienta de facilitación pacífica, opuesta al uso del asalto directo en la mesa."
+      }
+    ],
+    "hint": "Enfócate en una maniobra inicial de demostración de poder para generar inseguridad inmediata.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un equipo negociador aplica la estrategia conocida como 'Método del Salami'. ¿Cuál es el modo de ejecución de esta táctica en un proceso de diálogo?",
+    "opciones": [
+      {
+        "text": "Dividir las pretensiones en pequeñas partes o rodajas sucesivas para obtener concesiones parciales acumulativas.",
+        "isCorrect": true,
+        "rationale": "Logra que la contraparte vaya cediendo paso a paso en puntos aparentemente menores hasta acumular un objetivo mayor."
+      },
+      {
+        "text": "Rechazar en bloque toda la agenda de trabajo presentada por las autoridades locales.",
+        "isCorrect": false,
+        "rationale": "Representa una postura de gran muralla o bloqueo rígido, no un avance fraccionado de pretensiones."
+      },
+      {
+        "text": "Presentar una demanda desmedida al final de la reunión para tomar por sorpresa a los participantes.",
+        "isCorrect": false,
+        "rationale": "Esta maniobra de cierre de última hora se denomina escalada de último momento."
+      },
+      {
+        "text": "Sustituir a los integrantes del comité negociador en medio de la discusión sin previo aviso.",
+        "isCorrect": false,
+        "rationale": "Es una táctica de rotación para alterar el ritmo de la mesa, no la división progresiva de puntos de acuerdo."
+      },
+      {
+        "text": "Aceptar incondicionalmente todos los pliegos de reclamos en la primera sesión de contacto.",
+        "isCorrect": false,
+        "rationale": "La capitulación total elimina la dinámica de negociación y contradice el cálculo estratégico de concessiones."
+      }
+    ],
+    "hint": "Relaciona el nombre de la técnica con la acción de cortar una exigencia grande en porciones muy finas y continuas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el sector industrial y minero, ¿qué elementos definen el desarrollo de una negociación de carácter 'Mixto'?",
+    "opciones": [
+      {
+        "text": "Combinar la firmeza en la defensa de límites críticos con la apertura para colaborar en objetivos de interés mutuo.",
+        "isCorrect": true,
+        "rationale": "Permite alternar momentos de resguardo de los intereses esenciales de la empresa con espacios de flexibilidad integrativa."
+      },
+      {
+        "text": "Exigir un alto nivel de destreza en los negociadores para evitar que la discusión derive en bloqueos continuos.",
+        "isCorrect": true,
+        "rationale": "Debido al choque recurrente entre posturas duras y blandas, los facilitadores deben balancear el ritmo de las sesiones."
+      },
+      {
+        "text": "Posibilitar el intercambio flexible en temas secundarios sin ceder en las políticas operativas no negociables.",
+        "isCorrect": true,
+        "rationale": "Otorga un margen de maniobra práctico para destrabar la mesa sin comprometer la seguridad o la viabilidad del proyecto."
+      },
+      {
+        "text": "Asegurar que las reuniones concluyan sistemáticamente en menos de diez minutos sin requerir actas de compromiso.",
+        "isCorrect": false,
+        "rationale": "Las negociaciones complejas de tipo mixto suelen demandar debates extensos y un riguroso registro formal escrito."
+      },
+      {
+        "text": "Prescindir del uso de datos técnicos o informes ambientales durante las explicaciones.",
+        "isCorrect": false,
+        "rationale": "La argumentación técnica de sustento es imprescindible para validar las posturas firmes que se mantengan en el proceso."
+      }
+    ],
+    "hint": "Considera cómo se entrelazan la firmeza estratégica y la flexibilidad en la búsqueda de soluciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la etapa de preparación de una negociación estratégica, ¿qué representa la sigla MAN (Mejor Alternativa a un Acuerdo Negociado)?",
+    "opciones": [
+      {
+        "text": "El curso de acción o alternativa de respaldo disponible si las conversaciones actuales fracasan y no se logra un acuerdo.",
+        "isCorrect": true,
+        "rationale": "Otorga el poder real de decisión a la parte, permitiéndole saber cuál es su piso mínimo antes de levantarse de la mesa."
+      },
+      {
+        "text": "El monto máximo de dinero que la gerencia ha autorizado desembolsar para donaciones locales.",
+        "isCorrect": false,
+        "rationale": "Refiere únicamente a un techo presupuestario específico, no a la estrategia de reserva frente al fracaso del diálogo."
+      },
+      {
+        "text": "El manual interno de procedimientos para el uso de equipos de protección personal en socavón.",
+        "isCorrect": false,
+        "rationale": "Es un documento de seguridad operativa, sin ninguna vinculación con la teoría de negociación estratégica."
+      },
+      {
+        "text": "El borrador preliminar del contrato de concesión otorgado por el ministerio de energía y minas.",
+        "isCorrect": false,
+        "rationale": "Corresponde a un instrumento legal habilitante del Estado, no a la opción de reserva calculada por el negociador."
+      },
+      {
+        "text": "La lista de sancionados por faltas injustificadas durante los periodos de huelga.",
+        "isCorrect": false,
+        "rationale": "Se trata de un registro administrativo disciplinario que no constituye una alternativa estratégica de negociación."
+      }
+    ],
+    "hint": "Pensar en el plan de contingencia que te respalda si la otra parte rechaza tus propuestas finales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En medio de una situación de crisis operativa o ambiental en planta, ¿qué pauta asegura una comunicación asertiva y efectiva con los equipos de respuesta?",
+    "opciones": [
+      {
+        "text": "Orientar el mensaje hacia hechos verificables y soluciones operativas directas, manteniendo un tono sereno y libre de recriminaciones.",
+        "isCorrect": true,
+        "rationale": "En momentos de urgencia, enfocarse en los hechos y la acción preventiva evita el pánico y orienta la energía hacia la mitigación del riesgo."
+      },
+      {
+        "text": "Ocultar los datos de severidad del evento al personal para prevenir picos de nerviosismo en las cuadrillas.",
+        "isCorrect": false,
+        "rationale": "La falta de transparencia destruye la confianza y puede llevar al personal a tomar decisiones sin dimensionar el peligro real."
+      },
+      {
+        "text": "Utilizar la ironía o el humor mordaz para restarle importancia a la falla técnica ocurrida.",
+        "isCorrect": false,
+        "rationale": "El sarcasmo en medio de una emergencia transmite falta de profesionalismo, irresponsabilidad e insensibilidad."
+      },
+      {
+        "text": "Asumir compromisos financieros extraordinarios en caliente sin contar con la autorización de la dirección.",
+        "isCorrect": false,
+        "rationale": "Tomar acuerdos fuera de las atribuciones propias genera falsas expectativas y complica la gestión corporativa posterior."
+      },
+      {
+        "text": "Suspender los canales de reporte verbal e imponer el uso exclusivo de memorandos impresos.",
+        "isCorrect": false,
+        "rationale": "La burocracia rígida frena la capacidad de respuesta inmediata requerida en la atención de eventos críticos."
+      }
+    ],
+    "hint": "Considera la importancia de basarse en datos reales de campo manteniendo la calma y el respeto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para que los acuerdos pactados en una mesa de diálogo social adquieran validez duradera e irrefutable, ¿qué condiciones metodológicas deben cumplirse?",
+    "opciones": [
+      {
+        "text": "Garantizar que los interlocutores comunitarios cuenten con la representatividad y legitimidad de sus bases.",
+        "isCorrect": true,
+        "rationale": "Evita que sectores no incluidos desconozcan los avances firmados alegando falta de representatividad de los dirigentes."
+      },
+      {
+        "text": "Registrar todos los compromisos y plazos en actas escritas debidamente firmadas por las partes participantes.",
+        "isCorrect": true,
+        "rationale": "La formalización documental dota de seguridad jurídica al proceso y sirve de referencia clara ante futuras controversias."
+      },
+      {
+        "text": "Establecer comités mixtos encargados del seguimiento, monitoreo y verificación del cumplimiento del acta.",
+        "isCorrect": true,
+        "rationale": "Permite mantener la transparencia en la fase de ejecución, evitando que el desconfianza reaparezca por falta de información."
+      },
+      {
+        "text": "Omitir las fechas límite de entrega en los compromisos de infraestructura para no presionar al equipo de obras.",
+        "isCorrect": false,
+        "rationale": "La ausencia de plazos de cumplimiento genera sospechas de dilación y reaviva las protestas comunitarias."
+      },
+      {
+        "text": "Suscriber los convenios de forma secreta en sedes alejadas de la zona de influencia del proyecto.",
+        "isCorrect": false,
+        "rationale": "Las negociaciones a espaldas de la asamblea comunal deslegitiman a los líderes y provocan el rechazo automático del acuerdo."
+      }
+    ],
+    "hint": "Enfócate en la representatividad, la transparencia documental y la fiscalización conjunta de los compromisos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera impacta una cultura organizacional consolidada en la prevención de riesgos sobre la conducta diaria de los trabajadores?",
+    "opciones": [
+      {
+        "text": "Transforma la seguridad en un valor intrínseco, promoviendo el cuidado mutuo y el reporte abierto de condiciones inseguras.",
+        "isCorrect": true,
+        "rationale": "Hace que el cumplimiento de los estándares no responda a la amenaza de castigo, sino a la convicción compartida de proteger la vida."
+      },
+      {
+        "text": "Incentiva el ocultamiento de incidentes menores para evitar perder los bonos de productividad del turno.",
+        "isCorrect": false,
+        "rationale": "Esa práctica refleja una cultura enferma o basada en el miedo, que antepone el indicador numérico sobre la prevención real."
+      },
+      {
+        "text": "Reemplaza las capacitaciones técnicas por lemas publicitarios colocados en los accesos a la unidad.",
+        "isCorrect": false,
+        "rationale": "Los carteles sin formación práctica ni coherencia operativa constituyen un manejo superficial e ineficaz de la cultura."
+      },
+      {
+        "text": "Prioriza la velocidad de avance de la labor sobre la realización de las charlas de seguridad diarias.",
+        "isCorrect": false,
+        "rationale": "Anteponer la prisa operativa a las pausas de seguridad rompe con los valores de prevención y acelera los accidentes."
+      },
+      {
+        "text": "Elimina la facultad de los trabajadores para detener una tarea que consideren de peligro inminente.",
+        "isCorrect": false,
+        "rationale": "Una verdadera cultura preventiva otorga a todo colaborador la autoridad plena de detener un trabajo ante el riesgo indeseado."
+      }
+    ],
+    "hint": "Busca la opción donde los valores de seguridad se asimilan internamente como una prioridad personal e irrenunciable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de las subculturas dentro de una empresa minera, ¿cuál suele ser el enfoque principal del área de Mantenimiento en comparación con el área de Operaciones?",
+    "opciones": [
+      {
+        "text": "Garantizar la confiabilidad y vida útil de los activos mediante paradas programadas e inspecciones preventivas.",
+        "isCorrect": true,
+        "rationale": "Busca proteger la maquinaria y la continuidad operativa futura, mientras que Operaciones suele presionar por la meta de tonelaje inmediato."
+      },
+      {
+        "text": "Exigir el máximo tonelaje de mineral extraído en el menor tiempo posible sin importar el desgaste técnico.",
+        "isCorrect": false,
+        "rationale": "Ese objetivo inmediatista de volumen es característico de la subcultura de producción u operaciones."
+      },
+      {
+        "text": "Diseñar los planes de desarrollo agrícola y ganadero para los comuneros de la zona de influencia.",
+        "isCorrect": false,
+        "rationale": "Dicha tarea corresponde al ámbito especializado de la gestión o responsabilidad social de la compañía."
+      },
+      {
+        "text": "Consolidar los balances contables de cierre de año para la presentación ante los accionistas.",
+        "isCorrect": false,
+        "rationale": "Representa la función central del departamento de finanzas y contabilidad corporativa."
+      },
+      {
+        "text": "Negociar los convenios colectivos con los dirigentes del sindicato de trabajadores.",
+        "isCorrect": false,
+        "rationale": "Corresponde a la responsabilidad del área de relaciones laborales o recursos humanos."
+      }
+    ],
+    "hint": "Piensa en el rol enfocado en la conservación, el cuidado de la maquinaria y la prevención de fallas mecánicas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué estrategias favorecen la articulación y alineamiento cultural entre departamentos con objetivos aparentemente contrapuestos (como Operaciones, Soma y Mantenimiento)?",
+    "opciones": [
+      {
+        "text": "Institucionalizar espacios breves interdepartamentales como las reuniones de 5 minutos al inicio del turno.",
+        "isCorrect": true,
+        "rationale": "Permite contrastar urgencias, coordinar prioridades del día y prevenir fricciones por falta de visibilidad del trabajo ajeno."
+      },
+      {
+        "text": "Fomentar un estilo de liderazgo participativo que promueva el intercambio constructivo de retroalimentación.",
+        "isCorrect": true,
+        "rationale": "Abre canales para que los responsables de cada área expresen dificultades y negocien soluciones sin culpabilizar."
+      },
+      {
+        "text": "Desarrollar indicadores compartidos que recompensen el logro integral de la unidad por encima de metas estancadas.",
+        "isCorrect": true,
+        "rationale": "Alinea los incentivos para que un área no busque su éxito individual perjudicando la seguridad o el mantenimiento de la otra."
+      },
+      {
+        "text": "Promover la competencia destructiva entre jefaturas evaluando cuál departamento aplica más sanciones al otro.",
+        "isCorrect": false,
+        "rationale": "Incentivar la confrontación interárea fragmenta a la empresa en islas hostiles e incrementa los errores de coordinación."
+      },
+      {
+        "text": "Centralizar toda la información operativa en un comité cerrado prohibiendo la comunicación entre supervisores de campo.",
+        "isCorrect": false,
+        "rationale": "El aislamiento informativo bloquea la resolución ágil de problemas en el terreno y paraliza la operación."
+      }
+    ],
+    "hint": "Selecciona aquellas opciones que promueven la integración de metas, la comunicación transversal y el trabajo en equipo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Se ha observado que un porcentaje significativo de accidentes ocurre en momentos de tensión personal o transiciones (ingreso de turno, épocas festivas). ¿Qué medida preventiva atiende este factor humano?",
+    "opciones": [
+      {
+        "text": "Desarrollar breves espacios de indagación emocional y conexión antes del inicio de tareas críticas para evaluar la disposición mental del colaborador.",
+        "isCorrect": true,
+        "rationale": "Permite identificar estados de distracción, fatiga o estrés agudo antes de que el trabajador opere maquinaria riesgosa en terreno."
+      },
+      {
+        "text": "Extender la jornada diaria de trabajo para evitar que el personal piense en situaciones ajenas a la mina.",
+        "isCorrect": false,
+        "rationale": "El exceso de horas laborales incrementa exponencialmente la fatiga física y mental, elevando la probabilidad de accidentes."
+      },
+      {
+        "text": "Prohibir totalmente que los trabajadores expresen sus estados de ánimo o preocupaciones dentro del campamento.",
+        "isCorrect": false,
+        "rationale": "Reprimir la expresión emocional incrementa la tensión interna y aislamiento del trabajador, empeorando el riesgo de distracción."
+      },
+      {
+        "text": "Sancionar económicamente de forma automática a todo colaborador que manifieste un síntoma de cansancio.",
+        "isCorrect": false,
+        "rationale": "Punir el reporte de fatiga genera que el personal oculte su estado real, aumentando la probabilidad de catástrofes."
+      },
+      {
+        "text": "Retirar los elementos de bloqueo y etiquetado de energía en las paradas de planta programadas.",
+        "isCorrect": false,
+        "rationale": "Eliminar protocolos de seguridad física ante un problema socioemocional vulnera directamente las normas de vida."
+      }
+    ],
+    "hint": "Identifica la acción de contención que busca conocer el estado de concentración y bienestar del trabajador antes de la tarea.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Antes de iniciar la ejecución de un proyecto en una nueva zona geográfica, ¿por qué es indispensable realizar un diagnóstico situacional sociocultural?",
+    "opciones": [
+      {
+        "text": "Para identificar la dinámica comunitaria, las autoridades legítimas, sus prácticas culturales y sus expectativas no gestionadas.",
+        "isCorrect": true,
+        "rationale": "Aporta la información base para diseñar estrategias de relacionamiento respetuosas, evitando intervenir a ciegas e incurrir en ofensas o falsas expectativas."
+      },
+      {
+        "text": "Para fijar unilateralmente los precios de los metales que se cotizarán en los mercados internacionales.",
+        "isCorrect": false,
+        "rationale": "La cotización de metales responde a mercados financieros globales, completamente ajenos al diagnóstico social del territorio."
+      },
+      {
+        "text": "Para descartar el uso de mano de obra local y justificar la contratación exclusiva de empresas externas.",
+        "isCorrect": false,
+        "rationale": "El objetivo del diagnóstico es integrar armónicamente el proyecto al entorno social, fomentando la inclusión y el empleo local."
+      },
+      {
+        "text": "Para evadir la elaboración de la evaluación de impacto ambiental requerida por la normativa nacional.",
+        "isCorrect": false,
+        "rationale": "El estudio sociocultural complementa las exigencias legales del expediente ambiental, no busca reemplazarlas ni omitirlas."
+      },
+      {
+        "text": "Para calcular el consumo eléctrico de los equipos de ventilación en los niveles de desarrollo subterráneo.",
+        "isCorrect": false,
+        "rationale": "Constituye un cálculo puramente técnico de ingeniería minera, sin relación con la dimensión humana y social del entorno."
+      }
+    ],
+    "hint": "Enfócate en la herramienta de levantamiento de información para entender la realidad, actores y cultura del territorio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco de la construcción de puentes de comunicación intercultural con comunidades locales, ¿qué acciones fortalecen la confianza mutua de manera sostenible?",
+    "opciones": [
+      {
+        "text": "Traducir los conceptos técnicos y ambientales a un lenguaje sencillo, transparente y adaptado a la realidad local.",
+        "isCorrect": true,
+        "rationale": "Facilita la comprensión real del proyecto, eliminando el recelo generado por el uso de jerga técnica incomprensible."
+      },
+      {
+        "text": "Promover la participación comunitaria en comités participativos de monitoreo ambiental del agua y aire.",
+        "isCorrect": true,
+        "rationale": "Demuestra transparencia operacional y permite que la propia población verifique el cumplimiento de los estándares de protección."
+      },
+      {
+        "text": "Respetar la institucionalidad y los rituales tradicionales de toma de decisiones de la asamblea comunal.",
+        "isCorrect": true,
+        "rationale": "Valida la autoridad local legítima y muestra consideración hacia la autonomía socio-política de la población receptora."
+      },
+      {
+        "text": "Prometer empleo inmediato para la totalidad de la población sin evaluar requerimientos ni competencias.",
+        "isCorrect": false,
+        "rationale": "Genera expectativas irrealizables que al incumplirse desatan crisis de desconfianza y protestas radicales."
+      },
+      {
+        "text": "Dividir a las organizaciones sociales financiando únicamente a los sectores afines a la empresa.",
+        "isCorrect": false,
+        "rationale": "Las tácticas de cooptación o división fracturan el tejido social e intensifican la violencia del conflicto a mediano plazo."
+      }
+    ],
+    "hint": "Selecciona las prácticas fundadas en la transparencia, el respeto a la institucionalidad local y la participación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-01",
+    "diplomado": "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función estratégica fundamental de una 'Mesa de Diálogo' bien estructurada en el sector extractivo e industrial?",
+    "opciones": [
+      {
+        "text": "Constituir un espacio institucionalizado de diálogo continuo para abordar inquietudes, prevenir conflictos y construir acuerdos de desarrollo compartido.",
+        "isCorrect": true,
+        "rationale": "Funciona como un mecanismo preventivo y concertador que transforma la fricción potencial en oportunidades de crecimiento sostenible para las partes."
+      },
+      {
+        "text": "Servir como una plataforma para dilatar las respuestas estatales y desgastar a los dirigentes sociales.",
+        "isCorrect": false,
+        "rationale": "Utilizar las mesas como maniobra dilatoria destruye la fe en el diálogo e impulsa a las comunidades hacia medidas de fuerza."
+      },
+      {
+        "text": "Reemplazar al poder judicial en la resolución de litigios de propiedad privada entre particulares.",
+        "isCorrect": false,
+        "rationale": "Las mesas de diálogo son espacios consensuales de concertación social, sin facultades jurisdiccionales ni judiciales."
+      },
+      {
+        "text": "Aprobar las tarifas salariales del personal corporativo de las oficinas centrales de la empresa.",
+        "isCorrect": false,
+        "rationale": "Las políticas salariales corporativas son competencia de la gestión interna de recursos humanos, no de una mesa comunitaria."
+      },
+      {
+        "text": "Diseñar los planos arquitectónicos de las instalaciones del campamento minero permanente.",
+        "isCorrect": false,
+        "rationale": "Se trata de un cometido técnico de la ingeniería civil de proyectos, totalmente desvinculado de la concertación social."
+      }
+    ],
+    "hint": "Enfócate en la naturaleza de este espacio como punto de encuentro preventivo, continuo y pacificativo para los involucrados.",
+    "activo": true
+  }
+]

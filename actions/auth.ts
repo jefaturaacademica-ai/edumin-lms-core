@@ -130,14 +130,14 @@ export async function loginWithDni(
       userRoles: [
         {
           id: 'estudiante',
-          titulo: 'Aula virtual',
-          subtitulo: 'Accede a tus clases, cursos y diplomados como estudiante',
+          titulo: 'Ingresar como estudiante',
+          subtitulo: '',
           ruta: '/dashboard',
         },
         {
           id: 'admin',
-          titulo: 'Panel de gestión',
-          subtitulo: 'Administración ejecutiva, finanzas y certificaciones',
+          titulo: 'Ingresar como administrador',
+          subtitulo: '',
           ruta: '/admin',
         },
       ],

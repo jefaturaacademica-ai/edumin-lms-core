@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son las tres dimensiones fundamentales que conforman el denominado \"trípode de la sostenibilidad\" en la gestión minera?",
+    "opciones": [
+      {
+        "text": "Económica, ambiental y social",
+        "isCorrect": true,
+        "rationale": "La sostenibilidad integral en la industria minera moderna requiere un equilibrio entre el retorno económico para los inversionistas, el cumplimiento de los estándares ambientales fijados por el Estado y la aceptación e impacto social positivo en las comunidades de influencia."
+      },
+      {
+        "text": "Financiera, legal y tecnológica",
+        "isCorrect": false,
+        "rationale": "Aunque estos factores son sumamente importantes para la operación minera, no constituyen el trípode fundamental de la sostenibilidad sistémica."
+      },
+      {
+        "text": "Operativa, logística y comercial",
+        "isCorrect": false,
+        "rationale": "Estos aspectos corresponden a la cadena de valor operativa tradicional y no a los pilares del desarrollo sostenible."
+      },
+      {
+        "text": "Política, tributaria y cultural",
+        "isCorrect": false,
+        "rationale": "Aunque influyen en el entorno del negocio, no representan los tres ejes conceptuales del modelo de sostenibilidad empresarial."
+      },
+      {
+        "text": "Geológica, extracción y metalúrgica",
+        "isCorrect": false,
+        "rationale": "Estos son componentes estrictamente técnicos de la ingeniería de minas, no de la sostenibilidad corporativa."
+      }
+    ],
+    "hint": "Piensa en el equilibrio entre las ganancias de los inversionistas, el cuidado del entorno natural y la relación con la comunidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el organismo público peruano encargado de la fiscalización ambiental en el sector minero?",
+    "opciones": [
+      {
+        "text": "OEFA (Organismo de Evaluación y Fiscalización Ambiental)",
+        "isCorrect": true,
+        "rationale": "El OEFA es la entidad estatal encargada de fiscalizar el cumplimiento de las obligaciones y límites máximos permisibles ambientales en las unidades mineras."
+      },
+      {
+        "text": "OSINERGMIN",
+        "isCorrect": false,
+        "rationale": "Esta entidad supervisa la seguridad de la infraestructura y la operación técnica de energía y minería, no la fiscalización ambiental directamente."
+      },
+      {
+        "text": "SENACE",
+        "isCorrect": false,
+        "rationale": "El SENACE se encarga de revisar y aprobar los estudios de impacto ambiental detallados, pero no de la fiscalización de campo posterior."
+      },
+      {
+        "text": "MINAM",
+        "isCorrect": false,
+        "rationale": "El Ministerio del Ambiente es el ente rector de las políticas ambientales, pero la fiscalización directa la realiza su organismo adscrito, el OEFA."
+      },
+      {
+        "text": "SUNAT",
+        "isCorrect": false,
+        "rationale": "La SUNAT es la superintendencia encargada de la tributación y aduanas, sin competencia en fiscalización ambiental."
+      }
+    ],
+    "hint": "Sus siglas corresponden al organismo adscrito al Ministerio del Ambiente especializado en evaluación y fiscalización.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el sector minero metalúrgico, ¿por qué los minerales procesados (como concentrados de cobre, plomo o zinc) son clasificados como \"commodities\"?",
+    "opciones": [
+      {
+        "text": "Son bienes homogéneos producidos masivamente cuyo precio es determinado por el mercado internacional",
+        "isCorrect": true,
+        "rationale": "Los commodities son materias primas estandarizadas con escasa diferenciación, cuyo valor comercial no lo impone la empresa productora sino las bolsas internacionales."
+      },
+      {
+        "text": "Son productos finales empaquetados comercializados directamente en supermercados urbanos",
+        "isCorrect": false,
+        "rationale": "Los concentrados mineros son insumos industriales para refinerías o fundiciones, no bienes de consumo masivo minorista."
+      },
+      {
+        "text": "Cada empresa minera fija el precio de venta según el prestigio de su marca corporativa",
+        "isCorrect": false,
+        "rationale": "Al ser productos no diferenciados, ninguna empresa minera de manera individual tiene el poder de fijar un precio distinto al del mercado global."
+      },
+      {
+        "text": "Son servicios intangibles regulados exclusivamente por los municipios locales",
+        "isCorrect": false,
+        "rationale": "Los productos mineros son bienes tangibles de exportación internacional, no servicios municipales."
+      },
+      {
+        "text": "Su consumo está limitado únicamente al mercado interno del país donde se extraen",
+        "isCorrect": false,
+        "rationale": "Los minerales se comercializan globalmente en volúmenes masivos absorbidos por las grandes economías mundiales."
+      }
+    ],
+    "hint": "Considera la falta de diferenciación del producto y la forma en que se fija su valor en las bolsas mundiales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué documento formal se establecen originalmente los compromisos de índole social asumidos por una empresa minera que pueden ser sancionados si no se cumplen?",
+    "opciones": [
+      {
+        "text": "En el Instrumento de Gestión Ambiental, dentro del Plan de Participación Ciudadana",
+        "isCorrect": true,
+        "rationale": "Los compromisos sociales incluidos en los instrumentos ambientales aprobados y en los acuerdos formales concertados se convierten en obligaciones fiscalizables por la autoridad ambiental."
+      },
+      {
+        "text": "En el manual interno de inducción para nuevos trabajadores contratistas",
+        "isCorrect": false,
+        "rationale": "Los manuales de inducción son documentos operativos internos de la empresa y no constituyen compromisos fiscalizables ante la comunidad o el Estado."
+      },
+      {
+        "text": "En el comprobante de pago mensual emitido al área de compras",
+        "isCorrect": false,
+        "rationale": "Las facturas o comprobantes contables son registros de transacciones comerciales y no instrumentos de gestión social."
+      },
+      {
+        "text": "En las notas de prensa difundidas en medios de comunicación de la capital",
+        "isCorrect": false,
+        "rationale": "Los comunicados publicitarios o de prensa carecen de rango de obligación ambiental y social fiscalizable por el organismo regulador."
+      },
+      {
+        "text": "En el reglamento interno de trabajo e higiene de la oficina administrativa",
+        "isCorrect": false,
+        "rationale": "Este reglamento regula las relaciones laborales internas entre empleador y empleados, no los compromisos sociales con la población vecina."
+      }
+    ],
+    "hint": "Busca el estudio ambiental oficial que incorpora las consultas a los vecinos y comuneros del área de influencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia conceptual fundamental entre la Responsabilidad Social Empresarial (RSE) y la filantropía tradicional?",
+    "opciones": [
+      {
+        "text": "La RSE es un sistema de gestión estructurado enfocado en el desarrollo sostenible; la filantropía es la donación puntual o asistencialismo",
+        "isCorrect": true,
+        "rationale": "La RSE busca crear capacidades duraderas y desarrollo sostenible en la comunidad mediante planes estratégicos medibles, mientras que la filantropía se limita a donaciones o regalos sin visión sistemática."
+      },
+      {
+        "text": "La RSE consiste en regalar dinero en efectivo a los líderes comunales; la filantropía ejecuta obras de infraestructura pesada",
+        "isCorrect": false,
+        "rationale": "La entrega desorganizada de dinero no es parte de la RSE y se aleja por completo de los criterios éticos y de gestión sostenible."
+      },
+      {
+        "text": "La RSE es aplicada únicamente por entidades públicas; la filantropía es exclusiva del sector minero privado",
+        "isCorrect": false,
+        "rationale": "Ambos conceptos provienen del sector privado y representan diferentes enfoques de interacción social corporativa."
+      },
+      {
+        "text": "La RSE se enfoca en eliminar el pago de impuestos; la filantropía busca maximizar la utilidad contable bruta",
+        "isCorrect": false,
+        "rationale": "La RSE no tiene como objetivo la evasión fiscal ni la maximización contable, sino la sostenibilidad integral de la operación."
+      },
+      {
+        "text": "La RSE solo se ejecuta durante la etapa de cierre de mina; la filantropía se aplica durante la fase de exploración",
+        "isCorrect": false,
+        "rationale": "La RSE abarca todo el ciclo de vida de la operación minera de forma continua y planificada."
+      }
+    ],
+    "hint": "Considera cuál de los dos enfoques busca crear capacidades permanentes y sostenibles frente a donaciones asistenciales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Quiénes desarrollaron la metodología del Cuadro de Mando Integral (Balance Scorecard) publicada en la revista Harvard Business Review en 1992?",
+    "opciones": [
+      {
+        "text": "Robert Kaplan y David Norton",
+        "isCorrect": true,
+        "rationale": "Robert Kaplan y David Norton crearon el Balance Scorecard para incorporar indicadores no financieros a la medición estratégica del rendimiento corporativo."
+      },
+      {
+        "text": "Michael Porter y Philip Kotler",
+        "isCorrect": false,
+        "rationale": "Michael Porter es reconocido por la teoría de las fuerzas competitivas y la cadena de valor, mientras que Kotler es experto en mercadotecnia."
+      },
+      {
+        "text": "Peter Drucker y Henry Mintzberg",
+        "isCorrect": false,
+        "rationale": "Son referentes fundamentales de la administración general y la estrategia, pero no creadores del Balance Scorecard."
+      },
+      {
+        "text": "Frederick Taylor y Henri Fayol",
+        "isCorrect": false,
+        "rationale": "Fueron los pioneros de la administración científica y la teoría clásica a principios del siglo XX."
+      },
+      {
+        "text": "W. Edwards Deming y Joseph Juran",
+        "isCorrect": false,
+        "rationale": "Son los principales referentes de las teorías y metodologías de la gestión de la calidad total."
+      }
+    ],
+    "hint": "Sus nombres están asociados a la investigación académica que complementó los indicadores contables tradicionales en los noventa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a las cuatro perspectivas tradicionales que integran la estructura del Cuadro de Mando Integral (Balance Scorecard)?",
+    "opciones": [
+      {
+        "text": "Perspectiva Financiera",
+        "isCorrect": true,
+        "rationale": "Evalúa la salud económica, los costos, el rendimiento del capital invertido y el valor creado para los accionistas."
+      },
+      {
+        "text": "Perspectiva del Cliente",
+        "isCorrect": true,
+        "rationale": "Mide la satisfacción, retención, nivel de servicio y percepción de valor por parte de los clientes o grupos de interés receptores."
+      },
+      {
+        "text": "Perspectiva de Procesos Internos",
+        "isCorrect": true,
+        "rationale": "Analiza la eficiencia, calidad y desempeño de las operaciones internas necesarias para satisfacer las expectativas del cliente y los accionistas."
+      },
+      {
+        "text": "Perspectiva de Crecimiento y Aprendizaje",
+        "isCorrect": true,
+        "rationale": "Focusa la capacitación del personal, el desarrollo de competencias, el clima organizacional y la infraestructura tecnológica."
+      },
+      {
+        "text": "Perspectiva de Arbitraje Bursátil Internacional",
+        "isCorrect": false,
+        "rationale": "El arbitraje bursátil es una operación financiera de mercado externo y no forma parte de las perspectivas del Balance Scorecard."
+      }
+    ],
+    "hint": "Selecciona las cuatro dimensiones internas y externas organizacionales que equilibran lo financiero con lo operativo y humano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dado que las empresas mineras operan vendiendo commodities a precios fijados internacionalmente, ¿cuál es su principal fuente de ventaja competitiva?",
+    "opciones": [
+      {
+        "text": "El liderazgo en costos mediante la optimización contante de los procesos operativos",
+        "isCorrect": true,
+        "rationale": "Al no poder modificar el precio de venta fijado en las bolsas mundiales, la rentabilidad y supervivencia de la minera dependen de mantener sus costos de producción por debajo del precio de mercado."
+      },
+      {
+        "text": "El aumento unilateral y discrecional del precio por tonelada de concentrado",
+        "isCorrect": false,
+        "rationale": "Los compradores internacionales rechazarían cualquier precio por encima de la cotización estándar del mercado."
+      },
+      {
+        "text": "La diferenciación publicitaria de la marca de los minerales exportados",
+        "isCorrect": false,
+        "rationale": "Los minerales son insumos estandarizados que no requieren diferenciación publicitaria en el mercado de commodities."
+      },
+      {
+        "text": "La paralización preventiva de la extracción para generar escasez artificial",
+        "isCorrect": false,
+        "rationale": "El volumen de producción de una sola mina no altera sustancialmente la oferta mundial ni el precio global de commodities masivos."
+      },
+      {
+        "text": "La eliminación total de los programas de capacitación y de seguridad en el trabajo",
+        "isCorrect": false,
+        "rationale": "Eliminar la seguridad o la capacitación genera accidentes, sanciones legales e ineficiencias que elevan los costos a mediano plazo."
+      }
+    ],
+    "hint": "Si no se puede controlar el precio de venta en el mercado externo, piensa en la variable interna sobre la que sí se tiene control.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial de realizar un \"Análisis de Situación\" al asumir la jefatura o gerencia de un área en una empresa?",
+    "opciones": [
+      {
+        "text": "Determinar el punto de partida real, diagnosticando los recursos, el personal y los problemas pendientes del área",
+        "isCorrect": true,
+        "rationale": "El Análisis de Situación permite responder a la pregunta '¿dónde estamos hoy?' identificando fortalezas, falencias y capacidades para planificar estratégicamente."
+      },
+      {
+        "text": "Fijar el valor de las acciones corporativas en las bolsas de valores internacionales",
+        "isCorrect": false,
+        "rationale": "El valor accionario responde al mercado financiero global y no al diagnóstico situacional de un área operativa o social específica."
+      },
+      {
+        "text": "Elaborar la liquidación contable definitiva para el cierre definitivo de la mina",
+        "isCorrect": false,
+        "rationale": "El análisis de situación es una herramienta de diagnóstico para la gestión continua, no un procedimiento de liquidación o cierre."
+      },
+      {
+        "text": "Reemplazar inmediatamente a todo el personal obrero por sistemas automatizados de inteligencia artificial",
+        "isCorrect": false,
+        "rationale": "El análisis situacional busca evaluar el talento existente y las necesidades actuales, no realizar un despido masivo previo."
+      },
+      {
+        "text": "Aprobar los permisos de concesión minera emitidos por el gobierno central",
+        "isCorrect": false,
+        "rationale": "Los permisos de concesión son trámites legales y regulatorios competencia de las autoridades gubernamentales."
+      }
+    ],
+    "hint": "Esta evaluación inicial responde a la pregunta fundamental sobre el estado actual antes de elaborar un plan estratégico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la planificación estratégica, ¿cómo se define la \"Visión\" de una organización o área de gestión?",
+    "opciones": [
+      {
+        "text": "La declaración de lo que la organización aspira a ser o alcanzar en el futuro a largo plazo",
+        "isCorrect": true,
+        "rationale": "La Visión proyecta el estado deseado y la meta aspiracional hacia donde se orientan las estrategias y esfuerzos organizacionales."
+      },
+      {
+        "text": "El listado de compras de insumos ejecutado durante la semana previa",
+        "isCorrect": false,
+        "rationale": "Un registro de compras es un documento operativo de carácter administrativo y contable, no una visión estratégica."
+      },
+      {
+        "text": "El conjunto de sanciones tributarias acumuladas durante el año fiscal",
+        "isCorrect": false,
+        "rationale": "Las sanciones representan pasivos o contingencias legales que deben corregirse, no el propósito proyectado a futuro."
+      },
+      {
+        "text": "La descripción minuciosa de cada paso técnico de un procedimiento de laboratorio",
+        "isCorrect": false,
+        "rationale": "Eso corresponde a un manual o protocolo operativo estándar de trabajo."
+      },
+      {
+        "text": "El balance contable que muestra las pérdidas inmediatas por fallas mecánicas",
+        "isCorrect": false,
+        "rationale": "El balance de pérdidas es un reporte financiero histórico, opuesto a la naturaleza prospectiva de la visión."
+      }
+    ],
+    "hint": "Piensa en la pregunta prospectiva: '¿Qué queremos llegar a ser?' o '¿Hacia dónde nos dirigimos?'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro de la matriz de análisis FODA, ¿cuáles de los siguientes componentes se clasifican como factores de origen interno de la organización?",
+    "opciones": [
+      {
+        "text": "Fortalezas",
+        "isCorrect": true,
+        "rationale": "Son las capacidades, recursos y ventajas internas poseídas por la organización que favorecen el cumplimiento de sus metas."
+      },
+      {
+        "text": "Debilidades",
+        "isCorrect": true,
+        "rationale": "Son las carencias, limitaciones o aspectos deficientes internos de la organización que dificultan el alcance de los objetivos."
+      },
+      {
+        "text": "Oportunidades",
+        "isCorrect": false,
+        "rationale": "Las oportunidades provienen del entorno externo y no son controladas internamente por la organización."
+      },
+      {
+        "text": "Amenazas",
+        "isCorrect": false,
+        "rationale": "Las amenazas son factores externos negativos generados por el mercado, el gobierno o el contexto social."
+      },
+      {
+        "text": "Cambios tributarios nacionales",
+        "isCorrect": false,
+        "rationale": "Las modificaciones legislativas o tributarias del país son variables del entorno macroeconómico externo."
+      }
+    ],
+    "hint": "Diferencia los elementos que pertenecen al control directo de la empresa de aquellos que provienen del entorno socioeconómico externo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la matriz FODA de un área de responsabilidad social, el surgimiento de una tecnología accesible como los paneles solares para electrificar zonas aisladas se considera una:",
+    "opciones": [
+      {
+        "text": "Oportunidad",
+        "isCorrect": true,
+        "rationale": "Es una fuerza o tendencia positiva proveniente del entorno tecnológico externo que la empresa puede aprovechar para mejorar sus proyectos sociales."
+      },
+      {
+        "text": "Fortaleza",
+        "isCorrect": false,
+        "rationale": "Sería una fortaleza únicamente si la empresa fuera dueña de la patente o de la fabricación de dicha tecnología."
+      },
+      {
+        "text": "Debilidad",
+        "isCorrect": false,
+        "rationale": "La innovación tecnológica externa no constituye una deficiencia o falla interna del equipo de trabajo."
+      },
+      {
+        "text": "Amenaza",
+        "isCorrect": false,
+        "rationale": "Las amenazas son factores externos que perjudican o ponen en riesgo la operación, lo cual no aplica a una tecnología beneficiosa."
+      },
+      {
+        "text": "Falla operativa",
+        "isCorrect": false,
+        "rationale": "El avance tecnológico externo no es un error de ejecución en la planta o en el campo."
+      }
+    ],
+    "hint": "Es un elemento positivo proveniente del entorno tecnológico externo que la organización puede aprovechar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el mecanismo denominado \"Obras por Impuestos\" utilizado por las empresas mineras?",
+    "opciones": [
+      {
+        "text": "Modalidad donde la empresa financia y ejecuta obras públicas prioritarias a cuenta de su impuesto a la renta",
+        "isCorrect": true,
+        "rationale": "Permite canalizar recursos del impuesto a la renta de la empresa privada directamente hacia obras de infraestructura para la comunidad, acelerando la inversión pública."
+      },
+      {
+        "text": "Un cobro de multas adicionales que imponen los municipios por el uso de carreteras",
+        "isCorrect": false,
+        "rationale": "Obras por Impuestos es un mecanismo voluntario de inversión pública concertada, no una sanción administrativa o tributaria."
+      },
+      {
+        "text": "Una donación no registrada en los libros contables para evitar la auditoría del Estado",
+        "isCorrect": false,
+        "rationale": "El proceso está estrictamente normado, auditado y certificado por el Estado mediante el sistema de inversión pública."
+      },
+      {
+        "text": "Un descuento salarial que se aplica a los contratistas para construir la planta de procesamiento",
+        "isCorrect": false,
+        "rationale": "No involucra aportes ni descuentos de los sueldos del personal contratado."
+      },
+      {
+        "text": "Un contrato bancario para financiar compras de combustible extranjero con arancel cero",
+        "isCorrect": false,
+        "rationale": "El mecanismo se enfoca en proyectos de infraestructura e inversión pública local, no en importación de insumos."
+      }
+    ],
+    "hint": "Involucra sustituir el pago en efectivo de tributos al fisco por la ejecución directa de infraestructura para la comunidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué garantía otorgan los \"Contratos Ley\" suscritos entre el Estado y los inversionistas privados en el sector minero?",
+    "opciones": [
+      {
+        "text": "Garantizan la estabilidad jurídica y la inalterabilidad de las reglas tributarias y legales pactadas por un periodo fijo",
+        "isCorrect": true,
+        "rationale": "Los Contratos Ley aseguran al inversionista que las condiciones tributarias y normativas bajo las cuales decidió invertir no se modificarán arbitrariamente durante la vigencia del acuerdo."
+      },
+      {
+        "text": "Eximen a la empresa de cumplir con cualquier norma ambiental o de seguridad laboral",
+        "isCorrect": false,
+        "rationale": "Los Contratos Ley no otorgan impunidad ambiental ni eximen a las empresas de fiscalización o normas operativas."
+      },
+      {
+        "text": "Otorgan el derecho exclusivo de fijar los precios internacionales del concentrado de cobre",
+        "isCorrect": false,
+        "rationale": "Ningún contrato ley puede alterar el mecanismo global de formación de precios de commodities en las bolsas internacionales."
+      },
+      {
+        "text": "Obligan al Estado a subsidiar el 100% de los sueldos de la plantilla obrera",
+        "isCorrect": false,
+        "rationale": "La empresa privada asume íntegramente sus costos operativos e imprevistos financieros."
+      },
+      {
+        "text": "Permiten operar la mina sin contar con un Instrumento de Gestión Ambiental aprobado",
+        "isCorrect": false,
+        "rationale": "La aprobación y cumplimiento del instrumento ambiental es requisito legal obligatorio previo e ineludible."
+      }
+    ],
+    "hint": "Piensa en el instrumento constitucional diseñado para brindar seguridad y previsibilidad a las inversiones de largo plazo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el enfoque de cadena de valor e ISO 9001, ¿por qué es indispensable que las empresas contratistas de una minera estén alineadas con sus objetivos sociales y ambientales?",
+    "opciones": [
+      {
+        "text": "Porque las contratas forman parte de la cadena de valor y sus faltas comprometen la reputación y cumplimiento del titular minero",
+        "isCorrect": true,
+        "rationale": "La comunidad y las autoridades perciben a la operación como una sola entidad; cualquier infracción de una contratista impacta directamente en el titular minero."
+      },
+      {
+        "text": "Porque las contratas son propietarias legales del subsuelo y de la concesión minera",
+        "isCorrect": false,
+        "rationale": "La concesión del subsuelo pertenece exclusivamente al titular minero ante el Estado, no a sus empresas contratistas."
+      },
+      {
+        "text": "Porque el ISO 9001 exige la fusión patrimonial obligatoria de todas las empresas proveedoras",
+        "isCorrect": false,
+        "rationale": "Las normas ISO no exigen fusiones corporativas, sino la alineación de sistemas de gestión de calidad y procesos."
+      },
+      {
+        "text": "Porque así se elimina la obligación de realizar estudios de impacto ambiental en la unidad",
+        "isCorrect": false,
+        "rationale": "La presencia de contratistas no exime de la elaboración y actualización de los instrumentos de gestión ambiental."
+      },
+      {
+        "text": "Porque las contratistas reemplazan formalmente al Estado en el cobro de impuestos nacionales",
+        "isCorrect": false,
+        "rationale": "El cobro de tributos es competencia pública exclusiva del fisco nacional."
+      }
+    ],
+    "hint": "Considera cómo percibe la población local a los vehículos y personal de las empresas subcontratadas que operan en la mina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes ejemplos representan indicadores cuantitativos NO financieros en la gestión de responsabilidad social minera?",
+    "opciones": [
+      {
+        "text": "Porcentaje de viviendas del área de influencia con acceso a electrificación",
+        "isCorrect": true,
+        "rationale": "Mide en términos cuantitativos porcentuales el alcance de un servicio básico en la población, sin ser una métrica monetaria."
+      },
+      {
+        "text": "Tasa de reducción de la anemia infantil en la comunidad vecina",
+        "isCorrect": true,
+        "rationale": "Cuantifica el impacto social y de salud en la población mediante porcentajes de salud pública."
+      },
+      {
+        "text": "Número de horas de capacitación técnica brindadas al personal comunal",
+        "isCorrect": true,
+        "rationale": "Mide el volumen numérico de formación de capacidades en la comunidad."
+      },
+      {
+        "text": "Monto total del presupuesto de gastos en moneda nacional",
+        "isCorrect": false,
+        "rationale": "Es una métrica estrictamente financiera al expresarse en unidades monetarias."
+      },
+      {
+        "text": "Tasa de retorno sobre el patrimonio (ROE)",
+        "isCorrect": false,
+        "rationale": "El ROE es un ratio contable y financiero clásico utilitario para los accionistas."
+      }
+    ],
+    "hint": "Selecciona las opciones que expresan métricas numéricas objetivas o porcentajes pero que no están medidas en unidades monetarias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la secuencia lógica de causa y efecto del mapa estratégico del Balance Scorecard, ¿cuál es la perspectiva base que impulsa las demás mejoras?",
+    "opciones": [
+      {
+        "text": "Aprendizaje y Crecimiento",
+        "isCorrect": true,
+        "rationale": "El desarrollo del personal capacitado y motivado (Aprendizaje) permite optimizar los Procesos Internos, lo cual satisface a los Clientes y finalmente genera resultados Financieros."
+      },
+      {
+        "text": "Perspectiva Financiera",
+        "isCorrect": false,
+        "rationale": "La perspectiva financiera es el resultado final en la cima de la cadena causal, no la base fundacional."
+      },
+      {
+        "text": "Perspectiva de Clientes",
+        "isCorrect": false,
+        "rationale": "La satisfacción del cliente es consecuencia de la excelencia en los procesos internos organizacionales."
+      },
+      {
+        "text": "Perspectiva de Auditoría Externa",
+        "isCorrect": false,
+        "rationale": "La auditoría externa es una función de control y no una perspectiva base en el mapa estratégico."
+      },
+      {
+        "text": "Perspectiva de Fiscalización Tributaria",
+        "isCorrect": false,
+        "rationale": "La fiscalización tributaria es una obligación legal, no un eslabón del mapa estratégico de gestión interna."
+      }
+    ],
+    "hint": "Identifica la perspectiva humana e intelectual orientada a capacitar al personal en la base del edificio estratégico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia clave entre un \"Objetivo Estratégico\" y una \"Meta\" dentro de un plan de gestión?",
+    "opciones": [
+      {
+        "text": "El objetivo señala la dirección cualitativa deseada; la meta cuantifica el logro deseado agregando cantidad y plazo",
+        "isCorrect": true,
+        "rationale": "El objetivo establece el 'qué hacer' de forma conceptual, mientras que la meta le asigna un número específico y un horizonte temporal definido."
+      },
+      {
+        "text": "El objetivo mide únicamente la ganancia en dinero; la meta mide únicamente la satisfacción laboral del obrero",
+        "isCorrect": false,
+        "rationale": "Tanto objetivos como metas se aplican a cualquier dimensión (financiera, social, de procesos o humana)."
+      },
+      {
+        "text": "El objetivo es impuesto exclusivamente por el organismo fiscalizador; la meta la decide libremente el practicante",
+        "isCorrect": false,
+        "rationale": "Ambos son definidos internamente por la gerencia y el equipo directivo de la organización."
+      },
+      {
+        "text": "El objetivo se cumple diariamente; la meta tarda más de cien años en evaluarse",
+        "isCorrect": false,
+        "rationale": "Las metas tienen plazos definidos y evaluables dentro de horizontes temporales operativos o estratégicos acotados."
+      },
+      {
+        "text": "No existe ninguna diferencia; ambos términos son exactamente sinónimos técnicos e intercambiables en contabilidad",
+        "isCorrect": false,
+        "rationale": "En la administración estratégica se diferencian claramente la definición del propósito (objetivo) de su expresión cuantitativa y temporal (meta)."
+      }
+    ],
+    "hint": "Considera cuál de los dos conceptos agrega un valor numérico exacto y una fecha límite de cumplimiento al propósito planteado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta propia de las ciencias sociales se utiliza para recoger opiniones cualitativas mediante el diálogo guiado entre actores o pobladores clave?",
+    "opciones": [
+      {
+        "text": "Grupo de enfoque (Focus Group)",
+        "isCorrect": true,
+        "rationale": "El grupo de enfoque o Focus Group permite propiciar el diálogo directo entre los actores o vecinos para recoger percepciones, expectativas e impresiones de cualitativas."
+      },
+      {
+        "text": "Prueba de ensayo de fuego para minerales auríferos",
+        "isCorrect": false,
+        "rationale": "El ensayo de fuego es un método químico-metalúrgico de laboratorio para cuantificar metales preciosos."
+      },
+      {
+        "text": "Análisis contable de la prueba ácida de liquidez",
+        "isCorrect": false,
+        "rationale": "La prueba ácida es un indicador financiero de liquidez inmediata."
+      },
+      {
+        "text": "Balance hidrográfico de escorrentía superficial",
+        "isCorrect": false,
+        "rationale": "Es una herramienta hidrológica para medir caudales de agua, sin aplicación en el diálogo social cualitativo."
+      },
+      {
+        "text": "Levantamiento topográfico por fotogrametría digital",
+        "isCorrect": false,
+        "rationale": "Es una técnica de ingeniería geográfica para mapear el terreno físico."
+      }
+    ],
+    "hint": "Se trata de una técnica grupal participativa donde se reúne a un grupo representativo a conversar sobre un tema de interés común.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué indicador financiero es fundamental para la gerencia al evaluar el desempeño de la jefatura del área de Responsabilidad Social al cierre del ejercicio anual?",
+    "opciones": [
+      {
+        "text": "El porcentaje de ejecución del presupuesto asignado al área",
+        "isCorrect": true,
+        "rationale": "Evalúa qué proporción de los recursos presupuestados fueron realmente invertidos en los proyectos sociales planificados durante el año."
+      },
+      {
+        "text": "La cotización de la libra de cobre en la Bolsa de Metales de Londres",
+        "isCorrect": false,
+        "rationale": "El precio bursátil externo no depende de la gestión ejecutiva o presupuestal del equipo de responsabilidad social local."
+      },
+      {
+        "text": "El número total de hectáreas concesionadas en la fase de exploración",
+        "isCorrect": false,
+        "rationale": "Las hectáreas de concesión pertenecen al ámbito del área de Geología y Asuntos Legales Corporativos."
+      },
+      {
+        "text": "El volumen de reactivos químicos consumidos en las celdas de flotación",
+        "isCorrect": false,
+        "rationale": "El consumo de reactivos es un indicador operativo exclusivo de la planta concentradora metalúrgica."
+      },
+      {
+        "text": "El valor arancelario impuesto al transporte interprovincial de maquinaria pesada",
+        "isCorrect": false,
+        "rationale": "Los aranceles son regulaciones aduaneras de transporte que no miden el desempeño del gasto social presupuestado."
+      }
+    ],
+    "hint": "Mide la relación entre el dinero asignado en el plan anual y lo que realmente se gastó e invirtió en proyectos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes situaciones representan amenazas externas dentro del análisis FODA de una operación minera?",
+    "opciones": [
+      {
+        "text": "Inestabilidad o giros radicales en las políticas del gobierno central",
+        "isCorrect": true,
+        "rationale": "Los cambios bruscos en el entorno político o normativo son factores externos negativos fuera del control directo de la mina."
+      },
+      {
+        "text": "Caída severa de la cotización internacional del mineral por debajo del precio de corte",
+        "isCorrect": true,
+        "rationale": "La reducción del precio de mercado del commodity es un riesgo externo que impacta la rentabilidad financiera de la mina."
+      },
+      {
+        "text": "Aparición de conflictos sociales azuzados por actores externos con intereses subalternos",
+        "isCorrect": true,
+        "rationale": "La conflictividad social impulsada por terceros desinforma o distorsiona el entorno externo de la operación."
+      },
+      {
+        "text": "Carencia de personal bilingüe interno en la oficina de la empresa",
+        "isCorrect": false,
+        "rationale": "La falta de personal bilingüe interno es una debilidad propia de la organización y no un factor externo."
+      },
+      {
+        "text": "Falta de mantenimiento de las camionetas propias del área de relaciones comunitarias",
+        "isCorrect": false,
+        "rationale": "La falta de mantenimiento de activos propios es una ineficiencia o debilidad puramente interna."
+      }
+    ],
+    "hint": "Identifica los factores negativos que se originan en el entorno exterior a la empresa y que no dependen de la gestión interna.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la minería, ¿qué es el \"precio de corte\" (cut-off) del mineral?",
+    "opciones": [
+      {
+        "text": "La ley o precio mínimo por debajo del cual el material extraído ya no resulta económicamente rentable de procesar",
+        "isCorrect": true,
+        "rationale": "El precio o ley de corte determina el límite económico donde el valor de los minerales recuperados cubre exactamente los costos operativos de extracción y procesamiento."
+      },
+      {
+        "text": "El arancel fijo que se paga en las garitas peajales por el transporte de mineral",
+        "isCorrect": false,
+        "rationale": "Eso corresponde a un costo logístico puntual y no al parámetro técnico-económico del mineral."
+      },
+      {
+        "text": "El costo por hora de alquiler de las herramientas manuales utilizadas en campo",
+        "isCorrect": false,
+        "rationale": "Es una tarifa de arrendamiento de equipos de menor escala."
+      },
+      {
+        "text": "El porcentaje de descuento que exige el sindicato laboral al cierre de las negociaciones",
+        "isCorrect": false,
+        "rationale": "Las negociaciones sindicales abordan pliegos de reclamos laborales y beneficios salariales, no la rentabilidad de la roca minada."
+      },
+      {
+        "text": "El valor monetario fijado para regalar productos a los pobladores de la comunidad",
+        "isCorrect": false,
+        "rationale": "No tiene ninguna relación con las actividades de entrega de recursos o programas sociales."
+      }
+    ],
+    "hint": "Representa el límite económico o la ley mínima requerida para cubrir los costos de producción sin operar a pérdida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la capacitación continua del equipo de trabajo en temas sociales y de gestión constituye una fortaleza interna importante?",
+    "opciones": [
+      {
+        "text": "Alinea los conceptos del equipo, mejora la toma de decisiones y fomenta la generación de estrategias efectivas",
+        "isCorrect": true,
+        "rationale": "Un equipo capacitado maneja un lenguaje técnico común, comprende el sistema de gestión y reacciona de forma proactiva y profesional ante los retos del entorno."
+      },
+      {
+        "text": "Permite eliminar por completo la necesidad de cumplir con las normas ambientales del Estado",
+        "isCorrect": false,
+        "rationale": "La capacitación interna no reemplaza las obligaciones legales y ambientales ante los organismos de fiscalización."
+      },
+      {
+        "text": "Garantiza que el precio internacional del plomo se mantenga elevado durante todo el año",
+        "isCorrect": false,
+        "rationale": "El precio internacional lo fijan las bolsas mundiales independientemente del nivel educativo del personal de la mina."
+      },
+      {
+        "text": "Aumenta de forma inmediata el valor de los impuestos cobrados por la SUNAT",
+        "isCorrect": false,
+        "rationale": "Los tributos se calculan en base a las leyes fiscales vigentes y los estados financieros, no por las horas de capacitación impartidas."
+      },
+      {
+        "text": "Sustituye la necesidad de contar con maquinaria pesada en las labores de minado",
+        "isCorrect": false,
+        "rationale": "El desarrollo de competencias operativas o sociales no reemplaza a los equipos físicos indispensables en la extracción minera."
+      }
+    ],
+    "hint": "Considera cómo influye el nivel técnico y la preparación del equipo en la calidad de las propuestas y la resolución de problemas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la perspectiva de Procesos Internos de una jefatura de gestión social, ¿cuál de los siguientes es un indicador de eficiencia de respuesta?",
+    "opciones": [
+      {
+        "text": "El porcentaje de solicitudes o quejas comunitarias atendidas a tiempo en relación con el total recibido",
+        "isCorrect": true,
+        "rationale": "Mide la eficacia y rapidez interna del equipo de gestión para procesar y responder a los requerimientos formales presentados por la población."
+      },
+      {
+        "text": "La cotización porcentual del dólar estadounidense en el mercado cambiario",
+        "isCorrect": false,
+        "rationale": "El tipo de cambio es una variable macroeconómica externa al desempeño del proceso social interno."
+      },
+      {
+        "text": "La distancia en kilómetros que separa la unidad minera de la capital del país",
+        "isCorrect": false,
+        "rationale": "La distancia geográfica es un dato espacial fijo y no una métrica de desempeño operativo o de procesos."
+      },
+      {
+        "text": "La cantidad de lluvia registrada por el pluviómetro en la estación meteorológica",
+        "isCorrect": false,
+        "rationale": "Las precipitaciones son un dato climático ambiental, no un indicador de eficiencia en los trámites comunitarios."
+      },
+      {
+        "text": "El número total de accionistas extranjeros inscritos en la bolsa de valores",
+        "isCorrect": false,
+        "rationale": "El número de accionistas pertenece a la estructura societaria y corporativa de la empresa."
+      }
+    ],
+    "hint": "Relaciona la cantidad de trámites o inquietudes ingresadas por la población con las respuestas efectivamente resueltas por el equipo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el instrumento ambiental de un proyecto minero, ¿cuál es el propósito original del Plan de Participación Ciudadana (PPC)?",
+    "opciones": [
+      {
+        "text": "Informar y recoger las opiniones de los ciudadanos del área de influencia sobre las evaluaciones y parámetros ambientales",
+        "isCorrect": true,
+        "rationale": "El diseño original del PPC busca transparentar la información ambiental y dar voz a la población local en la evolución del proyecto minero."
+      },
+      {
+        "text": "Sustituir a los jueces del Poder Judicial en la resolución de litigios penales",
+        "isCorrect": false,
+        "rationale": "El PPC no posee atribuciones ni competencias jurisdiccionales o judiciales."
+      },
+      {
+        "text": "Fijar el sueldo mínimo que cobrarán los ingenieros extranjeros en la mina",
+        "isCorrect": false,
+        "rationale": "Las remuneraciones del personal privado se regulan por el mercado laboral y la legislación del trabajo, no en el PPC."
+      },
+      {
+        "text": "Recaudar los fondos para pagar la deuda externa del gobierno regional",
+        "isCorrect": false,
+        "rationale": "El PPC es un mecanismo de diálogo e información ambiental, sin fines ni facultades de recaudación fiscal pública."
+      },
+      {
+        "text": "Aprobar las leyes de minería en reemplazo del Congreso de la República",
+        "isCorrect": false,
+        "rationale": "La promulgación de leyes es potestad constitucional exclusiva del Poder Legislativo."
+      }
+    ],
+    "hint": "Se enfoca en involucrar a los vecinos y pobladores de la zona para que conozcan y opinen sobre el proyecto y su entorno ambiental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son los tres componentes esenciales que conforman el denominado 'trípode de la sostenibilidad' en el sector minero moderno?",
+    "opciones": [
+      {
+        "text": "Sostenibilidad económica, ambiental y social.",
+        "isCorrect": true,
+        "rationale": "El desarrollo sostenible en el sector minero requiere rentabilidad para los inversionistas, cumplimiento de estándares ambientales fijados por el Estado y aceptación social por parte de las poblaciones del entorno."
+      },
+      {
+        "text": "Sostenibilidad financiera, legal y tributaria.",
+        "isCorrect": false,
+        "rationale": "Los aspectos legales y tributarios forman parte del marco regulatorio e institucional, pero no constituyen los pilares conceptuales de la sostenibilidad empresarial."
+      },
+      {
+        "text": "Sostenibilidad operativa, logística y de seguridad laboral.",
+        "isCorrect": false,
+        "rationale": "Estos elementos corresponden a la gestión interna de producción y salud ocupacional de la mina, mas no abarcan las tres dimensiones integrales frente al entorno y la sociedad."
+      },
+      {
+        "text": "Sostenibilidad tecnológica, geológica y comercial.",
+        "isCorrect": false,
+        "rationale": "Aunque son factores clave para la viabilidad técnica del yacimiento, omiten las dimensiones ambiental y social frente a las comunidades."
+      },
+      {
+        "text": "Sostenibilidad gubernamental, internacional y regional.",
+        "isCorrect": false,
+        "rationale": "Esta clasificación se enfoca en niveles de gobernanza política y no en los pilares fundamentales del modelo de sostenibilidad empresarial minera."
+      }
+    ],
+    "hint": "Considere la interacción entre el retorno de inversión, los parámetros regulatorios del entorno natural y la relación con la población circundante.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué instrumento formal de la empresa minera se transforman los compromisos de índole social en obligaciones legalmente fiscalizables por los organismos reguladores?",
+    "opciones": [
+      {
+        "text": "En el Instrumento de Gestión Ambiental (IGA), específicamente en el Plan de Participación Ciudadana y acuerdos comunitarios incorporados.",
+        "isCorrect": true,
+        "rationale": "Cuando una empresa asume un compromiso social dentro de su IGA o sus planes aprobados por la autoridad competente, este se convierte en una obligación fiscalizable sujeta a sanciones de fiscalizadores como el OEFA."
+      },
+      {
+        "text": "En el código interno de ética y conducta empresarial.",
+        "isCorrect": false,
+        "rationale": "El código de ética es un documento autorregulado de carácter interno que no otorga facultades de sanción o fiscalización a los organismos del Estado."
+      },
+      {
+        "text": "En la memoria anual dirigida a la junta general de accionistas.",
+        "isCorrect": false,
+        "rationale": "La memoria anual es un informe de rendición de cuentas financiero y de gestión comercial, sin fuerza legal vinculante frente al regulador ambiental."
+      },
+      {
+        "text": "En el reglamento interno de seguridad y salud en el trabajo.",
+        "isCorrect": false,
+        "rationale": "Este documento norma la prevención de riesgos laborales para trabajadores e instalaciones internas, no las obligaciones sociales con las comunidades externas."
+      },
+      {
+        "text": "En los contratos comerciales celebrados con los compradores de minerales.",
+        "isCorrect": false,
+        "rationale": "Los acuerdos de comercialización estipulan condiciones de entrega de concentrados o minerales, no las obligaciones socioambientales reguladas por la autoridad competente."
+      }
+    ],
+    "hint": "Piense en el expediente aprobado por las autoridades ambientales donde se detallan los planes de interacción con la población.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un gestor comunitario publica en un periódico mural un listado del personal desafectado para ahorrar tiempo en notificaciones individuales. ¿Qué consecuencia legal o administrativa enfrenta la empresa ante este procedimiento?",
+    "opciones": [
+      {
+        "text": "Incurre en el incumplimiento de una obligación fiscalizable establecida en el IGA, lo que genera posibles sanciones administrativas e importantes multas.",
+        "isCorrect": true,
+        "rationale": "La formalidad del procedimiento acordado en el plan social exige notificación directa (cargo firmado o vía notarial); obviar este paso contraviene el compromiso ambiental-social y motiva sanciones estatales."
+      },
+      {
+        "text": "Ninguna, pues la publicación en un área visible cumple plenamente con el principio de transparencia pública.",
+        "isCorrect": false,
+        "rationale": "La transparencia no sustituye la notificación individual debida según el procedimiento de desvinculación formal acordado en los compromisos asumidos."
+      },
+      {
+        "text": "Recibe únicamente una llamada de atención verbal por parte del comité de auditoría interna.",
+        "isCorrect": false,
+        "rationale": "Al estar el compromiso social dentro de la esfera fiscalizable, las consecuencias sobrepasan la fiscalización interna de la empresa e intervienen entes reguladores estatales."
+      },
+      {
+        "text": "Se le otorga un plazo de 30 días para volver a publicar el listado con correcciones ortográficas.",
+        "isCorrect": false,
+        "rationale": "El fallo de fondo radica en el método impreciso de notificación directa al trabajador, no en un error de redacción o formato de la lista."
+      },
+      {
+        "text": "Se invalida únicamente la póliza de seguro contra accidentes del personal afectado.",
+        "isCorrect": false,
+        "rationale": "Las pólizas de seguros se rigen por contratos comerciales y laborales independientes de la fiscalización de compromisos socioambientales del IGA."
+      }
+    ],
+    "hint": "Recuerde cómo la autoridad ambiental (OEFA) evalúa los compromisos sociales formales y el rigor que exige en las formas de notificación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué los productos mineros como los concentrados de cobre o plomo son clasificados económicamente como *commodities*?",
+    "opciones": [
+      {
+        "text": "Porque son bienes homogéneos no diferenciados masivos cuyo precio no lo fija la mina, sino el mercado bursátil internacional.",
+        "isCorrect": true,
+        "rationale": "Los minerales procesados a nivel de concentrado son materias primas estandarizadas con escasa diferenciación, cuyos precios son determinados en bolsas internacionales como la de Londres o Nueva York."
+      },
+      {
+        "text": "Porque son productos altamente especializados diseñados a la medida de cada comprador minorista.",
+        "isCorrect": false,
+        "rationale": "Un bien con un alto grado de personalización es lo opuesto a un commodity estandarizado."
+      },
+      {
+        "text": "Porque su valor es fijado unilateralmente por el ministerio de energía y minas de cada país extractor.",
+        "isCorrect": false,
+        "rationale": "Los gobiernos no determinan el precio de venta de los minerales; este fluctúa según la oferta y demanda del mercado global."
+      },
+      {
+        "text": "Porque solo se pueden comercializar dentro del territorio nacional en el que fueron extraídos.",
+        "isCorrect": false,
+        "rationale": "Los commodities mineros son bienes transables a escala global destinados mayoritariamente al comercio exterior."
+      },
+      {
+        "text": "Porque su demanda es sumamente pequeña y restringida a empresas locales de manufactura.",
+        "isCorrect": false,
+        "rationale": "Los mercados de materias primas mineras son infinitos o extremadamente vastos a nivel mundial, absorbiendo toda la producción estándar disponible."
+      }
+    ],
+    "hint": "Piense en las propiedades de una materia prima estándar donde la mina acepta el precio que fija la bolsa mundial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dado que las empresas mineras operan vendiendo commodities y no fijan los precios del mercado, ¿cuál es su principal vía estratégica para aumentar la rentabilidad?",
+    "opciones": [
+      {
+        "text": "La optimización de procesos y el logro de una posición de liderazgo en costos operativos.",
+        "isCorrect": true,
+        "rationale": "Al no poder alterar el precio de venta del mineral, la única variable interna manipulable por la gerencia para maximizar el margen de utilidad es la reducción y control de sus costos de producción."
+      },
+      {
+        "text": "La aplicación de intensas campañas publicitarias para aumentar el precio de su mineral.",
+        "isCorrect": false,
+        "rationale": "El marketing de consumo no altera los precios bursátiles de los commodities estandarizados."
+      },
+      {
+        "text": "El condicionamiento del suministro limitando las ventas solo a compradores locales.",
+        "isCorrect": false,
+        "rationale": "La minería opera en un mercado masivo global; limitar sus clientes reduciría drásticamente sus ingresos en lugar de aumentarlos."
+      },
+      {
+        "text": "La alteración arbitraria de las cotizaciones fijadas en las bolsas internacionales.",
+        "isCorrect": false,
+        "rationale": "Ninguna compañía productora individual tiene el poder monopólico de cambiar los valores en la Bolsa de Metales de Londres."
+      },
+      {
+        "text": "El incremento acelerado de los costos de exploración sin control de gasto.",
+        "isCorrect": false,
+        "rationale": "Incrementar costos ineficientemente eleva el precio de corte e incrementa el riesgo de quiebra ante caídas del precio internacional."
+      }
+    ],
+    "hint": "En la ecuación de utilidad (Ingresos menos Costos), determine qué elemento está bajo el control directo de la mina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia conceptual determinante entre la Filantropía y la Responsabilidad Social Empresarial (RSE)?",
+    "opciones": [
+      {
+        "text": "La filantropía consiste en asistencialismo voluntario o donaciones sin retorno medible, mientras que la RSE es un sistema estructurado orientado al desarrollo sostenible e integrado a los objetivos del negocio.",
+        "isCorrect": true,
+        "rationale": "La filantropía entrega recursos de forma asistencialista sin un plan medible de sostenibilidad, mientras que la RSE gestiona proyectos con metas, indicadores y participación comunitaria duradera."
+      },
+      {
+        "text": "La filantropía es exigida por ley, mientras que la RSE es un acto totalmente clandestino e ilegal.",
+        "isCorrect": false,
+        "rationale": "Ninguna de las dos figuras es ilegal; la RSE busca cumplir normativas e ir más allá en gestión estratégica, mientras la filantropía es una donación libre de carácter asistencial."
+      },
+      {
+        "text": "La filantropía busca generar utilidades financieras directas y la RSE busca regalar dinero a los líderes locales.",
+        "isCorrect": false,
+        "rationale": "Ocurre lo opuesto; la filantropía no persigue rentabilidad ni estrategia, y la RSE explícitamente evita dádivas desestructuradas."
+      },
+      {
+        "text": "La filantropía es ejecutada únicamente por organismos del Estado y la RSE por ONGs extranjeras.",
+        "isCorrect": false,
+        "rationale": "Ambos conceptos son implementados o gestionados principalmente desde el sector privado y las corporaciones."
+      },
+      {
+        "text": "La filantropía requiere certificación ISO 9001 y la RSE se mide únicamente mediante auditorías contables.",
+        "isCorrect": false,
+        "rationale": "Los sistemas de gestión formalmente normados o estructurados como el Balanced Scorecard se aplican a la RSE, no a la filantropía ocasional."
+      }
+    ],
+    "hint": "Diferencie el simple acto de regalar dinero frente a un sistema enfocado en la autonomía futura y el progreso sostenido de la población.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones constituyen propósitos legítimos del Plan de Participación Ciudadana (PPC) en el marco de la gestión ambiental e institucional minera?",
+    "opciones": [
+      {
+        "text": "Facilitar que los ciudadanos del área de influencia conozcan la evolución de los parámetros ambientales de la operación.",
+        "isCorrect": true,
+        "rationale": "El diseño original del PPC tiene como pilar la transparencia de la información ambiental para dar tranquilidad técnica a la población informada."
+      },
+      {
+        "text": "Servir como canal para incorporar requerimientos socioambientales acordados entre la comunidad y la titular minera.",
+        "isCorrect": true,
+        "rationale": "En la práctica actual, el PPC integra compromisos sociales específicos que luego se convierten en parte del expediente fiscalizable."
+      },
+      {
+        "text": "Reemplazar de forma definitiva la labor judicial y administrativa de los tribunales del Estado.",
+        "isCorrect": false,
+        "rationale": "El PPC es un espacio participativo de consulta y transparencia socioambiental, no un fuero jurisdiccional para impartir justicia civil o penal."
+      },
+      {
+        "text": "Fomentar espacios como los monitoreos ambientales participativos con la comunidad.",
+        "isCorrect": true,
+        "rationale": "El monitoreo participativo genera confianza técnica mutua al permitir que la población constate en campo la toma y análisis de muestras."
+      },
+      {
+        "text": "Fijar unilateralmente las tarifas bursátiles del mineral procesado en la mina.",
+        "isCorrect": false,
+        "rationale": "El PPC no aborda aspectos de comercialización bursátil internacional de metales."
+      }
+    ],
+    "hint": "Seleccione las alternativas asociadas a la transparencia ambiental, la participación comunitaria activa y los acuerdos de gestión social.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al estructurar la 'Perspectiva del Cliente' dentro de un Balanced Scorecard adaptado a la Responsabilidad Social Minera, ¿quiénes asumen conceptualmente el rol de 'clientes'?",
+    "opciones": [
+      {
+        "text": "Los comuneros, pobladores y hogares del Área de Influencia Directa (AID) que reciben las prestaciones e intervenciones del plan social.",
+        "isCorrect": true,
+        "rationale": "En un sistema de gestión social, los destinatarios finales cuyos requerimientos y expectativas se busca atender de manera sostenible funcionan conceptualmente como los 'clientes' del servicio social ofrecido."
+      },
+      {
+        "text": "Únicamente las refinerías internacionales que compran los concentrados metálicos.",
+        "isCorrect": false,
+        "rationale": "Aunque comercialmente son compradores, en el subsistema de gestión social el 'cliente' de la estrategia comunitaria es el entorno humano poblacional."
+      },
+      {
+        "text": "Los funcionarios de las entidades reguladoras del gobierno central.",
+        "isCorrect": false,
+        "rationale": "Las entidades reguladoras representan a la autoridad fiscalizadora, no al público beneficiario directo de la estrategia comunitaria."
+      },
+      {
+        "text": "Los accionistas minoritarios de la bolsa de valores.",
+        "isCorrect": false,
+        "rationale": "Los accionistas corresponden a los interesados o destinatarios de la perspectiva financiera, no de la perspectiva de cliente socioambiental."
+      },
+      {
+        "text": "Los proveedores externos de maquinaria pesada y combustibles.",
+        "isCorrect": false,
+        "rationale": "Los proveedores forman parte de la cadena de aprovisionamiento en la perspectiva de procesos o logística, no del cliente receptor del desarrollo comunitario."
+      }
+    ],
+    "hint": "Identifique al grupo poblacional circundante receptor de los servicios de desarrollo sostenible de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el contexto de la gestión social minera y el Balanced Scorecard, ¿cuáles de las siguientes métricas corresponden a *indicadores cuantitativos no financieros*?",
+    "opciones": [
+      {
+        "text": "El porcentaje de niños de la comunidad que presentan niveles adecuados de hemoglobina tras un programa nutricional.",
+        "isCorrect": true,
+        "rationale": "Representa una medida médica/nutricional concreta expresada en porcentaje, sin estar medida en términos monetarios."
+      },
+      {
+        "text": "La tasa de rendimiento sobre el patrimonio invertido (ROE) de la empresa minera.",
+        "isCorrect": false,
+        "rationale": "El ROE es un indicador estrictamente financiero y contable."
+      },
+      {
+        "text": "El número de hogares del AID conectados con sistemas de electrificación autónoma.",
+        "isCorrect": true,
+        "rationale": "Mide una cifra absoluta cuantitativa sobre cobertura física de un servicio social sin expresar valor financiero contable."
+      },
+      {
+        "text": "El porcentaje de avance en horas de capacitación brindadas al personal del área de relaciones comunitarias.",
+        "isCorrect": true,
+        "rationale": "Cuantifica el esfuerzo de formación operativa en tiempo e intensidad dentro del pilar de aprendizaje y crecimiento."
+      },
+      {
+        "text": "El valor actual neto (VAN) proyectado para la expansión de la planta concentradora.",
+        "isCorrect": false,
+        "rationale": "El VAN es una métrica puramente financiera de evaluación de proyectos de capital."
+      }
+    ],
+    "hint": "Elija aquellas opciones que ofrecen mediciones numéricas o porcentuales claras que no involucran directamente divisas ni estados de pérdidas y ganancias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Frente al problema técnico y financiero que implica extender líneas de cableado eléctrico hacia estancias rurales dispersas en el AID, ¿qué solución tecnológica representa una oportunidad de desarrollo sostenible de fácil despliegue?",
+    "opciones": [
+      {
+        "text": "La instalación descentralizada de kits de paneles fotovoltaicos y sistemas de almacenamiento en baterías.",
+        "isCorrect": true,
+        "rationale": "Los sistemas solares aprovechan la radiación lumínica mediante saltos cuánticos en los paneles y guardan energía en baterías, solucionando la electrificación en zonas remotas sin requerir costoso cableado."
+      },
+      {
+        "text": "La construcción de pequeñas centrales nucleares en cada estancia ganadera.",
+        "isCorrect": false,
+        "rationale": "Es una alternativa inviable económica, técnica y ambientalmente para pequeñas poblaciones aisladas."
+      },
+      {
+        "text": "La distribución periódica de cisternas de combustible diésel para grupos electrógenos individuales.",
+        "isCorrect": false,
+        "rationale": "Genera dependencia continua, alta huella de carbono y elevados costos logísticos recurrentes, alejándose de la sostenibilidad."
+      },
+      {
+        "text": "El tendido obligatorio de red subterránea de alta tensión a lo largo de decenas de kilómetros.",
+        "isCorrect": false,
+        "rationale": "Representa un costo económico desproporcionado por vivienda dispersa y puede generar severas complicaciones de permisos de servidumbre."
+      },
+      {
+        "text": "La exigencia a la población para que adquiera velas de cera de forma independiente.",
+        "isCorrect": false,
+        "rationale": "No constituye ningún aporte de tecnología moderna ni resuelve las limitaciones de estudio o desarrollo técnico de los hogares."
+      }
+    ],
+    "hint": "Piense en soluciones de energía renovable autónomas que no dependan del tendido físico de cables por topografías difíciles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el enfoque de cadenas de valor e integración bajo normativas de gestión de calidad (ej. ISO 9001), ¿cómo deben alinearse las contratas de servicios con la política de RSE de la titular minera?",
+    "opciones": [
+      {
+        "text": "Las empresas contratistas, como parte de la cadena de valor operativa, deben compartir e integrar los mismos estándares y objetivos socioambientales de la titular.",
+        "isCorrect": true,
+        "rationale": "Los sistemas de gestión consideran la cadena de valor integralmente; un contratista que vulnere compromisos ambientales o sociales compromete directamente a la minera principal."
+      },
+      {
+        "text": "Las contratas están eximidas de cualquier política socioambiental, operando bajo sus propias reglas arbitrarias.",
+        "isCorrect": false,
+        "rationale": "El estándar de gestión moderna extiende la responsabilidad y supervisión a todos los proveedores y subcontratistas que actúan en nombre o dentro de la mina."
+      },
+      {
+        "text": "Se prohíbe terminantemente que las contratistas tengan contacto o contraten personal de las zonas aledañas.",
+        "isCorrect": false,
+        "rationale": "Al contrario, promover empleo local calificado o no calificado a través de contratas suele ser una exigencia clave de los acuerdos sociales."
+      },
+      {
+        "text": "Las contratas deben reportar sus compromisos exclusivamente a las autoridades del país de origen de sus dueños.",
+        "isCorrect": false,
+        "rationale": "Toda operación debe responder a los instrumentos de gestión ambiental y regulaciones del lugar donde se ejecuta la actividad minera."
+      },
+      {
+        "text": "Las contratas solo deben cumplir con normas de facturación comercial, omitiendo temas socioambientales.",
+        "isCorrect": false,
+        "rationale": "El desempeño operativo en mina exige cumplimiento integral de seguridad, medio ambiente y pautas de responsabilidad social."
+      }
+    ],
+    "hint": "Considere la continuidad y coherencia que debe existir entre la empresa matriz y los proveedores que ejecutan actividades operativas o de soporte.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué distorsión en la gestión se genera si el área de Responsabilidad Social solicita un presupuesto anual elevado y, al finalizar el ejercicio, devuelve un porcentaje significativo sin ejecutar?",
+    "opciones": [
+      {
+        "text": "Refleja ineficiencia en la planificación de proyectos, induciendo a la alta gerencia a recortar drásticamente el presupuesto de los años posteriores.",
+        "isCorrect": true,
+        "rationale": "En el sector privado, no ejecutar los recursos asignados evidencia falta de capacidad operativa o mala formulación, provocando el reajuste hacia abajo del presupuesto futuro."
+      },
+      {
+        "text": "Genera una bonificación financiera automática para los gestores comunitarios por concepto de ahorro.",
+        "isCorrect": false,
+        "rationale": "Devolver dinero destinado a proyectos comprometidos demuestra incumplimiento de las metas de desarrollo social programadas."
+      },
+      {
+        "text": "Aumenta de inmediato la satisfacción de la comunidad por haber ahorrado recursos a la empresa.",
+        "isCorrect": false,
+        "rationale": "La población percibe la subejecución como promesas e inversiones sociales no cumplidas por la empresa."
+      },
+      {
+        "text": "Garantiza que el Estado reduzca automáticamente el impuesto a la renta de la compañía minera.",
+        "isCorrect": false,
+        "rationale": "La subejecución presupuestal interna no otorga beneficios tributarios directos sobre el impuesto a la renta."
+      },
+      {
+        "text": "Provoca la aprobación inmediata del doble del presupuesto para el siguiente periodo sin auditoría.",
+        "isCorrect": false,
+        "rationale": "La respuesta de la gerencia ante fondos no ejecutados es recortar la asignación a la cifra que realmente se demostró capacidad de gastar."
+      }
+    ],
+    "hint": "Evalúe cómo interpreta la gerencia privada la incapacidad de gasto frente a los proyectos inicialmente planificados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función del 'Análisis de Situación' en el proceso de formulación estratégica de una unidad o área de gestión?",
+    "opciones": [
+      {
+        "text": "Determinar el punto de partida real ('dónde estamos hoy') identificando recursos, problemas pendientes y condiciones del entorno.",
+        "isCorrect": true,
+        "rationale": "Antes de trazar metas futuras (visión), la gerencia requiere un diagnóstico objetivo y riguroso del estado actual de los recursos, equipo y contexto social."
+      },
+      {
+        "text": "Fijar los precios de venta a futuro del cobre y del oro en la Bolsa de Londres.",
+        "isCorrect": false,
+        "rationale": "El análisis situacional evalúa el estado de la organización y su entorno, no predice ni fija precios bursátiles."
+      },
+      {
+        "text": "Sustituir formalmente la auditoría financiera externa exigida por ley.",
+        "isCorrect": false,
+        "rationale": "El análisis situacional es una herramienta de diagnóstico estratégico, no un examen contable legal de estados financieros."
+      },
+      {
+        "text": "Redactar la carta de cierre definitivo de las operaciones mineras.",
+        "isCorrect": false,
+        "rationale": "Diagnosticar la situación actual sirve para gestionar el presente y planificar el desarrollo, no para decretar el cierre de la empresa."
+      },
+      {
+        "text": "Aprobar el despido automático de todo el personal que no hable idiomas extranjeros.",
+        "isCorrect": false,
+        "rationale": "Un diagnóstico evalúa las competencias del equipo para tomar decisiones de capacitación o reestructuración, no actos sancionatorios automáticos."
+      }
+    ],
+    "hint": "Relacione esta etapa con la evaluación inicial que responde a la pregunta sobre el estado actual antes de definir adónde se quiere llegar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la construcción de una matriz FODA, ¿cuáles de los siguientes elementos son considerados *factores internos* de la organización o unidad minera?",
+    "opciones": [
+      {
+        "text": "Disponer de personal técnico calificado que habla la lengua nativa de la zona.",
+        "isCorrect": true,
+        "rationale": "Es un atributo y recurso propio del equipo humano de la empresa, lo que constituye una fortaleza interna."
+      },
+      {
+        "text": "Inestabilidad en la política gubernamental respecto al régimen tributario minero.",
+        "isCorrect": false,
+        "rationale": "El contexto político y legislativo del país es un factor externo (amenaza u oportunidad)."
+      },
+      {
+        "text": "Déficit o carencia de equipos especializados propios para el monitoreo rápido de efluentes.",
+        "isCorrect": true,
+        "rationale": "La falta de equipamiento dentro de la empresa representa una debilidad interna."
+      },
+      {
+        "text": "Flutuación a la baja en el precio internacional de los commodities metálicos.",
+        "isCorrect": false,
+        "rationale": "Las cotizaciones en las bolsas de metales son variables macroeconómicas exógenas."
+      },
+      {
+        "text": "Poseer un historial positivo de cumplimiento ambiental sin sanciones administrativas previa.",
+        "isCorrect": true,
+        "rationale": "El desempeño previo de la propia empresa es una fortaleza interna de su gestión."
+      }
+    ],
+    "hint": "Diferencie las capacidades o carencias inherentes a la propia empresa de aquellos eventos derivados del entorno macro, político o bursátil.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al realizar el cruce en una matriz FODA, ¿cómo se define operacionalmente una *estrategia FO* (Fortalezas - Oportunidades)?",
+    "opciones": [
+      {
+        "text": "Aprovechar una capacidad o ventaja interna propia para capturar una circunstancia favorable del entorno externo.",
+        "isCorrect": true,
+        "rationale": "Las estrategias FO (Maxi-Maxi) utilizan las fortalezas existentes en la organización para maximizar la ventaja de las oportunidades externas identificadas."
+      },
+      {
+        "text": "Utilizar recursos internos para protegerse de los cambios tributarios drásticos del gobierno.",
+        "isCorrect": false,
+        "rationale": "Esta descripción corresponde a una estrategia FA (Fortalezas - Amenazas)."
+      },
+      {
+        "text": "Superar una debilidad propia de la mina antes de que ocurra un desastre natural.",
+        "isCorrect": false,
+        "rationale": "Corresponde al análisis de vulnerabilidades internas frente a amenazas externas (DA)."
+      },
+      {
+        "text": "Minimizar los defectos internos para tomar una oportunidad disponible en el mercado.",
+        "isCorrect": false,
+        "rationale": "Esta formulación encaja con la lógica de las estrategias DO (Debilidades - Oportunidades)."
+      },
+      {
+        "text": "Eliminar de forma permanente la fiscalización reguladora del Estado.",
+        "isCorrect": false,
+        "rationale": "Ninguna estrategia legal busca eliminar la autoridad del Estado; la matriz busca gestionar adecuadamente la posición de la empresa."
+      }
+    ],
+    "hint": "Piense en la combinación de un atributo positivo propio con un viento a favor que proviene del mercado o la tecnología.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste sustancialmente el mecanismo de inversión denominado 'Obras por Impuestos' (OxI) aplicable al sector minero?",
+    "opciones": [
+      {
+        "text": "Permite a la empresa privada financiar y ejecutar obras públicas prioritarias, descontando dicha inversión del pago de su impuesto a la renta futuro.",
+        "isCorrect": true,
+        "rationale": "Obras por Impuestos es un mecanismo donde la minera ejecuta infraestructura pública consensuada (colegios, canales, carreteras) y el monto invertido se convalida mediante certificados contra el impuesto a la renta."
+      },
+      {
+        "text": "Exime a la empresa minera de todo pago de tributos por 50 años a cambio de donar víveres a la comunidad.",
+        "isCorrect": false,
+        "rationale": "OxI no es una exención fiscal permanente ni un programa asistencialista; se trata del adelantamiento de infraestructura pública a cuenta del impuesto tributable."
+      },
+      {
+        "text": "Consiste en la entrega directa de dinero en efectivo a las autoridades municipales sin proyecto formal.",
+        "isCorrect": false,
+        "rationale": "OxI opera estrictamente a través del sistema de inversión pública (como Invierte.pe) con expedientes técnicos y liquidaciones auditadas."
+      },
+      {
+        "text": "Es un impuesto extraordinario que sanciona a las mineras que no logran metas de producción.",
+        "isCorrect": false,
+        "rationale": "Es una modalidad de ejecución de inversión pública descentralizada, no una multa ni una penalidad."
+      },
+      {
+        "text": "Obliga a los comuneros a pagar tributos directamente a las empresas mineras de su zona.",
+        "isCorrect": false,
+        "rationale": "Las comunidades no tributan a las empresas; la minera es la que adelanta la ejecución de obras estatales a cuenta de su propio tributo al Estado."
+      }
+    ],
+    "hint": "Considere la sustitución directa del pago en dinero al fisco por la entrega directa de infraestructura pública a la comunidad a cuenta de tributos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la finalidad principal de la suscripción de un 'Contrato Ley' entre el Estado y un inversionista minero?",
+    "opciones": [
+      {
+        "text": "Otorgar seguridad y estabilidad jurídica al contrato fijando reglas tributarias y administrativas estables durante un plazo determinado.",
+        "isCorrect": true,
+        "rationale": "Un Contrato Ley otorga estabilidad jurídica al inversionista, garantizando que el marco impositivo y normativo no sufra modificaciones intempestivas que arruinen proyectos de capital a largo plazo."
+      },
+      {
+        "text": "Permitir que la empresa minera cree sus propias leyes y leyes laborales al margen de la Constitución.",
+        "isCorrect": false,
+        "rationale": "El contrato ley no otorga potestad legislativa soberana a la empresa, solo congela la norma jurídica vigente aplicable a la inversión."
+      },
+      {
+        "text": "Asegurar que el Estado asuma todas las pérdidas financieras de la empresa privada si cae el precio del metal.",
+        "isCorrect": false,
+        "rationale": "El riesgo del negocio y las fluctuaciones del precio son asumidos íntegramente por el inversionista privado."
+      },
+      {
+        "text": "Eliminar el requisito de presentar Estudios de Impacto Ambiental ante las autoridades.",
+        "isCorrect": false,
+        "rationale": "El contrato ley no exime a los titulares mineros de cumplir con la normativa socioambiental e instrumentos regulatorios vigentes."
+      },
+      {
+        "text": "Transferir la propiedad del subsuelo nacional a título personal de los gerentes de la empresa.",
+        "isCorrect": false,
+        "rationale": "El subsuelo se mantiene bajo soberanía del Estado; el contrato ley rige las condiciones de la concesión y la inversión privada."
+      }
+    ],
+    "hint": "Piense en la protección contra cambios normativos o reglas de juego impredecibles a lo largo del tiempo de explotación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Según el modelo original desarrollado por Kaplan y Norton para el Balanced Scorecard, ¿cuáles son las cuatro perspectivas fundamentales de análisis?",
+    "opciones": [
+      {
+        "text": "Perspectiva Financiera.",
+        "isCorrect": true,
+        "rationale": "Mide los resultados contables y el valor económico generado para los accionistas."
+      },
+      {
+        "text": "Perspectiva del Cliente.",
+        "isCorrect": true,
+        "rationale": "Evalúa la propuesta de valor y la satisfacción del público objetivo al que atiende la organización."
+      },
+      {
+        "text": "Perspectiva de Procesos Internos.",
+        "isCorrect": true,
+        "rationale": "Analiza la eficiencia, calidad y excelencia operativa de las actividades de la cadena de valor."
+      },
+      {
+        "text": "Perspectiva de Aprendizaje y Crecimiento.",
+        "isCorrect": true,
+        "rationale": "Examina la capacitación del talento humano, el clima organizacional y la infraestructura tecnológica que soporta la mejora continua."
+      },
+      {
+        "text": "Perspectiva de Geopolítica Internacional.",
+        "isCorrect": false,
+        "rationale": "No constituye una de las cuatro perspectivas de gestión organizacional estándar formuladas en la metodología del Balanced Scorecard."
+      }
+    ],
+    "hint": "Identifique las cuatro vistas estructurales clásicas que conectan a la persona, sus tareas, la propuesta al destinatario y la utilidad económica final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo impacta directamente la paralización no programada de una unidad minera (ej. bloqueos de vías durante 30 días) en la viabilidad financiera de la empresa?",
+    "opciones": [
+      {
+        "text": "Ocasiona pérdidas financieras masivas por costos fijos no absorbidos y la interrupción en el flujo de ventas, demostrando la importancia de la gestión social.",
+        "isCorrect": true,
+        "rationale": "Una operación minera es un proceso continuo intensivo en capital con altísimos costos fijos; las paralizaciones generan lucro cesante severo que demuestra el valor estratégico de la prevención de conflictos sociales."
+      },
+      {
+        "text": "Aumenta la rentabilidad contable debido a que no se gasta energía ni reactivos químicos.",
+        "isCorrect": false,
+        "rationale": "Aunque se reduzcan ciertos costos variables, los costos fijos, salarios, depreciación y la pérdida total de ingresos de venta superan con creces el ahorro temporal."
+      },
+      {
+        "text": "Mejora inmediatamente las cotizaciones bursátiles de la empresa por reducción de producción.",
+        "isCorrect": false,
+        "rationale": "Los inversionistas castigan la incertidumbre y la paralización operativa reduciendo el valor de las acciones en bolsa."
+      },
+      {
+        "text": "Elimina automáticamente las obligaciones tributarias causadas en ejercicios pasados.",
+        "isCorrect": false,
+        "rationale": "Las deudas tributarias o multas causadas previamente no desaparecen por causa de una huelga u obstaculización vial posterior."
+      },
+      {
+        "text": "Acelera el cumplimiento de las metas del plan de cierre de minas definitivo.",
+        "isCorrect": false,
+        "rationale": "Una paralización por conflicto interrumpe el ciclo de vida del proyecto sin equivaler a un cierre técnico planificado y remediado."
+      }
+    ],
+    "hint": "Considere el impacto económico que sufre una planta continua con altos costos fijos cuando se detienen sus despachos e ingresos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para construir un equipo de relaciones comunitarias eficiente y empático en campo, ¿cuáles de los siguientes atributos resultan estratégicos al integrar profesionales?",
+    "opciones": [
+      {
+        "text": "Capacidad de comunicación asertiva y formación en ciencias sociales o ramas afines integradas.",
+        "isCorrect": true,
+        "rationale": "Facilita la interpretación de las dinámicas culturales, la recolección de expectativas reales y la resolución Pacífica de discrepancias."
+      },
+      {
+        "text": "Dominio del idioma nativo (quechua o aimara) prevalente en las comunidades del entorno.",
+        "isCorrect": true,
+        "rationale": "Genera una conexión cultural directa y fortalece los lazos de confianza al reducir las barreras lingüísticas."
+      },
+      {
+        "text": "Perfil técnico orientado exclusivamente al trabajo cerrado en gabinetes sin interacción humana.",
+        "isCorrect": false,
+        "rationale": "El trabajo en RSE es de campo e interrelación permanente; un perfil aislado o hermético perjudica el diálogo fluido."
+      },
+      {
+        "text": "Experiencia en el diseño de metodologías de desarrollo sostenible e indicadores socioambientales.",
+        "isCorrect": true,
+        "rationale": "Permite transformar demandas sociales en programas de inversión estructurados y medibles en el tiempo."
+      },
+      {
+        "text": "Actitud impositiva basada en el poder económico de la empresa para resolver controversias.",
+        "isCorrect": false,
+        "rationale": "La imposición o soberbia empresarial exacerba la desconfianza comunitaria y suele detonar conflictos sociales agudos."
+      }
+    ],
+    "hint": "Seleccione las capacidades vinculadas a la empatía, el lenguaje nativo, la comprensión social y la estructuración de proyectos viables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de un cuadro de mando integral para RSE, ¿cuál de las siguientes opciones constituye un ejemplo de *indicador de proceso interno*?",
+    "opciones": [
+      {
+        "text": "Porcentaje de quejas comunitarias atendidas oportunamente sobre el total de reclamos recibidos.",
+        "isCorrect": true,
+        "rationale": "Mide la eficacia operativa y la rapidez con la que el flujo de trabajo interno de la gerencia responde y soluciona las inquietudes presentadas por la población."
+      },
+      {
+        "text": "Precio por libra de cobre registrado en la Bolsa de Londres.",
+        "isCorrect": false,
+        "rationale": "Es un dato del mercado externo financiero fuera de la gestión de procesos internos de la empresa."
+      },
+      {
+        "text": "Índice de prevalencia de enfermedades respiratorias en la población infantil.",
+        "isCorrect": false,
+        "rationale": "Corresponde a un indicador de impacto en la perspectiva del cliente/comunidad o de resultado final socioambiental."
+      },
+      {
+        "text": "Monto total en dólares gastado en el pago de dividendos a los socios.",
+        "isCorrect": false,
+        "rationale": "Es una cifra del ámbito estrictamente financiero e inversionista."
+      },
+      {
+        "text": "Grado de empatía percibido por los comuneros medido en una encuesta de opinión.",
+        "isCorrect": false,
+        "rationale": "Es un indicador de percepción cualitativa en la perspectiva del cliente o usuario del programa social."
+      }
+    ],
+    "hint": "Identifique la métrica que cuantifica la eficiencia operativa interna con la que se procesa o resuelve un trámite o demanda.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera se evalúan comúnmente los *indicadores cualitativos* en la perspectiva de la comunidad?",
+    "opciones": [
+      {
+        "text": "Mediante metodologías de las ciencias sociales como encuestas de percepción, entrevistas a profundidad con líderes de opinión y grupos focales (*focus groups*).",
+        "isCorrect": true,
+        "rationale": "Al no ser magnitudes físicas directamente medibles por instrumental, variables cualitativas como la confianza, satisfacción e imagen requieren herramientas de investigación social validadas."
+      },
+      {
+        "text": "A través del pesaje en balanzas industriales del concentrado de mineral extraído.",
+        "isCorrect": false,
+        "rationale": "El pesaje físico mide volúmenes de producción, no percepciones ni relaciones cualitativas complejas."
+      },
+      {
+        "text": "Analizando la titulación espectrométrica del agua en el laboratorio de química.",
+        "isCorrect": false,
+        "rationale": "Las pruebas de espectrometría miden concentraciones químicas cuantitativas (parámetros físicos) y no la percepción socioemocional de las personas."
+      },
+      {
+        "text": "Sumando únicamente las facturas de compra de suministros de oficina del mes.",
+        "isCorrect": false,
+        "rationale": "La revisión contable de facturas registra transacciones financieras, no la percepción de la comunidad."
+      },
+      {
+        "text": "Revisando el kilometraje marcado por los odómetros de los vehículos en la mina.",
+        "isCorrect": false,
+        "rationale": "El odómetro cuantifica distancias recorridas por el transporte, no estados de opinión ni calidad del vínculo socioambiental."
+      }
+    ],
+    "hint": "Busque las herramientas habituales de la sociología o la comunicación para captar opiniones, expectativas y niveles de satisfacción social.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el instrumento ambiental conocido como 'Plan de Cierre de Minas', ¿cuál es el enfoque principal referente al componente social al concluir las operaciones del yacimiento?",
+    "opciones": [
+      {
+        "text": "Asegurar que la población local haya desarrollado capacidades autónomas sostenibles que permitan la continuidad socioeconómica del territorio tras la salida de la mina.",
+        "isCorrect": true,
+        "rationale": "El cierre social evita el 'efecto pueblo fantasma' o el colapso económico local, garantizando que la comunidad mantenga actividades productivas e instituciones sólidas de manera independiente."
+      },
+      {
+        "text": "Abandonar el área sin comunicación previa para evitar la generación de reclamos laborales.",
+        "isCorrect": false,
+        "rationale": "El abandono no planificado es una infracción grave que genera severos pasivos socioambientales sancionados por ley."
+      },
+      {
+        "text": "Obligar a toda la población comunera a mudarse a otra región del país a costa propia.",
+        "isCorrect": false,
+        "rationale": "El plan de cierre respeta la permanencia y autonomía de las comunidades nativas y campesinas en su territorio original."
+      },
+      {
+        "text": "Regalar vehículos pesados en desuso a todos los habitantes para sustituir la economía agrícola.",
+        "isCorrect": false,
+        "rationale": "El regalo de bienes depreciados es una medida de filantropía chatarra que no genera un tejido socioeconómico productivo sostenible."
+      },
+      {
+        "text": "Contratar a toda la población del AID como empleados permanentes en las oficinas centrales de la ciudad capital.",
+        "isCorrect": false,
+        "rationale": "Resulta inviable económicamente y no resuelve la continuidad de la vida económica de la cuenca o territorio original."
+      }
+    ],
+    "hint": "Piense en la viabilidad y autonomía con la que subsistirá la población local cuando la mina agote sus reservas y cierre definitivamente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la relación lógica de causa-efecto que sustenta la arquitectura estratégica del Balanced Scorecard entre sus cuatro perspectivas?",
+    "opciones": [
+      {
+        "text": "El aprendizaje y capacidades del personal mejoran los procesos internos, lo que genera una superior propuesta de valor para el cliente, derivando en el logro de metas financieras sostenibles.",
+        "isCorrect": true,
+        "rationale": "La cadena causal del Balanced Scorecard establece que el desarrollo del capital humano e informacional fortalece los procesos, satisfaciendo al cliente/comunidad para proyectar el desempeño estratégico integral."
+      },
+      {
+        "text": "La meta financiera obliga a recortar la capacitación del personal para comprar satisfacción al cliente mediante donaciones en efectivo.",
+        "isCorrect": false,
+        "rationale": "Esta visión cortoplacista destruye el aprendizaje y los procesos internos, deteriorando la sostenibilidad futura."
+      },
+      {
+        "text": "Los clientes dictan directamente las fórmulas químicas del procesamiento metalúrgico en planta.",
+        "isCorrect": false,
+        "rationale": "Los procesos técnicos de planta responden a la ingeniería de procesos, no a los deseos comerciales o subjetivos de la población."
+      },
+      {
+        "text": "Los procesos internos se gestionan de forma totalmente aislada sin afectar ni a las personas ni a los resultados económicos.",
+        "isCorrect": false,
+        "rationale": "El modelo del Balanced Scorecard rechaza la visión de silos, demostrando que todo proceso defectuoso impacta en la propuesta de valor y las finanzas."
+      },
+      {
+        "text": "Los estados financieros son el punto de inicio para capacitar al personal sin pasar por ningún proceso intermedio.",
+        "isCorrect": false,
+        "rationale": "Los estados financieros son el resultado final del desempeño operativo y estratégico, no el punto inicial del desarrollo de habilidades."
+      }
+    ],
+    "hint": "Siga la cadena lógica ascendente: desde la formación y capacidades de las personas, pasando por la ejecución operativa, hasta la satisfacción y el resultado económico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-68",
+    "diplomado": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dado que las comunidades circundantes conocen el valor de los recursos económicos en minería, ¿cuáles de las siguientes medidas son recomendables para gestionar adecuadamente las altas expectativas sociales?",
+    "opciones": [
+      {
+        "text": "Implementar canales de comunicación transparentes especificando los presupuestos, alcances y límites del programa de RSE.",
+        "isCorrect": true,
+        "rationale": "Aclara el campo de acción de la empresa frente a las funciones propias del Estado, reduciendo la fricción derivada de falsas expectativas."
+      },
+      {
+        "text": "Comprometer verbalmente la construcción de megaobras irrealizables sin contar con expediente técnico aprobado.",
+        "isCorrect": false,
+        "rationale": "Generar falsas promesas no sustentadas genera frustración comunitaria y detona conflictos sociales severos al incumplir."
+      },
+      {
+        "text": "Involucrar a los líderes y comuneros en proyectos participativos con metas transparentes y cofinanciamiento de desarrollo.",
+        "isCorrect": true,
+        "rationale": "El involucramiento activo de la población genera corresponsabilidad y pertenencia en los proyectos socioeconómicos trazados."
+      },
+      {
+        "text": "Sustituir las donaciones asistenciales de dinero por programas orientados al desarrollo de capacidades productivas autónomas.",
+        "isCorrect": true,
+        "rationale": "Orienta la expectativa comunitaria desde la dependencia de dádiactiva hacia la creación de valor duradero e independiente de la mina."
+      },
+      {
+        "text": "Ignorar las solicitudes de reunión de la comunidad hasta que se presenten medidas de fuerza.",
+        "isCorrect": false,
+        "rationale": "La falta de atención oportuna escala el descontento y promueve la judicialización o las paralizaciones de las operaciones."
+      }
+    ],
+    "hint": "Seleccione las acciones que promueven la transparencia, el trabajo participativo estructurado y la sustitución del asistencialismo por autonomía.",
+    "activo": true
+  }
+]

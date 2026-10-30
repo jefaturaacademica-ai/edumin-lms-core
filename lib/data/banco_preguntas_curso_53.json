@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de las siguientes situaciones se clasifica como un riesgo financiero dentro de las operaciones de comercio internacional?",
+    "opciones": [
+      {
+        "text": "Variaciones inesperadas en la tasa de cambio de divisas y modificaciones no previstas en aranceles o impuestos.",
+        "isCorrect": true,
+        "rationale": "Las fluctuaciones monetarias y los cambios repentinos en las tasas impositivas alteran directamente el costo real de las transacciones y la rentabilidad de las operaciones."
+      },
+      {
+        "text": "Mal funcionamiento mecánico de la maquinaria de empaque en el almacén de origen.",
+        "isCorrect": false,
+        "rationale": "Los fallos de equipo en planta pertenecen a la categoría de riesgos operacionales o logísticos, no financieros."
+      },
+      {
+        "text": "Bloqueos de carreteras causados por fenómenos climáticos en la ruta de tránsito.",
+        "isCorrect": false,
+        "rationale": "Los eventos ambientales o de infraestructura corresponden a riesgos logísticos y de transporte."
+      },
+      {
+        "text": "Cambios en los reglamentos de seguridad y salud ocupacional del país comprador.",
+        "isCorrect": false,
+        "rationale": "Las modificaciones en normativas de seguridad laboral forman parte del marco de riesgos legales y regulatorios."
+      },
+      {
+        "text": "Deterioro físico de la mercadería debido a un embalaje defectuoso.",
+        "isCorrect": false,
+        "rationale": "Los daños en la mercancía por manipulación representan un riesgo de la cadena logística o de manipulación de carga."
+      }
+    ],
+    "hint": "Piensa en factores económicos que afectan directamente la liquidez, el costo impositivo y la rentabilidad monetaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis PESTEL, ¿a qué dimensión corresponde la evaluación del impacto de la automatización y la digitalización en las operaciones de comercio exterior?",
+    "opciones": [
+      {
+        "text": "Dimensión Tecnológica.",
+        "isCorrect": true,
+        "rationale": "Esta dimensión examina la innovación, el desarrollo de software y la adopción de herramientas digitales para optimizar los procesos comerciales."
+      },
+      {
+        "text": "Dimensión Económica.",
+        "isCorrect": false,
+        "rationale": "La dimensión económica analiza factores como inflación, tasas de interés y crecimiento del mercado, no la adopción tecnológica."
+      },
+      {
+        "text": "Dimensión Sociocultural.",
+        "isCorrect": false,
+        "rationale": "El ámbito sociocultural evalúa demografía, hábitos de consumo y valores culturales del mercado objetivo."
+      },
+      {
+        "text": "Dimensión Ecológica.",
+        "isCorrect": false,
+        "rationale": "La dimensión ecológica o ambiental se centra en la sostenibilidad, regulación ambiental y fenómenos naturales."
+      },
+      {
+        "text": "Dimensión Legal.",
+        "isCorrect": false,
+        "rationale": "La dimensión legal contempla leyes, normativas laborales y acuerdos de propiedad intelectual."
+      }
+    ],
+    "hint": "Se enfoca en las herramientas de software, innovación y sistemas digitales que modifican la eficiencia operativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro de la matriz de análisis FODA aplicada a una empresa dedicada a la importación y exportación, ¿cuáles de las siguientes opciones representan factores de origen estrictamente interno?",
+    "opciones": [
+      {
+        "text": "Fortalezas como poseer una red logística propia y personal altamente capacitado.",
+        "isCorrect": true,
+        "rationale": "Las fortalezas reflejan capacidades y recursos propios que la organización controla internamente."
+      },
+      {
+        "text": "Debilidades operativas como la falta de stock o una limitada variedad de productos.",
+        "isCorrect": true,
+        "rationale": "Las debilidades corresponden a carencias internas que limitan el desempeño organizacional y son modificables por la propia empresa."
+      },
+      {
+        "text": "Oportunidades derivadas de tratados de libre comercio firmados entre gobiernos.",
+        "isCorrect": false,
+        "rationale": "Los acuerdos comerciales internacionales provienen del entorno externo a la empresa."
+      },
+      {
+        "text": "Amenazas causadas por la delincuencia común y la inestabilidad política del país.",
+        "isCorrect": false,
+        "rationale": "Los problemas sociales y coyunturas políticas son factores externos fuera del control directo de la organización."
+      },
+      {
+        "text": "Cambios imprevistos en las regulaciones de impuestos aduaneros internacionales.",
+        "isCorrect": false,
+        "rationale": "Las decisiones de política fiscal y aduanera constituyen elementos externos del entorno comercial."
+      }
+    ],
+    "hint": "Recuerda que los aspectos internos son aquellos que dependen de la estructura, recursos y gestión directa de la organización.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el mapeo de procesos de comercio exterior, ¿cuál es el propósito de definir 'puntos de control'?",
+    "opciones": [
+      {
+        "text": "Identificar las etapas específicas donde pueden surgir fallas, cuellos de botella o retrasos en la entrega.",
+        "isCorrect": true,
+        "rationale": "Los puntos de control permiten vigilar momentos críticos del flujo operativo para intervenir preventivamente antes de que afecten el producto final."
+      },
+      {
+        "text": "Determinar el monto total de impuestos que deben pagarse al fisco aduanero.",
+        "isCorrect": false,
+        "rationale": "La determinación tributaria corresponde a la liquidación arancelaria y no a la supervisión operativa del mapeo."
+      },
+      {
+        "text": "Reemplazar los contratos de transporte marítimo firmados con los navieros.",
+        "isCorrect": false,
+        "rationale": "El mapeo de procesos es una herramienta de análisis interno, no un documento legal mercantil."
+      },
+      {
+        "text": "Registrar el ingreso de insumos iniciales sin evaluar el resultado final.",
+        "isCorrect": false,
+        "rationale": "El registro de insumos corresponde al análisis de entradas, mientras que los puntos de control verifican el rendimiento intermedio."
+      },
+      {
+        "text": "Establecer las campañas publicitarias que se lanzarán al mercado consumidor.",
+        "isCorrect": false,
+        "rationale": "Las actividades promocionales pertenecen al área comercial y no al control de calidad del mapeo de procesos."
+      }
+    ],
+    "hint": "Son verificaciones intermedias dentro del diagrama de flujo diseñadas para detectar errores antes de la entrega final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del ámbito aduanero, ¿qué consecuencia describe el concepto de 'riesgo de decomiso'?",
+    "opciones": [
+      {
+        "text": "La pérdida total de la mercancía retenida por aduanas debido al incumplimiento grave de normativas regulatorias.",
+        "isCorrect": true,
+        "rationale": "El decomiso implica la incautación definitiva de la carga por parte de la autoridad aduanera ante infracciones específicas no subsanables."
+      },
+      {
+        "text": "El cobro parcial de una multa administrativa que se cancela sin retener el producto.",
+        "isCorrect": false,
+        "rationale": "Una multa monetaria es una sanción financiera, mientras que el decomiso retira de forma permanente la propiedad de la mercancía."
+      },
+      {
+        "text": "El retraso de dos días en el embarque de contenedores por mal tiempo.",
+        "isCorrect": false,
+        "rationale": "Las demoras operativas por clima constituyen riesgos de transporte o logística, no sanciones aduaneras."
+      },
+      {
+        "text": "La reclasificación de la subpartida arancelaria con recargo de impuestos.",
+        "isCorrect": false,
+        "rationale": "Un ajuste arancelario representa un reajuste tributario, pero no la pérdida de la mercancía."
+      },
+      {
+        "text": "La devolución automática de la carga al puerto de origen sin penalización.",
+        "isCorrect": false,
+        "rationale": "El reembarque es una figura distinta donde la carga retorna al origen; el decomiso significa la confiscación de la mercancía."
+      }
+    ],
+    "hint": "Se refiere a la sanción aduanera más severa que priva al dueño de la propiedad de su carga por violaciones legales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de la segmentación arancelaria en la importación de mercancías?",
+    "opciones": [
+      {
+        "text": "Desglosar detalladamente los costos e impuestos aplicables desde la materia prima hasta el precio final mediante códigos específicos.",
+        "isCorrect": true,
+        "rationale": "Permite clasificar cada producto mediante códigos numéricos para determinar exactamente la tarifa de arancel e impuestos correspondientes."
+      },
+      {
+        "text": "Eliminar de manera permanente la obligación de pagar impuestos de importación como el IGV.",
+        "isCorrect": false,
+        "rationale": "La segmentación clasifica los bienes para aplicar los tributos correctos; no exonerante automáticamente de impuestos."
+      },
+      {
+        "text": "Fijar el límite de peso máximo que puede transportarse en un contenedor marítimo.",
+        "isCorrect": false,
+        "rationale": "Los límites de peso son regulaciones técnicas de transporte y estiba, no de clasificación tributaria."
+      },
+      {
+        "text": "Reemplazar las inspecciones físicas que realizan los auditores fiscales en aduanas.",
+        "isCorrect": false,
+        "rationale": "La clasificación del bien es un requisito documental; las inspecciones físicas son controles independientes."
+      },
+      {
+        "text": "Medir el nivel de satisfacción de los consumidores finales del producto.",
+        "isCorrect": false,
+        "rationale": "El nivel de satisfacción corresponde a métricas de mercadotecnia y servicio al cliente."
+      }
+    ],
+    "hint": "Asocia este concepto a la asignación de códigos numéricos para calcular aranceles y tributos de cada producto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la evaluación de riesgos organizacionales, ¿cuál es la diferencia fundamental entre 'impacto' y 'probabilidad'?",
+    "opciones": [
+      {
+        "text": "El impacto mide la severidad de las consecuencias si el riesgo ocurre, mientras que la probabilidad evalúa la frecuencia o posibilidad de que suceda.",
+        "isCorrect": true,
+        "rationale": "El impacto cuantifica la magnitud del daño potencial, mientras que la probabilidad indica qué tan factible es la materialización del evento."
+      },
+      {
+        "text": "El impacto se mide exclusivamente en porcentaje, mientras que la probabilidad se calcula solo en dinero.",
+        "isCorrect": false,
+        "rationale": "Comúnmente la probabilidad se expresa en porcentaje o frecuencia y el impacto en términos de costo, tiempo o daño."
+      },
+      {
+        "text": "El impacto se analiza antes de que existan controles y la probabilidad se mide únicamente al cerrar la empresa.",
+        "isCorrect": false,
+        "rationale": "Ambos componentes se evalúan de forma simultánea en todas las etapas del ciclo de gestión de riesgos."
+      },
+      {
+        "text": "El impacto evalúa solo factores climáticos y la probabilidad se aplica a riesgos informáticos.",
+        "isCorrect": false,
+        "rationale": "Ambos conceptos se aplican transversalmente a todo tipo de riesgo (financiero, operativo, legal o ambiental)."
+      },
+      {
+        "text": "El impacto se calcula mediante encuestas y la probabilidad se determina por ley estatal.",
+        "isCorrect": false,
+        "rationale": "Ambas métricas combinan metodologías cuantitativas y cualitativas según el modelo elegido por la organización."
+      }
+    ],
+    "hint": "Una variable responde a '¿qué tan grave sería el daño?' y la otra a '¿qué tan factible es que ocurra?'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de una matriz de riesgos en formato de mapa de calor, ¿qué nivel de prioridad señala el color rojo?",
+    "opciones": [
+      {
+        "text": "Riesgo de nivel alto o crítico que requiere intervención y acciones de mitigación urgentes.",
+        "isCorrect": true,
+        "rationale": "El color rojo identifica las amenazas más severas y probables que comprometen la operación y deben atenderse de inmediato."
+      },
+      {
+        "text": "Riesgo de nivel bajo que solo necesita supervisión periódica rutinaria.",
+        "isCorrect": false,
+        "rationale": "Los riesgos de prioridad baja que solo requieren monitoreo ocasional se representan típicamente con el color verde."
+      },
+      {
+        "text": "Riesgo de nivel moderado que puede ser gestionado sin prisa en el mediano plazo.",
+        "isCorrect": false,
+        "rationale": "El nivel moderado se señala generalmente con color amarillo o naranja dentro de la rejilla."
+      },
+      {
+        "text": "Oportunidad de negocio altamente rentable libre de cualquier posibilidad de falla.",
+        "isCorrect": false,
+        "rationale": "El mapa de calor mide niveles de exposición al peligro, no la rentabilidad de oportunidades comerciales."
+      },
+      {
+        "text": "Proceso completamente controlado que no requiere ningún tipo de seguimiento.",
+        "isCorrect": false,
+        "rationale": "Un proceso sin riesgo o bajo control seguro se ubica en las zonas verdes de baja prioridad."
+      }
+    ],
+    "hint": "Es el color universal utilizado en los sistemas de alerta para indicar peligro inminente o máxima severidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define el 'riesgo residual' en la gestión operativa de una empresa?",
+    "opciones": [
+      {
+        "text": "El nivel de riesgo que permanece vigente después de haber implementado los controles de seguridad y mitigación.",
+        "isCorrect": true,
+        "rationale": "Incluso tras aplicar barreras de protección, siempre queda una porción de riesgo no eliminable que se denomina residual."
+      },
+      {
+        "text": "El peligro original que existe antes de aplicar cualquier tipo de medida preventiva.",
+        "isCorrect": false,
+        "rationale": "El estado del peligro previo a cualquier intervención o control corresponde al riesgo inherente."
+      },
+      {
+        "text": "El costo financiero gastado al comprar pólizas de seguro internacionales.",
+        "isCorrect": false,
+        "rationale": "El gasto en seguros es un costo de transferencia de riesgo, no la definición del riesgo remanente."
+      },
+      {
+        "text": "La pérdida económica provocada exclusivamente por errores administrativos de los operarios.",
+        "isCorrect": false,
+        "rationale": "Los errores humanos son causas específicas de falla, no la definición del concepto de riesgo remanente."
+      },
+      {
+        "text": "El porcentaje de productos defectuosos que son desechados en la fábrica.",
+        "isCorrect": false,
+        "rationale": "La tasa de desecho representa una pérdida técnica o de merma operacional, no la métrica de riesgo residual."
+      }
+    ],
+    "hint": "Observa el término 'residuo' como aquello que queda al final de aplicar las barreras y protocolos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con la jerarquía de controles para la gestión de riesgos, ¿cuáles de las siguientes medidas corresponden a niveles formales de esta pirámide?",
+    "opciones": [
+      {
+        "text": "Eliminación del peligro en su origen.",
+        "isCorrect": true,
+        "rationale": "Es la medida de control más efectiva en la cima de la jerarquía, orientada a remover totalmente la fuente de riesgo."
+      },
+      {
+        "text": "Sustitución del proceso o material peligroso por uno de menor riesgo.",
+        "isCorrect": true,
+        "rationale": "Reemplazar un químico tóxico o un equipo riesgoso por una alternativa más segura es el segundo nivel de la jerarquía."
+      },
+      {
+        "text": "Implementación de controles administrativos, procedimientos y capacitaciones.",
+        "isCorrect": true,
+        "rationale": "Los controles administrativos cambian la forma en que las personas trabajan mediante reglas, señalizaciones y entrenamiento."
+      },
+      {
+        "text": "Uso de Equipos de Protección Personal (EPP).",
+        "isCorrect": true,
+        "rationale": "El EPP constituye el último nivel de la jerarquía de control para proteger la salud directa del trabajador."
+      },
+      {
+        "text": "Aumento inmediato de las tarifas de venta del producto final.",
+        "isCorrect": false,
+        "rationale": "El ajuste comercial de precios no es una medida de control operativo de riesgos de seguridad o procesos."
+      }
+    ],
+    "hint": "Incluye medidas que van desde remover la amenaza física hasta proteger individualmente al trabajador mediante barreras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis de modos y efectos de falla (AMFE / FMEA), ¿qué representa el indicador RPN (Número de Prioridad de Riesgo)?",
+    "opciones": [
+      {
+        "text": "El producto numérico de multiplicar la severidad, la ocurrencia y la detección para priorizar la atención de las fallas.",
+        "isCorrect": true,
+        "rationale": "El RPN/NPR cuantifica el riesgo combinando la gravedad del efecto, la frecuencia de la causa y la capacidad de detectar la falla antes de que ocurra."
+      },
+      {
+        "text": "El monto exacto en dólares que la empresa ganará tras realizar la exportación.",
+        "isCorrect": false,
+        "rationale": "El AMFE mide confiabilidad y prevención de fallas, no los estados de ingresos o utilidades netas."
+      },
+      {
+        "text": "El tiempo en días que tarda el contenedor en viajar desde el puerto de carga al destino.",
+        "isCorrect": false,
+        "rationale": "La duración del tránsito es un indicador logístico, no la métrica de prioridad del método AMFE."
+      },
+      {
+        "text": "La cantidad de personal requerido para operar una línea de ensamblaje.",
+        "isCorrect": false,
+        "rationale": "La asignación de operarios es un cálculo de capacidad operativa de mano de obra."
+      },
+      {
+        "text": "La tasa impositiva arancelaria aplicable a un producto químico importado.",
+        "isCorrect": false,
+        "rationale": "Los impuestos arancelarios los determina la autoridad tributaria, no el modelo de ingeniería de fallas AMFE."
+      }
+    ],
+    "hint": "Es un cálculo cuantitativo que resulta de multiplicar tres factores: Severidad x Ocurrencia x Detección.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué característica define principalmente a una evaluación cuantitativa de riesgos en comparación con una cualitativa?",
+    "opciones": [
+      {
+        "text": "Utiliza datos numéricos, métricas financieras y modelos estadísticos fiables para medir pérdidas y probabilidades.",
+        "isCorrect": true,
+        "rationale": "El enfoque cuantitativo asigna valores numéricos precisos y montos monetarios basados en registros históricos y cálculos estadísticos."
+      },
+      {
+        "text": "Se basa únicamente en opiniones intuitivas y descripciones verbales como 'alto', 'medio' o 'bajo'.",
+        "isCorrect": false,
+        "rationale": "El uso de escalas descriptivas verbales sin datos numéricos precisos caracteriza a la evaluación cualitativa."
+      },
+      {
+        "text": "No requiere recopilar información ni revisar antecedentes históricos de la empresa.",
+        "isCorrect": false,
+        "rationale": "La evaluación cuantitativa exige indispensablemente bases de datos históricas y confiables para efectuar sus cálculos."
+      },
+      {
+        "text": "Se realiza de forma exclusiva cuando ocurre un desastre de origen natural.",
+        "isCorrect": false,
+        "rationale": "Los métodos cuantitativos se aplican de manera planificada y rutinaria para cualquier tipo de riesgo operacional o financiero."
+      },
+      {
+        "text": "Evalúa únicamente el estado de ánimo y la motivación del personal operativo.",
+        "isCorrect": false,
+        "rationale": "Los factores de clima laboral se analizan con herramientas cualitativas o de gestión de talento humano."
+      }
+    ],
+    "hint": "Busca la opción centrada en el rigor numérico, datos estadísticos y valores financieros asignados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial de un plan de respuesta a emergencias en una instalación empresarial o industrial?",
+    "opciones": [
+      {
+        "text": "Proteger la vida humana, mitigar los daños materiales y facilitar la continuidad o rápida recuperación de las operaciones.",
+        "isCorrect": true,
+        "rationale": "El propósito central prioritario de todo plan de emergencia es salvaguardar la integridad de las personas y reanudar las funciones críticas rápidamente."
+      },
+      {
+        "text": "Incrementar las ventas de la empresa durante situaciones de crisis ambiental.",
+        "isCorrect": false,
+        "rationale": "Un plan de respuesta busca contener el impacto del siniestro y proteger vidas, no generar estrategia comercial de ventas."
+      },
+      {
+        "text": "Reducir los salarios del personal afectado para ahorrar presupuesto.",
+        "isCorrect": false,
+        "rationale": "Las medidas ante emergencias responden a la protección de las personas y cumplimiento normativo, no a recortes salariales."
+      },
+      {
+        "text": "Reemplazar los contratos comerciales firmados con los compradores extranjeros.",
+        "isCorrect": false,
+        "rationale": "Los contratos de compraventa se rigen por el derecho mercantil, mientras que el plan de emergencia actúa operacionalmente durante el evento."
+      },
+      {
+        "text": "Modificar de forma unilateral las leyes laborales del país donde opera la planta.",
+        "isCorrect": false,
+        "rationale": "Los planes internos deben acatarse dentro del marco regulatorio legal vigente y no tienen potestad legislativa."
+      }
+    ],
+    "hint": "La prioridad absoluta de este tipo de planes empieza siempre por la vida y salud de los trabajadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la etapa inicial fundamental para elaborar un plan de contingencia según la metodología estándar?",
+    "opciones": [
+      {
+        "text": "Identificar y confeccionar una lista de los riesgos potenciales que podrían afectar la operación.",
+        "isCorrect": true,
+        "rationale": "No se pueden diseñar medidas de control o prevención sin haber mapeado e identificado primero las amenazas posibles."
+      },
+      {
+        "text": "Aprobar el presupuesto financiero final en la junta directiva sin análisis previo.",
+        "isCorrect": false,
+        "rationale": "La junta directiva valida y aprueba el presupuesto una vez que el plan de contingencia ha sido completamente formulado."
+      },
+      {
+        "text": "Comprar equipos informáticos y sistemas de simulación de alto costo.",
+        "isCorrect": false,
+        "rationale": "La adquisición de tecnología o recursos se determina según las necesidades derivadas del análisis previo de riesgos."
+      },
+      {
+        "text": "Suspender inmediatamente las actividades comerciales de la organización.",
+        "isCorrect": false,
+        "rationale": "El plan de contingencia busca precisamente evitar la suspensión injustificada de las operaciones."
+      },
+      {
+        "text": "Contratar nuevo personal administrativo para reemplazar al comité existente.",
+        "isCorrect": false,
+        "rationale": "La reorganización de personal no es el paso metodológico inicial; primero se requiere diagnosticar los riesgos."
+      }
+    ],
+    "hint": "Es el paso cero donde se responde a la pregunta: '¿A qué amenazas o peligros nos enfrentamos?'",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Al estructurar el plan de acción dentro de un plan de contingencia, ¿cuáles de los siguientes componentes deben incluirse de forma indispensable?",
+    "opciones": [
+      {
+        "text": "Objetivos claros que definan la meta y acoten los tiempos de respuesta.",
+        "isCorrect": true,
+        "rationale": "Los objetivos fijan los límites operativos y los tiempos máximos permitidos para contener el evento."
+      },
+      {
+        "text": "Asignación de responsables concretos e individuos encargados de ejecutar las tareas.",
+        "isCorrect": true,
+        "rationale": "Cada acción debe tener un líder definido para evitar confusiones en momentos de alta tensión."
+      },
+      {
+        "text": "Indicadores de desempeño (KPIs) para evaluar la eficacia de las medidas aplicadas.",
+        "isCorrect": true,
+        "rationale": "Las métricas permiten medir si la respuesta fue oportuna y si logró reducir el impacto previsto."
+      },
+      {
+        "text": "Estrategias y protocolos de comunicación interna y externa.",
+        "isCorrect": true,
+        "rationale": "Las pautas de comunicación garantizan información transparente y fluida entre trabajadores, clientes y autoridades."
+      },
+      {
+        "text": "Ocultamiento de información sobre los incidentes a las autoridades reguladoras.",
+        "isCorrect": false,
+        "rationale": "Ocultar información viola el marco ético y regulatorio; la comunicación transparente es un principio clave."
+      }
+    ],
+    "hint": "Piensa en elementos que respondan a: qué hacer, quién lo hace, cómo medirlo y cómo comunicarlo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera contribuye la herramienta Big Data a la gestión de riesgos en la cadena de suministro internacional?",
+    "opciones": [
+      {
+        "text": "Permite procesar grandes volúmenes de datos en tiempo real para anticipar demandas, detectar anomalías y alimentar modelos predictivos.",
+        "isCorrect": true,
+        "rationale": "Big Data consolida información masiva de clientes, tráfico y clima para predecir interrupciones y optimizar la toma de decisiones."
+      },
+      {
+        "text": "Garantiza la eliminación automática de las inspecciones físicas en las aduanas de destino.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones aduaneras son potestad legal de las autoridades tributarias y no se eliminan por usar software interno."
+      },
+      {
+        "text": "Asegura que el costo del transporte marítimo se mantenga fijo sin importar las crisis mundiales.",
+        "isCorrect": false,
+        "rationale": "Las tarifas flete dependen de la oferta y demanda global del mercado naviero, no de la analítica interna de datos."
+      },
+      {
+        "text": "Sustituye la necesidad de contar con una junta directiva dentro de la empresa.",
+        "isCorrect": false,
+        "rationale": "Big Data es una herramienta tecnológica de apoyo analítico que requiere la supervisión y dirección humana estratégica."
+      },
+      {
+        "text": "Elimina el pago de impuestos arancelarios en las operaciones de exportación.",
+        "isCorrect": false,
+        "rationale": "El procesamiento de datos no exime a las empresas del cumplimiento de sus obligaciones tributarias."
+      }
+    ],
+    "hint": "Su fuerte radica en el procesamiento masivo de información en tiempo real para predecir tendencias e interrupciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la ciencia de datos aplicada a la gestión de riesgos, ¿cuál es el propósito del Análisis Exploratorio de Datos (EDA)?",
+    "opciones": [
+      {
+        "text": "Comprender la estructura de los datos, revelar patrones subyacentes y detectar anomalías o valores atípicos antes de crear modelos complejos.",
+        "isCorrect": true,
+        "rationale": "El EDA sirve como fase preliminar indispensable para limpiar los datos, entender sus distribuciones e identificar anomalías que distorsionen los resultados."
+      },
+      {
+        "text": "Aprobar los presupuestos financieros anuales presentados a los bancos comerciales.",
+        "isCorrect": false,
+        "rationale": "La aprobación de presupuestos es una función de la gerencia financiera y el directorio, no un método de exploración estadística."
+      },
+      {
+        "text": "Reemplazar los entrenamientos prácticos del personal de seguridad ocupacional.",
+        "isCorrect": false,
+        "rationale": "Los análisis de datos no sustituyen la capacitación física en protocolos de emergencia de los empleados."
+      },
+      {
+        "text": "Reducir la cantidad de proveedores contratados a un solo fabricante local.",
+        "isCorrect": false,
+        "rationale": "La selección de proveedores responde a estrategias de abastecimiento, no a la fase inicial de análisis exploratorio de datos."
+      },
+      {
+        "text": "Generar automáticamente contratos legales de compraventa internacional.",
+        "isCorrect": false,
+        "rationale": "La redacción de contratos es una labor del área jurídica y legal de la organización."
+      }
+    ],
+    "hint": "Es la primera etapa donde el analista de datos 'explora' y 'limpia' la información para detectar patrones y errores atípicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la evaluación financiera de proyectos, ¿qué calcula la métrica del Valor en Riesgo (VaR)?",
+    "opciones": [
+      {
+        "text": "La máxima pérdida potencial que podría sufrir una inversión en un periodo determinado bajo condiciones normales y con un nivel de confianza específico.",
+        "isCorrect": true,
+        "rationale": "El VaR estima estadísticamente el límite máximo de pérdida económica en un horizonte de tiempo y nivel de confianza determinado (ej. 95%)."
+      },
+      {
+        "text": "El promedio de ventas diarias que obtendrá un restaurante en su primer mes.",
+        "isCorrect": false,
+        "rationale": "Las estimaciones de ventas promedio representan ingresos operacionales, no el cálculo de pérdida máxima del VaR."
+      },
+      {
+        "text": "El número total de horas que tardará un barco en cruzar el océano.",
+        "isCorrect": false,
+        "rationale": "El tiempo de navegación forma parte del indicador de rendimiento logístico (transit time)."
+      },
+      {
+        "text": "El monto total de aranceles exonerados por tratados comerciales bilaterales.",
+        "isCorrect": false,
+        "rationale": "La exoneración arancelaria es un beneficio fiscal, no una métrica estadística de pérdida financiera riesgosa."
+      },
+      {
+        "text": "La cantidad de insumos defectuosos que serán devueltos a la fábrica.",
+        "isCorrect": false,
+        "rationale": "El recuento de insumos defectuosos es una métrica de control de calidad de producción."
+      }
+    ],
+    "hint": "Busca la métrica que expresa una 'pérdida financiera máxima proyectada' bajo un porcentaje de confianza (por ejemplo, 95%).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta analítica gráfica utiliza 'nodos de decisión' y 'ramas de resultados' para examinar cursos de acción alternativos en un proyecto?",
+    "opciones": [
+      {
+        "text": "Árboles de decisión.",
+        "isCorrect": true,
+        "rationale": "El árbol de decisión diagrama secuencialmente las alternativas (nodos) y sus posibles consecuencias o riesgos (ramas) facilitando la elección optativa."
+      },
+      {
+        "text": "Análisis PESTEL.",
+        "isCorrect": false,
+        "rationale": "PESTEL es un marco macroambiental que evalúa seis entornos externos, sin emplear diagramación por nodos y ramas cuantitativas."
+      },
+      {
+        "text": "Hoja de ruta aduanera.",
+        "isCorrect": false,
+        "rationale": "Una hoja de ruta lista la secuencia cronológica de trámites de despacho de mercancías."
+      },
+      {
+        "text": "Matriz de correlación lineal.",
+        "isCorrect": false,
+        "rationale": "La matriz de correlación cuantifica numéricamente la fuerza de relación entre variables, sin graficar nodos ni elecciones de proyectos."
+      },
+      {
+        "text": "Histograma de frecuencias simples.",
+        "isCorrect": false,
+        "rationale": "El histograma muestra la distribución gráfica de la frecuencia de un conjunto de datos numéricos continuos."
+      }
+    ],
+    "hint": "Su estructura visual se parece a un vegetal que se bifurca en múltiples extensiones según las opciones elegidas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la etapa de 'monitoreo continuo y revisión' dentro del ciclo de gestión de riesgos?",
+    "opciones": [
+      {
+        "text": "En el seguimiento permanente a indicadores y revisiones periódicas para detectar desviaciones, evaluar la efectividad de controles y corregir incidencias a tiempo.",
+        "isCorrect": true,
+        "rationale": "El monitoreo asegura que el perfil de riesgo se mantenga actualizado y que las respuestas aplicadas sigan siendo vigentes y efectivas durante la operación."
+      },
+      {
+        "text": "En una inspección única que se realiza exclusivamente al momento de constituir legalmente la empresa.",
+        "isCorrect": false,
+        "rationale": "El monitoreo debe ser constante y continuo durante todo el ciclo de vida de la organización, no una actividad de una sola vez."
+      },
+      {
+        "text": "En el cálculo manual de tributos arancelarios al cerrar el ejercicio contable del año.",
+        "isCorrect": false,
+        "rationale": "La liquidación de tributos es una tarea contable fiscal, no el proceso integral de revisión de gestión de riesgos."
+      },
+      {
+        "text": "En la eliminación definitiva de todos los comités de seguridad y salud de la planta.",
+        "isCorrect": false,
+        "rationale": "Los comités de seguridad forman parte activa del equipo que ejecuta el monitoreo y seguimiento."
+      },
+      {
+        "text": "En la suspensión de las auditorías internas hasta que ocurra un siniestro grave.",
+        "isCorrect": false,
+        "rationale": "El monitoreo continuo busca precisamente actuar de manera proactiva para prevenir los siniestros antes de que sucedan."
+      }
+    ],
+    "hint": "Enfatiza el carácter permanente y proactivo de medir indicadores periódicamente para ajustar controles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la evaluación estratégica de proveedores, ¿qué se analiza con el criterio de 'estabilidad financiera y solvencia'?",
+    "opciones": [
+      {
+        "text": "La salud y robustez económica del proveedor para garantizar que pueda mantener sus operaciones sin interrupciones por insolvencia a largo plazo.",
+        "isCorrect": true,
+        "rationale": "Evaluar la solvencia evita el riesgo de que un proveedor quiebre repentinamente y deje a la empresa sin insumos críticos para su producción."
+      },
+      {
+        "text": "La velocidad con la que el proveedor cambia de diseño de empaque cada semana.",
+        "isCorrect": false,
+        "rationale": "Los cambios de empaque corresponden a diseño o marketing de producto, no a la solidez financiera."
+      },
+      {
+        "text": "El número de seguidores que el proveedor posee en sus redes sociales comerciales.",
+        "isCorrect": false,
+        "rationale": "La presencia en redes sociales representa alcance de difusión, pero no demuestra liquidez económica real ni solvencia."
+      },
+      {
+        "text": "El color de la pintura exterior utilizada en los almacenes del proveedor.",
+        "isCorrect": false,
+        "rationale": "El aspecto estético del edificio es totalmente irrelevante para medir la capacidad financiera del aliado comercial."
+      },
+      {
+        "text": "La distancia exacta en kilómetros desde la fábrica del proveedor hasta el centro de la ciudad.",
+        "isCorrect": false,
+        "rationale": "La ubicación geográfica se analiza dentro del factor de riesgos logísticos y de transporte."
+      }
+    ],
+    "hint": "Piensa en el análisis de estados financieros y liquidez que asegura que el proveedor no quebrará.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes normas ISO ofrecen directrices de gestión reconocidas que respaldan la evaluación y auditoría integral de proveedores?",
+    "opciones": [
+      {
+        "text": "ISO 9001 (Sistemas de Gestión de la Calidad).",
+        "isCorrect": true,
+        "rationale": "ISO 9001 establece requisitos para evaluar y controlar a proveedores externos garantizando la consistencia del producto."
+      },
+      {
+        "text": "ISO 14001 (Sistemas de Gestión Ambiental).",
+        "isCorrect": true,
+        "rationale": "ISO 14001 aporta criterios para verificar que los proveedores cumplan con estándares de sostenibilidad y cuidado ambiental."
+      },
+      {
+        "text": "ISO 45001 (Sistemas de Gestión de la Seguridad y Salud en el Trabajo).",
+        "isCorrect": true,
+        "rationale": "ISO 45001 valida que los proveedores mantengan condiciones seguras de trabajo para sus empleados."
+      },
+      {
+        "text": "ISO 26000 (Guía de Responsabilidad Social).",
+        "isCorrect": true,
+        "rationale": "ISO 26000 orienta la evaluación de prácticas éticas, derechos laborales y comportamiento socialmente responsable de los proveedores."
+      },
+      {
+        "text": "ISO 0000 (Reglamento Universal de Tarifas Marítimas).",
+        "isCorrect": false,
+        "rationale": "Dicha denominación es inexistente; las tarifas de transporte las fija el mercado naviero."
+      }
+    ],
+    "hint": "Selecciona las normas internacionales estandarizadas orientadas a calidad, medio ambiente, seguridad laboral y responsabilidad social.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la utilidad de aplicar matrices de ponderación (como la matriz de evaluación de proveedores o la matriz de Kraljic)?",
+    "opciones": [
+      {
+        "text": "Asignar pesos cuantitativos a distintos criterios para priorizar y clasificar proveedores según el impacto del suministro y la complejidad del mercado.",
+        "isCorrect": true,
+        "rationale": "Estas matrices permiten comparar objetivamente a los proveedores en función de su importancia crítica y el riesgo de su mercado de origen."
+      },
+      {
+        "text": "Ocultar las facturas de compra a los inspectores de la autoridad tributaria.",
+        "isCorrect": false,
+        "rationale": "Las matrices son herramientas de gestión estratégica interna, no instrumentos para evadir controles fiscales."
+      },
+      {
+        "text": "Eliminar la necesidad de pagar fletes marítimos a las líneas navieras.",
+        "isCorrect": false,
+        "rationale": "Los costos de transporte se contratan con las navieras; la matriz sirve para calificar el desempeño comercial."
+      },
+      {
+        "text": "Sustituir las firmas de los contratos legales por acuerdos verbales informalmente establecidos.",
+        "isCorrect": false,
+        "rationale": "Las herramientas de evaluación fortalecen el análisis de selección, pero no reemplazan los instrumentos legales formales."
+      },
+      {
+        "text": "Aumentar de manera artificial el costo de la materia prima en los libros contables.",
+        "isCorrect": false,
+        "rationale": "Las herramientas de gestión buscan la transparencia y optimización de costos, no la alteración indebida de libros contables."
+      }
+    ],
+    "hint": "Asocialas con herramientas que ordenan a los proveedores asignando puntajes y ponderaciones numéricas según su importancia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con las buenas prácticas de gestión de proyectos para el proceso de 'Monitorear los Riesgos', ¿cuál de las siguientes opciones corresponde a una herramienta o técnica clave de este proceso?",
+    "opciones": [
+      {
+        "text": "Auditorías de riesgo y análisis de reserva.",
+        "isCorrect": true,
+        "rationale": "Las auditorías evalúan la efectividad de la gestión de riesgos y el análisis de reserva examina si los fondos para contingencias siguen siendo suficientes."
+      },
+      {
+        "text": "Confiscación de mercancía en fronteras aduaneras.",
+        "isCorrect": false,
+        "rationale": "El decomiso es una sanción gubernamental, no una técnica interna de gestión de proyectos."
+      },
+      {
+        "text": "Publicación de anuncios comerciales en radio y televisión.",
+        "isCorrect": false,
+        "rationale": "La publicidad pertenece a las estrategias del departamento de marketing y ventas."
+      },
+      {
+        "text": "Reducción por ley del salario mínimo de los empleados.",
+        "isCorrect": false,
+        "rationale": "El salario mínimo lo determina la política gubernamental estatal, fuera del control directo del proyecto."
+      },
+      {
+        "text": "Modificación de las tarifas tributarias arancelarias bilaterales.",
+        "isCorrect": false,
+        "rationale": "La fijación de impuestos comerciales es atribución exclusiva del poder ejecutivo y las autoridades aduaneras."
+      }
+    ],
+    "hint": "Incluye revisiones sistemáticas de los controles y el examen del saldo disponible en los fondos de contingencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera beneficia a una empresa el desarrollo de alianzas estratégicas de largo plazo orientadas a la 'coinnovación' con sus proveedores?",
+    "opciones": [
+      {
+        "text": "Permite investigar y desarrollar conjuntamente nuevos productos, perfeccionar procesos y crear soluciones con mayor valor agregado.",
+        "isCorrect": true,
+        "rationale": "La coinnovación aprovecha los conocimientos compartidos del proveedor y el comprador para generar ventaja competitiva y valor mutuo."
+      },
+      {
+        "text": "Garantiza que la empresa nunca más tenga que pagar impuestos ni aranceles de importación.",
+        "isCorrect": false,
+        "rationale": "La colaboración privada no modifica las leyes tributarias exigibles por los gobiernos."
+      },
+      {
+        "text": "Evita la obligación de realizar capacitaciones al personal que opera la maquinaria.",
+        "isCorrect": false,
+        "rationale": "La innovación exige, por el contrario, una formación continua para manejar nuevos sistemas y procesos."
+      },
+      {
+        "text": "Asegura la exención total de auditorías contables por parte del estado.",
+        "isCorrect": false,
+        "rationale": "Las obligaciones contables y fiscales son independientes de las alianzas de innovación entre empresas privadas."
+      },
+      {
+        "text": "Elimina la necesidad de revisar los estándares de calidad de las mercancías recibidas.",
+        "isCorrect": false,
+        "rationale": "Incluso en alianzas estrechas, se mantienen los controles periódicos de calidad para garantizar el cumplimiento normativo."
+      }
+    ],
+    "hint": "Observa el prefijo 'co-' que implica colaborar juntos para inventar o mejorar productos y procesos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de los riesgos financieros durante la importación y exportación, ¿cómo se define técnicamente un 'costo oculto' según lo expuesto en el curso?",
+    "opciones": [
+      {
+        "text": "Sobrecostos derivados de fluctuaciones de divisas en cartas de crédito internacionales.",
+        "isCorrect": false,
+        "rationale": "Las fluctuaciones en el tipo de cambio corresponden al riesgo cambiario o de divisas, los cuales están identificados en la transacción financiera."
+      },
+      {
+        "text": "Aranceles, impuestos como el IGV y desgloses logísticos no previstos en la valoración inicial del producto.",
+        "isCorrect": true,
+        "rationale": "Los costos ocultos representan tarifas y cargos no contemplados inicialmente en la compra simple, como los desgloses arancelarios y tributos aduaneros."
+      },
+      {
+        "text": "Intereses moratorios aplicados por entidades bancarias por falta de liquidez del importador.",
+        "isCorrect": false,
+        "rationale": "Los intereses moratorios corresponden al riesgo de crédito o liquidez bancaria, no a costos ocultos del desglose logístico o arancelario."
+      },
+      {
+        "text": "Gastos operativos directos derivados del flete marítimo o aéreo fijados por la naviera.",
+        "isCorrect": false,
+        "rationale": "El flete pactado con la naviera forma parte de los costos directos de transporte conocidos al momento de contratar el servicio."
+      },
+      {
+        "text": "Sanciones pecuniarias impuestas por aduanas debido al decomiso de mercancía restringida.",
+        "isCorrect": false,
+        "rationale": "Las sanciones por infracciones aduaneras constituyen penalizaciones legales directas por incumplimiento normativo y no costos ocultos del producto."
+      }
+    ],
+    "hint": "Considere las tarifas e impuestos implícitos en el precio final de venta que no siempre son visibles para el comprador común.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes situaciones constituyen directamente un riesgo de carácter aduanero en el comercio internacional?",
+    "opciones": [
+      {
+        "text": "Errores o inconsistencias en la codificación y clasificación arancelaria del lote de productos.",
+        "isCorrect": true,
+        "rationale": "La clasificación arancelaria incorrecta genera sanciones y retrasos en el despacho controlado por la administración tributaria aduanera."
+      },
+      {
+        "text": "Discrepancias entre la normativa fiscal aduanera del país exportador y la del país importador.",
+        "isCorrect": true,
+        "rationale": "Las diferencias legislativas tributarias entre naciones provocan quiebres en el trámite de nacionalización y levante de la mercancía."
+      },
+      {
+        "text": "Decomiso de la mercadería por infracciones regulatorias sobre sustancias o componentes no permitidos.",
+        "isCorrect": true,
+        "rationale": "El decomiso por incautación aduanera ocurre al incumplir los reglamentos sanitarios o de seguridad química fijados por la aduana."
+      },
+      {
+        "text": "Fluctuaciones imprevistas en la tasa de cambio de divisas durante la transferencia bancaria.",
+        "isCorrect": false,
+        "rationale": "La variación en las tasas de cambio de divisas corresponde a un riesgo financiero, no a un trámite ni control aduanero."
+      },
+      {
+        "text": "Retención del despacho por falta de certificaciones o inspecciones físicas obligatorias en frontera.",
+        "isCorrect": true,
+        "rationale": "Los controles fiscos y la falta de documentación fiscal en los puestos fronterizos representan un riesgo directo de fiscalización aduanera."
+      }
+    ],
+    "hint": "Enfóquese en los problemas derivados de las leyes tributarias, controles en frontera y fiscalización de mercancías.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al realizar un análisis PESTEL para planificar la importación y exportación, ¿qué aspecto analiza concretamente la dimensión sociocultural?",
+    "opciones": [
+      {
+        "text": "La normativa laboral interna y los acuerdos internacionales sobre propiedad intelectual.",
+        "isCorrect": false,
+        "rationale": "Las normativas laborales e intelectuales corresponden a la dimensión legal del análisis PESTEL."
+      },
+      {
+        "text": "Las características sociales y culturales del país de destino que influyen en la demanda y aceptación de los productos.",
+        "isCorrect": true,
+        "rationale": "La dimensión sociocultural evalúa los patrones de consumo, tendencias, valores y hábitos de los ciudadanos que determinan la aceptación comercial."
+      },
+      {
+        "text": "Las tasas de inflación acumulada y la disponibilidad de divisas internacionales.",
+        "isCorrect": false,
+        "rationale": "La inflación y la moneda extranjera forman parte de los factores macroeconómicos de la dimensión económica."
+      },
+      {
+        "text": "Las regulaciones medioambientales sobre emisiones de carbono y certificaciones ecológicas.",
+        "isCorrect": false,
+        "rationale": "Las regulaciones sobre el medio ambiente se estudian en el factor ecológico o ambiental de la matriz PESTEL."
+      },
+      {
+        "text": "El nivel de infraestructura portuaria y la velocidad de adopción de tecnologías digitales.",
+        "isCorrect": false,
+        "rationale": "La infraestructura tecnológica y digitalización corresponden a la dimensión tecnológica del modelo."
+      }
+    ],
+    "hint": "Piense en las variables del entorno humano y social que afectan los hábitos de compra del cliente final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del análisis FODA empresarial aplicado a la logística internacional, ¿cuáles de los siguientes elementos corresponden a factores externos que condicionan las operaciones?",
+    "opciones": [
+      {
+        "text": "Cambios repentinos en las políticas arancelarias o bloqueos comerciales internacionales.",
+        "isCorrect": true,
+        "rationale": "Las políticas arancelarias de terceros países y bloqueos constituyen amenazas externas fuera del control directo de la empresa."
+      },
+      {
+        "text": "Convenios y tratados comerciales vigentes que facilitan la reducción de impuestos aduaneros.",
+        "isCorrect": true,
+        "rationale": "Los acuerdos bilaterales representan oportunidades externas favorables para expandir el comercio con ventajas tributarias."
+      },
+      {
+        "text": "Carencia de certificaciones internacionales de calidad en los procesos de fabricación interna.",
+        "isCorrect": false,
+        "rationale": "La falta de certificaciones propias es un factor interno que se clasifica como una debilidad organizacional."
+      },
+      {
+        "text": "Flotas de transporte propio e infraestructura logística consolidada.",
+        "isCorrect": false,
+        "rationale": "Disponer de infraestructura logística propia es un atributo positivo interno de la empresa, considerado como una fortaleza."
+      },
+      {
+        "text": "Inestabilidad sociopolítica o delincuencia en las rutas de transporte del territorio de destino.",
+        "isCorrect": true,
+        "rationale": "La inseguridad sociopolítica en el entorno internacional o local configura una amenaza externa para la continuidad operativa."
+      }
+    ],
+    "hint": "Diferencie entre las condiciones del entorno macro (amenazas y oportunidades) y los recursos propios de la firma (fortalezas y debilidades).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la técnica del mapeo de procesos para operaciones de comercio exterior, ¿cuál es la función principal de los 'puntos de control'?",
+    "opciones": [
+      {
+        "text": "Establecer el desglose de precios unitarios de la materia prima en origen.",
+        "isCorrect": false,
+        "rationale": "El desglose de precios unitarios corresponde al análisis financiero y de costos de producción, no al mapeo de control de flujo."
+      },
+      {
+        "text": "Identificar las etapas propensas a fallas o demoras para garantizar que el producto llegue al cliente conforme a lo proyectado.",
+        "isCorrect": true,
+        "rationale": "Los puntos de control se ubican en el mapa de procesos para detectar cuellos de botella, errores y retrasos operativos antes de la entrega final."
+      },
+      {
+        "text": "Definir la arquitectura tecnológica de almacenamiento en la nube de la empresa.",
+        "isCorrect": false,
+        "rationale": "La arquitectura tecnológica es un componente de soporte de TI, no la función operativa de un punto de control de proceso."
+      },
+      {
+        "text": "Determinar la vigencia legal de los contratos y tratados internacionales firmados por el Estado.",
+        "isCorrect": false,
+        "rationale": "La verificación de tratados bilaterales es un procedimiento de auditoría legal y no un punto de control del mapa de procesos."
+      },
+      {
+        "text": "Asignar los porcentajes fijos de impuestos en las partidas arancelarias.",
+        "isCorrect": false,
+        "rationale": "La asignación de tributos corresponde a la legislación fiscal aduanera y no a los hitos de control del flujo de trabajo."
+      }
+    ],
+    "hint": "Identifique el elemento que sirve para detectar dónde ocurren retrasos o desviaciones durante la ejecución del servicio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De las siguientes situaciones, ¿cuál representa un riesgo de carácter estrictamente logístico en el proceso de importación y exportación?",
+    "opciones": [
+      {
+        "text": "Modificaciones legislativas sobre las tasas del Impuesto General a las Ventas (IGV).",
+        "isCorrect": false,
+        "rationale": "Las modificaciones tributarias del IGV representan un riesgo financiero o legal, no de la cadena de transporte."
+      },
+      {
+        "text": "Robos, extravíos de carga, congestión en puertos marítimos y manipulación inadecuada de mercancía frágil.",
+        "isCorrect": true,
+        "rationale": "Los problemas en el transporte, almacenamiento, demoras portuarias y daño físico de productos pertenecen a la operatividad logística."
+      },
+      {
+        "text": "Cambios de gobierno que alteren las relaciones diplomáticas bilaterales.",
+        "isCorrect": false,
+        "rationale": "Los giros diplomáticos por recambio de autoridades estatales constituyen riesgos de tipo político."
+      },
+      {
+        "text": "Disputas contractuales sobre el derecho de uso de patentes y registros de marca.",
+        "isCorrect": false,
+        "rationale": "Los litigios sobre propiedad intelectual se enmarcan dentro del riesgo legal o jurídico."
+      },
+      {
+        "text": "Incrementos inesperados en la tasa de interés de la banca comercial para préstamos a corto plazo.",
+        "isCorrect": false,
+        "rationale": "El incremento en tasas de interés bancarias es un factor del riesgo financiero o bancario."
+      }
+    ],
+    "hint": "Busque la alternativa relacionada con el movimiento físico, conservación y flujo de los productos en la cadena de suministro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre el concepto de riesgo inherente y el de riesgo residual en la evaluación de operaciones?",
+    "opciones": [
+      {
+        "text": "El riesgo inherente es de carácter cualitativo, mientras que el riesgo residual solo se mide de forma cuantitativa.",
+        "isCorrect": false,
+        "rationale": "Ambos tipos de riesgo pueden evaluarse utilizando metodologías cualitativas o cuantitativas."
+      },
+      {
+        "text": "El riesgo inherente se origina por factores externos, y el residual depende únicamente de fallas humanas internas.",
+        "isCorrect": false,
+        "rationale": "El origen externo o interno no define la distinción técnica entre riesgo inherente y residual."
+      },
+      {
+        "text": "El riesgo inherente es la vulnerabilidad propia de la actividad sin controles, mientras que el residual es el saldo que persiste tras aplicar medidas de mitigación.",
+        "isCorrect": true,
+        "rationale": "El riesgo inherente se presenta al inicio sin barreras, mientras que el residual es el riesgo que permanece a pesar de implementar todos los controles."
+      },
+      {
+        "text": "El riesgo inherente se calcula mediante software, mientras que el residual se obtiene por encuestas.",
+        "isCorrect": false,
+        "rationale": "Las herramientas de medición no definen la naturaleza teórica de ninguno de los dos estados del riesgo."
+      },
+      {
+        "text": "El riesgo inherente atañe a pérdidas financieras, mientras que el residual atañe exclusivamente a siniestros físicos.",
+        "isCorrect": false,
+        "rationale": "Tanto el riesgo inherente como el residual aplican a cualquier ámbito (financiero, físico, legal o de seguridad)."
+      }
+    ],
+    "hint": "Considere la presencia o ausencia de medidas de control e intervención previa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la evaluación de riesgos, ¿qué elemento metodológico caracteriza a un enfoque cuantitativo sobre uno cualitativo?",
+    "opciones": [
+      {
+        "text": "La descripción narrativa de escenarios basada en juicios de valor de expertos.",
+        "isCorrect": false,
+        "rationale": "Las descripciones subjetivas basadas en opiniones corresponden a la evaluación cualitativa."
+      },
+      {
+        "text": "El uso exclusivo de mapas de calor visuales con tres colores genéricos.",
+        "isCorrect": false,
+        "rationale": "Los mapas de colores simplificados se emplean con frecuencia en análisis cualitativos preliminares."
+      },
+      {
+        "text": "El empleo de métricas numéricas, porcentajes de probabilidad estadística y valores monetarios de impacto.",
+        "isCorrect": true,
+        "rationale": "El análisis cuantitativo utiliza datos históricos, porcentajes de ocurrencia y cifras financieras para calcular matemáticamente el riesgo."
+      },
+      {
+        "text": "La categorización de los riesgos en niveles verbales como bajo, medio y alto.",
+        "isCorrect": false,
+        "rationale": "El uso de adjetivos o categorías verbales forma parte de las escalas de medición cualitativa."
+      },
+      {
+        "text": "La identificación informal de amenazas en reuniones de comités operativos.",
+        "isCorrect": false,
+        "rationale": "Las dinámicas informales de grupo corresponden a la fase cualitativa de tormenta de ideas o identificación."
+      }
+    ],
+    "hint": "Busque la opción basada en datos numéricos, estadísticas y estimaciones monetarias concretas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con la pirámide de jerarquía de controles de riesgo, ¿cuáles de las siguientes medidas corresponden a los niveles de mayor efectividad técnica?",
+    "opciones": [
+      {
+        "text": "Eliminación completa del peligro en la fuente de origen.",
+        "isCorrect": true,
+        "rationale": "La eliminación del peligro se ubica en la cúspide de la pirámide por ser la medida más efectiva para erradicar el riesgo."
+      },
+      {
+        "text": "Sustitución del proceso o material peligroso por una alternativa de menor riesgo.",
+        "isCorrect": true,
+        "rationale": "La sustitución es el segundo nivel más efectivo al reemplazar el riesgo alto por uno más manejable."
+      },
+      {
+        "text": "Uso obligatorio de equipos de protección personal (EPP) por parte del trabajador.",
+        "isCorrect": false,
+        "rationale": "El EPP es la última barrera y la medida menos efectiva en la jerarquía de controles."
+      },
+      {
+        "text": "Aplicación de controles de ingeniería o rediseño técnico en las instalaciones.",
+        "isCorrect": true,
+        "rationale": "Los controles de ingeniería aíslan el peligro mediante infraestructura y son altamente efectivos."
+      },
+      {
+        "text": "Emisión de manuales administrativos, señalización y capacitaciones de personal.",
+        "isCorrect": false,
+        "rationale": "Los controles administrativos se consideran de baja efectividad al depender del comportamiento humano."
+      }
+    ],
+    "hint": "Identifique las intervenciones que modifican la naturaleza o la estructura del peligro antes de recurrir a conductas o protecciones individuales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la metodología AMFE (Análisis del Modo y Efecto de Falla), ¿cómo se obtiene el Número de Prioridad de Riesgo (NPR / RPN)?",
+    "opciones": [
+      {
+        "text": "Sumando las pérdidas financieras previstas en caso de fallo crítico.",
+        "isCorrect": false,
+        "rationale": "El RPN no es una suma monetaria, sino un índice escalar multivariable."
+      },
+      {
+        "text": "Dividiendo el costo total de los controles entre el número de procesos defectuosos.",
+        "isCorrect": false,
+        "rationale": "Esta división corresponde a un indicador de eficiencia de costos, no al cálculo del RPN."
+      },
+      {
+        "text": "Multiplicando las puntuaciones numéricas de la Severidad, la Ocurrencia y la Detección de la falla.",
+        "isCorrect": true,
+        "rationale": "El RPN se calcula formalmente mediante el producto escalar: Severidad $\\times$ Ocurrencia $\\times$ Detección."
+      },
+      {
+        "text": "Restando los riesgos residuales a los riesgos inherentes de la planta.",
+        "isCorrect": false,
+        "rationale": "La diferencia matemática entre riesgos no constituye la fórmula del modelo AMFE."
+      },
+      {
+        "text": "Promediando los años de antigüedad de la maquinaria utilizada en el proceso.",
+        "isCorrect": false,
+        "rationale": "La antigüedad del equipo es solo un insumo que puede influir en la ocurrencia, no la fórmula global."
+      }
+    ],
+    "hint": "Recuerde los tres factores clave de evaluación en AMFE: qué tan grave es, qué tan frecuente es y qué tan fácil se detecta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al emplear una matriz de riesgos con código de colores (mapa de calor), ¿cuáles son las implicancias operativas de un riesgo situado en la zona roja?",
+    "opciones": [
+      {
+        "text": "Presenta una combinación de alta probabilidad de ocurrencia y severidad de impacto crítico.",
+        "isCorrect": true,
+        "rationale": "La zona roja agrupa las vulnerabilidades con mayor tasa de repetición y consecuencias más graves."
+      },
+      {
+        "text": "Requiere atención e intervención prioritaria e inmediata para su mitigación.",
+        "isCorrect": true,
+        "rationale": "Los riesgos rojos deben tratarse con urgencia máxima asignando recursos inmediatos."
+      },
+      {
+        "text": "Puede gestionarse únicamente mediante revisiones y monitoreos rutinarios ocasionales.",
+        "isCorrect": false,
+        "rationale": "El monitoreo ocasional corresponde a la zona verde o de bajo riesgo."
+      },
+      {
+        "text": "Representa una amenaza directa contra la continuidad operativa y viabilidad de la empresa.",
+        "isCorrect": true,
+        "rationale": "Los eventos ubicados en la zona roja comprometen directamente la supervivencia del negocio si se materializan."
+      },
+      {
+        "text": "Genera un impacto financiero marginal que la compañía puede absorber sin planes de respuesta.",
+        "isCorrect": false,
+        "rationale": "Un impacto financiero absorbible corresponde a niveles de riesgo bajo o tolerables."
+      }
+    ],
+    "hint": "Considere la máxima urgencia de tratamiento y la combinación de frecuencia elevada con consecuencias graves.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la ventaja primordial de utilizar software especializado en la gestión de riesgos industriales y comerciales?",
+    "opciones": [
+      {
+        "text": "Eximir totalmente a la compañía del pago de aranceles e impuestos tributarios.",
+        "isCorrect": false,
+        "rationale": "Ningún software de gestión de riesgos elimina las obligaciones tributarias o arancelarias de ley."
+      },
+      {
+        "text": "Sustituir por completo las inspecciones físicas aduaneras mediante aprobaciones informáticas.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones aduaneras son potestad legal de la autoridad fiscal y no dependen del software del usuario."
+      },
+      {
+        "text": "Automatizar la recolección de datos, calcular indicadores en tiempo real y generar alertas tempranas.",
+        "isCorrect": true,
+        "rationale": "El software especializado facilita el procesamiento continuo de grandes volúmenes de datos e informa de inmediato las anomalías."
+      },
+      {
+        "text": "Reemplazar al personal de auditoría y dirección sin supervisión humana.",
+        "isCorrect": false,
+        "rationale": "El software es una herramienta de soporte que complementa, pero no sustituye la toma de decisiones directiva."
+      },
+      {
+        "text": "Garantizar la venta inmediata de la mercancía sin importar la demanda del mercado.",
+        "isCorrect": false,
+        "rationale": "La adopción de software gestiona riesgos operativos, pero no garantiza la demanda comercial de los productos."
+      }
+    ],
+    "hint": "Enfóquese en la eficiencia del procesamiento de datos, cálculo automático y notificaciones de alerta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo prioritario e innegociable de un Plan de Respuesta a Emergencias en una organización?",
+    "opciones": [
+      {
+        "text": "Proteger las utilidades líquidas programadas para el cierre del ejercicio fiscal.",
+        "isCorrect": false,
+        "rationale": "La protección del capital financiero es secundaria frente a la preservación de la vida humana."
+      },
+      {
+        "text": "Garantizar la protección de la vida humana y la integridad de los trabajadores.",
+        "isCorrect": true,
+        "rationale": "El objetivo fundamental del plan de respuesta a emergencias es salvaguardar la vida y la salud de las personas ante cualquier evento."
+      },
+      {
+        "text": "Evitar la contratación de seguros de cobertura para contenedores.",
+        "isCorrect": false,
+        "rationale": "El plan de emergencia no busca eliminar el uso de seguros marítimos o de carga."
+      },
+      {
+        "text": "Garantizar el despacho aduanero preferencial ante desastres naturales.",
+        "isCorrect": false,
+        "rationale": "El trámite aduanero es una gestión administrativa separada de la respuesta operativa de emergencia."
+      },
+      {
+        "text": "Reducir el costo por hora del personal de supervisión en planta.",
+        "isCorrect": false,
+        "rationale": "El plan no es una herramienta de reducción de salarios ni de costos administrativos."
+      }
+    ],
+    "hint": "Piense en el principio de máxima jerarquía que prima sobre los activos materiales y financieros en la gestión de emergencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del proceso sistemático para elaborar un plan de contingencia corporativo, ¿cuáles de las siguientes etapas son técnicamente indispensables?",
+    "opciones": [
+      {
+        "text": "Realizar la identificación y lista detallada de riesgos potenciales de la operación.",
+        "isCorrect": true,
+        "rationale": "El primer paso consiste en elaborar un inventario riguroso de todas las amenazas probables."
+      },
+      {
+        "text": "Evaluar la probabilidad de ocurrencia y la severidad del impacto de cada escenario.",
+        "isCorrect": true,
+        "rationale": "Es necesario ponderar la gravedad y frecuencia de los riesgos para establecer prioridades de atención."
+      },
+      {
+        "text": "Formular un plan de acción con asignación de recursos, funciones y responsables claros.",
+        "isCorrect": true,
+        "rationale": "Todo plan de contingencia requiere definir protocolos concretos, presupuestos y encargados de ejecución."
+      },
+      {
+        "text": "Obtener la validación y aprobación formal de la junta directiva o alta gerencia.",
+        "isCorrect": true,
+        "rationale": "La alta dirección debe aprobar el plan para autorizar la asignación presupuestal y legitimarlo."
+      },
+      {
+        "text": "Mantener los protocolos en secreto respecto del personal operativo para no generar alarma.",
+        "isCorrect": false,
+        "rationale": "Ocultar la información impide la capacitación y la respuesta rápida del personal durante la crisis."
+      }
+    ],
+    "hint": "Considere la secuencia que va desde el diagnóstico de amenazas hasta la asignación de recursos y autorización directiva.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función principal cumple un Sistema de Gestión de Riesgos (RMS) en el entorno del comercio exterior?",
+    "opciones": [
+      {
+        "text": "Aprobar automáticamente las licencias de importación de productos fiscalizados.",
+        "isCorrect": false,
+        "rationale": "Las licencias de importación son otorgadas por las entidades del Estado y no por el RMS corporativo."
+      },
+      {
+        "text": "Centralizar la información, aplicar modelos analíticos y emitir alertas tempranas sobre anomalías en la cadena de suministro.",
+        "isCorrect": true,
+        "rationale": "El RMS integra datos de diversas fuentes, evalúa mediante algoritmos y notifica variaciones críticas para actuar de forma proactiva."
+      },
+      {
+        "text": "Establecer la tasa arancelaria para países sin tratados de libre comercio.",
+        "isCorrect": false,
+        "rationale": "Las tarifas arancelarias se rigen por la política tributaria nacional y acuerdos internacionales."
+      },
+      {
+        "text": "Sustituir la contratación de agentes de aduana autorizados.",
+        "isCorrect": false,
+        "rationale": "Los agentes aduaneros cumplen un rol legal en el despacho que no es reemplazado por la plataforma RMS."
+      },
+      {
+        "text": "Subvencionar el pago de fletes marítimos en períodos de recesión.",
+        "isCorrect": false,
+        "rationale": "El RMS es un software analítico de gestión, no un mecanismo de financiamiento ni subsidio."
+      }
+    ],
+    "hint": "Piense en la integración de datos, evaluación predictiva y notificaciones para prevenir desvíos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de riesgos comerciales, ¿cuál es el aporte diferencial que ofrece el uso de herramientas de Big Data?",
+    "opciones": [
+      {
+        "text": "Modificar de forma automática los aranceles fijados en aduanas.",
+        "isCorrect": false,
+        "rationale": "Big Data analiza información, no altera reglamentaciones ni impuestos estatutarios."
+      },
+      {
+        "text": "Eliminar la necesidad de contratar almacenes físicos de depósito temporal.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento físico de carga sigue siendo indispensable en la logística real."
+      },
+      {
+        "text": "Procesar grandes volúmenes de datos masivos en tiempo real para anticipar necesidades y detectar patrones predictivos.",
+        "isCorrect": true,
+        "rationale": "Big Data permite analizar datos masivos de consumo, comportamiento y rutas para tomar decisiones anticipadas y de bajo riesgo."
+      },
+      {
+        "text": "Garantizar la exoneración de inspecciones sanitarias en origen.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones de salud alimentaria o agrícola son obligatorias e independientes de la analítica de datos."
+      },
+      {
+        "text": "Fijar el valor comercial de las divisas a largo plazo sin variación.",
+        "isCorrect": false,
+        "rationale": "El valor de las monedas depende de los mercados financieros globales y no del análisis interno de datos."
+      }
+    ],
+    "hint": "Considere la capacidad de manejar grandes volúmenes de información diversa para identificar patrones de conducta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué utilidades aportan las técnicas de Análisis Exploratorio de Datos (EDA) en la fase previa al diseño de modelos predictivos de riesgo?",
+    "opciones": [
+      {
+        "text": "Revelar patrones subyacentes y la estructura real de las variables sin asumir modelos rígidos.",
+        "isCorrect": true,
+        "rationale": "El EDA permite comprender la naturaleza de los datos antes de imponer supuestos analíticos complejos."
+      },
+      {
+        "text": "Detectar valores atípicos (outliers) y anomalías que puedan sesgar los análisis posteriores.",
+        "isCorrect": true,
+        "rationale": "Identificar y tratar datos atípicos evita distorsiones en los algoritmos de predicción de riesgo."
+      },
+      {
+        "text": "Validar los supuestos de homogeneidad y distribución estadística de la información recabada.",
+        "isCorrect": true,
+        "rationale": "Comprobar la validez de los datos asegura que las herramientas predictivas funcionen adecuadamente."
+      },
+      {
+        "text": "Otorgar financiamiento directo e inmediato para la adquisición de materia prima.",
+        "isCorrect": false,
+        "rationale": "El EDA es un método estadístico de análisis de datos, no un producto de crédito o liquidez."
+      },
+      {
+        "text": "Facilitar la selección de las variables más relevantes para construir modelos de regresión.",
+        "isCorrect": true,
+        "rationale": "Filtrar variables clave ayuda a diseñar modelos cuantitativos eficientes y centrados en el riesgo real."
+      }
+    ],
+    "hint": "Piense en las etapas preliminares de la ciencia de datos para limpiar, comprender y seleccionar variables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es fundamental incluir un protocolo de comunicación en la estructura de un plan de contingencia?",
+    "opciones": [
+      {
+        "text": "Para ocultar las fallas operativas a los auditores y fiscalizadores.",
+        "isCorrect": false,
+        "rationale": "El protocolo no busca el ocultamiento, sino la gestión transparente y ordenada de la crisis."
+      },
+      {
+        "text": "Para asegurar que la información sobre el incidente fluya de forma oportuna, transparente y coordinada hacia las partes interesadas.",
+        "isCorrect": true,
+        "rationale": "La comunicación estructurada evita la desinformación, coordina la respuesta y mantiene la confianza de clientes y autoridades."
+      },
+      {
+        "text": "Para sustituir la contratación de pólizas de seguro contra accidentes.",
+        "isCorrect": false,
+        "rationale": "Comunicar adecuadamente una contingencia no reemplaza la cobertura económica de un seguro."
+      },
+      {
+        "text": "Para eliminar la necesidad de coordinar con los equipos de respuesta externa como bomberos o policía.",
+        "isCorrect": false,
+        "rationale": "Por el contrario, el protocolo de comunicación coordina la intervención de las entidades de auxilio externo."
+      },
+      {
+        "text": "Para transferir la responsabilidad penal del siniestro a los proveedores de transporte.",
+        "isCorrect": false,
+        "rationale": "El protocolo determina canales de información, no la adjudicación de fallos legales a terceros."
+      }
+    ],
+    "hint": "Enfóquese en la coordinación interna y externa para evitar la desinformación y actuar con transparencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito fundamental de llevar a cabo una evaluación periódica y sistemática de los proveedores en la cadena de suministro?",
+    "opciones": [
+      {
+        "text": "Derivar la responsabilidad legal de los impuestos aduaneros al fabricante de origen.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad de los tributos de importación ante la aduana recae en el importador registrado."
+      },
+      {
+        "text": "Garantizar que los insumos y servicios suministrados cumplan de forma continua con los estándares técnicos, económicos y éticos requeridos.",
+        "isCorrect": true,
+        "rationale": "La evaluación continua asegura la confiabilidad del insumo, previene defectos y consolida la calidad en la cadena de abastecimiento."
+      },
+      {
+        "text": "Imponer reducciones de precio unilaterales sin considerar los costos de fabricación del proveedor.",
+        "isCorrect": false,
+        "rationale": "La evaluación busca asegurar la calidad y sostenibilidad global, no forzar rebajas arbitrarias que arriesguen el insumo."
+      },
+      {
+        "text": "Prescindir de las inspecciones de recepción de mercancías en los almacenes propios.",
+        "isCorrect": false,
+        "rationale": "Evaluar proveedores no elimina el control de calidad en la recepción física de las plantas."
+      },
+      {
+        "text": "Garantizar la aprobación automática de los vistos buenos de importación restringida.",
+        "isCorrect": false,
+        "rationale": "Los permisos de importación son emitidos por los ministerios competentes y no por la evaluación de proveedores."
+      }
+    ],
+    "hint": "Considere la verificación de la idoneidad, calidad, cumplimiento y solvencia de los abastecedores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes aspectos constituyen criterios técnicos esenciales para evaluar el desempeño de un proveedor estratégico?",
+    "opciones": [
+      {
+        "text": "Consistencia de la calidad del producto y baja tasa de defectos en los envíos.",
+        "isCorrect": true,
+        "rationale": "La calidad constante y el mínimo margen de error aseguran que la producción propia no sufra paralizaciones."
+      },
+      {
+        "text": "Puntualidad en los plazos de entrega y estricto cumplimiento de las condiciones contractuales.",
+        "isCorrect": true,
+        "rationale": "El cumplimiento de los tiempos pactados es clave para evitar desabastecimiento en la cadena de suministro."
+      },
+      {
+        "text": "Solvencia y estabilidad financiera que garanticen la continuidad operativa a largo plazo.",
+        "isCorrect": true,
+        "rationale": "Un proveedor con solidez financiera minimiza el riesgo de quiebra intempestiva y desabastecimiento."
+      },
+      {
+        "text": "Compromiso acreditado con la sostenibilidad ambiental y las prácticas de responsabilidad social.",
+        "isCorrect": true,
+        "rationale": "Las políticas ambientales y sociales alinean la cadena de valor con los estándares éticos e internacionales."
+      },
+      {
+        "text": "Aceptación de pagos informales sin comprobantes de pago respaldados por la administración tributaria.",
+        "isCorrect": false,
+        "rationale": "Las operaciones informales o no registradas representan una violación legal grave y un riesgo tributario."
+      }
+    ],
+    "hint": "Seleccione los factores relacionados con la confiabilidad técnica, financiera, operativa y el cumplimiento ético-legal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la evaluación analítica de suministros, ¿cuál es la función de una matriz de ponderación o Matriz de Kraljic?",
+    "opciones": [
+      {
+        "text": "Determinar la tasa de depreciación de los activos fijos de la compañía.",
+        "isCorrect": false,
+        "rationale": "La depreciación de activos es un cálculo de contabilidad financiera, no de categorización de insumos."
+      },
+      {
+        "text": "Categorizar y priorizar a los proveedores según el impacto financiero del insumo y la complejidad del mercado de suministro.",
+        "isCorrect": true,
+        "rationale": "La Matriz de Kraljic clasifica los suministros en categorías estratégicas para aplicar políticas de compra y gestión de riesgo diferenciadas."
+      },
+      {
+        "text": "Calcular la retención impositiva sobre las ventas internacionales.",
+        "isCorrect": false,
+        "rationale": "Las retenciones fiscales son fijadas por los códigos tributarios estatutarios."
+      },
+      {
+        "text": "Fijar el costo estándar de las tarifas de flete terrestre internacional.",
+        "isCorrect": false,
+        "rationale": "El costo del flete depende de la oferta y demanda de transporte comercial."
+      },
+      {
+        "text": "Emitir la certificación de origen exigida en los tratados bilaterales.",
+        "isCorrect": false,
+        "rationale": "La emisión de certificados de origen le compete a las cámaras de comercio o entidades oficiales autorizadas."
+      }
+    ],
+    "hint": "Piense en la herramienta que cruza la criticidad del producto comprado con el nivel de riesgo/dificultad para adquirirlo en el mercado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué beneficios estratégicos obtiene una organización al consolidar alianzas de largo plazo con sus proveedores clave?",
+    "opciones": [
+      {
+        "text": "Facilitar procesos de coinnovación y desarrollo conjunto de nuevos productos.",
+        "isCorrect": true,
+        "rationale": "La confianza mutua permite investigar y diseñar soluciones de alto valor agregado en conjunto."
+      },
+      {
+        "text": "Optimizar los costos globales al reducir las tasas de fallas, devoluciones y desperdicios.",
+        "isCorrect": true,
+        "rationale": "Las alianzas a largo plazo perfeccionan el flujo productivo reduciendo pérdidas en la cadena."
+      },
+      {
+        "text": "Promover un intercambio fluido de información del mercado y retroalimentación continua.",
+        "isCorrect": true,
+        "rationale": "Las relaciones sólidas habilitan canales transparentes para compartir tendencias e indicadores operativos."
+      },
+      {
+        "text": "Aumentar la resiliencia y la capacidad de respuesta de la cadena ante crisis o cambios imprevistos.",
+        "isCorrect": true,
+        "rationale": "La colaboración estrecha permite adaptar planes de contingencia conjuntos rápidamente frente a perturbaciones del entorno."
+      },
+      {
+        "text": "Garantizar la exoneración total de controles aduaneros e inspecciones fiscales en frontera.",
+        "isCorrect": false,
+        "rationale": "Las alianzas privadas no eximen a las mercancías de la fiscalización estatal obligatoria."
+      }
+    ],
+    "hint": "Considere la mejora continua, la innovación compartida y la reducción de costos operativos en la cadena de valor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera impacta la integración de la inteligencia artificial y el aprendizaje automático en el monitoreo continuo del abastecimiento?",
+    "opciones": [
+      {
+        "text": "Sustituyendo el marco normativo aduanero por algoritmos privados sin fiscalización estatal.",
+        "isCorrect": false,
+        "rationale": "El marco normativo aduanero se mantiene bajo la potestad legal soberana del Estado."
+      },
+      {
+        "text": "Permitiendo la detección predictiva en tiempo real de anomalías, patrones de riesgo e incumplimientos probables.",
+        "isCorrect": true,
+        "rationale": "El aprendizaje automático procesa datos en tiempo real para anticipar retrasos y fallos antes de que paralicen la operación."
+      },
+      {
+        "text": "Eliminando la necesidad del transporte físico de mercancías entre continentes.",
+        "isCorrect": false,
+        "rationale": "El transporte físico sigue siendo indispensable para el comercio de bienes tangibles."
+      },
+      {
+        "text": "Obligando a fijar precios de venta uniformes para todos los competidores del sector.",
+        "isCorrect": false,
+        "rationale": "Fijar precios obligatorios violaría las leyes de libre competencia del mercado."
+      },
+      {
+        "text": "Anulando la obligación de presentar declaraciones juradas tributarias.",
+        "isCorrect": false,
+        "rationale": "Las obligaciones tributarias son estatutarias e independientes de la tecnología aplicada."
+      }
+    ],
+    "hint": "Considere la capacidad de anticipar patrones de falla de forma automatizada e inmediata.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al estructurar un proceso para recopilar datos sobre el riesgo de los proveedores, ¿cuáles de los siguientes componentes deben planificarse formalmente?",
+    "opciones": [
+      {
+        "text": "Definición clara de la finalidad y objetivos perseguidos con la recopilación.",
+        "isCorrect": true,
+        "rationale": "Es imprescindible precisar para qué se va a utilizar la información recolectada."
+      },
+      {
+        "text": "Asignación de los recursos tecnológicos, financieros y humanos requeridos para la captura de datos.",
+        "isCorrect": true,
+        "rationale": "Se deben determinar las herramientas y el personal encargado de procesar la información."
+      },
+      {
+        "text": "Establecimiento de un calendario o cronograma temporal para las tomas de datos.",
+        "isCorrect": true,
+        "rationale": "Definir plazos garantiza que la toma de datos sea oportuna y periódica."
+      },
+      {
+        "text": "Selección de las metodologías analíticas cuantitativas o cualitativas a aplicar.",
+        "isCorrect": true,
+        "rationale": "Elegir las técnicas metodológicas asegura la rigurosidad y validez del análisis posterior."
+      },
+      {
+        "text": "Omisión de indicadores de desempeño para agilizar los registros sin auditoría.",
+        "isCorrect": false,
+        "rationale": "Omitir indicadores invalida el propósito de medir y controlar el desempeño del proveedor."
+      }
+    ],
+    "hint": "Identifique las fases de planeación sistemática: objetivo, recursos, tiempo y método analítico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-53",
+    "diplomado": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué norma ISO internacional establece los requisitos específicos para certificar un Sistema de Gestión de la Calidad en las organizaciones?",
+    "opciones": [
+      {
+        "text": "ISO 14001",
+        "isCorrect": false,
+        "rationale": "La norma ISO 14001 se enfoca en los requisitos para Sistemas de Gestión Ambiental."
+      },
+      {
+        "text": "ISO 45001",
+        "isCorrect": false,
+        "rationale": "La ISO 45001 corresponde a la Gestión de la Seguridad y Salud en el Trabajo."
+      },
+      {
+        "text": "ISO 9001",
+        "isCorrect": true,
+        "rationale": "La norma ISO 9001 establece los estándares internacionales para implementar y certificar un Sistema de Gestión de la Calidad."
+      },
+      {
+        "text": "ISO 31000",
+        "isCorrect": false,
+        "rationale": "La ISO 31000 proporciona directrices generales sobre la Gestión del Riesgo en las organizaciones."
+      },
+      {
+        "text": "ISO 26000",
+        "isCorrect": false,
+        "rationale": "La ISO 26000 es una guía en materia de Responsabilidad Social Empresarial."
+      }
+    ],
+    "hint": "Identifique la norma de la familia ISO enfocada en la consistencia de procesos, satisfacción del cliente y calidad del producto.",
+    "activo": true
+  }
+]

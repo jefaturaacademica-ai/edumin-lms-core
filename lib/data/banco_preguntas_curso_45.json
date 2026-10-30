@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el significado del acrónimo SCADA en el ámbito de la automatización industrial?",
+    "opciones": [
+      {
+        "text": "System Control and Digital Acquisition",
+        "isCorrect": false,
+        "rationale": "Confunde la función de supervisión general con un control puramente digital, omitiendo el aspecto central de adquisición de datos en tiempo real."
+      },
+      {
+        "text": "Supervisory Control and Data Acquisition",
+        "isCorrect": true,
+        "rationale": "Define adecuadamente el sistema integrado que permite supervisar, controlar y adquirir datos de procesos industriales de forma remota y en tiempo real."
+      },
+      {
+        "text": "Sequential Control and Data Analysis",
+        "isCorrect": false,
+        "rationale": "Hace referencia únicamente al control secuencial y al análisis posterior, ignorando el carácter de supervisión directa del sistema."
+      },
+      {
+        "text": "System Configuration and Device Automation",
+        "isCorrect": false,
+        "rationale": "Se centra en la configuración de hardware y automatización de dispositivos, que son tareas secundarias dentro del concepto global de SCADA."
+      },
+      {
+        "text": "Supervisory Communication and Digital Automation",
+        "isCorrect": false,
+        "rationale": "Sustituye los términos de adquisición de datos por automatización digital, desvirtuando el propósito básico de registro y monitoreo del sistema."
+      }
+    ],
+    "hint": "Piensa en las tres funciones principales reflejadas en sus siglas en inglés relacionadas con la supervisión, el mando y la recolección de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple un sensor dentro de un sistema de control y supervisión industrial?",
+    "opciones": [
+      {
+        "text": "Ejecutar movimientos mecánicos o empujes sobre los materiales del proceso.",
+        "isCorrect": false,
+        "rationale": "Esta función corresponde a los actuadores, los cuales responden a las órdenes del sistema generando trabajo físico."
+      },
+      {
+        "text": "Absorber información del medio ambiente y convertirla en señales eléctricas.",
+        "isCorrect": true,
+        "rationale": "Describe la función fundamental del sensor como elemento primario que capta magnitudes físicas o químicas para convertirlas en señales interpretables por el control."
+      },
+      {
+        "text": "Guardar el historial de variables en una base de datos masiva.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento masivo de datos es una tarea realizada por los servidores o bases de datos del sistema SCADA, no por el sensor individual."
+      },
+      {
+        "text": "Procesar la programación lógica del algoritmo principal de planta.",
+        "isCorrect": false,
+        "rationale": "El procesamiento de la lógica programada es responsabilidad exclusiva del autómata o PLC."
+      },
+      {
+        "text": "Proteger la red de comunicación industrial contra intrusiones cibernéticas.",
+        "isCorrect": false,
+        "rationale": "La seguridad informática es gestionada por firewalls, switches administrables y protocolos de red, no por los sensores de campo."
+      }
+    ],
+    "hint": "Recuerda la transformación que realiza este componente entre el entorno físico y el sistema eléctrico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia principal entre un autómata programable (PLC) y una interfaz hombre-máquina (HMI)?",
+    "opciones": [
+      {
+        "text": "El PLC posee pantalla táctil integrada mientras que el HMI solo procesa lógica interna.",
+        "isCorrect": false,
+        "rationale": "Invierte las funciones de ambos dispositivos, ya que el PLC carece de pantalla táctil propia y ejecuta el control lógico interno."
+      },
+      {
+        "text": "El HMI solo actúa como sensor térmico y el PLC opera como servomotor.",
+        "isCorrect": false,
+        "rationale": "Clasifica erróneamente ambos equipos de control industrial como instrumentos de medición o accionadores finales."
+      },
+      {
+        "text": "El PLC ejecuta la lógica programada sin pantalla gráfica, mientras que el HMI proporciona una interfaz gráfica visual.",
+        "isCorrect": true,
+        "rationale": "Diferencia correctamente el núcleo de control lógico del PLC frente a la función de visualización e interacción del usuario que brinda el HMI."
+      },
+      {
+        "text": "El PLC se utiliza únicamente en la nube y el HMI se instala exclusivamente por vía satelital.",
+        "isCorrect": false,
+        "rationale": "Atribuye métodos de conectividad remota lejana a equipos que habitualmente se instalan a nivel de campo y panel local."
+      },
+      {
+        "text": "El HMI elimina totalmente la necesidad de contar con sensores físicos en la planta.",
+        "isCorrect": false,
+        "rationale": "La interfaz gráfica necesita recibir los datos medidos por los sensores físicos para poder desplegarlos al operador."
+      }
+    ],
+    "hint": "Piensa en cuál de los dos dispositivos posee una interfaz gráfica para la interacción visual directa con el operador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con lo presentado sobre los sistemas SCADA, ¿cuáles de los siguientes sectores industriales utilizan activamente esta tecnología para la supervisión y control? (Selecciona todas las opciones correctas)",
+    "opciones": [
+      {
+        "text": "Distribución de agua y monitoreo de bombas.",
+        "isCorrect": true,
+        "rationale": "Permite supervisar presiones, caudales y niveles en reservorios y estaciones de bombeo de forma remota."
+      },
+      {
+        "text": "Redes de transmisión energética y subestaciones eléctricas.",
+        "isCorrect": true,
+        "rationale": "Facilita la supervisión segura y oportuna de líneas de alta y media tensión sin exponer al personal a riesgos eléctricos."
+      },
+      {
+        "text": "Líneas de ensamblaje en la manufactura.",
+        "isCorrect": true,
+        "rationale": "Optimiza el seguimiento secuencial, control de calidad y tiempos de producción en cadenas de montaje."
+      },
+      {
+        "text": "Redes de transporte y control de semáforos.",
+        "isCorrect": true,
+        "rationale": "Ayuda a gestionar la infraestructura vial de forma centralizada coordinando tiempos y flujos de tránsito."
+      },
+      {
+        "text": "Venta minorista manual de alimentos en mercados locales.",
+        "isCorrect": false,
+        "rationale": "El comercio minorista manual carece de procesos de transformación industrial automatizada o adquisición continua de datos físicos mediante sensores."
+      }
+    ],
+    "hint": "Revisa los campos de aplicación mencionados que requieren monitoreo continuo de infraestructura crítica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué dispositivo ejecuta órdenes de movimiento o fuerza mecánica en la planta a partir de las señales enviadas por el sistema de control?",
+    "opciones": [
+      {
+        "text": "Servidor primario.",
+        "isCorrect": false,
+        "rationale": "El servidor se encarga del procesamiento de datos y alojamiento del software, no del trabajo mecánico de campo."
+      },
+      {
+        "text": "Actuador.",
+        "isCorrect": true,
+        "rationale": "Identifica la entidad física que convierte las señales de control eléctricas o neumáticas en movimientos mecánicos o acciones directas."
+      },
+      {
+        "text": "Protocolo de red Profibus.",
+        "isCorrect": false,
+        "rationale": "Profibus es un estándar de comunicación de red, no un dispositivo físico de acción mecánica."
+      },
+      {
+        "text": "Módem de recepción pasiva.",
+        "isCorrect": false,
+        "rationale": "Un módem es un equipo para la transmisión y recepción de datos de telecomunicaciones."
+      },
+      {
+        "text": "Transmisor de frecuencia.",
+        "isCorrect": false,
+        "rationale": "Un transmisor adecua y envía señales de medición, pero no genera trabajo mecánico de accionamiento."
+      }
+    ],
+    "hint": "Considera el componente físico responsable de realizar acciones mecánicas directas como abrir válvulas o accionar pistones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué protocolo de bus de campo industrial se menciona en las fuentes como un estándar para la comunicación entre PLCs y dispositivos de control?",
+    "opciones": [
+      {
+        "text": "Profibus.",
+        "isCorrect": true,
+        "rationale": "Reconoce el protocolo de red industrial utilizado para la comunicación determinista y confiable entre controladores y equipos de campo."
+      },
+      {
+        "text": "HTTP.",
+        "isCorrect": false,
+        "rationale": "HTTP es un protocolo de transferencia de hipertexto utilizado en la web convencional, no un bus de campo determinista de planta."
+      },
+      {
+        "text": "Python.",
+        "isCorrect": false,
+        "rationale": "Python es un lenguaje de programación de propósito general, no un protocolo de comunicación de bus de campo."
+      },
+      {
+        "text": "Bluetooth doméstico.",
+        "isCorrect": false,
+        "rationale": "Bluetooth es un protocolo inalámbrico de corto alcance de consumo masivo, inadecuado para la comunicación crítica de bus de campo en planta."
+      },
+      {
+        "text": "Ladder.",
+        "isCorrect": false,
+        "rationale": "Ladder es un lenguaje gráfico de programación de PLCs, no un protocolo de red de transmisión de datos."
+      }
+    ],
+    "hint": "Se trata de un estándar de comunicación industrial comúnmente empleado para interconectar autómatas programables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el concepto del Internet Industrial de las Cosas (IIoT) en el marco de la Industria 4.0?",
+    "opciones": [
+      {
+        "text": "En reemplazar todos los motores eléctricos por mecanismos manuales de palanca.",
+        "isCorrect": false,
+        "rationale": "La evolución industrial busca la automatización digital, no el retorno a mecanismos de operación manual."
+      },
+      {
+        "text": "En la capacidad de interconectar máquinas y dispositivos a la red para el intercambio de datos en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Refleja el principio central del IIoT al integrar sensores y máquinas inteligentes en redes de datos para optimizar procesos."
+      },
+      {
+        "text": "En usar registros en papel para anotar diariamente las temperaturas de operación.",
+        "isCorrect": false,
+        "rationale": "El IIoT promueve la digitalización y captura automática de variables, eliminando el registro en papel."
+      },
+      {
+        "text": "En aislar los sistemas industriales de cualquier tipo de conexión digital o red.",
+        "isCorrect": false,
+        "rationale": "La base del IIoT es precisamente la interconexión y no el aislamiento de los equipos de producción."
+      },
+      {
+        "text": "En programar controladores exclusivamente mediante cableado físico sin posibilidad de red.",
+        "isCorrect": false,
+        "rationale": "El cableado rígido sin red limita la transmisión de datos que promueve el IIoT."
+      }
+    ],
+    "hint": "Se enfoca en la capacidad de conectar dispositivos y maquinarias a través de la red para intercambiar datos operativos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se diferencia el mantenimiento predictivo del mantenimiento preventivo tradicional?",
+    "opciones": [
+      {
+        "text": "El predictivo se ejecuta únicamente cuando la maquinaria ya ha sufrido una avería catastrófica.",
+        "isCorrect": false,
+        "rationale": "Atender el equipo tras una avería catastrófica corresponde al mantenimiento correctivo."
+      },
+      {
+        "text": "El predictivo utiliza sensores y datos en tiempo real para anticipar y corregir fallas antes de que ocurran.",
+        "isCorrect": true,
+        "rationale": "Destaca la esencia del mantenimiento predictivo al basarse en la lectura continua de parámetros reales para programar intervenciones oportunamente."
+      },
+      {
+        "text": "El predictivo sigue únicamente el kilometraje del manual del fabricante sin evaluar las condiciones reales de trabajo.",
+        "isCorrect": false,
+        "rationale": "El seguimiento rígido de intervalos preestablecidos por el fabricante define al mantenimiento preventivo tradicional."
+      },
+      {
+        "text": "El preventivo utiliza inteligencia artificial para reprogramar de forma autónoma la posición de los servomotores.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento preventivo no involucra reprogramación autónoma con IA, sino intervenciones calendarizadas."
+      },
+      {
+        "text": "El predictivo prescinde totalmente de la instalación de sensores térmicos o de vibración.",
+        "isCorrect": false,
+        "rationale": "Los sensores de vibración y temperatura son la fuente de datos imprescindible para alimentar el mantenimiento predictivo."
+      }
+    ],
+    "hint": "Observa el uso de sensores y analítica en tiempo real para anticipar el fallo real frente al seguimiento rígido del manual.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante el proceso de procesamiento de la caña de azúcar expuesto en clase, ¿qué subproducto fibroso queda tras la molienda y se utiliza como biomasa en las calderas?",
+    "opciones": [
+      {
+        "text": "Melasa.",
+        "isCorrect": false,
+        "rationale": "La melasa es el jarabe denso no cristalizable obtenido en la purificación del jugo, no el residuo fibroso."
+      },
+      {
+        "text": "Bagazo.",
+        "isCorrect": true,
+        "rationale": "Identifica correctamente la fibra remanente de la extracción del jugo de caña, empleada como combustible calórico en calderas."
+      },
+      {
+        "text": "Mosto.",
+        "isCorrect": false,
+        "rationale": "El mosto es la mezcla líquida azucarada fermentada previa a la destilación del alcohol."
+      },
+      {
+        "text": "Vinaza.",
+        "isCorrect": false,
+        "rationale": "La vinaza es el efluente líquido resultante del proceso de destilación del etanol."
+      },
+      {
+        "text": "Cristal de sacarosa.",
+        "isCorrect": false,
+        "rationale": "El cristal de sacarosa representa el producto final azúcar, no un subproducto de desecho fibroso."
+      }
+    ],
+    "hint": "Es el sobrante vegetal resultante de la trituración que posee un alto valor calórico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En el ámbito de la minería, ¿cuáles de las siguientes variables son típicamente monitoreadas en tiempo real mediante un sistema SCADA? (Selecciona todas las opciones correctas)",
+    "opciones": [
+      {
+        "text": "Presión y nivel de fluidos o caudales en tanques y tuberías.",
+        "isCorrect": true,
+        "rationale": "Monitorea la estabilidad y flujo en procesos hidro-metalúrgicos y líneas de agua o relaves."
+      },
+      {
+        "text": "Temperatura de operación en motores y molinos.",
+        "isCorrect": true,
+        "rationale": "Previene sobrecalentamientos y fallas en los sistemas moledores de gran potencia."
+      },
+      {
+        "text": "Concentración de gases nocivos en túneles de minería subterránea.",
+        "isCorrect": true,
+        "rationale": "Asegura la calidad del aire y activa sistemas de ventilación para salvaguardar vidas humanas."
+      },
+      {
+        "text": "Rendimiento, ubicación GPS y velocidad promedio de camiones de acarreo.",
+        "isCorrect": true,
+        "rationale": "Permite optimizar las rutas y controlar los tiempos de ciclo en minería a tajo abierto."
+      },
+      {
+        "text": "Fluctuación del valor bursátil internacional de los metales en el mercado financiero sin conexión a la planta.",
+        "isCorrect": false,
+        "rationale": "Los precios financieros externos no constituyen variables físicas ni operativas directas de control dentro del SCADA de planta."
+      }
+    ],
+    "hint": "Identifica los parámetros físicos y operativos que influyen directamente en la seguridad y rendimiento minero.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la metodología explicada para interactuar eficazmente con herramientas de Inteligencia Artificial (prompts), ¿cuáles son los tres elementos estructurales esenciales?",
+    "opciones": [
+      {
+        "text": "Introducción, Nudo y Desenlace.",
+        "isCorrect": false,
+        "rationale": "Corresponde a la estructura clásica de una narrativa literaria, no a la técnica de ingeniería de prompts."
+      },
+      {
+        "text": "Protagonista, Contexto y Solicitud.",
+        "isCorrect": true,
+        "rationale": "Resume los tres bloques presentados en clase para estructurar prompts precisos (definir rol, situar el escenario y pedir la acción específica)."
+      },
+      {
+        "text": "Comando, Variable y Subrutina.",
+        "isCorrect": false,
+        "rationale": "Son elementos tradicionales de programación estructurada en informática, no la estructura sugerida para prompts."
+      },
+      {
+        "text": "Algoritmo, Código y Ejecución.",
+        "isCorrect": false,
+        "rationale": "Se refiere al ciclo de desarrollo de software convencional."
+      },
+      {
+        "text": "Usuario, Contraseña y Servidor.",
+        "isCorrect": false,
+        "rationale": "Son credenciales de autenticación para acceso a sistemas informáticos."
+      }
+    ],
+    "hint": "La estructura recomendada asigna un rol, describe el escenario situacional y detalla el resultado esperado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito de realizar la destilación del mosto fermentado en el proceso industrial de la caña de azúcar?",
+    "opciones": [
+      {
+        "text": "Secar el bagazo sobrante para convertirlo en papel industrial.",
+        "isCorrect": false,
+        "rationale": "El secado del bagazo es un tratamiento físico independiente para fibras biomasicas."
+      },
+      {
+        "text": "Separar el etanol por ebullición para obtener un alcohol de mayor pureza.",
+        "isCorrect": true,
+        "rationale": "Explica correctamente que la destilación aprovecha los diferentes puntos de ebullición para purificar el etanol contenido en la mezcla."
+      },
+      {
+        "text": "Cristalizar el jugo bruto para formar granos de azúcar comercial.",
+        "isCorrect": false,
+        "rationale": "La cristalización ocurre en los tachos al vacío en la etapa previa de elaboración de azúcar."
+      },
+      {
+        "text": "Moler los tallos de la caña para extraer el primer jugo líquido.",
+        "isCorrect": false,
+        "rationale": "La extracción inicial se realiza en la etapa mecánica de molienda."
+      },
+      {
+        "text": "Enfriar las tuberías de las calderas de vapor.",
+        "isCorrect": false,
+        "rationale": "El enfriamiento de tuberías es un proceso auxiliar de intercambio térmico en los servicios de planta."
+      }
+    ],
+    "hint": "Piensa en el paso térmico necesario para separar el componente alcohólico según sus puntos de ebullición.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial de la fase de análisis de requisitos al iniciar un proyecto de automatización SCADA?",
+    "opciones": [
+      {
+        "text": "Comprar inmediatamente los componentes más costosos del mercado sin evaluación técnica previa.",
+        "isCorrect": false,
+        "rationale": "Adquirir equipos sin análisis técnico previo genera sobrecostos e incompatibilidades de arquitectura."
+      },
+      {
+        "text": "Identificar, documentar y validar las necesidades operativas, metas y restricciones del proceso.",
+        "isCorrect": true,
+        "rationale": "Establece el objetivo central del análisis inicial al definir con precisión qué se va a controlar y bajo qué parámetros operativos."
+      },
+      {
+        "text": "Eliminar por completo la utilización de autómatas programables en la planta.",
+        "isCorrect": false,
+        "rationale": "El análisis de requisitos busca dimensionar adecuadamente los PLCs necesarios, no eliminarlos."
+      },
+      {
+        "text": "Reemplazar a todo el personal de ingeniería por algoritmos no supervisados.",
+        "isCorrect": false,
+        "rationale": "El objetivo del SCADA es dotar a los ingenieros y operadores de herramientas de supervisión, no prescindir del criterio humano."
+      },
+      {
+        "text": "Escribir el código fuente sin conocer la infraestructura física de la planta.",
+        "isCorrect": false,
+        "rationale": "Programar sin conocer el proceso ni el hardware de campo conduce al fracaso del proyecto de automatización."
+      }
+    ],
+    "hint": "Se relaciona con la planificación previa de necesidades operativas, metas del proceso y restricciones antes de adquirir o programar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué se entiende por escalabilidad al seleccionar un software de supervisión SCADA?",
+    "opciones": [
+      {
+        "text": "La capacidad del software para ejecutarse únicamente en dispositivos móviles táctiles.",
+        "isCorrect": false,
+        "rationale": "La compatibilidad móvil es una característica de portabilidad de la interfaz, no de escalabilidad del sistema."
+      },
+      {
+        "text": "La capacidad del sistema para expandirse y adaptarse al crecimiento futuro de la planta sin reemplazar la plataforma.",
+        "isCorrect": true,
+        "rationale": "Define correctamente la escalabilidad como la propiedad de incorporar nuevos módulos, señales o estaciones sin desechar el software original."
+      },
+      {
+        "text": "La velocidad con la que la pantalla enciende durante el arranque del equipo.",
+        "isCorrect": false,
+        "rationale": "El tiempo de arranque es un parámetro de rendimiento del hardware informático."
+      },
+      {
+        "text": "La limitación estricta de licencias a un número máximo e inmodificable de sensores.",
+        "isCorrect": false,
+        "rationale": "Una plataforma no escalable es la que restringe o frena la adición de nuevos puntos de medición."
+      },
+      {
+        "text": "El costo fijo por hora del servicio de mantenimiento contratado al proveedor.",
+        "isCorrect": false,
+        "rationale": "Corresponde a los términos comerciales del contrato de soporte técnico."
+      }
+    ],
+    "hint": "Se refiere a la capacidad del sistema para adaptarse al crecimiento o expansión futura de la planta industrial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se relaciona conceptualmente una pantalla HMI respecto a un sistema SCADA completo?",
+    "opciones": [
+      {
+        "text": "El SCADA forma parte de un HMI local y solo sirve para controlar un único motor.",
+        "isCorrect": false,
+        "rationale": "Es una afirmación errónea; el SCADA tiene un nivel jerárquico superior y abarca toda la instalación."
+      },
+      {
+        "text": "Un HMI puede ser un componente de interfaz local dentro de un SCADA, pero un SCADA abarca la supervisión global de la planta.",
+        "isCorrect": true,
+        "rationale": "Aclara la relación jerárquica al establecer que el HMI actúa como punto táctil local mientras el SCADA administra y adquiere datos de toda la planta."
+      },
+      {
+        "text": "El HMI y el SCADA son términos idénticos para referirse exclusivamente al cableado de red.",
+        "isCorrect": false,
+        "rationale": "Ignora que HMI es la interfaz de visualización y SCADA el sistema integral de adquisición y control."
+      },
+      {
+        "text": "El HMI gestiona las bases de datos en la nube y el SCADA solo atiende a los sensores de temperatura.",
+        "isCorrect": false,
+        "rationale": "Invierte arbitrariamente el alcance del software de supervisión y los paneles locales de operador."
+      },
+      {
+        "text": "Ningún sistema SCADA permite la conexión de pantallas HMI dentro de su red de control.",
+        "isCorrect": false,
+        "rationale": "Los sistemas SCADA integran habitualmente múltiples pantallas HMI distribuidas en diferentes máquinas."
+      }
+    ],
+    "hint": "Piensa en la jerarquía y alcance de ambos sistemas según las explicaciones vertidas en clase.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué funciones clave cumplen las Unidades Terminales Remotas (RTU) en un sistema SCADA distribuido?",
+    "opciones": [
+      {
+        "text": "Recolectar datos de sensores situados en puntos geográficamente alejados.",
+        "isCorrect": true,
+        "rationale": "Permite adquirir señales en zonas distantes de la infraestructura sin requerir una estación maestra local."
+      },
+      {
+        "text": "Transmitir señales de mando y control hacia los actuadores ubicados en campo.",
+        "isCorrect": true,
+        "rationale": "Envía las instrucciones de apertura, cierre o ajuste hacia los equipos remotos."
+      },
+      {
+        "text": "Gestionar y enviar alertas o alarmas de eventos críticos a la estación central.",
+        "isCorrect": true,
+        "rationale": "Monitorea continuamente los rangos de operación y comunica anomalías de forma inmediata."
+      },
+      {
+        "text": "Reducir la necesidad de extensos cableados directos en áreas de difícil acceso.",
+        "isCorrect": true,
+        "rationale": "Concentra las señales locales y las envía por un único enlace de comunicación hacia el servidor central."
+      },
+      {
+        "text": "Eliminar la necesidad de suministro eléctrico en las estaciones lejanas.",
+        "isCorrect": false,
+        "rationale": "Las RTU son dispositivos electrónicos que requieren alimentación eléctrica para operar en el sitio remoto."
+      }
+    ],
+    "hint": "Piensa en cómo se recolectan y transmiten los datos en sitios distantes de la sala central de control.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el lenguaje de programación de PLCs más extendido y basado en diagramas de contactos eléctricos según la norma IEC 61131-3?",
+    "opciones": [
+      {
+        "text": "Python.",
+        "isCorrect": false,
+        "rationale": "Python no es un estándar gráfico tradicional de programación de autómatas definido en la norma IEC 61131-3."
+      },
+      {
+        "text": "Diagrama de Escalera (Ladder).",
+        "isCorrect": true,
+        "rationale": "Reconoce el lenguaje gráfico de programación de PLCs más popular, estructurado en peldaños similares a diagramas eléctricos de relés."
+      },
+      {
+        "text": "HTML5.",
+        "isCorrect": false,
+        "rationale": "HTML5 es un lenguaje de marcado para diseño de páginas web, no para lógica de automatismos industriales."
+      },
+      {
+        "text": "C++.",
+        "isCorrect": false,
+        "rationale": "C++ es un lenguaje de programación textual orientado a objetos de propósito general."
+      },
+      {
+        "text": "Ensamblador directo.",
+        "isCorrect": false,
+        "rationale": "El lenguaje ensamblador es de muy bajo nivel y no corresponde al estándar gráfico predominantemente usado en automatización."
+      }
+    ],
+    "hint": "Su estructura gráfica se asemeja a los peldaños de una herramienta utilizada para alcanzar zonas altas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es fundamental integrar medidas de ciberseguridad en la red de un sistema SCADA industrial?",
+    "opciones": [
+      {
+        "text": "Para cambiar automáticamente el color de los gabinetes del PLC.",
+        "isCorrect": false,
+        "rationale": "El color de los armarios de control es un aspecto estético que no guarda relación con la ciberseguridad."
+      },
+      {
+        "text": "Para proteger la información, prevenir accesos malintencionados y evitar paradas no autorizadas del proceso.",
+        "isCorrect": true,
+        "rationale": "Identifica la razón crítica de la ciberseguridad al resguardar la continuidad operativa y la confidencialidad de los datos frente a ciberataques."
+      },
+      {
+        "text": "Para reducir la cantidad de voltaje que consumen los motores eléctricos.",
+        "isCorrect": false,
+        "rationale": "El consumo eléctrico depende de la carga mecánica y la eficiencia de los variadores de frecuencia, no de la ciberseguridad de datos."
+      },
+      {
+        "text": "Para sustituir el uso de calibraciones periódicas en la instrumentación.",
+        "isCorrect": false,
+        "rationale": "La calibración es un procedimiento metrológico indispensable para garantizar la precisión de las mediciones."
+      },
+      {
+        "text": "Para eliminar la necesidad de adquirir licencias de software de supervisión.",
+        "isCorrect": false,
+        "rationale": "La ciberseguridad requiere inversiones en infraestructura y software de protección, no anula las licencias requeridas."
+      }
+    ],
+    "hint": "Piensa en la protección de datos operativos críticos y el riesgo de detener intencionadamente las operaciones de una planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el rango estándar de señal analógica de corriente ampliamente utilizado en la industria para la conexión de sensores e instrumentos de medición?",
+    "opciones": [
+      {
+        "text": "$0 \\text{ V}$ a $100 \\text{ V}$",
+        "isCorrect": false,
+        "rationale": "Es un rango de tensión continua elevado que no constituye el estándar de bucle de corriente para sensores industriales."
+      },
+      {
+        "text": "$4 \\text{ mA}$ a $20 \\text{ mA}$",
+        "isCorrect": true,
+        "rationale": "Identifica correctamente el estándar industrial de bucle de corriente donde $4 \\text{ mA}$ representa el valor mínimo de la escala y $20 \\text{ mA}$ el máximo."
+      },
+      {
+        "text": "$50 \\text{ A}$ a $100 \\text{ A}$",
+        "isCorrect": false,
+        "rationale": "Es una corriente extremadamente alta asociada a potencia de motores o soldadura, totalmente inadecuada para la transmisión de señales de instrumentación."
+      },
+      {
+        "text": "$1 \\text{ mA}$ a $5 \\text{ mA}$",
+        "isCorrect": false,
+        "rationale": "No responde a la norma estandarizada de transmisión de instrumentación analógica de $4-20 \\text{ mA}$."
+      },
+      {
+        "text": "$12 \\text{ V}$ a $24 \\text{ V}$",
+        "isCorrect": false,
+        "rationale": "Corresponde a valores típicos de alimentación de tensión en continua para componentes de control, no a la señal normalizada de bucle de corriente."
+      }
+    ],
+    "hint": "Es una señal de corriente continua estándar cuyo límite inferior evita confundir un valor cero con una rotura de cable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso práctico de la empresa de agua EPS Moquegua expuesto en clase, ¿qué acción remota puede ejecutar el operador desde la central SCADA al detectarse una fuga por rotura de tubería?",
+    "opciones": [
+      {
+        "text": "Desplazarse manualmente a pie para cerrar la tubería con herramientas de mano.",
+        "isCorrect": false,
+        "rationale": "El desplazamiento manual elimina la ventaja del control a distancia que ofrece el centro de monitoreo."
+      },
+      {
+        "text": "Enviar una orden remota para cerrar las electroválvulas de la línea afectada.",
+        "isCorrect": true,
+        "rationale": "Muestra la aplicación real del SCADA al permitir actuar a distancia sobre electroválvulas, deteniendo la pérdida de agua inmediatamente."
+      },
+      {
+        "text": "Apagar todos los servidores informáticos para reiniciar la red de agua.",
+        "isCorrect": false,
+        "rationale": "Apagar los servidores dejaría a la planta a ciegas y no detendría el flujo hidráulico de la fuga."
+      },
+      {
+        "text": "Aumentar la presión de las bombas para empujar la fuga fuera del reservorio.",
+        "isCorrect": false,
+        "rationale": "Incrementar la presión aumentaría el caudal derramado y empeoraría el daño en la tubería."
+      },
+      {
+        "text": "Vaciar completamente los tanques de almacenamiento de la población.",
+        "isCorrect": false,
+        "rationale": "Drenar los reservorios provocaría un desabastecimiento general innecesario de la ciudad."
+      }
+    ],
+    "hint": "Se trata del cierre a distancia de un elemento mecánico impulsado eléctricamente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta de Inteligencia Artificial presentada en el curso destaca por citar explícitamente sus fuentes bibliográficas y enlaces web al responder consultas de investigación?",
+    "opciones": [
+      {
+        "text": "Perplexity.",
+        "isCorrect": true,
+        "rationale": "Identifica la herramienta orientada a la búsqueda e investigación que proporciona respuestas fundamentadas con citas y fuentes web directas."
+      },
+      {
+        "text": "Kimi / Kimi-kwan.",
+        "isCorrect": false,
+        "rationale": "Kimi es un modelo de lenguaje enfocado en procesamiento de contexto extenso e imágenes, pero no en citar fuentes de búsqueda web estilo motor de investigación como Perplexity."
+      },
+      {
+        "text": "Dixi.",
+        "isCorrect": false,
+        "rationale": "Dixi se presentó en clase como un asistente conversacional con capacidad de razonamiento o modo pensar."
+      },
+      {
+        "text": "Ladder Editor.",
+        "isCorrect": false,
+        "rationale": "Es una denominación genérica para entornos de software de programación de PLCs."
+      },
+      {
+        "text": "TIA Portal.",
+        "isCorrect": false,
+        "rationale": "TIA Portal es la plataforma de ingeniería de la marca Siemens para automatización y PLCs."
+      }
+    ],
+    "hint": "Su nombre alude a la perplejidad y está orientada a búsquedas estructuradas con fuentes verificables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Al diseñar las pantallas de una interfaz hombre-máquina (HMI/SCADA), ¿cuáles de las siguientes opciones son buenas prácticas reconocidas para garantizar una correcta usabilidad? (Selecciona todas las opciones correctas)",
+    "opciones": [
+      {
+        "text": "Presentar una jerarquía clara de pantallas que facilite la navegación intuitiva.",
+        "isCorrect": true,
+        "rationale": "Organiza los niveles de detalle desde la vista general de la planta hasta las máquinas individuales."
+      },
+      {
+        "text": "Utilizar colores y notificaciones estandarizadas para diferenciar la criticidad de las alarmas.",
+        "isCorrect": true,
+        "rationale": "Permite al operador identificar instantáneamente el grado de gravedad de una anomalía (ej. amarillo advertencia, rojo peligro)."
+      },
+      {
+        "text": "Incluir botones de parada o control de emergencia fácilmente identificables.",
+        "isCorrect": true,
+        "rationale": "Garantiza una respuesta rápida del usuario para detener el proceso ante un riesgo inminente."
+      },
+      {
+        "text": "Mostrar datos operativos relevantes y variables críticas en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Ofrece información precisa al instante para la toma oportuna de decisiones de control."
+      },
+      {
+        "text": "Saturar toda la pantalla con colores brillantes sin distinción de prioridad de eventos.",
+        "isCorrect": false,
+        "rationale": "La saturación innecesaria de colores genera fatiga visual en el operador y dificulta la detección de alarmas críticas."
+      }
+    ],
+    "hint": "Considera la organización visual clara y la priorización de las alertas frente a situaciones de emergencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple la integración de scripts en un sistema SCADA?",
+    "opciones": [
+      {
+        "text": "Limpiar el polvo presente en los gabinetes metálicos de los autómatas.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento físico de armarios requiere intervención manual de electromecánica."
+      },
+      {
+        "text": "Personalizar funciones avanzadas, como generar reportes automáticos y procesar datos históricos.",
+        "isCorrect": true,
+        "rationale": "Define correctamente que los scripts permiten programar rutinas de software para cálculos, reportes continuos y tratamiento de datos."
+      },
+      {
+        "text": "Sustituir las tuberías de fluidos por conexiones de cable estructurado.",
+        "isCorrect": false,
+        "rationale": "Las tuberías de proceso transportan materia física y no pueden reemplazarse por cableado de red."
+      },
+      {
+        "text": "Aumentar la intensidad de corriente física en los sensores de campo.",
+        "isCorrect": false,
+        "rationale": "La intensidad eléctrica en los sensores está regida por la física del instrumento y sus acondicionadores."
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar bases de datos para el historial.",
+        "isCorrect": false,
+        "rationale": "Los scripts interactúan frecuentemente con las bases de datos para extraer y organizar la información guardada."
+      }
+    ],
+    "hint": "Permite personalizar tareas de alto nivel como la manipulación de datos, generación de reportes y rutinas avanzadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la utilidad principal del multímetro durante las tareas de verificación y mantenimiento de un sistema de control industrial?",
+    "opciones": [
+      {
+        "text": "Medir la masa de mineral que transita por una faja transportadora.",
+        "isCorrect": false,
+        "rationale": "La masa en fajas se mide con balanzas dinámicas de pesaje o celdas de carga."
+      },
+      {
+        "text": "Medir magnitudes eléctricas como voltaje, intensidad de corriente y resistencia en los circuitos.",
+        "isCorrect": true,
+        "rationale": "Indica con precisión la función del multímetro como herramienta de diagnóstico de parámetros eléctricos en el cableado e instrumentación."
+      },
+      {
+        "text": "Escribir directamente el código Ladder en la memoria interna del PLC.",
+        "isCorrect": false,
+        "rationale": "La programación de la lógica requiere una computadora con el software de desarrollo correspondiente."
+      },
+      {
+        "text": "Transmitir señales vía satélite hacia los nodos remotos de la mina.",
+        "isCorrect": false,
+        "rationale": "Las transmisiones de larga distancia se ejecutan con antenas, modems o parabólicas de telecomunicación."
+      },
+      {
+        "text": "Controlar automáticamente la ebullición del etanol en las columnas de destilación.",
+        "isCorrect": false,
+        "rationale": "La ebullición del proceso térmico se controla mediante la acción de válvulas modulantes impulsadas por controladores."
+      }
+    ],
+    "hint": "Es un instrumento portátil para verificar magnitudes eléctricas como diferencia de potencial, intensidad y resistencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Según lo expuesto en el curso, ¿cuáles de las siguientes son ventajas estratégicas directas de implementar un sistema SCADA en un proceso industrial o minero? (Selecciona todas las opciones correctas)",
+    "opciones": [
+      {
+        "text": "Permite la supervisión y toma de decisiones operativas en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Aporta visibilidad instantánea del estado de las variables para corregir desviaciones sin demora."
+      },
+      {
+        "text": "Reduce los tiempos de inactividad no planificados al detectar fallas oportunamente.",
+        "isCorrect": true,
+        "rationale": "Genera alertas tempranas para realizar intervenciones preventivas o correctivas inmediatas."
+      },
+      {
+        "text": "Disminuye la exposición de los trabajadores a zonas de riesgo operativo.",
+        "isCorrect": true,
+        "rationale": "Permite operar y supervisar máquinas desde salas de control distantes de entornos de alto riesgo."
+      },
+      {
+        "text": "Almacena datos históricos para análisis de rendimiento y optimización.",
+        "isCorrect": true,
+        "rationale": "Guarda registros continuos que sirven para identificar tendencias y evaluar la eficiencia del proceso."
+      },
+      {
+        "text": "Garantiza que la planta opere a cero costo de consumo de energía eléctrica.",
+        "isCorrect": false,
+        "rationale": "Los motores, servidores y equipos de la planta automatizada continúan requiriendo energía eléctrica para su funcionamiento."
+      }
+    ],
+    "hint": "Piensa en los beneficios relacionados con tiempos de respuesta, eficiencia, seguridad operacional y toma de decisiones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre un sistema SCADA y una cámara de video vigilancia convencional dentro del monitoreo de un proceso industrial?",
+    "opciones": [
+      {
+        "text": "SCADA no solo permite visualizar el estado del proceso en tiempo real, sino también interactuar y controlar activamente los equipos y variables a través de su interconexión con sensores y actuadores.",
+        "isCorrect": true,
+        "rationale": "El sistema SCADA combina la supervisión gráfica con la capacidad de envío de órdenes de control hacia el proceso operativo, superando la función meramente pasiva de observación."
+      },
+      {
+        "text": "Las cámaras de vigilancia requieren cables Ethernet industriales, mientras que los sistemas SCADA operan exclusivamente de forma inalámbrica.",
+        "isCorrect": false,
+        "rationale": "Los sistemas SCADA utilizan de manera preferente conexiones físicas mediante cableado estructurado como Ethernet para garantizar una transmisión de datos robusta y estable."
+      },
+      {
+        "text": "SCADA se limita a registrar imágenes en alta definición de las líneas de producción sin procesar datos numéricos de instrumentación.",
+        "isCorrect": false,
+        "rationale": "El propósito central de SCADA es la adquisición, procesamiento y almacenamiento de variables numéricas y estados de los dispositivos de campo."
+      },
+      {
+        "text": "Las cámaras de vigilancia son capaces de ejecutar lógica de control directo sobre los arrancadores de motores sin requerir un PLC.",
+        "isCorrect": false,
+        "rationale": "Las cámaras de vigilancia no disponen de arquitectura de control discreto ni de salidas físicas para gobernar arrancadores o actuadores industriales."
+      },
+      {
+        "text": "SCADA únicamente recopila datos en modo offline al finalizar la jornada de trabajo para generar reportes estáticos.",
+        "isCorrect": false,
+        "rationale": "Una de las características definitorias de un sistema SCADA es el procesamiento e interacción con el proceso en tiempo real."
+      }
+    ],
+    "hint": "Piensa en el alcance funcional más allá de la simple observación pasiva de una pantalla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro de la arquitectura de supervisión y control en planta, ¿cuáles de los siguientes elementos pertenecen a la capa física e instrumental que interactúa directamente con el proceso?",
+    "opciones": [
+      {
+        "text": "Sensores de temperatura, presión y nivel que convierten variables físicas en señales eléctricas.",
+        "isCorrect": true,
+        "rationale": "Los sensores captan la información del entorno operativo y la transforman en señales analógicas o digitales interpretables por los controladores."
+      },
+      {
+        "text": "Actuadores mecánicos como electroválvulas, motores y bombas que ejecutan acciones físicas sobre el fluido o material.",
+        "isCorrect": true,
+        "rationale": "Los actuadores son los dispositivos finales encagados de recibir las órdenes de control y modificar el estado del proceso operativo."
+      },
+      {
+        "text": "Unidades Terminales Remotas (RTU) instaladas en campo para la adquisición directa de señales.",
+        "isCorrect": true,
+        "rationale": "Las RTU actúan como interfaz de digitalización y enlace de campo entre la instrumentación física y la red de control central."
+      },
+      {
+        "text": "Servidores corporativos para el almacenamiento de datos históricos a largo plazo.",
+        "isCorrect": false,
+        "rationale": "Los servidores corporativos forman parte de la capa superior de gestión y almacenamiento masivo, no de la capa de instrumentación directa de campo."
+      },
+      {
+        "text": "Interfaces web de Business Intelligence para la evaluación de costos de exportación.",
+        "isCorrect": false,
+        "rationale": "Las herramientas de BI pertenecen al nivel estratégico y de gestión administrativa, desconectadas del bucle instrumental de control en tiempo real."
+      }
+    ],
+    "hint": "Identifica los dispositivos físicos que están en contacto directo con las variables de producción o que adquieren sus señales en planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al comparar un Controlador Lógico Programable (PLC) con una pantalla de Interfaz Hombre-Máquina (HMI), ¿qué característica distingue al PLC?",
+    "opciones": [
+      {
+        "text": "El PLC carece de pantalla gráfica propia y se centra en ejecutar la lógica de control programada procesando entradas y salidas físicas.",
+        "isCorrect": true,
+        "rationale": "El PLC opera como una unidad de procesamiento industrial sin interfaz gráfica integrada, ejecutando rutinas lógicas a alta velocidad."
+      },
+      {
+        "text": "El PLC es un software de nivel gerencial diseñado exclusivamente para presentar gráficos de tendencias en oficinas corporativas.",
+        "isCorrect": false,
+        "rationale": "El PLC es un dispositivo de hardware robusto de campo, no un paquete de software gráfico para análisis administrativo."
+      },
+      {
+        "text": "La HMI elimina la necesidad de contar con procesadores de control físico o tarjetas de entradas y salidas en la planta.",
+        "isCorrect": false,
+        "rationale": "La HMI requiere obligatoriamente del PLC o controlador subyacente para recibir datos y enviar comandos hacia los dispositivos reales."
+      },
+      {
+        "text": "El PLC solo puede comunicarse de forma satelital, imposibilitando la conexión por cableado estructurado.",
+        "isCorrect": false,
+        "rationale": "Los PLC utilizan primordialmente puertos de comunicación cableados industriales como Ethernet industrial, Profibus o Modbus."
+      },
+      {
+        "text": "La HMI es el único elemento capaz de enviar corriente eléctrica directa para mover un motor de media tensión.",
+        "isCorrect": false,
+        "rationale": "La HMI transmite únicamente comandos lógicos digitales al PLC, siendo este último o sus relés los que gobiernan los contactores del motor."
+      }
+    ],
+    "hint": "Considera qué dispositivo realiza el procesamiento de algoritmos e hilos de control en comparación con la representación gráfica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de una Unidad Terminal Remota (RTU) dentro de una arquitectura SCADA desplegada en instalaciones geográficamente extensas?",
+    "opciones": [
+      {
+        "text": "Recopilar datos de sensores distantes, codificar la información y transmitirla a la estación maestra, además de ejecutar comandos remotos.",
+        "isCorrect": true,
+        "rationale": "Las RTU están diseñadas para tolerar entornos remotos hostiles, concentrando señales locales para enviarlas eficientemente a la estación central de supervisión."
+      },
+      {
+        "text": "Suministrar la energía eléctrica trifásica requerida por los motores de gran potencia en la planta concentradora.",
+        "isCorrect": false,
+        "rationale": "La RTU es un equipo electrónico de bajo consumo para procesamiento de señales, no una fuente de alimentación de potencia industrial."
+      },
+      {
+        "text": "Renderizar animaciones 3D en alta resolución para el entretenimiento de los operadores en la sala de control.",
+        "isCorrect": false,
+        "rationale": "Las RTU no procesan ni muestran gráficos complejos; su tarea es el tratamiento y envío estructurado de datos numéricos y discretos."
+      },
+      {
+        "text": "Sustituir por completo la base de datos central eliminando la necesidad de servidores de almacenamiento en la empresa.",
+        "isCorrect": false,
+        "rationale": "Las RTU disponen de memoria limitada para almacenamiento temporal en caso de pérdida de enlace, no para el histórico consolidado."
+      },
+      {
+        "text": "Interrumpir el paso de fluidos mediante barreras mecánicas accionadas manualmente sin automatización.",
+        "isCorrect": false,
+        "rationale": "La RTU es un elemento de control electrónico automatizado que actúa mediante comandos digitales hacia actuadores, no de forma manual."
+      }
+    ],
+    "hint": "Analiza cómo se gestionan los datos en emplazamientos lejanos donde la conectividad directa de cada sensor es inviable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué beneficios operativos y de seguridad aporta la implementación de un sistema SCADA en la supervisión de subestaciones eléctricas y redes de distribución de agua?",
+    "opciones": [
+      {
+        "text": "Permite la detección rápida de fallas o fugas, reduciendo significativamente los tiempos de localización y respuesta.",
+        "isCorrect": true,
+        "rationale": "El monitoreo en tiempo real resalta desviaciones en presiones o voltajes, guiando de inmediato al personal de mantenimiento al punto exacto."
+      },
+      {
+        "text": "Reduce la exposición directa del personal técnico a zonas de alto riesgo operativo como líneas de media y alta tensión.",
+        "isCorrect": true,
+        "rationale": "Al poder maniobrar y monitorear desde una sala de control distante, se minimiza el riesgo de arcos eléctricos o accidentes en campo."
+      },
+      {
+        "text": "Facilita la optimización del bombeo y el control de presiones según el nivel de almacenamiento registrado continuamente.",
+        "isCorrect": true,
+        "rationale": "La adquisición constante de datos de nivel permite automatizar el encendido de bombas garantizando la continuidad del suministro."
+      },
+      {
+        "text": "Sustituye de forma absoluta la necesidad de efectuar mantenimientos o calibraciones físicas en los instrumentos.",
+        "isCorrect": false,
+        "rationale": "Aunque el sistema SCADA diagnostica desviaciones, los sensores e instrumentos físicos requieren mantenimiento y calibración periódica obligatoria."
+      },
+      {
+        "text": "Garantiza la anulación completa del consumo de energía eléctrica de la infraestructura.",
+        "isCorrect": false,
+        "rationale": "SCADA optimiza el uso energético de los equipos, pero no elimina la demanda eléctrica inherente al funcionamiento de las máquinas."
+      }
+    ],
+    "hint": "Considera tanto la gestión eficiente de los recursos hidráulicos y eléctricos como la protección de la integridad del trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de las redes de comunicación industrial mencionadas en el curso, ¿qué ventaja ofrece el uso del protocolo Profibus o Ethernet Industrial sobre conexiones no estandarizadas?",
+    "opciones": [
+      {
+        "text": "Aseguran determinismo, alta confiabilidad e interoperabilidad en la transmisión de datos entre PLC, sensores y el SCADA.",
+        "isCorrect": true,
+        "rationale": "Los protocolos industriales estandarizados garantizan que los paquetes de datos de control crítico lleguen dentro de tiempos estrictamente delimitados y sin interferencias."
+      },
+      {
+        "text": "Permiten transmitir datos sin necesidad de utilizar ningún tipo de soporte físico ni antenas emisoras.",
+        "isCorrect": false,
+        "rationale": "Tanto Profibus como Ethernet Industrial requieren medios de transmisión definidos, sean cables de par trenzado, fibra óptica o infraestructura inalámbrica regulada."
+      },
+      {
+        "text": "Eliminan la necesidad de programar direcciones de red o parámetros de comunicación en los equipos.",
+        "isCorrect": false,
+        "rationale": "La configuración de direcciones de nodo y velocidades de transmisión es indispensable para el correcto direccionamiento en estas redes."
+      },
+      {
+        "text": "Multiplican el voltaje de alimentación de los sensores para evitar el uso de fuentes de poder externas.",
+        "isCorrect": false,
+        "rationale": "Los protocolos de comunicación gestionan el intercambio de datos, no el suministro de potencia eléctrica a los instrumentos de alta carga."
+      },
+      {
+        "text": "Reducen a cero el peso de los programas de software instalados en las computadoras de control.",
+        "isCorrect": false,
+        "rationale": "Los protocolos no alteran el tamaño en disco ni la carga de memoria de las aplicaciones de software SCADA o HMI."
+      }
+    ],
+    "hint": "Piensa en la necesidad de que los datos de control crítico lleguen a tiempo y sin errores entre marcas distintas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la Minería 4.0, ¿en qué se diferencia conceptualmente el mantenimiento predictivo del mantenimiento preventivo tradicional?",
+    "opciones": [
+      {
+        "text": "El predictivo evalúa el estado real del equipo mediante sensores para anticipar fallas, mientras que el preventivo se rige por intervalos fijos de tiempo o kilometraje.",
+        "isCorrect": true,
+        "rationale": "El mantenimiento predictivo utiliza datos analíticos en tiempo real para intervenir solo cuando la condición del activo lo requiere, optimizando costos."
+      },
+      {
+        "text": "El preventivo utiliza algoritmos de analítica avanzada, mientras que el predictivo se basa únicamente en inspecciones visuales manuales.",
+        "isCorrect": false,
+        "rationale": "Es el mantenimiento predictivo el que requiere sensores de condición y modelos de análisis de datos para proyectar el momento de fallo."
+      },
+      {
+        "text": "El predictivo se aplica exclusivamente a sistemas informáticos, mientras que el preventivo es exclusivo para componentes mecánicos.",
+        "isCorrect": false,
+        "rationale": "Ambas estrategias de mantenimiento están enfocadas en la preservación de activos físicos y maquinaria operativa en la industria."
+      },
+      {
+        "text": "El preventivo asegura la eliminación total de paradas de planta, mientras que el predictivo provoca interrupciones no programadas.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento preventivo no evita fallas imprevistas entre intervalos, mientras que el predictivo busca precisamente planificar las paradas con antelación."
+      },
+      {
+        "text": "Ambos métodos ejecutan exactamente la misma lógica operacional sin diferencias en la recolección de datos.",
+        "isCorrect": false,
+        "rationale": "Existen diferencias fundamentales entre seguir un calendario estático y monitorear la salud real del equipo mediante sensores continuos."
+      }
+    ],
+    "hint": "Reflexiona sobre la diferencia entre basar una intervención en el reloj/manual o en la medición del desgaste en tiempo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Durante el proceso agroindustrial de la caña de azúcar para la fabricación de azúcar y etanol, ¿cuáles de los siguientes elementos constituyen subproductos o aprovechamientos energéticos clave?",
+    "opciones": [
+      {
+        "text": "El bagazo, aprovechado como biomasa de alto poder calórico en calderas para generar vapor y energía eléctrica.",
+        "isCorrect": true,
+        "rationale": "El residuo fibroso de la molienda se quema en calderas para promover la autosuficiencia energética de la planta industrial."
+      },
+      {
+        "text": "La melasa o miel residual, utilizada como fuente de carbohidratos en el proceso de fermentación para la obtención de alcohol.",
+        "isCorrect": true,
+        "rationale": "Los azúcares no cristalizables contenidos en la miel se derivan a los tanques de fermentación para transformarse en etanol mediante levaduras."
+      },
+      {
+        "text": "El bioetanol destilado, empleado como combustible renovable o insumo químico industrial.",
+        "isCorrect": true,
+        "rationale": "El alcohol obtenido de la destilación del mosto fermentado representa un producto de alto valor comercial para el sector energético e industrial."
+      },
+      {
+        "text": "La roca caliza triturada, producida directamente por el choque de los tallos en la molienda.",
+        "isCorrect": false,
+        "rationale": "La caña de azúcar es un compuesto orgánico; no genera minerales ni rocas calizas durante su trituración mecánica."
+      },
+      {
+        "text": "El jugo bruto sin clarificar, el cual se envasa inmediatamente para consumo humano sin tratamiento de impurezas.",
+        "isCorrect": false,
+        "rationale": "El jugo bruto requiere procesos de clarificación y evaporación para eliminar bagacillo y sólidos antes de cualquier uso comercial."
+      }
+    ],
+    "hint": "Considera qué materiales derivados de la caña no se convierten en azúcar cristalizada, pero alimentan la caldera o las columnas de destilación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la etapa de flotación dentro de una planta concentradora de minerales, ¿qué papel desempeña la supervisión por SCADA en la optimización del proceso?",
+    "opciones": [
+      {
+        "text": "Controlar de forma continua el caudal de aire, el nivel de espuma y la adición de reactivos químicos para maximizar la recuperación del mineral.",
+        "isCorrect": true,
+        "rationale": "El control de estas variables en las celdas de flotación es determinante para asegurar que las partículas de mineral útil se adhieran eficientemente a las burbujas."
+      },
+      {
+        "text": "Elevar la temperatura de la pulpa hasta el punto de fusión del metal dentro de las celdas.",
+        "isCorrect": false,
+        "rationale": "La flotación es un proceso fisicoquímico en medio acuoso a temperaturas moderadas, no un proceso pirometalúrgico de fusión."
+      },
+      {
+        "text": "Reemplazar el uso de reactivos espumantes mediante el incremento irrestricto de la velocidad del molino de bolas.",
+        "isCorrect": false,
+        "rationale": "La flotación requiere químicamente de reactivos colectores y espumantes, los cuales no pueden sustituirse por acciones mecánicas de la molienda."
+      },
+      {
+        "text": "Detener el flujo de agua en la planta para secar el mineral antes de ingresarlo a los clasificadores.",
+        "isCorrect": false,
+        "rationale": "La flotación requiere necesariamente un medio acuoso (pulpa) con una densidad y caudal controlados para la separación de especies."
+      },
+      {
+        "text": "Invertir la polaridad magnética del estaño para transformarlo en oro dentro del circuito.",
+        "isCorrect": false,
+        "rationale": "Los procesos industriales de flotación separan minerales existentes mediante propiedades superficiales, sin alterar la naturaleza química de los elementos."
+      }
+    ],
+    "hint": "Recuerda las variables fisicoquímicas que regulan la formación y estabilidad de las burbujas que arrastran el mineral valioso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En las operaciones de minería subterránea, ¿de qué manera el sistema SCADA incrementa la seguridad en las galerías mediante la gestión de ventilación?",
+    "opciones": [
+      {
+        "text": "Procesa lecturas de sensores de gases (como $CO$ y metano) y ajusta automáticamente la potencia y dirección de los ventiladores principales.",
+        "isCorrect": true,
+        "rationale": "El monitoreo continuo de la calidad del aire permite acelerar o redirigir el flujo de ventilación para diluir atmósferas peligrosas antes de que afecten al personal."
+      },
+      {
+        "text": "Incrementa la humedad relativa al $100\\%$ para precipitar mecánicamente todo tipo de gas pesado.",
+        "isCorrect": false,
+        "rationale": "Saturar el ambiente con humedad no elimina gases tóxicos o inflamables como el monóxido de carbono o el metano."
+      },
+      {
+        "text": "Sella herméticamente los accesos a los socavones cuando la concentración de oxígeno supera los niveles normales.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la ventilación automatizada es inyectar aire fresco rico en oxígeno, no bloquear las salidas del personal."
+      },
+      {
+        "text": "Desconecta los sensores ambientales cuando detecta la presencia de maquinaria pesada diésel.",
+        "isCorrect": false,
+        "rationale": "La maquinaria diésel genera emisiones tóxicas, lo que exige intensificar la supervisión de los sensores en lugar de apagarlos."
+      },
+      {
+        "text": "Sustituye la necesidad de utilizar detectores portátiles de gas mediante la emisión de señales de radiofrecuencia.",
+        "isCorrect": false,
+        "rationale": "Los sensores fijos del SCADA complementan la seguridad, pero no reemplazan los detectores personales de atmósfera en los frentes de avance."
+      }
+    ],
+    "hint": "Piensa en el mecanismo automatizado que reacciona ante la acumulación de contaminantes atmosféricos bajo tierra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes características corresponden a los pilares de la Industria 4.0 aplicados a los entornos de manufactura y extracción?",
+    "opciones": [
+      {
+        "text": "Integración del Internet Industrial de las Cosas (IIoT) para la interconexión masiva de máquinas y sensores.",
+        "isCorrect": true,
+        "rationale": "El IIoT facilita la transferencia continua de datos entre activos de planta y plataformas analíticas superiores."
+      },
+      {
+        "text": "Uso de sistemas ciberfísicos que enlazan operaciones mecánicas con modelos de procesamiento digital descentralizado.",
+        "isCorrect": true,
+        "rationale": "Los sistemas ciberfísicos supervisan el proceso físico y crean una réplica o control digital para la toma autónoma de decisiones."
+      },
+      {
+        "text": "Aplicación de analítica de Big Data para procesar altos volúmenes de datos operativos en tiempo real.",
+        "isCorrect": true,
+        "rationale": "El análisis masivo de datos revela patrones de rendimiento, fallas emergentes y oportunidades de optimización operativa."
+      },
+      {
+        "text": "Eliminación estricta de cualquier tipo de protocolo de ciberseguridad para acelerar la red.",
+        "isCorrect": false,
+        "rationale": "La alta interconexión de la Industria 4.0 exige reforzar la ciberseguridad para proteger la planta contra ciberataques."
+      },
+      {
+        "text": "Prohibición del uso de lógica programada o algoritmos de aprendizaje automático en las salas de control.",
+        "isCorrect": false,
+        "rationale": "La automatización inteligente y el machine learning son componentes centrales del desarrollo de la Industria 4.0."
+      }
+    ],
+    "hint": "Identifica los conceptos que impulsan la digitalización, la interconexión de activos y el análisis masivo de información.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al emplear la herramienta de Inteligencia Artificial Dixi en el análisis de proyectos, ¿qué beneficio ofrece la activación del modo de razonamiento profundo (\"pensar\")?",
+    "opciones": [
+      {
+        "text": "Ejecuta un procesamiento analítico interno previo, entregando respuestas más estructuradas, detalladas y fundamentadas.",
+        "isCorrect": true,
+        "rationale": "El modo de razonamiento profundo dedica ciclos de cómputo a evaluar las restricciones del prompt antes de redactar la solución final."
+      },
+      {
+        "text": "Conecta automáticamente la computadora al puerto de programación del PLC en planta para modificar el código en vivo.",
+        "isCorrect": false,
+        "rationale": "Dixi es un modelo de lenguaje y consulta de software, sin capacidad de enlace físico o eléctrico con el hardware industrial."
+      },
+      {
+        "text": "Garantiza que el usuario no necesite revisar ni validar la veracidad de los datos técnicos provistos.",
+        "isCorrect": false,
+        "rationale": "Todo resultado generado por modelos de IA requiere la supervisión y validación de un profesional técnico calificado."
+      },
+      {
+        "text": "Omite el procesamiento de normativas para entregar respuestas inmediatas en menos de un milisegundo.",
+        "isCorrect": false,
+        "rationale": "El modo de razonamiento toma más tiempo de procesamiento precisamente porque analiza a fondo las variables del problema."
+      },
+      {
+        "text": "Desactiva los sensores analógicos de campo mientras se genera el texto explicativo.",
+        "isCorrect": false,
+        "rationale": "Las herramientas de consulta en la nube no interactúan con el funcionamiento operativo de los instrumentos en planta."
+      }
+    ],
+    "hint": "Piensa en cómo influye dedicar tiempo adicional de procesamiento lógico antes de ofrecer una respuesta técnica compleja.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la etapa de análisis de requisitos es considerada un paso crítico en la planificación de un proyecto de automatización SCADA?",
+    "opciones": [
+      {
+        "text": "Permite definir el alcance, documentar las necesidades de instrumentación y evaluar las restricciones técnicas y económicas del proyecto.",
+        "isCorrect": true,
+        "rationale": "Un análisis riguroso de requisitos evita reestructuraciones costosas, asegurando que la arquitectura seleccionada responda a las metas reales de la planta."
+      },
+      {
+        "text": "Elimina por completo la necesidad de adquirir tarjetas de entradas y salidas físicas para los controladores.",
+        "isCorrect": false,
+        "rationale": "El análisis de requisitos sirve para especificar el hardware necesario, no para prescindir de la instrumentación esencial."
+      },
+      {
+        "text": "Asegura que la planta industrial pueda funcionar de manera indefinida sin consumo de energía eléctrica.",
+        "isCorrect": false,
+        "rationale": "Ninguna fase de diseño o análisis puede eximir a un proceso industrial de sus requerimientos energéticos fundamentales."
+      },
+      {
+        "text": "Permite omitir la fase de pruebas de comunicación antes de la puesta en marcha definitiva.",
+        "isCorrect": false,
+        "rationale": "El análisis de requisitos, por el contrario, establece los criterios con los cuales se deberán validar las pruebas futuras."
+      },
+      {
+        "text": "Garantiza la exención legal del cumplimiento de normas de seguridad e higiene industrial.",
+        "isCorrect": false,
+        "rationale": "La definición de requisitos exige alinear el sistema con los estándares de seguridad vigentes, nunca omitirlos."
+      }
+    ],
+    "hint": "Reflexiona sobre la importancia de sentar bases claras en cuanto a objetivos, restricciones y componentes antes de invertir en software o hardware.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al seleccionar la plataforma de software SCADA para un proceso industrial en expansión, ¿a qué se refiere el término \"escalabilidad\"?",
+    "opciones": [
+      {
+        "text": "A la capacidad del software de integrar nuevos nodos, variables e instrumentos sin requerir el reemplazo total de la plataforma existente.",
+        "isCorrect": true,
+        "rationale": "Una plataforma escalable permite añadir licencias, controladores y pantallas a medida que la planta crece, protegiendo la inversión inicial."
+      },
+      {
+        "text": "A la propiedad física del software de funcionar en computadoras instaladas a altitudes mayores a los $4000\\text{ m s. n. m.}$",
+        "isCorrect": false,
+        "rationale": "La resistencia a condiciones geográficas críticas depende del hardware de procesamiento, no del atributo de escalabilidad del software."
+      },
+      {
+        "text": "A la velocidad fija a la que se refrescan los gráficos en una pantalla HMI de 7 pulgadas.",
+        "isCorrect": false,
+        "rationale": "La tasa de refresco gráfico es un parámetro de rendimiento y tasa de cuadros, no de la arquitectura escalar del sistema."
+      },
+      {
+        "text": "A la restricción que impide conectar más de un PLC a la red de supervisión central.",
+        "isCorrect": false,
+        "rationale": "La restricción de conectividad es un límite del sistema; la escalabilidad busca precisamente la expansión de enlaces."
+      },
+      {
+        "text": "Al nivel de tolerancia térmica que soporta el disco duro del servidor de aplicaciones.",
+        "isCorrect": false,
+        "rationale": "Las especificaciones térmicas corresponden al grado de protección y diseño electrónico del hardware industrial."
+      }
+    ],
+    "hint": "Piensa en la facilidad con la que el sistema informático se adapta al crecimiento futuro de la planta de producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la estructuración jerárquica de un sistema de control, ¿cuáles de las siguientes premisas definen la relación correcta entre el SCADA y la HMI local?",
+    "opciones": [
+      {
+        "text": "La HMI se ubica comúnmente a pie de máquina para la interacción táctil directa con un proceso específico.",
+        "isCorrect": true,
+        "rationale": "Las HMI locales permiten al operador en planta maniobrar o calibrar la celda de trabajo sin acudir a la sala de control."
+      },
+      {
+        "text": "El sistema SCADA centraliza la adquisición de datos de múltiples procesos o de toda la planta industrial.",
+        "isCorrect": true,
+        "rationale": "SCADA integra la información distribuida de diversas áreas para ofrecer una visión global del estado operativo de la empresa."
+      },
+      {
+        "text": "Una HMI puede actuar como un nodo integrado dentro del ecosistema SCADA, pero el SCADA no se reduce a una HMI local.",
+        "isCorrect": true,
+        "rationale": "La HMI es un componente de visualización sectorial, mientras que el SCADA abarca la gestión, historización y control global de la infraestructura."
+      },
+      {
+        "text": "La HMI prescinde del uso de controladores PLC, gestionando directamente la alta tensión de la fábrica.",
+        "isCorrect": false,
+        "rationale": "La HMI es una interfaz de visualización que requiere del PLC para recibir datos y ejecutar acciones operativas."
+      },
+      {
+        "text": "El SCADA solo procesa datos analógicos, dejando las señales digitales exclusivamente a la HMI.",
+        "isCorrect": false,
+        "rationale": "Tanto la HMI como el SCADA adquieren y procesan de forma simultánea señales analógicas y digitales del proceso."
+      }
+    ],
+    "hint": "Diferencia el alcance de la interfaz de usuario en la máquina individual frente a la centralización de datos en toda la planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del diseño de la arquitectura de red para un sistema SCADA, ¿cuál de las siguientes medidas responde a un criterio de ciberseguridad industrial indispensable?",
+    "opciones": [
+      {
+        "text": "Segmentar la red mediante firewalls industriales, restringir accesos por roles y monitorear la presencia de intrusos.",
+        "isCorrect": true,
+        "rationale": "La segmentación aísla la red de control crítico (OT) de la red administrativa (IT), conteniendo vulnerabilidades o accesos no autorizados."
+      },
+      {
+        "text": "Publicar las claves de acceso de administrador en las pantallas HMI para agilizar el trabajo operativo.",
+        "isCorrect": false,
+        "rationale": "Exponer credenciales compromete gravemente la seguridad del sistema, permitiendo la alteración no autorizada de parámetros críticos."
+      },
+      {
+        "text": "Configurar la red de los PLC con señal Wi-Fi abierta sin contraseña para permitir la conexión de visitantes.",
+        "isCorrect": false,
+        "rationale": "Las redes de control jamás deben dejarse abiertas, ya que cualquier dispositivo no verificado podría inyectar comandos maliciosos."
+      },
+      {
+        "text": "Deshabilitar los registros de eventos e historiales para evitar el consumo de espacio en el servidor.",
+        "isCorrect": false,
+        "rationale": "Los registros de eventos e historiales son esenciales para realizar auditorías de seguridad y análisis forense ante fallos."
+      },
+      {
+        "text": "Conectar directamente los controladores de seguridad a servidores públicos de descarga de archivos sin aislamiento.",
+        "isCorrect": false,
+        "rationale": "Exponer los controladores de seguridad a internet sin protección adecuada incrementa la vulnerabilidad ante ciberataques."
+      }
+    ],
+    "hint": "Considera la necesidad de aislar y proteger la red de operaciones (OT) frente a intromisiones o manipulaciones no autorizadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para asegurar la disponibilidad operativa ininterrumpida (24/7) en plantas industriales críticas, ¿qué esquema de arquitectura de servidores SCADA es recomendado?",
+    "opciones": [
+      {
+        "text": "Implementar un servidor primario y uno secundario redundante en modo de conmutación automática (failover).",
+        "isCorrect": true,
+        "rationale": "La redundancia garantiza que si el servidor principal sufre una falla, el secundario asuma el control de inmediato sin pérdida de datos."
+      },
+      {
+        "text": "Apagar los servidores durante los turnos nocturnos para prolongar la vida útil de los procesadores.",
+        "isCorrect": false,
+        "rationale": "Las plantas industriales continuas exigen supervisión activa las 24 horas; apagar servidores deja el proceso a ciegas."
+      },
+      {
+        "text": "Centralizar toda la operación en una única computadora de escritorio comercial sin respaldos de información.",
+        "isCorrect": false,
+        "rationale": "Un punto único de falla comercial no garantiza la disponibilidad ni la tolerancia a fallos exigida en la industria crítica."
+      },
+      {
+        "text": "Transferir manualmente los datos del proceso en memorias USB al final de cada jornada.",
+        "isCorrect": false,
+        "rationale": "La transferencia manual no ofrece tiempo real ni disponibilidad continua, introduciendo además riesgos de seguridad por malware."
+      },
+      {
+        "text": "Eliminar la base de datos e imprimir en papel las variables enviadas por los sensores cada segundo.",
+        "isCorrect": false,
+        "rationale": "Imprimir lecturas continuas genera volúmenes inmanejables de papel y no permite el control ni la conmutación automática de la red."
+      }
+    ],
+    "hint": "Piensa en el mecanismo que evita que una falla de hardware en la computadora principal detenga el monitoreo de la planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué ventajas aporta la integración de subsistemas de seguridad y respuesta a emergencias (como detección de incendios o fugas) en la plataforma SCADA?",
+    "opciones": [
+      {
+        "text": "Permite la ejecución inmediata de secuencias automáticas de seguridad, como la parada de emergencia o el cierre de válvulas de combustible.",
+        "isCorrect": true,
+        "rationale": "Al recibir la señal de alarma, el SCADA puede ordenar interrupciones lógicas sobre el proceso para mitigar la propagación del peligro."
+      },
+      {
+        "text": "Facilita la ubicación exacta del evento crítico sobre los gráficos del sinóptico de planta para orientar a las brigadas de respuesta.",
+        "isCorrect": true,
+        "rationale": "La representación visual destaca la zona bajo emergencia, acelerando la toma de decisiones del personal de rescate o mantenimiento."
+      },
+      {
+        "text": "Consolida registros auditables del evento, los tiempos de disparo de las alarmas y las acciones tomadas por el operador.",
+        "isCorrect": true,
+        "rationale": "El almacenamiento de la cronología de eventos es fundamental para realizar el análisis causa-raíz y cumplir con las auditorías de seguridad."
+      },
+      {
+        "text": "Aumenta la velocidad de consumo de insumos químicos en las celdas durante la evacuación.",
+        "isCorrect": false,
+        "rationale": "Ante una emergencia, el objetivo del sistema es llevar el proceso a un estado seguro, no incrementar el consumo de reactivos."
+      },
+      {
+        "text": "Exime legalmente a la empresa de realizar capacitaciones y simulacros periódicos con el personal humano.",
+        "isCorrect": false,
+        "rationale": "La automatización complementa la seguridad, pero no reemplaza las normativas de salud en el trabajo ni los simulacros obligatorios."
+      }
+    ],
+    "hint": "Analiza las acciones automáticas de mitigación, el apoyo gráfico para la respuesta rápida y la generación de trazabilidad del incidente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la configuración de instrumentación analógica para sistemas industriales, ¿cuál es el rango estándar de corriente continua más utilizado por los sensores para transmitir señales de campo?",
+    "opciones": [
+      {
+        "text": "De $4\\text{ mA}$ a $20\\text{ mA}$.",
+        "isCorrect": true,
+        "rationale": "El estándar de $4\\text{ mA}$ a $20\\text{ mA}$ es ampliamente utilizado porque permite detectar roturas de cable (cuando la señal cae a $0\\text{ mA}$) y es inmune a caídas de voltaje."
+      },
+      {
+        "text": "De $0\\text{ A}$ a $100\\text{ A}$.",
+        "isCorrect": false,
+        "rationale": "Valores de hasta $100\\text{ A}$ representan niveles de alta potencia para motores, no señales de instrumentación de baja corriente."
+      },
+      {
+        "text": "De $12\\text{ V}$ a $220\\text{ V}$.",
+        "isCorrect": false,
+        "rationale": "El rango mencionado corresponde a voltajes de alimentación en corriente alterna o continua, no a la señal en lazo de corriente estándar."
+      },
+      {
+        "text": "De $1\\text{ mA}$ a $5\\text{ mA}$.",
+        "isCorrect": false,
+        "rationale": "Aparenta ser un rango bajo, pero la norma de la industria de procesos establece como estándar principal el lazo de $4-20\\text{ mA}$."
+      },
+      {
+        "text": "De $50\\text{ mA}$ a $500\\text{ mA}$.",
+        "isCorrect": false,
+        "rationale": "Corrientes superiores a $20\\text{ mA}$ incrementarían el consumo de potencia de las tarjetas de entrada del PLC sin aportar inmunidad adicional al ruido."
+      }
+    ],
+    "hint": "Recuerda cuál es el lazo de corriente estándar en instrumentación cuya elevación del cero ($4\\text{ mA}$) sirve para detectar cables rotos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Según el estándar internacional IEC 61131-3, ¿cuáles de los siguientes lenguajes se reconocen formalmente para la programación de Controladores Lógicos Programables (PLC)?",
+    "opciones": [
+      {
+        "text": "Diagrama de Lógica de Escalera (Ladder Diagram - LD).",
+        "isCorrect": true,
+        "rationale": "Es el lenguaje gráfico basado en esquemas de contactos eléctricos y relés más difundido en el entorno industrial."
+      },
+      {
+        "text": "Texto Estructurado (Structured Text - ST).",
+        "isCorrect": true,
+        "rationale": "Es un lenguaje de alto nivel sintácticamente similar a Pascal, idóneo para cálculos matemáticos y algoritmos complejos."
+      },
+      {
+        "text": "Diagrama de Bloques de Funciones (Function Block Diagram - FBD).",
+        "isCorrect": true,
+        "rationale": "Es un lenguaje gráfico que utiliza bloques lógicos interconectados para representar el flujo de señales de control."
+      },
+      {
+        "text": "Lenguaje de marcado de hipertexto (HTML5) para páginas estáticas.",
+        "isCorrect": false,
+        "rationale": "HTML5 es un lenguaje para diseño de páginas web, no un lenguaje normado por IEC 61131-3 para la lógica de control del PLC."
+      },
+      {
+        "text": "Código máquina binario sin herramientas de traducción o compilación.",
+        "isCorrect": false,
+        "rationale": "El estándar IEC define lenguajes simbólicos de alto y bajo nivel, no la escritura directa de ceros y unos en memoria."
+      }
+    ],
+    "hint": "Selecciona los entornos de programación normados que incluyen tanto formatos gráficos basales como texto estructurado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Además de ejecutar la lógica de control en tiempo real, ¿qué utilidad aporta la integración de scripts y bases de datos relacionales en un sistema SCADA?",
+    "opciones": [
+      {
+        "text": "Permite la generación de reportes consolidados, trazabilidad de lotes de producción y exportación de datos para análisis operativos.",
+        "isCorrect": true,
+        "rationale": "Los scripts y el almacenamiento relacional facilitan la conversión de datos crudos de campo en informes estructurados para la gestión."
+      },
+      {
+        "text": "Sustituye físicamente a las tarjetas de entradas y salidas analógicas conectadas a los instrumentos.",
+        "isCorrect": false,
+        "rationale": "El procesamiento informático de datos no elimina la necesidad de hardware para convertir magnitudes físicas en señales digitales."
+      },
+      {
+        "text": "Fuerza la reducción de la frecuencia del procesador del servidor para evitar el consumo eléctrico.",
+        "isCorrect": false,
+        "rationale": "Los scripts se ejecutan como tareas de software que demandan recursos del procesador, no para reducir su velocidad operacional."
+      },
+      {
+        "text": "Impide que los ingenieros de mantenimiento accedan a las pantallas de diagnóstico del sistema.",
+        "isCorrect": false,
+        "rationale": "El objetivo de generar reportes es precisamente brindar información clara para optimizar el diagnóstico de los ingenieros."
+      },
+      {
+        "text": "Transforma automáticamente las señales de los PLC en transmisiones de radio de entretenimiento.",
+        "isCorrect": false,
+        "rationale": "La integración de datos en SCADA busca el análisis industrial, no la conversión de protocolos en señales de difusión pública."
+      }
+    ],
+    "hint": "Piensa en el valor de procesar la información almacenada para generar reportes, balances y trazabilidad de lotes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la revisión de herramientas de Inteligencia Artificial para la investigación técnica, ¿qué ventaja operativa ofrece Perplexity frente a otros modelos generativos convencionales?",
+    "opciones": [
+      {
+        "text": "Aporta citas explícitas con referencias web directas a las fuentes de donde obtiene la información técnica.",
+        "isCorrect": true,
+        "rationale": "Perplexity combina la búsqueda en la web con la generación de texto, respaldando sus afirmaciones con enlaces verificables."
+      },
+      {
+        "text": "Sustituye el uso de multímetros al medir la corriente eléctrica enviando comandos por el cable de red.",
+        "isCorrect": false,
+        "rationale": "Ninguna herramienta de software en la nube realiza mediciones de magnitudes eléctricas directas en el cableado de la planta."
+      },
+      {
+        "text": "Repara automáticamente las tarjetas electrónicas dañadas dentro del tablero eléctrico.",
+        "isCorrect": false,
+        "rationale": "La reparación de activos físicos requiere la intervención técnica de personal capacitado en el taller o campo."
+      },
+      {
+        "text": "Prescinde del uso de protocolos de red para enviar datos a los servidores centrales.",
+        "isCorrect": false,
+        "rationale": "El intercambio de datos exige normas y protocolos definidos, independientemente de la herramienta de IA utilizada en la consulta."
+      },
+      {
+        "text": "Funciona sin conexión a la red eléctrica o baterías mediante enlaces cuánticos.",
+        "isCorrect": false,
+        "rationale": "Perplexity es una aplicación basada en servidores informáticos que requieren energía y conectividad a internet."
+      }
+    ],
+    "hint": "Considera la capacidad de validar la veracidad de los datos técnicos mediante la comprobación de la fuente citada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso práctico de la EPS Moquegua expuesto en el curso, ¿qué acción remota ejecutada desde el centro de control SCADA incrementa la eficiencia ante la rotura de una tubería en la red de agua?",
+    "opciones": [
+      {
+        "text": "La detección mediante alarmas críticas y el cierre inmediato de electroválvulas sectoriales para aislar la fuga de agua.",
+        "isCorrect": true,
+        "rationale": "El control remoto evita el traslado de personal físico hasta la válvula de campo, reduciendo las pérdidas de agua e impacto en la red."
+      },
+      {
+        "text": "El apagado definitivo de los sensores de nivel de todos los reservorios de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Ante una fuga, se requiere aislar la tubería afectada, manteniendo el monitoreo continuo de los tanques restantes."
+      },
+      {
+        "text": "El incremento de la velocidad de las bombas para compensar la fuga inyectando mayor caudal a la rotura.",
+        "isCorrect": false,
+        "rationale": "Aumentar el bombeo sobre una tubería rota incrementa el volumen de agua derramada y el riesgo de daños estructurales."
+      },
+      {
+        "text": "El despacho inmediato de personal técnico para realizar el monitoreo manual a pie de tanque durante el incidente.",
+        "isCorrect": false,
+        "rationale": "La ventaja central del SCADA en el caso presentado es evitar el desplazamiento físico para aislar el tramo dañado."
+      },
+      {
+        "text": "La eliminación de las alertas visuales en las pantallas para no alarmar a la sala de control.",
+        "isCorrect": false,
+        "rationale": "El sistema SCADA genera alarmas de colores según la gravedad del evento para asegurar una atención prioritaria del operador."
+      }
+    ],
+    "hint": "Recuerda la capacidad operativa mencionada en la entrevista para actuar sobre los elementos de corte desde la sala principal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué funciones cumplen los actuadores, válvulas reguladoras y motores dentro del lazo cerrado de control de un proceso automático?",
+    "opciones": [
+      {
+        "text": "Recibir señales de control emitidas por los PLC o el SCADA para modificar variables físicas en el proceso.",
+        "isCorrect": true,
+        "rationale": "Los actuadores transforman la señal lógica o eléctrica enviada por el sistema en un cambio físico concreto en el entorno."
+      },
+      {
+        "text": "Proporcionar la energía o fuerza necesaria (neumática, hidráulica o eléctrica) para mover el elemento final de control.",
+        "isCorrect": true,
+        "rationale": "Los actuadores convierten la energía suministrada en movimiento mecánico o variación del grado de apertura de un flujo."
+      },
+      {
+        "text": "Ajustar dinámicamente variables operativas como caudales, presiones o posiciones mecánicas de acuerdo al punto de consigna (setpoint).",
+        "isCorrect": true,
+        "rationale": "La regulación continua ejercida por los actuadores mantiene las condiciones del proceso dentro de las tolerancias programadas."
+      },
+      {
+        "text": "Efectuar lecturas de pH y concentraciones químicas sin desgaste mecánico.",
+        "isCorrect": false,
+        "rationale": "La medición de variables fisicoquímicas es tarea de los sensores especializados, no de los actuadores de fuerza."
+      },
+      {
+        "text": "Almacenar la base de datos de usuarios y contraseñas de acceso al sistema SCADA.",
+        "isCorrect": false,
+        "rationale": "El control de acceso y las bases de datos de seguridad se alojan en el servidor de software, no en el hardware del actuador en planta."
+      }
+    ],
+    "hint": "Identifica las tareas vinculadas a recibir la orden de control y transformar esa señal en movimiento o ajuste del proceso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-45",
+    "diplomado": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la etapa de implementación y pruebas de campo de una arquitectura SCADA, ¿cuál es la finalidad de utilizar multímetros e instrumentos de calibración en los bucles de señal?",
+    "opciones": [
+      {
+        "text": "Verificar la continuidad eléctrica, el nivel correcto de voltaje/corriente en el lazo y la precisión de la señal enviada al controlador.",
+        "isCorrect": true,
+        "rationale": "Las mediciones directas aseguran que la señal del sensor llegue al PLC con el valor adecuado de corriente ($4-20\\text{ mA}$) antes de habilitar el control automático."
+      },
+      {
+        "text": "Generar copias de seguridad de las bases de datos relacionales en el disco duro del instrumento.",
+        "isCorrect": false,
+        "rationale": "Un multímetro es una herramienta de prueba para magnitudes eléctricas, sin capacidad de almacenamiento de bases de datos de software."
+      },
+      {
+        "text": "Aumentar la tensión de la red comercial para forzar la aceleración de los servomotores.",
+        "isCorrect": false,
+        "rationale": "Forzar sobretensiones dañaría los módulos de entrada del PLC e instrumentos de campo."
+      },
+      {
+        "text": "Comprobar que los instrumentos analógicos no requerirán mantenimiento durante la operación futura.",
+        "isCorrect": false,
+        "rationale": "Las pruebas de puesta en marcha certifican el estado inicial del lazo, pero no eximen de futuros mantenimientos programados."
+      },
+      {
+        "text": "Sustituir el programa en escalera (Ladder) cargado previamente en la memoria interna del PLC.",
+        "isCorrect": false,
+        "rationale": "La medición física de voltaje o corriente no altera ni reemplaza la programación interna cargada en el autómata."
+      }
+    ],
+    "hint": "Piensa en el propósito de comprobar la integridad del cableado y el rango de señal analógica antes de dar inicio a las operaciones.",
+    "activo": true
+  }
+]

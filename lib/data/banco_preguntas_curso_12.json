@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son los tres elementos esenciales que configuran una relación laboral según la legislación laboral peruana descrita en la clase?",
+    "opciones": [
+      {
+        "text": "Prestación personal de servicios, subordinación y remuneración",
+        "isCorrect": true,
+        "rationale": "La relación laboral queda jurídicamente constituida cuando concurren la realización directa del trabajo, la facultad del empleador para dirigir las labores y el pago de un pago económico a cambio."
+      },
+      {
+        "text": "Trabajo en equipo, fiscalización técnica y horario flexible",
+        "isCorrect": false,
+        "rationale": "Aspectos operativos como la flexibilidad horaria o el trabajo en equipo no constituyen elementos jurídicos constitutivos de la relación de trabajo."
+      },
+      {
+        "text": "Exclusividad contractual, permanencia indefinida y afiliación sindical",
+        "isCorrect": false,
+        "rationale": "La afiliación sindical y la duración del contrato son derechos o modalidades contractuales, no elementos indispensables de la relación laboral en sí."
+      },
+      {
+        "text": "Representación legal, entrega de herramientas y permanencia fija",
+        "isCorrect": false,
+        "rationale": "Las herramientas de trabajo y la representación legal corresponden a condiciones logísticas y de gestión, no a los pilares que configuran el vínculo laboral."
+      },
+      {
+        "text": "Autonomía técnica, pago por honorarios y fiscalización externa",
+        "isCorrect": false,
+        "rationale": "La autonomía técnica y la emisión de honorarios caracterizan a los contratos civiles de locación de servicios, no a una relación laboral de dependencia."
+      }
+    ],
+    "hint": "Piensa en el compromiso físico individual del trabajador, la dependencia jerárquica del empleador y la contraprestación económica recibida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de la SUNAFIL en el ámbito del derecho laboral privado en el Perú?",
+    "opciones": [
+      {
+        "text": "Supervisar, fiscalizar y garantizar el cumplimiento de las normas sociolaborales y de seguridad en el trabajo",
+        "isCorrect": true,
+        "rationale": "SUNAFIL es el organismo técnico especializado encargado de verificar la observancia de la normativa laboral y sancionar las infracciones en el sector privado."
+      },
+      {
+        "text": "Dictar sentencias judiciales definitivas sobre despidos arbitrarios e indemnizaciones",
+        "isCorrect": false,
+        "rationale": "La emisión de sentencias e indemnizaciones jurisdiccionales es facultad exclusiva del Poder Judicial, no de la autoridad administrativa de inspección."
+      },
+      {
+        "text": "Redactar las cláusulas contractuales de las empresas mineras privadas",
+        "isCorrect": false,
+        "rationale": "El diseño de las cláusulas contractuales corresponde a las partes en el ejercicio de la autonomía de su voluntad dentro del marco legal."
+      },
+      {
+        "text": "Administrar los aportes de las AFPs y la ONP de los trabajadores mineros",
+        "isCorrect": false,
+        "rationale": "La administración de los fondos previsionales recae en las administradoras privadas de fondos de pensiones y en la Oficina de Normalización Previsional."
+      },
+      {
+        "text": "Aprobar los permisos ambientales y licencias de exploración de las concesiones mineras",
+        "isCorrect": false,
+        "rationale": "Las autorizaciones ambientales y sectoriales mineras corresponden a entidades como el Ministerio de Energía y Minas u OEFA."
+      }
+    ],
+    "hint": "Considera el rol inspectivo y sancionador del Estado para proteger los derechos sociolaborales de los trabajadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Bajo la Ley N° 29783 (Ley de Seguridad y Salud en el Trabajo), ¿cuál es una obligación central del empleador minero?",
+    "opciones": [
+      {
+        "text": "Garantizar condiciones de trabajo seguras, capacitar al personal y otorgar equipos de protección",
+        "isCorrect": true,
+        "rationale": "El principio de prevención obliga al empleador a implementar protocolos estrictos, dotar de indumentaria adecuada y brindar capacitaciones para minimizar riesgos."
+      },
+      {
+        "text": "Delegar la responsabilidad total de la seguridad en los sindicatos de la empresa",
+        "isCorrect": false,
+        "rationale": "La responsabilidad legal de garantizar un entorno seguro recae primordialmente en el empleador y no puede ser transferida al sindicato."
+      },
+      {
+        "text": "Cubrir únicamente los costos del seguro de vida ley si el trabajador lo solicita por escrito",
+        "isCorrect": false,
+        "rationale": "Las obligaciones en materia de seguridad y seguros de riesgo son imperativas e independientes de una petición formal previa del colaborador."
+      },
+      {
+        "text": "Pagar las multas administrativas directamente a los trabajadores afectados",
+        "isCorrect": false,
+        "rationale": "Las multas administrativas impuestas por SUNAFIL se abonan al Fisco y constituyen sanciones estatales, no indemnizaciones individuales directas."
+      },
+      {
+        "text": "Eximir al personal de confianza de someterse a capacitaciones sobre prevención de riesgos",
+        "isCorrect": false,
+        "rationale": "Todo el personal de la empresa, sin importar la jerarquía de su puesto, debe recibir la formación y capacitación obligatoria en seguridad."
+      }
+    ],
+    "hint": "Reflexiona sobre el deber de prevención y protección integral de la vida en entornos laborales con alta exposición a riesgos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes atribuciones forman parte de las facultades o derechos del empleador dentro del marco legal del trabajo?",
+    "opciones": [
+      {
+        "text": "Organizar, dirigir y administrar las tareas al interior de la empresa",
+        "isCorrect": true,
+        "rationale": "El poder de dirección otorga la facultad de estructurar la forma en que se ejecuta la prestación de servicios para cumplir las metas del negocio."
+      },
+      {
+        "text": "Sancionar disciplinariamente las faltas de los trabajadores bajo criterios de razonabilidad y proporcionalidad",
+        "isCorrect": true,
+        "rationale": "La facultad disciplinaria permite aplicar amonestaciones o suspensiones respetando los límites legales de graduación de faltas."
+      },
+      {
+        "text": "Dictar el Reglamento Interno de Trabajo (RIT) de cumplimiento obligatorio",
+        "isCorrect": true,
+        "rationale": "El empleador tiene la atribución normativa interna de elaborar las normas operativas y de convivencia que rigen en el centro de trabajo."
+      },
+      {
+        "text": "Modificar unilateralmente los derechos mínimos e irrenunciables establecidos por ley",
+        "isCorrect": false,
+        "rationale": "Los derechos mínimos garantizados por la Constitución y las leyes son indisponibles e irrenunciables para ambas partes."
+      },
+      {
+        "text": "Exigir la activación permanente de cámaras personales durante el trabajo virtual sin justificación",
+        "isCorrect": false,
+        "rationale": "La supervisión remota continua sin justificación vulnera el derecho constitucional a la intimidad y dignidad del trabajador."
+      }
+    ],
+    "hint": "Identifica las potestades normativas, directivas y disciplinarias del empleador que no vulneren derechos fundamentales del trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es un deber ético y legal fundamental exigido al trabajador en el desempeño de su labor contractual?",
+    "opciones": [
+      {
+        "text": "Cumplir sus funciones de forma diligente y guardar secreto profesional respecto a información confidencial",
+        "isCorrect": true,
+        "rationale": "El deber de lealtad y la buena fe presumen la reserva de secretos industriales o comerciales y el desempeño eficiente de las labores asignadas."
+      },
+      {
+        "text": "Aceptar reducciones unilaterales de sueldo siempre que el empleador lo requiera",
+        "isCorrect": false,
+        "rationale": "La remuneración goza de protección constitucional y no puede ser reducida de forma arbitraria o unilateral por decisión de la empresa."
+      },
+      {
+        "text": "Prestar servicios simultáneos en empresas competidoras sin comunicar al empleador",
+        "isCorrect": false,
+        "rationale": "La competencia desleal o el conflicto de interés rompen el principio de buena fe laboral y constituyen causa justa de falta grave."
+      },
+      {
+        "text": "Asumir de forma personal la compra de los equipos de protección personal requeridos para el puesto",
+        "isCorrect": false,
+        "rationale": "La dotación de los equipos de protección personal es un costo operacional que la ley asigna al empleador y no al trabajador."
+      },
+      {
+        "text": "Desatender las órdenes directas del empleador sobre normas de seguridad laboral",
+        "isCorrect": false,
+        "rationale": "El cumplimiento de las órdenes e instrucciones de seguridad es obligatorio para prevenir accidentes en la ejecución de la tarea."
+      }
+    ],
+    "hint": "Recuerda el principio de buena fe que exige reserva informativa y esmero en las tareas encargadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el régimen laboral general de la actividad privada en el Perú, ¿cuál es el límite máximo de la jornada laboral ordinaria establecida constitucionalmente?",
+    "opciones": [
+      {
+        "text": "8 horas diarias o 48 horas semanales",
+        "isCorrect": true,
+        "rationale": "La norma general establece una jornada máxima ordinaria de 8 horas diarias o un acumulado de 48 horas a la semana, salvaguardando jornadas atípicas reguladas."
+      },
+      {
+        "text": "12 horas diarias fijas sin descanso acumulativo",
+        "isCorrect": false,
+        "rationale": "Una jornada ordinaria de 12 horas diarias sobrepasa el parámetro constitucional general, reservándose esquemas especiales solo bajo regímenes atípicos compensados."
+      },
+      {
+        "text": "30 horas semanales distribuidas en cinco días",
+        "isCorrect": false,
+        "rationale": "Las 30 horas semanales corresponden a regímenes a tiempo parcial u horarios reducidos especificados voluntariamente."
+      },
+      {
+        "text": "10 horas diarias fijas sin derecho a sobretiempo",
+        "isCorrect": false,
+        "rationale": "Exceder las 8 horas diarias en régimen ordinario genera el derecho al pago de horas extras o descanso sustitutorio."
+      },
+      {
+        "text": "60 horas semanales para todo el personal operativo",
+        "isCorrect": false,
+        "rationale": "Las 60 horas semanales sobrepasan el límite legal de 48 horas semanales y vulneran la protección a la salud del trabajador."
+      }
+    ],
+    "hint": "Se trata de la regla estándar diaria y semanal sobre el número máximo de horas de trabajo ordinario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define un conflicto laboral en el entorno de las relaciones de trabajo?",
+    "opciones": [
+      {
+        "text": "Un desacuerdo o controversia entre empleadores y trabajadores respecto a condiciones de trabajo o derechos laborales",
+        "isCorrect": true,
+        "rationale": "El conflicto laboral nace de la discrepancia de intereses o la inobservancia de derechos entre las partes del vínculo o sus representantes sindicales."
+      },
+      {
+        "text": "Una infracción administrativa del Estado contra una empresa pública por falta de impuestos",
+        "isCorrect": false,
+        "rationale": "Las discrepancias tributarias con el Estado corresponden al derecho tributario y no constituyen un conflicto sociolaboral."
+      },
+      {
+        "text": "La paralización inmediata e irreversible de las actividades extractivas dispuesta por el Ministerio de Energía y Minas",
+        "isCorrect": false,
+        "rationale": "Las órdenes administrativas de paralización sectorial son medidas correctivas ambientales o de seguridad, no el conflicto laboral en sí."
+      },
+      {
+        "text": "La competencia comercial abierta entre dos empresas mineras por una concesión",
+        "isCorrect": false,
+        "rationale": "Las disputas entre empresas por concesiones o competencias de mercado corresponden al derecho mercantil o de minería."
+      },
+      {
+        "text": "La firma consensuada de un contrato individual de trabajo sin observaciones",
+        "isCorrect": false,
+        "rationale": "La celebración acordada de un contrato refleja un punto de avenimiento o concordancia, opuesto a una situación conflictiva."
+      }
+    ],
+    "hint": "Considera la divergencia o choque de opiniones entre las partes de la relación de trabajo sobre sus beneficios o condiciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una característica principal de la vía de solución mediante la 'negociación directa'?",
+    "opciones": [
+      {
+        "text": "Permite resolver la controversia entre empleadores y trabajadores sin la intervención de un tercero",
+        "isCorrect": true,
+        "rationale": "En la negociación directa, las partes dialogan de forma autónoma para lograr un entendimiento sin acudir a mediadores, conciliadores o árbitros."
+      },
+      {
+        "text": "Requiere la presencia obligatoria de un juez del Poder Judicial en cada reunión",
+        "isCorrect": false,
+        "rationale": "La intervención judicial es de naturaleza jurisdiccional y se activa únicamente cuando han fracasado las instancias de trato directo y solución pacífica."
+      },
+      {
+        "text": "Genera siempre un laudo definitivo dictado por el Ministerio de Trabajo",
+        "isCorrect": false,
+        "rationale": "El Ministerio de Trabajo fomenta la mediación o arbitraje; no dicta laudos en negociaciones directas entre privados."
+      },
+      {
+        "text": "Es el mecanismo más costoso por el pago continuo de honorarios arbitrales",
+        "isCorrect": false,
+        "rationale": "Al no requerir la contratación de un tercero ni un proceso formal externo, la negociación directa suele ser el medio más económico."
+      },
+      {
+        "text": "Impone acuerdos vinculantes dictados por inspectores de la SUNAFIL",
+        "isCorrect": false,
+        "rationale": "SUNAFIL cumple roles de fiscalización e inspección, no actúa como parte negociadora ni impone convenios de trato directo."
+      }
+    ],
+    "hint": "Piensa en un proceso donde únicamente interactúan la representación de la empresa y la de los trabajadores de forma bipartita.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el desarrollo de un proceso arbitral en materia laboral, ¿cuál es el plazo máximo normativo estipulado para la etapa probatoria activa de los árbitros?",
+    "opciones": [
+      {
+        "text": "30 días naturales",
+        "isCorrect": true,
+        "rationale": "La normativa de arbitraje laboral exige celeridad, fijando un plazo máximo de 30 días calendario desde la instalación para actuar pruebas."
+      },
+      {
+        "text": "6 meses hábiles",
+        "isCorrect": false,
+        "rationale": "Seis meses representa una duración excesiva ajena a la naturaleza sumarísima e intensiva fijada para el arbitraje laboral."
+      },
+      {
+        "text": "5 días hábiles",
+        "isCorrect": false,
+        "rationale": "Cinco días hábiles es el plazo para formular observaciones o presentar propuestas finales, no para el desarrollo probatorio."
+      },
+      {
+        "text": "1 año completo",
+        "isCorrect": false,
+        "rationale": "Un año es un periodo prolongado propio de litigios judiciales complejos, desvirtuando la celeridad del fuero arbitral."
+      },
+      {
+        "text": "15 días hábiles",
+        "isCorrect": false,
+        "rationale": "Quince días es un plazo parcial para determinados descargos, inferior al plazo legal global concedido a la actuación de pruebas."
+      }
+    ],
+    "hint": "Se trata de un número de días contados de corrido (calendario) diseñado para dar celeridad a la solución del conflicto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes tipos de arbitraje laboral fueron explicados en el curso según su origen o materia?",
+    "opciones": [
+      {
+        "text": "Arbitraje voluntario",
+        "isCorrect": true,
+        "rationale": "Surge por el libre acuerdo entre la representación de los trabajadores y el empleador cuando la conciliación o trato directo no prosperan."
+      },
+      {
+        "text": "Arbitraje obligatorio",
+        "isCorrect": true,
+        "rationale": "Es promovido por la autoridad administrativa ante situaciones extremas donde una huelga prolongada afecta severamente a la empresa o sector."
+      },
+      {
+        "text": "Arbitraje potestativo",
+        "isCorrect": true,
+        "rationale": "Faculta a una de las partes a someter el conflicto a decisión arbitral ante supuestos específicos como la mala fe o el desacuerdo en el nivel de negociación."
+      },
+      {
+        "text": "Arbitraje sancionador penal",
+        "isCorrect": false,
+        "rationale": "Las infracciones y delitos penales son competencia exclusiva del Poder Judicial mediante la justicia penal estatal, no de tribunales arbitrales."
+      },
+      {
+        "text": "Arbitraje constitucional sumario",
+        "isCorrect": false,
+        "rationale": "Las garantías constitucionales son tuteladas a través de procesos judiciales procesales constitucionales ante los juzgados o el Tribunal Constitucional."
+      }
+    ],
+    "hint": "Selecciona las modalidades del arbitraje atendiendo a la manifestación de voluntad de las partes o la facultad legal conferida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre un laudo arbitral y un convenio colectivo?",
+    "opciones": [
+      {
+        "text": "El laudo es la decisión final vinculante emitida por un tribunal de árbitros, mientras que el convenio es el acuerdo directo consensuado entre las partes",
+        "isCorrect": true,
+        "rationale": "El laudo constituye una resolución heterónoma dictada por un tercero (equivalente a una sentencia), mientras que el convenio refleja el consenso directo autónomo."
+      },
+      {
+        "text": "El laudo es redactado por SUNAFIL y el convenio es promulgado por el Poder Judicial",
+        "isCorrect": false,
+        "rationale": "Ni SUNAFIL emite laudos ni el Poder Judicial promulga convenios colectivos bilaterales."
+      },
+      {
+        "text": "El laudo aplica solo a trabajadores temporales y el convenio a trabajadores en planilla",
+        "isCorrect": false,
+        "rationale": "Ambos instrumentos regulan derechos colectivos de la masa laboral sin distinción por la modalidad temporal o indeterminada del contrato."
+      },
+      {
+        "text": "El laudo carece de fuerza obligatoria mientras que el convenio tiene rango de norma legal",
+        "isCorrect": false,
+        "rationale": "El laudo arbitral posee un efecto vinculante definitivo y carácter de cosa juzgada equivalente al de un convenio o sentencia."
+      },
+      {
+        "text": "El convenio se resuelve mediante juicio penal y el laudo por conciliación previa",
+        "isCorrect": false,
+        "rationale": "Los procesos colectivos laborales pertenecen a la rama laboral/arbitral, ajenos al fuero de la responsabilidad penal."
+      }
+    ],
+    "hint": "Diferencia entre una decisión impuesta por un tercero imparcial y un acuerdo redactado de mutuo acuerdo entre sindicato y empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el Reglamento de Relaciones Colectivas de Trabajo, ¿cuándo pueden los trabajadores activar el arbitraje potestativo?",
+    "opciones": [
+      {
+        "text": "Cuando tras al menos seis reuniones de trato directo o tres meses de negociación no se alcance un acuerdo sobre el nivel o exista mala fe",
+        "isCorrect": true,
+        "rationale": "La norma permite a la representación laboral activar el arbitraje de manera unilateral si se constata estancamiento prolongado o dilaciones de mala fe."
+      },
+      {
+        "text": "Desde el primer día de presentado el pliego de reclamos sin necesidad de reuniones",
+        "isCorrect": false,
+        "rationale": "Se requiere agotar una etapa previa mínima de tratativas directas o el transcurso de los plazos reglamentarios."
+      },
+      {
+        "text": "Únicamente cuando la empresa se declare en quiebra o liquidación comercial",
+        "isCorrect": false,
+        "rationale": "La quiebra empresarial genera la suspensión de actividades o terminación de contratos, no es el supuesto desencadenante del arbitraje potestativo."
+      },
+      {
+        "text": "Solo si la SUNAFIL impone una multa por encima de 100 UITs",
+        "isCorrect": false,
+        "rationale": "Las multas administrativas de inspección son independientes del procedimiento de negociación colectiva entre las partes."
+      },
+      {
+        "text": "Cuando el empleador otorgue un aumento salarial superior al solicitado",
+        "isCorrect": false,
+        "rationale": "El otorgamiento favorable de beneficios extingue el conflicto o lleva a la firma inmediata de un convenio consensuado."
+      }
+    ],
+    "hint": "Recuerda los requisitos de reuniones mínimas de negociación, el plazo de tres meses sin consenso o los actos dilatorios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el cuerpo normativo específico que regula la Seguridad y Salud Ocupacional en el sector Minero en el Perú?",
+    "opciones": [
+      {
+        "text": "El Decreto Supremo N° 024-2016-EM",
+        "isCorrect": true,
+        "rationale": "El D.S. 024-2016-EM es el reglamento sectorial detallado sobre estándares técnicos de seguridad, salud e inspección en actividades mineras."
+      },
+      {
+        "text": "El Decreto Legislativo N° 728",
+        "isCorrect": false,
+        "rationale": "El D.Leg. 728 es la Ley de Productividad y Competitividad Laboral, que rige aspectos de contratación y beneficios en el sector privado general."
+      },
+      {
+        "text": "La Ley General del Ambiente N° 28611",
+        "isCorrect": false,
+        "rationale": "La Ley General del Ambiente fija marcos de protección ecológica, no los protocolos operativos sectoriales de seguridad ocupacional minera."
+      },
+      {
+        "text": "El Decreto Supremo N° 003-97-TR",
+        "isCorrect": false,
+        "rationale": "El D.S. 003-97-TR es el texto único ordenado del D.Leg. 728 dedicado a la materia laboral individual general."
+      },
+      {
+        "text": "El Código Civil Peruano de 1984",
+        "isCorrect": false,
+        "rationale": "El Código Civil rige las relaciones jurídicas privadas ordinarias y contractuales, no la normativa técnica minera de SST."
+      }
+    ],
+    "hint": "Se trata de un Decreto Supremo sectorial emitido por el Ministerio de Energía y Minas en el año 2016.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el objetivo fundamental del nivel de 'prevención primaria' dentro de la gestión de riesgos laborales?",
+    "opciones": [
+      {
+        "text": "Eliminar o evitar la aparición de riesgos en el entorno de trabajo antes de que causen daños",
+        "isCorrect": true,
+        "rationale": "La prevención primaria actúa en el origen del peligro suprimiendo o aislando la causa para impedir que se genere el accidente o enfermedad."
+      },
+      {
+        "text": "Rehabilitar físicamente al trabajador luego de sufrir un accidente grave",
+        "isCorrect": false,
+        "rationale": "La rehabilitación física corresponde al nivel de prevención terciaria una vez que el daño a la salud se ha producido."
+      },
+      {
+        "text": "Ofrecer asistencia médica de emergencia dentro del socavón",
+        "isCorrect": false,
+        "rationale": "La atención médica de urgencia forma parte de la respuesta a emergencias y mitigación de daños una vez ocurrido el siniestro."
+      },
+      {
+        "text": "Calcular la indemnización económica por la pérdida incapacitante",
+        "isCorrect": false,
+        "rationale": "El cálculo de indemnizaciones opera en la esfera resarcitoria posterior al acaecimiento del accidente."
+      },
+      {
+        "text": "Sancionar penalmente al supervisor tras constatarse la falta",
+        "isCorrect": false,
+        "rationale": "Las sanciones penales son medidas de punición legal estatales, no acciones técnicas de ingeniería o prevención médica inicial."
+      }
+    ],
+    "hint": "Enfócate en la etapa inicial dedicada a impedir de raíz la presencia o exposición a factores peligrosos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes documentos forman parte de los instrumentos de gestión obligatorios en seguridad y salud ocupacional para las empresas mineras?",
+    "opciones": [
+      {
+        "text": "Política de Seguridad y Salud Ocupacional",
+        "isCorrect": true,
+        "rationale": "Es la declaración formal emitida por la alta gerencia que fija los compromisos clave en la protección del personal."
+      },
+      {
+        "text": "Programa Anual de Seguridad y Salud Ocupacional",
+        "isCorrect": true,
+        "rationale": "Contiene los objetivos, metas, presupuestos y cronogramas de monitoreo que se ejecutarán a lo largo del año."
+      },
+      {
+        "text": "Reglamento Interno de Seguridad y Salud Ocupacional (RISSO)",
+        "isCorrect": true,
+        "rationale": "Es el cuerpo normativo interno que debe entregarse a cada trabajador con los estándares y reglas de trabajo seguro."
+      },
+      {
+        "text": "Manual de marketing y ventas internacionales de minerales",
+        "isCorrect": false,
+        "rationale": "Los planes de comercialización de minerales atienden al área del negocio mercantil y no corresponden a la gestión preventiva de SST."
+      },
+      {
+        "text": "Registro público de acciones bursátiles de la empresa",
+        "isCorrect": false,
+        "rationale": "La información de capitales bursátiles atiende a los órganos de supervisión de mercado de valores, ajena al sistema de SST."
+      }
+    ],
+    "hint": "Selecciona los documentos exigidos por el reglamento minero que ordenan la política, la planificación anual y las reglas de conducta interna en SST.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué exigencia de capacitación previa contempla la norma minera antes de que un trabajador ingrese a laborar por primera vez?",
+    "opciones": [
+      {
+        "text": "Recibir inducción general y capacitación específica teórica y práctica no menor a 8 horas diarias durante 2 días",
+        "isCorrect": true,
+        "rationale": "La norma exige que el ingresante apruebe la inducción inicial teórica y práctica para obtener la constancia de aptitud antes de iniciar tareas."
+      },
+      {
+        "text": "Asistir a una charla verbal de 15 minutos al final del primer mes de labores",
+        "isCorrect": false,
+        "rationale": "Una charla de 15 minutos resulta insuficiente y extemporánea frente a las exigencias normativas previas al desempeño de la función."
+      },
+      {
+        "text": "Leer el reglamento por su cuenta en su domicilio antes de firmar el contrato",
+        "isCorrect": false,
+        "rationale": "La formación debe ser impartida directamente por la empresa de forma presencial dentro de la jornada laboral."
+      },
+      {
+        "text": "Completar un examen virtual de cultura general minera de 5 preguntas",
+        "isCorrect": false,
+        "rationale": "La capacitación reglamentaria requiere preparación técnica y práctica específica vinculada directamente a los riesgos de la labor asignada."
+      },
+      {
+        "text": "Acreditar experiencia previa de 10 años en minería para evitar ser capacitado",
+        "isCorrect": false,
+        "rationale": "La inducción del centro de trabajo es obligatoria sin importar los años de experiencia previa que reporte el trabajador."
+      }
+    ],
+    "hint": "Busca la regla que exige horas teóricas y prácticas formales que garanticen la aptitud del puesto antes de operar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de las siguientes actividades está calificada expresamente como un 'trabajo de alto riesgo' según la reglamentación minera?",
+    "opciones": [
+      {
+        "text": "Trabajos en altura (a partir de 1.80 m), espacios confinados y excavaciones profundas",
+        "isCorrect": true,
+        "rationale": "Estas actividades requieren obligatoriamente el Permiso Escrito para Trabajo de Alto Riesgo (PETAR) debido a su elevado potencial de daño o muerte."
+      },
+      {
+        "text": "Redacción de memorándums e informes administrativos en oficina",
+        "isCorrect": false,
+        "rationale": "El trabajo administrativo de oficina no reúne el perfil de riesgo crítico inherente a labores operativas mineras."
+      },
+      {
+        "text": "Atención telefónica en la recepción de la empresa",
+        "isCorrect": false,
+        "rationale": "Las funciones de recepción no implican peligros mecánicos, químicos o geotécnicos severos de alto riesgo."
+      },
+      {
+        "text": "Registro de asistencia del personal en la puerta de ingreso a las oficinas",
+        "isCorrect": false,
+        "rationale": "El control de accesos ordinario constituye un trabajo regular que no amerita la emisión continua de autorizaciones PETAR."
+      },
+      {
+        "text": "Participación en reuniones virtuales de coordinación de agenda",
+        "isCorrect": false,
+        "rationale": "Las reuniones de coordinación telemática están exentas de los peligros físicos o tóxicos del entorno minero directo."
+      }
+    ],
+    "hint": "Piensa en labores donde la exposición a caídas de distinto nivel, asfixia o colapsos de terreno demandan permisos especiales (PETAR).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En caso de ocurrir un accidente laboral fatal en la unidad minera, ¿cuál es el plazo máximo que tiene la empresa para notificar el suceso al Ministerio de Trabajo?",
+    "opciones": [
+      {
+        "text": "Dentro de las 24 horas de ocurrido el accidente",
+        "isCorrect": true,
+        "rationale": "La ley exige la notificación de accidentes mortales o incidentes peligrosos de forma inmediata dentro del plazo perentorio de 24 horas."
+      },
+      {
+        "text": "Hasta 30 días hábiles posteriores al entierro",
+        "isCorrect": false,
+        "rationale": "Treinta días es un lapso excesivo que impediría la investigación urgente del accidente por parte de las autoridades."
+      },
+      {
+        "text": "Al término del año fiscal en la memoria anual",
+        "isCorrect": false,
+        "rationale": "El reporte en memorias anuales atiende a consolidados estadísticos, no al deber de aviso inmediato ante la autoridad."
+      },
+      {
+        "text": "A los 10 días útiles previa reunión del sindicato",
+        "isCorrect": false,
+        "rationale": "Diez días corresponde al plazo de entrega del informe de investigación profunda del siniestro, no al aviso o notificación inicial."
+      },
+      {
+        "text": "Únicamente cuando la SUNAFIL se presente de forma inopinada",
+        "isCorrect": false,
+        "rationale": "El deber de notificar nace de forma directa e imperativa para la empresa sin esperar un requerimiento previo del inspector."
+      }
+    ],
+    "hint": "Es un plazo de aviso sumamente breve contado en horas desde el acaecimiento del siniestro fatal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Quién es el profesional responsable de liderar la gestión de la salud ocupacional y la vigilancia médica de los trabajadores mineros?",
+    "opciones": [
+      {
+        "text": "Un médico ocupacional con especialidad o experiencia acreditada en el sector",
+        "isCorrect": true,
+        "rationale": "La normativa exige que la salud ocupacional sea dirigida por un médico colegiado especializado encargándose de exámenes preocupacionales, periódicos y de retiro."
+      },
+      {
+        "text": "El jefe de logística y compras de insumos químicos",
+        "isCorrect": false,
+        "rationale": "Las áreas de compras gestionan inventarios, careciendo de la competencia profesional médica para realizar la vigilancia en salud."
+      },
+      {
+        "text": "Un inspector externo asignado por la municipalidad distrital",
+        "isCorrect": false,
+        "rationale": "Las municipalidades carecen de la potestad técnica sectorial en materia de vigilancia médica ocupacional de las unidades mineras."
+      },
+      {
+        "text": "El auditor de contabilidad interna de la empresa",
+        "isCorrect": false,
+        "rationale": "El rol contable audita finanzas y tributos, ajeno a los diagnósticos y protocolos de evaluación clínica."
+      },
+      {
+        "text": "El representante legal de los proveedores contratistas",
+        "isCorrect": false,
+        "rationale": "El proveedor contratista cumple roles comerciales sin capacidad para actuar como autoridad médica del sistema corporativo de SST."
+      }
+    ],
+    "hint": "Se trata de un profesional de la salud con formación específica encargada de evaluar la aptitud física de los colaboradores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué tipo de consecuencia jurídica da lugar la imposición de multas por parte de la SUNAFIL por faltas a las normas de seguridad?",
+    "opciones": [
+      {
+        "text": "Responsabilidad administrativa",
+        "isCorrect": true,
+        "rationale": "Las sanciones pecuniarias e inspecciones iniciadas por órganos estatales como SUNAFIL derivan del ejercicio del poder sancionador administrativo del Estado."
+      },
+      {
+        "text": "Responsabilidad penal con pena privativa de la libertad",
+        "isCorrect": false,
+        "rationale": "Las penas privativas de la libertad son aplicadas únicamente por los jueces penales tras la substanciación de un juicio penal."
+      },
+      {
+        "text": "Responsabilidad ambiental pecuniaria directa a la comunidad",
+        "isCorrect": false,
+        "rationale": "Las multas ambientales son reguladas por OEFA y se destinan a los fondos públicos del sector ambiental, no a pagos laborales de SUNAFIL."
+      },
+      {
+        "text": "Anulación de convenios colectivos vigentes",
+        "isCorrect": false,
+        "rationale": "Una multa inspectiva sanciona al empleador pero no elimina los acuerdos colectivos previamente pactados con los sindicatos."
+      },
+      {
+        "text": "Inhabilitación automática del sindicato de trabajadores",
+        "isCorrect": false,
+        "rationale": "El sindicato es el ente protegido por la fiscalización de condiciones de trabajo, no el sujeto pasivo sancionado por la SUNAFIL."
+      }
+    ],
+    "hint": "Identifica la esfera del derecho vinculada al control e inspección que ejercen las entidades del Poder Ejecutivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la responsabilidad civil por un accidente de trabajo en minería, ¿cuáles son los conceptos indemnizatorios ordinarios que se pueden demandar judicialmente?",
+    "opciones": [
+      {
+        "text": "Lucro cesante, daño emergente y daño moral",
+        "isCorrect": true,
+        "rationale": "La responsabilidad civil busca la reparación integral del menoscabo patrimonial (lo que se dejó de ganar y lo que se gastó) y del menoscabo extrapatrimonial (sufrimiento/afectación personal)."
+      },
+      {
+        "text": "Pago de multas a la SUNAFIL y aranceles de importación",
+        "isCorrect": false,
+        "rationale": "Las multas a SUNAFIL y aranceles corresponden al derecho público/tributario y no forman parte del resarcimiento civil al trabajador."
+      },
+      {
+        "text": "Descuento de impuestos y devolución de aportes a la AFP",
+        "isCorrect": false,
+        "rationale": "Las obligaciones previsionales e impositivas responden a regulaciones tributarias y de seguridad social, no al principio resarcitorio de daños."
+      },
+      {
+        "text": "Distribución del total del capital social de la minera entre los empleados",
+        "isCorrect": false,
+        "rationale": "La indemnización cuantifica económicamente el perjuicio individual causado, no la liquidación o reparto patrimonial del capital de la empresa."
+      },
+      {
+        "text": "Transferencia de la concesión minera a los familiares del perjudicado",
+        "isCorrect": false,
+        "rationale": "La titularidad de la concesión minera se rige por el derecho administrativo minero y no constituye un bien resarcitorio civil."
+      }
+    ],
+    "hint": "Enfócate en la categoría de daños patrimoniales (pérdidas efectivas o futuras) y extrapatrimoniales (dolor o sufrimiento).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Conforme a la jurisprudencia judicial peruana reiterada en las clases, ¿qué enfermedad profesional se vincula directamente a la actividad de minería sin requerir un nexo causal complejo adicional?",
+    "opciones": [
+      {
+        "text": "Neumoconiosis",
+        "isCorrect": true,
+        "rationale": "El Poder Judicial y el Tribunal Constitucional han fijado que la neumoconiosis (por inhalación de polvo sílice) se adquiere esencialmente por la labor en minas, presumiendo su nexo laboral."
+      },
+      {
+        "text": "Miopía leve",
+        "isCorrect": false,
+        "rationale": "La miopía constituye un defecto refractivo ocular genérico no clasificado como enfermedad profesional propia de la exposición minera."
+      },
+      {
+        "text": "Gastritis crónica ordinaria",
+        "isCorrect": false,
+        "rationale": "Las afecciones digestivas comunes responden a múltiples factores multicausales (dieta, estrés general) no vinculados de forma presuntiva directa al riesgo minero."
+      },
+      {
+        "text": "Gripe estacional",
+        "isCorrect": false,
+        "rationale": "Las infecciones respiratorias virales comunitarias son patologías comunes no ocupacionales."
+      },
+      {
+        "text": "Insolación leve por clima de verano",
+        "isCorrect": false,
+        "rationale": "Afecciones climáticas menores no constituyen patologías crónicas o incapacitantes reguladas en la tabla de enfermedades profesionales mineras de silicosis."
+      }
+    ],
+    "hint": "Es la afección pulmonar degenerativa producida por la inhalación continuada de polvo de sílice u otros minerales en la labor extractiva.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes esferas de responsabilidad jurídica pueden activarse simultáneamente frente a un accidente de trabajo fatal en minería derivado de una negligencia grave?",
+    "opciones": [
+      {
+        "text": "Responsabilidad administrativa sancionadora (multas estatales)",
+        "isCorrect": true,
+        "rationale": "SUNAFIL impone sanciones monetarias a la empresa por la infracción de las normas de prevención de seguridad."
+      },
+      {
+        "text": "Responsabilidad civil (pago de indemnizaciones a los deudos)",
+        "isCorrect": true,
+        "rationale": "Los familiares del trabajador afectado pueden demandar en el fuero civil o laboral la reparación económica por los daños y perjuicios sufridos."
+      },
+      {
+        "text": "Responsabilidad penal (procesamiento a los responsables por homicidio culposo)",
+        "isCorrect": true,
+        "rationale": "Las personas naturales (supervisores, gerentes) que inobservaron conscientemente las reglas de seguridad pueden ser imputadas penalmente."
+      },
+      {
+        "text": "Responsabilidad diplomática internacional directa del país comprador de minerales",
+        "isCorrect": false,
+        "rationale": "Los países compradores de mineral celebran contratos comerciales internacionales ajenos a la jurisdicción penal o civil sobre accidentes internos."
+      },
+      {
+        "text": "Responsabilidad mercantil por competencia desleal ante la Bolsa de Valores",
+        "isCorrect": false,
+        "rationale": "Las normas de competencia desleal regulan conductas comerciales entre competidores, no el juzgamiento de accidentes laborales."
+      }
+    ],
+    "hint": "Considera que un mismo hecho trágico puede desencadenar consecuencias administrativas (multa), civiles (indemnización) y penales (cárcel a responsables).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En un juicio laboral donde se discute el incumplimiento de la entrega de equipos de seguridad o la falta de capacitaciones, ¿qué principio probatorio se aplica?",
+    "opciones": [
+      {
+        "text": "Inversión de la carga de la prueba en favor del trabajador, correspondiendo al empleador demostrar que sí cumplió la norma",
+        "isCorrect": true,
+        "rationale": "Al ostentar el empleador el deber de prevención y la custodia de los registros de entrega y asistencia, recae sobre él la obligación de probar el cumplimiento."
+      },
+      {
+        "text": "El trabajador debe financiar peritajes de la maquinaria para ser escuchado",
+        "isCorrect": false,
+        "rationale": "El proceso laboral tutela a la parte débil y no condiciona el acceso a la justicia al pago de peritajes costosos por parte del obrero."
+      },
+      {
+        "text": "Se presume sin admitir prueba en contrario que el trabajador actuó con negligencia",
+        "isCorrect": false,
+        "rationale": "La ley presume la responsabilidad del empleador en la prevención de riesgos, salvo prueba en contrario aportada por este."
+      },
+      {
+        "text": "El juez debe rechazar la demanda si el sindicato no interviene como co-demandante",
+        "isCorrect": false,
+        "rationale": "Las acciones individuales por daños o derechos laborales pueden ser ejercidas directamente por el trabajador afectado sin requerir presencia sindical."
+      },
+      {
+        "text": "La carga de la prueba recae únicamente en el inspector de SUNAFIL que hizo la denuncia",
+        "isCorrect": false,
+        "rationale": "En el proceso judicial las partes litigantes son el trabajador y el empleador, no el inspector que actuó en la vía administrativa."
+      }
+    ],
+    "hint": "Piensa en quién posee las planillas, las firmas de entrega de EPP y los registros de capacitación en el centro de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En última instancia, ¿en quién recae la máxima responsabilidad legal de implementar el sistema de gestión de seguridad y prevenir riesgos en la unidad minera?",
+    "opciones": [
+      {
+        "text": "El empleador (titular de la actividad minera)",
+        "isCorrect": true,
+        "rationale": "La ley asigna la responsabilidad económica, operativa y legal del sistema de gestión de seguridad a la empresa o titular minero."
+      },
+      {
+        "text": "El comité del vaso de leche de la comunidad vecina",
+        "isCorrect": false,
+        "rationale": "Las organizaciones sociales comunitarias no forman parte de la estructura jerárquica u operativa de la empresa minera."
+      },
+      {
+        "text": "El proveedor externo que elaboró los cascos de protección",
+        "isCorrect": false,
+        "rationale": "El fabricante responde por defectos de fábrica del producto comercial, pero la gestión global de seguridad y fiscalización del uso en mina es del empleador."
+      },
+      {
+        "text": "El médico de la posta de salud pública más cercana",
+        "isCorrect": false,
+        "rationale": "Los médicos del sistema público atienden la salud general comunitaria, no dirigen los planes de SST de la minera privada."
+      },
+      {
+        "text": "El Ministerio de Energía y Minas como titular de las tierras",
+        "isCorrect": false,
+        "rationale": "El Ministerio concede la autorización de explotación y fiscaliza, pero no asume la gestión ni el deber patronal de seguridad operativa."
+      }
+    ],
+    "hint": "Recuerda la entidad que ostenta la titularidad de las operaciones y ejerce la dirección empresarial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son los tres elementos esenciales e indispensables que configuran una relación laboral sujeta al régimen privado (Decreto Legislativo 728) en el sector minero?",
+    "opciones": [
+      {
+        "text": "Prestación personal de servicios, subordinación y remuneración.",
+        "isCorrect": true,
+        "rationale": "La legislación laboral y la jurisprudencia peruana establecen que la concurrencia simultánea de la prestación directa del trabajador, la facultad de dirección del empleador y la contraprestación económica define la existencia de un contrato de trabajo."
+      },
+      {
+        "text": "Exclusividad laboral, subordinación y pago de utilidades.",
+        "isCorrect": false,
+        "rationale": "El pago de utilidades es un beneficio legal condicionado a las ganancias de la empresa y la exclusividad puede pactarse, pero no constituyen elementos constitutivos esenciales de la relación de trabajo."
+      },
+      {
+        "text": "Prestación personal, fiscalización directa y exclusividad horaria.",
+        "isCorrect": false,
+        "rationale": "La fiscalización forma parte del elemento amplio de la subordinación, mientras que la exclusividad horaria no es un requisito indispensable para la existencia del vínculo laboral."
+      },
+      {
+        "text": "Período de prueba, subordinación y registro en la planilla PLAME.",
+        "isCorrect": false,
+        "rationale": "El período de prueba y el registro en planilla son exigencias operativas y legales del contrato, no elementos sustanciales de la definición del vínculo laboral."
+      },
+      {
+        "text": "Exclusividad laboral, autonomía técnica y contraprestación económica.",
+        "isCorrect": false,
+        "rationale": "La autonomía técnica es característica de la locación de servicios (prestación independiente), lo cual contradice la subordinación propia del contrato de trabajo."
+      }
+    ],
+    "hint": "Piensa en los factores que diferencian un contrato de trabajo de un contrato civil de locación de servicios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el sector minero peruano, ¿cuáles de las siguientes obligaciones corresponden directamente al empleador respecto a sus trabajadores?",
+    "opciones": [
+      {
+        "text": "Registrar oportunamente al trabajador en la planilla electrónica (T-Registro y PLAME).",
+        "isCorrect": true,
+        "rationale": "El registro formal formaliza la relación laboral frente a las autoridades tributarias y laborales garantizando el acceso a derechos sociales."
+      },
+      {
+        "text": "Proveer los equipos de protección personal (EPP) adecuados e impartir capacitaciones de prevención de riesgos.",
+        "isCorrect": true,
+        "rationale": "El deber de prevención exige al empleador dotar de herramientas de protección e instrucción técnica para preservar la integridad del personal."
+      },
+      {
+        "text": "Contratar y financiar el Seguro de Vida Ley de acuerdo con la norma vigente.",
+        "isCorrect": true,
+        "rationale": "El seguro de vida ley es una obligación económica que asume el empleador para cubrir riesgos de invalidez o fallecimiento del trabajador."
+      },
+      {
+        "text": "Asumir los tributos personales del impuesto a la renta de quinta categoría que corresponden al trabajador.",
+        "isCorrect": false,
+        "rationale": "El impuesto a la renta de quinta categoría es una carga tributaria legal que recae sobre el trabajador, actuando el empleador únicamente como agente de retención."
+      },
+      {
+        "text": "Notificar cualquier cambio de domicilio del trabajador ante las autoridades policiales de la localidad.",
+        "isCorrect": false,
+        "rationale": "La actualización de datos domiciliarios ante la policía es una diligencia personal del ciudadano y no una obligación de la gestión de recursos humanos de la empresa."
+      }
+    ],
+    "hint": "Considera tanto los deberes de formalización laboral como los de protección e higiene en el trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el régimen de trabajo acumulativo o atípico en minería (por ejemplo, sistemas 14x7 o 21x7), ¿cuál es el principio legal que debe respetarse rigurosamente en la estipulación del contrato?",
+    "opciones": [
+      {
+        "text": "Que el promedio de horas trabajadas en el ciclo respectivo no supere los límites máximos de 8 horas diarias o 48 horas semanales.",
+        "isCorrect": true,
+        "rationale": "Las jornadas atípicas son válidas en minería siempre que el cómputo del promedio de horas trabajadas durante el período de trabajo y descanso no exceda los máximos constitucionales."
+      },
+      {
+        "text": "Que los días de descanso acumulados se puedan compensar de manera indefinida mediante pagos en efectivo.",
+        "isCorrect": false,
+        "rationale": "El descanso en regímenes atípicos tiene por finalidad la recuperación física y no puede ser sustituido sistemáticamente por compensación monetaria."
+      },
+      {
+        "text": "Que las horas adicionales en campamento se liquiden obligatoriamente como bonos no remunerativos de movilidad.",
+        "isCorrect": false,
+        "rationale": "El trabajo prestado en sobretiempo sobre los promedios legales debe pagarse con los recargos de horas extraordinarias o compensarse con descanso sustitutorio."
+      },
+      {
+        "text": "Que el trabajador firme una cláusula de renuncia al cobro de horas extras a cambio de vivienda y alimentación.",
+        "isCorrect": false,
+        "rationale": "Los derechos laborales son irrenunciables, por lo que la vivienda y alimentación en campamento no anulan el pago del trabajo extraordinario."
+      },
+      {
+        "text": "Que la jornada no requiera registro de asistencia dada la naturaleza del trabajo en zonas alejadas.",
+        "isCorrect": false,
+        "rationale": "El control de asistencia es exigible para verificar el cumplimiento de los límites de la jornada laboral y el cálculo de sobretiempo."
+      }
+    ],
+    "hint": "Evalúa cómo se aplica la protección del límite máximo de horas de trabajo cuando los turnos son distribuidos en días consecutivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué implica la 'ocupación efectiva' como obligación del empleador dentro del desarrollo de la relación laboral?",
+    "opciones": [
+      {
+        "text": "Garantizar que el trabajador ejecute las funciones reales y específicas para las que fue contratado en su categoría profesional.",
+        "isCorrect": true,
+        "rationale": "La ocupación efectiva asegura el derecho del trabajador a realizar las labores convenidas, impidiendo actos de hostilidad como el aislamiento laboral o la asignación de tareas incompatibles."
+      },
+      {
+        "text": "Exigir la permanencia física del colaborador en las instalaciones durante 12 horas diarias continuas.",
+        "isCorrect": false,
+        "rationale": "La permanencia física por encima de la jornada contratada excede los límites legales y no define el derecho a desempeñar las funciones asignadas."
+      },
+      {
+        "text": "Reasignar al trabajador a tareas operativas de menor jerarquía de forma permanente para evaluar su versatilidad.",
+        "isCorrect": false,
+        "rationale": "Rebajar la categoría o reasignar funciones inferiores de manera injustificada constituye una vulneración de la dignidad del trabajador y un posible acto de hostilidad."
+      },
+      {
+        "text": "Mantener al trabajador sin asignación de tareas mientras siga percibiendo su remuneración básica mensual.",
+        "isCorrect": false,
+        "rationale": "Dejar sin tareas a un trabajador (privación de ocupación efectiva) atenta contra su desarrollo profesional y su dignidad, aun cuando se mantenga el pago del sueldo."
+      },
+      {
+        "text": "Obligar al trabajador a cumplir funciones en empresas filiales del mismo grupo sin contrato o adenda escrita.",
+        "isCorrect": false,
+        "rationale": "El traslado de personal entre distintas entidades jurídicas requiere formalización y no se fundamenta en la ocupación efectiva dentro de la empresa contratante."
+      }
+    ],
+    "hint": "Relaciona este concepto con el respeto a la categoría del trabajador y la prevención del hostigamiento laboral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En relación con el régimen del Seguro de Vida Ley en el Perú, ¿cuál de las siguientes afirmaciones refleja correctamente su naturaleza regulatoria?",
+    "opciones": [
+      {
+        "text": "Es un seguro obligatorio financiado por el empleador para cubrir los riesgos de fallecimiento e invalidez total y permanente del trabajador.",
+        "isCorrect": true,
+        "rationale": "La normativa peruana exige al empleador contratar esta póliza desde el inicio de la relación laboral para proteger a los beneficiarios ante eventualidades graves."
+      },
+      {
+        "text": "Es una cobertura facultativa que el empleador otorga solo tras cumplirse cuatro años de servicios continuos.",
+        "isCorrect": false,
+        "rationale": "Las modificaciones legales eliminaron el requisito de antigüedad de cuatro años, siendo obligatorio desde el primer día de trabajo."
+      },
+      {
+        "text": "Es un beneficio cuyo costo se descuenta mensualmente de la remuneración del colaborador en la boleta de pago.",
+        "isCorrect": false,
+        "rationale": "El costo de la póliza de Seguro de Vida Ley es asumido íntegramente por la entidad empleadora, estando prohibido su descuento al trabajador."
+      },
+      {
+        "text": "Cubre exclusivamente accidentes ocurridos en el trayecto directo entre el domicilio y el campamento minero.",
+        "isCorrect": false,
+        "rationale": "El Seguro de Vida Ley brinda cobertura ante el fallecimiento natural, fallecimiento por accidente o invalidez permanente, dentro o fuera del centro de trabajo."
+      },
+      {
+        "text": "Sustituye completamente a las aportaciones del Seguro Complementario de Trabajo de Riesgo (SCTR).",
+        "isCorrect": false,
+        "rationale": "El Seguro de Vida Ley y el SCTR son coberturas con marcos legales y finalidades distintas que coexisten obligatoriamente en actividades de alto riesgo."
+      }
+    ],
+    "hint": "Considera la obligatoriedad, la fuente de financiamiento y la cobertura integral de este seguro legal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el principio de irrenunciabilidad de derechos reconocido en la Constitución y la legislación laboral?",
+    "opciones": [
+      {
+        "text": "En la imposibilidad jurídica de que el trabajador se despoje voluntariamente de los derechos mínimos e imperativos otorgados por la norma laboral.",
+        "isCorrect": true,
+        "rationale": "El principio sanciona con nulidad cualquier acuerdo o renuncia que prive al trabajador de sus beneficios o garantías legales de carácter indispensable."
+      },
+      {
+        "text": "En la prohibición absoluta de pactar jornadas acumulativas o atípicas en los convenios colectivos.",
+        "isCorrect": false,
+        "rationale": "Las jornadas atípicas son legalmente permitidas si cumplen con los promedios y compensaciones exigidos por la legislación aplicable."
+      },
+      {
+        "text": "En el derecho del empleador a mantener inalterables los sueldos fijados al inicio del contrato sin posibilidad de aumentos.",
+        "isCorrect": false,
+        "rationale": "El principio protege los derechos mínimos del trabajador, no la facultad del empleador de congelar remuneraciones."
+      },
+      {
+        "text": "En la imposibilidad de que un trabajador sea sancionado o despedido bajo causales disciplinarias justificadas.",
+        "isCorrect": false,
+        "rationale": "El empleador mantiene el poder disciplinario para sancionar o despedir según ley cuando el trabajador comete una falta grave."
+      },
+      {
+        "text": "En la obligación del Estado de igualar los sueldos de todos los trabajadores mineros independientemente de su especialidad.",
+        "isCorrect": false,
+        "rationale": "La irrenunciabilidad aplica a los derechos mínimos legales, no a la fijación uniforme de salarios por encima de la remuneración mínima."
+      }
+    ],
+    "hint": "Recuerda el carácter imperativo de la norma laboral frente a cualquier manifestación de voluntad individual que busque reducir beneficios legales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la resolución de conflictos colectivos de trabajo, ¿en qué se diferencia sustancialmente la mediación del arbitraje?",
+    "opciones": [
+      {
+        "text": "En la mediación, el tercero neutral promueve el diálogo y propone fórmulas de acuerdo no vinculantes; en el arbitraje, el árbitro decide la controversia mediante un laudo obligatorio.",
+        "isCorrect": true,
+        "rationale": "El mediador facilita la solución proponiendo alternativas que las partes pueden o no aceptar, mientras que el árbitro ejerce jurisdicción privada resolviendo el conflicto de manera imperativa."
+      },
+      {
+        "text": "La mediación es conducida obligatoriamente por un juez de trabajo y el arbitraje se realiza en el Ministerio de Energía y Minas.",
+        "isCorrect": false,
+        "rationale": "Tanto la mediación como el arbitraje son mecanismos extrajudiciales; la mediación suele ser promovida por el Ministerio de Trabajo y el arbitraje por tribunales arbitrales o árbitros independientes."
+      },
+      {
+        "text": "El laudo arbitral es una recomendación no obligatoria, mientras que el acuerdo de mediación requiere sanción penal para cumplirse.",
+        "isCorrect": false,
+        "rationale": "El laudo tiene la firmeza y ejecutabilidad de una sentencia judicial, al contrario de la afirmación planteada."
+      },
+      {
+        "text": "La mediación exige la designación de un tribunal de tres personas y el arbitraje es llevado a cabo por un solo funcionario del Estado.",
+        "isCorrect": false,
+        "rationale": "El arbitraje puede ser unipersonal o colegiado (tribunal arbitral), mientras que la mediación no exige un tribunal formal."
+      },
+      {
+        "text": "En la mediación solo se abordan despidos individuales y en el arbitraje se tratan únicamente asuntos ambientales.",
+        "isCorrect": false,
+        "rationale": "Ambos mecanismos son aplicables a los conflictos laborales colectivos referentes a condiciones de trabajo y negociación de pliegos."
+      }
+    ],
+    "hint": "Enfócate en la fuerza vinculante de la decisión final adoptada por el tercero neutral en cada mecanismo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Según el marco de las relaciones colectivas de trabajo en el Perú, ¿cuáles de las siguientes circunstancias facultan la activación del arbitraje potestativo?",
+    "opciones": [
+      {
+        "text": "La falta de acuerdo respecto al nivel en que deba desarrollarse la negociación colectiva tras agotar las etapas previas.",
+        "isCorrect": true,
+        "rationale": "El desacuerdo persistente sobre el nivel de la negociación habilita a la parte trabajadora a someter la controversia a arbitraje potestativo."
+      },
+      {
+        "text": "La evidencia de actos de mala fe durante la negociación directa orientados a dilatar o entorpecer el logro de un acuerdo.",
+        "isCorrect": true,
+        "rationale": "La conducta de mala fe vulnera el deber de negociación de buena fe y autoriza a solicitar la vía arbitral potestativa."
+      },
+      {
+        "text": "El haber transcurrido al menos tres meses desde el inicio de la negociación colectiva sin acuerdo, tras cumplir las reuniones mínimas de trato directo o conciliación.",
+        "isCorrect": true,
+        "rationale": "El transcurso del plazo legal de tres meses sin solución faculta la activación del arbitraje a solicitud de los trabajadores."
+      },
+      {
+        "text": "La decisión unilateral del empleador de reducir las remuneraciones básicas en un 50% por razones del mercado internacional.",
+        "isCorrect": false,
+        "rationale": "La reducción unilateral e injustificada de remuneraciones configura un acto de hostilidad remediable en la vía inspectiva o judicial, no un supuesto de arbitraje potestativo de negociación."
+      },
+      {
+        "text": "La negativa del sindicato a someterse a los exámenes médicos de salud ocupacional programados.",
+        "isCorrect": false,
+        "rationale": "La negativa a someterse a exámenes médicos es un incumplimiento de las obligaciones individuales de seguridad y salud, ajeno al procedimiento de negociación colectiva."
+      }
+    ],
+    "hint": "Identifica los supuestos procesales y de conducta de las partes durante la negociación colectiva regulados por el D.S. 010-2003-TR y sus modificatorias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del procedimiento arbitral laboral, ¿cuál es la característica de la resolución final denominada 'Laudo Arbitral'?",
+    "opciones": [
+      {
+        "text": "Posee fuerza vinculante y efectos equiparables a una sentencia judicial firme, dando solución definitiva a la controversia colectiva.",
+        "isCorrect": true,
+        "rationale": "El laudo arbitral pone fin a la controversia con carácter inapelable en el fondo, siendo de estricto y obligatorio cumplimiento para las partes."
+      },
+      {
+        "text": "Es una recomendación facultativa que las partes pueden ratificar o desechar voluntariamente en un plazo de 30 días.",
+        "isCorrect": false,
+        "rationale": "El laudo no es una recomendación u opinión consultiva; es un acto jurídico que vincula de manera imperativa a empleadores y trabajadores."
+      },
+      {
+        "text": "Constituye un proyecto de convenio que requiere la homologación previa por un juzgado de paz letrado para surtir efectos.",
+        "isCorrect": false,
+        "rationale": "El laudo surte efectos directos e inmediatos sin requerir la aprobación o validez de un juez ordinario."
+      },
+      {
+        "text": "Es un acto administrativo emitido de oficio por la Autoridad Administrativa de Trabajo al finalizar una inspección de Sunafil.",
+        "isCorrect": false,
+        "rationale": "Sunafil emite actas de infracción o resoluciones de sanción; el laudo emana de los árbitros o tribunales arbitrales elegidos o designados."
+      },
+      {
+        "text": "Es una propuesta provisional que puede ser modificada libremente mediante recurso de apelación ante el Ministerio de Energía y Minas.",
+        "isCorrect": false,
+        "rationale": "El fondo del laudo no es revisable por la autoridad administrativa minera; solo cabe impugnación judicial por causales tasadas de nulidad."
+      }
+    ],
+    "hint": "Compara el laudo arbitral con la naturaleza y eficacia ejecutiva que tiene un fallo de la función jurisdiccional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Ante una demanda judicial promovida por un ex trabajador minero que padece neumoconiosis, ¿cuál es el criterio jurisprudencial consolidado respecto a la acreditación del nexo causal?",
+    "opciones": [
+      {
+        "text": "Se presume el nexo causal por la máxima de la experiencia, al ser la neumoconiosis una enfermedad ligada de forma directa a la exposición al polvo mineral.",
+        "isCorrect": true,
+        "rationale": "El Tribunal Constitucional y la Corte Suprema han determinado que probar la condición de trabajador minero expuesto a minerales y el diagnóstico de neumoconiosis basta para dar por acreditado el nexo de causalidad."
+      },
+      {
+        "text": "Exige que el demandante presente una pericia técnica del nivel de polvo en el socavón efectuada en la misma fecha de su cese.",
+        "isCorrect": false,
+        "rationale": "No se exige al trabajador pruebas complejas o extemporáneas de medición en el socavón para reconocer el nexo causal en la neumoconiosis."
+      },
+      {
+        "text": "Requiere la prueba de la existencia de dolo específico mediante una sentencia penal firme contra los administradores de la mina.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad en materia de enfermedades profesionales no requiere probar dolo o responsabilidad penal, sino el daño y la exposición ocupacional."
+      },
+      {
+        "text": "Excluye la responsabilidad del empleador si el trabajador laboró menos de 15 años ininterrumpidos en labores de mina subterránea.",
+        "isCorrect": false,
+        "rationale": "El tiempo de desarrollo de la neumoconiosis varía según el nivel de exposición y no existe un plazo legal mínimo absoluto de 15 años para descartar su cobertura."
+      },
+      {
+        "text": "Traslada la obligación indemnizatoria de manera exclusiva al Sistema Privado de Pensiones (AFP).",
+        "isCorrect": false,
+        "rationale": "Las pensiones e indemnizaciones por enfermedades profesionales son asumidas por la aseguradora del SCTR o por el empleador no asegurado, no por la AFP."
+      }
+    ],
+    "hint": "Recuerda la presunción jurisprudencial que opera a favor de las enfermedades profesionales ligadas de modo inherente a la actividad extractiva.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso de dolencias de origen multifactorial como la lumbalgia o lumbago mecánico, ¿cuál ha sido el criterio jurisprudencial aplicado para el reconocimiento de una indemnización por enfermedad profesional?",
+    "opciones": [
+      {
+        "text": "No se presupone automáticamente el nexo causal, requiriendo que la afección esté catalogada normativamente y se demuestre la relación directa con la labor.",
+        "isCorrect": true,
+        "rationale": "A diferencia de la neumoconiosis, las afecciones como la lumbalgia exigen probar que las tareas específicas desarrolladas en el puesto generaron directa y determinantemente la patología."
+      },
+      {
+        "text": "Se clasifica de oficio como un accidente de trabajo mortal en la primera atención de urgencias.",
+        "isCorrect": false,
+        "rationale": "La lumbalgia es un trastorno musculoesquelético de desarrollo progresivo, no un accidente de impacto o un suceso con resultado de muerte."
+      },
+      {
+        "text": "Otorga automáticamente una pensión de invalidez total permanente sin necesidad de evaluación por una comisión médica.",
+        "isCorrect": false,
+        "rationale": "Se requiere de forma indispensable el dictamen emitido por un certificado o comisión médica calificada que acredite el menoscabo real."
+      },
+      {
+        "text": "Exime a la empresa de implementar medidas de ergonomía si el trabajador firmó su contrato bajo el régimen general.",
+        "isCorrect": false,
+        "rationale": "El empleador está legalmente obligado a cumplir los estándares de ergonomía preventiva para todo su personal independientemente del contrato."
+      },
+      {
+        "text": "Determina que la indemnización sea cubierta directamente mediante el pago del bono por cierre de pliego de reclamos.",
+        "isCorrect": false,
+        "rationale": "Las indemnizaciones por daños a la salud se tramitan independientemente de las bonificaciones o montos colectivos acordados en la negociación."
+      }
+    ],
+    "hint": "Considera la diferencia entre enfermedades de causalidad ocupacional exclusiva y aquellas dolencias que pueden tener múltiples causas ajenas al trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Durante la negociación colectiva en el sector minero, ¿cuáles de las siguientes materias pueden ser objeto de acuerdos en el pliego de reclamos entre la empresa y el sindicato?",
+    "opciones": [
+      {
+        "text": "Incrementos en la remuneración básica y otorgamiento de asignaciones económicas recurrentes.",
+        "isCorrect": true,
+        "rationale": "Las remuneraciones y reajustes salariales son materias centrales y válidas de la negociación colectiva."
+      },
+      {
+        "text": "Otorgamiento de bonificaciones por condiciones especiales como trabajo en altura, subsuelo o turno nocturno.",
+        "isCorrect": true,
+        "rationale": "El reconocimiento de compensaciones por las condiciones de riesgo e incomodidad del puesto es un aspecto laboral ampliamente negociable."
+      },
+      {
+        "text": "Concesión de un monto económico extraordinario denominado 'bono por cierre de pliego'.",
+        "isCorrect": true,
+        "rationale": "Las partes pueden convenir libremente un pago único y no remunerativo como incentivo al finalizar exitosamente la negociación."
+      },
+      {
+        "text": "La renuncia de los trabajadores a ser afiliados al régimen de seguridad social en salud (EsSalud).",
+        "isCorrect": false,
+        "rationale": "La afiliación a la seguridad social en salud es un derecho de orden público e irrenunciable que no puede ser objeto de negociación o supresión."
+      },
+      {
+        "text": "La exoneración de la fiscalización de la Sunafil dentro de las unidades operativas de la mina.",
+        "isCorrect": false,
+        "rationale": "Las facultades de inspección e imperio del Estado son irrenunciables y no pueden ser limitadas por acuerdos entre privados."
+      }
+    ],
+    "hint": "Distingue las condiciones de trabajo y beneficios económicos negociables de aquellas normas de orden público indisponibles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el Reglamento de Seguridad y Salud Ocupacional en Minería (D.S. 024-2016-EM), ¿cuál es la función principal de la Matriz IPERC en la gestión preventiva del titular minero?",
+    "opciones": [
+      {
+        "text": "Identificar continuamente los peligros, evaluar los riesgos asociados e implementar las medidas de control requeridas antes de realizar cualquier tarea.",
+        "isCorrect": true,
+        "rationale": "La Matriz IPERC es la herramienta técnica fundamental para mapear los riesgos del entorno minero y estructurar los controles preventivos."
+      },
+      {
+        "text": "Registrar exclusivamente los costos contables en los que incurre la empresa para adquirir repuestos de maquinaria.",
+        "isCorrect": false,
+        "rationale": "La Matriz IPERC es un instrumento de gestión de seguridad y salud en el trabajo, no un registro contable o de compras."
+      },
+      {
+        "text": "Sustituir las auditorías externas anuales del sistema de gestión mediante una declaración jurada del sindicato.",
+        "isCorrect": false,
+        "rationale": "Las auditorías externas son exigencias legales complementarias que no quedan eximidas por la existencia de la Matriz IPERC."
+      },
+      {
+        "text": "Regular el procedimiento disciplinario interno para sancionar las tardanzas del personal administrativo.",
+        "isCorrect": false,
+        "rationale": "El régimen disciplinario y de asistencia se regula en el Reglamento Interno de Trabajo, no en la Matriz IPERC."
+      },
+      {
+        "text": "Determinar el cálculo para la distribución de utilidades anuales entre los trabajadores operativos de campamento.",
+        "isCorrect": false,
+        "rationale": "El cálculo y reparto de utilidades está regido por la legislación tributaria y laboral aplicable a las ganancias de la empresa."
+      }
+    ],
+    "hint": "Enfócate en la sigla de la herramienta: Identificación de Peligros, Evaluación de Riesgos y Medidas de Control.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con la normativa técnica de seguridad en minería, ¿cuáles de los siguientes documentos forman parte de los instrumentos de gestión de cumplimiento obligatorio para la empresa minera?",
+    "opciones": [
+      {
+        "text": "El Reglamento Interno de Seguridad y Salud Ocupacional (RISST).",
+        "isCorrect": true,
+        "rationale": "El RISST es un documento obligatorio aprobable por el Comité de SST que fija los estándares de seguridad dentro de las operaciones."
+      },
+      {
+        "text": "El Programa Anual de Seguridad y Salud Ocupacional.",
+        "isCorrect": true,
+        "rationale": "Este documento planifica las metas, presupuestos, capacitaciones y actividades preventivas que se ejecutarán durante el año."
+      },
+      {
+        "text": "El Plan de Preparación y Respuesta para Emergencias.",
+        "isCorrect": true,
+        "rationale": "Es una guía operativa obligatoria para actuar ante eventuales siniestros, derrumbes u otras emergencias en la mina."
+      },
+      {
+        "text": "El Estatuto de Constitución de la Organización Sindical.",
+        "isCorrect": false,
+        "rationale": "El estatuto es una norma interna de gobernanza propia de la organización sindical, no un instrumento de gestión de seguridad del titular minero."
+      },
+      {
+        "text": "El Libro de Actas de Junta General de Accionistas.",
+        "isCorrect": false,
+        "rationale": "Es un libro mercantil societario que no integra la documentación del sistema de prevención de riesgos laborales."
+      }
+    ],
+    "hint": "Selecciona los planes y reglamentos que exige el Reglamento de SST en Minería para la organización del trabajo seguro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la ejecución de labores consideradas de alto riesgo (como trabajos en altura a partir de 1.80 metros, espacios confinados o trabajos en caliente), ¿qué requisito de gestión de campo es indispensable antes de autorizar las tareas en cada turno?",
+    "opciones": [
+      {
+        "text": "Contar con el Permiso Escrito para Trabajo de Alto Riesgo (PETAR) debidamente firmado por el supervisor y el responsable del área.",
+        "isCorrect": true,
+        "rationale": "El PETAR verifica in situ que las condiciones de seguridad han sido evaluadas y los controles colocados antes de iniciar la labor peligrosa."
+      },
+      {
+        "text": "Aprobación del horario de trabajo mediante un acta firmada por la asamblea general de trabajadores.",
+        "isCorrect": false,
+        "rationale": "El control del trabajo de alto riesgo requiere una verificación técnica de campo (PETAR), no un acuerdo sobre horarios de trabajo."
+      },
+      {
+        "text": "Publicación formal del listado de reparto de utilidades en la garita de ingreso.",
+        "isCorrect": false,
+        "rationale": "Los trámites de beneficios económicos no guardan relación con la autorización técnica de seguridad de un trabajo de alto riesgo."
+      },
+      {
+        "text": "Constancia de inscripción del contrato de alquiler de la maquinaria en los registros públicos.",
+        "isCorrect": false,
+        "rationale": "La titularidad o alquiler de los equipos es un asunto administrativo ajeno al permiso de seguridad operativo de campo."
+      },
+      {
+        "text": "Emisión de una licencia comercial provisional de la municipalidad distrital.",
+        "isCorrect": false,
+        "rationale": "Las autorizaciones municipales no corresponden a las herramientas técnicas operativas de prevención de riesgos en socavón o mina a cielo abierto."
+      }
+    ],
+    "hint": "Identifica el formato de autorización previa por escrito firmado por la supervisión antes de iniciar actividades peligrosas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el ámbito de la higiene ocupacional en operaciones mineras, ¿cómo se clasifican los factores de riesgo representados por el ruido continuo, las temperaturas extremas y la radiación?",
+    "opciones": [
+      {
+        "text": "Agentes o riesgos físicos.",
+        "isCorrect": true,
+        "rationale": "El ruido, la temperatura, la iluminación, las vibraciones y las radiaciones constituyen formas de energía clasificadas como agentes físicos."
+      },
+      {
+        "text": "Agentes o riesgos químicos.",
+        "isCorrect": false,
+        "rationale": "Los riesgos químicos abarcan sustancias en forma de polvos, humos, gases, neblinas o vapores contaminantes."
+      },
+      {
+        "text": "Riesgos disergonómicos.",
+        "isCorrect": false,
+        "rationale": "Los riesgos disergonómicos se relacionan con posturas inadecuadas, movimientos repetitivos y manipulación manual de cargas."
+      },
+      {
+        "text": "Agentes o riesgos biológicos.",
+        "isCorrect": false,
+        "rationale": "Los riesgos biológicos comprenden la presencia de virus, bacterias, hongos o plagas en el entorno."
+      },
+      {
+        "text": "Riesgos psicosociales.",
+        "isCorrect": false,
+        "rationale": "Los riesgos psicosociales abarcan factores como el estrés laboral, la sobrecarga mental y el acoso."
+      }
+    ],
+    "hint": "Considera la manifestación física y energética del factor ambiental presente en el lugar de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el plazo máximo legalmente fijado para notificar al Ministerio de Trabajo y Promoción del Empleo la ocurrencia de un accidente de trabajo mortal en una unidad minera?",
+    "opciones": [
+      {
+        "text": "Dentro de las 24 horas de ocurrido el accidente.",
+        "isCorrect": true,
+        "rationale": "La ley exige comunicar de inmediato los accidentes mortales e incidentes peligrosos dentro del plazo máximo imperativo de 24 horas."
+      },
+      {
+        "text": "Dentro de los 10 días hábiles posteriores mediante carta notarial.",
+        "isCorrect": false,
+        "rationale": "El plazo de 10 días calendario aplica para la entrega de la investigación del accidente mortal, no para la notificación inicial."
+      },
+      {
+        "text": "Al momento de presentar el informe trimestral de actividades del Comité de SST.",
+        "isCorrect": false,
+        "rationale": "Esperar al informe trimestral incumple la obligación de reporte urgente e inmediato estipulada por la normativa de SST."
+      },
+      {
+        "text": "Dentro de los 30 días calendario del mes siguiente a la fecha del deceso.",
+        "isCorrect": false,
+        "rationale": "Un plazo mensual resultaría extemporáneo y sancionable como infracción grave ante las autoridades de fiscalización."
+      },
+      {
+        "text": "En la fecha de renovación de la póliza anual del Seguro Complementario de Trabajo de Riesgo.",
+        "isCorrect": false,
+        "rationale": "La vigencia de las pólizas de seguro es independiente de la obligación de notificación inmediata del suceso fatal."
+      }
+    ],
+    "hint": "Recuerda la exigencia de inmediatez expresada en horas para informar a la autoridad administrativa sobre la pérdida de una vida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Con respecto al Comité de Seguridad y Salud Ocupacional en una empresa minera, ¿cuáles de las siguientes características corresponden a su estructura y atribuciones según el Reglamento de SST en Minería?",
+    "opciones": [
+      {
+        "text": "Es un órgano bipartito y paritario integrado por igual número de representantes del empleador y de los trabajadores.",
+        "isCorrect": true,
+        "rationale": "La norma exige que la composición garantice la representación equilibrada entre la empresa y el personal."
+      },
+      {
+        "text": "Aprueba el Reglamento Interno de Seguridad y Salud Ocupacional (RISST) de la empresa minera.",
+        "isCorrect": true,
+        "rationale": "Es una función clave del Comité revisar, discutir y aprobar formalmente el RISST antes de su aplicación."
+      },
+      {
+        "text": "Efectúa inspecciones periódicas a las instalaciones y deja constancia de sus observaciones en el Libro de SST.",
+        "isCorrect": true,
+        "rationale": "El Comité inspecciona directamente las áreas de trabajo y asienta sus hallazgos en el libro legal correspondiente."
+      },
+      {
+        "text": "Asume la representación jurídica exclusiva de la empresa ante procesos judiciales por despido.",
+        "isCorrect": false,
+        "rationale": "La representación judicial la ejercen los apoderados o directores designados societariamente, no el Comité de SST."
+      },
+      {
+        "text": "Fija los precios de exportación y comercialización de los minerales extraídos.",
+        "isCorrect": false,
+        "rationale": "Las decisiones comerciales y de ventas son de atribución gerencial e ajenas a la función técnico-preventiva del Comité."
+      }
+    ],
+    "hint": "Considera la naturaleza representativa, la paridad y las funciones de supervisión aprobatoria de este órgano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el desarrollo de actividades extractivas, ¿qué obligación recae sobre la empresa minera en relación con el mantenimiento de la ropa de trabajo cuando los colaboradores están expuestos de forma permanente a polvos o elementos minerales tóxicos (como plomo o sílice)?",
+    "opciones": [
+      {
+        "text": "Asumir de forma directa y exclusiva el lavado, descontaminación y mantenimiento de la indumentaria de trabajo.",
+        "isCorrect": true,
+        "rationale": "El deber de prevención y control de agentes tóxicos exige que la descontaminación de las prendas usadas en labores de riesgo sea financiada y gestionada por la empresa para no trasladar el riesgo ni el costo al trabajador."
+      },
+      {
+        "text": "Efectuar un descuento equivalente al 5% en la boleta de pago para cubrir el servicio de lavado externo.",
+        "isCorrect": false,
+        "rationale": "Los costos derivados de las medidas de seguridad y salud en el trabajo no pueden ser trasladados en modo alguno a los trabajadores."
+      },
+      {
+        "text": "Obligar al trabajador a trasladar la ropa contaminada a su domicilio personal para que la lave con sus prendas familiares.",
+        "isCorrect": false,
+        "rationale": "Llevar ropa impregnada con sustancias tóxicas al hogar contamina el entorno familiar y vulnera los protocolos de higiene ocupacional."
+      },
+      {
+        "text": "Exigir que la organización sindical asuma la compra de los insumos de lavado con los fondos de sus cuotas ordinarias.",
+        "isCorrect": false,
+        "rationale": "La provisión y mantenimiento de las condiciones de trabajo seguras es responsabilidad del empleador, no del sindicato."
+      },
+      {
+        "text": "Sustituir los mamelucos por vestimenta civil común sin especificaciones técnicas de protección.",
+        "isCorrect": false,
+        "rationale": "La ropa de trabajo en ambientes contaminados debe cumplir estándares específicos y no puede ser reemplazada por ropa de uso común."
+      }
+    ],
+    "hint": "Piensa en el principio que prohíbe trasladar los costos de la prevención de riesgos y descontaminación a los colaboradores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En materia de responsabilidad civil por accidentes de trabajo en minería, ¿qué implica la aplicación de la 'inversión de la carga de la prueba' en el proceso judicial?",
+    "opciones": [
+      {
+        "text": "Corresponde al empleador probar que cumplió diligentemente con las normas de seguridad, capacitaciones e implementos preventivos para liberarse de responsabilidad.",
+        "isCorrect": true,
+        "rationale": "Al existir una asimetría, la ley procesal laboral exige al empleador acreditar que adoptó las medidas de seguridad necesarias para evitar el daño reclamado."
+      },
+      {
+        "text": "El trabajador lesionado debe financiar peritajes de alta complejidad para demostrar la falla técnica del equipo.",
+        "isCorrect": false,
+        "rationale": "La inversión de la carga probatoria busca aliviar la posición del trabajador, imputando la prueba del cumplimiento de las medidas de seguridad a la parte empleadora."
+      },
+      {
+        "text": "La víctima pierde su derecho a indemnización si no presenta fotografías tomadas al momento exacto del siniestro.",
+        "isCorrect": false,
+        "rationale": "No se imponen cargas probatorias desproporcionadas o de imposible cumplimiento al trabajador o a sus causahabientes."
+      },
+      {
+        "text": "El juez debe rechazar la demanda si el Ministerio de Energía y Minas no emite un dictamen penal previo.",
+        "isCorrect": false,
+        "rationale": "La vía civil procesa pretensiones indemnizatorias sin subordinarse a pronunciamientos penales previos."
+      },
+      {
+        "text": "El Ministerio Público asume directamente los costos de la defensa jurídica privada de la empresa demandada.",
+        "isCorrect": false,
+        "rationale": "La fiscalía no actúa en defensa de los intereses privados de la empresa en un proceso judicial de naturaleza laboral o civil."
+      }
+    ],
+    "hint": "Recuerda a quién le corresponde acreditar en juicio que se cumplieron todas las exigencias del sistema de prevención de riesgos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Cuando en una operación minera ocurre un accidente fatal derivado del incumplimiento grave de las medidas de seguridad, ¿cuáles de las siguientes responsabilidades jurídicas pueden configurarse de forma concurrente?",
+    "opciones": [
+      {
+        "text": "Responsabilidad administrativa sancionadora impuesta por la Sunafil con multas pecuniarias.",
+        "isCorrect": true,
+        "rationale": "El incumplimiento de las normas de SST acarrea la imposición de sanciones administrativas por parte de la autoridad inspectiva."
+      },
+      {
+        "text": "Responsabilidad civil indemnizatoria por daños y perjuicios a favor de los deudos del trabajador.",
+        "isCorrect": true,
+        "rationale": "La empresa debe reparar el daño causado (daño moral, lucro cesante y daño emergente) mediante el pago de indemnizaciones."
+      },
+      {
+        "text": "Responsabilidad penal individual para los funcionarios o supervisores por delito de homicidio culposo o atentado contra las condiciones de seguridad.",
+        "isCorrect": true,
+        "rationale": "Las personas naturales responsables del control del riesgo pueden ser procesadas penalmente por inobservancia de las reglas de su profesión o cargo."
+      },
+      {
+        "text": "Responsabilidad de caducidad tributaria con traspaso inmediato del patrimonio minero al sindicato.",
+        "isCorrect": false,
+        "rationale": "Las infracciones laborales no conllevan la confiscación o traspaso automático de activos societarios al gremio sindical."
+      },
+      {
+        "text": "Responsabilidad de pérdida automática del título profesional de todos los ingenieros colegiados del departamento.",
+        "isCorrect": false,
+        "rationale": "Las sanciones éticas o profesionales recaen individualmente sobre los profesionales involucrados previo procedimiento sancionador de su colegio profesional, no de modo colectivo regional."
+      }
+    ],
+    "hint": "Considera la autonomía de las vías administrativa, civil y penal en el ordenamiento jurídico peruano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según las resoluciones del Tribunal de Fiscalización Laboral de la Sunafil, ¿por qué motivo la falta de reporte oportuno de un accidente de trabajo mortal constituye una infracción administrativa sancionable?",
+    "opciones": [
+      {
+        "text": "Porque vulnera el deber de información y obstaculiza la actuación inspectiva inmediata del Estado para esclarecer las causas de la muerte.",
+        "isCorrect": true,
+        "rationale": "El reporte extemporáneo oculta o retrasa la constatación in situ de los hechos por parte del cuerpo inspectivo, perjudicando la fiscalización pública."
+      },
+      {
+        "text": "Porque invalida automáticamente el contrato de seguro privado de la empresa.",
+        "isCorrect": false,
+        "rationale": "La sanción administrativa impuesta por Sunafil responde a la violación de un deber legal frente a la autoridad, no a las cláusulas comerciales del seguro."
+      },
+      {
+        "text": "Porque exime al empleador del pago de los subsidios por incapacidad de los demás trabajadores.",
+        "isCorrect": false,
+        "rationale": "El incumplimiento del aviso de un accidente fatal no libera a la empresa de sus obligaciones de seguridad social con el resto del personal."
+      },
+      {
+        "text": "Porque convierte un hecho fortuito en una infracción tributaria de competencia de la Sunat.",
+        "isCorrect": false,
+        "rationale": "Las notificaciones de accidentes laborales corresponden al fuero de trabajo e inspección laboral, no a la administración tributaria."
+      },
+      {
+        "text": "Porque impone la obligación de paralizar de forma indefinida todas las concesiones del grupo económico.",
+        "isCorrect": false,
+        "rationale": "La sanción por falta de aviso es una multa pecuniaria específica, diferente a una medida cautelar de cierre de operaciones."
+      }
+    ],
+    "hint": "Piensa en el rol que cumple la notificación urgente para permitir la investigación de las causas por parte de la autoridad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Ante la advertencia expresa de un trabajador minero sobre la presencia de ruidos anómalos o desprendimientos en el socavón (crujidos de rocas), ¿cuál es el deber operativo e inmediato del supervisor según los estándares de seguridad?",
+    "opciones": [
+      {
+        "text": "Paralizar preventivamente la labor, evacuar la zona y evaluar técnicamente el área con especialistas antes de autorizar el reingreso.",
+        "isCorrect": true,
+        "rationale": "Ante indicios fehacientes de inestabilidad, la norma exige detener la actividad y verificar la seguridad del terreno para evitar derrumbes mortales."
+      },
+      {
+        "text": "Disponer que el trabajador continúe con el perforado para no retrasar el avance de la guardia.",
+        "isCorrect": false,
+        "rationale": "Ignorar los avisos de inestabilidad rocosa por priorizar la producción constituye una negligencia grave que expone la vida del personal."
+      },
+      {
+        "text": "Desestimar la alerta mientras el polvo acumulado en el ambiente no supere los límites normativos.",
+        "isCorrect": false,
+        "rationale": "Los límites de polvo miden la calidad del aire, lo cual no sustituye la evaluación geomecánica sobre riesgo de colapso de rocas."
+      },
+      {
+        "text": "Sancionar disciplinariamente al trabajador por perturbar la tranquilidad de las operaciones.",
+        "isCorrect": false,
+        "rationale": "El trabajador tiene derecho a interrumpir su labor e informar sobre riesgos graves e inminentes sin ser objeto de represalias."
+      },
+      {
+        "text": "Solicitar la intervención de la oficina de recursos humanos para el trámite de una adenda laboral.",
+        "isCorrect": false,
+        "rationale": "El control de riesgos geomecánicos inmediatos requiere medidas técnicas de campo, no trámites de contratación o administración de personal."
+      }
+    ],
+    "hint": "Aplica el principio de prevención y la primacía de la vida frente a las metas de producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco del régimen sancionador de la Sunafil en materia minera, ¿cuáles de las siguientes conductas son calificadas como infracciones MUY GRAVES de seguridad y salud en el trabajo?",
+    "opciones": [
+      {
+        "text": "No identificar los peligros ni evaluar los riesgos (IPERC) en su totalidad respecto a las labores operativas de la unidad.",
+        "isCorrect": true,
+        "rationale": "La omisión del IPERC impide controlar adecuadamente los riesgos, siendo clasificada como una falta de la máxima gravedad."
+      },
+      {
+        "text": "No entregar los equipos de protección personal (EPP) requeridos para las actividades de alto riesgo.",
+        "isCorrect": true,
+        "rationale": "Privar de EPP indispensables a los trabajadores expuestos a riesgos severos constituye una vulneración grave del deber de protección."
+      },
+      {
+        "text": "No implementar los planes de prevención, preparación y respuesta ante situaciones de emergencia.",
+        "isCorrect": true,
+        "rationale": "Incurrir en desprotección frente a situaciones de emergencia pone en peligro colectivo la integridad de las brigadas y los operarios."
+      },
+      {
+        "text": "Registrar la asistencia del personal mediante un sistema de marcación electrónica en la puerta de ingreso.",
+        "isCorrect": false,
+        "rationale": "Llevar un control de asistencia es el cumplimiento de una obligación legal y de ninguna forma constituye una infracción."
+      },
+      {
+        "text": "Otorgar las licencias sindicales convenidas en el pacto colectivo celebrado con los representantes de los trabajadores.",
+        "isCorrect": false,
+        "rationale": "El cumplimiento de las facilidades sindicales pactadas respeta la legalidad y la libertad sindical."
+      }
+    ],
+    "hint": "Selecciona los incumplimientos que afectan directamente el núcleo de la prevención de incidentes mortales y la protección biológica del trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-12",
+    "diplomado": "DERECHO LABORAL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué papel cumple el compromiso ético de la alta gerencia en el cumplimiento del sistema de gestión de seguridad y salud en el trabajo dentro del sector extractivo?",
+    "opciones": [
+      {
+        "text": "Liderar y destinar los recursos económicos, humanos y técnicos necesarios para preservar la vida de los trabajadores, asumiendo la seguridad como un valor integral y no como un mero trámite administrativo.",
+        "isCorrect": true,
+        "rationale": "La alta dirección responde por la efectividad del sistema de gestión y la asignación real de recursos para prevenir accidentes y enfermedades."
+      },
+      {
+        "text": "Delegar de forma total e incondicional las responsabilidades legales en las empresas contratistas de servicios auxiliares.",
+        "isCorrect": false,
+        "rationale": "El titular minero mantiene la responsabilidad solidaria y de fiscalización sobre el cumplimiento de la seguridad de sus contratistas."
+      },
+      {
+        "text": "Buscar vacíos normativos para reducir los costos monetarios de las multas impuestas por la autoridad inspectiva.",
+        "isCorrect": false,
+        "rationale": "Centrar la gestión en evadir sanciones de la autoridad desnaturaliza la prevención de riesgos de la salud y la vida."
+      },
+      {
+        "text": "Limitar la inversión en seguridad al equivalente del 1% del capital social registrado ante la Superintendencia de Sociedades.",
+        "isCorrect": false,
+        "rationale": "El presupuesto de seguridad se determina según las necesidades objetivas de la matriz de riesgos y la norma técnica, no por un porcentaje fijo del capital social."
+      },
+      {
+        "text": "Reemplazar las capacitaciones obligatorias por comunicados de texto breves difundidos mediante correo corporativo.",
+        "isCorrect": false,
+        "rationale": "Las capacitaciones de seguridad deben ser efectivas, presenciales y dentro de la jornada de trabajo según las exigencias del reglamento minero."
+      }
+    ],
+    "hint": "Enfócate en la responsabilidad directiva de provisión de recursos, liderazgo efectivo y protección de la dignidad humana.",
+    "activo": true
+  }
+]

@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué se entiende por un 'punto crítico' en el contexto de la seguridad e inspección del mantenimiento industrial?",
+    "opciones": [
+      {
+        "text": "Una condición o equipo que, al no ser controlado, presenta una alta probabilidad de generar accidentes o fallas en el proceso.",
+        "isCorrect": true,
+        "rationale": "Un punto crítico comprende aquellos componentes, fuentes de energía o condiciones que conllevan el mayor nivel de riesgo o daño potencial para las personas, procesos o maquinarias si no se aplican medidas de control."
+      },
+      {
+        "text": "Cualquier herramienta manual básica que se encuentre almacenada dentro del taller de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Las herramientas manuales en buen estado no constituyen por sí solas un punto crítico, a menos que presenten fallas, desgaste extremo o modificaciones subestándar."
+      },
+      {
+        "text": "El presupuesto anual asignado por la gerencia para la compra de repuestos e insumos del almacén.",
+        "isCorrect": false,
+        "rationale": "El presupuesto es un indicador financiero, no un punto crítico de seguridad o riesgo operativo en campo."
+      },
+      {
+        "text": "La zona del taller destinada exclusivamente para la alimentación y descanso del personal operativo.",
+        "isCorrect": false,
+        "rationale": "Las áreas de descanso son zonas seguras desvinculadas de la interacción directa con peligros mecánicos o industriales críticos."
+      },
+      {
+        "text": "Un tipo de certificación ambiental internacional otorgada de manera voluntaria a las empresas.",
+        "isCorrect": false,
+        "rationale": "Las certificaciones son marcos normativos de gestión, mientras que un punto crítico es una condición o equipo específico dentro de la operación."
+      }
+    ],
+    "hint": "Piensa en aquellas condiciones o equipos cuya falla o falta de control ocasiona incidentes graves o interrupciones operativas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Durante la inspección visual inicial para identificar puntos críticos en una zona de trabajo de mantenimiento, ¿cuáles de las siguientes acciones forman parte del protocolo recomendado?",
+    "opciones": [
+      {
+        "text": "Verificar el estado general de las herramientas y equipos antes de iniciar la labor.",
+        "isCorrect": true,
+        "rationale": "Permite detectar deformidades, fisuras o anomalías evidentes a simple vista que pongan en riesgo la maniobra."
+      },
+      {
+        "text": "Revisar la presencia y correcto estado de las guardas de seguridad en partes móviles.",
+        "isCorrect": true,
+        "rationale": "Asegura que los sistemas físicos de protección no hayan sido retirados ni modificados por los mecánicos."
+      },
+      {
+        "text": "Inspeccionar el área cercana en busca de materiales inflamables, desorden o cables expuestos.",
+        "isCorrect": true,
+        "rationale": "Evaluar el entorno previene que proyecciones como chispas de soldadura entren en contacto con combustibles o generen tropezones."
+      },
+      {
+        "text": "Omitir la revisión de cables eléctricos si están cubiertos parcialmente con cinta aislante.",
+        "isCorrect": false,
+        "rationale": "Los cables empalmados o con cinta aislante representan una condición subestándar grave que requiere inspección y corrección inmediata."
+      },
+      {
+        "text": "Asumir que los balones de gas comprimido vacíos no representan ningún tipo de peligro.",
+        "isCorrect": false,
+        "rationale": "Los balones residuales suelen conservar una merma de gas de aproximadamente un 10%, manteniendo el riesgo de deflagración o fuga."
+      }
+    ],
+    "hint": "Considera la revisión general del equipo, sus resguardos de seguridad, el desgaste y el estado del entorno cercano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la evaluación de riesgos, ¿cómo se define y calcula el nivel de riesgo en una matriz IPERC?",
+    "opciones": [
+      {
+        "text": "Como el valor resultante de la multiplicación de la probabilidad de ocurrencia por la severidad o consecuencia del evento.",
+        "isCorrect": true,
+        "rationale": "El nivel de riesgo se cuantifica como un número o categoría que resulta de combinar cuán probable es que suceda un evento con la gravedad de sus consecuencias."
+      },
+      {
+        "text": "Como la suma total de las horas trabajadas por los operarios durante un turno de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Las horas trabajadas representan el tiempo de exposición, pero no determinan por sí solas el valor del riesgo."
+      },
+      {
+        "text": "Como el porcentaje de dinero ahorrado al omitir mantenimientos preventivos en la planta.",
+        "isCorrect": false,
+        "rationale": "El ahorro presupuestal no es una fórmula válida de evaluación de riesgos de seguridad."
+      },
+      {
+        "text": "Como la cantidad de equipos en mal estado que permanecen guardados en el almacén central.",
+        "isCorrect": false,
+        "rationale": "La cantidad de equipos en almacén es un dato de inventario y no una matriz de evaluación de riesgos operacionales."
+      },
+      {
+        "text": "Como el número total de inspecciones de seguridad programadas durante el año fiscal.",
+        "isCorrect": false,
+        "rationale": "El número de inspecciones es un indicador de gestión o control, no la definición del nivel de riesgo."
+      }
+    ],
+    "hint": "Recuerda la fórmula matemática que combina la probabilidad de ocurrencia con la gravedad del daño.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la jerarquía de controles de seguridad, ¿cuál de los siguientes ejemplos corresponde a un control de ingeniería o aislamiento?",
+    "opciones": [
+      {
+        "text": "Instalar guardas fijas de protección metálica alrededor de poleas y engranajes mecánicos.",
+        "isCorrect": true,
+        "rationale": "Las guardas o barreras físicas modifican o aíslan el peligro de forma directa en la fuente, impidiendo el contacto físico accidental."
+      },
+      {
+        "text": "Entregar guantes de cuero y caretas de protección facial a los soldadores.",
+        "isCorrect": false,
+        "rationale": "La entrega de elementos de protección constituye el último nivel de la jerarquía (EPP) y protege únicamente al receptor."
+      },
+      {
+        "text": "Publicar el Procedimiento Escrito de Trabajo Seguro (PETS) en el periódico mural del taller.",
+        "isCorrect": false,
+        "rationale": "Los procedimientos e instructivos impresos son controles de carácter administrativo."
+      },
+      {
+        "text": "Realizar una charla de seguridad de cinco minutos antes de iniciar el turno de trabajo.",
+        "isCorrect": false,
+        "rationale": "Las charlas y capacitaciones corresponden a controles administrativos enfocados en la conducta del personal."
+      },
+      {
+        "text": "Sustituir una escalera telescópica convencional por una plataforma elevadora de tipo Manlift.",
+        "isCorrect": false,
+        "rationale": "Reemplazar un equipo por otro tecnológicamente superior y más seguro se clasifica como un control de sustitución."
+      }
+    ],
+    "hint": "Busca la medida que modifica la estructura física de la máquina o coloca barreras fidedignas para interponerse entre el peligro y el trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la principal limitación de depender únicamente de los controles administrativos y del uso de EPP para la mitigación de riesgos?",
+    "opciones": [
+      {
+        "text": "Dependen al 100% del comportamiento, estado emocional y correcto uso por parte del trabajador.",
+        "isCorrect": true,
+        "rationale": "A diferencia de las barreras físicas de ingeniería, el EPP y las normas administrativas fallan si el trabajador se distrae, se equivoca o comete un acto imprudente."
+      },
+      {
+        "text": "Representan los controles más costosos y complejos de implementar para la gerencia de la empresa.",
+        "isCorrect": false,
+        "rationale": "Al contrario, los EPP y los controles administrativos suelen ser los más económicos y rápidos de adquirir o redactar."
+      },
+      {
+        "text": "Eliminan por completo el peligro desde la fuente original de emisión.",
+        "isCorrect": false,
+        "rationale": "Los EPP y controles administrativos no eliminan el peligro; únicamente colocan una protección o indicación sobre el receptor."
+      },
+      {
+        "text": "Requieren modificar la infraestructura y reemplazar toda la maquinaria del taller.",
+        "isCorrect": false,
+        "rationale": "La modificación física de infraestructura corresponde a los controles de ingeniería y sustitución, no a los administrativos o EPP."
+      },
+      {
+        "text": "Están terminantemente prohibidos por la legislación y normativas de inspección laboral.",
+        "isCorrect": false,
+        "rationale": "Los EPP y controles administrativos son legales y obligatorios, aunque se consideran los menos eficientes dentro de la jerarquía."
+      }
+    ],
+    "hint": "Considera el factor humano, la volatilidad emocional y los errores operacionales del día a día.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes características corresponden al mantenimiento preventivo en una planta industrial?",
+    "opciones": [
+      {
+        "text": "Se programa con anticipación en función del tiempo o las horas de recorrido del equipo.",
+        "isCorrect": true,
+        "rationale": "Se basa en frecuencias preestablecidas (como cada 200 horas o cada mes) para reemplazar componentes o hacer ajustes."
+      },
+      {
+        "text": "Ayuda a minimizar la ocurrencia de mantenimientos correctivos de emergencia.",
+        "isCorrect": true,
+        "rationale": "Al intervenir las máquinas antes de que colapsen, se evita que ocurran paradas inesperadas e intempestivas."
+      },
+      {
+        "text": "Permite una planificación más ordenada de los permisos de trabajo y control de riesgos.",
+        "isCorrect": true,
+        "rationale": "Al ser una tarea prevista, se pueden elaborar con tiempo los IPERC, PETAR y coordinar la presencia de supervisores."
+      },
+      {
+        "text": "Se realiza únicamente después de que el equipo ha sufrido una rotura total o colapso.",
+        "isCorrect": false,
+        "rationale": "Intervenir tras la falla o colapso del equipo define al mantenimiento correctivo, no al preventivo."
+      },
+      {
+        "text": "Obliga a realizar paradas de planta no programadas durante los picos de máxima producción.",
+        "isCorrect": false,
+        "rationale": "Las paradas no programadas ocurren por fallas imprevistas atendidas mediante mantenimiento correctivo."
+      }
+    ],
+    "hint": "Identifica las prácticas programadas que buscan evitar averías imprevistas mediante intervenciones planificadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué documento de seguridad es obligatorio autorizar formalmente antes de ejecutar labores críticas como trabajos en caliente, espacios confinados o altura?",
+    "opciones": [
+      {
+        "text": "PETAR (Permiso Escrito para Trabajo de Alto Riesgo).",
+        "isCorrect": true,
+        "rationale": "El PETAR es el formato firmado por las jefaturas y supervisores que autoriza expresamente la realización de un trabajo de alto riesgo específico durante una jornada."
+      },
+      {
+        "text": "PETS (Procedimiento Escrito de Trabajo Seguro).",
+        "isCorrect": false,
+        "rationale": "El PETS describe el paso a paso estándar de cómo realizar la tarea, pero no constituye el permiso de autorización diario."
+      },
+      {
+        "text": "SDS (Hoja de Datos de Seguridad de Materiales).",
+        "isCorrect": false,
+        "rationale": "La SDS es una ficha informativa sobre las propiedades químicas y riesgos de una sustancia, no un permiso de trabajo."
+      },
+      {
+        "text": "IPERC Línea Base.",
+        "isCorrect": false,
+        "rationale": "El IPERC Línea Base es la matriz general de identificación de peligros de toda la empresa, no un permiso diario por tarea."
+      },
+      {
+        "text": "Plan Anual de Capacitación en Seguridad.",
+        "isCorrect": false,
+        "rationale": "El Plan Anual es un documento de programación pedagógica, no una autorización operativa para tareas críticas."
+      }
+    ],
+    "hint": "Corresponde a un permiso específico escrito exigido para tareas de alto riesgo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito fundamental de un Plan de Respuesta a Emergencias en una instalación industrial?",
+    "opciones": [
+      {
+        "text": "Establecer las acciones inmediatas para mitigar las consecuencias de un accidente o evento catastrófico ya ocurrido.",
+        "isCorrect": true,
+        "rationale": "El plan de emergencia actúa post-incidente para evitar que los daños humanos, materiales o ambientales escalen a niveles superiores."
+      },
+      {
+        "text": "Reemplazar completamente la elaboración de la matriz IPERC y los procedimientos de trabajo.",
+        "isCorrect": false,
+        "rationale": "El plan de emergencia es complementario y no sustituye la prevención previa establecida en el IPERC y PETS."
+      },
+      {
+        "text": "Eliminar la necesidad de conformar y capacitar brigadas de primeros auxilios y contra incendios.",
+        "isCorrect": false,
+        "rationale": "Por el contrario, el plan de emergencia exige la constitución y preparación constante de brigadas operativas."
+      },
+      {
+        "text": "Garantizar que los equipos mecánicos de la planta jamás sufran desgaste o averías.",
+        "isCorrect": false,
+        "rationale": "La preservación de los equipos depende del mantenimiento mecánico, no del plan de atención de emergencias."
+      },
+      {
+        "text": "Sustituir las inspecciones periódicas de extintores, botiquines y luces de emergencia.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones garantizan que los recursos de emergencia funcionen; el plan norma cómo usarlos adecuadamente."
+      }
+    ],
+    "hint": "Se enfoca en las acciones posteriores al evento para controlar y minimizar la gravedad de las consecuencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es Screen View en el ámbito del control y monitoreo de la contaminación ambiental?",
+    "opciones": [
+      {
+        "text": "Un software de modelamiento que estima la concentración máxima de contaminantes atmosféricos emitidos por una fuente.",
+        "isCorrect": true,
+        "rationale": "Screen View es un software validado por la EPA de EE. UU. que utiliza un modelo gaussiano para estimar la dispersión de gases y material particulado a nivel del suelo."
+      },
+      {
+        "text": "Un dispositivo físico que se instala dentro de las chimeneas para filtrar el material particulado.",
+        "isCorrect": false,
+        "rationale": "Screen View es un programa informático de simulación matemática, no un filtro o equipo físico de planta."
+      },
+      {
+        "text": "Un sistema informático utilizado para registrar la asistencia y turnos del personal de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "El software no cumple funciones de gestión de recursos humanos o control de asistencia."
+      },
+      {
+        "text": "Una aplicación móvil orientada a la compra y venta de repuestos industriales usados.",
+        "isCorrect": false,
+        "rationale": "Screen View se enfoca estrictamente en la ingeniería ambiental y dispersión atmosférica, no en el comercio electrónico."
+      },
+      {
+        "text": "Un sensor remoto de vibraciones mecánicas diseñado para motores eléctricos de alta potencia.",
+        "isCorrect": false,
+        "rationale": "No es un hardware de mantenimiento predictivo, sino un software de análisis de emisiones al aire."
+      }
+    ],
+    "hint": "Es un programa computacional aprobado por la EPA que aplica ecuaciones gaussianas de dispersión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el software Screen View, ¿en qué escala meteorológica se fundamentan las clases de estabilidad atmosférica (de la A a la F)?",
+    "opciones": [
+      {
+        "text": "Escala de Pasquill y Gifford.",
+        "isCorrect": true,
+        "rationale": "Esta escala clasifica la estabilidad atmosférica desde 'A' (muy inestable) hasta 'F' (muy estable) según el viento y la radiación solar."
+      },
+      {
+        "text": "Escala de Richter.",
+        "isCorrect": false,
+        "rationale": "La escala de Richter mide la magnitud de la energía liberada por los sismos o terremotos."
+      },
+      {
+        "text": "Escala de Mohs.",
+        "isCorrect": false,
+        "rationale": "La escala de Mohs mide la dureza de los minerales mediante la resistencia al rayado."
+      },
+      {
+        "text": "Escala de Beaufort.",
+        "isCorrect": false,
+        "rationale": "La escala de Beaufort mide la intensidad del viento basándose principalmente en el estado de la mar o efectos en tierra, no en las clases A-F de estabilidad gaussiana."
+      },
+      {
+        "text": "Escala de Kelvin.",
+        "isCorrect": false,
+        "rationale": "Kelvin es una unidad de medida de temperatura absoluta en el sistema internacional."
+      }
+    ],
+    "hint": "Lleva los apellidos de dos investigadores que combinaron la velocidad del viento con la radiación solar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué tipos de terreno topográfico permite configurar el programa Screen View para evaluar la dispersión de plumas contaminantes?",
+    "opciones": [
+      {
+        "text": "Terreno plano o simple.",
+        "isCorrect": true,
+        "rationale": "Modela áreas sin elevaciones significativas, considerando principalmente la distancia horizontal desde la fuente emisora."
+      },
+      {
+        "text": "Terreno complejo o elevado.",
+        "isCorrect": true,
+        "rationale": "Modela zonas con montañas o colinas donde la elevación del terreno supera la altura física de la chimenea."
+      },
+      {
+        "text": "Terreno submarino profundo.",
+        "isCorrect": false,
+        "rationale": "Screen View está diseñado exclusivamente para evaluar emisiones en la atmósfera terrestre, no en ecosistemas bentónicos o marinos."
+      },
+      {
+        "text": "Terreno exoplanetario de baja gravedad.",
+        "isCorrect": false,
+        "rationale": "Los modelos meteorológicos integrados corresponden a la atmósfera de la Tierra."
+      },
+      {
+        "text": "Terreno espacial sin atmósfera.",
+        "isCorrect": false,
+        "rationale": "Sin atmósfera no existe dispersión aerodinámica de gases ni plumas de contaminación."
+      }
+    ],
+    "hint": "El programa diferencia entre áreas geográficas totalmente llanas y zonas con elevaciones o montañas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una ventaja clave del software de modelamiento ambiental AERMOD frente a herramientas más simples como Screen View?",
+    "opciones": [
+      {
+        "text": "Integra procesadores topográficos (AERMAP) y meteorológicos (AERMET) generando resultados 3D exportables a Google Earth.",
+        "isCorrect": true,
+        "rationale": "AERMOD ofrece un análisis tridimensional avanzado y realista combinando mapas de terreno reales con bases de datos meteorológicas procesadas."
+      },
+      {
+        "text": "Funciona completamente a mano sin requerir datos de velocidad o dirección del viento.",
+        "isCorrect": false,
+        "rationale": "AERMOD requiere un conjunto complejo de datos meteorológicos y topográficos procesados por computadora."
+      },
+      {
+        "text": "Está limitado exclusivamente a evaluar los niveles de ruido dentro de oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "AERMOD evalúa la dispersión atmosférica de gases y partículas (PM10, PM2.5, SO2), no la acústica de interiores."
+      },
+      {
+        "text": "No permite ingresar fuentes de emisión provenientes de canteras ni plantas industriales.",
+        "isCorrect": false,
+        "rationale": "El software permite simular múltiples fuentes puntuales, de área, volumétricas y de canteras o minas."
+      },
+      {
+        "text": "Elimina totalmente la necesidad legal de realizar monitoreos de calidad del aire en campo.",
+        "isCorrect": false,
+        "rationale": "Los modelos matemáticos estiman concentraciones, pero los monitoreos reales de campo siguen siendo requeridos para la validación."
+      }
+    ],
+    "hint": "Combina datos meteorológicos avanzados con modelos tridimensionales exportables a plataformas geográficas reales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere el concepto de 'ecomantenimiento' en el sector industrial moderno?",
+    "opciones": [
+      {
+        "text": "A la integración de principios de sostenibilidad, eficiencia energética y reducción de huella ambiental en el mantenimiento.",
+        "isCorrect": true,
+        "rationale": "El ecomantenimiento busca que las actividades de preservación de maquinaria optimicen insumos, prevengan fugas y reduzcan emisiones de CO2."
+      },
+      {
+        "text": "A la eliminación de los planes preventivos para permitir que las máquinas funcionen hasta romperse.",
+        "isCorrect": false,
+        "rationale": "Dejar romper las máquinas genera mayor desperdicio de piezas, consumo energético y contaminación reactiva."
+      },
+      {
+        "text": "Al mantenimiento enfocado exclusivamente en las áreas verdes y jardines exteriores de la fábrica.",
+        "isCorrect": false,
+        "rationale": "No se limita a la jardinería; se aplica directamente a la maquinaria, motores, calderas y procesos de planta."
+      },
+      {
+        "text": "Al reemplazo inmediato de toda la maquinaria usada por equipos nuevos cada seis meses.",
+        "isCorrect": false,
+        "rationale": "Desechar equipos prematuramente atenta contra la economía circular y genera exceso de residuos sólidos."
+      },
+      {
+        "text": "A la prohibición absoluta del uso de cualquier tipo de lubricante sintético en la industria.",
+        "isCorrect": false,
+        "rationale": "El ecomantenimiento promueve el uso de lubricantes biodegradables o eficientes, no la eliminación de la lubricación adecuada."
+      }
+    ],
+    "hint": "Implica fusionar el cuidado de los activos mecánicos con criterios de preservación ambiental y uso eficiente de recursos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del ecomantenimiento, ¿cuál estrategia se considera la más eficiente para intervenir los equipos justo antes de que ocurra una falla, evitando desperdicios?",
+    "opciones": [
+      {
+        "text": "Mantenimiento predictivo.",
+        "isCorrect": true,
+        "rationale": "El mantenimiento predictivo monitorea variables físicas en tiempo real para intervenir el equipo en el momento óptimo, maximizando la vida útil sin sobre-mantenimiento."
+      },
+      {
+        "text": "Mantenimiento reactivo.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento reactivo se ejecuta cuando la falla ya ocurrió, resultando en pérdidas de energía, materiales y paradas no planificadas."
+      },
+      {
+        "text": "Mantenimiento de emergencia.",
+        "isCorrect": false,
+        "rationale": "Es una variante del mantenimiento reactivo que atiende colapsos intempestivos bajo alta presión operativa."
+      },
+      {
+        "text": "Mantenimiento estético o cosmético.",
+        "isCorrect": false,
+        "rationale": "Se limita a aspectos visuales de pintura o limpieza superficial sin evaluar el rendimiento mecánico ni ambiental."
+      },
+      {
+        "text": "Mantenimiento correctivo no planificado.",
+        "isCorrect": false,
+        "rationale": "Genera altos costos, desperdicio de insumos y riesgos accidentales al trabajar bajo urgencia."
+      }
+    ],
+    "hint": "Utiliza tecnología de monitoreo continuo (como análisis de vibración o termografía) para predecir el deterioro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes características definen el paradigma de la 'Industria 5.0' en comparación con modelos netamente productivistas?",
+    "opciones": [
+      {
+        "text": "Colocar al ser humano en el centro de la producción colaborando armónicamente con cobots (robots colaborativos).",
+        "isCorrect": true,
+        "rationale": "La Industria 5.0 busca potenciar las capacidades humanas mediante la tecnología, dejando las tareas peligrosas o repetitivas a las máquinas."
+      },
+      {
+        "text": "Enfoque prioritario en la sostenibilidad, energías limpias y reducción del impacto ambiental.",
+        "isCorrect": true,
+        "rationale": "Integra el cuidado del planeta como un requisito indispensable de la cadena de valor industrial."
+      },
+      {
+        "text": "Fomentar la resiliencia industrial frente a crisis, interrupciones o cambios globales.",
+        "isCorrect": true,
+        "rationale": "Busca que las cadenas de suministro y líneas de producción sean capaces de adaptarse rápidamente ante eventualidades."
+      },
+      {
+        "text": "Sustituir y desplazar de forma absoluta a los seres humanos de todas las decisiones creativas y de gestión.",
+        "isCorrect": false,
+        "rationale": "A diferencia de la automatización rígida, la Industria 5.0 revaloriza el rol y juicio del trabajador humano."
+      },
+      {
+        "text": "Incrementar de manera masiva e ininterrumpida el consumo de combustibles fósiles.",
+        "isCorrect": false,
+        "rationale": "La Industria 5.0 promueve activamente la transición energética hacia fuentes renovables y bajas en carbono."
+      }
+    ],
+    "hint": "Busca un equilibrio situando al ser humano en el centro, promoviendo la sostenibilidad y la resiliencia operativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué el mantenimiento eficiente de los motores eléctricos es crítico para la sostenibilidad ambiental de una empresa industrial?",
+    "opciones": [
+      {
+        "text": "Porque los motores eléctricos consumen aproximadamente el 70% de la energía eléctrica generada en la industria.",
+        "isCorrect": true,
+        "rationale": "Dado que la mayoría de la fuerza motriz industrial proviene de motores eléctricos, optimizar su rendimiento ahorra un volumen gigantesco de energía y reduce emisiones indirectas."
+      },
+      {
+        "text": "Porque son los únicos equipos industriales que jamás requieren lubricación ni alineación.",
+        "isCorrect": false,
+        "rationale": "Los motores eléctricos requieren un riguroso mantenimiento preventivo/predictivo de rodamientos, aislamiento y alineación."
+      },
+      {
+        "text": "Porque funcionan exclusivamente con combustible diésel de alto octanaje.",
+        "isCorrect": false,
+        "rationale": "Los motores eléctricos se alimentan de corriente eléctrica, no de combustibles líquidos derivados del petróleo."
+      },
+      {
+        "text": "Porque la ley exige reemplazarlos por completo cada tres semanas de uso continuo.",
+        "isCorrect": false,
+        "rationale": "No existe tal exigencia normativa; los motores están diseñados para operar durante años mediante un correcto mantenimiento."
+      },
+      {
+        "text": "Porque no generan ningún tipo de disipación de calor ni resistencia magnética.",
+        "isCorrect": false,
+        "rationale": "Los motores sufren pérdidas por efecto Joule, calor y fricción, factores que se reducen con un buen mantenimiento."
+      }
+    ],
+    "hint": "Recuerda el porcentaje masivo de energía eléctrica global que consumen estos componentes en las plantas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión ambiental industrial, ¿qué matriz se utiliza específicamente para identificar cómo las actividades de la planta alteran el entorno?",
+    "opciones": [
+      {
+        "text": "Matriz de Identificación de Aspectos e Impactos Ambientales.",
+        "isCorrect": true,
+        "rationale": "Esta matriz relaciona los 'aspectos' (causas/elementos de la actividad que interactúan con el ambiente) con los 'impactos' (cambios o consecuencias producidas en el entorno)."
+      },
+      {
+        "text": "Matriz IPERC de Seguridad y Salud Ocupacional.",
+        "isCorrect": false,
+        "rationale": "El IPERC se enfoca en peligros y riesgos hacia la integridad física y salud de los trabajadores, no en el medio ambiente."
+      },
+      {
+        "text": "Matriz de Contabilidad y Flujo de Caja Operativo.",
+        "isCorrect": false,
+        "rationale": "La matriz contable evalúa indicadores de liquidez y presupuestos financieros."
+      },
+      {
+        "text": "Matriz FODA Organizacional.",
+        "isCorrect": false,
+        "rationale": "El FODA es una herramienta estratégica de negocios para analizar Fortalezas, Oportunidades, Debilidades y Amenazas."
+      },
+      {
+        "text": "Matriz de Calificación de Proveedores de Repuestos.",
+        "isCorrect": false,
+        "rationale": "Se utiliza en logística para homologar la calidad de compras de bienes o servicios."
+      }
+    ],
+    "hint": "Se enfoca en analizar la relación causa-efecto entre las operaciones y el medio ambiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la norma internacional certificable que establece los requisitos para un Sistema de Gestión Ambiental (SGA)?",
+    "opciones": [
+      {
+        "text": "ISO 14001.",
+        "isCorrect": true,
+        "rationale": "La ISO 14001 es la norma estándar internacional reconocida para la implementación de Sistemas de Gestión Ambiental en organizaciones."
+      },
+      {
+        "text": "ISO 9001.",
+        "isCorrect": false,
+        "rationale": "La ISO 9001 se enfoca de manera exclusiva en los Sistemas de Gestión de la Calidad."
+      },
+      {
+        "text": "ISO 45001.",
+        "isCorrect": false,
+        "rationale": "La ISO 45001 establece los requisitos para los Sistemas de Gestión de Seguridad y Salud en el Trabajo."
+      },
+      {
+        "text": "ISO 27001.",
+        "isCorrect": false,
+        "rationale": "La ISO 27001 rige los Sistemas de Gestión de la Seguridad de la Información."
+      },
+      {
+        "text": "ISO 50001.",
+        "isCorrect": false,
+        "rationale": "La ISO 50001 establece los requisitos específicos para los Sistemas de Gestión de la Energía."
+      }
+    ],
+    "hint": "Pertenece a la familia de normas ISO y su código termina en 4001.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué cláusula o apartado de la norma ISO 14001 se exige a la organización determinar sus aspectos ambientales y los impactos asociados?",
+    "opciones": [
+      {
+        "text": "Numeral 6.1.2.",
+        "isCorrect": true,
+        "rationale": "El numeral 6.1.2 de la ISO 14001 exige identificar los aspectos ambientales de las actividades, productos y servicios, así como determinar cuáles son significativos."
+      },
+      {
+        "text": "Numeral 4.1.",
+        "isCorrect": false,
+        "rationale": "El numeral 4.1 trata sobre la comprensión de la organización y de su contexto."
+      },
+      {
+        "text": "Numeral 10.2.",
+        "isCorrect": false,
+        "rationale": "El numeral 10.2 corresponde a la gestión de no conformidades y acciones correctivas."
+      },
+      {
+        "text": "Numeral 5.1.",
+        "isCorrect": false,
+        "rationale": "El numeral 5.1 aborda el liderazgo y compromiso de la alta dirección."
+      },
+      {
+        "text": "Numeral 8.2.",
+        "isCorrect": false,
+        "rationale": "El numeral 8.2 trata sobre la preparación y respuesta ante emergencias ambientales."
+      }
+    ],
+    "hint": "Forma parte del capítulo 6 referente a la Planificación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la definición formal de un 'impacto ambiental' según los conceptos de gestión ambiental?",
+    "opciones": [
+      {
+        "text": "Cualquier cambio en el medio ambiente, sea adverso o beneficioso, resultado total o parcial de las actividades humanas o naturales.",
+        "isCorrect": true,
+        "rationale": "El impacto ambiental abarca todas las modificaciones medibles en los ecosistemas, pudiendo ser negativas (contaminación) o positivas (reforestación)."
+      },
+      {
+        "text": "El costo económico directo pagado en multas a las entidades reguladoras del estado.",
+        "isCorrect": false,
+        "rationale": "La multa económica es una sanción administrativa legal, no la definición del cambio producido en el ecosistema."
+      },
+      {
+        "text": "La cantidad de lubricante usado consumido durante el turno de trabajo de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "El consumo de lubricante es un 'aspecto ambiental' (causa), mientras que la contaminación o alteración del suelo resultante es el 'impacto'."
+      },
+      {
+        "text": "El número de personal capacitado en brigadas de respuesta contra incendios.",
+        "isCorrect": false,
+        "rationale": "El entrenamiento de personal es una medida de control o capacidad operativa, no un impacto ambiental en el medio físico."
+      },
+      {
+        "text": "La adquisición de un nuevo software computacional para la empresa.",
+        "isCorrect": false,
+        "rationale": "La compra de herramientas informáticas es una acción administrativa o tecnológica."
+      }
+    ],
+    "hint": "Se refiere a cualquier alteración o cambio provocado en el entorno por causas humanas o naturales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del SENACE en el marco del sistema de evaluación ambiental del Perú?",
+    "opciones": [
+      {
+        "text": "Evaluar y aprobar los estudios de impacto ambiental detallados (EIA-d) de los grandes proyectos de inversión del país.",
+        "isCorrect": true,
+        "rationale": "El SENACE (Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles) revisa y aprueba los estudios ambientales más complejos antes de la fase de construcción."
+      },
+      {
+        "text": "Sancionar y clausurar directamente comercios minoristas por no reciclar plástico.",
+        "isCorrect": false,
+        "rationale": "La fiscalización ambiental y sanción en grandes proyectos corresponde al OEFA o a las municipalidades según competencia."
+      },
+      {
+        "text": "Administrar el cobro de la tarifa del servicio público de agua potable en zonas urbanas.",
+        "isCorrect": false,
+        "rationale": "El cobro de agua potable es competencia de las empresas prestadoras de servicios (EPS) reguladas por la SUNASS."
+      },
+      {
+        "text": "Dictar capacitaciones obligatorias de primeros auxilios para talleres mecánicos informales.",
+        "isCorrect": false,
+        "rationale": "El SENACE es un organismo evaluador de estudios ambientales, no una entidad de formación técnica de primeros auxilios."
+      },
+      {
+        "text": "Otorgar licencias de conducir para maquinaria pesada y camiones mineros.",
+        "isCorrect": false,
+        "rationale": "Las licencias de conducir son competencia del Ministerio de Transportes y Comunicaciones (MTC)."
+      }
+    ],
+    "hint": "Se encarga de la revisión y aprobación de los Estudios de Impacto Ambiental detallados (EIA-d) para proyectos de gran envergadura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué entidad pública peruana cumple el rol de fiscalizar, supervisar y aplicar sanciones administrativas en materia ambiental a las industrias y mineras?",
+    "opciones": [
+      {
+        "text": "OEFA.",
+        "isCorrect": true,
+        "rationale": "El OEFA es la entidad adscrita al MINAM encargada de la fiscalización, supervisión, control y sanción del cumplimiento de los compromisos ambientales."
+      },
+      {
+        "text": "SUNAFIL.",
+        "isCorrect": false,
+        "rationale": "La SUNAFIL fiscaliza el cumplimiento de las normas sociolaborales y de seguridad y salud en el trabajo, no los compromisos ambientales."
+      },
+      {
+        "text": "INDECOPI.",
+        "isCorrect": false,
+        "rationale": "INDECOPI vela por la defensa de la competencia y la protección de los derechos de los consumidores."
+      },
+      {
+        "text": "CONCYTEC.",
+        "isCorrect": false,
+        "rationale": "El CONCYTEC promueve el desarrollo de la ciencia, tecnología e innovación tecnológica en el país."
+      },
+      {
+        "text": "SENCICO.",
+        "isCorrect": false,
+        "rationale": "SENCICO es la entidad dedicada a la capacitación e investigación en el sector de la construcción."
+      }
+    ],
+    "hint": "Sus siglas corresponden al Organismo de Evaluación y Fiscalización Ambiental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la responsabilidad principal de la Autoridad Nacional del Agua (ANA) en relación con las operaciones industriales y mineras?",
+    "opciones": [
+      {
+        "text": "Administrar, conservar y vigilar las fuentes naturales de agua, otorgando derechos de uso y autorizaciones de vertimiento.",
+        "isCorrect": true,
+        "rationale": "La ANA gestiona de manera integrada los recursos hídricos en cuencas, autorizando el uso de agua y el vertimiento o reúso de aguas residuales tratadas."
+      },
+      {
+        "text": "Inspeccionar únicamente el uso correcto de cascos y arneses en trabajos de altura.",
+        "isCorrect": false,
+        "rationale": "La inspección de EPP de seguridad laboral es competencia de SUNAFIL o de OSINERGMIN (en minería)."
+      },
+      {
+        "text": "Aprobar las licencias comerciales de funcionamiento de los talleres mecánicos municipales.",
+        "isCorrect": false,
+        "rationale": "Las licencias de funcionamiento son otorgadas por las municipalidades distritales o provinciales."
+      },
+      {
+        "text": "Sancionar el exceso de velocidad de los vehículos en autopistas nacionales.",
+        "isCorrect": false,
+        "rationale": "La fiscalización de tránsito corresponde a la Policía Nacional del Perú y a la SUTRAN."
+      },
+      {
+        "text": "Evaluar la calidad de la señal de internet en campamentos mineros alejados.",
+        "isCorrect": false,
+        "rationale": "La regulación de telecomunicaciones corresponde al OSIPTEL."
+      }
+    ],
+    "hint": "Es el ente rector técnico-normativo encargado de vigilar y otorgar licencias de uso y vertimiento sobre el recurso hídrico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el sector energético y minero del Perú, ¿qué organismo se encarga de supervisar la seguridad de las infraestructuras e instalaciones operativas?",
+    "opciones": [
+      {
+        "text": "OSINERGMIN.",
+        "isCorrect": true,
+        "rationale": "OSINERGMIN fiscaliza la seguridad de la infraestructura y condiciones operativas en minería, electricidad e hidrocarburos."
+      },
+      {
+        "text": "OEFA.",
+        "isCorrect": false,
+        "rationale": "OEFA fiscaliza exclusivamente los compromisos y la normativa ambiental, dejando la seguridad de infraestructura a OSINERGMIN."
+      },
+      {
+        "text": "SENAMHI.",
+        "isCorrect": false,
+        "rationale": "El SENAMHI brinda información meteorológica e hidrológica del clima en el país."
+      },
+      {
+        "text": "SUNAT.",
+        "isCorrect": false,
+        "rationale": "La SUNAT administra los tributos internos y aduaneros del estado peruano."
+      },
+      {
+        "text": "OSITRAN.",
+        "isCorrect": false,
+        "rationale": "OSITRAN supervisa la inversión en infraestructura de transporte de uso público (carreteras, puertos, aeropuertos)."
+      }
+    ],
+    "hint": "Sus siglas corresponden al Organismo Supervisor de la Inversión en Energía y Minería.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes tecnologías o estrategias contribuyen directamente a mejorar la eficiencia operativa y reducir los riesgos laborales durante el mantenimiento?",
+    "opciones": [
+      {
+        "text": "Implementación de automatización y robótica para tareas repetitivas o peligrosas.",
+        "isCorrect": true,
+        "rationale": "Saca al personal humano de la línea directa de fuego o entornos de alto riesgo, disminuyendo accidentes de atrapamiento."
+      },
+      {
+        "text": "Uso de sensores IoT (Internet de las Cosas) para el monitoreo continuo de variables como temperatura y vibración.",
+        "isCorrect": true,
+        "rationale": "Permite anticipar fallas mecánicas y programar intervenciones predictivas exactas antes de que ocurran colapsos."
+      },
+      {
+        "text": "Optimización del diseño del flujo de procesos para minimizar traslados innecesarios de materiales.",
+        "isCorrect": true,
+        "rationale": "Reducir movimientos redundantes ahorra tiempo, evita fatiga operativa y disminuye riesgos de atropello o caída."
+      },
+      {
+        "text": "Eliminación completa de los programas de capacitación técnica al personal de taller.",
+        "isCorrect": false,
+        "rationale": "Omitir capacitaciones incrementa la tasa de errores operacionales y destruye la cultura de seguridad."
+      },
+      {
+        "text": "Operación continua de maquinaria pesada que presente fugas activas de aceite hidrocarburo.",
+        "isCorrect": false,
+        "rationale": "Operar con fugas contamina el suelo/agua y puede causar agarrotamientos mecánicos e incendios por sobrecalentamiento."
+      }
+    ],
+    "hint": "Identifica las soluciones que modernizan el monitoreo, reducen la exposición humana y optimizan flujos de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la inspección visual previa a un mantenimiento en taller, ¿cuál de las siguientes situaciones representa un punto crítico de seguridad no evidente que requiere un control específico antes de intervenir la maquinaria?",
+    "opciones": [
+      {
+        "text": "La presencia de baterías internas o acumuladores de energía neumática sin señalización visual directa.",
+        "isCorrect": true,
+        "rationale": "Las fuentes de energía almacenadas o no visibles representan riesgos latentes que pueden liberarse de forma intempestiva durante la intervención si no se bloquean adecuadamente."
+      },
+      {
+        "text": "La falta de orden y limpieza en los pasillos de circulación de peatones.",
+        "isCorrect": false,
+        "rationale": "Aunque el desorden genera riesgo de tropiezos, constituye una condición subestándar evidente y de fácil detección visual simple."
+      },
+      {
+        "text": "El desgaste superficial en la pintura protectora del chasis del equipo.",
+        "isCorrect": false,
+        "rationale": "El desgaste de pintura es un aspecto estético o corrosivo superficial visible que no representa una amenaza oculta de liberación intempestiva de energía."
+      },
+      {
+        "text": "Un cable eléctrico tendido en el suelo con aislamiento visiblemente dañado.",
+        "isCorrect": false,
+        "rationale": "Un cable pelado o deteriorado en la superficie es un peligro físico y eléctrico obvio detectado a simple vista en la inspección del entorno."
+      },
+      {
+        "text": "La ausencia de señalización de uso obligatorio de casco en la entrada del taller.",
+        "isCorrect": false,
+        "rationale": "La falta de cartelería es una deficiencia administrativa obvia que no constituye un punto crítico de energía atrapada en el equipo."
+      }
+    ],
+    "hint": "Considere aquellos riesgos vinculados a energías residuales u ocultas que no se perciben a simple vista al observar la estructura externa del equipo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de mantenimiento, ¿por qué los mantenimientos correctivos suelen presentar un nivel de riesgo de accidentes significativamente mayor en comparación con los mantenimientos preventivos programados?",
+    "opciones": [
+      {
+        "text": "Debido a la urgencia operativa por reiniciar la producción, lo que propicia la omisión de procedimientos seguros como el aislamiento y bloqueo de energías.",
+        "isCorrect": true,
+        "rationale": "La presión por tiempo en intervenciones de emergencia induce al personal a saltarse pasos críticos de seguridad como la verificación de energía cero y el llenado riguroso de permisos."
+      },
+      {
+        "text": "Porque los mantenimientos correctivos siempre requieren el uso obligatorio de grúas puente de gran tonelaje.",
+        "isCorrect": false,
+        "rationale": "El tipo de izaje depende del componente a reparar y no de si la intervención fue programada o reactiva."
+      },
+      {
+        "text": "Debido a que las herramientas utilizadas en intervenciones correctivas son técnicamente distintas a las empleadas en mantenimientos preventivos.",
+        "isCorrect": false,
+        "rationale": "Las herramientas mecánicas o eléctricas empleadas suelen ser las mismas; la diferencia radica en la planificación y el control del entorno."
+      },
+      {
+        "text": "Porque la normativa legal prohíbe elaborar Permisos Escritos para Trabajos de Alto Riesgo (PETAR) en tareas no programadas.",
+        "isCorrect": false,
+        "rationale": "La normativa exige el uso de PETAR para toda tarea de alto riesgo independientemente de si es preventiva o correctiva."
+      },
+      {
+        "text": "Debido a que el mantenimiento correctivo se aplica únicamente a equipos que han sufrido una pérdida total e irreparable.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento correctivo busca reparar fallas parciales o funcionales para restaurar la operatividad del equipo, no solo atender pérdidas totales."
+      }
+    ],
+    "hint": "Piense en el factor psicológico y la presión de tiempo que genera una parada no planificada en la planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco operativo de la seguridad en mantenimiento, ¿cuáles de los siguientes documentos son indispensables para autorizar y ejecutar una tarea no rutinaria de alto riesgo en campo?",
+    "opciones": [
+      {
+        "text": "Permiso Escrito para Trabajo de Alto Riesgo (PETAR) firmado por los supervisores responsables.",
+        "isCorrect": true,
+        "rationale": "Autoriza formalmente la ejecución de la tarea crítica validando que se han verificado los controles específicos en el lugar."
+      },
+      {
+        "text": "Procedimiento Escrito de Trabajo Seguro (PTS/PETS) correspondiente a la tarea.",
+        "isCorrect": true,
+        "rationale": "Establece la secuencia paso a paso de la actividad técnica garantizando que se apliquen los estándares operativos seguros."
+      },
+      {
+        "text": "Identificación de Peligros, Evaluación de Riesgos y Medidas de Control Continuo (IPERC Continuo) elaborado en la jornada por los trabajadores.",
+        "isCorrect": true,
+        "rationale": "Permite evaluar las condiciones específicas del entorno y del día antes de iniciar la labor en el punto de trabajo."
+      },
+      {
+        "text": "Manual de Organización y Funciones (MOF) actualizado del departamento de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "El MOF es un documento administrativo estructural de la empresa que no evalúa riesgos ni autoriza trabajos operativos en campo."
+      },
+      {
+        "text": "Certificación del Sistema de Gestión Ambiental según la norma ISO 14001 de la planta.",
+        "isCorrect": false,
+        "rationale": "La norma ISO 14001 es un estándar marco de gestión, no un documento operativo o permiso de trabajo específico para tareas de alto riesgo."
+      }
+    ],
+    "hint": "Identifique las herramientas operativas de control de campo y permisos específicos frente a los documentos administrativos corporativos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un equipo mecánico presenta un elevado nivel de ruido y riesgo de atrapamiento por engranajes expuestos. La empresa decide instalar una carcasa metálica fija con enclavamiento de seguridad que frena el motor si la cubierta se abre. Según la jerarquía de controles de seguridad, ¿a qué nivel corresponde esta medida?",
+    "opciones": [
+      {
+        "text": "Control de ingeniería e aislamiento.",
+        "isCorrect": true,
+        "rationale": "La implementación de resguardos físicos, barreras mecánicas y sistemas de interbloqueo modifica la estructura de la maquinaria para aislar el peligro del trabajador."
+      },
+      {
+        "text": "Sustitución del peligro.",
+        "isCorrect": false,
+        "rationale": "La sustitución implica reemplazar el equipo o el insumo por otro de menor peligro, no agregar protecciones al equipo existente."
+      },
+      {
+        "text": "Control administrativo.",
+        "isCorrect": false,
+        "rationale": "Los controles administrativos corresponden a señales, procedimientos, alertas o capacitaciones, no a barreras físicas integradas a la máquina."
+      },
+      {
+        "text": "Equipo de Protección Personal (EPP).",
+        "isCorrect": false,
+        "rationale": "El EPP es una prenda o elemento portado por el trabajador, mientras que la carcasa es una modificación física instalada en la maquinaria."
+      },
+      {
+        "text": "Eliminación del peligro.",
+        "isCorrect": false,
+        "rationale": "La eliminación suprime por completo el peligro del proceso; en este caso los engranajes y la fuente de movimiento siguen existiendo detrás de la guarda."
+      }
+    ],
+    "hint": "Analice si la medida modifica la estructura del equipo para interponer una barrera física antes de llegar al trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué las medidas basadas exclusivamente en Equipos de Protección Personal (EPP) y Controles Administrativos se consideran los eslabones menos eficaces dentro de la jerarquía de controles de seguridad?",
+    "opciones": [
+      {
+        "text": "Porque dependen totalmente del comportamiento, estado mental o cumplimiento del factor humano, sin alterar directamente la fuente del peligro.",
+        "isCorrect": true,
+        "rationale": "A diferencia de las barreras físicas o de ingeniería, las acciones humanas están sujetas a distracciones, fatiga, actos inseguros o uso incorrecto del equipo."
+      },
+      {
+        "text": "Debido a que representan la inversión económica más elevada y de lenta implementación para la empresa.",
+        "isCorrect": false,
+        "rationale": "Por el contrario, los EPP y los procedimientos suelen ser las medidas de menor costo económico inicial en comparación con modificaciones de ingeniería."
+      },
+      {
+        "text": "Porque la normativa nacional prohíbe combinar controles administrativos con el uso de EPP en tareas operativas.",
+        "isCorrect": false,
+        "rationale": "La normativa fomenta la combinación multinivel de controles cuando la fuente no puede ser totalmente eliminada."
+      },
+      {
+        "text": "Debido a que únicamente protegen las instalaciones de la planta y no al trabajador expuesto.",
+        "isCorrect": false,
+        "rationale": "Los EPP y procedimientos están enfocados directamente en la protección del personal, no en la infraestructura."
+      },
+      {
+        "text": "Porque reducen la severidad de la consecuencia a cero sin modificar la probabilidad de ocurrencia del evento.",
+        "isCorrect": false,
+        "rationale": "Los EPP no garantizan la anulación total de la severidad si se produce un fallo masivo en la fuente del peligro."
+      }
+    ],
+    "hint": "Considere la variabilidad en la conducta del ser humano frente a una barrera física o mecánica automatizada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la evaluación del nivel de riesgo puro previa a la implementación de controles en una matriz IPERC, ¿cuáles son las dos variables fundamentales cuya combinación determina la magnitud cuantitativa o cualitativa del riesgo?",
+    "opciones": [
+      {
+        "text": "Severidad (o consecuencia) del evento y Probabilidad (o frecuencia) de ocurrencia.",
+        "isCorrect": true,
+        "rationale": "El nivel de riesgo se calcula formalmente intersectando la gravedad potencial del daño con la frecuencia o factibilidad de que la amenaza se materialice."
+      },
+      {
+        "text": "Costo del equipo dañado y Horas-hombre requeridas para la reparación.",
+        "isCorrect": false,
+        "rationale": "Estas variables corresponden a la estimación de costos del mantenimiento y no a la matriz de evaluación de riesgos para la salud y seguridad."
+      },
+      {
+        "text": "Tiempo de parada de planta y Cantidad de contratistas involucrados.",
+        "isCorrect": false,
+        "rationale": "Representan parámetros de planificación de producción y logística, no las variables normativas de cálculo de riesgo."
+      },
+      {
+        "text": "Número de EPP utilizados y Nivel de capacitación del supervisor.",
+        "isCorrect": false,
+        "rationale": "Estos elementos constituyen medidas de control existentes, no las dimensiones intrínsecas para medir el peligro en el riesgo puro."
+      },
+      {
+        "text": "Grado de desgaste de la maquinaria y Antigüedad de la instalación industrial.",
+        "isCorrect": false,
+        "rationale": "Son factores que pueden influir en la probabilidad, pero no constituyen los dos ejes directos de la matriz de evaluación."
+      }
+    ],
+    "hint": "Recuerde los dos ejes de entrada utilizados en las matrices estandarizadas de 4x4 o 5x5 para calificar un peligro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al diseñar e implementar un Plan de Respuesta a Emergencias en una planta industrial para responder a incidentes en trabajos de mantenimiento, ¿cuáles de los siguientes criterios operativos deben incluirse necesariamente?",
+    "opciones": [
+      {
+        "text": "Determinación de los niveles de emergencia y protocolos de escalamiento.",
+        "isCorrect": true,
+        "rationale": "Permite clasificar la severidad del evento (desde amagos menores hasta emergencias generales) para activar los recursos proporcionados."
+      },
+      {
+        "text": "Ubicación estandarizada y registro de inspección periódico de los equipos de respuesta.",
+        "isCorrect": true,
+        "rationale": "Asegura la disponibilidad inmediata y operatividad probada de extintores, camillas, lavaojos y botiquines en el momento de la crisis."
+      },
+      {
+        "text": "Definición de funciones, tiempos de respuesta y flujo de comunicación de la brigada de emergencia.",
+        "isCorrect": true,
+        "rationale": "Garantiza una acción coordinada sin duplicidad de mando y aclara las vías de contacto con entidades externas como bomberos y centros médicos."
+      },
+      {
+        "text": "Reducción de la frecuencia de mantenimientos preventivos a las bombas del sistema contraincendios.",
+        "isCorrect": false,
+        "rationale": "Los sistemas contraincendios requieren mantenimiento preventivo riguroso y constante para asegurar su funcionamiento durante una emergencia."
+      },
+      {
+        "text": "Exención total de capacitación en primeros auxilios para los trabajadores del área operativa.",
+        "isCorrect": false,
+        "rationale": "Todo el personal operativo debe recibir capacitación básica para la primera respuesta antes de la llegada de las brigadas especializadas."
+      }
+    ],
+    "hint": "Considere las acciones organizativas, los recursos físicos necesarios y la preparación previa requerida para atender un evento no deseado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la supervisión de un trabajo de corte y desbaste con esmeril angular en un taller de mantenimiento, se observa que el operario ha retirado la guarda de protección para instalar un disco de mayor diámetro. ¿Cuál es el riesgo crítico inminente asociado a esta condición subestándar?",
+    "opciones": [
+      {
+        "text": "Fractura y proyección violenta de fragmentos del disco hacia el cuerpo del operador por sobrepasar las RPM y carecer de contención.",
+        "isCorrect": true,
+        "rationale": "Un disco diseñado para menor diámetro opera a un límite de revoluciones diferente; al fracturarse sin guarda, los proyectiles impactan directamente contra el trabajador."
+      },
+      {
+        "text": "Sobrecalentamiento inmediato del cable de alimentación eléctrica de la herramienta.",
+        "isCorrect": false,
+        "rationale": "La ausencia de la guarda es una falla mecánica de contención que no altera de forma directa la impedancia o corriente del cable eléctrico."
+      },
+      {
+        "text": "Fuga inminente de gases combustibles desde la toma principal del taller.",
+        "isCorrect": false,
+        "rationale": "Aunque las chispas son fuente de ignición, la falla mecánica crítica directa del esmeril modificado es la proyección de fragmentos del disco por ruptura."
+      },
+      {
+        "text": "Desmagnetización instantánea del inducido del motor del esmeril angular.",
+        "isCorrect": false,
+        "rationale": "Retirar la carcasa de protección física no produce efectos de desmagnetización en el estator o inducido del motor."
+      },
+      {
+        "text": "Generación de un choque eléctrico directo por pérdida de la puesta a tierra del equipo.",
+        "isCorrect": false,
+        "rationale": "La puesta a tierra se gestiona en la conexión y aislamiento eléctrico, mientras que la guarda cumple una función de barrera mecánica de contención."
+      }
+    ],
+    "hint": "Reflexione sobre lo que sucede con el disco sintético de corte cuando gira a altas revoluciones y carece de la carcasa de contención.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El software de modelación ambiental Screen View, aprobado por la EPA de EE.UU., utiliza el modelo gaussiano para estimar la concentración de contaminantes. ¿Cuál es una característica operativa clave de este programa?",
+    "opciones": [
+      {
+        "text": "Permite evaluar de manera rápida el escenario más crítico de dispersión desde una única fuente puntual a nivel del suelo.",
+        "isCorrect": true,
+        "rationale": "Screen View está diseñado como un modelo de evaluación inicial (screening) simplificado para determinar concentraciones máximas desde una fuente individual."
+      },
+      {
+        "text": "Modela simultáneamente el impacto acumulativo de más de cincuenta fuentes puntuales e interactivas en 3D.",
+        "isCorrect": false,
+        "rationale": "Screen View está limitado al análisis de una sola fuente a la vez; la simulación multifuente compleja requiere herramientas como AERMOD."
+      },
+      {
+        "text": "Requiere de manera obligatoria datos satelitales en tiempo real para poder ejecutar cualquier corrida de simulación.",
+        "isCorrect": false,
+        "rationale": "Screen View utiliza parámetros meteorológicos predeterminados e introducidos manualmente por el usuario sin requerir enlace satelital activo."
+      },
+      {
+        "text": "Calcula únicamente la radiación ionizante emitida por reactores nucleares en terrenos planos.",
+        "isCorrect": false,
+        "rationale": "El software evalúa contaminantes convencionales del aire como PM10, PM2.5, SO2 y CO2, no radiación nuclear exclusivamente."
+      },
+      {
+        "text": "Ignora completamente las clases de estabilidad atmosférica al realizar sus cálculos de concentración.",
+        "isCorrect": false,
+        "rationale": "El modelo basa sus cálculos en las combinaciones de velocidad del viento y las clases de estabilidad de Pasquill-Gifford."
+      }
+    ],
+    "hint": "Piense en la diferencia entre una herramienta de diagnóstico rápido mono-fuente y una plataforma multifuente compleja.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En los modelos de dispersión atmosférica como Screen View, se utiliza la clasificación de estabilidad de Pasquill-Gifford (de la letra A a la F). ¿Qué condición representa la Clase F?",
+    "opciones": [
+      {
+        "text": "Una atmósfera muy estable, con vientos débiles (típicamente nocturna), donde los contaminantes se dispersan muy lentamente.",
+        "isCorrect": true,
+        "rationale": "La clase F se caracteriza por alta estabilidad atmosférica y baja turbulencia, atrapando los contaminantes cerca de la superficie con lenta dispersión."
+      },
+      {
+        "text": "Una atmósfera extremadamente inestable con fuerte radiación solar y turbulencia severa.",
+        "isCorrect": false,
+        "rationale": "Las condiciones de alta inestabilidad y turbulencia corresponden a la Clase A de la escala de Pasquill-Gifford."
+      },
+      {
+        "text": "Una condición neutra representativa de días nublados con vientos de alta velocidad.",
+        "isCorrect": false,
+        "rationale": "El estado neutro donde predomina la mezcla mecánica por viento moderado a fuerte se clasifica como Clase D."
+      },
+      {
+        "text": "Un estado de inversión térmica extrema donde la velocidad del viento supera los 25 m/s.",
+        "isCorrect": false,
+        "rationale": "La estabilidad F requiere vientos muy débiles (usualmente menores a 2 m/s); las altas velocidades generan mezcla turbulenta (Clase D)."
+      },
+      {
+        "text": "Una zona de alta precipitación pluvial que elimina instantáneamente el material particulado.",
+        "isCorrect": false,
+        "rationale": "Las clases de Pasquill-Gifford miden la turbulencia térmica y mecánica según radiación y viento, no eventos de precipitación."
+      }
+    ],
+    "hint": "Recuerde qué extremo del abecedario (A vs F) representa la condición más calmada y estable frente a la más turbulenta e inestable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En comparación con Screen View, ¿cuáles de las siguientes características distinguen al modelo de dispersión atmosférica AERMOD (AirMode View)?",
+    "opciones": [
+      {
+        "text": "Integra procesadores específicos como AERMET (datos meteorológicos y turbulencia) y AERMAP (topografía del terreno).",
+        "isCorrect": true,
+        "rationale": "AERMOD utiliza preprocesadores avanzados para incorporar la estructura meteorológica detallada y el perfil de elevación topográfica."
+      },
+      {
+        "text": "Permite modelar el impacto de múltiples fuentes de emisión y exportar representaciones tridimensionales compatibles con Google Earth.",
+        "isCorrect": true,
+        "rationale": "AERMOD gestiona escenarios complejos con múltiples chimeneas o áreas de emisión y se integra con capas geográficas en 3D."
+      },
+      {
+        "text": "Evalúa con mayor precisión terrenos complejos considerando variaciones topográficas reales y rugosidad del suelo.",
+        "isCorrect": true,
+        "rationale": "El algoritmo avanzado de pluma considera los efectos de ladera, la altura del terreno y el uso de suelo (urbano/rural)."
+      },
+      {
+        "text": "Funciona de manera exclusiva sin requerir ningún tipo de datos de entrada meteorológicos o geográficos.",
+        "isCorrect": false,
+        "rationale": "AERMOD es altamente dependiente de conjuntos rigurosos de datos meteorológicos superficiales y modelos digitales de elevación (DEM)."
+      },
+      {
+        "text": "Está limitado a evaluar únicamente fuentes puntuales dentro de un radio máximo de 100 metros.",
+        "isCorrect": false,
+        "rationale": "AERMOD permite simular impactos a escala regional en radios que alcanzan hasta 50 km con múltiples receptores."
+      }
+    ],
+    "hint": "Identifique las capacidades avanzadas de modelación tridimensional, multifuente y procesamiento topográfico propias de un software de segunda generación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El concepto de 'Ecomantenimiento' o mantenimiento verde busca transformar las intervenciones técnicas tradicionales incorporando criterios de sostenibilidad. ¿Cuál de las siguientes acciones refleja adecuadamente este enfoque?",
+    "opciones": [
+      {
+        "text": "Sustituir insumos químicos agresivos por lubricantes biodegradables, optimizando la dosificación de grasa y gestionando sus envases.",
+        "isCorrect": true,
+        "rationale": "El ecomantenimiento prioriza el uso eficiente de insumos de menor toxicidad, la prevención de la contaminación y la reducción de residuos sólidos."
+      },
+      {
+        "text": "Anticipar el desecho masivo de aceites industriales antes de cumplir la mitad de su vida útil garantizada.",
+        "isCorrect": false,
+        "rationale": "Desechar insumos en buen estado de forma prematura genera generación innecesaria de residuos peligrosos y sobrecostos."
+      },
+      {
+        "text": "Reemplazar los controles de ingeniería por señalización administrativa para economizar en repuestos de maquinaria.",
+        "isCorrect": false,
+        "rationale": "Debilitar la jerarquía de controles de seguridad compromete la integridad física de los técnicos e incrementa el riesgo laboral."
+      },
+      {
+        "text": "Aumentar el volumen de purga de agua sin tratamiento en las calderas para acelerar la limpieza interna.",
+        "isCorrect": false,
+        "rationale": "Verter aguas industriales sin tratar contraviene los límites máximos permisibles y degrada los recursos hídricos."
+      },
+      {
+        "text": "Eliminar la medición de gases de combustión en motores diésel para reducir tiempos de parada de planta.",
+        "isCorrect": false,
+        "rationale": "Omitir el monitoreo de emisiones impide verificar la eficiencia energética y el cumplimiento normativo ambiental de la flota."
+      }
+    ],
+    "hint": "Busque la opción que combine el uso de insumos de menor impacto ecológico con la optimización en el consumo de recursos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con las estadísticas globales sobre fuentes de emisiones contaminantes y gases de efecto invernadero, ¿cuál de las siguientes áreas genera la mayor proporción de impacto por consumo de energía?",
+    "opciones": [
+      {
+        "text": "El uso de energía en la industria, el transporte y las edificaciones.",
+        "isCorrect": true,
+        "rationale": "El consumo energético sumado en la producción industrial, el transporte de bienes/personas y la climatización/operación de edificios representa más del 70% de las emisiones."
+      },
+      {
+        "text": "La disposición final de residuos sólidos urbanos no peligrosos.",
+        "isCorrect": false,
+        "rationale": "Los residuos sólidos representan una fracción menor (aproximadamente entre 3% y 5%) en la matriz global de gases de efecto invernadero."
+      },
+      {
+        "text": "Las fugas accidentales de vapor de agua en torres de enfriamiento industrial.",
+        "isCorrect": false,
+        "rationale": "El vapor condensado en torres de enfriamiento es agua no contaminante que no constituye la fuente principal de gases de efecto invernadero."
+      },
+      {
+        "text": "El uso de papel y cartón en áreas administrativas de plantas industriales.",
+        "isCorrect": false,
+        "rationale": "Aunque genera impacto forestal, el consumo de papelería administrativa es marginal frente al impacto de la matriz energética."
+      },
+      {
+        "text": "La aplicación manual de pintura epóxica en talleres de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Emite COVs a nivel local, pero su contribución porcentual al volumen global de emisiones es secundaria respecto al consumo energético masivo."
+      }
+    ],
+    "hint": "Considere qué sector requiere la combustión directa de hidrocarburos e intensidad eléctrica para mover la infraestructura global.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la principal ventaja técnica y ambiental del mantenimiento predictivo frente al mantenimiento preventivo sistemático basado únicamente en intervalos fijos de tiempo?",
+    "opciones": [
+      {
+        "text": "Monitorea variables físicas (vibración, temperatura, análisis de aceite) para intervenir el equipo justo antes de la falla, maximizando la vida útil de las piezas.",
+        "isCorrect": true,
+        "rationale": "El diagnóstico por condición evita el reemplazo prematuro de componentes operativos y previene fallas catastróficas que generan altos volúmenes de residuos."
+      },
+      {
+        "text": "Garantiza que los componentes mecánicos se reemplacen siempre al 50% de su vida útil sin importar su estado real.",
+        "isCorrect": false,
+        "rationale": "Sustituir piezas a mitad de su vida útil útil es una práctica ineficiente del mantenimiento rutinario que genera desperdicio de recursos."
+      },
+      {
+        "text": "Elimina la necesidad de utilizar instrumentos de medición o sensores en los equipos críticos.",
+        "isCorrect": false,
+        "rationale": "Por el contrario, el mantenimiento predictivo depende directamente de sensores de precisión e instrumentos de monitoreo continuo."
+      },
+      {
+        "text": "Requiere detener por completo la planta de producción de forma diaria para inspeccionar manualmente cada pieza.",
+        "isCorrect": false,
+        "rationale": "La toma de datos predictivos (como termografía o análisis de vibraciones) suele realizarse con el equipo en plena operación sin paradas."
+      },
+      {
+        "text": "Permite omitir la fase de lubricación en rodamientos de alta velocidad.",
+        "isCorrect": false,
+        "rationale": "El monitoreo predictivo detecta la degradación del lubricante para aplicar re-engrase preciso, pero nunca omite la lubricación requerida."
+      }
+    ],
+    "hint": "Piense en la técnica que utiliza sensores para medir la 'salud' real del componente antes de decidir su cambio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la Revolución Industrial 5.0 aplicada a la gestión de mantenimiento, ¿cuál es el rol fundamental de la interacción entre humanos y tecnología (como cobots e Inteligencia Artificial)?",
+    "opciones": [
+      {
+        "text": "Situar al ser humano en el centro del proceso, dejando que los cobots asuman tareas repetitivas o de alto riesgo para que las personas aporten capacidad crítica y creativa.",
+        "isCorrect": true,
+        "rationale": "La Industria 5.0 busca la colaboración armónica donde la tecnología absorbe los peligros físicos y la repetitividad, potenciando la toma de decisiones humana."
+      },
+      {
+        "text": "Reemplazar al 100% de los técnicos de mantenimiento para operar plantas completamente deshabitadas sin supervisión humana.",
+        "isCorrect": false,
+        "rationale": "El enfoque de reemplazar totalmente al humano corresponde a visiones extremas de automatización previa, mientras la 5.0 revaloriza el factor humano."
+      },
+      {
+        "text": "Desactivar todos los sistemas de parada de emergencia automatizada para acelerar la velocidad de los robots colaborativos.",
+        "isCorrect": false,
+        "rationale": "Los cobots están diseñados intrínsecamente con sensores de colisión y paradas de seguridad estrictas para trabajar junto al operario."
+      },
+      {
+        "text": "Prohibir el uso de sensores de monitoreo de condición a fin de depender únicamente de la intuición del operario.",
+        "isCorrect": false,
+        "rationale": "La recopilación de datos mediante sensores e IA es la base tecnológica sobre la cual el humano toma decisiones de mantenimiento."
+      },
+      {
+        "text": "Centralizar el trabajo manual pesado en los técnicos eliminando cualquier equipamiento automatizado.",
+        "isCorrect": false,
+        "rationale": "La meta de la tecnología colaborativa es precisamente erradicar la sobrecarga física y el esfuerzo ergonómico excesivo en el trabajador."
+      }
+    ],
+    "hint": "Considere la filosofía que combina el juicio, pensamiento crítico y creatividad humana con la precisión y fuerza de la robótica colaborativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el software Screen View, la opción de simulación por 'fumigación costera' (Shoreline Fumigation) está diseñada específicamente para ser aplicada en cuál de los siguientes escenarios:",
+    "opciones": [
+      {
+        "text": "Fuentes de emisión ubicadas en zonas rurales cercanas a grandes cuerpos de agua donde la brisa altera la pluma.",
+        "isCorrect": true,
+        "rationale": "El algoritmo de fumigación litoral analiza la mezcla y caída rápida del contaminante cuando la pluma cruza la frontera térmicamente inestable entre la tierra y el agua."
+      },
+      {
+        "text": "Instalaciones subterráneas situadas dentro de socavones mineros a más de 3000 metros de altitud.",
+        "isCorrect": false,
+        "rationale": "Las labores subterráneas se rigen por principios de ventilación minera y no por modelos de dispersión atmosférica costera."
+      },
+      {
+        "text": "Ambientes totalmente cerrados sin ventilación natural dentro de almacenes de reactivos químicos.",
+        "isCorrect": false,
+        "rationale": "Screen View calcula dispersión atmosférica a cielo abierto, no la acumulación de vapores en recintos confinados."
+      },
+      {
+        "text": "Incineradores portátiles operados temporalmente en zonas desérticas sin humedad relativa.",
+        "isCorrect": false,
+        "rationale": "La fumigación costera requiere obligatoriamente la presencia de una gran masa de agua a menos de 3 km de la fuente."
+      },
+      {
+        "text": "Calderas industriales que utilizan exclusivamente gas natural en parques urbanos continentales.",
+        "isCorrect": false,
+        "rationale": "Fuentes urbanas alejadas de la costa se evalúan con el coeficiente urbano estándar sin activar la rutina litoral."
+      }
+    ],
+    "hint": "Identifique el entorno geográfico que combina la emisión de una chimenea con la proximidad física al mar o lagos de gran extensión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión ambiental bajo la norma ISO 14001, es fundamental diferenciar entre 'aspecto ambiental' e 'impacto ambiental'. ¿Cuál de los siguientes pares ejemplifica correctamente esta relación causa-efecto en una actividad de mantenimiento?",
+    "opciones": [
+      {
+        "text": "Aspecto: Potencial derrame de hidrocarburos / Impacto: Contaminación del suelo y degradación de la calidad del agua.",
+        "isCorrect": true,
+        "rationale": "El aspecto es el elemento de la actividad que interactúa con el medio ambiente (la causa), mientras que el impacto es la alteración resultante en el medio (el efecto)."
+      },
+      {
+        "text": "Aspecto: Agotamiento de recursos naturales / Impacto: Generación de aceites usados.",
+        "isCorrect": false,
+        "rationale": "Los términos están invertidos; la generación de aceites es el aspecto operativo y el agotamiento o contaminación es el impacto."
+      },
+      {
+        "text": "Aspecto: Eutrofización del agua / Impacto: Consumo ineficiente de energía eléctrica.",
+        "isCorrect": false,
+        "rationale": "La eutrofización es un impacto ecológico en cuerpos de agua, mientras que el consumo energético es un aspecto operativo."
+      },
+      {
+        "text": "Aspecto: Pérdida de biodiversidad / Impacto: Emisión de gases de combustión por chimenea.",
+        "isCorrect": false,
+        "rationale": "La pérdida de biodiversidad es la consecuencia final (impacto), en tanto la emisión por chimenea es el elemento emisor (aspecto)."
+      },
+      {
+        "text": "Aspecto: Ruido ambiental severo / Impacto: Uso de solventes dieléctricos en limpieza de motores.",
+        "isCorrect": false,
+        "rationale": "El uso de solventes es la actividad/aspecto de consumo, mientras que la molestia o contaminación auditiva deriva del ruido."
+      }
+    ],
+    "hint": "Recuerde que el elemento generador o interacción es el 'aspecto' y la consecuencia o cambio en el entorno es el 'impacto'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante un mantenimiento en campo, la fuga de 1 litro de aceite lubricante sobre un cuerpo de agua genera un impacto ambiental severo. ¿Cuál es el mecanismo fisicoquímico principal por el cual este vertimiento degrada la vida acuática?",
+    "opciones": [
+      {
+        "text": "Forma una película superficial que impermeabiliza la interfaz agua-aire, impidiendo el intercambio de oxígeno indispensable para los organismos.",
+        "isCorrect": true,
+        "rationale": "La capa delgada e insoluble de hidrocarburo se extiende sobre la superficie bloqueando la reaireación natural y asfixiando la biota acuática."
+      },
+      {
+        "text": "Incrementa instantáneamente la temperatura del agua por encima de los 80 °C.",
+        "isCorrect": false,
+        "rationale": "Los aceites fríos de fugas en reposo no generan una reacción exotérmica capaz de elevar la temperatura del cuerpo hídrico."
+      },
+      {
+        "text": "Disuelve completamente los minerales pesados transformando el agua dulce en agua salobre industrial.",
+        "isCorrect": false,
+        "rationale": "El aceite es inmiscible e insoluble en agua; no actúa como un agente salinizante o disolvente de minerales pesados."
+      },
+      {
+        "text": "Genera una reacción de neutralización ácida que elimina el nitrógeno presente en la atmósfera.",
+        "isCorrect": false,
+        "rationale": "El impacto principal es la barrera física de intercambio gaseoso a nivel de la capa de contacto, no una reacción de neutralización atmosférica."
+      },
+      {
+        "text": "Provoca la evaporación inmediata de toda la capa freática del cuerpo de agua afectado.",
+        "isCorrect": false,
+        "rationale": "Un derrame de aceite no produce la evaporación de las masas de agua ni afecta de esa forma las napas subterráneas."
+      }
+    ],
+    "hint": "Piense en la propiedad de inmiscibilidad del aceite y en cómo flota creando una barrera física contra el aire.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con la estructura de la norma ISO 14001:2015, ¿cuáles de los siguientes incisos del Capítulo 6 (Planificación) establecen requisitos clave que una empresa debe documentar en sus matrices operativas?",
+    "opciones": [
+      {
+        "text": "Subcláusula 6.1.2: Aspectos ambientales significativos de las actividades, productos y servicios.",
+        "isCorrect": true,
+        "rationale": "Exige identificar y evaluar los aspectos ambientales para determinar cuáles tienen o pueden tener un impacto significativo."
+      },
+      {
+        "text": "Subcláusula 6.1.3: Requisitos legales y otros requisitos aplicables a la organización.",
+        "isCorrect": true,
+        "rationale": "Establece la obligación de determinar y acceder a las leyes y compromisos ambientales que aplican a las operaciones."
+      },
+      {
+        "text": "Subcláusula 6.2: Objetivos ambientales y planificación para lograrlos.",
+        "isCorrect": true,
+        "rationale": "Requiere definir metas medibles coherentes con la política ambiental y trazar los planes de acción para alcanzarlas."
+      },
+      {
+        "text": "Subcláusula 4.1: Compra de bienes inmuebles para expansión corporativa.",
+        "isCorrect": false,
+        "rationale": "El apartado 4.1 aborda la comprensión de la organización y de su contexto, no transacciones comerciales inmobiliarias."
+      },
+      {
+        "text": "Subcláusula 10.3: Venta de participaciones financieras en la bolsa de valores.",
+        "isCorrect": false,
+        "rationale": "El capítulo 10 trata sobre la mejora continua del sistema de gestión ambiental, no sobre operaciones bursátiles."
+      }
+    ],
+    "hint": "Seleccione los requisitos pertenecientes al bloque de planificación operativa del Sistema de Gestión Ambiental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco legal ambiental peruano, ¿cuáles son las funciones asignadas a las entidades fiscalizadoras y evaluadoras SENACE, OEFA y ANA respecto a proyectos industriales y mineros?",
+    "opciones": [
+      {
+        "text": "SENACE: Evalúa y aprueba los Estudios de Impacto Ambiental detallados (EIA-d) de gran envergadura.",
+        "isCorrect": true,
+        "rationale": "Es el organismo técnico especializado encargado de revisar los estudios de impacto ambiental de mayor complejidad antes de la fase de construcción."
+      },
+      {
+        "text": "OEFA: Fiscaliza, supervisa y sanciona el cumplimiento de los compromisos ambientales asumidos por las empresas.",
+        "isCorrect": true,
+        "rationale": "Ejerce la potestad sancionadora e inspecciona en campo que las empresas cumplan con la normativa ambiental y sus instrumentos aprobados."
+      },
+      {
+        "text": "ANA: Administra, otorga derechos de uso y vigila la calidad y conservación de las fuentes naturales de agua.",
+        "isCorrect": true,
+        "rationale": "Es la autoridad rectora que autoriza los vertimientos industriales tratados y el uso de agua de cuerpos naturales."
+      },
+      {
+        "text": "SUNAFIL: Emite la certificación ambiental inicial para grandes proyectos de minería a tajo abierto.",
+        "isCorrect": false,
+        "rationale": "SUNAFIL es la entidad encargada de la inspección laboral y de seguridad y salud en el trabajo, no de certificaciones ambientales."
+      },
+      {
+        "text": "OSINERGMIN: Administra las áreas naturales protegidas por el Estado a nivel nacional.",
+        "isCorrect": false,
+        "rationale": "La gestión de Áreas Naturales Protegidas corresponde al SERNANP, mientras que OSINERGMIN supervisa energía y minería."
+      }
+    ],
+    "hint": "Diferencie los roles de la evaluación previa de estudios, la fiscalización posterior en campo y la gestión del recurso hídrico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La Resolución de Consejo Directivo N° 123-2024-OS-CD de OSINERGMIN establece el tipificador de infracciones y escala de multas para el sector minero. ¿Cuál es la utilidad estratégica de este documento para el profesional de seguridad y mantenimiento?",
+    "opciones": [
+      {
+        "text": "Permite fundamentar económicamente ante la gerencia la inversión en seguridad y procedimientos, demostrando el costo de las sanciones por incumplimiento.",
+        "isCorrect": true,
+        "rationale": "Ofrece un respaldo legal y cuantitativo formal para justificar presupuestos de prevención frente al impacto financiero de las multas estatales."
+      },
+      {
+        "text": "Otorga una exoneración automática del pago de impuestos a las empresas que registren accidentes mortales.",
+        "isCorrect": false,
+        "rationale": "La resolución tipifica sanciones y multas penales e imperativas; de ningún modo otorga beneficios o exenciones tributarias por accidentes."
+      },
+      {
+        "text": "Sustituye la obligación de elaborar matrices IPERC en operaciones de minería subterránea.",
+        "isCorrect": false,
+        "rationale": "El tipificador sanciona la falta de controles y matrices, pero no anula la obligación legal de elaborar el IPERC."
+      },
+      {
+        "text": "Permite a las empresas fijar libremente el valor de sus propias multas de manera arbitraria.",
+        "isCorrect": false,
+        "rationale": "Las escalas de multas son fijadas legalmente por el organismo regulador del Estado de manera obligatoria."
+      },
+      {
+        "text": "Elimina las inspecciones inopinadas por parte de los supervisores del Estado.",
+        "isCorrect": false,
+        "rationale": "El tipificador le da marco legal a los inspectores para aplicar sanciones justamente durante las fiscalizaciones inopinadas."
+      }
+    ],
+    "hint": "Considere cómo se utiliza la escala oficial de multas de la autoridad fiscalizadora para justificar el presupuesto de prevención de riesgos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al comparar el marco sancionador de las multas por infracciones ambientales frente a las multas de seguridad ocupacional en el sector industrial general, ¿qué característica general diferencia a las sanciones ambientales?",
+    "opciones": [
+      {
+        "text": "Las multas ambientales suelen alcanzar cuantías pecuniarias significativamente más elevadas debido al alcance e irreversibilidad del daño ecosistémico.",
+        "isCorrect": true,
+        "rationale": "Dado que la contaminación de un acuífero o suelo afectado impacta a colectividades y ecosistemas a largo plazo, la ley fija montos de cientos a miles de UIT."
+      },
+      {
+        "text": "Las sanciones ambientales se pagan de forma exclusiva mediante horas de trabajo comunitario del gerente general.",
+        "isCorrect": false,
+        "rationale": "Las multas administrativas impuestas a empresas se liquidan en términos monetarios basados en la Unidad Impositiva Tributaria (UIT)."
+      },
+      {
+        "text": "Las multas de seguridad ocupacional son fijadas por organismos internacionales y no por leyes nacionales.",
+        "isCorrect": false,
+        "rationale": "Tanto las normas de seguridad como las ambientales son promulgadas y sancionadas por el marco regulatorio del estado nacional."
+      },
+      {
+        "text": "Las infracciones ambientales prescriben automáticamente a las 24 horas de haber ocurrido el incidente.",
+        "isCorrect": false,
+        "rationale": "Los procesos sancionadores ambientales cuentan con plazos legales de investigación y prescripción de varios años."
+      },
+      {
+        "text": "La fiscalización ambiental se aplica únicamente a pequeñas empresas artesanales y no a la mediana o gran industria.",
+        "isCorrect": false,
+        "rationale": "Las entidades como OEFA fiscalizan prioritariamente a la mediana y gran industria de sectores minero, energético y manufacturero."
+      }
+    ],
+    "hint": "Analice la magnitud económica de las multas en función de la extensión territorial y temporal del daño causado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante el mantenimiento de las palas de un aerogenerador en un parque eólico, los técnicos deben ingresar al Nasel y descender mediante cuerdas. ¿Por qué es inadecuado agrupar toda la intervención bajo un único enunciado general como 'Reparación de palas' en la matriz IPERC?",
+    "opciones": [
+      {
+        "text": "Porque cada subetapa (ascenso, izaje con polipasto, anclaje exterior, autorrescate) presenta peligros y niveles de riesgo radicalmente distintos.",
+        "isCorrect": true,
+        "rationale": "Desglosar la actividad en tareas elementales permite identificar los peligros específicos de cada fase (p. ej., atrapamiento en ascensor vs. caída a distinto nivel en exterior)."
+      },
+      {
+        "text": "Porque la normativa internacional exige redactar un documento IPERC independiente por cada herramienta manual utilizada.",
+        "isCorrect": false,
+        "rationale": "Las herramientas se listan dentro de la evaluación de la tarea; no se redacta una matriz completa por cada llave o destornillador."
+      },
+      {
+        "text": "Debido a que los aerogeneradores operan de manera que no requieren ningún tipo de control de ingeniería.",
+        "isCorrect": false,
+        "rationale": "Los sistemas de generación eólica poseen múltiples controles mecánicos y eléctricos integrados de ingeniería."
+      },
+      {
+        "text": "Porque la ley prohíbe realizar evaluaciones de riesgo en actividades que se ejecuten a más de 50 metros de altura.",
+        "isCorrect": false,
+        "rationale": "Por el contrario, a mayor altura la exigencia normativa de evaluar cada paso e implementar controles estrictos es máxima."
+      },
+      {
+        "text": "Debido a que la reparación de palas se considera una tarea administrativa de bajo riesgo sin necesidad de permisos.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento de palas suspendidas a gran altura es una tarea crítica de muy alto riesgo que requiere PETAR obligatoriamente."
+      }
+    ],
+    "hint": "Piense en la necesidad de desagregar un trabajo complejo en pasos secuenciales para no pasar por alto amenazas específicas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Además de reducir el error humano en el proceso productivo, ¿cuál es un beneficio directo en la seguridad laboral cuando se implementa la automatización en tareas críticas de mantenimiento?",
+    "opciones": [
+      {
+        "text": "La erradicación o reducción de la exposición directa de los trabajadores a entornos peligrosos, esfuerzos ergonómicos y sustancias tóxicas.",
+        "isCorrect": true,
+        "rationale": "Al automatizar o robotizar tareas de alto riesgo (como limpieza interna de tanques o manipulación de cargas), se retira al ser humano de la línea de fuego."
+      },
+      {
+        "text": "El incremento inmediato del tiempo de exposición directa del trabajador a fuentes de radiación no ionizante.",
+        "isCorrect": false,
+        "rationale": "La automatización bien diseñada busca reducir la presencia física del trabajador en zonas con agentes de riesgo."
+      },
+      {
+        "text": "La obligatoriedad de eliminar los turnos de descanso y pausas activas durante la jornada laboral.",
+        "isCorrect": false,
+        "rationale": "Las pausas activas y la ergonomía siguen siendo requisitos de ley obligatorios para el personal que opera y supervisa sistemas."
+      },
+      {
+        "text": "La reducción drástica de la vida útil de los sensores e instrumentos de medición instalados en la planta.",
+        "isCorrect": false,
+        "rationale": "La automatización busca optimizar el rendimiento global del equipamiento sin acortar la durabilidad de la instrumentación."
+      },
+      {
+        "text": "La necesidad de duplicar el uso de solventes clorados para la limpieza manual de los componentes mecánicos.",
+        "isCorrect": false,
+        "rationale": "La automatización suele integrar procesos de limpieza cerrados y ecológicos, disminuyendo la manipulación de insumos químicos."
+      }
+    ],
+    "hint": "Considere el principio de distanciar o retirar físicamente al operador de la zona de peligro directo mediante tecnología.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-58",
+    "diplomado": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En caso de producirse un derrame accidental de aceite lubricante sobre terreno natural durante un mantenimiento, ¿cuál es el procedimiento técnico inmediato adecuado para contener el impacto ambiental?",
+    "opciones": [
+      {
+        "text": "Delimitar la zona, contener el derrame con material absorbente, retirar la tierra contaminada y disponerla en contenedores impermeables como residuo peligroso.",
+        "isCorrect": true,
+        "rationale": "Evita la migración del hidrocarburo a capas profundas o acuíferos, asegurando la remediación de la porción de suelo afectada y su correcta disposición final."
+      },
+      {
+        "text": "Lavar el suelo afectado con agua a alta presión para diluir el aceite hacia los drenajes pluviales cercanos.",
+        "isCorrect": false,
+        "rationale": "Manejar un derrame con agua a presión expande el área de contaminación hacia los drenajes pluviales y cuerpos receptores."
+      },
+      {
+        "text": "Cubrir el derrame con tierra limpia o arena seca sin retirar el suelo impregnado para ocultar la mancha superficial.",
+        "isCorrect": false,
+        "rationale": "Ocultar el hidrocarburo con tierra limpia no remueve el contaminante, permitiendo que siga lixiviando e inutilizando el suelo subyacente."
+      },
+      {
+        "text": "Aplicar solventes inflamables sobre el área para evaporar el aceite al aire libre mediante combustión.",
+        "isCorrect": false,
+        "rationale": "La quema no controlada genera gases tóxicos nocivos e incrementa exponencialmente el riesgo de incendios en el área."
+      },
+      {
+        "text": "Esperar a que la lluvia absorba naturalmente el hidrocarburo hacia la capa freática profunda.",
+        "isCorrect": false,
+        "rationale": "Permitir que la lluvia arrastre el aceite contamina los acuíferos subterráneos de agua dulce de forma irreversible."
+      }
+    ],
+    "hint": "Piense en las acciones del kit antiderrames: contención física, recolección del material impregnado y segregación como residuo peligroso.",
+    "activo": true
+  }
+]

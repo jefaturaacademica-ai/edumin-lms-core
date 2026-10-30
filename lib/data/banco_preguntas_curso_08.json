@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la Ley General de Minería y el Código Civil peruano, ¿cuál es la formalidad requerida para que un contrato minero surta plenos efectos legales frente a terceros y al Estado?",
+    "opciones": [
+      {
+        "text": "Otorgamiento por escritura pública e inscripción en el Registro Público de Minería.",
+        "isCorrect": true,
+        "rationale": "La legislación especial exige la formalidad solemne del documento público elevado ante notario y su correspondiente publicidad registral para garantizar seguridad jurídica ante el Estado y terceros."
+      },
+      {
+        "text": "Firma privada legalizada ante notario sin necesidad de inscripción registral.",
+        "isCorrect": false,
+        "rationale": "Aunque la legalización de firmas otorga fecha cierta, no satisface el requisito de inscripción en el registro público exigido para la oponibilidad en minería."
+      },
+      {
+        "text": "Aprobación verbal en asamblea comunitaria y posterior depósito municipal.",
+        "isCorrect": false,
+        "rationale": "Las actas o acuerdos comunitarios no sustituyen los requisitos formales de escritura pública e inscripción en el registro minero."
+      },
+      {
+        "text": "Inscripción exclusiva en la dirección de inspección del Ministerio de Trabajo.",
+        "isCorrect": false,
+        "rationale": "El registro laboral supervisa aspectos de seguridad y empleo, pero no la validez u oponibilidad de los contratos de derechos mineros."
+      },
+      {
+        "text": "Aprobación mediante resolución ministerial extraordinaria del Ministerio de Energía y Minas.",
+        "isCorrect": false,
+        "rationale": "Los contratos entre particulares o titulares se rigen por el derecho común y registral, sin requerir una resolución ministerial para cada suscripción contractual."
+      }
+    ],
+    "hint": "Considere el requisito de publicidad registral y la solemnidad notarial exigida en la legislación minera.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste fundamentalmente un contrato de transferencia minera?",
+    "opciones": [
+      {
+        "text": "En el traslado total o parcial de la titularidad de los derechos mineros a cambio de una contraprestación.",
+        "isCorrect": true,
+        "rationale": "Este contrato principal implica la enajenación o venta del dominio de las alícuotas o concesión a favor del adquirente."
+      },
+      {
+        "text": "En el arrendamiento temporal del uso de la mina sin ceder la titularidad del derecho.",
+        "isCorrect": false,
+        "rationale": "El arrendamiento o la cesión otorga el uso y disfrute temporal, pero no transfiere la titularidad o propiedad de la concesión."
+      },
+      {
+        "text": "En la promesa unilateral de evaluar el yacimiento antes de decidir su compra.",
+        "isCorrect": false,
+        "rationale": "La promesa unilateral de evaluación corresponde a la naturaleza preparatoria del contrato de opción."
+      },
+      {
+        "text": "En una asociación estratégica que genera automáticamente una nueva persona jurídica.",
+        "isCorrect": false,
+        "rationale": "La transferencia es un contrato bilateral de enajenación y no una constitución societaria."
+      },
+      {
+        "text": "En la entrega de la concesión como garantía exclusiva para la obtención de un préstamo.",
+        "isCorrect": false,
+        "rationale": "La afectación de un bien para garantizar una deuda configura un contrato accesorio de garantía o hipoteca, no de transferencia."
+      }
+    ],
+    "hint": "Piense en la figura jurídica equivalente a la compraventa en el derecho común.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica principal del contrato de cesión minera que lo distingue de la transferencia?",
+    "opciones": [
+      {
+        "text": "Transfiere temporalmente el uso y aprovechamiento de los frutos sin ceder la titularidad de la concesión.",
+        "isCorrect": true,
+        "rationale": "Funciona de manera análoga al arrendamiento, permitiendo al cesionario extraer y hacerse dueño de los minerales extraídos mientras el cedente conserva el título."
+      },
+      {
+        "text": "Transfiere de manera definitiva e irrevocable la propiedad del yacimiento.",
+        "isCorrect": false,
+        "rationale": "La transferencia definitiva de la concesión es propia del contrato de transferencia o compraventa, no de la cesión."
+      },
+      {
+        "text": "Es un contrato preparatorio que únicamente autoriza labores informativas de gabinete.",
+        "isCorrect": false,
+        "rationale": "La cesión faculta el uso y explotación operativa directa de la concesión y el beneficio de sus frutos."
+      },
+      {
+        "text": "Obliga al cedente a asumir las deudas tributarias y operativas que genere el cesionario.",
+        "isCorrect": false,
+        "rationale": "El cesionario se sustituye en los derechos y obligaciones operativas derivadas del uso de la concesión."
+      },
+      {
+        "text": "Exige la creación inmediata de una empresa pública mixta con el Estado.",
+        "isCorrect": false,
+        "rationale": "La cesión es un contrato que se celebra libremente entre particulares o empresas sin requerir la participación del Estado como socio."
+      }
+    ],
+    "hint": "Relacione este contrato con el concepto de arrendamiento y el derecho a beneficiarse de las sustancias extraídas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué define al contrato de opción minera dentro de la categoría de contratos preparatorios?",
+    "opciones": [
+      {
+        "text": "Concede al optante la facultad incondicional de celebrar un contrato definitivo dentro de un plazo pactado.",
+        "isCorrect": true,
+        "rationale": "El otorgante queda vinculado de forma irrevocable, mientras que el optante decide si ejerce o no la opción de suscribir el contrato final."
+      },
+      {
+        "text": "Obliga a ambas partes a ejecutar inmediatamente la explotación del yacimiento.",
+        "isCorrect": false,
+        "rationale": "La opción vincula irrevocablemente solo a una de las partes a la espera de la decisión del optante, por lo que no impone la ejecución inmediata a ambas."
+      },
+      {
+        "text": "Funciona como un contrato accesorio que respalda una hipoteca bancaria previa.",
+        "isCorrect": false,
+        "rationale": "Aunque puede vincularse a otros acuerdos, la opción es una figura preparatoria de un contrato futuro y no una garantía de crédito."
+      },
+      {
+        "text": "Establece la disolución automática de la titularidad minera a favor de las comunidades.",
+        "isCorrect": false,
+        "rationale": "La opción prepara la celebración de actos civiles entre inversionistas y titulares, sin extinguir ni expropiar la concesión."
+      },
+      {
+        "text": "Prohíbe realizar estudios técnicos o exploraciones previas en el área de la concesión.",
+        "isCorrect": false,
+        "rationale": "Precisamente la opción se utiliza para permitir al interesado evaluar la viabilidad técnica del yacimiento antes de adquirirlo o cederlo."
+      }
+    ],
+    "hint": "Recuerde su carácter de promesa o compromiso unilateral antes de la firma de un contrato definitivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes contratos son considerados contratos mineros típicos contemplados por la legislación minera peruana?",
+    "opciones": [
+      {
+        "text": "Contrato de transferencia minera.",
+        "isCorrect": true,
+        "rationale": "Se encuentra expresamente regulado como un contrato principal de enajenación de derechos en la Ley General de Minería."
+      },
+      {
+        "text": "Contrato de cesión minera.",
+        "isCorrect": true,
+        "rationale": "Está nominado y tipificado legalmente para regular el arrendamiento y disfrute de concesiones mineras."
+      },
+      {
+        "text": "Contrato de opción minera.",
+        "isCorrect": true,
+        "rationale": "Es una figura preparatoria tipificada por la legislación sectorial para futuras contrataciones mineras."
+      },
+      {
+        "text": "Contrato de riesgo compartido (Joint Venture).",
+        "isCorrect": true,
+        "rationale": "Cuenta con regulación específica en la normativa minera como figura asociativa no societaria."
+      },
+      {
+        "text": "Contrato de arrendamiento de inmueble urbano para uso administrativo.",
+        "isCorrect": false,
+        "rationale": "Corresponde al régimen civil común de arrendamiento urbano y no constituye un contrato minero típico."
+      }
+    ],
+    "hint": "Seleccione los contratos que poseen una regulación explícita y específica dentro de la Ley General de Minería.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Respecto al contrato de riesgo compartido (Joint Venture) en el sector minero, ¿cuál de las siguientes afirmaciones es correcta?",
+    "opciones": [
+      {
+        "text": "No constituye una persona jurídica independiente y exige que al menos uno de los contratantes sea titular minero.",
+        "isCorrect": true,
+        "rationale": "Mantiene la autonomía legal de las partes que se agrupan para un proyecto específico, requiriendo por ley que al menos una tenga titularidad de la actividad."
+      },
+      {
+        "text": "Crea una persona jurídica sujeta a inscripción en el registro de sociedades de manera obligatoria.",
+        "isCorrect": false,
+        "rationale": "A diferencia de las sociedades mercantiles, el Joint Venture es una alianza contractual que no genera un nuevo sujeto de derecho."
+      },
+      {
+        "text": "Exime a las empresas participantes de asumir responsabilidades frente a terceros.",
+        "isCorrect": false,
+        "rationale": "Las partes responden solidariamente o según lo pactado por los riesgos, deudas y obligaciones derivadas de la operación conjunta."
+      },
+      {
+        "text": "Prohíbe a los contratantes agrupar capitales o tecnología extranjera.",
+        "isCorrect": false,
+        "rationale": "Su objetivo principal es facilitar la asociación de grandes capitales, tecnología e infraestructura nacional o internacional."
+      },
+      {
+        "text": "Transfiere automáticamente la propiedad de los bienes de todos los socios a favor del Estado.",
+        "isCorrect": false,
+        "rationale": "Los aportes de recursos y bienes continúan bajo la estructura contractual acordada por las partes privadas."
+      }
+    ],
+    "hint": "Identifique el elemento clave sobre la personalidad jurídica y el requisito de titularidad sobre la actividad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del contrato de hipoteca minera?",
+    "opciones": [
+      {
+        "text": "Garantizar el cumplimiento de una obligación principal mediante un derecho real sobre la concesión.",
+        "isCorrect": true,
+        "rationale": "Es un contrato accesorio de garantía real sobre un bien inmueble (concesión) que otorga preferencia de pago al acreedor."
+      },
+      {
+        "text": "Transferir la comercialización de minerales de manera definitiva a una entidad bancaria.",
+        "isCorrect": false,
+        "rationale": "La hipoteca no vende ni comercializa el mineral, solo afecta la concesión en respaldo de una deuda."
+      },
+      {
+        "text": "Sustituir las obligaciones ambientales por un aporte económico a la municipalidad.",
+        "isCorrect": false,
+        "rationale": "Las obligaciones ambientales son de cumplimiento normativo imperativo y no son sustituibles por garantías hipotecarias."
+      },
+      {
+        "text": "Crear una empresa minera mixta de responsabilidad limitada.",
+        "isCorrect": false,
+        "rationale": "La hipoteca es un derecho real de garantía contractual y no un acto de constitución societaria."
+      },
+      {
+        "text": "Permitir la ocupación inmediata de los terrenos superficiales sin pago de servidumbre.",
+        "isCorrect": false,
+        "rationale": "El derecho sobre la concesión gravada no exime del cumplimiento de los acuerdos de servidumbre o uso de terreno superficial."
+      }
+    ],
+    "hint": "Piense en su carácter de contrato accesorio y en la afectación de un bien inmueble para respaldar un crédito.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué consecuencia jurídica ocurre respecto de la titularidad minera cuando se constituye una Sociedad Minera de Responsabilidad Limitada?",
+    "opciones": [
+      {
+        "text": "La nueva persona jurídica constituida pasa a ser la única titular de la concesión que la originó.",
+        "isCorrect": true,
+        "rationale": "Se crea un nuevo sujeto de derecho privado que asume en exclusiva la titularidad de la concesión que le dio origen."
+      },
+      {
+        "text": "La concesión se fracciona en títulos individuales e independientes para cada socio.",
+        "isCorrect": false,
+        "rationale": "La titularidad no se fracciona entre los individuos, sino que se unifica bajo el patrimonio de la nueva persona jurídica."
+      },
+      {
+        "text": "Los socios asumen responsabilidad personal e ilimitada por todas las deudas de la mina.",
+        "isCorrect": false,
+        "rationale": "Como su nombre lo indica, la responsabilidad de los socios se limita al monto de sus aportaciones o participaciones."
+      },
+      {
+        "text": "La concesión se convierte de forma automática en un bien de dominio público inalienable.",
+        "isCorrect": false,
+        "rationale": "La sociedad de responsabilidad limitada es de derecho privado y mantiene la titularidad de la concesión privada."
+      },
+      {
+        "text": "Se extingue el título minero y se debe solicitar un petitorio completamente nuevo.",
+        "isCorrect": false,
+        "rationale": "El título de concesión no se extingue, sino que se adscribe y registra a nombre de la sociedad creada."
+      }
+    ],
+    "hint": "Considere la diferencia fundamental con el Joint Venture en cuanto a la creación de un nuevo sujeto de derecho.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo de incluir una cláusula de confidencialidad en la contratación minera?",
+    "opciones": [
+      {
+        "text": "Proteger la información técnico-económica obtenida, restringiendo su divulgación salvo por mandato legal o judicial.",
+        "isCorrect": true,
+        "rationale": "Asegura que los datos de reservas, estudios y finanzas sean manejados con reserva comercial por las partes intervinientes."
+      },
+      {
+        "text": "Ocultar la evaluación de impacto ambiental a los organismos de fiscalización del Estado.",
+        "isCorrect": false,
+        "rationale": "Los instrumentos de gestión ambiental son de carácter público e imperativo ante las autoridades competentes."
+      },
+      {
+        "text": "Evitar el pago de tributos o el canon minero correspondiente a la producción.",
+        "isCorrect": false,
+        "rationale": "La confidencialidad contractual no aplica frente a las obligaciones fiscales ni excusa el cumplimiento tributario."
+      },
+      {
+        "text": "Impedir que los trabajadores conozcan el reglamento interno de seguridad y salud.",
+        "isCorrect": false,
+        "rationale": "La normativa laboral exige la difusión activa e instructiva de los estándares de seguridad a todo el personal."
+      },
+      {
+        "text": "Prohibir la presentación de pruebas en caso de que se inicie un procedimiento arbitral.",
+        "isCorrect": false,
+        "rationale": "Las cláusulas de reserva no limitan el derecho de defensa ni la exhibición de pruebas ante un tribunal arbitral competentemente instalado."
+      }
+    ],
+    "hint": "Enfóquese en la protección de los datos técnicos, reservas y modelos económicos del proyecto frente a terceros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En un contrato de comercialización de minerales, ¿qué elemento debe quedar claramente detallado dentro de las especificaciones del producto?",
+    "opciones": [
+      {
+        "text": "El tipo de mineral, volumen, ensayos de calidad y presencia de elementos o penalizables.",
+        "isCorrect": true,
+        "rationale": "Es clave especificar las características físicas y químicas del lote, porcentajes de humedad y mermas aplicables para calcular la liquidación."
+      },
+      {
+        "text": "Los antecedentes policiales y penales del conductor de la unidad de transporte.",
+        "isCorrect": false,
+        "rationale": "Aunque forma parte de la logística operativa, no define las condiciones comerciales ni la calidad del mineral a vender."
+      },
+      {
+        "text": "El historial de aportes previsionales del personal administrativo de la empresa vendedora.",
+        "isCorrect": false,
+        "rationale": "Los temas previsionales son ajenos a la especificación técnica del producto mineral objeto de compraventa."
+      },
+      {
+        "text": "El número de hectáreas de la concesión donde no se realiza ningún tipo de extracción.",
+        "isCorrect": false,
+        "rationale": "Las áreas no explotables no forman parte de las condiciones comerciales ni técnicas de los lotes de concentrado."
+      },
+      {
+        "text": "La lista de proveedores de alimentos contratados en el campamento minero.",
+        "isCorrect": false,
+        "rationale": "La logística de servicios de campamento no guarda relación con la caracterización mercantil del mineral vendido."
+      }
+    ],
+    "hint": "Identifique las variables técnicas y de laboratorio que determinan el valor comercial de las sustancias minerales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué condiciones en materia de Seguridad y Salud Ocupacional deben ser garantizadas en la ejecución de los contratos mineros?",
+    "opciones": [
+      {
+        "text": "Provisión de equipos de protección personal (EPP) adecuados a la labor.",
+        "isCorrect": true,
+        "rationale": "Es una obligación legal primaria entregar indumentaria y equipos específicos que mitiguen los riesgos de la actividad."
+      },
+      {
+        "text": "Capacitación continua y realización de simulacros de prevención.",
+        "isCorrect": true,
+        "rationale": "La norma exige instruir permanentemente a los trabajadores en procedimientos de trabajo seguro y respuesta a emergencias."
+      },
+      {
+        "text": "Implementación de un plan de gestión de riesgos laborales y comités de seguridad.",
+        "isCorrect": true,
+        "rationale": "El marco legal minero impone contar con comités mixtos y planes documentados para identificar y monitorear peligros."
+      },
+      {
+        "text": "Financiamiento obligatorio de vacaciones turísticas al extranjero para el personal.",
+        "isCorrect": false,
+        "rationale": "No constituye un estándar de seguridad laboral ni una obligación contemplada por el reglamento sectorial."
+      },
+      {
+        "text": "Cumplimiento estricto del reglamento de seguridad e higiene minera vigente.",
+        "isCorrect": true,
+        "rationale": "Toda operación debe adecuar sus estándares contractuales a las normas sectoriales obligatorias fijadas por el Estado."
+      }
+    ],
+    "hint": "Seleccione las obligaciones laborales directas que previenen accidentes y protegen la integridad de los operarios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué instrumento de gestión ambiental debe ser aprobado por la autoridad competente (como el SENACE) antes de iniciar el desarrollo de un proyecto minero?",
+    "opciones": [
+      {
+        "text": "El Estudio de Impacto Ambiental (EIA).",
+        "isCorrect": true,
+        "rationale": "Es el requisito legal obligatorio que evalúa los posibles impactos del proyecto y establece las medidas de mitigación y monitoreo."
+      },
+      {
+        "text": "La licencia de marca comercial emitida por el Indecopi.",
+        "isCorrect": false,
+        "rationale": "El registro de marcas regula la propiedad industrial pero no autoriza operaciones ni evalúa impactos ambientales."
+      },
+      {
+        "text": "El certificado de inscripción en el padrón de proveedores locales.",
+        "isCorrect": false,
+        "rationale": "Es un requisito comercial administrativo que no reemplaza la certificación ni la evaluación ambiental sectorial."
+      },
+      {
+        "text": "La declaración jurada de la bolsa de valores para la cotización de acciones.",
+        "isCorrect": false,
+        "rationale": "Corresponde al ámbito bursátil y de financiamiento, totalmente independiente de la aprobación ambiental de la mina."
+      },
+      {
+        "text": "El balance contable trimestral visado por un auditor externo.",
+        "isCorrect": false,
+        "rationale": "Los informes financieros supervisan la salud contable de la empresa pero no evalúan ni previenen el daño ambiental."
+      }
+    ],
+    "hint": "Piense en el documento técnico preventivo que analiza la interacción del proyecto con el agua, aire, suelo y ecosistemas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Desde la perspectiva de la gestión de contratos mineros, ¿cómo se define la noción de 'riesgo'?",
+    "opciones": [
+      {
+        "text": "La probabilidad de ocurrencia de un evento que puede generar impactos negativos en los objetivos o actividades del proyecto.",
+        "isCorrect": true,
+        "rationale": "Involucra un grado de incertidumbre respecto a pérdidas financieras, operacionales, sociales o ambientales durante la ejecución."
+      },
+      {
+        "text": "La certeza matemática de que un proyecto quebrará durante su primer mes de operación.",
+        "isCorrect": false,
+        "rationale": "El riesgo implica probabilidad e incertidumbre, no una certeza o fatalidad inevitable de quiebra."
+      },
+      {
+        "text": "La obligación irrenunciable de cancelar la totalidad de los contratos al finalizar el año.",
+        "isCorrect": false,
+        "rationale": "El término se refiere a eventos contingentes imprevistos, no a estipulaciones o plazos pactados para la terminación."
+      },
+      {
+        "text": "La inexistencia total de leyes que regulen la actividad extractiva en un país.",
+        "isCorrect": false,
+        "rationale": "La falta de normas puede ser un factor regulatorio, pero no constituye la definición conceptual de riesgo."
+      },
+      {
+        "text": "La decisión voluntaria de duplicar el pago de impuestos sin fiscalización estatal.",
+        "isCorrect": false,
+        "rationale": "Los riesgos no son decisiones voluntarias de pago, sino eventos cuya probabilidad e impacto deben ser evaluados."
+      }
+    ],
+    "hint": "Considere los dos componentes fundamentales: la probabilidad de que algo suceda y la magnitud de sus consecuencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la minería en el Perú, ¿cuál de los siguientes factores suele ponderarse con alta prioridad dentro del análisis de riesgos post-pandemia?",
+    "opciones": [
+      {
+        "text": "El riesgo asociado a la licencia social y la relación con las comunidades locales.",
+        "isCorrect": true,
+        "rationale": "Los estudios del sector demuestran que en el Perú el aspecto social y la viabilidad comunitaria sopesan como riesgos de primer orden."
+      },
+      {
+        "text": "El costo del transporte público urbano para el personal de las oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "El pasaje urbano secundario no constituye un factor crítico en la matriz de riesgos estratégicos mineros."
+      },
+      {
+        "text": "La variación del formato impreso de los comprobantes de pago de los proveedores minoristas.",
+        "isCorrect": false,
+        "rationale": "Los aspectos de papelería secundaria no impactan estructuralmente la continuidad de los proyectos de envergadura."
+      },
+      {
+        "text": "La disponibilidad de espacio en los servidores de correo para comunicaciones personales.",
+        "isCorrect": false,
+        "rationale": "Aun cuando la ciberseguridad importa, el correo secundario no representa el riesgo social prioritario de la industria."
+      },
+      {
+        "text": "El color de la pintura utilizada en los comedores del campamento minero.",
+        "isCorrect": false,
+        "rationale": "Los detalles estéticos del campamento carecen de relevancia frente a los riesgos sociales, ambientales u operativos."
+      }
+    ],
+    "hint": "Recuerde qué aspecto del entorno peruano genera frecuentemente paralizaciones o conflictos si no se gestiona adecuadamente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes cláusulas y medidas contractuales permiten mitigar activamente los riesgos en la ejecución de contratos mineros?",
+    "opciones": [
+      {
+        "text": "Cláusulas de fuerza mayor bien especificadas.",
+        "isCorrect": true,
+        "rationale": "Permiten suspender o adecuar obligaciones ante eventos extraordinarios, imprevisibles e irresistibles."
+      },
+      {
+        "text": "Contratación de pólizas de seguro contra accidentes y daños ambientales.",
+        "isCorrect": true,
+        "rationale": "Trasladan el riesgo financiero de pérdidas o indemnizaciones cuantiosas a una empresa aseguradora."
+      },
+      {
+        "text": "Establecimiento de mecanismos de revisión y renegociación periódica.",
+        "isCorrect": true,
+        "rationale": "Facilitan la adaptación de las condiciones económicas del contrato ante cambios bruscos en el mercado o normativas."
+      },
+      {
+        "text": "Inclusión de cláusulas penales por incumplimiento de plazos.",
+        "isCorrect": true,
+        "rationale": "Desincentivan la inejecución al fijar montos o sanciones predeterminadas frente al incumplimiento."
+      },
+      {
+        "text": "Eliminación total de los planes de contingencia operativos.",
+        "isCorrect": false,
+        "rationale": "Suprimir las contingencias incrementa la vulnerabilidad y la gravedad del impacto si un riesgo llega a materializarse."
+      }
+    ],
+    "hint": "Identifique los instrumentos que protegen jurídicamente a las partes o transfieren los impactos económicos derivados de contingencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la finalidad central del proceso de Consulta Previa (Ley 29785) en relación con las actividades mineras?",
+    "opciones": [
+      {
+        "text": "Garantizar el diálogo e informar a los pueblos indígenas u originarios sobre medidas que puedan afectar sus derechos colectivos.",
+        "isCorrect": true,
+        "rationale": "Busca llegar a acuerdos o lograr el consentimiento previo, libre e informado para asegurar una relación de convivencia armónica."
+      },
+      {
+        "text": "Transferir de forma directa la titularidad de los yacimientos a favor de empresas extranjeras.",
+        "isCorrect": false,
+        "rationale": "No es un mecanismo de privatización ni de asignación de títulos de concesión, sino un proceso participativo legal."
+      },
+      {
+        "text": "Anular la obligación legal de presentar estudios de impacto ambiental ante el SENACE.",
+        "isCorrect": false,
+        "rationale": "La consulta previa se desarrolla de forma paralela y complementaria a la fiscalización ambiental obligatoria."
+      },
+      {
+        "text": "Eximir a las mineras del pago de impuestos y regalías al fisco nacional.",
+        "isCorrect": false,
+        "rationale": "Las obligaciones tributarias y de regalías se mantienen inalterables independientemente del desarrollo de la consulta."
+      },
+      {
+        "text": "Sustituir el Poder Judicial por tribunales comunales para juzgar delitos comunes.",
+        "isCorrect": false,
+        "rationale": "La consulta previa es un procedimiento administrativo sobre medidas del Estado, no una reforma del fuero penal ordinario."
+      }
+    ],
+    "hint": "Piense en la protección de los derechos colectivos de las poblaciones originarias asentadas en la zona de influencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué factor de incertidumbre económica está expuesto principalmente el riesgo financiero en un contrato minero?",
+    "opciones": [
+      {
+        "text": "A la volatilidad de los precios internacionales de los metales y a las variaciones del tipo de cambio.",
+        "isCorrect": true,
+        "rationale": "La rentabilidad de la mina depende de cotizaciones internacionales fluctuantes en mercados de materias primas y de la moneda de cambio."
+      },
+      {
+        "text": "Al número de folios y hojas de la escritura pública del contrato.",
+        "isCorrect": false,
+        "rationale": "La extensión del documento contractual es una formalidad que no altera las variables financieras del negocio."
+      },
+      {
+        "text": "A la cantidad de notarios públicos disponibles en la ciudad donde se ubica la sede administrativa.",
+        "isCorrect": false,
+        "rationale": "La oferta notarial local no influye en los precios internacionales ni en el flujo de caja operativo del proyecto."
+      },
+      {
+        "text": "Al diseño gráfico utilizado en la carátula de los informes internos de gestión.",
+        "isCorrect": false,
+        "rationale": "El diseño de papelería carece de relación con las tasas de interés, inversión o viabilidad económica del proyecto."
+      },
+      {
+        "text": "A la marca de los vehículos particulares que conducen los asesores externos.",
+        "isCorrect": false,
+        "rationale": "Las preferencias de transporte privado no constituyen un indicador financiero del mercado extractivo."
+      }
+    ],
+    "hint": "Identifique las variables macroeconómicas del mercado global de materias primas que alteran los ingresos del proyecto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué aspecto busca prevenir y regular el Reglamento de Seguridad y Salud en el Trabajo en Minería?",
+    "opciones": [
+      {
+        "text": "Ocurrencia de accidentes de trabajo y desarrollo de enfermedades profesionales en las operaciones.",
+        "isCorrect": true,
+        "rationale": "Fija estándares imperativos para proteger la salud física y la vida de los trabajadores en ambientes de alto riesgo."
+      },
+      {
+        "text": "La fluctuación diaria del tipo de cambio de la divisa en la bolsa de valores.",
+        "isCorrect": false,
+        "rationale": "Las variables cambiarias son monetarias y financieras, totalmente ajenas a las normas de prevención de accidentes."
+      },
+      {
+        "text": "Las normas para el pago de dividendos a los accionistas extranjeros.",
+        "isCorrect": false,
+        "rationale": "El reparto de utilidades societarias se rige por la Ley General de Sociedades, no por las normas de higiene laboral."
+      },
+      {
+        "text": "La delimitación catastral de los límites provinciales del departamento.",
+        "isCorrect": false,
+        "rationale": "La demarcación territorial es una función del Estado sin relación con los protocolos de trabajo seguro en la mina."
+      },
+      {
+        "text": "La aprobación de licencias para la construcción de carreteras públicas del Estado.",
+        "isCorrect": false,
+        "rationale": "Las obras viales estatales responden a infraestructura civil pública y no al reglamento de seguridad minera en mina."
+      }
+    ],
+    "hint": "Concéntrese en la preservación de la vida, integridad y salud de los operarios en las labores de socavón o tajo abierto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Si dos empresas mineras pactaron expresamente en su contrato una cláusula arbitral, ¿qué ocurre si una de ellas demanda directamente ante el Poder Judicial por un desacuerdo contractual?",
+    "opciones": [
+      {
+        "text": "Se debe amparar el arbitraje, pues el contrato es ley entre las partes y la vía judicial ordinaria es incompetente por el pacto.",
+        "isCorrect": true,
+        "rationale": "El convenio arbitral sustrae válidamente la controversia de la jurisdicción ordinaria, obligando a las partes a someterse a los árbitros."
+      },
+      {
+        "text": "El juez ordinario anula el contrato y transfiere el yacimiento al municipio local.",
+        "isCorrect": false,
+        "rationale": "El desacuerdo de fuero no extingue el contrato ni confisca la propiedad privada a favor de un municipio."
+      },
+      {
+        "text": "La demanda judicial cancela de forma automática e inmediata la validez del convenio arbitral.",
+        "isCorrect": false,
+        "rationale": "La interposición unilateral ante un juez viola el acuerdo contractual pactado y no anula la cláusula arbitral."
+      },
+      {
+        "text": "El Ministerio de Energía y Minas debe asumir la administración directa de la empresa demandada.",
+        "isCorrect": false,
+        "rationale": "El Poder Ejecutivo no interviene ni estatiza empresas privadas por conflictos de jurisdicción contractual."
+      },
+      {
+        "text": "Se obliga a ambas empresas a disolverse y liquidar a todo su personal en tres días.",
+        "isCorrect": false,
+        "rationale": "Los desacuerdos de fuero procesal no son causal de disolución forzosa de sociedades mercantiles."
+      }
+    ],
+    "hint": "Recuerde la fuerza vinculante del acuerdo de voluntades y el principio de que el contrato es ley entre las partes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son los principales mecanismos no judiciales de solución de conflictos aplicados en la industria minera?",
+    "opciones": [
+      {
+        "text": "La negociación directa, la mediación o conciliación, y el arbitraje.",
+        "isCorrect": true,
+        "rationale": "Constituyen medios alternativos de resolución de controversias (MARC) que permiten resolver disputas sin depender del Poder Judicial."
+      },
+      {
+        "text": "El uso de la fuerza pública, el decomiso de minerales y la clausura inmediata.",
+        "isCorrect": false,
+        "rationale": "Son medidas coercitivas o de sanción administrativa estatal, no mecanismos contractuales de solución pacífica."
+      },
+      {
+        "text": "El paro de actividades, la toma de carreteras y la protesta indefinida.",
+        "isCorrect": false,
+        "rationale": "Constituyen medidas de presión o conflicto social que no forman parte de los mecanismos legales acordados en los contratos."
+      },
+      {
+        "text": "La presentación de denuncias penales automáticas entre los gerentes generales.",
+        "isCorrect": false,
+        "rationale": "Las denuncias penales activan la vía punitiva estatal y no solucionan la interpretación ni ejecución civil de los contratos."
+      },
+      {
+        "text": "La promulgación de leyes especiales de expropiación en el Congreso.",
+        "isCorrect": false,
+        "rationale": "La actividad legislativa es de carácter público soberano y no un mecanismo compositivo privado entre partes."
+      }
+    ],
+    "hint": "Piense en las vías alternativas que priorizan la autonomía de la voluntad o la intervención de terceros especializados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una de las ventajas fundamentales por las cuales las empresas mineras prefieren el arbitraje sobre la vía judicial ordinaria?",
+    "opciones": [
+      {
+        "text": "Ofrece mayor celeridad procesal, confidencialidad y especialización técnica de los juzgadores.",
+        "isCorrect": true,
+        "rationale": "Permite resolver controversias complejas en plazos reducidos y ante expertos calificados en la materia minera o legal."
+      },
+      {
+        "text": "Es un trámite gratuito subvencionado en su totalidad por el Estado.",
+        "isCorrect": false,
+        "rationale": "El arbitraje es privado y los honorarios de los árbitros y centros son asumidos directamente por las partes."
+      },
+      {
+        "text": "Invalida de manera automática las normas ambientales e impositivas aplicables.",
+        "isCorrect": false,
+        "rationale": "Los árbitros deben fallar respetando el orden público y la legislación imperativa del país."
+      },
+      {
+        "text": "Exime a las empresas de presentar documentos o informes periciales.",
+        "isCorrect": false,
+        "rationale": "El procedimiento exige rigor probatorio con presentación de peritajes técnicos y exhibición de documentos."
+      },
+      {
+        "text": "Asegura que la decisión final beneficie siempre a la empresa que interpuso la solicitud.",
+        "isCorrect": false,
+        "rationale": "El tribunal arbitral actúa de manera imparcial e independiente analizando las pruebas presentadas por ambas partes."
+      }
+    ],
+    "hint": "Considere factores como el tiempo de tramitación, el resguardo de la información y la pericia técnica del tribunal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes etapas corresponden al procedimiento arbitral según el Decreto Legislativo 1071 en el Perú?",
+    "opciones": [
+      {
+        "text": "Presentación de la solicitud de arbitraje y contestación.",
+        "isCorrect": true,
+        "rationale": "Inicia formalmente la controversia mediante el traslado del pedido y la postura de la parte convocada."
+      },
+      {
+        "text": "Constitución del tribunal arbitral y aprobación de las reglas procesales.",
+        "isCorrect": true,
+        "rationale": "Se nombra a los árbitros, quienes aceptan el cargo y fijan el reglamento o calendario del procedimiento."
+      },
+      {
+        "text": "Fase de actuación probatoria y desarrollo de audiencias.",
+        "isCorrect": true,
+        "rationale": "Se examinan las pruebas, peritajes, documentos y se escuchan los alegatos de las partes."
+      },
+      {
+        "text": "Emisión del laudo arbitral definitivo.",
+        "isCorrect": true,
+        "rationale": "Es el fallo final del tribunal que resuelve de forma vinculante todas las pretensiones planteadas."
+      },
+      {
+        "text": "Aprobación obligatoria del laudo mediante votación en el Congreso.",
+        "isCorrect": false,
+        "rationale": "Los laudos arbitrales son firmes de pleno derecho sin requerir revisión o aprobación del Poder Legislativo."
+      }
+    ],
+    "hint": "Seleccione las fases operativas que estructuran el juicio arbitral desde la petición inicial hasta la decisión final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Respecto a la naturaleza jurídica del Laudo Arbitral, ¿cuál de las siguientes características es correcta?",
+    "opciones": [
+      {
+        "text": "Posee el valor equivalente a una sentencia judicial firme con autoridad de cosa juzgada.",
+        "isCorrect": true,
+        "rationale": "Es una resolución vinculante, definitiva e inapelable en el fondo que obliga al cumplimiento inmediato de las partes."
+      },
+      {
+        "text": "Es una sugerencia referencial que cualquiera de las partes puede desobedecer sin sanción.",
+        "isCorrect": false,
+        "rationale": "El laudo posee fuerza ejecutiva y carácter vinculante para las partes que se sometieron al arbitraje."
+      },
+      {
+        "text": "Requiere ser ratificado por la alcaldía provincial para tener validez.",
+        "isCorrect": false,
+        "rationale": "No requiere visto bueno ni ratificación de autoridades gubernamentales o municipales locales."
+      },
+      {
+        "text": "Permite abrir de inmediato un juicio ordinario desde cero para revisar el fondo de lo resuelto.",
+        "isCorrect": false,
+        "rationale": "El Poder Judicial no revisa el fondo de lo resuelto en el laudo, limitándose a causales muy específicas de anulación formal."
+      },
+      {
+        "text": "Caduca automáticamente a los quince días de ser notificado.",
+        "isCorrect": false,
+        "rationale": "El laudo mantiene su exigibilidad y eficacia legal de forma permanente hasta su ejecución efectiva."
+      }
+    ],
+    "hint": "Identifique el grado de exigibilidad legal y la imposibilidad de reabrir la discusión de fondo en la justicia ordinaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué vía o especialidad del Poder Judicial se procesan ordinariamente las demandas por incumplimiento de contratos mineros celebrados entre privados?",
+    "opciones": [
+      {
+        "text": "En la vía civil, ante juzgados especializados en materia civil o comercial.",
+        "isCorrect": true,
+        "rationale": "Al tratarse de desacuerdos sobre obligaciones patrimoniales contractuales entre privados, la competencia corresponde al fuero civil."
+      },
+      {
+        "text": "En la vía penal, mediante juzgados de juzgamiento inmediato.",
+        "isCorrect": false,
+        "rationale": "El fuero penal persigue delitos y penas, no la interpretación o incumplimiento de obligaciones contractuales civiles."
+      },
+      {
+        "text": "En el tribunal penal militar-policial de las Fuerzas Armadas.",
+        "isCorrect": false,
+        "rationale": "Aplica únicamente para delitos de función cometidos por miembros de las fuerzas armadas y policiales."
+      },
+      {
+        "text": "En la intendencia de fiscalización del Ministerio de Economía y Finanzas.",
+        "isCorrect": false,
+        "rationale": "El MEF es un órgano del Ejecutivo que formula política económica, no un tribunal que resuelve conflictos civiles."
+      },
+      {
+        "text": "En los juzgados de paz letrados especializados en asuntos de familia.",
+        "isCorrect": false,
+        "rationale": "Las pretensiones patrimoniales de gran cuantía de contratos mineros escapan a la materia de derecho de familia o paz letrado."
+      }
+    ],
+    "hint": "Piense en la rama del derecho encargado de regular el cumplimiento de obligaciones, contratos y reparaciones patrimoniales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Bajo qué circunstancias una controversia ligada a un contrato o proyecto minero puede ser llevada a la vía constitucional mediante un Proceso de Amparo?",
+    "opciones": [
+      {
+        "text": "Cuando se evidencie una vulneración manifiesta al derecho constitucional al debido proceso.",
+        "isCorrect": true,
+        "rationale": "El amparo procede para restituir garantías procesales constitucionales cuando se hayan conculcado en una vía previa."
+      },
+      {
+        "text": "Cuando exista una amenaza o violación directa al derecho de propiedad.",
+        "isCorrect": true,
+        "rationale": "Protege la propiedad privada como derecho fundamental frente a actos arbitrarios del Estado o de terceros."
+      },
+      {
+        "text": "Cuando se afecte el derecho fundamental a gozar de un ambiente equilibrado y adecuado.",
+        "isCorrect": true,
+        "rationale": "El fuero constitucional tutela el derecho a la salud ambiental ante vulneraciones de relevancia constitucional."
+      },
+      {
+        "text": "When se controviertan deudas comerciales simples sobre el precio de útiles de oficina.",
+        "isCorrect": false,
+        "rationale": "Las discusiones patrimoniales ordinarias carecen de trascendencia constitucional y deben ventilarse en la vía ordinaria."
+      },
+      {
+        "text": "Cuando se transgreda arbitrariamente la libertad de empresa y contratación lícita.",
+        "isCorrect": true,
+        "rationale": "La Constitución garantiza el libre ejercicio del derecho empresarial frente a restricciones estatales ilegítimas."
+      }
+    ],
+    "hint": "Seleccione únicamente aquellos supuestos donde se encuentren en juego derechos fundamentales reconocidos en la Constitución.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el marco legal minero peruano y el Código Civil, ¿cuál es la formalidad requerida para que los contratos mineros surtan plenos efectos frente al Estado y a terceros?",
+    "opciones": [
+      {
+        "text": "Escritura pública e inscripción en el Registro Público de Minería.",
+        "rationale": "La Ley General de Minería exige el otorgamiento de escritura pública y su posterior inscripción en el registro correspondiente para gozar de oponibilidad frente a terceros.",
+        "isCorrect": true
+      },
+      {
+        "text": "Documento privado con firmas legalizadas ante notario e informe favorable del MINEM.",
+        "rationale": "La simple legalización notarial de firmas en documento privado es insuficiente para generar efectos registrales erga omnes frente a terceros y al Estado.",
+        "isCorrect": false
+      },
+      {
+        "text": "Acta de asamblea general de la empresa inscrita en la SUNAT.",
+        "rationale": "Las actas internas de asamblea rigen la vida societaria interna pero no constituyen la formalidad exigida para actos de disposición o gravamen de derechos mineros.",
+        "isCorrect": false
+      },
+      {
+        "text": "Declaración jurada ante el Ministerio de Energía y Minas con aprobación de la comunidad local.",
+        "rationale": "El trámite administrativo sectorial no sustituye la exigencia de elevar el acuerdo a escritura pública e inscribirlo en la SUNARP.",
+        "isCorrect": false
+      },
+      {
+        "text": "Contrato privado con legalización consular previa y publicación en el diario oficial El Peruano.",
+        "rationale": "Salvo el trámite consular para contratos celebrados en el extranjero, la publicación en el diario oficial no reemplaza la inscripción registral obligatoria.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el requisito indispensable para la oponibilidad de los derechos reales de garantía y transferencia ante registros públicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el régimen legal minero, ¿cuál es la característica distintiva del contrato de sesión minera en comparación con el contrato de transferencia?",
+    "opciones": [
+      {
+        "text": "Transfiere temporalmente el uso, disfrute y aprovechamiento de los frutos de la concesión sin ceder la titularidad del derecho minero.",
+        "rationale": "La sesión minera opera como un arrendamiento especial donde el cesionario explota y se queda con los minerales extraídos pero el cedente conserva la titularidad del derecho.",
+        "isCorrect": true
+      },
+      {
+        "text": "Transfiere de forma definitiva la titularidad plena de las alícuotas del derecho minero a cambio de un precio.",
+        "rationale": "La transferencia definitiva de titularidad es la figura propia del contrato de transferencia minera y no de la sesión.",
+        "isCorrect": false
+      },
+      {
+        "text": "Constituye una garantía real sobre la concesión para respaldar el cumplimiento de una obligación crediticia futura.",
+        "rationale": "La afectación de la concesión para respaldar un crédito responde a la naturaleza del contrato de hipoteca minera.",
+        "isCorrect": false
+      },
+      {
+        "text": "Genera una nueva persona jurídica de derecho privado que asume la titularidad de la concesión minera.",
+        "rationale": "La creación de una nueva persona jurídica distingue a la sociedad minera de responsabilidad limitada y no a la sesión minera.",
+        "isCorrect": false
+      },
+      {
+        "text": "Concede una promesa unilateral donde solo una de las partes queda obligada a celebrar un contrato futuro definitivo.",
+        "rationale": "El compromiso de celebrar un contrato definitivo futuro bajo plazo determinado es la estructura formal del contrato de opción minera.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera la diferencia entre la enajenación del título minero y la transferencia temporal de la explotación manteniendo la titularidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes afirmaciones describen correctamente los elementos y reglas legales del contrato de riesgo compartido (joint venture) en el sector minero peruano?",
+    "opciones": [
+      {
+        "text": "No constituye una persona jurídica distinta a la de sus contratantes ni genera un sujeto de derecho independiente.",
+        "rationale": "El joint venture contractual no nace como una persona jurídica autónoma, manteniendo cada participante su independencia societaria.",
+        "isCorrect": true
+      },
+      {
+        "text": "Al menos una de las partes contratantes debe ser titular de la actividad minera.",
+        "rationale": "La normativa especial exige que al menos una de las partes vinculadas al contrato posea el título o derecho sobre la actividad minera.",
+        "isCorrect": true
+      },
+      {
+        "text": "Las partes comparten tanto los beneficios económicos como los riesgos legales, operativos y la responsabilidad solidaria frente a terceros.",
+        "rationale": "La naturaleza asociativa del contrato implica la asunción conjunta del riesgo empresarial y las responsabilidades operativas e indemnizatorias derivadas del proyecto.",
+        "isCorrect": true
+      },
+      {
+        "text": "Requiere obligatoriamente la disolución de la personería jurídica previa de cada una de las empresas participantes.",
+        "rationale": "Las partes conservan íntegramente su personería jurídica y autonomía previa sin requerir ningún proceso de disolución societaria.",
+        "isCorrect": false
+      },
+      {
+        "text": "Otorga automáticamente al inversionista extranjero el derecho incondicional e irrevocable de expropiar la concesión.",
+        "rationale": "El contrato regula la asociación privada de inversión pero no otorga facultades soberanas de expropiación sobre bienes públicos o privados.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerda si este acuerdo contractual genera una persona jurídica independiente o mantiene la autonomía de las partes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ocurre con la titularidad de una concesión minera cuando se constituye una Sociedad Minera de Responsabilidad Limitada al otorgarse el título sobre un petitorio con pluralidad de titulares?",
+    "opciones": [
+      {
+        "text": "La nueva sociedad constituida se convierte en la única titular de la concesión que la originó.",
+        "rationale": "A diferencia de los acuerdos contractuales puros, esta sociedad constituye una persona jurídica de derecho privado que asume la titularidad exclusiva de la concesión.",
+        "isCorrect": true
+      },
+      {
+        "text": "Cada socio mantiene la titularidad individual e independiente de su alícuota sobre el terreno superficial.",
+        "rationale": "Las alícuotas individuales se convierten en participaciones sociales dentro del capital de la nueva persona jurídica, perdiendo la titularidad individual directa.",
+        "isCorrect": false
+      },
+      {
+        "text": "La titularidad se revierte automáticamente al Estado peruano, quedando los socios únicamente como arrendatarios.",
+        "rationale": "El Estado no recupera la concesión; esta pasa a ser de propiedad de la entidad privada recién constituida.",
+        "isCorrect": false
+      },
+      {
+        "text": "Se genera un joint venture sin personería jurídica donde el Estado asume el 51% del capital social.",
+        "rationale": "Esta figura sí crea una persona jurídica independiente y no impone participación estatal obligatoria en su accionariado.",
+        "isCorrect": false
+      },
+      {
+        "text": "La titularidad queda suspendida hasta que la sociedad se transforme en una sociedad anónima abierta.",
+        "rationale": "La ley reconoce plena capacidad jurídica a la sociedad minera de responsabilidad limitada sin exigir su transformación a sociedad anónima.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Analiza el efecto societario al nacer una nueva persona jurídica de derecho privado frente a la titularidad de la concesión originaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al constituir una hipoteca minera sobre una concesión registrada, ¿cuál de los siguientes aspectos legales y alcances patrimoniales es correcto?",
+    "opciones": [
+      {
+        "text": "Recae sobre un bien inmueble por determinación legal e incluye tanto la concesión como los frutos y productos que de ella se deriven.",
+        "rationale": "El Código Civil clasifica a las concesiones mineras como inmuebles y la garantía abarca la concesión junto con los frutos de la extracción mineral.",
+        "isCorrect": true
+      },
+      {
+        "text": "Puede constituirse válidamente sobre bienes futuros no peticionados ni registrados para respaldar deudas hipotéticas.",
+        "rationale": "La hipoteca exige un objeto determinado e inscrito en el registro correspondiente, por lo que no puede recaer sobre derechos futuros no constituidos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Otorga al acreedor el derecho de transferir unilateralmente la titularidad sin necesidad de inscripción registral previa.",
+        "rationale": "La constitución e inscripción en el Registro Público de Minería son requisitos esenciales para la validez y preferencia de la garantía.",
+        "isCorrect": false
+      },
+      {
+        "text": "Se extingue automáticamente si la concesión sufre una variación en su producción de minerales durante los primeros seis meses.",
+        "rationale": "Las fluctuaciones operativas o productivas de la mina no extinguen el derecho real de garantía registrado a favor del acreedor.",
+        "isCorrect": false
+      },
+      {
+        "text": "Es un contrato principal e independiente que no requiere la existencia de una obligación o crédito subyacente.",
+        "rationale": "La hipoteca posee naturaleza accesoria, dependiendo indispensablemente de una obligación o crédito dinerario principal que garantiza.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Reflexiona sobre la clasificación legal de la concesión minera según el Código Civil y los elementos que comprende la garantía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En un contrato de opción minera celebrado conforme a la legislación vigente, ¿cuál es la obligación del otorgante durante el plazo de vigencia pactado?",
+    "opciones": [
+      {
+        "text": "Queda obligado incondicional e irrevocablemente a celebrar el contrato definitivo si el optante decide ejercer su derecho.",
+        "rationale": "El contrato de opción es preparatorio y vincula irrevocablemente al otorgante, dejando a la sola decisión del optante la suscripción del contrato final.",
+        "isCorrect": true
+      },
+      {
+        "text": "Asume la obligación bilateral e inmediata de transferir el 50% de las acciones de la mina antes del inicio de las labores de exploración.",
+        "rationale": "El contrato no exige la transferencia accionaria previa, sino el mantenimiento exclusivo de la oferta contractual proyectada.",
+        "isCorrect": false
+      },
+      {
+        "text": "Debe financiar con capital propio todos los estudios de factibilidad bancable exigidos por el optante.",
+        "rationale": "Los costos de los estudios de factibilidad y exploración suelen ser asumidos por la parte optante que evalúa el potencial del yacimiento.",
+        "isCorrect": false
+      },
+      {
+        "text": "Queda facultado para vender la concesión a un tercero sin previo aviso si recibe una oferta económica superior.",
+        "rationale": "Mientras la opción esté vigente, el otorgante no puede disponer libremente del derecho minero de forma que frustre la opción del optante.",
+        "isCorrect": false
+      },
+      {
+        "text": "Debe asumir la responsabilidad solidaria de todas las deudas tributarias contraídas por el optante en otros proyectos.",
+        "rationale": "Las obligaciones tributarias ajenas de la contraparte no son transferidas ni garantizadas por el otorgante en el contrato de opción.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Distingue la posición de la parte que promete la oferta frente a la parte que evalúa el potencial para decidir la firma final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En un contrato de comercialización de minerales, ¿cuál de las siguientes estipulaciones resulta indispensable para determinar el precio neto a pagar por el lote y ajustar las deducciones aplicables?",
+    "opciones": [
+      {
+        "text": "Las especificaciones de calidad, ensayes de laboratorio y deducciones por elementos dañinos o mermas.",
+        "rationale": "El valor comercial de los concentrados depende del contenido metálico útil ajustado por mermas, gastos de refinación y castigos por impurezas o elementos penalizables (como el arsénico).",
+        "isCorrect": true
+      },
+      {
+        "text": "La transferencia irrevocable del terreno superficial a favor de la comunidad campesina local.",
+        "rationale": "La propiedad del terreno superficial es un concepto jurídico distinto al comercio de los minerales ya extraídos.",
+        "isCorrect": false
+      },
+      {
+        "text": "La renuncia expresa de la empresa compradora a solicitar evaluaciones de impacto ambiental al SENACE.",
+        "rationale": "Los aspectos de certificación ambiental de las operaciones no sustituyen los parámetros comerciales de calidad exigidos por los compradores de concentrados.",
+        "isCorrect": false
+      },
+      {
+        "text": "El compromiso de contratar exclusivamente a personal extranjero para el muestreo de humedad.",
+        "rationale": "La legislación laboral o las costumbres comerciales no imponen la contratación exclusiva de técnicos extranjeros para el pesaje y ensaye.",
+        "isCorrect": false
+      },
+      {
+        "text": "La obligación de someter los desacuerdos técnicos a la aprobación previa del Ministerio de Economía y Finanzas.",
+        "rationale": "El arbitraje o el peritaje técnico privado son los mecanismos habituales para resolver discrepancias comerciales, sin intervención del MEF.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en los factores físicos y químicos que reducen el valor bruto del mineral comercializado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con los criterios registrales en materia minera, ¿por qué resulta procedente la tacha registral de una solicitud para inscribir la resolución unilateral de un contrato fundada en el artículo 1429 del Código Civil cuando existe una cláusula arbitral pactada?",
+    "opciones": [
+      {
+        "text": "Porque existiendo un pacto arbitral, cualquier controversia sobre la resolución o eficacia del contrato debe someterse a la jurisdicción arbitral acordada.",
+        "rationale": "El contrato es ley entre las partes; si se pactó arbitraje para resolver controversias, la validez o eficacia de una resolución unilateral debe ser ventilada en esa vía y no inscribirse directamente.",
+        "isCorrect": true
+      },
+      {
+        "text": "Porque los contratos mineros son de duración indeterminada y la ley prohíbe expresamente su resolución en todo supuesto.",
+        "rationale": "La ley permite la resolución contractual, pero exige respetar los mecanismos de solución de conflictos pactados libremente por las partes.",
+        "isCorrect": false
+      },
+      {
+        "text": "Porque la SUNARP tiene la facultad legal de resolver el fondo de los litigios mineros mediante resoluciones administrativas.",
+        "rationale": "La función registral evalúa la legalidad y titulación, pero no reemplaza a los jueces o árbitros en el juzgamiento de controversias de fondo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Porque la resolución unilateral solo es válida si la aprueba el Ministerio de Energía y Minas en instancia final.",
+        "rationale": "La autoridad sectorial no interviene en la validez registral de las resoluciones de contratos privados sujetas a arbitraje.",
+        "isCorrect": false
+      },
+      {
+        "text": "Porque el Código Civil queda derogado automáticamente cuando se firma un contrato entre dos empresas privadas.",
+        "rationale": "El Código Civil se mantiene como norma supletoria y marco general del derecho contractual privado en el Perú.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera la primacía de la autonomía de la voluntad en la elección de la vía jurisdiccional acordada en el contrato.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes razones justifican la inclusión de cláusulas ambientales expresas y delimitadas en los contratos mineros (como cesión o explotación)?",
+    "opciones": [
+      {
+        "text": "Permiten deslindar la responsabilidad por pasivos ambientales previos mediante auditorías ambientales iniciales.",
+        "rationale": "Realizar auditorías al inicio del contrato permite delimitar el estado ambiental previo y evitar atribuir pasivos antiguos al nuevo operador.",
+        "isCorrect": true
+      },
+      {
+        "text": "Asignan claramente qué parte asumirá los costos de remediación y cumplimiento de los instrumentos de gestión ambiental.",
+        "rationale": "Definir las obligaciones de remediación asegura que los costos de fiscalización e instrumentos ambientales tengan un responsable contractual claro.",
+        "isCorrect": true
+      },
+      {
+        "text": "Evitan que la falta de estipulación genere incertidumbres o posibles responsabilidades solidarias frente a multas de organismos fiscalizadores.",
+        "rationale": "Precisar la responsabilidad indemnizatoria e idoneidad operativa protege a los titulares frente a multas administrativas o contingencias ambientales ocasionadas por el operador.",
+        "isCorrect": true
+      },
+      {
+        "text": "Eximen a ambas partes de cumplir con el Plan de Cierre de Minas exigido por el reglamento sectorial.",
+        "rationale": "Las obligaciones regulatorias del Cierre de Minas son de carácter legal e imperativo y no pueden ser derogadas por acuerdos privados.",
+        "isCorrect": false
+      },
+      {
+        "text": "Garantizan que la empresa quede liberada de pagar el Impuesto General a las Ventas (IGV).",
+        "rationale": "Las materias tributarias de orden público como el IGV no pueden ser exoneradas ni modificadas mediante cláusulas contractuales privadas.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Evalúa cómo se determina el estado del área antes del contrato para evitar asumir daños o multas por contaminación pasada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la redacción de contratos de exploración u opción minera, ¿cuál es la función de la cláusula de confidencialidad respecto a la información técnica del yacimiento?",
+    "opciones": [
+      {
+        "text": "Restringir la divulgación de datos geológicos, reservas y ensayes a terceros, salvo mandato expreso de la autoridad judicial o legal.",
+        "rationale": "Protege el valor comercial de los datos técnicos de prospección y perforación, limitando su difusión pública excepto por requerimientos normativos o judiciales.",
+        "isCorrect": true
+      },
+      {
+        "text": "Impedir que el Estado peruano cobre derechos de vigencia o penalidades sobre las concesiones.",
+        "rationale": "Las obligaciones tributarias y de mantenimiento de la concesión minera ante el Estado son de cumplimiento público obligatorio.",
+        "isCorrect": false
+      },
+      {
+        "text": "Ocultar de manera permanente los estudios de impacto ambiental a las comunidades locales interesadas.",
+        "rationale": "La información sobre impactos ambientales y participación ciudadana se rige por normas de transparencia ambiental de orden público.",
+        "isCorrect": false
+      },
+      {
+        "text": "Transferir automáticamente los derechos de propiedad intelectual de los peritos a favor de SUNAT.",
+        "rationale": "La confidencialidad regula el uso de información confidencial entre partes contratantes, sin modificar derechos tributarios o de autor.",
+        "isCorrect": false
+      },
+      {
+        "text": "Cancelar los registros de comercialización de minerales en el Registro Público de Minería.",
+        "rationale": "Los actos inscribibles en la SUNARP son públicos por naturaleza registral y no se extinguen mediante pactos de confidencialidad.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en la protección del valor estratégico de las muestras geológicas y datos de perforación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En caso de que un contrato de explotación omita consignar expresamente el plazo o la distribución de responsabilidades para el Cierre de Minas, ¿cuál es la consecuencia legal y operativa para el titular de la actividad minera?",
+    "opciones": [
+      {
+        "text": "Permanece obligado administrativamente a cumplir con el reglamento sectorial de cierre de minas ante la autoridad competente.",
+        "rationale": "Las obligaciones ambientales de cierre son de orden público y la omisión de una cláusula contractual privada no exime al titular minero de la responsabilidad administrativa.",
+        "isCorrect": true
+      },
+      {
+        "text": "Queda liberado de manera automática e incondicional de toda obligación de rehabilitación ambiental.",
+        "rationale": "Las normas ambientales administrativas son imperativas y se aplican con independencia de los vacíos o deficiencias de los contratos privados.",
+        "isCorrect": false
+      },
+      {
+        "text": "Puede transferir la concesión al municipio provincial sin necesidad de elaborar un estudio ambiental.",
+        "rationale": "El titular no puede desligarse de sus deberes de remediación mediante la cesión o transferencia informal del predio o concesión.",
+        "isCorrect": false
+      },
+      {
+        "text": "Se extingue la concesión minera de forma inmediata, convirtiéndose el área en zona de reserva nacional.",
+        "rationale": "La caducidad o extinción de la concesión se rige por causas legales específicas reguladas en la Ley General de Minería, no por la omisión de una cláusula contractual.",
+        "isCorrect": false
+      },
+      {
+        "text": "Queda exento del pago de multas impuestas por la OEFA en caso de contaminación por desmonteras.",
+        "rationale": "La OEFA sanciona administrativamente al titular responsable de la actividad, sin que este pueda alegar el silencio del contrato privado.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera el carácter imperativo de la normativa ambiental administrativa frente a las omisiones de acuerdos privados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el artículo 1315 del Código Civil aplicable a los contratos mineros, ¿qué elementos deben concurrir para configurar el caso fortuito o fuerza mayor que suspenda las obligaciones pactadas?",
+    "opciones": [
+      {
+        "text": "Un evento extraordinario, imprevisible e irresistible que impida temporal o definitivamente la ejecución de la prestación.",
+        "rationale": "El Código Civil exige que el hecho no sea imputable al deudor y reúna las características de ser imprevisible, irresistible y extraordinario (como desastres o convulsión social masiva).",
+        "isCorrect": true
+      },
+      {
+        "text": "Un hecho derivado exclusivamente de la negligencia u omisión técnica de la empresa operadora.",
+        "rationale": "Si el evento se debe a imprudencia o negligencia del operador, genera responsabilidad por inejecución de obligaciones y no constituye fuerza mayor.",
+        "isCorrect": false
+      },
+      {
+        "text": "La fluctuación ordinaria de los precios internacionales de los metales en la bolsa de valores.",
+        "rationale": "Los vaivenes ordinarios del mercado forman parte del riesgo comercial inherente a la industria minera y no califican como fuerza mayor.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un incremento unilateral en los sueldos del personal administrativo de la empresa minera.",
+        "rationale": "Los costos laborales internos y decisiones de planilla son de gestión empresarial interna y no constituyen eventos irresistibles ajenos a las partes.",
+        "isCorrect": false
+      },
+      {
+        "text": "La decisión voluntaria del inversionista de suspender las labores por falta de interés comercial.",
+        "rationale": "La falta de interés comercial es un riesgo de negocio subjetivo y no un obstáculo objetivo e insuperable provocado por una causa de fuerza mayor.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerda las tres características indispensables establecidas en el Código Civil para eximir de responsabilidad contractual.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según los estudios e investigaciones sectoriales post-pandemia expuestos en el curso, ¿cuál fue el factor de riesgo que mayor preocupación y ponderación generó en las empresas mineras operando en el Perú?",
+    "opciones": [
+      {
+        "text": "El riesgo asociado a la licencia social y los efectos de la actividad sobre las comunidades locales.",
+        "rationale": "A diferencia de otros países latinoamericanos volcados al precio o a la recesión, en el Perú el factor socioambiental y la relación con las comunidades fue percibido como el mayor riesgo operativo y reputacional.",
+        "isCorrect": true
+      },
+      {
+        "text": "El riesgo de la variabilidad del tipo de cambio entre el real y el peso argentino.",
+        "rationale": "Las monedas de Argentina o Brasil no constituyen el factor de riesgo financiero central para las operaciones mineras en el Perú.",
+        "isCorrect": false
+      },
+      {
+        "text": "La falta total de tecnología para la extracción de minerales no metálicos en la costa.",
+        "rationale": "La disponibilidad tecnológica no fue el riesgo prioritario identificado en la encuesta comparativa del sector.",
+        "isCorrect": false
+      },
+      {
+        "text": "La imposibilidad legal de suscribir contratos de trabajo a plazo determinado.",
+        "rationale": "El régimen de contratación laboral minero está plenamente regulado y no constituía la principal amenaza percibida según la encuesta.",
+        "isCorrect": false
+      },
+      {
+        "text": "La ausencia de un código civil aplicable a los contratos de financiamiento internacional.",
+        "rationale": "El marco legal peruano cuenta con un Código Civil plenamente vigente que rige las relaciones contractuales privadas e internacionales.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el factor socioambiental que generó mayor impacto en el desarrollo y operatividad de las minas peruanas post-pandemia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Conforme a la jurisprudencia laboral examinada sobre la Ley de Seguridad y Salud en el Trabajo (Ley N° 29783), ¿qué criterio asumieron los tribunales respecto a la indumentaria de trabajo contaminada con minerales pesados?",
+    "opciones": [
+      {
+        "text": "El empleador debe asumir el costo y proceso de descontaminación de la ropa de trabajo expuesta a sustancias tóxicas para garantizar la salud.",
+        "rationale": "La interpretación extensiva de la Ley de Seguridad y Salud en el Trabajo determina que el deber de prevención exige al empleador asumir la descontaminación e higiene del vestuario de protección.",
+        "isCorrect": true
+      },
+      {
+        "text": "Los trabajadores deben pagar de su propio sueldo el servicio de lavandería por tratarse de un beneficio personal insustituible.",
+        "rationale": "Transferir el costo del lavado de indumentaria tóxica al trabajador vulnera el principio de prevención y la gratuidad de los medios de protección.",
+        "isCorrect": false
+      },
+      {
+        "text": "El lavado de indumentaria solo es obligatorio si la exposición a minerales pesados supera el 90% de la jornada diaria.",
+        "rationale": "No se requiere un umbral extremo para activar el deber de resguardo de la salud; la sola exposición al riesgo químico impone la obligación patronal.",
+        "isCorrect": false
+      },
+      {
+        "text": "Las empresas mineras quedan exoneradas de la entrega de equipos de protección si capacitan verbalmente al personal.",
+        "rationale": "Las capacitaciones no eximen al empleador de la entrega y mantenimiento adecuado de los equipos de protección personal (EPP).",
+        "isCorrect": false
+      },
+      {
+        "text": "El Ministerio de Energía y Minas debe reembolsar el 100% de las indemnizaciones laborales fijadas por el Poder Judicial.",
+        "rationale": "Las indemnizaciones por incumplimiento de deberes laborales son asumidas por la empresa empleadora infractora, no por el MINEM.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerda el principio de prevención en salud ocupacional respecto a la descontaminación de prendas expuestas a minerales tóxicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes leyes y normativas peruanas constituyen marcos de obligatorio cumplimiento que condicionan la validez y ejecución de los contratos mineros?",
+    "opciones": [
+      {
+        "text": "Código Civil Peruano.",
+        "rationale": "El Código Civil es la norma supletoria y pilar de la teoría de las obligaciones y contratación privada en el sistema legal.",
+        "isCorrect": true
+      },
+      {
+        "text": "Texto Único Ordenado de la Ley General de Minería.",
+        "rationale": "La Ley General de Minería fija el régimen de concesiones, tipología contractual minera y obligaciones del titular sectorial.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ley N° 29783, Ley de Seguridad y Salud en el Trabajo.",
+        "rationale": "La Ley N° 29783 es imperativa para garantizar la prevención de riesgos biológicos, físicos y químicos en los centros de trabajo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ley N° 29785, Ley del Derecho a la Consulta Previa.",
+        "rationale": "La Ley N° 29785 regula la obligación estatal y sectorial de consultar a los pueblos indígenas antes de emitir medidas administrativas o mineras que los afecten.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ley Orgánica de Municipalidades para la fijación del Impuesto a la Renta de Tercera Categoría.",
+        "rationale": "El Impuesto a la Renta forma parte del régimen tributario nacional administrado por la SUNAT y no de tributos municipales normados por los municipios.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica los cuerpos legales nacionales que regulan los aspectos laborales, ambientales, contractuales e interculturales en la minería.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de riesgos financieros de un proyecto minero, ¿cuál es la función de emplear derivados e instrumentos de cobertura como futuros u opciones?",
+    "opciones": [
+      {
+        "text": "Fijar precios futuros de comercialización de los minerales para proteger el flujo de caja ante la volatilidad del mercado.",
+        "rationale": "Las coberturas financieras aseguran un piso de precio negociado, protegiendo el flujo de caja y la viabilidad del financiamiento frente a caídas de cotización.",
+        "isCorrect": true
+      },
+      {
+        "text": "Garantizar la aprobación automática de los Estudios de Impacto Ambiental presentados ante el SENACE.",
+        "rationale": "Los instrumentos financieros de mercado de capitales no intervienen en los procedimientos administrativos de certificación ambiental.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminar por completo el pago de regalías e impuesto a la renta en el territorio nacional.",
+        "rationale": "El uso de futuros sobre minerales no altera la legislación tributaria ni exime del cumplimiento de cargas fiscales.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eximir a la empresa de contar con pólizas de seguro contra accidentes de trabajo.",
+        "rationale": "La mitigación del riesgo comercial no reemplaza las pólizas ni los seguros laborales exigidos por la Ley de Seguridad y Salud en el Trabajo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Otorgar inmunidad diplomática a los ejecutivos extranjeros de la empresa minera.",
+        "rationale": "Los mecanismos contractuales de derivados no confieren estatus ni prerrogativas diplomáticas a particulares.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el mecanismo que fija un valor garantizado para el mineral protegiendo los ingresos futuros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Conforme a la Ley N° 29785, ¿cuál es el objetivo central del proceso de Consulta Previa en el desarrollo de proyectos mineros?",
+    "opciones": [
+      {
+        "text": "Garantizar un diálogo intercultural e informado para buscar acuerdos o el consentimiento de los pueblos indígenas frente a medidas que los afecten.",
+        "rationale": "Busca tutelar los derechos colectivos de los pueblos indígenas mediante el diálogo previo, libre e informado sobre proyectos que los puedan afectar.",
+        "isCorrect": true
+      },
+      {
+        "text": "Transferir la propiedad de las concesiones mineras del Estado a los directorios de las empresas privadas.",
+        "rationale": "El proceso no constituye un acto de enajenación de la concesión ni altera la titularidad del yacimiento.",
+        "isCorrect": false
+      },
+      {
+        "text": "Sustituir la elaboración de los Estudios de Impacto Ambiental detallados por un acta de asamblea verbal.",
+        "rationale": "La consulta previa se desarrolla de forma complementaria y no exime del cumplimiento estricto de los instrumentos de gestión ambiental exigidos por ley.",
+        "isCorrect": false
+      },
+      {
+        "text": "Establecer un impuesto municipal del 50% sobre las utilidades brutas de la empresa minera.",
+        "rationale": "La Ley N° 29785 no crea gravámenes tributarios ni fijaciones de utilidades para los municipios.",
+        "isCorrect": false
+      },
+      {
+        "text": "Exonerar a las empresas de fiscalizaciones ambientales por parte de la OEFA.",
+        "rationale": "Las competencias de supervisión y sanción de la OEFA se mantienen plenamente vigentes con independencia de la consulta previa.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerda el mecanismo de diálogo obligatorio regulado por la Ley 29785 para medidas que afecten a pueblos originarios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito fundamental de pactar cláusulas de revisión contractual periódica en proyectos mineros de larga duración?",
+    "opciones": [
+      {
+        "text": "Permitir la adaptación de las condiciones económicas u operativas ante variaciones severas de mercado o cambios normativos.",
+        "rationale": "Al desarrollarse los proyectos mineros a lo largo de décadas, estas cláusulas otorgan flexibilidad contractual para reajustar equilibrios ante distorsiones severas de mercado o leyes.",
+        "isCorrect": true
+      },
+      {
+        "text": "Cancelar las concesiones registradas si la cotización del mineral sube en el mercado internacional.",
+        "rationale": "Un alza de precios favorece la rentabilidad y no fundamenta la cancelación de los títulos mineros concedidos por el Estado.",
+        "isCorrect": false
+      },
+      {
+        "text": "Otorgar potestad al notario público para modificar unilateralmente el capital social de las partes.",
+        "rationale": "Los notarios carecen de facultades jurisdiccionales para alterar unilateralmente la estructura societaria de contratantes privados.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminar la aplicación supletoria del Código Civil en caso de fallecimiento de un socio.",
+        "rationale": "El marco del Código Civil mantiene la continuidad de las obligaciones y derechos sucesorios entre los contratantes.",
+        "isCorrect": false
+      },
+      {
+        "text": "Convertir los contratos privados de explotación en concesiones otorgadas por organismos internacionales.",
+        "rationale": "Los contratos privados regulan relaciones interpartes dentro del territorio nacional bajo el amparo de la legislación peruana.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera la necesidad de ajustar las prestaciones contractuales en proyectos que se extienden durante varias décadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el Decreto Legislativo N° 1071 (Ley de Arbitraje), ¿cuál es la eficacia y naturaleza jurídica de un laudo arbitral definitivo?",
+    "opciones": [
+      {
+        "text": "Es definitivo, vinculante y produce efectos de cosa juzgada, siendo equiparable a una sentencia judicial firme.",
+        "rationale": "El laudo arbitral produce efectos de cosa juzgada y es de obligatorio cumplimiento inmediato para las partes, ejecutable ante el Poder Judicial.",
+        "isCorrect": true
+      },
+      {
+        "text": "Es un informe técnico de recomendación no vinculante que requiere aprobación del Ministerio de Justicia.",
+        "rationale": "El arbitraje emite un fallo vinculante, diferenciándose de las opiniones o recomendaciones emitidas en procesos de mediación o peritaje no vinculante.",
+        "isCorrect": false
+      },
+      {
+        "text": "Puede ser modificado por cualquier juez de paz letrado a solicitud verbal de una de las partes.",
+        "rationale": "La justicia ordinaria no puede reexaminar el fondo de la controversia resuelta por los árbitros, salvo en el marco estricto del recurso de anulación por forma.",
+        "isCorrect": false
+      },
+      {
+        "text": "Carece de fuerza ejecutiva hasta que sea homologado por el Congreso de la República.",
+        "rationale": "Los laudos de tribunales arbitrales privados no requieren ratificación ni intervención del Poder Legislativo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Equivale a una conciliación extrajudicial que caduca automáticamente a los 30 días de su notificación.",
+        "rationale": "El laudo es una decisión con autoridad de cosa juzgada y no se extingue por el transcurso de plazos breves de caducidad.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerda el valor probatorio y la fuerza legal que el Decreto Legislativo 1071 otorga a la decisión del tribunal arbitral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si la parte vencida en un arbitraje minero no cumple voluntariamente lo ordenado en el laudo arbitral, ¿ante qué fuero debe acudir la parte vencedora para exigir su ejecución forzosa?",
+    "opciones": [
+      {
+        "text": "Ante el Poder Judicial, interponiendo una demanda de ejecución de laudo arbitral ante el juzgado civil competente.",
+        "rationale": "Al carecer los árbitros de imperium (coacción estatal), la ejecución forzosa del laudo se tramita directamente ante los jueces civiles mediante un proceso sumario de ejecución.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ante el Ministerio de Energía y Minas, mediante recurso administrativo de apelación de fondo.",
+        "rationale": "Las autoridades administrativas sectoriales no poseen competencia jurisdiccional para revisar ni ejecutar laudos arbitrales.",
+        "isCorrect": false
+      },
+      {
+        "text": "Ante la SUNARP, solicitando la cancelación policial del registro de la empresa deudora.",
+        "rationale": "La SUNARP es un registro público y no una autoridad de ejecución coercitiva ni policial de resoluciones.",
+        "isCorrect": false
+      },
+      {
+        "text": "Ante un centro de conciliación extrajudicial, para reiniciar las negociaciones desde el principio.",
+        "rationale": "Habiéndose emitido un laudo con autoridad de cosa juzgada, no corresponde retroceder a instancias de negociación conciliatoria.",
+        "isCorrect": false
+      },
+      {
+        "text": "Ante la Contraloría General de la República, mediante queja de fiscalización presupuestal.",
+        "rationale": "La Contraloría supervisa el uso de fondos públicos estatales y no ejecuta laudos derivados de controversias entre privados.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Analiza qué entidad estatal posee imperium y facultad coercitiva para hacer cumplir una resolución firme.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes características constituyen ventajas del arbitraje comercial frente al litigio judicial ordinario en la industria minera?",
+    "opciones": [
+      {
+        "text": "Mayor celeridad procedimental y plazos reducidos para la resolución de la disputa.",
+        "rationale": "El arbitraje suele durar significativamente menos tiempo que los procesos judiciales ordinarios de múltiples instancias.",
+        "isCorrect": true
+      },
+      {
+        "text": "Posibilidad de designar árbitros especializados en derecho minero y aspectos técnicos del sector.",
+        "rationale": "Las partes pueden elegir a profesionales expertos en minería y derecho societario, asegurando un nivel de análisis técnico especializado.",
+        "isCorrect": true
+      },
+      {
+        "text": "Confidencialidad del procedimiento e información comercial presentada durante el proceso.",
+        "rationale": "A diferencia de la publicidad de los juicios en el Poder Judicial, el proceso arbitral mantiene carácter reservado para proteger la reputación e información comercial.",
+        "isCorrect": true
+      },
+      {
+        "text": "Exoneración automática del pago del Impuesto a la Renta de tercera categoría.",
+        "rationale": "El arbitraje resuelve litigios contractuales pero no modifica las normas de tributación ni otorga beneficios fiscales.",
+        "isCorrect": false
+      },
+      {
+        "text": "Financiamiento del 100% de los honorarios de los árbitros con cargo al presupuesto estatal.",
+        "rationale": "Los honorarios del tribunal y gastos administrativos son asumidos directamente por las partes litigantes y no por el presupuesto público del Estado.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en las razones operativas, técnicas y de reserva que llevan a las empresas privadas a evitar el fuero judicial ordinario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el desarrollo de un arbitraje minero, ¿cuál es la función determinante del acta de fijación de reglas procesales aprobada por el tribunal arbitral?",
+    "opciones": [
+      {
+        "text": "Establecer los plazos, formalidades, medios de notificación y reglas de actuación probatoria que rigen el proceso.",
+        "rationale": "El acta de fijación de reglas fija el marco adjetivo preciso al que deben ceñirse estrictamente las partes y los árbitros, bajo sanción de caducidad o nulidad.",
+        "isCorrect": true
+      },
+      {
+        "text": "Facultar a los árbitros para modificar las leyes tributarias nacionales aplicables a la mina.",
+        "rationale": "Los órganos arbitrales carecen de potestad legislativa para alterar las cargas fiscales imperativas impuestas por ley.",
+        "isCorrect": false
+      },
+      {
+        "text": "Anular el contrato principal de explotación minera sin requerir evaluación previa de pruebas.",
+        "rationale": "Las reglas adjetivas del proceso arbitral no extinguen ni novan las obligaciones contenidas en el contrato sustantivo materia de reclamo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eximir a la empresa demandada de responder ante fiscalizaciones ambientales del OEFA o la SUNAFIL.",
+        "rationale": "Las sanciones administrativas de entes fiscalizadores no quedan sin efecto por la sola aprobación del reglamento procedimental en un arbitraje privado.",
+        "isCorrect": false
+      },
+      {
+        "text": "Conceder a la parte demandante el derecho exclusivo de nombrar a los vocales de la Corte Suprema.",
+        "rationale": "Las partes litigantes no tienen injerencia en el nombramiento o conformación de los magistrados del Poder Judicial.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera el documento en el que se formalizan las reglas procedimentales y los plazos de actuación para ambas partes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué supuesto procede interponer una acción constitucional de amparo en el contexto de la ejecución de una operación o contrato minero?",
+    "opciones": [
+      {
+        "text": "Ante la amenaza inminente o vulneración directa de un derecho fundamental consagrado en la Constitución (como la propiedad o el debido proceso).",
+        "rationale": "El amparo constitucional es una vía de tutela de urgencia destinada a la protección de derechos fundamentales vulnerados por actos de autoridad o privados.",
+        "isCorrect": true
+      },
+      {
+        "text": "Para discutir la liquidación contable de las facturas comerciales por venta de concentrados.",
+        "rationale": "Las discrepancias sobre cobranzas comerciales de facturas se ventilan en la vía ordinaria civil o arbitral, careciendo de contenido constitucional directo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Para impugnar el costo de las tasas notariales aplicables a la escritura pública.",
+        "rationale": "Las tasas y derechos notariales o registrales se sujetan a aranceles administrativos y no constituyen un atentado constitucional de urgencia.",
+        "isCorrect": false
+      },
+      {
+        "text": "Para solicitar una prórroga ordinaria en el plazo contractual de exploración.",
+        "rationale": "Los plazos y renovaciones puramente comerciales y contractuales se rigen por los términos del contrato y el Código Civil.",
+        "isCorrect": false
+      },
+      {
+        "text": "Siempre que el inversionista esté disconforme con la cotización bursátil internacional del cobre.",
+        "rationale": "Las variaciones del mercado de materias primas no involucran la afectación de derechos constitucionalmente protegidos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica la vía de urgencia destinada a la protección de derechos constitucionales de directa vulneración.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Conforme al Decreto Legislativo N° 1071, ¿cuál de las siguientes causas constituye un motivo válido para interponer un recurso de anulación de laudo arbitral ante la Sala Civil del Poder Judicial?",
+    "opciones": [
+      {
+        "text": "La vulneración formal de garantías del debido proceso (como indebida notificación, fallo fuera de plazo o falta de convenio arbitral válido).",
+        "rationale": "La anulación de laudo es un recurso de revisión del procedimiento formal y debido proceso arbitral, prohibiendo a los jueces revisar el fondo del asunto o la valoración probatoria.",
+        "isCorrect": true
+      },
+      {
+        "text": "La disconformidad de la parte vencida con el monto de la indemnización económico determinado por los árbitros.",
+        "rationale": "El criterio o juzgamiento de fondo de los árbitros sobre el quantum indemnizatorio es inimpugnable en sede judicial mediante anulación.",
+        "isCorrect": false
+      },
+      {
+        "text": "El deseo de una de las partes de presentar pruebas documentales extemporáneas rechazadas en el arbitraje.",
+        "rationale": "La reapertura de etapas probatorias precluidas en el arbitraje no está permitida mediante el recurso de anulación.",
+        "isCorrect": false
+      },
+      {
+        "text": "La reducción de las utilidades comerciales de la empresa durante el periodo en que duró el procedimiento.",
+        "rationale": "El resultado contable o económico de una parte no constituye motivo legal de anulación de un laudo debidamente tramitado.",
+        "isCorrect": false
+      },
+      {
+        "text": "El cambio de directorio o de apoderados legales de una de las empresas durante el litigio.",
+        "rationale": "La recomposición de los órganos sociales de una empresa no afecta la validez jurídica formal del laudo emitido.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Distingue entre la revisión del debido proceso formal y la reevaluación del criterio de fondo de los árbitros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-08",
+    "diplomado": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes actos forman parte de las etapas ordinarias de un proceso arbitral tramitado bajo el D.L. 1071?",
+    "opciones": [
+      {
+        "text": "Presentación de la solicitud de arbitraje y su contestación por la contraparte.",
+        "rationale": "El proceso inicia formalmente con la solicitud de arbitraje donde se expone el convenio, las pretensiones y la designación de árbitro.",
+        "isCorrect": true
+      },
+      {
+        "text": "Constitución del tribunal arbitral e instalación para la fijación de las reglas del proceso.",
+        "rationale": "Constituidos los árbitros y aceptado el cargo, se fijan las reglas adjetivas procesales que gobernarán el arbitraje.",
+        "isCorrect": true
+      },
+      {
+        "text": "Fase de actuación probatoria y desarrollo de audiencias para alegatos e informes técnicos.",
+        "rationale": "Se desarrollan las audiencias técnicas y legales donde se actúan los informes periciales, pruebas documentales y alegatos finales.",
+        "isCorrect": true
+      },
+      {
+        "text": "Deliberación y emisión del laudo arbitral definitivo por el tribunal.",
+        "rationale": "El tribunal deliberará y emitirá la decisión final motivada y vinculante denominada laudo arbitral.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ratificación parlamentaria obligatoria mediante votación en el Congreso de la República.",
+        "rationale": "El arbitraje privado no requiere ratificación ni intervención del Poder Legislativo para adquirir fuerza ejecutiva.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Analiza el recorrido procedimental desde la interposición de la controversia hasta la decisión final ejecutoria.",
+    "activo": true
+  }
+]

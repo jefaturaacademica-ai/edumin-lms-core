@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la normativa aduanera explicada en el curso, ¿cuál es la diferencia principal entre el término 'mercadería' y 'mercancía'?",
+    "opciones": [
+      {
+        "text": "Mercadería se refiere a transacciones del comercio local, mientras que mercancía se utiliza para el comercio internacional y grandes lotes de carga.",
+        "isCorrect": true,
+        "rationale": "El término 'mercadería' se emplea formalmente para el tránsito comercial dentro del ámbito nacional, mientras que 'mercancía' es la denominación empleada en el comercio internacional debido al volumen e impacto económico de los lotes."
+      },
+      {
+        "text": "Mercadería se aplica únicamente a productos de contrabando y mercancía a productos totalmente legales.",
+        "isCorrect": false,
+        "rationale": "Ambos términos se refieren a bienes lícitos; la distinción no radica en la legalidad del origen del bien."
+      },
+      {
+        "text": "Mercadería describe materias primas sin procesar y mercancía hace referencia a bienes industriales terminados.",
+        "isCorrect": false,
+        "rationale": "El estado de transformación industrial del bien no determina el uso de uno u otro término en el ámbito aduanero."
+      },
+      {
+        "text": "Mercadería es el término legal exclusivo de la SUNAT y mercancía es un término informal usado sólo en el transporte marítimo.",
+        "isCorrect": false,
+        "rationale": "La SUNAT y la normativa aduanera internacional emplean 'mercancía' formalmente para el despacho y control de importaciones y exportaciones."
+      },
+      {
+        "text": "Mercadería se refiere a bienes transportados por vía aérea y mercancía a bienes transportados por vía marítima.",
+        "isCorrect": false,
+        "rationale": "La vía o modo de transporte no define la terminología comercial de los productos en aduanas."
+      }
+    ],
+    "hint": "Piensa en el alcance territorial y la magnitud económica del lote de bienes comercializados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la norma legal que establece la Ley General de Aduanas en el Perú?",
+    "opciones": [
+      {
+        "text": "Decreto Legislativo 1053",
+        "isCorrect": true,
+        "rationale": "El Decreto Legislativo N° 1053 aprueba la Ley General de Aduanas vigente en el Perú, regulando las actuaciones de los operadores y autoridades aduaneras."
+      },
+      {
+        "text": "Decreto Legislativo 1020",
+        "isCorrect": false,
+        "rationale": "El Decreto Legislativo 1020 norma otros aspectos del sector público y no corresponde a la Ley General de Aduanas."
+      },
+      {
+        "text": "Decreto Legislativo 821",
+        "isCorrect": false,
+        "rationale": "El DL 821 corresponde a la Ley del Impuesto General a las Ventas e Impuesto Selectivo al Consumo, no a la Ley General de Aduanas."
+      },
+      {
+        "text": "Decreto Legislativo 1090",
+        "isCorrect": false,
+        "rationale": "Este decreto está enfocado en la legislación forestal y de fauna silvestre, ajeno al marco normativo aduanero general."
+      },
+      {
+        "text": "Decreto Legislativo 728",
+        "isCorrect": false,
+        "rationale": "El DL 728 regula la productividad y competitividad laboral en el sector privado."
+      }
+    ],
+    "hint": "Identifica el número del Decreto Legislativo que reemplazó las normas previas para actualizar la legislación aduanera peruana.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal del proceso de valoración aduanera en el comercio internacional?",
+    "opciones": [
+      {
+        "text": "Determinar la base imponible real para el correcto cálculo de los tributos y aranceles de importación.",
+        "isCorrect": true,
+        "rationale": "La valoración aduanera permite establecer el valor real sobre el cual se calculan los gravámenes impositivos que corresponden pagar al ingresar mercancías al país."
+      },
+      {
+        "text": "Establecer el precio mínimo de venta al público en los establecimientos comerciales locales.",
+        "isCorrect": false,
+        "rationale": "Las aduanas no fijan precios comerciales de venta al consumidor final dentro del mercado local."
+      },
+      {
+        "text": "Asignar una marca de calidad internacional estandarizada a las mercancías que ingresan al país.",
+        "isCorrect": false,
+        "rationale": "El proceso de valoración es puramente tributario y financiero, no un control técnico de sello de calidad."
+      },
+      {
+        "text": "Inspeccionar el empaque físico para certificar que el transporte de la carga no sufra daños.",
+        "isCorrect": false,
+        "rationale": "La inspección física del embalaje corresponde a la logística y al control operativo, no a la valoración impositiva."
+      },
+      {
+        "text": "Aprobar de forma automática la exoneración total del Impuesto General a las Ventas (IGV).",
+        "isCorrect": false,
+        "rationale": "La valoración no exonera impuestos; busca determinar el valor correcto para aplicar la tasa tributaria correspondiente."
+      }
+    ],
+    "hint": "Relaciona este concepto con la base financiera necesaria para cobrar tributos equitablemente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el régimen aduanero de admisión temporal para perfeccionamiento activo?",
+    "opciones": [
+      {
+        "text": "Permite el ingreso de materias primas o insumos al país con suspensión de tributos para ser transformados, elaborados o reparados y posteriormente exportados.",
+        "isCorrect": true,
+        "rationale": "El perfeccionamiento activo suspende el pago de aranceles sobre materias primas e insumos destinados a sufrir una transformación industrial antes de volver a salir del país."
+      },
+      {
+        "text": "Permite la importación definitiva de mercancías terminadas cancelando la totalidad de los derechos arancelarios de inmediato.",
+        "isCorrect": false,
+        "rationale": "Esa descripción corresponde al régimen definitivo de importación para el consumo, no a un régimen temporal de perfeccionamiento."
+      },
+      {
+        "text": "Autoriza el almacenamiento indefinido de mercancías en depósitos privados sin ningún tipo de fiscalización.",
+        "isCorrect": false,
+        "rationale": "El depósito aduanero es supervisado y posee plazos definidos, sin implicar transformación del producto."
+      },
+      {
+        "text": "Permite la salida temporal de productos nacionales para ser vendidos de forma definitiva en ferias internacionales.",
+        "isCorrect": false,
+        "rationale": "La salida de mercancías corresponde a la exportación, mientras que la admisión implica el ingreso previo de insumos."
+      },
+      {
+        "text": "Consiste en la devolución directa del pago de peajes a los vehículos de transporte terrestre internacional.",
+        "isCorrect": false,
+        "rationale": "Este régimen no está relacionado con reembolsos de peajes ni infraestructura vial."
+      }
+    ],
+    "hint": "Considera qué ocurre con la materia prima que ingresa temporalmente para ser procesada antes de reexportarse.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes principios constituyen pilares fundamentales de la Ley General de Aduanas en el Perú?",
+    "opciones": [
+      {
+        "text": "Principio de legalidad en las actuaciones aduaneras.",
+        "isCorrect": true,
+        "rationale": "Todas las decisiones y trámites de las autoridades aduaneras deben sustentarse strictly en disposiciones normativas vigentes."
+      },
+      {
+        "text": "Principio de transparencia y debida motivación.",
+        "isCorrect": true,
+        "rationale": "La administración aduanera debe fundamentar sus resoluciones con criterios técnico-legales claros y accesibles."
+      },
+      {
+        "text": "Principio de simplificación administrativa.",
+        "isCorrect": true,
+        "rationale": "Se busca reducir la carga burocrática e impulsar la agilización de los trámites de importación y exportación."
+      },
+      {
+        "text": "Principio de fijación estática y perpetua de los precios de mercado.",
+        "isCorrect": false,
+        "rationale": "Las aduanas no controlan ni congelan de forma perpetua los precios del mercado internacional."
+      },
+      {
+        "text": "Principio de exoneración universal u obligatoria de todos los tributos.",
+        "isCorrect": false,
+        "rationale": "El pago de aranceles y tributos es la regla general, salvo excepciones expresamente contempladas en tratados o leyes especificas."
+      }
+    ],
+    "hint": "Selecciona los principios orientados a la validez jurídica, la claridad del servicio y la reducción de trabas burocráticas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando una carga pasa por el mecanismo de selección automatizado en la aduana y se activa el canal verde, ¿qué trámite corresponde?",
+    "opciones": [
+      {
+        "text": "Se concede el desaduanamiento libre sin requerir revisión documental ni inspección física inmediata.",
+        "isCorrect": true,
+        "rationale": "El canal verde significa que la mercancía no requiere reconocimiento físico ni revisión documental en el momento, autorizándose su libre levante."
+      },
+      {
+        "text": "Se procede al embargo inmediato y definitivo de toda la carga transportada.",
+        "isCorrect": false,
+        "rationale": "El embargo o retención se produce por irregularidades graves en el canal rojo o en inspecciones de fiscalización."
+      },
+      {
+        "text": "Se exige realizar un segundo pago obligatorio por el doble de los tributos liquidados.",
+        "isCorrect": false,
+        "rationale": "El canal verde no impone sanciones ni cobros tributarios adicionales."
+      },
+      {
+        "text": "La mercancía debe retornar obligatoriamente al país de origen para un nuevo embalaje.",
+        "isCorrect": false,
+        "rationale": "Al obtener desaduanamiento libre, la carga queda autorizada para ingresar legalmente al mercado nacional."
+      },
+      {
+        "text": "La carga pasa obligatoriamente a una inspección física detallada que toma 30 días.",
+        "isCorrect": false,
+        "rationale": "La inspección física detallada ocurre cuando el mecanismo determina el canal rojo, no el verde."
+      }
+    ],
+    "hint": "Asocia la señal luminosa verde del semáforo fiscal con la fluidez y liberación de la mercancía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define un arancel de tipo Ad Valorem?",
+    "opciones": [
+      {
+        "text": "Es un tributo expresado como un porcentaje del valor en aduanas de la mercancía.",
+        "isCorrect": true,
+        "rationale": "El arancel Ad Valorem se calcula aplicando una tasa porcentual directamente sobre el valor CIF o valor aduanero del bien importado."
+      },
+      {
+        "text": "Es cobrado exclusivamente mediante una tarifa fija en dólares por cada tonelada métrica de peso.",
+        "isCorrect": false,
+        "rationale": "El cobro de un monto fijo por unidad física corresponde al arancel específico, no al Ad Valorem."
+      },
+      {
+        "text": "Es una multa penal aplicable cuando existe subvaluación de las facturas comerciales.",
+        "isCorrect": false,
+        "rationale": "Ad Valorem es una modalidad regular de tributo arancelario, no una sanción o multa."
+      },
+      {
+        "text": "Es un pago que se realiza únicamente si las mercancías ingresan de forma temporal por ferias.",
+        "isCorrect": false,
+        "rationale": "Es la forma principal de arancel aplicada a las importaciones definitivas ordinarias."
+      },
+      {
+        "text": "Es la suma del valor comercial del producto más los seguros de transporte acumulados.",
+        "isCorrect": false,
+        "rationale": "Representa la tasa porcentual impositiva, no la suma de los costos logísticos."
+      }
+    ],
+    "hint": "Recuerda el término en latín que hace referencia a 'según el valor' económico del producto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la aplicación de un arancel específico?",
+    "opciones": [
+      {
+        "text": "Se impone como una suma fija de dinero por unidad física, peso o volumen de la mercancía importada.",
+        "isCorrect": true,
+        "rationale": "A diferencia del porcentaje, el arancel específico fija una cantidad de dinero determinada por cada unidad de medida (ejemplo: dólares por tonelada o por par)."
+      },
+      {
+        "text": "Consiste en la aplicación de un porcentaje variable sobre la utilidad estimada del importador.",
+        "isCorrect": false,
+        "rationale": "No se evalúa la utilidad comercial posterior del importador, sino la cantidad física de mercancía."
+      },
+      {
+        "text": "Es la combinación obligatoria de una cuota cuantitativa y un subsidio de exportación.",
+        "isCorrect": false,
+        "rationale": "La combinación de aranceles se denomina arancel mixto, no arancel específico."
+      },
+      {
+        "text": "Se trata de una exención tributaria otorgada a insumos agrícolas durante la cosecha.",
+        "isCorrect": false,
+        "rationale": "El arancel específico es un cobro efectivo de gravamen, no una exoneración."
+      },
+      {
+        "text": "Es un gravamen que aumenta en proporción directa a la distancia en kilómetros recorrida por el buque.",
+        "isCorrect": false,
+        "rationale": "Las distancias de transporte influyen en el flete, pero no definen la estructura del arancel específico."
+      }
+    ],
+    "hint": "Piensa en un cobro determinado por métricas cuantitativas físicas, como kilos, toneladas o unidades.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una de las finalidades de aplicar aranceles a la importación de bienes de consumo en la política comercial local?",
+    "opciones": [
+      {
+        "text": "Proteger a la industria y producción nacional frente a la competencia desleal o precios extranjeros muy bajos.",
+        "isCorrect": true,
+        "rationale": "Los aranceles encarecen de forma calculada el producto importado para permitir que los fabricantes locales compitan en condiciones más equitativas."
+      },
+      {
+        "text": "Garantizar que todos los productos importados resulten siempre más económicos que los nacionales.",
+        "isCorrect": false,
+        "rationale": "El efecto directo del arancel es incrementar el costo del producto extranjero, no abaratarlo."
+      },
+      {
+        "text": "Obligar a que las empresas extranjeras trasladen sus fábricas al país importador de inmediato.",
+        "isCorrect": false,
+        "rationale": "Si bien promueve la industrialización interna, no constituye una imposición de reubicación corporativa forzosa."
+      },
+      {
+        "text": "Eliminar de forma definitiva el cobro de impuestos internos como el IGV.",
+        "isCorrect": false,
+        "rationale": "Los impuestos internos de venta aplican de manera independiente a los aranceles aduaneros."
+      },
+      {
+        "text": "Establecer un monopolio estatal sobre las empresas de transporte de carga marítima.",
+        "isCorrect": false,
+        "rationale": "La política arancelaria grava mercancías, no regula la propiedad de los operadores de transporte marítimo."
+      }
+    ],
+    "hint": "Considera cómo se defiende a los productores locales del impacto de las importaciones masivas de bajo costo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué impacto principal tiene la firma de un Tratado de Libre Comercio (TLC) en la aplicación de los aranceles entre los países firmantes?",
+    "opciones": [
+      {
+        "text": "Permite la reducción gradual o la eliminación total de los aranceles para una lista de bienes y servicios negociados.",
+        "isCorrect": true,
+        "rationale": "Los TLC buscan dinamizar el intercambio comercial eliminando o reduciendo barreras arancelarias de forma preferencial entre los Estados parte."
+      },
+      {
+        "text": "Eleva de forma automática todos los tributos aduaneros en un 50% para proteger las fronteras.",
+        "isCorrect": false,
+        "rationale": "Los acuerdos de libre comercio buscan disminuir los aranceles, no incrementarlos."
+      },
+      {
+        "text": "Prohíbe de manera permanente cualquier tipo de importación entre los países firmantes.",
+        "isCorrect": false,
+        "rationale": "Un TLC fomenta e incrementa la fluidez del comercio de bienes y servicios, no lo prohíbe."
+      },
+      {
+        "text": "Elimina la obligación de presentar facturas comerciales o utilizar agentes de aduanas.",
+        "isCorrect": false,
+        "rationale": "Los TLC otorgan preferencias tributarias, pero exigen seguir cumpliendo con los controles y trámites documentarios aduaneros."
+      },
+      {
+        "text": "Obliga a utilizar una única moneda de curso legal administrada por un banco central multinacional.",
+        "isCorrect": false,
+        "rationale": "La unificación monetaria es una fase avanzada de integración económica que excede la naturaleza de un TLC ordinario."
+      }
+    ],
+    "hint": "Enfócate en la facilidad tributaria que obtienen los productos al cruzar fronteras entre países aliados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes corresponden a tipos de aranceles contemplados en la política arancelaria?",
+    "opciones": [
+      {
+        "text": "Arancel Ad Valorem.",
+        "isCorrect": true,
+        "rationale": "Calculado como un porcentaje sobre el valor en aduana de la mercancía."
+      },
+      {
+        "text": "Arancel Específico.",
+        "isCorrect": true,
+        "rationale": "Establecido como un monto fijo sobre una unidad física de medida de la carga."
+      },
+      {
+        "text": "Arancel Mixto.",
+        "isCorrect": true,
+        "rationale": "Combina un componente porcentual (Ad Valorem) y un monto fijo por unidad (Específico)."
+      },
+      {
+        "text": "Arancel de Cobro Espacial.",
+        "isCorrect": false,
+        "rationale": "Es una denominación ficticia ajena a las categorías impositivas aduaneras."
+      },
+      {
+        "text": "Arancel Bancario Restrictivo.",
+        "isCorrect": false,
+        "rationale": "Las comisiones bancarias no forman parte de los tipos de aranceles cobrados por el Estado en aduanas."
+      }
+    ],
+    "hint": "Identifica los tres tipos principales de tributos de importación según su forma de cálculo (porcentaje, monto fijo o combinación).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de las etapas de integración económica analizadas en la pirámide de comercio, ¿cuál representa la fase más básica o inicial entre dos países?",
+    "opciones": [
+      {
+        "text": "Acuerdo preferencial",
+        "isCorrect": true,
+        "rationale": "El acuerdo preferencial es el nivel primario donde los Estados otorgan reducciones arancelarias parciales e intencionales en ciertos productos."
+      },
+      {
+        "text": "Mercado común",
+        "isCorrect": false,
+        "rationale": "El mercado común es una fase avanzada que incluye libre circulación de bienes, servicios, capitales y personas."
+      },
+      {
+        "text": "Unión monetaria",
+        "isCorrect": false,
+        "rationale": "La unión monetaria requiere adoptar una moneda común y políticas macroeconómicas coordinadas, situándose en la cúspide de la integración."
+      },
+      {
+        "text": "Integración económica plena",
+        "isCorrect": false,
+        "rationale": "Corresponde al grado máximo donde se unifican las políticas fiscales, monetarias y sociales de los Estados miembros."
+      },
+      {
+        "text": "Unión aduanera",
+        "isCorrect": false,
+        "rationale": "La unión aduanera implica adoptar un arancel externo común, ubicándose por encima del acuerdo preferencial y de la zona de libre comercio."
+      }
+    ],
+    "hint": "Busca la etapa inicial donde sólo se otorgan ventajas o rebajas tributarias parciales sobre un grupo acotado de productos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del documento conocido como Packing List o lista de empaque?",
+    "opciones": [
+      {
+        "text": "Detallar la distribución física de la mercancía, especificando bultos, contenido, pesos y dimensiones.",
+        "isCorrect": true,
+        "rationale": "El Packing List facilita la verificación física y logística indicando de forma detallada cómo está empaquetada la mercancía en el embarque."
+      },
+      {
+        "text": "Acreditar el pago formal de los impuestos aduaneros efectuados por el importador.",
+        "isCorrect": false,
+        "rationale": "El comprobante de pago o la liquidación de tributos acredita la cancelación impositiva, no la lista de empaque."
+      },
+      {
+        "text": "Constituir el contrato legal de transporte marítimo suscrito entre la naviera y el consignatario.",
+        "isCorrect": false,
+        "rationale": "El contrato de transporte marítimo se representa mediante el Bill of Lading (conocimiento de embarque)."
+      },
+      {
+        "text": "Otorgar la autorización sanitaria para el ingreso de medicamentos de uso restringido.",
+        "isCorrect": false,
+        "rationale": "Las autorizaciones sanitarias son emitidas por entidades reguladoras como DIGEMID o DIGESA, no por el proveedor mediante la lista de empaque."
+      },
+      {
+        "text": "Funcionar como el comprobante de venta minorista exigido al consumidor final.",
+        "isCorrect": false,
+        "rationale": "Es un documento operativo de comercio exterior, no un comprobante de venta en el mercado local."
+      }
+    ],
+    "hint": "Enfócate en el documento que desglosa el volumen, peso bruto y empaquetado de las cajas o bultos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Para solicitar una preferencia arancelaria al amparo de un Tratado de Libre Comercio, ¿qué documento es indispensable presentar?",
+    "opciones": [
+      {
+        "text": "Certificado de origen",
+        "isCorrect": true,
+        "rationale": "El certificado de origen prueba y acredita formalmente que la mercancía fue producida en el país firmante del acuerdo para gozar de la rebaja arancelaria."
+      },
+      {
+        "text": "Guía de remisión remitente",
+        "isCorrect": false,
+        "rationale": "La guía de remisión sustenta el traslado interno de la mercancía dentro del territorio nacional."
+      },
+      {
+        "text": "Solicitud de crédito bancario",
+        "isCorrect": false,
+        "rationale": "Los documentos financieros privados no otorgan ni certifican el origen geográfico exigido por las aduanas."
+      },
+      {
+        "text": "Póliza de seguro vehicular",
+        "isCorrect": false,
+        "rationale": "El seguro cubre riesgos de transporte, pero no certifica la procedencia u origen de fabricación del producto."
+      },
+      {
+        "text": "Ficha técnica de homologación",
+        "isCorrect": false,
+        "rationale": "La ficha de homologación prueba compatibilidad técnica, no la procedencia geográfica para beneficios de un TLC."
+      }
+    ],
+    "hint": "Identifica el documento que garantiza en qué país se fabricó o cosechó el producto comercializado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el trámite aduanero peruano, ¿qué significan las siglas de la declaración denominada DAM?",
+    "opciones": [
+      {
+        "text": "Declaración Aduanera de Mercancías",
+        "isCorrect": true,
+        "rationale": "La DAM (Declaración Aduanera de Mercancías) es el formato oficial mediante el cual el declarante transmite los datos de la operación a la SUNAT."
+      },
+      {
+        "text": "Documento Autorizado de Marcas",
+        "isCorrect": false,
+        "rationale": "Esta denominación no corresponde al formato oficial de declaración ante la autoridad tributaria."
+      },
+      {
+        "text": "Despacho Automático de Materias",
+        "isCorrect": false,
+        "rationale": "Las siglas no hacen referencia a una modalidad de despacho automático."
+      },
+      {
+        "text": "Declaración Anual de Montos",
+        "isCorrect": false,
+        "rationale": "No se trata de una declaración anual de impuestos internos, sino de un documento específico de cada despacho de importación/exportación."
+      },
+      {
+        "text": "Depósito Aduanero de Manufacturas",
+        "isCorrect": false,
+        "rationale": "No se refiere a un almacén o recinto fiscalizado de bienes transformados."
+      }
+    ],
+    "hint": "Recuerda el nombre del formato oficial utilizado para declarar la mercancía en el despacho de aduana.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del SENASA en el proceso de despacho aduanero en el Perú?",
+    "opciones": [
+      {
+        "text": "Fiscalizar e inspeccionar la sanidad e inocuidad agrícola y pecuaria de los productos agropecuarios que ingresan o salen del país.",
+        "isCorrect": true,
+        "rationale": "SENASA es la autoridad sanitaria encargada de prevenir el ingreso de plagas y enfermedades agropecuarias mediante controles fitosanitarios."
+      },
+      {
+        "text": "Autorizar la homologación de equipos de telecomunicaciones y teléfonos celulares.",
+        "isCorrect": false,
+        "rationale": "Esa competencia corresponde al Ministerio de Transportes y Comunicaciones (MTC)."
+      },
+      {
+        "text": "Administrar el cobro del Impuesto Selectivo al Consumo en aduanas.",
+        "isCorrect": false,
+        "rationale": "La administración y recaudación de impuestos aduaneros e internos corresponde a la SUNAT."
+      },
+      {
+        "text": "Emitir cartas de crédito comerciales para la financiación bancaria de las importaciones.",
+        "isCorrect": false,
+        "rationale": "Las cartas de crédito son emitidas por las entidades bancarias privadas del sistema financiero."
+      },
+      {
+        "text": "Otorgar la póliza de seguro marítimo de protección contra accidentes y naufragios.",
+        "isCorrect": false,
+        "rationale": "Las pólizas de seguro de carga son expedidas por compañías aseguradoras privadas."
+      }
+    ],
+    "hint": "Asocia las siglas de esta entidad con el sector de sanidad agraria y pecuaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes constituyen documentos indispensables para concretar el despacho ordinario de una importación?",
+    "opciones": [
+      {
+        "text": "Factura comercial (Commercial Invoice).",
+        "isCorrect": true,
+        "rationale": "Acredita la transacción de compraventa internacional y los valores pagados o por pagar."
+      },
+      {
+        "text": "Documento de transporte (Bill of Lading, Air Waybill o Carta Porte).",
+        "isCorrect": true,
+        "rationale": "Prueba la existencia del contrato de transporte y la propiedad de la carga embarcada."
+      },
+      {
+        "text": "Lista de empaque (Packing List).",
+        "isCorrect": true,
+        "rationale": "Detalla las especificaciones de pesos, bultos y dimensiones del envío."
+      },
+      {
+        "text": "Licencia de conducir del comprador.",
+        "isCorrect": false,
+        "rationale": "No es un documento exigido para la nacionalización o despacho aduanero de mercancías."
+      },
+      {
+        "text": "Certificado de estudios del representante legal.",
+        "isCorrect": false,
+        "rationale": "La formación académica personal no constituye un requisito documental para el trámite de aduanas."
+      }
+    ],
+    "hint": "Marca únicamente los documentos comerciales y logísticos que sustentan la compra, el empaque y el transporte de la carga.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué condición previa exige la SUNAT con relación al Registro Único de Contribuyentes (RUC) para realizar operaciones formales de importación o exportación?",
+    "opciones": [
+      {
+        "text": "Contar con RUC en estado Activo y con condición de Habido.",
+        "isCorrect": true,
+        "rationale": "Es requisito indispensable para operar en comercio exterior estar registrado en SUNAT con el RUC activo y domicilio fiscal verificado (habido)."
+      },
+      {
+        "text": "Tener un RUC en estado de Suspensión Temporal de actividades.",
+        "isCorrect": false,
+        "rationale": "Si el RUC se encuentra suspendido, la plataforma aduanera bloqueará la tramitación de las declaraciones."
+      },
+      {
+        "text": "Contar únicamente con un RUC registrado en condición de No Habido.",
+        "isCorrect": false,
+        "rationale": "La condición de No Habido impide realizar despachos de comercio exterior de manera formal."
+      },
+      {
+        "text": "Registrarse exclusivamente con un permiso municipal de funcionamiento menor.",
+        "isCorrect": false,
+        "rationale": "Las licencias municipales no reemplazan el registro tributario nacional administrado por la SUNAT."
+      },
+      {
+        "text": "Presentar un código de identificación fiscal extranjero sin representación local.",
+        "isCorrect": false,
+        "rationale": "Para despachar mercancías en el territorio peruano se requiere domicilio y registro tributario formal en el Perú."
+      }
+    ],
+    "hint": "Considera el estado del registro tributario que demuestra que el contribuyente está localizado y apto para tributar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia de roles entre un Agente de Carga Internacional (Freight Forwarder) y un Agente de Aduanas?",
+    "opciones": [
+      {
+        "text": "El Agente de Carga coordina y gestiona la logística del transporte de la mercancía, mientras que el Agente de Aduanas representa legalmente al importador/exportador en los trámites del despacho aduanero.",
+        "isCorrect": true,
+        "rationale": "El Freight Forwarder organiza la cadena logística de fletes y consolida carga, mientras que el Agente de Aduanas es un auxiliar autorizado para tramitar el régimen aduanero ante la autoridad tributaria."
+      },
+      {
+        "text": "El Agente de Carga recauda tributos y el Agente de Aduanas maneja los buques de transporte.",
+        "isCorrect": false,
+        "rationale": "Ninguno de ellos recauda tributos para sí; la recaudación es función exclusiva de la SUNAT."
+      },
+      {
+        "text": "El Agente de Carga opera únicamente por vía aérea y el Agente de Aduanas trabaja sólo en puertos marítimos.",
+        "isCorrect": false,
+        "rationale": "Ambos profesionales pueden operar en cualquier vía o modo de transporte (aéreo, marítimo o terrestre)."
+      },
+      {
+        "text": "El Agente de Carga emite la factura comercial y el Agente de Aduanas fabrica el producto en origen.",
+        "isCorrect": false,
+        "rationale": "La factura comercial la emite el vendedor o proveedor extranjero; ninguno de estos agentes produce los bienes."
+      },
+      {
+        "text": "Ambos términos se refieren exactamente al mismo profesional con las mismas licencias legales.",
+        "isCorrect": false,
+        "rationale": "Tienen funciones, atribuciones legales y responsabilidades operativas claramente diferenciadas."
+      }
+    ],
+    "hint": "Diferencia entre quien reserva el espacio físico en el medio de transporte y quien realiza los trámites tributarios ante la SUNAT.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué organización internacional es la encargada de regir las normas del comercio entre las naciones del mundo?",
+    "opciones": [
+      {
+        "text": "Organización Mundial del Comercio (OMC)",
+        "isCorrect": true,
+        "rationale": "La OMC es la única organización internacional que se ocupa de las normas que rigen el comercio entre los países a nivel global."
+      },
+      {
+        "text": "Fondo Monetario Internacional (FMI)",
+        "isCorrect": false,
+        "rationale": "El FMI promueve la estabilidad financiera y la cooperación monetaria, pero no fija las reglas del comercio de mercancías."
+      },
+      {
+        "text": "Banco Interamericano de Desarrollo (BID)",
+        "isCorrect": false,
+        "rationale": "El BID es un organismo financiero multinacional enfocado en el desarrollo económico de América Latina y el Caribe."
+      },
+      {
+        "text": "Cámara de Comercio Internacional (CCI)",
+        "isCorrect": false,
+        "rationale": "La CCI es una organización empresarial privada global que crea los Incoterms, pero no dicta las normas intergubernamentales obligatorias."
+      },
+      {
+        "text": "Foro Económico Mundial (WEF)",
+        "isCorrect": false,
+        "rationale": "El WEF es una fundación de debate de agenda global, no un ente regulador formal del comercio exterior."
+      }
+    ],
+    "hint": "Identifica la organización mundial con sede en Ginebra cuyas siglas son OMC.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se denomina el documento de transporte empleado para el comercio internacional por vía aérea?",
+    "opciones": [
+      {
+        "text": "Air Waybill (AWB) o Guía Aérea",
+        "isCorrect": true,
+        "rationale": "El Air Waybill es el documento que certifica el contrato de transporte aéreo entre el embarcador y la aerolínea."
+      },
+      {
+        "text": "Bill of Lading (BL)",
+        "isCorrect": false,
+        "rationale": "El Bill of Lading o conocimiento de embarque es el documento propio del transporte marítimo."
+      },
+      {
+        "text": "Carta Porte Terrestre",
+        "isCorrect": false,
+        "rationale": "La carta porte de carretera se aplica para el transporte por camiones o vía terrestre internacional."
+      },
+      {
+        "text": "Volante de Despacho",
+        "isCorrect": false,
+        "rationale": "El volante de despacho es expedido por el almacén o depósito temporal al ingresar la carga al recinto local."
+      },
+      {
+        "text": "Manifiesto Marítimo de Carga",
+        "isCorrect": false,
+        "rationale": "Es el listado general de carga que transporta una nave marítima, no el documento individual aéreo."
+      }
+    ],
+    "hint": "Busca el término en inglés que incluye la palabra 'Air' o la traducción 'Guía Aérea'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es fundamental determinar correctamente la subpartida arancelaria (HS Code) de un producto al importar?",
+    "opciones": [
+      {
+        "text": "Permite clasificar el producto para calcular los tributos aplicables, verificar restricciones y aplicar beneficios de un TLC.",
+        "isCorrect": true,
+        "rationale": "La partida arancelaria codifica la mercancía universalmente, determinando los impuestos a pagar, exigencias sanitarias y tratados aplicables."
+      },
+      {
+        "text": "Reemplaza la necesidad de contar con una factura comercial firmada por el proveedor.",
+        "isCorrect": false,
+        "rationale": "El código numérico no sustituye a la factura ni a la prueba documental de compraventa."
+      },
+      {
+        "text": "Otorga automáticamente un seguro de transporte gratuito contra todo riesgo.",
+        "isCorrect": false,
+        "rationale": "El seguro debe contratarse con una compañía aseguradora; la partida arancelaria no financia coberturas."
+      },
+      {
+        "text": "Garantiza que la entrega del paquete en el domicilio del comprador se efectúe en 24 horas.",
+        "isCorrect": false,
+        "rationale": "La clasificación arancelaria no altera los tiempos de tránsito contratados con la naviera o courier."
+      },
+      {
+        "text": "Elimina la obligación de contar con el RUC en estado activo.",
+        "isCorrect": false,
+        "rationale": "Las obligaciones tributarias del contribuyente deben cumplirse independientemente del tipo de mercancía clasificada."
+      }
+    ],
+    "hint": "Considera el código numérico estandarizado que identifica exactamente qué producto ingresa al país.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes organizaciones cumplen funciones relevantes en el ámbito aduanero o la facilitación del comercio a nivel internacional?",
+    "opciones": [
+      {
+        "text": "Organización Mundial de Aduanas (OMA).",
+        "isCorrect": true,
+        "rationale": "Se dedica a la cooperación y mejora de la efectividad de las administraciones aduaneras globales."
+      },
+      {
+        "text": "Conferencia de las Naciones Unidas sobre Comercio y Desarrollo (UNCTAD).",
+        "isCorrect": true,
+        "rationale": "Promueve la integración de los países en desarrollo en el comercio mundial."
+      },
+      {
+        "text": "Banco Mundial.",
+        "isCorrect": true,
+        "rationale": "Ofrece financiamiento, asistencia técnica y promueve el desarrollo de infraestructura comercial global."
+      },
+      {
+        "text": "Asociación Internacional de Hoteles y Restaurantes.",
+        "isCorrect": false,
+        "rationale": "Es una entidad ligada al turismo y la hotelería, no al control ni normativa de aduanas."
+      },
+      {
+        "text": "Federación Internacional de Deporte Universitario.",
+        "isCorrect": false,
+        "rationale": "Corresponde al ámbito deportivo estudiantil sin vinculación con la facilitación aduanera."
+      }
+    ],
+    "hint": "Marca las tres entidades multilaterales especializadas en aduanas, desarrollo económico y comercio global.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué consecuencia puede generar la subvaluación intencional o la presentación de documentación falsa ante la aduana?",
+    "opciones": [
+      {
+        "text": "Constituye un delito o infracción aduanera grave, pudiendo acarrear multas, embargo de la mercancía y acciones penales.",
+        "isCorrect": true,
+        "rationale": "El fraude o falsedad documental se sanciona severamente mediante incautación (PAMA), aplicación de multas y denuncias penales."
+      },
+      {
+        "text": "Otorga un descuento automático del 50% en el pago de tributos aduaneros.",
+        "isCorrect": false,
+        "rationale": "Las infracciones no otorgan beneficios tributarios; generan sanciones y cobros recargados."
+      },
+      {
+        "text": "Genera la aprobación inmediata de la DUA en canal verde sin revisión alguna.",
+        "isCorrect": false,
+        "rationale": "Si se detectan incongruencias, la carga es enviada inmediatamente a reconocimiento físico o auditoría posterior."
+      },
+      {
+        "text": "Obliga a la SUNAT a asumir el costo del flete de retorno al país de origen.",
+        "isCorrect": false,
+        "rationale": "Los gastos derivados de retenciones o devoluciones recaen íntegramente sobre el infractor."
+      },
+      {
+        "text": "Permite la entrega inmediata del producto sin necesidad de cancelar tributos.",
+        "isCorrect": false,
+        "rationale": "El intento de evadir impuestos bloquea el levante y la nacionalización del producto."
+      }
+    ],
+    "hint": "Reflexiona sobre las sanciones contempladas para los actos ilícitos en el trámite del despacho.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función institucional de la SUNAT en el sistema aduanero peruano?",
+    "opciones": [
+      {
+        "text": "Administrar, recaudar y fiscalizar los tributos aduaneros, así como controlar el ingreso y salida de mercancías en el país.",
+        "isCorrect": true,
+        "rationale": "La SUNAT es la entidad del Estado responsable de aplicar la legislación aduanera, recaudar tributos y controlar el tráfico de mercancías en las fronteras."
+      },
+      {
+        "text": "Transportar la carga desde los almacenes extranjeros hacia el domicilio particular del comprador.",
+        "isCorrect": false,
+        "rationale": "El transporte y la distribución son ejecutados por empresas de carga privadas, navieras o aerolíneas."
+      },
+      {
+        "text": "Otorgar financiamiento directo y préstamos comerciales para la producción de bienes.",
+        "isCorrect": false,
+        "rationale": "La SUNAT es el ente recaudador del fisco, no una institución bancaria de crédito productivo."
+      },
+      {
+        "text": "Emitir las facturas comerciales de compraventa a nombre de los proveedores extranjeros.",
+        "isCorrect": false,
+        "rationale": "La factura comercial la emite directamente el vendedor o exportador de la mercancía."
+      },
+      {
+        "text": "Determinar los precios fijados por las aerolíneas y navieras privadas para sus fletes.",
+        "isCorrect": false,
+        "rationale": "Los fletes son regulados por el mercado libre y las tarifas de los operadores privados de transporte."
+      }
+    ],
+    "hint": "Identifica a la autoridad tributaria nacional encargada de la fiscalización y cobro de aranceles en el Perú.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el marco legal principal que regula la legislación aduanera en el Perú y establece las atribuciones y facultades de la SUNAT?",
+    "opciones": [
+      {
+        "text": "Decreto Legislativo 1053 (Ley General de Aduanas)",
+        "isCorrect": true,
+        "rationale": "Esta norma actualiza la legislación aduanera nacional, definiendo los regímenes, las atribuciones de la SUNAT y la actuación de los operadores de comercio exterior."
+      },
+      {
+        "text": "Decreto Ley 25632 (Ley Marco de Comprobantes de Pago)",
+        "isCorrect": false,
+        "rationale": "Esta disposición regula la emisión de comprobantes de pago en el ámbito tributario interno, pero no constituye la Ley General de Aduanas."
+      },
+      {
+        "text": "Ley 28008 (Ley de Delitos Aduaneros)",
+        "isCorrect": false,
+        "rationale": "Aunque tipifica y sanciona infracciones penales como el contrabando, no representa el marco general de la legislación y regímenes aduaneros."
+      },
+      {
+        "text": "Decreto Supremo 011-2005-EF",
+        "isCorrect": false,
+        "rationale": "Esta norma corresponde al texto único ordenado del Código Tributario general, mas no a la Ley General de Aduanas en particular."
+      },
+      {
+        "text": "Decreto Legislativo 1050",
+        "isCorrect": false,
+        "rationale": "Corresponde a una norma distinta en materia legislativa que no guarda relación con la regulación de aduanas."
+      }
+    ],
+    "hint": "Piensa en el decreto legislativo aprobado en 2008 que actualizó el régimen aduanero peruano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el procedimiento de despacho aduanero, al someter el cargamento al mecanismo de selección automatizado (semáforo fiscal), ¿cuáles de las siguientes alternativas describen correctamente los canales y sus consecuencias operativas?",
+    "opciones": [
+      {
+        "text": "Canal verde: desaduanamiento libre sin revisión física de la mercancía.",
+        "isCorrect": true,
+        "rationale": "Esta modalidad permite el otorgamiento directo del levante al no requerir revisión física ni documental previa."
+      },
+      {
+        "text": "Canal rojo: requiere inspección física y documental detallada de la mercancía.",
+        "isCorrect": true,
+        "rationale": "El semáforo fiscal asigna la revisión minuciosa del cargamento y el cotejo de sus documentos de sustento."
+      },
+      {
+        "text": "Canal naranja: revisión física obligatoria de contenedores sin revisión de documentos.",
+        "isCorrect": false,
+        "rationale": "El canal naranja implica únicamente la revisión documental de la declaración, reservando el examen físico al canal rojo."
+      },
+      {
+        "text": "En canal rojo, si existen irregularidades graves como subvaluación o mercancía no declarada, se puede proceder al embargo mediante el PAMA.",
+        "isCorrect": true,
+        "rationale": "El procedimiento administrativo en materia aduanera (PAMA) se desencadena ante la detección de inconsistencias graves durante la fiscalización."
+      },
+      {
+        "text": "Canal amarillo: pago automático del doble de aranceles antes del levante.",
+        "isCorrect": false,
+        "rationale": "Dicho canal no existe en el sistema de selección automatizada aduanera presentado en el curso."
+      }
+    ],
+    "hint": "Considera los significados universales de los colores del semáforo y las consecuencias de hallar irregularidades.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la valoración aduanera normada por la Organización Mundial del Comercio (OMC), ¿cuál es el método principal y preferente para determinar la base imponible de los tributos de importación?",
+    "opciones": [
+      {
+        "text": "Método del valor de transacción de las mercancías importadas",
+        "isCorrect": true,
+        "rationale": "Este criterio se basa en el precio realmente pagado o por pagar por las mercancías cuando se venden para su exportación al país de importación."
+      },
+      {
+        "text": "Método del valor deductivo basado en el precio de venta local",
+        "isCorrect": false,
+        "rationale": "Se aplica de forma secundaria únicamente cuando no es posible determinar el valor mediante el método de transacción directa o de mercancías similares."
+      },
+      {
+        "text": "Método del costo computado o reconstruido",
+        "isCorrect": false,
+        "rationale": "Este enfoque se fundamenta en la suma de los costos de producción y utilidades en origen, utilizándose solo en etapas subsidiarias del orden jerárquico."
+      },
+      {
+        "text": "Método de mercancías idénticas o similares",
+        "isCorrect": false,
+        "rationale": "Funciona como un método sustituto cuando la transacción directa carece de sustentación o presenta inconsistencias no subsanables."
+      },
+      {
+        "text": "Método de última instancia o de último recurso",
+        "isCorrect": false,
+        "rationale": "Se reserva como la opción final de valoración empleando criterios razonables compatibles con los principios de la OMC."
+      }
+    ],
+    "hint": "Se fundamenta en la transacción efectiva realizada entre comprador y vendedor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia técnica fundamental resaltada en el curso entre los términos 'mercadería' y 'mercancía'?",
+    "opciones": [
+      {
+        "text": "Mercadería se refiere al comercio local o nacional, mientras que mercancía aplica al comercio internacional y lotes de gran impacto económico.",
+        "isCorrect": true,
+        "rationale": "El término mercancía se emplea en el tráfico aduanero internacional debido al volumen e impacto tributario que representan los lotes comercializados a gran escala."
+      },
+      {
+        "text": "Mercadería se utiliza únicamente para productos agrícolas, mientras que mercancía abarca bienes industriales procesados.",
+        "isCorrect": false,
+        "rationale": "La distinción técnica no se basa en el sector productivo del bien, sino en el ámbito comercial y la escala del tráfico."
+      },
+      {
+        "text": "Mercancía es el término legal exclusivo utilizado por la SUNAT a nivel local, y mercadería es el estándar fijado por la OMA.",
+        "isCorrect": false,
+        "rationale": "La regulación tributaria nacional adopta la denominación de mercancía para las operaciones aduaneras de comercio exterior."
+      },
+      {
+        "text": "Mercadería requiere obligatoriamente certificado de origen, mientras que la mercancía está exenta de todo control arancelario.",
+        "isCorrect": false,
+        "rationale": "El requerimiento de certificados de origen responde a acuerdos comerciales y no a la denominación del producto."
+      },
+      {
+        "text": "Mercancía aplica solo a envíos por courier o postal, mientras que mercadería se refiere a carga contenerizada marítima.",
+        "isCorrect": false,
+        "rationale": "El medio de transporte no condiciona el uso de estos términos en la jerga del comercio exterior."
+      }
+    ],
+    "hint": "Evalúa el ámbito geográfico y la escala económica del intercambio de los bienes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Respecto a los regímenes aduaneros de perfeccionamiento, ¿cuáles de las siguientes características corresponden a la admisión temporal para perfeccionamiento activo?",
+    "opciones": [
+      {
+        "text": "Permite el ingreso de materias primas e insumos al territorio nacional para su transformación o elaboración.",
+        "isCorrect": true,
+        "rationale": "Facilita la entrada de componentes destinados a sufrir procesos de manufactura o modificación industrial en el país."
+      },
+      {
+        "text": "Otorga la suspensión del pago de derechos arancelarios e impuestos aplicables a la importación de dichos insumos.",
+        "isCorrect": true,
+        "rationale": "Mantiene en pausa la carga tributaria inicial bajo la condición de incorporar valor agregado a los bienes importados."
+      },
+      {
+        "text": "Exige que los productos terminados obtenidos sean posteriormente exportados dentro de un plazo determinado.",
+        "isCorrect": true,
+        "rationale": "Cancela el régimen suspensivo mediante la salida del bien transformado hacia el mercado exterior."
+      },
+      {
+        "text": "Implica la salida definitiva de mercancías nacionales para ser consumidas definitivamente en el extranjero.",
+        "isCorrect": false,
+        "rationale": "Esta descripción corresponde al régimen de exportación definitiva y no a un ingreso temporal con perfeccionamiento."
+      },
+      {
+        "text": "Concede la exoneración permanente e incondicional del impuesto a la renta a la empresa exportadora.",
+        "isCorrect": false,
+        "rationale": "El régimen suspende exclusivamente los tributos aduaneros de importación de los insumos, sin alterar el impuesto a la renta corporativo."
+      }
+    ],
+    "hint": "Recuerda el objetivo de ingresar materia prima para manufacturarla y luego enviar el producto final al exterior.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el régimen aduanero de depósito aduanero?",
+    "opciones": [
+      {
+        "text": "Permite almacenar mercancías bajo control aduanero en un lugar autorizado sin el pago inmediato de los tributos de importación.",
+        "isCorrect": true,
+        "rationale": "Otorga a los importadores un plazo para reorganizar su logística o decidir el destino definitivo de los bienes sin desembolsar tributos de inmediato."
+      },
+      {
+        "text": "Concede el ingreso definitivo de insumos agrícolas con exoneración total y permanente de aranceles.",
+        "isCorrect": false,
+        "rationale": "No constituye un beneficio tributario definitivo, sino una postergación temporal del pago bajo custodia autorizada."
+      },
+      {
+        "text": "Exige la reexportación inmediata de las mercancías en un plazo máximo de 24 horas desde su arribo.",
+        "isCorrect": false,
+        "rationale": "El depósito aduanero ofrece plazos extendidos para almacenar la carga y no obliga a salidas perentorias de un día."
+      },
+      {
+        "text": "Cancela automáticamente las obligaciones tributarias al momento del desembarque en el puerto.",
+        "isCorrect": false,
+        "rationale": "La deuda tributaria aduanera se mantiene suspendida hasta que se determine la destinación final de la carga."
+      },
+      {
+        "text": "Permite la venta libre de las mercancías en el mercado local sin requerir la nacionalización ni la DAM.",
+        "isCorrect": false,
+        "rationale": "Para comercializar los bienes internamente se exige previamente tramitar su despacho a consumo y cancelar los tributos correspondientes."
+      }
+    ],
+    "hint": "Relaciónalo con la facultad de postergar la cancelación tributaria almacenando la carga bajo custodia aduanera.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define un arancel de tipo Ad Valorem?",
+    "opciones": [
+      {
+        "text": "Se calcula como un porcentaje fijo sobre el valor en aduana de la mercancía importada.",
+        "isCorrect": true,
+        "rationale": "Esta modalidad aplica una tasa porcentual proporcional a la base imponible determinada por el valor aduanero de la carga."
+      },
+      {
+        "text": "Se cobra como un monto monetario fijo por cada unidad o tonelada de medida física importada.",
+        "isCorrect": false,
+        "rationale": "El cobro por unidades físicas de volumen o peso define a los aranceles específicos y no al sistema porcentual."
+      },
+      {
+        "text": "Es una tarifa variable aplicable únicamente según la estación del año en productos agrícolas.",
+        "isCorrect": false,
+        "rationale": "Esta descripción se refiere a los aranceles estacionales o sazonales proyectados para proteger cosechas locales."
+      },
+      {
+        "text": "Consiste en una cuota fija que combina impuestos directos a la renta con arbitrios municipales.",
+        "isCorrect": false,
+        "rationale": "Los aranceles son tributos aduaneros al comercio exterior y no abarcan tributos municipales o directos."
+      },
+      {
+        "text": "Corresponde a una multa fija aplicada a mercancías retenidas en canal rojo.",
+        "isCorrect": false,
+        "rationale": "No constituye una sanción o penalidad, sino la estructura tributaria estándar para la recaudación arancelaria."
+      }
+    ],
+    "hint": "Asocia el término 'Ad Valorem' con su traducción literal referida al valor del bien.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué distingue a un arancel específico de otras modalidades tarifarias?",
+    "opciones": [
+      {
+        "text": "Se aplica como un cobro monetario determinado por unidad física, peso o volumen de la mercancía importada.",
+        "isCorrect": true,
+        "rationale": "Establece un monto cuantitativo expresado en moneda por cada unidad de medida de la mercancía, independientemente de su valor monetario."
+      },
+      {
+        "text": "Se determina exclusivamente como un porcentaje flotante del precio de venta final en el mercado local.",
+        "isCorrect": false,
+        "rationale": "La tasa porcentual sobre el valor corresponde al arancel Ad Valorem y no al cobro por volumen o peso."
+      },
+      {
+        "text": "Aplica únicamente a productos de tecnología e innovación tecnológica exentos de IGB.",
+        "isCorrect": false,
+        "rationale": "Puede aplicarse a diversos sectores comerciales con el objetivo de dar previsibilidad sin depender del valor de mercado."
+      },
+      {
+        "text": "Se calcula multiplicando el valor FOB por el tipo de cambio promedio del Banco Central de Reserva.",
+        "isCorrect": false,
+        "rationale": "La liquidación tributaria evalúa la cantidad física gravada y no una simple conversión monetaria del valor FOB."
+      },
+      {
+        "text": "Depende de las utilidades netas proyectadas por la empresa importadora al final del año fiscal.",
+        "isCorrect": false,
+        "rationale": "La estimación del arancel aduanero es independiente de los resultados financieros o utilidades anuales de la empresa."
+      }
+    ],
+    "hint": "Concéntrate en la medición cuantitativa física (peso, unidades, volumen) en lugar del valor monetario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco de la política arancelaria, ¿cuáles de los siguientes representan objetivos estratégicos que persigue un Estado al imponer o ajustar aranceles?",
+    "opciones": [
+      {
+        "text": "Proteger la industria local evitando la competencia desleal de bienes extranjeros a precios muy bajos.",
+        "isCorrect": true,
+        "rationale": "Al encarecer el ingreso de bienes extranjeros, se otorga a la producción nacional la capacidad de competir en condiciones más equitativas."
+      },
+      {
+        "text": "Generar recaudación fiscal para contribuir al presupuesto público del Estado.",
+        "isCorrect": true,
+        "rationale": "Los gravámenes cobrados a las importaciones representan una fuente directa de ingresos tributarios para el tesoro público."
+      },
+      {
+        "text": "Regular el comercio exterior para buscar el equilibrio en la balanza comercial.",
+        "isCorrect": true,
+        "rationale": "Permite desincentivar la entrada masiva de bienes no esenciales que pudiesen generar déficit en la cuenta corriente nacional."
+      },
+      {
+        "text": "Garantizar la eliminación total e inmediata de la SUNAT en el control fronterizo.",
+        "isCorrect": false,
+        "rationale": "La política arancelaria fortalece y orienta la fiscalización aduanera en frontera, sin buscar la disolución de la entidad pública reguladora."
+      },
+      {
+        "text": "Obligar a todos los países extranjeros a adoptar la moneda nacional del país importador.",
+        "isCorrect": false,
+        "rationale": "La fijación de derechos arancelarios no otorga competencia ni atribución para modificar los sistemas monetarios soberanos de otros Estados."
+      }
+    ],
+    "hint": "Piensa en las tres funciones clave del Estado en comercio exterior: protección, recaudación y balanza comercial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la pirámide de las etapas de integración económica expuesta en la clase, ¿qué caracteriza a una Unión Aduanera?",
+    "opciones": [
+      {
+        "text": "La eliminación de aranceles internos entre países socios y la adopción de un Arancel Externo Común (AEC) frente a terceros países.",
+        "isCorrect": true,
+        "rationale": "Adiciona a la zona de libre comercio la armonización del trato arancelario que la totalidad del bloque aplica frente al resto del mundo."
+      },
+      {
+        "text": "La libre circulación exclusiva de trabajadores sin alterar los aranceles o tarifas nacionales.",
+        "isCorrect": false,
+        "rationale": "La movilidad de factores productivos sin barreras define al mercado común y no a la fase inicial de unión aduanera."
+      },
+      {
+        "text": "La adopción de una moneda única compartida y la unificación de los bancos centrales de todos los Estados miembros.",
+        "isCorrect": false,
+        "rationale": "La unificación monetaria e institucional representa la etapa más avanzada de la integración de economías."
+      },
+      {
+        "text": "Un acuerdo básico de preferencia donde solo se otorgan rebajas parciales y aisladas a un par de productos.",
+        "isCorrect": false,
+        "rationale": "Esa fase corresponde al nivel más elemental denominado acuerdo de preferencias arancelarias."
+      },
+      {
+        "text": "La armonización total de las políticas fiscales directas e impuestos a la renta personales.",
+        "isCorrect": false,
+        "rationale": "Las políticas fiscales internas de imposición directa se coordinan en etapas superiores como la unión económica."
+      }
+    ],
+    "hint": "Recuerda qué elemento diferencia a la Unión Aduanera de una simple Zona de Libre Comercio frente al resto del mundo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al analizar los aranceles escalonados o progresivos, ¿cuáles de las siguientes proposiciones describen correctamente su funcionamiento técnico?",
+    "opciones": [
+      {
+        "text": "Las materias primas suelen tener aranceles más bajos o nulos para facilitar su transformación interna.",
+        "isCorrect": true,
+        "rationale": "La entrada accesible de insumos promueve su procesamiento por parte de la industria de manufactura local."
+      },
+      {
+        "text": "Los productos semielaborados o terminados presentan niveles arancelarios más altos para proteger el valor agregado local.",
+        "isCorrect": true,
+        "rationale": "El incremento de la tarifa según el grado de elaboración evita el desplazamiento de bienes acabados producidos en el país."
+      },
+      {
+        "text": "Tienen como finalidad incentivar la industrialización y el procesamiento de insumos dentro del territorio nacional.",
+        "isCorrect": true,
+        "rationale": "Estimula la cadena productiva interna elevando la protección al aumentar el nivel de manufactura del bien importado."
+      },
+      {
+        "text": "Aplican tarifas fijas decrecientes a medida que aumenta el volumen total del lote importado.",
+        "isCorrect": false,
+        "rationale": "La progresividad del arancel responde al grado de procesamiento del bien y no al volumen de toneladas ingresadas."
+      },
+      {
+        "text": "Están prohibidos categóricamente en todos los acuerdos bilaterales de libre comercio del mundo.",
+        "isCorrect": false,
+        "rationale": "Constituyen herramientas de política comercial utilizadas internacionalmente para estructurar calendarios de desgravación."
+      }
+    ],
+    "hint": "Analiza cómo varía la tarifa arancelaria a medida que un insumo bruto se transforma en un producto terminado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué efecto económico directo produce la aplicación de un arancel elevado sobre las mercancías importadas destinadas al consumo final?",
+    "opciones": [
+      {
+        "text": "Incrementa el precio final del bien importado en el mercado interno, lo que puede encarecer los productos para el consumidor.",
+        "isCorrect": true,
+        "rationale": "El tributo adicional se traslada a la estructura de costos y al precio de venta, reduciendo el excedente del consumidor."
+      },
+      {
+        "text": "Disminuye automáticamente los costos de producción de las empresas nacionales que utilizan insumos importados.",
+        "isCorrect": false,
+        "rationale": "Un arancel alto en insumos importados eleva los costos de producción locales en lugar de reducirlos."
+      },
+      {
+        "text": "Genera una reducción inmediata de los precios locales en todos los bienes importados de consumo masivo.",
+        "isCorrect": false,
+        "rationale": "El gravamen actúa como un sobrecosto que presiona al alza las tarifas de comercialización final."
+      },
+      {
+        "text": "Elimina la necesidad de presentar facturas comerciales y certificados de origen ante la autoridad aduanera.",
+        "isCorrect": false,
+        "rationale": "La carga tributaria no exime el cumplimiento de las formalidades documentarias exigidas por aduanas."
+      },
+      {
+        "text": "Fuerza la equiparación del tipo de cambio oficial con el euro y el dólar estadounidense.",
+        "isCorrect": false,
+        "rationale": "Los aranceles afectan la formación de precios de bienes específicos, mas no determinan la paridad cambiaria entre divisas."
+      }
+    ],
+    "hint": "Considera cómo un sobrecosto en frontera afecta el precio de venta al público en las tiendas locales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del proceso de despacho de mercancías en el Perú, ¿qué documento oficial expedido por el depósito temporal acredita el peso, bultos y recepción física de la carga ingresada a sus recintos?",
+    "opciones": [
+      {
+        "text": "Volante de despacho",
+        "isCorrect": true,
+        "rationale": "Este comprobante deja constancia del peso, cantidad de bultos y condición de la carga ingresada al depósito para contrastarla con el manifiesto."
+      },
+      {
+        "text": "Declaración Andina de Valor (DAV)",
+        "isCorrect": false,
+        "rationale": "La DAV es un formulario donde el importador declara los elementos de la transacción comercial para determinar el valor aduanero."
+      },
+      {
+        "text": "Póliza de seguro marítimo",
+        "isCorrect": false,
+        "rationale": "Representa el contrato privado que otorga cobertura financiera frente a riesgos y siniestros durante la travesía."
+      },
+      {
+        "text": "Factura proforma",
+        "isCorrect": false,
+        "rationale": "Constituye un documento de cotización previo a la transacción y no una constancia de recepción física de carga en puerto."
+      },
+      {
+        "text": "Certificado fitosanitario de SENASA",
+        "isCorrect": false,
+        "rationale": "Es el permiso oficial emitido para respaldar la inocuidad y sanidad vegetal de los productos agropecuarios."
+      }
+    ],
+    "hint": "Es el documento emitido en el almacén aduanero para constatar el peso y bultos recibidos del contenedor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para llevar a cabo la importación formal de mercancías bajo supervisión de las autoridades peruanas, ¿cuáles de los siguientes requisitos administrativos son indispensables según lo expuesto?",
+    "opciones": [
+      {
+        "text": "Contar con un Registro Único de Contribuyentes (RUC) activo y habido emitido por la SUNAT.",
+        "isCorrect": true,
+        "rationale": "Representa el requisito formal tributario indispensable para realizar operaciones comerciales y de aduanas en el país."
+      },
+      {
+        "text": "Presentar la Declaración Aduanera de Mercancías (DAM) con datos verídicos y detallados del embarque.",
+        "isCorrect": true,
+        "rationale": "Es el formato oficial mediante el cual se destina la carga declarando sus valores, origen y características ante la SUNAT."
+      },
+      {
+        "text": "Cumplir con las autorizaciones y permisos de las entidades regulatorias según la naturaleza de la mercancía.",
+        "isCorrect": true,
+        "rationale": "Garantiza que los bienes restringidos cuenten con los vistos buenos sanitarios o de seguridad requeridos por ley."
+      },
+      {
+        "text": "Disponer de un carné de extranjería o pasaporte diplomático emitido por el Ministerio de Relaciones Exteriores.",
+        "isCorrect": false,
+        "rationale": "El trámite de importación se respalda en el registro tributario (RUC) y no requiere de un estatus diplomático o migratorio específico."
+      },
+      {
+        "text": "Pagar una fianza bancaria equivalente al 100% del valor del buque transportista.",
+        "isCorrect": false,
+        "rationale": "Las garantías bancarias en aduanas aplican a modalidades específicas de despacho y no al valor del medio de transporte."
+      }
+    ],
+    "hint": "Identifica las obligaciones tributarias generales (SUNAT), la declaración de destinación (DAM) y los permisos sanitarios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función principal cumple el documento denominado Packing List (Lista de empaque) en la gestión logística y aduanera?",
+    "opciones": [
+      {
+        "text": "Detallar minuciosamente la distribución física, peso bruto/neto, dimensiones, bultos y especificaciones del contenido del embarque.",
+        "isCorrect": true,
+        "rationale": "Proporciona la información del acondicionamiento logístico facilitando la fiscalización y verificación de bultos en el despacho."
+      },
+      {
+        "text": "Acreditar la transferencia legal de la propiedad financiera de las mercancías entre comprador y vendedor.",
+        "isCorrect": false,
+        "rationale": "La transferencia de titularidad y la transacción económica se sustentan a través de la factura comercial y el título de transporte."
+      },
+      {
+        "text": "Garantizar la exoneración automática del Impuesto a la Renta de Tercera Categoría.",
+        "isCorrect": false,
+        "rationale": "La lista de empaque no posee naturaleza tributaria directa ni concede beneficios en impuestos a la renta."
+      },
+      {
+        "text": "Constituir el pagaré bancario negociable ante el Banco Central de Reserva para el cierre de cambio.",
+        "isCorrect": false,
+        "rationale": "Este documento operativo no actúa como instrumento financiero negociable ante la banca central."
+      },
+      {
+        "text": "Certificar la inmunidad de la carga ante posibles revisiones físicas en los almacenes aduaneros.",
+        "isCorrect": false,
+        "rationale": "No limita ni exime las facultades de fiscalización y asignación de canales de revisión por parte de la SUNAT."
+      }
+    ],
+    "hint": "Centra tu atención en el documento que especifica el embalaje, volumen, dimensiones y peso bruto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el ámbito de la regulación de mercancías restringidas en el Perú, ¿cuáles de las siguientes entidades sectoriales participan emitiendo autorizaciones y certificados según la naturaleza del producto?",
+    "opciones": [
+      {
+        "text": "SENASA para productos de origen agropecuario, vegetal y animal.",
+        "isCorrect": true,
+        "rationale": "Regula y certifica la sanidad e inocuidad agraria protegiendo el patrimonio fitosanitario del país."
+      },
+      {
+        "text": "DIGESA para alimentos procesados y bebidas destinadas al consumo humano.",
+        "isCorrect": true,
+        "rationale": "Autoriza los registros sanitarios y controles de higiene de los productos alimenticios elaborados."
+      },
+      {
+        "text": "DIGEMID para productos farmacéuticos, cosméticos y dispositivos médicos.",
+        "isCorrect": true,
+        "rationale": "Supervisa la calidad y seguridad de insumos médicos, medicamentos y artículos de cuidado personal."
+      },
+      {
+        "text": "INDECOPI para la autorización de buques de carga pesada y transporte internacional.",
+        "isCorrect": false,
+        "rationale": "La regulación del transporte marítimo y la marina mercante compete a autoridades del sector transportes y no al organismo de propiedad intelectual."
+      },
+      {
+        "text": "OSINERGMIN para la aprobación de licencias de importación de ropa y calzado textil.",
+        "isCorrect": false,
+        "rationale": "El organismo supervisor de energía y minería no regula las importaciones del sector textil ni del confecciones."
+      }
+    ],
+    "hint": "Asocia cada entidad gubernamental peruana con su sector correspondiente: agrario, salud ambiental y medicamentos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la vía de transporte marítimo, ¿cuál es el documento de transporte y título valor que acredita la recepción de la carga a bordo y la propiedad de las mercancías?",
+    "opciones": [
+      {
+        "text": "Conocimiento de embarque o Bill of Lading (B/L)",
+        "isCorrect": true,
+        "rationale": "Funciona como contrato de flete marítimo, recibo de carga a bordo y título representativo de la propiedad de los bienes."
+      },
+      {
+        "text": "Carta de porte aéreo o Airway Bill (AWB)",
+        "isCorrect": false,
+        "rationale": "Corresponde al documento de transporte en el modo aéreo y carece del carácter negociable de título valor."
+      },
+      {
+        "text": "Factura comercial definitiva (Commercial Invoice)",
+        "isCorrect": false,
+        "rationale": "Sustenta la transacción de compraventa comercial y su precio, pero no constituye el contrato de flete marítimo."
+      },
+      {
+        "text": "Póliza de caución aduanera",
+        "isCorrect": false,
+        "rationale": "Constituye una garantía financiera ante la aduana y no el documento de recepción del transportista marítimo."
+      },
+      {
+        "text": "Certificado de origen emitido por la Cámara de Comercio",
+        "isCorrect": false,
+        "rationale": "Certifica la procedencia de la mercancía para efectos arancelarios, no la tenencia física ni el flete internacional."
+      }
+    ],
+    "hint": "Identifica el contrato de flete de la vía marítima que representa la titularidad de las mercancías.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la etapa de control posterior efectuada por la administración aduanera (SUNAT)?",
+    "opciones": [
+      {
+        "text": "En la realización de auditorías y fiscalizaciones tras la liberación de la mercancía para verificar la veracidad de lo declarado y reliquidar tributos si existen inconsistencias.",
+        "isCorrect": true,
+        "rationale": "Permite a la SUNAT revisar operaciones concluidas para fiscalizar la exactitud de los valores y clasificaciones declaradas."
+      },
+      {
+        "text": "En la inspección física exclusiva que realiza la SUNAT en el puerto antes de que el barco desatranque en origen.",
+        "isCorrect": false,
+        "rationale": "Las acciones en puerto de origen corresponden al embarque internacional y no a las auditorías posteriores al despacho."
+      },
+      {
+        "text": "En el examen médico obligatorio realizado a la tripulación del buque transportista al ingresar al recinto fiscal.",
+        "isCorrect": false,
+        "rationale": "Las medidas de sanidad marítima para tripulantes son ajenas al control tributario aduanero posterior de mercancías."
+      },
+      {
+        "text": "En el pago por adelantado del 100% de los aranceles antes de firmar la orden de compra con el proveedor extranjero.",
+        "isCorrect": false,
+        "rationale": "La tributación aduanera se tramita dentro del despacho y no condiciona la firma de la cotización comercial privada."
+      },
+      {
+        "text": "En la destrucción obligatoria de todos los comprobantes de pago transcurridos 24 horas del despacho.",
+        "isCorrect": false,
+        "rationale": "Las normas tributarias exigen la conservación de comprobantes para soportar auditorías aduaneras futuras."
+      }
+    ],
+    "hint": "Observa la palabra 'posterior' para deducir las auditorías que realiza la SUNAT una vez otorgado el levante.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental precisada en el curso entre un Agente de Carga Internacional (Freight Forwarder) y un Agente de Aduanas?",
+    "opciones": [
+      {
+        "text": "El Agente de Carga coordina y planifica la logística y el transporte de la mercancía, mientras que el Agente de Aduanas representa legalmente al importador/exportador en los trámites y despacho ante la autoridad aduanera.",
+        "isCorrect": true,
+        "rationale": "El agente de carga consolida y gestiona la movilización del flete, mientras que el agente de aduanas efectúa la gestión documental y destinación aduanera."
+      },
+      {
+        "text": "El Agente de Aduanas emite los pasajes aéreos de los ejecutivos, mientras que el Agente de Carga fija la tasa arancelaria del país.",
+        "isCorrect": false,
+        "rationale": "La fijación arancelaria es competencia exclusiva del Estado y no de los operadores logísticos privados."
+      },
+      {
+        "text": "El Agente de Carga realiza las inspecciones sanitarias de DIGESA, y el Agente de Aduanas opera los montacargas en el depósito temporal.",
+        "isCorrect": false,
+        "rationale": "La inspección sanitaria es potestad de funcionarios públicos y el manejo de estiba compete a los depósitos autorizados."
+      },
+      {
+        "text": "El Agente de Aduanas financia la compra de mercancía, mientras que el Agente de Carga recauda el IGB a favor de la SUNAT.",
+        "isCorrect": false,
+        "rationale": "Ninguno de estos operadores cumple funciones de financiamiento comercial ni de recaudación directa de impuestos de terceros."
+      },
+      {
+        "text": "No existe diferencia operativa; ambos términos son sinónimos legales para la legislación aduanera del Perú.",
+        "isCorrect": false,
+        "rationale": "La Ley General de Aduanas delimita responsabilidades y licencias operativas distintas para cada uno de estos actores."
+      }
+    ],
+    "hint": "Diferencia la gestión puramente logística del transporte frente a la representación legal ante la aduana.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al momento de confeccionar la Factura Comercial (Commercial Invoice) para un despacho aduanero, ¿cuáles de los siguientes datos son técnicamente indispensables según lo expuesto?",
+    "opciones": [
+      {
+        "text": "Numeración correlativa o identificador único de la factura.",
+        "isCorrect": true,
+        "rationale": "Permite la identificación y validación del documento contable dentro del sistema de gestión tributaria aduanera."
+      },
+      {
+        "text": "Datos completos del proveedor/exportador y del consignatario/importador.",
+        "isCorrect": true,
+        "rationale": "Individualiza a las partes involucradas en la compraventa internacional y fija las responsabilidades de la transacción."
+      },
+      {
+        "text": "Descripción detallada de las mercancías, cantidad, precio unitario y valor total.",
+        "isCorrect": true,
+        "rationale": "Fundamenta la determinación de la base imponible y la correcta valoración aduanera de los productos declarados."
+      },
+      {
+        "text": "Término de comercio internacional (Incoterm) pactado en la negociación.",
+        "isCorrect": true,
+        "rationale": "Define la distribución de costos y riesgos de transporte para el cálculo correcto de los valores FOB, CFR o CIF."
+      },
+      {
+        "text": "Firma y sello del juez supremo de la Corte Internacional de La Haya.",
+        "isCorrect": false,
+        "rationale": "La factura es un documento mercantil privado entre partes y no requiere validaciones judiciales internacionales."
+      }
+    ],
+    "hint": "Piensa en los datos contables, las partes comerciales, el detalle del producto y la regla Incoterm.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito del certificado de origen en una operación de importación formal?",
+    "opciones": [
+      {
+        "text": "Acreditar el país donde se fabricó o extrajo la mercancía para acogerse a desgravaciones o beneficios arancelarios derivados de Tratados de Libre Comercio (TLC).",
+        "isCorrect": true,
+        "rationale": "Certifica la procedencia del bien conforme a las reglas de origen pactadas para aplicar la preferencia arancelaria."
+      },
+      {
+        "text": "Sustituir a la guía de remisión del remitente para el traslado de bienes dentro del territorio nacional.",
+        "isCorrect": false,
+        "rationale": "El traslado interno de mercancías nacionalizadas se ampara en comprobantes de pago y guías de remisión del transporte local."
+      },
+      {
+        "text": "Garantizar que la mercancía no sufrirá ningún daño físico o mermas durante el trayecto marítimo.",
+        "isCorrect": false,
+        "rationale": "La protección frente a daños físicos y pérdidas durante la navegación se cubre mediante las pólizas de seguro de transporte."
+      },
+      {
+        "text": "Reemplazar la necesidad de contar con un RUC activo ante la Superintendencia Nacional de Aduanas y de Administración Tributaria.",
+        "isCorrect": false,
+        "rationale": "El registro de contribuyente (RUC) es de exigencia obligatoria e independiente de los certificados de origen del bien."
+      },
+      {
+        "text": "Servir como comprobante de pago bancario que acredita la liquidación total de las divisas extranjeras.",
+        "isCorrect": false,
+        "rationale": "Las transferencias bancarias y mensajes de pago (SWIFT) acreditan la cancelación financiera y no el documento de origen."
+      }
+    ],
+    "hint": "Asocia este documento con las desgravaciones arancelarias pactadas en los acuerdos comerciales (TLC).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el régimen sancionador aduanero, ¿cuáles de las siguientes conductas constituyen infracciones o delitos sancionados severamente con multas, incautaciones o sanciones penales?",
+    "opciones": [
+      {
+        "text": "Declarar deliberadamente un valor significativamente menor al real (subvaluación intencional) para evadir tributos.",
+        "isCorrect": true,
+        "rationale": "Constituye una infracción grave o delito de defraudación de rentas de aduana orientada a defraudar al fisco."
+      },
+      {
+        "text": "Ocultar u omitir mercancías dentro del contenedor sin declararlas en la documentación de despacho (contrabando).",
+        "isCorrect": true,
+        "rationale": "Representa el delito de contrabando al pretender burlar los controles del recinto fiscal e ingresar mercancía no declarada."
+      },
+      {
+        "text": "Presentar documentos falsificados o adulterados ante la administración aduanera.",
+        "isCorrect": true,
+        "rationale": "Vulneran el principio de veracidad y acarrean nulidad, sanciones administrativas y acciones penales correspondientes."
+      },
+      {
+        "text": "Solicitar asesoría logística a un Agente de Carga antes de realizar la compra internacional.",
+        "isCorrect": false,
+        "rationale": "La consulta técnica sobre fletes e itinerarios logísticos constituye una buena práctica operativa totalmente legal."
+      },
+      {
+        "text": "Contratar una póliza de seguro internacional voluntaria para cubrir riesgos de transporte en altamar.",
+        "isCorrect": false,
+        "rationale": "La contratación de coberturas de seguro para respaldar la mercancía es un acto privado formal y recomendado en el comercio."
+      }
+    ],
+    "hint": "Identifica conductas ilícitas destinadas a engañar al fisco u ocultar mercancías en el despacho.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función principal cumple la Proforma Invoice dentro de la etapa previa de una transacción de comercio internacional?",
+    "opciones": [
+      {
+        "text": "Funciona como un documento de cotización previo donde el proveedor estipula las condiciones comerciales, precios, Incoterm, pesos y medidas estimadas.",
+        "isCorrect": true,
+        "rationale": "Proporciona la información inicial necesaria para que el importador analice costos, evalúe la viabilidad y coordine los fletes."
+      },
+      {
+        "text": "Constituye el título valor definitivo exigible para solicitar el levante autorizado de la carga en aduanas.",
+        "isCorrect": false,
+        "rationale": "La destinación aduanera requiere la factura comercial definitiva y no la cotización preliminar proforma."
+      },
+      {
+        "text": "Reemplaza a la Declaración Aduanera de Mercancías (DAM) expedida por la SUNAT al momento del despacho.",
+        "isCorrect": false,
+        "rationale": "La DAM es una declaración oficial ante el Estado, mientras que la proforma es una propuesta comercial entre privados."
+      },
+      {
+        "text": "Avala la inspección física y el rotulado sanitario realizado por DIGEMID en el país de destino.",
+        "isCorrect": false,
+        "rationale": "Las certificaciones sanitarias corresponden a protocolos de autoridades de salud y no a la proforma del vendedor."
+      },
+      {
+        "text": "Es el contrato de seguro definitivo firmado entre la naviera y el depósito temporal autorizado.",
+        "isCorrect": false,
+        "rationale": "Las pólizas de seguro se tramitan con aseguradoras y no guardan relación con la cotización emitida por el proveedor."
+      }
+    ],
+    "hint": "Recuerda que es el documento de cotización previo que envía el proveedor antes del pago definitivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con lo explicado sobre los organismos internacionales de comercio exterior, ¿cuáles de las siguientes representan funciones encomendadas a la Organización Mundial de Aduanas (OMA)?",
+    "opciones": [
+      {
+        "text": "Mejorar la efectividad y eficiencia de las administraciones aduaneras de los países miembros.",
+        "isCorrect": true,
+        "rationale": "Promueve estándares internacionales para fortalecer las capacidades de gestión de las aduanas en el mundo."
+      },
+      {
+        "text": "Promover el cumplimiento de disposiciones comerciales, la protección de la sociedad y la cobranza eficiente de tributos aduaneros.",
+        "isCorrect": true,
+        "rationale": "Asiste a los Estados en la optimización de sus mecanismos de fiscalización y facilitación del comercio legítimo."
+      },
+      {
+        "text": "Facilitar la comunicación y estandarización de procedimientos en materia aduanera a nivel global.",
+        "isCorrect": true,
+        "rationale": "Desarrolla herramientas como la nomenclatura del Sistema Armonizado para uniformizar la clasificación de mercancías."
+      },
+      {
+        "text": "Fijar la tasa de interés interbancaria de referencia para los préstamos soberanos de América Latina.",
+        "isCorrect": false,
+        "rationale": "Las tasas de interés y préstamos macroeconómicos corresponden al ámbito del Fondo Monetario Internacional y bancos multilaterales."
+      },
+      {
+        "text": "Emitir los comprobantes de pago electrónicos obligatorios para las PYMES en el mercado local peruano.",
+        "isCorrect": false,
+        "rationale": "La regulación de comprobantes de pago internos en el Perú es competencia exclusiva de la SUNAT."
+      }
+    ],
+    "hint": "Enfócate en la organización mundial con sede en Bruselas dedicada exclusivamente a la administración aduanera.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-51",
+    "diplomado": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué se recomienda contratar una Póliza de Seguro Internacional al realizar importaciones marítimas o aéreas con un valor significativo?",
+    "opciones": [
+      {
+        "text": "Para respaldar financieramente el valor de la mercancía ante eventuales siniestros o pérdidas en tránsito y evitar la asignación de la tabla de seguro de aduana.",
+        "isCorrect": true,
+        "rationale": "Otorga cobertura ante riesgos imprevistos durante la navegación marítima o aérea y fija una prima real para la liquidación."
+      },
+      {
+        "text": "Para exonerar a la empresa importadora de presentar el RUC activo y habido ante la SUNAT.",
+        "isCorrect": false,
+        "rationale": "La exigencia de contar con RUC activo es un requisito legal impositivo no sustituible por seguros."
+      },
+      {
+        "text": "Para cancelar de manera automática los aranceles de importación Ad Valorem sin requerir el certificado de origen.",
+        "isCorrect": false,
+        "rationale": "El seguro otorga cobertura financiera frente a siniestros, pero no elimina la obligación tributaria arancelaria."
+      },
+      {
+        "text": "Para convertir la carga en mercancía nacionalizada antes de salir del puerto de embarque en origen.",
+        "isCorrect": false,
+        "rationale": "La nacionalización solo se completa tras el despacho y levante concedido por la aduana del país de destino."
+      },
+      {
+        "text": "Para obligar a la naviera a entregar la mercancía sin pasar por el mecanismo de selección automatizada.",
+        "isCorrect": false,
+        "rationale": "El control del semáforo fiscal es potestad soberana del Estado y no puede ser omitido mediante un seguro."
+      }
+    ],
+    "hint": "Piensa en la protección patrimonial frente a pérdidas en altamar y en la fijación de la prima en el cálculo aduanero.",
+    "activo": true
+  }
+]

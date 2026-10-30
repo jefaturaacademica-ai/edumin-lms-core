@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define formalmente la gestión de proveedores en la industria minera según el contenido del curso?",
+    "opciones": [
+      {
+        "text": "Un proceso sistemático de identificación, selección, evaluación y supervisión de proveedores de bienes y servicios.",
+        "isCorrect": true,
+        "rationale": "Describe las etapas continuas que garantizan la calidad, disponibilidad, sostenibilidad y costos óptimos en las operaciones mineras."
+      },
+      {
+        "text": "Un procedimiento exclusivo de emisión y pago inmediato de facturas de compras menores.",
+        "isCorrect": false,
+        "rationale": "Confunde la gestión integral de proveedores con una tarea contable y administrativa puntual."
+      },
+      {
+        "text": "Un sistema de auditoría externa enfocado únicamente en la venta final de los minerales extraídos.",
+        "isCorrect": false,
+        "rationale": "Se centra en la comercialización del producto minero en lugar del abastecimiento de los insumos requeridos."
+      },
+      {
+        "text": "Un registro de contratación de personal interno dedicado a las labores de socavón.",
+        "isCorrect": false,
+        "rationale": "Hace referencia a la gestión de recursos humanos internos en lugar del relacionamiento con empresas proveedoras externas."
+      },
+      {
+        "text": "La adquisición aleatoria de equipos mediante subastas abiertas sin requisitos técnicos previos.",
+        "isCorrect": false,
+        "rationale": "Omite el carácter sistemático, la evaluación técnica y la planificación continua requeridas en el sector minero."
+      }
+    ],
+    "hint": "Considere el conjunto ordenado de etapas que abarca desde buscar a un suministrador hasta fiscalizar su desempeño.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes representan roles estratégicos que desempeñan los proveedores en la industria minera?",
+    "opciones": [
+      {
+        "text": "Garantizar la continuidad operativa asegurando que la mina no se detenga por falta de insumos.",
+        "isCorrect": true,
+        "rationale": "Destaca la función esencial de proteger el flujo productivo frente a desabastecimientos o paradas no programadas."
+      },
+      {
+        "text": "Aportar innovación tecnológica mediante la introducción de nuevos productos y procesos optimizados.",
+        "isCorrect": true,
+        "rationale": "Resalta cómo las soluciones técnicas avanzadas introducidas por proveedores mejoran la productividad y la sostenibilidad."
+      },
+      {
+        "text": "Impactar positivamente en la rentabilidad mediante negociaciones eficientes de costos y eficiencias operativas.",
+        "isCorrect": true,
+        "rationale": "Subraya la optimización de los márgenes operativos a través de compras competitivas y alianzas de valor."
+      },
+      {
+        "text": "Determinar la estrategia corporativa y la fijación de precios globales de venta de los minerales.",
+        "isCorrect": false,
+        "rationale": "Atribuye a los proveedores funciones directivas internas que corresponden a la alta gerencia de la titular minera."
+      },
+      {
+        "text": "Asumir la propiedad legal de las concesiones mineras en caso de emergencias operativas.",
+        "isCorrect": false,
+        "rationale": "Confunde el suministro de bienes o servicios con la titularidad jurídica de los yacimientos mineros."
+      }
+    ],
+    "hint": "Piense en cómo un buen suministrador ayuda a no parar la mina, traer nuevas tecnologías y cuidar los costos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una característica geográfica y logística destacada del sector minero en el Perú?",
+    "opciones": [
+      {
+        "text": "Operar en ubicaciones geográficas remotas, aisladas y a gran altitud con acceso difícil.",
+        "isCorrect": true,
+        "rationale": "Describe el entorno en que se ubican las minas peruanas, lo cual exige una logística precisa y adaptada al clima."
+      },
+      {
+        "text": "Ubicarse exclusivamente en zonas urbanas centrales con acceso inmediato a puertos marítimos.",
+        "isCorrect": false,
+        "rationale": "Omite que la mayoría de los yacimientos mineros se ubican en zonas cordilleranas distantes."
+      },
+      {
+        "text": "Carecer de regulaciones sobre seguridad laboral y manejo de impacto ambiental.",
+        "isCorrect": false,
+        "rationale": "Desconoce las estrictas normativas vigentes supervisadas por organismos fiscalizadores como OSINERGMIN, SUNAFIL y OEFA."
+      },
+      {
+        "text": "Estar libre de riesgos por fenómenos naturales o interrupciones en el transporte.",
+        "isCorrect": false,
+        "rationale": "Ignora factores reales como huaicos, nevadas y derrumbes que afectan periódicamente las vías de transporte."
+      },
+      {
+        "text": "Depender en un 100% de proveedores situados dentro del campamento minero.",
+        "isCorrect": false,
+        "rationale": "No toma en cuenta la necesidad de trasladar maquinaria e insumos desde diversos puntos nacionales e internacionales."
+      }
+    ],
+    "hint": "Recuerde dónde se ubican la mayoría de los yacimientos en el territorio peruano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Ante el riesgo de paradas de planta causadas por bloqueos o huaycos en las carreteras, ¿qué medida estratégica de inventarios se suele implementar?",
+    "opciones": [
+      {
+        "text": "Mantener un stock de seguridad de insumos críticos en la unidad minera.",
+        "isCorrect": true,
+        "rationale": "Asegura una reserva de suministros clave para sostener la producción mientras se restablece el tránsito."
+      },
+      {
+        "text": "Reducir los inventarios a cero para evitar cualquier costo de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Eliminar la reserva frente a imprevistos viales incrementa drásticamente el riesgo de paradas totales."
+      },
+      {
+        "text": "Cancelar los contratos a largo plazo con las empresas de transporte.",
+        "isCorrect": false,
+        "rationale": "Rómpe la relación logística estratégica y no soluciona la falta física de materiales en la mina."
+      },
+      {
+        "text": "Comprar insumos únicamente cuando la planta de procesamiento ya se haya detenido.",
+        "isCorrect": false,
+        "rationale": "Representa una gestión reactiva que genera pérdidas económicas cuantiosas por tiempo de inactividad."
+      },
+      {
+        "text": "Exigir el envío aéreo exclusivo de toda la maquinaria pesada en cada compra.",
+        "isCorrect": false,
+        "rationale": "Incurre en costos desproporcionados e inviables para el transporte continuo de volúmenes pesados."
+      }
+    ],
+    "hint": "Piense en la reserva preventiva de insumos esenciales que se guarda en el almacén de la mina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el principio fundamental al buscar optimizar costos en la gestión de proveedores mineros?",
+    "opciones": [
+      {
+        "text": "Reducir costos de adquisición sin comprometer la calidad ni la seguridad operativa.",
+        "isCorrect": true,
+        "rationale": "Refleja el equilibrio requerido entre eficiencia económica y la prevención de fallas o accidentes en mina."
+      },
+      {
+        "text": "Adquirir siempre los productos de menor precio sin importar sus especificaciones técnicas.",
+        "isCorrect": false,
+        "rationale": "Puede provocar fallas en los equipos, interrupciones no programadas o riesgos fatales por baja calidad."
+      },
+      {
+        "text": "Comprar únicamente insumos importados independientemente de su valor de mercado.",
+        "isCorrect": false,
+        "rationale": "Ignora la oferta local competitiva y el análisis integral de Costo Total de Adquisición."
+      },
+      {
+        "text": "Eliminar por completo la ganancia del proveedor en cada negociación.",
+        "isCorrect": false,
+        "rationale": "Afecta la viabilidad financiera del proveedor e impide mantener alianzas comerciales sostenibles."
+      },
+      {
+        "text": "Sustituir los productos críticos por materiales no certificados de origen desconocido.",
+        "isCorrect": false,
+        "rationale": "Incumple con las regulaciones de seguridad y expone la vida de los trabajadores a peligros graves."
+      }
+    ],
+    "hint": "Considere la relación clave entre el ahorro de dinero y el mantenimiento de estándares técnicos altos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué beneficio principal busca la adopción de tecnologías avanzadas y equipos autónomos en operaciones mineras?",
+    "opciones": [
+      {
+        "text": "Reducir la exposición humana a riesgos de seguridad e incrementar la eficiencia operativa.",
+        "isCorrect": true,
+        "rationale": "Relaciona la automatización con la protección de la integridad física del trabajador y la continuidad continua."
+      },
+      {
+        "text": "Eliminar la necesidad de personal especializado en la programación e inspección de sistemas.",
+        "isCorrect": false,
+        "rationale": "Pasa por alto que la automatización requiere personal capacitado para controlar y supervisar los equipos."
+      },
+      {
+        "text": "Prescindir del mantenimiento preventivo en la maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "Confunde la autonomía de conducción con la ausencia de desgaste mecánico y mantenimiento."
+      },
+      {
+        "text": "Anular la obligación de cumplir con las regulaciones ambientales exigidas por el Estado.",
+        "isCorrect": false,
+        "rationale": "La tecnología de punta no exime a la empresa de acatar el marco legal ambiental vigente."
+      },
+      {
+        "text": "Permitir el uso de componentes de baja calidad en zonas subterráneas.",
+        "isCorrect": false,
+        "rationale": "Los equipos autónomos requieren repuestos de alta precisión para evitar fallas del sistema."
+      }
+    ],
+    "hint": "Enfóquese en la protección del personal en zonas de peligro y el rendimiento continuo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué abarca el concepto de Costo Total de Adquisición (TCO) en la evaluación de proveedores?",
+    "opciones": [
+      {
+        "text": "La suma de todos los costos del ciclo de vida: compra, transporte, mantenimiento, consumo y disposición.",
+        "isCorrect": true,
+        "rationale": "Evalúa el impacto económico integral de un bien desde su compra inicial hasta el término de su uso."
+      },
+      {
+        "text": "Únicamente el precio de venta inicial facturado por el fabricante.",
+        "isCorrect": false,
+        "rationale": "Se limita al precio de compra e ignora los gastos posteriores de operación, energía y mantenimiento."
+      },
+      {
+        "text": "Exclusivamente la tarifa del flete de transporte desde la fábrica hasta el puerto.",
+        "isCorrect": false,
+        "rationale": "Representa solo una parte del gasto logístico, omitiendo el valor del bien y sus costos de uso."
+      },
+      {
+        "text": "El valor del mineral procesado que se recupera tras usar el equipo.",
+        "isCorrect": false,
+        "rationale": "Confunde los ingresos operativos de la mina con la estructura de costos de los insumos comprados."
+      },
+      {
+        "text": "El monto cobrado al proveedor por penalidades de demora en la entrega.",
+        "isCorrect": false,
+        "rationale": "Confunde una sanción contractual de incumplimiento con una metodología de evaluación económica."
+      }
+    ],
+    "hint": "Piense en el análisis financiero que revisa todos los gastos del producto a lo largo de su vida útil.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes son criterios clave utilizados en el proceso de selección de proveedores mineros?",
+    "opciones": [
+      {
+        "text": "Calidad técnica de los bienes y servicios ofrecidos.",
+        "isCorrect": true,
+        "rationale": "Asegura que los insumos resistan condiciones operativas exigentes y prevengan fallas o accidentes."
+      },
+      {
+        "text": "Capacidad de suministro y de respuesta rápida ante emergencias.",
+        "isCorrect": true,
+        "rationale": "Verifica que el suministrador sostenga el volumen requerido y atienda contingencias de manera oportuna."
+      },
+      {
+        "text": "Cumplimiento normativo, laboral, ambiental y conducta ética.",
+        "isCorrect": true,
+        "rationale": "Garantiza la legalidad de la operación y preserva la reputación y Licencia Social para Operar."
+      },
+      {
+        "text": "Exigencia de poseer más de 100 años de fundación en el mercado.",
+        "isCorrect": false,
+        "rationale": "Constituye una restricción arbitraria que descartaría a empresas competitivas e innovadoras."
+      },
+      {
+        "text": "Aceptación obligatoria de pagos exclusivamente mediante trueque de concentrado.",
+        "isCorrect": false,
+        "rationale": "No forma parte de las prácticas comerciales ni de los criterios estándar en la selección de proveedores."
+      }
+    ],
+    "hint": "Seleccione las alternativas que abordan la calidad técnica, el abastecimiento confiable y el acatamiento de las leyes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el primer paso dentro del proceso estructurado de selección de proveedores?",
+    "opciones": [
+      {
+        "text": "Identificar y definir claramente las necesidades y especificaciones técnicas requeridas.",
+        "isCorrect": true,
+        "rationale": "Establece los requisitos precisos del área usuaria antes de iniciar la búsqueda o licitación de mercado."
+      },
+      {
+        "text": "Emitir la orden de compra y efectuar el pago por adelantado.",
+        "isCorrect": false,
+        "rationale": "Corresponde al cierre de la contratación tras haber evaluado y elegido al proveedor."
+      },
+      {
+        "text": "Aplicar penalidades contractuales por retrasos en el transporte.",
+        "isCorrect": false,
+        "rationale": "Es un procedimiento de control posterior que se ejecuta durante la administración del contrato."
+      },
+      {
+        "text": "Redactar las cláusulas de arbitraje para la resolución de disputas.",
+        "isCorrect": false,
+        "rationale": "Corresponde a la fase de elaboración y negociación de términos legales con el postor seleccionado."
+      },
+      {
+        "text": "Evaluar la tasa de defectos de los productos entregados en el almacén.",
+        "isCorrect": false,
+        "rationale": "Es una métrica de gestión del desempeño que se aplica cuando el proveedor ya abastece a la mina."
+      }
+    ],
+    "hint": "Piense en la fase inicial donde el área usuaria detalla exactamente qué bien o servicio necesita.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué documento formal se emite a los proveedores preseleccionados para solicitar sus ofertas técnicas y comerciales?",
+    "opciones": [
+      {
+        "text": "Solicitud de propuesta o cotización (RFP).",
+        "isCorrect": true,
+        "rationale": "Detalla las especificaciones, volúmenes, plazos y condiciones para que los proveedores preparen sus propuestas."
+      },
+      {
+        "text": "Guía de remisión emitida por el almacén.",
+        "isCorrect": false,
+        "rationale": "Es un documento de transporte que valida el traslado de bienes físicos ya adquiridos."
+      },
+      {
+        "text": "Factura comercial de cobro.",
+        "isCorrect": false,
+        "rationale": "Es el comprobante de pago emitido por el proveedor tras vender o prestar un servicio."
+      },
+      {
+        "text": "Licencia de funcionamiento de la unidad minera.",
+        "isCorrect": false,
+        "rationale": "Corresponde a la autorización administrativa emitida por el Estado para operar el yacimiento."
+      },
+      {
+        "text": "Registro de inscripción en la SUNAFIL.",
+        "isCorrect": false,
+        "rationale": "Es la acreditación de la empresa ante la entidad fiscalizadora del sector trabajo."
+      }
+    ],
+    "hint": "Identifique el término en inglés o español usado para pedir cotizaciones estructuradas a los proveedores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En una matriz de evaluación ponderada, ¿cómo se calcula la puntuación ponderada de un criterio específico?",
+    "opciones": [
+      {
+        "text": "Multiplicando la calificación asignada al criterio por su peso relativo.",
+        "isCorrect": true,
+        "rationale": "Obtiene el valor proporcional del criterio en función de su importancia estratégica prefijada."
+      },
+      {
+        "text": "Sumando los precios cotizados por todos los competidores.",
+        "isCorrect": false,
+        "rationale": "Confunde el cálculo algebraico de la matriz con la suma de tarifas monetarias."
+      },
+      {
+        "text": "Dividiendo la calificación entre la cantidad de proveedores postulantes.",
+        "isCorrect": false,
+        "rationale": "Altera la ponderación al promediar entre competidores en lugar de aplicar el peso del criterio."
+      },
+      {
+        "text": "Restando el peso del criterio a la cotización enviada.",
+        "isCorrect": false,
+        "rationale": "Utiliza una operación aritmética errónea que desvirtúa la medición cualitativa o cuantitativa."
+      },
+      {
+        "text": "Promediando las horas de retraso registradas en compras pasadas.",
+        "isCorrect": false,
+        "rationale": "Confunde una métrica operativa puntual con la fórmula de cálculo de la matriz ponderada."
+      }
+    ],
+    "hint": "Recuerde cómo interactúan la nota asignada a un aspecto y el porcentaje de importancia que se le dio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al evaluar cotizaciones de maquinaria pesada, ¿por qué un equipo con precio inicial más alto puede resultar el seleccionado?",
+    "opciones": [
+      {
+        "text": "Porque su menor consumo de combustible y mantenimiento generan un costo total menor en su ciclo de vida.",
+        "isCorrect": true,
+        "rationale": "Muestra cómo los ahorros operativos acumulados compensan el mayor desembolso de la compra inicial."
+      },
+      {
+        "text": "Porque la matriz ponderada siempre asigna mayor puntaje a los costos más elevados.",
+        "isCorrect": false,
+        "rationale": "En las matrices de evaluación, los costos más altos suelen recibir puntajes inferiores en la variable precio."
+      },
+      {
+        "text": "Porque la normativa ambiental exige adquirir únicamente el bien más costoso del mercado.",
+        "isCorrect": false,
+        "rationale": "La norma ambiental exige cumplir niveles de emisión y eficiencia, no adquirir la opción más cara."
+      },
+      {
+        "text": "Porque los equipos de menor precio inicial están prohibidos por ley en el sector minero.",
+        "isCorrect": false,
+        "rationale": "No existe tal prohibición legal, sino la necesidad de evaluar especificaciones y costo total."
+      },
+      {
+        "text": "Porque el precio inicial es el único criterio analizado en el cuadro comparativo.",
+        "isCorrect": false,
+        "rationale": "Contradice el principio del Costo Total de Adquisición que analiza múltiples gastos a lo largo del tiempo."
+      }
+    ],
+    "hint": "Piense en cómo el consumo de combustible y las reparaciones influyen en el gasto durante varios años.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal al negociar contratos de suministro en el sector minero?",
+    "opciones": [
+      {
+        "text": "Establecer términos claros, equilibrados y viables que garanticen la continuidad operativa.",
+        "isCorrect": true,
+        "rationale": "Busca proteger a ambas partes e impedir disputas o desabastecimientos que paralicen las actividades."
+      },
+      {
+        "text": "Imponer condiciones unilaterales que obliguen al proveedor a trabajar con pérdidas.",
+        "isCorrect": false,
+        "rationale": "Compromete la salud financiera del proveedor y arriesga la estabilidad del abastecimiento a futuro."
+      },
+      {
+        "text": "Omitir las especificaciones técnicas para acelerar la firma del documento.",
+        "isCorrect": false,
+        "rationale": "La falta de claridad técnica genera confusiones, entregas erróneas y reclamos en la operación."
+      },
+      {
+        "text": "Eliminar cualquier cláusula de penalidad por entregas fuera de plazo.",
+        "isCorrect": false,
+        "rationale": "Deja a la minera sin herramientas de compensación o exigencia ante retrasos del proveedor."
+      },
+      {
+        "text": "Asumir que la mina pagará todas las variaciones de costos sin importar la causa.",
+        "isCorrect": false,
+        "rationale": "Impide compartir adecuadamente los riesgos comerciales entre comprador y proveedor."
+      }
+    ],
+    "hint": "Busque la opción enfocada en lograr acuerdos justos que aseguren el funcionamiento continuo de la mina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes cláusulas o acuerdos son habituales al definir los términos comerciales de un contrato minero?",
+    "opciones": [
+      {
+        "text": "Fórmulas polinómicas o cláusulas de ajuste vinculadas a índices internacionales de precios.",
+        "isCorrect": true,
+        "rationale": "Permiten actualizar periódicamente el valor de insumos volátiles como el diésel o los metales."
+      },
+      {
+        "text": "Cláusulas de penalidades por incumplimiento y bonificaciones por desempeño sobresaliente.",
+        "isCorrect": true,
+        "rationale": "Incentivan el cumplimiento de los plazos y compensan económicamente los perjuicios por retraso."
+      },
+      {
+        "text": "Establecimiento de las condiciones de pago, plazos de facturación y moneda del contrato.",
+        "isCorrect": true,
+        "rationale": "Aportan previsibilidad financiera y orden administrativo en la relación con el proveedor."
+      },
+      {
+        "text": "Traspaso de la propiedad de la mina al proveedor al finalizar el año.",
+        "isCorrect": false,
+        "rationale": "Representa una figura ajena a la contratación de insumos y servicios de abastecimiento."
+      },
+      {
+        "text": "Prohibición total de recurrir a mecanismos de arbitraje para resolver conflictos.",
+        "isCorrect": false,
+        "rationale": "Contradice la práctica contractual estándar que incluye el arbitraje como medio de solución de controversias."
+      }
+    ],
+    "hint": "Considere cláusulas sobre actualización de precios volátiles, incentivos/sanciones y orden en los pagos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Si durante la vigencia de un contrato se requiere modificar los volúmenes de entrega o agregar un nuevo frente de trabajo, ¿cómo se debe proceder?",
+    "opciones": [
+      {
+        "text": "Formalizar los cambios mediante una adenda firmada al contrato original.",
+        "isCorrect": true,
+        "rationale": "Garantiza el respaldo legal, la trazabilidad administrativa y el cumplimiento de auditorías."
+      },
+      {
+        "text": "Acordar las modificaciones solo de palabra mediante una llamada telefónica.",
+        "isCorrect": false,
+        "rationale": "Carece de validez legal y expone a la empresa a malentendidos e inconsistencias documentales."
+      },
+      {
+        "text": "Anular el contrato vigente e iniciar una demanda legal de inmediato.",
+        "isCorrect": false,
+        "rationale": "Es una medida desproporcionada que rompe la relación comercial sin justificación."
+      },
+      {
+        "text": "Ocultar la variación al área de logística e inventarios.",
+        "isCorrect": false,
+        "rationale": "Entorpece el control de recepción, el pago de facturas y la planificación de inventario."
+      },
+      {
+        "text": "Modificar unilateralmente las facturas emitidas sin informar al proveedor.",
+        "isCorrect": false,
+        "rationale": "Constituye un acto arbitrario e irregular que altera la contabilidad contractual."
+      }
+    ],
+    "hint": "Piense en el documento legal que se anexa a un acuerdo existente para actualizar sus condiciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué mide el indicador clave de desempeño On Time Delivery (OTD)?",
+    "opciones": [
+      {
+        "text": "El porcentaje de entregas realizadas a tiempo dentro del plazo pactado.",
+        "isCorrect": true,
+        "rationale": "Evalúa la puntualidad del proveedor comparando los pedidos a tiempo frente al total de entregas."
+      },
+      {
+        "text": "El número total de bienes devueltos por fallas de fábrica.",
+        "isCorrect": false,
+        "rationale": "Describe la Tasa de Defectos (Defect Rate) y no el cumplimiento de plazos."
+      },
+      {
+        "text": "El costo acumulado por concepto de fletes de transporte.",
+        "isCorrect": false,
+        "rationale": "Mide un gasto financiero en lugar del nivel de puntualidad de las entregas."
+      },
+      {
+        "text": "El tiempo que tarda el mineral en procesarse en la planta.",
+        "isCorrect": false,
+        "rationale": "Mide un indicador del proceso productivo interno, no el desempeño del proveedor."
+      },
+      {
+        "text": "La cantidad de cotizaciones recibidas en una licitación.",
+        "isCorrect": false,
+        "rationale": "Refleja la participación en la etapa de selección, no el cumplimiento posterior de entregas."
+      }
+    ],
+    "hint": "Enfóquese en la traducción directa del término en inglés ligado a la puntualidad del suministro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Un proveedor entrega 1,000 polines para fajas transportadoras. En la inspección se identifican 25 unidades defectuosas. ¿Cuál es la Tasa de Defectos (Defect Rate)?",
+    "opciones": [
+      {
+        "text": "2.5%",
+        "isCorrect": true,
+        "rationale": "Se obtiene dividiendo 25 entre 1,000 y multiplicando por 100: $(25 / 1000) \\times 100 = 2.5\\%$."
+      },
+      {
+        "text": "0.25%",
+        "isCorrect": false,
+        "rationale": "Resulta de un error de cálculo al dividir entre 10,000 en lugar de las 1,000 unidades del lote."
+      },
+      {
+        "text": "25%",
+        "isCorrect": false,
+        "rationale": "Representa la cantidad de unidades dañadas expresada de forma equivocada como porcentaje."
+      },
+      {
+        "text": "10%",
+        "isCorrect": false,
+        "rationale": "Es una cifra incorrecta que no corresponde al cálculo de las unidades defectuosas encontradas."
+      },
+      {
+        "text": "5.0%",
+        "isCorrect": false,
+        "rationale": "Corresponde al doble de la proporción real de fallas observadas en el lote inspeccionado."
+      }
+    ],
+    "hint": "Divida las unidades con falla entre el total recibido y multiplique por 100 para hallar el porcentaje.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es fundamental conservar un expediente documental completo con contratos, cotizaciones, órdenes y guías de remisión?",
+    "opciones": [
+      {
+        "text": "Para respaldar la trazabilidad, resolver controversias y responder ante auditorías.",
+        "isCorrect": true,
+        "rationale": "Asegura la transparencia administrativa y la evidencia legal de cada decisión y recepción de bienes."
+      },
+      {
+        "text": "Para exonerar a la empresa minera de pagar tributos o impuestos.",
+        "isCorrect": false,
+        "rationale": "Guardar expedientes no elimina las obligaciones fiscales vigentes de la empresa."
+      },
+      {
+        "text": "Para evitar que los proveedores conozcan la ubicación final de la mina.",
+        "isCorrect": false,
+        "rationale": "El punto de entrega debe ser claro para coordinar la logística y el transporte adecuadamente."
+      },
+      {
+        "text": "Para sustituir el uso de sistemas informáticos de gestión ERP.",
+        "isCorrect": false,
+        "rationale": "Los archivos físicos o digitales complementan y respaldan la información registrada en el ERP."
+      },
+      {
+        "text": "Para transferir la responsabilidad ambiental al Ministerio de Energía y Minas.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad ambiental del titular minero no se transfiere mediante registros internos."
+      }
+    ],
+    "hint": "Considere la necesidad de justificar cada gasto ante controles internos, fiscalizadores y revisiones contables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una consecuencia directa para la minera si sus proveedores incumplen normativas ambientales o de seguridad?",
+    "opciones": [
+      {
+        "text": "Multas económicas, sanciones legales y pérdida de la Licencia Social para Operar.",
+        "isCorrect": true,
+        "rationale": "Muestra el impacto regulatorio y reputacional que generan las faltas de los contratistas en la mina."
+      },
+      {
+        "text": "Incremento automático en la cotización internacional de los metales.",
+        "isCorrect": false,
+        "rationale": "El valor internacional de los minerales depende de mercados globales y no de sanciones a terceros."
+      },
+      {
+        "text": "Exoneración de impuestos locales otorgada por el gobierno central.",
+        "isCorrect": false,
+        "rationale": "Las infracciones traen consigo castigos y multas, no beneficios ni exenciones de impuestos."
+      },
+      {
+        "text": "Aumento en la productividad de la planta de procesamiento.",
+        "isCorrect": false,
+        "rationale": "Los incidentes ambientales o de seguridad generan paralizaciones e investigaciones que frenan el trabajo."
+      },
+      {
+        "text": "Cierre definitivo de los puertos comerciales del país.",
+        "isCorrect": false,
+        "rationale": "Representa una medida desproporcionada e irrelevante ante la falta puntual de un proveedor."
+      }
+    ],
+    "hint": "Piense en las multas del Estado y la reacción de las comunidades locales ante daños ambientales o accidentes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes normativas peruanas regulan la gestión ambiental o la seguridad laboral en minería?",
+    "opciones": [
+      {
+        "text": "Ley N° 29783 (Ley de Seguridad y Salud en el Trabajo).",
+        "isCorrect": true,
+        "rationale": "Establece el marco general para la prevención de riesgos laborales en todas las industrias del país."
+      },
+      {
+        "text": "Decreto Supremo N° 024-2016-EM (Reglamento de Seguridad y Salud Ocupacional en Minería).",
+        "isCorrect": true,
+        "rationale": "Norma específicamente las exigencias técnicas de prevención, protección e inspección en operaciones mineras."
+      },
+      {
+        "text": "Ley N° 28611 (Ley General del Ambiente).",
+        "isCorrect": true,
+        "rationale": "Fija los principios generales de conservación, sostenibilidad y gestión ambiental a nivel nacional."
+      },
+      {
+        "text": "Ley N° 27157 de Regularización de Edificaciones Urbanas.",
+        "isCorrect": false,
+        "rationale": "Regula la propiedad y trámite de predios urbanos, sin relación con la actividad minera."
+      },
+      {
+        "text": "Ley N° 26887 (Ley General de Sociedades).",
+        "isCorrect": false,
+        "rationale": "Norma la constitución y reglas corporativas de las empresas, sin tratar aspectos ambientales o de seguridad."
+      }
+    ],
+    "hint": "Identifique las normas referentes a seguridad laboral general, reglamento minero específico y marco del ambiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ley peruana establece el marco para la formalización de la pequeña minería y minería artesanal (vinculada al REINFO)?",
+    "opciones": [
+      {
+        "text": "Ley N° 27651.",
+        "isCorrect": true,
+        "rationale": "Regula los procedimientos y disposiciones para formalizar las actividades de pequeña minería y minería artesanal."
+      },
+      {
+        "text": "Ley N° 30077.",
+        "isCorrect": false,
+        "rationale": "Corresponde a la Ley contra el Crimen Organizado, enfocada en la persecución de delitos graves."
+      },
+      {
+        "text": "Decreto Supremo N° 024-2013-EF.",
+        "isCorrect": false,
+        "rationale": "Es una norma reglamentaria de carácter tributario y fiscalizador, no el marco de formalización."
+      },
+      {
+        "text": "Ley N° 28305.",
+        "isCorrect": false,
+        "rationale": "Norma el control de insumos químicos y productos fiscalizados en el país."
+      },
+      {
+        "text": "Decreto Legislativo N° 1013.",
+        "isCorrect": false,
+        "rationale": "Es la norma de creación y organización del Ministerio del Ambiente (MINAM)."
+      }
+    ],
+    "hint": "Señale la norma específica de promoción y formalización de la pequeña minería y artesanal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso de insumos químicos fiscalizados (IQPF) como el cianuro de sodio, ¿qué control periódico exige la SUNAT a las mineras?",
+    "opciones": [
+      {
+        "text": "Presentar declaraciones mensuales detallando compras, consumos y stocks de insumos.",
+        "isCorrect": true,
+        "rationale": "Permite auditar la trazabilidad de sustancias peligrosas e impedir su desvío a actividades ilícitas."
+      },
+      {
+        "text": "Donar la mitad de las sustancias químicas a las comunidades cercanas.",
+        "isCorrect": false,
+        "rationale": "El manejo de químicos fiscalizados está prohibido de distribuirse de forma informal o no autorizada."
+      },
+      {
+        "text": "Quemar todo el inventario sobrante al finalizar la semana.",
+        "isCorrect": false,
+        "rationale": "Los reactivos químicos deben almacenarse o neutralizarse bajo protocolos específicos sin incineración libre."
+      },
+      {
+        "text": "Exportar las sustancias sobrantes sin registrar el despacho aduanero.",
+        "isCorrect": false,
+        "rationale": "El traslado sin registro incurre en contrabando y viola gravemente las leyes de IQPF."
+      },
+      {
+        "text": "Reemplazar el producto por agua potable en los procesos de lixiviación de oro.",
+        "isCorrect": false,
+        "rationale": "El agua no posee las propiedades químicas requeridas para disolver y recuperar el metal precioso."
+      }
+    ],
+    "hint": "Enfóquese en la obligación de reporte de saldos y uso mensual exigida por la entidad tributaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué exigencia logística aplica al transporte de insumos químicos fiscalizados en rutas de alto riesgo?",
+    "opciones": [
+      {
+        "text": "Usar transportistas autorizados con unidades monitoreadas por GPS y escoltas si se requiere.",
+        "isCorrect": true,
+        "rationale": "Reduce el riesgo de derrames, robos o desvíos mediante el rastreo en tiempo real y seguridad especializada."
+      },
+      {
+        "text": "Utilizar vehículos particulares sin rotulado de carga peligrosa.",
+        "isCorrect": false,
+        "rationale": "Incumple el reglamento de transporte de materiales peligrosos y genera sanciones administrativas y penales."
+      },
+      {
+        "text": "Transportar los reactivos en buses de transporte público de pasajeros.",
+        "isCorrect": false,
+        "rationale": "Está totalmente prohibido poner en riesgo la vida de pasajeros con sustancias tóxicas."
+      },
+      {
+        "text": "Prescindir de las hojas de datos de seguridad (MSDS) durante el viaje.",
+        "isCorrect": false,
+        "rationale": "La hoja MSDS es obligatoria para la atención rápida de derrames o emergencias en vía pública."
+      },
+      {
+        "text": "Realizar el viaje de noche sin luces ni señalización visible.",
+        "isCorrect": false,
+        "rationale": "Aumenta la probabilidad de accidentes fatales e infringe las normas elementales de tránsito."
+      }
+    ],
+    "hint": "Piense en las medidas de rastreo satelital y resguardo requeridas para cargas peligrosas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Frente a caídas repentinas en los precios de los metales que obligan a ajustar la producción, ¿qué estrategia contractual mitiga pérdidas entre minera y proveedor?",
+    "opciones": [
+      {
+        "text": "Negociar contratos flexibles con cláusulas de revisión periódica o extensión de plazos.",
+        "isCorrect": true,
+        "rationale": "Permite adecuar las compras a la demanda real de la mina preservando la relación comercial."
+      },
+      {
+        "text": "Cancelar los contratos de forma unilateral sin previo aviso.",
+        "isCorrect": false,
+        "rationale": "Rompe la relación con el suministrador y genera contingencias por incumplimiento de contrato."
+      },
+      {
+        "text": "Aumentar al doble las compras de insumos sin espacio de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Inmoviliza capital de trabajo innecesariamente y sobrepasa la capacidad física de los almacenes."
+      },
+      {
+        "text": "Exigir que el proveedor venda por debajo del costo de fabricación de forma permanente.",
+        "isCorrect": false,
+        "rationale": "Lleva al proveedor a la quiebra y destruye la cadena de abastecimiento futura."
+      },
+      {
+        "text": "Ocultar las proyecciones de consumo para que el proveedor fabrique en exceso.",
+        "isCorrect": false,
+        "rationale": "La falta de transparencia destruye la planificación eficiente y perjudica la sostenibilidad."
+      }
+    ],
+    "hint": "Considere soluciones de negociación que meporen las cantidades solicitadas o alarguen el tiempo del acuerdo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Al seleccionar una empresa de transporte para cargas críticas y de alto valor (como concentrados o repuestos pesados), ¿qué aspectos deben priorizarse?",
+    "opciones": [
+      {
+        "text": "Póliza de seguros vigente con montos de cobertura adecuados contra robos, accidentes y daños a terceros.",
+        "isCorrect": true,
+        "rationale": "Protege el alto valor económico de la carga frente a pérdidas o incidentes durante el traslado."
+      },
+      {
+        "text": "Antigüedad y estado de la flota, junto con la experiencia y antecedentes de los conductores.",
+        "isCorrect": true,
+        "rationale": "Asegura que los camiones soporten rutas difíciles y el personal maneje bajo estándares de seguridad."
+      },
+      {
+        "text": "Certificaciones internacionales de gestión de calidad, seguridad y medio ambiente.",
+        "isCorrect": true,
+        "rationale": "Verifica que el transportista aplique procesos estandarizados en sus operaciones."
+      },
+      {
+        "text": "Elección de la cotización más barata que no cuente con pólizas de seguro vigentes.",
+        "isCorrect": false,
+        "rationale": "Expone a la mina a pérdidas cuantiosas por ahorrar en la tarifa del servicio."
+      },
+      {
+        "text": "Desactivación del sistema GPS para reducir el costo del servicio.",
+        "isCorrect": false,
+        "rationale": "Elimina el monitoreo en tiempo real e incrementa la vulnerabilidad ante asaltos o emergencias."
+      }
+    ],
+    "hint": "Elija las alternativas centradas en respaldos de seguro, flota/conductores calificados y normas de calidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una operación minera de cobre situada en una zona remota de los Andes enfrenta frecuentes bloqueos de carreteras por nevadas e interrupciones logísticas. ¿Cuál es la estrategia preventiva descrita en el curso para garantizar la continuidad operativa sin detener la planta de procesamiento?",
+    "opciones": [
+      {
+        "text": "Mantener un stock de seguridad de insumos críticos de hasta un mes en la unidad minera.",
+        "isCorrect": true,
+        "rationale": "El establecimiento de un inventario de seguridad en ubicaciones aisladas absorbe los retrasos del transporte ante eventos climáticos o sociales inesperados, evitando la paralización de la planta."
+      },
+      {
+        "text": "Suspender la extracción en socavón inmediatamente para evitar el sobrealmacenamiento de mineral.",
+        "isCorrect": false,
+        "rationale": "Detener la extracción ante un evento logístico interrumpe la producción y genera pérdidas operativas significativas, en lugar de solucionar el abastecimiento."
+      },
+      {
+        "text": "Comprar insumos únicamente a proveedores locales informales de la comunidad cercana.",
+        "isCorrect": false,
+        "rationale": "Los proveedores informales locales difícilmente cuentan con la capacidad técnica o los volúmenes requeridos para insumos críticos homologados."
+      },
+      {
+        "text": "Confiar en la entrega diaria ('just in time') desde los almacenes centrales ubicados en la costa.",
+        "isCorrect": false,
+        "rationale": "El modelo 'just in time' no es viable en zonas de difícil acceso con carreteras vulnerables a bloqueos o nevadas frecuentes."
+      },
+      {
+        "text": "Reemplazar los insumos físicos importados por contratos de suministro exclusivamente digital.",
+        "isCorrect": false,
+        "rationale": "Los insumos críticos físicos de operación minera (como reactivos, repuestos o explosivos) no pueden sustituirse por soluciones digitales."
+      }
+    ],
+    "hint": "Considera la medida preventiva de inventario aplicada en unidades mineras alejadas para mitigar paradas de planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la gestión de compras, un comprador nota que un distribuidor mayorista ofrece precios más bajos en insumos estandarizados que el propio fabricante directo. ¿A qué factor económico se debe esta situación presentada en el curso?",
+    "opciones": [
+      {
+        "text": "El distribuidor mayorista adquiere volúmenes masivos al fabricante, accediendo a escalas de descuento a las que la minera no califica individualmente.",
+        "isCorrect": true,
+        "rationale": "Los grandes distribuidores consolidan la demanda global del mercado, obteniendo descuentos por volumen de fábrica que trasladan competitivamente a sus clientes."
+      },
+      {
+        "text": "El fabricante aplica un sobreprecio penalizable a las mineras para forzarlas a comprar inventario obsoleto.",
+        "isCorrect": false,
+        "rationale": "Los fabricantes estandarizan sus políticas de precio según rangos de volumen, no por penalizaciones arbitrarias a clientes industriales."
+      },
+      {
+        "text": "Los productos vendidos por el distribuidor son réplicas de menor calidad que incumplen la hoja técnica original.",
+        "isCorrect": false,
+        "rationale": "En insumos industriales homologados, los distribuidores autorizados comercializan exactamente la misma marca y especificación que el fabricante."
+      },
+      {
+        "text": "El distribuidor opera bajo un régimen tributario especial totalmente exento de impuestos a las ventas.",
+        "isCorrect": false,
+        "rationale": "Las operaciones comerciales de distribución mayorista están sujetas a la misma legislación tributaria comercial que las ventas de fábrica."
+      },
+      {
+        "text": "Se trata de un error de cotización recurrente en el mercado comercial que no afecta la rentabilidad.",
+        "isCorrect": false,
+        "rationale": "No es un error episódico, sino una estructura comercial formal sustentada en economías de escala por compra masiva."
+      }
+    ],
+    "hint": "Piensa en el efecto del volumen acumulado de compra y las escalas de descuento mayoristas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes acciones demuestran la contribución estratégica de un proveedor a la rentabilidad e innovación de una mina?",
+    "opciones": [
+      {
+        "text": "Desarrollar mezclas personalizadas de emulsiones explosivas para optimizar la fragmentación de la roca y reducir costos de molienda.",
+        "isCorrect": true,
+        "rationale": "La innovación en la composición del explosivo reduce la energía requerida en los procesos posteriores de chancado y molienda en planta."
+      },
+      {
+        "text": "Realizar monitoreos periódicos de rendimiento e inspecciones de corte en neumáticos de equipos móviles.",
+        "isCorrect": true,
+        "rationale": "El seguimiento técnico especializado de neumáticos permite identificar causas de desgaste prematuro y minimizar paradas no programadas."
+      },
+      {
+        "text": "Ofrecer asistencia técnica y estudios de eficiencia operativa directamente en la mina.",
+        "isCorrect": true,
+        "rationale": "El acompañamiento técnico del proveedor en campo optimiza el uso del activo y extiende su vida útil operativa."
+      },
+      {
+        "text": "Suministrar insumos sin exigir certificaciones de calidad para agilizar los tiempos de despacho.",
+        "isCorrect": false,
+        "rationale": "Omitir certificaciones de calidad incrementa el riesgo de fallas catastróficas y accidentes en la operación minera."
+      },
+      {
+        "text": "Exigir el pago por adelantado sin ofrecer garantías de cumplimiento sobre las fechas de entrega.",
+        "isCorrect": false,
+        "rationale": "Esta práctica traslada riesgos financieros y operativos a la minera sin aportar innovación ni valor agregado."
+      }
+    ],
+    "hint": "Selecciona las opciones donde el proveedor aporta optimización técnica, colaboración en campo e innovación de procesos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Frente a un suministro de insumos en un mercado regional con estructuras monopólicas o con presencia de comunidades locales, ¿cuál es el enfoque estratégico recomendado en la gestión de proveedores?",
+    "opciones": [
+      {
+        "text": "Realizar un análisis de criticidad de insumos para asegurar contratos de largo plazo o distribuir compras entre proveedores de la zona para mitigar riesgos sociales.",
+        "isCorrect": true,
+        "rationale": "Diversificar el abastecimiento regional promueve la licencia social y mitiga el riesgo de paradas comunitarias, protegiendo la operación mediante acuerdos a largo plazo."
+      },
+      {
+        "text": "Sustituir de inmediato el uso de insumos clave por alternativas importadas por vía aérea sin evaluar costos de flete.",
+        "isCorrect": false,
+        "rationale": "El flete aéreo permanente encarece drásticamente la estructura de costos sin resolver las tensiones sociales locales."
+      },
+      {
+        "text": "Cancelar los contratos vigentes de abastecimiento regional sin disponer de proveedores alternativos homologados.",
+        "isCorrect": false,
+        "rationale": "Interrumpir los contratos sin alternativas listas genera desabastecimiento directo y paralización de la mina."
+      },
+      {
+        "text": "Imponer tarifas fijas por debajo del costo de producción amparándose únicamente en el volumen corporativo de la minera.",
+        "isCorrect": false,
+        "rationale": "Forzar tarifas inviables financieramente quiebra a los proveedores locales y detona conflictos sociales."
+      },
+      {
+        "text": "Desestimar el cumplimiento de estándares técnicos para favorecer de forma exclusiva al proveedor más cercano.",
+        "isCorrect": false,
+        "rationale": "Aceptar baja calidad técnica pone en riesgo la seguridad de las personas y la continuidad de las operaciones."
+      }
+    ],
+    "hint": "La solución debe equilibrar la seguridad de suministro del insumo crítico con el manejo preventivo del entorno social.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La minería moderna presenta una alta dependencia de tecnología de vanguardia. ¿Cuáles de las siguientes afirmaciones representan características de esta relación tecnológica entre la minera y sus proveedores?",
+    "opciones": [
+      {
+        "text": "El proveedor no solo vende el equipo autónomo o sensor, sino que suministra soporte continuo, software y mantenimiento especial.",
+        "isCorrect": true,
+        "rationale": "Las soluciones tecnológicas avanzadas requieren una alianza de soporte integral continuo para mantener la operatividad del sistema."
+      },
+      {
+        "text": "Los sensores e instrumentación permiten el monitoreo en tiempo real del desgaste para programar mantenimientos preventivos.",
+        "isCorrect": true,
+        "rationale": "La telemetría predictiva reduce las paradas no programadas mediante la detección temprana de fallas en componentes clave."
+      },
+      {
+        "text": "La automatización de maquinaria pesada reduce la exposición del personal humano a zonas de alto riesgo en socavón o tajo.",
+        "isCorrect": true,
+        "rationale": "La operación remota de equipos elimina la presencia física de trabajadores en áreas vulnerables a desprendimientos o gases."
+      },
+      {
+        "text": "La incorporación de robots elimina completamente la necesidad de contar con programadores o supervisores calificados.",
+        "isCorrect": false,
+        "rationale": "La tecnología reemplaza tareas operativas rutinarias pero incrementa la demanda de personal altamente especializado en control y programación."
+      },
+      {
+        "text": "Los equipos automatizados eliminan la necesidad de realizar auditorías de seguridad ocupacional y normativas laborales.",
+        "isCorrect": false,
+        "rationale": "La introducción de nuevas tecnologías requiere marcos regulatorios e inspecciones de seguridad igualmente estrictas."
+      }
+    ],
+    "hint": "Identifica las ventajas en seguridad humana, mantenimiento predictivo y la naturaleza de servicio integral que brinda el proveedor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso de estudio de Antamina expuesto en clase, ¿cuál fue la problemática principal que generaba millonarias pérdidas por paradas no programadas y qué solución estratégica se ejecutó?",
+    "opciones": [
+      {
+        "text": "Dependencia de proveedores únicos y demoras en componentes críticos como polines; se resolvió diversificando proveedores y firmando contratos a largo plazo con KPIs.",
+        "isCorrect": true,
+        "rationale": "La falta de alternativas en piezas críticas causaba interrupciones masivas, lo que se mitigó precalificando múltiples proveedores e introduciendo indicadores de desempeño."
+      },
+      {
+        "text": "Falta de transporte aéreo para el traslado de concentrado; se resolvió mediante la construcción de un mineroducto exclusivo.",
+        "isCorrect": false,
+        "rationale": "El concentrado en Antamina se transporta por mineroducto hacia el puerto de Huarmey, pero la problemática de paradas se centró en suministros de planta."
+      },
+      {
+        "text": "Escasez de compradores en la oficina central; se solucionó trasladando la gerencia entera a la zona de operación.",
+        "isCorrect": false,
+        "rationale": "El desafío no radicaba en la ubicación del comprador, sino en la gestión de contratos, riesgos y sincronización de proveedores."
+      },
+      {
+        "text": "Incapacidad para procesar mineral subterráneo; se solucionó cambiando el método de minado a tajo abierto.",
+        "isCorrect": false,
+        "rationale": "Antamina opera como una mina a tajo abierto a gran escala; el caso evaluó la cadena de abastecimiento de componentes de planta."
+      },
+      {
+        "text": "Incumplimiento generalizado de normas tributarias; se resolvió estatizando los servicios de transporte.",
+        "isCorrect": false,
+        "rationale": "El enfoque de la solución fue la profesionalización de la gestión privada de proveedores, estándares ISO y eficiencia logística."
+      }
+    ],
+    "hint": "El problema afectaba elementos de fajas transportadoras e involucró contratos con KPIs e incremento de la base de suministradores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una minera evalúa la compra de un camión de acarreo. El Proveedor A ofrece un precio inicial de $500,000, costo anual de mantenimiento de $25,000, consumo de 2.5 L/km, vida útil de 8 años y recorre 30,000 km al año. El costo del combustible diésel es de $1.20 por litro. ¿Cuál es el Costo Total de Pertenencia (TCO) durante su vida útil?",
+    "opciones": [
+      {
+        "text": "$1,420,000",
+        "isCorrect": true,
+        "rationale": "El TCO resulta de la suma del precio inicial ($500,000) + mantenimiento total ($25,000 × 8 = $200,000) + combustible total (2.5 L/km × 30,000 km × $1.20/L × 8 años = $720,000)."
+      },
+      {
+        "text": "$1,220,000",
+        "isCorrect": false,
+        "rationale": "Este valor omite calcular el costo total de mantenimiento correspondiente a los 8 años de operación del camión."
+      },
+      {
+        "text": "$1,480,000",
+        "isCorrect": false,
+        "rationale": "Este cálculo erróneo aplica un rendimiento incorrecto de combustible o sobreestima el costo del diésel."
+      },
+      {
+        "text": "$1,510,000",
+        "isCorrect": false,
+        "rationale": "Esta cifra resulta de sumar incorrectamente un ciclo adicional de gasto de mantenimiento no previsto en la vida útil."
+      },
+      {
+        "text": "$1,350,000",
+        "isCorrect": false,
+        "rationale": "Este resultado desestima el consumo de combustible real al no considerar los kilómetros totales recorridos por año."
+      }
+    ],
+    "hint": "Suma el precio inicial, el gasto de mantenimiento acumulado y el costo total de combustible en los 8 años.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En una matriz ponderada para evaluar un proveedor de fajas transportadoras, se establecen los siguientes criterios: Calidad (40%), Precio (30%), Tiempo de Entrega (20%) y Soporte Técnico (10%). El Proveedor A obtiene notas de 9, 6, 7 y 8 respectivamente (escala 1-10). ¿Cuál es su puntaje ponderado final?",
+    "opciones": [
+      {
+        "text": "7.6",
+        "isCorrect": true,
+        "rationale": "El puntaje ponderado es (9 × 0.40) + (6 × 0.30) + (7 × 0.20) + (8 × 0.10) = 3.6 + 1.8 + 1.4 + 0.8 = 7.6."
+      },
+      {
+        "text": "7.0",
+        "isCorrect": false,
+        "rationale": "Este valor equivale al promedio aritmético simple de las notas sin aplicar la ponderación por importancia relativa."
+      },
+      {
+        "text": "8.2",
+        "isCorrect": false,
+        "rationale": "Este puntaje se obtiene asignando erróneamente un peso del 40% al precio y reduciendo la ponderación del criterio técnico."
+      },
+      {
+        "text": "7.4",
+        "isCorrect": false,
+        "rationale": "Este resultado surge de una inversión de porcentajes entre los criterios de tiempo de entrega y soporte técnico."
+      },
+      {
+        "text": "8.0",
+        "isCorrect": false,
+        "rationale": "Esta cifra es producto de sobreestimar la calificación del soporte técnico en la suma ponderada."
+      }
+    ],
+    "hint": "Multiplica la nota de cada criterio por su peso en decimal y realiza la suma de los valores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al seleccionar un proveedor de bienes o servicios críticos para la minería, ¿qué factores deben ser evaluados además del precio inicial de compra?",
+    "opciones": [
+      {
+        "text": "Capacidad técnica, infraestructura y solidez financiera para responder ante fluctuaciones o emergencias.",
+        "isCorrect": true,
+        "rationale": "Un proveedor sin respaldo financiero o infraestructura técnica puede quebrar durante la ejecución del contrato y paralizar la mina."
+      },
+      {
+        "text": "Adhesión a estándares ambientales, de seguridad ocupacional (ISO 14001, ISO 45001) y principios éticos.",
+        "isCorrect": true,
+        "rationale": "El incumplimiento de estándares ambientales o de seguridad expone a la minera a sanciones legales y pérdida de licencia social."
+      },
+      {
+        "text": "Costo Total de Pertenencia (TCO) incluyendo mantenimiento, consumo energético y vida útil acumulada.",
+        "isCorrect": true,
+        "rationale": "El análisis integral del ciclo de vida revela qué equipo es más económico en el tiempo, evitando compras inicialmente baratas pero costosas de operar."
+      },
+      {
+        "text": "Disposición del proveedor a operar sin emitir comprobantes autorizados para reducir costos tributarios.",
+        "isCorrect": false,
+        "rationale": "La informalidad o falta de cumplimiento tributario pone en riesgo legal a la minera y quiebra el principio de auditoría."
+      },
+      {
+        "text": "Ubicación exclusiva de las oficinas administrativas del proveedor en la capital del país.",
+        "isCorrect": false,
+        "rationale": "La sede administrativa capitalina no garantiza soporte técnico, repuestos ni capacidad de respuesta en la unidad minera."
+      }
+    ],
+    "hint": "Elige los criterios integrales que evalúan la sostenibilidad operativa, técnica, legal y el ciclo de vida del bien.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si dos proveedores obtienen exactamente el mismo puntaje ponderado total (ej. 7.6) en una matriz de selección, ¿cuál es el procedimiento metodológico recomendado en el curso para desempatar y adjudicar?",
+    "opciones": [
+      {
+        "text": "Analizar en detalle las calificaciones de los criterios individuales más críticos para el usuario (como calidad o seguridad), o solicitar una mejora de ofertas (negociación 2.0).",
+        "isCorrect": true,
+        "rationale": "El desempate se resuelve priorizando la variable técnica de mayor impacto operativo o abriendo una etapa de negociación comercial con los finalistas."
+      },
+      {
+        "text": "Descalificar a ambos postulantes e iniciar un proceso de licitación completamente nuevo.",
+        "isCorrect": false,
+        "rationale": "Anular el proceso genera retrasos logísticos innecesarios y desperdicia el trabajo técnico de evaluación ya avanzado."
+      },
+      {
+        "text": "Elegir al azar al ganador mediante un sorteo presencial en la sesión del comité de compras.",
+        "isCorrect": false,
+        "rationale": "La adjudicación al azar carece de sustento auditable y vulnera la transparencia del proceso corporativo."
+      },
+      {
+        "text": "Adjudicar automáticamente al proveedor que ingresó su propuesta primero en el sistema ERP.",
+        "isCorrect": false,
+        "rationale": "El orden cronológico de recepción de sobres no refleja ventajas técnicas ni de Costo Total de Pertenencia."
+      },
+      {
+        "text": "Dividir el pedido en partes iguales sin confirmar si el insumo admite fraccionamiento operativo.",
+        "isCorrect": false,
+        "rationale": "Fraccionar arbitrariamente bienes no divisibles (como un equipo o molino) destruye la garantía y la estandarización técnica."
+      }
+    ],
+    "hint": "Se deben reevaluar los criterios individuales clave para la mina o solicitar una propuesta optimizada a los finalistas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En un proceso formal de licitación minera (como el caso Borax presentado en clase), ¿cuál es la distinción fundamental entre las Bases Técnicas y las Bases Comerciales entregadas a los postores?",
+    "opciones": [
+      {
+        "text": "Las Bases Técnicas norman el alcance, homologación, KPIs de servicio y certificados de calidad; las Comerciales fijan cronogramas, penalidades, forma de pago y garantías.",
+        "isCorrect": true,
+        "rationale": "Las bases técnicas especifican la ingeniería y el desempeño requerido del bien, mientras que las comerciales norman el marco contractual y financiero de la transacción."
+      },
+      {
+        "text": "Las Bases Técnicas regulan únicamente los precios unitarios; las Comerciales definen los ensayos de laboratorio químico.",
+        "isCorrect": false,
+        "rationale": "Los componentes financieros corresponden a las bases comerciales y las pruebas de laboratorio a las especificaciones técnicas."
+      },
+      {
+        "text": "Las Bases Comerciales son obligatorias; las Bases Técnicas constituyen sugerencias opcionales de libre cumplimiento.",
+        "isCorrect": false,
+        "rationale": "Ambos documentos son de cumplimiento obligatorio y de carácter vinculante para la validez de la propuesta."
+      },
+      {
+        "text": "Las Bases Técnicas se aplican a proveedores locales y las Comerciales exclusivamente a proveedores internacionales.",
+        "isCorrect": false,
+        "rationale": "Toda licitación exige la presentación alineada de ambas bases a la totalidad de los postores sin distinción geográfica."
+      },
+      {
+        "text": "No existe diferencia; ambos documentos duplican exactamente las mismas cláusulas para fines de archivo.",
+        "isCorrect": false,
+        "rationale": "Cada base responde a dimensiones completamente distintas del proceso de abastecimiento y evaluación."
+      }
+    ],
+    "hint": "Diferencia el documento enfocado en características del producto/servicio del que rige las condiciones contractuales y de pago.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En las bases comerciales de una licitación para suministros mineros críticos, ¿cuáles de las siguientes condiciones contractuales son habitualmente exigidas?",
+    "opciones": [
+      {
+        "text": "Cláusulas de penalidad por retraso o rotura de stock que pueden causar la resolución del contrato si superan un techo (ej. 10%).",
+        "isCorrect": true,
+        "rationale": "Las penalidades acotadas protegen a la minera del desabastecimiento e incentivan el cumplimiento del proveedor dentro de un marco de resolución de contrato."
+      },
+      {
+        "text": "Obligación de mantener un stock de seguridad consignado en los almacenes de la unidad minera.",
+        "isCorrect": true,
+        "rationale": "El inventario de seguridad local garantiza la continuidad inmediata de las operaciones ante demoras en el transporte."
+      },
+      {
+        "text": "Presentación de documentación de respaldo legal, estados financieros auditados y consultas de no adeudos tributarios.",
+        "isCorrect": true,
+        "rationale": "La validación financiera y tributaria asegura que el proveedor posee la solvencia necesaria para sostener la cadena de suministro."
+      },
+      {
+        "text": "Pago adelantado del 100% del contrato sin exigir guías de remisión ni fianzas de fiel cumplimiento.",
+        "isCorrect": false,
+        "rationale": "Adelantar el costo total sin garantías desprotege a la minera ante eventuales estafas o incumplimientos del suministrador."
+      },
+      {
+        "text": "Exención absoluta de responsabilidad ambiental para el proveedor en caso de derrames durante el transporte.",
+        "isCorrect": false,
+        "rationale": "Las bases comerciales trasladan la responsabilidad ambiental y legal del transporte de insumos peligrosos directamente al proveedor."
+      }
+    ],
+    "hint": "Busca las cláusulas orientadas a mitigar riesgos financieros, operativos, legales y de stock en sitio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para mitigar el impacto de la volatilidad internacional de commodities como el diésel o el acero en contratos a largo plazo, ¿qué mecanismo de ajuste de precios se estipula comercialmente?",
+    "opciones": [
+      {
+        "text": "Inclusión de fórmulas polinómicas o cláusulas vinculadas a índices de precios internacionales reconocidos.",
+        "isCorrect": true,
+        "rationale": "Las fórmulas polinómicas permiten ajustar transparente y equitativamente los costos según la variación real de las materias primas en el mercado global."
+      },
+      {
+        "text": "Fijación de un precio estático inamovible por 10 años sin considerar inflación o variaciones de costos de producción.",
+        "isCorrect": false,
+        "rationale": "Congelar precios a largo plazo genera la quiebra del proveedor o la negativa de suministro cuando las materias primas se encarecen."
+      },
+      {
+        "text": "Indexación exclusiva de las tarifas al tipo de pago en especie mediante concentrado de mineral sin procesar.",
+        "isCorrect": false,
+        "rationale": "El pago en especie con mineral no procesado no es una práctica comercial estándar para adquirir suministros operativos."
+      },
+      {
+        "text": "Revisión diaria unilateral de las tarifas a criterio exclusivo del departamento de compras de la minera.",
+        "isCorrect": false,
+        "rationale": "Las variaciones arbitrarias e unilaterales rompen la equidad del contrato y derivan en disputas legales o rescisión."
+      },
+      {
+        "text": "Eliminación de contratos a largo plazo para adquirir insumos en el mercado spot a través de caja chica.",
+        "isCorrect": false,
+        "rationale": "Comprar insumos industriales críticos por caja chica carece de trazabilidad, escala económica y garantía de suministro."
+      }
+    ],
+    "hint": "Se trata de una herramienta basada en fórmulas matemáticamente ligadas a indicadores de mercado objetivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la vigencia de un contrato minero, surge la necesidad de extender el suministro a nuevas unidades operativas no contempladas en el alcance inicial. ¿Cómo debe formalizarse este cambio según la administración contractual?",
+    "opciones": [
+      {
+        "text": "Mediante la suscripción formal de una adenda al contrato que especifique el nuevo alcance, precios y condiciones.",
+        "isCorrect": true,
+        "rationale": "Cualquier variación en el alcance, volumen o destinos requiere una adenda escrita para mantener la validez legal y ser auditable."
+      },
+      {
+        "text": "A través de acuerdos verbales informales entre las partes sin registro en el expediente.",
+        "isCorrect": false,
+        "rationale": "Los acuerdos verbales carecen de respaldo legal ante desacuerdos comerciales, auditorías internas o cambios de personal."
+      },
+      {
+        "text": "Emitiendo órdenes de pago directas sin asociarlas al contrato ni requerir aprobación de adenda.",
+        "isCorrect": false,
+        "rationale": "Procesar pagos desvinculados del contrato vulnera los controles de gobernanza y genera observaciones de auditoría."
+      },
+      {
+        "text": "Resolviendo el contrato inmediatamente y sancionando al proveedor por la variación de requerimientos.",
+        "isCorrect": false,
+        "rationale": "Sancionar al proveedor por necesidades nuevas de la minera es inviable e interrumpe la continuidad operativa."
+      },
+      {
+        "text": "Transferiendo los fondos desde cuentas personales de los jefes de proyecto.",
+        "isCorrect": false,
+        "rationale": "El uso de fondos personales en transacciones corporativas constituye una vulneración grave de las normas anticorrupción."
+      }
+    ],
+    "hint": "La administración contractual exige respaldos legales escritos que incorporen modificaciones de alcance de forma auditable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un comprador emite una orden de compra consolidada en SAP para 50 repuestos, donde el proveedor indica fechas de entrega distintas para cada familia de piezas. ¿Cómo debe registrarse la promesa de entrega para evaluar con precisión el KPI de On-Time Delivery (OTD)?",
+    "opciones": [
+      {
+        "text": "Ingresar la fecha de entrega específica correspondiente a cada ítem individualmente a nivel de posición/SKU en el sistema.",
+        "isCorrect": true,
+        "rationale": "Asignar la fecha de promesa a cada SKU permite comparar de forma precisa el momento de ingreso a almacén versus el compromiso del ítem."
+      },
+      {
+        "text": "Colocar la fecha de emisión del documento a todos los ítems y exigir su despacho inmediato en 24 horas.",
+        "isCorrect": false,
+        "rationale": "Fijar plazos irrestrictos de 24 horas desvirtúa la medición real del desempeño comercial prometido por el proveedor."
+      },
+      {
+        "text": "Consolidar todo el pedido bajo la fecha de entrega del repuesto que llega más rápido al almacén.",
+        "isCorrect": false,
+        "rationale": "Utilizar la fecha del artículo más veloz distorsiona el indicador penalizando injustamente a los ítems de fabricación lenta."
+      },
+      {
+        "text": "Dejar el campo de fecha de compromiso en blanco para evitar alertas en los reportes de almacén.",
+        "isCorrect": false,
+        "rationale": "Omitir las fechas imposibilita el cálculo automatizado de la puntualidad de la orden de compra."
+      },
+      {
+        "text": "Modificar la fecha en el sistema cada vez que el proveedor solicite una prórroga para mantener el OTD al 100%.",
+        "isCorrect": false,
+        "rationale": "Reprogramar fechas arbitrariamente adultera los datos e impide detectar fallas en la cadena de suministro."
+      }
+    ],
+    "hint": "Para medir el cumplimiento de cada artículo recibido, la fecha prometida debe vincularse de manera individual a cada código.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la administración de contratos en minería, ¿cuáles son los objetivos de aplicar mecanismos de bonificación y penalidad?",
+    "opciones": [
+      {
+        "text": "Las penalidades desincentivan incumplimientos de plazos, calidad o seguridad actuando como mitigadores de riesgo.",
+        "isCorrect": true,
+        "rationale": "El cobro de penalidades compensa los perjuicios causados por demoras y exige al proveedor rigor en el cumplimiento del contrato."
+      },
+      {
+        "text": "Las bonificaciones motivan al proveedor a superar los estándares mínimos estipulados de entrega o rendimiento.",
+        "isCorrect": true,
+        "rationale": "Los incentivos económicos promueven eficiencias operativas que benefician el ritmo de producción de la unidad."
+      },
+      {
+        "text": "Alinean los objetivos del proveedor con la continuidad estratégica de la operación minera.",
+        "isCorrect": true,
+        "rationale": "La combinación de incentivos y sanciones alinea los intereses comerciales del suministrador con las metas operativas."
+      },
+      {
+        "text": "Reemplazan la exigencia de solicitar pólizas de seguro de transporte o garantías bancarias.",
+        "isCorrect": false,
+        "rationale": "Las penalidades no constituyen un seguro de indemnización ante pérdidas catastróficas o accidentes graves."
+      },
+      {
+        "text": "Permiten a la minera reducir sus costos desconociendo el pago de suministros conforme entregados a tiempo.",
+        "isCorrect": false,
+        "rationale": "Las cláusulas contractuales regulan contingencias de desempeño, no justifican retenciones arbitrarias de pagos aprobados."
+      }
+    ],
+    "hint": "Considera el rol dual de control de riesgos e incentivo a la excelencia operativa que poseen estos instrumentos contractuales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En negociaciones de gran envergadura con fabricantes o contratistas extranjeros sin domicilio legal en el país, ¿qué fuero se estipula para resolver disputas complejas de manera imparcial?",
+    "opciones": [
+      {
+        "text": "Cláusulas de arbitraje internacional en instituciones independientes como el CIADI (Washington) o cámaras arbitrales acordadas.",
+        "isCorrect": true,
+        "rationale": "El arbitraje internacional ofrece una vía técnica y neutral para ambas partes, evitando sesgos de jurisdicciones locales."
+      },
+      {
+        "text": "El juzgado de paz letrado de la comunidad adyacente a la unidad minera.",
+        "isCorrect": false,
+        "rationale": "Los juzgados locales de menor cuantía no poseen competencia ni especialización en disputas internacionales complejas."
+      },
+      {
+        "text": "Someter la controversia a la decisión unilateral e inapelable de la gerencia legal del proveedor.",
+        "isCorrect": false,
+        "rationale": "Ceder la jurisdicción a la contraparte rompe el principio de equidad contractual para la minera."
+      },
+      {
+        "text": "Juicios ordinarios en los tribunales del país de origen de la casa matriz del proveedor.",
+        "isCorrect": false,
+        "rationale": "Aceptar los tribunales locales del proveedor expone a la minera a sobrecostos procesales y desventajas de jurisdicción."
+      },
+      {
+        "text": "Someter la solución del conflicto a encuestas públicas en portales corporativos.",
+        "isCorrect": false,
+        "rationale": "Las disputas legales corporativas se resuelven bajo marcos normativos y arbitrales formales, no mediante mecanismos informales."
+      }
+    ],
+    "hint": "Para acuerdos transnacionales se conviene recurrir a tribunales o centros de arbitraje independientes de cobertura global.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para asegurar la transparencia y trazabilidad en las auditorías de compras y contratos mineros, ¿qué evidencias documentales se deben conservar obligatoriamente?",
+    "opciones": [
+      {
+        "text": "Requerimiento técnico formal respaldado por el área usuaria.",
+        "isCorrect": true,
+        "rationale": "El requerimiento demuestra la necesidad operativa original y el origen de la especificación solicitada."
+      },
+      {
+        "text": "Cuadro comparativo de evaluación conteniendo los sustentos y firmas del comité o responsable de adjudicación.",
+        "isCorrect": true,
+        "rationale": "El cuadro comparativo firmado certifica la objetividad del proceso de selección y el cumplimiento de las políticas."
+      },
+      {
+        "text": "Guías de remisión de almacén o Actas de Conformidad del Servicio aprobadas por el usuario final.",
+        "isCorrect": true,
+        "rationale": "La recepción conforme prueba que la minera recibió los bienes o servicios bajo los estándares exigidos antes de pagar."
+      },
+      {
+        "text": "Mensajes privados informales en los que se acuerden variaciones de precios sin adenda respaldatoria.",
+        "isCorrect": false,
+        "rationale": "Los mensajes no oficiales carecen de rigor corporativo y son motivo de observaciones graves por parte de auditores."
+      },
+      {
+        "text": "Copias de correos eliminados sin registro ni codificación en el sistema ERP corporativo.",
+        "isCorrect": false,
+        "rationale": "La documentación omitida o eliminada quiebra el principio de auditoría e impide rastrear las decisiones de compra."
+      }
+    ],
+    "hint": "La trazabilidad exige expedientes donde se verifique el requerimiento, la evaluación objetiva y la recepción conforme.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco normativo peruano de Seguridad y Salud Ocupacional en Minería (DS 024-2016-EM y Ley 29783), ¿qué implicancia legal directa tiene un accidente fatal ocurrido dentro de la operación, incluso con personal de empresas contratistas?",
+    "opciones": [
+      {
+        "text": "Asunción de responsabilidad penal para los ejecutivos responsables e inspecciones de SUNAFIL que pueden derivar en la paralización de labores y sanciones severas.",
+        "isCorrect": true,
+        "rationale": "El marco legal atribuye deber de prevención a la empresa titular, generando responsabilidad penal a las gerencias si se omitieron medidas de seguridad."
+      },
+      {
+        "text": "La responsabilidad recae de forma exclusiva en el trabajador afectado, liberando a las gerencias de investigaciones penales.",
+        "isCorrect": false,
+        "rationale": "La legislación laboral determina que la empresa titular es legalmente responsable de velar por la seguridad en sus instalaciones."
+      },
+      {
+        "text": "Aplica únicamente el pago de una multa administrativa menor sin riesgo de cierres ni acciones de la fiscalía.",
+        "isCorrect": false,
+        "rationale": "Las fatalidades mineras conllevan investigaciones de la fiscalía, posibles penas privativas de la libertad y clausuras temporales."
+      },
+      {
+        "text": "Las leyes de seguridad vigentes excluyen de supervisión a las empresas especializadas y contratistas de minado.",
+        "isCorrect": false,
+        "rationale": "El reglamento de seguridad minera abarca por igual a empleados directos, contratistas y proveedores dentro de la unidad."
+      },
+      {
+        "text": "El Estado asume la compensación económica de las víctimas liberando a la minera de obligaciones financieras.",
+        "isCorrect": false,
+        "rationale": "Las indemnizaciones y responsabilidades civiles recaen directamente sobre la empresa titular y sus contratistas."
+      }
+    ],
+    "hint": "La normativa vigente establece el deber de prevención y atribuye responsabilidad penal si se incumplen estándares de seguridad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una unidad minera aurífera requiere adquirir y transportar Cianuro de Sodio para su planta de procesos. De acuerdo con la normativa de Insumos Químicos y Productos Fiscalizados (IQPF) en el Perú, ¿cuál es una exigencia operativa obligatoria?",
+    "opciones": [
+      {
+        "text": "Estar inscrita en el Registro para el Control de Bienes Fiscalizados de SUNAT, tramitar autorizaciones de ingreso por embarque y presentar declaraciones mensuales de saldo y consumo.",
+        "isCorrect": true,
+        "rationale": "Los productos fiscalizados requieren registro habilitante ante SUNAT, permisos de internamiento y reportes estrictos de consumo para evitar desviaciones."
+      },
+      {
+        "text": "Adquirir el reactivo a través de comerciantes informales sin requerir autorización previa de internamiento.",
+        "isCorrect": false,
+        "rationale": "Comprar cianuro fuera de los canales autorizados constituye un delito penal tipificado en las leyes contra la minería ilegal."
+      },
+      {
+        "text": "Almacenar el cianuro junto a la dinamita dentro del mismo polvorín principal para optimizar espacio.",
+        "isCorrect": false,
+        "rationale": "Los insumos químicos y los explosivos deben conservarse en instalaciones completamente separadas bajo protocolos específicos de compatibilidad."
+      },
+      {
+        "text": "Reportar los consumos de cianuro únicamente al cierre de cada quinquenio durante la actualización del estudio ambiental.",
+        "isCorrect": false,
+        "rationale": "La ley de insumos químicos exige reportes mensuales obligatorios a SUNAT, no balances quinquenales."
+      },
+      {
+        "text": "Utilizar transporte de carga general sin exigencia de resguardo ni sistemas de geolocalización.",
+        "isCorrect": false,
+        "rationale": "El transporte de cianuro exige cisternas o furgones especiales, empresas autorizadas por la autoridad y seguimiento satelital."
+      }
+    ],
+    "hint": "Los insumos fiscalizados demandan un registro habilitante ante la autoridad aduanera/tributaria y declaraciones mensuales de inventario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante el transporte de concentrado de mineral o componentes mecánicos de elevado valor, ¿por qué la evaluación de la póliza de seguro del transportista y la estimación del lucro cesante resultan aspectos indispensables?",
+    "opciones": [
+      {
+        "text": "Ante un siniestro o robo, las pérdidas por parada de planta (lucro cesante) superan ampliamente la tarifa del flete, exigiendo pólizas que aseguren la carga y su reposición.",
+        "isCorrect": true,
+        "rationale": "Un accidente no solo destruye el valor del bien transportado, sino que puede detener la producción de la mina por meses, generando costos millonarios."
+      },
+      {
+        "text": "Las compañías aseguradoras reembolsan automáticamente el 100% de los ingresos no percibidos en menos de 24 horas sin aplicar deducibles.",
+        "isCorrect": false,
+        "rationale": "Las liquidaciones de seguros requieren peritajes extensos, aplican deducibles y no suelen cubrir de inmediato el lucro cesante total."
+      },
+      {
+        "text": "Disponer de una póliza de seguro exime al transportista de contratar choferes capacitados o contar con GPS.",
+        "isCorrect": false,
+        "rationale": "Las aseguradoras imponen como condición de cobertura que el transporte cumpla estrictos protocolos de seguridad y conductores calificados."
+      },
+      {
+        "text": "La normativa peruana prohíbe exigir seguros de carga a las empresas de transporte de mineral para abaratar costos.",
+        "isCorrect": false,
+        "rationale": "Las regulaciones de transporte de materiales peligrosos y mineros obligan a contar con pólizas de responsabilidad civil y carga."
+      },
+      {
+        "text": "Las pólizas de transporte solo cubren rayaduras del camión excluyendo el mineral o equipo transportado.",
+        "isCorrect": false,
+        "rationale": "Los seguros de transporte minero se estructuran expresamente para cubrir la pérdida total o parcial del cargamento."
+      }
+    ],
+    "hint": "Un siniestro en ruta genera un costo por inactividad de la planta que supera ampliamente el valor de la tarifa del transporte.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes entes e instrumentos regulan la gestión y fiscalización ambiental de las operaciones mineras en el Perú?",
+    "opciones": [
+      {
+        "text": "Organismo de Evaluación y Fiscalización Ambiental (OEFA), encargado de la fiscalización, supervisión y sanción ambiental.",
+        "isCorrect": true,
+        "rationale": "OEFA es el ente fiscalizador que realiza inspecciones de campo y aplica sanciones ante infracciones ambientales."
+      },
+      {
+        "text": "Ministerio del Ambiente (MINAM) y el Reglamento de Protección Ambiental para Actividades Minero-Metalúrgicas (DS 040-2014-EM).",
+        "isCorrect": true,
+        "rationale": "El marco legal del sector minero-metalúrgico norma la prevención, control y mitigación de impactos en el entorno."
+      },
+      {
+        "text": "Elaboración y aprobación de Estudios de Impacto Ambiental (EIA) previos al inicio de la fase operativa.",
+        "isCorrect": true,
+        "rationale": "El EIA constituye el instrumento técnico obligatorio para evaluar la viabilidad ambiental antes de construir o explorar una mina."
+      },
+      {
+        "text": "Superintendencia Nacional de Salud (SUSALUD) como única entidad evaluadora de residuos químicos mineros.",
+        "isCorrect": false,
+        "rationale": "SUSALUD fiscaliza la atención en salud de las personas, no el manejo ambiental de efluentes o residuos industriales en minas."
+      },
+      {
+        "text": "SUCAMEC como la institución responsable de emitir licencias de manejo de aguas residuales continentales.",
+        "isCorrect": false,
+        "rationale": "SUCAMEC controla armas, municiones y explosivos; la gestión del agua corresponde a la Autoridad Nacional del Agua (ANA)."
+      }
+    ],
+    "hint": "Diferencia los organismos de fiscalización ambiental (OEFA, MINAM, EIA) de aquellos dedicados a tributos, salud o control de armas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Ante una caída repentina de la demanda internacional de un metal que obliga a reducir la extracción de mineral y ajustar los pedidos de insumos acordados por contrato, ¿cuál es la mejor estrategia contractual de negociación?",
+    "opciones": [
+      {
+        "text": "Acordar una adenda para redistribuir las cantidades totales comprometidas extendiendo la vigencia temporal del contrato.",
+        "isCorrect": true,
+        "rationale": "Ampliar el plazo de vigencia permite absorber los volúmenes pactados a un menor ritmo de consumo sin romper la relación comercial con el proveedor."
+      },
+      {
+        "text": "Resolver el contrato unilateralmente y rehusar el pago de saldos pendientes por insumos entregados.",
+        "isCorrect": false,
+        "rationale": "Romper el acuerdo de forma arbitraria genera litigios judiciales, penalidades y destruye las alianzas con los proveedores."
+      },
+      {
+        "text": "Exigir al proveedor que continúe despachando las cantidades originales y verter los excesos al medio ambiente.",
+        "isCorrect": false,
+        "rationale": "Desechar reactivos o insumos genera graves delitos ambientales y desperdicia capital de trabajo de la empresa."
+      },
+      {
+        "text": "Obligar al proveedor a comprar el sobrante del mineral de la mina para compensar la baja de la demanda.",
+        "isCorrect": false,
+        "rationale": "Los proveedores de insumos no tienen el rol comercial de compradores ni procesadores del concentrado producido por la mina."
+      },
+      {
+        "text": "Ocultar la reducción de producción al suministrador hasta saturar la capacidad del almacén.",
+        "isCorrect": false,
+        "rationale": "Ocultar información operativa crea colapsos de inventario y deteriora los insumos por exceso de almacenamiento."
+      }
+    ],
+    "hint": "Se debe buscar una alternativa de negociación que adecúe la vigencia temporal al menor consumo sin perjudicar a las partes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco legal peruano sobre formalización de la pequeña minería y combate al crimen organizado (Ley 27651, REINFO, Ley 30077), ¿cuáles son disposiciones normativas clave?",
+    "opciones": [
+      {
+        "text": "El desvío ilícito de insumos químicos fiscalizados (como cianuro o mercurio) se sanciona bajo la ley contra el crimen organizado.",
+        "isCorrect": true,
+        "rationale": "La ley califica la desviación no autorizada de químicos para la minería ilegal como un delito agravado."
+      },
+      {
+        "text": "Las autoridades (SUNAT, PNP) pueden efectuar intervenciones e incautaciones de insumos químicos ante sospechas de desvío.",
+        "isCorrect": true,
+        "rationale": "Los entes de fiscalización poseen facultades legales para decomisar y destruir insumos desviados a actividades no autorizadas."
+      },
+      {
+        "text": "El REINFO constituye el registro de formalización donde los pequeños mineros se adecúan a normativas técnicas y ambientales.",
+        "isCorrect": true,
+        "rationale": "El registro busca canalizar a la pequeña minería informal hacia el cumplimiento de normas de seguridad y cuidado ambiental."
+      },
+      {
+        "text": "Los mineros inscritos en el REINFO están totalmente exentos de cumplir con el Reglamento de Seguridad Minera.",
+        "isCorrect": false,
+        "rationale": "El proceso de formalización exige progresivamente el estricto apego a las leyes de seguridad e higiene minera."
+      },
+      {
+        "text": "La normativa aprueba la comercialización libre y desregulada de mercurio en ferias locales.",
+        "isCorrect": false,
+        "rationale": "El mercurio y el cianuro son productos altamente restringidos cuya venta no autorizada es tipificada como delito."
+      }
+    ],
+    "hint": "Considera cómo la legislación fomenta la formalización exigiendo controles ambientales y sancionando penalmente el desvío de insumos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-05",
+    "diplomado": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al diseñar una matriz ponderada para contratar el servicio de transporte de concentrado de mineral, ¿por qué la variable 'Precio por Flete' suele ponderarse en una proporción menor frente a 'Póliza de Seguro' y 'Experiencia/Flota'?",
+    "opciones": [
+      {
+        "text": "Porque el inmenso valor económico del concentrado hace que el respaldo financiero y la seguridad preventiva sean prioritarios frente a un ahorro en flete.",
+        "isCorrect": true,
+        "rationale": "Un ahorro en el flete resulta irrelevante si el transportista no posee el seguro o la experiencia para responder por la pérdida de un cargamento valioso."
+      },
+      {
+        "text": "Porque las tarifas de transporte de mineral están totalmente subvencionadas por el Ministerio de Transportes.",
+        "isCorrect": false,
+        "rationale": "El flete minero es un servicio privado negociado libremente en el mercado comercial entre la mina y la empresa de transportes."
+      },
+      {
+        "text": "Porque las leyes peruanas prohíben negociar el precio del flete en los contratos de carga pesada.",
+        "isCorrect": false,
+        "rationale": "Las tarifas comerciales son totalmente negociables; la baja ponderación responde al análisis de riesgo operacional."
+      },
+      {
+        "text": "Porque las mineras procuran elevar sus costos operativos para agotar el presupuesto asignado.",
+        "isCorrect": false,
+        "rationale": "La gestión logística busca optimizar costos, pero prioriza la mitigación de riesgos catastróficos en materiales de alto valor."
+      },
+      {
+        "text": "Porque la calidad o antigüedad de las unidades de transporte no influye en la seguridad de la carga.",
+        "isCorrect": false,
+        "rationale": "La calidad y antigüedad de la flota determinan la probabilidad de fallas mecánicas, volcamiento o retrasos en ruta."
+      }
+    ],
+    "hint": "La criticidad del producto transportado condiciona la evaluación: la protección del valor monetario de la carga prima sobre la tarifa.",
+    "activo": true
+  }
+]

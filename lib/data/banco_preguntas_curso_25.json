@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal de integrar la tecnología de la Industria 4.0 en el sector minero?",
+    "opciones": [
+      {
+        "text": "Optimizar recursos y hacer los procesos de extracción y procesamiento más eficientes y sostenibles.",
+        "isCorrect": true,
+        "rationale": "La minería 4.0 busca integrar tecnologías avanzadas para maximizar la productividad, reducir desperdicios y minimizar el impacto ambiental."
+      },
+      {
+        "text": "Sustituir por completo a la totalidad de los trabajadores humanos por sistemas automáticos desde el primer día.",
+        "isCorrect": false,
+        "rationale": "La tecnología busca complementar y potenciar la labor humana, exigiendo la capacitación del personal en lugar de su eliminación total."
+      },
+      {
+        "text": "Aumentar la extracción masiva de minerales sin considerar el consumo energético ni los costos de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "El enfoque 4.0 prioriza la eficiencia energética y el control de costos operativo sobre la extracción desmedida no planificada."
+      },
+      {
+        "text": "Reducir el presupuesto de capacitación del personal para recortar costos operativos de forma inmediata.",
+        "isCorrect": false,
+        "rationale": "La implementación de tecnologías avanzadas requiere una inversión sostenida en la formación continua del capital humano."
+      },
+      {
+        "text": "Eliminar el uso de redes inalámbricas e internet dentro de las instalaciones de la planta minera.",
+        "isCorrect": false,
+        "rationale": "La conectividad y la transmisión de datos a través de redes son el pilar fundamental para el funcionamiento de la minería 4.0."
+      }
+    ],
+    "hint": "Piensa en cómo el uso inteligente de datos y tecnología impacta en la conservación de insumos y los tiempos de proceso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la minería 4.0, ¿cuál es la función primordial que cumplen los sensores instalados en plantas o maquinarias?",
+    "opciones": [
+      {
+        "text": "Captar e ingresar datos del entorno en tiempo real para ser procesados y analizados.",
+        "isCorrect": true,
+        "rationale": "Los sensores absorben variables del entorno como temperatura, vibración o humedad y las convierten en datos útiles para el monitoreo y toma de decisiones."
+      },
+      {
+        "text": "Modificar automáticamente los presupuestos financieros de la empresa sin supervisión humana.",
+        "isCorrect": false,
+        "rationale": "Los sensores recopilan datos físicos y operacionales de los equipos, no realizan gestiones ni decisiones de presupuesto financiero."
+      },
+      {
+        "text": "Reemplazar los motores y componentes mecánicos principales de la maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "Los sensores son dispositivos electrónicos de medición y captura de información, no elementos de tracción o propulsión mecánica."
+      },
+      {
+        "text": "Almacenar copias de seguridad físicas en papel de todos los informes diarios de producción.",
+        "isCorrect": false,
+        "rationale": "Los sensores impulsan la digitalización y el procesamiento electrónico, reduciendo el uso de registros físicos en papel."
+      },
+      {
+        "text": "Generar energía eléctrica a gran escala para alimentar toda la operación minera subterránea.",
+        "isCorrect": false,
+        "rationale": "Los sensores consumen pequeñas cantidades de energía para funcionar y medir datos, no son generadores de potencia eléctrica."
+      }
+    ],
+    "hint": "Piensa en cómo el sistema obtiene variables físicas como temperatura, vibración o presión directamente del entorno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la tecnología de los \"gemelos digitales\" aplicada a las operaciones mineras?",
+    "opciones": [
+      {
+        "text": "En crear simulaciones virtuales de los procesos para probar mejoras y corregir errores sin riesgo real.",
+        "isCorrect": true,
+        "rationale": "Un gemelo digital es un modelo virtual que simula el comportamiento de un proceso o activo real para evaluar escenarios e iterar mejoras de manera segura."
+      },
+      {
+        "text": "En clonar físicamente las máquinas de acarreo para tener siempre un repuesto idéntico en almacén.",
+        "isCorrect": false,
+        "rationale": "No se trata de duplicar maquinaria física en el almacén, sino de construir un modelo informático que simule su funcionamiento."
+      },
+      {
+        "text": "En duplicar la plantilla de trabajadores para que ejecuten dos turnos idénticos en paralelo.",
+        "isCorrect": false,
+        "rationale": "Los gemelos digitales son representaciones de software de procesos o infraestructura, no esquemas de organización de personal."
+      },
+      {
+        "text": "En construir dos plantas mineras exactamente iguales en diferentes regiones geográficas.",
+        "isCorrect": false,
+        "rationale": "El concepto refiere a un entorno digital que replica una operación física existente, no a la construcción de infraestructura redundante."
+      },
+      {
+        "text": "En elaborar mapas topográficos tradicionales impresos en papel en dos dimensiones.",
+        "isCorrect": false,
+        "rationale": "Los gemelos digitales operan mediante modelos informáticos interactivos y dinámicos, no en esquemas impresos estáticos."
+      }
+    ],
+    "hint": "Se relaciona con la creación de un entorno virtual que funciona como réplica exacta del mundo real para realizar simulaciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la ventaja principal del mantenimiento predictivo asistido por Big Data sobre el mantenimiento correctivo tradicional?",
+    "opciones": [
+      {
+        "text": "Identificar tempranamente posibles fallas mediante el análisis de historial para evitar paradas imprevistas.",
+        "isCorrect": true,
+        "rationale": "El mantenimiento predictivo analiza patrones de datos para intervenir los equipos justo antes de que ocurra una avería, reduciendo costos por paradas no planificadas."
+      },
+      {
+        "text": "Esperar a que el equipo falle por completo durante la operación para proceder a reemplazar la pieza.",
+        "isCorrect": false,
+        "rationale": "Esperar a la rotura total es la definición de mantenimiento correctivo, el cual genera interrupciones costosas e imprevistas."
+      },
+      {
+        "text": "Incrementar la frecuencia de lubricación periódica sin considerar el estado técnico real del motor.",
+        "isCorrect": false,
+        "rationale": "Intervenir por intervalos fijos de tiempo sin evaluar el estado real corresponde a un enfoque preventivo tradicional, no predictivo con datos."
+      },
+      {
+        "text": "Garantizar que la maquinaria nunca requiera ninguna revisión ni cambio de repuestos en su vida útil.",
+        "isCorrect": false,
+        "rationale": "Ninguna tecnología elimina el desgaste mecánico; el mantenimiento predictivo optimiza el momento exacto de la intervención."
+      },
+      {
+        "text": "Eliminar la necesidad de consultar los manuales técnicos suministrados por los fabricantes de equipos.",
+        "isCorrect": false,
+        "rationale": "Las fichas técnicas y manuales del fabricante son insumos indispensables para parametrizar las alertas del mantenimiento predictivo."
+      }
+    ],
+    "hint": "Enfócate en la capacidad de anticiparse al fallo antes de que la máquina quede inhabilitada durante la producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones representan aplicaciones directas del Internet de las Cosas (IoT) en las operaciones mineras?",
+    "opciones": [
+      {
+        "text": "Monitoreo remoto de signos vitales o niveles de fatiga de los operadores de maquinaria en tiempo real.",
+        "isCorrect": true,
+        "rationale": "El IoT permite conectar sensores corporales a la red para monitorear el estado del trabajador y prevenir accidentes por somnolencia."
+      },
+      {
+        "text": "Control y supervisión remota de sistemas de calidad de aire y ventilación desde un centro de mando.",
+        "isCorrect": true,
+        "rationale": "La interconexión de sensores ambientales mediante IoT permite visualizar niveles de gases tóxicos a distancia y ajustar ventiladores."
+      },
+      {
+        "text": "Transmisión continua del kilometraje y estado operativo de camiones de acarreo mediante redes inalámbricas.",
+        "isCorrect": true,
+        "rationale": "Los camiones conectados envían telemetría en tiempo real sobre su rendimiento a los servidores centrales a través de la red."
+      },
+      {
+        "text": "Registro manual en cuadernos de papel de la asistencia de los trabajadores al ingresar a la mina.",
+        "isCorrect": false,
+        "rationale": "Los procesos analógicos en papel no utilizan dispositivos interconectados a una red de transmisión de datos."
+      },
+      {
+        "text": "Desconexión total de las antenas de comunicación y redes Wi-Fi dentro de los socavones subterráneos.",
+        "isCorrect": false,
+        "rationale": "El Internet de las Cosas requiere infraestructura de red activa para funcionar y transmitir la información recopilada."
+      }
+    ],
+    "hint": "Considera qué dispositivos capturan datos y se controlan o monitorean a distancia a través de una red conectada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la realidad virtual (VR) resulta ser una herramienta estratégica en la capacitación sobre seguridad minera?",
+    "opciones": [
+      {
+        "text": "Permite entrenar al personal en escenarios de riesgo y emergencia reduciendo el peligro real y el margen de error.",
+        "isCorrect": true,
+        "rationale": "La VR recrea situaciones peligrosas o maniobras complejas de forma inmersiva, permitiendo al trabajador practicar la respuesta adecuada sin exponer su integridad física."
+      },
+      {
+        "text": "Sustituye de forma permanente la obligación de utilizar equipos de protección personal (EPP) en la mina.",
+        "isCorrect": false,
+        "rationale": "La realidad virtual es una herramienta pedagógica de simulación que no reemplaza los elementos de protección física requeridos en campo."
+      },
+      {
+        "text": "Garantiza que los trabajadores no sientan cansancio ni estrés durante las jornadas laborales en la mina.",
+        "isCorrect": false,
+        "rationale": "La simulación mejora el aprendizaje y la preparación técnica, pero no elimina la fatiga física propia del trabajo operativo."
+      },
+      {
+        "text": "Elimina la necesidad de realizar inducciones periódicas sobre normativas de seguridad en el trabajo.",
+        "isCorrect": false,
+        "rationale": "La VR complementa las capacitaciones reglamentarias haciéndolas más didácticas, pero no anula los requerimientos legales de formación."
+      },
+      {
+        "text": "Se utiliza exclusivamente como un medio de entretenimiento durante los horarios de descanso en los campamentos.",
+        "isCorrect": false,
+        "rationale": "Su aplicación principal en minería 4.0 es la formación técnica, entrenamiento operativo y preparación ante emergencias."
+      }
+    ],
+    "hint": "Imagina practicar maniobras peligrosas de rescate sin poner en riesgo la vida ni la integridad física del colaborador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con los conceptos explicados en el curso, ¿cuál es la diferencia clave entre ser \"eficaz\" y ser \"eficiente\"?",
+    "opciones": [
+      {
+        "text": "Ser eficaz es cumplir la meta fijada; ser eficiente es alcanzarla optimizando tiempo, costos o recursos.",
+        "isCorrect": true,
+        "rationale": "Eficacia implica lograr el resultado esperado, mientras que la eficiencia añade la optimización e inteligente uso de los recursos empleados."
+      },
+      {
+        "text": "Ser eficaz implica gastar más dinero del presupuestado, mientras que eficiente es no culminar la tarea.",
+        "isCorrect": false,
+        "rationale": "Gastar en exceso sin control no define la eficacia, ni dejar tareas inconclusas representa eficiencia."
+      },
+      {
+        "text": "Ser eficiente es cumplir el objetivo, mientras que ser eficaz es hacerlo sin utilizar herramientas tecnológicas.",
+        "isCorrect": false,
+        "rationale": "La eficacia se enfoca en el cumplimiento del objetivo final independientemente del nivel de tecnología empleada."
+      },
+      {
+        "text": "Ambos términos expresan exactamente el mismo concepto y se usan como sinónimos en la gestión industrial.",
+        "isCorrect": false,
+        "rationale": "En la gestión operativa e industrial existe una distinción clara entre cumplir un objetivo (eficacia) y optimizar los recursos al hacerlo (eficiencia)."
+      },
+      {
+        "text": "Ser eficaz refiere únicamente al mantenimiento de equipos y eficiente al uso exclusivo de inteligencia artificial.",
+        "isCorrect": false,
+        "rationale": "Ambos son conceptos transversales de gestión de desempeño aplicables a cualquier proceso, proyecto o recurso humano."
+      }
+    ],
+    "hint": "Piensa en cuál de las dos condiciones premia el alcanzar la meta utilizando menos insumos o menos tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al fundamentar un proyecto de implementación tecnológica 4.0 ante la gerencia, ¿qué factor financiero es imprescindible demostrar?",
+    "opciones": [
+      {
+        "text": "El tiempo estimado de retorno de inversión (ROI) y el punto a partir del cual el proyecto generará ganancias.",
+        "isCorrect": true,
+        "rationale": "Los proyectos de innovación deben justificarse financieramente mostrando cuándo se recupera el capital invertido y qué beneficio económico aportará a la empresa."
+      },
+      {
+        "text": "Que el presupuesto de implementación sea ilimitado y no requiera métricas de control de gastos.",
+        "isCorrect": false,
+        "rationale": "Todo proyecto industrial exige un presupuesto definido y sometido a un riguroso análisis de costo-beneficio."
+      },
+      {
+        "text": "Que el desembolso financiero se registre como una pérdida definitiva sin posibilidad de recuperarse.",
+        "isCorrect": false,
+        "rationale": "Las inversiones en tecnología buscan generar ahorros o incrementos en la productividad que devuelvan el capital gastado."
+      },
+      {
+        "text": "Que el proyecto sea desarrollado íntegramente por terceros sin participación de la empresa.",
+        "isCorrect": false,
+        "rationale": "La modalidad de contratación no sustituye la obligación de justificar la viabilidad económica y rentabilidad del proyecto."
+      },
+      {
+        "text": "Que la tecnología adquirida no requiera mantenimientos futuros ni actualizaciones de software.",
+        "isCorrect": false,
+        "rationale": "Los costos recurrentes de mantenimiento y actualización deben ser considerados dentro del modelo financiero estratégico."
+      }
+    ],
+    "hint": "Los tomadores de decisiones necesitan saber en qué plazo se recupera el capital invertido y cuándo comenzarán los beneficios netos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes escenarios representan amenazas o riesgos cibernéticos para una empresa minera digitalizada?",
+    "opciones": [
+      {
+        "text": "Ataques de ransomware que encriptan sistemas de monitoreo o bases de datos exigiendo un pago por su rescate.",
+        "isCorrect": true,
+        "rationale": "El ransomware es un ciberataque grave que secuestra información operativa crítica impidiendo el funcionamiento de la mina."
+      },
+      {
+        "text": "Ataques de denegación de servicio que paralizan la comunicación con la flota de camiones de acarreo.",
+        "isCorrect": true,
+        "rationale": "La interrupción malintencionada de las señales de red afecta la coordinación de la maquinaria y paraliza la producción."
+      },
+      {
+        "text": "Intrusiones no autorizadas a la red para sustraer información geológica confidencial de exploraciones.",
+        "isCorrect": true,
+        "rationale": "El robo de propiedad intelectual y datos de prospección vulnera la ventaja competitiva de la organización."
+      },
+      {
+        "text": "La instalación de actualizaciones de seguridad autorizadas en los sistemas operativos de las computadoras.",
+        "isCorrect": false,
+        "rationale": "Las actualizaciones oficiales enviadas por fabricantes son medidas defensivas y no constituyen ataques cibernéticos."
+      },
+      {
+        "text": "El mantenimiento mecánico programado del sistema de frenos de una pala cargadora.",
+        "isCorrect": false,
+        "rationale": "Esta es una actividad física rutinaria de mantenimiento mecánico que no involucra vulnerabilidades digitales."
+      }
+    ],
+    "hint": "Identifica los eventos malintencionados que atentan contra la red, paralizan la operación o comprometen la información confidencial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la norma internacional que establece los requisitos para implementar un Sistema de Gestión de Seguridad de la Información (Ciberseguridad)?",
+    "opciones": [
+      {
+        "text": "ISO 27001 (serie ISO 27000).",
+        "isCorrect": true,
+        "rationale": "La familia ISO 27000, e ISO 27001 en particular, constituye el estándar internacional reconocido para la gestión de la seguridad de la información y ciberseguridad."
+      },
+      {
+        "text": "ISO 9001.",
+        "isCorrect": false,
+        "rationale": "La norma ISO 9001 está orientada a los Sistemas de Gestión de la Calidad en productos y servicios, no a la ciberseguridad."
+      },
+      {
+        "text": "ISO 14001.",
+        "isCorrect": false,
+        "rationale": "La ISO 14001 especifica los requisitos para un Sistema de Gestión Ambiental, no para la protección de datos."
+      },
+      {
+        "text": "ISO 45001.",
+        "isCorrect": false,
+        "rationale": "La ISO 45001 regula los Sistemas de Gestión de Seguridad y Salud en el Trabajo, enfocados en la integridad física de las personas."
+      },
+      {
+        "text": "ISO 50001.",
+        "isCorrect": false,
+        "rationale": "La ISO 50001 establece los requisitos para la gestión de la eficiencia energética en las organizaciones."
+      }
+    ],
+    "hint": "Es la norma específica citada en clase para proteger los activos de información y prevenir riesgos de ciberataques.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la metodología Design Thinking para la innovación industrial, ¿cuál es el objetivo de probar un prototipo con usuarios finales?",
+    "opciones": [
+      {
+        "text": "Recibir retroalimentación (feedback) para identificar fallas y perfeccionar la propuesta antes de su despliegue final.",
+        "isCorrect": true,
+        "rationale": "La fase de evaluación busca recolectar las observaciones prácticas del usuario para iterar, corregir errores y asegurar la utilidad de la solución."
+      },
+      {
+        "text": "Demostrar que la primera idea concebida era perfecta y que no requiere ninguna mejora o ajuste.",
+        "isCorrect": false,
+        "rationale": "El Design Thinking asume que las ideas iniciales deben ponerse a prueba y evolucionar en función de la experiencia real del usuario."
+      },
+      {
+        "text": "Incrementar innecesariamente el costo de fabricación mediante pruebas excesivas y sin rumbo.",
+        "isCorrect": false,
+        "rationale": "El prototipado busca reducir costos futuros al detectar fallas de diseño de manera temprana y económica."
+      },
+      {
+        "text": "Evitar que los trabajadores u operarios interactúen con las nuevas herramientas tecnológicas.",
+        "isCorrect": false,
+        "rationale": "La metodología se centra en el ser humano y requiere indispensablemente la participación activa del usuario final."
+      },
+      {
+        "text": "Sustituir la etapa inicial de investigación e identificación del problema operativo.",
+        "isCorrect": false,
+        "rationale": "Probar prototipos es una etapa avanzada del proceso que depende directamente de haber comprendido previamente la necesidad."
+      }
+    ],
+    "hint": "Se busca obtener valiosas observaciones de los trabajadores para pulir el producto antes de su lanzamiento definitivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la capacitación continua del capital humano es indispensable para lograr una transformación digital exitosa en minería?",
+    "opciones": [
+      {
+        "text": "Porque las herramientas avanzadas requieren personal capaz de operarlas e interpretar sus datos correctamente.",
+        "isCorrect": true,
+        "rationale": "La tecnología por sí sola no genera valor si los trabajadores no poseen las competencias digitales para operar los sistemas y tomar decisiones informadas."
+      },
+      {
+        "text": "Porque la formación de los trabajadores elimina automáticamente la necesidad de invertir en infraestructura digital.",
+        "isCorrect": false,
+        "rationale": "La capacitación y la infraestructura tecnológica son componentes complementarios; ninguno elimina la necesidad del otro."
+      },
+      {
+        "text": "Porque la tecnología sustituye por completo la necesidad del pensamiento crítico en la toma de decisiones.",
+        "isCorrect": false,
+        "rationale": "La tecnología aporta análisis y sugerencias, pero el criterio humano sigue siendo fundamental para la gestión de las operaciones."
+      },
+      {
+        "text": "Porque la legislación minera exige que todo el personal de planta posea títulos universitarios en informática.",
+        "isCorrect": false,
+        "rationale": "La formación busca desarrollar competencias digitales aplicadas al puesto, no exigir carreras de informática a todo el personal."
+      },
+      {
+        "text": "Porque el objetivo de la minería 4.0 es convertir a todos los mineros de socavón en programadores de código.",
+        "isCorrect": false,
+        "rationale": "El propósito es dotar al trabajador de capacidades para interactuar con la tecnología de su área, no cambiar su perfil profesional."
+      }
+    ],
+    "hint": "La mejor tecnología no rinde frutos si los trabajadores no comprenden cómo utilizarla ni cómo interpretar sus resultados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué característica distingue a la robótica (como drones o brazos robóticos) respecto a la automatización de procesos digitales?",
+    "opciones": [
+      {
+        "text": "La robótica integra componentes mecánicos y electrónicos que involucran fuerza, precisión y movimiento físico en el espacio.",
+        "isCorrect": true,
+        "rationale": "A diferencia de la automatización lógica de software, la robótica actúa directamente en el mundo físico aplicando fuerza y movimiento mecánico."
+      },
+      {
+        "text": "La automatización se aplica exclusivamente en el mantenimiento de tuberías y bombas de agua.",
+        "isCorrect": false,
+        "rationale": "La automatización abarca una amplia gama de procesos digitales, administrativos y de control en todas las áreas de la industria."
+      },
+      {
+        "text": "La robótica solo se utiliza para procesar hojas de cálculo y bases de datos en oficinas.",
+        "isCorrect": false,
+        "rationale": "El procesamiento de datos en oficina es área del software y la automatización digital, no de la robótica física."
+      },
+      {
+        "text": "La automatización exige indispensablemente el uso de motores diésel de gran cilindraje.",
+        "isCorrect": false,
+        "rationale": "La automatización de procesos se basa en lógica de programación y sistemas electrónicos, independientemente del tipo de motor."
+      },
+      {
+        "text": "La robótica no permite la incorporación de sensores ni la conexión a redes inalámbricas.",
+        "isCorrect": false,
+        "rationale": "Los sistemas robóticos modernos dependen fundamentalmente de sensores integrados y conectividad de red para operar de forma autónoma."
+      }
+    ],
+    "hint": "Considera el componente físico, mecánico y de desplazamiento tridimensional que poseen los equipos robóticos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el beneficio primordial de implementar teleoperaciones en maquinaria para minería subterránea?",
+    "opciones": [
+      {
+        "text": "Aceptar que el operador trabaje a distancia, reduciendo su exposición a riesgos de derrumbes o ambientes tóxicos.",
+        "isCorrect": true,
+        "rationale": "Las teleoperaciones permiten controlar equipos pesados desde salas de mando seguras en la superficie, salvaguardando la vida del personal."
+      },
+      {
+        "text": "Aumentar el consumo de combustible de los camiones en cada turno de trabajo.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la tecnología es optimizar la conducción y reducir el gasto innecesario de energía o combustible."
+      },
+      {
+        "text": "Permitir que los vehículos mineros transiten sin ningún tipo de supervisión ni control humano.",
+        "isCorrect": false,
+        "rationale": "La teleoperación traslada el control directo del vehículo a un operador remoto, manteniendo constante la supervisión humana."
+      },
+      {
+        "text": "Eliminar la necesidad de contar con sistemas de telecomunicaciones o fibra óptica en la mina.",
+        "isCorrect": false,
+        "rationale": "Las teleoperaciones requieren una red de telecomunicaciones robusta y de baja latencia para transmitir mandos y video en tiempo real."
+      },
+      {
+        "text": "Reducir la velocidad de procesamiento del mineral dentro de las plantas concentradoras.",
+        "isCorrect": false,
+        "rationale": "El control remoto busca mantener o incrementar el ritmo de producción asegurando la continuidad operativa."
+      }
+    ],
+    "hint": "Piensa en la distancia que separa al operador del frente de trabajo expuesto a caída de rocas o presencia de gases.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo aporta la tecnología de impresión 3D a la eficiencia logística en campamentos mineros alejados?",
+    "opciones": [
+      {
+        "text": "Permite fabricar repuestos o componentes específicos bajo demanda directamente en el sitio de operación.",
+        "isCorrect": true,
+        "rationale": "La fabricación aditiva en 3D evita largos tiempos de espera por envíos logísticos al fabricar piezas de reemplazo in situ."
+      },
+      {
+        "text": "Sustituye la extracción física de minerales valiosos mediante la impresión de maquetas de plástico.",
+        "isCorrect": false,
+        "rationale": "La impresión 3D es una herramienta de soporte para crear componentes y repuestos, no un sustituto de la actividad extractiva."
+      },
+      {
+        "text": "Fabrica combustible sintético para alimentar directamente los motores de los camiones de acarreo.",
+        "isCorrect": false,
+        "rationale": "Las impresoras 3D procesan polímeros, resinas o metales para crear objetos sólidos, no sintetizan combustibles líquidos."
+      },
+      {
+        "text": "Reemplaza el uso de redes de fibra óptica y sistemas de comunicación por radio.",
+        "isCorrect": false,
+        "rationale": "La impresión 3D es una tecnología de manufactura que no cumple funciones de infraestructura de telecomunicaciones."
+      },
+      {
+        "text": "Construye túneles subterráneos de manera instantánea sin requerir maquinaria de excavación.",
+        "isCorrect": false,
+        "rationale": "El desarrollo de galerías subterráneas requiere perforación y voladura o minadores continuos, no impresión aditiva."
+      }
+    ],
+    "hint": "Considera la ventaja de poder elaborar piezas o conectores mecánicos a pedido en la mina sin esperar traslados largos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con la fórmula explicada en clase para estructurar un \"prompt\" efectivo en inteligencias artificiales (como DeepSeek o ChatGPT), ¿cuáles de los siguientes componentes deben incluirse?",
+    "opciones": [
+      {
+        "text": "Protagonista (definir el rol profesional o nivel de experiencia con el que debe actuar la IA).",
+        "isCorrect": true,
+        "rationale": "Asignar un rol claro (ej. \"actúa como experto en mantenimiento minero\") orienta a la IA hacia el tono y vocabulario apropiados."
+      },
+      {
+        "text": "Contexto o situación (brindar detalles específicos sobre el entorno o problema actual).",
+        "isCorrect": true,
+        "rationale": "Aportar antecedentes e información sobre la situación permite a la IA generar una respuesta ajustada al escenario real."
+      },
+      {
+        "text": "Solicitud precisa (indicar claramente la tarea, formato o resultado concreto requerido).",
+        "isCorrect": true,
+        "rationale": "La instrucción explícita del entregable esperado (ej. \"entrega 5 indicadores en una tabla\") garantiza una respuesta útil."
+      },
+      {
+        "text": "Código binario puro compuesto únicamente por cadenas de ceros y unos.",
+        "isCorrect": false,
+        "rationale": "Los prompts se comunican en lenguaje natural estructurado, no en código binario de bajo nivel."
+      },
+      {
+        "text": "Firma digital notarial obligatoria antes de enviar la consulta a la plataforma.",
+        "isCorrect": false,
+        "rationale": "Las consultas a modelos de lenguaje no requieren certificaciones legales ni firmas notariales para ser procesadas."
+      }
+    ],
+    "hint": "Recuerda la analogía utilizada por el docente basada en la estructura narrativa de una película (actor, historia y pregunta).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué significa el concepto \"Machine Learning\" (aprendizaje automático) aplicado al análisis de datos mineros?",
+    "opciones": [
+      {
+        "text": "La capacidad de los algoritmos para aprender de patrones históricos y mejorar sus decisiones o predicciones de forma autónoma.",
+        "isCorrect": true,
+        "rationale": "Machine Learning es una rama de la IA donde los sistemas procesan grandes datos históricos para identificar patrones y hacer pronósticos precisos sin ser reprogramados expresamente."
+      },
+      {
+        "text": "El mantenimiento físico y engrase de componentes mecánicos ejecutado por un técnico en taller.",
+        "isCorrect": false,
+        "rationale": "Esta es una labor manual de mantenimiento mecánico, no un proceso informático de análisis de datos."
+      },
+      {
+        "text": "La transcripción manual de informes impresos a documentos de procesador de texto.",
+        "isCorrect": false,
+        "rationale": "Digitalizar texto manualmente es un trabajo de digitación, no un algoritmo de aprendizaje estadístico automático."
+      },
+      {
+        "text": "La instalación de cableado de fibra óptica a lo largo de las galerías de la mina.",
+        "isCorrect": false,
+        "rationale": "El tendido de red es infraestructura física de telecomunicaciones, no un software de procesamiento analítico."
+      },
+      {
+        "text": "La adquisición de computadoras de escritorio sin realizar una evaluación previa de especificaciones.",
+        "isCorrect": false,
+        "rationale": "La compra de hardware no guarda relación con los algoritmos matemáticos de aprendizaje automático."
+      }
+    ],
+    "hint": "Se refiere a algoritmos que analizan patrones en datos históricos para predecir eventos futuros y tomar mejores decisiones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se aplica el procesamiento de imágenes o visión por computadora en el control de calidad industrial?",
+    "opciones": [
+      {
+        "text": "Analizando capturas de video en tiempo real con algoritmos para identificar imperfecciones, grietas o insumos defectuosos.",
+        "isCorrect": true,
+        "rationale": "La visión por computadora procesa imágenes de cámaras en fajas transportadoras para detectar automáticamente material que no cumple con el estándar exigido."
+      },
+      {
+        "text": "Proyectando videos de entretenimiento para los trabajadores durante los turnos de la noche.",
+        "isCorrect": false,
+        "rationale": "Su objetivo es la inspección técnica automatizada de procesos, no la reproducción de medios recreativos."
+      },
+      {
+        "text": "Reemplazando los medidores físicos de presión hidráulica en los circuitos de agua.",
+        "isCorrect": false,
+        "rationale": "La visión artificial procesa datos ópticos e imágenes, mientras que los sensores de presión miden fuerzas en fluidos."
+      },
+      {
+        "text": "Generando planos arquitectónicos en papel para la construcción de oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "El diseño de planos es tarea del software CAD, no del análisis automatizado de video e imágenes en línea."
+      },
+      {
+        "text": "Incrementando la temperatura de los hornos de fundición a través de fotografías digitales.",
+        "isCorrect": false,
+        "rationale": "Las imágenes permiten monitorear o inspeccionar visualmente, pero no aportan energía térmica para alterar temperaturas."
+      }
+    ],
+    "hint": "Un sistema analiza el contenido visual captado por cámaras para detectar anomalías o defectos en el material que avanza por una faja.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es un \"Data Pipeline\" (tubería de datos) en una arquitectura de información minera?",
+    "opciones": [
+      {
+        "text": "Un flujo automatizado y estructurado mediante el cual los datos viajan de forma continua desde su captura hasta su análisis.",
+        "isCorrect": true,
+        "rationale": "Un data pipeline define la ruta de procesamiento que transforma y conduce los datos desde los sensores o fuentes primarias hasta los paneles de control."
+      },
+      {
+        "text": "Una tubería metálica física por la cual se transporta concentrado de mineral o slurry.",
+        "isCorrect": false,
+        "rationale": "Un pipeline de datos es una infraestructura lógica de software para información, no un ducto físico para fluidos o minerales."
+      },
+      {
+        "text": "Un conducto de ventilación diseñado exclusivamente para la extracción de gases en socavones.",
+        "isCorrect": false,
+        "rationale": "Los ductos de ventilación son elementos de ingeniería de minas para flujo de aire, no para transporte de datos informáticos."
+      },
+      {
+        "text": "Una lista física en papel con las contraseñas de red Wi-Fi distribuidas al personal.",
+        "isCorrect": false,
+        "rationale": "Refiere a la arquitectura de flujo de datos, no a credenciales impresas de acceso a la red."
+      },
+      {
+        "text": "Un plan de evacuación de emergencia utilizado durante simulacros de sismo.",
+        "isCorrect": false,
+        "rationale": "Los planes de evacuación son protocolos de seguridad física para personas, no flujos de integración de datos."
+      }
+    ],
+    "hint": "Piensa en una ruta automatizada y ordenada por la cual fluye la información desde los sensores hasta las bases de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función principal cumple un sistema SCADA en el centro de control de una mina?",
+    "opciones": [
+      {
+        "text": "Ofrecer una interfaz gráfica que representa e integra todo el proceso industrial y sus variables en tiempo real.",
+        "isCorrect": true,
+        "rationale": "El sistema SCADA permite a los operadores visualizar, supervisar y controlar remotamente las distintas etapas del proceso productivo desde una pantalla."
+      },
+      {
+        "text": "Redactar los contratos de trabajo del personal técnico y administrativo de la empresa.",
+        "isCorrect": false,
+        "rationale": "La gestión de contratos laborales corresponde a los sistemas de recursos humanos (ERP), no al control industrial de procesos."
+      },
+      {
+        "text": "Emitir órdenes de compra automáticas en la bolsa de valores para comercializar acciones.",
+        "isCorrect": false,
+        "rationale": "Los sistemas SCADA supervisan variables físicas operativas de planta, no ejecutan transacciones bursátiles."
+      },
+      {
+        "text": "Reemplazar el almacenamiento en la nube por registros guardados únicamente en discos duros locales.",
+        "isCorrect": false,
+        "rationale": "SCADA se integra con tecnologías en la nube e IoT para respaldar y analizar datos en múltiples plataformas."
+      },
+      {
+        "text": "Controlar el marcado biométrico de asistencia a la entrada de los comedores del campamento.",
+        "isCorrect": false,
+        "rationale": "Los controles de asistencia son sistemas administrativos de personal, distantes de la supervisión de procesos industriales SCADA."
+      }
+    ],
+    "hint": "Proporciona un entorno visual que muestra todo el proceso industrial paso a paso y el estado de sus variables en tiempo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Al configurar las instrucciones personalizadas (Custom Instructions) en herramientas de IA como ChatGPT, ¿qué ventajas se obtienen según lo explicado en clase?",
+    "opciones": [
+      {
+        "text": "La IA adapta su vocabulario y enfoque al perfil profesional especificado por el usuario (ej. ingeniero de seguridad).",
+        "isCorrect": true,
+        "rationale": "Definir el perfil orienta a la IA a emplear términos técnicos precisos y relevantes para la especialidad del profesional."
+      },
+      {
+        "text": "Se consiguen respuestas más estructuradas, rigurosas y alineadas con las necesidades del trabajo.",
+        "isCorrect": true,
+        "rationale": "Establecer preferencias de formato (ej. respuestas explicativas con fuentes) eleva la calidad técnica del contenido entregado."
+      },
+      {
+        "text": "Se evita repetir la información del contexto profesional e instrucciones de formato en cada nueva consulta.",
+        "isCorrect": true,
+        "rationale": "Las instrucciones personalizadas permanecen activas para todos los chats futuros, ahorrando tiempo en la redacción de prompts."
+      },
+      {
+        "text": "La IA alcanza un 100% de infalibilidad eliminando por completo cualquier posibilidad de error.",
+        "isCorrect": false,
+        "rationale": "Los modelos de lenguaje siempre requieren la revisión crítica del profesional humano para verificar la exactitud de los datos."
+      },
+      {
+        "text": "Permite utilizar la herramienta de IA sin necesidad de contar con conexión a internet.",
+        "isCorrect": false,
+        "rationale": "La personalización de parámetros en plataformas web de IA no cambia los requisitos de conectividad a la red."
+      }
+    ],
+    "hint": "Identifica cómo influye en la precisión del lenguaje técnico, el tono de respuesta y el ahorro de tiempo al no repetir tu perfil.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el proceso de digitalización de registros de trabajo tomados manualmente en hojas de papel?",
+    "opciones": [
+      {
+        "text": "Transformar los datos manuscritos en formatos digitales estructurados mediante herramientas de reconocimiento e IA.",
+        "isCorrect": true,
+        "rationale": "La digitalización convierte información física en datos electrónicos legibles para procesarlos rápidamente e integrarlos al sistema central."
+      },
+      {
+        "text": "Imprimir en papel todos los correos electrónicos que ingresan a la bandeja de entrada.",
+        "isCorrect": false,
+        "rationale": "Imprimir documentos electrónicos es un proceso inverso que genera más uso de papel y no aporta a la digitalización."
+      },
+      {
+        "text": "Destruir los documentos en papel antiguos sin mantener ningún tipo de respaldo digital.",
+        "isCorrect": false,
+        "rationale": "Eliminar archivos sin captura ni digitalización previa conlleva la pérdida irreparable de información histórica."
+      },
+      {
+        "text": "Dictar telefónicamente los datos del papel a un centro de atención telefónica externo.",
+        "isCorrect": false,
+        "rationale": "El dictado verbal no convierte los datos en formatos estructurados para análisis en bases de datos informáticas."
+      },
+      {
+        "text": "Archivar las hojas manuscritas en cajas de seguridad de concreto dentro de la mina.",
+        "isCorrect": false,
+        "rationale": "Guardar papel físico perpetúa los archivos analógicos y dificulta el acceso rápido a la información para tomar decisiones."
+      }
+    ],
+    "hint": "Se refiere a convertir la información escrita a mano en tablas o registros electrónicos listos para su análisis.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera el análisis de Big Data contribuye a la sostenibilidad ambiental y a la eficiencia energética en minería?",
+    "opciones": [
+      {
+        "text": "Identificando picos innecesarios de consumo para optimizar el uso de energía y reducir desperdicios de agua.",
+        "isCorrect": true,
+        "rationale": "Al analizar datos masivos de operaciones, se detectan ineficiencias en los patrones de consumo energético y hídrico, ajustando el proceso para ser sostenible."
+      },
+      {
+        "text": "Incrementando las emisiones de gases contaminantes durante las horas de mayor actividad en la planta.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la sostenibilidad mediante Big Data es precisamente medir y mitigar las emisiones nocivas."
+      },
+      {
+        "text": "Desactivando el tratamiento de agua residual para ahorrar costos inmediatos en insumos químicos.",
+        "isCorrect": false,
+        "rationale": "La gestión ambiental busca maximizar la recirculación y tratamiento adecuado del agua, no omitir los procesos de limpieza."
+      },
+      {
+        "text": "Apagando permanentemente los sensores de control de calidad del aire en los socavones.",
+        "isCorrect": false,
+        "rationale": "La analítica de datos depende de sensores activos que midan constantemente las variables ambientales para proteger al personal."
+      },
+      {
+        "text": "Forzando a los motores a trabajar a máxima velocidad sin importar las lecturas de desgaste.",
+        "isCorrect": false,
+        "rationale": "El análisis predictivo ajusta la carga de trabajo de los equipos para maximizar su eficiencia sin desgastarlos prematuramente."
+      }
+    ],
+    "hint": "Analizar los picos de demanda eléctrica o hídrica permite reorganizar las cargas de trabajo para evitar el malgasto de insumos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la \"trazabilidad\" de los minerales dentro de una cadena de producción digitalizada?",
+    "opciones": [
+      {
+        "text": "En registrar el historial y recorrido del mineral desde su extracción en el yacimiento hasta su venta final.",
+        "isCorrect": true,
+        "rationale": "La trazabilidad rastrea la ruta, leyes y transformaciones del lote de mineral en cada fase, asegurando el control de calidad y la transparencia."
+      },
+      {
+        "text": "En dibujar manualmente las líneas de topografía en planos impresos en papel antes de perforar.",
+        "isCorrect": false,
+        "rationale": "Trazar mapas topográficos es una labor de diseño geológico, no la trazabilidad de la cadena de suministro del producto."
+      },
+      {
+        "text": "En alterar aleatoriamente los precios del mineral negociados en los mercados bursátiles.",
+        "isCorrect": false,
+        "rationale": "La trazabilidad responde a un registro de datos del producto físico en la cadena operativa, no a la especulación de precios."
+      },
+      {
+        "text": "En mezclar diferentes tipos de concentrado sin dejar registro de su composición química.",
+        "isCorrect": false,
+        "rationale": "Mezclar sin control destruye la trazabilidad, cuya función es conocer con precisión las características de cada lote."
+      },
+      {
+        "text": "En ocultar el lugar geográfico de procedencia del material extraído a las autoridades.",
+        "isCorrect": false,
+        "rationale": "La trazabilidad fomenta la transparencia y auditoría del origen responsable de las materias primas."
+      }
+    ],
+    "hint": "Se trata del seguimiento completo paso a paso desde que el mineral sale del frente de excavación hasta la entrega del producto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "A lo largo del curso, ¿cuáles de los siguientes puntos han sido destacados como beneficios de la transformación hacia la Minería 4.0?",
+    "opciones": [
+      {
+        "text": "Aumento de la productividad mediante la reducción de tiempos de inactividad de las máquinas.",
+        "isCorrect": true,
+        "rationale": "El monitoreo y mantenimiento predictivo evitan paradas no planificadas, elevando la disponibilidad de la flota y la producción."
+      },
+      {
+        "text": "Mejora de la seguridad laboral al alejar al trabajador de las zonas de mayor riesgo mediante teleoperación.",
+        "isCorrect": true,
+        "rationale": "Controlar equipos a distancia y entrenar en VR reduce significativamente la siniestralidad de los operadores."
+      },
+      {
+        "text": "Sostenibilidad ambiental superior al optimizar el consumo de energía y la gestión del agua.",
+        "isCorrect": true,
+        "rationale": "Los sensores e inteligencia artificial permiten controlar el uso de recursos naturales y minimizar la huella de carbono."
+      },
+      {
+        "text": "Eliminación absoluta de la necesidad de contar con cualquier tipo de supervisión humana.",
+        "isCorrect": false,
+        "rationale": "La tecnología complementa al ser humano, pero la toma de decisiones estratégicas y la gestión requieren liderazgo humano."
+      },
+      {
+        "text": "Prohibición del uso de modelos estadísticos o algoritmos en el área de gestión de operaciones.",
+        "isCorrect": false,
+        "rationale": "La minería 4.0 se fundamenta precisamente en el uso intensivo de datos y modelos estadísticos predictivos."
+      }
+    ],
+    "hint": "Piensa en las tres áreas principales de impacto positivo: eficiencia productiva, protección del trabajador y cuidado ambiental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de las siguientes acciones describe con mayor precisión la aplicación de la optimización en la utilización de equipos para reducir la merma operacional en una planta concentradora?",
+    "opciones": [
+      {
+        "text": "Mantener los equipos encendidos en modo de espera (standby) de forma continua durante toda la guardia.",
+        "isCorrect": false,
+        "rationale": "Dejar la maquinaria encendida sin procesar mineral genera un consumo energético innecesario y un desgaste prematuro sin aportar valor a la producción."
+      },
+      {
+        "text": "Programar el uso efectivo del equipo únicamente durante las horas requeridas, eliminando tiempos muertos y consumos innecesarios.",
+        "isCorrect": true,
+        "rationale": "Optimizar la utilización de equipos implica ajustar su funcionamiento estrictamente a los tiempos efectivos de operación para evitar el desperdicio de recursos."
+      },
+      {
+        "text": "Incrementar la carga de mineral por encima del límite técnico especificado por el fabricante.",
+        "isCorrect": false,
+        "rationale": "Exceder la capacidad técnica de diseño sobrecarga los componentes mecánicos, provocando fallas graves y paradas no programadas."
+      },
+      {
+        "text": "Sustituir el mantenimiento predictivo por revisiones informales al final de cada semana.",
+        "isCorrect": false,
+        "rationale": "Reemplazar la analítica predictiva por inspecciones tardías aumenta la probabilidad de averías imprevistas y pérdida de material."
+      },
+      {
+        "text": "Reemplazar toda la flota por vehículos autónomos sin realizar un estudio de retorno de inversión.",
+        "isCorrect": false,
+        "rationale": "Sustituir activos masivamente sin una evaluación económica previa puede comprometer la liquidez financiera de la empresa."
+      }
+    ],
+    "hint": "Considere la estrategia que busca utilizar la energía y los activos estrictamente cuando agregan valor directo al proceso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la minería 4.0, ¿cuál es la función principal de implementar un gemelo digital (digital twin) mediante software de simulación como Arena?",
+    "opciones": [
+      {
+        "text": "Reemplazar las bases de datos históricas de la mina por un archivo plano estático.",
+        "isCorrect": false,
+        "rationale": "Los gemelos digitales requieren bases de datos dinámicas y continuas para reflejar fielmente el comportamiento del sistema real."
+      },
+      {
+        "text": "Ejecutar iteraciones y simulaciones virtuales de procesos para anticipar errores y evaluar mejoras sin arriesgar la operación real.",
+        "isCorrect": true,
+        "rationale": "Un gemelo digital permite experimentar con cientos de escenarios en un entorno virtual seguro antes de realizar modificaciones físicas en la mina o planta."
+      },
+      {
+        "text": "Generar automáticamente los informes de marcación de asistencia del personal administrativo.",
+        "isCorrect": false,
+        "rationale": "El control de asistencia corresponde a los sistemas de recursos humanos y no al modelado y simulación de flujos de procesos industriales."
+      },
+      {
+        "text": "Eliminar por completo la necesidad de capacitaciones en seguridad para los operadores de socavón.",
+        "isCorrect": false,
+        "rationale": "La simulación virtual complementa la capacitación del personal, requiriendo profesionales aún más preparados para interpretar los modelos."
+      },
+      {
+        "text": "Automatizar la firma de contratos comerciales con los clientes compradores de concentrado.",
+        "isCorrect": false,
+        "rationale": "La gestión contractual pertenece al área comercial y legal, siendo ajena a las herramientas de simulación operativa."
+      }
+    ],
+    "hint": "Pense en cómo una réplica virtual permite probar cambios operativos sin paralizar la planta ni generar costos reales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el sector minero peruano, ¿cuál es el marco normativo específico emitido por el Ministerio de Energía y Minas que regula la seguridad y salud ocupacional?",
+    "opciones": [
+      {
+        "text": "Ley General de Sociedades y el Código Penal.",
+        "isCorrect": false,
+        "rationale": "Estas leyes pertenecen al ámbito mercantil y mercantil-penal general, no al marco normativo de seguridad industrial en minería."
+      },
+      {
+        "text": "Decreto Supremo 024-2016-EM y sus modificatorias como el D.S. 023-2017-EM.",
+        "isCorrect": true,
+        "rationale": "El Ministerio de Energía y Minas del Perú regula los estándares técnicos de seguridad y salud ocupacional en minería mediante estos decretos supremos."
+      },
+      {
+        "text": "Reglamento de Inspecciones Tributarias de la SUNAT.",
+        "isCorrect": false,
+        "rationale": "La SUNAT administra la recaudación tributaria y aduanera, sin competencias en fiscalización de seguridad minera."
+      },
+      {
+        "text": "Ley Marco del Sistema Nacional de Gestión Ambiental N° 28245 únicamente.",
+        "isCorrect": false,
+        "rationale": "Esta norma establece el marco ambiental general del país, mientras que la seguridad ocupacional minera tiene su propio reglamento sectorial."
+      },
+      {
+        "text": "Norma Técnica de Salud NTS 021 del Ministerio de Salud.",
+        "isCorrect": false,
+        "rationale": "Aunque el MINSA emite pautas de salud pública, la actividad minera se rige prioritariamente por los decretos específicos del MINEM."
+      }
+    ],
+    "hint": "Identifique los decretos supremos sectoriales emitidos por el MINEM para regular la prevención de riesgos en operaciones mineras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes aplicaciones corresponden a casos reales de uso del Internet de las Cosas (IoT) en la gestión de operaciones mineras? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Monitoreo remoto en tiempo real del kilometraje y estado mecánico de maquinaria pesada.",
+        "isCorrect": true,
+        "rationale": "El IoT permite transmitir variables telemáticas de los vehículos desde la mina hacia centros de control centralizados."
+      },
+      {
+        "text": "Detección de fatiga y somnolencia en operadores mediante sensores integrados en cabina o dispositivos portátiles.",
+        "isCorrect": true,
+        "rationale": "Los dispositivos portátiles y sensores faciales conectados a la red emiten alertas tempranas al detectar signos de cansancio en los conductores."
+      },
+      {
+        "text": "Eliminación total de redes de comunicación de campo en socavón.",
+        "isCorrect": false,
+        "rationale": "El despliegue de IoT requiere indispensablemente el fortalecimiento de las redes de comunicación para transmitir los datos recopilados."
+      },
+      {
+        "text": "Monitoreo de niveles de oxígeno y alerta de picos de gases tóxicos en tiempo real en minería subterránea.",
+        "isCorrect": true,
+        "rationale": "Las redes de sensores de gases transmiten continuamente la calidad del aire en los frentes de trabajo para prevenir intoxicaciones."
+      },
+      {
+        "text": "Procesamiento físico manual de muestras geológicas en laboratorios externos sin conexión.",
+        "isCorrect": false,
+        "rationale": "El trabajo analítico manual aislado de las redes de datos no constituye una aplicación de conectividad IoT."
+      }
+    ],
+    "hint": "Recuerde qué dispositivos recaban datos del entorno u operadores y los transmiten a través de una red para la toma de decisiones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué solución tecnológica de la minería 4.0 permite optimizar el balance hídrico y reducir el consumo de agua fresca en procesos como la lixiviación?",
+    "opciones": [
+      {
+        "text": "Reemplazo de tuberías herméticas por canales abiertos de evaporación.",
+        "isCorrect": false,
+        "rationale": "Los canales abiertos aumentan las pérdidas del recurso por evaporación e infiltración en el terreno."
+      },
+      {
+        "text": "Instalación de sensores de calidad y nivel hídrico acoplados a sistemas analíticos de recirculación de agua.",
+        "isCorrect": true,
+        "rationale": "El monitoreo sensorial continuo acoplado a software de gestión permite reutilizar el agua del proceso y minimizar la captación fresca."
+      },
+      {
+        "text": "Uso exclusivo de agua embotellada para todas las operaciones de lavado de mineral.",
+        "isCorrect": false,
+        "rationale": "Esta medida no es factible a escala industrial ni resuelve la gestión sostenible de los efluentes en planta."
+      },
+      {
+        "text": "Eliminación de los monitoreos ambientales periódicos exigidos por el fiscalizador ambiental.",
+        "isCorrect": false,
+        "rationale": "Omitir las evaluaciones ambientales genera sanciones legales e impide detectar ineficiencias en el uso del agua."
+      },
+      {
+        "text": "Aumento indefinido de la presión de bombeo sin control de volumen.",
+        "isCorrect": false,
+        "rationale": "Incrementar el bombeo sin regulación aumenta el desperdicio de agua y eleva excesivamente los costos de energía."
+      }
+    ],
+    "hint": "Piense en la combinación de medición física en tiempo real y algoritmos para recircular los recursos en planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al evaluar la viabilidad de implementar tecnologías 4.0 en una unidad minera, ¿cuál es reconocido como uno de los principales desafíos económicos e infraestructura iniciales?",
+    "opciones": [
+      {
+        "text": "La prohibición legal del uso de sensores en el territorio nacional.",
+        "isCorrect": false,
+        "rationale": "La legislación promueve e incentiva el uso de tecnología para mejorar la seguridad e industrialización en la minería."
+      },
+      {
+        "text": "El alto costo de inversión inicial en infraestructura tecnológica, equipamiento y capacitación del personal.",
+        "isCorrect": true,
+        "rationale": "Adquirir sensores, desplegar redes de alta velocidad, comprar software especializado y entrenar al personal exige un desembolso de capital elevado al inicio."
+      },
+      {
+        "text": "La falta total de interés de las gerencias en incrementar la productividad operativa.",
+        "isCorrect": false,
+        "rationale": "Las gerencias mineras buscan constantemente estrategias para maximizar la productividad y optimizar sus costos."
+      },
+      {
+        "text": "La imposibilidad técnica de conectar dispositivos a redes de datos industriales.",
+        "isCorrect": false,
+        "rationale": "Existen soluciones avanzadas de conectividad industrial, satelital y redes 5G adaptadas para entornos mineros exigentes."
+      },
+      {
+        "text": "El exceso de personal calificado en ciencia de datos en el mercado minero actual.",
+        "isCorrect": false,
+        "rationale": "Actualmente existe una brecha de talento especializado en analítica de datos aplicada a operaciones mineras."
+      }
+    ],
+    "hint": "Enfoque su análisis en la barrera financiera inicial requerida para adquirir activos digitales y preparar al capital humano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un jefe de mantenimiento recibe un presupuesto de $100,000 y un plazo de 10 meses para desarrollar un sistema de mitigación de fallas. Si logra completar el sistema en 8 meses utilizando solo $90,000, ¿cómo se clasifica su gestión?",
+    "opciones": [
+      {
+        "text": "Eficaz pero ineficiente, por no haber utilizado la totalidad del presupuesto asignado.",
+        "isCorrect": false,
+        "rationale": "Alcanzar la meta empleando menos presupuesto y tiempo es la definición directa de eficiencia y no de ineficiencia."
+      },
+      {
+        "text": "Eficiente, ya que cumplió el objetivo alcanzando la meta con un menor uso de tiempo y recursos financieros.",
+        "isCorrect": true,
+        "rationale": "La eficiencia consiste en lograr los resultados planificados optimizando los recursos y reduciendo los tiempos fijados."
+      },
+      {
+        "text": "Deficiente, al haber alterado la programación financiera establecida originalmente por la gerencia.",
+        "isCorrect": false,
+        "rationale": "Generar ahorros de costo y tiempo dentro de los parámetros de calidad constituye un logro operativo valioso."
+      },
+      {
+        "text": "Puramente operativa, sin impacto alguno en la productividad global de la empresa.",
+        "isCorrect": false,
+        "rationale": "El ahorro de capital y la disponibilidad anticipada del sistema impactan favorablemente en la rentabilidad de la mina."
+      },
+      {
+        "text": "Incumplidora, debido a la desviación de los indicadores temporales estandarizados.",
+        "isCorrect": false,
+        "rationale": "Superar las metas entregando el proyecto antes de lo previsto mejora la competitividad de la organización."
+      }
+    ],
+    "hint": "Diferencie entre lograr la meta ajustada a los límites (eficacia) y lograrla optimizando costos y tiempos (eficiencia).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para convencer al directorio de aprobar un proyecto de digitalización de $1,000,000, ¿cuál es la presentación financiera más rigurosa que debe realizar el gestor del proyecto?",
+    "opciones": [
+      {
+        "text": "Mostrar únicamente los beneficios cualitativos sin presentar cifras ni flujos monetarios.",
+        "isCorrect": false,
+        "rationale": "Las decisiones de inversión a gran escala requieren un análisis cuantitativo que demuestre el retorno económico del capital."
+      },
+      {
+        "text": "Presentar un modelo financiero con periodo de retorno de inversión (ROI), análisis de sensibilidad y comparación frente a tasas de rendimiento bancario.",
+        "isCorrect": true,
+        "rationale": "Sustentar el proyecto con indicadores como el ROI y análisis de escenarios demuestra matemáticamente cuándo y cuánto capital recuperará la empresa."
+      },
+      {
+        "text": "Garantizar verbalmente que el dinero se recuperará en el primer mes de operación sin presentar sustento técnico.",
+        "isCorrect": false,
+        "rationale": "Ofrecer garantías infundadas sin un modelo financiero de respaldo compromete la credibilidad del gestor ante el directorio."
+      },
+      {
+        "text": "Solicitar la aprobación basándose exclusivamente en que la tecnología está de moda en el sector.",
+        "isCorrect": false,
+        "rationale": "Adoptar tecnología por moda sin justificar la rentabilidad operativa representa un riesgo no aceptable para la alta dirección."
+      },
+      {
+        "text": "Demostrar que el costo del proyecto se puede registrar como gasto administrativo no deducible.",
+        "isCorrect": false,
+        "rationale": "El registro contable del gasto no reemplaza la evaluación de viabilidad y rentabilidad económica de la inversión."
+      }
+    ],
+    "hint": "Considere qué métricas numéricas evalúan la rentabilidad del dinero en el tiempo y el tiempo necesario para recuperar el capital.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué metodologías o herramientas cuantitativas se emplean en la evaluación de riesgos financieros y logísticos para la toma de decisiones en la minería 4.0? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Simulación de Montecarlo para predecir variaciones de demanda e inventario.",
+        "isCorrect": true,
+        "rationale": "La simulación de Montecarlo ejecuta miles de iteraciones con variables aleatorias para estimar el comportamiento de inventarios y demanda."
+      },
+      {
+        "text": "Estimación del Valor en Riesgo (VaR) y análisis de sensibilidad de escenarios.",
+        "isCorrect": true,
+        "rationale": "El VaR y las pruebas de sensibilidad cuantifican la exposición a pérdidas económicas ante fluctuaciones del mercado u operaciones."
+      },
+      {
+        "text": "Registro analógico en cuadernos de obra sin respaldo digital.",
+        "isCorrect": false,
+        "rationale": "Los apuntes en papel no constituyen metodologías analíticas ni permiten modelar cuantitativamente el riesgo."
+      },
+      {
+        "text": "Evaluación del horizonte de inversión comparado con el costo de oportunidad del capital bancario.",
+        "isCorrect": true,
+        "rationale": "Comparar el rendimiento del proyecto frente a tasas de interés bancarias determina si la inversión genera valor sobre el costo del dinero."
+      },
+      {
+        "text": "Eliminación de los planes de contingencia operativos.",
+        "isCorrect": false,
+        "rationale": "Suprimir los planes de contingencia incrementa el riesgo operacional en lugar de medirlo o mitigarlo."
+      }
+    ],
+    "hint": "Seleccione las técnicas matemáticas e indicadores financieros utilizados para modelar escenarios inciertos y evaluar el costo de oportunidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la capacitación del personal minero para la gestión de la innovación, ¿cuál es el orden lógico de las etapas de la metodología Design Thinking explicada en el curso?",
+    "opciones": [
+      {
+        "text": "Prototipar -> Empatizar -> Implementar sin probar -> Evaluar.",
+        "isCorrect": false,
+        "rationale": "Construir un prototipo antes de comprender la necesidad del usuario invierte la secuencia metodológica de la innovación."
+      },
+      {
+        "text": "Identificar la necesidad -> Buscar información e involucrarse -> Proponer solución (prototipo) -> Probar en entorno real -> Recibir retroalimentación y corregir.",
+        "isCorrect": true,
+        "rationale": "Design Thinking es un ciclo centrado en comprender el problema, diseñar un prototipo, probarlo con usuarios y ajustar según la retroalimentación."
+      },
+      {
+        "text": "Vender el producto -> Identificar la falla -> Diseñar el prototipo -> Capacitar al personal.",
+        "isCorrect": false,
+        "rationale": "Comercializar una solución sin validación previa genera altas tasas de fallo e insatisfacción en los usuarios."
+      },
+      {
+        "text": "Redactar el manual -> Comprar equipos masivos -> Probar con usuarios -> Cancelar el proyecto.",
+        "isCorrect": false,
+        "rationale": "Comprar equipamiento a gran escala antes de probar el prototipo expone a la empresa a gastos innecesarios."
+      },
+      {
+        "text": "Ignorar la opinión del usuario -> Comercializar la solución -> Buscar el problema.",
+        "isCorrect": false,
+        "rationale": "Desestimar la retroalimentación del cliente o trabajador impide perfeccionar el producto y contradice la filosofía de la innovación."
+      }
+    ],
+    "hint": "Recuerde la secuencia iterativa que inicia comprendiendo la necesidad del usuario y termina refinando el prototipo tras probarlo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un ataque informático logra cifrar y secuestrar la base de datos del sistema de monitoreo de flotas de una mina, exigiendo un pago en criptomonedas para liberar la clave. ¿Qué tipo de amenaza cibernética se ha ejecutado?",
+    "opciones": [
+      {
+        "text": "Phishing publicitario mediante correo masivo sin afectación de archivos.",
+        "isCorrect": false,
+        "rationale": "El phishing busca engañar al usuario para robar credenciales, pero no cifra la infraestructura de datos para extorsión."
+      },
+      {
+        "text": "Ataque de Ransomware.",
+        "isCorrect": true,
+        "rationale": "El ransomware es un software malicioso que bloquea el acceso a archivos operativos mediante cifrado y exige un rescate financiero."
+      },
+      {
+        "text": "Desmagnetización física no autorizada de discos duros.",
+        "isCorrect": false,
+        "rationale": "La desmagnetización es un procedimiento físico de borrado definitivo y no un secuestro digital extorsivo."
+      },
+      {
+        "text": "Inserción accidental de un registro duplicado en la base de datos.",
+        "isCorrect": false,
+        "rationale": "Un error de duplicidad de datos representa una falla de validación de software y no un ciberataque extorsivo."
+      },
+      {
+        "text": "Actualización automática no programada del sistema operativo local.",
+        "isCorrect": false,
+        "rationale": "Las actualizaciones del sistema operativo son tareas de mantenimiento y no eventos de secuestro malicioso."
+      }
+    ],
+    "hint": "Piense en el término informático específico asociado al 'secuestro' de datos e información digital mediante cifrado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la norma internacional que establece los requisitos para estructurar e implementar un Sistema de Gestión de Seguridad de la Información (SGSI) en empresas mineras?",
+    "opciones": [
+      {
+        "text": "ISO 9001.",
+        "isCorrect": false,
+        "rationale": "La norma ISO 9001 regula los sistemas de gestión de la calidad en procesos industriales y de servicios."
+      },
+      {
+        "text": "ISO 27001.",
+        "isCorrect": true,
+        "rationale": "La ISO 27001 es el estándar internacional encargado de la seguridad de la información y protección de la infraestructura digital."
+      },
+      {
+        "text": "ISO 14001.",
+        "isCorrect": false,
+        "rationale": "La ISO 14001 especifica los requisitos para estructurar un sistema de gestión ambiental."
+      },
+      {
+        "text": "ISO 45001.",
+        "isCorrect": false,
+        "rationale": "La ISO 45001 establece los estándares internacionales para los sistemas de seguridad y salud en el trabajo."
+      },
+      {
+        "text": "ISO 50001.",
+        "isCorrect": false,
+        "rationale": "La ISO 50001 se enfoca en la gestión y optimización de la eficiencia energética."
+      }
+    ],
+    "hint": "Identifique la norma ISO orientada al resguardo de la confidencialidad, integridad y disponibilidad de los datos digitales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes constituyen medidas efectivas de mitigación de riesgos de ciberseguridad en la infraestructura de la minería 4.0? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Implementación de autenticación multifactor (MFA) y gestión estricta de accesos.",
+        "isCorrect": true,
+        "rationale": "Exigir múltiples credenciales para ingresar a los sistemas reduce significativamente la probabilidad de accesos no autorizados."
+      },
+      {
+        "text": "Segmentación de redes industriales e infraestructura de servidores dedicada.",
+        "isCorrect": true,
+        "rationale": "Dividir la red en zonas aisladas evita que un ciberataque en el área administrativa comprometa el control operacional de la planta."
+      },
+      {
+        "text": "Integración de algoritmos de IA y Machine Learning para la detección temprana de anomalías en el tráfico de red.",
+        "isCorrect": true,
+        "rationale": "Los modelos de aprendizaje automático analizan patrones inusuales en tiempo real para bloquear intrusiones maliciosas antes de que causen daños."
+      },
+      {
+        "text": "Publicación de claves corporativas en pizarras visibles de la sala de control.",
+        "isCorrect": false,
+        "rationale": "Exponer las contraseñas físicamente anula los controles de seguridad y vulnera la confidencialidad de la red."
+      },
+      {
+        "text": "Eliminación completa de los respaldos (backups) periódicos de las bases de datos.",
+        "isCorrect": false,
+        "rationale": "No contar con copias de respaldo impide restaurar la operación ante incidentes de secuestro de datos o fallas críticas."
+      }
+    ],
+    "hint": "Seleccione las buenas prácticas defensivas que aíslan redes, verifican identidades de usuarios y monitorean el tráfico mediante software inteligente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental explicada en el curso entre la robótica y la automatización en el entorno industrial minero?",
+    "opciones": [
+      {
+        "text": "La automatización utiliza únicamente energía eléctrica mientras que la robótica opera con combustibles fósiles.",
+        "isCorrect": false,
+        "rationale": "Tanto los robots como los sistemas de automatización utilizan principalmente energía eléctrica y electrónica de control."
+      },
+      {
+        "text": "La robótica involucra componentes mecánicos y electrónicos con movimiento y fuerza en tres ejes (X, Y, Z), mientras que la automatización se enfoca en agilizar y sistematizar tareas repetitivas.",
+        "isCorrect": true,
+        "rationale": "La robótica añade interacción física tridimensional y fuerza mecánica, mientras que la automatización optimiza el flujo analítico o mecánico de tareas sistemáticas."
+      },
+      {
+        "text": "La automatización no requiere programación de software mientras que la robótica es completamente analógica.",
+        "isCorrect": false,
+        "rationale": "Ambas disciplinas dependen indispensablemente de código de programación e integración de software."
+      },
+      {
+        "text": "La robótica solo se aplica a la gestión documental de oficina y la automatización al minado en socavón.",
+        "isCorrect": false,
+        "rationale": "La robótica física tiene su mayor aplicación en el trabajo pesado de planta y mina, no en la gestión documental."
+      },
+      {
+        "text": "Ambos conceptos son exactamente sinónimos operacionales y no poseen distinción técnica.",
+        "isCorrect": false,
+        "rationale": "Aunque están estrechamente relacionadas, representan conceptos distintos en cuanto al uso de fuerza tridimensional frente a la sistematización de procesos."
+      }
+    ],
+    "hint": "Considere la presencia de fuerza mecánica tridimensional (ejes X, Y, Z) en contraste con la ejecución sistemática de flujos de trabajo repetitivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el beneficio principal de implementar teleoperaciones (control remoto de maquinaria pesada mediante señal de red) en socavones de minería subterránea?",
+    "opciones": [
+      {
+        "text": "Aumentar el número de trabajadores expuestos en el frente de disparo.",
+        "isCorrect": false,
+        "rationale": "El objetivo prioritario de operar remotamente es retirar al personal de las áreas de alto peligro físico."
+      },
+      {
+        "text": "Mitigar el riesgo humano alejando al operador de la zona de peligro directo sin paralizar la extracción de mineral.",
+        "isCorrect": true,
+        "rationale": "Las teleoperaciones permiten controlar perforadoras o cargadores desde salas de mando seguras en superficie, protegiendo la vida del trabajador."
+      },
+      {
+        "text": "Reducir la velocidad de acarreo de mineral a la mitad para fines administrativos.",
+        "isCorrect": false,
+        "rationale": "La operación remota busca mantener o incrementar la tasa de producción garantizando condiciones de trabajo seguras."
+      },
+      {
+        "text": "Reemplazar las redes de datos industriales por señales analógicas no guiadas.",
+        "isCorrect": false,
+        "rationale": "Las teleoperaciones requieren infraestructura de red de alta velocidad y baja latencia para transmitir mandos e imágenes en tiempo real."
+      },
+      {
+        "text": "Anular la necesidad de realizar mantenimiento mecánico a los camiones de extracción.",
+        "isCorrect": false,
+        "rationale": "Los componentes mecánicos de los vehículos siguen requiriendo rutinas de mantenimiento preventivo independientemente de quién los conduzca."
+      }
+    ],
+    "hint": "Piense en la prevención de accidentes fatales al operar maquinaria desde un entorno seguro fuera del socavón.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En un sistema de instrumentación y monitoreo minero 4.0, ¿cuáles de las siguientes afirmaciones sobre los sensores inteligentes son correctas? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Absorben variables físicas del entorno (como humedad, temperatura o presión) y las convierten en señales eléctricas medibles.",
+        "isCorrect": true,
+        "rationale": "Los sensores operan como transductores que transforman magnitudes físicas en datos analógicos o digitales procesables."
+      },
+      {
+        "text": "Un sensor de proximidad ayuda a prevenir colisiones activando alertas al detectar personas u objetos en el perímetro del equipo.",
+        "isCorrect": true,
+        "rationale": "La medición de distancia mediante radar o ultrasonido emite avisos para evitar atropellos y choques en puntos ciegos."
+      },
+      {
+        "text": "Los sensores eliminan la necesidad de contar con redes de comunicación de datos.",
+        "isCorrect": false,
+        "rationale": "Los sensores generan datos que requieren obligatoriamente de infraestructura de red para ser transmitidos a los servidores de análisis."
+      },
+      {
+        "text": "Los sensores de calidad de aire permiten monitorear concentraciones de gases tóxicos en la atmósfera de socavón.",
+        "isCorrect": true,
+        "rationale": "La instrumentación ambiental mide partículas por millón de sustancias nocivas para activar la ventilación o evacuar áreas de riesgo."
+      },
+      {
+        "text": "Los sensores sustituyen completamente los procesos metalúrgicos de molienda y flotación.",
+        "isCorrect": false,
+        "rationale": "Los sensores recopilan y miden información; los procesos de transformación física del mineral requieren maquinaria metalúrgica dedicada."
+      }
+    ],
+    "hint": "Identifique las características transductoras de los sensores y cómo sus lecturas de cercanía o de atmósfera protegen la operación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el modelo del 'Prom de Película' enseñado en clase para interactuar eficazmente con inteligencia artificial (como DeepSeek o ChatGPT), ¿cuáles son los tres componentes esenciales que deben estructurarse en la instrucción?",
+    "opciones": [
+      {
+        "text": "Saludo formal, Despedida de cortesía y Firma digital.",
+        "isCorrect": false,
+        "rationale": "Las fórmulas de cortesía no aportan contexto técnico ni precisión funcional al modelo de lenguaje."
+      },
+      {
+        "text": "Protagonista (Rol o experto) + Contexto/Situación + Solicitud o instrucción concreta.",
+        "isCorrect": true,
+        "rationale": "Esta estructura asigna un rol profesional al modelo, le brinda el escenario del problema y especifica claramente el entregable requerido."
+      },
+      {
+        "text": "Código fuente + Algoritmo matemático + Lenguaje de programación.",
+        "isCorrect": false,
+        "rationale": "El prompt es una instrucción formulada en lenguaje natural y no requiere necesariamente código ejecutable para ser efectivo."
+      },
+      {
+        "text": "Título del proyecto + Presupuesto total + Lista de compras.",
+        "isCorrect": false,
+        "rationale": "Estos datos corresponden a la gestión de adquisiciones de una obra y no a la metodología de redacción de prompts."
+      },
+      {
+        "text": "Pregunta abierta + Opción múltiple + Clave de respuestas.",
+        "isCorrect": false,
+        "rationale": "Esa estructura corresponde al formato de evaluación pedagógica y no a la técnica de ingeniería de instrucciones."
+      }
+    ],
+    "hint": "Recuerde los tres elementos analógicos de una película: quién actúa (rol), cuál es la trama (escenario) y qué petición se realiza.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al utilizar la herramienta de inteligencia artificial BlackBox AI en análisis operativo, ¿qué ventaja diferencial ofrece la activación de la función `websearch`?",
+    "opciones": [
+      {
+        "text": "Limitar el procesamiento de respuestas únicamente a textos históricos de minería antigua.",
+        "isCorrect": false,
+        "rationale": "La búsqueda en la web expande el alcance a datos actuales de cualquier ámbito industrial y tecnológico."
+      },
+      {
+        "text": "Buscar y sintetizar información actualizada en tiempo real desde internet adjuntando las fuentes consultadas.",
+        "isCorrect": true,
+        "rationale": "La opción de búsqueda web permite al modelo consultar el estado presente de internet y citar las fuentes de información utilizadas."
+      },
+      {
+        "text": "Exigir la instalación física de un servidor exclusivo en las instalaciones de la mina.",
+        "isCorrect": false,
+        "rationale": "BlackBox AI se ejecuta directamente desde la nube a través de navegadores web sin requerir servidores locales dedicados."
+      },
+      {
+        "text": "Impedir la exportación de resultados a formatos estructurados como tablas.",
+        "isCorrect": false,
+        "rationale": "El sistema mantiene la capacidad de organizar y presentar respuestas en tablas o formato Markdown."
+      },
+      {
+        "text": "Procesar información únicamente en idioma chino mandarín sin opción de traducción.",
+        "isCorrect": false,
+        "rationale": "La plataforma comprende y redacta en múltiples idiomas, incluyendo español fluido."
+      }
+    ],
+    "hint": "Piense en la capacidad de acceder a datos de eventos y normas ocurridos hoy en la red global frente a modelos con fecha de corte cerrada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿De qué manera la visión por computadora (procesamiento de imágenes con IA) contribuye al control de procesos y la seguridad en minería? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Detección automática de material o roca no deseada en fajas transportadoras mediante cámaras entrenadas.",
+        "isCorrect": true,
+        "rationale": "Los modelos visuales identifican variaciones de color, textura y forma en la faja para separar el material no conforme en tiempo real."
+      },
+      {
+        "text": "Inspección visual remota de zonas de difícil acceso o componentes mecánicos desgastados.",
+        "isCorrect": true,
+        "rationale": "El análisis de imágenes capturadas por drones o cámaras fijas permite auditar estructuras sin exponer a inspectores humanos."
+      },
+      {
+        "text": "Generación de emisión de radiación ionizante en el área de descanso de los trabajadores.",
+        "isCorrect": false,
+        "rationale": "Las cámaras ópticas de visión por computadora captan luz visible e infrarroja estándar, sin emitir radiaciones nocivas."
+      },
+      {
+        "text": "Monitoreo por video analítico para verificar el uso correcto de EPP e identificar actos inseguros.",
+        "isCorrect": true,
+        "rationale": "Los sistemas de analítica de video detectan en tiempo real la ausencia de cascos o chalecos, alertando al área de prevención."
+      },
+      {
+        "text": "Impresión tridimensional instantánea de repuestos metálicos masivos.",
+        "isCorrect": false,
+        "rationale": "La visión por computadora procesa datos ópticos; la fabricación física de repuestos corresponde a la manufactura aditiva."
+      }
+    ],
+    "hint": "Elija las opciones donde el análisis de video e imágenes digitales automatiza el reconocimiento de objetos, desvíos de seguridad o fallas en fajas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En un frente operativo donde los supervisores registran eventos y paradas de planta manualmente en cuadernos de papel, ¿cuál es el procedimiento eficiente para digitalizar dicha información según las herramientas de la minería 4.0?",
+    "opciones": [
+      {
+        "text": "Eliminar los registros en papel y reiniciar la toma de datos omitiendo lo ocurrido.",
+        "isCorrect": false,
+        "rationale": "Desechar la información física elimina el historial de fallas necesario para gestionar el mantenimiento de la planta."
+      },
+      {
+        "text": "Aplicar procesamiento de imágenes u OCR asistido por IA para extraer el texto escrito a mano y convertirlo automáticamente en tablas de datos digitales.",
+        "isCorrect": true,
+        "rationale": "El reconocimiento óptico de caracteres (OCR) con IA permite digitalizar manuscritos fotografiados e integrarlos directamente a bases de datos estructuradas."
+      },
+      {
+        "text": "Contratar un equipo permanente de 50 digitadores para la transcripción manual cada noche.",
+        "isCorrect": false,
+        "rationale": "La transcripción manual masiva incrementa los costos fijos de nómina y mantiene un elevado riesgo de error de digitación."
+      },
+      {
+        "text": "Guardar las fotografías de las hojas en carpetas personales de los supervisores sin procesar su contenido.",
+        "isCorrect": false,
+        "rationale": "Almacenar imágenes sin extraer su texto impide realizar consultas, análisis estadísticos o tableros de control."
+      },
+      {
+        "text": "Prohibir el registro de paradas de planta para evitar acumulación de documentos.",
+        "isCorrect": false,
+        "rationale": "Omitir el reporte de incidentes elimina la visibilidad de los problemas y paraliza la gestión de mantenimiento preventivo."
+      }
+    ],
+    "hint": "Considere la tecnología que lee caracteres manuscritos desde una imagen fotográfica y los transforma en texto digital estructurado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la arquitectura de datos e integración de sistemas de una mina digital, ¿qué define el término 'pipeline de datos'?",
+    "opciones": [
+      {
+        "text": "Una red de tuberías de acero por donde se transporta el concentrado de mineral mediante bombeo.",
+        "isCorrect": false,
+        "rationale": "Esa definición describe un concentraducto o mineroducto físico, no una estructura analítica de software."
+      },
+      {
+        "text": "Una arquitectura automatizada que define el flujo continuo, recolección, transformación y traslado de datos desde los sensores hasta los sistemas analíticos.",
+        "isCorrect": true,
+        "rationale": "Un pipeline de datos es la secuencia automatizada de procesos que extrae datos de diversas fuentes, los transforma y los entrega listos para análisis."
+      },
+      {
+        "text": "Un tendido de cables de alta tensión que alimenta de energía eléctrica a los camiones autónomos.",
+        "isCorrect": false,
+        "rationale": "Las líneas eléctricas suministran potencia, pero no constituyen flujos de información analítica de datos."
+      },
+      {
+        "text": "Un programa informático destinado únicamente al diseño geométrico de planos topográficos en 2D.",
+        "isCorrect": false,
+        "rationale": "Los programas CAD se encargan del dibujo vectorial, concepto distinto al flujo continuo e integración de datos."
+      },
+      {
+        "text": "Una plataforma de mensajería instantánea utilizada exclusivamente por el personal ejecutivo.",
+        "isCorrect": false,
+        "rationale": "Las herramientas de comunicación corporativa no cumplen la función de arquitecturas de procesamiento y flujo de datos."
+      }
+    ],
+    "hint": "Piense en la 'tubería digital' por la que viaja la información procesada desde el sensor hasta los tableros de control.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de un sistema SCADA supervisando la sala de control de una operación minera?",
+    "opciones": [
+      {
+        "text": "Calcular y depositar mensualmente la planilla de pago de los trabajadores.",
+        "isCorrect": false,
+        "rationale": "La gestión de nóminas es una tarea administrativa ejecutada por los sistemas ERP de gestión humana."
+      },
+      {
+        "text": "Presentar una interfaz gráfica en tiempo real que representa el flujo completo del proceso industrial, permitiendo monitorear y controlar variables operativas.",
+        "isCorrect": true,
+        "rationale": "El sistema SCADA recopila datos de campo y los muestra esquemáticamente en pantallas de control para supervisar la planta en tiempo real."
+      },
+      {
+        "text": "Proyectar estados financieros y rendimientos de acciones en mercados internacionales.",
+        "isCorrect": false,
+        "rationale": "Las proyecciones bursátiles pertenecen a la analítica financiera corporativa y no al control directo del proceso productivo en mina."
+      },
+      {
+        "text": "Sustituir la red de datos industrial por enlaces de comunicación por radiofrecuencia analógica.",
+        "isCorrect": false,
+        "rationale": "Los sistemas SCADA modernos se integran con redes digitales de alta velocidad para actualizar estados de proceso instantáneamente."
+      },
+      {
+        "text": "Gestionar la reserva de boletos aéreos y hospedajes para visitantes técnicos.",
+        "isCorrect": false,
+        "rationale": "Las reservas logísticas de viajes son gestionadas por el área administrativa y no por la sala de control de procesos."
+      }
+    ],
+    "hint": "Asocie el término con el esquema visual en pantalla que permite a los operadores ver y regular el estado de las válvulas, motores y fajas de la planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el caso práctico de mantenimiento en camiones de acarreo (como el analizado en la minera Cerro Verde), ¿cuáles son beneficios directos del uso de Machine Learning y sensores integrados? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Reducción aproximada del 20% en los costos de mantenimiento correctivo al predecir averías imprevistas.",
+        "isCorrect": true,
+        "rationale": "Identificar patrones anómalos antes de que ocurra la rotura evita reparaciones catastróficas reduciendo los costos correctivos."
+      },
+      {
+        "text": "Mayor disponibilidad operativa de la flota de maquinaria pesada.",
+        "isCorrect": true,
+        "rationale": "Planificar intervenciones preventivas breves evita que los camiones permanezcan inactivos durante semanas por fallas graves."
+      },
+      {
+        "text": "Análisis continuo de variables históricas como temperatura, presión de motor y niveles de vibración.",
+        "isCorrect": true,
+        "rationale": "Los modelos predictivos se nutren de datos sensoriales de vibración y temperatura para diagnosticar la salud mecánica de los activos."
+      },
+      {
+        "text": "Obligatoriedad de detener la planta concentradora durante 15 días seguidos cada mes.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento predictivo busca reducir la duración y frecuencia de las paradas no programadas de planta."
+      },
+      {
+        "text": "Eliminación de los sistemas hidráulicos de todos los equipos de la mina.",
+        "isCorrect": false,
+        "rationale": "Los vehículos de gran minería requieren fundamentalmente de sistemas hidráulicos para operar la dirección y elevación de tolvas."
+      }
+    ],
+    "hint": "Seleccione las ventajas que relacionan la lectura de temperatura/vibraciones con la reducción de paradas no planificadas y menores costos de reparación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera la analítica de datos masivos (Big Data) permitió optimizar el consumo de energía eléctrica en las operaciones de planta?",
+    "opciones": [
+      {
+        "text": "Desconectando completamente la ventilación en los frentes de socavón durante la jornada laboral.",
+        "isCorrect": false,
+        "rationale": "Apagar la ventilación en zonas subterráneas activas expone al personal a atmósferas deficientes en oxígeno y acumulación de gases."
+      },
+      {
+        "text": "Identificando picos y valles de consumo para reorganizar y sincronizar pausas operativas, evitando sobrecostos por máxima demanda en horas punta.",
+        "isCorrect": true,
+        "rationale": "Analizar la curva de consumo permite coordinar paradas operativas durante los periodos de tarifa eléctrica más alta, reduciendo la facturación energéticas."
+      },
+      {
+        "text": "Sustituyendo los motores eléctricos de planta por motores diésel en recintos cerrados.",
+        "isCorrect": false,
+        "rationale": "Aumentar la combustión interna en recintos cerrados incrementa los gases nocivos y empeora la huella de carbono."
+      },
+      {
+        "text": "Cancelando el contrato de suministro eléctrico para operar exclusivamente con baterías de linterna.",
+        "isCorrect": false,
+        "rationale": "Las baterías portátiles carecen de la capacidad industrial requerida para alimentar molinos o chancadoras de gran minería."
+      },
+      {
+        "text": "Haciendo funcionar los molinos continuamente sin carga de mineral para no gastar energía de arranque.",
+        "isCorrect": false,
+        "rationale": "Operar molinos sin carga consume energía masivamente sin producir concentrado, desgastando inútilmente los componentes."
+      }
+    ],
+    "hint": "Considere cómo el estudio analítico del perfil de demanda eléctrica ayuda a planificar las pausas de la maquinaria fuera de las horas con tarifas punta elevadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-25",
+    "diplomado": "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al configurar las 'Instrucciones Personalizadas' (Custom Instructions) en un modelo de lenguaje para la gestión minera, ¿qué parámetros es recomendable especificar para asegurar un alto rigor técnico? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "El rol profesional del usuario y su área de especialización (ej. Ingeniero de Minas, Jefe de Seguridad o Analista de Datos).",
+        "isCorrect": true,
+        "rationale": "Definir el perfil profesional permite que la IA calibre el nivel técnico y la terminología de las respuestas entregadas."
+      },
+      {
+        "text": "El estilo, tono y estructura esperada en los entregables (ej. enfoque científico, lenguaje preciso y tablas organizadas).",
+        "isCorrect": true,
+        "rationale": "Indicar la estructura requerida asegura que el modelo entregue reportes y esquemas analíticos listos para uso ejecutivo."
+      },
+      {
+        "text": "La exigencia de fundamentar las respuestas en normas tecnicas, marcos legales o fuentes verídicas y comprobables.",
+        "isCorrect": true,
+        "rationale": "Solicitar respaldo normativo u oficial reduce significativamente el riesgo de que la IA genere respuestas imprecisas o inventadas."
+      },
+      {
+        "text": "La orden de redactar todos los informes en forma de cuentos informales sin datos numéricos.",
+        "isCorrect": false,
+        "rationale": "Utilizar estilos literarios informales invalida la utilidad técnica requerida para la toma de decisiones en minería."
+      },
+      {
+        "text": "Restringir la extensión de las respuestas exclusivamente a saludos breves sin brindar análisis.",
+        "isCorrect": false,
+        "rationale": "Omitir las explicaciones técnicas impide obtener los diagnósticos necesarios para la gestión operativa."
+      }
+    ],
+    "hint": "Elija los ajustes de configuración que definen el rol del usuario, el rigor científico solicitado y el formato técnico deseado.",
+    "activo": true
+  }
+]

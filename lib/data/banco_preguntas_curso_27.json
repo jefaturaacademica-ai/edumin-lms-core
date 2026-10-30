@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál fue el invento tecnológico fundamental que impulsó el desarrollo de la Tercera Revolución Industrial?",
+    "opciones": [
+      {
+        "text": "El transistor y el desarrollo de las computadoras digitales.",
+        "isCorrect": true,
+        "rationale": "La invención del transistor permitió la creación de la electrónica digital, la computación accesible y la primera ola de automatización industrial mediante controladores lógicos programables."
+      },
+      {
+        "text": "La máquina de vapor de James Watt.",
+        "isCorrect": false,
+        "rationale": "La máquina de vapor impulsó la Primera Revolución Industrial mediante la mecanización del trabajo."
+      },
+      {
+        "text": "El generador y motor eléctrico de Michael Faraday.",
+        "isCorrect": false,
+        "rationale": "Las máquinas eléctricas y el establecimiento de las redes de energía desencadenaron la Segunda Revolución Industrial."
+      },
+      {
+        "text": "El regulador centrífugo o gobernador de velocidad.",
+        "isCorrect": false,
+        "rationale": "El regulador centrífugo fue un dispositivo mecánico para estabilizar la velocidad del vapor en la Primera Revolución Industrial."
+      },
+      {
+        "text": "Los algoritmos de Inteligencia Artificial en la nube.",
+        "isCorrect": false,
+        "rationale": "La Inteligencia Artificial y la computación masiva en la nube forman parte de la Cuarta Revolución Industrial."
+      }
+    ],
+    "hint": "Piensa en el componente semiconductor básico que reemplazó a los tubos de vacío y permitió crear circuitos integrados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En la pirámide de la automatización industrial, ¿cuáles de los siguientes componentes pertenecen directamente al nivel inferior de campo o instrumentación?",
+    "opciones": [
+      {
+        "text": "Sensores de temperatura, presión y nivel.",
+        "isCorrect": true,
+        "rationale": "Los sensores miden las variables físicas directamente del proceso y pertenecen a la base de la pirámide."
+      },
+      {
+        "text": "Actuadores como válvulas de control y motores.",
+        "isCorrect": true,
+        "rationale": "Los actuadores son los elementos finales que modifican las condiciones físicas del proceso en la capa más baja de la pirámide."
+      },
+      {
+        "text": "Controladores lógicos programables (PLC).",
+        "isCorrect": false,
+        "rationale": "Los PLC se ubican en la capa inmediatamente superior, correspondiente al nivel de control."
+      },
+      {
+        "text": "Sistemas de planificación de recursos empresariales (ERP).",
+        "isCorrect": false,
+        "rationale": "El ERP ocupa la cúspide de la pirámide en el nivel de gestión empresarial e información corporativa."
+      },
+      {
+        "text": "Pantallas de interfaz hombre-máquina (HMI).",
+        "isCorrect": false,
+        "rationale": "Los HMI y sistemas SCADA pertenecen al nivel de supervisión, por encima de los controladores."
+      }
+    ],
+    "hint": "Busca únicamente aquellos dispositivos físicos encargados de medir las variables o actuar directamente sobre la planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la automatización 4.0, ¿qué representa un \"gemelo digital\" (*digital twin*)?",
+    "opciones": [
+      {
+        "text": "Un modelo informático o matemático del equipo físico que simula su comportamiento en tiempo real para predecir fallas.",
+        "isCorrect": true,
+        "rationale": "El gemelo digital replica virtualmente las variables de operación de la máquina física para adelantar escenarios de mantenimiento predictivo."
+      },
+      {
+        "text": "Un segundo equipo físico de respaldo instalado en la misma planta para sustituir al principal si este falla.",
+        "isCorrect": false,
+        "rationale": "Eso describe una redundancia de hardware físico, no un modelo digital de simulación informática."
+      },
+      {
+        "text": "Una copia de seguridad diaria de la base de datos de contabilidad y planillas de la empresa.",
+        "isCorrect": false,
+        "rationale": "Esa acción corresponde a un *backup* o respaldo de datos administrativos, no a la modelación de activos físicos."
+      },
+      {
+        "text": "Un visor de realidad virtual que solo sirve para entrenar a conductores novatos de volquetes.",
+        "isCorrect": false,
+        "rationale": "Aunque se puede integrar con realidad virtual, el gemelo digital es un modelo analítico de comportamiento operativo del activo."
+      },
+      {
+        "text": "Un protocolo de comunicación física cableada entre el sensor y la tarjeta del PLC.",
+        "isCorrect": false,
+        "rationale": "El gemelo digital es una solución de software y analítica, no un canal o cable de comunicación."
+      }
+    ],
+    "hint": "Se trata de un hermano virtual basado en datos que 'vive' en la computadora y simula el estado futuro del equipo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el nivel superior en la pirámide de la automatización tradicional que integra la información de producción con la gestión financiera y logística?",
+    "opciones": [
+      {
+        "text": "Nivel de gestión / Sistema ERP.",
+        "isCorrect": true,
+        "rationale": "El nivel ERP centraliza la planificación estratégica, conectando la producción con los departamentos de finanzas, compras y ventas."
+      },
+      {
+        "text": "Nivel de control / PLC.",
+        "isCorrect": false,
+        "rationale": "El nivel de control ejecuta las decisiones de automatización en tiempo real mediante autómatas programables."
+      },
+      {
+        "text": "Nivel de instrumentación / Campo.",
+        "isCorrect": false,
+        "rationale": "El nivel de campo recoge las señales físicas y es la capa inferior de la pirámide."
+      },
+      {
+        "text": "Nivel de supervisión / SCADA.",
+        "isCorrect": false,
+        "rationale": "El nivel SCADA supervisa el proceso en sala de control pero no gestiona los aspectos financieros ni comerciales corporativos."
+      },
+      {
+        "text": "Nivel de ejecución de manufactura / MES.",
+        "isCorrect": false,
+        "rationale": "El sistema MES gestiona la producción en planta, pero se ubica un escalón por debajo del nivel de gestión estratégica ERP."
+      }
+    ],
+    "hint": "Es la cima de la pirámide en la que se ejecutan programas corporativos consolidados como SAP.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos constituyen beneficios directos de la adopción de la automatización 4.0 en la industria minera?",
+    "opciones": [
+      {
+        "text": "Ahorro económico mediante la transición al mantenimiento predictivo.",
+        "isCorrect": true,
+        "rationale": "Anticiparse a las averías mediante analítica de datos evita paradas no programadas en equipos de alto costo."
+      },
+      {
+        "text": "Mejora de la seguridad laboral al alejar al personal de áreas peligrosas.",
+        "isCorrect": true,
+        "rationale": "La teleoperación y los vehículos autónomos reducen la exposición directa del trabajador a riesgos operativos."
+      },
+      {
+        "text": "Optimización de la eficiencia en el uso de insumos y energía.",
+        "isCorrect": true,
+        "rationale": "Los algoritmos inteligentes ajustan de forma precisa el consumo eléctrico y químico en procesos como la concentración."
+      },
+      {
+        "text": "Eliminación absoluta de cualquier fallo mecánico o eléctrico en las máquinas.",
+        "isCorrect": false,
+        "rationale": "Toda maquinaria física está sujeta al desgaste natural y eventuales fallas; la automatización ayuda a predecir, no a anular la física."
+      },
+      {
+        "text": "Reemplazo de los canales digitales por lecturas exclusivamente analógicas y manuales.",
+        "isCorrect": false,
+        "rationale": "La Industria 4.0 busca profundizar la digitalización y la conectividad, no retroceder a métodos analógicos aislados."
+      }
+    ],
+    "hint": "Considera las ventajas vinculadas con la reducción de costos no planificados, la protección humana y el rendimiento de recursos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué innovación introdujo James Watt en la máquina de vapor que constituyó un hito inicial en la automatización de procesos industriales?",
+    "opciones": [
+      {
+        "text": "El regulador centrífugo para controlar mecánicamente la velocidad de giro constante.",
+        "isCorrect": true,
+        "rationale": "Este mecanismo autoajustaba la válvula de vapor según la velocidad de rotación, haciendo innecesaria la intervención continua de un operador humano."
+      },
+      {
+        "text": "El primer circuito integrado de transistores.",
+        "isCorrect": false,
+        "rationale": "Los transistores y circuitos integrados fueron desarrollados a mediados del siglo XX, muy posterior a la época de Watt."
+      },
+      {
+        "text": "El lenguaje de programación en diagrama de contactos (*Ladder*).",
+        "isCorrect": false,
+        "rationale": "La programación en escalón surgió con la invención de los controladores lógicos programables (PLC) en la tercera revolución."
+      },
+      {
+        "text": "La red de comunicación industrial de alta velocidad mediante fibra óptica.",
+        "isCorrect": false,
+        "rationale": "La fibra óptica y las redes digitales de comunicación son tecnologías de finales del siglo XX."
+      },
+      {
+        "text": "La invención del motor de inducción alimentado por corriente alterna.",
+        "isCorrect": false,
+        "rationale": "El desarrollo del motor eléctrico de corriente alterna corresponde a la Segunda Revolución Industrial con aportes de Faraday y Tesla."
+      }
+    ],
+    "hint": "Piensa en el mecanismo de esferas metálicas que giraban por fuerza centrífuga para regular el flujo del gas o vapor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tecnología de detección remota por haz de luz enfocado se utiliza en drones para realizar el cartografiado y monitorear la estabilidad de taludes en minería a tajo abierto?",
+    "opciones": [
+      {
+        "text": "LiDAR.",
+        "isCorrect": true,
+        "rationale": "El sistema LiDAR emite pulsos de luz láser para medir distancias con alta precisión y crear mapas tridimensionales de las superficies de terreno."
+      },
+      {
+        "text": "Bluetooth de baja energía.",
+        "isCorrect": false,
+        "rationale": "Bluetooth es un protocolo de red inalámbrica de corto alcance no diseñado para escaneo cartográfico topográfico."
+      },
+      {
+        "text": "Redes mesh de 900 MHz.",
+        "isCorrect": false,
+        "rationale": "Las redes mesh son infraestructuras de comunicación para enlace de datos, no dispositivos de emisión de imágenes ni escaneo."
+      },
+      {
+        "text": "Sensores térmicos resistivos Pt100.",
+        "isCorrect": false,
+        "rationale": "Las sondas Pt100 son sensores mecánicos/eléctricos de contacto usados para medir temperatura de fluidos o sólidos."
+      },
+      {
+        "text": "Transmisores de modulación por amplitud AM.",
+        "isCorrect": false,
+        "rationale": "La modulación AM es una técnica analógica para la transmisión de ondas de radio de audio, sin aplicaciones en medición óptica tridimensional."
+      }
+    ],
+    "hint": "Sus siglas corresponden a la detección y rango por luz (*Light Detection and Ranging*).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Entre las siguientes opciones, ¿cuáles representan ventajas operativas de la teleoperación de camiones y maquinaria pesada en la minería?",
+    "opciones": [
+      {
+        "text": "Protección de los operadores al removerlos físicamente del frente de trabajo de alto riesgo.",
+        "isCorrect": true,
+        "rationale": "Manejar la maquinaria desde salas de control distantes elimina la exposición directa a volcaduras, polvo o derrumbes."
+      },
+      {
+        "text": "Posibilidad de monitoreo y soporte simultáneo por parte de supervisores en centros de control urbanos.",
+        "isCorrect": true,
+        "rationale": "Las salas centralizadas permiten que un equipo experimentado supervise de cerca el desempeño de varios conductores en tiempo real."
+      },
+      {
+        "text": "Mayor flexibilidad en los relevos de turno y reducción de la fatiga del conductor.",
+        "isCorrect": true,
+        "rationale": "El entorno ergonómico de una sala remota mejora el confort del personal y facilita los cambios inmediatos de operador."
+      },
+      {
+        "text": "Eliminación total de la necesidad de redes de telecomunicaciones en el yacimiento.",
+        "isCorrect": false,
+        "rationale": "Al contrario, la teleoperación requiere una infraestructura de conectividad de ultra baja latencia extremadamente robusta."
+      },
+      {
+        "text": "Garantía absoluta de que el equipo nunca sufrirá ningún desgaste mecánico.",
+        "isCorrect": false,
+        "rationale": "El desgaste del chasis, neumáticos o motor del vehículo sigue ocurriendo al margen del lugar desde donde se envíen las órdenes."
+      }
+    ],
+    "hint": "Piensa en el traslado del chofer desde una cabina ruidosa y peligrosa a un escritorio con pantallas en la ciudad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué proceso clave de la planta concentradora se utiliza el procesamiento de imágenes e Inteligencia Artificial para optimizar la dosificación de reactivos y el tamaño de burbuja?",
+    "opciones": [
+      {
+        "text": "Proceso de flotación de mineral.",
+        "isCorrect": true,
+        "rationale": "El monitoreo por visión artificial de la espuma de flotación ajusta automáticamente la adición de reactivos químicos para aumentar la ley de concentrado."
+      },
+      {
+        "text": "Chancado primario de rocas secas.",
+        "isCorrect": false,
+        "rationale": "El chancado primario es una etapa puramente mecánica de reducción de tamaño donde no se generan burbujas ni espuma química."
+      },
+      {
+        "text": "Espesado y filtrado de relaves.",
+        "isCorrect": false,
+        "rationale": "Si bien el espesado utiliza floculantes, el control estricto de dosificación por burbujeo es característico de las celdas de flotación."
+      },
+      {
+        "text": "Mantenimiento preventivo de llantas de volquetes.",
+        "isCorrect": false,
+        "rationale": "Esta es una tarea mecánica del taller de acarreo y no un proceso químico de la planta concentradora."
+      },
+      {
+        "text": "Fundición y moldeo de anodos de cobre.",
+        "isCorrect": false,
+        "rationale": "La fundición trabaja con metal fundido a alta temperatura en hornos y no involucra mezclas acuosas de reacción por burbujas."
+      }
+    ],
+    "hint": "Es la etapa en la que el mineral útil se adhiere a las burbujas que ascienden a la superficie de celdas especializadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere el término sistemas o equipos *Legacy* en el contexto de la integración hacia la Industria 4.0?",
+    "opciones": [
+      {
+        "text": "A los equipos o sistemas antiguos heredados que aún operan pero carecen de conectividad digital nativa.",
+        "isCorrect": true,
+        "rationale": "Los activos *Legacy* son máquinas funcionales de generaciones previas cuyo acople a arquitecturas modernas de IoT resulta complejo o costoso."
+      },
+      {
+        "text": "A los sistemas operativos creados exclusivamente para la nube que se actualizan automáticamente.",
+        "isCorrect": false,
+        "rationale": "Esos corresponden a sistemas modernos nativos de la nube (*cloud-native*), exactamente lo opuesto a un sistema heredado."
+      },
+      {
+        "text": "A las patentes de software libres que no requieren el pago de licencias.",
+        "isCorrect": false,
+        "rationale": "El término *Legacy* se refiere al ciclo de vida y antigüedad de la tecnología instalada, no a su modelo de licencia comercial."
+      },
+      {
+        "text": "A las computadoras portátiles asignadas a los gerentes de logística.",
+        "isCorrect": false,
+        "rationale": "Esa denominación corresponde a dispositivos de usuario de TI, no a la categoría tecnológica de activos industriales en planta."
+      },
+      {
+        "text": "A las redes satelitales instaladas para dar servicio de internet a los campamentos.",
+        "isCorrect": false,
+        "rationale": "La infraestructura satelital es un canal de telecomunicaciones y no un sistema o activo heredado de proceso."
+      }
+    ],
+    "hint": "Hace referencia a las tecnologías de 'vieja generación' que siguen funcionando en la mina pero son difíciles de conectar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes corresponden a amenazas directas a la ciberseguridad industrial cuando se interconectan las redes de operaciones (OT) con internet?",
+    "opciones": [
+      {
+        "text": "Secuestro de datos o extorsión por *ransomware* que paralice la planta.",
+        "isCorrect": true,
+        "rationale": "El cifrado malicioso de servidores paraliza la toma de decisiones y puede detener los sistemas de control de proceso."
+      },
+      {
+        "text": "Sabotaje o alteración no autorizada de las consignas de trabajo en los actuadores.",
+        "isCorrect": true,
+        "rationale": "Infiltrarse en la red de operaciones permite modificar variables críticas provocando fallas físicas en los equipos o accidentes."
+      },
+      {
+        "text": "Robo y fuga de información técnica o estratégica del yacimiento.",
+        "isCorrect": true,
+        "rationale": "La extracción no autorizada de mapas, leyes de mineral o datos operativos perjudica la ventaja competitiva de la empresa."
+      },
+      {
+        "text": "Falla mecánica inmediata en las ballestas y muelles de la suspensión de los camiones.",
+        "isCorrect": false,
+        "rationale": "Las fallas mecánicas por carga no son provocadas por ciberataques informáticos a las redes de datos."
+      },
+      {
+        "text": "Pérdida súbita de la ley de mineral en el yacimiento subterráneo.",
+        "isCorrect": false,
+        "rationale": "La concentración geológica del mineral es una propiedad física natural que no puede ser alterada por código de software."
+      }
+    ],
+    "hint": "Piensa en ataques informáticos dirigidos a encriptar información, intervenir en los mandos de control o filtrar datos confidenciales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué constelación de satélites de órbita baja se menciona como una alternativa para solventar la falta de conectividad en zonas mineras geográficamente aisladas?",
+    "opciones": [
+      {
+        "text": "Starlink.",
+        "isCorrect": true,
+        "rationale": "La red de satélites LEO de Starlink ofrece enlaces de banda ancha y baja latencia en lugares remotos donde no llega la fibra óptica."
+      },
+      {
+        "text": "Profibus DP.",
+        "isCorrect": false,
+        "rationale": "Profibus DP es un protocolo de red industrial cableado de campo, no un sistema de telecomunicación satelital."
+      },
+      {
+        "text": "Modbus RTU.",
+        "isCorrect": false,
+        "rationale": "Modbus RTU es un protocolo de comunicación serie para equipos industriales y no una red satelital."
+      },
+      {
+        "text": "CANbus.",
+        "isCorrect": false,
+        "rationale": "CANbus es un bus de comunicación usado internamente en vehículos y maquinaria pesada."
+      },
+      {
+        "text": "AS-Interface.",
+        "isCorrect": false,
+        "rationale": "AS-Interface es un bus de campo pensado para la interconexión sencilla de actuadores y sensores discretos."
+      }
+    ],
+    "hint": "Es la red comercial desplegada por la empresa SpaceX que utiliza miles de pequeños satélites en órbita.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el significado formal del acrónimo SCADA en la ingeniería de automatización?",
+    "opciones": [
+      {
+        "text": "Supervisory Control and Data Acquisition.",
+        "isCorrect": true,
+        "rationale": "SCADA alude al control supervisorio y adquisición de datos, la arquitectura clave para capturar variables y operar procesos a distancia."
+      },
+      {
+        "text": "System Configuration and Digital Automation.",
+        "isCorrect": false,
+        "rationale": "Aunque usa automatización digital, el acrónimo correcto enfatiza la supervisión y la adquisición de datos."
+      },
+      {
+        "text": "Safety Control and Direct Analysis.",
+        "isCorrect": false,
+        "rationale": "Si bien contribuye a la seguridad operacional, la 'S' deviene de la función 'Supervisoria'."
+      },
+      {
+        "text": "Standard Communication and Data Architecture.",
+        "isCorrect": false,
+        "rationale": "Esta combinación de palabras inventadas no corresponde a las siglas técnicas estandarizadas internacionalmente."
+      },
+      {
+        "text": "Sequential Calculation and Digital Adjustment.",
+        "isCorrect": false,
+        "rationale": "Esta terminología no describe el concepto de supervisión centralizada de salas de control."
+      }
+    ],
+    "hint": "Traducción al español de 'Control Supervisorio y Adquisición de Datos'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una ventaja técnica fundamental del estándar de comunicación OPC UA respecto al estándar OPC DA tradicional?",
+    "opciones": [
+      {
+        "text": "OPC UA es multiplataforma e incorpora capas avanzadas de ciberseguridad sin depender de Windows OLE/DCOM.",
+        "isCorrect": true,
+        "rationale": "OPC UA puede ejecutarse en Linux, sistemas embebidos o la nube con encriptación nativa, superando las limitaciones de Windows del antiguo OPC DA."
+      },
+      {
+        "text": "OPC DA requiere obligatoriamente fibra óptica mientras que OPC UA solo funciona con ondas de radio AM.",
+        "isCorrect": false,
+        "rationale": "Ambos estándares son independientes del medio físico de transmisión subyacente y operan sobre capas de red de datos."
+      },
+      {
+        "text": "OPC UA elimina totalmente la necesidad de utilizar bases de datos en los servidores de planta.",
+        "isCorrect": false,
+        "rationale": "OPC UA estructura el intercambio de datos entre clientes y servidores, pero no invalida el almacenamiento en bases de datos."
+      },
+      {
+        "text": "OPC DA es el único capaz de transmitir señales desde sensores de temperatura y presión.",
+        "isCorrect": false,
+        "rationale": "Ambos pueden transmitir cualquier tipo de variable del proceso industrial."
+      },
+      {
+        "text": "OPC UA sirve exclusivamente para la impresión de componentes mecánicos en impresoras 3D.",
+        "isCorrect": false,
+        "rationale": "OPC UA es un protocolo universal de comunicación industrial y no un controlador de impresión para manufactura aditiva."
+      }
+    ],
+    "hint": "Piensa en la capacidad de correr en diferentes sistemas operativos (como Linux o embebidos) de forma segura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con las recomendaciones de diseño ergonómico de interfaces HMI/SCADA, ¿cuáles son los colores y funciones asociados al código de alarmas y avisos?",
+    "opciones": [
+      {
+        "text": "Rojo para alarmas críticas que requieren intervención urgente por peligro o falla imminente.",
+        "isCorrect": true,
+        "rationale": "El color rojo se reserva estrictamente para llamar la atención sobre desviaciones graves que amenazan la seguridad o el proceso."
+      },
+      {
+        "text": "Amarillo para advertencias o alertas que indican condiciones fuera de rango no críticas.",
+        "isCorrect": true,
+        "rationale": "El amarillo informa sobre eventos preventivos que requieren monitoreo antes de que escalen a una parada."
+      },
+      {
+        "text": "Azul o tonos neutros para avisos informativos o estados de operación normal.",
+        "isCorrect": true,
+        "rationale": "Utilizar tonos neutros para lo cotidiano evita la fatiga visual del operador en las pantallas de la sala de control."
+      },
+      {
+        "text": "Fondo rojo brillante permanente en toda la pantalla durante el funcionamiento normal.",
+        "isCorrect": false,
+        "rationale": "Un fondo rojo saturado continuo produce saturación visual y oculta la presencia de alarmas verdaderamente críticas."
+      },
+      {
+        "text": "Uso indeterminado de luces intermitentes multicolor sin importar la severidad.",
+        "isCorrect": false,
+        "rationale": "Asignar colores de manera aleatoria dificulta la interpretación rápida ante una emergencia."
+      }
+    ],
+    "hint": "Identifica la convención tipo semáforo donde el rojo es crítico, el amarillo es prevención y los colores fríos son informativos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué software representativo del nivel de gestión (ERP) es ampliamente utilizado en grandes mineras para integrar la contabilidad, compras, planillas y operaciones?",
+    "opciones": [
+      {
+        "text": "SAP.",
+        "isCorrect": true,
+        "rationale": "SAP es el sistema ERP referente a nivel mundial para administrar la información corporativa y logística en minería."
+      },
+      {
+        "text": "AutoCAD.",
+        "isCorrect": false,
+        "rationale": "AutoCAD es un software de diseño asistido por computadora (CAD) para dibujo técnico y planos, no un ERP empresarial."
+      },
+      {
+        "text": "Factory I/O.",
+        "isCorrect": false,
+        "rationale": "Factory I/O es un simulador tridimensional para entornos de automatización industrial y pruebas de PLC."
+      },
+      {
+        "text": "CadeSIMU.",
+        "isCorrect": false,
+        "rationale": "CadeSIMU es un programa sencillo de simulación de esquemas de automatismos eléctricos de contacto."
+      },
+      {
+        "text": "Excel sin vinculación a bases de datos.",
+        "isCorrect": false,
+        "rationale": "Aunque ampliamente usado, la hoja de cálculo aislada no constituye un sistema ERP integrado en una base de datos única."
+      }
+    ],
+    "hint": "Es la marca comercial alemana líder cuyas siglas se han vuelto casi un sinónimo de ERP en la gran minería.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes constituyen protocolos o estándares ligeros de mensajería frecuentemente utilizados para conectar datos hacia el Internet de las Cosas (IoT)?",
+    "opciones": [
+      {
+        "text": "MQTT.",
+        "isCorrect": true,
+        "rationale": "MQTT es un protocolo ligero basado en publicación/suscripción, ideal para sensores e IoT industrial."
+      },
+      {
+        "text": "AMQP.",
+        "isCorrect": true,
+        "rationale": "AMQP es un protocolo estándar para el intercambio eficiente de mensajes entre aplicaciones y la nube."
+      },
+      {
+        "text": "OPC UA.",
+        "isCorrect": true,
+        "rationale": "OPC UA incluye perfiles de publicación/suscripción integrables en arquitecturas modernas de IoT industrial."
+      },
+      {
+        "text": "Turbo Pascal.",
+        "isCorrect": false,
+        "rationale": "Turbo Pascal es un entorno de desarrollo de lenguaje de programación estructurada de la década de 1980, no un protocolo de red."
+      },
+      {
+        "text": "Fortran 77.",
+        "isCorrect": false,
+        "rationale": "Fortran 77 es un lenguaje de programación numérico histórico, no un protocolo para transmisión de mensajes IoT."
+      }
+    ],
+    "hint": "Identifica los acrónimos de protocolos de mensajería eficientes que permiten enviar datos de sensores hacia servidores web.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito principal de un sistema MES (*Manufacturing Execution System*) situado en el nivel de operaciones de la pirámide?",
+    "opciones": [
+      {
+        "text": "Monitorear, rastrear y coordinar la ejecución directa del proceso productivo en planta desde la materia prima hasta el producto final.",
+        "isCorrect": true,
+        "rationale": "El MES vincula la supervisión del escada con la planificación del ERP, dirigiendo el ritmo diario de producción en planta."
+      },
+      {
+        "text": "Liquidar los sueldos y salarios mensuales del personal administrativo de las oficinas centrales.",
+        "isCorrect": false,
+        "rationale": "El cálculo de nómina y planillas es una función administrativa correspondiente al sistema ERP / Recursos Humanos."
+      },
+      {
+        "text": "Diseñar los planos arquitectónicos de las salas eléctricas.",
+        "isCorrect": false,
+        "rationale": "Los planos de infraestructura son elaborados mediante software CAD de ingeniería de diseño."
+      },
+      {
+        "text": "Sustituir los cables físicos de alimentación del motor por enlaces de radiofrecuencia.",
+        "isCorrect": false,
+        "rationale": "La potencia eléctrica para operar motores requiere conductores físicos y no puede ser reemplazada por software MES."
+      },
+      {
+        "text": "Medir directamente la resistencia eléctrica de las bobinas en el sensor analógico.",
+        "isCorrect": false,
+        "rationale": "Esa tarea la efectúa la tarjeta de acondicionamiento del sensor o el instrumento de medición, no el software gestor MES."
+      }
+    ],
+    "hint": "Se encarga de controlar 'cómo se está ejecutando la manufactura o extracción' en el piso de planta día a día.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el lenguaje de programación gráfico representativo de los PLC que simula la lógica de diagramas de contactos eléctricos?",
+    "opciones": [
+      {
+        "text": "Diagrama de contactos / Escalón (*Ladder*).",
+        "isCorrect": true,
+        "rationale": "El lenguaje *Ladder* representa rieles de alimentación y contactos (cerrados/abiertos) asemejando los antiguos esquemas de relés."
+      },
+      {
+        "text": "HTML5.",
+        "isCorrect": false,
+        "rationale": "HTML5 es un lenguaje de marcado de etiquetas para la estructuración de páginas web."
+      },
+      {
+        "text": "Python.",
+        "isCorrect": false,
+        "rationale": "Python es un lenguaje de programación interpretado de alto nivel muy popular en ciencia de datos, no la norma clásica de contactos."
+      },
+      {
+        "text": "SQL.",
+        "isCorrect": false,
+        "rationale": "SQL es el lenguaje estándar para la consulta y manipulación de bases de datos relacionales."
+      },
+      {
+        "text": "C++.",
+        "isCorrect": false,
+        "rationale": "C++ es un lenguaje de código fuente compilado orientado a objetos no estructurado en forma de escalones eléctricos."
+      }
+    ],
+    "hint": "Su nombre en inglés evoca una 'escalera' debido a los peldaños verticales y horizontales de sus esquemas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En todo sistema de control automático de lazo cerrado, ¿cuáles de los siguientes tres elementos son indispensables para medir, comparar y corregir la variable del proceso?",
+    "opciones": [
+      {
+        "text": "Sensor o elemento primario de medición.",
+        "isCorrect": true,
+        "rationale": "Capta el valor real de la variable del proceso (temperatura, flujo, etc.) para realimentar al sistema."
+      },
+      {
+        "text": "Controlador (PLC o autómata).",
+        "isCorrect": true,
+        "rationale": "Calcula el error entre el valor deseado (*setpoint*) y la medición del sensor para dictar una acción."
+      },
+      {
+        "text": "Actuador o elemento final de control.",
+        "isCorrect": true,
+        "rationale": "Recibe la señal de mando del controlador y modifica físicamente la entrada al proceso (ej. abriendo una válvula)."
+      },
+      {
+        "text": "Un sistema de facturación electrónica comercial.",
+        "isCorrect": false,
+        "rationale": "La facturación comercial pertenece al ámbito de ventas y administración, ajeno al bucle de control dinámico."
+      },
+      {
+        "text": "Una gafa de realidad aumentada para el operador.",
+        "isCorrect": false,
+        "rationale": "Las gafas son herramientas opcionales de soporte para inspección y no participan en el bucle de realimentación automático."
+      }
+    ],
+    "hint": "Piensa en el trío fundamental: el que mide la variable, el que toma la decisión y el que ejecuta el cambio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tipo de estrategia de control clásico calcula la salida sumando las acciones Proporcional, Integral y Derivativa según el error acumulado?",
+    "opciones": [
+      {
+        "text": "Control PID.",
+        "isCorrect": true,
+        "rationale": "El algoritmo PID combina la respuesta proporcional al error, la corrección acumulativa del error pasado (integral) y la predicción futura (derivativa)."
+      },
+      {
+        "text": "Control On/Off (Todo o Nada).",
+        "isCorrect": false,
+        "rationale": "El control On/Off alterna únicamente entre estado encendido al 100% o apagado al 0%, sin graduar matemáticamente."
+      },
+      {
+        "text": "Control manual por palanca física.",
+        "isCorrect": false,
+        "rationale": "El control manual depende de la intervención humana directa y carece de un bucle automático calculated por algoritmo."
+      },
+      {
+        "text": "Control de lazo abierto no realimentado.",
+        "isCorrect": false,
+        "rationale": "Un sistema de lazo abierto no calcula el error ni utiliza términos matemáticos basados en realimentación."
+      },
+      {
+        "text": "Control temporizado básico por relé térmico.",
+        "isCorrect": false,
+        "rationale": "Un temporizador activa salidas por conteo de tiempo fijado y no mediante operaciones matemáticas de integración y derivación."
+      }
+    ],
+    "hint": "Es la estrategia de control más extendida en la industria, conocida por sus siglas de tres letras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica distintiva de un Sistema de Control Distribuido (DCS) en comparación con un único PLC centralizado?",
+    "opciones": [
+      {
+        "text": "Distribuye la capacidad de cómputo e interfaz de E/S en múltiples nodos autónomos interconectados mediante una red de alta velocidad.",
+        "isCorrect": true,
+        "rationale": "El DCS descentraliza el control en varios controladores acoplados que gestionan plantas complejas con miles de puntos de entrada/salida."
+      },
+      {
+        "text": "Funciona sin necesidad de utilizar energía eléctrica ni señales de voltaje.",
+        "isCorrect": false,
+        "rationale": "Todo DCS requiere alimentación eléctrica y señales analógicas/digitales para operar."
+      },
+      {
+        "text": "Está diseñado exclusivamente para controlar el encendido de focos domésticos.",
+        "isCorrect": false,
+        "rationale": "Un DCS es una plataforma de automatización de gran escala para procesos industriales pesados como refinerías o minas."
+      },
+      {
+        "text": "Inhabilita el uso de pantallas de supervisión en las salas de control.",
+        "isCorrect": false,
+        "rationale": "Los DCS integran de forma nativa potentes sistemas HMI y SCADA para la visualización centralizada."
+      },
+      {
+        "text": "No permite realizar operaciones de control en lazo cerrado.",
+        "isCorrect": false,
+        "rationale": "El control en lazo cerrado es la tarea fundamental de los algoritmos de proceso en un DCS."
+      }
+    ],
+    "hint": "Como lo indica su nombre, no pone 'todos los huevos en la misma canasta', sino que reparte la inteligencia en la planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del control de calidad aplicado a procesos mineros, ¿cuáles de las siguientes herramientas estadísticas o diagramas se citan como apoyo al análisis de fallas y desviaciones?",
+    "opciones": [
+      {
+        "text": "Diagrama de Ishikawa o causa-efecto (espina de pescado).",
+        "isCorrect": true,
+        "rationale": "El diagrama de causa-efecto ayuda a categorizar sistemáticamente las posibles fuentes de una desviación de calidad."
+      },
+      {
+        "text": "Diagrama de Pareto (Regla del 80/20).",
+        "isCorrect": true,
+        "rationale": "El principio de Pareto prioriza el 20% de las causas que generan el 80% de los defectos del proceso."
+      },
+      {
+        "text": "Gráficos de control estadístico del proceso (SPC).",
+        "isCorrect": true,
+        "rationale": "Monitorean la variabilidad de los parámetros en el tiempo definiendo límites superiores e inferiores de tolerancia."
+      },
+      {
+        "text": "Archivos del historial del chat de redes sociales personales.",
+        "isCorrect": false,
+        "rationale": "Las conversaciones privadas informales no constituyen metodologías técnicas de ingeniería de calidad."
+      },
+      {
+        "text": "Lista de precios de boletos de viaje aéreo.",
+        "isCorrect": false,
+        "rationale": "Los precios de vuelos comerciales son independientes de la variabilidad estadística de las celdas de proceso."
+      }
+    ],
+    "hint": "Selecciona las metodologías clásicas de calidad como el análisis de causa raíz, la regla 80/20 y las cartas de control.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué estado de respuesta dinámica se busca alcanzar en la sintonización de un bucle de control para que alcance el valor deseado sin oscilaciones molestas ni respuestas extremadamente lentas?",
+    "opciones": [
+      {
+        "text": "Amortiguamiento crítico.",
+        "isCorrect": true,
+        "rationale": "El amortiguamiento crítico logra que la variable llegue a la consigna de la forma más rápida posible sin sobrepasarla ni oscilar."
+      },
+      {
+        "text": "Subamortiguamiento descontrolado.",
+        "isCorrect": false,
+        "rationale": "El subamortiguamiento provoca oscilaciones continuas y sobrepicos que desgastan los actuadores y desestabilizan el proceso."
+      },
+      {
+        "text": "Sobreamortiguamiento rígido muy lento.",
+        "isCorrect": false,
+        "rationale": "Un sistema sobreamortiguado en exceso tarda un tiempo demasiado prolongado en alcanzar la consigna requerida."
+      },
+      {
+        "text": "Oscilación armónica infinita.",
+        "isCorrect": false,
+        "rationale": "La oscilación constante significa que el sistema está al borde de la inestabilidad y nunca alcanza el equilibrio."
+      },
+      {
+        "text": "Falla de saturación permanente del actuador.",
+        "isCorrect": false,
+        "rationale": "La saturación es una condición límite donde el actuador llega a su tope físico (100%), perdiendo capacidad de regulación."
+      }
+    ],
+    "hint": "Es el equilibrio perfecto entre la respuesta brusca que rebota y la respuesta tan perezosa que tarda demasiado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de los siguientes constituye un ejemplo claro de una señal eléctrica discreta (digital) conectada a la entrada de un PLC?",
+    "opciones": [
+      {
+        "text": "El contacto de un pulsador de parada de emergencia (abierto o cerrado).",
+        "isCorrect": true,
+        "rationale": "Un pulsador solo posee dos estados lógicos posibles (0 o 1, abierto o cerrado), lo que define una señal discreta."
+      },
+      {
+        "text": "La medición continua de temperatura en un rango de 0 °C a 150 °C.",
+        "isCorrect": false,
+        "rationale": "Las variables de rango continuo son señales analógicas que toman infinitos valores dentro de un intervalo."
+      },
+      {
+        "text": "Una señal de corriente proveniente de un transmisor de flujo de 4 a 20 mA.",
+        "isCorrect": false,
+        "rationale": "El estándar de 4 a 20 mA es la representación analógica clásica de una variable física proporcional continua."
+      },
+      {
+        "text": "La lectura de presión en una tubería expresada de 0 a 10 Voltios.",
+        "isCorrect": false,
+        "rationale": "Una señal de tensión variable entre 0 y 10 V es por definición una entrada de tipo analógico."
+      },
+      {
+        "text": "El valor del pH del agua ajustado en la escala continua de 0 a 14.",
+        "isCorrect": false,
+        "rationale": "La escala de pH adopta valores continuos y requiere una tarjeta de entrada analógica para su acondicionamiento."
+      }
+    ],
+    "hint": "Busca el elemento que únicamente puede tomar dos estados posibles: conducido/abierto, encendido/apagado o 1/0.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la Automatización 4.0 en empresas mineras, ¿cuál es la distinción funcional clave entre el dominio de Tecnología de Información (IT) y el dominio de Tecnología de Operaciones (OT)?",
+    "opciones": [
+      {
+        "text": "IT se encarga de los sistemas informáticos administrativos como correo y finanzas, mientras que OT supervisa y controla los sistemas físicos y electrónicos del proceso productivo.",
+        "isCorrect": true,
+        "rationale": "La tecnología de operaciones engloba el hardware y software que gestiona la ejecución física en planta, mientras que la tecnología de información administra el flujo de datos corporativos e institucionales."
+      },
+      {
+        "text": "OT administra la infraestructura de servidores de correo electrónico, mientras que IT programa directamente los autómatas programables de campo.",
+        "isCorrect": false,
+        "rationale": "Esta afirmación invierte los roles, atribuyendo la gestión de procesos físicos a IT y las herramientas administrativas a OT."
+      },
+      {
+        "text": "IT interactúa exclusivamente con la instrumentación de campo, mientras que OT se limita al desarrollo de sistemas ERP.",
+        "isCorrect": false,
+        "rationale": "La instrumentación de campo forma parte del dominio operacional de OT, mientras que los sistemas ERP corporativos pertenecen a la esfera de IT."
+      },
+      {
+        "text": "OT reemplaza de forma definitiva a IT en la Industria 4.0, eliminando la necesidad de redes de datos corporativas.",
+        "isCorrect": false,
+        "rationale": "La Industria 4.0 busca la convergencia e integración entre IT y OT, no la eliminación de ninguna de las dos áreas."
+      },
+      {
+        "text": "IT y OT comparten exactamente la misma arquitectura y herramientas, diferenciándose únicamente por la gerencia a la que reportan.",
+        "isCorrect": false,
+        "rationale": "Aunque ambas utilizan componentes informáticos, sus arquitecturas, requerimientos de tiempo real, protocolos y objetivos operativos son fundamentalmente distintos."
+      }
+    ],
+    "hint": "Considere la diferencia entre los sistemas administrativos de oficina y los sistemas físicos dedicados a la producción en planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro de la convergencia tecnológica de la Automatización 4.0, ¿cuáles de las siguientes tecnologías provienen del ámbito de IT pero potencian directamente la toma de decisiones en OT? (Seleccione todas las que apliquen)",
+    "opciones": [
+      {
+        "text": "Analítica de datos masivos (Big Data y Data Science).",
+        "isCorrect": true,
+        "rationale": "Permite procesar grandes volúmenes de datos operativos recopilados por sensores para extraer patrones y tendencias de rendimiento."
+      },
+      {
+        "text": "Computación en la nube (Cloud Computing).",
+        "isCorrect": true,
+        "rationale": "Ofrece capacidad de procesamiento masivo y almacenamiento escalable para ejecutar modelos complejos fuera de los servidores locales de planta."
+      },
+      {
+        "text": "Modelamiento mediante gemelos digitales (Digital Twins).",
+        "isCorrect": true,
+        "rationale": "Utiliza modelos matemáticos e informáticos en la nube o servidores para simular y predecir el comportamiento de activos mecánicos reales."
+      },
+      {
+        "text": "Contactores electromagnéticos de alta potencia.",
+        "isCorrect": false,
+        "rationale": "Los contactores son dispositivos eléctricos tradicionales de actuación en la red de campo y no provienen del área de IT."
+      },
+      {
+        "text": "Válvulas neumáticas proporcional de caudal.",
+        "isCorrect": false,
+        "rationale": "Representan elementos finales de control propios del nivel físico de instrumentación tradicional de OT."
+      }
+    ],
+    "hint": "Identifique herramientas informáticas avanzadas basadas en datos y computación que complementan la instrumentación tradicional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Históricamente, ¿qué hito e invención tecnológica permitió la transición de la lógica eléctrica de contactos a la era de la automatización digital y programable durante la Tercera Revolución Industrial?",
+    "opciones": [
+      {
+        "text": "El transistor semiconductor.",
+        "isCorrect": true,
+        "rationale": "La invención del transistor posibilitó el desarrollo de circuitos integrados, la microelectrónica y los primeros controladores lógicos programables (PLC)."
+      },
+      {
+        "text": "El regulador centrífugo de James Watt.",
+        "isCorrect": false,
+        "rationale": "Este mecanismo fue el regulador mecánico clave de la Primera Revolución Industrial aplicada a las máquinas de vapor."
+      },
+      {
+        "text": "El motor eléctrico de corriente alterna.",
+        "isCorrect": false,
+        "rationale": "Las máquinas eléctricas impulsaron la Segunda Revolución Industrial mediante la electrificación masiva de la industria."
+      },
+      {
+        "text": "El estándar de red OPC UA.",
+        "isCorrect": false,
+        "rationale": "OPC UA es un protocolo de comunicación moderno propio de la convergencia digital de la Industria 4.0."
+      },
+      {
+        "text": "La máquina de manufactura aditiva tridimensional.",
+        "isCorrect": false,
+        "rationale": "La impresión 3D constituye una tecnología emergente asociada a la Cuarta Revolución Industrial."
+      }
+    ],
+    "hint": "Piense en el componente semiconductor básico que reemplazó a los tubos de vacío y permitió crear las primeras computadoras industriales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la representación clásica de la Pirámide de Automatización, ¿cuál es la función primordial del nivel base denominado Instrumentación o Red de Campo?",
+    "opciones": [
+      {
+        "text": "Interactuar directamente con el proceso físico capturando variables mediante sensores y manipulándolo a través de actuadores.",
+        "isCorrect": true,
+        "rationale": "Este nivel alberga los elementos primarios de medición y los elementos finales de control que están en contacto directo con el flujo del proceso."
+      },
+      {
+        "text": "Planificar las compras de insumos químicos y gestionar el pago de planillas del personal.",
+        "isCorrect": false,
+        "rationale": "Estas tareas corresponden al nivel superior de gestión empresarial (ERP)."
+      },
+      {
+        "text": "Ejecutar la programación en lenguaje Ladder de los bucles de control secuencial.",
+        "isCorrect": false,
+        "rationale": "La ejecución de la lógica programable se realiza en el nivel inmediatamente superior correspondiente al control (PLC/DCS)."
+      },
+      {
+        "text": "Supervisar la flota de camiones mediante mapas geográficos e interfaces mnemónicas.",
+        "isCorrect": false,
+        "rationale": "El monitoreo gráfico y supervisión global corresponden al nivel de SCADA o sistemas de despacho (Dispatch)."
+      },
+      {
+        "text": "Consolidar las bases de datos de contabilidad financiera para auditorías externas.",
+        "isCorrect": false,
+        "rationale": "Esta función financiera se ejecuta en los sistemas administrativos ERP de la cima piramidal."
+      }
+    ],
+    "hint": "Reflexione sobre el punto de contacto físico directo donde se leen las variables operativas y se accionan los mecanismos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La implementación de soluciones de IIoT y analítica predictiva en equipos mineros de alto valor ofrece beneficios operativos directos. ¿Cuáles de los siguientes son ejemplos de dichos beneficios? (Seleccione todas las que apliquen)",
+    "opciones": [
+      {
+        "text": "Reducción imprevista de paradas de planta mediante la detección temprana de desgaste en componentes críticos.",
+        "isCorrect": true,
+        "rationale": "Al predecir fallas mecánicas antes de que ocurran, se programa el mantenimiento de forma oportuna evitando paradas no planificadas."
+      },
+      {
+        "text": "Disminución de la exposición de trabajadores a entornos de alto riesgo operativo.",
+        "isCorrect": true,
+        "rationale": "El monitoreo remoto continuo reduce las inspecciones manuales en áreas peligrosas de la mina."
+      },
+      {
+        "text": "Optimización del consumo energético mediante el ajuste automático de parámetros de operación.",
+        "isCorrect": true,
+        "rationale": "El análisis continuo de variables operativas permite ajustar los puntos de trabajo para maximizar la eficiencia energética."
+      },
+      {
+        "text": "Eliminación absoluta de la necesidad de realizar mantenimiento físico a los motores.",
+        "isCorrect": false,
+        "rationale": "Los componentes mecánicos continúan sufriendo desgaste físico real; la analítica optimiza el momento de intervenir, no elimina la intervención."
+      },
+      {
+        "text": "Sustitución completa de las redes de comunicación industriales por enlaces telefónicos analógicos.",
+        "isCorrect": false,
+        "rationale": "El IIoT requiere redes digitales de alta velocidad y baja latencia, opuestas a las líneas analógicas obsoletas."
+      }
+    ],
+    "hint": "Considere cómo la anticipación de fallas mecánicas e imprevistos incide en la rentabilidad, la seguridad y el consumo de recursos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto del mantenimiento predictivo 4.0, ¿cómo se define conceptualmente un 'Gemelo Digital' (Digital Twin) de un activo minero como un camión de extracción?",
+    "opciones": [
+      {
+        "text": "Un modelo matemático y virtual del activo en tiempo real que simula su comportamiento y desgaste para predecir fallas futuras.",
+        "isCorrect": true,
+        "rationale": "Se nutre de los datos transmitidos por el equipo real para replicar su estado en un entorno computacional y adelantar simulaciones de falla."
+      },
+      {
+        "text": "Un segundo camión físico idéntico que se mantiene estacionado en el taller como reserva de emergencia.",
+        "isCorrect": false,
+        "rationale": "Un gemelo digital es una entidad puramente informática y de modelamiento, no un duplicado físico de repuesto."
+      },
+      {
+        "text": "Un plano en dos dimensiones guardado en formato PDF dentro del sistema informático de la mina.",
+        "isCorrect": false,
+        "rationale": "Un plano estático no posee dinamismo ni recibe variables en tiempo real para simular comportamiento operativo."
+      },
+      {
+        "text": "Un sensor aislado encargado de registrar exclusivamente la temperatura del refrigerante del motor.",
+        "isCorrect": false,
+        "rationale": "Un sensor es un dispositivo primario de lectura, mientras que el gemelo digital integra múltiples variables en un modelo holístico."
+      },
+      {
+        "text": "Un módulo contable dentro del software ERP encargado de calcular la depreciación fiscal de la maquinaria.",
+        "isCorrect": false,
+        "rationale": "Aunque el ERP maneja datos de activos, el gemelo digital enfoca su simulación en la física y rendimiento dinámico de la máquina."
+      }
+    ],
+    "hint": "Considere la relación entre el activo físico que opera en la mina y su representación computacional parametrizada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la operación de flotas de camiones en minería a tajo abierto, ¿cuál es la ventaja estratégica primordial que motiva la implementación de Sistemas de Acarreo Autónomo (AHS)?",
+    "opciones": [
+      {
+        "text": "Maximizar la seguridad al retirar al personal de la zona de riesgo y optimizar la disponibilidad y consistencia del ciclo de acarreo.",
+        "isCorrect": true,
+        "rationale": "La autonomía elimina la exposición directa del operador a accidentes en la mina y estandariza los tiempos de ciclo evitando variaciones por fatiga humana."
+      },
+      {
+        "text": "Permitir que los camiones operen sin requerir ningún tipo de mantenimiento mecánico o lubricación.",
+        "isCorrect": false,
+        "rationale": "La autonomía elimina la figura del conductor, pero las exigencias mecánicas del chasis y motor siguen requiriendo mantenimiento riguroso."
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar redes de comunicación o sistemas de posicionamiento geográfico.",
+        "isCorrect": false,
+        "rationale": "Los camiones autónomos dependen de forma crítica de redes inalámbricas robustas y GPS de alta precisión para navegar."
+      },
+      {
+        "text": "Reducir la velocidad de desplazamiento de los vehículos a niveles peatonales para evitar el polvo.",
+        "isCorrect": false,
+        "rationale": "El objetivo del acarreo autónomo es mantener velocidades óptimas y seguras, no ralentizar la productividad de la mina."
+      },
+      {
+        "text": "Garantizar que los camiones puedan tomar decisiones de minado y cambiar el plan de mina de forma independiente.",
+        "isCorrect": false,
+        "rationale": "Los camiones siguen las rutas y órdenes asignadas por el sistema de despacho; no alteran los planes geológicos o estratégicos."
+      }
+    ],
+    "hint": "Piense en la continuidad operativa durante los turnos, la precisión de las rutas y la seguridad laboral del personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para el monitoreo de infraestructura crítica y la evaluación de riesgos geotécnicos en operaciones mineras, ¿qué soluciones robóticas y de teledetección se aplican activamente? (Seleccione todas las que apliquen)",
+    "opciones": [
+      {
+        "text": "Drones (VAV) equipados con sensores LiDAR para mapear la estabilidad de taludes en tajos abiertos.",
+        "isCorrect": true,
+        "rationale": "La tecnología LiDAR aérea permite obtener nubes de puntos tridimensionales precisas para detectar deformaciones en las paredes del tajo."
+      },
+      {
+        "text": "Satélites dotados de sensores multiespectrales para la inspección periódica de canchones y depósitos de relaves.",
+        "isCorrect": true,
+        "rationale": "Las imágenes satelitales multiespectrales ayudan a detectar filtraciones, humedad o desplazamientos en grandes extensiones de relave."
+      },
+      {
+        "text": "Robots móviles terrestres (cuadrúpedos o sobre orugas) para la inspección de fajas transportadoras y subestaciones.",
+        "isCorrect": true,
+        "rationale": "Permiten patrullar zonas peligrosas o confinadas tomando lecturas térmicas y acústicas de los polines o componentes eléctricos."
+      },
+      {
+        "text": "Bombas centrífugas para el drenaje de pozas de lodos sin instrumentos de medición.",
+        "isCorrect": false,
+        "rationale": "Las bombas no son sistemas robóticos de inspección o teledetección, sino equipos hidráulicos convencionales."
+      },
+      {
+        "text": "Motores mecánicos asíncronos para el accionamiento directo de chancadoras primarias.",
+        "isCorrect": false,
+        "rationale": "Son actuadores electromecánicos de potencia, no herramientas de monitoreo o inspección autónoma."
+      }
+    ],
+    "hint": "Piense en tecnologías aéreas, terrestres y satelitales que capturan datos topográficos y estructurales a distancia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una unidad minera integra imágenes del satélite Perusat procesadas mediante algoritmos de visión computacional. ¿Cuál es una aplicación operativa directa descrita para esta integración?",
+    "opciones": [
+      {
+        "text": "Identificar anomalías estructurales y controlar el estado ambiental en los depósitos de relaves y canchones.",
+        "isCorrect": true,
+        "rationale": "La visión computacional aplicada a imágenes satelitales analiza cambios sutiles en la superficie de los relaves para alertar sobre posibles inestabilidades."
+      },
+      {
+        "text": "Controlar en tiempo real la apertura de válvulas de reactivos en las celdas de flotación.",
+        "isCorrect": false,
+        "rationale": "La frecuencia de captura satelital no ofrece la latencia de milisegundos requerida para el control de bucles en planta."
+      },
+      {
+        "text": "Transmitir señales de encendido y apagado a los variadores de frecuencia de los molinos SAG.",
+        "isCorrect": false,
+        "rationale": "El control de maquinaria pesada se efectúa mediante redes industriales locales (PLC/DCS), no mediante imágenes satelitales."
+      },
+      {
+        "text": "Reemplazar los sistemas de protección cibersegura de los controladores programables de la mina.",
+        "isCorrect": false,
+        "rationale": "La visión computacional por satélite es una herramienta de monitoreo espacial, no una solución de ciberseguridad industrial."
+      },
+      {
+        "text": "Sustituir la red de fibra óptica submarina que conecta las sedes administrativas.",
+        "isCorrect": false,
+        "rationale": "Las imágenes satelitales constituyen datos de observación terrestre, no infraestructura de telecomunicaciones de alta velocidad."
+      }
+    ],
+    "hint": "Considere la supervisión de grandes estructuras de almacenamiento de residuos mineros a escala geográfica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al llevar a cabo proyectos de modernización hacia la Automatización 4.0 en plantas concentradoras existentes, las empresas enfrentan diversos retos técnicos. ¿Cuáles de los siguientes representan barreras habituales? (Seleccione todas las que apliquen)",
+    "opciones": [
+      {
+        "text": "La dificultad de integrar sistemas heredados (equipos 'Legacy') que utilizan protocolos de comunicación obsoletos o propietarios.",
+        "isCorrect": true,
+        "rationale": "Interconectar dispositivos antiguos con nuevas plataformas digitalizadas requiere convertidores de protocolo o reemplazo de hardware."
+      },
+      {
+        "text": "Los riesgos de ciberseguridad emergentes al conectar redes de operación (OT) a plataformas basadas en la nube.",
+        "isCorrect": true,
+        "rationale": "Abrir las redes de planta a la Internet aumenta la superficie de ataque frente a malware o accesos no autorizados."
+      },
+      {
+        "text": "La necesidad de garantizar infraestructura de comunicaciones de alta disponibilidad y ancho de banda en zonas geográficas remotas.",
+        "isCorrect": true,
+        "rationale": "Las minas suelen ubicarse en zonas alejadas donde el despliegue de fibra óptica o enlaces inalámbricos estables resulta costoso y complejo."
+      },
+      {
+        "text": "La prohibición legal internacional del uso de controladores digitales en procesos de procesamiento de minerales.",
+        "isCorrect": false,
+        "rationale": "No existe tal prohibición; por el contrario, las normativas fomentan la automatización para mejorar la seguridad operacional."
+      },
+      {
+        "text": "La imposibilidad de ejecutar algoritmos de procesamiento de datos en servidores de borde (Edge Computing).",
+        "isCorrect": false,
+        "rationale": "El procesamiento en el borde es una técnica plenamente viable y ampliamente utilizada para procesar datos localmente antes de enviar resúmenes a la nube."
+      }
+    ],
+    "hint": "Reflexione sobre la coexistencia de equipos antiguos, los problemas de conectividad en zonas aisladas y los riesgos de red.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El famoso caso del ciberataque mediante el malware Stuxnet a instalaciones industriales dejó una lección fundamental en ciberseguridad OT. ¿Cuál fue su vector de ataque característico?",
+    "opciones": [
+      {
+        "text": "Infiltrarse a través de memorias extraíbles USB infectadas, superando el aislamiento físico e impactando directamente a los variadores de velocidad.",
+        "isCorrect": true,
+        "rationale": "Stuxnet aprovechó dispositivos USB de empleados para cruzar la brecha de aire (air gap) y modificar sutilmente el código de los PLCs de los variadores."
+      },
+      {
+        "text": "Un ataque masivo de denegación de servicio (DDoS) ejecutado desde navegadores web públicos.",
+        "isCorrect": false,
+        "rationale": "Stuxnet no buscaba colapsar el ancho de banda, sino alterar sigilosamente la frecuencia de operación de variadores específicos."
+      },
+      {
+        "text": "La interceptación de llamadas telefónicas entre los operadores y el centro de control.",
+        "isCorrect": false,
+        "rationale": "El ataque estuvo dirigido específicamente al software de programación y al código de los PLCs Siemens, no a las telecomunicaciones de voz."
+      },
+      {
+        "text": "La manipulación física directa del cableado de cobre en los tableros de instrumentación.",
+        "isCorrect": false,
+        "rationale": "Fue un ataque cibernético basado en software malicioso sofisticado con firmas digitales robadas, no un saboteo físico de cableado."
+      },
+      {
+        "text": "La modificación del espectro de luz en los sensores fotoeléctricos de la planta.",
+        "isCorrect": false,
+        "rationale": "Stuxnet actuó a nivel del código de los controladores industriales para descalibrar procesos centrífugos, no en sensores ópticos."
+      }
+    ],
+    "hint": "Recuerde cómo el malware logró superar una red aislada sin conexión directa a Internet (air gap).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En las plantas concentradoras, el proceso de flotación es variable y complejo. ¿Cómo contribuyen los modelos de Inteligencia Artificial al rendimiento de este proceso?",
+    "opciones": [
+      {
+        "text": "Analizando variables en tiempo real para ajustar automáticamente la dosificación de reactivos y el flujo de aire, optimizando la recuperación de metal.",
+        "isCorrect": true,
+        "rationale": "La IA procesa las dinámicas no lineales de la celda de flotación para predecir el comportamiento de la espuma y optimizar las adiciones químicas."
+      },
+      {
+        "text": "Sustituyendo el uso de reactivos químicos por ultrasonido de alta frecuencia sin requerir agua.",
+        "isCorrect": false,
+        "rationale": "La flotación sigue requiriendo la fisiquímica de surfactantes y colectores; la IA optimiza su uso, no cambia la química fundamental."
+      },
+      {
+        "text": "Eliminando por completo la etapa de molienda previa del mineral extraído de la mina.",
+        "isCorrect": false,
+        "rationale": "La liberación del mineral mediante molienda es un requisito mecánico imprescindible previo a la flotación que la IA no puede omitir."
+      },
+      {
+        "text": "Deteniendo el flujo de pulpa cada diez minutos para calibrar manualmente las bombas de lodo.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la optimización por IA es el control continuo en tiempo real, evitando interrupciones o paradas manuales."
+      },
+      {
+        "text": "Aumentando indiscriminadamente la velocidad de los agitadores para maximizar el consumo de energía.",
+        "isCorrect": false,
+        "rationale": "Los modelos de IA buscan la eficiencia operativa y energética, no el desperdicio o sobreesfuerzo de los componentes."
+      }
+    ],
+    "hint": "Piense en la capacidad de analizar múltiples variables continuas para ajustar automáticamente los insumos y la aireación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La creación de centros unificados de teleoperación en grandes ciudades (como Lima o Arequipa) para minas ubicadas en la sierra o selva ofrece ventajas importantes. ¿Cuáles son algunas de ellas? (Seleccione todas las que apliquen)",
+    "opciones": [
+      {
+        "text": "Mejora las condiciones de seguridad y salud del personal al distanciarlo de condiciones climáticas y geográficas extremas.",
+        "isCorrect": true,
+        "rationale": "Operar desde ciudades a nivel del mar o entornos urbanos reduce el desgaste físico producido por la alta montaña o el aislamiento."
+      },
+      {
+        "text": "Permite la colaboración en tiempo real de supervisores y especialistas multidisciplinarios en un único centro de control.",
+        "isCorrect": true,
+        "rationale": "Centralizar la operación facilita que expertos en geomecánica, mantenimiento y procesos analicen datos juntos de inmediato."
+      },
+      {
+        "text": "Facilita la atracción y retención de talento calificado que prefiere no desplazarse bajo regímenes atípicos a zonas remotas.",
+        "isCorrect": true,
+        "rationale": "Muchos profesionales valoran la posibilidad de trabajar en centros urbanos manteniendo un estilo de vida familiar continuo."
+      },
+      {
+        "text": "Elimina la necesidad de contar con cobertura de redes de telecomunicaciones de alta velocidad entre la mina y la ciudad.",
+        "isCorrect": false,
+        "rationale": "La teleoperación distante exige fundamentalmente enlaces de datos de ultra baja latencia y altísima confiabilidad."
+      },
+      {
+        "text": "Garantiza que la maquinaria pesada no sufra ningún desgaste mecánico durante las jornadas de acarreo.",
+        "isCorrect": false,
+        "rationale": "El control remoto modifica el lugar donde se sienta el operador, pero la máquina en campo sigue sometida a fricción y esfuerzo mecánico real."
+      }
+    ],
+    "hint": "Considere la calidad de vida de los operadores, la atracción de talento y la centralización de expertos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la Pirámide de Automatización, el Nivel 4 (Operaciones/MES) y el Nivel 5 (Gestión/ERP) interactúan estrechamente. ¿Cuál es el enfoque diferenciador del sistema MES respecto al ERP?",
+    "opciones": [
+      {
+        "text": "MES supervisa y rastrea la ejecución detallada de la producción en la planta en tiempo corto, mientras que el ERP gestiona recursos empresariales globales como finanzas y compras.",
+        "isCorrect": true,
+        "rationale": "MES es el puente operacional enfocado en la tasa de producción, rendimiento de líneas y trazabilidad de lotes, mientras ERP consolida el negocio transaccional."
+      },
+      {
+        "text": "MES genera las señales eléctricas de milivoltios para los sensores, mientras que el ERP ejecuta la lógica de contactos del PLC.",
+        "isCorrect": false,
+        "rationale": "Las señales analógicas corresponden al nivel de instrumentación (Nivel 1) y la lógica de contactos al nivel de control (Nivel 2)."
+      },
+      {
+        "text": "ERP opera únicamente dentro de la red del variador de frecuencia, mientras que MES es un hardware instalado en las válvulas.",
+        "isCorrect": false,
+        "rationale": "Tanto MES como ERP son capas de software informático que corren en servidores y computadoras, no dispositivos mecánicos de campo."
+      },
+      {
+        "text": "MES reemplaza al sistema SCADA para dibujar los gráficos del operador, mientras que el ERP es la pantalla táctil física del tablero.",
+        "isCorrect": false,
+        "rationale": "La representación gráfica de proceso de campo la realiza el SCADA/HMI en el Nivel 3; la pantalla física local es el HMI."
+      },
+      {
+        "text": "Ambos sistemas ejecutan exactamente la misma tarea y no se justifica utilizarlos simultáneamente en una industria.",
+        "isCorrect": false,
+        "rationale": "Cumplen funciones complementarias jerárquicas: MES optimiza la manufactura operativa y ERP la estrategia administrativa empresarial."
+      }
+    ],
+    "hint": "Piense en quién supervisa el ritmo de ejecución de la producción en planta versus quién administra las finanzas y ventas corporativas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué ventajas técnicas fundamentales diferencian al estándar moderno OPC UA (Unified Architecture) del estándar clásico OPC DA (Data Access)? (Seleccione todas las que apliquen)",
+    "opciones": [
+      {
+        "text": "OPC UA es independiente del sistema operativo, permitiendo su implementación en Linux, Windows, Android o embebidos, superando la dependencia exclusiva de Windows (DCOM).",
+        "isCorrect": true,
+        "rationale": "A diferencia de OPC Classic (basado en COM/DCOM de Microsoft), OPC UA se diseñó desde cero para ser multiplataforma."
+      },
+      {
+        "text": "OPC UA incorpora mecanismos nativos de seguridad como cifrado de datos, firma digital y autenticación de clientes y servidores.",
+        "isCorrect": true,
+        "rationale": "La ciberseguridad está integrada en la propia especificación del protocolo para garantizar la integridad en entornos de red 4.0."
+      },
+      {
+        "text": "OPC UA unifica el acceso a datos en tiempo real, alarmas, eventos y datos históricos bajo un mismo modelo de información estructurado.",
+        "isCorrect": true,
+        "rationale": "Integra las antiguas especificaciones separadas (OPC DA, OPC AE, OPC HDA) en una arquitectura única y coherente."
+      },
+      {
+        "text": "OPC UA requiere obligatoriamente el uso de conexiones mediante puertos serie analógicos RS-232 sin encriptación.",
+        "isCorrect": false,
+        "rationale": "OPC UA utiliza protocolos de transporte modernos basados en TCP/IP y servicios web orientados a redes digitales."
+      },
+      {
+        "text": "OPC UA restringe la comunicación a un máximo de dos dispositivos interconectados simultáneamente.",
+        "isCorrect": false,
+        "rationale": "OPC UA es sumamente escalable y permite conectar miles de nodos clientes y servidores en arquitecturas distribuidas."
+      }
+    ],
+    "hint": "Considere aspectos como la independencia de plataformas informáticas, la seguridad cibernética y el soporte a redes complejas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la arquitectura física y distribuida de un sistema SCADA, ¿cuál es el cometido específico de una Unidad Terminal Remota (RTU)?",
+    "opciones": [
+      {
+        "text": "Recolectar datos de sensores e influir en actuadores en una ubicación remota, transmitiendo dicha información a la unidad maestra (MTU).",
+        "isCorrect": true,
+        "rationale": "La RTU actúa como el nodo distribuido de adquisición y control local que enlaza la instrumentación distante con el sistema central."
+      },
+      {
+        "text": "Desplegar la interfaz gráfica de usuario donde el gerente general analiza el balance financiero de fin de año.",
+        "isCorrect": false,
+        "rationale": "La visualización ejecutiva se realiza en estaciones de trabajo informáticas utilizando clientes de software ERP o Business Intelligence."
+      },
+      {
+        "text": "Reemplazar los cables de alta tensión de la subestación eléctrica por tubos de aire comprimido.",
+        "isCorrect": false,
+        "rationale": "Una RTU es un módulo electrónico de procesado de señales y comunicaciones, no un elemento de transporte de potencia eléctrica."
+      },
+      {
+        "text": "Almacenar en exclusiva la base de datos de recursos humanos e historial de vacaciones de la minera.",
+        "isCorrect": false,
+        "rationale": "La información administrativa reside en servidores centrales de bases de datos relacionales asociadas al ERP."
+      },
+      {
+        "text": "Ejecutar la molienda autónoma de las rocas sin requerir energía eléctrica.",
+        "isCorrect": false,
+        "rationale": "La RTU es un equipo electrónico de control y telecomunicaciones; no realiza trabajo mecánico sobre el mineral."
+      }
+    ],
+    "hint": "Piense en el dispositivo ubicado en zonas alejadas de la planta que recolecta datos de los sensores locales para enviarlos al servidor central.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con las guías de buenas prácticas para el diseño de interfaces HMI en salas de control, ¿cómo se deben aplicar los colores en las pantallas? (Seleccione todas las que apliquen)",
+    "opciones": [
+      {
+        "text": "Utilizar fondos en tonos de gris neutro para reducir el cansancio visual durante jornadas prolongadas de monitoreo.",
+        "isCorrect": true,
+        "rationale": "Los fondos grises opacos evitan el encandilamiento y permiten que los colores de alerta resalten eficazmente."
+      },
+      {
+        "text": "Reservar el color rojo de forma estricta para indicar situaciones de alarma crítica o emergencias que requieren acción inmediata.",
+        "isCorrect": true,
+        "rationale": "Si el rojo se utiliza en elementos normales, pierde su impacto psicológico de advertencia ante un peligro real."
+      },
+      {
+        "text": "Emplear el color amarillo para señalar advertencias o condiciones fuera de rango que no representan un peligro inminente.",
+        "isCorrect": true,
+        "rationale": "El amarillo categoriza preventivamente desvíos o precauciones antes de que alcancen el umbral de alarma roja."
+      },
+      {
+        "text": "Llenar la pantalla con animación 3D brillante y colores saturados en todos los tanques y tuberías normales.",
+        "isCorrect": false,
+        "rationale": "El exceso de dinamismo y saturación cromática satura al operador y oculta las alarmas verdaderamente importantes."
+      },
+      {
+        "text": "Representar los estados de funcionamiento normal mediante colores discretos como el azul o tonos apagados.",
+        "isCorrect": true,
+        "rationale": "Los estados normales deben ser visualmente sobrios para no distraer la atención de los desvíos del proceso."
+      }
+    ],
+    "hint": "Considere cómo prevenir la fatiga del operador y lograr que las alertas anormales destaquen de inmediato.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la ventaja primordial de consolidar una 'Única Fuente de Verdad' (Single Source of Truth) mediante una base de datos integrada entre el SCADA, el MES y el ERP?",
+    "opciones": [
+      {
+        "text": "Asegurar que todas las áreas corporativas y operativas tomen decisiones basadas en los mismos datos en tiempo real y consistentes.",
+        "isCorrect": true,
+        "rationale": "Elimina las discrepancias de información entre departamentos, garantizando que finanzas, mantenimiento y operaciones analicen la misma realidad operativa."
+      },
+      {
+        "text": "Incrementar la cantidad de archivos Excel independientes que se envían por correo entre gerencias.",
+        "isCorrect": false,
+        "rationale": "Precisamente busca erradicar la proliferación de hojas de cálculo descentralizadas y desactualizadas."
+      },
+      {
+        "text": "Obligar a que el PLC detenga la ejecución de sus programas de control en caso de consultas administrativas.",
+        "isCorrect": false,
+        "rationale": "Las bases de datos unificadas utilizan capas de abstracción para no interferir con la velocidad del procesamiento determinístico del PLC."
+      },
+      {
+        "text": "Reducir el ancho de banda de la red a cero para evitar invasiones de virus informáticos.",
+        "isCorrect": false,
+        "rationale": "La integración requiere redes activas e interconectadas, protegidas por ciberseguridad, no el corte de la red."
+      },
+      {
+        "text": "Impedir que el personal técnico pueda visualizar los históricos de tendencias del proceso.",
+        "isCorrect": false,
+        "rationale": "Una base de datos unificada facilita la disponibilidad de históricos para analítica y control a usuarios autorizados."
+      }
+    ],
+    "hint": "Reflexione sobre los problemas que surgen cuando cada departamento maneja cifras diferentes en hojas de cálculo aisladas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué tendencias tecnológicas caracterizan la evolución moderna de las interfaces Hombre-Máquina (HMI) en el contexto 4.0? (Seleccione todas las que apliquen)",
+    "opciones": [
+      {
+        "text": "Adopción de dispositivos móviles industriales (tablets) que permiten supervisar el proceso directamente en campo.",
+        "isCorrect": true,
+        "rationale": "Las tablets robustas otorgan flexibilidad al personal de mantenimiento para diagnosticar equipos al lado de la máquina."
+      },
+      {
+        "text": "Desarrollo de HMIs basadas en tecnologías Web y arquitecturas en el borde (Edge HMI).",
+        "isCorrect": true,
+        "rationale": "Permiten desplegar la interfaz mediante navegadores compatibles en múltiples dispositivos sin necesidad de clientes instalados pesados."
+      },
+      {
+        "text": "Interfaces centradas en 'Alto Rendimiento' enfocadas en la usabilidad y rápida identificación de problemas.",
+        "isCorrect": true,
+        "rationale": "Priorizan el diseño limpio orientado a la toma de decisiones eficiente sobre la estética compleja o recargada."
+      },
+      {
+        "text": "Retorno exclusivo a tableros de mando físicos analógicos con agujas de presión sin pantallas.",
+        "isCorrect": false,
+        "rationale": "La tendencia actual se orienta a la digitalización flexible y pantallas dinámicas, reservando pulsadores físicos solo para paradas de emergencia."
+      },
+      {
+        "text": "Eliminación total de la representación gráfica del proceso, reemplazándola por listas de texto en código máquina.",
+        "isCorrect": false,
+        "rationale": "El objetivo del HMI es hacer la información intuitiva y comprensible para el cerebro humano mediante representaciones gráficas claras."
+      }
+    ],
+    "hint": "Piense en la movilidad del operador, el acceso mediante navegadores web y la capacidad de cómputo cercana al proceso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia técnica conceptual entre un sistema de control de lazo abierto y uno de lazo cerrado (retroalimentado)?",
+    "opciones": [
+      {
+        "text": "El lazo cerrado mide continuamente la variable de salida mediante sensores para compararla con el set point y corregir el error.",
+        "isCorrect": true,
+        "rationale": "La retroalimentación (feedback) en lazo cerrado permite ajustar dinámicamente la acción de control en función del desvío medido real."
+      },
+      {
+        "text": "El lazo abierto utiliza sensores para calcular el error y corregirlo automáticamente sin intervención.",
+        "isCorrect": false,
+        "rationale": "El lazo abierto no mide la variable de salida ni calcula el error; actúa basándose únicamente en una calibración o tiempo predeterminado."
+      },
+      {
+        "text": "El lazo cerrado no requiere de ningún elemento actuador para modificar el estado del proceso.",
+        "isCorrect": false,
+        "rationale": "Todo sistema de control necesita un elemento final de control (actuador) para aplicar la energía o acción sobre el proceso."
+      },
+      {
+        "text": "El lazo abierto requiere obligatoriamente que un operador humano presione una perilla cada segundo.",
+        "isCorrect": false,
+        "rationale": "Un sistema de lazo abierto puede ser completamente automático (como un temporizador), pero carece de medición de la variable final."
+      },
+      {
+        "text": "Ambos términos son completamente equivalentes y se refieren a la misma arquitectura en ingeniería de control.",
+        "isCorrect": false,
+        "rationale": "Representan dos filosofías de control totalmente distintas en cuanto a la presencia o ausencia de señal de realimentación."
+      }
+    ],
+    "hint": "Observe si el sistema mide constantemente el resultado final para corregir desvíos respecto al objetivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Un controlador PID clásico combina tres acciones matemáticas sobre la señal de error. ¿Qué función específica aporta cada una de estas componentes? (Seleccione todas las que apliquen)",
+    "opciones": [
+      {
+        "text": "La acción Proporcional (P) genera una respuesta de salida directamente proporcional a la magnitud del error presente.",
+        "isCorrect": true,
+        "rationale": "Aporta la corrección básica e inmediata en función de qué tan lejos se encuentra la variable respecto al set point."
+      },
+      {
+        "text": "La acción Integral (I) elimina el error en estado estacionario acumulando el historial del error a lo largo del tiempo.",
+        "isCorrect": true,
+        "rationale": "Suma los errores pasados para forzar al sistema a alcanzar exactamente la consigna deseada en régimen permanente."
+      },
+      {
+        "text": "La acción Derivativa (D) evalúa la velocidad de cambio del error para anticipar su comportamiento futuro y amortiguar la respuesta.",
+        "isCorrect": true,
+        "rationale": "Actúa como un freno predictivo proporcional a la rapidez con la que varía la señal de error."
+      },
+      {
+        "text": "La acción Proporcional borra automáticamente la memoria de almacenamiento de datos del PLC cada diez minutos.",
+        "isCorrect": false,
+        "rationale": "La componente P es una operación aritmética de multiplicación dentro del algoritmo de control, sin relación con el formateo de memoria."
+      },
+      {
+        "text": "La acción Derivativa se encarga exclusivamente de medir el flujo volumétrico de agua ácida en el tanque.",
+        "isCorrect": false,
+        "rationale": "La acción D es un cálculo matemático del algoritmo de control, no un sensor físico de flujo de campo."
+      }
+    ],
+    "hint": "Relacione cada letra (P, I, D) con el error presente, la acumulación del error pasado y la tendencia de cambio futura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al sintonizar un bucle de control de proceso (como el nivel de un tanque), ¿qué caracteriza a una respuesta dinámica 'críticamente amortiguada'?",
+    "opciones": [
+      {
+        "text": "El sistema alcanza el valor de consigna (set point) lo más rápido posible sin presentar sobrepasos ni oscilaciones alrededor de la meta.",
+        "isCorrect": true,
+        "rationale": "El amortiguamiento crítico logra la transición más rápida hacia el estado estable sin incurrir en oscilaciones subamortiguadas ni en la lentitud sobreamortiguada."
+      },
+      {
+        "text": "El sistema oscila de manera indefinida entre el límite máximo y mínimo de la escala del tanque.",
+        "isCorrect": false,
+        "rationale": "Las oscilaciones sostenidas corresponden a un sistema inestable o subamortiguado al límite de la estabilidad."
+      },
+      {
+        "text": "El sistema tarda un tiempo infinitamente largo en responder a cualquier cambio de la perilla de comando.",
+        "isCorrect": false,
+        "rationale": "Una respuesta extremadamente lenta y perezosa caracteriza a un sistema excesivamente sobreamortiguado."
+      },
+      {
+        "text": "El actuador de la válvula conmuta constantemente entre $0\\%$ y $100\\%$ a máxima frecuencia.",
+        "isCorrect": false,
+        "rationale": "Esa conmutación abrupta es propia de un control Todo/Nada (On-Off), no de una respuesta PID críticamente amortiguada."
+      },
+      {
+        "text": "La variable de proceso se reduce instantáneamente a cero y bloquea la comunicación del PLC.",
+        "isCorrect": false,
+        "rationale": "El amortiguamiento crítico describe una trayectoria de respuesta suave y óptima, no una falla del controlador."
+      }
+    ],
+    "hint": "Piense en el equilibrio perfecto en la amortiguación: alcanzar el nivel deseado lo más rápido posible sin oscilar ni rebotar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes afirmaciones describen correctamente diferencias de arquitectura entre un PLC tradicional y un Sistema de Control Distribuido (DCS)? (Seleccione todas las que apliquen)",
+    "opciones": [
+      {
+        "text": "Los PLC nacieron para el control discreto y de celdas específicas, mientras que los DCS se diseñaron desde el origen para controlar plantas de proceso continuo a gran escala.",
+        "isCorrect": true,
+        "rationale": "El DCS maneja la planta de forma holística con controladores distribuidos, mientras que los PLC tradicionalmente automatizan máquinas o secciones discretas."
+      },
+      {
+        "text": "Los DCS integran en un único entorno de ingeniería la configuración de controladores, la base de datos de etiquetas (tags) y las pantallas SCADA.",
+        "isCorrect": true,
+        "rationale": "En un DCS no se requieren servidores OPC adicionales para vincular la pantalla del operador con las variables del controlador; la base de datos es nativa y unificada."
+      },
+      {
+        "text": "En un DCS, la falla de un controlador individual no paraliza la totalidad de la planta gracias a la redundancia e independencia distribuida.",
+        "isCorrect": true,
+        "rationale": "La arquitectura distribuida aísla los procesos por nodos y utiliza CPU redundantes para garantizar alta disponibilidad operativa."
+      },
+      {
+        "text": "Un PLC es técnicamente incapaz de leer señales digitales provenientes de pulsadores o interruptores.",
+        "isCorrect": false,
+        "rationale": "La lectura de contactos discretos (0 y 1) fue la función primaria para la cual se inventaron los controladores programables."
+      },
+      {
+        "text": "Un DCS opera exclusivamente mediante comandos neumáticos de presión de aire sin componentes electrónicos.",
+        "isCorrect": false,
+        "rationale": "Los DCS son arquitecturas informáticas y electrónicas avanzadas basadas en procesadores digitales y redes industriales."
+      }
+    ],
+    "hint": "Considere la escala del sistema, la integración unificada de la base de datos y el enfoque hacia máquinas aisladas versus plantas completas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando un sensor de temperatura de campo entrega una señal analógica estándar de $4\\text{ a }20\\text{ mA}$ al módulo de entrada de un PLC, ¿en qué consiste el proceso de discretización?",
+    "opciones": [
+      {
+        "text": "En convertir la magnitud eléctrica continua en un valor numérico digital discreto en memoria mediante un convertidor Analógico-Digital (A/D).",
+        "isCorrect": true,
+        "rationale": "La discretización muestrea la señal analógica y la cuantifica en un equivalente numérico de N bits para que la CPU del PLC pueda realizar cálculos."
+      },
+      {
+        "text": "En transformar la señal de corriente en aire comprimido para activar un silbato neumático de alarma.",
+        "isCorrect": false,
+        "rationale": "El convertidor A/D efectúa una transformación de señal eléctrica a código binario digital, no a energía neumática."
+      },
+      {
+        "text": "En elevar la corriente del sensor a $220\\text{ V}$ alternos para alimentar directamente los motores eléctricos.",
+        "isCorrect": false,
+        "rationale": "Las entradas analógicas operan en rangos de instrumentos de baja potencia ($4\\text{ a }20\\text{ mA}$); aplicar alto voltaje destruiría el módulo."
+      },
+      {
+        "text": "En borrar la memoria RAM del controlador cada vez que la señal analógica sobrepasa los $12\\text{ mA}$.",
+        "isCorrect": false,
+        "rationale": "El valor leído se almacena en registros de memoria para el programa de control; no provoca el formateo del sistema."
+      },
+      {
+        "text": "En convertir la temperatura en una imagen tridimensional que se imprime en papel térmico de forma continua.",
+        "isCorrect": false,
+        "rationale": "El destino de la discretización es un dato numérico interno en el registro de la CPU del autómata, no una impresión física."
+      }
+    ],
+    "hint": "Piense en cómo el módulo electrónico convierte una corriente eléctrica continua en un número binario procesable por la CPU digital.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-27",
+    "diplomado": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco del Control de Calidad automatizado en plantas de procesamiento de minerales, ¿qué herramientas de Control Estadístico de Procesos (SPC) se integran habitualmente en los sistemas informáticos? (Seleccione todas las que apliquen)",
+    "opciones": [
+      {
+        "text": "Gráficos de Control de Proceso para verificar que las variables se mantengan dentro de los Límites de Control Superior e Inferior.",
+        "isCorrect": true,
+        "rationale": "Permiten visualizar en tiempo real si el proceso se encuentra bajo control estadístico o si muestra tendencias anormales."
+      },
+      {
+        "text": "Diagramas de Pareto para identificar el $20\\%$ de las causas principales que generan el $80\\%$ de los defectos de calidad.",
+        "isCorrect": true,
+        "rationale": "Facilitan la priorización de los problemas operacionales más impactantes para concentrar los esfuerzos de mantenimiento o corrección."
+      },
+      {
+        "text": "Diagramas de Causa-Efecto (Ishikawa o Espina de Pescado) para analizar de forma estructurada las fuentes de variación del proceso.",
+        "isCorrect": true,
+        "rationale": "Ayudan a categorizar las causas potenciales de una falla de calidad en factores como maquinaria, métodos, mano de obra y materia prima."
+      },
+      {
+        "text": "Histogramas de frecuencia para observar la distribución estadística y variabilidad de las muestras del producto concentrado.",
+        "isCorrect": true,
+        "rationale": "Permiten evaluar la centrado y la dispersión de los parámetros de calidad del mineral respecto a las especificaciones del cliente."
+      },
+      {
+        "text": "Centrífugas mecánicas manuales de fundición de plomo para la trituración física de las muestras.",
+        "isCorrect": false,
+        "rationale": "Son herramientas de taller o preparación mecánica, no diagramas o herramientas analíticas informáticas de SPC."
+      }
+    ],
+    "hint": "Piense en diagramas utilizados para analizar la regla del 80/20, identificar causas raíz de variación y monitorear límites estadísticos.",
+    "activo": true
+  }
+]

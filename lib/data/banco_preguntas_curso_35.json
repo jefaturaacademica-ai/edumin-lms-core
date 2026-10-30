@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la definición fundamental de Machine Learning expuesta en el curso?",
+    "opciones": [
+      {
+        "text": "Una rama de la Inteligencia Artificial que permite a las máquinas aprender automáticamente a partir de datos sin ser programadas explícitamente.",
+        "isCorrect": true,
+        "rationale": "El Machine Learning se enfoca en el desarrollo de algoritmos que detectan patrones en los datos para tomar decisiones de forma autónoma."
+      },
+      {
+        "text": "Un componente de hardware diseñado para reemplazar las unidades de procesamiento central en supercomputadoras.",
+        "isCorrect": false,
+        "rationale": "El Machine Learning es una disciplina de software y algoritmos, no un componente de hardware físico."
+      },
+      {
+        "text": "Un lenguaje de consulta determinista utilizado exclusivamente para gestionar tablas relacionales SQL.",
+        "isCorrect": false,
+        "rationale": "El lenguaje SQL es para consulta de bases de datos relacionales, no una rama de aprendizaje automático de patrones."
+      },
+      {
+        "text": "Un sistema experto basado de forma estricta en reglas rígidas escritas manualmente por programadores.",
+        "isCorrect": false,
+        "rationale": "A diferencia de los sistemas basados en reglas rígidas, el Machine Learning aprende patrones a partir de datos de entrenamiento."
+      },
+      {
+        "text": "Un sensor físico encargado de capturar y transmitir señales analógicas de audio en tiempo real.",
+        "isCorrect": false,
+        "rationale": "Los sensores físicos capturan señales del entorno, pero no constituyen por sí mismos la disciplina del aprendizaje automático."
+      }
+    ],
+    "hint": "Piensa en la capacidad de las computadoras para identificar patrones en la información de manera autónoma.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tipo de aprendizaje automático utiliza datos etiquetados que contienen tanto las entradas como las salidas conocidas durante el entrenamiento?",
+    "opciones": [
+      {
+        "text": "Aprendizaje supervisado",
+        "isCorrect": true,
+        "rationale": "En el aprendizaje supervisado, el modelo se entrena guiado por etiquetas que indican explícitamente la respuesta esperada."
+      },
+      {
+        "text": "Aprendizaje no supervisado",
+        "isCorrect": false,
+        "rationale": "El aprendizaje no supervisado trabaja con datos sin etiquetar para encontrar patrones o agrupaciones de forma implícita."
+      },
+      {
+        "text": "Aprendizaje por refuerzo",
+        "isCorrect": false,
+        "rationale": "El aprendizaje por refuerzo se basa en interacciones con el entorno usando recompensas y castigos, no en etiquetas predefinidas."
+      },
+      {
+        "text": "Aprendizaje heurístico",
+        "isCorrect": false,
+        "rationale": "Las heurísticas son reglas empíricas de resolución de problemas y no una categoría principal de entrenamiento en Machine Learning."
+      },
+      {
+        "text": "Aprendizaje profundo no estructurado",
+        "isCorrect": false,
+        "rationale": "El aprendizaje profundo es una subrama que usa redes neuronales y puede ser supervisado o no supervisado según los datos."
+      }
+    ],
+    "hint": "Este enfoque guía al modelo mostrándole ejemplos previos con su respuesta correcta asignada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo procesa los datos un modelo de aprendizaje no supervisado?",
+    "opciones": [
+      {
+        "text": "Encuentra relaciones ocultas, patrones o agrupaciones en los datos sin requerir etiquetas de salida previas.",
+        "isCorrect": true,
+        "rationale": "El aprendizaje no supervisado analiza la estructura interna de la información para agrupar elementos por similitud."
+      },
+      {
+        "text": "Recibe una puntuación de recompensa o castigo tras realizar cada acción en un entorno simulado.",
+        "isCorrect": false,
+        "rationale": "La dinámica de premios y castigos en función de acciones corresponde al aprendizaje por refuerzo."
+      },
+      {
+        "text": "Depende exclusivamente de anotaciones manuales efectuadas por ingenieros para cada dato de entrada.",
+        "isCorrect": false,
+        "rationale": "Requerir anotaciones para cada dato es característico del aprendizaje supervisado, no del no supervisado."
+      },
+      {
+        "text": "Clasifica imágenes únicamente basándose en reglas binarias preprogramadas en una base de datos SQL.",
+        "isCorrect": false,
+        "rationale": "El modelo no supervisado no utiliza reglas binarias prefijadas, sino algoritmos de agrupamiento de datos."
+      },
+      {
+        "text": "Transforma automáticamente imágenes de video en archivos de texto plano sin usar algoritmos.",
+        "isCorrect": false,
+        "rationale": "La conversión de medios requiere modelos específicos de procesamiento de lenguaje o visión, no es la definición del agrupamiento no supervisado."
+      }
+    ],
+    "hint": "Considera cómo una máquina puede agrupar elementos basándose únicamente en características comunes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de los siguientes algoritmos se utiliza principalmente para tareas de clasificación binaria (como determinar si un correo es spam o no spam)?",
+    "opciones": [
+      {
+        "text": "Regresión logística",
+        "isCorrect": true,
+        "rationale": "La regresión logística estimará la probabilidad de que una observación pertenezca a una de dos categorías binarias."
+      },
+      {
+        "text": "Regresión lineal",
+        "isCorrect": false,
+        "rationale": "La regresión lineal se emplea para predecir valores continuos, como precios o temperaturas, no categorías binarias."
+      },
+      {
+        "text": "Análisis de Componentes Principales (PCA)",
+        "isCorrect": false,
+        "rationale": "PCA es un algoritmo de reducción de dimensionalidad no supervisado, no un clasificador binario."
+      },
+      {
+        "text": "Agrupamiento K-Means",
+        "isCorrect": false,
+        "rationale": "K-Means se utiliza para la segmentación no supervisada en conjuntos o clusters, no para clasificación supervisada binaria."
+      },
+      {
+        "text": "Algoritmo Q-Learning",
+        "isCorrect": false,
+        "rationale": "Q-Learning forma parte del aprendizaje por refuerzo y busca optimizar políticas de decisión en entornos dinámicos."
+      }
+    ],
+    "hint": "A pesar de tener la palabra 'regresión' en su nombre, se usa ampliamente para categorizar en dos opciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el principio del aprendizaje por refuerzo?",
+    "opciones": [
+      {
+        "text": "El modelo aprende a tomar decisiones autónomas mediante la interacción con un entorno que le otorga recompensas o castigos.",
+        "isCorrect": true,
+        "rationale": "El agente aprende mediante ensayo y error, buscando maximizar la recompensa acumulada a lo largo del tiempo."
+      },
+      {
+        "text": "El modelo memoriza tablas de bases de datos relacionales sin modificar sus parámetros internos.",
+        "isCorrect": false,
+        "rationale": "La simple memorización de datos no constituye un proceso de aprendizaje por interacción o adaptación."
+      },
+      {
+        "text": "Un supervisor humano corrige la salida del modelo en cada iteración asignando etiquetas numéricas.",
+        "isCorrect": false,
+        "rationale": "La corrección directa con etiquetas por iteración describe el aprendizaje supervisado tradicional."
+      },
+      {
+        "text": "El algoritmo convierte imágenes no estructuradas en tablas relacionales estructuradas automáticamente.",
+        "isCorrect": false,
+        "rationale": "El procesamiento de imágenes no define la estructura de recompensa y castigo del aprendizaje por refuerzo."
+      },
+      {
+        "text": "El sistema utiliza ecuaciones lineales continuas para predecir exclusivamente valores monetarios.",
+        "isCorrect": false,
+        "rationale": "Las predicciones continuas de valores pertenecen a los modelos de regresión lineal en aprendizaje supervisado."
+      }
+    ],
+    "hint": "Relaciona este método con cómo un agente o videojuego aprende intentando conseguir la máxima puntuación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes algoritmos pertenecen al ámbito del aprendizaje supervisado? (Selecciona todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Regresión lineal",
+        "isCorrect": true,
+        "rationale": "Usa datos con etiquetas continuas para predecir un resultado cuantitativo específico."
+      },
+      {
+        "text": "Árboles de decisión",
+        "isCorrect": true,
+        "rationale": "Estructuran reglas de decisión basadas en atributos etiquetados para clasificar o predecir valores."
+      },
+      {
+        "text": "Máquinas de Soporte Vectorial (SVM)",
+        "isCorrect": true,
+        "rationale": "Encuentran hiperplanos óptimos para separar clases bien definidas en datos de entrenamiento etiquetados."
+      },
+      {
+        "text": "Agrupamiento K-Means",
+        "isCorrect": false,
+        "rationale": "Es una técnica no supervisada que busca agrupar datos sin conocer etiquetas preexistentes."
+      },
+      {
+        "text": "Q-Learning",
+        "isCorrect": false,
+        "rationale": "Es un algoritmo correspondiente al aprendizaje por refuerzo basado en funciones de recompensa."
+      }
+    ],
+    "hint": "Identifica aquellos algoritmos que requieren ejemplos etiquetados previos para realizar sus predicciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de Big Data, ¿a qué se refiere la característica de 'Volumen'?",
+    "opciones": [
+      {
+        "text": "A la cantidad masiva e inmensa de datos que se generan y almacenan a cada segundo.",
+        "isCorrect": true,
+        "rationale": "El volumen describe la escala de los datos, que suele medirse en terabytes, petabytes o exabytes."
+      },
+      {
+        "text": "A la velocidad exacta a la que viajan los paquetes de red a través de la fibra óptica.",
+        "isCorrect": false,
+        "rationale": "La tasa de transmisión y flujo de datos corresponde a la característica de Velocidad, no de Volumen."
+      },
+      {
+        "text": "Al grado de veracidad y limpieza de los archivos de texto almacenados.",
+        "isCorrect": false,
+        "rationale": "La exactitud y limpieza de los datos corresponden a las dimensiones de Calidad o Veracidad."
+      },
+      {
+        "text": "Al diseño gráfico utilizado para presentar tableros e informes visuales a los directivos.",
+        "isCorrect": false,
+        "rationale": "La representación visual se relaciona con herramientas de Business Intelligence y reporting, no con el volumen masivo."
+      },
+      {
+        "text": "Al costo financiero por gigabyte de comprar discos duros en el mercado.",
+        "isCorrect": false,
+        "rationale": "El costo del hardware es un factor de infraestructura pero no define la propiedad de datos masivos."
+      }
+    ],
+    "hint": "Esta 'V' del Big Data se enfoca en el tamaño o magnitud física de la información recopilada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de las siguientes opciones es un ejemplo claro de datos no estructurados?",
+    "opciones": [
+      {
+        "text": "Archivos de video, imágenes digitales y texto libre.",
+        "isCorrect": true,
+        "rationale": "Los datos no estructurados carecen de una estructura o esquema tabular predefinido en filas y columnas."
+      },
+      {
+        "text": "Tablas de bases de datos relacionales SQL con columnas fijas.",
+        "isCorrect": false,
+        "rationale": "Las tablas organizadas en columnas y filas con tipos definidos son el ejemplo clásico de datos estructurados."
+      },
+      {
+        "text": "Hojas de cálculo financieras estructuradas en celdas numéricas.",
+        "isCorrect": false,
+        "rationale": "Las celdas ordenadas con esquemas fijos constituyen datos de tipo estructurado."
+      },
+      {
+        "text": "Registros de base de datos relacional con claves primarias y foráneas.",
+        "isCorrect": false,
+        "rationale": "El modelado relacional mediante claves asegura una arquitectura totalmente estructurada."
+      },
+      {
+        "text": "Formularios estandarizados donde cada campo exige un número entero.",
+        "isCorrect": false,
+        "rationale": "Exigir campos delimitados y tipos de datos rígidos corresponde a un formato estructurado."
+      }
+    ],
+    "hint": "Busca elementos cuya información no encaje de forma natural en una tabla convencional de filas y columnas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de la herramienta Apache Kafka en un ecosistema de Big Data?",
+    "opciones": [
+      {
+        "text": "Procesar y gestionar transmisiones de datos y flujos de eventos en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Kafka es una plataforma distribuida de transmisión que gestiona grandes flujos de datos con muy baja latencia."
+      },
+      {
+        "text": "Servir como un motor de base de datos relacional estática para computadoras de escritorio.",
+        "isCorrect": false,
+        "rationale": "Kafka no es un sistema gestor de bases de datos relacionales estáticas como MySQL o PostgreSQL."
+      },
+      {
+        "text": "Generar etiquetas sintéticas fuera de línea para imágenes médicas.",
+        "isCorrect": false,
+        "rationale": "Kafka gestiona la mensajería y flujos, no la anotación ni generación sintética de imágenes."
+      },
+      {
+        "text": "Ejecutar copias de seguridad físicas en cintas magnéticas de forma mensual.",
+        "isCorrect": false,
+        "rationale": "Su objetivo es el procesamiento en tiempo real de eventos, no el almacenamiento pasivo de respaldo."
+      },
+      {
+        "text": "Compilar código fuente de Python a lenguaje ensamblador de hardware.",
+        "isCorrect": false,
+        "rationale": "Kafka no realiza funciones de compilación de software de bajo nivel."
+      }
+    ],
+    "hint": "Piensa en el manejo continuo de información enviada por sensores o aplicaciones al instante.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es fundamental la calidad de los datos para los modelos de Machine Learning?",
+    "opciones": [
+      {
+        "text": "Porque si se entrena un modelo con datos erróneos o sesgados, las predicciones resultantes serán incorrectas.",
+        "isCorrect": true,
+        "rationale": "El rendimiento de los algoritmos depende directamente de la limpieza y precisión de los datos suministrados."
+      },
+      {
+        "text": "Porque una buena calidad de datos elimina la necesidad de contar con servidores de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "La calidad de los datos no altera la necesidad física de disponer de infraestructura para almacenarlos."
+      },
+      {
+        "text": "Porque la calidad transforma automáticamente los algoritmos no supervisados en redes neuronales.",
+        "isCorrect": false,
+        "rationale": "La calidad no cambia la naturaleza matemática ni la arquitectura del algoritmo seleccionado."
+      },
+      {
+        "text": "Porque garantiza que la velocidad del internet aumente de forma automática en toda la empresa.",
+        "isCorrect": false,
+        "rationale": "El estado de los datos no afecta el ancho de banda físico de la red de telecomunicaciones."
+      },
+      {
+        "text": "Porque evita que los componentes físicos de la computadora se sobrecalienten.",
+        "isCorrect": false,
+        "rationale": "El sobrecalentamiento del hardware se gestiona mediante disipadores y sistemas de ventilación, no con datos limpios."
+      }
+    ],
+    "hint": "Recuerda el principio clásico de la informática: si entra información defectuosa, saldrá información defectuosa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué librería de Python se menciona en las clases como una herramienta ampliamente utilizada para el análisis, limpieza y transformación de datos?",
+    "opciones": [
+      {
+        "text": "Pandas",
+        "isCorrect": true,
+        "rationale": "Pandas ofrece estructuras de datos flexibles como DataFrames para manipular y limpiar datos eficazmente."
+      },
+      {
+        "text": "Cassandra",
+        "isCorrect": false,
+        "rationale": "Cassandra es una base de datos NoSQL distribuida, no una librería estándar de procesamiento en Python."
+      },
+      {
+        "text": "Apache Flume",
+        "isCorrect": false,
+        "rationale": "Flume es un servicio distribuido para recopilar y agregar datos de registros, no una librería de código de Python."
+      },
+      {
+        "text": "MySQL",
+        "isCorrect": false,
+        "rationale": "MySQL es un sistema gestor de bases de datos relacionales completo, no una librería del lenguaje Python."
+      },
+      {
+        "text": "Redis",
+        "isCorrect": false,
+        "rationale": "Redis es un almacén de estructura de datos en memoria utilizado como caché o base de datos."
+      }
+    ],
+    "hint": "Su nombre evoca a un animal y es muy famosa por el uso de DataFrames.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones representan herramientas o marcos diseñados para la gestión, validación o evaluación de la calidad de los datos? (Selecciona todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Apache Griffin",
+        "isCorrect": true,
+        "rationale": "Ofrece procesos automatizados de medición y monitoreo de la calidad de datos en entornos de Big Data."
+      },
+      {
+        "text": "Great Expectations",
+        "isCorrect": true,
+        "rationale": "Permite definir reglas explícitas de validación para detectar datos atípicos o inconsistentes en pipelines de ML."
+      },
+      {
+        "text": "Talend Data Quality",
+        "isCorrect": true,
+        "rationale": "Proporciona soluciones empresariales para la limpieza, perfilado y estandarización de grandes conjuntos de datos."
+      },
+      {
+        "text": "MySQL Workbench",
+        "isCorrect": false,
+        "rationale": "Es un entorno gráfico para administrar y diseñar bases de datos MySQL, no una herramienta especializada en calidad de datos."
+      },
+      {
+        "text": "Apache Cassandra",
+        "isCorrect": false,
+        "rationale": "Es una base de datos NoSQL orientada a columnas, no una herramienta de validación de calidad."
+      }
+    ],
+    "hint": "Busca plataformas centradas explícitamente en la auditoría, perfilado y limpieza de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del componente HDFS en el ecosistema de Apache Hadoop?",
+    "opciones": [
+      {
+        "text": "Almacenar grandes volúmenes de datos de manera distribuida y tolerante a fallos entre los nodos de un clúster.",
+        "isCorrect": true,
+        "rationale": "HDFS divide los archivos en bloques y los distribuye a través de múltiples nodos para asegurar disponibilidad y escalabilidad."
+      },
+      {
+        "text": "Entrenar redes neuronales profundas utilizando unidades de procesamiento gráfico (GPU).",
+        "isCorrect": false,
+        "rationale": "HDFS se limita al almacenamiento de archivos distribuidos, dejando el procesamiento a otros marcos."
+      },
+      {
+        "text": "Traducir comandos de voz humana a consultas estructuradas SQL de forma automática.",
+        "isCorrect": false,
+        "rationale": "La traducción de voz requiere sistemas de procesamiento de lenguaje natural y no es tarea de un sistema de archivos."
+      },
+      {
+        "text": "Renderizar gráficos en 3D para simulaciones de minería subterránea en tiempo real.",
+        "isCorrect": false,
+        "rationale": "El renderizado gráfico es tarea de software de diseño y procesamiento visual, no de HDFS."
+      },
+      {
+        "text": "Calcular la depreciación financiera de maquinaria pesada mediante hojas de cálculo.",
+        "isCorrect": false,
+        "rationale": "Las operaciones de cálculo financiero pertenecen a aplicaciones de software contable o analítico."
+      }
+    ],
+    "hint": "Las siglas significan 'Hadoop Distributed File System'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple el componente YARN dentro de la arquitectura de Apache Hadoop?",
+    "opciones": [
+      {
+        "text": "Gestionar los recursos del clúster y planificar las tareas de procesamiento.",
+        "isCorrect": true,
+        "rationale": "YARN actúa como el administrador central de recursos, coordinando la ejecución de trabajos en los nodos."
+      },
+      {
+        "text": "Convertir imágenes no estructuradas en hiperplanos vectoriales.",
+        "isCorrect": false,
+        "rationale": "YARN no realiza procesamiento científico de datos ni transformaciones de imágenes."
+      },
+      {
+        "text": "Cifrar las conexiones de red inalámbricas de los usuarios remotos.",
+        "isCorrect": false,
+        "rationale": "La seguridad de red se gestiona mediante protocolos de cifrado como TLS/SSL, no por YARN."
+      },
+      {
+        "text": "Imprimir directamente informes de texto en formato PDF estandarizado.",
+        "isCorrect": false,
+        "rationale": "YARN es un orquestador de recursos de cómputo, no un motor de generación de documentos."
+      },
+      {
+        "text": "Supervisar la temperatura física del procesador en el servidor principal.",
+        "isCorrect": false,
+        "rationale": "El monitoreo del hardware lo efectúa el sistema operativo o herramientas del centro de datos."
+      }
+    ],
+    "hint": "Actúa como el 'director de orquesta' que asigna memoria y CPU a cada trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la principal ventaja de Apache Spark en comparación con el modelo tradicional MapReduce de Hadoop en términos de velocidad?",
+    "opciones": [
+      {
+        "text": "Realiza el procesamiento de datos directamente en memoria RAM, reduciendo lecturas y escrituras en disco.",
+        "isCorrect": true,
+        "rationale": "Al minimizar las operaciones I/O en disco mediante el uso de memoria RAM, Spark alcanza un rendimiento significativamente mayor."
+      },
+      {
+        "text": "Elimina el uso de microprocesadores mediante el empleo de fotónica cuántica.",
+        "isCorrect": false,
+        "rationale": "Spark es un software que se ejecuta en hardware convencional basado en procesadores estándar."
+      },
+      {
+        "text": "Restringe la ejecución a un único servidor físico para evitar conexiones de red.",
+        "isCorrect": false,
+        "rationale": "Spark es una herramienta distribuida que escala a través de múltiples nodos conectados en red."
+      },
+      {
+        "text": "Desactiva los sistemas de autenticación de datos para acelerar las lecturas.",
+        "isCorrect": false,
+        "rationale": "El rendimiento de Spark se debe a su arquitectura en memoria, no a omitir protocolos de seguridad."
+      },
+      {
+        "text": "Procesa únicamente archivos de texto que contengan menos de 100 registros.",
+        "isCorrect": false,
+        "rationale": "Spark está diseñado precisamente para procesar grandes volúmenes masivos de datos."
+      }
+    ],
+    "hint": "Piensa en el componente del servidor que es mucho más rápido que el almacenamiento en disco duro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué biblioteca integrada en Apache Spark proporciona algoritmos optimizados para el desarrollo de Machine Learning?",
+    "opciones": [
+      {
+        "text": "MLlib",
+        "isCorrect": true,
+        "rationale": "MLlib es la biblioteca de Spark que contiene algoritmos escalables de clasificación, regresión y agrupamiento."
+      },
+      {
+        "text": "Spark SQL",
+        "isCorrect": false,
+        "rationale": "Spark SQL está destinado a la manipulación de datos estructurados mediante consultas, no a algoritmos de ML."
+      },
+      {
+        "text": "GraphX",
+        "isCorrect": false,
+        "rationale": "GraphX se especializa en la computación y análisis de grafos y redes complejas."
+      },
+      {
+        "text": "YARN",
+        "isCorrect": false,
+        "rationale": "YARN es el gestor de recursos de Hadoop, no una librería interna de Machine Learning de Spark."
+      },
+      {
+        "text": "HDFS",
+        "isCorrect": false,
+        "rationale": "HDFS es el sistema de archivos distribuido de Hadoop, no una biblioteca de software de Spark."
+      }
+    ],
+    "hint": "Sus siglas combinan el término 'Machine Learning' con 'library'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito fundamental de la plataforma Microsoft Azure Machine Learning?",
+    "opciones": [
+      {
+        "text": "Gestionar todo el ciclo de vida de los proyectos de ML, desde la preparación de datos hasta el despliegue y monitoreo.",
+        "isCorrect": true,
+        "rationale": "Azure ML ofrece un entorno integrado en la nube para construir, entrenar y gestionar modelos de forma escalable."
+      },
+      {
+        "text": "Sustituir los sistemas operativos locales de las computadoras por procesadores de texto.",
+        "isCorrect": false,
+        "rationale": "Es un servicio especializado de Inteligencia Artificial en la nube, no un reemplazo de sistema operativo."
+      },
+      {
+        "text": "Proporcionar señal de internet satelital a vehículos mineros sin usar routers.",
+        "isCorrect": false,
+        "rationale": "Azure ML es una plataforma de desarrollo e infraestructura de modelos, no un proveedor de conectividad física."
+      },
+      {
+        "text": "Redactar patentes legales automáticamente para algoritmos de computación.",
+        "isCorrect": false,
+        "rationale": "El software de IA ayuda en el desarrollo analítico, pero no redacta registros legales de patentes de forma autónoma."
+      },
+      {
+        "text": "Fabricar sensores físicos de temperatura para camiones de transporte.",
+        "isCorrect": false,
+        "rationale": "Azure es una plataforma de servicios de software en la nube, no una fábrica de hardware o sensores."
+      }
+    ],
+    "hint": "Abarca desde la captura inicial de la información hasta la puesta en producción del modelo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes servicios o componentes forman parte de la suite de Google Cloud para el manejo de Big Data e Inteligencia Artificial? (Selecciona todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "BigQuery",
+        "isCorrect": true,
+        "rationale": "Es el almacén de datos distribuido y de alto rendimiento para realizar consultas SQL masivas en la nube."
+      },
+      {
+        "text": "Google Cloud Storage",
+        "isCorrect": true,
+        "rationale": "Ofrece un almacenamiento de objetos escalable para guardar datos estructurados y no estructurados."
+      },
+      {
+        "text": "Vertex AI / AI Platform",
+        "isCorrect": true,
+        "rationale": "Proporciona herramientas integradas para entrenar y desplegar modelos de Machine Learning en la nube de Google."
+      },
+      {
+        "text": "Apache Cassandra",
+        "isCorrect": false,
+        "rationale": "Es un proyecto de código abierto independiente supervisado por la Apache Software Foundation, no un producto propietario de Google Cloud."
+      },
+      {
+        "text": "Microsoft Active Directory",
+        "isCorrect": false,
+        "rationale": "Es un servicio de identidad desarrollado por Microsoft, no por la plataforma de Google."
+      }
+    ],
+    "hint": "Identifica los productos nativos de la nube de Google para almacenamiento, analítica y entrenamiento de modelos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se diferencia la escalabilidad horizontal de la escalabilidad vertical?",
+    "opciones": [
+      {
+        "text": "La horizontal añade más máquinas o nodos a un clúster, mientras que la vertical aumenta la capacidad (RAM/CPU) de un único servidor.",
+        "isCorrect": true,
+        "rationale": "La escalabilidad horizontal permite un crecimiento elástico distribuido, a diferencia de potenciar una sola máquina físicamente."
+      },
+      {
+        "text": "La horizontal reemplaza el software por la nube, mientras que la vertical usa cables físicos.",
+        "isCorrect": false,
+        "rationale": "Ambos tipos de escalabilidad pueden implementar infraestructura física o en la nube."
+      },
+      {
+        "text": "La horizontal reduce las tablas de una base de datos, mientras que la vertical suma columnas.",
+        "isCorrect": false,
+        "rationale": "El tipo de escalabilidad se refiere al escalamiento de infraestructura de cómputo, no a alterar esquemas lógicos."
+      },
+      {
+        "text": "La horizontal se aplica solo en teléfonos móviles y la vertical en supercomputadoras.",
+        "isCorrect": false,
+        "rationale": "Los conceptos de escalabilidad aplican a arquitecturas de servidores y clústeres empresariales de cualquier dimensión."
+      },
+      {
+        "text": "La horizontal restringe el ancho de banda y la vertical aumenta la velocidad de red.",
+        "isCorrect": false,
+        "rationale": "La definición de escalabilidad se enfoca en la capacidad de cómputo y almacenamiento, no en regular la red."
+      }
+    ],
+    "hint": "Imagina la diferencia entre comprar un servidor más grande o comprar varios servidores estándar y conectarlos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo de los procesos de limpieza de datos en la etapa previa al entrenamiento de un modelo de Machine Learning?",
+    "opciones": [
+      {
+        "text": "Eliminar registros duplicados, corregir errores y tratar valores faltantes para garantizar datos confiables.",
+        "isCorrect": true,
+        "rationale": "La limpieza previene que las inconsistencias afecten negativamente el aprendizaje del algoritmo."
+      },
+      {
+        "text": "Aumentar el tamaño de los archivos para ocupar todo el espacio libre en disco.",
+        "isCorrect": false,
+        "rationale": "El objetivo es mejorar la calidad de la información, no saturar innecesariamente el almacenamiento."
+      },
+      {
+        "text": "Transformar automáticamente todos los números en transmisiones de video HD.",
+        "isCorrect": false,
+        "rationale": "La limpieza busca corregir la información existente, no cambiar arbitrariamente el tipo de medio."
+      },
+      {
+        "text": "Cifrar los archivos de modo que ni el propio algoritmo de IA pueda leerlos.",
+        "isCorrect": false,
+        "rationale": "Si el algoritmo no puede leer los datos, no será posible llevar a cabo el proceso de entrenamiento."
+      },
+      {
+        "text": "Eliminar el 90% de los datos reales para ahorrar electricidad en los servidores.",
+        "isCorrect": false,
+        "rationale": "Descartar datos válidos masivamente destruye la representatividad y reduce la precisión del modelo."
+      }
+    ],
+    "hint": "Consiste en preparar y 'sanear' la información eliminando elementos ruidosos o defectuosos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tecnología se destaca en la Clase 4 por gestionar flujos de datos en tiempo real, permitiendo su ingesta, transformación y enrutamiento automatizado?",
+    "opciones": [
+      {
+        "text": "Apache NiFi",
+        "isCorrect": true,
+        "rationale": "Apache NiFi está diseñado para automatizar el flujo de datos entre sistemas de forma visual y en tiempo real."
+      },
+      {
+        "text": "MySQL",
+        "isCorrect": false,
+        "rationale": "MySQL es un gestor de bases de datos relacionales estáticas, no un orquestador de flujos continuos."
+      },
+      {
+        "text": "Redis",
+        "isCorrect": false,
+        "rationale": "Redis es una base de datos en memoria orientada a caché, no un motor especializado en flujos ETL visuales."
+      },
+      {
+        "text": "Jupyter Notebook",
+        "isCorrect": false,
+        "rationale": "Jupyter es un entorno interactivo para escribir código y documentación, no un motor de ingesta de datos en servidor."
+      },
+      {
+        "text": "Python IDLE",
+        "isCorrect": false,
+        "rationale": "IDLE es un entorno de desarrollo básico para escribir scripts en Python."
+      }
+    ],
+    "hint": "Forma parte del ecosistema Apache y permite crear tuberías de datos de manera intuitiva.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consisten las técnicas de anonimización y enmascaramiento de datos?",
+    "opciones": [
+      {
+        "text": "En ocultar o reemplazar información personal sensible por seudónimos o valores ficticios para proteger la privacidad.",
+        "isCorrect": true,
+        "rationale": "Estas técnicas garantizan que los datos se puedan analizar sin exponer la identidad real de las personas."
+      },
+      {
+        "text": "En incrementar la velocidad del reloj del procesador durante la multiplicación de matrices.",
+        "isCorrect": false,
+        "rationale": "El enmascaramiento se enfoca en la privacidad de la información, no en la frecuencia física del hardware."
+      },
+      {
+        "text": "En traducir textos en español a código ensamblador sin usar compiladores.",
+        "isCorrect": false,
+        "rationale": "La traducción de código es un proceso de compilación, no una técnica de protección de la privacidad."
+      },
+      {
+        "text": "En fusionar bases de datos relacionales en un solo archivo comprimido.",
+        "isCorrect": false,
+        "rationale": "Unir datos no implica ocultar la identidad o proteger campos confidenciales."
+      },
+      {
+        "text": "En convertir ondas de sonido analógicas en archivos de video digital.",
+        "isCorrect": false,
+        "rationale": "La conversión de formatos multimedia no se relaciona con la protección de datos personales."
+      }
+    ],
+    "hint": "Su objetivo es cumplir con regulaciones como la protección de identidades sensibles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En una arquitectura de Big Data y Machine Learning, ¿qué significa el concepto de 'Interoperabilidad'?",
+    "opciones": [
+      {
+        "text": "La capacidad de plataformas, aplicaciones y sistemas diversos para trabajar juntos y compartir datos sin restricciones.",
+        "isCorrect": true,
+        "rationale": "La interoperabilidad asegura que distintas tecnologías puedan intercambiar información y colaborar de forma fluida."
+      },
+      {
+        "text": "El requisito de que todos los servidores de una empresa deban ser del mismo fabricante.",
+        "isCorrect": false,
+        "rationale": "La interoperabilidad busca precisamente lo contrario: conectar componentes heterogéneos de marcas distintas."
+      },
+      {
+        "text": "La obligación de convertir los datos en la nube a cintas de respaldo locales.",
+        "isCorrect": false,
+        "rationale": "Copiar datos a cintas físicas es una estrategia de respaldo, no un atributo de comunicación entre plataformas."
+      },
+      {
+        "text": "El bloqueo de la información dentro de bases de datos propietarias sin acceso externo.",
+        "isCorrect": false,
+        "rationale": "Bloquear los datos es un obstáculo que impide la integración e interoperabilidad entre sistemas."
+      },
+      {
+        "text": "El borrado automático de registros almacenados al cabo de veinticuatro horas.",
+        "isCorrect": false,
+        "rationale": "Las políticas de purga periódica no definen la capacidad de comunicación entre plataformas."
+      }
+    ],
+    "hint": "Piensa en cómo diferentes programas de marcas distintas se comunican compartiendo un mismo formato.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes medidas contribuyen a garantizar la seguridad y privacidad de los datos en entornos corporativos de Big Data? (Selecciona todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Cifrado de datos en tránsito y en reposo",
+        "isCorrect": true,
+        "rationale": "Asegura que la información no pueda ser leída por terceros no autorizados si es interceptada o sustraída."
+      },
+      {
+        "text": "Control de acceso basado en roles y autenticación",
+        "isCorrect": true,
+        "rationale": "Restringe el acceso a la información confidencial asegurando que solo ingresen usuarios autorizados."
+      },
+      {
+        "text": "Técnicas de anonimización y enmascaramiento",
+        "isCorrect": true,
+        "rationale": "Protegen la identidad de las personas al ocultar los atributos sensibles antes del análisis."
+      },
+      {
+        "text": "Desactivación completa de los firewalls del sistema",
+        "isCorrect": false,
+        "rationale": "Desactivar los cortafuegos vulnera gravemente la red, facilitando ataques cibernéticos."
+      },
+      {
+        "text": "Otorgar permisos absolutos de administrador a usuarios externos",
+        "isCorrect": false,
+        "rationale": "Conceder privilegios totales a usuarios externos destruye el principio de seguridad y control de accesos."
+      }
+    ],
+    "hint": "Selecciona las prácticas recomendadas para proteger la confidencialidad, integridad y privacidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes tecnologías facilitan la integración de datos (ETL) y la interoperabilidad entre sistemas heterogéneos? (Selecciona todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Talend",
+        "isCorrect": true,
+        "rationale": "Ofrece un entorno para extraer, transformar y cargar datos provenientes de múltiples fuentes y esquemas."
+      },
+      {
+        "text": "Apache NiFi",
+        "isCorrect": true,
+        "rationale": "Permite enrutar y transformar flujos continuos de datos garantizando su comunicación entre plataformas."
+      },
+      {
+        "text": "Apache Camel",
+        "isCorrect": true,
+        "rationale": "Es un marco de integración basado en patrones de diseño que conecta aplicaciones mediante diversos protocolos."
+      },
+      {
+        "text": "Microsoft Paint",
+        "isCorrect": false,
+        "rationale": "Es un editor de gráficos básico de uso personal, sin relación con tareas de integración ETL."
+      },
+      {
+        "text": "Notepad++",
+        "isCorrect": false,
+        "rationale": "Es un editor de texto plano para programadores, no un motor empresarial de procesos ETL o integración."
+      }
+    ],
+    "hint": "Elige herramientas concebidas para transformar, orquestar y conectar flujos de datos entre diferentes aplicaciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto del aprendizaje automático supervisado, ¿cuál es la función principal de los \"datos etiquetados\" durante la fase de entrenamiento del modelo?",
+    "opciones": [
+      {
+        "text": "Proporcionar una referencia clara de entrada y salida para que el algoritmo identifique patrones y ajuste sus predicciones.",
+        "isCorrect": true,
+        "rationale": "El aprendizaje supervisado se fundamenta en entregar al algoritmo pares de datos con sus respectivas etiquetas de salida conocidas para que aprenda la relación entre ellos."
+      },
+      {
+        "text": "Permitir que el modelo agrupe los datos de manera autónoma sin conocer de antemano el resultado esperado.",
+        "isCorrect": false,
+        "rationale": "La agrupación autónoma sin resultados predefinidos es la característica central del aprendizaje no supervisado, no del supervisado."
+      },
+      {
+        "text": "Reducir la dimensionalidad de las imágenes procesadas eliminando la necesidad de algoritmos de regresión.",
+        "isCorrect": false,
+        "rationale": "Las etiquetas de datos no tienen como objetivo reducir dimensiones espaciales ni sustituir los métodos de regresión."
+      },
+      {
+        "text": "Asignar castigos o recompensas numéricas en función de las acciones realizadas por un agente en un entorno simulado.",
+        "isCorrect": false,
+        "rationale": "El esquema de recompensas y penalizaciones es propio del aprendizaje por refuerzo y no de los datos etiquetados del aprendizaje supervisado."
+      },
+      {
+        "text": "Reemplazar el uso de algoritmos de clasificación binaria mediante el uso exclusivo de redes neuronales convolucionales.",
+        "isCorrect": false,
+        "rationale": "Las etiquetas son empleadas tanto en algoritmos clásicos de clasificación como en redes complejas, sin reemplazarse mutuamente."
+      }
+    ],
+    "hint": "Considere qué elemento diferenciador orienta al modelo hacia un resultado concreto previamente conocido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando se requiere clasificar si un correo electrónico recibido es \"spam\" o \"no spam\" (una salida discreta binaria), ¿qué algoritmo de aprendizaje supervisado es el más adecuado según lo expuesto en el curso?",
+    "opciones": [
+      {
+        "text": "Regresión lineal.",
+        "isCorrect": false,
+        "rationale": "La regresión lineal se aplica para predecir valores continuos numéricos (como precios o temperaturas) y no para categóricos binarios."
+      },
+      {
+        "text": "Regresión logística.",
+        "isCorrect": true,
+        "rationale": "La regresión logística está diseñada específicamente para resolver problemas de clasificación binaria determinando la probabilidad de pertenencia a una clase (sí/no, spam/no spam)."
+      },
+      {
+        "text": "Clustering K-Means.",
+        "isCorrect": false,
+        "rationale": "K-Means es un algoritmo de aprendizaje no supervisado enfocado en agrupar datos no etiquetados y no en clasificación binaria supervisada."
+      },
+      {
+        "text": "Análisis de Componentes Principales (PCA).",
+        "isCorrect": false,
+        "rationale": "PCA se utiliza para la reducción de dimensionalidad y visualización en aprendizaje no supervisado, no para clasificar eventos."
+      },
+      {
+        "text": "Algoritmo Q-Learning.",
+        "isCorrect": false,
+        "rationale": "Q-Learning pertenece a la rama del aprendizaje por refuerzo orientado a la toma de decisiones mediante recompensas."
+      }
+    ],
+    "hint": "Piense en el modelo probabilístico estándar diseñado para responder preguntas de tipo sí/no o verdadero/falso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes afirmaciones representan características o algoritmos propios del aprendizaje NO supervisado? (Seleccione todas las que correspondan).",
+    "opciones": [
+      {
+        "text": "Opera con conjuntos de datos no etiquetados donde el modelo busca estructuras o patrones ocultos por asociación.",
+        "isCorrect": true,
+        "rationale": "Al carecer de etiquetas previas, la máquina explora las relaciones inherentes dentro de los datos para agruparlos de forma autónoma."
+      },
+      {
+        "text": "Incluye algoritmos como K-Means y DBSCAN para la agrupación de datos en clusters.",
+        "isCorrect": true,
+        "rationale": "Tanto K-Means como DBSCAN son métodos estadísticos populares de clustering no supervisado para segmentar conjuntos de datos."
+      },
+      {
+        "text": "Emplea técnicas como PCA (Análisis de Componentes Principales) y t-SNE para la reducción dimensional y visualización.",
+        "isCorrect": true,
+        "rationale": "Estas técnicas permiten simplificar grandes volúmenes de características manteniendo las varianzas más significativas sin requerir etiquetas."
+      },
+      {
+        "text": "Utiliza una función de recompensa positiva o castigo negativo para guiar el comportamiento del agente mediante prueba y error.",
+        "isCorrect": false,
+        "rationale": "La dinámica de agente, entorno y retroalimentación mediante recompensas define al aprendizaje por refuerzo."
+      },
+      {
+        "text": "Requiere que cada registro de entrada cuente con una etiqueta explícita de salida predefinida para medir la precisión.",
+        "isCorrect": false,
+        "rationale": "La exigencia de etiquetas de salida explícitas es la condición fundamental del aprendizaje supervisado."
+      }
+    ],
+    "hint": "Identifique las opciones que se enfocan en encontrar patrones internos o reducir dimensiones sin depender de etiquetas previa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el aprendizaje por refuerzo, ¿cómo aprende la inteligencia artificial a tomar decisiones óptimas dentro de un entorno?",
+    "opciones": [
+      {
+        "text": "Analizando únicamente archivos estructurados organizados en tablas relacionales SQL.",
+        "isCorrect": false,
+        "rationale": "El aprendizaje por refuerzo no está restringido a consultas en tablas SQL, sino a la interacción dinámica con entornos."
+      },
+      {
+        "text": "Siguiendo reglas rígidas de taxonomía morfológica programadas explícitamente por el desarrollador.",
+        "isCorrect": false,
+        "rationale": "Este tipo de aprendizaje busca evitar reglas rígidas programadas explícitamente, permitiendo que el sistema descubra la mejor estrategia."
+      },
+      {
+        "text": "Recibiendo recompensas por acciones positivas y castigos o penalizaciones por acciones negativas a través de la interacción.",
+        "isCorrect": true,
+        "rationale": "El modelo aprende evaluando las consecuencias de sus acciones en un ciclo de prueba y error maximizando la puntuación o recompensa acumulada."
+      },
+      {
+        "text": "Eliminando automáticamente los datos atípicos antes de procesar las imágenes en tiempo real.",
+        "isCorrect": false,
+        "rationale": "La limpieza o eliminación de atípicos es un paso de preparación de datos y no el mecanismo de aprendizaje del algoritmo."
+      },
+      {
+        "text": "Etiquetando previamente miles de imágenes de forma manual para categorizarlas en tipos predefinidos.",
+        "isCorrect": false,
+        "rationale": "El etiquetado manual masivo corresponde a la preparación de datos para aprendizaje supervisado."
+      }
+    ],
+    "hint": "Piense en la analogía del entrenamiento mediante la asignación de puntos por aciertos y quita de puntos por errores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la relación conceptual planteada entre el Machine Learning y el Deep Learning, ¿cuál es la diferencia estructural fundamental entre ambos?",
+    "opciones": [
+      {
+        "text": "El Machine Learning no requiere ningún tipo de datos para funcionar, mientras que el Deep Learning depende de bases de datos relacionales SQL.",
+        "isCorrect": false,
+        "rationale": "Ambas ramas dependen estrictamente de datos para poder entrenarse y generar conocimiento."
+      },
+      {
+        "text": "El Deep Learning utiliza únicamente datos estructurados etiquetados, mientras que el Machine Learning procesa exclusivamente video.",
+        "isCorrect": false,
+        "rationale": "El Deep Learning sobresale especialmente con datos no estructurados como video e imágenes, lo opuesto a la restricción planteada."
+      },
+      {
+        "text": "El Deep Learning es una subrama del Machine Learning cuyo aprendizaje se fundamenta en arquitecturas de redes neuronales.",
+        "isCorrect": true,
+        "rationale": "El Deep Learning constituye una especialización dentro del Machine Learning que procesa información compleja imitando estructuras de redes neuronales."
+      },
+      {
+        "text": "El Machine Learning reemplaza completamente la lógica simbólica y los sistemas expertos en cualquier aplicación de IA.",
+        "isCorrect": false,
+        "rationale": "El Machine Learning complementa el abanico de la IA pero no elimina la existencia de los sistemas expertos o la lógica simbólica."
+      },
+      {
+        "text": "El Deep Learning imposibilita el entrenamiento con datos masivos al requerir procesamiento puramente secuencial.",
+        "isCorrect": false,
+        "rationale": "El Deep Learning se beneficia enormemente y requiere de grandes volúmenes de datos masivos para optimizar sus parámetros."
+      }
+    ],
+    "hint": "Recuerde qué subrama dentro del aprendizaje automático imita la estructura y conexiones del cerebro humano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con lo expuesto sobre las aplicaciones del aprendizaje automático, ¿en qué escenarios se aplica el Machine Learning predictivo o de reconocimiento dentro del transporte y la minería? (Seleccione todas las que correspondan).",
+    "opciones": [
+      {
+        "text": "Predicciones en tiempo real a partir de datos captados por sensores en herramientas y perforadoras.",
+        "isCorrect": true,
+        "rationale": "Los algoritmos leen las variaciones de sensores operativos para predecir fallas mecánicas y optimizar el rendimiento."
+      },
+      {
+        "text": "Sistemas de navegación y conducción autónoma para vehículos que operan bajo tierra o en áreas remotas.",
+        "isCorrect": true,
+        "rationale": "Los modelos de visión por computadora y reconocimiento de entorno permiten desplazar vehículos mineros de forma autónoma y segura."
+      },
+      {
+        "text": "Detección de patrones de voz y transcripción automática de comandos para asistentes en cabina.",
+        "isCorrect": true,
+        "rationale": "El procesamiento de lenguaje y audio mediante ML permite interpretar instrucciones de voz en entornos operativos."
+      },
+      {
+        "text": "Almacenamiento exclusivo de datos en archivos planos sin necesidad de ningún algoritmo de interpretación.",
+        "isCorrect": false,
+        "rationale": "El mero almacenamiento estático en archivos no constituye una aplicación analítica ni predictiva de Machine Learning."
+      },
+      {
+        "text": "Eliminación total de la necesidad de realizar mantenimiento preventivo o calibración física en los equipos.",
+        "isCorrect": false,
+        "rationale": "El Machine Learning optimiza las tareas de mantenimiento, pero no elimina la intervención ni la calibración física requerida."
+      }
+    ],
+    "hint": "Elija los casos que involucran procesamiento analítico de sensores, autonomía de maquinaria y procesamiento de comandos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del ecosistema de Big Data, ¿cómo se clasifican los archivos de tipo JSON, XML o los registros log de aplicaciones móviles?",
+    "opciones": [
+      {
+        "text": "Datos estructurados.",
+        "isCorrect": false,
+        "rationale": "Los datos estructurados siguen tablas rígidas con filas y columnas perfectamente definidas como en SQL tradicional."
+      },
+      {
+        "text": "Datos semiestructurados.",
+        "isCorrect": true,
+        "rationale": "Formatos como JSON o XML no poseen una tabla fija pero contienen etiquetas o marcadores internos que separan y organizan los elementos."
+      },
+      {
+        "text": "Datos no estructurados.",
+        "isCorrect": false,
+        "rationale": "Los datos no estructurados carecen por completo de una organización o jerarquía previa, como las imágenes, audios o videos sin procesar."
+      },
+      {
+        "text": "Datos relacionales puramente SQL.",
+        "isCorrect": false,
+        "rationale": "Las bases de datos relacionales manejan esquemas estrictos a diferencia de los documentos flexibles tipo JSON."
+      },
+      {
+        "text": "Datos vectoriales tridimensionales.",
+        "isCorrect": false,
+        "rationale": "Los datos vectoriales 3D corresponden a representaciones espaciales y no al formato de texto ligero con jerarquías como JSON o XML."
+      }
+    ],
+    "hint": "Piense en archivos que carecen de tablas rígidas pero poseen etiquetas internas y claves jerárquicas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si se requiere gestionar y almacenar grandes volúmenes de datos NO estructurados o semiestructurados de forma altamente escalable y flexible, ¿cuál de las siguientes tecnologías es la más adecuada según la Clase 2?",
+    "opciones": [
+      {
+        "text": "MySQL relacional.",
+        "isCorrect": false,
+        "rationale": "MySQL está optimizado para esquemas rígidos y datos estructurados bajo relaciones formales de tablas."
+      },
+      {
+        "text": "MongoDB.",
+        "isCorrect": true,
+        "rationale": "MongoDB es una base de datos NoSQL orientada a documentos (JSON/BSON) ideal para manejar esquemas flexibles y datos no estructurados a gran escala."
+      },
+      {
+        "text": "PostgreSQL.",
+        "isCorrect": false,
+        "rationale": "PostgreSQL es un sistema gestor de bases de datos relacional tradicional que exige esquemas prefijados."
+      },
+      {
+        "text": "SQLite.",
+        "isCorrect": false,
+        "rationale": "SQLite es una base de datos relacional ligera y local no diseñada para grandes volúmenes masivos de Big Data no estructurado."
+      },
+      {
+        "text": "Apache Hive en modo exclusivamente relacional estático.",
+        "isCorrect": false,
+        "rationale": "Hive actúa como un data warehouse sobre Hadoop para realizar consultas tipo SQL en datos estructurados masivos."
+      }
+    ],
+    "hint": "Identifique la solución NoSQL orientada a documentos flexibles que permite almacenar formatos BSON/JSON.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes tecnologías o marcos de trabajo están específicamente diseñados para el procesamiento de flujos de datos masivos en tiempo real (streaming)? (Seleccione todas las que correspondan).",
+    "opciones": [
+      {
+        "text": "Apache Kafka.",
+        "isCorrect": true,
+        "rationale": "Kafka es una plataforma distribuida de transmisión de mensajes de alto rendimiento que procesa eventos en tiempo real."
+      },
+      {
+        "text": "Apache Flink.",
+        "isCorrect": true,
+        "rationale": "Flink es un framework enfocado en el procesamiento de flujos de datos continuos (streaming) con muy baja latencia."
+      },
+      {
+        "text": "Spark Streaming.",
+        "isCorrect": true,
+        "rationale": "Es el módulo especializado de Apache Spark que permite la ingesta y análisis en tiempo real de flujos continuos de datos."
+      },
+      {
+        "text": "MySQL en modo relacional mono-nodo sin extensiones.",
+        "isCorrect": false,
+        "rationale": "Un motor MySQL mono-nodo no está estructurado para recibir y procesar flujos masivos de eventos paralelos en streaming."
+      },
+      {
+        "text": "HDFS utilizado únicamente como almacenamiento masivo estático sin motores de procesamiento.",
+        "isCorrect": false,
+        "rationale": "HDFS se encarga de guardar archivos en disco de forma distribuida, no de procesar eventos continuos en memoria en tiempo real."
+      }
+    ],
+    "hint": "Seleccione las tecnologías que permiten la ingesta y el análisis continuo e inmediato de eventos tan pronto como ocurren.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de Big Data y Machine Learning, ¿qué consecuencia directa sufre un modelo al ser entrenado con datos que presentan un alto nivel de errores, ruido o inconsistencias (baja calidad)?",
+    "opciones": [
+      {
+        "text": "Aumenta automáticamente su velocidad de procesamiento reduciendo el uso de memoria.",
+        "isCorrect": false,
+        "rationale": "La mala calidad de datos no optimiza los recursos computacionales ni acelera los cálculos."
+      },
+      {
+        "text": "Corrige automáticamente las inconsistencias mediante la auto-calibración de la regresión.",
+        "isCorrect": false,
+        "rationale": "Los modelos de Machine Learning no corrigen mágicamente los errores de entrada; aprenden de ellos de forma ciega."
+      },
+      {
+        "text": "Genera predicciones erróneas o sesgadas al aprender patrones distorsionados que no corresponden a la realidad.",
+        "isCorrect": true,
+        "rationale": "El principio de \"basura entra, basura sale\" establece que el rendimiento y confiabilidad del modelo depende directamente de la calidad de los datos de entrenamiento."
+      },
+      {
+        "text": "Transforma los datos no estructurados en esquemas relacionales ordenados por columnas.",
+        "isCorrect": false,
+        "rationale": "La falta de calidad no modifica la estructura técnica de los archivos de entrada."
+      },
+      {
+        "text": "Convierte el modelo supervisado en un modelo de aprendizaje por refuerzo de forma autónoma.",
+        "isCorrect": false,
+        "rationale": "La calidad de los datos afecta la precisión del algoritmo, pero no cambia la naturaleza metodológica del paradigma de aprendizaje."
+      }
+    ],
+    "hint": "Recuerde la máxima básica que conecta la calidad de los insumos de entrenamiento con los resultados predictivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes herramientas y bibliotecas se utilizan específicamente para la validación, limpieza y monitoreo de la calidad de los datos en entornos de Big Data y Machine Learning? (Seleccione todas las que correspondan).",
+    "opciones": [
+      {
+        "text": "Apache Griffin.",
+        "isCorrect": true,
+        "rationale": "Es una plataforma dentro del ecosistema Hadoop diseñada para monitorear y medir la calidad de datos en tiempo real y por lotes."
+      },
+      {
+        "text": "Great Expectations.",
+        "isCorrect": true,
+        "rationale": "Es una herramienta de software que permite definir reglas de validación, realizar pruebas automáticas y detectar datos atípicos antes del entrenamiento."
+      },
+      {
+        "text": "Librería Pandas en Python.",
+        "isCorrect": true,
+        "rationale": "Pandas es la biblioteca estándar de Python utilizada para la exploración, transformación, filtrado e imputación de datos incompletos."
+      },
+      {
+        "text": "Un clúster de GPU sin software de procesamiento configurado.",
+        "isCorrect": false,
+        "rationale": "El hardware gráfico por sí solo proporciona potencia de cálculo, pero no ejecuta reglas lógicas de validación de datos sin un software adecuado."
+      },
+      {
+        "text": "Protocolos de red física como cables Ethernet.",
+        "isCorrect": false,
+        "rationale": "La infraestructura física de red transmite datos, pero no realiza auditorías ni limpieza de contenido analítico."
+      }
+    ],
+    "hint": "Marque tanto las bibliotecas de código para manipular DataFrames como los marcos de trabajo dedicados a medir la calidad de los datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con lo visto en la Clase 2, ¿por qué resulta crítico disponer de un gran VOLUMEN de datos al entrenar modelos complejos de Machine Learning y Deep Learning?",
+    "opciones": [
+      {
+        "text": "Porque elimina la necesidad de utilizar infraestructuras distribuidas o almacenamiento en la nube.",
+        "isCorrect": false,
+        "rationale": "Al contrario, un volumen de datos masivo incrementa la necesidad de contar con almacenamiento distribuido y escalable."
+      },
+      {
+        "text": "Porque reduce a cero el tiempo necesario para procesar petabytes de información.",
+        "isCorrect": false,
+        "rationale": "A mayor volumen de datos, mayor es la carga computacional requerida para procesarlos."
+      },
+      {
+        "text": "Porque ayuda a prevenir el sobreajuste (overfitting), permitiendo que el modelo identifique patrones generales y robustos.",
+        "isCorrect": true,
+        "rationale": "Disponer de amplios conjuntos de datos evita que el modelo simplemente memorice los ejemplos de entrenamiento y promueve una generalización correcta ante datos nuevos."
+      },
+      {
+        "text": "Porque transforma automáticamente cualquier archivo de video en un documento de texto estructurado.",
+        "isCorrect": false,
+        "rationale": "El volumen no altera el tipo ni el formato del medio de origen."
+      },
+      {
+        "text": "Porque limita la capacidad del modelo para realizar predicciones sobre eventos futuros.",
+        "isCorrect": false,
+        "rationale": "Un volumen alto y variado de datos de calidad mejora la precisión de las predicciones en lugar de limitarla."
+      }
+    ],
+    "hint": "Considere qué problema ocurre cuando un modelo memoriza un conjunto reducido de datos en lugar de aprender patrones generales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del ecosistema Apache Hadoop, ¿cuál es la función principal del componente HDFS (Hadoop Distributed File System)?",
+    "opciones": [
+      {
+        "text": "Ejecutar consultas interactivas únicamente en memoria RAM volatil de un solo equipo.",
+        "isCorrect": false,
+        "rationale": "HDFS es un sistema gestor de almacenamiento en discos de clúster y no un motor analítico exclusivo de memoria RAM."
+      },
+      {
+        "text": "Almacenar grandes volúmenes de datos de forma distribuida, escalable y tolerante a fallos dividiendo los archivos en bloques.",
+        "isCorrect": true,
+        "rationale": "HDFS fragmenta archivos gigantescos en bloques y los reparte a lo largo de múltiples nodos en un clúster asegurando redundancia."
+      },
+      {
+        "text": "Traducir automáticamente consultas complejas de Python a SQL.",
+        "isCorrect": false,
+        "rationale": "HDFS no funciona como un compilador o traductor de lenguajes de programación."
+      },
+      {
+        "text": "Monitorear en tiempo real las transacciones de tarjetas de crédito sin guardar registros en disco.",
+        "isCorrect": false,
+        "rationale": "Su objetivo principal es la persistencia distribuida de datos masivos en disco, no el filtrado en memoria sin guardar registros."
+      },
+      {
+        "text": "Servir como la única interfaz de usuario gráfica para crear modelos de aprendizaje profundo.",
+        "isCorrect": false,
+        "rationale": "HDFS es una capa del sistema de archivos distribuido de bajo nivel, no una interfaz gráfica para usuarios finales."
+      }
+    ],
+    "hint": "Enfóquese en el pilar del ecosistema Hadoop responsable de guardar archivos fragmentados en varios servidores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el modelo clásico de procesamiento MapReduce de Apache Hadoop, ¿cuál es el rol específico de la fase \"Map\"?",
+    "opciones": [
+      {
+        "text": "Combinar y resumir todos los resultados finales calculados para entregarlos al usuario.",
+        "isCorrect": false,
+        "rationale": "La agregación y combinación final de resultados es la responsabilidad de la fase 'Reduce'."
+      },
+      {
+        "text": "Asignar los recursos de memoria física y CPU a nivel del sistema operativo en el servidor principal.",
+        "isCorrect": false,
+        "rationale": "La administración y planificación de recursos computacionales es función del componente YARN."
+      },
+      {
+        "text": "Procesar y filtrar los datos de entrada, transformándolos en un conjunto de pares clave-valor intermediarios.",
+        "isCorrect": true,
+        "rationale": "La etapa 'Map' toma el conjunto de datos inicial, analiza sus elementos y genera pares clave-valor estructurados para su posterior procesamiento."
+      },
+      {
+        "text": "Generar copias de respaldo físicas de las computadoras mediante imágenes de disco completo.",
+        "isCorrect": false,
+        "rationale": "MapReduce es un modelo de programación en paralelo, no una utilidad de clonación de discos duros."
+      },
+      {
+        "text": "Encriptar las conexiones entre los diferentes usuarios que envían consultas al clúster.",
+        "isCorrect": false,
+        "rationale": "La fase 'Map' se enfoca en la transformación lógica de datos, no en el cifrado de protocolos de red."
+      }
+    ],
+    "hint": "Recuerde el primer paso del paradigma en el que los datos sin estructurar se convierten en parejas de datos organizados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué ventajas clave ofrece Apache Spark en comparación con el modelo MapReduce tradicional de Hadoop para el procesamiento de Big Data? (Seleccione todas las que correspondan).",
+    "opciones": [
+      {
+        "text": "Capacidad de realizar procesamiento de datos en memoria RAM, lo que acelera drásticamente las operaciones iterativas.",
+        "isCorrect": true,
+        "rationale": "Al minimizar las operaciones de lectura y escritura en discos físicos que hacía MapReduce, Spark logra velocidades significativamente mayores."
+      },
+      {
+        "text": "Integración con la biblioteca MLlib para el entrenamiento de algoritmos de Machine Learning escalables.",
+        "isCorrect": true,
+        "rationale": "Spark cuenta con módulos nativos dedicados a la implementación distribuida de modelos de aprendizaje automático."
+      },
+      {
+        "text": "Soporte para el procesamiento de flujos de datos en tiempo real mediante Spark Streaming.",
+        "isCorrect": true,
+        "rationale": "Spark permite procesar datos continuos en streaming a diferencia de MapReduce, que estaba pensado principalmente para procesamiento por lotes (batch)."
+      },
+      {
+        "text": "Incapacidad total para leer archivos almacenados en el sistema HDFS o en la nube.",
+        "isCorrect": false,
+        "rationale": "Spark es plenamente compatible e integrable con HDFS, Amazon S3 y muchas otras fuentes de datos."
+      },
+      {
+        "text": "Exigencia de reemplazar todos los servidores del clúster por tarjetas gráficas GPU dedicadas.",
+        "isCorrect": false,
+        "rationale": "Spark funciona sobre hardware estándar de clústeres computacionales sin exigir el uso exclusivo de GPUs."
+      }
+    ],
+    "hint": "Considere la velocidad que aporta el trabajo en memoria y la presencia de módulos nativos para analítica y tiempo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del ecosistema de desarrollo de inteligencia artificial, ¿cuál es el propósito principal de la plataforma Microsoft Azure Machine Learning?",
+    "opciones": [
+      {
+        "text": "Operar como un procesador de texto simple para redactar informes de oficina sin conexión a internet.",
+        "isCorrect": false,
+        "rationale": "Azure Machine Learning es un servicio avanzado en la nube y no un editor de texto convencional."
+      },
+      {
+        "text": "Proporcionar un entorno integral en la nube para acelerar y gestionar todo el ciclo de vida del Machine Learning (MLOps).",
+        "isCorrect": true,
+        "rationale": "Permite administrar el proceso completo de proyectos de IA, incluyendo la preparación de datos, entrenamiento, despliegue, gobernanza y monitoreo de modelos."
+      },
+      {
+        "text": "Reemplazar completamente el uso de sensores físicos en la industria de extracción minera.",
+        "isCorrect": false,
+        "rationale": "La plataforma procesa y gestiona los datos de los sensores, pero no sustituye el hardware físico de medición."
+      },
+      {
+        "text": "Limitar el uso de algoritmos únicamente a aquellos programados en lenguajes privativos antiguos.",
+        "isCorrect": false,
+        "rationale": "Azure apoya marcos de trabajo modernos e hiperconectados como TensorFlow, PyTorch y Scikit-Learn."
+      },
+      {
+        "text": "Restringir el acceso a los datos únicamente a un único computador personal por empresa.",
+        "isCorrect": false,
+        "rationale": "Es un entorno distribuido y colaborativo en la nube que permite el acceso a equipos globales de desarrollo."
+      }
+    ],
+    "hint": "Piense en la plataforma empresarial en la nube que gestiona desde la preparación inicial de datos hasta la puesta en producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro de las herramientas para Machine Learning y Big Data en la nube de Google Cloud Platform (GCP), ¿cuáles de los siguientes componentes cumplen funciones clave en el almacenamiento, análisis o entrenamiento de modelos? (Seleccione todas las que correspondan).",
+    "opciones": [
+      {
+        "text": "BigQuery para el análisis masivo de datos y consultas SQL ultrarrápidas en la nube.",
+        "isCorrect": true,
+        "rationale": "BigQuery es el almacén de datos (data warehouse) gestionado por Google que ejecuta consultas masivas en cuestión de segundos."
+      },
+      {
+        "text": "Google Cloud Storage para el almacenamiento escalable y seguro de objetos y archivos grandes.",
+        "isCorrect": true,
+        "rationale": "Es el servicio de almacenamiento fundamental para guardar datos estructurados, semiestructurados o no estructurados en la nube."
+      },
+      {
+        "text": "Vertex AI / AI Platform para el entrenamiento, gestión y despliegue de modelos de aprendizaje automático.",
+        "isCorrect": true,
+        "rationale": "Constituye la suite integrada de Google diseñada específicamente para construir y poner en producción modelos de Machine Learning."
+      },
+      {
+        "text": "Servidores locales físicos instalados dentro de gabinetes de red sin acceso a internet.",
+        "isCorrect": false,
+        "rationale": "GCP ofrece servicios basados en la nube pública y no infraestructuras privadas locales disconnected."
+      },
+      {
+        "text": "Algoritmos mecánicos de calibración manual de motores diésel.",
+        "isCorrect": false,
+        "rationale": "La calibración mecánica es un proceso de taller y no un componente de software analítico en la nube."
+      }
+    ],
+    "hint": "Elija los servicios de Google Cloud destinados al análisis SQL masivo, repositorio de archivos y entrenamiento de IA.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la arquitectura del sistema de archivos distribuido HDFS, ¿cuál es la responsabilidad del nodo principal denominado NameNode en comparación con los DataNodes?",
+    "opciones": [
+      {
+        "text": "El NameNode guarda los bloques reales de datos, mientras que los DataNodes gestionan la interfaz gráfica.",
+        "isCorrect": false,
+        "rationale": "Son los DataNodes los encargados de almacenar los bloques físicos de contenido, no el NameNode."
+      },
+      {
+        "text": "El NameNode administra los metadatos y la estructura del directorio, mientras que los DataNodes almacenan los bloques físicos de datos.",
+        "isCorrect": true,
+        "rationale": "El NameNode actúa como el maestro que mantiene la ubicación de los archivos y metadatos, mientras que los DataNodes guardan los archivos reales repartidos en el clúster."
+      },
+      {
+        "text": "El NameNode ejecuta los algoritmos de redes neuronales, mientras que los DataNodes compilan el código fuente.",
+        "isCorrect": false,
+        "rationale": "HDFS es un sistema de almacenamiento de archivos y no el motor de ejecución de redes neuronales o compilación."
+      },
+      {
+        "text": "El NameNode procesa exclusivamente transacciones de tarjetas de crédito en streaming.",
+        "isCorrect": false,
+        "rationale": "La gestión de datos transaccionales en tiempo real corresponde a motores como Kafka o Flink, no al NameNode de HDFS."
+      },
+      {
+        "text": "El NameNode es un nodo esclavo que solo se enciende cuando falla la red eléctrica.",
+        "isCorrect": false,
+        "rationale": "El NameNode es el nodo maestro crítico que debe estar constantemente operativo para dirigir el sistema de archivos."
+      }
+    ],
+    "hint": "Diferencie entre la entidad encargada de la 'agenda o mapa de ubicación' (metadatos) y los servidores que guardan la información real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un equipo de ingeniería decide incrementar la capacidad de procesamiento de su sistema agregando más memoria RAM y procesadores más potentes a su único servidor central. ¿Qué tipo de escalabilidad están ejecutando?",
+    "opciones": [
+      {
+        "text": "Escalabilidad horizontal.",
+        "isCorrect": false,
+        "rationale": "La escalabilidad horizontal involucra agregar más máquinas o nodos a la red en lugar de potenciar un solo equipo."
+      },
+      {
+        "text": "Escalabilidad vertical.",
+        "isCorrect": true,
+        "rationale": "Aumentar los componentes de hardware (RAM, CPU, almacenamiento) en una misma máquina física existente constituye el concepto de escalabilidad vertical (scale-up)."
+      },
+      {
+        "text": "Escalabilidad por fragmentación NoSQL.",
+        "isCorrect": false,
+        "rationale": "La fragmentación (sharding) distribuye tablas a través de múltiples servidores, lo cual es propio del enfoque horizontal."
+      },
+      {
+        "text": "Escalabilidad por anonimización.",
+        "isCorrect": false,
+        "rationale": "La anonimización es una técnica de privacidad de datos, no un método de expansión de capacidad de hardware."
+      },
+      {
+        "text": "Escalabilidad estática de red.",
+        "isCorrect": false,
+        "rationale": "El término no corresponde a una categoría formal de arquitectura de cómputo para escalamiento de sistemas."
+      }
+    ],
+    "hint": "Considere la dirección de la expansión cuando se mejora un solo equipo individualmente hacia arriba.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son las características fundamentales de la escalabilidad HORIZONTAL en entornos de Big Data y Machine Learning? (Seleccione todas las que correspondan).",
+    "opciones": [
+      {
+        "text": "Consiste en añadir más computadoras o nodos interconectados a un clúster para repartir el trabajo.",
+        "isCorrect": true,
+        "rationale": "En lugar de hacer una máquina más grande, la escalabilidad horizontal incrementa el número total de nodos que colaboran entre sí."
+      },
+      {
+        "text": "Utiliza arquitecturas distribuidas que dividen los datos y los procesan en paralelo.",
+        "isCorrect": true,
+        "rationale": "Los marcos de trabajo distribuidos permiten repartir bloques de datos entre los distintos nodos para procesarlos simultáneamente."
+      },
+      {
+        "text": "Ofrece alta disponibilidad y tolerancia a fallos mediante la replicación de datos en varios nodos.",
+        "isCorrect": true,
+        "rationale": "Si un nodo falla dentro del clúster, la información se recupera automáticamente desde otro nodo que posee una copia redundante."
+      },
+      {
+        "text": "Exige actualizar únicamente los componentes de un único servidor central sin sumar más equipos.",
+        "isCorrect": false,
+        "rationale": "Potenciar una sola máquina individual es la definición de escalabilidad vertical y no horizontal."
+      },
+      {
+        "text": "Prohíbe el uso de sistemas de archivos distribuidos como HDFS o tecnologías de procesamiento masivo.",
+        "isCorrect": false,
+        "rationale": "La escalabilidad horizontal es precisamente el principio operativo bajo el cual funcionan HDFS, Spark y Hadoop."
+      }
+    ],
+    "hint": "Identifique las ventajas ligadas al trabajo distribuido en equipo mediante la adición de múltiples nodos en un clúster.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del proceso de limpieza y preparación de datos, ¿qué característica distingue al uso de Apache NiFi frente a los procesos tradicionales por lotes?",
+    "opciones": [
+      {
+        "text": "Exige que toda la información se ingrese de forma manual mediante planillas de cálculo.",
+        "isCorrect": false,
+        "rationale": "NiFi es una plataforma de automatización de flujos de datos a escala empresarial totalmente automatizada."
+      },
+      {
+        "text": "Permite gestionar, dirigir, transformar y limpiar flujos de datos continuos en tiempo real con automatización visual.",
+        "isCorrect": true,
+        "rationale": "Apache NiFi destaca por su capacidad de manipular y transformar datos en movimiento (streaming) en tiempo real mediante un flujo visual."
+      },
+      {
+        "text": "Elimina la necesidad de utilizar políticas de seguridad o control de acceso en la empresa.",
+        "isCorrect": false,
+        "rationale": "NiFi incluye controles estrictos de seguridad, cifrado y trazabilidad de los datos."
+      },
+      {
+        "text": "Prohíbe la conexión de dispositivos o sensores IoT provenientes del sector industrial.",
+        "isCorrect": false,
+        "rationale": "NiFi se utiliza ampliamente para la ingesta y preparación de datos continuos provenientes de sensores industriales IoT."
+      },
+      {
+        "text": "Su función exclusiva es la encriptación de discos duros que están apagados.",
+        "isCorrect": false,
+        "rationale": "NiFi gestiona el flujo activo y transformación de datos, no se limita al cifrado estático de hardware."
+      }
+    ],
+    "hint": "Piense en la herramienta del ecosistema Apache enfocada en enrutamiento y transformación de datos en flujo continuo (streaming).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para garantizar un entorno seguro en la gestión de datos masivos y Machine Learning, ¿cuáles de los siguientes pilares de la seguridad de la información deben cumplirse rigurosamente? (Seleccione todas las que correspondan).",
+    "opciones": [
+      {
+        "text": "Confidencialidad: garantizar que solo las personas o sistemas autorizados tengan acceso a la información.",
+        "isCorrect": true,
+        "rationale": "Protege los datos sensibles de accesos no autorizados mediante controles de autenticación y cifrado."
+      },
+      {
+        "text": "Integridad: asegurar que los datos no sean alterados, modificados o corruptos de forma accidental o maliciosa.",
+        "isCorrect": true,
+        "rationale": "Garantiza que la información se mantenga exacta y fiel a su estado original desde su ingesta."
+      },
+      {
+        "text": "Disponibilidad: garantizar que la información esté accesible para los usuarios autorizados en el momento requerido.",
+        "isCorrect": true,
+        "rationale": "Asegura que las plataformas y datos estén operativos y libres de interrupciones no planificadas."
+      },
+      {
+        "text": "Exposición pública sin restricciones para acelerar las velocidades de transferencia.",
+        "isCorrect": false,
+        "rationale": "Exponer datos sensibles de forma pública vulnera directamente el principio de confidencialidad."
+      },
+      {
+        "text": "Eliminación de los registros de auditoría y de los controles de acceso basados en roles.",
+        "isCorrect": false,
+        "rationale": "Suprimir las auditorías desprotege el sistema e impide verificar la integridad del uso de la información."
+      }
+    ],
+    "hint": "Seleccione los tres componentes clásicos que forman la tríada fundamental de la seguridad de la información.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué técnica de seguridad y privacidad consiste en reemplazar u ocultar la información personalmente identificable (como nombres o números de identidad) utilizando seudónimos o valores ficticios?",
+    "opciones": [
+      {
+        "text": "Escalabilidad vertical.",
+        "isCorrect": false,
+        "rationale": "La escalabilidad vertical es la ampliación de recursos de hardware en un servidor."
+      },
+      {
+        "text": "Reducción por PCA no supervisado.",
+        "isCorrect": false,
+        "rationale": "PCA reduce dimensiones numéricas en un espacio de variables, no enmascara identidades con seudónimos."
+      },
+      {
+        "text": "Anonimización y enmascaramiento de datos.",
+        "isCorrect": true,
+        "rationale": "La anonimización y el enmascaramiento sustituyen los atributos de identidad directa por identificadores ficticios para proteger a los individuos durante el análisis."
+      },
+      {
+        "text": "Regresión logística de atributos.",
+        "isCorrect": false,
+        "rationale": "La regresión logística es un modelo predictivo supervisado y no un método de privacidad."
+      },
+      {
+        "text": "Replicación redundante en DataNodes.",
+        "isCorrect": false,
+        "rationale": "La replicación guarda copias exactas de archivos para tolerancia a fallos, no para ocultar identidades."
+      }
+    ],
+    "hint": "Enfóquese en la técnica que protege el derecho a la privacidad transformando nombres reales en códigos ficticios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes herramientas, estándares o lenguajes facilitan la INTEROPERABILIDAD y la integración fluida entre sistemas y plataformas heterogéneas? (Seleccione todas las que correspondan).",
+    "opciones": [
+      {
+        "text": "Apache Kafka para el desacoplamiento y transmisión distribuida de mensajes entre distintas aplicaciones.",
+        "isCorrect": true,
+        "rationale": "Kafka sirve como un bus central que permite a múltiples sistemas heterogéneos conectarse e intercambiar datos en tiempo real."
+      },
+      {
+        "text": "Formatos estandarizados de intercambio como JSON y XML.",
+        "isCorrect": true,
+        "rationale": "JSON y XML proporcionan una estructura común que puede ser interpretada por prácticamente cualquier lenguaje o sistema operativo."
+      },
+      {
+        "text": "Herramientas ETL como Apache Airflow, Pentaho o Talend.",
+        "isCorrect": true,
+        "rationale": "Estas plataformas extraen datos de diversas fuentes, los transforman a formatos compatibles y los cargan en los sistemas de destino."
+      },
+      {
+        "text": "Sistemas cerrados sin interfaces API que bloquean el envío de consultas externas.",
+        "isCorrect": false,
+        "rationale": "Los sistemas cerrados e incomunicados representan lo opuesto al concepto de interoperabilidad."
+      },
+      {
+        "text": "Formatos propietarios ilegibles sin documentación ni estándares abiertos.",
+        "isCorrect": false,
+        "rationale": "Los formatos cerrados e indocumentados dificultan la comunicación e integración entre plataformas."
+      }
+    ],
+    "hint": "Elija los estándares abiertos, los buses de mensajes y las herramientas de transformación que permiten interconectar sistemas distintos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-35",
+    "diplomado": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera se integran y complementan el Big Data y el Machine Learning dentro de una arquitectura de analítica avanzada?",
+    "opciones": [
+      {
+        "text": "El Big Data elimina la necesidad de usar algoritmos, mientras que el Machine Learning solo limpia cables de red.",
+        "isCorrect": false,
+        "rationale": "Ambos campos operan a nivel de software y datos; el Big Data no elimina los algoritmos analíticos."
+      },
+      {
+        "text": "El Big Data captura, gestiona y almacena grandes volúmenes de datos masivos, los cuales alimentan al Machine Learning para que aprenda y genere predicciones.",
+        "isCorrect": true,
+        "rationale": "El Big Data proporciona la infraestructura y los volúmenes de datos requeridos, mientras que el Machine Learning aporta la inteligencia analítica para extraer valor de ellos."
+      },
+      {
+        "text": "El Machine Learning reemplaza por completo los discos de almacenamiento físico usando solo papel.",
+        "isCorrect": false,
+        "rationale": "El Machine Learning requiere potencia de cálculo y almacenamiento digital de alto rendimiento."
+      },
+      {
+        "text": "El Big Data solo trabaja con datos pequeños etiquetados manualmente, impidiendo el aprendizaje continuo.",
+        "isCorrect": false,
+        "rationale": "El Big Data se caracteriza por manejar volúmenes masivos heterogéneos y no pequeños conjuntos manuales."
+      },
+      {
+        "text": "La integración entre ambos sistemas anula los requisitos de seguridad y gobernanza de la empresa.",
+        "isCorrect": false,
+        "rationale": "La combinación de Big Data y Machine Learning hace aún más necesaria la aplicación de controles estrictos de gobernanza."
+      }
+    ],
+    "hint": "Piense en la relación donde una disciplina aporta la materia prima masiva y la otra aporta el cerebro interpretativo.",
+    "activo": true
+  }
+]

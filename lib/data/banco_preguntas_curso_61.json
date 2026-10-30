@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según los datos presentados en el curso, ¿cuál es la contribución aproximada de la actividad minera a la economía nacional del Perú en términos de Producto Bruto Interno (PBI) y exportaciones?",
+    "opciones": [
+      {
+        "text": "Representa cerca del 10% del PBI nacional y más del 60% de las exportaciones.",
+        "isCorrect": true,
+        "rationale": "Estos porcentajes reflejan el peso macroeconómico directo que mantiene la industria extractiva en la estructura de ingresos y comercio exterior del país."
+      },
+      {
+        "text": "Representa el 50% del PBI nacional y el 90% de las exportaciones.",
+        "isCorrect": false,
+        "rationale": "Esta proporción sobreestima de manera extrema la participación minera en la producción nacional total frente a otros sectores como servicios e industria."
+      },
+      {
+        "text": "Representa únicamente el 2% del PBI nacional y el 15% de las exportaciones.",
+        "isCorrect": false,
+        "rationale": "Esta cifra subestima considerablemente la contribución real de la minería, que constituye el principal motor de envíos al extranjero."
+      },
+      {
+        "text": "Representa el 25% del PBI nacional y el 30% de las exportaciones.",
+        "isCorrect": false,
+        "rationale": "Aunque atribuye un valor significativo al PBI, invierte y desajusta la proporción real donde la minería destaca en más de la mitad de las ventas externas."
+      },
+      {
+        "text": "Representa el 100% de las exportaciones nacionales sin aportar al PBI.",
+        "isCorrect": false,
+        "rationale": "Ningún sector abarca la totalidad del comercio exterior ni carece de impacto en el producto bruto de la nación."
+      }
+    ],
+    "hint": "Piensa en los indicadores económicos que ubican a la minería con un porcentaje de un dígito superior en PBI y más de la mitad del comercio exterior.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes pilares conforman la visión tridimensional fundamental de la sostenibilidad minera?",
+    "opciones": [
+      {
+        "text": "Pilar ambiental",
+        "isCorrect": true,
+        "rationale": "Se enfoca en la conservación de ecosistemas, mitigación de impactos y el uso eficiente de recursos naturales no renovables."
+      },
+      {
+        "text": "Pilar social",
+        "isCorrect": true,
+        "rationale": "Vela por el bienestar comunitario, el respeto a los derechos humanos y la generación de equidad e inclusión en el entorno."
+      },
+      {
+        "text": "Pilar económico",
+        "isCorrect": true,
+        "rationale": "Asegura la viabilidad financiera, el desarrollo de infraestructura y la generación de empleo productivo a largo plazo."
+      },
+      {
+        "text": "Pilar militar",
+        "isCorrect": false,
+        "rationale": "El resguardo de la seguridad pública no constituye una dimensión constitutiva del desarrollo sostenible corporativo."
+      },
+      {
+        "text": "Pilar político-partidario",
+        "isCorrect": false,
+        "rationale": "Las actividades empresariales sostenibles deben mantener neutralidad y no subordinarse a agendas partidarias específicas."
+      }
+    ],
+    "hint": "Identifica los tres ejes clásicos que equilibran el planeta, las personas y la rentabilidad financiera.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la definición del Ministerio de Energía y Minas (MINEM), ¿qué busca garantizar la minería sostenible?",
+    "opciones": [
+      {
+        "text": "La explotación de los recursos minerales asegurando el bienestar actual y el de las futuras generaciones.",
+        "isCorrect": true,
+        "rationale": "La sostenibilidad implica aprovechar las riquezas del subsuelo reduciendo y mitigando impactos para no comprometer el patrimonio natural y social del mañana."
+      },
+      {
+        "text": "La extracción masiva e ininterrumpida sin importar las alteraciones al ecosistema circundante.",
+        "isCorrect": false,
+        "rationale": "Priorizar el volumen de producción sobre la conservación ambiental contradice el concepto fundamental de desarrollo sostenible."
+      },
+      {
+        "text": "El cese inmediato de toda exploración minera en el territorio peruano para proteger la flora y fauna.",
+        "isCorrect": false,
+        "rationale": "La definición busca el aprovechamiento responsable de los recursos minerales, no la parálisis total del sector extractivo."
+      },
+      {
+        "text": "La transferencia total de la administración de los yacimientos mineros a organismos internacionales.",
+        "isCorrect": false,
+        "rationale": "La soberanía y regulación del sector permanecen bajo la potestad del Estado peruano y sus entidades competentes."
+      },
+      {
+        "text": "La exoneración de impuestos a todas las empresas mineras para incrementar su margen de ganancia.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad fiscal y el aporte tributario son componentes indispensables del pilar económico y social de la minería."
+      }
+    ],
+    "hint": "Considera el equilibrio entre el uso presente de los recursos minerales y la preservación del entorno para las personas que vendrán.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple el Consejo Internacional de Minería y Metales (ICMM) en el escenario global de la industria extractiva?",
+    "opciones": [
+      {
+        "text": "Agrupar a las principales compañías mineras globales y definir principios alineados con los Objetivos de Desarrollo Sostenible (ODS) de la ONU.",
+        "isCorrect": true,
+        "rationale": "El ICMM actúa como un organismo rector que promueve estándares ambientales y sociales para elevar el desempeño ético de la industria a nivel internacional."
+      },
+      {
+        "text": "Sancionar con multas económicas a los países que no cumplan con sus cuotas de exportación de cobre.",
+        "isCorrect": false,
+        "rationale": "El ICMM no es un tribunal regulador ni una entidad comercial dedicada a fijar penalidades cambiarias o de exportación."
+      },
+      {
+        "text": "Reemplazar las leyes ambientales nacionales de cada país miembro por un código legal único.",
+        "isCorrect": false,
+        "rationale": "Las normativas locales de cada Estado soberano prevalecen legalmente sobre los lineamientos voluntarios fijados por el consejo internacional."
+      },
+      {
+        "text": "Financiar la compra de maquinaria pesada para empresas mineras artesanales en vías de formalización.",
+        "isCorrect": false,
+        "rationale": "El consejo no opera como una institución financiera o de crédito comercial para equipamiento de pequeñas mineras."
+      },
+      {
+        "text": "Administrar directamente las regalías y el canon minero en las regiones andinas del Perú.",
+        "isCorrect": false,
+        "rationale": "La recaudación y redistribución de impuestos o recursos estatales corresponde exclusivamente al gobierno nacional y sus entidades locales."
+      }
+    ],
+    "hint": "Piensa en una organización internacional que establece pautas y buenas prácticas ambientales alineadas con las Naciones Unidas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial del pilar ambiental en la minería responsable?",
+    "opciones": [
+      {
+        "text": "Preservar los recursos naturales, proteger los ecosistemas y prevenir o mitigar los impactos negativos sobre el medio ambiente.",
+        "isCorrect": true,
+        "rationale": "Este pilar busca reducir la huella ambiental de la operación mediante el uso racional de insumos y el control riguroso de emisiones y residuos."
+      },
+      {
+        "text": "Garantizar la máxima rentabilidad financiera en el menor tiempo posible sin considerar el agua o el suelo.",
+        "isCorrect": false,
+        "rationale": "Buscar únicamente el beneficio económico inmediato a costa de la degradación ecológica pertenece al modelo extractivista tradicional y no sostenible."
+      },
+      {
+        "text": "Eliminar por completo el uso de energía eléctrica en los campamentos mineros.",
+        "isCorrect": false,
+        "rationale": "El objetivo no es prescindir de la energía, sino promover el uso eficiente e integrador de fuentes limpias o renovables."
+      },
+      {
+        "text": "Obligar a las comunidades a abandonar sus tierras ancestrales antes de iniciar la exploración.",
+        "isCorrect": false,
+        "rationale": "El desplazamiento forzado vulnera los derechos humanos y atenta directamente contra los principios de la sostenibilidad social y ambiental."
+      },
+      {
+        "text": "Reemplazar toda la vegetación nativa por cultivos comerciales agrícolas exóticos durante la operación.",
+        "isCorrect": false,
+        "rationale": "La gestión ambiental promueve la rehabilitación con especies nativas para mantener el equilibrio y la biodiversidad original del terreno."
+      }
+    ],
+    "hint": "Enfócate en las acciones orientadas a la conservación del ecosistema y a la reducción de daños sobre los recursos naturales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del pilar social de la minería responsable, ¿cuál de los siguientes aspectos se considera indispensable?",
+    "opciones": [
+      {
+        "text": "El respeto a los derechos humanos y laborales, promoviendo el diálogo, la inclusión y la participación ciudadana.",
+        "isCorrect": true,
+        "rationale": "La sostenibilidad social exige una interacción armónica entre la empresa, el Estado y las comunidades para generar bienestar equitativo."
+      },
+      {
+        "text": "La toma de decisiones unilaterales por parte de la empresa sin consultar a la población local.",
+        "isCorrect": false,
+        "rationale": "La imposición de proyectos genera desconfianza y conflictos, alejándose de los procesos inclusivos y participativos."
+      },
+      {
+        "text": "La restricción de oportunidades laborales únicamente para trabajadores extranjeros.",
+        "isCorrect": false,
+        "rationale": "La minería responsable promueve la contratación local y el fortalecimiento de capacidades en el área de influencia del proyecto."
+      },
+      {
+        "text": "La exclusión total de la mujer en los puestos de operación en yacimientos mineros.",
+        "isCorrect": false,
+        "rationale": "La equidad de género y la igualdad de oportunidades forman parte fundamental de los principios sociales contemporáneos."
+      },
+      {
+        "text": "La prohibición de realizar reuniones e informativos con los líderes comunitarios.",
+        "isCorrect": false,
+        "rationale": "La comunicación transparente mediante mesas de diálogo es esencial para construir consensos y legitimidad social."
+      }
+    ],
+    "hint": "Busca la opción que destaca la interacción transparente, la equidad de oportunidades y el valor de las comunidades locales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes entidades estatales peruanas tienen competencias de supervisión, fiscalización o regulación en las actividades mineras?",
+    "opciones": [
+      {
+        "text": "Organismo de Evaluación y Fiscalización Ambiental (OEFA)",
+        "isCorrect": true,
+        "rationale": "Supervisa y sanciona el cumplimiento de las obligaciones y compromisos ambientales asumidos por las empresas mineras."
+      },
+      {
+        "text": "Superintendencia Nacional de Fiscalización Laboral (Sunafil)",
+        "isCorrect": true,
+        "rationale": "Verifica las condiciones de seguridad y salud en el trabajo, así como el cumplimiento de los derechos laborales del personal."
+      },
+      {
+        "text": "Organismo Supervisor de la Inversión en Energía y Minería (Osinergmin)",
+        "isCorrect": true,
+        "rationale": "Supervisa la seguridad de la infraestructura minera y el cumplimiento de las normas técnicas y de inversión energética."
+      },
+      {
+        "text": "Autoridad Nacional del Agua (ANA)",
+        "isCorrect": true,
+        "rationale": "Otorga derechos de uso y fiscaliza la calidad e integridad de los recursos hídricos en las cuencas del país."
+      },
+      {
+        "text": "Instituto Nacional de Defensa de la Competencia y de la Protección de la Propiedad Intelectual (Indecopi)",
+        "isCorrect": false,
+        "rationale": "Aunque regula la competencia de mercado en general, no ejerce la fiscalización operativa, técnica o ambiental directa de las minas."
+      }
+    ],
+    "hint": "Selecciona los organismos públicos que controlan el medio ambiente, la seguridad laboral, la infraestructura técnica y el recurso hídrico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué establece la Ley General del Ambiente (Ley N° 28611) en el marco jurídico peruano?",
+    "opciones": [
+      {
+        "text": "El marco normativo que consagra el derecho a vivir en un ambiente saludable e introduce principios como 'el que contamina paga' y la prevención.",
+        "isCorrect": true,
+        "rationale": "Constituye la norma rectora fundamental en materia ambiental para todas las actividades económicas y ciudadanos del país."
+      },
+      {
+        "text": "La fijación exclusiva de los precios internacionales de compra y venta del cobre y el oro.",
+        "isCorrect": false,
+        "rationale": "El valor comercial de los minerales es regulado por los mercados y cotizaciones bursátiles internacionales."
+      },
+      {
+        "text": "La transferencia de la propiedad de las tierras comunales a los inversionistas mineros extranjeros.",
+        "isCorrect": false,
+        "rationale": "La ley protege el entorno ambiental y respeta el marco legal de propiedad y derechos de las poblaciones."
+      },
+      {
+        "text": "La supresión de las evaluaciones de impacto ambiental para acelerar la construcción de proyectos.",
+        "isCorrect": false,
+        "rationale": "La norma refuerza la obligatoriedad de instrumentos de gestión preventiva como los estudios de impacto ambiental."
+      },
+      {
+        "text": "La autorización para verter residuos químicos directamente en los ríos sin tratamiento previo.",
+        "isCorrect": false,
+        "rationale": "La Ley General del Ambiente prohíbe las descargas contaminantes que sobrepasen los límites máximos permisibles."
+      }
+    ],
+    "hint": "Recuerda la norma madre en el Perú que garantiza el derecho a un entorno sano y promueve la responsabilidad ambiental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del Reglamento de Protección Ambiental para las Actividades Minero-Metalúrgicas?",
+    "opciones": [
+      {
+        "text": "Regular de forma específica las obligaciones ambientales en cada etapa minera, estableciendo límites máximos permisibles y estándares de calidad.",
+        "isCorrect": true,
+        "rationale": "Traduce los principios generales de la ley en exigencias operativas concretas para la exploración, explotación y cierre minero."
+      },
+      {
+        "text": "Determinar los sueldos mínimos de los ingenieros y técnicos que trabajan en los campamentos.",
+        "isCorrect": false,
+        "rationale": "Las escalas salariales y contratos laborales son materia del régimen laboral y negociaciones privadas, no de la regulación ambiental."
+      },
+      {
+        "text": "Otorgar licencias de conducir para maquinaria pesada dentro de los yacimientos.",
+        "isCorrect": false,
+        "rationale": "La certificación y expedición de brevets corresponde a las entidades de transporte y políticas internas de seguridad laboral."
+      },
+      {
+        "text": "Eximir a las mineras de presentar planes de cierre al finalizar la extracción de mineral.",
+        "isCorrect": false,
+        "rationale": "El reglamento exige obligatoriamente planes de cierre progresivo y final para garantizar la remediación del terreno."
+      },
+      {
+        "text": "Administrar el sistema bancario y los préstamos comerciales para proyectos extractivos.",
+        "isCorrect": false,
+        "rationale": "Las transacciones financieras están fuera del alcance sectorial del ministerio regulador del ambiente y minería."
+      }
+    ],
+    "hint": "Piensa en la norma sectorial detallada que fija los parámetros técnicos de contaminación permitidos en la minería.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión del suelo en operaciones mineras a tajo abierto, ¿qué se entiende por 'topsoil' y por qué es crucial preservarlo?",
+    "opciones": [
+      {
+        "text": "Es la capa superficial fértil del suelo, rica en materia orgánica, indispensable para la futura rehabilitación y revegetación del terreno.",
+        "isCorrect": true,
+        "rationale": "Las empresas mineras responsables retiran y almacenan adecuadamente el topsoil para utilizarlo en el cierre y restauración del ecosistema."
+      },
+      {
+        "text": "Es el mineral concentrado de alto valor comercial que se exporta directamente a las refinerías externas.",
+        "isCorrect": false,
+        "rationale": "El topsoil es suelo orgánico no mineralizado que recubre la superficie previa a las labores de excavación."
+      },
+      {
+        "text": "Es un producto químico sintético utilizado para disolver las rocas duras en el proceso de chancado.",
+        "isCorrect": false,
+        "rationale": "No es una sustancia agregada ni un reactivo, sino un recurso natural original presente en la capa del terreno."
+      },
+      {
+        "text": "Es el depósito definitivo donde se vierten las aguas servidas de la planta concentradora.",
+        "isCorrect": false,
+        "rationale": "Las aguas residuales reciben tratamiento en plantas específicas o depósitos de relaves, no en el suelo fértil guardado."
+      },
+      {
+        "text": "Es el residuo tóxico que queda tras la lixiviación con cianuro o mercurio.",
+        "isCorrect": false,
+        "rationale": "La capa superficial fértil es un insumo biológico limpio guardado intencionalmente para la remediación ambiental."
+      }
+    ],
+    "hint": "Se trata del componente biológico natural del terreno que permite que crezcan plantas al momento de rehabilitar la mina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es el Drenaje Ácido de Mina (DANG) y cómo se genera?",
+    "opciones": [
+      {
+        "text": "Es una reacción química que ocurre cuando minerales con sulfuros quedan expuestos al aire y agua, generando acidez y disolviendo metales pesados.",
+        "isCorrect": true,
+        "rationale": "Representa un impacto ambiental severo si no se gestiona, ya que el agua acidificada moviliza contaminantes tóxicos hacia las cuencas."
+      },
+      {
+        "text": "Es la evaporación natural de los estanques de agua dulce debido a las altas temperaturas en la cordillera.",
+        "isCorrect": false,
+        "rationale": "La evaporación es un proceso físico natural que no involucra acidificación química ni lixiviación de metales."
+      },
+      {
+        "text": "Es el método por el cual se purifica el agua de lluvia para convertirla en agua potable en los campamentos.",
+        "isCorrect": false,
+        "rationale": "El drenaje ácido es una fuente potencial de contaminación perjudicial, no un método de potabilización hídrica."
+      },
+      {
+        "text": "Es una técnica de perforación que utiliza aire comprimido para extraer muestras de rocas subterráneas.",
+        "isCorrect": false,
+        "rationale": "El DANG es un fenómeno químico ambiental indeseado y no una metodología técnica de muestreo geológico."
+      },
+      {
+        "text": "Es el polvo fino que levantan los camiones al circular por carreteras no pavimentadas.",
+        "isCorrect": false,
+        "rationale": "El material particulado en carreteras es un impacto atmosférico, mientras que el DANG es una alteración química hídrica."
+      }
+    ],
+    "hint": "Enfócate en la interacción entre minerales sulfurados, oxígeno y humedad que produce un efluente de bajo pH con metales solubilizados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el rol primordial del Organismo de Evaluación y Fiscalización Ambiental (OEFA) en el sector minero?",
+    "opciones": [
+      {
+        "text": "Supervisar, evaluar y fiscalizar el cumplimiento de las normas y compromisos ambientales por parte de las unidades mineras.",
+        "isCorrect": true,
+        "rationale": "El OEFA realiza inspecciones en campo, mide parámetros de emisión y sanciona infracciones a las leyes ambientales vigentes."
+      },
+      {
+        "text": "Aprobar los contratos de concesión minera y otorgar el título de propiedad del subsuelo.",
+        "isCorrect": false,
+        "rationale": "El otorgamiento de derechos mineros y títulos de concesión es potestad del Ingemmet y el Ministerio de Energía y Minas."
+      },
+      {
+        "text": "Elaborar los estudios de factibilidad financiera de las empresas privadas.",
+        "isCorrect": false,
+        "rationale": "La viabilidad económica de un negocio privado es evaluada por sus propios inversionistas y entidades bancarias."
+      },
+      {
+        "text": "Organizar las huelgas sindicales de los trabajadores del sector extractivo.",
+        "isCorrect": false,
+        "rationale": "Las relaciones colectivas de trabajo son supervisadas por el Ministerio de Trabajo y Sunafil, no por el organismo ambiental."
+      },
+      {
+        "text": "Construir carreteras públicas e infraestructura vial en las capitales regionales.",
+        "isCorrect": false,
+        "rationale": "Las obras viales públicas competen al Ministerio de Transportes y Comunicaciones o a los gobiernos subnacionales."
+      }
+    ],
+    "hint": "Identifica la entidad pública especializada en vigilar que las empresas mineras respeten sus compromisos ambientales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere el concepto de 'licencia social para operar' en la industria minera moderna?",
+    "opciones": [
+      {
+        "text": "A la aceptación, legitimidad y respaldo no escrito que otorga la comunidad local y grupos de interés a la presencia del proyecto.",
+        "isCorrect": true,
+        "rationale": "La licencia social no es un documento legal otorgado por el Estado, sino la confianza constante construida mediante el diálogo y el beneficio mutuo."
+      },
+      {
+        "text": "Al permiso oficial firmado por el Presidente de la República para iniciar la extracción.",
+        "isCorrect": false,
+        "rationale": "Las licencias legales las otorgan las autoridades sectoriales pertinentes y no dependen de la firma directa del jefe de Estado."
+      },
+      {
+        "text": "Al pago obligatorio de un impuesto adicional a las instituciones bancarias privadas.",
+        "isCorrect": false,
+        "rationale": "La aceptación comunitaria no consiste en una transacción financiera con entidades bancarias o financieras."
+      },
+      {
+        "text": "A la acreditación internacional emitida por las Naciones Unidas para exportar minerales.",
+        "isCorrect": false,
+        "rationale": "Se trata de un entendimiento y validación comunitaria en el territorio de influencia, no de un certificado global de la ONU."
+      },
+      {
+        "text": "Al certificado de seguridad vial concedido a los choferes de volquetes pesados.",
+        "isCorrect": false,
+        "rationale": "No tiene relación con brevetes de tránsito, sino con la convivencia pacífica y armónica entre mina y población entorno."
+      }
+    ],
+    "hint": "Es el permiso 'no escrito' basado en la confianza y el consentimiento de la población vecina al yacimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué garantiza la Ley de Consulta Previa (Ley N° 29785) a los pueblos indígenas u originarios en el Perú?",
+    "opciones": [
+      {
+        "text": "El derecho a ser consultados de forma previa, libre e informada sobre medidas legislativas o administrativas que puedan afectar sus derechos colectivos.",
+        "isCorrect": true,
+        "rationale": "Busca integrar la voz y perspectiva de las comunidades originarias antes de autorizar proyectos que impacten sus territorios o modos de vida."
+      },
+      {
+        "text": "La entrega gratuita de acciones representativas en la bolsa de valores a todos los pobladores.",
+        "isCorrect": false,
+        "rationale": "La consulta previa es un proceso de diálogo e información participativa, no una repartición de participaciones bursátiles."
+      },
+      {
+        "text": "El veto absoluto e incondicional sobre cualquier decisión política emitida por el Congreso de la República.",
+        "isCorrect": false,
+        "rationale": "El proceso busca alcanzar acuerdos y consenso intercultural, pero la decisión administrativa final permanece en el ámbito constitucional del Estado."
+      },
+      {
+        "text": "La exención total de pagar servicios de energía eléctrica en sus domicilios.",
+        "isCorrect": false,
+        "rationale": "La ley se centra en los derechos territoriales y culturales de los pueblos originarios, no en subsidios de servicios básicos urbanos."
+      },
+      {
+        "text": "La obligación de las comunidades de financiar los estudios técnicos del proyecto minero.",
+        "isCorrect": false,
+        "rationale": "Las empresas y el Estado asumen la elaboración y costos de los estudios técnicos e informativos; las comunidades son las consultadas."
+      }
+    ],
+    "hint": "Piensa en el mecanismo constitucional de diálogo informado con poblaciones originarias previo al inicio de actividades en su ámbito.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ventaja operativa y ambiental aporta el uso de agua de mar (como el caso implementado en Mar Cobre) en la minería?",
+    "opciones": [
+      {
+        "text": "Reduce notablemente la presión y demanda sobre las fuentes continentales de agua dulce en zonas de escasez hídrica.",
+        "isCorrect": true,
+        "rationale": "Al utilizar agua de mar desalinizada o directa para procesos industrializados, se reservan las fuentes de agua dulce para el consumo humano y agrícola."
+      },
+      {
+        "text": "Multiplica por diez el volumen de mineral precioso extraído de la roca.",
+        "isCorrect": false,
+        "rationale": "La fuente de agua utilizada no altera la ley ni la concentración geológica del mineral en la matriz rocosa."
+      },
+      {
+        "text": "Elimina por completo la necesidad de contar con personal capacitado en la planta.",
+        "isCorrect": false,
+        "rationale": "Operar plantas desalinizadoras o de transporte de agua de mar exige mano de obra altamente especializada e ingenieros calificados."
+      },
+      {
+        "text": "Evita que la maquinaria pesada requiera mantenimiento mecánico preventivo.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento de equipos pesados depende del desgaste operativo y horas de trabajo, no de la fuente hídrica del proceso industrial."
+      },
+      {
+        "text": "Permite realizar tronaduras sin generar ningún tipo de ruido o vibración.",
+        "isCorrect": false,
+        "rationale": "El control de la voladura se logra con técnicas de detonación, sin relación con el abastecimiento hídrico del área."
+      }
+    ],
+    "hint": "Reflexiona sobre el impacto positivo que tiene no competir por los ríos o pozos de agua potable con las poblaciones y agricultores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes son principios fundamentales de la gobernanza corporativa en una empresa minera responsable?",
+    "opciones": [
+      {
+        "text": "Rendición de cuentas (Accountability)",
+        "isCorrect": true,
+        "rationale": "Obliga a la empresa a asumir la responsabilidad formal y transparente por sus decisiones operativas y sus impactos en el entorno."
+      },
+      {
+        "text": "Equidad y trato justo a los grupos de interés",
+        "isCorrect": true,
+        "rationale": "Garantiza el respeto uniforme y sin discriminación a los derechos de accionistas, trabajadores y comunidades vecinas."
+      },
+      {
+        "text": "Transparencia en la información",
+        "isCorrect": true,
+        "rationale": "Implica publicar de forma clara y accesible los datos operacionales, financieros y ambientales relevantes de la compañía."
+      },
+      {
+        "text": "Ocultamiento de reportes ambientales negativos",
+        "isCorrect": false,
+        "rationale": "Suprimir o alterar datos vulnera éticamente la gobernanza y constituye una infracción legal grave sancionable por los reguladores."
+      },
+      {
+        "text": "Favorecimiento ilícito a intermediarios políticos",
+        "isCorrect": false,
+        "rationale": "Las prácticas corruptas y el tráfico de influencias atentan directamente contra la ética empresarial y el código corporativo."
+      }
+    ],
+    "hint": "Elige los atributos que caracterizan a una gestión empresarial íntegra, responsable con sus actos y abierta al público.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué promueve la Ley N° 30424 en el marco de la gobernanza y la prevención de delitos en las empresas mineras en el Perú?",
+    "opciones": [
+      {
+        "text": "Incentiva la implementación de modelos de prevención y sistemas de control interno para mitigar la responsabilidad administrativa por delitos de corrupción.",
+        "isCorrect": true,
+        "rationale": "Exige la adopción de canales de denuncia, matrices de riesgos anticorrupción y códigos de conducta firmes dentro de las organizaciones."
+      },
+      {
+        "text": "Exige que todas las decisiones de la junta directiva sean aprobadas por voto popular en elecciones nacionales.",
+        "isCorrect": false,
+        "rationale": "Las juntas directivas responden a sus accionistas e inversionistas en la esfera privada, no a comicios electorales públicos."
+      },
+      {
+        "text": "Obliga a las mineras a comprar de manera exclusiva repuestos fabricados en el extranjero.",
+        "isCorrect": false,
+        "rationale": "La ley busca combatir la corrupción y el cohecho, sin imponer restricciones comerciales de insumos a las empresas."
+      },
+      {
+        "text": "Cancela la vigencia de los códigos de ética en todas las industrias del país.",
+        "isCorrect": false,
+        "rationale": "La norma fortalece la relevancia y obligatoriedad de los códigos de conducta empresariales en lugar de derogarlos."
+      },
+      {
+        "text": "Otorga amnistía automática a las empresas que realicen pagos no contabilizados a funcionarios.",
+        "isCorrect": false,
+        "rationale": "La ley penaliza las prácticas opacas y los sobornos a funcionarios públicos de manera categórica."
+      }
+    ],
+    "hint": "Esta norma está ligada al cumplimiento ético, la prevención de sobornos y los sistemas de 'Compliance' corporativo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo central de la iniciativa EITI (Iniciativa para la Transparencia de las Industrias Extractivas) en la cual participa el Perú?",
+    "opciones": [
+      {
+        "text": "Promover la publicación transparente de los pagos que las empresas extractivas realizan al Estado y los ingresos que este recibe por esos conceptos.",
+        "isCorrect": true,
+        "rationale": "La alianza EITI busca combatir la corrupción comparando y transparentando los montos tributarios recaudados y los aportes informados por las mineras."
+      },
+      {
+        "text": "Fijar un límite estándar a la profundidad de los socavones en minería subterránea.",
+        "isCorrect": false,
+        "rationale": "Las especificaciones de diseño geotécnico y profundidad dependen de la geología y seguridad técnica, no de la iniciativa EITI."
+      },
+      {
+        "text": "Unificar todos los tipos de monedas de la región bajo una sola divisa extractiva.",
+        "isCorrect": false,
+        "rationale": "La EITI no interviene en políticas monetarias ni en la creación de monedas o divisas de cambio regional."
+      },
+      {
+        "text": "Garantizar que solo los gobiernos regionales aprueben las licencias ambientales sin participación técnica.",
+        "isCorrect": false,
+        "rationale": "La iniciativa divulga información tributaria y fiscal, sin alterar las competencias legales de los organismos evaluadores del Estado."
+      },
+      {
+        "text": "Reemplazar el trabajo de los ingenieros de minas por auditores financieros internacionales.",
+        "isCorrect": false,
+        "rationale": "La iniciativa no sustituye la mano de obra técnica operativa; crea marcos para la divulgación transparente de las finanzas públicas."
+      }
+    ],
+    "hint": "Esta alianza transparente contrasta lo que las mineras dicen pagar en impuestos con lo que el fisco estatal declara recibir.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de las tendencias futuras y la minería responsable, ¿qué distingue el enfoque de la 'Industria 5.0' respecto a etapas anteriores?",
+    "opciones": [
+      {
+        "text": "Combina el uso de tecnologías avanzadas y digitalización con un enfoque central en el bienestar humano, la sostenibilidad y el cuidado ambiental.",
+        "isCorrect": true,
+        "rationale": "A diferencia del enfoque centrado únicamente en la automatización industrial, la Industria 5.0 reintegra el valor social, humano y la resiliencia ecológica."
+      },
+      {
+        "text": "Reemplaza la electricidad por fuerza motriz animal en los campamentos mineros.",
+        "isCorrect": false,
+        "rationale": "La evolución tecnológica busca mayor eficiencia limpia y avanzada, no el retroceso a técnicas preindustriales."
+      },
+      {
+        "text": "Prohíbe el uso de sensores e inteligencia artificial en el monitoreo de contaminantes.",
+        "isCorrect": false,
+        "rationale": "Las tecnologías de monitoreo en tiempo real e inteligencia artificial son herramientas clave potenciadas en la Industria 5.0."
+      },
+      {
+        "text": "Busca aumentar el desperdicio de agua y residuos sintéticos en los procesos concentradores.",
+        "isCorrect": false,
+        "rationale": "El principio rector es la optimización extrema de recursos y el logro de una huella ambiental neutra o positiva."
+      },
+      {
+        "text": "Excluye por completo el diálogo con las comunidades y las metas de descarbonización.",
+        "isCorrect": false,
+        "rationale": "La dimensión social y la reducción de la huella de carbono son pilares indispensables en este nuevo paradigma productivo."
+      }
+    ],
+    "hint": "Piensa en la evolución tecnológica que coloca nuevamente a la persona, la resiliencia ambiental y el bienestar en el centro del proceso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué beneficio directo aporta la implementación de camiones y perforadoras autónomas (como las utilizadas por Southern o Antamina)?",
+    "opciones": [
+      {
+        "text": "Incrementa la precisión operativa, optimiza los ciclos de transporte y retira al personal de zonas de alto riesgo de accidentes.",
+        "isCorrect": true,
+        "rationale": "La automatización no solo eleva la eficiencia productiva, sino que resguarda la integridad física de los operadores al alejarlos del peligro directo."
+      },
+      {
+        "text": "Duplica inmediatamente el consumo de combustible de diésel por tonelada movilizada.",
+        "isCorrect": false,
+        "rationale": "La conducción autónoma programada reduce aceleraciones bruscas y optimiza el consumo energético de la flota."
+      },
+      {
+        "text": "Requiere que la mina detenga sus operaciones cada dos horas para cambiar repuestos.",
+        "isCorrect": false,
+        "rationale": "La tecnología autónoma brinda mayor continuidad operativa y disminuye los paros imprevistos por fallas mecánicas severas."
+      },
+      {
+        "text": "Impide realizar controles de calidad del mineral durante el procesamiento en planta.",
+        "isCorrect": false,
+        "rationale": "La automatización de flotas facilita el rastreo digital continuo del tipo y calidad de mineral transportado."
+      },
+      {
+        "text": "Genera un aumento drástico e incontrolable en las emisiones de polvo atmosférico.",
+        "isCorrect": false,
+        "rationale": "Los sistemas inteligentes integran controles de velocidad y rociado automático en rutas para mitigar el levante de polvo."
+      }
+    ],
+    "hint": "La robótica pesada mejora el rendimiento logístico y, sobre todo, aleja a los trabajadores de las áreas de peligro físico directo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la aplicación principal del uso de drones en las labores de minería responsable e inspección ambiental?",
+    "opciones": [
+      {
+        "text": "Capturar imágenes de alta resolución e información topográfica y ambiental desde alturas para estudiar zonas inaccesibles sin riesgo humano.",
+        "isCorrect": true,
+        "rationale": "Permiten inspeccionar tajos, depósitos de relaves y vegetación de forma rápida, precisa y segura para el equipo técnico."
+      },
+      {
+        "text": "Transportar el concentrado de mineral pesado directamente desde la mina hasta los puertos de exportación.",
+        "isCorrect": false,
+        "rationale": "La capacidad de carga de un dron comercial o industrial es limitada e inviable para mover toneladas métricas de cargamento denso."
+      },
+      {
+        "text": "Reemplazar por completo el trabajo de los laboratorios químicos en el análisis de pureza del cobre.",
+        "isCorrect": false,
+        "rationale": "La caracterización metalúrgica detallada exige muestras de campo y análisis cuantitativos específicos en laboratorio."
+      },
+      {
+        "text": "Generar energía hidroeléctrica mediante el movimiento constante de sus hélices.",
+        "isCorrect": false,
+        "rationale": "Los drones consumen energía contenida en sus baterías eléctricas; no son plantas generadoras de electricidad."
+      },
+      {
+        "text": "Sustituir a las reuniones presenciales de la consulta previa obligatoria con las comunidades.",
+        "isCorrect": false,
+        "rationale": "El diálogo social transparente requiere espacios interactivos y talleres participativos directos con la población."
+      }
+    ],
+    "hint": "Los vehículos aéreos no tripulados facilitan el monitoreo del relieve, mapas de terreno e inspecciones ambientales de área.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple la integración del Internet de las Cosas (IoT) y la Computación en la Nube (Cloud Computing) en la minería?",
+    "opciones": [
+      {
+        "text": "Capturar datos masivos en tiempo real mediante sensores en equipos e infraestructuras, almacenándolos centralizadamente para su análisis predictivo.",
+        "isCorrect": true,
+        "rationale": "Permite conocer el estado instantáneo de la operación, prevenir fallas mecánicas y monitorear parámetros ambientales continuamente."
+      },
+      {
+        "text": "Reemplazar la necesidad de contar con una red de comunicaciones e internet en las operaciones.",
+        "isCorrect": false,
+        "rationale": "El IoT y las plataformas Cloud dependen indispensablemente de conectividad estable de datos para transmitir información."
+      },
+      {
+        "text": "Ocultar los registros de consumo energético a los organismos fiscalizadores.",
+        "isCorrect": false,
+        "rationale": "La digitalización facilita la trazabilidad de datos para los reportes de sostenibilidad auditables de la empresa."
+      },
+      {
+        "text": "Forzar el uso exclusivo de documentos impresos en papel en los procesos administrativos.",
+        "isCorrect": false,
+        "rationale": "La transformación digital busca la desmaterialización de documentos, eliminando el uso innecesario de papel en oficinas y planta."
+      },
+      {
+        "text": "Impedir que los ingenieros puedan monitorear los indicadores de desempeño a distancia.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento en la nube permite el acceso remoto seguro a tableros de control desde cualquier ubicación."
+      }
+    ],
+    "hint": "Piensa en el uso de sensores inteligentes interconectados que envían variables físicas a servidores virtuales compartidos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la aplicación de la 'economía circular' en el ámbito de la minería moderna?",
+    "opciones": [
+      {
+        "text": "Reincorporar residuos y mermas al ciclo productivo, tales como el reprocesamiento de relaves o el reuso de subproductos e insumos.",
+        "isCorrect": true,
+        "rationale": "Busca romper el modelo lineal de 'extraer, usar y tirar', maximizando el aprovechamiento del recurso extraído y reduciendo desechos."
+      },
+      {
+        "text": "Desechar la maquinaria pesada tan pronto sufra el primer fallo mecánico leve.",
+        "isCorrect": false,
+        "rationale": "La circularidad promueve la reparación, mantenimiento preventivo y reutilización de componentes industriales de alto valor."
+      },
+      {
+        "text": "Extraer únicamente la capa superficial del terreno sin procesar el mineral que contiene.",
+        "isCorrect": false,
+        "rationale": "La actividad minera procesa la matriz rocosa para recuperar metales valiosos mediante técnicas metalúrgicas óptimas."
+      },
+      {
+        "text": "Aumentar el volumen de agua de primer uso enviada a botaderos sin reciclar.",
+        "isCorrect": false,
+        "rationale": "La economía circular en minería impulsa la recirculación continua de hasta el 80% o más del agua utilizada en planta."
+      },
+      {
+        "text": "Prohibir el reciclaje de materiales metálicos o plásticos en las instalaciones de la empresa.",
+        "isCorrect": false,
+        "rationale": "La segregación en la fuente y la revalorización de materiales es un requisito clave para la sostenibilidad operativa."
+      }
+    ],
+    "hint": "Apunta a transformar desechos, relaves o mermas en nuevos recursos útiles para la propia industria u otros sectores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes estrategias fortalecen la relación comunitaria y el desarrollo local sostenible en torno a un proyecto minero?",
+    "opciones": [
+      {
+        "text": "Contratación local y desarrollo de proveedores locales de bienes y servicios",
+        "isCorrect": true,
+        "rationale": "Integra a la población en la cadena de valor económica del proyecto, dinamizando el empleo y los emprendimientos regionales."
+      },
+      {
+        "text": "Creación de fondos sociales e inversión consensuada en proyectos de infraestructura básica",
+        "isCorrect": true,
+        "rationale": "Dirige recursos a resolver necesidades reales como saneamiento, salud y educación priorizadas por la propia población."
+      },
+      {
+        "text": "Establecimiento de mesas de diálogo de participación transparente y permanente",
+        "isCorrect": true,
+        "rationale": "Construye un canal preventivo e interactivo para canalizar inquietudes, consensuar decisiones y prevenir discrepancias severas."
+      },
+      {
+        "text": "Incumplimiento de las promesas y acuerdos asumidos en las actas comunitarias",
+        "isCorrect": false,
+        "rationale": "La falta de palabra y el abandono de compromisos es la causa principal de la desconfianza y la conflictividad social."
+      },
+      {
+        "text": "Difusión de información falsa sobre los reales impactos ambientales del proyecto",
+        "isCorrect": false,
+        "rationale": "Engañar a la población destruye la legitimidad social de la mina y genera enfrentamientos a mediano y largo plazo."
+      }
+    ],
+    "hint": "Selecciona las acciones que generan confianza mutua, dinamización de la economía local y espacios permanentes de concertación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el rol normativo que cumple la Autoridad Nacional del Agua (ANA) frente a las operaciones mineras en el Perú?",
+    "opciones": [
+      {
+        "text": "Otorgar autorizaciones de uso de agua y supervisar la preservación de la calidad de las fuentes hídricas en las cuencas.",
+        "isCorrect": true,
+        "rationale": "La ANA administra de manera multisectorial el recurso hídrico del país, garantizando que los efluentes no dañen los ríos ni acuíferos."
+      },
+      {
+        "text": "Administrar el pago de los sueldos a los trabajadores de las minas privadas.",
+        "isCorrect": false,
+        "rationale": "La remuneración salarial compete estrictamente al vínculo contractual entre el trabajador y la empresa empleadora."
+      },
+      {
+        "text": "Emitir el título de propiedad registral sobre las viviendas urbanas de la capital.",
+        "isCorrect": false,
+        "rationale": "El registro de predios urbanos está en manos de Sunarp o entidades municipales, fuera del ámbito de la gestión hídrica."
+      },
+      {
+        "text": "Fabricar los insumos químicos utilizados en los procesos de lixiviación.",
+        "isCorrect": false,
+        "rationale": "La ANA es un organismo público fiscalizador y regulador de la nación; no una empresa química o manufacturera."
+      },
+      {
+        "text": "Eximir a las mineras del cumplimiento de los estándares de calidad ambiental para el agua.",
+        "isCorrect": false,
+        "rationale": "La entidad vela rigurosamente por el respeto a los Estándares de Calidad Ambiental (ECA) para el agua en todo el territorio nacional."
+      }
+    ],
+    "hint": "Piensa en el organismo máximo rector que administra los permisos y cuida la calidad de los ríos, lagos y acuíferos del país.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se articulan los tres pilares fundamentales de la sostenibilidad (económico, ambiental y social) en el modelo de gestión de la minería responsable en el Perú?",
+    "opciones": [
+      {
+        "text": "Equilibrando la rentabilidad financiera a corto plazo con la inversión contingente en remediación ambiental.",
+        "isCorrect": false,
+        "rationale": "Enfocarse solo en la rentabilidad a corto plazo ignora la necesidad de una viabilidad económica sostenida y permanente con previsión ambiental integral."
+      },
+      {
+        "text": "Garantizando la viabilidad económica del negocio mientras se reducen impactos ambientales y se impulsa el bienestar social con equidad.",
+        "isCorrect": true,
+        "rationale": "La sostenibilidad estratégica exige una triple hélice alineada donde el crecimiento económico promueva la conservación de los ecosistemas y la equidad social a largo plazo."
+      },
+      {
+        "text": "Priorizando la maximización del valor para los accionistas sobre la resolución de conflictos comunitarios.",
+        "isCorrect": false,
+        "rationale": "Subordinar los aspectos sociales a la rentabilidad del accionista genera vulnerabilidad operativa y pone en riesgo la licencia social."
+      },
+      {
+        "text": "Sustituyendo la fiscalización ambiental obligatoria por programas voluntarios de responsabilidad social corporativa.",
+        "isCorrect": false,
+        "rationale": "Los programas voluntarios complementan pero bajo ninguna circunstancia reemplazan el cumplimiento del marco legal imperativo."
+      },
+      {
+        "text": "Reemplazando la inversión en tecnología por aportes económicos directos a los gobiernos regionales.",
+        "isCorrect": false,
+        "rationale": "Los aportes económicos no suplen la necesidad de incorporar innovación técnica para mitigar huellas ambientales directas en las operaciones."
+      }
+    ],
+    "hint": "Considere la intersección equilibrada entre la rentabilidad, la preservación ecológica y la equidad comunitaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el papel principal del Consejo Internacional de Minería y Metales (ICMM) en el contexto global de la sostenibilidad minera?",
+    "opciones": [
+      {
+        "text": "Emitir licencias de explotación comercial con carácter vinculante para los gobiernos soberanos.",
+        "isCorrect": false,
+        "rationale": "La emisión de licencias operativas es una competencia exclusiva y soberana del Estado a través de sus respectivos ministerios."
+      },
+      {
+        "text": "Establecer principios y estándares globales alineados con los Objetivos de Desarrollo Sostenible (ODS) de la ONU.",
+        "isCorrect": true,
+        "rationale": "El ICMM agrupa a las principales empresas globales para fijar directrices de minería responsable alineadas con la agenda universal de sostenibilidad."
+      },
+      {
+        "text": "Sustituir las auditorías de fiscalización ambiental que realizan los organismos estatales locales.",
+        "isCorrect": false,
+        "rationale": "El marco del ICMM guía las buenas prácticas privadas, pero no reemplaza la función fiscalizadora de los organismos gubernamentales."
+      },
+      {
+        "text": "Fijar los precios internacionales de comercialización de metales como el cobre, oro y zinc.",
+        "isCorrect": false,
+        "rationale": "La fijación de precios responde a la dinámica de oferta y demanda en bolsas de comercio globales como el London Metal Exchange."
+      },
+      {
+        "text": "Financiar de manera directa la construcción de obras públicas en comunidades nativas.",
+        "isCorrect": false,
+        "rationale": "El ICMM define estándares de gestión estratégica, dejando la ejecución de infraestructura a las empresas y al sector público."
+      }
+    ],
+    "hint": "Piense en una organización internacional que define lineamientos e indicadores de desempeño para la industria global.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la jerarquía normativa peruana y la Ley General del Ambiente (Ley N° 28611), ¿cuál es el principio legal supremo que rige el ejercicio de las actividades extractivas?",
+    "opciones": [
+      {
+        "text": "La prevalencia del contrato de concesión por encima de las disposiciones constitucionales.",
+        "isCorrect": false,
+        "rationale": "Los contratos de concesión deben subordinarse jerárquicamente a los derechos fundamentales consagrados en la Constitución."
+      },
+      {
+        "text": "El derecho irrenunciable de toda persona a vivir en un ambiente saludable, equilibrado y adecuado para el desarrollo de la vida.",
+        "isCorrect": true,
+        "rationale": "La Ley General del Ambiente consagra el derecho humano a un entorno sano como eje rector intransgredible para cualquier industria."
+      },
+      {
+        "text": "La exención de responsabilidad ambiental si la empresa genera más del 10% del PBI regional.",
+        "isCorrect": false,
+        "rationale": "El aporte al producto bruto interno no otorga inmunidad ni exime a ninguna entidad del cumplimiento estricto de las normas ambientales."
+      },
+      {
+        "text": "La facultad del Ministerio de Energía y Minas para condonar sanciones ambientales ante bajas en el precio del mineral.",
+        "isCorrect": false,
+        "rationale": "Las fluctuaciones de mercado no facultan a las autoridades a condonar faltas o contaminaciones ambientales."
+      },
+      {
+        "text": "La primacía de las ordenanzas municipales sobre los decretos supremos sectoriales en materia minera.",
+        "isCorrect": false,
+        "rationale": "En la jerarquía jurídica nacional, las políticas de alcance sectorial y regulación nacional prevalecen dentro de sus competencias sobre normas locales."
+      }
+    ],
+    "hint": "Recuerde cuál es el derecho fundamental garantizado por la Constitución y desarrollado en la norma ambiental marco.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco del Reglamento de Protección Ambiental para las Actividades Minero-Metalúrgicas, ¿cuál es la función técnica de los Límites Máximos Permisibles (LMP)?",
+    "opciones": [
+      {
+        "text": "Determinar el monto exacto del canon minero que debe distribuirse a las municipalidades.",
+        "isCorrect": false,
+        "rationale": "El cálculo de las regalías y del canon minero corresponde a aspectos tributarios y económicos normados por el Ministerio de Economía y Finanzas."
+      },
+      {
+        "text": "Medir la concentración de contaminantes en los efluentes o emisiones en el punto de descarga para asegurar que no superen los niveles legales regulados.",
+        "isCorrect": true,
+        "rationale": "Los LMP establecen el techo legal cuantitativo de sustancias químicas permitido en la descarga directa antes de mezclarse con el cuerpo receptor."
+      },
+      {
+        "text": "Establecer la cantidad máxima de toneladas de mineral que una empresa puede extraer por día.",
+        "isCorrect": false,
+        "rationale": "La capacidad de producción diaria responde a los permisos de operación de la planta aprobados en el diseño de ingeniería."
+      },
+      {
+        "text": "Evaluar el nivel de satisfacción socioeconómica de las comunidades ubicadas en el área de influencia.",
+        "isCorrect": false,
+        "rationale": "La medición del impacto social se realiza mediante indicadores de desarrollo territorial e instrumentos de consulta, no mediante LMP."
+      },
+      {
+        "text": "Fijar el sueldo máximo de los operadores de maquinaria pesada en mina subterránea.",
+        "isCorrect": false,
+        "rationale": "Los salarios corresponden a los acuerdos laborales y normativas de trabajo, estando completamente ajenos a los parámetros ambientales."
+      }
+    ],
+    "hint": "Diferencie los parámetros que se miden en el punto de emisión de la planta de los estándares de calidad ambiental del entorno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En las operaciones a tajo abierto, la remoción de material para acceder al mineral genera impactos severos en el suelo. ¿Qué medidas técnicas se establecen normativamente para la conservación e integralidad del suelo (topsoil)?",
+    "opciones": [
+      {
+        "text": "Almacenamiento segregado del suelo orgánico superficial (topsoil) para su posterior uso en la rehabilitación y cierre progresivo.",
+        "isCorrect": true,
+        "rationale": "Guardar y proteger la capa orgánica fértil permite reponer la cobertura vegetal original durante las actividades de remediación del terreno."
+      },
+      {
+        "text": "Compactación intensiva del suelo superficial mediante maquinaria pesada para evitar su erosión eólica.",
+        "isCorrect": false,
+        "rationale": "Compactar el suelo destruye su porosidad y estructura física, volviéndolo infértil e impidiendo el crecimiento de la vegetación."
+      },
+      {
+        "text": "Reutilización del topsoil en el mezclado con efluentes químicos para estabilizar los reactivos.",
+        "isCorrect": false,
+        "rationale": "Mezclar suelo fértil con efluentes químicos destruye sus propiedades orgánicas biológicas y contamina el recurso."
+      },
+      {
+        "text": "Implementación de depósitos de desmonte diseñados con criterios de estabilidad física y química a largo plazo.",
+        "isCorrect": true,
+        "rationale": "Asegurar la estabilidad estructural del material estéril previene deslizamientos y la generación no controlada de contaminantes hacia el suelo adyacente."
+      },
+      {
+        "text": "Vertido directo del suelo fértil retirado en los cursos de agua adyacentes para enriquecer la cuenca.",
+        "isCorrect": false,
+        "rationale": "Arrojar suelo a los ríos genera sedimentación excesiva y colmata los cursos de agua, destruyendo el hábitat acuático."
+      }
+    ],
+    "hint": "Identifique las acciones orientadas a resguardar la capa fértil para el cierre minero y asegurar la contención geomorfológica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El drenaje ácido de mina (DAM o DANG) es uno de los problemas ambientales más serios en la minería. ¿Cuál es el mecanismo de origen de este fenómeno?",
+    "opciones": [
+      {
+        "text": "La evaporación de aguas salobres en reservorios abiertos de alta cordillera.",
+        "isCorrect": false,
+        "rationale": "La evaporación incrementa la salinidad por concentración de sales, pero no produce por sí sola soluciones fuertemente ácidas."
+      },
+      {
+        "text": "La reacción química entre minerales sulfurados expuestos en la roca, el oxígeno atmosférico y el agua.",
+        "isCorrect": true,
+        "rationale": "Al exponer sulfuros como la pirita a los agentes climáticos, se produce ácido sulfúrico que lixivia metales pesados en el entorno."
+      },
+      {
+        "text": "La neutralización de suelos alcalinos mediante la adición de cal viva durante el procesamiento.",
+        "isCorrect": false,
+        "rationale": "La adición de cal viva eleva el pH para neutralizar la acidez, funcionando como un tratamiento corrector y no como la causa del problema."
+      },
+      {
+        "text": "El vertido accidental de lubricantes sintéticos desde la flota de camiones de acarreo.",
+        "isCorrect": false,
+        "rationale": "Los derrames de lubricantes representan contaminación por hidrocarburos, la cual difiere químicamente de la acidez por sulfuros."
+      },
+      {
+        "text": "La precipitación de carbonatos debido al uso de agua desalinizada en las plantas concentradoras.",
+        "isCorrect": false,
+        "rationale": "La precipitación de carbonatos tiende a amortiguar la acidez en lugar de generar el drenaje ácido de mina."
+      }
+    ],
+    "hint": "Asocie la exposición de sulfuros de hierro con el aire y la humedad en las rocas removidas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la entidad pública descentralizada del Estado peruano encargada de fiscalizar, supervisar y sancionar el cumplimiento de las obligaciones ambientales en la gran y mediana minería?",
+    "opciones": [
+      {
+        "text": "La Autoridad Nacional del Agua (ANA).",
+        "isCorrect": false,
+        "rationale": "La ANA gestiona y administra de manera exclusiva los recursos hídricos en las cuencas hidrológicas."
+      },
+      {
+        "text": "El Organismo de Evaluación y Fiscalización Ambiental (OEFA).",
+        "isCorrect": true,
+        "rationale": "El OEFA es el ente rector del SINEFA encargado del monitoreo, fiscalización y sanción ambiental en el sector minero."
+      },
+      {
+        "text": "La Superintendencia Nacional de Fiscalización Laboral (Sunafil).",
+        "isCorrect": false,
+        "rationale": "La Sunafil fiscaliza el cumplimiento de las normas sociolaborales y de seguridad y salud en el trabajo."
+      },
+      {
+        "text": "El Organismo Supervisor de la Inversión en Energía y Minería (Osinergmin).",
+        "isCorrect": false,
+        "rationale": "Osinergmin supervisa la seguridad de la infraestructura operativa y los aspectos energéticos de la industria."
+      },
+      {
+        "text": "El Ministerio de Economía y Finanzas (MEF).",
+        "isCorrect": false,
+        "rationale": "El MEF administra la política fiscal y tributaria del país, sin ejercer labores de campo en inspección ambiental."
+      }
+    ],
+    "hint": "Identifique el organismo adscrito al MINAM cuyas siglas corresponden al fiscalizador ambiental oficial del sector.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Respecto a la Licencia Social para Operar (LSO) en el sector minero peruano, ¿cuáles de las siguientes afirmaciones describen correctamente su naturaleza y gestión?",
+    "opciones": [
+      {
+        "text": "Es un título de concesión legal emitido directamente por el Ministerio de Energía y Minas.",
+        "isCorrect": false,
+        "rationale": "La LSO no es un trámite administrativo o resolución del Estado, sino un estatus otorgado por el entorno social."
+      },
+      {
+        "text": "Es una aprobación social no escrita y continua otorgada por las comunidades locales del área de influencia.",
+        "isCorrect": true,
+        "rationale": "Representa el grado de confianza y aceptación que la población tiene respecto a la presencia de la empresa."
+      },
+      {
+        "text": "Su pérdida o deterioro puede ocasionar la paralización total de un proyecto debido a conflictos sociales.",
+        "isCorrect": true,
+        "rationale": "La falta de respaldo comunitario suele desencadenar protestas y bloqueos que obligan a detener las operaciones."
+      },
+      {
+        "text": "Exime a la empresa minera de cumplir con la presentación de Estudios de Impacto Ambiental (EIA).",
+        "isCorrect": false,
+        "rationale": "Tener buena relación comunitaria no suspende las exigencias técnicas ni los estudios de impacto exigidos por ley."
+      },
+      {
+        "text": "Se obtiene mediante un pago único irrefutable al gobierno regional correspondiente.",
+        "isCorrect": false,
+        "rationale": "La LSO se construye mediante el diálogo continuo y no se adquiere como un bien comercial o tarifa fija."
+      }
+    ],
+    "hint": "Diferencie el permiso formal-estatal del consentimiento intangible que otorga la población a lo largo del tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La Ley de Consulta Previa (Ley N° 29785) otorga un marco legal clave en el ámbito social. ¿Cuál es su objetivo esencial en relación con los pueblos indígenas u originarios?",
+    "opciones": [
+      {
+        "text": "Otorgar un poder de veto absoluto que invalide la Constitución Política del Perú.",
+        "isCorrect": false,
+        "rationale": "La consulta previa busca la concertación y acuerdos, no está concebida legalmente como un mecanismo de veto automático."
+      },
+      {
+        "text": "Consultar de manera previa, libre e informed sobre medidas legislativas o administrativas que afecten directamente sus derechos colectivos.",
+        "isCorrect": true,
+        "rationale": "Garantiza que el Estado dialogue de buena fe con las comunidades antes de autorizar proyectos que impacten sus territorios o modos de vida."
+      },
+      {
+        "text": "Transferir la titularidad de los yacimientos mineros del subsuelo a las directivas comunitarias.",
+        "isCorrect": false,
+        "rationale": "Los recursos del subsuelo pertenecen a la Nación según la Constitución, independientemente del proceso de consulta."
+      },
+      {
+        "text": "Obligar a las empresas mineras a contratar al 100% de la fuerza laboral únicamente de la comunidad local.",
+        "isCorrect": false,
+        "rationale": "La norma busca proteger derechos colectivos y territoriales, sin establecer cuotas laborales rígidas e imposibles de aplicar."
+      },
+      {
+        "text": "Eliminar la participación del Ministerio de Cultura en la validación de los procesos de diálogo.",
+        "isCorrect": false,
+        "rationale": "El Ministerio de Cultura actúa como ente rector orientador en la identificación de pueblos originarios y la aplicación de la norma."
+      }
+    ],
+    "hint": "Concéntrese en el proceso dialógico mediante el cual el Estado informa y recoge la voz colectiva antes de tomar decisiones administrativas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión integral del agua en la minería peruana, ¿qué estrategia operativa destaca por reducir sustancialmente la presión sobre las fuentes continentales de agua dulce?",
+    "opciones": [
+      {
+        "text": "El uso masivo de pozos subterráneos no regulados en épocas de sequía.",
+        "isCorrect": false,
+        "rationale": "La extracción incontrolada del acuífero agota el agua subterránea y agrava la escasez en las cuencas."
+      },
+      {
+        "text": "La incorporación de agua de mar desalinizada o directa en plantas concentradoras, como el caso de Marcobre.",
+        "isCorrect": true,
+        "rationale": "Utilizar agua marina mediante plantas de desalación evita competir con el consumo humano y agrícola de los valles andinos."
+      },
+      {
+        "text": "El vertido de agua de proceso sin tratar en ríos de alto caudal para lograr su dilución natural.",
+        "isCorrect": false,
+        "rationale": "Descargar efluentes sin tratamiento contamina la cuenca y viola los estándares de calidad ambiental vigentes."
+      },
+      {
+        "text": "El reemplazo del agua por cianuro concentrado en todas las fases del procesamiento metalúrgico.",
+        "isCorrect": false,
+        "rationale": "El cianuro es un reactivo de lixivicación específico que requiere disolución acuosa y no sustituye al agua."
+      },
+      {
+        "text": "La captación exclusiva de agua de lluvia mediante la deforestación de cabeceras de cuenca.",
+        "isCorrect": false,
+        "rationale": "Deforestar destruye la capacidad natural del suelo para retener agua y altera gravemente el ciclo hidrológico."
+      }
+    ],
+    "hint": "Considere la fuente alternativa de recurso hídrico no continental empleada por operaciones costeras en el sur del país.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Los Pasivos Ambientales Mineros (PAM) representan un riesgo continuo para la salud y el ambiente. ¿Qué componentes forman parte de un plan de cierre y remediación ambiental efectivo?",
+    "opciones": [
+      {
+        "text": "Estabilización física y química de los depósitos de relaves y desmontes abandonados.",
+        "isCorrect": true,
+        "rationale": "Controlar la estructura geomorfológica y neutralizar las reacciones contaminantes previene colapsos y lixiviación de metales."
+      },
+      {
+        "text": "Abandono inmediato de las instalaciones una vez concluida la extracción comercial del mineral.",
+        "isCorrect": false,
+        "rationale": "Abandonar el lugar sin tratamiento perpetúa la contaminación por pasivos ambientales y está penado por ley."
+      },
+      {
+        "text": "Revegetación de las áreas intervenidas utilizando especies nativas adaptadas al ecosistema local.",
+        "isCorrect": true,
+        "rationale": "La siembra de flora nativa recupera el paisaje original y fija el suelo reduciendo la erosión."
+      },
+      {
+        "text": "Ocultamiento de efluentes mediante el soterrado sin impermeabilizar del material reactivo.",
+        "isCorrect": false,
+        "rationale": "Enterrar material reactivo sin geomembranas contamina los acuíferos subterráneos de forma invisible."
+      },
+      {
+        "text": "Quema a cielo abierto de los residuos peligrosos generados durante la etapa operativa.",
+        "isCorrect": false,
+        "rationale": "La incineración no controlada emite gases tóxicos a la atmósfera violando la regulación de residuos sólidos."
+      }
+    ],
+    "hint": "Elija las actividades orientadas a garantizar la contención de relaves a largo plazo y el restablecimiento de la cobertura vegetal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "A diferencia de la Industria 4.0 enfocada en la automatización y los datos, ¿cuál es el rasgo distintivo de la Industria 5.0 en la minería responsable?",
+    "opciones": [
+      {
+        "text": "La eliminación completa de la supervisión humana en las plantas concentradoras.",
+        "isCorrect": false,
+        "rationale": "La Industria 5.0 revaloriza el rol humano colaborativo con las máquinas en lugar de desplazar completamente a las personas."
+      },
+      {
+        "text": "La integración armónica entre la alta tecnología, la centralidad en el ser humano y el cuidado ambiental estricto.",
+        "isCorrect": true,
+        "rationale": "Combina la eficiencia del análisis de datos y la automatización con un propósito centrado en las personas y la sostenibilidad del entorno."
+      },
+      {
+        "text": "El retorno al trabajo manual en mina subterránea para maximizar el empleo local.",
+        "isCorrect": false,
+        "rationale": "No implica un retroceso tecnológico hacia el trabajo manual, sino el uso inteligente de la tecnología al servicio del trabajador."
+      },
+      {
+        "text": "El desuso de la inteligencia artificial para evitar costos de infraestructura digital.",
+        "isCorrect": false,
+        "rationale": "La quinta revolución industrial aprovecha fuertemente la inteligencia artificial para optimizar decisiones con criterios socioambientales."
+      },
+      {
+        "text": "El incremento indeterminado de las emisiones contaminantes en pos del volumen de extracción.",
+        "isCorrect": false,
+        "rationale": "La Industria 5.0 exige descarbonización estricta y reducción de huella ambiental como pilar del diseño."
+      }
+    ],
+    "hint": "Considere la visión que complementa los procesos digitales con el factor humano, la resiliencia y el valor ecológico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué se entiende por Gobernanza Corporativa en una empresa minera moderna?",
+    "opciones": [
+      {
+        "text": "La estrategia publicitaria utilizada para mejorar la imagen corporativa en redes sociales.",
+        "isCorrect": false,
+        "rationale": "La publicidad gestiona la comunicación externa, mientras que la gobernanza establece el marco real de dirección y control interno."
+      },
+      {
+        "text": "El sistema de principios, políticas y procesos mediante los cuales la empresa es dirigida, operada y controlada éticamente.",
+        "isCorrect": true,
+        "rationale": "Define la estructura directiva, la rendición de cuentas ante grupos de interés y las políticas para la toma de decisiones responsables."
+      },
+      {
+        "text": "El conjunto de leyes que imponen los países compradores de mineral en los contratos de importación.",
+        "isCorrect": false,
+        "rationale": "Las leyes extranjeras corresponden a regulaciones de comercio internacional, no al sistema normativo propio de la empresa."
+      },
+      {
+        "text": "La junta de contratistas encargada del mantenimiento de la flota de maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento de equipos es una función logística y operativa específica, no un modelo directivo corporativo."
+      },
+      {
+        "text": "El fondo económico destinado a la financiación de campañas políticas en los municipios locales.",
+        "isCorrect": false,
+        "rationale": "Financiar campañas locales vulnera principios éticos y legislaciones anticorrupción globales y nacionales."
+      }
+    ],
+    "hint": "Piense en la estructura institucional interna que guía la toma de decisiones, la transparencia y el control directivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el Perú, la Ley N° 30424 regula la responsabilidad administrativa y penal de las personas jurídicas. ¿Qué incentiva esta norma en las empresas del sector minero?",
+    "opciones": [
+      {
+        "text": "La creación de fondos secretos para el pago de agasajos a inspectores de gobierno.",
+        "isCorrect": false,
+        "rationale": "La entrega de incentivos económicos o agasajos a funcionarios constituye un delito sancionado expresamente por la norma."
+      },
+      {
+        "text": "La implementación de modelos de prevención de delitos (programas de cumplimiento o compliance), códigos de conducta y canales de denuncia anónimos.",
+        "isCorrect": true,
+        "rationale": "La ley exime o mitiga la responsabilidad corporativa si la empresa demuestra haber implementado un sistema robusto de compliance y anticorrupción."
+      },
+      {
+        "text": "La exoneración del pago del impuesto a la renta a cambio de donaciones en infraestructura.",
+        "isCorrect": false,
+        "rationale": "El cumplimiento anticorrupción no otorga beneficios tributarios directos sobre la renta imponible."
+      },
+      {
+        "text": "El traspaso de sanciones penales corporativas hacia los sindicatos de trabajadores.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad de la persona jurídica recae sobre el ente corporativo y sus administradores, sin transferirse a los trabajadores."
+      },
+      {
+        "text": "La eliminación de los requisitos de auditoría financiera interna.",
+        "isCorrect": false,
+        "rationale": "Un programa de cumplimiento efectivo fortalece y multiplica los controles y auditorías internas."
+      }
+    ],
+    "hint": "Reflexione sobre la adopción voluntaria pero preventiva de programas de cumplimiento normativo (compliance).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La Iniciativa para la Transparencia de las Industrias Extractivas (EITI), aplicada en el Perú como EITI Perú, promueve la apertura de datos. ¿Cuáles de las siguientes acciones corresponden a este estándar?",
+    "opciones": [
+      {
+        "text": "La publicación transparente y cotejada de los pagos que las empresas hacen al Estado (impuestos y regalías).",
+        "isCorrect": true,
+        "rationale": "EITI concilia los reportes de pagos entregados por las empresas con los ingresos efectivamente recibidos por el fisco."
+      },
+      {
+        "text": "La divulgación del uso y distribución de los recursos generados por el canon y sobrecanon en los gobiernos subnacionales.",
+        "isCorrect": true,
+        "rationale": "El estándar exige rastrear la ruta del dinero hasta su empleo en proyectos de inversión pública en regiones."
+      },
+      {
+        "text": "La reserva confidencial absoluta de todas las actas de transferencia monetaria entre mineras y el Estado.",
+        "isCorrect": false,
+        "rationale": "EITI combate el secreto mediante la publicación abierta de las cifras financieras entre las partes."
+      },
+      {
+        "text": "La fijación secreta del valor de las multas impuestas por la OEFA a las empresas mineras.",
+        "isCorrect": false,
+        "rationale": "Las multas e infracciones ambientales deben ser públicas para dar trazabilidad al desempeño ambiental."
+      },
+      {
+        "text": "El ocultamiento de la identidad de los beneficiarios finales de las empresas concesionarias.",
+        "isCorrect": false,
+        "rationale": "El marco actualizado de EITI promueve activamente la identificación de los propietarios reales o beneficiarios finales."
+      }
+    ],
+    "hint": "Busque los compromisos vinculados con la conciliación abierta de impuestos y el rastreo social del canon.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la finalidad principal de establecer Mesas de Diálogo y Comités de Monitoreo Participativo entre la empresa minera, el Estado y las comunidades?",
+    "opciones": [
+      {
+        "text": "Retardar la aprobación técnica del Estudio de Impacto Ambiental de manera indefinida.",
+        "isCorrect": false,
+        "rationale": "Los espacios de diálogo buscan resolver dudas y consensuar acuerdos, no bloquear el trabajo técnico normativo."
+      },
+      {
+        "text": "Prevenir la conflictividad social, fomentar la confianza recíproca y consensuar proyectos de desarrollo territorial sostenible.",
+        "isCorrect": true,
+        "rationale": "Generan transparencia operacional y permiten que la comunidad participe directamente en la verificación del cumplimiento socioambiental."
+      },
+      {
+        "text": "Reemplazar las funciones legislativas del Congreso de la República a nivel provincial.",
+        "isCorrect": false,
+        "rationale": "Las mesas de diálogo son mecanismos de concertación local y no poseen facultades reglamentarias o legislativas."
+      },
+      {
+        "text": "Negociar exoneraciones tributarias directas para los ejecutivos de la compañía minera.",
+        "isCorrect": false,
+        "rationale": "El régimen tributario se fija mediante leyes aprobadas por el parlamento y administradas por SUNAT, fuera del alcance comunitario."
+      },
+      {
+        "text": "Transferir el costo del mantenimiento de las vías públicas a la policía nacional.",
+        "isCorrect": false,
+        "rationale": "El resguardo o mantenimiento de vías públicas obedece a competencias sectoriales de transportes y gobiernos locales."
+      }
+    ],
+    "hint": "Concéntrese en el espacio multiactor creado para prevenir disputas y fiscalizar comunitariamente los acuerdos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la modernización de operaciones mineras peruanas (como en Southern Perú o Antamina), ¿qué beneficio ambiental y operativo aporta el uso de camiones de acarreo y perforadoras autónomas?",
+    "opciones": [
+      {
+        "text": "Aumenta el consumo imprevisto de combustible fósil debido al uso de sensores.",
+        "isCorrect": false,
+        "rationale": "La conducción autónoma programada reduce frenadas y aceleraciones bruscas, optimizando la quema de combustible."
+      },
+      {
+        "text": "Incrementa la eficiencia operativa, reduce los ciclos de transporte, optimiza el consumo energético y expone menos al personal a peligros severos.",
+        "isCorrect": true,
+        "rationale": "Al retirar al conductor de la zona de alto riesgo del tajo y automatizar la ruta, se eleva la seguridad y disminuye el desgaste innecesario del equipo."
+      },
+      {
+        "text": "Eleva la probabilidad de colisión vehicular al eliminar los sistemas informáticos de ciberseguridad.",
+        "isCorrect": false,
+        "rationale": "Los sistemas robóticos cuentan con sensores lidar y frenado automático de emergencia que reducen casi a cero las colisiones."
+      },
+      {
+        "text": "Reclama un incremento en el mantenimiento de vías no pavimentadas mediante agua potable.",
+        "isCorrect": false,
+        "rationale": "El sistema no requiere agua potable extra; al contrario, la precisión de ruta reduce la polvareda por desvío de carril."
+      },
+      {
+        "text": "Desactiva el monitoreo en tiempo real del desgaste de los componentes mecánicos.",
+        "isCorrect": false,
+        "rationale": "La tecnología de flotas autónomas depende de la telemetría continua de los motores para operar correctamente."
+      }
+    ],
+    "hint": "Piense en la combinación de seguridad humana en el tajo y la regularidad en el consumo de energía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Las tecnologías avanzadas como el Análisis de Datos, la Inteligencia Artificial (IA) y los Gemelos Digitales se están integrando en la minería. ¿Cuáles son aplicaciones concretas de estas herramientas en el sector?",
+    "opciones": [
+      {
+        "text": "Mantenimiento predictivo de componentes críticos en maquinaria mediante sensores e IoT para evitar fallas catástrofe.",
+        "isCorrect": true,
+        "rationale": "El análisis algorítmico de vibración y temperatura detecta desgastes antes de que la pieza se rompa por completo."
+      },
+      {
+        "text": "Predicción geológica optimizada y procesamiento de imágenes para identificar áreas con mayor probabilidad de mineralización.",
+        "isCorrect": true,
+        "rationale": "Los modelos de aprendizaje automático procesan datos geofísicos e imágenes satelitales para precisar las zonas de exploración."
+      },
+      {
+        "text": "Generación automática de certificados ambientales aprobados sin evaluación de campo.",
+        "isCorrect": false,
+        "rationale": "La evaluación ambiental exige rigor científico e inspecciones en el terreno exigidas por la ley."
+      },
+      {
+        "text": "Reemplazo inmediato de las leyes ambientales nacionales por algoritmos privados no auditables.",
+        "isCorrect": false,
+        "rationale": "Las leyes son normas jurídicas públicas que ningún software o empresa privada puede derogar o sustituir."
+      },
+      {
+        "text": "Simulación de escenarios operativos para reducir el uso de agua y energía en la planta concentradora.",
+        "isCorrect": true,
+        "rationale": "Crear un gemelo digital de la planta permite probar ajustes virtuales para optimizar el consumo hídrico y eléctrico sin riesgo de parar la producción."
+      }
+    ],
+    "hint": "Identifique las tecnologías orientadas al diagnóstico anticipado de fallas mecánicas, la simulación virtual y el procesamiento geológico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ventajas aporta la utilización de drones equipados con sensores en la gestión ambiental minera?",
+    "opciones": [
+      {
+        "text": "Reemplazan de manera permanente el trabajo de extracción de mineral en los tajos.",
+        "isCorrect": false,
+        "rationale": "Los drones cumplen funciones de inspección, escaneo y medición, pero carecen de capacidad mecánica para la carga y extracción."
+      },
+      {
+        "text": "Permiten inspeccionar zonas de difícil acceso, monitorear la estabilidad de depósitos de relaves y medir emisiones de polvo sin arriesgar al personal.",
+        "isCorrect": true,
+        "rationale": "Al sobrevolar zonas inestables o tóxicas, capturan fotogrametría y datos de calidad de aire garantizando la integridad de los inspectores."
+      },
+      {
+        "text": "Incrementan la contaminación sónica y destruyen la topografía local de manera irreversible.",
+        "isCorrect": false,
+        "rationale": "Los vuelos de mapeo con aeronaves no tripuladas son de bajo impacto sonoro y no alteran la física del terreno."
+      },
+      {
+        "text": "Suprimen la necesidad de presentar informes de monitoreo de aire ante la OEFA.",
+        "isCorrect": false,
+        "rationale": "El dron sirve precisamente para recopilar datos precisos requeridos en los informes presentados a la autoridad."
+      },
+      {
+        "text": "Se utilizan exclusivamente para el transporte de carga pesada entre campamentos.",
+        "isCorrect": false,
+        "rationale": "Su uso principal en gestión ambiental radica en la teledetección e inspección visual y espectral."
+      }
+    ],
+    "hint": "Piense en la adquisición rápida de imágenes topográficas y mediciones ambientales desde el aire en terrenos peligrosos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la Ley Marco sobre Cambio Climático en el Perú, ¿cuál es la obligación directa de las empresas mineras en el pilar ambiental?",
+    "opciones": [
+      {
+        "text": "Cancelar el uso de electricidad de origen hídrico en todas sus operaciones.",
+        "isCorrect": false,
+        "rationale": "La energía hidroeléctrica es renovable y baja en emisiones; la ley busca promoverla sobre los combustibles fósiles."
+      },
+      {
+        "text": "Reportar sus emisiones de Gases de Efecto Invernadero (GEI) e implementar medidas de adaptación y mitigación de la huella de carbono.",
+        "isCorrect": true,
+        "rationale": "La norma exige contabilidad de carbono y acciones de eficiencia energética para descarbonizar progresivamente el sector."
+      },
+      {
+        "text": "Trasladar todas sus operaciones metalúrgicas a zonas costeras sin población.",
+        "isCorrect": false,
+        "rationale": "La relocalización física geográfica de yacimientos no es factible técnicamente ni está tipificada en la ley."
+      },
+      {
+        "text": "Aumentar la quema de carbón como sustituto del gas natural para reducir costos.",
+        "isCorrect": false,
+        "rationale": "El carbón genera mayores emisiones por unidad de energía, lo que contraviene los compromisos de mitigación."
+      },
+      {
+        "text": "Desviar el curso de los ríos continentales sin autorización de la ANA.",
+        "isCorrect": false,
+        "rationale": "Desviar cauces hídricos sin permiso es un delito ambiental grave que contraviene la gestión climática."
+      }
+    ],
+    "hint": "Relacione la norma climática nacional con la cuantificación y reducción de los GEI producidos por la combustión de la flota.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el contexto de las tendencias futuras hacia la Economía Circular en minería, ¿cuáles de las siguientes prácticas representan una valorización integral de recursos?",
+    "opciones": [
+      {
+        "text": "El reprocesamiento de relaves antiguos para recuperar metales valiosos remanentes (minería secundaria).",
+        "isCorrect": true,
+        "rationale": "Aprovechar las mermas depositadas en el pasado recupera valor comercial y reduce el volumen del depósito."
+      },
+      {
+        "text": "La transformación de subproductos mineros en insumos aprovechables para otras industrias (simbiosis industrial).",
+        "isCorrect": true,
+        "rationale": "Utilizar escorias estabilizadas o escasos materiales inertes para la fabricación de cemento o construcción reduce la acumulación de desechos."
+      },
+      {
+        "text": "La acumulación indefinida de desmonte de roca reactivo a la intemperie.",
+        "isCorrect": false,
+        "rationale": "Dejar material reactivo al descubierto sigue el modelo lineal de desecho y favorece la contaminación por drenaje."
+      },
+      {
+        "text": "El diseño de equipos mineros con partes reciclables y modulares de mayor vida útil.",
+        "isCorrect": true,
+        "rationale": "Proyectar la maquinaria bajo la remanufactura y la circularidad minimiza la chatarra y el consumo de materias primas."
+      },
+      {
+        "text": "La mezcla no controlada de residuos peligrosos con suelos agrícolas locales.",
+        "isCorrect": false,
+        "rationale": "Mezclar residuos peligrosos sin tratamiento previo degrada el suelo y viola la ley de gestión integral de residuos."
+      }
+    ],
+    "hint": "Identifique las acciones que reinsertan los materiales usados o relaves de nuevo en la cadena de valor o minimizan el descarte.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el Corredor Minero del Sur del Perú, que abarca operaciones de gran escala, ¿cuál ha sido una de las principales fuentes de tensión socioambiental recurrente?",
+    "opciones": [
+      {
+        "text": "El rechazo comunitario al uso de energía solar en los campamentos mineros.",
+        "isCorrect": false,
+        "rationale": "Las fuentes renovables como la energía solar no generan rechazo de las poblaciones del entorno."
+      },
+      {
+        "text": "Las preocupaciones por la generación de polvo y ruido del transporte de mineral en vías no pavimentadas y el impacto hídrico.",
+        "isCorrect": true,
+        "rationale": "El paso continuo de camiones pesados por vías de tierra genera dispersión de partículas y vibraciones que afectan la salud y los cultivos locales."
+      },
+      {
+        "text": "La negativa de las empresas mineras a contratar ingenieros peruanos colegiados.",
+        "isCorrect": false,
+        "rationale": "Las mineras contratan habitualmente profesionales peruanos colegiados según las exigencias del ejercicio legal de la profesión."
+      },
+      {
+        "text": "La prohibición estatal de construir infraestructura vial en la cordillera.",
+        "isCorrect": false,
+        "rationale": "El Estado impulsa proyectos de conectividad pública y privada en la sierra sur dentro del plan nacional de infraestructura."
+      },
+      {
+        "text": "El cobro excesivo de peajes por parte de organismos ambientales internacionales.",
+        "isCorrect": false,
+        "rationale": "Los organismos ambientales internacionales no cobran peajes ni administran las rutas nacionales."
+      }
+    ],
+    "hint": "Piense en las afecciones directas causadas por el tránsito constante de logística pesada a lo largo de poblados rurales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo contribuyen las Asociaciones Público-Privadas (APP) y mecanismos similares a mejorar la gestión de proyectos de desarrollo social e infraestructura en regiones mineras?",
+    "opciones": [
+      {
+        "text": "Permitiendo que las empresas privadas sustituyan al Poder Judicial en el cobro de multas.",
+        "isCorrect": false,
+        "rationale": "La imposición y cobro de multas coercitivas corresponde al fuero público estatal indisponible."
+      },
+      {
+        "text": "Uniendo capacidades de gestión, innovación y financiamiento privado con el Estado para ejecutar obras públicas con eficiencia y transparencia.",
+        "isCorrect": true,
+        "rationale": "Aportan rigor técnico, cumplimiento de plazos y estándares de eficiencia privada para construir hospitales u obras hídricas de impacto social."
+      },
+      {
+        "text": "Transfiriendo las obligaciones fiscales de las mineras a los pequeños comerciantes locales.",
+        "isCorrect": false,
+        "rationale": "Las APP no alteran la equidad ni las obligaciones tributarias individuales fijadas por el marco tributario general."
+      },
+      {
+        "text": "Eliminando los presupuestos asignados a los centros de salud pública regionales.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la alianza es ampliar y mejorar la cobertura de salud pública, no desfinanciar la red existente."
+      },
+      {
+        "text": "Reduciendo los controles de calidad técnica en las edificaciones públicas.",
+        "isCorrect": false,
+        "rationale": "Estas asociaciones exigen el cumplimiento de la reglamentación nacional de edificaciones e inspecciones estrictas."
+      }
+    ],
+    "hint": "Considere la sinergia donde la eficiencia y gerencia corporativa coadyuvan con las funciones del sector público.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para mitigar los impactos en la calidad del aire causados por la voladura, transporte de material y procesamiento metalúrgico, ¿qué medidas operativas aplican las mineras responsables?",
+    "opciones": [
+      {
+        "text": "Riego constante de vías no pavimentadas con aditivos supresores de polvo de bajo impacto ambiental.",
+        "isCorrect": true,
+        "rationale": "La aplicación de supresores de polvo como bischofita fija el material particulado impidiendo su suspensión eólica."
+      },
+      {
+        "text": "Instalación de sistemas de filtrado de gases y captura de dióxido de azufre ($SO_2$) en plantas metalúrgicas.",
+        "isCorrect": true,
+        "rationale": "Capturar el gas sulfuroso en plantas de ácido evita la emisión tóxica a la atmósfera y la generación de lluvia ácida."
+      },
+      {
+        "text": "Realización de voladuras en momentos meteorológicos desfavorables con vientos hacia los centros poblados.",
+        "isCorrect": false,
+        "rationale": "Efectuar voladuras con vientos dirigidos a poblados arrastra polvo tóxico directo a las viviendas."
+      },
+      {
+        "text": "Encapsulado de fajas transportadoras de mineral para prevenir la dispersión de material particulado.",
+        "isCorrect": true,
+        "rationale": "Cubrir las correas de transporte evita que el viento sople el polvo fino extraído durante su traslado a la planta."
+      },
+      {
+        "text": "Eliminación de estaciones de monitoreo de calidad de aire en el perímetro de la concesión.",
+        "isCorrect": false,
+        "rationale": "Retirar los equipos de monitoreo impide verificar el cumplimiento del Estándar de Calidad Ambiental (ECA) para aire."
+      }
+    ],
+    "hint": "Seleccione los métodos físicos y químicos utilizados para controlar el material particulado en carreteras y las emanaciones gaseosas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-61",
+    "diplomado": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la diligencia en la cadena de suministro, ¿por qué es fundamental implementar mecanismos de trazabilidad en la comercialización del oro en el Perú?",
+    "opciones": [
+      {
+        "text": "Para elevar artificialmente la cotización del gramo de oro en el Banco Central de Reserva.",
+        "isCorrect": false,
+        "rationale": "El precio del oro es un indicador internacional determinado por los mercados financieros globales."
+      },
+      {
+        "text": "Para garantizar que el mineral provenga de fuentes formales y sostenibles, asegurando que no financie la minería ilegal o la vulneración de derechos humanos.",
+        "isCorrect": true,
+        "rationale": "La trazabilidad audita la ruta del mineral desde la bocamina hasta la exportación, asegurando la erradicación del trabajo infantil y la deforestación ilegal."
+      },
+      {
+        "text": "Para impedir que las pequeñas empresas de joyería puedan adquirir materia prima nacional.",
+        "isCorrect": false,
+        "rationale": "La trazabilidad busca formalidad, beneficio legítimo y legalidad comercial, no el desabastecimiento del mercado local."
+      },
+      {
+        "text": "Para reemplazar las inspecciones aduaneras por trámites informales en fronteras.",
+        "isCorrect": false,
+        "rationale": "Un sistema de cadena de custodia formal fortalece la labor de fiscalización de la aduana y la SUNAT."
+      },
+      {
+        "text": "Para eximir a las refinerías internacionales del pago de aranceles de exportación.",
+        "isCorrect": false,
+        "rationale": "La diligencia en la cadena de custodia no otorga liberaciones tributarias a los compradores externos."
+      }
+    ],
+    "hint": "Piense en la necesidad de certificar que el mineral extraído no proceda del lavado de activos ni devaste áreas protegidas.",
+    "activo": true
+  }
+]

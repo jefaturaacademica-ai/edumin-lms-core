@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica principal que diferencia a un proyecto de una operación rutinaria de mantenimiento?",
+    "opciones": [
+      {
+        "text": "Tener una naturaleza temporal con un inicio y un fin bien definidos para lograr un objetivo único.",
+        "isCorrect": true,
+        "rationale": "Un proyecto se distingue de las operaciones por ser una iniciativa laboral acotada en el tiempo, orientada a alcanzar metas específicas e irrepetibles."
+      },
+      {
+        "text": "Ser un proceso continuo e indefinido enfocado en mantener el flujo operativo diario.",
+        "isCorrect": false,
+        "rationale": "Las tareas continuas e indefinidas corresponden al trabajo operativo rutinario de la organización y no a la estructura de un proyecto."
+      },
+      {
+        "text": "Requerir un presupuesto anual ilimitado gestionado por el departamento financiero.",
+        "isCorrect": false,
+        "rationale": "Todos los proyectos están sujetos a restricciones presupuestarias y asignación finita de recursos económicos."
+      },
+      {
+        "text": "Ser ejecutado sin la necesidad de asignar recursos humanos especializados.",
+        "isCorrect": false,
+        "rationale": "Incluso el proyecto más sencillo requiere la gestión y asignación explícita de personal capacitado."
+      },
+      {
+        "text": "Tratarse de un procedimiento estandarizado que se repite diariamente sin variaciones.",
+        "isCorrect": false,
+        "rationale": "La repetitividad continua es la esencia de las operaciones, mientras que la unicidad define al proyecto."
+      }
+    ],
+    "hint": "Piensa en el marco temporal y en la unicidad del resultado que busca cada uno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos constituyen restricciones clave que se deben gestionar en cualquier proyecto de mantenimiento?",
+    "opciones": [
+      {
+        "text": "El alcance delimitado del trabajo a realizar.",
+        "isCorrect": true,
+        "rationale": "El alcance define con precisión qué tareas e hitos están incluidos dentro del trabajo encomendado y cuáles quedan fuera."
+      },
+      {
+        "text": "El tiempo o la temporalidad bien definida.",
+        "isCorrect": true,
+        "rationale": "La restricción temporal establece el plazo de ejecución con una fecha clara de inicio y de culminación."
+      },
+      {
+        "text": "Los recursos financieros, humanos y materiales asignados.",
+        "isCorrect": true,
+        "rationale": "La disponibilidad finita de presupuesto, personal calificado e insumos condiciona la ejecución efectiva de las tareas."
+      },
+      {
+        "text": "La continuidad indefinida de las actividades operativas cotidianas.",
+        "isCorrect": false,
+        "rationale": "La continuidad operativa caracteriza a la rutina de planta y no a la naturaleza acotada de un proyecto."
+      },
+      {
+        "text": "El valor ilimitado de la inversión inicial sin necesidad de control presupuestal.",
+        "isCorrect": false,
+        "rationale": "El presupuesto de un proyecto es siempre limitado y requiere una estricta medición de costos."
+      }
+    ],
+    "hint": "Considera los tres o cuatro factores limitantes tradicionales que encuadran la gestión de un proyecto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son las cuatro fases fundamentales que conforman el ciclo de vida básico de un proyecto?",
+    "opciones": [
+      {
+        "text": "Inicio, planificación, ejecución y cierre.",
+        "isCorrect": true,
+        "rationale": "Estas cuatro etapas constituyen la secuencia conceptual lógica que guía a un proyecto desde su concepción hasta su entrega final."
+      },
+      {
+        "text": "Análisis, cotización, compras y desecho.",
+        "isCorrect": false,
+        "rationale": "Esta secuencia describe más bien un proceso de adquisición o abastecimiento de bienes, no el ciclo de vida del proyecto."
+      },
+      {
+        "text": "Diseño, contratación, lubricación y auditoría.",
+        "isCorrect": false,
+        "rationale": "Incluye actividades mixtas donde la lubricación es una tarea operativa de mantenimiento y no una fase de la gestión global."
+      },
+      {
+        "text": "Inspección, mantenimiento preventivo, overhaul y venta.",
+        "isCorrect": false,
+        "rationale": "Representa distintas estrategias o niveles de intervención sobre un activo físico, pero no las etapas de gestión del proyecto."
+      },
+      {
+        "text": "Exploración, perforación, voladura y transporte.",
+        "isCorrect": false,
+        "rationale": "Corresponde a las fases operativas de extracción en la minería de tajo abierto o subterránea, no al ciclo del proyecto."
+      }
+    ],
+    "hint": "Comienza por la evaluación de necesidades y concluye con la entrega de resultados e informes finales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué actividad es un ejemplo claro de una operación continua y rutinaria dentro del departamento de mantenimiento?",
+    "opciones": [
+      {
+        "text": "La lubricación periódica diaria de los puntos de engrase de un equipo.",
+        "isCorrect": true,
+        "rationale": "Es una actividad repetitiva, de frecuencia continua y permanente a lo largo del tiempo de operación de la planta."
+      },
+      {
+        "text": "El overhaul completo o reparación mayor de un motor de combustión.",
+        "isCorrect": false,
+        "rationale": "Una intervención mayor o reconstrucción profunda se gestiona como un proyecto debido a su alcance, costo y temporalidad."
+      },
+      {
+        "text": "La remodelación e instalación integral de un nuevo taller de fundición.",
+        "isCorrect": false,
+        "rationale": "Constituye un proyecto de infraestructura con fechas específicas de diseño, inicio y entrega."
+      },
+      {
+        "text": "La reingeniería y rediseño de un deflector de una faja transportadora.",
+        "isCorrect": false,
+        "rationale": "Es una iniciativa puntual de mejora tecnológica que busca modificar las especificaciones de un activo en un plazo fijo."
+      },
+      {
+        "text": "La implementación e integración inicial de un sistema informático para la gestión.",
+        "isCorrect": false,
+        "rationale": "Representa un proyecto de transformación digital que culmina una vez puesto en marcha el software."
+      }
+    ],
+    "hint": "Busca la tarea recurrente que se realiza de manera constante según una frecuencia fija.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué tipos de recursos indispensables deben asignarse y gestionarse adecuadamente al ejecutar un proyecto de mantenimiento?",
+    "opciones": [
+      {
+        "text": "Recursos humanos capacitados y especializados.",
+        "isCorrect": true,
+        "rationale": "Proporcionan el personal técnico calificado necesario para ejecutar las tareas de ingeniería y reparación de manera segura."
+      },
+      {
+        "text": "Recursos financieros o financiamiento económico.",
+        "isCorrect": true,
+        "rationale": "Sostienen el presupuesto requerido para cubrir costos mano de obra, adquisiciones y contingencias."
+      },
+      {
+        "text": "Recursos materiales, herramientas y repuestos.",
+        "isCorrect": true,
+        "rationale": "Abarcan las refacciones, componentes mecánicos, insumos consumibles y equipos especializados necesarios para la intervención."
+      },
+      {
+        "text": "Suscripciones ilimitadas a redes sociales de entretenimiento.",
+        "isCorrect": false,
+        "rationale": "No representan un insumo técnico ni operativo involucrado en la gestión de mantenimiento."
+      },
+      {
+        "text": "Licencias de construcción municipal no vinculadas a la planta.",
+        "isCorrect": false,
+        "rationale": "Trámites ajenos a la ubicación del activo no forman parte de la asignación de recursos del proyecto."
+      }
+    ],
+    "hint": "Identifica las tres categorías principales de insumos (personas, dinero y bienes físicos) necesarios para trabajar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué estándar de gestión creado por el Project Management Institute (PMI) reúne las mejores prácticas y estructura los proyectos en cinco grupos de procesos?",
+    "opciones": [
+      {
+        "text": "La guía del PMBOK (Project Management Body of Knowledge).",
+        "isCorrect": true,
+        "rationale": "Es el cuerpo de conocimiento estándar del PMI que organiza la dirección de proyectos en iniciación, planificación, ejecución, seguimiento/control y cierre."
+      },
+      {
+        "text": "El manual de usuario del fabricante del equipo.",
+        "isCorrect": false,
+        "rationale": "Contiene especificaciones técnicas de operación y catálogo de piezas, no principios de gestión de proyectos."
+      },
+      {
+        "text": "El certificado de calibración de instrumental de medición.",
+        "isCorrect": false,
+        "rationale": "Documenta la trazabilidad metrológica de una herramienta, no un marco global de dirección."
+      },
+      {
+        "text": "La norma ISO 9001 de gestión de la calidad únicamente.",
+        "isCorrect": false,
+        "rationale": "Está enfocada en sistemas de gestión de calidad organizacional, no en la disciplina específica de gestión de proyectos del PMI."
+      },
+      {
+        "text": "El reglamento interno de seguridad y salud en el trabajo.",
+        "isCorrect": false,
+        "rationale": "Establece directrices de prevención de riesgos laborales a nivel de empresa o sede."
+      }
+    ],
+    "hint": "Sus siglas en inglés hacen referencia al 'cuerpo de conocimiento de la gestión de proyectos'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito principal de elaborar una Estructura de Desglose del Trabajo (EDT o WBS) en la gestión del alcance?",
+    "opciones": [
+      {
+        "text": "Descomponer jerárquicamente el trabajo total en componentes y paquetes más pequeños y manejables.",
+        "isCorrect": true,
+        "rationale": "Al fraccionar el alcance en tareas de menor escala, facilita la estimación de costos, tiempos y la asignación de responsabilidades."
+      },
+      {
+        "text": "Determinar los sueldos individuales del personal administrativo de la empresa.",
+        "isCorrect": false,
+        "rationale": "La escala salarial de la organización es un proceso de gestión humana ajeno a la descomposición técnica del alcance."
+      },
+      {
+        "text": "Generar una lista de proveedores autorizados para la adquisición de materia prima.",
+        "isCorrect": false,
+        "rationale": "La selección de proveedores corresponde a la gestión de adquisiciones y compras."
+      },
+      {
+        "text": "Sustituir por completo el uso de cronogramas y diagramas de planificación temporal.",
+        "isCorrect": false,
+        "rationale": "La EDT organiza el contenido del trabajo; se complementa con los cronogramas pero no los reemplaza."
+      },
+      {
+        "text": "Eliminar de forma absoluta todos los riesgos de fallas mecánicas en los activos.",
+        "isCorrect": false,
+        "rationale": "La EDT es una herramienta de organización del alcance, no una técnica de mantenimiento predictivo o prevención física."
+      }
+    ],
+    "hint": "Recuerda el principio de 'dividir un problema grande en partes más pequeñas para manejarlo mejor'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué beneficios aporta definir minuciosamente el alcance de un proyecto antes de iniciar su ejecución?",
+    "opciones": [
+      {
+        "text": "Evitar ambigüedades y falsos supuestos en las expectativas de los interesados.",
+        "isCorrect": true,
+        "rationale": "Establecer límites claros aclara exactamente qué resultados esperará el cliente y cuáles no están contemplados."
+      },
+      {
+        "text": "Prevenir una expansión descontrolada de las tareas y los sobrecostos asociados.",
+        "isCorrect": true,
+        "rationale": "Al contar con un enunciado formal del alcance, se frena la adición no autorizada de trabajo adicional que encarece el proyecto."
+      },
+      {
+        "text": "Facilitar la creación de indicadores de desempeño y mecanismos de control precisos.",
+        "isCorrect": true,
+        "rationale": "Permite comparar los entregables reales obtenidos frente a la línea base planificada para medir el avance efectivo."
+      },
+      {
+        "text": "Garantizar que no se requiera invertir presupuesto ni recursos materiales.",
+        "isCorrect": false,
+        "rationale": "Todo proyecto, aun con un alcance impecable, exige consumo de presupuesto y recursos."
+      },
+      {
+        "text": "Eliminar la necesidad de comunicarse con las partes interesadas del proyecto.",
+        "isCorrect": false,
+        "rationale": "Definir el alcance requiere una comunicación intensa y continua con todos los involucrados."
+      }
+    ],
+    "hint": "Aquel enfoque que evita sorpresas en el presupuesto, controla las tareas y aclara las metas al cliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué aspecto define una gestión de comunicaciones efectiva en el desarrollo de un proyecto?",
+    "opciones": [
+      {
+        "text": "Asegurar que la información correcta llegue a las personas adecuadas en el momento oportuno.",
+        "isCorrect": true,
+        "rationale": "Una comunicación efectiva distribuye información precisa, clara y transparente a las partes interesadas según la frecuencia necesaria."
+      },
+      {
+        "text": "Enviar informes técnicos únicamente cuando el proyecto ha sido culminado por completo.",
+        "isCorrect": false,
+        "rationale": "Retener información hasta el cierre impide tomar decisiones correctivas oportunas durante la ejecución."
+      },
+      {
+        "text": "Ocultar las desviaciones presupuestarias para no generar preocupación en los directivos.",
+        "isCorrect": false,
+        "rationale": "La transparencia es la base de la gestión de comunicaciones; ocultar datos incrementa el riesgo del proyecto."
+      },
+      {
+        "text": "Utilizar exclusivamente mensajes verbales e informales sin dejar registros formales.",
+        "isCorrect": false,
+        "rationale": "Los proyectos requieren canales formales y documentación trazable para registrar acuerdos e hitos."
+      },
+      {
+        "text": "Restringir la información para que únicamente el gerente del proyecto tenga acceso a ella.",
+        "isCorrect": false,
+        "rationale": "El aislamiento de la información destruye la coordinación de los equipos multidisciplinarios."
+      }
+    ],
+    "hint": "Se relaciona con entregar el mensaje apropiado al destinatario correcto y en el tiempo justo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Quiénes son considerados stakeholders o partes interesadas en un proyecto?",
+    "opciones": [
+      {
+        "text": "Personas, grupos u organizaciones que pueden influir, verse afectados o recibir un beneficio del proyecto.",
+        "isCorrect": true,
+        "rationale": "Abarca a todo individuo o entidad (interna o externa) con un interés legítimo o impacto directo/indirecto en la iniciativa."
+      },
+      {
+        "text": "Únicamente los accionistas y directores ejecutivos que financian la empresa.",
+        "isCorrect": false,
+        "rationale": "Los accionistas son solo un grupo dentro del amplio abanico de partes interesadas."
+      },
+      {
+        "text": "Exclusivamente los proveedores externos encargados de la venta de repuestos.",
+        "isCorrect": false,
+        "rationale": "Los proveedores forman parte de los stakeholders, pero no son los únicos interesados."
+      },
+      {
+        "text": "Únicamente los operarios encargados de ejecutar las tareas mecánicas en el taller.",
+        "isCorrect": false,
+        "rationale": "El equipo ejecutor es un stakeholder clave, pero coexiste con clientes, comunidades y directivos."
+      },
+      {
+        "text": "Solamente los inspectores de organismos reguladores y entidades estatales.",
+        "isCorrect": false,
+        "rationale": "Los entes de fiscalización representan un actor regulador, excluyendo a los usuarios y ejecutores."
+      }
+    ],
+    "hint": "Incluye tanto al equipo interno como a clientes, proveedores e incluso comunidades aledañas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la matriz de evaluación de interesados (basada en nivel de poder e interés), ¿cuál es la estrategia adecuada para aquellos actores con alto poder y alto interés?",
+    "opciones": [
+      {
+        "text": "Involucrarlos activamente y gestionarlos con el máximo cuidado durante todo el proyecto.",
+        "isCorrect": true,
+        "rationale": "Al poseer alta capacidad de decisión e interés directo, requieren colaboración estrecha y comunicación prioritaria."
+      },
+      {
+        "text": "Mantenerlos con un nivel de monitoreo mínimo y esfuerzo bajo.",
+        "isCorrect": false,
+        "rationale": "Esta estrategia se aplica a actores con bajo poder y bajo interés para no saturar recursos."
+      },
+      {
+        "text": "Enviarles únicamente un resumen ejecutivo al finalizar la obra.",
+        "isCorrect": false,
+        "rationale": "Ignorar a actores influyentes durante la ejecución puede provocar bloqueos o la paralización del proyecto."
+      },
+      {
+        "text": "Ignorar sus expectativas hasta que presenten una queja formal o conflicto.",
+        "isCorrect": false,
+        "rationale": "La gestión de stakeholders busca la prevención proactiva de desacuerdos, no la reacción tardía ante crisis."
+      },
+      {
+        "text": "Mantenerlos satisfechos de forma pasiva pero sin permitirles conocer los avances en tiempo real.",
+        "isCorrect": false,
+        "rationale": "Esta acción corresponde a interesados con alto poder pero bajo interés directo."
+      }
+    ],
+    "hint": "Piensa en el grupo clave de decisión cuyo respaldo es vital para que el proyecto no se detenga.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ventaja ofrece el uso de plataformas colaborativas de gestión como Monday, Trello o Asana?",
+    "opciones": [
+      {
+        "text": "Permitir el seguimiento visual del progreso de las tareas y la asignación del equipo en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Centralizan la información de las actividades en tableros dinámicos, mejorando la transparencia y la coordinación."
+      },
+      {
+        "text": "Reemplazar la necesidad de contratar personal técnico especializado en mantenimiento.",
+        "isCorrect": false,
+        "rationale": "El software ayuda a organizar y supervisar el trabajo, pero no ejecuta las labores físicas de ingeniería."
+      },
+      {
+        "text": "Garantizar de forma automática que no ocurran fallas por desgaste físico en los activos.",
+        "isCorrect": false,
+        "rationale": "La gestión digital de tareas organiza procesos, no altera la física o metalurgia de las máquinas."
+      },
+      {
+        "text": "Aprobar automáticamente los estudios de impacto ambiental sin revisión técnica.",
+        "isCorrect": false,
+        "rationale": "Las aprobaciones legales corresponden a las autoridades del Estado y no a un software privado."
+      },
+      {
+        "text": "Eliminar la restricción presupuestaria en la adquisición de componentes mecánicos.",
+        "isCorrect": false,
+        "rationale": "Las plataformas monitorean gastos, pero no otorgan financiamiento económico ilimitado."
+      }
+    ],
+    "hint": "Se enfoca en la visibilidad inmediata del estado de cada actividad y quién la está realizando.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre la certificación PMP y la certificación CAPM otorgadas por el PMI?",
+    "opciones": [
+      {
+        "text": "PMP exige experiencia previa comprobable en liderazgo de proyectos, mientras que CAPM está enfocada en niveles iniciales o asociados.",
+        "isCorrect": true,
+        "rationale": "PMP valida competencia avanzada y miles de horas liderando proyectos; CAPM requiere un perfil técnico o académico básico sin exigir horas de liderazgo previas."
+      },
+      {
+        "text": "CAPM es un certificado de validez vitalicia y PMP caduca obligatoriamente cada mes.",
+        "isCorrect": false,
+        "rationale": "Ambas certificaciones requieren procesos de actualización y renovación periódica establecidos por el PMI."
+      },
+      {
+        "text": "PMP es aplicable únicamente en minería y CAPM solo en el sector bancario.",
+        "isCorrect": false,
+        "rationale": "Todas las certificaciones del PMI son de carácter global y aplicables a cualquier sector industrial o de servicios."
+      },
+      {
+        "text": "CAPM requiere más de 7,500 horas de dirección demostrable y PMP no exige ningún requisito.",
+        "isCorrect": false,
+        "rationale": "El requisito riguroso de miles de horas demostradas pertenece a la acreditación PMP."
+      },
+      {
+        "text": "PMP es un título universitario de pregrado y CAPM es un grado de doctorado académico.",
+        "isCorrect": false,
+        "rationale": "Son certificaciones profesionales emitidas por un instituto internacional (PMI), no grados académicos universitarios."
+      }
+    ],
+    "hint": "Analiza cuál exige haber dirigido proyectos en la práctica durante años y cuál sirve como puerta de entrada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes roles están definidos formalmente en el marco de trabajo ágil Scrum?",
+    "opciones": [
+      {
+        "text": "Scrum Master.",
+        "isCorrect": true,
+        "rationale": "Actúa como el facilitador del equipo, asegurando la correcta aplicación del marco y eliminando impedimentos."
+      },
+      {
+        "text": "Product Owner (Dueño del Producto).",
+        "isCorrect": true,
+        "rationale": "Se encarga de gestionar el backlog de tareas, priorizar entregables y maximizar el valor del producto."
+      },
+      {
+        "text": "Equipo de Desarrollo (Development Team).",
+        "isCorrect": true,
+        "rationale": "Grupo multidisciplinario autoorganizado encargado de ejecutar el trabajo funcional al final de cada sprint."
+      },
+      {
+        "text": "Auditor Externo de Estados Financieros.",
+        "isCorrect": false,
+        "rationale": "Es una función contable o de control ajena a los roles internos definidos en la metodología Scrum."
+      },
+      {
+        "text": "Inspector Municipal de Edificaciones.",
+        "isCorrect": false,
+        "rationale": "Representa una autoridad regulatoria externa a la estructura del equipo Scrum."
+      }
+    ],
+    "hint": "Recuerda al facilitador del proceso, al responsable de la lista de prioridades y al equipo ejecutor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son las tres columnas básicas que estructuran el flujo de trabajo en un tablero Kanban tradicional?",
+    "opciones": [
+      {
+        "text": "Por hacer (To Do).",
+        "isCorrect": true,
+        "rationale": "Contiene la lista de tareas pendientes que han sido priorizadas para ser iniciadas."
+      },
+      {
+        "text": "En proceso o haciendo (Doing).",
+        "isCorrect": true,
+        "rationale": "Muestra las actividades que se están ejecutando activamente en el ciclo de trabajo actual."
+      },
+      {
+        "text": "Hecho o completado (Done).",
+        "isCorrect": true,
+        "rationale": "Reúne las tareas que han culminado satisfactoriamente los criterios de aceptación."
+      },
+      {
+        "text": "Cancelado sin revisión.",
+        "isCorrect": false,
+        "rationale": "No forma parte de las tres columnas estándar de avance continuo en un tablero básico."
+      },
+      {
+        "text": "Archivado por falta de presupuesto.",
+        "isCorrect": false,
+        "rationale": "Es una condición excepcional de descarte, no un estado del flujo de trabajo habitual."
+      }
+    ],
+    "hint": "Observa las tres etapas sencillas que recorre una tarea desde que se planifica hasta que se entrega.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué el software Oracle Primavera P6 es reconocido en la gestión de proyectos de gran escala frente a opciones más sencillas?",
+    "opciones": [
+      {
+        "text": "Por su capacidad de gestionar portafolios complejos, estructuras de desglose de organización y documentación en un solo entorno.",
+        "isCorrect": true,
+        "rationale": "Ofrece un manejo robusto de grandes volúmenes de datos, trazabilidad de entregables y gestión avanzada de recursos interconectados."
+      },
+      {
+        "text": "Porque es un software gratuito y de código abierto sin licencias comerciales.",
+        "isCorrect": false,
+        "rationale": "Primavera P6 es una herramienta de software corporativo de pago desarrollada por Oracle."
+      },
+      {
+        "text": "Porque no requiere ingresar ningún dato referente a fechas ni costos.",
+        "isCorrect": false,
+        "rationale": "Su objetivo principal es precisamente el cálculo preciso de cronogramas, ruta crítica y costos."
+      },
+      {
+        "text": "Porque reemplaza la necesidad de contar con un director o gerente de proyecto.",
+        "isCorrect": false,
+        "rationale": "El software es un medio de soporte que requiere la toma de decisiones del equipo profesional."
+      },
+      {
+        "text": "Porque no permite trabajar con múltiples usuarios ni conectar bases de datos.",
+        "isCorrect": false,
+        "rationale": "Primavera P6 se destaca por su entorno multiusuario y arquitectura orientada a empresas."
+      }
+    ],
+    "hint": "Piensa en las características necesarias para controlar proyectos mineros e industriales de gran complejidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son las tres dimensiones esenciales de la sostenibilidad que deben integrarse en los proyectos de ingeniería modernos?",
+    "opciones": [
+      {
+        "text": "Sostenibilidad ambiental.",
+        "isCorrect": true,
+        "rationale": "Busca la preservación de los recursos naturales y la reducción del impacto o huella ecológica de las operaciones."
+      },
+      {
+        "text": "Sostenibilidad económica.",
+        "isCorrect": true,
+        "rationale": "Garantiza que el proyecto sea rentablemente viable y genere retorno sobre la inversión de manera responsable."
+      },
+      {
+        "text": "Sostenibilidad social.",
+        "isCorrect": true,
+        "rationale": "Promueve el bienestar, el desarrollo equitativo de las comunidades locales y un clima laboral seguro."
+      },
+      {
+        "text": "Sostenibilidad burocrática.",
+        "isCorrect": false,
+        "rationale": "El exceso de trámites no constituye una dimensión de desarrollo sostenible aceptada."
+      },
+      {
+        "text": "Sostenibilidad tributaria exclusiva.",
+        "isCorrect": false,
+        "rationale": "El cumplimiento fiscal es una obligación legal, no un pilar integral del desarrollo sostenible."
+      }
+    ],
+    "hint": "Considera el triple balance: cuidado del planeta, viabilidad financiera y bienestar humano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera aportan la realidad aumentada y la realidad virtual en la ejecución de proyectos de mantenimiento industrial?",
+    "opciones": [
+      {
+        "text": "Facilitando la simulación interactiva de procedimientos complejos y la capacitación en entornos seguros.",
+        "isCorrect": true,
+        "rationale": "Permiten al personal practicar maniobras de alto riesgo (como soldadura o desensamblaje) sin exponerse a peligros físicos directos."
+      },
+      {
+        "text": "Eliminando por completo la necesidad de comprar repuestos o partes físicas para los equipos.",
+        "isCorrect": false,
+        "rationale": "La simulación digital entrena y planifica, pero los componentes físicos reales siguen siendo indispensables."
+      },
+      {
+        "text": "Haciendo que los metales de las máquinas no sufran desgaste térmico o mecánico con el tiempo.",
+        "isCorrect": false,
+        "rationale": "Las herramientas visuales no modifican la fricción ni las propiedades mecánicas de la materia."
+      },
+      {
+        "text": "Reemplazando totalmente el trabajo de campo de los ingenieros operacionales.",
+        "isCorrect": false,
+        "rationale": "Sirven como complemento de entrenamiento y diseño, sin sustituir la labor de ejecución técnica presencial."
+      },
+      {
+        "text": "Evitando la necesidad de llevar un presupuesto o control financieros.",
+        "isCorrect": false,
+        "rationale": "Las tecnologías de simulación también representan costos de implementación que deben gestionarse."
+      }
+    ],
+    "hint": "Involucra modelos en 3D interactivos para entrenar operarios sin correr riesgos en la planta real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una de las aplicaciones clave del uso de drones en la gestión de proyectos mineros?",
+    "opciones": [
+      {
+        "text": "La inspección remota, topografía y cartografía de infraestructuras críticas como presas de relaves.",
+        "isCorrect": true,
+        "rationale": "Capturan imágenes detalladas y crean modelos 3D de áreas extensas o peligrosas sin poner en riesgo al personal de inspección."
+      },
+      {
+        "text": "El acarreo pesado de decenas de toneladas de roca mineralizada a la planta.",
+        "isCorrect": false,
+        "rationale": "El transporte masivo de mineral requiere maquinaria pesada de gran tonelaje, no aeronaves livianas."
+      },
+      {
+        "text": "El procesamiento químico y refinamiento final del mineral de cobre.",
+        "isCorrect": false,
+        "rationale": "El proceso de beneficio metalúrgico ocurre en las celdas de flotación o lixiviación de la planta."
+      },
+      {
+        "text": "La sustitución total de los camiones de extracción autónomos.",
+        "isCorrect": false,
+        "rationale": "Los drones cumplen tareas de supervisión y monitoreo visual, no de carga y acarreo."
+      },
+      {
+        "text": "La perforación profunda de galerías en la mina subterránea sin herramientas.",
+        "isCorrect": false,
+        "rationale": "Las perforaciones subterráneas requieren jumbos y equipos pesados de rotación y percusión."
+      }
+    ],
+    "hint": "Visualiza una cámara voladora tomando fotos para mapear terrenos peligrosos o inaccesibles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué caracteriza principalmente a la gestión ágil frente al modelo de desarrollo tradicional en cascada (Waterfall)?",
+    "opciones": [
+      {
+        "text": "Un enfoque iterativo e incremental que entrega componentes funcionales de forma rápida y flexible.",
+        "isCorrect": true,
+        "rationale": "Se organiza en ciclos cortos (sprints) para adaptar continuamente el proyecto según el feedback recibido."
+      },
+      {
+        "text": "La prohibición absoluta de realizar modificaciones en el alcance acordado al inicio.",
+        "isCorrect": false,
+        "rationale": "El modelo tradicional en cascada suele ser más rígido; las metodologías ágiles abrazan el cambio."
+      },
+      {
+        "text": "La obligación de realizar inspecciones de calidad únicamente al finalizar el proyecto.",
+        "isCorrect": false,
+        "rationale": "La gestión ágil evalúa la calidad en cada iteración corta de manera continua."
+      },
+      {
+        "text": "La ausencia de reuniones y canales de coordinación dentro del equipo de trabajo.",
+        "isCorrect": false,
+        "rationale": "Fomenta la comunicación diaria mediante reuniones cortas de sincronización (daily meetings)."
+      },
+      {
+        "text": "Un esquema burocrático orientado exclusivamente a la documentación masiva en papel.",
+        "isCorrect": false,
+        "rationale": "El Manifiesto Ágil valora los productos o entregables funcionales por encima de la documentación exhaustiva."
+      }
+    ],
+    "hint": "Enfócate en la capacidad de realizar ciclos cortos de trabajo para ajustarse velozmente a los cambios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumplen los sensores del Internet de las Cosas (IoT) instalados en la maquinaria de planta minera?",
+    "opciones": [
+      {
+        "text": "Capturar variables de operación como vibración y temperatura en tiempo real para predecir fallas.",
+        "isCorrect": true,
+        "rationale": "Transmiten datos continuamente a plataformas analíticas, alimentando estrategias de mantenimiento basado en la condición."
+      },
+      {
+        "text": "Reemplazar los motores diésel por palancas de operación mecánica manual.",
+        "isCorrect": false,
+        "rationale": "Los sensores miden parámetros de estado, no modifican la potencia o sistema motriz primario del equipo."
+      },
+      {
+        "text": "Eliminar la necesidad de cambiar filtros y lubricantes a los equipos.",
+        "isCorrect": false,
+        "rationale": "Los insumos siguen requiriendo cambio físico, aunque el sensor ayuda a determinar el momento óptimo."
+      },
+      {
+        "text": "Aprobar las licencias de construcción con la municipalidad local de forma automática.",
+        "isCorrect": false,
+        "rationale": "Trámites administrativos o gubernamentales son ajenos a la telemetría técnica de las máquinas."
+      },
+      {
+        "text": "Reducir a cero la necesidad de contar con personal capacitado en taller.",
+        "isCorrect": false,
+        "rationale": "Se requiere personal técnico especializado para interpretar los datos y ejecutar las acciones correctivas."
+      }
+    ],
+    "hint": "Son dispositivos electrónicos que miden signos vitales de la máquina como la temperatura o la vibración.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes representan desafíos globales frecuentes al gestionar proyectos en la industria minera?",
+    "opciones": [
+      {
+        "text": "La volatilidad de los precios internacionales de los minerales.",
+        "isCorrect": true,
+        "rationale": "Las fluctuaciones del mercado imponen incertidumbre financiera sobre los presupuestos de inversión de la minería."
+      },
+      {
+        "text": "El cumplimiento estricto de estándares socioambientales y permisos regulatorios.",
+        "isCorrect": true,
+        "rationale": "Las exigencias de licencias ambientales y el cuidado de los ecosistemas imponen controles rigurosos a la operación."
+      },
+      {
+        "text": "La gestión de conflictos sociales y la búsqueda de licencias sociales con comunidades.",
+        "isCorrect": true,
+        "rationale": "Exige procesos de diálogo activo, negociación y acuerdos de desarrollo con los poblados aledaños para garantizar la viabilidad."
+      },
+      {
+        "text": "La prohibición legal internacional del uso de computadoras en la mina.",
+        "isCorrect": false,
+        "rationale": "Al contrario, la digitalización y el uso de computadoras están promovidos a nivel global."
+      },
+      {
+        "text": "La disponibilidad ilimitada e inmediata de repuestos importados sin trámites aduaneros.",
+        "isCorrect": false,
+        "rationale": "La logística de importación suele ser problemática y compleja, no un factor garantizado."
+      }
+    ],
+    "hint": "Analiza los factores del entorno económico mundial, regulaciones del gobierno y la relación con la población vecina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el beneficio primordial de implementar sistemas de teleoperación y automatización en maquinaria pesada minera?",
+    "opciones": [
+      {
+        "text": "Retirar al operador humano de zonas de alto riesgo de derrumbe o gases tóxicos, protegiendo su integridad.",
+        "isCorrect": true,
+        "rationale": "Permite controlar perforadoras o camiones de forma remota desde cabinas seguras, reduciendo la exposición a accidentes."
+      },
+      {
+        "text": "Conseguir que los equipos consuman cero combustible o energía eléctrica.",
+        "isCorrect": false,
+        "rationale": "El consumo energético del motor continúa existiendo, independientemente de si se opera a bordo o a distancia."
+      },
+      {
+        "text": "Evitar que los activos sufran cualquier tipo de desgaste mecánico durante su uso.",
+        "isCorrect": false,
+        "rationale": "Las piezas mecánicas continúan sufriendo fricción y trabajo físico, exigiendo mantenimiento rutinario."
+      },
+      {
+        "text": "Eliminar la necesidad de señales de comunicación o redes en la mina.",
+        "isCorrect": false,
+        "rationale": "La teleoperación exige redes de comunicación (Wi-Fi industrial o 5G) robustas para transmitir mandos."
+      },
+      {
+        "text": "Garantizar la venta inmediata de la mina a inversionistas extranjeros.",
+        "isCorrect": false,
+        "rationale": "Es una mejora técnica de seguridad y productividad operativa, no una transacción corporativa."
+      }
+    ],
+    "hint": "Considera el valor supremo de la seguridad y cómo la tecnología evita que el personal esté físicamente expuesto al peligro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al utilizar modelos de Inteligencia Artificial avanzados con capacidad de 'razonamiento' (como DeepSeek R1), ¿qué diferencia aporta su proceso frente a una respuesta estándar?",
+    "opciones": [
+      {
+        "text": "Evaluar hipótesis internas, comparar alternativas y razonar el contexto antes de ofrecer una recomendación.",
+        "isCorrect": true,
+        "rationale": "El procesamiento de razonamiento imita la resolución de problemas en pasos internos, mejorando la precisión en diagnósticos complejos."
+      },
+      {
+        "text": "Modificar los parámetros físicos de las máquinas en planta sin supervisión humana.",
+        "isCorrect": false,
+        "rationale": "La IA procesa datos e informa; la intervención física o reprogramación de planta requiere autorización técnica."
+      },
+      {
+        "text": "Garantizar que los costos de los insumos se reduzcan automáticamente a la mitad.",
+        "isCorrect": false,
+        "rationale": "Ofrece optimización de decisiones, pero los precios del mercado de insumos dependen de proveedores externos."
+      },
+      {
+        "text": "Reemplazar completamente la responsabilidad legal del gerente ante un accidente laboral.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad legal de la seguridad recae siempre en la organización y sus directivos humanos."
+      },
+      {
+        "text": "Eliminar la necesidad de mantener registros históricos o bases de datos en la empresa.",
+        "isCorrect": false,
+        "rationale": "Los modelos de IA dependen precisamente de datos históricos de calidad para poder analizar escenarios."
+      }
+    ],
+    "hint": "Imagina a un asistente digital que piensa y compara internamente varios caminos lógicos antes de hablar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué se afirma que la guía del PMBOK no es una metodología rígida sino un marco de referencia?",
+    "opciones": [
+      {
+        "text": "Porque ofrece principios y buenas prácticas que deben adaptarse según las necesidades de cada proyecto.",
+        "isCorrect": true,
+        "rationale": "No impone reglas inflexibles, sino un conjunto de herramientas y procesos que el director ajusta al tamaño y contexto del trabajo."
+      },
+      {
+        "text": "Porque es un código penal de obligado cumplimiento redactado por el Estado.",
+        "isCorrect": false,
+        "rationale": "El PMBOK es un estándar profesional voluntario del PMI, no una ley estatal sancionatoria."
+      },
+      {
+        "text": "Porque aplica únicamente a proyectos menores que no superen una semana de duración.",
+        "isCorrect": false,
+        "rationale": "Es escalable tanto a iniciativas pequeñas como a megaproyectos internacionales."
+      },
+      {
+        "text": "Porque prohíbe explícitamente el uso de metodologías ágiles o tecnológicas.",
+        "isCorrect": false,
+        "rationale": "Las ediciones recientes integran activamente enfoques ágiles, híbridos y tradicionales."
+      },
+      {
+        "text": "Porque no incluye ningún lineamiento sobre la gestión de tiempos o presupuestos.",
+        "isCorrect": false,
+        "rationale": "El control de cronogramas y presupuestos son pilares fundamentales dentro de sus áreas de conocimiento."
+      }
+    ],
+    "hint": "Piensa en un mapa que te guía pero te permite adaptar el camino según el terreno específico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre un proyecto de mantenimiento mayor y una operación de mantenimiento rutinario dentro de una unidad industrial?",
+    "opciones": [
+      {
+        "text": "El proyecto es una iniciativa temporal y única con inicio y fin bien definidos, mientras que la operación es continua y repetitiva a lo largo del tiempo.",
+        "isCorrect": true,
+        "rationale": "Los proyectos se caracterizan por su temporalidad y unicidad para alcanzar un objetivo específico, mientras que las operaciones mantienen la continuidad operativa mediante tareas rutinarias."
+      },
+      {
+        "text": "El proyecto carece de restricciones presupuestarias, mientras que la operación rutinaria tiene un costo fijo asignado mensualmente.",
+        "isCorrect": false,
+        "rationale": "Todos los proyectos están sujetos a restricciones estrictas de recursos presupuestarios y financieros, al igual que las operaciones."
+      },
+      {
+        "text": "La operación rutinaria requiere gestión de riesgos, mientras que los proyectos mayores no presentan incertidumbre ni variabilidad.",
+        "isCorrect": false,
+        "rationale": "Los proyectos conllevan niveles significativos de riesgo e incertidumbre debido a su naturaleza única y temporal."
+      },
+      {
+        "text": "El proyecto solo involucra recursos materiales, mientras que la operación se ejecuta exclusivamente con mano de obra interna.",
+        "isCorrect": false,
+        "rationale": "Tanto los proyectos como las operaciones requieren una combinación de recursos humanos, materiales, financieros y tecnológicos."
+      },
+      {
+        "text": "La operación rutinaria es planificada por la alta gerencia, mientras que los proyectos mayores son ejecutados de manera imprevista.",
+        "isCorrect": false,
+        "rationale": "Los proyectos mayores requieren una planificación formal y rigurosa antes de su puesta en marcha para garantizar sus objetivos."
+      }
+    ],
+    "hint": "Considere la duración en el tiempo y el carácter repetitivo o exclusivo del trabajo realizado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la fase de inicio de un proyecto de intervención mayor en mantenimiento, ¿cuál es la actividad clave que debe ejecutarse antes de definir la planificación detallada?",
+    "opciones": [
+      {
+        "text": "Realizar un análisis inicial para identificar las necesidades del cliente y diagnosticar la causa raíz del problema.",
+        "isCorrect": true,
+        "rationale": "El inicio de un proyecto requiere evaluar las necesidades reales de los interesados y comprender el origen del problema para definir adecuadamente el alcance inicial."
+      },
+      {
+        "text": "Adquirir de inmediato la totalidad de los repuestos e insumos sin un presupuesto previo aprobado.",
+        "isCorrect": false,
+        "rationale": "La adquisición masiva de materiales ocurre durante la ejecución del proyecto tras haber completado la fase de planificación y estimación de costos."
+      },
+      {
+        "text": "Asignar las tareas diarias a los mecánicos mediante reuniones breves de seguimiento operacional.",
+        "isCorrect": false,
+        "rationale": "La asignación diaria de tareas corresponde a la fase de ejecución y control del trabajo, no a la fase de inicio estratégica."
+      },
+      {
+        "text": "Elaborar el informe final de lecciones aprendidas para la entrega formal del activo a operaciones.",
+        "isCorrect": false,
+        "rationale": "La recopilación de lecciones aprendidas e informes finales se realiza formalmente en la etapa de cierre del proyecto."
+      },
+      {
+        "text": "Configurar las órdenes de trabajo definitivas en el sistema de gestión de mantenimiento antes de validar la viabilidad.",
+        "isCorrect": false,
+        "rationale": "La programación detallada en sistemas ERP/CMMS presupone que el proyecto ya ha sido justificado e iniciado formalmente."
+      }
+    ],
+    "hint": "Piense en la primera etapa del ciclo de vida donde se justifica la necesidad del proyecto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la ejecución de un overhaul completo a un motor Diésel de gran minería, ¿cuáles de los siguientes elementos forman parte de los recursos materiales y de infraestructura necesarios? (Seleccione todas las opciones correspondientes)",
+    "opciones": [
+      {
+        "text": "Repuestos mecánicos como metales de bancada, anillos de pistón y metales de biela.",
+        "isCorrect": true,
+        "rationale": "Los componentes mecánicos directos de reemplazo son partes esenciales de los recursos materiales necesarios para reconstruir el motor."
+      },
+      {
+        "text": "Insumos de taller como desengrasantes, lubricantes nuevos, solventes y trapos industriales.",
+        "isCorrect": true,
+        "rationale": "Los consumibles de limpieza y lubricación son indispensables durante las etapas de desmontaje, armado y pruebas técnicas."
+      },
+      {
+        "text": "Equipos de soporte técnico como tecles, bancos de mecanizado, prensas hidráulicas y tornos.",
+        "isCorrect": true,
+        "rationale": "La maquinaria y las herramientas especiales de taller constituyen los recursos materiales e infraestructura requeridos para el mecanizado y montaje."
+      },
+      {
+        "text": "El contrato de póliza de seguro de vida colectivo del personal técnico de la planta.",
+        "isCorrect": false,
+        "rationale": "Las pólizas de seguro representan instrumentos administrativos y financieros de gestión de riesgos, no recursos materiales operacionales."
+      },
+      {
+        "text": "El acta de constitución firmada que otorga autoridad formal al gerente del proyecto.",
+        "isCorrect": false,
+        "rationale": "El acta de constitución es un documento administrativo del proyecto, no un recurso material o insumo para la tarea mecánica."
+      }
+    ],
+    "hint": "Identifique tanto las piezas físicas de recambio como los insumos y herramientas requeridos en el taller.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo justifica el análisis costo-beneficio la implementación de un proyecto de mantenimiento basado en la condición (CBM)?",
+    "opciones": [
+      {
+        "text": "Demuestra que la inversión inicial en instrumentación y capacitación se compensa al evitar paradas no programadas de alto costo.",
+        "isCorrect": true,
+        "rationale": "El costo de monitorear la condición resulta significativamente menor que la pérdida de producción e impacto económico derivados de una falla catastrófica imprevista."
+      },
+      {
+        "text": "Asegura que no se requerirá la compra de repuestos durante toda la vida útil restante del activo.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento basado en condición detecta fallas potenciales para reemplazar repuestos en el momento oportuno, no elimina el desgaste de los componentes."
+      },
+      {
+        "text": "Garantiza la eliminación total del personal especializado mediante procesos 100% automatizados sin supervisión.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento condicional requiere especialistas analistas en técnicas predictivas para interpretar los datos recabados por los sensores."
+      },
+      {
+        "text": "Demuestra que es más rentable esperar a que el equipo falle por completo antes de intervenirlo.",
+        "isCorrect": false,
+        "rationale": "Esperar la falla funcional (mantenimiento correctivo puro) suele ser la opción económicamente más costosa para activos críticos."
+      },
+      {
+        "text": "Aumenta linealmente los costos de mantenimiento para igualar el presupuesto de producción anual.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la gestión de proyectos de mantenimiento es optimizar la eficiencia reduciendo el costo global por tonelada o unidad producida."
+      }
+    ],
+    "hint": "Contraste la inversión en tecnología preventiva frente al costo de una interrupción no planificada de la producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el enfoque estándar de gestión de proyectos (PMBOK), ¿cuál es el objetivo del grupo de procesos de Seguimiento y Control en proyectos de mantenimiento?",
+    "opciones": [
+      {
+        "text": "Supervisar el avance real, detectar desviaciones frente a la línea base y aplicar medidas correctivas a tiempo.",
+        "isCorrect": true,
+        "rationale": "El seguimiento y control analiza el desempeño continuo del proyecto para corregir variaciones en costo, tiempo o alcance oportunamente."
+      },
+      {
+        "text": "Firmar la autorización inicial para asignar el presupuesto global por parte del patrocinador.",
+        "isCorrect": false,
+        "rationale": "La autorización presupuestaria y formalización inicial es responsabilidad exclusiva del grupo de procesos de Inicio."
+      },
+      {
+        "text": "Ejecutar físicamente el reemplazo de componentes mecánicos especificados en el alcance.",
+        "isCorrect": false,
+        "rationale": "La realización del trabajo físico planificado corresponde al grupo de procesos de Ejecución."
+      },
+      {
+        "text": "Redactar el documento final de lecciones aprendidas y liberar formalmente a las contratistas.",
+        "isCorrect": false,
+        "rationale": "La formalización de contratos e lecciones aprendidas finales forma parte de las actividades del grupo de procesos de Cierre."
+      },
+      {
+        "text": "Diseñar los procedimientos teóricos de ingeniería de detalle antes de iniciar el proyecto.",
+        "isCorrect": false,
+        "rationale": "El diseño de detalles e ingeniería forma parte del grupo de procesos de Planificación."
+      }
+    ],
+    "hint": "Esta fase se ejecuta en paralelo a la ejecución para comparar lo planificado frente a lo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el desarrollo de un proyecto de mantenimiento mayor en una unidad minera, ¿cuáles de los siguientes actores constituyen stakeholders directos? (Seleccione todas las opciones correspondientes)",
+    "opciones": [
+      {
+        "text": "Las comunidades locales ubicadas en la zona de influencia del yacimiento.",
+        "isCorrect": true,
+        "rationale": "Las comunidades son partes interesadas externas críticas que pueden verse impactadas ambiental o socialmente por los proyectos mineros."
+      },
+      {
+        "text": "Los proveedores especializados de repuestos, componentes y servicios técnicos.",
+        "isCorrect": true,
+        "rationale": "Los proveedores son stakeholders comerciales indispensables para el abastecimiento oportuno de bienes y servicios al proyecto."
+      },
+      {
+        "text": "El equipo técnico de mantenimiento y los supervisores de la unidad operativa.",
+        "isCorrect": true,
+        "rationale": "El personal interno encargado de ejecutar y liderar las tareas directas es un stakeholder clave con alto interés y participación."
+      },
+      {
+        "text": "Empresas competidoras de otros rubros industriales sin presencia local ni alianzas.",
+        "isCorrect": false,
+        "rationale": "Las entidades externas sin vínculo comercial, geográfico ni operativo no califican como partes interesadas del proyecto."
+      },
+      {
+        "text": "Las autoridades regulatorias estatales de fiscalización ambiental y minera.",
+        "isCorrect": true,
+        "rationale": "Los entes fiscalizadores del Estado son stakeholders clave que imponen requisitos normativos y licencias de operación."
+      }
+    ],
+    "hint": "Considere tanto a las personas e instituciones internas como a las externas afectadas o interesadas en la operación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el ciclo de vida de un proyecto minero, ¿cuál es el objetivo central de la fase de Evaluación y Factibilidad?",
+    "opciones": [
+      {
+        "text": "Determinar la viabilidad técnica, ambiental, legal y económica antes de comprometer grandes inversiones de capital.",
+        "isCorrect": true,
+        "rationale": "La factibilidad analiza minuciosamente todas las dimensiones del proyecto para confirmar si es rentable y realizable antes de pasar a la construcción."
+      },
+      {
+        "text": "Localizar mediante sondeos iniciales la presencia física del mineral en el subsuelo.",
+        "isCorrect": false,
+        "rationale": "El hallazgo y cuantificación inicial de los recursos geológicos corresponde a la fase previa de Exploración."
+      },
+      {
+        "text": "Iniciar el arranque continuo de las líneas de molienda y flotación a capacidad máxima de diseño.",
+        "isCorrect": false,
+        "rationale": "El procesamiento continuo a ritmo comercial es propio de la etapa de Operación y Extracción."
+      },
+      {
+        "text": "Restaurar el entorno geográfico y desmantelar las instalaciones al concluir las reservas.",
+        "isCorrect": false,
+        "rationale": "El desmantelamiento y la reforestación del sitio corresponden a la fase final de Cierre de Mina."
+      },
+      {
+        "text": "Construir las rutas definitivas de acceso de transporte pesado para maquinaria de gran escala.",
+        "isCorrect": false,
+        "rationale": "La construcción de accesos e infraestructura mayor se lleva a cabo en la fase de Ingeniería de Detalle y Construcción."
+      }
+    ],
+    "hint": "Esta etapa se encuentra entre la exploración geológica inicial y la construcción final de las instalaciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué consecuencia directa genera la falta de definición clara en los requisitos del alcance durante la planificación de un proyecto?",
+    "opciones": [
+      {
+        "text": "Ocasiona sobrecostos presupuestarios, retrasos operacionales y expansión descontrolada del trabajo (scope creep).",
+        "isCorrect": true,
+        "rationale": "La ambigüedad en los límites del proyecto provoca la inclusión no planificada de tareas, lo que incrementa los costos y excede el tiempo estimado."
+      },
+      {
+        "text": "Aumenta la motivación del equipo de trabajo al darles libertad de modificar los objetivos sobre la marcha.",
+        "isCorrect": false,
+        "rationale": "La falta de claridad en el alcance genera confusión, retrabajos y frustración en el equipo ejecutor."
+      },
+      {
+        "text": "Garantiza la aprobación automática de los permisos ambientales sin requerir documentación de sustento.",
+        "isCorrect": false,
+        "rationale": "Las entidades fiscalizadoras exigen alcances técnicos sumamente detallados para otorgar licencias o permisos."
+      },
+      {
+        "text": "Elimina la necesidad de implementar mecanismos de control de calidad en las entregas técnicas.",
+        "isCorrect": false,
+        "rationale": "El control de calidad es indispensable para verificar que los entregables cumplan con los criterios de aceptación prefijados."
+      },
+      {
+        "text": "Asegura la reducción automática de los tiempos de entrega sin requerir mayor asignación de recursos.",
+        "isCorrect": false,
+        "rationale": "Al no tener un alcance delimitado, los plazos tienden a extenderse indefinidamente por falta de foco y exceso de cambios."
+      }
+    ],
+    "hint": "Piense en qué sucede cuando se agregan tareas adicionales no presupuestadas por falta de límites precisos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es fundamental construir la Estructura de Desglose del Trabajo (EDT o WBS) en un proyecto de mantenimiento industrial?",
+    "opciones": [
+      {
+        "text": "Descompone el proyecto en paquetes de trabajo más pequeños y manejables para facilitar la estimación de costos y tiempos.",
+        "isCorrect": true,
+        "rationale": "La EDT/WBS segmenta jerárquicamente la totalidad del alcance en componentes menores, haciendo precisa la asignación de recursos y el control."
+      },
+      {
+        "text": "Funciona como un contrato legal vinculante que reemplaza la licencia de funcionamiento municipal.",
+        "isCorrect": false,
+        "rationale": "La EDT/WBS es una herramienta técnica de gestión interna de alcance, no un documento jurídico ni un permiso administrativo."
+      },
+      {
+        "text": "Determina automáticamente la tasa de fallas mecánicas utilizando algoritmos de simulación matemática.",
+        "isCorrect": false,
+        "rationale": "El análisis de confiabilidad y fallas utiliza herramientas de ingeniería como RCM o Weibull, no la estructura de descomposición del trabajo."
+      },
+      {
+        "text": "Sustituye por completo la necesidad de desarrollar un cronograma de barras para medir la duración.",
+        "isCorrect": false,
+        "rationale": "La EDT sirve de base indispensable para elaborar posteriormente el cronograma de actividades (Gantt); no lo reemplaza."
+      },
+      {
+        "text": "Garantiza que el proyecto quede blindado contra cualquier tipo de riesgo ambiental o climático.",
+        "isCorrect": false,
+        "rationale": "La EDT ayuda a organizar el trabajo pero no elimina por sí misma los riesgos externos o ambientales."
+      }
+    ],
+    "hint": "Esta herramienta jerárquica aplica el principio de 'dividir el problema en partes más simples'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Utilizando la Matriz de Poder e Interés, ¿qué estrategia de gestión debe aplicarse con aquellos stakeholders situados en el cuadrante de ALTO PODER y ALTO INTERÉS?",
+    "opciones": [
+      {
+        "text": "Gestionar de cerca e involucrar activamente en las decisiones clave del proyecto.",
+        "isCorrect": true,
+        "rationale": "Los actores con alto poder de decisión y elevado interés en los resultados deben mantenerse estrechamente comprometidos para asegurar el éxito."
+      },
+      {
+        "text": "Monitorear de forma pasiva realizando un esfuerzo mínimo de comunicación.",
+        "isCorrect": false,
+        "rationale": "El esfuerzo mínimo corresponde a actores con bajo poder y bajo interés en la Matriz de Stakeholders."
+      },
+      {
+        "text": "Limitarse a enviar resúmenes informativos consolidados una vez finalizado el proyecto.",
+        "isCorrect": false,
+        "rationale": "A los interesados de alto poder e interés se les debe consultar e involucrar continuamente durante toda la ejecución."
+      },
+      {
+        "text": "Mantener satisfechos únicamente mediante reportes formales periódicos sin involucramiento directo.",
+        "isCorrect": false,
+        "rationale": "Mantener satisfechos es la estrategia asignada a aquellos con alto poder pero bajo interés directo."
+      },
+      {
+        "text": "Delegarles la responsabilidad completa de la ejecución de las tareas técnicas del proyecto.",
+        "isCorrect": false,
+        "rationale": "La gestión del stakeholder busca alinear expectativas, no transferir la responsabilidad de ejecución técnica."
+      }
+    ],
+    "hint": "Considere a los actores decisivos (como la alta gerencia o la comunidad local directa) que pueden impactar fuertemente el proyecto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes aspectos se consideran componentes esenciales que deben ser definidos en un Plan de Gestión de Comunicaciones? (Seleccione todas las opciones correspondientes)",
+    "opciones": [
+      {
+        "text": "La identificación clara de las partes interesadas y los destinatarios específicos de cada reporte.",
+        "isCorrect": true,
+        "rationale": "Es imprescindible definir quién requiere cada tipo de información para asegurar una distribución precisa."
+      },
+      {
+        "text": "La frecuencia y los plazos estipulados para la emisión de los avances del proyecto.",
+        "isCorrect": true,
+        "rationale": "Establecer la periodicidad (diaria, semanal, mensual) garantiza la predictibilidad en la toma de decisiones."
+      },
+      {
+        "text": "Los canales, herramientas tecnológicas y formatos que se emplearán para transmitir los datos.",
+        "isCorrect": true,
+        "rationale": "Determinar los medios (correo, tableros virtuales, reuniones) evita distorsiones o retrasos en el flujo de información."
+      },
+      {
+        "text": "La formulación diferencial de las ecuaciones de esfuerzo cortante en los componentes de la estructura.",
+        "isCorrect": false,
+        "rationale": "Los cálculos mecánicos de ingeniería corresponden a las especificaciones técnicas del diseño, no al plan de comunicación."
+      },
+      {
+        "text": "Los roles y responsables asignados para elaborar, revisar y emitir cada comunicado.",
+        "isCorrect": true,
+        "rationale": "Asignar responsables directos garantiza la veracidad de los datos presentados a los stakeholders."
+      }
+    ],
+    "hint": "Piense en las preguntas clave: ¿qué se comunica?, ¿a quién?, ¿con qué frecuencia?, ¿por qué medio? y ¿quién lo emite?",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la relación operativa entre los procedimientos estandarizados de trabajo y la estimación de tiempos en la programación de un proyecto?",
+    "opciones": [
+      {
+        "text": "Los procedimientos definen la secuencia detallada y parámetros de ejecución, lo que permite estimar duraciones objetivas basadas en estándares e historial.",
+        "isCorrect": true,
+        "rationale": "Contar con pasos estandarizados y normas claras permite calcular con precisión las horas-hombre y tiempos requeridos para cada tarea."
+      },
+      {
+        "text": "La existencia de procedimientos permite prescindir de la elaboración de un cronograma de actividades.",
+        "isCorrect": false,
+        "rationale": "Los procedimientos indican el 'cómo' hacer la tarea, pero el cronograma sigue siendo necesario para determinar el 'cuándo' y la ruta crítica."
+      },
+      {
+        "text": "Los procedimientos garantizan que la ejecución física tarde exactamente la mitad del tiempo estimado.",
+        "isCorrect": false,
+        "rationale": "El objetivo del procedimiento es estandarizar la calidad y seguridad, no acelerar arbitrariamente los tiempos técnicos requeridos."
+      },
+      {
+        "text": "La estimación de tiempos en la programación se hace siempre de forma aleatoria sin revisar los procedimientos.",
+        "isCorrect": false,
+        "rationale": "Una estimación profesional requiere analizar la complejidad técnica descrita en los procedimientos operativos."
+      },
+      {
+        "text": "Los procedimientos sustituyen la asignación de repuestos y herramientas en el plan de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Los procedimientos detallan qué recursos se necesitan, pero no reemplazan la adquisición física de los mismos."
+      }
+    ],
+    "hint": "Reflexione sobre cómo el detalle paso a paso de una tarea ayuda a predecir la cantidad de horas necesarias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al comparar las certificaciones profesionales PMP y CAPM del PMI, ¿cuál es la diferencia principal en cuanto al perfil y requisitos de los postulantes?",
+    "opciones": [
+      {
+        "text": "PMP exige acreditar miles de horas de experiencia dirigiendo proyectos, mientras que CAPM está diseñada para principiantes o técnicos sin experiencia previa obligatoria.",
+        "isCorrect": true,
+        "rationale": "PMP es una certificación senior que valida años de liderazgo práctico, mientras que CAPM acredita el conocimiento teórico del estándar en perfiles junior."
+      },
+      {
+        "text": "CAPM requiere contar con un grado de doctorado, mientras que PMP solo exige educación secundaria obligatoria.",
+        "isCorrect": false,
+        "rationale": "CAPM solo requiere nivel secundario y horas de capacitación, mientras que PMP exige título profesional universitario o secundario combinado con amplia experiencia comprobada."
+      },
+      {
+        "text": "PMP no requiere la rendición de ningún examen presencial, mientras que CAPM exige responder tres evaluaciones teóricas.",
+        "isCorrect": false,
+        "rationale": "La certificación PMP se obtiene mediante un examen riguroso de evaluación basado en escenarios del mundo real."
+      },
+      {
+        "text": "CAPM tiene una vigencia perpetua sin recertificación, mientras que PMP expira a los seis meses de emitida.",
+        "isCorrect": false,
+        "rationale": "Tanto PMP como CAPM tienen esquemas de recertificación y mantenimiento periódico de unidades de desarrollo profesional."
+      },
+      {
+        "text": "PMP se aplica exclusivamente en proyectos informáticos, mientras que CAPM aplica de forma única a la minería.",
+        "isCorrect": false,
+        "rationale": "Ambas certificaciones del PMI son de carácter agnóstico e internacional, aplicables a cualquier sector industrial o de servicios."
+      }
+    ],
+    "hint": "Considere la exigencia en horas demostrables de liderazgo real de proyectos frente a la sola comprensión de la teoría del estándar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En un equipo que ejecuta proyectos mediante el marco ágil Scrum, ¿cuál es la responsabilidad primordial del Product Owner?",
+    "opciones": [
+      {
+        "text": "Gestionar y priorizar el Product Backlog para maximizar el valor del producto entregado al negocio.",
+        "isCorrect": true,
+        "rationale": "El Product Owner es el responsable final de definir los requerimientos, ordenar las prioridades en la lista de trabajo y defender el valor para el usuario."
+      },
+      {
+        "text": "Eliminar los impedimentos operacionales y coordinar las dinámicas de trabajo como facilitador del proceso.",
+        "isCorrect": false,
+        "rationale": "La eliminación de obstáculos y la facilitación metodológica son tareas características del Scrum Master."
+      },
+      {
+        "text": "Ejecutar directamente las pruebas de banco e inspecciones físicas de torque en los componentes.",
+        "isCorrect": false,
+        "rationale": "La realización de las tareas técnicas del entregable es competencia del Equipo de Desarrollo (Development Team)."
+      },
+      {
+        "text": "Aprobar los estados financieros y balances contables consolidados de la compañía.",
+        "isCorrect": false,
+        "rationale": "Las auditorías contables corporativas recaen en las gerencias financieras y de auditoría interna de la empresa."
+      },
+      {
+        "text": "Auditar de manera independiente el cumplimiento del reglamento de seguridad e higiene minera.",
+        "isCorrect": false,
+        "rationale": "La supervisión normativa de seguridad es ejecutada por el departamento de SST de la operación."
+      }
+    ],
+    "hint": "Esta función está orientada a representar la voz del cliente y decidir qué características o tareas se realizan primero.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la metodología Kanban aplicada a la gestión de intervenciones de mantenimiento, ¿cuál es su principio operativo fundamental?",
+    "opciones": [
+      {
+        "text": "Visualizar el flujo de trabajo en un tablero dinámico y limitar el trabajo en proceso (WIP) para evitar cuellos de botella.",
+        "isCorrect": true,
+        "rationale": "Kanban utiliza tarjetas visuales organizadas por etapas e impone límites al trabajo en curso para hacer continuo y eficiente el flujo operacional."
+      },
+      {
+        "text": "Dividir el proyecto en ciclos cerrados de cinco años sin permitir modificaciones visuales.",
+        "isCorrect": false,
+        "rationale": "Kanban promueve la adaptación continua del flujo operacional y la visibilidad constante en intervalos cortos."
+      },
+      {
+        "text": "Exigir una reunión presencial obligatoria con el directorio corporativo para mover cada tarea en el tablero.",
+        "isCorrect": false,
+        "rationale": "Kanban busca descentralizar la gestión y brindar autonomía visual al equipo de trabajo directo."
+      },
+      {
+        "text": "Sustituir todo software informático por el uso exclusivo de archivos físicos impresos archivados.",
+        "isCorrect": false,
+        "rationale": "Kanban se implementa ampliamente mediante herramientas digitales modernas como Trello, Jira o Asana."
+      },
+      {
+        "text": "Eliminar la medición de estados de avance para centrarse únicamente en el reporte de costos finales.",
+        "isCorrect": false,
+        "rationale": "El seguimiento del progreso de cada tarea a través de las columnas del tablero es la esencia técnica de Kanban."
+      }
+    ],
+    "hint": "Identifique el uso de tarjetas y columnas (Por Hacer, En Proceso, Hecho) para controlar el trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco de la gestión ágil de proyectos, ¿cuáles de las siguientes métricas son utilizadas para evaluar el desempeño y avance del equipo? (Seleccione todas las opciones correspondientes)",
+    "opciones": [
+      {
+        "text": "La Velocidad del equipo (Velocity), que mide la cantidad de trabajo completado en cada ciclo o sprint.",
+        "isCorrect": true,
+        "rationale": "La velocidad cuantifica la capacidad real de producción y entrega de valor del equipo en intervalos fijos."
+      },
+      {
+        "text": "El Tiempo de Ciclo (Cycle Time), que mide la duración transcurrida desde que se inicia una tarea hasta su entrega final.",
+        "isCorrect": true,
+        "rationale": "El tiempo de ciclo es un KPI clave para identificar demoras y optimizar el flujo de trabajo."
+      },
+      {
+        "text": "El Diagrama de Trabajo Pendiente (Burn-down Chart), que muestra el trabajo restante frente al tiempo disponible.",
+        "isCorrect": true,
+        "rationale": "El Burn-down chart grafica de forma intuitiva si el equipo está en camino de cumplir los objetivos fijados para el periodo."
+      },
+      {
+        "text": "El Índice de Viscosidad Química del aceite hidráulico sintético utilizado en las bombas.",
+        "isCorrect": false,
+        "rationale": "La viscosidad del aceite es un parámetro técnico de condición del fluido, no una métrica de gestión ágil de proyectos."
+      },
+      {
+        "text": "La Tasa de Depreciación Fiscal Anual acumulada de los activos fijos de la planta.",
+        "isCorrect": false,
+        "rationale": "La depreciación fiscal es un indicador contable financiero corporativo, no una métrica de desempeño de proyectos ágiles."
+      }
+    ],
+    "hint": "Seleccione indicadores relacionados con la velocidad de ejecución de tareas, la duración de procesos y el trabajo pendiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ventaja clave ofrece el software Oracle Primavera P6 al planificar paradas de planta complejas en minería frente a herramientas básicas de programación?",
+    "opciones": [
+      {
+        "text": "Permite gestionar portafolios masivos de proyectos interrelacionados, integrando estructuras organizacionales (OBS) y amplia trazabilidad.",
+        "isCorrect": true,
+        "rationale": "Primavera P6 está diseñado para megaproyectos industriales, ofreciendo alta capacidad de manejo de datos, control de recursos estructurados y documentación."
+      },
+      {
+        "text": "Se distribuye de forma gratuita y no requiere servidor ni instalación técnica alguna.",
+        "isCorrect": false,
+        "rationale": "Primavera P6 es una plataforma de nivel empresarial que requiere licencias especializadas e infraestructura corporativa."
+      },
+      {
+        "text": "Elimina de forma automática la necesidad de calcular la ruta crítica en las redes de actividades.",
+        "isCorrect": false,
+        "rationale": "El cálculo y análisis de la ruta crítica es una de las funciones centrales que ejecuta Primavera P6 para determinar la duración del proyecto."
+      },
+      {
+        "text": "Inhabilita la opción de ingresar datos numéricos o costos asignados a las tareas programadas.",
+        "isCorrect": false,
+        "rationale": "Primavera P6 cuenta con módulos avanzados para la asignación, nivelación y análisis detallado de costos y recursos."
+      },
+      {
+        "text": "Limita la programación de proyectos a un tope máximo de 10 actividades individuales.",
+        "isCorrect": false,
+        "rationale": "Primavera P6 destaca por su capacidad de procesar decenas de miles de actividades e interrelaciones simultáneas sin perder rendimiento."
+      }
+    ],
+    "hint": "Considere las necesidades de gestión de proyectos masivos con múltiples frentes de trabajo y documentación integrada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera contribuye la tecnología Blockchain a la gestión de contratos y entregables en proyectos de ingeniería y mantenimiento?",
+    "opciones": [
+      {
+        "text": "Proporciona un registro distribuido e inmutable que garantiza la transparencia, trazabilidad y seguridad de las transacciones contractuales.",
+        "isCorrect": true,
+        "rationale": "Blockchain actúa como un libro mayor digital infalsificable donde se validan entregables, aprobaciones y pagos entre partes sin intermediarios."
+      },
+      {
+        "text": "Aumenta mecánicamente la velocidad de procesamiento físico del material en los chancadores secundarios.",
+        "isCorrect": false,
+        "rationale": "Blockchain es una tecnología informática de almacenamiento y validación de datos, no un componente mecánico de procesamiento de mineral."
+      },
+      {
+        "text": "Permite alterar los registros históricos de fechas de entrega sin dejar huella de auditoría en el sistema.",
+        "isCorrect": false,
+        "rationale": "La principal característica de Blockchain es la inmutabilidad de los datos; no permite borrar ni modificar registros del pasado."
+      },
+      {
+        "text": "Sustituye la necesidad de contar con suministro de energía eléctrica en las salas de servidores de la minera.",
+        "isCorrect": false,
+        "rationale": "Las redes Blockchain requieren infraestructura de cómputo conectada a la red eléctrica para procesar y validar bloques de información."
+      },
+      {
+        "text": "Reemplaza completamente la necesidad de utilizar contratos de trabajo o convenios comerciales.",
+        "isCorrect": false,
+        "rationale": "Blockchain automatiza la verificación del cumplimiento mediante contratos inteligentes (smart contracts), pero no elimina el marco legal comercial."
+      }
+    ],
+    "hint": "Piense en las propiedades de un libro mayor digital que no se puede alterar y que todos los interesados pueden auditar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el sector minero e industrial, ¿por qué contar con profesionales certificados en gestión de proyectos (PMP/CAPM) facilita la obtención de financiamiento internacional?",
+    "opciones": [
+      {
+        "text": "Aumenta la credibilidad institucional, garantiza el cumplimiento de estándares rigurosos y disminuye el riesgo percibido por los bancos multilaterales.",
+        "isCorrect": true,
+        "rationale": "Entidades como el Banco Mundial exigen que los proyectos financiados cuenten con estándares probados de gobernanza, control de costos y gestión de riesgos."
+      },
+      {
+        "text": "Exime automáticamente a las empresas del cumplimiento de la legislación fiscal nacional y tributaria.",
+        "isCorrect": false,
+        "rationale": "Las certificaciones de gestión de proyectos son credenciales profesionales técnicas y no otorgan exenciones impositivas o tributarias."
+      },
+      {
+        "text": "Garantiza que la cotización bursátil de los minerales se mantenga estable sin fluctuaciones de mercado.",
+        "isCorrect": false,
+        "rationale": "Los precios de los commodities en los mercados internacionales dependen de la oferta y demanda global, no de las certificaciones del personal."
+      },
+      {
+        "text": "Elimina la obligación legal de elaborar declaraciones e instrumentos de impacto ambiental previo al inicio.",
+        "isCorrect": false,
+        "rationale": "Las normas ambientales son exigencias legales estatales estrictas que aplican de forma obligatoria a todo proyecto minero."
+      },
+      {
+        "text": "Permite prescindir de la contratación de pólizas de seguro para los activos físicos de la empresa.",
+        "isCorrect": false,
+        "rationale": "La gestión formal de proyectos promueve la adquisición oportuna de seguros como parte del tratamiento del riesgo."
+      }
+    ],
+    "hint": "Considere cómo evalúan los inversionistas e instituciones financieras la madurez de la gestión para minimizar la probabilidad de fracaso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué escenario de mantenimiento resulta más conveniente adoptar una metodología ágil frente al enfoque tradicional en cascada (Waterfall)?",
+    "opciones": [
+      {
+        "text": "En proyectos con alta incertidumbre, requerimientos evolucionativos y necesidad de entregas parciales rápidas de valor.",
+        "isCorrect": true,
+        "rationale": "Las metodologías ágiles destacan por su flexibilidad para adaptar el trabajo rápidamente ante entornos cambiantes o con alta retroalimentación."
+      },
+      {
+        "text": "En obras de construcción civil donde los planos técnicos y legales están 100% congelados y no aceptan cambios.",
+        "isCorrect": false,
+        "rationale": "Proyectos con alcance fijo y requerimientos highly predecibles se gestionan eficientemente bajo esquemas tradicionales de planificación secuencial."
+      },
+      {
+        "text": "En tareas rutinarias de lubricación diaria estructuradas con listas de verificación estáticas.",
+        "isCorrect": false,
+        "rationale": "Las tareas totalmente estandarizadas y rutinarias se rigen como operaciones continuas mediante procedimientos operativos estándar."
+      },
+      {
+        "text": "En entornos donde existe una prohibición expresa de comunicación entre los miembros del equipo.",
+        "isCorrect": false,
+        "rationale": "La gestión ágil exige un nivel de colaboración, transparencia y comunicación constante entre todos los integrantes."
+      },
+      {
+        "text": "En la elaboración de estados financieros contables regulados por normas internacionales estricta y rígidamente.",
+        "isCorrect": false,
+        "rationale": "Los procesos contables regulados siguen secuencias lineales rígidamente normadas bajo esquemas tradicionales de auditoría."
+      }
+    ],
+    "hint": "Evalúe el grado de variabilidad, cambio de requerimientos e incertidumbre presente en el trabajo a ejecutar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son las funciones primordiales que desempeñan los sensores de Internet de las Cosas (IoT) instalados en la maquinaria pesada minera? (Seleccione todas las opciones correspondientes)",
+    "opciones": [
+      {
+        "text": "Monitorear continuamente en tiempo real variables como vibración, temperatura, nivel de gases y presión.",
+        "isCorrect": true,
+        "rationale": "Los sensores IoT capturan constantemente variables físicas críticas de condición sin requerir la presencia física del operador."
+      },
+      {
+        "text": "Transmitir datos en tiempo real a sistemas centralizados para habilitar estrategias de mantenimiento predictivo.",
+        "isCorrect": true,
+        "rationale": "La conectividad constante permite analizar tendencias e identificar anomalías de manera oportuna antes de que ocurra la falla."
+      },
+      {
+        "text": "Alimentar bases de datos masivas (Big Data) para entrenar modelos analíticos de confiabilidad de activos.",
+        "isCorrect": true,
+        "rationale": "La acumulación de datos históricos de sensores permite alimentar algoritmos para predecir la vida útil restante de componentes."
+      },
+      {
+        "text": "Aumentar de forma automática la potencia mecánica de los motores superando los límites de diseño de fábrica.",
+        "isCorrect": false,
+        "rationale": "Los sensores recopilan y transmiten información operacional de condición, pero no alteran arbitrariamente la capacidad mecánica del motor."
+      },
+      {
+        "text": "Reparar por sí mismos las fisuras en la estructura del chasis mediante soldadura robotizada autónoma.",
+        "isCorrect": false,
+        "rationale": "Los sensores detectan la presencia o condición de daño, pero las intervenciones físicas requieren mantenimiento correctivo o de reparación."
+      }
+    ],
+    "hint": "Piense en el papel de estos dispositivos en la recolección, transmisión y análisis analítico de parámetros operativos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la supervisión de la infraestructura minera de gran envergadura, ¿cuál es el beneficio directo del empleo de drones y tecnología de teledetección?",
+    "opciones": [
+      {
+        "text": "Inspeccionar de forma segura zonas críticas de difícil acceso como presas de relaves y taludes sin exponer al personal a peligros.",
+        "isCorrect": true,
+        "rationale": "Los drones capturan imágenes fotogramétricas y térmicas en áreas de riesgo geológico o de altura, eliminando la exposición del trabajador."
+      },
+      {
+        "text": "Reemplazar el transporte terrestre de toneladas de mineral concentrado hacia las plantas de embarque.",
+        "isCorrect": false,
+        "rationale": "Los drones industriales se utilizan para inspección y levantamiento de datos topográficos, no para el transporte masivo de carga pesada."
+      },
+      {
+        "text": "Sustituir los reactivos químicos utilizados en los procesos de flotación de minerales en las celdas.",
+        "isCorrect": false,
+        "rationale": "Los drones son equipos de teledetección fotográfica y no intervienen en los procesos químicos de concentración hidro-metalúrgica."
+      },
+      {
+        "text": "Inhabilitar el uso de redes de comunicación satelital en la unidad minera.",
+        "isCorrect": false,
+        "rationale": "Los drones suelen integrarse con sistemas digitales y redes inalámbricas para procesar y cargar datos en la nube."
+      },
+      {
+        "text": "Eliminar la necesidad de elaborar planes de mantenimiento preventivo para la flota vehicular.",
+        "isCorrect": false,
+        "rationale": "El monitoreo mediante drones ayuda a identificar fallas estructurales o de terreno, complementando la planificación del mantenimiento."
+      }
+    ],
+    "hint": "Considere la prevención de accidentes en terrenos inestables, depósitos de residuos o estructuras elevadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En operaciones mineras subterráneas, ¿cuál es la razón primordial para adoptar equipos teleoperados y maquinaria autónoma?",
+    "opciones": [
+      {
+        "text": "Retirar al personal de la zona de alto riesgo (frentes de desprendimiento o atmósferas peligrosas) preservando la vida y seguridad.",
+        "isCorrect": true,
+        "rationale": "La teleoperación permite controlar jumbos o cargadores LHD desde salas de control de superficie, reduciendo a cero el riesgo de atrapamiento del operador."
+      },
+      {
+        "text": "Asegurar que los componentes de fricción y rodamiento funcionen indefinidamente sin lubricación.",
+        "isCorrect": false,
+        "rationale": "Los equipos autónomos o teleoperados poseen componentes mecánicos equivalentes que requieren rutinas estrictas de mantenimiento y lubricación."
+      },
+      {
+        "text": "Eliminar por completo el gasto energético asociado a la ventilación e iluminación en el interior del socavón.",
+        "isCorrect": false,
+        "rationale": "Aunque se reduzca la presencia humana en el frente de carguío, las galerías subterráneas requieren ventilación para disipar gases de voladura y polvo."
+      },
+      {
+        "text": "Inhabilitar los requisitos legales de tramitación de permisos de operación minera.",
+        "isCorrect": false,
+        "rationale": "La adopción de tecnologías autónomas está sujeta a auditorías y autorizaciones regulatorias estrictas por parte de las autoridades de SST."
+      },
+      {
+        "text": "Permitir que la maquinaria opere sin conexión ni intercambio de datos con los centros de control.",
+        "isCorrect": false,
+        "rationale": "La teleoperación y la autonomía dependen en un 100% de redes de comunicación de datos de alta velocidad y baja latencia."
+      }
+    ],
+    "hint": "Valore el principio fundamental de la seguridad industrial que busca eliminar el peligro alejando al trabajador del área de exposición.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Durante la planificación de una Parada de Planta (Overhaul Mayor), ¿cuáles de los siguientes frentes operacionales deben ser gestionados de forma rigurosa? (Seleccione todas las opciones correspondientes)",
+    "opciones": [
+      {
+        "text": "El abastecimiento oportuno de repuestos de largo tiempo de entrega (lead time) y consumibles críticos.",
+        "isCorrect": true,
+        "rationale": "Garantizar que todos los componentes especiales estén en sitio antes de detener la planta es vital para evitar extensiones del paro."
+      },
+      {
+        "text": "La programación y control detallado del cronograma para minimizar la pérdida de horas de producción.",
+        "isCorrect": true,
+        "rationale": "Cada hora de parada no planificada representa cuantiosas pérdidas financieras, por lo que el control del tiempo es crítico."
+      },
+      {
+        "text": "La gestión de la seguridad, permisos de trabajo de alto riesgo y homologación de empresas contratistas.",
+        "isCorrect": true,
+        "rationale": "Dado que las paradas involucran cientos de trabajadores simultáneos y tareas de alto riesgo, la gestión de SST es prioritaria."
+      },
+      {
+        "text": "La coordinación interdisciplinaria entre mantenimiento, operaciones, logística y seguridad.",
+        "isCorrect": true,
+        "rationale": "El alineamiento de todas las áreas operativas garantiza una ejecución fluida sin interferencias entre especialidades."
+      },
+      {
+        "text": "La modificación aleatoria de los planes de minado e incremento de tonelaje durante la ejecución del mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Modificar arbitrariamente el alcance u objetivos durante la parada genera caos operacional, sobrecostos y graves riesgos de seguridad."
+      }
+    ],
+    "hint": "Considere la adquisición previa de recursos, la minimización del tiempo de parada y la seguridad del personal masivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-59",
+    "diplomado": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de proyectos mineros a nivel global, ¿cuál de las siguientes situaciones constituye un desafío del entorno social y regulatorio que exige un enfoque de sostenibilidad?",
+    "opciones": [
+      {
+        "text": "La gestión de la conflictividad social con comunidades locales, la obtención de licencias ambientales y el cumplimiento de exigencias normativas.",
+        "isCorrect": true,
+        "rationale": "Los proyectos globales enfrentan complejos contextos comunitarios y marcos legales estrictos que requieren transparencia, responsabilidad social y ambiental."
+      },
+      {
+        "text": "La estandarización del diseño estético de los uniformes administrativos de los trabajadores.",
+        "isCorrect": false,
+        "rationale": "Los aspectos estéticos menores no constituyen riesgos ni desafíos de sostenibilidad que comprometan la viabilidad del proyecto."
+      },
+      {
+        "text": "La presencia de condiciones climáticas y geográficas completamente idénticas en todos los continentes.",
+        "isCorrect": false,
+        "rationale": "Los proyectos globales enfrentan entornos geográficos, climáticos y culturales sumamente heterogéneos y diversos."
+      },
+      {
+        "text": "La total estabilidad en los tipos de cambio de divisas y precios de los metales sin variación alguna.",
+        "isCorrect": false,
+        "rationale": "La volatilidad de las divisas y de los precios internacionales de las materias primas es uno de los mayores riesgos financieros del sector."
+      },
+      {
+        "text": "La prohibición internacional de aplicar tecnologías de información o software de programación.",
+        "isCorrect": false,
+        "rationale": "La tendencia global exige una acelerada digitalización e incorporación de software avanzado para asegurar la eficiencia del proyecto."
+      }
+    ],
+    "hint": "Reflexione sobre la importancia de la 'licencia social para operar' e impacto en las poblaciones aledañas.",
+    "activo": true
+  }
+]

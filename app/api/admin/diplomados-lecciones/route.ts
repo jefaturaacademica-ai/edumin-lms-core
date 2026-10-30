@@ -13,12 +13,14 @@ export async function GET(request: Request) {
     const codigoParam = searchParams.get('codigo')?.trim();
     const slugParam = searchParams.get('slug')?.trim();
 
-    // Resolver Código de Diplomado (DIP-01 .. DIP-22) a partir de slugParam si no se envió codigoParam
+    // Resolver Código de Diplomado o Curso (DIP-01..22, CUR-01..76, TAL-..) a partir de slugParam si no se envió codigoParam
     let targetCodigo = codigoParam;
     if (!targetCodigo && slugParam) {
-      if (/^dip-\d+$/i.test(slugParam)) {
-        const num = slugParam.replace(/[^0-9]/g, '').padStart(2, '0');
-        targetCodigo = `DIP-${num}`;
+      const matchPrefix = slugParam.match(/^(dip|cur|tal)-?(\d+)$/i);
+      if (matchPrefix) {
+        const pfx = matchPrefix[1].toUpperCase();
+        const num = matchPrefix[2].padStart(2, '0');
+        targetCodigo = `${pfx}-${num}`;
       } else {
         const matched = getDiplomadoBySlug(slugParam) || getDiplomadoByTitleOrSlug(slugParam);
         if (matched && matched.numId) {

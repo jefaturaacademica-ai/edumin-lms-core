@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el doble objetivo fundamental de la ergonomía según la Asociación Internacional de Ergonomía?",
+    "opciones": [
+      {
+        "text": "Optimizar el bienestar humano y el rendimiento general del sistema.",
+        "isCorrect": true,
+        "rationale": "La ergonomía busca la sinergia donde la salud del trabajador y la productividad del sistema se potencian mutuamente."
+      },
+      {
+        "text": "Adquirir mobiliario de oficina de elevado costo para cumplir con criterios estéticos.",
+        "isCorrect": false,
+        "rationale": "La disciplina va más allá de la adquisición de muebles de oficina, enfocándose en la adaptación científica del trabajo a las capacidades humanas."
+      },
+      {
+        "text": "Reducir la jornada de trabajo e incrementar la frecuencia de descansos obligatorios.",
+        "isCorrect": false,
+        "rationale": "Aunque la gestión de tiempos es relevante, el propósito central es adecuar las exigencias de las tareas a las capacidades corporales e intelectuales."
+      },
+      {
+        "text": "Reemplazar la mano de obra humana por líneas totalmente automatizadas.",
+        "isCorrect": false,
+        "rationale": "La ergonomía interactúa con la tecnología para optimizar el desempeño y bienestar de la persona en su puesto, no para eliminarla."
+      },
+      {
+        "text": "Incrementar la velocidad de producción prescindiendo de evaluaciones médicas.",
+        "isCorrect": false,
+        "rationale": "Aumentar la producción ignorando la salud corporal genera lesiones, desperdicio y menor productividad a largo plazo."
+      }
+    ],
+    "hint": "Considere la búsqueda de un punto de equilibrio integral entre salud y eficiencia operacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son los tres factores clave por los que una solución ergonómica debe adaptarse específicamente a la realidad peruana?",
+    "opciones": [
+      {
+        "text": "La antropometría local, dado que la maquinaria importada suele estar diseñada para estaturas mayores.",
+        "isCorrect": true,
+        "rationale": "El diseño de equipos importados suele responder a proporciones físicas europeas o norteamericanas, lo que genera posturas forzadas en trabajadores locales."
+      },
+      {
+        "text": "La geografía y el entorno, que imponen demandas como el calor en la costa o la hipoxia en la altura.",
+        "isCorrect": true,
+        "rationale": "Las condiciones ambientales extremas del territorio condicionan severamente la resistencia y capacidad física de la población laboral."
+      },
+      {
+        "text": "El marco regulatorio nacional, que exige un enfoque técnico sustentado en datos objetivos.",
+        "isCorrect": true,
+        "rationale": "La normativa legal peruana obliga a sustentar las evaluaciones de riesgo en datos cuantitativos e informes técnicos válidos."
+      },
+      {
+        "text": "La obligación de emplear únicamente estándares de diseño textil e industrial europeos.",
+        "isCorrect": false,
+        "rationale": "Adoptar de forma ciega estándares extranjeros sin adaptación local es precisamente la causa de desajustes posturales y fatiga."
+      },
+      {
+        "text": "La exoneración de fiscalizaciones para empresas que operan en zonas rurales.",
+        "isCorrect": false,
+        "rationale": "Las exigencias de seguridad y salud en el trabajo aplican de forma generalizada en todo el territorio nacional."
+      }
+    ],
+    "hint": "Piense en las características físicas del trabajador, el entorno geográfico y las exigencias legales del país.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a los \"cuatro lentes\" o dominios analíticos empleados en la ergonomía para evaluar un puesto de trabajo?",
+    "opciones": [
+      {
+        "text": "Ergonomía física.",
+        "isCorrect": true,
+        "rationale": "Aborda las respuestas anatómicas, antropométricas, biomecánicas y fisiológicas ante la actividad física."
+      },
+      {
+        "text": "Ergonomía cognitiva.",
+        "isCorrect": true,
+        "rationale": "Analiza los procesos mentales como la percepción, memoria, carga de trabajo mental y toma de decisiones."
+      },
+      {
+        "text": "Ergonomía organizacional (o macroergonomía).",
+        "isCorrect": true,
+        "rationale": "Examina la optimización de sistemas sociotécnicos, estructuras organizacionales, políticas y regímenes de turnos."
+      },
+      {
+        "text": "Ergonomía ambiental.",
+        "isCorrect": true,
+        "rationale": "Estudia el impacto de factores físicos como la iluminación, el ruido, las vibraciones y el estrés térmico en el trabajador."
+      },
+      {
+        "text": "Ergonomía contable.",
+        "isCorrect": false,
+        "rationale": "Aunque se analiza el retorno económico, la contabilidad puramente financiera no constituye una rama o lente anatómico-funcional de esta ciencia."
+      }
+    ],
+    "hint": "Recuerde los enfoques que van desde el cuerpo y la mente del trabajador hasta la organización y el ambiente físico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el modelo del iceberg de los costos en ergonomía, ¿cuál de las siguientes opciones representa un costo oculto o indirecto derivado de la mala ergonomía?",
+    "opciones": [
+      {
+        "text": "El presentismo de trabajadores operando con dolor muscular a baja capacidad.",
+        "isCorrect": true,
+        "rationale": "El rendimiento reducido por trabajar con malestar físico queda sumergido en la operación y supera con frecuencia los costos directos visibles."
+      },
+      {
+        "text": "Las facturas médicas inmediatas por atención de emergencias.",
+        "isCorrect": false,
+        "rationale": "Los gastos médicos directos son desembolsos evidentes situados en la superficie del iceberg de costos."
+      },
+      {
+        "text": "Las indemnizaciones legales pagadas por incapacidad temporal.",
+        "isCorrect": false,
+        "rationale": "Los pagos de indemnizaciones constituyen costos directos plenamente contabilizados por el seguro o la empresa."
+      },
+      {
+        "text": "El pago de pólizas del seguro complementario de trabajo de riesgo.",
+        "isCorrect": false,
+        "rationale": "Las primas de seguros forman parte de los gastos fijos y directos en la gestión contable de seguridad."
+      },
+      {
+        "text": "La compra de kits de primeros auxilios para la planta industrial.",
+        "isCorrect": false,
+        "rationale": "El suministro de botiquines y materiales sanitarios es un costo directo y transparente en el presupuesto de SST."
+      }
+    ],
+    "hint": "Identifique la pérdida de productividad que ocurre de manera imperceptible cuando el personal trabaja con malestar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué elementos componen la tríada del esfuerzo biomecánico que multiplica el riesgo de lesión al manipular una carga?",
+    "opciones": [
+      {
+        "text": "El peso o magnitud de la fuerza ejercida.",
+        "isCorrect": true,
+        "rationale": "Representa la exigencia mecánica directa impuesta sobre las estructuras articulares y musculares."
+      },
+      {
+        "text": "La repetición o frecuencia con la que se efectúa la tarea.",
+        "isCorrect": true,
+        "rationale": "El número de ciclos por minuto impide la recuperación tisular si la frecuencia es excesiva."
+      },
+      {
+        "text": "La postura adoptada y la calidad del agarre de la carga.",
+        "isCorrect": true,
+        "rationale": "Las desviaciones respecto a la posición neutra y agarres deficientes incrementan la tensión estructural sobre el cuerpo."
+      },
+      {
+        "text": "El nivel de iluminación en el área de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Si bien influye en la ergonomía ambiental, la iluminación no forma parte de la mecánica directa de fuerzas corporales sobre la carga."
+      },
+      {
+        "text": "El tipo de régimen tributario al que pertenece la empresa.",
+        "isCorrect": false,
+        "rationale": "La categoría fiscal es ajena a la física y biomecánica del esfuerzo corporal durante la tarea."
+      }
+    ],
+    "hint": "Piense en la magnitud física, la cantidad de veces que se realiza la acción y la posición del cuerpo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el principal riesgo biomecánico de mantener de manera prolongada los brazos levantados por encima del nivel de los hombros?",
+    "opciones": [
+      {
+        "text": "Tensión y compresión en los tendones del hombro, incrementando el riesgo de tendinitis.",
+        "isCorrect": true,
+        "rationale": "Manejar extremidades fuera de la postura neutra comprime las estructuras blandas del hombro, provocando inflamación crónica."
+      },
+      {
+        "text": "Pinzamiento inmediato en las vértebras cervicales con pérdida de sensibilidad en los pies.",
+        "isCorrect": false,
+        "rationale": "La elevación de brazos afecta prioritariamente a la articulación glenohumeral y manguito rotador antes que a la extremidad inferior."
+      },
+      {
+        "text": "Aumento directo de la masa muscular en la zona pectoral por hipertrofia.",
+        "isCorrect": false,
+        "rationale": "La postura estática forzada produce fatiga e inflamación, no un desarrollo muscular saludable."
+      },
+      {
+        "text": "Atrofia de los nervios de la muñeca conocida como síndrome del túnel carpiano.",
+        "isCorrect": false,
+        "rationale": "El túnel carpiano se asocia con desviaciones continuas de la muñeca y movimientos repetitivos de la mano, no principalmente con la elevación del hombro."
+      },
+      {
+        "text": "Disminución del ritmo cardíaco provocada por hipotensión súbita.",
+        "isCorrect": false,
+        "rationale": "Las posturas forzadas sostienen tensión muscular que suele elevar el esfuerzo circulatorio localizado, sin causar caídas cardíacas súbitas."
+      }
+    ],
+    "hint": "Considere la articulación directamente involucrada en sostener las extremidades superiores en alto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué tipo de tareas y zonas anatómicas se enfoca primordialmente el método de evaluación RULA?",
+    "opciones": [
+      {
+        "text": "Tareas sedentarias o estáticas, enfocado en cuello, espalda alta, brazos y muñecas.",
+        "isCorrect": true,
+        "rationale": "RULA evalúa la exposición de las extremidades superiores en actividades donde la postura se mantiene fija o sedentaria."
+      },
+      {
+        "text": "Tareas altamente dinámicas con cambios continuos de posición de todo el cuerpo.",
+        "isCorrect": false,
+        "rationale": "El análisis dinámico global de cuerpo entero es abordado por otros métodos como REBA."
+      },
+      {
+        "text": "Exclusivamente en el cálculo de fuerzas de empuje de carretillas industriales.",
+        "isCorrect": false,
+        "rationale": "RULA es una herramienta de evaluación postural y no una fórmula para fuerzas de tracción o empuje."
+      },
+      {
+        "text": "Análisis exclusivo de las extremidades inferiores y la pisada en terreno irregular.",
+        "isCorrect": false,
+        "rationale": "RULA prioriza el tren superior (cuello, tronco y miembros superiores) en puestos fundamentalmente sedentarios."
+      },
+      {
+        "text": "Medición del estrés térmico y la radiación solar en trabajos de campo.",
+        "isCorrect": false,
+        "rationale": "Las variables térmicas y ambientales son evaluadas mediante índices como WBGT y no a través de tablas posturales RULA."
+      }
+    ],
+    "hint": "Piense en labores de oficina o ensamblaje donde predomina el trabajo estático con las manos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la principal característica operacional del método REBA frente al método RULA?",
+    "opciones": [
+      {
+        "text": "Está diseñado para evaluar tareas dinámicas de cuerpo entero con cargas variables o inestables.",
+        "isCorrect": true,
+        "rationale": "REBA abarca la estabilidad de extremidades inferiores y la dinamica completa del cuerpo ante posturas cambiantes."
+      },
+      {
+        "text": "Se aplica únicamente a puestos de trabajo en los que el usuario permanece sentado todo el día.",
+        "isCorrect": false,
+        "rationale": "El enfoque en sedestación estática es idóneo para RULA, mientras que REBA incluye actividades en pie y con movimiento."
+      },
+      {
+        "text": "Entrega una puntuación simplificada que varía únicamente entre $1$ y $3$.",
+        "isCorrect": false,
+        "rationale": "REBA utiliza una escala más amplia que llega hasta $15$ puntos para matizar los niveles de riesgo."
+      },
+      {
+        "text": "Evalúa únicamente la carga mental y el estrés producido por alarmas sonoras.",
+        "isCorrect": false,
+        "rationale": "REBA es una herramienta estrictamente biomecánica y postural, no un test de carga cognitiva."
+      },
+      {
+        "text": "Requiere la colocación obligatoria de sensores electromiográficos en las piernas.",
+        "isCorrect": false,
+        "rationale": "REBA es un método observacional que no exige instrumentalización digital directa."
+      }
+    ],
+    "hint": "Considere la variabilidad de la postura corporal y la intervención de las extremidades inferiores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la ecuación de NIOSH para el levantamiento manual de cargas, ¿cuál es el peso máximo recomendado de partida bajo condiciones ideales?",
+    "opciones": [
+      {
+        "text": "$23\\text{ kg}$",
+        "isCorrect": true,
+        "rationale": "La constante de carga teórica perfecta fijada por NIOSH para proteger la columna lumbar es de $23\\text{ kg}$."
+      },
+      {
+        "text": "$15\\text{ kg}$",
+        "isCorrect": false,
+        "rationale": "$15\\text{ kg}$ es el límite general normativo para mujeres en Perú, no la constante base de la ecuación de NIOSH."
+      },
+      {
+        "text": "$40\\text{ kg}$",
+        "isCorrect": false,
+        "rationale": "$40\\text{ kg}$ representa el límite máximo permisible para hombres solo en condiciones excepcionales entrenadas según la norma peruana."
+      },
+      {
+        "text": "$50\\text{ kg}$",
+        "isCorrect": false,
+        "rationale": "Sostener $50\\text{ kg}$ de forma manual sobrepasa los márgenes de seguridad biomecánica para el levantamiento individual."
+      },
+      {
+        "text": "$10\\text{ kg}$",
+        "isCorrect": false,
+        "rationale": "Un valor de $10\\text{ kg}$ resultaría excesivamente conservador como punto de origen en la constante de NIOSH."
+      }
+    ],
+    "hint": "Se trata del valor teórico estándar utilizado antes de aplicar los factores de reducción por distancia o giro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones constituyen principios o pilares normativos fijados por la Ley $29783$ en Perú?",
+    "opciones": [
+      {
+        "text": "Principio de Prevención, donde el empleador garantiza condiciones protegidas.",
+        "isCorrect": true,
+        "rationale": "La ley asigna al empleador la responsabilidad directa de prevenir los riesgos laborales en sus instalaciones."
+      },
+      {
+        "text": "Gestión Integral mediante la actualización sistemática de la matriz IPERC.",
+        "isCorrect": true,
+        "rationale": "Exige identificar peligros y evaluar riesgos de forma continua y documentada."
+      },
+      {
+        "text": "Obligatoriedad de dictar al menos cuatro capacitaciones al año en materia de SST.",
+        "isCorrect": true,
+        "rationale": "Es un requisito legal cuantitativo para mantener capacitado al personal frente a sus riesgos."
+      },
+      {
+        "text": "Responsabilidad solidaria entre la empresa principal y sus contratistas.",
+        "isCorrect": true,
+        "rationale": "La empresa titular responde por el cumplimiento de los estándares de seguridad de sus empresas contratistas."
+      },
+      {
+        "text": "Facultad del empleador para omitir exámenes médicos en actividades de alto riesgo.",
+        "isCorrect": false,
+        "rationale": "Los exámenes médicos ocupacionales son de estricto cumplimiento y no pueden ser omitidos."
+      }
+    ],
+    "hint": "Piense en las obligaciones del empleador respecto a la matriz de riesgos, capacitaciones y responsabilidad sobre terceros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la Norma Básica de Ergonomía (RM $375$-$2008$-TR), ¿cuál es el límite máximo general de carga sugerido para trabajadores varones en condiciones normales?",
+    "opciones": [
+      {
+        "text": "$25\\text{ kg}$",
+        "isCorrect": true,
+        "rationale": "La regulación técnica peruana fija en $25\\text{ kg}$ el peso límite recomendado para varones adultos en labores habituales."
+      },
+      {
+        "text": "$15\\text{ kg}$",
+        "isCorrect": false,
+        "rationale": "$15\\text{ kg}$ es el límite normativo estipulado para trabajadoras mujeres en condiciones habituales."
+      },
+      {
+        "text": "$40\\text{ kg}$",
+        "isCorrect": false,
+        "rationale": "Dicho valor aplica únicamente a trabajadores masculinos entrenados y bajo circunstancias altamente controladas."
+      },
+      {
+        "text": "$30\\text{ kg}$",
+        "isCorrect": false,
+        "rationale": "La legislación peruana utiliza $25\\text{ kg}$ y no $30\\text{ kg}$ como umbral estándar para la población masculina habitual."
+      },
+      {
+        "text": "$50\\text{ kg}$",
+        "isCorrect": false,
+        "rationale": "Ese peso excede los límites legales de levantamiento manual individual permitidos en el país."
+      }
+    ],
+    "hint": "Recuerde la cifra estándar más extendida en la reglamentación nacional para hombres.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la RM $375$-$2008$-TR, ¿cuál es el nivel mínimo de iluminación requerido en luxes para trabajos de oficina frente a pantallas de computadora?",
+    "opciones": [
+      {
+        "text": "$500\\text{ lux}$",
+        "isCorrect": true,
+        "rationale": "El trabajo administrativo y de oficina requiere un mínimo de $500\\text{ lux}$ para prevenir la fatiga visual."
+      },
+      {
+        "text": "$100\\text{ lux}$",
+        "isCorrect": false,
+        "rationale": "Un nivel de $100\\text{ lux}$ se considera suficiente solo para zonas de tránsito o pasillos."
+      },
+      {
+        "text": "$1000\\text{ lux}$",
+        "isCorrect": false,
+        "rationale": "Niveles superiores a $1000\\text{ lux}$ se reservan para tareas industriales o artesanales de altísima precisión."
+      },
+      {
+        "text": "$50\\text{ lux}$",
+        "isCorrect": false,
+        "rationale": "$50\\text{ lux}$ resulta insuficiente para lectura o trabajo continuo con pantallas, provocando severa vista cansada."
+      },
+      {
+        "text": "$250\\text{ lux}$",
+        "isCorrect": false,
+        "rationale": "Esa intensidad corresponde a labores de demanda visual moderada, pero no alcanza el estándar de $500\\text{ lux}$ fijado para oficinas."
+      }
+    ],
+    "hint": "Se exige una intensidad de luz suficiente para labores continuas de lectura y uso de PVD.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué transformaciones caracterizan la evolución de la ergonomía hacia un enfoque estratégico de negocio?",
+    "opciones": [
+      {
+        "text": "Paso de un modelo reactivo a un modelo predictivo basado en datos.",
+        "isCorrect": true,
+        "rationale": "Permite anticipar la aparición de dolencias analizando variables cuantitativas antes de que ocurra la lesión."
+      },
+      {
+        "text": "Consideración de la ergonomía como una inversión con retorno rentable.",
+        "isCorrect": true,
+        "rationale": "Demuestra que la reducción de costos por lesiones y el aumento de eficiencia compensan la inversión efectuada."
+      },
+      {
+        "text": "Alineación de las mejoras ergonómicas con la eliminación de desperdicios (muda) en Lean Manufacturing.",
+        "isCorrect": true,
+        "rationale": "Ataca directamente sobreesfuerzos, movimientos innecesarios y errores provocados por la fatiga acumulada."
+      },
+      {
+        "text": "Reducción de la ergonomía a la compra de mobiliario estándar para cumplir inspecciones.",
+        "isCorrect": false,
+        "rationale": "Limitarse al cumplimiento formal estático representa el enfoque reactivo tradicional que la ergonomía estratégica busca superar."
+      },
+      {
+        "text": "Sustitución de las auditorías operativas por revisiones bibliográficas sin contacto directo con la planta.",
+        "isCorrect": false,
+        "rationale": "La ergonomía estratégica requiere constante evaluación técnica en el terreno operativo y recolección de datos reales."
+      }
+    ],
+    "hint": "Considere la transición hacia la prevención basada en métricas, la rentabilidad y la filosofía Lean.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el pilar conceptual supremo del diseño ergonómico de puestos de trabajo regulado en la norma peruana?",
+    "opciones": [
+      {
+        "text": "El puesto de trabajo se adapta a la persona y nunca la persona al puesto.",
+        "isCorrect": true,
+        "rationale": "Toda intervención debe ajustar la geometría, herramientas y procesos a las dimensiones y capacidades del trabajador."
+      },
+      {
+        "text": "El trabajador debe ejercitarse para adaptarse al ritmo fijado por la maquinaria.",
+        "isCorrect": false,
+        "rationale": "Forzar al organismo a adaptarse a condiciones inadecuadas es el origen de los trastornos músculoesqueléticos."
+      },
+      {
+        "text": "Las especificaciones del fabricante extranjero no deben modificarse bajo ninguna circunstancia.",
+        "isCorrect": false,
+        "rationale": "Los equipos importados deben adaptarse o regularse según las características de la población laboral local."
+      },
+      {
+        "text": "Las métricas de producción tienen prioridad legal absoluta sobre el confort biomecánico.",
+        "isCorrect": false,
+        "rationale": "El marco regulatorio exige que los parámetros técnicos de seguridad primen para proteger la salud humana."
+      },
+      {
+        "text": "Las dimensiones del puesto deben diseñarse tomando únicamente la estatura máxima masculina mundial.",
+        "isCorrect": false,
+        "rationale": "Diseñar para extremos inapropiados perjudica a la mayoría de los usuarios locales que quedan fuera de esas dimensiones."
+      }
+    ],
+    "hint": "Reflexione sobre la dirección en la que debe fluir la adaptación entre la máquina y el ser humano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con los estudios antropométricos citados para el trabajador peruano promedio, ¿cuál es su estatura media de referencia?",
+    "opciones": [
+      {
+        "text": "$158.4\\text{ cm}$",
+        "isCorrect": true,
+        "rationale": "Esa cifra representa la media antropométrica local, evidenciando por qué escritorios estáticos de $75\\text{ cm}$ resultan elevados para gran parte de la población."
+      },
+      {
+        "text": "$175.0\\text{ cm}$",
+        "isCorrect": false,
+        "rationale": "Este promedio corresponde más bien a poblaciones del norte de Europa o Norteamérica."
+      },
+      {
+        "text": "$168.0\\text{ cm}$",
+        "isCorrect": false,
+        "rationale": "Representa una estatura superior a la media de la población laboral peruana registrada en las tablas de referencia presentadas."
+      },
+      {
+        "text": "$150.0\\text{ cm}$",
+        "isCorrect": false,
+        "rationale": "Es un valor por debajo del promedio poblacional laboral registrado en los estudios de las fuentes."
+      },
+      {
+        "text": "$180.2\\text{ cm}$",
+        "isCorrect": false,
+        "rationale": "Corresponde a percentiles altos internacionales que distan de la antropometría promedio nacional."
+      }
+    ],
+    "hint": "Piense en la medida que explica el desajuste de mobiliario importado de $75\\text{ cm}$ de altura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Según la Ley $31572$ sobre teletrabajo, ¿cuáles de las siguientes pautas son recomendadas para la autoevaluación ergonómica del puesto en el hogar?",
+    "opciones": [
+      {
+        "text": "Ubicación del borde superior de la pantalla a la altura de los ojos.",
+        "isCorrect": true,
+        "rationale": "Evita la flexión o extensión continua del cuello manteniendo la columna cervical neutra."
+      },
+      {
+        "text": "Uso de una silla que brinde soporte firme en la zona lumbar.",
+        "isCorrect": true,
+        "rationale": "Preserva la lordosis natural de la espalda reduciendo la presión sobre los discos intervertebrales."
+      },
+      {
+        "text": "Apoyo de ambos pies firmemente sobre el suelo o un reposapiés.",
+        "isCorrect": true,
+        "rationale": "Favorece el retorno venoso y distribuye de forma homogénea el peso sobre los muslos."
+      },
+      {
+        "text": "Utilizar exclusivamente la pantalla, teclado y mouse integrados de la laptop sin accesorios.",
+        "isCorrect": false,
+        "rationale": "El uso prolongado de laptops sin periféricos externos fuerza posturas encorvadas y tensión en muñecas."
+      },
+      {
+        "text": "Ubicación del escritorio frente a una ventana sin cortinas para recibir luz solar directa en la pantalla.",
+        "isCorrect": false,
+        "rationale": "Genera deslumbramiento y reflejos en el monitor que causan fatiga visual y posturas forzadas."
+      }
+    ],
+    "hint": "Se busca mantener posturas neutras en cuello, espalda y extremidades inferiores mientras se trabaja a distancia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué parámetro fisiológico evalúan específicamente los sensores de electromiografía de superficie (sEMG) en ergonomía predictiva?",
+    "opciones": [
+      {
+        "text": "La actividad eléctrica muscular para detectar fatiga y niveles de tensión imperceptibles a la vista.",
+        "isCorrect": true,
+        "rationale": "La sEMG cuantifica el grado de activación de las fibras musculares durante la ejecución del trabajo."
+      },
+      {
+        "text": "Los ángulos exactos de rotación articular de las rodillas.",
+        "isCorrect": false,
+        "rationale": "La medición angular y cinemática de las articulaciones es realizada por los sensores inerciales (IMUs), no por electromiografía."
+      },
+      {
+        "text": "La concentración de oxígeno en la sangre periférica.",
+        "isCorrect": false,
+        "rationale": "Eso es determinado mediante oximetría o gasometría, no a través de la captación eléctrica muscular sEMG."
+      },
+      {
+        "text": "La pérdida de audición inducida por exposición a ruido elevado.",
+        "isCorrect": false,
+        "rationale": "La evaluación auditiva se ejecuta mediante audiometrías y no con electrodos superficiales en los músculos."
+      },
+      {
+        "text": "El grado de sudoración corporal ante el estrés térmico por calor.",
+        "isCorrect": false,
+        "rationale": "La respuesta sudomotora o el calor ambiental se monitorea mediante termómetros de globo e índices WBGT."
+      }
+    ],
+    "hint": "Asocie las siglas electromiográficas con la electricidad producida durante la contracción muscular.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función específica de un exoesqueleto ocupacional enfocado en el soporte de hombros?",
+    "opciones": [
+      {
+        "text": "Asistir mecánicamente a las extremidades superiores durante tareas con los brazos elevados.",
+        "isCorrect": true,
+        "rationale": "Transferir la carga del área del manguito rotador hacia la cadera disminuye la fatiga en trabajos por encima de la cabeza."
+      },
+      {
+        "text": "Aumentar la fuerza de agarre de los dedos para manipular componentes microscópicos.",
+        "isCorrect": false,
+        "rationale": "Para la mano existen guantes robóticos o herramientas asistidas, no un exoesqueleto de hombro."
+      },
+      {
+        "text": "Corregir el ángulo de visión ante pantallas mal posicionadas.",
+        "isCorrect": false,
+        "rationale": "Los exoesqueletos brindan asistencia biomecánica y física, no corrección óptica."
+      },
+      {
+        "text": "Reducir el impacto del ruido ambiental en el oído interno.",
+        "isCorrect": false,
+        "rationale": "La atenuación sonora corresponde a los equipos de protección auditiva."
+      },
+      {
+        "text": "Sustituir por completo el esfuerzo de las piernas durante la marcha.",
+        "isCorrect": false,
+        "rationale": "Los exoesqueletos de hombro no actúan sobre la locomoción o soporte de los miembros inferiores."
+      }
+    ],
+    "hint": "Considere las tareas donde el trabajador opera de manera constante con las manos por arriba de su cabeza.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué condición fundamental deben cumplir las pausas activas para ser efectivas en la reducción de la fatiga en una organización?",
+    "opciones": [
+      {
+        "text": "Estar programadas sistemáticamente y diseñadas según los riesgos específicos de cada puesto.",
+        "isCorrect": true,
+        "rationale": "Un programa eficaz debe ser estructurado y compensar de forma dirigida los grupos musculares exigidos."
+      },
+      {
+        "text": "Ejecutarse de manera libre y sin horario prefijado cuando el trabajador sienta dolor agudo.",
+        "isCorrect": false,
+        "rationale": "Esperar a sentir dolor agudo convierte la acción en reactiva, perdiendo el efecto preventivo deseado."
+      },
+      {
+        "text": "Involucrar rutinas de acondicionamiento físico de alta intensidad cardiovascular.",
+        "isCorrect": false,
+        "rationale": "El ejercicio extenuante genera más fatiga y sudoración, lo que resulta contraproducente durante la jornada laboral."
+      },
+      {
+        "text": "Aplicar exactamente los mismos ejercicios a todo el personal, sea administrativo o de planta.",
+        "isCorrect": false,
+        "rationale": "Las necesidades osteomusculares de una labor sedentaria difieren drásticamente de las de la manipulación manual de cargas."
+      },
+      {
+        "text": "Reemplazar las evaluaciones de evaluación de riesgos por listas de asistencia a las pausas.",
+        "isCorrect": false,
+        "rationale": "Las pausas activas son una medida complementaria organizativa y no sustituyen el análisis cuantitativo de riesgos."
+      }
+    ],
+    "hint": "Piense en la necesidad de planificación e individualización según las demandas del trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste esencialmente la ergonomía participativa?",
+    "opciones": [
+      {
+        "text": "Involucrar directamente a los trabajadores en la identificación de problemas y el diseño de soluciones para sus puestos.",
+        "isCorrect": true,
+        "rationale": "El conocimiento operativo del trabajador es aprovechado para codiseñar mejoras más aplicables y sostenibles."
+      },
+      {
+        "text": "Permitir que los empleados decidan sus horarios de entrada y salida sin supervisión.",
+        "isCorrect": false,
+        "rationale": "La participación se enfoca en el análisis ergonómico del trabajo y no en la flexibilización horaria sin control."
+      },
+      {
+        "text": "Contratar consultores externos que rediseñen la fábrica sin interactuar con los operarios.",
+        "isCorrect": false,
+        "rationale": "Excluir al personal operativo representa el modelo tradicional 'desde el escritorio' que suele fracasar."
+      },
+      {
+        "text": "Votar colectivamente si se deben cumplir o no las normativas impuestas por la autoridad laboral.",
+        "isCorrect": false,
+        "rationale": "Las leyes laborales son de cumplimiento obligatorio y no están sujetas a votación dentro de la empresa."
+      },
+      {
+        "text": "Financiar el costo de las sillas ergonómicas mediante aportes voluntarios del personal.",
+        "isCorrect": false,
+        "rationale": "La provisión de condiciones de trabajo seguras es responsabilidad legal y financiera del empleador."
+      }
+    ],
+    "hint": "Valora la inclusión de la voz de quien realiza la tarea cotidiana para encontrar soluciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la evidencia y casos de estudio presentados sobre industrias en Perú, ¿cuál es el retorno de inversión (ROI) promedio estimado por cada sol invertido en ergonomía?",
+    "opciones": [
+      {
+        "text": "$2.54\\text{ soles}$ de retorno por cada sol invertido.",
+        "isCorrect": true,
+        "rationale": "Los estudios en la agroindustria local demuestran que las mejoras recuperan la inversión inicial y generan un excedente rentable."
+      },
+      {
+        "text": "$1.00\\text{ sol}$ de retorno por cada sol invertido.",
+        "isCorrect": false,
+        "rationale": "Un retorno de $1.00$ implicaría únicamente recuperar el dinero sin generar beneficios o ganancias netas sobre la inversión."
+      },
+      {
+        "text": "$0.50\\text{ soles}$ de retorno por cada sol invertido.",
+        "isCorrect": false,
+        "rationale": "Este valor significaría una pérdida económica del $50\\%$, lo cual contradice la rentabilidad demostrada en las fuentes."
+      },
+      {
+        "text": "$10.00\\text{ soles}$ de retorno por cada sol invertido.",
+        "isCorrect": false,
+        "rationale": "Esa cifra supera con creces el índice empírico documentado de $2.54$ registrado en los casos peruanos analizados."
+      },
+      {
+        "text": "Cero retornos, considerándose un gasto perdido sin impacto económico.",
+        "isCorrect": false,
+        "rationale": "La ergonomía estratégica genera rentabilidad demostrada al reducir ausentismo, fallas y aumentar la velocidad del proceso."
+      }
+    ],
+    "hint": "Recuerde la métrica que demuestra que se recupera más del doble del capital invertido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso de éxito de la agroexportación peruana en líneas de empaque (packing), ¿cuál fue el resultado de la intervención en la puntuación de riesgo RULA?",
+    "opciones": [
+      {
+        "text": "Disminuyó de un nivel crítico de $14$ a un nivel bajo de $3$.",
+        "isCorrect": true,
+        "rationale": "La instalación de plataformas regulables y la rotación de tareas redujeron drásticamente la exposición a riesgo muscular."
+      },
+      {
+        "text": "Se mantuvo estática en $14$, pero incrementó la velocidad del envasado.",
+        "isCorrect": false,
+        "rationale": "Mantener una puntuación de $14$ significaría continuar en un riesgo inaceptable para la salud del operario."
+      },
+      {
+        "text": "Aumentó de $3$ a $14$ al exigir mayor ritmo de empaque.",
+        "isCorrect": false,
+        "rationale": "Las intervenciones ergonómicas exitosas buscan descender la puntuación hacia rangos de bajo riesgo."
+      },
+      {
+        "text": "Se redujo el ruido de $85$ a $50\\text{ decibeles}$ sin alterar la postura.",
+        "isCorrect": false,
+        "rationale": "El método RULA cuantifica riesgos posturales y biomecánicos, no la presión sonora."
+      },
+      {
+        "text": "Obligó a suspender la operación por superar los límites de NIOSH.",
+        "isCorrect": false,
+        "rationale": "La intervención logró optimizar la producción elevando la eficiencia sin paralizar las actividades."
+      }
+    ],
+    "hint": "Identifique el drástico descenso de la puntuación que llevó el riesgo de rojo a verde.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En el caso aplicado al sector minero peruano, ¿qué medidas ayudaron a reducir las enfermedades lumbares y los incidentes por fatiga en operadores de maquinaria?",
+    "opciones": [
+      {
+        "text": "Sustitución de asientos de fábrica por butacas ergonómicas con suspensión de aire.",
+        "isCorrect": true,
+        "rationale": "Atenúa la transmisión de vibraciones de cuerpo entero producidas por el terreno y el equipo pesado."
+      },
+      {
+        "text": "Instalación de cámaras con IA en cabina para detectar eventos de micro-sueños.",
+        "isCorrect": true,
+        "rationale": "Permite emitir alertas tempranas antes de que ocurra un accidente grave por somnolencia."
+      },
+      {
+        "text": "Implementación de rutinas de estiramiento al inicio y mitad del turno.",
+        "isCorrect": true,
+        "rationale": "Promueve la activación muscular y alivia la fatiga biomecánica acumulada por sedestación prolongada."
+      },
+      {
+        "text": "Incremento de las horas de turno continuo sin pausas para reducir días de viaje.",
+        "isCorrect": false,
+        "rationale": "Aumentar las horas continuas incrementa severamente la fatiga acumulada y el riesgo de fatalidad."
+      },
+      {
+        "text": "Prohibición del uso de sistemas de climatización en las cabinas de los camiones.",
+        "isCorrect": false,
+        "rationale": "Prescindir del control térmico genera estrés por calor o frío, degradando el rendimiento del conductor."
+      }
+    ],
+    "hint": "Considere la reducción de vibraciones, el control tecnológico de fatiga y las pausas de estiramiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles fueron los hallazgos e impactos logrados tras las intervenciones de bajo costo en las MIPEs textiles de confección en el Callao?",
+    "opciones": [
+      {
+        "text": "El diagnóstico inicial arrojó que más del $80\\%$ del personal padecía molestias de espalda y cuello.",
+        "isCorrect": true,
+        "rationale": "Demostró la elevada prevalencia de trastornos músculoesqueléticos en talleres no adaptados."
+      },
+      {
+        "text": "Se redujo la presencia de lumbalgias en un $76\\%$.",
+        "isCorrect": true,
+        "rationale": "El acondicionamiento mediante cojines y correcciones posturales eliminó la mayoría de casos de dolor lumbar."
+      },
+      {
+        "text": "Los dolores en la zona cervical o cuello disminuyeron en un $69\\%$.",
+        "isCorrect": true,
+        "rationale": "La mejora en la iluminación focalizada y el ajuste de alturas redujo la flexión del cuello."
+      },
+      {
+        "text": "Se comprobó que intervenciones sencillas y económicas pueden generar beneficios masivos de salud.",
+        "isCorrect": true,
+        "rationale": "Demostró que la ergonomía eficaz no requiere siempre de inversiones de alta tecnología."
+      },
+      {
+        "text": "El proyecto fracasó debido a la negativa de los confeccionistas de modificar sus hábitos.",
+        "isCorrect": false,
+        "rationale": "El caso peruano presentó resultados contundentes y cuantificables en beneficio del taller textil."
+      }
+    ],
+    "hint": "Piense en las cifras de reducción de dolores de espalda y cuello obtenidas mediante cambios sencillos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la filosofía Lean Manufacturing integrada con la ergonomía, ¿cómo se define el término \"muda\"?",
+    "opciones": [
+      {
+        "text": "Cualquier desperdicio en el proceso, como movimientos ineficientes, errores o sobrecargas por fatiga.",
+        "isCorrect": true,
+        "rationale": "La mala ergonomía genera directo despilfarro de tiempo y recursos en forma de retrabajos y movimientos innecesarios."
+      },
+      {
+        "text": "La imposibilidad de comunicar verbalmente un riesgo dentro de la planta industrial.",
+        "isCorrect": false,
+        "rationale": "El término japonés 'muda' no refiere a problemas del habla, sino a categorías de desperdicio operativo."
+      },
+      {
+        "text": "La obligación de mantener en silencio las salas de monitoreo y control.",
+        "isCorrect": false,
+        "rationale": "No hace referencia a normas de volumen sonoro en las instalaciones."
+      },
+      {
+        "text": "El costo contable derivado únicamente del pago de licencias médicas.",
+        "isCorrect": false,
+        "rationale": "Aunque las licencias son un costo, 'muda' engloba todo desperdicio de proceso ocasionado por ineficiencia."
+      },
+      {
+        "text": "El diseño de herramientas que no requieren energía eléctrica para funcionar.",
+        "isCorrect": false,
+        "rationale": "El concepto es central para la eliminación de actividades que no agregan valor, no a la fuente de energía."
+      }
+    ],
+    "hint": "Asocie el término con las ineficiencias y pérdidas que elimina la ergonomía activa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al analizar una sala de control industrial saturada de datos visuales y señales sonoras de alarma poco claras que elevan la probabilidad de un error humano en situaciones críticas, ¿qué lente de evaluación ergonómica se está aplicando de manera prioritaria?",
+    "opciones": [
+      {
+        "text": "Ergonomía cognitiva",
+        "isCorrect": true,
+        "rationale": "Analiza los procesos mentales como la percepción, la memoria y la atención cuando la interfaz y el entorno de trabajo demandan procesamiento de información bajo tensión."
+      },
+      {
+        "text": "Ergonomía física",
+        "isCorrect": false,
+        "rationale": "Se centra en las características anatómicas, antropométricas, fisiológicas y biomecánicas del cuerpo humano en relación con la actividad física."
+      },
+      {
+        "text": "Ergonomía organizacional",
+        "isCorrect": false,
+        "rationale": "Examina la optimización de los sistemas socio-técnicos, incluyendo estructuras organizacionales, políticas y procesos de trabajo como los turnos."
+      },
+      {
+        "text": "Ergonomía ambiental",
+        "isCorrect": false,
+        "rationale": "Evalúa las condiciones físicas del entorno como iluminación, ruido, vibraciones y estrés térmico en su impacto sobre el confort fisiológico."
+      },
+      {
+        "text": "Biomecánica ocupacional",
+        "isCorrect": false,
+        "rationale": "Estudia el comportamiento mecánico de las estructuras óseas y musculares frente a fuerzas y cargas físicas aplicadas."
+      }
+    ],
+    "hint": "Considere la dimensión ergonómica enfocado en el procesamiento de información, la carga mental y la toma de decisiones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos forman parte de los costos ocultos e indirectos provocados por la falta de gestión disergonómica en una organización?",
+    "opciones": [
+      {
+        "text": "Paradas de producción no programadas e interrupciones del flujo operativo.",
+        "isCorrect": true,
+        "rationale": "Las fallas en el ritmo de trabajo y detenciones imprevistas representan pérdidas de tiempo productivo que constituyen costos sumergidos de la mala ergonomía."
+      },
+      {
+        "text": "Presentismo laboral de colaboradores operando con malestar físico.",
+        "isCorrect": true,
+        "rationale": "El personal que acude a trabajar sintiendo dolor rinde a una fracción de su capacidad, afectando la eficiencia sin generar un registro directo de ausentismo."
+      },
+      {
+        "text": "Baja en la moral del equipo y deterioro de la reputación corporativa.",
+        "isCorrect": true,
+        "rationale": "El desgaste del clima laboral y el daño a la imagen institucional erosionan el valor intangible de la empresa a mediano y largo plazo."
+      },
+      {
+        "text": "Pago directo del tratamiento médico de urgencia del trabajador.",
+        "isCorrect": false,
+        "rationale": "Corresponde a un costo directo visible y contable que se desembolsa inmediatamente ante la ocurrencia de la lesión."
+      },
+      {
+        "text": "Indemnizaciones económicas normadas pagadas al afectado.",
+        "isCorrect": false,
+        "rationale": "Es un costo directo cuantificable legalmente que figura de manera explícita en los registros financieros de la empresa."
+      }
+    ],
+    "hint": "Piense en las ineficiencias sumergidas bajo la superficie operacional que no corresponden a desembolsos médicos inmediatos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la antropometría de la población peruana constituye un factor disergonómico crítico cuando se introduce maquinaria industrial importada sin realizar adaptaciones previas?",
+    "opciones": [
+      {
+        "text": "Las dimensiones del equipo importado suelen basarse en promedios de estatura mayores, obligando a los trabajadores a adoptar posturas forzadas sostenidas.",
+        "isCorrect": true,
+        "rationale": "El diseño concebido para datos antropométricos foráneos exige alcances excesivos o elevación compensatoria de hombros y brazos en el colaborador local."
+      },
+      {
+        "text": "Las máquinas importadas carecen de certificaciones de seguridad física emitidas por organismos internacionales.",
+        "isCorrect": false,
+        "rationale": "El problema no radica en la certificación de origen, sino en la falta de correspondencia dimensional con el usuario final."
+      },
+      {
+        "text": "La regulación peruana prohíbe el uso de maquinaria industrial diseñada en el extranjero sin homologación aduanera.",
+        "isCorrect": false,
+        "rationale": "La legislación exije adaptación técnica e identificación de riesgos, pero no prohíbe la importación de maquinaria industrial."
+      },
+      {
+        "text": "El operario promedio peruano requiere mayor fuerza física para activar mandos mecánicos estandarizados.",
+        "isCorrect": false,
+        "rationale": "La dificultad no proviene del nivel de fuerza, sino de la posición geométrica desfavorable en que quedan los mandos respecto a la anatomía del trabajador."
+      },
+      {
+        "text": "Los equipos importados operan a frecuencias mecánicas incompatibles con el reloj biológico de la región.",
+        "isCorrect": false,
+        "rationale": "Las frecuencias operativas de la máquina no se vinculan con la antropometría, sino con especificaciones mecánicas e ingeneriles."
+      }
+    ],
+    "hint": "Reflexione sobre el descalce entre los estándares de diseño de los fabricantes extranjeros y las características físicas del usuario local.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la evaluación biomecánica de extremidades superiores, ¿cuál es el mecanismo principal que incrementa el riesgo de desarrollar síndrome del túnel carpiano en tareas repetitivas?",
+    "opciones": [
+      {
+        "text": "La desviación repetida o mantenida fuera de la postura neutra de la muñeca que genera fricción y presión sostenida en los tendones flexores.",
+        "isCorrect": true,
+        "rationale": "Flexionar o extender la muñeca continuamente crea puntos de rozamiento que inflaman los tendones provocando la compresión del nervio mediano."
+      },
+      {
+        "text": "La acumulación inmediata de ácido láctico en los músculos del antebrazo por falta de irrigación.",
+        "isCorrect": false,
+        "rationale": "La acumulación de metabolitos genera fatiga muscular aguda, pero no es la causa biomecánica estructural del atrapamiento nervioso en el túnel carpiano."
+      },
+      {
+        "text": "La compresión directa de los discos intervertebrales por mantener los codos extendidos.",
+        "isCorrect": false,
+        "rationale": "La compresión de discos vertebrales afecta la columna lumbar o cervical, no la zona anatómica del carpo."
+      },
+      {
+        "text": "La elevación prolongada de los hombros por encima del plano horizontal del tórax.",
+        "isCorrect": false,
+        "rationale": "La elevación de hombros genera tensión en el trapecio y riesgo de tendinitis en el manguito rotador, no en la muñeca."
+      },
+      {
+        "text": "El incremento sostenido de cortisol muscular debido al nivel de ruido en el área de trabajo.",
+        "isCorrect": false,
+        "rationale": "El cortisol responde al estrés ambiental o sistémico, mientras que la neuropatía del carpo es ocasionada por fricción biomecánica localizada."
+      }
+    ],
+    "hint": "Considere la postura de la articulación distal del brazo y el comportamiento de los tendones dentro del canal anatómico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Un especialista en ergonomía requiere evaluar una tarea dinámica en el sector construcción que involucra cambios posturales impredecibles, cargas inestables y compromiso del cuerpo entero. ¿Qué herramientas cuantitativas son las indicadas para este escenario?",
+    "opciones": [
+      {
+        "text": "El método REBA (o REVA), debido a que contempla la evaluación postural del cuerpo entero y contempla la estabilidad de las piernas y el agarre.",
+        "isCorrect": true,
+        "rationale": "REBA está diseñado específicamente para analizar tareas dinámicas globales donde las posturas cambian constantemente y existen cargas inestables."
+      },
+      {
+        "text": "La ecuación de NIOSH, si la actividad incluye tareas específicas de levantamiento manual de cargas de origen y destino.",
+        "isCorrect": true,
+        "rationale": "NIOSH complementa el análisis al calcular la masa máxima recomendable cuando la tarea dinámica implica manipular objetos de cierto peso."
+      },
+      {
+        "text": "El método RULA, por ser la herramienta estándar indicada para movimientos dinámicos de cuerpo entero.",
+        "isCorrect": false,
+        "rationale": "RULA centra su enfoque en tareas sedentarias o estáticas enfocado prioritariamente en extremidades superiores y cuello."
+      },
+      {
+        "text": "El índice WGT, como parámetro cuantitativo principal para medir el esfuerzo postural de brazos.",
+        "isCorrect": false,
+        "rationale": "El índice WBGT mide la sobrecarga térmica ambiental y no evalúa la biomecánica postural."
+      },
+      {
+        "text": "El método OCRA, enfocado exclusivamente en determinar la compresión de los discos intervertebrales lumbares.",
+        "isCorrect": false,
+        "rationale": "OCRA se enfoca en movimientos repetitivos de extremidades superiores, no en la compresión discal ni en la dinámica global del cuerpo."
+      }
+    ],
+    "hint": "Diferencie los métodos según si están dirigidos a posturas estáticas de extremidad superior o a actividades dinámicas globales y levantamiento de carga.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la aplicación de la ecuación de NIOSH para calcular el Límite de Peso Recomendado (LPR), partiendo de una constante de peso ideal de 23 kg, ¿qué factor multiplicador ejerce la penalización o reducción más severa cuando se aleja la carga del cuerpo?",
+    "opciones": [
+      {
+        "text": "El factor de distancia horizontal de la carga al cuerpo.",
+        "isCorrect": true,
+        "rationale": "Alejar el objeto apenas unos centímetros del centro de gravedad del cuerpo incrementa exponencialmente el momento flector lumbar, reduciendo dramáticamente el peso seguro."
+      },
+      {
+        "text": "El factor de simetría respecto al plano sagital.",
+        "isCorrect": false,
+        "rationale": "La asimetría o torsión penaliza el límite, pero no con el impacto biomecánico tan directo como el distanciamiento horizontal."
+      },
+      {
+        "text": "El factor de agarre de la masa levantada.",
+        "isCorrect": false,
+        "rationale": "La calidad del agarre modifica el límite recomendado, pero su coeficiente reductor es menos drástico que el brazo de palanca horizontal."
+      },
+      {
+        "text": "El factor de distancia vertical de elevación.",
+        "isCorrect": false,
+        "rationale": "El recorrido vertical influye en el gasto metabólico, pero la distancia horizontal domina en la generación de compresión discal."
+      },
+      {
+        "text": "El factor de frecuencia de levantamiento por minuto.",
+        "isCorrect": false,
+        "rationale": "La frecuencia penaliza la fatiga acumulada, pero en un levantamiento único la posición horizontal es el determinante biomecánico crítico."
+      }
+    ],
+    "hint": "Piense en la variable geométrica que incrementa drásticamente el brazo de palanca y el momento de fuerza sobre la zona lumbar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al aplicar el método RULA para evaluar un puesto de ensamble estático de componentes electrónicos, se obtiene una puntuación final de 7. ¿Cuál es el diagnóstico de riesgo e intervención requerida según la metodología?",
+    "opciones": [
+      {
+        "text": "Riesgo inaceptable, requiriéndose cambios y rediseños inmediatos en el puesto de trabajo.",
+        "isCorrect": true,
+        "rationale": "El puntaje 7 representa el nivel de riesgo máximo en RULA, exigiendo modificaciones técnicas y organizativas con prioridad alta."
+      },
+      {
+        "text": "Riesgo aceptable, determinando que la postura se encuentra dentro de límites biomecánicos seguros.",
+        "isCorrect": false,
+        "rationale": "Los niveles aceptables en RULA corresponden a puntuaciones de 1 o 2."
+      },
+      {
+        "text": "Riesgo bajo, recomendándose únicamente el seguimiento rutinario del trabajador sin alteraciones estructurales.",
+        "isCorrect": false,
+        "rationale": "Puntuaciones de 3 o 4 indican un riesgo bajo a moderado que puede requerir cambios a futuro, no una cifra de 7."
+      },
+      {
+        "text": "Riesgo moderado, requiriendo un rediseño programado en el plan anual del subsiguiente periodo.",
+        "isCorrect": false,
+        "rationale": "Un resultado de 5 o 6 marca riesgo alto que requiere investigación y cambios pronto, mientras que 7 demanda acción inmediata."
+      },
+      {
+        "text": "Puntuación nula, debido a que la escala cuantitativa de RULA contempla como límite superior un valor de 5 puntos.",
+        "isCorrect": false,
+        "rationale": "La escala de puntuación final de RULA abarca valores del 1 al 7."
+      }
+    ],
+    "hint": "Considere el límite superior de la escala de RULA y la urgencia de las acciones correctivas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del marco de la Ley N.º 29783 de Perú, ¿cuál de los siguientes enunciados describe correctamente la aplicación del principio de gestión integral en el ámbito ergonómico?",
+    "opciones": [
+      {
+        "text": "Obliga a integrar la ergonomía en la matriz de Identificación de Peligros, Evaluación de Riesgos y Medidas de Control (IPERC), manteniéndola actualizada.",
+        "isCorrect": true,
+        "rationale": "La gestión integral exige incluir los riesgos disergonómicos dentro del instrumento central de evaluación y control de la empresa."
+      },
+      {
+        "text": "Exige brindar cuatro capacitaciones anuales exclusivamente centradas en ejercicios de relajación para la gerencia.",
+        "isCorrect": false,
+        "rationale": "Las capacitaciones son obligatorias para todos los trabajadores y deben abarcar los riesgos específicos de sus puestos."
+      },
+      {
+        "text": "Traslada la responsabilidad administrativa de los accidentes disergonómicos de manera única a las empresas contratistas.",
+        "isCorrect": false,
+        "rationale": "La ley establece la responsabilidad solidaria de la empresa principal respecto a sus contratistas y subcontratistas."
+      },
+      {
+        "text": "Dictamina los niveles absolutos de iluminancia ambiental expresados en luxes para laboratorios.",
+        "isCorrect": false,
+        "rationale": "Los valores técnicos cuantitativos de iluminación están detallados en la norma técnica específica (RM 375-2008-TR) y no en los principios de la ley marco."
+      },
+      {
+        "text": "Otorga inmunidad jurídica al empleador si la lesión ocurre en un puesto supervisado por comités paritarios.",
+        "isCorrect": false,
+        "rationale": "El empleador mantiene siempre la responsabilidad legal y de prevención del sistema de gestión."
+      }
+    ],
+    "hint": "Identifique la herramienta sistemática de evaluación continua que exige la ley para mapear los peligros disergonómicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con la Resolución Ministerial N.º 375-2008-TR en Perú, ¿cuáles son los límites máximos normativos fijados para la manipulación manual de cargas en condiciones normales de trabajo?",
+    "opciones": [
+      {
+        "text": "25 kg como masa máxima permitida para trabajadores de sexo masculino.",
+        "isCorrect": true,
+        "rationale": "Es el límite reglamentario básico establecido por la RM 375-2008-TR para hombres en condiciones habituales."
+      },
+      {
+        "text": "15 kg como masa máxima permitida para trabajadoras de sexo femenino.",
+        "isCorrect": true,
+        "rationale": "Es el límite reglamentario fijado por la norma peruana para proteger la salud biomecánica de las mujeres."
+      },
+      {
+        "text": "Prohibición absoluta de la manipulación manual de cargas para trabajadoras gestantes.",
+        "isCorrect": true,
+        "rationale": "La norma protege explícitamente a las trabajadoras en estado de gestación prohibiendo cualquier levantamiento manual de carga."
+      },
+      {
+        "text": "40 kg como límite operativo diario y libre para varones en tareas habituales.",
+        "isCorrect": false,
+        "rationale": "Los 40 kg solo se permiten en circunstancias excepcionales e ideales, no como un límite cotidiano general."
+      },
+      {
+        "text": "25 kg como límite normativo para mujeres en líneas de empaque de alta frecuencia.",
+        "isCorrect": false,
+        "rationale": "El límite de 25 kg aplica a varones; para mujeres el máximo habitual es 15 kg y disminuye ante alta frecuencia."
+      }
+    ],
+    "hint": "Diferencie los valores absolutos fijados por la norma técnica según el género del trabajador y el estado de gestación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según los parámetros técnicos de la R.M. 375-2008-TR, si el nivel de ruido continuo equivalente en una planta industrial se incrementa de 85 dB(A) a 88 dB(A), ¿cómo debe ajustarse el tiempo máximo de exposición permisible sin protección?",
+    "opciones": [
+      {
+        "text": "El tiempo máximo de exposición permisible se reduce a la mitad, quedando limitado a 4 horas.",
+        "isCorrect": true,
+        "rationale": "La norma establece una tasa de cambio de 3 dB; por cada 3 dB de incremento sobre el límite base de 85 dB(A) para 8 horas, el tiempo de exposición se divide entre dos."
+      },
+      {
+        "text": "El tiempo máximo de exposición se mantiene en 8 horas siempre que se entreguen tapones auditivos de inserción.",
+        "isCorrect": false,
+        "rationale": "El valor límite normativo de exposición ambiental exige el control del tiempo independientemente de la entrega de equipos de protección."
+      },
+      {
+        "text": "El tiempo de exposición se disminuye proporcionalmente a 6 horas operativas.",
+        "isCorrect": false,
+        "rationale": "La escala de atenuación reglamentaria es logarítmica y reduce el tiempo a la mitad por cada 3 dB, no de forma lineal."
+      },
+      {
+        "text": "Se requiere la suspensión inmediata e indefinida de las operaciones en el área de trabajo.",
+        "isCorrect": false,
+        "rationale": "Un nivel de 88 dB(A) no exige el cierre, sino la gestión del tiempo de exposición a 4 horas o el control de la fuente."
+      },
+      {
+        "text": "El tiempo máximo permisible permanece inalterado, puesto que la reducción de tiempo inicia a los 90 dB(A).",
+        "isCorrect": false,
+        "rationale": "En la normativa peruana el umbral base es 85 dB(A) para 8 horas, iniciando la restricción temporal al superar esa cifra."
+      }
+    ],
+    "hint": "Aplica la regla de intercambio o tasa de incremento en decibeles que reduce a la mitad la duración segura de la jornada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante una auditoría de fiscalización por parte de Sunafil en materia de ergonomía, ¿qué evidencia objetiva resulta indispensable para demostrar cumplimiento real, más allá de presentar documentos y planes en papel?",
+    "opciones": [
+      {
+        "text": "Constancia de implementación efectiva de controles de ingeniería u organizativos en los puestos evaluados.",
+        "isCorrect": true,
+        "rationale": "Sunafil fiscaliza el paso de la identificación del riesgo a la acción concreta, exigiendo probar que se ejecutaron mejoras en las condiciones de trabajo."
+      },
+      {
+        "text": "Facturas de adquisición de mobiliario administrativo genérico sin estudios disergonómicos previos.",
+        "isCorrect": false,
+        "rationale": "Comprar equipos sin sustento técnico ni evaluación antropométrica no demuestra la resolución de los riesgos identificados."
+      },
+      {
+        "text": "Registros de firma de los colaboradores en el reglamento interno de trabajo sin actas de capacitación.",
+        "isCorrect": false,
+        "rationale": "La simple firma del reglamento no prueba el cumplimiento de las capacitaciones específicas ni la efectividad de las medidas correctivas."
+      },
+      {
+        "text": "Copias archivadas de los contratos de trabajo con cláusulas genéricas de prevención.",
+        "isCorrect": false,
+        "rationale": "Las cláusulas contractuales no sustituyen los monitoreos disergonómicos ni los informes de intervención en planta."
+      },
+      {
+        "text": "Cartas firmadas por los operarios donde declaren no sentir molestias músculoesqueléticas.",
+        "isCorrect": false,
+        "rationale": "Las declaraciones individuales no eximen al empleador de presentar la evaluación cuantitativa de riesgos y sus controles ejecutados."
+      }
+    ],
+    "hint": "Considere la diferencia entre tener instrumentos teóricos de gestión e implementar modificaciones físicas o procedimentales demostrables en el puesto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la integración de la ergonomía con la filosofía Lean Manufacturing, ¿a qué término de desperdicio se asocia directamente la sobrecarga física o mental ejercida sobre el trabajador al superar sus capacidades fisiológicas?",
+    "opciones": [
+      {
+        "text": "Muri",
+        "isCorrect": true,
+        "rationale": "Representa la sobrecarga o exigencia excesiva impuesta a los recursos humanos o máquinas, excediendo sus límites naturales de capacidad."
+      },
+      {
+        "text": "Muda",
+        "isCorrect": false,
+        "rationale": "Designa el desperdicio general o la actividad que consume recursos sin añadir valor, como movimientos innecesarios."
+      },
+      {
+        "text": "Mura",
+        "isCorrect": false,
+        "rationale": "Hace referencia a la variabilidad, inconsistencia o falta de uniformidad en los flujos de trabajo."
+      },
+      {
+        "text": "Kaizen",
+        "isCorrect": false,
+        "rationale": "Es el concepto enfocado en la mejora continua de los procesos operativos y organizacionales."
+      },
+      {
+        "text": "Poka-yoke",
+        "isCorrect": false,
+        "rationale": "Se refiere al diseño de mecanismos a prueba de errores imprevistos en la línea de producción."
+      }
+    ],
+    "hint": "Identifique el término japonés que designa el exceso, la irracionalidad o la sobreexigencia en la carga de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al comparar el paradigma tradicional de la ergonomía con la visión estratégica moderna, ¿cuál es el cambio fundamental en la gestión operacional de las empresas?",
+    "opciones": [
+      {
+        "text": "Evolucionar de un modelo reactivo orientado únicamente a evitar multas hacia una inversión estratégica proactiva enfocada en la sostenibilidad y eficiencia.",
+        "isCorrect": true,
+        "rationale": "El nuevo paradigma concibe la ergonomía como una palanca que potencia la productividad, la calidad y el bienestar simultáneamente."
+      },
+      {
+        "text": "Sustituir los análisis cuantitativos por valoraciones cualitativas basadas en la percepción directa del supervisor.",
+        "isCorrect": false,
+        "rationale": "La ergonomía moderna exige mayor rigor técnico mediante datos duros y metodologías científicas validadas."
+      },
+      {
+        "text": "Priorizar la adquisición de mobiliario administrativo frente al rediseño de las líneas de producción industrial.",
+        "isCorrect": false,
+        "rationale": "La visión estratégica abarca todos los procesos críticos del negocio, priorizando las áreas operativas de mayor riesgo de falla."
+      },
+      {
+        "text": "Tratar la salud ocupacional como un costo fijo no recuperable dentro de los presupuestos anuales.",
+        "isCorrect": false,
+        "rationale": "El enfoque moderno demuestra que la buena ergonomía genera un retorno financiero medible sobre la inversión realizada."
+      },
+      {
+        "text": "Transferir la responsabilidad de la adaptación del puesto de trabajo a la autogestión exclusiva del colaborador.",
+        "isCorrect": false,
+        "rationale": "El diseño del sistema de trabajo es responsabilidad del empleador mediante ingeniería y gestión de procesos."
+      }
+    ],
+    "hint": "Analice el paso de un enfoque reactivo basado en costos de cumplimiento a un enfoque preventivo alineado con el rendimiento corporativo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Durante el diseño ergonómico de una cabina de operador para maquinaria pesada en la minería peruana, ¿qué consideraciones antropométricas y organizacionales se deben aplicar para evitar lesiones estructurales de la columna?",
+    "opciones": [
+      {
+        "text": "Utilizar datos antropométricos locales, considerando que la estatura promedio peruana difiere de los estándares de diseño foráneos.",
+        "isCorrect": true,
+        "rationale": "Adecuar las dimensiones a los promedios locales evita que el operador trabaje en rangos de extensión forzada de cuello y extremidades."
+      },
+      {
+        "text": "Incorporar sistemas de ajustabilidad en el asiento y mandos, como suspensión de aire y regulación de alcance.",
+        "isCorrect": true,
+        "rationale": "La regulabilidad permite acomodar la variabilidad de la población dentro de los límites de postura neutra y amortiguar vibraciones."
+      },
+      {
+        "text": "Ubicar la palanca de mandos primarios dentro de la zona de poder del operador, evitando giros de tronco.",
+        "isCorrect": true,
+        "rationale": "Disponer los elementos de alta frecuencia de uso cerca del cuerpo previene momentos flectores nocivos sobre la columna lumbar."
+      },
+      {
+        "text": "Fijar la posición del asiento de manera rígida para garantizar la resistencia estructural frente a colisiones.",
+        "isCorrect": false,
+        "rationale": "Un asiento rígido e inamovible impide la adaptación postural del operario, provocando tensiones crónicas."
+      },
+      {
+        "text": "Capacitar al operador para que fuerce la adaptación de su biomecánica a las medidas estáticas del equipo importado.",
+        "isCorrect": false,
+        "rationale": "El principio ergonómico establece que el puesto debe adaptarse a la persona y nunca a la inversa."
+      }
+    ],
+    "hint": "Identifique las variables de ajuste físico y la ubicación espacial de los controles acordes con la población usuaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la Ley N.º 31572 en Perú, ¿cuál es el alcance de la responsabilidad del empleador respecto a los riesgos disergonómicos en la modalidad de teletrabajo?",
+    "opciones": [
+      {
+        "text": "La responsabilidad de la empresa se extiende al espacio domiciliario de trabajo, debiendo facilitar pautas de autoevaluación guiada y herramientas de control.",
+        "isCorrect": true,
+        "rationale": "La norma establece que el empleador debe garantizar la prevención de riesgos disergonómicos en el espacio remoto provisto por el trabajador mediante mecanismos de verificación guiados."
+      },
+      {
+        "text": "El empleador queda eximido de responsabilidad al no poder realizar inspecciones físicas presenciales e inopinadas en el domicilio.",
+        "isCorrect": false,
+        "rationale": "La falta de presencia física no anula la responsabilidad legal de la empresa respecto a la salud ocupacional del teletrabajador."
+      },
+      {
+        "text": "La ley exige la remodelación arquitectónica obligatoria de la vivienda por parte de la empresa antes de iniciar la modalidad.",
+        "isCorrect": false,
+        "rationale": "La norma exige acondicionamiento e información ergonómica, no la alteración física o reconstrucción de la propiedad privada."
+      },
+      {
+        "text": "Se transfiere la responsabilidad legal de la evaluación IPERC íntegramente al teletrabajador.",
+        "isCorrect": false,
+        "rationale": "El empleador mantiene la titularidad del sistema de gestión de seguridad y salud, debiendo procesar la información recopilada."
+      },
+      {
+        "text": "La regulación limita el control a la entrega de computadoras sin considerar accesorios periféricos ni pausas activas.",
+        "isCorrect": false,
+        "rationale": "La gestión abarca la postura, la iluminación, el uso de mouse/teclado externo y la organización de los tiempos de descanso."
+      }
+    ],
+    "hint": "Considere la extensión de las obligaciones de la empresa al espacio del hogar y los mecanismos para su gestión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Un colaborador realiza trabajo remoto frente a una computadora portátil en su domicilio. ¿Cuáles de las siguientes pautas técnicas resultan indispensables en su autoevaluación ergonómica?",
+    "opciones": [
+      {
+        "text": "Alinear el borde superior de la pantalla a la altura de los ojos para mantener la columna cervical en postura neutra.",
+        "isCorrect": true,
+        "rationale": "Evita la flexión continuada del cuello, previniendo la sobrecarga muscular en la zona trapezoide y cervical."
+      },
+      {
+        "text": "Utilizar teclado y mouse independientes conectados a la laptop para permitir un correcto apoyo de antebrazos.",
+        "isCorrect": true,
+        "rationale": "Evita la elevación de hombros y la desviación de muñecas que genera el uso directo del teclado y touchpad integrado del equipo portátil."
+      },
+      {
+        "text": "Mantener la espalda apoyada firmemente en el respaldo lumbar y los pies asentados sobre el suelo o reposapiés.",
+        "isCorrect": true,
+        "rationale": "Garantiza la distribución homogénea de presiones en los discos intervertebrales y favorece el retorno venoso en extremidades inferiores."
+      },
+      {
+        "text": "Uso preferente del equipo en el sofá sosteniendo la laptop sobre las rodillas para fomentar el confort muscular.",
+        "isCorrect": false,
+        "rationale": "Esa posición fuerza una flexión severa de la columna vertebral y el cuello, acelerando la fatiga músculoesquelética."
+      },
+      {
+        "text": "Ubicar la mesa frente a ventanas sin cortinas para aprovechar el brillo directo del sol sobre el monitor.",
+        "isCorrect": false,
+        "rationale": "La luz solar directa sobre la pantalla crea deslumbramientos y reflejos que provocan fatiga visual y posturas compensatorias nocivas."
+      }
+    ],
+    "hint": "Seleccione los criterios que garantizan la postura neutra de la columna cervical, el apoyo articular y la estabilidad biomecánica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto del análisis predictivo de puestos de trabajo mediante plataformas digitales como Ergo GU-IBB, ¿cuál es la ventaja metodológica del uso de gemelos virtuales (wireframes)?",
+    "opciones": [
+      {
+        "text": "Permite simular el puesto de trabajo digitalmente para predecir el impacto de rediseños en el nivel de riesgo antes de ejecutar inversiones físicas.",
+        "isCorrect": true,
+        "rationale": "La simulación computarizada elimina la incertidumbre al evaluar el beneficio ergonómico de un cambio de puesto en la fase de diseño previo."
+      },
+      {
+        "text": "Exime a la empresa de realizar monitoreos de campo y mediciones ambientales cuantitativas.",
+        "isCorrect": false,
+        "rationale": "La simulación es una herramienta de diseño predictivo que complementa, pero no anula, la verificación del entorno operativo real."
+      },
+      {
+        "text": "Elimina el factor de variabilidad biomecánica individual de los trabajadores en las líneas de ensamble.",
+        "isCorrect": false,
+        "rationale": "El gemelo virtual modela datos antropométricos, pero no elimina la variabilidad biológica del personal."
+      },
+      {
+        "text": "Sustituye por completo el uso de electromiografía y sensores inerciales en análisis de alta precisión.",
+        "isCorrect": false,
+        "rationale": "El software de análisis postural de imagen y los sensores de contacto biomecánico se complementan para diferentes niveles de estudio."
+      },
+      {
+        "text": "Genera de manera automática la exención de impuestos laborales por adquisiciones industriales.",
+        "isCorrect": false,
+        "rationale": "No posee implicancias tributarias; es una herramienta técnica para la optimización de procesos y prevención de riesgos."
+      }
+    ],
+    "hint": "Piense en la capacidad de evaluar modificaciones de diseño en un entorno digital antes de realizar desembolsos económicos en planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la evaluación biomecánica avanzada mediante tecnología vestible (wearables), ¿qué parámetro fisiológico cuantifica la electromiografía de superficie (sEMG) combinada con sensores inerciales (IMUs)?",
+    "opciones": [
+      {
+        "text": "La actividad eléctrica muscular para detectar estados de tensión y fatiga imperceptibles a la observación directa.",
+        "isCorrect": true,
+        "rationale": "La sEMG registra los impulsos microeléctricos del músculo, revelando la sobrecarga interna antes de que se traduzca en una falla o movimiento visible."
+      },
+      {
+        "text": "El grado de refracción lumínica que incide sobre la córnea del trabajador durante la jornada.",
+        "isCorrect": false,
+        "rationale": "Ese parámetro evalúa la fatiga visual o iluminación, no la respuesta neuromuscular captada por sEMG."
+      },
+      {
+        "text": "La tasa de evaporación del sudor para calcular el estrés térmico en recintos cerrados.",
+        "isCorrect": false,
+        "rationale": "La sudoración se relaciona con la termorregulación ambiental y no con la señal eléctrica del tejido muscular."
+      },
+      {
+        "text": "La concentración de contaminantes químicos absorbidos a través del torrente sanguíneo.",
+        "isCorrect": false,
+        "rationale": "Corresponde a monitoreos de higiene industrial y toxicología, no a mediciones de biomecánica de la tensión muscular."
+      },
+      {
+        "text": "La resistencia mecánica del calzado de seguridad frente a cargas estáticas.",
+        "isCorrect": false,
+        "rationale": "Es una prueba destructiva o de ingeniería sobre equipos de protección individual, completamente ajena a la electromiografía humana."
+      }
+    ],
+    "hint": "Considere qué variable mide el nivel de activación eléctrica de las fibras musculares frente a esfuerzos invisibles a simple vista.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Respecto al uso de exoesqueletos ocupacionales como tecnología de asistencia física en la industria, ¿cuáles de las siguientes afirmaciones son técnicamente correctas?",
+    "opciones": [
+      {
+        "text": "Los exoesqueletos de soporte lumbar reducen la fuerza de compresión en las vértebras durante la manipulación de cargas.",
+        "isCorrect": true,
+        "rationale": "Asisten a la musculatura erectora de la columna redistribuyendo la carga sobre cadera y muslos durante el levantamiento."
+      },
+      {
+        "text": "Los exoesqueletos de hombro disminuyen el desgaste muscular en tareas que exigen mantener los brazos elevados.",
+        "isCorrect": true,
+        "rationale": "Proporcionan par de asistencia mecánica superior reduciendo la contracción continua del deltoides y supraespinoso."
+      },
+      {
+        "text": "Su implementación exige adaptar las dimensiones mecánicas del equipo a la antropometría de la población local.",
+        "isCorrect": true,
+        "rationale": "Un descalce antropométrico en el exoesqueleto puede desplazar los centros de rotación articular creando nuevos riesgos biomecánicos."
+      },
+      {
+        "text": "Permiten sobrepasar de forma indefinida los límites normativos de carga fijados por la RM 375-2008-TR.",
+        "isCorrect": false,
+        "rationale": "El exoesqueleto es una medida complementaria de asistencia, no una justificación legal para ignorar los límites de carga normados."
+      },
+      {
+        "text": "Sustituyen la necesidad de implementar controles de ingeniería primarios en el diseño del puesto.",
+        "isCorrect": false,
+        "rationale": "En la jerarquía de controles, la reingeniería del puesto antecede al uso de equipamiento asistencial o de protección."
+      }
+    ],
+    "hint": "Diferencie el área biomecánica asistida según el tipo de estructura del exoesqueleto y la importancia de la adaptación antropométrica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En operaciones mineras o de transporte pesado con regímenes atípicos, ¿cuál es el impacto directo de la acumulación de fatiga no gestionada sobre los indicadores de producción?",
+    "opciones": [
+      {
+        "text": "Existe una correlación directa entre picos de microfatiga, la caída en las toneladas movidas por hora y el aumento de accidentes.",
+        "isCorrect": true,
+        "rationale": "La fatiga degrada la precisión psicomotora del operario, disminuyendo el rendimiento operativo y elevando la accidentabilidad crítica."
+      },
+      {
+        "text": "La fatiga incrementa la velocidad de reacción muscular debido a la secreción sostenida de adrenalina en el turno.",
+        "isCorrect": false,
+        "rationale": "La fatiga disminuye progresivamente los tiempos de respuesta psicomotora y la capacidad de juicio del trabajador."
+      },
+      {
+        "text": "El agotamiento acumulado no altera el rendimiento ni la seguridad si se compensa con bonificaciones financieras.",
+        "isCorrect": false,
+        "rationale": "Los incentivos económicos no neutralizan el deterioro neurofisiológico provocado por la falta de descanso."
+      },
+      {
+        "text": "La fatiga incide en la percepción subjetiva de confort sin afectar las métricas de rendimiento ni la tasa de colisiones.",
+        "isCorrect": false,
+        "rationale": "Existen datos empíricos que prueban la pérdida de productividad física y el aumento drástico de eventos catastróficos."
+      },
+      {
+        "text": "Los esquemas de turno de 14x7 eliminan automáticamente la fatiga crónica a partir del tercer día de trabajo.",
+        "isCorrect": false,
+        "rationale": "Los turnos atípicos prolongados imponen una severa exigencia al ritmo circadiano que acumula fatiga si no hay gestión activa."
+      }
+    ],
+    "hint": "Analice la relación entre la degradación fisiológica del estado de alerta y el desempeño volumétrico de la maquinaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el desarrollo de proyectos de mejora de puestos de trabajo, ¿en qué consiste la metodología de la ergonomía participativa?",
+    "opciones": [
+      {
+        "text": "Involucrar activamente a los propios trabajadores en la identificación de los peligros disergonómicos y en la propuesta de soluciones.",
+        "isCorrect": true,
+        "rationale": "Aprovecha la experiencia directa del operario para diseñar mejoras realistas, acelerando la aceptación y eficacia de los cambios."
+      },
+      {
+        "text": "Delegar la toma de decisiones técnicas de manera exclusiva a un comité de gerentes sin consulta en planta.",
+        "isCorrect": false,
+        "rationale": "El enfoque participativo requiere la inclusión horizontal del personal operativo que ejecuta la tarea diariamente."
+      },
+      {
+        "text": "Permitir que los trabajadores elijan de forma individual sus horarios y cuotas de producción diaria sin fiscalización.",
+        "isCorrect": false,
+        "rationale": "No implica la pérdida de control de procesos, sino la colaboración en el diseño seguro y eficiente del puesto de trabajo."
+      },
+      {
+        "text": "Subcontratar la totalidad de las propuestas de intervención a proveedores de mobiliario externo.",
+        "isCorrect": false,
+        "rationale": "Comprar soluciones empaquetadas sin consultar al usuario interno vulnera el principio de análisis participativo de la tarea real."
+      },
+      {
+        "text": "Realizar encuestas anuales de satisfacción laboral sin vinculación técnica con la matriz IPERC.",
+        "isCorrect": false,
+        "rationale": "La ergonomía participativa implica talleres operativos y mesas de rediseño técnico, no simples encuestas de clima."
+      }
+    ],
+    "hint": "Considere la fuente directa de conocimiento sobre los dolores del puesto y la integración de los actores clave de la planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con los casos de estudio aplicados en empresas de la industria peruana, ¿qué resultado arroja el análisis de la relación beneficio-costo (ROI) en programas de intervención ergonómica?",
+    "opciones": [
+      {
+        "text": "Por cada sol invertido en mejoras ergonómicas, las empresas recuperan S/ 2.54 por aumento de productividad y reducción de ausentismo.",
+        "isCorrect": true,
+        "rationale": "El cálculo de ROI demuestra que el rediseño ergonómico genera un retorno financiero positivo superior al capital inicial desembolsado."
+      },
+      {
+        "text": "La inversión genera un retorno neutro de S/ 1.00 por sol invertido, alcanzando únicamente el punto de equilibrio.",
+        "isCorrect": false,
+        "rationale": "La evidencia demuestra que el retorno supera sustancialmente el punto de equilibrio financiero."
+      },
+      {
+        "text": "Los costos de implementación superan a los beneficios devueltos, obteniéndose S/ 0.50 por cada sol destinado.",
+        "isCorrect": false,
+        "rationale": "Tratar la ergonomía como pérdida es una percepción del enfoque tradicional desmentida por los datos de ROI operacional."
+      },
+      {
+        "text": "El retorno monetario es incalculable debido a que los beneficios solo pueden expresarse en variables cualitativas.",
+        "isCorrect": false,
+        "rationale": "Existen metodologías financieras validadas para monetizar las ganancias por eficiencia y la reducción de gastos médicos."
+      },
+      {
+        "text": "El beneficio económico solo se materializa si la empresa recibe subsidios tributarios del Estado.",
+        "isCorrect": false,
+        "rationale": "El valor se genera internamente mediante la eliminación de fallas, la reducción de descansos médicos y la ganancia de velocidad de proceso."
+      }
+    ],
+    "hint": "Identifique la cifra de retorno monetario por cada sol invertido en la reingeniería disergonómica de los puestos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso de estudio del sector agroexportador de empaque (packing) en Perú, ¿qué paquete de medidas técnicas permitió reducir el riesgo RULA de un nivel crítico de 14 a un nivel tolerable de 3?",
+    "opciones": [
+      {
+        "text": "Implementación de plataformas de altura regulable, rotación programada de tareas cada 2 horas y capacitación en higiene postural.",
+        "isCorrect": true,
+        "rationale": "La combinación de controles de ingeniería (plataformas ajustables) con medidas organizativas (rotación) redujo drásticamente las posturas forzadas."
+      },
+      {
+        "text": "Sustitución completa de la fuerza de trabajo humana por brazos robóticos de alta velocidad.",
+        "isCorrect": false,
+        "rationale": "La intervención optimizó el puesto para el trabajador humano mediante adaptaciones ergonómicas, sin automatización total."
+      },
+      {
+        "text": "Incremento de la velocidad de la faja transportadora para reducir el tiempo de contacto del personal con la fruta.",
+        "isCorrect": false,
+        "rationale": "Aumentar la velocidad de la faja eleva la repetitividad y la fatiga, incrementando el riesgo disergonómico en lugar de bajarlo."
+      },
+      {
+        "text": "Reducción de la jornada laboral a la mitad congelando las dimensiones fijas del mobiliario.",
+        "isCorrect": false,
+        "rationale": "Sin corregir la postura forzada mediante ingeniería, la reducción horaria no elimina el pico de riesgo postural de la tarea."
+      },
+      {
+        "text": "Elevación estática de las mesas de empaque para obligar al personal a trabajar en bipedestación rígida.",
+        "isCorrect": false,
+        "rationale": "Las mesas fijas imponen malas posturas a quienes no calzan con esa altura; la clave del éxito fue la regulabilidad de las plataformas."
+      }
+    ],
+    "hint": "Identifique la combinación de modificaciones mecánicas regulables, esquemas de descanso y adiestramiento corporal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la intervención desarrollada en talleres de costura de MIPEs en el Callao, ¿cuál fue el impacto de implementar adaptaciones ergonómicas de bajo costo como cojines de soporte, ajuste de iluminación y formación en postura?",
+    "opciones": [
+      {
+        "text": "Se redujo en un 76% la prevalencia de lumbalgia y en un 69% el dolor de cuello en los colaboradores.",
+        "isCorrect": true,
+        "rationale": "Los datos empíricos del estudio demostraron caídas drásticas en las molestias músculoesqueléticas mediante intervenciones de bajo costo."
+      },
+      {
+        "text": "La tasa de molestias músculoesqueléticas se mantuvo inalterada al no reemplazarse las máquinas de coser.",
+        "isCorrect": false,
+        "rationale": "El estudio probó que intervenciones sencillas en el punto de contacto postural generan mejoras masivas sin cambiar las máquinas."
+      },
+      {
+        "text": "Las dolencias lumbares se incrementaron levemente debido al tiempo destinado a las pausas activas.",
+        "isCorrect": false,
+        "rationale": "Las pausas activas y los soportes lumbares reducen el espasmo muscular, disminuyendo la incidencia del dolor."
+      },
+      {
+        "text": "Se logró erradicar totalmente las fallas de calidad en la costura sin registrar impacto en la salud de las trabajadoras.",
+        "isCorrect": false,
+        "rationale": "El impacto principal medido fue la reducción sustancial del dolor físico en lumbalgias y cervicalgias."
+      },
+      {
+        "text": "El programa fracasó debido a la negativa de las operarias a modificar sus hábitos posturales cotidianos.",
+        "isCorrect": false,
+        "rationale": "La intervención demostró una alta efectividad al lograr la aceptación y la consecuente reducción de los síntomas físicos."
+      }
+    ],
+    "hint": "Recuerde los porcentajes de disminución de la prevalencia de dolencias en la zona lumbar y cervical de las operarias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-74",
+    "diplomado": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué pilares se interconectan para consolidar el ciclo virtuoso de la ergonomía industrial en las empresas en Perú?",
+    "opciones": [
+      {
+        "text": "El marco legal reglamentario como base o cimiento de cumplimiento indispensable.",
+        "isCorrect": true,
+        "rationale": "La legislación fija los parámetros mínimos obligatorios que garantizan un piso de seguridad para el capital humano."
+      },
+      {
+        "text": "El diseño de ingeniería centrado en las características antropométricas del trabajador local y el control del entorno.",
+        "isCorrect": true,
+        "rationale": "Garantiza la adaptación técnica de los puestos de trabajo minimizando la fatiga biomecánica y ambiental."
+      },
+      {
+        "text": "La optimización del rendimiento que eleva la productividad y genera retornos financieros reinvestibles en el sistema.",
+        "isCorrect": true,
+        "rationale": "La mayor eficiencia genera recursos económicos que retroalimentan la inversión en mejores condiciones de trabajo."
+      },
+      {
+        "text": "La maximización del trabajo a destajo forzando ritmos dictados exclusivamente por la maquinaria.",
+        "isCorrect": false,
+        "rationale": "Forzar ritmos por encima de la capacidad humana rompe el equilibrio e introduce costos ocultos por lesiones y fallas."
+      },
+      {
+        "text": "La estandarización rígida de puestos utilizando mobiliario importado no regulable.",
+        "isCorrect": false,
+        "rationale": "La falta de ajustabilidad entra en conflicto directo con los principios de adaptación antropométrica del puesto a la persona."
+      }
+    ],
+    "hint": "Considere la secuencia lógica que une la norma técnica, el diseño centrado en la persona y los resultados operativos de la empresa.",
+    "activo": true
+  }
+]

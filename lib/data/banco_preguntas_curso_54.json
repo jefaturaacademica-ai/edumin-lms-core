@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representan las siglas QA y QC en el contexto del aseguramiento y control de la calidad en procesos mineros?",
+    "opciones": [
+      {
+        "text": "Quality Assurance y Quality Control",
+        "isCorrect": true,
+        "rationale": "En la gestión de proyectos e industria, QA corresponde al aseguramiento de la calidad (garantizar procesos) y QC al control de la calidad (verificación del producto)."
+      },
+      {
+        "text": "Quantity Assessment y Quality Control",
+        "isCorrect": false,
+        "rationale": "Aunque la evaluación de cantidad es relevante en minería, la sigla QA refiere conceptualmente al aseguramiento de la calidad."
+      },
+      {
+        "text": "Quality Audit y Quality Certification",
+        "isCorrect": false,
+        "rationale": "Las auditorías y certificaciones son herramientas del sistema, pero no corresponden al significado directo de las siglas del programa QA/QC."
+      },
+      {
+        "text": "Quantitative Analysis y Qualitative Control",
+        "isCorrect": false,
+        "rationale": "Estos términos refieren a tipos de análisis químico o estadístico, pero no corresponden a la nomenclatura estándar de aseguramiento y control de calidad."
+      },
+      {
+        "text": "Quick Action y Quality Compliance",
+        "isCorrect": false,
+        "rationale": "Aunque la rapidez de acción y el cumplimiento son deseables, no constituyen la definición oficial del acrónimo QA/QC."
+      }
+    ],
+    "hint": "Corresponde a los términos en inglés para aseguramiento y control de la calidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la teoría de gestión de proyectos aplicada a la calidad, ¿cuáles son los tres elementos que componen el denominado 'triple bottom line' o restricción triple?",
+    "opciones": [
+      {
+        "text": "Tiempo, alcance y costo",
+        "isCorrect": true,
+        "rationale": "Estos tres pilares definen los límites del proyecto; cualquier variación en el tiempo, alcance o costo impacta directamente en la calidad negociada."
+      },
+      {
+        "text": "Seguridad, medio ambiente y rentabilidad",
+        "isCorrect": false,
+        "rationale": "Si bien son objetivos clave de la minería, no conforman la tríada clásica de gestión de restricciones de proyectos."
+      },
+      {
+        "text": "Planificación, ejecución y monitoreo",
+        "isCorrect": false,
+        "rationale": "Estos corresponden a etapas o grupos de procesos en el ciclo de vida de la gestión de un proyecto."
+      },
+      {
+        "text": "Leyes, reglamentos y licencias sociales",
+        "isCorrect": false,
+        "rationale": "Representan aspectos normativos e institucionales externos, no las restricciones operativas directas de la restricción triple."
+      },
+      {
+        "text": "Muestreo, ensayo y laboratorio",
+        "isCorrect": false,
+        "rationale": "Corresponden a procedimientos de control operativo de leyes minerales y no al marco de restricciones de proyectos."
+      }
+    ],
+    "hint": "Piensa en las tres restricciones fundamentales de todo proyecto descritas por el marco del PMI.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el protocolo de QA/QC en el muestreo geológico presentado en el curso, ¿para qué se utiliza la inserción de estándares o materiales de referencia certificados?",
+    "opciones": [
+      {
+        "text": "Para medir y evaluar la exactitud de los resultados del laboratorio",
+        "isCorrect": true,
+        "rationale": "Los estándares poseen valores conocidos con precisión, por lo que desviaciones al analizarlos revelan problemas de exactitud en el laboratorio."
+      },
+      {
+        "text": "Para reducir el costo total de los ensayos analíticos",
+        "isCorrect": false,
+        "rationale": "La inserción de materiales de control agrega un costo operativo con el fin de garantizar calidad, no de reducir costos."
+      },
+      {
+        "text": "Para determinar la presencia de contaminación en la etapa de preparación",
+        "isCorrect": false,
+        "rationale": "La detección de contaminación entre muestras se evalúa mediante el envío de muestras estériles o blancos, no de estándares."
+      },
+      {
+        "text": "Para sustituir el proceso de homogenización de muestras en campo",
+        "isCorrect": false,
+        "rationale": "Los estándares son materiales ya preparados que se insertan en la cadena de custodia, no reemplazan el trabajo de muestra primaria."
+      },
+      {
+        "text": "Para acelerar los tiempos de respuesta de los ensayos químicos",
+        "isCorrect": false,
+        "rationale": "El uso de materiales de referencia verifica la veracidad analítica pero no altera la velocidad del proceso de ensaye."
+      }
+    ],
+    "hint": "Se busca comprobar qué tan cerca del valor verdaderamente real se encuentran los resultados reportados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes componentes forman parte clave de la gestión integral de un programa de QA/QC en minería?",
+    "opciones": [
+      {
+        "text": "Planificación y definición de estrategias desde las fases iniciales",
+        "isCorrect": true,
+        "rationale": "Establece la estructura, responsabilidades y alcance del control de calidad desde la exploración hasta el cierre."
+      },
+      {
+        "text": "Establecimiento de normas y procedimientos operativos claros",
+        "isCorrect": true,
+        "rationale": "Permite alinear las operaciones con los requisitos legales, ambientales e industriales obligatorios."
+      },
+      {
+        "text": "Mecanismos continuos de monitoreo y control en tiempo real",
+        "isCorrect": true,
+        "rationale": "Garantiza la supervisión continua para detectar desviaciones de calidad de manera oportuna."
+      },
+      {
+        "text": "Implementación de metodologías de evaluación y mejora continua",
+        "isCorrect": true,
+        "rationale": "Asegura la optimización iterativa del sistema a lo largo del ciclo de vida del proyecto mediante revisiones y auditorías."
+      },
+      {
+        "text": "Eliminación completa de la necesidad de realizar auditorías externas",
+        "isCorrect": false,
+        "rationale": "Las auditorías externas continúan siendo indispensables para la verificación objetiva y la certificación de estándares como los ISO."
+      }
+    ],
+    "hint": "Considera los pilares metodológicos que abarca un sistema QA/QC en todo su ciclo de vida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se definió el concepto de 'calidad' en el desarrollo de las clases del curso?",
+    "opciones": [
+      {
+        "text": "Como el cumplimiento estricto de las características y especificaciones negociadas con el cliente",
+        "isCorrect": true,
+        "rationale": "La calidad se satisface cuando el producto final cumple de forma precisa con los requisitos previamente pactados."
+      },
+      {
+        "text": "Como la adquisición de la tecnología más cara e innovadora disponible en el mercado",
+        "isCorrect": false,
+        "rationale": "Poseer tecnología costosa no garantiza calidad si el producto no responde a los requerimientos del cliente."
+      },
+      {
+        "text": "Como la extracción de la mayor cantidad de volumen mineral sin importar las impurezas",
+        "isCorrect": false,
+        "rationale": "El volumen masivo sin control de ley ni eliminación de impurezas perjudica el cumplimiento de especificaciones del comprador."
+      },
+      {
+        "text": "Como la ausencia total de costos operacionales en las etapas de minado",
+        "isCorrect": false,
+        "rationale": "Buscar calidad puede optimizar costos, pero la definición de calidad radica en cumplir requerimientos, no en el costo cero."
+      },
+      {
+        "text": "Como el rendimiento invariable del 100% en todas las máquinas de la planta",
+        "isCorrect": false,
+        "rationale": "El rendimiento mecánico es un factor operativo, mientras que la calidad es la conformidad del producto/servicio con la demanda."
+      }
+    ],
+    "hint": "Se relaciona con satisfacer las especificaciones acordadas entre la oferta y la demanda.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el protocolo de control de calidad de muestras en terreno, ¿cuál es el procedimiento correcto para generar una 'muestra gemela'?",
+    "opciones": [
+      {
+        "text": "Tomar una muestra, homogeneizarla, dividirla en dos partes y enviarlas al laboratorio etiquetadas con nombres o códigos distintos",
+        "isCorrect": true,
+        "rationale": "Permite verificar la precisión del laboratorio al analizar dos porciones de una misma muestra sin que el analista reconozca el duplicado."
+      },
+      {
+        "text": "Tomar dos muestras de diferentes sondajes situados a más de 100 metros de distancia",
+        "isCorrect": false,
+        "rationale": "Muestras de puntos alejados presentan heterogeneidad geológica y no sirven para evaluar precisión analítica."
+      },
+      {
+        "text": "Utilizar material estéril de cuarzo comercial para enviarlo con la misma etiqueta que la muestra mineralizada",
+        "isCorrect": false,
+        "rationale": "El material estéril se utiliza como 'blanco' para verificar contaminación, no para duplicados o precisión."
+      },
+      {
+        "text": "Enviar la misma muestra dos veces consecutivas al mismo laboratorio utilizando siempre el mismo código original",
+        "isCorrect": false,
+        "rationale": "Si el laboratorio ve el mismo código, reconocerá la muestra y el ensayo ciego de precisión perderá validez."
+      },
+      {
+        "text": "Mezclar el mineral extraído con reactivos de flotación antes de embolsarlo para su despacho",
+        "isCorrect": false,
+        "rationale": "Alterar químicamente la muestra en terreno contamina la muestra primaria e invalida el ensayo geológico."
+      }
+    ],
+    "hint": "Consiste en un duplicado 'ciego' obtenido a partir de la división de una única muestra homogeneizada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión y evaluación de riesgos operacionales de calidad, ¿cuál es la relación básica empleada para calcular el nivel de riesgo?",
+    "opciones": [
+      {
+        "text": "Probabilidad multiplicada por la Severidad",
+        "isCorrect": true,
+        "rationale": "El nivel de riesgo se obtiene ponderando la frecuencia esperada del suceso por la gravedad de sus consecuencias."
+      },
+      {
+        "text": "Costo directo dividido entre el Tiempo de parada",
+        "isCorrect": false,
+        "rationale": "Esta relación puede medir la tasa de pérdida económica por hora, pero no representa la matriz cualitativa/cuantitativa de riesgo."
+      },
+      {
+        "text": "Número de trabajadores dividido entre los Días sin accidentes",
+        "isCorrect": false,
+        "rationale": "Representa un cálculo estadístico de exposición laboral, no el riesgo estandarizado de una falla operacional."
+      },
+      {
+        "text": "Tonelaje procesado sumado a la Ley media del mineral",
+        "isCorrect": false,
+        "rationale": "Esa suma combina variables de producción y metalurgia, ajenas a la cuantificación del riesgo."
+      },
+      {
+        "text": "Frecuencia de monitoreo multiplicada por el Margen de ganancia",
+        "isCorrect": false,
+        "rationale": "Estas variables pertenecen al control operativo y financiero, no a la fórmula fundamental de evaluación de riesgos."
+      }
+    ],
+    "hint": "Evalúa qué tan posible es que ocurra un evento indeseado y qué tan grave sería su impacto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué mide el indicador clave de desempeño (KPI) denominado 'tasa de recuperación del mineral'?",
+    "opciones": [
+      {
+        "text": "El porcentaje de mineral valioso que se logra extraer y procesar exitosamente respecto al total ingresado",
+        "isCorrect": true,
+        "rationale": "Refleja la eficiencia del proceso metalúrgico para separar la mena útil del material estéril o relave."
+      },
+      {
+        "text": "La velocidad a la que los camiones transportan el mineral hasta la chancadora",
+        "isCorrect": false,
+        "rationale": "La velocidad del transporte es un indicador logístico, no de recuperación de especie valiosa."
+      },
+      {
+        "text": "El tiempo que toma rehabilitar ambientalmente una cancha de relaves",
+        "isCorrect": false,
+        "rationale": "Ese factor corresponde a métricas de cierre de mina y remediación ambiental."
+      },
+      {
+        "text": "La cantidad de horas consecutivas que un equipo opera sin fallas mecánicas",
+        "isCorrect": false,
+        "rationale": "Representa métricas de disponibilidad de equipo o tiempo medio entre fallas (MTBF)."
+      },
+      {
+        "text": "El número de hectáreas concesionadas que no presentan actividad extractiva",
+        "isCorrect": false,
+        "rationale": "Es una medida de gestión territorial o legal de concesiones, no un parámetro de proceso metalúrgico."
+      }
+    ],
+    "hint": "Indica la proporción de metal útil recuperado durante el procesamiento frente al contenido original.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes son Indicadores Clave de Desempeño (KPIs) comúnmente monitoreados en el control de calidad de operaciones mineras?",
+    "opciones": [
+      {
+        "text": "Tasa de recuperación del mineral valioso",
+        "isCorrect": true,
+        "rationale": "Evalúa la efectividad metalúrgica del proceso de concentración o lixiviación."
+      },
+      {
+        "text": "Tiempo de inactividad de los equipos de planta y mina",
+        "isCorrect": true,
+        "rationale": "Monitorea las paradas no programadas que afectan la productividad y los costos del proceso."
+      },
+      {
+        "text": "Nivel de cumplimiento de los estándares de seguridad laboral",
+        "isCorrect": true,
+        "rationale": "Mide la adherencia a la normativa preventiva para evitar incidentes y paradas operativas."
+      },
+      {
+        "text": "Cantidad de material desechado o contaminado en el proceso",
+        "isCorrect": true,
+        "rationale": "Indica el nivel de mermas y residuos fuera de especificación que requieren re-trabajo o disposición."
+      },
+      {
+        "text": "Cotización internacional diaria del precio del cobre en la bolsa",
+        "isCorrect": false,
+        "rationale": "El precio de mercado es una variable exógena macroeconómica, no un indicador de control operacional interno de la mina."
+      }
+    ],
+    "hint": "Selecciona las variables operacionales internas que pueden medirse y controlarse dentro de la unidad minera.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con lo expuesto sobre la gestión de residuos en el sector minero (como el caso de la empresa Resiter), ¿cuál es el objetivo central de aplicar la 'economía circular'?",
+    "opciones": [
+      {
+        "text": "Transformar y darle un segundo uso o reuso a los residuos sólidos y líquidos generados en las faenas",
+        "isCorrect": true,
+        "rationale": "La economía circular busca cerrar los ciclos de vida de los materiales recuperándolos para nuevos procesos en lugar de desecharlos."
+      },
+      {
+        "text": "Aumentar la compra de insumos plásticos desechables de un solo uso",
+        "isCorrect": false,
+        "rationale": "Es contrario a la economía circular, la cual promueve la eliminación de insumos descartables de un solo uso."
+      },
+      {
+        "text": "Almacenar indefinidamente todos los desechos en vertederos sin ningún tratamiento",
+        "isCorrect": false,
+        "rationale": "La disposición en vertederos sin tratamiento corresponde al modelo lineal tradicional de 'extraer, usar y tirar'."
+      },
+      {
+        "text": "Descargar los efluentes líquidos directamente a los ríos sin reciclaje de agua",
+        "isCorrect": false,
+        "rationale": "La economía circular promueve la recirculación y purificación del agua en la misma faena para minimizar el consumo fresco."
+      },
+      {
+        "text": "Evitar la medición de la huella de carbono en la cadena logística de la faena",
+        "isCorrect": false,
+        "rationale": "La cuantificación y reducción de la huella de carbono forma parte de las metas de sostenibilidad ligadas a la economía circular."
+      }
+    ],
+    "hint": "Busca el principio de revalorizar residuos para reincorporarlos en la cadena productiva.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué término de origen japonés se utiliza en la gestión de calidad para denominar la filosofía de 'mejora continua' de procesos de manera constante e iterativa?",
+    "opciones": [
+      {
+        "text": "Kaizen",
+        "isCorrect": true,
+        "rationale": "Kaizen es la filosofía enfocada en realizar pequeñas y continuas mejoras diarias en todos los procesos de la organización."
+      },
+      {
+        "text": "Kanban",
+        "isCorrect": false,
+        "rationale": "Kanban es un sistema visual de gestión de flujo de trabajo e inventarios, no el concepto general de mejora continua."
+      },
+      {
+        "text": "Poka-Yoke",
+        "isCorrect": false,
+        "rationale": "Poka-Yoke refiere a mecanismos a prueba de errores humanos involuntarios en el diseño operacional."
+      },
+      {
+        "text": "Andon",
+        "isCorrect": false,
+        "rationale": "Andon es un sistema de luces o señales visuales para notificar fallas en una línea de producción en tiempo real."
+      },
+      {
+        "text": "Muda",
+        "isCorrect": false,
+        "rationale": "Muda es el término japonés que significa desperdicio o despilfarro, aquello que la mejora continua busca eliminar."
+      }
+    ],
+    "hint": "Se compone de dos conceptos traducidos como 'cambio' y 'bueno' para referirse a la mejora constante.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el postulado central de la filosofía de trabajo LIN (Lean) en el ámbito del control de procesos industriales y mineros?",
+    "opciones": [
+      {
+        "text": "Maximizar la eficiencia y el valor reduciendo al mínimo indispensable todo tipo de desperdicio",
+        "isCorrect": true,
+        "rationale": "La filosofía Lean se enfoca en entregar el máximo valor al cliente eliminando el desperdicio de tiempo, recursos y materiales."
+      },
+      {
+        "text": "Duplicar el tamaño de los inventarios para prevenir imprevistos en la cadena de suministros",
+        "isCorrect": false,
+        "rationale": "Aumentar inventarios excesivos es considerado desperdicio (muda) según los principios de la filosofía Lean."
+      },
+      {
+        "text": "Aumentar los tiempos de procesamiento sin importar el consumo energético de la planta",
+        "isCorrect": false,
+        "rationale": "Extender los tiempos y gastar energía innecesaria contraviene el principio de optimización de flujos de Lean."
+      },
+      {
+        "text": "Reemplazar los sistemas de control de calidad por inspecciones únicamente finales",
+        "isCorrect": false,
+        "rationale": "Lean promueve la calidad construida en la fuente durante todo el proceso, no solo la inspección reactiva al final."
+      },
+      {
+        "text": "Ignorar la ergonomía y capacitación de los operarios para abaratar costos",
+        "isCorrect": false,
+        "rationale": "El respeto y el desarrollo del personal son pilares clave de Lean junto a la eliminación de mermas."
+      }
+    ],
+    "hint": "Su enfoque prioritario es la identificación y eliminación de todo aquello que no aporta valor (desperdicio).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representan exactamente las siglas del sistema 'CAPA' aplicado a la gestión de calidad en operaciones mineras?",
+    "opciones": [
+      {
+        "text": "Corrective and Preventive Actions (Acciones Correctivas y Preventivas)",
+        "isCorrect": true,
+        "rationale": "CAPA engloba las medidas destinadas a solucionar problemas ya ocurridos (correctivas) y a evitar la aparición de futuros fallos (preventivas)."
+      },
+      {
+        "text": "Control and Process Analysis (Control y Análisis de Procesos)",
+        "isCorrect": false,
+        "rationale": "Aunque describe actividades de calidad, no corresponde al significado del acrónimo estandarizado CAPA."
+      },
+      {
+        "text": "Continuous Assessment for Plant Operations (Evaluación Continua para Operaciones)",
+        "isCorrect": false,
+        "rationale": "Es una frase descriptiva plausible pero ajena al término normativo CAPA de gestión de calidad."
+      },
+      {
+        "text": "Certification and Product Accreditation (Certificación y Acreditación de Productos)",
+        "isCorrect": false,
+        "rationale": "Refiere a fases de auditoría externa y no a las acciones internas de tratamiento de no conformidades."
+      },
+      {
+        "text": "Capacity Allocation for Production Assurance (Asignación de Capacidad)",
+        "isCorrect": false,
+        "rationale": "Pertenece al ámbito de la planificación de capacidad productiva y no al sistema de desviaciones de calidad."
+      }
+    ],
+    "hint": "Sus dos pilares responden a corregir el presente e impedir fallas en el futuro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la gestión de la calidad, ¿cuál es la diferencia fundamental entre un 'riesgo' y un 'hecho'?",
+    "opciones": [
+      {
+        "text": "El riesgo es una posibilidad o probabilidad de ocurrencia futura, mientras que el hecho es un suceso ya concretado",
+        "isCorrect": true,
+        "rationale": "El riesgo habita en el terreno de la incertidumbre (probabilidad), mientras que el hecho ya se manifestó al 100% de certeza."
+      },
+      {
+        "text": "El riesgo siempre es algo positivo y el hecho es siempre una pérdida económica",
+        "isCorrect": false,
+        "rationale": "En gestión operacional, los riesgos evaluados suelen tener consecuencias negativas y un hecho puede ser cualquier suceso consumado."
+      },
+      {
+        "text": "El hecho se puede prevenir mediante un plan, pero el riesgo no se puede calcular",
+        "isCorrect": false,
+        "rationale": "Es al revés: el riesgo se cuantifica y se previene antes de que ocurra; una vez convertido en hecho, solo se corrige o mitiga."
+      },
+      {
+        "text": "El riesgo aplica solo a la maquinaria y el hecho ocurre únicamente en el personal",
+        "isCorrect": false,
+        "rationale": "Ambos conceptos aplican indistintamente a personas, equipos, finanzas y medio ambiente."
+      },
+      {
+        "text": "No existe diferencia alguna entre ambos conceptos en la minería",
+        "isCorrect": false,
+        "rationale": "Diferenciarlos es vital para la gestión preventiva, ya que actuar sobre el riesgo evita que este se convierta en un hecho o incidente."
+      }
+    ],
+    "hint": "Un concepto se refiere a la probabilidad de que algo pase; el otro a algo que ya sucedió.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son las etapas indispensables para completar de forma efectiva el ciclo de implementación de las 'acciones correctivas'?",
+    "opciones": [
+      {
+        "text": "Identificación de la causa raíz de la no conformidad",
+        "isCorrect": true,
+        "rationale": "Permite descubrir el origen real del problema para no limitarse a solucionar solo el síntoma superficial."
+      },
+      {
+        "text": "Implementación de las medidas de corrección abordando el problema",
+        "isCorrect": true,
+        "rationale": "Ejecuta las decisiones y modificaciones requeridas en los equipos o procesos para subsanar la falla."
+      },
+      {
+        "text": "Verificación formal de la eficacia de la solución implementada",
+        "isCorrect": true,
+        "rationale": "Confirma que la acción ejecutada resolvió el problema de forma permanente sin provocar nuevas desviaciones."
+      },
+      {
+        "text": "Ocultamiento de los registros de fallas para evitar auditorías",
+        "isCorrect": false,
+        "rationale": "Ocultar registros atenta contra la trazabilidad y la mejora continua en cualquier sistema de calidad."
+      },
+      {
+        "text": "Aumento del margen de tolerancia de errores para dar por resuelto el caso",
+        "isCorrect": false,
+        "rationale": "Aumentar tolerancias de forma arbitraria degrada la calidad en lugar de corregir la causa subyacente."
+      }
+    ],
+    "hint": "Considera los pasos requeridos para resolver la causa de fondo y asegurar que la falla no vuelva a repetirse.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué se enfatiza en el curso que las acciones correctivas y de mantenimiento deben tener un 'enfoque holístico'?",
+    "opciones": [
+      {
+        "text": "Porque la modificación en un componente debe evaluar la resistencia e impacto en todo el sistema integrado para evitar fallas colaterales",
+        "isCorrect": true,
+        "rationale": "Reparar o potenciar una pieza aislada sin considerar el estado de la estructura general puede provocar la ruptura de otros componentes débiles."
+      },
+      {
+        "text": "Porque permite reparar las máquinas únicamente cuando estas sufren una parada catastrófica",
+        "isCorrect": false,
+        "rationale": "Esperar la falla catastrófica es propio del mantenimiento reactivo deficiente, opuesto al enfoque holístico integrador."
+      },
+      {
+        "text": "Porque busca enfocar el presupuesto de calidad exclusivamente en la etapa de exploración",
+        "isCorrect": false,
+        "rationale": "El enfoque holístico contempla todas las etapas de la mina, no una sola fase aislada."
+      },
+      {
+        "text": "Porque elimina la necesidad de coordinar entre los departamentos de mantenimiento e ingeniería",
+        "isCorrect": false,
+        "rationale": "Al contrario, el enfoque holístico exige una estricta coordinación interdepartamental."
+      },
+      {
+        "text": "Porque garantiza que los repuestos instalados no requieran nunca más inspección técnica",
+        "isCorrect": false,
+        "rationale": "Todo componente dentro de una planta industrial requiere inspección y mantenimiento preventivo continuo."
+      }
+    ],
+    "hint": "Implica ver la planta o proceso como un todo interconectado y no como partes aisladas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito central de aplicar 'acciones preventivas' dentro del marco del sistema CAPA?",
+    "opciones": [
+      {
+        "text": "Eliminar la causa de una no conformidad potencial antes de que esta se manifieste o se produzca",
+        "isCorrect": true,
+        "rationale": "Las acciones preventivas actúan sobre riesgos probables para impedir que se consolide una falla o accidente."
+      },
+      {
+        "text": "Sancionar económicamente a los operadores tras la ocurrencia de un accidente",
+        "isCorrect": false,
+        "rationale": "El objetivo de la prevención en calidad es la mejora operacional y el diseño seguro, no la medida punitiva post-incidente."
+      },
+      {
+        "text": "Reducir el salario de los inspectores de calidad de la planta",
+        "isCorrect": false,
+        "rationale": "No tiene ninguna relación con las metas operacionales del aseguramiento de la calidad."
+      },
+      {
+        "text": "Reparar los equipos una vez que hayan dejado de funcionar por completo",
+        "isCorrect": false,
+        "rationale": "Corresponde al mantenimiento correctivo o reactivo, la antítesis de la acción preventiva."
+      },
+      {
+        "text": "Sustituir las capacitaciones del personal por manuales teóricos no leídos",
+        "isCorrect": false,
+        "rationale": "Las acciones preventivas suelen exigir la mejora efectiva de las competencias del personal mediante formación continua."
+      }
+    ],
+    "hint": "Se focalizan en el escenario antes de que el evento indeseado ocurra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la investigación de incidentes o fallos de calidad, ¿cuál es la función principal del análisis de 'Causa Raíz'?",
+    "opciones": [
+      {
+        "text": "Desentrañar las causas subyacentes o de fondo que originaron el problema para evitar su recurrencia",
+        "isCorrect": true,
+        "rationale": "Identifica los factores originarios (físicos, humanos u organizacionales) para aplicar soluciones definitivas."
+      },
+      {
+        "text": "Determinar qué trabajador es el responsable directo para proceder con su despido",
+        "isCorrect": false,
+        "rationale": "El análisis sistémico busca corregir las fallas del proceso o diseño, no buscar culpables individuales."
+      },
+      {
+        "text": "Aumentar la velocidad de procesamiento de la planta aunque aumente el riesgo",
+        "isCorrect": false,
+        "rationale": "Prioriza la seguridad y la estabilidad sobre la velocidad descontrolada."
+      },
+      {
+        "text": "Calcular la depreciación contable de los activos de la empresa minera",
+        "isCorrect": false,
+        "rationale": "Es una función puramente financiera ajena al análisis de causa raíz técnico."
+      },
+      {
+        "text": "Elaborar los informes de facturación comercial para la exportación",
+        "isCorrect": false,
+        "rationale": "Corresponde a la gestión de ventas y finanzas, no a la gestión de fallas cualitativas."
+      }
+    ],
+    "hint": "Busca ir más allá de los síntomas visibles para encontrar la raíz verdadera que provoca el defecto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Quién fue el teórico e ingeniero químico japonés que desarrolló el Diagrama de Causa y Efecto, también conocido como Diagrama de Espina de Pescado?",
+    "opciones": [
+      {
+        "text": "Kaoru Ishikawa",
+        "isCorrect": true,
+        "rationale": "Kaoru Ishikawa postuló este diagrama para categorizar de forma estructurada las causas de los problemas cualitativos."
+      },
+      {
+        "text": "Genichi Taguchi",
+        "isCorrect": false,
+        "rationale": "Taguchi es famoso por la función de pérdida de calidad y el diseño robusto de experimentos, no por la espina de pescado."
+      },
+      {
+        "text": "Noriaki Kano",
+        "isCorrect": false,
+        "rationale": "Kano desarrolló el modelo Kano para clasificar las preferencias y satisfacción del cliente."
+      },
+      {
+        "text": "Shigeo Shingo",
+        "isCorrect": false,
+        "rationale": "Shingo es reconocido por sus aportes al sistema de producción Toyota y la creación del concepto Poka-Yoke."
+      },
+      {
+        "text": "Taiichi Ohno",
+        "isCorrect": false,
+        "rationale": "Ohno es considerado el diseñador del sistema Just in Time (JIT) en Toyota."
+      }
+    ],
+    "hint": "Su apellido da nombre alternativo al célebre diagrama de análisis de causas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco tradicional del Diagrama de Ishikawa, ¿cuál de las siguientes opciones enumera correctamente el conjunto clásico de las '6 Ms' empleadas para agrupar las causas?",
+    "opciones": [
+      {
+        "text": "Mano de obra, Maquinaria, Materiales, Métodos, Medio ambiente y Medición",
+        "isCorrect": true,
+        "rationale": "Son las seis categorías estándar utilizadas para clasificar sistemáticamente las fuentes de variación o fallo."
+      },
+      {
+        "text": "Minería, Mantenimiento, Muestreo, Metalurgia, Margen y Mercado",
+        "isCorrect": false,
+        "rationale": "Aunque corresponden a términos del sector, no constituyen las 6 Ms del método de Ishikawa."
+      },
+      {
+        "text": "Motivación, Mando, Movimiento, Memoria, Mapeo y Muestra",
+        "isCorrect": false,
+        "rationale": "Son conceptos dispersos que no estructuran el modelo clásico de diagnóstico."
+      },
+      {
+        "text": "Modelo, Modificación, Matriz, Monitor, Módulo y Margen",
+        "isCorrect": false,
+        "rationale": "Son términos técnicos variados que no representan las categorías del diagrama."
+      },
+      {
+        "text": "Mangueras, Motores, Molienda, Mezcla, Malla y Mecánica",
+        "isCorrect": false,
+        "rationale": "Representan elementos operacionales específicos y no las categorías generales del modelo."
+      }
+    ],
+    "hint": "Incluye factores humanos, de equipos, insumos, procedimientos, entorno operacional y calibración/evaluación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el principio rector del Diagrama de Pareto (regla 80/20) cuando se aplica al control de calidad?",
+    "opciones": [
+      {
+        "text": "En establecer que aproximadamente el 20% de las causas produce el 80% de los problemas o defectos",
+        "isCorrect": true,
+        "rationale": "Permite priorizar las acciones resolviendo el '20% vital' de las causas para erradicar la gran mayoría de los defectos."
+      },
+      {
+        "text": "En dedicar el 80% del tiempo a reuniones teóricas y solo el 20% a la operación en campo",
+        "isCorrect": false,
+        "rationale": "Contraviene la eficiencia productiva de los sistemas de gestión operacional."
+      },
+      {
+        "text": "En desechar el 80% de la producción de mineral por considerarla fuera de norma",
+        "isCorrect": false,
+        "rationale": "Generar un 80% de desperdicio indicaría un proceso totalmente inviable y fuera de control."
+      },
+      {
+        "text": "En contratar un 80% de inspectores de calidad por cada 20% de trabajadores de planta",
+        "isCorrect": false,
+        "rationale": "Proporción absurda que elevaría los costos fijos sin agregar valor al proceso de origen."
+      },
+      {
+        "text": "En utilizar un 80% de reactivos químicos diluidos en un 20% de agua",
+        "isCorrect": false,
+        "rationale": "No responde al principio estadístico de Pareto, sino a una dosificación química ficticia."
+      }
+    ],
+    "hint": "Postula que unos pocos factores clave son los responsables de la mayor parte de las consecuencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes funciones son capacidades clave que proporciona un software de gestión de la calidad (QMS)?",
+    "opciones": [
+      {
+        "text": "Automatizar la recopilación de datos de desempeño de calidad en tiempo real",
+        "isCorrect": true,
+        "rationale": "Facilita la supervisión continua y reduce el margen de error humano al registrar datos."
+      },
+      {
+        "text": "Gestionar y dar seguimiento al flujo de registro de no conformidades",
+        "isCorrect": true,
+        "rationale": "Permite rastrear cada desviación desde su hallazgo hasta la verificación del plan correctivo."
+      },
+      {
+        "text": "Controlar la trazabilidad y actualización de la documentación normativa",
+        "isCorrect": true,
+        "rationale": "Garantiza que el personal opere con la versión vigente de procedimientos e instructivos de trabajo."
+      },
+      {
+        "text": "Generar informes automáticos y análisis de tendencias para la toma de decisiones",
+        "isCorrect": true,
+        "rationale": "Aporta visibilidad analítica oportuna sobre la estabilidad o degradación de los procesos."
+      },
+      {
+        "text": "Garantizar la cotización del mineral en el mercado sin importar su ley",
+        "isCorrect": false,
+        "rationale": "Las cotizaciones comerciales internacionales dependen del mercado externo y la ley real entregada, no del software QMS."
+      }
+    ],
+    "hint": "Selecciona las características orientadas al control documental, datos en tiempo real y flujo de hallazgos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere la 'naturaleza estocástica' mencionada al analizar ciertos procesos operacionales y geológicos en minería?",
+    "opciones": [
+      {
+        "text": "A procesos cuyo comportamiento combina tramos deterministas con tramos de comportamiento caótico o aleatorio",
+        "isCorrect": true,
+        "rationale": "Implica la coexistencia de variabilidades predecibles con zonas de alta incertidumbre y comportamientos aleatorios."
+      },
+      {
+        "text": "A procesos que se mantienen exactamente iguales y sin ninguna variación a lo largo de décadas",
+        "isCorrect": false,
+        "rationale": "Un proceso sin variación es completamente determinista y estático, lo opuesto a estocástico."
+      },
+      {
+        "text": "A operaciones realizadas únicamente mediante el trabajo manual de operarios",
+        "isCorrect": false,
+        "rationale": "El término es de índole matemática y probabilística, no una clasificación de mano de obra."
+      },
+      {
+        "text": "A la propiedad física de los metales para conducir calor y electricidad de forma perfecta",
+        "isCorrect": false,
+        "rationale": "Describe una propiedad física/eléctrica de la materia, no la naturaleza probabilística de un proceso."
+      },
+      {
+        "text": "A la ausencia absoluta de datos estadísticos para tomar decisiones",
+        "isCorrect": false,
+        "rationale": "Los procesos estocásticos precisamente requieren modelos probabilísticos avanzados de análisis de datos."
+      }
+    ],
+    "hint": "Se vincula a fenómenos que presentan componentes aleatorios y de variabilidad probabilística.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la utilidad principal del 'análisis de regresión' en las herramientas estadísticas aplicadas al control de calidad?",
+    "opciones": [
+      {
+        "text": "Comprender la relación matemática entre dos o más variables para predecir el comportamiento de parámetros del proceso",
+        "isCorrect": true,
+        "rationale": "Permite modelar cómo varía una variable dependiente (ej. recuperación) ante cambios en variables independientes (ej. granulometría)."
+      },
+      {
+        "text": "Contar físicamente la cantidad de sacos de mineral almacenados en el depósito",
+        "isCorrect": false,
+        "rationale": "Se trata de un conteo de inventario físico simple, no un análisis estadístico de regresión."
+      },
+      {
+        "text": "Aumentar arbitrariamente la velocidad de los camiones de extracción",
+        "isCorrect": false,
+        "rationale": "No es una función ni un objetivo de las herramientas de modelamiento estadístico."
+      },
+      {
+        "text": "Sustituir los ensayos de laboratorio químico por estimaciones visuales",
+        "isCorrect": false,
+        "rationale": "El control de calidad requiere rigor analítico y no reemplaza los ensayos formales por aproximaciones empíricas descalibradas."
+      },
+      {
+        "text": "Eliminar la necesidad de presentar planes de cierre de minas",
+        "isCorrect": false,
+        "rationale": "Los planes de cierre son obligaciones legales de sostenibilidad ajenas a esta técnica estadística."
+      }
+    ],
+    "hint": "Ayuda a modelar y predecir una variable en función del comportamiento de otra u otras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante una auditoría de certificación bajo normas de calidad como ISO, ¿qué aspecto es el más rigurosamente auditado para validar el cumplimiento de los procesos?",
+    "opciones": [
+      {
+        "text": "La existencia de documentación actualizada, procedimientos operativos y la evidencia objetiva de su ejecución",
+        "isCorrect": true,
+        "rationale": "Las auditorías ISO exigen verificar que 'se haga lo que está escrito y esté registrado con evidencia suficiente'."
+      },
+      {
+        "text": "La marca y el color estético de los edificios administrativos del campamento",
+        "isCorrect": false,
+        "rationale": "Aspecto puramente estético irrelevante para los criterios de auditoría de un sistema de gestión."
+      },
+      {
+        "text": "La cantidad de seguidores de la empresa en redes sociales",
+        "isCorrect": false,
+        "rationale": "Métrica de marketing digital sin ningún valor normativo en auditorías de procesos de calidad."
+      },
+      {
+        "text": "El valor bursátil de las acciones de la compañía en la bolsa el día de la auditoría",
+        "isCorrect": false,
+        "rationale": "El precio accionario es una variable bursátil externa, no un criterio de conformidad procedimental."
+      },
+      {
+        "text": "La promesa verbal no documentada de los directores de la planta",
+        "isCorrect": false,
+        "rationale": "Las promesas verbales sin registro escrito ni evidencia documental carecen de validez en una auditoría ISO."
+      }
+    ],
+    "hint": "Recuerda la premisa: lo que no está documentado y registrado con evidencias, no existe para el auditor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la distinción fundamental entre el Aseguramiento de la Calidad (QA) y el Control de la Calidad (QC) en la gestión de muestras geológico-mineras?",
+    "opciones": [
+      {
+        "text": "El QA establece los protocolos y procesos preventivos para evitar errores en las bases de datos, mientras que el QC mide la exactitud, precisión y preparación mediante ensayos trazables.",
+        "isCorrect": true,
+        "rationale": "El QA se enfoca en el diseño preventivo de procedimientos para asegurar la confiabilidad del modelo, mientras que el QC evalúa cuantitativamente los resultados analíticos ejecutados."
+      },
+      {
+        "text": "El QA realiza la medición directa de laboratorio en muestras gemelas, mientras que el QC se encarga del etiquetado y transporte en campo.",
+        "isCorrect": false,
+        "rationale": "El envío y análisis de muestras gemelas es una técnica específica de medición de precisión correspondiente al QC y no a la definición marco de QA."
+      },
+      {
+        "text": "El QA aplica únicamente al proceso de cierre de mina, mientras que el QC supervisa la fase de voladura y extracción primaria.",
+        "isCorrect": false,
+        "rationale": "Ambas metodologías de calidad se aplican de forma continua a lo largo de todo el ciclo de vida del proyecto minero, no en etapas excluyentes."
+      },
+      {
+        "text": "El QA evalúa exclusivamente el cumplimiento legal sancionatorio, mientras que el QC elabora las estimaciones de recursos y reservas.",
+        "isCorrect": false,
+        "rationale": "El cumplimiento regulatorio forma parte de la gestión integral y las estimaciones de recursos se basan en la veracidad generada por ambos sistemas en conjunto."
+      },
+      {
+        "text": "El QA reemplaza la necesidad de auditorías externas, mientras que el QC valida los costos de operación en planta.",
+        "isCorrect": false,
+        "rationale": "El QA no sustituye las auditorías sino que las facilita mediante estándares documentados, y el QC no es una herramienta de contabilidad financiera."
+      }
+    ],
+    "hint": "Considere cuál de los dos conceptos actúa de forma preventiva sobre el sistema y cuál realiza la verificación cuantitativa sobre los datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de proyectos mineros bajo la teoría del Project Management Institute (PMI) expuesta en el curso, ¿cuáles son los tres elementos que delimitan la restricción triple (Triple Bottom Line) que define la calidad?",
+    "opciones": [
+      {
+        "text": "Tiempo, Alcance y Costo.",
+        "isCorrect": true,
+        "rationale": "La teoría de gestión de proyectos establece que la calidad está acotada por el equilibrio entre el marco temporal, la especificación del trabajo (alcance) y el presupuesto (costo)."
+      },
+      {
+        "text": "Leyes de mineral, Tonelaje y Recuperación.",
+        "isCorrect": false,
+        "rationale": "Aunque corresponden a parámetros metalúrgicos operativos, no constituyen los ejes fundamentales de la restricción triple del PMI."
+      },
+      {
+        "text": "Seguridad, Licencia Social y Medio Ambiente.",
+        "isCorrect": false,
+        "rationale": "Estos aspectos forman parte del marco de sostenibilidad y gobernanza, pero no representan la restricción triple clásica de gestión de proyectos."
+      },
+      {
+        "text": "Planificación, Monitoreo y Cierre.",
+        "isCorrect": false,
+        "rationale": "Estas representan etapas o fases secuenciales en el ciclo de gestión, no los límites de la restricción triple."
+      },
+      {
+        "text": "Eficiencia, Productividad y Rentabilidad.",
+        "isCorrect": false,
+        "rationale": "Estos son beneficios o resultados esperados de la optimización del proceso, no las variables demarcadoras del proyecto."
+      }
+    ],
+    "hint": "Piense en las tres variables básicas que todo director de proyecto debe equilibrar continuamente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el protocolo de QA/QC de muestreo minero basado en estándares internacionales como la norma NI 43-101, ¿qué procedimientos son correctos para la preparación y evaluación de muestras gemelas?",
+    "opciones": [
+      {
+        "text": "Tomar una muestra, quebrarla, homogenizarla y dividirla en dos partes iguales.",
+        "isCorrect": true,
+        "rationale": "La división físicamente homogénea de la muestra original es el paso procedimental básico para garantizar que ambas submuestras posean la misma naturaleza."
+      },
+      {
+        "text": "Guardar las dos submuestras en bolsas separadas y etiquetarlas con códigos o nombres completamente diferentes.",
+        "isCorrect": true,
+        "rationale": "El etiquetado ciego o diferenciado evita sesgos en el laboratorio analítico durante la lectura de la precisión."
+      },
+      {
+        "text": "Solicitar un reensaye inmediato si los valores arrojados por el laboratorio exceden las diferencias toleradas.",
+        "isCorrect": true,
+        "rationale": "Superar los límites de tolerancia aceptables invalida el lote y exige el reanálisis para controlar el error analítico."
+      },
+      {
+        "text": "Mezclar mineral de alta ley con material estéril antes del empaquetado para evaluar la ley media.",
+        "isCorrect": false,
+        "rationale": "Contaminar deliberadamente la muestra gemela destruye la representatividad necesaria para evaluar la precisión del duplicado."
+      },
+      {
+        "text": "Enviar las muestras gemelas únicamente cuando se detecte un fallo en el monitoreo del agua freática.",
+        "isCorrect": false,
+        "rationale": "Las muestras gemelas forman parte de la rutina continua de control de calidad del muestreo geológico, no de contingencias ambientales hidrogeológicas."
+      }
+    ],
+    "hint": "Seleccione las acciones orientadas a la preparación a ciegas de duplicados y la tolerancia de repetibilidad analítica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la relevancia de integrar la fase de exploración continua del entorno dentro del plan integral de QA/QC antes de efectuar el cierre definitivo de una mina?",
+    "opciones": [
+      {
+        "text": "Permite identificar vetas o yacimientos aledaños utilizables para prolongar la vida útil de la operación y optimizar el valor de la infraestructura construida.",
+        "isCorrect": true,
+        "rationale": "Identificar tempranamente reservas cercanas evita el abandono prematuro de campamentos e instalaciones que pueden dar soporte a décadas adicionales de extracción."
+      },
+      {
+        "text": "Garantiza la eliminación automática de los pasivos ambientales sin necesidad de remediación de suelos.",
+        "isCorrect": false,
+        "rationale": "La exploración no elimina las obligaciones de remediación ambiental de las áreas previamente intervenidas."
+      },
+      {
+        "text": "Aumenta la ley de cabeza del mineral que ya ha sido extraído y depositado en las canchas de relave.",
+        "isCorrect": false,
+        "rationale": "La actividad exploratoria evalúa recursos in situ en el subsuelo, no modifica las propiedades químicas del material procesado."
+      },
+      {
+        "text": "Exime a la empresa minera de la entrega de licencias sociales a las comunidades impactadas.",
+        "isCorrect": false,
+        "rationale": "Extender la vida útil mediante nuevos descubrimientos exige renovar y mantener la legitimidad y la licencia social con las comunidades."
+      },
+      {
+        "text": "Evita la necesidad de implementar estudios de impacto ambiental para nuevas concesiones.",
+        "isCorrect": false,
+        "rationale": "Cualquier expansión u operación de nuevas vetas requiere ajustarse a la normativa ambiental vigente y presentar sus respectivos instrumentos de gestión."
+      }
+    ],
+    "hint": "Reflexione sobre el beneficio logístico y financiero de aprovechar la infraestructura minera existente frente a vetas cercanas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el control analítico de laboratorios geológicos, ¿cuál es la función principal de insertar una 'muestra estéril' (blanco) dentro de un paquete de muestras enviado a ensaye?",
+    "opciones": [
+      {
+        "text": "Detectar posible contaminación cruzada durante los procesos de preparación mecánica o análisis en el laboratorio.",
+        "isCorrect": true,
+        "rationale": "Un material estéril libre de mineralización debe arrojar valores nulos; si muestra valores anómalos, evidencia que hubo transferencia no deseada de mineral entre muestras durante el chancado o pulverizado."
+      },
+      {
+        "text": "Verificar la exactitud calibrando el sesgo del instrumento de medición con un valor certificado alto.",
+        "isCorrect": false,
+        "rationale": "La exactitud y el sesgo se evalúan con Materiales de Referencia Certificados (estándares), no con muestras estériles desprovistas de ley."
+      },
+      {
+        "text": "Determinar el grado de humedad superficial y el esfuerzo cortante de la roca.",
+        "isCorrect": false,
+        "rationale": "Las muestras estériles no se utilizan para ensayos geotécnicos ni de mecánica de rocas en el control analítico químico."
+      },
+      {
+        "text": "Sustituir las muestras gemelas en los controles periódicos de precisión.",
+        "isCorrect": false,
+        "rationale": "El blanco evalúa contaminación, mientras que la muestra gemela evalúa la precisión; son controles complementarios e insustituibles."
+      },
+      {
+        "text": "Garantizar que el relave no contenga reactivos químicos de flotación.",
+        "isCorrect": false,
+        "rationale": "El estéril de control se inserta en el flujo de muestras geológicas, no en las colas del proceso metalúrgico."
+      }
+    ],
+    "hint": "Piense en qué sucedería si un material sin ley química pasa por un triturador que conserva polvo de una muestra de alta concentración previa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del marco conceptual de QA/QC y el post-cierre de mina, ¿de qué manera se revalorizan los activos e infraestructuras del campamento minero en beneficio de las comunidades impactadas?",
+    "opciones": [
+      {
+        "text": "Acondicionando pabellones, centros educativos, áreas recreativas y plantas de procesamiento para su transferencia funcional a la comunidad.",
+        "isCorrect": true,
+        "rationale": "El desarrollo sostenible busca adaptar las instalaciones de material noble y servicios complementarios para que la comunidad gestione un uso habitacional, productivo o social posterior."
+      },
+      {
+        "text": "Inundando todas las estructuras residenciales para convertirlas en represas de agua ácida tratada.",
+        "isCorrect": false,
+        "rationale": "Inundar infraestructura habitable genera riesgos geotécnicos y ambientales, destruyendo el valor social del activo."
+      },
+      {
+        "text": "Vendiendo la totalidad de los inmuebles al Estado extranjero para financiar la exploración.",
+        "isCorrect": false,
+        "rationale": "Los activos en el poscierre se orientan a dejar un impacto positivo en las comunidades locales mediante acuerdos legítimos."
+      },
+      {
+        "text": "Demoliendo completamente las construcciones de concreto para restaurar el relieve primigenio sin dejar infraestructura.",
+        "isCorrect": false,
+        "rationale": "Aunque es una opción en ciertos componentes, el texto resalta la puesta en valor de campamentos utilizables como viviendas u obras sociales para la comunidad."
+      },
+      {
+        "text": "Convertir los socavones mineros en depósitos urbanos de basura sin tratamiento.",
+        "isCorrect": false,
+        "rationale": "El uso inadecuado de labores subterráneas como vertederos informales genera pasivos ambientales graves e ilegales."
+      }
+    ],
+    "hint": "Considere qué beneficios habitacionales y de desarrollo social de largo plazo pueden heredar los pobladores locales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la evaluación del riesgo operacional de la calidad en minería, ¿cuál es la fórmula conceptual básica utilizada para determinar el nivel o 'prima' de riesgo?",
+    "opciones": [
+      {
+        "text": "Multiplicación de la Probabilidad (frecuencia de ocurrencia) por la Severidad (impacto del evento).",
+        "isCorrect": true,
+        "rationale": "El nivel de riesgo se cuantifica ponderando la posibilidad de que el fallo se manifieste frente a la gravedad del daño o desviación ocasionada."
+      },
+      {
+        "text": "Suma del Costo Operativo más el Alcance del Proyecto dividida entre el Tiempo.",
+        "isCorrect": false,
+        "rationale": "Esta relación alude a métricas de desempeño presupuestal, no a la matriz estándar de evaluación de riesgos."
+      },
+      {
+        "text": "División de la Tasa de Recuperación entre la Ley del Mineral.",
+        "isCorrect": false,
+        "rationale": "Es una razón de eficiencia metalúrgica en planta, no un cálculo de riesgo operacional."
+      },
+      {
+        "text": "Resta de las Impurezas respecto al Tonelaje Total procesado.",
+        "isCorrect": false,
+        "rationale": "Corresponde a una estimación de masa limpia, ajena a la frecuencia e impacto del riesgo."
+      },
+      {
+        "text": "Multiplicación del Tiempo de Inactividad por la Tasa de Inflación anual.",
+        "isCorrect": false,
+        "rationale": "Combina una variable operativa con una variable macroeconómica, sin evaluar la severidad de las no conformidades."
+      }
+    ],
+    "hint": "Identifique las dos dimensiones clave empleadas en las matrices para cuantificar cualquier peligro o vulnerabilidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del monitoreo de calidad en plantas de procesamiento minero, ¿cuál de los siguientes conjuntos comprende Indicadores Clave de Desempeño (KPIs) directamente vinculados a la eficiencia del proceso y la seguridad?",
+    "opciones": [
+      {
+        "text": "Tasa de recuperación del mineral, tiempo de inactividad de equipos y porcentaje de adherencia a estándares de seguridad.",
+        "isCorrect": true,
+        "rationale": "Estos tres indicadores miden la efectividad de captura de la mena, la continuidad operacional operativa y la integridad del personal."
+      },
+      {
+        "text": "Precio internacional del cobre, número de accionistas y tipo de cambio bancario.",
+        "isCorrect": false,
+        "rationale": "Son variables macroeconómicas y financieras externas, no KPIs de control operacional de proceso."
+      },
+      {
+        "text": "Horas de lluvia anuales, número de publicaciones académicas y distancia a la capital.",
+        "isCorrect": false,
+        "rationale": "Representan datos geográficos o divulgativos que no ejercen control sobre el rendimiento cualitativo de la planta."
+      },
+      {
+        "text": "Cantidad de impuestos pagados, canon minero redistribuido y votos del congreso.",
+        "isCorrect": false,
+        "rationale": "Corresponden a materias tributarias y políticas fuera del control directo del sistema QA/QC en planta."
+      },
+      {
+        "text": "Profundidad del mar, temperatura de la oficina administrativa y número de visas de consultores.",
+        "isCorrect": false,
+        "rationale": "Son parámetros inconexos con la recuperación metalúrgica o la tasa de fallas en los equipos de extracción."
+      }
+    ],
+    "hint": "Busque la combinación que mida rendimiento metalúrgico, disponibilidad de maquinaria y prevención de accidentes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de efluentes y residuos mineros, ¿cuál es la diferencia sustancial entre la estrategia de adaptación tecnológica interna y el paradigma del 'principio del contaminador pagador'?",
+    "opciones": [
+      {
+        "text": "La adaptación interna aplica tecnología en proceso para neutralizar residuos antes de su emisión, mientras que el 'contaminador pagador' asume un costo o tarifa estatal sobre los excedentes emitidos.",
+        "isCorrect": true,
+        "rationale": "La primera postura invierte en ingeniería preventiva dentro de la planta, mientras que la segunda externaliza la remediación o la compensa económicamente según límites regulados."
+      },
+      {
+        "text": "La adaptación interna elimina el uso de agua, mientras que el contaminador pagador utiliza mercurio sin fiscalización.",
+        "isCorrect": false,
+        "rationale": "Ningún paradigma formal autoriza la contaminación ilegal con sustancias prohibidas sin fiscalización."
+      },
+      {
+        "text": "El contaminador pagador aplica únicamente en la minería subterránea, mientras que la adaptación tecnológica se limita al tajo abierto.",
+        "isCorrect": false,
+        "rationale": "Ambas posturas ambientales son aplicables a cualquier método de extracción minera."
+      },
+      {
+        "text": "La adaptación interna es obligatoria solo en Europa, mientras que el principio del contaminador pagador es una ley exclusiva del Perú.",
+        "isCorrect": false,
+        "rationale": "Ambas son filosofías y marcos regulatorios adoptados con distintos matices a nivel global."
+      },
+      {
+        "text": "El contaminador pagador prohíbe las auditorías ambientales a cambio de un pago único de concesión.",
+        "isCorrect": false,
+        "rationale": "El principio del contaminador pagador exige un monitoreo constante para determinar los montos o penalizaciones según las emisiones."
+      }
+    ],
+    "hint": "Considere qué opción busca evitar la salida del contaminante mediante ingeniería previa y cuál aplica un cobro o sanción sobre el efluente expulsado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según lo expuesto sobre el desarrollo de la legislación ambiental peruana, ¿cuál fue el marco normativo histórico de 1990 y qué ley general promulgada en 2005 consolidó el marco ambiental vigente?",
+    "opciones": [
+      {
+        "text": "El Código del Medio Ambiente y los Recursos Naturales (Decreto Legislativo 613) de 1990 y la Ley General del Ambiente (Ley 28611) de 2005.",
+        "isCorrect": true,
+        "rationale": "El DL 613 sentó las bases iniciales en 1990, siendo posteriormente reemplazado de manera orgánica por la Ley 28611 en el año 2005."
+      },
+      {
+        "text": "La Ley del Canon Minero de 1990 y el Reglamento de Seguridad e Higiene Minera de 2005.",
+        "isCorrect": false,
+        "rationale": "El texto aborda la legislación ambiental general, no las normas específicas de distribución fiscal o reglamentos puros de seguridad laboral."
+      },
+      {
+        "text": "El Código de Comercio de 1990 y la Ley de Concesiones Subterráneas de 2005.",
+        "isCorrect": false,
+        "rationale": "Estas normativas pertenecen al derecho mercantil y minero patrimonial, no al hito de gestión ambiental peruano expuesto."
+      },
+      {
+        "text": "La Ley de Minería Ilegal de 1990 y el Código Penal Sustantivo de 2005.",
+        "isCorrect": false,
+        "rationale": "No corresponden a las leyes hito citadas en la evolución de la regulación ambiental en el país."
+      },
+      {
+        "text": "La Constitución Política de 1990 y la Ley Marco de la Microempresa de 2005.",
+        "isCorrect": false,
+        "rationale": "No coinciden con la cronología ni con la denominación de las normas ambientales detalladas en el curso."
+      }
+    ],
+    "hint": "Recuerde el Decreto Legislativo 613 y la norma orgánica 28611 citados en el análisis del marco ambiental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el contexto de la economía circular aplicada a la minería (como en el caso de la empresa chilena Resiter), ¿qué iniciativas ejemplifican la valorización de residuos industriales?",
+    "opciones": [
+      {
+        "text": "Recuperar y reciclar las líneas de goteros utilizadas en las pilas de lixiviación para reintroducirlas al proceso productivo.",
+        "isCorrect": true,
+        "rationale": "Transformar el mangueramen plástico desechado en insumo para nuevos sistemas de riego disminuye el consumo de polímeros vírgenes."
+      },
+      {
+        "text": "Reutilizar el caucho de los neumáticos fuera de uso (NFU) para fabricar cuñas y barreras tipo Jersey de seguridad.",
+        "isCorrect": true,
+        "rationale": "Dar un segundo uso a los neumáticos gigantes de la flota pesada reduce el volumen en botaderos y proporciona elementos de señalización."
+      },
+      {
+        "text": "Tratar las aguas residuales industriales para su recirculación en las operaciones de la misma faena.",
+        "isCorrect": true,
+        "rationale": "El reciclaje de efluentes líquidos preserva el recurso hídrico fresco en zonas de alta escasez hídrica."
+      },
+      {
+        "text": "Incinerar todos los plásticos a cielo abierto para generar energía térmica sin filtros de gases.",
+        "isCorrect": false,
+        "rationale": "La quema abierta libera dioxinas y gases tóxicos, violando la filosofía de sostenibilidad y las leyes ambientales."
+      },
+      {
+        "text": "Verter los residuos sólidos de laboratorio directamente en los cursos naturales de los ríos.",
+        "isCorrect": false,
+        "rationale": "La disposición no controlada en cauces hídricos destruye el ecosistema y constituye un delito ambiental grave."
+      }
+    ],
+    "hint": "Seleccione las prácticas que transforman un residuo masivo (mangueras, neumáticos, efluentes) en un nuevo recurso utilizable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la selección de reactivos químicos adecuados en las celdas de flotación es un factor crítico en el control de calidad minero?",
+    "opciones": [
+      {
+        "text": "Porque determina la selectividad de separación entre la mena valiosa y la ganga, optimizando la ley del concentrado y reduciendo pérdidas.",
+        "isCorrect": true,
+        "rationale": "Una dosificación química adecuada maximiza la hidrofobocidad del mineral de interés sin arrastrar impurezas ni desperdiciar reactivos."
+      },
+      {
+        "text": "Porque altera la estructura cristalina de las rocas para hacerlas totalmente transparentes al sonar.",
+        "isCorrect": false,
+        "rationale": "Los reactivos de flotación actúan sobre las propiedades fisicoquímicas de superficie de las partículas, no sobre ondas sonoras."
+      },
+      {
+        "text": "Porque sustituye el proceso mecánico de molienda primaria en el molino SAG.",
+        "isCorrect": false,
+        "rationale": "La concentración por flotación es un proceso físico-químico posterior a la reducción de tamaño mecánica."
+      },
+      {
+        "text": "Porque incrementa automáticamente la presión de aire en los neumáticos de los volquetes.",
+        "isCorrect": false,
+        "rationale": "La formulación química de la pulpa es completamente ajena a los sistemas mecánicos de transporte vehicular."
+      },
+      {
+        "text": "Porque garantiza la eliminación total de impuestos de importación para la maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "La selección de insumos operativos responde a criterios técnicos de planta y no a tratados arancelarios."
+      }
+    ],
+    "hint": "Enfóquese en el propósito fisicoquímico de separar el mineral valioso de la roca sin valor comercial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Desde el punto de vista operativo de la calidad y la seguridad minera, ¿cómo se define conceptualmente el término 'Riesgo'?",
+    "opciones": [
+      {
+        "text": "Es la probabilidad o posibilidad de ocurrencia de un evento indeseado, a diferencia de un hecho ya materializado.",
+        "isCorrect": true,
+        "rationale": "El riesgo habita en el terreno de la probabilidad contingente; al concretarse al 100%, deja de ser riesgo y se transforma en un incidente o hecho real."
+      },
+      {
+        "text": "Es un suceso fatal que ya ha sido registrado en la bitácora de mantenimiento de la planta.",
+        "isCorrect": false,
+        "rationale": "Un evento registrado en la bitácora es un hecho consumado o accidente, no la posibilidad probabilística previa."
+      },
+      {
+        "text": "Es la certeza absoluta de que un proyecto minero no obtendrá ganancias financieras.",
+        "isCorrect": false,
+        "rationale": "La certeza cancela el estado de probabilidad que define esencialmente al riesgo."
+      },
+      {
+        "text": "Es el número total de trabajadores contratados formalmente en una faena de socavón.",
+        "isCorrect": false,
+        "rationale": "La dotación de personal es un dato estadístico operativo, no un concepto de peligro o vulnerabilidad."
+      },
+      {
+        "text": "Es el valor nominal en dólares de la concesión minera otorgada por el Estado.",
+        "isCorrect": false,
+        "rationale": "El valor del título de concesión representa un activo intangible, no la medición de ocurrencia de fallas."
+      }
+    ],
+    "hint": "Recuerde la distinción clave establecida entre una posibilidad contingente y un hecho consumado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En tecnologías aplicadas al transporte minero (como el sistema Gauss Control expuesto en clase), ¿qué variables se monitorean para reducir accidentes graves y evaluar la aptitud del operador?",
+    "opciones": [
+      {
+        "text": "Evaluación previa de la capacidad cognitiva, presencia de fatiga, alcohol o drogas antes de iniciar el turno (fitness to operate).",
+        "isCorrect": true,
+        "rationale": "Comprobar el estado psicofísico previo previene que un conductor no apto ingrese a operar maquinaria pesada."
+      },
+      {
+        "text": "Detección mediante visión computacional de micro-sueños, somnolencia y distracciones durante la conducción.",
+        "isCorrect": true,
+        "rationale": "Las cámaras inteligentes en cabina identifican patrones faciales de fatiga o uso de celulares lanzando alertas tempranas."
+      },
+      {
+        "text": "Monitoreo de excesos de velocidad, descansos y cumplimiento del límite de jornadas laborales.",
+        "isCorrect": true,
+        "rationale": "Controlar las variables de operación y tiempos de trabajo disminuye la exposición a fatiga crónica acumulada."
+      },
+      {
+        "text": "Medición de la afinidad política del conductor mediante encuestas obligatorias.",
+        "isCorrect": false,
+        "rationale": "Las variables ideológicas son irrelevantes y vulneran los derechos del trabajador en la prevención de riesgos."
+      },
+      {
+        "text": "Conteo del número de pasajeros que abordan los trenes subterráneos de pasajeros en la capital.",
+        "isCorrect": false,
+        "rationale": "El indicador de transporte minero evalúa operadores de faena y camiones de carga, no el aforo del transporte público urbano."
+      }
+    ],
+    "hint": "Identifique las tecnologías de monitoreo biométrico pre-turno y las alertas de comportamiento dentro de la cabina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial de la metodología CAPA (Acciones Correctivas y Preventivas) en la gestión de calidad en procesos mineros?",
+    "opciones": [
+      {
+        "text": "Investigar las causas raíz de las no conformidades detectadas para eliminar la falla presentada y prevenir su recurrencia futura.",
+        "isCorrect": true,
+        "rationale": "El enfoque CAPA busca rectificar la desviación actual y ajustar el sistema preventivo para que el error no vuelva a manifestarse."
+      },
+      {
+        "text": "Ocultar las fallas operativas ante los auditores internacionales de la norma ISO.",
+        "isCorrect": false,
+        "rationale": "El sistema CAPA exige transparencia y documentación rigurosa para la trazabilidad de la mejora continua."
+      },
+      {
+        "text": "Reemplazar la totalidad de los manuales de procedimientos por decisiones improvisadas del personal.",
+        "isCorrect": false,
+        "rationale": "El método CAPA estandariza y actualiza los procedimientos documentados a partir del análisis riguroso."
+      },
+      {
+        "text": "Reducir el salario de los operadores que reporten incidentes en las líneas de molienda.",
+        "isCorrect": false,
+        "rationale": "Penalizar el reporte inhibe la cultura de seguridad e impide la identificación real de las causas raíz."
+      },
+      {
+        "text": "Aumentar la ley de cabeza del mineral mediante el uso de software de simulación financiera.",
+        "isCorrect": false,
+        "rationale": "CAPA gestiona procesos y desviaciones de calidad, no altera la ley geológica in situ de la roca."
+      }
+    ],
+    "hint": "Relaciones el acrónimo CAPA con la respuesta ante la falla presente y la barrera ante fallas futuras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la estructuración de un Diagrama de Ishikawa (Espina de Pescado) tradicional para el análisis de no conformidades en minería, ¿cuáles son las categorías clásicas conocidas como las '6 Ms'?",
+    "opciones": [
+      {
+        "text": "Mano de obra, Maquinaria, Materiales, Metodología (Métodos), Medio ambiente y Medición.",
+        "isCorrect": true,
+        "rationale": "Estas seis dimensiones abarcan los factores operativos principales donde pueden originarse las causas de un problema."
+      },
+      {
+        "text": "Mina, Mineral, Metalurgia, Mercado, Mantenimiento y Muestra.",
+        "isCorrect": false,
+        "rationale": "Aunque corresponden a términos del sector minero, no conforman las 6 ramas estandarizadas de la metodología Ishikawa."
+      },
+      {
+        "text": "Mecanización, Monitoreo, Muelle, Molienda, Mapeo y Malla.",
+        "isCorrect": false,
+        "rationale": "Representan términos técnicos o procesos específicos, no el marco sistemático de clasificación de causas de Ishikawa."
+      },
+      {
+        "text": "Margen, Monetización, Muestra, Módulo, Matriz y Marco.",
+        "isCorrect": false,
+        "rationale": "Son vocablos dispersos sin relación con el estándar de las 6 Ms de calidad industrial."
+      },
+      {
+        "text": "Mejora, Misión, Métrica, Mantenibilidad, Modelo y Mapeo.",
+        "isCorrect": false,
+        "rationale": "Corresponden a conceptos generales de gestión pero no a la categorización de espinas primarias del diagrama."
+      }
+    ],
+    "hint": "Recuerde los factores que agrupan a las personas, equipos, insumos, procedimientos, entorno y controles de medición.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al aplicar una acción correctiva en una planta concentradora, ¿por qué es indispensable adoptar un 'enfoque holístico' o sistémico?",
+    "opciones": [
+      {
+        "text": "Porque reparar o modificar un componente de forma aislada puede alterar el equilibrio operativo y causar fallas mayores en otras partes del sistema.",
+        "isCorrect": true,
+        "rationale": "El sistema es interdependiente; ajustar una pieza con especificaciones no balanceadas respecto al resto de la estructura puede desatar fallas catastróficas (como en el ejemplo del caldero)."
+      },
+      {
+        "text": "Porque permite ignorar las variables de temperatura y presión en las tuberías de vapor.",
+        "isCorrect": false,
+        "rationale": "El enfoque holístico exige considerar absolutamente todas las variables del entorno, jamás ignorarlas."
+      },
+      {
+        "text": "Porque garantiza que los costos de reparación se reduzcan automáticamente a cero dólares.",
+        "isCorrect": false,
+        "rationale": "Tener una visión global busca la seguridad y eficiencia operativa, no elimina el costo intrínseco del mantenimiento."
+      },
+      {
+        "text": "Porque deshabilita el funcionamiento de los PLCs y de los sensores automáticos de la planta.",
+        "isCorrect": false,
+        "rationale": "Un enfoque de sistema se apoya en los datos de monitoreo para evaluar la interacción de todos los procesos."
+      },
+      {
+        "text": "Porque limita la responsabilidad del mantenimiento exclusivamente al departamento de contabilidad.",
+        "isCorrect": false,
+        "rationale": "El enfoque holístico promueve la coordinación interdepartamental entre ingeniería, operaciones, mantenimiento y seguridad."
+      }
+    ],
+    "hint": "Piense en las consecuencias de poner un componente ultra moderno o potente sobre una estructura antigua y desgastada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función específica de la técnica de los '5 Porqués' dentro de la investigación de causa raíz en el diagrama de Ishikawa?",
+    "opciones": [
+      {
+        "text": "Profundizar en capas sucesivas de causabilidad para desentrañar el problema subyacente más allá de los síntomas superficiales.",
+        "isCorrect": true,
+        "rationale": "Preguntarse 'por qué' repetidamente sobre una desviación ayuda a migrar desde la manifestación visible del error hasta la falla metodológica o de origen."
+      },
+      {
+        "text": "Despedir a cinco trabajadores cada vez que ocurra una parada no programada.",
+        "isCorrect": false,
+        "rationale": "La metodología busca resolver fallas del sistema, no aplicar castigos sumarios al personal."
+      },
+      {
+        "text": "Aumentar en cinco veces el tiempo dedicado a las pausas activas durante la guardia.",
+        "isCorrect": false,
+        "rationale": "No tiene ninguna relación con la estructuración analítica de la causa raíz de una no conformidad."
+      },
+      {
+        "text": "Calcular la quinta potencia de la ley de mineral obtenida en el laboratorio.",
+        "isCorrect": false,
+        "rationale": "Los 5 porqués es una técnica cualitativa/analítica de preguntas lógicas, no una operación algebraica de leyes."
+      },
+      {
+        "text": "Reducir las dimensiones de la muestra estéril a una quinta parte del peso original.",
+        "isCorrect": false,
+        "rationale": "No influye en las reglas químicas ni físicas de preparación de muestras en geología."
+      }
+    ],
+    "hint": "Considere qué se logra al cuestionar repetidamente la razón de un síntoma operativo para llegar a su origen.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el análisis de coyuntura publicado en el Diario Gestión (marzo de 2025) citado en la Clase 4, ¿cuál es una consecuencia directa de las nuevas exigencias normativas relativas a las garantías de cierre de minas?",
+    "opciones": [
+      {
+        "text": "Un incremento en los costos financieros y de liquidez para las empresas que deben cubrir garantías inmediatas si no poseen un plan de cierre aprobado.",
+        "isCorrect": true,
+        "rationale": "Las modificaciones normativas exigen respaldar financieramente de manera inmediata las labores de remediación, afectando el flujo de caja de las mineras."
+      },
+      {
+        "text": "La exoneración total del pago de impuestos para las compañías mineras formales.",
+        "isCorrect": false,
+        "rationale": "Las normativas incrementaron las exigencias y penalidades, en ningún caso exoneraron de tributación."
+      },
+      {
+        "text": "La eliminación de la responsabilidad legal para los directores y accionistas mayoritarios.",
+        "isCorrect": false,
+        "rationale": "Por el contrario, la norma establece responsabilidad solidaria sobre los directores y accionistas ante daños ambientales por abandono."
+      },
+      {
+        "text": "La prohibición absoluta de utilizar cualquier tipo de software QMS en la gestión de residuos.",
+        "isCorrect": false,
+        "rationale": "Los sistemas de gestión digital son herramientas clave para respaldar la trazabilidad exigida por la ley."
+      },
+      {
+        "text": "La sustitución del cobre por aluminio en todas las líneas de transporte de concentrado.",
+        "isCorrect": false,
+        "rationale": "La noticia se refiere al marco regulatorio financiero y ambiental del cierre de mina, no a sustitución de insumos metalúrgicos."
+      }
+    ],
+    "hint": "Identifique el impacto sobre el capital de trabajo y los avales financieros que deben presentar las mineras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera el Diagrama de Pareto (80/20) optimiza las acciones de control de calidad en una faena minera?",
+    "opciones": [
+      {
+        "text": "Permite identificar y focalizar los esfuerzos en el 20% de las causas críticas que generan el 80% de los defectos o no conformidades.",
+        "isCorrect": true,
+        "rationale": "El principio de Pareto prioriza los pocos factores vitales que concentran la gran mayoría de las fallas operativas."
+      },
+      {
+        "text": "Garantiza que el 80% del mineral extraído sea enviado directamente al botadero sin procesar.",
+        "isCorrect": false,
+        "rationale": "Enviar el 80% de mineral útil a desperdicio iría en contra de la recuperación y la rentabilidad."
+      },
+      {
+        "text": "Divide el salario del personal otorgando el 80% al departamento de contabilidad.",
+        "isCorrect": false,
+        "rationale": "Es una herramienta analítica de frecuencia de fallas, no un modelo de distribución de planillas."
+      },
+      {
+        "text": "Exige que el 20% de las muestras sean analizadas únicamente mediante inspección visual.",
+        "isCorrect": false,
+        "rationale": "Pareto no fija porcentajes arbitrarios de métodos de ensaye químico."
+      },
+      {
+        "text": "Sustituye por completo el uso de gráficos de control estadístico de procesos.",
+        "isCorrect": false,
+        "rationale": "El diagrama de Pareto complementa las herramientas estadísticas de control, no las anula."
+      }
+    ],
+    "hint": "Aplique la regla de priorización que distingue los pocos factores vitales de los muchos triviales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la Minería 4.0, ¿qué se entiende por la 'naturaleza estocástica' de ciertos procesos de extracción y tratamiento de minerales?",
+    "opciones": [
+      {
+        "text": "La presencia de tramos operativos con comportamiento determinista combinados con zonas de alta variabilidad caótica impredecible.",
+        "isCorrect": true,
+        "rationale": "Un proceso estocástico alterna momentos modelables linealmente con fases complejas donde los parámetros fluctúan dinámicamente."
+      },
+      {
+        "text": "La certeza matemática de que ningún equipo sufrirá desgaste mecánico en 10 años.",
+        "isCorrect": false,
+        "rationale": "El término estocástico alude precisamente a la presencia de azar y variabilidad, no a certezas estáticas absolutas."
+      },
+      {
+        "text": "Un método de molienda que funciona exclusivamente sin consumo de agua ni energía eléctrica.",
+        "isCorrect": false,
+        "rationale": "Es un concepto matemático-estadístico sobre el comportamiento de variables, no un diseño mecánico de molinos."
+      },
+      {
+        "text": "La ley que obliga a las mineras a contratar únicamente personal nacido en la región.",
+        "isCorrect": false,
+        "rationale": "No guarda relación con la caracterización matemática de datos o dinámicas de proceso."
+      },
+      {
+        "text": "La medición exacta de la gravedad terrestre utilizando plomadas de plomo puro.",
+        "isCorrect": false,
+        "rationale": "Representa una prueba física elemental, distante de la teoría de procesos dinámicos complejos y estocásticos."
+      }
+    ],
+    "hint": "Piense en la transición entre el orden determinista y el comportamiento caótico de los datos de proceso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al integrar un sistema de gestión de calidad (QMS) con autómatas programables (PLCs) e Inteligencia Artificial en una planta concentradora, ¿qué funcionalidades avanzadas se habilitan?",
+    "opciones": [
+      {
+        "text": "Recopilación y análisis de datos en tiempo real para detectar anomalías en la pulpa o el rendimiento de los equipos.",
+        "isCorrect": true,
+        "rationale": "La lectura continua de sensores permite identificar desviaciones al instante y prevenir fallas mayores."
+      },
+      {
+        "text": "Ajuste e intervención automática sobre variables del proceso (como dosificación de reactivos o flujo de aire) para corregir fluctuaciones.",
+        "isCorrect": true,
+        "rationale": "La IA conectada a los PLCs ejecuta bucles de retroalimentación en fracciones de segundo para mantener los parámetros en especificación."
+      },
+      {
+        "text": "Generación automatizada de informes de desempeño y trazabilidad de no conformidades.",
+        "isCorrect": true,
+        "rationale": "Sintetizar la Big Data operativa agiliza la toma de decisiones estratégicas y respalda las auditorías de calidad."
+      },
+      {
+        "text": "Eliminación completa de la necesidad de mantener planes de cierre de mina aprobados.",
+        "isCorrect": false,
+        "rationale": "El desarrollo tecnológico automatizado no exime a la empresa de sus obligaciones legales sobre planes de cierre."
+      },
+      {
+        "text": "Transformación química instantánea del hierro residual en lingotes de oro puro en las fajas transportadoras.",
+        "isCorrect": false,
+        "rationale": "La automatización optimiza la eficiencia del proceso, pero respeta estrictamente las leyes de conservación de la materia de la física y química."
+      }
+    ],
+    "hint": "Seleccione las capacidades vinculadas a la captura de datos en tiempo real, el control en bucle cerrado y la reportería automática.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la trazabilidad documental de procesos es un requisito indispensable durante las auditorías de certificación ISO de calidad?",
+    "opciones": [
+      {
+        "text": "Porque demuestra con evidencias registradas que las operaciones reales se ejecutan strictly según lo definido en los manuales e instructivos aprobados.",
+        "isCorrect": true,
+        "rationale": "La auditoría contrasta el estándar escrito contra los registros históricos que prueban el cumplimiento riguroso del procedimiento."
+      },
+      {
+        "text": "Porque reemplaza las pruebas de laboratorio por firmas manuscritas de los gerentes.",
+        "isCorrect": false,
+        "rationale": "Los registros documentales incluyen precisamente los certificados y datos analíticos del laboratorio."
+      },
+      {
+        "text": "Porque permite modificar los datos de accidentabilidad históricos antes de enviarlos al ministerio.",
+        "isCorrect": false,
+        "rationale": "Adulterar registros viola el principio de integridad y conduce a la pérdida inmediata de certificaciones y sanciones legales."
+      },
+      {
+        "text": "Porque garantiza que la empresa no tenga que capacitar a su personal operario.",
+        "isCorrect": false,
+        "rationale": "La trazabilidad exige demostrar, mediante registros, que el personal ha recibido la capacitación adecuada para sus funciones."
+      },
+      {
+        "text": "Porque automatiza el pago bancario de dividendos a los accionistas minoritarios.",
+        "isCorrect": false,
+        "rationale": "El control documental ISO audita el sistema de gestión de operaciones y calidad, no la tesorería de acciones."
+      }
+    ],
+    "hint": "Piense en la necesidad de presentar pruebas fehacientes de que lo que está escrito en el papel se cumple en la práctica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis estadístico de control de calidad, ¿cuál es el propósito de aplicar un 'análisis de regresión' entre variables de proceso?",
+    "opciones": [
+      {
+        "text": "Establecer la relación matemática entre dos o más variables para predecir el comportamiento de un parámetro en función de otro.",
+        "isCorrect": true,
+        "rationale": "Permite modelar numéricamente cómo una variable independiente (ej. granulometría de alimentación) afecta a una dependiente (ej. consumo de energía)."
+      },
+      {
+        "text": "Determinar la marca comercial del vehículo más rápido dentro del tajo abierto.",
+        "isCorrect": false,
+        "rationale": "La regresión es una herramienta matemática sobre datos operacionales, no una comparativa comercial."
+      },
+      {
+        "text": "Medir el ángulo de inclinación geofísica de las estrellas sobre el campamento.",
+        "isCorrect": false,
+        "rationale": "Carece de significancia técnica para el control de procesos minero-metalúrgicos."
+      },
+      {
+        "text": "Aumentar exponencialmente el sesgo analítico de las lecturas químicas del laboratorio.",
+        "isCorrect": false,
+        "rationale": "El análisis estadístico busca medir y minimizar el error o sesgo, no incrementarlo."
+      },
+      {
+        "text": "Verificar la validez de los títulos de concesión otorgados por el Estado.",
+        "isCorrect": false,
+        "rationale": "Los aspectos dominiables y legales se revisan en el catastro minero, no mediante modelos de regresión estadística."
+      }
+    ],
+    "hint": "Considere la utilidad de estimar el valor futuro de una variable operativa a partir del cambio en otra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-54",
+    "diplomado": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función operativa principal de los Gráficos de Control en la supervisión continua de un proceso industrial minero?",
+    "opciones": [
+      {
+        "text": "Monitorear la variabilidad de un parámetro a lo largo del tiempo identificando tendencias, fluctuaciones y puntos fuera de los límites especificados.",
+        "isCorrect": true,
+        "rationale": "Al graficar los datos con límites superior e inferior de control, la herramienta alerta de inmediato cuando un proceso pierde estabilidad."
+      },
+      {
+        "text": "Diseñar los planos arquitectónicos de las oficinas administrativas de la empresa.",
+        "isCorrect": false,
+        "rationale": "Los gráficos de control son diagramas estadísticos cronológicos, no software de diseño CAD estructural."
+      },
+      {
+        "text": "Calcular la depreciación tributaria de los escritorios de la gerencia.",
+        "isCorrect": false,
+        "rationale": "Corresponde a la contabilidad financiera de activos fijos, ajena al control estadístico de procesos (SPC)."
+      },
+      {
+        "text": "Sustituir el uso de sensores físicos en las celdas de flotación.",
+        "isCorrect": false,
+        "rationale": "Los gráficos de control requieren de la captura de datos de los sensores para poder construirse."
+      },
+      {
+        "text": "Garantizar que no existan fluctuaciones en el tipo de cambio monetario.",
+        "isCorrect": false,
+        "rationale": "No tienen capacidad de controlar variables macroeconómicas ni mercados divisas."
+      }
+    ],
+    "hint": "Identifique la herramienta gráfica que utiliza límites de control superior e inferior para evaluar la estabilidad de un parámetro en el tiempo.",
+    "activo": true
+  }
+]

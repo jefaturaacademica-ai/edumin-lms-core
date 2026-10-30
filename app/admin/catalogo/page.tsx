@@ -43,7 +43,7 @@ export default function CatalogoAdminPage() {
   const [nuevoTitulo, setNuevoTitulo] = useState('');
   const [nuevoDocente, setNuevoDocente] = useState('');
   const [nuevoNumModulos, setNuevoNumModulos] = useState('3');
-  const [nuevoTallerAplicable, setNuevoTallerAplicable] = useState('Ninguno');
+  const [nuevoTallerAplicable, setNuevoTallerAplicable] = useState('TAL-02: Taller de Seguridad Basada en el Comportamiento');
   const [nuevoPrecio, setNuevoPrecio] = useState('150.00');
   const [nuevaDuracion, setNuevaDuracion] = useState('325 horas académicas');
   const [nuevosCreditos, setNuevosCreditos] = useState('13');
@@ -1692,11 +1692,9 @@ export default function CatalogoAdminPage() {
 
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8">
             <div>
-              <div className="flex items-center gap-2">
-                <span className="bg-emerald-100 text-emerald-800 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">Catálogo Sincronizado</span>
-                <span className="text-slate-400 text-xs tabular-nums">• Supabase public.cursos</span>
-              </div>
-              <h1 className="text-3xl font-bold text-slate-900 dark:text-white mt-1">Gestión del Catálogo Académico</h1>
+              <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mt-1 tracking-tight">
+                Gestión del catálogo académico
+              </h1>
             </div>
             
             <div className="flex flex-wrap items-center gap-2.5">
@@ -2034,15 +2032,21 @@ export default function CatalogoAdminPage() {
                 {itemEditando.tipo === 'diplomado' && (
                   <>
                     <div>
-                      <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">Taller Aplicable</label>
+                      <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">Taller Aplicable (Regalo)</label>
                       <select 
-                        value={itemEditando.taller_aplicable || 'Ninguno'}
+                        value={
+                          itemEditando.taller_aplicable?.includes('TAL-01') || itemEditando.taller_aplicable?.includes('Soft') || itemEditando.taller_aplicable?.includes('Taller 1')
+                            ? 'TAL-01: Taller de Soft Skills en la Industria y Minería'
+                            : itemEditando.taller_aplicable === 'Ninguno'
+                            ? 'Ninguno'
+                            : 'TAL-02: Taller de Seguridad Basada en el Comportamiento'
+                        }
                         onChange={(e) => setItemEditando({ ...itemEditando, taller_aplicable: e.target.value })}
                         className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-900"
                       >
-                        <option value="Ninguno">Ninguno</option>
-                        <option value="Taller 1">Taller 1: Softskills en la Industria y Minería</option>
-                        <option value="Taller 2">Taller 2: Seguridad Basada en el Comportamiento</option>
+                        <option value="TAL-02: Taller de Seguridad Basada en el Comportamiento">TAL-02: Taller de Seguridad Basada en el Comportamiento (Estándar)</option>
+                        <option value="TAL-01: Taller de Soft Skills en la Industria y Minería">TAL-01: Taller de Soft Skills en la Industria y Minería</option>
+                        <option value="Ninguno">Ninguno (Sin taller de regalo)</option>
                       </select>
                     </div>
 
@@ -2775,15 +2779,15 @@ export default function CatalogoAdminPage() {
                 </div>
               ) : (
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Taller Aplicable</label>
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Taller Aplicable (Regalo)</label>
                   <select 
                     value={nuevoTallerAplicable} 
                     onChange={(e) => setNuevoTallerAplicable(e.target.value)}
                     className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-semibold bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-600 text-slate-800"
                   >
-                    <option value="Ninguno">Ninguno</option>
-                    <option value="Taller 1">Taller 1: Softskills en la Industria y Minería</option>
-                    <option value="Taller 2">Taller 2: Seguridad Basada en el Comportamiento</option>
+                    <option value="TAL-02: Taller de Seguridad Basada en el Comportamiento">TAL-02: Taller de Seguridad Basada en el Comportamiento (Estándar)</option>
+                    <option value="TAL-01: Taller de Soft Skills en la Industria y Minería">TAL-01: Taller de Soft Skills en la Industria y Minería</option>
+                    <option value="Ninguno">Ninguno (Sin taller de regalo)</option>
                   </select>
                 </div>
               )}

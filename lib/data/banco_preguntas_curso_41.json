@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué principio económico se fundamenta principalmente el comercio internacional al explicar por qué los países se especializan e intercambian bienes?",
+    "opciones": [
+      {
+        "text": "La teoría de las ventajas comparativas",
+        "isCorrect": true,
+        "rationale": "Este principio explica cómo las naciones se especializan en producir y exportar bienes que pueden generar con mayor eficiencia y menor costo relativo debido a sus factores geográficos, tecnológicos o recursos."
+      },
+      {
+        "text": "El proteccionismo absoluto estatal",
+        "isCorrect": false,
+        "rationale": "El proteccionismo busca restringir las importaciones mediante barreras para aislar la economía nacional, en lugar de incentivar el intercambio internacional."
+      },
+      {
+        "text": "La autarquía comercial cerrada",
+        "isCorrect": false,
+        "rationale": "La autarquía implica autosuficiencia total y ausencia de comercio exterior, lo cual se opone al concepto de intercambio global."
+      },
+      {
+        "text": "El monopolio arancelario global",
+        "isCorrect": false,
+        "rationale": "No existe un monopolio único de aranceles a nivel mundial, sino diversos acuerdos bilaterales y multilaterales entre naciones."
+      },
+      {
+        "text": "La sustitución unilateral de importaciones",
+        "isCorrect": false,
+        "rationale": "La sustitución de importaciones es una estrategia de desarrollo interno orientada a producir localmente lo que se importa, no la base que impulsa el comercio internacional."
+      }
+    ],
+    "hint": "Piensa en el principio desarrollado por David Ricardo sobre la especialización de cada país en lo que produce de manera más eficiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué sector productivo representa aproximadamente el 60% del total de las exportaciones peruanas?",
+    "opciones": [
+      {
+        "text": "El sector minero",
+        "isCorrect": true,
+        "rationale": "La extracción y exportación de minerales como el cobre, el oro y el zinc constituyen la mayor proporción de los ingresos de exportación del Perú."
+      },
+      {
+        "text": "El sector agroexportador",
+        "isCorrect": false,
+        "rationale": "Aunque la agricultura tiene un crecimiento destacado en frutas y hortalizas, representa un porcentaje significativamente menor comparado con la minería."
+      },
+      {
+        "text": "El sector pesquero",
+        "isCorrect": false,
+        "rationale": "La pesca, liderada por la harina y aceite de pescado, es un rubro clave pero no alcanza la cuota mayoritaria del volumen total exportado."
+      },
+      {
+        "text": "El sector textil y de confecciones",
+        "isCorrect": false,
+        "rationale": "Los productos textiles como las prendas de algodón y alpaca tienen un alto valor cualitativo, pero representan un porcentaje menor de la balanza comercial."
+      },
+      {
+        "text": "El sector manufacturero industrial",
+        "isCorrect": false,
+        "rationale": "La manufactura diversa forma parte de la canasta exportadora, pero está muy lejos del volumen de generación de divisas del sector extractivo."
+      }
+    ],
+    "hint": "Considera el sector extractivo tradicional que incluye metales como el cobre, el oro y el zinc.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es actualmente el principal socio comercial de Perú, representando más del 30% de sus exportaciones totales?",
+    "opciones": [
+      {
+        "text": "China",
+        "isCorrect": true,
+        "rationale": "La alta demanda de minerales e insumos industriales por parte de esta nación asiática la posiciona como el destino líder de los envíos peruanos."
+      },
+      {
+        "text": "Estados Unidos",
+        "isCorrect": false,
+        "rationale": "Es el segundo socio comercial estratégico, con especial relevancia para el sector agroindustrial, pero no llega al primer lugar de participación porcentual."
+      },
+      {
+        "text": "Japón",
+        "isCorrect": false,
+        "rationale": "Japón es un comprador importante de productos pesqueros y mineros, pero su cuota representa un porcentaje menor del total general."
+      },
+      {
+        "text": "Alemania",
+        "isCorrect": false,
+        "rationale": "A pesar de integrar la Unión Europea y comprar productos agrícolas y minerales, no representa el mayor volumen individual por país."
+      },
+      {
+        "text": "Brasil",
+        "isCorrect": false,
+        "rationale": "Es un socio comercial relevante a nivel latinoamericano, pero el volumen de intercambio es menor comparado con las potencias asiáticas y norteamericanas."
+      }
+    ],
+    "hint": "Se trata de la gran economía asiática cuyo fuerte consumo de cobre e hierro lidera las compras al Perú.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes productos agrícolas peruanos destacan en la canasta de agroexportación debido a sus ventajas climáticas y alta demanda internacional?",
+    "opciones": [
+      {
+        "text": "Espárragos frescos o en conserva",
+        "isCorrect": true,
+        "rationale": "El Perú ha consolidado su posición mundial como exportador líder de esta hortaliza gracias a la constante producción en su franja costera."
+      },
+      {
+        "text": "Arándanos",
+        "isCorrect": true,
+        "rationale": "Las condiciones climáticas han permitido un crecimiento exponencial en la producción y envío de esta fruta hacia mercados norteamericanos y europeos."
+      },
+      {
+        "text": "Paltas (aguacates)",
+        "isCorrect": true,
+        "rationale": "La variedad Hass producida en valles peruanos cuenta con una amplia penetración en los mercados de consumo masivo internacional."
+      },
+      {
+        "text": "Trigo duro para harina panificable",
+        "isCorrect": false,
+        "rationale": "El trigo no es un producto de agroexportación representativo del país; de hecho, se requiere importar volúmenes significativos para cubrir el consumo interno."
+      },
+      {
+        "text": "Arroz basmati de grano largo",
+        "isCorrect": false,
+        "rationale": "Esta variedad específica es originaria y producida masivamente en Asia meridional, no figurando en la oferta exportable peruana."
+      }
+    ],
+    "hint": "Identifica los frutos u hortalizas de gran crecimiento en los valles de la costa y sierra peruana orientados a Norteamérica y Europa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué concepto describe mejor la interdependencia económica en el comercio internacional?",
+    "opciones": [
+      {
+        "text": "La necesidad mutua entre países de intercambiar bienes y servicios para cubrir requerimientos que no satisfacen internamente",
+        "isCorrect": true,
+        "rationale": "Los países recurren al comercio exterior debido a que no producen la totalidad de los insumos, alimentos o tecnologías que sus poblaciones exigen."
+      },
+      {
+        "text": "La autosuficiencia total de una nación para cubrir todos sus requerimientos de consumo sin importar del exterior",
+        "isCorrect": false,
+        "rationale": "Ese concepto corresponde a la autarquía, la cual elimina la dependencia económica con el exterior."
+      },
+      {
+        "text": "La imposición unilateral de precios y aranceles por parte de un único gobierno sobre el mercado global",
+        "isCorrect": false,
+        "rationale": "La interdependencia refleja relaciones bilaterales o multilaterales de intercambio, no un dominio normativo único."
+      },
+      {
+        "text": "La adopción obligatoria de una misma moneda para todas las operaciones comerciales transfronterizas",
+        "isCorrect": false,
+        "rationale": "El intercambio comercial ocurre cotidianamente entre países con distintas divisas respaldadas por tipos de cambio."
+      },
+      {
+        "text": "La prohibición de enviar materias primas a países con mayor desarrollo tecnológico",
+        "isCorrect": false,
+        "rationale": "La interdependencia precisamente fomenta el envío de materias primas a cambio de bienes manufacturados o tecnológicos."
+      }
+    ],
+    "hint": "Reflexiona sobre la relación recíproca en la cual ningún país produce absolutamente todo lo que necesita.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de los Tratados de Libre Comercio (TLC) firmados entre Perú y sus socios internacionales?",
+    "opciones": [
+      {
+        "text": "Eliminar o reducir aranceles y barreras comerciales para facilitar el intercambio de productos y servicios",
+        "isCorrect": true,
+        "rationale": "Los TLC establecen reglas claras y desgravaciones tributarias que hacen competitivos los productos en los mercados de destino."
+      },
+      {
+        "text": "Aumentar los impuestos aduaneros para proteger de manera permanente a las empresas locales",
+        "isCorrect": false,
+        "rationale": "Los TLC buscan la apertura comercial y la reducción de impuestos, no el incremento de protecciones tarifarias."
+      },
+      {
+        "text": "Unificar las leyes laborales y ambientales para que sean idénticas en todos los países firmantes",
+        "isCorrect": false,
+        "rationale": "Aunque incluyen capítulos sobre cooperación laboral o ambiental, cada Estado conserva su propia soberanía legislativa."
+      },
+      {
+        "text": "Establecer cuotas fijas de compra obligatoria asignadas por los gobiernos a las empresas privadas",
+        "isCorrect": false,
+        "rationale": "Los acuerdos comerciales facilitan las condiciones del mercado, pero no fuerzan volúmenes obligatorios de compra a actores privados."
+      },
+      {
+        "text": "Prohibir el uso de vías de transporte marítimo para favorecer únicamente la vía aérea",
+        "isCorrect": false,
+        "rationale": "Los convenios regulan aspectos tarifarios y de acceso, sin restringir los medios logísticos que elijan los operadores."
+      }
+    ],
+    "hint": "Piensa en las facilidades impositivas que buscan quitar obstáculos al ingreso de productos entre países firmantes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué implica el carácter 'transfronterizo' en la celebración de un contrato de compraventa internacional?",
+    "opciones": [
+      {
+        "text": "Que las partes, mercancías o servicios están sujetos a jurisdicciones e intercambios que cruzan límites territoriales",
+        "isCorrect": true,
+        "rationale": "La transacción conecta regulaciones y geografías de dos o más países distintos, lo que exige considerar normativas de ambos lados de la frontera."
+      },
+      {
+        "text": "Que la transacción sólo es válida si el transporte se realiza por vía terrestre a través de fronteras colindantes",
+        "isCorrect": false,
+        "rationale": "Un contrato internacional puede involucrar transporte marítimo o aéreo entre países sin fronteras terrestres comunes."
+      },
+      {
+        "text": "Que las partes deben compartir obligatoriamente la misma nacionalidad y marco legal interno",
+        "isCorrect": false,
+        "rationale": "La esencia del comercio internacional es conectar a partes ubicadas bajo ordenamientos jurídicos y naciones distintas."
+      },
+      {
+        "text": "Que el contrato no requiere de documentación aduanera para validar el traspaso de la mercancía",
+        "isCorrect": false,
+        "rationale": "Al cruzar fronteras nacionales, el proceso exige necesariamente tramitación y control aduanero."
+      },
+      {
+        "text": "Que el pago debe realizarse únicamente en efectivo al momento del cruce fronterizo del camión de carga",
+        "isCorrect": false,
+        "rationale": "Las operaciones transfronterizas utilizan herramientas bancarias y financieras reguladas como cartas de crédito o transferencias."
+      }
+    ],
+    "hint": "Relaciona el término con el hecho de conectar dos países bajo diferentes leyes y geografías.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el Incoterm EXW (Ex Works / En Fábrica), ¿cuál es la obligación primaria del vendedor respecto a la entrega?",
+    "opciones": [
+      {
+        "text": "Poner la mercancía a disposición del comprador en sus propios locales o almacenes",
+        "isCorrect": true,
+        "rationale": "Bajo EXW, el vendedor limita su responsabilidad a dejar la carga lista en sus instalaciones, trasladando casi todos los costos y riesgos al comprador."
+      },
+      {
+        "text": "Cargar la mercancía en el buque internacional y pagar el seguro de transporte hasta el puerto de destino",
+        "isCorrect": false,
+        "rationale": "Esa responsabilidad corresponde a términos de la categoría C o D, como CIF o CIP, no a EXW."
+      },
+      {
+        "text": "Realizar todos los trámites aduaneros de importación en el país del comprador",
+        "isCorrect": false,
+        "rationale": "El despacho de importación corre por cuenta del comprador; en EXW el vendedor ni siquiera asume la aduana de exportación."
+      },
+      {
+        "text": "Pagar el flete marítimo y asumir el riesgo de pérdida hasta el almacén final del cliente",
+        "isCorrect": false,
+        "rationale": "Asumir el transporte e impuestos de destino corresponde al Incoterm DDP, el extremo opuesto a EXW."
+      },
+      {
+        "text": "Entregar la mercancía en el puerto de embarque con los impuestos de destino cancelados",
+        "isCorrect": false,
+        "rationale": "En EXW el comprador se encarga del recojo desde la fábrica del vendedor, asumiendo el transporte posterior."
+      }
+    ],
+    "hint": "Es la regla donde el vendedor tiene el mínimo nivel de responsabilidad y deja la carga en sus propios almacenes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué momento se transfiere el riesgo del vendedor al comprador bajo la regla Incoterm FOB (Free on Board)?",
+    "opciones": [
+      {
+        "text": "Cuando la mercancía se encuentra sobre el buque designado en el puerto de embarque convenido",
+        "isCorrect": true,
+        "rationale": "En el Incoterm FOB, la transferencia de costos y riesgos se concreta una vez que los bienes están embarcados a bordo del navío."
+      },
+      {
+        "text": "Al momento en que la carga es empaquetada en la fábrica del vendedor",
+        "isCorrect": false,
+        "rationale": "La preparación del paquete en fábrica no libera al vendedor del riesgo del traslado hacia el puerto."
+      },
+      {
+        "text": "Cuando el buque arriba y descarga en el puerto de destino final",
+        "isCorrect": false,
+        "rationale": "En FOB el vendedor no asume el tránsito marítimo ni la llegada al puerto de destino."
+      },
+      {
+        "text": "En el instante en que el comprador realiza la transferencia bancaria inicial",
+        "isCorrect": false,
+        "rationale": "Los Incoterms regulan la entrega física, costos y riesgos logísticos, no el momento del pago financiero del contrato."
+      },
+      {
+        "text": "Cuando el producto supera la inspección de la aduana de importación",
+        "isCorrect": false,
+        "rationale": "Los trámites e inspecciones en la aduana de destino son responsabilidad exclusiva del comprador bajo FOB."
+      }
+    ],
+    "hint": "Piensa en el momento en que la carga ha sido colocada de forma efectiva sobre la embarcación marítima de origen.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes aspectos resultan fundamentales al redactar cláusulas en un contrato de compraventa internacional?",
+    "opciones": [
+      {
+        "text": "Determinación de la ley aplicable y la jurisdicción competente",
+        "isCorrect": true,
+        "rationale": "Define con claridad qué marco legal nacional o internacional resolverá cualquier interpretación o disputa jurídica."
+      },
+      {
+        "text": "Establecimiento del idioma oficial que regirá el texto del contrato",
+        "isCorrect": true,
+        "rationale": "Previene malentendidos de traducción al fijar la versión lingüística que prevalecerá legalmente entre las partes."
+      },
+      {
+        "text": "Inclusión de mecanismos de solución de controversias como el arbitraje internacional",
+        "isCorrect": true,
+        "rationale": "Asegura un procedimiento ágil, neutral y especializado para resolver litigios sin recurrir a tribunales ordinarios extranjeros."
+      },
+      {
+        "text": "Asignación obligatoria de un único agente bancario estatal para ambas partes",
+        "isCorrect": false,
+        "rationale": "Las partes son libres de seleccionar las instituciones bancarias privadas o públicas de su preferencia comercial."
+      },
+      {
+        "text": "Fijación permanente de precios sin posibilidad de revisión por fluctuaciones cambiarias",
+        "isCorrect": false,
+        "rationale": "Los contratos suelen incorporar cláusulas de revisión de precios para prever riesgos por volatilidad de monedas o insumos."
+      }
+    ],
+    "hint": "Elige aquellas cláusulas jurídicas que evitan conflictos sobre qué tribunales, idioma o reglas aplicarán ante un incumplimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de las reglas Incoterms elaboradas por la Cámara de Comercio Internacional (ICC)?",
+    "opciones": [
+      {
+        "text": "Delimitar de forma estandarizada los costos, riesgos y responsabilidades logísticas entre comprador y vendedor",
+        "isCorrect": true,
+        "rationale": "Aportan un lenguaje comercial universal que define con precisión el punto exacto de entrega y transferencia de gastos."
+      },
+      {
+        "text": "Definir las alícuotas del impuesto a la renta que cada empresa debe pagar en su país",
+        "isCorrect": false,
+        "rationale": "La tributación interna es materia de la legislación fiscal de cada Estado, no de los Incoterms."
+      },
+      {
+        "text": "Garantizar que las mercancías vendidas no sufran variaciones de precio en el mercado minorista",
+        "isCorrect": false,
+        "rationale": "Los Incoterms no fijan precios comerciales al consumidor ni regulan el margen de ganancia."
+      },
+      {
+        "text": "Sustituir la necesidad de formalizar un contrato de compraventa internacional",
+        "isCorrect": false,
+        "rationale": "Los Incoterms son cláusulas logísticas que se incorporan dentro de un contrato, pero no lo reemplazan."
+      },
+      {
+        "text": "Determinar de forma exclusiva la validez del título de propiedad de una empresa exportadora",
+        "isCorrect": false,
+        "rationale": "Los Incoterms no regulan la transferencia de propiedad de los bienes, aspecto que corresponde a las leyes del contrato."
+      }
+    ],
+    "hint": "Piensa en las siglas de tres letras que estandarizan el reparto de tareas y fletes en la logística comercial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué el arbitraje internacional es un mecanismo muy recurrido para resolver conflictos en contratos de comercio exterior?",
+    "opciones": [
+      {
+        "text": "Ofrece un procedimiento neutral, especializado y de ejecución vinculante para las partes",
+        "isCorrect": true,
+        "rationale": "Evita el sesgo de litigarse en los tribunales nacionales de una de las partes mediante la decisión de árbitros expertos."
+      },
+      {
+        "text": "Asegura que la parte vendedora quede exenta de cualquier responsabilidad por defectos de calidad",
+        "isCorrect": false,
+        "rationale": "El tribunal arbitral juzga imparcialmente con base en el contrato y las pruebas, sin favorecer sistemáticamente a una parte."
+      },
+      {
+        "text": "Elimina de forma automática el pago de aranceles e impuestos aduaneros",
+        "isCorrect": false,
+        "rationale": "El arbitraje resuelve disputas entre las partes del contrato, no modifica la legislación fiscal de las aduanas."
+      },
+      {
+        "text": "Garantiza que el fallo sea confidencial e inaplicable en el territorio del comprador",
+        "isCorrect": false,
+        "rationale": "Los laudos arbitrales son exigibles e internacionales gracias a convenios multilaterales de ejecución."
+      },
+      {
+        "text": "Permite resolver controversias sin necesidad de presentar pruebas ni testimonios documentales",
+        "isCorrect": false,
+        "rationale": "El proceso exige aportar contratos, facturas y evidencias que fundamenten los reclamos de las partes."
+      }
+    ],
+    "hint": "Considera la búsqueda de imparcialidad y especialización técnica fuera del poder judicial ordinario de un país.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la investigación para exportar, ¿qué evalúa el análisis PESTEL?",
+    "opciones": [
+      {
+        "text": "Los factores Políticos, Económicos, Sociales, Tecnológicos, Ambientales y Legales del entorno",
+        "isCorrect": true,
+        "rationale": "Esta herramienta estratégica examina las fuerzas macroambientales del país de destino para medir la viabilidad del negocio."
+      },
+      {
+        "text": "El precio de venta en fábrica, los costos de flete, el seguro y los márgenes de ganancia neta",
+        "isCorrect": false,
+        "rationale": "Ese cálculo concierne a la estructura de costos y precios de exportación, no al entorno macroeconómico PESTEL."
+      },
+      {
+        "text": "La lista detallada del peso, empaque y contenido de cada contenedor o bulto",
+        "isCorrect": false,
+        "rationale": "Esa descripción corresponde a la lista de empaque o packing list en la gestión operativa."
+      },
+      {
+        "text": "Las normas específicas de inspección técnica exigidas por la aduana de origen",
+        "isCorrect": false,
+        "rationale": "Aunque abarca aspectos legales, PESTEL es una herramienta macro multidimensional y no un checklist aduanero."
+      },
+      {
+        "text": "El volumen de carga máxima permitido para transporte marítimo de contenedores refrigerados",
+        "isCorrect": false,
+        "rationale": "La capacidad operativa de los contenedores concierne a la logística de transporte y no a un análisis macroambiental."
+      }
+    ],
+    "hint": "Recuerda las siglas que abarcan dimensiones desde la política y la economía hasta el medio ambiente y la legislación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué documento es indispensable para demostrar el lugar de producción de una mercancía y solicitar desgravaciones arancelarias bajo un TLC?",
+    "opciones": [
+      {
+        "text": "Certificado de Origen",
+        "isCorrect": true,
+        "rationale": "Prueba formalmente que el bien cumple con las reglas de origen negociadas para beneficiarse de la desgravación en la aduana."
+      },
+      {
+        "text": "Lista de Empaque (Packing List)",
+        "isCorrect": false,
+        "rationale": "El packing list detalla el contenido físico y peso de los paquetes, sin certificar el cumplimiento de reglas de origen."
+      },
+      {
+        "text": "Guía Aérea (Airway Bill)",
+        "isCorrect": false,
+        "rationale": "Es el contrato de transporte internacional para la vía aérea, no un documento probatorio del origen del producto."
+      },
+      {
+        "text": "Factura Proforma",
+        "isCorrect": false,
+        "rationale": "Es un documento borrador o cotización previa que no posee validez probatoria oficial ante la aduana."
+      },
+      {
+        "text": "Póliza de seguro individual de carga",
+        "isCorrect": false,
+        "rationale": "Cubre los riesgos financieros por daño o pérdida de los bienes durante el trayecto, sin certificar su origen geográfico."
+      }
+    ],
+    "hint": "Es la certificación emitida para acreditar en qué país se fabricó o cosechó el producto para pagar menos aranceles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes documentos son requeridos habitualmente para tramitar el despacho aduanero en operaciones de exportación e importación?",
+    "opciones": [
+      {
+        "text": "Factura Comercial",
+        "isCorrect": true,
+        "rationale": "Constituye el comprobante de la transacción mercantil que detalla los valores y condiciones acordadas."
+      },
+      {
+        "text": "Declaración Única de Aduanas (DUA) o documento aduanero equivalente",
+        "isCorrect": true,
+        "rationale": "Es la declaración oficial que formaliza ante la autoridad aduanera el ingreso o salida legal de los bienes."
+      },
+      {
+        "text": "Conocimiento de embarque o documento de transporte (Bill of Lading / Airway Bill)",
+        "isCorrect": true,
+        "rationale": "Acredita la propiedad de la carga y el contrato celebrado con la empresa transportista."
+      },
+      {
+        "text": "Licencia de conducir de uso particular del representante legal de la empresa",
+        "isCorrect": false,
+        "rationale": "La identificación personal de tránsito privado del representante no forma parte del expediente aduanero de la mercancía."
+      },
+      {
+        "text": "Título universitario del agente de aduanas que realiza el trámite",
+        "isCorrect": false,
+        "rationale": "Las aduanas exigen el registro y autorización formal del agente, no la presentación de sus diplomas académicos en cada trámite."
+      }
+    ],
+    "hint": "Identifica los documentos comerciales, aduaneros y logísticos de respaldo indispensable en el trámite de aduanas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la principal ventaja operativa del transporte marítimo frente al aéreo en el envío de grandes volúmenes de carga no perecedera?",
+    "opciones": [
+      {
+        "text": "Mayor capacidad de volumen y costos de flete considerablemente más bajos por tonelada",
+        "isCorrect": true,
+        "rationale": "El transporte por barco permite mover miles de toneladas a costos reducidos, siendo ideal para minerales y graneles."
+      },
+      {
+        "text": "Mínimos tiempos de tránsito que permiten entregas en menos de 24 horas",
+        "isCorrect": false,
+        "rationale": "La velocidad del transporte marítimo es lenta comparada con la del transporte aéreo, tomando semanas de tránsito."
+      },
+      {
+        "text": "Exención total de tramitación aduanera en los puertos de destino",
+        "isCorrect": false,
+        "rationale": "Toda carga marítima internacional debe cumplir estrictamente con los controles y despachos aduaneros."
+      },
+      {
+        "text": "Entregas directas en los almacenes del cliente sin necesidad de transporte terrestre complementario",
+        "isCorrect": false,
+        "rationale": "El transporte marítimo requiere conectar con el transporte terrestre (camión o tren) para completar el traslado."
+      },
+      {
+        "text": "Ausencia de requisitos para contratar pólizas de seguro de carga",
+        "isCorrect": false,
+        "rationale": "El flete marítimo enfrenta riesgos de navegación que hacen recomendable y habitualmente exigida la contratación de seguros."
+      }
+    ],
+    "hint": "Considera la relación entre el costo económico por tonelada y la capacidad masiva de los buques portacontenedores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta pública de información comercial permite consultar estadísticas de importación, exportación y aranceles entre países?",
+    "opciones": [
+      {
+        "text": "TradeMap",
+        "isCorrect": true,
+        "rationale": "Desarrollada por el Centro de Comercio Internacional, esta plataforma ofrece datos estadísticos de flujos comerciales y aranceles a nivel global."
+      },
+      {
+        "text": "Google Trends",
+        "isCorrect": false,
+        "rationale": "Google Trends mide la frecuencia de búsqueda de palabras clave en la web, no registros oficiales de aduana ni aranceles."
+      },
+      {
+        "text": "LinkedIn",
+        "isCorrect": false,
+        "rationale": "Es una red social profesional orientada al networking y búsqueda de empleo, no una base de datos aduaneros."
+      },
+      {
+        "text": "Canva",
+        "isCorrect": false,
+        "rationale": "Es una herramienta de diseño gráfico en línea y no recopila datos sobre comercio ni aranceles."
+      },
+      {
+        "text": "WhatsApp Business",
+        "isCorrect": false,
+        "rationale": "Es una aplicación de mensajería para atención al cliente, carente de registros estadísticos sobre transacciones internacionales."
+      }
+    ],
+    "hint": "Es una base de datos interactiva sobre flujos de comercio internacional gestionada por organismos de las Naciones Unidas y la OMC.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué certificación emitida por la autoridad sanitaria competente es obligatoria para exportar e importar productos agrícolas o alimentos frescos?",
+    "opciones": [
+      {
+        "text": "Certificado fitosanitario o sanitario",
+        "isCorrect": true,
+        "rationale": "Garantiza que los productos vegetales o de origen animal están libres de plagas y cumplen con los requisitos de inocuidad."
+      },
+      {
+        "text": "Certificado de depósito bancario en garantía",
+        "isCorrect": false,
+        "rationale": "Es un instrumento financiero sobre depósitos de dinero y no avala el estado biológico o la inocuidad de alimentos."
+      },
+      {
+        "text": "Póliza de responsabilidad civil ambiental vehicular",
+        "isCorrect": false,
+        "rationale": "Se refiere a coberturas de seguros para vehículos terrestres y no a la sanidad del producto agrícola."
+      },
+      {
+        "text": "Licencia comercial de marca registrada",
+        "isCorrect": false,
+        "rationale": "Acredita la propiedad intelectual de un nombre de marca, pero no certifica la ausencia de plagas o bacterias."
+      },
+      {
+        "text": "Matrícula consular de viaje de negocios",
+        "isCorrect": false,
+        "rationale": "Es un documento de identificación personal emitido por consulados y carece de relación con los controles de alimentos."
+      }
+    ],
+    "hint": "Documento avalado por entidades como SENASA en Perú para garantizar la sanidad biológica de los alimentos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el networking internacional enfocado en el comercio exterior?",
+    "opciones": [
+      {
+        "text": "En construir, gestionar y mantener una red de contactos profesionales para generar alianzas y oportunidades comerciales",
+        "isCorrect": true,
+        "rationale": "El networking busca conectar a exportadores con compradores, distribuidores, agentes y organismos clave para potenciar negocios."
+      },
+      {
+        "text": "En contratar sistemas informáticos cerrados para evitar la comunicación con proveedores internacionales",
+        "isCorrect": false,
+        "rationale": "El networking promueve la apertura relacional y el intercambio, no el aislamiento de la empresa."
+      },
+      {
+        "text": "En fijar precios de venta arbitrarios sin consultar las condiciones del mercado objetivo",
+        "isCorrect": false,
+        "rationale": "La fijación de precios concierne a las estrategias de comercialización y costos, no al desarrollo de redes de contactos."
+      },
+      {
+        "text": "En tramitar permisos aduaneros de forma presencial sin el apoyo de agentes autorizados",
+        "isCorrect": false,
+        "rationale": "El despacho aduanero es una gestión operativa formal, distinta del relacionamiento profesional que propone el networking."
+      },
+      {
+        "text": "En enviar comunicaciones publicitarias masivas y no solicitadas a cualquier dirección electrónica",
+        "isCorrect": false,
+        "rationale": "El envío de spam es una práctica invasiva opuesta al networking estratégico, el cual construye relaciones de confianza."
+      }
+    ],
+    "hint": "Reflexiona sobre la interconexión deliberada entre personas, instituciones y empresas para sumar contactos de valor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones son herramientas o espacios efectivos para aplicar el networking en el comercio internacional?",
+    "opciones": [
+      {
+        "text": "Participación activa en ferias comerciales internacionales y ruedas de negocios",
+        "isCorrect": true,
+        "rationale": "Reúnen en un mismo espacio a compradores e importadores calificados buscando nuevos proveedores."
+      },
+      {
+        "text": "Uso de redes sociales de ámbito profesional como LinkedIn para contactar decisores",
+        "isCorrect": true,
+        "rationale": "Facilita la prospección directa de ejecutivos y la presentación formal de ofertas exportables a nivel global."
+      },
+      {
+        "text": "Integración en misiones comerciales organizadas por entidades de promoción como PromPerú",
+        "isCorrect": true,
+        "rationale": "Ofrece respaldo institucional para agendas de reuniones agendadas con compradores internacionales interesados."
+      },
+      {
+        "text": "Distribución de folletos de papel en vías públicas locales de baja concurrencia comercial",
+        "isCorrect": false,
+        "rationale": "El volanteo informal en calles locales no alcanza al público objetivo internacional del comercio exterior."
+      },
+      {
+        "text": "Publicación de anuncios clasificados en periódicos de circulación puramente regional",
+        "isCorrect": false,
+        "rationale": "Los medios impresos estrictamente locales no poseen alcance para conectar con importadores extranjeros."
+      }
+    ],
+    "hint": "Piensa en eventos especializados, plataformas profesionales digitales y agendas institucionales que vinculen oferta y demanda internacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito central de la primera fase del marketing internacional referente a la investigación de mercado?",
+    "opciones": [
+      {
+        "text": "Recopilar y analizar información sobre regulaciones, competidores y preferencias del consumidor del país de destino",
+        "isCorrect": true,
+        "rationale": "Permite tomar decisiones informadas antes de realizar inversiones significativas de empaque, envío o promoción."
+      },
+      {
+        "text": "Fijar el precio final de venta al detalle sin evaluar la capacidad adquisitiva local",
+        "isCorrect": false,
+        "rationale": "La fijación de precios debe considerar los datos arrojados por la investigación previa y no establecerse a ciegas."
+      },
+      {
+        "text": "Enviar de inmediato contenedores con mercancía para probar la aceptación en tiendas",
+        "isCorrect": false,
+        "rationale": "Despachar mercancía sin estudio previo genera un alto riesgo de rechazo aduanero o fracaso comercial."
+      },
+      {
+        "text": "Diseñar campañas publicitarias masivas antes de saber si el producto cumple con los permisos sanitarios",
+        "isCorrect": false,
+        "rationale": "Promocionar un producto sin verificar primero el marco legal e higiénico en el destino inutiliza la inversión."
+      },
+      {
+        "text": "Eliminar todos los intermediarios y distribuidores en la cadena de comercialización",
+        "isCorrect": false,
+        "rationale": "La investigación determina cuáles canales de distribución resultan más convenientes, sin descartar intermediarios de forma apriorística."
+      }
+    ],
+    "hint": "Es la fase inicial que busca diagnosticar la demanda, las barreras y las preferencias antes de exportar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué condición fundamental define a un producto agrícola como 'orgánico' en el comercio internacional?",
+    "opciones": [
+      {
+        "text": "Haber sido cultivado sin plaguicidas sintéticos ni fertilizantes químicos, contando con certificación acreditada",
+        "isCorrect": true,
+        "rationale": "Exige procesos de producción limpios sustentados en auditorías y sellos internacionales exigidos por los países compradores."
+      },
+      {
+        "text": "Ser transportado de forma exclusiva por tramos terrestres utilizando vehículos eléctricos",
+        "isCorrect": false,
+        "rationale": "El término orgánico evalúa el sistema de cultivo y procesamiento del producto, no el tipo de motor del transporte."
+      },
+      {
+        "text": "Estar exonerado por completo del pago de impuestos y derechos arancelarios en todas las aduanas",
+        "isCorrect": false,
+        "rationale": "Los productos orgánicos pagan los aranceles que corresponden a su partida, salvo beneficio expreso por un TLC."
+      },
+      {
+        "text": "Ser comercializado únicamente en mercados locales sin procesamiento ni empaque",
+        "isCorrect": false,
+        "rationale": "Los productos orgánicos se exportan ampliamente procesados o empaquetados cumpliendo normativas internacionales."
+      },
+      {
+        "text": "Tener un costo de producción idéntico o inferior al de los cultivos convencionales masivos",
+        "isCorrect": false,
+        "rationale": "El cultivo orgánico suele exigir mayor mano de obra y certificaciones, lo que habitualmente eleva sus costos operacionales."
+      }
+    ],
+    "hint": "Considera la ausencia de insumos sintéticos de síntesis química en el campo y la presencia de sellos habilitantes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el enfoque central de los sellos y certificaciones de 'Comercio Justo' (Fairtrade)?",
+    "opciones": [
+      {
+        "text": "Garantizar condiciones laborales dignas, precios equitativos y desarrollo social para los productores",
+        "isCorrect": true,
+        "rationale": "Busca que un porcentaje del beneficio retorne a las comunidades de origen y prevenga abusos o trabajo infantil."
+      },
+      {
+        "text": "Asegurar que el producto llegue al país receptor en menos de 24 horas desde su cosecha",
+        "isCorrect": false,
+        "rationale": "El Comercio Justo evalúa la equidad socioeconómica y ambiental de la cadena, no la velocidad del flete."
+      },
+      {
+        "text": "Eliminar los costos por flete marítimo y seguros internacionales de transporte",
+        "isCorrect": false,
+        "rationale": "Los servicios logísticos mantienen sus tarifas de mercado independientemente de la certificación social del bien."
+      },
+      {
+        "text": "Permitir la venta de mercancías sin necesidad de someterse a controles higiénicos ni aduaneros",
+        "isCorrect": false,
+        "rationale": "Las certificaciones sociales no eximen del cumplimiento de la legislación aduanera y sanitaria internacional."
+      },
+      {
+        "text": "Forzar al comprador a adquirir mercancía sin revisar los estándares de calidad del producto",
+        "isCorrect": false,
+        "rationale": "El Comercio Justo promueve estándares de calidad comercial acompañados de responsabilidad social."
+      }
+    ],
+    "hint": "Piensa en las iniciativas que combaten la explotación laboral, promueven salarios dignos y pagan primas comunitarias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué pilares contribuyen a consolidar una sólida reputación comercial para un importador o exportador en los mercados globales?",
+    "opciones": [
+      {
+        "text": "Puntualidad en el cumplimiento de los plazos de entrega de carga y pagos convenidos",
+        "isCorrect": true,
+        "rationale": "Respetar los tiempos pactados genera certidumbre en la cadena logística y fortaleza financiera ante la contraparte."
+      },
+      {
+        "text": "Transparencia y comunicación oportuna ante cualquier contingencia u obstáculo operativo",
+        "isCorrect": true,
+        "rationale": "Informar problemas con rapidez permite a los socios ajustar planes sin fracturar la confianza comercial."
+      },
+      {
+        "text": "Mantenimiento consistente de los estándares de calidad comprometidos en la muestra o contrato",
+        "isCorrect": true,
+        "rationale": "Entregar mercancías conformes con las especificaciones acordadas consolida relaciones de largo plazo."
+      },
+      {
+        "text": "Modificación unilateral y recurrente de los precios pactados tras la firma del contrato",
+        "isCorrect": false,
+        "rationale": "Alterar precios acordados de manera intempestiva destruye la confianza y genera litigios contractuales."
+      },
+      {
+        "text": "Cancelación de pedidos en tránsito sin notificación a la empresa transportista",
+        "isCorrect": false,
+        "rationale": "El abandono u omisión de carga genera costos no cubiertos y deteriora severamente el perfil comercial de la empresa."
+      }
+    ],
+    "hint": "Selecciona las prácticas operativas y éticas que generan confianza, previsibilidad y constancia entre socios comerciales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es crucial adaptar el empaque, diseño y etiquetado de un producto al mercado de destino en el marketing internacional?",
+    "opciones": [
+      {
+        "text": "Para cumplir con las normas nutricionales e idiomáticas locales y alinearse con las preferencias del consumidor",
+        "isCorrect": true,
+        "rationale": "Cada país exige un formato legal de etiquetado (idioma, ingredientes, advertencias) y posee códigos culturales específicos de compra."
+      },
+      {
+        "text": "Para evitar el pago de aranceles de importación en la aduana de destino",
+        "isCorrect": false,
+        "rationale": "El diseño de empaque no altera la partida arancelaria ni elimina los tributos aduaneros aplicables."
+      },
+      {
+        "text": "Para eximir al producto de contar con certificados de origen o guías de embarque",
+        "isCorrect": false,
+        "rationale": "La documentación de aduana es obligatoria independientemente de la estética del etiquetado comercial."
+      },
+      {
+        "text": "Para obligar a la empresa de transporte a reducir las tarifas de flete contratadas",
+        "isCorrect": false,
+        "rationale": "Las tarifas de flete responden al peso y volumen transportado, no a la tipografía o idioma de la etiqueta."
+      },
+      {
+        "text": "Para asegurar que el producto no requiera ser inspeccionado en el puerto de salida",
+        "isCorrect": false,
+        "rationale": "Los controles de aduana e inspección física se realizan sobre la carga de forma aleatoria u obligatoria, al margen del diseño del producto."
+      }
+    ],
+    "hint": "Considera los requerimientos legales del país receptor (idioma, información nutricional) y los gustos del comprador final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el principio económico fundamental propuesto por David Ricardo que explica por qué los países se especializan en la producción y exportación de aquellos bienes en los que poseen mayor eficiencia relativa?",
+    "opciones": [
+      {
+        "text": "Teoría de la ventaja comparativa",
+        "isCorrect": true,
+        "rationale": "Esta teoría establece que cada nación se especializa en los bienes y servicios que puede producir con mayor eficiencia y menor costo relativo en comparación con otros países, optimizando el comercio global."
+      },
+      {
+        "text": "Modelo de proteccionismo arancelario",
+        "isCorrect": false,
+        "rationale": "El proteccionismo busca restringir las importaciones mediante aranceles para proteger la industria nacional, en lugar de incentivar la especialización basada en eficiencias relativas."
+      },
+      {
+        "text": "Principio de ventaja absoluta de monopolio",
+        "isCorrect": false,
+        "rationale": "El monopolio describe el dominio de mercado por una sola entidad, no el principio de especialización eficiente basada en costos de oportunidad entre países."
+      },
+      {
+        "text": "Doctrina de balanza comercial proteccionista",
+        "isCorrect": false,
+        "rationale": "Las doctrinas mercantilistas o proteccionistas priorizan la acumulación de divisas restringiendo compras externas, a diferencia del enfoque del libre comercio sustentado en eficiencias productivas."
+      },
+      {
+        "text": "Sustitución de importaciones regionales",
+        "isCorrect": false,
+        "rationale": "La sustitución de importaciones es una estrategia de desarrollo orientada a reemplazar bienes extranjeros por producción local, no una teoría de especialización comercial internacional."
+      }
+    ],
+    "hint": "Piensa en el concepto económico que explica cómo dos naciones se benefician comerciando incluso si una es más eficiente en todo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la estructura del comercio exterior peruano presentada en el curso, ¿cuál es el principal producto tradicional de exportación minera y cuál es su mercado de destino mayoritario?",
+    "opciones": [
+      {
+        "text": "Cobre con destino principal hacia China",
+        "isCorrect": true,
+        "rationale": "La minería representa aproximadamente el 60% de las exportaciones peruanas, siendo el cobre el producto estrella impulsado por la alta demanda industrial de China, su principal comprador."
+      },
+      {
+        "text": "Oro con destino principal hacia Canadá",
+        "isCorrect": false,
+        "rationale": "A pesar de que el oro es un mineral de exportación relevante, el volumen principal de envíos minerales y el socio comercial dominante del Perú es el cobre hacia el mercado chino."
+      },
+      {
+        "text": "Cinc con destino principal hacia Japón",
+        "isCorrect": false,
+        "rationale": "Japón destaca principalmente en la compra de productos pesqueros como la harina de pescado, mientras que el sector minero peruano está liderado por los despachos de cobre a China."
+      },
+      {
+        "text": "Plata refinada con destino principal hacia Estados Unidos",
+        "isCorrect": false,
+        "rationale": "Estados Unidos destaca más como destino de exportaciones agrícolas no tradicionales (como espárragos y paltas) que como el comprador líder del concentrado minero principal de Perú."
+      },
+      {
+        "text": "Plomo con destino principal hacia la Unión Europea",
+        "isCorrect": false,
+        "rationale": "El plomo no constituye el volumen predominante de la canasta minera peruana frente al peso masivo que registra la exportación de cobre hacia Asia."
+      }
+    ],
+    "hint": "Considera el metal no ferroso de mayor participación en la canasta exportadora peruana y el país asiático que concentra cerca del 30% del comercio total.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes rubros forman parte destacada de la canasta agroexportadora y pesquera no tradicional o tradicional del Perú mencionada en las sesiones?",
+    "opciones": [
+      {
+        "text": "Arándanos, paltas y mangos frescos",
+        "isCorrect": true,
+        "rationale": "Las frutas frescas han posicionado al Perú como un proveedor líder en los mercados de Estados Unidos y Europa gracias a la diversidad climática del país."
+      },
+      {
+        "text": "Harina y conserva de pescado",
+        "isCorrect": true,
+        "rationale": "El sector pesquero peruano es reconocido mundialmente por liderar la exportación de harina de pescado para la nutrición animal."
+      },
+      {
+        "text": "Espárragos y café de alta calidad",
+        "isCorrect": true,
+        "rationale": "Los espárragos y el café representan rubros agrícolas consolidados de alta demanda en mercados internacionales como EE. UU. y Europa."
+      },
+      {
+        "text": "Maquinaria pesada para la minería",
+        "isCorrect": false,
+        "rationale": "La maquinaria pesada corresponde a bienes de capital que el Perú generalmente importa del extranjero para equipar sus sectores productivos."
+      },
+      {
+        "text": "Automóviles y vehículos de transporte",
+        "isCorrect": false,
+        "rationale": "El sector automotriz forma parte de la oferta exportadora de países industrializados y constituye una importación relevante para Perú."
+      }
+    ],
+    "hint": "Identifica los productos del mar y del campo peruano que gozan de ventajas comparativas en el mercado internacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué instrumento de política comercial busca principalmente eliminar o reducir los aranceles y las barreras al comercio entre dos o más países para facilitar el flujo de bienes y servicios?",
+    "opciones": [
+      {
+        "text": "Tratado de Libre Comercio (TLC)",
+        "isCorrect": true,
+        "rationale": "Los TLC fijan reglas claras y reducen o eliminan aranceles para hacer competitivos los productos de los países firmantes en sus respectivos mercados."
+      },
+      {
+        "text": "Acuerdo de Protección Recíproca de Inversiones (APPRI)",
+        "isCorrect": false,
+        "rationale": "Los APPRI se centran en brindar garantías jurídicas y protección a los capitales e inversionistas extranjeros, más que en la desgravación de aranceles de mercancías."
+      },
+      {
+        "text": "Convenio de Complementación Exclusivamente Cultural",
+        "isCorrect": false,
+        "rationale": "Este tipo de convenios fomenta el intercambio educativo y cultural sin incidir directamente en las tarifas arancelarias ni en la logística de mercancías."
+      },
+      {
+        "text": "Licencia No Arancelaria Restrictiva",
+        "isCorrect": false,
+        "rationale": "Las licencias y barreras no arancelarias suelen actuar como controles o restricciones administrativas, no como instrumentos para liberalizar el comercio."
+      },
+      {
+        "text": "Régimen de Salvaguardia Temporal",
+        "isCorrect": false,
+        "rationale": "Las salvaguardias son medidas de emergencia para limitar la importación de productos si causan daño a la industria nacional, lo opuesto a la apertura comercial de un TLC."
+      }
+    ],
+    "hint": "Busca el acuerdo bilateral o multilateral diseñado expresamente para liberar el intercambio de mercancías reduciendo tributos de aduana.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son características fundamentales que definen el dinamismo del comercio exterior peruano en la última década?",
+    "opciones": [
+      {
+        "text": "Diversificación progresiva de la canasta exportadora no tradicional.",
+        "isCorrect": true,
+        "rationale": "El país ha impulsado activamente nuevos sectores exportadores como la agroindustria, la pesca para consumo humano y los textiles para no depender únicamente de los minerales."
+      },
+      {
+        "text": "Política de apertura económica e integración global mediante acuerdos comerciales.",
+        "isCorrect": true,
+        "rationale": "La suscripción de más de 20 tratados de libre comercio ha facilitado el acceso preferencial a los principales mercados del mundo."
+      },
+      {
+        "text": "Crecimiento comercial sostenido con registros de superávit en la balanza comercial.",
+        "isCorrect": true,
+        "rationale": "El valor de las exportaciones ha permitido mantener superávits comerciales significativos, fortaleciendo los ingresos divisas del país."
+      },
+      {
+        "text": "Dependencia exclusiva de un único comprador internacional.",
+        "isCorrect": false,
+        "rationale": "Aunque China es el principal socio, el comercio peruano está distribuido entre Estados Unidos, la Unión Europea, Japón y América Latina."
+      },
+      {
+        "text": "Prohibición total a las importaciones de bienes de consumo.",
+        "isCorrect": false,
+        "rationale": "Perú mantiene un modelo de economía abierta que promueve tanto las exportaciones como el ingreso de insumos, maquinaria y bienes de consumo del exterior."
+      }
+    ],
+    "hint": "Selecciona las opciones que reflejan la apertura de mercados, la variedad de productos no tradicionales y la salud de la balanza comercial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué bloque de integración económica regional agrupa a Perú, Chile, Colombia y México con el objetivo de constituir un área de libre circulación de bienes, servicios, capitales y personas?",
+    "opciones": [
+      {
+        "text": "Alianza del Pacífico",
+        "isCorrect": true,
+        "rationale": "La Alianza del Pacífico es un mecanismo de integración profunda conformado por estos cuatro países para potenciar la competitividad de sus miembros, especialmente hacia el mercado de Asia-Pacífico."
+      },
+      {
+        "text": "Mercado Común del Sur (MERCOSUR)",
+        "isCorrect": false,
+        "rationale": "MERCOSUR está integrado originalmente por países del cono sur como Argentina, Brasil, Paraguay y Uruguay, no siendo el bloque fundado por Perú, México, Colombia y Chile."
+      },
+      {
+        "text": "Comunidad Andina (CAN)",
+        "isCorrect": false,
+        "rationale": "La CAN integra a Bolivia, Colombia, Ecuador y Perú, excluyendo a México y Chile de sus miembros plenos."
+      },
+      {
+        "text": "Asociación Latinoamericana de Integración (ALADI)",
+        "isCorrect": false,
+        "rationale": "ALADI es un marco institucional más amplio de alcance regional que engloba a 13 países de América Latina, sin ser el bloque específico formado por los cuatro países mencionados."
+      },
+      {
+        "text": "Unión de Naciones Suramericanas (UNASUR)",
+        "isCorrect": false,
+        "rationale": "UNASUR fue un proyecto de concertación política que abarcaba exclusivamente a naciones sudamericanas, por lo que no incluía a México."
+      }
+    ],
+    "hint": "Es un bloque comercial latinoamericano muy dinámico orientado estratégicamente hacia la región de Asia-Pacífico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de las transacciones comerciales transfronterizas, ¿cuál es el propósito principal de diseñar un contrato internacional con cláusulas jurídicas rigurosas?",
+    "opciones": [
+      {
+        "text": "Anticipar y mitigar riesgos de incumplimiento, establecer la ley aplicable y determinar los mecanismos de solución de controversias.",
+        "isCorrect": true,
+        "rationale": "El contrato internacional otorga certeza jurídica a ambas partes al prever situaciones de incumplimiento, variaciones cambiarias y fijar la jurisdicción ante posibles disputas."
+      },
+      {
+        "text": "Eliminar de forma automática la obligación de presentar declaraciones aduaneras.",
+        "isCorrect": false,
+        "rationale": "Los acuerdos privados entre comprador y vendedor no pueden derogar las obligaciones legales ni los controles aduaneros exigidos por las autoridades de cada país."
+      },
+      {
+        "text": "Garantizar que el pago de impuestos locales sea transferido directamente a organismos internacionales.",
+        "isCorrect": false,
+        "rationale": "Los impuestos aduaneros y locales son recaudados por las autoridades tributarias nacionales de cada Estado, no por organismos internacionales."
+      },
+      {
+        "text": "Sustituir la necesidad de contratar pólizas de seguro para el transporte de carga.",
+        "isCorrect": false,
+        "rationale": "El contrato establece las obligaciones de asegurar la mercancía, pero no reemplaza la póliza emitida por una compañía aseguradora."
+      },
+      {
+        "text": "Eximir al exportador de cumplir con los requisitos sanitarios del país importador.",
+        "isCorrect": false,
+        "rationale": "El contrato obliga al exportador a entregar productos que cumplan con la regulación del país de destino; no puede eximir del cumplimiento de normas imperativas."
+      }
+    ],
+    "hint": "Considera cómo las partes previenen contingencias legales, riesgos cambiarios y desacuerdos al operar bajo distintas legislaciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Bajo las reglas Incoterms 2020, si un exportador y un importador acuerdan la regla EXW (En Fábrica), ¿qué grado de responsabilidad y costo asume el vendedor?",
+    "opciones": [
+      {
+        "text": "Entrega la mercancía en sus propias instalaciones sin cargarla en el vehículo receptor, transfiriendo al comprador casi la totalidad de riesgos y costos.",
+        "isCorrect": true,
+        "rationale": "EXW representa la mínima obligación para el vendedor, limitándose a poner la mercancía a disposición del comprador en su fábrica o almacén."
+      },
+      {
+        "text": "Asume el flete internacional y el seguro de transporte hasta el puerto de destino designado.",
+        "isCorrect": false,
+        "rationale": "El pago de flete y seguro internacional corresponde a reglas donde el vendedor tiene mayor responsabilidad, como CIP o CIF."
+      },
+      {
+        "text": "Efectúa el despacho aduanero de exportación e importación y paga todos los aranceles.",
+        "isCorrect": false,
+        "rationale": "En EXW el comprador se encarga incluso del despacho de exportación en el país de origen, siendo la regla opuesta a DDP."
+      },
+      {
+        "text": "Asume todo el riesgo hasta que la mercancía es descargada en el almacén del comprador.",
+        "isCorrect": false,
+        "rationale": "La transferencia de riesgos al destino final corresponde a las reglas del grupo D (DAP, DPU, DDP), no a EXW."
+      },
+      {
+        "text": "Cubre el transporte terrestre hasta el puerto de salida pero no se encarga del estibado.",
+        "isCorrect": false,
+        "rationale": "En EXW el vendedor ni siquiera asume el transporte terrestre interno en el país de origen."
+      }
+    ],
+    "hint": "Identifica el Incoterm que impone la obligación mínima al vendedor en la cadena logística.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia clave respecto al costo y seguro entre los Incoterms FOB (Franco a Bordo) y CIF (Costo, Seguro y Flete) en el transporte marítimo?",
+    "opciones": [
+      {
+        "text": "En FOB el vendedor entrega la carga a bordo del buque y el comprador paga flete y seguro, mientras que en CIF el vendedor contrata y paga flete y seguro hasta el puerto de destino.",
+        "isCorrect": true,
+        "rationale": "En FOB la responsabilidad financiera del vendedor concluye al cargar la mercancía en el buque; en CIF el vendedor debe pagar el flete marítimo y la cobertura de seguro hasta el destino."
+      },
+      {
+        "text": "En FOB el vendedor debe pagar el despacho de importación, mientras que en CIF solo paga la exportación.",
+        "isCorrect": false,
+        "rationale": "Tanto en FOB como en CIF el despacho de importación en el país de destino es responsabilidad exclusiva del comprador."
+      },
+      {
+        "text": "En FOB la mercancía se entrega en el almacén del comprador, mientras que en CIF se entrega en la fábrica del vendedor.",
+        "isCorrect": false,
+        "rationale": "Ambas son reglas exclusivas para transporte marítimo o vías navegables y la entrega operacional se relaciona con el puerto o buque, no con el almacén final en FOB."
+      },
+      {
+        "text": "En FOB el riesgo del transporte se transfiere en destino y en CIF la transferencia ocurre en origen.",
+        "isCorrect": false,
+        "rationale": "Sorprendentemente, en ambas reglas el riesgo sobre la mercancía se transfiere al comprador en el puerto de origen una vez que la carga está a bordo del barco."
+      },
+      {
+        "text": "En FOB se exige seguro aéreo obligatorio y en CIF se prohíbe el uso de seguro de carga.",
+        "isCorrect": false,
+        "rationale": "FOB y CIF son reglas aplicables únicamente al transporte por vía marítima o fluvial, no al transporte aéreo."
+      }
+    ],
+    "hint": "Analiza quién debe asumir el pago del flete marítimo internacional y la prima del seguro según las siglas de cada regla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes modalidades corresponden a instrumentos financieros de pago comúnmente utilizados para cerrar operaciones de comercio internacional?",
+    "opciones": [
+      {
+        "text": "Carta de crédito confirmada e irrevocable",
+        "isCorrect": true,
+        "rationale": "Es uno de los medios más seguros, pues un banco garante asegura el pago al exportador previa verificación de la documentación contractual."
+      },
+      {
+        "text": "Transferencia bancaria internacional o orden de pago",
+        "isCorrect": true,
+        "rationale": "Es un mecanismo ágil de envío de fondos entre cuentas bancarias de distintos países, habitual cuando existe alta confianza entre las partes."
+      },
+      {
+        "text": "Cobranza documentaria (a la vista o a plazo)",
+        "isCorrect": true,
+        "rationale": "Permite canalizar la gestión de cobro de los documentos comerciales a través de entidades bancarias intermediarias."
+      },
+      {
+        "text": "Pago informal mediante efectivo no declarado en frontera",
+        "isCorrect": false,
+        "rationale": "El traslado físico e informal de efectivo viola las normativas aduaneras y de prevención de lavado de activos en el comercio formal."
+      },
+      {
+        "text": "Pagaré de consumo interno emitido sin validez transfronteriza",
+        "isCorrect": false,
+        "rationale": "Los títulos valores locales sin regulación o aval bancario internacional carecen de ejecutabilidad y aceptación en operaciones internacionales."
+      }
+    ],
+    "hint": "Selecciona los medios de pago bancarizados y regulados por el sistema financiero internacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la Carta de Crédito es considerada uno de los métodos de pago más seguros para el exportador e importador en el comercio exterior?",
+    "opciones": [
+      {
+        "text": "Porque interpone el compromiso irrevocable de un banco de pagar al vendedor siempre que presente strictly los documentos exigidos.",
+        "isCorrect": true,
+        "rationale": "La carta de crédito sustituye el crédito individual del comprador por el respaldo garantizado del banco emisor, supeditado al cumplimiento documental."
+      },
+      {
+        "text": "Porque elimina la necesidad de realizar inspecciones físicas de calidad o sanidad en las mercancías.",
+        "isCorrect": false,
+        "rationale": "Los bancos operan con documentos y no con mercancías; los controles de calidad dependen de los certificados requeridos dentro del expediente."
+      },
+      {
+        "text": "Porque condona el pago de aranceles e impuestos ante las aduanas de ambos países.",
+        "isCorrect": false,
+        "rationale": "La carta de crédito es un medio de pago financiero y no un mecanismo de exoneración de tributos aduaneros."
+      },
+      {
+        "text": "Porque financia automáticamente al comprador a tasa cero de interés durante diez años.",
+        "isCorrect": false,
+        "rationale": "Es un instrumento de garantía y pago regulado bajo normas bancarias (como las UCP 600), no un subsidio financiero sin costos de comisión."
+      },
+      {
+        "text": "Porque obliga al transportista marítimo a asumir las pérdidas por fluctuaciones en el tipo de cambio.",
+        "isCorrect": false,
+        "rationale": "Los riesgos cambiarios son gestionados por el comprador y vendedor mediante cobertura financiera, no trasvasados a la empresa naviera."
+      }
+    ],
+    "hint": "Piensa en el rol del banco emisor como garante independiente del cumplimiento de las condiciones documentarias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al formalizar un contrato de compraventa internacional, ¿qué elementos deben quedar expresamente redactados para prevenir vacíos legales entre las partes?",
+    "opciones": [
+      {
+        "text": "La ley aplicable y el fuero o tribunal de arbitraje para resolver controversias.",
+        "isCorrect": true,
+        "rationale": "Definir el marco normativo (por ejemplo, la Convención de Viena sobre Compraventa Internacional) evita conflictos sobre qué ley nacional rige el acuerdo."
+      },
+      {
+        "text": "El Incoterm específico indicando el lugar o puerto exacto de entrega.",
+        "isCorrect": true,
+        "rationale": "Especificar la regla Incoterms delimita claramente la distribución de costos, riesgos y fletes entre comprador y vendedor."
+      },
+      {
+        "text": "El idioma oficial en que se interpreta y redacta el contrato vinculante.",
+        "isCorrect": true,
+        "rationale": "Establecer una lengua oficial (frecuentemente el inglés u otro idioma acordado) previene ambigüedades derivadas de traducciones."
+      },
+      {
+        "text": "La cláusula de exención permanente de presentar factura comercial en aduana.",
+        "isCorrect": false,
+        "rationale": "La factura comercial es un documento legal obligatorio exigido por las aduanas para la valoración tributaria y no se puede omitir contractualmente."
+      },
+      {
+        "text": "La renuncia irrevocable a contratar seguros contra riesgos de transporte.",
+        "isCorrect": false,
+        "rationale": "El contrato puede asignar quién contrata el seguro, pero no se redacta para prohibir la protección financiera del flete."
+      }
+    ],
+    "hint": "Elige los componentes contractuales que determinan la jurisdicción, la regla de transporte y la interpretación lingüística oficial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del marco del análisis PESTEL aplicado a la investigación de mercados internacionales, ¿qué variables específicas examina el componente 'Político'?",
+    "opciones": [
+      {
+        "text": "La estabilidad gubernamental, las políticas comerciales, barreras tarifarias y la relación diplomática con el país de origen.",
+        "isCorrect": true,
+        "rationale": "El factor Político analiza la seguridad jurídica de la nación de destino, decisiones gubernamentales sobre aranceles y acuerdos comerciales que puedan impactar el negocio."
+      },
+      {
+        "text": "Las tasas de interés bancarias, el nivel de inflación y el producto bruto interno.",
+        "isCorrect": false,
+        "rationale": "Las tasas de inflación, el PBI y la fluctuación del tipo de cambio son evaluados en el componente Económico ('E') del PESTEL."
+      },
+      {
+        "text": "Los hábitos de consumo, la estructura demográfica y los valores culturales de la población.",
+        "isCorrect": false,
+        "rationale": "Los datos demográficos y culturales corresponden al análisis Social ('S') dentro de la matriz."
+      },
+      {
+        "text": "La penetración del comercio electrónico y la infraestructura de telecomunicaciones.",
+        "isCorrect": false,
+        "rationale": "El grado de digitalización y conectividad se evalúa bajo la variable Tecnológica ('T')."
+      },
+      {
+        "text": "La regulación en la disposición de residuos industriales y empaques reciclables.",
+        "isCorrect": false,
+        "rationale": "Las regulaciones de cuidado ambiental y reciclaje se analizan en el apartado Ecológico/Ambiental ('E')."
+      }
+    ],
+    "hint": "Enfócate en los aspectos relacionados con las decisiones del gobierno, estabilidad de régimen y normativas de política exterior.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para exportar legalmente productos agrícolas frescos desde el Perú (como paltas o uvas), ¿qué certificado de control sanitario y fitosanitario es obligatorio tramitar ante la autoridad nacional competente?",
+    "opciones": [
+      {
+        "text": "Certificado Fitosanitario de SENASA",
+        "isCorrect": true,
+        "rationale": "El Servicio Nacional de Sanidad Agraria (SENASA) es el organismo peruano facultado para certificar que los productos vegetales están libres de plagas y cumplen con los requisitos de inocuidad."
+      },
+      {
+        "text": "Certificado de Almacén General de Depósito Privado",
+        "isCorrect": false,
+        "rationale": "Es un documento de carácter logístico o financiero de custodia, pero no avala el estado sanitario ni la sanidad vegetal exigida por la aduana."
+      },
+      {
+        "text": "Registro Unificado de Proveedores de la Marina Mercante",
+        "isCorrect": false,
+        "rationale": "Este registro atañe a operadores del ámbito marítimo y portuario, sin competencias en la inspección de sanidad vegetal de alimentos."
+      },
+      {
+        "text": "Licencia de Funcionamiento del Municipio del Callao",
+        "isCorrect": false,
+        "rationale": "Las licencias municipales autorizan actividades comerciales en locales urbanos dentro de un distrito, pero no constituyen certificados técnicos de exportación agrícola."
+      },
+      {
+        "text": "Certificado de Valoración de la Cámara de Comercio Internacional",
+        "isCorrect": false,
+        "rationale": "La CCI promueve reglas operativas como los Incoterms, pero no realiza inspecciones ni emite certificaciones fitosanitarias de sanidad agraria."
+      }
+    ],
+    "hint": "Identifica la entidad oficial peruana adscrita al Ministerio de Desarrollo Agrario encargada de velar por la sanidad agraria e inocuidad de las plantas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes documentos forman parte del expediente indispensable para tramitar el despacho aduanero de una exportación o importación formal?",
+    "opciones": [
+      {
+        "text": "Factura comercial",
+        "isCorrect": true,
+        "rationale": "Documento mercantil clave emitido por el vendedor que prueba la transacción, valor, cantidad y condiciones de los bienes."
+      },
+      {
+        "text": "Lista de empaque (Packing List)",
+        "isCorrect": true,
+        "rationale": "Detalla la distribución del contenido por caja, bulto o contenedor, facilitando la inspección física de la carga en aduana."
+      },
+      {
+        "text": "Declaración Única de Aduanas (DUA / DAM)",
+        "isCorrect": true,
+        "rationale": "Es la declaración oficial mediante la cual el operador destina legalmente la mercancía a un régimen aduanero."
+      },
+      {
+        "text": "Documento de transporte (Bill of Lading, Guía Aérea o Carta de Porte)",
+        "isCorrect": true,
+        "rationale": "Acredita el contrato de transporte internacional y el derecho de propiedad o posesión de los bienes enviados."
+      },
+      {
+        "text": "Licencia de conducir del capitán del buque marítimo",
+        "isCorrect": false,
+        "rationale": "Las credenciales operativas de la tripulación naviera son del ámbito operativo del transporte y no forman parte del expediente del despacho aduanero."
+      }
+    ],
+    "hint": "Elige los documentos requeridos por la aduana para verificar el valor comercial, el embalaje, la declaración del régimen y la titularidad de la carga.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión logística internacional, ¿cuál es la principal ventaja comparativa que ofrece el transporte aéreo sobre el flete marítimo para ciertos tipos de carga?",
+    "opciones": [
+      {
+        "text": "Elevada velocidad en el tiempo de tránsito, resultando óptimo para cargas de alto valor o productos altamente perecederos.",
+        "isCorrect": true,
+        "rationale": "El transporte aéreo reduce los tiempos de tránsito de semanas a horas o días, preservando la vida útil de perecederos y acortando ciclos de inventario."
+      },
+      {
+        "text": "Costos de flete por tonelada significativamente más económicos para mercancías voluminosas o a granel.",
+        "isCorrect": false,
+        "rationale": "El flete aéreo es considerablemente más costoso que el marítimo para enviar grandes volúmenes o insumos pesados como minerales."
+      },
+      {
+        "text": "Capacidad ilimitada de peso y volumen dentro de la bodega del avión.",
+        "isCorrect": false,
+        "rationale": "Los aviones cuentan con restricciones estrictas de peso, dimensiones de puerta y volumen útil en comparación con la capacidad de los buques portacontenedores."
+      },
+      {
+        "text": "Exención absoluta de controles aduaneros y revisiones de seguridad en origen y destino.",
+        "isCorrect": false,
+        "rationale": "Las terminales aéreas están sujetas a rigurosos controles de seguridad y fiscalización aduanera al igual que los puertos marítimos."
+      },
+      {
+        "text": "Eliminación completa de la necesidad de solicitar certificados de origen o facturas.",
+        "isCorrect": false,
+        "rationale": "El medio de transporte no altera las exigencias legales y documentarias del despacho de mercancías ante la aduana."
+      }
+    ],
+    "hint": "Piensa en el factor tiempo al trasladar bienes como flores frescas, medicamentos o componentes electrónicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué soluciones de software avanzadas e Inteligencia Artificial se mencionaron en el curso para realizar pronósticos de demanda y optimizar cadenas de suministro internacionales?",
+    "opciones": [
+      {
+        "text": "Oracle Demand Planning",
+        "isCorrect": true,
+        "rationale": "Plataforma empresarial que aplica algoritmos predictivos sobre datos históricos y tendencias de mercado para proyectar ventas e inventarios."
+      },
+      {
+        "text": "IBM Watson (con analítica predictiva)",
+        "isCorrect": true,
+        "rationale": "Sistema de IA capaz de procesar Big Data en tiempo real para anticipar la demanda y optimizar la logística global."
+      },
+      {
+        "text": "Módulos de demanda en SAP (planificación S&OP)",
+        "isCorrect": true,
+        "rationale": "Software ERP líder que integra la planificación comercial de ventas con la capacidad operativa de suministro."
+      },
+      {
+        "text": "Microsoft Paint 3D",
+        "isCorrect": false,
+        "rationale": "Es una herramienta gráfica básica de dibujo, no diseñada para el procesamiento de datos logísticos ni modelos de demanda."
+      },
+      {
+        "text": "WhatsApp Messenger sin extensiones",
+        "isCorrect": false,
+        "rationale": "Aunque es una aplicación de mensajería instantánea para comunicación informal o de servicio, no es un software especializado de simulación de cadena de suministro."
+      }
+    ],
+    "hint": "Selecciona las plataformas empresariales corporativas de analítica de datos, ERP e Inteligencia Artificial citadas en la sesión de tecnologías aplicadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función logística y legal cumple el documento de transporte conocido como Bill of Lading (B/L) o Conocimiento de Embarque en el modo marítimo?",
+    "opciones": [
+      {
+        "text": "Prueba la recepción de la carga por la naviera, actúa como título representativo de la propiedad de la mercancía y constituye el contrato de flete marítimo.",
+        "isCorrect": true,
+        "rationale": "El B/L es el pilar del transporte marítimo; prueba el contrato, certifica que la carga está a bordo y otorga a su tenedor legítimo el derecho a reclamar los bienes en el puerto de destino."
+      },
+      {
+        "text": "Sustituye a la Declaración Única de Aduanas emitida por la autoridad tributaria nacional.",
+        "isCorrect": false,
+        "rationale": "El B/L lo emite la línea naviera o el agente de carga, mientras que la DUA/DAM es una declaración oficial ante la aduana pública."
+      },
+      {
+        "text": "Acredita únicamente la exoneración de impuestos a la renta del exportador.",
+        "isCorrect": false,
+        "rationale": "El B/L es un título operativo y mercantil de transporte marítimo, no una exención de obligaciones tributarias internas."
+      },
+      {
+        "text": "Garantiza que el producto ha sido producido mediante prácticas orgánicas sustentables.",
+        "isCorrect": false,
+        "rationale": "Las características orgánicas se acreditan mediante certificaciones emitidas por organismos calificadores, no por el documento de embarque de la naviera."
+      },
+      {
+        "text": "Otorga el permiso fitosanitario para el libre tránsito de vegetales en frontera.",
+        "isCorrect": false,
+        "rationale": "Los aspectos fitosanitarios corresponden exclusivamente a las autoridades de sanidad vegetal (como SENASA)."
+      }
+    ],
+    "hint": "Infiere el valor de este documento como título de propiedad de la carga transportada por vía marítima.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial del 'Networking' estratégico en las operaciones de comercio internacional?",
+    "opciones": [
+      {
+        "text": "Construir, nutrir y sostener relaciones profesionales sólidas con actores clave para generar alianzas, acceder a nuevos mercados y detectar oportunidades de negocio.",
+        "isCorrect": true,
+        "rationale": "El networking busca entrelazar una red de contactos sólida (proveedores, compradores, entidades de promoción) para respaldar y hacer crecer la actividad comercial a largo plazo."
+      },
+      {
+        "text": "Negociar la evasión de impuestos arancelarios directamente con los fiscalizadores aduaneros.",
+        "isCorrect": false,
+        "rationale": "El networking es una práctica legal de vinculación comercial, no un mecanismo para eludir las leyes aduaneras y tributarias."
+      },
+      {
+        "text": "Sustituir la obligación formal de celebrar contratos jurídicos escritos de compraventa.",
+        "isCorrect": false,
+        "rationale": "Las redes de contactos facilitan la búsqueda de socios, pero las transacciones formales requieren soporte contractual para darles seguridad jurídica."
+      },
+      {
+        "text": "Reducir los requisitos sanitarios exigidos a los productos alimenticios congelados.",
+        "isCorrect": false,
+        "rationale": "Las normativas sanitarias son de obligado cumplimiento fijadas por los Estados, independientemente del nivel de contactos que tenga una empresa."
+      },
+      {
+        "text": "Eliminar por completo los costos de empaque y embalaje de los productos.",
+        "isCorrect": false,
+        "rationale": "El networking optimiza oportunidades comerciales, pero no altera los requerimientos técnicos de embalaje para la protección de mercancías."
+      }
+    ],
+    "hint": "Enfócate en la creación de valor mediante relaciones de confianza y colaboración a largo plazo entre empresas e instituciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes acciones constituyen canales o actividades eficaces para poner en práctica el networking internacional en el sector exportador?",
+    "opciones": [
+      {
+        "text": "Participación activa en ferias internacionales especializadas y ruedas de negocios organizadas por organismos de promoción.",
+        "isCorrect": true,
+        "rationale": "Las ferias internacionales (como Expoalimentaria o Anuga) reúnen a compradores e importadores globales facilitando reuniones presenciales de alto impacto."
+      },
+      {
+        "text": "Uso estratégico de plataformas digitales profesionales como LinkedIn para conectar con decisores del sector.",
+        "isCorrect": true,
+        "rationale": "Las redes profesionales facilitan la prospección directa de contactos clave, permitiendo presentar credenciales y construir reputación digital."
+      },
+      {
+        "text": "Asistencia a misiones comerciales, paneles y conferencias del sector objetivo.",
+        "isCorrect": true,
+        "rationale": "Participar en eventos gremiales o misiones institucionales permite posicionarse en el ecosistema y entablar vínculos informados."
+      },
+      {
+        "text": "Envío no solicitado de correo masivo publicitario (spam) a bases de datos desactualizadas.",
+        "isCorrect": false,
+        "rationale": "Las prácticas de correo masivo invasivo generan desconfianza, dañan la reputación digital de la empresa y no constituyen networking efectivo."
+      },
+      {
+        "text": "Ocultamiento deliberado de las credenciales de la empresa en reuniones de negocios.",
+        "isCorrect": false,
+        "rationale": "El networking se fundamenta en la visibilidad, la transparencia y el intercambio abierto de credenciales profesionales para generar confianza."
+      }
+    ],
+    "hint": "Elige las estrategias que involucran presencia en eventos clave, herramientas profesionales y el respaldo de gremios e instituciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco del Marketing Internacional, ¿por qué resulta indispensable llevar a cabo la 'adaptación del producto' antes de iniciar ventas en el mercado de destino?",
+    "opciones": [
+      {
+        "text": "Para responder a las normativas locales de etiquetado, requisitos nutricionales, idioma, formatos de tamaño y preferencias culturales de los consumidores.",
+        "isCorrect": true,
+        "rationale": "Adaptar el producto asegura el cumplimiento normativo en aduana y maximiza la aceptación del consumidor ajustando empaques, idiomas e ingredientes a la cultura local."
+      },
+      {
+        "text": "Para elevar artificialmente el precio final e impedir que la competencia pueda vender bienes similares.",
+        "isCorrect": false,
+        "rationale": "La adaptación busca adecuarse a las normas y gustos del mercado, no imponer precios artificialmente elevados que reduzcan la competitividad."
+      },
+      {
+        "text": "Para eludir la necesidad de contratar empresas transportistas internacionales.",
+        "isCorrect": false,
+        "rationale": "Modificar empaques o etiquetas no reemplaza la logística necesaria para trasladar la carga al extranjero."
+      },
+      {
+        "text": "Para cambiar la naturaleza física del bien y convertirlo en un servicio puramente digital.",
+        "isCorrect": false,
+        "rationale": "La adaptación adecúa un bien físico a los requerimientos del nuevo mercado, sin alterar su esencia básica como producto."
+      },
+      {
+        "text": "Para exonerar al comprador del pago de tarifas arancelarias en su país.",
+        "isCorrect": false,
+        "rationale": "Las modificaciones de diseño de producto no afectan la clasificación arancelaria ni eximen del pago de tributos aduaneros aplicables."
+      }
+    ],
+    "hint": "Piensa en el ejemplo de modificar etiquetas al alemán o ajustar empaques a requerimientos nutricionales específicos de otro país.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué pilar social y ético diferencia principalmente a la certificación de 'Comercio Justo' (Fair Trade) respecto a las certificaciones exclusivamente orgánicas?",
+    "opciones": [
+      {
+        "text": "Su enfoque en asegurar salarios dignos, condiciones laborales seguras, prohibición del trabajo infantil y la asignación de una prima social para la comunidad.",
+        "isCorrect": true,
+        "rationale": "Mientras que lo orgánico valida la sostenibilidad ecológica del cultivo, el Comercio Justo evalúa el impacto social, la equidad económica y el desarrollo comunitario."
+      },
+      {
+        "text": "La exigencia exclusiva de utilizar únicamente transporte por vía aérea.",
+        "isCorrect": false,
+        "rationale": "El Comercio Justo no limita el medio de transporte; este se elige según la viabilidad logística de la carga."
+      },
+      {
+        "text": "La exención absoluta de tramitar registros fitosanitarios ante las autoridades de origen.",
+        "isCorrect": false,
+        "rationale": "Toda exportación agrícola debe cumplir de forma obligatoria con la sanidad vegetal exigida por la ley, al margen de sus sellos éticos."
+      },
+      {
+        "text": "La prohibición total de exportar a países con economías desarrolladas.",
+        "isCorrect": false,
+        "rationale": "Al contrario, los productos de Comercio Justo encuentran su mayor demanda y valoración 'premium' en mercados como Europa y Norteamérica."
+      },
+      {
+        "text": "La obligación de vender productos únicamente a través de intermediarios no registrados.",
+        "isCorrect": false,
+        "rationale": "El modelo de Comercio Justo promueve la transparencia y las relaciones directas con cooperativas y productores, rechazando la intermediación opaca."
+      }
+    ],
+    "hint": "Considera qué aspecto se evalúa cuando un sello se centra en los derechos del trabajador y la prima de desarrollo local.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué ventajas comerciales y estratégicas reporta a una pyme agroexportadora peruana obtener certificaciones orgánicas internacionales (como USDA Organic o EU Organic)?",
+    "opciones": [
+      {
+        "text": "Acceso a nichos de mercado de mayor poder adquisitivo en Europa, Estados Unidos y Japón.",
+        "isCorrect": true,
+        "rationale": "Los consumidores de estas regiones valoran la sostenibilidad y están dispuestos a pagar por productos libres de agroquímicos."
+      },
+      {
+        "text": "Posibilidad de comercializar el producto con un margen de precio superior ('premium').",
+        "isCorrect": true,
+        "rationale": "Los productos con certificación orgánica respaldada alcanzan precios diferenciados más altos en el anaquel en comparación con la oferta convencional."
+      },
+      {
+        "text": "Mejora del posicionamiento de marca alineado con la salud y el cuidado ambiental.",
+        "isCorrect": true,
+        "rationale": "Certificar procesos sostenibles fortalece la reputación corporativa y proyecta credibilidad ante clientes globales."
+      },
+      {
+        "text": "Liberación total de los costos de transporte marítimo e impuestos de flete.",
+        "isCorrect": false,
+        "rationale": "Las certificaciones de producto no eximen a las empresas de contratar fletes logísticos con las navieras."
+      },
+      {
+        "text": "Prohibición de ser inspeccionado por la aduana del país importador.",
+        "isCorrect": false,
+        "rationale": "Los productos orgánicos están sujetos a los mismos o incluso más estrictos controles aduaneros e inspecciones aleatorias."
+      }
+    ],
+    "hint": "Identifica los beneficios vinculados con el ingreso a mercados de alto valor, el sobreprecio de venta y el posicionamiento de marca.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el ecosistema del comercio global, ¿por qué la reputación del comprador o vendedor se considera un activo intangible crítico para la sostenibilidad del negocio?",
+    "opciones": [
+      {
+        "text": "Porque genera confianza entre los operadores, facilita la consecución de mejores condiciones de crédito y garantiza relaciones a largo plazo.",
+        "isCorrect": true,
+        "rationale": "En un entorno transfronterizo donde no siempre hay contacto presencial, la confianza fundamentada en la reputación técnica y financiera es clave para cerrar acuerdos duraderos."
+      },
+      {
+        "text": "Porque permite realizar envíos internacionales sin contar con una empresa registrada legalmente.",
+        "isCorrect": false,
+        "rationale": "El comercio exterior formal requiere estricta formalidad legal y tributaria; la reputación no exime de estar constituido de acuerdo a ley."
+      },
+      {
+        "text": "Porque condona el pago de multas impuestas por cometer infracciones aduaneras graves.",
+        "isCorrect": false,
+        "rationale": "Las autoridades aduaneras aplican sanciones de acuerdo a la ley de aduanas, independientemente del prestigio comercial de la empresa."
+      },
+      {
+        "text": "Porque elimina los riesgos climáticos o desastres naturales en las rutas marítimas.",
+        "isCorrect": false,
+        "rationale": "La reputación mide la confiabilidad corporativa, pero no puede evitar imprevistos de fuerza mayor durante el tránsito internacional."
+      },
+      {
+        "text": "Porque garantiza que los bancos comerciales no cobren comisiones por transferencias.",
+        "isCorrect": false,
+        "rationale": "Las instituciones financieras aplican sus tarifas tarifarias por servicios internacionales al margen del prestigio de la firma."
+      }
+    ],
+    "hint": "Reflexiona sobre cómo la confiabilidad facilita la negociación de créditos, mejores plazos y alianzas duraderas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-41",
+    "diplomado": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son los pilares de desempeño empresarial necesarios para construir y mantener una sólida reputación como operador en el comercio internacional?",
+    "opciones": [
+      {
+        "text": "Puntualidad rigurosa en el cumplimiento de los plazos de despacho y compromisos de pago.",
+        "isCorrect": true,
+        "rationale": "Cumplir los cronogramas logísticos y financieros demuestra solidez operativa e infunde plena certeza al socio comercial."
+      },
+      {
+        "text": "Transparencia y comunicación oportuna ante cualquier eventualidad o contratiempo logístico.",
+        "isCorrect": true,
+        "rationale": "Informar preventivamente sobre imprevistos en la cadena de suministro demuestra profesionalismo y permite gestionar contingencias a tiempo."
+      },
+      {
+        "text": "Consistencia en el control de calidad asegurando el cumplimiento de los especificados técnicos acordados.",
+        "isCorrect": true,
+        "rationale": "Entregar lotes que cumplan permanentemente con los estándares prometidos evita reclamos y consolida la credibilidad de la firma."
+      },
+      {
+        "text": "Modificación unilateral de los precios estipulados en el contrato sin aviso previo.",
+        "isCorrect": false,
+        "rationale": "Incumplir lo pactado alterando costos arbitrariamente destruye la confianza y vulnera los contratos internacionales."
+      },
+      {
+        "text": "Ocultamiento de información sobre el país de origen real de la mercancía.",
+        "isCorrect": false,
+        "rationale": "Incurrir en triangulaciones opacas o falsificación de origen acarrea severas sanciones aduaneras y arruina la reputación comercial."
+      }
+    ],
+    "hint": "Elige las prácticas enfocadas en la seriedad operativa, cumplimiento de acuerdos, honestidad en la comunicación y calidad del producto.",
+    "activo": true
+  }
+]

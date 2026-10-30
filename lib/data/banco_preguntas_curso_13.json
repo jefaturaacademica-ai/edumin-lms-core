@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el marco constitucional y legal del Perú, ¿quién ostenta la soberanía y el dominio originario sobre todos los recursos naturales?",
+    "opciones": [
+      {
+        "text": "El Estado peruano.",
+        "isCorrect": true,
+        "rationale": "La Constitución y la Ley Orgánica de Aprovechamiento de Recursos Naturales establecen que los recursos naturales son patrimonio de la Nación y el Estado es su único soberano."
+      },
+      {
+        "text": "El propietario del terreno superficial.",
+        "isCorrect": false,
+        "rationale": "El derecho de propiedad sobre el suelo no se extiende a los yacimientos o recursos del subsuelo."
+      },
+      {
+        "text": "La empresa titular de la concesión minera.",
+        "isCorrect": false,
+        "rationale": "La concesión otorga únicamente derechos de uso y aprovechamiento de los recursos, no la propiedad originaria de los mismos."
+      },
+      {
+        "text": "La comunidad campesina o nativa de la zona de influencia.",
+        "isCorrect": false,
+        "rationale": "Las comunidades tienen derechos sobre sus tierras colectivas, pero el dominio de los recursos del subsuelo pertenece al Estado."
+      },
+      {
+        "text": "El gobierno regional correspondiente.",
+        "isCorrect": false,
+        "rationale": "La titularidad de los recursos naturales corresponde al Estado a nivel nacional y no a las administraciones regionales de forma independiente."
+      }
+    ],
+    "hint": "Considera qué entidad nacional representa los intereses del colectivo y conserva el dominio según el artículo 66 de la Constitución.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué derecho otorga sustancialmente el título de una concesión minera al solicitante?",
+    "opciones": [
+      {
+        "text": "El derecho exclusivo de uso y disfrute para el aprovechamiento de los recursos minerales concedidos.",
+        "isCorrect": true,
+        "rationale": "La concesión faculta al titular para explorar o explotar las sustancias minerales del área otorgada conforme a las leyes especiales."
+      },
+      {
+        "text": "La transferencia de propiedad absoluta de la tierra y del predio superficial.",
+        "isCorrect": false,
+        "rationale": "La concesión es un inmueble distinto y separado del terreno superficial, por lo que no otorga título de propiedad sobre el suelo."
+      },
+      {
+        "text": "La autorización automática e inmediata para iniciar la extracción de minerales.",
+        "isCorrect": false,
+        "rationale": "El título de concesión no autoriza por sí solo el inicio de actividades operativas sin obtener previamente los permisos ambientales y sectoriales."
+      },
+      {
+        "text": "La potestad de expropiar terrenos privados sin someterse a evaluación previa de la autoridad.",
+        "isCorrect": false,
+        "rationale": "La expropiación o servidumbre es un procedimiento regulado por la autoridad y la ley, no una atribución directa e incondicional del concesionario."
+      },
+      {
+        "text": "La exoneración permanente e indefinida de tributos y penalidades mineras.",
+        "isCorrect": false,
+        "rationale": "El concesionario está sujeto a obligaciones legales estrictas, tales como el pago del derecho de vigencia y penalidades por inactividad."
+      }
+    ],
+    "hint": "Piensa en la diferencia jurídica entre ser propietario de una tierra y tener la facultad de aprovechamiento sobre los minerales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la unidad básica de medida superficial utilizada en el sistema catastral peruano para otorgar concesiones mineras?",
+    "opciones": [
+      {
+        "text": "La cuadrícula de 100 hectáreas.",
+        "isCorrect": true,
+        "rationale": "La norma minera establece que la unidad básica de medida superficial es una figura geométrica determinada por coordenadas UTM equivalente a 100 hectáreas."
+      },
+      {
+        "text": "La parcela de 10 hectáreas.",
+        "isCorrect": false,
+        "rationale": "Diez hectáreas no constituyen la medida estándar de la cuadrícula catastral nacional."
+      },
+      {
+        "text": "El lote de 50 hectáreas.",
+        "isCorrect": false,
+        "rationale": "La medida básica de cuadrícula minera está fijada en una extensión superior a las 50 hectáreas."
+      },
+      {
+        "text": "El predio de 500 hectáreas.",
+        "isCorrect": false,
+        "rationale": "Quinientas hectáreas corresponden a una agrupación de varias cuadrículas y no a la unidad mínima superficial."
+      },
+      {
+        "text": "La manzana urbana de 1 hectánea.",
+        "isCorrect": false,
+        "rationale": "La manzana superficial de una hectárea se utiliza en catastros urbanos, no en el catastro minero del Estado."
+      }
+    ],
+    "hint": "Se trata de un área en forma de retícula geométrica guiada por coordenadas satelitales UTM.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Dentro de qué rango de extensión superficial (en hectáreas) se pueden solicitar habitualmente las concesiones mineras?",
+    "opciones": [
+      {
+        "text": "De 100 a 1,000 hectáreas.",
+        "isCorrect": true,
+        "rationale": "El rango legal para solicitar un petitorio minero abarca desde una cuadrícula básica (100 hectáreas) hasta un máximo estándar de 1,000 hectáreas por concesión."
+      },
+      {
+        "text": "De 10 a 100 hectáreas.",
+        "isCorrect": false,
+        "rationale": "El límite inferior para formular un petitorio formal mediante cuadrículas catastrales es de 100 hectáreas."
+      },
+      {
+        "text": "De 50 a 500 hectáreas.",
+        "isCorrect": false,
+        "rationale": "Este rango no coincide con las medidas normativas de petitorios basados en cuadrículas de 100 hectáreas."
+      },
+      {
+        "text": "De 500 a 5,000 hectáreas.",
+        "isCorrect": false,
+        "rationale": "Mil hectáreas representa el tope estándar habitual por concesión individual en el régimen general."
+      },
+      {
+        "text": "De 1,000 a 10,000 hectáreas.",
+        "isCorrect": false,
+        "rationale": "Este rango excede los límites fijados por la ley para la formulación de una sola concesión de cuadrículas."
+      }
+    ],
+    "hint": "Abarca desde el tamaño de una sola cuadrícula básica hasta un máximo de diez cuadrículas agrupadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes características jurídicas corresponden a la concesión minera según la Ley General de Minería?",
+    "opciones": [
+      {
+        "text": "Es un inmueble distinto y separado del predio donde se ubica.",
+        "isCorrect": true,
+        "rationale": "La ley contempla la separación legal plena entre la propiedad de la superficie terrestre y el derecho minero otorgado sobre los minerales."
+      },
+      {
+        "text": "Es irrevocable mientras el titular mantenga vigentes sus obligaciones legales.",
+        "isCorrect": true,
+        "rationale": "El Estado garantiza la estabilidad y vigencia del título concesional en tanto el minero pague sus derechos y cumpla la ley."
+      },
+      {
+        "text": "Otorga la propiedad definitiva e imprescriptible del suelo al concesionario.",
+        "isCorrect": false,
+        "rationale": "La concesión otorga derechos de aprovechamiento mineral, jamás la propiedad privada del terreno superficial."
+      },
+      {
+        "text": "Se concede únicamente a empresas estatales pertenecientes al gobierno de turno.",
+        "isCorrect": false,
+        "rationale": "Las concesiones pueden ser otorgadas tanto a personas naturales como jurídicas, sean privadas, públicas, nacionales o extranjeras."
+      },
+      {
+        "text": "Exime al concesionario del pago de anualidades o penalidades por inactividad.",
+        "isCorrect": false,
+        "rationale": "Para mantener la vigencia de la concesión es obligatorio abonar anualmente el derecho de vigencia o la penalidad correspondiente."
+      }
+    ],
+    "hint": "Recuerda las características de los derechos reales sobre bienes inmuebles distintos del predio y las garantías que brinda el Estado al concesionario que cumple.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué institución estatal peruana tiene como función principal la tramitación de petitorios y el otorgamiento de títulos de concesión minera?",
+    "opciones": [
+      {
+        "text": "El Instituto Geológico, Minero y Metalúrgico (INGEMMET).",
+        "isCorrect": true,
+        "rationale": "El INGEMMET es el organismo técnico especializado encargado de administrar el catastro minero nacional y otorgar los títulos de concesión."
+      },
+      {
+        "text": "La Superintendencia Nacional de Aduanas y de Administración Tributaria (SUNAT).",
+        "isCorrect": false,
+        "rationale": "La SUNAT administra la recaudación tributaria y aduanera, no el catastro ni las concesiones mineras."
+      },
+      {
+        "text": "El Ministerio de Trabajo y Promoción del Empleo (MTPE).",
+        "isCorrect": false,
+        "rationale": "El MTPE se enfoca en las relaciones laborales y la promoción del empleo formal a nivel general."
+      },
+      {
+        "text": "La Superintendencia de Banca, Seguros y Administradoras Privadas de Fondos de Pensiones (SBS).",
+        "isCorrect": false,
+        "rationale": "La SBS supervisa el sistema financiero y previsional, sin competencias en la administración del subsuelo minero."
+      },
+      {
+        "text": "El Ministerio de Transportes y Comunicaciones (MTC).",
+        "isCorrect": false,
+        "rationale": "El MTC regula la infraestructura vial y las telecomunicaciones, no la titulación de derechos mineros."
+      }
+    ],
+    "hint": "Es la entidad técnica especializada encargada del catastro minero del Estado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la finalidad básica de la fase de exploración minera dentro del ciclo de la minería?",
+    "opciones": [
+      {
+        "text": "Demostrar las dimensiones, posición, características mineralógicas, reservas y valor comercial del yacimiento.",
+        "isCorrect": true,
+        "rationale": "La exploración realiza trabajos directos para evaluar técnicamente la viabilidad y cantidad de recurso mineral existente en el subsuelo."
+      },
+      {
+        "text": "Vender directamente en el mercado internacional los minerales extraídos masivamente.",
+        "isCorrect": false,
+        "rationale": "La venta masiva corresponde a la fase final de comercialización tras la producción y procesamiento."
+      },
+      {
+        "text": "Construir de forma definitiva la planta de fundición y refinación de metales.",
+        "isCorrect": false,
+        "rationale": "La edificación de plantas de procesamiento corresponde a las etapas de construcción y concesión de beneficio."
+      },
+      {
+        "text": "Ejecutar las labores de remediación ambiental una vez agotadas las reservas mineras.",
+        "isCorrect": false,
+        "rationale": "La rehabilitación ambiental al agotarse el mineral es la etapa del plan de cierre de minas."
+      },
+      {
+        "text": "Realizar la fiscalización laboral de las cuadrillas de trabajadores en el terreno.",
+        "isCorrect": false,
+        "rationale": "La inspección de derechos laborales le compete a los organismos fiscalizadores del Estado y no al objetivo técnico del proyecto minero."
+      }
+    ],
+    "hint": "Consiste en verificar sobre el terreno cuánto mineral hay y si resulta económicamente rentable extraerlo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la etapa de exploración minera requiere obligatoriamente de concesión y permisos ambientales, a diferencia del cateo y la prospección?",
+    "opciones": [
+      {
+        "text": "Porque implica actividades físicas directas con impacto en el terreno, como perforaciones profundas, trincheras y uso de maquinarias o explosivos.",
+        "isCorrect": true,
+        "rationale": "A diferencia de la observación o recolección libre de datos superficiales, la exploración altera el terreno con técnicas que requieren regulación ambiental estricta."
+      },
+      {
+        "text": "Porque la exploración se realiza exclusivamente mediante estudios teóricos en gabinete sin contacto con el campo.",
+        "isCorrect": false,
+        "rationale": "Los trabajos puramente teóricos de gabinete no generan impacto ni requieren la infraestructura de perforación propia de la exploración."
+      },
+      {
+        "text": "Porque el cateo y la prospección son actividades prohibidas en todo el territorio nacional.",
+        "isCorrect": false,
+        "rationale": "El cateo y la prospección son libres en la mayor parte del territorio nacional salvo áreas restringidas por ley."
+      },
+      {
+        "text": "Porque la exploración no genera ningún tipo de riesgo sobre los ecosistemas ni el agua.",
+        "isCorrect": false,
+        "rationale": "Al contrario, la exploración conlleva riesgos de impacto ambiental que deben ser evaluados y controlados mediante licencias."
+      },
+      {
+        "text": "Porque los permisos de exploración son otorgados de forma inmediata sin revisión técnica por el gobierno.",
+        "isCorrect": false,
+        "rationale": "Los permisos de exploración están sujetos a evaluaciones rigurosas por distintas entidades estatales competentes."
+      }
+    ],
+    "hint": "Compara la simple observación de rocas con las obras mecánicas necesarias para tomar muestras del subsuelo a gran profundidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes certificaciones o autorizaciones forman parte del procedimiento legal para desarrollar actividades de exploración formal?",
+    "opciones": [
+      {
+        "text": "La certificación ambiental (Declaración de Impacto Ambiental o Estudio de Impacto Ambiental semidetallado).",
+        "isCorrect": true,
+        "rationale": "Todo proyecto de exploración requiere acreditar previamente su instrumento de gestión ambiental aprobado."
+      },
+      {
+        "text": "El Certificado de Inexistencia de Restos Arqueológicos (CIRA) o Plan de Monitoreo Arqueológico.",
+        "isCorrect": true,
+        "rationale": "El Ministerio de Cultura exige comprobar que las actividades no afectarán el patrimonio arqueológico de la Nación."
+      },
+      {
+        "text": "La Licencia Municipal de Apertura de local comercial en zona urbana.",
+        "isCorrect": false,
+        "rationale": "Las licencias comerciales urbanas no otorgan derechos operacionales ni reemplazan los permisos sectoriales mineros."
+      },
+      {
+        "text": "La transferencia obligatoria del predio superficial a nombre de la empresa minera.",
+        "isCorrect": false,
+        "rationale": "No se requiere adquirir la propiedad del predio, sino contar con una autorización de uso, servidumbre o acuerdo con el titular."
+      },
+      {
+        "text": "El título de exención perpetua de fiscalización ambiental expedido por OEFA.",
+        "isCorrect": false,
+        "rationale": "Ninguna empresa está exenta de la fiscalización ambiental continua por parte de las autoridades competentes."
+      }
+    ],
+    "hint": "Piensa en las evaluaciones obligatorias vinculadas al medio ambiente y a la protección del patrimonio cultural.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué organismo fiscalizador del Estado peruano es responsable de vigilar el cumplimiento ambiental de las operaciones del sector minero?",
+    "opciones": [
+      {
+        "text": "El Organismo de Evaluación y Fiscalización Ambiental (OEFA).",
+        "isCorrect": true,
+        "rationale": "El OEFA fiscaliza que las empresas mineras cumplan con los compromisos establecidos en sus estudios ambientales y la normativa del sector."
+      },
+      {
+        "text": "La Superintendencia Nacional de Fiscalización Laboral (SUNAFIL).",
+        "isCorrect": false,
+        "rationale": "La SUNAFIL es el ente encargado de inspeccionar las condiciones de trabajo y seguridad laboral, no los compromisos ambientales."
+      },
+      {
+        "text": "El Instituto Geológico, Minero y Metalúrgico (INGEMMET).",
+        "isCorrect": false,
+        "rationale": "El INGEMMET concede los títulos mineros y gestiona el catastro, pero la fiscalización ambiental recae en el OEFA."
+      },
+      {
+        "text": "La Superintendencia Nacional de los Registros Públicos (SUNARP).",
+        "isCorrect": false,
+        "rationale": "La SUNARP administra los registros de propiedad y derechos reales, careciendo de facultades de inspección en campo."
+      },
+      {
+        "text": "La Autoridad Nacional del Agua (ANA).",
+        "isCorrect": false,
+        "rationale": "La ANA gestiona la administración del recurso hídrico, mientras que el monitoreo ambiental integral corresponde al OEFA."
+      }
+    ],
+    "hint": "Es la entidad especializada en fiscalización ambiental creada para verificar el respeto a los compromisos ecológicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En caso de que un proyecto minero requiera captar y utilizar agua de una fuente natural para sus operaciones, ¿ante qué autoridad debe tramitarse el permiso de uso de agua?",
+    "opciones": [
+      {
+        "text": "La Autoridad Nacional del Agua (ANA).",
+        "isCorrect": true,
+        "rationale": "La ANA es el ente rector encargado de otorgar licencias y autorizaciones para la captación y uso de recursos hídricos en el país."
+      },
+      {
+        "text": "El Ministerio de Cultura.",
+        "isCorrect": false,
+        "rationale": "El Ministerio de Cultura tutela el patrimonio arqueológico e histórico, sin competencia sobre el uso del agua."
+      },
+      {
+        "text": "La Superintendencia Nacional de Bienes Estatales (SBN).",
+        "isCorrect": false,
+        "rationale": "La SBN administra los predios y terrenos pertenecientes al Estado, no el recurso hídrico de las cuencas."
+      },
+      {
+        "text": "La Superintendencia Nacional de Control de Servicios de Seguridad, Armas, Municiones y Explosivos de Uso Civil (SUCAMEC).",
+        "isCorrect": false,
+        "rationale": "La SUCAMEC regula el uso de explosivos e insumos de seguridad, no las concesiones o licencias hídricas."
+      },
+      {
+        "text": "El Ministerio de Economía y Finanzas (MEF).",
+        "isCorrect": false,
+        "rationale": "El MEF maneja la política económica del Estado y no evalúa técnicamente las solicitudes sobre recursos de agua."
+      }
+    ],
+    "hint": "Busca el organismo máximo que administra las cuencas y el recurso hídrico a nivel nacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué entidad técnica del Estado regula y autoriza la adquisición, almacenamiento y empleo de explosivos en la actividad minera?",
+    "opciones": [
+      {
+        "text": "La SUCAMEC.",
+        "isCorrect": true,
+        "rationale": "La SUCAMEC es la institución responsable de emitir las autorizaciones para el uso civil y seguro de explosivos e insumos conexos."
+      },
+      {
+        "text": "El SENACE.",
+        "isCorrect": false,
+        "rationale": "El SENACE revisa estudios ambientales detallados, no la regulación de armas o explosivos."
+      },
+      {
+        "text": "El SERNANP.",
+        "isCorrect": false,
+        "rationale": "El SERNANP administra las áreas naturales protegidas por el Estado."
+      },
+      {
+        "text": "La SUNAFIL.",
+        "isCorrect": false,
+        "rationale": "La SUNAFIL supervise el régimen laboral de los trabajadores y sus condiciones de seguridad interna."
+      },
+      {
+        "text": "El INGEMMET.",
+        "isCorrect": false,
+        "rationale": "El INGEMMET otorga el derecho minero, pero la fiscalización del material explosivo le corresponde a la SUCAMEC."
+      }
+    ],
+    "hint": "Es la superintendencia encargada del control de armas, municiones y productos explosivos de uso civil.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el Código Civil peruano (artículo 954), ¿cuál es el alcance de la propiedad del terreno superficial respecto al subsuelo?",
+    "opciones": [
+      {
+        "text": "La propiedad del suelo no comprende los recursos naturales, los yacimientos mineros ni los restos arqueológicos que se encuentren en el subsuelo.",
+        "isCorrect": true,
+        "rationale": "El ordenamiento peruano consagra el principio de separación legal entre la propiedad superficial y la riqueza del subsuelo."
+      },
+      {
+        "text": "El propietario de la superficie es dueño automático e ilimitado de todos los minerales existentes debajo de su propiedad.",
+        "isCorrect": false,
+        "rationale": "Esta regla no aplica en el Perú, donde el subsuelo minero y sus recursos pertenecen exclusivamente al Estado."
+      },
+      {
+        "text": "Los minerales del subsuelo se dividen en partes iguales (50% y 50%) entre el dueño del predio y el gobierno regional.",
+        "isCorrect": false,
+        "rationale": "La ley no establece porcentajes de copropiedad privada sobre los recursos naturales del subsuelo."
+      },
+      {
+        "text": "El dueño del suelo puede vender directamente el petróleo o los minerales encontrados sin consultar a las autoridades.",
+        "isCorrect": false,
+        "rationale": "Los particulares no pueden comercializar yacimientos del subsuelo al carecer de dominio originario sobre los mismos."
+      },
+      {
+        "text": "El subsuelo pertenece al dueño del terreno únicamente hasta los primeros 500 metros de profundidad.",
+        "isCorrect": false,
+        "rationale": "La exclusión de los recursos naturales del subsuelo no depende de un límite métrico de profundidad."
+      }
+    ],
+    "hint": "Recuerda que la norma separa jurídicamente el terreno que pisamos de las riquezas minerales ocultas debajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Mediante qué mecanismo financiero el Estado redistribuye parte de los ingresos generados por la minería hacia las regiones, municipios y universidades?",
+    "opciones": [
+      {
+        "text": "El canon y las regalías mineras.",
+        "isCorrect": true,
+        "rationale": "Las regalías y el canon son compensaciones económicas que retribuyen a los gobiernos locales y regionales por la explotación de recursos en sus territorios."
+      },
+      {
+        "text": "El Impuesto Selectivo al Consumo.",
+        "isCorrect": false,
+        "rationale": "El Impuesto Selectivo al Consumo grava la venta de bienes específicos como combustibles o licores, no la extracción minera."
+      },
+      {
+        "text": "El pago directo de sueldos por el Ministerio de Economía.",
+        "isCorrect": false,
+        "rationale": "Las transferencias por recursos naturales no constituyen pagos directos de salarios a la ciudadanía."
+      },
+      {
+        "text": "La devolución anticipada del Impuesto General a las Ventas.",
+        "isCorrect": false,
+        "rationale": "La devolución de IGV es un incentivo para adquisiciones de capital de las empresas, no un mecanismo de redistribución regional."
+      },
+      {
+        "text": "El subsidio gubernamental a la importación de maquinaria.",
+        "isCorrect": false,
+        "rationale": "Los beneficios por recursos minerales no adoptan la forma de subsidios directos a las importaciones de las empresas."
+      }
+    ],
+    "hint": "Consiste en la participación de la que gozan los gobiernos locales y regionales sobre los ingresos obtenidos por la explotación del recurso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica principal de la minería subterránea o de socavón?",
+    "opciones": [
+      {
+        "text": "Se ejecuta por debajo de la superficie mediante la excavación de túneles, pozos, galerías y chimeneas.",
+        "isCorrect": true,
+        "rationale": "La explotación subterránea requiere construir estructuras de acceso e ingeniería bajo tierra para alcanzar el cuerpo mineralizado."
+      },
+      {
+        "text": "Consiste en la remoción completa de la capa de tierra a intemperie mediante palas gigantes.",
+        "isCorrect": false,
+        "rationale": "La remoción de la capa vegetal y tierra a intemperie corresponde a la minería a cielo abierto o tajo abierto."
+      },
+      {
+        "text": "Se desarrolla únicamente en lechos de ríos navegables mediante el uso de dragas de succión.",
+        "isCorrect": false,
+        "rationale": "La extracción con dragas en ríos se vincula a operaciones de minería aluvial en superficie."
+      },
+      {
+        "text": "No requiere ningún tipo de sostenimiento estructural de rocas ni de ventilación artificial.",
+        "isCorrect": false,
+        "rationale": "Por el contrario, la minería subterránea exige sistemas indispensables de fortificación de galerías y suministro de oxígeno."
+      },
+      {
+        "text": "Expone el yacimiento de manera constante a la luz solar directa.",
+        "isCorrect": false,
+        "rationale": "Las labores de socavón se realizan completamente a oscuras en el subsuelo, requiriendo iluminación artificial constante."
+      }
+    ],
+    "hint": "Requiere perforar y crear vías de tránsito en el interior de las montañas o profundidades de la tierra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué método de explotación minera es el más prevalente en el Perú para la extracción a gran escala de yacimientos diseminados como Cerro Verde o Toquepala?",
+    "opciones": [
+      {
+        "text": "Minería a cielo abierto o tajo abierto.",
+        "isCorrect": true,
+        "rationale": "La minería a cielo abierto abarca la mayor proporción de la producción nacional al permitir procesar masivamente yacimientos diseminados cerca de la superficie."
+      },
+      {
+        "text": "Minería subterránea por bloques hundidos.",
+        "isCorrect": false,
+        "rationale": "Aunque existe minería subterránea, las operaciones de gran tonelaje de cobre como Cerro Verde emplean el método a tajo abierto."
+      },
+      {
+        "text": "Extracción aluvial por dragado profundo.",
+        "isCorrect": false,
+        "rationale": "El dragado se restringe a depósitos auríferos aluviales y no a los grandes yacimientos de pórfidos de cobre."
+      },
+      {
+        "text": "Lixiviación marina en alta mar.",
+        "isCorrect": false,
+        "rationale": "En el Perú no se desarrolla la minería de lixiviación metálica en fondos marinos."
+      },
+      {
+        "text": "Minería artesanal por pircas de piedra.",
+        "isCorrect": false,
+        "rationale": "Las grandes operaciones mineras utilizan tecnología industrial de gran escala y no métodos artesanales manuales."
+      }
+    ],
+    "hint": "Es el método que crea un enorme anfiteatro o escalonamiento a plena luz del día mediante remoción de tierra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes representan ventajas operativas habituales de la minería a cielo abierto en comparación con la minería subterránea?",
+    "opciones": [
+      {
+        "text": "Permite utilizar equipos y maquinarias de transporte de gran tamaño y tonelaje.",
+        "isCorrect": true,
+        "rationale": "Al no estar restringida por las dimensiones de un túnel, la minería a tajo abierto emplea camiones y palas gigantes."
+      },
+      {
+        "text": "Ofrece condiciones naturales de iluminación y ventilación en el área de trabajo.",
+        "isCorrect": false,
+        "rationale": "Las labores se realizan al aire libre, reduciendo la necesidad de instalar complejos sistemas de inyección de aire."
+      },
+      {
+        "text": "Elimina la obligación de presentar un Plan de Cierre de Minas al finalizar el proyecto.",
+        "isCorrect": false,
+        "rationale": "Todas las operaciones mineras formales, sin importar su método, deben contar obligatoriamente con un Plan de Cierre."
+      },
+      {
+        "text": "No genera ningún tipo de alteración visual ni emisión de polvo en la superficie.",
+        "isCorrect": false,
+        "rationale": "La minería a cielo abierto genera impactos visuales notorios y emisiones de polvo que deben ser mitigadas continuamente."
+      },
+      {
+        "text": "Garantiza la exención completa de acuerdos de uso de terreno con los propietarios del suelo.",
+        "isCorrect": false,
+        "rationale": "Al abarcar grandes extensiones de superficie, la minería a tajo abierto requiere indispensables acuerdos o servidumbres sobre el predio."
+      }
+    ],
+    "hint": "Considera las ventajas de trabajar al aire libre y el espacio disponible para vehículos de gran dimensión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué instrumento ambiental obligatorio debe presentar una empresa minera antes de iniciar sus operaciones para detallar la remediación del terreno al término de su vida útil?",
+    "opciones": [
+      {
+        "text": "El Plan de Cierre de Minas.",
+        "isCorrect": true,
+        "rationale": "El Plan de Cierre es un compromiso ambiental en el que se detallan las medidas de rehabilitación que se aplicarán en el área trabajada antes del retiro definitivo."
+      },
+      {
+        "text": "El Certificado de Posesión Comunal.",
+        "isCorrect": false,
+        "rationale": "El certificado de posesión acredita la tenencia de una superficie pero no contempla planes de remediación ambiental."
+      },
+      {
+        "text": "La Licencia Comercial de Importación.",
+        "isCorrect": false,
+        "rationale": "Este documento es de índole mercantil y aduanera, ajeno a los compromisos de sostenibilidad ecológica."
+      },
+      {
+        "text": "El Registro Único de Contribuyentes de la SUNAT.",
+        "isCorrect": false,
+        "rationale": "El RUC identifica tributariamente a la empresa pero no establece compromisos de restauración del paisaje."
+      },
+      {
+        "text": "El Carné de Sanidad para Operadores.",
+        "isCorrect": false,
+        "rationale": "El carné de sanidad acredita condiciones básicas de salud individual y no la rehabilitación ambiental de una unidad minera."
+      }
+    ],
+    "hint": "Es la guía ambiental que especifica cómo se dejará la zona y las instalaciones cuando concluya la extracción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué enfermedad profesional de carácter irreversible y reconocida por ley para el retiro o jubilación anticipada afecta a los mineros por exposición prolongada al polvo de sílice?",
+    "opciones": [
+      {
+        "text": "La silicosis o neumoconiosis.",
+        "isCorrect": true,
+        "rationale": "La silicosis es una enfermedad pulmonar profesional causada por la inhalación repetida de polvo de sílice en las labores mineras."
+      },
+      {
+        "text": "La gastritis crónica.",
+        "isCorrect": false,
+        "rationale": "La gastritis afecta el sistema digestivo y no está asociada directamente a la inhalación del polvo en el socavón."
+      },
+      {
+        "text": "La dermatitis atópica.",
+        "isCorrect": false,
+        "rationale": "Es una afección cutánea que no constituye la enfermedad respiratoria ocupacional clásica por sílice."
+      },
+      {
+        "text": "El astigmatismo severo.",
+        "isCorrect": false,
+        "rationale": "El astigmatismo es un defecto refractivo visual no derivado del polvo mineral de las labores de subsuelo."
+      },
+      {
+        "text": "La hipertensión arterial sistémica.",
+        "isCorrect": false,
+        "rationale": "Aunque es una condición médica común, no es una enfermedad neumológica clasificada por exposición a polvos mineros."
+      }
+    ],
+    "hint": "Es una patología pulmonar degenerativa común en trabajadores expuestos al polvo de las perforaciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el requisito de formalidad esencial para que cualquier contrato minero surta plena validez y efectos jurídicos ante el Estado y terceros?",
+    "opciones": [
+      {
+        "text": "Otorgarse por escritura pública e inscribirse en el Registro de Minería de la SUNARP.",
+        "isCorrect": true,
+        "rationale": "La legislación prescribe que los contratos mineros deben formalizarse ante notario en escritura pública e inscribirse registralmente para ser oponibles."
+      },
+      {
+        "text": "Realizar un acuerdo verbal privado en presencia de dos testigos de la comunidad.",
+        "isCorrect": false,
+        "rationale": "Los acuerdos verbales no cumplen la exigencia legal de formalidad solemne que exige la norma minera."
+      },
+      {
+        "text": "Enviar una carta simple por correo electrónico a la municipalidad distrital.",
+        "isCorrect": false,
+        "rationale": "La correspondencia simple no brinda la fe pública ni el asiento registral requerido para los derechos mineros."
+      },
+      {
+        "text": "Publicar un anuncio promocional en una red social de acceso público.",
+        "isCorrect": false,
+        "rationale": "Las redes sociales no constituyen instrumentos con fe pública ni valor registral ante las instituciones del Estado."
+      },
+      {
+        "text": "Constara en una boleta de venta emitida por una estación de servicios local.",
+        "isCorrect": false,
+        "rationale": "Un comprobante de pago mercantil común no sustituye la formalización del contrato mediante escritura pública."
+      }
+    ],
+    "hint": "Requiere la intervención de un notario para dar fe pública y su posterior ingreso en el registro público oficial de la propiedad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tipo de contrato minero opera de forma análoga a una compraventa, transmitiendo el dominio o la titularidad de los derechos concesionales?",
+    "opciones": [
+      {
+        "text": "El contrato de transferencia minera.",
+        "isCorrect": true,
+        "rationale": "Mediante el contrato de transferencia el titular (transferente) traslada el dominio total o parcial de sus derechos mineros a favor de un adquirente."
+      },
+      {
+        "text": "El contrato de cesión minera.",
+        "isCorrect": false,
+        "rationale": "La cesión funciona similar a un arrendamiento donde se concede solo el uso y disfrute temporal, sin vender la titularidad."
+      },
+      {
+        "text": "El contrato de hipoteca minera.",
+        "isCorrect": false,
+        "rationale": "La hipoteca es un contrato accesorio de garantía para respaldar obligaciones, no un acto de enajenación inmediata de titularidad."
+      },
+      {
+        "text": "El contrato de opción minera.",
+        "isCorrect": false,
+        "rationale": "La opción es un acuerdo preparatorio que compromete la celebración de un contrato futuro, no la venta inmediata."
+      },
+      {
+        "text": "El contrato de riesgo compartido (Joint Venture).",
+        "isCorrect": false,
+        "rationale": "El Joint Venture es una alianza estratégica de cooperación operativa sin transferir el título de la concesión."
+      }
+    ],
+    "hint": "Es la figura contractual por la cual se cede de forma definitiva la titularidad del derecho minero a cambio de un pago.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste fundamentalmente la naturaleza jurídica de un contrato de cesión minera?",
+    "opciones": [
+      {
+        "text": "Es equivalente a un arrendamiento, donde el cedente entrega el uso y aprovechamiento de la concesión al cesionario a cambio de una retribución o renta.",
+        "isCorrect": true,
+        "rationale": "En la cesión el cesionario asume la operación y los frutos mineros pagando una compensación económica al titular, sin adquirir la propiedad del título."
+      },
+      {
+        "text": "Es la venta definitiva del terreno superficial y de todos los inmuebles de la zona.",
+        "isCorrect": false,
+        "rationale": "La cesión minera no transfiere la propiedad del predio ni el título concesional de modo definitivo."
+      },
+      {
+        "text": "Es un préstamo de dinero otorgado de forma gratuita por el Ministerio de Energía y Minas.",
+        "isCorrect": false,
+        "rationale": "Se trata de una relación contractual privada entre particulares y de carácter oneroso."
+      },
+      {
+        "text": "Es una promesa unilateral de donación de minerales a favor de una entidad de caridad.",
+        "isCorrect": false,
+        "rationale": "El contrato de cesión es bilateral y lucrativo, destinado al desarrollo industrial o comercial de la mina."
+      },
+      {
+        "text": "Es la renuncia irrevocable del minero a continuar sus actividades para entregar la mina al municipio.",
+        "isCorrect": false,
+        "rationale": "En la cesión el titular mantiene la concesión y la cede temporalmente a un tercero para su explotación."
+      }
+    ],
+    "hint": "Se asemeja a la figura del alquiler de un predio, permitiendo operar la mina pagando un monto periódico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función o propósito de un contrato de opción minera?",
+    "opciones": [
+      {
+        "text": "Es un contrato preparatorio en el que el titular de la concesión se obliga incondicionalmente a celebrar un contrato definitivo en el futuro si el optante decide hacerlo.",
+        "isCorrect": true,
+        "rationale": "La opción concede al optante el derecho exclusivo de decidir la ejecución posterior de un contrato de transferencia o cesión bajo condiciones fijadas."
+      },
+      {
+        "text": "Es un acuerdo formal para disolver inmediatamente la empresa y repartir sus activos.",
+        "isCorrect": false,
+        "rationale": "La opción prepara la realización de un negocio futuro, no la liquidación de la entidad."
+      },
+      {
+        "text": "Es la renuncia de los trabajadores a sus beneficios laborales y de seguridad social.",
+        "isCorrect": false,
+        "rationale": "Los derechos laborales son irrenunciables y no forman parte del objeto de los contratos mineros sobre concesiones."
+      },
+      {
+        "text": "Es la obtención automática de la licencia de uso de explosivos emitida por SUCAMEC.",
+        "isCorrect": false,
+        "rationale": "Los permisos de explosivos son autorizaciones administrativas sectoriales y no acuerdos contractuales privados."
+      },
+      {
+        "text": "Es un contrato de seguro privado que cubre accidentes de trabajo en el socavón.",
+        "isCorrect": false,
+        "rationale": "Las pólizas de seguro no constituyen contratos preparatorios de derechos mineros sobre concesiones."
+      }
+    ],
+    "hint": "Es un compromiso previo que le asegura a un inversionista la oportunidad de comprar o alquilar la mina en el futuro bajo reglas prefijadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el plazo máximo de duración determinado por la Ley General de Minería para un contrato de opción minera?",
+    "opciones": [
+      {
+        "text": "5 años.",
+        "isCorrect": true,
+        "rationale": "La norma establece de forma expresa que el plazo de los contratos de opción minera no podrá ser mayor a cinco años."
+      },
+      {
+        "text": "1 año.",
+        "isCorrect": false,
+        "rationale": "Un año es un plazo permitido, pero el límite legal máximo fijado por la norma minera asciende a cinco años."
+      },
+      {
+        "text": "10 años.",
+        "isCorrect": false,
+        "rationale": "Diez años supera el tope normativo establecido para mantener vigente una opción contractual."
+      },
+      {
+        "text": "20 años.",
+        "isCorrect": false,
+        "rationale": "Este plazo resulta excesivo y está fuera del límite fijado para los contratos preparatorios de opción."
+      },
+      {
+        "text": "Indefinido.",
+        "isCorrect": false,
+        "rationale": "La ley prohíbe que el contrato de opción se pacte con carácter indefinido, obligando a fijar un tiempo tope."
+      }
+    ],
+    "hint": "El legislador ha puesto un límite de un lustro para la vigencia de este tipo de contratos preparatorios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes características corresponden al contrato de riesgo compartido o Joint Venture en la actividad minera?",
+    "opciones": [
+      {
+        "text": "Permite que dos o más personas se asocien para participar de los resultados de una actividad minera compartiendo inversiones, riesgos y responsabilidades.",
+        "isCorrect": true,
+        "rationale": "El Joint Venture es una alianza estratégica de colaboración empresarial en la que los participantes comparten las ganancias o pérdidas del proyecto."
+      },
+      {
+        "text": "No genera ni crea una persona jurídica distinta a la de los participantes del contrato.",
+        "isCorrect": true,
+        "rationale": "Se trata de un contrato asociativo de colaboración que no da nacimiento a una nueva sociedad comercial separada."
+      },
+      {
+        "text": "Garantiza por ley que las empresas asociadas nunca sufrirán pérdidas financieras en sus operaciones.",
+        "isCorrect": false,
+        "rationale": "Al denominarse de riesgo compartido, los participantes asumen expresamente la posibilidad de encarar pérdidas."
+      },
+      {
+        "text": "Exime a las partes del cumplimiento de la normativa sobre estudios de impacto ambiental.",
+        "isCorrect": false,
+        "rationale": "Toda alianza o consorcio que opere una mina debe cumplir strictly con las leyes ambientales vigentes."
+      },
+      {
+        "text": "Transfiere de manera automática e irrevocable la propiedad del terreno superficial a favor del Estado.",
+        "isCorrect": false,
+        "rationale": "El contrato entre privados no altera la titularidad legal de los predios ni constituye una expropiación."
+      }
+    ],
+    "hint": "Piensa en un acuerdo de colaboración donde varias empresas unen recursos para una aventura minera común sin crear una empresa nueva.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el artículo 66 de la Constitución Política del Perú y la Ley Orgánica de Aprovechamiento de Recursos Naturales, ¿cuál es la naturaleza jurídica del dominio sobre los recursos minerales y el alcance de una concesión?",
+    "opciones": [
+      {
+        "text": "El Estado conserva el dominio originario e inalienable de los recursos minerales, mientras que la concesión otorga únicamente el derecho de uso y aprovechamiento del recurso.",
+        "isCorrect": true,
+        "rationale": "Los recursos naturales son patrimonio de la nación y el Estado mantiene su dominio, de modo que la concesión atribuye exclusivamente el aprovechamiento sujeto a ley y no la propiedad del predio."
+      },
+      {
+        "text": "La concesión otorga al particular el título de propiedad imprescriptible sobre la extensión del terreno superficial concedido.",
+        "isCorrect": false,
+        "rationale": "La concesión minera es un inmueble distinto y separado del terreno superficial, por lo que no otorga derecho de propiedad sobre el suelo."
+      },
+      {
+        "text": "El concesionario se convierte en propietario del predio de superficie tras efectuar la inscripción del título formal en la SUNARP.",
+        "isCorrect": false,
+        "rationale": "La inscripción registral consolida el derecho minero concedido para el aprovechamiento de minerales, pero no transfiere la propiedad predial del terreno."
+      },
+      {
+        "text": "La concesión minera unifica la propiedad del suelo y del subsuelo bajo un solo título de dominio privado irreversible.",
+        "isCorrect": false,
+        "rationale": "La legislación peruana mantiene una estricta separación jurídica entre la propiedad de la superficie y los recursos del subsuelo."
+      },
+      {
+        "text": "El titular de la concesión adquiere la propiedad absoluta de los minerales incluso antes de su extracción efectiva del yacimiento.",
+        "isCorrect": false,
+        "rationale": "La propiedad sobre los frutos o productos extraídos solo se consolida una vez que los minerales son efectivamente removidos y extraídos en el marco del título."
+      }
+    ],
+    "hint": "Diferencia entre el dominio eminente del Estado sobre el patrimonio nacional y los derechos de uso cedidos a particulares.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la unidad básica de medida superficial utilizada por el Estado peruano para la formulación de petitorios y otorgamiento de concesiones mineras?",
+    "opciones": [
+      {
+        "text": "Una figura geométrica en cuadrícula delimitada por coordenadas UTM con una extensión mínima de 100 hectáreas.",
+        "isCorrect": true,
+        "rationale": "El catastro minero peruano divide el territorio en cuadrículas UTM de 100 hectáreas como unidad básica para petitorios."
+      },
+      {
+        "text": "Una parcela irregular determinada por hitos topográficos de libre elección con una extensión mínima de 10 hectáreas.",
+        "isCorrect": false,
+        "rationale": "Las concesiones no se delimitan mediante trazados irregulares o hitos arbitrarios, sino mediante un sistema estandarizado de cuadrículas coordinadas."
+      },
+      {
+        "text": "Una cuadrícula definida por coordenadas geográficas simples con un área fija e inalterable de 50 hectáreas.",
+        "isCorrect": false,
+        "rationale": "La unidad básica de la cuadrícula en el sistema catastral nacional equivale a 100 hectáreas y utiliza la proyección UTM."
+      },
+      {
+        "text": "Un área poligonal continua que no puede exceder las 50 hectáreas por solicitud individual de explotación.",
+        "isCorrect": false,
+        "rationale": "Los petitorios mineros se otorgan en extensiones que van desde un mínimo de 100 hasta un máximo de 1000 hectáreas por cuadrícula."
+      },
+      {
+        "text": "Un lote determinado por accidentes geográficos naturales con extensión variable entre 500 y 2000 hectáreas.",
+        "isCorrect": false,
+        "rationale": "El sistema legal emplea coordenadas satelitales UTM y no límites naturales cambiantes para definir la superficie concesionada."
+      }
+    ],
+    "hint": "Considere la división del mapa nacional en retículas estandarizadas mediante satélite.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En relación con las restricciones y condiciones legales para la titularidad de concesiones mineras en el Perú, ¿cuáles de las siguientes afirmaciones son correctas?",
+    "opciones": [
+      {
+        "text": "Por razones de soberanía nacional, no se pueden otorgar ni concesionar áreas dentro de los 50 kilómetros de frontera a personas extranjeras.",
+        "isCorrect": true,
+        "rationale": "La norma constitucional prohíbe expresamente que extranjeros adquieran o posean concesiones dentro de la zona limítrofe por seguridad nacional."
+      },
+      {
+        "text": "Las concesiones se otorgan a plazo fijo o indefinido, manteniéndose irrevocables mientras el titular cumpla sus obligaciones legales.",
+        "isCorrect": true,
+        "rationale": "El título de concesión otorga seguridad jurídica al inversionista protegiéndolo de revocaciones arbitrarias si mantiene vigentes sus pagos y compromisos."
+      },
+      {
+        "text": "La obtención del título de concesión otorga automáticamente la autorización para iniciar de inmediato los trabajos de exploración y explotación.",
+        "isCorrect": false,
+        "rationale": "El título de concesión por sí solo no faculta la iniciación de labores operativas, requiriéndose permisos ambientales, sociales y sectoriales adicionales."
+      },
+      {
+        "text": "Las concesiones mineras son bienes inmuebles incorporales susceptibles de ser objeto de hipoteca, cesión o transferencia registral.",
+        "isCorrect": true,
+        "rationale": "Al ser calificadas como derechos reales e inmuebles, las concesiones pueden ser gravadas o transferidas e inscribirse en el Registro de Minería."
+      },
+      {
+        "text": "El concesionario adquiere el derecho de expropiar terrenos urbanos de manera directa sin intervención ni aval de autoridades estatales.",
+        "isCorrect": false,
+        "rationale": "Las zonas urbanas presentan severas limitaciones normativas y cualquier expropiación requiere la fundamentación de necesidad pública declarada conforme a ley."
+      }
+    ],
+    "hint": "Identifique las normas constitucionales de frontera y la distinción entre el título minero y las autorizaciones operativas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del procedimiento administrativo para autorizar actividades de minería formal, ¿cuál es la función específica del Certificado de Inexistencia de Restos Arqueológicos (CIRA)?",
+    "opciones": [
+      {
+        "text": "Garantizar, a través del Ministerio de Cultura, que las labores mineras en la superficie solicitada no afectarán patrimonio arqueológico protegido.",
+        "isCorrect": true,
+        "rationale": "El CIRA es expedido por el sector cultura para certificar que el desarrollo del proyecto en la superficie no destruirá vestigios ni monumentos arqueológicos."
+      },
+      {
+        "text": "Acreditar que la superficie del proyecto pertenece en su totalidad al Estado y carece de propietarios particulares o comunitarios.",
+        "isCorrect": false,
+        "rationale": "La verificación de la titularidad de predios o tierras comunitarias es competencia de la SBN o registros de propiedad, no del CIRA."
+      },
+      {
+        "text": "Evaluar la viabilidad económica y el diseño de ingeniería para la construcción de túneles y plantas de beneficio.",
+        "isCorrect": false,
+        "rationale": "Los aspectos operacionales y económicos son evaluados en las autorizaciones técnicas ante la Dirección General de Minería."
+      },
+      {
+        "text": "Autorizar la adquisición, transporte y almacenamiento de explosivos requeridos en las operaciones de voladura.",
+        "isCorrect": false,
+        "rationale": "El control de insumos y materiales explosivos de uso civil es competencia exclusiva de la SUCAMEC."
+      },
+      {
+        "text": "Certificar que la cuadrícula solicitada se encuentra libre de superposiciones con otros petitorios presentados con anterioridad.",
+        "isCorrect": false,
+        "rationale": "La evaluación de superposiciones catastrales la realiza el INGEMMET durante los primeros días del trámite del petitorio."
+      }
+    ],
+    "hint": "Piense en la entidad del Estado encargada de tutelar la herencia cultural e histórica del país.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué consecuencia jurídica se produce si el titular de una concesión minera omite el pago del derecho de vigencia o de las penalidades aplicables durante el plazo legal estipulado?",
+    "opciones": [
+      {
+        "text": "Se declara la caducidad de la concesión minera, extinguiéndose el derecho y revirtiéndose el área al Estado.",
+        "isCorrect": true,
+        "rationale": "El incumplimiento continuado en el pago de los derechos de vigencia o penalidades origina la caducidad del título conforme a la Ley General de Minería."
+      },
+      {
+        "text": "Se le exonera temporalmente del pago previo compromiso escrito de formalización extraordinaria.",
+        "isCorrect": false,
+        "rationale": "El no pago de derechos de vigencia devenga penalidades y la eventual pérdida del título, sin que la norma contemple exoneraciones automáticas por sola promesa."
+      },
+      {
+        "text": "El título de concesión se transforma de forma automática en una licencia temporal de cateo libre de cargas.",
+        "isCorrect": false,
+        "rationale": "El cateo no requiere título ni proviene de la degradación de una concesión extinguida; la caducidad extingue la concesión por completo."
+      },
+      {
+        "text": "La concesión se adjudica de manera directa y gratuita a favor de la comunidad campesina del área de influencia.",
+        "isCorrect": false,
+        "rationale": "Al caducar una concesión, el área se declara denunciable por el Estado o retorna al dominio público, no adjudicándose directamente a terceros."
+      },
+      {
+        "text": "Se otorga la propiedad privada del predio de superficie al concesionario para compensar sus gastos previos.",
+        "isCorrect": false,
+        "rationale": "El incumplimiento financiero ante el Estado bajo ningún supuesto otorga derechos de propiedad inmobiliaria superficial."
+      }
+    ],
+    "hint": "Reflexione sobre la causal legal de extinción del título por mora tributaria o pecuniaria ante el organismo minero.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la entidad pública descentralizada competente para fiscalizar el cumplimiento de los compromisos ambientales en las operaciones mineras a mediana y gran escala en el Perú?",
+    "opciones": [
+      {
+        "text": "El Organismo de Evaluación y Fiscalización Ambiental (OEFA).",
+        "isCorrect": true,
+        "rationale": "La OEFA es el ente rector encargado del seguimiento, supervisión y sanción en materia de protección ambiental en la minería."
+      },
+      {
+        "text": "El Instituto Geológico, Minero y Metalúrgico (INGEMMET).",
+        "isCorrect": false,
+        "rationale": "El INGEMMET otorga los títulos de concesión y gestiona el catastro minero nacional, pero no ejecuta la fiscalización ambiental ambiental operativa."
+      },
+      {
+        "text": "La Superintendencia Nacional de Fiscalización Laboral (SUNAFIL).",
+        "isCorrect": false,
+        "rationale": "La SUNAFIL supervisa la normativa laboral y las condiciones de seguridad y salud en el trabajo, no los compromisos ambientales."
+      },
+      {
+        "text": "La Superintendencia Nacional de Control de Servicios de Seguridad, Armas, Municiones y Explosivos de Uso Civil (SUCAMEC).",
+        "isCorrect": false,
+        "rationale": "La SUCAMEC regula la adquisición y manipulación de explosivos y armamento."
+      },
+      {
+        "text": "El Servicio Nacional de Áreas Naturales Protegidas por el Estado (SERNANP).",
+        "isCorrect": false,
+        "rationale": "El SERNANP emite pronunciamientos o compatibilidades sobre áreas protegidas, pero la fiscalización ambiental general recae en la OEFA."
+      }
+    ],
+    "hint": "Busque el organismo especializado en la fiscalización de los límites máximos permisibles y estándares de calidad ambiental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la fase de exploración minera exige obligatoriamente la tramitación de licencias y autorizaciones estatales, a diferencia de las labores previas de cateo y prospección?",
+    "opciones": [
+      {
+        "text": "Porque la exploración requiere métodos directos como perforaciones profundas, apertura de zanjas y posible uso de explosivos que alteran el entorno.",
+        "isCorrect": true,
+        "rationale": "La exploración genera intervenciones físicas considerables sobre el terreno (perforaciones, maquinaria), lo que hace indispensable el control estatal preventivo."
+      },
+      {
+        "text": "Porque el cateo impone la obligación de comercializar de inmediato las muestras minerales obtenidas.",
+        "isCorrect": false,
+        "rationale": "El cateo consiste en búsquedas elementales en la superficie y no faculta la comercialización ni exige permisos previos."
+      },
+      {
+        "text": "Porque la prospección concede automáticamente la titularidad y propiedad del predio superficial.",
+        "isCorrect": false,
+        "rationale": "Ninguna actividad minera previa otorga la propiedad del suelo, manteniéndose este independiente del derecho minero."
+      },
+      {
+        "text": "Porque la exploración es una actividad libre de fiscalización que exime al titular de presentar estudios ambientales.",
+        "isCorrect": false,
+        "rationale": "Al contrario, la exploración requiere de manera estricta contar con una declaración o estudio de impacto ambiental antes de ejecutar obras."
+      },
+      {
+        "text": "Porque el cateo exige un Estudio de Impacto Ambiental Semidetallado aprobado previamente por el SENACE.",
+        "isCorrect": false,
+        "rationale": "El cateo y la prospección son actividades libres que se realizan en zonas no prohibidas sin exigencia de estudios ambientales complejos."
+      }
+    ],
+    "hint": "Considere la intensidad del impacto físico que provocan las perforaciones de diamante o circulación inversa respecto a la mera observación de superficie.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el análisis económico y técnico del proceso de exploración minera expuesto en el curso, ¿cuáles de las siguientes proposiciones son correctas?",
+    "opciones": [
+      {
+        "text": "Estadísticamente, se estima que aproximadamente solo 1 de cada 100 proyectos de exploración minera se transforma en una mina operativa.",
+        "isCorrect": true,
+        "rationale": "La exploración es una actividad de elevado riesgo financiero donde la gran mayoría de prospectos no demuestra viabilidad económica."
+      },
+      {
+        "text": "Los dilatados plazos administrativos en la obtención de permisos incrementan los costos fijos al mantener equipos y geólogos paralizados.",
+        "isCorrect": true,
+        "rationale": "La burocracia en las autorizaciones genera gastos operativos continuos durante la espera, dificultando el financiamiento del proyecto."
+      },
+      {
+        "text": "Los permisos de exploración otorgan automáticamente la propiedad plena e indefinida sobre las fuentes de agua adyacentes.",
+        "isCorrect": false,
+        "rationale": "El uso de recursos hídricos para exploración requiere tramitar licencias temporales específicas ante la Autoridad Nacional del Agua."
+      },
+      {
+        "text": "Para iniciar perforaciones de exploración se requiere contar con la certificación ambiental correspondiente (DIA o EIA-sd).",
+        "isCorrect": true,
+        "rationale": "La normativa ambiental exige evaluar previamente el impacto de las plataformas de perforación mediante el instrumento ambiental pertinente."
+      },
+      {
+        "text": "El riesgo financiero de la exploración es asumido íntegramente por el Estado mediante fondos no reembolsables.",
+        "isCorrect": false,
+        "rationale": "El capital de riesgo invertido en exploración es asumido por particulares o empresas mineras bajo su propia cuenta y riesgo."
+      }
+    ],
+    "hint": "Considere las probabilidades reales de descubrimiento de yacimientos y los requisitos de gestión de permisos ante el Estado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el criterio técnico-operativo que determina si un proyecto de exploración minera debe tramitar una Declaración de Impacto Ambiental (DIA) o un Estudio de Impacto Ambiental Semidetallado (EIA-sd)?",
+    "opciones": [
+      {
+        "text": "La DIA se aplica a proyectos con un máximo de 20 plataformas de perforación y menos de 10 ha de área alterada; el EIA-sd es para superar dichos límites o construir túneles de más de 50 metros.",
+        "isCorrect": true,
+        "rationale": "El reglamento ambiental minero clasifica la exigencia del instrumento ambiental según el número de plataformas, área afectada y extensión de túneles propuestos."
+      },
+      {
+        "text": "La DIA exige obligatoriamente procesos de consulta previa formal con comunidades, mientras que el EIA-sd no requiere participación ciudadana.",
+        "isCorrect": false,
+        "rationale": "La consulta previa es un proceso conducido por el Estado ante la presencia de pueblos indígenas, no una exigencia exclusiva ligada a la DIA."
+      },
+      {
+        "text": "La DIA se utiliza únicamente en minería subterránea, mientras que el EIA-sd se destina para la minería de socavón a gran escala.",
+        "isCorrect": false,
+        "rationale": "Ambos instrumentos ambientales aplican a proyectos de exploración según la envergadura y magnitud de la intervención, no exclusivamente por el tipo de minado."
+      },
+      {
+        "text": "El EIA-sd se aprueba de forma automática mediante silencio administrativo positivo, a diferencia de la DIA que requiere un trámite de tres años.",
+        "isCorrect": false,
+        "rationale": "La DIA es de evaluación más rápida o automática según las condiciones, mientras que el EIA-sd implica una revisión detallada con talleres participativos."
+      },
+      {
+        "text": "La DIA autoriza el uso ilimitado de explosivos de alto poder, mientras que el EIA-sd prohíbe de forma absoluta cualquier tipo de voladura.",
+        "isCorrect": false,
+        "rationale": "El uso de explosivos está determinado por la autorización técnica y de SUCAMEC, no prohibido por la naturaleza del estudio ambiental."
+      }
+    ],
+    "hint": "Examine los umbrales numéricos de plataformas de perforación, hectáreas de terreno a intervenir y longitud de excavación de túneles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En caso de que un proyecto de exploración minera requiera captar y utilizar agua de fuentes naturales para sus labores de perforación, ¿ante qué entidad y con qué vigencia se gestiona dicha autorización?",
+    "opciones": [
+      {
+        "text": "Ante la Autoridad Nacional del Agua (ANA), con una autorización temporal concedida por un plazo de hasta 2 años.",
+        "isCorrect": true,
+        "rationale": "La ANA administra los recursos hídricos del país y concede permisos de uso de agua para uso minero por períodos renovables de 2 años."
+      },
+      {
+        "text": "Ante el INGEMMET, otorgándose un permiso de uso perpetuo vinculado a la vigencia del título concesional.",
+        "isCorrect": false,
+        "rationale": "El INGEMMET no administra el recurso hídrico ni está facultado para autorizar la extracción directa de fuentes naturales de agua."
+      },
+      {
+        "text": "Ante el Ministerio de Cultura, obteniendo un permiso de extracción hídrica por un periodo máximo de 5 años.",
+        "isCorrect": false,
+        "rationale": "El Ministerio de Cultura tutela el patrimonio cultural e indígena, careciendo de competencias en gestión hídrica."
+      },
+      {
+        "text": "Ante la SUCAMEC, mediante una licencia temporal aprobada por un periodo de 10 años sin inspección.",
+        "isCorrect": false,
+        "rationale": "La SUCAMEC regula armamento y explosivos, de forma totalmente ajena a la gestión de recursos hídricos."
+      },
+      {
+        "text": "Ante el gobierno distrital correspondiente, mediante el pago directo de un arbitrio ambiental de periodicidad anual.",
+        "isCorrect": false,
+        "rationale": "La regulación del agua natural es de competencia nacional exclusiva del sector agricultura y riego a través de la ANA."
+      }
+    ],
+    "hint": "Identifique el ente nacional sectorial encargado de la administración y preservación de las cuencas e hídricos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del Registro Integral de Formalización Minera (Reinfo) y cuál ha sido uno de sus efectos legales más controvertidos?",
+    "opciones": [
+      {
+        "text": "Busca la formalización progresiva de pequeños mineros, pero la inscripción ha servido para suspender la persecución penal por el delito de minería ilegal.",
+        "isCorrect": true,
+        "rationale": "El Reinfo se creó como vía de formalización, pero la ley exime de responsabilidad penal por minería ilegal a quienes mantengan su inscripción vigente."
+      },
+      {
+        "text": "Concede la titularidad y propiedad privada del subsuelo a los mineros artesanales inscritos en la plataforma.",
+        "isCorrect": false,
+        "rationale": "El Reinfo es un registro de formalización de la actividad, no un instrumento de transferencia de propiedad del subsuelo."
+      },
+      {
+        "text": "Exime a las empresas mineras de mediana escala de la obligación de presentar instrumentos ambientales ante el MINEM.",
+        "isCorrect": false,
+        "rationale": "El Reinfo aplica exclusivamente para la Pequeña Minería y Minería Artesanal, no eximiendo a la mediana ni gran minería."
+      },
+      {
+        "text": "Anula de forma automática y definitiva los títulos de concesión minera otorgados previamente por el INGEMMET a terceros.",
+        "isCorrect": false,
+        "rationale": "El Reinfo no extingue las concesiones preexistentes otorgadas conforme a ley, lo que suele originar conflictos por superposición de derechos."
+      },
+      {
+        "text": "Prohíbe la venta de minerales extraídos por pequeños productores en el mercado nacional de manera permanente.",
+        "isCorrect": false,
+        "rationale": "El Reinfo busca justamente permitir la comercialización lícita formal de los minerales extraídos durante el proceso."
+      }
+    ],
+    "hint": "Analice el impacto que genera estar inscrito en este registro respecto a la acción del Ministerio Público en delitos ambientales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el ordenamiento normativo minero-ambiental en el Perú, ¿qué requerimiento debe cumplirse obligatoriamente en zonas con presencia de pueblos indígenas antes de autorizar el inicio de actividades de exploración?",
+    "opciones": [
+      {
+        "text": "Ejecutar un proceso de consulta previa conducido por el Estado para evaluar la afectación de sus derechos colectivos.",
+        "isCorrect": true,
+        "rationale": "La legislación exige la consulta previa en territorios donde habiten comunidades nativas o campesinas reconocidas para tutelar sus derechos."
+      },
+      {
+        "text": "Tramitar la expropiación forzosa de las tierras comunitarias a favor de la empresa mediante resolución ministerial.",
+        "isCorrect": false,
+        "rationale": "La norma respeta la propiedad y posesión comunitaria, impidiendo expropiaciones automáticas o arbitrarias para proyectos de exploración."
+      },
+      {
+        "text": "Prohibir el asentamiento de poblaciones originarias dentro de un radio de 50 kilómetros de la cuadrícula concesionada.",
+        "isCorrect": false,
+        "rationale": "No existe legislación que desplace forzosamente a comunidades nativas preexistentes por el simple otorgamiento de petitorios."
+      },
+      {
+        "text": "Eximir al titular del proyecto de presentar la Declaración de Impacto Ambiental ante las autoridades competentes.",
+        "isCorrect": false,
+        "rationale": "La presencia de comunidades indígenas incrementa la exigencia de evaluaciones ambientales en lugar de exonerarlas."
+      },
+      {
+        "text": "Convertir obligatoriamente a los miembros de la comunidad en socios accionistas de la empresa concesionaria.",
+        "isCorrect": false,
+        "rationale": "La norma establece procesos de negociación libre, servidumbres y consulta previa, pero no la entrega forzosa de participaciones accionarias."
+      }
+    ],
+    "hint": "Recuerde el mecanismo internacional y nacional destinado a consultar a los pueblos originarios sobre medidas administrativas que los afecten.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Conforme al artículo 954 del Código Civil peruano y la Ley General de Minería, ¿cómo se articula la relación jurídica entre el predio de superficie y la concesión de subsuelo?",
+    "opciones": [
+      {
+        "text": "Son inmuebles completamente distintos y separados; la propiedad sobre el terreno superficial no otorga derecho alguno sobre los yacimientos del subsuelo.",
+        "isCorrect": true,
+        "rationale": "El sistema legal establece la separación absoluta entre el dominio del suelo y los recursos minerales que yacen en el subsuelo."
+      },
+      {
+        "text": "La propiedad del suelo se extiende ilimitadamente en profundidad, abarcando de forma automática todos los minerales allí contenidos.",
+        "isCorrect": false,
+        "rationale": "El principio de accesión ilimitada al subsuelo no aplica a los recursos mineros en el Perú por ser patrimonio de la nación."
+      },
+      {
+        "text": "El titular de la superficie se convierte de pleno derecho en titular del 50% de las acciones de la empresa concesionaria del subsuelo.",
+        "isCorrect": false,
+        "rationale": "Ser propietario de la superficie no atribuye titularidad ni derechos accionarios automáticos sobre la concesión minera concedida."
+      },
+      {
+        "text": "El otorgamiento de la concesión de subsuelo extingue automáticamente el título de propiedad registrado sobre la superficie.",
+        "isCorrect": false,
+        "rationale": "La propiedad superficial se mantiene vigente y debe negociarse mediante compraventa o constitución de servidumbre."
+      },
+      {
+        "text": "El propietario del suelo tiene la facultad legal de explotar el subsuelo sin necesidad de contar con concesión minera formal.",
+        "isCorrect": false,
+        "rationale": "Cualquier persona que pretenda explotar recursos minerales del subsuelo requiere indispensablemente un título concedido por el Estado."
+      }
+    ],
+    "hint": "Considere la coexistencia de dos derechos reales independientes que recaen sobre el plano de superficie y el subsuelo respectivamente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En relación con el régimen de regalías mineras recaudadas por la explotación de recursos en el Perú, ¿cuáles de las siguientes afirmaciones son correctas?",
+    "opciones": [
+      {
+        "text": "Las regalías constituyen una contraprestación económica pagada al Estado y redistribuida a gobiernos regionales, municipios y universidades.",
+        "isCorrect": true,
+        "rationale": "El canon y regalías abonados por las mineras son transferidos por el Tesoro Público a las entidades territoriales y académicas del área de influencia."
+      },
+      {
+        "text": "En diversas regiones existen acumulaciones de fondos por regalías que se devuelven al Tesoro debido a deficiencias de gestión en los gobiernos locales.",
+        "isCorrect": true,
+        "rationale": "La incapacidad técnica de ejecución presupuestal en ciertos municipios ocasiona que los fondos recibidos no se conviertan en obras públicas oportunas."
+      },
+      {
+        "text": "Las regalías se distribuyen mediante depósitos en efectivo directos e individuales en las cuentas bancarias de cada poblador comunal.",
+        "isCorrect": false,
+        "rationale": "Las regalías se transfieren como presupuesto público a las instituciones gubernamentales y no como dinero en efectivo a personas particulares."
+      },
+      {
+        "text": "Los propietarios particulares o comunidades campesinas no perciben ingresos automáticos de las regalías salvo acuerdos privados de servidumbre o venta de terrenos.",
+        "isCorrect": true,
+        "rationale": "Las regalías benefician al Tesoro y gobiernos locales; los comuneros negocian directamente compensaciones por el uso del terreno de superficie."
+      },
+      {
+        "text": "El 100% de los fondos recaudados por regalías se destina a financiar las operaciones de exploración de pequeñas empresas privadas.",
+        "isCorrect": false,
+        "rationale": "Los recursos del canon y regalía son públicos y se orientan legalmente al financiamiento de obras de infraestructura y desarrollo subnacional."
+      }
+    ],
+    "hint": "Diferencie entre la recaudación y distribución del presupuesto público subnacional y las compensaciones privadas a propietarios de tierras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si el titular de una concesión minera no logra un acuerdo voluntario de compra o arrendamiento con el propietario del terreno superficial para acceder al área de trabajo, ¿de qué mecanismo legal dispone?",
+    "opciones": [
+      {
+        "text": "Solicitar al Ministerio de Energía y Minas la imposición de una servidumbre legal forzosa sobre el terreno de superficie.",
+        "isCorrect": true,
+        "rationale": "La ley contempla la servidumbre minera como mecanismo para garantizar el acceso al recurso del subsuelo previa indemnización fijada por la autoridad."
+      },
+      {
+        "text": "Decretar la caducidad del título de propiedad registrado ante la SUNARP mediante resolución de la empresa.",
+        "isCorrect": false,
+        "rationale": "Una empresa privada carece de facultades administrativas para anular o caducar títulos de propiedad registral."
+      },
+      {
+        "text": "Solicitar la anulación automática de las evaluaciones ambientales ante el Organismo de Evaluación y Fiscalización Ambiental.",
+        "isCorrect": false,
+        "rationale": "La falta de acuerdo predial no invalida los estudios ambientales ni modifica las exigencias de fiscalización ambiental."
+      },
+      {
+        "text": "Transferir de forma obligatoria las acciones de la minera a favor de la municipalidad distrital.",
+        "isCorrect": false,
+        "rationale": "No existe marco legal que imponga la cesión accionar a gobiernos locales como solución a discrepancias por uso de superficie."
+      },
+      {
+        "text": "Convertir de inmediato el proyecto formal en un petitorio de prospección aluvial exento de pagos.",
+        "isCorrect": false,
+        "rationale": "El estatus de la concesión formal y sus obligaciones pecuniarias no cambian por la falta de arreglo con el propietario superficial."
+      }
+    ],
+    "hint": "Considere la figura del derecho civil e inmobiliario que impone el paso o uso de un predio gravado en favor de una actividad declarada de interés.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una exigencia operativa y de seguridad propia de la minería de subterránea o socavón, en contraste con las operaciones a Tajo Abierto?",
+    "opciones": [
+      {
+        "text": "La construcción de galerías y chimeneas que requieren instalar sistemas continuos de ventilación forzada y estructuras de sostenimiento.",
+        "isCorrect": true,
+        "rationale": "El minado subterráneo exige garantizar inyección de aire fresco, remoción de gases nocivos y sostenimiento del macizo rocoso para evitar colapsos."
+      },
+      {
+        "text": "El uso exclusivo de camiones de acarreo de más de 300 toneladas dentro de los túneles de extracción.",
+        "isCorrect": false,
+        "rationale": "La minería subterránea requiere maquinaria de dimensiones reducidas para transitar por el espacio confinado de las galerías."
+      },
+      {
+        "text": "La exoneración total de tramitar y ejecutar un Plan de Cierre de Minas al término de las operaciones.",
+        "isCorrect": false,
+        "rationale": "Toda modalidad minera formal en el Perú está legalmente obligada a presentar y financiar un Plan de Cierre ambiental."
+      },
+      {
+        "text": "La prohibición absoluta del uso de cualquier tipo de explosivos para el avance de las labores.",
+        "isCorrect": false,
+        "rationale": "La minería de socavón utiliza voladuras controladas mediante explosivos para fracturar la roca en los frentes de avance."
+      },
+      {
+        "text": "El desarrollo de las labores extractivas expuestas completamente a las condiciones climáticas de la intemperie.",
+        "isCorrect": false,
+        "rationale": "El trabajo a la intemperie es característico de la minería superficial o Tajo Abierto, no de la minería subterránea."
+      }
+    ],
+    "hint": "Piense en las necesidades vitales y estructurales que surgen al realizar excavaciones a gran profundidad bajo la superficie terrestre.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la distribución de los métodos de extracción minera en el Perú expuesta en la clase, ¿cuál es la modalidad técnica predominantemente utilizada y qué proporción representa la minería subterránea?",
+    "opciones": [
+      {
+        "text": "Predomina la minería superficial o Tajo Abierto, mientras que la minería subterránea abarca aproximadamente un 38% de las operaciones.",
+        "isCorrect": true,
+        "rationale": "Grandes asentamientos como Cerro Verde, Antamina o Toquepala emplean minado superficial, correspondiendo el 38% restante a minería subterránea."
+      },
+      {
+        "text": "La minería subterránea es ampliamente predominante alcanzando el 90% de la producción metálica del país.",
+        "isCorrect": false,
+        "rationale": "El mayor volumen de minerales en el Perú se extrae a través de operaciones a Tajo Abierto y no de minas de socavón."
+      },
+      {
+        "text": "La minería aluvial de los ríos representa el 70% de las operaciones metálicas formales en el Perú.",
+        "isCorrect": false,
+        "rationale": "La minería aluvial se concentra principalmente en el oro de la cuenca amazónica y no constituye la mayoría del sector formal nacional."
+      },
+      {
+        "text": "La minería subterránea abarca el 62% y la minería superficial representa únicamente el 38% de la producción nacional.",
+        "isCorrect": false,
+        "rationale": "Las cifras se encuentran invertidas; la minería de superficie supera ampliamente a la modalidad subterránea en el Perú."
+      },
+      {
+        "text": "Ambas modalidades extractivas tienen exactamente una participación del 50% en el universo de la minería formal.",
+        "isCorrect": false,
+        "rationale": "La minería a Tajo Abierto ostenta una participación mayoritaria clara debido a las dimensiones de los pórfidos de cobre explotados."
+      }
+    ],
+    "hint": "Recuerde las características extractivas de los grandes yacimientos de cobre como Cerro Verde o Toquepala frente a la minería de vetas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la enfermedad ocupacional de carácter irreversible ocasionada por la inhalación prolongada de polvo de sílice en labores mineras, que otorga el derecho a la jubilación anticipada?",
+    "opciones": [
+      {
+        "text": "La silicosis o neumoconiosis.",
+        "isCorrect": true,
+        "rationale": "La exposición continuada a polvos minerales en mina genera silicosis (o neumoconiosis), patología pulmonar ocupacional que faculta el beneficio de jubilación minera."
+      },
+      {
+        "text": "La hipertensión arterial de altitud.",
+        "isCorrect": false,
+        "rationale": "La hipertensión por altitud es una condición fisiológica tratable ligada a la presión barométrica, no a la inhalación destructiva de polvos de sílice."
+      },
+      {
+        "text": "La dermatitis de contacto por agroquímicos.",
+        "isCorrect": false,
+        "rationale": "La dermatitis es una afección cutánea no pulmo-respiratoria, ajena al polvo de sílice de los socavones."
+      },
+      {
+        "text": "La presbiacusia senil acelerada.",
+        "isCorrect": false,
+        "rationale": "La presbiacusia alude a la pérdida auditiva por envejecimiento o ruido, diferenciándose de las enfermedades pulmonares intersticiales."
+      },
+      {
+        "text": "El síndrome del túnel carpiano crónico.",
+        "isCorrect": false,
+        "rationale": "Es una dolencia neuromuscular de las extremidades superiores generada por movimientos repetitivos y no por inhalación de sílice."
+      }
+    ],
+    "hint": "Identifique la patología respiratoria crónica producida por la acumulación de partículas minerales en el tejido pulmonar del minero.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el requisito de validez indispensable para que los contratos mineros (tales como la transferencia, cesión o hipoteca) surtan plenos efectos jurídicos frente a terceros y al Estado?",
+    "opciones": [
+      {
+        "text": "Otorgarse mediante escritura pública e inscribirse en el Registro de Minería de los Registros Públicos (SUNARP).",
+        "isCorrect": true,
+        "rationale": "La legislación minera impone como formalidad ad solemnitatem la escritura pública e inscripción registral para oponer el contrato frente a terceros."
+      },
+      {
+        "text": "Celebrarse mediante un contrato privado verbal con la presencia de dos testigos locales de la zona.",
+        "isCorrect": false,
+        "rationale": "Los contratos mineros son solemnes y exigen la intervención notarial y la inscripción en registros públicos para tener plena eficacia."
+      },
+      {
+        "text": "Publicarse exclusivamente en un diario de circulación local sin necesidad de elevarse a registro notarial.",
+        "isCorrect": false,
+        "rationale": "Las publicaciones periodísticas integran ciertos trámites del petitorio, pero la transmisión formal contractual requiere inscripción en la SUNARP."
+      },
+      {
+        "text": "Contar únicamente con la aprobación por firmas simples del equipo de ingenieros residentes de la mina.",
+        "isCorrect": false,
+        "rationale": "La aprobación operacional técnica interna de ingenieros carece de todo valor jurídico registral frente a terceros."
+      },
+      {
+        "text": "Registrarse en el padrón de la municipalidad distrital del área de influencia de las operaciones.",
+        "isCorrect": false,
+        "rationale": "La competencia registral de los derechos e inmobiliaria minera recae exclusivamente en la SUNARP y el INGEMMET, no en los municipios."
+      }
+    ],
+    "hint": "Piense en la formalidad notarial de mayor jerarquía y su publicidad en la SUNARP para constituir derechos oponibles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia jurídica esencial entre un contrato de transferencia minera y un contrato de cesión minera?",
+    "opciones": [
+      {
+        "text": "La transferencia transmite la titularidad y el dominio del derecho minero, mientras que la cesión equivale a un arrendamiento donde se cede el uso y disfrute a cambio de una renta.",
+        "isCorrect": true,
+        "rationale": "Transferir implica desprenderse de la propiedad de la concesión; la cesión mantiene el dominio en el cedente y otorga la explotación temporal al cesionario."
+      },
+      {
+        "text": "La transferencia se celebra siempre a título gratuito, en tanto que la cesión impone la entrega obligatoria de participaciones sociales.",
+        "isCorrect": false,
+        "rationale": "La transferencia es habitualmente a título oneroso y equivale a una compraventa, no a una donación gratuita."
+      },
+      {
+        "text": "La cesión transfiere la propiedad perpetua del yacimiento, mientras que la transferencia se otorga exclusivamente por un plazo improrrogable de 1 año.",
+        "isCorrect": false,
+        "rationale": "Los términos están invertidos: la cesión es temporal como un alquiler y la transferencia involucra la cesión definitiva del título."
+      },
+      {
+        "text": "La transferencia aplica únicamente para mineros ilegales, mientras que la cesión regula exclusivamente las operaciones de gran minería.",
+        "isCorrect": false,
+        "rationale": "Ambas figuras contractuales son institutos de derecho privado aplicables a cualquier titular o proyecto dentro del marco formal."
+      },
+      {
+        "text": "En la cesión se extingue definitivamente el título otorgado por el Estado, mientras que la transferencia genera una nueva cuadrícula concesional.",
+        "isCorrect": false,
+        "rationale": "Ninguno de los contratos extingue el título concesional; la cesión transfiere el ejercicio temporal y la transferencia el dominio del mismo título."
+      }
+    ],
+    "hint": "Establezca la analogía entre la venta definitiva de un bien versus el arrendamiento o alquiler temporal del mismo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco del Contrato de Opción Minera previsto en la Ley General de Minería en el Perú, ¿cuáles de las siguientes características son correctas?",
+    "opciones": [
+      {
+        "text": "Es un contrato preparatorio vinculante mediante el cual el titular de la concesión se obliga incondicionalmente a celebrar un contrato definitivo en el futuro.",
+        "isCorrect": true,
+        "rationale": "El contrato de opción otorga al optante la facultad exclusiva e irrevocable de decidir la posterior celebración de una compraventa o cesión."
+      },
+      {
+        "text": "El plazo máximo de duración del contrato de opción estipulado expresamente por la legislación minera es de hasta 5 años.",
+        "isCorrect": true,
+        "rationale": "La ley de minería limita el compromiso del contrato de opción a un horizonte temporal que no puede superar el límite legal de 5 años."
+      },
+      {
+        "text": "Permite al optante evaluar técnicamente el yacimiento o gestionar financiamiento antes de ejecutar la adquisición o cesión definitiva.",
+        "isCorrect": true,
+        "rationale": "Esta modalidad otorga un tiempo de exclusividad para que el inversionista realice labores de exploración o consiga fondos sin riesgo de pérdida del activo."
+      },
+      {
+        "text": "Consiste en la expropiación administrativa e inmediata del terreno de superficie por parte del Ministerio de Energía y Minas.",
+        "isCorrect": false,
+        "rationale": "El contrato de opción es un acuerdo de voluntades privado entre partes y no una figura expropiatoria del Estado."
+      },
+      {
+        "text": "Transfiere de manera automática la propiedad de los minerales extraídos sin requerir la firma posterior de un contrato definitivo.",
+        "isCorrect": false,
+        "rationale": "El contrato de opción es preparatorio; el dominio o cesión se consolida al ejercitar la opción y suscribir el contrato definitivo."
+      }
+    ],
+    "hint": "Analice la naturaleza preparatoria de esta figura, la limitación legal de su vigencia y su utilidad en la evaluación de proyectos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define conceptualmente el contrato de riesgo compartido o \"Joint Venture\" en el ámbito de la actividad minera en el Perú?",
+    "opciones": [
+      {
+        "text": "Es un contrato asociativo por el cual dos o más personas se agrupan para ejecutar un proyecto minero compartiendo riesgos, gastos y utilidades, sin constituir una nueva persona jurídica.",
+        "isCorrect": true,
+        "rationale": "El Joint Venture minero es un acuerdo de colaboración empresarial en el que las partes comparten los resultados sin crear una sociedad distinta."
+      },
+      {
+        "text": "Es la constitución obligatoria de una sociedad anónima abierta inscrita en la Bolsa de Valores para captar pequeños inversionistas.",
+        "isCorrect": false,
+        "rationale": "El Joint Venture evita expresamente la creación de una nueva persona jurídica o sociedad mercantil formal."
+      },
+      {
+        "text": "Es el contrato de arrendamiento de maquinaria pesada con pacto de compra obligatoria al vencimiento del plazo estipulado.",
+        "isCorrect": false,
+        "rationale": "Esa descripción corresponde a un arrendamiento financiero (leasing) de bienes muebles, no a una asociación asociativa de riesgo minero."
+      },
+      {
+        "text": "Es la transferencia completa e irreversible de los compromisos del Plan de Cierre de Minas a favor de las comunidades locales.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad ambiental del plan de cierre permanece en el titular o la operadora sin transferirse a las comunidades mediante un Joint Venture."
+      },
+      {
+        "text": "Es un contrato unilateral en el que el Estado asume la totalidad de las pérdidas financieras sufridas durante la exploración.",
+        "isCorrect": false,
+        "rationale": "En el Joint Venture el riesgo es compartido exclusivamente entre las partes privadas asociadas al contrato."
+      }
+    ],
+    "hint": "Considere la alianza estratégica de capitales o conocimientos técnicos donde los socios se asocian para una obra o negocio determinado sin crear una empresa nueva.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la legislación minera peruana, ¿qué consecuencia jurídica se produce automáticamente cuando la titularidad de un petitorio o concesión pasa a pertenecer de manera conjunta a dos o más personas?",
+    "opciones": [
+      {
+        "text": "Se constituye de modo obligatorio una Sociedad Minera de Responsabilidad Limitada (S.M.R.L.), salvo que acuerden formar una sociedad contractual.",
+        "isCorrect": true,
+        "rationale": "La pluralidad de titulares sobre un mismo petitorio o concesión da origen legal automático a una S.M.R.L. para unificar la representación ante el Estado."
+      },
+      {
+        "text": "Se declara la caducidad inmediata del derecho minero por incurrir en acaparamiento ilícito de cuadrículas.",
+        "isCorrect": false,
+        "rationale": "La cotitularidad sobre un derecho minero es una situación legal plenamente permitida que da origen a una S.M.R.L. y no a la caducidad."
+      },
+      {
+        "text": "El área de la concesión se reclasifica automáticamente como zona reservada bajo administración del SERNANP.",
+        "isCorrect": false,
+        "rationale": "El estatus de área natural protegida es determinado por decreto supremo ambiental, no por la cantidad de cotitulares de un petitorio."
+      },
+      {
+        "text": "La concesión es revertida al gobierno regional para ser administrada como empresa estatal subnacional.",
+        "isCorrect": false,
+        "rationale": "Las concesiones pertenecientes a varios titulares continúan en la esfera del derecho privado bajo la figura de la S.M.R.L."
+      },
+      {
+        "text": "Los titulares quedan inhabilitados de manera permanente para solicitar derechos de uso de agua ante la ANA.",
+        "isCorrect": false,
+        "rationale": "La S.M.R.L. constituida asume los derechos de la concesión y puede tramitar válidamente los permisos hídricos operacionales."
+      }
+    ],
+    "hint": "Identifique la persona jurídica ex lege contemplada en el Código de Minería para administrar la cotitularidad minera.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué el contrato de hipoteca sobre una concesión minera tiene la calificación jurídica de ser un contrato de carácter accesorio?",
+    "opciones": [
+      {
+        "text": "Porque su validez y existencia dependen de una obligación principal (como un crédito bancario) a la cual respalda como garantía real.",
+        "isCorrect": true,
+        "rationale": "La hipoteca es un derecho real de garantía que no subsiste por sí solo, sino en función del cumplimiento de una deuda u obligación principal."
+      },
+      {
+        "text": "Porque puede celebrarse únicamente entre pequeños mineros e informales inscritos en el Reinfo.",
+        "isCorrect": false,
+        "rationale": "La hipoteca es una garantía real aplicable a cualquier título minero dentro del tráfico comercial privado formal."
+      },
+      {
+        "text": "Porque no requiere ser elevada a escritura pública ni inscribirse en la SUNARP para tener validez legal.",
+        "isCorrect": false,
+        "rationale": "La hipoteca requiere indispensablemente la solemnidad de la escritura pública e inscripción registral para constituir el gravamen."
+      },
+      {
+        "text": "Porque su plazo de vigencia máxima está restringido por ley a un periodo de 30 días calendario improrrogables.",
+        "isCorrect": false,
+        "rationale": "La vigencia de la hipoteca está atada al plazo fijado para la cancelación del crédito o deuda garantizada."
+      },
+      {
+        "text": "Porque otorga de inmediato la transferencia de la propiedad de la superficie al acreedor financiero.",
+        "isCorrect": false,
+        "rationale": "La hipoteca es un gravamen de garantía que no otorga la propiedad del suelo ni la posesión directa al acreedor mientras no sea ejecutada por mora."
+      }
+    ],
+    "hint": "Recuerde el principio de accesoriedad en las garantías reales frente a la obligación principal que respaldan.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-13",
+    "diplomado": "TIPOS DE CONCESIONES MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el análisis presentado sobre los problemas de la minería ilegal e informal en regiones como Madre de Dios, ¿cuáles de los siguientes factores dificultan la formalización minera integral?",
+    "opciones": [
+      {
+        "text": "La superposición de mineros informales en concesiones otorgadas a terceros que se niegan a suscribir contratos de cesión o explotación.",
+        "isCorrect": true,
+        "rationale": "Sin el consentimiento expreso del titular de la concesión mediante contrato formal, el minero en proceso no puede culminar su formalización."
+      },
+      {
+        "text": "Las severas restricciones normativas sobre la minería aluvial y la falta de un ordenamiento territorial adecuado en las cuencas.",
+        "isCorrect": true,
+        "rationale": "La legislación limita o prohíbe el uso de dragas e intervenciones en cauces de ríos, complicando la adecuación técnica en zonas aluviales."
+      },
+      {
+        "text": "El avance de actividades extractivas ilegales en zonas prohibidas como reservas nacionales, que conllevan deforestación y contaminación por mercurio.",
+        "isCorrect": true,
+        "rationale": "Las zonas protegidas no admiten actividad minera de ningún tipo, generando conflictos socioambientales y actividades ilícitas conexas."
+      },
+      {
+        "text": "La erradicación total e inminente de la minería ilegal debido a la sola creación de la plataforma del Reinfo.",
+        "isCorrect": false,
+        "rationale": "El Reinfo no ha logrado erradicar la ilegalidad y, por el contrario, presenta bajos porcentajes de mineros efectivamente formalizados."
+      },
+      {
+        "text": "La concesión automática de la propiedad del subsuelo a favor de cualquier minero por la sola ocupación de la superficie.",
+        "isCorrect": false,
+        "rationale": "La simple ocupación de hecho sobre la superficie no transfiere derechos sobre el subsuelo ni otorga títulos formales."
+      }
+    ],
+    "hint": "Considere la presencia de derechos de terceros preexistentes, los límites ambientales en la minería de cauces y las invasiones a áreas protegidas.",
+    "activo": true
+  }
+]

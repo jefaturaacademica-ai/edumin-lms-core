@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Según lo expuesto en el curso, qué filósofo y profesor acuñó el término 'stakeholder' en la década de 1980 para referirse a las partes interesadas de un negocio?",
+    "opciones": [
+      {
+        "text": "Robert Edward Freeman",
+        "isCorrect": true,
+        "rationale": "Freeman introdujo formalmente el concepto en los años 80 para señalar que las decisiones de una empresa afectan a múltiples grupos de interés y no solo a los dueños."
+      },
+      {
+        "text": "Michael Porter",
+        "isCorrect": false,
+        "rationale": "Porter es reconocido por desarrollar el modelo de las cinco fuerzas competitivas y la cadena de valor, no por definir el término stakeholder."
+      },
+      {
+        "text": "Philip Kotler",
+        "isCorrect": false,
+        "rationale": "Kotler es una figura central en la teoría del marketing moderno, pero no fue el creador del concepto de stakeholders."
+      },
+      {
+        "text": "Adam Smith",
+        "isCorrect": false,
+        "rationale": "Smith es considerado el padre de la economía moderna por obras del siglo XVIII, mucho antes de la acuñación de este término en los años 80."
+      },
+      {
+        "text": "Peter Drucker",
+        "isCorrect": false,
+        "rationale": "Drucker fue un influyente autor de administración por objetivos, pero no el filósofo que acuñó la definición de stakeholders."
+      }
+    ],
+    "hint": "Se trata de un filósofo y teórico organizacional que destacó el impacto estratégico de los grupos de interés en los años 80.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia conceptual fundamental entre un 'shareholder' y un 'stakeholder'?",
+    "opciones": [
+      {
+        "text": "El shareholder posee acciones de la empresa, mientras que el stakeholder incluye a cualquier individuo u organización impactado por ella.",
+        "isCorrect": true,
+        "rationale": "El shareholder o accionista es un tipo específico de stakeholder primario que posee participación de capital en la compañía."
+      },
+      {
+        "text": "El stakeholder es siempre el dueño legal exclusivo de la empresa, mientras que el shareholder es un trabajador externo.",
+        "isCorrect": false,
+        "rationale": "Esta afirmación invierte la relación, ya que el accionista (shareholder) es el propietario de acciones y el stakeholder abarca a un grupo más amplio."
+      },
+      {
+        "text": "El shareholder abarca únicamente a entidades estatales, mientras que el stakeholder se limita de forma exclusiva a los clientes.",
+        "isCorrect": false,
+        "rationale": "Ambas definiciones son erróneas, puesto que los shareholders representan a los accionistas y los stakeholders incluyen proveedores, empleados y sociedad."
+      },
+      {
+        "text": "Los stakeholders solo tienen interés financiero por poseer acciones, mientras que los shareholders no tienen vínculo económico.",
+        "isCorrect": false,
+        "rationale": "Los accionistas o shareholders son los que poseen las acciones y aportan capital financiero a la empresa."
+      },
+      {
+        "text": "Ambos términos son sinónimos exactos y no poseen ninguna diferencia en la gestión administrativa.",
+        "isCorrect": false,
+        "rationale": "Aunque están estrechamente relacionados porque todo shareholder es un stakeholder, los conceptos no son idénticos."
+      }
+    ],
+    "hint": "Considera cuál de los dos términos se refiere específicamente a la tenencia de acciones de capital.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes actores se clasifican como stakeholders internos o primarios dentro de una organización?",
+    "opciones": [
+      {
+        "text": "Propietarios o accionistas.",
+        "isCorrect": true,
+        "rationale": "Tienen un vínculo económico y directo imprescindible para la estructura y funcionamiento básico de la empresa."
+      },
+      {
+        "text": "Directores y gerentes.",
+        "isCorrect": true,
+        "rationale": "Forman parte de la estructura interna encargada de la toma de decisiones operativas y estratégicas permanentes."
+      },
+      {
+        "text": "Trabajadores de la empresa.",
+        "isCorrect": true,
+        "rationale": "Son la fuerza laboral interna con relación económica y operativa directa en el día a día de la organización."
+      },
+      {
+        "text": "Medios de comunicación masiva.",
+        "isCorrect": false,
+        "rationale": "Los medios de comunicación son entes externos a la organización y se clasifican dentro de los stakeholders secundarios."
+      },
+      {
+        "text": "Entidades regulatorias del Estado.",
+        "isCorrect": false,
+        "rationale": "La administración pública opera desde el entorno externo como ente regulador y secundario."
+      }
+    ],
+    "hint": "Identifica a los grupos que tienen una relación laboral, ejecutiva o de propiedad directa e interna con la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué entidad o herramienta de análisis empresarial destaca por emitir informes comerciales y financieros completos evaluando el riesgo mediante indicadores como el M Score?",
+    "opciones": [
+      {
+        "text": "Dun & Bradstreet (D&B)",
+        "isCorrect": true,
+        "rationale": "Dun & Bradstreet proporciona reportes detallados del historial financiero, estructura societaria y puntajes de riesgo (como M Score y Paydex) a nivel internacional."
+      },
+      {
+        "text": "Portal Aduanet de la SUNAT",
+        "isCorrect": false,
+        "rationale": "Aduanet sirve para consultar partidas arancelarias y trámites aduaneros locales en Perú, no para emitir reportes crediticios globales de proveedores."
+      },
+      {
+        "text": "Indecopi",
+        "isCorrect": false,
+        "rationale": "Indecopi es el organismo peruano de defensa de la competencia y propiedad intelectual, no una calificadora privada de riesgo internacional."
+      },
+      {
+        "text": "Ministerio de Transportes y Comunicaciones (MTC)",
+        "isCorrect": false,
+        "rationale": "El MTC emite permisos para equipos de telecomunicaciones, pero no evalúa estados financieros de fábricas extranjeras."
+      },
+      {
+        "text": "Aliexpress B2C",
+        "isCorrect": false,
+        "rationale": "Aliexpress es un portal de compras al por menor para consumidores finales y no una plataforma de análisis de riesgo financiero corporativo."
+      }
+    ],
+    "hint": "Se trata de una firma global especializada en informes de crédito corporativo e inteligencias comerciales de alto nivel.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la matriz de evaluación de stakeholders, ¿cuáles son las dos variables principales que se cruzan para determinar las acciones de gestión?",
+    "opciones": [
+      {
+        "text": "Grado de interés y nivel de poder.",
+        "isCorrect": true,
+        "rationale": "La matriz evalúa el interés de la parte interesada y su poder o influencia para clasificarla en cuadrantes estratégicos."
+      },
+      {
+        "text": "Monto de facturación y número de empleados.",
+        "isCorrect": false,
+        "rationale": "Estas cifras son métricas operativas de tamaño de empresa, no las variables de la matriz de ponderación de interesados."
+      },
+      {
+        "text": "Ubicación geográfica y tipo de moneda utilizada.",
+        "isCorrect": false,
+        "rationale": "La localización y divisa no determinan la posición de un stakeholder dentro del marco analítico de poder e interés."
+      },
+      {
+        "text": "Antigüedad en el mercado y número de ventas anuales.",
+        "isCorrect": false,
+        "rationale": "La experiencia mercantil no forma parte de los ejes de la matriz estándar de clasificación de interesados."
+      },
+      {
+        "text": "Grado de escolaridad e idiomas hablados.",
+        "isCorrect": false,
+        "rationale": "Los atributos académicos no son la base para estructurar los cuadrantes de atención a grupos de interés."
+      }
+    ],
+    "hint": "Piensa en las dos fuerzas que determinan si a un grupo se le debe mantener satisfecho, monitorear o gestionar de cerca.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el ámbito de las importaciones y el transporte marítimo, ¿qué significa el término ETA?",
+    "opciones": [
+      {
+        "text": "Estimated Time of Arrival (Tiempo estimado de llegada).",
+        "isCorrect": true,
+        "rationale": "ETA hace referencia a la fecha y hora aproximada en la que se prevé que la embarcación o carga arribará al puerto de destino."
+      },
+      {
+        "text": "Exact Time of Allocation (Tiempo exacto de asignación).",
+        "isCorrect": false,
+        "rationale": "ETA no alude a asignaciones de espacio, sino a la estimación del arribo de la nave."
+      },
+      {
+        "text": "External Trade Authorization (Autorización de comercio exterior).",
+        "isCorrect": false,
+        "rationale": "No es un permiso legal de comercio, sino un término logístico de programación de itinerarios."
+      },
+      {
+        "text": "Electronic Tariff Application (Aplicación arancelaria electrónica).",
+        "isCorrect": false,
+        "rationale": "ETA no está vinculado con el pago o cálculo de tributos arancelarios."
+      },
+      {
+        "text": "Essential Transport Agent (Agente de transporte esencial).",
+        "isCorrect": false,
+        "rationale": "La sigla describe una referencia temporal de transporte y no una categoría de agente logístico."
+      }
+    ],
+    "hint": "Es una sigla en inglés utilizada para estimar el momento en que un barco u operador arribará al puerto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de las siguientes plataformas digitales está orientada principalmente al comercio al por menor B2C (Business to Consumer)?",
+    "opciones": [
+      {
+        "text": "AliExpress",
+        "isCorrect": true,
+        "rationale": "AliExpress está configurada para la venta directa de pequeñas cantidades de productos al consumidor final."
+      },
+      {
+        "text": "Alibaba",
+        "isCorrect": false,
+        "rationale": "Alibaba es el portal B2B por excelencia para compras corporativas al por mayor y grandes volúmenes entre empresas."
+      },
+      {
+        "text": "Amazon Business",
+        "isCorrect": false,
+        "rationale": "Amazon Business es una vertiente orientada expresamente al aprovisionamiento entre empresas (B2B)."
+      },
+      {
+        "text": "BigCommerce B2B",
+        "isCorrect": false,
+        "rationale": "Esta plataforma proporciona soluciones específicas para comercio electrónico interempresarial."
+      },
+      {
+        "text": "Global Sources",
+        "isCorrect": false,
+        "rationale": "Global Sources es un directorio y directorio especializado en facilitación de comercio mayorista internacional B2B."
+      }
+    ],
+    "hint": "Busca la plataforma del grupo chino enfocada en venta minorista directamente a compradores individuales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos distinguen a las plataformas de comercio electrónico B2B (Business to Business)?",
+    "opciones": [
+      {
+        "text": "Venta al por mayor en grandes volúmenes.",
+        "isCorrect": true,
+        "rationale": "Permite aprovechar economías de escala reduciendo el costo unitario mediante compras masivas."
+      },
+      {
+        "text": "Precios personalizados según volumen y condiciones negociadas.",
+        "isCorrect": true,
+        "rationale": "Ofrece cotizaciones adaptadas al perfil comercial del comprador y la magnitud del pedido."
+      },
+      {
+        "text": "Posibilidad de integración con sistemas ERP y CRM corporativos.",
+        "isCorrect": true,
+        "rationale": "Facilita la automatización de pedidos y gestión administrativa conectando los softwares empresariales."
+      },
+      {
+        "text": "Enfoque exclusivo en ventas unitarias para uso personal del comprador final.",
+        "isCorrect": false,
+        "rationale": "La venta unitaria para consumo individual corresponde al modelo B2C y no al comercio interempresarial B2B."
+      },
+      {
+        "text": "Prohibición absoluta de utilizar pasarelas de pago o transferencias bancarias.",
+        "isCorrect": false,
+        "rationale": "Las plataformas B2B integran métodos de pago bancarizados y seguros para transacciones comerciales."
+      }
+    ],
+    "hint": "Selecciona las opciones que reflejan operaciones comerciales al por mayor entre empresas e integración de sistemas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al evaluar la calidad en la recepción de un lote, ¿cuál es el porcentaje de defecto o error comúnmente aceptado como margen tolerablemente estándar?",
+    "opciones": [
+      {
+        "text": "Hasta un 5%",
+        "isCorrect": true,
+        "rationale": "En la gestión de abastecimiento se admite habitualmente un margen estadístico de falla no mayor al 5% en el lote recibido."
+      },
+      {
+        "text": "Entre 20% y 25%",
+        "isCorrect": false,
+        "rationale": "Un margen de falla superior a la quinta parte de la mercancía resultaría inaceptable y perjudicaría seriamente la operación."
+      },
+      {
+        "text": "Alrededor del 50%",
+        "isCorrect": false,
+        "rationale": "Aceptar la mitad del lote defectuoso representaría una falla grave de calidad que arruinaría la rentabilidad."
+      },
+      {
+        "text": "Exactamente el 0% sin margen alguno bajo ninguna contingencia física.",
+        "isCorrect": false,
+        "rationale": "El riesgo cero absoluto no existe en procesos industriales masivos, por lo que se establece una tolerancia razonable."
+      },
+      {
+        "text": "Un 75% o más.",
+        "isCorrect": false,
+        "rationale": "Este porcentaje indicaría un colapso en el control de producción del fabricante extranjero."
+      }
+    ],
+    "hint": "Recuerda el porcentaje estándar de tolerancia de margen de error en la recepción de pedidos comerciales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué comportamiento o solicitud por parte de un proveedor debe interpretarse como una señal clara de alerta de posible estafa?",
+    "opciones": [
+      {
+        "text": "Exigir pagos en efectivo o transferencias hacia cuentas bancarias personales no identificadas.",
+        "isCorrect": true,
+        "rationale": "La falta de bancarización hacia la cuenta jurídica del proveedor dificulta el rastreo legal del dinero y sugiere fraude."
+      },
+      {
+        "text": "Proporcionar copias de la licencia comercial y certificaciones ISO vigentes.",
+        "isCorrect": false,
+        "rationale": "Entregar documentación oficial transparente es una prueba de formalidad y no una señal de peligro."
+      },
+      {
+        "text": "Aceptar inspecciones de calidad antes del embarque por parte de un tercero.",
+        "isCorrect": false,
+        "rationale": "Permitir la revisión física de los insumos refleja seguridad operativa por parte de la fábrica."
+      },
+      {
+        "text": "Proponer contratos detallados con cláusulas de penalización por mora.",
+        "isCorrect": false,
+        "rationale": "Establecer penalidades claras por escrito protege la relación contractual y demuestra seriedad."
+      },
+      {
+        "text": "Mantener un sitio web corporativo actualizado y presencia en directorios formales.",
+        "isCorrect": false,
+        "rationale": "La visibilidad pública y corporativa refuerza la legitimidad del proveedor en el mercado."
+      }
+    ],
+    "hint": "Piensa en la modalidad de cobro que evita dejar registro formal ante los organismos bancarios y tributarios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes corresponden a auditorías específicas que se pueden ejecutar para verificar a un proveedor?",
+    "opciones": [
+      {
+        "text": "Auditoría de calidad.",
+        "isCorrect": true,
+        "rationale": "Inspecciona que los procesos productivos y materiales cumplan con los estándares técnicos requeridos."
+      },
+      {
+        "text": "Auditoría de cumplimiento legal y ambiental.",
+        "isCorrect": true,
+        "rationale": "Verifica que el proveedor respete las leyes locales, regulaciones de trabajo y normativas ambientales."
+      },
+      {
+        "text": "Auditoría de responsabilidad social corporativa.",
+        "isCorrect": true,
+        "rationale": "Evalúa las condiciones éticas de trabajo y el trato hacia los colaboradores dentro de la fábrica."
+      },
+      {
+        "text": "Auditoría de hábitos de consumo de los clientes finales B2C.",
+        "isCorrect": false,
+        "rationale": "La auditoría al proveedor analiza las capacidades de la fábrica, no las preferencias individuales de los consumidores."
+      },
+      {
+        "text": "Auditoría informal de puestos de venta ambulatoria en la vía pública.",
+        "isCorrect": false,
+        "rationale": "Las auditorías corporativas se aplican a las instalaciones, procesos y finanzas formales del proveedor."
+      }
+    ],
+    "hint": "Selecciona los tipos de evaluación periódica orientados a medir los procesos internos, cumplimiento normativo y trato ético de una fábrica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es uno de los principales incentivos para que un fabricante venda sus productos masivamente a través de portales B2B?",
+    "opciones": [
+      {
+        "text": "Acelerar la rotación de su inventario y asegurar un flujo alto de ingresos.",
+        "isCorrect": true,
+        "rationale": "Vender grandes volúmenes permite despachar mercancía rápidamente, evitando la obsolescencia de stock en almacén."
+      },
+      {
+        "text": "Obtener una exención automática y permanente del pago de aranceles de importación.",
+        "isCorrect": false,
+        "rationale": "Vender por B2B no elimina las obligaciones aduaneras e impuestos fijados por las leyes de cada país."
+      },
+      {
+        "text": "Operar comercialmente sin necesidad de licencias o registros fiscales.",
+        "isCorrect": false,
+        "rationale": "Las plataformas B2B exigen verificaciones legales e identificación tributaria a las fábricas registradas."
+      },
+      {
+        "text": "Evitar la firma de contratos comerciales y el uso de documentos de transporte.",
+        "isCorrect": false,
+        "rationale": "Las transacciones B2B requieren documentación rigurosa como facturas comerciales y conocimientos de embarque."
+      },
+      {
+        "text": "Eliminar por completo los costos operativos y de producción de su planta.",
+        "isCorrect": false,
+        "rationale": "Toda fabricación conserva costos operacionales; la escala los optimiza pero no los desaparece."
+      }
+    ],
+    "hint": "Considera la ventaja operativa de despejar rápidamente el almacén vendiendo miles de unidades en una sola transacción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto comercial y de gestión de inventarios, ¿qué se entiende por 'venta perdida'?",
+    "opciones": [
+      {
+        "text": "Los ingresos que la empresa deja de percibir por no disponer de stock para atender la demanda.",
+        "isCorrect": true,
+        "rationale": "La venta perdida es un indicador altamente negativo que refleja la incapacidad de satisfacer al cliente por quiebre de stock."
+      },
+      {
+        "text": "Las rebajas de precio otorgadas voluntariamente durante liquidaciones de temporada.",
+        "isCorrect": false,
+        "rationale": "Las rebajas son estrategias comerciales de precio y no reflejan la pérdida de clientes por falta de producto."
+      },
+      {
+        "text": "La pérdida de valor contable de los activos fijos por depreciación anual.",
+        "isCorrect": false,
+        "rationale": "La depreciación de activos fijos es un concepto financiero totalmente ajeno al quiebre de inventario comercial."
+      },
+      {
+        "text": "El costo por pago suplementario de seguros marítimos durante el transporte.",
+        "isCorrect": false,
+        "rationale": "Los seguros forman parte de la estructura de costos logísticos, no del costo de oportunidad por desabastecimiento."
+      },
+      {
+        "text": "La mercancía obsequiada a clientes en campañas de promoción publicitaria.",
+        "isCorrect": false,
+        "rationale": "El material promocional o de muestra es un gasto publicitario planificado, no una venta perdida."
+      }
+    ],
+    "hint": "Se produce cuando un cliente desea adquirir un producto pero la empresa no se lo puede vender porque se quedó sin existencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué sistema electrónico de intercambio de datos (Electronic Data Interchange) es utilizado por grandes cadenas minoristas como Walmart para conectar sus inventarios en tiempo real con sus proveedores?",
+    "opciones": [
+      {
+        "text": "EDI",
+        "isCorrect": true,
+        "rationale": "El EDI (Electronic Data Interchange) permite transmitir datos estructurados de inventarios y pedidos directamente entre los sistemas de la empresa y el proveedor."
+      },
+      {
+        "text": "GPS",
+        "isCorrect": false,
+        "rationale": "El GPS es una tecnología de geolocalización satelital y no un formato estandarizado de intercambio de datos comerciales."
+      },
+      {
+        "text": "CRM",
+        "isCorrect": false,
+        "rationale": "El CRM gestiona las relaciones y base de datos con los clientes, no la reposición de stock en tiempo real con fabricantes."
+      },
+      {
+        "text": "POS",
+        "isCorrect": false,
+        "rationale": "El sistema POS es el punto de venta donde se cobra al cliente final, no la red global de intercambio electrónico interempresarial."
+      },
+      {
+        "text": "ISO",
+        "isCorrect": false,
+        "rationale": "ISO se refiere a los estándares internacionales de gestión de calidad emitidos por la Organización Internacional de Normalización."
+      }
+    ],
+    "hint": "Sus siglas significan Electronic Data Interchange y automatizan las órdenes de reposición compartiendo información de ventas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son las tres acciones centrales que nos permite realizar la etapa de planificación dentro de la gestión de proveedores?",
+    "opciones": [
+      {
+        "text": "Establecer objetivos.",
+        "isCorrect": true,
+        "rationale": "Define la dirección deseada y los resultados generales que busca alcanzar la empresa."
+      },
+      {
+        "text": "Fijar metas.",
+        "isCorrect": true,
+        "rationale": "Traduce los objetivos en cuantificaciones y parámetros concretos medibles en el tiempo."
+      },
+      {
+        "text": "Diseñar estrategias.",
+        "isCorrect": true,
+        "rationale": "Estructura el plan de acción necesario para alcanzar los objetivos y metas fijados."
+      },
+      {
+        "text": "Eliminar todo tipo de control de calidad sobre los insumos.",
+        "isCorrect": false,
+        "rationale": "La planificación busca fortalecer y planificar los controles, jamás suprimirlos."
+      },
+      {
+        "text": "Ignorar la fluctuación de la demanda en el mercado.",
+        "isCorrect": false,
+        "rationale": "Planificar exige proyectar la demanda del mercado para evitar sobrestocks o ventas perdidas."
+      }
+    ],
+    "hint": "Recuerda la triada fundamental del proceso de planificación: señalar el qué, definir la métrica concreta y trazar la ruta de acción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el modelo de negociación integrativa (conocido como 'ganar-ganar'), ¿cuál es la orientación estratégica de las partes?",
+    "opciones": [
+      {
+        "text": "Buscar soluciones de beneficio mutuo que fortalezcan la relación commercial a largo plazo.",
+        "isCorrect": true,
+        "rationale": "La negociación integrativa busca ampliar el valor del acuerdo para que ambas empresas obtengan ventajas sostenibles."
+      },
+      {
+        "text": "Imponer condiciones drásticas para que una parte gane a costa de la pérdida de la otra.",
+        "isCorrect": false,
+        "rationale": "Esa postura agresiva o de suma cero define a la negociación distributiva, no a la integrativa."
+      },
+      {
+        "text": "Ocultar la información de ventas para perjudicar la planificación del proveedor.",
+        "isCorrect": false,
+        "rationale": "El modelo integrativo requiere transparencia en la información para colaborar eficazmente."
+      },
+      {
+        "text": "Prescindir por completo del uso de contratos escritos o garantías.",
+        "isCorrect": false,
+        "rationale": "Buscar acuerdos de mutuo beneficio no significa abandonar los marcos legales formales de protección."
+      },
+      {
+        "text": "Procurar la quiebra financiera del socio comercial en el menor tiempo posible.",
+        "isCorrect": false,
+        "rationale": "Destruir al socio comercial imposibilita la construcción de cadenas de suministro estables."
+      }
+    ],
+    "hint": "Se basa en el principio de reciprocidad y colaboración donde ambas partes obtienen un resultado positivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son los tres criterios fundamentales que deben evaluarse prioritariamente al seleccionar un proveedor adecuado?",
+    "opciones": [
+      {
+        "text": "Calidad del producto, precio competitivo y plazos de entrega.",
+        "isCorrect": true,
+        "rationale": "Cultura operativa clave: asegurar que el bien cumpla los requisitos, tenga un costo rentable y llegue a tiempo."
+      },
+      {
+        "text": "Cantidad de seguidores en redes personales del dueño y color de su logotipo.",
+        "isCorrect": false,
+        "rationale": "Las redes personales del dueño y la estética visual no determinan la eficiencia operativa del fabricante."
+      },
+      {
+        "text": "Cercanía a la residencia del comprador y preferencia por operaciones sin factura.",
+        "isCorrect": false,
+        "rationale": "La cercanía física es irrelevante en importaciones internacionales y la falta de factura denota informalidad."
+      },
+      {
+        "text": "Idioma nativo del operario de planta y número de piso del edificio.",
+        "isCorrect": false,
+        "rationale": "Estos datos son anecdóticos y no constituyen métricas objetivas de desempeño de un proveedor."
+      },
+      {
+        "text": "Disponibilidad de aceptar obsequios e historial de disputas legales de sus ejecutivos.",
+        "isCorrect": false,
+        "rationale": "Estos aspectos violan los estándares éticos corporativos y no forman la base de una selección profesional."
+      }
+    ],
+    "hint": "Enfócate en los aspectos operativos indispensables del producto: sus características físicas, su costo y el tiempo de despacho.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes corresponden a indicadores de gestión (KPIs) utilizados para evaluar el desempeño operacional de un proveedor?",
+    "opciones": [
+      {
+        "text": "Tasa de entregas a tiempo (On-Time Delivery).",
+        "isCorrect": true,
+        "rationale": "Mide la puntualidad del proveedor respecto a los plazos pactados en las órdenes de compra."
+      },
+      {
+        "text": "Índice de calidad o tasa de defectos.",
+        "isCorrect": true,
+        "rationale": "Cuantifica la proporción de mercancía recibida que presenta fallas respecto al total del lote."
+      },
+      {
+        "text": "Número de reclamos por discrepancia técnica.",
+        "isCorrect": true,
+        "rationale": "Mide la frecuencia de inconformidades reportadas por fallas o incumplimiento de especificaciones."
+      },
+      {
+        "text": "Número de colores empleados en el catálogo publicitario impreso.",
+        "isCorrect": false,
+        "rationale": "Las opciones de diseño publicitario no son indicadores de desempeño logístico ni de calidad de producción."
+      },
+      {
+        "text": "Distancia en kilómetros hacia la capital geográfica de su país.",
+        "isCorrect": false,
+        "rationale": "La distancia geográfica es un dato de ubicación, no una métrica de rendimiento operativo o cumplimiento del proveedor."
+      }
+    ],
+    "hint": "Busca las métricas que miden la puntualidad en los envíos, la falta de fallos en los materiales y las quejas generadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumplen los Incoterms en una operación de comercio internacional?",
+    "opciones": [
+      {
+        "text": "Definir las responsabilidades, costos y riesgos de transporte entre el comprador y el vendedor.",
+        "isCorrect": true,
+        "rationale": "Los Incoterms delimitan el punto exacto donde se transfieren los riesgos y quién asume los fletes, seguros y trámites."
+      },
+      {
+        "text": "Establecer la tasa de impuesto a la renta que debe pagar la empresa en su país.",
+        "isCorrect": false,
+        "rationale": "Los impuestos sobre la renta nacional son regulados por el marco tributario local, no por reglas comerciales de transporte."
+      },
+      {
+        "text": "Otorgar licencias de funcionamiento municipales a locales comerciales.",
+        "isCorrect": false,
+        "rationale": "Las licencias de funcionamiento son autorizaciones administrativas locales concedidas por municipios."
+      },
+      {
+        "text": "Estandarizar el tipo de cambio entre las divisas del exportador e importador.",
+        "isCorrect": false,
+        "rationale": "Los tipos de cambio se cotizan en los mercados financieros globales y no son fijados por las reglas Incoterms."
+      },
+      {
+        "text": "Supervisar el pago de planillas de los trabajadores en la fábrica de origen.",
+        "isCorrect": false,
+        "rationale": "La gestión laboral interna corresponde al departamento de recursos humanos de la empresa extranjera."
+      }
+    ],
+    "hint": "Términos como FOB o EXW forman parte de este conjunto de reglas internacionales que determinan el reparto de costos y riesgos logísticos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué tipo de control corresponde la verificación de licencias, antecedentes y certificaciones de un proveedor antes de emitir una orden de compra?",
+    "opciones": [
+      {
+        "text": "Control preventivo o previo.",
+        "isCorrect": true,
+        "rationale": "El control previo se realiza antes de iniciar el proceso para evitar contingencias o contrataciones riesgosas."
+      },
+      {
+        "text": "Control concurrente.",
+        "isCorrect": false,
+        "rationale": "El control concurrente se aplica de manera simultánea durante el desarrollo de la producción o del proceso."
+      },
+      {
+        "text": "Control retroalimentativo o posterior.",
+        "isCorrect": false,
+        "rationale": "El control posterior evalúa los resultados una vez finalizada la operación o entregado el lote."
+      },
+      {
+        "text": "Control de quiebre de stock.",
+        "isCorrect": false,
+        "rationale": "No es una fase del ciclo de control administrativo, sino la consecuencia no deseada de la falta de existencias."
+      },
+      {
+        "text": "Control aleatorio de salida.",
+        "isCorrect": false,
+        "rationale": "Revisar licencias de un proveedor no es una inspección física aleatoria de salida de mercancía."
+      }
+    ],
+    "hint": "Reflexiona sobre la fase del proceso administrativo que se ejecuta *antes* de iniciar la transacción comercial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes son beneficios clave derivados de trabajar con proveedores internacionales?",
+    "opciones": [
+      {
+        "text": "Acceso a costos de producción competitivos por economías de escala.",
+        "isCorrect": true,
+        "rationale": "Fábricas de gran tamaño pueden reducir significativamente sus costos unitarios de elaboración."
+      },
+      {
+        "text": "Disponibilidad de insumos, materias primas o tecnologías no producidas localmente.",
+        "isCorrect": true,
+        "rationale": "Permite conseguir recursos no disponibles en el mercado nacional para diversificar la oferta."
+      },
+      {
+        "text": "Acceso a especialización industrial y estándares de calidad avanzados.",
+        "isCorrect": true,
+        "rationale": "Aprovecha la trayectoria técnica desarrollada por clústeres industriales especializados en el extranjero."
+      },
+      {
+        "text": "Eliminación automática de cualquier riesgo de tránsito o diferencia de idioma.",
+        "isCorrect": false,
+        "rationale": "Importar a nivel internacional siempre conlleva riesgos de transporte y retos culturales que deben gestionarse."
+      },
+      {
+        "text": "Exención permanente de hacer aduanas y de pagar impuestos de importación.",
+        "isCorrect": false,
+        "rationale": "Toda importación legal debe cumplir los procedimientos aduaneros e impuestos exigidos por la ley."
+      }
+    ],
+    "hint": "Selecciona las opciones que destacan las ventajas de abastecimiento, volumen de producción y especialización técnica fuera del mercado local.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante el surgimiento de un conflicto comercial por discrepancias de calidad con un proveedor, ¿cuál es el proceder profesional más recomendable?",
+    "opciones": [
+      {
+        "text": "Enfocarse en buscar soluciones directas y consensuadas priorizando la preservación de la relación.",
+        "isCorrect": true,
+        "rationale": "La gestión profesional de conflictos busca corregir la causa técnica sin destruir la relación comercial con el socio."
+      },
+      {
+        "text": "Asignar culpas de forma agresiva y romper inmediatamente todo canal de comunicación.",
+        "isCorrect": false,
+        "rationale": "Romper la comunicación agudiza el conflicto e impide recuperar la inversión o subsanar el pedido."
+      },
+      {
+        "text": "Declarar la quiebra inmediata de la empresa sin evaluar alternativas.",
+        "isCorrect": false,
+        "rationale": "Cerrar la compañía por una discrepancia operacional de un pedido es una medida desproporcionada y errónea."
+      },
+      {
+        "text": "Asumir todas las pérdidas en silencio sin informar del fallo al proveedor.",
+        "isCorrect": false,
+        "rationale": "Ignorar el problema no resuelve la falla de calidad e incentiva a que el fabricante la repita en el futuro."
+      },
+      {
+        "text": "Publicar secretos industriales confidenciales en redes sociales personales.",
+        "isCorrect": false,
+        "rationale": "Divulgar información confidencial representa una falta ética grave que genera responsabilidad legal."
+      }
+    ],
+    "hint": "La clave está en ser constructivo y enfocar la energía en solucionar la falla operativa preservando la alianza estratégica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es fundamental solicitar muestras representativas de un producto antes de autorizar una compra masiva a un nuevo proveedor extranjero?",
+    "opciones": [
+      {
+        "text": "Para verificar físicamente que las especificaciones técnicas y calidad cumplen con el estándar solicitado.",
+        "isCorrect": true,
+        "rationale": "Evaluar la muestra permite comprobar la calidad y rendimiento del producto antes de comprometer un gran capital."
+      },
+      {
+        "text": "Para evitar tener que pagar el flete marítimo del contenedor completo.",
+        "isCorrect": false,
+        "rationale": "La muestra verifica la calidad técnica, pero no reemplaza el flete del lote mayorista cuando se importe."
+      },
+      {
+        "text": "Para prescindir del uso de facturas comerciales e impuestos aduaneros.",
+        "isCorrect": false,
+        "rationale": "Pedir muestras no elimina las obligaciones tributarias ni aduaneras de las importaciones comerciales."
+      },
+      {
+        "text": "Para vender las muestras de forma ambulante sin registrar ingresos.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la muestra es la validación de estándares de control de calidad, no el comercio informal."
+      },
+      {
+        "text": "Para obtener una liberación automática de todas las licencias regulatorias.",
+        "isCorrect": false,
+        "rationale": "Las regulaciones y permisos de importación deben tramitarse igualmente según lo exija el tipo de producto."
+      }
+    ],
+    "hint": "La muestra actúa como un control previo para validar la apariencia, funcionalidad y acabado técnico del insumo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes cláusulas deben figurar expresamente en un contrato formal de importación internacional?",
+    "opciones": [
+      {
+        "text": "Descripción detallada de bienes, especificaciones y cantidades.",
+        "isCorrect": true,
+        "rationale": "Define con precisión qué se está comprando para evitar entregas con características distintas."
+      },
+      {
+        "text": "Precios acordados, moneda de pago e Incoterm aplicable.",
+        "isCorrect": true,
+        "rationale": "Establece el costo financiero transparente, la divisa de transacción y los límites de responsabilidad de flete."
+      },
+      {
+        "text": "Mecanismos claros para la resolución de disputas (mediación o arbitraje).",
+        "isCorrect": true,
+        "rationale": "Prevé la vía legal o arbitral neutral para solucionar desavenencias sin recurrir a juicios ordinarios complejos."
+      },
+      {
+        "text": "Cláusulas de confidencialidad y protección de propiedad intelectual.",
+        "isCorrect": true,
+        "rationale": "Protege los diseños, marcas y datos estratégicos compartidos con el fabricante extranjero."
+      },
+      {
+        "text": "Exención absoluta del cumplimiento de la legislación aduanera del país comprador.",
+        "isCorrect": false,
+        "rationale": "Un contrato privado entre partes no puede anular las leyes tributarias y aduaneras de un país soberano."
+      }
+    ],
+    "hint": "Marca las cláusulas comerciales que definen las características físicas del producto, las condiciones financieras, la seguridad legal y la protección de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué instrumento o mecanismo financiero es recomendable para mitigar el riesgo de tipo de cambio al pagar a un proveedor internacional?",
+    "opciones": [
+      {
+        "text": "Pactar condiciones claras en contratos a plazo o utilizar cartas de crédito bancarias.",
+        "isCorrect": true,
+        "rationale": "Las cartas de crédito y los instrumentos de cobertura cambiaria fijan condiciones que aseguran el pago correcto contra entrega de documentos."
+      },
+      {
+        "text": "Realizar todos los pagos enviando efectivo no registrado dentro de cartas postales.",
+        "isCorrect": false,
+        "rationale": "Enviar efectivo por correo informal es una práctica ilegal de altísimo riesgo de pérdida total."
+      },
+      {
+        "text": "Incrementar el precio final de venta al público sin analizar el mercado.",
+        "isCorrect": false,
+        "rationale": "Subir precios unilateralmente destruye la competitividad sin solucionar el riesgo de devaluación en la compra."
+      },
+      {
+        "text": "Sustituir los contratos formales por notas informales escritas a mano.",
+        "isCorrect": false,
+        "rationale": "Los compromisos manuscritos e informales carecen de respaldo y garantías bancarias internacionales."
+      },
+      {
+        "text": "Alterar intencionalmente la partida arancelaria asignada en aduanas.",
+        "isCorrect": false,
+        "rationale": "Cambiar la partida arancelaria constituye un delito aduanero y no una cobertura de riesgo cambiario."
+      }
+    ],
+    "hint": "Se apoya en herramientas bancarias estructuradas que garantizan la operación y protegen contra la devaluación o fraude.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre un 'stakeholder' y un 'shareholder' en el contexto de la gestión empresarial e importaciones?",
+    "opciones": [
+      {
+        "text": "El shareholder posee acciones de la empresa (siendo un stakeholder primario), mientras que el stakeholder es cualquier individuo u organización impactado por las acciones de la empresa.",
+        "isCorrect": true,
+        "rationale": "Los accionistas o shareholders son un tipo específico de partes interesadas porque poseen participación de capital, mientras que la categoría de stakeholder abarca a trabajadores, clientes, proveedores y comunidad."
+      },
+      {
+        "text": "El stakeholder es únicamente quien invierte capital financiero, mientras que el shareholder agrupa a todos los actores externos como la comunidad y el gobierno.",
+        "isCorrect": false,
+        "rationale": "Quien invierte capital financiero es el shareholder; los actores externos como la comunidad pertenecen a la categoría más amplia de stakeholders externos."
+      },
+      {
+        "text": "Los shareholders son interesados secundarios sin influencia directa, mientras que los stakeholders son exclusivamente los dueños de la compañía.",
+        "isCorrect": false,
+        "rationale": "Los shareholders tienen una influencia fuerte y directa al ser propietarios (primarios), mientras que los stakeholders no se limitan solo a los dueños."
+      },
+      {
+        "text": "Un shareholder no asume riesgos económicos de pérdidas o ganancias, a diferencia de los stakeholders generales que tienen control absoluto.",
+        "isCorrect": false,
+        "rationale": "El shareholder asume directamente el riesgo de ganar o perder dinero según las acciones de la empresa."
+      },
+      {
+        "text": "Ambos términos son equivalentes y se refieren de manera exclusiva a los ejecutivos y directores de la organización.",
+        "isCorrect": false,
+        "rationale": "Aunque suenan similares, son conceptos distintos: shareholder es accionista y stakeholder es cualquier parte interesada."
+      }
+    ],
+    "hint": "Considera cuál de los dos términos se refiere específicamente a la propiedad de acciones de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes actores corresponden a la clasificación de 'stakeholders externos' o secundarios para una empresa dedicada a la importación?",
+    "opciones": [
+      {
+        "text": "Proveedores internacionales y agentes de aduana.",
+        "isCorrect": true,
+        "rationale": "Son entidades independientes que interactúan comercialmente desde fuera de la organización."
+      },
+      {
+        "text": "Organismos reguladores del Estado y administración pública.",
+        "isCorrect": true,
+        "rationale": "Supervisan el cumplimiento normativo sin participar directamente en la operación interna de la compañía."
+      },
+      {
+        "text": "Competidores y entidades de defensa del consumidor como Indecopi.",
+        "isCorrect": true,
+        "rationale": "Forman parte del entorno externo que influye y se ve afectado por los resultados de la empresa."
+      },
+      {
+        "text": "Propietarios, accionistas y socios de la empresa.",
+        "isCorrect": false,
+        "rationale": "Estos actores poseen un vínculo económico directo e interno, por lo que son stakeholders internos o primarios."
+      },
+      {
+        "text": "Gerentes y trabajadores administrativos de la empresa.",
+        "isCorrect": false,
+        "rationale": "Pertenecen a la planilla interna de la organización y son clasificados como stakeholders internos."
+      }
+    ],
+    "hint": "Identifica a las partes interesadas que no forman parte de la estructura interna o planilla de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al evaluar a un proveedor internacional de alto volumen, ¿qué función especializada desempeña la firma Dun & Bradstreet (D&B)?",
+    "opciones": [
+      {
+        "text": "Emite informes comerciales y financieros detallados asignando una calificación de riesgo (M-score).",
+        "isCorrect": true,
+        "rationale": "Esta entidad proporciona análisis profundos de solvencia, riesgo crediticio, antecedentes comerciales e historial de pagos de empresas a nivel internacional."
+      },
+      {
+        "text": "Ofrece servicios de consolidación física de carga y transporte marítimo exclusivo desde China.",
+        "isCorrect": false,
+        "rationale": "Esa función corresponde a un operador logístico o consolidador de carga, no a una firma de informes comerciales."
+      },
+      {
+        "text": "Gestiona permisos sanitarios y arancelarios directamente en las aduanas de destino.",
+        "isCorrect": false,
+        "rationale": "Los trámites aduaneros e inspecciones sanitarias son competencia de agentes de aduana y entidades gubernamentales como Digesa o VUCE."
+      },
+      {
+        "text": "Certifica gratuitamente la vigencia de registros ISO para pequeñas empresas exportadoras.",
+        "isCorrect": false,
+        "rationale": "Las certificaciones ISO son otorgadas por organismos acreditados como SGS o Bureau Veritas mediante auditorías pagadas."
+      },
+      {
+        "text": "Financia el 100% de la orden de compra mediante la emisión de cartas de crédito locales.",
+        "isCorrect": false,
+        "rationale": "La emisión de cartas de crédito es una operación bancaria e institucional, no de un buró de información comercial."
+      }
+    ],
+    "hint": "Piensa en una entidad dedicada a la emisión de reportes comerciales e historial financiero de riesgo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la matriz de evaluación de stakeholders basada en 'Poder' e 'Interés', ¿qué estrategia se debe aplicar a aquellos ubicados en el cuadrante de Alto Poder y Alto Interés?",
+    "opciones": [
+      {
+        "text": "Administrar de cerca y mantener totalmente satisfechos.",
+        "isCorrect": true,
+        "rationale": "Al combinar alta influencia y alto interés en los resultados, la empresa debe priorizar una gestión cercana para evitar bloqueos u homologaciones fallidas."
+      },
+      {
+        "text": "Monitorear con un esfuerzo mínimo y sin inversión de tiempo.",
+        "isCorrect": false,
+        "rationale": "El monitoreo pasivo se reserva para actores con bajo poder y bajo interés."
+      },
+      {
+        "text": "Mantener únicamente informados mediante boletines pasivos.",
+        "isCorrect": false,
+        "rationale": "Mantener informado es la estrategia adecuada para aquellos con alto interés pero bajo poder."
+      },
+      {
+        "text": "Ignorar sus requerimientos por no tener impacto en las decisiones operativas.",
+        "isCorrect": false,
+        "rationale": "Ignorar a partes interesadas con alto poder pone en riesgo directo la viabilidad del negocio."
+      },
+      {
+        "text": "Delegar su atención de forma exclusiva a proveedores secundarios.",
+        "isCorrect": false,
+        "rationale": "La alta gerencia debe administrar directamente a estos stakeholders estratégicos debido a su elevado poder."
+      }
+    ],
+    "hint": "Se trata del grupo más crítico para la estabilidad de la empresa, como socios o reguladores clave.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la primera importación con un proveedor chino desconocido, ¿por qué la Carta de Crédito bancaria no garantiza un $100\\%$ de protección contra estafas?",
+    "opciones": [
+      {
+        "text": "Porque el banco verifica la conformidad formal de los documentos pero no inspecciona físicamente la carga depositada en el contenedor.",
+        "isCorrect": true,
+        "rationale": "El banco procesa los pagos al recibir documentos aparentemente válidos (conocimiento de embarque, factura), lo que permite fraudes si el proveedor falsifica los papeles y embarca insumos sin valor como arena."
+      },
+      {
+        "text": "Porque las cartas de crédito carecen de validez legal dentro de las normativas del comercio asiático.",
+        "isCorrect": false,
+        "rationale": "La carta de crédito es un instrumento financiero de alcance global plenamente reconocido en el comercio internacional."
+      },
+      {
+        "text": "Porque exige entregar el dinero en efectivo directamente al fabricante antes de iniciar la producción.",
+        "isCorrect": false,
+        "rationale": "La carta de crédito funciona precisamente como una garantía intermedia donde el pago se libera contra presentación de documentos de embarque, no en efectivo por adelantado."
+      },
+      {
+        "text": "Porque las aduanas de destino rechazan automáticamente las mercancías respaldadas por garantias bancarias.",
+        "isCorrect": false,
+        "rationale": "Las aduanas no rechazan envíos respaldados por cartas de crédito; estas constituyen un estándar comercial legítimo."
+      },
+      {
+        "text": "Porque obliga al importador a contratar seguros de carga con la aduana de origen.",
+        "isCorrect": false,
+        "rationale": "La carta de crédito define la forma de pago bancaria y no impone la contratación de seguros aduaneros estatales."
+      }
+    ],
+    "hint": "Recuerda el caso expuesto sobre la revisión formal de documentos versus la inspección física del contenedor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué consulta clave debe realizar un importador en el portal de operatividad aduanera (Aduanet/SUNAT) antes de cerrar una compra internacional?",
+    "opciones": [
+      {
+        "text": "Verificar la partida arancelaria para identificar los tributos a pagar, convenios de TLC y restricciones de permisos obligatorios.",
+        "isCorrect": true,
+        "rationale": "Consultar la partida arancelaria permite prever si el producto requiere autorizaciones de entidades estatales o si está libre de ad-valorem por un tratado comercial."
+      },
+      {
+        "text": "Solicitar la devolución inmediata del IGV antes de que la mercancía sea embarcada en el puerto de origen.",
+        "isCorrect": false,
+        "rationale": "El IGV no se devuelve por anticipado; se liquida y paga durante la nacionalización ante la aduana."
+      },
+      {
+        "text": "Contratar obligatoriamente a la naviera asignada por el sistema aduanero estatal.",
+        "isCorrect": false,
+        "rationale": "La aduana no asigna la naviera; el transporte es contratado libremente entre importador, proveedor u operador logístico según el Incoterm."
+      },
+      {
+        "text": "Forzar la reclasificación del producto a una partida sin aranceles prescindiendo de la ficha técnica.",
+        "isCorrect": false,
+        "rationale": "Clasificar incorrectamente una partida para evadir impuestos constituye un delito tributario y aduanero sancionado por ley."
+      },
+      {
+        "text": "Obtener la condonación total del impuesto de promoción municipal sin certificado de origen.",
+        "isCorrect": false,
+        "rationale": "Para acceder a beneficios arancelarios o liberación de impuestos se requiere cumplir con la normatividad y presentar el certificado de origen correspondiente."
+      }
+    ],
+    "hint": "Enfócate en la herramienta que permite conocer los aranceles, beneficios por acuerdos comerciales y requerimientos de permisos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al examinar la licencia comercial de un potencial proveedor en China, ¿cuál de los siguientes hallazgos representa una señal de alerta de posible estafa?",
+    "opciones": [
+      {
+        "text": "Que el giro o naturaleza registrada de la empresa no coincida con el tipo de producto que está vendiendo.",
+        "isCorrect": true,
+        "rationale": "Si una empresa registrada legalmente como taller mecánico u oficina administrativa intenta vender insumos médicos o fajas industriales, existe un elevado riesgo de intermediación fraudulenta o empresa fantasma."
+      },
+      {
+        "text": "Que la empresa cuente con un número de registro fiscal activo e identificable en bases de datos oficiales.",
+        "isCorrect": false,
+        "rationale": "Un registro fiscal verificable es una prueba de formalidad y existencia legal de la empresa."
+      },
+      {
+        "text": "Que el proveedor presente certificaciones ISO de calidad vigentes y auditadas por un tercero.",
+        "isCorrect": false,
+        "rationale": "Las certificaciones de calidad vigentes respaldan la estandarización y confiabilidad de sus procesos productivos."
+      },
+      {
+        "text": "Que la compañía disponga de sitio web corporativo e historial comercial acreditable de exportación.",
+        "isCorrect": false,
+        "rationale": "La presencia digital y el historial de exportaciones son indicadores positivos de profesionalismo y trayectoria."
+      },
+      {
+        "text": "Que el proveedor acepte realizar las transacciones financieras a través de cuentas bancarias corporativas.",
+        "isCorrect": false,
+        "rationale": "Utilizar cuentas bancarias corporativas bancarizadas es el procedimiento estándar y seguro en transacciones internacionales."
+      }
+    ],
+    "hint": "Compara la coherencia entre lo que la empresa vende y su objeto social registrado ante las autoridades.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes características corresponden a las plataformas de comercio B2B (Business-to-Business) como Alibaba en comparación con las plataformas B2C como AliExpress?",
+    "opciones": [
+      {
+        "text": "Enfoque en transacciones entre empresas orientadas al comercio al por mayor y grandes volúmenes.",
+        "isCorrect": true,
+        "rationale": "Las plataformas B2B conectan fabricantes y compradores corporativos para abastecimiento en escala."
+      },
+      {
+        "text": "Capacidad de negociar precios según escala de compra, contratos personalizados y condiciones de pago.",
+        "isCorrect": true,
+        "rationale": "Permiten ajustar cotizaciones, solicitar especificaciones técnicas particulares y acordar plazos según el volumen pedido."
+      },
+      {
+        "text": "Requisito de verificación de licencias y auditorías previas a las empresas compradoras y vendedoras alojadas.",
+        "isCorrect": true,
+        "rationale": "Para ofrecer espacio en un entorno B2B formal se exige la homologación de licencias para proteger la reputación de la plataforma."
+      },
+      {
+        "text": "Diseño exclusivo para la venta directa al menor hacia el consumidor final en pequeñas unidades.",
+        "isCorrect": false,
+        "rationale": "Esta es la característica principal de los modelos B2C (Business-to-Customer), no de las plataformas B2B."
+      },
+      {
+        "text": "Prohibición absoluta de emitir facturas comerciales formales o acuerdos de inspección.",
+        "isCorrect": false,
+        "rationale": "Las plataformas B2B facilitan la emisión de documentos legales y contratos formales de compraventa internacional."
+      }
+    ],
+    "hint": "Piensa en el perfil del cliente objetivo, los volúmenes negociados y el nivel de personalización de los contratos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Haciendo una analogía operativa, ¿cómo se define la función de una plataforma B2B como Alibaba en la intermediación comercial?",
+    "opciones": [
+      {
+        "text": "Opera como un centro comercial virtual que evalúa y aloja a empresas proveedoras, cobrándoles comisión y espacio de visibilidad.",
+        "isCorrect": true,
+        "rationale": "Alibaba evalúa las credenciales de las empresas para darles visibilidad global dentro de su infraestructura virtual a cambio de comisiones y membresías."
+      },
+      {
+        "text": "Actúa como la naviera estatal encargada del transporte físico del contenedor hasta el puerto de destino.",
+        "isCorrect": false,
+        "rationale": "Alibaba conecta compradores y vendedores, pero el flete marítimo es ejecutado por navieras independientes contratadas."
+      },
+      {
+        "text": "Funciona como un banco público internacional que financia compras sin exigir respaldo de capital.",
+        "isCorrect": false,
+        "rationale": "Aunque ofrece pasarelas de pago seguras, no es un banco estatal que asuma el financiamiento de las importaciones."
+      },
+      {
+        "text": "Desempeña el papel de agencia aduanera única dentro del país de destino del importador.",
+        "isCorrect": false,
+        "rationale": "El despacho aduanero en el país importador se realiza mediante agentes de aduana locales autorizados."
+      },
+      {
+        "text": "Funciona como un tribunal judicial internacional que sanciona penalmente a compradores morosos.",
+        "isCorrect": false,
+        "rationale": "La plataforma gestiona reclamos comerciales comerciales e disputas internas, pero no es un tribunal de justicia penal."
+      }
+    ],
+    "hint": "Considera cómo opera un centro comercial físico respecto a los negocios que alquilan un espacio en su interior.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de contratos con proveedores extranjeros, ¿qué herramienta formal se debe utilizar para modificar términos específicos (como prórrogas de entrega) sin invalidar el contrato original?",
+    "opciones": [
+      {
+        "text": "Adenda contractual.",
+        "isCorrect": true,
+        "rationale": "La adenda permite modificar cláusulas puntuales (como ajustar el plazo de 30 a 45 días) manteniendo vigentes todas las demás condiciones acordadas originalmente."
+      },
+      {
+        "text": "Conocimiento de embarque (Bill of Lading).",
+        "isCorrect": false,
+        "rationale": "El conocimiento de embarque es el documento emitido por la naviera que acredita la propiedad de la carga transportada."
+      },
+      {
+        "text": "Factura proforma provisional.",
+        "isCorrect": false,
+        "rationale": "La factura proforma es una cotización o documento previo al pago, no un instrumento para modificar un contrato firmado."
+      },
+      {
+        "text": "Declaración Única de Aduanas (DUA).",
+        "isCorrect": false,
+        "rationale": "La DUA es el documento aduanero oficial para la nacionalización de mercancías en el país de destino."
+      },
+      {
+        "text": "Nota de crédito comercial.",
+        "isCorrect": false,
+        "rationale": "Una nota de crédito es un comprobante financiero de ajuste contable por saldos a favor o devoluciones."
+      }
+    ],
+    "hint": "Se trata de una modificación escrita adjunta al contrato inicial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define conceptualmente el indicador operativo de 'Venta Perdida' dentro de la cadena de suministro de un importador?",
+    "opciones": [
+      {
+        "text": "Es el volumen de ventas que una empresa deja de realizar por quedarse sin stock debido a fallas de planificación o retrasos del proveedor.",
+        "isCorrect": true,
+        "rationale": "Representa un costo de oportunidad directo e insatisfacción del cliente cuando la demanda supera el inventario disponible por una mala gestión de reabastecimiento."
+      },
+      {
+        "text": "Es el porcentaje de mercancía que llega dañada dentro del margen de tolerancia estadística del $5\\%$.",
+        "isCorrect": false,
+        "rationale": "El porcentaje de mercancía dañada se mide a través de la tasa de defectos o ratio de no conformidad."
+      },
+      {
+        "text": "Es la diferencia de valor generada por las variaciones desfavorables en la tasa de cambio de divisas.",
+        "isCorrect": false,
+        "rationale": "La pérdida por fluctuación de moneda corresponde al riesgo cambiario en la gestión financiera."
+      },
+      {
+        "text": "Es el costo total de los tributos aduaneros pagados al nacionalizar la carga en aduanas.",
+        "isCorrect": false,
+        "rationale": "Los tributos pagados forman parte de la liquidación de la DUA y la estructura del costo nacionalizado del producto."
+      },
+      {
+        "text": "Es el descuento financiero concedido al cliente final por pagar al contado.",
+        "isCorrect": false,
+        "rationale": "Los descuentos por pronto pago son incentivos comerciales y no un fallo por quiebre de stock."
+      }
+    ],
+    "hint": "Reflexiona sobre las ventas que no se pueden concretar debido a la falta de stock en almacén.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué criterios técnicos se deben evaluar al seleccionar a un agente de carga u operador logístico internacional confiable?",
+    "opciones": [
+      {
+        "text": "Experiencia probada y trayectoria en el tipo específico de mercancía y ruta comercial requerida.",
+        "isCorrect": true,
+        "rationale": "Conocer la ruta y las exigencias del tipo de carga garantiza una mejor respuesta ante contingencias en origen o tránsito."
+      },
+      {
+        "text": "Dominio actualizado de la regulación aduanera y acompañamiento durante la nacionalización.",
+        "isCorrect": true,
+        "rationale": "Un operador hábil previene demoras por partidas incorrectas o falta de permisos en ventanilla aduanera."
+      },
+      {
+        "text": "Mecanismos de reporte proactivo y seguimiento continuo sobre el estado real del embarque.",
+        "isCorrect": true,
+        "rationale": "Un buen operador informa de forma constante al importador sobre el estado del envío sin esperar a que el cliente reclame."
+      },
+      {
+        "text": "Garantía incondicional de que la nave nunca sufrirá retrasos por factores climáticos o congestión en puerto.",
+        "isCorrect": false,
+        "rationale": "Ningún operador puede garantizar la ausencia de retrasos climáticos o congestiones en puerto; los plazos marítimos son siempre estimados (ETA)."
+      },
+      {
+        "text": "Aceptación de pagos exclusivamente en efectivo y sin registro en el sistema financiero.",
+        "isCorrect": false,
+        "rationale": "La exigencia de pagos informales en efectivo indica falta de formalidad y elevado riesgo operativo o fraude."
+      }
+    ],
+    "hint": "Busca factores vinculados a la experiencia específica en la ruta, reputación y capacidad de seguimiento activo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el control de calidad e inspección de mercancías importadas, ¿cuál es el porcentaje de margen de error o tasa de defectos comúnmente aceptado como estándar en la industria?",
+    "opciones": [
+      {
+        "text": "Un máximo de $\\pm 5\\%$.",
+        "isCorrect": true,
+        "rationale": "Un margen de no conformidad de hasta el $5\\%$ se considera estadísticamente normal en la producción masiva, previéndose devoluciones o reemplazos si supera este nivel."
+      },
+      {
+        "text": "Entre $15\\%$ y $20\\%$.",
+        "isCorrect": false,
+        "rationale": "Un nivel de defectos del $15\\%$ al $20\\%$ resulta inaceptable para la rentabilidad de la importación y refleja serios problemas en la fábrica."
+      },
+      {
+        "text": "Exactamente $0\\%$, bajo el supuesto de que ninguna producción masiva falla.",
+        "isCorrect": false,
+        "rationale": "El $0\\%$ absoluto es inviable en la producción industrial masiva; por eso se establece un margen de tolerancia."
+      },
+      {
+        "text": "Superior al $30\\%$.",
+        "isCorrect": false,
+        "rationale": "Un margen tan elevado inutilizaría el lote comercializado y obligaría al rechazo total del envío."
+      },
+      {
+        "text": "Entre $40\\%$ y $50\\%$.",
+        "isCorrect": false,
+        "rationale": "Una tasa del $40\\%$ o más destruiría el margen económico y la reputación comercial del importador."
+      }
+    ],
+    "hint": "Considera el valor porcentual máximo de unidades no conformes toleradas dentro de un lote.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la experiencia de gestión de inventarios de Walmart, ¿qué sistema tecnológico permitió conectar las ventas en punto de compra con los proveedores para reabastecer en tiempo real?",
+    "opciones": [
+      {
+        "text": "Sistema EDI (Electronic Data Interchange).",
+        "isCorrect": true,
+        "rationale": "El EDI automatizó el intercambio de datos de ventas entre Walmart y sus proveedores, eliminando las órdenes de compra manuales y evitando quiebres de stock."
+      },
+      {
+        "text": "Plataforma B2C de venta al menudeo.",
+        "isCorrect": false,
+        "rationale": "Las plataformas B2C gestionan la venta hacia el consumidor final, no la integración B2B de reabastecimiento con proveedores."
+      },
+      {
+        "text": "Software aislado de lectura de código de barras.",
+        "isCorrect": false,
+        "rationale": "El lector de códigos identifica el producto, pero requiere de una red como EDI para transmitir la información al fabricante."
+      },
+      {
+        "text": "Red social corporativa de consulta abierta.",
+        "isCorrect": false,
+        "rationale": "Las redes sociales no están diseñadas para la integración automatizada de inventarios ni el procesamiento de órdenes de compra."
+      },
+      {
+        "text": "Carta de crédito bancaria automática.",
+        "isCorrect": false,
+        "rationale": "La carta de crédito es un instrumento financiero de pago y no un sistema de intercambio de datos de inventario."
+      }
+    ],
+    "hint": "Se trata del intercambio electrónico normalizado de datos entre sistemas de empresas asociadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué áreas clave evalúa una auditoría de cumplimiento y responsabilidad social aplicada a un fabricante internacional?",
+    "opciones": [
+      {
+        "text": "Condiciones de trabajo seguras, jornadas laborales reguladas y pago justo de salarios a los trabajadores.",
+        "isCorrect": true,
+        "rationale": "Verifica que el proveedor no incurra en explotación o abusos que vulneren los derechos laborales internacionales."
+      },
+      {
+        "text": "Cumplimiento de regulaciones ambientales y control de residuos o emisión de contaminantes.",
+        "isCorrect": true,
+        "rationale": "Garantiza que la planta fabril opere respetando el entorno y las leyes ambientales vigentes."
+      },
+      {
+        "text": "Adhesión a códigos éticos comerciales que eviten prácticas de corrupción o soborno.",
+        "isCorrect": true,
+        "rationale": "Evalúa el comportamiento ético y la transparencia corporativa del proveedor en sus operaciones."
+      },
+      {
+        "text": "Fijación del tipo de cambio monetario para todos los compradores del mercado internacional.",
+        "isCorrect": false,
+        "rationale": "Los proveedores no fijan las tasas de cambio de divisas; estas son reguladas por los mercados financieros globales."
+      },
+      {
+        "text": "Obligación de diferir todos los pagos a plazos superiores a 180 días sin intereses.",
+        "isCorrect": false,
+        "rationale": "Los plazos de pago son condiciones comerciales negociadas y no forman parte de los criterios de auditoría social y ambiental."
+      }
+    ],
+    "hint": "Piensa en las dimensiones normativas, ambientales y de derechos laborales que impactan en la sostenibilidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco del análisis competitivo de Michael Porter, ¿cuál es el objetivo estratégico de construir una relación 'win-win' con los proveedores?",
+    "opciones": [
+      {
+        "text": "Mitigar el poder de negociación del proveedor y asegurar el suministro continuo en condiciones de costo y calidad competitivas.",
+        "isCorrect": true,
+        "rationale": "Una relación colaborativa alinea intereses, garantizando prioridad en despachos y precios razonables al convertir al proveedor en un socio estratégico."
+      },
+      {
+        "text": "Eliminar la necesidad de redactar contratos de compraventa y formalidades aduaneras.",
+        "isCorrect": false,
+        "rationale": "La confianza mutua no elimina la necesidad de contar con contratos escritos y respaldos legales ante disputas."
+      },
+      {
+        "text": "Obligar al fabricante a vender por debajo de sus costos directos de producción.",
+        "isCorrect": false,
+        "rationale": "Forzar ventas a pérdida destruye la relación comercial a largo plazo y quiebra al proveedor."
+      },
+      {
+        "text": "Adquirir la propiedad legal de las instalaciones del proveedor en el extranjero.",
+        "isCorrect": false,
+        "rationale": "Una alianza 'win-win' se basa en la cooperación entre empresas independientes, no en la absorción o compra de la fábrica."
+      },
+      {
+        "text": "Trasladar todos los riesgos operativos e impuestos locales al cliente final.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la gestión de proveedores es optimizar la cadena de valor, no perjudicar la propuesta de cara al consumidor."
+      }
+    ],
+    "hint": "Enfócate en la reducción de tensiones en la cadena de suministro para evitar que la contraparte imponga condiciones arbitrarias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la reputación corporativa, ¿qué lección estratégica dejó la controversia de la megafábrica Foxconn respecto a la marca Apple?",
+    "opciones": [
+      {
+        "text": "Que las empresas compradoras son juzgadas por las condiciones éticas de sus proveedores, sufriendo daños reputacionales si existen abusos laborales en la cadena.",
+        "isCorrect": true,
+        "rationale": "A pesar de que Foxconn era un proveedor independiente en China, los escándalos laborales impactaron directamente la percepción pública y el valor de marca de Apple a nivel global."
+      },
+      {
+        "text": "Que la subcontratación de grandes fábricas en Asia elimina la necesidad de efectuar auditorías de cumplimiento.",
+        "isCorrect": false,
+        "rationale": "Al contrario, demostró que es indispensable efectuar auditorías periódicas a los subcontratistas para evitar escándalos."
+      },
+      {
+        "text": "Que los costos de mano de obra pueden reducirse sin restricciones éticas en el comercio global.",
+        "isCorrect": false,
+        "rationale": "Las presiones internacionales obligaron a corregir los abusos e imponer normas laborales estrictas en las plantas."
+      },
+      {
+        "text": "Que las regulaciones ambientales y laborales locales no aplican a marcas multinacionales.",
+        "isCorrect": false,
+        "rationale": "Las multinacionales deben velar por el cumplimiento regulatorio en todos los países donde operan sus proveedores."
+      },
+      {
+        "text": "Que el volumen de compra otorga inmunidad total frente a las denuncias de organismos de derechos humanos.",
+        "isCorrect": false,
+        "rationale": "Las organizaciones internacionales y los consumidores responsabilizan a las grandes marcas sin importar su volumen comercial."
+      }
+    ],
+    "hint": "Analiza cómo el incumplimiento de normas éticas o laborales por parte de un subcontratista afecta la imagen del cliente principal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al negociar la compra de mercancía en fábrica bajo el Incoterm EXW (Ex Works), ¿qué oportunidad operativa tiene el importador en comparación con la modalidad FOB?",
+    "opciones": [
+      {
+        "text": "Tomar control de la carga desde las instalaciones del proveedor, permitiendo realizar inspecciones antes del embalaje y sellado del contenedor.",
+        "isCorrect": true,
+        "rationale": "Dado que en EXW el comprador gestiona la recogida desde la planta del fabricante, su operador puede verificar físicamente la mercancía antes de que cierre el contenedor."
+      },
+      {
+        "text": "Transferir al proveedor el costo total del flete marítimo internacional y los tributos de destino.",
+        "isCorrect": false,
+        "rationale": "En EXW el proveedor no paga el flete marítimo ni impuestos; la responsabilidad de esos gastos recae en el comprador desde la fábrica."
+      },
+      {
+        "text": "Delegar la responsabilidad del transporte local en origen al agente aduanero de destino.",
+        "isCorrect": false,
+        "rationale": "El agente aduanero de destino opera localmente; el transporte en origen requiere de un operador logístico o agente de carga."
+      },
+      {
+        "text": "Eximir al importador del pago de cualquier gasto de manipulación o flete terrestre.",
+        "isCorrect": false,
+        "rationale": "En EXW el importador asume todos los costos de flete terrestre, manipulación y despacho de exportación en origen."
+      },
+      {
+        "text": "Garantizar que la aduana en origen otorgue levante automático sin revisión documental.",
+        "isCorrect": false,
+        "rationale": "Los Incoterms regulan responsabilidades comerciales y costos entre partes, no el tipo de control que aplica la autoridad aduanera."
+      }
+    ],
+    "hint": "Considera el punto de la cadena logística en el que el comprador asume la responsabilidad del envío.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para prevenir la recepción de mercancía defectuosa o diferente a la contratada, ¿cuál es la mejor práctica recomendada antes de realizar el embarque en el país de origen?",
+    "opciones": [
+      {
+        "text": "Contratar a una empresa auditora especializada (SGS, Bureau Veritas) o al operador logístico para verificar el producto terminado en planta.",
+        "isCorrect": true,
+        "rationale": "Efectuar una inspección pre-embarque en las instalaciones del fabricante asegura que lo embalado cumpla las especificaciones requeridas antes de pagar el saldo final."
+      },
+      {
+        "text": "Liquidar el $100\\%$ del valor del pedido en efectivo antes de que comience la fabricación.",
+        "isCorrect": false,
+        "rationale": "Pagar el $100\\%$ por adelantado aumenta significativamente el riesgo de estafa o envío de mercancía defectuosa sin opción a reclamo."
+      },
+      {
+        "text": "Aceptar únicamente fotografías digitales enviadas por el mismo vendedor sin validación independiente.",
+        "isCorrect": false,
+        "rationale": "Las fotografías pueden ser manipuladas o corresponder a mercancía de otros lotes; se requiere validación presencial de terceros."
+      },
+      {
+        "text": "Solicitar muestras solo de las materias primas descartando la revisión del producto final.",
+        "isCorrect": false,
+        "rationale": "Las muestras de materia prima no garantizan la calidad del ensamblaje ni el funcionamiento del producto terminado."
+      },
+      {
+        "text": "Esperar a abrir el contenedor en el puerto de destino para recién corroborar la mercancía.",
+        "isCorrect": false,
+        "rationale": "Descubrir fallas o mercancía falsa al abrir el contenedor en destino dificulta la recuperación del dinero y genera sobrecostos aduaneros."
+      }
+    ],
+    "hint": "Enfócate en la verificación física en la planta del proveedor mediante entidades independientes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes situaciones constituyen 'señales de alerta' (red flags) que podrían indicar un intento de fraude por parte de un supuesto proveedor extranjero?",
+    "opciones": [
+      {
+        "text": "Presión constante para cerrar el contrato de inmediato alegando precios anormalmente bajos.",
+        "isCorrect": true,
+        "rationale": "Los estafadores utilizan el sentido de urgencia y precios irrisorios para evitar que el comprador realice verificaciones de antecedentes."
+      },
+      {
+        "text": "Exigencia de realizar transferencias bancarias hacia cuentas personales no vinculadas a la razón social corporativa.",
+        "isCorrect": true,
+        "rationale": "Los pagos de comercio exterior legítimos deben dirigirse a cuentas institucionales de la empresa registrada."
+      },
+      {
+        "text": "Negativa e imprecisión a la hora de proporcionar licencias de funcionamiento o referencias verificables.",
+        "isCorrect": true,
+        "rationale": "Evitar la entrega de registros oficiales suele ocultar la inexistencia legal o la falsificación de la entidad."
+      },
+      {
+        "text": "Aceptación de pagos respaldados por Cartas de Crédito emitidas por instituciones bancarias reconocidas.",
+        "isCorrect": false,
+        "rationale": "Aceptar cartas de crédito es una práctica comercial segura que indica formalidad operativa por parte del vendedor."
+      },
+      {
+        "text": "Facilidad para recibir auditorías de terceros e inspecciones de pre-embarque en las instalaciones fabriles.",
+        "isCorrect": false,
+        "rationale": "Permitir inspecciones en planta es un signo positivo de transparencia y existencia de infraestructura real."
+      }
+    ],
+    "hint": "Identifica comportamientos atípicos en precios, métodos de pago requeridos y resistencia a la validación legal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Desde la perspectiva del riesgo financiero, ¿qué escenario cambiario beneficia a un importador peruano que cotiza sus compras en dólares americanos ($USD$)?",
+    "opciones": [
+      {
+        "text": "Una baja en la tasa de cambio del dólar frente al sol (sol fortalecido), ya que necesitará menos soles para comprar los dólares adeudados.",
+        "isCorrect": true,
+        "rationale": "Si el tipo de cambio baja de S/ $3.80$ a S/ $3.50$ por dólar, la empresa requiere menos moneda local para liquidar la factura en dólares, reduciendo su costo final."
+      },
+      {
+        "text": "Un incremento acelerado en el valor del dólar frente al sol durante el periodo de fabricación.",
+        "isCorrect": false,
+        "rationale": "Un alza del tipo de cambio encarece el costo en moneda local para adquirir los dólares necesarios para el pago."
+      },
+      {
+        "text": "La devaluación continua de la moneda local que obligue a solicitar mayor crédito.",
+        "isCorrect": false,
+        "rationale": "La devaluación de la moneda local encarece las importaciones cotizadas en divisas extranjeras."
+      },
+      {
+        "text": "La aplicación de sobretasas arancelarias calculadas sobre una tasa de cambio inflada.",
+        "isCorrect": false,
+        "rationale": "Las sobretasas y tipos de cambio elevados incrementan el pago final de impuestos aduaneros."
+      },
+      {
+        "text": "La obligación de pagar en divisas locales sin posibilidad de conversión internacional.",
+        "isCorrect": false,
+        "rationale": "La imposibilidad de conversión bloquea las transacciones financieras en el comercio exterior regulado."
+      }
+    ],
+    "hint": "Piensa en la cantidad de soles requerida para adquirir cada dólar al momento de cancelar la obligación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando surge un reclamo o incumplimiento parcial por parte de un proveedor estratégico, ¿qué estilo de negociación es el más adecuado para solucionar la controversia?",
+    "opciones": [
+      {
+        "text": "Aplicar una negociación integrativa centrada en resolver el problema en conjunto para mantener la relación comercial a largo plazo.",
+        "isCorrect": true,
+        "rationale": "La negociación integrativa busca acuerdos mutuamente benéficos enfocándose en solucionar la falla operativa sin destruir la alianza comercial."
+      },
+      {
+        "text": "Recurrir a una negociación distributiva agresiva para imponer multas sin escuchar los descargos del fabricante.",
+        "isCorrect": false,
+        "rationale": "Las negociaciones distributivas de 'suma cero' generan resentimiento y suelen terminar con la ruptura del suministro."
+      },
+      {
+        "text": "Cancelar inmediatamente todos los pedidos y entablar litigios judiciales internacionales de alto costo.",
+        "isCorrect": false,
+        "rationale": "El litigio internacional es costoso y lento; debe ser la última instancia tras agotar acuerdos o mediaciones."
+      },
+      {
+        "text": "Aceptar las fallas en silencio para no generar fricciones en la comunicación con el vendedor.",
+        "isCorrect": false,
+        "rationale": "Aceptar fallas repetidamente normaliza el incumplimiento y perjudica la calidad final ofrecida al cliente."
+      },
+      {
+        "text": "Exigir la transferencia de la propiedad industrial del fabricante como penalización unilateral.",
+        "isCorrect": false,
+        "rationale": "Es una exigencia desproporcionada que impide cualquier posibilidad de llegar a un consenso práctico."
+      }
+    ],
+    "hint": "Elige el enfoque enfocado en la resolución colaborativa que busca preservar la relación comercial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué estipulaciones obligatorias deben figurar de forma explícita en un contrato de compraventa internacional de mercancías?",
+    "opciones": [
+      {
+        "text": "Especificaciones técnicas detalladas, cantidades solicitadas y márgenes de tolerancia de defectos.",
+        "isCorrect": true,
+        "rationale": "Define objetivamente los parámetros de calidad e inspección exigibles al fabricante."
+      },
+      {
+        "text": "Incoterm acordado, precio unitario, moneda de pago y plazos de entrega nominales.",
+        "isCorrect": true,
+        "rationale": "Establece la distribución de costos logísticos, riesgos del transporte y fechas de cumplimiento financiero."
+      },
+      {
+        "text": "Mecanismos formales de resolución de controversias (mediación, arbitraje) y causas de rescisión.",
+        "isCorrect": true,
+        "rationale": "Determina las reglas de juego ante incumplimientos graves previniendo juicios costosos."
+      },
+      {
+        "text": "Acuerdo tácito para omitir la declaración de impuestos en la aduana del país comprador.",
+        "isCorrect": false,
+        "rationale": "Incurrir en omisión tributaria es un delito ilegal que invalida el contrato y acarrea sanciones aduaneras."
+      },
+      {
+        "text": "Renuncia total e irrevocable del comprador a efectuar cualquier inspección de la carga.",
+        "isCorrect": false,
+        "rationale": "El comprador conserva el derecho contractual de verificar la conformidad de la mercancía recibida."
+      }
+    ],
+    "hint": "Identifica los elementos que definen técnicamente el producto, la logística de entrega y los mecanismos ante disputas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la facilitación del comercio bilateral con China, ¿qué servicio directo ofrece la Cámara de Comercio Peruano China (CAPECHI)?",
+    "opciones": [
+      {
+        "text": "Brinda acceso a listas de proveedores verificados y coordinaciones para auditorías o inspecciones de plantas en China.",
+        "isCorrect": true,
+        "rationale": "CAPECHI apoya a los importadores mediante su base de datos homologada y el envío de representantes a verificar la veracidad de las fábricas en origen."
+      },
+      {
+        "text": "Otorga financiamiento directo a tasa cero para la adquisición de mercancía importada.",
+        "isCorrect": false,
+        "rationale": "La cámara de comercio no es una entidad financiera que otorgue préstamos directos de capital de trabajo."
+      },
+      {
+        "text": "Exime de forma automática el pago del IGV e impuestos aduaneros en las fronteras peruanas.",
+        "isCorrect": false,
+        "rationale": "La recaudación e impuestos aduaneros es facultad exclusiva de la administración tributaria (SUNAT), no de una cámara gremial."
+      },
+      {
+        "text": "Garantiza un subsidio del $100\\%$ en los fletes aéreos y marítimos para cualquier tipo de carga.",
+        "isCorrect": false,
+        "rationale": "Los fletes los fijan las empresas navieras y aerolíneas privadas de transporte internacional."
+      },
+      {
+        "text": "Reembolsa las pérdidas financieras ocasionadas por fluctuaciones en el tipo de cambio.",
+        "isCorrect": false,
+        "rationale": "El riesgo cambiario es asumido por las partes comerciales mediante coberturas financieras y no por la cámara gremial."
+      }
+    ],
+    "hint": "Se trata de un organismo que ayuda a validar la existencia de empresas y ofrece directorios de proveedores confiables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-52",
+    "diplomado": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante el despacho aduanero de una importación, ¿qué implica la asignación de 'Canal Verde' para una Declaración Única de Aduanas (DUA)?",
+    "opciones": [
+      {
+        "text": "Que la mercancía no requiere revisión documental ni inspección física previa para otorgar el levante, sin perjuicio de controles extraordinarios.",
+        "isCorrect": true,
+        "rationale": "El canal verde autoriza la libre disponibilidad o levante directo de la carga sin pasar por revisión documental o física rutinaria en el depósito."
+      },
+      {
+        "text": "Que el contenedor debe ser abierto de forma obligatoria para el conteo de unidades e inspección física total.",
+        "isCorrect": false,
+        "rationale": "El conteo físico y apertura del contenedor corresponde al control de Canal Rojo."
+      },
+      {
+        "text": "Que los documentos deben ser sometidos a revisión manual por un especialista antes del retiro.",
+        "isCorrect": false,
+        "rationale": "La revisión documental sin inspección física corresponde al Canal Naranja."
+      },
+      {
+        "text": "Que la carga queda retenida automáticamente por un periodo imponible de 30 días en el puerto.",
+        "isCorrect": false,
+        "rationale": "El canal verde agiliza el retiro inmediato de la carga y evita inmovilizaciones innecesarias."
+      },
+      {
+        "text": "Que el importador queda exento de pagar cualquier arancel o IGV de manera definitiva.",
+        "isCorrect": false,
+        "rationale": "El canal verde exime de inspecciones físicas/documentales de rutina, pero no exime del pago de los tributos de importación correspondientes."
+      }
+    ],
+    "hint": "Considera el nivel de control físico o documental que aplica la autoridad aduanera en este canal.",
+    "activo": true
+  }
+]

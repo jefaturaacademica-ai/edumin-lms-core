@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Con qué elemento se compara una arquitectura de datos bien organizada en la Clase 01 para ilustrar lo fácil que resulta encontrar la información?",
+    "opciones": [
+      {
+        "text": "Una biblioteca bien organizada donde es fácil encontrar los libros.",
+        "isCorrect": true,
+        "rationale": "En la lección se compara la arquitectura de datos con una biblioteca bien organizada, donde la documentación y la limpieza permiten a la empresa saber dónde encontrar su información."
+      },
+      {
+        "text": "Un laboratorio químico sin etiquetas en los reactivos.",
+        "isCorrect": false,
+        "rationale": "Esta analogía reflejaría desorden y peligro, lo contrario a lo que busca representar una arquitectura de datos estructurada."
+      },
+      {
+        "text": "Una carretera sin señales de tránsito ni mapa de ruta.",
+        "isCorrect": false,
+        "rationale": "Un sistema sin señales representa la falta de gobernanza o guía, no una arquitectura organizada."
+      },
+      {
+        "text": "Un mercado informal sin secciones de productos.",
+        "isCorrect": false,
+        "rationale": "El comercio informal ilustra la falta de estructura, mientras que la comparación del texto resalta la facilidad de búsqueda."
+      },
+      {
+        "text": "Una oficina de correos sin código postal asignado.",
+        "isCorrect": false,
+        "rationale": "La ausencia de códigos postales causaría extravío de información, a diferencia del orden de una biblioteca."
+      }
+    ],
+    "hint": "Piensa en un lugar público donde los recursos impresos están clasificados y catalogados meticulosamente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representan las siglas ETL en el contexto del procesamiento e integración de datos?",
+    "opciones": [
+      {
+        "text": "Extracción, Transformación y Carga (Load).",
+        "isCorrect": true,
+        "rationale": "ETL corresponde al proceso fundamental donde los datos se extraen de las fuentes, se transforman según la lógica de negocio y se cargan en un contenedor."
+      },
+      {
+        "text": "Estructuración, Transferencia y Logística.",
+        "isCorrect": false,
+        "rationale": "Aunque involucra estructura y transferencia, el término estándar de la industria incluye la carga final de datos."
+      },
+      {
+        "text": "Encriptación, Tipificación y Limpieza.",
+        "isCorrect": false,
+        "rationale": "La limpieza forma parte de la transformación, pero las siglas no corresponden a esta combinación de palabras."
+      },
+      {
+        "text": "Enlace, Transmisión y Lectura.",
+        "isCorrect": false,
+        "rationale": "Estas palabras describen etapas de red, pero no el proceso de almacenamiento analítico de datos."
+      },
+      {
+        "text": "Escalabilidad, Tolerancia y Lógica.",
+        "isCorrect": false,
+        "rationale": "Estos son atributos o propiedades de software, no las fases de un flujo de datos."
+      }
+    ],
+    "hint": "Se refiere a las tres etapas secuenciales para mover datos desde la fuente hasta su depósito final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la toma de decisiones basada en datos, ¿cuál de las siguientes tareas corresponde al nivel operativo?",
+    "opciones": [
+      {
+        "text": "El monitoreo en tiempo real del stock de productos en una tienda.",
+        "isCorrect": true,
+        "rationale": "El nivel operativo abarca las tareas del día a día, como supervisar de inmediato el inventario disponible."
+      },
+      {
+        "text": "La expansión del negocio a nuevos mercados dentro de 5 años.",
+        "isCorrect": false,
+        "rationale": "La planificación a 5 años corresponde al nivel estratégico de la gerencia general."
+      },
+      {
+        "text": "El análisis de ventas trimestrales para ajustar estrategias de marketing.",
+        "isCorrect": false,
+        "rationale": "El análisis trimestral para ajustes de marketing pertenece al nivel táctico o intermedio de la empresa."
+      },
+      {
+        "text": "La aprobación de una fusión corporativa a largo plazo.",
+        "isCorrect": false,
+        "rationale": "Las fusiones y compras de empresas son decisiones del más alto nivel estratégico."
+      },
+      {
+        "text": "La formulación de la visión y misión institucional.",
+        "isCorrect": false,
+        "rationale": "Definir la visión empresarial es una directriz estratégica de la alta gerencia."
+      }
+    ],
+    "hint": "Busca la actividad cotidiana y de ejecución inmediata que supervisa el estado diario del negocio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos forman parte de las fuentes de datos utilizadas en la arquitectura de una organización? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Bases de datos transaccionales SQL y NoSQL.",
+        "isCorrect": true,
+        "rationale": "Son repositorios estructurados y no estructurados fundamentales donde se registran las operaciones transaccionales."
+      },
+      {
+        "text": "Sensores de Internet de las Cosas (IoT).",
+        "isCorrect": true,
+        "rationale": "Proveen datos continuos en tiempo real sobre variables físicas, maquinaria o movimiento."
+      },
+      {
+        "text": "Archivos planos y hojas de cálculo (Excel).",
+        "isCorrect": true,
+        "rationale": "Representan fuentes de datos comunes fuera de los sistemas transaccionales centrales en muchas empresas."
+      },
+      {
+        "text": "Monitores de pantalla de alta resolución.",
+        "isCorrect": false,
+        "rationale": "Los monitores son dispositivos periféricos de salida visual, no fuentes generadoras o almacenadoras de datos."
+      },
+      {
+        "text": "Cables de fibra óptica subterráneos.",
+        "isCorrect": false,
+        "rationale": "La fibra óptica es el medio físico de transmisión de red, no una fuente de información de datos en sí."
+      }
+    ],
+    "hint": "Identifica los orígenes físicos o digitales desde donde se recopila o extrae la información.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tipo de integridad de datos asegura que las relaciones entre tablas (como pedidos y clientes) se mantengan coherentes sin registros huérfanos?",
+    "opciones": [
+      {
+        "text": "Integridad referencial.",
+        "isCorrect": true,
+        "rationale": "La integridad referencial garantiza que una clave foránea en una tabla coincida con una clave primaria válida en otra tabla."
+      },
+      {
+        "text": "Integridad de entidad.",
+        "isCorrect": false,
+        "rationale": "La integridad de entidad se asegura de que cada fila sea única mediante una clave primaria."
+      },
+      {
+        "text": "Integridad de dominio.",
+        "isCorrect": false,
+        "rationale": "La integridad de dominio valida que los valores ingresados cumplan con el tipo y rango de dato permitido."
+      },
+      {
+        "text": "Integridad de negocio.",
+        "isCorrect": false,
+        "rationale": "La integridad de negocio evalúa el cumplimiento de reglas lógicas de la empresa (por ejemplo, no retirar más saldo del disponible)."
+      },
+      {
+        "text": "Integridad física.",
+        "isCorrect": false,
+        "rationale": "La integridad física se refiere a la conservación electromagnética del hardware y discos frente a fallos de energía."
+      }
+    ],
+    "hint": "Esta regla impide que exista una venta registrada a nombre de un código de vendedor o cliente que no existe.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es un objetivo directo de la optimización de recursos en la arquitectura de datos?",
+    "opciones": [
+      {
+        "text": "Reducir costos en almacenamiento y aumentar la velocidad de consulta.",
+        "isCorrect": true,
+        "rationale": "Optimizar recursos busca reducir el espacio ocupado en disco y acelerar la respuesta a las consultas de negocio."
+      },
+      {
+        "text": "Aumentar indefinidamente la compra de servidores físicos locales.",
+        "isCorrect": false,
+        "rationale": "Comprar servidores sin control incrementa los costos, opuesto a la optimización."
+      },
+      {
+        "text": "Duplicar los datos en todas las áreas para evitar pedir autorizaciones.",
+        "isCorrect": false,
+        "rationale": "La duplicación genera redundancia e incrementa el costo de almacenamiento de forma innecesaria."
+      },
+      {
+        "text": "Eliminar por completo el uso de bases de datos relacionales.",
+        "isCorrect": false,
+        "rationale": "Las bases relacionales son esenciales para operaciones transaccionales y no se eliminan por optimización."
+      },
+      {
+        "text": "Evitar hacer auditorías de seguridad en la empresa.",
+        "isCorrect": false,
+        "rationale": "Las auditorías son indispensables para la gobernanza y no representan un recurso prescindible."
+      }
+    ],
+    "hint": "Busca el equilibrio entre gastar menos dinero en espacio y responder más rápido a las necesidades de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es la \"Data Cruda\" o \"Row Data\" según lo presentado en la Clase 02?",
+    "opciones": [
+      {
+        "text": "Datos originales obtenidos de diversas fuentes sin sufrir alteraciones ni transformaciones.",
+        "isCorrect": true,
+        "rationale": "La data cruda representa los datos tal cual fueron capturados de los orígenes, antes de ser modelados o limpiados."
+      },
+      {
+        "text": "Información procesada y lista para mostrarse en dashboards de Power BI.",
+        "isCorrect": false,
+        "rationale": "Los datos procesados ya pasaron por una capa de transformación y visualización."
+      },
+      {
+        "text": "Modelos predictivos generados mediante aprendizaje automático.",
+        "isCorrect": false,
+        "rationale": "Los modelos predictivos resultan del análisis analítico sobre datos ya estructurados."
+      },
+      {
+        "text": "Reportes consolidados en formato PDF para la alta dirección.",
+        "isCorrect": false,
+        "rationale": "Un reporte consolidado es el producto final consumible, no la materia prima original."
+      },
+      {
+        "text": "Bases de datos que han completado la tercera forma normal.",
+        "isCorrect": false,
+        "rationale": "Una base de datos normalizada ya ha sido altamente estructurada y alterada respecto a su origen."
+      }
+    ],
+    "hint": "Piensa en el estado primario e inalterado en el que se encuentra la información justo al ser recolectada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el contenido del curso, ¿cuál es la función principal de Power BI?",
+    "opciones": [
+      {
+        "text": "Servir como herramienta de visualización para interpretar datos mediante reportes interactivos.",
+        "isCorrect": true,
+        "rationale": "Power BI permite crear tableros y gráficos dinámicos para que los usuarios de negocio analicen la información fácilmente."
+      },
+      {
+        "text": "Almacenar terabytes de datos crudos en servidores distribuidos.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento masivo se realiza en Data Lakes o Data Warehouses, no en herramientas de visualización."
+      },
+      {
+        "text": "Reemplazar los sistemas ERP transaccionales de la compañía.",
+        "isCorrect": false,
+        "rationale": "Power BI explota los datos para análisis, pero no procesa las ventas u operaciones transaccionales diarias."
+      },
+      {
+        "text": "Ejecutar la configuración de hardware de los discos duros locales.",
+        "isCorrect": false,
+        "rationale": "La configuración de hardware es tarea de los administradores de sistemas e infraestructura."
+      },
+      {
+        "text": "Crear copias de seguridad físicas en cintas magnéticas.",
+        "isCorrect": false,
+        "rationale": "Los respaldos físicos dependen de políticas de infraestructura y almacenamiento de TI."
+      }
+    ],
+    "hint": "Es la capa final que transforma tablas y métricas en gráficos dinámicos e historias visuales de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial del proceso de normalización en bases de datos relacionales?",
+    "opciones": [
+      {
+        "text": "Reducir la redundancia de datos y evitar inconsistencias.",
+        "isCorrect": true,
+        "rationale": "La normalización (1FN, 2FN, 3FN) organiza las tablas para eliminar duplicidades y mantener la integridad de los datos."
+      },
+      {
+        "text": "Aumentar el espacio físico utilizado en disco por cada tabla.",
+        "isCorrect": false,
+        "rationale": "La normalización busca hacer eficiente la base de datos, no malgastar espacio."
+      },
+      {
+        "text": "Convertir todas las tablas SQL en archivos de texto plano.",
+        "isCorrect": false,
+        "rationale": "La normalización se aplica dentro del motor relacional de base de datos, no convierte las tablas en texto plano."
+      },
+      {
+        "text": "Eliminar el uso de claves primarias y secundarias.",
+        "isCorrect": false,
+        "rationale": "El proceso exige y utiliza activamente las claves primarias y foráneas para relacionar las entidades."
+      },
+      {
+        "text": "Desactivar los controles de acceso de seguridad del motor.",
+        "isCorrect": false,
+        "rationale": "La seguridad no se altera al normalizar la estructura lógica de las tablas."
+      }
+    ],
+    "hint": "Busca el principio que impide repetir el nombre o dirección de un cliente en miles de facturas distintas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tecnología se especialista en procesamiento por lotes masivo utilizando el paradigma MapReduce y el sistema de archivos HDFS?",
+    "opciones": [
+      {
+        "text": "Apache Hadoop.",
+        "isCorrect": true,
+        "rationale": "Apache Hadoop es la plataforma clásica para procesamiento en lotes a gran escala con HDFS y MapReduce."
+      },
+      {
+        "text": "Power BI.",
+        "isCorrect": false,
+        "rationale": "Power BI es un software de visualización y análisis de inteligencia de negocios."
+      },
+      {
+        "text": "MySQL Workbench.",
+        "isCorrect": false,
+        "rationale": "Es una herramienta de administración visual para bases de datos relacionales MySQL."
+      },
+      {
+        "text": "Microsoft Excel.",
+        "isCorrect": false,
+        "rationale": "Es una aplicación de hoja de cálculo para escritorio no diseñada para clústeres masivos distribuidos."
+      },
+      {
+        "text": "Postman.",
+        "isCorrect": false,
+        "rationale": "Es una herramienta utilizada para probar y consumir servicios API, no para cómputo distribuido."
+      }
+    ],
+    "hint": "Esta herramienta pionera en Big Data usa un elefante amarillo como logotipo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes representan buenas prácticas de seguridad de datos vistas en el curso? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Cifrado de datos sensibles con algoritmos robustos.",
+        "isCorrect": true,
+        "rationale": "El cifrado (como AES o RSA) protege la información convirtiéndola en un código ilegible sin la clave."
+      },
+      {
+        "text": "Control de acceso con autenticación multifactor (MFA).",
+        "isCorrect": true,
+        "rationale": "MFA agrega capas de validación adicionales para confirmar la identidad del usuario."
+      },
+      {
+        "text": "Realización periódica de copias de seguridad (backups).",
+        "isCorrect": true,
+        "rationale": "Los respaldos continuos previenen la pérdida irrecoverable de datos ante fallos o ciberataques."
+      },
+      {
+        "text": "Compartir una sola contraseña universal entre todos los empleados.",
+        "isCorrect": false,
+        "rationale": "Utilizar credenciales compartidas destruye el principio de trazabilidad y control de acceso individual."
+      },
+      {
+        "text": "Desactivar los registros de auditoría (logs) de la base de datos.",
+        "isCorrect": false,
+        "rationale": "Sin logs es imposible detectar intrusiones o saber qué usuario modificó registros indebidamente."
+      }
+    ],
+    "hint": "Selecciona las medidas que refuerzan la confidencialidad, la autenticidad y la recuperación de información.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tipo de base de datos está diseñada para gestionar grandes volúmenes de datos no estructurados o semiestructurados, como colecciones de documentos JSON?",
+    "opciones": [
+      {
+        "text": "Bases de datos NoSQL.",
+        "isCorrect": true,
+        "rationale": "NoSQL (como MongoDB o Cassandra) maneja flexibilidad de esquemas para archivos semiestructurados o no estructurados."
+      },
+      {
+        "text": "Bases de datos relacionales SQL tradicional.",
+        "isCorrect": false,
+        "rationale": "Las bases de datos SQL exigen un esquema rígido de tablas, filas y columnas fijas."
+      },
+      {
+        "text": "Hojas de cálculo en formato CSV.",
+        "isCorrect": false,
+        "rationale": "El archivo CSV es una representación plana en filas y columnas, no un motor de base de datos."
+      },
+      {
+        "text": "Archivos estáticos de texto enriquecido.",
+        "isCorrect": false,
+        "rationale": "Los archivos de texto enriquecido carecen de capacidades de consulta transaccional o indexación de motor."
+      },
+      {
+        "text": "Diagramas de entidad-relación en papel.",
+        "isCorrect": false,
+        "rationale": "Un gráfico en papel es una representación de diseño conceptual, no un sistema de base de datos gestor."
+      }
+    ],
+    "hint": "Son motores que rompen la exigencia estricta de tablas compuestas solo por filas y columnas rígidas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la Arquitectura Lambda en el contexto del procesamiento de datos analíticos?",
+    "opciones": [
+      {
+        "text": "En la combinación del procesamiento en tiempo real (streaming) y el procesamiento por lotes (batch).",
+        "isCorrect": true,
+        "rationale": "La arquitectura Lambda une el análisis rápido en tiempo real con la precisión histórica del procesamiento por lotes."
+      },
+      {
+        "text": "En el uso exclusivo de servidores físicos locales sin conexión a redes.",
+        "isCorrect": false,
+        "rationale": "La arquitectura Lambda es un diseño lógico de capas de datos, no una restricción de red aislada."
+      },
+      {
+        "text": "En eliminar la capa de datos históricos para almacenar solo las últimas 2 horas.",
+        "isCorrect": false,
+        "rationale": "Lambda conserva explícitamente la capa de lotes para almacenar y procesar el historial completo."
+      },
+      {
+        "text": "En realizar consultas SQL manualmente en hojas de cálculo.",
+        "isCorrect": false,
+        "rationale": "Lambda es un patrón de arquitectura distribuida para Big Data, no un trabajo manual de oficina."
+      },
+      {
+        "text": "En procesar únicamente imágenes médicas ignorando los datos numéricos.",
+        "isCorrect": false,
+        "rationale": "Es una arquitectura genérica para cualquier flujo masivo de datos, independientemente del sector."
+      }
+    ],
+    "hint": "Esta arquitectura integra la velocidad de respuesta inmediata con el cálculo masivo histórico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la escalabilidad horizontal de un sistema de base de datos?",
+    "opciones": [
+      {
+        "text": "En agregar más nodos o servidores distribuidos para repartir la carga de trabajo.",
+        "isCorrect": true,
+        "rationale": "La escalabilidad horizontal consiste en incorporar más máquinas al clúster (scale out) para procesar mayores volúmenes."
+      },
+      {
+        "text": "En aumentar la memoria RAM y el procesador a un único servidor central.",
+        "isCorrect": false,
+        "rationale": "Aumentar los recursos de un único equipo físico se conoce como escalabilidad vertical (scale up)."
+      },
+      {
+        "text": "En reducir el número de usuarios que pueden conectarse simultáneamente.",
+        "isCorrect": false,
+        "rationale": "Restringir usuarios limita el negocio y no representa una técnica de escalabilidad."
+      },
+      {
+        "text": "En reemplazar discos mecánicos por discos de estado sólido en la misma máquina.",
+        "isCorrect": false,
+        "rationale": "Mejorar las piezas de un mismo ordenador es repotenciación o escalado vertical."
+      },
+      {
+        "text": "En convertir todas las consultas en tiempo real a procesos nocturnos.",
+        "isCorrect": false,
+        "rationale": "Cambiar la frecuencia de ejecución es una decisión de procesamiento, no de escalado de infraestructura."
+      }
+    ],
+    "hint": "Se relaciona con sumar más máquinas a la red en lugar de hacer más grande a un solo equipo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué caso de éxito corporativo se utilizó en la Clase 03 para ilustrar la transición de un modelo de DVD por correo a una infraestructura highly escalable en la nube?",
+    "opciones": [
+      {
+        "text": "Netflix.",
+        "isCorrect": true,
+        "rationale": "El texto cita a Netflix como ejemplo de evolución desde el envío de DVDs hasta una arquitectura masiva distribuida en AWS."
+      },
+      {
+        "text": "Kodak.",
+        "isCorrect": false,
+        "rationale": "Kodak es un ejemplo histórico de la industria fotográfica analógica, no de streaming en la nube."
+      },
+      {
+        "text": "Blockbuster.",
+        "isCorrect": false,
+        "rationale": "Blockbuster mantuvo un modelo tradicional de tiendas físicas y no realizó esa migración de streaming."
+      },
+      {
+        "text": "BlackBerry.",
+        "isCorrect": false,
+        "rationale": "BlackBerry destacó en telefonía móvil corporativa antes de la era de los smartphones modernos."
+      },
+      {
+        "text": "Yahoo.",
+        "isCorrect": false,
+        "rationale": "Yahoo fue un pionero de portales web y buscadores, no el caso mencionado de DVDs a streaming en AWS."
+      }
+    ],
+    "hint": "Es la popular plataforma de entretenimiento streaming cuyo logo es una letra 'N' roja.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son beneficios de mantener la integridad de los datos en la gestión empresarial? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Generación de reportes financieros exactos y confiables.",
+        "isCorrect": true,
+        "rationale": "La precisión en los datos de origen asegura que los balances contables reflejen la realidad económica."
+      },
+      {
+        "text": "Prevención de entregas o cobros duplicados en comercio electrónico.",
+        "isCorrect": true,
+        "rationale": "Evitar registros duplicados en las tablas impide enviar doble mercadería a un cliente."
+      },
+      {
+        "text": "Toma de decisiones estratégicas basadas en métricas reales.",
+        "isCorrect": true,
+        "rationale": "Los datos limpios e íntegros dan certeza a la gerencia para realizar inversiones con menor riesgo."
+      },
+      {
+        "text": "Aumento imprevisto de compras por registros erróneos de inventario.",
+        "isCorrect": false,
+        "rationale": "Las compras innecesarias ocurren precisamente cuando la data carece de integridad y muestra stock falso."
+      },
+      {
+        "text": "Errores en historiales clínicos por duplicación de identidades.",
+        "isCorrect": false,
+        "rationale": "Los errores de identidad en historiales clínicos son consecuencia de la falta de integridad en los sistemas."
+      }
+    ],
+    "hint": "Selecciona las consecuencias positivas que aportan certeza financiera, logística y de gestión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función del proceso de orquestación y monitoreo dentro de un flujo de datos?",
+    "opciones": [
+      {
+        "text": "Coordinar la secuencia de tareas y supervisar el estado de ejecución de los flujos de datos.",
+        "isCorrect": true,
+        "rationale": "La orquestación programa y organiza el orden en que se ejecutan los trabajos, mientras el monitoreo alerta sobre fallos."
+      },
+      {
+        "text": "Diseñar los logotipos gráficos y la paleta de colores de una aplicación.",
+        "isCorrect": false,
+        "rationale": "El diseño de la identidad visual es responsabilidad del equipo de marketing y diseño UI/UX."
+      },
+      {
+        "text": "Escribir los términos jurídicos y políticas de privacidad de la web.",
+        "isCorrect": false,
+        "rationale": "La redacción de términos legales es responsabilidad del departamento jurídico o de cumplimiento legal."
+      },
+      {
+        "text": "Fabricar físicamente los microchips de los servidores informáticos.",
+        "isCorrect": false,
+        "rationale": "La fabricación de componentes de hardware pertenece a la industria de semiconductores."
+      },
+      {
+        "text": "Atender llamadas telefónicas de reclamos de clientes finales.",
+        "isCorrect": false,
+        "rationale": "Atender llamadas directas es función del área de atención al cliente o call center."
+      }
+    ],
+    "hint": "Piensa en el rol del director de una orquesta, quien marca el ritmo y asegura que cada instrumento toque a tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre el enfoque tradicional ETL y el enfoque ELT?",
+    "opciones": [
+      {
+        "text": "En ELT los datos se cargan primero en el depósito destino y luego se transforman aprovechando el poder de cómputo de la nube.",
+        "isCorrect": true,
+        "rationale": "ELT (Extract, Load, Transform) aprovecha repositorios modernos (como Data Lakes) para cargar la data cruda rápidamente y transformarla internamente."
+      },
+      {
+        "text": "En ELT se eliminan todos los datos antes de realizar cualquier tipo de consulta.",
+        "isCorrect": false,
+        "rationale": "Eliminar la información impediría realizar analítica; la 'L' corresponde a 'Load' (Carga)."
+      },
+      {
+        "text": "En ETL nunca se extrae información desde las fuentes originales.",
+        "isCorrect": false,
+        "rationale": "La 'E' en ambos enfoques significa 'Extract' (Extracción) de las fuentes de origen."
+      },
+      {
+        "text": "En ELT solo es posible procesar hojas de cálculo de Microsoft Excel.",
+        "isCorrect": false,
+        "rationale": "ELT se utiliza principalmente en grandes arquitecturas distribuidas de nube con múltiples formatos."
+      },
+      {
+        "text": "En ETL los cálculos solo pueden ejecutarse en teléfonos celulares.",
+        "isCorrect": false,
+        "rationale": "Los procesos ETL e ELT se ejecutan en servidores o clústeres de datos, no en dispositivos móviles de usuario."
+      }
+    ],
+    "hint": "Observa el orden de las letras: en una de las siglas la 'L' de Carga (Load) ocurre antes de la 'T' de Transformación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una característica de la infraestructura de datos In-House en comparación con la Nube?",
+    "opciones": [
+      {
+        "text": "Requiere una alta inversión inicial en la compra de servidores y equipamiento propio.",
+        "isCorrect": true,
+        "rationale": "Instalar una infraestructura In-House exige adquirir hardware, espacio físico, climatización y licencias desde el inicio."
+      },
+      {
+        "text": "Permite aumentar la capacidad de disco de forma ilimitada con un solo clic.",
+        "isCorrect": false,
+        "rationale": "El escalado inmediato e ilimitado es una ventaja nativa de los proveedores de la Nube."
+      },
+      {
+        "text": "El mantenimiento físico del servidor es realizado por un proveedor externo como Amazon o Google.",
+        "isCorrect": false,
+        "rationale": "En el modelo In-House, el mantenimiento del hardware es responsabilidad exclusiva de la propia empresa."
+      },
+      {
+        "text": "El pago se realiza únicamente por los segundos que el procesador está trabajando.",
+        "isCorrect": false,
+        "rationale": "El pago por uso o consumo por segundo es propio de los servicios en la Nube (como FaaS/Serverless)."
+      },
+      {
+        "text": "Garantiza acceso público instantáneo desde cualquier lugar del mundo sin configurar redes privadas.",
+        "isCorrect": false,
+        "rationale": "In-House suele restringirse a la red local y exige configurar VPNs o Gateways para accesos remotos."
+      }
+    ],
+    "hint": "Se refiere a tener el centro de datos físicamente dentro de las instalaciones de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué define a una arquitectura de datos de tipo Híbrida?",
+    "opciones": [
+      {
+        "text": "La combinación coordinada de infraestructura In-House con servicios en la Nube.",
+        "isCorrect": true,
+        "rationale": "Una arquitectura híbrida aprovecha la seguridad local para datos sensibles y la flexibilidad de la nube para cómputo o respaldos."
+      },
+      {
+        "text": "El uso exclusivo de carpetas de papel y archivos físicos de cartón.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento analógico en papel no constituye una arquitectura de datos digital."
+      },
+      {
+        "text": "La prohibición de conectarse a redes de internet en toda la empresa.",
+        "isCorrect": false,
+        "rationale": "El entorno híbrido requiere explícitamente conexión a internet para sincronizar la nube con el servidor local."
+      },
+      {
+        "text": "El uso único de tarjetas de memoria SD para respaldar las ventas.",
+        "isCorrect": false,
+        "rationale": "Usar tarjetas SD es un método de almacenamiento externo portátil no estructurado."
+      },
+      {
+        "text": "El procesamiento de datos únicamente en microchips implantados.",
+        "isCorrect": false,
+        "rationale": "Es una idea de ciencia ficción desconectada de la definición de infraestructura híbrida empresarial."
+      }
+    ],
+    "hint": "Esta solución une lo mejor del mundo del servidor local propio con el mundo del almacenamiento externo en la nube.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se diferencia una arquitectura de microservicios de una arquitectura monolítica tradicional?",
+    "opciones": [
+      {
+        "text": "Los microservicios dividen la aplicación en componentes pequeños e independientes enfocados en tareas específicas.",
+        "isCorrect": true,
+        "rationale": "A diferencia del monolito donde todo el código está acoplado, los microservicios son módulos autónomos e independientes."
+      },
+      {
+        "text": "Las aplicaciones monolíticas no utilizan bases de datos para guardar datos.",
+        "isCorrect": false,
+        "rationale": "Las arquitecturas monolíticas sí utilizan bases de datos, habitualmente una única base de datos centralizada."
+      },
+      {
+        "text": "Los microservicios requieren que todo el código fuente se compile en un único archivo ejecutable.",
+        "isCorrect": false,
+        "rationale": "Compilar todo en un único bloque es la característica distintiva del modelo monolítico."
+      },
+      {
+        "text": "Las arquitecturas de microservicios impiden actualizar partes del sistema de forma aislada.",
+        "isCorrect": false,
+        "rationale": "Permitir actualizaciones independientes sin detener el resto del sistema es una ventaja de los microservicios."
+      },
+      {
+        "text": "Los microservicios solo funcionan en computadoras sin conexión a red.",
+        "isCorrect": false,
+        "rationale": "Los microservicios se comunican intensamente a través de redes mediante protocolos como HTTP/APIs."
+      }
+    ],
+    "hint": "Aplica la regla de 'divide y vencerás', fragmentando un sistema gigante en piezas autónomas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes afirmaciones sobre las APIs (Application Programming Interfaces) son correctas? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Permiten que dos sistemas o aplicaciones distintas se comuniquen e intercambien datos.",
+        "isCorrect": true,
+        "rationale": "Una API actúa como intermediario para que distintos softwares compartan información mediante reglas definidas."
+      },
+      {
+        "text": "Utilizan estándares y protocolos de comunicación como REST o GraphQL.",
+        "isCorrect": true,
+        "rationale": "REST y GraphQL son estilos arquitectónicos ampliamente utilizados para estructurar la transferencia de datos mediante APIs."
+      },
+      {
+        "text": "Requieren mecanismos de seguridad como tokens para autenticar las peticiones.",
+        "isCorrect": true,
+        "rationale": "El empleo de tokens de seguridad (como los JWT) asegura que solo usuarios o sistemas autorizados consuman el servicio."
+      },
+      {
+        "text": "Son dispositivos físicos de hardware que se instalan dentro de la placa madre.",
+        "isCorrect": false,
+        "rationale": "Las APIs son interfaces lógicas de software, no piezas físicas de hardware."
+      },
+      {
+        "text": "Eliminan la necesidad de contar con bases de datos en las empresas.",
+        "isCorrect": false,
+        "rationale": "Las APIs transportan o consultan información, pero los datos siguen almacenándose en las bases de datos."
+      }
+    ],
+    "hint": "Considera el rol de la API como el de un 'mesero' que lleva y trae pedidos de datos entre aplicaciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica principal de la arquitectura Serverless (sin servidor)?",
+    "opciones": [
+      {
+        "text": "Permite ejecutar código sin que la empresa deba administrar ni aprovisionar servidores físicos o virtuales.",
+        "isCorrect": true,
+        "rationale": "En Serverless, el proveedor de la nube gestiona la infraestructura automáticamente y el desarrollador solo sube su código."
+      },
+      {
+        "text": "Elimina la necesidad de utilizar la nube para procesar información.",
+        "isCorrect": false,
+        "rationale": "Serverless es un modelo de cómputo que funciona directamente sobre la infraestructura de la nube."
+      },
+      {
+        "text": "Funciona únicamente cuando el servidor físico local está apagado.",
+        "isCorrect": false,
+        "rationale": "Los servicios en la nube requieren servidores físicos encendidos en los centros de datos del proveedor."
+      },
+      {
+        "text": "Obliga a comprar servidores dedicados para cada función del sistema.",
+        "isCorrect": false,
+        "rationale": "Serverless evita comprar o arrendar servidores dedicados, operando bajo demanda."
+      },
+      {
+        "text": "Prohíbe el procesamiento de archivos de imagen o video.",
+        "isCorrect": false,
+        "rationale": "Serverless se utiliza frecuentemente para procesar archivos multimedia mediante eventos automáticos."
+      }
+    ],
+    "hint": "Aunque la infraestructura física existe en el centro de datos, la empresa no se preocupa por mantener el sistema operativo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En un modelo de costos de arquitectura Serverless, ¿cómo se cobra habitualmente el servicio al cliente?",
+    "opciones": [
+      {
+        "text": "Se paga por el tiempo real de ejecución del código y las peticiones o lecturas/escrituras realizadas.",
+        "isCorrect": true,
+        "rationale": "El cobro se basa en el consumo exacto de recursos generados durante la ejecución del evento o función."
+      },
+      {
+        "text": "Se paga una tarifa mensual fija, incluso si nadie utiliza la aplicación.",
+        "isCorrect": false,
+        "rationale": "El cobro fijo mensual es típico del arriendo de servidores virtuales tradicionales (IaaS), no de Serverless."
+      },
+      {
+        "text": "El servicio es gratuito sin importar el volumen de transacciones consumidas.",
+        "isCorrect": false,
+        "rationale": "Los proveedores ofrecen capas gratuitas iniciales, pero el modelo comercial cobrable escala con el uso."
+      },
+      {
+        "text": "Se cobra por la cantidad de computadoras instaladas en las oficinas del cliente.",
+        "isCorrect": false,
+        "rationale": "Serverless se ejecuta en la nube, independientemente del número de PCs en las oficinas."
+      },
+      {
+        "text": "Se exige un pago único por adelantado de 10 años de mantenimiento de hardware.",
+        "isCorrect": false,
+        "rationale": "Serverless no exige comprar ni pagar mantenimientos de hardware por adelantado."
+      }
+    ],
+    "hint": "Piensa en el recibo del agua o la luz: pagas exactamente por la cantidad consumida mientras la llave estuvo abierta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de los siguientes es un ejemplo de servicio de cómputo Serverless presentado en la Clase 04?",
+    "opciones": [
+      {
+        "text": "AWS Lambda.",
+        "isCorrect": true,
+        "rationale": "AWS Lambda es el servicio emblemático de Amazon Web Services para ejecutar código guiado por eventos bajo el modelo Serverless."
+      },
+      {
+        "text": "Microsoft Word.",
+        "isCorrect": false,
+        "rationale": "Microsoft Word es un procesador de texto para usuario final."
+      },
+      {
+        "text": "Apache HTTP Server instalado en una PC local.",
+        "isCorrect": false,
+        "rationale": "Un servidor Apache local requiere administración y mantenimiento directo de hardware y software."
+      },
+      {
+        "text": "Un disco duro SATA externo en un puerto USB.",
+        "isCorrect": false,
+        "rationale": "Un disco externo es un medio físico de almacenamiento secundario personal."
+      },
+      {
+        "text": "MySQL Workbench instalado en el escritorio.",
+        "isCorrect": false,
+        "rationale": "MySQL Workbench es un cliente gráfico para interactuar con bases de datos SQL relacionales."
+      }
+    ],
+    "hint": "Es un servicio de Amazon Web Services cuyo símbolo es una letra griega equivalente a la 'L'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto del nivel estratégico de una organización, ¿de qué manera una arquitectura de datos bien diseñada impacta de forma directa en la toma de decisiones?",
+    "opciones": [
+      {
+        "text": "Permite evaluar las tendencias de mercado y planificar la expansión del negocio a largo plazo mediante datos limpios y consolidados.",
+        "isCorrect": true,
+        "rationale": "El nivel estratégico requiere información histórica, limpia y consolidada para proyectar el crecimiento corporativo y anticiparse a las tendencias del mercado."
+      },
+      {
+        "text": "Automatiza el monitoreo en tiempo real del inventario para reponer stock de forma inmediata en las cajas registradoras.",
+        "isCorrect": false,
+        "rationale": "El monitoreo y reposición inmediata de inventario en el punto de venta corresponde al nivel operacional, no al nivel estratégico."
+      },
+      {
+        "text": "Sustituye por completo la función de la alta gerencia al generar decisiones algorítmicas sin supervisión humana.",
+        "isCorrect": false,
+        "rationale": "La arquitectura de datos provee el soporte informativo necesario para fundamentar las decisiones directivas, pero no reemplaza el juicio de la alta gerencia."
+      },
+      {
+        "text": "Reduce exclusivamente los costos de hardware local sin influir en la planificación o el análisis comercial.",
+        "isCorrect": false,
+        "rationale": "Aunque optimiza recursos, el objetivo principal en el nivel estratégico trasciende la reducción de hardware y busca potenciar la toma de decisiones informadas."
+      },
+      {
+        "text": "Limita el acceso a los datos históricos a un máximo de un mes para acelerar las transacciones operativas diarias.",
+        "isCorrect": false,
+        "rationale": "Restringir el histórico de datos a un solo mes impediría realizar análisis de tendencias y proyecciones estratégicas a mediano y largo plazo."
+      }
+    ],
+    "hint": "Piensa en cómo la alta gerencia utiliza la información estructurada a largo plazo frente a las operaciones del día a día.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes estrategias contribuyen directamente a la optimización de recursos dentro de una arquitectura de datos corporativa? (Selecciona todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Normalización de bases de datos para eliminar la redundancia y evitar la duplicidad de registros.",
+        "isCorrect": true,
+        "rationale": "La normalización evita la duplicación innecesaria de datos, reduciendo de manera directa el almacenamiento consumido y mejorando la coherencia."
+      },
+      {
+        "text": "Compresión y particionamiento de datos para reducir espacio en disco y acelerar la velocidad de consulta.",
+        "isCorrect": true,
+        "rationale": "Comprimir reduce el uso de memoria física y particionar limita el escaneo a los fragmentos requeridos, optimizando el rendimiento de las consultas."
+      },
+      {
+        "text": "Automatización de procesos ETL ejecutados en horarios de menor tráfico operativo.",
+        "isCorrect": true,
+        "rationale": "Programar las cargas pesadas fuera de las horas punta evita la degradación del rendimiento de los sistemas transaccionales que utilizan los usuarios."
+      },
+      {
+        "text": "Replicación completa e idéntica de todas las tablas transaccionales en múltiples servidores locales sin particionar.",
+        "isCorrect": false,
+        "rationale": "Replicar bases de datos masivas sin particionamiento incrementa drásticamente los costos de almacenamiento y sobrecarga el procesamiento."
+      },
+      {
+        "text": "Almacenamiento continuo de diez años de transacciones operativas en las tablas principales del ERP.",
+        "isCorrect": false,
+        "rationale": "Mantener datos históricos lejanos en las tablas de producción del ERP ralentiza las operaciones diarias; este histórico debe derivarse a Data Lakes o Data Warehouses."
+      }
+    ],
+    "hint": "Considera las técnicas que minimizan el espacio de disco y reducen la carga de procesamiento durante las horas de operación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un sistema bancario permite que un cliente ejecute un retiro monetario que supera el saldo disponible en su cuenta sin contar con una línea de sobregiro autorizada. ¿Qué tipo de integridad de datos se ha vulnerado principalmente?",
+    "opciones": [
+      {
+        "text": "Integridad de negocio.",
+        "isCorrect": true,
+        "rationale": "La integridad de negocio garantiza que se cumplan las reglas lógicas específicas de la empresa, como impedir giros por encima del saldo disponible."
+      },
+      {
+        "text": "Integridad referencial.",
+        "isCorrect": false,
+        "rationale": "La integridad referencial asegura la validez de las relaciones entre claves primarias y claves foráneas entre tablas, no el cumplimiento de reglas lógicas de saldo."
+      },
+      {
+        "text": "Integridad de entidad.",
+        "isCorrect": false,
+        "rationale": "La integridad de entidad vela por la unicidad de cada registro mediante una clave primaria no nula, no por las reglas financieras de transacción."
+      },
+      {
+        "text": "Integridad de dominio.",
+        "isCorrect": false,
+        "rationale": "La integridad de dominio valida el tipo de dato y el rango permitido de un campo específico, pero no la lógica compuesta de un saldo bancario."
+      },
+      {
+        "text": "Integridad física de hardware.",
+        "isCorrect": false,
+        "rationale": "Este concepto atañe al estado del equipamiento físico y medios de almacenamiento, no a las reglas lógicas del software de gestión."
+      }
+    ],
+    "hint": "Reflexiona sobre qué tipo de regla valida los requerimientos y límites lógicos propios de las operaciones financieras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante un proceso de integración de datos, se identifica que el campo 'Edad del cliente' contiene valores negativos y fechas de nacimiento correspondientes a años futuros. ¿Qué medida técnica en el diseño del repositorio corrige directamente este problema?",
+    "opciones": [
+      {
+        "text": "Implementación de restricciones de verificación (Check constraints) y reglas de validación en el dominio del campo.",
+        "isCorrect": true,
+        "rationale": "Las restricciones de verificación (Check) garantizan la integridad de dominio al rechazar cualquier valor que no cumpla un rango lógico predefinido."
+      },
+      {
+        "text": "Asignación de claves primarias compuestas a la tabla de clientes sin modificar las reglas del campo.",
+        "isCorrect": false,
+        "rationale": "Las claves compuestas aseguran la identificación única de una fila, pero no evitan el ingreso de datos numéricos incoherentes en los atributos."
+      },
+      {
+        "text": "Eliminación de las claves foráneas que vinculan la tabla de clientes con la tabla de ventas.",
+        "isCorrect": false,
+        "rationale": "Remover claves foráneas degrada la integridad referencial y no soluciona los errores de formato o valores incoherentes en los campos de fecha."
+      },
+      {
+        "text": "Cifrado asimétrico del campo de fecha de nacimiento mediante algoritmos de clave pública.",
+        "isCorrect": false,
+        "rationale": "El cifrado protege la confidencialidad de la información, pero no valida si el dato numérico o de fecha ingresado es lógicamente correcto."
+      },
+      {
+        "text": "Migración inmediata de la base de datos a un repositorio no estructurado de tipo clave-valor.",
+        "isCorrect": false,
+        "rationale": "Migrar a un motor clave-valor sin validaciones laxará aún más la estructura, permitiendo guardar cualquier valor erróneo."
+      }
+    ],
+    "hint": "Evalúa las restricciones de base de datos que garantizan que los valores ingresados cumplan con las reglas válidas para un atributo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos constituyen medidas indispensables para garantizar la seguridad y el cumplimiento normativo en la gestión de datos sensibles? (Selecciona todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Cifrado de datos tanto en tránsito como en reposo utilizando estándares reconocidos.",
+        "isCorrect": true,
+        "rationale": "El cifrado protege la confidencialidad impidiendo que interceptores o usuarios no autorizados puedan leer la información sensible."
+      },
+      {
+        "text": "Control de acceso basado en roles y permisos específicos asignados a los usuarios.",
+        "isCorrect": true,
+        "rationale": "Restringir privilegios según el rol asegura que cada empleado solo acceda a los datos estrictamente necesarios para sus funciones."
+      },
+      {
+        "text": "Auditoría de logs que registre las modificaciones, fechas y usuarios que alteraron la información.",
+        "isCorrect": true,
+        "rationale": "Los registros de auditoría proporcionan la trazabilidad requerida por las normativas para detectar y deslindar responsabilidades ante alteraciones."
+      },
+      {
+        "text": "Asignación de credenciales administrativas universales a todo el personal técnico de la empresa.",
+        "isCorrect": false,
+        "rationale": "Compartir credenciales universales destruye la trazabilidad individual y viola gravemente los principios de menor privilegio."
+      },
+      {
+        "text": "Publicación de las copias de seguridad en servidores de acceso público para facilitar la restauración.",
+        "isCorrect": false,
+        "rationale": "Exponer respaldos de datos en directorios públicos quebranta la confidencialidad y expone la información a filtraciones masivas."
+      }
+    ],
+    "hint": "Identifica los principios orientados a proteger la confidencialidad, trazabilidad e integridad de la información sensible.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En un flujo de trabajo de Extracción, Transformación y Carga (ETL), ¿cuál es el propósito fundamental de la fase de Transformación (T)?",
+    "opciones": [
+      {
+        "text": "Convertir los datos crudos transaccionales a las estructuras, formatos y reglas lógicas requeridas por el negocio para el análisis.",
+        "isCorrect": true,
+        "rationale": "La transformación limpia, normaliza y adapta los datos del modelo operativo original al modelo dimensional requerido por el área analítica."
+      },
+      {
+        "text": "Extraer los archivos planos desde sensores IoT hacia el almacenamiento temporal en disco local.",
+        "isCorrect": false,
+        "rationale": "La captura o ingesta inicial desde las fuentes hacia el área de staging pertenece a la fase de Extracción (E)."
+      },
+      {
+        "text": "Cargar directamente la información sin modificar dentro del Data Warehouse analítico.",
+        "isCorrect": false,
+        "rationale": "Guardar los datos directamente en el destino sin alteraciones corresponde a un proceso de carga simple (o un enfoque ELT previo a transformar)."
+      },
+      {
+        "text": "Eliminar la gobernanza de datos para acelerar las consultas directas sobre el motor transaccional.",
+        "isCorrect": false,
+        "rationale": "La fase de transformación aplica activamente reglas de gobernanza y calidad, en lugar de eliminarlas."
+      },
+      {
+        "text": "Bloquear la conexión de los servidores corporativos para impedir accesos remotos durante la noche.",
+        "isCorrect": false,
+        "rationale": "El aislamiento de red es una medida de seguridad perimetral que no guarda relación con la lógica de transformación de datos."
+      }
+    ],
+    "hint": "Considera cómo los datos operativos crudos se moldean para responder a las necesidades analíticas de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué define conceptualmente a la 'Data cruda' o 'Row Data' dentro de los componentes de una arquitectura de datos?",
+    "opciones": [
+      {
+        "text": "Información original recopilada desde fuentes diversas que no ha sido sometida a ninguna alteración o filtrado.",
+        "isCorrect": true,
+        "rationale": "Los datos crudos representan la captura fiel del evento o transacción en su estado nativo, antes de cualquier procesamiento o limpieza."
+      },
+      {
+        "text": "Conjuntos de datos limpios, agregados y dispuestos en esquemas en estrella listos para consulta.",
+        "isCorrect": false,
+        "rationale": "Los datos agregados y organizados en esquemas estrella son el resultado final de un proceso de modelado y transformación analítica."
+      },
+      {
+        "text": "Reportes ejecutivos exportados periódicamente a formato de Hoja de Cálculo para la alta gerencia.",
+        "isCorrect": false,
+        "rationale": "Los reportes finales son productos de consumo formateados y procesados, lo opuesto a la data cruda sin transformar."
+      },
+      {
+        "text": "Algoritmos supervisados de Machine Learning entrenados para predecir tendencias de mercado.",
+        "isCorrect": false,
+        "rationale": "El Machine Learning es una técnica de análisis avanzado que consume datos, no un tipo de dato fuente crudo en sí mismo."
+      },
+      {
+        "text": "Bases de datos relacionales que han sido sometidas a un proceso de normalización hasta la tercera forma normal.",
+        "isCorrect": false,
+        "rationale": "Las bases de datos normalizadas ya sufrieron estructuración y modelado lógico, superando la etapa de data cruda."
+      }
+    ],
+    "hint": "Enfócate en el estado en que se encuentran los datos en el momento exacto de su captura original.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para una entidad del sector financiero que gestiona millones de transacciones operativas y análisis de riesgo, ¿cuál es el esquema de almacenamiento híbrido más eficiente?",
+    "opciones": [
+      {
+        "text": "Mantener las operaciones del día a día en almacenamiento local de baja latencia y depositar los registros históricos en repositorios analíticos distribuídos.",
+        "isCorrect": true,
+        "rationale": "Este enfoque hibrido optimiza la velocidad transaccional en el sitio operativo mientras aprovecha la escalabilidad del sistema distribuido para el análisis histórico masivo."
+      },
+      {
+        "text": "Almacenar la base de datos de producción únicamente en cintas magnéticas locales y realizar los respaldos en la nube pública.",
+        "isCorrect": false,
+        "rationale": "Las cintas magnéticas son medios de respaldo de acceso secuencial y lento, totalmente inviables para las operaciones transaccionales diarias."
+      },
+      {
+        "text": "Guardar toda la información operativa transaccional en archivos planos de texto alojados en carpetas de red compartidas.",
+        "isCorrect": false,
+        "rationale": "Los archivos planos no garantizan propiedades ACID ni la concurrencia necesaria para la operativa financiera crítica."
+      },
+      {
+        "text": "Procesar las transacciones financieras exclusivamente mediante hojas de cálculo individuales distribuidas por correo.",
+        "isCorrect": false,
+        "rationale": "Las hojas de cálculo desconectadas carecen de gobernanza, seguridad, escalabilidad e integridad transaccional para un banco."
+      },
+      {
+        "text": "Migrar todo el histórico de compras a bases de datos orientadas a grafos sin establecer índices ni particiones.",
+        "isCorrect": false,
+        "rationale": "Las bases de datos de grafos se especializan en relaciones complejas de red, no en el almacenamiento analítico masivo de transacciones estructuradas."
+      }
+    ],
+    "hint": "Piensa en la necesidad de baja latencia para la operativa diaria versus la alta capacidad requerida para el análisis histórico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes características corresponden al paradigma de las bases de datos NoSQL? (Selecciona todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Capacidad para procesar y almacenar grandes volúmenes de datos no estructurados o semiestructurados.",
+        "isCorrect": true,
+        "rationale": "Las bases de datos NoSQL fueron diseñadas para manejar variedad de formatos de datos que no encajan en esquemas relacionales rígidos."
+      },
+      {
+        "text": "Soporte para múltiples modelos de datos como documentos, clave-valor, columnas anchas y grafos.",
+        "isCorrect": true,
+        "rationale": "A diferencia del estándar relacional tabular, NoSQL ofrece distintas familias de motores adaptadas al tipo de estructura o relación de los datos."
+      },
+      {
+        "text": "Esquemas dinámicos o flexibles que permiten modificar campos sin requerir migraciones complejas.",
+        "isCorrect": true,
+        "rationale": "El enfoque 'schema-on-read' o esquema flexible permite añadir atributos a los documentos o registros sin alterar una estructura de tabla fija."
+      },
+      {
+        "text": "Obligatoriedad estricta de definir relaciones entre tablas mediante claves primarias y foráneas.",
+        "isCorrect": false,
+        "rationale": "El uso estricto de claves primarias y foráneas entre tablas normalizadas es característico del modelo relacional SQL, no del paradigma NoSQL."
+      },
+      {
+        "text": "Incapacidad para operar en arquitecturas distribuidas o nodos en la nube.",
+        "isCorrect": false,
+        "rationale": "Una de las fortalezas centrales de los motores NoSQL es su escalabilidad horizontal nativa en clústeres distribuidos."
+      }
+    ],
+    "hint": "Considera las diferencias clave entre esquemas rígidos relacionales y esquemas flexibles diseñados para Big Data.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué diferencia fundamental existe entre el procesamiento de datos por lotes (Batch) y el procesamiento en tiempo real (Streaming)?",
+    "opciones": [
+      {
+        "text": "El procesamiento por lotes acumula datos para ejecutarlos en bloques en intervalos programados, mientras que el procesamiento en tiempo real procesa los eventos inmediatamente al ser generados.",
+        "isCorrect": true,
+        "rationale": "El paradigma Batch prioriza el volumen acumulado y la precisión diferida, mientras que Streaming busca la inmediatez e ingesta continua del dato."
+      },
+      {
+        "text": "El procesamiento por lotes solo funciona sobre datos de tipo imagen, mientras que el procesamiento en tiempo real solo procesa texto.",
+        "isCorrect": false,
+        "rationale": "Ambos modos de procesamiento son independientes del tipo de medio; pueden procesar texto, imágenes, números o métricas."
+      },
+      {
+        "text": "El procesamiento en tiempo real exige apagar los sistemas transaccionales durante la ejecución del análisis.",
+        "isCorrect": false,
+        "rationale": "El procesamiento en tiempo real analiza los flujos en paralelo sin interrumpir las operaciones transaccionales del negocio."
+      },
+      {
+        "text": "El procesamiento por lotes ofrece una latencia significativamente menor que el procesamiento en tiempo real.",
+        "isCorrect": false,
+        "rationale": "Por definición, el procesamiento por lotes tiene mayor latencia debido a la acumulación periódica de datos antes de su ejecución."
+      },
+      {
+        "text": "El procesamiento por lotes requiere obligatoriamente una arquitectura Serverless en la nube.",
+        "isCorrect": false,
+        "rationale": "Los procesos en lote pueden ejecutarse en infraestructura dedicada, servidores in-house o entornos tradicionales sin depender de Serverless."
+      }
+    ],
+    "hint": "Piensa en la frecuencia de ejecución y la inmediatez con la que los datos necesitan ser analizados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de Apache Kafka dentro de una arquitectura moderna de procesamiento de datos?",
+    "opciones": [
+      {
+        "text": "Actuar como una plataforma distribuida de transmisión de eventos basada en el patrón publicador/suscriptor para ingesta continua.",
+        "isCorrect": true,
+        "rationale": "Apache Kafka desacopla emisores y receptores de datos, gestionando flujos de eventos masivos en tiempo real con alta disponibilidad."
+      },
+      {
+        "text": "Servir como motor principal de renderizado gráfico para tableros interactivos de Business Intelligence.",
+        "isCorrect": false,
+        "rationale": "Kafka es una plataforma de transporte e ingesta de flujos de datos, no un motor de visualización ni de reporte visual."
+      },
+      {
+        "text": "Funcionar como un motor de base de datos relacional con soporte nativo para consultas SQL complejas.",
+        "isCorrect": false,
+        "rationale": "Aunque posee librerías para procesamiento de flujos, Kafka no es una base de datos relacional orientada a tablas estáticas."
+      },
+      {
+        "text": "Aumentar la capacidad física de los discos duros locales mediante algoritmos de compresión por hardware.",
+        "isCorrect": false,
+        "rationale": "Kafka es una solución de software distribuida para eventos, no una herramienta para modificar el hardware local."
+      },
+      {
+        "text": "Administrar el directorio activo y las contraseñas de red de los empleados de una compañía.",
+        "isCorrect": false,
+        "rationale": "La gestión de identidades corporativas corresponde a servicios de directorio como LDAP o Active Directory, no a Apache Kafka."
+      }
+    ],
+    "hint": "Observa el patrón de mensajería utilizado para ingerir y distribuir flujos continuos de datos a alta velocidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes medidas previenen eficazmente pérdidas catastróficas de datos provocadas por ciberataques como el Ransomware? (Selecciona todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Implementación de autenticación multifactor (MFA) para el acceso a la infraestructura de datos.",
+        "isCorrect": true,
+        "rationale": "La autenticación multifactor dificulta que atacantes usen credenciales robadas para vulnerar servidores de datos."
+      },
+      {
+        "text": "Ejecución periódica de respaldos (backups) automatizados almacenados de forma aislada o en repositorios secundarios.",
+        "isCorrect": true,
+        "rationale": "Disponer de respaldos inmutables y físicamente aislados permite restaurar la operación sin pagar rescates ante el cifrado malicioso."
+      },
+      {
+        "text": "Cifrado robusto de los contenedores de datos y bases de datos estratégicas.",
+        "isCorrect": true,
+        "rationale": "El cifrado impide que los atacantes exfiltren y lean la información confidencial aunque logren acceder al sistema de archivos."
+      },
+      {
+        "text": "Desactivación de los firewalls internos para reducir el tiempo de latencia en la transmisión de datos.",
+        "isCorrect": false,
+        "rationale": "Remover firewalls expone los servicios internos a escaneos y propagación lateral no autorizada dentro de la red corporativa."
+      },
+      {
+        "text": "Otorgamiento de permisos absolutos de escritura en el servidor de base de datos a todas las aplicaciones operativas.",
+        "isCorrect": false,
+        "rationale": "Conceder permisos excesivos amplifica el daño si una sola aplicación o cuenta es comprometida por un programa malicioso."
+      }
+    ],
+    "hint": "Identifica las prácticas preventivas y de recuperación ante secuestros o violaciones de seguridad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En un entorno de comercio minorista (retail), se observa una baja rotación de mercancía perecedera que provoca mermas recurrentes. ¿De qué manera la arquitectura de datos aporta una solución estratégica?",
+    "opciones": [
+      {
+        "text": "Consolidando las ventas e inventarios en un Data Warehouse para analizar patrones de consumo históricos y ajustar el reabastecimiento.",
+        "isCorrect": true,
+        "rationale": "Integrar datos históricos permite proyectar la demanda real por temporada, calibrando los pedidos para evitar exceso de stock mermado."
+      },
+      {
+        "text": "Eliminando los registros de los productos mermados para evitar que figuren en las auditorías de fin de año.",
+        "isCorrect": false,
+        "rationale": "Borrar registros altera fraudulentamente los datos y destruye la trazabilidad contable, empeorando el problema de gestión."
+      },
+      {
+        "text": "Incrementando al doble el volumen de compra de la mercancía perecedera sin revisar la demanda previa.",
+        "isCorrect": false,
+        "rationale": "Comprar a ciegas sin considerar los históricos de venta incrementaría directamente las mermas y las pérdidas financieras."
+      },
+      {
+        "text": "Desconectando las alertas del sistema de almacén para que no notifiquen las fechas de vencimiento próximas.",
+        "isCorrect": false,
+        "rationale": "Desactivar las alertas suprime la visibilidad del problema operacional, impidiendo tomar acciones comerciales correctivas a tiempo."
+      },
+      {
+        "text": "Desplazando todos los datos operacionales a archivos de texto locales administrados de forma independiente por cada cajero.",
+        "isCorrect": false,
+        "rationale": "Fragmentar los datos en archivos aislados destruye la centralización y la capacidad de análisis consolidado del negocio."
+      }
+    ],
+    "hint": "Evalúa cómo la consolidación histórica permite prever el comportamiento de ventas por temporadas o rotación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes capas componen estructuralmente la Arquitectura Lambda en el procesamiento masivo de datos? (Selecciona todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Capa de lotes (Batch Layer), orientada al procesamiento masivo, inmutable y preciso de todo el histórico de datos.",
+        "isCorrect": true,
+        "rationale": "La capa de lotes almacena la data maestra sin modificaciones y calcula vistas procesadas exhaustivas a intervalos regulares."
+      },
+      {
+        "text": "Capa de velocidad (Speed Layer), dedicada al procesamiento en tiempo real de datos recientes para minimizar la latencia.",
+        "isCorrect": true,
+        "rationale": "La capa de velocidad compensa la latencia del proceso batch analizando de inmediato los eventos que van ingresando."
+      },
+      {
+        "text": "Capa de servicio (Serving Layer), encargada de responder las consultas combinando los resultados precomputados de las capas previas.",
+        "isCorrect": true,
+        "rationale": "La capa de servicio expone vistas consolidadas integrando las lecturas históricas de lotes con los datos recientes en tiempo real."
+      },
+      {
+        "text": "Capa de transmisión analógica, diseñada para convertir video en vivo a formatos de texto estático.",
+        "isCorrect": false,
+        "rationale": "La conversión de medios analógicos no forma parte de la especificación teórica de la Arquitectura Lambda de datos."
+      },
+      {
+        "text": "Capa de aislamiento perimetral, orientada a impedir el intercambio de datos entre servicios de un mismo clúster.",
+        "isCorrect": false,
+        "rationale": "La arquitectura Lambda busca la integración de capas para responder consultas, no el bloqueo de comunicación entre componentes."
+      }
+    ],
+    "hint": "Recuerda la arquitectura híbrida que combina procesamiento en tiempo real con procesamiento por lotes para responder consultas analíticas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un equipo de analistas necesita optimizar el tiempo de respuesta de las consultas sobre una tabla analítica que supera los miles de millones de registros. ¿Qué técnica de modelado y almacenamiento es la recomendada?",
+    "opciones": [
+      {
+        "text": "Aplicar particionamiento de datos por criterios temporales e indexación adecuada sobre las columnas de filtro frecuente.",
+        "isCorrect": true,
+        "rationale": "El particionamiento evita el escaneo total de la tabla (full table scan), dirigiendo la consulta solo al bloque temporal relevante."
+      },
+      {
+        "text": "Eliminar todos los índices primarios y secundarios para ahorrar espacio de metadatos en el servidor.",
+        "isCorrect": false,
+        "rationale": "Sin índices, el motor de base de datos se ve obligado a realizar lecturas secuenciales completas, aumentando drásticamente la latencia."
+      },
+      {
+        "text": "Convertir todos los campos numéricos a cadenas de texto sin restricción de longitud.",
+        "isCorrect": false,
+        "rationale": "Transformar números a texto incrementa el consumo de almacenamiento y ralentiza las operaciones de agregación y filtrado."
+      },
+      {
+        "text": "Deshabilitar la compresión de bloques en disco para que el motor evite ciclos de CPU al descomprimir.",
+        "isCorrect": false,
+        "rationale": "Desactivar la compresión aumenta el volumen de lectura/escritura en I/O de disco, siendo generalmente más perjudicial para la velocidad."
+      },
+      {
+        "text": "Duplicar la tabla completa dentro de cada nodo del clúster sin aplicar ninguna segmentación.",
+        "isCorrect": false,
+        "rationale": "Duplicar tablas masivas sin segmentar satura la memoria y el almacenamiento de los nodos sin solucionar la lentitud de consulta."
+      }
+    ],
+    "hint": "Considera la estrategia que divide la información en fragmentos lógicos para evitar leer la totalidad de la tabla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes repercusiones representan impactos negativos directos derivados de una mala calidad e inconsistencia de datos? (Selecciona todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Emisión de reportes financieros con errores que pueden acarrear sanciones regulatorias o decisiones erróneas.",
+        "isCorrect": true,
+        "rationale": "La inconsistencia contable expone a la empresa a multas fiscales y estimaciones erróneas de rentabilidad."
+      },
+      {
+        "text": "Envíos duplicados de pedidos a clientes en plataformas de e-commerce, incrementando los costos logísticos.",
+        "isCorrect": true,
+        "rationale": "La duplicación de transacciones genera insatisfacción en el cliente y doble gasto operativo de despacho."
+      },
+      {
+        "text": "Diagnósticos y tratamientos médicos inadecuados producto de la duplicidad o alteración de historiales clínicos.",
+        "isCorrect": true,
+        "rationale": "En el sector salud, la falta de integridad en los expedientes compromete la seguridad y vida de los pacientes."
+      },
+      {
+        "text": "Incremento involuntario de la velocidad física del procesador del servidor principal.",
+        "isCorrect": false,
+        "rationale": "Los datos erróneos afectan la validez lógica de la información, no la velocidad física de reloj del hardware."
+      },
+      {
+        "text": "Reducción automática de la cuota de impuestos exigida por los entes reguladores.",
+        "isCorrect": false,
+        "rationale": "Presentar datos con errores ante entes fiscales desencadena auditorías y multas, en lugar de reducciones tributarias."
+      }
+    ],
+    "hint": "Identifica las consecuencias operacionales, financieras e institucionales de trabajar con datos inconsistentes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia conceptual fundamental entre la escalabilidad vertical (Scale-Up) y la escalabilidad horizontal (Scale-Out)?",
+    "opciones": [
+      {
+        "text": "La escalabilidad vertical incrementa los recursos físicos de un solo servidor, mientras que la horizontal agrega más nodos a un clúster distribuido.",
+        "isCorrect": true,
+        "rationale": "Scale-Up repotencia la máquina existente (CPU/RAM); Scale-Out distribuye la carga sumando nuevos servidores que trabajan en conjunto."
+      },
+      {
+        "text": "La escalabilidad vertical opera únicamente en entornos de código abierto, mientras que la horizontal requiere software propietario.",
+        "isCorrect": false,
+        "rationale": "Ambos enfoques de escalado son conceptos de arquitectura independientes del tipo de licencia de software utilizada."
+      },
+      {
+        "text": "La escalabilidad horizontal consiste en cambiar discos mecánicos por discos sólidos dentro del mismo chasis.",
+        "isCorrect": false,
+        "rationale": "Reemplazar componentes por otros más potentes en el mismo chasis es un ejemplo de escalabilidad vertical, no horizontal."
+      },
+      {
+        "text": "La escalabilidad vertical impide el uso de bases de datos relacionales SQL.",
+        "isCorrect": false,
+        "rationale": "Las bases de datos SQL tradicionales han utilizado históricamente la escalabilidad vertical como su mecanismo principal de crecimiento."
+      },
+      {
+        "text": "La escalabilidad horizontal elimina la necesidad de contar con redes de comunicación entre servidores.",
+        "isCorrect": false,
+        "rationale": "La escalabilidad horizontal depende críticamente de una red de interconexión rápida y confiable entre todos los nodos del clúster."
+      }
+    ],
+    "hint": "Piensa en la diferencia entre repotenciar una sola máquina versus agregar múltiples máquinas que trabajen en conjunto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple la orquestación dentro de un flujo de trabajo de ingeniería de datos (Data Pipeline)?",
+    "opciones": [
+      {
+        "text": "Programar, coordinar, gestionar las dependencias y supervisar el estado de ejecución de cada tarea dentro del flujo.",
+        "isCorrect": true,
+        "rationale": "La orquestación asegura que cada paso del proceso (extracción, limpieza, carga) se ejecute en el orden correcto y gestione fallos automáticamente."
+      },
+      {
+        "text": "Diseñar los aspectos estéticos y colores de las interfaces gráficas que consumen los usuarios finales.",
+        "isCorrect": false,
+        "rationale": "El diseño de interfaz gráfica corresponde al área de frontend o UI/UX, no a los motores de orquestación de datos."
+      },
+      {
+        "text": "Cifrar mecánicamente las tarjetas de red de los servidores de almacenamiento local.",
+        "isCorrect": false,
+        "rationale": "El cifrado de red es una tarea de infraestructura de seguridad, no de un orquestador de flujos de datos."
+      },
+      {
+        "text": "Sustituir las consultas de base de datos eliminando el lenguaje SQL del flujo corporativo.",
+        "isCorrect": false,
+        "rationale": "Los orquestadores ejecutan y coordinan scripts o consultas (incluyendo SQL), pero no reemplazan los lenguajes de consulta."
+      },
+      {
+        "text": "Supervisar físicamente la temperatura ambiental del Data Center mediante personal dedicado.",
+        "isCorrect": false,
+        "rationale": "El monitoreo de instalaciones físicas atañe al mantenimiento de la infraestructura del Data Center, no al software de flujos de datos."
+      }
+    ],
+    "hint": "Observa cómo se coordinan las secuencias de tareas automatizadas en las distintas etapas de procesamiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al evaluar la migración de una infraestructura de datos corporativa desde un modelo In-House hacia la nube pública, ¿cuál representa una de las principales diferencias a nivel de modelo financiero?",
+    "opciones": [
+      {
+        "text": "La transición desde un gasto de capital inicial en equipamiento (CapEx) hacia un modelo de costo operativo basado en el consumo (OpEx).",
+        "isCorrect": true,
+        "rationale": "La nube evita realizar inversiones cuantiosas iniciales en servidores propios (CapEx), reemplazándolas por pagos periódicos según el uso real (OpEx)."
+      },
+      {
+        "text": "La eliminación total de los costos operativos y de personal especializado en la empresa.",
+        "isCorrect": false,
+        "rationale": "Aunque se reducen tareas de mantenimiento físico, la nube sigue requiriendo inversión en gestión, arquitectura y costos de consumo."
+      },
+      {
+        "text": "La garantía absoluta de que las transferencias de salida de datos masivos no generarán ningún costo.",
+        "isCorrect": false,
+        "rationale": "Los proveedores de la nube comúnmente tarifan la transferencia de salida de datos (egress), un aspecto clave a presupuestar."
+      },
+      {
+        "text": "El requisito obligatorio de adquirir licencias físicas para cada componente virtualizado.",
+        "isCorrect": false,
+        "rationale": "En la nube prevalecen los modelos de licenciamiento incluidos en el pago por uso o licencias flexibles por suscripción."
+      },
+      {
+        "text": "La obligación legal de ubicar los servidores físicos dentro de las oficinas centrales del cliente.",
+        "isCorrect": false,
+        "rationale": "La nube pública aloja la infraestructura en centros de datos remotos gestionados por el proveedor del servicio."
+      }
+    ],
+    "hint": "Compara la inversión en la compra de servidores propios versus el pago por consumo de servicios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes situaciones justifican la adopción de una arquitectura de datos híbrida (combinando In-House y Cloud)? (Selecciona todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Cumplimiento de regulaciones estrictas que exigen alojar datos sensibles localmente mientras se usa la nube para análisis general.",
+        "isCorrect": true,
+        "rationale": "El modelo híbrido permite mantener el control legal directo sobre datos regulados en sitio, aprovechando la nube para otras cargas."
+      },
+      {
+        "text": "Aprovechamiento de la capacidad elástica de cómputo en la nube para gestionar picos estacionales de demanda.",
+        "isCorrect": true,
+        "rationale": "Permite escalar temporalmente en la nube durante eventos de gran tráfico sin necesidad de sobredimensionar los servidores locales."
+      },
+      {
+        "text": "Implementación de planes de recuperación ante desastres (DRP) manteniendo respaldos redundantes en la nube.",
+        "isCorrect": true,
+        "rationale": "Resguardar copias activas en la nube asegura la continuidad operativa frente a fallos o siniestros en el Data Center principal."
+      },
+      {
+        "text": "Inexistencia total de redes de comunicación o conectividad a Internet en la compañía.",
+        "isCorrect": false,
+        "rationale": "Un entorno híbrido requiere obligatoriamente conexiones de red y enlaces (como VPNs o líneas dedicadas) para sincronizar ambos entornos."
+      },
+      {
+        "text": "Voluntad de prescindir de cualquier mecanismo de control de identidad o autenticación.",
+        "isCorrect": false,
+        "rationale": "La arquitectura híbrida exige una gestión de identidad y seguridad más rigurosa para proteger la comunicación entre entornos."
+      }
+    ],
+    "hint": "Evalúa el equilibrio entre control estricto local para datos críticos y elasticidad en la nube para procesamiento intensivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué característica define esencialmente a una arquitectura de microservicios en contraste con un diseño monolítico?",
+    "opciones": [
+      {
+        "text": "Divide la aplicación en servicios autónomos e independientes centrados en tareas específicas que interactúan mediante APIs.",
+        "isCorrect": true,
+        "rationale": "Cada microservicio se despliega, escala y mantiene de forma independiente, desacoplando las funciones lógicas de la aplicación."
+      },
+      {
+        "text": "Empaqueta la lógica de negocio, la base de datos y la interfaz en un único bloque de código indivisible.",
+        "isCorrect": false,
+        "rationale": "Agrupar todas las capas del sistema en una sola unidad ejecutable es la definición clásica de una arquitectura monolítica."
+      },
+      {
+        "text": "Obliga a que todos los componentes utilicen obligatoriamente el mismo lenguaje de programación y base de datos.",
+        "isCorrect": false,
+        "rationale": "Los microservicios ofrecen poliglotismo, permitiendo seleccionar el lenguaje y base de datos más conveniente para cada servicio."
+      },
+      {
+        "text": "Prohíbe la comunicación remota entre los diferentes módulos funcionales del software.",
+        "isCorrect": false,
+        "rationale": "Los microservicios requieren de forma inherente mecanismos de comunicación de red (como REST o gRPC) para colaborar."
+      },
+      {
+        "text": "Elimina la necesidad de realizar pruebas de software o monitoreo de eventos.",
+        "isCorrect": false,
+        "rationale": "Debido a su naturaleza distribuida, la arquitectura de microservicios exige una estrategia de pruebas y monitoreo más rigurosa."
+      }
+    ],
+    "hint": "Considera el principio de modularidad e independencia de despliegue que promueve este enfoque.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En un ecosistema basado en microservicios, ¿cuál es la responsabilidad principal de un 'API Gateway'?",
+    "opciones": [
+      {
+        "text": "Fungir como punto único de entrada que gestiona, autentica, enruta y limita las solicitudes externas hacia los microservicios correspondientes.",
+        "isCorrect": true,
+        "rationale": "El API Gateway centraliza aspectos transversales como enrutamiento, seguridad y balanceo, evitando exponer los microservicios directamente."
+      },
+      {
+        "text": "Reemplazar la base de datos relacional almacenando permanentemente todos los registros transaccionales.",
+        "isCorrect": false,
+        "rationale": "El API Gateway es una puerta de enlace de tráfico de red, no un motor de almacenamiento de persistencia de datos."
+      },
+      {
+        "text": "Compilar de forma unificada el código fuente de todos los microservicios antes de su ejecución.",
+        "isCorrect": false,
+        "rationale": "Los microservicios se compilan y despliegan de forma independiente; el Gateway enruta solicitudes en tiempo de ejecución."
+      },
+      {
+        "text": "Generar automáticamente la documentación comercial de la empresa sin requerir configuración.",
+        "isCorrect": false,
+        "rationale": "El API Gateway administra tráfico técnico de red, no crea contenido o documentación de negocio de manera autónoma."
+      },
+      {
+        "text": "Desactivar la encriptación para acelerar las peticiones dentro de la red privada del cliente.",
+        "isCorrect": false,
+        "rationale": "El API Gateway refuerza las políticas de seguridad en lugar de desactivar el cifrado de las peticiones."
+      }
+    ],
+    "hint": "Piensa en una puerta de enlace centralizada que recibe las solicitudes de los clientes y las distribuye de manera segura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a protocolos e interfaces comúnmente utilizados para la integración y comunicación en arquitecturas orientadas a servicios? (Selecciona todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "REST APIs sobre transporte HTTP/HTTPS utilizando estructuras de intercambio JSON.",
+        "isCorrect": true,
+        "rationale": "REST es el estándar web más extendido para la creación de servicios ligeros y desvinculados que intercambian JSON."
+      },
+      {
+        "text": "GraphQL para consultas flexibles donde el cliente especifica la estructura exacta de datos requerida.",
+        "isCorrect": true,
+        "rationale": "GraphQL permite a las aplicaciones cliente solicitar únicamente los campos necesarios, optimizando el ancho de banda."
+      },
+      {
+        "text": "gRPC para comunicaciones de alta velocidad y baja latencia basadas en HTTP/2 y Protocol Buffers.",
+        "isCorrect": true,
+        "rationale": "gRPC es altamente eficiente para la comunicación interna entre microservicios gracias a su serialización binaria."
+      },
+      {
+        "text": "Líneas físicas dedicadas de puerto paralelo para conectar impresoras de matriz de punto.",
+        "isCorrect": false,
+        "rationale": "Los puertos paralelos físicos son interfaces de hardware obsoletas para periféricos, no protocolos de red para microservicios."
+      },
+      {
+        "text": "Transmisiones analógicas de radio de frecuencia modulada para sincronizar tablas de SQL.",
+        "isCorrect": false,
+        "rationale": "La radio FM no es un protocolo de transporte de software o red apto para la integración de microservicios."
+      }
+    ],
+    "hint": "Identifica los estándares web modernos utilizados para intercambiar mensajes e interfaces estructuradas entre aplicaciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la arquitectura de datos 'Serverless' (como AWS Lambda o Cloud Functions), ¿cómo se administra la infraestructura de cómputo subyacente?",
+    "opciones": [
+      {
+        "text": "El proveedor de la nube gestiona completamente el aprovisionamiento y escalado de los servidores, cobrando únicamente por el tiempo de ejecución del código.",
+        "isCorrect": true,
+        "rationale": "Serverless abstrae la gestión del servidor; la infraestructura se activa mediante eventos, escala automáticamente y tarifa por consumo real."
+      },
+      {
+        "text": "El equipo de desarrollo debe instalar y configurar manualmente el sistema operativo en cada máquina virtual utilizada.",
+        "isCorrect": false,
+        "rationale": "Tener que administrar sistemas operativos o máquinas virtuales corresponde al modelo IaaS, no al paradigma Serverless."
+      },
+      {
+        "text": "Requiere mantener un servidor físico encendido las 24 horas del día reservado exclusivamente para la aplicación.",
+        "isCorrect": false,
+        "rationale": "A diferencia de los servidores dedicados, en Serverless las instancias se crean bajo demanda y se destruyen al finalizar el evento."
+      },
+      {
+        "text": "Inhabilita la posibilidad de conectar la lógica de código con bases de datos o servicios de almacenamiento en la nube.",
+        "isCorrect": false,
+        "rationale": "Serverless se integra nativamente con repositorios de datos, colas de mensajes y servicios de almacenamiento en la nube."
+      },
+      {
+        "text": "Exige que las aplicaciones sean ejecutadas en servidores locales alojados en la propia oficina del usuario.",
+        "isCorrect": false,
+        "rationale": "Serverless se apoya en la infraestructura altamente gestionada y distribuida de los proveedores de nube pública."
+      }
+    ],
+    "hint": "Recuerda que la abstracción del servidor permite evitar el aprovisionamiento manual y pagar únicamente por los recursos consumidos durante los eventos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-31",
+    "diplomado": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes servicios y bases de datos operan bajo un modelo completamente gestionado o 'Serverless' en la nube? (Selecciona todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Amazon DynamoDB",
+        "isCorrect": true,
+        "rationale": "DynamoDB es una base de datos NoSQL Serverless que escala el almacenamiento y rendimiento de forma automática sin administrar servidores."
+      },
+      {
+        "text": "Google Cloud Firestore / Firebase",
+        "isCorrect": true,
+        "rationale": "Firestore ofrece almacenamiento documental completamente administrado y elástico impulsado por eventos."
+      },
+      {
+        "text": "Amazon S3",
+        "isCorrect": true,
+        "rationale": "Amazon S3 es un servicio de almacenamiento de objetos Serverless donde se abona por los gigabytes almacenados e ingertados."
+      },
+      {
+        "text": "Instancia local de un motor de base de datos instalado en un computador personal sin conexión.",
+        "isCorrect": false,
+        "rationale": "Un motor instalado localmente exige administración directa de parches, almacenamiento y recursos físicos por el usuario."
+      },
+      {
+        "text": "Disco duro externo portátil conectado mediante cable USB a una estación de trabajo.",
+        "isCorrect": false,
+        "rationale": "Un disco físico externo es un medio local de persistencia manual carente de las capacidades elásticas gestionadas del modelo Serverless."
+      }
+    ],
+    "hint": "Selecciona las soluciones que escalan automáticamente bajo demanda sin requerir la administración directa de servidores de base de datos por parte del usuario.",
+    "activo": true
+  }
+]

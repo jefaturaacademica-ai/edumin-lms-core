@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué caracteriza fundamentalmente al concepto de Big Data en el entorno empresarial moderno?",
+    "opciones": [
+      {
+        "text": "El almacenamiento y análisis masivo de datos interrelacionados para generar patrones, predicciones y valor estratégico.",
+        "isCorrect": true,
+        "rationale": "Big Data se define por la capacidad de procesar grandes volúmenes de datos diversos para extraer análisis valiosos y tendencias predictivas."
+      },
+      {
+        "text": "La eliminación sistemática de archivos antiguos para liberar espacio en servidores locales de la empresa.",
+        "isCorrect": false,
+        "rationale": "Big Data busca aprovechar el valor estratégico de los datos acumulados en lugar de eliminarlos para ahorrar espacio físico."
+      },
+      {
+        "text": "El uso exclusivo de hojas de cálculo tradicionales para el registro manual de ventas diarias.",
+        "isCorrect": false,
+        "rationale": "El volumen y la velocidad del Big Data superan las capacidades del registro manual y de las hojas de cálculo convencionales."
+      },
+      {
+        "text": "La transmisión analógica de información mediante líneas telefónicas fijas.",
+        "isCorrect": false,
+        "rationale": "Big Data utiliza infraestructuras digitales avanzadas e interconectadas en lugar de transmisiones analógicas obsoletas."
+      },
+      {
+        "text": "El archivo físico en carpetas impresas de documentos legales corporativos.",
+        "isCorrect": false,
+        "rationale": "Big Data opera sobre estructuras y flujos de información digitalizada de alta velocidad, no sobre soportes físicos de papel."
+      }
+    ],
+    "hint": "Piensa en el volumen, análisis y propósito predictivo de la información masiva digitalizada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la inteligencia artificial, ¿qué define al término Machine Learning (aprendizaje automático)?",
+    "opciones": [
+      {
+        "text": "El mantenimiento técnico y la reparación física de los componentes de hardware de un servidor.",
+        "isCorrect": false,
+        "rationale": "Machine Learning es un concepto de software y algoritmos, no de mantenimiento físico de hardware."
+      },
+      {
+        "text": "La capacidad de un sistema algorítmico para aprender y mejorar automáticamente su precisión a partir de la experiencia y los datos.",
+        "isCorrect": true,
+        "rationale": "El aprendizaje automático entrena algoritmos con datos para adaptarlos y mejorar sus predicciones sin necesidad de reprogramación manual."
+      },
+      {
+        "text": "La programación de reglas fijas e inmutables que no cambian sin importar la cantidad de datos ingresados.",
+        "isCorrect": false,
+        "rationale": "Las reglas programadas fijas no aprenden; el Machine Learning justamente adapta su modelo en función de la nueva información recopilada."
+      },
+      {
+        "text": "El proceso manual de ingresar contraseñas de seguridad en bases de datos empresariales.",
+        "isCorrect": false,
+        "rationale": "La digitación manual de credenciales es una tarea administrativa simple, no un proceso de entrenamiento algorítmico."
+      },
+      {
+        "text": "La velocidad física con la que un procesador ejecuta operaciones matemáticas elementales.",
+        "isCorrect": false,
+        "rationale": "La velocidad del reloj del procesador mide capacidad de cómputo, mientras que el Machine Learning implica adaptación estadística de modelos."
+      }
+    ],
+    "hint": "Considera cómo los algoritmos evolucionan a medida que procesan más información histórica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la estructura recomendada para construir un 'prompt' efectivo en herramientas de IA, ¿cuáles son sus tres componentes esenciales?",
+    "opciones": [
+      {
+        "text": "Personaje o actor, contexto de la situación y solicitud precisa.",
+        "isCorrect": true,
+        "rationale": "Un prompt efectivo define quién actúa (rol), el escenario en el que se encuentra (contexto) y qué resultado específico se espera (solicitud)."
+      },
+      {
+        "text": "Nombre del programador, clave de acceso y lenguaje de código fuente.",
+        "isCorrect": false,
+        "rationale": "Estos elementos corresponden a autenticación y desarrollo de software, no a la redacción de instrucciones para un modelo de lenguaje."
+      },
+      {
+        "text": "Dirección IP, sistema operativo del equipo y capacidad de memoria RAM.",
+        "isCorrect": false,
+        "rationale": "Estos son especificaciones de red y hardware, no variables de redacción contextual de un prompt."
+      },
+      {
+        "text": "Título del proyecto, fecha de inicio y presupuesto asignado.",
+        "isCorrect": false,
+        "rationale": "Aunque corresponden a la gestión de proyectos, no forman la estructura sintáctica recomendada para guiar a una IA."
+      },
+      {
+        "text": "Licencia de software, contraseña de usuario y ancho de banda de internet.",
+        "isCorrect": false,
+        "rationale": "Son parámetros de conectividad y derechos de uso, inconexos con la técnica de diseño de instrucciones de texto."
+      }
+    ],
+    "hint": "Recuerda la analogía del guion cinematográfico utilizada para dar indicaciones a la IA.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia conceptual entre un Data Lake y un Data Warehouse?",
+    "opciones": [
+      {
+        "text": "Un Data Lake almacena datos en bruto sin estructurar, mientras que un Data Warehouse procesa y almacena datos estructurados y limpios.",
+        "isCorrect": true,
+        "rationale": "El Data Lake recopila información heterogénea tal como llega, mientras que el Data Warehouse la consolida y estructura para análisis posterior."
+      },
+      {
+        "text": "Un Data Lake se guarda en formato impreso, mientras que un Data Warehouse utiliza discos duros locales.",
+        "isCorrect": false,
+        "rationale": "Ambas son arquitecturas digitales de almacenamiento masivo; ninguna se basa en papel."
+      },
+      {
+        "text": "Un Data Lake sirve exclusivamente para finanzas, mientras que un Data Warehouse es para recursos humanos.",
+        "isCorrect": false,
+        "rationale": "Ambos tipos de depósitos de datos son transversales y pueden dar servicio a cualquier área de la organización."
+      },
+      {
+        "text": "Un Data Lake funciona únicamente mediante satélites, mientras que un Data Warehouse requiere cables submarinos.",
+        "isCorrect": false,
+        "rationale": "Las diferencias residen en la estructura y estado de procesamiento de los datos, no en el medio físico de transmisión de red."
+      },
+      {
+        "text": "Un Data Lake es un programa de diseño gráfico, mientras que un Data Warehouse es un procesador de texto.",
+        "isCorrect": false,
+        "rationale": "Ambas son soluciones de arquitectura de datos empresarial, no aplicaciones de ofimática o diseño."
+      }
+    ],
+    "hint": "Enfócate en el nivel de organización y limpieza que tienen los datos al ser almacenados en cada sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la toma de decisiones basada en datos (Data-Driven Decision Making)?",
+    "opciones": [
+      {
+        "text": "En fundamentar las estrategias empresariales en el análisis objetivo y sistemático de datos reales verificados.",
+        "isCorrect": true,
+        "rationale": "El enfoque Data-Driven prioriza la evidencia empírica extraída de la información para guiar las decisiones estratégicas de la organización."
+      },
+      {
+        "text": "En guiarse exclusivamente por las corazonadas o la intuición de la alta gerencia sin consultar reportes.",
+        "isCorrect": false,
+        "rationale": "El enfoque Data-Driven busca precisamente reemplazar la intuición pura por evidencia analítica objetiva."
+      },
+      {
+        "text": "En ceder el control operativo total a robots físicos sin supervisión de personal humano.",
+        "isCorrect": false,
+        "rationale": "Tomar decisiones con datos no equivale a la automatización física o robótica de los puestos de trabajo."
+      },
+      {
+        "text": "En cambiar la dirección corporativa según rumores no confirmados del mercado.",
+        "isCorrect": false,
+        "rationale": "Los rumores carecen de la verificación empírica y estructura requerida por la metodología Data-Driven."
+      },
+      {
+        "text": "En realizar encuestas informales de opinión sin registrarlas en ninguna plataforma digital.",
+        "isCorrect": false,
+        "rationale": "El enfoque requiere recolección, estructuración y análisis riguroso de información en sistemas de datos."
+      }
+    ],
+    "hint": "Considera la diferencia entre basar una estrategia en suposiciones o en métricas objetivas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué caso ejemplifica el concepto de monetización de datos (Data Monetization)?",
+    "opciones": [
+      {
+        "text": "El uso de modelos estadísticos y probabilísticos por parte de plataformas de apuestas para fijar cuotas y generar ingresos.",
+        "isCorrect": true,
+        "rationale": "Al utilizar datos históricos para predecir probabilidades y fijar precios o cuotas, la empresa convierte la información directamente en ganancias."
+      },
+      {
+        "text": "La venta de computadoras viejas que fueron dadas de baja en el departamento de contabilidad.",
+        "isCorrect": false,
+        "rationale": "Eso constituye la venta de activos de hardware usados, no la generación de ingresos a partir del valor intrínseco de los datos."
+      },
+      {
+        "text": "El cobro por la impresión en papel de informes financieros internos de la empresa.",
+        "isCorrect": false,
+        "rationale": "Cobrar por suministros físicos de oficina no es monetizar el valor analítico de los activos de datos."
+      },
+      {
+        "text": "La contratación de servicios externos de limpieza para las oficinas corporativas.",
+        "isCorrect": false,
+        "rationale": "Representa un gasto operativo de mantenimiento físico, no una estrategia de explotación financiera de la información."
+      },
+      {
+        "text": "El pago de licencias mensuales de programas antivirus para los empleados.",
+        "isCorrect": false,
+        "rationale": "Es un costo de ciberseguridad corporativa, no un mecanismo para generar ingresos mediante activos de datos."
+      }
+    ],
+    "hint": "Piensa en cómo transformar los análisis y algoritmos de información en una fuente directa de ingresos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿En qué sectores se aplican modelos predictivos basados en Big Data para anticipar eventos o comportamientos? (Selecciona todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Sector salud, para diagnosticar patologías y predecir brotes de enfermedades.",
+        "isCorrect": true,
+        "rationale": "La analítica de Big Data combina historiales clínicos para predecir condiciones médicas y mejorar la prevención."
+      },
+      {
+        "text": "Sector financiero, para la evaluación de riesgos crediticios y detección de fraudes.",
+        "isCorrect": true,
+        "rationale": "Los modelos analizan transacciones históricas y patrones de conducta para mitigar riesgos financieros e identificar anomalías."
+      },
+      {
+        "text": "Sector logístico, para la optimización de rutas de transporte y gestión de inventarios.",
+        "isCorrect": true,
+        "rationale": "El Big Data permite prever demanda de insumos y reducir tiempos de traslado mediante el análisis de tráfico y stocks."
+      },
+      {
+        "text": "Redacción e impresión manual de correspondencia en papel sin registro digital.",
+        "isCorrect": false,
+        "rationale": "Los procesos puramente manuales en soporte analógico no emplean modelos predictivos ni analítica de Big Data."
+      },
+      {
+        "text": "Fabricación artesanal sin recopilación de datos de producción o demanda.",
+        "isCorrect": false,
+        "rationale": "La ausencia de datos recopilados impide la creación y aplicación de modelos predictivos."
+      }
+    ],
+    "hint": "Identifica los campos donde la recopilación de grandes volúmenes de información ayuda a prever necesidades futuras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial de la ciberseguridad en la administración de datos masivos?",
+    "opciones": [
+      {
+        "text": "Aumentar automáticamente la cantidad de seguidores en las redes sociales de la empresa.",
+        "isCorrect": false,
+        "rationale": "El crecimiento de redes sociales corresponde a marketing, no a la protección de datos e infraestructura."
+      },
+      {
+        "text": "Proteger la información confidencial de la organización contra accesos no autorizados, sabotajes y fraudes.",
+        "isCorrect": true,
+        "rationale": "La ciberseguridad busca mantener la confidencialidad, integridad y disponibilidad de la información frente a amenazas externas e internas."
+      },
+      {
+        "text": "Diseñar elementos gráficos e imágenes publicitarias para la marca.",
+        "isCorrect": false,
+        "rationale": "El diseño gráfico corporativo no cumple funciones de protección o blindaje de datos."
+      },
+      {
+        "text": "Reducir la velocidad de conexión a internet para evitar gastos en datos.",
+        "isCorrect": false,
+        "rationale": "Limitar el ancho de banda no es una medida de seguridad, sino una restricción operativa de la red."
+      },
+      {
+        "text": "Incrementar el peso físico de los servidores alojados en el centro de datos.",
+        "isCorrect": false,
+        "rationale": "Las dimensiones o masa física de los equipos no determinan el grado de protección lógica de la información."
+      }
+    ],
+    "hint": "Piensa en el blindaje necesario para evitar ataques de hackers y filtraciones de información.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple la herramienta de IA llamada Dixi según lo presentado en las sesiones?",
+    "opciones": [
+      {
+        "text": "Servir como un chat conversacional y analítico para procesar datos, estructurar ideas y responder consultas.",
+        "isCorrect": true,
+        "rationale": "Dixi opera como un modelo de lenguaje interactivo que ayuda al usuario a analizar información, generar prompts y estructurar proyectos."
+      },
+      {
+        "text": "Eliminar físicamente los discos duros obsoletos de una computadora.",
+        "isCorrect": false,
+        "rationale": "Dixi es una solución de software de inteligencia artificial, no una herramienta física de destrucción de hardware."
+      },
+      {
+        "text": "Funcionar como un sistema de refrigeración líquida para procesadores.",
+        "isCorrect": false,
+        "rationale": "No es un componente de hardware o climatización para centros de datos."
+      },
+      {
+        "text": "Operar como una red social dedicada exclusivamente a la venta de ropa.",
+        "isCorrect": false,
+        "rationale": "Su propósito es el procesamiento de información e interacción analítica mediante IA, no el comercio social."
+      },
+      {
+        "text": "Reemplazar los cables de red por conexiones de cobre antiguas.",
+        "isCorrect": false,
+        "rationale": "Es una aplicación digital de procesamiento inteligente, no una infraestructura física de cableado."
+      }
+    ],
+    "hint": "Recuerda las prácticas realizadas donde se hacían preguntas a la IA para organizar proyectos y tablas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ventaja clave aporta activar la búsqueda en tiempo real (Web Search) en herramientas de IA como BlackBox AI?",
+    "opciones": [
+      {
+        "text": "Permitir la consulta y análisis de información actualizada directamente desde la web en el momento de la solicitud.",
+        "isCorrect": true,
+        "rationale": "Al conectarse a la web en tiempo real, el modelo supera el límite de su base de datos estática recopilando datos del día."
+      },
+      {
+        "text": "Aumentar automáticamente la memoria RAM física instalada en la laptop del usuario.",
+        "isCorrect": false,
+        "rationale": "La búsqueda en la web es una función de software y no altera el hardware de la computadora."
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar monitores o pantallas para ver los resultados.",
+        "isCorrect": false,
+        "rationale": "La visualización de datos requiere siempre de una interfaz física o pantalla, independientemente del origen de los datos."
+      },
+      {
+        "text": "Formatear el disco duro del usuario cada vez que se hace una pregunta.",
+        "isCorrect": false,
+        "rationale": "Formatear la memoria eliminaría los datos del usuario, lo cual es opuesto al propósito de consultar información."
+      },
+      {
+        "text": "Generar energía eléctrica para alimentar el router de internet.",
+        "isCorrect": false,
+        "rationale": "El software utiliza la conexión existente, pero no produce energía física para los componentes."
+      }
+    ],
+    "hint": "Piensa en la diferencia entre consultar un libro impreso de hace dos años y buscar noticias de hoy en un buscador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué se entiende por Internet de las Cosas (IoT)?",
+    "opciones": [
+      {
+        "text": "Un catálogo impreso de artículos para el hogar vendido en tiendas físicas.",
+        "isCorrect": false,
+        "rationale": "El IoT se basa en conectividad digital y sensores en tiempo real, no en soportes físicos impresos."
+      },
+      {
+        "text": "La red de dispositivos físicos equipados con sensores y software para conectar, transmitir y recibir datos mediante internet.",
+        "isCorrect": true,
+        "rationale": "El IoT permite que objetos y equipos (como cámaras o sensores industriales) recopilen e intercambien datos de forma remota."
+      },
+      {
+        "text": "Un motor de búsqueda que reemplaza a las páginas web convencionales.",
+        "isCorrect": false,
+        "rationale": "El IoT refiere a la interconexión de objetos y sensores físicos, no a un software específico de búsqueda web."
+      },
+      {
+        "text": "Una marca específica de computadoras portátiles diseñadas para estudiantes.",
+        "isCorrect": false,
+        "rationale": "Es una arquitectura tecnológica de conectividad global, no el nombre de un fabricante de laptops."
+      },
+      {
+        "text": "Un servicio de atención telefónica mediante operadores humanos.",
+        "isCorrect": false,
+        "rationale": "El IoT implica automatización e interconexión digital de dispositivos, no llamadas de voz tradicionales."
+      }
+    ],
+    "hint": "Piensa en cómo una cámara de vigilancia o un sensor industrial envía datos a tu teléfono desde cualquier lugar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el beneficio de la tecnología de redes 5G en el ecosistema de Big Data e IoT?",
+    "opciones": [
+      {
+        "text": "Ofrecer mayor velocidad de transmisión de datos, ultra baja latencia y alta capacidad de dispositivos conectados simultáneamente.",
+        "isCorrect": true,
+        "rationale": "La infraestructura 5G permite trasladar volúmenes masivos de datos en milisegundos, facilitando la respuesta inmediata de sensores e IA."
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar servidores o bases de datos en la nube.",
+        "isCorrect": false,
+        "rationale": "Las redes 5G mejoran la velocidad del transporte de datos, pero los servidores siguen siendo indispensables para almacenarlos."
+      },
+      {
+        "text": "Hacer que los equipos electrónicos funcionen sin requerir energía eléctrica.",
+        "isCorrect": false,
+        "rationale": "Las redes inalámbricas transmiten señales de datos, no energía para alimentar el funcionamiento de los equipos."
+      },
+      {
+        "text": "Garantizar la eliminación automática de todos los virus informáticos del mundo.",
+        "isCorrect": false,
+        "rationale": "La infraestructura de red transporta datos más rápido, pero la ciberseguridad requiere capas adicionales de software antivirus."
+      },
+      {
+        "text": "Reducir a cero el costo del papel utilizado en impresiones de oficina.",
+        "isCorrect": false,
+        "rationale": "La tecnología de telecomunicaciones no influye directamente en el precio de los insumos físicos papeleros."
+      }
+    ],
+    "hint": "Enfócate en los aspectos de velocidad de comunicación y volumen de conexiones inalámbricas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo operan las redes neuronales artificiales en el desarrollo de la inteligencia artificial?",
+    "opciones": [
+      {
+        "text": "Mediante capas de nodos interconectados que procesan datos e imitan el aprendizaje biológico para reconocer patrones complejos.",
+        "isCorrect": true,
+        "rationale": "Inspiradas en las neuronas del cerebro humano, las redes neuronales procesan información en capas para clasificar, predecir e inferir."
+      },
+      {
+        "text": "Utilizando conexiones de tejido biológico vivo dentro de los microchips de las computadoras.",
+        "isCorrect": false,
+        "rationale": "Las redes neuronales artificiales son algoritmos de software y estructuras matemáticas ejecutadas en silicio estándar."
+      },
+      {
+        "text": "A través de cables de cobre entrelazados manualmente dentro de la torre de la computadora.",
+        "isCorrect": false,
+        "rationale": "El término 'red neuronal' refiere al modelo matemático de procesamiento de información, no a un cableado físico."
+      },
+      {
+        "text": "Reemplazando la lógica algorítmica por decisiones basadas en sentimientos y emociones.",
+        "isCorrect": false,
+        "rationale": "Los modelos de IA ejecutan cálculos probabilísticos y estadísticos, careciendo de emociones o estados afectivos."
+      },
+      {
+        "text": "Mediante tablas estáticas que prohíben el procesamiento de texto e imágenes.",
+        "isCorrect": false,
+        "rationale": "Las redes neuronales son clave precisamente para procesar datos no estructurados como imágenes, audio y texto."
+      }
+    ],
+    "hint": "Recuerda la analogía con la estructura del cerebro humano para el entrenamiento analítico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué abarca el término Data Management (Gestión de Datos)?",
+    "opciones": [
+      {
+        "text": "El conjunto de prácticas, políticas y tecnologías destinadas a recolectar, organizar, proteger y analizar la información de una organización.",
+        "isCorrect": true,
+        "rationale": "Data Management engloba todo el ciclo de vida de los datos para garantizar que sean accesibles, seguros y útiles para la toma de decisiones."
+      },
+      {
+        "text": "La limpieza física con productos químicos del polvo acumulado en los teclados de la oficina.",
+        "isCorrect": false,
+        "rationale": "Es una tarea de aseo de instalaciones, desconectada de la administración lógica de la información."
+      },
+      {
+        "text": "La compra de escritorios y sillas ergonómicas para el personal administrativo.",
+        "isCorrect": false,
+        "rationale": "Se relaciona con la ergonomía y mobiliario de trabajo, no con la gestión de activos de información."
+      },
+      {
+        "text": "El diseño de afiches publicitarios impresos para ser colocados en la vía pública.",
+        "isCorrect": false,
+        "rationale": "Corresponde al departamento de diseño o publicidad visual exterior, no a la arquitectura corporativa de datos."
+      },
+      {
+        "text": "La instalación de antenas físicas de televisión en los techos de las casas.",
+        "isCorrect": false,
+        "rationale": "Es una instalación de recepción de señal analógica o digital de transmisión abierta, no una gestión de bases de datos."
+      }
+    ],
+    "hint": "Considera el ciclo integral que abarca desde la recolección hasta la protección y análisis seguro de la información.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere la Gobernanza de Datos (Data Governance) en una empresa?",
+    "opciones": [
+      {
+        "text": "Al proceso de votación política para nombrar a los gerentes de la empresa.",
+        "isCorrect": false,
+        "rationale": "La gobernanza de datos atañe a las reglas sobre la información, no a los procesos de elección ejecutiva directiva."
+      },
+      {
+        "text": "A la venta no autorizada de historiales crediticios de usuarios a terceros.",
+        "isCorrect": false,
+        "rationale": "Esa práctica vulnera la ética y legalidad; la gobernanza busca justamente prevenir el mal uso de la información."
+      },
+      {
+        "text": "Al conjunto de políticas, normas y estándares que aseguran la calidad, privacidad, seguridad e integridad de los datos.",
+        "isCorrect": true,
+        "rationale": "La gobernanza establece el marco de responsabilidad e idoneidad para que los datos sean confiables y seguros."
+      },
+      {
+        "text": "Al pago de impuestos municipales por disponer de computadoras en la oficina.",
+        "isCorrect": false,
+        "rationale": "Se trata de obligaciones tributarias corporativas, ajenas a la regulación interna del uso de la información."
+      },
+      {
+        "text": "A la contratación exclusiva de programadores que vivan en el extranjero.",
+        "isCorrect": false,
+        "rationale": "La gobernanza de datos define políticas de gestión de activos de información, no reglas de reclutamiento geográfico."
+      }
+    ],
+    "hint": "Piensa en el marco normativo interno que garantiza que los datos sean precisos, seguros y bien utilizados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones constituyen prácticas sostenibles dentro del manejo de infraestructura tecnológica y datos? (Selecciona todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Implementación de centros de datos verdes con sistemas de refrigeración de bajo consumo energético.",
+        "isCorrect": true,
+        "rationale": "Utilizar soluciones de climatización eficiente reduce significativamente la huella de carbono del procesamiento informático."
+      },
+      {
+        "text": "Depuración periódica de datos para eliminar información obsoleta, duplicada e innecesaria.",
+        "isCorrect": true,
+        "rationale": "Al eliminar basura digital, se reduce la necesidad de almacenamiento y el gasto energético continuo asociado a mantenerla."
+      },
+      {
+        "text": "Compresión de datos para optimizar la capacidad de almacenamiento y agilizar transferencias.",
+        "isCorrect": true,
+        "rationale": "Comprimir archivos minimiza el espacio utilizado en disco y la energía requerida para mover los datos por la red."
+      },
+      {
+        "text": "Mantener servidores innecesarios encendidos a máxima capacidad de cómputo sin procesar tareas.",
+        "isCorrect": false,
+        "rationale": "Mantener equipos ociosos consumiendo energía incrementa el desperdicio y la huella ecológica."
+      },
+      {
+        "text": "Desechar componentes informáticos antiguos en vertederos comunes de basura sin reciclar.",
+        "isCorrect": false,
+        "rationale": "El desecho informal de chatarra electrónica genera contaminación por metales pesados en el medio ambiente."
+      }
+    ],
+    "hint": "Busca las acciones que reducen el consumo eléctrico y minimizan el impacto ambiental de la tecnología.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la depuración de datos dentro del contexto de la sostenibilidad digital?",
+    "opciones": [
+      {
+        "text": "En identificar y eliminar datos redundantes o no relevantes para liberar espacio y reducir el gasto energético.",
+        "isCorrect": true,
+        "rationale": "Depurar implica limpiar los repositorios eliminando registros inservibles, ahorrando así energía de mantenimiento en el servidor."
+      },
+      {
+        "text": "En aplicar desinfectante líquido sobre las placas madre de los computadores.",
+        "isCorrect": false,
+        "rationale": "La depuración de datos es un procedimiento lógico sobre los archivos digitales, no una limpieza física con líquidos."
+      },
+      {
+        "text": "En transformar todos los archivos de texto de la empresa en archivos de audio de alta definición.",
+        "isCorrect": false,
+        "rationale": "Convertir texto a audio incrementaría drásticamente el peso de los archivos y el almacenamiento requerido."
+      },
+      {
+        "text": "En duplicar todas las bases de datos diez veces en diferentes discos duros.",
+        "isCorrect": false,
+        "rationale": "Multiplicar innecesariamente las copias genera redundancia y aumenta el consumo de recursos de almacenamiento."
+      },
+      {
+        "text": "En cambiar la fuente tipográfica de los documentos impresos.",
+        "isCorrect": false,
+        "rationale": "Modificar el formato tipográfico de lectura no elimina datos basura ni optimiza el almacenamiento digital."
+      }
+    ],
+    "hint": "Relaciona el término con la acción de filtrar y borrar la información inservible o repetida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la meta principal de aplicar algoritmos de compresión de datos en la gestión de repositorios masivos?",
+    "opciones": [
+      {
+        "text": "Aumentar artificialmente el tamaño de los archivos para ralentizar su descarga.",
+        "isCorrect": false,
+        "rationale": "Incrementar el peso del archivo es perjudicial para la eficiencia y velocidad del sistema informático."
+      },
+      {
+        "text": "Reducir el tamaño de almacenamiento requerido por los archivos sin perder la información esencial.",
+        "isCorrect": true,
+        "rationale": "La compresión optimiza la representación lógica de los datos para ocupar menos bytes en disco o ancho de banda."
+      },
+      {
+        "text": "Ocultar intencionadamente la información para que los usuarios no puedan leerla.",
+        "isCorrect": false,
+        "rationale": "El cifrado o encriptación busca confidencialidad, mientras que la compresión busca reducir espacio y mejorar eficiencia."
+      },
+      {
+        "text": "Borrar automáticamente el sistema operativo de los servidores centrales.",
+        "isCorrect": false,
+        "rationale": "Eliminar el sistema operativo inutilizaría el servidor, destruyendo la capacidad operativa."
+      },
+      {
+        "text": "Transformar todas las bases de datos en archivadores de papel en físico.",
+        "isCorrect": false,
+        "rationale": "La compresión de datos es un proceso digital para formatos de software, opuesto a la impresión en soporte físico."
+      }
+    ],
+    "hint": "Piensa en el proceso de empaquetar archivos para que ocupen menos espacio en disco o correo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera utilizan las redes sociales y plataformas de comercio la analítica de Big Data?",
+    "opciones": [
+      {
+        "text": "Analizando interacciones, búsquedas y reacciones para personalizar recomendaciones de contenido y anuncios.",
+        "isCorrect": true,
+        "rationale": "El seguimiento de comportamiento permite a los algoritmos predecir preferencias e hiperpersonalizar la experiencia del usuario."
+      },
+      {
+        "text": "Enviando mensajes de texto aleatorios que no guardan relación con las preferencias de la persona.",
+        "isCorrect": false,
+        "rationale": "La analítica busca precisión y relevancia personalizada, evitando los envíos masivos e irrelevantes de correo no deseado."
+      },
+      {
+        "text": "Bloqueando el acceso a internet a los usuarios que no realizan compras en las primeras horas del día.",
+        "isCorrect": false,
+        "rationale": "Restringir el acceso reduciría la interacción del usuario y destruiría el modelo de negocio digital."
+      },
+      {
+        "text": "Eliminando la cuenta de usuario cada vez que la persona cierra sesión.",
+        "isCorrect": false,
+        "rationale": "Borrar la cuenta impediría acumular datos de comportamiento histórico, destruyendo la base del Big Data."
+      },
+      {
+        "text": "Mostrando exactamente la misma publicidad a todos los usuarios del mundo sin distinción.",
+        "isCorrect": false,
+        "rationale": "El propósito central del Big Data en marketing es la segmentación y personalización, no los anuncios genéricos masivos."
+      }
+    ],
+    "hint": "Considera por qué a cada usuario le aparecen ofertas o videos alineados a sus gustos personales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto del pronóstico de datos y ventas, ¿qué caracteriza a un crecimiento de tipo exponencial?",
+    "opciones": [
+      {
+        "text": "Un aumento constante y fijo en una cantidad exacta de unidades cada mes sin aceleración.",
+        "isCorrect": false,
+        "rationale": "Un incremento fijo idéntico por período describe un comportamiento lineal, no exponencial."
+      },
+      {
+        "text": "Un incremento acelerado y progresivo donde la tasa de crecimiento se multiplica período tras período.",
+        "isCorrect": true,
+        "rationale": "La progresión exponencial muestra curvas de aceleración rápida donde las cifras se duplican o triplican sucesivamente."
+      },
+      {
+        "text": "Una cifra que permanece inalterada y rígida a lo largo de los años.",
+        "isCorrect": false,
+        "rationale": "Una cifra inalterada representa un valor constante o estancamiento, no un patrón de crecimiento."
+      },
+      {
+        "text": "Una caída abrupta de las métricas hasta llegar a cero.",
+        "isCorrect": false,
+        "rationale": "La caída hasta cero refleja un colapso o decrecimiento, opuesto al concepto de crecimiento exponencial."
+      },
+      {
+        "text": "Un valor que cambia al azar sin guardar relación con los datos del mes anterior.",
+        "isCorrect": false,
+        "rationale": "Las variaciones al azar se catalogan como comportamiento estocástico o ruido, no como un patrón matemático exponencial."
+      }
+    ],
+    "hint": "Piensa en una curva gráfica que empieza despacio y luego se eleva muy rápidamente hacia arriba.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes programas o entornos corresponden a motores y sistemas gestores de bases de datos relacionales o de gran volumen? (Selecciona todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "MySQL",
+        "isCorrect": true,
+        "rationale": "Es uno de los sistemas gestores de bases de datos relacionales más extendidos en la industria para almacenar estructuradamente datos."
+      },
+      {
+        "text": "Oracle",
+        "isCorrect": true,
+        "rationale": "Es una plataforma empresarial robusta utilizada ampliamente para la administración de grandes volúmenes de datos transaccionales."
+      },
+      {
+        "text": "Microsoft SQL Server",
+        "isCorrect": true,
+        "rationale": "Es un motor de base de datos relacional desarrollado para la gestión corporativa de datos escalables."
+      },
+      {
+        "text": "Adobe Photoshop",
+        "isCorrect": false,
+        "rationale": "Es un software para edición y retoque de imágenes ráster, no un gestor de bases de datos."
+      },
+      {
+        "text": "Windows Media Player",
+        "isCorrect": false,
+        "rationale": "Es un reproductor de archivos multimedia de audio y video, sin capacidades de gestión de bases de datos corporativas."
+      }
+    ],
+    "hint": "Identifica las herramientas de software diseñadas específicamente para consultar y gestionar tablas de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de plataformas de IA como Leonardo AI presentadas en clase?",
+    "opciones": [
+      {
+        "text": "Calcular automáticamente el pago de tributos de los trabajadores.",
+        "isCorrect": false,
+        "rationale": "Esas tareas corresponden a sistemas de nómina y contabilidad, no a generadores de contenido gráfico."
+      },
+      {
+        "text": "Generar, procesar y editar imágenes digitales a partir de instrucciones descriptivas de texto (prompts).",
+        "isCorrect": true,
+        "rationale": "Leonardo AI utiliza modelos generativos para sintetizar arte e ilustraciones a partir de descripciones sintácticas de texto."
+      },
+      {
+        "text": "Detectar fugas físicas de agua en las instalaciones de la empresa.",
+        "isCorrect": false,
+        "rationale": "La detección física de fugas requiere sensores de humedad e ingeniería de fontanería, no modelos sintéticos de imagen."
+      },
+      {
+        "text": "Organizar carpetas físicas de archivo en archivadores de metal.",
+        "isCorrect": false,
+        "rationale": "La organización manual de archivadores es una tarea de conserjería u ofimática física, desconectada de la IA generativa."
+      },
+      {
+        "text": "Medir la presión de aire de los neumáticos de los vehículos corporativos.",
+        "isCorrect": false,
+        "rationale": "Requiere manómetros mecánicos o sensores automotrices de presión, ajenos a la generación artificial de imágenes."
+      }
+    ],
+    "hint": "Recuerda el tipo de contenido (visual o escrito) que genera esta herramienta específica al colocarle una indicación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué algunas grandes corporaciones tecnológicas ubican centros de datos bajo el mar?",
+    "opciones": [
+      {
+        "text": "Para aprovechar las bajas temperaturas del agua de forma natural y reducir el elevado costo de refrigeración.",
+        "isCorrect": true,
+        "rationale": "El entorno marino frío permite disipar el calor generado por miles de servidores, ahorrando grandes sumas en energía de climatización."
+      },
+      {
+        "text": "Para evitar que los datos sean interceptados por la señal de radio comercial de las ciudades.",
+        "isCorrect": false,
+        "rationale": "La protección de datos se basa en encriptación lógica, no en aislarse de las señales de radio comercial."
+      },
+      {
+        "text": "Porque la fibra óptica solo puede transmitir información si está totalmente mojada.",
+        "isCorrect": false,
+        "rationale": "El pulso de luz dentro de la fibra óptica viaja por reflexión interna de vidrio/plástico, sin requerir contacto con agua."
+      },
+      {
+        "text": "Para brindar conexión de internet de alta velocidad a la fauna marina.",
+        "isCorrect": false,
+        "rationale": "Los centros de datos buscan servir a usuarios e industrias humanas, no proveer conectividad a animales."
+      },
+      {
+        "text": "Porque los discos duros aumentan su velocidad cuando se encuentran a altas presiones de agua.",
+        "isCorrect": false,
+        "rationale": "Los servidores están sellados herméticamente en cápsulas secas; el agua nunca toca directamente los discos ni influye en su velocidad."
+      }
+    ],
+    "hint": "Piensa en el problema del sobrecalentamiento de los procesadores y la energía necesaria para enfriarlos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera se integran el IoT y el Big Data en sectores industriales como la minería?",
+    "opciones": [
+      {
+        "text": "Instalando sensores en maquinaria pesada para transmitir métricas en tiempo real y anticipar fallas de mantenimiento.",
+        "isCorrect": true,
+        "rationale": "Los sensores IoT recopilan datos operativos contínuos que la analítica de Big Data procesa para predecir averías y coordinar reparaciones."
+      },
+      {
+        "text": "Sustituyendo los camiones de extracción por trabajo manual con herramientas básicas.",
+        "isCorrect": false,
+        "rationale": "La tendencia tecnológica busca la automatización y teleoperación masiva, no el retorno a técnicas artesanales."
+      },
+      {
+        "text": "Eliminando los sistemas de comunicación inalámbrica dentro de los campamentos.",
+        "isCorrect": false,
+        "rationale": "La transmisión de datos de sensores exige contar con redes inalámbricas robustas y constantes en el sitio de trabajo."
+      },
+      {
+        "text": "Enviando los reportes de producción diaria únicamente por correo postal en papel.",
+        "isCorrect": false,
+        "rationale": "La integración digital requiere flujos instantáneos de información, incompatibles con los tiempos del correo físico postal."
+      },
+      {
+        "text": "Apagando todos los monitores de control para operar los equipos a ciegas.",
+        "isCorrect": false,
+        "rationale": "La supervisión centralizada en salas de control requiere pantallas y telemetría activa en todo momento."
+      }
+    ],
+    "hint": "Enfócate en la transmisión de datos desde sensores colocados en maquinaria para evitar paradas inesperadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones son ventajas directas de contar con una estrategia corporativa articulada de analítica de datos y gobernanza? (Selecciona todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Optimización de los costos operativos y eficiencia en la asignación de recursos.",
+        "isCorrect": true,
+        "rationale": "El análisis preciso revela cuellos de botella y desperdicios, permitiendo reasignar recursos eficientemente."
+      },
+      {
+        "text": "Mayor precisión en los pronósticos de demanda e inventario disponible.",
+        "isCorrect": true,
+        "rationale": "Las predicciones basadas en históricos reducen el exceso de stock y evitan el quiebre de inventarios."
+      },
+      {
+        "text": "Aseguramiento del cumplimiento normativo y protección de la privacidad de clientes.",
+        "isCorrect": true,
+        "rationale": "Un marco de gobernanza sólido garantiza el tratamiento legal de los datos, evitando sanciones regulatorias."
+      },
+      {
+        "text": "Garantía de ventas infinitas independientemente de las crisis económicas externas.",
+        "isCorrect": false,
+        "rationale": "Los datos ayudan a tomar mejores decisiones, pero no pueden eliminar las variables externas macroeconómicas del mercado."
+      },
+      {
+        "text": "Eliminación completa de la necesidad de contar con directores o decisiones humanas.",
+        "isCorrect": false,
+        "rationale": "La analítica complementa la dirección humana estratégicamente; no reemplaza la visión y responsabilidad del liderazgo."
+      }
+    ],
+    "hint": "Piensa en los beneficios de eficiencia, cumplimiento legal y precisión comercial que se obtienen al ordenar los datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del análisis de Big Data en la modelación del comportamiento de los usuarios en plataformas digitales?",
+    "opciones": [
+      {
+        "text": "Procesar volúmenes masivos de datos estructurados y no estructurados para identificar patrones y predecir tendencias de consumo.",
+        "isCorrect": true,
+        "rationale": "El Big Data analiza grandes volúmenes de datos interrelacionados para estudiar hábitos y predecir comportamientos futuros de manera automatizada."
+      },
+      {
+        "text": "Sustituir los motores de búsqueda tradicionales mediante la eliminación completa del historial de navegación.",
+        "isCorrect": false,
+        "rationale": "El análisis de Big Data aprovecha el historial y la actividad del usuario en lugar de eliminarlo para generar perfiles de recomendación."
+      },
+      {
+        "text": "Almacenar únicamente información financiera estática sin realizar ningún procesamiento analítico.",
+        "isCorrect": false,
+        "rationale": "La finalidad central del Big Data radica en el análisis activo y predictivo, no en el mero almacenamiento pasivo de datos estáticos."
+      },
+      {
+        "text": "Garantizar que todos los usuarios reciban exactamente la misma publicidad independientemente de sus preferencias.",
+        "isCorrect": false,
+        "rationale": "El valor estratégico del Big Data estriba en la personalización de contenidos según los gustos y acciones individuales del usuario."
+      },
+      {
+        "text": "Limitar el flujo de datos en tiempo real para reducir el consumo de banda ancha en las redes sociales.",
+        "isCorrect": false,
+        "rationale": "El Big Data busca maximizar la captura y procesamiento de eventos relevantes, no restringir el tráfico de red de forma arbitraria."
+      }
+    ],
+    "hint": "Considere cómo el análisis masivo de interacciones previas permite anticipar acciones futuras de los clientes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué características definen el funcionamiento del aprendizaje automático (Machine Learning) en los modelos de lenguaje de inteligencia artificial?",
+    "opciones": [
+      {
+        "text": "Entrenamiento continuo y ajuste de parámetros a partir de la experiencia y la retroalimentación entregada en los prompts.",
+        "isCorrect": true,
+        "rationale": "El modelo refina la calidad y precisión de sus respuestas a medida que procesa más interacciones y datos estructurados."
+      },
+      {
+        "text": "Capacidad para inferir relaciones complejas en estructuras de datos mediante arquitecturas de redes neuronales.",
+        "isCorrect": true,
+        "rationale": "Las redes neuronales simulan interconexiones de aprendizaje para procesar patrones abstractos en grandes bases de conocimiento."
+      },
+      {
+        "text": "Reescritura permanente del código fuente del sistema operativo subyacente durante cada consulta del usuario.",
+        "isCorrect": false,
+        "rationale": "El aprendizaje automático actualiza los pesos y parámetros del modelo entrenado, no modifica el código fuente del sistema operativo."
+      },
+      {
+        "text": "Dependencia exclusiva de reglas condicionales rígidas escritas manualmente sin capacidad de adaptación.",
+        "isCorrect": false,
+        "rationale": "El aprendizaje automático supera la programación por reglas estáticas al ser capaz de generalizar y adaptarse a nuevas entradas."
+      },
+      {
+        "text": "Optimización progresiva de pronósticos y respuestas a medida que incrementa el volumen de datos de entrenamiento.",
+        "isCorrect": true,
+        "rationale": "Un mayor corpus de datos y práctica permite al algoritmo reducir el sesgo y mejorar la efectividad de sus predicciones."
+      }
+    ],
+    "hint": "Piense en las propiedades que permiten a un algoritmo evolucionar mediante datos sin depender de código estático.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el ámbito de la ciberseguridad industrial y financiera, ¿cuál es el objetivo principal de los sistemas de detección de fraudes ante ataques cibernéticos?",
+    "opciones": [
+      {
+        "text": "Prevenir la interrupción no planificada de las operaciones y evitar la alteración maliciosa de registros de identidad o geolocalización.",
+        "isCorrect": true,
+        "rationale": "Los ataques cibernéticos buscan sabotear líneas de producción o falsificar ubicaciones e identidades para vulnerar activos críticos."
+      },
+      {
+        "text": "Aumentar la latencia de las transacciones bancarias para desmotivar el uso de canales digitales.",
+        "isCorrect": false,
+        "rationale": "La seguridad busca proteger la integridad de las operaciones manteniendo la eficiencia operativa, no degradar deliberadamente el servicio."
+      },
+      {
+        "text": "Convertir automáticamente las direcciones IP públicas en servidores de acceso libre para cualquier usuario externo.",
+        "isCorrect": false,
+        "rationale": "Exponer servidores y direcciones IP compromete la red en lugar de resguardarla contra intrusiones no autorizadas."
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar encriptación en la transmisión de credenciales de acceso.",
+        "isCorrect": false,
+        "rationale": "La encriptación es una capa indispensable en la protección de datos y la prevención de fraudes informáticos."
+      },
+      {
+        "text": "Desactivar la supervisión en tiempo real para evitar el sobrecalentamiento de los cortafuegos.",
+        "isCorrect": false,
+        "rationale": "La detección efectiva de fraudes requiere un monitoreo continuo para identificar anomalías operativas de inmediato."
+      }
+    ],
+    "hint": "Reflexione sobre el impacto que sufriría una planta de producción o un banco si sus controles de seguridad fueran vulnerados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa de suministros observa fluctuaciones atípicas en sus ventas mensuales. Al aplicar el enfoque de toma de decisiones basadas en datos (Data-Driven Decision Making), ¿cuál debe ser el primer paso metodológico?",
+    "opciones": [
+      {
+        "text": "Analizar la estructura de datos histórica e investigar las causas raíz del descenso en los periodos específicos.",
+        "isCorrect": true,
+        "rationale": "El enfoque Data-Driven exige fundamentar cualquier acción en el análisis de la información empírica para diagnosticar el problema antes de actuar."
+      },
+      {
+        "text": "Despedir de inmediato al personal de ventas sin revisar los registros de interacciones con los clientes.",
+        "isCorrect": false,
+        "rationale": "Tomar medidas drásticas sin evaluar los datos contraviene los principios de la toma de decisiones informada."
+      },
+      {
+        "text": "Duplicar el precio de los productos para compensar la baja de volumen sin consultar la demanda del mercado.",
+        "isCorrect": false,
+        "rationale": "Alterar precios arbitrariamente sin sustento analítico suele empeorar la pérdida de competitividad en el mercado."
+      },
+      {
+        "text": "Descontinuar la recopilación de datos de facturación para simplificar el flujo contable.",
+        "isCorrect": false,
+        "rationale": "Eliminar la recolección de datos priva a la organización de la visibilidad necesaria para corregir desviaciones operativas."
+      },
+      {
+        "text": "Suponer que las ventas se estabilizarán automáticamente el próximo mes sin hacer ninguna verificación.",
+        "isCorrect": false,
+        "rationale": "Confiar en suposiciones pasivas ignora el análisis cuantitativo que sustenta el principio de Data-Driven."
+      }
+    ],
+    "hint": "Enfóquese en la etapa inicial del análisis crítico antes de formular hipótesis o aplicar soluciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al analizar datos históricos de ventas, se observa que la demanda creció en una secuencia mensual de 1,000 a 4,000, luego a 8,000 y finalmente a 20,000 unidades. ¿A qué tipo de tendencia predictiva corresponde este comportamiento?",
+    "opciones": [
+      {
+        "text": "Comportamiento exponencial.",
+        "isCorrect": true,
+        "rationale": "El incremento acelerado y multiplicativo en breves periodos caracteriza una progresión de tipo exponencial."
+      },
+      {
+        "text": "Comportamiento lineal.",
+        "isCorrect": false,
+        "rationale": "El comportamiento lineal mantiene incrementos proporcionales y estables con variaciones mínimas entre periodos."
+      },
+      {
+        "text": "Comportamiento estático constante.",
+        "isCorrect": false,
+        "rationale": "Una tendencia estática mantendría valores idénticos o con oscilaciones despreciables a lo largo del tiempo."
+      },
+      {
+        "text": "Progresión decreciente logarítmica.",
+        "isCorrect": false,
+        "rationale": "La serie de datos refleja una aceleración hacia el aumento, no una desaceleración o contracción de la demanda."
+      },
+      {
+        "text": "Distribución aleatoria uniforme.",
+        "isCorrect": false,
+        "rationale": "Los datos muestran un patrón claro de expansión acelerada, lo que descarta una distribución totalmente estocástica e inalterable."
+      }
+    ],
+    "hint": "Observe si la variación de un mes a otro se mantiene constante o si muestra un crecimiento multiplicativo sustancial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son los tres componentes fundamentales requeridos para estructurar un prompt efectivo y riguroso dirigido a un modelo de inteligencia artificial?",
+    "opciones": [
+      {
+        "text": "Definición del personaje o rol que debe asumir la IA.",
+        "isCorrect": true,
+        "rationale": "Asignar una identidad experta orienta el tono, contexto técnico y perspectiva analítica de la respuesta generada."
+      },
+      {
+        "text": "Descripción detallada del contexto o situación del problema.",
+        "isCorrect": true,
+        "rationale": "Proporcionar el marco operativo delimita el alcance y evita generalizaciones vagamente aplicables."
+      },
+      {
+        "text": "Formulación clara y específica de la solicitud o requerimiento exacto.",
+        "isCorrect": true,
+        "rationale": "La instrucción explícita de la tarea determina directamente el formato y la calidad del resultado final entregado."
+      },
+      {
+        "text": "Inclusión obligatoria de fragmentos de código binario compilado.",
+        "isCorrect": false,
+        "rationale": "Los prompts se estructuran en procesamiento de lenguaje natural y no requieren código máquina compilado."
+      },
+      {
+        "text": "Restricción de la consulta a un máximo de tres palabras clave sin conectores.",
+        "isCorrect": false,
+        "rationale": "Un prompt efectivo requiere suficiente detalle descriptivo; reducirlo excesivamente empobrece el resultado del modelo."
+      }
+    ],
+    "hint": "Recuerde la analogía cinematográfica que combina quién actúa, la situación de la trama y la petición concreta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué beneficio aporta activar el modo de razonamiento profundo (Deep Thinking / 'Dix Think') en herramientas avanzadas de procesamiento de lenguaje natural?",
+    "opciones": [
+      {
+        "text": "Permite al modelo conectar miles de millones de parámetros y evaluar internamente múltiples rutas de análisis antes de entregar la respuesta final.",
+        "isCorrect": true,
+        "rationale": "La función de pensamiento extendido ejecuta una evaluación exhaustiva de variables y conocimientos interconectados para aumentar la precisión en tareas complejas."
+      },
+      {
+        "text": "Elimina la necesidad de contar con una base de datos previa al generar respuestas totalmente aleatorias.",
+        "isCorrect": false,
+        "rationale": "El razonamiento avanzado depende estrictamente de vastas estructuras de datos entrenadas para sintetizar respuestas coherentes."
+      },
+      {
+        "text": "Desactiva todos los filtros de validación sintáctica para acelerar la velocidad de escritura gráfica.",
+        "isCorrect": false,
+        "rationale": "El modo de pensamiento incrementa el rigor analítico, no la mera velocidad de salida sin control de calidad."
+      },
+      {
+        "text": "Garantiza que el servidor responda de forma instantánea sin requerir tiempo de procesamiento adicional.",
+        "isCorrect": false,
+        "rationale": "Al procesar una cantidad mayor de parámetros y verificaciones lógicas, el tiempo de respuesta suele incrementarse ligeramente."
+      },
+      {
+        "text": "Limita el uso de la inteligencia artificial exclusivamente a la generación de archivos de audio comprimido.",
+        "isCorrect": false,
+        "rationale": "Esta función está orientada a la profundidad analítica del razonamiento abstracto y del procesamiento textual complejo."
+      }
+    ],
+    "hint": "Piense en el proceso de lectura y reflexión minuciosa que realiza un especialista antes de emitir un dictamen técnico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia conceptual clave entre una arquitectura Data Lake y un repositorio Data Warehouse?",
+    "opciones": [
+      {
+        "text": "El Data Lake almacena datos primarios en bruto con alta flexibilidad, mientras que el Data Warehouse alberga datos limpios, transformados y estructurados.",
+        "isCorrect": true,
+        "rationale": "El Data Lake recibe información sin procesar para análisis flexibles, mientras que el Data Warehouse organiza los datos para gobernanza y reportes precisos."
+      },
+      {
+        "text": "El Data Lake solo funciona en discos locales físicos, mientras que el Data Warehouse existe únicamente en dispositivos móviles.",
+        "isCorrect": false,
+        "rationale": "Ambas arquitecturas pueden implementarse en entornos locales, híbridos o en la nube mediante plataformas masivas."
+      },
+      {
+        "text": "El Data Warehouse elimina la posibilidad de consultar indicadores históricos mediante tableros de control.",
+        "isCorrect": false,
+        "rationale": "Al contrario, el Data Warehouse está diseñado específicamente para facilitar la generación de métricas e indicadores de negocio."
+      },
+      {
+        "text": "El Data Lake prohíbe el ingreso de archivos no estructurados como imágenes o registros de sensores.",
+        "isCorrect": false,
+        "rationale": "La ventaja principal del Data Lake es su capacidad para admitir múltiples formatos de datos sin estructura previa."
+      },
+      {
+        "text": "Ambas arquitecturas son idénticas y la terminología responde únicamente a un cambio de marca comercial.",
+        "isCorrect": false,
+        "rationale": "Existen diferencias técnicas sustanciales respecto al grado de procesamiento, estructuración y propósito de uso de los datos."
+      }
+    ],
+    "hint": "Considere el estado de procesamiento del dato: desde su captura sin depurar hasta su preparación final para la toma de decisiones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Herramientas de análisis avanzado como BlackBox AI ofrecen capacidades de integración de datos en tiempo real mediante la función 'Web Search'. ¿Qué ventaja operativa proporciona esta característica?",
+    "opciones": [
+      {
+        "text": "Sintetizar información actualizada navegando activamente en la red para superar las limitaciones de corte de entrenamiento estático.",
+        "isCorrect": true,
+        "rationale": "La búsqueda web en tiempo real permite al modelo extraer eventos y métricas recientes para análisis comparativos inmediatos."
+      },
+      {
+        "text": "Desactivar la conexión a Internet para procesar consultas en un entorno local aislado.",
+        "isCorrect": false,
+        "rationale": "La función 'Web Search' requiere conectividad activa para rastrear fuentes externas en la red global."
+      },
+      {
+        "text": "Bloquear el acceso a cualquier fuente de noticias internacionales para centrarse en archivos antiguos.",
+        "isCorrect": false,
+        "rationale": "La meta de integrar el rastreo web es ampliar el acceso a fuentes recientes, no restringir el alcance informativo."
+      },
+      {
+        "text": "Garantizar que no se requieran algoritmos de procesamiento de lenguaje natural al formular las preguntas.",
+        "isCorrect": false,
+        "rationale": "El sistema sigue dependiendo de modelos de lenguaje para interpretar la consulta y redactar la síntesis de resultados."
+      },
+      {
+        "text": "Reemplazar los sistemas de bases de datos relacionales por impresiones en papel.",
+        "isCorrect": false,
+        "rationale": "Es una función puramente digital destinada a enriquecer la recolección de información en tiempo real."
+      }
+    ],
+    "hint": "Reflexione sobre la diferencia entre consultar un libro impreso cerrado y buscar la noticia del día en la web.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿De qué maneras las organizaciones monetizan sus activos de datos (Data Monetization) para generar ventajas competitivas o ingresos directos?",
+    "opciones": [
+      {
+        "text": "Desarrollando modelos probabilísticos para establecer tarifas competitivas en sectores de alto riesgo como seguros o apuestas.",
+        "isCorrect": true,
+        "rationale": "Calcular probabilidades precisas basadas en tendencias de comportamiento permite fijar precios y márgenes de ganancia sostenibles."
+      },
+      {
+        "text": "Identificando patrones de consumo para ejecutar campañas de adquisición de clientes altamente perfiladas.",
+        "isCorrect": true,
+        "rationale": "El conocimiento detallado del cliente incrementa la conversión de ventas al ofrecer productos acordes a sus necesidades específicas."
+      },
+      {
+        "text": "Optimizando la toma de decisiones operativas para reducir desperdicios y costos ocultos en la cadena de valor.",
+        "isCorrect": true,
+        "rationale": "La monetización indirecta se logra convirtiendo la eficiencia basada en datos en ahorro de capital operativo."
+      },
+      {
+        "text": "Ocultando toda la información contable a los directivos para evitar modificaciones en la estrategia.",
+        "isCorrect": false,
+        "rationale": "Ocultar información impide el uso estratégico de los datos y debilita la gestión organizacional."
+      },
+      {
+        "text": "Borrando sistemáticamente las bases de datos de clientes al término de cada año fiscal.",
+        "isCorrect": false,
+        "rationale": "Destruir el historial de clientes elimina el activo de datos necesario para análisis longitudinales y retención de mercado."
+      }
+    ],
+    "hint": "Considere tanto la generación directa de ingresos como la optimización de procesos mediante el uso de la información.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al diseñar el esquema de una tabla dentro de un repositorio estructurado, ¿cuál es el criterio fundamental para seleccionar los campos o encabezados de recolección?",
+    "opciones": [
+      {
+        "text": "Definir los indicadores claves (KPIs) y el propósito analítico que se pretende calcular con dicha información a futuro.",
+        "isCorrect": true,
+        "rationale": "La estructura de recolección debe responder directamente a las métricas e interrogantes estratégicas que la empresa necesita supervisar."
+      },
+      {
+        "text": "Incluir el mayor número posible de variables irrelevantes para llenar la capacidad del disco duro.",
+        "isCorrect": false,
+        "rationale": "Acumular datos superfluos genera ruido, dificulta el procesamiento e incrementa costos inútiles de almacenamiento."
+      },
+      {
+        "text": "Asegurar que la tabla no contenga ningún identificador único ni claves primarias.",
+        "isCorrect": false,
+        "rationale": "La falta de identificadores únicos impide la trazabilidad y la correcta correlación entre registros relacionales."
+      },
+      {
+        "text": "Modificar los nombres de las columnas diariamente para evitar que los analistas se familiaricen con el formato.",
+        "isCorrect": false,
+        "rationale": "La inconsistencia en los esquemas destruye la gobernanza de datos y arruina la automatización de procesos."
+      },
+      {
+        "text": "Copiar esquemas aleatorios de otros sectores que no guardan relación con la operación interna.",
+        "isCorrect": false,
+        "rationale": "Cada diseño de datos debe adaptarse al modelo de negocio operativo específico para aportar valor real."
+      }
+    ],
+    "hint": "Piense en cómo el objetivo final del informe condiciona los datos concretos que se deben solicitar en el formulario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué las plataformas de análisis en la nube como Azure Analytics o Google BigQuery son preferibles frente a las hojas de cálculo tradicionales al trabajar con Big Data?",
+    "opciones": [
+      {
+        "text": "Ofrecen una infraestructura escalable capaz de procesar terabytes de datos distribuidos sin colapsar por límites de memoria.",
+        "isCorrect": true,
+        "rationale": "Las herramientas empresariales en la nube están diseñadas para cómputo masivo distribuido, superando las restricciones físicas de las hojas de cálculo individuales."
+      },
+      {
+        "text": "Eliminan la necesidad de usar conexiones de red para consultar bases de datos remotas.",
+        "isCorrect": false,
+        "rationale": "Las soluciones analíticas en la nube dependen necesariamente de conectividad a Internet o redes corporativas dedicadas."
+      },
+      {
+        "text": "Son herramientas exclusivas para el diseño tipográfico y la edición de documentos impresos.",
+        "isCorrect": false,
+        "rationale": "Su propósito es el procesamiento masivo de datos y el análisis de inteligencia de negocios, no la maquetación editorial."
+      },
+      {
+        "text": "Restringen el análisis a un máximo de mil registros por consulta.",
+        "isCorrect": false,
+        "rationale": "Estas arquitecturas están construidas precisamente para procesar millones de registros de manera simultánea."
+      },
+      {
+        "text": "Impiden la integración con lenguajes de programación o algoritmos de machine learning.",
+        "isCorrect": false,
+        "rationale": "Al contrario, estas plataformas se integran nativamente con pipelines de machine learning y diversos lenguajes de consulta."
+      }
+    ],
+    "hint": "Considere la capacidad de volumen, velocidad de cómputo y límites de memoria de una aplicación de escritorio frente a un clúster en la nube.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco del Internet de las Cosas (IoT), ¿cómo interactúan los sensores físicos con las plataformas de análisis de datos centrales?",
+    "opciones": [
+      {
+        "text": "Capturan variables del entorno, las convierten en señales digitales y las transmiten mediante protocolos de red para su monitoreo remoto.",
+        "isCorrect": true,
+        "rationale": "Los dispositivos IoT funcionan recolectando datos físicos del medio y enviándolos por redes virtuales a sistemas centrales de control."
+      },
+      {
+        "text": "Generan energía eléctrica ilimitada para alimentar las centrales hidroeléctricas sin necesidad de cables.",
+        "isCorrect": false,
+        "rationale": "Los sensores son dispositivos consumibles de medición y datos, no fuentes de generación masiva de potencia eléctrica."
+      },
+      {
+        "text": "Reemplazan por completo a los algoritmos de inteligencia artificial al tomar decisiones sin datos previos.",
+        "isCorrect": false,
+        "rationale": "Los sensores proveen la materia prima (datos) que alimenta a los sistemas analíticos e inteligencias artificiales."
+      },
+      {
+        "text": "Almacenan físicamente todo el historial de datos dentro del propio microchip del sensor sin enviarlo a la red.",
+        "isCorrect": false,
+        "rationale": "Los sensores IoT transmiten la información hacia servidores o la nube debido a sus limitaciones de memoria interna."
+      },
+      {
+        "text": "Requieren la presencia constante de un operador humano al lado de cada dispositivo para digitar la información.",
+        "isCorrect": false,
+        "rationale": "El objetivo del IoT es la automatización de la captura y transmisión de datos a distancia sin intervención manual directa."
+      }
+    ],
+    "hint": "Piense en la función de una cámara de seguridad o un sensor de temperatura conectado a un aplicativo móvil.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué ventajas técnicas ofrece el despliegue de redes 5G en la integración de ecosistemas industriales de Big Data e Inteligencia Artificial?",
+    "opciones": [
+      {
+        "text": "Banda ancha de ultra alta velocidad para la transmisión masiva de datos en milisegundos.",
+        "isCorrect": true,
+        "rationale": "La velocidad del 5G permite trasladar volúmenes masivos de datos sin generar cuellos de botella en la red."
+      },
+      {
+        "text": "Baja latencia que facilita la tele-operación y el control de maquinaria crítica en tiempo real.",
+        "isCorrect": true,
+        "rationale": "El retardo mínimo en la señal garantiza respuestas inmediatas indispensables en entornos industriales remotos."
+      },
+      {
+        "text": "Soporte para una conectividad masiva de millones de dispositivos IoT simultáneamente.",
+        "isCorrect": true,
+        "rationale": "La densidad de red del 5G permite mantener interconectados miles de sensores en plantas complejas sin degradar la señal."
+      },
+      {
+        "text": "Sustitución total de los centros de datos por cables de cobre tradicionales.",
+        "isCorrect": false,
+        "rationale": "El 5G es una tecnología de transmisión inalámbrica y no elimina la necesidad de centros de datos de almacenamiento."
+      },
+      {
+        "text": "Eliminación completa del consumo de batería en los dispositivos móviles conectados.",
+        "isCorrect": false,
+        "rationale": "Aunque optimiza el envío de paquetes, los dispositivos conectados continúan requiriendo energía eléctrica para funcionar."
+      }
+    ],
+    "hint": "Enfóquese en los atributos de velocidad, tiempo de respuesta de la señal y volumen de equipos interconectados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En lugar de duplicar y consolidar manualmente la información de distintas áreas en una sola hoja, ¿cuál es el beneficio de utilizar Sistemas de Gestión de Bases de Datos Relacionales (RDBMS) como SQL u Oracle?",
+    "opciones": [
+      {
+        "text": "Vincular y relacionar tablas independientes mediante claves compartidas manteniendo la integridad y coherencia de los datos.",
+        "isCorrect": true,
+        "rationale": "Las bases de datos relacionales conectan entidades (como Finanzas y Recursos Humanos) mediante llaves primarias y foráneas sin necesidad de duplicar registros."
+      },
+      {
+        "text": "Obligar al usuario a imprimir cada tabla antes de poder ejecutar una consulta.",
+        "isCorrect": false,
+        "rationale": "Los RDBMS gestionan la información de manera completamente digital y optimizada para consultas en pantalla o servidor."
+      },
+      {
+        "text": "Aumentar la redundancia de datos duplicando diez veces el mismo expediente de empleado.",
+        "isCorrect": false,
+        "rationale": "Uno de los objetivos esenciales del modelo relacional y la normalización es precisamente erradicar la redundancia de datos."
+      },
+      {
+        "text": "Impedir que más de un usuario pueda acceder al sistema durante la misma semana.",
+        "isCorrect": false,
+        "rationale": "Estos sistemas están diseñados con mecanismos de concurrencia para permitir el acceso multiusuario simultáneo y seguro."
+      },
+      {
+        "text": "Eliminar todos los controles de acceso e identificadores de usuario.",
+        "isCorrect": false,
+        "rationale": "Los RDBMS incorporan estrictos niveles de seguridad y permisos de rol para proteger la confidencialidad de la información."
+      }
+    ],
+    "hint": "Recuerde cómo dos tablas separadas pueden 'llamarse' o conectarse a través de un código de identificación en común.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la meta central de la Inteligencia de Negocios (Business Intelligence - BI) dentro de la gestión estratégica organizacional?",
+    "opciones": [
+      {
+        "text": "Transformar datos analizados en indicadores ejecutivos e informes visuales que permitan optimizar la rentabilidad y las operaciones.",
+        "isCorrect": true,
+        "rationale": "El BI busca dotar a la directiva de métricas claras para tomar decisiones fundamentadas que mejoren los resultados del negocio."
+      },
+      {
+        "text": "Sustituir la producción industrial por tareas exclusivamente manuales y artesanales.",
+        "isCorrect": false,
+        "rationale": "El BI utiliza la tecnología de datos para optimizar los procesos, no para retroceder a métodos manuales e ineficientes."
+      },
+      {
+        "text": "Generar reportes en papel con retrasos de varios años para evitar el uso de computadoras.",
+        "isCorrect": false,
+        "rationale": "La efectividad del BI depende de la actualización oportuna y la agilidad analítica mediante entornos digitales."
+      },
+      {
+        "text": "Eliminar los presupuestos del área de tecnologías de información.",
+        "isCorrect": false,
+        "rationale": "El BI requiere inversión constante en infraestructura y talento tecnológico para sostener la ventaja competitiva."
+      },
+      {
+        "text": "Limitar el conocimiento del mercado únicamente a las intuiciones de la gerencia sin mirar las métricas.",
+        "isCorrect": false,
+        "rationale": "El BI combate la toma de decisiones guiada por corazonadas, reemplazándola con evidencia cuantitativa comprobable."
+      }
+    ],
+    "hint": "Piense en la utilidad de los tableros de control (dashboards) que muestran el estado de la empresa a la alta dirección.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué prácticas corresponden a la gestión sostenible de datos (Green Data) enfocada en reducir la huella de carbono tecnológica?",
+    "opciones": [
+      {
+        "text": "Implementación de centros de datos eficientes con enfriamiento natural o sumergidos en agua.",
+        "isCorrect": true,
+        "rationale": "Aprovechar la temperatura ambiental del agua o sistemas verdes disminuye drásticamente el consumo eléctrico de refrigeración."
+      },
+      {
+        "text": "Depuración sistemática de datos obsoletos, redundantes e innecesarios.",
+        "isCorrect": true,
+        "rationale": "Eliminar datos sin uso ('Data Junk') libera espacio en servidor y reduce la energía requerida para mantener discos activos."
+      },
+      {
+        "text": "Uso de algoritmos avanzados de compresión de datos para minimizar el almacenamiento requerido.",
+        "isCorrect": true,
+        "rationale": "Comprimir archivos disminuye la carga en los discos duros y optimiza el ancho de banda durante las transferencias."
+      },
+      {
+        "text": "Mantenimiento encendido al máximo rendimiento de servidores vacíos sin ningún uso operativo.",
+        "isCorrect": false,
+        "rationale": "Mantener servidores inactivos encendidos desperdicia energía y contradice la sostenibilidad ambiental."
+      },
+      {
+        "text": "Incineración de componentes electrónicos usados sin reciclaje de materiales pesados.",
+        "isCorrect": false,
+        "rationale": "La quema sin tratamiento contamina el entorno; la gestión verde promueve la economía circular y la minimización del desperdicio electrónico."
+      }
+    ],
+    "hint": "Identifique las estrategias que apuntan a consumir menos electricidad y reducir el almacenamiento de archivos inservibles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de las políticas de gobierno de datos, ¿en qué consiste el procedimiento de 'depuración de datos' (data purging)?",
+    "opciones": [
+      {
+        "text": "Identificar y eliminar registros duplicados, obsoletos o irrelevantes que ya no aportan valor a la organización.",
+        "isCorrect": true,
+        "rationale": "La depuración limpia las bases de datos para garantizar la calidad de la información y optimizar el espacio de almacenamiento."
+      },
+      {
+        "text": "Duplicar intencionalmente tres veces cada fila de la base de datos para simular mayor volumen.",
+        "isCorrect": false,
+        "rationale": "Duplicar registros corrompe la calidad de los datos e incrementa innecesariamente el costo de almacenamiento."
+      },
+      {
+        "text": "Encriptar el código fuente para impedir que los analistas autorizados realicen consultas.",
+        "isCorrect": false,
+        "rationale": "Bloquear el acceso legítimo paraliza la operación analítica en lugar de higienizar la base de datos."
+      },
+      {
+        "text": "Convertir todos los datos numéricos en texto plano de forma irreversible.",
+        "isCorrect": false,
+        "rationale": "Alterar arbitrariamente los tipos de datos destruye la integridad analítica necesaria para calcular indicadores."
+      },
+      {
+        "text": "Guardar capturas de pantalla de la base de datos en formatos de imagen comprimidos.",
+        "isCorrect": false,
+        "rationale": "Las capturas de pantalla no sustituyen la depuración estructurada dentro del propio sistema de datos."
+      }
+    ],
+    "hint": "Considere la acción de retirar de un almacén aquellos productos vencidos o dañados que ocupan espacio inútil.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función técnica de las técnicas de compresión de datos en la administración de servidores de almacenamiento?",
+    "opciones": [
+      {
+        "text": "Reducir la cantidad de bytes requeridos para representar la información mediante algoritmos matemáticos sin alterar la estructura lógica subyacente.",
+        "isCorrect": true,
+        "rationale": "La compresión disminuye el tamaño físico de los archivos para maximizar la capacidad útil de almacenamiento y agilizar el tráfico de red."
+      },
+      {
+        "text": "Eliminar de forma aleatoria la mitad de las variables numéricas de una tabla contable.",
+        "isCorrect": false,
+        "rationale": "La compresión no destruye arbitrariamente datos esenciales, sino que codifica la información de forma eficiente."
+      },
+      {
+        "text": "Aumentar el peso físico de los archivos para justificar la compra de más hardware.",
+        "isCorrect": false,
+        "rationale": "El propósito es el opuesto: reducir el espacio ocupado para optimizar costos de infraestructura."
+      },
+      {
+        "text": "Transformar la base de datos en un programa ejecutable de reproductor de video.",
+        "isCorrect": false,
+        "rationale": "La compresión mantiene la integridad funcional de los archivos para sus aplicaciones correspondientes."
+      },
+      {
+        "text": "Impedir que la información pueda ser leída por cualquier servidor en el futuro.",
+        "isCorrect": false,
+        "rationale": "Los datos comprimidos están diseñados para descomprimirse o procesarse sin pérdida de acceso autorizado."
+      }
+    ],
+    "hint": "Piense en la analogía de empaquetar ropa al vacío para que ocupe menos volumen dentro de una maleta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué implicaciones legales y éticas deben observarse rigurosamente al gestionar bases de datos que contienen información personal identificable (PII)?",
+    "opciones": [
+      {
+        "text": "Cumplimiento de normativas de protección de datos personales y consentimiento informado del titular.",
+        "isCorrect": true,
+        "rationale": "Las leyes exigen recolectar datos bajo autorización explícita y utilizarlos exclusivamente para los fines estipulados."
+      },
+      {
+        "text": "Implementación de salvaguardas para prevenir la suplantación de identidad mediante clonación de voz o imagen.",
+        "isCorrect": true,
+        "rationale": "La biometría y los datos personales deben protegerse contra usos maliciosos que vulneren la seguridad jurídica del usuario."
+      },
+      {
+        "text": "Restricción del acceso a datos sensibles únicamente al personal autorizado bajo acuerdos de confidencialidad.",
+        "isCorrect": true,
+        "rationale": "La gobernanza exige controles de acceso estrictos basados en roles para preservar la privacidad de la información."
+      },
+      {
+        "text": "Venta libre de números de identificación y claves bancarias en foros públicos sin supervisión.",
+        "isCorrect": false,
+        "rationale": "Comercializar datos confidenciales vulnera gravemente las leyes de privacidad y constituye un delito informático."
+      },
+      {
+        "text": "Uso irrestricto de la información confidencial para cualquier fin no declarado al usuario.",
+        "isCorrect": false,
+        "rationale": "El tratamiento de datos personales debe alinearse estrictamente con las finalidades expresamente autorizadas por el usuario."
+      }
+    ],
+    "hint": "Considere la responsabilidad legal de resguardar nombres, números de documento, voces y credenciales financieras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera contribuye la tecnología Blockchain a la seguridad e integridad de la información en entornos interorganizacionales?",
+    "opciones": [
+      {
+        "text": "Proporcionando una cadena de bloques inmutable que garantiza la trazabilidad completa y el no renegado de los registros.",
+        "isCorrect": true,
+        "rationale": "La arquitectura distribuida de blockchain impide la alteración unilateral de los datos registrados, asegurando auditorías transparentes."
+      },
+      {
+        "text": "Permitiendo que cualquier usuario externo borre el historial de transacciones de manera anónima.",
+        "isCorrect": false,
+        "rationale": "La inmutabilidad de la cadena de bloques evita precisamente que los registros históricos puedan ser borrados o manipulados."
+      },
+      {
+        "text": "Reemplazando todos los servidores centrales por archivos impresos en papel de seguridad.",
+        "isCorrect": false,
+        "rationale": "Blockchain es una solución criptográfica digital avanzada, no una técnica de archivo impreso tradicional."
+      },
+      {
+        "text": "Aumentando los errores de digitación en los sistemas de facturación electrónica.",
+        "isCorrect": false,
+        "rationale": "Blockchain busca automatizar la confianza y reducir inconsistencias en el intercambio de información."
+      },
+      {
+        "text": "Eliminando el uso de llaves criptográficas en las transacciones digitales.",
+        "isCorrect": false,
+        "rationale": "La seguridad de blockchain se sustenta fuertemente en el uso de criptografía de clave pública y privada."
+      }
+    ],
+    "hint": "Reflexione sobre la propiedad de tener un libro contable distribuido donde nadie puede borrar lo que ya ha sido validado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué avance promete la computación cuántica en el procesamiento de modelos analíticos altamente complejos?",
+    "opciones": [
+      {
+        "text": "Resolver problemas multivariable masivos en fracciones de segundo reduciendo drásticamente el tiempo de procesamiento técnico.",
+        "isCorrect": true,
+        "rationale": "Los bits cuánticos (qubits) permiten procesar estados simultáneos, acelerando la resolución de cálculos que llevarían años a computadoras clásicas."
+      },
+      {
+        "text": "Aumentar el tamaño físico de las computadoras al tamaño de un edificio comercial.",
+        "isCorrect": false,
+        "rationale": "La meta de la tecnología cuántica es la potencia de cómputo y eficiencia de procesamiento, no el mero volumen físico."
+      },
+      {
+        "text": "Limitar las operaciones matemáticas exclusivamente a sumas y restas de un solo dígito.",
+        "isCorrect": false,
+        "rationale": "La computación cuántica aborda simulaciones avanzadas, optimizaciones complejas y criptografía de alto nivel."
+      },
+      {
+        "text": "Eliminar completamente el uso de algoritmos en el desarrollo de software.",
+        "isCorrect": false,
+        "rationale": "Los sistemas cuánticos requieren algoritmos especializados (algoritmos cuánticos) para ejecutar sus operaciones."
+      },
+      {
+        "text": "Restringir la velocidad de las redes de fibra óptica a niveles dial-up.",
+        "isCorrect": false,
+        "rationale": "No está diseñada para degradar la velocidad de transmisión, sino para revolucionar la potencia analítica de procesamiento."
+      }
+    ],
+    "hint": "Piense en la capacidad de evaluar millones de combinaciones y rutas simultáneamente en lugar de probarlas una por una.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cómo apoya la integración de sensores IoT al mantenimiento predictivo de equipos en plantas industriales de manufactura o minería?",
+    "opciones": [
+      {
+        "text": "Monitoreando variables como temperatura y vibración en tiempo real para detectar anomalías antes de una falla catastrófica.",
+        "isCorrect": true,
+        "rationale": "La captura continua de señales físicas permite identificar desgastes incipientes y planificar la intervención oportuna."
+      },
+      {
+        "text": "Reduciendo las paradas intempestivas de planta al programar reparaciones en momentos óptimos de producción.",
+        "isCorrect": true,
+        "rationale": "Anticiparse a las averías evita paradas abruptas que generan sobrecostos y riesgos de accidentes laborales."
+      },
+      {
+        "text": "Extendiendo la vida útil de los componentes mecánicos mediante el control de condiciones operativas.",
+        "isCorrect": true,
+        "rationale": "Operar los activos dentro de rangos térmicos y dinámicos seguros prolonga la durabilidad de los equipos."
+      },
+      {
+        "text": "Ocultando las señales de falla al equipo de mantenimiento para evitar detener la maquinaria.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento predictivo busca visibilizar las fallas anticipadamente, no disimular el peligro operativo."
+      },
+      {
+        "text": "Reemplazando los componentes de acero por piezas de cartón para abaratar costos.",
+        "isCorrect": false,
+        "rationale": "El monitoreo por sensores aborda la gestión de información operativa, no la alteración inadecuada de insumos mecánicos."
+      }
+    ],
+    "hint": "Enfóquese en cómo la recolección continua de datos físicos previene la rotura imprevista de una máquina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al utilizar plataformas de IA generativa de imágenes (como Leonardo AI o Kwan), ¿qué factor determina principalmente la precisión técnica del recurso gráfico generado?",
+    "opciones": [
+      {
+        "text": "La especificidad, detalle descriptivo y parámetros técnicos incluidos en el prompt de texto provisto.",
+        "isCorrect": true,
+        "rationale": "Las inteligencias artificiales generativas construyen las imágenes interpretando cada atributo y contexto detallado en la instrucción textual."
+      },
+      {
+        "text": "El color de la carcasa física del monitor desde donde se realiza la consulta.",
+        "isCorrect": false,
+        "rationale": "Los componentes estéticos externos del hardware no influyen en el procesamiento del algoritmo generativo."
+      },
+      {
+        "text": "La velocidad a la que el usuario escribe físicamente las teclas en el teclado.",
+        "isCorrect": false,
+        "rationale": "El algoritmo procesa el contenido conceptual del texto enviado, no la rapidez de mecanografía del operador."
+      },
+      {
+        "text": "El número de hojas de papel disponibles en la bandeja de la impresora local.",
+        "isCorrect": false,
+        "rationale": "El proceso de síntesis de imágenes es completamente digital dentro del modelo y independiente de dispositivos de impresión."
+      },
+      {
+        "text": "La eliminación absoluta de toda adjetivación dentro del texto de consulta.",
+        "isCorrect": false,
+        "rationale": "Incluir adjetivos detallados y referencias de estilo enriquece la orientación del modelo para sintetizar la imagen deseada."
+      }
+    ],
+    "hint": "Considere qué elemento contiene las instrucciones de estilo, encuadre, iluminación y sujeto que lee la máquina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-23",
+    "diplomado": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera el teletrabajo y la supervisión mediante plantas conectadas (Industria 4.0/5.0) impactan en las metas de sostenibilidad organizacional?",
+    "opciones": [
+      {
+        "text": "Disminuyen las emisiones de carbono asociadas al traslado físico y optimizan el consumo de recursos en sedes corporativas.",
+        "isCorrect": true,
+        "rationale": "Operar plantas a distancia reduce el desplazamiento innecesario y racionaliza el gasto energético de instalaciones físicas."
+      },
+      {
+        "text": "Aumentan obligatoriamente el uso de combustibles fósiles en los centros de cómputo.",
+        "isCorrect": false,
+        "rationale": "La digitalización busca elevar la eficiencia energética y promover la migración hacia fuentes de energía limpias."
+      },
+      {
+        "text": "Exigen que todos los ingenieros se trasladen en vehículos diésel individuales a la mina cada hora.",
+        "isCorrect": false,
+        "rationale": "La tele-operación basada en redes 5G e IoT evita precisamente los viajes continuos y presenciales."
+      },
+      {
+        "text": "Impiden la visualización en tiempo real de los niveles de producción de la planta.",
+        "isCorrect": false,
+        "rationale": "La ventaja central de la supervisión remota es ofrecer visibilidad completa e instantánea de las métricas operativas."
+      },
+      {
+        "text": "Inhabilitan los protocolos de respuesta ante emergencias ambientales.",
+        "isCorrect": false,
+        "rationale": "El monitoreo remoto facilita la detección temprana de eventos ambientales peligrosos para actuar con mayor rapidez."
+      }
+    ],
+    "hint": "Reflexione sobre el beneficio ambiental de evitar que cientos de trabajadores tengan que desplazarse diariamente hacia un centro operativo.",
+    "activo": true
+  }
+]

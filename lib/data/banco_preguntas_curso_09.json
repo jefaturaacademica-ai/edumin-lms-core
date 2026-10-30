@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la primera sesión del curso, ¿qué figura o metáfora utiliza el ponente para describir la aparente contradicción al juntar los conceptos de 'Derecho Humanos' y 'Minería'?",
+    "opciones": [
+      {
+        "text": "Un oxímoron (como hablar de 'helado caliente').",
+        "rationale": "Esta figura retórica ilustra la percepción común de que ambos conceptos son opuestos e irreconciliables a primera vista.",
+        "isCorrect": true
+      },
+      {
+        "text": "Un pleonasmo jurídico sobre desarrollo sostenible.",
+        "rationale": "Un pleonasmo implica redundancia, lo cual contrasta con la idea expresada de dos conceptos que parecen contradecirse.",
+        "isCorrect": false
+      },
+      {
+        "text": "Una metáfora de crecimiento económico ilimitado.",
+        "rationale": "El ponente no buscaba resaltar la abundancia, sino la dificultad inicial de conciliar la extracción con los derechos fundamentales.",
+        "isCorrect": false
+      },
+      {
+        "text": "Una hipérbole sobre la tributación minera.",
+        "rationale": "La intención no era exagerar un hecho económico, sino señalar la tensión conceptual entre ambas ideas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Una analogía de la tecnología ambiental avanzada.",
+        "rationale": "Aunque se menciona la tecnología en la minería, no se empleó como la metáfora inicial para definir la relación entre derechos y extracción.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en una expresión que une dos términos de significado opuesto para generar un contraste impactante.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según lo expuesto en el curso, ¿cuál es la diferencia de enfoque entre abordar la relación minería-derechos humanos como un 'problema' o como un 'desafío'?",
+    "opciones": [
+      {
+        "text": "El término problema exige un fallo judicial, mientras que el desafío solo requiere un acuerdo informal.",
+        "rationale": "Ambos conceptos trascienden el ámbito puramente judicial y se enfocan en la gestión social y económica.",
+        "isCorrect": false
+      },
+      {
+        "text": "El término desafío excluye las obligaciones ambientales de las empresas.",
+        "rationale": "El enfoque de desafío mantiene y refuerza las exigencias ambientales como parte del desarrollo responsable.",
+        "isCorrect": false
+      },
+      {
+        "text": "El término desafío integra la oportunidad de generar desarrollo, prosperidad y valor social a partir de la crisis.",
+        "rationale": "Ver la situación como desafío permite transformar una dificultad en una oportunidad de progreso integral para la comunidad.",
+        "isCorrect": true
+      },
+      {
+        "text": "El concepto de problema aplica a la minería formal y el de desafío a la ilegal.",
+        "rationale": "La distinción conceptual se aplica a la actividad minera en general y a su impacto en la sociedad.",
+        "isCorrect": false
+      },
+      {
+        "text": "El desafío se enfoca únicamente en incrementar la recaudación de impuestos regionales.",
+        "rationale": "El desarrollo integral abarca dimensiones sociales, ambientales y culturales, no solo la recaudación fiscal.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerda qué palabra incluye tanto el aspecto crítico como la posibilidad de encontrar una oportunidad de mejora.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el análisis de la minería ilegal en zonas como Madre de Dios, ¿cuáles de los siguientes males sociales y ambientales están directamente asociados a esta actividad?",
+    "opciones": [
+      {
+        "text": "Trabajo infantil en condiciones de esclavitud.",
+        "rationale": "La falta de regulación en campamentos clandestinos vulnera los derechos básicos de los menores sometiéndolos a labores forzadas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Prostitución infantil y trata de personas.",
+        "rationale": "Las redes ilícitas explotan la vulnerabilidad en zonas liberadas generando graves violaciones a los derechos humanos.",
+        "isCorrect": true
+      },
+      {
+        "text": "Deforestación masiva e indiscriminada de bosques.",
+        "rationale": "La remoción de capa vegetal sin planes ambientales devasta ecosistemas amazónicos a gran escala.",
+        "isCorrect": true
+      },
+      {
+        "text": "Vertimiento de relaves y contaminantes sin tratamiento en ríos.",
+        "rationale": "El uso de químicos como el mercurio sin controles contamina los cursos de agua y las cadenas alimenticias.",
+        "isCorrect": true
+      },
+      {
+        "text": "Programas inmediatos de reforestación con especies nativas.",
+        "rationale": "Esta práctica es propia de la minería formal regulada y no de las operaciones ilegales que abandonan los pasivos ambientales.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica las consecuencias destructivas e ilícitas que caracterizan a las zonas no reguladas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso de la minera Antapaccay en la provincia de Espinar, ¿qué mecanismo acordado con las comunidades permite financiar proyectos de desarrollo específicos adicionales a las cargas de ley?",
+    "opciones": [
+      {
+        "text": "El Canon Gasífero de la Selva.",
+        "rationale": "Este canon pertenece a un sector extractivo y zona geográfica totalmente distintos.",
+        "isCorrect": false
+      },
+      {
+        "text": "El Convenio Marco.",
+        "rationale": "Este acuerdo voluntary permite concertar proyectos de desarrollo directamente entre la empresa y los representantes comunitarios.",
+        "isCorrect": true
+      },
+      {
+        "text": "El Plan de Expropiación Forzosa.",
+        "rationale": "No constituye un espacio de diálogo voluntario sino una medida estatal de carácter coercitivo.",
+        "isCorrect": false
+      },
+      {
+        "text": "La Licencia Ambiental Temporal.",
+        "rationale": "Se trata de un permiso administrativo expedido por el Estado y no de un fondo concertado de desarrollo social.",
+        "isCorrect": false
+      },
+      {
+        "text": "El Contrato de Cierre Definitivo.",
+        "rationale": "Este instrumento regula la etapa final de las operaciones mineras y no la convivencia y desarrollo continuo.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Busca el término que describe un acuerdo voluntario de diálogo entre la empresa y las comunidades para financiar proyectos sociales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de los debates del curso, ¿a qué se refiere el concepto de 'Estado desbordado'?",
+    "opciones": [
+      {
+        "text": "A un Estado que cuenta con un superávit presupuestal que no logra ejecutar.",
+        "rationale": "El término no alude al exceso de dinero, sino a la falta de capacidad operativa para gestionar problemas.",
+        "isCorrect": false
+      },
+      {
+        "text": "A la incapacidad de las instituciones públicas para fiscalizar, regular y atender las demandas sociales que sobrepasan su control.",
+        "rationale": "Refleja cómo las problemáticas del país sobrepasan la estructura gubernamental disponible para darles solución oportuna.",
+        "isCorrect": true
+      },
+      {
+        "text": "A la presencia masiva de organismos internacionales administrando los servicios públicos.",
+        "rationale": "La presencia de organismos externos no define la condición estructural interna de la administración pública.",
+        "isCorrect": false
+      },
+      {
+        "text": "A un sistema donde el Poder Judicial ha sido reemplazado por empresas privadas.",
+        "rationale": "Aunque existan arbitrajes o falencias en la justicia, las funciones soberanas no han sido sustituidas por privados en el marco legal.",
+        "isCorrect": false
+      },
+      {
+        "text": "Al exceso de personal militar vigilando las carreteras nacionales.",
+        "rationale": "El desborde institutional implica una carencia o ineficiencia de control, no un despliegue desmedido y efectivo.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en una estructura administrativa que se ve superada por la cantidad y complejidad de los conflictos de su entorno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la explicación sobre la estructura política del país, ¿cuáles son los dos componentes principales que integran el Estado?",
+    "opciones": [
+      {
+        "text": "Las empresas privadas y las organizaciones no gubernamentales.",
+        "rationale": "Estos actores forman parte del tejido económico y social, pero no agrupan la definición integral del Estado.",
+        "isCorrect": false
+      },
+      {
+        "text": "El Gobierno y la Sociedad Civil.",
+        "rationale": "El Estado abarca tanto a las instituciones que ejercen el poder público (Gobierno) como a la ciudadanía en sus distintas formas de organización (Sociedad Civil).",
+        "isCorrect": true
+      },
+      {
+        "text": "El Congreso de la República y los Gremios Empresariales.",
+        "rationale": "Representan solo una fracción de las instituciones públicas y de la actividad privada respectivamente.",
+        "isCorrect": false
+      },
+      {
+        "text": "La Policía Nacional y las Fuerzas Armadas.",
+        "rationale": "Constituyen los órganos ejecutores del uso legítimo de la fuerza, pero no la totalidad del Estado.",
+        "isCorrect": false
+      },
+      {
+        "text": "El Ministerio de Energía y Minas y las Municipalidades.",
+        "rationale": "Son instancias pertenecientes al nivel del Gobierno central y local, omitiendo al componente ciudadano.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera la dualidad entre las autoridades que administran el poder y el conjunto de la ciudadanía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Bajo la legislación peruana, ¿cuál es la condición jurídica de una persona que adquiere un terreno agrícola o urbano en la superficie?",
+    "opciones": [
+      {
+        "text": "Es dueña absoluta de la superficie y de todos los minerales que se encuentren en el subsuelo.",
+        "rationale": "En el Perú, la propiedad del suelo no concede derechos sobre los recursos minerales del subsuelo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Es propietaria únicamente del suelo (superficie), pues el subsuelo y sus recursos pertenecen al Estado.",
+        "rationale": "La ley establece la separación entre el dominio del predio superficial y los recursos del subsuelo, administrados por el Estado.",
+        "isCorrect": true
+      },
+      {
+        "text": "Adquiere el derecho automático de extraer metales sin solicitar permisos ambientales.",
+        "rationale": "La extracción minera requiere concesiones y estudios ambientales otorgados exclusivamente por las autoridades competentes.",
+        "isCorrect": false
+      },
+      {
+        "text": "Debe pagar un canon directo al municipio por cada metro de profundidad que explore.",
+        "rationale": "El canon no es un pago por profundidad abonado por propietarios de terrenos, sino una distribución del Impuesto a la Renta de empresas mineras.",
+        "isCorrect": false
+      },
+      {
+        "text": "Pierde automáticamente el derecho de cultivar o habitar la superficie.",
+        "rationale": "El propietario mantiene el uso de la superficie a menos que se realice un proceso legal de negociación o servidumbre.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerda la distinción legal entre lo que está 'arriba' en la tierra y los recursos que yacen 'debajo'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco de la gestión ambiental minera, ¿qué tipos de contaminación pueden generarse si no se aplican los controles adecuados?",
+    "opciones": [
+      {
+        "text": "Contaminación sólida por acumulación de relaves y desmontes.",
+        "rationale": "La disposición inadecuada de material sobrante altera la capa terrestre y el paisaje.",
+        "isCorrect": true
+      },
+      {
+        "text": "Contaminación hídrica en aguas subterráneas y napas freáticas.",
+        "rationale": "La filtración de efluentes químicos puede alcanzar los acuíferos profundos inutilizándolos para el consumo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Contaminación atmosférica por gases de fundición y material particulado.",
+        "rationale": "Las emisiones sin tratar liberan gases pesados y polvos nocivos al aire.",
+        "isCorrect": true
+      },
+      {
+        "text": "Contaminación del suelo con sustancias ácidas o salitrosas.",
+        "rationale": "La reactividad de los reactivos mineros modifica la composición química del suelo impidiendo el cultivo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Purificación natural inmediata de los ríos afectados por mercurio.",
+        "rationale": "El mercurio es un metal pesado bioacumulable que degrada los ecosistemas en lugar de purificarlos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera los tres estados de la materia en los que se vierten o dispersan los residuos nocivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante las exposiciones sobre buenas prácticas mineras, ¿qué país se citó como referente internacional y modelo en la aplicación de la 'minería verde'?",
+    "opciones": [
+      {
+        "text": "España.",
+        "rationale": "Aunque posee minería, no fue el ejemplo nórdico citado para definir los estándares más altos de minería verde.",
+        "isCorrect": false
+      },
+      {
+        "text": "Finlandia.",
+        "rationale": "Se destacó a Finlandia por sus rigurosos parámetros tecnológicos y ambientales en el desarrollo extractivo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Italia.",
+        "rationale": "No fue mencionada como la potencia líder en el establecimiento de estándares de minería verde global.",
+        "isCorrect": false
+      },
+      {
+        "text": "Grecia.",
+        "rationale": "Grecia no fue parte de los ejemplos analizados sobre tecnología minera sostenible de vanguardia.",
+        "isCorrect": false
+      },
+      {
+        "text": "Portugal.",
+        "rationale": "No se utilizó a esta nación como el referente principal de minería ambientalmente limpia en las sesiones.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Se trata de un país nórdico europeo reconocido mundialmente por su alta tecnología y sostenibilidad ambiental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "El proceso de 'consulta previa, libre e informada' busca principalmente garantizar:",
+    "opciones": [
+      {
+        "text": "El cobro por adelantado de los tributos municipales.",
+        "rationale": "La consulta previa aborda derechos fundamentales y de participación, no la recaudación tributaria anticipada.",
+        "isCorrect": false
+      },
+      {
+        "text": "La obtención legítima de la licencia social y el respeto al derecho de autodeterminación de los pueblos.",
+        "rationale": "Asegura que las comunidades conozcan las implicancias del proyecto y participen activamente en las decisiones sobre sus territorios.",
+        "isCorrect": true
+      },
+      {
+        "text": "La transferencia obligatoria de las acciones de la mina a los pobladores.",
+        "rationale": "El mecanismo no exige la entrega de propiedad accionaria de la empresa a la comunidad.",
+        "isCorrect": false
+      },
+      {
+        "text": "La exoneración de los estudios de impacto ambiental formales.",
+        "rationale": "La consulta no reemplaza las exigencias de los estudios ambientales normados por el Estado.",
+        "isCorrect": false
+      },
+      {
+        "text": "La privatización de las fuentes de agua comunales.",
+        "rationale": "El objetivo de la consulta es proteger los recursos comunales y la cultura, no privatizarlos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Se relaciona con el consentimiento dialogado y la preservación de la identidad y decisiones comunitarias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el ciclo de vida de un proyecto minero formal, ¿en qué etapa es obligatorio realizar la remediación ambiental y reforestación de las zonas intervenidas?",
+    "opciones": [
+      {
+        "text": "En la fase de cateo y prospección.",
+        "rationale": "En esta fase inicial solo se realizan estudios preliminares de campo con mínimo impacto superficial.",
+        "isCorrect": false
+      },
+      {
+        "text": "En la etapa de Post-cierre.",
+        "rationale": "La normativa exige dejar el área en condiciones seguras y ambientalmente estables una vez concluidas las operaciones.",
+        "isCorrect": true
+      },
+      {
+        "text": "Durante la licitación de la maquinaria pesada.",
+        "rationale": "La licitación comercial ocurre antes de la construcción y no corresponde a la recuperación del terreno.",
+        "isCorrect": false
+      },
+      {
+        "text": "En el momento de la aprobación del primer crédito bancario.",
+        "rationale": "Se trata de un trámite financiero que precede a las operaciones de campo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Únicamente durante los primeros tres meses de exploración.",
+        "rationale": "La restauración profunda abarca el terreno alterado por toda la operación y se consolida al concluir la extracción.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Esta fase se ejecuta cuando la extracción ha finalizado y se requiere dejar el ecosistema rehabilitado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Según el contenido expuesto, ¿qué elementos dificultan una supervisión estatal efectiva en las zonas afectadas por la minería ilegal?",
+    "opciones": [
+      {
+        "text": "La escasa capacidad presupuestal y logística de las direcciones de medio ambiente de la policía.",
+        "rationale": "La falta de recursos y transporte adecuado limita el desplazamiento de las fuerzas del orden hacia zonas alejadas.",
+        "isCorrect": true
+      },
+      {
+        "text": "La presencia de corrupción en diversos estamentos que encubre actividades ilícitas.",
+        "rationale": "El poder económico ilícito compra impunidad impidiendo la aplicación severa de la ley.",
+        "isCorrect": true
+      },
+      {
+        "text": "La inaccesibilidad geográfica de los terrenos donde se asientan los campamentos clandestinos.",
+        "rationale": "La ubicación en selva profunda o zonas de difícil acceso complica las intervenciones sorpresivas y sostenidas.",
+        "isCorrect": true
+      },
+      {
+        "text": "La rápida capacidad de reequipamiento de las mafias debido a sus altas ganancias.",
+        "rationale": "Al generar cuantiosos ingresos diarios, las mafias sustituyen rápidamente las maquinarias destruidas.",
+        "isCorrect": true
+      },
+      {
+        "text": "El cumplimiento riguroso de los estándares de salud ocupacional por parte de los mineros ilegales.",
+        "rationale": "Las actividades ilegales se caracterizan precisamente por la ausencia total de estándares laborales o ambientales.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica los obstáculos financieros, geográficos y de integridad pública que impiden erradicar la ilegalidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el ordenamiento jurídico peruano, ¿qué porcentaje del Impuesto a la Renta que pagan las mineras formales se destina al Canon Minero?",
+    "opciones": [
+      {
+        "text": "10%",
+        "rationale": "Este porcentaje no refleja la proporción de participación en el Impuesto a la Renta fijada desde el 2003.",
+        "isCorrect": false
+      },
+      {
+        "text": "20%",
+        "rationale": "Ese era el porcentaje aplicado antes del ajuste normativo del año 2003.",
+        "isCorrect": false
+      },
+      {
+        "text": "50%",
+        "rationale": "La ley establece que la mitad del total de los ingresos captados por Impuesto a la Renta de las mineras conforma el Canon Minero.",
+        "isCorrect": true
+      },
+      {
+        "text": "75%",
+        "rationale": "Supera la proporción que el Estado transfiere bajo el concepto de canon a las regiones.",
+        "isCorrect": false
+      },
+      {
+        "text": "100%",
+        "rationale": "El Estado retiene una mitad para el tesoro público y destina el otro 50% para el canon de las zonas productoras.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Equivale exactamente a la mitad de la recaudación del tributo a las ganancias de las empresas formales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la distribución interna del Canon Minero, ¿qué porcentaje del total recaudado le corresponde a los municipios provinciales y distritales del departamento donde se explota el recurso?",
+    "opciones": [
+      {
+        "text": "10%",
+        "rationale": "Corresponde a la tajada directa del distrito específico donde se sitúa la mina.",
+        "isCorrect": false
+      },
+      {
+        "text": "25%",
+        "rationale": "Este porcentaje asigna recursos a los municipios distritales de la provincia o al gobierno regional/universidades.",
+        "isCorrect": false
+      },
+      {
+        "text": "40%",
+        "rationale": "La reglamentación asigna esta proporción para el conjunto de municipios provinciales y distritales de la región productora.",
+        "isCorrect": true
+      },
+      {
+        "text": "50%",
+        "rationale": "Es la proporción del Impuesto a la Renta que se convierte en canon, no la partida provincial regional.",
+        "isCorrect": false
+      },
+      {
+        "text": "60%",
+        "rationale": "Supera el tope de la asignación establecida para este nivel subnacional.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Es la partida más grande destinada al conjunto de gobiernos locales de la región donde se extrae el mineral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del marco de los derechos humanos y laborales en la minería formal, ¿cuáles representan compromisos obligatorios para la empresa?",
+    "opciones": [
+      {
+        "text": "Prohibición total del trabajo infantil en la operación.",
+        "rationale": "Proteger a los menores de la explotación es una norma internacional y constitucional de carácter imperativo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Provisión de Equipos de Protección Personal (EPP) capacitados e idóneos.",
+        "rationale": "Asegurar la integridad física de los trabajadores mediante indumentaria adecuada es deber del empleador.",
+        "isCorrect": true
+      },
+      {
+        "text": "Garantizar jornadas de trabajo razonables con espacios de descanso.",
+        "rationale": "Evitar la fatiga extrema previene accidentes y cuida la salud física y mental del personal.",
+        "isCorrect": true
+      },
+      {
+        "text": "Acceso a beneficios de seguridad social y salud ocupacional.",
+        "rationale": "Los trabajadores deben contar con cobertura médica y seguro ante accidentes o enfermedades de trabajo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Obligar al colaborador a financiar sus propias medicinas tras un accidente en mina.",
+        "rationale": "En la minería formal, la cobertura ante accidentes laborales es responsabilidad económica del sistema de seguro y de la empresa.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Selecciona las opciones que protegen la salud, seguridad y dignidad del trabajador en el régimen formal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "El principio de 'igualdad salarial' en el ámbito laboral minero establece que:",
+    "opciones": [
+      {
+        "text": "El salario debe fijarse según el grupo étnico del colaborador.",
+        "rationale": "La discriminación por origen étnico viola las leyes laborales y los derechos humanos.",
+        "isCorrect": false
+      },
+      {
+        "text": "A igual trabajo y bajo las mismas condiciones de eficiencia, corresponde igual remuneración sin distinción de género o raza.",
+        "rationale": "Asegura que los méritos laborales y el puesto sean los únicos criterios para la compensación económica.",
+        "isCorrect": true
+      },
+      {
+        "text": "Los trabajadores extranjeros deben ganar el doble que los locales por la misma función.",
+        "rationale": "Esa práctica constituiría un acto discriminatorio prohibido por el marco normativo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Las remuneraciones son decididas unilateralmente por el sindicato comunal.",
+        "rationale": "Las escalas salariales se establecen respetando la legislación laboral y los convenios colectivos, no por imponer un monopolio.",
+        "isCorrect": false
+      },
+      {
+        "text": "Las mujeres solo pueden aspirar al 50% del sueldo de un varón en el mismo cargo.",
+        "rationale": "La brecha salarial por razón de género es una vulneración de derechos que la normativa busca erradicar.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Esta regla garantiza que el puesto desempeñando determine el ingreso, erradicando sesgos de género o raza.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la salud ocupacional minera, ¿a qué tipo de agente nocivo en el aire se exponen los trabajadores si no se aplican sistemas de ventilación y filtros adecuados?",
+    "opciones": [
+      {
+        "text": "Polvo de sílice.",
+        "rationale": "La inhalación prolongada de partículas de sílice produce silicosis, una enfermedad pulmonar crónica grave.",
+        "isCorrect": true
+      },
+      {
+        "text": "Gases de nitrógeno puro inofensivo.",
+        "rationale": "El nitrógeno es un componente habitual del aire y no constituye el riesgo particulado característico de la roca perforada.",
+        "isCorrect": false
+      },
+      {
+        "text": "Vapor de agua purificada.",
+        "rationale": "El vapor de agua no causa afecciones pulmonares ni es un contaminante de la roca minada.",
+        "isCorrect": false
+      },
+      {
+        "text": "Polvo de tiza escolar.",
+        "rationale": "No es el residuo derivado de la excavación o perforación de vetas minerales en las minas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Dióxido de carbono vegetal.",
+        "rationale": "Aunque en espacios cerrados sofoca, el contaminante particulado específico de la roca es la sílice.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Es un fino polvo derivado de la trituración de rocas que afecta gravemente la función pulmonar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión social del sector extractivo, ¿qué diferencia a una empresa minera 'legal' de una que ha alcanzado la 'legitimidad'?",
+    "opciones": [
+      {
+        "text": "La legalidad se refiere a cumplir con las normas del Estado; la legitimidad implica obtener la confianza y aceptación social de la comunidad (licencia social).",
+        "rationale": "Cumplir la ley es el requisito básico estatal, pero la legitimidad se gana mediante el respeto y la convivencia armónica con los vecinos.",
+        "isCorrect": true
+      },
+      {
+        "text": "La legalidad la otorga la municipalidad y la legitimidad la da la Policía.",
+        "rationale": "Ambas instancias son del fuero estatal y no representan la dimensión de la aceptación comunitaria.",
+        "isCorrect": false
+      },
+      {
+        "text": "No existe diferencia alguna; ambos conceptos expresan exactamente el mismo trámite.",
+        "rationale": "Son conceptos distintos: la ley es jurídica y la legitimidad es social e interrelacional.",
+        "isCorrect": false
+      },
+      {
+        "text": "La legitimidad se compra mediante pagos informales y la legalidad con impuestos.",
+        "rationale": "La legitimidad proviene de la buena fe y la responsabilidad social, no del soborno o la corrupción.",
+        "isCorrect": false
+      },
+      {
+        "text": "La legalidad aplica a las minas extranjeras y la legitimidad a las minas artesanales.",
+        "rationale": "Cualquier proyecto minero requiere operar bajo el marco de la ley y aspirar al respaldo de su entorno.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Una condición depende de los permisos en papel otorgados por el Estado; la otra, del respaldo auténtico de los vecinos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Por mandato de ley, ¿en qué rubros deben emplearse obligatoriamente las transferencias financieras del Canon Minero recibidas por los gobiernos subnacionales?",
+    "opciones": [
+      {
+        "text": "En el financiamiento de campañas electorales locales.",
+        "rationale": "Usar dinero público para propaganda política es un delito de malversación.",
+        "isCorrect": false
+      },
+      {
+        "text": "En obras de infraestructura pública, mantenimiento, elaboración de perfiles y proyectos de inversión pública.",
+        "rationale": "La norma exige destinar estos fondos a mejorar el patrimonio público y cerrar brechas de servicios para la población.",
+        "isCorrect": true
+      },
+      {
+        "text": "En la compra de regalos y donaciones privadas para empresas familiares.",
+        "rationale": "El dinero del canon no puede desviarse para fines particulares ni empresariales privados.",
+        "isCorrect": false
+      },
+      {
+        "text": "En la contratación de personal administrativo permanente en exceso.",
+        "rationale": "Los fondos del canon no están autorizados para gasto corriente ni contratación de planillas burocráticas permanentes.",
+        "isCorrect": false
+      },
+      {
+        "text": "En el pago directo de la deuda privada de las mineras.",
+        "rationale": "Son recursos públicos destinados al beneficio social de la región y no al auxilio financiero privado.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en obras físicas, carreteras, colegios, sistemas de agua y preparación de expedientes técnicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el departamento de Arequipa, ¿cuál de las siguientes provincias recibe históricamente la mayor proporción de transferencias por Canon Minero?",
+    "opciones": [
+      {
+        "text": "La Unión.",
+        "rationale": "Históricamente es una de las provincias que menores asignaciones recibe por ubicación y población.",
+        "isCorrect": false
+      },
+      {
+        "text": "Arequipa (provincia capital).",
+        "rationale": "Concentra la mayor asignación presupuestal por concepto de canon dentro de la distribución regional.",
+        "isCorrect": true
+      },
+      {
+        "text": "Caravelí.",
+        "rationale": "Recibe ingresos por su actividad minera pero en montos menores en comparación con la provincia capital.",
+        "isCorrect": false
+      },
+      {
+        "text": "Condesuyos.",
+        "rationale": "Sus asignaciones son reducidas comparadas con los volúmenes transferidos a la provincia principal.",
+        "isCorrect": false
+      },
+      {
+        "text": "Castilla.",
+        "rationale": "No encabeza el ranking de transferencias en la distribución departamental de Arequipa.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Es la provincia que alberga la mayor población y la capital del departamento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Entre las principales empresas de la minería formal en el Perú explicadas en el curso, ¿cuáles destacan por sus operaciones a Tajo Abierto en la zona sur y centro del país?",
+    "opciones": [
+      {
+        "text": "Sociedad Minera Cerro Verde (Arequipa).",
+        "rationale": "Es una de las operaciones a tajo abierto más grandes del país en producción de cobre y molibdeno.",
+        "isCorrect": true
+      },
+      {
+        "text": "Compañía Minera Antapaccay (Cusco).",
+        "rationale": "Opera un importante yacimiento a tajo abierto para la extracción de concentrados de cobre.",
+        "isCorrect": true
+      },
+      {
+        "text": "Minera Las Bambas (Apurímac).",
+        "rationale": "Destaca como una mina a tajo abierto de gran escala productora de cobre en el sur andino.",
+        "isCorrect": true
+      },
+      {
+        "text": "Southern Peru Copper Corporation (Cuajone y Toquepala).",
+        "rationale": "Sus centros operativos en Moquegua y Tacna corresponden a tajos abiertos históricos de gran volumen.",
+        "isCorrect": true
+      },
+      {
+        "text": "Dragas informales flotantes de cauce de río.",
+        "rationale": "Constituyen métodos clandestinos prohibidos que operan en los ríos de selva y no minas formales a tajo abierto.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Elige las grandes empresas corporativas que procesan cobre a gran escala en canteras abiertas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el reporte de transferencias del año 2023 revisado en clase, ¿qué distrito de la provincia de Arequipa destacó por recibir un monto superior a los 80 millones de soles por Canon Minero?",
+    "opciones": [
+      {
+        "text": "Tiabaya.",
+        "rationale": "Aunque recibe canon por cercanía a la mina, su cifra fue significativamente menor a la del distrito líder.",
+        "isCorrect": false
+      },
+      {
+        "text": "Cerro Colorado.",
+        "rationale": "Lideró las transferencias presupuestales en la provincia de Arequipa con más de 84 millones de soles.",
+        "isCorrect": true
+      },
+      {
+        "text": "Paucarpata.",
+        "rationale": "Maneja presupuesto de canon pero no encabezó la lista con dicha cifra récord.",
+        "isCorrect": false
+      },
+      {
+        "text": "Socabaya.",
+        "rationale": "Sus montos recibidos se ubicaron sustancialmente por debajo del piso de los 80 millones.",
+        "isCorrect": false
+      },
+      {
+        "text": "Yanahuara.",
+        "rationale": "No figuró entre las jurisdicciones distritales con mayores ingresos por canon minero de Arequipa.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Es el distrito más poblado del cono norte de la ciudad de Arequipa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En las operaciones de extracción ilegal de oro en ríos amazónicos, ¿qué insumo químico highly nocivo se utiliza comúnmente para amalgamar el metal precioso?",
+    "opciones": [
+      {
+        "text": "Cloruro de sodio.",
+        "rationale": "Es sal común y no posee la propiedad química de atrapar y amalgamar las partículas de oro.",
+        "isCorrect": false
+      },
+      {
+        "text": "Mercurio.",
+        "rationale": "Se emplea ilegalmente para capturar el oro en el proceso de lavado, generando grave contaminación ambiental.",
+        "isCorrect": true
+      },
+      {
+        "text": "Bicarbonato de sodio.",
+        "rationale": "Es un compuesto doméstico que no sirve para la concentración del metal en los cauces.",
+        "isCorrect": false
+      },
+      {
+        "text": "Sulfato de magnesio.",
+        "rationale": "No es el elemento pesado que se comercializa de contrabando para la minería aurífera informal.",
+        "isCorrect": false
+      },
+      {
+        "text": "Agua oxigenada concentrada.",
+        "rationale": "No funciona como reactivo amalgamador de las arenas auríferas.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Es un metal líquido de alta toxicidad que bioacumula en los peces y afecta a las poblaciones nativas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Por regla general, ¿en qué momento del año realiza el Ministerio de Economía y Finanzas las transferencias anuales del Canon Minero a las regiones?",
+    "opciones": [
+      {
+        "text": "En enero de manera adelantada.",
+        "rationale": "A inicios de año aún se consolidan las declaraciones tributarias de las empresas del ejercicio saliente.",
+        "isCorrect": false
+      },
+      {
+        "text": "Entre los meses de junio y julio del año posterior al ejercicio fiscal recaudado.",
+        "rationale": "Una vez regularizado el Impuesto a la Renta anual en la SUNAT, se gira la partida en una sola cuota a mediados del año siguiente.",
+        "isCorrect": true
+      },
+      {
+        "text": "Semanalmente en cuotas fraccionadas.",
+        "rationale": "La norma contempla la entrega consolidada en un único depósito en cuenta especial del Banco de la Nación.",
+        "isCorrect": false
+      },
+      {
+        "text": "Al término total de la concesión minera tras varios decenios.",
+        "rationale": "Las transferencias son de periodicidad anual para mantener el presupuesto público de los gobiernos locales.",
+        "isCorrect": false
+      },
+      {
+        "text": "Cada cinco años durante los comicios generales.",
+        "rationale": "El ciclo presupuestal es de frecuencia anual y desvinculado de los calendarios electorales.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Las transferencias ocurren a mitad del año siguiente, tras cerrarse la regularización del Impuesto a la Renta del año previo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con los materiales audiovisuales expuestos en la última sesión, ¿cuáles son los impactos trágicos derivados de la expansión de la minería ilegal en la selva?",
+    "opciones": [
+      {
+        "text": "Pérdida masiva de miles de hectáreas de bosque primario por deforestación.",
+        "rationale": "La tala y remoción con maquinaria pesada destruye la flora y fauna amazónica de forma irreversible.",
+        "isCorrect": true
+      },
+      {
+        "text": "Trata de personas con fines de explotación sexual y laboral en campamentos.",
+        "rationale": "Se captan jóvenes mediante engaños para someterlas a redes de prostitución en bares clandestinos.",
+        "isCorrect": true
+      },
+      {
+        "text": "Inseguridad ciudadana y sicariato sin presencia de las fuerzas de la ley.",
+        "rationale": "Las disputas de territorio generan asesinatos e impunidad al margen del Estado de derecho.",
+        "isCorrect": true
+      },
+      {
+        "text": "Contaminación por mercurio de los ríos y de los peces consumedos por familias nativas.",
+        "rationale": "El vertimiento ilícito de tóxicos genera daños irreparables en la salud de las comunidades nativas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Aumento de la recaudación del impuesto a la renta en favor de las universidades públicas.",
+        "rationale": "La minería ilegal evade todo tipo de impuestos, privando de recursos a las instituciones educativas.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Selecciona las consecuencias que representan vulneraciones graves al medio ambiente y a los derechos humanos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el planteamiento central al calificar la relación entre la minería y los derechos humanos como un «desafío global»?",
+    "opciones": [
+      {
+        "text": "Conciliar el desarrollo económico extractivo con la protección de los derechos ciudadanos y la sostenibilidad social de las comunidades.",
+        "isCorrect": true,
+        "rationale": "El desafío radica en aprovechar la oportunidad de crecimiento y recursos de la minería sin comprometer la calidad de vida, el medio ambiente ni las garantías fundamentales de la población."
+      },
+      {
+        "text": "Sustituir la regulación estatal por convenios privados internacionales de cumplimiento voluntario.",
+        "isCorrect": false,
+        "rationale": "La regulación legal del Estado y el cumplimiento obligatorio de los derechos humanos no se pueden reemplazar por acuerdos privados informales."
+      },
+      {
+        "text": "Eliminar por completo la extracción de minerales metálicos para evitar cualquier tipo de impacto ambiental.",
+        "isCorrect": false,
+        "rationale": "El enfoque planteado busca conciliar y gestionar los impactos de la actividad minera de forma responsable, no erradicar la industria extractiva formal."
+      },
+      {
+        "text": "Subordinar los derechos constitucionales de la población local al pago inmediato de tributos e impuestos.",
+        "isCorrect": false,
+        "rationale": "Los derechos fundamentales son inalienables y no se pueden supeditar ni canjear por compensaciones económicas o tributarias."
+      },
+      {
+        "text": "Garantizar que la explotación de recursos se realice de forma exclusiva mediante la minería artesanal e informal.",
+        "isCorrect": false,
+        "rationale": "La minería informal e ilegal suele ser la principal fuente de vulneraciones severas a los derechos humanos y daños ambientales irreversibles."
+      }
+    ],
+    "hint": "Considera la dualidad entre la generación de riqueza/recursos y la obligación ética de resguardar el bienestar social e individual.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué problemáticas interconectadas caracterizan el impacto de la minería ilegal e informal en zonas críticas como Madre de Dios?",
+    "opciones": [
+      {
+        "text": "Trabajo infantil ejercido bajo condiciones de servidumbre o trabajo esclavo.",
+        "isCorrect": true,
+        "rationale": "En campamentos informales e ilegales se explota a menores vulnerando su derecho a la educación, salud y libertad."
+      },
+      {
+        "text": "Explotación sexual de menores y redes de trata asociadas a los asentamientos ilegales.",
+        "isCorrect": true,
+        "rationale": "La falta de presencia estatal facilita redes de trata de personas y explotación sistemática en los entornos mineros no regulados."
+      },
+      {
+        "text": "Contaminación severa de suelos y fuentes hídricas por efluentes y relaves sin tratamiento.",
+        "isCorrect": true,
+        "rationale": "Al no utilizar tecnología de contención ni fiscalización, los reactivos como el mercurio se vertieron directamente al ecosistema."
+      },
+      {
+        "text": "Implementación obligatoria y fiscalizada de planes de post-cierre ambiental auditados por el Estado.",
+        "isCorrect": false,
+        "rationale": "Los planes de post-cierre y remediación ambiental son exigencias propias de la minería formal, inexistentes en la minería ilegal."
+      },
+      {
+        "text": "Distribución directa del Canon Minero a las comunidades amazónicas no contactadas.",
+        "isCorrect": false,
+        "rationale": "La minería ilegal no tributa ni genera Canon Minero legal para su distribución institucional a los gobiernos locales o comunidades."
+      }
+    ],
+    "hint": "Identifica los delitos sociales, laborales y ambientales que proliferan debido a la falta de control estatal en zonas de extracción ilícita.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al analizar la problemática del «Estado desbordado» en el Perú, ¿qué distinción fundamental se establece entre Gobierno y Sociedad Civil?",
+    "opciones": [
+      {
+        "text": "El Gobierno abarca a las autoridades que administran el poder público, mientras que la Sociedad Civil incluye a la ciudadanía organizada y no organizada.",
+        "isCorrect": true,
+        "rationale": "El Estado abarca tanto al Gobierno (administradores y decisores públicos) como a la Sociedad Civil, la cual se subdivide en formas colegiadas o de libre agrupación comunitaria."
+      },
+      {
+        "text": "El Gobierno está integrado únicamente por el Poder Judicial, mientras que la Sociedad Civil comprende la totalidad de los ministerios.",
+        "isCorrect": false,
+        "rationale": "El Gobierno incluye al Poder Ejecutivo, Legislativo y niveles subnacionales, mientras que los ministerios son entes gubernamentales y no de la sociedad civil."
+      },
+      {
+        "text": "La Sociedad Civil se limita a las empresas privadas, mientras que el Gobierno agrupa a los frentes de defensa comunales.",
+        "isCorrect": false,
+        "rationale": "Los frentes de defensa y organizaciones sociales forman parte de la sociedad civil organizada, no del aparato gubernamental."
+      },
+      {
+        "text": "El Gobierno representa a las comunidades campesinas y la Sociedad Civil está compuesta exclusivamente por las Fuerzas Armadas.",
+        "isCorrect": false,
+        "rationale": "Las Fuerzas Armadas constituyen una institución del Estado/Gobierno y las comunidades campesinas forman parte de la sociedad civil."
+      },
+      {
+        "text": "No existe diferencia funcional entre ambos, ya que los términos son jurídicamente idénticos e intercambiables.",
+        "isCorrect": false,
+        "rationale": "Estructuralmente existe una delimitación clara entre quienes ejercen la autoridad normativa y presupuestal (Gobierno) y el cuerpo social (Sociedad Civil)."
+      }
+    ],
+    "hint": "Piensa en quiénes ostentan la potestad de administrar recursos públicos frente al conjunto de la población civil e instituciones comunitarias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Pese al crecimiento del Producto Bruto Interno (PBI) en periodos de bonanza extractiva, ¿cuál es el factor crítico que limita la transformación de la recaudación minera en bienestar social?",
+    "opciones": [
+      {
+        "text": "La ineficiencia, corrupción y reducida capacidad institucional en los niveles de gobierno para ejecutar proyectos de inversión pública.",
+        "isCorrect": true,
+        "rationale": "Aunque se generen recursos fiscales significativos por la minería, la incapacidad de gasto y la corrupción administrativa impiden cerrar las brechas de infraestructura y servicios."
+      },
+      {
+        "text": "La prohibición legal explícita de utilizar impuestos mineros en la construcción de escuelas y hospitales.",
+        "isCorrect": false,
+        "rationale": "La normativa sobre recursos mineros promueve expresamente el financiamiento de infraestructura básica como educación y salud."
+      },
+      {
+        "text": "El destino obligatorio del total de las regalías mineras al pago de la deuda externa nacional.",
+        "isCorrect": false,
+        "rationale": "Las regalías y el Canon están normativamente destinados a los gobiernos regionales y locales de las zonas donde se extrae el recurso."
+      },
+      {
+        "text": "La ausencia de empresas mineras formales sujetas al régimen impositivo del Impuesto a la Renta.",
+        "isCorrect": false,
+        "rationale": "El Perú cuenta con importantes operaciones mineras formales que tributan y generan el Canon distribuido a las regiones."
+      },
+      {
+        "text": "La contracción automática del PBI cada vez que se incrementa la producción minera formal.",
+        "isCorrect": false,
+        "rationale": "La producción minera formal aporta positivamente al crecimiento del PBI nacional."
+      }
+    ],
+    "hint": "Enfócate en la gestión administrativa y en la capacidad de los gobiernos subnacionales para convertir ingresos fiscales en obras públicas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el ámbito de la administración pública, ¿qué limitación estructural suelen presentar los Órganos de Control Interno (OCI) frente a faltas administrativas e ilícitos?",
+    "opciones": [
+      {
+        "text": "Procedimientos disciplinarios lentos y sanciones administrativas leves o extemporáneas que no logran desincentivar la corrupción.",
+        "isCorrect": true,
+        "rationale": "La burocracia en las investigaciones internas causa que los procesos se dilaten por años y concluyan con sanciones menores que no erradican la impunidad."
+      },
+      {
+        "text": "Incapacidad legal para auditar o revisar el uso de recursos presupuestales en los gobiernos subnacionales.",
+        "isCorrect": false,
+        "rationale": "Los OCI y la Contraloría tienen el mandato constitucional y legal directo para auditar la ejecución presupuestal."
+      },
+      {
+        "text": "Subordinación jerárquica obligatoria hacia los gremios de la minería ilegal e informal.",
+        "isCorrect": false,
+        "rationale": "Los OCI responden institucionalmente a la Contraloría General de la República y no a actores informales."
+      },
+      {
+        "text": "Prohibición expresada en la Constitución para intervenir en municipalidades distritales o provinciales.",
+        "isCorrect": false,
+        "rationale": "El control gubernamental abarca a todos los niveles del Estado, incluyendo municipios provinciales y distritales."
+      },
+      {
+        "text": "La facultad penal exclusiva para encarcelar de forma preventiva e inmediata a funcionarios investigados.",
+        "isCorrect": false,
+        "rationale": "Las sanciones penales privativas de la libertad son competencia exclusiva del Poder Judicial, no de los órganos administrativos de control."
+      }
+    ],
+    "hint": "Evalúa la eficacia y celeridad con la que se aplican los castigos administrativos en el aparato estatal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la etapa de «post-cierre» en el ciclo de gestión ambiental de un proyecto minero formal?",
+    "opciones": [
+      {
+        "text": "En ejecutar actividades de remediación y monitoreo posterior a la explotación para restituir el entorno a condiciones seguras e idóneas.",
+        "isCorrect": true,
+        "rationale": "El post-cierre exige rehabilitar los espacios intervenidos, garantizando la estabilidad física y química del terreno a largo plazo."
+      },
+      {
+        "text": "En la transferencia de los terrenos y la maquinaria a la minería informal sin fiscalización.",
+        "isCorrect": false,
+        "rationale": "El post-cierre es una obligación socioambiental estricta asumida por el titular minero y fiscalizada por el Estado."
+      },
+      {
+        "text": "En la suspensión inmediata de todo monitoreo de efluentes y calidad del agua en la cuenca.",
+        "isCorrect": false,
+        "rationale": "Durante el post-cierre se requiere mantener el monitoreo ambiental para certificar que no existan filtraciones ni contaminación residual."
+      },
+      {
+        "text": "En la condonación retroactiva de todos los impuestos y cánones pagados durante la vida útil del yacimiento.",
+        "isCorrect": false,
+        "rationale": "El cierre y post-cierre no alteran las obligaciones tributarias o de compensación generadas durante la operación."
+      },
+      {
+        "text": "En el abandono inmediato del campamento minero una vez agotada la veta económica del mineral.",
+        "isCorrect": false,
+        "rationale": "El abandono sin remediación constituye una infracción grave; la ley exige planes estructurados de cierre y post-cierre."
+      }
+    ],
+    "hint": "Reflexiona sobre los compromisos finales que asume una empresa para mitigar la huella dejada tras la extracción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el marco legal peruano, ¿cuál es la distinción sustancial entre la propiedad de la superficie terrestre y el dominio del subsuelo?",
+    "opciones": [
+      {
+        "text": "El titular del predio es dueño de la capa superficial, mientras que los recursos minerales del subsuelo pertenecen originariamente al Estado.",
+        "isCorrect": true,
+        "rationale": "La legislación distingue la propiedad del suelo del dominio estatal de los recursos del subsuelo, requiriendo negociaciones para el uso de la superficie."
+      },
+      {
+        "text": "El propietario de la superficie es automáticamente dueño absoluto de todos los minerales que se encuentren debajo de su predio.",
+        "isCorrect": false,
+        "rationale": "A diferencia de otros sistemas jurídicos, en el Perú el dominio minero del subsuelo es reservado exclusivamente al Estado."
+      },
+      {
+        "text": "Las concesiones mineras otorgan la propiedad definitiva de la superficie sin necesidad de acordar servidumbres o compras.",
+        "isCorrect": false,
+        "rationale": "Una concesión minera concede el derecho de explorar/explotar el mineral en el subsuelo, pero requiere negociar el uso o compra del terreno superficial."
+      },
+      {
+        "text": "La superficie es de dominio público inalienable y el subsuelo es propiedad de las empresas privadas con concesión.",
+        "isCorrect": false,
+        "rationale": "La superficie puede ser de propiedad privada o comunal, mientras que el subsuelo extractivo es gestionado normativamente por el Estado."
+      },
+      {
+        "text": "El dominio del subsuelo prescribe automáticamente si el propietario del suelo inicia actividades agrícolas o ganaderas.",
+        "isCorrect": false,
+        "rationale": "Los derechos del Estado sobre los recursos del subsuelo no prescriben ni quedan anulados por el uso agrícola de la superficie."
+      }
+    ],
+    "hint": "Diferencia los derechos que otorga un título de propiedad sobre el terreno de los derechos sobre los yacimientos minerales subyacentes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando el desarrollo de un proyecto minero requiere reubicar a una comunidad, ¿cuál es el principio operativo que orienta el reasentamiento justo?",
+    "opciones": [
+      {
+        "text": "Negociar la reubicación garantizando la preservación o mejora del nivel de vida y la sostenibilidad socioeconómica de las familias.",
+        "isCorrect": true,
+        "rationale": "El reasentamiento debe evitar brechas de vulnerabilidad o empobrecimiento, asegurando condiciones habitacionales y productivas equivalentes o superiores."
+      },
+      {
+        "text": "Ejecutar el desplazamiento forzado inmediato sin realizar consultas previas ni procesos de diálogo social.",
+        "isCorrect": false,
+        "rationale": "El desplazamiento forzado sin consulta vulnera los derechos humanos fundamentales y genera severos conflictos sociales."
+      },
+      {
+        "text": "Compensar únicamente las estructuras físicas construidas, ignorando los derechos de uso sobre tierras agrícolas.",
+        "isCorrect": false,
+        "rationale": "La compensación integral debe cubrir la pérdida de medios de subsistencia, tierras de cultivo, accesos a recursos y la cohesión comunal."
+      },
+      {
+        "text": "Sustituir la indemnización por la promesa formal de contratar a la totalidad de comuneros en la mina.",
+        "isCorrect": false,
+        "rationale": "El empleo temporal en mina no reemplaza las garantías sobre la propiedad, el hábitat y los derechos territoriales comunitarios."
+      },
+      {
+        "text": "Trasladar a la población a periferias urbanas sin coordinar la dotación de servicios de agua, energía o salud.",
+        "isCorrect": false,
+        "rationale": "Reubicar poblaciones sin acceso a servicios básicos constituye una violación de sus derechos a una vida digna."
+      }
+    ],
+    "hint": "Busca la alternativa que enfatiza el diálogo social, la compensación integral y el mantenimiento de la calidad de vida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes son consecuencias ambientales directas provocadas por el vertimiento no tratado de efluentes mineros en fuentes hídricas?",
+    "opciones": [
+      {
+        "text": "Contaminación de napas freáticas y acuíferos por filtración de reactivos y metales pesados.",
+        "isCorrect": true,
+        "rationale": "Los efluentes sin tratamiento percolan el suelo alterando permanentemente las aguas subterráneas."
+      },
+      {
+        "text": "Degradación química de suelos agrícolas debido al depósito de sedimentos salitrosos o acidificados.",
+        "isCorrect": true,
+        "rationale": "El contacto de aguas contaminadas con tierras de cultivo altera el $pH$ y elimina nutrientes esenciales como el nitrógeno."
+      },
+      {
+        "text": "Riesgo crítico para la salud pública y la fauna local por exposición o ingesta de agua contaminada.",
+        "isCorrect": true,
+        "rationale": "La presencia de metales o sustancias tóxicas en fuentes de agua genera enfermedades agudas y crónicas en los seres vivos."
+      },
+      {
+        "text": "Purificación natural inmediata del recurso hídrico mediante la evaporación de compuestos sulfatados.",
+        "isCorrect": false,
+        "rationale": "Los metales pesados no se purifican ni se eliminan mediante simple evaporación hídrica."
+      },
+      {
+        "text": "Aumento de la fertilidad orgánica del suelo agrícola en las zonas ribereñas afectadas.",
+        "isCorrect": false,
+        "rationale": "Los efluentes ácidos o con sustancias tóxicas destruyen la materia orgánica y disminuyen la fertilidad de la tierra."
+      }
+    ],
+    "hint": "Identifica los efectos adversos que la descarga de sustancias tóxicas genera en el agua, el suelo y la salud humana.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la minería moderna, ¿qué caracteriza esencialmente al concepto de «minería verde»?",
+    "opciones": [
+      {
+        "text": "La incorporación de tecnología avanzada para tratar efluentes, reducir emisiones y planificar la recuperación ambiental progresiva.",
+        "isCorrect": true,
+        "rationale": "La minería verde integra procesos eficientes que reducen el impacto hídrico y atmosférico, alineando la extracción con altos estándares de sostenibilidad."
+      },
+      {
+        "text": "El uso exclusivo de herramientas manuales de extracción para prescindir de maquinaria industrial.",
+        "isCorrect": false,
+        "rationale": "La minería verde no implica retroceder a métodos manuales, sino utilizar tecnología de punta con menor huella ambiental."
+      },
+      {
+        "text": "La exoneración total de controles ambientales a cambio de la siembra de especies ornamentales.",
+        "isCorrect": false,
+        "rationale": "No se trata de sustituir obligaciones legales por medidas decorativas, sino de aplicar estándares estrictos de mitigación."
+      },
+      {
+        "text": "La colocación de coberturas plásticas sobre relaves para simular vegetación sin tratamiento químico previo.",
+        "isCorrect": false,
+        "rationale": "Disimular relaves no constituye sostenibilidad ambiental; se requiere contención física y química comprobada."
+      },
+      {
+        "text": "La detención inmediata de la extracción de minerales metálicos en todo el territorio nacional.",
+        "isCorrect": false,
+        "rationale": "El enfoque de minería verde busca la viabilidad y sostenibilidad de las operaciones extractivas, no su cancelación."
+      }
+    ],
+    "hint": "Se relaciona con el empleo de innovación tecnológica para minimizar el impacto ecológico de la actividad extractiva.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito esencial del derecho a la Consulta Previa, Libre e Informada en proyectos extractivos?",
+    "opciones": [
+      {
+        "text": "Garantizar la participación de los pueblos indígenas antes de autorizar medidas legislativas o administrativas que afecten sus derechos colectivos.",
+        "isCorrect": true,
+        "rationale": "La Consulta Previa busca dialogar e involucrar de manera informada a las comunidades originarias sobre decisiones en sus territorios ancestrales."
+      },
+      {
+        "text": "Otorgar un poder de veto que invalide de forma automática las atribuciones normativas del Estado.",
+        "isCorrect": false,
+        "rationale": "El objetivo principal de la Consulta Previa es alcanzar acuerdos y el consentimiento mediante el diálogo, no funcionar como un simple poder de veto."
+      },
+      {
+        "text": "Sustituir la elaboración de los Estudios de Impacto Ambiental ($EIA$) por reuniones informales.",
+        "isCorrect": false,
+        "rationale": "La consulta previa no reemplaza las obligaciones técnicas y legales de evaluación ambiental que exige la ley."
+      },
+      {
+        "text": "Obligar a las comunidades a vender de forma obligatoria sus propiedades al titular de la concesión.",
+        "isCorrect": false,
+        "rationale": "La Consulta Previa protege los derechos colectivos y no constituye un mecanismo de venta o expropiación forzosa."
+      },
+      {
+        "text": "Eximir a las empresas de fiscalizaciones posteriores sobre seguridad y salud en el trabajo.",
+        "isCorrect": false,
+        "rationale": "Los acuerdos alcanzados en la consulta previa no exoneran a la empresa del cumplimiento de la normativa laboral ni de seguridad."
+      }
+    ],
+    "hint": "Relaciona el concepto con el diálogo intercultural y el respeto a la autodeterminación y derechos territoriales de las comunidades.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué factores institucionales contribuyen a debilitar la capacidad fiscalizadora del Estado en materia minera?",
+    "opciones": [
+      {
+        "text": "Limitación de recursos logísticos y presupuestales en entidades de supervisión ambiental y laboral.",
+        "isCorrect": true,
+        "rationale": "La escasez de fondos y personal dificulta la inspección continua en zonas mineras alejadas de difícil acceso."
+      },
+      {
+        "text": "Inestabilidad y rotación constante de funcionarios en puestos clave de los sectores de fiscalización.",
+        "isCorrect": true,
+        "rationale": "La falta de continuidad técnica impide consolidar estrategias de fiscalización a largo plazo."
+      },
+      {
+        "text": "Casos de corrupción o filtración de información que vulneran los operativos de control de efluentes e insumos.",
+        "isCorrect": true,
+        "rationale": "La corrupción interna neutraliza la efectividad de las inspecciones e impide la aplicación oportuna de sanciones."
+      },
+      {
+        "text": "Exceso de inspectores de campo desplegados permanentemente en la totalidad de campamentos informales.",
+        "isCorrect": false,
+        "rationale": "Existe una marcada falta de personal inspectivo en el campo, lo que imposibilita la cobertura de la minería informal."
+      },
+      {
+        "text": "Prohibición constitucional de realizar fiscalizaciones in situ a empresas mineras con concesión formal.",
+        "isCorrect": false,
+        "rationale": "Las entidades del Estado como el $OEFA$ y $OSINERGMIN$ poseen la atribución y deber legal de supervisar las operaciones in situ."
+      }
+    ],
+    "hint": "Enfócate en los cuellos de botella presupuestales, la rotación de personal y los problemas de integridad pública.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La contaminación de fuentes hídricas por la descarga no tratada de relaves y reactivos afecta directamente el derecho humano a:",
+    "opciones": [
+      {
+        "text": "El agua potable, el saneamiento y la salud en condiciones de dignidad e inocuidad.",
+        "isCorrect": true,
+        "rationale": "El acceso al agua limpia para consumo y agricultura es un derecho esencial amenazado por el vertimiento de insumos tóxicos."
+      },
+      {
+        "text": "La libertad de asociación en gremios de exportación de minerales.",
+        "isCorrect": false,
+        "rationale": "La contaminación hídrica afecta derechos biológicos y vitales de las personas, no el derecho de libre asociación comercial."
+      },
+      {
+        "text": "La propiedad intelectual sobre marcas e invenciones industriales registradas.",
+        "isCorrect": false,
+        "rationale": "La salubridad del agua atañe a la vida y la salud, sin vinculación con el registro de patentes o marcas."
+      },
+      {
+        "text": "La exoneración automática del cobro de tributos y arbitrios municipales.",
+        "isCorrect": false,
+        "rationale": "El derecho al agua potable es de carácter prestacional y vital, no tributario o administrativo."
+      },
+      {
+        "text": "La libre contratación de personal en empresas extranjeras de consultoría.",
+        "isCorrect": false,
+        "rationale": "La afectación hídrica compromete la salud pública y ambiental, no los contratos de personal técnico."
+      }
+    ],
+    "hint": "Identifica la garantía elemental vinculada con el consumo vital, la salud de las poblaciones y la salubridad del entorno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué afecciones a la salud ocupacional y comunitaria están asociadas a la exposición descontrolada a sustancias e insumos en la minería?",
+    "opciones": [
+      {
+        "text": "Enfermedades respiratorias crónicas, como la silicosis, por inhalación prolongada de polvo mineral.",
+        "isCorrect": true,
+        "rationale": "La exposición a sílice libre cristalizada en operaciones sin epp o ventilación destruye progresivamente el tejido pulmonar."
+      },
+      {
+        "text": "Afecciones dermatológicas e intoxicación aguda por manipulación de reactivos corrosivos o cianuro.",
+        "isCorrect": true,
+        "rationale": "Los ácidos y sustancias empleadas en la lixiviación o separación mineral causan quemaduras y toxicidad en la sangre."
+      },
+      {
+        "text": "Trastornos neurológicos y sistémicos derivados de la acumulación de metales pesados en el organismo.",
+        "isCorrect": true,
+        "rationale": "Elementos como el plomo, mercurio o arsénico se bioacumulan causando daños crónicos en órganos y sistema nervioso."
+      },
+      {
+        "text": "Mejora en la capacidad pulmonar y fortalecimiento inmunológico por inhalación de vapores mineros.",
+        "isCorrect": false,
+        "rationale": "Los polvos y reactivos mineros representan contaminantes dañinos para el sistema respiratorio e inmunológico."
+      },
+      {
+        "text": "Inmunidad total frente al desarrollo de neoplasias u otras enfermedades dermatológicas.",
+        "isCorrect": false,
+        "rationale": "La exposición a ciertos metales pesados y polvo mineral está catalogada como factor de riesgo oncológico."
+      }
+    ],
+    "hint": "Selecciona las patologías respiratorias, dermatológicas y sistémicas provocadas por el contacto con contaminantes mineros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de los derechos laborales en la minería formal, ¿qué exige el principio de no discriminación en la remuneración?",
+    "opciones": [
+      {
+        "text": "A igual puesto, funciones y condiciones laborales, corresponde la misma remuneración, independientemente del género, origen o credo del trabajador.",
+        "isCorrect": true,
+        "rationale": "La equidad salarial prohíbe brechas o arbitrariedades basadas en factores ajenos a las competencias y funciones desempeñadas."
+      },
+      {
+        "text": "Los trabajadores locales deben percibir de forma obligatoria el doble de salario que el personal técnico especializado.",
+        "isCorrect": false,
+        "rationale": "Las remuneraciones se estructuran según perfil profesional, riesgos y responsabilidad, no por un mandato multiplicador por origen."
+      },
+      {
+        "text": "La empresa puede fijar remuneraciones menores a trabajadoras mujeres si laboran en áreas administrativas.",
+        "isCorrect": false,
+        "rationale": "Fijar diferencias salariales por razones de género constituye una discriminación laboral directa sancionada por la ley."
+      },
+      {
+        "text": "El salario debe determinarse de acuerdo a la afiliación a un determinado partido político o gremio específico.",
+        "isCorrect": false,
+        "rationale": "Condicionar la escala salarial a filiaciones políticas o gremiales vulnera la libertad individual y la no discriminación."
+      },
+      {
+        "text": "La escala salarial de la mina puede reajustarse arbitrariamente según la decisión del supervisor del área.",
+        "isCorrect": false,
+        "rationale": "Las escalas salariales deben responder a criterios objetivos, transparentes y formalmente regulados en la empresa."
+      }
+    ],
+    "hint": "Aplica el principio de equidad salarial basado en las responsabilidades del cargo y no en características individuales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Conforme al ordenamiento legal del Canon Minero en el Perú, ¿qué porcentaje del Impuesto a la Renta pagado por las mineras se transfiere a las regiones productoras?",
+    "opciones": [
+      {
+        "text": "El 50% del total de ingresos y rentas recaudados por el Estado por concepto de Impuesto a la Renta de las empresas mineras.",
+        "isCorrect": true,
+        "rationale": "La legislación del Canon establece que la mitad de lo recaudado por Impuesto a la Renta de la actividad extractiva regresa a la zona donde se extrajo el mineral."
+      },
+      {
+        "text": "El 100% de las ventas brutas registradas en los contratos de exportación de concentrados.",
+        "isCorrect": false,
+        "rationale": "El Canon no se calcula sobre la facturación bruta total, sino sobre el $50\\%$ del Impuesto a la Renta efectivamente pagado."
+      },
+      {
+        "text": "El 10% de las utilidades distribuidas de manera privada entre los accionistas de la minera.",
+        "isCorrect": false,
+        "rationale": "El tributo del que proviene el Canon es el Impuesto a la Renta pagado al Estado, no los dividendos de accionistas."
+      },
+      {
+        "text": "El 20% del valor total de las compras operativas e insumos importados por la mina.",
+        "isCorrect": false,
+        "rationale": "Las compras de la empresa no constituyen la base imponible del Canon Minero."
+      },
+      {
+        "text": "El 5% del Presupuesto General de la República de forma fija, independientemente de las utilidades mineras.",
+        "isCorrect": false,
+        "rationale": "El Canon fluctúa según las utilidades netas alcanzadas y el Impuesto a la Renta tributado en cada ejercicio fiscal."
+      }
+    ],
+    "hint": "Recuerda la proporción porcentual del Impuesto a la Renta asignada por ley a los gobiernos locales y regionales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el marco normativo, ¿cuáles de los siguientes son usos válidos de los recursos provenientes del Canon Minero?",
+    "opciones": [
+      {
+        "text": "Financiamiento o cofinanciamiento de proyectos de inversión pública en infraestructura básica.",
+        "isCorrect": true,
+        "rationale": "El objetivo prioritario del Canon es financiar obras que reduzcan las brechas sociales e impulsen el desarrollo regional."
+      },
+      {
+        "text": "Mantenimiento de la infraestructura generada por proyectos de impacto local dentro de los límites porcentuales fijados.",
+        "isCorrect": true,
+        "rationale": "Se autoriza destinar una fracción del Canon para sostener operativas las obras públicas creadas."
+      },
+      {
+        "text": "Financiamiento de perfiles e informes técnicos para proyectos de inversión pública concertados.",
+        "isCorrect": true,
+        "rationale": "La ley permite destinar un porcentaje normado a la etapa de formulación de proyectos ($PIP$)."
+      },
+      {
+        "text": "Pago de gastos corrientes y sueldos permanentes de la plantilla de empleados municipales.",
+        "isCorrect": false,
+        "rationale": "El Canon Minero no está destinado al pago de gastos corrientes ni salarios de la administración de la municipalidad."
+      },
+      {
+        "text": "Distribución directa de dinero en efectivo a los pobladores de la circunscripción sin un proyecto de inversión.",
+        "isCorrect": false,
+        "rationale": "La entrega directa de efectivo o subsidios monetarios no constituye un proyecto de inversión pública computable para el Canon."
+      }
+    ],
+    "hint": "Diferencia los proyectos de inversión y mantenimiento de infraestructura de los gastos corrientes administrativos o entregas monetarias directas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el desarrollo de un proyecto minero, ¿cuál es la distinción conceptual clave entre legalidad y legitimidad social?",
+    "opciones": [
+      {
+        "text": "La legalidad la otorgan los permisos estatales, mientras que la legitimidad social deviene del respaldo y aceptación de las comunidades del área de influencia.",
+        "isCorrect": true,
+        "rationale": "Una empresa puede poseer todas las licencias del Estado (legalidad) y aún así enfrentar paralizaciones si carece de la aprobación social comunitaria (legitimidad)."
+      },
+      {
+        "text": "La legalidad proviene de las asambleas comunales y la legitimidad la otorga el Ministerio de Energía y Minas.",
+        "isCorrect": false,
+        "rationale": "La legalidad corresponde a las leyes y licencias del Estado, no a acuerdos comunitarios internos."
+      },
+      {
+        "text": "Son términos equivalentes que se consiguen automáticamente al realizar el pago del Canon Minero.",
+        "isCorrect": false,
+        "rationale": "El Canon es una transferencia fiscal automática que no garantiza por sí misma la buena relación ni la confianza con la comunidad."
+      },
+      {
+        "text": "La legitimidad social reemplaza jurídicamente la obligación de presentar el Estudio de Impacto Ambiental.",
+        "isCorrect": false,
+        "rationale": "Contar con respaldo social no exime a la empresa de tramitar las licencias y cumplir con los estudios ambientales exigidos por ley."
+      },
+      {
+        "text": "La legalidad rige para la minería informal mientras que la legitimidad es exclusiva de la minería ilegal.",
+        "isCorrect": false,
+        "rationale": "Tanto la minería informal como la ilegal carecen de un marco de legalidad plenamente constituido."
+      }
+    ],
+    "hint": "Compara las licencias gubernamentales necesarias para operar con la aceptación comunitaria mediante la licencia social.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple un «Convenio Marco» firmado entre una empresa minera y las comunidades de su zona de influencia?",
+    "opciones": [
+      {
+        "text": "Establecer acuerdos de financiamiento para proyectos de desarrollo local acordados, más allá de los impuestos exigidos por ley.",
+        "isCorrect": true,
+        "rationale": "El Convenio Marco constituye un espacio voluntario de concertación para financiar proyectos comunitarios no cubiertos por las obligaciones fiscales ordinarias."
+      },
+      {
+        "text": "Anular la obligación de la empresa minera de tributar el Impuesto a la Renta al Estado.",
+        "isCorrect": false,
+        "rationale": "Un acuerdo privado o voluntario no puede exonerar ni modificar los impuestos nacionales exigidos por el marco tributario."
+      },
+      {
+        "text": "Sustituir las funciones de fiscalización técnica ambiental de los organismos del Estado.",
+        "isCorrect": false,
+        "rationale": "La fiscalización ambiental es competencia del Estado ($OEFA$) y no puede delegarse ni suprimirse mediante un Convenio Marco."
+      },
+      {
+        "text": "Traspasar la propiedad de la concesión minera a las organizaciones no gubernamentales ($ONG$).",
+        "isCorrect": false,
+        "rationale": "La propiedad del recurso y el título de la concesión minera pertenecen a sus titulares legales y al Estado, no a organizaciones privadas."
+      },
+      {
+        "text": "Eximir a la empresa minera del cumplimiento de los estándares laborales y de seguridad en el trabajo.",
+        "isCorrect": false,
+        "rationale": "Las normas de seguridad y salud en el trabajo son de obligatorio cumplimiento e inmodificables por convenios locales."
+      }
+    ],
+    "hint": "Reflexiona sobre los mecanismos de concertación socioeconómica que complementan las obligaciones legales impositivas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia técnica fundamental entre el Canon Minero y las Regalías Mineras en el Perú?",
+    "opciones": [
+      {
+        "text": "El Canon es una participación del Impuesto a la Renta recaudado por el Estado, mientras que la Regalía es una contraprestación pagada por la extracción del recurso.",
+        "isCorrect": true,
+        "rationale": "El Canon proviene de la redistribución del Impuesto a la Renta ($50\\%$), mientras que la Regalía es la retribución económica directa que paga el titular por explotar recursos no renovables."
+      },
+      {
+        "text": "El Canon lo pagan las municipalidades locales y la Regalía la pagan las universidades públicas.",
+        "isCorrect": false,
+        "rationale": "Tanto el Canon como las Regalías representan fondos transferidos hacia los gobiernos subnacionales y universidades, proviniendo de la actividad minera."
+      },
+      {
+        "text": "El Canon se aplica sobre las remuneraciones de los trabajadores y la Regalía sobre las compras de la mina.",
+        "isCorrect": false,
+        "rationale": "El Canon depende de la renta/utilidades gravadas y las Regalías del valor del concentrado o utilidad operativa, no de salarios o compras."
+      },
+      {
+        "text": "La Regalía es un aporte facultativo de la mina, mientras que el Canon solo se recauda si la empresa declara pérdidas.",
+        "isCorrect": false,
+        "rationale": "La Regalía es un concepto normativamente obligatorio y el Canon requiere la generación de utilidades e Impuesto a la Renta positivo."
+      },
+      {
+        "text": "Ambos conceptos son jurídicamente idénticos y se aplican mediante un único cobro municipal directo.",
+        "isCorrect": false,
+        "rationale": "Constituyen instrumentos financieros distintos en su base imponible y mecanismo de determinación tributaria."
+      }
+    ],
+    "hint": "Identifica cuál corresponde a la redistribución impositiva estatal del Impuesto a la Renta y cuál al pago directo por explotar un recurso mineral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la transferencia de recursos por minería en el departamento de Arequipa, ¿cuáles son los distritos que han figurado en los primeros lugares de recepción por Canon y Regalías?",
+    "opciones": [
+      {
+        "text": "Cerro Colorado y Yarabamba.",
+        "isCorrect": true,
+        "rationale": "Debido a los criterios de redistribución por impacto y producción, Cerro Colorado y Yarabamba captan montos significativos del Canon en la provincia de Arequipa."
+      },
+      {
+        "text": "Cotahuasi y Chivay.",
+        "isCorrect": false,
+        "rationale": "Estos distritos pertenecen a provincias que reciben proporciones menores en comparación con los municipios de mayor concentración o impacto directo."
+      },
+      {
+        "text": "Mollendo y Camaná.",
+        "isCorrect": false,
+        "rationale": "Aunque reciben Canon, no lideran los montos acumulados respecto a los distritos con mayores transferencias de la provincia capital."
+      },
+      {
+        "text": "Chuquibamba y Andaray.",
+        "isCorrect": false,
+        "rationale": "Corresponden a distritos con menor asignación presupuestal por concepto de Canon respecto a las jurisdicciones con mayor índice de transferencia."
+      },
+      {
+        "text": "Yanahuara y Characato.",
+        "isCorrect": false,
+        "rationale": "Si bien integran la provincia de Arequipa, los distritos líderes en los reportes de transferencias son Cerro Colorado y Yarabamba."
+      }
+    ],
+    "hint": "Recuerda las jurisdicciones de la provincia de Arequipa reportadas con transferencias millonarias por actividad extractiva.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué factores explican la baja ejecución o escaso impacto de los fondos del Canon Minero en el desarrollo de algunas regiones receptoras?",
+    "opciones": [
+      {
+        "text": "Deficiencias técnicas en la elaboración, formulación y evaluación de proyectos de inversión pública.",
+        "isCorrect": true,
+        "rationale": "La falta de perfiles e expedientes técnicos sólidos genera demoras, paralizaciones o rechazos en el banco de inversiones."
+      },
+      {
+        "text": "Baja capacidad de gasto y escasa gestión administrativa en las autoridades regionales y locales.",
+        "isCorrect": true,
+        "rationale": "Múltiples municipios subnacionales ejecutan porcentajes reducidos del presupuesto disponible para obras durante el año fiscal."
+      },
+      {
+        "text": "Prácticas de corrupción, direccionamiento o mala priorización en la contratación de infraestructura.",
+        "isCorrect": true,
+        "rationale": "La desviación de fondos e irregularidades administrativas impiden la concreción de obras que beneficien a la población."
+      },
+      {
+        "text": "Prohibición normativa de destinar el Canon a proyectos de saneamiento, agua potable o conectividad vial.",
+        "isCorrect": false,
+        "rationale": "El marco legal promueve expresamente la inversión en infraestructura hídrica, vial, sanitaria y educativa."
+      },
+      {
+        "text": "Obligatoriedad de devolver la totalidad de fondos de Canon no gastados a las empresas mineras privadas.",
+        "isCorrect": false,
+        "rationale": "Los recursos del Canon transferidos a los gobiernos regionales y locales no revierten a las empresas privadas ni se pierden si no se gastan en el año, manteniéndose en cuentas especiales."
+      }
+    ],
+    "hint": "Identifica los problemas de gestión pública, la calidad de los expedientes técnicos y la integridad en la administración de recursos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Entre las principales empresas mineras formales que operan en el Perú, ¿cuáles destacan por la producción de cobre a gran escala?",
+    "opciones": [
+      {
+        "text": "Sociedad Minera Cerro Verde S.A.A.",
+        "isCorrect": true,
+        "rationale": "Ubicada en Arequipa, es uno de los yacimientos de cobre a tajo abierto más grandes y productivos del país."
+      },
+      {
+        "text": "Compañía Minera Antamina S.A.",
+        "isCorrect": true,
+        "rationale": "Ubicada en Ancash, opera una mina polimetálica con una destacada producción de concentrados de cobre y zinc."
+      },
+      {
+        "text": "Minera Las Bambas S.A.",
+        "isCorrect": true,
+        "rationale": "Ubicada en la región Apurímac, constituye un actor central en la producción y exportación de cobre peruano."
+      },
+      {
+        "text": "Southern Peru Copper Corporation.",
+        "isCorrect": true,
+        "rationale": "Opera unidades de gran envergadura como Cuajone y Toquepala en el sur del país."
+      },
+      {
+        "text": "Empresa Minera de Dragado e Insumos Ilegales de la Pampa S.A.",
+        "isCorrect": false,
+        "rationale": "Las operaciones de dragado no autorizado en la Pampa constituyen actividades delictivas e informales, no empresas mineras formales."
+      }
+    ],
+    "hint": "Selecciona las unidades productivas formales de gran minería cuprífera identificadas en el sur y centro del Perú.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es uno de los principales obstáculos de gobernabilidad al combatir los enclaves de minería ilegal en zonas selváticas?",
+    "opciones": [
+      {
+        "text": "La consolidación de organizaciones criminales armadas que manejan redes de insumos ilícitos, trata de personas y violencia.",
+        "isCorrect": true,
+        "rationale": "Los campamentos ilegales suelen organizarse como zonas de alta criminalidad, con presencia de bandas armadas que dificultan el control institucional."
+      },
+      {
+        "text": "La prohibición de los organismos ambientales internacionales de ingresar a áreas deforestadas.",
+        "isCorrect": false,
+        "rationale": "Los organismos internacionales instan a los Estados a erradicar los delitos ambientales y no impiden el ejercicio del orden público."
+      },
+      {
+        "text": "El amparo de los mineros ilegales en contratos de concesión formal protegidos constitucionalmente.",
+        "isCorrect": false,
+        "rationale": "Por definición, la minería ilegal opera al margen del derecho, sin títulos de concesión ni instrumentos de gestión ambiental ($IGAC$/$IGAFOM$)."
+      },
+      {
+        "text": "La falta absoluta de vetas o minerales metálicos de valor comercial en dichas áreas.",
+        "isCorrect": false,
+        "rationale": "Estas zonas atraen a la minería ilegal precisamente por la presencia de yacimientos auríferos."
+      },
+      {
+        "text": "La prohibición de emplear helicópteros o logística militar para trasladar fuerzas policiales.",
+        "isCorrect": false,
+        "rationale": "El Estado efectúa interdicciones utilizando medios aéreos de las Fuerzas Armadas y Policía Nacional cuando se dispone de presupuesto y logística."
+      }
+    ],
+    "hint": "Enfócate en la presencia de economías ilegales, violencia armada y falta de control institucional en zonas de interdicción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-09",
+    "diplomado": "DERECHOS HUMANOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Como instrumento de descentralización y equidad territorial, ¿cuál es el potencial del Canon Minero si se gestiona con eficiencia técnica?",
+    "opciones": [
+      {
+        "text": "Cerrar brechas prioritarias en salud, educación, saneamiento e infraestructura para fomentar el desarrollo sostenible de las regiones.",
+        "isCorrect": true,
+        "rationale": "Su objetivo es transformar la renta de recursos no renovables en activos sociales permanentes que Eleven la calidad de vida comunitaria."
+      },
+      {
+        "text": "Eliminar la necesidad de realizar evaluaciones de impacto ambiental en futuros proyectos extractivos.",
+        "isCorrect": false,
+        "rationale": "La disponibilidad presupuestal no exime ni disminuye la obligación legal de cumplir con la normativa y fiscalización ambiental."
+      },
+      {
+        "text": "Sustituir la totalidad de las actividades agrícolas, ganaderas y turísticas de la región receptoras.",
+        "isCorrect": false,
+        "rationale": "El Canon busca diversificar la economía local y fortalecer sectores productivos, no reemplazar las actividades tradicionales."
+      },
+      {
+        "text": "Convertir a las municipalidades en entidades comercializadoras de combustible no reguladas.",
+        "isCorrect": false,
+        "rationale": "Los municipios no pueden utilizar recursos públicos para crear giros comerciales informales de combustibles."
+      },
+      {
+        "text": "Suprimir los impuestos nacionales y financiar el gasto corriente del Gobierno Central.",
+        "isCorrect": false,
+        "rationale": "El Canon se asigna normativamente a los gobiernos subnacionales y universidades para inversión, sin financiar el gasto del Gobierno Central."
+      }
+    ],
+    "hint": "Evalúa el papel del Canon en la creación de valor público, diversificación productiva y cierre de brechas de infraestructura.",
+    "activo": true
+  }
+]

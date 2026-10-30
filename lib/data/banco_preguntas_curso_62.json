@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial de brindar primeros auxilios a un trabajador accidentado en una faena minera antes de la llegada de la atención especializada?",
+    "opciones": [
+      {
+        "text": "Salvar la vida, evitar complicaciones secundarias y facilitar la recuperación del paciente.",
+        "isCorrect": true,
+        "rationale": "Los primeros auxilios actúan como una primera respuesta inmediata enfocada en estabilizar las funciones vitales y prevenir daños mayores mientras llega el equipo profesional."
+      },
+      {
+        "text": "Reemplazar definitivamente el tratamiento médico quirúrgico y hospitalario posterior.",
+        "isCorrect": false,
+        "rationale": "Las maniobras de primeros auxilios son medidas temporales e iniciales que no sustituyen la evaluación y tratamiento de un centro de salud."
+      },
+      {
+        "text": "Diagnosticar patologías crónicas y recetar medicamentos sistémicos al accidentado.",
+        "isCorrect": false,
+        "rationale": "El diagnóstico médico formal y la prescripción de fármacos son competencias exclusivas de profesionales de la salud capacitados."
+      },
+      {
+        "text": "Realizar peritajes legales inmediatos para deslindar responsabilidades operativas.",
+        "isCorrect": false,
+        "rationale": "La prioridad de los primeros auxilios es la atención física de la víctima, dejando las investigaciones de incidentes para fases posteriores."
+      },
+      {
+        "text": "Trasladar de forma obligatoria al trabajador lesionado sin evaluar el entorno ni la escena.",
+        "isCorrect": false,
+        "rationale": "Mover a un paciente sin una evaluación previa de seguridad y estado puede agravar lesiones o poner en riesgo al auxiliador."
+      }
+    ],
+    "hint": "Piense en la función de soporte inicial e inmediato que busca preservar la integridad del accidentado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué diferencia fundamental existe entre una emergencia y una urgencia en el contexto de la atención médica de primeros auxilios?",
+    "opciones": [
+      {
+        "text": "La emergencia representa una amenaza inminente para la vida de la víctima, mientras que la urgencia requiere atención rápida pero no compromete la vida de inmediato.",
+        "isCorrect": true,
+        "rationale": "La emergencia implica un riesgo vital potencial o directo que requiere intervención inmediata, a diferencia de la urgencia donde el factor tiempo es importante pero sin riesgo mortal directo."
+      },
+      {
+        "text": "La urgencia es siempre mortal si no se actúa en menos de un minuto, mientras que la emergencia permite esperar varias horas.",
+        "isCorrect": false,
+        "rationale": "La urgencia no pone en riesgo inmediato la vida, a diferencia de la emergencia que sí compromete la supervivencia si no se interviene al instante."
+      },
+      {
+        "text": "Las emergencias solo aplican a enfermedades comunes y las urgencias a traumatismos graves.",
+        "isCorrect": false,
+        "rationale": "Tanto las emergencias como las urgencias pueden ser originadas por traumatismos o patologías repentinas, variando según la gravedad del riesgo vital."
+      },
+      {
+        "text": "Las urgencias son atendidas exclusivamente por brigadistas y las emergencias por los propios compañeros de piso.",
+        "isCorrect": false,
+        "rationale": "La clasificación de urgencia o emergencia depende de la condición médica y vital de la víctima, no del perfil de la persona que la atiende."
+      },
+      {
+        "text": "No existe ninguna diferencia práctica entre ambos términos, ya que se usan como sinónimos exactos en todos los protocolos.",
+        "isCorrect": false,
+        "rationale": "En medicina de emergencias existe una distinción clara basada en la presencia o ausencia de compromiso vital inminente."
+      }
+    ],
+    "hint": "Considere cuál de las dos situaciones pone en riesgo vital inmediato la vida del paciente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué está strictly prohibido incluir medicamentos de venta libre o inyectables dentro de los botiquines de primeros auxilios en las faenas mineras?",
+    "opciones": [
+      {
+        "text": "Para prevenir reacciones alérgicas severas, efectos adversos indeseados e intoxicaciones por automedicación.",
+        "isCorrect": true,
+        "rationale": "El suministro de fármacos exige valoración médica formal ya que una persona puede presentar alergias desconocidas o contraindicaciones graves a ciertos medicamentos."
+      },
+      {
+        "text": "Debido a que las pastillas reducen la efectividad del material de curación empaquetado.",
+        "isCorrect": false,
+        "rationale": "El motivo de la restricción no se debe a la interacción física con otros insumos, sino a los riesgos médicos que implica la administración no controlada de fármacos."
+      },
+      {
+        "text": "Porque los medicamentos pierden sus propiedades curativas al ser almacenados en faena.",
+        "isCorrect": false,
+        "rationale": "Los medicamentos mantienen su caducidad si se conservan adecuadamente, pero su restricción en botiquines comunitarios responde a la seguridad del paciente."
+      },
+      {
+        "text": "Únicamente por razones de espacio físico en la caja del botiquín de primeros auxilios.",
+        "isCorrect": false,
+        "rationale": "La prohibición de fármacos responde a un estricto principio de bioseguridad y prevención de riesgos a la salud, no a un problema de almacenamiento."
+      },
+      {
+        "text": "Porque el personal de seguridad debe consumir previamente todos los fármacos antes de su distribución.",
+        "isCorrect": false,
+        "rationale": "Los fármacos solo deben ser indicados y administrados por personal de salud autorizado en el tópico o centro médico."
+      }
+    ],
+    "hint": "Recuerde las consecuencias que puede sufrir un trabajador al ingerir una pastilla a la cual podría ser alérgico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes insumos y elementos SÍ son recomendados y apropiados en un botiquín estándar de primeros auxilios para la atención de heridas leves?",
+    "opciones": [
+      {
+        "text": "Gasas esterilizadas y suero fisiológico.",
+        "isCorrect": true,
+        "rationale": "Son insumos esenciales para limpiar y cubrir heridas de manera higiénica sin introducir gérmenes."
+      },
+      {
+        "text": "Guantes de examen de un solo uso (látex o vinilo).",
+        "isCorrect": true,
+        "rationale": "Proporcionan una barrera de bioprotección fundamental entre el auxiliador y los fluidos corporales de la víctima."
+      },
+      {
+        "text": "Tijeras de punta roma y esparadrapo.",
+        "isCorrect": true,
+        "rationale": "Permiten cortar vendas o ropa de manera segura y fijar los apósitos en la zona afectada."
+      },
+      {
+        "text": "Tabletas de analgésicos e inyectables de ampolla.",
+        "isCorrect": false,
+        "rationale": "Los medicamentos e inyectables están restringidos de los botiquines básicos para evitar la automedicación y reacciones alérgicas."
+      },
+      {
+        "text": "Alcohol etílico para verter directamente en el interior de heridas abiertas profundas.",
+        "isCorrect": false,
+        "rationale": "El alcohol no debe colocarse dentro de heridas abiertas porque irrita y daña los tejidos expuestos; solo se usa para la higiene de manos del auxiliador."
+      }
+    ],
+    "hint": "Identifique el material de curación y bioprotección que no requiere receta médica ni ingerirse.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el rango de temperatura corporal central que se considera normal en un adulto en condiciones fisiológicas de reposo?",
+    "opciones": [
+      {
+        "text": "Entre $36.5\\,^{\\circ}\\text{C}$ y $37.5\\,^{\\circ}\\text{C}$.",
+        "isCorrect": true,
+        "rationale": "Este rango refleja el equilibrio termorregulador adecuado entre la producción y la pérdida de calor en el cuerpo humano."
+      },
+      {
+        "text": "Entre $32.0\\,^{\\circ}\\text{C}$ y $34.5\\,^{\\circ}\\text{C}$.",
+        "isCorrect": false,
+        "rationale": "Valores por debajo de $35.0\\,^{\\circ}\\text{C}$ representan estados de hipotermia grave que comprometen el funcionamiento vital."
+      },
+      {
+        "text": "Entre $38.0\\,^{\\circ}\\text{C}$ y $39.5\\,^{\\circ}\\text{C}$.",
+        "isCorrect": false,
+        "rationale": "Valores en este rango corresponden a cuadros de fiebre moderada a alta."
+      },
+      {
+        "text": "Entre $40.0\\,^{\\circ}\\text{C}$ y $41.5\\,^{\\circ}\\text{C}$.",
+        "isCorrect": false,
+        "rationale": "Temperaturas iguales o superiores a $40.0\\,^{\\circ}\\text{C}$ constituyen hipertermia o hiperpirexia crítica."
+      },
+      {
+        "text": "Inferior a los $30.0\\,^{\\circ}\\text{C}$ en todo momento.",
+        "isCorrect": false,
+        "rationale": "Una temperatura tan baja es incompatible con el funcionamiento orgánico normal y representa hipotermia profunda."
+      }
+    ],
+    "hint": "Identifique los valores de temperatura corporal estándar aprendidos para evaluar los signos vitales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A partir de qué valor de temperatura corporal central se considera que una persona entra en un estado de hipotermia?",
+    "opciones": [
+      {
+        "text": "Por debajo de $35.5\\,^{\\circ}\\text{C}$.",
+        "isCorrect": true,
+        "rationale": "Una lectura inferior a $35.5\\,^{\\circ}\\text{C}$ indica que los mecanismos termogénicos del organismo están siendo superados por la pérdida de calor."
+      },
+      {
+        "text": "Al alcanzar los $37.0\\,^{\\circ}\\text{C}$.",
+        "isCorrect": false,
+        "rationale": "El valor de $37.0\\,^{\\circ}\\text{C}$ es una cifra estándar dentro del rango normotérmico."
+      },
+      {
+        "text": "Al subir a $38.5\\,^{\\circ}\\text{C}$.",
+        "isCorrect": false,
+        "rationale": "Una temperatura de $38.5\\,^{\\circ}\\text{C}$ indica presencia de fiebre, no de hipotermia."
+      },
+      {
+        "text": "Por encima de $41.0\\,^{\\circ}\\text{C}$.",
+        "isCorrect": false,
+        "rationale": "Temperaturas sobre $41.0\\,^{\\circ}\\text{C}$ corresponden a hiperpirexia de extremo peligro por calor."
+      },
+      {
+        "text": "Únicamente si la temperatura marca $0.0\\,^{\\circ}\\text{C}$.",
+        "isCorrect": false,
+        "rationale": "La hipotermia médica se define clínicamente mucho antes de alcanzar el punto de congelación corporal."
+      }
+    ],
+    "hint": "Recuerde el umbral numérico por debajo del cual el cuerpo pierde más calor del que logra generar en zonas frías o húmedas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes variables o condiciones alteran o influyen directamente en las mediciones de los signos vitales de un trabajador?",
+    "opciones": [
+      {
+        "text": "La realización de ejercicio físico intenso.",
+        "isCorrect": true,
+        "rationale": "El esfuerzo muscular incrementa de inmediato la frecuencia cardíaca, respiratoria y la temperatura corporal."
+      },
+      {
+        "text": "El estado emocional, el estrés o la ansiedad.",
+        "isCorrect": true,
+        "rationale": "La liberación de hormonas como la adrenalina ante el estrés eleva la presión arterial y el pulso."
+      },
+      {
+        "text": "La presencia de fiebre o hemorragias significativas.",
+        "isCorrect": true,
+        "rationale": "La pérdida de volumen sanguíneo o la respuesta infecciosa alteran significativamente la frecuencia cardíaca y la presión arterial."
+      },
+      {
+        "text": "El color del casco de protección que porta el trabajador.",
+        "isCorrect": false,
+        "rationale": "El color de la indumentaria no altera los parámetros fisiológicos ni los signos vitales de la persona."
+      },
+      {
+        "text": "El tipo de turno de trabajo asignado en el sistema informático.",
+        "isCorrect": false,
+        "rationale": "El registro administrativo en un software no modifica las variables fisiológicas directas del cuerpo humano."
+      }
+    ],
+    "hint": "Seleccione los factores internos o externos que modifican directamente el funcionamiento cardíaco, respiratorio o metabólico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué significan las siglas del protocolo básico de conducta PAS ante una emergencia en mina?",
+    "opciones": [
+      {
+        "text": "Proteger, Alertar y Socorrer.",
+        "isCorrect": true,
+        "rationale": "Sigue la secuencia lógica fundamental: primero asegurar la escena, luego avisar a los equipos de emergencia y finalmente brindar la atención básica."
+      },
+      {
+        "text": "Prevenir, Auxiliar y Sancionar.",
+        "isCorrect": false,
+        "rationale": "El protocolo no incluye acciones disciplinarias o sancionatorias durante la respuesta a una emergencia médica."
+      },
+      {
+        "text": "Paralizar, Atender y Salir.",
+        "isCorrect": false,
+        "rationale": "Aunque es necesario asegurar la zona, las siglas correctas corresponden a Proteger la escena, Alertar a emergencias y Socorrer a la víctima."
+      },
+      {
+        "text": "Presionar, Acomodar y Trasladar.",
+        "isCorrect": false,
+        "rationale": "Esta secuencia omite el paso crítico de activar la cadena de llamadas de emergencia antes de manipular al paciente."
+      },
+      {
+        "text": "Proyectar, Analizar y Solucionar.",
+        "isCorrect": false,
+        "rationale": "Corresponde a términos genéricos de resolución de problemas y no a la regla nemotécnica de primeros auxilios."
+      }
+    ],
+    "hint": "Piense en el orden que inicia garantizando la seguridad, continúa con la comunicación y termina con el auxilio directo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Antes de tomar contacto con una víctima lesionada para administrarle primeros auxilios, ¿cuál es la acción prioritaria de bioprotección que debe realizar el primer respondiente?",
+    "opciones": [
+      {
+        "text": "Ponerse guantes de protección (látex o vinilo) para evitar el contacto directo con sangre o fluidos.",
+        "isCorrect": true,
+        "rationale": "Los guantes aíslan la piel del auxiliador de agentes patógenos transmisibles por fluidos biológicos."
+      },
+      {
+        "text": "Verter alcohol directamente sobre el rostro de la víctima inconsciente.",
+        "isCorrect": false,
+        "rationale": "Verter alcohol en la cara es peligroso, daña las mucosas y no constituye una medida de bioseguridad personal."
+      },
+      {
+        "text": "Mover inmediatamente al accidentado a otra zona sin evaluar el entorno.",
+        "isCorrect": false,
+        "rationale": "Mover a la víctima sin verificar riesgos en el entorno compromete la seguridad del auxiliador y de la víctima."
+      },
+      {
+        "text": "Suministrarle medicamentos analgésicos en tabletas sin evaluación previa.",
+        "isCorrect": false,
+        "rationale": "Administrar pastillas está prohibido en primeros auxilios y no representa una medida de bioprotección para el auxiliador."
+      },
+      {
+        "text": "Retirar inmediatamente toda la indumentaria de trabajo del accidentado.",
+        "isCorrect": false,
+        "rationale": "Desvestir a la víctima innecesariamente puede inducir hipotermia y no protege la bioseguridad del primer respondiente."
+      }
+    ],
+    "hint": "Considere la barrera física primaria que protege sus manos al atender heridas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es fundamental la reportabilidad de incidentes, actos y condiciones subestándares en una unidad minera?",
+    "opciones": [
+      {
+        "text": "Porque permite corregir desviaciones y peligros antes de que se desencadene un accidente grave o fatal.",
+        "isCorrect": true,
+        "rationale": "La notificación oportuna de fallas y conductas inseguras permite aplicar controles preventivos y romper la cadena de causalidad de los accidentes."
+      },
+      {
+        "text": "Para aplicar sanciones económicas inmediatas a todos los trabajadores del turno.",
+        "isCorrect": false,
+        "rationale": "La gestión moderna de seguridad busca la prevención y el aprendizaje, no el castigo punitivo de los reportes."
+      },
+      {
+        "text": "Para eliminar la necesidad de realizar capacitaciones de seguridad en faena.",
+        "isCorrect": false,
+        "rationale": "El reporte de incidentes complementa y retroalimenta los programas de capacitación, nunca los sustituye."
+      },
+      {
+        "text": "Debido a que evita la presencia de brigadas de rescate en la mina.",
+        "isCorrect": false,
+        "rationale": "Las brigadas de rescate son indispensables en el plan de emergencia independientemente del volumen de reportes."
+      },
+      {
+        "text": "Para aumentar la velocidad de producción reduciendo los tiempos de inspección.",
+        "isCorrect": false,
+        "rationale": "La reportabilidad busca cuidar la integridad física del personal y no acelerar procesos a costa del riesgo."
+      }
+    ],
+    "hint": "Reflexione sobre la base de la pirámide de proporcionalidad de accidentes y cómo evitar eventos mayores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué característica clínica distingue a una hemorragia de origen arterial?",
+    "opciones": [
+      {
+        "text": "La sangre es de color rojo brillante y sale a borbotones de forma pulsátil.",
+        "isCorrect": true,
+        "rationale": "Al provenir de vasos con alta presión impulsados por el corazón, la sangre arterial brota a borbotones y con un tono vivo oxigenado."
+      },
+      {
+        "text": "La sangre es de color rojo oscuro y fluye de manera continua y uniforme.",
+        "isCorrect": false,
+        "rationale": "El flujo continuo de sangre oscura es característico de las hemorragias de origen venoso."
+      },
+      {
+        "text": "Se manifiesta como un sangrado leve en forma de pequeñas gotas en la piel.",
+        "isCorrect": false,
+        "rationale": "El sangrado leve en sábana o gotas corresponde a una hemorragia capilar superficial."
+      },
+      {
+        "text": "No presenta salida de sangre visible al exterior bajo ninguna circunstancia.",
+        "isCorrect": false,
+        "rationale": "Las hemorragias arteriales externas son claramente visibles y expulsan volumen sanguíneo con fuerza."
+      },
+      {
+        "text": "El flujo sanguíneo se detiene por sí solo en menos de cinco segundos sin intervención.",
+        "isCorrect": false,
+        "rationale": "Por la elevada presión arterial, estas hemorragias raramente ceden solas y requieren presión firme inmediata."
+      }
+    ],
+    "hint": "Asocie el color oxigenado y el impulso rítmico que genera la presión del bombeo cardíaco.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la maniobra inicial primaria y más efectiva para lograr el control de una hemorragia externa en una extremidad?",
+    "opciones": [
+      {
+        "text": "Aplicar presión directa sobre la herida con un apósito o gasa limpia.",
+        "isCorrect": true,
+        "rationale": "La compresión continua sobre el punto sangrante ocluye los vasos rotos y favorece la formación del coágulo hemostático."
+      },
+      {
+        "text": "Colocar un torniquete de inmediato sin importar la gravedad del sangrado.",
+        "isCorrect": false,
+        "rationale": "El torniquete está reservado como último recurso ante sangrados exangüinantes o exanguinantes que no responden a compresión."
+      },
+      {
+        "text": "Verter alcohol desnaturalizado en el interior de la lesión para cauterizarla.",
+        "isCorrect": false,
+        "rationale": "El alcohol destruye las células expuestas, destruye el tejido dañado y genera dolor severo sin detener el flujo sanguíneo."
+      },
+      {
+        "text": "Lavar la zona con agua hirviendo para cerrar las arterias por calor.",
+        "isCorrect": false,
+        "rationale": "El agua hirviendo provoca quemaduras graves adicionales y empeora drásticamente el cuadro de la víctima."
+      },
+      {
+        "text": "Mover repetidamente la extremidad lesionada para activar la circulación de retorno.",
+        "isCorrect": false,
+        "rationale": "Movilizar el miembro afectado incrementa el bombeo sanguíneo y dificulta la coagulación natural."
+      }
+    ],
+    "hint": "Piense en la acción física directa que comprime los vasos sanguíneos sobre la Herida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el protocolo de primeros auxilios, ¿cuándo se justifica técnicamente el uso de un torniquete en una extremidad?",
+    "opciones": [
+      {
+        "text": "Exclusivamente en hemorragias severas o traumáticas donde la presión directa constante ha fallado o en amputaciones.",
+        "isCorrect": true,
+        "rationale": "Es una medida extrema de contención para evitar la muerte por desangramiento cuando las técnicas estándar de compresión no funcionan."
+      },
+      {
+        "text": "Para tratar raspaduras o abrasiones superficiales de la piel.",
+        "isCorrect": false,
+        "rationale": "Las lesiones superficiales ceden fácilmente con limpieza y vendas simples sin requerir oclusión vascular extrema."
+      },
+      {
+        "text": "Como primera opción rápida en cualquier corte pequeño de los dedos.",
+        "isCorrect": false,
+        "rationale": "Aplicar un torniquete indebidamente interrumpe la irrigación sana del miembro y puede ocasionar necrosis tisular innecesaria."
+      },
+      {
+        "text": "Para sostener una gasa sobre una herida leve sin necesidad de usar cinta adhesiva.",
+        "isCorrect": false,
+        "rationale": "Para sujetar un apósito leve se emplean vendajes elásticos o esparadrapo, no dispositivos de oclusión arterial."
+      },
+      {
+        "text": "Se debe aplicar siempre alrededor del cuello en caso de sangrado facial.",
+        "isCorrect": false,
+        "rationale": "Colocar un torniquete en el cuello provoca asfixia y bloquea el flujo sanguíneo al cerebro causando la muerte inmediata."
+      }
+    ],
+    "hint": "Identifique la condición límite donde hay peligro inminente de muerte por desangramiento inaccesible a la compresión simple.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Si durante la presión directa el apósito colocado sobre una herida se empapa completamente de sangre, ¿qué acción debe realizar el auxiliador?",
+    "opciones": [
+      {
+        "text": "Colocar un nuevo apósito sobre el anterior empapado y mantener la presión firme sin retirarlo.",
+        "isCorrect": true,
+        "rationale": "Retirar la primera gasa despegaría los incipientes coágulos formados en la base de la herida, reactivando el sangrado."
+      },
+      {
+        "text": "Retirar todas las gasas húmedas y limpiar nuevamente el interior de la lesión.",
+        "isCorrect": false,
+        "rationale": "Desprender las capas de gasa rompe la trama de fibrinógeno y destruye la coagulación natural del cuerpo."
+      },
+      {
+        "text": "Soplar la herida para ayudar a que la sangre se seque más rápido.",
+        "isCorrect": false,
+        "rationale": "Soplar introduce gérmenes de la boca en la herida abierta aumentando el riesgo de infección grave."
+      },
+      {
+        "text": "Retirar la presión por completo y dejar abierta la zona para que ventile.",
+        "isCorrect": false,
+        "rationale": "Detener la compresión provoca que la hemorragia continúe libremente perdiendo volumen vital."
+      },
+      {
+        "text": "Aplicar hielo picado directamente dentro de la Herida abierta.",
+        "isCorrect": false,
+        "rationale": "El hielo directo en tejidos expuestos puede causar lesión térmica adicional y no reemplaza la presión mecánica."
+      }
+    ],
+    "hint": "Recuerde la regla de oro sobre conservar los coágulos iniciales formados en la primera capa de gasa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes términos corresponden a clasificaciones formales de heridas según su mecanismo o agente traumático?",
+    "opciones": [
+      {
+        "text": "Heridas cortantes (incisas).",
+        "isCorrect": true,
+        "rationale": "Producidas por objetos con filo que generan bordes limpios y sangrado variable."
+      },
+      {
+        "text": "Heridas punzantes.",
+        "isCorrect": true,
+        "rationale": "Causadas por objetos con punta que penetran en profundidad con un orificio de entrada pequeño."
+      },
+      {
+        "text": "Heridas contusas.",
+        "isCorrect": true,
+        "rationale": "Originadas por impactos de objetos romos que aplastan o lesionan los tejidos sin necesariamente romper la piel de forma limpia."
+      },
+      {
+        "text": "Heridas por avulsión.",
+        "isCorrect": true,
+        "rationale": "Caracterizadas por el rasgado, desgarro o separación parcial o total de colgajos de piel y tejido."
+      },
+      {
+        "text": "Heridas térmicas por hipotermia fisiológica.",
+        "isCorrect": false,
+        "rationale": "La hipotermia es una condición sistémica de baja temperatura corporal, no una clasificación anatómica de herida traumática."
+      }
+    ],
+    "hint": "Marque los tipos de lesiones cutáneas según las características de la herramienta o impacto que las origina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Ante un accidente donde un trabajador presenta un objeto punzante (como un trozo de metal o madera) incrustado profundamente en su cuerpo, ¿cuál es el procedimiento correcto de primeros auxilios?",
+    "opciones": [
+      {
+        "text": "Fijar e inmovilizar el objeto en su posición actual sin intentarlo extraer, y esperar auxilio médico.",
+        "isCorrect": true,
+        "rationale": "El objeto incrustado puede estar taponando vasos sanguíneos dañados; retirarlo provocaría una hemorragia masiva e incontrolable en el lugar."
+      },
+      {
+        "text": "Extraer rápidamente el objeto con fuerza para cerrar la Herida de inmediato.",
+        "isCorrect": false,
+        "rationale": "Retirar el objeto elimina el efecto de tapón y desencadena hemorragias severas difíciles de contener en faena."
+      },
+      {
+        "text": "Girar el objeto en $360^{\\circ}$ para comprobar si está adherido al hueso.",
+        "isCorrect": false,
+        "rationale": "Manipular o rotar un cuerpo incrustado destruye más nervios, músculos y vasos sanguíneos adyacentes."
+      },
+      {
+        "text": "Empujar el objeto más adentro para que no estorbe durante el traslado.",
+        "isCorrect": false,
+        "rationale": "Introducir más el objeto profundiza el daño orgánico e incrementa exponencialmente el peligro para la vida."
+      },
+      {
+        "text": "Verter solventes industriales sobre el objeto para desinfectar la entrada.",
+        "isCorrect": false,
+        "rationale": "Los químicos industriales provocan severa toxicidad y quemaduras químicas en los tejidos internos expuestos."
+      }
+    ],
+    "hint": "Considere la función de 'tapón' temporal que ejerce el elemento extraño sobre los vasos lesionados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué característica define esencialmente a una fractura de tipo abierta o expuesta?",
+    "opciones": [
+      {
+        "text": "El hueso roto atraviesa los tejidos blandos y la piel, quedando comunicado con el exterior.",
+        "isCorrect": true,
+        "rationale": "La pérdida de continuidad de la piel sobre el foco de fractura expone la zona ósea al ambiente y eleva el riesgo de infección."
+      },
+      {
+        "text": "El hueso se fisura internamente pero la piel permanece completamente intacta.",
+        "isCorrect": false,
+        "rationale": "Cuando la piel no presenta fisuras ni heridas sobre el sitio fracturado se trata de una fractura cerrada."
+      },
+      {
+        "text": "El hueso se dobla en niños sin llegar a romperse del todo.",
+        "isCorrect": false,
+        "rationale": "Esta descripción corresponde a una fractura en 'rama verde', típica de huesos infantiles flexibles."
+      },
+      {
+        "text": "Corresponde al desgarro leve de los ligamentos en una articulación.",
+        "isCorrect": false,
+        "rationale": "La lesión de ligamentos articulares es un esguince, no una ruptura de la estructura ósea."
+      },
+      {
+        "text": "Es una fractura que únicamente afecta a los huesos del cráneo.",
+        "isCorrect": false,
+        "rationale": "Cualquier hueso del cuerpo puede sufrir una fractura abierta si el fragmento rompe la piel suprayacente."
+      }
+    ],
+    "hint": "Observe la relación entre los fragmentos óseos rotos y la superficie externa de la piel.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al atender a un accidentado con sospecha de fractura en una extremidad, ¿cuál es la regla de oro que debe seguir el primer respondiente?",
+    "opciones": [
+      {
+        "text": "Inmovilizar la zona en la posición exacta en que se encuentra sin intentar traccionar o acomodar el hueso.",
+        "isCorrect": true,
+        "rationale": "Intentar alinear o manipular un hueso roto provoca dolor extremo y puede cortar arterias o nervios cercanos con los bordes filosos del hueso."
+      },
+      {
+        "text": "Tirar con fuerza del pie o mano para intentar encajar el hueso roto.",
+        "isCorrect": false,
+        "rationale": "Traccionar sin conocimientos ni anestesia médica genera daños tisulares severos y posibles hemorragias internas."
+      },
+      {
+        "text": "Hacer que el lesionado camine inmediatamente para comprobar si el hueso sostiene peso.",
+        "isCorrect": false,
+        "rationale": "Forzar la carga de peso sobre un hueso roto desplaza aún más los fragmentos y destruye el tejido adyacente."
+      },
+      {
+        "text": "Masajear vigorosamente la zona inflamada con ungüentos calientes.",
+        "isCorrect": false,
+        "rationale": "El masaje sobre un foco de fractura incrementa el sangrado interno y causa un sufrimiento innecesario."
+      },
+      {
+        "text": "Doblarlos repetidamente para evaluar la flexibilidad de la extremidad.",
+        "isCorrect": false,
+        "rationale": "Someter a flexión una zona fracturada puede transformar una lesión cerrada en una fractura expuesta."
+      }
+    ],
+    "hint": "Recuerde la norma que prohíbe reacondicionar o alinear manualmente los fragmentos de hueso dañado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste esencialmente la lesión denominada esguince?",
+    "opciones": [
+      {
+        "text": "En la distensión, estiramiento o desgarro de los ligamentos de una articulación sin que los huesos se desprendan permanentemente de su sitio.",
+        "isCorrect": true,
+        "rationale": "El esguince lesiona la cápsula o ligamentos articulares por un movimiento brusco, manteniendo la concordancia anatómica básica al ceder el esfuerzo."
+      },
+      {
+        "text": "En la separación completa y fija de las superficies articulares de dos huesos.",
+        "isCorrect": false,
+        "rationale": "La pérdida permanente de contacto articular entre huesos se define como luxación."
+      },
+      {
+        "text": "En el aplastamiento del cuerpo del hueso con pérdida de masa ósea.",
+        "isCorrect": false,
+        "rationale": "La pérdida de masa u origen de esquirlas múltiples corresponde a una fractura conminuta."
+      },
+      {
+        "text": "En la pérdida de conocimiento producida por la inhalación de polvo minero.",
+        "isCorrect": false,
+        "rationale": "La pérdida de conciencia por inhalación es un cuadro de intoxicación o asfixia, no un trauma articular."
+      },
+      {
+        "text": "En una quemadura profunda producida por contacto con ácidos fuertes.",
+        "isCorrect": false,
+        "rationale": "Las lesiones por químicos en la piel son quemaduras cáusticas, no lesiones osteomusculares."
+      }
+    ],
+    "hint": "Diferencie el estiramiento o daño de los ligamentos de la pérdida permanente de posición del hueso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define la lesión osteomuscular conocida como luxación (o dislocación)?",
+    "opciones": [
+      {
+        "text": "Como la pérdida permanente de la relación anatómica normal entre las superficies articulares de los huesos.",
+        "isCorrect": true,
+        "rationale": "En la luxación, los extremos óseos que forman la articulación se salen totalmente de su cavidad normal y permanecen desplazados."
+      },
+      {
+        "text": "Como una pequeña fisura lineal en la superficie externa del hueso corto.",
+        "isCorrect": false,
+        "rationale": "Una fisura en la continuidad del tejido óseo es una forma leve de fractura, no una luxación."
+      },
+      {
+        "text": "Como un corte limpio producido por una cuchilla sobre la epidermis.",
+        "isCorrect": false,
+        "rationale": "Las lesiones causadas por filo sobre la piel corresponden a heridas cortantes."
+      },
+      {
+        "text": "Como la inflamación del tejido pulmonar producto de gases tóxicos.",
+        "isCorrect": false,
+        "rationale": "La inflamación pulmonar por gases es una neumonitis o intoxicación respiratoria."
+      },
+      {
+        "text": "Como la curación espontánea e instantánea de un músculo desgarado.",
+        "isCorrect": false,
+        "rationale": "Las luxaciones son traumáticas, dolorosas y requieren intervención profesional para su reducción."
+      }
+    ],
+    "hint": "Identifique el evento donde la articulación pierde por completo la posición de encaje entre sus huesos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Si se atiende a un trabajador tras una caída de altura en la que se sospecha de un traumatismo en la columna vertebral o el cuello, ¿cuáles son las medidas de primeros auxilios correctas?",
+    "opciones": [
+      {
+        "text": "No mover a la víctima salvo que persista un riesgo inminente para su vida en el lugar (como fuego o derrumbe).",
+        "isCorrect": true,
+        "rationale": "Evita desplazar los fragmentos vertebrales que podrían seccionar la médula espinal y causar parálisis permanente."
+      },
+      {
+        "text": "Solicitar ayuda y activar de inmediato el plan de respuesta a emergencias médicas.",
+        "isCorrect": true,
+        "rationale": "Garantiza la llegada rápida de personal capacitado equipado con camillas rígidas y collares cervicales."
+      },
+      {
+        "text": "Sostener manualmente la cabeza y el cuello alineados en posición neutra sin traccionar.",
+        "isCorrect": true,
+        "rationale": "Estabilizar el eje cabeza-cuello con las manos limita movimientos involuntarios que agraven una posible lesión medular."
+      },
+      {
+        "text": "Incorporar inmediatamente al herido para sentarlo en una silla de trabajo.",
+        "isCorrect": false,
+        "rationale": "Sentar o flexionar a un paciente con trauma de columna puede provocar una sección medular irreversibles."
+      },
+      {
+        "text": "Obligarlo a realizar movimientos de rotación del cuello para evaluar reflejos.",
+        "isCorrect": false,
+        "rationale": "Forzar la rotación del cuello lesionado es extremadamente peligroso y compromete la vida o movilidad del paciente."
+      }
+    ],
+    "hint": "Seleccione las pautas que aseguran la inmovilización del eje espinal y la llegada de auxilio especializado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con las pautas ergonómicas de salud ocupacional expuestas en la clase, ¿cuál es el peso límite máximo recomendado para la manipulación manual de cargas por un trabajador varón?",
+    "opciones": [
+      {
+        "text": "$25\\,\\text{kg}$.",
+        "isCorrect": true,
+        "rationale": "Es la cifra límite estándar recomendada para proteger la estructura dorsolumbar del trabajador durante el levantamiento manual."
+      },
+      {
+        "text": "$50\\,\\text{kg}$.",
+        "isCorrect": false,
+        "rationale": "Levantar $50\\,\\text{kg}$ de forma individual sobrepasa el límite seguro e incrementa exponencialmente el riesgo de hernias o luxaciones vertebrales."
+      },
+      {
+        "text": "$10\\,\\text{kg}$.",
+        "isCorrect": false,
+        "rationale": "Aunque es una carga liviana, el estándar normativo general para varones fija el límite en $25\\,\\text{kg}$ para tareas de levantamiento."
+      },
+      {
+        "text": "$80\\,\\text{kg}$.",
+        "isCorrect": false,
+        "rationale": "Un peso de $80\\,\\text{kg}$ exige obligatoriamente apoyo de equipos mecánicos de izaje o ayuda de múltiples personas."
+      },
+      {
+        "text": "$100\\,\\text{kg}$.",
+        "isCorrect": false,
+        "rationale": "Es un peso desmedido para la capacidad biomecánica humana individual y provocaría lesiones graves en la columna."
+      }
+    ],
+    "hint": "Recuerde la cifra de peso en kilogramos que sirve de tope estándar preventivo para la espalda de los hombres.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el ámbito de la minería, ¿cuál es la postura obligatoria que debe asumir cualquier trabajador o supervisor frente a la seguridad de las operaciones?",
+    "opciones": [
+      {
+        "text": "La seguridad no se negocia ni se compromete bajo ninguna presión de tiempo o producción.",
+        "isCorrect": true,
+        "rationale": "El principio de seguridad establece que la vida e integridad física del personal están por encima de metas operativas o exigencias de avance."
+      },
+      {
+        "text": "La seguridad es secundaria cuando se debe cumplir con las metas del turno.",
+        "isCorrect": false,
+        "rationale": "Anteponer la velocidad de trabajo a la seguridad es la causa principal de accidentes graves y fatales."
+      },
+      {
+        "text": "Los protocolos de seguridad se aplican únicamente si hay inspectores externos presentes.",
+        "isCorrect": false,
+        "rationale": "La seguridad debe practicarse de manera continua e intrínseca en cada tarea, independientemente de la fiscalización."
+      },
+      {
+        "text": "Si el jefe de turno lo solicita verbalmente, se pueden omitir los permisos de trabajo seguro.",
+        "isCorrect": false,
+        "rationale": "Ninguna orden jerárquica justifica la realización de trabajos de alto riesgo sin sus correspondientes permisos o procedimientos."
+      },
+      {
+        "text": "La seguridad es responsabilidad exclusiva del departamento de primeros auxilios.",
+        "isCorrect": false,
+        "rationale": "La prevención y el cumplimiento de normas de seguridad es un deber compartido por todos los trabajadores de la mina."
+      }
+    ],
+    "hint": "Considere la regla básica que prohíbe flexibilizar los estándares de protección a cambio de avance operacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes áreas dentro de una unidad minera exigen la aplicación rigurosa de normas y medidas de bioseguridad?",
+    "opciones": [
+      {
+        "text": "Tópicos y centros de atención médica.",
+        "isCorrect": true,
+        "rationale": "Requieren máximo control para prevenir la propagación de infecciones y manejar adecuadamente los residuos patológicos."
+      },
+      {
+        "text": "Comedores y zonas de concesionarias de alimentos.",
+        "isCorrect": true,
+        "rationale": "Son espacios de alto tránsito donde la higiene de alimentos evita brotes epidémicos digestivos o intoxicaciones."
+      },
+      {
+        "text": "Servicios higiénicos y vestuarios.",
+        "isCorrect": true,
+        "rationale": "Puntos donde la desinfección regular previene el contagio de patógenos biológicos entre el personal."
+      },
+      {
+        "text": "Zonas de recolección y segregación de residuos peligrosos o biológicos.",
+        "isCorrect": true,
+        "rationale": "El manejo de material contaminado requiere barreras específicas para evitar la liberación de agentes infecciosos."
+      },
+      {
+        "text": "Vías públicas abiertas alejadas de la concesión minera.",
+        "isCorrect": false,
+        "rationale": "Las áreas externas no industriales quedan fuera del alcance del plan de bioseguridad operativo de la mina."
+      }
+    ],
+    "hint": "Piense en las áreas operativas e instalaciones donde se manipulan fluidos, residuos, alimentos o se brinda atención de salud.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En caso de que un trabajador sufra la proyección accidental de una sustancia química corrosiva en los ojos o la piel, ¿cuál es la medida inmediata de primeros auxilios?",
+    "opciones": [
+      {
+        "text": "Lavar la zona afectada con abundante agua limpia corriente en duchas o lavaojos de emergencia durante varios minutos.",
+        "isCorrect": true,
+        "rationale": "El lavado hídrico continuo diluye la sustancia química, reduce la temperatura de la reacción y remueve el corrosivo del tejido."
+      },
+      {
+        "text": "Frotar fuertemente la piel con un paño seco para retirar el líquido.",
+        "isCorrect": false,
+        "rationale": "Frotar la piel expande el químico, profundiza la penetración de la sustancia y destruye el tejido epitelial."
+      },
+      {
+        "text": "Aplicar cremas grasas o pasta de dientes sobre la zona afectada.",
+        "isCorrect": false,
+        "rationale": "Cubrir la zona con materiales grasos retiene el calor del químico y puede reaccionar negativamente agravando la quemadura."
+      },
+      {
+        "text": "Verter vinagre o jugos cítricos para neutralizar químicamente la sustancia.",
+        "isCorrect": false,
+        "rationale": "Intentar neutralizar químicos sobre la piel genera reacciones exotérmicas que producen quemaduras térmicas adicionales."
+      },
+      {
+        "text": "Soplar la zona quemada con aire comprimido industrial.",
+        "isCorrect": false,
+        "rationale": "El aire comprimido puede introducir contaminantes con fuerza dentro de los tejidos y dañar severamente los ojos."
+      }
+    ],
+    "hint": "Recuerde el recurso hídrico abundante que se encuentra en las estaciones lavadoras de faena para diluir el producto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante una jornada en una labor subterránea, un socorrista evalúa dos situaciones distintas: un operario en paro cardiorrespiratorio y otro con un esguince leve de tobillo. ¿Cuál es el criterio técnico que clasifica la primera situación como emergencia y la segunda como urgencia?",
+    "opciones": [
+      {
+        "text": "La emergencia implica un riesgo vital inminente que requiere intervención inmediata, mientras que la urgencia requiere atención rápida pero no compromete la vida de forma directa.",
+        "isCorrect": true,
+        "rationale": "Las emergencias médicas involucran un compromiso vital inmediato (como el paro cardiorrespiratorio), donde el tiempo de respuesta determina la sobrevida, a diferencia de las urgencias donde la atención es prioritaria pero la vida no corre peligro inminente."
+      },
+      {
+        "text": "La emergencia solo puede ser atendida por personal médico especializado en hospital, mientras que la urgencia es resuelta por los brigadistas en el lugar.",
+        "isCorrect": false,
+        "rationale": "Ambas situaciones pueden recibir primeros auxilios e intervención inicial por parte del primer respondiente o brigadista antes de la llegada de la atención médica avanzada."
+      },
+      {
+        "text": "La urgencia siempre deriva de accidentes traumatológicos, mientras que la emergencia responde únicamente a patologías previas del trabajador.",
+        "isCorrect": false,
+        "rationale": "Tanto las emergencias como las urgencias pueden originarse por traumatismos violentos o por patologías de aparición repentina."
+      },
+      {
+        "text": "La emergencia requiere la aplicación obligatoria de un torniquete, mientras que la urgencia solo exige la limpieza superficial de heridas.",
+        "isCorrect": false,
+        "rationale": "El uso de torniquetes es un procedimiento específico para hemorragias arteriales masivas e incontrolables, no una condición definitoria de todas las emergencias."
+      },
+      {
+        "text": "La urgencia implica la pérdida del estado de conciencia del trabajador, mientras que la emergencia mantiene al paciente orientado.",
+        "isCorrect": false,
+        "rationale": "La pérdida de conciencia suele indicar un compromiso del sistema nervioso o circulatorio que orienta hacia una emergencia y no a una urgencia leve."
+      }
+    ],
+    "hint": "Analiza la presencia o ausencia de un peligro inminente para la supervivencia de la víctima.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la inspección de seguridad de un frente de trabajo minero, el auditor observa que el botiquín de primeros auxilios no contiene analgésicos ni inyectables. ¿Cuál es la justificación operativa para restringir el uso de medicamentos en los botiquines de área?",
+    "opciones": [
+      {
+        "text": "Prevenir reacciones alérgicas o intoxicaciones por automedicación, reservando la administración de fármacos exclusivamente al personal médico del tópico.",
+        "isCorrect": true,
+        "rationale": "El personal no médico desconoce el historial de alergias o interacciones farmacológicas de los trabajadores, por lo que la administración de medicamentos en botiquines portátiles o de área está estrictamente prohibida."
+      },
+      {
+        "text": "Reducir los costos operativos de reposición de insumos médicos en los frentes de trabajo de la unidad minera.",
+        "isCorrect": false,
+        "rationale": "La restricción responde a criterios de bioseguridad y prevención de riesgos a la salud, no a razones económicas o presupuestarias de la empresa."
+      },
+      {
+        "text": "Evitar que los insumos farmacológicos pierdan efectividad rápidamente debido a la humedad ambiental de la mina.",
+        "isCorrect": false,
+        "rationale": "Aunque las condiciones ambientales influyen en el almacenamiento, la razón principal de prohibición es el riesgo de automedicación y shock anafiláctico."
+      },
+      {
+        "text": "Cumplir con la norma que exige que los botiquines de área contengan únicamente materiales de inmovilización ósea.",
+        "isCorrect": false,
+        "rationale": "Los botiquines de área deben contener antisépticos, material de curación y desinfección, no solo insumos de inmovilización."
+      },
+      {
+        "text": "Garantizar que los trabajadores solo consuman medicamentos prescritos durante sus días de descanso médico fuera de la unidad.",
+        "isCorrect": false,
+        "rationale": "El personal puede recibir medicamentos durante la guardia siempre que sean diagnosticados y entregados formalmente por el profesional del tópico médico."
+      }
+    ],
+    "hint": "Piensa en las complicaciones clínicas asociadas a la automedicación o reacciones adversas no registradas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la atención de una laceración expuesta en el antebrazo de un trabajador, un brigadista se dispone a aplicar insumos del botiquín. ¿Cuál es la directriz correcta respecto al uso de toallitas con alcohol antiséptico en este procedimiento?",
+    "opciones": [
+      {
+        "text": "Deben emplearse únicamente para la higienización de las manos del auxiliador antes de la curación, evitando su aplicación directa sobre la herida para no dañar los tejidos.",
+        "isCorrect": true,
+        "rationale": "El alcohol antiséptico causa irritación severa, quemadura química e inhibición de la coagulación cuando se aplica directamente en lechos arteriales o venosos abiertos."
+      },
+      {
+        "text": "Deben vertirse directamente sobre la herida abierta para cauterizar los vasos capilares y detener el sangrado.",
+        "isCorrect": false,
+        "rationale": "Vertir alcohol en tejido expuesto aumenta la lesión tisular y la respuesta inflamatoria en lugar de promover la hemostasia."
+      },
+      {
+        "text": "Deben combinarse con agua oxigenada sobre la lesión para acelerar el proceso de cicatrización y coagulación.",
+        "isCorrect": false,
+        "rationale": "La mezcla indiscriminada de desinfectantes en heridas abiertas daña las células sanas y retrasa la reparación tisular."
+      },
+      {
+        "text": "Se aplican exclusivamente alrededor de fracturas expuestas para disolver restos de mineral incrustados.",
+        "isCorrect": false,
+        "rationale": "En fracturas expuestas está totalmente contraindicado el uso de alcohol; la limpieza debe realizarse con suero fisiológico esterilizado."
+      },
+      {
+        "text": "Se utilizan para diluir el suero fisiológico antes de irrigar cualquier quemadura química en la piel.",
+        "isCorrect": false,
+        "rationale": "Las quemaduras químicas se lavan exclusivamente con agua limpia o suero fisiológico a baja presión de manera prolongada."
+      }
+    ],
+    "hint": "Distingue entre la desinfección de las manos del auxiliador y la aplicación de sustancias sobre el tejido lesionado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al tomar los signos vitales a un trabajador que presentó escalofríos tras mojarse con agua de mina a 4,000 m s. n. m., el termómetro marca 35.0 °C. De acuerdo con las escalas fisiológicas expuestas en el curso, ¿cómo se clasifica el estado de este trabajador?",
+    "opciones": [
+      {
+        "text": "Hipotermia, requiriendo retiro inmediato de prendas húmedas y estabilización térmica en el tópico.",
+        "isCorrect": true,
+        "rationale": "Una temperatura corporal central inferior a 35.5 °C se clasifica como hipotermia, requiriendo aislamiento térmico y atención inmediata para evitar arritmias o colapso."
+      },
+      {
+        "text": "Temperatura normal adaptada a las condiciones extremas de altitud y clima frío.",
+        "isCorrect": false,
+        "rationale": "El rango fisiológico normal se mantiene entre 36.5 °C y 37.5 °C independientemente de la altitud de la faena minera."
+      },
+      {
+        "text": "Febrícula leve secundaria al esfuerzo físico de la caminata en el frente minero.",
+        "isCorrect": false,
+        "rationale": "La febrícula representa una elevación térmica entre 37.5 °C y 38.0 °C, lo cual es opuesto al valor registrado."
+      },
+      {
+        "text": "Hipertermia moderada producida por la vasoconstricción periférica severa.",
+        "isCorrect": false,
+        "rationale": "La hipertermia implica un aumento crítico de la temperatura por encima de los 40.0 °C."
+      },
+      {
+        "text": "Estado de shock anafiláctico provocado por el contacto con agua de mina contaminada.",
+        "isCorrect": false,
+        "rationale": "El shock anafiláctico es una reacción alérgica sistémica caracterizada por colapso circulatorio y broncoespasmo, no simplemente por descenso térmico asilado."
+      }
+    ],
+    "hint": "Considera el límite térmico a partir del cual el organismo pierde la capacidad de mantener el equilibrio calórico normal (< 35.5 °C).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un brigadista mide el pulso arterial de un paciente inconsciente en reposo y contabiliza 112 latidos por minuto (LPM). ¿Qué alteración de la frecuencia cardíaca se está registrando y cuál es su umbral de definición en adultos?",
+    "opciones": [
+      {
+        "text": "Taquicardia, definida como una frecuencia cardíaca en reposo superior a 100 LPM.",
+        "isCorrect": true,
+        "rationale": "En adultos en estado de reposo, un ritmo cardíaco que excede los 100 latidos por minuto se diagnostica clínicamente como taquicardia."
+      },
+      {
+        "text": "Bradicardia, definida como una frecuencia cardíaca en reposo inferior a 60 LPM.",
+        "isCorrect": false,
+        "rationale": "La bradicardia corresponde a un ritmo cardíaco por debajo de los 60 LPM en adultos en reposo."
+      },
+      {
+        "text": "Arritmia respiratoria fisiológica, caracterizada por valores entre 80 y 110 LPM.",
+        "isCorrect": false,
+        "rationale": "La arritmia respiratoria fisiológica es una variación benigna del pulso asociada a los ciclos de inspiración y espiración, no un valor fijo elevado."
+      },
+      {
+        "text": "Pulso parvus tardus, caracterizado por una frecuencia cardíaca estable a más de 120 LPM.",
+        "isCorrect": false,
+        "rationale": "El pulso parvus tardus describe la morfología de la onda (pequeña amplitud y ascenso lento), no la frecuencia por minuto."
+      },
+      {
+        "text": "Pulso alternante, definido por una elevación transitoria entre 90 y 100 LPM.",
+        "isCorrect": false,
+        "rationale": "El pulso alternante consiste en la alternancia de impulsos fuertes y débiles, no en el conteo total de latidos por minuto."
+      }
+    ],
+    "hint": "Evalúa si el valor obtenido supera el límite superior de latidos en reposo estandarizado para un adulto en calma.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la palpación arterial de una víctima de traumatismo, el personal de auxilio percibe que la onda pulsátil cambia de volumen de forma rítmica (un latido fuerte seguido de uno débil consecutivamente). ¿A qué tipo de pulso corresponde esta manifestación?",
+    "opciones": [
+      {
+        "text": "Pulso alternante, asociado a variaciones en la fuerza de contracción ventricular.",
+        "isCorrect": true,
+        "rationale": "El pulso alternante se caracteriza por una sucesión regular de ondas de gran y pequeña amplitud, reflejando alternancia en la fuerza contráctil del corazón."
+      },
+      {
+        "text": "Pulso celer, caracterizado por un ascenso y descenso rápido de la onda de presión.",
+        "isCorrect": false,
+        "rationale": "El pulso celer o en martillo de agua muestra un colapso e impulso rápido, pero constante en cada ciclo."
+      },
+      {
+        "text": "Pulso paradójico, donde la amplitud disminuye marcadamente durante la inspiración profunda.",
+        "isCorrect": false,
+        "rationale": "El pulso paradójico depende de la fase respiratoria y no de un patrón rítmico latido a latido."
+      },
+      {
+        "text": "Pulso parvus, caracterizado por ser de pequeña amplitud y de ascenso muy lento.",
+        "isCorrect": false,
+        "rationale": "El pulso parvus mantiene una amplitud pequeña constante en todos sus impulsos."
+      },
+      {
+        "text": "Arritmia respiratoria, donde el ritmo varía exclusivamente en relación con los movimientos torácicos.",
+        "isCorrect": false,
+        "rationale": "La arritmia respiratoria altera los intervalos entre latidos durante la ventilación, no la fuerza pulsátil alternada."
+      }
+    ],
+    "hint": "Observa el patrón alternado de la fuerza o amplitud de la onda en cada ciclo cardíaco.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al presenciar la caída de un técnico cerca de un tablero eléctrico energizado en una planta concentradora, ¿cuál debe ser la primera acción del primer respondiente antes de tocar a la víctima?",
+    "opciones": [
+      {
+        "text": "Verificar y garantizar la seguridad de la escena interrumpiendo la energía o asegurando el entorno antes de abordar a la víctima.",
+        "isCorrect": true,
+        "rationale": "La regla primordial de socorro exige asegurar el área (etapa libre de obstáculos) para evitar que el auxiliador se convierta en una segunda víctima por contacto eléctrico."
+      },
+      {
+        "text": "Iniciar inmediatamente maniobras de reanimación cardiopulmonar en el lugar exacto del contacto.",
+        "isCorrect": false,
+        "rationale": "Iniciar maniobras en una zona no aislada o con riesgo eléctrico activo expone al auxiliador a una descarga fatal."
+      },
+      {
+        "text": "Trasladar a la víctima arrastrándola de las extremidades sin evaluar los cables o componentes expuestos.",
+        "isCorrect": false,
+        "rationale": "Tocar a una víctima en contacto con corriente eléctrica sin desenergizar el circuito conducirá la descarga hacia el auxiliador."
+      },
+      {
+        "text": "Colocar un torniquete en el brazo del afectado para evitar descargas eléctricas sistémicas.",
+        "isCorrect": false,
+        "rationale": "El torniquete es una medida de hemostasia y no tiene ningún efecto frente a la conducción de corriente eléctrica."
+      },
+      {
+        "text": "Retirar la mascarilla de protección respiratoria del afectado para facilitar la ventilación inmediata.",
+        "isCorrect": false,
+        "rationale": "Cualquier intervención directa sobre el afectado debe postergarse hasta garantizar que el entorno esté totalmente desenergizado y seguro."
+      }
+    ],
+    "hint": "Recuerda la regla fundamental de seguridad que prioriza la integridad del auxiliador frente a los peligros del entorno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un trabajador consciente sufre una contusión tras un deslizamiento menor en un tajo abierto. Si el trabajador está completamente orientado y rechaza verbalmente la atención inicial de primeros auxilios, ¿cuál es la conducta ética y legalmente procedente?",
+    "opciones": [
+      {
+        "text": "Respetar su autonomía mientras mantenga el estado de conciencia pleno, informando de inmediato al servicio médico y supervisión sin forzar el procedimiento.",
+        "isCorrect": true,
+        "rationale": "El consentimiento informado verbal es obligatorio en pacientes conscientes; forzar la atención física atenta contra sus derechos éticos y legales, por lo que se debe notificar la negativa al área médica."
+      },
+      {
+        "text": "Obligarlo físicamente a recibir la atención, incurriendo en falta de omisión de socorro si se le respeta la decisión.",
+        "isCorrect": false,
+        "rationale": "La omisión de socorro aplica al abandono desamparado de personas en peligro o incapaces, no cuando un adulto consciente en uso de sus facultades rechaza la atención."
+      },
+      {
+        "text": "Administrarle un sedante inyectable del botiquín para proceder con la atención contra su voluntad.",
+        "isCorrect": false,
+        "rationale": "La administración forzada de sustancias está prohibida y constituye un delito y una falta grave de bioseguridad."
+      },
+      {
+        "text": "Dar por concluido el caso sin notificar a la central de emergencias ni registrar el incidente.",
+        "isCorrect": false,
+        "rationale": "Todo rechazo de atención en el ámbito laboral debe ser reportado a la supervisión y al servicio médico para el registro legal del incidente."
+      },
+      {
+        "text": "Asumir que existe consentimiento implícito y realizar maniobras invasivas de inmediato.",
+        "isCorrect": false,
+        "rationale": "El consentimiento implícito se aplica únicamente en pacientes inconscientes o con alteración severa del estado de alerta."
+      }
+    ],
+    "hint": "Considera la exigencia legal del consentimiento verbal en pacientes conscientes y sin alteración del estado de alerta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Ante un evento con lesionados en una labor minera, surge la duda entre los trabajadores sobre el protocolo de comunicación telefónica o por radio. ¿Cuál es la consigna operativa recomendada para el primer respondiente?",
+    "opciones": [
+      {
+        "text": "Comunicarse directamente con la central de rescate o ambulancia médica para no perder minutos vitales antes de notificar al supervisor.",
+        "isCorrect": true,
+        "rationale": "La alerta médica directa ahorra segundos críticos en el inicio de la cadena de respuesta especializada, evitando triangulaciones jerárquicas dilatadas."
+      },
+      {
+        "text": "Llamar primero al supervisor directo y esperar a que este transmita la alerta a la gerencia corporativa.",
+        "isCorrect": false,
+        "rationale": "Esperar la cadena de mando administrativa demora innecesariamente el despacho de las brigadas de emergencia."
+      },
+      {
+        "text": "Enviar una solicitud escrita por correo electrónico al área de recursos humanos antes de pedir la ambulancia.",
+        "isCorrect": false,
+        "rationale": "Las emergencias operativas requieren alertas por radio o teléfono de acceso inmediato, nunca trámites documentarios previos."
+      },
+      {
+        "text": "Cortar la llamada telefónica inmediatamente tras dar la ubicación básica sin esperar preguntas del operador.",
+        "isCorrect": false,
+        "rationale": "El emisor debe ser el último en cortar la llamada para verificar que la central haya recopilado todos los detalles relevantes de la víctima."
+      },
+      {
+        "text": "Difundir la emergencia en redes sociales para alertar a los familiares antes que al equipo de rescate interno.",
+        "isCorrect": false,
+        "rationale": "La comunicación debe seguir los canales oficiales internos para movilizar la ayuda técnica sin generar desinformación externa."
+      }
+    ],
+    "hint": "Prioriza la rapidez de la respuesta médica especializada frente a los canales jerárquicos administrativos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del contexto de bioseguridad aplicable al manejo de fluidos biológicos en la atención de heridos, ¿cómo se clasifican las vacunas administradas al personal en comparación con el uso de guantes de látex y mascarillas?",
+    "opciones": [
+      {
+        "text": "Las vacunas constituyen una medida de inmunización, mientras que los guantes y mascarillas son barreras primarias de contención.",
+        "isCorrect": true,
+        "rationale": "La inmunización (vacunas) induce protección biológica interna, mientras que los guantes y mascarillas actúan como barreras primarias físicas entre el agente y el trabajador."
+      },
+      {
+        "text": "Las vacunas son barreras secundarias de ingeniería y los guantes son elementos de bioprotección terciaria.",
+        "isCorrect": false,
+        "rationale": "Las barreras secundarias corresponden al diseño de infraestructura (ventilación, lavamanos), no a la inmunización."
+      },
+      {
+        "text": "Ambos elementos corresponden a la categoría de barreras secundarias de infraestructura en salas de tópico.",
+        "isCorrect": false,
+        "rationale": "Los guantes y mascarillas son barreras primarias de uso personal, no elementos arquitectónicos o de ingeniería."
+      },
+      {
+        "text": "Los guantes representan medidas de bioaislamiento sintético y las vacunas corresponden a procedimientos de eliminación de residuos.",
+        "isCorrect": false,
+        "rationale": "La eliminación de residuos se refiere al descarte estricto de material contaminado en recipientes rojos o biológicos."
+      },
+      {
+        "text": "Las vacunas son dispositivos de biocontención activa y las mascarillas son barreras inmunológicas pasivas.",
+        "isCorrect": false,
+        "rationale": "Las mascarillas son barreras físicas de filtración que impiden la entrada de micropartículas, sin función inmunológica."
+      }
+    ],
+    "hint": "Identifica la diferencia entre la protección inmunológica previa y los elementos físicos de contención directa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según los principios de gestión de seguridad expuestos en clase, ¿por qué una baja tasa de reporte de incidentes y condiciones subestándares en una mina debe considerarse una señal de alarma y no de buen desempeño?",
+    "opciones": [
+      {
+        "text": "Indica una falta de identificación o encubrimiento de comportamientos de riesgo que anteceden estadísticamente a los accidentes graves o fatales.",
+        "isCorrect": true,
+        "rationale": "La ausencia de reportes esconde los actos y condiciones subestándares en la base de la pirámide de Bird, impidiendo tomar medidas preventivas antes de que ocurra una fatalidad."
+      },
+      {
+        "text": "Demuestra que los trabajadores han alcanzado la inmunidad completa frente a los peligros mecánicos y eléctricos.",
+        "isCorrect": false,
+        "rationale": "Ningún sistema operativo está exento de peligro; la falta de registros refleja una falla en la cultura de reporte y no la inexistencia de riesgos."
+      },
+      {
+        "text": "Refleja que los sistemas automatizados han eliminado totalmente los actos inseguros en la operación subterránea.",
+        "isCorrect": false,
+        "rationale": "Incluso en operaciones altamente automatizadas persisten los comportamientos de riesgo y la necesidad de inspección humana constante."
+      },
+      {
+        "text": "Significa que la gerencia ha cancelado la necesidad de realizar capacitaciones continuas en primeros auxilios.",
+        "isCorrect": false,
+        "rationale": "La capacitación continua es un requisito legal y operativo permanente independientemente de la tasa de accidentabilidad."
+      },
+      {
+        "text": "Garantiza que el plan de respuesta a emergencias no requerirá actualización durante los próximos años.",
+        "isCorrect": false,
+        "rationale": "La falta de reportes distorsiona los planes de emergencia al no retroalimentarlos con información real sobre los incidentes frecuentes."
+      }
+    ],
+    "hint": "Reflexiona sobre lo que oculta la ausencia de reportes en la base de la pirámide de proporcionalidad de accidentes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes instalaciones mineras e industriales requieren la aplicación rigurosa de protocolos de bioseguridad para el control de riesgos infecciosos o agentes contaminantes?",
+    "opciones": [
+      {
+        "text": "Tópicos y centros médicos de la unidad minera.",
+        "isCorrect": true,
+        "rationale": "Son áreas de alta exposición a fluidos corporales, patógenos y atención de pacientes que requieren máxima bioprotección."
+      },
+      {
+        "text": "Comedores y áreas de concesión de alimentos.",
+        "isCorrect": true,
+        "rationale": "El manejo masivo de insumos alimenticios exige bioseguridad estricta para evitar brotes de intoxicación gastrointestinal o contaminación cruzada."
+      },
+      {
+        "text": "Laboratorios químicos y de control de calidad.",
+        "isCorrect": true,
+        "rationale": "Involucran el uso de reactivos, análisis biológicos o exposición a vapores y residuos tóxicos que demandan biocontención."
+      },
+      {
+        "text": "Almacenes de materiales peligrosos (HAZMAT) y zonas de segregación de residuos.",
+        "isCorrect": true,
+        "rationale": "Requieren procedimientos rigurosos para evitar la liberación no intencionada o contaminación con sustancias infecciosas o biopatogénicas."
+      },
+      {
+        "text": "Talleres de mantenimiento mecánico al aire libre sin presencia de agentes biológicos.",
+        "isCorrect": false,
+        "rationale": "Aunque aplican normas de seguridad industrial y EPP mecánico, no representan recintos críticos de riesgo biológico directo."
+      }
+    ],
+    "hint": "Piensa en recintos con manipulación de fluidos corporales, alimentos, residuos o reactivos químicos y biológicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la secuencia metodológica de atención en primeros auxilios identificada con las siglas P.A.S., ¿cuál es el orden correcto de ejecución de las tres fases fundamentales frente a una emergencia?",
+    "opciones": [
+      {
+        "text": "Proteger la escena y a uno mismo, Alertar a los servicios de rescate y Socorrer a la víctima.",
+        "isCorrect": true,
+        "rationale": "El protocolo PAS establece la secuencia lógica inamovible: primero asegurar que no existan peligros (Proteger), dar aviso inmediato a emergencias (Alertar) y finalmente brindar la atención al lesionado (Socorrer)."
+      },
+      {
+        "text": "Socorrer inmediatamente a la víctima, Proteger los bienes materiales y Alertar a la jefatura.",
+        "isCorrect": false,
+        "rationale": "Socorrer sin proteger previamente pone en riesgo la vida del auxiliador, anulando el principio de seguridad."
+      },
+      {
+        "text": "Alertar a las redes sociales, Proteger el equipo mecánico y Socorrer únicamente si hay médicos presentes.",
+        "isCorrect": false,
+        "rationale": "La alerta debe dirigirse a los canales médicos internos y la protección prioriza vidas humanas antes que maquinaria."
+      },
+      {
+        "text": "Proteger las pruebas del accidente, Socorrer al herido y Alertar a la compañía aseguradora.",
+        "isCorrect": false,
+        "rationale": "Proteger se refiere a la seguridad del entorno operacional, no a la preservación documental o legal inmediata."
+      },
+      {
+        "text": "Socorrer a los heridos más graves, Alertar al público general y Proteger el área con cinta amarilla al final.",
+        "isCorrect": false,
+        "rationale": "El acrónimo PAS desordena completamente las prioridades al colocar el auxilio directo antes del aseguramiento del área."
+      }
+    ],
+    "hint": "Asegurar el entorno precede a pedir ayuda, y esto último debe ocurrir antes de la manipulación directa del herido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante una evacuación en un túnel subterráneo con presencia de gases tóxicos y espacio confinado, ¿qué combinación de equipos es imprescindible para la extracción segura de un trabajador imposibilitado de caminar?",
+    "opciones": [
+      {
+        "text": "Detector multigás portátil, equipo de oxígeno portátil y camilla tipo canasto (basket stretcher).",
+        "isCorrect": true,
+        "rationale": "El detector verifica la calidad del aire, el oxígeno permite la supervivencia atmosférica y la camilla canasto posibilita la maniobra de rescate en galerías angostas."
+      },
+      {
+        "text": "Ambu manual, férula espinal de madera rígida y alcohol antiséptico en aerosol.",
+        "isCorrect": false,
+        "rationale": "En galerías estrechas con presencia de gases tóxicos, el ambú manual sin suministro de gas limpio ventilaría aire contaminado hacia el paciente."
+      },
+      {
+        "text": "Extintor de Polvo Químico Seco (PQS), mascarilla quirúrgica simple y arnés de tres puntos.",
+        "isCorrect": false,
+        "rationale": "Las mascarillas quirúrgicas no filtran gases tóxicos como monóxido de carbono o metano en ambientes subterráneos."
+      },
+      {
+        "text": "Termómetro digital, suero fisiológico en bolsa y manta térmica aluminizada únicamente.",
+        "isCorrect": false,
+        "rationale": "Estos insumos son complementarios y no resuelven la deficiencia de oxígeno ni la extracción física en espacios confinados."
+      },
+      {
+        "text": "Botiquín con anestésicos locales, medidor de presión arterial y tijera de punta aguda.",
+        "isCorrect": false,
+        "rationale": "Insumos clínicos menores no sustituyen los equipos de monitoreo atmosférico y soporte respiratorio de rescate."
+      }
+    ],
+    "hint": "Requiere monitoreo atmosférico, aporte de aire respirable y un dispositivo de transporte diseñado para espacios estrechos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un minero sufre el hincado de una varilla de acero oxidada en la pierna durante el enmaderado de una labor. La penetración es de 6 cm, pero el orificio de entrada en la piel es muy pequeño. ¿Cómo se clasifica esta herida y cuál es su principal complicación infecciosa?",
+    "opciones": [
+      {
+        "text": "Herida punzante, caracterizada por un alto riesgo de infección profunda debido a la dificultad para limpiar la cavidad.",
+        "isCorrect": true,
+        "rationale": "Las heridas punzantes tienen un orificio estrecho y profundo que arrastra contaminantes al interior de los tejidos donde la desinfección es difícil, favoreciendo la proliferación bacteriana anaeróbica."
+      },
+      {
+        "text": "Herida cortante, caracterizada por bordes limpios y un sangrado arterial abundante fácil de cauterizar.",
+        "isCorrect": false,
+        "rationale": "Las heridas cortantes son causadas por objetos con filo que generan bordes lineales y limpios, diferente al impacto de una varilla."
+      },
+      {
+        "text": "Herida avulsiva, caracterizada por el desgarro completo con pérdida extensa de masa muscular visible.",
+        "isCorrect": false,
+        "rationale": "La herida avulsiva involucra extirpación o separación violenta de colgajos de piel y tejido, no un trayecto punzante estrecho."
+      },
+      {
+        "text": "Herida abrasiva, caracterizada por la fricción epidérmica superficial que genera un raspón doloroso.",
+        "isCorrect": false,
+        "rationale": "Las abrasiones comprometen únicamente la capa superficial de la epidermis por rozamiento."
+      },
+      {
+        "text": "Herida contusa, caracterizada por la ausencia total de daño en vasos sanguíneos o tejidos blandos.",
+        "isCorrect": false,
+        "rationale": "Las heridas contusas son producto de golpes con objetos romos que generan aplastamiento o hematoma sin penetración profunda limpia."
+      }
+    ],
+    "hint": "Evalúa la relación entre la profundidad del trayecto, el tamaño de la apertura cutánea y la dificultad para higienizar el interior.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al evaluar una herida profunda en el muslo de un operario golpeado por un fragmento de roca, el brigadista observa que la sangre brota a borbotones de manera rítmica con los latidos y presenta un color rojo brillante. ¿De qué tipo de hemorragia se trata?",
+    "opciones": [
+      {
+        "text": "Hemorragia arterial, la cual representa una urgencia vital por el riesgo de desangramiento rápido.",
+        "isCorrect": true,
+        "rationale": "La sangre oxigenada proveniente de las arterias fluye impulsada por la presión cardíaca (a borbotones rítmicos) y muestra un tono rojo vivo brillante."
+      },
+      {
+        "text": "Hemorragia venosa, caracterizada por un flujo continuo y oscuro de baja presión.",
+        "isCorrect": false,
+        "rationale": "La hemorragia venosa brota de forma continua, sin pulsaciones rítmicas, y exhibe una coloración rojo oscura por baja saturación de oxígeno."
+      },
+      {
+        "text": "Hemorragia capilar, caracterizada por una pérdida hemática en sábana de fácil contención.",
+        "isCorrect": false,
+        "rationale": "El sangrado capilar es escaso, en puntillado o en sábana superficial, producto de laceraciones menores."
+      },
+      {
+        "text": "Hemorragia intersticial, caracterizada por la acumulación interna de linfa en la masa muscular.",
+        "isCorrect": false,
+        "rationale": "El líquido intersticial no brota en forma de sangre arterial oxigenada a borbotones."
+      },
+      {
+        "text": "Hemorragia parenquimatosa, caracterizada por la ausencia de pulso o presión medible.",
+        "isCorrect": false,
+        "rationale": "Las hemorragias parenquimatosas ocurren internamente en vísceras sólidas y no se manifiestan directamente como un chorro arterial hacia el exterior."
+      }
+    ],
+    "hint": "La presión del sistema y el nivel de oxigenación determinan la pulsatilidad y el tono rojo vivo de la sangre.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un primer respondiente aplica una gasa estéril sobre una herida sangrante y ejerce presión directa durante 5 minutos. Sin embargo, la gasa se empapa por completo de sangre. ¿Cuál es el procedimiento correcto a seguir?",
+    "opciones": [
+      {
+        "text": "Colocar un nuevo apósito estéril directamente sobre el primero y mantener la presión firme sin retirar el anterior.",
+        "isCorrect": true,
+        "rationale": "Jamás debe retirarse el primer apósito empapado, ya que se rompería el entramado de fibrina y los coágulos iniciales formados en la Herida."
+      },
+      {
+        "text": "Retirar el apósito empapado, limpiar la herida con alcohol puro y colocar un nuevo vendaje apretado.",
+        "isCorrect": false,
+        "rationale": "Retirar la primera gasa destruye los coágulos recién consolidados y reanuda intensamente el sangrado."
+      },
+      {
+        "text": "Lavar la herida con abundante agua helada para comprimir las arterias antes de volver a vendar.",
+        "isCorrect": false,
+        "rationale": "Lavar la herida en pleno proceso hemostático diluye los factores de coagulación e incrementa la hemorragia."
+      },
+      {
+        "text": "Retirar todas las gasas, explorar el interior de la herida con pinzas y suturar de emergencia.",
+        "isCorrect": false,
+        "rationale": "La exploración profunda de heridas sangrantes por personal no entrenado está contraindicada por riesgo de lacerar más vasos."
+      },
+      {
+        "text": "Dejar la herida al descubierto para que el aire ambiente coagule la sangre de forma natural.",
+        "isCorrect": false,
+        "rationale": "Suspender la presión directa facilita la pérdida masiva de volemia e incrementa la contaminación biológica."
+      }
+    ],
+    "hint": "Evita retirar el material inicial para no destruir la malla de fibrina y el coágulo en formación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Bajo qué circunstancias extremas está indicado el uso de un torniquete en el entorno minero y cuál es una precaución crítica en su aplicación?",
+    "opciones": [
+      {
+        "text": "Solo ante hemorragias severas incontrolables en extremidades que amenacen la vida, anotando la hora exacta de colocación.",
+        "isCorrect": true,
+        "rationale": "El torniquete es una medida de último recurso para hemorragias exanguinantes masivas; debe registrarse la hora de aplicación para prevenir la necrosis isquémica prolongada del miembro."
+      },
+      {
+        "text": "De manera rutinaria en cualquier herida superficial de antebrazo para facilitar la curación en el tópico.",
+        "isCorrect": false,
+        "rationale": "Su uso rutinario en heridas menores está totalmente proscrito debido a los daños tisulares y nerviosos irreversibles que puede ocasionar."
+      },
+      {
+        "text": "Únicamente sobre articulaciones como codos o rodillas para frenar fracturas cerradas sin sangrado.",
+        "isCorrect": false,
+        "rationale": "El torniquete nunca debe colocar directamente sobre una articulación, sino a unos centímetros por encima de la herida en segmentos de hueso único."
+      },
+      {
+        "text": "Como primera medida antes de aplicar presión directa en raspones leves ocasionados por caídas.",
+        "isCorrect": false,
+        "rationale": "La presión directa sobre la herida es siempre la primera línea de control antes de considerar un torniquete."
+      },
+      {
+        "text": "Aplicándolo con alambres o cables eléctricos delgados ajustados indefinidamente hasta la cirugía.",
+        "isCorrect": false,
+        "rationale": "Los materiales estrechos como cables cortan la piel y destruyen nervios; se requieren cintas anchas estandarizadas de al menos 4-5 cm."
+      }
+    ],
+    "hint": "Considera su estatus como último recurso ante hemorragias masivas incontrolables y la necesidad de registrar el tiempo de isquemia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al atender a un minero con una fractura expuesta de tibia donde el extremo óseo sobresale por la piel con sangrado moderado, ¿qué acción está ESTRICTAMENTE PROHIBIDA para el primer respondiente?",
+    "opciones": [
+      {
+        "text": "Intentar reintroducir o reacomodar el hueso expuesto dentro de la extremidad.",
+        "isCorrect": true,
+        "rationale": "Tratar de acomodar o empujar los bordes óseos hacia adentro arrastra suciedad al interior del musculo, daña nervios y arterias, y desencadena un shock neurogénico."
+      },
+      {
+        "text": "Cubrir la herida y el hueso expuesto con un apósito estéril sin ejercer presión sobre el fragmento óseo.",
+        "isCorrect": false,
+        "rationale": "Cubrir con material estéril la zona expuesta protege la lesión de la contaminación del entorno minero."
+      },
+      {
+        "text": "Inmovilizar la extremidad manteniendo la posición en la que se encontró la lesión.",
+        "isCorrect": false,
+        "rationale": "Inmovilizar en la posición encontrada previene un mayor desplazamiento de las astillas óseas."
+      },
+      {
+        "text": "Controlar el sangrado periférico mediante apósitos estériles alrededor de la herida.",
+        "isCorrect": false,
+        "rationale": "La hemostasia perilesional mediante apósitos suavemente colocados a los lados es un procedimiento adecuado."
+      },
+      {
+        "text": "Solicitar la evacuación médica inmediata mediante la central de rescate.",
+        "isCorrect": false,
+        "rationale": "Activar la cadena de rescate para el traslado de urgencia es el procedimiento estándar correcto."
+      }
+    ],
+    "hint": "Alterar la posición de los fragmentos óseos fuera del quirófano incrementa masivamente el daño neurovascular y muscular.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para inmovilizar correctamente un segmento óseo fracturado (por ejemplo, el antebrazo o el fémur) mediante tablillas o férulas en el campo, ¿cuál es la regla anatómica fundamental que debe cumplirse?",
+    "opciones": [
+      {
+        "text": "Inmovilizar la articulación inmediatamente superior e inferior al foco de la fractura.",
+        "isCorrect": true,
+        "rationale": "Para anular por completo la movilidad del hueso roto y evitar que los extremos cortantes dañen tejidos, es obligatorio fijar las articulaciones situadas por encima y por debajo del trazo de fractura."
+      },
+      {
+        "text": "Ajustar la férula únicamente sobre el punto exacto de la rotura con la máxima fuerza posible.",
+        "isCorrect": false,
+        "rationale": "Comprimir directamente el sitio de la rotura causa dolor severo y no evita la rotación si las articulaciones adyacentes quedan libres."
+      },
+      {
+        "text": "Traccionar la extremidad vigorosamente hasta que el paciente deje de sentir dolor local.",
+        "isCorrect": false,
+        "rationale": "La tracción empírica violenta está contraindicada en primeros auxilios por el elevado riesgo de laceración vascular."
+      },
+      {
+        "text": "Permitir la libre movilidad de la articulación superior para mantener la circulación colateral.",
+        "isCorrect": false,
+        "rationale": "Si la articulación superior se mueve, los músculos insertados en el hueso fracturado se contraerán desalineando la fractura."
+      },
+      {
+        "text": "Colocar la férula exclusivamente en el lado opuesto de la herida cutánea sin sujetar las articulaciones.",
+        "isCorrect": false,
+        "rationale": "Fijar una férula sin abarcar las articulaciones proximal y distal no logra estabilizar el miembro traumatizado."
+      }
+    ],
+    "hint": "Asegurar que el segmento no rote exige fijar las estructuras móviles adyacentes al hueso lesionado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la práctica deportiva en el campamento minero, dos trabajadores sufren traumatismos articulares. El primero presenta estiramiento ligamentoso con inflamación leve en el tobillo. El segundo presenta desplazamiento completo de las superficies articulares del hombro fuera de su cavidad. ¿Cómo se clasifican ambas lesiones?",
+    "opciones": [
+      {
+        "text": "El primer trabajador presenta un esguince y el segundo una luxación.",
+        "isCorrect": true,
+        "rationale": "El esguince es la distensión o rotura parcial de ligamentos sin pérdida de contacto óseo, mientras que la luxación es la separación total y permanente de las superficies articulares."
+      },
+      {
+        "text": "El primer trabajador presenta una fractura conminuta y el segundo un desgarro muscular.",
+        "isCorrect": false,
+        "rationale": "La fractura conminuta implica múltiples fragmentos óseos, no una distensión ligamentosa benigna de tobillo."
+      },
+      {
+        "text": "El primer trabajador presenta una luxación completa y el segundo una fisura ósea por estrés.",
+        "isCorrect": false,
+        "rationale": "El estiramiento ligamentoso en el tobillo es la definición de esguince, no de una luxación completa."
+      },
+      {
+        "text": "Ambos trabajadores presentan esguinces de grado III con rotura arterial masiva.",
+        "isCorrect": false,
+        "rationale": "La pérdida del patrón anatómico del hombro (desplazamiento óseo completo) es una luxación y no un esguince."
+      },
+      {
+        "text": "El primer trabajador presenta una fractura expuesta y el segundo un hematoma superficial.",
+        "isCorrect": false,
+        "rationale": "No hay pérdida de continuidad cutánea ni fragmentos salientes en el primer operario para calificarlo como fractura expuesta."
+      }
+    ],
+    "hint": "La diferencia radica en si la pérdida de contacto entre los extremos óseos de la articulación es parcial/mantenida o total/permanente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un mecánico sufre la luxación traumática de su codo al zafarse una llave hidráulica. La articulación luce deformada y el dolor es extremadamente intenso. ¿Por qué el personal no médico DEBE ABSTENERSE de intentar 'reducir' o 'encajar' la articulación?",
+    "opciones": [
+      {
+        "text": "Porque se corre el riesgo de atrapar, pellizcar o desgarrar vasos sanguíneos y nervios principales, agravando la lesión.",
+        "isCorrect": true,
+        "rationale": "La manipulación sin visión radiológica ni entrenamiento ortopédico puede comprimir el paquete neurovascular, pudiendo ocasionar parálisis o isquemia permanente del miembro."
+      },
+      {
+        "text": "Porque la reducción manual solo está permitida si se utiliza una palanca de madera o metal en el campo.",
+        "isCorrect": false,
+        "rationale": "Uso de elementos rígidos como palancas destruye la articulación y está absolutamente contraindicado."
+      },
+      {
+        "text": "Porque las luxaciones siempre se curan de forma espontánea sin necesidad de inmovilización médica.",
+        "isCorrect": false,
+        "rationale": "Las luxaciones requieren reducción bajo anestesia/sedación médica e inmovilización posterior controlada."
+      },
+      {
+        "text": "Porque intentar encajar la articulación convierte automáticamente la luxación en una herida avulsiva sangrante.",
+        "isCorrect": false,
+        "rationale": "El peligro principal es la lesión neurovascular interna, no necesariamente la apertura cutánea avulsiva."
+      },
+      {
+        "text": "Porque el dolor desaparecerá por completo en 5 minutos si el paciente continúa realizando esfuerzos.",
+        "isCorrect": false,
+        "rationale": "El dolor de una luxación es sostenido y se agrava con cualquier intento de movimiento voluntario."
+      }
+    ],
+    "hint": "La manipulación empírica de una articulación desplazada puede comprometer de forma irreversible arterias y nervios principales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la prevención de lesiones osteomusculares y la higiene postural en operaciones mineras, ¿cuáles son los límites máximos permitidos para el levantamiento manual de cargas por trabajador, para varones y mujeres respectivamente, en condiciones normales?",
+    "opciones": [
+      {
+        "text": "25 kg para varones y 15 kg para mujeres.",
+        "isCorrect": true,
+        "rationale": "La norma ergonómica estándar establece que la carga máxima manual por persona sin ayuda mecánica es de 25 kg en hombres y 15 kg en mujeres para prevenir hernias y lumbalgias."
+      },
+      {
+        "text": "50 kg para varones y 30 kg para mujeres.",
+        "isCorrect": false,
+        "rationale": "Levantar 50 kg de forma individual excede masivamente los límites biomecánicos seguros de la columna lumbar."
+      },
+      {
+        "text": "15 kg para varones y 25 kg para mujeres.",
+        "isCorrect": false,
+        "rationale": "Los valores están invertidos respecto al marco normativo ergonómico de seguridad física."
+      },
+      {
+        "text": "40 kg para varones y 20 kg para mujeres.",
+        "isCorrect": false,
+        "rationale": "40 kg supera la capacidad de carga segura unipersonal sin apoyo de equipos de izaje o ayuda de un tercero."
+      },
+      {
+        "text": "10 kg para varones y 5 kg para mujeres.",
+        "isCorrect": false,
+        "rationale": "Estos valores corresponden a restricciones médicas especiales u operativas reducidas, no al estándar de salud ocupacional general."
+      }
+    ],
+    "hint": "Recuerda los estándares normativos de ergonomía básica para la manipulación manual de objetos individuales (25 kg / 15 kg).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué conceptos clave de la gestión de la prevención de riesgos se desprenden de la interpretación de la Pirámide de proporcionalidad de accidentes de Frank Bird / Heinrich presentada en el curso?",
+    "opciones": [
+      {
+        "text": "Por cada accidente fatal ocurren cientos de miles de comportamientos de riesgo (actos y condiciones subestándares).",
+        "isCorrect": true,
+        "rationale": "La base amplia de la pirámide demuestra la enorme cantidad de actos inseguros y desviaciones que sostienen estadísticamente los eventos graves."
+      },
+      {
+        "text": "La gravedad final de un evento suele depender de la presencia de barreras de control y no de la suerte.",
+        "isCorrect": true,
+        "rationale": "Si las barreras de gestión fallan, una condición subestándar se desplaza desde la base de la pirámide hasta la cúspide fatal."
+      },
+      {
+        "text": "Intervenir sobre las desviaciones y comportamientos inseguros en la base evita la ocurrencia de fatalidades.",
+        "isCorrect": true,
+        "rationale": "Eliminar las condiciones subestándares y corregir los hábitos de riesgo en la base impide la acumulación de incidentes que derivan en fatalidades."
+      },
+      {
+        "text": "Los incidentes sin lesión (cuasi-accidentes) son oportunidades gratuitas de aprendizaje para el sistema de gestión.",
+        "isCorrect": true,
+        "rationale": "Reportar e investigar los cuasi-accidentes permite corregir fallas del sistema sin haber sufrido pérdidas humanas ni materiales."
+      },
+      {
+        "text": "Las fatalidades ocurren de manera totalmente impredecible sin que existan actos ni condiciones previas.",
+        "isCorrect": false,
+        "rationale": "La pirámide demuestra lo contrario: toda fatalidad es precedida por múltiples eventos menores y conductas de riesgo no gestionadas."
+      }
+    ],
+    "hint": "Analiza la relación numérica entre los comportamientos de riesgo en la base y las fatalidades en el vértice superior.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-62",
+    "diplomado": "PRIMEROS AUXILIOS EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Según lo expuesto en las sesiones del curso, ¿cuáles de las siguientes situaciones representan emergencias o riesgos de alto impacto característicos del entorno minero?",
+    "opciones": [
+      {
+        "text": "Caída de rocas y colapso de estratos en labores subterráneas.",
+        "isCorrect": true,
+        "rationale": "La inestabilidad geomecánica representa uno de los mayores peligros de traumatismos severos y atrapamientos en minería de socavón."
+      },
+      {
+        "text": "Intoxicación por gases contaminantes como monóxido de carbono ($CO$), metano ($CH_4$) o sulfuro de hidrógeno ($H_2S$).",
+        "isCorrect": true,
+        "rationale": "La acumulación de gases asfixiantes o tóxicos en galerías sin ventilación adecuada genera emergencias letales de forma rápida."
+      },
+      {
+        "text": "Quemaduras químicas por contacto con reactivos corrosivos o soluciones de lixiviación.",
+        "isCorrect": true,
+        "rationale": "El manejo de reactivos e insumos en plantas de beneficio conlleva el riesgo constante de quemaduras tisulares severas."
+      },
+      {
+        "text": "Contacto accidental con líneas eléctricas energizadas de baja y alta tensión.",
+        "isCorrect": true,
+        "rationale": "La presencia de redes eléctricas de potencia para alimentar jumbos, bombas y ventiladores genera riesgo constante de electrocución."
+      },
+      {
+        "text": "Intoxicación por consumo de agua potable tratada en las oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "El agua potable fiscalizada de la unidad no constituye un riesgo operativo crítico ni una emergencia de alto impacto del proceso extractivo."
+      }
+    ],
+    "hint": "Identifica peligros vinculados a geomecánica, productos químicos de lixiviación, atmósferas y energía no controlada.",
+    "activo": true
+  }
+]

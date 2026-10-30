@@ -1,9 +1,10 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { createAdminClient } from '@/lib/supabase/admin';
-import { calculateReleasedCredits } from '@/lib/utils/credits';
+import { calculateEduminCredits, calculateReleasedCredits } from '@/lib/utils/credits';
 import { parseDiplomadosFromProfile, parseCursosFromProfile } from '@/lib/utils/profileParser';
 import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
+import { obtenerTallerParaDiplomado } from '@/lib/utils/tallerAsignado';
 
 function parseCreditoRow(pag: any) {
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CARGO_EXTRA|')) {
@@ -112,6 +113,39 @@ export async function GET() {
         const diplomados_json = parseDiplomadosFromProfile(pByDni);
         const cursos_json = parseCursosFromProfile(pByDni);
 
+        const dipTitulosDemo: string[] = [];
+        if (pByDni.diplomado_1) dipTitulosDemo.push(pByDni.diplomado_1);
+        if (pByDni.diplomado_2) dipTitulosDemo.push(pByDni.diplomado_2);
+        diplomados_json.forEach((d: any) => {
+          const t = d.titulo || d.slug;
+          if (t && !dipTitulosDemo.includes(t)) dipTitulosDemo.push(t);
+        });
+        dipTitulosDemo.forEach((dt) => {
+          const tr = obtenerTallerParaDiplomado(dt);
+          if (!cursos_json.some(c => c.id === tr.id || c.codigo === tr.codigo)) {
+            cursos_json.push({
+              id: tr.id,
+              codigo: tr.codigo,
+              titulo: tr.titulo,
+              nota: 0,
+              completado: false,
+              avance: 0,
+              categoria: tr.categoria,
+              duracion: tr.duracion,
+              horas: tr.horas
+            });
+          }
+        });
+
+        const eduminCredits = calculateEduminCredits({
+          paqueteAdquirido: pByDni.paquete_adquirido || 'COMPLETO',
+          cuotasPagadas: pByDni.cuotas_pagadas || 1,
+          cuotasTotales: pByDni.cuotas_totales || 1,
+          tipoPago: pByDni.tipo_pago || 'CONTADO',
+          diplomadosConsumidos: pByDni.cupos_diplomados || Math.max(1, diplomados_json.length),
+          cursosConsumidos: pByDni.cupos_cursos || cursos_json.length
+        });
+
         return NextResponse.json({
           user: { id: pByDni.id, email: pByDni.email },
           profile: {
@@ -123,8 +157,9 @@ export async function GET() {
           rawPagos: rawPagos || [],
           matriculas: [],
           solicitudes: [],
-          releasedCredits: 10,
-          availableCredits: 8
+          releasedCredits: eduminCredits.diplomados.liberados,
+          availableCredits: eduminCredits.diplomados.disponibles,
+          eduminCredits
         });
       }
 
@@ -192,13 +227,6 @@ export async function GET() {
       profile.bloqueado = false;
     }
 
-    // Cálculo de créditos liberados y disponibles
-    const releasedCredits = esAdmin ? 10 : calculateReleasedCredits(
-      profile.paquete_adquirido || 'FULL',
-      profile.cuotas_pagadas || 1
-    );
-    const availableCredits = esAdmin ? 10 : Math.max(0, releasedCredits - (profile.cupos_diplomados || 0));
-
     let diplomados_json = parseDiplomadosFromProfile(profile);
     if (esAdmin && diplomados_json.length === 0) {
       const defaultDip = getDiplomadoByTitleOrSlug(profile.diplomado_1 || 'derecho-minero');
@@ -218,6 +246,50 @@ export async function GET() {
     }
     const cursos_json = parseCursosFromProfile(profile);
 
+    const dipTitulosProfile: string[] = [];
+    if (profile.diplomado_1) dipTitulosProfile.push(profile.diplomado_1);
+    if (profile.diplomado_2) dipTitulosProfile.push(profile.diplomado_2);
+    diplomados_json.forEach((d: any) => {
+      const t = d.titulo || d.slug;
+      if (t && !dipTitulosProfile.includes(t)) dipTitulosProfile.push(t);
+    });
+    dipTitulosProfile.forEach((dt) => {
+      const tr = obtenerTallerParaDiplomado(dt);
+      if (!cursos_json.some(c => c.id === tr.id || c.codigo === tr.codigo)) {
+        cursos_json.push({
+          id: tr.id,
+          codigo: tr.codigo,
+          titulo: tr.titulo,
+          nota: 0,
+          completado: false,
+          avance: 0,
+          categoria: tr.categoria,
+          duracion: tr.duracion,
+          horas: tr.horas
+        });
+      }
+    });
+
+    // Cálculo centralizado de Créditos EDUMIN
+    const eduminCredits = esAdmin 
+      ? {
+          paquete: 'ILIMITADO' as const,
+          esContado: true,
+          cuotasPagadas: 5,
+          cuotasTotales: 5,
+          diplomados: { contratados: 10, liberados: 10, consumidos: 0, disponibles: 10 },
+          cursos: { contratados: 15, liberados: 15, consumidos: 0, disponibles: 15 },
+          total: { contratados: 25, liberados: 25, consumidos: 0, disponibles: 25 }
+        }
+      : calculateEduminCredits({
+          paqueteAdquirido: profile.paquete_adquirido || 'COMPLETO',
+          cuotasPagadas: profile.cuotas_pagadas || 1,
+          cuotasTotales: profile.cuotas_totales || (profile.paquete_adquirido === 'ILIMITADO' ? 5 : 3),
+          tipoPago: profile.tipo_pago || (profile.cuotas_pagadas >= 3 ? 'CONTADO' : 'CUOTAS'),
+          diplomadosConsumidos: profile.cupos_diplomados || Math.max(1, diplomados_json.length),
+          cursosConsumidos: profile.cupos_cursos || cursos_json.length
+        });
+
     return NextResponse.json({
       user,
       profile: {
@@ -229,8 +301,9 @@ export async function GET() {
       rawPagos,
       matriculas: matriculasData || [],
       solicitudes: [],
-      releasedCredits,
-      availableCredits
+      releasedCredits: eduminCredits.diplomados.liberados,
+      availableCredits: eduminCredits.diplomados.disponibles,
+      eduminCredits
     });
   } catch (err: any) {
     console.error('Error en /api/dashboard/me:', err);

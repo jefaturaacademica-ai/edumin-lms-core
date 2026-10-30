@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el concepto central que define a la Industria 4.0 en relación con los procesos de producción y gestión de activos?",
+    "opciones": [
+      {
+        "text": "La generación de valor agregado a través de la interconexión, el control a distancia y la analítica de datos en tiempo real.",
+        "isCorrect": true,
+        "rationale": "La Industria 4.0 se fundamenta en integrar sensores, redes de comunicación y analítica de datos para monitorear y optimizar procesos de forma remota e inteligente."
+      },
+      {
+        "text": "La sustitución completa de máquinas impulsadas por energía eléctrica por motores térmicos de combustión interna.",
+        "isCorrect": false,
+        "rationale": "Esta transformación pertenece a etapas anteriores de la revolución industrial y no refleja la digitalización ni la conectividad moderna."
+      },
+      {
+        "text": "El abandono de la seguridad informática para priorizar únicamente la velocidad en la transmisión de datos masivos.",
+        "isCorrect": false,
+        "rationale": "La ciberseguridad es un pilar fundamental en la Industria 4.0 para proteger la información operativa crítica ante posibles vulnerabilidades."
+      },
+      {
+        "text": "El uso exclusivo de esquemas de mantenimiento correctivo una vez que falla un equipo para reducir costos de sensores.",
+        "isCorrect": false,
+        "rationale": "El enfoque de la Industria 4.0 busca precisamente evolucionar hacia estrategias predictivas y proactivas para evitar paradas no programadas."
+      },
+      {
+        "text": "La eliminación total de dispositivos físicos en las plantas industriales para reemplazarlos por entornos hipotéticos.",
+        "isCorrect": false,
+        "rationale": "Los componentes físicos y sensores siguen siendo esenciales; la digitalización conecta el mundo físico con el entorno digital a través del IoT."
+      }
+    ],
+    "hint": "Considera la interacción entre datos digitales, sensores y capacidad de gestión remota.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones constituyen componentes y características fundamentales del Internet de las Cosas (IoT)?",
+    "opciones": [
+      {
+        "text": "Conectividad continua mediante redes inalámbricas o cables de comunicación de datos.",
+        "isCorrect": true,
+        "rationale": "La infraestructura de red permite el flujo permanente de datos desde los dispositivos distribuidos hacia los servidores centrales o la nube."
+      },
+      {
+        "text": "Sensores que captan variables físicas del entorno y las transforman en señales digitales o eléctricas.",
+        "isCorrect": true,
+        "rationale": "Los sensores actúan como la interfaz primaria para medir parámetros operativos como temperatura, presión o vibración."
+      },
+      {
+        "text": "Microcontroladores o dispositivos integrados que procesan e intercambian información.",
+        "isCorrect": true,
+        "rationale": "Estos componentes embebidos otorgan capacidad local de cómputo y ejecutan instrucciones programadas para la captación y envío de datos."
+      },
+      {
+        "text": "Dependencia exclusiva de inspecciones manuales directas sin ningún canal de comunicación digital.",
+        "isCorrect": false,
+        "rationale": "El paradigma del IoT busca automatizar la captación de datos reduciendo la necesidad de mediciones manuales presenciales."
+      },
+      {
+        "text": "Almacenamiento único en memorias físicas locales sin posibilidad de conexión externa.",
+        "isCorrect": false,
+        "rationale": "La esencia del IoT radica en la interconexión y capacidad de compartir información a través de redes locales o en la nube."
+      }
+    ],
+    "hint": "Identifica los elementos que permiten capturar, procesar y transmitir variables físicas del campo a la red.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el mantenimiento predictivo dentro de la gestión moderna de activos?",
+    "opciones": [
+      {
+        "text": "En el seguimiento continuo mediante sensores y algoritmos para anticipar fallas antes de que afecten la operación.",
+        "isCorrect": true,
+        "rationale": "Esta estrategia se apoya en el análisis de tendencias y patrones de datos en tiempo real para determinar el momento oportuno de intervención."
+      },
+      {
+        "text": "En reparar la maquinaria únicamente cuando esta ha sufrido una rotura o detención definitiva.",
+        "isCorrect": false,
+        "rationale": "Este enfoque corresponde al mantenimiento correctivo puro, el cual suele generar mayores costos y paradas imprevistas."
+      },
+      {
+        "text": "En seguir estrictamente intervalos de tiempo fijos dictados por el manual sin evaluar el estado real del equipo.",
+        "isCorrect": false,
+        "rationale": "Seguir intervalos fijos sin evaluar condiciones reales es la definición del mantenimiento preventivo tradicional o sistemático."
+      },
+      {
+        "text": "En realizar limpiezas superficiales de forma diaria basándose en la apreciación visual subjetiva del operador.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones básicas son parte del mantenimiento operacional básico, pero no constituyen un diagnóstico predictivo avanzado."
+      },
+      {
+        "text": "En reemplazar piezas al azar de acuerdo con la disponibilidad de repuestos en el almacén.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento predictivo requiere fundamento analítico y datos precisos, evitando decisiones arbitrarias sobre las intervenciones."
+      }
+    ],
+    "hint": "Piensa en el uso de datos en tiempo real para determinar anomalías antes de que ocurra una avería.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el ámbito de la gestión operativa, ¿cuál es la diferencia fundamental entre eficacia y eficiencia?",
+    "opciones": [
+      {
+        "text": "La eficacia busca alcanzar los objetivos planificados, mientras que la eficiencia optimiza el uso de recursos para maximizar resultados.",
+        "isCorrect": true,
+        "rationale": "Eficacia se enfoca en cumplir la meta establecida, mientras que la eficiencia añade la dimensión del uso óptimo de tiempo, insumos y costos."
+      },
+      {
+        "text": "La eficacia minimiza el uso de insumos, mientras que la eficiencia ignora el resultado final alcanzado.",
+        "isCorrect": false,
+        "rationale": "Es la eficiencia la que busca la optimización de insumos, manteniendo siempre el cumplimiento del objetivo."
+      },
+      {
+        "text": "La eficacia se aplica únicamente en sistemas cibernéticos y la eficiencia en trabajos totalmente manuales.",
+        "isCorrect": false,
+        "rationale": "Ambos son principios de gestión operacional aplicables a cualquier tipo de proceso o tecnología."
+      },
+      {
+        "text": "La eficacia prescinde de la planificación y la eficiencia requiere modelos matemáticos de simulación.",
+        "isCorrect": false,
+        "rationale": "La eficacia presupone la existencia de un plan u objetivo previo con el cual comparar los logros obtenidos."
+      },
+      {
+        "text": "La eficacia aborda el mantenimiento correctivo y la eficiencia se limita al mantenimiento rutinario.",
+        "isCorrect": false,
+        "rationale": "Estos conceptos evalúan el desempeño general de la gestión y no están restringidos a un tipo particular de mantenimiento."
+      }
+    ],
+    "hint": "Relaciona un término con lograr la meta y el otro con el aprovechamiento de los recursos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal de la metodología de Mantenimiento Centrado en la Confiabilidad (RCM)?",
+    "opciones": [
+      {
+        "text": "Priorizar la asignación de recursos identificando y preservando las funciones críticas de los activos para la operación.",
+        "isCorrect": true,
+        "rationale": "El RCM evalúa los modos de falla y sus consecuencias para focalizar los esfuerzos en los componentes de mayor impacto en la confiabilidad y seguridad."
+      },
+      {
+        "text": "Garantizar que todas las piezas de un equipo reciban exactamente el mismo nivel de mantenimiento preventivo.",
+        "isCorrect": false,
+        "rationale": "El RCM diferencia la criticidad de los componentes, evitando tratar todas las partes con la misma intensidad de recursos."
+      },
+      {
+        "text": "Eliminar por completo el uso de componentes electrónicos en favor de mecanismos puramente hidráulicos.",
+        "isCorrect": false,
+        "rationale": "Esta metodología se centra en la estrategia de mantenimiento y es independiente de la tecnología física del activo."
+      },
+      {
+        "text": "Sustituir los análisis técnicos por decisiones tomadas exclusivamente en función del costo del repuesto.",
+        "isCorrect": false,
+        "rationale": "El RCM analiza sistemáticamente las consecuencias funcionales, de seguridad y ambientales, no solo el precio de las partes."
+      },
+      {
+        "text": "Descartar los diagnósticos por sensores para basarse únicamente en la experiencia histórica del personal más antiguo.",
+        "isCorrect": false,
+        "rationale": "El RCM integra datos cualitativos y cuantitativos, fomentando el uso de técnicas modernas de monitoreo en activos críticos."
+      }
+    ],
+    "hint": "Reflexiona sobre la evaluación de componentes en función de su impacto y criticidad para la planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué beneficios aporta el monitoreo de variables en tiempo real en comparación con los esquemas de inspección periódica tradicional?",
+    "opciones": [
+      {
+        "text": "Permite detectar desviaciones operativas de forma inmediata ante cualquier anomalía.",
+        "isCorrect": true,
+        "rationale": "Al recibir datos de forma ininterrumpida, el sistema identifica al instante variaciones fuera de los parámetros normales."
+      },
+      {
+        "text": "Facilita el cálculo preciso de tendencias para programar intervenciones antes de la falla.",
+        "isCorrect": true,
+        "rationale": "El flujo continuo de información alimenta modelos predictivos que estiman la vida útil restante con mayor exactitud."
+      },
+      {
+        "text": "Elimina totalmente la necesidad de contar con especialistas técnicos en la planta.",
+        "isCorrect": false,
+        "rationale": "El monitoreo en tiempo real apoya la toma de decisiones, pero sigue requiriendo personal calificado para interpretar e intervenir."
+      },
+      {
+        "text": "Garantiza que las piezas mecánicas no sufran desgaste físico a lo largo de su operación.",
+        "isCorrect": false,
+        "rationale": "El desgaste mecánico es inevitable con el uso; el monitoreo ayuda a gestionarlo, pero no evita las leyes físicas del roce o la fatiga."
+      },
+      {
+        "text": "Permite operar maquinaria pesada ignorando los límites máximos recomendados por ingeniería.",
+        "isCorrect": false,
+        "rationale": "El monitoreo busca precisamente mantener el equipo dentro de los rangos de operación seguros e ideales."
+      }
+    ],
+    "hint": "Identifica las ventajas operativas inmediatas y de planificación que ofrece la captura continua de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple un sensor inercial como el acelerómetro en el monitoreo de condición de maquinaria?",
+    "opciones": [
+      {
+        "text": "Capturar variaciones en la aceleración para analizar patrones de vibración en componentes rotativos.",
+        "isCorrect": true,
+        "rationale": "Los acelerómetros transforman el movimiento cinético en señales eléctricas, permitiendo diagnosticar desalineaciones, desbalances o daños en rodamientos."
+      },
+      {
+        "text": "Medir la luminosidad ambiental en la cabina del operador para ajustar la pantalla de control.",
+        "isCorrect": false,
+        "rationale": "La medición de iluminación corresponde a sensores ópticos o celdas fotoeléctricas, no a sensores inerciales."
+      },
+      {
+        "text": "Evaluar la composición química del lubricante para determinar la acidez del fluido.",
+        "isCorrect": false,
+        "rationale": "El análisis químico del aceite se realiza mediante técnicas tribológicas o espectrométricas específicas."
+      },
+      {
+        "text": "Registrar el voltaje de entrada en los tableros de alta tensión para evitar cortocircuitos.",
+        "isCorrect": false,
+        "rationale": "Los parámetros eléctricos se miden con transformadores de potencial o sensores de corriente específicos."
+      },
+      {
+        "text": "Detectar la presencia de gases tóxicos mediante la absorción de luz infrarroja.",
+        "isCorrect": false,
+        "rationale": "La detección de gases utiliza principios de espectroscopía óptica o sensores electroquímicos."
+      }
+    ],
+    "hint": "Asocia la aceleración con el movimiento cinético no deseado que sufren las partes mecánicas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica principal del protocolo MQTT en la comunicación de dispositivos IoT?",
+    "opciones": [
+      {
+        "text": "Es un protocolo ligero basado en publicación y suscripción optimizado para minimizar el ancho de banda.",
+        "isCorrect": true,
+        "rationale": "MQTT resulta ideal para entornos industriales con conectividad limitada debido a su bajo consumo de recursos y estructura eficiente de mensajería."
+      },
+      {
+        "text": "Es una norma física de cableado que transmite electricidad de alta tensión a motores síncronos.",
+        "isCorrect": false,
+        "rationale": "MQTT es un protocolo de capa de aplicación de software, no un cable o medio físico de transmisión de energía."
+      },
+      {
+        "text": "Requiere enlaces de fibra óptica directa sin posibilidad de transmisión inalámbrica.",
+        "isCorrect": false,
+        "rationale": "Una de las fortalezas de MQTT es su flexibilidad para operar sobre redes inalámbricas y de ancho de banda restringido."
+      },
+      {
+        "text": "Es un software para el diseño e impresión 3D de repuestos mecánicos complejos.",
+        "isCorrect": false,
+        "rationale": "MQTT gestiona la transmisión de datos de mensajes, no el modelado ni la fabricación digital."
+      },
+      {
+        "text": "Es una base de datos relacional utilizada únicamente para calcular impuestos de producción.",
+        "isCorrect": false,
+        "rationale": "No es un motor de almacenamiento de datos relacionales, sino un mecanismo de transporte de mensajes en tiempo real."
+      }
+    ],
+    "hint": "Piensa en el modelo de transporte de mensajes que ahorra datos y recursos en redes limitadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿En qué aplicaciones resulta clave el uso de sensores térmicos como termistores o termopares en plantas industriales y mineras?",
+    "opciones": [
+      {
+        "text": "Monitorear el aumento de temperatura en rodamientos y ejes de camiones de acarreo o cintas transportadoras.",
+        "isCorrect": true,
+        "rationale": "El incremento térmico en componentes mecánicos es un indicador claro de fricción inadecuada o falta de lubricación."
+      },
+      {
+        "text": "Supervisar la temperatura dentro de hornos de fundición o tratamiento térmico de minerales.",
+        "isCorrect": true,
+        "rationale": "El control térmico en procesos metalúrgicos asegura la calidad del producto final y previene fallas estructurales por sobrecalentamiento."
+      },
+      {
+        "text": "Medir la distancia exacta de frenado entre vehículos autónomos en la superficie.",
+        "isCorrect": false,
+        "rationale": "La medición de distancias y prevención de colisiones se ejecuta con sensores de proximidad, radar o LiDAR."
+      },
+      {
+        "text": "Contar automáticamente el número de empaques que pasan por una línea de distribución rápida.",
+        "isCorrect": false,
+        "rationale": "El conteo de piezas se efectúa mediante sensores ópticos, fotoeléctricos o de visión artificial."
+      },
+      {
+        "text": "Determinar el nivel de ruido ambiental producido por las sirenas de advertencia.",
+        "isCorrect": false,
+        "rationale": "La presión sonora se cuantifica mediante micrófonos y sensores acústicos específicos."
+      }
+    ],
+    "hint": "Busca escenarios donde el exceso de calor directo indique una falla mecánica o una variable crítica de proceso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la gestión predictiva de activos, ¿qué se entiende por Big Data?",
+    "opciones": [
+      {
+        "text": "El procesamiento y análisis de volúmenes masivos de datos que superan las capacidades de las herramientas informáticas tradicionales.",
+        "isCorrect": true,
+        "rationale": "El Big Data integra velocidad, variedad y volumen de datos de múltiples sensores para identificar patrones de fallas complejos."
+      },
+      {
+        "text": "El almacenamiento exclusivo de documentos impresos en archivos físicos de gran tamaño.",
+        "isCorrect": false,
+        "rationale": "El Big Data es un concepto puramente digital enfocado en estructuras de datos informáticas."
+      },
+      {
+        "text": "La instalación de pantallas de visualización de gran formato en las salas de control.",
+        "isCorrect": false,
+        "rationale": "El tamaño físico del hardware de visualización no define la analítica de grandes datos."
+      },
+      {
+        "text": "El reemplazo de motores eléctricos por turbinas de vapor en operaciones de mina.",
+        "isCorrect": false,
+        "rationale": "Big Data es una tecnología de la información y comunicación, no una categoría de maquinaria pesada."
+      },
+      {
+        "text": "La sustitución de redes de comunicación digital por registros de voz en llamadas telefónicas.",
+        "isCorrect": false,
+        "rationale": "El Big Data requiere datos estructurados o no estructurados digitalizados para su procesamiento mediante algoritmos."
+      }
+    ],
+    "hint": "Concéntrate en la magnitud, diversidad y velocidad de la información digital capturada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de la analítica predictiva dentro del mantenimiento 4.0?",
+    "opciones": [
+      {
+        "text": "Utilizar modelos estadísticos y de aprendizaje automático para estimar la probabilidad de fallas futuras basándose en datos históricos y actuales.",
+        "isCorrect": true,
+        "rationale": "Busca proyectar escenarios futuros para intervenir de manera anticipada y optimizar la vida útil del activo."
+      },
+      {
+        "text": "Generar únicamente reportes estáticos sobre lo ocurrido durante el mes anterior sin proyectar tendencias.",
+        "isCorrect": false,
+        "rationale": "Esta descripción corresponde a la analítica descriptiva, la cual solo mira eventos pasados."
+      },
+      {
+        "text": "Calcular la depreciación contable e impuestos de los equipos de la empresa.",
+        "isCorrect": false,
+        "rationale": "Los cálculos financieros de depreciación son tareas contables ajenas al diagnóstico predictivo del estado físico del equipo."
+      },
+      {
+        "text": "Sustituir los sensores de campo por apreciaciones subjetivas de los supervisores.",
+        "isCorrect": false,
+        "rationale": "La analítica predictiva requiere la precisión de los datos objetivos capturados por sensores en la planta."
+      },
+      {
+        "text": "Describir la ubicación geográfica del personal administrativo fuera de las horas laborales.",
+        "isCorrect": false,
+        "rationale": "El objeto de la analítica predictiva en mantenimiento son los activos físicos y sus variables operativas."
+      }
+    ],
+    "hint": "Piensa en el uso de datos del presente y pasado para proyectar lo que sucederá adelante en el tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos forman parte de la arquitectura básica de un sistema IoT industrial?",
+    "opciones": [
+      {
+        "text": "Sensores y actuadores instalados directamente en los activos de la planta.",
+        "isCorrect": true,
+        "rationale": "Constituyen la capa física de adquisición de datos y ejecución de acciones en el entorno operativo."
+      },
+      {
+        "text": "Redes y protocolos de comunicación para la transmisión segura de datos.",
+        "isCorrect": true,
+        "rationale": "Permiten el enlace entre el equipamiento de campo y las plataformas centrales de cómputo."
+      },
+      {
+        "text": "Servidores o plataformas en la nube para el almacenamiento y análisis de información.",
+        "isCorrect": true,
+        "rationale": "Proveen la capacidad de procesamiento masivo y ejecución de algoritmos avanzados de diagnóstico."
+      },
+      {
+        "text": "Registros manuales en carpetas físicas completados al final de cada semana laboral.",
+        "isCorrect": false,
+        "rationale": "El flujo de un sistema IoT es digital y automatizado, evitando los cuellos de botella de los registros físicos manuales."
+      },
+      {
+        "text": "Motores hidráulicos antiguos desprovistos de cualquier tipo de instrumento eléctrico.",
+        "isCorrect": false,
+        "rationale": "Para formar parte de una red IoT, los equipos deben estar instrumentados con sensores o adaptadores de captura de datos."
+      }
+    ],
+    "hint": "Considera la ruta completa que sigue un dato desde el equipo físico hasta el sistema de análisis central.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo apoya el Diagrama de Pareto (regla 80/20) en la toma de decisiones dentro del mantenimiento?",
+    "opciones": [
+      {
+        "text": "Permite priorizar el 20% de las causas raíz que generan aproximadamente el 80% de las fallas o pérdidas operativas.",
+        "isCorrect": true,
+        "rationale": "El principio de Pareto ayuda a enfocar los recursos e intervenciones en los problemas que tienen el mayor impacto en la disponibilidad."
+      },
+      {
+        "text": "Establece la secuencia detallada de pasos que debe seguir un técnico para ensamblar un rodamiento.",
+        "isCorrect": false,
+        "rationale": "Las secuencias de ensamblaje son instructivos de trabajo o procedimientos operativos estándar, no diagramas de Pareto."
+      },
+      {
+        "text": "Mide de forma continua la viscosidad del aceite sintético mediante pulsos eléctricos.",
+        "isCorrect": false,
+        "rationale": "La medición de viscosidad se realiza mediante sensores tribológicos específicos y no con una herramienta gráfica de calidad."
+      },
+      {
+        "text": "Determina la velocidad máxima permisible para los camiones en las vías de acarreo.",
+        "isCorrect": false,
+        "rationale": "Los límites de velocidad son regulaciones de seguridad operacional establecidas por estudios del terreno."
+      },
+      {
+        "text": "Calcula el impuesto de importación de repuestos según la legislación vigente.",
+        "isCorrect": false,
+        "rationale": "El análisis de tributación de comercio exterior no forma parte del análisis de causa raíz de fallas en planta."
+      }
+    ],
+    "hint": "Piensa en la herramienta gráfica de calidad utilizada para enfocar los esfuerzos en las causas más relevantes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la finalidad principal de elaborar un Diagrama de Ishikawa (Espina de Pescado) tras una falla grave?",
+    "opciones": [
+      {
+        "text": "Agrupar y analizar sistemáticamente las causas potenciales clasificadas por categorías para identificar la causa raíz del problema.",
+        "isCorrect": true,
+        "rationale": "Esta herramienta facilita el análisis causa-efecto ordenando los factores (como mano de obra, maquinaria, métodos, materiales) que provocaron el evento no deseado."
+      },
+      {
+        "text": "Calcular la depreciación financiera acumulada de la maquinaria al final de su vida útil.",
+        "isCorrect": false,
+        "rationale": "El Diagrama de Ishikawa es un organizador cualitativo de causa-efecto, no una herramienta de contabilidad financiera."
+      },
+      {
+        "text": "Programar las fechas de vacaciones anuales del equipo de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "La gestión de vacaciones es una tarea administrativa de recursos humanos que no utiliza este diagrama de causa y efecto."
+      },
+      {
+        "text": "Monitorear la temperatura en tiempo real mediante imágenes infrarrojas.",
+        "isCorrect": false,
+        "rationale": "El análisis térmico se efectúa con cámaras termográficas, mientras que el Diagrama de Ishikawa es un esquema conceptual de análisis."
+      },
+      {
+        "text": "Contar el número de herramientas prestadas al personal durante un turno.",
+        "isCorrect": false,
+        "rationale": "El control de pañol o inventario de herramientas se lleva a cabo en software de gestión o listas de verificación."
+      }
+    ],
+    "hint": "Recuerda la estructura en categorías que ayuda a descomponer las razones de un fallo no deseado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué módulos y funciones fundamentales ofrece un software de Gestión de Mantenimiento Asistido por Ordenador (CMMS / GMAO)?",
+    "opciones": [
+      {
+        "text": "Gestión del registro e historial detallado de los activos de la empresa.",
+        "isCorrect": true,
+        "rationale": "Permite mantener una hoja de vida de cada equipo, incluyendo intervenciones previas, fallas y componentes reemplazados."
+      },
+      {
+        "text": "Emisión, programación y seguimiento de las órdenes de trabajo (OT).",
+        "isCorrect": true,
+        "rationale": "Organiza las tareas pendientes, asignando técnicos, fechas y procedimientos para asegurar la ejecución del plan."
+      },
+      {
+        "text": "Control de repuestos e inventario asignado al mantenimiento.",
+        "isCorrect": true,
+        "rationale": "Supervisa las existencias de piezas en almacén para asegurar la disponibilidad de materiales al ejecutar una orden."
+      },
+      {
+        "text": "Simulación y renderizado arquitectónico para la construcción de oficinas.",
+        "isCorrect": false,
+        "rationale": "El diseño arquitectónico se ejecuta mediante plataformas CAD especificas, ajenas a las funciones de un CMMS."
+      },
+      {
+        "text": "Modificación autónoma de las propiedades químicas de las rocas extraídas.",
+        "isCorrect": false,
+        "rationale": "Las características del mineral son físicas y químicas de la naturaleza; el software gestiona la maquinaria que lo procesa."
+      }
+    ],
+    "hint": "Piensa en el sistema informático diseñado para administrar activos, órdenes de trabajo y repuestos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la técnica de inspección mediante termografía infrarroja aplicada al mantenimiento?",
+    "opciones": [
+      {
+        "text": "En medir la radiación térmica emitida por los equipos para detectar puntos calientes indicativos de anomalías eléctricas o mecánicas.",
+        "isCorrect": true,
+        "rationale": "La termografía permite inspeccionar en funcionamiento y sin contacto directo, identificando contactos flojos, sobrecargas o falta de lubricación."
+      },
+      {
+        "text": "En aplicar líquidos penetrantes coloreados sobre las piezas para visualizar grietas bajo luz natural.",
+        "isCorrect": false,
+        "rationale": "Los líquidos penetrantes constituyen una técnica de ensayos no destructivos distinta, basada en la capilaridad sobre superficies."
+      },
+      {
+        "text": "En enviar impulsos de ultrasonido para medir la velocidad del flujo de agua en tuberías subterráneas.",
+        "isCorrect": false,
+        "rationale": "La inspección acústica o por ultrasonido mide variaciones de onda de sonido, no radiación infrarroja."
+      },
+      {
+        "text": "En extraer muestras de aceite para quemarlas y analizar los componentes químicos del humo.",
+        "isCorrect": false,
+        "rationale": "El análisis de aceite se realiza en laboratorios mediante espectrometría o viscosimetría sin destruir la muestra mediante combustión."
+      },
+      {
+        "text": "En pesar los componentes metálicos antes y después de su uso para calcular la erosión del material.",
+        "isCorrect": false,
+        "rationale": "La pérdida de masa no se evalúa pesando equipos industriales grandes, sino midiendo espesores o partículas en el lubricante."
+      }
+    ],
+    "hint": "Considera la captura de mapas de temperatura sin necesidad de detener o tocar el equipo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la principal ventaja de integrar el software de mantenimiento (CMMS) con el sistema ERP de la empresa?",
+    "opciones": [
+      {
+        "text": "Conectar los datos técnicos y operativos de mantenimiento con la gestión financiera, presupuestaria y de compras.",
+        "isCorrect": true,
+        "rationale": "La integración unifica los datos de campo con las finanzas globales, facilitando la compra oportuna de repuestos y la evaluación real de costos."
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar lubricantes en las partes mecánicas de los motores.",
+        "isCorrect": false,
+        "rationale": "El software gestiona datos e información, sin alterar las leyes físicas de fricción mecánica que requieren lubricación."
+      },
+      {
+        "text": "Descartar los planes de trabajo para que cada técnico decida de forma independiente qué reparar.",
+        "isCorrect": false,
+        "rationale": "La integración busca incrementar el control y la estandarización de las intervenciones, no eliminar la disciplina del plan."
+      },
+      {
+        "text": "Aumentar automáticamente la velocidad máxima de producción de la planta sin importar el diseño técnico.",
+        "isCorrect": false,
+        "rationale": "La capacidad instalada está limitada por el diseño físico e ingeniería de los equipos, no por los sistemas informáticos."
+      },
+      {
+        "text": "Sustituir los sensores instalados en las máquinas por encuestas a los clientes.",
+        "isCorrect": false,
+        "rationale": "Los sensores entregan datos operacionales objetivos del activo que el ERP y CMMS procesan para la toma de decisiones."
+      }
+    ],
+    "hint": "Piensa en el vínculo directo entre la gestión técnica operativa y las áreas financieras y de compras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué ventajas directas se derivan de la implementación exitosa de un plan de mantenimiento basado en la condición?",
+    "opciones": [
+      {
+        "text": "Disminución de las paradas no programadas mediante la detección oportuna de anomalías.",
+        "isCorrect": true,
+        "rationale": "Al actuar cuando los parámetros indican una degradación incipiente, se evita la falla catastrófica e inesperada durante la producción."
+      },
+      {
+        "text": "Optimización del aprovechamiento de la vida útil de los componentes al no cambiarlos prematuramente.",
+        "isCorrect": true,
+        "rationale": "A diferencia del preventivo fijo, no se desechan piezas que aún se encuentran en perfecto estado operativo."
+      },
+      {
+        "text": "Eliminación total del gasto en adquisición de piezas de repuesto.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento basado en la condición sigue requiriendo el reemplazo de componentes cuando estos se degradan."
+      },
+      {
+        "text": "Reducción automática de las exigencias de seguridad laboral en la planta.",
+        "isCorrect": false,
+        "rationale": "Las normas de seguridad deben mantenerse e incluso reforzarse durante cualquier tipo de intervención técnica."
+      },
+      {
+        "text": "Extensión indefinida de la garantía otorgada por el fabricante del equipo.",
+        "isCorrect": false,
+        "rationale": "La garantía del fabricante se rige por términos contractuales y no se altera automáticamente por la estrategia elegida."
+      }
+    ],
+    "hint": "Evalúa los beneficios vinculados a evitar paradas repentinas y aprovechar mejor los repuestos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el rol funcional en la organización del mantenimiento, ¿cuál es la diferencia clave entre el Planner (Planificador) y el Supervisor?",
+    "opciones": [
+      {
+        "text": "El Planner diseña los procedimientos, estrategias y calcula recursos futuros, mientras que el Supervisor lidera la ejecución directa en campo.",
+        "isCorrect": true,
+        "rationale": "El Planner prepara el trabajo con anticipación (qué y cómo hacer) y el Supervisor gestiona al personal e imprevistos en el momento de la ejecución."
+      },
+      {
+        "text": "El Planner repara personalmente los motores en el taller y el Supervisor redacta los estados contables anuales.",
+        "isCorrect": false,
+        "rationale": "La ejecución física del taller la realizan los técnicos; los estados contables son responsabilidad del área de contabilidad."
+      },
+      {
+        "text": "El Planner administra la nómina de salarios y el Supervisor diseña los planos de ingeniería de la planta.",
+        "isCorrect": false,
+        "rationale": "Ambos roles pertenecen a la gestión operativa de mantenimiento y no a la administración de salarios ni al diseño de obras."
+      },
+      {
+        "text": "El Planner realiza las inspecciones de seguridad de tránsito externo y el Supervisor opera las grúas pesadas.",
+        "isCorrect": false,
+        "rationale": "Estas tareas corresponden al área de transporte o seguridad vial y a los operadores de equipo pesado respectivamente."
+      },
+      {
+        "text": "El Planner compra los insumos de papelería y el Supervisor aprueba las leyes ambientales del país.",
+        "isCorrect": false,
+        "rationale": "El Planner determina repuestos técnicos y las leyes las aprueba el marco regulatorio del Estado."
+      }
+    ],
+    "hint": "Diferencia la preparación estratégica del trabajo futuro frente a la conducción del equipo técnico en el día a día.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se diferencia el mantenimiento basado en la condición frente al mantenimiento preventivo sistemático tradicional?",
+    "opciones": [
+      {
+        "text": "Evalúa parámetros reales en tiempo real para intervenir solo cuando hay una desviación, en lugar de guiarse por un calendario fijo.",
+        "isCorrect": true,
+        "rationale": "Se fundamenta en la salud real del activo medida por sensores, reduciendo reemplazos innecesarios por horas acumuladas."
+      },
+      {
+        "text": "Aplica cambios de componentes en fechas fijas del año sin revisar si el equipo presentó o no desgaste.",
+        "isCorrect": false,
+        "rationale": "Esta afirmación describe precisamente al mantenimiento preventivo sistemático o por calendario."
+      },
+      {
+        "text": "Espera a que el equipo se rompa por completo para recién solicitar la compra de una máquina nueva.",
+        "isCorrect": false,
+        "rationale": "Esta conducta corresponde al mantenimiento correctivo no planificado por rotura."
+      },
+      {
+        "text": "Prescinde de mediciones con sensores para confiar únicamente en la intuición del personal.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento basado en la condición requiere datos medibles y objetivos proporcionados por instrumentación."
+      },
+      {
+        "text": "Se ejecuta únicamente cuando el equipo ha sido retirado definitivamente de la planta por obsolescencia.",
+        "isCorrect": false,
+        "rationale": "Esta estrategia se aplica durante toda la vida útil operativa activa del equipo en producción."
+      }
+    ],
+    "hint": "Enfócate en el criterio que detona la intervención: lecturas de estado real versus tiempo acumulado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué utilidades ofrecen las plataformas de Inteligencia Artificial en la gestión moderna del mantenimiento?",
+    "opciones": [
+      {
+        "text": "Sintetizar documentación técnica extensa y normativas para la estructuración de procedimientos.",
+        "isCorrect": true,
+        "rationale": "Las herramientas de lenguaje e IA ayudan a procesar manuales complejos rápidamente para redactar borradores de planes de trabajo."
+      },
+      {
+        "text": "Proponer modelos predictivos e identificar patrones de comportamiento a partir de conjuntos de datos.",
+        "isCorrect": true,
+        "rationale": "Los algoritmos de IA analizan grandes volúmenes de variables para sugerir relaciones entre lecturas y probabilidad de fallas."
+      },
+      {
+        "text": "Sustituir la presencia física del personal técnico al realizar un ajuste mecánico en el taller.",
+        "isCorrect": false,
+        "rationale": "Las herramientas digitales procesan información, pero la intervención física en el equipo requiere personal técnico de campo."
+      },
+      {
+        "text": "Modificar los componentes físicos del motor mediante mensajes de texto sin intervención de herramientas.",
+        "isCorrect": false,
+        "rationale": "La materia física de los componentes mecánicos requiere manipulación o reparación física directa."
+      },
+      {
+        "text": "Eliminar la necesidad de consumir energía o combustible durante la operación de los equipos.",
+        "isCorrect": false,
+        "rationale": "La IA ayuda a optimizar el consumo energético, pero no elimina la necesidad de energía necesaria para el trabajo físico."
+      }
+    ],
+    "hint": "Identifica las tareas de soporte analítico, procesamiento de textos e interpretación de tendencias de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal del análisis tribológico de aceites y lubricantes en sistemas mecánicos?",
+    "opciones": [
+      {
+        "text": "Identificar la presencia de partículas de desgaste metálico, humedad y degradación química para evaluar el estado interno del equipo.",
+        "isCorrect": true,
+        "rationale": "El estado del lubricante actúa como una 'prueba de sangre' de la máquina, revelando el desgaste interno de componentes rotativos o la contaminación del fluido."
+      },
+      {
+        "text": "Determinar el peso total del camión de acarreo para ajustar el cobro de peajes internos.",
+        "isCorrect": false,
+        "rationale": "El peso del vehículo se determina mediante balanzas dinámicas y no mediante análisis químico de aceites."
+      },
+      {
+        "text": "Medir la intensidad lumínica emitida por las pantallas de la cabina de control.",
+        "isCorrect": false,
+        "rationale": "Las mediciones lumínicas se llevan a cabo con fotómetros en estudios de ergonomía e iluminación."
+      },
+      {
+        "text": "Verificar la presión del aire de los neumáticos antes de iniciar la marcha.",
+        "isCorrect": false,
+        "rationale": "La presión de neumáticos se controla mediante manómetros o sistemas TPMS dedicados."
+      },
+      {
+        "text": "Calcular la cantidad de pintura requerida para cubrir la estructura externa del chasis.",
+        "isCorrect": false,
+        "rationale": "Los cálculos de recubrimientos corresponden al mantenimiento de pintura y protección contra la corrosión externa."
+      }
+    ],
+    "hint": "Piensa en cómo el fluido recoge partículas que delatan la salud interna de los componentes mecánicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función del programador de mantenimiento en el ciclo de trabajo de la planta?",
+    "opciones": [
+      {
+        "text": "Coordinar la logística, disponibilidad de repuestos, permisos de trabajo y franjas horarias para cumplir con las órdenes planeadas.",
+        "isCorrect": true,
+        "rationale": "El programador equilibra las capacidades operativas y la disponibilidad de insumos para encajar el trabajo planeado en la ventana de tiempo oportuna."
+      },
+      {
+        "text": "Escribir el código en lenguaje de bajo nivel para los Microchips de los sensores de campo.",
+        "isCorrect": false,
+        "rationale": "La programación de firmware es tarea de ingenieros en electrónica, sistemas embebidos o automatización."
+      },
+      {
+        "text": "Reemplazar al jefe de finanzas en la elaboración de la estrategia impositiva de la empresa.",
+        "isCorrect": false,
+        "rationale": "La contabilidad y estrategia tributaria dependen del área financiera corporativa."
+      },
+      {
+        "text": "Realizar ensayos destructivos en las vigas del taller mecánico.",
+        "isCorrect": false,
+        "rationale": "Las pruebas estructurales son llevadas a cabo por especialistas en ensayos de materiales e ingeniería civil."
+      },
+      {
+        "text": "Manejar los buses de transporte de personal hacia la ciudad.",
+        "isCorrect": false,
+        "rationale": "El transporte de personal es gestionado por el área de logística de servicios generales."
+      }
+    ],
+    "hint": "Enfócate en el equilibrio y asignación de recursos, permisos y ventanas de tiempo para ejecutar las tareas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué ventajas ofrecen los motores de búsqueda asistidos por IA estructurada (como Perplexity) en la investigación técnica?",
+    "opciones": [
+      {
+        "text": "Entregan respuestas sintetizadas directamente vinculadas y citadas a sus fuentes bibliográficas o web.",
+        "isCorrect": true,
+        "rationale": "Permite al profesional verificar el origen de la información técnica navegando hacia las fuentes originales."
+      },
+      {
+        "text": "Permiten profundizar en el contexto mediante preguntas de seguimiento continuas.",
+        "isCorrect": true,
+        "rationale": "Mantiene el hilo conversacional para refinar y detallar los aspectos específicos de una investigación."
+      },
+      {
+        "text": "Reemplazan la necesidad de validar técnicamente la información antes de aplicar un procedimiento en el campo.",
+        "isCorrect": false,
+        "rationale": "Cualquier sugerencia generada por una plataforma debe ser validada por el juicio técnico del especialista responsable."
+      },
+      {
+        "text": "Modifican automáticamente las configuraciones físicas de los controladores en la planta.",
+        "isCorrect": false,
+        "rationale": "Las herramientas de búsqueda procesan texto e información, sin conexión directa para reprogramar hardware industrial sin supervisión."
+      },
+      {
+        "text": "Garantizan que no exista ningún costo asociado al mantenimiento preventivo.",
+        "isCorrect": false,
+        "rationale": "La investigación acelera el aprendizaje, pero la adquisición de repuestos y mano de obra sigue representando un costo directo."
+      }
+    ],
+    "hint": "Identifica las capacidades de síntesis con trazabilidad a las fuentes y razonamiento interactivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es imprescindible integrar la gestión de riesgos y seguridad laboral desde la etapa de planificación del mantenimiento?",
+    "opciones": [
+      {
+        "text": "Porque permite anticipar peligros específicos, definir controles seguros y prevenir accidentes durante las intervenciones.",
+        "isCorrect": true,
+        "rationale": "Planificar la seguridad junto con la tarea técnica garantiza que se contemplen permisos de trabajo, bloqueos de energía y equipos de protección adecuados."
+      },
+      {
+        "text": "Porque incrementa automáticamente la velocidad de rotación de los motores sin requerir lubricación.",
+        "isCorrect": false,
+        "rationale": "La seguridad vela por la integridad de las personas y activos, sin alterar las leyes mecánicas de operación."
+      },
+      {
+        "text": "Porque elimina la necesidad de contar con supervisores técnicos en las operaciones de campo.",
+        "isCorrect": false,
+        "rationale": "La presencia de supervisores capacitados es vital para asegurar el cumplimiento de las normas de seguridad en el terreno."
+      },
+      {
+        "text": "Porque evita la necesidad de realizar cualquier tipo de medición eléctrica en las subestaciones.",
+        "isCorrect": false,
+        "rationale": "Las mediciones en subestaciones deben continuar, aplicándose con protocolos estrictos de seguridad eléctrica."
+      },
+      {
+        "text": "Porque garantiza el aumento directo en la cotización comercial de los productos de la empresa.",
+        "isCorrect": false,
+        "rationale": "Los precios de mercado se fijan por la oferta y demanda internacional, no por los planes de prevención de riesgos internos."
+      }
+    ],
+    "hint": "Considera la protección del personal técnico y la prevención de eventos no deseados al intervenir equipos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el concepto fundamental que define a la Industria 4.0 en contraste con las etapas previas de automatización industrial?",
+    "opciones": [
+      {
+        "text": "La automatización del trabajo mecánico mediante brazos robóticos aislados sin conexión a red.",
+        "rationale": "La robótica aislada caracterizó a la Industria 3.0, mientras que la etapa actual exige integración y comunicación constante entre sistemas.",
+        "isCorrect": false
+      },
+      {
+        "text": "La generación de valor agregado y control centralizado a partir del análisis de datos en tiempo real y conectividad en red.",
+        "rationale": "El pilar central de la Industria 4.0 es la capacidad de interconectar equipos mediante redes para recopilar datos, monitorear en tiempo real y generar pronósticos operativos.",
+        "isCorrect": true
+      },
+      {
+        "text": "El reemplazo total del personal humano por inteligencias artificiales autónomas en todas las áreas de la planta.",
+        "rationale": "La Industria 4.0 no busca eliminar al ser humano, sino asignarle nuevas tareas complejas de supervisión, formulación de reglas y toma de decisiones estratégicas.",
+        "isCorrect": false
+      },
+      {
+        "text": "La adopción exclusiva de motores a vapor y combustión interna para aumentar la potencia de transporte.",
+        "rationale": "Las máquinas impulsadas por vapor corresponden a la Primera Revolución Industrial y no al paradigma digital actual.",
+        "isCorrect": false
+      },
+      {
+        "text": "El uso estricto de documentos en papel y tablas manuales para el seguimiento de la producción.",
+        "rationale": "El registro manual en papel imposibilita el procesamiento inmediato y la predictibilidad que definen a la cuarta revolución industrial.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el elemento que conecta las máquinas a distancia y permite procesar información al instante.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del marco conceptual de la Industria 4.0 y el Internet de las Cosas (IoT), ¿cuáles de las siguientes afirmaciones describen correctamente las funciones de sus componentes tecnológicos clave?",
+    "opciones": [
+      {
+        "text": "Los sensores captan magnitudes físicas o ambientales y las convierten en señales eléctricas procesables.",
+        "rationale": "Esta función define el rol de la sensorización avanzada como el puente entre el mundo físico y el entorno digital.",
+        "isCorrect": true
+      },
+      {
+        "text": "Los actuadores ejecutan mecanismos físicos aplicando fuerza en respuesta a instrucciones o señales de control.",
+        "rationale": "Los actuadores son los elementos finales de control que modifican el estado de un proceso o desvían componentes mecánicos según las reglas programadas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Los microcontroladores almacenan programas e instrucciones de código para procesar datos y controlar dispositivos.",
+        "rationale": "Estos componentes integrados en los dispositivos contienen las instrucciones necesarias para ejecutar la automatización a nivel de hardware.",
+        "isCorrect": true
+      },
+      {
+        "text": "La información capturada por sensores de campo debe guardarse únicamente en el disco duro local de la computadora operadora.",
+        "rationale": "En la Industria 4.0 la información se transmite hacia plataformas en la nube o servidores compartidos para estar accesible en tiempo real por múltiples usuarios.",
+        "isCorrect": false
+      },
+      {
+        "text": "Las transmisiones de datos industriales en la red no requieren protocolos de ciberseguridad por ser redes cerradas.",
+        "rationale": "Al circular datos por la red se incrementa la vulnerabilidad ante espionaje o sabotaje, exigiendo capas de ciberseguridad industrial.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera cómo se transforma una variable del entorno en una acción mecánica o en código de programación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un equipo de mantenimiento nota que las recomendaciones preventivas del fabricante no evitan fallas imprevistas en la maquinaria pesada que opera en minería subterránea. ¿A qué se debe principalmente esta limitación del mantenimiento preventivo tradicional?",
+    "opciones": [
+      {
+        "text": "El mantenimiento preventivo solo se ejecuta de manera reactiva una vez que la falla catastrófica ha destruido el motor.",
+        "rationale": "La intervención posterior a la rotura corresponde al mantenimiento correctivo puro y no al preventivo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Las especificaciones del fabricante se basan en intervalos estandarizados bajo condiciones normales y no consideran la severidad y variabilidad del entorno operativo real.",
+        "rationale": "El mantenimiento preventivo se rige por frecuencias fijas teóricas, ignorando factores ambientales extremos que aceleran el desgaste de los componentes.",
+        "isCorrect": true
+      },
+      {
+        "text": "El mantenimiento preventivo utiliza modelos de analítica prescriptiva que requieren sensores infrarrojos obligatorios.",
+        "rationale": "El preventivo tradicional se apoya en manuales e intervalos de tiempo o kilometraje estáticos, no en analítica avanzada.",
+        "isCorrect": false
+      },
+      {
+        "text": "El costo de realizar mantenimientos preventivos es siempre superior al de detener la planta por una falla total del sistema.",
+        "rationale": "Las paradas no programadas por fallas imprevistas generan pérdidas económicas sustancialmente mayores que las intervenciones planificadas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Los manuales de fábrica exigen desarmar la maquinaria por completo al inicio de cada jornada laboral de seis horas.",
+        "rationale": "El mantenimiento preventivo programa revisiones en periodos razonables y no exige el desmantelamiento diario integral del activo.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Reflexiona sobre si las pruebas de laboratorio del fabricante coinciden con el trabajo bajo tierra en condiciones extremas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la implementación del Mantenimiento Centrado en la Confiabilidad (RCM), ¿cuál es el criterio clave para priorizar la asignación de recursos e intervenciones en los sistemas de la planta?",
+    "opciones": [
+      {
+        "text": "Intervenir prioritariamente los componentes de menor costo económico para agilizar la compra de repuestos.",
+        "rationale": "Priorizar por el valor monetario del repuesto ignora el impacto operativo que puede tener la falla de un componente crítico.",
+        "isCorrect": false
+      },
+      {
+        "text": "Enfocar los esfuerzos según la severidad, las consecuencias y la criticidad de las fallas sobre la seguridad, el medio ambiente y la rentabilidad.",
+        "rationale": "El RCM evalúa sistemáticamente los modos de falla y sus consecuencias para priorizar la protección de los activos más determinantes para la operación.",
+        "isCorrect": true
+      },
+      {
+        "text": "Sustituir únicamente las piezas mecánicas siguiendo el orden alfabético de sus códigos de inventario.",
+        "rationale": "El RCM es una metodología analítica de evaluación del riesgo operativo y no una clasificación administrativa alfabética.",
+        "isCorrect": false
+      },
+      {
+        "text": "Atacar en primer lugar los componentes que nunca han presentado desgaste para garantizar que sigan nuevos.",
+        "rationale": "Dirigir recursos a elementos no críticos o sin riesgo de falla desperdicia capital y tiempo operativo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Esperar a la falla general de la planta para evaluar qué equipo requería mayor atención.",
+        "rationale": "El RCM busca prevenir y mitigar los efectos de las fallas críticas de manera estructurada antes de que ocurra el colapso.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Analiza qué falla causaría el impacto más grave en la producción, el personal o el medio ambiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "El Mantenimiento Basado en la Condición (CBM) se distingue por su enfoque operativo dinámico. ¿Cuáles de las siguientes características corresponden específicamente a esta estrategia?",
+    "opciones": [
+      {
+        "text": "Evalúa el estado de salud actual del activo mediante el monitoreo constante de variables físicas como vibración o temperatura.",
+        "rationale": "El CBM se fundamenta en la medición directa y continua de indicadores físicos para determinar la condición operacional instantánea del equipo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Activa inspecciones, ajustes o sustituciones únicamente cuando los parámetros monitoreados se desvían de los niveles normales.",
+        "rationale": "A diferencia de las rutinas por calendario, el CBM desencadena acciones de mantenimiento solo al detectar anomalías respecto a la condición estándar.",
+        "isCorrect": true
+      },
+      {
+        "text": "Utiliza datos recopilados por sensores para identificar la degradación y actuar ante variaciones en la condición operativa.",
+        "rationale": "La recolección de datos en tiempo real mediante sensores permite verificar desviaciones térmicas, mecánicas o de presión de forma inmediata.",
+        "isCorrect": true
+      },
+      {
+        "text": "Se basa strictly en un calendario con fechas fijas inalterables definidas al inicio del año.",
+        "rationale": "El mantenimiento basado en intervalos fijos temporales es característico del mantenimiento preventivo tradicional, no del CBM.",
+        "isCorrect": false
+      },
+      {
+        "text": "Prescinde de la instrumentación física en campo para basar las decisiones en estimaciones presupuestarias.",
+        "rationale": "El CBM requiere obligatoriamente de instrumentación y sensores para capturar la condición física real del equipo.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica las opciones que se enfocan en responder al estado real e instantáneo del equipo y no a un reloj o calendario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al comparar el Internet de las Cosas comercial (IoT) con el Internet de las Cosas Industrial (IIoT), ¿cuál es la diferencia técnica e infraestructura determinante entre ambos?",
+    "opciones": [
+      {
+        "text": "El IoT comercial utiliza cableado estructurado ethernet, mientras que el IIoT requiere conexiones inalámbricas bluetooth.",
+        "rationale": "El IIoT utiliza frecuentemente comunicaciones robustas por cable (ethernet industrial, profibus) o redes inalámbricas avanzadas según la severidad del entorno.",
+        "isCorrect": false
+      },
+      {
+        "text": "El IIoT exige mayor precisión, alta ciberseguridad, tolerancia a fallas e integración con sistemas de control como PLC y SCADA.",
+        "rationale": "El entorno industrial demanda estándares rigurosos de disponibilidad, normativas de seguridad e interoperabilidad con controladores lógicos programables.",
+        "isCorrect": true
+      },
+      {
+        "text": "El IoT comercial procesa volúmenes de datos orientados exclusivamente a la manufactura pesada y minería.",
+        "rationale": "El IoT comercial se enfoca en domótica, dispositivos personales (wearables) y electrodomésticos, no en la gran industria.",
+        "isCorrect": false
+      },
+      {
+        "text": "El IIoT elimina la necesidad de contar con sensores físicos en la maquinaria de planta.",
+        "rationale": "Tanto el IoT como el IIoT dependen intrínsecamente de sensores para capturar datos del entorno.",
+        "isCorrect": false
+      },
+      {
+        "text": "El IoT comercial requiere protocolos de red propietarios inmunes a cualquier ataque informático.",
+        "rationale": "Los dispositivos comerciales suelen tener arquitecturas de seguridad más sencillas que los sistemas de control crítico de una planta industrial.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el nivel de exigencia, precisión y consecuencias de una falla en una fábrica en comparación con un hogar inteligente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para el monitoreo térmico en componentes mecánicos sometidos a alta fricción en maquinaria pesada, se instalan sensores específicos. ¿Cuál es el principio de funcionamiento de un termistor?",
+    "opciones": [
+      {
+        "text": "Generar un voltaje eléctrico proporcional a la diferencia de temperatura entre dos metales disímiles.",
+        "rationale": "La generación de voltaje por la unión de dos metales distintos es el principio de funcionamiento de un termopar, no de un termistor.",
+        "isCorrect": false
+      },
+      {
+        "text": "Modificar de forma predecible su resistencia eléctrica en función de las variaciones de temperatura.",
+        "rationale": "Los termistores son componentes pasivos cuya resistencia cambia significativamente ante incrementos o decrementos de temperatura.",
+        "isCorrect": true
+      },
+      {
+        "text": "Capturar fotogramas en espectro infrarrojo para generar una matriz de píxeles térmicos.",
+        "rationale": "La captura de imágenes en espectro infrarrojo corresponde a las cámaras termográficas y no a un termistor discreto.",
+        "isCorrect": false
+      },
+      {
+        "text": "Medir el desplazamiento angular de las fajas de transmisión mediante pulsos electromagnéticos.",
+        "rationale": "El desplazamiento angular se mide con encóderes u otros sensores inerciales y rotativos, no con sensores térmicos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Emitir ondas ultrasónicas para detectar burbujas de aire en las tuberías de lubricación.",
+        "rationale": "El ultrasonido es una técnica acústica de alta frecuencia no vinculada al cambio de resistencia por temperatura.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerda cuál propiedad eléctrica básica varía directamente al calentarse o enfriarse el material del sensor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el contexto de la sensorización industrial, la selección del dispositivo debe responder a la variable física que se desea medir. ¿Cuáles de las siguientes correspondencias entre sensor y aplicación son correctas?",
+    "opciones": [
+      {
+        "text": "Sensores inerciales (acelerómetros) para medir vibraciones y alteraciones en el movimiento de motores y martillos hidráulicos.",
+        "rationale": "Los acelerómetros captan las variaciones de aceleración que provocan las vibraciones mecánicas en equipos rotativos y de impacto.",
+        "isCorrect": true
+      },
+      {
+        "text": "Sensores ópticos con visión artificial para la inspección, clasificación y conteo de mineral sobre cintas transportadoras.",
+        "rationale": "Las cámaras y sensores ópticos procesan imágenes para evaluar volumen, tamaño de partícula e imperfecciones en tiempo real.",
+        "isCorrect": true
+      },
+      {
+        "text": "Sensores de presión para controlar y prevenir variaciones bruscas en tuberías de fluido hidráulico o aire comprimido.",
+        "rationale": "Los sensores de presión monitorean la fuerza por unidad de área en líneas neumáticas e hidráulicas para garantizar la operatividad.",
+        "isCorrect": true
+      },
+      {
+        "text": "Giroscopios inerciales para medir la acidez química y el nivel de pH en estanques de relaves.",
+        "rationale": "Los giroscopios miden rotación y orientación espacial, no propiedades químicas o acidez de un fluido.",
+        "isCorrect": false
+      },
+      {
+        "text": "Sensores inductivos de proximidad para medir la temperatura interna de combustión dentro de la caldera.",
+        "rationale": "Los sensores de proximidad inductivos detectan la presencia o cercanía de objetos metálicos, no temperaturas de combustión.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Relaciona la naturaleza de la variable (movimiento, luz/imagen, fuerza fluida) con el mecanismo físico del sensor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El protocolo MQTT se utiliza ampliamente en la transmisión de datos dentro de arquitecturas IoT industrial. ¿Cuál es su estructura de comunicación característica?",
+    "opciones": [
+      {
+        "text": "Un esquema cliente-servidor síncrono donde cada dispositivo envía peticiones HTTP masivas a intervalos fijos.",
+        "rationale": "El protocolo HTTP síncrono genera un alto consumo de ancho de banda y recursos, inadecuado para sensores ligeros en redes masivas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un modelo ligero de publicación y suscripción a través de un intermediario (broker), donde los sensores publican en tópicos específicos.",
+        "rationale": "MQTT destaca por su baja carga de encabezado y su arquitectura de publicación/suscripción, ideal para transmitir datos de sensores de forma eficiente.",
+        "isCorrect": true
+      },
+      {
+        "text": "Una red punto a punto basada en la transferencia de archivos ejecutables entre computadoras maestras.",
+        "rationale": "MQTT transmite mensajes breves con datos de sensores, no archivos ejecutables pesados entre ordenadores.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un protocolo físico de cableado especializado para la transmisión de energía eléctrica en alta tensión.",
+        "rationale": "MQTT es un protocolo de mensajería a nivel de software/red y no un estándar físico de cableado eléctrico.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un algoritmo de Inteligencia Artificial que simula valores térmicos cuando la red está fuera de servicio.",
+        "rationale": "MQTT es un medio de transporte de mensajes de red y no un algoritmo generativo de simulación.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Busca el patrón donde los emisores envían datos a un canal temático y los receptores solo reciben lo que les interesa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En operaciones de minería subterránea donde la infraestructura de red es limitada y existe bajo ancho de banda, ¿cuál es la ventaja operativa del protocolo CoAP (Constrained Application Protocol)?",
+    "opciones": [
+      {
+        "text": "Permite transmitir señales de video de ultra alta definición en tiempo real sin comprimir.",
+        "rationale": "La transmisión de video sin comprimir requiere un ancho de banda masivo, lo opuesto a lo que ofrece CoAP.",
+        "isCorrect": false
+      },
+      {
+        "text": "Está diseñado específicamente para dispositivos con restricciones de memoria, energía y ancho de banda, ofreciendo un encabezado muy reducido.",
+        "rationale": "CoAP optimiza las comunicaciones mediante paquetes UDP ligeros, permitiendo conectar nodos con recursos informáticos mínimos en redes severas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Elimina la necesidad de contar con sensores para medir deformaciones en el socavón.",
+        "rationale": "CoAP es un protocolo para transmitir los datos medidos por los sensores; no reemplaza la necesidad física de la sensorización.",
+        "isCorrect": false
+      },
+      {
+        "text": "Funciona de manera exclusiva mediante cables de fibra óptica inmunes a la humedad.",
+        "rationale": "CoAP se utiliza frecuentemente sobre redes inalámbricas restringidas y no depende exclusivamente de fibra óptica.",
+        "isCorrect": false
+      },
+      {
+        "text": "Garantiza que la maquinaria pesada funcione sin consumir combustible diésel.",
+        "rationale": "Los protocolos de comunicación gestionan datos de red y no el consumo directo de energía primaria de los motores.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera qué protocolo es idóneo para dispositivos con baterías pequeñas y comunicaciones con empaquetado mínimo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "El Big Data en el mantenimiento 4.0 involucra distintos niveles de procesamiento informático. ¿Cuáles de las siguientes descripciones corresponden a los tipos de analítica de datos aplicados a los activos?",
+    "opciones": [
+      {
+        "text": "La analítica descriptiva examina datos pasados y presentes para resumir el estado operacional y lo que está sucediendo en tiempo real.",
+        "rationale": "Este nivel sintetiza el historial y el comportamiento actual mediante tableros e indicadores visuales de condición.",
+        "isCorrect": true
+      },
+      {
+        "text": "La analítica predictiva utiliza modelos estadísticos y algoritmos de Machine Learning para proyectar fallas o comportamientos futuros.",
+        "rationale": "La analítica predictiva estima la probabilidad de ocurrencia de eventos futuros basándose en patrones identificados en los datos históricos.",
+        "isCorrect": true
+      },
+      {
+        "text": "La analítica prescriptiva sugiere decisiones estratégicas y acciones correctivas óptimas evaluando múltiples escenarios.",
+        "rationale": "La fase prescriptiva va más allá del pronóstico al recomendar la mejor vía de acción operativa ante la falla proyectada.",
+        "isCorrect": true
+      },
+      {
+        "text": "La analítica descriptiva ejecuta de forma autónoma el cambio físico de los lubricantes en el taller mecánico.",
+        "rationale": "La analítica es el procesamiento de información digital; las tareas físicas de sustitución las realizan los técnicos o sistemas robóticos.",
+        "isCorrect": false
+      },
+      {
+        "text": "La analítica predictiva sustituye la necesidad de instalar instrumentación física en los equipos de planta.",
+        "rationale": "Los modelos predictivos requieren de los datos recolectados por sensores físicos para poder realizar estimaciones precisas.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Distingue entre los tres enfoques de la analítica: comprender el presente/pasado, anticipar el futuro y recomendar qué hacer.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de un sistema de diagnóstico predictivo, ¿qué función cumple el concepto de \"Machine Learning\" (Aprendizaje Automático)?",
+    "opciones": [
+      {
+        "text": "Inducir la auto-reparación molecular de los componentes metálicos sometidos a desgaste.",
+        "rationale": "El Machine Learning es una técnica de software y procesamiento de datos, no un proceso químico de regeneración de materiales.",
+        "isCorrect": false
+      },
+      {
+        "text": "Identificar patrones complejos en datos históricos y en tiempo real para predecir anomalías sin necesidad de ser programado explícitamente para cada regla.",
+        "rationale": "Los algoritmos de Machine Learning detectan desviaciones sutiles en los datos operacionales aprendiendo del comportamiento histórico del activo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Reemplazar los servidores en la nube por archivos físicos impresos en papel.",
+        "rationale": "El aprendizaje automático requiere de capacidad de cómputo y bases de datos digitales para procesar grandes volúmenes de datos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Obligar a que el operador ingrese los datos de vibración a mano cada 5 minutos.",
+        "rationale": "El valor del Machine Learning radica en procesar flujos continuos de datos recopilados automáticamente por sensores.",
+        "isCorrect": false
+      },
+      {
+        "text": "Aumentar la latencia de red para ralentizar la emisión de alertas de emergencia.",
+        "rationale": "Las aplicaciones predictivas buscan minimizar la latencia para alertar tempranamente antes de que ocurra la avería.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en cómo una computadora puede descubrir reglas y hábitos en los datos sin que un programador escriba cada condición si/entonces.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de calidad y diagnóstico de mantenimiento, se aplica el Diagrama de Pareto. ¿En qué principio práctico se fundamenta esta herramienta para la toma de decisiones?",
+    "opciones": [
+      {
+        "text": "Asumir que el 100% de los componentes fallan con la misma frecuencia y causan el mismo impacto económico.",
+        "rationale": "Las fallas no tienen una distribución uniforme; algunas pocas causan la inmensa mayoría de las paradas no programadas.",
+        "isCorrect": false
+      },
+      {
+        "text": "La regla 80/20, que establece que aproximadamente el 80% de las paradas o defectos provienen del 20% de las causas raíz.",
+        "rationale": "El principio de Pareto permite identificar ese pequeño porcentaje de causas críticas que generan la mayor parte de las pérdidas operativas.",
+        "isCorrect": true
+      },
+      {
+        "text": "El balance de las horas de trabajo distribuidas equitativamente según el código alfabético del técnico.",
+        "rationale": "El diagrama de Pareto prioriza problemas operativos por su frecuencia o costo, no por aspectos administrativos de personal.",
+        "isCorrect": false
+      },
+      {
+        "text": "La representación del ciclo de vida útil del activo mediante una función matemática de distribución normal.",
+        "rationale": "El diagrama de Pareto es un gráfico de barras decrecientes con curva acumulada, no una curva Gaussiana de distribución.",
+        "isCorrect": false
+      },
+      {
+        "text": "La medición del tiempo exacto que tarda un fluido de perforación en alcanzar su punto de ebullición.",
+        "rationale": "Pareto es una herramienta de ordenamiento y priorización de eventos o fallas, no un instrumento de termodinámica.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerda la regla porcentual que busca separar \"pocos vitales\" de \"muchos triviales\".",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un equipo técnico busca identificar la causa raíz de una falla recurrente en un chancador primario analizando categorías como mano de obra, maquinaria, métodos y materiales. ¿Qué herramienta de calidad es la adecuada para este análisis?",
+    "opciones": [
+      {
+        "text": "Diagrama de Gantt.",
+        "rationale": "El diagrama de Gantt se utiliza para la planificación temporal de proyectos y cronogramas de tareas, no para análisis causa-efecto.",
+        "isCorrect": false
+      },
+      {
+        "text": "Diagrama de Ishikawa (Espina de Pescado).",
+        "rationale": "Esta herramienta organiza sistemáticamente las posibles causas de un problema agrupándolas en categorías estructurales (las 6M) para hallar la causa raíz.",
+        "isCorrect": true
+      },
+      {
+        "text": "Histograma de frecuencias relativas.",
+        "rationale": "El histograma muestra la distribución de un conjunto de datos continuos, pero no categoriza las causas conceptuales de una falla.",
+        "isCorrect": false
+      },
+      {
+        "text": "Gráfico de control X-Barra.",
+        "rationale": "Las gráficas de control supervisan la estabilidad de un proceso en el tiempo frente a límites estadísticos, no las relaciones causales de origen.",
+        "isCorrect": false
+      },
+      {
+        "text": "Análisis FODA de la empresa.",
+        "rationale": "El FODA es una herramienta estratégica institucional de negocios y no una metodología técnica de diagnóstico de fallas mecánicas.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el diagrama con forma de esqueleto marino que ramifica los factores que influyen en un problema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Los sistemas informáticos como el CMMS (Computerized Maintenance Management System) y los ERP desempeñan un rol central en la gestión moderna. ¿Cuáles de las siguientes funciones son propias de estas plataformas?",
+    "opciones": [
+      {
+        "text": "Registrar el historial detallado de fallas, intervenciones y reparaciones de cada activo de la planta.",
+        "rationale": "El CMMS mantiene el expediente operativo completo del equipo, lo que facilita el cálculo de indicadores de confiabilidad e historial técnico.",
+        "isCorrect": true
+      },
+      {
+        "text": "Gestionar, emitir y controlar las Órdenes de Trabajo (OT) asignadas al personal técnico.",
+        "rationale": "La administración del flujo de trabajo desde la solicitud hasta el cierre mediante firmas digitales es la función central del CMMS.",
+        "isCorrect": true
+      },
+      {
+        "text": "Controlar el inventario de repuestos y sincronizar los requerimientos con el área de compras y finanzas.",
+        "rationale": "La integración entre el CMMS y el ERP permite verificar la disponibilidad de insumos y registrar los costos operativos de mantenimiento.",
+        "isCorrect": true
+      },
+      {
+        "text": "Sustituir físicamente las fajas transportadoras mediante comandos de voz automáticos.",
+        "rationale": "El software gestiona datos, cronogramas y documentos, pero no reemplaza las acciones mecánicas de montaje físico.",
+        "isCorrect": false
+      },
+      {
+        "text": "Calibrar los sensores de campo de forma remota sin necesidad de energizar la planta.",
+        "rationale": "La calibración física exige instrumentos de patrón de laboratorio y energización de los circuitos de señal correspondientes.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica las tareas vinculadas a la administración de documentos de trabajo, repuestos e historial técnico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "El diagnóstico no destructivo mediante instrumentación avanzada es clave en el mantenimiento predictivo. ¿Cuáles de las siguientes combinaciones de técnica y aplicación son correctas?",
+    "opciones": [
+      {
+        "text": "Termografía infrarroja para detectar puntos de sobrecalentamiento, empalmes defectuosos o sobrecargas en tableros eléctricos.",
+        "rationale": "La termografía muestra anomalías de temperatura que revelan alta resistencia eléctrica o fricción excesiva antes de que ocurra el cortocircuito.",
+        "isCorrect": true
+      },
+      {
+        "text": "Análisis de vibraciones para identificar desbalances mecánicos, falta de alineación en ejes y severidad de desgaste en rodamientos.",
+        "rationale": "La firma espectral de vibración revela la fuente específica de anomalía en máquinas rotativas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Análisis de aceites y lubricantes para medir la viscosidad, nivel de contaminación y presencia de partículas metálicas de desgaste.",
+        "rationale": "El análisis tribológico del aceite permite evaluar tanto la degradación del fluido como el desgaste interno de las piezas metálicas del motor.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ultrasonido industrial utilizado exclusivamente para medir la presión de inflado de neumáticos de automóviles.",
+        "rationale": "El ultrasonido detecta fugas de aire/gas a alta presión, arcos eléctricos y fallas en rodamientos, no la presión estática de inflado.",
+        "isCorrect": false
+      },
+      {
+        "text": "Líquidos penetrantes aplicados para determinar la potencia de consumo eléctrico de los variadores de frecuencia.",
+        "rationale": "Los líquidos penetrantes identifican grietas o fisuras superficiales en componentes sólidos, no variables eléctricas de potencia.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Relaciona cada técnica física (calor por IR, ondas mecánicas, química de fluidos) con la anomalía específica que detecta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al analizar la relación entre el tiempo de uso de un motor y la temperatura que alcanza en condiciones de carga, un analista genera un gráfico con puntos dispersos en el plano cartesiano. ¿Qué herramienta está utilizando y qué busca determinar?",
+    "opciones": [
+      {
+        "text": "Un diagrama de Gantt para verificar las fechas límite de entrega de repuestos.",
+        "rationale": "El diagrama de Gantt utiliza barras sobre una escala temporal y no representa pares de variables en un plano x-y.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un diagrama de dispersión para evaluar el grado de correlación entre las dos variables continuas.",
+        "rationale": "El gráfico de dispersión representa pares de datos numéricos para verificar si existe una relación directa, inversa o nula entre dos variables.",
+        "isCorrect": true
+      },
+      {
+        "text": "Un diagrama de Pareto para clasificar las quejas del cliente externo.",
+        "rationale": "El diagrama de Pareto ordena categorías discretas de fallas de mayor a menor frecuencia acumulada.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un esquema de Ishikawa para listar los componentes dañados en la caja de cambios.",
+        "rationale": "El diagrama de Ishikawa es un organizador cualitativo causa-efecto y no una gráfica con ejes cuantitativos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un gráfico de control de atributos para contar piezas aprobadas y rechazadas.",
+        "rationale": "Las gráficas de control supervisan la estabilidad en el tiempo con respecto a límites de control, no la correlación entre dos variables de operación.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el gráfico de nube de puntos empleado para evaluar si una variable crece cuando la otra varía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Antes de iniciar una intervención compleja de mantenimiento en una subestación eléctrica, el área técnica elabora un diagrama detallado de flujo de proceso. ¿Cuál es el propósito central de este recurso gráfico?",
+    "opciones": [
+      {
+        "text": "Calcular la indemnización económica que recibiría el personal en caso de accidente.",
+        "rationale": "Los diagramas de flujo establecen procedimientos técnicos operativos y no cálculos contables o legales de compensación.",
+        "isCorrect": false
+      },
+      {
+        "text": "Mapear de forma secuencial los pasos del procedimiento, identificando tareas, puntos de inspección, decisiones y responsables.",
+        "rationale": "El diagrama de flujo estandariza la ruta lógica de trabajo garantizando que se sigan las etapas de seguridad y verificación requeridas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Medir el espesor de la capa de pintura anticorrosiva de las estructuras metálicas.",
+        "rationale": "La medición de recubrimientos es una inspección física puntual y no la representación lógica de un proceso.",
+        "isCorrect": false
+      },
+      {
+        "text": "Emitir una factura comercial para el cobro del servicio a clientes finales.",
+        "rationale": "Las facturas son documentos de transacción comercial no vinculados a los diagramas de ingeniería de proceso.",
+        "isCorrect": false
+      },
+      {
+        "text": "Determinar la composición química exacta del cobre utilizado en los bobinados.",
+        "rationale": "La composición química se determina mediante análisis de materiales en laboratorio y no a través de un diagrama de flujo.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Busca la opción que habla de definir el camino paso a paso, con sus bifurcaciones de decisión y orden de ejecución.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la estructura de gestión de mantenimiento, se diferencian claramente las responsabilidades del Planner (Planificador) y del Supervisor. ¿Cuál es el enfoque central que define el rol del Planner de Mantenimiento?",
+    "opciones": [
+      {
+        "text": "Ejecutar directamente las reparaciones mecánicas con herramientas de mano en la zona de trabajo.",
+        "rationale": "La ejecución del trabajo físico en campo la realizan los técnicos bajo la guía del supervisor.",
+        "isCorrect": false
+      },
+      {
+        "text": "Analizar los manuales, definir los procedimientos paso a paso, estimar tiempos, repuestos, costos y preparar las Órdenes de Trabajo estructuradas.",
+        "rationale": "El Planner se enfoca en el \"qué\" y el \"cómo\" de manera anticipada, preparando los recursos y procedimientos para que el trabajo sea eficiente.",
+        "isCorrect": true
+      },
+      {
+        "text": "Negociar exclusivamente el contrato de venta del mineral procesado con los compradores internacionales.",
+        "rationale": "La comercialización del producto final es responsabilidad del departamento comercial o de ventas de la empresa.",
+        "isCorrect": false
+      },
+      {
+        "text": "Reemplazar al personal de seguridad en la vigilancia nocturna de las puertas de acceso a la mina.",
+        "rationale": "El Planner es un especialista técnico en gestión de activos y no personal de seguridad patrimonial.",
+        "isCorrect": false
+      },
+      {
+        "text": "Realizar la auditoría de estados financieros anuales ante las entidades tributarias.",
+        "rationale": "La auditoría fiscal la lideran contadores y auditores financieros, no los planificadores de mantenimiento.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Distingue entre quien prepara la estrategia, procedimientos e insumos antes de ir al campo y quien dirige la cuadrilla en sitio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el análisis del perfil operativo en planta, ¿qué competencias definen a un Programador de Mantenimiento respecto al balance de recursos?",
+    "opciones": [
+      {
+        "text": "Un perfil técnico orientado al laboratorio para analizar la viscosidad de los lubricantes.",
+        "rationale": "El laboratorio de aceites está a cargo de analistas tribológicos o químicos, no del programador de mantenimiento.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un perfil dinámico y gestor que coordina la ventana de tiempo, el balanceo de carga de trabajo, la disponibilidad de repuestos con almacén y la logística para cumplir el cronograma.",
+        "rationale": "El Programador se encarga del \"cuándo\" y \"con quién\", coordinando las fechas de parada, la llegada de insumos y la asignación de la mano de obra disponible.",
+        "isCorrect": true
+      },
+      {
+        "text": "Un especialista en la reparación de tarjetas electrónicas de sensores de temperatura.",
+        "rationale": "El mantenimiento electrónico especializado es función de los instrumentistas y técnicos de automatización.",
+        "isCorrect": false
+      },
+      {
+        "text": "El directivo encargado de redactar el reglamento interno de trabajo de la compañía.",
+        "rationale": "La redacción de reglamentos laborales corresponde al área de Recursos Humanos y Asesoría Legal.",
+        "isCorrect": false
+      },
+      {
+        "text": "El operador a cargo de conducir la maquinaria pesada dentro de la mina subterránea.",
+        "rationale": "La conducción del equipo es tarea del personal de operaciones de minado o transporte.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Enfócate en el rol que gestiona la agenda, cuadra los horarios, verifica que las piezas estén en bodega y coordina las paradas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "El mantenimiento basado en condiciones aplica el análisis en tiempo real de diversas variables en maquinaria crítica. ¿Cuáles de las siguientes situaciones representan aplicaciones típicas de esta estrategia?",
+    "opciones": [
+      {
+        "text": "Monitorear la amplitud y frecuencias espectrales de vibración en bombas centrífugas o compresores para detectar desalignment.",
+        "rationale": "El monitoreo de firma vibratoria identifica desbalances y desalineaciones antes de que se produzca el daño catastrófico.",
+        "isCorrect": true
+      },
+      {
+        "text": "Analizar la viscosidad y presencia de partículas metálicas en el aceite de motores de combustión de camiones mineros.",
+        "rationale": "La degradación del lubricante y el nivel de partículas de desgaste indican la salud interna del motor sin requerir su desmonte.",
+        "isCorrect": true
+      },
+      {
+        "text": "Realizar inspecciones termográficas en tableros eléctricos y subestaciones para detectar sobrecalentamientos por empalmes flojos.",
+        "rationale": "La detección de puntos calientes mediante infrarrojo identifica arcos imminentes o sobrecargas en circuitos energizados.",
+        "isCorrect": true
+      },
+      {
+        "text": "Reemplazar las piezas mecánicas de un equipo basándose únicamente en la intuición del operador sin tomar datos.",
+        "rationale": "El Mantenimiento Basado en la Condición exige datos medibles y parámetros objetivos, no suposiciones o intuiciones no sustentadas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Sustituir los neumáticos de la flota minera cada primer día del mes independientemente del kilometraje o desgaste de cocada.",
+        "rationale": "El cambio por fecha fija es preventivo por calendario y no basado en la medición del desgaste real (condición) del neumático.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica las actividades que se fundamentan en medir parámetros físicos reales (vibración, estado de fluido, temperatura) antes de intervenir.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al utilizar herramientas de Inteligencia Artificial como ChatGPT para apoyo en ingeniería de mantenimiento, ¿cuál es el propósito de realizar una adecuada personalización del perfil de usuario (custom instructions/prompting)?",
+    "opciones": [
+      {
+        "text": "Garantizar que la computadora funcione sin necesidad de conectarse a la red de energía eléctrica.",
+        "rationale": "La configuración de software no altera los requerimientos físicos de energía eléctrica del hardware informático.",
+        "isCorrect": false
+      },
+      {
+        "text": "Orientar al modelo de lenguaje para que adopte un rol técnico, ajuste su vocabulario, use un nivel de rigor adecuado y entregue respuestas especializadas.",
+        "rationale": "Al definir el perfil profesional y el nivel esperado, la IA filtra sus respuestas para ofrecer análisis estructurados de ingeniería en lugar de explicaciones generales.",
+        "isCorrect": true
+      },
+      {
+        "text": "Obligar a que la maquinaria pesada ejecute maniobras de desmonte de forma remota.",
+        "rationale": "El prompting en un chatbot genera texto/código y no se conecta directamente a la actuación mecánica de la maquinaria sin un sistema SCADA integrado.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminar la responsabilidad legal del ingeniero colegiado al firmar los planes de seguridad.",
+        "rationale": "La responsabilidad profesional y legal recae siempre en el profesional humano y no en la herramienta informática.",
+        "isCorrect": false
+      },
+      {
+        "text": "Aumentar automáticamente la capacidad de almacenamiento del disco duro de la laptop.",
+        "rationale": "Instruir a una IA no incrementa el espacio físico del disco duro del ordenador.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera cómo cambia la respuesta de la IA cuando le pides que actúe como un experto técnico en lugar de un usuario común.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis de información y redacción de informes técnicos de mantenimiento, ¿cuál es la ventaja distintiva de emplear plataformas como Perplexity en comparación con otros modelos generativos convencionales?",
+    "opciones": [
+      {
+        "text": "Permite mecanizar piezas en tornos CNC mediante conexión analógica directa.",
+        "rationale": "Perplexity es un motor de búsqueda y procesamiento del lenguaje, no un software de control numérico computarizado para tornos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Proporcionar respuestas fundamentadas en búsquedas web en tiempo real, acompañadas de citas y fuentes bibliográficas verificables.",
+        "rationale": "A diferencia de los modelos generativos puros, Perplexity contrasta la información en la web y adjunta los enlaces de origen para corroborar la validez técnica.",
+        "isCorrect": true
+      },
+      {
+        "text": "Funcionar como un variador de frecuencia físico para regular la velocidad de los motores de corriente alterna.",
+        "rationale": "Un variador de frecuencia es un equipo electrónico de potencia en campo, mientras que Perplexity es un sistema de software basado en IA.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar sensores de presión en los circuitos neumáticos.",
+        "rationale": "Las herramientas de investigación no reemplazan la captura física de variables mediante sensores en la planta.",
+        "isCorrect": false
+      },
+      {
+        "text": "Imprimir repuestos metálicos tridimensionales de forma inmediata sin insumos.",
+        "rationale": "La fabricación de repuestos requiere tecnologías de manufactura aditiva y material físico, no software de búsqueda.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en la herramienta que te indica exactamente de qué página web o documento técnico extrajo cada dato presentado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Las plataformas de Inteligencia Artificial de origen chino como Dixi y Kimi (Kiwan) ofrecen capacidades específicas orientadas a la analítica de datos. ¿Cuáles de las siguientes funcionalidades destacan en estos sistemas?",
+    "opciones": [
+      {
+        "text": "Inclusión de modos de \"pensamiento profundo\" (deep thinking) para razonar modelos matemáticos y cadenas lógicas complejas.",
+        "rationale": "El modo de razonamiento paso a paso permite a estas IAs estructurar modelos analíticos y resolver problemas complejos de forma transparente.",
+        "isCorrect": true
+      },
+      {
+        "text": "Capacidad para procesar, analizar e interconectar archivos extensos de hojas de cálculo con múltiples pestañas y grandes volúmenes de datos.",
+        "rationale": "Estas herramientas destacan en la lectura e interpretación directa de datos tabulares y documentos técnicos extensos cargados por el usuario.",
+        "isCorrect": true
+      },
+      {
+        "text": "Capacidad para generar representaciones visuales e imágenes detalladas a partir de descripciones sintácticas estructuradas.",
+        "rationale": "Estas plataformas integran motores generativos capaces de crear gráficos e imágenes conceptuales basadas en las instrucciones enviadas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Reparación remota de tarjetas electrónicas dañadas mediante la emisión de microondas desde la pantalla.",
+        "rationale": "El software no puede emitir radiación de potencia ni reparar físicamente componentes de hardware a través de un monitor.",
+        "isCorrect": false
+      },
+      {
+        "text": "Fabricación aditiva de piezas de acero en el taller sin requerir insumos de materia prima.",
+        "rationale": "La producción física exige insumos metálicos y maquinaria industrial; la IA actúa a nivel de procesamiento de información.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Enfócate en las funciones informáticas asociadas al análisis de tablas complejas, razonamiento de modelos y generación de contenido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-48",
+    "diplomado": "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al integrar la automatización, los sensores IoT, la analítica de Big Data y las herramientas de Inteligencia Artificial en el ciclo de mantenimiento, ¿cuál es el beneficio estratégico global que busca la empresa?",
+    "opciones": [
+      {
+        "text": "Aumentar la cantidad de paradas no programadas para mantener a los técnicos constantemente ocupados en taller.",
+        "rationale": "Las paradas no programadas generan grandes pérdidas económicas y son lo que la gestión moderna busca reducir al mínimo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Maximizar la disponibilidad, fiabilidad y vida útil de los activos, reduciendo costos operativos y mejorando la seguridad industrial.",
+        "rationale": "El objetivo supremo de la optimización del mantenimiento 4.0 es garantizar la máxima continuidad operacional al menor costo y con la mayor seguridad.",
+        "isCorrect": true
+      },
+      {
+        "text": "Desmantelar la infraestructura de la fábrica y regresar al trabajo artesanal manual sin electricidad.",
+        "rationale": "La Industria 4.0 busca profundizar la tecnología e integración digital, no el retroceso a fases preindustriales.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminar la necesidad de monitorear el consumo de combustible y lubricante de los equipos.",
+        "rationale": "El control de insumos y eficiencias energéticas es uno de los indicadores clave monitorizados por la analítica de datos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Incrementar los tiempos muertos de la maquinaria pesada durante las horas de mayor demanda de producción.",
+        "rationale": "La meta operativa es erradicar los tiempos muertos no planificados mediante el diagnóstico oportuno antes de la avería.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Reflexiona sobre la meta principal de cualquier planta industrial: producir de forma continua, segura y rentable.",
+    "activo": true
+  }
+]

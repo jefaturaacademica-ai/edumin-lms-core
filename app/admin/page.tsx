@@ -311,20 +311,14 @@ export default function AdminDashboard360() {
 
       {/* Área Principal de Contenido con Header Superior Institucional */}
       <div className="flex-1 flex flex-col overflow-hidden min-w-0 h-full">
-        <AdminHeader breadcrumb="Dashboard & Finanzas 360°" />
+        <AdminHeader breadcrumb="Dashboard y finanzas" />
         <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
           <div className="max-w-7xl mx-auto space-y-8">
           
           <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
-              <div className="flex items-center gap-2">
-                <span className="bg-indigo-100 dark:bg-indigo-950/80 text-indigo-800 dark:text-indigo-300 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider border border-indigo-200 dark:border-indigo-800">
-                  Mando Central 360°
-                </span>
-                <span className="text-slate-400 dark:text-slate-500 text-xs tabular-nums">• Estrategia Comercial & Deserción Cero</span>
-              </div>
-              <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mt-1 tracking-tight">
-                Dashboard 360° & Analítica Ejecutiva
+              <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+                Dashboard 360° y analítica ejecutiva
               </h1>
             </div>
 
@@ -337,7 +331,7 @@ export default function AdminDashboard360() {
                     : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800'
                 }`}
               >
-                <BarChart3 className="w-4 h-4" /> Analítica 360° & Retención
+                <BarChart3 className="w-4 h-4" /> Analítica y retención
               </button>
               <button 
                 onClick={() => setActiveTab('tesoreria')}

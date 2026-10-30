@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { ALL_DIPLOMADOS } from '@/lib/data/diplomadosData';
+import { obtenerTallerParaDiplomado } from '@/lib/utils/tallerAsignado';
 import { 
   LeccionRow, 
   normalizeLeccionRow, 
@@ -129,7 +130,7 @@ function getLocalCatalogoData() {
       tipo: 'diplomado',
       categoria: 'Diplomados Oficiales',
       num_modulos: modulosFormateados.length || 3,
-      taller_aplicable: 'Ninguno',
+      taller_aplicable: `${obtenerTallerParaDiplomado(titulo)?.codigo}: ${obtenerTallerParaDiplomado(titulo)?.titulo}`,
       docente: docenteDiplomado,
       duracion: '120 horas',
       imagen: ALL_DIPLOMADOS[index]?.imagen || '/assets/images/daem/gestion-minera.webp',
@@ -368,7 +369,9 @@ function reconstruirDiplomadosDesdeLecciones(leccionesRows: any[], cursosSupabas
       tipo: 'diplomado',
       categoria: 'Diplomados Oficiales',
       num_modulos: modulos.length || cursoExistente?.num_modulos || 3,
-      taller_aplicable: cursoExistente?.taller_aplicable || 'Ninguno',
+      taller_aplicable: (cursoExistente?.taller_aplicable && cursoExistente.taller_aplicable !== 'Ninguno') 
+        ? cursoExistente.taller_aplicable 
+        : `${obtenerTallerParaDiplomado(titulo)?.codigo}: ${obtenerTallerParaDiplomado(titulo)?.titulo}`,
       docente: docenteDiplomado,
       duracion: (cursoExistente?.horas || 325) + ' horas',
       horas: Number(cursoExistente?.horas) || 325,

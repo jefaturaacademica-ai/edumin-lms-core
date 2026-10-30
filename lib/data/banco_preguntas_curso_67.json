@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué se entiende por una crisis industrial en el ámbito de la gestión de organizaciones e infraestructuras?",
+    "opciones": [
+      {
+        "text": "Un evento inesperado, disruptivo y potencialmente catastrófico que afecta el normal funcionamiento de una industria y pone en riesgo recursos humanos, activos y el entorno.",
+        "isCorrect": true,
+        "rationale": "Las crisis industriales se distinguen de los incidentes menores por su carácter disruptivo, su alto impacto potencial sobre personas y bienes, y por sobrepasar los controles habituales."
+      },
+      {
+        "text": "Cualquier pequeña falla de mantenimiento preventivo que se resuelve dentro del mismo turno de trabajo sin alterar la producción.",
+        "isCorrect": false,
+        "rationale": "Las incidencias menores y manejables en el turno regular constituyen eventos operativos cotidianos, no eventos catastróficos o disruptivos a escala industrial."
+      },
+      {
+        "text": "Un proceso ordinario y programado de negociación salarial entre la directiva corporativa y la representación sindical.",
+        "isCorrect": false,
+        "rationale": "Las reuniones periódicas de negociación laboral forman parte de la gestión habitual de recursos humanos y no representan por sí mismas un evento catastrófico repentino."
+      },
+      {
+        "text": "Una fluctuación común en las ventas mensuales proyectadas debido a cambios previsibles en la estacionalidad del mercado.",
+        "isCorrect": false,
+        "rationale": "Las variaciones comerciales esperadas son contingencias de mercado estándar y no constituyen emergencias operativas o físicas disruptivas."
+      },
+      {
+        "text": "La sustitución planificada de maquinaria obsoleta por nuevos equipos dentro del presupuesto de inversión anual.",
+        "isCorrect": false,
+        "rationale": "El reemplazo programado de activos responde a la planificación estratégica ordinaria y no a una pérdida de control o evento inesperado."
+      }
+    ],
+    "hint": "Piensa en un evento inesperado que va más allá de un problema rutinario e interrumpe gravemente la operatividad y la seguridad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la evaluación de seguridad industrial, ¿cuál es la diferencia fundamental entre 'peligro' y 'riesgo'?",
+    "opciones": [
+      {
+        "text": "El peligro es la fuente o condición con potencial de causar daño, mientras que el riesgo combina la probabilidad de que ocurra un evento con la severidad de su impacto.",
+        "isCorrect": true,
+        "rationale": "El peligro existe de forma intrínseca en objetos o situaciones, mientras que el riesgo calcula la probabilidad de materialización del daño multiplicada por su gravedad."
+      },
+      {
+        "text": "El peligro es una estimación matemática de pérdidas financieras, mientras que el riesgo es únicamente el equipo de protección personal empleado.",
+        "isCorrect": false,
+        "rationale": "Confunde la probabilidad operacional con pérdidas puramente contables y reduce el riesgo al uso de indumentaria de protección."
+      },
+      {
+        "text": "El peligro se aplica a fallas tecnológicas, mientras que el riesgo se refiere exclusivamente a errores cometidos por seres humanos.",
+        "isCorrect": false,
+        "rationale": "Tanto el peligro como el riesgo aplican a factores tecnológicos, humanos, ambientales y procedimentales por igual."
+      },
+      {
+        "text": "El peligro es el resultado final de un desastre materializado, mientras que el riesgo es la alarma auditiva que suena en la planta.",
+        "isCorrect": false,
+        "rationale": "Invierte los conceptos al equiparar el peligro con el daño ya ocurrido y el riesgo con los mecanismos de señalización física."
+      },
+      {
+        "text": "Ambos conceptos son sinónimos exactos y pueden intercambiarse de forma indistinta en las matrices de evaluación.",
+        "isCorrect": false,
+        "rationale": "En la gestión técnica de seguridad, la distinción entre fuente de daño (peligro) y probabilidad/severidad (riesgo) es conceptualmente rigurosa y diferenciada."
+      }
+    ],
+    "hint": "Uno se refiere a la fuente latente con capacidad de causar daño, mientras que el otro mide la probabilidad e impacto de que ese daño ocurra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes situaciones corresponden a ejemplos de crisis tecnológicas en el entorno industrial?",
+    "opciones": [
+      {
+        "text": "Ciberataques mediante ransomware que paralizan la funcionalidad de las plataformas operativas o la logística de distribución.",
+        "isCorrect": true,
+        "rationale": "Los ataques informáticos vulneran la continuidad operativa digital y constituyen un tipo claro de crisis tecnológica."
+      },
+      {
+        "text": "Fallas generales e imprevistas en los sistemas automatizados de control causadas por cortes no programados de energía eléctrica.",
+        "isCorrect": true,
+        "rationale": "La interrupción del suministro eléctrico que afecta los sistemas automatizados interrumpe directamente la continuidad tecnológica e industrial."
+      },
+      {
+        "text": "Incendios en instalaciones provocados por el bloqueo deliberado de puertas de evacuación por negligencia humana.",
+        "isCorrect": false,
+        "rationale": "Este tipo de siniestro responde a deficiencias humanas o procedimentales en la seguridad física, catalogándose como una crisis humana o de protocolos."
+      },
+      {
+        "text": "Manipulación intencionada de pruebas de emisiones contaminantes para engañar a los organismos reguladores.",
+        "isCorrect": false,
+        "rationale": "El fraude en mediciones responde a decisiones gerenciales o corporativas deshonestas, lo que constituye una crisis organizacional o ética."
+      },
+      {
+        "text": "Inundaciones catastróficas generadas por tsunamis o maremotos que afectan las estructuras de la planta.",
+        "isCorrect": false,
+        "rationale": "Los eventos originados por fenómenos de la naturaleza corresponden a la categoría de crisis naturales."
+      }
+    ],
+    "hint": "Considera aquellas situaciones provocadas por fallos en sistemas digitales, energía o vulnerabilidades informáticas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la jerarquía de gestión de riesgos, ¿en qué consiste la medida preventiva denominada 'reducción de riesgo'?",
+    "opciones": [
+      {
+        "text": "En implementar acciones o controles diseñados para disminuir la probabilidad o frecuencia de que ocurra un incidente.",
+        "isCorrect": true,
+        "rationale": "La reducción de riesgo actúa de forma previa orientándose a evitar la ocurrencia mediante el control de la probabilidad."
+      },
+      {
+        "text": "En atenuar únicamente las consecuencias de un accidente una vez que este ya se ha producido.",
+        "isCorrect": false,
+        "rationale": "La atenuación de las consecuencias posteriores a un evento se define como mitigación del riesgo, no como reducción de su probabilidad."
+      },
+      {
+        "text": "En transferir la totalidad de la responsabilidad financiera de los daños a una entidad aseguradora.",
+        "isCorrect": false,
+        "rationale": "La transferencia financiera mediante pólizas de seguro no disminuye la probabilidad física de que ocurra un accidente en planta."
+      },
+      {
+        "text": "En eliminar totalmente la interacción de trabajadores con cualquier tipo de maquinaria en la fábrica.",
+        "isCorrect": false,
+        "rationale": "La eliminación absoluta de la actividad productiva no es una medida razonable de reducción de riesgo, sino la supresión del proceso mismo."
+      },
+      {
+        "text": "En redactar informes detallados exclusivamente después de que los trabajadores han sufrido lesiones.",
+        "isCorrect": false,
+        "rationale": "El registro posterior de lesiones es una medida reactiva de documentación, no una acción de reducción preventiva."
+      }
+    ],
+    "hint": "Se enfoca en disminuir la probabilidad de que el evento indeseado llegue a desencadenarse.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial de la metodología de análisis de riesgos conocida como HAZOP (Hazard and Operability Study)?",
+    "opciones": [
+      {
+        "text": "Identificar riesgos sistemáticos y desviaciones operativas en las variables de proceso que puedan desencadenar accidentes.",
+        "isCorrect": true,
+        "rationale": "El estudio HAZOP analiza metódicamente las desviaciones de parámetros (como presión o temperatura) en plantas industriales para evitar fallas catastróficas."
+      },
+      {
+        "text": "Calcular la indemnización monetaria exacta que debe otorgarse en caso de despido masivo de personal.",
+        "isCorrect": false,
+        "rationale": "HAZOP se centra en la seguridad de procesos y no en cálculos de compensación laboral o recursos humanos."
+      },
+      {
+        "text": "Reemplazar las inspecciones físicas de seguridad con encuestas de satisfacción dirigidas a los clientes.",
+        "isCorrect": false,
+        "rationale": "No evalúa la percepción comercial, sino la integridad técnica y la operatividad segura de los sistemas de proceso."
+      },
+      {
+        "text": "Diseñar la estrategia de publicidad y marketing para el lanzamiento de nuevos productos en el mercado.",
+        "isCorrect": false,
+        "rationale": "Es una herramienta de ingeniería de seguridad de procesos, completamente ajena al área de mercadotecnia."
+      },
+      {
+        "text": "Medir el desempeño financiero y el rendimiento de las inversiones bursátiles de la empresa.",
+        "isCorrect": false,
+        "rationale": "La metodología examina variables físicas de operación industrial, no indicadores de finanzas corporativas."
+      }
+    ],
+    "hint": "Es una técnica cualitativa sistemática muy utilizada en la industria química para identificar desviaciones en las variables de proceso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué establece la norma internacional ISO 31000 en el contexto de la gestión industrial?",
+    "opciones": [
+      {
+        "text": "Proporcionar principios y directrices generales para la identificación, análisis, evaluación y tratamiento sistemático del riesgo.",
+        "isCorrect": true,
+        "rationale": "La norma ISO 31000 sirve de marco rector universal para la estructura y proceso de gestión de riesgos en las empresas."
+      },
+      {
+        "text": "Certificar de manera exclusiva que los productos manufacturados no tengan ningún defecto estético de fábrica.",
+        "isCorrect": false,
+        "rationale": "El estándar se enfoca en el proceso integral de gestión de riesgos organizacionales y no en el control de calidad visual de productos."
+      },
+      {
+        "text": "Regular únicamente las especificaciones constructivas de recipientes de presión y calderas de vapor.",
+        "isCorrect": false,
+        "rationale": "Corresponde a códigos técnicos de ingeniería mecánica específicos y no al estándar general de administración de riesgos."
+      },
+      {
+        "text": "Fijar las escalas de salarios mínimos de obligatorio cumplimiento para los operadores de maquinaria.",
+        "isCorrect": false,
+        "rationale": "Los aspectos salariales dependen de normativas laborales nacionales y negociaciones, fuera del alcance del marco ISO 31000."
+      },
+      {
+        "text": "Garantizar que una red informática sea completamente inmune a cualquier virus o ataque cibernético.",
+        "isCorrect": false,
+        "rationale": "Proporciona pautas de gestión de riesgos en general, pero no constituye una garantía tecnológica de invulnerabilidad informática."
+      }
+    ],
+    "hint": "Proporciona las directrices globales y un marco general para gestionar cualquier tipo de riesgo en las organizaciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el monitoreo mediante salas de control (sistemas SCADA o DCS), ¿qué indican las alarmas de desviación de parámetros respecto a los valores umbral?",
+    "opciones": [
+      {
+        "text": "Advierten que las variables de proceso han superado los límites seguros permitidos y requieren acción oportuna para evitar un siniestro.",
+        "isCorrect": true,
+        "rationale": "Las alarmas operativas identifican desviaciones críticas respecto al umbral seguro para activar medidas correctivas de contención."
+      },
+      {
+        "text": "Confirman que el sistema ha alcanzado la máxima eficiencia y que no se requiere supervisión humana adicional.",
+        "isCorrect": false,
+        "rationale": "Una desviación de parámetro respecto al umbral es una señal de alerta indeseada, no una confirmación de funcionamiento óptimo."
+      },
+      {
+        "text": "Indican la aprobación definitiva de los informes de auditoría contable por parte del directorio.",
+        "isCorrect": false,
+        "rationale": "Los sensores de instrumentación en planta monitorean variables físicas y no procesos administrativos o contables."
+      },
+      {
+        "text": "Demuestran que se han eliminado de forma permanente todos los desacuerdos entre los trabajadores.",
+        "isCorrect": false,
+        "rationale": "Las señales de control de procesos informan sobre el estado técnico de los equipos, no sobre el clima interrelacional del personal."
+      },
+      {
+        "text": "Notifican el inicio del periodo oficial de mantenimiento anual sin necesidad de detener los motores.",
+        "isCorrect": false,
+        "rationale": "Las alarmas advierten sobre condiciones anómalas de operación y no constituyen avisos de calendario administrativo."
+      }
+    ],
+    "hint": "Alertan al operador de que las variables operativas han superado los límites normales, requiriendo acción antes de una falla grave.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple la práctica conocida como 'evaluación de riesgo de última hora' (o de último minuto)?",
+    "opciones": [
+      {
+        "text": "Servir como una barrera personal e individual donde el trabajador verifica su entorno y condiciones seguras antes de iniciar el trabajo.",
+        "isCorrect": true,
+        "rationale": "Es una revisión reflexiva y rápida de sentido común que realiza el trabajador justo antes de actuar para prevenir accidentes de última hora."
+      },
+      {
+        "text": "Constituir la firma obligatoria de un deslinde de responsabilidades legales ante un fiscal o notario.",
+        "isCorrect": false,
+        "rationale": "No se trata de un trámite legal punitivo, sino de una herramienta preventiva de autocuidado en el lugar de trabajo."
+      },
+      {
+        "text": "Reemplazar las reuniones de planificación y los permisos de trabajo escritos para tareas complejas.",
+        "isCorrect": false,
+        "rationale": "Complementa pero no sustituye las evaluaciones formales ni los permisos requeridos para trabajos de alto riesgo."
+      },
+      {
+        "text": "Elaborar el informe consolidado de daños materiales semanas después de ocurrido un desastre industrial.",
+        "isCorrect": false,
+        "rationale": "Es una medida estrictamente preventiva y previa al inicio de una tarea, no una investigación reactiva posterior."
+      },
+      {
+        "text": "Auditar los estados financieros de la empresa al cierre de cada ejercicio fiscal.",
+        "isCorrect": false,
+        "rationale": "Es una práctica de seguridad operativa en campo, sin relación con auditorías contables o financieras."
+      }
+    ],
+    "hint": "Es una comprobación breve e individual que realiza el propio trabajador inmediatamente antes de ejecutar la tarea.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Para lograr una comunicación de crisis externa transparente y efectiva, ¿cuál de las siguientes directrices es indispensable?",
+    "opciones": [
+      {
+        "text": "Contar con un portavoz único capacitado que transmita mensajes claros, basados en la verdad, la empatía y la responsabilidad.",
+        "isCorrect": true,
+        "rationale": "Un único portavoz entrenado evita contradicciones, proyecta competencia y asegura que los datos entregados a la opinión pública sean rigurosos."
+      },
+      {
+        "text": "Permitir que cualquier colaborador de la planta emita sus opiniones personales libremente a la prensa.",
+        "isCorrect": false,
+        "rationale": "La falta de centralización en la vocería genera rumores, especulaciones desinformadas y contradicciones que agravan la crisis."
+      },
+      {
+        "text": "Ocultar la existencia del evento a la opinión pública hasta que hayan transcurrido varios meses de investigación.",
+        "isCorrect": false,
+        "rationale": "La falta de información oportuna destruye la confianza pública, perjudica la reputación corporativa e incrementa la especulación."
+      },
+      {
+        "text": "Enviar comunicados exclusivamente mediante notas impresas colocadas en los periódicos murales de la empresa.",
+        "isCorrect": false,
+        "rationale": "La comunicación de crisis externa exige el uso de canales efectivos de difusión masiva y coordinación con autoridades y medios."
+      },
+      {
+        "text": "Negar categóricamente la ocurrencia del incidente aun cuando existan evidencias públicas irrefutables.",
+        "isCorrect": false,
+        "rationale": "La negación de hechos comprobados vulnera la transparencia, destruye la credibilidad institucional e incrementa las sanciones legales."
+      }
+    ],
+    "hint": "Evita la dispersión de mensajes centralizando la información en un representante capacitado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué lección fundamental en materia de seguridad operacional dejó el accidente de la plataforma Deepwater Horizon en 2010?",
+    "opciones": [
+      {
+        "text": "Que ignorar los protocolos de seguridad y saltarse la cadena de mando en decisiones clave puede provocar catástrofes humanas y ambientales masivas.",
+        "isCorrect": true,
+        "rationale": "El siniestro evidenció que la omisión de controles, las fallas en la comunicación jerárquica y el apuro operacional desencadenan pérdidas humanas y millonarias devastadoras."
+      },
+      {
+        "text": "Que las plataformas en el mar están totalmente exentas de sufrir incendios debido a la presencia de agua alrededor.",
+        "isCorrect": false,
+        "rationale": "Los hidrocarburos a alta presión representan un peligro extremo de explosión e incendio independientemente de estar en un entorno acuático."
+      },
+      {
+        "text": "Que los errores de operación en el sector de hidrocarburos solo generan pequeños gastos administrativos de fácil recuperación.",
+        "isCorrect": false,
+        "rationale": "Las consecuencias económicas del evento superaron los 65.000 millones de dólares, demostrando el impacto financiero masivo de una crisis industrial."
+      },
+      {
+        "text": "Que las decisiones tomadas en segundos en las salas de control jamás influyen en la vida de los trabajadores.",
+        "isCorrect": false,
+        "rationale": "La pérdida de 11 vidas en este evento demostró que las decisiones tomadas en fracciones de segundo tienen un impacto directo y fatal en la vida humana."
+      },
+      {
+        "text": "Que la automatización total elimina la necesidad de contar con personal capacitado en la toma de decisiones.",
+        "isCorrect": false,
+        "rationale": "El factor humano y el juicio riguroso de la línea jerárquica siguen siendo la última barrera crítica para evitar accidentes masivos."
+      }
+    ],
+    "hint": "Demostró las consecuencias catastróficas de omitir la consulta a jerarquías clave e incumplir protocolos establecidos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a señales de alerta de carácter organizacional o interno dentro de una planta industrial?",
+    "opciones": [
+      {
+        "text": "Incremento inusual y elevado en la tasa de rotación voluntaria e involuntaria de personal clave.",
+        "isCorrect": true,
+        "rationale": "La rotación excesiva evidencia problemas subyacentes de clima laboral, pérdida de conocimiento crítico y riesgo operativo."
+      },
+      {
+        "text": "Incumplimiento reiterado y sistemático de los procedimientos operativos estandarizados y normas de seguridad.",
+        "isCorrect": true,
+        "rationale": "Ignorar u omitir los procedimientos refleja la degradación de la disciplina operativa y aumenta la probabilidad de accidentes."
+      },
+      {
+        "text": "Inundaciones repentinas provocadas por maremotos en instalaciones costeras.",
+        "isCorrect": false,
+        "rationale": "Los tsunamis son eventos de origen natural y geofísico, no indicadores de comportamiento organizacional interno."
+      },
+      {
+        "text": "Modificaciones en las tasas de tributación aprobadas por el poder legislativo nacional.",
+        "isCorrect": false,
+        "rationale": "Las reformas fiscales representan factores regulatorios externos y no señales de clima u operación interna."
+      },
+      {
+        "text": "Ataques informáticos externos ejecutados por cibercriminales internacionales.",
+        "isCorrect": false,
+        "rationale": "Constituye una amenaza tecnológica de origen externo, diferente de los indicadores organizacionales humanos internos."
+      }
+    ],
+    "hint": "Son síntomas en la conducta colectiva, el desempeño laboral o el cumplimiento normativo que indican un deterioro previo a una crisis.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis de causa y consecuencia de riesgos, ¿cómo se representa gráficamente la información en el diagrama de Corbatín (Bowtie)?",
+    "opciones": [
+      {
+        "text": "Coloca las causas y controles preventivos a la izquierda, el evento de riesgo al centro y las consecuencias y controles de mitigación a la derecha.",
+        "isCorrect": true,
+        "rationale": "El esquema de Corbatín estructura de forma clara y lógica la secuencia de un riesgo, desde sus causas desencadenantes hasta sus efectos finales."
+      },
+      {
+        "text": "Ordena a los trabajadores en una estructura piramidal basada estrictamente en la antigüedad laboral.",
+        "isCorrect": false,
+        "rationale": "Esa representación corresponde a un organigrama de personal y no a la metodología Bowtie de análisis de riesgos."
+      },
+      {
+        "text": "Muestra un gráfico circular que divide los costos fijos y variables del presupuesto de producción.",
+        "isCorrect": false,
+        "rationale": "Los diagramas circulares financieros representan distribución presupuestaria, ajenos a la estructura de causas y consecuencias de un riesgo."
+      },
+      {
+        "text": "Dibuja un mapa interactivo con la ubicación satelital en tiempo real de las unidades de transporte.",
+        "isCorrect": false,
+        "rationale": "El rastreo GPS se utiliza para la gestión logística de flotas y no constituye la representación de la técnica Bowtie."
+      },
+      {
+        "text": "Presenta una matriz donde solo se registran los salarios asignados al personal ejecutivo de la planta.",
+        "isCorrect": false,
+        "rationale": "El enfoque del diagrama es la prevención y mitigación de eventos de riesgo, sin relación con tablas salariales corporativas."
+      }
+    ],
+    "hint": "Visualiza el evento central en el medio, disponiendo los desencadenantes a un lado y los impactos al otro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la reducción arbitraria del presupuesto destinado al mantenimiento preventivo constituye una señal de alerta técnica grave?",
+    "opciones": [
+      {
+        "text": "Porque incrementa la probabilidad de fallas mecánicas no detectadas que pueden amplificarse y desencadenar accidentes graves.",
+        "isCorrect": true,
+        "rationale": "Recortar el mantenimiento degrada la confiabilidad de los equipos, propiciando que pequeñas anomalías evolucionen hacia fallas catastróficas."
+      },
+      {
+        "text": "Porque asegura la obtención inmediata de certificados internacionales de gestión ambiental.",
+        "isCorrect": false,
+        "rationale": "Reducir el mantenimiento preventivo contraviene los estándares de certificación internacional y aumenta los riesgos operacionales."
+      },
+      {
+        "text": "Porque elimina la necesidad de contar con planes de contingencia ante emergencias en la planta.",
+        "isCorrect": false,
+        "rationale": "El deterioro de los activos por falta de mantenimiento exige mantener e intensificar la preparación para emergencias, no eliminarla."
+      },
+      {
+        "text": "Porque garantiza que los equipos funcionen más rápido sin necesidad de supervisión técnica.",
+        "isCorrect": false,
+        "rationale": "La falta de mantenimiento genera desgaste e ineficiencia, reduciendo el rendimiento operacional y la seguridad de la maquinaria."
+      },
+      {
+        "text": "Porque vuelve a los sistemas informáticos inmunes a cualquier vulnerabilidad cibernética.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento industrial físico y la ciberseguridad son dominios distintos; reducir presupuesto no otorga protección digital."
+      }
+    ],
+    "hint": "Al posponer las revisiones mecánicas periódicas, las fallas invisibles se acumulan y se amplifican con el tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define el concepto de 'conflicto' en el contexto de las relaciones organizacionales e industriales?",
+    "opciones": [
+      {
+        "text": "Una situación donde dos o más partes perciben que tienen metas, intereses u objetivos contrapuestos y sus acciones interfieren entre sí.",
+        "isCorrect": true,
+        "rationale": "El conflicto surge de la divergencia de intereses percibidos o reales acoplada a la interferencia mutua en las acciones de las partes."
+      },
+      {
+        "text": "Un estado permanente en el cual todos los miembros del equipo comparten exactamente los mismos criterios sin discrepancias.",
+        "isCorrect": false,
+        "rationale": "La coincidencia total de criterios describe un consenso uniforme, que es la condición opuesta a la existencia de un conflicto."
+      },
+      {
+        "text": "Un desastre natural impredecible originado exclusivamente por condiciones climáticas extremas.",
+        "isCorrect": false,
+        "rationale": "Un desastre natural es un evento meteorológico o geológico, mientras que el conflicto es una dinámica social e interpersonal."
+      },
+      {
+        "text": "Un procedimiento administrativo mediante el cual se otorgan licencias de descanso anual a los empleados.",
+        "isCorrect": false,
+        "rationale": "La gestión de descansos es un proceso ordinario de recursos humanos, no una situación de contraposición de intereses."
+      },
+      {
+        "text": "Una avería mecánica fortuita en un motor eléctrico que no guarda relación con decisiones humanas.",
+        "isCorrect": false,
+        "rationale": "Una falla puramente mecánica se clasifica como problema técnico u operativo, diferenciándose de las dinámicas de conflicto entre personas."
+      }
+    ],
+    "hint": "Ocurre cuando existen intereses, objetivos o deseos opuestos entre partes cuya interacción genera interferencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste un 'conflicto de procedimientos' dentro de una línea de producción o trabajo industrial?",
+    "opciones": [
+      {
+        "text": "En discrepancias acerca de los métodos, pasos o la manera en que deben ejecutarse y llevarse a cabo las tareas.",
+        "isCorrect": true,
+        "rationale": "Los conflictos procedimentales versan sobre la metodología o el proceso operativo a seguir para completar un trabajo."
+      },
+      {
+        "text": "En discusiones sobre el monto global que se pagará a los inversionistas en la distribución de utilidades.",
+        "isCorrect": false,
+        "rationale": "La distribución de utilidades corresponde a un ámbito de decisiones financieras alto nivel, no a conflictos procedimentales de operación."
+      },
+      {
+        "text": "En choques de carácter debidos a antipatías personales entre dos colaboradores de la misma área.",
+        "isCorrect": false,
+        "rationale": "Las incompatibilidades personales de carácter se enmarcan en la categoría de conflictos interpersonales."
+      },
+      {
+        "text": "En dilemas morales provocados por el incumplimiento de normativas de responsabilidad ambiental.",
+        "isCorrect": false,
+        "rationale": "Los cuestionamientos sobre principios éticos o compromisos sociales constituyen conflictos de valores."
+      },
+      {
+        "text": "En desacuerdos causados por barreras de idioma al comunicarse con filiales en el extranjero.",
+        "isCorrect": false,
+        "rationale": "Las dificultades idiomáticas son barreras de comunicación, que pueden suscitar tensión pero no definen el conflicto sobre métodos."
+      }
+    ],
+    "hint": "Esta desacuerdo se centra en la forma, los métodos o el 'cómo' deben ejecutarse las actividades de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué caracteriza a un 'conflicto de metas u objetivos' en la gestión departamental?",
+    "opciones": [
+      {
+        "text": "Ocurre cuando las partes difieren en los resultados finales que se buscan alcanzar o en las prioridades de logro.",
+        "isCorrect": true,
+        "rationale": "La discrepancia sobre las metas radica en el desacuerdo de los objetivos deseados por cada departamento o individuo."
+      },
+      {
+        "text": "Se origina únicamente por comentarios desobligantes expresados de forma informal durante el almuerzo.",
+        "isCorrect": false,
+        "rationale": "Las tensiones generadas por comentarios informales corresponden a aspectos de relaciones interpersonales y clima de convivencia."
+      },
+      {
+        "text": "Surge cuando se produce un fallo general en el suministro de energía eléctrica en las oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "Las interrupciones de servicios representan fallas de infraestructura tecnológica o pública, no discrepancias sobre metas."
+      },
+      {
+        "text": "Se debe a la falta de manuales impresos para la inducción del personal contratado.",
+        "isCorrect": false,
+        "rationale": "La carencia de material de inducción es una deficiencia de capacitación, distinta del conflicto por objetivos opuestos."
+      },
+      {
+        "text": "Corresponde a la disputa legal frente a un competidor por el uso no autorizado de una marca.",
+        "isCorrect": false,
+        "rationale": "Los litigios por propiedad intelectual son disputas legales externas y no choques sobre metas internas organizacionales."
+      }
+    ],
+    "hint": "Se origina cuando los involucrados difieren sobre *qué* resultados se deben alcanzar o cuáles deben ser las prioridades.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el origen principal de los conflictos interpersonales en las organizaciones?",
+    "opciones": [
+      {
+        "text": "Diferencias individuales en la personalidad, estilos de comunicación, emociones o percepciones entre los colaboradores.",
+        "isCorrect": true,
+        "rationale": "Las fricciones interpersonales surgen del choque entre las características de carácter, valores personales o formas de comunicarse de los individuos."
+      },
+      {
+        "text": "Incompatibilidades exclusivamente informáticas entre diferentes versiones de sistemas operativos.",
+        "isCorrect": false,
+        "rationale": "Las fallas de compatibilidad de software son problemas informáticos, no conflictos interpersonales entre individuos."
+      },
+      {
+        "text": "Errores numéricos involuntarios cometidos al calcular la depreciación contable de los activos.",
+        "isCorrect": false,
+        "rationale": "Las equivocaciones en cálculos contables son desaciertos de procesamiento de datos y no disputas de carácter interpersonal."
+      },
+      {
+        "text": "Fallas de calibración física en los instrumentos de medición de presión de una planta.",
+        "isCorrect": false,
+        "rationale": "Las descalibraciones son incidencias técnicas de instrumentación que no involucran aspectos interpersonales."
+      },
+      {
+        "text": "La ocurrencia de terremotos que dañan la estructura física del centro de trabajo.",
+        "isCorrect": false,
+        "rationale": "Los desastres telúricos son eventos naturales geofísicos, no desencadenantes de dinámicas de personalidad."
+      }
+    ],
+    "hint": "Tienen su raíz en las diferencias de carácter, estilo de comunicación, percepciones o antipatías individuales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué define a un 'conflicto estructural' dentro de una empresa industrial?",
+    "opciones": [
+      {
+        "text": "Se deriva de un diseño organizacional deficiente, como roles mal definidos, jerarquías ambiguas o duplicidad de funciones.",
+        "isCorrect": true,
+        "rationale": "Los conflictos estructurales son provocados por el marco de la organización (roles, autoridad, recursos) cuando genera fricción en las operaciones."
+      },
+      {
+        "text": "Se refiere exclusivamente a la ruptura física de vigas o pilares en la estructura de concreto de la fábrica.",
+        "isCorrect": false,
+        "rationale": "Confunde la estructura organizativa (diseño de cargos) con la estructura civil o arquitectónica del inmueble."
+      },
+      {
+        "text": "Es el resultado directo de la incorrecta manipulación de sustancias químicas tóxicas en los laboratorios.",
+        "isCorrect": false,
+        "rationale": "El mal manejo de insumos químicos representa un riesgo de seguridad química u operacional, no un defecto estructural organizativo."
+      },
+      {
+        "text": "Surge cuando dos colaboradores compiten amistosamente en un torneo deportivo corporativo.",
+        "isCorrect": false,
+        "rationale": "La competencia deportiva sana forma parte de actividades de integración y no refleja fallas de estructura en la empresa."
+      },
+      {
+        "text": "Corresponde a la variación de precios entre dos proveedores externos de servicios de internet.",
+        "isCorrect": false,
+        "rationale": "Las diferencias tarifarias de proveedores externos son asuntos de compras y negociación mercantil, no de estructura interna."
+      }
+    ],
+    "hint": "Proviene de deficiencias en el diseño de la organización, como la falta de claridad en jerarquías o la superposición de roles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto corporativo, ¿qué implica la existencia de un 'conflicto de valores'?",
+    "opciones": [
+      {
+        "text": "Una confrontación basada en desacuerdos sobre principios éticos, códigos morales o estándares de responsabilidad corporativa.",
+        "isCorrect": true,
+        "rationale": "Este conflicto surge cuando las acciones o políticas de la empresa o colaboradores colisionan con las convicciones éticas o morales de las partes."
+      },
+      {
+        "text": "Un error involuntario al momento de emitir las facturas de cobro a los clientes.",
+        "isCorrect": false,
+        "rationale": "Las equivocaciones en la facturación representan fallas administrativas operativas, sin trasfondo ético o de principios."
+      },
+      {
+        "text": "La falta de espacio físico en los almacenes para guardar inventario excedente.",
+        "isCorrect": false,
+        "rationale": "El déficit de capacidad en almacenes constituye un problema de gestión logística, ajeno a los conflictos de valores."
+      },
+      {
+        "text": "La diferencia de opinión respecto a la graduación adecuada de la temperatura del aire acondicionado.",
+        "isCorrect": false,
+        "rationale": "Las preferencias sobre el confort ambiental en la oficina son discrepancias de comodidad cotidiana, no dilemas éticos morales."
+      },
+      {
+        "text": "La interrupción temporal del servicio de telefonía debido a problemas con la proveedora.",
+        "isCorrect": false,
+        "rationale": "La caída de un servicio de telecomunicaciones es una falla técnica del proveedor, sin carga de valores éticos."
+      }
+    ],
+    "hint": "Se manifiesta cuando colisionan principios éticos, convicciones morales o estándares de responsabilidad social.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes situaciones constituyen indicadores tempranos de que un conflicto interno se está escalando negativamente en la planta?",
+    "opciones": [
+      {
+        "text": "Deterioro evidente y progresivo en la calidad de la comunicación entre jefaturas y colaboradores.",
+        "isCorrect": true,
+        "rationale": "La ruptura o enfriamiento en los canales de comunicación es un síntoma claro del escalamiento del conflicto."
+      },
+      {
+        "text": "Formación de subgrupos antagónicos o facciones enfrentadas dentro del equipo de trabajo.",
+        "isCorrect": true,
+        "rationale": "La polarización en bandos opuestos fragmenta la cohesión del equipo y evidencia un agravamiento del conflicto."
+      },
+      {
+        "text": "Disminución en el rendimiento operativo e incremento indeseado en las tasas de ausentismo.",
+        "isCorrect": true,
+        "rationale": "El desgaste emocional derivado del conflicto no resuelto se traduce en falta de compromiso, menor productividad y ausencias."
+      },
+      {
+        "text": "Aumento sostenido en los índices de eficiencia de producción sin registrarse ninguna queja.",
+        "isCorrect": false,
+        "rationale": "La alta productividad y la ausencia de reclamos reflejan un ambiente funcional, no un conflicto escalado."
+      },
+      {
+        "text": "Obtención de premios internacionales por haber logrado el mejor clima laboral del sector.",
+        "isCorrect": false,
+        "rationale": "El reconocimiento por excelente clima laboral es opuesto a la existencia de dinámicas conflictivas no resueltas."
+      }
+    ],
+    "hint": "Busca conductas grupales y métricas operativas que reflejen deterioro en la convivencia y el rendimiento laboral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a métodos formales para la resolución de conflictos en el ámbito organizacional?",
+    "opciones": [
+      {
+        "text": "Negociación directa entre las partes orientada a buscar puntos de acuerdo.",
+        "isCorrect": true,
+        "rationale": "La negociación directa es un proceso básico donde las partes dialogan para gestionar sus diferencias y buscar acuerdos."
+      },
+      {
+        "text": "Mediación conducida por un tercero neutral que facilita el diálogo sin imponer la solución.",
+        "isCorrect": true,
+        "rationale": "La mediación utiliza a un tercero imparcial para restablecer la comunicación y guiar a las partes hacia una solución mutuamente aceptable."
+      },
+      {
+        "text": "Arbitraje formal en el cual un tercero especialista analiza el caso y emite una decisión vinculante.",
+        "isCorrect": true,
+        "rationale": "El arbitraje otorga a un tercero la facultad de dictaminar una resolución obligatoria cuando las partes no logran acordar voluntariamente."
+      },
+      {
+        "text": "Uso de descalificaciones públicas y hostigamiento (scratched) en redes sociales contra la contraparte.",
+        "isCorrect": false,
+        "rationale": "El acoso o desprestigio público constituye una agresión que destruye el diálogo y agrava destructivamente la controversia."
+      },
+      {
+        "text": "Ignorar indefinidamente los reclamos del personal esperando que los involucrados renuncien voluntariamente.",
+        "isCorrect": false,
+        "rationale": "La evasión intencionada no resuelve las causas de fondo y genera un deterioro sostenido en la cultura organizacional."
+      }
+    ],
+    "hint": "Incluyen alternativas de diálogo asistido, negociación o decisiones emitidas por terceros calificados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la orientación principal de la herramienta de Coaching cuando se aplica a la resolución de conflictos interpersonales?",
+    "opciones": [
+      {
+        "text": "Acompañar a las partes a establecer metas futuras y superar barreras de conducta, sin enfocar la intervención en la terapia sobre el pasado.",
+        "isCorrect": true,
+        "rationale": "El coaching laboral mira hacia adelante, ayudando a las personas a asumir responsabilidad, modificar conductas y proyectar metas constructivas."
+      },
+      {
+        "text": "Asignar culpas de inmediato y aplicar sanciones monetarias sin escuchar a los colaboradores.",
+        "isCorrect": false,
+        "rationale": "El coaching no es una medida disciplinaria ni punitiva, sino un proceso de desarrollo centrado en conversaciones y compromisos."
+      },
+      {
+        "text": "Prescribir medicamentos para reducir el estrés de los colaboradores involucrados en el problema.",
+        "isCorrect": false,
+        "rationale": "La prescripción médica es competencia exclusiva de la psiquiatría y la medicina, totalmente ajena al rol del coaching organizativo."
+      },
+      {
+        "text": "Sustituir a los abogados laboralistas en las audiencias judiciales dictando sentencias formales.",
+        "isCorrect": false,
+        "rationale": "El coach no ejerce la abogacía ni dicta resoluciones legales, sino que facilita la toma de conciencia individual."
+      },
+      {
+        "text": "Elaborar y auditar los estados financieros de la empresa al término del ejercicio fiscal.",
+        "isCorrect": false,
+        "rationale": "El coaching se centra en competencias conductuales y relaciones interpersonales, no en la contabilidad financiera de la empresa."
+      }
+    ],
+    "hint": "Se enfoca en el desarrollo futuro y en el compromiso individual, en lugar de realizar indagaciones terapéuticas sobre el pasado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el enfoque de 'negociación integrativa' al abordar disputas de trabajo?",
+    "opciones": [
+      {
+        "text": "En buscar soluciones de tipo 'ganar-ganar' que creen valor y logren satisfacer los intereses fundamentales de ambas partes.",
+        "isCorrect": true,
+        "rationale": "La negociación integrativa busca cooperar para 'agrandar el pastel', encontrando opciones creativas donde ambas partes obtengan beneficios sustanciales."
+      },
+      {
+        "text": "En imponer rigurosamente la postura de la gerencia mediante el uso de la autoridad sin ceder en ningún punto.",
+        "isCorrect": false,
+        "rationale": "Imponer una postura unilateral corresponde a una estrategia distributiva o de dominación ('ganar-perder'), opuesta a la integración."
+      },
+      {
+        "text": "En dividir inmediatamente los bienes de la empresa para proceder al cierre definitivo de la planta.",
+        "isCorrect": false,
+        "rationale": "La negociación integrativa persigue la sostenibilidad y mejora de las relaciones laborales continuas, no la liquidación de activos."
+      },
+      {
+        "text": "En ceder incondicionalmente ante todas las demandas planteadas por la contraparte para no discutir.",
+        "isCorrect": false,
+        "rationale": "Ceder totalmente sin defender los propios intereses describe una postura de acomodación pasiva o sumisión, no un acuerdo integrativo equilibrado."
+      },
+      {
+        "text": "En posponer las reuniones de diálogo indefinidamente confiando en que el tiempo diluya el conflicto.",
+        "isCorrect": false,
+        "rationale": "La dilación intencionada representa una conducta de evación, la cual no busca construir valor ni negociar activamente."
+      }
+    ],
+    "hint": "Es una estrategia orientada al beneficio mutuo (ganar-ganar) donde se amplía el valor para satisfacer los intereses de ambas partes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con modelos de gestión como el de Toyota, ¿cómo contribuyen las herramientas de gestión visual (como paneles o pizarras de seguimiento) a la resolución de conflictos?",
+    "opciones": [
+      {
+        "text": "Aportan transparencia haciendo visibles los problemas operativos y permitiendo el seguimiento abierto del estado de los acuerdos.",
+        "isCorrect": true,
+        "rationale": "La gestión visual objetiva los problemas en paneles compartidos, evitando interpretaciones sesgadas y enfocando al equipo en la resolución de las tareas."
+      },
+      {
+        "text": "Ocultan las fallas operativas para evitar que los clientes externos conozcan las dificultades de la fábrica.",
+        "isCorrect": false,
+        "rationale": "La gestión visual busca la máxima visibilidad interna de los problemas para corregirlos, no el ocultamiento de las fallas."
+      },
+      {
+        "text": "Sustituyen por completo la necesidad de mantener conversaciones o reuniones de coordinación entre las personas.",
+        "isCorrect": false,
+        "rationale": "Las herramientas visuales sirven de soporte y guía para el diálogo efectivo, pero no reemplazan la interacción humana directa."
+      },
+      {
+        "text": "Cumplen un rol puramente estético y decorativo en las paredes del recinto industrial.",
+        "isCorrect": false,
+        "rationale": "Tienen un propósito operativo funcional para la toma de decisiones y el control del trabajo, lejos de ser adornos visuales."
+      },
+      {
+        "text": "Eximen a la organización de pagar los impuestos correspondientes a las ganancias del periodo.",
+        "isCorrect": false,
+        "rationale": "Las pautas visuales de planta son metodologías de trabajo interno y carecen de vinculación con las obligaciones tributarias corporativas."
+      }
+    ],
+    "hint": "Hacen que los problemas y su estado de solución sean visibles y transparentes para todo el equipo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué lección de alineación organizacional ofrece el caso de cultura y relaciones laborales en plantas como las de Procter & Gamble descrito en clase?",
+    "opciones": [
+      {
+        "text": "Que al alinear a directivos y trabajadores en un mismo propósito corporativo, las representaciones laborales pueden presentar pliegos de propuestas de mejora en lugar de solo reclamos.",
+        "isCorrect": true,
+        "rationale": "Cuando se construye una cultura de metas compartidas, el diálogo sindical se transforma en aportes de valor y ganancias mutuas sobre la eficiencia operacional."
+      },
+      {
+        "text": "Que la única manera de evitar disputas es prohibir la libre asociación y eliminar los grupos representativos de trabajadores.",
+        "isCorrect": false,
+        "rationale": "El caso enseña la integración y cooperación mutua entre sindicato y gerencia, no la supresión de los derechos laborales de asociación."
+      },
+      {
+        "text": "Que la alta directiva nunca debe involucrarse ni conocer los detalles operacionales de las plantas.",
+        "isCorrect": false,
+        "rationale": "El modelo exitoso requiere que las gerencias conozcan la operación real para validar y respaldar las propuestas de mejora del personal."
+      },
+      {
+        "text": "Que las negociaciones laborales deben mantenerse en secreto sin informar a la base de trabajadores.",
+        "isCorrect": false,
+        "rationale": "La transparencia y el entendimiento compartido son la base para que el personal se comprometa con los planes de incremento de productividad."
+      },
+      {
+        "text": "Que los incrementos de producción se logran únicamente aumentando las horas de trabajo sin otorgar descansos.",
+        "isCorrect": false,
+        "rationale": "El incremento sostenido de la productividad se basa en la optimización procedimental y la cooperación, no en la explotación de la jornada laboral."
+      }
+    ],
+    "hint": "Demuestra que cuando todos asumen estar en el mismo barco, la representación laboral presenta propuestas de mejora operacional en lugar de meros reclamos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica distintiva que diferencia una crisis industrial de un incidente operativo cotidiano?",
+    "opciones": [
+      {
+        "text": "Afecta la operatividad mediante la pérdida de control sobre procedimientos establecidos y exige medidas extraordinarias para su contención y recuperación.",
+        "isCorrect": true,
+        "rationale": "Una crisis industrial se define por ser un evento disruptivo e inesperado que supera la capacidad de respuesta rutinaria y pone en riesgo la supervivencia operativa, reputacional y humana de la organización."
+      },
+      {
+        "text": "Representa una desviación menor que se resuelve utilizando exclusivamente el presupuesto asignado al mantenimiento rutinario del área.",
+        "isCorrect": false,
+        "rationale": "Los desvíos menores atendidos por mantenimiento preventivo o correctivo básico constituyen desviaciones operativas normales, no eventos de crisis."
+      },
+      {
+        "text": "Involucra únicamente daños materiales menores en la infraestructura sin comprometer la integridad física del personal ni el entorno.",
+        "isCorrect": false,
+        "rationale": "Los daños materiales menores sin riesgo humano o ambiental corresponden a fallas de activos simples que no alcanzan el nivel catastrófico o disruptivo de una crisis."
+      },
+      {
+        "text": "Constituye un evento altamente predecible que se soluciona aplicando los canales formales de comunicación interna habituales.",
+        "isCorrect": false,
+        "rationale": "La imprevisibilidad y la disrupción sobre los canales habituales son rasgos esenciales de una crisis, requiriendo protocolos extraordinarios de contingencia."
+      },
+      {
+        "text": "Se limita a interrupciones temporales en los servidores informáticos sin impacto alguno en la reputación o continuidad de la planta.",
+        "isCorrect": false,
+        "rationale": "Una interrupción informática sin repercusiones operativas ni reputacionales es una falla de TI de bajo impacto, no una crisis industrial."
+      }
+    ],
+    "hint": "Piense en el grado de disrupción sobre los procedimientos normales y la necesidad de activar protocolos de contingencia no rutinarios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la catástrofe de la plataforma Deepwater Horizon en 2010, ¿cuál fue la falla operativa determinante en la cadena de mando que desencadenó el evento?",
+    "opciones": [
+      {
+        "text": "La omisión intencionada de las alarmas sonoras de presión por parte del personal de guardia.",
+        "isCorrect": false,
+        "rationale": "El origen crítico no estuvo en ignorar alarmas auditivas, sino en vacíos de información e interpretación en la toma de decisiones al saltarse niveles jerárquicos."
+      },
+      {
+        "text": "La toma de decisiones apresurada saltándose la jerarquía técnica responsable de monitorear variables clave en las tuberías y las mareas.",
+        "isCorrect": true,
+        "rationale": "La toma de decisiones en segundos sin consultar al nivel jerárquico especializado que conocía los riesgos de la toma subacuática provocó el descontrol de la pozo y la posterior explosión."
+      },
+      {
+        "text": "La ausencia total de protocolos de seguridad escritos dentro de las instalaciones petroleras de la empresa.",
+        "isCorrect": false,
+        "rationale": "Los protocolos de seguridad sí existían en la organización, pero fueron vulnerados al omitir el paso jerárquico de validación."
+      },
+      {
+        "text": "El colapso estructural originado por un fenómeno sísmico submarino no detectado por los sensores.",
+        "isCorrect": false,
+        "rationale": "El accidente fue de origen meramente operacional y humano, no consecuencia de un desastre natural o movimiento telúrico."
+      },
+      {
+        "text": "Un ciberataque externo que alteró remotamente los parámetros de la torre de extracción.",
+        "isCorrect": false,
+        "rationale": "La investigación del evento confirmó fallas operativas y procedimentales internas, descartando intervenciones maliciosas de ciberseguridad."
+      }
+    ],
+    "hint": "Considere la omisión de consultas con la jefatura técnica encargada del seguimiento del comportamiento marino y las líneas de flujo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes escenarios se clasifican como crisis tecnológicas u organizacionales en el entorno industrial?",
+    "opciones": [
+      {
+        "text": "Paralización del transporte de insumos debido a un ataque de ransomware contra los sistemas de control de flujo.",
+        "isCorrect": true,
+        "rationale": "Los ciberataques que secuestran sistemas de información u operación constituyen una tipología clara de crisis tecnológica moderna."
+      },
+      {
+        "text": "Encubrimiento y manipulación deliberada de pruebas de emisiones contaminantes por parte de altos ejecutivos.",
+        "isCorrect": true,
+        "rationale": "Las decisiones gerenciales fraudulentas y la corrupción corporativa representan crisis de índole organizacional."
+      },
+      {
+        "text": "Incendio en instalaciones industriales originado por la omisión sistemática de normas de seguridad laboral.",
+        "isCorrect": false,
+        "rationale": "Los accidentes graves causados por fallas en la gestión de seguridad y negligencia directa se encuadran como crisis de origen humano."
+      },
+      {
+        "text": "Daños estructurales severos en un reactor nuclear provocados por el impacto de un tsunami.",
+        "isCorrect": false,
+        "rationale": "Los eventos provocados por fuerzas telúricas o climáticas extremas corresponden a la categoría de crisis naturales."
+      },
+      {
+        "text": "Paro nacional del gremio de camioneros que paraliza la logística industrial de un país.",
+        "isCorrect": false,
+        "rationale": "Los conflictos laborales generalizados y las huelgas de transporte se clasifican dentro de las crisis sociales y políticas."
+      }
+    ],
+    "hint": "Diferencie las fallas en sistemas de software o gobernanza corporativa de las causas humanas, naturales o socio-políticas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué un ataque de tipo ransomware contra una empresa distribuidora de combustible constituye una crisis de tipo tecnológico?",
+    "opciones": [
+      {
+        "text": "Porque daña mecánicamente las tuberías y válvulas físicas por sobrecalentamiento imprevisto.",
+        "isCorrect": false,
+        "rationale": "El ransomware bloquea lógica y digitalmente el software de gestión, pero no destruye directamente componentes mecánicos pesados."
+      },
+      {
+        "text": "Porque invalida el control operacional y la logística de distribución al secuestrar los sistemas de información.",
+        "isCorrect": true,
+        "rationale": "Al inhabilitar los sistemas digitales de monitoreo y facturación, se paraliza la capacidad de transporte e interrumpe el suministro a gran escala."
+      },
+      {
+        "text": "Porque altera las variables climáticas del entorno afectando la presión de los tanques de reserva.",
+        "isCorrect": false,
+        "rationale": "Un ciberataque actúa en el dominio cibernético y no influye sobre las variables atmosféricas externas."
+      },
+      {
+        "text": "Porque destruye la reputación del producto sin generar impacto alguno en las operaciones físicas de la planta.",
+        "isCorrect": false,
+        "rationale": "El efecto primario es la parálisis de la infraestructura operativa y logística, lo que subsecuentemente afecta la reputación."
+      },
+      {
+        "text": "Porque provoca el colapso inmediato de las estructuras sindicales internas de la organización.",
+        "isCorrect": false,
+        "rationale": "Las organizaciones sindicales se relacionan con el ámbito social y de recursos humanos, no con el secuestro de software operativo."
+      }
+    ],
+    "hint": "Enfoque su análisis en cómo el secuestro de datos altera la continuidad operacional y el control del transporte.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La metodología FMEA (Análisis de Modo y Efecto de Fallas) evalúa los riesgos operacionales considerando principalmente tres variables técnicas. ¿Cuáles son?",
+    "opciones": [
+      {
+        "text": "Frecuencia, costo de reemplazo y tiempo de inactividad.",
+        "isCorrect": false,
+        "rationale": "Aunque el costo y el tiempo son métricas de negocio, el marco formal de FMEA utiliza parámetros específicos de la falla."
+      },
+      {
+        "text": "Severidad, ocurrencia y detectabilidad de la falla potencial.",
+        "isCorrect": true,
+        "rationale": "El FMEA cuantifica el nivel de riesgo combinando la gravedad del efecto (severidad), la probabilidad de que suceda (ocurrencia) y la facilidad para identificar la falla antes de que impacte (detectabilidad)."
+      },
+      {
+        "text": "Probabilidad de huelga, impacto en la prensa y factibilidad legal.",
+        "isCorrect": false,
+        "rationale": "Estas variables pertenecen a análisis de riesgo político, social o reputacional, no al marco FMEA de procesos y productos."
+      },
+      {
+        "text": "Antigüedad del equipo, margen de ganancia y capacidad de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Estos son indicadores financieros y de activos fijos, ajenos a la evaluación técnica de modos de falla del FMEA."
+      },
+      {
+        "text": "Vulnerabilidad sísmica, disponibilidad de seguros y nivel de automatización.",
+        "isCorrect": false,
+        "rationale": "Factores externos como la vulnerabilidad sísmica o pólizas no forman parte del cálculo estándar del FMEA."
+      }
+    ],
+    "hint": "Recuerde los tres criterios con los que se calcula el Número de Prioridad de Riesgo (RPN) en los procesos y productos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito central del estudio de operabilidad y peligros conocidos como HAZOP en instalaciones industriales complejas?",
+    "opciones": [
+      {
+        "text": "Revisar los estados financieros para detectar inconsistencias presupuestarias en el mantenimiento de activos.",
+        "isCorrect": false,
+        "rationale": "La metodología HAZOP es una herramienta estrictamente de ingeniería y seguridad de procesos, no de auditoría contable."
+      },
+      {
+        "text": "Identificar riesgos sistemáticos derivados de pequeñas desviaciones en las condiciones iniciales del proceso que pueden amplificarse.",
+        "isCorrect": true,
+        "rationale": "HAZOP evalúa cómo las desviaciones menores en variables operativas (como flujo, temperatura o presión) se propagan y amplifican en el sistema hasta causar siniestros."
+      },
+      {
+        "text": "Mapear los conflictos interpersonales entre los jefes de turno para reestructurar el clima laboral.",
+        "isCorrect": false,
+        "rationale": "El análisis HAZOP se enfoca en las variables físicas y operativas del proceso, no en la conducta ni relaciones humanas."
+      },
+      {
+        "text": "Diseñar las campañas de comunicación institucional tras un desastre ambiental consumado.",
+        "isCorrect": false,
+        "rationale": "HAZOP es un método analítico preventivo de diseño y operación, no un plan de respuesta a medios tras una crisis."
+      },
+      {
+        "text": "Clasificar los equipos mecánicos únicamente según su valor comercial de reposición.",
+        "isCorrect": false,
+        "rationale": "La valoración financiera de activos no guarda relación con el análisis cualitativo de desviaciones del método HAZOP."
+      }
+    ],
+    "hint": "Piense en el análisis de variables de proceso sensibles a las condiciones iniciales y cómo pequeñas variaciones generan un efecto cadena.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el modelo visual de evaluación de riesgos denominado Bow-Tie (Pajarita), ¿cómo se organizan estructuralmente los componentes del análisis?",
+    "opciones": [
+      {
+        "text": "Las consecuencias se ubican a la izquierda, los costos operacionales al centro y la probabilidad a la derecha.",
+        "isCorrect": false,
+        "rationale": "El lado izquierdo se reserva para las causas que originan el evento crítico, no para sus consecuencias finales."
+      },
+      {
+        "text": "Las causas o amenazas se posicionan a la izquierda, el evento del riesgo al centro, y las consecuencias a la derecha, flanqueadas por controles preventivos y mitigantes.",
+        "isCorrect": true,
+        "rationale": "El diagrama Bow-Tie conecta las causas (izquierda) con el evento central de pérdida de control, y este con las consecuencias (derecha), mostrando los barreras preventivas y de mitigación."
+      },
+      {
+        "text": "Los factores de riesgo tecnológico se colocan arriba, los humanos al centro y los ambientales en la base.",
+        "isCorrect": false,
+        "rationale": "El esquema Bow-Tie no se organiza verticalmente por tipo de riesgo, sino de forma horizontal secuencial en relación con el evento principal."
+      },
+      {
+        "text": "Los controles de mitigación van a la izquierda y los de prevención a la derecha sin vincularse a un evento central.",
+        "isCorrect": false,
+        "rationale": "Los controles preventivos preceden al evento (izquierda) mientras que los mitigantes van después de que el evento ocurre (derecha)."
+      },
+      {
+        "text": "Las sanciones legales se muestran a la izquierda y las pérdidas de vidas humanas en el extremo opuesto sin considerar controles.",
+        "isCorrect": false,
+        "rationale": "El modelo exige explícitamente la identificación de barreras y controles en ambos lados del diagrama."
+      }
+    ],
+    "hint": "Imagine la forma del corbatín: las amenazas previas ingresan por un lado, convergen en el nudo o evento principal y se ramifican hacia los impactos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Desde la perspectiva técnica de la seguridad industrial, ¿cuál es la diferencia conceptual entre un peligro y un riesgo?",
+    "opciones": [
+      {
+        "text": "El peligro es la probabilidad de ocurrencia de un siniestro, mientras que el riesgo es la pérdida económica sufrida.",
+        "isCorrect": false,
+        "rationale": "La probabilidad de ocurrencia es una dimensión del riesgo, no la definición técnica de peligro."
+      },
+      {
+        "text": "El peligro es una fuente o condición inherente con potencial de causar daño, mientras que el riesgo es la probabilidad de que ese daño se materialice combinada con su severidad.",
+        "isCorrect": true,
+        "rationale": "El peligro existe intrínsecamente en el objeto o situación (ej. energía eléctrica, un químico tóxico), mientras que el riesgo es una magnitud calculada mediante la combinación de frecuencia e impacto ($Riesgo = Frecuencia \\times Impacto$)."
+      },
+      {
+        "text": "El peligro proviene siempre de desastres naturales, mientras que el riesgo es generado únicamente por error humano.",
+        "isCorrect": false,
+        "rationale": "Tanto los peligros como los riesgos pueden originarse en factores tecnológicos, humanos, organizacionales o ambientales sin distinción exclusiva."
+      },
+      {
+        "text": "El peligro se mide en unidades monetarias, mientras que el riesgo se determina mediante la observación de sensores.",
+        "isCorrect": false,
+        "rationale": "El peligro describe la naturaleza de la amenaza, mientras que el riesgo cuantifica la exposición y consecuencia."
+      },
+      {
+        "text": "El peligro es una condición que se puede eliminar totalmente en cualquier proceso, mientras que el riesgo es inmutable.",
+        "isCorrect": false,
+        "rationale": "Muchos peligros son inherentes a la actividad industrial (ej. presión o voltaje) y no se pueden eliminar, pero sus riesgos se gestionan mediante controles."
+      }
+    ],
+    "hint": "Recuerde el ejemplo del objeto afilado o la sustancia química: el elemento en sí es una condición intrínseca, mientras que la probabilidad de sufrir una lesión es el cálculo asociado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco operacional de protección, ¿qué diferencia a una medida de reducción de riesgo de una medida de mitigación?",
+    "opciones": [
+      {
+        "text": "La reducción de riesgo busca evitar la ocurrencia del evento disminuyendo su probabilidad; la mitigación busca aminorar las consecuencias una vez que el evento ha ocurrido.",
+        "isCorrect": true,
+        "rationale": "La reducción actúa antes de la falla minimizando las probabilidades de que se desencadene (ej. arnés anticaídas), mientras que la mitigación actúa sobre los efectos si la falla llega a consumarse (ej. chaleco salvavidas)."
+      },
+      {
+        "text": "La reducción de riesgo se aplica a fallas informáticas, mientras que la mitigación atiende contingencias exclusivas del personal.",
+        "isCorrect": false,
+        "rationale": "Ambos conceptos se aplican transversalmente a riesgos físicos, tecnológicos, ambientales y humanos por igual."
+      },
+      {
+        "text": "La reducción de riesgo se ejecuta durante el siniestro, mientras que la mitigación se planea exclusivamente en la fase de diseño.",
+        "isCorrect": false,
+        "rationale": "La reducción es una estrategia previa al siniestro; la mitigación entra en juego para limitar la gravedad del daño durante o tras la ocurrencia."
+      },
+      {
+        "text": "La reducción de riesgo es un requisito administrativo opcional, mientras que la mitigación es una imposición legal obligatoria.",
+        "isCorrect": false,
+        "rationale": "Ambas forman parte del sistema integral obligatorio de gestión de riesgos e IPERC en cualquier industria regulada."
+      },
+      {
+        "text": "La reducción de riesgo consiste en contratar seguros comerciales, mientras que la mitigación consiste en paralizar la producción.",
+        "isCorrect": false,
+        "rationale": "La transferencia financiera mediante seguros no equivale a la reducción técnica del riesgo en la operación física."
+      }
+    ],
+    "hint": "Considere la analogía de los elementos de seguridad: una barrera impide que ocurra el accidente, mientras que un dispositivo de protección limita la gravedad de la lesión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del seguimiento preventivo de una planta industrial, ¿cuáles de las siguientes señales corresponden a indicadores de alerta de tipo organizacional?",
+    "opciones": [
+      {
+        "text": "Aumento sostenido en la tasa de rotación de personal operativo en áreas críticas.",
+        "isCorrect": true,
+        "rationale": "La alta rotación refleja problemas en la cultura, clima y pérdida de memoria operativa, lo que incrementa la probabilidad de fallas humanas."
+      },
+      {
+        "text": "Recortes sistemáticos en el presupuesto asignado al mantenimiento preventivo de equipos.",
+        "isCorrect": true,
+        "rationale": "Reducir los fondos de mantenimiento es una decisión organizacional que posterga intervenciones necesarias y prepara el terreno para fallas catastróficas."
+      },
+      {
+        "text": "Inobservancia recurrente de los procedimientos operativos estandarizados.",
+        "isCorrect": true,
+        "rationale": "El incumplimiento de protocolos denota laxitud en la disciplina operativa y erosión en la gobernanza interna."
+      },
+      {
+        "text": "Lecturas de vibración y temperatura que sobrepasan las alarmas $HHA$ en el sistema SCADA.",
+        "isCorrect": false,
+        "rationale": "Los datos captados por la instrumentación física constituyen señales de alerta técnicas, no organizacionales."
+      },
+      {
+        "text": "Publicación de notas desfavorables en medios de comunicación o rumores en redes sociales.",
+        "isCorrect": false,
+        "rationale": "La presión mediática y los rumores del entorno se clasifican como señales de alerta externas."
+      }
+    ],
+    "hint": "Identifique los indicadores vinculados a la cultura interna, la conducta del personal, las decisiones presupuestarias y el cumplimiento de normas internas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando un sistema automatizado de control distribuido (DCS) registra que una variable operativa clave supera el límite crítico superior ($HHA$), ¿cuál es la respuesta técnica estandarizada que debe activarse automáticamente?",
+    "opciones": [
+      {
+        "text": "Emitir una alerta contable para recalcular la depreciación de la maquinaria.",
+        "isCorrect": false,
+        "rationale": "El sistema de control del proceso actúa sobre la seguridad física e inmediatez del sistema, no sobre la contabilidad de activos."
+      },
+      {
+        "text": "Ejecutar la parada de emergencia automática (shutdown) para prevenir un fallo catastrófico.",
+        "isCorrect": true,
+        "rationale": "Ante la superación de umbrales críticos de seguridad ($HHA$), el DCS corta suministros o detiene el proceso automáticamente para evitar la explosión o colapso de la instalación."
+      },
+      {
+        "text": "Modificar los nombres de las redes Wi-Fi de la planta para evitar ciberataques.",
+        "isCorrect": false,
+        "rationale": "El cambio de parámetros informáticos de red no resuelve una condición física descontrolada de presión o temperatura."
+      },
+      {
+        "text": "Notificar al sindicato para iniciar una mesa de negociación presupuestaria.",
+        "isCorrect": false,
+        "rationale": "Las alarmas $HHA$ requieren contención física inmediata en segundos, lejos del tiempo que toma una negociación de representación laboral."
+      },
+      {
+        "text": "Reducir automáticamente la remuneración de los operadores presentes en la sala de control.",
+        "isCorrect": false,
+        "rationale": "Los sistemas SCADA/DCS no administran medidas disciplinarias ni nóminas de personal."
+      }
+    ],
+    "hint": "Considere la función de los enclavamientos automáticos de seguridad en plantas cuando los parámetros físicos rozan el límite de rotura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de la comunicación externa durante una crisis industrial, ¿cuál es el principio operativo recomendado para evitar versiones contradictorias o desinformación?",
+    "opciones": [
+      {
+        "text": "Permitir que cualquier trabajador o jefe de área exprese libremente sus apreciaciones ante la prensa.",
+        "isCorrect": false,
+        "rationale": "Múltiples voces sin preparación técnica ni información consolidada generan mensajes especulativos y destruyen la credibilidad institucional."
+      },
+      {
+        "text": "Centralizar la vocería en un portavoz único capacitado que entregue mensajes veraces, claros y estructurados con empatía.",
+        "isCorrect": true,
+        "rationale": "Tener una vocería única y preparada garantiza la consistencia del mensaje, la precisión técnica y la empatía requerida frente al público y autoridades."
+      },
+      {
+        "text": "Dejar de responder solicitudes de información de las autoridades e instituciones hasta controlar el evento.",
+        "isCorrect": false,
+        "rationale": "El silencio institucional genera vacíos de información que suelen llenarse con rumores y aumenta la desconfianza pública y legal."
+      },
+      {
+        "text": "Utilizar lenguaje extremadamente críptico o códigos encriptados para que la comunidad no entienda la gravedad.",
+        "isCorrect": false,
+        "rationale": "La falta de transparencia y la opacidad terminan profundizando el daño reputacional y la desconfianza social."
+      },
+      {
+        "text": "Difundir la responsabilidad de los daños hacia los organismos de fiscalización del Estado.",
+        "isCorrect": false,
+        "rationale": "Eadir la responsabilidad corporativa transmite incompetencia y aumenta el conflicto legal y regulatorio."
+      }
+    ],
+    "hint": "Piense en la necesidad de coherencia, preparación mediática y control en el flujo formal de comunicados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué forma se articula la norma internacional ISO 31000 con la matriz IPERC en el esquema de prevención de riesgos en plantas industriales?",
+    "opciones": [
+      {
+        "text": "Sustituye la revisión de la matriz IPERC por auditorías exclusivas de estados financieros.",
+        "isCorrect": false,
+        "rationale": "La ISO 31000 no descarta la identificación operativa de peligros, sino que le da un marco de gobernanza estratégico."
+      },
+      {
+        "text": "Suministra la estructura estandarizada (contexto, identificación, análisis, evaluación y tratamiento) en la cual se fundamenta el desarrollo del IPERC.",
+        "isCorrect": true,
+        "rationale": "La norma ISO 31000 establece las directrices universales para gestionar el riesgo organizativo, sirviendo de base lógica para la matriz IPERC."
+      },
+      {
+        "text": "Garantiza que la planta quede exenta de cumplir las regulaciones de la autoridad laboral local.",
+        "isCorrect": false,
+        "rationale": "Las normas ISO son estándares internacionales de gestión que complementan, pero no anulan ni sustituyen las leyes laborales locales."
+      },
+      {
+        "text": "Se aplica únicamente para controlar la privacidad de los correos electrónicos del personal directivo.",
+        "isCorrect": false,
+        "rationale": "El alcance de la ISO 31000 abarca la totalidad de los riesgos operativos, estratégicos y de procesos de la empresa."
+      },
+      {
+        "text": "Elimina la obligación de realizar capacitaciones continuas en materia de seguridad en el trabajo.",
+        "isCorrect": false,
+        "rationale": "El marco ISO 31000 exige expresamente la capacitación, comunicación y monitoreo constante de los controles de riesgo."
+      }
+    ],
+    "hint": "Considere la relación entre el estándar marco internacional de gestión de riesgos y la herramienta específica utilizada a nivel de puesto de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la teoría organizacional contemporánea, ¿cuál es la perspectiva adecuada sobre los conflictos dentro de un ambiente industrial?",
+    "opciones": [
+      {
+        "text": "Constituyen anomalias destructivas que deben ser eliminadas mediante sanciones inmediatas.",
+        "isCorrect": false,
+        "rationale": "Tratar el conflicto únicamente como una falta punible ignora las causas de fondo y reprime oportunidades de mejora estructural."
+      },
+      {
+        "text": "Son interacciones naturales derivadas de intereses u objetivos opuestos que, adecuadamente gestionadas, se convierten en motores de aprendizaje y optimización de procesos.",
+        "isCorrect": true,
+        "rationale": "El conflicto bien administrado saca a la luz ineficiencias, promueve el diálogo y estimula la innovación y la mejora continua en la organización."
+      },
+      {
+        "text": "Demuestran de forma irrefutable la incapacidad técnica de los supervisores y jefes de planta.",
+        "isCorrect": false,
+        "rationale": "El conflicto surge por la diversidad de objetivos y funciones entre áreas interdependientes, no necesariamente por incompetencia individual."
+      },
+      {
+        "text": "Son irrelevantes en la gestión industrial siempre que los indicadores de ventas se mantengan altos.",
+        "isCorrect": false,
+        "rationale": "Ignorar los conflictos internos deteriora el clima organizacional y suele desembocar en ausentismo, accidentes o baja productividad a largo plazo."
+      },
+      {
+        "text": "Surgen únicamente debido al uso desmedido de herramientas informáticas y redes sociales en el trabajo.",
+        "isCorrect": false,
+        "rationale": "Los conflictos tienen orígenes variados que incluyen procedimientos, metas, valores y estructuras, trascendiendo el uso de software."
+      }
+    ],
+    "hint": "Evalúe cómo la confrontación constructiva de ideas y procedimientos puede generar oportunidades de cambio y mejora.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre un conflicto de procedimientos y un conflicto de metas en una organización industrial?",
+    "opciones": [
+      {
+        "text": "El de procedimientos aborda temas salariales; el de metas concierne a los reglamentos de vestimenta.",
+        "isCorrect": false,
+        "rationale": "Ambas materias están desligadas de las definiciones técnicas de flujo metodológico y objetivos cuantitativos."
+      },
+      {
+        "text": "El de procedimientos gira en torno al *cómo* debe ejecutarse una tarea o proceso; el de metas se enfoca en *qué* objetivos específicos se buscan alcanzar.",
+        "isCorrect": true,
+        "rationale": "Los conflictos procedimentales discuten la metodología operativa (el cómo), mientras que los de metas debaten la prioridad y magnitud de los resultados a lograr (el qué)."
+      },
+      {
+        "text": "El de procedimientos surge entre gerentes y accionistas; el de metas ocurre exclusivamente con clientes externos.",
+        "isCorrect": false,
+        "rationale": "Ambos tipos de conflicto pueden presentarse transversalmente en todos los niveles y áreas internas de la organización."
+      },
+      {
+        "text": "El de procedimientos se resuelve en los tribunales laborales; el de metas requiere la intervención del sindicato.",
+        "isCorrect": false,
+        "rationale": "Los métodos de resolución (negociación, mediación) se aplican según la dinámica del conflicto y no por su clasificación inicial."
+      },
+      {
+        "text": "El de procedimientos es generado por fallas informáticas; el de metas es causado por el clima astronómico.",
+        "isCorrect": false,
+        "rationale": "Los desacuerdos de metas y procedimientos se derivan de la gestión y planificación de personas en la empresa."
+      }
+    ],
+    "hint": "Contraste la discusión metodológica sobre los pasos para realizar una labor frente a la discusión sobre la cuantía y dirección de los resultados finales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué dinámicas o factores organizacionales propician la aparición y escalada de conflictos interpersonales y la creación de subgrupos antagónicos en una planta industrial?",
+    "opciones": [
+      {
+        "text": "Tiempos vacíos causados por una baja asignación de carga laboral en el personal.",
+        "isCorrect": true,
+        "rationale": "Disponer de amplios espacios sin tareas productivas asignadas favorece la dispersión, la amplificación de rumores y los enfrentamientos informales."
+      },
+      {
+        "text": "Prácticas de comunicación desinformada, burlas o conductas de *scratching* no erradicadas a tiempo.",
+        "isCorrect": true,
+        "rationale": "El acoso verbal o digital crea polarización, resentimiento interpersonal y erosión en las relaciones de trabajo."
+      },
+      {
+        "text": "Sesgos de percepción donde se asume que un colaborador pertenece a un bando rival solo por su cercanía interpersonal con un tercero.",
+        "isCorrect": true,
+        "rationale": "Los sesgos de grupo dividen a la organización en facciones antagónicas de forma arbitraria e irracional."
+      },
+      {
+        "text": "Ejecución rigurosa de las auditorías de seguridad bajo la norma ISO 45001.",
+        "isCorrect": false,
+        "rationale": "La implementación de estándares de seguridad formaliza procesos y disminuye la incertidumbre, reduciendo potenciales roces organizacionales."
+      },
+      {
+        "text": "Monitoreo continuo de los parámetros de presión y temperatura mediante SCADA.",
+        "isCorrect": false,
+        "rationale": "El control técnico de variables de ingeniería no promueve la formación de facciones humanas antagónicas."
+      }
+    ],
+    "hint": "Seleccione aquellos factores relacionados con la inactividad, la mala comunicación no frenada y la formación de prejuicios entre el personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el desarrollo del automóvil Ford Pinto, ¿qué desencadenó el conflicto entre el área de ingeniería y el área de seguridad y producción?",
+    "opciones": [
+      {
+        "text": "Una diferencia respecto a las escalas salariales aplicadas a los diseñadores junior.",
+        "isCorrect": false,
+        "rationale": "La controversia no se basó en remuneraciones individuales, sino en compromisos de diseño vs. resistencia física del vehículo."
+      },
+      {
+        "text": "La discrepancia entre priorizar la estética/plazos de lanzamiento frente a la protección estructural del tanque de combustible.",
+        "isCorrect": true,
+        "rationale": "El conflicto interdepartamental enfrentó los objetivos de diseño apresurado e imagen con los requerimientos técnicos de seguridad del tanque ante colisiones traseras."
+      },
+      {
+        "text": "Un ciberataque que modificó los comandos de robótica en la línea de montaje.",
+        "isCorrect": false,
+        "rationale": "En la época de desarrollo del vehículo no existían amenazas informáticas ni ataques de red como los actuales."
+      },
+      {
+        "text": "La negativa del gremio de camioneros a transportar los vehículos terminados.",
+        "isCorrect": false,
+        "rationale": "El problema fue estrictamente interno entre las áreas funcionales de desarrollo del producto, previo a la comercialización masiva."
+      },
+      {
+        "text": "Inconsistencias contables detectadas por la firma de auditoría externa.",
+        "isCorrect": false,
+        "rationale": "El choque de posturas se dio por especificaciones de producto e ingeniería, no por registros en los libros contables."
+      }
+    ],
+    "hint": "Enfoque su análisis en la tensión entre acelerar el diseño estético y cumplir los requerimientos de integridad física ante un choque.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál fue el fallo en la estructura organizativa de la empresa Enron que exacerbó los conflictos de interés e hizo posible su posterior colapso financiero?",
+    "opciones": [
+      {
+        "text": "El predominio absoluto de las decisiones dictadas por el sindicato de trabajadores.",
+        "isCorrect": false,
+        "rationale": "Enron carecía de un poder sindical predominante; el descontrol provino de las esferas de alta gerencia."
+      },
+      {
+        "text": "Una estructura con roles ambiguos, superposición de funciones e ineficiencia en los controles entre directores y gerentes.",
+        "isCorrect": true,
+        "rationale": "La falta de delimitación clara de funciones y la concentración de poder sin supervisión crearon un entorno difuso que encubrió prácticas fraudulentas."
+      },
+      {
+        "text": "La rigidez derivada de la aplicación de la metodología Kaizen en todas las oficinas.",
+        "isCorrect": false,
+        "rationale": "Las metodologías de mejora continua no promueven el fraude contable ni el colapso de la gobernanza corporativa."
+      },
+      {
+        "text": "La excesiva transparencia exigida por los entes fiscalizadores del sector de hidrocarburos.",
+        "isCorrect": false,
+        "rationale": "La causa del colapso fue precisamente la opacidad y ocultamiento de pasivos financieros, no el exceso de transparencia."
+      },
+      {
+        "text": "La sustitución del directorio por sistemas automatizados informáticos imprecisos.",
+        "isCorrect": false,
+        "rationale": "Las decisiones irregulares fueron adoptadas por ejecutivos humanos y no por algoritmos de software."
+      }
+    ],
+    "hint": "Piense en las consecuencias de tener ejecutivos con cargos directivos duplicados que operan en un marco sin delimitación de control.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El conflicto enfrentado por Nike debido a las condiciones en sus plantas subcontratadas en Asia es clasificado como un conflicto de valores. ¿Por qué razón?",
+    "opciones": [
+      {
+        "text": "Porque alteró las normas de presión permitidas en las calderas de vapor de las fábricas.",
+        "isCorrect": false,
+        "rationale": "El cuestionamiento hacia la empresa se situó en el ámbito ético y de derechos humanos, no en parámetros mecánicos de ingeniería."
+      },
+      {
+        "text": "Por la contradicción entre los principios corporativos promovidos (excelencia e innovación) y las denuncias de abusos laborales en su cadena de valor.",
+        "isCorrect": true,
+        "rationale": "El choque de valores se presentó al confrontar la imagen institucional de responsabilidad social con la tolerancia a condiciones precarias y trabajo infantil en sus proveedores asiáticos."
+      },
+      {
+        "text": "Porque los colaboradores exigieron el pago de salarios mediante criptomonedas intangibles.",
+        "isCorrect": false,
+        "rationale": "Las controversias se centraron en salarios mínimos de subsistencia y horarios, no en mecanismos de cobro digitales."
+      },
+      {
+        "text": "Debido a desacuerdos comerciales sobre los derechos de patrocinio de eventos deportivos.",
+        "isCorrect": false,
+        "rationale": "Aunque afectó la imagen de los atletas patrocinados, la causa raíz fue la violación de principios de ética laboral en la producción."
+      },
+      {
+        "text": "Por disputas territoriales entre los gerentes de logística de los puertos de embarque.",
+        "isCorrect": false,
+        "rationale": "El problema central residía en las condiciones humanas de trabajo en la manufactura, no en la disputa de competencias logísticas."
+      }
+    ],
+    "hint": "Considere la colisión entre el discurso ético institucionalizado de la marca y la realidad de los derechos humanos en las plantas tercerizadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la resolución de disputas corporativas, ¿qué caracteriza a la negociación integrativa según lo observado en empresas como Google?",
+    "opciones": [
+      {
+        "text": "Un enfoque distributivo donde una parte obtiene la totalidad del beneficio a expensas de las pérdidas absolutas de la contraparte.",
+        "isCorrect": false,
+        "rationale": "El modelo distributivo o de 'suma cero' no busca la integración de intereses ni la creación de valor mutuo."
+      },
+      {
+        "text": "Un proceso colaborativo donde las partes negocian la revisión de políticas para alcanzar acuerdos de mutuo beneficio y equidad.",
+        "isCorrect": true,
+        "rationale": "La negociación integrativa enfoca a las partes en expandir las opciones disponibles para que ambos lados logren satisfacer sus intereses prioritarios de forma compartida."
+      },
+      {
+        "text": "La derivación inmediata del problema a un litigio legal externo sin intentar el diálogo directo.",
+        "isCorrect": false,
+        "rationale": "El litigio legal implica la intervención de terceros en un esquema adversarial, distanciándose de la negociación integrativa."
+      },
+      {
+        "text": "El despido inmediato del personal que manifieste inconformidad con las políticas vigentes.",
+        "isCorrect": false,
+        "rationale": "Las medidas represivas unilaterales impiden la resolución negociada y profundizan el conflicto organizacional."
+      },
+      {
+        "text": "La imposición de soluciones dictadas de manera autoritaria sin consultar la posición de los colaboradores.",
+        "isCorrect": false,
+        "rationale": "La imposición unilateral elimina la esencia participativa de la negociación interpartes."
+      }
+    ],
+    "hint": "Piense en las dinámicas donde las partes sustituyen el choque frontal por la búsqueda conjunta de alternativas que sumen valor para todos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del Coaching cuando se utiliza como herramienta gerencial en la resolución de conflictos interpersonales?",
+    "opciones": [
+      {
+        "text": "Determinar culpabilidades de hechos pasados para imponer las sanciones disciplinarias del reglamento.",
+        "isCorrect": false,
+        "rationale": "El Coaching no actua como un tribunal punitivo enfocado en buscar culpables de faltas pasadas."
+      },
+      {
+        "text": "Facilitar conversaciones enfocadas en el futuro para que los involucrados superen barreras y alcancen acuerdos constructivos.",
+        "isCorrect": true,
+        "rationale": "El Coaching gerencial busca que las personas destraben supuestos, asuman su responsabilidad y tracen un camino operativo acordado hacia adelante."
+      },
+      {
+        "text": "Prescribir diagnósticos y tratamientos clínicos o psiquiátricos a los trabajadores.",
+        "isCorrect": false,
+        "rationale": "Las intervenciones médicas de salud mental competen a profesionales de la medicina y la psicología clínica, fuera del alcance del coaching."
+      },
+      {
+        "text": "Sustituir la elaboración de los planes técnicos de mantenimiento de los equipos de proceso.",
+        "isCorrect": false,
+        "rationale": "El coaching aborda el comportamiento y relaciones de personas, no la programación de ingeniería de mantenimiento."
+      },
+      {
+        "text": "Redactar las demandas sindicales presentadas en la negociación colectiva anual.",
+        "isCorrect": false,
+        "rationale": "La representación sindical elabora sus propios pliegos sin que esto constituya el marco de una sesión de coaching gerencial."
+      }
+    ],
+    "hint": "Considere la orientación hacia el diseño de soluciones futuras y la desactivación de supuestos que bloquean el diálogo interpersonal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En las metodologías de Gestión Visual de Conflictos (como la adaptación de esquemas Kanban en plantas industriales), ¿cuáles son prácticas esenciales del proceso?",
+    "opciones": [
+      {
+        "text": "Mapear los conflictos en un tablero público (*backlog*) clasificándolos para su atención.",
+        "isCorrect": true,
+        "rationale": "Hacer visibles los problemas en un tablero saca los reclamos de la opacidad y formaliza su estatus ante la organización."
+      },
+      {
+        "text": "Seguir el estado de avance de las mesas de diálogo y soluciones en curso.",
+        "isCorrect": true,
+        "rationale": "Registrar el flujo de trabajo de cada conflicto permite evaluar si las reuniones están rindiendo frutos o si están estancadas."
+      },
+      {
+        "text": "Documentar los acuerdos logrados para consolidar un repositorio de buenas prácticas de gestión.",
+        "isCorrect": true,
+        "rationale": "Consignar los compromisos en la columna de 'finalizado' crea precedentes de soluciones exitosas reutilizables ante casos futuros."
+      },
+      {
+        "text": "Ocultar las controversias para evitar inquietar a los auditorios o clientes externos.",
+        "isCorrect": false,
+        "rationale": "El ocultamiento es lo opuesto a la gestión visual transparente exigida por este tipo de filosofías."
+      },
+      {
+        "text": "Reemplazar las reuniones presenciales por votaciones públicas y anónimas en redes sociales.",
+        "isCorrect": false,
+        "rationale": "Las decisiones de gestión de planta requieren responsabilidad y mesas formales de trabajo, no encuestas informales externas."
+      }
+    ],
+    "hint": "Piense en la transparencia del proceso: visibilizar los reclamos en paneles, medir la progresión de los acuerdos y registrar los aprendizajes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué caracteriza el modelo de relaciones laborales implementado en la planta de Procter & Gamble en Colonia (Alemania) expuesto en el curso?",
+    "opciones": [
+      {
+        "text": "La prohibición de los sindicatos e imposición de contratos temporales renovables cada mes.",
+        "isCorrect": false,
+        "rationale": "El modelo no suprime la representación laboral, sino que la integra formalmente en la gobernanza."
+      },
+      {
+        "text": "La integración transversal de gerentes y operadores en el sindicato, presentando pliegos de 'ofrecimientos de mejora' ligados a metas compartidas.",
+        "isCorrect": true,
+        "rationale": "El enfoque de colaboración mutua alinea a todos los estamentos organizacionales en la búsqueda conjunta de metas de productividad y retorno de beneficios."
+      },
+      {
+        "text": "La disolución de la gerencia general para dejar la dirección a cargo de un arbitraje externo permanente.",
+        "isCorrect": false,
+        "rationale": "La gerencia mantiene sus funciones directivas ejecutivas dentro de la estructura formal de la compañía."
+      },
+      {
+        "text": "La asignación aleatoria de salarios mediante algoritmos informáticos no negociables.",
+        "isCorrect": false,
+        "rationale": "Las compensaciones se determinan en función de resultados operativos acordados y evaluaciones formales de desempeño."
+      },
+      {
+        "text": "El cierre preventivo de las plantas de producción durante tres meses al año para evitar reclamos.",
+        "isCorrect": false,
+        "rationale": "La meta del modelo es garantizar la continuidad operativa eficiente sin paralizaciones forzadas."
+      }
+    ],
+    "hint": "Analice la transformación de un modelo puramente contencioso de reclamos a un esquema cooperativo de compromisos de rendimiento técnico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al gestionar la salida de un colaborador tóxico cuya conducta vulnera sistemáticamente la seguridad y el clima laboral, ¿cuál es el riesgo legal de proceder mediante un despido sin sustento en la Ley de Productividad?",
+    "opciones": [
+      {
+        "text": "Que el trabajador asuma automáticamente la titularidad de las patentes de la empresa.",
+        "isCorrect": false,
+        "rationale": "La normativa de relaciones laborales no contempla la transferencia de propiedad intelectual a los extrabajadores."
+      },
+      {
+        "text": "Que la autoridad laboral declare el despido como arbitrario o nulo, obligando a la reposición del trabajador con el pago de devengados y multas.",
+        "isCorrect": true,
+        "rationale": "Un despido mal fundamentado documentalmente expone a la empresa a un mandato de reincorporación obligatoria del colaborador perjudicial, además de sanciones económicas."
+      },
+      {
+        "text": "Que los sistemas automatizados SCADA queden inoperativos de forma permanente.",
+        "isCorrect": false,
+        "rationale": "Los procesos judiciales laborales no afectan la funcionalidad del software de control de procesos en planta."
+      },
+      {
+        "text": "Que se revoquen de inmediato todas las pólizas de seguro vehicular de la flota corporativa.",
+        "isCorrect": false,
+        "rationale": "Los contratos de seguro con terceros no se anulan por fallos de los tribunales de derecho laboral individual."
+      },
+      {
+        "text": "Que la junta directiva pierda la facultad de nombrar nuevos gerentes de área.",
+        "isCorrect": false,
+        "rationale": "Las prerrogativas de gobernanza societaria del directorio se mantienen al margen de los procesos laborales singulares."
+      }
+    ],
+    "hint": "Considere la consecuencia de una orden de reposición librada por el Ministerio de Trabajo cuando la empresa no logra probar la causa justa del despido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-67",
+    "diplomado": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes señales operativas e interpersonales funcionan como indicadores tempranos del deterioro en el clima laboral antes de que estalle un conflicto mayor?",
+    "opciones": [
+      {
+        "text": "Caída inexplicada en los índices de eficiencia operacional o rendimiento de un equipo de trabajo.",
+        "isCorrect": true,
+        "rationale": "La pérdida de eficiencia suele responder al desinterés, la falta de cooperación o el conflicto no resuelto entre los miembros."
+      },
+      {
+        "text": "Aumento en las faltas injustificadas, tardanzas reiteradas o ausentismo laboral.",
+        "isCorrect": true,
+        "rationale": "La evasión de la jornada laboral refleja desmotivación y un ambiente percibido como hostil por parte de los colaboradores."
+      },
+      {
+        "text": "Ruptura de los flujos informales de colaboración y comunicación entre departamentos interdependientes.",
+        "isCorrect": true,
+        "rationale": "El aislamiento entre áreas señala la existencia de barreras emocionales o de metas que impiden el trabajo coordinado."
+      },
+      {
+        "text": "Participación activa en el llenado de los formatos IPERC al inicio del turno.",
+        "isCorrect": false,
+        "rationale": "El cumplimiento riguroso de las tareas preventivas muestra compromiso con la seguridad y buen funcionamiento del turno."
+      },
+      {
+        "text": "Cumplimiento del programa de mantenimiento preventivo de las maquinarias de la planta.",
+        "isCorrect": false,
+        "rationale": "La ejecución oportuna de mantenimientos indica disciplina operativa y una gestión coordinada del trabajo."
+      }
+    ],
+    "hint": "Aísle aquellas variables asociadas al descompromiso, al retraimiento de las interacciones y a la caída inexplicable en los resultados grupales.",
+    "activo": true
+  }
+]

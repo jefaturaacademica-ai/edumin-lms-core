@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { calculateReleasedCredits } from '@/lib/utils/credits';
+import { obtenerTallerParaDiplomado } from '@/lib/utils/tallerAsignado';
+import { parseCursosFromProfile, CursoJSON } from '@/lib/utils/profileParser';
 
 export async function POST(request: Request) {
   try {
@@ -46,13 +48,18 @@ export async function POST(request: Request) {
       }, { status: 400 });
     }
 
-    // 3. Crear registros de matrículas en Supabase
-    const nuevasMatriculas = seleccionados.map((itemId: string, idx: number) => {
+    // 3. Crear registros de matrículas en Supabase (Diplomados y Talleres de regalo)
+    const nuevasMatriculas: any[] = [];
+    const cursosPerfilActuales: CursoJSON[] = parseCursosFromProfile(profile);
+    const cursosNuevos = [...cursosPerfilActuales];
+
+    seleccionados.forEach((itemId: string) => {
       const tituloProg = (programaTitulos && programaTitulos[itemId]) 
         ? programaTitulos[itemId] 
         : `DIPLOMADO EN ${itemId.toUpperCase().replace(/-/g, ' ')}`;
 
-      return {
+      // Matrícula del Diplomado
+      nuevasMatriculas.push({
         profile_id: profile.id,
         dni_ce: profile.dni_ce,
         item_id: itemId,
@@ -60,7 +67,35 @@ export async function POST(request: Request) {
         titulo: tituloProg,
         avance_porcentaje: 0,
         estado: 'EN_CURSO'
-      };
+      });
+
+      // Taller de regalo asignado según la temática del diplomado
+      const tallerRegalo = obtenerTallerParaDiplomado(tituloProg);
+      const yaTieneTaller = cursosNuevos.some(c => c.id === tallerRegalo.id || c.codigo === tallerRegalo.codigo);
+      
+      if (!yaTieneTaller) {
+        nuevasMatriculas.push({
+          profile_id: profile.id,
+          dni_ce: profile.dni_ce,
+          item_id: tallerRegalo.id,
+          tipo: 'TALLER',
+          titulo: tallerRegalo.titulo,
+          avance_porcentaje: 0,
+          estado: 'EN_CURSO'
+        });
+
+        cursosNuevos.push({
+          id: tallerRegalo.id,
+          codigo: tallerRegalo.codigo,
+          titulo: tallerRegalo.titulo,
+          nota: 0,
+          completado: false,
+          avance: 0,
+          categoria: tallerRegalo.categoria,
+          duracion: tallerRegalo.duracion,
+          horas: tallerRegalo.horas
+        });
+      }
     });
 
     const { data: insertedMatriculas, error: insertError } = await admin
@@ -72,13 +107,17 @@ export async function POST(request: Request) {
       console.warn('Advertencia al insertar en tabla matriculas:', insertError.message);
     }
 
-    // 4. Actualizar cupos_diplomados en profiles
+    // 4. Actualizar cupos_diplomados y cursos (talleres de regalo) en profiles
     const nuevosCuposTotal = cuposActuales + seleccionados.length;
+    const cursosSerialized = `CURSOS_LIST|${JSON.stringify(cursosNuevos)}`;
+
     await admin
       .from('profiles')
       .update({ 
         cupos_diplomados: nuevosCuposTotal,
-        diplomado_2: profile.diplomado_2 || (seleccionados[0] ? seleccionados[0].toUpperCase() : null)
+        diplomado_2: profile.diplomado_2 || (seleccionados[0] ? seleccionados[0].toUpperCase() : null),
+        cursos: cursosSerialized,
+        cupos_cursos: (profile.cupos_cursos || 0) + (cursosNuevos.length - cursosPerfilActuales.length)
       })
       .eq('id', profile.id);
 

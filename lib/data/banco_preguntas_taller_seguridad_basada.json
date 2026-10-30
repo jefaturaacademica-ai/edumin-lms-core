@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se enfoca principalmente un liderazgo en seguridad basado en el \"hacer\"?",
+    "opciones": [
+      {
+        "text": "En el cumplimiento formal de normativas, procedimientos y la supervisión directa.",
+        "isCorrect": true,
+        "rationale": "El enfoque en el hacer prioritariamente busca verificar el cumplimiento de reglas, el seguimiento de estándares operativos y el control externo mediante supervisión."
+      },
+      {
+        "text": "En el desarrollo de la convicción personal y la transformación profunda de creencias.",
+        "isCorrect": false,
+        "rationale": "La transformación de creencias e identidad personal corresponde al enfoque basado en el ser, no al basado en el hacer."
+      },
+      {
+        "text": "En el fomento de la cultura interdependiente basada en el cuidado mutuo espontáneo.",
+        "isCorrect": false,
+        "rationale": "El cuidado mutuo interdependiente surge de la convicción compartida y el valor por la vida, característicos de una gestión desde el ser."
+      },
+      {
+        "text": "En el fortalecimiento de la identidad individual y los valores intrínsecos de cada colaborador.",
+        "isCorrect": false,
+        "rationale": "El trabajo sobre la identidad y los valores personales forma la base del modelo centrado en el ser."
+      },
+      {
+        "text": "En el análisis de factores personales mediante metodologías de coaching ontológico.",
+        "isCorrect": false,
+        "rationale": "El coaching ontológico y el abordaje de factores personales indagan en la esencia del individuo, alejándose de la supervisión puramente normativa."
+      }
+    ],
+    "hint": "Piensa en el enfoque tradicional que prioriza reglamentos, listas de verificación y fiscalización externa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica distintiva de una cultura de seguridad de nivel \"independiente\"?",
+    "opciones": [
+      {
+        "text": "El trabajador asume la responsabilidad de su propio autocuidado por elección consciente.",
+        "isCorrect": true,
+        "rationale": "En el nivel independiente, la persona reconoce que es el principal responsable de su propia seguridad y actúa en consecuencia sin requerir vigilancia constante."
+      },
+      {
+        "text": "La prevención se activa de manera exclusiva después de que ocurre un accidente grave.",
+        "isCorrect": false,
+        "rationale": "Actuar únicamente tras la ocurrencia de un evento indeseado caracteriza a una cultura de tipo reactivo."
+      },
+      {
+        "text": "El cumplimiento de las normas depende de la presencia permanente de un supervisor.",
+        "isCorrect": false,
+        "rationale": "La necesidad de supervisión constante para acatar las reglas es el pilar de una cultura dependiente."
+      },
+      {
+        "text": "Los miembros del equipo cuidan de manera activa la seguridad de sus compañeros.",
+        "isCorrect": false,
+        "rationale": "El cuidado mutuo y colectivo entre los integrantes del equipo define el nivel de cultura interdependiente."
+      },
+      {
+        "text": "Las medidas correctivas se centran primordialmente en buscar y sancionar a los culpables.",
+        "isCorrect": false,
+        "rationale": "El enfoque sancionador y punitivo ante las fallas está asociado a culturas dependientes o reactivas basadas en la supervisión."
+      }
+    ],
+    "hint": "Reflexiona sobre la etapa en la que el individuo no requiere de un supervisor para protegerse a sí mismo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a características de un liderazgo basado en el \"ser\" y la convicción?",
+    "opciones": [
+      {
+        "text": "Considerar la seguridad como un valor intrínseco fundamental para la vida.",
+        "isCorrect": true,
+        "rationale": "Asimilar la seguridad como un valor personal posiciona las acciones de prevención desde la propia identidad del individuo."
+      },
+      {
+        "text": "Buscar el aprendizaje y la mejora continua a partir de las fallas e incidentes.",
+        "isCorrect": true,
+        "rationale": "Afrontar los eventos no deseados como oportunidades de aprendizaje promueve la convicción y fortalece el sistema preventivo."
+      },
+      {
+        "text": "Motivar al personal mediante el propósito personal de regresar sano a casa con su familia.",
+        "isCorrect": true,
+        "rationale": "Conectar el cumplimiento preventivo con motivos de vida personales despierta el compromiso genuino en lugar del temor a la sanción."
+      },
+      {
+        "text": "Sostener el cumplimiento de las normas en la presión continua y el miedo a las amonestaciones.",
+        "isCorrect": false,
+        "rationale": "Recurrir a la presión y las amonestaciones es propio del liderazgo basado en el hacer y la supervisión punitiva."
+      },
+      {
+        "text": "Actuar de forma puramente reactiva una vez que los eventos indeseados se han materializado.",
+        "isCorrect": false,
+        "rationale": "La gestión centrada en el ser se caracteriza por ser proactiva y preventiva en lugar de reactiva."
+      }
+    ],
+    "hint": "Selecciona las opciones que promueven el valor intrínseco por la vida, el propósito y el aprendizaje continuo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué distingue a una cultura de seguridad \"interdependiente\" de los demás niveles del modelo?",
+    "opciones": [
+      {
+        "text": "La evolución de cuidar únicamente de sí mismo hacia el cuidado mutuo y colectivo entre compañeros.",
+        "isCorrect": true,
+        "rationale": "La interdependencia representa el estadio más avanzado, donde la seguridad se vive como un compromiso recíproco de velar por el bienestar de todos."
+      },
+      {
+        "text": "La dependencia exclusiva de las inspecciones y multas impuestas por organismos externos.",
+        "isCorrect": false,
+        "rationale": "Delegar el cumplimiento en agentes externos refleja un nivel de madurez preventivo bajo o dependiente."
+      },
+      {
+        "text": "El enfoque prioritario en la elaboración anual de la matriz de identificación de peligros.",
+        "isCorrect": false,
+        "rationale": "La elaboración de documentos técnicos es un procedimiento administrativo que puede existir en cualquier nivel de cultura."
+      },
+      {
+        "text": "La aplicación rigurosa de sanciones disciplinarias escritas ante cualquier desviación operacional.",
+        "isCorrect": false,
+        "rationale": "Las sanciones disciplinarias obligatorias forman parte de la gestión por control y subordinación."
+      },
+      {
+        "text": "La ejecución de auditorías internas sin incluir la participación activa de los colaboradores.",
+        "isCorrect": false,
+        "rationale": "Excluir a los trabajadores contradice el principio participativo e integrador de la interdependencia."
+      }
+    ],
+    "hint": "Busca la opción que resalta la cooperación y la protección recíproca entre todos los integrantes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la perspectiva del \"ser\", ¿por qué suelen resultar insuficientes los sistemas de gestión que se limitan a generar documentos, capacitaciones y procedimientos?",
+    "opciones": [
+      {
+        "text": "Porque no intervienen previamente en las creencias, valores e identidad de las personas.",
+        "isCorrect": true,
+        "rationale": "Sin una alineación entre las creencias individuales y los estándares solicitados, las acciones prescriptas por los documentos resultan temporales y superficiales."
+      },
+      {
+        "text": "Porque las normas legales exigen actualizar los documentos únicamente tras un accidente mortal.",
+        "isCorrect": false,
+        "rationale": "La normativa legal exige revisiones periódicas o ante cambios, no siendo esta la causa de la insuficiencia del sistema."
+      },
+      {
+        "text": "Porque la elaboración de procedimientos requiere obligatoriamente un software de automatización.",
+        "isCorrect": false,
+        "rationale": "El soporte tecnológico no garantiza la apropiación consciente ni el compromiso del personal con la seguridad."
+      },
+      {
+        "text": "Porque los inspectores de trabajo rechazan los sistemas que contienen reglamentos internos.",
+        "isCorrect": false,
+        "rationale": "Las autoridades laborales auditan y exigen la presencia de reglamentos internos de seguridad."
+      },
+      {
+        "text": "Porque la capacitación presencial invalida las decisiones tomadas por los comités mixtos.",
+        "isCorrect": false,
+        "rationale": "La capacitación y los comités complementan el desarrollo del sistema de gestión dentro del marco normativo."
+      }
+    ],
+    "hint": "Considera qué aspecto interno del trabajador debe moldearse para que los estándares normativos se sostengan en el tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes variables suelen motivar el comportamiento del trabajador en un entorno de liderazgo centrado únicamente en el \"hacer\"?",
+    "opciones": [
+      {
+        "text": "El temor a recibir una amonestación escrita o sanción disciplinaria.",
+        "isCorrect": true,
+        "rationale": "En la gestión por cumplimiento, la evitación del castigo actúa como el motor principal del comportamiento del trabajador."
+      },
+      {
+        "text": "La presión directa ejercida por la presencia física del supervisor en el área.",
+        "isCorrect": true,
+        "rationale": "El control supervisado genera conductas de cumplimiento temporal sujetas a la vigilancia externa."
+      },
+      {
+        "text": "La convicción intrínseca de preservar la integridad física y la salud.",
+        "isCorrect": false,
+        "rationale": "La convicción interna por la integridad personal constituye la base del liderazgo desde el ser."
+      },
+      {
+        "text": "El valor personal por el amor a la vida y el disfrute con la familia.",
+        "isCorrect": false,
+        "rationale": "Los valores vinculados a la vida y la familia estimulan la motivación intrínseca y la cultura proactiva."
+      },
+      {
+        "text": "El deseo genuino de contribuir al cuidado mutuo de los compañeros de equipo.",
+        "isCorrect": false,
+        "rationale": "El cuidado mutuo corresponde a un nivel interdependiente motivado por la empatía y la convicción compartida."
+      }
+    ],
+    "hint": "Identifica los factores externos ligados al control, la fiscalización y la evitación de consecuencias negativas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la herramienta de autodiagnóstico del liderazgo, ¿qué define a un \"área palanca\"?",
+    "opciones": [
+      {
+        "text": "Es el área cuyo fortalecimiento estratégico genera un crecimiento automático en las demás áreas.",
+        "isCorrect": true,
+        "rationale": "El área palanca actúa como un eje integrador que impulsa el desempeño global del liderazgo al ser trabajada de forma prioritaria."
+      },
+      {
+        "text": "Es el área que registró la calificación más alta posible en la autoevaluación realizada.",
+        "isCorrect": false,
+        "rationale": "La puntuación más alta refleja una fortaleza actual, pero no necesariamente el punto de apoyo para elevar los demás aspectos."
+      },
+      {
+        "text": "Es la sección de la rueda que evalúa de forma exclusiva el presupuesto asignado a la prevención.",
+        "isCorrect": false,
+        "rationale": "El autodiagnóstico mide competencias y enfoques de liderazgo, no variables financieras directas."
+      },
+      {
+        "text": "Es el área que debe ser descartada por no tener relación con el comportamiento humano.",
+        "isCorrect": false,
+        "rationale": "Todas las áreas evaluadas en la rueda están vinculadas al liderazgo y al comportamiento preventivo."
+      },
+      {
+        "text": "Es el indicador cuantitativo que mide de forma estricta las horas de capacitación ejecutadas.",
+        "isCorrect": false,
+        "rationale": "Las horas de capacitación representan una métrica de gestión de actividades, no el concepto metodológico de área palanca."
+      }
+    ],
+    "hint": "Piensa en el principio donde una acción enfocada en un punto clave multiplica los resultados en todo el sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la forma correcta de redactar un compromiso personal efectivo tras identificar las áreas de mejora en el autodiagnóstico?",
+    "opciones": [
+      {
+        "text": "Mediante una acción concreta, específica, medible y acotada que dependa de uno mismo.",
+        "isCorrect": true,
+        "rationale": "Un compromiso transformador requiere claridad en la conducta a implementar para evitar ambigüedades y permitir su seguimiento."
+      },
+      {
+        "text": "A través de intenciones generales como \"prometo mejorar mi coherencia en el trabajo\".",
+        "isCorrect": false,
+        "rationale": "Las formulaciones gaseosas o abstractas dificultan la ejecución prácitca y el cambio de hábitos."
+      },
+      {
+        "text": "Copiando textualmente los objetivos generales definidos en la política de la empresa.",
+        "isCorrect": false,
+        "rationale": "La política de la empresa establece compromisos institucionales, no acciones de desarrollo personal para el líder."
+      },
+      {
+        "text": "Condicionando la acción a que la alta gerencia apruebe primero un incremento salarial.",
+        "isCorrect": false,
+        "rationale": "Los compromisos de liderazgo en el ser nacen de la autonomía y elección individual, no de incentivos externos."
+      },
+      {
+        "text": "Redactando una lista de sanciones que se impondrán a los subordinados que cometan errores.",
+        "isCorrect": false,
+        "rationale": "Definir sanciones a terceros desplaza la responsabilidad personal y mantiene un enfoque punitivo."
+      }
+    ],
+    "hint": "Busca la opción que especifique una conducta precisa y realizable por el propio individuo en su día a día.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes aspectos forman parte de las áreas evaluadas en la rueda de autodiagnóstico de liderazgo en seguridad?",
+    "opciones": [
+      {
+        "text": "Ejemplo y coherencia en seguridad.",
+        "isCorrect": true,
+        "rationale": "Evalúa en qué medida la conducta personal del líder refleja los estándares que exige a los demás."
+      },
+      {
+        "text": "Influencia y comunicación en seguridad.",
+        "isCorrect": true,
+        "rationale": "Mide la capacidad para lograr que el mensaje preventivo sea comprendido, valorado y acogido por el equipo."
+      },
+      {
+        "text": "Innovación y mejora continua en seguridad.",
+        "isCorrect": true,
+        "rationale": "Examina la búsqueda activa de metodologías novedosas para fortalecer la cultura más allá del estándar normativo."
+      },
+      {
+        "text": "Cálculo técnico de indemnizaciones por accidentes de trabajo.",
+        "isCorrect": false,
+        "rationale": "Las estimaciones indemnizatorias corresponden a aspectos legales y contables, no a las dimensiones de liderazgo de la rueda."
+      },
+      {
+        "text": "Redacción de cláusulas sancionatorias para contratos comerciales.",
+        "isCorrect": false,
+        "rationale": "Las estipulaciones contractuales pertenecen al área legal y corporativa, ajenas al autodiagnóstico personal."
+      }
+    ],
+    "hint": "Selecciona los elementos orientados al desempeño personal del líder, la comunicación y la creatividad en la gestión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito central de determinar la \"realidad actual\" mediante la autoevaluación del liderazgo?",
+    "opciones": [
+      {
+        "text": "Reconocer con honestidad la situación presente para trazar un camino hacia la realidad ideal deseada.",
+        "isCorrect": true,
+        "rationale": "El punto de partida consciente es indispensable para identificar brechas y diseñar acciones orientadas a la transformación de la cultura."
+      },
+      {
+        "text": "Clasificar a los supervisores en rangos salariales según su nivel de cumplimiento.",
+        "isCorrect": false,
+        "rationale": "El autodiagnóstico busca la toma de conciencia personal, no la categorización salarial o administrativa."
+      },
+      {
+        "text": "Sustituir la necesidad de elaborar matrices de identificación de peligros y evaluación de riesgos.",
+        "isCorrect": false,
+        "rationale": "La evaluación de liderazgo es un ejercicio reflexivo sobre la persona y no reemplaza las herramientas técnicas de gestión."
+      },
+      {
+        "text": "Generar evidencias documentales para sancionar al personal con bajas calificaciones.",
+        "isCorrect": false,
+        "rationale": "El ejercicio es formativo y confidencial, alejado de propósitos punitivos o fiscalizadores."
+      },
+      {
+        "text": "Demostrar que los mandos medios no poseen fallas en sus procesos de supervisión.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la herramienta es precisamente evidenciar oportunidades de mejora en el ser del líder."
+      }
+    ],
+    "hint": "Reflexiona sobre la necesidad de conocer dónde estamos parados antes de definir a dónde queremos llegar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Además del emisor, receptor, mensaje, código y canal, ¿qué elementos clave añade el modelo de comunicación humana abordado en el taller?",
+    "opciones": [
+      {
+        "text": "La corporalidad, la emoción, el contexto y los dominios de interacción.",
+        "isCorrect": true,
+        "rationale": "La comunicación efectiva requiere coherencia entre el lenguaje verbal, la postura física, el estado emocional y el entorno donde ocurre el diálogo."
+      },
+      {
+        "text": "El ancho de banda de la red y la resolución del archivo digital transmitido.",
+        "isCorrect": false,
+        "rationale": "Estas características corresponden a la infraestructura técnica de telecomunicaciones, no a la dinámica ontológica humana."
+      },
+      {
+        "text": "La inclusión obligatoria de términos legales de fiscalización en cada frase.",
+        "isCorrect": false,
+        "rationale": "El uso de jerga legal no garantiza el entendimiento ni la conexión empática con el interlocutor."
+      },
+      {
+        "text": "El registro mecanografiado de las palabras exactas pronunciadas por el interlocutor.",
+        "isCorrect": false,
+        "rationale": "El registro textual es un procedimiento de acta o transcripción que no define la calidad del proceso comunicativo."
+      },
+      {
+        "text": "La eliminación absoluta de pausas o silencios durante la transmisión oral.",
+        "isCorrect": false,
+        "rationale": "Los silencios resultan necesarios para procesar la información y permitir la reflexión del oyente."
+      }
+    ],
+    "hint": "Piensa en los factores no verbales, emocionales y ambientales que determinan cómo se recibe realmente un mensaje.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de las distinciones del lenguaje, ¿cuál de las siguientes declaraciones representa una \"afirmación\" o \"hecho\"?",
+    "opciones": [
+      {
+        "text": "El colaborador ejecutó la tarea en la línea eléctrica sin utilizar sus guantes dielectrícos.",
+        "isCorrect": true,
+        "rationale": "Describe un acontecimiento observable y verificable de manera objetiva sin agregar interpretaciones personales."
+      },
+      {
+        "text": "El trabajador demostró ser una persona irresponsable al no colocarse el equipo de protección.",
+        "isCorrect": false,
+        "rationale": "Calificar a alguien como irresponsable constituye una evaluación o juicio subjetivo sobre su carácter."
+      },
+      {
+        "text": "El operador omitió el uso del equipo porque seguramente tenía prisa por terminar su turno.",
+        "isCorrect": false,
+        "rationale": "Atribuir intenciones sobre la prisa del trabajador es un juicio de valor no verificado."
+      },
+      {
+        "text": "El colaborador es la persona más descuidada de toda la cuadrilla de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Comparar y etiquetar a una persona como la más descuidada representa una opinión personal o juicio."
+      },
+      {
+        "text": "La falta de uso del guante evidencia que al trabajador no le interesa el bienestar de su familia.",
+        "isCorrect": false,
+        "rationale": "Suponer desinterés familiar a partir de un comportamiento observado es un juicio infundado."
+      }
+    ],
+    "hint": "Busca la frase que se limite a describir lo que una cámara de video registraría sin emitir opiniones ni calificaciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define un \"juicio\" en la comunicación interpersonal aplicada a la prevención?",
+    "opciones": [
+      {
+        "text": "Es una interpretación, valoración u opinión subjetiva que construimos a partir de un hecho observable.",
+        "isCorrect": true,
+        "rationale": "Los juicios habitan en la persona que observa y representan su lectura o evaluación particular de lo sucedido."
+      },
+      {
+        "text": "Es una descripción objetiva que puede ser confirmada o refutada mediante evidencias físicas.",
+        "isCorrect": false,
+        "rationale": "Las descripciones objetivas confirmables corresponden a la distinción de las afirmaciones o hechos."
+      },
+      {
+        "text": "Es la copia exacta del paso a paso descrito en un procedimiento escrito de trabajo seguro.",
+        "isCorrect": false,
+        "rationale": "Un procedimiento estandarizado es un documento normativo operativo, no un juicio del lenguaje."
+      },
+      {
+        "text": "Es el registro oficial obtenido mediante un instrumento de medición calibrado.",
+        "isCorrect": false,
+        "rationale": "Las lecturas de instrumentos calibrados proporcionan datos cuantitativos objetivos (afirmaciones)."
+      },
+      {
+        "text": "Es un acuerdo explícito firmado voluntariamente entre dos o más colaboradores.",
+        "isCorrect": false,
+        "rationale": "Los acuerdos formales entre partes corresponden a la categoría de compromisos o promesas."
+      }
+    ],
+    "hint": "Recuerda que esta distinción del lenguaje expresa la mirada, valoración u opinión del observador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos de la corporalidad e intencionalidad modifican de manera directa la percepción de un mensaje de seguridad?",
+    "opciones": [
+      {
+        "text": "La postura corporal adoptada durante la intervención.",
+        "isCorrect": true,
+        "rationale": "Una postura erguida, abierta o defensiva comunica apertura, autoridad o confrontación antes de pronunciar palabras."
+      },
+      {
+        "text": "El contacto visual y la dirección de la mirada hacia el interlocutor.",
+        "isCorrect": true,
+        "rationale": "Sostener el contacto visual demuestra interés, respeto y presencia plena durante el diálogo preventivo."
+      },
+      {
+        "text": "El tono de voz y la emoción reflejada al transmitir la indicación.",
+        "isCorrect": true,
+        "rationale": "Un tono sereno pero firme refleja calma y cuidado, mientras que un tono alterado evoca amenaza o agresión."
+      },
+      {
+        "text": "El número de páginas impresas que posee el manual operativo del área.",
+        "isCorrect": false,
+        "rationale": "La extensión del manual de procesos es un dato documental ajeno a la corporalidad del emisor."
+      },
+      {
+        "text": "El modelo y la marca de la computadora empleada en la oficina administrativa.",
+        "isCorrect": false,
+        "rationale": "El equipamiento informático carece de influencia en los aspectos corporales y emocionales de la comunicación humana."
+      }
+    ],
+    "hint": "Selecciona las señales no verbales expresadas a través del cuerpo, la voz y la mirada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué el \"contexto\" resulta determinante al momento de realizar una conversación o retroalimentación sobre seguridad?",
+    "opciones": [
+      {
+        "text": "Porque un ambiente inadecuado, ruidoso o con prisa extrema dificulta la escucha activa y la recepción del mensaje.",
+        "isCorrect": true,
+        "rationale": "Elegir el momento y espacio oportunos garantiza que el interlocutor pueda concentrar sus recursos cognitivos y emocionales en el diálogo."
+      },
+      {
+        "text": "Porque la legislación nacional invalida las conversaciones realizadas fuera de las salas de capacitación.",
+        "isCorrect": false,
+        "rationale": "Las retroalimentaciones operativas en campo son plenamente válidas e incentivas por la gestión preventiva."
+      },
+      {
+        "text": "Porque el contexto elimina la necesidad de que exista un receptor presente durante la charla.",
+        "isCorrect": false,
+        "rationale": "Todo acto comunicativo requiere indispensablemente la presencia activa de emisor y receptor."
+      },
+      {
+        "text": "Porque alterar el espacio físico transforma automáticamente los juicios en hechos observables.",
+        "isCorrect": false,
+        "rationale": "La naturaleza lingüística de las afirmaciones y juicios no depende del lugar geográfico donde se expresen."
+      },
+      {
+        "text": "Porque las emociones humanas se desactivan por completo cuando se cambia de ambiente de trabajo.",
+        "isCorrect": false,
+        "rationale": "Las emociones acompañan permanentemente la experiencia humana en cualquier entorno o dominio."
+      }
+    ],
+    "hint": "Considera cómo la prisa, las interrupciones o el ruido ambiental influyen en la capacidad de atención del trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la principal desventaja de iniciar una intervención de seguridad formulando la pregunta acusatoria \"¿Por qué no usaste tu EPP?\"?",
+    "opciones": [
+      {
+        "text": "Induce al trabajador a ponerse a la defensiva y ofrecer justificaciones o excusas preprogramadas.",
+        "isCorrect": true,
+        "rationale": "Preguntar el 'por qué' de forma directa suele ser percibido como un reclamo que invita a buscar razones externas antes que a reflexionar."
+      },
+      {
+        "text": "Garantiza que el colaborador memorice el reglamento interno en ese preciso instante.",
+        "isCorrect": false,
+        "rationale": "La confrontación defensiva bloquea el aprendizaje y no promueve la memorización consciente de normas."
+      },
+      {
+        "text": "Impide por completo que el supervisor registre la observación en el sistema de gestión.",
+        "isCorrect": false,
+        "rationale": "La forma de preguntar no limita técnicamente el registro administrativo de una observación en el sistema."
+      },
+      {
+        "text": "Genera de forma automática un compromiso de autocuidado en el nivel interdependiente.",
+        "isCorrect": false,
+        "rationale": "Las preguntas acusatorias refuerzan conductas defensivas o dependientes, alejadas de la interdependencia."
+      },
+      {
+        "text": "Obliga al trabajador a suspender sus labores de manera definitiva durante toda la jornada.",
+        "isCorrect": false,
+        "rationale": "Una pregunta desafortunada no conlleva legalmente la suspensión indefinida de la tarea."
+      }
+    ],
+    "hint": "Piensa en la reacción instintiva de una persona cuando se siente señalada o interrogada sobre un error.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la finalidad esencial de realizar una \"pregunta de exploración\" durante un abordaje preventivo en campo?",
+    "opciones": [
+      {
+        "text": "Guiar al trabajador para que observe su entorno, recuerde el estándar y proponga sus propias soluciones.",
+        "isCorrect": true,
+        "rationale": "La exploración activa los procesos reflexivos del colaborador, permitiendo que descubra la brecha de seguridad por sí mismo."
+      },
+      {
+        "text": "Obtener una respuesta cerrada de \"sí\" o \"no\" para completar rápidamente la planilla de inspección.",
+        "isCorrect": false,
+        "rationale": "Las respuestas monosilábicas no estimulan la conciencia ni la propuesta de mejoras por parte del personal."
+      },
+      {
+        "text": "Demostrar que el supervisor posee un conocimiento técnico superior al del operador.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la pregunta poderosa es el empoderamiento del trabajador, no la exhibición de jerarquía técnica."
+      },
+      {
+        "text": "Imponer la máxima sanción económica prevista en la tabla de infracciones de la empresa.",
+        "isCorrect": false,
+        "rationale": "La indagación busca prevenir y formar, rechazando el enfoque punitivo directo."
+      },
+      {
+        "text": "Confrontar agresivamente al colaborador frente a los demás integrantes de su cuadrilla.",
+        "isCorrect": false,
+        "rationale": "La exposición pública agresiva destruye la confianza e imposibilita la comunicación generativa."
+      }
+    ],
+    "hint": "Busca la opción que resalte la activación del pensamiento crítico y la iniciativa del propio trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes interrogantes están formuladas como \"preguntas poderosas abiertas\" orientadas a generar conciencia?",
+    "opciones": [
+      {
+        "text": "¿Qué situaciones presentes en este espacio podrían desencadenar un accidente?",
+        "isCorrect": true,
+        "rationale": "Invita a examinar detalladamente el entorno e identificar peligros sin inducir una respuesta predeterminada."
+      },
+      {
+        "text": "¿Qué indica el procedimiento escrito respecto al paso previo antes de energizar el sistema?",
+        "isCorrect": true,
+        "rationale": "Estimula la memoria operativa y la revisión mental de los estándares de trabajo seguro."
+      },
+      {
+        "text": "¿Qué modificaciones podrías implementar aquí para trabajar de forma más segura?",
+        "isCorrect": true,
+        "rationale": "Transfiere la responsabilidad de proponer controles al propio ejecutante de la tarea."
+      },
+      {
+        "text": "¿Entendiste la explicación que te acabo de dar sobre el uso de la careta?",
+        "isCorrect": false,
+        "rationale": "Es una pregunta cerrada que suele responderse con un 'sí' por compromiso, sin verificar la comprensión real."
+      },
+      {
+        "text": "¿Vas a cumplir con la norma a partir de ahora, sí o no?",
+        "isCorrect": false,
+        "rationale": "Ofrece una dicotomía cerrada que no promueve el análisis profundo de la conducta."
+      }
+    ],
+    "hint": "Selecciona las preguntas que exigen al interlocutor elaborar una respuesta descriptiva o propositiva.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al realizar una intervención preventiva, ¿qué se busca lograr mediante las \"preguntas de compromiso\"?",
+    "opciones": [
+      {
+        "text": "Que el trabajador tome conciencia del valor de la tarea y elija hacerse cargo voluntariamente de su seguridad.",
+        "isCorrect": true,
+        "rationale": "Buscan movilizar la voluntad interna del colaborador para que adopte decisiones preventivas por convicción personal."
+      },
+      {
+        "text": "Que el colaborador firme de inmediato una amonestación disciplinaria en la oficina de personal.",
+        "isCorrect": false,
+        "rationale": "Obtener firmas para sanciones disciplinarias pertenece al ámbito del control punitivo tradicional."
+      },
+      {
+        "text": "Que el equipo de trabajo acepte laborar turnos extra omitiendo las pausas activas.",
+        "isCorrect": false,
+        "rationale": "Omitir las pausas y sobrecargar al personal vulnera los principios de salud y seguridad en el trabajo."
+      },
+      {
+        "text": "Que la línea de mando quede totalmente exonerada de sus responsabilidades legales.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad de la gerencia sobre el sistema de gestión es inalienable según el marco legal."
+      },
+      {
+        "text": "Que el supervisor reemplace al operario en la ejecución física de la labor de alto riesgo.",
+        "isCorrect": false,
+        "rationale": "El rol del líder es guiar y facilitar la conciencia preventiva, no suplir las operaciones asignadas."
+      }
+    ],
+    "hint": "Considera cómo estas preguntas transfieren la iniciativa al trabajador para que adopte una postura activa de autocuidado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Si ante una intervención por un acto inseguro el trabajador responde con la creencia limitante \"aquí nunca pasa nada\", ¿qué estrategia de indagación es la más adecuada?",
+    "opciones": [
+      {
+        "text": "Formular repreguntas sobre consecuencias en escenarios potenciales que lo inviten a cuestionar su suposición.",
+        "isCorrect": true,
+        "rationale": "Acompañar la creencia del trabajador con preguntas sobre escenarios posibles quebranta la falsa sensación de seguridad sin confrontar agresivamente."
+      },
+      {
+        "text": "Elevar la voz enérgicamente frente a sus pares para imponer autoridad inmediata.",
+        "isCorrect": false,
+        "rationale": "Gritar invalida la comunicación efectiva y refuerza respuestas de resistencia o miedo."
+      },
+      {
+        "text": "Aceptar la respuesta del trabajador y retirarse del área sin realizar ninguna corrección.",
+        "isCorrect": false,
+        "rationale": "Permitir la continuidad de condiciones o actos inseguros vulnera el principio de prevención del sistema."
+      },
+      {
+        "text": "Iniciar el proceso formal de desvinculación laboral durante el mismo turno de trabajo.",
+        "isCorrect": false,
+        "rationale": "El despido inmediato ante un comentario limita la oportunidad de educar y transformar comportamientos."
+      },
+      {
+        "text": "Coincidir con su opinión para mantener una relación amistosa y evitar discusiones.",
+        "isCorrect": false,
+        "rationale": "La complacencia fomenta la tolerancia al riesgo y pone en peligro la vida del colaborador."
+      }
+    ],
+    "hint": "Piensa en el uso de preguntas que desafíen la certeza del trabajador haciéndolo reflexionar sobre posibles eventos indeseados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la metodología de storytelling aplicada a la seguridad, ¿por qué es fundamental \"otorgar humanidad\" al personaje principal del relato?",
+    "opciones": [
+      {
+        "text": "Para lograr que la audiencia conecte empáticamente, se identifique y se proyecte en las vivencias del personaje.",
+        "isCorrect": true,
+        "rationale": "Dotar al personaje de hábitos, afectos y dilemas reales genera un espejo donde el oyente reflexiona sobre sus propias conductas."
+      },
+      {
+        "text": "Para extender la duración de la charla de cinco minutos y cumplir con los tiempos exigidos.",
+        "isCorrect": false,
+        "rationale": "El storytelling busca efectividad emocional y sintesis pedagógica, no el mero relleno de tiempo."
+      },
+      {
+        "text": "Para cumplir con una exigencia formal establecida en las auditorías internacionales ISO.",
+        "isCorrect": false,
+        "rationale": "Las normas ISO requieren la gestión de competencias y concientización, pero no prescriben narrativas específicas."
+      },
+      {
+        "text": "Para ocultar la falta de datos y estadísticas técnicas en la presentación preventiva.",
+        "isCorrect": false,
+        "rationale": "La narrativa complementa y potencia los datos técnicos al otorgarles un sentido humano."
+      },
+      {
+        "text": "Porque los trabajadores adultos solo aprenden si se les presentan fábulas con seres ficticios.",
+        "isCorrect": false,
+        "rationale": "El aprendizaje en adultos requiere realismo, contexto operativo y situaciones con las que puedan identificarse plenamente."
+      }
+    ],
+    "hint": "Reflexiona sobre qué causa que los oyentes sientan que la historia que están escuchando trata sobre ellos mismos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple la introducción de un \"conflicto o dilema interno\" dentro de la estructura de una historia sobre prevención?",
+    "opciones": [
+      {
+        "text": "Generar la tensión dramática necesaria para captar la atención de la audiencia y sostener su interés.",
+        "isCorrect": true,
+        "rationale": "El dilema interno plantea una decisión difícil que mantiene en expectativa al oyente sobre la resolución que adoptará el personaje."
+      },
+      {
+        "text": "Demostrar que los trabajadores carecen de capacidad para tomar decisiones en el área operativa.",
+        "isCorrect": false,
+        "rationale": "El conflicto busca evidenciar las conversaciones internas comunes a toda persona, no descalificar su capacidad de decisión."
+      },
+      {
+        "text": "Justificar la reducción del presupuesto operativo destinado a la compra de equipos de protección.",
+        "isCorrect": false,
+        "rationale": "Las decisiones presupuestarias corporativas no guardan relación con la estructura narrativa pedagógica."
+      },
+      {
+        "text": "Sustituir la elaboración diaria del Análisis de Trabajo Seguro (ATS) en los frentes de obra.",
+        "isCorrect": false,
+        "rationale": "Las herramientas narrativas de sensibilización no reemplazan la evaluación documental técnica de riesgos."
+      },
+      {
+        "text": "Provocar discusiones conflictivas entre los integrantes de las diferentes cuadrillas de trabajo.",
+        "isCorrect": false,
+        "rationale": "El conflicto narrativo busca la reflexión individual y colectiva, nunca el encono o la disputa entre trabajadores."
+      }
+    ],
+    "hint": "Considera qué elemento narrativo evita que una exposición sea monótona y despierte la curiosidad por el desenlace.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué recursos del lenguaje y del entorno enriquecen la narración de una historia de seguridad para hacerla memorable?",
+    "opciones": [
+      {
+        "text": "Incorporar detalles sensoriales como ruidos característicos, clima o visibilidad del espacio.",
+        "isCorrect": true,
+        "rationale": "Describir el ambiente con detalles sensoriales ayuda a la audiencia a reconstruir mentalmente la escena con realismo."
+      },
+      {
+        "text": "Describir las sensaciones físicas asociadas a las emociones, como el sudor en las manos o la aceleración cardíaca.",
+        "isCorrect": true,
+        "rationale": "Mencionar las respuestas fisiológicas del cuerpo conecta directamente con el recuerdo emocional de los oyentes."
+      },
+      {
+        "text": "Utilizar metáforas o analogías potentes que conecten el cuidado preventivo con la vida cotidiana.",
+        "isCorrect": true,
+        "rationale": "Las imágenes metafóricas simplifican conceptos complejos e instalan reflexiones perdurables en la memoria."
+      },
+      {
+        "text": "Mantener un tono de voz monótono, plano y acelerado durante toda la exposición.",
+        "isCorrect": false,
+        "rationale": "La falta de modulación e intensidad vocal aburre a la audiencia y desconecta su atención de la historia."
+      },
+      {
+        "text": "Evitar el uso de pausas o silencios estratégicos entre las frases principales del relato.",
+        "isCorrect": false,
+        "rationale": "Los silencios estratégicos son indispensables para acentuar momentos clave y permitir la asimilación del mensaje."
+      }
+    ],
+    "hint": "Elige las herramientas que estimulan los sentidos, las emociones y la imaginación del oyente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la meta primordial del \"llamado a la acción\" al finalizar una sesión estructurada de storytelling en seguridad?",
+    "opciones": [
+      {
+        "text": "Desafiar a los oyentes a reflexionar sobre su conducta y elegir activamente la transformación de sus hábitos.",
+        "isCorrect": true,
+        "rationale": "El cierre narrativo moviliza a la audiencia a trasladar la emoción generada por la historia hacia un cambio voluntario en su trabajo diario."
+      },
+      {
+        "text": "Recaudar las firmas de asistencia en el menor tiempo posible para dar por concluida la reunión.",
+        "isCorrect": false,
+        "rationale": "La toma de firmas es un trámite administrativo que no constituye el propósito formativo del cierre narrativo."
+      },
+      {
+        "text": "Asignar públicamente la culpa de los accidentes ocurridos en la empresa durante el año anterior.",
+        "isCorrect": false,
+        "rationale": "Buscar culpables contradice el espíritu del storytelling centrado en la empatía, el aprendizaje y la prevención."
+      },
+      {
+        "text": "Anunciar la suspensión temporal e inmediata de todas las operaciones del proyecto industrial.",
+        "isCorrect": false,
+        "rationale": "Las decisiones de paralización operacional obedecen a riesgos inminentes detectados en campo, no al cierre de un relato."
+      },
+      {
+        "text": "Leer en voz alta la totalidad de los artículos y sanciones estipulados en la ley del sector.",
+        "isCorrect": false,
+        "rationale": "La lectura árida de normativas al cierre rompe la conexión emocional construida a lo largo de la historia."
+      }
+    ],
+    "hint": "Reflexiona sobre el puente que conecta el desenlace de la historia con el comportamiento futuro del trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la estructura de un relato preventivo, ¿por qué resulta clave abordar la etapa de resistencia frente al \"qué dirán\" o la presión social de los pares?",
+    "opciones": [
+      {
+        "text": "Porque empodera al trabajador para sostener su convicción segura aun cuando el entorno actúe con complacencia.",
+        "isCorrect": true,
+        "rationale": "Anticipar la presión social del grupo permite al colaborador prepararse mentalmente para actuar con autonomía según sus valores."
+      },
+      {
+        "text": "Porque demuestra que las culturas de tipo dependiente son las únicas eficientes en la industria.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la concientización es avanzar hacia culturas independientes e interdependientes, no validar la dependencia."
+      },
+      {
+        "text": "Porque incentiva a los trabajadores a aislarse y no comunicarse bajo ninguna circunstancia con su equipo.",
+        "isCorrect": false,
+        "rationale": "Fomentar el aislamiento destruye la comunicación y la interdependencia necesarias para un ambiente seguro."
+      },
+      {
+        "text": "Porque confirma que el uso de equipos de protección personal es completamente optativo en el puesto.",
+        "isCorrect": false,
+        "rationale": "El acatamiento de estándares y uso de EPP es obligatorio y fundamental para la preservación de la vida."
+      },
+      {
+        "text": "Porque promueve que el autocuidado se practique de manera exclusiva cuando el supervisor está observando.",
+        "isCorrect": false,
+        "rationale": "La meta del liderazgo en el ser es que la conducta segura se mantenga en todo momento, se esté o no bajo supervisión."
+      }
+    ],
+    "hint": "Piensa en cómo preparar al trabajador para que no ceda ante comentarios de compañeros que minimizan el riesgo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la Seguridad Basada en el Comportamiento, ¿cuál es la diferencia fundamental entre el liderazgo enfocado en el 'Hacer' y el liderazgo centrado en el 'Ser'?",
+    "opciones": [
+      {
+        "text": "El liderazgo en el Hacer busca la convicción interna, mientras que el del Ser prioriza la fiscalización directa.",
+        "isCorrect": false,
+        "rationale": "El liderazgo centrado en el Ser es el que busca la convicción y los valores profundos, invirtiendo el enfoque punitivo tradicional."
+      },
+      {
+        "text": "El liderazgo en el Hacer se enfoca en el cumplimiento normativo y procedimientos, mientras que el del Ser trabaja sobre los valores, creencias e identidad.",
+        "isCorrect": true,
+        "rationale": "El enfoque en el Hacer limita la gestión al seguimiento de reglas y documentos, mientras que el enfoque en el Ser transforma la mentalidad y los principios personales para sostener hábitos seguros."
+      },
+      {
+        "text": "El liderazgo en el Ser reemplaza la necesidad de contar con sistemas documentales e IPERC en la empresa.",
+        "isCorrect": false,
+        "rationale": "Trabajar en el Ser no elimina las herramientas de gestión como la matriz IPERC o los estándares, sino que les da propósito y sostenibilidad a través de la conciencia del trabajador."
+      },
+      {
+        "text": "El liderazgo en el Hacer es de carácter proactivo y participativo, mientras que el del Ser es estrictamente reactivo.",
+        "isCorrect": false,
+        "rationale": "El enfoque basado en el Hacer tiende a ser reactivo o dependiente de la supervisión, a diferencia del Ser que fomenta la proactividad preventiva."
+      },
+      {
+        "text": "El liderazgo en el Ser delega la responsabilidad legal del empleador exclusivamente hacia los supervisores de campo.",
+        "isCorrect": false,
+        "rationale": "El liderazgo centrado en el Ser fomenta la responsabilidad individual y compartida, sin alterar ni delegar las responsabilidades legales de la empresa."
+      }
+    ],
+    "hint": "Piensa en cuál de los dos enfoques actúa sobre el cumplimiento externo versus la transformación de la conciencia interna.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué problema surge al gestionar la seguridad bajo el paradigma tradicional de 'Hacer para Tener' en lugar de formar primero la identidad ('Ser')?",
+    "opciones": [
+      {
+        "text": "Se genera un exceso de reportes de incidentes leves en las plataformas digitales.",
+        "isCorrect": false,
+        "rationale": "El paradigma tradicional suele causar el ocultamiento de eventos por miedo a sanciones, en lugar de un exceso de reportes."
+      },
+      {
+        "text": "Las acciones preventivas se vuelven permanentes y automáticas en toda la organización.",
+        "isCorrect": false,
+        "rationale": "Bajo el esquema tradicional, las acciones son temporales y dependen de la presencia constante del fiscalizador."
+      },
+      {
+        "text": "Las acciones resultan temporales y dependen de la supervisión constante, pues no hay un valor interno arraigado.",
+        "isCorrect": true,
+        "rationale": "Si solo se exigen acciones sin modificar la mentalidad y las creencias del trabajador, el comportamiento seguro dura únicamente mientras exista fiscalización activa."
+      },
+      {
+        "text": "Se invalida legalmente el Plan y Programa Anual de Seguridad y Salud en el Trabajo.",
+        "isCorrect": false,
+        "rationale": "El paradigma no invalida legalmente los documentos, sino que resta efectividad real a su ejecución en el campo."
+      },
+      {
+        "text": "El personal asume un nivel interdependiente de seguridad de manera inmediata.",
+        "isCorrect": false,
+        "rationale": "La interdependencia requiere que la seguridad sea un valor personal compartido, lo cual no se logra imponiendo tareas sin cultivar el Ser."
+      }
+    ],
+    "hint": "Considera qué ocurre con el comportamiento de un trabajador cuando el supervisor se retira del área de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el desarrollo del taller, ¿cuáles de las siguientes características corresponden a la evolución hacia una Cultura de Seguridad 'Independiente' e 'Interdependiente'?",
+    "opciones": [
+      {
+        "text": "En el nivel independiente, el trabajador se hace responsable de su propia seguridad por convicción.",
+        "isCorrect": true,
+        "rationale": "La cultura independiente se alcanza cuando el autocuidado surge de la propia elección y valor personal del individuo."
+      },
+      {
+        "text": "En el nivel interdependiente, la motivación colectiva evoluciona hacia el cuidado mutuo ('nos cuidamos').",
+        "isCorrect": true,
+        "rationale": "El nivel máximo de madurez en seguridad implica velar no solo por el propio bienestar, sino de manera colaborativa por los compañeros."
+      },
+      {
+        "text": "En ambos niveles se requiere la presencia obligatoria de un vigía para ejecutar cualquier tarea operativa.",
+        "isCorrect": false,
+        "rationale": "La necesidad constante de un vigía o fiscalizador caracteriza a la cultura dependiente, no a la independiente ni a la interdependiente."
+      },
+      {
+        "text": "Las normas y procedimientos se convierten en hábitos arraigados por decisión propia y no por miedo a la sanción.",
+        "isCorrect": true,
+        "rationale": "El paso de la dependencia a la independencia radica en sustituir la presión externa por el compromiso consciente con la regla."
+      },
+      {
+        "text": "La gestión ante fallas o eventos se enfoca en buscar culpables y aplicar amonestaciones escritas inmediatas.",
+        "isCorrect": false,
+        "rationale": "Buscar culpables es propio de culturas reactivas o dependientes; las culturas avanzadas buscan el aprendizaje y la mejora del sistema."
+      }
+    ],
+    "hint": "Selecciona las opciones que reflejen la autonomía del trabajador y la responsabilidad colectiva sobre el cuidado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante el ejercicio del autodiagnóstico mediante la 'Rueda de Liderazgo en Seguridad', ¿a qué se refiere específicamente el concepto de 'Área Palanca'?",
+    "opciones": [
+      {
+        "text": "Es el área con la calificación más alta que sirve únicamente para felicitar al equipo.",
+        "isCorrect": false,
+        "rationale": "El área palanca no es necesariamente la de mayor puntaje, sino aquella con potencial estratégico de impacto global."
+      },
+      {
+        "text": "Es la dimensión que requiere mayor inversión económica para cumplir con los estándares mínimos exigidos.",
+        "isCorrect": false,
+        "rationale": "El concepto no está ligado al presupuesto financiero, sino a la influencia del aspecto en el resto de las competencias de liderazgo."
+      },
+      {
+        "text": "Es aquella área de evaluación que, al ser trabajada y mejorada, impulsa por defecto el desarrollo de las demás áreas.",
+        "isCorrect": true,
+        "rationale": "El área palanca es un punto focal estratégico donde la mejora genera un efecto multiplicador positivo en la gestión integral del líder."
+      },
+      {
+        "text": "Es el indicador cuantitativo que mide exclusivamente la reducción del índice de accidentabilidad.",
+        "isCorrect": false,
+        "rationale": "La rueda de liderazgo evalúa competencias personales y de gestión del ser, no métricas estadísticas de accidentes."
+      },
+      {
+        "text": "Es el área más baja detectada en el diagnóstico y que debe ser sancionada de inmediato.",
+        "isCorrect": false,
+        "rationale": "El área más baja es la brecha principal, pero no se confunde con la palanca a menos que su fortalecimiento movilice el resto del sistema."
+      }
+    ],
+    "hint": "Piensa en un elemento que al ser movido o fortalecido produce un efecto dominó positivo en todo el sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al formular compromisos personales de mejora tras un autodiagnóstico de liderazgo, ¿cuáles de las siguientes pautas garantizan que el compromiso sea efectivo y no se quede en un enunciado 'gaseoso'?",
+    "opciones": [
+      {
+        "text": "Redactar acciones abstractas como 'voy a mejorar mi actitud en seguridad' para tener flexibilidad.",
+        "isCorrect": false,
+        "rationale": "Las frases abstractas o vagas impiden la medición y la rendición de cuentas del compromiso asumido."
+      },
+      {
+        "text": "Establecer comportamientos específicos, medibles y con un tiempo o frecuencia clara de ejecución.",
+        "isCorrect": true,
+        "rationale": "Un compromiso operativo debe definir exactamente qué acción concreta se realizará y con qué periodicidad."
+      },
+      {
+        "text": "Identificar qué valores e identidad personal se deben adoptar para sostener la acción elegida.",
+        "isCorrect": true,
+        "rationale": "Para cumplir de forma consistente un compromiso práctico, es indispensable alinear la convicción interna y la elección del 'Ser'."
+      },
+      {
+        "text": "Delegar el cumplimiento del compromiso personal en el supervisor de turno.",
+        "isCorrect": false,
+        "rationale": "El compromiso del liderazgo en el Ser es una decisión y responsabilidad de carácter estrictamente individual."
+      },
+      {
+        "text": "Definir acciones puntuales, tales como destinar un tiempo específico para dinámicas participativas o pausas de reflexión.",
+        "isCorrect": true,
+        "rationale": "Acciones operativas delimitadas permiten verificar si el líder está ejecutando el cambio planificado."
+      }
+    ],
+    "hint": "Busca las pautas que le otorgan especificidad técnica, claridad operacional y sustento de valor al compromiso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué el modelo clásico de comunicación (Emisor - Código - Canal - Mensaje - Receptor) resulta insuficiente para la gestión del comportamiento en seguridad?",
+    "opciones": [
+      {
+        "text": "Porque el modelo clásico solo aplica para comunicaciones escritas y no para el diálogo verbal en campo.",
+        "isCorrect": false,
+        "rationale": "El modelo clásico abarca tanto lo escrito como lo verbal, pero omite factores humanos y ontológicos determinantes."
+      },
+      {
+        "text": "Porque ignora que la interpretación del mensaje está filtrada por las emociones, la corporalidad, las creencias y el contexto del receptor.",
+        "isCorrect": true,
+        "rationale": "Un mensaje nunca llega intacto; el receptor lo procesa a través de sus vivencias, su estado emocional y el entorno, lo que exige considerar estos elementos en la interacción."
+      },
+      {
+        "text": "Porque los trabajadores de campo no cuentan con el nivel educativo para entender códigos técnicos.",
+        "isCorrect": false,
+        "rationale": "Esta suposición es un juicio erróneo; la limitación del modelo radica en no considerar la multidimensionalidad del ser humano."
+      },
+      {
+        "text": "Porque invalida la autoridad formal del emisor para dictar órdenes operativas.",
+        "isCorrect": false,
+        "rationale": "El modelo de comunicación no aborda la jerarquía legal, sino la efectividad del entendimiento y la conexión interpersonal."
+      },
+      {
+        "text": "Porque exige obligatoriamente el uso de medios digitales para confirmar la recepción de las normas.",
+        "isCorrect": false,
+        "rationale": "La efectividad comunicativa no depende de la tecnología utilizada, sino de las dimensiones de interpretación del lenguaje."
+      }
+    ],
+    "hint": "Considera qué elementos internos y del entorno influyen en cómo una persona percibe una instrucción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la comunicación ontológica aplicada a la seguridad, ¿qué dominios o dimensiones deben alinearse para que el mensaje genere un impacto real y no cause incoherencia?",
+    "opciones": [
+      {
+        "text": "La corporalidad (postura, gestos y mirada que respaldan lo que se dice).",
+        "isCorrect": true,
+        "rationale": "El lenguaje corporal transmite congruencia; si el cuerpo contradice la palabra, el receptor percibe insinceridad o desinterés."
+      },
+      {
+        "text": "La emoción (el estado afectivo desde el cual se comunica y la emoción que se busca generar).",
+        "isCorrect": true,
+        "rationale": "La emoción determina la apertura o el cierre del interlocutor ante la instrucción o retroalimentación."
+      },
+      {
+        "text": "El contexto y el dominio de la interacción (momento y lugar adecuado para la conversación).",
+        "isCorrect": true,
+        "rationale": "Comunicar un tema crítico en un entorno lleno de ruido o presión productiva distorsiona la efectividad del mensaje."
+      },
+      {
+        "text": "La aplicación inmediata de amonestaciones verbales ante cualquier falla del receptor.",
+        "isCorrect": false,
+        "rationale": "Las amonestaciones generan posturas defensivas basadas en el miedo, alejándose de la alineación comunicativa del ser."
+      },
+      {
+        "text": "El uso exclusivo de jerga legal técnica durante las charlas de cinco minutos.",
+        "isCorrect": false,
+        "rationale": "El exceso de tecnicismos legales entorpece la comprensión y no contribuye a la conexión emocional ni a la coherencia."
+      }
+    ],
+    "hint": "Selecciona las variables que estructuran el 'cómo' se transmite el mensaje más allá de las palabras empleadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un supervisor observa a un trabajador manipulando un equipo sin lentes de protección y le dice: 'Se nota que a ti no te importa la seguridad ni tu familia'. ¿A qué distinción del lenguaje corresponde esta frase?",
+    "opciones": [
+      {
+        "text": "A una afirmación verificable basada en datos duros.",
+        "isCorrect": false,
+        "rationale": "La frase no describe un dato factual, sino una interpretación subjetiva del estado mental de la persona."
+      },
+      {
+        "text": "A una descripción objetiva del hecho observado.",
+        "isCorrect": false,
+        "rationale": "Un hecho objetivo se limitaría a señalar la ausencia física del lente durante la tarea."
+      },
+      {
+        "text": "A un juicio de valor cargado de suposición sobre la actitud del trabajador.",
+        "isCorrect": true,
+        "rationale": "Los juicios son interpretaciones o etiquetas sobre la realidad. Asumir la falta de interés o amor familiar del trabajador es un juicio que genera la defensiva."
+      },
+      {
+        "text": "A una petición formal de trabajo seguro.",
+        "isCorrect": false,
+        "rationale": "Una petición solicita una acción futura concreta de manera clara, sin descalificar a la persona."
+      },
+      {
+        "text": "A un reclamo fundado en un estándar operacional.",
+        "isCorrect": false,
+        "rationale": "Un reclamo objetivo parte de un hecho incumplido y contrasta con el acuerdo previo, sin atacar el compromiso moral del individuo."
+      }
+    ],
+    "hint": "Diferencia entre la observación directa de una acción física y la etiqueta subjetiva que el observador le otorga.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de los siguientes enunciados representa una descripción de HECHO (afirmación) en un entorno de trabajo?",
+    "opciones": [
+      {
+        "text": "El operador conduce de manera irresponsable por la rampa principal.",
+        "isCorrect": false,
+        "rationale": "El término 'irresponsable' es una etiqueta subjetiva (juicio) sobre la conducta del conductor."
+      },
+      {
+        "text": "El trabajador no portaba los guantes de cuero durante el acople de la manguera a las 10:00 a.m.",
+        "isCorrect": true,
+        "rationale": "Es una afirmación fáctica y observable que puede ser comprobada o refutada sin emitir una opinión sobre la moral del trabajador."
+      },
+      {
+        "text": "El técnico está apurado porque seguro quiere salir temprano a su descanso.",
+        "isCorrect": false,
+        "rationale": "Especular sobre las intenciones o prisa del técnico constituye una suposición o juicio."
+      },
+      {
+        "text": "El área de mantenimiento es desordenada y nunca cuida las herramientas.",
+        "isCorrect": false,
+        "rationale": "'Desordenada' y 'nunca' son generalizaciones subjetivas que califican sin describir hechos exactos."
+      },
+      {
+        "text": "El personal no usa el arnés debido a su falta de cultura preventiva.",
+        "isCorrect": false,
+        "rationale": "Atribuir la causa a la 'falta de cultura' es una interpretación previa y no la observación objetiva del hecho."
+      }
+    ],
+    "hint": "Busca la opción que registre únicamente lo que una cámara de video podría captar de forma neutral y comprobable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué efecto negativo produce intervenir a un trabajador formulando la pregunta tradicional: '¿Por qué no te pusiste el EPP?'?",
+    "opciones": [
+      {
+        "text": "Provoca que el trabajador recuerde de inmediato el paso a paso del procedimiento.",
+        "isCorrect": false,
+        "rationale": "Preguntar 'por qué' no invita a recordar la regla técnica, sino a buscar justificaciones o excusas."
+      },
+      {
+        "text": "Activa mecanismos de defensa, excusas e historia de justificación en lugar de autorreflexión.",
+        "isCorrect": true,
+        "rationale": "La pregunta '¿por qué?' suele percibirse como una acusación, llevando a la mente a justificar la falla ('es que incomoda', 'fue un segundo') en vez de analizar el riesgo."
+      },
+      {
+        "text": "Garantiza que la conducta no se vuelva a repetir en el siguiente turno.",
+        "isCorrect": false,
+        "rationale": "Obtener una excusa no genera la modificación profunda del comportamiento a largo plazo."
+      },
+      {
+        "text": "Demuestra empatía profunda por parte del supervisor hacia la tarea.",
+        "isCorrect": false,
+        "rationale": "Cuestionar el 'por qué' de manera directa suele sonar inquisitivo y distanciar al interlocutor."
+      },
+      {
+        "text": "Obliga al trabajador a firmar una carta de compromiso de manera automática.",
+        "isCorrect": false,
+        "rationale": "La pregunta no conduce a un compromiso formal, sino a una respuesta defensiva verbal."
+      }
+    ],
+    "hint": "Analiza cómo reacciona la mente humana ante una pregunta que cuestiona sus motivos directos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En lugar de imponer una orden o buscar excusas, ¿cuáles son los propósitos principales de formular 'Preguntas Poderosas' durante una intervención de seguridad?",
+    "opciones": [
+      {
+        "text": "Evocar la conciencia y hacer que el propio trabajador identifique la desviación por sí mismo.",
+        "isCorrect": true,
+        "rationale": "Las preguntas poderosas invitan a la persona a observar su entorno y darse cuenta de la falla sin que se la etiquete."
+      },
+      {
+        "text": "Transferir la responsabilidad del autocuidado al trabajador al hacerlo reflexionar sobre sus acciones.",
+        "isCorrect": true,
+        "rationale": "Al responder cómo protegerse, el trabajador asume la autoría del control en lugar de ser un mero ejecutor de órdenes."
+      },
+      {
+        "text": "Demostrar que el supervisor posee un conocimiento técnico superior al del operario.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la pregunta no es la exhibición de poder o conocimiento del líder, sino la toma de conciencia del colaborador."
+      },
+      {
+        "text": "Estimular la memoria procedimental indagando sobre lo que establece el estándar o norma.",
+        "isCorrect": true,
+        "rationale": "Preguntar qué establece el procedimiento exige al trabajador consultar su conocimiento previo activamente."
+      },
+      {
+        "text": "Generar argumentos para justificar la amonestación escrita del personal sancionado.",
+        "isCorrect": false,
+        "rationale": "Las preguntas poderosas buscan educar y prevenir, no recopilar pruebas para sanciones punitivas."
+      }
+    ],
+    "hint": "Considera los enfoques que estimulan el pensamiento crítico, la memoria técnica y el compromiso personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un supervisor encuentra herramientas tiradas cerca de un desnivel que podrían causar un tropezón. ¿Cuál de las siguientes preguntas corresponde a una 'Pregunta de Exploración o Indagación' orientada a la prevención?",
+    "opciones": [
+      {
+        "text": "¡Oye! ¿Quién dejó este desorden aquí para reportarlo?",
+        "isCorrect": false,
+        "rationale": "Esta frase busca culpables y juzga la situación de inmediato sin invitar a la reflexión de seguridad."
+      },
+      {
+        "text": "¿Qué situaciones en este espacio de trabajo podrían desencadenar un accidente y cómo las corregirías?",
+        "isCorrect": true,
+        "rationale": "Esta pregunta de exploración guía al trabajador a observar el entorno, analizar el peligro potencial por sí mismo y proponer la solución."
+      },
+      {
+        "text": "¿Sabes que por esto te pueden suspender tres días, verdad?",
+        "isCorrect": false,
+        "rationale": "Es una pregunta cerrada basada en la amenaza y el miedo, que no explora la gestión del riesgo."
+      },
+      {
+        "text": "¿Acaso no leíste el reglamento interno de trabajo esta mañana?",
+        "isCorrect": false,
+        "rationale": "Es una frase sarcástica que ataca la capacidad del trabajador en lugar de explorar el estado de la tarea."
+      },
+      {
+        "text": "¿Vas a guardar eso sí o no?",
+        "isCorrect": false,
+        "rationale": "Es un ultimátum cerrado de opción binaria que no promueve el análisis operativo del peligro."
+      }
+    ],
+    "hint": "Busca la pregunta abierta que estimule al trabajador a analizar el área y proponer los cambios requeridos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si un trabajador realiza una maniobra apresurada para terminar su turno, ¿qué pregunta formulada por el líder busca invitar al 'Compromiso y la Conciencia' sobre el impacto personal?",
+    "opciones": [
+      {
+        "text": "¿Por qué siempre corres a la hora de salida?",
+        "isCorrect": false,
+        "rationale": "Es un señalamiento generalizado que invita a la justificación o al rechazo."
+      },
+      {
+        "text": "¿Cuándo fue la última vez que tomaste una decisión basada en la seguridad por encima de la rapidez?",
+        "isCorrect": true,
+        "rationale": "Esta pregunta obliga al individuo a revisar su comportamiento reciente y contrastar la velocidad con la preservación de su salud."
+      },
+      {
+        "text": "¿No sabes que el camión de transporte te va a esperar de todos modos?",
+        "isCorrect": false,
+        "rationale": "Trata sobre un detalle logístico secundario sin profundizar en la gestión personal del riesgo."
+      },
+      {
+        "text": "¿Vas a llenar el reporte de incidentes ahora mismo o mañana?",
+        "isCorrect": false,
+        "rationale": "Es una pregunta administrativa cerrada que no aborda la toma de decisiones consciente."
+      },
+      {
+        "text": "¿Crees que a tu jefe le importa que trabajes rápido?",
+        "isCorrect": false,
+        "rationale": "Involucra un juicio sobre la postura del jefe sin enfocar la responsabilidad en el propio trabajador."
+      }
+    ],
+    "hint": "Selecciona la interrogante que confronta de forma reflexiva la prisa versus la valoración de la seguridad propia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función estratégica del Storytelling (arte de contar historias) en los talleres y charlas de Seguridad Basada en el Comportamiento?",
+    "opciones": [
+      {
+        "text": "Distraer al personal para que la capacitación no resulte aburrida ni extensa.",
+        "isCorrect": false,
+        "rationale": "El objetivo no es la simple diversión o distracción, sino la transmisión profunda del mensaje preventivo."
+      },
+      {
+        "text": "Conectar con las emociones y valores del trabajador para hacer memorable el mensaje y transformar sus creencias.",
+        "isCorrect": true,
+        "rationale": "Las historias activan la empatía y los sentimientos, permitiendo que las normas técnicas se traduzcan en vivencias con significado personal sostenido."
+      },
+      {
+        "text": "Reemplazar la lectura obligatoria de las matrices IPERC y procedimientos escritos de trabajo seguro.",
+        "isCorrect": false,
+        "rationale": "Las historias no sustituyen las herramientas técnicas y normativas; las complementan dándoles sentido humano."
+      },
+      {
+        "text": "Exponer públicamente los errores cometidos por trabajadores sancionados para dar un ejemplo punitivo.",
+        "isCorrect": false,
+        "rationale": "Usar relatos para avergonzar destruye la confianza y la cultura del ser, promoviendo el miedo."
+      },
+      {
+        "text": "Cumplir de manera formal con la hora académica requerida por la fiscalización laboral.",
+        "isCorrect": false,
+        "rationale": "El Storytelling es una herramienta pedagógica transformadora, no un mero requisito de tiempo administrativo."
+      }
+    ],
+    "hint": "Reflexiona sobre cómo las narrativas influyen en el lado afectivo del cerebro para fijar aprendizajes duraderos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para construir un personaje creíble y con 'humanidad' dentro de una historia de seguridad, ¿qué elementos deben incluirse según las pautas metodológicas de la capacitación?",
+    "opciones": [
+      {
+        "text": "Detalles cotidianos con los que la audiencia pueda identificarse (familia, pasatiempos, hábitos como tomar café).",
+        "isCorrect": true,
+        "rationale": "La humanidad del personaje surge al dotarlo de rasgos comunes y cotidianos con los que el trabajador empatiza."
+      },
+      {
+        "text": "Sus dudas internas, temores reales y dilemas personales ante la seguridad.",
+        "isCorrect": true,
+        "rationale": "Mostrar las conversaciones internas y conflictos del personaje refleja las contradicciones que vive el propio operario en campo."
+      },
+      {
+        "text": "Una descripción impecable de un héroe perfecto que jamás comete errores ni siente miedo.",
+        "isCorrect": false,
+        "rationale": "Un personaje irreal o 'invulnerable' destruye la identificación y la empatía de los trabajadores."
+      },
+      {
+        "text": "Un contexto de experiencia laboral real (años en el puesto, responsabilidades familiares).",
+        "isCorrect": true,
+        "rationale": "Anclar al personaje en su realidad técnica y social otorga verosimilitud y cercanía al relato."
+      },
+      {
+        "text": "El número exacto de DNI y ficha de registro administrativo del trabajador involucrado.",
+        "isCorrect": false,
+        "rationale": "Los datos administrativos fríos restan fluidez narrativa e incurren en la exposición innecesaria de personas."
+      }
+    ],
+    "hint": "Identifica los factores que convierten a un sujeto de papel en una persona de carne y hueso dentro de la mente del oyente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es crucial incluir un 'conflicto o dilema' en la estructura del Storytelling aplicado a la seguridad?",
+    "opciones": [
+      {
+        "text": "Porque permite alargar la historia para cubrir el tiempo asignado a la charla.",
+        "isCorrect": false,
+        "rationale": "El conflicto no busca rellenar tiempo, sino mantener la tensión dramática y la atención reflexiva."
+      },
+      {
+        "text": "Porque la tensión dramática capta la atención y refleja las decisiones difíciles entre la velocidad, la presión social y la seguridad.",
+        "isCorrect": true,
+        "rationale": "El conflicto genera identificación activa; en él se escenifica la lucha entre hacer lo cómodo o hacer lo correcto frente a la presión del entorno."
+      },
+      {
+        "text": "Porque demuestra que en la empresa siempre existe una mala intención de los supervisores.",
+        "isCorrect": false,
+        "rationale": "El dilema demuestra las presiones reales del trabajo diario, no la malignidad de los actores."
+      },
+      {
+        "text": "Porque es un requisito exigido por el Reglamento Interno de Seguridad y Salud en el Trabajo.",
+        "isCorrect": false,
+        "rationale": "El SST regula estándares normativos, no las técnicas pedagógicas narrativas del facilitador."
+      },
+      {
+        "text": "Porque sin conflicto es imposible mencionar las características técnicas de los EPP.",
+        "isCorrect": false,
+        "rationale": "Las especificaciones del EPP se pueden mencionar independientemente, pero el conflicto le otorga valor práctico a su uso."
+      }
+    ],
+    "hint": "Piensa en qué elemento narrativo engancha al espectador y lo obliga a preguntarse '¿qué pasará ahora?'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el clímax de una narración de seguridad, el facilitador detiene el relato y pregunta a la audiencia: 'Si ustedes fueran Juan, ¿qué harían?'. ¿Qué objetivo pedagógico cumple esta pausa interactiva?",
+    "opciones": [
+      {
+        "text": "Evaluar si los trabajadores están despiertos en la sesión.",
+        "isCorrect": false,
+        "rationale": "Aunque verifica la atención, su propósito profundo es el procesamiento ético de la decisión."
+      },
+      {
+        "text": "Obligar a la audiencia a proyectarse en el conflicto, analizar las consecuencias e involucrarse activamente en la solución.",
+        "isCorrect": true,
+        "rationale": "Al hacer que la audiencia tome postura en el dilema del personaje, se estimula el juicio crítico y se ensaya la respuesta segura ante la presión real."
+      },
+      {
+        "text": "Ceder el control del taller para que la audiencia decida la nota del curso.",
+        "isCorrect": false,
+        "rationale": "La pregunta es un recurso de facilitación, no una transferencia de la gestión evaluativa."
+      },
+      {
+        "text": "Identificar qué trabajadores no conocen el número telefónico de emergencias.",
+        "isCorrect": false,
+        "rationale": "No es una pregunta de trivia memorística sobre números de emergencia, sino una reflexión de decisión actitudinal."
+      },
+      {
+        "text": "Comprobar que el personaje ficticio actuó conforme al contrato de trabajo.",
+        "isCorrect": false,
+        "rationale": "El enfoque es invitar a la audiencia a elegir desde su propia conciencia en el lugar del personaje."
+      }
+    ],
+    "hint": "Considera cómo la pregunta traslada al oyente del rol de espectador pasivo al de participante activo de la decisión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Cuando el narrador plantea la etapa de 'Sostenibilidad en el tiempo' en una historia de seguridad, ¿a qué desafíos reales del trabajador hace referencia para evitar que el mensaje se olvide al volver a la operación?",
+    "opciones": [
+      {
+        "text": "A la presión del grupo o las burlas cuando la persona decide realizar los reportes de seguridad.",
+        "isCorrect": true,
+        "rationale": "El trabajador enfrentará resistencia o comentarios de compañeros cuando intente romper hábitos arraigados."
+      },
+      {
+        "text": "A la tentación de caer en la comodidad y la rutina cuando nadie lo está supervisando.",
+        "isCorrect": true,
+        "rationale": "Mantener la conducta segura exige vencer el sesgo de complacencia que surge al repetir la tarea sin novedades."
+      },
+      {
+        "text": "A la posibilidad de ser juzgado como 'exagerado' por aplicar la parada de trabajo preventiva.",
+        "isCorrect": true,
+        "rationale": "El temor al rechazo social es un obstáculo clave que el relato debe abordar para empoderar al trabajador."
+      },
+      {
+        "text": "A la firma obligatoria de la lista de asistencia al final de cada turno de trabajo.",
+        "isCorrect": false,
+        "rationale": "La firma de asistencia es un trámite formal que no representa un desafío de convicción actitudinal en campo."
+      },
+      {
+        "text": "Al mantenimiento mecánico preventivo de los vehículos asignados al área de logística.",
+        "isCorrect": false,
+        "rationale": "El dilema de sostenibilidad se refiere a la postura mental frente al grupo, no a los planes de taller de equipos."
+      }
+    ],
+    "hint": "Selecciona los obstáculos de tipo social, emocional y de rutina que el trabajador encuentra al regresar a su puesto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo ayuda el recurso del 'Detallado Sensorial' (describir olores, ruidos, temperaturas, sensaciones físicas) en la narración de un evento de seguridad?",
+    "opciones": [
+      {
+        "text": "Sirve para demostrar la calidad del equipamiento técnico utilizado en la empresa.",
+        "isCorrect": false,
+        "rationale": "Las sensaciones físicas no buscan promocionar marcas o calidad de equipos, sino evocar vivencias."
+      },
+      {
+        "text": "Sumerge a la audiencia en la experiencia, haciendo sentir el miedo, el sudor en las manos o la vibración del entorno para fijar la memoria episódica.",
+        "isCorrect": true,
+        "rationale": "El cerebro procesa los detalles sensoriales recreando la vivencia. Al sentir el nudo en el estómago o el sonido del metal, la lección se graba de forma profunda."
+      },
+      {
+        "text": "Sustituye la necesidad de realizar monitoreos de agentes físicos y químicos en planta.",
+        "isCorrect": false,
+        "rationale": "El detalle sensorial es una técnica de oratoria, no un monitoreo higiénico normativo."
+      },
+      {
+        "text": "Permite ocultar la falta de datos numéricos en la investigación de accidentes.",
+        "isCorrect": false,
+        "rationale": "La narrativa no busca encubrir deficiencias técnicas, sino sensibilizar a las personas."
+      },
+      {
+        "text": "Aumenta el tiempo de la capacitación sin aportar valor al aprendizaje del grupo.",
+        "isCorrect": false,
+        "rationale": "El detalle sensorial aporta un alto valor pedagógico al activar la memoria emocional del oyente."
+      }
+    ],
+    "hint": "Piensa en cómo reacciona el cuerpo de un oyente cuando escucha descripciones precisas de ruidos peligrosos o tensión física.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del uso de herramientas narrativas en seguridad, ¿cuáles de los siguientes recursos contribuyen a elevar el impacto pedagógico del facilitador?",
+    "opciones": [
+      {
+        "text": "Uso de metáforas o comparaciones (ej. 'los guantes son tu segunda piel' o 'la comunicación es un puente').",
+        "isCorrect": true,
+        "rationale": "Las metáforas simplifican conceptos abstractos y crean imágenes mentales de fácil recordación."
+      },
+      {
+        "text": "Manejo estratégico de silencios o pausas para permitir que la audiencia procese una idea o pregunta reflexiva.",
+        "isCorrect": true,
+        "rationale": "El silencio bien administrado genera expectativa y brinda tiempo mental para la asimilación del concepto."
+      },
+      {
+        "text": "Variación del ritmo de voz y contraste de emociones durante la narración.",
+        "isCorrect": true,
+        "rationale": "Acelerar o pausar el tono según el peligro descrito evita la monotonía y mantiene la atención."
+      },
+      {
+        "text": "Dictado de largos párrafos de leyes y decretos supremos a velocidad constante.",
+        "isCorrect": false,
+        "rationale": "Monotonía y exceso de texto normativo desconectan emocionalmente a la audiencia."
+      },
+      {
+        "text": "Uso permanente de gritos e insultos para imponer autoridad frente al grupo.",
+        "isCorrect": false,
+        "rationale": "Gritar degrada el clima de confianza, activa defensas y destruye el liderazgo basado en la convicción."
+      }
+    ],
+    "hint": "Selecciona las técnicas de oratoria reflexiva que enriquecen la recepción del mensaje sin caer en el autoritarismo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un supervisor observa a un operario de montacargas conduciendo por encima del límite de velocidad en el almacén. ¿Cuál sería el abordaje correcto bajo el modelo de Liderazgo basado en el Ser y Preguntas Poderosas?",
+    "opciones": [
+      {
+        "text": "Gritarle desde lejos que baje la velocidad o le aplicará una amonestación escrita inmediata.",
+        "isCorrect": false,
+        "rationale": "Acción punitiva basada en el miedo que no genera autorreflexión ni aprendizaje."
+      },
+      {
+        "text": "Ignorar la conducta para evitar conflictos y generar un clima laboral agradable.",
+        "isCorrect": false,
+        "rationale": "La permisividad ante el riesgo inminente omite el principio de prevención y la responsabilidad del líder."
+      },
+      {
+        "text": "Detener la maniobra con respeto y preguntar: '¿Qué consecuencias podría traer para ti y tus compañeros conducir a esta velocidad en este pasillo?'",
+        "isCorrect": true,
+        "rationale": "El abordaje detiene el riesgo, no ataca al individuo, e investiga las consecuencias mediante una pregunta abierta que invita al operario a responsabilizarse del peligro."
+      },
+      {
+        "text": "Asumir el control del montacargas y realizar la tarea él mismo para demostrar cómo se hace.",
+        "isCorrect": false,
+        "rationale": "Reemplazar al trabajador no desarrolla la competencia ni la conciencia de este sobre su autocuidado."
+      },
+      {
+        "text": "Preguntar: '¿Sabías que el reglamento dice que la velocidad máxima es 10 km/h, sí o no?'",
+        "isCorrect": false,
+        "rationale": "Es una pregunta cerrada que busca verificar datos fríos sin explorar el compromiso con la vida."
+      }
+    ],
+    "hint": "Elige la opción que detiene la desviación de forma segura e interpela al operario para que valore el impacto de su acción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En una vía de transporte minero se observa una densa acumulación de polvo que reduce la visibilidad. Ningún operador lo reporta porque 'siempre ha sido así'. ¿Cómo debe intervenir el líder para romper esta 'normalización del riesgo'?",
+    "opciones": [
+      {
+        "text": "Sancionar a todos los conductores del turno por no llenar la tarjeta de reporte.",
+        "isCorrect": false,
+        "rationale": "Sancionar a ciegas refuerza el miedo y el ocultamiento, sin desarticular la creencia de que 'siempre fue así'."
+      },
+      {
+        "text": "Aceptar que el polvo es parte del trabajo en minería y que no se puede cambiar.",
+        "isCorrect": false,
+        "rationale": "Aceptar la desviación es el síntoma definitivo de la normalización del peligro."
+      },
+      {
+        "text": "Reunir al equipo y preguntar: '¿Qué riesgos particulares identifican hoy en esta rampa y qué podríamos hacer diferente para garantizar la visibilidad de todos?'",
+        "isCorrect": true,
+        "rationale": "La pregunta cuestiona la complacencia, moviliza al grupo a observar el peligro cotidiano con nuevos ojos y pide propuestas surgidas de ellos mismos."
+      },
+      {
+        "text": "Esperar a que ocurra un choque leve para recién actualizar la matriz IPERC.",
+        "isCorrect": false,
+        "rationale": "Esperar el evento es la definición de la gestión reactiva basada exclusivamente en la ocurrencia del daño."
+      },
+      {
+        "text": "Emitir un memorándum recordando que el polvo está prohibido en las vías.",
+        "isCorrect": false,
+        "rationale": "Un documento frío no modifica la percepción de complacencia ni resuelve la condición operativa en campo."
+      }
+    ],
+    "hint": "Busca la intervención participativa que desmonte la costumbre e invite a mirar la vía con enfoque preventivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Durante un proceso de investigación de accidentes, ¿cuáles son las diferencias fundamentales entre una gestión enfocada en el 'Hacer/Cumplimiento' y una basada en el 'Ser/Convicción'?",
+    "opciones": [
+      {
+        "text": "El enfoque en el Hacer busca culpables e impone sanciones como medida correctiva principal.",
+        "isCorrect": true,
+        "rationale": "Centrarse únicamente en el cumplimiento formal tiende a castigar al eslabón más débil sin revisar el sistema."
+      },
+      {
+        "text": "El enfoque en el Ser busca aprendizajes organizacionales e identifica factores humanos subyacentes.",
+        "isCorrect": true,
+        "rationale": "La gestión por convicción indaga en la motivación, el estado físico/mental y las fallas del sistema para evitar la recurrencia."
+      },
+      {
+        "text": "El enfoque en el Hacer borra los registros de accidentes para no pagar multas a la autoridad.",
+        "isCorrect": false,
+        "rationale": "Borrar registros constituye un acto ilegal, no una característica metodológica del enfoque en el hacer."
+      },
+      {
+        "text": "El enfoque en el Ser fomenta que el personal reporte incidentes sin temor a represalias.",
+        "isCorrect": true,
+        "rationale": "La confianza construida desde la convicción estimula la transparencia en la comunicación de eventos y condiciones."
+      },
+      {
+        "text": "El enfoque en el Hacer elimina la necesidad de contar con la participación del Comité de SST.",
+        "isCorrect": false,
+        "rationale": "La legislación exige el Comité de SST independientemente del estilo de liderazgo ejercido."
+      }
+    ],
+    "hint": "Compara la búsqueda de culpables para el castigo versus la búsqueda de causas raíz para el aprendizaje sistémico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué implica asumir el principio de 'Coherencia' en el liderazgo en seguridad según lo discutido en el taller?",
+    "opciones": [
+      {
+        "text": "Exigir al personal el cumplimiento de estándares que el propio líder no aplica en su rutina personal o de oficina.",
+        "isCorrect": false,
+        "rationale": "La falta de ejemplo por parte del líder destruye la credibilidad del sistema de gestión."
+      },
+      {
+        "text": "Asegurar que el comportamiento del líder refleje de manera consistente lo que exige a los demás, tanto dentro como fuera del trabajo.",
+        "isCorrect": true,
+        "rationale": "La coherencia radica en la alineación entre el discurso y la acción. Un verdadero líder vive la seguridad como un valor personal integrado a su identidad."
+      },
+      {
+        "text": "Aprenderse de memoria todos los artículos de la Ley de Seguridad y Salud en el Trabajo.",
+        "isCorrect": false,
+        "rationale": "Memorizar normas es un conocimiento teórico que no garantiza la conducta ética coherente en el día a día."
+      },
+      {
+        "text": "Aprobar el 100% de las inspecciones planeadas de seguridad sin registrar observaciones.",
+        "isCorrect": false,
+        "rationale": "Aprobar inspecciones sin hallazgos puede ser muestra de complacencia o enmascaramiento, no de coherencia personal."
+      },
+      {
+        "text": "Utilizar EPP de marcas costosas para destacar frente al personal operativo.",
+        "isCorrect": false,
+        "rationale": "El valor del ejemplo no reside en la marca del equipo, sino en la consistencia de la conducta de autocuidado."
+      }
+    ],
+    "hint": "Reflexiona sobre la relación entre el ejemplo personal del líder y la validez de sus exigencias hacia el equipo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "TAL-02",
+    "diplomado": "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO",
+    "modulo": "Examen del Taller",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "A modo de conclusión del taller, ¿cuál es el fin último de transformar el liderazgo tradicional en un Liderazgo basado en la Convicción y el Ser?",
+    "opciones": [
+      {
+        "text": "Reducir los costos de compra de equipos de protección personal.",
+        "isCorrect": false,
+        "rationale": "La transformación cultural no busca recortar presupuestos en la protección física necesaria."
+      },
+      {
+        "text": "Construir una cultura donde la seguridad no sea una obligación impuesta, sino una elección genuina para proteger la vida y regresar sano a casa.",
+        "isCorrect": true,
+        "rationale": "El propósito del liderazgo en el Ser es que la persona elija cuidarse y cuidar a otros basada en el valor del ser humano y la vida."
+      },
+      {
+        "text": "Lograr la acreditación documental para aprobar auditorías externas sin cambiar la realidad de campo.",
+        "isCorrect": false,
+        "rationale": "Buscar solo aprobar auditorías es el reflejo del 'cumplo y miento' propio del liderazgo en el hacer."
+      },
+      {
+        "text": "Eliminar la figura del supervisor de seguridad en todas las industrias.",
+        "isCorrect": false,
+        "rationale": "El rol del especialista evoluciona de fiscalizador a facilitador, pero la supervisión sigue siendo un soporte clave."
+      },
+      {
+        "text": "Evitar el pago de bonos por productividad al personal operativo.",
+        "isCorrect": false,
+        "rationale": "Los incentivos productivos no tienen relación estratégica con la transformación ética de la cultura preventiva."
+      }
+    ],
+    "hint": "Piensa en la meta máxima que busca la Seguridad Basada en el Comportamiento respecto al valor de la vida humana.",
+    "activo": true
+  }
+]

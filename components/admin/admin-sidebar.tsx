@@ -44,7 +44,7 @@ export default function AdminSidebar() {
       '/admin': 'Dashboard y Finanzas 360°',
       '/admin/catalogo': 'Catálogo y Programas',
       '/admin/examenes': 'Evaluaciones',
-      '/admin/estudiantes': 'Estudiantes y Secretaría',
+      '/admin/estudiantes': 'Estudiantes',
       '/admin/certificaciones': 'Certificaciones',
       '/admin/alumnos-riesgo': 'Alumnos en Riesgo',
       '/admin/reportes': 'Reportes y Datos',
@@ -82,7 +82,7 @@ export default function AdminSidebar() {
         },
         {
           href: '/admin/estudiantes',
-          label: 'Estudiantes y secretaría',
+          label: 'Estudiantes',
           icon: UserCheck,
           color: 'text-emerald-400'
         },

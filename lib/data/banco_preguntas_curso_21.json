@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A partir de qué orden de magnitud o volumen de datos se considera usualmente el trabajo con Big Data según lo expuesto en la introducción del curso?",
+    "opciones": [
+      {
+        "text": "Terabytes (o petabytes)",
+        "isCorrect": true,
+        "rationale": "Big Data se define por la gestión de volúmenes masivos de información que superan la capacidad de procesamiento tradicional, ubicándose comúnmente en la escala de terabytes en adelante."
+      },
+      {
+        "text": "Kilobytes",
+        "isCorrect": false,
+        "rationale": "Los kilobytes representan unidades pequeñas de almacenamiento de texto que pueden procesarse fácilmente en cualquier aplicación convencional."
+      },
+      {
+        "text": "Megabytes",
+        "isCorrect": false,
+        "rationale": "Los megabytes representan archivos livianos como imágenes o documentos simples que no requieren infraestructura masiva distribuida."
+      },
+      {
+        "text": "Gigabytes",
+        "isCorrect": false,
+        "rationale": "Aunque es un volumen considerable para archivos personales, los gigabytes aún pueden manipularse mediante herramientas convencionales como hojas de cálculo o bases relacionales locales."
+      },
+      {
+        "text": "Bytes",
+        "isCorrect": false,
+        "rationale": "Un byte representa una unidad básica de carácter individual y no constituye un volumen de datos."
+      }
+    ],
+    "hint": "Considera la escala equivalente a aproximadamente mil gigabytes o cerca de mil millones de kilobytes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de las siguientes opciones describe mejor a los datos estructurados en el contexto del Big Data?",
+    "opciones": [
+      {
+        "text": "Información organizada de forma rígida en filas y columnas, como tablas y bases relacionales.",
+        "isCorrect": true,
+        "rationale": "Los datos estructurados poseen un formato rígido y estandarizado con atributos definidos en columnas y registros organizados en filas."
+      },
+      {
+        "text": "Archivos de video grabados en alta definición por drones sobre el yacimiento.",
+        "isCorrect": false,
+        "rationale": "Los archivos de video carecen de una estructura relacional de campos y registros, por lo que pertenecen a la categoría de datos no estructurados."
+      },
+      {
+        "text": "Fotografías aéreas e imágenes satelitales sin etiquetar.",
+        "isCorrect": false,
+        "rationale": "Las imágenes digitales no poseen filas ni columnas numéricas directas, clasificándose como datos no estructurados."
+      },
+      {
+        "text": "Grabaciones de audio continuo tomadas en túneles subterráneos.",
+        "isCorrect": false,
+        "rationale": "Las señales de audio requieren procesamiento complejo y no están contenidas originalmente en tablas relacionales."
+      },
+      {
+        "text": "Archivos de texto libre y registros brutos de servidores.",
+        "isCorrect": false,
+        "rationale": "El texto narrativo sin delimitadores claros pertenece a los datos no estructurados o semiestructurados."
+      }
+    ],
+    "hint": "Piensa en el formato tradicional de tablas que contiene campos con tipos de datos definidos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de las características de Big Data conocidas como las 'V's', ¿a qué se refiere el concepto de 'Velocidad'?",
+    "opciones": [
+      {
+        "text": "A la rapidez con la que se generan, transmiten y procesan los datos en tiempo real.",
+        "isCorrect": true,
+        "rationale": "La velocidad alude al flujo continuo e instantáneo de datos que provienen de fuentes como sensores y requieren análisis inmediato."
+      },
+      {
+        "text": "A la cantidad masiva de terabytes acumulados en los discos duros.",
+        "isCorrect": false,
+        "rationale": "La cantidad total de información almacenada corresponde a la dimensión del volumen, no a la velocidad."
+      },
+      {
+        "text": "A la diversidad de formatos como texto, audio, gráficos y video.",
+        "isCorrect": false,
+        "rationale": "La heterogeneidad de formatos de datos representa la característica de variedad."
+      },
+      {
+        "text": "A la confiabilidad y calidad de los datos para evitar información falsa.",
+        "isCorrect": false,
+        "rationale": "La fidelidad y limpieza del dato corresponden a la característica de veracidad."
+      },
+      {
+        "text": "Al retorno económico obtenido mediante el análisis de los datos.",
+        "isCorrect": false,
+        "rationale": "El beneficio de negocio extraído de la información hace referencia al valor."
+      }
+    ],
+    "hint": "Relaciónalo con el tiempo de respuesta e ingesta inmediata de la información desde los sensores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes corresponden a etapas del flujo general del ecosistema Big Data? (Seleccione las opciones que apliquen)",
+    "opciones": [
+      {
+        "text": "Captura o recolección de datos desde fuentes diversas.",
+        "isCorrect": true,
+        "rationale": "Es la fase inicial donde los sensores, sistemas u operarios generan e ingieren la información cruda."
+      },
+      {
+        "text": "Almacenamiento en servidores o plataformas distribuidas.",
+        "isCorrect": true,
+        "rationale": "Consiste en guardar los volúmenes de datos masivos en repositorios físicos o virtuales escalables."
+      },
+      {
+        "text": "Procesamiento y análisis mediante modelos o algoritmos.",
+        "isCorrect": true,
+        "rationale": "Es la etapa analítica donde se limpian, transforman y evalúan los datos para extraer patrones."
+      },
+      {
+        "text": "Visualización y presentación de resultados en dashboards.",
+        "isCorrect": true,
+        "rationale": "Permite convertir los resultados analíticos en representaciones gráficas comprensibles para la toma de decisiones."
+      },
+      {
+        "text": "Mantenimiento mecánico manual sin sensores en motores.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento físico no equipado con tecnología digital es una tarea operativa tradicional y no forma parte del flujo de datos."
+      }
+    ],
+    "hint": "Identifica las fases secuenciales que conducen la información desde su generación hasta la toma de decisiones visual.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué lenguaje de programación destaca en el ecosistema de Big Data por su versatilidad en análisis estadístico y desarrollo de modelos de Machine Learning?",
+    "opciones": [
+      {
+        "text": "Python",
+        "isCorrect": true,
+        "rationale": "Python es ampliamente reconocido en la ciencia de datos por sus bibliotecas avanzadas para procesamiento, manipulación y Machine Learning."
+      },
+      {
+        "text": "HTML",
+        "isCorrect": false,
+        "rationale": "HTML es un lenguaje de marcado utilizado exclusivamente para estructurar páginas web, no para análisis analítico de datos."
+      },
+      {
+        "text": "CSS",
+        "isCorrect": false,
+        "rationale": "CSS se utiliza para definir el diseño visual y estilos en la web, sin capacidad analítica o de procesamiento de datos."
+      },
+      {
+        "text": "Photoshop",
+        "isCorrect": false,
+        "rationale": "Photoshop es un software de edición gráfica de imágenes y no un lenguaje de programación analítico."
+      },
+      {
+        "text": "Assembly",
+        "isCorrect": false,
+        "rationale": "Es un lenguaje de bajo nivel orientado al hardware y no al desarrollo de algoritmos de Machine Learning o Big Data."
+      }
+    ],
+    "hint": "Es uno de los lenguajes de código abierto más populares en ciencia de datos e inteligencia artificial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es un beneficio directo de la implementación de Big Data en la gestión de flota de maquinaria pesada en minería?",
+    "opciones": [
+      {
+        "text": "Predecir fallas y programar mantenimientos preventivos para evitar tiempo de inactividad.",
+        "isCorrect": true,
+        "rationale": "El análisis continuo de lecturas de vibración y temperatura permite detectar anomalías antes de que ocurra una avería catastrófica."
+      },
+      {
+        "text": "Aumentar el peso físico bruto de los camiones de acarreo.",
+        "isCorrect": false,
+        "rationale": "El procesamiento de datos digitales no modifica las propiedades físicas ni mecánicas del chasis de los vehículos."
+      },
+      {
+        "text": "Eliminar la necesidad de usar combustible en motores diésel de forma inmediata.",
+        "isCorrect": false,
+        "rationale": "El Big Data optimiza el consumo de combustible, pero no cambia el tipo de energía que requiere un motor térmico."
+      },
+      {
+        "text": "Sustituir las llantas de los camiones por sensores digitales.",
+        "isCorrect": false,
+        "rationale": "Los sensores monitorean el estado de los neumáticos, pero no reemplazan los componentes físicos de rodaje."
+      },
+      {
+        "text": "Desactivar de forma permanente los sistemas de ventilación en túneles.",
+        "isCorrect": false,
+        "rationale": "La analítica busca mejorar la seguridad operativa en lugar de anular sistemas críticos de protección."
+      }
+    ],
+    "hint": "Piensa en la anticipación a las averías del motor basándose en lecturas continuas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué se define al Big Data como un 'ecosistema'?",
+    "opciones": [
+      {
+        "text": "Porque está conformado por la interacción de diversos componentes, herramientas y procesos que se complementan.",
+        "isCorrect": true,
+        "rationale": "Al igual que un ecosistema natural, en Big Data coexisten e interactúan fuentes, plataformas de ingesta, almacenamiento y análisis para lograr un objetivo común."
+      },
+      {
+        "text": "Porque funciona de manera exclusiva en reservas naturales y áreas protegidas.",
+        "isCorrect": false,
+        "rationale": "El término ecosistema es una analogía funcional de sistemas integrados y no se refiere a la ubicación geográfica de la mina."
+      },
+      {
+        "text": "Porque consiste únicamente en un solo software unificado e independiente.",
+        "isCorrect": false,
+        "rationale": "Big Data no se reduce a una sola aplicación aislada, sino a un conjunto interconectado de tecnologías."
+      },
+      {
+        "text": "Porque se utiliza únicamente para catalogar especies vegetales y animales.",
+        "isCorrect": false,
+        "rationale": "Su aplicación abarca todas las áreas operativas, geológicas y logísticas de la industria, no solo la biología."
+      },
+      {
+        "text": "Porque reemplaza los factores abióticos del medio ambiente por computadoras.",
+        "isCorrect": false,
+        "rationale": "La definición es una metáfora de integración tecnológica, no una transformación de los elementos de la naturaleza."
+      }
+    ],
+    "hint": "Considera la analogía con la naturaleza, donde múltiples elementos interactúan coordinadamente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de las siguientes tecnologías está diseñada específicamente para la transmisión e ingesta masiva de datos en tiempo real?",
+    "opciones": [
+      {
+        "text": "Apache Kafka",
+        "isCorrect": true,
+        "rationale": "Apache Kafka es una plataforma distribuida de transmisión de datos diseñada para gestionar flujos masivos e instantáneos de eventos."
+      },
+      {
+        "text": "Microsoft Word",
+        "isCorrect": false,
+        "rationale": "Word es un procesador de texto para documentos estáticos de oficina sin funciones de transmisión masiva en tiempo real."
+      },
+      {
+        "text": "Adobe Reader",
+        "isCorrect": false,
+        "rationale": "Es un visor de archivos en formato PDF y no posee capacidades analíticas o de ingesta de datos."
+      },
+      {
+        "text": "Notepad++",
+        "isCorrect": false,
+        "rationale": "Es un editor de texto plano que no cuenta con motores de ingesta distribuida de datos masivos."
+      },
+      {
+        "text": "Paint",
+        "isCorrect": false,
+        "rationale": "Es un programa básico de dibujo y edición de gráficos sencillos que no procesa flujos de información industrial."
+      }
+    ],
+    "hint": "Se trata de una plataforma muy popular para el procesamiento de flujos contínuos de datos de sensores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes forman parte de los tipos de aprendizaje automático en Inteligencia Artificial expuestos en el curso? (Seleccione las opciones que apliquen)",
+    "opciones": [
+      {
+        "text": "Aprendizaje supervisado.",
+        "isCorrect": true,
+        "rationale": "En esta modalidad el algoritmo se entrena con datos previamente etiquetados que indican la respuesta deseada."
+      },
+      {
+        "text": "Aprendizaje no supervisado.",
+        "isCorrect": true,
+        "rationale": "En este enfoque el sistema procesa datos sin etiquetas para descubrir patrones u agrupaciones ocultas de manera autónoma."
+      },
+      {
+        "text": "Aprendizaje por reforzamiento.",
+        "isCorrect": true,
+        "rationale": "El modelo aprende mediante la interacción con un entorno dinámico recibiendo recompensas o castigos en función de sus acciones."
+      },
+      {
+        "text": "Aprendizaje empírico sin soporte digital.",
+        "isCorrect": false,
+        "rationale": "El aprendizaje automático requiere capacidad computacional y modelos matemáticos digitales."
+      },
+      {
+        "text": "Aprendizaje vegetativo biológico.",
+        "isCorrect": false,
+        "rationale": "Es una función orgánica de los seres vivos y no una categoría dentro de los algoritmos de Inteligencia Artificial."
+      }
+    ],
+    "hint": "Recuerda los tres enfoques principales mediante los cuales los algoritmos procesan datos con o sin etiquetas y con retroalimentación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo apoya la Inteligencia Artificial mediante visión artificial a la seguridad ocupacional en minería?",
+    "opciones": [
+      {
+        "text": "Detectando automáticamente si los trabajadores llevan correctamente sus Equipos de Protección Personal (EPP).",
+        "isCorrect": true,
+        "rationale": "Los algoritmos de visión por computadora procesan imágenes en tiempo real para verificar el uso de cascos, lentes y chalecos en áreas operativas."
+      },
+      {
+        "text": "Sustituyendo el uso de cascos físicos por hologramas virtuales.",
+        "isCorrect": false,
+        "rationale": "La visión artificial inspecciona el cumplimiento de seguridad, pero los equipos físicos siguen siendo indispensables."
+      },
+      {
+        "text": "Desconectando la iluminación de los túneles subterráneos.",
+        "isCorrect": false,
+        "rationale": "La visión por cámara requiere condiciones de visibilidad y busca prevenir riesgos, no incrementarlos."
+      },
+      {
+        "text": "Generando aire comprimido en las galerías de extracción.",
+        "isCorrect": false,
+        "rationale": "La ventilación es función de sistemas mecánicos de compresoras, no del procesamiento de imágenes."
+      },
+      {
+        "text": "Evitando el desgaste mecánico de las herramientas manuales.",
+        "isCorrect": false,
+        "rationale": "El desgaste físico responde a la fricción operativa y no se elimina con monitoreo por cámaras."
+      }
+    ],
+    "hint": "Piensa en el reconocimiento automático de cascos, chalecos y lentes mediante procesamiento de imágenes de video.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En los procesos de lixiviación de minerales, ¿qué logro se obtiene al aplicar modelos analíticos de Machine Learning?",
+    "opciones": [
+      {
+        "text": "Optimizar la dosificación de reactivos químicos como el cianuro, reduciendo su consumo sin sacrificar la recuperación.",
+        "isCorrect": true,
+        "rationale": "Al analizar variables como temperatura y granulometría, el modelo ajusta de forma precisa los reactivos minimizando desperdicios."
+      },
+      {
+        "text": "Eliminar completamente el uso de agua en los procesos hidrometalúrgicos.",
+        "isCorrect": false,
+        "rationale": "La analítica ajusta las concentraciones de insumos, pero no prescinde del medio líquido de disolución."
+      },
+      {
+        "text": "Transformar el mineral de cobre directamente en lingotes de oro.",
+        "isCorrect": false,
+        "rationale": "La Inteligencia Artificial no altera las leyes ni la naturaleza química de los elementos metálicos."
+      },
+      {
+        "text": "Duplicar arbitrariamente el volumen de insumos químicos utilizados.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la analítica es la eficiencia operacional y la reducción de costos, no el sobreconsumo."
+      },
+      {
+        "text": "Detener el funcionamiento continuo de los molinos de manera permanente.",
+        "isCorrect": false,
+        "rationale": "Los modelos analíticos buscan la continuidad operativa eficiente y no la interrupción inmotivada."
+      }
+    ],
+    "hint": "Se relaciona con el ajuste dinámico de insumos en función de la temperatura y la granulometría.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes representan fuentes válidas de datos para el ecosistema de Big Data en minería? (Seleccione las opciones que apliquen)",
+    "opciones": [
+      {
+        "text": "Sensores IoT de temperatura y vibración en maquinaria.",
+        "isCorrect": true,
+        "rationale": "Emiten métricas operativas de forma continua para monitorear el estado térmico y mecánico."
+      },
+      {
+        "text": "Imágenes satelitales y datos geotécnicos de terreno.",
+        "isCorrect": true,
+        "rationale": "Proporcionan información geoespacial relevante para exploración y estabilidad de estructuras."
+      },
+      {
+        "text": "Cámaras de vigilancia e instrumentación en túneles subterráneos.",
+        "isCorrect": true,
+        "rationale": "Capturan flujos de video y mediciones ambientales de gas para velar por la seguridad."
+      },
+      {
+        "text": "Bitácoras en papel guardadas en estantes sin escanear.",
+        "isCorrect": false,
+        "rationale": "Los registros físicos no digitalizados no pueden ingresar de forma directa ni automatizada al flujo digital de Big Data."
+      },
+      {
+        "text": "Herramientas de perforación convencionales sin sensores.",
+        "isCorrect": false,
+        "rationale": "Los componentes puramente mecánicos desprovistos de electrónica no emiten señales ni datos digitales."
+      }
+    ],
+    "hint": "Identifica los dispositivos capaces de capturar y transmitir métricas o archivos digitales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tipo de datos capturan los acelerómetros instalados en los taludes de una operación minera a cielo abierto?",
+    "opciones": [
+      {
+        "text": "Datos de vibración y desplazamientos físicos para evaluar la estabilidad del terreno y prevenir derrumbes.",
+        "isCorrect": true,
+        "rationale": "Los acelerómetros registran movimientos telúricos diminutos y variaciones dinámicas en las paredes del Tajo Abierto."
+      },
+      {
+        "text": "Datos de asistencia y puntualidad del personal de oficina.",
+        "isCorrect": false,
+        "rationale": "El control de asistencia se gestiona mediante lectores de tarjetas o biométricos en accesos."
+      },
+      {
+        "text": "Concentración de reactivos en las celdas de flotación.",
+        "isCorrect": false,
+        "rationale": "La química de pulpas se analiza mediante sondas específicas y sensores de pH en planta."
+      },
+      {
+        "text": "Consumo de energía eléctrica de las computadoras administrativas.",
+        "isCorrect": false,
+        "rationale": "Esa variable se mide a través de medidores e indicadores en las redes de distribución eléctrica."
+      },
+      {
+        "text": "Facturación mensual de los proveedores de insumos.",
+        "isCorrect": false,
+        "rationale": "Es información contable administrada en el sistema ERP institucional."
+      }
+    ],
+    "hint": "Su función es registrar pequeños desplazamientos o movimientos mecánicos en las paredes de roca.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de montar un sensor LiDAR en un dron para la gestión minera?",
+    "opciones": [
+      {
+        "text": "Generar mapas topográficos y modelos en 3D de alta precisión mediante pulsos láser.",
+        "isCorrect": true,
+        "rationale": "El sensor LiDAR emite haces de luz láser que rebotan en la superficie para reconstruir la geometría del terreno en tres dimensiones."
+      },
+      {
+        "text": "Transportar mineral procesado desde el tajo hasta el puerto de embarque.",
+        "isCorrect": false,
+        "rationale": "La carga pesada se efectúa a través de camiones de acarreo o fajas transportadoras, no mediante drones."
+      },
+      {
+        "text": "Sustituir los motores diésel de las perforadoras por baterías portátiles.",
+        "isCorrect": false,
+        "rationale": "Los sensores aéreos recopilan datos de superficie, pero no alimentan la maquinaria pesada."
+      },
+      {
+        "text": "Purificar el agua de las pozas de sedimentación de forma química.",
+        "isCorrect": false,
+        "rationale": "El tratamiento de efluentes es un proceso fisicoquímico en plantas de tratamiento."
+      },
+      {
+        "text": "Repartir raciones de alimento a los trabajadores en las galerías subterraneas.",
+        "isCorrect": false,
+        "rationale": "La logística de suministros personales no es el propósito de la instrumentación remota LiDAR."
+      }
+    ],
+    "hint": "Esta tecnología utiliza impulsos de luz infrarroja para escanear las superficies de terreno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué significan las siglas del sistema industrial denominado SCADA?",
+    "opciones": [
+      {
+        "text": "Supervisory Control and Data Acquisition (Control Supervisorio y Adquisición de Datos).",
+        "isCorrect": true,
+        "rationale": "SCADA hace referencia a la arquitectura de software y hardware que supervisa y controla procesos industriales recopilando datos en tiempo real."
+      },
+      {
+        "text": "System Central for Automatic Data Analysis.",
+        "isCorrect": false,
+        "rationale": "Es una denominación errónea que no corresponde a las siglas estandarizadas de la industria."
+      },
+      {
+        "text": "Safety Control and Digital Automation.",
+        "isCorrect": false,
+        "rationale": "Aunque involucra automatización, las siglas exactas se orientan al control supervisorio y adquisición."
+      },
+      {
+        "text": "Software Created for Advanced Data Architecture.",
+        "isCorrect": false,
+        "rationale": "Esta descripción confunde el concepto con un nombre genérico de software de arquitectura."
+      },
+      {
+        "text": "System of Calculation and Data Analytics.",
+        "isCorrect": false,
+        "rationale": "No refleja la función de adquisición remota e interacción directa con controladores lógicos."
+      }
+    ],
+    "hint": "Se trata de un sistema que supervisa procesos recopilando datos de sensores y controladores PLCs.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes herramientas son utilizadas para la visualización de datos y creación de dashboards analíticos en minería? (Seleccione las opciones que apliquen)",
+    "opciones": [
+      {
+        "text": "Power BI",
+        "isCorrect": true,
+        "rationale": "Es una herramienta ampliamente extendida para la construcción de reportes interactivos e inteligencia de negocios."
+      },
+      {
+        "text": "Tableau",
+        "isCorrect": true,
+        "rationale": "Es una plataforma analítica especializada en visualizaciones avanzadas y exploración gráfica de datos."
+      },
+      {
+        "text": "Grafana",
+        "isCorrect": true,
+        "rationale": "Es una herramienta de código abierto ideal para monitorear métricas en tiempo real a través de paneles dinámicos."
+      },
+      {
+        "text": "Microsoft Paint",
+        "isCorrect": false,
+        "rationale": "Es un editor elemental de imágenes estáticas que carece de conexiones a bases de datos o dashboards dinámicos."
+      },
+      {
+        "text": "Notepad",
+        "isCorrect": false,
+        "rationale": "Es un editor de texto plano que no posee funciones analíticas ni capacidad de representación gráfica de datos."
+      }
+    ],
+    "hint": "Selecciona las plataformas diseñadas para representar métricas en gráficos dinámicos e interactivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una característica fundamental de un Data Lake frente a un almacén de datos tradicional?",
+    "opciones": [
+      {
+        "text": "Permite almacenar grandes volúmenes de datos en su formato original (estructurados, semiestructurados y no estructurados) sin esquema previo.",
+        "isCorrect": true,
+        "rationale": "Un Data Lake recibe la información de forma cruda, postergando la estructuración hasta el momento en que los datos son consultados."
+      },
+      {
+        "text": "Exige transformar obligatoriamente todos los datos en tablas relacionales antes de guardarlos.",
+        "isCorrect": false,
+        "rationale": "Esa restricción de esquema estricto de entrada caracteriza a los Data Warehouses tradicionales."
+      },
+      {
+        "text": "Acepta únicamente archivos de texto plano con un tamaño inferior a un megabyte.",
+        "isCorrect": false,
+        "rationale": "Un Data Lake admite cualquier tipo de archivo y está diseñado para escalas masivas de terabytes."
+      },
+      {
+        "text": "Almacena exclusivamente fotografías digitales en formato comprimido.",
+        "isCorrect": false,
+        "rationale": "Su capacidad de ingesta incluye audios, lecturas de sensores, tablas y cualquier formato de archivo."
+      },
+      {
+        "text": "Borra la información recolectada de forma automática al cabo de cada jornada.",
+        "isCorrect": false,
+        "rationale": "Los Data Lakes están diseñados para el almacenamiento persistente a largo plazo para análisis histórico."
+      }
+    ],
+    "hint": "Es un repositorio que recibe la información de forma cruda tal como proviene de la fuente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué escenario resulta especialmente adecuado el uso de la herramienta Grafana?",
+    "opciones": [
+      {
+        "text": "En el monitoreo continuo de métricas operativas e infraestructura en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Grafana destaca por su capacidad de conectarse a fuentes de series temporales y refrescar dashboards de manera instantánea."
+      },
+      {
+        "text": "En la edición e impresión de boletines administrativos en papel.",
+        "isCorrect": false,
+        "rationale": "No es una herramienta de maquetación ni procesamiento de textos impresos."
+      },
+      {
+        "text": "En el retoque fotográfico de paisajes y retratos corporativos.",
+        "isCorrect": false,
+        "rationale": "Las tareas de edición estética visual corresponden a programas de diseño gráfico."
+      },
+      {
+        "text": "En el diseño vectorial de planos arquitectónicos para edificaciones.",
+        "isCorrect": false,
+        "rationale": "El modelado arquitectónico se realiza en sistemas CAD específicos."
+      },
+      {
+        "text": "En el escaneo y digitalización manual de documentos físicos.",
+        "isCorrect": false,
+        "rationale": "La captura por imagen física utiliza software OCR especializado."
+      }
+    ],
+    "hint": "Se emplea frecuentemente para paneles de control dinámicos que se actualizan segundo a segundo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué caracteriza fundamentalmente a las bases de datos relacionales conocidas como SQL?",
+    "opciones": [
+      {
+        "text": "Organizan la información en tablas estructuradas compuestas por filas y columnas vinculadas entre sí.",
+        "isCorrect": true,
+        "rationale": "El modelo relacional almacena registros en filas y atributos en columnas, estableciendo relaciones mediante llaves primarias y foráneas."
+      },
+      {
+        "text": "Prohíben el uso de esquemas rígidos o relaciones entre entidades.",
+        "isCorrect": false,
+        "rationale": "Las bases relacionales requieren de forma indispensable un esquema predefinido y estructurado."
+      },
+      {
+        "text": "Se orientan exclusivamente a guardar archivos de video sin formato.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento masivo de video sin metadatos no es el propósito de las tablas SQL."
+      },
+      {
+        "text": "Carecen de un lenguaje estandarizado para la realización de consultas.",
+        "isCorrect": false,
+        "rationale": "El estándar SQL (Structured Query Language) es precisamente su lenguaje universal de consulta."
+      },
+      {
+        "text": "Funcionan únicamente en computadoras que no poseen sistema operativo.",
+        "isCorrect": false,
+        "rationale": "Los motores de bases de datos SQL requieren un sistema operativo donde ejecutar sus servicios."
+      }
+    ],
+    "hint": "Piensa en la representación en tablas tradicionales donde cada registro es una fila con atributos fijos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del lenguaje SQL, ¿cuál es la función de la sentencia 'SELECT'?",
+    "opciones": [
+      {
+        "text": "Consultar y extraer datos o registros específicos guardados en las tablas.",
+        "isCorrect": true,
+        "rationale": "SELECT es la instrucción DML básica utilizada para filtrar, recuperar y mostrar la información almacenada."
+      },
+      {
+        "text": "Eliminar de manera permanente una tabla completa con sus estructuras.",
+        "isCorrect": false,
+        "rationale": "La eliminación estructural de una tabla se lleva a cabo con la instrucción DROP TABLE."
+      },
+      {
+        "text": "Crear una base de datos nueva en el motor de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "La creación de un espacio de base de datos se realiza mediante la instrucción CREATE DATABASE."
+      },
+      {
+        "text": "Modificar la contraseña de acceso de un usuario del sistema.",
+        "isCorrect": false,
+        "rationale": "La gestión de credenciales y accesos se realiza con comandos de administración de permisos."
+      },
+      {
+        "text": "Apagar el servidor de base de datos de manera repentina.",
+        "isCorrect": false,
+        "rationale": "La detención de servicios corresponde a comandos de administración del sistema operativo o motor."
+      }
+    ],
+    "hint": "Es la instrucción fundamental que se utiliza para pedir o filtrar información de una tabla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de los siguientes comandos pertenece al grupo de Definición de Datos (DDL) en SQL y se usa para alterar la estructura de una tabla existente?",
+    "opciones": [
+      {
+        "text": "ALTER TABLE",
+        "isCorrect": true,
+        "rationale": "ALTER TABLE es la sentencia DDL orientada a modificar, agregar o eliminar columnas y restricciones en la estructura de una tabla."
+      },
+      {
+        "text": "INSERT INTO",
+        "isCorrect": false,
+        "rationale": "INSERT es una sentencia DML utilizada para agregar nuevos registros de datos dentro de las filas."
+      },
+      {
+        "text": "SELECT",
+        "isCorrect": false,
+        "rationale": "SELECT es una sentencia de consulta DML que no altera la definición estructural del objeto."
+      },
+      {
+        "text": "UPDATE",
+        "isCorrect": false,
+        "rationale": "UPDATE es una instrucción DML destinada a modificar los valores existentes en los registros de las filas."
+      },
+      {
+        "text": "DELETE",
+        "isCorrect": false,
+        "rationale": "DELETE es un comando DML que remueve filas de datos sin alterar la estructura contenedora de la tabla."
+      }
+    ],
+    "hint": "Su nombre en inglés hace referencia a modificar o modificar la definición de la tabla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes sentencias forman parte del lenguaje de manipulación de datos (DML) en SQL? (Seleccione las opciones que apliquen)",
+    "opciones": [
+      {
+        "text": "INSERT",
+        "isCorrect": true,
+        "rationale": "Permite insertar nuevos registros de información en una tabla existente."
+      },
+      {
+        "text": "UPDATE",
+        "isCorrect": true,
+        "rationale": "Se utiliza para modificar valores existentes en las filas almacenadas."
+      },
+      {
+        "text": "DELETE",
+        "isCorrect": true,
+        "rationale": "Se emplea para eliminar filas específicas de datos dentro de una tabla."
+      },
+      {
+        "text": "CREATE TABLE",
+        "isCorrect": false,
+        "rationale": "Es un comando DDL que define la estructura física de una tabla, no su contenido."
+      },
+      {
+        "text": "DROP TABLE",
+        "isCorrect": false,
+        "rationale": "Es un comando DDL que destruye el objeto tabla dentro del catálogo de la base de datos."
+      }
+    ],
+    "hint": "Distingue los comandos que operan directamente sobre los registros de información de aquellos que alteran la estructura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo organiza la información una base de datos NoSQL del modelo 'Clave-Valor' como Redis?",
+    "opciones": [
+      {
+        "text": "Asociando una clave única identificadora a un dato o conjunto de datos denominado valor.",
+        "isCorrect": true,
+        "rationale": "El modelo almacena registros simples emparejando una clave directa de búsqueda con su contenido respectivo."
+      },
+      {
+        "text": "Estructurando tablas estrictas con relaciones mediante llaves foráneas.",
+        "isCorrect": false,
+        "rationale": "La estructuración en tablas relacionales rígidas es propia del modelo SQL tradicional."
+      },
+      {
+        "text": "Guardando únicamente imágenes satelitales en formato comprimido.",
+        "isCorrect": false,
+        "rationale": "Las bases Clave-Valor almacenan cualquier estructura binaria o de texto asociada a la clave, no solo imágenes."
+      },
+      {
+        "text": "Creando carpetas físicas de papel en estantes mecánicos.",
+        "isCorrect": false,
+        "rationale": "Es una plataforma digital en memoria y no un medio físico analógico de archivo."
+      },
+      {
+        "text": "Convertir los datos en ecuaciones matriciales sin acceso directo.",
+        "isCorrect": false,
+        "rationale": "Su objetivo es el acceso ultrarrápido a través de la clave y no la representación en matrices opacas."
+      }
+    ],
+    "hint": "Es comparable a un diccionario donde a cada concepto le corresponde una definición asociada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Para qué tipo de problemas resulta idónea una base de datos NoSQL orientada a Grafos como Neo4j?",
+    "opciones": [
+      {
+        "text": "Para representar e interconectar relaciones complejas entre nodos, como redes de transporte y logística.",
+        "isCorrect": true,
+        "rationale": "Los motores de grafos representan las entidades como nodos y sus interconexiones como aristas, optimizando la consulta de redes."
+      },
+      {
+        "text": "Para elaborar estados financieros contables tradicionales.",
+        "isCorrect": false,
+        "rationale": "Las operaciones contables estructuradas se abordan de mejor forma mediante modelos relacionales SQL."
+      },
+      {
+        "text": "Para almacenar únicamente archivos de audio de reproducciones musicales.",
+        "isCorrect": false,
+        "rationale": "No es un repositorio especializado en streaming multimedia, sino en análisis de relaciones interconectadas."
+      },
+      {
+        "text": "Para maquetar textos impresos en procesadores de oficina.",
+        "isCorrect": false,
+        "rationale": "El formateo de textos corresponde a aplicaciones de edición de documentos."
+      },
+      {
+        "text": "Para realizar operaciones de suma simple sin guardar historial.",
+        "isCorrect": false,
+        "rationale": "La fortaleza de los grafos radica en la navegabilidad de conexiones complejas, no en cálculos aritméticos aislados."
+      }
+    ],
+    "hint": "Este modelo representa los elementos como nodos y las conexiones entre ellos como relaciones directas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué circunstancia se recomienda optar por una base de datos NoSQL en lugar de una base SQL tradicional?",
+    "opciones": [
+      {
+        "text": "Cuando se requiere manejar volúmenes masivos de datos no estructurados en tiempo real y con escalabilidad horizontal.",
+        "isCorrect": true,
+        "rationale": "NoSQL ofrece alta velocidad, esquemas flexibles y fácil distribución entre múltiples servidores para entornos de Big Data."
+      },
+      {
+        "text": "Cuando se almacenan únicamente diez registros de texto en una tabla estática.",
+        "isCorrect": false,
+        "rationale": "Para volúmenes pequeños y fijos, un motor SQL tradicional o una tabla simple resulta suficiente y más sencillo."
+      },
+      {
+        "text": "Cuando se exige un esquema rígido e inalterable en filas y columnas.",
+        "isCorrect": false,
+        "rationale": "La rigidez de esquema es la fortaleza del modelo SQL y no de los motores NoSQL."
+      },
+      {
+        "text": "Cuando la aplicación no requiere conexión a la red ni almacenamiento distribuido.",
+        "isCorrect": false,
+        "rationale": "Las ventajas de NoSQL se aprovechan principalmente en arquitecturas distribuidas y en red."
+      },
+      {
+        "text": "Cuando se busca limitar la capacidad de almacenamiento a un archivo pequeño.",
+        "isCorrect": false,
+        "rationale": "NoSQL se diseña para superar las limitaciones de escala y no para restringir el volumen."
+      }
+    ],
+    "hint": "La tecnología NoSQL es flexible y está optimizada para ingestas masivas y heterogéneas en tiempo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la definición técnica fundamental de Big Data según el ecosistema analítico expuesto en el curso?",
+    "opciones": [
+      {
+        "text": "Un paquete de software para diseño asistido por computadora enfocado en la elaboración de planos topográficos en dos dimensiones.",
+        "isCorrect": false,
+        "rationale": "El diseño asistido por computadora corresponde a herramientas tipo CAD, las cuales no abarcan el procesamiento de datos masivos distribuido."
+      },
+      {
+        "text": "Un conjunto integrado de tecnologías, herramientas y procesos que permiten recopilar, almacenar, procesar y analizar volúmenes masivos de datos heterogéneos a alta velocidad.",
+        "isCorrect": true,
+        "rationale": "Big Data abarca de manera holística la infraestructura distribuida y las analíticas necesarias para transformar datos masivos de diversa naturaleza en información útil."
+      },
+      {
+        "text": "Una base de datos relacional estática que opera exclusivamente mediante hojas de cálculo para la gestión contable de una oficina.",
+        "isCorrect": false,
+        "rationale": "Las hojas de cálculo y bases estáticas convencionales carecen de la escalabilidad y velocidad requeridas para el manejo de terabytes de información heterogénea."
+      },
+      {
+        "text": "Un sensor físico independiente instalado en el chasis de los vehículos para medir el nivel de combustible.",
+        "isCorrect": false,
+        "rationale": "Un sensor es solo un dispositivo puntual de captura en la capa de ingesta, no la definición conceptual de Big Data."
+      },
+      {
+        "text": "Un protocolo de red cableada para conectar impresoras en una planta administrativa.",
+        "isCorrect": false,
+        "rationale": "Las redes locales de oficina cumplen funciones de ofimática y no representan el ecosistema analítico de datos masivos."
+      }
+    ],
+    "hint": "Piensa en el ecosistema integral de tecnologías capaz de procesar escala, velocidad y diversidad de formatos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el procesamiento de datos semiestructurados provenientes de sensores en maquinaria pesada, ¿cuáles de los siguientes formatos permiten estructurar la información mediante etiquetas o pares clave-valor de forma liviana para su transporte?",
+    "opciones": [
+      {
+        "text": "JSON",
+        "isCorrect": true,
+        "rationale": "JSON es un formato ligero de intercambio de datos estructurado en pares clave-valor, idóneo para la lectura rápida desde sensores."
+      },
+      {
+        "text": "XML",
+        "isCorrect": true,
+        "rationale": "XML utiliza una estructura basada en etiquetas personalizadas para organizar y almacenar datos semiestructurados de manera portable."
+      },
+      {
+        "text": "Archivos binarios ejecutables (.exe)",
+        "isCorrect": false,
+        "rationale": "Los archivos ejecutables contienen instrucciones de código maquina compilado y no son formatos estándar para estructurar o intercambiar datos."
+      },
+      {
+        "text": "Documentos de texto plano sin formato (.txt)",
+        "isCorrect": false,
+        "rationale": "El texto plano no posee una jerarquía semántica ni sintaxis estandarizada de etiquetas o claves para representar relaciones semiestructuradas."
+      },
+      {
+        "text": "Imágenes de disco comprimidas (.iso)",
+        "isCorrect": false,
+        "rationale": "Los archivos ISO son imágenes de sistemas de archivos completos y no formatos de texto estructurados para serializar datos de sensores."
+      }
+    ],
+    "hint": "Identifica las estructuras de intercambio de datos basadas en etiquetas o pares clave-valor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la arquitectura distribuida de Big Data, ¿cuál es la función primordial de la capa de procesamiento paralelo mediante marcos como Apache Spark o MapReduce?",
+    "opciones": [
+      {
+        "text": "Remplazar la instalación física de sensores en los componentes mecánicos de la flota.",
+        "isCorrect": false,
+        "rationale": "El procesamiento en software no sustituye los dispositivos físicos de hardware encargados de la medición de variables en terreno."
+      },
+      {
+        "text": "Dividir y ejecutar tareas analíticas masivas de forma simultánea entre múltiples nodos de cómputo en un clúster.",
+        "isCorrect": true,
+        "rationale": "La computación paralela fragmenta los volúmenes masivos de datos para procesarlos concurrentemente, reduciendo drásticamente el tiempo de cómputo."
+      },
+      {
+        "text": "Generar reportes impresos en papel para las inspecciones ambientales de rutina.",
+        "isCorrect": false,
+        "rationale": "La capa de procesamiento opera a nivel computacional interno y no está concebida para la impresión física de documentos."
+      },
+      {
+        "text": "Almacenar respaldos analógicos en cinta magnética dentro de bóvedas fuera de la mina.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento en cinta es un medio de archivo pasivo y no una capa de cómputo y transformación activa en paralelo."
+      },
+      {
+        "text": "Restringir la transmisión de datos hacia la red central durante los turnos nocturnos.",
+        "isCorrect": false,
+        "rationale": "Los motores de procesamiento distribuido buscan optimizar el flujo y análisis continuo, no bloquera la conectividad."
+      }
+    ],
+    "hint": "Considera el principio de fragmentar la carga de trabajo entre un conjunto de equipos interconectados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de las dimensiones del Big Data conocidas como las $5\\text{ V}$, ¿a qué aspecto operacional responde la \"Variedad\"?",
+    "opciones": [
+      {
+        "text": "A la velocidad medida en milisegundos en que los impulsos eléctricos viajan por el cableado.",
+        "isCorrect": false,
+        "rationale": "La rapidez de transmisión y respuesta corresponde a la dimensión de Velocidad, no de Variedad."
+      },
+      {
+        "text": "A la capacidad de asimilar e integrar múltiples tipos y formatos de datos, desde estructurados hasta no estructurados como video o audio.",
+        "isCorrect": true,
+        "rationale": "La variedad aborda la diversidad de fuentes y formatos de datos que el ecosistema debe procesar sintácticamente."
+      },
+      {
+        "text": "Al costo comercial en dólares necesario para adquirir servidores informáticos.",
+        "isCorrect": false,
+        "rationale": "El costo financiero representa una variable económica de inversión, ajena a las dimensiones intrínsecas de los datos."
+      },
+      {
+        "text": "A la precisión y margen de error estadístico de los datos capturados por la instrumentación.",
+        "isCorrect": false,
+        "rationale": "La exactitud y la confiabilidad de la información corresponden a la dimensión de Veracidad."
+      },
+      {
+        "text": "A la cantidad absoluta de gigabytes que se pueden grabar en un dispositivo de almacenamiento USB.",
+        "isCorrect": false,
+        "rationale": "La escala cuantitativa de espacio necesario hace referencia a la dimensión de Volumen."
+      }
+    ],
+    "hint": "Enfócate en la convivencia de distintos formatos y tipos de información en un mismo sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes fases forman parte de la secuencia lógica del ciclo de vida del dato en una solución de Big Data?",
+    "opciones": [
+      {
+        "text": "Captura de datos mediante fuentes como sensores IoT y sistemas de telemetría.",
+        "isCorrect": true,
+        "rationale": "La captura recopila las señales primarias desde el entorno operativo para introducirlas al ecosistema."
+      },
+      {
+        "text": "Almacenamiento distribuido y procesamiento o limpieza de los volúmenes de información.",
+        "isCorrect": true,
+        "rationale": "Esta fase garantiza la persistencia eficiente del dato y su depuración previa al modelado analítico."
+      },
+      {
+        "text": "Visualización analítica y consumo de información para la toma de decisiones.",
+        "isCorrect": true,
+        "rationale": "Representa la etapa final donde los datos procesados se convierten en conocimiento accionable mediante dashboards o alertas."
+      },
+      {
+        "text": "Purgado aleatorio de la mitad de los registros sin evaluación previa para liberar espacio de disco.",
+        "isCorrect": false,
+        "rationale": "El descarte indiscriminado degrada la calidad del conjunto de datos e invalida los modelos analíticos posteriores."
+      },
+      {
+        "text": "Sustitución física obligatoria de los servidores al finalizar cada jornada operativa.",
+        "isCorrect": false,
+        "rationale": "La infraestructura distribuida está diseñada para la persistencia y escalabilidad a largo plazo, no para el reemplazo diario de hardware."
+      }
+    ],
+    "hint": "Identifica los pasos secuenciales desde que se origina la variable hasta que impacta en la decisión operativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define un \"clúster\" en la infraestructura de almacenamiento y procesamiento de datos masivos?",
+    "opciones": [
+      {
+        "text": "Un disco duro único de gran capacidad conectado de forma aislada a una estación de trabajo.",
+        "isCorrect": false,
+        "rationale": "Un sistema monopuesto carece de la redundancia y escalabilidad que caracterizan a los clústeres distribuidos."
+      },
+      {
+        "text": "Un conjunto de servidores independientes interconectados por red que operan coordinadamente como un sistema lógico unificado.",
+        "isCorrect": true,
+        "rationale": "El clúster integra múltiples nodos de procesamiento y memoria para ejecutar tareas complejas de manera distribuida."
+      },
+      {
+        "text": "Una antena de radiofrecuencia para telecomunicaciones de voz entre brigadas de rescate.",
+        "isCorrect": false,
+        "rationale": "Las antenas de comunicación son componentes de red de voz, no conjuntos computacionales de procesamiento de datos."
+      },
+      {
+        "text": "Un programa especializado en el retoque digital de imágenes corporativas.",
+        "isCorrect": false,
+        "rationale": "Un software de edición es una aplicación cliente final y no una infraestructura de servidores interconectados."
+      },
+      {
+        "text": "Un microprocesador integrado en una tarjeta de control de encendido de vehículo liviano.",
+        "isCorrect": false,
+        "rationale": "Un microcontrolador vehicular es un sistema embebido individual, no un arreglo distribuido de servidores."
+      }
+    ],
+    "hint": "Visualiza un grupo de computadoras coordinadas por red actuando como un único recurso computacional potente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la capa de ingesta de datos de Big Data, ¿cuál es el cometido de tecnologías como Apache Kafka o Apache Flume?",
+    "opciones": [
+      {
+        "text": "Renderizar modelos tridimensionales para la simulación geotécnica en minas subterráneas.",
+        "isCorrect": false,
+        "rationale": "El renderizado visual y la simulación geotécnica corresponden a herramientas analíticas especializadas o GIS, no a la ingesta."
+      },
+      {
+        "text": "Recepcionar, agregar y transportar flujos masivos de datos en tiempo real desde múltiples fuentes heterogéneas hacia los almacenes centralizados.",
+        "isCorrect": true,
+        "rationale": "Las herramientas de ingesta gestionan la llegada continua de datos a gran velocidad garantizando su transmisión fluida y desacoplada."
+      },
+      {
+        "text": "Ejecutar la contabilidad y emisión automatizada de facturas a clientes internacionales.",
+        "isCorrect": false,
+        "rationale": "Las funciones administrativas y transaccionales corresponden a los sistemas ERP corporativos."
+      },
+      {
+        "text": "Ajustar mecánicamente las válvulas de admisión en motores de combustión interna.",
+        "isCorrect": false,
+        "rationale": "Las operaciones mecánicas son ejecutadas por actuadores físicos y sistemas de control en máquina, no por software de ingesta."
+      },
+      {
+        "text": "Supervisar el cumplimiento de horarios del personal administrativo en garita de control.",
+        "isCorrect": false,
+        "rationale": "La gestión de asistencia utiliza aplicaciones de recursos humanos y lectura biométrica puntual, no gestores de eventos masivos de Big Data."
+      }
+    ],
+    "hint": "Enfócate en la fase responsable de recibir y canalizar las transmisiones continuas de datos hacia la plataforma central.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia conceptual entre el aprendizaje supervisado y el no supervisado en las técnicas de Machine Learning?",
+    "opciones": [
+      {
+        "text": "El aprendizaje supervisado prescinde de algoritmos matemáticos, utilizando reglas condicionales fijas escritas a mano.",
+        "isCorrect": false,
+        "rationale": "Ambas ramas de Machine Learning fundamentan su operación en modelos algorítmicos y cálculos estadísticos avanzados."
+      },
+      {
+        "text": "El aprendizaje supervisado se entrena con datos previamente etiquetados con sus respuestas objetivo, mientras que el no supervisado busca agrupamientos o estructuras implícitas sin etiquetas.",
+        "isCorrect": true,
+        "rationale": "La presencia de una variable objetivo (etiqueta) guía la optimización del modelo supervisado, a diferencia del enfoque exploratorio no supervisado."
+      },
+      {
+        "text": "El aprendizaje no supervisado exige la intervención humana en tiempo real para aprobar cada cálculo del sistema.",
+        "isCorrect": false,
+        "rationale": "El término 'no supervisado' alude a la ausencia de etiquetas en los datos, no a la falta de automatización computacional."
+      },
+      {
+        "text": "El aprendizaje supervisado solo procesa imágenes satelitales en escala de grises.",
+        "isCorrect": false,
+        "rationale": "El tipo de aprendizaje es independiente del formato del dato de entrada; procesa vectores numéricos, tablas o imágenes indistintamente."
+      },
+      {
+        "text": "Ambos métodos son idénticos y la distinción obedece únicamente a la marca comercial del software utilizado.",
+        "isCorrect": false,
+        "rationale": "Existe una rigurosa diferencia metodológica y matemática en la función de pérdida y en la estructuración de las entradas del modelo."
+      }
+    ],
+    "hint": "Considera la presencia o ausencia de respuestas o etiquetas de referencia en el conjunto de entrenamiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes aplicaciones corresponden a casos prácticos de implantación de Big Data e Inteligencia Artificial en la minería?",
+    "opciones": [
+      {
+        "text": "Optimización de las rutas de acarreos para camiones autónomos en tajo abierto.",
+        "isCorrect": true,
+        "rationale": "El análisis en tiempo real de rutas y tráfico minimiza tiempos muertos y reduce el consumo de combustible."
+      },
+      {
+        "text": "Predicción de fallas en molinos SAG a partir del monitoreo de patrones de vibración y temperatura.",
+        "isCorrect": true,
+        "rationale": "La detección temprana de anomalías físicas previene paradas catastróficas mediante mantenimiento predictivo."
+      },
+      {
+        "text": "Monitoreo continuo de parámetros fisicoquímicos del agua para el control de efluentes ambientales.",
+        "isCorrect": true,
+        "rationale": "Los sensores IoT acoplados a analítica detectan desviaciones ambientales garantizando el cumplimiento normativo."
+      },
+      {
+        "text": "Cálculo manual de nóminas de pago utilizando exclusivamente registros en cuadernos de papel.",
+        "isCorrect": false,
+        "rationale": "El registro manual en soporte físico contraviene los principios de digitalización y automatización masiva."
+      },
+      {
+        "text": "Reemplazo de los levantamientos topográficos por estimaciones empíricas visuales.",
+        "isCorrect": false,
+        "rationale": "La analítica moderna busca la máxima precisión cuantitativa apoyada en sensores y modelos digitales, descartando la especulación."
+      }
+    ],
+    "hint": "Selecciona las opciones que involucren automatización, mantenimiento predictivo o control continuo basado en datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tecnología analítica permite detectar en tiempo real si el personal operativo porta adecuadamente sus Equipos de Protección Personal (EPP) en áreas críticas?",
+    "opciones": [
+      {
+        "text": "Sistemas de posicionamiento magnético embebidos en las herramientas de mano.",
+        "isCorrect": false,
+        "rationale": "Los sensores magnéticos identifican presencia o proximidad de objetos metálicos, no la correcta colocación de indumentaria."
+      },
+      {
+        "text": "Cámaras de visión artificial conectadas a modelos de Deep Learning entrenados en clasificación y detección de objetos visuales.",
+        "isCorrect": true,
+        "rationale": "Las redes neuronales convolucionales analizan la transmisión de video para verificar la presencia de cascos, lentes y chalecos en las imágenes."
+      },
+      {
+        "text": "Termómetros analógicos colocados en las salidas del sistema de ventilación.",
+        "isCorrect": false,
+        "rationale": "La medición de temperatura ambiental no provee información geométrica ni visual sobre la vestimenta de los trabajadores."
+      },
+      {
+        "text": "Hojas de cálculo compartidas en red local llenadas manualmente por el supervisor.",
+        "isCorrect": false,
+        "rationale": "Los registros manuales no ofrecen verificación automática ni respuesta en tiempo real ante omisiones de seguridad."
+      },
+      {
+        "text": "Bases de datos relacionales aisladas sin interfaz de captura de imágenes.",
+        "isCorrect": false,
+        "rationale": "Sin la captura y procesamiento de datos fotográficos o de video es imposible realizar el reconocimiento de EPP."
+      }
+    ],
+    "hint": "Identifica la disciplina que procesa imágenes y video para clasificar la presencia de objetos en los trabajadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el beneficio directo de aplicar modelos predictivos sobre los datos de operación de la flota de acarreo?",
+    "opciones": [
+      {
+        "text": "Incrementar de forma deliberada las paradas no programadas por fallas mecánicas.",
+        "isCorrect": false,
+        "rationale": "Las paradas no programadas perjudican la productividad y representan el problema que la analítica busca erradicar."
+      },
+      {
+        "text": "Identificar tendencias anómalas antes de que ocurra una avería grave, permitiendo programar intervenciones oportunamente y reducir costos.",
+        "isCorrect": true,
+        "rationale": "El mantenimiento predictivo utiliza la firma de degradación capturada en las variables para intervenir la máquina en el momento óptimo."
+      },
+      {
+        "text": "Eliminar por completo los procedimientos de lubricación periódica en los motores diésel.",
+        "isCorrect": false,
+        "rationale": "La analítica optimiza las rutinas de mantenimiento, pero no elimina las leyes físicas de desgaste mecánico de los lubricantes."
+      },
+      {
+        "text": "Obligar a los mecánicos a reparar los sistemas hidráulicos con el camión en pleno movimiento.",
+        "isCorrect": false,
+        "rationale": "Intervenir componentes en movimiento constituye una violación grave de los protocolos de seguridad industrial."
+      },
+      {
+        "text": "Duplicar la adquisición de repuestos innecesarios para almacenarlos indefinidamente en bodega.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la analítica en cadena de suministro es reducir inventarios ociosos ajustándolos a la demanda real."
+      }
+    ],
+    "hint": "Enfócate en la anticipación de la falla mediante la interpretación de patrones precursores capturados en los sensores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes componentes son fundamentales para la constitución de una plataforma analítica de Big Data?",
+    "opciones": [
+      {
+        "text": "Capa de fuentes e ingesta continua de información.",
+        "isCorrect": true,
+        "rationale": "Garantiza la captura desacoplada y la canalización eficiente de los datos brutos desde el terreno."
+      },
+      {
+        "text": "Infraestructura de almacenamiento distribuido y motores de procesamiento masivo.",
+        "isCorrect": true,
+        "rationale": "Provee el espacio persistente y la capacidad de cálculo paralelo para transformar grandes volúmenes de datos."
+      },
+      {
+        "text": "Capas de análisis avanzado y herramientas de visualización de métricas.",
+        "isCorrect": true,
+        "rationale": "Traduce los datos procesados en indicadores y patrones interpretables por los operadores y gestores."
+      },
+      {
+        "text": "Motores de combustión interna de 12 cilindros instalados en el datacenter.",
+        "isCorrect": false,
+        "rationale": "Los motores de combustión son componentes de maquinaria pesada, no elementos de la arquitectura de datos."
+      },
+      {
+        "text": "Archivos impresos guardados en carpetas colgantes dentro de un depósito físico.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento en soporte de papel es un formato no digitalizable directamente por las herramientas de cómputo analítico."
+      }
+    ],
+    "hint": "Repasa la arquitectura funcional del dato desde que se genera en el sensor hasta que se presenta al tomador de decisiones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En minería subterránea, ¿cuál es el objetivo primordial de desplegar una red de sensores IoT para la medición de gases?",
+    "opciones": [
+      {
+        "text": "Regular el volumen de reproducción del sistema de sonido en los vehículos de transporte.",
+        "isCorrect": false,
+        "rationale": "Los sistemas de entretenimiento vehicular son ajenos a la instrumentación de seguridad ambiental en socavón."
+      },
+      {
+        "text": "Monitorear continuamente concentraciones de $CO_2$, metano y niveles de $O_2$ para activar alertas de evacuación y ventilación automatizada.",
+        "isCorrect": true,
+        "rationale": "La telemetría de gases previene intoxicaciones o explosiones en labores subterráneas garantizando atmósferas respirables."
+      },
+      {
+        "text": "Contar la cantidad de fragmentos rocosos que caen a la vía durante los períodos de descanso.",
+        "isCorrect": false,
+        "rationale": "El desprendimiento de rocas se evalúa mediante mallas geotécnicas y acelerómetros, no con sensores de concentración de gas."
+      },
+      {
+        "text": "Medir el nivel de radiación solar que ingresa a los niveles más profundos de la mina.",
+        "isCorrect": false,
+        "rationale": "En minería subterránea no existe penetración de radiación solar directa que requiera medición operacional."
+      },
+      {
+        "text": "Sustituir la colocación de pernos de anclaje y malla de electrosoldada en los techos del túnel.",
+        "isCorrect": false,
+        "rationale": "Los sensores entregan información ambiental pero no aportan soporte mecánico a la estructura de la roca."
+      }
+    ],
+    "hint": "Piensa en el monitoreo en tiempo real de atmósferas potencialmente letales para la seguridad de la cuadrilla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ventaja aporta el uso de sensores LiDAR montados en drones para los levantamientos topográficos en tajos abiertos?",
+    "opciones": [
+      {
+        "text": "Modificar químicamente la superficie de la roca para simplificar el proceso de perforación.",
+        "isCorrect": false,
+        "rationale": "El sistema LiDAR es un instrumento de medición remota óptico-láser, sin capacidad de reacción química sobre el terreno."
+      },
+      {
+        "text": "Emitir pulsos láser que generan nubes de puntos de alta densidad para reconstruir modelos topográficos tridimensionales ($3D$) de gran precisión.",
+        "isCorrect": true,
+        "rationale": "La tecnología LiDAR penetra cobertura vegetal ligera y captura la elevación exacta del terreno para cubicaciones precisas."
+      },
+      {
+        "text": "Sustituir el uso de explosivos en las fases de voladura primaria.",
+        "isCorrect": false,
+        "rationale": "El LiDAR cumple propósitos exclusivamente cartográficos y de medición espacial, no de fragmentación de rocas."
+      },
+      {
+        "text": "Transmitir señales de televisión digital gratuita hacia los campamentos mineros.",
+        "isCorrect": false,
+        "rationale": "Las frecuencias y protocolos del sensor responden a la captura de datos de rango óptico, no a la radiodifusión de contenidos."
+      },
+      {
+        "text": "Eliminar la necesidad de realizar estudios de caracterización geológica en los núcleos de perforación.",
+        "isCorrect": false,
+        "rationale": "El modelado de superficie complementa la información, pero no reemplaza el análisis fisicoquímico intrínseco del mineral obtenido en testigo."
+      }
+    ],
+    "hint": "Se basa en la emisión de pulsos de luz para medir distancias y construir representaciones volumétricas exactas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define la arquitectura funcional de un sistema SCADA dentro de una planta de procesamiento de minerales?",
+    "opciones": [
+      {
+        "text": "Un editor de texto utilizado para elaborar minutas de reuniones de gerencia.",
+        "isCorrect": false,
+        "rationale": "Un software de ofimática no posee controladores ni conectividad de hardware industrial en tiempo real."
+      },
+      {
+        "text": "Un sistema de control centralizado y adquisición de datos que recopila información de PLCs e instrumentos para la supervisión e intervención de la planta.",
+        "isCorrect": true,
+        "rationale": "SCADA integra la interfaz hombre-máquina ($HMI$) con controladores lógicos para monitorear y accionar equipos industriales de forma remota."
+      },
+      {
+        "text": "Un vehículo aéreo no tripulado diseñado para volar dentro de las tuberías de agua.",
+        "isCorrect": false,
+        "rationale": "SCADA es un esquema de software y redes de automatización, no un vehículo físico de inspección."
+      },
+      {
+        "text": "Una red social interna para el intercambio de mensajes informales entre los empleados.",
+        "isCorrect": false,
+        "rationale": "Las plataformas de comunicación social carecen de la determinación y seguridad requeridas para el control de procesos industriales de riesgo."
+      },
+      {
+        "text": "Un motor de búsqueda de documentos en Internet sin conexión con la planta.",
+        "isCorrect": false,
+        "rationale": "SCADA opera sobre redes industriales privadas conectadas directamente a la instrumentación de proceso."
+      }
+    ],
+    "hint": "Considera la plataforma central que despliega el diagrama de flujo del proceso y permite interactuar con válvulas y motores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes herramientas tecnológicas se utilizan para construir dashboards analíticos y cuadros de mando e indicadores mineros?",
+    "opciones": [
+      {
+        "text": "Grafana",
+        "isCorrect": true,
+        "rationale": "Grafana se especializa en la visualización temporal e indicadores de series de tiempo para datos en tiempo real."
+      },
+      {
+        "text": "Tableau",
+        "isCorrect": true,
+        "rationale": "Tableau ofrece analítica visual avanzada y capacidad de exploración de datos empresariales de alta complejidad."
+      },
+      {
+        "text": "Power BI",
+        "isCorrect": true,
+        "rationale": "Power BI permite construir reportes interactivos integrando diversas fuentes de datos corporativos e industriales."
+      },
+      {
+        "text": "Microsoft Paint",
+        "isCorrect": false,
+        "rationale": "Paint es una herramienta básica de dibujo sintético de gráficos de mapa de bits sin capacidad de procesamiento de datos."
+      },
+      {
+        "text": "Bloc de notas (Notepad)",
+        "isCorrect": false,
+        "rationale": "Un editor de texto plano no posee motor de procesamiento gráfico ni conectores dinámicos a bases de datos."
+      }
+    ],
+    "hint": "Selecciona las herramientas orientadas a la inteligencia de negocios, analítica visual e indicadores en tiempo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una ventaja operativa clave del almacenamiento de datos en plataformas Cloud en comparación con la infraestructura local tradicional en faena?",
+    "opciones": [
+      {
+        "text": "Garantizar la transmisión de información sin requerir ningún tipo de conectividad a redes de datos.",
+        "isCorrect": false,
+        "rationale": "Las soluciones en la nube dependen de enlaces de red (fibra, satélite o 5G) para transferir los datos desde la mina."
+      },
+      {
+        "text": "Ofrecer escalabilidad elástica a demanda y alta disponibilidad, evitando inversiones masivas en servidores físicos locales de capacidad rígida.",
+        "isCorrect": true,
+        "rationale": "La nube permite aprovisionar recursos de almacenamiento y cómputo dinámicamente según la carga de la operación."
+      },
+      {
+        "text": "Asegurar que los datos solo puedan ser vistos en la pantalla del computador del jefe de mina.",
+        "isCorrect": false,
+        "rationale": "La arquitectura Cloud promueve la accesibilidad distribuida y el consumo seguro de datos desde múltiples ubicaciones."
+      },
+      {
+        "text": "Eliminar la necesidad de implementar mecanismos de autenticación o cifrado de seguridad.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento remoto exige la máxima rigurosidad en protocolos de ciberseguridad, cifrado y control de accesos."
+      },
+      {
+        "text": "Inhabilitar automáticamente el uso de algoritmos de Machine Learning sobre los datos almacenados.",
+        "isCorrect": false,
+        "rationale": "Las plataformas Cloud ofrecen integración nativa con servicios avanzados de inteligencia artificial y analítica."
+      }
+    ],
+    "hint": "Piensa en la flexibilidad para ajustar la capacidad computacional de forma inmediata según las necesidades cambiantes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Con qué propósito se implementan los mapas de calor y los modelos tridimensionales ($3D$) en la analítica de operaciones mineras?",
+    "opciones": [
+      {
+        "text": "Identificar visualmente densidades de concentración mineral o zonas de riesgo geotécnico en la estructura de la mina.",
+        "isCorrect": true,
+        "rationale": "Los mapas de calor interpolan variables discontinuas para destacar gradientes de ley o inestabilidades de terreno."
+      },
+      {
+        "text": "Optimizar el diseño de mallas de perforación y distribución de carga explosiva mediante modelos espacializados.",
+        "isCorrect": true,
+        "rationale": "La geometría $3D$ del macizo rocoso permite simular el alcance y fragmentación requerida en la voladura."
+      },
+      {
+        "text": "Evaluar espacialmente la variabilidad de variables geofísicas y topográficas.",
+        "isCorrect": true,
+        "rationale": "El modelado volumétrico representa fielmente la topografía y las estructuras intrínsecas del yacimiento."
+      },
+      {
+        "text": "Elaborar gráficos artísticos para la decoración de oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "El modelado geotécnico responde a criterios rigurosos de ingeniería y no a fines estéticos o decorativos."
+      },
+      {
+        "text": "Ocultar la presencia de fallas estructurales a los equipos de auditoría geotécnica.",
+        "isCorrect": false,
+        "rationale": "La analítica espacial busca transparentar las discontinuidades del terreno para mitigar riesgos de colapso."
+      }
+    ],
+    "hint": "Considera la utilidad de representar espacialmente densidades de variables geológicas y volúmenes de roca.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia de diseño fundamental entre las bases de datos relacionales (SQL) y las no relacionales (NoSQL)?",
+    "opciones": [
+      {
+        "text": "Las bases de datos SQL solo guardan archivos de audio, mientras que las NoSQL almacenan texto plano.",
+        "isCorrect": false,
+        "rationale": "SQL procesa datos alfanuméricos en tablas, no se limita a archivos de audio."
+      },
+      {
+        "text": "Las bases de datos SQL organizan la información en tablas rígidas con esquemas fijos predefinidos, mientras que las NoSQL utilizan esquemas flexibles como documentos, claves-valor, columnas o grafos.",
+        "isCorrect": true,
+        "rationale": "SQL garantiza consistencia relacional estricta mediante tablas, mientras que NoSQL prioriza la flexibilidad y escalabilidad para datos diversos."
+      },
+      {
+        "text": "Las bases de datos NoSQL no son capaces de ejecutarse en ordenadores de arquitectura $x86$.",
+        "isCorrect": false,
+        "rationale": "Los motores NoSQL se ejecutan ampliamente sobre hardware estándar en entornos distribuidos."
+      },
+      {
+        "text": "Las bases de datos SQL imposibilitan la ejecución de operaciones de cálculo matemático.",
+        "isCorrect": false,
+        "rationale": "SQL incluye potentes funciones de agregación y cálculo matemático integrado sobre sus registros."
+      },
+      {
+        "text": "NoSQL es un lenguaje de programación antiguo enfocado exclusivamente en dispositivos móviles discontinuados.",
+        "isCorrect": false,
+        "rationale": "NoSQL designa un paradigma moderno de gestión de bases de datos de alta escala y no un lenguaje móvil obsoleto."
+      }
+    ],
+    "hint": "Contrasta la rigidez de los esquemas de tablas estrictas frente a la versatilidad de los modelos orientados a documentos o pares clave-valor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué escenario operativo de Big Data es idóneo utilizar un motor de base de datos de clave-valor como Redis?",
+    "opciones": [
+      {
+        "text": "Para redactar extensos manuales corporativos de cumplimiento normativo en texto enriquecido.",
+        "isCorrect": false,
+        "rationale": "El texto extenso no estructurado no aprovecha la estructura de acceso ultrarrápido por clave indexada."
+      },
+      {
+        "text": "Para la lectura y escritura en memoria de altísima velocidad de estados puntuales (ejemplo: ID del equipo como clave y la temperatura instantánea como valor).",
+        "isCorrect": true,
+        "rationale": "Redis optimiza el acceso en submilisegundos al mantener datos simples en memoria principal organizados por claves de búsqueda directa."
+      },
+      {
+        "text": "Para almacenar capas cartográficas vectoriales complejas con múltiples relaciones geométricas.",
+        "isCorrect": false,
+        "rationale": "Las estructuras geométricas complejas requieren motores espaciales o bases de datos orientadas a objetos y grafos."
+      },
+      {
+        "text": "Para consolidar los libros contables de balance financiero anual con auditoría cruzada.",
+        "isCorrect": false,
+        "rationale": "Las transacciones financieras requieren esquemas relacionales con soporte estricto de propiedades ACID."
+      },
+      {
+        "text": "Para procesar archivos de video en alta definición sin generar índices de búsqueda.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento de objetos binarios masivos ($BLOB$) utiliza repositorios tipo Data Lake o S3, no bases en memoria clave-valor."
+      }
+    ],
+    "hint": "Busca la opción que requiera asociar un identificador único con una métrica inmediata de muy baja latencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué formato estructurado de documentos utiliza por excelencia MongoDB para el almacenamiento flexible de información semiestructurada?",
+    "opciones": [
+      {
+        "text": "Archivos de hojas de cálculo binarias cerradas.",
+        "isCorrect": false,
+        "rationale": "MongoDB almacena información en formatos abiertos basados en texto estructurado y su representación binaria, no en planillas propietarias."
+      },
+      {
+        "text": "Documentos en formato JSON / BSON.",
+        "isCorrect": true,
+        "rationale": "MongoDB utiliza colecciones de documentos JSON (y su versión binaria optimizada BSON) que permiten campos dinámicos y anidados."
+      },
+      {
+        "text": "Código fuente compilado sin estructuración de datos.",
+        "isCorrect": false,
+        "rationale": "Los ejecutables o código de programas no representan una estructura de almacenamiento de datos recuperable por consultas de base de datos."
+      },
+      {
+        "text": "Archivos de texto delimitados exclusivamente por comas ($CSV$) con filas estáticas.",
+        "isCorrect": false,
+        "rationale": "El formato $CSV$ es rígido y tabular, careciendo de las jerarquías anidadas nativas del esquema de documentos NoSQL."
+      },
+      {
+        "text": "Archivos de presentación de diapositivas interactivas.",
+        "isCorrect": false,
+        "rationale": "Las diapositivas corresponden a formatos de presentación visual, no a documentos estructurados para motores de base de datos."
+      }
+    ],
+    "hint": "Piensa en el estándar de objetos con llaves y valores jerárquicos ampliamente utilizado en la Web y en bases de documentos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué una base de datos orientada a grafos como Neo4j resulta óptima para resolver problemas de logística y transporte de mineral?",
+    "opciones": [
+      {
+        "text": "Porque genera automáticamente archivos de sonido descriptivos para los conductores.",
+        "isCorrect": false,
+        "rationale": "Neo4j gestiona estructuras de datos en red y no cumple funciones de síntesis de voz."
+      },
+      {
+        "text": "Porque representa de manera nativa nodos (minas, acopios, plantas, puertos) y sus relaciones o vías, permitiendo calcular rutas óptimas y dependencias complejas.",
+        "isCorrect": true,
+        "rationale": "El modelo de grafos computa recorridos sobre vértices y aristas mediante algoritmos de red muy eficientes."
+      },
+      {
+        "text": "Porque transforma las bases de datos en hojas de cálculo tradicionales de una sola columna.",
+        "isCorrect": false,
+        "rationale": "Neo4j no utiliza esquemas tabulares rígidos ni reduce la información a columnas simples aisladas."
+      },
+      {
+        "text": "Porque es el único sistema que puede funcionar grabado directamente dentro de un PLC industrial.",
+        "isCorrect": false,
+        "rationale": "Neo4j se ejecuta sobre servidores y centros de cómputo, no en la memoria limitada de un controlador de campo."
+      },
+      {
+        "text": "Porque no requiere energía eléctrica para procesar las peticiones de los usuarios.",
+        "isCorrect": false,
+        "rationale": "Todos los motores de bases de datos dependen de infraestructura de hardware que consume energía eléctrica."
+      }
+    ],
+    "hint": "Enfócate en la capacidad de modelar entidades e interconexiones que representan caminos o costos de transporte.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la fortaleza distintiva de Apache Cassandra como motor NoSQL de columna ancha ($Wide\\text{-}Column$)?",
+    "opciones": [
+      {
+        "text": "Su diseño enfocado exclusivamente en la ejecución de un único servidor sin posibilidad de expansión.",
+        "isCorrect": false,
+        "rationale": "Cassandra se diseñó específicamente para ser distribuida masivamente sin puntos únicos de fallo."
+      },
+      {
+        "text": "Su arquitectura peer-to-peer distribuida que ofrece altísima disponibilidad, tolerancia a fallos y capacidad de escritura masiva en escala masiva.",
+        "isCorrect": true,
+        "rationale": "Cassandra permite añadir nodos al clúster linealmente para soportar volúmenes masivos de escrituras continuas de sensores."
+      },
+      {
+        "text": "Su especialización exclusiva en el procesamiento de texto para correos electrónicos.",
+        "isCorrect": false,
+        "rationale": "Es un motor de almacenamiento de datos de propósito general masivo, no un servidor de correo."
+      },
+      {
+        "text": "Su restricción técnica a un límite máximo de 100 transacciones diarias.",
+        "isCorrect": false,
+        "rationale": "Cassandra procesa habitualmente cientos de miles de operaciones de escritura por segundo en entornos industriales."
+      },
+      {
+        "text": "Su dependencia de hojas de cálculo aisladas para funcionar.",
+        "isCorrect": false,
+        "rationale": "Posee su propia arquitectura de almacenamiento persistente basada en SSTables, independiente de software de oficina."
+      }
+    ],
+    "hint": "Destaca por su arquitectura distribuida descentralizada para escrituras de gran volumen sin interrupciones del servicio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el lenguaje SQL estricto para bases de datos relacionales, ¿cuáles de las siguientes sentencias forman parte del Lenguaje de Manipulación de Datos (DML)?",
+    "opciones": [
+      {
+        "text": "SELECT",
+        "isCorrect": true,
+        "rationale": "SELECT permite recuperar y consultar registros existentes almacenados en las tablas relacionales."
+      },
+      {
+        "text": "INSERT",
+        "isCorrect": true,
+        "rationale": "INSERT agrega nuevas filas de datos a una estructura de tabla existente."
+      },
+      {
+        "text": "UPDATE",
+        "isCorrect": true,
+        "rationale": "UPDATE modifica los valores de los atributos en las filas existentes dentro de una tabla."
+      },
+      {
+        "text": "FORMAT_DISK",
+        "isCorrect": false,
+        "rationale": "FORMAT_DISK no es un comando de SQL, sino una instrucción de bajo nivel del sistema operativo."
+      },
+      {
+        "text": "SHUTDOWN_POWER",
+        "isCorrect": false,
+        "rationale": "No existe esta sentencia dentro de la sintaxis estándar de DML en motores SQL."
+      }
+    ],
+    "hint": "Corresponde a las sentencias estándar para consultar, insertar y actualizar los registros de una tabla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-21",
+    "diplomado": "FUNDAMENTOS DE BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Bajo qué criterio técnico de arquitectura de datos se debe preferir una base de datos NoSQL frente a una SQL tradicional?",
+    "opciones": [
+      {
+        "text": "Cuando se requiera un control contable que exija de forma estricta transacciones ACID sobre tablas fijas e inmutables.",
+        "isCorrect": false,
+        "rationale": "Las transacciones contables rígidas benefician directamente del motor transaccional de un sistema SQL relacional."
+      },
+      {
+        "text": "Cuando se deba procesar un flujo masivo e ininterrumpido de datos no estructurados o variables desde miles de sensores con necesidad de escalabilidad horizontal rápida.",
+        "isCorrect": true,
+        "rationale": "La ausencia de esquema rígido y la capacidad de escalar horizontalmente hacen de NoSQL la opción óptima para la velocidad y volumen de Big Data."
+      },
+      {
+        "text": "Cuando el volumen total de la información sea diminuto y se pueda manejar en una pequeña planilla.",
+        "isCorrect": false,
+        "rationale": "Para volúmenes pequeños y datos estables no se justifica la complejidad de despliegue de una arquitectura NoSQL distribuida."
+      },
+      {
+        "text": "Cuando se busque bloquear explícitamente cualquier integración con algoritmos analíticos modernos.",
+        "isCorrect": false,
+        "rationale": "Los sistemas NoSQL se diseñan justamente para acoplarse con motores de cómputo analítico y Machine Learning."
+      },
+      {
+        "text": "Cuando no se cuente con conectividad de red ni servidores distribuidos de apoyo.",
+        "isCorrect": false,
+        "rationale": "NoSQL apalanca su rendimiento en la distribución de nodos interconectados por red."
+      }
+    ],
+    "hint": "Considera la ingesta masiva de datos dinámicos no estructurados y la necesidad de escalar distribuyendo carga en varios nodos.",
+    "activo": true
+  }
+]

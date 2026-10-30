@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son los tres factores que conforman la tríada de obstáculos que define la logística minera en el Perú?",
+    "opciones": [
+      {
+        "text": "Geografía, sociedad e infraestructura",
+        "isCorrect": true,
+        "rationale": "Estos tres elementos actúan de forma conjunta imponiendo barreras físicas, vulnerabilidad social y retos de conectividad en los Andes peruanos."
+      },
+      {
+        "text": "Geología, clima e impuestos",
+        "isCorrect": false,
+        "rationale": "Aunque la geología y el clima influyen en la extracción, los impuestos corresponden al marco fiscal y no a la tríada logística fundamental descrita."
+      },
+      {
+        "text": "Financiamiento, tecnología y leyes laborales",
+        "isCorrect": false,
+        "rationale": "Estos factores corresponden al ámbito de la gestión corporativa y regulatoria, pero no constituyen la tríada de obstáculos territoriales de la logística minera."
+      },
+      {
+        "text": "Digitalización, automatización y electrificación",
+        "isCorrect": false,
+        "rationale": "Estos componentes forman parte de las soluciones tecnológicas de la minería 4.0, no de las barreras del entorno operacional."
+      },
+      {
+        "text": "Exportación, almacenamiento y puertos",
+        "isCorrect": false,
+        "rationale": "Estos son eslabones de la cadena de distribución física, en lugar de los obstáculos externos que condicionan la planificación logística."
+      }
+    ],
+    "hint": "Piensa en las tres barreras estructurales y del entorno que dificultan la operación en los Andes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Ante los constantes bloqueos de carreteras en los Andes peruanos, ¿qué filosofía logística se ven obligadas a adoptar las empresas mineras en reemplazo del 'Justo a tiempo' (JIT)?",
+    "opciones": [
+      {
+        "text": "El modelo 'Por si acaso'",
+        "isCorrect": true,
+        "rationale": "Este enfoque busca la continuidad operativa e inmoviliza stock para meses, garantizando la supervivencia frente a interrupciones en las vías."
+      },
+      {
+        "text": "La producción esbelta (Lean)",
+        "isCorrect": false,
+        "rationale": "La producción esbelta se enfoca en eliminar desperdicios y reducir inventarios, lo cual resulta inviable ante bloqueos impredecibles."
+      },
+      {
+        "text": "El inventario cero",
+        "isCorrect": false,
+        "rationale": "El inventario cero es una variante del Justo a Tiempo que genera vulnerabilidad total si la cadena de transporte se interrumpe."
+      },
+      {
+        "text": "La entrega sobre pedido",
+        "isCorrect": false,
+        "rationale": "Este esquema funciona cuando los tiempos de tránsito son predecibles, condición que no se cumple en corredores viales con alta conflictividad."
+      },
+      {
+        "text": "El flujo tenso automatizado",
+        "isCorrect": false,
+        "rationale": "El flujo tenso requiere sincronización exacta sin margen de demora, lo cual colapsa cuando ocurren protestas o bloqueos viales."
+      }
+    ],
+    "hint": "Este modelo prioriza la continuidad operativa mediante el almacenamiento masivo sobre la minimización de inventarios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la clasificación de inventario mediante el análisis ABC/VED en la gestión de abastecimiento minero?",
+    "opciones": [
+      {
+        "text": "Organiza los artículos combinando su costo con la criticidad de su falta, dividiéndolos en vitales, esenciales o deseables",
+        "isCorrect": true,
+        "rationale": "Esta metodología categoriza miles de suministros considerando tanto su valor financiero como las consecuencias operativas de un desabastecimiento."
+      },
+      {
+        "text": "Agrupa los productos únicamente según su país de origen y el tiempo de importación marítima",
+        "isCorrect": false,
+        "rationale": "El análisis ABC/VED se enfoca en el valor y la importancia operativa interna, no en la procedencia geográfica de los bienes."
+      },
+      {
+        "text": "Ordena los insumos exclusivamente por el volumen y tonelaje gastado por la planta al mes",
+        "isCorrect": false,
+        "rationale": "El volumen físico es solo un aspecto; la metodología evalúa la criticidad para la continuidad de la mina y el valor económico."
+      },
+      {
+        "text": "Clasifica los repuestos según el tamaño físico de la pieza y el espacio requerido en el almacén",
+        "isCorrect": false,
+        "rationale": "Las dimensiones físicas no determinan la criticidad ni el valor financiero de un componente esencial para la producción."
+      },
+      {
+        "text": "Divide los proveedores según su facturación anual y años de relación comercial con la mina",
+        "isCorrect": false,
+        "rationale": "Esa evaluación corresponde a la segmentación de proveedores, no a la categorización de los artículos almacenados en inventario."
+      }
+    ],
+    "hint": "Evalúa el impacto operativo de quedarse sin un repuesto, integrando tanto el valor monetario como el grado de necesidad de la pieza.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es un IROC en el contexto de la minería moderna y la logística 4.0?",
+    "opciones": [
+      {
+        "text": "Un Centro Integrado de Operaciones Remotas que controla la mina en tiempo real desde una ciudad lejana",
+        "isCorrect": true,
+        "rationale": "El IROC procesa datos de sensores en tiempo real para tomar decisiones centralizadas e integrar toda la cadena desde una ubicación remota."
+      },
+      {
+        "text": "Un registro digital descentralizado para rastrear la pureza química del mineral extraído",
+        "isCorrect": false,
+        "rationale": "La tecnología de registro digital para trazabilidad corresponde a blockchain o pasaportes digitales, no al IROC."
+      },
+      {
+        "text": "Un software de compras exclusivo para evaluar la solvencia de proveedores locales",
+        "isCorrect": false,
+        "rationale": "La homologación y evaluación de proveedores utiliza plataformas financieras y auditorías, no centros de operaciones remotas."
+      },
+      {
+        "text": "Un sistema mecánico automatizado para la trituración de relaves secos en planta",
+        "isCorrect": false,
+        "rationale": "El IROC es una infraestructura digital de monitoreo y control, no un equipo mecánico de procesamiento de minerales."
+      },
+      {
+        "text": "Un protocolo de seguridad exclusivo para el transporte terrestre de explosivos",
+        "isCorrect": false,
+        "rationale": "El transporte de explosivos se rige por normativas específicas como MATPEL, mientras que el IROC gestiona datos integrados de la operación."
+      }
+    ],
+    "hint": "Piensa en una sala de control estilo NASA que actúa como el cerebro digital unificado de la operación a distancia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué porcentaje aproximado del costo total de operación de una gran mina es gestionado por el equipo de compras y abastecimiento?",
+    "opciones": [
+      {
+        "text": "Más del 60%",
+        "isCorrect": true,
+        "rationale": "El área de abastecimiento maneja la mayoría del presupuesto operativo de la mina, lo que convierte a las compras en un centro estratégico de costo y riesgo."
+      },
+      {
+        "text": "Alrededor del 15%",
+        "isCorrect": false,
+        "rationale": "Un 15% es una proporción demasiado baja que no refleja la inmensa magnitud de recursos requeridos para mantener operativa una mina."
+      },
+      {
+        "text": "Exactamente el 30%",
+        "isCorrect": false,
+        "rationale": "El volumen de adquisiciones de bienes, repuestos, servicios y combustibles supera ampliamente el 30% del gasto operativo."
+      },
+      {
+        "text": "Cerca del 45%",
+        "isCorrect": false,
+        "rationale": "Aunque es una cifra considerable, la gestión de abastecimiento abarca una fracción aun mayor de la estructura total de costos operativos."
+      },
+      {
+        "text": "Menos del 5%",
+        "isCorrect": false,
+        "rationale": "Esta cifra es errónea, ya que la compra de insumos vitales y contratos de servicio representa la mayor parte de los costos continuos."
+      }
+    ],
+    "hint": "Representa la mayor parte del presupuesto operativo asignado a la cadena de suministro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión moderna de compras mineras, ¿cómo se ejemplifica el cambio hacia contratar un rendimiento garantizado en lugar de adquirir un simple producto?",
+    "opciones": [
+      {
+        "text": "Pagando a los proveedores de neumáticos por tonelada movida en lugar de comprar la llanta",
+        "isCorrect": true,
+        "rationale": "Este modelo enfocado en el rendimiento alinea los incentivos, pues el proveedor obtiene mayores ingresos si el neumático dura más tiempo."
+      },
+      {
+        "text": "Comprando insumos químicos únicamente al contado y sin contrato a largo plazo",
+        "isCorrect": false,
+        "rationale": "Las compras al contado sin contrato corresponden a transacciones tradicionales de bajo valor agregado y no a modelos de rendimiento."
+      },
+      {
+        "text": "Alquilando camiones sin incluir servicios de mantenimiento ni garantía de disponibilidad",
+        "isCorrect": false,
+        "rationale": "Alquilar sin servicio traslada el riesgo operativo a la mina en lugar de contratar un resultado o nivel de servicio con el proveedor."
+      },
+      {
+        "text": "Adquiriendo repuestos usados en subastas locales para reducir el costo inicial de adquisición",
+        "isCorrect": false,
+        "rationale": "La compra de repuestos usados busca reducir desembolsos de corto plazo pero no garantiza el desempeño ni la disponibilidad operacional."
+      },
+      {
+        "text": "Subcontratando la seguridad del almacén a múltiples proveedores sin homologación",
+        "isCorrect": false,
+        "rationale": "La falta de homologación incrementa los riesgos de seguridad y contraviene el principio de alianzas basadas en calidad garantizada."
+      }
+    ],
+    "hint": "Analiza la alianza estratégica donde el proveedor gana más mientras más tiempo y mejor funcione su componente en la operación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal del Sami Cluster Minero Andino?",
+    "opciones": [
+      {
+        "text": "Articular a mineras, proveedores, gobierno y academia para elevar el nivel técnico de las empresas locales e impulsar la innovación",
+        "isCorrect": true,
+        "rationale": "El Sami Cluster busca fortalecer el ecosistema local para que las empresas de la región puedan cumplir con los estrictos estándares de homologación minera."
+      },
+      {
+        "text": "Fiscalizar las emisiones de carbono de los vehículos de carga pesada en el corredor minero",
+        "isCorrect": false,
+        "rationale": "La fiscalización ambiental es una competencia directa de las autoridades estatales, no de una iniciativa de clúster colaborativo."
+      },
+      {
+        "text": "Administrar de forma exclusiva la venta de explosivos e insumos químicos en la sierra central",
+        "isCorrect": false,
+        "rationale": "La comercialización de explosivos e insumos controlados está supeditada a regulaciones de seguridad del Estado y no al clúster."
+      },
+      {
+        "text": "Monitorear las rutas ferroviarias para evitar el desvío de concentrado de cobre hacia el extranjero",
+        "isCorrect": false,
+        "rationale": "El monitoreo de carga y prevención de ilícitos es responsabilidad de las empresas operadoras y los organismos de fiscalización tributaria."
+      },
+      {
+        "text": "Reemplazar la administración de los megapuertos nacionales por una gestión comunal",
+        "isCorrect": false,
+        "rationale": "La gestión portuaria depende de concesiones de infraestructura y autoridades de transporte, no de un clúster de desarrollo de proveedores."
+      }
+    ],
+    "hint": "Busca una alianza ecosistémica que ayuda a pequeñas y medianas empresas a cumplir con las altas exigencias de la gran minería.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué entidad pública se encarga de fiscalizar de forma estricta el transporte y uso de Insumos Químicos y Bienes Fiscalizados (IQPF) como el cianuro en el Perú?",
+    "opciones": [
+      {
+        "text": "La SUNAT",
+        "isCorrect": true,
+        "rationale": "La SUNAT fiscaliza rigurosamente los insumos químicos controlados mediante trazabilidad por GPS y registros especiales para evitar su desvío a actividades ilícitas."
+      },
+      {
+        "text": "El MINAM",
+        "isCorrect": false,
+        "rationale": "El Ministerio del Ambiente establece políticas de sostenibilidad pero no ejerce el control fiscal ni el rastreo aduanero del transporte de IQPF."
+      },
+      {
+        "text": "OSINERGMIN",
+        "isCorrect": false,
+        "rationale": "OSINERGMIN supervisa la seguridad técnica en energía y minería, pero el control administrativo y físico de insumos químicos fiscalizados le compete a la SUNAT."
+      },
+      {
+        "text": "El MTC",
+        "isCorrect": false,
+        "rationale": "El Ministerio de Transportes y Comunicaciones norma la infraestructura vial, pero la fiscalización del tráfico de insumos restringidos recae en la SUNAT."
+      },
+      {
+        "text": "INDECOPI",
+        "isCorrect": false,
+        "rationale": "INDECOPI tutela la competencia de mercado y la propiedad intelectual, sin atribuciones sobre el control de productos químicos fiscalizados."
+      }
+    ],
+    "hint": "Es la agencia tributaria y aduanera del Perú que impone registros especiales y monitoreo por GPS a estas cargas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica principal del mineroducto utilizado por Compañía Minera Antamina?",
+    "opciones": [
+      {
+        "text": "Es una tubería subterránea de más de 300 km que aprovecha la gravedad para transportar el mineral en flujo continuo hacia la costa",
+        "isCorrect": true,
+        "rationale": "El mineroducto utiliza la pendiente natural para trasladar el concentrado en forma de pulpa sin saturar las carreteras y con mínima exposición a conflictos."
+      },
+      {
+        "text": "Es un tren eléctrico de alta velocidad diseñado para atravesar los centros poblados de la Sierra Central",
+        "isCorrect": false,
+        "rationale": "El mineroducto es una tubería sellada que transporta pulpa mineral, no un sistema ferroviario de transporte de carga en vagones."
+      },
+      {
+        "text": "Es una autopista asfaltada de uso exclusivo para camiones de gran tonelaje",
+        "isCorrect": false,
+        "rationale": "Su gran ventaja técnica es precisamente evitar el transporte terrestre por carretera mediante el envío fluido por tubería."
+      },
+      {
+        "text": "Es una red de fajas transportadoras aéreas impulsadas exclusivamente por paneles solares",
+        "isCorrect": false,
+        "rationale": "El sistema consiste en un conducto cerrado bajo tierra impulsado por gravedad, no en fajas mecánicas expuestas a la intemperie."
+      },
+      {
+        "text": "Es un sistema fluvial de barcazas que conectan los ríos andinos con los puertos del Océano Pacífico",
+        "isCorrect": false,
+        "rationale": "La geografía andina de alta montaña imposibilita la navegación fluvial directa hacia la costa del Pacífico."
+      }
+    ],
+    "hint": "Esta obra de ingeniería elimina la necesidad de convoyes de camiones utilizando la caída de altitud.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ventaja estratégica aporta el uso del ferrocarril para las minas de la Sierra Central del Perú?",
+    "opciones": [
+      {
+        "text": "Permite mover grandes volúmenes de carga (como concentrado de cobre) y libera espacio crítico en la Carretera Central",
+        "isCorrect": true,
+        "rationale": "El tren ofrece capacidad masiva de transporte, optimizando costos logísticos y reduciendo el tráfico en la vía que abastece a la capital."
+      },
+      {
+        "text": "Garantiza que el mineral viaje sin ningún tipo de regulación o permiso ambiental",
+        "isCorrect": false,
+        "rationale": "El transporte ferroviario está regulado por normativas de seguridad y ambientales al igual que cualquier otro medio de transporte de insumos."
+      },
+      {
+        "text": "Elimina completamente la necesidad de usar puertos marítimos para la exportación",
+        "isCorrect": false,
+        "rationale": "El ferrocarril conecta las minas con los puertos costeros, donde el mineral debe ser embarcado obligatoriamente en buques."
+      },
+      {
+        "text": "Permite el transporte directo de concentrado en estado líquido a través de mangueras de presión",
+        "isCorrect": false,
+        "rationale": "El concentrado en trenes se transporta en vagones de carga secos o contenedores, no en forma fluida como en un mineroducto."
+      },
+      {
+        "text": "Reduce a cero los costos operativos de mantenimiento de infraestructura",
+        "isCorrect": false,
+        "rationale": "Las vías férreas y el material rodante demandan inversiones intensivas y constantes en mantenimiento preventivo y correctivo."
+      }
+    ],
+    "hint": "Piensa en cómo la escala de un solo viaje en tren equivale a docenas de camiones en una vía descongestionada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el corredor minero del Sur, ¿cuál es el costo estimado que pierde la economía cada día debido a los bloqueos de carreteras?",
+    "opciones": [
+      {
+        "text": "Más de 280 millones de soles diario",
+        "isCorrect": true,
+        "rationale": "Las paradas en este corredor estratégico interrumpen la salida de casi una quinta parte del cobre peruano, generando pérdidas diarias brutales."
+      },
+      {
+        "text": "Alrededor de 10,000 soles diario",
+        "isCorrect": false,
+        "rationale": "Esta cantidad es insignificante en comparación con la magnitud del valor económico del concentrado de mineral retenido."
+      },
+      {
+        "text": "Un millón de dólares exactamente",
+        "isCorrect": false,
+        "rationale": "Aunque es una cifra elevada, la pérdida estimada en la economía nacional por la parálisis del corredor del sur supera ampliamente ese monto."
+      },
+      {
+        "text": "Cerca de 50 millones de dólares diario",
+        "isCorrect": false,
+        "rationale": "Esta cifra excede los cálculos oficiales presentados en la clase para medir el impacto diario en la economía peruana."
+      },
+      {
+        "text": "Aproximadamente 500,000 soles diario",
+        "isCorrect": false,
+        "rationale": "El impacto diario por paralizar la exportación masiva de cobre en el sur es considerablemente mayor."
+      }
+    ],
+    "hint": "Es una cifra diaria expuesta en las fuentes que demuestra el alto impacto económico de las interrupciones logísticas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Bajo la regulación MATPEL para el transporte de materiales peligrosos en minería, ¿qué categoría de licencia de conducir se exige al conductor?",
+    "opciones": [
+      {
+        "text": "Licencia A4",
+        "isCorrect": true,
+        "rationale": "La norma exige la categoría de élite A4 para conductores capacitados específicamente en el manejo de materiales y residuos peligrosos."
+      },
+      {
+        "text": "Licencia A1",
+        "isCorrect": false,
+        "rationale": "La licencia A1 es la categoría básica autorizada únicamente para conducir vehículos particulares de uso personal."
+      },
+      {
+        "text": "Licencia B2",
+        "isCorrect": false,
+        "rationale": "Las licencias de clase B corresponden a vehículos menores como motocicletas y mototaxis, no aptos para transporte pesado."
+      },
+      {
+        "text": "Licencia C3",
+        "isCorrect": false,
+        "rationale": "La nomenclatura C3 no corresponde a la clasificación oficial de licencias de conducir del sistema de transportes peruano."
+      },
+      {
+        "text": "Licencia A2a",
+        "isCorrect": false,
+        "rationale": "La categoría A2a autoriza el transporte de pasajeros en vehículos menores como taxis o ambulancias, no cargas peligrosas."
+      }
+    ],
+    "hint": "Corresponde a la máxima habilitación profesional para el manejo de cargas de alto riesgo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consistió la solución de economía circular implementada por Sociedad Minera Cerro Verde en Arequipa respecto al recurso hídrico?",
+    "opciones": [
+      {
+        "text": "Financió y construyó una planta para tratar el 100% de las aguas servidas de la ciudad, usando una parte y devolviendo el resto limpio al río Chili",
+        "isCorrect": true,
+        "rationale": "Esta iniciativa eliminó la contaminación del río Chili con desagües crudos, proveyendo agua industrial a la mina sin competir por el agua fresca de la ciudad."
+      },
+      {
+        "text": "Construyó un acueducto desde el océano Pacífico para desalinizar agua exclusivamente de uso minero",
+        "isCorrect": false,
+        "rationale": "El proyecto de Cerro Verde se basó en el tratamiento de las aguas residuales urbanas de la ciudad de Arequipa, no en agua de mar."
+      },
+      {
+        "text": "Utilizó agua de lluvia almacenada en represas privadas sin interacción con la población urbana",
+        "isCorrect": false,
+        "rationale": "El valor del proyecto radica en resolver la contaminación urbana de Arequipa mediante una alianza de beneficio compartido."
+      },
+      {
+        "text": "Reemplazó el agua en sus procesos de flotación por reactivos sintéticos sin necesidad de líquidos",
+        "isCorrect": false,
+        "rationale": "El procesamiento de minerales requiere volúmenes masivos de agua en pulpa; no es posible sustituir el líquido por reactivos secos."
+      },
+      {
+        "text": "Compró embotelladoras locales para distribuir agua potable en camiones cisterna",
+        "isCorrect": false,
+        "rationale": "La solución fue una gran obra de infraestructura de saneamiento ambiental (planta Enlozada), no la distribución en cisternas."
+      }
+    ],
+    "hint": "Solucionó un problema ambiental urbano al mismo tiempo que aseguró suministro de agua tratada para sus operaciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo transforma la innovación sostenible los relaves mineros según los ejemplos analizados en el curso?",
+    "opciones": [
+      {
+        "text": "Convirtiendo los barros finos del procesamiento en ladrillos y adoquines para la construcción",
+        "isCorrect": true,
+        "rationale": "Mediante innovación tecnológica, los relaves dejan de ser un pasivo peligroso y se reutilizan como insumos para elaborar materiales comunitarios."
+      },
+      {
+        "text": "Quemándolos a altas temperaturas para generar energía termoeléctrica",
+        "isCorrect": false,
+        "rationale": "Los relaves son residuos minerales no combustibles formados por roca molida con agua y reactivos, no aptos para generación térmica."
+      },
+      {
+        "text": "Disolviéndolos en los cauces de los ríos mediante agentes químicos biodegradables",
+        "isCorrect": false,
+        "rationale": "Verter relaves a los cursos de agua está prohibido por ley y genera desastres ambientales graves en los ecosistemas."
+      },
+      {
+        "text": "Inyectándolos en pozos petroleros abandonados para sellar capas subterráneas",
+        "isCorrect": false,
+        "rationale": "El tratamiento circular busca reciclar el material en la superficie para elaborar productos útiles, no enterrarlo en pozos de hidrocarburos."
+      },
+      {
+        "text": "Exportándolos como fertilizantes orgánicos para la agricultura intensiva",
+        "isCorrect": false,
+        "rationale": "Los relaves no contienen materia orgánica ni nutrientes agrícolas; son derivados rocosos del procesamiento minero."
+      }
+    ],
+    "hint": "Transforma un pasivo ambiental guardado en depósitos en materiales útiles para la comunidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el modelo de 'transporte comunal' promovido por empresas como Hudbay Perú?",
+    "opciones": [
+      {
+        "text": "Contratar a empresas formadas por las propias comunidades locales para gestionar una parte del transporte de mineral",
+        "isCorrect": true,
+        "rationale": "Al otorgar contratos de transporte a las comunidades locales, se alinean los incentivos económicos de ambas partes y se reduce la conflictividad vial."
+      },
+      {
+        "text": "Permitir que los pobladores locales usen los camiones mineros como transporte público gratuito",
+        "isCorrect": false,
+        "rationale": "El transporte comunal es una modalidad de contratación de servicios logísticos a proveedores locales, no un servicio de autobús para pasajeros."
+      },
+      {
+        "text": "Donar toda la flota de transporte a la municipalidad provincial al finalizar la concesión",
+        "isCorrect": false,
+        "rationale": "Se trata de un modelo de negocio activo durante la operación, no de un esquema de donación al cierre del proyecto."
+      },
+      {
+        "text": "Subcontratar exclusivamente a transnacionales extranjeras que empleen personal local",
+        "isCorrect": false,
+        "rationale": "El modelo busca que las empresas locales sean las propietarias y gestoras del servicio de transporte, generando desarrollo empresarial directo."
+      },
+      {
+        "text": "Construir vías de tren comunitarias financias por impuestos municipales",
+        "isCorrect": false,
+        "rationale": "Esta estrategia involucra el transporte de concentrado en camiones operados por comuneros organizados en empresas de carga."
+      }
+    ],
+    "hint": "Convierte a las comunidades en socias estratégicas integradas a la cadena de valor en lugar de verlas como un obstáculo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el principal beneficio logístico que aporta el megapuerto de Chancay al comercio minero peruano hacia Asia?",
+    "opciones": [
+      {
+        "text": "Reduce el tiempo de viaje marítimo a Asia hasta en 15 días",
+        "isCorrect": true,
+        "rationale": "El megapuerto de Chancay genera una ruta directa que ahorra unos 15 días de navegación, optimizando los costos de flete para los exportadores."
+      },
+      {
+        "text": "Elimina los impuestos a la exportación de concentrado de hierro",
+        "isCorrect": false,
+        "rationale": "Las políticas tributarias corresponden al marco legislativo del Estado y no al desarrollo de infraestructura portuaria."
+      },
+      {
+        "text": "Sustituye la necesidad de usar mineroductos en las operaciones del norte",
+        "isCorrect": false,
+        "rationale": "Chancay optimiza la fase de embarque marítimo, pero no reemplaza el transporte terrestre o por tubería desde la mina hasta la costa."
+      },
+      {
+        "text": "Permite el despacho de mineral sin requerir controles de trazabilidad",
+        "isCorrect": false,
+        "rationale": "Todos los puertos deben cumplir estrictos controles aduaneros y de trazabilidad mineral regulados por el Estado."
+      },
+      {
+        "text": "Cancela la necesidad de realizar embarques en buques de gran calado",
+        "isCorrect": false,
+        "rationale": "Al contrario, Chancay está diseñado precisamente para recibir los buques cargueros más grandes del mundo gracias a su gran profundidad."
+      }
+    ],
+    "hint": "Piensa en el impacto directo en tiempos y costos de flete marítimo para las exportaciones transpacíficas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué logro ambiental alcanzó Minera La Arena al incorporar tecnología limpia en su flota de transporte?",
+    "opciones": [
+      {
+        "text": "Implementó una flota de 50 camiones 100% eléctricos, dejando de emitir 5,000 toneladas de $CO_2$ al año",
+        "isCorrect": true,
+        "rationale": "Esta apuesta masiva por la electrificación demuestra la viabilidad de desplazar el consumo de diésel en flotas pesadas dentro de la región."
+      },
+      {
+        "text": "Reemplazó todos sus vehículos por modelos alimentados exclusivamente a gas natural vehicular",
+        "isCorrect": false,
+        "rationale": "Minera La Arena optó por una transición directa hacia la electrificación total de 50 unidades, no por motores a gas natural."
+      },
+      {
+        "text": "Instaló motores diésel de última generación que reducen el ruido operacional a la mitad",
+        "isCorrect": false,
+        "rationale": "La innovación consistió en sustituir el diésel por energía eléctrica, erradicando las emisiones directas del escape."
+      },
+      {
+        "text": "Convirtió la totalidad de sus camiones a motores impulsados por biocombustibles de caña",
+        "isCorrect": false,
+        "rationale": "El proyecto emblemático de esta mina consistió en la incorporación de camiones eléctricos propulsados por baterías."
+      },
+      {
+        "text": "Sustituyó el transporte terrestre en la mina mediante el uso de teleféricos de carga",
+        "isCorrect": false,
+        "rationale": "El transporte interno se mantiene mediante camiones volquete pesados, pero utilizando propulsión eléctrica en lugar de combustión."
+      }
+    ],
+    "hint": "Un paso pionero en electrificación masiva que elimina completamente el diésel en decenas de unidades.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo logra Shougang Hierro Perú un ahorro del 15% en combustible usando tecnología híbrida en sus camiones?",
+    "opciones": [
+      {
+        "text": "Los camiones generan energía eléctrica al frenar durante las bajadas cargados y la aprovechan como impulso en las subidas",
+        "isCorrect": true,
+        "rationale": "El sistema híbrido convierte la energía cinética del frenado descendente en electricidad acumulable, reduciendo el gasto diésel en el ascenso."
+      },
+      {
+        "text": "Apagan el motor por completo en los tramos planos y son remolcados por cables electrificados",
+        "isCorrect": false,
+        "rationale": "Los camiones híbridos autorgeneran energía a bordo mediante frenado regenerativo; no requieren cables ni apagado total del sistema de propulsión."
+      },
+      {
+        "text": "Mezclan diésel con hidrógeno gris directamente en el tanque de combustible",
+        "isCorrect": false,
+        "rationale": "El ahorro proviene de la tecnología híbrida regenerativa en el frenado, no de aditivos de hidrógeno en el tanque diésel."
+      },
+      {
+        "text": "Limitan la velocidad máxima de los vehículos a un tope de 10 km/h en todas las rutas",
+        "isCorrect": false,
+        "rationale": "El ahorro se basa en la recuperación de energía cinética en la geografía del tajo, no en una restricción severa que afecte la productividad."
+      },
+      {
+        "text": "Reducen la capacidad de carga de las tolvas para hacer los vehículos más ligeros",
+        "isCorrect": false,
+        "rationale": "Llevar menos carga reduce la productividad por viaje; el beneficio del sistema híbrido es mover la misma tonelaje usando menos combustible."
+      }
+    ],
+    "hint": "Aprovechan la fuerza de gravedad en el descenso de la mina para regenerar energía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tecnología utiliza Minsur para otorgar 'pasaportes digitales' a sus lotes de estaño y garantizar un origen ético y trazable?",
+    "opciones": [
+      {
+        "text": "Blockchain",
+        "isCorrect": true,
+        "rationale": "Minsur es pionera mundial en aplicar blockchain para certificar el origen ético y libre de conflicto de su estaño a lo largo de toda la cadena."
+      },
+      {
+        "text": "Inteligencia artificial generativa",
+        "isCorrect": false,
+        "rationale": "La IA ayuda en la analítica predictiva de datos, pero la certificación inmutable de registros en cadena se realiza mediante blockchain."
+      },
+      {
+        "text": "Drones de fotogrametría aérea",
+        "isCorrect": false,
+        "rationale": "Los drones ejecutan levantamientos topográficos e inspecciones, no la creación de registros digitales irrefutables para clientes."
+      },
+      {
+        "text": "Sensores de radiofrecuencia pasivos (RFID)",
+        "isCorrect": false,
+        "rationale": "Las etiquetas RFID ayudan al rastreo físico en almacén, pero no generan la contabilidad descentralizada e inalterable que aporta el pasaporte digital."
+      },
+      {
+        "text": "Radioenlaces satelitales analógicos",
+        "isCorrect": false,
+        "rationale": "Esta es una infraestructura de telecomunicaciones tradicional que no proporciona la seguridad criptográfica del pasaporte digital."
+      }
+    ],
+    "hint": "Es un registro digital inmutable y descentralizado que crea identidades digitales infalsificables para el mineral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué mide el indicador logístico clave OTIF en la cadena de suministro minera?",
+    "opciones": [
+      {
+        "text": "Si los pedidos de materiales e insumos críticos llegan 'a tiempo y completos' (On Time In Full)",
+        "isCorrect": true,
+        "rationale": "El OTIF mide la precisión del abastecimiento, asegurando que los insumos estén disponibles exactamente cuando y en la cantidad necesaria."
+      },
+      {
+        "text": "La cantidad total de toneladas de mineral procesadas por turno de trabajo",
+        "isCorrect": false,
+        "rationale": "El tonelaje procesado por turno es un indicador de productividad de la planta concentradora, no una métrica de desempeño del proveedor."
+      },
+      {
+        "text": "El porcentaje de combustible consumido por cada kilómetro recorrido",
+        "isCorrect": false,
+        "rationale": "Esta relación corresponde al rendimiento energético o eficiencia de combustible de la flota pesada."
+      },
+      {
+        "text": "El número de horas que la planta permanece paralizada por mantenimiento",
+        "isCorrect": false,
+        "rationale": "Las horas de parálisis se miden mediante indicadores de mantenimiento como el tiempo de inactividad (Downtime)."
+      },
+      {
+        "text": "La proporción de trabajadores locales contratados por la empresa contratista",
+        "isCorrect": false,
+        "rationale": "El empleo local se mide a través de KPIs de gestión social y compras locales, no mediante la métrica logística OTIF."
+      }
+    ],
+    "hint": "Evalúa la confiabilidad y puntualidad del abastecimiento para evitar paradas no programadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes son efectos directos de la altitud extrema (a más de 4,000 m.s.n.m.) sobre los elementos de la operación minera en los Andes peruanos?",
+    "opciones": [
+      {
+        "text": "Los motores de los camiones pierden hasta un 30% de su potencia por la menor densidad de oxígeno.",
+        "isCorrect": true,
+        "rationale": "La menor presión atmosférica dificulta la combustión en los motores, reduciendo drásticamente su fuerza operacional en la altura."
+      },
+      {
+        "text": "El personal de trabajo enfrenta riesgos fisiológicos graves como la hipoxia.",
+        "isCorrect": true,
+        "rationale": "La menor concentración de oxígeno a elevadas altitudes afecta la condición física del trabajador y exige estrictos protocolos de salud."
+      },
+      {
+        "text": "El equipo mecánico sufre un desgaste acelerado debido a las exigentes condiciones ambientales.",
+        "isCorrect": true,
+        "rationale": "Las bajas temperaturas, el terreno hostil y el sobreesfuerzo del motor aceleran el deterioro de componentes mecánicos."
+      },
+      {
+        "text": "El mineral extraído pierde densidad física y valor metálico de forma automática.",
+        "isCorrect": false,
+        "rationale": "Las propiedades geológicas y la ley del mineral son intrínsecas a la roca y no se alteran por la altitud sobre el nivel del mar."
+      },
+      {
+        "text": "Las carreteras asfaltadas se derriten por efecto de la baja presión atmosférica.",
+        "isCorrect": false,
+        "rationale": "La presión atmosférica baja no provoca el derretimiento del asfalto; las condiciones andinas presentan más bien heladas y frío extremo."
+      }
+    ],
+    "hint": "Identifica las consecuencias físicas y biológicas reales sobre motores, personas y maquinaria mencionadas en el texto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué aspectos son evaluados de manera rigurosa durante el proceso de homologación de un proveedor minero?",
+    "opciones": [
+      {
+        "text": "Capacidad financiera de la empresa proveedora.",
+        "isCorrect": true,
+        "rationale": "Mide la estabilidad económica de la empresa para garantizar que pueda sostener sus operaciones sin quebrar a mitad de contrato."
+      },
+      {
+        "text": "Capacidad técnica y solvencia operativa para responder a los requerimientos.",
+        "isCorrect": true,
+        "rationale": "Verifica que el proveedor cuente con la maquinaria, conocimientos y personal apto para entregar productos o servicios de alta exigencia."
+      },
+      {
+        "text": "Cultura de seguridad y prevención de riesgos laborales.",
+        "isCorrect": true,
+        "rationale": "En una industria con altos riesgos implícitos, no se contrata a empresas que vulneren los estándares de protección de la vida humana."
+      },
+      {
+        "text": "Cumplimiento ambiental y de responsabilidad social.",
+        "isCorrect": true,
+        "rationale": "Asegura que el proveedor opere respetando las normativas ecológicas y la paz social de las zonas de influencia."
+      },
+      {
+        "text": "Afiliación a partidos políticos por parte de los directivos del proveedor.",
+        "isCorrect": false,
+        "rationale": "La orientación política de los ejecutivos no forma parte de los criterios técnicos ni del proceso de auditoría de homologación."
+      }
+    ],
+    "hint": "Se revisan filtros definitivos y de idoneidad corporativa que no admiten negociación en industrias de alto riesgo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son los tres pilares clave sobre los que se sostiene la visión de una minería moderna y preparada para el futuro?",
+    "opciones": [
+      {
+        "text": "Resiliencia operacional para adaptarse y superar entornos inciertos.",
+        "isCorrect": true,
+        "rationale": "Permite que la cadena de suministro mantenga la continuidad frente a interrupciones geográficas o sociales."
+      },
+      {
+        "text": "Tecnología y digitalización como cerebro de la operación.",
+        "isCorrect": true,
+        "rationale": "Aporta predictibilidad, automatización y seguridad avanzada mediante la gestión inteligente de datos."
+      },
+      {
+        "text": "Generación de valor compartido con la comunidad y el medio ambiente.",
+        "isCorrect": true,
+        "rationale": "Sostiene la licencia social asegurando que el desarrollo de la mina impulse directamente el bienestar local."
+      },
+      {
+        "text": "Dependencia exclusiva de combustibles fósiles de bajo costo.",
+        "isCorrect": false,
+        "rationale": "El modelo moderno busca descarbonizar la cadena mediante la electrificación e hidrógeno, alejándose del diésel."
+      },
+      {
+        "text": "Reducción de estándares de seguridad para acelerar la producción.",
+        "isCorrect": false,
+        "rationale": "La seguridad es un valor no negociable sobre el cual se construye toda la gestión minera actual."
+      }
+    ],
+    "hint": "Se identifican en el curso como los tres principios estratégicos de la transformación integrada y circular.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Para evaluar la seguridad operacional de forma rigurosa en una mina, ¿qué índices se deben analizar de manera combinada?",
+    "opciones": [
+      {
+        "text": "Índice de frecuencia de accidentes.",
+        "isCorrect": true,
+        "rationale": "Cuantifica qué tan seguido suceden los eventos o incidentes en un período determinado de horas trabajadas."
+      },
+      {
+        "text": "Índice de severidad de los percances.",
+        "isCorrect": true,
+        "rationale": "Mide la gravedad de las lesiones calculando las jornadas de trabajo perdidas a causa de los accidentes."
+      },
+      {
+        "text": "Índice de consumo de diésel por tonelada movida.",
+        "isCorrect": false,
+        "rationale": "Esta es una métrica de eficiencia energética y costo, no un indicador de seguridad y salud en el trabajo."
+      },
+      {
+        "text": "Índice de volumen exportado por vía marítima.",
+        "isCorrect": false,
+        "rationale": "Este dato pertenece a la gestión comercial y logística de salida del producto, sin relación con el riesgo operativo."
+      },
+      {
+        "text": "Índice de rotación de activos financieros.",
+        "isCorrect": false,
+        "rationale": "Corresponde a un indicador contable sobre la eficiencia del capital, no a la prevención de accidentes laborales."
+      }
+    ],
+    "hint": "Se componen de dos métricas complementarias que evalúan tanto el número de eventos como la magnitud del daño.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes iniciativas representan aplicaciones reales de la economía circular en el sector minero peruano?",
+    "opciones": [
+      {
+        "text": "Reciclaje y despiece del 100% de los componentes de neumáticos gigantes de camión.",
+        "isCorrect": true,
+        "rationale": "Permite recuperar caucho, negro de humo y acero de alta calidad de los neumáticos fuera de uso para reintroducirlos al mercado."
+      },
+      {
+        "text": "Tratamiento de aguas residuales urbanas para uso industrial y posterior devolución limpia al río.",
+        "isCorrect": true,
+        "rationale": "Transforma los efluentes servidos de la ciudad en un insumo operativo, saneando el entorno natural como en el caso de Cerro Verde."
+      },
+      {
+        "text": "Transformación de relaves mineros en materiales de construcción como ladrillos y adoquines.",
+        "isCorrect": true,
+        "rationale": "Aprovecha los barros del procesamiento para elaborar insumos útiles y neutralizar un riesgo ambiental tradicional."
+      },
+      {
+        "text": "Vertido directo de efluentes químicos a cabeceras de cuenca para acelerar la evaporación.",
+        "isCorrect": false,
+        "rationale": "La contaminación de fuentes hídricas es un delito ambiental que contraviene totalmente los principios del desarrollo sostenible."
+      },
+      {
+        "text": "Almacenamiento indefinido de neumáticos usados en botaderos abiertos sin procesamiento.",
+        "isCorrect": false,
+        "rationale": "Acumular residuos en botaderos es la práctica del modelo lineal tradicional que la economía circular busca erradicar."
+      }
+    ],
+    "hint": "Busca prácticas donde los residuos se convierten en nuevos recursos o productos con valor para la sociedad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la razón principal por la que la filosofía logística 'Justo a Tiempo' (JIT) se reemplaza habitualmente por el modelo 'Por si acaso' en las operaciones mineras de los Andes peruanos?",
+    "opciones": [
+      {
+        "text": "La alta incertidumbre generada por frecuentes bloqueos sociales e interrupciones en arterias clave como el Corredor Minero del Sur obliga a mantener stocks de contingencia masivos.",
+        "isCorrect": true,
+        "rationale": "En un entorno hostil e impredecible por conflictos sociales, el modelo JIT paralizaría la mina si un camión se retrasa; por ello, se prioriza la continuidad operativa con inventarios de resiliencia para varios meses."
+      },
+      {
+        "text": "Las extremas altitudes reducen la vida útil de los repuestos almacenados, exigiendo su rotación antes del tiempo programado por los fabricantes.",
+        "isCorrect": false,
+        "rationale": "Aunque la altitud afecta el rendimiento de motores mecánicos y la fisiología humana, no altera la conservación física ni la vida útil de repuestos inanimados dentro de un almacén."
+      },
+      {
+        "text": "Las regulaciones aduaneras de la SUNAT prohíben taxativamente la importación de insumos bajo esquemas de entregas fraccionadas o periódicas.",
+        "isCorrect": false,
+        "rationale": "La SUNAT fiscaliza estrictamente los insumos químicos controlados por riesgo de desvío ilícito, pero no prohíbe las importaciones periódicas o bajo esquemas de entregas continuas."
+      },
+      {
+        "text": "La falta de conectividad digital en la cordillera impide la sincronización en tiempo real entre los proveedores globales y los almacenes de la mina.",
+        "isCorrect": false,
+        "rationale": "Las minas modernas emplean centros de control y tecnología satelital para monitorear inventarios; el problema de fondo del reemplazo del JIT es social y logístico terrestre, no de falta de conectividad."
+      },
+      {
+        "text": "El modelo JIT incrementa sustancialmente los costos tributarios de la empresa en comparación con el almacenamiento prolongado en bodegas remotas.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento prolongado ('Por si acaso') de hecho inmoviliza millones de dólares y genera un costo logístico mucho mayor, el cual la mina acepta pagar únicamente para evitar una parálisis operativa."
+      }
+    ],
+    "hint": "Piensa en el impacto operativo que generan las interrupciones imprevistas en las carreteras compartidas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la combinación metodológica de categorización de inventarios ABC / VED aplicada en la cadena de suministro minera?",
+    "opciones": [
+      {
+        "text": "Evalúa los insumos cruzando su valor monetario e inversión (ABC) con el nivel de criticidad u operacionalidad (Vital, Esencial, Deseable) si el insumo llegara a faltar.",
+        "isCorrect": true,
+        "rationale": "El análisis ABC/VED permite diseñar estrategias diferenciadas: desde contratos a largo plazo para insumos masivos vitales (diésel) hasta mantenimiento predictivo para componentes costosos y críticos."
+      },
+      {
+        "text": "Clasifica los componentes según su huella de carbono (ABC) y el grado de peligrosidad reglamentado por el código MATPEL (VED).",
+        "isCorrect": false,
+        "rationale": "La metodología ABC/VED no mide emisiones ni códigos de peligro ambiental, sino valor económico e impacto directo en la parada de planta."
+      },
+      {
+        "text": "Agrupa los materiales en función de la distancia geográfica (ABC) y el volumen de almacenamiento requerido en puertos (VED).",
+        "isCorrect": false,
+        "rationale": "Esta matriz se enfoca en priorizar la gestión del stock interno de la mina según costos e impacto operativo, no en distancias de transporte costero."
+      },
+      {
+        "text": "Mide los artículos exclusivamente por la fecha de caducidad de sus componentes químicos y la velocidad de degradación por congelamiento.",
+        "isCorrect": false,
+        "rationale": "La caducidad es un factor específico de ciertos reactivos, mientras que el análisis ABC/VED abarca miles de artículos, desde guantes hasta motores gigantes."
+      },
+      {
+        "text": "Asigna prioridades de compras en función de si el insumo es producido por contratistas locales (ABC) o por fabricantes internacionales (VED).",
+        "isCorrect": false,
+        "rationale": "El origen local o internacional del proveedor se gestiona mediante programas de desarrollo e homologación, no a través de la matriz de criticidad de inventarios ABC/VED."
+      }
+    ],
+    "hint": "Analiza cómo se equilibran el costo económico de un repuesto y la gravedad que tendría paralizar la mina si este no está disponible.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de los Centros Integrados de Operaciones Remotas (IROC), ¿cuál es la ventaja operativa fundamental de procesar datos masivos para crear un 'gemelo digital' de la mina?",
+    "opciones": [
+      {
+        "text": "Permite simular y predecir variaciones en el proceso —como la dureza del mineral entrante— para realizar ajustes automatizados antes de que ocurran fallas.",
+        "isCorrect": true,
+        "rationale": "Un gemelo digital procesa datos en tiempo real de miles de sensores para prever eventos (ej. enviar más bolas de acero al molino con 3 horas de anticipación) y operar de forma proactiva."
+      },
+      {
+        "text": "Elimina la necesidad de contar con personal técnico y brigadas de rescate presenciales en las áreas de tajo abierto o mina subterránea.",
+        "isCorrect": false,
+        "rationale": "Aunque el IROC traslada el control y la toma de decisiones a cientos de kilómetros, siempre se requiere personal en terreno para labores mecánicas y de mantenimiento físico."
+      },
+      {
+        "text": "Sustituye por completo los trámites de fiscalización ambiental ante entidades gubernamentales mediante reportes virtuales estandarizados.",
+        "isCorrect": false,
+        "rationale": "Las auditorías normativas e inspecciones ambientales y de SUNAT siguen requeridos por ley y no son reemplazados por simulaciones internas."
+      },
+      {
+        "text": "Garantiza que el mineral extraído mantenga exactamente la misma ley geoquímica durante toda la vida útil del yacimiento.",
+        "isCorrect": false,
+        "rationale": "La variabilidad o 'comodín geológico' es una condición natural invariable de la Tierra; el gemelo digital ayuda a reaccionar a ella, no a cambiar la geología."
+      },
+      {
+        "text": "Permite transportar el concentrado de mineral a través de redes inalámbricas de datos hasta los buques de exportación.",
+        "isCorrect": false,
+        "rationale": "El gemelo digital gestiona la información y los comandos de operación; el concentrado físico requiere infraestructura de transporte real (ductos, trenes o camiones)."
+      }
+    ],
+    "hint": "Considera cómo la transición de un modelo reactivo a uno predictivo modifica el control de la molienda o del procesamiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué criterios evalúa de manera estricta y no negociable el proceso de homologación de proveedores estratégicos para una gran operación minera?",
+    "opciones": [
+      {
+        "text": "Solvencia financiera y capacidad técnica comprobada para garantizar el suministro sostenido a gran escala.",
+        "isCorrect": true,
+        "rationale": "La estabilidad financiera y técnica asegura que el socio no colapse en medio del contrato, lo que detendría la cadena logística."
+      },
+      {
+        "text": "Alineamiento con una consolidada cultura de seguridad operacional e índices mínimos de accidentabilidad.",
+        "isCorrect": true,
+        "rationale": "En un entorno de altísimo riesgo, la seguridad es un filtro definitivo; cualquier fallo del proveedor pone en riesgo vidas humanas y paraliza operaciones."
+      },
+      {
+        "text": "Cumplimiento riguroso de normas y compromisos de responsabilidad socioambiental.",
+        "isCorrect": true,
+        "rationale": "La gestión ambiental y social del proveedor impacta directamente en la licencia social de la empresa minera; un incumplimiento puede desatar protestas o sanciones."
+      },
+      {
+        "text": "Obligación legal de ser una empresa con participación accionaria estatal o municipal en la región de influencia.",
+        "isCorrect": false,
+        "rationale": "Las mineras privadas y concesionadas homologan a empresas privadas, comunitarias o locales sin requerir que sean de propiedad estatal."
+      },
+      {
+        "text": "Compromiso de importar la totalidad de sus insumos sin establecer contratos de abastecimiento dentro del territorio nacional.",
+        "isCorrect": false,
+        "rationale": "Por el contrario, la tendencia estratégica actual es fomentar la compra local y desarrollar cadenas de abastecimiento cercanas a la operación."
+      }
+    ],
+    "hint": "Piensa en los filtros cuyo incumplimiento puede poner en riesgo la vida de los trabajadores o suspender la licencia social de la mina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de abastecimiento mediante Inventario Gestionado por el Proveedor (VMI), ¿cómo se redefinen los incentivos y la custodia del stock dentro de la mina?",
+    "opciones": [
+      {
+        "text": "El proveedor instala su propio stock dentro de las instalaciones de la mina, y la minera solo paga por el producto conforme este es consumido o utilizado.",
+        "isCorrect": true,
+        "rationale": "El VMI traslada la gestión y costo del capital inmovilizado al proveedor clave (ej. Caterpillar), asegurando disponibilidad inmediata del repuesto crítico para la mina."
+      },
+      {
+        "text": "La minera asume la compra anticipada del 100% de los insumos anuales, encomendando su almacenamiento externo a la comunidad local.",
+        "isCorrect": false,
+        "rationale": "Eso correspondería a un esquema tradicional de compras masivas con almacenamiento delegado, no a un modelo VMI donde el proveedor mantiene la propiedad del stock."
+      },
+      {
+        "text": "El proveedor cobra una tarifa fija mensual independientemente de si los repuestos funcionan o si la mina se encuentra paralizada.",
+        "isCorrect": false,
+        "rationale": "En los modelos modernos VMI y de pago por rendimiento (ej. costo por tonelada movida en neumáticos), el proveedor solo gana si el equipo opera eficazmente."
+      },
+      {
+        "text": "La empresa minera subcontrata a la SUNAT para que administre los almacenes internos e inventaríe los repuestos mecánicos.",
+        "isCorrect": false,
+        "rationale": "La SUNAT fiscaliza insumos químicos restringidos; la gestión de repuestos mecánicos comerciales en VMI la realiza directamente el proveedor privado."
+      },
+      {
+        "text": "Se eliminan las compras de repuestos nuevos, obligando al proveedor a reparar piezas usadas exclusivamente con materiales locales.",
+        "isCorrect": false,
+        "rationale": "El VMI busca maximizar la disponibilidad de repuestos originales o homologados en almacén, sin limitar la modalidad al remanufacturado local."
+      }
+    ],
+    "hint": "Considera qué actor mantiene la propiedad física del repuesto hasta el instante exacto en que este se instala o utiliza en el equipo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué entidad gubernamental fiscaliza con extremo rigor el transporte, consumo e inventario de Insumos Químicos Controlados (como cianuro y diésel) para evitar su desvío hacia actividades ilícitas?",
+    "opciones": [
+      {
+        "text": "SUNAT",
+        "isCorrect": true,
+        "rationale": "La SUNAT exige trazabilidad mediante GPS, registros detallados y fiscalización quirúrgica de reactivos y combustibles debido al riesgo de su desvío a la minería ilegal o narcotráfico."
+      },
+      {
+        "text": "OSINERGMIN",
+        "isCorrect": false,
+        "rationale": "Aunque OSINERGMIN supervisa la seguridad energética y minera, la fiscalización administrativa y de registro de insumos químicos controlados para evitar delitos es competencia de SUNAT."
+      },
+      {
+        "text": "MINAM",
+        "isCorrect": false,
+        "rationale": "El Ministerio del Ambiente regula estándares de calidad ambiental y límites máximos permisibles, pero no fiscaliza el rastreo operativo diario de insumos químicos de uso dual."
+      },
+      {
+        "text": "INDECOPI",
+        "isCorrect": false,
+        "rationale": "INDECOPI vela por la libre competencia y la protección al consumidor, no por la fiscalización de materiales restringidos o combustibles en la minería."
+      },
+      {
+        "text": "OEFA",
+        "isCorrect": false,
+        "rationale": "OEFA fiscaliza el cumplimiento de compromisos ambientales en terreno, pero el registro de control de insumos y combate al desvío ilícito está a cargo de la autoridad tributaria/aduanera (SUNAT)."
+      }
+    ],
+    "hint": "Identifica a la institución encargada de la administración tributaria y del control aduanero/de insumos restringidos en Perú.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica técnica y operativa que otorga al mineroducto de Antamina una ventaja excepcional en términos de resiliencia y costo operacional?",
+    "opciones": [
+      {
+        "text": "Transporta la pulpa de concentrado a lo largo de más de 300 km mediante un sistema subterráneo que aprovecha la gravedad, aislándolo de conflictos viales.",
+        "isCorrect": true,
+        "rationale": "Al bajar desde más de 4,000 msnm hasta la costa impulsado por la propia fuerza de gravedad y bajo tierra, es invulnerable a bloqueos carreteros y highly eficiente en energía."
+      },
+      {
+        "text": "Utiliza un sistema de fajas aéreas sostenidas por cables que recorren paralelamente las autopistas públicas de la sierra central.",
+        "isCorrect": false,
+        "rationale": "El mineroducto es una tubería subterránea por la que circula pulpa líquida (agua y mineral), no una faja transportadora aérea para roca seca."
+      },
+      {
+        "text": "Funciona con motores de combustión a diésel distribuidos en estaciones de bombeo expuestas cada 5 kilómetros.",
+        "isCorrect": false,
+        "rationale": "Una de las grandes ventajas de este sistema es que la caída de gradiente de altitud (gravedad) mueve el flujo, minimizando el uso de combustibles fósiles."
+      },
+      {
+        "text": "Requiere la descarga y filtrado del mineral en cada provincia que atraviesa para su distribución en el mercado local.",
+        "isCorrect": false,
+        "rationale": "El flujo es continuo y sellado desde la planta concentradora en la mina hasta la planta de filtrado en el puerto de embarque."
+      },
+      {
+        "text": "Transporta el mineral en estado sólido mediante cápsulas neumáticas impulsadas por aire comprimido.",
+        "isCorrect": false,
+        "rationale": "El concentrado se mueve en forma de pulpa fluida (mezcla hidráulica con agua), no mediante rocas secas ni cápsulas neumáticas."
+      }
+    ],
+    "hint": "Piensa en el medio físico (líquido vs. sólido) y la fuerza natural producida por la diferencia de altitud entre la cordillera y el mar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué aspectos caracterizan el uso del ferrocarril como columna vertebral para la logística minera en la Sierra Central del Perú?",
+    "opciones": [
+      {
+        "text": "Ofrece un transporte de alta capacidad de carga, donde más del 50% del volumen movilizado corresponde a concentrados de cobre.",
+        "isCorrect": true,
+        "rationale": "El ferrocarril destaca por su enorme capacidad de escala para la industria pesada, siendo el cobre su carga principal en la zona central."
+      },
+      {
+        "text": "Genera una descongestión clave en la Carretera Central, una arteria vehicular crítica para el abastecimiento de Lima.",
+        "isCorrect": true,
+        "rationale": "Al reemplazar el tránsito de docenas de camiones pesados por cada viaje de tren, reduce la saturación en una vía pública saturada."
+      },
+      {
+        "text": "Sufre interrupciones continuas debido a la imposibilidad técnica de circular a altitudes superiores a los 2,000 msnm.",
+        "isCorrect": false,
+        "rationale": "El ferrocarril central peruano es famoso por superar altitudes extremas en los Andes (más de 4,000 msnm) mediante proezas históricas de ingeniería."
+      },
+      {
+        "text": "Requiere inversiones operativas en combustible un 80% superiores a las del transporte por camión articulado.",
+        "isCorrect": false,
+        "rationale": "Por tonelada transportada, el ferrocarril es significativamente más eficiente en consumo de energía y costos que una flota equivalente de camiones."
+      },
+      {
+        "text": "Es un sistema que transporta exclusivamente productos agrícolas, estando prohibido el traslado de concentrados pesados.",
+        "isCorrect": false,
+        "rationale": "El ferrocarril minero es una arteria industrial fundamental diseñada específicamente para carga pesada y minerales concentrados."
+      }
+    ],
+    "hint": "Considera los beneficios de escala en el volumen de minerales y la reducción del tráfico pesado en carreteras clave hacia la costa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el impacto económico diario estimado para el país cuando el Corredor Minero del Sur sufre paralizaciones por bloqueos de carretera?",
+    "opciones": [
+      {
+        "text": "Pérdidas superiores a 1.2 millones de soles por mina (y más de 280 millones de soles diarios de impacto en la economía nacional).",
+        "isCorrect": true,
+        "rationale": "Los datos cuantitativos muestran que la interrupción de esta arteria, por donde pasa casi la quinta parte del cobre exportado por el país, genera un costo devastador para el PBI nacional y regional."
+      },
+      {
+        "text": "Pérdidas menores a 50,000 soles al día, absorbidas en su totalidad por las empresas aseguradoras internacionales.",
+        "isCorrect": false,
+        "rationale": "El impacto es de millones de soles diarios y afecta directamente al canon regional, empleo y exportaciones, desbordando las coberturas simples de seguros."
+      },
+      {
+        "text": "Un incremento del 15% en los ingresos por peajes de las vías alternativas de la costa sur.",
+        "isCorrect": false,
+        "rationale": "Las vías alternativas en la sierra no tienen capacidad para suplir el Corredor Minero del Sur, por lo que el bloqueo provoca parálisis, no desvío ventajoso a peajes."
+      },
+      {
+        "text": "Cierre automático e indefectible de las fronteras comerciales marítimas por orden de la Marina de Guerra.",
+        "isCorrect": false,
+        "rationale": "Los bloqueos viales ocurren en la infraestructura terrestre del interior del país, sin desencadenar cierres militares de fronteras marítimas."
+      },
+      {
+        "text": "Una reducción inmediata en la cotización internacional de los metales en la bolsa de Londres.",
+        "isCorrect": false,
+        "rationale": "Si bien puede afectar la oferta global si se prolonga, la pérdida diaria inmediata de 1.2M soles/mina o +280M soles a nivel nacional mide el impacto directo local/estatal."
+      }
+    ],
+    "hint": "Recuerda la magnitud millonaria que se pierde diariamente en exportaciones, impuestos y canon por interrumpir el flujo de cobre.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Bajo la normativa MATPEL para el transporte de materiales peligrosos en la minería, ¿cuáles de las siguientes exigencias son de cumplimiento obligatorio?",
+    "opciones": [
+      {
+        "text": "Conductores con licencia especial de categoría A4 y capacitación constante en manejo defensivo y contingencias.",
+        "isCorrect": true,
+        "rationale": "El transporte de insumos peligrosos (explosivos, cianuro) exige conductores altamente calificados con brevete A4."
+      },
+      {
+        "text": "Monitoreo vehicular permanente respaldado por sistemas de inteligencia artificial para la detección de signos de fatiga.",
+        "isCorrect": true,
+        "rationale": "Las empresas utilizan sensores en cabina e IA para prevenir somnolencia u omisión de protocolos en rutas críticas."
+      },
+      {
+        "text": "Establecimiento de responsabilidad legal compartida y solidaria entre la empresa minera y la empresa de transporte.",
+        "isCorrect": true,
+        "rationale": "Frente a un incidente o derrame, la ley determina que tanto el dueño de la carga (la mina) como el transportista asumen responsabilidad legal."
+      },
+      {
+        "text": "Velocidad libre sin restricciones en tramos urbanos a fin de reducir el tiempo de exposición del material en la vía.",
+        "isCorrect": false,
+        "rationale": "Por razones de seguridad pública, la normativa impone estrictos límites de velocidad reducida, jamás velocidad libre."
+      },
+      {
+        "text": "Exención de inspecciones técnicas vehiculares para camiones que trasladen reactivos con menos de 100 km de recorrido.",
+        "isCorrect": false,
+        "rationale": "Todos los vehículos MATPEL deben contar con revisiones técnicas y permisos rigurosos, independientemente de la distancia del viaje."
+      }
+    ],
+    "hint": "Considera tanto las exigencias al capital humano (conductores y alertas) como la figura legal en caso de un accidente ambiental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera el proyecto de la planta de tratamiento de aguas residuales implementado por Sociedad Minera Cerro Verde en Arequipa resolvió un doble desafío (ambiental y operativo)?",
+    "opciones": [
+      {
+        "text": "Financió la planta para procesar el 100% de los desagües que contaminaban el río Chili, utilizando una fracción para su operación minera y devolviendo el agua limpia restante al río.",
+        "isCorrect": true,
+        "rationale": "Este caso de economía circular y valor compartido eliminó la contaminación del río de la ciudad sin competir por el agua fresca de la población."
+      },
+      {
+        "text": "Construyó una tubería para trasvasar agua del lago Titicaca hacia las comunidades agrícolas en época de sequía.",
+        "isCorrect": false,
+        "rationale": "El proyecto se centró en el río Chili y la cuenca de Arequipa mediante aguas residuales urbanas, no en trasvases del lago Titicaca."
+      },
+      {
+        "text": "Desalinizó agua de mar en la costa de Camaná y la regaló de forma exclusiva a las empresas embotelladoras de la ciudad.",
+        "isCorrect": false,
+        "rationale": "La planta procesó desagües urbanos continentales en Arequipa (planta La Enlozada), no agua de mar para uso comercial privado."
+      },
+      {
+        "text": "Sustituyó el uso de agua en la planta concentradora por químicos sintéticos biodegradables importados.",
+        "isCorrect": false,
+        "rationale": "El procesamiento minero sigue requiriendo grandes volúmenes de agua; el hito fue obtenerla de efluentes urbanos previamente descontaminados."
+      },
+      {
+        "text": "Clausuró los pozos de agua subterránea de la región para obligar a la población a utilizar agua embotellada de la mina.",
+        "isCorrect": false,
+        "rationale": "El modelo creó valor compartido ambiental para los habitantes de Arequipa al sanear su río principal, ganando así licencia social."
+      }
+    ],
+    "hint": "Piensa en el beneficio bidireccional entre la descontaminación de los desagües del río Chili y el abastecimiento de la planta procesadora.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de las metas globales de sostenibilidad y descarbonización minera, ¿a qué se refiere el concepto de 'Emisiones de Alcance 3' (Scope 3)?",
+    "opciones": [
+      {
+        "text": "A la huella de carbono indirecta generada a lo largo de toda la cadena de valor extendida, desde la fabricación del acero de las máquinas hasta el transporte de proveedores.",
+        "isCorrect": true,
+        "rationale": "El Alcance 3 mide la huella 'invisible' y más voluminosa de la cadena de suministro integrada, más allá del consumo directo de diésel (Alcance 1) o electricidad comprada (Alcance 2)."
+      },
+      {
+        "text": "A los gases emitidos exclusivamente por el tubo de escape de los camiones de extracción gigantes dentro del tajo minero.",
+        "isCorrect": false,
+        "rationale": "El consumo directo de combustible por la flota propia de la empresa corresponde a las emisiones de Alcance 1."
+      },
+      {
+        "text": "A las emisiones de polvo generadas por las explosiones con ANFO durante las voladuras de rocas.",
+        "isCorrect": false,
+        "rationale": "Las voladuras y material particulado corresponden a impactos operativos directos (Alcance 1 / gestión ambiental local), no al concepto amplio de huella Scope 3 de la cadena de suministro."
+      },
+      {
+        "text": "Al calor disipado por los centros de datos informáticos situados en las oficinas corporativas de la capital.",
+        "isCorrect": false,
+        "rationale": "Aunque el consumo eléctrico corporativo suma a la huella, el Scope 3 abarca fundamentalmente la producción, insumos y logística de la cadena de valor global."
+      },
+      {
+        "text": "A las fugas accidentales de gas refrigerante en los sistemas de aire acondicionado de los campamentos.",
+        "isCorrect": false,
+        "rationale": "Las fugas de refrigerante en instalaciones propias se clasifican como emisiones directas fugitivas de Alcance 1."
+      }
+    ],
+    "hint": "Diferencia entre las emisiones directas por quemar diésel en el tajo y el impacto acumulado de todos los insumos y contratistas de la cadena.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia logística fundamental entre el sistema de evacuación de concentrado de Antamina y el utilizado por Minera Las Bambas?",
+    "opciones": [
+      {
+        "text": "Antamina emplea un mineroducto subterráneo continuo directo al puerto, mientras que Las Bambas utiliza un esquema bimodal highly expuesto (camión por vía compartida y tren).",
+        "isCorrect": true,
+        "rationale": "Antamina evita el conflicto carretero mediante su ducto directo; Las Bambas debe trasladar su carga 450 km en camiones por el Corredor Minero del Sur antes de trasvasarla al ferrocarril."
+      },
+      {
+        "text": "Las Bambas utiliza transporte aéreo mediante zeppelines industriales, mientras que Antamina usa carreteras convencionales.",
+        "isCorrect": false,
+        "rationale": "Las Bambas usa un sistema bimodal terrestre (camión + tren) y Antamina un mineroducto subterráneo."
+      },
+      {
+        "text": "Antamina depende de una red de caminos de tierra concesionados a comunidades, mientras que Las Bambas opera un tren privado continuo.",
+        "isCorrect": false,
+        "rationale": "Es la ruta de Las Bambas la que transita por carreteras comunales/públicas no pavimentadas vulnerables a interrupciones."
+      },
+      {
+        "text": "Las Bambas transporta concentrado líquido por tuberías marinas, mientras que Antamina traslada el mineral en estado seco por camiones a diésel.",
+        "isCorrect": false,
+        "rationale": "Antamina es la que utiliza el mineroducto hidráulico subterráneo; Las Bambas mueve concentrado seco o semisólido en camiones pesados."
+      },
+      {
+        "text": "Ambas empresas operan exactamente el mismo mineroducto compartido que cruza transversalmente la cordillera de los Andes.",
+        "isCorrect": false,
+        "rationale": "Se encuentran en regiones geográficas distintas (Áncash en el centro-norte vs. Apurímac/Cusco en el sur) y con infraestructuras totalmente diferentes."
+      }
+    ],
+    "hint": "Enfócate en la infraestructura empleada por cada mina para llegar al puerto (tubería subterránea continua vs. combinación de camiones terrestres y tren).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la estrategia de 'transporte comunal' implementada por mineras como Hudbay Perú para mitigar el riesgo de vulnerabilidad social?",
+    "opciones": [
+      {
+        "text": "En integrar a las empresas constituidas por las propias comunidades como socias estratégicas, contratándolas para transportar una porción sustancial (ej. 35%) del concentrado.",
+        "isCorrect": true,
+        "rationale": "Al convertir a la comunidad en un proveedor activo que genera ingresos directos moviendo el concentrado, los intereses de la mina y los vecinos se alinean, reduciendo bloqueos."
+      },
+      {
+        "text": "En obligar a los comuneros a financiar con sus propios ahorros la pavimentación de las carreteras regionales.",
+        "isCorrect": false,
+        "rationale": "El transporte comunal es un modelo de contratación inclusiva donde la minera paga a las empresas comunitarias por brindar servicios de carga."
+      },
+      {
+        "text": "En ceder de manera gratuita la propiedad total de las concesiones mineras a las directivas comunales distritales.",
+        "isCorrect": false,
+        "rationale": "La titularidad de la concesión sigue en manos de la minera; la estrategia consiste en externalizar servicios logísticos a favor de contratistas locales."
+      },
+      {
+        "text": "En utilizar autobuses de transporte público de pasajeros para trasladar los sacos de concentrado de cobre.",
+        "isCorrect": false,
+        "rationale": "Las empresas comunales adquieren y operan camiones pesados regulados con estándares mineros para transportar la carga de mineral."
+      },
+      {
+        "text": "En sustituir a los choferes profesionales por habitantes locales sin requerir licencias de conducir de categoría pesada.",
+        "isCorrect": false,
+        "rationale": "Las mineras capacitan y homologan a las empresas comunitarias para que cumplan con todos los permisos (incluyendo licencias profesionales y MATPEL) e ISOs."
+      }
+    ],
+    "hint": "Analiza cómo se transforma a la comunidad de un actor potencialmente crítico a un socio comercial directo dentro del negocio de transporte.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué ventajas estratégicas aportará el nuevo megapuerto de Chancay a la cadena de suministro y comercio exterior minero del Perú?",
+    "opciones": [
+      {
+        "text": "Reducción significativa de los tiempos de tránsito marítimo hacia el mercado asiático en hasta 15 días.",
+        "isCorrect": true,
+        "rationale": "Al funcionar como hub directo de aguas profundas hacia Asia, ahorra semanas de navegación en comparación con las rutas tradicionales."
+      },
+      {
+        "text": "Reconfiguración de la logística de importación, permitiendo el ingreso directo de maquinaria pesada y componentes de gran calado.",
+        "isCorrect": true,
+        "rationale": "Su capacidad para recibir buques de última generación facilita el desembarco de equipos industriales de gran tonelaje sin escalas intermedias."
+      },
+      {
+        "text": "Sustitución total y obligatoria del puerto de Matarani para todos los embarques de cobre del sur del país.",
+        "isCorrect": false,
+        "rationale": "Matarani seguirá siendo el puerto especializado por excelencia para el nodo minero del sur peruano debido a su cercanía geográfica."
+      },
+      {
+        "text": "Eliminación completa de la necesidad de contar con almacenes y plantas de filtrado de concentrados.",
+        "isCorrect": false,
+        "rationale": "Todo puerto minero requiere infraestructura terrestre para recepción, acopio, muestreo y filtrado del mineral antes del embarque."
+      },
+      {
+        "text": "Procesamiento y refinación del mineral a bordo de los buques mientras navegan hacia los puertos de destino.",
+        "isCorrect": false,
+        "rationale": "Los buques de granel o concentrado son transportistas de carga física; la refinación metalúrgica se realiza en plantas en tierra firme."
+      }
+    ],
+    "hint": "Considera el impacto en los tiempos de travesía trasatlántica/pacífica y la capacidad de atraque para embarques industriales pesados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la electrificación de flotas de transporte pesado, ¿de qué manera aprovecha Shougang Hierro Perú la topografía minera para lograr un ahorro de hasta 15% en combustible?",
+    "opciones": [
+      {
+        "text": "Mediante el frenado regenerativo: los camiones gigantes recargan sus baterías al bajar cargados al tajo y usan esa energía como impulso en las subidas.",
+        "isCorrect": true,
+        "rationale": "El sistema híbrido/regenerativo convierte la energía potencial gravitatoria del camión pesado que desciende en energía eléctrica utilizable para la aceleración ascendente."
+      },
+      {
+        "text": "Instalando velamen aerodinámico en la tolva de los vehículos para aprovechar las brisas marinas de la costa de Marcona.",
+        "isCorrect": false,
+        "rationale": "Los camiones mineros de cientos de toneladas dependen de tracción eléctrica/diésel de gran potencia; el ahorro proviene del frenado regenerativo."
+      },
+      {
+        "text": "Desconectando el motor diésel y dejándolo rodar en punto muerto durante los descensos por la pendiente de la mina.",
+        "isCorrect": false,
+        "rationale": "Dejar rodar un vehículo minero de 300 toneladas en punto muerto violaría todos los protocolos de seguridad; la energía se recupera mediante frenos eléctricos regenerativos."
+      },
+      {
+        "text": "Utilizando combustible derivado del reciclaje de aceites vegetales provistos por los comedores del campamento.",
+        "isCorrect": false,
+        "rationale": "El caso de Shougang se basa en la tecnología de camiones híbridos con regeneración de energía de frenado en pendiente, no en biodiésel artesanal."
+      },
+      {
+        "text": "Remolcando los camiones mediante cables eléctricos conectados a un tranvía subterráneo de superficie.",
+        "isCorrect": false,
+        "rationale": "Los camiones mantienen su movilidad autónoma sobre ruedas mediante el sistema de gestión de baterías recargadas por el propio descenso."
+      }
+    ],
+    "hint": "Piensa en el principio físico de convertir la fuerza de retención al bajar una pendiente con carga pesada en energía eléctrica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función del 'pasaporte digital de producto' implementado mediante tecnología blockchain por empresas como Minsur en la producción de estaño?",
+    "opciones": [
+      {
+        "text": "Garantizar una trazabilidad inalterable desde la extracción en la mina hasta el cliente final, demostrando que el metal proviene de fuentes éticas y sostenibles.",
+        "isCorrect": true,
+        "rationale": "Blockchain actúa como un registro digital público e infalsificable (DNI del mineral) que certifica al mercado internacional que el metal está libre de conflictos y trabajo infantil."
+      },
+      {
+        "text": "Servir como visa de tránsito para que los conductores de los camiones puedan cruzar las fronteras regionales sin ser detenidos.",
+        "isCorrect": false,
+        "rationale": "El pasaporte digital rastrea el lote físico del metal para compradores y auditorías de sostenibilidad, no es un documento de identidad para choferes."
+      },
+      {
+        "text": "Sustituir los pagos en moneda local a los proveedores por tokens virtuales no regulados por el Banco Central.",
+        "isCorrect": false,
+        "rationale": "No es un sistema de pago o criptomoneda comercial, sino una base de datos distribuida para auditoría de trazabilidad de la materia prima."
+      },
+      {
+        "text": "Ocultar la composición química real del concentrado para proteger el secreto comercial de la empresa.",
+        "isCorrect": false,
+        "rationale": "El objetivo del pasaporte blockchain es precisamente lo opuesto: ofrecer máxima transparencia y verificar la procedencia ética y ambiental."
+      },
+      {
+        "text": "Emitir certificados de exoneración del pago de regalías mineras ante el Ministerio de Economía y Finanzas.",
+        "isCorrect": false,
+        "rationale": "Las obligaciones tributarias y regalías están fijadas por ley y no se modifican ni exoneran mediante el uso de tecnología blockchain."
+      }
+    ],
+    "hint": "Enfócate en la necesidad de las industrias tecnológicas de certificar el origen transparente y ético de los metales utilizados en sus dispositivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué pilares tecnológicos caracterizan la arquitectura de la denominada 'Cadena de Suministro 4.0' en la gran minería?",
+    "opciones": [
+      {
+        "text": "Electrificación y descarbonización progresiva de flotas de transporte y equipos.",
+        "isCorrect": true,
+        "rationale": "Reemplazar el diésel por vehículos 100% eléctricos u híbridos es clave para reducir emisiones masivas en la Cadena 4.0."
+      },
+      {
+        "text": "Trazabilidad digital infalsificable y pasaportes de producto sobre blockchain.",
+        "isCorrect": true,
+        "rationale": "Aporta transparencia total y seguridad sobre la procedencia del mineral para los clientes finales en el mundo."
+      },
+      {
+        "text": "Integración de datos masivos y analítica predictiva mediante centros de control remoto (IROC) y gemelos digitales.",
+        "isCorrect": true,
+        "rationale": "Permite orquestar la mina, la planta y la logística portuaria en tiempo real desde salas digitalizadas de alto nivel."
+      },
+      {
+        "text": "Retorno al registro físico manual en libros contables para evitar ciberataques a las redes de datos.",
+        "isCorrect": false,
+        "rationale": "La minería 4.0 se basa precisamente en la digitalización, sensorización e interconexión de datos, no en registros analógicos en papel."
+      },
+      {
+        "text": "Desconexión total de los sistemas de GPS en los vehículos pesados para proteger la privacidad comercial de la ruta.",
+        "isCorrect": false,
+        "rationale": "El rastreo por GPS y la sensorización IoT son indispensables para el control de flotas y la prevención de accidentes/robos en la Supply Chain 4.0."
+      }
+    ],
+    "hint": "Identifica los tres componentes clave presentados: energía limpia, transparencia de datos y analítica centralizada en tiempo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del modelo de economía circular, ¿de qué forma las innovaciones tecnológicas recientes están transformando la gestión de los relaves mineros?",
+    "opciones": [
+      {
+        "text": "Reutilizan el desecho pasivo convirtiéndolo en insumos utilizables como ladrillos, adoquines y materiales de construcción para las comunidades.",
+        "isCorrect": true,
+        "rationale": "Al procesar el lodo de relave y estabilizarlo en materiales de construcción, se elimina un riesgo/pasivo ambiental y se crea valor económico utilitario."
+      },
+      {
+        "text": "Disuelven los relaves con químicos corrosivos para verterlos en el océano sin requerir depósitos de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "El vertido en el océano está severamente prohibido por regulaciones ambientales; la economía circular busca aprovechar el residuo en tierra en un ciclo cerrado."
+      },
+      {
+        "text": "Incineran los relaves a altas temperaturas dentro de los hornos de la mina para generar electricidad a carbón.",
+        "isCorrect": false,
+        "rationale": "Los relaves son pulpas compuestas de finos de roca y agua, no un combustible fósil diseñado para incineración energética."
+      },
+      {
+        "text": "Mezclan los relaves con diésel para utilizarlos como lubricante pesado en los motores de los camiones.",
+        "isCorrect": false,
+        "rationale": "Los relaves contienen partículas de roca abrasivas que destruirían de inmediato un motor si se usaran como lubricante."
+      },
+      {
+        "text": "Almacenan los relaves en contenedores plásticos sellados para su venta a supermercados locales.",
+        "isCorrect": false,
+        "rationale": "Los volúmenes de relave son de millones de toneladas; la circularidad industrial los convierte en materiales sintéticos de construcción masiva."
+      }
+    ],
+    "hint": "Piensa en la conversión de un lodo residual abrasivo en un producto físico resistente de utilidad para la infraestructura de viviendas u obras locales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión operativa de compras e inventario, ¿qué mide específicamente el indicador clave de desempeño OTIF (On Time In Full)?",
+    "opciones": [
+      {
+        "text": "Mide el porcentaje de entregas de suministros que llegan exactamente dentro del plazo programado y con la totalidad de los artículos requeridos.",
+        "isCorrect": true,
+        "rationale": "El OTIF (A tiempo y completo) es crítico en minería, pues recibir un repuesto a tiempo pero incompleto (o completo pero tarde) causa la parálisis de equipos costosos."
+      },
+      {
+        "text": "Mide el costo promedio en dólares por tonelada de mineral transportada desde el tajo hasta el puerto de embarque.",
+        "isCorrect": false,
+        "rationale": "El costo por tonelada transportada es un KPI de costo logístico directo, mientras que el OTIF mide la confiabilidad del abastecimiento de insumos."
+      },
+      {
+        "text": "Calcula el volumen total de emisiones de $CO_2$ evitadas mediante la electrificación de los camiones de extracción.",
+        "isCorrect": false,
+        "rationale": "La reducción de emisiones se mide en toneladas de $CO_2$ equivalente ($tCO_2e$), correspondiente a KPIs de sostenibilidad ambiental."
+      },
+      {
+        "text": "Registra el porcentaje de empleados de la mina que provienen de las comunidades adyacentes al proyecto.",
+        "isCorrect": false,
+        "rationale": "El empleo local se mide a través de KPIs de impacto social o gestión de talento comunitario, no con la métrica de inventario OTIF."
+      },
+      {
+        "text": "Mide el tiempo promedio que tarda un camión en ser descargado dentro de las instalaciones del puerto marítimo.",
+        "isCorrect": false,
+        "rationale": "El tiempo de descarga portuaria o 'turnaround time' es una métrica de gestión de terminales, no el índice OTIF de abastecimiento de almacén."
+      }
+    ],
+    "hint": "Analiza el significado de las siglas en inglés relacionadas con el cumplimiento puntual y completo de una orden de compra o repuesto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con los casos de optimización en la flota de transporte pesado (como en la mina Sky Cruz), ¿qué modificación de bajo costo permitió generar un ahorro anual de $1,200,000?",
+    "opciones": [
+      {
+        "text": "Un ajuste en el diseño técnico para incrementar ligeramente la capacidad de carga en las tolvas de los camiones, optimizando viajes y mantenimiento.",
+        "isCorrect": true,
+        "rationale": "Aumentar la capacidad de la tolva permite mover más toneladas por ciclo de camión, reduciendo el desgaste general de la flota por tonelada y generando ahorros millonarios."
+      },
+      {
+        "text": "Sustituir a los choferes experimentados por un sistema de conducción a distancia basado en videoconsolas domésticas.",
+        "isCorrect": false,
+        "rationale": "Los camiones pesados requieren choferes certificados o sistemas autónomos industriales de alta precisión, no consolas de juego domésticas."
+      },
+      {
+        "text": "Eliminar por completo los cambios de lubricante y filtros de aceite en los motores a diésel.",
+        "isCorrect": false,
+        "rationale": "Omitir el mantenimiento preventivo provocaría fallas catastróficas en motores que cuestan cientos de miles de dólares, multiplicando los costos."
+      },
+      {
+        "text": "Reducir la presión del aire de los neumáticos a la mitad para evitar pinchazos con rocas afiladas.",
+        "isCorrect": false,
+        "rationale": "Rodar neumáticos mineros gigantes con baja presión destruye la estructura de caucho/acero rápidamente e incrementa drásticamente el consumo de combustible."
+      },
+      {
+        "text": "Prohibir el tránsito de los camiones durante las horas de la noche para ahorrar electricidad en los faros.",
+        "isCorrect": false,
+        "rationale": "Las minas operan de forma continua 24/7 día y noche por décadas; detener la flota de noche costaría millones en producción perdida."
+      }
+    ],
+    "hint": "Piensa en el KPI de 'costo por tonelada transportada' y cómo maximizar el volumen movido por cada recorrido individual del vehículo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué indicadores y tecnologías se emplean para monitorear y mitigar el riesgo de accidentabilidad en el transporte minero de larga distancia?",
+    "opciones": [
+      {
+        "text": "Cálculo integrado del índice de frecuencia (qué tan seguido ocurren incidentes) y del índice de severidad (la gravedad de las consecuencias).",
+        "isCorrect": true,
+        "rationale": "La combinación de ambos índices proporciona la radiografía precisa de la seguridad operacional requerida para tomar medidas preventivas."
+      },
+      {
+        "text": "Implementación de sensores biométricos y cámaras con inteligencia artificial para detectar tempranamente signos de fatiga y somnolencia.",
+        "isCorrect": true,
+        "rationale": "El monitoreo activo de fatiga en cabina ha demostrado reducir la frecuencia de accidentes viales hasta en un 48% en la industria."
+      },
+      {
+        "text": "Evaluación estricta del cumplimiento de horas de descanso obligatorio antes del inicio de cada turno de manejo.",
+        "isCorrect": true,
+        "rationale": "El control preventivo del descanso es un factor operativo clave que complementa el seguimiento tecnológico en ruta."
+      },
+      {
+        "text": "Incremento de la velocidad máxima en zonas de lluvia extrema para salir más rápido del tramo peligroso.",
+        "isCorrect": false,
+        "rationale": "Ante condiciones climáticas adversas o lluvias en la sierra, los protocolos obligan a reducir la velocidad o detener la marcha, jamás acelerar."
+      },
+      {
+        "text": "Desactivación de las alarmas sonoras y sensores de carril en los camiones para no generar estrés auditivo en el conductor.",
+        "isCorrect": false,
+        "rationale": "Los sensores y alarmas son dispositivos de seguridad esenciales diseñados para alertar proactivamente al chofer ante desviaciones."
+      }
+    ],
+    "hint": "Selecciona las opciones que abordan tanto las métricas combinadas de accidentes como los dispositivos tecnológicos preventivos en la cabina del vehículo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito central de iniciativas de articulación como el Clúster Minero Andino (Sami) en la gestión de abastecimiento?",
+    "opciones": [
+      {
+        "text": "Juntar a las empresas mineras, el gobierno, las universidades y los proveedores para elevar las capacidades tecnológicas de las pymes locales y ayudarlas a cumplir estándares de homologación.",
+        "isCorrect": true,
+        "rationale": "El clúster actúa como un catalizador que capacita e impulsa la competitividad de las empresas regionales para que puedan captar parte de los miles de millones de dólares en compras mineras."
+      },
+      {
+        "text": "Establecer un monopolio de precios fijos obligatorios para todos los insumos químicos importados del extranjero.",
+        "isCorrect": false,
+        "rationale": "El clúster busca el desarrollo de proveedores locales y la innovación abierta, no fijar monopolios o precios de insumos importados."
+      },
+      {
+        "text": "Sustituir a los organismos de fiscalización ambiental mediante la auto-evaluación confidencial entre empresas privadas.",
+        "isCorrect": false,
+        "rationale": "El Clúster Sami no reemplaza al OEFA ni a las entidades del Estado en su rol fiscalizador y sancionador."
+      },
+      {
+        "text": "Exigir que el 100% de la maquinaria pesada sea ensamblada manualmente en talleres artesanales comunitarios.",
+        "isCorrect": false,
+        "rationale": "El objetivo es desarrollar proveedores competitivos en servicios, repuestos e innovación tecnológica de alto nivel, no ensamblaje artesanal fuera de norma."
+      },
+      {
+        "text": "Garantizar la compra preferencial de bienes importados por encima de las soluciones fabricadas en el Perú.",
+        "isCorrect": false,
+        "rationale": "El enfoque estratégico del Clúster Sami es potenciar el ecosistema local y nacional para sustituir eficientemente la dependencia de importaciones."
+      }
+    ],
+    "hint": "Piensa en cómo cerrar la brecha técnica y de calidad que impide a las pymes locales ser homologadas por las grandes mineras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera el KPI de 'Gasto Local' influye de forma directa en la resiliencia operativa y la preservación de la licencia social para operar?",
+    "opciones": [
+      {
+        "text": "Demuestra cuantitativamente el volumen de dinero que la mina reinvierte en la economía comunitaria, transformando a las empresas locales en aliadas del éxito operativo.",
+        "isCorrect": true,
+        "rationale": "Un alto gasto local genera un ciclo virtuoso: la comunidad prospera económicamente al brindar servicios/bienes a la mina, fortaleciendo la paz social y reduciendo el riesgo de bloqueos."
+      },
+      {
+        "text": "Permite a la minera reducir sus estándares de seguridad operacional al contratar mano de obra no calificada sin homologación.",
+        "isCorrect": false,
+        "rationale": "El gasto local no implica bajar estándares; por el contrario, exige capacitar al proveedor local para que alcance estándares internacionales (ej. ISOs)."
+      },
+      {
+        "text": "Exime a la empresa de presentar los estudios de impacto ambiental (EIA) periódicos ante el Ministerio de Energía y Minas.",
+        "isCorrect": false,
+        "rationale": "El gasto local es una métrica socioeconómica de gestión privada; las obligaciones de los EIA están reguladas por leyes de evaluación ambiental estrictas."
+      },
+      {
+        "text": "Aumenta la dependencia de la mina hacia proveedores extranjeros al reducir las compras en el territorio nacional.",
+        "isCorrect": false,
+        "rationale": "El KPI de gasto local mide el porcentaje de presupuesto que se queda en la región/país, con el objetivo de disminuir la dependencia extrema de importaciones lejanas."
+      },
+      {
+        "text": "Calcula el impuesto municipal aplicado a las bodegas y comercios minoristas situados fuera de la concesión minera.",
+        "isCorrect": false,
+        "rationale": "El KPI de gasto local evalúa la facturación y contratación directa que efectúa la mina a proveedores y contratistas de las comunidades vecinas."
+      }
+    ],
+    "hint": "Considera la relación entre el desarrollo económico perceptible por los vecinos de la mina y la estabilidad del entorno social.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-70",
+    "diplomado": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son los cuatro pilares fundamentales sobre los que se sostiene la transformación estratégica de la logística minera en el Perú?",
+    "opciones": [
+      {
+        "text": "Reinvención de la infraestructura física mediante megaproyectos resilientes (mineroductos, megapuertos) para mitigar riesgos geográficos y sociales.",
+        "isCorrect": true,
+        "rationale": "Infraestructuras como Antamina o el puerto de Chancay reducen la exposición a cuellos de botella viales tradicionales."
+      },
+      {
+        "text": "Adopción de la Cadena de Suministro 4.0 basada en electrificación, trazabilidad por blockchain e integración predictiva vía IROC.",
+        "isCorrect": true,
+        "rationale": "La digitalización y descarbonización tecnológica son clave para una operación predecible, limpia y transparente."
+      },
+      {
+        "text": "Transición hacia modelos de valor compartido y economía circular industrializada en la gestión de insumos y residuos.",
+        "isCorrect": true,
+        "rationale": "La minería moderna convierte residuos (agua residual, neumáticos, relaves) en activos y hace de las comunidades socias comerciales de su cadena."
+      },
+      {
+        "text": "Evolución de los indicadores de éxito (KPIs) hacia una matriz de equilibrio entre eficiencia económica, seguridad y desempeño socioambiental.",
+        "isCorrect": true,
+        "rationale": "El éxito ya no se mide solo en toneladas extraídas o costo por tonelada, sino en métricas integradas de seguridad, gasto local y huella de carbono."
+      },
+      {
+        "text": "Retorno exclusivo al uso de camiones de combustible fósil de bajo costo sin monitoreo biométrico ni control satelital.",
+        "isCorrect": false,
+        "rationale": "El modelo actual rechaza el uso reactivo e ineficiente del diésel no controlado, migrando decididamente hacia tecnologías inteligentes y descarbonizadas."
+      }
+    ],
+    "hint": "Identifica las cuatro conclusiones globales que abarcan infraestructura física, tecnología digital, economía circular y la nueva métrica de KPIs integrados.",
+    "activo": true
+  }
+]

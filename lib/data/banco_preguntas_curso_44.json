@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo definen Kotler y Keller el propósito fundamental de la investigación de mercados dentro de una estrategia empresarial?",
+    "opciones": [
+      {
+        "text": "Permite evaluar la demanda, identificar oportunidades y diseñar estrategias efectivas mediante métodos cualitativos y cuantitativos.",
+        "isCorrect": true,
+        "rationale": "Esta definición destaca la combinación de métodos cualitativos y cuantitativos para comprender a los consumidores y reducir la incertidumbre estratégica."
+      },
+      {
+        "text": "Se limita exclusivamente a realizar encuestas telefónicas masivas para medir la satisfacción del cliente posterior a la compra.",
+        "isCorrect": false,
+        "rationale": "La investigación de mercados moderna va mucho más allá de encuestas telefónicas, integrando la analítica de datos y métodos cualitativos avanzados."
+      },
+      {
+        "text": "Consiste únicamente en calcular los impuestos de importación y aranceles fijados por la aduana nacional.",
+        "isCorrect": false,
+        "rationale": "El cálculo de impuestos y aranceles corresponde a los trámites aduaneros y logísticos, no a la investigación de mercados."
+      },
+      {
+        "text": "Su único objetivo es inspeccionar físicamente los almacenes de los proveedores extranjeros antes de firmar un contrato.",
+        "isCorrect": false,
+        "rationale": "La inspección de almacenes forma parte de la evaluación operativa de proveedores, no del estudio de la demanda de mercado."
+      },
+      {
+        "text": "Busca reemplazar las estrategias de publicidad digital por métodos tradicionales de venta puerta a puerta.",
+        "isCorrect": false,
+        "rationale": "La investigación de mercados recopila y analiza datos sobre consumidores y competidores para optimizar estrategias, sin eliminar los canales digitales."
+      }
+    ],
+    "hint": "Considera la definición integral que combina la evaluación del cliente objetivo mediante datos cuantitativos y cualitativos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son los tres factores de riesgo principales identificados al momento de realizar importaciones para comercializar en tiendas online?",
+    "opciones": [
+      {
+        "text": "Riesgo de mercado, riesgo financiero y riesgo operativo.",
+        "isCorrect": true,
+        "rationale": "Estos tres aspectos abarcan la incertidumbre en la demanda de los consumidores, la volatilidad de divisas o tipo de cambio y los fallos en la logística o transporte."
+      },
+      {
+        "text": "Riesgo tributario, riesgo de imagen y riesgo laboral.",
+        "isCorrect": false,
+        "rationale": "Aunque son factores relevantes en la gestión general, el marco conceptual analizado agrupa los riesgos de la importación digital en mercado, financiero y operativo."
+      },
+      {
+        "text": "Riesgo tecnológico, riesgo reputacional y riesgo político.",
+        "isCorrect": false,
+        "rationale": "Esta combinación omite los aspectos operativos directos de la cadena de suministro y la variación de divisas explicados en el curso."
+      },
+      {
+        "text": "Riesgo legal, riesgo ambiental y riesgo publicitario.",
+        "isCorrect": false,
+        "rationale": "No representan la clasificación tripartita fundamental de mercado, finanzas y operaciones que afecta la viabilidad de la importación."
+      },
+      {
+        "text": "Riesgo de producción, riesgo de almacenamiento y riesgo de embalaje.",
+        "isCorrect": false,
+        "rationale": "Estos elementos son subcomponentes del riesgo operativo y no abarcan las dimensiones financieras ni de demanda del mercado."
+      }
+    ],
+    "hint": "Piensa en las tres áreas clave que involucran al consumidor final, el tipo de cambio monetario y la entrega del producto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes corresponden a términos de comercio internacional (Incoterms) básicos explicados en el proceso de importación?",
+    "opciones": [
+      {
+        "text": "EXW (Ex Works / En fábrica)",
+        "isCorrect": true,
+        "rationale": "Representa la condición en la que el comprador asume casi la totalidad de los costos y riesgos desde las instalaciones del fabricante."
+      },
+      {
+        "text": "FOB (Free on Board / Puerto de origen)",
+        "isCorrect": true,
+        "rationale": "Establece que la responsabilidad del vendedor termina una vez que la mercancía es sobrepasada a bordo del buque en el puerto de embarque."
+      },
+      {
+        "text": "DDP (Delivered Duty Paid / Entregado con derechos pagados)",
+        "isCorrect": true,
+        "rationale": "Abarca el nivel máximo de obligación para el vendedor, incluyendo el transporte hasta el almacén en el mercado destino y el pago de impuestos aduaneros."
+      },
+      {
+        "text": "CIF (Cost, Insurance and Freight / Costo, seguro y flete)",
+        "isCorrect": true,
+        "rationale": "Incluye el pago del flete marítimo y el seguro de transporte hasta el puerto de destino por parte del proveedor."
+      },
+      {
+        "text": "ABC (Activity Based Costing)",
+        "isCorrect": false,
+        "rationale": "Representa una metodología de contabilidad de costos interna y no una cláusula Incoterm de comercio internacional."
+      }
+    ],
+    "hint": "Identifica las siglas estandarizadas utilizadas internacionalmente para negociar las condiciones de entrega entre comprador y vendedor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis macroeconómico presentado sobre el tipo de cambio en Perú, ¿a qué factor principal obedece el retroceso o la caída en la cotización del dólar?",
+    "opciones": [
+      {
+        "text": "Al mayor ingreso de dólares a la economía peruana debido a una balanza comercial positiva e inversiones en diversos sectores.",
+        "isCorrect": true,
+        "rationale": "Un superávit comercial por exportaciones y la entrada de capitales de inversión aumentan la oferta de dólares en el mercado local, haciendo que su cotización baje respecto al sol."
+      },
+      {
+        "text": "A la prohibición total de transacciones financieras en moneda extranjera por parte de la aduana.",
+        "isCorrect": false,
+        "rationale": "En el Perú existe un libre mercado cambiarío y no hay prohibiciones absolutas de operar en moneda extranjera."
+      },
+      {
+        "text": "Al incremento masivo en las compras de dólares por parte de la población en billeteras digitales.",
+        "isCorrect": false,
+        "rationale": "El aumento en la compra masiva de dólares por consumidores incrementaría la demanda de la divisa, provocando un alza en su valor y no una caída."
+      },
+      {
+        "text": "A la fijación obligatoria y arbitraria de un precio único del dólar dictada por el Poder Ejecutivo.",
+        "isCorrect": false,
+        "rationale": "El Banco Central de Reserva del Perú interviene mediante políticas cambiarias de mercado, no por fijación dictatorial de precios."
+      },
+      {
+        "text": "A la suspensión absoluta de las importaciones marítimas desde países asiáticos.",
+        "isCorrect": false,
+        "rationale": "Las operaciones de importación continúan vigentes; el tipo de cambio varía por el flujo neto de divisas y balanza comercial."
+      }
+    ],
+    "hint": "Recuerda el impacto de la oferta y la demanda de divisas cuando aumentan las exportaciones e inversiones extranjeras en el país.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el desarrollo de una infraestructura web para e-commerce, ¿cuál es la definición técnica precisa de *Hosting*?",
+    "opciones": [
+      {
+        "text": "Es el espacio asignado en un servidor en la nube donde se almacena la información, archivos y datos de la tienda virtual.",
+        "isCorrect": true,
+        "rationale": "El Hosting actúa como la infraestructura digital que aloja los textos, imágenes y código necesarios para que el sitio funcione en internet."
+      },
+      {
+        "text": "Es la dirección web o URL personalizada con la que los usuarios identifican una marca en la barra del navegador.",
+        "isCorrect": false,
+        "rationale": "Esa descripción corresponde al concepto de Dominio, no al de Hosting."
+      },
+      {
+        "text": "Es el protocolo de encriptación que procesa exclusivamente los pagos con tarjeta de crédito.",
+        "isCorrect": false,
+        "rationale": "El procesamiento de tarjetas corresponde a una pasarela de pago o certificación de seguridad SSL, no al alojamiento."
+      },
+      {
+        "text": "Es la plantilla visual editable que define la combinación de colores de la página.",
+        "isCorrect": false,
+        "rationale": "Las plantillas corresponden a herramientas de maquetación o diseño dentro de plataformas web, no al almacenamiento físico o en la nube."
+      },
+      {
+        "text": "Es la base de datos gubernamental donde se registran las marcas registradas.",
+        "isCorrect": false,
+        "rationale": "El registro de marcas es un trámite legal de propiedad intelectual y no una infraestructura de almacenamiento de páginas web."
+      }
+    ],
+    "hint": "Diferencia entre la dirección o nombre de un sitio web y el espacio físico o virtual donde guardas sus archivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Según la caracterización generacional revisada en el estudio de mercado, ¿qué hábitos o tendencias de consumo identifican a la generación *Millennial*?",
+    "opciones": [
+      {
+        "text": "Buscan alcanzar la independencia financiera de forma temprana y ser 'nómadas digitales'.",
+        "isCorrect": true,
+        "rationale": "Esta generación prioriza la flexibilidad laboral y geográfica, apoyándose en herramientas digitales para trabajar de forma remota."
+      },
+      {
+        "text": "Tienen una preferencia alta por servicios basados en modelos de economía colaborativa como Airbnb o Uber.",
+        "isCorrect": true,
+        "rationale": "Valoran el acceso al servicio y la experiencia por encima de la posesión permanente de bienes de alto costo como casas o autos propios."
+      },
+      {
+        "text": "Presentan una tasa elevada de consumo de servicios 'Pet Friendly' para sus mascotas.",
+        "isCorrect": true,
+        "rationale": "Tienen una marcada tendencia a posponer o reducir la conformación de familias tradicionales, integrando a las mascotas en sus hábitos de consumo."
+      },
+      {
+        "text": "Priorizan empleos estables de por vida dentro de una sola institución tradicional.",
+        "isCorrect": false,
+        "rationale": "La búsqueda de estabilidad laboral vitalicia en una sola empresa es una característica propia de generaciones anteriores como los Baby Boomers."
+      },
+      {
+        "text": "Conforman núcleos familiares masivos con un promedio superior a 5 hijos.",
+        "isCorrect": false,
+        "rationale": "El promedio de hijos por hogar ha decrecido notablemente en esta generación comparada con el periodo posterior a la Segunda Guerra Mundial."
+      }
+    ],
+    "hint": "Piensa en el perfil que valora la movilidad constante, la flexibilidad, el acceso frente a la propiedad y los servicios adaptados a mascotas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con los mapas de calor aplicados al diseño de *User Experience* (UX) en e-commerce, ¿dónde se posiciona habitualmente el carrito de compras?",
+    "opciones": [
+      {
+        "text": "En la esquina superior derecha de la interfaz gráfica.",
+        "isCorrect": true,
+        "rationale": "El análisis de navegación estándar muestra que el ojo humano y el cursor buscan intuitivamente el resumen de compra en la zona superior derecha."
+      },
+      {
+        "text": "En el centro inferior de la pantalla principal.",
+        "isCorrect": false,
+        "rationale": "El centro inferior se reserva habitualmente para el catálogo, banners informativos o el desplazamiento de productos."
+      },
+      {
+        "text": "Oculto dentro del menú de términos y condiciones del pie de página.",
+        "isCorrect": false,
+        "rationale": "Ubicación que generaría fricción y provocaría el abandono inmediato de la página al no ser accesible de forma intuitiva."
+      },
+      {
+        "text": "En la esquina superior izquierda, sustituyendo al logotipo corporativo.",
+        "isCorrect": false,
+        "rationale": "La esquina superior izquierda es el punto caliente predilecto para ubicar la identidad visual o logotipo de la marca."
+      },
+      {
+        "text": "Exclusivamente en una ventana emergente que aparece al cerrar el navegador.",
+        "isCorrect": false,
+        "rationale": "Las ventanas emergentes al salir son recursos de retención y no la ubicación permanente del carrito de compras."
+      }
+    ],
+    "hint": "Recuerda la distribución estándar utilizada por grandes agregadores comerciales como Mercado Libre, Linio o Temu.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de diseño web y neurología del consumidor, ¿qué reacción busca evitar el *User Experience* (UX) para que no se active el cerebro reptiliano?",
+    "opciones": [
+      {
+        "text": "Evitar que la navegación sea confusa o amenazante para que el usuario no sienta peligro y abandone la página.",
+        "isCorrect": true,
+        "rationale": "El cerebro reptiliano actúa por supervivencia: si detecta desorden, desconfianza o dificultad, responde huyendo y cerrando el sitio."
+      },
+      {
+        "text": "Evitar que el usuario pase más de 10 segundos leyendo la descripción del producto.",
+        "isCorrect": false,
+        "rationale": "El UX busca facilitar la lectura y comprensión; permanecer en la página examinando detalles es un indicador positivo de interés."
+      },
+      {
+        "text": "Forzar al usuario a ingresar sus datos bancarios antes de ver el catálogo visual.",
+        "isCorrect": false,
+        "rationale": "Solicitar datos financieros sin mostrar oferta previa activa alertas de fraude en la mente del consumidor, causando rechazo."
+      },
+      {
+        "text": "Eliminar la barra de búsqueda para que el comprador revise producto por producto manualmente.",
+        "isCorrect": false,
+        "rationale": "Quitar la barra de búsqueda incrementa la frustración y la carga cognitiva, alejándose de una experiencia ágil e intuitiva."
+      },
+      {
+        "text": "Cambiar aleatoriamente los colores del fondo cada vez que se mueve el cursor.",
+        "isCorrect": false,
+        "rationale": "Los cambios aleatorios molestan visualmente y restan profesionalismo al diseño de la tienda virtual."
+      }
+    ],
+    "hint": "El cerebro instintivo solo tiene dos respuestas básicas: quedarse tranquilo o huir ante una amenaza o dificultad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el principio de *Diseño Responsive* en el desarrollo de una tienda virtual?",
+    "opciones": [
+      {
+        "text": "En garantizar que el sitio web adapte su maquetación e interfaz de forma automática a diversos dispositivos como celulares, tablets y computadoras.",
+        "isCorrect": true,
+        "rationale": "Un diseño responsive asegura que la experiencia de usuario sea fluida e intuitiva independientemente del tamaño de pantalla desde el que se conecte."
+      },
+      {
+        "text": "En responder automáticamente los correos de reclamos de los clientes mediante bots.",
+        "isCorrect": false,
+        "rationale": "Esa función corresponde a la automatización de atención al cliente o mensajería, no al diseño de la tienda."
+      },
+      {
+        "text": "En cambiar los precios de los productos según la hora del día en que el cliente ingresa.",
+        "isCorrect": false,
+        "rationale": "La variación de precios por horarios es una estrategia de precios dinámicos y no una propiedad de la adaptabilidad visual del sitio."
+      },
+      {
+        "text": "En crear una aplicación móvil nativa obligatoria que reemplace completamente al sitio web.",
+        "isCorrect": false,
+        "rationale": "El diseño responsive adapta la web existente para navegadores móviles sin requerir la descarga de una app independiente."
+      },
+      {
+        "text": "En permitir que los clientes diseñen sus propios logotipos dentro de la tienda.",
+        "isCorrect": false,
+        "rationale": "Esa opción es una herramienta de personalización de productos y no la adaptabilidad técnica de la pantalla."
+      }
+    ],
+    "hint": "Piensa en cómo se visualiza una misma página web al abrirla en un teléfono móvil versus una computadora de escritorio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre las estrategias de posicionamiento *SEO* y *SEM*?",
+    "opciones": [
+      {
+        "text": "El SEO logra tráfico y posicionamiento orgánico mediante la relevancia percibida por la demanda, mientras que el SEM utiliza anuncios pagados.",
+        "isCorrect": true,
+        "rationale": "El SEO posiciona de forma natural gracias a la calidad de contenido y reseñas de usuarios; el SEM requiere inversión en plataformas como Google Ads."
+      },
+      {
+        "text": "El SEO se aplica únicamente a redes sociales y el SEM es exclusivo para tiendas físicas.",
+        "isCorrect": false,
+        "rationale": "Ambas metodologías se aplican en motores de búsqueda digitales para captar tráfico web hacia plataformas en línea."
+      },
+      {
+        "text": "El SEM es un servicio gratuito proporcionado por el Estado y el SEO es una certificación aduanera.",
+        "isCorrect": false,
+        "rationale": "Ninguno de los dos proviene de entes estatales ni aduaneros; son conceptos de marketing digital."
+      },
+      {
+        "text": "El SEO requiere un pago mensual obligatorio a Google y el SEM depende únicamente de comentarios en foros.",
+        "isCorrect": false,
+        "rationale": "La afirmación está invertida: el SEM es el canal de pago directo por publicidad y el SEO se construye de manera orgánica."
+      },
+      {
+        "text": "No existe diferencia, ambos términos son sinónimos utilizados para referirse al diseño de logotipos.",
+        "isCorrect": false,
+        "rationale": "Son estrategias completamente distintas enfocadas en el posicionamiento en motores de búsqueda, no en el diseño gráfico."
+      }
+    ],
+    "hint": "Considera cuál de las dos opciones depende de la inversión publicitaria directa versus la construcción orgánica de autoridad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes medidas corresponden a buenas prácticas para la gestión de seguridad en pasarelas de pago digitales?",
+    "opciones": [
+      {
+        "text": "Implementar un certificado de seguridad SSL (Secure Sockets Layer).",
+        "isCorrect": true,
+        "rationale": "Garantiza que la información transmitida entre el navegador del cliente y el servidor viaje cifrada de extremo a extremo."
+      },
+      {
+        "text": "Terciarizar el procesamiento de tarjetas de crédito con entidades especializadas como Visa, Mastercard o PayPal.",
+        "isCorrect": true,
+        "rationale": "Transfiere el riesgo de cumplimiento y almacenamiento de datos sensibles a pasarelas con alta infraestructura de ciberseguridad."
+      },
+      {
+        "text": "Ofrecer la integración de billeteras digitales populares como Yape o Plin.",
+        "isCorrect": true,
+        "rationale": "Permite realizar transacciones inmediatas desde el entorno seguro de las aplicaciones bancarias sin exponer claves secretas."
+      },
+      {
+        "text": "Almacenar los números de las tarjetas de crédito de los clientes en un documento de texto en la computadora del negocio.",
+        "isCorrect": false,
+        "rationale": "Guardar datos bancarios sensibles sin cifrado representa una vulneración grave a la privacidad y seguridad del comprador."
+      },
+      {
+        "text": "Deshabilitar las verificaciones de seguridad para acelerar el cobro sin pedir validaciones al banco emisor.",
+        "isCorrect": false,
+        "rationale": "Omitir las validaciones incrementa drásticamente el riesgo de fraudes, controcargos y suplantación de identidad."
+      }
+    ],
+    "hint": "Identifica los mecanismos que cifran la información, reducen el riesgo de almacenamiento de datos y apoyan la confianza mediante pasarelas reconocidas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al crear un sitio web en plataformas de creación ágil como Wix utilizando la versión gratuita, ¿cuál es la razón por la que la URL incluye el nombre de la plataforma?",
+    "opciones": [
+      {
+        "text": "Porque se está haciendo uso de un subdominio y alojamiento gratuito proporcionado por el proveedor antes de adquirir un Hosting y Dominio propios.",
+        "isCorrect": true,
+        "rationale": "Las cuentas gratuitas utilizan subdominios de la marca proveedora como parte del modelo 'freemium' hasta que el usuario decida pagar un plan propio."
+      },
+      {
+        "text": "Porque la aduana exige que todas las tiendas virtuales peruanas lleven ese nombre por ley.",
+        "isCorrect": false,
+        "rationale": "Las leyes aduaneras no regulan la denominación técnica de las direcciones web en plataformas privadas."
+      },
+      {
+        "text": "Porque el sitio web ha sido bloqueado por no contar con un certificado de antecedentes penales.",
+        "isCorrect": false,
+        "rationale": "La extensión del nombre en la URL es una condición estándar del servicio gratuito y no un bloqueo legal."
+      },
+      {
+        "text": "Porque es una condición obligatoria impuesta por los bancos para habilitar los cobros con tarjeta.",
+        "isCorrect": false,
+        "rationale": "Los procesadores de pago evalúan la seguridad del sitio, independientemente de si la web usa un dominio propio o un subdominio gratuito."
+      },
+      {
+        "text": "Porque el diseño responsive únicamente funciona cuando se incluye la marca del software en el título.",
+        "isCorrect": false,
+        "rationale": "El diseño adaptable a pantallas depende del código HTML/CSS del sitio y no de la inclusión del nombre de la herramienta en la URL."
+      }
+    ],
+    "hint": "Piensa en la modalidad inicial de bajo costo que ofrecen las herramientas web antes de contratar un dominio comercial personalizado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la estructura u orden conceptual correcto para calcular el Precio Final transparente de un producto en la venta en línea?",
+    "opciones": [
+      {
+        "text": "Costo Fijo + Costo Variable + Utilidad + Gasto Financiero + Impuestos = Precio Final.",
+        "isCorrect": true,
+        "rationale": "Contempla todos los costos operativos, el margen de ganancia pretendido, las comisiones por pasarelas de pago e tributos aplicables de manera transparente."
+      },
+      {
+        "text": "Precio Final = Costo Fijo + Descuento Sorpresa - Gastos Financieros.",
+        "isCorrect": false,
+        "rationale": "Esta fórmula es errónea ya que omite los costos variables, la ganancia del negocio y la carga impositiva obligatoria."
+      },
+      {
+        "text": "Costo Variable + Impuestos + Gasto Financiero = Margen de Contribución Total.",
+        "isCorrect": false,
+        "rationale": "El margen de contribución es la diferencia entre los ingresos y los costos variables, no una suma de costos con tributos."
+      },
+      {
+        "text": "Precio Final = Impuestos + Comisiones Bancarias - Utilidad Neta.",
+        "isCorrect": false,
+        "rationale": "Restar la utilidad neta de los impuestos no arroja la cifra de venta al consumidor final, distorsionando las finanzas."
+      },
+      {
+        "text": "Costo Fijo + Utilidad = Precio Final (los impuestos y gastos bancarios se cobran como recargo cobrado al entregarse).",
+        "isCorrect": false,
+        "rationale": "Añadir costos financieros o tributos como sorpresas al momento de pagar vulnera la transparencia comercial y genera rechazo en el cliente."
+      }
+    ],
+    "hint": "Asegúrate de sumar ordenadamente la base operativa, el margen de ganancia, la comisión de pago y los tributos de ley antes de ofrecer la cifra al público.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son las 4 Ps tradicionales que conforman la mezcla del Marketing (Marketing Mix)?",
+    "opciones": [
+      {
+        "text": "Producto, Precio, Plaza y Promoción.",
+        "isCorrect": true,
+        "rationale": "Representan los cuatro pilares estratégicos fundamentales para estructurar la oferta comercial ante un público objetivo determinado."
+      },
+      {
+        "text": "Proceso, Planificación, Personal y Presupuesto.",
+        "isCorrect": false,
+        "rationale": "Aunque son variables clave en la gestión administrativa, no conforman las 4 Ps clásicas de la mezcla de mercadotecnia."
+      },
+      {
+        "text": "Producción, Pérdida, Ganancia y Posicionamiento.",
+        "isCorrect": false,
+        "rationale": "Mezcla términos contables y operacionales que no corresponden a la teoría tradicional del marketing."
+      },
+      {
+        "text": "Publicidad, Plataforma, Proveedor y Pasarela.",
+        "isCorrect": false,
+        "rationale": "Son componentes específicos del e-commerce pero no sustituyen el modelo conceptual de las 4 Ps."
+      },
+      {
+        "text": "Perfil, Paquete, Pedido y Postventa.",
+        "isCorrect": false,
+        "rationale": "Hacen referencia a fases del servicio al cliente y logística, alejándose del esquema clásico de mercadotecnia."
+      }
+    ],
+    "hint": "Recuerda los cuatro términos en español que inician con la letra P y abarcan la oferta, el costo al cliente, la distribución y la comunicación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos identifican a un emprendimiento bajo el modelo de *Startup*?",
+    "opciones": [
+      {
+        "text": "Sustentarse en una propuesta de negocio con alto componente innovador.",
+        "isCorrect": true,
+        "rationale": "Las startups buscan resolver problemas mediante enfoques nuevos o modelos no convencionales de rápido escalamiento."
+      },
+      {
+        "text": "Requerir un nivel de capital o inversión inicial bajo (tendiente a cero en sus etapas iniciales).",
+        "isCorrect": true,
+        "rationale": "Priorizan metodologías ágiles que validan la idea con la menor cantidad de recursos económicos posibles."
+      },
+      {
+        "text": "Estar conformada por un número reducido de cofundadores.",
+        "isCorrect": true,
+        "rationale": "Su estructura organizativa inicial es delgada y muy enfocada en la ejecución rápida con equipos pequeños."
+      },
+      {
+        "text": "Exigir la contratación obligatoria de más de 50 empleados en nómina fija desde el primer mes.",
+        "isCorrect": false,
+        "rationale": "Las startups evitan las estructuras pesadas de costos fijos al inicio para mantener la agilidad operativa."
+      },
+      {
+        "text": "Construir infraestructuras físicas de gran envergadura antes de probar el producto en el mercado.",
+        "isCorrect": false,
+        "rationale": "El enfoque startup busca validar el modelo mediante productos mínimos viables digitales sin realizar grandes inversiones en activos fijos."
+      }
+    ],
+    "hint": "Identifica las tres condiciones básicas revisadas: innovación en la idea, mínimo capital requerido y equipo fundador pequeño.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de billeteras digitales en Perú (como Yape), ¿qué ocurre cuando la cuenta de destino está configurada a nombre de una persona jurídica o empresa?",
+    "opciones": [
+      {
+        "text": "Se aplican cobros o gastos financieros por comisión comercial según las políticas de la entidad financiera.",
+        "isCorrect": true,
+        "rationale": "A diferencia de las transferencias gratuitas entre personas naturales, las cuentas empresariales o corporativas están sujetas a tarifas por procesamiento de ventas."
+      },
+      {
+        "text": "El sistema bloquea automáticamente la transferencia por estar prohibido su uso comercial.",
+        "isCorrect": false,
+        "rationale": "Las billeteras electrónicas fomentan el cobro comercial mediante funcionalidades corporativas, cobrando la tarifa correspondiente."
+      },
+      {
+        "text": "La transacción se exonera automáticamente de todo tipo de tributos por 10 años.",
+        "isCorrect": false,
+        "rationale": "Las herramientas de cobro no otorgan exenciones tributarias de manera automática."
+      },
+      {
+        "text": "El dinero queda retenido en la aduana hasta que el comprador presente su factura impresas.",
+        "isCorrect": false,
+        "rationale": "La aduana regula el ingreso físico de mercancías al país y no interviene en las transferencias interbancarias de billeteras locales."
+      },
+      {
+        "text": "Se obliga a la empresa a convertir el saldo de soles a dólares de forma inmediata.",
+        "isCorrect": false,
+        "rationale": "El saldo se procesa en la moneda origen de la cuenta sin forzar cambios de divisa imprevistos."
+      }
+    ],
+    "hint": "Piensa en las diferencias tarifarias entre transferir dinero a un amigo versus recibir cobros de un negocio formal o persona jurídica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué el costo de envío a domicilio por plataformas como PedidosYa, Rappi o InDrive se clasifica como un costo adicional y terciarizado?",
+    "opciones": [
+      {
+        "text": "Porque no forma parte de la estructura fija del producto y depende de la modalidad o distancia que el comprador elija para recibir su pedido.",
+        "isCorrect": true,
+        "rationale": "Es un servicio prestado por un tercero logístico independiente que varía según el destino elegido por el cliente final."
+      },
+      {
+        "text": "Porque es un impuesto fiscal cobrado por los municipios para la limpieza pública.",
+        "isCorrect": false,
+        "rationale": "Las tarifas de envío corresponden al pago por transporte privado y no a un tributo municipal."
+      },
+      {
+        "text": "Porque sustituye completamente al valor real de la mercancía importada.",
+        "isCorrect": false,
+        "rationale": "El costo de flete o despacho es independiente del valor intrínseco del bien comercializado."
+      },
+      {
+        "text": "Porque la ley de comercio electrónico prohíbe incluir costos de transporte en las facturas.",
+        "isCorrect": false,
+        "rationale": "La legislación permite detallar el costo de envío de manera transparente en los comprobantes de pago."
+      },
+      {
+        "text": "Porque únicamente se aplica cuando el cliente paga con dinero en efectivo en la tienda física.",
+        "isCorrect": false,
+        "rationale": "Los servicios de mensajería y delivery se contratan habitualmente en compras digitales con diversos métodos de pago."
+      }
+    ],
+    "hint": "Considera que la distribución por aplicaciones externas se contrata como un servicio independiente al bien vendido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué regulaciones o buenas prácticas peruanas se deben cumplir al operar una tienda virtual para ofrecer transparencia e infundir confianza?",
+    "opciones": [
+      {
+        "text": "Cumplir con las disposiciones de la Ley de Protección al Consumidor supervisadas por Indecopi.",
+        "isCorrect": true,
+        "rationale": "Asegura el respeto a las condiciones ofrecidas, información clara de precios y atención a reclamos en canales digitales."
+      },
+      {
+        "text": "Aplicar de forma transparente los impuestos de ley (como el IGV o tasas preferenciales según sector).",
+        "isCorrect": true,
+        "rationale": "Garantiza el cumplimiento tributario ante la Sunat e informa claramente si el impuesto está incluido en el precio publicado."
+      },
+      {
+        "text": "Disponer de términos de servicio y políticas de privacidad accesibles para el cliente.",
+        "isCorrect": true,
+        "rationale": "Define las reglas de juego respecto a las entregas, responsabilidades y el uso de datos personales en el entorno web."
+      },
+      {
+        "text": "Ocultar la información de contacto y dirección fiscal para evitar preguntas de los compradores.",
+        "isCorrect": false,
+        "rationale": "Ocultar los datos de contacto genera desconfianza, eleva la tasa de abandono e infringe la normativa de protección al consumidor."
+      },
+      {
+        "text": "Modificar los precios negociados una vez que el comprador ha realizado el pago en línea.",
+        "isCorrect": false,
+        "rationale": "Aumentar el precio de manera posterior a la transacción es una práctica ilegal que acarrea sanciones severas."
+      }
+    ],
+    "hint": "Selecciona las acciones referidas al marco legal de Indecopi, pago de tributos de ley y claridad en las condiciones contractuales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el comercio electrónico actual, ¿a qué se refiere el concepto de *Omnicanalidad*?",
+    "opciones": [
+      {
+        "text": "A la integración fluida entre los canales de distribución físicos (offline) y digitales (online) para ofrecer una experiencia continua al usuario.",
+        "isCorrect": true,
+        "rationale": "Busca que el consumidor pueda interactuar, comprar o solicitar soporte a través de cualquier canal sin perder el seguimiento de su proceso."
+      },
+      {
+        "text": "A la obligación de vender mercancías únicamente a través de la televisión abierta.",
+        "isCorrect": false,
+        "rationale": "La omnicanalidad abarca canales web, redes sociales, apps y tiendas físicas, no se limita a la televisión."
+      },
+      {
+        "text": "A la eliminación total de las tiendas físicas para operar exclusivamente en redes sociales.",
+        "isCorrect": false,
+        "rationale": "La omnicanalidad integra y conecta el entorno físico con el virtual, en lugar de destruir los puntos de venta tradicionales."
+      },
+      {
+        "text": "A un sistema de importación exclusivo para envíos aéreos de emergencia.",
+        "isCorrect": false,
+        "rationale": "Es una estrategia de atención y distribución comercial, no un método exclusivo de transporte internacional."
+      },
+      {
+        "text": "A vender un mismo producto con cuatro nombres de marcas distintas en la misma página.",
+        "isCorrect": false,
+        "rationale": "Duplicar marcas confunde al usuario y vulnera el principio de transparencia en la comunicación."
+      }
+    ],
+    "hint": "Piensa en la convergencia armoniosa entre la experiencia de venta presencial (tienda) y la experiencia digital (web/redes).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el control de calidad y gestión de postventa, ¿cuál es el porcentaje promedio de margen de error estadístico (percentil) tolerado habitualmente en un lote de producción?",
+    "opciones": [
+      {
+        "text": "Alrededor del 1%.",
+        "isCorrect": true,
+        "rationale": "En métricas operativas estándar se asume un margen de error cercano al 1%, lo que requiere contar con políticas claras de cambio o garantía para atender tales eventualidades."
+      },
+      {
+        "text": "El 25%.",
+        "isCorrect": false,
+        "rationale": "Un 25% de falla representaría un nivel inaceptable de defectos que arruinaría la rentabilidad y reputación de la empresa."
+      },
+      {
+        "text": "El 50%.",
+        "isCorrect": false,
+        "rationale": "Tener la mitad de la producción defectuosa refleja una falta total de controles de calidad con el proveedor."
+      },
+      {
+        "text": "Exactamente el 0% garantizado en todos los casos sin excepción.",
+        "isCorrect": false,
+        "rationale": "Estadísticamente es muy difícil alcanzar la falla cero permanente en procesos masivos, por lo que siempre se contempla un pequeño margen de tolerancia."
+      },
+      {
+        "text": "El 80%.",
+        "isCorrect": false,
+        "rationale": "Un margen tan elevado haría inviable cualquier modelo de negocio de importación y comercialización."
+      }
+    ],
+    "hint": "Considera la tasa mínima habitual de imperfección prevista en procesos industriales antes de tramitar garantías.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes cuadrantes corresponden a la estructura estándar de un *Mapa de Empatía* (Empathy Map)?",
+    "opciones": [
+      {
+        "text": "¿Qué piensa y siente?",
+        "isCorrect": true,
+        "rationale": "Explora las emociones, preocupaciones principales, valores y aspiraciones profundas del usuario objetivo."
+      },
+      {
+        "text": "¿Qué oye?",
+        "isCorrect": true,
+        "rationale": "Analiza las influencias del entorno, comentarios de amigos, familiares y creadores de contenido que impactan al consumidor."
+      },
+      {
+        "text": "¿Qué ve?",
+        "isCorrect": true,
+        "rationale": "Examina el contexto visual del cliente, las ofertas de la competencia, su entorno cotidiano y los anuncios que observa."
+      },
+      {
+        "text": "¿Cuáles son sus dolores o frustraciones?",
+        "isCorrect": true,
+        "rationale": "Identifica los obstáculos, miedos y barreras que el cliente enfrenta al intentar resolver una necesidad."
+      },
+      {
+        "text": "Cálculo de la depreciación de maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "Los cálculos de contabilidad sobre activos fijos no pertenecen al análisis cualitativo del consumidor en el Mapa de Empatía."
+      }
+    ],
+    "hint": "Selecciona las áreas que exploran los sentidos, emociones, comentarios del entorno y barreras del cliente en el análisis de perfil.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de utilizar la herramienta *Business Model Canvas* en la fase de planificación de una tienda virtual?",
+    "opciones": [
+      {
+        "text": "Permite visualizar y estructurar de manera sintética los 9 módulos fundamentales del modelo de negocio en un solo lienzo.",
+        "isCorrect": true,
+        "rationale": "El lienzo Canvas ayuda a conectar de forma ágil la propuesta de valor, clientes, canales, recursos, alianzas y estructura financiera del proyecto."
+      },
+      {
+        "text": "Sirve exclusivamente para imprimir el catálogo de códigos de barra para la aduana.",
+        "isCorrect": false,
+        "rationale": "No es una herramienta de etiquetado aduanero, sino un modelo visual de planificación estratégica corporativa."
+      },
+      {
+        "text": "Reemplaza la necesidad de contar con una pasarela de pagos al momento de cobrar.",
+        "isCorrect": false,
+        "rationale": "Es una herramienta teórica de diseño de negocios y no un software informático de procesamiento transaccional."
+      },
+      {
+        "text": "Su propósito es calcular automáticamente el tipo de cambio del dólar en tiempo real.",
+        "isCorrect": false,
+        "rationale": "La cotización de divisas se consulta en sistemas financieros y no mediante un lienzo de modelo de negocio."
+      },
+      {
+        "text": "Funciona como un antivirus para proteger las computadoras de la empresa.",
+        "isCorrect": false,
+        "rationale": "No es un software de ciberseguridad, sino un marco conceptual de gestión empresarial."
+      }
+    ],
+    "hint": "Piensa en el gráfico compuesto por nueve bloques que resume la lógica de cómo una empresa crea, entrega y captura valor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la teoría de gestión de clientes afirma que resulta más costoso perder a un cliente existente que captar uno nuevo?",
+    "opciones": [
+      {
+        "text": "Porque atraer a un cliente nuevo exige inversiones continuas en publicidad y prospección, mientras que retener a uno satisfecho genera compras recurrentes a menor costo.",
+        "isCorrect": true,
+        "rationale": "El costo de adquisición de clientes (CAC) en publicidad para usuarios nuevos es significativamente más alto que el costo de fidelización y recompras de clientes vigentes."
+      },
+      {
+        "text": "Porque la ley obliga a indemnizar económicamente a cada cliente que deja de comprar en la web.",
+        "isCorrect": false,
+        "rationale": "No existe ninguna legislación que imponga multas por la pérdida voluntaria de preferencia de un comprador."
+      },
+      {
+        "text": "Porque los clientes antiguos consumen el triple de ancho de banda del Hosting que los clientes nuevos.",
+        "isCorrect": false,
+        "rationale": "El tráfico web de un usuario no genera costos de Hosting significativamente diferenciados por su antigüedad."
+      },
+      {
+        "text": "Porque los clientes nuevos siempre exigen que el producto se les regale en su primera compra.",
+        "isCorrect": false,
+        "rationale": "Aunque se puedan ofrecer cupones de bienvenida, no es regla general regalar la mercancía a nuevos compradores."
+      },
+      {
+        "text": "Porque perder a un cliente provoca el cierre automático de las cuentas bancarias de la empresa.",
+        "isCorrect": false,
+        "rationale": "Las entidades bancarias operan con independencia de las fluctuaciones de la base de clientes comerciales de una tienda."
+      }
+    ],
+    "hint": "Compara el esfuerzo publicitario y económico requerido para convencer a un desconocido versus atender a alguien que ya confía en la marca.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué acciones contribuyen a fortalecer la estrategia de postventa y la fidelización de clientes en el comercio electrónico?",
+    "opciones": [
+      {
+        "text": "Diseñar programas de puntos acumulables o recompensas para compradores frecuentes.",
+        "isCorrect": true,
+        "rationale": "Incentiva la repetición de compra al premiar la lealtad del usuario con beneficios tangibles."
+      },
+      {
+        "text": "Establecer canales de atención eficientes para resolver consultas o tramitar garantías sin demoras.",
+        "isCorrect": true,
+        "rationale": "Brindar soporte rápido tras la entrega incrementa la confianza e influye positivamente en las recomendaciones del comprador."
+      },
+      {
+        "text": "Enviar comunicaciones periódicas y personalizadas (newsletter o contenido en redes) con ofertas relevantes.",
+        "isCorrect": true,
+        "rationale": "Mantiene el contacto activo con la marca según los intereses y hábitos generacionales del cliente."
+      },
+      {
+        "text": "Ignorar las solicitudes de cambio cuando el producto presenta fallos de fábrica.",
+        "isCorrect": false,
+        "rationale": "Desatender las reclamaciones destruye la reputación del negocio y genera comentarios negativos en línea."
+      },
+      {
+        "text": "Aumentar sorpresivamente las tarifas de envío una vez concretada la entrega del pedido.",
+        "isCorrect": false,
+        "rationale": "Alterar cobros con posterioridad quiebra la confianza del cliente y genera rechazo inmediato hacia la tienda."
+      }
+    ],
+    "hint": "Selecciona las decisiones orientadas a premiar la recompra, brindar soporte eficaz y mantener comunicación de valor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con las preferencias de formato por generación, ¿qué canal o medio de contenido digital resulta más adecuado para la generación *Baby Boomer*?",
+    "opciones": [
+      {
+        "text": "Blogs con artículos detallados de texto explicativo.",
+        "isCorrect": true,
+        "rationale": "Esta generación conserva un alto hábito de lectura de textos extensos y explicativos en formato de blog."
+      },
+      {
+        "text": "Videos ultracortos de 5 segundos con filtros de realidad aumentada en TikTok.",
+        "isCorrect": false,
+        "rationale": "Los formatos de ritmo vertiginoso y baja carga de texto son preferidos por generaciones más jóvenes como la Gen Z o Touch."
+      },
+      {
+        "text": "Memes de audio sin texto en plataformas de mensajería efímera.",
+        "isCorrect": false,
+        "rationale": "Los formatos basados exclusivamente en humor e iconografía no responden a los hábitos tradicionales de lectura de esta cohorte."
+      },
+      {
+        "text": "Transmisiones en vivo de videojuegos en plataformas de streaming.",
+        "isCorrect": false,
+        "rationale": "El contenido gamer en vivo se concentra en públicos de menor edad (Millennials, Gen Z y Touch)."
+      },
+      {
+        "text": "Infografías animadas exclusivas para computadoras de cómputo científico.",
+        "isCorrect": false,
+        "rationale": "No es un canal masivo de comunicación comercial adaptado a los hábitos de consumo de dicha generación."
+      }
+    ],
+    "hint": "Recuerda cuál es la cohorte generacional de mayor edad estudiada que prioriza la lectura comprensiva de texto frente a los videos efímeros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según los fundamentos teóricos del comercio y el marketing digital, ¿cuál es el objetivo central de la investigación de mercados en el contexto actual de las tiendas en línea?",
+    "opciones": [
+      {
+        "text": "Recopilar y analizar datos cuantitativos y cualitativos sobre consumidores y competidores para reducir la incertidumbre y predecir comportamientos de compra.",
+        "rationale": "La investigación moderna aprovecha el análisis de datos para anticipar tendencias de demanda y optimizar las decisiones estratégicas de la empresa.",
+        "isCorrect": true
+      },
+      {
+        "text": "Realizar exclusivamente encuestas presenciales en las calles para conocer la ubicación demográfica de la demanda local.",
+        "rationale": "Las encuestas presenciales representan una técnica tradicional limitada que no abarca el análisis predictivo de datos digitales actual.",
+        "isCorrect": false
+      },
+      {
+        "text": "Modificar la política cambiaria fijada por el Banco Central de Reserva para asegurar la rentabilidad del negocio.",
+        "rationale": "La política cambiaria es una variable macroeconómica regulada por el Estado y no un objetivo de la investigación de mercados.",
+        "isCorrect": false
+      },
+      {
+        "text": "Determinar únicamente los costos logísticos de fabricación en el mercado de origen sin evaluar a los clientes.",
+        "rationale": "Analizar únicamente los costos de origen corresponde a la evaluación de proveedores, omitiendo el estudio integral de la demanda.",
+        "isCorrect": false
+      },
+      {
+        "text": "Reemplazar la interacción comercial por campañas publicitarias masivas sin considerar la segmentación del mercado.",
+        "rationale": "El marketing digital requiere conocer el perfil del consumidor para diseñar estrategias efectivas, en lugar de lanzar publicidad no segmentada.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el proceso sistemático que combina el estudio de la oferta y la demanda mediante el análisis de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa importadora enfrenta fluctuaciones imprevistas en la cotización de la divisa extranjera y, simultáneamente, sufre retrasos en la entrega de mercadería por un empaque dañado en tránsito. ¿A qué categorías corresponden respectivamente estos eventos?",
+    "opciones": [
+      {
+        "text": "Riesgo financiero y riesgo operativo.",
+        "rationale": "Las variaciones en el tipo de cambio afectan la liquidez y costos (riesgo financiero), mientras que las fallas en el transporte o empaque alteran la ejecución logística (riesgo operativo).",
+        "isCorrect": true
+      },
+      {
+        "text": "Riesgo de mercado y riesgo financiero.",
+        "rationale": "El riesgo de mercado se relaciona con cambios en el comportamiento o preferencias de la demanda, no con fallas físicas en la logística.",
+        "isCorrect": false
+      },
+      {
+        "text": "Riesgo operativo y riesgo reputacional.",
+        "rationale": "Aunque el retraso puede impactar la reputación, la fluctuación del tipo de cambio es estrictamente un riesgo de índole financiera.",
+        "isCorrect": false
+      },
+      {
+        "text": "Riesgo financiero y riesgo de mercado.",
+        "rationale": "El daño físico en la mercadería durante el transporte es un fallo de procesos operativos, no una variación de las fuerzas del mercado.",
+        "isCorrect": false
+      },
+      {
+        "text": "Riesgo de mercado y riesgo operativo.",
+        "rationale": "La alteración en el tipo de cambio representa un riesgo financiero directo, invirtiendo el orden de los conceptos planteados.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Diferencia los factores ligados al tipo de cambio de aquellos relacionados con la ejecución física de la cadena de suministro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si un importador peruano acuerda con un proveedor extranjero que la mercadería sea entregada directamente en el almacén de destino en Perú, con impuestos y trámites cubiertos, ¿qué Incoterm se está aplicando?",
+    "opciones": [
+      {
+        "text": "DDP (Delivered Duty Paid).",
+        "rationale": "Bajo el Incoterm DDP, el vendedor asume la máxima responsabilidad, entregando la mercancía despachada de aduana en el punto de destino acordado.",
+        "isCorrect": true
+      },
+      {
+        "text": "EXW (Ex Works).",
+        "rationale": "En EXW el comprador asume casi la totalidad de los costos y riesgos desde las instalaciones del fabricante en el país de origen.",
+        "isCorrect": false
+      },
+      {
+        "text": "FOB (Free on Board).",
+        "rationale": "El Incoterm FOB limita la responsabilidad del vendedor hasta que la mercancía se sobrepasa la borda del buque en el puerto de embarque origen.",
+        "isCorrect": false
+      },
+      {
+        "text": "CIF (Cost, Insurance and Freight).",
+        "rationale": "En CIF el vendedor cubre el flete y seguro hasta el puerto de destino, pero no incluye los trámites ni tributos de importación local.",
+        "isCorrect": false
+      },
+      {
+        "text": "CIP (Carriage and Insurance Paid to).",
+        "rationale": "CIP implica la entrega al primer transportista designado, sin incluir los derechos aduaneros del país comprador.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica la regla comercial internacional donde el vendedor asume la mayor cantidad de obligaciones hasta el destino final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto económico peruano, ¿cuál de los siguientes factores macroeconómicos impulsa directamente un retroceso o bajada en el tipo de cambio del dólar frente al sol?",
+    "opciones": [
+      {
+        "text": "Un superávit en la balanza comercial y el incremento de inversiones extranjeras en sectores clave.",
+        "rationale": "El ingreso masivo de divisas por mayores exportaciones o inversiones aumenta la oferta de dólares en el mercado local, haciendo caer su precio.",
+        "isCorrect": true
+      },
+      {
+        "text": "Un déficit persistente en la balanza comercial provocado por la reducción de las exportaciones.",
+        "rationale": "Un déficit reduce la cantidad de dólares que ingresan al país, lo que tiende a presionar el tipo de cambio al alza.",
+        "isCorrect": false
+      },
+      {
+        "text": "La intervención del Banco Central de Reserva mediante la compra masiva de dólares en el mercado abierto.",
+        "rationale": "Al comprar dólares, el ente emisor retira liquidez en divisa extranjera, lo que evita que el dólar caiga o genera que suba.",
+        "isCorrect": false
+      },
+      {
+        "text": "El aumento de la fuga de capitales hacia economías exteriores por incertidumbre política.",
+        "rationale": "La salida de capitales implica una alta demanda de dólares para abandonar el país, lo que incrementa la cotización de la divisa.",
+        "isCorrect": false
+      },
+      {
+        "text": "La suspensión de los acuerdos comerciales bilaterales y multilaterales con socios internacionales.",
+        "rationale": "Interrumpir acuerdos comerciales reduce el flujo de comercio exterior y no genera una apreciación automática de la moneda local.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera cómo afecta la abundancia de divisa extranjera ingresando a la economía local en la ley de oferta y demanda.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes afirmaciones describen correctamente las funciones y diferencias entre Hosting y Dominio en el desarrollo de una tienda en línea?",
+    "opciones": [
+      {
+        "text": "El Hosting es el espacio físico o virtual en la nube donde se almacenan los archivos, imágenes y bases de datos del sitio web.",
+        "rationale": "Proporciona la infraestructura del servidor necesaria para alojar todo el contenido accesible de la tienda virtual.",
+        "isCorrect": true
+      },
+      {
+        "text": "El Dominio es la dirección URL única y personalizada que los usuarios ingresan en el navegador para identificar la tienda.",
+        "rationale": "Sirve como la identidad y la ruta lógica de acceso que conduce a los usuarios hacia el servidor donde está la web.",
+        "isCorrect": true
+      },
+      {
+        "text": "El certificado SSL vinculado al dominio garantiza el cifrado de datos y previene fraudes en el sitio.",
+        "rationale": "Asegura la autenticidad y seguridad de las conexiones mediante el protocolo HTTPS en la dirección web.",
+        "isCorrect": true
+      },
+      {
+        "text": "Comprar un Dominio internacional exime al negocio de abonar las comisiones bancarias por pasarelas de pago.",
+        "rationale": "Las pasarelas de pago aplican comisiones operativas independientemente de la extensión de dominio que utilice la web.",
+        "isCorrect": false
+      },
+      {
+        "text": "El Hosting reemplaza la necesidad de realizar tramitaciones tributarias y aduaneras en el proceso de importación.",
+        "rationale": "El alojamiento web es un recurso tecnológico y no tiene vinculación con las normativas legales o aduaneras de importación.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Diferencia entre el espacio de almacenamiento de archivos y la dirección de identificación en la web.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera transforma la Inteligencia Artificial (IA) la investigación de mercados contemporánea frente a las metodologías tradicionales?",
+    "opciones": [
+      {
+        "text": "Permite procesar grandes volúmenes de datos digitales para inferir patrones de conducta futuros sin depender únicamente de encuestas físicas.",
+        "rationale": "La analítica avanzada e IA pasa de la mera descripción cualitativa a la estadística inferencial y predictiva de comportamientos de compra.",
+        "isCorrect": true
+      },
+      {
+        "text": "Sustituye por completo la necesidad de establecer un público objetivo o target para los productos importados.",
+        "rationale": "La IA ayuda a definir y refinar el target, pero nunca elimina la necesidad conceptual de dirigirse a un segmento de mercado.",
+        "isCorrect": false
+      },
+      {
+        "text": "Garantiza de forma automática que los proveedores internacionales envíen la mercancía sin ningún margen de error físico.",
+        "rationale": "El control de calidad físico y operativo en fábrica requiere procesos humanos de inspección y estándares logísticos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Reemplaza la obligatoriedad legal de pagar tributos arancelarios al ingresar productos al país.",
+        "rationale": "El cumplimiento tributario y aduanero es una obligación fiscal independiente de las herramientas de investigación empleadas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Obliga a las empresas a operar exclusivamente en establecimientos comerciales físicos y locales.",
+        "rationale": "La IA potencia especialmente las estrategias digitales y e-commerce, en lugar de restringir los negocios al entorno físico.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el paso de la recolección manual de encuestas al análisis masivo y predictivo de datos digitales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el diseño de la experiencia de usuario (UX) para tiendas virtuales, ¿cuál es la razón técnica para colocar el logo a la izquierda, el buscador al centro y el carrito a la derecha?",
+    "opciones": [
+      {
+        "text": "Sigue los patrones visuales de mapas de calor aprendidos, evitando activar la alerta del cerebro reptiliano para retener al usuario.",
+        "rationale": "Estructurar la página de forma intuitiva reduce el esfuerzo cognitivo y evita que el usuario abandone el sitio por percepción de amenaza o incomodidad.",
+        "isCorrect": true
+      },
+      {
+        "text": "Es una regulación técnica obligatoria exigida por la SUNAT para habilitar páginas de e-commerce en Perú.",
+        "rationale": "La autoridad tributaria exige transparencia y comprobantes de pago, pero no legisla sobre la maquetación web de las empresas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Asegura que la tienda reduzca a la mitad el costo del consumo de ancho de banda del Hosting.",
+        "rationale": "La disposición de los elementos gráficos responde a la usabilidad y no al peso de transferencia de datos en el servidor.",
+        "isCorrect": false
+      },
+      {
+        "text": "Permite ocultar los costos logísticos e impuestos durante todo el proceso de navegación y pago.",
+        "rationale": "Ocultar costos distorsiona la transparencia del precio final y genera rechazo o abandono del carrito al momento del pago.",
+        "isCorrect": false
+      },
+      {
+        "text": "Es la condición indispensable para que Google otorgue posicionamiento SEM gratuito de por vida.",
+        "rationale": "El posicionamiento SEM se basa en subastas publicitarias de pago y no en la distribución fija de elementos de la interfaz.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Relaciona la frecuencia de escaneo visual con la respuesta instintiva que determina si un visitante se queda o abandona la web.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué implica técnicamente que una tienda virtual implemente un diseño de tipo 'responsive'?",
+    "opciones": [
+      {
+        "text": "Que la arquitectura web adapta automáticamente la maquetación y contenidos al tamaño de pantalla de cualquier dispositivo.",
+        "rationale": "Garantiza una navegación óptima tanto en teléfonos móviles como en tablets o computadoras de escritorio.",
+        "isCorrect": true
+      },
+      {
+        "text": "Que la tienda responde preguntas de soporte de manera automatizada mediante bots de inteligencia artificial.",
+        "rationale": "Las respuestas automáticas corresponden al área de atención al cliente automatizada, no al diseño adaptable de la interfaz.",
+        "isCorrect": false
+      },
+      {
+        "text": "Que los productos son despachados en un plazo menor a 24 horas hacia el domicilio del cliente.",
+        "rationale": "El tiempo de despacho es un indicador de eficiencia logística y no una propiedad de diseño web.",
+        "isCorrect": false
+      },
+      {
+        "text": "Que la plataforma actualiza sus precios de manera dinámica según las variaciones del tipo de cambio.",
+        "rationale": "El ajuste dinámico de precios corresponde a la integración de sistemas de facturación con divisas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Que el código fuente del sitio web se ejecuta únicamente en navegadores de computadoras de escritorio.",
+        "rationale": "El diseño responsive busca precisamente romper la exclusividad del escritorio, priorizando el tráfico móvil.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en la capacidad de la plataforma para verse adecuadamente tanto en una computadora como en un teléfono celular.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre la optimización SEO y las campañas de posicionamiento SEM en motores de búsqueda?",
+    "opciones": [
+      {
+        "text": "El SEO logra visibilidad orgánica mediante la relevancia de contenidos y menciones, mientras que el SEM requiere pagos directos por publicidad.",
+        "rationale": "El SEO construye autoridad orgánica a través del comportamiento de la demanda, mientras que el SEM compra espacio publicitario mediante anuncios patrocinados.",
+        "isCorrect": true
+      },
+      {
+        "text": "El SEO exige un pago fijo por cada clic recibido, mientras que el SEM es completamente gratuito y natural.",
+        "rationale": "Esta afirmación invierte los conceptos, ya que el modelo de pago por clic caracteriza a la publicidad SEM.",
+        "isCorrect": false
+      },
+      {
+        "text": "El SEO es exclusivo para dispositivos móviles y el SEM se utiliza únicamente en computadoras de escritorio.",
+        "rationale": "Ambas estrategias funcionan de manera transversal en cualquier dispositivo con conexión a motores de búsqueda.",
+        "isCorrect": false
+      },
+      {
+        "text": "El SEO se utiliza para investigar proveedores y el SEM se enfoca en la gestión de logística inversa.",
+        "rationale": "Ambas son herramientas de promoción y posicionamiento para la atracción de demanda hacia la tienda en línea.",
+        "isCorrect": false
+      },
+      {
+        "text": "No existe diferencia conceptual ni operativa, ya que corresponden al mismo algoritmo interno de búsqueda.",
+        "rationale": "Son dos disciplinas distintas de marketing digital, diferenciables por el canal de atribución monetario u orgánico.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Diferencia el posicionamiento alcanzado por reputación y contenido orgánico de aquel obtenido mediante pago de pauta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al integrar pasarelas de pago y procesar compras en una tienda virtual, ¿cuáles de las siguientes prácticas son recomendadas para mitigar el riesgo transaccional?",
+    "opciones": [
+      {
+        "text": "Terciarizar el procesamiento financiero con pasarelas certificadas para evitar almacenar datos sensibles de tarjetas.",
+        "rationale": "Delegar la transacción a operadores especializados reduce la responsabilidad directa y los riesgos de vulneraciones de seguridad.",
+        "isCorrect": true
+      },
+      {
+        "text": "Asegurar que la web cuente con protocolo HTTPS mediante certificado SSL para cifrar la información transferida.",
+        "rationale": "El certificado SSL garantiza que la información viaja protegida entre el navegador del usuario y el servidor.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ofrecer alternativas locales populares como billeteras digitales para facilitar la conversión inmediata.",
+        "rationale": "Incluir billeteras de uso masivo reduce la fricción en el checkout y mejora la experiencia de compra del usuario local.",
+        "isCorrect": true
+      },
+      {
+        "text": "Guardar en bases de datos locales del servidor los números completos de tarjeta y códigos CVV de los clientes.",
+        "rationale": "Almacenar datos sensibles de tarjetas en servidores locales vulnera los estándares de seguridad y expone al negocio a robos de información.",
+        "isCorrect": false
+      },
+      {
+        "text": "Añadir la comisión del procesador de pagos como un cobro sorpresa no anunciado al finalizar el checkout.",
+        "rationale": "Introducir cargos ocultos rompe la transparencia de cara al usuario y genera abandono inmediato de compras.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica las medidas de ciberseguridad y transparencia financiera que protegen tanto al comerciante como al comprador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para una startup que se encuentra validando su idea de negocio sin capital de trabajo elevado, ¿por qué es estratégico utilizar plataformas SaaS en modo gratuito antes de programar una web a medida?",
+    "opciones": [
+      {
+        "text": "Permite lanzar un catálogo funcional a costo inicial casi nulo, respetando el principio de baja inversión de una startup.",
+        "rationale": "Permite probar el interés del mercado de forma ágil y económica sin comprometer grandes recursos financieros al inicio.",
+        "isCorrect": true
+      },
+      {
+        "text": "Exime a la empresa de incluir tributos e impuestos locales al momento de comercializar los bienes.",
+        "rationale": "Las obligaciones fiscales de venta se rigen por la ley nacional y no por el tipo de software utilizado para la tienda.",
+        "isCorrect": false
+      },
+      {
+        "text": "Garantiza automáticamente el primer lugar de resultados de búsqueda pagados en Google sin invertir en anuncios.",
+        "rationale": "El posicionamiento en buscadores requiere trabajo de SEO o pauta en SEM, no de la simple elección de un constructor SaaS.",
+        "isCorrect": false
+      },
+      {
+        "text": "Otorga la propiedad absoluta e ilimitada del código fuente y servidor sin marcas de agua del proveedor.",
+        "rationale": "Las versiones gratuitas de plataformas SaaS mantienen la marca de agua del servicio y no entregan el código fuente propietario.",
+        "isCorrect": false
+      },
+      {
+        "text": "Elimina de forma permanente la necesidad de brindar servicio al cliente o contar con políticas de garantía.",
+        "rationale": "El servicio al cliente es un pilar operativo esencial para cualquier modelo de negocio independientemente de la plataforma.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Relaciona el concepto de un emprendimiento en etapa inicial con la necesidad de minimizar los desembolsos monetarios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al planificar la compra de Hosting y Dominio para un proyecto comercial, ¿qué factor financiero se debe prever respecto a las ofertas promocionales del primer año?",
+    "opciones": [
+      {
+        "text": "Que la tarifa de renovación para los años siguientes suele incrementarse significativamente en comparación al costo de entrada.",
+        "rationale": "Las empresas proveedoras atraen clientes con precios de enganche bajos que luego se reajustan a tarifas estándar más elevadas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Que comprar un dominio comercial internacional impide realizar ventas dentro del territorio peruano.",
+        "rationale": "Cualquier extensión de dominio válida (.com, .net, etc.) permite transaccionar comercialmente a nivel local e internacional.",
+        "isCorrect": false
+      },
+      {
+        "text": "Que adquirir un Hosting por tres años obliga legalmente a la empresa a constituirse como Persona Jurídica.",
+        "rationale": "La contratación de servicios web privados no determina ni condiciona la personería jurídica tributaria ante el Estado.",
+        "isCorrect": false
+      },
+      {
+        "text": "Que los certificados de seguridad SSL dejan de funcionar en dominios con extensión comercial .com.",
+        "rationale": "Los certificados SSL funcionan en todo tipo de dominios de primer nivel independientemente de su terminación.",
+        "isCorrect": false
+      },
+      {
+        "text": "Que los dominios gratuitos de prueba aseguran el registro de la marca comercial en el INDECOPI.",
+        "rationale": "El registro de una marca comercial es un trámite legal independiente al alquiler temporal de un dominio web.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera el cambio de costo que sufren los servicios tecnológicos una vez vencido el periodo inicial de descuento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la estructura de costos y precios recomendada para el e-commerce, ¿cuál es el orden secuencial correcto para determinar el precio final transparente al consumidor?",
+    "opciones": [
+      {
+        "text": "Costo fijo + Costo variable + Margen de utilidad + Gasto financiero + Impuesto = Precio final.",
+        "rationale": "Cada componente debe ir sumándose en orden lógico para asegurar el margen deseado y cubrir la comisión transaccional e impuestos legales.",
+        "isCorrect": true
+      },
+      {
+        "text": "Costo fijo + Impuesto + Gasto financiero + Costo variable = Precio final.",
+        "rationale": "Omitir la utilidad y alterar la base del cálculo del impuesto distorsiona la sostenibilidad financiera del negocio.",
+        "isCorrect": false
+      },
+      {
+        "text": "Margen de utilidad + Gasto financiero + Impuesto - Costo fijo = Precio final.",
+        "rationale": "Restar los costos fijos en lugar de sumarlos generaría un cálculo negativo incapaz de cubrir la operación.",
+        "isCorrect": false
+      },
+      {
+        "text": "Costo variable + Gasto financiero + Impuesto = Precio final.",
+        "rationale": "Este esquema olvida cubrir los costos fijos y no contempla la utilidad esperada para la empresa.",
+        "isCorrect": false
+      },
+      {
+        "text": "Costo fijo + Costo variable + Impuesto + Recargo sorpresa = Precio final.",
+        "rationale": "Agregar recargos arbitrarios vulnera la transparencia de precios y perjudica la retención de clientes.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Asegúrate de incluir los costos operativos, la ganancia deseada, la comisión por cobranza y el tributo legal en el orden correcto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué hito operativo representa la transición formal de operar como Persona Natural con Negocio a constituirse como Persona Jurídica?",
+    "opciones": [
+      {
+        "text": "La apertura de un establecimiento comercial físico abierto al público o la contratación formal de personal para operar la actividad.",
+        "rationale": "Asumir responsabilidades comerciales complejas y contratar personal requiere separar el patrimonio personal del empresarial mediante una entidad jurídica.",
+        "isCorrect": true
+      },
+      {
+        "text": "La realización del primer cobro utilizando una billetera digital como Yape o Plin.",
+        "rationale": "Las billeteras digitales son utilizadas tanto por personas naturales como jurídicas sin definir la estructura societaria.",
+        "isCorrect": false
+      },
+      {
+        "text": "El uso exclusivo de redes sociales para vender productos de forma esporádica desde la vivienda.",
+        "rationale": "Las ventas ocasionales desde el hogar encajan en la figura de persona natural con negocio sin necesidad de constituir una empresa.",
+        "isCorrect": false
+      },
+      {
+        "text": "La creación de un perfil de usuario en una plataforma de prueba web gratuita.",
+        "rationale": "Registrarse en un software SaaS no modifica el estatus legal ni la personería tributaria del emprendedor.",
+        "isCorrect": false
+      },
+      {
+        "text": "La importación esporádica de muestras sin valor comercial para uso estrictamente personal.",
+        "rationale": "Las importaciones personales no comerciales no constituyen actividad empresarial jurídica.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Analiza qué nivel de infraestructura física y relación laboral exige diferenciar el patrimonio personal de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al utilizar un proveedor de transporte tercerizado para los envíos de última milla, ¿cómo debe presentarse el costo del flete en la tienda virtual?",
+    "opciones": [
+      {
+        "text": "Como un rubro adicional transparente desglosado según la zona geográfica del cliente, separado del valor base del producto.",
+        "rationale": "Informar el costo de envío de forma clara evita sorpresas y ajusta la tarifa según la distancia real hasta el destino.",
+        "isCorrect": true
+      },
+      {
+        "text": "Como una tarifa fija obligatoria idéntica para todos los destinos, sin importar la distancia geográfica del despacho.",
+        "rationale": "Cobrar una tarifa plana sin considerar zonas muy distantes puede generar pérdidas logísticas o sobrecostos injustos para clientes cercanos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Absorbiéndolo de forma obligatoria dentro de los costos fijos de fabricación de la empresa.",
+        "rationale": "El flete de última milla no es un costo de producción sino un servicio logístico de distribución variable.",
+        "isCorrect": false
+      },
+      {
+        "text": "Ocultando el valor del transporte para sumarlo como un cobro imprevisto al momento de la entrega en efectivo.",
+        "rationale": "Los cobros sorpresa al momento de la entrega destruyen la confianza del usuario y generan rechazo del pedido.",
+        "isCorrect": false
+      },
+      {
+        "text": "Obligando al comprador a realizar el pago del envío exclusivamente mediante depósitos bancarios presenciales.",
+        "rationale": "Restringir los canales de pago del flete incrementa la fricción y perjudica la conversión de la venta en línea.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera cómo debe comunicarse un servicio tercerizado que varía en función de la ubicación final del comprador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el consumo de medios por grupo generacional, ¿cuáles de las siguientes parejas entre público objetivo y canal digital se alinean correctamente?",
+    "opciones": [
+      {
+        "text": "Baby Boomers - Blogs y artículos en sitios web con contenido de texto extenso.",
+        "rationale": "Las generaciones de mayor edad conservan el hábito de lectura detallada de textos explicativos en formatos digitales tradicionales.",
+        "isCorrect": true
+      },
+      {
+        "text": "Generación X - Redes sociales con mezcla de texto, imágenes y videos de duración intermedia.",
+        "rationale": "Esta generación procesa adecuadamente formatos híbridos que equilibran la información detallada con contenido audiovisual.",
+        "isCorrect": true
+      },
+      {
+        "text": "Millennials y Gen Touch - Plataformas audiovisuales de formato corto y dinámico como TikTok o Reels.",
+        "rationale": "Los públicos más jóvenes demandan estímulos visuales rápidos e inmediatos en formato vertical de corta duración.",
+        "isCorrect": true
+      },
+      {
+        "text": "Baby Boomers - Contenidos efímeros de 15 segundos exclusivamente en TikTok.",
+        "rationale": "Este grupo no es el usuario nativo de formatos de video ultracorto y prefiere lecturas de mayor profundidad.",
+        "isCorrect": false
+      },
+      {
+        "text": "Gen Touch - Blogs extensos sin elementos multimedia ni gráficos interactivos.",
+        "rationale": "Los usuarios pertenecientes a la generación Touch responden prioritariamente a interfaces altamente visuales e interactivas.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Relaciona el formato de contenido (texto, video largo, video corto) con la edad y hábitos de consumo del público.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando una empresa publica imágenes y textos originales elaborados por ella en una red social de terceros, ¿a quién pertenece la propiedad intelectual de dicho contenido digital?",
+    "opciones": [
+      {
+        "text": "A la empresa o autor que creó y redactó el contenido original.",
+        "rationale": "Los derechos de autor sobre las creaciones originales corresponden a su creador, aunque la plataforma disponga de licencias de uso para la red.",
+        "isCorrect": true
+      },
+      {
+        "text": "Exclusivamente a la red social o plataforma que aloja la publicación.",
+        "rationale": "Las plataformas obtienen licencias para mostrar el contenido, pero no la titularidad de los derechos de autor originales.",
+        "isCorrect": false
+      },
+      {
+        "text": "A la pasarela de pago que procesa las compras derivadas de esa red social.",
+        "rationale": "El procesador financiero no tiene vinculación con los derechos de propiedad intelectual del material publicitario.",
+        "isCorrect": false
+      },
+      {
+        "text": "Al fabricante internacional que proveyó la mercancía fotografiada.",
+        "rationale": "El fabricante posee derechos sobre el producto físico, pero no sobre las piezas publicitarias creadas por el distribuidor local.",
+        "isCorrect": false
+      },
+      {
+        "text": "Se convierte automáticamente en propiedad estatal de libre dominio público.",
+        "rationale": "Publicar contenido en redes sociales no equivale a renunciar a los derechos de autor para que pasen al Estado.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Diferencia entre el medio o plataforma que distribuye la publicación y la autoría de la pieza gráfica o escrita.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco del mix de marketing digital (4 Ps), ¿qué representa el elemento 'Plaza' cuando se aplica a una tienda virtual?",
+    "opciones": [
+      {
+        "text": "La definición, localización digital y comportamiento del público objetivo o target al que se dirige la tienda.",
+        "rationale": "En entornos digitales, la Plaza evoluciona de un espacio físico al mapa de canales y entornos web donde se encuentra la demanda objetivo.",
+        "isCorrect": true
+      },
+      {
+        "text": "La tasa de interés aplicada por las entidades financieras al procesar los cobros con tarjeta.",
+        "rationale": "El costo por procesamiento de tarjetas corresponde a los gastos financieros del precio y no a la Plaza.",
+        "isCorrect": false
+      },
+      {
+        "text": "El valor del margen de utilidad nula fijado para cubrir los gastos administrativos.",
+        "rationale": "La utilidad es un componente económico del Precio y no define los canales o mercados de distribución.",
+        "isCorrect": false
+      },
+      {
+        "text": "La especificación técnica del empaque secundario de la mercancía importada.",
+        "rationale": "Las características físicas del producto y empaque pertenecen al elemento Producto dentro del mix de marketing.",
+        "isCorrect": false
+      },
+      {
+        "text": "El costo de alquiler de una tienda en un centro comercial tradicional.",
+        "rationale": "Para una tienda virtual, la Plaza se enfoca en el entorno digital y de distribución online, en lugar de locales físicos tradicionales.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el equivalente digital del espacio o mercado donde interactúan la oferta y la demanda objetivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la implementación de una estrategia de comercio 'omnicanal'?",
+    "opciones": [
+      {
+        "text": "En integrar de manera fluida y coherente los canales de atención físicos y digitales para brindar una experiencia continua al cliente.",
+        "rationale": "La omnicanalidad sincroniza los puntos de contacto online y offline de forma que el usuario puede transicionar entre ellos sin interrupciones.",
+        "isCorrect": true
+      },
+      {
+        "text": "En vender exclusivamente a través de tiendas físicas cerrando todo canal de atención digital.",
+        "rationale": "Remplazar lo digital por lo presencial elimina la integración de canales y corresponde a un modelo exclusivamente tradicional.",
+        "isCorrect": false
+      },
+      {
+        "text": "En utilizar un único canal de comunicación digital eliminando el resto de redes sociales y web.",
+        "rationale": "Depender de una sola vía es una estrategia monocanal, opuesta al principio de múltiples puntos de contacto integrados.",
+        "isCorrect": false
+      },
+      {
+        "text": "En aplicar precios y promociones contradictorias en cada canal para competir contra la propia marca.",
+        "rationale": "La omnicanalidad requiere mantener coherencia de precios e información para evitar confundir al comprador.",
+        "isCorrect": false
+      },
+      {
+        "text": "En tercerizar el proceso de fabricación para operar únicamente como intermediario financiero sin inventario.",
+        "rationale": "El modelo de intermediación o dropshipping se refiere a la gestión de inventario y no a la estrategia de canales de comunicación.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera la fusión armoniosa entre la experiencia de venta presencial y el comercio electrónico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión postventa de una tienda en línea, considerando que existe un margen estadístico inevitable de defectuosos de fábrica (~1%), ¿cuál es la conducta adecuada para proteger la marca?",
+    "opciones": [
+      {
+        "text": "Disponer de políticas claras de devolución y garantía que especifiquen plazos, condiciones y canales de atención.",
+        "rationale": "Contar con un protocolo transparente para el reemplazo o solución ante fallas minimiza el impacto negativo y conserva la confianza del cliente.",
+        "isCorrect": true
+      },
+      {
+        "text": "Negar todo cambio señalando que la responsabilidad es 100% del cliente por haber comprado por internet.",
+        "rationale": "Evadir la garantía daña la reputación del negocio y contraviene las normas de protección al consumidor.",
+        "isCorrect": false
+      },
+      {
+        "text": "Cobrar una penalización económica adicional al usuario para poder revisar la mercancía defectuosa.",
+        "rationale": "Imponer cobros por aplicar una garantía justa genera rechazo y repercusiones legales negativas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Derivar al cliente a contactar por su cuenta al fabricante directo en el extranjero en otro idioma.",
+        "rationale": "Es el distribuidor local quien debe responder ante el usuario final, gestionando la garantía con su cadena de suministros.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminar la presencia en redes sociales para evitar que el comprador publique reclamos públicos.",
+        "rationale": "Cerrar canales de comunicación destruye la confianza y elimina la posibilidad de retener o fidelizar clientes.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Busca la respuesta centrada en brindar soluciones transparentes para el reemplazo o reparación de productos fallados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes secciones forman parte de la estructura de un Mapa de Empatía (Empathy Map) para el análisis cualitativo del cliente?",
+    "opciones": [
+      {
+        "text": "¿Qué piensa y siente? (Preocupaciones principales, aspiraciones y valores).",
+        "rationale": "Explora el entorno emocional e intelectual interno que influye en las decisiones del usuario.",
+        "isCorrect": true
+      },
+      {
+        "text": "¿Qué oye? (Influencia del entorno familiar, amigos e influencers).",
+        "rationale": "Mide el impacto de la presión social y los canales de comunicación externos en el comprador.",
+        "isCorrect": true
+      },
+      {
+        "text": "Dolores/Frustraciones y Necesidades/Deseos.",
+        "rationale": "Identifica los obstáculos que el cliente desea evitar y los beneficios clave que busca obtener.",
+        "isCorrect": true
+      },
+      {
+        "text": "Cálculo exacto del costo arancelario y la subpartida nacional de importación.",
+        "rationale": "La clasificación arancelaria forma parte de los procesos de aduana y no del análisis cualitativo del consumidor.",
+        "isCorrect": false
+      },
+      {
+        "text": "Fórmula matemática de la depreciación de activos fijos del servidor.",
+        "rationale": "La depreciación de activos es un concepto puramente contable y ajeno al perfil de empatía del cliente.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica los bloques que estudian las percepciones, estímulos sensoriales y motivaciones del consumidor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué resulta comercialmente más rentable enfocar recursos en estrategias de fidelización y retención de clientes en una tienda virtual?",
+    "opciones": [
+      {
+        "text": "Porque el costo de adquisición de un cliente nuevo es mayor que el costo de incentivar la recompra en un cliente satisfecho.",
+        "rationale": "Retener a un comprador existente requiere menos inversión publicitaria y genera mayores ingresos por recomendaciones directas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Porque los clientes fidelizados no exigen la entrega de comprobantes de pago ni el cumplimiento de garantías.",
+        "rationale": "Todo cliente, recurrente o nuevo, tiene derecho a exigir comprobantes y cumplimiento de normativas de consumo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Porque la fidelización elimina el costo impositivo del impuesto a las ventas en las transacciones futuras.",
+        "rationale": "Los tributos se aplican a todas las operaciones comerciales independientemente de la antigüedad del cliente.",
+        "isCorrect": false
+      },
+      {
+        "text": "Porque permite prescindir del uso de pasarelas de pago seguras al cobrar por transferencia informal.",
+        "rationale": "La seguridad transaccional debe mantenerse en todo momento para proteger la operación del e-commerce.",
+        "isCorrect": false
+      },
+      {
+        "text": "Porque los clientes antiguos aceptan recibir productos con fallas de fábrica sin presentar reclamos.",
+        "rationale": "Un cliente recurrente exige la misma o mayor calidad en el servicio para mantener su lealtad hacia la marca.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Compara la inversión necesaria para convencer a un desconocido frente al esfuerzo para volver a venderle a un cliente contento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el lienzo del modelo de negocio (Business Model Canvas) para un e-commerce, ¿cuál es la función de la 'Propuesta de Valor'?",
+    "opciones": [
+      {
+        "text": "Definir el conjunto de productos, servicios y beneficios diferenciadores que solucionan los problemas del segmento de clientes.",
+        "rationale": "La propuesta de valor sintetiza la razón por la cual un cliente elegirá a la empresa por encima de las alternativas competidoras.",
+        "isCorrect": true
+      },
+      {
+        "text": "Detallar el listado de todos los fabricantes extranjeros de la cadena de aprovisionamiento.",
+        "rationale": "La lista de fabricantes forma parte del bloque de Socios Clave o Recursos Clave en el lienzo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Registrar el desglose del pago del impuesto a la renta realizado en el ejercicio fiscal anterior.",
+        "rationale": "El registro de pagos de impuestos corresponde a la contabilidad financiera y no al diseño del modelo de negocio.",
+        "isCorrect": false
+      },
+      {
+        "text": "Especificar las credenciales técnicas de administración del servidor de alojamiento web.",
+        "rationale": "Los datos de acceso al servidor son activos operativos que no representan la oferta de valor hacia el usuario.",
+        "isCorrect": false
+      },
+      {
+        "text": "Enumerar únicamente las comisiones cobradas por los bancos locales.",
+        "rationale": "Las comisiones bancarias forman parte de la Estructura de Costos del modelo de negocio.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en el elemento que explica la solución única y los beneficios que la tienda ofrece para satisfacer la necesidad del usuario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son los tres pilares fundamentales que definen la etapa inicial de una Startup?",
+    "opciones": [
+      {
+        "text": "Propuesta de negocio innovadora, bajo nivel de inversión inicial y un equipo pequeño de cofundadores.",
+        "rationale": "Una startup busca validar ágilmente una solución novedosa en el mercado minimizando el capital de riesgo y manteniendo agilidad en la gestión.",
+        "isCorrect": true
+      },
+      {
+        "text": "Infraestructura física propia, capital masivo de entrada y múltiples locales comerciales.",
+        "rationale": "Poseer grandes activos físicos e inversiones pesadas caracteriza a las empresas corporativas tradicionales, no a una startup ligera.",
+        "isCorrect": false
+      },
+      {
+        "text": "Contratación de un dominio de alto costo, exención total de impuestos y ausencia de competidores.",
+        "rationale": "El tipo de dominio y las obligaciones tributarias o la presencia de competidores no definen la naturaleza de una startup.",
+        "isCorrect": false
+      },
+      {
+        "text": "Operación exclusiva en tiendas físicas, gran plantilla de empleados y crédito bancario masivo.",
+        "rationale": "Las startups priorizan entornos escalables y digitales con estructuras livianas de personal e inversión.",
+        "isCorrect": false
+      },
+      {
+        "text": "Ausencia de productos comerciales, mercados saturados y costos fijos de operación elevados.",
+        "rationale": "Incurrir en costos fijos elevados sin contar con una propuesta valida contradice los principios de supervivencia de una startup.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerda las características de un proyecto emprendedor ágil que busca validar su producto con presupuesto reducido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-44",
+    "diplomado": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué beneficios directos genera la práctica de la transparencia informativa (fotografías reales, desglose de costos y políticas claras) en una tienda en línea?",
+    "opciones": [
+      {
+        "text": "Reduce la tasa de devoluciones y reclamos al alinear las expectativas del cliente con el producto real que recibirá.",
+        "rationale": "Mostrar el producto tal cual es evita frustraciones post-compra y disminuye la tasa de rechazo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Genera confianza en el comprador, favoreciendo las valoraciones positivas y la recomendación boca a boca.",
+        "rationale": "La honestidad comercial fortalece la reputación digital de la tienda y atrae nuevos usuarios por recomendación.",
+        "isCorrect": true
+      },
+      {
+        "text": "Elimina los conflictos en el checkout derivados de cobros imprevistos o gastos ocultos.",
+        "rationale": "Desglosar los impuestos y fletes desde el inicio evita sorpresas desagradables al momento de pagar.",
+        "isCorrect": true
+      },
+      {
+        "text": "Otorga una exención legal permanente del pago del impuesto general a las ventas (IGV).",
+        "rationale": "La transparencia es una buena práctica comercial, pero no modifica las leyes tributarias aplicables a las ventas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Permite reajustar el precio al alza de forma unilateral una vez que el pago ha sido procesado.",
+        "rationale": "Aumentar el precio de manera posterior a la transacción es una práctica abusiva que destruye la confianza y vulnera las normas.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica cómo la honestidad en la información publicada impacta en la lealtad de la demanda y en la disminución de disputas.",
+    "activo": true
+  }
+]

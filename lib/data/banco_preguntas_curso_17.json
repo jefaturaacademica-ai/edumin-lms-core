@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define técnicamente una emergencia industrial dentro de la gestión de riesgos en planta o minería?",
+    "opciones": [
+      {
+        "text": "Una situación inesperada que interrumpe las operaciones normales y pone en riesgo a las personas o al entorno.",
+        "isCorrect": true,
+        "rationale": "Esta definición sintetiza la naturaleza fortuita de las emergencias industriales y el peligro inminente que representan para la integridad física del personal y las instalaciones."
+      },
+      {
+        "text": "Un procedimiento programado de parada de planta para realizar mantenimiento preventivo.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento preventivo es una actividad planificada con anticipación, a diferencia de una emergencia que se presenta de forma inesperada."
+      },
+      {
+        "text": "Una auditoría administrativa llevada a cabo por los organismos reguladores del Estado.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones o auditorías gubernamentales son actividades de control normativo, no eventos críticos que pongan en peligro inmediato a la operación."
+      },
+      {
+        "text": "La renovación anual de la licencia municipal de funcionamiento de la empresa.",
+        "isCorrect": false,
+        "rationale": "Trata de un trámite legal y burocrático periódico que no implica la interrupción violenta de los procesos productivos."
+      },
+      {
+        "text": "Una charla de inducción de 5 minutos impartida al personal antes de iniciar el turno de trabajo.",
+        "isCorrect": false,
+        "rationale": "Las charlas breves son medidas formativas y de sensibilización cotidiana, no una condición de crisis imprevista."
+      }
+    ],
+    "hint": "Considera el carácter imprevisto del evento y su impacto inmediato sobre la seguridad y la continuidad operativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión moderna del riesgo de emergencias, ¿en qué consiste la gestión proactiva?",
+    "opciones": [
+      {
+        "text": "Esperar a que ocurra el incidente para contratar a un perito que determine las causas.",
+        "isCorrect": false,
+        "rationale": "Contratar a un perito después de ocurrido el evento constituye una gestión reactiva tradicional centrada en el análisis posterior al daño."
+      },
+      {
+        "text": "Evaluar posibles causas y consecuencias previamente, preparando controles, capacitaciones y simulacros antes de que el evento ocurra.",
+        "isCorrect": true,
+        "rationale": "La proactividad busca anticiparse al peligro preparando respuestas operativas, estándares de control y programas preventivos antes de que se desate la emergencia."
+      },
+      {
+        "text": "Reconstruir la infraestructura dañada utilizando fondos del seguro tras un incendio.",
+        "isCorrect": false,
+        "rationale": "Esta medida es de reparación y mitigación posterior a la crisis, propia de un enfoque reactivo."
+      },
+      {
+        "text": "Limitarse al pago de indemnizaciones legales a las familias de los accidentados.",
+        "isCorrect": false,
+        "rationale": "El cumplimiento de responsabilidades legales tras un accidente grave no evita el daño ni previene futuros sucesos."
+      },
+      {
+        "text": "Implementar medidas correctivas únicamente cuando las autoridades emiten una sanción económica.",
+        "isCorrect": false,
+        "rationale": "Actuar condicionado por fiscalizaciones o sanciones representa una actitud puramente reactiva y sumisa frente al cumplimiento normativo."
+      }
+    ],
+    "hint": "Se enfoca en anticipar los escenarios de peligro y tomar medidas preventivas antes de que se presente el siniestro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones constituyen medidas de prevención eficaces frente al riesgo de incendios en las instalaciones industriales?",
+    "opciones": [
+      {
+        "text": "Instalación de sistemas de detección temprana de humo y gas.",
+        "isCorrect": true,
+        "rationale": "Los detectores permiten alertar de forma automática la presencia de fuego o gases inflamables antes de que el evento se extienda."
+      },
+      {
+        "text": "Implementación de redes de rociadores automáticos de agua u otros agentes extintores.",
+        "isCorrect": true,
+        "rationale": "Los sistemas rociadores responden de manera autónoma para sofocar o contener los amagos de incendio en áreas críticas."
+      },
+      {
+        "text": "Mantenimiento periódico y prueba de funcionamiento de la red contraincendios.",
+        "isCorrect": true,
+        "rationale": "Garantizar que las bombas y tuberías tengan la presión adecuada asegura la operatividad de la respuesta de la brigada."
+      },
+      {
+        "text": "Eliminación total de los extintores portátiles en pasillos para evitar bloqueos de paso.",
+        "isCorrect": false,
+        "rationale": "Los extintores son la primera línea de defensa manual indispensable para combatir amagos iniciales de fuego."
+      },
+      {
+        "text": "Omisión de la capacitación a brigadistas para no interrumpir el ritmo de producción.",
+        "isCorrect": false,
+        "rationale": "La falta de preparación en el personal capacitado incrementa el riesgo de pérdidas humanas en caso de siniestro."
+      }
+    ],
+    "hint": "Considera tanto los equipos de detección automática como la preparación operativa y de combate directo del fuego.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Ante la ocurrencia de un accidente o falla severa al operar maquinaria pesada, ¿cuál es la primera acción inmediata que debe ejecutar el operador?",
+    "opciones": [
+      {
+        "text": "Continuar maniobrando la maquinaria hasta culminar la cuota de producción del día.",
+        "isCorrect": false,
+        "rationale": "Seguir operando bajo condiciones de falla grave incrementa drásticamente el peligro de volcadura o colisión."
+      },
+      {
+        "text": "Desmontar la estructura defectuosa por cuenta propia sin herramientas certificadas.",
+        "isCorrect": false,
+        "rationale": "Intervenir partes mecánicas o hidráulicas sin autorización o aislamiento pone en riesgo directo la integridad física del operador."
+      },
+      {
+        "text": "Detener la máquina inmediatamente, asegurar el área afectada y reportar el suceso.",
+        "isCorrect": true,
+        "rationale": "Detener de inmediato el equipo neutraliza la fuente de peligro, mientras que asegurar la zona evita incidentes secundarios."
+      },
+      {
+        "text": "Abandonar el vehículo en marcha y alejarse del lugar sin notificar a la supervisión.",
+        "isCorrect": false,
+        "rationale": "Dejar el equipo encendido o descontrolado puede provocar atropellos o daños mayores en la zona de trabajo."
+      },
+      {
+        "text": "Aumentar la velocidad del vehículo para llegar más rápido al taller de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Desplazarse a alta velocidad con una máquina con fallas incrementa exponencialmente el riesgo de un accidente fatal."
+      }
+    ],
+    "hint": "La prioridad operativa inmediata es neutralizar la fuente de peligro y controlar la zona del incidente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del mantenimiento de instalaciones eléctricas en baja o alta tensión, ¿cuáles de los siguientes pasos corresponden a las 'Cinco Reglas de Oro' de la seguridad eléctrica?",
+    "opciones": [
+      {
+        "text": "Desconectar todas las fuentes de alimentación eléctrica.",
+        "isCorrect": true,
+        "rationale": "Es el primer paso fundamental para cortar el flujo de energía hacia el circuito donde se trabajará."
+      },
+      {
+        "text": "Bloquear los dispositivos de corte e instalar la señalización de prohibido maniobrar.",
+        "isCorrect": true,
+        "rationale": "Forma parte del sistema de enclavamiento (LOTO) que impide la reconexión accidental por parte de terceros."
+      },
+      {
+        "text": "Verificar la ausencia de tensión con instrumentos calibrados adecuados.",
+        "isCorrect": true,
+        "rationale": "Comprobar que no exista energía remanente garantiza que la zona de trabajo sea eléctricamente segura."
+      },
+      {
+        "text": "Maniobrar los paneles eléctricos directamente con las manos húmedas o descalzo.",
+        "isCorrect": false,
+        "rationale": "La humedad reduce la resistencia eléctrica del cuerpo, facilitando descargas eléctricas letales."
+      },
+      {
+        "text": "Retirar las puestas a tierra de protección antes de iniciar los trabajos.",
+        "isCorrect": false,
+        "rationale": "La puesta a tierra debe colocarse precisamente antes de iniciar las labores para derivar descargas accidentales."
+      }
+    ],
+    "hint": "Identifica los pasos estandarizados orientados a aislar, desenergizar y asegurar la instalación eléctrica antes de su manipulación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué documento técnico es obligatorio consultar para conocer la peligrosidad, los elementos de protección personal (EPP) necesarios y las acciones de emergencia ante un producto químico derramado?",
+    "opciones": [
+      {
+        "text": "La orden de compra emitida por el área de logística.",
+        "isCorrect": false,
+        "rationale": "Las órdenes de compra detallan aspectos comerciales y precios, no información sobre manejo seguro ni toxicidad."
+      },
+      {
+        "text": "La Hoja de Datos de Seguridad del Material (MSDS/HDS) del producto.",
+        "isCorrect": true,
+        "rationale": "La Ficha o Hoja de Datos de Seguridad contiene la información técnica estandarizada sobre reactividad, riesgos para la salud y kits de contención recomendados."
+      },
+      {
+        "text": "La guía de remisión del vehículo de transporte.",
+        "isCorrect": false,
+        "rationale": "Este documento respalda el traslado de mercancías entre destinos, pero carece de protocolos técnicos de emergencia de sustancias tóxicas."
+      },
+      {
+        "text": "El manual de organización y funciones (MOF) de la compañía.",
+        "isCorrect": false,
+        "rationale": "El MOF establece las responsabilidades de los puestos de trabajo, no las características químicas de las sustancias."
+      },
+      {
+        "text": "El organigrama corporativo de la empresa contratista.",
+        "isCorrect": false,
+        "rationale": "El organigrama describe las líneas jerárquicas directivas, sin aportar datos sobre primeros auxilios o contención de derrames."
+      }
+    ],
+    "hint": "Es la guía estandarizada que detalla la composición, riesgos e instrucciones de emergencia de cada reactivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el principio rector de protección presente en las normas OHSAS y la legislación de Seguridad y Salud en el Trabajo, ¿cuál es la premisa ética básica obligatoria para las empresas?",
+    "opciones": [
+      {
+        "text": "La rentabilidad del negocio justifica asumir riesgos mortales para los trabajadores.",
+        "isCorrect": false,
+        "rationale": "Ninguna ganancia financiera o meta productiva está por encima de la protección de la vida humana en las operaciones."
+      },
+      {
+        "text": "Ningún trabajador debe verse en la necesidad de elegir entre su vida y su empleo.",
+        "isCorrect": true,
+        "rationale": "El principio de protección establece que el empleador debe garantizar condiciones dignas que preserven la salud física y mental sin poner en riesgo la vida del empleado."
+      },
+      {
+        "text": "Los empleados deben financiar de sus salarios los equipos de protección que la empresa no pueda pagar.",
+        "isCorrect": false,
+        "rationale": "La ley asigna íntegramente al empleador la responsabilidad económica de brindar herramientas y EPP adecuados."
+      },
+      {
+        "text": "Las capacitaciones de seguridad solo aplican cuando hay margen presupuestal disponible.",
+        "isCorrect": false,
+        "rationale": "La formación en seguridad es una obligación legal continua e innegociable, independiente de las fluctuaciones financieras del empleador."
+      },
+      {
+        "text": "Los trabajadores de empresas contratistas asumen personalmente toda la responsabilidad en caso de accidentes.",
+        "isCorrect": false,
+        "rationale": "La empresa principal mantiene la responsabilidad solidaria y de supervisión sobre las condiciones de seguridad de los contratistas."
+      }
+    ],
+    "hint": "Refleja la obligación del empleador de brindar un entorno laboral seguro donde el trabajo no ponga en peligro la existencia del trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una de las evoluciones más significativas que introdujo la norma ISO 45001 al reemplazar a la antigua norma OHSAS 18001?",
+    "opciones": [
+      {
+        "text": "La eliminación obligatoria de auditorías internas en la empresa.",
+        "isCorrect": false,
+        "rationale": "Las auditorías internas siguen siendo un pilar fundamental para evaluar la eficacia del sistema en la norma ISO 45001."
+      },
+      {
+        "text": "La adopción de una estructura de alto nivel (HLS) integrada con el contexto de la organización y la participación de los trabajadores.",
+        "isCorrect": true,
+        "rationale": "ISO 45001 comparte el mismo esquema estructural que ISO 9001 e ISO 14001, obligando a considerar el entorno de la empresa y la consulta directa al personal."
+      },
+      {
+        "text": "La sustitución del compromiso de la alta dirección por la supervisión exclusiva de entes externos.",
+        "isCorrect": false,
+        "rationale": "ISO 45001 exige un liderazgo mucho más visible y directo de la gerencia general en el sistema de gestión."
+      },
+      {
+        "text": "La prohibición de registrar o reportar los incidentes laborales menores.",
+        "isCorrect": false,
+        "rationale": "Registrar los incidentes es crucial para la prevención continua y la identificación de acciones correctivas."
+      },
+      {
+        "text": "La reducción de las sanciones legales por el incumplimiento de normas ambientales.",
+        "isCorrect": false,
+        "rationale": "La norma ISO es un estándar voluntario de gestión de seguridad que no modifica los marcos de penalización legal del Estado."
+      }
+    ],
+    "hint": "Busca la norma estandarizada que incorpora la estructura común ISO y una perspectiva estratégica orientada al entorno organizacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal de la implementación de la norma ISO 14001 en una organización industrial o minera?",
+    "opciones": [
+      {
+        "text": "Garantizar el incremento directo en las ventas de productos en el mercado local.",
+        "isCorrect": false,
+        "rationale": "ISO 14001 se enfoca en el desempeño y control ambiental, no en los resultados comerciales de ventas."
+      },
+      {
+        "text": "Establecer un marco eficaz para gestionar las responsabilidades ambientales y mitigar el impacto negativo de las operaciones en el entorno.",
+        "isCorrect": true,
+        "rationale": "La norma promueve un equilibrio sostenible entre la actividad productiva de la empresa y la protección del medio ambiente mediante planes sistemáticos."
+      },
+      {
+        "text": "Aumentar la carga de residuos peligrosos generados en la planta de producción.",
+        "isCorrect": false,
+        "rationale": "El estándar busca precisamente reducir, reciclar y controlar la generación de residuos contaminantes."
+      },
+      {
+        "text": "Reemplazar las leyes ambientales nacionales por un reglamento privado de la empresa.",
+        "isCorrect": false,
+        "rationale": "ISO 14001 exige cumplir de forma estricta la legislación ambiental vigente del país donde opera la organización."
+      },
+      {
+        "text": "Certificar únicamente las características nutricionales u orgánicas del producto final.",
+        "isCorrect": false,
+        "rationale": "ISO 14001 certifica la locación o sistema de gestión de la planta o terreno, no las propiedades químicas o físicas del producto."
+      }
+    ],
+    "hint": "Se centra en la búsqueda del equilibrio entre la actividad industrial y la preservación del entorno ecológico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En un Sistema Integrado de Gestión (conocido como Trinorma), ¿cuáles son los tres estándares ISO internacionales que se combinan habitualmente?",
+    "opciones": [
+      {
+        "text": "ISO 9001 (Sistema de Gestión de la Calidad).",
+        "isCorrect": true,
+        "rationale": "Es la norma pionera que asegura la estandarización de procesos para lograr la satisfacción del cliente."
+      },
+      {
+        "text": "ISO 14001 (Sistema de Gestión Ambiental).",
+        "isCorrect": true,
+        "rationale": "Proporciona el marco para la prevención de la contaminación y el manejo sostenible de insumos en la planta."
+      },
+      {
+        "text": "ISO 45001 (Sistema de Gestión de la Seguridad y Salud en el Trabajo).",
+        "isCorrect": true,
+        "rationale": "Establece los requisitos para proteger la vida, integridad y salud de los trabajadores en las operaciones."
+      },
+      {
+        "text": "ISO 50001 (Sistema de Gestión de la Contabilidad Financiera).",
+        "isCorrect": false,
+        "rationale": "Aunque existen otras normas ISO, la 'Trinorma' industrial clásica se enfoca en Calidad, Ambiente y Seguridad Laboral."
+      },
+      {
+        "text": "ISO 27001 (Sistema Exclusivo de Marketing y Publicidad).",
+        "isCorrect": false,
+        "rationale": "ISO 27001 aborda la Seguridad de la Información, la cual no forma parte del trío básico tradicional de producción segura e higiénica."
+      }
+    ],
+    "hint": "Combina la norma más antigua de procesos organizacionales con las normativas específicas de medio ambiente y salud ocupacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "A diferencia de la certificación ISO 9001 o ISO 45001, ¿cuál es una particularidad del alcance de la certificación ISO 14001?",
+    "opciones": [
+      {
+        "text": "Certifica directamente el empaque comercial del producto vendido.",
+        "isCorrect": false,
+        "rationale": "ISO 14001 no es un sello ni certificación que se imprima directamente sobre el producto comercial final."
+      },
+      {
+        "text": "Se aplica y otorga a una unidad física, planta, finca o terreno específico, no a la empresa en su totalidad si opera en distintas sedes.",
+        "isCorrect": true,
+        "rationale": "El desempeño ambiental debe medirse y certificarse locación por locación debido a que las condiciones geográficas y de impacto varían entre plantas."
+      },
+      {
+        "text": "No requiere revisiones por la gerencia una vez expedida.",
+        "isCorrect": false,
+        "rationale": "Requiere revisiones periódicas e inspecciones permanentes para renovar la certificación en la unidad operativa."
+      },
+      {
+        "text": "Se otorga automáticamente con la apertura de la empresa sin requerir auditorías.",
+        "isCorrect": false,
+        "rationale": "La certificación exige la evaluación de agencias acreditadas externas mediante auditorías severas."
+      },
+      {
+        "text": "Es de validez ilimitada de por vida sin necesidad de reacreditación.",
+        "isCorrect": false,
+        "rationale": "Las certificaciones ISO vencen y deben renovarse periódicamente mediante auditorías de seguimiento."
+      }
+    ],
+    "hint": "Considera si la evaluación del desempeño ambiental se mide sobre una instalación geográfica concreta o sobre la empresa de forma abstracta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "El ciclo de mejora continua de Deming (PHVA), estructurado en el estándar de las normas ISO, se compone de las siguientes etapas en secuencia:",
+    "opciones": [
+      {
+        "text": "Comprar, Producir, Vender y Cobrar.",
+        "isCorrect": false,
+        "rationale": "Estas representan etapas de una cadena comercial tradicional, no las fases de un sistema de gestión."
+      },
+      {
+        "text": "Planificar, Hacer, Verificar (Controlar) y Actuar.",
+        "isCorrect": true,
+        "rationale": "El ciclo PHVA permite establecer metas (Planificar), ejecutarlas (Hacer), medir los resultados (Verificar) e implementar correcciones (Actuar)."
+      },
+      {
+        "text": "Ignorar, Reaccionar, Sancionar y Clausurar.",
+        "isCorrect": false,
+        "rationale": "Representa una respuesta punitiva y descoordinada ante fallas, opuesta a la mejora sistemática."
+      },
+      {
+        "text": "Diseñar, Promocionar, Distribuir y Desechar.",
+        "isCorrect": false,
+        "rationale": "Son etapas del ciclo de vida de un producto físico, no de la gestión estratégica de una norma."
+      },
+      {
+        "text": "Auditar, Multar, Suspender y Reformular.",
+        "isCorrect": false,
+        "rationale": "Constituye un esquema puramente administrativo o de fiscalización estatal, no la dinámica interna de mejora de la ISO."
+      }
+    ],
+    "hint": "Es el modelo circular PHVA destinado a perfeccionar de forma constante todos los procesos operativos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos constituyen beneficios tangibles directos al implementar la norma ISO 45001 en una empresa?",
+    "opciones": [
+      {
+        "text": "Reducción de los costos asociados a descansos médicos y ausentismo laboral.",
+        "isCorrect": true,
+        "rationale": "Al disminuir las enfermedades y accidentes de trabajo, hay mayor presencia efectiva de los operarios en las líneas productivas."
+      },
+      {
+        "text": "Disminución del valor de las primas de seguros de accidentes por menor nivel de siniestralidad.",
+        "isCorrect": true,
+        "rationale": "Las aseguradoras cobran primas más reducidas a empresas que demuestran estándares internacionales acreditados de control de riesgo."
+      },
+      {
+        "text": "Mejora de la reputación institucional actuando como un 'vendedor silencioso' ante clientes exigentes.",
+        "isCorrect": true,
+        "rationale": "Contar con certificaciones ISO facilita la homologación de proveedores exigida por grandes corporaciones o mercados internacionales."
+      },
+      {
+        "text": "Eliminación total del mantenimiento preventivo de las máquinas de planta.",
+        "isCorrect": false,
+        "rationale": "ISO 45001 fortalece los planes de mantenimiento como mecanismo clave para evitar fallas que causen lesiones."
+      },
+      {
+        "text": "Aumento deliberado de las horas de inactividad por accidentes graves en la jornada.",
+        "isCorrect": false,
+        "rationale": "El objetivo principal es eliminar los accidentes y evitar la paralización no programada de las operaciones."
+      }
+    ],
+    "hint": "Piensa en los impactos estratégicos positivos sobre los costos operativos, las coberturas de seguro y la imagen frente a los clientes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es un simulacro de emergencia según los estándares de preparación laboral?",
+    "opciones": [
+      {
+        "text": "Una evaluación teórica escrita aplicada exclusivamente a los supervisores al cierre de cada año.",
+        "isCorrect": false,
+        "rationale": "Un simulacro es un ejercicio práctico de campo que involucra activamente a toda la población laboral."
+      },
+      {
+        "text": "Una práctica controlada que recrea una situación de emergencia para evaluar la capacidad de respuesta y eficacia del plan de contingencia.",
+        "isCorrect": true,
+        "rationale": "Permite poner a prueba los tiempos de evacuación, el entrenamiento de brigadas y la claridad de los protocolos antes de que ocurra una crisis real."
+      },
+      {
+        "text": "Una reunión del directorio para revisar los balances de pérdidas y ganancias del periodo.",
+        "isCorrect": false,
+        "rationale": "Las reuniones de directorio atienden temas directivos y financieros, no la práctica física de evacuar un área de riesgo."
+      },
+      {
+        "text": "Un desfile o ceremonia cívica realizada en las instalaciones en fechas festivas.",
+        "isCorrect": false,
+        "rationale": "Los actos protocolarios o festivos no evalúan las competencias operativas de supervivencia ante eventos peligrosos."
+      },
+      {
+        "text": "Una maniobra de producción rápida para sobrepasar las cuotas semanales fijadas.",
+        "isCorrect": false,
+        "rationale": "Las pruebas de carga en producción buscan medir el rendimiento de la planta, no la evacuación ni el rescate."
+      }
+    ],
+    "hint": "Se trata de un ejercicio práctico controlado que simula un evento crítico para poner a prueba la respuesta del personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Para realizar un simulacro de emergencia eficaz dentro de una instalación industrial, ¿cuáles de las siguientes etapas resultan fundamentales?",
+    "opciones": [
+      {
+        "text": "Planificar detalladamente el escenario, fijando objetivos, roles y recursos a emplear.",
+        "isCorrect": true,
+        "rationale": "Establecer la hipótesis de la emergencia y delimitar los roles es esencial para estructurar la práctica de forma segura."
+      },
+      {
+        "text": "Comunicar previamente los objetivos e instrucciones a todo el personal involucrado.",
+        "isCorrect": true,
+        "rationale": "Informar al personal asegura que entiendan la naturaleza pedagógica de la prueba y se coordinen adecuadamente."
+      },
+      {
+        "text": "Evaluación posterior midiendo indicadores de tiempo, coordinación y efectividad.",
+        "isCorrect": true,
+        "rationale": "Mapear los resultados permite identificar cuellos de botella y retroalimentar el plan para subsanar errores."
+      },
+      {
+        "text": "Simular incendios reales sin supervisión ni extintores en recintos cerrados con personal adscrito.",
+        "isCorrect": false,
+        "rationale": "Crear emergencias reales sin control pone en riesgo la vida de los empleados, violando los principios básicos de seguridad."
+      },
+      {
+        "text": "Bloquear intencionadamente las salidas de emergencia permanentes sin previo aviso.",
+        "isCorrect": false,
+        "rationale": "Las salidas de evacuación deben estar siempre despejadas y señalizadas tanto en pruebas como en situaciones reales."
+      }
+    ],
+    "hint": "Contempla desde la formulación previa de los escenarios hasta la medición y análisis posterior de los resultados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones constituyen criterios clave para evaluar el desempeño de un simulacro de evacuación?",
+    "opciones": [
+      {
+        "text": "El tiempo de respuesta y vaciado completo de la infraestructura hasta las zonas seguras.",
+        "isCorrect": true,
+        "rationale": "Cronometrar la evacuación ayuda a determinar si la velocidad de desocupación evitaría muertes en un desastre real."
+      },
+      {
+        "text": "La efectividad y claridad en la transmisión de señales de alarma y comunicación de brigadas.",
+        "isCorrect": true,
+        "rationale": "Medir el funcionamiento de sirenas y la fluidez de comandos permite verificar la cadena de llamadas de emergencia."
+      },
+      {
+        "text": "La coordinación y liderazgo ejercido por los brigadistas en el guiado del personal.",
+        "isCorrect": true,
+        "rationale": "Evaluar la actuación de las brigadas confirma si el entrenamiento intensivo recibido se traduce en un control efectivo."
+      },
+      {
+        "text": "El número de archivos comerciales y laptops rescatadas por los empleados durante la huida.",
+        "isCorrect": false,
+        "rationale": "En una evacuación por emergencia, la única prioridad humana es salvar la vida, dejando atrás objetos y enseres."
+      },
+      {
+        "text": "La cantidad de llamadas telefónicas personales realizadas por los operarios durante el ejercicio.",
+        "isCorrect": false,
+        "rationale": "Utilizar la red telefónica personal en emergencias desconcentra de la evacuación y puede colapsar las líneas de auxilio."
+      }
+    ],
+    "hint": "Enfócate en las variables críticas que miden tiempo de desocupación, liderazgo de apoyo y canales informativos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la gestión moderna de seguridad laboral, ¿qué se entiende por 'capacitación continua'?",
+    "opciones": [
+      {
+        "text": "Una charla única dictada al ingresar a la empresa que nunca vuelve a repetirse.",
+        "isCorrect": false,
+        "rationale": "La capacitación única genera vacíos de conocimiento con el tiempo al cambiar las tecnologías y los entornos."
+      },
+      {
+        "text": "Un proceso constante de formación y entrenamiento para actualizar competencias y adaptarse a nuevos riesgos y estándares.",
+        "isCorrect": true,
+        "rationale": "La formación continua refresca los conocimientos, corrige malas prácticas operativas e integra nuevos reglamentos en el trabajo cotidiano."
+      },
+      {
+        "text": "La obligación de los trabajadores de costear externamente sus maestrías universitarias.",
+        "isCorrect": false,
+        "rationale": "El entrenamiento para la prevención de riesgos en el puesto es responsabilidad y costo del empleador."
+      },
+      {
+        "text": "Un taller exclusivo impartido únicamente cuando ocurre una fatalidad en la empresa.",
+        "isCorrect": false,
+        "rationale": "Esperar a que ocurra una tragedia para capacitar contradice el enfoque proactivo de la seguridad laboral."
+      },
+      {
+        "text": "La lectura optativa de memorandos administrativos al finalizar la semana.",
+        "isCorrect": false,
+        "rationale": "La lectura esporádica e informal no constituye un método estructurado de formación técnica en SST."
+      }
+    ],
+    "hint": "Es un proceso formativo recurrente orientado a mantener las destrezas al día frente a riesgos cambiantes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Por disposición legal en el marco de la Ley de Seguridad y Salud en el Trabajo, ¿quién asume la responsabilidad de financiar y garantizar las capacitaciones del personal?",
+    "opciones": [
+      {
+        "text": "Cada trabajador de manera individual con sus propios recursos.",
+        "isCorrect": false,
+        "rationale": "El trabajador no debe asumir el costo financiero de las capacitaciones ni del equipamiento de seguridad."
+      },
+      {
+        "text": "El empleador o la empresa dentro de la jornada laboral.",
+        "isCorrect": true,
+        "rationale": "La ley establece que el empleador es el responsable de brindar formación gratuita, oportuna y dentro de la jornada de trabajo."
+      },
+      {
+        "text": "Los clientes finales que compran los bienes manufacturados.",
+        "isCorrect": false,
+        "rationale": "Los compradores no participan de la gestión operativa interna ni de la instrucción técnica de la fuerza laboral."
+      },
+      {
+        "text": "Las municipalidades distritales de la jurisdicción.",
+        "isCorrect": false,
+        "rationale": "Las municipalidades administran licencias de zonificación urbana, no la capacitación laboral interna de empresas privadas."
+      },
+      {
+        "text": "El sindicato de la empresa mediante descuentos de planilla a los afiliados.",
+        "isCorrect": false,
+        "rationale": "La formación en SST es una obligación directa del empleador, no un servicio financiado por aportes sindicales."
+      }
+    ],
+    "hint": "Es una obligación innegociable de la organización para asegurar que las labores operativas se realicen de forma controlada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tipo de simulacro requiere el entrenamiento específico en aislamiento de zonas, uso de trajes especiales y manejo de salchichas o paños absorbentes?",
+    "opciones": [
+      {
+        "text": "Simulacro de evacuación por tsunami en zonas altoandinas.",
+        "isCorrect": false,
+        "rationale": "Los kits de absorción y trajes no están diseñados para eventos de tsunamis o inundaciones masivas en altura."
+      },
+      {
+        "text": "Simulacro de derrame de productos químicos o sustancias peligrosas.",
+        "isCorrect": true,
+        "rationale": "Las salchichas absorbentes y los EPP químicos se emplean para confinar, neutralizar y limpiar sustancias tóxicas antes de que contaminen el entorno."
+      },
+      {
+        "text": "Simulacro de corte prolongado del suministro de internet en oficinas.",
+        "isCorrect": false,
+        "rationale": "Las fallas en redes de datos corresponden a emergencias tecnológicas informáticas que no involucran materiales peligrosos."
+      },
+      {
+        "text": "Simulacro de asalto o robo a mano armada en caja chica.",
+        "isCorrect": false,
+        "rationale": "Las contingencias de seguridad patrimonial aplican protocolos de resguardo y comunicación policial, no contención de líquidos."
+      },
+      {
+        "text": "Simulacro de falla en el sistema de aire acondicionado del auditorio.",
+        "isCorrect": false,
+        "rationale": "Representa un problema de climatización menor que no exige trajes de bioseguridad ni kits de absorción química."
+      }
+    ],
+    "hint": "Su propósito es confinar, limpiar y disponer de líquidos nocivos o corrosivos sin exponer la salud de los brigadistas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define el concepto de Responsabilidad Social Empresarial (RSE)?",
+    "opciones": [
+      {
+        "text": "Una entrega esporádica de donaciones económicas para deducir impuestos al final del ejercicio.",
+        "isCorrect": false,
+        "rationale": "Las donaciones puntuales son actos de asistencia o filantropía que no constituyen una estrategia integrada de RSE."
+      },
+      {
+        "text": "El compromiso voluntario y estratégico de las empresas por gestionar responsablemente los impactos sociales, ambientales y económicos de sus actividades.",
+        "isCorrect": true,
+        "rationale": "La RSE integra las preocupaciones éticas, ambientales y laborales en las operaciones del negocio y en la relación con sus grupos de interés."
+      },
+      {
+        "text": "Una táctica contable para evitar la contratación de empleados en la planilla formal.",
+        "isCorrect": false,
+        "rationale": "La RSE exige el estricto cumplimiento de las leyes laborales y el respeto de las condiciones dignas de empleo."
+      },
+      {
+        "text": "La obligación legal de regalar las acciones de la empresa a la comunidad local.",
+        "isCorrect": false,
+        "rationale": "La RSE no contempla la transferencia de propiedad accionaria sino la gestión transparente y la inversión social."
+      },
+      {
+        "text": "Un programa publicitario diseñado para ocultar sanciones impuestas por el Ministerio de Trabajo.",
+        "isCorrect": false,
+        "rationale": "El lavado de imagen o la publicidad engañosa contradicen los valores de ética e integridad que fundamentan la RSE."
+      }
+    ],
+    "hint": "Representa una visión integral que equilibra la rentabilidad económica con el bienestar comunitario y la preservación ambiental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son los tres aspectos o pilares fundamentales que integran el desarrollo sostenible dentro de la Responsabilidad Social Empresarial?",
+    "opciones": [
+      {
+        "text": "El aspecto económico (viabilidad financiera y rentabilidad del negocio).",
+        "isCorrect": true,
+        "rationale": "Asegura la generación de valor, empleo e inversión continua para la permanencia de la empresa en el mercado."
+      },
+      {
+        "text": "El aspecto social (bienestar de los trabajadores, derechos humanos y relación con la comunidad).",
+        "isCorrect": true,
+        "rationale": "Promueve condiciones laborales equitativas y proyectos que mejoren la calidad de vida de las poblaciones vecinas."
+      },
+      {
+        "text": "El aspecto ambiental (cuidado del entorno, reducción de huella ecológica y uso eficiente de recursos).",
+        "isCorrect": true,
+        "rationale": "Garantiza que la explotación de insumos e instalaciones no comprometa el planeta para las futuras generaciones."
+      },
+      {
+        "text": "El aspecto monopólico (control total del mercado eliminado a la competencia).",
+        "isCorrect": false,
+        "rationale": "Las prácticas comerciales anti-competitivas violan los principios éticos del desarrollo sostenible y la RSE."
+      },
+      {
+        "text": "El aspecto asistencialista (regalo permanente de dinero en efectivo sin proyectos de desarrollo).",
+        "isCorrect": false,
+        "rationale": "El asistencialismo no genera capacidades productivas ni desarrollo sostenible a largo plazo en las comunidades."
+      }
+    ],
+    "hint": "Constituyen la triple dimensión o 'triple botton line' (Económico, Social y Ambiental) de la sostenibilidad organizacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al integrar la Responsabilidad Social Empresarial con la gestión de emergencias, ¿cuál es el enfoque correcto hacia la comunidad vecina?",
+    "opciones": [
+      {
+        "text": "Ignorar a los pobladores vecinos, preocupándose únicamente por evacuar al personal propio.",
+        "isCorrect": false,
+        "rationale": "Las crisis industriales como explosiones o fugas no se detienen en los muros de la planta y pueden afectar gravemente el entorno."
+      },
+      {
+        "text": "Desarrollar planes de contingencia compartidos, alertas tempranas y protocolos de protección que incluyan la seguridad comunitaria.",
+        "isCorrect": true,
+        "rationale": "Una empresa responsable coordina con los líderes locales y autoridades para proteger tanto a sus trabajadores como a los pobladores ante siniestros."
+      },
+      {
+        "text": "Exigir a la comunidad que financie los equipos contraincendios de la planta.",
+        "isCorrect": false,
+        "rationale": "La inversión en seguridad y contención de contingencias en la empresa es responsabilidad exclusiva del inversionista."
+      },
+      {
+        "text": "Ocultar la ocurrencia de fugas tóxicas a los vecinos para no generar alarma pública.",
+        "isCorrect": false,
+        "rationale": "La falta de transparencia en contingencias pone en peligro letal a la población y destruye la confianza institucional."
+      },
+      {
+        "text": "Prohibir el ingreso de ambulancias o bomberos a la zona para evitar publicidad negativa.",
+        "isCorrect": false,
+        "rationale": "Bloquear la ayuda médica o de emergencia ante incidentes es una infracción grave que atenta contra la vida."
+      }
+    ],
+    "hint": "Implica extender los estándares de preparación y respuesta rápida más allá de las barreras de la fábrica o mina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se diferencia sustancialmente la Responsabilidad Social Empresarial de la filantropía o asistencia tradicional?",
+    "opciones": [
+      {
+        "text": "La filantropía es obligatoria por ley mientras que la RSE es un trámite judicial.",
+        "isCorrect": false,
+        "rationale": "La filantropía es un acto voluntario no normado por leyes de gestión corporativa."
+      },
+      {
+        "text": "La RSE es un enfoque de gestión estratégico, permanente e integrado en las operaciones, mientras que la filantropía es una donación puntual sin impacto estructurado en el core del negocio.",
+        "isCorrect": true,
+        "rationale": "La RSE genera valor compartido sostenible en el tiempo para la empresa y la sociedad, diferenciándose de los aportes esporádicos de caridad."
+      },
+      {
+        "text": "No existe ninguna diferencia; ambos conceptos representan exactamente la misma práctica.",
+        "isCorrect": false,
+        "rationale": "Confundir RSE con filantropía es una equivocación común: la RSE involucra la estrategia corporativa integral."
+      },
+      {
+        "text": "La filantropía busca la rentabilidad financiera y la RSE busca la quiebra de la empresa.",
+        "isCorrect": false,
+        "rationale": "La RSE contempla explícitamente el pilar de sostenibilidad económica para garantizar la permanencia del negocio."
+      },
+      {
+        "text": "La RSE consiste en la entrega de bolsas de viveres y la filantropía en construir plantas industriales.",
+        "isCorrect": false,
+        "rationale": "Regalar víveres o insumos sin sostenibilidad se aproxima más a la asistencia puntual o filantropía."
+      }
+    ],
+    "hint": "La RSE se enfoca en crear valor compartido a largo plazo articulado con la estrategia comercial de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere el concepto de 'resiliencia empresarial' en el contexto del manejo de crisis y emergencias?",
+    "opciones": [
+      {
+        "text": "A la capacidad de la organización para resistir, adaptarse y recuperarse rápidamente ante desastres o situaciones adversas sin colapsar.",
+        "isCorrect": true,
+        "rationale": "Una empresa resiliente absorbe el impacto de un evento crítico, mantiene sus funciones clave y retorna a la operatividad resguardando a su personal."
+      },
+      {
+        "text": "A la práctica de no efectuar cambios en los procedimientos aun cuando ocurran fatalidades repetidas.",
+        "isCorrect": false,
+        "rationale": "La inflexibilidad operativa y la terquedad conducen al colapso de la seguridad laboral y a mayores accidentes."
+      },
+      {
+        "text": "A la transferencia inmediata de las pérdidas financieras a las cuentas de los empleados.",
+        "isCorrect": false,
+        "rationale": "La resiliencia alude al fortalecimiento de los sistemas institucionales y de seguridad de la organización."
+      },
+      {
+        "text": "A la paralización definitiva y clausura irreversible de la empresa ante la primera contingencia.",
+        "isCorrect": false,
+        "rationale": "La resiliencia implica precisamente la facultad de superar la crisis y dar continuidad al negocio de forma segura."
+      },
+      {
+        "text": "Al rechazo voluntario de cualquier protocolo de seguridad o plan de protección civil.",
+        "isCorrect": false,
+        "rationale": "Sin protocolos de seguridad, la empresa se vuelve frágil e incapaz de sobreponerse a contingencias."
+      }
+    ],
+    "hint": "Se refiere a la fortaleza organizativa para absorber un impacto crítico, adaptarse y retomar operaciones de forma segura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿De qué formas una empresa que practica la Responsabilidad Social Empresarial puede aportar al fortalecimiento de la comunidad local en la prevención de emergencias?",
+    "opciones": [
+      {
+        "text": "Organizando capacitaciones y simulacros comunitarios en conjunto con las autoridades locales.",
+        "isCorrect": true,
+        "rationale": "Compartir la experiencia de los profesionales de seguridad entrena a la población ante sismos u otros desastres naturales."
+      },
+      {
+        "text": "Brindando asistencia con maquinaria, equipos o suministros de auxilio en momentos de catástrofe comunal.",
+        "isCorrect": true,
+        "rationale": "Poner los recursos técnicos de la empresa a disposición de la población amenazada fortalece la respuesta ante desastres."
+      },
+      {
+        "text": "Implementando sistemas de alerta temprana comunitarios para avisar de riesgos ambientales o industriales.",
+        "isCorrect": true,
+        "rationale": "Las alarmas y monitoreos integrados aseguran que la población cuente con tiempo oportuno de ponerse a salvo."
+      },
+      {
+        "text": "Desechando los efluentes o residuos químicos en los campos agrícolas de los vecinos.",
+        "isCorrect": false,
+        "rationale": "Contaminar el entorno viola los principios fundamentales del desarrollo sostenible y destruye la salud comunitaria."
+      },
+      {
+        "text": "Ocultando la ubicación de las zonas de evacuación y puntos de reunión a los pobladores del entorno.",
+        "isCorrect": false,
+        "rationale": "La transparencia y la señalización accesible son vitales para proteger la vida de las personas en emergencias."
+      }
+    ],
+    "hint": "Enfócate en iniciativas colaborativas de formación, alerta temprana y apoyo logístico directo ante catástrofes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de emergencias industriales, ¿cuál es la diferencia fundamental entre una gestión del riesgo reactiva y una gestión del riesgo proactiva según el paradigma moderno de seguridad?",
+    "opciones": [
+      {
+        "text": "La gestión reactiva invierte exclusivamente en equipos de detección temprana, mientras que la proactiva se limita a la contratación de peritos tras el incidente.",
+        "isCorrect": false,
+        "rationale": "Los peritos intervienen posteriormente a un siniestro, lo cual corresponde a un enfoque reactivo, mientras que los equipos de detección temprana forman parte de la prevención proactiva."
+      },
+      {
+        "text": "La gestión reactiva actúa únicamente después de ocurrido el evento para analizar causas y reparar daños, mientras que la proactiva evalúa riesgos y prepara la respuesta antes de que suceda la emergencia.",
+        "isCorrect": true,
+        "rationale": "El enfoque moderno de gestión del riesgo prioriza la anticipación, evaluación y preparación preventiva por encima de la simple respuesta posterior a la ocurrencia del desastre."
+      },
+      {
+        "text": "La gestión reactiva es exigida obligatoriamente por la ISO 45001, mientras que la proactiva se aplica solo en micro y pequeñas empresas (MIPYMES).",
+        "isCorrect": false,
+        "rationale": "Las normas internacionales como la ISO 45001 exigen la gestión proactiva del riesgo en organizaciones de cualquier tamaño."
+      },
+      {
+        "text": "La gestión reactiva busca eliminar los costos de capacitación, mientras que la proactiva se centra solo en la compra masiva de extintores manuales.",
+        "isCorrect": false,
+        "rationale": "La gestión proactiva abarca programas continuos de capacitación y análisis integral de causas, no únicamente la compra de extintores."
+      },
+      {
+        "text": "La gestión reactiva confía la respuesta a las brigadas internas, mientras que la proactiva deriva toda la responsabilidad operativa a entidades gubernamentales externas.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad de la gestión proactiva recae directamente en la organización y sus líderes, requiriendo preparación interna antes de depender de entidades externas."
+      }
+    ],
+    "hint": "Piense en si las acciones de control se realizan antes o después de que se desencadene el siniestro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante el mantenimiento de un ducto de hidrocarburos u oleoducto, detener el flujo de combustible no elimina por completo el riesgo de explosión al realizar trabajos en caliente (como oxicorte). ¿Cuál es la causa técnica principal de este peligro residual?",
+    "opciones": [
+      {
+        "text": "La acumulación de electricidad estática en las paredes externas del tubo.",
+        "isCorrect": false,
+        "rationale": "Si bien la estática es un riesgo, la causa determinante de explosiones violentas al cortar ductos de petróleo vacíos es la presencia de vapores confinados."
+      },
+      {
+        "text": "La presencia imprevista de corrosión galvánica en la soldadura del ducto.",
+        "isCorrect": false,
+        "rationale": "La corrosión galvánica debilita el material con el tiempo, pero no genera por sí misma una atmósfera explosiva inmediata al contacto con la llama."
+      },
+      {
+        "text": "La permanencia de gases y vapores inflamables retenidos en el interior de la tubería.",
+        "isCorrect": true,
+        "rationale": "Incluso si se interrumpe el flujo líquido, los gases y vapores inflamables acumulados dentro del tubo pueden reaccionar violentamente ante chispas o llamas de oxicorte si no se purgan previamente."
+      },
+      {
+        "text": "La falta de presión hidráulica para enfriar el soplete durante el corte.",
+        "isCorrect": false,
+        "rationale": "El oxicorte utiliza gases combustibles y oxígeno, no presión hidráulica para el enfriamiento de la tubería."
+      },
+      {
+        "text": "La reactividad del diésel al contacto inmediato con el casco protector del operador.",
+        "isCorrect": false,
+        "rationale": "El EPP del operador no entra en reacción química con los hidrocarburos dentro de la tubería para generar una explosión."
+      }
+    ],
+    "hint": "Considere qué estado de la materia permanece confinado en un recipiente que albergaba derivados del petróleo tras vaciar el líquido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de un entorno industrial, ¿cuál es el procedimiento fundamental del sistema LOTO (Lockout/Tagout o Bloqueo y Etiquetado) para prevenir accidentes por descargas eléctricas durante intervenciones de mantenimiento?",
+    "opciones": [
+      {
+        "text": "Instalar detectores de humo y sensores térmicos en el panel central de distribución.",
+        "isCorrect": false,
+        "rationale": "Los detectores de humo advierten sobre incendios, pero no impiden que un tercero reconecte una línea eléctrica en mantenimiento."
+      },
+      {
+        "text": "Desconectar, aislar físicamente y colocar candados junto con tarjetas de advertencia en los puntos de corte de energía.",
+        "isCorrect": true,
+        "rationale": "El sistema LOTO garantiza la desenergización efectiva mediante el bloqueo mecánico (candado) y la señalización (etiqueta) para evitar reconexiones accidentales."
+      },
+      {
+        "text": "Reemplazar todos los cables de baja tensión por conductores de alta frecuencia aislados.",
+        "isCorrect": false,
+        "rationale": "El reemplazo de conductores no sustituye el procedimiento operativo de aislamiento y bloqueo seguro previo a la intervención."
+      },
+      {
+        "text": "Utilizar únicamente botas dieléctricas sin necesidad de cortar la energía del tablero central.",
+        "isCorrect": false,
+        "rationale": "El uso de EPP es una medida complementaria; la regla básica de oro exige la supresión y verificación de la ausencia de tensión."
+      },
+      {
+        "text": "Lavar con abundante agua desmineralizada las conexiones eléctricas antes de operar la palanca.",
+        "isCorrect": false,
+        "rationale": "Aplicar agua a circuitos o tableros eléctricos incrementa severamente el riesgo de electrocución."
+      }
+    ],
+    "hint": "Recuerde las medidas mecánicas y visuales empleadas para impedir que un interruptor sea activado por error.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al producirse un derrame de una sustancia química peligrosa en el área de planta, ¿cuáles de las siguientes acciones son procedimientos operativos correctos recomendados para la contención y respuesta inmediata?",
+    "opciones": [
+      {
+        "text": "Consultar la Hoja de Datos de Seguridad (FDS / MSDS) para conocer el grado de peligrosidad e identificar el producto.",
+        "isCorrect": true,
+        "rationale": "Conocer la Hoja de Datos de Seguridad permite identificar los riesgos específicos del químico y seleccionar los reactivos o EPP adecuados."
+      },
+      {
+        "text": "Colocar salchichas absorbentes directamente sobre el líquido derramado para acelerar la evaporación.",
+        "isCorrect": false,
+        "rationale": "Las salchichas absorbentes se colocan a cierta distancia alrededor del perímetro para confinar el derrame, no encima para acelerar evaporaciones peligrosas."
+      },
+      {
+        "text": "Delimitar el área de peligro y usar el Equipo de Protección Personal (EPP) adecuado antes de intervenir.",
+        "isCorrect": true,
+        "rationale": "Asegurar la zona y proteger al personal interviniente con EPP específico evita la contaminación de más personas o áreas."
+      },
+      {
+        "text": "Interrumpir la fuente de origen del derrame antes de proceder con el confinamiento definitivo.",
+        "isCorrect": true,
+        "rationale": "Detener el flujo o fuga en el contenedor de origen frena la expansión del volumen derramado haciéndolo manejable."
+      },
+      {
+        "text": "Diluir el derrame con abundante agua de caño para canalizarlo hacia el drenaje pluvial público.",
+        "isCorrect": false,
+        "rationale": "Vertir químicos al drenaje pluvial genera contaminación ambiental severa y vulnera la normativa de manejo de residuos peligrosos."
+      }
+    ],
+    "hint": "Identifique las acciones que protegen al personal, detienen la fuga y aseguran la contención sin dispersar la contaminación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si durante la operación de una maquinaria pesada en una obra de minería o construcción se presenta una anomalía operativa crítica o riesgo inminente de vuelco, ¿cuál es la primera acción inmediata que debe ejecutar el operador?",
+    "opciones": [
+      {
+        "text": "Abandonar el vehículo en marcha y solicitar ayuda a la brigada de rescate.",
+        "isCorrect": false,
+        "rationale": "Saltar de un equipo en movimiento incrementa el riesgo de atropello o aplastamiento por la misma máquina."
+      },
+      {
+        "text": "Aumentar la velocidad para salir del terreno inestable hacia una zona nivelada.",
+        "isCorrect": false,
+        "rationale": "Incrementar la velocidad en un terreno inestable o con falla mecánica desestabiliza aún más la carga y acelera el accidente."
+      },
+      {
+        "text": "Detener inmediatamente la máquina, asegurar el área y reportar el evento al área de seguridad.",
+        "isCorrect": true,
+        "rationale": "El protocolo básico ante una emergencia con maquinaria exige apagar/detener la unidad para neutralizar el peligro, acordonar e informar de inmediato."
+      },
+      {
+        "text": "Esperar a que concluya el turno de trabajo para informar al supervisor de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Posponer el reporte de un fallo grave expone al resto del personal a incidentes severos en el área de tránsito."
+      },
+      {
+        "text": "Modificar el ángulo del brazo mecánico sin apagar el motor para estabilizar la carga.",
+        "isCorrect": false,
+        "rationale": "Efectuar maniobras bruscas de brazos hidráulicos en estado inestable puede alterar el centro de gravedad y precipitar el vuelco."
+      }
+    ],
+    "hint": "Piense en el paso inicial para inactivar la energía de la máquina antes de delimitar y notificar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de emergencias industriales para incendios y explosiones, ¿cuál es la característica operativa diferenciadora de una brigada de respuesta ante emergencias debidamente formada frente al simple uso preventivo de extintores?",
+    "opciones": [
+      {
+        "text": "La brigada reemplaza por completo la necesidad de contar con sistemas de rociadores o alarmas automáticas.",
+        "isCorrect": false,
+        "rationale": "Las brigadas forman parte de la respuesta humana, pero no eliminan la exigencia técnica de contar con sistemas de detección y rociadores automáticos."
+      },
+      {
+        "text": "Los brigadistas reciben entrenamientos intensivos teórico-prácticos (comúnmente de 40 horas) dictados por instructores certificados para controlar fugas complejas y siniestros de alto riesgo.",
+        "isCorrect": true,
+        "rationale": "Las brigadas de respuesta industrial están capacitadas mediante cursos exigentes teórico-prácticos para intervenir activamente en escenarios de alto riesgo como incendios estructurales o fugas masivas."
+      },
+      {
+        "text": "El entrenamiento de brigada consiste únicamente en la revisión visual de las fechas de vencimiento de los extintores.",
+        "isCorrect": false,
+        "rationale": "La inspección de extintores es una labor preventiva básica, mientras que la brigada se prepara para la contención activa y rescate en siniestros."
+      },
+      {
+        "text": "La brigada actúa exclusivamente después de que los peritos judiciales han emitido su informe de investigación.",
+        "isCorrect": false,
+        "rationale": "Los peritos intervienen semanas o meses después del evento; la brigada actúa durante los primeros minutos de la emergencia."
+      },
+      {
+        "text": "Los brigadistas están exentos del uso de equipos de protección personal durante la fase de contención.",
+        "isCorrect": false,
+        "rationale": "Los brigadistas requieren equipos de protección especializados para resistir altas temperaturas y atmósferas tóxicas."
+      }
+    ],
+    "hint": "Considere la preparación requerida para enfrentar fugas masivas de gas o fuego en instalaciones complejas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La norma ISO 45001 se considera una evolución de la especificación OSHAS 18001. ¿Qué elemento innovador introduce la ISO 45001 en su Capítulo 4 respecto a su antecesora?",
+    "opciones": [
+      {
+        "text": "La obligatoriedad de contratar seguros privados contra todo riesgo para el 100% de los practicantes.",
+        "isCorrect": false,
+        "rationale": "El Capítulo 4 de la estructura de alto nivel de ISO aborda el entorno organizacional, no especificaciones de pólizas de seguros."
+      },
+      {
+        "text": "El análisis explícito del contexto de la organización, considerando factores internos, externos y partes interesadas.",
+        "isCorrect": true,
+        "rationale": "La ISO 45001 adopta la estructura de alto nivel de ISO, requiriendo en el punto 4 evaluar el contexto interno/externo y las necesidades de partes interesadas para adaptar el sistema de gestión."
+      },
+      {
+        "text": "La eliminación del principio de protección continua de los trabajadores.",
+        "isCorrect": false,
+        "rationale": "El principio de protección de la vida y salud del trabajador se mantiene y refuerza en ISO 45001."
+      },
+      {
+        "text": "El requisito exclusivo de contar con la certificación ISO 9001 antes de iniciar cualquier trámite.",
+        "isCorrect": false,
+        "rationale": "Si bien es recomendable por la estructura común, no es un requisito legal restrictivo certificar previamente ISO 9001 para optar por ISO 45001."
+      },
+      {
+        "text": "La transferencia de toda la responsabilidad legal de accidentes a los comités paritarios de salud.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad legal última del sistema de SST sigue recayendo en la alta dirección de la empresa."
+      }
+    ],
+    "hint": "Piense en la cláusula que obliga a la empresa a mirar tanto su entorno de negocio como sus grupos de interés.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la génesis normativa de OSHAS/ISO y en la Ley de Seguridad y Salud en el Trabajo de Perú (Ley N° 29783), el \"Principio de Protección\" establece un axioma fundamental de la SST. ¿Cómo se define dicho principio?",
+    "opciones": [
+      {
+        "text": "Los trabajadores deben financiar la compra de sus propios EPP si sus ingresos superan el sueldo mínimo.",
+        "isCorrect": false,
+        "rationale": "La normativa establece de forma imperativa que el costo de los EPP y las medidas de SST debe ser asumido íntegramente por el empleador."
+      },
+      {
+        "text": "Ningún trabajador debe tener que elegir entre su vida y su empleo, siendo obligación del empleador garantizar ambientes de trabajo dignos y seguros.",
+        "isCorrect": true,
+        "rationale": "El principio de protección sostiene que es derecho inalienable del trabajador laborar en condiciones seguras que cuiden su integridad física y mental."
+      },
+      {
+        "text": "La empresa queda eximida de responsabilidad laboral si el trabajador firma una declaración jurada de riesgo aceptado.",
+        "isCorrect": false,
+        "rationale": "Los derechos de seguridad y salud en el trabajo son irrenunciables; las declaraciones de exoneración no tienen validez legal."
+      },
+      {
+        "text": "El Estado asume el pago total de las indemnizaciones por accidentes fatales en empresas privadas de la gran minería.",
+        "isCorrect": false,
+        "rationale": "Las indemnizaciones y responsabilidades civiles o penales recaen sobre el empleador causante del incumplimiento."
+      },
+      {
+        "text": "Las capacitaciones de seguridad deben realizarse fuera de la jornada laboral sin remuneración adicional.",
+        "isCorrect": false,
+        "rationale": "La Ley N° 29783 estipula que las capacitaciones en SST deben realizarse dentro de la jornada de trabajo o ser remuneradas."
+      }
+    ],
+    "hint": "Recuerde el dilema histórico entre conservar el puesto de trabajo o arriesgar la vida en entornos insalubres.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la gestión ambiental según la norma ISO 14001, ¿cuál es el alcance real de la certificación cuando una empresa industrial la obtiene?",
+    "opciones": [
+      {
+        "text": "Certifica la calidad técnica e inocuidad del producto comercial final en los puntos de venta.",
+        "isCorrect": false,
+        "rationale": "ISO 14001 es una norma de proceso y gestión ambiental, no de especificación técnica de producto."
+      },
+      {
+        "text": "Avala únicamente a la marca corporativa a nivel global, aplicando automáticamente a todos sus locales comerciales sin auditar.",
+        "isCorrect": false,
+        "rationale": "La certificación no se extiende automáticamente a todas las sedes; cada emplazamiento debe ser auditado formalmente."
+      },
+      {
+        "text": "Certifica la finca, terreno, planta de producción o emplazamiento específico auditado, y no el producto ni la empresa completa.",
+        "isCorrect": true,
+        "rationale": "A diferencia de otros estándares, la ISO 14001 certifica el plan de manejo ambiental de un terreno o planta física concreta, no la mercadería en sí."
+      },
+      {
+        "text": "Garantiza que la empresa obtiene una exención del 50% en el pago de impuestos sobre la renta.",
+        "isCorrect": false,
+        "rationale": "Las normas ISO son de carácter voluntario e internacional, no otorgan beneficios tributarios directos por sí solas."
+      },
+      {
+        "text": "Otorga un sello que permite la venta directa de plásticos de un solo uso sin supervisión del Ministerio del Ambiente.",
+        "isCorrect": false,
+        "rationale": "La ISO 14001 exige respetar las leyes ambientales nacionales, no otorga permisos para vulnerar regulaciones de plásticos u otros contaminantes."
+      }
+    ],
+    "hint": "Diferencie entre la auditoría a una instalación física concreta y el etiquetado que lleva un objeto comercial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos constituyen beneficios directos cuantitativos y cualitativos para una organización al implementar la norma ISO 45001?",
+    "opciones": [
+      {
+        "text": "Reducción en los costos de las primas de seguros corporativos debido a la disminución del perfil de riesgo.",
+        "isCorrect": true,
+        "rationale": "Demostrar la certificación ISO 45001 disminuye la siniestralidad proyectada, lo que permite negociar tarifas reducidas en las primas de seguros."
+      },
+      {
+        "text": "Disminución de las tasas de absentismo laboral y de la rotación de personal por incidentes de salud.",
+        "isCorrect": true,
+        "rationale": "Un entorno seguro reduce las horas hombre perdidas por descansos médicos e incrementa la retención del talento calificado."
+      },
+      {
+        "text": "Funcionar como un \"vendedor silencioso\" que abre puertas hacia clientes y mercados internacionales exigentes.",
+        "isCorrect": true,
+        "rationale": "Muchas multinacionales exigen homologación en SST a sus proveedores, convirtiendo la norma en un factor diferenciador comercial."
+      },
+      {
+        "text": "Aumento automático en el precio final de los productos en el mercado minorista para compensar la inversión.",
+        "isCorrect": false,
+        "rationale": "El mercado no paga un sobreprecio directo en góndola simplemente porque el fabricante posea una norma de SST interna."
+      },
+      {
+        "text": "Exención total del cumplimiento de los decretos supremos sectoriales emitidos por el Ministerio de Energía y Minas.",
+        "isCorrect": false,
+        "rationale": "Poseer una certificación ISO no exime de las fiscalizaciones o el cumplimiento obligatorio del marco legal sectorial del país."
+      }
+    ],
+    "hint": "Piense en las ventajas operativas, comerciales e impositivas relativas a primas de seguros y fidelidad laboral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué en la práctica industrial se recomienda habitualmente iniciar el camino de las certificaciones internacionales implementando la ISO 9001 antes de abordar la ISO 14001 y la ISO 45001?",
+    "opciones": [
+      {
+        "text": "Porque la ISO 9001 es la única norma que exige el uso del sistema LOTO en todas las instalaciones.",
+        "isCorrect": false,
+        "rationale": "El procedimiento LOTO es un control operativo de seguridad eléctrica (ISO 45001), no un requisito exclusivo de calidad (ISO 9001)."
+      },
+      {
+        "text": "Porque la ISO 9001 proporciona la columna vertebral metodológica, terminología común y estructura de gestión sobre la cual se acoplan más fácilmente las demás normas.",
+        "isCorrect": true,
+        "rationale": "Al ser la norma más antigua y base de los sistemas de gestión, la ISO 9001 establece el esqueleto de indicadores, auditorías y control documental que facilita la integración de la trinorma."
+      },
+      {
+        "text": "Porque la ISO 14001 y la ISO 45001 han sido derogadas y reemplazadas en su totalidad por la ISO 9001.",
+        "isCorrect": false,
+        "rationale": "Cada norma mantiene su independencia y vigencia; no han sido sustituidas por la ISO 9001."
+      },
+      {
+        "text": "Porque legalmente en el Perú no se permite constituir un Comité de SST si la empresa no cuenta con ISO 9001 aprobada.",
+        "isCorrect": false,
+        "rationale": "La conformación del Comité de SST en Perú responde al mandato de la Ley N° 29783, independientemente de certificaciones ISO."
+      },
+      {
+        "text": "Porque la ISO 9001 es gratuita y no requiere auditorías externas de certificación por terceros.",
+        "isCorrect": false,
+        "rationale": "Todas las certificaciones ISO requieren la contratación de un organismo certificador acreditado para auditorías externas."
+      }
+    ],
+    "hint": "Considere qué norma establece los cimientos sobre los que se estructura el lenguaje común de auditorías e indicadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la aplicación del ciclo de Mejora Continua (PHVA / Deming) dentro del marco de la ISO 14001, ¿en qué fase se ubica la revisión de no conformidades, el análisis de sus causas raíz y la ejecución de acciones correctivas?",
+    "opciones": [
+      {
+        "text": "Planificar (P).",
+        "isCorrect": false,
+        "rationale": "En la fase de Planificación se definen los objetivos ambientales y los recursos necesarios antes de la ejecución."
+      },
+      {
+        "text": "Hacer (H).",
+        "isCorrect": false,
+        "rationale": "En la fase de Hacer se implementan los procesos operacionales conforme a lo planificado."
+      },
+      {
+        "text": "Controlar / Verificar (V).",
+        "isCorrect": false,
+        "rationale": "En la fase de Controlar se realiza el seguimiento, medición de indicadores y auditorías internas."
+      },
+      {
+        "text": "Actuar (A).",
+        "isCorrect": true,
+        "rationale": "La fase de Actuar aborda las desviaciones y no conformidades detectadas en la verificación, ejecutando acciones correctivas para cerrar el ciclo e impulsar la mejora."
+      },
+      {
+        "text": "Certificar (C).",
+        "isCorrect": false,
+        "rationale": "Certificar no es una etapa formal del ciclo de mejora continua de Deming (PHVA)."
+      }
+    ],
+    "hint": "Corresponde a la última etapa del ciclo donde se corrigen las fallas halladas durante el monitoreo para no repetir errores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al implementar un Sistema Integrado de Gestión (SIG), ¿cuál es la limitación intrínseca de las herramientas de Inteligencia Artificial al tratar de sustituir el liderazgo humano en el proceso de certificación?",
+    "opciones": [
+      {
+        "text": "La Inteligencia Artificial no puede procesar textos técnicos en idioma español.",
+        "isCorrect": false,
+        "rationale": "Los modelos de lenguaje actuales procesan y generan texto técnico en múltiples idiomas con fluidez."
+      },
+      {
+        "text": "Las herramientas de IA no pueden redactar matrices IPERC ni procedimientos operativos estandarizados.",
+        "isCorrect": false,
+        "rationale": "La IA puede redactar borradores o sugerir pasos metodológicos para procedimientos y matrices de riesgo."
+      },
+      {
+        "text": "La IA puede sugerir pasos metodológicos, pero la gestión del cambio requiere persuadir, negociar y liderar a las personas en la organización.",
+        "isCorrect": true,
+        "rationale": "Las normas ISO dependen de la cultura organizacional; la gestión del cambio involucra motivar y liderar personas, competencias que escapan a la automatización tecnológica."
+      },
+      {
+        "text": "Las certificadoras internacionales prohíben por ley el uso de software computacional en las auditorías internas.",
+        "isCorrect": false,
+        "rationale": "El uso de herramientas digitales y software está permitido y promovido en los procesos de auditoría moderna."
+      },
+      {
+        "text": "La IA únicamente funciona para normas contables y no se puede aplicar a temas de seguridad industrial.",
+        "isCorrect": false,
+        "rationale": "Las herramientas tecnológicas se aplican transversalmente a diversos campos de la ingeniería e industria."
+      }
+    ],
+    "hint": "Reflexione sobre qué aspecto de la cultura laboral requiere persuasión e interacción empática interpresonal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la definición técnica y el propósito principal de un simulacro en el contexto del entrenamiento de respuesta a emergencias?",
+    "opciones": [
+      {
+        "text": "Es un examen teórico obligatorio que determina la continuidad laboral de los operarios de maquinaria.",
+        "isCorrect": false,
+        "rationale": "Un simulacro es un ejercicio práctico de campo u operacional, no una prueba teórica sobre rendimiento laboral."
+      },
+      {
+        "text": "Es una práctica controlada que replica una situación de emergencia para evaluar la respuesta del personal y medir la efectividad de los planes de contingencia.",
+        "isCorrect": true,
+        "rationale": "El simulacro busca reproducir de manera segura y simulada un escenario de riesgo para poner a prueba los protocolos, recursos y tiempos de reacción."
+      },
+      {
+        "text": "Es una auditoría contable realizada por la SUNAT para verificar la compra de equipos contra incendios.",
+        "isCorrect": false,
+        "rationale": "La entidad tributaria no fiscaliza operativamente la ejecución técnica de ejercicios de evacuación."
+      },
+      {
+        "text": "Es un procedimiento reactivo que se ejecuta exclusivamente cuando ya se ha producido un siniestro con pérdidas fatales.",
+        "isCorrect": false,
+        "rationale": "El simulacro se realiza de forma preventiva antes de que ocurra una catástrofe real."
+      },
+      {
+        "text": "Es una reunión informativa reservada únicamente para la alta gerencia y los accionistas de la empresa.",
+        "isCorrect": false,
+        "rationale": "Un simulacro involucra activamente a toda la población del centro de trabajo y sus brigadas."
+      }
+    ],
+    "hint": "Tenga en cuenta el carácter preventivo y experimental de recrear una hipótesis de siniestro sin peligro real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al finalizar la ejecución de un simulacro de evacuación por sismo o incendio, ¿cuál es el error metodológico más grave que comete una organización en su gestión de prevención?",
+    "opciones": [
+      {
+        "text": "Utilizar cronómetros múltiples para medir el tiempo de salida de las diferentes áreas.",
+        "isCorrect": false,
+        "rationale": "Medir los tiempos con precisión mediante cronómetros es una buena práctica técnica recomendada."
+      },
+      {
+        "text": "Dar por concluido el ejercicio sin realizar una evaluación formal mediante datos, indicadores (como tiempo de respuesta) y retroalimentación.",
+        "isCorrect": true,
+        "rationale": "Un simulacro carece de valor si no se miden los resultados ni se efectúa una reunión de retroalimentación para identificar fallas y oportunidades de mejora."
+      },
+      {
+        "text": "Grabar en video el desplazamiento de las brigadas y el personal evacuado.",
+        "isCorrect": false,
+        "rationale": "El registro audiovisual es una herramienta útil para observar fallas de comportamiento que no se captan a simple vista."
+      },
+      {
+        "text": "Diseñar el simulacro considerando la evacuación prioritaria de personal vulnerable o con discapacidad.",
+        "isCorrect": false,
+        "rationale": "Planificar la evacuación de personas con movilidad reducida o vulnerabilidades es un requisito fundamental de inclusión en la seguridad."
+      },
+      {
+        "text": "Difundir previamente las rutas de evacuación a través de afiches y boletines internos.",
+        "isCorrect": false,
+        "rationale": "Informar previamente sobre las rutas de evacuación garantiza que el personal conozca los flujos seguros."
+      }
+    ],
+    "hint": "Piense en qué sucede si la actividad se toma como un simple acto presencial sin analizar métricas ni fallas cometidas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes fases forman parte de la secuencia metodológica estándar para llevar a cabo un simulacro institucional o industrial efectivo?",
+    "opciones": [
+      {
+        "text": "Planificación: definir el escenario, objetivos, hipótesis, recursos y roles de los participantes.",
+        "isCorrect": true,
+        "rationale": "En la planificación se establece la hipótesis del siniestro y la logística de evaluadores y brigadas."
+      },
+      {
+        "text": "Comunicación y sobreinformación: difundir de manera clara los objetivos y procedimientos a toda la población involucrada.",
+        "isCorrect": true,
+        "rationale": "Sensibilizar e informar repetidamente garantiza que la población sepa cómo actuar sin generar pánico infundado."
+      },
+      {
+        "text": "Implementación / Puesta en escena: ejecutar la práctica controlada siguiendo el plan establecido.",
+        "isCorrect": true,
+        "rationale": "Es el desarrollo en campo donde se activan alarmas y se desplazan los participantes al punto de reunión."
+      },
+      {
+        "text": "Evaluación post-ejercicio: medir tiempos, analizar fortalezas, debilidades y establecer acciones de mejora continua.",
+        "isCorrect": true,
+        "rationale": "La evaluación posterior mediante actas y rúbricas consolida las lecciones aprendidas para actualizar los planes."
+      },
+      {
+        "text": "Suspensión permanente de la producción industrial por un periodo mínimo de 30 días calendario post-simulacro.",
+        "isCorrect": false,
+        "rationale": "Un simulacro es una interrupción breve y programada; no exige paralizaciones prolongadas de las operaciones."
+      }
+    ],
+    "hint": "Seleccione las cuatro fases secuenciales que van desde la preparación teórica hasta el análisis final de resultados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la puesta en escena de un simulacro de emergencia, ¿cuál es la diferencia funcional entre un \"simulacro de gabinete\" y un \"simulacro de campo o puesta en escena\"?",
+    "opciones": [
+      {
+        "text": "El de gabinete se realiza en la vía pública con apoyo policial, mientras que el de campo se ejecuta dentro de oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "El simulacro de gabinete se desarrolla en interiores (salas de reuniones) mediante discusión de hipótesis."
+      },
+      {
+        "text": "El de gabinete se resuelve teóricamente en una mesa de trabajo o sala de reuniones analizando la hipótesis, mientras que el de campo ejecuta la acción física en el terreno.",
+        "isCorrect": true,
+        "rationale": "El ejercicio de gabinete prueba la toma de decisiones del comité en mesa sin movilización de personal, a diferencia de la puesta en escena real en terreno."
+      },
+      {
+        "text": "El de gabinete requiere el uso obligatorio de ambulancias reales, mientras que el de campo prescinde de brigadistas.",
+        "isCorrect": false,
+        "rationale": "El despliegue de ambulancias y brigadas corresponde a las prácticas operativas de campo."
+      },
+      {
+        "text": "El de gabinete no posee validez legal ante las autoridades de Defensa Civil, mientras que el de campo sí.",
+        "isCorrect": false,
+        "rationale": "Los simulacros de gabinete son reconocidos metodológicamente si se encuentran fundamentados y firmados por el comité."
+      },
+      {
+        "text": "El de gabinete se enfoca exclusivamente en riesgos químicos, mientras que el de campo solo aborda sismos.",
+        "isCorrect": false,
+        "rationale": "Ambas modalidades pueden abordar cualquier tipo de hipótesis (química, sísmica, incendios, etc.)."
+      }
+    ],
+    "hint": "Diferencie el ejercicio intelectual de escritorio frente a la movilización de recursos y personas en la planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la estructura organizativa de evaluación de un simulacro, ¿cuál es la función específica encomendada a los \"evaluadores\" a diferencia de la población general que evacúa?",
+    "opciones": [
+      {
+        "text": "Encargarse de cortar el suministro de agua de la comunidad circundante durante el ejercicio.",
+        "isCorrect": false,
+        "rationale": "Interrumpir servicios públicos comunitarios no es labor de los evaluadores de un simulacro interno."
+      },
+      {
+        "text": "Medir el cumplimiento de los protocolos por parte de las brigadas y la efectividad de la infraestructura/rutas usando instrumentos de cotejo.",
+        "isCorrect": true,
+        "rationale": "Los evaluadores analizan de manera neutral el desempeño de las brigadas, los tiempos en rutas y el correcto funcionamiento de alarmas."
+      },
+      {
+        "text": "Personificar a las víctimas fatales en el punto de encuentro para aumentar el dramatismo.",
+        "isCorrect": false,
+        "rationale": "El rol de heridos o víctimas es asignado a actores o simuladores previamente definidos, no a los evaluadores."
+      },
+      {
+        "text": "Dirigir el tráfico vehicular en la carretera nacional más cercana a la instalación.",
+        "isCorrect": false,
+        "rationale": "El control de tránsito externo corresponde a la policía de tránsito o al personal de seguridad periférica."
+      },
+      {
+        "text": "Financiar la compra de extintores adicionales para el centro de trabajo.",
+        "isCorrect": false,
+        "rationale": "El financiamiento de insumos es responsabilidad de la administración y logística de la empresa."
+      }
+    ],
+    "hint": "Considere quién lleva las listas de chequeo y cronómetros para auditar la respuesta del personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión moderna del talento y la seguridad industrial, ¿cuál es el propósito de integrar la \"educación o capacitación continua\" en el programa de SST?",
+    "opciones": [
+      {
+        "text": "Cumplir un trámite documental anual para evitar sanciones administrativas sin importar si el aprendizaje se consolida.",
+        "isCorrect": false,
+        "rationale": "La visión tradicional de ver la capacitación como mero papel ignora el valor de salvaguardar vidas mediante competencias reales."
+      },
+      {
+        "text": "Mantener las habilidades y conocimientos actualizados ante nuevas tecnologías, regulaciones y cambios en el entorno laboral.",
+        "isCorrect": true,
+        "rationale": "La educación continua garantiza que los trabajadores adapten sus competencias a la evolución tecnológica, riesgos emergentes y cambios normativos."
+      },
+      {
+        "text": "Reemplazar la necesidad de instalar señalética de seguridad en las áreas operativas.",
+        "isCorrect": false,
+        "rationale": "La señalización de seguridad es una medida de control de ingeniería obligatoria que no se invalida con la capacitación."
+      },
+      {
+        "text": "Reducir la jornada de trabajo a la mitad mediante sesiones teóricas permanentes.",
+        "isCorrect": false,
+        "rationale": "La capacitación busca optimizar el desempeño seguro sin suspender arbitrariamente las operaciones de la empresa."
+      },
+      {
+        "text": "Transferir la responsabilidad de la inducción inicial a los proveedores externos de insumos.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad de capacitar al personal en sus puestos específicos sigue siendo del empleador."
+      }
+    ],
+    "hint": "Relacione este concepto con la necesidad de adaptarse a un mundo profesional en constante transformación técnica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con las definiciones técnicas explicadas en el curso, ¿qué diferencia sustancial existe entre la Responsabilidad Social Empresarial (RSE) y la filantropía o asistencialismo?",
+    "opciones": [
+      {
+        "text": "La RSE se enfoca únicamente en regalar dinero en efectivo, mientras que la filantropía realiza donaciones de insumos médicos.",
+        "isCorrect": false,
+        "rationale": "Entregar dinero en efectivo sin un plan de desarrollo sostenible es un ejemplo de filantropía, no de RSE."
+      },
+      {
+        "text": "La RSE es un compromiso voluntario y estratégico integrado a la gestión del negocio para mitigar sus impactos económicos, sociales y ambientales, mientras que la filantropía es la donación puntual o entrega de dinero sin estrategia de desarrollo sostenible.",
+        "isCorrect": true,
+        "rationale": "La RSE trasciende el mero regalo de dinero (filantropía) o la caridad puntual; es una estrategia integral que asume la responsabilidad de las decisiones empresariales en la comunidad y el entorno."
+      },
+      {
+        "text": "La RSE es obligatoria solo para microempresas, mientras que la filantropía es exclusiva de las multinacionales mineras.",
+        "isCorrect": false,
+        "rationale": "La RSE se aplica voluntariamente a empresas de cualquier tamaño y rubro económico."
+      },
+      {
+        "text": "La RSE se limita al cuidado exclusivo del ecosistema forestal, mientras que la filantropía regula las relaciones laborales internas.",
+        "isCorrect": false,
+        "rationale": "El cuidado exclusivo ambiental es ecología; la RSE abarca también la dimensión social y laboral."
+      },
+      {
+        "text": "No existe ninguna diferencia; ambos términos son sinónimos perfectos en el derecho mercantil.",
+        "isCorrect": false,
+        "rationale": "La literatura de gestión diferencia claramente el asistencialismo pasivo de la inversión social estratégica."
+      }
+    ],
+    "hint": "Analice si la acción consiste en una donación dineraria esporádica o en un plan estratégico integrado de impacto a largo plazo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un programa genuino de Responsabilidad Social Empresarial debe articular armónicamente tres dimensiones o pilares estratégicos. ¿Cuáles son dichos pilares?",
+    "opciones": [
+      {
+        "text": "Económico, Político y Sindical.",
+        "isCorrect": false,
+        "rationale": "Los componentes políticos y sindicales representan actores o dinámicas, pero no constituyen los tres pilares conceptuales del desarrollo sostenible."
+      },
+      {
+        "text": "Tributario, Judicial y Administrativo.",
+        "isCorrect": false,
+        "rationale": "Estos corresponden a ámbitos del cumplimiento legal o normativo estatal."
+      },
+      {
+        "text": "Económico, Social y Ambiental.",
+        "isCorrect": true,
+        "rationale": "La RSE se sostiene en la triple hélice o 'Triple Bottom Line': lograr rentabilidad económica respetando el desarrollo social e impactando de forma sostenible en el medio ambiente."
+      },
+      {
+        "text": "Financiero, Comercial y Publicitario.",
+        "isCorrect": false,
+        "rationale": "Estos representan áreas funcionales de marketing y finanzas de una empresa comercial."
+      },
+      {
+        "text": "Legal, Tecnológico y Operativo.",
+        "isCorrect": false,
+        "rationale": "Son aspectos de la gestión interna, pero no representan la definición amplia del desarrollo sostenible."
+      }
+    ],
+    "hint": "Piense en la concepción del \"Triple Resultado\" (Triple Bottom Line) del desarrollo sostenible.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿De qué manera la Responsabilidad Social Empresarial se vincula y fortalece la gestión de emergencias industriales en el entorno donde opera una empresa?",
+    "opciones": [
+      {
+        "text": "Desarrollando planes de contingencia comunitarios que contemplen la protección y alerta temprana para los vecinos colindantes a la planta.",
+        "isCorrect": true,
+        "rationale": "Una empresa socialmente responsable integra a sus vecinos en sus planes de emergencia, comunicando avisos y rutas en caso de fugas o explosiones."
+      },
+      {
+        "text": "Fortaleciendo el diálogo preventivo y la resiliencia con la comunidad en caso de desastres naturales o siniestros operacionales.",
+        "isCorrect": true,
+        "rationale": "La RSE genera espacios de confianza que permiten coordinar respuestas conjuntas ante inundaciones, huaicos u otros desastres."
+      },
+      {
+        "text": "Disponiendo de recursos corporativos y maquinaria para auxiliar a la población vulnerable de la zona de influencia durante una catástrofe.",
+        "isCorrect": true,
+        "rationale": "El auxilio con maquinaria, agua o apoyo médico a la comunidad afectada en momentos de desastre demuestra el compromiso social real de la inversión."
+      },
+      {
+        "text": "Trasladando los residuos peligrosos sin tratar hacia las áreas urbanas vecinas para proteger las instalaciones de la empresa.",
+        "isCorrect": false,
+        "rationale": "Contaminar el área vecina vulnera gravemente los principios básicos de la RSE y la legislación ambiental."
+      },
+      {
+        "text": "Ocultando la información sobre fugas químicas a la comunidad para no dañar la imagen de la marca en el mercado.",
+        "isCorrect": false,
+        "rationale": "El ocultamiento de emergencias ambientales rompe la transparencia y aumenta el peligro para los pobladores."
+      }
+    ],
+    "hint": "Considere la colaboración activa con los vecinos en alertas, apoyo en catástrofes y resiliencia comunitaria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la implementación de la RSE es considerada actualmente una inversión estratégica y un \"activo de competitividad\" para las empresas en el mercado internacional?",
+    "opciones": [
+      {
+        "text": "Porque permite fijar precios monopólicos sin intervención del organismo regulador.",
+        "isCorrect": false,
+        "rationale": "La RSE no concede libertades para vulnerar las leyes de libre competencia o regulación de mercado."
+      },
+      {
+        "text": "Porque los grandes compradores internacionales, fondos de inversión y licitaciones exigen estándares éticos, sociales y ambientales para cerrar contratos.",
+        "isCorrect": true,
+        "rationale": "Cadenas globales (como Walmart o Tesco) y fondos internacionales auditan y descartan a proveedores que no cumplan con prácticas laborales éticas, ambientales y de RSE."
+      },
+      {
+        "text": "Porque exonera a las empresas exportadoras del pago de sueldos a los operarios durante el primer año.",
+        "isCorrect": false,
+        "rationale": "La RSE promueve salarios justos y el estricto cumplimiento del marco legal laboral."
+      },
+      {
+        "text": "Porque reemplaza completamente la necesidad de contar con un seguro complementario de trabajo de riesgo (SCTR).",
+        "isCorrect": false,
+        "rationale": "El SCTR es una obligación legal en actividades de alto riesgo que no se sustituye con planes comunitarios."
+      },
+      {
+        "text": "Porque otorga inmunidad penal automática a los ejecutivos frente a delitos ambientales.",
+        "isCorrect": false,
+        "rationale": "La RSE no constituye un blindaje jurídico para evadir responsabilidades penales ante actos ilícitos."
+      }
+    ],
+    "hint": "Reflexione sobre los requisitos éticos y ambientales exigidos por grandes compradores y licitaciones internacionales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En proyectos industriales o mineros ubicados en zonas rurales o de comunidades campesinas, ¿cuál es el resultado operativo de aplicar una RSE basada en el respeto cultural y la negociación transparente?",
+    "opciones": [
+      {
+        "text": "La erradicación total de la minería formal en todo el territorio nacional.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la RSE es permitir la viabilidad de inversiones responsables de forma sostenible, no eliminarlas."
+      },
+      {
+        "text": "La obtención de la \"licencia social\", previniendo conflictos sociambientales y construyendo relaciones de confianza mutuamente beneficiosas.",
+        "isCorrect": true,
+        "rationale": "Escuchar y cooperar con las comunidades genera la aceptación transparente (licencia social) indispensable para la continuidad del proyecto."
+      },
+      {
+        "text": "La obligación legal de entregar el 100% de las acciones de la compañía a los líderes locales.",
+        "isCorrect": false,
+        "rationale": "La RSE genera esquemas de valor compartido sin implicar la transferencia de la propiedad accionaria de la empresa."
+      },
+      {
+        "text": "La prohibición de realizar simulacros de emergencia dentro del campamento industrial.",
+        "isCorrect": false,
+        "rationale": "La RSE impulsa la realización de simulacros conjuntos con las comunidades, no su prohibición."
+      },
+      {
+        "text": "El incremento de las multas impuestas por los organismos de fiscalización laboral.",
+        "isCorrect": false,
+        "rationale": "Las prácticas sostenibles disminuyen las infracciones y las subsecuentes multas fiscalizadoras."
+      }
+    ],
+    "hint": "Considere el concepto intangible de aprobación colectiva que otorgan los pobladores de la zona de influencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-17",
+    "diplomado": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define el concepto de \"resiliencia empresarial\" cuando una compañía integra adecuadamente la RSE y la gestión de emergencias?",
+    "opciones": [
+      {
+        "text": "La capacidad financiera de la empresa para absorber multas sin cambiar sus malas prácticas operativas.",
+        "isCorrect": false,
+        "rationale": "Pagar sanciones por reincidir en malas prácticas no constituye resiliencia sino irresponsabilidad corporativa."
+      },
+      {
+        "text": "La habilidad de la organización para resistir, adaptarse y recuperarse de situaciones adversas o desastres, protegiendo a sus colaboradores y al entorno comunitario.",
+        "isCorrect": true,
+        "rationale": "La resiliencia implica la fortaleza institucional y operativa para superar crisis o catástrofes manteniendo el compromiso con las personas y la continuidad sostenible del negocio."
+      },
+      {
+        "text": "La estrategia de cambiar de razón social cada año para evadir pasivos ambientales e indemnizaciones.",
+        "isCorrect": false,
+        "rationale": "Evadir pasivos mediante cambios fraudulentos de razón social es un acto ilegal contrario a la ética corporativa."
+      },
+      {
+        "text": "El uso de campañas publicitarias para negar la existencia de un accidente industrial grave.",
+        "isCorrect": false,
+        "rationale": "Negar incidentes mediante publicidad manipuladora daña la reputación y contradice el pilar de transparencia de la RSE."
+      },
+      {
+        "text": "La decisión de cerrar definitivamente la planta operativa al primer indicio de riesgo sísmico.",
+        "isCorrect": false,
+        "rationale": "La resiliencia busca la continuidad del negocio y la superación de crisis, no el abandono de operaciones ante la primera dificultad."
+      }
+    ],
+    "hint": "Piense en la capacidad de resistir eventos disruptivos, adaptarse y salir fortalecido protegiendo el entorno.",
+    "activo": true
+  }
+]

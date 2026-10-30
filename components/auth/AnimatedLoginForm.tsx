@@ -120,14 +120,9 @@ export function AnimatedLoginForm({ className = "" }: AnimatedLoginFormProps) {
                   } transition-colors`}>
                     {esEstudiante ? <GraduationCap className="size-5" /> : <ShieldCheck className="size-5" />}
                   </div>
-                  <div className="space-y-0.5">
-                    <span className="text-sm font-bold text-white group-hover:text-indigo-300 transition-colors block">
-                      {rol.titulo}
-                    </span>
-                    <p className="text-[11px] text-slate-400 leading-tight">
-                      {rol.subtitulo}
-                    </p>
-                  </div>
+                  <span className="text-sm font-bold text-white group-hover:text-indigo-300 transition-colors block">
+                    {rol.titulo}
+                  </span>
                 </div>
 
                 <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-white transition-transform group-hover:translate-x-1 shrink-0 ml-2" />

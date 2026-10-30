@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal de aplicar técnicas de control jerárquico en la industria minera según la pirámide de procesos?",
+    "opciones": [
+      {
+        "text": "Minimizar los riesgos y peligros para proteger la salud y la vida de los trabajadores.",
+        "isCorrect": true,
+        "rationale": "El marco jerárquico prioriza la identificación de peligros y la gestión de riesgos para resguardar la seguridad del personal en un entorno operacional de alto riesgo."
+      },
+      {
+        "text": "Reemplazar por completo la mano de obra humana sin supervisión técnica.",
+        "isCorrect": false,
+        "rationale": "La pirámide de control busca mitigar riesgos operacionales y mejorar la eficiencia, manteniendo la supervisión técnica y la interacción segura hombre-máquina."
+      },
+      {
+        "text": "Eliminar la necesidad de realizar capacitaciones de seguridad laboral.",
+        "isCorrect": false,
+        "rationale": "Los controles administrativos dentro de la pirámide exigen la capacitación continua del personal para garantizar operaciones seguras."
+      },
+      {
+        "text": "Aumentar la frecuencia de paradas no planificadas en la planta de procesamiento.",
+        "isCorrect": false,
+        "rationale": "Un sistema de control eficiente busca evitar la interrupción abrupta de operaciones y minimizar los tiempos muertos."
+      },
+      {
+        "text": "Reducir los estándares de calidad del mineral extraído para acelerar la venta.",
+        "isCorrect": false,
+        "rationale": "El control de procesos garantiza la homogeneidad y el cumplimiento de estándares exigidos de calidad del producto final."
+      }
+    ],
+    "hint": "Piensa en el valor más importante que se busca resguardar en trabajos de alto riesgo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué sistema integra múltiples controladores para operar y supervisar grandes secciones de la planta minera desde una sala central?",
+    "opciones": [
+      {
+        "text": "DCS (Sistema de Control Distribuido).",
+        "isCorrect": true,
+        "rationale": "El DCS agrupa y coordina diversos controladores para operar de manera integrada áreas extensas como trituración y flotación desde un mando central."
+      },
+      {
+        "text": "Termostato doméstico manual.",
+        "isCorrect": false,
+        "rationale": "Un termostato simple regula únicamente variables locales básicas y no tiene capacidad de integración industrial compleja."
+      },
+      {
+        "text": "Relé electromecánico aislado.",
+        "isCorrect": false,
+        "rationale": "Los relés aislados ejecutan conmutaciones simples de encendido y apagado sin ofrecer supervisión integrada de grandes plantas."
+      },
+      {
+        "text": "Interruptor de presión analógico.",
+        "isCorrect": false,
+        "rationale": "Un interruptor individual solo detecta un umbral físico local y no coordina grandes áreas de procesamiento."
+      },
+      {
+        "text": "Sensor de masa bimetálico.",
+        "isCorrect": false,
+        "rationale": "Un sensor bimetálico es un componente mecánico de medición directa que no gestiona múltiples variables industriales."
+      }
+    ],
+    "hint": "Se compara analógicamente con la dirección ordenada de una orquesta de instrumentos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple el sistema SCADA en el monitoreo de bombas de agua en minería subterránea?",
+    "opciones": [
+      {
+        "text": "Ofrecer visualización y registro de datos en tiempo real para predecir y evitar inundaciones.",
+        "isCorrect": true,
+        "rationale": "El sistema SCADA recopila datos de presión y caudal al instante, facilitando la prevención de contingencias operativas."
+      },
+      {
+        "text": "Reemplazar el cableado de potencia eléctrica de la infraestructura minera.",
+        "isCorrect": false,
+        "rationale": "SCADA es un software de adquisición de datos y supervisión, no un medio físico de transmisión de potencia."
+      },
+      {
+        "text": "Sustituir el trabajo de contabilidad y la gestión de nóminas de la empresa.",
+        "isCorrect": false,
+        "rationale": "SCADA se enfoca en la supervisión de procesos industriales de campo y no en la administración contable."
+      },
+      {
+        "text": "Reparar de forma mecánica y física las tuberías dañadas en el socavón.",
+        "isCorrect": false,
+        "rationale": "El sistema provee información y diagnóstico en pantalla, requiriendo intervención técnica o de mantenimiento para reparar fallas físicas."
+      },
+      {
+        "text": "Modificar los reglamentos legales de seguridad minera del estado.",
+        "isCorrect": false,
+        "rationale": "El software supervisa variables de planta y no redacta ni promulga normativas estatales."
+      }
+    ],
+    "hint": "Considera cómo la supervisión de presión y caudal ayuda a prevenir emergencias de agua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones constituyen beneficios de la automatización en la industria minera?",
+    "opciones": [
+      {
+        "text": "Aumento de la eficiencia energética y uso óptimo de recursos.",
+        "isCorrect": true,
+        "rationale": "La regulación automática ajusta la velocidad y potencia del equipamiento según la demanda real, reduciendo consumos innecesarios."
+      },
+      {
+        "text": "Minimización de la exposición humana en áreas de alto riesgo.",
+        "isCorrect": true,
+        "rationale": "La teleoperación y los sistemas autónomos retiran al trabajador de zonas peligrosas, mejorando los estándares de seguridad."
+      },
+      {
+        "text": "Reducción de paradas no planificadas mediante mantenimiento predictivo.",
+        "isCorrect": true,
+        "rationale": "Los sensores de vibración y temperatura detectan anomalías tempranas evitando interrupciones abruptas de producción."
+      },
+      {
+        "text": "Eliminación total del mantenimiento preventivo en las maquinarias.",
+        "isCorrect": false,
+        "rationale": "La automatización requiere un mantenimiento especializado continuo para asegurar la precisión de sensores y actuadores."
+      },
+      {
+        "text": "Aumento deliberado de los costos operativos de la planta.",
+        "isCorrect": false,
+        "rationale": "Uno de los metas fundamentales de automatizar es optimizar costos y maximizar la rentabilidad del proceso."
+      }
+    ],
+    "hint": "Selecciona los aspectos que optimizan recursos, protegen la vida del operario y mantienen la producción continua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de los tipos de control en minería, ¿qué categoría abarca las capacitaciones especializadas, protocolos de trabajo y rotación de personal?",
+    "opciones": [
+      {
+        "text": "Controles administrativos.",
+        "isCorrect": true,
+        "rationale": "Los procedimientos documentados, la gestión de turnos y la capacitación continua constituyen la barrera administrativa de control."
+      },
+      {
+        "text": "Controles de ingeniería.",
+        "isCorrect": false,
+        "rationale": "Los controles de ingeniería corresponden a modificaciones físicas o implementación de software e infraestructura como PLC y sensores."
+      },
+      {
+        "text": "Equipos de protección personal (EPP).",
+        "isCorrect": false,
+        "rationale": "El EPP representa la última barrera física individual de protección y no abarca los protocolos o capacitaciones del personal."
+      },
+      {
+        "text": "Eliminación del peligro.",
+        "isCorrect": false,
+        "rationale": "La eliminación consiste en remover físicamente la fuente de peligro del entorno de trabajo."
+      },
+      {
+        "text": "Sustitución de procesos.",
+        "isCorrect": false,
+        "rationale": "La sustitución implica reemplazar un material o proceso peligroso por uno de menor riesgo."
+      }
+    ],
+    "hint": "Se enfoca en la gestión de personas, normas y procedimientos operativos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función del control de velocidad automático mediante un PLC en una cinta transportadora minera?",
+    "opciones": [
+      {
+        "text": "Ajustar la velocidad de la banda según la cantidad de mineral detectado para evitar desgastes y consumo innecesario.",
+        "isCorrect": true,
+        "rationale": "El PLC adapta el funcionamiento del motor al flujo real detectado por sensores, optimizando la eficiencia energética y la vida útil del equipo."
+      },
+      {
+        "text": "Mantener la cinta a máxima velocidad de manera ininterrumpida sin importar la carga.",
+        "isCorrect": false,
+        "rationale": "Operar a máxima velocidad sin carga genera un desgaste mecánico acelerado y consumo innecesario de energía."
+      },
+      {
+        "text": "Invertir continuamente el sentido de marcha de la faja transportadora cada cinco minutos.",
+        "isCorrect": false,
+        "rationale": "Invertir la marcha constantemente interrumpe la línea de transporte y daña los componentes motrices."
+      },
+      {
+        "text": "Desactivar la lectura de datos de todos los sensores de peso y presencia.",
+        "isCorrect": false,
+        "rationale": "El PLC requiere de las señales enviadas por los sensores para poder calcular el ajuste de velocidad."
+      },
+      {
+        "text": "Reemplazar la fuente de energía eléctrica por accionamiento manual de manivela.",
+        "isCorrect": false,
+        "rationale": "La automatización busca controlar eficientemente motores eléctricos, no retornar al trabajo de fuerza física manual."
+      }
+    ],
+    "hint": "Relaciona la cantidad de material sobre la banda con el gasto de energía y desgaste mecánico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la pirámide de procesos de la industria minera, ¿cuál es el objetivo central del nivel estratégico o directivo?",
+    "opciones": [
+      {
+        "text": "Definir la visión, misión, políticas corporativas y lineamientos globales de productividad y sostenibilidad.",
+        "isCorrect": true,
+        "rationale": "El nivel estratégico establece el marco conceptual corporativo y los objetivos de rentabilidad y cumplimiento normativo a largo plazo."
+      },
+      {
+        "text": "Realizar el mantenimiento correctivo diario de los camiones de extracción.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento operativo directo pertenece a los niveles táctico y de servicios auxiliares."
+      },
+      {
+        "text": "Operar los joysticks de control en las salas teleoperadas durante el turno de noche.",
+        "isCorrect": false,
+        "rationale": "La ejecución del trabajo en salas de control corresponde al nivel operativo."
+      },
+      {
+        "text": "Registrar manualmente la hora de entrada de los trabajadores en el campamento.",
+        "isCorrect": false,
+        "rationale": "Las tareas rutinarias de registro y control de acceso corresponden a labores de administración operativa."
+      },
+      {
+        "text": "Supervisar la presión de aire de los neumáticos en la zona de perforación.",
+        "isCorrect": false,
+        "rationale": "Las inspeciones técnicas de maquinaria de campo son responsabilidad del nivel operativo y de supervisión."
+      }
+    ],
+    "hint": "Ubicado en la cúspide de la pirámide, se encarga de las decisiones macro corporativas a largo plazo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué nivel de la pirámide traduce los objetivos estratégicos en planes concretos a mediano plazo, gestionando recursos humanos, financieros y materiales?",
+    "opciones": [
+      {
+        "text": "Nivel táctico o gerencial.",
+        "isCorrect": true,
+        "rationale": "La gerencia táctica articula las directrices macro en planes operativos de mantenimiento, presupuesto y capacitación de personal."
+      },
+      {
+        "text": "Nivel operativo de ejecución.",
+        "isCorrect": false,
+        "rationale": "El nivel operativo realiza las labores diarias directas de extracción sin diseñar los presupuestos gerenciales."
+      },
+      {
+        "text": "Nivel de proveedores externos.",
+        "isCorrect": false,
+        "rationale": "Los proveedores externos abastecen bienes o servicios pero no estructuran la estrategia táctica interna de la mina."
+      },
+      {
+        "text": "Nivel de servicios de limpieza de campamento.",
+        "isCorrect": false,
+        "rationale": "Los servicios auxiliares dan soporte a la infraestructura básica y no definen planes tácticos de gerencia."
+      },
+      {
+        "text": "Nivel de entes reguladores estatales.",
+        "isCorrect": false,
+        "rationale": "Los organismos de fiscalización auditan el cumplimiento de leyes pero no gestionan los recursos internos de la empresa."
+      }
+    ],
+    "hint": "Es el puente entre las altas directivas corporativas y la ejecución de los operarios en campo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función primordial del nivel operativo dentro de la pirámide de procesos?",
+    "opciones": [
+      {
+        "text": "Ejecutar las tareas diarias de extracción, procesamiento y transporte de mineral bajo normas de seguridad.",
+        "isCorrect": true,
+        "rationale": "El nivel operativo se encarga de la manipulación directa de maquinaria y procesos productivos cotidianos en el frente de trabajo."
+      },
+      {
+        "text": "Aprobar el presupuesto financiero anual para la expansión internacional de la firma.",
+        "isCorrect": false,
+        "rationale": "Las decisiones financieras estratégicas le corresponden al directorio y nivel estratégico."
+      },
+      {
+        "text": "Negociar contratos de venta de mineral a diez años con compradores extranjeros.",
+        "isCorrect": false,
+        "rationale": "Las negociaciones de contratos globales son responsabilidad del área comercial y nivel estratégico."
+      },
+      {
+        "text": "Redactar las leyes nacionales sobre el uso del agua y medio ambiente.",
+        "isCorrect": false,
+        "rationale": "Las leyes gubernamentales son redactadas por las autoridades legislativas del estado."
+      },
+      {
+        "text": "Diseñar los chips de procesamiento para las computadoras de la empresa.",
+        "isCorrect": false,
+        "rationale": "La fabricación de componentes de hardware electrónico la realizan proveedores tecnológicos especializados."
+      }
+    ],
+    "hint": "Se relaciona directamente con la acción en el frente de trabajo, la maquinaría y la producción del día a día.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué actividades corresponden al nivel de soporte o servicios auxiliares en una mina?",
+    "opciones": [
+      {
+        "text": "Mantenimiento preventivo y correctivo de la maquinaria de mina.",
+        "isCorrect": true,
+        "rationale": "Garantizar la disponibilidad de los equipos principales es una labor fundamental de soporte operativo."
+      },
+      {
+        "text": "Suministro oportuno de repuestos e insumos para el procesamiento.",
+        "isCorrect": true,
+        "rationale": "La gestión logística de materiales asegura la continuidad ininterrumpida de la cadena productiva."
+      },
+      {
+        "text": "Gestión de residuos mineros y logística de transporte de desechos.",
+        "isCorrect": true,
+        "rationale": "El manejo ambiental de residuos apoya la operación principal cumpliendo normativas de sostenibilidad."
+      },
+      {
+        "text": "Establecimiento de la misión y visión global de la corporación.",
+        "isCorrect": false,
+        "rationale": "Definir la identidad y dirección corporativa es tarea exclusiva del nivel estratégico directivo."
+      },
+      {
+        "text": "Elección de la junta general de accionistas de la minera.",
+        "isCorrect": false,
+        "rationale": "Las decisiones de propiedad y gobernanza corporativa residen en los dueños e inversionistas de la empresa."
+      }
+    ],
+    "hint": "Piensa en aquellas tareas que, sin extraer mineral directamente, permiten que las máquinas y procesos continúen operando.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto del control de procesos, ¿cómo se define la 'mejora continua'?",
+    "opciones": [
+      {
+        "text": "Identificar desviaciones o fallas para analizarlas, aprender de ellas y optimizar constantemente los procesos.",
+        "isCorrect": true,
+        "rationale": "La mejora continua utiliza la retroalimentación de errores y datos para realizar ajustes sistemáticos que incrementen la eficiencia."
+      },
+      {
+        "text": "Repetir procedimientos obsoletos sin efectuar ningún cambio en la planta.",
+        "isCorrect": false,
+        "rationale": "Mantener procesos deficientes o antiguos sin revisión contraviene el principio de optimización del ciclo de mejora."
+      },
+      {
+        "text": "Aumentar los presupuestos de operación sin justificar los resultados de calidad.",
+        "isCorrect": false,
+        "rationale": "La mejora busca incrementar la rentabilidad y eficiencia, evitando gastos o costos innecesarios."
+      },
+      {
+        "text": "Ignorar las sugerencias e informes de fallas presentados por los operarios.",
+        "isCorrect": false,
+        "rationale": "La retroalimentación directa del personal de campo es un insumo indispensable para implementar mejoras."
+      },
+      {
+        "text": "Reemplazar los sistemas informáticos por registros analógicos en papel.",
+        "isCorrect": false,
+        "rationale": "Retornar a métodos analógicos reduce la trazabilidad y la velocidad de análisis necesaria para mejorar."
+      }
+    ],
+    "hint": "Consiste en la retroalimentación constante para evitar repetir equivocaciones y elevar la calidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es obligatorio realizar exámentes médicos ocupacionales al personal antes y durante su relación laboral en minería?",
+    "opciones": [
+      {
+        "text": "Para verificar la salud del trabajador y determinar si alguna afección es de origen previo o producto de su labor.",
+        "isCorrect": true,
+        "rationale": "Los exámenes establecen una línea base de salud para vigilar y prevenir enfermedades ocupacionales derivadas del trabajo."
+      },
+      {
+        "text": "Para clasificar el salario del personal según su masa muscular.",
+        "isCorrect": false,
+        "rationale": "La compensación salarial se basa en contratos, competencias e indicadores laborales, no en la masa muscular."
+      },
+      {
+        "text": "Para evitar entregar los Equipos de Protección Personal (EPP) en la faena.",
+        "isCorrect": false,
+        "rationale": "La evaluación médica no exime bajo ninguna circunstancia la entrega y uso obligatorio del EPP."
+      },
+      {
+        "text": "Para sustituir la necesidad de automatizar los procesos en la planta.",
+        "isCorrect": false,
+        "rationale": "La salud ocupacional es un requerimiento legal y humano independiente del nivel de tecnología adoptado."
+      },
+      {
+        "text": "Para acelerar la velocidad máxima permitida de las maquinarias de transporte.",
+        "isCorrect": false,
+        "rationale": "Los límites de velocidad dependen de la ingeniería vial y seguridad operativa de los equipos."
+      }
+    ],
+    "hint": "Su objetivo es garantizar que la salud del operario no se vea deteriorada por las condiciones del entorno minero.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué significan las siglas PLC en la automatización de la industria minera?",
+    "opciones": [
+      {
+        "text": "Controlador Lógico Programable (Programmable Logic Controller).",
+        "isCorrect": true,
+        "rationale": "Es el dispositivo electrónico industrial diseñado para automatizar secuencias de control mediante programación digital."
+      },
+      {
+        "text": "Proceso Logístico Centralizado.",
+        "isCorrect": false,
+        "rationale": "Aunque describe una función conceptual, no corresponde al nombre del equipo informático industrial PLC."
+      },
+      {
+        "text": "Panel Limitador de Corriente.",
+        "isCorrect": false,
+        "rationale": "El PLC realiza procesamiento lógico y no es un mero dispositivo físico de protección eléctrica."
+      },
+      {
+        "text": "Planta de Lixiviación Continua.",
+        "isCorrect": false,
+        "rationale": "Describe un proceso metalúrgico específico y no un controlador informático programable."
+      },
+      {
+        "text": "Programa de Limpieza y Control.",
+        "isCorrect": false,
+        "rationale": "No coincide con las siglas ni con la definición técnica del equipo de automatización."
+      }
+    ],
+    "hint": "Es la computadora industrial por excelencia utilizada para ejecutar secuencias lógicas de control.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué componente del PLC se encarga de ejecutar el programa de control y realizar cálculos lógicos?",
+    "opciones": [
+      {
+        "text": "Unidad Central de Procesamiento (CPU).",
+        "isCorrect": true,
+        "rationale": "La CPU procesa las señales de entrada, ejecuta la lógica programada en memoria y determina las órdenes de salida."
+      },
+      {
+        "text": "Módulo de entradas digitales.",
+        "isCorrect": false,
+        "rationale": "Su única función es recibir y acondicionar las señales físicas provenientes de los sensores del campo."
+      },
+      {
+        "text": "Fuente de alimentación.",
+        "isCorrect": false,
+        "rationale": "Suministra los niveles de tensión eléctrica adecuados para el funcionamiento interno de los componentes."
+      },
+      {
+        "text": "Módulo de salidas analógicas.",
+        "isCorrect": false,
+        "rationale": "Envía señales de control graduadas hacia los actuadores de campo según las órdenes de la CPU."
+      },
+      {
+        "text": "Chasis o bastidor de montaje.",
+        "isCorrect": false,
+        "rationale": "Es la estructura física que sostiene las tarjetas mecánicamente pero no procesa datos lógicos."
+      }
+    ],
+    "hint": "Se le considera el 'cerebro' del sistema de control.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función específica de los módulos de entrada en la arquitectura de un PLC?",
+    "opciones": [
+      {
+        "text": "Recibir e interpretar las señales físicas enviadas por sensores o interruptores del proceso.",
+        "isCorrect": true,
+        "rationale": "Los módulos de entrada adaptan las señales analógicas o digitales del entorno para que la CPU pueda procesarlas."
+      },
+      {
+        "text": "Suministrar corriente de alta potencia para mover los motores de la mina.",
+        "isCorrect": false,
+        "rationale": "La potencia eléctrica la entregan los variadores, contactores o arrancadores, no las entradas de señal del PLC."
+      },
+      {
+        "text": "Guardar permanentemente los estados financieros de la empresa.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento de datos corporativos se realiza en servidores de base de datos de administración."
+      },
+      {
+        "text": "Accionar directamente la apertura física de una válvula hidráulica pesada.",
+        "isCorrect": false,
+        "rationale": "El accionamiento de dispositivos es tarea de los módulos de salida acoplados a actuadores."
+      },
+      {
+        "text": "Conectar el equipo a la red de telefonía celular comercial.",
+        "isCorrect": false,
+        "rationale": "La comunicación móvil requiere módems o interfaces de comunicación específicas."
+      }
+    ],
+    "hint": "Capta la información del exterior (como temperatura, presión o nivel) y la traduce para la computadora.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con la norma IEC 61131-3, ¿cuáles son lenguajes estandarizados para programar un PLC?",
+    "opciones": [
+      {
+        "text": "Diagrama de escalera (Ladder Diagram - LD).",
+        "isCorrect": true,
+        "rationale": "Es un lenguaje gráfico basado en la representación de esquemas de contactos de relés eléctricos."
+      },
+      {
+        "text": "Bloques de funciones (Function Block Diagram - FBD).",
+        "isCorrect": true,
+        "rationale": "Utiliza bloques interconectados que representan funciones lógicas o matemáticas complejas."
+      },
+      {
+        "text": "Texto estructurado (Structured Text - ST).",
+        "isCorrect": true,
+        "rationale": "Es un lenguaje de alto nivel basado en bloques similar a algoritmos de programación tradicionales."
+      },
+      {
+        "text": "Lenguaje de marcado hipertexto HTML5.",
+        "isCorrect": false,
+        "rationale": "HTML5 se utiliza para el diseño de páginas web y no es un estándar de programación de lógica de PLC."
+      },
+      {
+        "text": "Código Morse neumático.",
+        "isCorrect": false,
+        "rationale": "El código Morse es un sistema de señalización telegráfica y no un lenguaje de automatización industrial."
+      }
+    ],
+    "hint": "Selecciona las opciones que corresponden a métodos gráficos y textuales estandarizados por la norma internacional de control industrial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo contribuye la aplicación de un PLC a la seguridad dentro de una mina subterránea?",
+    "opciones": [
+      {
+        "text": "Controlando automáticamente los sistemas de ventilación y activando alarmas ante la presencia de gases nocivos.",
+        "isCorrect": true,
+        "rationale": "El PLC monitorea sensores de gas y gradúa la ventilación o activa protocolos de evacuación automática en emergencias."
+      },
+      {
+        "text": "Remplazando la necesidad de usar cascos de protección y lámparas de mina.",
+        "isCorrect": false,
+        "rationale": "La automatización del aire no elimina los riesgos físicos de caídas de roca u oscuridad."
+      },
+      {
+        "text": "Aumentando la concentración de monóxido de carbono en los frentes de trabajo.",
+        "isCorrect": false,
+        "rationale": "El objetivo del control ambiental es diluir y extraer gases peligrosos para garantizar aire respirable."
+      },
+      {
+        "text": "Desconectando la energía de las bombas de desagüe durante una lluvia torrencial.",
+        "isCorrect": false,
+        "rationale": "En emergencias por inundación, el PLC debe activar e incrementar el bombeo para resguardar la mina."
+      },
+      {
+        "text": "Impidiendo la comunicación radial entre los rescatistas y la superficie.",
+        "isCorrect": false,
+        "rationale": "Los sistemas lógicos integran canales de comunicación para coordinar la respuesta a incidentes."
+      }
+    ],
+    "hint": "Piensa en la gestión de sensores ambientales y en la circulación del aire respirable en los socavones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ventaja operativa ofrece la estructura modular de un PLC cuando se amplía una planta minera?",
+    "opciones": [
+      {
+        "text": "Permite añadir nuevas tarjetas y funciones sin tener que desechar todo el equipo existente.",
+        "isCorrect": true,
+        "rationale": "La arquitectura modular faculta la escalabilidad agregando módulos de E/S o comunicación según crezca la demanda."
+      },
+      {
+        "text": "Obliga a reescribir desde cero todo el programa lógico de la fábrica.",
+        "isCorrect": false,
+        "rationale": "La modularidad justamente evita reestructurar por completo el programa base mediante la adición de bloques."
+      },
+      {
+        "text": "Exige eliminar todos los sensores analógicos de la instalación.",
+        "isCorrect": false,
+        "rationale": "Un sistema modular acepta la combinación de señales digitales, analógicas y de comunicación en el mismo bastidor."
+      },
+      {
+        "text": "Reduce la velocidad del procesador cada vez que se agrega una máquina.",
+        "isCorrect": false,
+        "rationale": "Los componentes modulares mantienen un rendimiento de escaneo eficiente dentro de sus especificaciones."
+      },
+      {
+        "text": "Desactiva las comunicaciones industriales Ethernet/IP de forma automática.",
+        "isCorrect": false,
+        "rationale": "Las tarjetas de expansión de red incrementan la conectividad en lugar de desactivarla."
+      }
+    ],
+    "hint": "Se relaciona con la capacidad de crecimiento adaptativo agregando partes en lugar de cambiar la máquina entera.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En un controlador PID, ¿cuál es la función de la **acción Proporcional (P)**?",
+    "opciones": [
+      {
+        "text": "Generar una respuesta directa y proporcional a la magnitud del error instantáneo.",
+        "isCorrect": true,
+        "rationale": "La acción proporcional multiplica el error actual por una ganancia para corregir la desviación en forma inmediata."
+      },
+      {
+        "text": "Acumular las desviaciones del pasado a lo largo de varias horas.",
+        "isCorrect": false,
+        "rationale": "La acumulación del error histórico es función de la acción Integral (I)."
+      },
+      {
+        "text": "Predecir el comportamiento futuro de la variable según su tasa de cambio.",
+        "isCorrect": false,
+        "rationale": "La predicción según la velocidad de variación del error corresponde a la acción Derivativa (D)."
+      },
+      {
+        "text": "Eliminar por sí sola todo el ruido eléctrico proveniente de los sensores.",
+        "isCorrect": false,
+        "rationale": "La acción P no es un filtro de señal; de hecho, una ganancia muy alta puede amplificar las perturbaciones."
+      },
+      {
+        "text": "Invertir la polaridad de la fuente de alimentación del sistema.",
+        "isCorrect": false,
+        "rationale": "La acción P calcula un valor de control, no altera la alimentación de potencia de la electrónica."
+      }
+    ],
+    "hint": "Esta acción reacciona únicamente a la diferencia actual entre el valor deseado y el medido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En un algoritmo PID, ¿cuál es la función clave de la **acción Integral (I)**?",
+    "opciones": [
+      {
+        "text": "Sumar el error en el tiempo para eliminar la desviación permanente o en estado estacionario (offset).",
+        "isCorrect": true,
+        "rationale": "Al integrar el error acumulado, el término I ajusta la salida hasta que la variable alcance exactamente el punto de consigna."
+      },
+      {
+        "text": "Predecir cambios repentinos bruscos en la variable mediante derivadas.",
+        "isCorrect": false,
+        "rationale": "La anticipación ante tendencias de cambio es tarea de la acción derivativa."
+      },
+      {
+        "text": "Multiplicar instantáneamente el error por una ganancia fija sin memoria.",
+        "isCorrect": false,
+        "rationale": "El cálculo sin memoria temporal describe a la acción proporcional pura."
+      },
+      {
+        "text": "Desconectar los actuadores mecánicos cuando el sistema está estable.",
+        "isCorrect": false,
+        "rationale": "El término integral mantiene la señal de salida necesaria para sostener la variable en su valor deseado."
+      },
+      {
+        "text": "Aumentar la resistencia física de las tuberías de fluidos.",
+        "isCorrect": false,
+        "rationale": "El término I es un algoritmo numérico de software y no modifica propiedades mecánicas de la tubería."
+      }
+    ],
+    "hint": "Se encarga de borrar el 'error acumulado' que la acción Proporcional por sí sola no logra corregir.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En un sistema de control PID, ¿qué caracteriza a la **acción Derivativa (D)**?",
+    "opciones": [
+      {
+        "text": "Evaluar la velocidad de cambio del error para anticipar y suavizar variaciones bruscas.",
+        "isCorrect": true,
+        "rationale": "Al calcular la derivada del error, la acción D actúa de manera predictiva amortiguando sobreimpulsos."
+      },
+      {
+        "text": "Acumular errores durante periodos prolongados para corregir diferencias lentas.",
+        "isCorrect": false,
+        "rationale": "La corrección de errores acumulados lentos pertenece al componente Integral."
+      },
+      {
+        "text": "Mantener una salida fija e inalterable ante cualquier perturbación externa.",
+        "isCorrect": false,
+        "rationale": "Una salida fija significaría la ausencia de control activo ante cambios en el proceso."
+      },
+      {
+        "text": "Ignorar la tasa de variación de la señal de retroalimentación.",
+        "isCorrect": false,
+        "rationale": "La acción D se fundamenta precisamente en calcular la tasa de variación temporal de la señal."
+      },
+      {
+        "text": "Reducir la velocidad de procesamiento de la CPU del controlador.",
+        "isCorrect": false,
+        "rationale": "Es una operación matemática estándar ejecutada de manera continua en cada ciclo del procesador."
+      }
+    ],
+    "hint": "Actúa como un 'freno' amortiguador fijándose en qué tan rápido está cambiando la variable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes son métodos clásicos utilizados para sintonizar controladores PID?",
+    "opciones": [
+      {
+        "text": "Método de Ziegler-Nichols.",
+        "isCorrect": true,
+        "rationale": "Es la técnica empírica clásica basada en la ganancia crítica y periodo de oscilación para calcular parámetros PID."
+      },
+      {
+        "text": "Método de Cohen-Coon.",
+        "isCorrect": true,
+        "rationale": "Es un método empírico que utiliza la curva de respuesta ante un escalón para procesos con retardo."
+      },
+      {
+        "text": "Análisis de la curva de reacción del proceso.",
+        "isCorrect": true,
+        "rationale": "Determina la constante de tiempo y el tiempo muerto del lazo abierto al aplicar un cambio escalón."
+      },
+      {
+        "text": "Tanteo aleatorio sin registro de datos ni observaciones.",
+        "isCorrect": false,
+        "rationale": "La sintonización requiere criterios metódicos o matemáticos para evitar inestabilidad peligrosa en planta."
+      },
+      {
+        "text": "Sintonización por lectura de cartas astrales.",
+        "isCorrect": false,
+        "rationale": "Las metodologías de ingeniería se basan en principios físicos, matemáticos y datos empíricos comprobables."
+      }
+    ],
+    "hint": "Selecciona las metodologías empíricas e ingenieriles desarrolladas para hallar las ganancias P, I y D.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere el término 'Setpoint' o valor de consigna en un lazo de control de temperatura?",
+    "opciones": [
+      {
+        "text": "Al valor deseado al que se quiere mantener la temperatura dentro del proceso.",
+        "isCorrect": true,
+        "rationale": "El Setpoint es la referencia objetiva introducida por el usuario que el controlador intenta alcanzar y sostener."
+      },
+      {
+        "text": "A la temperatura ambiental medida fuera del edificio.",
+        "isCorrect": false,
+        "rationale": "La temperatura exterior suele ser una perturbación, no la meta de consigna del control interno."
+      },
+      {
+        "text": "Al punto donde el horno colapsa por sobrecalentamiento.",
+        "isCorrect": false,
+        "rationale": "El Setpoint se establece dentro de los rangos de operación seguros de la maquinaria."
+      },
+      {
+        "text": "Al error absoluto entre dos mediciones de voltaje.",
+        "isCorrect": false,
+        "rationale": "La diferencia entre el valor deseado y la variable medida es el 'error', no el Setpoint."
+      },
+      {
+        "text": "Al tiempo en segundos que tarda en encenderse el PLC.",
+        "isCorrect": false,
+        "rationale": "El tiempo de arranque es un parámetro de hardware y no el valor objetivo de regulación."
+      }
+    ],
+    "hint": "Es la meta o el valor objetivo al que se desea que llegue la variable física.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es el 'offset' o error en estado estacionario que se presenta cuando se usa únicamente un control Proporcional (P)?",
+    "opciones": [
+      {
+        "text": "La diferencia permanente que queda entre el valor real estabilizado y el Setpoint deseado.",
+        "isCorrect": true,
+        "rationale": "Un control P puro suele estabilizar la variable cerca de la meta, pero sin alcanzar exactamente el Setpoint a menos que se añada la acción I."
+      },
+      {
+        "text": "La velocidad máxima de transmisión de datos en un cable de fibra óptica.",
+        "isCorrect": false,
+        "rationale": "Describe un parámetro de ancho de banda de red y no una desviación de control."
+      },
+      {
+        "text": "La falla física total de la memoria RAM del procesador.",
+        "isCorrect": false,
+        "rationale": "Es una característica dinámica natural del algoritmo P y no una avería del chip informático."
+      },
+      {
+        "text": "El tiempo de retardo en encender una lámpara indicadora en el tablero.",
+        "isCorrect": false,
+        "rationale": "No equivale al tiempo de encendido de luces secundarias en la interfaz."
+      },
+      {
+        "text": "El consumo máximo de agua por tonelada de mineral procesado.",
+        "isCorrect": false,
+        "rationale": "Corresponde a un indicador de consumo de proceso y no a la diferencia matemática entre Setpoint y variable."
+      }
+    ],
+    "hint": "Es la brecha constante que la acción proporcional no logra cerrar por sí sola.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la Industria 4.0 y la minería moderna, ¿por qué los controladores PID siguen siendo ampliamente vigentes?",
+    "opciones": [
+      {
+        "text": "Por su versatilidad, robustez, sencillez conceptual y alta eficacia comprobada en la regulación de variables dinámicas.",
+        "isCorrect": true,
+        "rationale": "Su amplio soporte comercial y equilibrio entre simplicidad y estabilidad los mantiene como la base de la mayoría de lazos industriales."
+      },
+      {
+        "text": "Porque no requieren el uso de ningún tipo de energía eléctrica para funcionar.",
+        "isCorrect": false,
+        "rationale": "Los algoritmos PID se ejecutan en equipos electrónicos o digitales que exigen suministro eléctrico."
+      },
+      {
+        "text": "Porque eliminan la necesidad de contar con ingenieros de control en la planta.",
+        "isCorrect": false,
+        "rationale": "Su sintonización, supervisión y mantenimiento requieren profesionales especializados en automatización."
+      },
+      {
+        "text": "Porque impiden que los equipos se conecten a redes de comunicación SCADA.",
+        "isCorrect": false,
+        "rationale": "Los bloques PID se integran de forma nativa en los softwares SCADA y sistemas de control distribuido."
+      },
+      {
+        "text": "Porque únicamente pueden aplicarse a electrodomésticos pequeños de cocina.",
+        "isCorrect": false,
+        "rationale": "Se aplican masivamente en refinerías, plantas mineras, robótica y centrales de generación de energía."
+      }
+    ],
+    "hint": "Considera el balance que ofrecen entre facilidad de uso, estabilidad y décadas de éxito en plantas industriales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo fundamental de aplicar una estructura jerárquica de controles (pirámide de control) en las operaciones mineras?",
+    "opciones": [
+      {
+        "text": "Minimizar los riesgos y peligros operativos para salvaguardar la salud y vida de los trabajadores.",
+        "isCorrect": true,
+        "rationale": "La jerarquía de controles organiza las medidas preventivas priorizando la reducción o eliminación de riesgos de alto impacto en entornos de trabajo peligrosos."
+      },
+      {
+        "text": "Sustituir de manera definitiva la supervisión humana por algoritmos de inteligencia artificial autónomos.",
+        "isCorrect": false,
+        "rationale": "La automatización busca asistir y reducir la exposición del trabajador en tareas de alto riesgo, pero no elimina la supervisión humana estratégica ni la toma de decisiones."
+      },
+      {
+        "text": "Eliminar la necesidad de capacitaciones continuas en materia de seguridad y salud ocupacional.",
+        "isCorrect": false,
+        "rationale": "Los controles administrativos señalan expresamente que la capacitación continua es un pilar indispensable para mantener la cultura de prevención."
+      },
+      {
+        "text": "Aumentar la velocidad de transporte de mineral sin considerar las variaciones de carga en la correa.",
+        "isCorrect": false,
+        "rationale": "El control busca ajustar las velocidades según el flujo detectado para evitar desgastes y consumo innecesario de energía, no acelerar sin control."
+      },
+      {
+        "text": "Reducir los costos operativos mediante la supresión de los protocolos de rotación del personal.",
+        "isCorrect": false,
+        "rationale": "La rotación de personal es un control administrativo diseñado para limitar el tiempo de exposición a peligros, no una medida para recortar presupuestos."
+      }
+    ],
+    "hint": "Considere la función principal de priorizar medidas de seguridad en entornos de alto riesgo laboral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la arquitectura de control de una planta concentradora, ¿cuál es la función principal del sistema SCADA?",
+    "opciones": [
+      {
+        "text": "Ejecutar la conmutación física directa de relés electromecánicos de alta potencia.",
+        "isCorrect": false,
+        "rationale": "La conmutación física directa de relés la realizan los actuadores e interruptores de campo, no el software de supervisión."
+      },
+      {
+        "text": "Proporcionar visualización y supervisión en tiempo real registrando datos operativos para la toma de decisiones.",
+        "isCorrect": true,
+        "rationale": "SCADA actúa como interfaz gráfica y centro de adquisición de datos que permite monitorear y registrar el estado de las variables en tiempo real."
+      },
+      {
+        "text": "Reemplazar los cálculos lógicos de la Unidad Central de Procesamiento del PLC.",
+        "isCorrect": false,
+        "rationale": "El PLC sigue ejecutando el programa de control determinista de bajo nivel, mientras SCADA realiza tareas de nivel superior como supervisión y archivo."
+      },
+      {
+        "text": "Modificar directamente la posición de las válvulas sin la intervención de sensores de presión o flujo.",
+        "isCorrect": false,
+        "rationale": "SCADA requiere de la red de sensores y controladores para conocer el estado del proceso antes de enviar comandos de ajuste a los actuadores."
+      },
+      {
+        "text": "Elaborar la planificación financiera y contable anual de la compañía extractiva.",
+        "isCorrect": false,
+        "rationale": "Las funciones contables pertenecen a los sistemas ERP corporativos y no a los sistemas SCADA dedicados al control industrial."
+      }
+    ],
+    "hint": "Piense en la herramienta que permite a los operadores observar el estado de las bombas y presiones en pantallas de control.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En un Sistema de Control Distribuido (DCS) aplicado a la minería, ¿cómo se gestionan áreas extensas como la trituración y la flotación?",
+    "opciones": [
+      {
+        "text": "Mantenimiento de mandos manuales e independientes sin interconexión digital entre sectores.",
+        "isCorrect": false,
+        "rationale": "Los mandos aislados imposibilitan la sincronización armónica de grandes secciones de la planta."
+      },
+      {
+        "text": "Integración de múltiples controladores distribuidos operados y supervisados de manera centralizada.",
+        "isCorrect": true,
+        "rationale": "El DCS agrupa varios controladores en diferentes subsectores para operar la planta como un sistema unificado y coordinado desde una sala central."
+      },
+      {
+        "text": "Desconexión de lazos de realimentación para evitar la transmisión de datos a la sala de control.",
+        "isCorrect": false,
+        "rationale": "La realimentación continua es imprescindible para ajustar automáticamente los parámetros operativos ante variaciones del proceso."
+      },
+      {
+        "text": "Uso exclusivo de mecanismos hidráulicos sin sensores de señal eléctrica ni procesamiento de datos.",
+        "isCorrect": false,
+        "rationale": "Un DCS depende fundamentalmente de la instrumentación electrónica y digital para transmitir y procesar señales de control."
+      },
+      {
+        "text": "Isla de control local sin capacidad de expansión ni reconfiguración de software.",
+        "isCorrect": false,
+        "rationale": "Una característica clave del DCS es su escalabilidad modular y su capacidad de integración en red a gran escala."
+      }
+    ],
+    "hint": "Reflexione sobre la analogía de una orquesta donde cada instrumento se coordina bajo una dirección centralizada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes variables del proceso minero son reguladas frecuentemente mediante algoritmos de control PID?",
+    "opciones": [
+      {
+        "text": "Temperatura en hornos de fundición y reactores de lixiviación.",
+        "isCorrect": true,
+        "rationale": "La temperatura requiere ajustes finos mediante la regulación de calor para mantenerse estable y evitar sobrecalentamientos."
+      },
+      {
+        "text": "Presión en líneas de bombeo de pulpa o agua subterránea.",
+        "isCorrect": true,
+        "rationale": "El control preciso de la presión previene cavitaciones en bombas e inundaciones en galerías subterráneas."
+      },
+      {
+        "text": "Nivel de líquido en tanques de almacenamiento y celdas de flotación.",
+        "isCorrect": true,
+        "rationale": "Mantener el nivel constante en tanques garantiza que las bombas centrífugas trabajen bajo una presión de entrada adecuada."
+      },
+      {
+        "text": "Valor de la tasa tributaria aplicada a las regalías de la concesión minera.",
+        "isCorrect": false,
+        "rationale": "Los aspectos fiscales y tributarios son parámetros legales y no variables físicas de un lazo de control automatizado."
+      },
+      {
+        "text": "Densidad del tráfico vehicular urbano fuera de los límites de la faena.",
+        "isCorrect": false,
+        "rationale": "Las condiciones de tránsito exterior están fuera del alcance del sistema de instrumentación y control de la planta minera."
+      }
+    ],
+    "hint": "Identifique las variables físicas continuas que requieren regulación constante en el procesamiento de minerales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ventaja directa ofrece la implementación de sensores de caudal y presión en los sistemas de bombeo de minería subterránea?",
+    "opciones": [
+      {
+        "text": "Prevenir oportunamente riesgos de inundación en las galerías operativas.",
+        "isCorrect": true,
+        "rationale": "La lectura en tiempo real de caudal y presión permite ajustar la velocidad de las bombas para drenar eficazmente el agua y evitar colapsos por inundación."
+      },
+      {
+        "text": "Aumentar la dureza estructural del mineral extraído antes de la molienda.",
+        "isCorrect": false,
+        "rationale": "La dureza es una propiedad física intrínseca de la roca y no cambia por el uso de sensores en las bombas de agua."
+      },
+      {
+        "text": "Incrementar la cantidad de polvo en suspensión en los frentes de excavación.",
+        "isCorrect": false,
+        "rationale": "Los sistemas de control buscan mejorar la seguridad laboral, lo que incluye mitigar riesgos como el polvo mediante humidificación y ventilación."
+      },
+      {
+        "text": "Sustituir el uso de energía eléctrica por combustible diésel en las bombas.",
+        "isCorrect": false,
+        "rationale": "Los sensores de control monitorean variables del fluido, no modifican la fuente de alimentación motriz de la bomba."
+      },
+      {
+        "text": "Desactivar la necesidad de monitorear la presencia de gases tóxicos en el túnel.",
+        "isCorrect": false,
+        "rationale": "El monitoreo de agua de bombeo y la detección de gases atmosféricos son sistemas de seguridad complementarios e independientes."
+      }
+    ],
+    "hint": "Piense en la función del sistema SCADA aplicado a las bombas del nivel inferior en minas bajo tierra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con los principios de eficiencia energética en minería, ¿cómo impacta la regulación automática de velocidad en una cinta transportadora?",
+    "opciones": [
+      {
+        "text": "Genera desgastes mecánicos prematuros debido al funcionamiento ininterrumpido a máxima velocidad.",
+        "isCorrect": false,
+        "rationale": "El ajuste de velocidad evita precisamente el funcionamiento a capacidad máxima continua cuando no hay carga suficiente."
+      },
+      {
+        "text": "Reduce el consumo innecesario de energía y disminuye el sobreesfuerzo de los motores según el flujo de material.",
+        "isCorrect": true,
+        "rationale": "Al adaptar la velocidad de la banda al volumen de mineral detectado por los sensores, se optimiza el gasto eléctrico y se prolonga la vida útil del motor."
+      },
+      {
+        "text": "Aumenta los picos de demanda eléctrica durante los periodos de baja producción.",
+        "isCorrect": false,
+        "rationale": "Los controladores ajustan los lazos para suavizar y minimizar los picos de potencia eléctrica en momentos de demanda reducida."
+      },
+      {
+        "text": "Provoca paradas abruptas continuas que detienen el procesamiento de flotación.",
+        "isCorrect": false,
+        "rationale": "La regulación automática busca mantener un flujo continuo y progresivo, previniendo paradas no planificadas."
+      },
+      {
+        "text": "Obliga a la intervención humana constante para cambiar manualmente las poleas del sistema.",
+        "isCorrect": false,
+        "rationale": "El uso de variadores de frecuencia y PLC automatiza la variación de velocidad sin requerir modificaciones mecánicas manuales."
+      }
+    ],
+    "hint": "Considere la relación entre la masa de mineral detectada sobre la banda y la energía requerida para moverla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la pirámide de procesos de una organización minera, ¿cuál es la función representativa del Nivel Estratégico o Directivo?",
+    "opciones": [
+      {
+        "text": "Supervisar el estado diario de lubricación de los chancadores en la planta.",
+        "isCorrect": false,
+        "rationale": "La supervisión diaria del estado de componentes mecánicos es una tarea del nivel de mantenimiento o nivel operativo."
+      },
+      {
+        "text": "Establecer la visión, misión, políticas corporativas y metas globales de sostenibilidad y rentabilidad a largo plazo.",
+        "isCorrect": true,
+        "rationale": "El nivel directivo define los lineamientos macro y las políticas globales que orientan el cumplimiento normativo y los objetivos del negocio."
+      },
+      {
+        "text": "Programar las órdenes de trabajo semanales de los técnicos de instrumentación.",
+        "isCorrect": false,
+        "rationale": "La programación de actividades semanales corresponde a la gestión gerencial y táctica de los jefes de área."
+      },
+      {
+        "text": "Manipular los joysticks de perforación remota en la sala teleoperada.",
+        "isCorrect": false,
+        "rationale": "La ejecución de la perforación mediante equipos remotos es responsabilidad directa del nivel operativo."
+      },
+      {
+        "text": "Gestionar el despacho inmediato de repuestos desde el almacén secundario.",
+        "isCorrect": false,
+        "rationale": "El suministro de repuestos es ejecutado por el nivel de soporte y servicios auxiliares."
+      }
+    ],
+    "hint": "Piense en las decisiones institucionales que se toman en la cúspide de la gestión corporativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué rol desempeña el Nivel Táctico o Gerencial dentro de la pirámide de procesos?",
+    "opciones": [
+      {
+        "text": "Traducir las directrices estratégicas en planes concretos de mantenimiento, capacitación y coordinación de recursos a mediano plazo.",
+        "isCorrect": true,
+        "rationale": "El nivel gerencial conecta la visión estratégica con la operación mediante la elaboración de planes de seguridad, presupuestos y programación de recursos."
+      },
+      {
+        "text": "Escribir los algoritmos en código ensamblador para los microcontroladores de campo.",
+        "isCorrect": false,
+        "rationale": "La programación de bajo nivel es ejecutada por ingenieros de automatización en la fase de ingeniería detallada u operativa."
+      },
+      {
+        "text": "Efectuar el reemplazo físico de tuberías dañadas en las celdas de flotación.",
+        "isCorrect": false,
+        "rationale": "El reemplazo e instalación de componentes físicos en planta es responsabilidad del personal operativo y de soporte auxiliar."
+      },
+      {
+        "text": "Dictar leyes ambientales nacionales ante el parlamento gubernamental.",
+        "isCorrect": false,
+        "rationale": "Las leyes son emitidas por los entes del Estado, la gerencia minera únicamente vela por el cumplimiento normativo interno."
+      },
+      {
+        "text": "Efectuar la descarga de explosivos en los pozos de tronadura del frente.",
+        "isCorrect": false,
+        "rationale": "La manipulación directa de explosivos en terreno es una tarea crítica de ejecución operativa."
+      }
+    ],
+    "hint": "Identifique el puente de gestión que convierte las metas globales corporativas en planes de trabajo coordinados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal del Nivel de Soporte o Servicios Auxiliares en la gestión de una mina?",
+    "opciones": [
+      {
+        "text": "Diseñar los mapas de prospección geológica iniciales.",
+        "isCorrect": false,
+        "rationale": "La prospección geológica pertenece al ciclo estratégico y de ingeniería de desarrollo minero."
+      },
+      {
+        "text": "Suministrar insumos, mantenimiento, logística y gestión de residuos para garantizar la continuidad operativa principal.",
+        "isCorrect": true,
+        "rationale": "Los servicios auxiliares proveen los recursos y el mantenimiento preventivo necesario para que el proceso directo de extracción no sufra interrupciones."
+      },
+      {
+        "text": "Autorizar fusiones bancarias e inversiones bursátiles de la empresa.",
+        "isCorrect": false,
+        "rationale": "Las decisiones financieras de alto impacto corporativo son potestad de la alta dirección y directorio estratégico."
+      },
+      {
+        "text": "Configurar las ganancias del controlador PID de los molinos SAG.",
+        "isCorrect": false,
+        "rationale": "La sintonización de parámetros de control es tarea de los especialistas operativos de procesos e instrumentación."
+      },
+      {
+        "text": "Conducir directamente los camiones de extracción en el rajo.",
+        "isCorrect": false,
+        "rationale": "La conducción de equipos de acarreo es la labor propia de los operadores del nivel de ejecución."
+      }
+    ],
+    "hint": "Considere aquellas actividades complementarias necesarias para que la maquinaria y la logística no se detengan.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes tareas corresponden de manera directa al Nivel Operativo o de Ejecución en la pirámide de procesos?",
+    "opciones": [
+      {
+        "text": "Ejecutar el trabajo diario de extracción, chancado y transporte de minerales.",
+        "isCorrect": true,
+        "rationale": "El nivel operativo realiza físicamente la transformación y manipulación de las materias primas en la faena diaria."
+      },
+      {
+        "text": "Monitorear y controlar los parámetros instantáneos de producción en la maquinaria de campo.",
+        "isCorrect": true,
+        "rationale": "Los operadores y supervisores de turno aseguran que el volumen extraído y procesado cumpla con la cuota diaria establecida."
+      },
+      {
+        "text": "Verificar el cumplimiento estricto de las normas de seguridad y el uso correcto de EPP en el frente de trabajo.",
+        "isCorrect": true,
+        "rationale": "La supervisión directa en el sitio garantiza la integridad física de la fuerza laboral durante las operaciones diarias."
+      },
+      {
+        "text": "Aprobar la visión y misión corporativa para los próximos diez años.",
+        "isCorrect": false,
+        "rationale": "La definición de principios corporativos a largo plazo corresponde a la alta dirección en el nivel estratégico."
+      },
+      {
+        "text": "Negociar préstamos soberanos con entidades financieras internacionales.",
+        "isCorrect": false,
+        "rationale": "La adquisición de grandes deudas corporativas es una responsabilidad del departamento financiero en el nivel gerencial/directivo."
+      }
+    ],
+    "hint": "Seleccione las actividades ligadas al trabajo físico directo y a la supervisión diaria en las áreas de producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué modo la implementación del mantenimiento predictivo minimiza los costos operativos en las plantas de procesamiento?",
+    "opciones": [
+      {
+        "text": "Esperando a que la maquinaria falle catastróficamente antes de intervenirla.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento correctivo por falla catastrófica genera elevados tiempos muertos no planificados y sobrecostos en piezas."
+      },
+      {
+        "text": "Identificando anomalías térmicas o de vibración de forma temprana para intervenir antes de que ocurra una falla crítica.",
+        "isCorrect": true,
+        "rationale": "Monitorear parámetros mediante sensores permite programar paradas breves de reparación antes de que se produzca un daño irreparable."
+      },
+      {
+        "text": "Sustituyendo los componentes mecánicos cada 24 horas sin importar su estado.",
+        "isCorrect": false,
+        "rationale": "El reemplazo ciego e indiscriminado de piezas incrementa excesivamente los gastos en repuestos e insumos."
+      },
+      {
+        "text": "Eliminando la necesidad de realizar registros audibles de calidad del mineral.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento de equipos no reemplaza el control de calidad, el cual es obligatorio para la comercialización del producto."
+      },
+      {
+        "text": "Aumentando las horas de inactividad no planificada en los turnos de alta demanda.",
+        "isCorrect": false,
+        "rationale": "El propósito del mantenimiento predictivo es precisamente prevenir y reducir los tiempos inactivos no planificados."
+      }
+    ],
+    "hint": "Piense en la ventaja de detectar el desgaste de un rodamiento mediante sensores antes de que se rompa la correa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué los exámenes médicos ocupacionales obligatorios son un estándar clave de salud e higiene en la industria minera?",
+    "opciones": [
+      {
+        "text": "Permiten determinar el estado de salud previo del trabajador y prevenir o identificar a tiempo enfermedades ocupacionales.",
+        "isCorrect": true,
+        "rationale": "El diagnóstico preventivo protege al trabajador evaluando su aptitud física antes de ingresar a entornos exigentes y monitorea impactos durante su permanencia."
+      },
+      {
+        "text": "Eximen a la gerencia de la responsabilidad legal de entregar Equipos de Protección Personal.",
+        "isCorrect": false,
+        "rationale": "La evaluación médica no libera a la empresa de proporcionar la infraestructura de protección necesaria."
+      },
+      {
+        "text": "Determinan de forma exclusiva el volumen de producción que debe extraer un operador en su turno.",
+        "isCorrect": false,
+        "rationale": "Las metas de extracción dependen del plan minero y la capacidad instalada, no de los indicadores médicos individuales."
+      },
+      {
+        "text": "Reemplazan los análisis ambientales de concentración de polvo e iluminación en las galerías.",
+        "isCorrect": false,
+        "rationale": "Los exámenes médicos complementan el monitoreo ambiental pero no sustituyen la evaluación periódica de los agentes de riesgo en el entorno."
+      },
+      {
+        "text": "Sirven para calibrar la velocidad de respuesta de los sistemas automatizados de transporte.",
+        "isCorrect": false,
+        "rationale": "Los sistemas automatizados se ajustan mediante la instrumentación de campo y controladores lógicos, no con parámetros médicos del personal."
+      }
+    ],
+    "hint": "Considere el objetivo preventivo en la salud integral del trabajador expuesto a polvo, ruido o gran altitud.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función específica de la Unidad Central de Procesamiento (CPU) dentro de un Controlador Lógico Programable (PLC)?",
+    "opciones": [
+      {
+        "text": "Alimentar directamente con corriente alterna de potencia a los motores eléctricos de trituración.",
+        "isCorrect": false,
+        "rationale": "La alimentación eléctrica de potencia hacia motores la ejecutan los variadores de frecuencia y contactores, no el procesador del PLC."
+      },
+      {
+        "text": "Ejecutar el programa de control, procesar cálculos lógicos/aritméticos y gestionar la comunicación con los módulos de I/O.",
+        "isCorrect": true,
+        "rationale": "La CPU es el núcleo del PLC encargado de interpretar las variables de entrada, aplicar las reglas lógicas y ordenar las salidas correspondientes."
+      },
+      {
+        "text": "Medir la humedad física de la pulpa directamente en el ducto de transporte.",
+        "isCorrect": false,
+        "rationale": "La medición física la realizan los sensores e instrumentos de campo dedicados."
+      },
+      {
+        "text": "Aumentar mecánicamente la fricción en los frenos de los camiones autónomos.",
+        "isCorrect": false,
+        "rationale": "La fuerza mecánica de frenado se efectúa mediante actuadores hidráulicos o neumáticos comandados electrónicamente."
+      },
+      {
+        "text": "Aislar ópticamente la sala de control de las fluctuaciones ambientales.",
+        "isCorrect": false,
+        "rationale": "El aislamiento óptico es una característica interna de los módulos de entrada/salida para proteger la CPU de picos de voltaje."
+      }
+    ],
+    "hint": "Piense en el 'cerebro' digital que procesa las reglas del código de control y decide qué hacer con la señal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera el módulo de entradas de un PLC procesa la información proveniente del campo minero?",
+    "opciones": [
+      {
+        "text": "Recibiendo señales digitales de interruptores o analógicas de sensores y convirtiéndolas en datos procesables para la CPU.",
+        "isCorrect": true,
+        "rationale": "El módulo de entradas adapta los niveles de tensión o corriente de los dispositivos externos para que el microprocesador los pueda interpretar."
+      },
+      {
+        "text": "Transformando el código fuente en mineral físico concentrado.",
+        "isCorrect": false,
+        "rationale": "Los módulos procesan únicamente información de señales eléctricas, no realizan transformación física de materia."
+      },
+      {
+        "text": "Emitiendo alertas sonoras directamente a través del sensor sin mediación del programa.",
+        "isCorrect": false,
+        "rationale": "Las alarmas son activadas mediante las salidas del PLC tras evaluar la lógica programada en la CPU."
+      },
+      {
+        "text": "Generando variaciones de temperatura para calibrar los termostatos.",
+        "isCorrect": false,
+        "rationale": "Los módulos de entrada son receptores pasivos de información del proceso y no elementos calefactores."
+      },
+      {
+        "text": "Deteniendo la energía de la planta en caso de fallos de red corporativa.",
+        "isCorrect": false,
+        "rationale": "El corte de energía general depende de los sistemas de protección eléctrica y no directamente de los módulos de señal."
+      }
+    ],
+    "hint": "Considere la función de interfaz que adapta las señales eléctricas de los sensores de terreno hacia el microprocesador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la norma IEC 61131-3, ¿cuál de los siguientes lenguajes de programación estructurados para PLC utiliza esquemas gráficos similares a los diagramas de contactos eléctricos?",
+    "opciones": [
+      {
+        "text": "Texto Estructurado (ST).",
+        "isCorrect": false,
+        "rationale": "Texto Estructurado es un lenguaje textual de alto nivel similar a Pascal o C."
+      },
+      {
+        "text": "Diagrama de Escalera (Ladder Diagram - LD).",
+        "isCorrect": true,
+        "rationale": "El Diagrama de Escalera o Ladder emula la lógica gráfica de los antiguos tableros de relés electromecánicos, facilitando la transición al control digital."
+      },
+      {
+        "text": "Lista de Instrucciones (IL).",
+        "isCorrect": false,
+        "rationale": "Lista de Instrucciones es un lenguaje textual de bajo nivel semejante al lenguaje ensamblador."
+      },
+      {
+        "text": "Diagrama de Funciones Secuenciales (SFC).",
+        "isCorrect": false,
+        "rationale": "SFC es un lenguaje gráfico orientado a la representación de etapas y transiciones secuenciales, no a esquemas de contactos."
+      },
+      {
+        "text": "Código Máquina Binario (HEX).",
+        "isCorrect": false,
+        "rationale": "El código máquina es el lenguaje ejecutable traducido por el compilador, no uno de los cinco lenguajes estándar de usuario de la IEC 61131-3."
+      }
+    ],
+    "hint": "Busque el lenguaje gráfico cuya disposición vertical y peldaños horizontales recuerdan a una escalera de relés.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son beneficios característicos de adoptar controladores lógicos programables (PLC) en la automatización de procesos mineros?",
+    "opciones": [
+      {
+        "text": "Elevada robustez operacional frente a vibraciones, polvo y variaciones térmicas hostiles.",
+        "isCorrect": true,
+        "rationale": "Los PLC están diseñados específicamente para soportar el entorno industrial agresivo sin perder precisión en el procesamiento."
+      },
+      {
+        "text": "Flexibilidad para modificar el comportamiento del proceso reconfigurando el software en lugar de recablear.",
+        "isCorrect": true,
+        "rationale": "Cambiar la lógica de control requiere editar el programa, eliminando la necesidad de alterar físicamente tableros de relés."
+      },
+      {
+        "text": "Reducción considerable en el volumen de cableado de control y espacio en gabinetes.",
+        "isCorrect": true,
+        "rationale": "Reemplazar cientos de relés físicos por lógica interna en la CPU disminuye drásticamente el uso de cables y componentes."
+      },
+      {
+        "text": "Funcionamiento ininterrumpido sin requerir ninguna fuente de suministro eléctrico.",
+        "isCorrect": false,
+        "rationale": "Todo PLC requiere una fuente de alimentación de energía eléctrica estable para operar sus circuitos electrónicos."
+      },
+      {
+        "text": "Eliminación automática de la necesidad de realizar mantenimiento en los motores.",
+        "isCorrect": false,
+        "rationale": "El PLC controla y protege los motores, pero los componentes mecánicos de estos siguen necesitando mantenimiento preventivo."
+      }
+    ],
+    "hint": "Identifique las ventajas asociadas a la durabilidad industrial, la facilidad de reprogramación y la economía de espacio físico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En las faenas subterráneas, ¿cómo contribuye el PLC a la seguridad dentro de los túneles a través de los sistemas de ventilación?",
+    "opciones": [
+      {
+        "text": "Aumentando la temperatura para acelerar la evaporación de agua acumulada.",
+        "isCorrect": false,
+        "rationale": "Elevar la temperatura en socavones empeora las condiciones térmicas de los trabajadores sin garantizar ventilación."
+      },
+      {
+        "text": "Procesando datos de sensores de gases nocivos para regular automáticamente la velocidad de los extractores de aire.",
+        "isCorrect": true,
+        "rationale": "Al detectar concentraciones peligrosas de gases como monóxido de carbono, el PLC activa o acelera los ventiladores para disipar la contaminación."
+      },
+      {
+        "text": "Deteniendo el suministro de electricidad a los tableros de alumbrado durante la presencia de humo.",
+        "isCorrect": false,
+        "rationale": "Desconectar la iluminación dificulta la evacuación de emergencia de los mineros en presencia de visibilidad reducida."
+      },
+      {
+        "text": "Inyectando reactivos químicos corrosivos al flujo de aire principal.",
+        "isCorrect": false,
+        "rationale": "Inyectar químicos al aire contamina la atmósfera respirable y atenta directamente contra la salud de los operarios."
+      },
+      {
+        "text": "Mantenimiento inalterable de la velocidad de ventilación sin importar la calidad del aire detectada.",
+        "isCorrect": false,
+        "rationale": "El beneficio central del PLC es el control dinámico proporcional a la lectura de las condiciones atmosféricas en tiempo real."
+      }
+    ],
+    "hint": "Piense en el lazo de control que vincula la detección de gases nocivos con la activación de ventiladores de refresco.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia técnica fundamental entre una señal de entrada digital y una señal de entrada analógica en un PLC?",
+    "opciones": [
+      {
+        "text": "La entrada digital procesa rangos continuos de tensión, mientras que la analógica mide únicamente datos lógicos de un bit.",
+        "isCorrect": false,
+        "rationale": "Esta afirmación invierte los conceptos; el rango continuo corresponde a las señales analógicas."
+      },
+      {
+        "text": "La entrada digital registra solo dos estados discretos ($0$ o $1$), mientras que la analógica mide un rango continuo de valores proporcionales.",
+        "isCorrect": true,
+        "rationale": "Las entradas digitales detectan estados binarios (como un interruptor abierto/cerrado), mientras que las analógicas miden magnitudes variables (como $4$-$20\\text{ mA}$ para presión o temperatura)."
+      },
+      {
+        "text": "Las entradas analógicas no requieren ningún cable de cobre para conectarse a la tarjeta de expansión.",
+        "isCorrect": false,
+        "rationale": "Tanto las señales analógicas como las digitales convencionales utilizan conductores eléctricos para transmitir la información al módulo."
+      },
+      {
+        "text": "La entrada digital solo se utiliza para transmitir video y la analógica para audio.",
+        "isCorrect": false,
+        "rationale": "En la automatización de procesos, ambas entradas procesan variables de estado de instrumentos industriales, no datos multimedia."
+      },
+      {
+        "text": "Ambas procesan exactamente la misma cantidad de niveles numéricos en la memoria del PLC.",
+        "isCorrect": false,
+        "rationale": "La entrada digital ocupa un solo bit, mientras que la analógica requiere una palabra de varios bits tras la conversión analógica-digital."
+      }
+    ],
+    "hint": "Diferencie entre la lectura de un botón de parada (encendido/apagado) y la lectura continua de un termómetro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En un algoritmo de control PID, ¿cuál es la función matemática y operativa básica del término Proporcional ($P$)?",
+    "opciones": [
+      {
+        "text": "Sumar los errores históricos acumulados durante el tiempo de operación.",
+        "isCorrect": false,
+        "rationale": "La suma acumulativa del error a lo largo del tiempo es la función del término Integral ($I$)."
+      },
+      {
+        "text": "Proporcionar una salida de corrección directamente proporcional a la magnitud instantánea del error presente.",
+        "isCorrect": true,
+        "rationale": "La acción proporcional multiplica el error instantáneo por una constante $K_p$, reaccionando de forma directa a la desviación de la variable respecto al valor deseado."
+      },
+      {
+        "text": "Predecir la tendencia futura evaluando la velocidad de cambio de la señal.",
+        "isCorrect": false,
+        "rationale": "La evaluación de la tasa de cambio y la predicción del comportamiento futuro corresponden a la acción Derivativa ($D$)."
+      },
+      {
+        "text": "Eliminar el ruido eléctrico mediante la aplicación de un filtro pasa-bajos.",
+        "isCorrect": false,
+        "rationale": "El filtrado de ruido es una etapa de acondicionamiento de señal, no el propósito matemático de la acción proporcional."
+      },
+      {
+        "text": "Garantizar que la salida del accionador permanezca fija independientemente del error.",
+        "isCorrect": false,
+        "rationale": "El control proporcional modifica activamente la salida en función directa del error detectado."
+      }
+    ],
+    "hint": "Considere la acción que responde de forma inmediata multiplicando la desviación actual por la constante $K_p$.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué deficiencia técnica del control puramente Proporcional se corrige al incorporar la acción Integral ($I$)?",
+    "opciones": [
+      {
+        "text": "La lentitud del sistema ante variaciones abruptas de carga.",
+        "isCorrect": false,
+        "rationale": "Aumentar la velocidad ante variaciones rápidas es el propósito de la acción derivativa, no de la integral."
+      },
+      {
+        "text": "El error permanente en estado estacionario (denominado *offset*).",
+        "isCorrect": true,
+        "rationale": "La acción integral acumula el error persistente en el tiempo hasta anular por completo la diferencia entre la variable controlada y la consigna."
+      },
+      {
+        "text": "El exceso de amplificación del ruido de alta frecuencia.",
+        "isCorrect": false,
+        "rationale": "La acción integral actúa como un suavizador y no amplifica el ruido; es la acción derivativa la que puede presentar este problema."
+      },
+      {
+        "text": "La saturación de la memoria RAM del procesador en el PLC.",
+        "isCorrect": false,
+        "rationale": "Los cálculos del algoritmo PID son rutinas numéricas livianas que no agotan la memoria del controlador."
+      },
+      {
+        "text": "El consumo excesivo de corriente eléctrica en los actuadores de baja potencia.",
+        "isCorrect": false,
+        "rationale": "La acción integral regula el valor final del comando de control, pero no cambia las características de potencia eléctrica de los dispositivos."
+      }
+    ],
+    "hint": "Piense en la incapacidad de la respuesta proporcional por sí sola para alcanzar exactamente el valor deseado cuando la señal se estabiliza cerca del objetivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué se encarga la acción Derivativa ($D$) en la dinámica de respuesta de un controlador PID?",
+    "opciones": [
+      {
+        "text": "Evaluar la tasa de variación o velocidad del error para anticiparse y suavizar cambios bruscos.",
+        "isCorrect": true,
+        "rationale": "La acción derivativa calcula la derivada del error respecto al tiempo, lo que le permite frenar el sobreimpulso y responder rápidamente ante variaciones repentinas."
+      },
+      {
+        "text": "Acumular pequeñas desviaciones continuas para eliminar el offset en régimen permanente.",
+        "isCorrect": false,
+        "rationale": "Acumular desviaciones a lo largo del tiempo es la definición de la acción integral ($I$)."
+      },
+      {
+        "text": "Generar una ganancia estática constante independiente del tiempo.",
+        "isCorrect": false,
+        "rationale": "La ganancia constante independiente del tiempo corresponde al término proporcional ($K_p$)."
+      },
+      {
+        "text": "Ignorar las mediciones del sensor cuando este supera el valor objetivo.",
+        "isCorrect": false,
+        "rationale": "El control derivativo sigue considerando la medición continuamente para amortiguar el movimiento al aproximarse al objetivo."
+      },
+      {
+        "text": "Desconectar automáticamente los relés de protección térmica del sistema.",
+        "isCorrect": false,
+        "rationale": "El algoritmo PID es una estrategia de regulación analógica y no reemplaza los esquemas de enclavamiento de protección física."
+      }
+    ],
+    "hint": "Considere qué término analiza qué tan rápido está cambiando el error para ejercer un efecto 'amortiguador' predictivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes son métodos empíricos o tradicionales reconocidos para la sintonización de parámetros en controladores PID?",
+    "opciones": [
+      {
+        "text": "Método de oscilación crítica de Ziegler-Nichols (lazo cerrado).",
+        "isCorrect": true,
+        "rationale": "Ziegler-Nichols en lazo cerrado incrementa la ganancia proporcional hasta obtener oscilaciones sostenidas para calcular los parámetros de sintonía."
+      },
+      {
+        "text": "Método de la Curva de Reacción (lazo abierto).",
+        "isCorrect": true,
+        "rationale": "El método de la curva de reacción evalúa la respuesta escalón del sistema sin realimentación para caracterizar el retardo y la constante de tiempo."
+      },
+      {
+        "text": "Método de Cohen-Coon.",
+        "isCorrect": true,
+        "rationale": "Cohen-Coon es un método de sintonización empírico ajustado para procesos con tiempos muertos significativos."
+      },
+      {
+        "text": "Método de la transformada rápida de Fourier para análisis contable.",
+        "isCorrect": false,
+        "rationale": "La transformada de Fourier es un método de procesamiento de señales en el dominio de la frecuencia y no un método directo de sintonía de parámetros PID."
+      },
+      {
+        "text": "Algoritmo de búsqueda binaria en bases de datos relacionales.",
+        "isCorrect": false,
+        "rationale": "La búsqueda binaria es una técnica de ciencias de la computación para recuperar datos y no una metodología de sintonización de lazos de control industrial."
+      }
+    ],
+    "hint": "Seleccione las técnicas clásicas que utilizan la ganancia crítica o la respuesta escalón para determinar $K_p$, $T_i$ y $T_d$.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la aplicación del método de sintonización en lazo cerrado de Ziegler-Nichols, ¿cómo se obtienen la ganancia crítica ($K_u$) y el periodo crítico ($P_u$)?",
+    "opciones": [
+      {
+        "text": "Desconectando la acción integral y derivativa, e incrementando $K_p$ hasta que la variable oscile con amplitud constante.",
+        "isCorrect": true,
+        "rationale": "Al anular las acciones $I$ y $D$, se eleva la ganancia proporcional pura hasta que el sistema entra en oscilación sostenida, midiendo esa ganancia $K_u$ y el periodo entre picos $P_u$."
+      },
+      {
+        "text": "Apagando la alimentación principal del horno y midiendo el tiempo de enfriamiento libre.",
+        "isCorrect": false,
+        "rationale": "Medir el enfriamiento pasivo sin energía no genera la respuesta dinámica necesaria para el método de lazo cerrado."
+      },
+      {
+        "text": "Aumentando la constante integral al valor máximo permitido por el PLC.",
+        "isCorrect": false,
+        "rationale": "El método exige explícitamente desactivar el término integral para aislar el punto crítico mediante ganancia proporcional pura."
+      },
+      {
+        "text": "Midiendo la resistencia eléctrica estática del sensor de temperatura a temperatura ambiente.",
+        "isCorrect": false,
+        "rationale": "La resistencia estática es una prueba de continuidad eléctrica del instrumento, no una prueba dinámica de lazo cerrado."
+      },
+      {
+        "text": "Inyectando ruido aleatorio en la entrada analógica del módulo de expansión.",
+        "isCorrect": false,
+        "rationale": "Introducir ruido no controlado desestabiliza la medición e impide identificar las oscilaciones puras requeridas por la fórmula."
+      }
+    ],
+    "hint": "Recuerde el procedimiento en el que se ajustan únicamente los impulsos proporcionales hasta alcanzar un comportamiento oscilatorio sostenido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la regulación de un proceso minero, ¿cuál es el riesgo de configurar una ganancia proporcional ($K_p$) excesivamente elevada?",
+    "opciones": [
+      {
+        "text": "Generar inestabilidad en el lazo, con sobreimpulsos elevados y oscilaciones violentas que pueden dañar los equipos.",
+        "isCorrect": true,
+        "rationale": "Una ganancia $K_p$ muy alta hace que el actuador reaccione de forma exagerada ante errores mínimos, provocando oscilaciones descontroladas en la variable."
+      },
+      {
+        "text": "Incapacitar al PLC para comunicarse con la red de tarjetas de entrada y salida.",
+        "isCorrect": false,
+        "rationale": "El valor numérico de la constante en el algoritmo numérico no interrumpe los protocolos de comunicación del hardware."
+      },
+      {
+        "text": "Provocar que el sistema reaccione de manera extremadamente lenta, tardando horas en responder.",
+        "isCorrect": false,
+        "rationale": "Aumentar $K_p$ acelera la velocidad de respuesta del sistema; la lentitud extrema suele ser consecuencia de un $K_p$ demasiado bajo."
+      },
+      {
+        "text": "Forzar al sensor de temperatura a entregar lecturas con valores negativos permanentes.",
+        "isCorrect": false,
+        "rationale": "La ganancia del controlador afecta la señal enviada al actuador, no altera la escala física de calibración del sensor."
+      },
+      {
+        "text": "Desactivar la protección térmica del motor de accionamiento.",
+        "isCorrect": false,
+        "rationale": "Las protecciones térmicas del motor operan mediante relés o rutinas independientes de enclavamiento en la memoria del PLC."
+      }
+    ],
+    "hint": "Considere el efecto que observaba el programador en el foco del experimento cuando elevaba la constante a un valor muy alto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-47",
+    "diplomado": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué los controladores PID continúan siendo la solución de control más utilizada en la industria pesada y minera a pesar de la existencia de técnicas avanzadas?",
+    "opciones": [
+      {
+        "text": "Porque no requieren el uso de sensores ni elementos de medición de realimentación.",
+        "isCorrect": false,
+        "rationale": "Todo lazo PID requiere indispensablemente la realimentación proveniente de sensores para calcular el error."
+      },
+      {
+        "text": "Por su simplicidad conceptual, robustez en un amplio rango de operación, facilidad de sintonía y vasta experiencia acumulada.",
+        "isCorrect": true,
+        "rationale": "Su estructura simple pero efectiva proporciona un excelente equilibrio entre estabilidad y velocidad, con soporte integrado en casi todos los sistemas comerciales."
+      },
+      {
+        "text": "Debido a que eliminan la necesidad de utilizar tarjetas o controladores físicos PLC en la planta.",
+        "isCorrect": false,
+        "rationale": "Los algoritmos PID suelen programarse y ejecutarse precisamente dentro de las rutinas de los PLC o controladores del DCS."
+      },
+      {
+        "text": "Porque garantizan un error absolutamente nulo frente a cualquier perturbación sin necesidad de calibrar parámetros.",
+        "isCorrect": false,
+        "rationale": "Todo controlador PID requiere un proceso riguroso de sintonización de parámetros ($K_p$, $T_i$, $T_d$) para adaptarse a la dinámica del proceso."
+      },
+      {
+        "text": "Porque son el único tipo de controlador cuyo uso está permitido por las leyes tributarias de fiscalización.",
+        "isCorrect": false,
+        "rationale": "Las entidades fiscalizadoras regulan los estándares de seguridad y emisiones ambientales, no la arquitectura matemática específica de los controladores."
+      }
+    ],
+    "hint": "Piense en la combinación entre un modelo de fácil comprensión y una altísima confiabilidad en el entorno industrial.",
+    "activo": true
+  }
+]

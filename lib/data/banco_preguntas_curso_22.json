@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de la herramienta Apache NiFi en el ecosistema de Big Data?",
+    "opciones": [
+      {
+        "text": "Ingerir, gestionar y mover grandes volúmenes de datos mediante una interfaz gráfica intuitiva basada en procesadores.",
+        "isCorrect": true,
+        "rationale": "Apache NiFi fue diseñado precisamente para automatizar el flujo de datos entre sistemas heterogéneos mediante un entorno visual sin necesidad de programación compleja."
+      },
+      {
+        "text": "Mover datos exclusivamente entre bases de datos relacionales tradicionales mediante comandos de consola SQL.",
+        "isCorrect": false,
+        "rationale": "El traslado exclusivo entre bases relacionales por línea de comandos es la función característica de herramientas como Apache Sqoop y no el propósito general de NiFi."
+      },
+      {
+        "text": "Indexar páginas web públicas para reemplazar a los motores de búsqueda comerciales en tiempo real.",
+        "isCorrect": false,
+        "rationale": "Aunque NiFi puede consumir datos extraídos de la web, su función principal no es actuar como un motor de búsqueda web."
+      },
+      {
+        "text": "Entrenar modelos de redes neuronales profundas para el reconocimiento automático de voz humana.",
+        "isCorrect": false,
+        "rationale": "El entrenamiento de aprendizaje profundo se realiza con frameworks especializados como TensorFlow o Spark ML, no con NiFi."
+      },
+      {
+        "text": "Sustituir a los sistemas de archivos distribuidos almacenando físicamente la información en tablas relacionales.",
+        "isCorrect": false,
+        "rationale": "NiFi gestiona el movimiento y la transformación fluida de datos hacia contenedores finales, pero no actúa como un sistema de almacenamiento relacional."
+      }
+    ],
+    "hint": "Esta herramienta, liberada por la NSA a la Fundación Apache, destaca por su diseño gráfico interactivo de flujos de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Para qué se utiliza principalmente la herramienta Apache Sqoop en el procesamiento de Big Data?",
+    "opciones": [
+      {
+        "text": "Transferir datos de manera eficiente entre bases de datos relacionales y almacenes del ecosistema Hadoop.",
+        "isCorrect": true,
+        "rationale": "Sqoop automatiza la importación y exportación de datos estructurados entre gestores de bases de datos relacionales (como MySQL o PostgreSQL) y HDFS o Hive."
+      },
+      {
+        "text": "Capturar y procesar transmisiones continuas de video e imágenes satelitales en tiempo real.",
+        "isCorrect": false,
+        "rationale": "Sqoop opera mediante lotes sobre datos relacionales y no está diseñado para el procesamiento de flujo de video continuo."
+      },
+      {
+        "text": "Diseñar interfaces gráficas interactivas para la edición de archivos de audio y conversaciones telefónicas.",
+        "isCorrect": false,
+        "rationale": "Sqoop es una herramienta orientada a la línea de comandos para la migración de datos relacionales, sin capacidades de edición multimedia."
+      },
+      {
+        "text": "Analizar la sintaxis y gramática del lenguaje humano hablado mediante algoritmos NLP.",
+        "isCorrect": false,
+        "rationale": "El análisis sintáctico del lenguaje corresponde al procesamiento del lenguaje natural y no al propósito de transferencia de bases de datos de Sqoop."
+      },
+      {
+        "text": "Monitorear continuamente señales de sensores biomédicos utilizando comunicación inalámbrica de bajo consumo.",
+        "isCorrect": false,
+        "rationale": "La captura de señales biomédicas continuas se gestiona mediante arquitecturas de IoT y streaming, fuera del alcance de Sqoop."
+      }
+    ],
+    "hint": "Su nombre proviene de la combinación de las palabras 'SQL' y 'Hadoop'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes afirmaciones describen correctamente las características de Apache NiFi y Apache Sqoop? (Selecciona todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Apache NiFi permite gestionar flujos de datos tanto en tiempo real como por lotes utilizando un entorno gráfico.",
+        "isCorrect": true,
+        "rationale": "Destaca la versatilidad operativa de NiFi para configurar visualmente procesos de flujo continuo o diferido."
+      },
+      {
+        "text": "Apache NiFi es capaz de ingerir datos no estructurados como archivos de texto, imágenes, audios o sensores.",
+        "isCorrect": true,
+        "rationale": "Resalta la flexibilidad de NiFi para procesar diversos formatos no estructurados antes de moverlos a almacenes masivos."
+      },
+      {
+        "text": "Apache Sqoop utiliza el paradigma MapReduce para optimizar la migración masiva de datos en lotes.",
+        "isCorrect": true,
+        "rationale": "Explica el mecanismo interno de Sqoop para dividir el trabajo de importación/exportación relacional en tareas paralelas distribuidas."
+      },
+      {
+        "text": "Apache Sqoop realiza procesamiento continuo en tiempo real para redes sociales y señales de video.",
+        "isCorrect": false,
+        "rationale": "Sqoop no soporta streaming continuo en tiempo real, ya que está limitado a transferencias por lotes en bases relacionales."
+      },
+      {
+        "text": "Tanto NiFi como Sqoop requieren obligatoriamente escribir código fuente en lenguaje ensamblador para funcionar.",
+        "isCorrect": false,
+        "rationale": "Ninguna de las dos herramientas exige programación a nivel de máquina o ensamblador para mover información."
+      }
+    ],
+    "hint": "Diferencia la herramienta basada en flujos visuales y datos no estructurados de la herramienta orientada a lotes relacionales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto del análisis de información, ¿qué caracteriza a los datos considerados 'estáticos'?",
+    "opciones": [
+      {
+        "text": "Son datos almacenados de forma masiva en sistemas integrados que no cambian constantemente segundo a segundo.",
+        "isCorrect": true,
+        "rationale": "Los datos estáticos corresponden a registros acumulados en repositorios (como padrones o historiales) que se analizan de manera acumulada y masiva."
+      },
+      {
+        "text": "Son transmisiones ininterrumpidas capturadas por sensores de aceleración en tiempo real.",
+        "isCorrect": false,
+        "rationale": "Las transmisiones ininterrumpidas de sensores constituyen datos dinámicos o en tiempo real, no estáticos."
+      },
+      {
+        "text": "Son archivos temporales que se autodestruyen inmediatamente después de ser leídos.",
+        "isCorrect": false,
+        "rationale": "La volatilidad o eliminación automática no es el criterio que define a los datos estáticos almacenados."
+      },
+      {
+        "text": "Son señales GPS que cambian continuamente de coordenadas cada milisegundo.",
+        "isCorrect": false,
+        "rationale": "Las coordenadas en constante movimiento son un ejemplo claro de flujos de datos continuos en tiempo real."
+      },
+      {
+        "text": "Son datos exclusivamente analizados mediante la escucha directa de llamadas en un call center.",
+        "isCorrect": false,
+        "rationale": "El audio en vivo de un call center genera un flujo de datos no estructurados en tiempo real mientras transcurre la llamada."
+      }
+    ],
+    "hint": "Piensa en bases de datos históricas de clientes, censos o registros transaccionales ya consolidados en un ERP.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de las siguientes limitaciones se asocia al uso de Apache NiFi?",
+    "opciones": [
+      {
+        "text": "Presenta un alto consumo de recursos de cómputo debido al volumen y procesamiento continuo de datos que gestiona.",
+        "isCorrect": true,
+        "rationale": "La flexibilidad, la interfaz gráfica y la gestión en tiempo real imponen una carga elevada sobre la memoria y el procesamiento del servidor."
+      },
+      {
+        "text": "Carece por completo de mecanismos para autenticar usuarios o cifrar la información transferida.",
+        "isCorrect": false,
+        "rationale": "NiFi incluye sólidos protocolos de seguridad, cifrado y autenticación para proteger los flujos de datos."
+      },
+      {
+        "text": "Es incapaz de conectarse con APIs de terceros o dispositivos de Internet de las Cosas (IoT).",
+        "isCorrect": false,
+        "rationale": "Una de las mayores fortalezas de NiFi es justamente su alta compatibilidad con APIs, sensores e IoT."
+      },
+      {
+        "text": "Exige que el usuario programe manualmente el código fuente en lenguaje máquina para mover cada archivo.",
+        "isCorrect": false,
+        "rationale": "NiFi elimina la necesidad de programar a bajo nivel gracias a su diseño basado en procesadores visuales drag-and-drop."
+      },
+      {
+        "text": "Solo se puede conectar con una única tabla de base de datos relacional a la vez.",
+        "isCorrect": false,
+        "rationale": "NiFi se conecta de manera simultánea a múltiples fuentes de datos estructuradas y no estructuradas."
+      }
+    ],
+    "hint": "El monitoreo y la transformación gráfica constante de grandes volúmenes de datos imponen exigencias al hardware.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tipo de bases de datos son el objetivo principal de importación y exportación de Apache Sqoop?",
+    "opciones": [
+      {
+        "text": "Bases de datos relacionales estructuradas como MySQL, PostgreSQL, Oracle o SQL Server.",
+        "isCorrect": true,
+        "rationale": "Sqoop se diseñó específicamente para interactuar con motores relacionales tradicionales basados en el modelo entidad-relación."
+      },
+      {
+        "text": "Archivos planos de texto que contienen únicamente conversaciones de chat sin formato.",
+        "isCorrect": false,
+        "rationale": "Los textos no estructurados de chats no se gestionan mediante Sqoop, sino mediante herramientas de ingesta de archivos o flujos como NiFi o Flume."
+      },
+      {
+        "text": "Repositorios de imágenes médicas almacenadas exclusivamente en formato binario no relacional.",
+        "isCorrect": false,
+        "rationale": "Sqoop requiere esquemas relacionales tabulares y no está concebido para extraer directamente repositorios binarios sin formato."
+      },
+      {
+        "text": "Modelos de grafos no estructurados utilizados para el análisis de redes sociales complejas.",
+        "isCorrect": false,
+        "rationale": "Las bases de datos de grafos o NoSQL utilizan otros conectores específicos y no son el foco relacional de Sqoop."
+      },
+      {
+        "text": "Servidores de correo electrónico en vivo sin tablas de datos definidas.",
+        "isCorrect": false,
+        "rationale": "Sqoop necesita una estructura relacional con tablas y columnas para ejecutar sus mapeos hacia Hadoop."
+      }
+    ],
+    "hint": "Sqoop funciona con motores de almacenamiento tabular organizados en esquemas tradicionales de filas y columnas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son las 5 'V' fundamentales que caracterizan al concepto de Big Data?",
+    "opciones": [
+      {
+        "text": "Volumen, Velocidad, Variedad, Veracidad y Valor.",
+        "isCorrect": true,
+        "rationale": "Estas cinco dimensiones resumen la escala de los datos, la rapidez de su generación, la diversidad de formatos, su confiabilidad y el beneficio que aportan a la toma de decisiones."
+      },
+      {
+        "text": "Volumen, Vector, Variable, Varianza y Valor.",
+        "isCorrect": false,
+        "rationale": "Términos estadísticos como varianza o variable no forman parte de las 5 'V' tradicionales de la definición de Big Data."
+      },
+      {
+        "text": "Velocidad, Visión, Variabilidad, Vínculo y Verificación.",
+        "isCorrect": false,
+        "rationale": "Conceptos como visión o vínculo no pertenecen al marco estándar de las 5 'V' de Big Data."
+      },
+      {
+        "text": "Variedad, Verdad, Virtualización, Voltaje y Validación.",
+        "isCorrect": false,
+        "rationale": "Voltaje y virtualización son términos tecnológicos ajenos al modelo conceptual de las 5 'V'."
+      },
+      {
+        "text": "Volumen, Velocidad, Visualización, Varianza y Veracidad.",
+        "isCorrect": false,
+        "rationale": "Aunque la visualización es importante en el análisis, las 5 'V' estándar sustituyen ese término por 'Variedad' y 'Valor'."
+      }
+    ],
+    "hint": "Contemplan la cantidad de datos, su rapidez de flujo, la diversidad de formatos, la precisión de la información y la utilidad para el negocio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la técnica conocida como 'Web Scraping'?",
+    "opciones": [
+      {
+        "text": "Extraer contenido e información directamente desde sitios web para estructurarla según una necesidad específica.",
+        "isCorrect": true,
+        "rationale": "El Web Scraping utiliza herramientas o código para navegar en sitios web, extraer datos no estructurados (como clima o precios) y guardarlos de forma organizada."
+      },
+      {
+        "text": "Cifrar las conexiones de un servidor para evitar ciberataques a las bases de datos de una empresa.",
+        "isCorrect": false,
+        "rationale": "El cifrado de servidores corresponde a la ciberseguridad y no al proceso de extracción de contenidos en páginas web."
+      },
+      {
+        "text": "Comprimir archivos de video en tiempo real para reducir el ancho de banda consumido.",
+        "isCorrect": false,
+        "rationale": "La compresión de multimedia es un proceso de optimización de archivos, diferente a la recolección de datos mediante scraping."
+      },
+      {
+        "text": "Convertir oraciones de texto escrito a voz sintética interpretada por una computadora.",
+        "isCorrect": false,
+        "rationale": "La conversión de texto a voz es una aplicación de síntesis de audio y NLP, no de extracción web."
+      },
+      {
+        "text": "Borrar automáticamente registros duplicados dentro de un sistema ERP transaccional.",
+        "isCorrect": false,
+        "rationale": "La eliminación de duplicados en un ERP es una tarea de limpieza de datos internos, no de scraping sobre la web."
+      }
+    ],
+    "hint": "Esta técnica se usa para recolectar información pública en la red, como tipos de cambio o publicaciones, usando librerías como Beautiful Soup o Scrapy.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos corresponden a componentes estructurales del Procesamiento del Lenguaje Natural (NLP)? (Selecciona todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "La morfología, que estudia la estructura interna de las palabras.",
+        "isCorrect": true,
+        "rationale": "Analiza las unidades mínimas de significado que constituyen cada palabra dentro del texto."
+      },
+      {
+        "text": "La sintaxis, que regula el orden y las reglas de combinación de las palabras en oraciones.",
+        "isCorrect": true,
+        "rationale": "Establece la gramática y el ordenamiento adecuado para formar frases coherentes."
+      },
+      {
+        "text": "La semántica, que se enfoca en la interpretación del significado de palabras y expresiones.",
+        "isCorrect": true,
+        "rationale": "Aporta el sentido explícito de los vocablos y las frases construidas."
+      },
+      {
+        "text": "La pragmática, que analiza la interpretación del lenguaje en función del contexto específico.",
+        "isCorrect": true,
+        "rationale": "Determina cómo el entorno y la intención modifican la interpretación final del mensaje."
+      },
+      {
+        "text": "La georreferenciación, que calcula la altitud y latitud de un servidor web.",
+        "isCorrect": false,
+        "rationale": "La georreferenciación pertenece al ámbito geoespacial y no a los componentes lingüísticos de NLP."
+      }
+    ],
+    "hint": "Selecciona las disciplinas de la lingüística que analizan la forma, la estructura, el significado y el contexto del lenguaje humano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una diferencia clave entre un Data Lake y un Data Warehouse?",
+    "opciones": [
+      {
+        "text": "El Data Lake almacena datos estructurados, semiestructurados y no estructurados en su formato original, mientras que el Data Warehouse almacena datos previamente estructurados y transformados.",
+        "isCorrect": true,
+        "rationale": "Un Data Lake es un repositorio flexible que conserva la información cruda en diversos formatos, mientras que el Data Warehouse requiere un esquema estructurado previo (ETL)."
+      },
+      {
+        "text": "El Data Warehouse solo guarda archivos de audio y video, mientras que el Data Lake únicamente soporta tablas SQL relacionales.",
+        "isCorrect": false,
+        "rationale": "Es todo lo contrario: el Data Warehouse trabaja con datos relacionales y tabulares, mientras que el Data Lake admite archivos multimedia no estructurados."
+      },
+      {
+        "text": "El Data Lake exige limpiar y normalizar strictly los datos antes de guardarlos, mientras que el Data Warehouse recibe datos crudos.",
+        "isCorrect": false,
+        "rationale": "El Data Warehouse sigue el enfoque Schema-on-Write (limpieza previa), mientras que el Data Lake aplica Schema-on-Read (almacenamiento en crudo)."
+      },
+      {
+        "text": "El Data Warehouse es una tecnología de código abierto completamente gratuita, mientras que el Data Lake es siempre propietario.",
+        "isCorrect": false,
+        "rationale": "Existen soluciones tanto comerciales como de código abierto para ambas arquitecturas de almacenamiento."
+      },
+      {
+        "text": "El Data Lake impide el uso de herramientas de Machine Learning o analítica avanzada sobre su contenido.",
+        "isCorrect": false,
+        "rationale": "Los Data Lakes son ampliamente utilizados como base para entrenar modelos de Machine Learning sobre datos variados."
+      }
+    ],
+    "hint": "Piensa en cuál de los dos contenedores permite guardar datos crudos 'tal cual' llegan (imágenes, logs, JSON) sin necesidad de estructurarlos antes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere el 'Análisis de Sentimientos' en el procesamiento de datos no estructurados de redes sociales?",
+    "opciones": [
+      {
+        "text": "A la clasificación computacional del tono, la opinión o la actitud emocional expresada por los usuarios en textos e interacciones.",
+        "isCorrect": true,
+        "rationale": "Utiliza NLP y algoritmos para determinar si las expresiones publicadas (tweets, comentarios) transmiten emociones positivas, negativas o neutras."
+      },
+      {
+        "text": "A la medición física de la temperatura ambiente de las oficinas donde trabajan los usuarios de redes sociales.",
+        "isCorrect": false,
+        "rationale": "La temperatura física se mide con sensores de IoT, sin relación con el tono de los textos escritos."
+      },
+      {
+        "text": "Al recuento del número total de palabras escritas en un contrato legal sin interpretar su significado.",
+        "isCorrect": false,
+        "rationale": "Contar palabras es una métrica cuantitativa básica que no evalúa la carga emocional u opinión del texto."
+      },
+      {
+        "text": "A la verificación de la velocidad de conexión a Internet que utiliza un cliente al publicar una foto.",
+        "isCorrect": false,
+        "rationale": "La velocidad de conexión es un parámetro de red y hardware, ajeno al contenido semántico del mensaje."
+      },
+      {
+        "text": "A la traducción automática de un archivo de audio en código binario hacia un lenguaje ensamblador.",
+        "isCorrect": false,
+        "rationale": "La conversión entre código binario y ensamblador es un proceso informático de bajo nivel que no analiza actitudes humanas."
+      }
+    ],
+    "hint": "Consiste en evaluar si la opinión de un usuario sobre un producto o marca es favorable, desfavorable o neutra mediante el uso de emojis y frases.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta o librería es mencionada en la clase como una opción poderosa para ejecutar tareas de Machine Learning y aprendizaje automático en Big Data?",
+    "opciones": [
+      {
+        "text": "Spark ML / TensorFlow.",
+        "isCorrect": true,
+        "rationale": "Spark ML y TensorFlow son motores y librerías ampliamente utilizados para implementar algoritmos de clasificación, regresión y redes neuronales a gran escala."
+      },
+      {
+        "text": "Apache Sqoop.",
+        "isCorrect": false,
+        "rationale": "Sqoop es una herramienta de transferencia entre bases relacionales y Hadoop, no un framework de Machine Learning."
+      },
+      {
+        "text": "Google Maps.",
+        "isCorrect": false,
+        "rationale": "Google Maps es una aplicación de mapas y geolocalización, no una librería de aprendizaje automático."
+      },
+      {
+        "text": "OpenStreetMap.",
+        "isCorrect": false,
+        "rationale": "OpenStreetMap provee datos cartográficos abiertos, pero no algoritmos de entrenamiento para modelos predictivos."
+      },
+      {
+        "text": "PostgreSQL.",
+        "isCorrect": false,
+        "rationale": "PostgreSQL es un sistema gestor de bases de datos relacionales, no una librería orientada principalmente al desarrollo de aprendizaje profundo."
+      }
+    ],
+    "hint": "Incluye bibliotecas especializadas en algoritmos predictivos, redes neuronales y procesamiento distribuido muy usadas con Python.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué define conceptualmente a los datos geoespaciales o geodatos?",
+    "opciones": [
+      {
+        "text": "Son datos que representan fenómenos identificados por una referencia geográfica en la Tierra, mediante coordenadas de latitud, longitud y altitud.",
+        "isCorrect": true,
+        "rationale": "Los geodatos vinculan un evento o entidad con una ubicación espacial precisa dentro del globo terráqueo mediante un sistema de coordenadas."
+      },
+      {
+        "text": "Son archivos de texto plano que almacenan contraseñas cifradas de usuarios sin referencia geográfica.",
+        "isCorrect": false,
+        "rationale": "Las contraseñas cifradas son registros numéricos o alfanuméricos carentes de atributos o coordenadas espaciales."
+      },
+      {
+        "text": "Son grabaciones de voz utilizadas únicamente para medir el volumen de los altavoces de un teléfono.",
+        "isCorrect": false,
+        "rationale": "Las grabaciones de voz corresponden a archivos de audio y no constituyen datos de posición o cartografía."
+      },
+      {
+        "text": "Son programas ejecutables que formatean los discos duros de forma remota.",
+        "isCorrect": false,
+        "rationale": "Los utilitarios de formateo son programas informáticos y no datos que representan objetos en el espacio geográfico."
+      },
+      {
+        "text": "Son tablas de ventas contables que no incluyen ninguna variable de ubicación ni dirección física.",
+        "isCorrect": false,
+        "rationale": "Si un registro contable carece de datos de ubicación o coordenadas, no puede considerarse un dato geoespacial."
+      }
+    ],
+    "hint": "Permiten ubicar exactamente cualquier elemento o evento en un punto específico del planeta mediante variables como (X, Y, Z).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones constituyen fuentes primarias para la captura de datos geoespaciales? (Selecciona todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Dispositivos GPS que determinan el posicionamiento global en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Capturan de forma directa las coordenadas de ubicación espacial mediante la señal de red satelital."
+      },
+      {
+        "text": "Drones equipados con sensores remotos para la toma de imágenes de alta resolución.",
+        "isCorrect": true,
+        "rationale": "Recolectan fotogrametría e información geográfica precisa desde el aire."
+      },
+      {
+        "text": "Imágenes capturadas por satélites de observación terrestre.",
+        "isCorrect": true,
+        "rationale": "Proporcionan datos espectrales y fotografías de grandes extensiones de la superficie de la Tierra."
+      },
+      {
+        "text": "Archivos de texto que contienen listas de nombres de clientes sin direcciones ni coordenadas.",
+        "isCorrect": false,
+        "rationale": "Una lista simple de nombres carece por completo de atributos de posicionamiento espacial o coordenadas."
+      },
+      {
+        "text": "Canciones en formato MP3 guardadas en un disco duro local sin metadatos de ubicación.",
+        "isCorrect": false,
+        "rationale": "Los archivos de música estándar no capturan información geográfica de la superficie terrestre."
+      }
+    ],
+    "hint": "Busca aquellas tecnologías físicas o satelitales que registran directamente fotos, coordenadas o mapas del terreno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué significan las siglas IoT y cuál es su concepto central?",
+    "opciones": [
+      {
+        "text": "Internet of Things (Internet de las Cosas); se refiere a la interconexión de dispositivos físicos a Internet para capturar, transmitir y compartir datos sin intervención humana directa.",
+        "isCorrect": true,
+        "rationale": "IoT abarca objetos provistos de sensores, software y conectividad que recopilan y envían información de su entorno a la red."
+      },
+      {
+        "text": "Integration of Technology (Integración de Tecnología); se refiere a la instalación de cables de red en un edificio de oficinas.",
+        "isCorrect": false,
+        "rationale": "La instalación de cables es infraestructura de red y no define la red de objetos inteligentes interconectados."
+      },
+      {
+        "text": "Internal Online Transfer (Transferencia Interna en Línea); se refiere al pago de salarios mediante la banca por Internet.",
+        "isCorrect": false,
+        "rationale": "Las transferencias bancarias son transacciones financieras electrónicas, ajenas al concepto de sensores y objetos interconectados."
+      },
+      {
+        "text": "Index of Topologies (Índice de Topologías); se refiere a la ordenación alfabética de los países en un mapa mundial.",
+        "isCorrect": false,
+        "rationale": "Un índice alfabético geográfico no describe la red de dispositivos físicos conectados comunicándose datos."
+      },
+      {
+        "text": "Input Organization Tool (Herramienta de Organización de Entrada); se refiere a un teclado físico conectado a una computadora.",
+        "isCorrect": false,
+        "rationale": "Un teclado convencional es un periférico de entrada básico y no una red de dispositivos IoT interconectados recopilando datos autónomamente."
+      }
+    ],
+    "hint": "Conecta sensores de objetos cotidianos (como relojes, autos o termostatos) a la red para enviar información.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a protocolos o medios de comunicación comúnmente utilizados en entornos de IoT? (Selecciona todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Wi-Fi.",
+        "isCorrect": true,
+        "rationale": "Permite la conexión inalámbrica de alta velocidad para dispositivos IoT en redes locales."
+      },
+      {
+        "text": "Bluetooth.",
+        "isCorrect": true,
+        "rationale": "Ofrece un canal de comunicación inalámbrico de corto alcance e intercambio de datos con bajo consumo."
+      },
+      {
+        "text": "LoRaWAN.",
+        "isCorrect": true,
+        "rationale": "Es un protocolo inalámbrico de gran alcance y muy bajo consumo de energía, ideal para sensores remotos de IoT."
+      },
+      {
+        "text": "HDMI.",
+        "isCorrect": false,
+        "rationale": "HDMI es una interfaz de cable físico para transmisión de video/audio en alta definición, no un protocolo de red inalámbrico para IoT."
+      },
+      {
+        "text": "Cintas magnéticas VHS.",
+        "isCorrect": false,
+        "rationale": "Las cintas VHS son medios analógicos de almacenamiento de video completamente obsoletos y sin conectividad."
+      }
+    ],
+    "hint": "Incluye estándares de comunicación inalámbrica de corto, mediano y largo alcance que permiten transmitir datos desde sensores a la red.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de un Sistema de Información Geográfica (SIG o GIS)?",
+    "opciones": [
+      {
+        "text": "Capturar, almacenar, manipular, analizar y desplegar todo tipo de datos espacialmente referenciados mediante mapas en capas.",
+        "isCorrect": true,
+        "rationale": "Un SIG integra software, hardware y datos para representar visualmente la realidad geográfica y resolver problemas complejos de localización."
+      },
+      {
+        "text": "Generar automáticamente facturas contables en PDF para clientes de un comercio electrónico.",
+        "isCorrect": false,
+        "rationale": "La facturación comercial es una función administrativa de un sistema ERP o POS, no de un software geográfico."
+      },
+      {
+        "text": "Comprimir bases de datos relacionales eliminando todos sus atributos espaciales.",
+        "isCorrect": false,
+        "rationale": "El objetivo de un SIG es aprovechar y potenciar los atributos espaciales, no eliminarlos."
+      },
+      {
+        "text": "Traducir archivos de voz humana a texto escrito sin considerar coordenadas.",
+        "isCorrect": false,
+        "rationale": "La transcripción de audio corresponde a herramientas de NLP y procesamiento de voz."
+      },
+      {
+        "text": "Reemplazar los antivirus de un servidor para detectar archivos maliciosos.",
+        "isCorrect": false,
+        "rationale": "La protección contra virus corresponde a la ciberseguridad y no al análisis de información geográfica."
+      }
+    ],
+    "hint": "Permite superponer información sobre el territorio (como capas de ríos, carreteras, o manzanas urbanas) para tomar decisiones espaciales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de los siguientes es un formato vectorial ampliamente utilizado para almacenar datos geoespaciales en un SIG?",
+    "opciones": [
+      {
+        "text": "Shapefile (.shp).",
+        "isCorrect": true,
+        "rationale": "El formato Shapefile es un estándar vectorial desarrollado por ESRI que almacena la ubicación geométrica (puntos, líneas, polígonos) y sus atributos."
+      },
+      {
+        "text": ".MP3.",
+        "isCorrect": false,
+        "rationale": "El formato .MP3 se utiliza para comprimir archivos de audio y no contiene geometría vectorial geoespacial."
+      },
+      {
+        "text": ".EXE.",
+        "isCorrect": false,
+        "rationale": "Un archivo .EXE es un ejecutable de software en sistemas Windows, no un formato de almacenamiento de vectores geográficos."
+      },
+      {
+        "text": ".DOCX.",
+        "isCorrect": false,
+        "rationale": "El formato .DOCX corresponde a documentos de texto procesados en procesadores de palabras como Microsoft Word."
+      },
+      {
+        "text": ".APK.",
+        "isCorrect": false,
+        "rationale": "Un archivo .APK es un paquete de instalación de aplicaciones para el sistema operativo Android."
+      }
+    ],
+    "hint": "Es un formato vectorial clásico que guarda geometrías de puntos, líneas y polígonos ampliamente soportado por software como QGIS y ArcGIS.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el beneficio de tomar decisiones empresariales respaldadas por análisis de datos en lugar de guiarse únicamente por intuiciones?",
+    "opciones": [
+      {
+        "text": "Permite reducir riesgos, actuar con evidencia objetiva y responder con mayor precisión a las tendencias reales del mercado.",
+        "isCorrect": true,
+        "rationale": "Los datos recopilados reflejan el comportamiento real de los clientes y procesos, minimizando la incertidumbre en la toma de decisiones estratégicas."
+      },
+      {
+        "text": "Garantiza que la empresa no necesite invertir presupuesto en infraestructura tecnológica.",
+        "isCorrect": false,
+        "rationale": "Adoptar analítica basada en datos requiere justamente invertir en tecnología adecuada para capturar y procesar dicha información."
+      },
+      {
+        "text": "Asegura que los clientes acepten automáticamente cualquier aumento en el precio de los productos.",
+        "isCorrect": false,
+        "rationale": "Los datos orientan las decisiones, pero no fuerzan automáticamente el comportamiento o aceptación de los clientes."
+      },
+      {
+        "text": "Elimina totalmente la necesidad de cumplir con normativas de privacidad de información.",
+        "isCorrect": false,
+        "rationale": "Al contrario, el manejo de grandes volúmenes de datos exige un cumplimiento aún más riguroso de las leyes de privacidad."
+      },
+      {
+        "text": "Evita tener que medir el rendimiento o la satisfacción de los usuarios en el tiempo.",
+        "isCorrect": false,
+        "rationale": "El análisis de datos busca precisamente medir de forma continua la satisfacción y el desempeño operativo."
+      }
+    ],
+    "hint": "La evidencia objetiva permite a las organizaciones reducir la incertidumbre y adaptarse con mayor rapidez a sus clientes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes acciones son clave para optimizar el proceso de captura de datos en Big Data? (Selecciona todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Definir previamente qué datos son realmente necesarios para resolver las preguntas clave del negocio.",
+        "isCorrect": true,
+        "rationale": "Establecer objetivos claros evita gastar recursos capturando datos irrelevantes para los fines de la organización."
+      },
+      {
+        "text": "Aplicar filtros y técnicas de limpieza en la captura para descartar registros redundantes o erróneos.",
+        "isCorrect": true,
+        "rationale": "La filtración temprana garantiza que solo ingrese información útil y confiable a las etapas de almacenamiento y procesamiento."
+      },
+      {
+        "text": "Elegir formatos de compresión eficientes (como Apache Parquet) para optimizar el almacenamiento.",
+        "isCorrect": true,
+        "rationale": "El uso de formatos comprimidos reduce drásticamente el espacio ocupado en disco y acelera las consultas subsecuentes."
+      },
+      {
+        "text": "Guardar absolutamente todos los datos generados en el universo, sin importar si contienen errores o están en blanco.",
+        "isCorrect": false,
+        "rationale": "Guardar datos masivos sin filtrar satura los discos, encarece la infraestructura y ralentiza los análisis."
+      },
+      {
+        "text": "Desactivar la seguridad de la red para que los archivos se transfieran sin controles de acceso.",
+        "isCorrect": false,
+        "rationale": "Eliminar la seguridad expone la información a filtraciones graves y viola las regulaciones de protección de datos."
+      }
+    ],
+    "hint": "Optimizar implica filtrar lo innecesario, definir objetivos de negocio claros y usar formatos de compresión que ahorren recursos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tecnología está concebida expresamente para la captura y procesamiento de datos en flujo continuo (streaming en tiempo real)?",
+    "opciones": [
+      {
+        "text": "Apache Kafka / Apache Flink.",
+        "isCorrect": true,
+        "rationale": "Kafka actúa como intermediario de mensajería de alta velocidad en tiempo real y Flink procesa dichos flujos continuos con muy baja latencia."
+      },
+      {
+        "text": "Microsoft Paint.",
+        "isCorrect": false,
+        "rationale": "Microsoft Paint es un accesorio gráfico básico para dibujar imágenes estáticas a mano."
+      },
+      {
+        "text": "WinRAR.",
+        "isCorrect": false,
+        "rationale": "WinRAR es una utilidad de compresión manual de archivos locales, no una plataforma de procesamiento de flujos de datos."
+      },
+      {
+        "text": "Adobe Acrobat Reader.",
+        "isCorrect": false,
+        "rationale": "Acrobat Reader se limita a la visualización de documentos en formato PDF estático."
+      },
+      {
+        "text": "Notepad++.",
+        "isCorrect": false,
+        "rationale": "Notepad++ es un editor de texto plano orientado al desarrollo de código, sin capacidades de procesamiento distribuido en streaming."
+      }
+    ],
+    "hint": "Son plataformas de motores distribuidos diseñados para gestionar eventos inmediatos con latencias de milisegundos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿En cuáles de las siguientes situaciones resulta imprescindible contar con un análisis de datos en tiempo real? (Selecciona todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "En la detección inmediata de transacciones fraudulentas con tarjetas de crédito en el sector bancario.",
+        "isCorrect": true,
+        "rationale": "Exige bloquear la operación en milisegundos para evitar pérdidas económicas antes de que la transacción se complete."
+      },
+      {
+        "text": "En el monitoreo ininterrumpido de signos vitales de un paciente en estado crítico en un hospital.",
+        "isCorrect": true,
+        "rationale": "Requiere alertas instantáneas ante cualquier alteración de salud para que el personal médico actúe de inmediato."
+      },
+      {
+        "text": "En el ajuste dinámico de rutas de tráfico vehicular en aplicaciones de navegación como Waze o Uber.",
+        "isCorrect": true,
+        "rationale": "Necesita reconfigurar las rutas al instante basándose en congestiones o accidentes reportados al segundo."
+      },
+      {
+        "text": "En la impresión anual del balance contable en papel de una empresa para los accionistas.",
+        "isCorrect": false,
+        "rationale": "Un reporte contable consolidado de cierre de año es un proceso por lotes histórico que no requiere streaming en tiempo real."
+      },
+      {
+        "text": "En la redacción e impresión de un libro de texto educativo.",
+        "isCorrect": false,
+        "rationale": "La edición de un libro impreso es una actividad editorial tradicional ajena al procesamiento de datos en tiempo real."
+      }
+    ],
+    "hint": "Identifica los casos donde retrasar la respuesta por unos pocos minutos o segundos anularía el valor de la decisión o provocaría un perjuicio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere la 'personalización' de las herramientas de captura de datos en Big Data?",
+    "opciones": [
+      {
+        "text": "A la adaptación y configuración de las herramientas tecnológicas en función de las necesidades específicas, volumen, frecuencia y seguridad de cada empresa.",
+        "isCorrect": true,
+        "rationale": "Personalizar implica calibrar la arquitectura de ingesta (elegir entre tiempo real, lotes, tipos de filtros) de acuerdo a las metas de cada organización."
+      },
+      {
+        "text": "A modificar los colores estéticos de las carpetas del sistema operativo según el gusto del administrador.",
+        "isCorrect": false,
+        "rationale": "Cambiar colores de carpetas es un ajuste estético básico que no altera el funcionamiento del pipeline de datos."
+      },
+      {
+        "text": "A obligar a todas las industrias del mercado a emplear exactamente el mismo software con la misma configuración.",
+        "isCorrect": false,
+        "rationale": "La personalización busca lo opuesto: evitar soluciones estandarizadas rígidas que no se adapten a las particularidades de cada negocio."
+      },
+      {
+        "text": "A prohibir el uso de servidores en la nube y recopilar todos los datos en cuadernos físicos.",
+        "isCorrect": false,
+        "rationale": "El registro manual en cuadernos destruye la automatización y escala que propone el ecosistema de Big Data."
+      },
+      {
+        "text": "A limitar la captura de información exclusivamente a formularios impresos en papel.",
+        "isCorrect": false,
+        "rationale": "Restringir la captura a formularios físicos impide procesar fuentes digitales masivas en tiempo real."
+      }
+    ],
+    "hint": "Dado que cada empresa tiene problemas y volumen de información distintos, la herramienta debe calibrarse según su propósito específico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué consecuencia negativa se produce si una empresa intenta capturar datos de forma indiscriminada sin ningún filtrado ni control?",
+    "opciones": [
+      {
+        "text": "Aumentan los costos de infraestructura, se ralentiza el procesamiento y se acumulan datos irrelevantes o erróneos.",
+        "isCorrect": true,
+        "rationale": "Al no filtrar la información previa, se almacenan registros sucios y 'basura' que consumen espacio en disco y demoran las consultas."
+      },
+      {
+        "text": "Se incrementa automáticamente la velocidad de respuesta de las bases de datos relacionales.",
+        "isCorrect": false,
+        "rationale": "Al contrario, acumular datos no filtrados aumenta el volumen a procesar y ralentiza la velocidad de respuesta."
+      },
+      {
+        "text": "Se elimina totalmente cualquier posibilidad de sufrir un ciberataque o robo de información.",
+        "isCorrect": false,
+        "rationale": "La captura sin control no ofrece protección contra ciberataques; por el contrario, amplía la superficie expuesta sin seguridad."
+      },
+      {
+        "text": "Se reduce de forma inmediata el número de servidores físicos necesarios en el centro de datos.",
+        "isCorrect": false,
+        "rationale": "Ingresar más volumen sin filtrar exige contratar más almacenamiento y servidores, incrementando la infraestructura."
+      },
+      {
+        "text": "Se garantiza que todos los reportes analíticos resulten 100% exactos sin necesidad de revisiones.",
+        "isCorrect": false,
+        "rationale": "Procesar datos irrelevantes o corruptos (datos sucios) degrada la precisión y confiabilidad de los reportes."
+      }
+    ],
+    "hint": "Capturar datos masivos sin criterio satura el espacio en disco, incrementa la factura de almacenamiento y genera cuellos de botella.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué factores son clave para preservar la seguridad y la privacidad al capturar datos en proyectos de Big Data? (Selecciona todas las opciones que correspondan)",
+    "opciones": [
+      {
+        "text": "Cumplir strictly con las regulaciones y leyes vigentes sobre protección de datos personales.",
+        "isCorrect": true,
+        "rationale": "Asegura el marco legal adecuado y evita sanciones éticas o corporativas por el uso de la información."
+      },
+      {
+        "text": "Anonimizar o cifrar los datos sensibles de los usuarios antes o durante su almacenamiento.",
+        "isCorrect": true,
+        "rationale": "Protege la identidad y privacidad de los clientes en caso de filtraciones de la base de datos."
+      },
+      {
+        "text": "Establecer controles de acceso y autenticación para evitar que usuarios no autorizados manipulen la información.",
+        "isCorrect": true,
+        "rationale": "Garantiza la gobernanza y restringe el uso de la información crítica únicamente al personal autorizado."
+      },
+      {
+        "text": "Publicar abiertamente en foros de internet las claves secretas de acceso al servidor de producción.",
+        "isCorrect": false,
+        "rationale": "Publicar claves privadas destruye la ciberseguridad y expone los sistemas a accesos maliciosos."
+      },
+      {
+        "text": "Almacenar información confidencial bancaria en texto plano sin cifrado en redes públicas.",
+        "isCorrect": false,
+        "rationale": "Almacenar datos confidenciales sin cifrado viola todas las normas de privacidad y seguridad bancaria."
+      }
+    ],
+    "hint": "Considera los principios de cumplimiento legal, protección de identidades sensibles mediante cifrado y restricción de accesos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al diseñar una arquitectura de ingesta de datos en Big Data, ¿cuál es la diferencia fundamental en el tipo de datos y modo de procesamiento entre Apache NiFi y Apache Sqoop?",
+    "opciones": [
+      {
+        "text": "Apache NiFi procesa datos estructurados exclusivamente en lotes, mientras que Apache Sqoop ingiere datos no estructurados en tiempo real.",
+        "isCorrect": false,
+        "rationale": "NiFi no está restringido a datos estructurados por lotes, sino que se especializa en enrutamiento y procesamiento dinámico de datos no estructurados tanto en tiempo real como por lotes."
+      },
+      {
+        "text": "Apache NiFi admite datos no estructurados y semiestructurados en tiempo real o por lotes mediante una interfaz gráfica, mientras que Apache Sqoop se enfoca en transferencias por lotes entre bases relacionales y entornos Hadoop.",
+        "isCorrect": true,
+        "rationale": "NiFi destaca por su flexibilidad gráfica para flujos de datos variados y continuos, mientras que Sqoop optimiza la migración masiva y estructurada utilizando el motor de MapReduce en Hadoop."
+      },
+      {
+        "text": "Apache NiFi requiere scripts obligatorios en SQL para transformar tablas relacionales, mientras que Apache Sqoop utiliza procesadores gráficos para conectar sensores IoT.",
+        "isCorrect": false,
+        "rationale": "NiFi proporciona una interfaz orientada a procesadores sin necesidad de programar en SQL, mientras que Sqoop opera mediante líneas de comandos orientadas a bases relacionales."
+      },
+      {
+        "text": "Apache NiFi está limitado únicamente al sistema de archivos HDFS, mientras que Apache Sqoop interactúa de forma nativa con APIs de redes sociales y streaming.",
+        "isCorrect": false,
+        "rationale": "Sqoop es el que se integra estrechamente con HDFS para volúmenes relacionales, mientras que NiFi posee conectores universales para APIs, sensores y múltiples destinos."
+      },
+      {
+        "text": "Apache NiFi no consume recursos de hardware significativos, mientras que Apache Sqoop requiere servidores dedicados de alta gama para ejecutar procesamiento en memoria.",
+        "isCorrect": false,
+        "rationale": "Debido al manejo constante de flujos dinámicos en tiempo real, NiFi suele exigir un alto consumo de recursos de hardware en comparación con ejecuciones puntuales por lotes."
+      }
+    ],
+    "hint": "Considere la estructura de los datos de origen (relacional vs. no estructurado) y la frecuencia de ingesta (flujo continuo vs. lotes).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué característica técnica define el funcionamiento operativo de Apache NiFi al gestionar flujos de datos complejos?",
+    "opciones": [
+      {
+        "text": "Operar mediante consultas declarativas en SQL dentro de contenedores relacionales tradicionales.",
+        "isCorrect": false,
+        "rationale": "NiFi no utiliza consultas relacionales SQL como motor de procesamiento principal, sino una arquitectura dirigida por flujos de datos."
+      },
+      {
+        "text": "Implementar un modelo basado en procesadores interconectados que permiten capturar, transformar, enrutar y filtrar datos mediante una interfaz visual.",
+        "isCorrect": true,
+        "rationale": "El diseño de NiFi utiliza procesadores modulares configurables mediante arrastrar y soltar para manipular y direccionar la información de punta a punta."
+      },
+      {
+        "text": "Ejecutar scripts monolíticos en Python de forma exclusiva para la migración de esquemas de bases de datos relacionales.",
+        "isCorrect": false,
+        "rationale": "Su núcleo está construido sobre Java y no depende exclusivamente de scripts en Python ni se limita a esquemas relacionales."
+      },
+      {
+        "text": "Transformar imágenes en vectores numéricos sin requerir almacenamiento ni memoria intermedia durante el flujo.",
+        "isCorrect": false,
+        "rationale": "NiFi gestiona repositorios de flujo (flowfile repositories) para controlar la procedencia y estado de los datos en tránsito."
+      },
+      {
+        "text": "Reemplazar completamente la necesidad de un almacenamiento centralizado tipo Data Lake mediante indexación directa.",
+        "isCorrect": false,
+        "rationale": "NiFi actúa como una herramienta de ingestión y transporte hacia repositorios como Data Lakes, pero no sustituye el almacenamiento persistente a gran escala."
+      }
+    ],
+    "hint": "Piense en la manera intuitiva y modular en que la herramienta conecta diferentes orígenes y destinos de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la migración de grandes volúmenes de datos desde una base de datos relacional (RDBMS) hacia un entorno Hadoop mediante Apache Sqoop, ¿qué mecanismo interno permite optimizar la velocidad de transferencia?",
+    "opciones": [
+      {
+        "text": "La conversión automática de todos los registros relacionales en archivos de audio antes de la ingesta.",
+        "isCorrect": false,
+        "rationale": "Sqoop preserva la estructura de los datos tabulares o los convierte a formatos delimitados o de almacenamiento eficiente como Parquet/Avro, no a archivos de audio."
+      },
+      {
+        "text": "La fragmentación de los datos y su ejecución paralela por lotes aprovechando el framework MapReduce.",
+        "isCorrect": true,
+        "rationale": "Sqoop divide la tabla relacional en rangos y lanza mappers en paralelo dentro del clúster Hadoop para acelerar la transferencia masiva."
+      },
+      {
+        "text": "El procesamiento en tiempo real mediante sockets web directos al motor de búsqueda.",
+        "isCorrect": false,
+        "rationale": "Sqoop trabaja mediante procesamiento por lotes (batch) y no está diseñado para conectividad en tiempo real vía sockets."
+      },
+      {
+        "text": "La eliminación permanente de índices en la base de datos de origen antes de realizar la lectura.",
+        "isCorrect": false,
+        "rationale": "Sqoop lee los datos de la base relacional utilizando consultas JDBC basadas en claves primarias o delimitadores sin alterar la estructura original de la base de datos."
+      },
+      {
+        "text": "El uso exclusivo de conectores no relacionales optimizados para documentos JSON sin esquema.",
+        "isCorrect": false,
+        "rationale": "Sqoop se especializa primordialmente en la interacción con fuentes relacionales estructuradas mediante conectores JDBC."
+      }
+    ],
+    "hint": "Recuerde cómo el ecosistema de Hadoop distribuye tareas masivas de lectura y escritura entre múltiples nodos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el contexto de la ingesta y gestión de datos masivos, ¿cuáles de las siguientes opciones corresponden a ventajas o limitaciones técnicas documentadas de Apache NiFi?",
+    "opciones": [
+      {
+        "text": "Ofrece una interfaz gráfica intuitiva que facilita el diseño e inspección de flujos de datos sin necesidad de programación compleja.",
+        "isCorrect": true,
+        "rationale": "Su entorno visual permite configurar conectores y procesadores arrastrando elementos, reduciendo la curva de desarrollo técnico."
+      },
+      {
+        "text": "Es totalmente incompatible con arquitecturas basadas en sensores IoT o transmisiones mediante APIs de terceros.",
+        "isCorrect": false,
+        "rationale": "NiFi es ampliamente utilizado por su elevada compatibilidad con dispositivos IoT, protocolos de sensores y servicios web API."
+      },
+      {
+        "text": "Puede llegar a presentar un elevado consumo de recursos de hardware debido al procesamiento continuo y trazabilidad de datos.",
+        "isCorrect": true,
+        "rationale": "La gestión constante del linaje de datos (data provenance) y el procesamiento dinámico en memoria demandan recursos sustanciales del servidor."
+      },
+      {
+        "text": "Permite la ingesta flexible de datos no estructurados garantizando el enrutamiento y la transformación en tiempo real o por lotes.",
+        "isCorrect": true,
+        "rationale": "Su arquitectura híbrida facilita procesar eventos individuales al instante o agruparlos en lotes según la necesidad operativa."
+      },
+      {
+        "text": "Carece por completo de mecanismos de cifrado y autenticación para la seguridad de la información en tránsito.",
+        "isCorrect": false,
+        "rationale": "NiFi incluye sólidas características de seguridad, incluyendo cifrado TLS/SSL, autenticación y políticas de acceso basadas en roles."
+      }
+    ],
+    "hint": "Identifique los rasgos de la herramienta en cuanto a usabilidad, rendimiento de hardware y diversidad de ingesta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué Apache Sqoop NO resulta una herramienta adecuada para la captura continua de eventos generados por sensores en tiempo real?",
+    "opciones": [
+      {
+        "text": "Porque carece de compatibilidad con bases de datos como MySQL, Oracle o PostgreSQL.",
+        "isCorrect": false,
+        "rationale": "Sqoop tiene amplia compatibilidad nativa con las principales bases de datos relacionales del mercado."
+      },
+      {
+        "text": "Porque su arquitectura está optimizada para la importación y exportación por lotes de bases de datos relacionales estáticas o semiestáticas.",
+        "isCorrect": true,
+        "rationale": "Sqoop requiere iniciar un trabajo discreto de MapReduce para mover datos, lo que genera latencia e impide procesar flujos continuos de alta velocidad."
+      },
+      {
+        "text": "Porque exige obligatoriamente un entorno gráfico web para poder iniciar cualquier proceso de transmisión.",
+        "isCorrect": false,
+        "rationale": "Sqoop se administra mediante la interfaz de línea de comandos (CLI) o scripts automatizados."
+      },
+      {
+        "text": "Porque no permite guardar los datos transferidos dentro del sistema de archivos distribuido HDFS.",
+        "isCorrect": false,
+        "rationale": "Uno de los destinos primarios de Sqoop es precisamente el almacenamiento HDFS en clústeres Hadoop."
+      },
+      {
+        "text": "Porque procesa únicamente archivos de texto sin formato almacenados en memoria RAM local.",
+        "isCorrect": false,
+        "rationale": "Sqoop interactúa con tablas relacionales completas e integra los datos con Hive, HBase o HDFS."
+      }
+    ],
+    "hint": "Evalúe la diferencia entre ejecutar un trabajo programado por bloques versus mantener un canal de datos permanentemente abierto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el diseño de una arquitectura corporativa, ¿cuáles de los siguientes escenarios representan un caso de uso técnicamente adecuado para Apache Sqoop o Apache NiFi?",
+    "opciones": [
+      {
+        "text": "Migración masiva nocturna de tablas transaccionales de ventas desde SQL Server hacia HDFS utilizando Apache Sqoop.",
+        "isCorrect": true,
+        "rationale": "Sqoop es ideal para extraer datos estructurados históricos o diarios mediante cargas en lote hacia el entorno distribuido."
+      },
+      {
+        "text": "Captura y enrutamiento continuo de transmisiones de datos no estructurados procedentes de videovigilancia usando Apache NiFi.",
+        "isCorrect": true,
+        "rationale": "NiFi destaca en la ingesta fluida de contenidos no estructurados que requieren moverse eficientemente desde el origen hacia almacenamiento masivo."
+      },
+      {
+        "text": "Transformación en tiempo real de archivos de audio mediante consultas relacionales de bajo nivel utilizando Apache Sqoop.",
+        "isCorrect": false,
+        "rationale": "Sqoop no soporta flujos en tiempo real ni está diseñado para la manipulación directa de archivos multimedia no estructurados."
+      },
+      {
+        "text": "Ingesta e integración de datos provenientes de dispositivos IoT con transformaciones y filtrados intermedios usando Apache NiFi.",
+        "isCorrect": true,
+        "rationale": "NiFi permite conectar sensores heterogéneos, limpiar la información sobre la marcha y redirigirla a múltiples destinos de analítica."
+      },
+      {
+        "text": "Reemplazo de clústeres de almacenamiento relacional mediante la ejecución de algoritmos de streaming con Apache Sqoop.",
+        "isCorrect": false,
+        "rationale": "Sqoop no es un motor de procesamiento en streaming ni actúa como sustituto de bases de datos de almacenamiento."
+      }
+    ],
+    "hint": "Seleccione las combinaciones donde la herramienta elegida coincida con el tipo de fuente (relacional o no estructurada) y la latencia requerida (lote o tiempo real).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el proceso de Extracción, Transformación y Carga (ETL) sobre datos no estructurados, ¿a qué se refiere la dimensión de 'Variedad' dentro de las 5 V del Big Data?",
+    "opciones": [
+      {
+        "text": "A la velocidad con la que los servidores transfieren peticiones por segundo mediante redes de fibra óptica.",
+        "isCorrect": false,
+        "rationale": "Esta descripción corresponde a la dimensión de 'Velocidad', no de 'Variedad'."
+      },
+      {
+        "text": "A la coexistencia de múltiples formatos heterogéneos de origen, tales como imágenes, audios, documentos de texto, logs y formatos JSON/XML.",
+        "isCorrect": true,
+        "rationale": "La Variedad aborda la complejidad de ingerir y unificar datos que carecen de un esquema tabular único o estandarizado."
+      },
+      {
+        "text": "Al valor comercial directo y retorno de inversión obtenido inmediatamente tras aplicar un algoritmo analítico.",
+        "isCorrect": false,
+        "rationale": "Esta definición representa la V de 'Valor'."
+      },
+      {
+        "text": "A la exactitud estadística y ausencia total de ruido o sesgos dentro de la muestra capturada.",
+        "isCorrect": false,
+        "rationale": "La confiabilidad y limpieza de los datos corresponden a la V de 'Veracidad'."
+      },
+      {
+        "text": "Al tamaño total medido en petabytes que ocupa un repositorio de almacenamiento relacional.",
+        "isCorrect": false,
+        "rationale": "La escala masiva del tamaño de almacenamiento hace referencia a la V de 'Volumen'."
+      }
+    ],
+    "hint": "Piense en la diversidad de tipos y estructuras de archivos que ingresan desde diferentes fuentes tecnológicas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la etapa de transformación de datos de texto no estructurado previa al procesamiento de lenguaje natural (NLP), ¿qué función cumple la 'tokenización'?",
+    "opciones": [
+      {
+        "text": "Comprimir el archivo de texto original en un documento cifrado sin alterar su sintaxis.",
+        "isCorrect": false,
+        "rationale": "La tokenización no es una técnica de cifrado ni de compresión de archivos."
+      },
+      {
+        "text": "Fragmentar una cadena de texto continuo en unidades discretas y analizables, tales como palabras, términos o frases numéricas.",
+        "isCorrect": true,
+        "rationale": "Permite descomponer el lenguaje natural en 'tokens' básicos sobre los cuales se aplicarán análisis sintácticos o estadísticos posteriores."
+      },
+      {
+        "text": "Convertir automáticamente una imagen escaneada en una tabla relacional normalizada dentro de SQL Server.",
+        "isCorrect": false,
+        "rationale": "La conversión de imágenes a texto legible corresponde al Reconocimiento Óptico de Caracteres (OCR)."
+      },
+      {
+        "text": "Eliminar físicamente los registros duplicados guardados en un almacén de datos (Data Warehouse).",
+        "isCorrect": false,
+        "rationale": "La deduplicación de registros es una tarea general de limpieza de datos, distinta a la tokenización de texto."
+      },
+      {
+        "text": "Asignar un costo económico predeterminado a cada oración procesada dentro de un servidor.",
+        "isCorrect": false,
+        "rationale": "La tokenización es un procedimiento computacional lingüístico y no una métrica de facturación de infraestructura."
+      }
+    ],
+    "hint": "Considere el paso necesario para dividir un párrafo completo en elementos individuales identificables por la computadora.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia arquitectónica fundamental entre un Data Warehouse y un Data Lake en relación con el estado de los datos al momento de la ingesta?",
+    "opciones": [
+      {
+        "text": "El Data Lake requiere datos previamente filtrados, estructurados y modelados (Schema-on-Write), mientras que el Data Warehouse no acepta tablas relacionales.",
+        "isCorrect": false,
+        "rationale": "Es el Data Warehouse el que exige un esquema previo definido al escribir (Schema-on-Write), a diferencia del Data Lake."
+      },
+      {
+        "text": "El Data Warehouse almacena datos estructurados y transformados para propósitos de negocio definidos, mientras que el Data Lake almacena datos masivos en su formato nativo (bruto) sin importar su estructura.",
+        "isCorrect": true,
+        "rationale": "El Data Lake adopta el enfoque Schema-on-Read, permitiendo guardar datos estructurados, semiestructurados y no estructurados tal como provienen de la fuente."
+      },
+      {
+        "text": "El Data Lake únicamente permite consultas mediante lenguaje SQL tradicional, mientras que el Data Warehouse aloja únicamente archivos de video.",
+        "isCorrect": false,
+        "rationale": "Los Data Warehouses son los entornos nativos para analítica SQL sobre tablas relacionales, mientras que los Data Lakes aceptan múltiples formatos multimedia y motores de consulta."
+      },
+      {
+        "text": "El Data Warehouse opera de forma exclusiva con sensores IoT, mientras que el Data Lake es para uso exclusivo de hojas de cálculo.",
+        "isCorrect": false,
+        "rationale": "Los sensores IoT suelen verter sus datos brutos en Data Lakes antes de ser procesados para Data Warehouses."
+      },
+      {
+        "text": "El Data Lake elimina automáticamente los datos tras 24 horas, mientras que el Data Warehouse conserva copias de seguridad de forma indefinida.",
+        "isCorrect": false,
+        "rationale": "Ambas soluciones están diseñadas para la persistencia de datos a largo plazo según las políticas de la organización."
+      }
+    ],
+    "hint": "Analice el concepto de 'Schema-on-Write' (esquema al escribir) frente a 'Schema-on-Read' (esquema al leer).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En bases de datos NoSQL (como MongoDB) o motores de búsqueda y análisis (como ElasticSearch), ¿cuál es el beneficio principal de implementar mecanismos de indexación?",
+    "opciones": [
+      {
+        "text": "Incrementar el volumen de los archivos guardados en disco para prevenir la fragmentación del servidor.",
+        "isCorrect": false,
+        "rationale": "Los índices consumen un espacio adicional en disco, pero su objetivo no es aumentar el tamaño de los archivos sino acelerar las búsquedas."
+      },
+      {
+        "text": "Acelerar sustancialmente el rendimiento de las consultas al crear estructuras de punteros y direcciones organizadas sobre los datos.",
+        "isCorrect": true,
+        "rationale": "La indexación permite al sistema localizar información específica de forma directa sin necesidad de escanear exhaustivamente toda la base de datos."
+      },
+      {
+        "text": "Convertir de manera obligatoria todos los documentos no estructurados en esquemas relacionales fijos.",
+        "isCorrect": false,
+        "rationale": "Indexar no altera la naturaleza flexible y sin esquema rígido propia de las bases de datos NoSQL."
+      },
+      {
+        "text": "Desactivar la compatibilidad con frameworks de procesamiento distribuido para reducir consumo de memoria.",
+        "isCorrect": false,
+        "rationale": "La indexación optimiza el acceso a la información y se integra eficazmente con clústeres distribuidos."
+      },
+      {
+        "text": "Garantizar la eliminación automática de los datos que superen un determinado número de palabras.",
+        "isCorrect": false,
+        "rationale": "Los índices ordenan y facilitan el acceso a los datos, pero no ejecutan borrados automáticos basados en longitud."
+      }
+    ],
+    "hint": "Piense en la analogía del índice temático al final de un libro denso cuando se busca un término específico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En un sistema interactivo basado en Procesamiento del Lenguaje Natural (NLP), como un asistente de voz, ¿cuál es el flujo de procesamiento técnico estándar para atender la solicitud del usuario?",
+    "opciones": [
+      {
+        "text": "Captura de señal de audio, conversión de voz a texto (STT), procesamiento e interpretación sintáctico-semántica, y respuesta sintetizada de texto a voz (TTS).",
+        "isCorrect": true,
+        "rationale": "El sistema transforma las ondas sonoras en texto legible por la máquina, aplica modelos de comprensión del lenguaje y responde convirtiendo el resultado nuevamente en audio."
+      },
+      {
+        "text": "Transformación directa del audio en un archivo ejecutable, almacenamiento en base relacional sin análisis y respuesta en formato de texto estático.",
+        "isCorrect": false,
+        "rationale": "Se requiere una etapa intermedia de interpretación lingüística y extracción de intenciones antes de formular una respuesta."
+      },
+      {
+        "text": "Análisis de la imagen del usuario mediante reconocimiento facial, indexación geográfica y generación de un mapa vectorial.",
+        "isCorrect": false,
+        "rationale": "El flujo primario de un asistente de voz responde al procesamiento de señales de audio y texto, no al análisis geoespacial ni facial."
+      },
+      {
+        "text": "Eliminación completa de la sintaxis del lenguaje, conversión de términos a código binario no interpretable y envío de correo masivo.",
+        "isCorrect": false,
+        "rationale": "NLP busca preservar e interpretar la sintaxis y semántica para mantener la coherencia del diálogo humano."
+      },
+      {
+        "text": "Lectura de archivos Shapefile, cálculo de áreas limítrofes y almacenamiento inmediato en un repositorio comprimido.",
+        "isCorrect": false,
+        "rationale": "Este procedimiento corresponde a análisis GIS y no a la tubería estándar de comunicación en NLP."
+      }
+    ],
+    "hint": "Siga la transformación del mensaje desde que la persona habla hasta que la máquina responde de forma auditiva.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al analizar la comunicación humana mediante modelos de Procesamiento del Lenguaje Natural (NLP), ¿cuáles de los siguientes aspectos representan retos o limitaciones complejas identificadas?",
+    "opciones": [
+      {
+        "text": "La ambigüedad semántica, donde términos idénticos alteran su significado de acuerdo con el contexto de la oración.",
+        "isCorrect": true,
+        "rationale": "El contexto determina el sentido preciso de palabras polisémicas o homónimas, dificultando la interpretación unívoca del algoritmo."
+      },
+      {
+        "text": "La imposibilidad absoluta de representar términos o palabras mediante valores matemáticos o vectores.",
+        "isCorrect": false,
+        "rationale": "Modelos como Word2Vec o Embeddings demuestran que es completamente viable mapear texto a espacios vectoriales matemáticos."
+      },
+      {
+        "text": "La dificultad técnica para interpretar adecuadamente elementos socioculturales como la ironía, el sarcasmo y las bromas de doble sentido.",
+        "isCorrect": true,
+        "rationale": "Estas figuras expresivas dependen del tono, la intención y supuestos culturales que no siempre quedan reflejados explícitamente en el texto."
+      },
+      {
+        "text": "La presencia de sesgos o prejuicios implícitos contenidos en los grandes volúmenes de datos utilizados para el entrenamiento.",
+        "isCorrect": true,
+        "rationale": "Si los corpus de entrenamiento contienen sesgos humanos, los modelos predictivos tenderán a reproducir y amplificar dichos patrones."
+      },
+      {
+        "text": "La incapacidad estructural de los algoritmos de NLP para ejecutarse sobre arquitecturas de almacenamiento en la nube.",
+        "isCorrect": false,
+        "rationale": "Los modelos modernos de NLP se alojan y escalan masivamente en infraestructuras y servicios de nube."
+      }
+    ],
+    "hint": "Considere las sutilezas del lenguaje humano que causan confusión incluso entre personas y los problemas presentes en los datos de entrenamiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para determinar la ubicación tridimensional exacta de un elemento o fenómeno sobre la superficie terrestre en un sistema geoespacial, ¿qué coordenadas son indispensables?",
+    "opciones": [
+      {
+        "text": "Latitud, longitud y altitud.",
+        "isCorrect": true,
+        "rationale": "Representan la posición horizontal (x, y) dada por la latitud/longitud y la posición vertical o elevación (z) mediante la altitud."
+      },
+      {
+        "text": "Grados, píxeles y vector.",
+        "isCorrect": false,
+        "rationale": "Píxel se refiere a la resolución de imágenes y no a un eje de ubicación tridimensional del espacio real."
+      },
+      {
+        "text": "Azimut, frecuencia y distancia.",
+        "isCorrect": false,
+        "rationale": "Son parámetros de medición angular y de ondas de telecomunicación, no las coordenadas universales de referencia terrestre."
+      },
+      {
+        "text": "Radio, centroide y perímetro.",
+        "isCorrect": false,
+        "rationale": "Corresponden a propiedades geométricas calculadas sobre polígonos, no a la posición absoluta en el globo."
+      },
+      {
+        "text": "Escala, densidad y topología.",
+        "isCorrect": false,
+        "rationale": "Representan conceptos y atributos analíticos de mapas, no el sistema tridimensional de coordenadas de un punto."
+      }
+    ],
+    "hint": "Identifique las variables correspondientes a los ejes cartesianos horizontales y la elevación vertical sobre el nivel del mar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En los Sistemas de Información Geográfica (SIG), ¿cuál es la diferencia conceptual entre los datos de tipo vectorial y los datos de tipo raster?",
+    "opciones": [
+      {
+        "text": "Los datos vectoriales utilizan mallas continuas de píxeles, mientras que los datos raster emplean únicamente tablas relacionales de texto.",
+        "isCorrect": false,
+        "rationale": "La estructura basada en mallas de píxeles o celdas es la característica definitoria del modelo raster, no del vectorial."
+      },
+      {
+        "text": "Los datos vectoriales representan objetos geográficos mediante puntos, líneas y polígonos con límites precisos, mientras que los datos raster utilizan mallas continuas de celdas o píxeles.",
+        "isCorrect": true,
+        "rationale": "El modelo vectorial abstrae elementos discretos (como carreteras o predios), mientras que el raster modela variables continuas (como elevación o imágenes satelitales)."
+      },
+      {
+        "text": "Los datos vectoriales solo se aplican a la telefonía móvil, mientras que los datos raster se utilizan exclusivamente en minería de datos financieros.",
+        "isCorrect": false,
+        "rationale": "Ambos son modelos de datos espaciales utilizados transversalmente en múltiples disciplinas que emplean análisis geográfico."
+      },
+      {
+        "text": "Los datos raster carecen de coordenadas espaciales, mientras que los datos vectoriales no admiten atributos numéricos.",
+        "isCorrect": false,
+        "rationale": "Ambos formatos requieren estar georreferenciados y pueden vincularse a tablas de atributos con métricas explícitas."
+      },
+      {
+        "text": "Los datos vectoriales se leen únicamente en papel, mientras que los datos raster son exclusivos de código Python.",
+        "isCorrect": false,
+        "rationale": "Tanto vectores como rasters son formatos digitales procesados por software especializado de SIG."
+      }
+    ],
+    "hint": "Piense en la diferencia entre trazar límites exactos de una propiedad frente a tomar una fotografía aérea compuesta por píxeles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al procesar capas de datos vectoriales en un entorno de programación orientado a análisis espacial (como GeoPandas en Python), ¿cuál de los siguientes es un formato estándar para el intercambio de geometrías y atributos?",
+    "opciones": [
+      {
+        "text": "Shapefile (.shp).",
+        "isCorrect": true,
+        "rationale": "Es el formato de archivo vectorial más difundido para almacenar la ubicación geométrica y la información de atributos de las entidades geográficas."
+      },
+      {
+        "text": "MP3 (.mp3).",
+        "isCorrect": false,
+        "rationale": "Es un formato de compresión de audio digital, sin capacidad de almacenar entidades geoespaciales."
+      },
+      {
+        "text": "DOCX (.docx).",
+        "isCorrect": false,
+        "rationale": "Es un formato de procesamiento de texto estructurado de oficina sin soporte nativo para capas GIS vectoriales."
+      },
+      {
+        "text": "AVI (.avi).",
+        "isCorrect": false,
+        "rationale": "Corresponde a un contenedor de video digital y no a una estructura de datos espaciales vectoriales."
+      },
+      {
+        "text": "EXE (.exe).",
+        "isCorrect": false,
+        "rationale": "Es un archivo ejecutable de sistema operativo y no un estándar de intercambio de geometrías cartográficas."
+      }
+    ],
+    "hint": "Busque la extensión de archivo desarrollada originalmente para software cartográfico que agrupa geometrías de puntos, líneas o polígonos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para la transmisión de datos desde sensores IoT distribuidos en áreas agrícolas extensas donde se requiere una larga distancia de cobertura y un consumo de energía mínimo, ¿qué protocolo es el más recomendado?",
+    "opciones": [
+      {
+        "text": "Bluetooth estándar de corta distancia.",
+        "isCorrect": false,
+        "rationale": "Bluetooth tradicional tiene un alcance muy restringido (pocos metros), inviable para abarcar hectáreas agrícolas."
+      },
+      {
+        "text": "LoRaWAN.",
+        "isCorrect": true,
+        "rationale": "Es una tecnología de red de área amplia y baja potencia (LPWAN) diseñada específicamente para conectar dispositivos IoT a largas distancias optimizando la batería."
+      },
+      {
+        "text": "Conexión física mediante cable HDMI.",
+        "isCorrect": false,
+        "rationale": "Es una interfaz para transmisión de audio y video de alta definición en distancias muy cortas, no aplicable a redes de sensores de campo."
+      },
+      {
+        "text": "Protocolo FTP sobre red de área local (LAN) cableada.",
+        "isCorrect": false,
+        "rationale": "Desplegar cableado LAN en extensiones agrícolas resulta logísticamente inviable e innecesariamente costoso."
+      },
+      {
+        "text": "Transmisión infrarroja directa por línea de visión corta.",
+        "isCorrect": false,
+        "rationale": "Sufre interferencias por obstáculos físicos y requiere alineación visual directa a corta distancia, inadecuado para monitoreo remoto masivo."
+      }
+    ],
+    "hint": "Elija la tecnología inalámbrica perteneciente a la categoría LPWAN (Low Power Wide Area Network).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En proyectos de optimización operativa y monitoreo del entorno, ¿cuáles de las siguientes opciones representan aplicaciones reales de sensores IoT integrados con Big Data?",
+    "opciones": [
+      {
+        "text": "Monitoreo continuo de temperatura y humedad en el suelo para la automatización del riego en agricultura de precisión.",
+        "isCorrect": true,
+        "rationale": "Los sensores de campo recopilan métricas agronómicas en tiempo real que permiten accionar válvulas y prevenir el estrés hídrico o heladas."
+      },
+      {
+        "text": "Seguimiento en tiempo real de la ubicación de flotas de transporte mediante dispositivos GPS y transmisión telemática.",
+        "isCorrect": true,
+        "rationale": "El rastreo geoespacial permite calcular tiempos de llegada, optimizar rutas y verificar paradas no programadas."
+      },
+      {
+        "text": "Captura de lecturas de vibración y desgaste en maquinaria industrial para programas de mantenimiento predictivo.",
+        "isCorrect": true,
+        "rationale": "Los datos telemétricos detectan desviaciones operativas antes de que ocurra un fallo mecánico catastrófico en la planta."
+      },
+      {
+        "text": "Eliminación automática de la necesidad de almacenamiento en servidores al sustituir los datos por impulsos ópticos estáticos.",
+        "isCorrect": false,
+        "rationale": "Los sensores capturan datos que requieren ser transmitidos y guardados en repositorios persistentes para su análisis."
+      },
+      {
+        "text": "Sustitución de todas las decisiones gerenciales por lecturas analógicas que no generan registros digitales.",
+        "isCorrect": false,
+        "rationale": "El objetivo de IoT es digitalizar el entorno físico para generar datos analizables que respalden la toma de decisiones."
+      }
+    ],
+    "hint": "Identifique las situaciones donde la medición constante de variables físicas del entorno o activos aporta información útil para el negocio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para mitigar riesgos de seguridad y prevenir accesos no autorizados en redes de dispositivos IoT, ¿qué buenas prácticas de ciberseguridad deben implementarse?",
+    "opciones": [
+      {
+        "text": "Reemplazar las credenciales y contraseñas configuradas por defecto por claves complejas y cambiarlas periódicamente.",
+        "isCorrect": true,
+        "rationale": "Las contraseñas de fábrica son la principal puerta de entrada para ataques automatizados a dispositivos conectados."
+      },
+      {
+        "text": "Mantener actualizado el firmware del dispositivo con los últimos parches de seguridad distribuidos por el fabricante.",
+        "isCorrect": true,
+        "rationale": "Las actualizaciones corrigen vulnerabilidades conocidas del sistema operativo embebido que podrían ser explotadas remotamente."
+      },
+      {
+        "text": "Segmentar la red para aislar los dispositivos IoT de la red principal o confidencial de la organización.",
+        "isCorrect": true,
+        "rationale": "Evita que el compromiso de un sensor periférico permita a un atacante desplazarse lateralmente hacia servidores centrales."
+      },
+      {
+        "text": "Desactivar por completo los protocolos de cifrado para elevar al máximo la velocidad de transmisión.",
+        "isCorrect": false,
+        "rationale": "Transmitir información sin cifrado expone los datos a intercepciones y manipulaciones en tránsito (ataques Man-in-the-Middle)."
+      },
+      {
+        "text": "Publicar abiertamente en foros las direcciones IP y claves de acceso de los concentradores de datos.",
+        "isCorrect": false,
+        "rationale": "Divulgar las credenciales y direcciones vulnera el principio básico de confidencialidad y control de acceso."
+      }
+    ],
+    "hint": "Considere las medidas de protección estándar que refuerzan las credenciales, la red física/lógica y la actualización del software.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al planificar la ingesta de datos para un sistema analítico empresarial, ¿cuál es la primera acción recomendada para optimizar la captura y evitar el almacenamiento irrestricto de información irrelevante?",
+    "opciones": [
+      {
+        "text": "Adquirir de inmediato la mayor capacidad de almacenamiento en disco disponible sin importar el uso.",
+        "isCorrect": false,
+        "rationale": "Comprar capacidad sin estrategia previa incrementa los costos sin garantizar que la información recolectada agregue valor."
+      },
+      {
+        "text": "Definir con claridad las preguntas de negocio y objetivos estratégicos para identificar y capturar únicamente los datos necesarios.",
+        "isCorrect": true,
+        "rationale": "Establecer la meta de negocio orienta la ingesta de datos, filtrando el ruido y reduciendo costos de procesamiento y almacenamiento."
+      },
+      {
+        "text": "Capturar el 100% de los clics, movimientos del cursor e interacciones marginales sin realizar filtrados previos.",
+        "isCorrect": false,
+        "rationale": "Capturar todo sin filtrar suele saturar la infraestructura y ralentizar los tiempos de procesamiento con datos de poco valor."
+      },
+      {
+        "text": "Desactivar la fase de validación e inspección de datos para evitar latencias en la base de datos.",
+        "isCorrect": false,
+        "rationale": "Omitir la validación permite el ingreso de datos corruptos o sesgados que comprometen la calidad de la analítica posterior."
+      },
+      {
+        "text": "Convertir de forma obligatoria todas las bases de datos transaccionales en un único archivo de texto plano.",
+        "isCorrect": false,
+        "rationale": "Forzar la conversión a texto plano no optimiza la ingesta y destruye las relaciones eficientes de los modelos relacionales."
+      }
+    ],
+    "hint": "Piense en la necesidad de alinear la arquitectura técnica con las prioridades de toma de decisiones de la organización.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la toma de decisiones operativas, ¿en cuál de las siguientes situaciones se requiere técnicamente un motor de procesamiento en tiempo real (como Apache Flink o Spark Streaming)?",
+    "opciones": [
+      {
+        "text": "El cálculo y balance de la planilla de sueldos de los empleados al cierre de mes.",
+        "isCorrect": false,
+        "rationale": "El cálculo de nómina es una tarea clásica de procesamiento masivo por lotes que no requiere respuesta en milisegundos."
+      },
+      {
+        "text": "La detección y bloqueo instantáneo de fraude en transacciones financieras con tarjeta de crédito.",
+        "isCorrect": true,
+        "rationale": "Exige evaluar patrones anómalos y responder en fracciones de segundo para autorizar o denegar la operación antes de que se complete."
+      },
+      {
+        "text": "La actualización semestral del catálogo impreso de bienes de capital de una empresa.",
+        "isCorrect": false,
+        "rationale": "Es un proceso administrativo de baja frecuencia que no requiere canalizaciones de streaming continuas."
+      },
+      {
+        "text": "La estimación anual de depreciación de inmuebles e infraestructura física.",
+        "isCorrect": false,
+        "rationale": "Es un cálculo contable periódico sin requerimientos de baja latencia en tiempo real."
+      },
+      {
+        "text": "La consolidación trimestral de informes de auditoría interna de documentos legales.",
+        "isCorrect": false,
+        "rationale": "Los informes trimestrales procesan datos históricos consolidados mediante trabajos programados por lotes."
+      }
+    ],
+    "hint": "Identifique el evento donde retrasar la respuesta un par de minutos invalidaría por completo el valor de la acción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En arquitecturas de repositorios masivos de datos (Data Lakes), ¿cuál es la ventaja clave del almacenamiento en formatos orientados a columnas como Apache Parquet?",
+    "opciones": [
+      {
+        "text": "Convertir automáticamente cualquier base de datos NoSQL en un archivo de procesador de texto.",
+        "isCorrect": false,
+        "rationale": "Parquet es un formato de archivo binario estructurado en columnas, no un convertidor de texto de oficina."
+      },
+      {
+        "text": "Proporcionar altos niveles de compresión y acelerar las consultas analíticas al leer únicamente las columnas requeridas por el usuario.",
+        "isCorrect": true,
+        "rationale": "Al agrupar datos del mismo tipo en columnas continuas, se reduce drásticamente la entrada/salida de disco (I/O) y se optimiza la compresión."
+      },
+      {
+        "text": "Impedir que se ejecuten consultas complejas en SQL para proteger la memoria RAM del servidor.",
+        "isCorrect": false,
+        "rationale": "Al contrario, Parquet está altamente optimizado para motores de consulta SQL como Spark SQL, Hive o Presto."
+      },
+      {
+        "text": "Aumentar el peso físico de los archivos facilitando la duplicación en múltiples discos sin comprimir.",
+        "isCorrect": false,
+        "rationale": "Su objetivo principal es reducir el espacio en disco mediante técnicas eficientes de compresión por columna."
+      },
+      {
+        "text": "Requerir la entrada manual de esquemas mediante operadores humanos durante la lectura.",
+        "isCorrect": false,
+        "rationale": "Parquet es un formato auto-descriptivo que almacena el esquema y metadatos explícitamente en el propio archivo."
+      }
+    ],
+    "hint": "Considere la eficiencia de leer solo los datos seleccionados en lugar de recorrer filas completas con campos innecesarios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al configurar una herramienta de captura para el monitoreo crítico de pacientes en una unidad de cuidados intensivos, ¿cuál debe ser el criterio técnico prioritario?",
+    "opciones": [
+      {
+        "text": "Programar la recolección de datos por lotes una vez cada 24 horas para minimizar el consumo energético.",
+        "isCorrect": false,
+        "rationale": "Recopilar datos médicos críticos una vez al día pondría en riesgo la vida del paciente ante descompensaciones repentinas."
+      },
+      {
+        "text": "Garantizar una captura continua de alta frecuencia y muy baja latencia en tiempo real para alertar ante anomalías en los signos vitales.",
+        "isCorrect": true,
+        "rationale": "En medicina de urgencia, la latencia mínima es vital para activar alarmas tempranas ante variaciones en los parámetros del paciente."
+      },
+      {
+        "text": "Descartar arbitrariamente el 90% de las lecturas para mantener los discos locales libres de espacio.",
+        "isCorrect": false,
+        "rationale": "Eliminar masivamente lecturas continuas invalida la precisión de los trazados de diagnóstico y las alertas automatizadas."
+      },
+      {
+        "text": "Convertir las lecturas de los monitores en imágenes comprimidas antes de enviarlas al centro de control.",
+        "isCorrect": false,
+        "rationale": "Transformar datos numéricos a imágenes agrega sobrecarga computacional innecesaria e dificulta el procesamiento analítico inmediato."
+      },
+      {
+        "text": "Almacenar los datos de los sensores de forma exclusiva en dispositivos magnéticos aislados sin conexión a red.",
+        "isCorrect": false,
+        "rationale": "Aislar los datos en soportes fuera de línea impide la transmisión instantánea a las estaciones de personal médico."
+      }
+    ],
+    "hint": "Piense en la tolerancia al retraso en un contexto donde cada segundo cuenta para salvar vidas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En sectores como el comercio electrónico y la logística urbana, ¿cuáles de las siguientes opciones representan ventajas comprobadas de la analítica en tiempo real?",
+    "opciones": [
+      {
+        "text": "Recomendación instantánea de productos complementarios basada en los clics e interacciones actuales del usuario.",
+        "isCorrect": true,
+        "rationale": "Analizar la navegación activa permite personalizar ofertas adaptadas al interés momentáneo del comprador."
+      },
+      {
+        "text": "Ajuste dinámico de tarifas e itinerarios en plataformas de movilidad según la demanda y congestión del momento.",
+        "isCorrect": true,
+        "rationale": "Los algoritmos de precios dinámicos equilibran la disponibilidad de conductores con las solicitudes activas de pasajeros."
+      },
+      {
+        "text": "Optimización continua de rutas de reparto para eludir congestiones de tráfico y disminuir el consumo de combustible.",
+        "isCorrect": true,
+        "rationale": "Procesar eventos de tráfico en vivo permite desviar unidades y maximizar la eficiencia de la entrega en la 'última milla'."
+      },
+      {
+        "text": "Obligación de procesar manualmente cada transacción comercial mediante operadores telefónicos antes de confirmarla.",
+        "isCorrect": false,
+        "rationale": "La intervención manual introduce latencias prolongadas que contradicen la automatización y velocidad del tiempo real."
+      },
+      {
+        "text": "Eliminación completa de la necesidad de aplicar medidas de seguridad y cifrado en las bases de datos.",
+        "isCorrect": false,
+        "rationale": "Procesar en tiempo real no exime del cumplimiento estricto de protocolos de seguridad y protección de datos."
+      }
+    ],
+    "hint": "Seleccione las respuestas que reflejen cómo el procesamiento inmediato de datos mejora la oferta comercial y la eficiencia de distribución.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al escalar un sistema de ingesta masiva de datos a nivel corporativo, ¿cuáles de los siguientes aspectos representan desafíos técnicos y normativos clave que deben ser gestionados?",
+    "opciones": [
+      {
+        "text": "Asegurar la integración fluida y la compatibilidad entre múltiples fuentes de datos heterogéneas.",
+        "isCorrect": true,
+        "rationale": "Conectar orígenes estructurados, NoSQL, APIs y sensores exige gestionar discrepancias de formatos y protocolos."
+      },
+      {
+        "text": "Garantizar el cumplimiento estricto de las regulaciones de privacidad y protección de datos personales mediante la anonimización de datos sensibles.",
+        "isCorrect": true,
+        "rationale": "La captura masiva debe cumplir con leyes (como RGPD o leyes nacionales de protección de datos) para evitar sanciones y vulneraciones a la privacidad."
+      },
+      {
+        "text": "Diseñar arquitecturas escalables capaces de procesar incrementos exponenciales en el volumen de datos sin degradar el rendimiento del servicio.",
+        "isCorrect": true,
+        "rationale": "El sistema debe escalar horizontalmente para soportar picos de carga sin generar cuellos de botella ni caídas en el procesamiento."
+      },
+      {
+        "text": "Restringir el procesamiento de datos exclusivamente al uso de tarjetas físicas perforadas.",
+        "isCorrect": false,
+        "rationale": "Las tarjetas perforadas son una tecnología obsoleta que no posee capacidad para soportar volúmenes o velocidades de Big Data."
+      },
+      {
+        "text": "Publicar en servidores de acceso abierto sin autenticación las bases de datos financieras de los clientes.",
+        "isCorrect": false,
+        "rationale": "Exponer datos confidenciales sin autenticación constituye una falla grave de seguridad y un delito de violación de privacidad."
+      }
+    ],
+    "hint": "Considere los pilares de la ingeniería de datos moderna: interoperabilidad, cumplimiento normativo y rendimiento de la infraestructura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-22",
+    "diplomado": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Desde la perspectiva ética y regulatoria de la gestión de datos, ¿cuál es el requisito principal al recopilar la ubicación geoespacial y el comportamiento de uso de los clientes mediante aplicaciones móviles?",
+    "opciones": [
+      {
+        "text": "Ocultar la captura de datos en los términos para evitar que los usuarios desinstalen la aplicación.",
+        "isCorrect": false,
+        "rationale": "Capturar información de forma oculta vulnera los principios éticos y las normativas vigentes sobre transparencia y privacidad."
+      },
+      {
+        "text": "Obtener el consentimiento explícito e informado del usuario, especificando el uso legítimo y protegiendo su identidad mediante privacidad desde el diseño.",
+        "isCorrect": true,
+        "rationale": "Las mejores prácticas regulatorias exigen informar de manera transparente al usuario y recopilar solo los datos explícitamente autorizados."
+      },
+      {
+        "text": "Comercializar libremente la identidad directa y los movimientos del usuario a terceros sin ningún tipo de anonimización.",
+        "isCorrect": false,
+        "rationale": "Vender datos identificables sin consentimiento viola las leyes de protección de datos personales y la privacidad del usuario."
+      },
+      {
+        "text": "Alterar de forma remota los componentes del dispositivo móvil sin conocimiento del propietario.",
+        "isCorrect": false,
+        "rationale": "Acceder o modificar el hardware del usuario sin autorización es una vulneración directa de la seguridad del sistema."
+      },
+      {
+        "text": "Almacenar todas las contraseñas e identificadores en registros públicos sin encriptación.",
+        "isCorrect": false,
+        "rationale": "Guardar credenciales en texto plano expone gravemente la seguridad de los usuarios y falta a los estándares de ciberseguridad."
+      }
+    ],
+    "hint": "Piense en los derechos de los usuarios sobre sus datos personales y la obligación de las empresas de solicitar permiso explícito.",
+    "activo": true
+  }
+]

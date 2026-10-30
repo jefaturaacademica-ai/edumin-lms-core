@@ -1,12 +1,78 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
-import { PlayCircle, CheckCircle2, FileText, ArrowLeft, Download, Video, Award, Check, Loader2, Table, ExternalLink, Globe, Code } from 'lucide-react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
+import { 
+  CheckCircle2, 
+  Circle,
+  FileText, 
+  ChevronLeft, 
+  ChevronRight, 
+  ChevronDown,
+  Folder,
+  ArrowLeft, 
+  Download, 
+  Send, 
+  Video, 
+  Headphones, 
+  Sparkles, 
+  Eye, 
+  Award,
+  Check,
+  Loader2,
+  Table,
+  ExternalLink,
+  Network,
+  PanelRightClose,
+  PanelRightOpen,
+  Timer,
+  AlertCircle,
+  Globe,
+  Code
+} from 'lucide-react';
+import { useParams, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
 import { useTheme } from '@/context/theme-context';
-import { parseCursosFromProfile } from '@/lib/utils/profileParser';
+import { useProfile } from '@/context/profile-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
+import { parseCursosFromProfile } from '@/lib/utils/profileParser';
+import { PreguntaExamenEstudiante, DetalleCalificacionPregunta } from '@/lib/types/examenes';
+import { parsearResumenTexto, ResumenData } from '@/lib/utils/resumenParser';
+import resumenesCacheJson from '@/lib/data/resumenes_clases_cache.json';
+import { 
+  obtenerRecursosConLinks, 
+  normalizeLeccionRow,
+  LeccionRow 
+} from '@/lib/data/diplomadosLeccionesService';
+
+export interface RecursoItem {
+  id: string;
+  tipo: 'pdf' | 'video' | 'audio' | 'interactivo' | 'mapamental' | 'excel' | 'material';
+  titulo: string;
+  descripcion: string;
+  archivo?: string;
+  url?: string;
+  duracion?: string;
+}
+
+export interface ParteClase {
+  id: string;
+  numero: number;
+  titulo: string;
+  subtitulo: string;
+  duracion: string;
+  videoUrl: string;
+  completada: boolean;
+  resumen?: ResumenData | null;
+  recursos: RecursoItem[];
+}
+
+export interface TemaCurso {
+  id: string;
+  numeroTema: number;
+  titulo: string;
+  completado: boolean;
+  partes: ParteClase[];
+}
 
 function formatearUrlVideoEmbed(url?: string): string {
   if (!url) return '';
@@ -18,7 +84,7 @@ function formatearUrlVideoEmbed(url?: string): string {
   }
 
   // YouTube: convertir watch?v= o youtu.be a embed
-  const ytMatch = trimmed.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+  const ytMatch = trimmed.match(/(?:youtube\.com\/(?:watch\?.*v=|embed\/|live\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
   if (ytMatch && ytMatch[1]) {
     return `https://www.youtube.com/embed/${ytMatch[1]}`;
   }
@@ -26,67 +92,61 @@ function formatearUrlVideoEmbed(url?: string): string {
   return trimmed;
 }
 
-function getMaterialInfo(url: string) {
-  const trimmed = (url || '').trim();
-  const lower = trimmed.toLowerCase();
-
-  const isGithub = lower.includes('github.io') || lower.includes('github.com');
-  const isHtml = lower.endsWith('.html') || lower.includes('.html?') || lower.includes('/interactive');
-  const isPdf = lower.endsWith('.pdf') || lower.includes('.pdf?') || lower.includes('drive.google.com');
-
-  if (isGithub) {
-    return {
-      tipo: 'Repositorio GitHub / Pages',
-      badgeColor: 'bg-slate-800 text-slate-100 border-slate-700',
-      icono: 'github',
-      verTexto: 'Ver en GitHub / Web',
-      descargarTexto: 'Abrir Repositorio'
-    };
-  }
-
-  if (isHtml) {
-    return {
-      tipo: 'Diapositivas HTML Interactivas',
-      badgeColor: 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20',
-      icono: 'html',
-      verTexto: 'Ver Diapositivas HTML',
-      descargarTexto: 'Abrir Interactivo'
-    };
-  }
-
-  if (isPdf) {
-    return {
-      tipo: 'Diapositivas PDF',
-      badgeColor: 'bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20',
-      icono: 'pdf',
-      verTexto: 'Ver Diapositivas',
-      descargarTexto: 'Descargar PDF'
-    };
-  }
-
-  return {
-    tipo: 'Material Complementario',
-    badgeColor: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20',
-    icono: 'doc',
-    verTexto: 'Ver Material',
-    descargarTexto: 'Descargar / Abrir'
-  };
-}
-
 export default function ReproductorCursoPage() {
   const params = useParams();
-  const cursoId = params.id as string;
-  const { esOscuro } = useTheme();
+  const searchParams = useSearchParams();
+  const cursoId = (params.id as string) || '';
 
+  const { esOscuro } = useTheme();
+  const { nombres, apellidos } = useProfile();
+
+  // Estados de datos de Supabase y Catálogo
   const [loading, setLoading] = useState(true);
   const [completadosMap, setCompletadosMap] = useState<Record<string, boolean>>({});
   const [cursoCatalogo, setCursoCatalogo] = useState<any>(null);
+  const [leccionesTabla, setLeccionesTabla] = useState<LeccionRow[]>([]);
+  const [recursoUrlActivo, setRecursoUrlActivo] = useState<string>('');
   const [guardandoAvance, setGuardandoAvance] = useState(false);
+  const [dniAlumno, setDniAlumno] = useState<string>('71234567');
+  const [modoCine, setModoCine] = useState(false);
 
-  // Base de datos de fallback para cursos cortos
+  // Estados de Navegación del Curso
+  const [temaActivoId, setTemaActivoId] = useState<string>('');
+  const [parteSeleccionada, setParteSeleccionada] = useState<number>(1);
+
+  // Estados de contenido principal y pestañas
+  const [contenidoPrincipal, setContenidoPrincipal] = useState<'video_clase' | 'pdf_visor' | 'resumen_video' | 'resumen_audio' | 'resumen_interactivo' | 'mapamental'>('video_clase');
+  const [recursoActivoInfo, setRecursoActivoInfo] = useState<string>('Grabación de la clase');
+  const [tabActiva, setTabActiva] = useState<'resumen' | 'recursos' | 'foro'>('resumen');
+  const [menuFormatoAbierto, setMenuFormatoAbierto] = useState<boolean>(false);
+
+  // Estados del Foro
+  const [comentario, setComentario] = useState('');
+  const [listaComentarios, setListaComentarios] = useState<{ autor: string; texto: string; fecha: string }[]>([
+    {
+      autor: 'Ing. Carlos Mendoza (Tutor)',
+      texto: 'Bienvenidos a este curso especializado. Los recursos interactivos, diapositivas y el examen están a su disposición. No duden en formular cualquier consulta técnica en este espacio.',
+      fecha: 'Hace 2 días'
+    }
+  ]);
+
+  // Estados del Examen del Curso
+  const [notaCurso, setNotaCurso] = useState<number | undefined>(undefined);
+  const [examenActivoModal, setExamenActivoModal] = useState<boolean>(false);
+  const [pasoModalExamen, setPasoModalExamen] = useState<'indicaciones' | 'cuestionario' | 'resultado' | 'ver_intento'>('indicaciones');
+  const [respuestasExamenDinamicas, setRespuestasExamenDinamicas] = useState<Record<string, number[]>>({});
+  const [preguntasExamenDinamicas, setPreguntasExamenDinamicas] = useState<PreguntaExamenEstudiante[]>([]);
+  const [cargandoPreguntasExamen, setCargandoPreguntasExamen] = useState(false);
+  const [detallesCalificacionExamen, setDetallesCalificacionExamen] = useState<DetalleCalificacionPregunta[] | null>(null);
+  const [tiempoRestanteSegundos, setTiempoRestanteSegundos] = useState<number>(30 * 60);
+  const [preguntaFaltanteAlertaId, setPreguntaFaltanteAlertaId] = useState<string | null>(null);
+  const [guardandoExamen, setGuardandoExamen] = useState(false);
+  const [resultadoExamen, setResultadoExamen] = useState<{ nota: number; aprobado: boolean } | null>(null);
+
+  // Base de datos de fallback para cursos cortos cuando aún no se conectan a Supabase
   const cursosDataFallback: Record<string, { titulo: string; categoria: string; grabaciones: { id: string; titulo: string; duracion: string; videoUrl: string }[]; material: string }> = {
     'manejo-epps': {
-      titulo: "Manejo de EPPs y Equipos de Protección según Ley 29783",
+      titulo: "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
       categoria: "Seguridad Industrial",
       grabaciones: [
         { id: 'g1', titulo: 'Sesión 1: Marco normativo de EPPs en la Ley 29783', duracion: '35 min', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
@@ -96,7 +156,7 @@ export default function ReproductorCursoPage() {
       material: 'Guia_Practica_EPPs_Ley29783.pdf'
     },
     'big-data': {
-      titulo: "Fundamentos de Big Data y Analítica Predictiva para Operaciones",
+      titulo: "FUNDAMENTOS DE BIG DATA Y ANALÍTICA PREDICTIVA PARA OPERACIONES",
       categoria: "Tecnología Minera",
       grabaciones: [
         { id: 'g1', titulo: 'Sesión 1: Introducción al Big Data en entornos industriales', duracion: '45 min', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
@@ -107,7 +167,7 @@ export default function ReproductorCursoPage() {
       material: 'Manual_BigData_Operaciones.pdf'
     },
     'riesgos-criticos': {
-      titulo: "Gestión de Riesgos Críticos y AST",
+      titulo: "GESTIÓN DE RIESGOS CRÍTICOS Y AST",
       categoria: "Seguridad Industrial",
       grabaciones: [
         { id: 'g1', titulo: 'Sesión 1: Identificación de peligros y evaluación de riesgos', duracion: '40 min', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
@@ -116,7 +176,7 @@ export default function ReproductorCursoPage() {
       material: 'Formato_AST_Guia.pdf'
     },
     'logistica-minera': {
-      titulo: "Introducción a la Cadena de Suministro y Logística Minera",
+      titulo: "INTRODUCCIÓN A LA CADENA DE SUMINISTRO Y LOGÍSTICA MINERA",
       categoria: "Logística",
       grabaciones: [
         { id: 'g1', titulo: 'Sesión 1: Ecosistema logístico en proyectos mineros', duracion: '50 min', videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
@@ -128,49 +188,74 @@ export default function ReproductorCursoPage() {
     }
   };
 
+  // Cargar datos de Supabase (/api/dashboard/me, /api/admin/catalogo y /api/admin/diplomados-lecciones)
   const cargarDatosSupabase = useCallback(async () => {
     try {
       setLoading(true);
-      const [meRes, catRes] = await Promise.all([
+      const [meRes, catRes, leccRes] = await Promise.all([
         fetch('/api/dashboard/me').catch(() => null),
-        fetch('/api/admin/catalogo').catch(() => null)
+        fetch('/api/admin/catalogo').catch(() => null),
+        fetch(`/api/admin/diplomados-lecciones?slug=${encodeURIComponent(cursoId)}`).catch(() => null)
       ]);
+
+      let userDni = '71234567';
 
       if (meRes && meRes.ok) {
         const meData = await meRes.json();
         const profile = meData.profile || meData;
+        if (profile?.dni_ce || profile?.dni) {
+          userDni = profile.dni_ce || profile.dni;
+          setDniAlumno(userDni);
+        }
+
         const cursos = profile?.cursos_json || (Array.isArray(profile?.cursos) ? profile.cursos : parseCursosFromProfile(profile));
-        
         const targetNorm = cursoId.toLowerCase().replace(/[^a-z0-9]+/g, '-');
         const curEnPerfil = Array.isArray(cursos)
-          ? cursos.find((c: any) => (c.id || c.codigo || c.titulo || '').toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetNorm)
+          ? cursos.find((c: any) => 
+              (c.id || c.codigo || c.titulo || '').toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetNorm ||
+              (c.titulo && c.titulo.toLowerCase().replace(/[^a-z0-9]+/g, '-').includes(targetNorm))
+            )
           : null;
 
         if (curEnPerfil) {
-          setCompletadosMap(prev => {
-            const next = { ...prev };
-            if (curEnPerfil.completadosMap && typeof curEnPerfil.completadosMap === 'object') {
-              Object.assign(next, curEnPerfil.completadosMap);
-            }
-            next[curEnPerfil.id || cursoId] = Boolean(curEnPerfil.completado);
-            return next;
-          });
+          const map: Record<string, boolean> = {};
+          if (curEnPerfil.completadosMap && typeof curEnPerfil.completadosMap === 'object') {
+            Object.assign(map, curEnPerfil.completadosMap);
+          }
+          if (curEnPerfil.completado) {
+            map[curEnPerfil.id || cursoId] = true;
+          }
+          setCompletadosMap(map);
+
+          if (curEnPerfil.nota !== undefined && curEnPerfil.nota !== null && curEnPerfil.nota > 0) {
+            setNotaCurso(Number(curEnPerfil.nota));
+          }
         }
       }
 
       if (catRes && catRes.ok) {
         const catData = await catRes.json();
-        const todos = catData.cursos || catData.todos || [];
+        const todos = catData.cursos || catData.todos || catData.diplomados || [];
         const targetNorm = cursoId.toLowerCase().replace(/[^a-z0-9]+/g, '-');
         const catItem = todos.find((c: any) => 
-          (c.id || c.codigo || c.titulo || '').toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetNorm
+          c.id === cursoId ||
+          (c.codigo && c.codigo.toLowerCase() === cursoId.toLowerCase()) ||
+          (c.titulo && c.titulo.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetNorm) ||
+          (c.titulo && c.titulo.toLowerCase().includes(targetNorm))
         );
         if (catItem) {
           setCursoCatalogo(catItem);
         }
       }
+
+      if (leccRes && leccRes.ok) {
+        const leccData = await leccRes.json();
+        if (leccData && Array.isArray(leccData.filas) && leccData.filas.length > 0) {
+          setLeccionesTabla(leccData.filas);
+        }
+      }
     } catch (e) {
-      console.error('Error al cargar curso:', e);
+      console.error('Error al cargar datos del curso:', e);
     } finally {
       setLoading(false);
     }
@@ -180,83 +265,293 @@ export default function ReproductorCursoPage() {
     cargarDatosSupabase();
   }, [cargarDatosSupabase]);
 
-  const fallback = cursosDataFallback[cursoId] || cursosDataFallback['manejo-epps'];
-  const clasesDesdeCatalogo = (() => {
-    if (cursoCatalogo?.modulos?.[0]?.clases && Array.isArray(cursoCatalogo.modulos[0].clases) && cursoCatalogo.modulos[0].clases.length > 0) {
-      return cursoCatalogo.modulos[0].clases;
+  // Resolver el código oficial de curso (ej: CUR-01, CUR-19...)
+  const codigoCursoActual: string = useMemo(() => {
+    if (leccionesTabla && leccionesTabla[0]?.CodigoDiplomado) {
+      return leccionesTabla[0].CodigoDiplomado;
     }
-    if (Array.isArray(cursoCatalogo?.clases) && cursoCatalogo.clases.length > 0) {
-      return cursoCatalogo.clases;
+    const match = (cursoId || '').match(/^(cur|tal)-?(\d+)$/i);
+    if (match) {
+      return `${match[1].toUpperCase()}-${match[2].padStart(2, '0')}`;
     }
-    return null;
-  })();
+    if (cursoCatalogo?.codigo) {
+      return cursoCatalogo.codigo;
+    }
+    return 'CUR-01';
+  }, [leccionesTabla, cursoId, cursoCatalogo]);
 
-  const cursoActual = {
-    titulo: cursoCatalogo?.titulo || fallback.titulo,
-    categoria: cursoCatalogo?.categoria || fallback.categoria,
-    grabaciones: clasesDesdeCatalogo
-      ? clasesDesdeCatalogo.map((claseStr: any, idx: number) => {
-          const rawTitulo = typeof claseStr === 'string' ? claseStr : claseStr?.titulo;
-          const parteNum = idx + 1;
-          const tituloParte = rawTitulo || `Parte ${parteNum}`;
-          const rawVideo = typeof claseStr === 'object' ? (claseStr?.videoUrl || claseStr?.iframe_url || '') : '';
-          const mat1 = typeof claseStr === 'object' ? (claseStr?.material1 || claseStr?.pdfUrl || '') : '';
-          const mat2 = typeof claseStr === 'object' ? (claseStr?.material2 || claseStr?.excelUrl || '') : '';
+  // Consultar notas_modulos en Supabase para saber si ya rindió el examen del curso
+  useEffect(() => {
+    if (!codigoCursoActual || !dniAlumno) return;
+    fetch(`/api/dashboard/examenes?codigoDiplomado=${encodeURIComponent(codigoCursoActual)}&modulo=${encodeURIComponent('Examen del Curso')}&dni=${encodeURIComponent(dniAlumno)}&accion=ver_intento`)
+      .then(r => r.json())
+      .then(d => {
+        if (d.success && d.intento) {
+          if (typeof d.intento.nota === 'number') {
+            setNotaCurso(d.intento.nota);
+          }
+          if (d.intento.detalles_examen) {
+            setDetallesCalificacionExamen(d.intento.detalles_examen);
+          }
+        }
+      })
+      .catch(err => console.warn('Error al verificar intento previo del curso:', err));
+  }, [codigoCursoActual, dniAlumno]);
+
+  // Si la URL viene con ?accion=examen, abrir automáticamente la evaluación
+  useEffect(() => {
+    if (!loading) {
+      const accion = searchParams.get('accion');
+      if (accion === 'examen') {
+        if (notaCurso !== undefined) {
+          abrirVerIntento();
+        } else {
+          abrirModalExamen();
+        }
+      }
+    }
+  }, [loading, searchParams, notaCurso]);
+
+  // Fallback si no hay filas cargadas en Supabase aún
+  const fallback = cursosDataFallback[cursoId] || cursosDataFallback['manejo-epps'];
+
+  // Construir la estructura oficial del curso y sus temas
+  const cursoEstructurado = useMemo(() => {
+    let globalClaseCounter = 1;
+
+    // 1. PRIORIDAD: Usar datos de la tabla lecciones de Supabase
+    if (leccionesTabla && leccionesTabla.length > 0) {
+      const temasMap = new Map<string, LeccionRow[]>();
+      let tituloOficial = leccionesTabla[0].Diplomado || cursoCatalogo?.titulo || fallback.titulo;
+      let docenteOficial = leccionesTabla[0].Docente || cursoCatalogo?.docente || '';
+
+      leccionesTabla.forEach(f => {
+        const r = normalizeLeccionRow(f);
+        const tKey = r.Tema || 'Tema 01: Contenido del Curso';
+        if (!temasMap.has(tKey)) {
+          temasMap.set(tKey, []);
+        }
+        temasMap.get(tKey)!.push(r);
+      });
+
+      const temas: TemaCurso[] = Array.from(temasMap.entries()).map(([temaTituloRaw, rows], tIdx) => {
+        const numTema = tIdx + 1;
+        const numTemaStr = numTema < 10 ? `0${numTema}` : `${numTema}`;
+        const temaLimpio = temaTituloRaw
+          .replace(/^Tema\s*\d+[:\-\s]*/i, '')
+          .replace(/^(Clase|CLASE|Sesión|SESIÓN)\s*\d+[:\-\s]*/i, '')
+          .trim();
+        const temaTituloFinal = `Tema ${numTemaStr}: ${temaLimpio || 'Contenido de la Sesión'}`;
+
+        const partes: ParteClase[] = rows.map((r, pIdx) => {
+          const numParte = pIdx + 1;
+          const parteId = r.id || `tema-${numTema}-parte-${numParte}`;
+          const recursos = obtenerRecursosConLinks(r, globalClaseCounter++);
+          const resumenParsed = parsearResumenTexto(r.ResumenTexto) || (resumenesCacheJson as any)[parteId] || null;
 
           return {
-            id: typeof claseStr === 'object' && claseStr?.id ? claseStr.id : `parte-${parteNum}`,
-            titulo: tituloParte,
+            id: parteId,
+            numero: numParte,
+            titulo: r.Sesion || (rows.length > 1 ? `Parte ${numParte}` : 'Clase Completa'),
+            subtitulo: r.Docente ? `Docente: ${r.Docente}` : `Tema ${numTemaStr}`,
             duracion: 'Clase Completa',
-            videoUrl: formatearUrlVideoEmbed(rawVideo),
-            videoUrlOriginal: rawVideo,
-            material1: mat1,
-            material2: mat2,
-            pdfUrl: mat1,
-            excelUrl: mat2
+            videoUrl: formatearUrlVideoEmbed(r.VideoUrl || ''),
+            completada: Boolean(completadosMap[parteId]),
+            resumen: resumenParsed,
+            recursos: recursos
           };
-        })
-      : fallback.grabaciones.map((g: any) => ({
-          ...g,
-          material1: fallback.material,
-          material2: '',
-          pdfUrl: fallback.material,
-          excelUrl: ''
-        })),
-    material: fallback.material
+        });
+
+        const esTemaCompletado = partes.length > 0 && partes.every(p => p.completada);
+
+        return {
+          id: `tema-${numTema}`,
+          numeroTema: numTema,
+          titulo: temaTituloFinal,
+          completado: esTemaCompletado,
+          partes: partes
+        };
+      });
+
+      return {
+        titulo: tituloOficial,
+        categoria: cursoCatalogo?.categoria || fallback.categoria,
+        docente: docenteOficial,
+        temas: temas
+      };
+    }
+
+    // 2. FALLBACK: Construir a partir de catálogo o base de datos de respaldo
+    const clasesDesdeCatalogo = (() => {
+      if (cursoCatalogo?.modulos?.[0]?.clases && Array.isArray(cursoCatalogo.modulos[0].clases) && cursoCatalogo.modulos[0].clases.length > 0) {
+        return cursoCatalogo.modulos[0].clases;
+      }
+      if (Array.isArray(cursoCatalogo?.clases) && cursoCatalogo.clases.length > 0) {
+        return cursoCatalogo.clases;
+      }
+      return null;
+    })();
+
+    const listaRaw = clasesDesdeCatalogo || fallback.grabaciones;
+
+    const temas: TemaCurso[] = listaRaw.map((item: any, idx: number) => {
+      const numTema = idx + 1;
+      const numTemaStr = numTema < 10 ? `0${numTema}` : `${numTema}`;
+      const rawTitulo = typeof item === 'string' ? item : (item.titulo || `Tema ${numTemaStr}`);
+      const temaLimpio = rawTitulo
+        .replace(/^Tema\s*\d+[:\-\s]*/i, '')
+        .replace(/^(Clase|CLASE|Sesión|SESIÓN)\s*\d+[:\-\s]*/i, '')
+        .trim();
+      const temaTituloFinal = `Tema ${numTemaStr}: ${temaLimpio || 'Contenido de la Sesión'}`;
+
+      const rawVideo = typeof item === 'object' ? (item.videoUrl || item.iframe_url || '') : '';
+      const mat1 = typeof item === 'object' ? (item.material1 || item.pdfUrl || fallback.material) : fallback.material;
+      const mat2 = typeof item === 'object' ? (item.material2 || item.excelUrl || '') : '';
+      const parteId = (typeof item === 'object' && item.id) ? item.id : `tema-${numTema}-parte-1`;
+
+      const recursos: RecursoItem[] = [];
+      if (mat1) {
+        recursos.push({
+          id: `rec-mat1-${numTema}`,
+          tipo: 'pdf',
+          titulo: 'Material de Clases',
+          descripcion: 'Diapositivas y contenidos de la sesión · PDF',
+          archivo: mat1,
+          url: mat1
+        });
+      }
+      if (mat2) {
+        recursos.push({
+          id: `rec-mat2-${numTema}`,
+          tipo: 'excel',
+          titulo: 'Plantilla de Trabajo / Complemento',
+          descripcion: 'Recurso complementario de estudio',
+          archivo: mat2,
+          url: mat2
+        });
+      }
+
+      const parte: ParteClase = {
+        id: parteId,
+        numero: 1,
+        titulo: 'Parte 1',
+        subtitulo: cursoCatalogo?.docente || 'Docente especializado',
+        duracion: typeof item === 'object' && item.duracion ? item.duracion : 'Clase Completa',
+        videoUrl: formatearUrlVideoEmbed(rawVideo),
+        completada: Boolean(completadosMap[parteId]),
+        resumen: null,
+        recursos: recursos
+      };
+
+      return {
+        id: `tema-${numTema}`,
+        numeroTema: numTema,
+        titulo: temaTituloFinal,
+        completado: Boolean(completadosMap[parteId]),
+        partes: [parte]
+      };
+    });
+
+    return {
+      titulo: cursoCatalogo?.titulo || fallback.titulo,
+      categoria: cursoCatalogo?.categoria || fallback.categoria,
+      docente: cursoCatalogo?.docente || '',
+      temas: temas
+    };
+  }, [leccionesTabla, cursoCatalogo, fallback, completadosMap]);
+
+  // Inicializar tema activo y parte seleccionada
+  useEffect(() => {
+    if (cursoEstructurado.temas.length > 0) {
+      if (!temaActivoId || !cursoEstructurado.temas.some(t => t.id === temaActivoId)) {
+        setTemaActivoId(cursoEstructurado.temas[0].id);
+        setParteSeleccionada(1);
+      }
+    }
+  }, [cursoEstructurado.temas, temaActivoId]);
+
+  // Actualizar el título de la pestaña del navegador con el nombre del curso
+  useEffect(() => {
+    if (cursoEstructurado?.titulo) {
+      document.title = `${cursoEstructurado.titulo.toUpperCase()} | EDUMIN`;
+    }
+  }, [cursoEstructurado?.titulo]);
+
+  // Tema activo y parte activa en el reproductor
+  const temaActual = useMemo(() => {
+    return cursoEstructurado.temas.find(t => t.id === temaActivoId) || cursoEstructurado.temas[0] || null;
+  }, [cursoEstructurado.temas, temaActivoId]);
+
+  const parteActiva = useMemo(() => {
+    if (!temaActual || temaActual.partes.length === 0) return null;
+    return temaActual.partes.find(p => p.numero === parteSeleccionada) || temaActual.partes[0];
+  }, [temaActual, parteSeleccionada]);
+
+  // Lista plana de todas las partes para navegación secuencial y cálculo de avance
+  const todasLasPartes = useMemo(() => {
+    const lista: { tema: TemaCurso; parte: ParteClase }[] = [];
+    cursoEstructurado.temas.forEach(t => {
+      t.partes.forEach(p => {
+        lista.push({ tema: t, parte: p });
+      });
+    });
+    return lista;
+  }, [cursoEstructurado.temas]);
+
+  // Cálculo de avance porcentual del curso
+  const totalPartesContadas = todasLasPartes.length;
+  const partesCompletadasContadas = todasLasPartes.filter(item => completadosMap[item.parte.id]).length;
+  const avancePorcentaje = totalPartesContadas > 0 
+    ? Math.round((partesCompletadasContadas / totalPartesContadas) * 100) 
+    : 0;
+
+  // Determinar si la parte activa tiene resumen pedagógico
+  const tieneResumen = Boolean(
+    parteActiva?.resumen?.parrafo || 
+    (parteActiva?.resumen?.temasClave && parteActiva.resumen.temasClave.length > 0)
+  );
+
+  useEffect(() => {
+    if (!tieneResumen && tabActiva === 'resumen') {
+      setTabActiva('recursos');
+    }
+  }, [tieneResumen, tabActiva]);
+
+  // Navegación secuencial Anterior / Siguiente
+  const indiceActualPlano = useMemo(() => {
+    if (!temaActual || !parteActiva) return -1;
+    return todasLasPartes.findIndex(
+      item => item.tema.id === temaActual.id && item.parte.numero === parteActiva.numero
+    );
+  }, [todasLasPartes, temaActual, parteActiva]);
+
+  const itemAnterior = indiceActualPlano > 0 ? todasLasPartes[indiceActualPlano - 1] : null;
+  const itemSiguiente = indiceActualPlano >= 0 && indiceActualPlano < todasLasPartes.length - 1 ? todasLasPartes[indiceActualPlano + 1] : null;
+
+  // Contador de temas para la interfaz
+  const totalTemas = cursoEstructurado.temas.length;
+  const numeroTemaActual = temaActual ? (cursoEstructurado.temas.findIndex(t => t.id === temaActual.id) + 1) : 1;
+
+  // Activar un recurso específico en el visor
+  const activarRecursoEnVisor = (tipo: 'video_clase' | 'pdf_visor' | 'resumen_video' | 'resumen_audio' | 'resumen_interactivo' | 'mapamental', titulo: string, url?: string) => {
+    setContenidoPrincipal(tipo);
+    setRecursoActivoInfo(titulo);
+    if (url) {
+      setRecursoUrlActivo(url);
+    }
   };
 
-  const [videoActivo, setVideoActivo] = useState<any>(cursoActual.grabaciones[0] || null);
+  // Marcar automáticamente la lección como completada
+  const marcarLeccionCompletadaAuto = useCallback(async (targetId: string) => {
+    if (!targetId || completadosMap[targetId]) return;
 
-  useEffect(() => {
-    if (cursoActual.titulo) {
-      document.title = `${cursoActual.titulo} | EDUMIN`;
-    }
-  }, [cursoActual.titulo]);
-
-  useEffect(() => {
-    if (cursoActual.grabaciones.length > 0) {
-      setVideoActivo((prev: any) => {
-        if (prev) {
-          const encontrado = cursoActual.grabaciones.find((g: any) => g.id === prev.id);
-          if (encontrado) return encontrado;
-        }
-        return cursoActual.grabaciones[0];
-      });
-    }
-  }, [cursoCatalogo]);
-
-  const toggleCompletarSesion = async (sesionId: string) => {
     try {
-      setGuardandoAvance(true);
-      const estadoActual = Boolean(completadosMap[sesionId]);
-      const nuevoEstado = !estadoActual;
-
-      const nuevoMap = { ...completadosMap, [sesionId]: nuevoEstado };
+      const nuevoMap = { ...completadosMap, [targetId]: true };
       setCompletadosMap(nuevoMap);
 
-      const completadasCount = cursoActual.grabaciones.filter((g: any) => nuevoMap[g.id]).length;
-      const totalGrabaciones = cursoActual.grabaciones.length;
-      const nuevoAvance = totalGrabaciones > 0 ? Math.round((completadasCount / totalGrabaciones) * 100) : 0;
+      const completadasCount = todasLasPartes.filter(item => nuevoMap[item.parte.id]).length;
+      const totalContadas = todasLasPartes.length;
+      const nuevoAvance = totalContadas > 0 ? Math.round((completadasCount / totalContadas) * 100) : 0;
 
       await fetch('/api/dashboard/completar-leccion', {
         method: 'POST',
@@ -264,335 +559,1607 @@ export default function ReproductorCursoPage() {
         body: JSON.stringify({
           cursoId: cursoId,
           cursoSlug: cursoId,
-          cursoTitulo: cursoActual.titulo,
-          sesionId: sesionId,
-          claseId: sesionId,
-          completado: nuevoEstado,
+          cursoTitulo: cursoEstructurado.titulo,
+          claseId: targetId,
+          sesionId: targetId,
+          completado: true,
           completadosMap: nuevoMap,
-          avancePorcentaje: nuevoAvance
+          avancePorcentaje: nuevoAvance,
+          dni: dniAlumno
         })
       });
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setGuardandoAvance(false);
+    } catch (err) {
+      console.warn('Error al guardar avance automático:', err);
+    }
+  }, [completadosMap, todasLasPartes, cursoId, cursoEstructurado.titulo, dniAlumno]);
+
+  // Selección de tema y de parte
+  const seleccionarTema = (tema: TemaCurso) => {
+    setExamenActivoModal(false);
+    setTemaActivoId(tema.id);
+    setParteSeleccionada(1);
+    activarRecursoEnVisor('video_clase', 'Grabación de la clase');
+    if (tema.partes[0]) {
+      marcarLeccionCompletadaAuto(tema.partes[0].id);
     }
   };
 
-  const totalGrabaciones = cursoActual.grabaciones.length;
-  const completadasCount = cursoActual.grabaciones.filter((g: any) => completadosMap[g.id]).length;
-  const avancePorcentaje = totalGrabaciones > 0 ? Math.round((completadasCount / totalGrabaciones) * 100) : 0;
-
-  const sesionEstaCompletada = videoActivo ? Boolean(completadosMap[videoActivo.id]) : false;
-
-  const renderMaterialCard = (url: string, num: number) => {
-    if (!url || !url.trim()) return null;
-    const info = getMaterialInfo(url);
-
-    return (
-      <div key={num} className={`p-4 rounded-2xl border transition-all flex flex-col justify-between gap-3 ${
-        esOscuro ? 'bg-slate-950/60 border-slate-800' : 'bg-slate-50 border-slate-200'
-      }`}>
-        <div className="flex items-start justify-between gap-2">
-          <div className="flex items-center gap-2.5">
-            <div className={`size-8 rounded-lg grid place-items-center text-xs font-bold border shrink-0 ${
-              info.icono === 'github'
-                ? 'bg-slate-800 text-white border-slate-700'
-                : info.icono === 'html'
-                ? 'bg-amber-100 text-amber-800 border-amber-200'
-                : 'bg-rose-100 text-rose-800 border-rose-200'
-            }`}>
-              {info.icono === 'github' ? <Globe className="w-4 h-4" /> : info.icono === 'html' ? <Code className="w-4 h-4" /> : <FileText className="w-4 h-4" />}
-            </div>
-            <div>
-              <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">
-                Material 0{num}
-              </span>
-              <span className="text-xs font-bold text-slate-900 dark:text-white block truncate max-w-[180px]">
-                {info.tipo}
-              </span>
-            </div>
-          </div>
-
-          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md border shrink-0 ${info.badgeColor}`}>
-            {info.tipo.split(' ')[0]}
-          </span>
-        </div>
-
-        <div className="flex items-center gap-2 pt-1 border-t border-slate-200/60 dark:border-slate-800">
-          <a
-            href={url}
-            target="_blank"
-            rel="noreferrer"
-            className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-3 py-2 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5 shadow-sm"
-          >
-            <ExternalLink className="w-3.5 h-3.5" />
-            <span>{info.verTexto}</span>
-          </a>
-          <a
-            href={url}
-            target="_blank"
-            rel="noreferrer"
-            download
-            className={`px-3 py-2 rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-1 border shrink-0 ${
-              esOscuro
-                ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700'
-                : 'bg-white hover:bg-slate-100 text-slate-700 border-slate-200 shadow-2xs'
-            }`}
-            title="Descargar o abrir enlace"
-          >
-            <Download className="w-3.5 h-3.5" />
-            <span>Descargar</span>
-          </a>
-        </div>
-      </div>
-    );
+  const seleccionarParte = (tema: TemaCurso, parteNum: number) => {
+    setExamenActivoModal(false);
+    setTemaActivoId(tema.id);
+    setParteSeleccionada(parteNum);
+    activarRecursoEnVisor('video_clase', tema.partes.length > 1 ? `Grabación (Parte ${parteNum})` : 'Grabación de la clase');
+    const targetParte = tema.partes.find(p => p.numero === parteNum) || tema.partes[0];
+    if (targetParte) {
+      marcarLeccionCompletadaAuto(targetParte.id);
+    }
   };
 
-  if (loading) {
+  useEffect(() => {
+    if (parteActiva && !loading && !completadosMap[parteActiva.id]) {
+      marcarLeccionCompletadaAuto(parteActiva.id);
+    }
+  }, [parteActiva, loading, completadosMap, marcarLeccionCompletadaAuto]);
+
+  const irAAnterior = () => {
+    if (itemAnterior) {
+      seleccionarParte(itemAnterior.tema, itemAnterior.parte.numero);
+    }
+  };
+
+  const irASiguiente = () => {
+    if (itemSiguiente) {
+      seleccionarParte(itemSiguiente.tema, itemSiguiente.parte.numero);
+    }
+  };
+
+  // Temporizador para el examen
+  useEffect(() => {
+    if (pasoModalExamen !== 'cuestionario' || cargandoPreguntasExamen || guardandoExamen) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setTiempoRestanteSegundos(prev => {
+        if (prev <= 1) {
+          clearInterval(interval);
+          rendirExamenCurso(true);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [pasoModalExamen, cargandoPreguntasExamen, guardandoExamen]);
+
+  const formatearTiempoDisponible = (segundos: number) => {
+    const m = Math.floor(segundos / 60);
+    const s = segundos % 60;
+    return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+  };
+
+  // Abrir Modal de Examen
+  const abrirModalExamen = async () => {
+    setExamenActivoModal(true);
+    setPasoModalExamen('indicaciones');
+    setRespuestasExamenDinamicas({});
+    setResultadoExamen(null);
+    setDetallesCalificacionExamen(null);
+    setPreguntaFaltanteAlertaId(null);
+    setTiempoRestanteSegundos(30 * 60);
+
+    try {
+      setCargandoPreguntasExamen(true);
+      const res = await fetch(`/api/dashboard/examenes?codigoDiplomado=${encodeURIComponent(codigoCursoActual)}&modulo=${encodeURIComponent('Examen del Curso')}&cantidad=10`);
+      const data = await res.json();
+      if (data.success && data.preguntas && data.preguntas.length > 0) {
+        setPreguntasExamenDinamicas(data.preguntas);
+      } else {
+        setPreguntasExamenDinamicas([]);
+      }
+    } catch (err) {
+      console.error('Error al cargar preguntas de examen del curso:', err);
+      setPreguntasExamenDinamicas([]);
+    } finally {
+      setCargandoPreguntasExamen(false);
+    }
+  };
+
+  // Ver Intento Previo de Examen
+  const abrirVerIntento = async () => {
+    setExamenActivoModal(true);
+    setPasoModalExamen('ver_intento');
+    const nota = notaCurso || 0;
+    setResultadoExamen({ nota, aprobado: nota >= 12 });
+
+    if (!detallesCalificacionExamen || detallesCalificacionExamen.length === 0) {
+      try {
+        const res = await fetch(`/api/dashboard/examenes?codigoDiplomado=${encodeURIComponent(codigoCursoActual)}&modulo=${encodeURIComponent('Examen del Curso')}&dni=${encodeURIComponent(dniAlumno)}&accion=ver_intento`);
+        const data = await res.json();
+        if (data.success && data.intento?.detalles_examen) {
+          setDetallesCalificacionExamen(data.intento.detalles_examen);
+        }
+      } catch (e) {
+        console.warn('No se pudo recuperar intento previo de notas_modulos:', e);
+      }
+    }
+  };
+
+  const seleccionarOpcionDinamica = (preguntaId: string, indice: number, esMultiple: boolean) => {
+    setPreguntasExamenDinamicas(prev => {
+      setRespuestasExamenDinamicas(prevMap => {
+        const actual = prevMap[preguntaId] || [];
+        if (esMultiple) {
+          const yaExiste = actual.includes(indice);
+          const siguiente = yaExiste ? actual.filter(i => i !== indice) : [...actual, indice];
+          return { ...prevMap, [preguntaId]: siguiente };
+        } else {
+          return { ...prevMap, [preguntaId]: [indice] };
+        }
+      });
+      return prev;
+    });
+
+    if (preguntaFaltanteAlertaId === preguntaId) {
+      setPreguntaFaltanteAlertaId(null);
+    }
+  };
+
+  // Entregar y calificar el examen
+  const rendirExamenCurso = async (autoSubmitPorTiempo: boolean = false) => {
+    if (!autoSubmitPorTiempo) {
+      for (const p of preguntasExamenDinamicas) {
+        const r = respuestasExamenDinamicas[p.id];
+        if (!r || r.length === 0) {
+          setPreguntaFaltanteAlertaId(p.id);
+          const el = document.getElementById(`pregunta-card-${p.id}`);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+          return;
+        }
+      }
+    }
+
+    try {
+      setGuardandoExamen(true);
+      const res = await fetch('/api/dashboard/examenes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          codigoDiplomado: codigoCursoActual,
+          modulo: 'Examen del Curso',
+          dni: dniAlumno,
+          respuestasUsuario: respuestasExamenDinamicas
+        })
+      });
+
+      const data = await res.json();
+      if (data.success && data.resultado) {
+        const { nota, aprobado, detalles } = data.resultado;
+        setNotaCurso(nota);
+        setResultadoExamen({ nota, aprobado });
+        setDetallesCalificacionExamen(detalles || null);
+        setPasoModalExamen('resultado');
+      } else {
+        alert('Hubo un problema al calificar el examen. Intente nuevamente.');
+      }
+    } catch (e) {
+      console.error('Error al entregar examen:', e);
+      alert('Error de conexión al enviar tus respuestas.');
+    } finally {
+      setGuardandoExamen(false);
+    }
+  };
+
+  const agregarComentario = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!comentario.trim()) return;
+    const nombreUsuario = [nombres, apellidos].filter(Boolean).join(' ') || 'Estudiante';
+    setListaComentarios(prev => [
+      {
+        autor: nombreUsuario,
+        texto: comentario.trim(),
+        fecha: 'Hace un momento'
+      },
+      ...prev
+    ]);
+    setComentario('');
+  };
+
+  if (loading || !temaActual || !parteActiva) {
     return <DashboardLoader minHeight="min-h-screen" />;
   }
 
+  const esTaller = cursoEstructurado.titulo.toUpperCase().includes('TALLER') || (cursoCatalogo?.tipo || '').toLowerCase().includes('taller');
+
   return (
-    <div className={`min-h-screen flex flex-col transition-colors duration-200 ${
+    <div className={`w-full h-full max-h-full flex flex-col overflow-hidden transition-colors duration-200 ${
       esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
     }`}>
       
-      {/* Top Bar */}
-      <header className={`h-16 border-b px-4 sm:px-6 flex items-center justify-between shrink-0 transition-colors ${
-        esOscuro ? 'border-slate-800 bg-slate-900' : 'border-slate-200 bg-white'
+      {/* TOP BAR FIJA EN EL ENCABEZADO */}
+      <header className={`sticky top-0 z-30 h-16 min-h-16 max-h-16 border-b px-4 sm:px-6 flex items-center justify-between shrink-0 backdrop-blur-md transition-colors ${
+        esOscuro ? 'border-slate-800 bg-slate-900/95' : 'border-slate-200 bg-white/95'
       }`}>
-        <div className="flex items-center gap-3 sm:gap-4">
+        <div className="flex items-center gap-3 sm:gap-4 min-w-0 flex-1 pr-3">
           <Link 
             href="/dashboard/cursos"
-            className={`inline-flex items-center gap-2 text-xs sm:text-sm font-semibold transition-colors px-3 py-1.5 rounded-xl border ${
+            className={`inline-flex items-center gap-2 text-xs sm:text-sm font-semibold transition-colors px-3 py-1.5 rounded-xl border shrink-0 ${
               esOscuro 
                 ? 'text-slate-400 hover:text-white bg-slate-800/50 border-slate-700/50' 
                 : 'text-slate-600 hover:text-slate-900 bg-slate-100 border-slate-200 hover:bg-slate-200'
             }`}
           >
             <ArrowLeft className="w-4 h-4" /> 
-            <span className="hidden sm:inline">Volver a Cursos</span>
-            <span className="sm:hidden">Volver</span>
+            <span>Volver</span>
           </Link>
-          <div className={`h-5 w-px hidden sm:block ${esOscuro ? 'bg-slate-800' : 'bg-slate-200'}`} />
-          <div className="flex items-center gap-2">
-            <Award className="w-5 h-5 text-indigo-500 hidden sm:block" />
-            <h1 className={`text-xs sm:text-sm font-bold truncate max-w-lg hidden sm:block ${
+          <div className={`h-5 w-px hidden sm:block shrink-0 ${esOscuro ? 'bg-slate-800' : 'bg-slate-200'}`} />
+          <div className="min-w-0">
+            <h1 className={`text-xs sm:text-sm font-bold line-clamp-2 leading-tight uppercase ${
               esOscuro ? 'text-white' : 'text-slate-900'
             }`}>
-              {cursoActual.titulo}
+              {cursoEstructurado.titulo}
             </h1>
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
-          <span className={`text-[11px] sm:text-xs font-bold px-3 py-1.5 rounded-full border ${
-            avancePorcentaje > 0 
-              ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' 
-              : esOscuro ? 'bg-slate-800 text-slate-400 border-slate-700' : 'bg-slate-100 text-slate-600 border-slate-200'
-          }`}>
-            Avance: {avancePorcentaje}%
-          </span>
+        {/* Botón Ocultar / Mostrar Temario */}
+        <div className="flex items-center gap-2.5 shrink-0">
+          <button
+            type="button"
+            onClick={() => setModoCine(!modoCine)}
+            className={`text-xs font-semibold px-3 py-1.5 rounded-xl border flex items-center gap-1.5 transition-all cursor-pointer ${
+              esOscuro
+                ? 'bg-slate-800/80 hover:bg-slate-700 text-slate-300 border-slate-700'
+                : 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-200'
+            }`}
+            title={modoCine ? 'Mostrar temario' : 'Ocultar temario'}
+          >
+            {modoCine ? (
+              <>
+                <PanelRightOpen className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+                <span className="hidden sm:inline">Mostrar temario</span>
+              </>
+            ) : (
+              <>
+                <PanelRightClose className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+                <span className="hidden sm:inline">Ocultar temario</span>
+              </>
+            )}
+          </button>
         </div>
       </header>
 
-      {/* Layout Principal */}
-      <div className="flex-1 flex flex-col lg:flex-row overflow-hidden">
+      {/* LAYOUT PRINCIPAL */}
+      <div className="flex-1 min-h-0 flex flex-col lg:flex-row overflow-y-auto lg:overflow-hidden">
         
-        {/* ZONA PRINCIPAL DE REPRODUCCIÓN (70%) */}
-        <div className={`flex-1 flex flex-col overflow-y-auto p-4 sm:p-8 lg:p-10 lg:border-r space-y-6 ${
+        {/* ZONA PRINCIPAL DE REPRODUCCIÓN (70%) O ENTORNO DE EVALUACIÓN */}
+        <div id="zona-reproductor-principal" className={`flex-1 lg:h-full lg:overflow-y-auto min-h-0 p-4 sm:p-8 lg:p-10 ${modoCine ? 'lg:border-r-0' : 'lg:border-r'} space-y-6 ${
           esOscuro ? 'lg:border-slate-800' : 'lg:border-slate-200'
         }`}>
-          
-          {/* Visor de Video */}
-          <div className={`w-full aspect-video bg-black rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl relative border ${
-            esOscuro ? 'border-slate-800' : 'border-slate-300'
-          }`}>
-            {videoActivo?.videoUrl ? (
-              <iframe 
-                src={videoActivo.videoUrl} 
-                title={videoActivo.titulo}
-                className="w-full h-full object-cover absolute inset-0"
-                allowFullScreen
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              />
-            ) : (
-              <div className="w-full h-full flex flex-col items-center justify-center text-slate-400 gap-2 p-4 text-center">
-                <Video className="w-12 h-12 opacity-30 text-indigo-400" />
-                <p className="text-sm font-bold text-slate-300">
-                  {videoActivo?.titulo || 'Clase Seleccionada'}
-                </p>
-                <p className="text-xs text-slate-500 max-w-sm">
-                  Esta parte aún no cuenta con un enlace de video registrado en el catálogo.
-                </p>
-              </div>
-            )}
-          </div>
+          {examenActivoModal ? (
+            /* ENTORNO DE EVALUACIÓN OFICIAL INTEGRADO */
+            <div className="space-y-6 animate-in fade-in duration-200">
+              {/* Header de la Evaluación */}
+              <div className={`p-5 sm:p-6 rounded-2xl border flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all ${
+                esOscuro ? 'bg-slate-900 border-slate-800 text-white' : 'bg-white border-slate-200 text-slate-900 shadow-sm'
+              }`}>
+                <div className="flex items-center gap-3.5 min-w-0">
+                  <div className="size-11 rounded-xl bg-indigo-500/15 text-indigo-500 dark:text-indigo-400 grid place-items-center shrink-0 border border-indigo-500/30">
+                    <FileText className="w-5 h-5 text-indigo-500 dark:text-indigo-400" />
+                  </div>
+                  <div className="min-w-0">
+                    <span className="text-[11px] font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider block">
+                      Evaluación Académica Oficial · {codigoCursoActual}
+                    </span>
+                    <h2 className="text-base sm:text-lg font-bold truncate mt-0.5 uppercase">
+                      Examen del Curso
+                    </h2>
+                  </div>
+                </div>
 
-          {/* Detalles de la Sesión Activa + Botón Marcar Completado */}
-          {videoActivo && (
-            <div className={`p-5 sm:p-6 rounded-3xl border flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all ${
-              esOscuro ? 'bg-slate-900/80 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
-            }`}>
-              <div>
-                <span className="text-[10px] sm:text-xs font-bold text-indigo-500 uppercase tracking-widest">
-                  Reproduciendo
-                </span>
-                <h2 className={`text-base sm:text-lg font-bold mt-1 ${
-                  esOscuro ? 'text-white' : 'text-slate-900'
-                }`}>
-                  {videoActivo.titulo}
-                </h2>
-                <p className={`text-xs mt-0.5 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                  Duración estimada: {videoActivo.duracion}
-                </p>
+                <div className="flex items-center gap-3 shrink-0">
+                  {pasoModalExamen === 'cuestionario' && (
+                    <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl border bg-slate-100 dark:bg-slate-800/80 border-slate-200 dark:border-slate-700/80 shadow-xs">
+                      <Timer className={`w-4 h-4 ${tiempoRestanteSegundos <= 300 ? 'text-rose-500 animate-pulse' : 'text-indigo-500'}`} />
+                      <span className="text-xs text-slate-500 dark:text-slate-400 font-medium hidden sm:inline">Tiempo disponible:</span>
+                      <span className={`tabular-nums text-xs sm:text-sm font-bold ${
+                        tiempoRestanteSegundos <= 300 
+                          ? 'text-rose-500 animate-pulse' 
+                          : 'text-indigo-600 dark:text-indigo-400'
+                      }`}>
+                        {formatearTiempoDisponible(tiempoRestanteSegundos)}
+                      </span>
+                    </div>
+                  )}
+
+                  <button
+                    type="button"
+                    onClick={() => setExamenActivoModal(false)}
+                    className={`text-xs font-bold px-4 py-2.5 rounded-xl border flex items-center justify-center gap-2 transition-all cursor-pointer shrink-0 ${
+                      esOscuro 
+                        ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700' 
+                        : 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-200'
+                    }`}
+                  >
+                    <ArrowLeft className="w-4 h-4" />
+                    <span>Volver a las clases</span>
+                  </button>
+                </div>
               </div>
 
-              <button
-                onClick={() => toggleCompletarSesion(videoActivo.id)}
-                disabled={guardandoAvance}
-                className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 border shrink-0 ${
-                  sesionEstaCompletada
-                    ? 'bg-emerald-600 hover:bg-emerald-500 text-white border-emerald-500'
-                    : 'bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500 shadow'
-                }`}
-              >
-                {guardandoAvance ? (
-                  <Loader2 className="w-4 h-4 animate-spin" />
-                ) : sesionEstaCompletada ? (
-                  <>
-                    <Check className="w-4 h-4 text-white" />
-                    <span>Completado ✓</span>
-                  </>
-                ) : (
-                  <>
-                    <CheckCircle2 className="w-4 h-4" />
-                    <span>Marcar como Completado</span>
-                  </>
+              {/* Contenedor del Examen */}
+              <div className={`transition-all ${
+                pasoModalExamen === 'cuestionario'
+                  ? esOscuro ? 'text-white' : 'text-slate-900'
+                  : `rounded-2xl border p-6 sm:p-8 ${
+                      esOscuro ? 'bg-slate-900/90 border-slate-800 text-white' : 'bg-white border-slate-200 text-slate-900 shadow-sm'
+                    }`
+              }`}>
+                {/* PASO 1: INDICACIONES PREVIAS */}
+                {pasoModalExamen === 'indicaciones' && (
+                  <div className="space-y-6 max-w-2xl mx-auto py-2">
+                    <div className={`p-5 rounded-2xl border ${
+                      esOscuro ? 'bg-slate-800/60 border-slate-750' : 'bg-slate-50 border-slate-200'
+                    }`}>
+                      <h4 className="text-sm font-bold mb-4 flex items-center gap-2">
+                        <Sparkles className="w-4 h-4 text-amber-500" />
+                        Indicaciones para rendir tu evaluación del curso
+                      </h4>
+                      <ul className="space-y-3.5 text-xs sm:text-sm leading-relaxed">
+                        <li className="flex items-start gap-2.5">
+                          <span className="font-bold text-indigo-500 shrink-0">⏱️ Tiempo:</span>
+                          <span>Tendrás un tiempo límite de <strong>30 minutos</strong> para responder el cuestionario completo.</span>
+                        </li>
+                        <li className="flex items-start gap-2.5">
+                          <span className="font-bold text-indigo-500 shrink-0">🎯 Intentos:</span>
+                          <span>Cuentas con <strong>1 solo intento</strong> para rendir este examen final.</span>
+                        </li>
+                        <li className="flex items-start gap-2.5">
+                          <span className="font-bold text-indigo-500 shrink-0">📝 Estructura:</span>
+                          <span>Consta de <strong>10 preguntas objetivas</strong> formuladas según el temario impartido.</span>
+                        </li>
+                        <li className="flex items-start gap-2.5">
+                          <span className="font-bold text-indigo-500 shrink-0">🏆 Aprobación:</span>
+                          <span>La nota mínima aprobatoria es <strong>12 / 20</strong> (cada pregunta correcta suma 2 puntos).</span>
+                        </li>
+                        <li className="flex items-start gap-2.5">
+                          <span className="font-bold text-indigo-500 shrink-0">📜 Certificación:</span>
+                          <span>Al aprobar con 12 o más, tu certificado oficial se habilitará en <strong>Mis Certificados</strong>.</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="pt-2 flex items-center justify-end gap-3">
+                      <button
+                        type="button"
+                        onClick={() => setExamenActivoModal(false)}
+                        className={`px-5 py-2.5 rounded-xl text-xs font-semibold border transition-colors cursor-pointer ${
+                          esOscuro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-slate-300' : 'bg-slate-100 border-slate-200 hover:bg-slate-200 text-slate-700'
+                        }`}
+                      >
+                        Cancelar
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setPasoModalExamen('cuestionario')}
+                        className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl shadow-md transition-colors flex items-center gap-2 cursor-pointer shadow-indigo-600/20"
+                      >
+                        <FileText className="w-4 h-4" /> Comenzar Examen Ahora
+                      </button>
+                    </div>
+                  </div>
                 )}
-              </button>
-            </div>
-          )}
 
-          {/* Materiales de la Clase (Parte X): Material 1 y Material 2 */}
-          {(videoActivo?.material1 || videoActivo?.material2 || videoActivo?.pdfUrl) ? (
-            <div className={`p-5 sm:p-6 rounded-3xl border transition-all space-y-4 ${
-              esOscuro ? 'bg-slate-900/50 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
-            }`}>
-              <div className="flex items-center gap-3 border-b pb-3 border-slate-100 dark:border-slate-800">
-                <div className={`size-10 rounded-xl grid place-items-center border shrink-0 ${
-                  esOscuro ? 'bg-indigo-600/20 text-indigo-400 border-indigo-500/30' : 'bg-indigo-50 text-indigo-600 border-indigo-200'
-                }`}>
-                  <FileText className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className={`font-bold text-sm ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                    Materiales de la Clase · {videoActivo?.titulo || 'Parte Seleccionada'}
-                  </h4>
-                  <p className={`text-xs ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                    Diapositivas (PDF), recursos interactivos HTML y repositorios GitHub Pages para ver o descargar.
-                  </p>
-                </div>
-              </div>
+                {/* PASO 2: CUESTIONARIO */}
+                {pasoModalExamen === 'cuestionario' && (
+                  <div className="space-y-6 max-w-3xl mx-auto">
+                    {cargandoPreguntasExamen ? (
+                      <div className="p-12 text-center text-slate-400 space-y-3">
+                        <Loader2 className="w-8 h-8 animate-spin mx-auto text-indigo-500" />
+                        <p className="text-sm font-semibold">Cargando las preguntas oficiales del curso...</p>
+                      </div>
+                    ) : preguntasExamenDinamicas.length === 0 ? (
+                      <div className="p-10 text-center space-y-3 border rounded-2xl border-dashed border-slate-300 dark:border-slate-800">
+                        <AlertCircle className="w-10 h-10 text-slate-400 mx-auto" />
+                        <h4 className="font-bold text-sm">Examen en preparación</h4>
+                        <p className="text-xs text-slate-500 max-w-md mx-auto">
+                          Aún no se han publicado las preguntas para este curso. La coordinación académica las habilitará próximamente.
+                        </p>
+                        <button
+                          type="button"
+                          onClick={() => setExamenActivoModal(false)}
+                          className="mt-2 text-xs font-bold px-4 py-2 bg-indigo-600 text-white rounded-xl"
+                        >
+                          Volver a las clases
+                        </button>
+                      </div>
+                    ) : (
+                      <>
+                        {/* Barra de progreso rápida */}
+                        <div className="sticky top-2 z-20 p-3.5 rounded-2xl border backdrop-blur-md flex items-center justify-between gap-3 shadow-sm bg-white/90 dark:bg-slate-900/90 border-slate-200 dark:border-slate-800">
+                          <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold">
+                            <span className="text-slate-500 dark:text-slate-400">Progreso:</span>
+                            <strong className="text-indigo-600 dark:text-indigo-400">
+                              {Object.values(respuestasExamenDinamicas).filter(arr => arr && arr.length > 0).length} de {preguntasExamenDinamicas.length}
+                            </strong>
+                          </div>
 
-              {/* Botones de Material 1 y Material 2 */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {videoActivo?.material1 && renderMaterialCard(videoActivo.material1, 1)}
-                {videoActivo?.material2 && renderMaterialCard(videoActivo.material2, 2)}
-                {!videoActivo?.material1 && videoActivo?.pdfUrl && renderMaterialCard(videoActivo.pdfUrl, 1)}
+                          <div className="flex items-center gap-2 tabular-nums text-xs sm:text-sm font-bold">
+                            <Timer className={`w-4 h-4 ${tiempoRestanteSegundos <= 300 ? 'text-rose-500 animate-pulse' : 'text-indigo-500'}`} />
+                            <span className={`${
+                              tiempoRestanteSegundos <= 300 
+                                ? 'text-rose-500 animate-pulse' 
+                                : 'text-indigo-600 dark:text-indigo-400'
+                            }`}>
+                              {formatearTiempoDisponible(tiempoRestanteSegundos)}
+                            </span>
+                          </div>
+                        </div>
+
+                        {preguntasExamenDinamicas.map((q, qIdx) => {
+                          const esMultiple = q.tipo === 'multiple_select';
+                          const seleccionadasActuales = respuestasExamenDinamicas[q.id] || [];
+                          const esFaltante = preguntaFaltanteAlertaId === q.id;
+
+                          return (
+                            <div
+                              id={`pregunta-card-${q.id}`}
+                              key={q.id}
+                              className={`p-5 sm:p-6 rounded-2xl border space-y-4 transition-all scroll-mt-24 ${
+                                esFaltante
+                                  ? 'border-rose-500 ring-2 ring-rose-500/30 bg-rose-500/5'
+                                  : esOscuro ? 'bg-slate-900/70 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
+                              }`}
+                            >
+                              <div className="flex flex-wrap items-center justify-between gap-2">
+                                <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-lg border ${
+                                  esMultiple 
+                                    ? 'bg-purple-500/10 border-purple-500/30 text-purple-400' 
+                                    : 'bg-indigo-500/10 border-indigo-500/30 text-indigo-500 dark:text-indigo-400'
+                                }`}>
+                                  {esMultiple ? 'Selección múltiple' : 'Opción única'}
+                                </span>
+
+                                {esFaltante && (
+                                  <span className="text-[11px] font-bold text-rose-500 flex items-center gap-1">
+                                    <AlertCircle className="w-3.5 h-3.5" /> Falta responder esta pregunta
+                                  </span>
+                                )}
+                              </div>
+
+                              <div className="space-y-1">
+                                <span className="text-xs font-bold text-indigo-500">
+                                  Pregunta {qIdx + 1} de {preguntasExamenDinamicas.length}
+                                </span>
+                                <h3 className="text-sm sm:text-base font-semibold leading-relaxed">
+                                  {q.pregunta}
+                                </h3>
+                              </div>
+
+                              <div className="space-y-2.5 pt-1">
+                                {q.opciones.map((opt) => {
+                                  const marcada = seleccionadasActuales.includes(opt.indice);
+                                  return (
+                                    <button
+                                      key={opt.indice}
+                                      type="button"
+                                      onClick={() => seleccionarOpcionDinamica(q.id, opt.indice, esMultiple)}
+                                      className={`w-full p-3.5 rounded-xl border text-left text-xs sm:text-sm font-medium transition-all flex items-start gap-3 cursor-pointer ${
+                                        marcada
+                                          ? 'bg-indigo-600/10 border-indigo-600 text-indigo-600 dark:text-indigo-300 font-semibold ring-1 ring-indigo-600'
+                                          : esOscuro
+                                            ? 'bg-slate-800/40 border-slate-800 hover:bg-slate-800/70 text-slate-300'
+                                            : 'bg-slate-50 border-slate-200 hover:bg-slate-100 text-slate-700'
+                                      }`}
+                                    >
+                                      <div className={`size-5 rounded-${esMultiple ? 'md' : 'full'} border flex items-center justify-center shrink-0 mt-0.5 ${
+                                        marcada
+                                          ? 'border-indigo-600 bg-indigo-600 text-white'
+                                          : esOscuro ? 'border-slate-600' : 'border-slate-300'
+                                      }`}>
+                                        {marcada && <Check className="w-3.5 h-3.5 stroke-[3]" />}
+                                      </div>
+                                      <span className="leading-relaxed flex-1">{opt.text}</span>
+                                    </button>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          );
+                        })}
+
+                        {/* Botón Flotante de Entrega */}
+                        <div className="sticky bottom-4 z-20 pt-2">
+                          <button
+                            type="button"
+                            onClick={() => rendirExamenCurso(false)}
+                            disabled={guardandoExamen}
+                            className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base p-4 rounded-2xl shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer shadow-emerald-600/20"
+                          >
+                            {guardandoExamen ? (
+                              <>
+                                <Loader2 className="w-5 h-5 animate-spin" />
+                                <span>Calificando tu examen...</span>
+                              </>
+                            ) : (
+                              <>
+                                <Award className="w-5 h-5" />
+                                <span>Entregar y Calificar Examen</span>
+                              </>
+                            )}
+                          </button>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                )}
+
+                {/* PASO 3 y 4: RESULTADO / VER INTENTO PREVIO */}
+                {(pasoModalExamen === 'resultado' || pasoModalExamen === 'ver_intento') && resultadoExamen && (
+                  <div className="space-y-6 max-w-2xl mx-auto text-center py-4">
+                    <div className={`size-20 rounded-3xl mx-auto grid place-items-center border ${
+                      resultadoExamen.aprobado
+                        ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-500'
+                        : 'bg-rose-500/10 border-rose-500/30 text-rose-500'
+                    }`}>
+                      {resultadoExamen.aprobado ? (
+                        <Award className="w-10 h-10" />
+                      ) : (
+                        <AlertCircle className="w-10 h-10" />
+                      )}
+                    </div>
+
+                    <div className="space-y-2">
+                      <span className={`text-xs font-bold uppercase tracking-wider ${
+                        resultadoExamen.aprobado ? 'text-emerald-500' : 'text-rose-500'
+                      }`}>
+                        {resultadoExamen.aprobado ? '¡Felicitaciones! Has aprobado' : 'Evaluación no aprobada'}
+                      </span>
+                      <h3 className="text-2xl sm:text-3xl font-extrabold">
+                        Nota: {resultadoExamen.nota.toString().padStart(2, '0')} / 20
+                      </h3>
+                      <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-md mx-auto">
+                        {resultadoExamen.aprobado 
+                          ? 'Tu constancia y certificado digital han sido habilitados para descarga en tu panel de certificados.' 
+                          : 'La nota mínima aprobatoria es 12. Puedes solicitar un examen sustitutorio con tu asesor académico.'}
+                      </p>
+                    </div>
+
+                    {/* Desglose de Retroalimentación y Rationale */}
+                    {detallesCalificacionExamen && detallesCalificacionExamen.length > 0 && (
+                      <div className="text-left space-y-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+                        <h4 className="text-sm font-bold flex items-center gap-2">
+                          <FileText className="w-4 h-4 text-indigo-500" />
+                          Retroalimentación pedagógica por pregunta
+                        </h4>
+
+                        <div className="space-y-4">
+                          {detallesCalificacionExamen.map((det, dIdx) => (
+                            <div 
+                              key={det.preguntaId || dIdx}
+                              className={`p-4 sm:p-5 rounded-2xl border space-y-3 text-xs ${
+                                det.esCorrecta 
+                                  ? 'bg-emerald-500/5 border-emerald-500/30' 
+                                  : 'bg-rose-500/5 border-rose-500/30'
+                              }`}
+                            >
+                              <div className="flex items-center justify-between gap-2">
+                                <span className="font-bold text-slate-500 dark:text-slate-400">Pregunta {dIdx + 1}</span>
+                                <span className={`font-bold px-2.5 py-1 rounded-md text-[10px] border ${
+                                  det.esCorrecta ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' : 'bg-rose-500/20 text-rose-400 border-rose-500/30'
+                                }`}>
+                                  {det.esCorrecta ? `Correcto (+${det.puntajeObtenido} pts)` : 'Incorrecto (0 pts)'}
+                                </span>
+                              </div>
+                              <p className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white leading-relaxed">{det.pregunta}</p>
+                              
+                              {/* Desglose de alternativas con fundamento */}
+                              <div className="space-y-2 pt-1">
+                                {det.desgloseOpciones?.map(opt => {
+                                  let estilo = esOscuro 
+                                    ? 'bg-slate-900/80 border-slate-800 text-slate-300' 
+                                    : 'bg-white border-slate-200 text-slate-700';
+
+                                  if (opt.marcadaPorAlumno && opt.isCorrect) {
+                                    estilo = 'bg-emerald-600/15 border-emerald-500/50 text-emerald-400 font-bold';
+                                  } else if (opt.marcadaPorAlumno && !opt.isCorrect) {
+                                    estilo = 'bg-rose-600/15 border-rose-500/50 text-rose-400 font-bold';
+                                  } else if (!opt.marcadaPorAlumno && opt.isCorrect) {
+                                    estilo = 'bg-emerald-600/10 border-emerald-500/40 text-emerald-400 font-medium';
+                                  }
+
+                                  return (
+                                    <div key={opt.indice} className={`p-3 rounded-xl border space-y-1 ${estilo}`}>
+                                      <div className="flex items-center justify-between gap-2">
+                                        <span>{opt.text}</span>
+                                        {opt.marcadaPorAlumno && (
+                                          <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-white/10 shrink-0">
+                                            Tu respuesta
+                                          </span>
+                                        )}
+                                      </div>
+                                      {opt.rationale && (
+                                        <p className="text-[11px] opacity-80 pt-0.5 border-t border-slate-500/20">
+                                          💡 {opt.rationale}
+                                        </p>
+                                      )}
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="pt-2 flex items-center justify-center gap-3">
+                      <button
+                        type="button"
+                        onClick={() => setExamenActivoModal(false)}
+                        className="px-6 py-2.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white cursor-pointer shadow-sm"
+                      >
+                        Volver a las clases
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ) : (
-            <div className={`p-5 rounded-2xl border transition-all flex items-center gap-3 ${
-              esOscuro ? 'bg-slate-900/30 border-slate-800/80 text-slate-400' : 'bg-slate-50 border-slate-200 text-slate-500'
-            }`}>
-              <FileText className="w-5 h-5 text-slate-400 shrink-0" />
-              <p className="text-xs">
-                No hay diapositivas o repositorios adicionales adjuntados para esta parte.
-              </p>
-            </div>
+            /* ZONA PRINCIPAL DE REPRODUCCIÓN (GRABACIÓN + SELECTOR DE RECURSOS) */
+            <>
+              {/* CONTENEDOR INTEGRADO: BARRA DE CONTROL CONTINUA + VISOR MULTIMEDIA */}
+              {(() => {
+                if (!parteActiva) return null;
+
+                let tituloRecurso = 'Grabación de la clase';
+                let tipoRecurso: 'video' | 'pdf' | 'excel' | 'audio' | 'interactivo' | 'mapamental' | 'material' = 'video';
+                let urlRecurso = (parteActiva.videoUrl || '').replace(/\/preview(\?.*)?$/, '/view');
+
+                if (contenidoPrincipal !== 'video_clase') {
+                  const recMatch = parteActiva.recursos?.find(r => 
+                    (r.archivo && r.archivo === recursoUrlActivo) || 
+                    (r.url && r.url === recursoUrlActivo) ||
+                    (r.titulo && r.titulo === recursoActivoInfo)
+                  );
+
+                  if (recMatch) {
+                    tituloRecurso = recMatch.titulo;
+                    tipoRecurso = recMatch.tipo;
+                    urlRecurso = recMatch.archivo || recMatch.url || recursoUrlActivo;
+                  } else if (contenidoPrincipal === 'pdf_visor') {
+                    const recPdf = parteActiva.recursos?.find(r => r.tipo === 'pdf');
+                    tituloRecurso = recursoActivoInfo || recPdf?.titulo || 'Material en PDF';
+                    tipoRecurso = 'pdf';
+                    urlRecurso = recursoUrlActivo || recPdf?.archivo || recPdf?.url || '';
+                  } else if (contenidoPrincipal === 'resumen_video') {
+                    const recVid = parteActiva.recursos?.find(r => r.tipo === 'video');
+                    tituloRecurso = recursoActivoInfo || recVid?.titulo || 'Resumen en video';
+                    tipoRecurso = 'video';
+                    urlRecurso = recursoUrlActivo || recVid?.archivo || recVid?.url || parteActiva.videoUrl || '';
+                  } else if (contenidoPrincipal === 'resumen_audio') {
+                    const recAud = parteActiva.recursos?.find(r => r.tipo === 'audio');
+                    tituloRecurso = recursoActivoInfo || recAud?.titulo || 'Resumen en audio';
+                    tipoRecurso = 'audio';
+                    urlRecurso = recursoUrlActivo || recAud?.archivo || recAud?.url || '';
+                  } else if (contenidoPrincipal === 'resumen_interactivo') {
+                    const recInt = parteActiva.recursos?.find(r => r.tipo === 'interactivo');
+                    tituloRecurso = recursoActivoInfo || recInt?.titulo || 'Resumen interactivo';
+                    tipoRecurso = 'interactivo';
+                    urlRecurso = recursoUrlActivo || recInt?.archivo || recInt?.url || '';
+                  } else if (contenidoPrincipal === 'mapamental') {
+                    const recMap = parteActiva.recursos?.find(r => r.tipo === 'mapamental');
+                    tituloRecurso = recursoActivoInfo || recMap?.titulo || 'Mapa mental';
+                    tipoRecurso = 'mapamental';
+                    urlRecurso = recursoUrlActivo || recMap?.archivo || recMap?.url || '';
+                  }
+                }
+
+                const tieneRecursosAdicionales = (parteActiva.recursos && parteActiva.recursos.length > 0);
+
+                return (
+                  <div className={`w-full shrink-0 rounded-2xl overflow-hidden shadow-lg border flex flex-col ${
+                    esOscuro ? 'border-slate-800 bg-slate-900/90' : 'border-slate-300 bg-white'
+                  }`}>
+                    {/* BARRA SUPERIOR CONTINUA DEL VISOR */}
+                    <div className={`px-3.5 sm:px-5 py-3 border-b flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 ${
+                      esOscuro ? 'border-slate-800 bg-slate-950/80' : 'border-slate-200 bg-slate-50/90'
+                    }`}>
+                      {/* LADO IZQUIERDO: RECURSO ACTUAL (ÍCONO + TÍTULO) */}
+                      <div className="flex items-center gap-3 min-w-0">
+                        <div className={`size-9 rounded-xl grid place-items-center shrink-0 ${
+                          tipoRecurso === 'pdf' ? 'bg-rose-500/20 text-rose-500' :
+                          tipoRecurso === 'excel' ? 'bg-emerald-500/20 text-emerald-500' :
+                          tipoRecurso === 'video' ? 'bg-indigo-500/20 text-indigo-400' :
+                          tipoRecurso === 'audio' ? 'bg-purple-500/20 text-purple-400' :
+                          tipoRecurso === 'interactivo' ? 'bg-amber-500/20 text-amber-400' :
+                          tipoRecurso === 'mapamental' ? 'bg-teal-500/20 text-teal-400' :
+                          'bg-cyan-500/20 text-cyan-400'
+                        }`}>
+                          {tipoRecurso === 'pdf' && <FileText className="w-4.5 h-4.5" />}
+                          {tipoRecurso === 'excel' && <Table className="w-4.5 h-4.5" />}
+                          {tipoRecurso === 'video' && <Video className="w-4.5 h-4.5" />}
+                          {tipoRecurso === 'audio' && <Headphones className="w-4.5 h-4.5" />}
+                          {tipoRecurso === 'interactivo' && <Sparkles className="w-4.5 h-4.5" />}
+                          {tipoRecurso === 'mapamental' && <Network className="w-4.5 h-4.5" />}
+                          {tipoRecurso === 'material' && <Folder className="w-4.5 h-4.5" />}
+                        </div>
+                        <div className="min-w-0">
+                          <h3 className={`text-xs sm:text-sm font-bold truncate ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                            {tituloRecurso}
+                          </h3>
+                        </div>
+                      </div>
+
+                      {/* LADO DERECHO: ACCIONES Y SELECTOR */}
+                      <div className="flex items-center gap-2 shrink-0 ml-auto">
+                        {/* BOTÓN IR AL VIDEO PRINCIPAL (GRABACIÓN) */}
+                        <button
+                          type="button"
+                          onClick={() => {
+                            activarRecursoEnVisor('video_clase', 'Grabación de la clase');
+                            setMenuFormatoAbierto(false);
+                          }}
+                          title="Ver grabación oficial en video"
+                          className={`text-xs font-bold px-3 py-1.5 rounded-xl border flex items-center gap-1.5 transition-all cursor-pointer ${
+                            contenidoPrincipal === 'video_clase'
+                              ? 'bg-indigo-600 text-white border-indigo-500 shadow-2xs'
+                              : esOscuro
+                                ? 'bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-700 hover:text-white'
+                                : 'bg-white hover:bg-slate-100 text-slate-700 border-slate-200 shadow-2xs hover:text-slate-900'
+                          }`}
+                        >
+                          <Video className="w-3.5 h-3.5" />
+                          <span>Grabación</span>
+                        </button>
+
+                        {/* SELECTOR DESPLEGABLE DE RECURSOS */}
+                        {tieneRecursosAdicionales && (
+                          <div className="relative">
+                            <button
+                              type="button"
+                              onClick={() => setMenuFormatoAbierto(!menuFormatoAbierto)}
+                              className={`text-xs font-bold px-3 py-1.5 rounded-xl border flex items-center gap-1.5 transition-all cursor-pointer ${
+                                menuFormatoAbierto || contenidoPrincipal !== 'video_clase'
+                                  ? 'bg-indigo-600 text-white border-indigo-500 shadow-2xs'
+                                  : esOscuro
+                                    ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700'
+                                    : 'bg-white hover:bg-slate-100 text-slate-800 border-slate-200 shadow-2xs'
+                              }`}
+                              title="Elegir otro recurso multimedia"
+                            >
+                              <span>Cambiar recurso</span>
+                              <ChevronDown className={`w-3.5 h-3.5 transition-transform ${menuFormatoAbierto ? 'rotate-180' : ''}`} />
+                            </button>
+
+                            {menuFormatoAbierto && (
+                              <>
+                                <div 
+                                  className="fixed inset-0 z-40" 
+                                  onClick={() => setMenuFormatoAbierto(false)} 
+                                />
+                                <div className={`absolute right-0 mt-2 w-64 max-h-80 overflow-y-auto rounded-2xl border backdrop-blur-xl shadow-2xl p-1.5 z-50 space-y-1 animate-in fade-in slide-in-from-top-2 duration-150 ${
+                                  esOscuro ? 'bg-slate-950/95 border-slate-800 text-white' : 'bg-white/95 border-slate-200 text-slate-900'
+                                }`}>
+                                  <div className={`px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider border-b ${
+                                    esOscuro ? 'text-slate-400 border-slate-800' : 'text-slate-500 border-slate-100'
+                                  }`}>
+                                    Recursos disponibles
+                                  </div>
+
+                                  {/* Opción Grabación */}
+                                  <button
+                                    type="button"
+                                    onClick={() => {
+                                      activarRecursoEnVisor('video_clase', 'Grabación de la clase');
+                                      setMenuFormatoAbierto(false);
+                                    }}
+                                    className={`w-full flex items-center gap-2.5 px-2.5 py-2 rounded-xl text-xs font-semibold transition-colors cursor-pointer text-left ${
+                                      contenidoPrincipal === 'video_clase'
+                                        ? 'bg-indigo-600 text-white font-bold'
+                                        : esOscuro ? 'text-slate-200 hover:bg-slate-800' : 'text-slate-800 hover:bg-slate-100'
+                                    }`}
+                                  >
+                                    <Video className="w-4 h-4 text-indigo-400 shrink-0" />
+                                    <div className="flex-1 min-w-0">
+                                      <span className="block truncate font-bold">Grabación de la clase</span>
+                                    </div>
+                                    {contenidoPrincipal === 'video_clase' && <span className="text-xs">✓</span>}
+                                  </button>
+
+                                  {/* Demás recursos de parteActiva */}
+                                  {parteActiva.recursos?.map((rec) => {
+                                    const visorTipo = 
+                                      rec.tipo === 'video' ? 'resumen_video' :
+                                      rec.tipo === 'audio' ? 'resumen_audio' :
+                                      rec.tipo === 'interactivo' ? 'resumen_interactivo' :
+                                      rec.tipo === 'mapamental' ? 'mapamental' : 'pdf_visor';
+                                    const esActivo = (contenidoPrincipal === visorTipo) && (
+                                      recursoUrlActivo === (rec.archivo || rec.url) ||
+                                      recursoActivoInfo === rec.titulo
+                                    );
+
+                                    return (
+                                      <button
+                                        key={rec.id}
+                                        type="button"
+                                        onClick={() => {
+                                          activarRecursoEnVisor(visorTipo, rec.titulo || 'Recurso', rec.archivo || rec.url);
+                                          setMenuFormatoAbierto(false);
+                                        }}
+                                        className={`w-full flex items-center gap-2.5 px-2.5 py-2 rounded-xl text-xs font-semibold transition-colors cursor-pointer text-left ${
+                                          esActivo
+                                            ? 'bg-indigo-600 text-white font-bold'
+                                            : esOscuro ? 'text-slate-200 hover:bg-slate-800' : 'text-slate-800 hover:bg-slate-100'
+                                        }`}
+                                      >
+                                        <div className="shrink-0">
+                                          {rec.tipo === 'pdf' && <FileText className="w-4 h-4 text-rose-400" />}
+                                          {rec.tipo === 'excel' && <Table className="w-4 h-4 text-emerald-400" />}
+                                          {rec.tipo === 'video' && <Video className="w-4 h-4 text-indigo-400" />}
+                                          {rec.tipo === 'audio' && <Headphones className="w-4 h-4 text-purple-400" />}
+                                          {rec.tipo === 'interactivo' && <Sparkles className="w-4 h-4 text-amber-400" />}
+                                          {rec.tipo === 'mapamental' && <Network className="w-4 h-4 text-teal-400" />}
+                                          {rec.tipo === 'material' && <Folder className="w-4 h-4 text-cyan-400" />}
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                          <span className="block truncate font-bold">{rec.titulo}</span>
+                                        </div>
+                                        {esActivo && <span className="text-xs">✓</span>}
+                                      </button>
+                                    );
+                                  })}
+                                </div>
+                              </>
+                            )}
+                          </div>
+                        )}
+
+                        {/* BOTÓN VER EN NUEVA PESTAÑA */}
+                        {urlRecurso && (
+                          <a
+                            href={urlRecurso}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Abrir este recurso en una nueva pestaña"
+                            className={`p-2 rounded-xl border flex items-center justify-center transition-all cursor-pointer ${
+                              esOscuro
+                                ? 'bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-700 hover:text-white'
+                                : 'bg-white hover:bg-slate-100 text-slate-700 border-slate-200 shadow-2xs hover:text-slate-900'
+                            }`}
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                          </a>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* ÁREA DE VISOR / IFRAME */}
+                    <div className="w-full aspect-video shrink-0 bg-black relative flex flex-col items-center justify-center">
+                      {contenidoPrincipal === 'video_clase' && (
+                        parteActiva.videoUrl ? (
+                          <iframe 
+                            key={`${temaActual.id}-p${parteActiva.numero}`}
+                            src={formatearUrlVideoEmbed(parteActiva.videoUrl)} 
+                            title={`${temaActual.titulo} - ${parteActiva.titulo}`}
+                            className="w-full h-full border-0 absolute inset-0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                          />
+                        ) : (
+                          <div className="w-full h-full flex flex-col items-center justify-center text-slate-400 gap-2 p-4 text-center">
+                            <Video className="w-12 h-12 opacity-30 text-indigo-400" />
+                            <p className="text-sm font-bold text-slate-300">
+                              {parteActiva.titulo}
+                            </p>
+                            <p className="text-xs text-slate-500 max-w-sm">
+                              Esta sesión aún no cuenta con un enlace de video registrado en el catálogo.
+                            </p>
+                          </div>
+                        )
+                      )}
+
+                      {contenidoPrincipal !== 'video_clase' && (() => {
+                        let url = recursoUrlActivo;
+                        if (!url) {
+                          if (contenidoPrincipal === 'pdf_visor') {
+                            url = parteActiva.recursos.find(r => r.tipo === 'pdf')?.archivo || '';
+                          } else if (contenidoPrincipal === 'resumen_video') {
+                            url = parteActiva.recursos.find(r => r.tipo === 'video')?.archivo || parteActiva.videoUrl || '';
+                          } else if (contenidoPrincipal === 'resumen_audio') {
+                            url = parteActiva.recursos.find(r => r.tipo === 'audio')?.archivo || '';
+                          } else if (contenidoPrincipal === 'resumen_interactivo') {
+                            url = parteActiva.recursos.find(r => r.tipo === 'interactivo')?.archivo || '';
+                          } else if (contenidoPrincipal === 'mapamental') {
+                            url = parteActiva.recursos.find(r => r.tipo === 'mapamental')?.archivo || '';
+                          }
+                        }
+
+                        if (!url) {
+                          return (
+                            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-slate-400 bg-slate-950">
+                              <p className="text-xs sm:text-sm">No hay enlace configurado para este recurso.</p>
+                            </div>
+                          );
+                        }
+
+                        const esAudioDirecto = contenidoPrincipal === 'resumen_audio' && /\.(mp3|wav|ogg|m4a|aac)(\?.*)?$/i.test(url);
+
+                        if (esAudioDirecto) {
+                          return (
+                            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-slate-950">
+                              <div className={`w-full max-w-md p-6 rounded-2xl border text-center space-y-4 ${
+                                esOscuro ? 'bg-slate-900 border-slate-800 text-white' : 'bg-white border-slate-200 text-slate-900 shadow-xl'
+                              }`}>
+                                <p className="text-xs sm:text-sm font-bold truncate">
+                                  {recursoActivoInfo || temaActual.titulo}
+                                </p>
+                                <audio controls autoPlay src={url} className="w-full mt-2" />
+                              </div>
+                            </div>
+                          );
+                        }
+
+                        let embedUrl = formatearUrlVideoEmbed(url);
+
+                        return (
+                          <iframe 
+                            key={`${contenidoPrincipal}-${embedUrl}`}
+                            src={embedUrl}
+                            title={recursoActivoInfo || 'Recurso Multimedia'}
+                            className="w-full h-full border-0 absolute inset-0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                          />
+                        );
+                      })()}
+                    </div>
+                  </div>
+                );
+              })()}
+
+              {/* SECCIÓN UNIFICADA: TEMA ACTIVO, SELECTOR DE PARTES Y NAVEGACIÓN */}
+              {(() => {
+                const partesDelTema = (temaActual && temaActual.partes && temaActual.partes.length > 0)
+                  ? temaActual.partes
+                  : (parteActiva ? [parteActiva] : []);
+                const tituloMostrar = (temaActual?.titulo || cursoEstructurado.titulo || '').toUpperCase();
+
+                return (
+                  <div className={`p-4 sm:p-5 shrink-0 rounded-2xl border transition-all space-y-4 ${
+                    esOscuro ? 'bg-slate-900/90 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
+                  }`}>
+                    {/* Encabezado: Título en mayúsculas */}
+                    <div className="flex items-center justify-between gap-2.5">
+                      <h2 className={`text-sm sm:text-base font-bold leading-snug uppercase ${
+                        esOscuro ? 'text-white' : 'text-slate-900'
+                      }`}>
+                        {tituloMostrar}
+                      </h2>
+                    </div>
+
+                    {/* Selector de Partes */}
+                    <div className="flex flex-wrap items-center gap-2.5 w-full">
+                      {partesDelTema.map((parteItem: ParteClase, pIdx: number) => {
+                        const esParteActiva = parteActiva?.id === parteItem.id;
+                        const esParteCompletada = Boolean(completadosMap[parteItem.id]);
+
+                        return (
+                          <button
+                            key={parteItem.id}
+                            type="button"
+                            onClick={() => seleccionarParte(temaActual, parteItem.numero)}
+                            className={`w-32 sm:w-36 shrink-0 p-2.5 rounded-xl border flex items-center gap-2.5 transition-all cursor-pointer select-none ${
+                              esParteActiva
+                                ? 'bg-indigo-600 text-white border-indigo-500 shadow-sm font-bold'
+                                : esOscuro
+                                  ? 'bg-slate-800/80 border-slate-700/80 text-slate-200 hover:bg-slate-800'
+                                  : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
+                            }`}
+                          >
+                            <div className="shrink-0">
+                              {esParteCompletada ? (
+                                <CheckCircle2 
+                                  className={`w-4 h-4 shrink-0 ${
+                                    esParteActiva 
+                                      ? '[&>circle]:fill-white [&>circle]:stroke-white [&>path]:stroke-indigo-600 [&>path]:stroke-[2.5]' 
+                                      : '[&>circle]:fill-emerald-500 [&>circle]:stroke-emerald-500 [&>path]:stroke-white [&>path]:stroke-[2.5]'
+                                  }`} 
+                                  strokeWidth={2.2} 
+                                />
+                              ) : (
+                                <CheckCircle2 
+                                  className={`w-4 h-4 shrink-0 ${
+                                    esParteActiva 
+                                      ? 'text-white/70' 
+                                      : esOscuro ? 'text-slate-500' : 'text-slate-400'
+                                  }`} 
+                                  strokeWidth={1.8} 
+                                />
+                              )}
+                            </div>
+                            <span className="text-xs font-bold truncate uppercase flex-1 text-left">
+                              Parte {String(pIdx + 1).padStart(2, '0')}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    {/* Navegación secuencial de temas (Anterior / Contador de Temas / Siguiente) */}
+                    <div className="pt-1 flex items-center justify-between gap-3">
+                      <button
+                        type="button"
+                        onClick={irAAnterior}
+                        disabled={!itemAnterior}
+                        className={`inline-flex items-center justify-center gap-1.5 text-xs font-bold px-4 py-2 rounded-xl border transition-all shrink-0 cursor-pointer ${
+                          itemAnterior
+                            ? esOscuro
+                              ? 'bg-slate-800 text-slate-200 border-slate-700 hover:bg-slate-700'
+                              : 'bg-slate-100 text-slate-800 border-slate-200 hover:bg-slate-200'
+                            : 'opacity-40 cursor-not-allowed text-slate-500 border-transparent'
+                        }`}
+                      >
+                        <ChevronLeft className="w-4 h-4" /> 
+                        <span>Anterior</span>
+                      </button>
+
+                      <div className={`text-center text-xs font-semibold px-4 py-1.5 rounded-lg shrink-0 ${
+                        esOscuro ? 'bg-slate-800/60 text-slate-400' : 'bg-slate-100 text-slate-600'
+                      }`}>
+                        Tema {numeroTemaActual} de {totalTemas}
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={irASiguiente}
+                        disabled={!itemSiguiente}
+                        className={`inline-flex items-center justify-center gap-1.5 text-xs font-bold px-4 py-2 rounded-xl border transition-all shrink-0 cursor-pointer ${
+                          itemSiguiente
+                            ? 'bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500 shadow-xs'
+                            : 'opacity-40 cursor-not-allowed text-slate-500 border-transparent'
+                        }`}
+                      >
+                        <span>Siguiente</span>
+                        <ChevronRight className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+                );
+              })()}
+
+              {/* PESTAÑAS (TABS): RESUMEN, RECURSOS Y FORO */}
+              <div className="mt-4">
+                <div className={`flex flex-wrap items-center gap-2 border-b pb-3 ${
+                  esOscuro ? 'border-slate-800' : 'border-slate-200'
+                }`}>
+                  {tieneResumen && (
+                    <button
+                      onClick={() => setTabActiva('resumen')}
+                      className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                        tabActiva === 'resumen' 
+                          ? 'bg-indigo-600 text-white shadow-sm' 
+                          : esOscuro 
+                            ? 'text-slate-400 hover:text-white hover:bg-slate-900' 
+                            : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                      }`}
+                    >
+                      Resumen
+                    </button>
+                  )}
+                  <button
+                    onClick={() => setTabActiva('recursos')}
+                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                      tabActiva === 'recursos' 
+                        ? 'bg-indigo-600 text-white shadow-sm' 
+                        : esOscuro 
+                          ? 'text-slate-400 hover:text-white hover:bg-slate-900' 
+                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                    }`}
+                  >
+                    Recursos multimedia
+                  </button>
+                  <button
+                    onClick={() => setTabActiva('foro')}
+                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                      tabActiva === 'foro' 
+                        ? 'bg-indigo-600 text-white shadow-sm' 
+                        : esOscuro 
+                          ? 'text-slate-400 hover:text-white hover:bg-slate-900' 
+                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                    }`}
+                  >
+                    Foro de consultas
+                  </button>
+                </div>
+
+                <div className="mt-5 text-sm leading-relaxed">
+                  
+                  {/* TAB RESUMEN */}
+                  {tabActiva === 'resumen' && tieneResumen && parteActiva?.resumen && (
+                    <div className={`p-6 sm:p-7 rounded-2xl border space-y-6 ${
+                      esOscuro ? 'bg-slate-900/60 border-slate-800 text-slate-300' : 'bg-white border-slate-200 text-slate-700 shadow-sm'
+                    }`}>
+                      {parteActiva.resumen.parrafo && (
+                        <div className="space-y-2">
+                          <h4 className={`text-xs font-black uppercase tracking-wider ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`}>
+                            Resumen:
+                          </h4>
+                          <p className={`text-xs sm:text-sm leading-relaxed ${esOscuro ? 'text-slate-200' : 'text-slate-700'}`}>
+                            {parteActiva.resumen.parrafo}
+                          </p>
+                        </div>
+                      )}
+
+                      {parteActiva.resumen.temasClave && parteActiva.resumen.temasClave.length > 0 && (
+                        <div className="space-y-3 pt-4 border-t border-slate-200/60 dark:border-slate-800/60">
+                          <h4 className={`text-xs font-black uppercase tracking-wider ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`}>
+                            Puntos clave:
+                          </h4>
+                          <ul className="space-y-2.5">
+                            {parteActiva.resumen.temasClave.map((item, idx) => (
+                              <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm">
+                                <span className="text-indigo-500 font-bold shrink-0">•</span>
+                                <div>
+                                  {item.titulo && <strong className="text-slate-900 dark:text-white mr-1.5">{item.titulo}:</strong>}
+                                  <span>{item.descripcion}</span>
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* TAB RECURSOS MULTIMEDIA Y DOCUMENTOS (ESTRUCTURA IDÉNTICA A DIPLOMADOS) */}
+                  {tabActiva === 'recursos' && (
+                    <div className="space-y-3">
+                      {/* 1. GRABACIÓN DE LA CLASE (SIEMPRE PRIMER RECURSO) */}
+                      {(() => {
+                        const esGrabacionActiva = contenidoPrincipal === 'video_clase';
+
+                        return (
+                          <div 
+                            className={`flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-2xl border gap-4 transition-all ${
+                              esGrabacionActiva
+                                ? esOscuro
+                                  ? 'bg-indigo-950/40 border-indigo-700/60 ring-1 ring-indigo-500/30 shadow-sm'
+                                  : 'bg-indigo-50/70 border-indigo-300 ring-1 ring-indigo-400/30 shadow-sm'
+                                : esOscuro 
+                                  ? 'bg-slate-900 border-slate-800 hover:border-slate-700' 
+                                  : 'bg-white border-slate-200 hover:border-slate-300 shadow-sm'
+                            }`}
+                          >
+                            <div className="flex items-center gap-3 min-w-0">
+                              <div className={`size-10 rounded-xl grid place-items-center shrink-0 ${
+                                esGrabacionActiva 
+                                  ? 'bg-indigo-600 text-white shadow-xs' 
+                                  : 'bg-indigo-500/20 text-indigo-500'
+                              }`}>
+                                <Video className="w-5 h-5" />
+                              </div>
+                              <div className="min-w-0">
+                                <h4 className={`font-bold text-xs sm:text-sm truncate ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                                  Grabación de la clase {parteActiva.titulo ? `· ${parteActiva.titulo}` : ''}
+                                </h4>
+                                <span className={`text-[11px] block truncate ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                                  Clase magistral completa en video de alta definición.
+                                </span>
+                              </div>
+                            </div>
+
+                            <div className="flex items-center gap-2 shrink-0">
+                              <button 
+                                type="button"
+                                onClick={() => activarRecursoEnVisor('video_clase', 'Grabación de la clase')}
+                                className={`text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors border cursor-pointer ${
+                                  esGrabacionActiva
+                                    ? 'bg-indigo-600 text-white border-indigo-500 shadow-xs'
+                                    : esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-white border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
+                                }`}
+                              >
+                                <Eye className="w-3.5 h-3.5" /> Ver en visor
+                              </button>
+                              <a 
+                                href={parteActiva.videoUrl || '#'} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                title="Abrir en nueva pestaña"
+                                className={`p-2 rounded-xl flex items-center justify-center transition-colors border cursor-pointer ${
+                                  esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-200'
+                                }`}
+                              >
+                                <ExternalLink className="w-4 h-4" />
+                              </a>
+                            </div>
+                          </div>
+                        );
+                      })()}
+
+                      {/* RESTO DE RECURSOS MULTIMEDIA */}
+                      {parteActiva.recursos && parteActiva.recursos.length > 0 ? (
+                        parteActiva.recursos.map((rec) => {
+                          const esRecursoActivo = (() => {
+                            if (rec.tipo === 'video' && contenidoPrincipal === 'resumen_video') return true;
+                            if (rec.tipo === 'audio' && contenidoPrincipal === 'resumen_audio') return true;
+                            if (rec.tipo === 'interactivo' && contenidoPrincipal === 'resumen_interactivo') return true;
+                            if (rec.tipo === 'mapamental' && contenidoPrincipal === 'mapamental') return true;
+                            if (rec.tipo === 'pdf' && contenidoPrincipal === 'pdf_visor') return true;
+                            return false;
+                          })();
+
+                          return (
+                            <div 
+                              key={rec.id}
+                              className={`flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-2xl border gap-4 transition-all ${
+                                esRecursoActivo 
+                                  ? esOscuro
+                                    ? 'bg-indigo-950/40 border-indigo-700/60 ring-1 ring-indigo-500/30 shadow-sm'
+                                    : 'bg-indigo-50/70 border-indigo-300 ring-1 ring-indigo-400/30 shadow-sm'
+                                  : esOscuro 
+                                    ? 'bg-slate-900 border-slate-800 hover:border-slate-700' 
+                                    : 'bg-white border-slate-200 hover:border-slate-300 shadow-sm'
+                              }`}
+                            >
+                              <div className="flex items-center gap-3 min-w-0">
+                                <div className={`size-10 rounded-xl grid place-items-center shrink-0 ${
+                                  esRecursoActivo
+                                    ? 'bg-indigo-600 text-white shadow-xs'
+                                    : rec.tipo === 'pdf' ? 'bg-rose-500/20 text-rose-500' :
+                                      rec.tipo === 'excel' ? 'bg-emerald-500/20 text-emerald-500' :
+                                      rec.tipo === 'video' ? 'bg-indigo-500/20 text-indigo-500' :
+                                      rec.tipo === 'audio' ? 'bg-purple-500/20 text-purple-500' :
+                                      rec.tipo === 'interactivo' ? 'bg-amber-500/20 text-amber-500' :
+                                      rec.tipo === 'mapamental' ? 'bg-teal-500/20 text-teal-500' :
+                                      'bg-cyan-500/20 text-cyan-500'
+                                }`}>
+                                  {rec.tipo === 'pdf' && <FileText className="w-5 h-5" />}
+                                  {rec.tipo === 'excel' && <Table className="w-5 h-5" />}
+                                  {rec.tipo === 'video' && <Video className="w-5 h-5" />}
+                                  {rec.tipo === 'audio' && <Headphones className="w-5 h-5" />}
+                                  {rec.tipo === 'interactivo' && <Sparkles className="w-5 h-5" />}
+                                  {rec.tipo === 'mapamental' && <Network className="w-5 h-5" />}
+                                  {rec.tipo === 'material' && <Folder className="w-5 h-5" />}
+                                </div>
+                                <div className="min-w-0">
+                                  <h4 className={`font-bold text-xs sm:text-sm truncate ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                                    {rec.titulo}
+                                  </h4>
+                                  <span className={`text-[11px] block truncate ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                                    {rec.descripcion}
+                                  </span>
+                                </div>
+                              </div>
+
+                              {/* ÚNICOS 2 BOTONES: VER EN VISOR Y NUEVA PESTAÑA */}
+                              <div className="flex items-center gap-2 shrink-0">
+                                <button 
+                                  type="button"
+                                  onClick={() => {
+                                    const visorTipo = 
+                                      rec.tipo === 'video' ? 'resumen_video' :
+                                      rec.tipo === 'audio' ? 'resumen_audio' :
+                                      rec.tipo === 'interactivo' ? 'resumen_interactivo' :
+                                      rec.tipo === 'mapamental' ? 'mapamental' : 'pdf_visor';
+                                    activarRecursoEnVisor(visorTipo, rec.titulo || 'Recurso', rec.archivo || rec.url);
+                                  }}
+                                  className={`text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors border cursor-pointer ${
+                                    esRecursoActivo
+                                      ? 'bg-indigo-600 text-white border-indigo-500 shadow-xs'
+                                      : esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-white border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
+                                  }`}
+                                >
+                                  <Eye className="w-3.5 h-3.5" /> Ver en visor
+                                </button>
+                                <a 
+                                  href={rec.archivo || rec.url || '#'} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  title="Abrir en nueva pestaña"
+                                  className={`p-2 rounded-xl flex items-center justify-center transition-colors border cursor-pointer ${
+                                    esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-200'
+                                  }`}
+                                >
+                                  <ExternalLink className="w-4 h-4" />
+                                </a>
+                              </div>
+                            </div>
+                          );
+                        })
+                      ) : null}
+                    </div>
+                  )}
+
+                  {/* TAB FORO DE CONSULTAS */}
+                  {tabActiva === 'foro' && (
+                    <div className="space-y-6">
+                      <form onSubmit={agregarComentario} className="flex flex-col sm:flex-row gap-3">
+                        <input 
+                          type="text"
+                          placeholder="Escribe una duda o consulta académica para el docente..."
+                          value={comentario}
+                          onChange={(e) => setComentario(e.target.value)}
+                          className={`flex-1 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-600 border transition-all ${
+                            esOscuro 
+                              ? 'bg-slate-900 border-slate-800 text-white placeholder:text-slate-500' 
+                              : 'bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 shadow-sm'
+                          }`}
+                        />
+                        <button 
+                          type="submit" 
+                          disabled={!comentario.trim()}
+                          className="bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 text-white font-bold px-5 py-3 rounded-xl transition-colors flex items-center justify-center gap-2 text-sm shrink-0 shadow cursor-pointer"
+                        >
+                          <Send className="w-4 h-4" /> Enviar comentario
+                        </button>
+                      </form>
+
+                      <div className="space-y-3">
+                        {listaComentarios.map((c, i) => (
+                          <div 
+                            key={i} 
+                            className={`p-4 rounded-2xl border transition-all ${
+                              esOscuro ? 'bg-slate-900/60 border-slate-800 text-slate-300' : 'bg-white border-slate-200 text-slate-800 shadow-sm'
+                            }`}
+                          >
+                            <div className="flex justify-between items-center mb-1">
+                              <span className="font-bold text-xs text-indigo-500">{c.autor}</span>
+                              <span className={`text-[10px] ${esOscuro ? 'text-slate-500' : 'text-slate-400'}`}>{c.fecha}</span>
+                            </div>
+                            <p className="text-xs sm:text-sm">{c.texto}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                </div>
+              </div>
+            </>
           )}
 
         </div>
 
-        {/* SIDEBAR DERECHO: LAS GRABACIONES / PARTES DEL PROGRAMA */}
-        <div className={`w-full lg:w-96 border-t lg:border-t-0 lg:border-l flex flex-col shrink-0 transition-colors ${
-          esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
-        }`}>
-          <div className={`p-5 border-b shrink-0 ${
-            esOscuro ? 'border-slate-800 bg-slate-950/50' : 'border-slate-200 bg-slate-50'
+        {/* SIDEBAR DERECHO (30%) - TEMARIO CONTINUO SIN MÓDULOS */}
+        {!modoCine && (
+          <aside className={`w-full lg:w-96 border-t lg:border-t-0 lg:border-l flex flex-col shrink-0 lg:h-full lg:overflow-y-auto transition-colors ${
+            esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
           }`}>
-            <h3 className={`font-bold text-base ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-              Clases del Programa
-            </h3>
-            <p className={`text-xs mt-0.5 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-              {cursoActual.grabaciones.length} Partes Registradas
-            </p>
-          </div>
-
-          <div className="flex-1 overflow-y-auto p-4 space-y-3">
-            {cursoActual.grabaciones.map((grab: any, index: number) => {
-              const esSeleccionado = videoActivo?.id === grab.id;
-              const estaComp = Boolean(completadosMap[grab.id]);
-              const parteTexto = grab.titulo?.toLowerCase().includes('parte')
-                ? grab.titulo
-                : `Parte ${index + 1}`;
-
-              return (
-                <div 
-                  key={grab.id}
-                  onClick={() => setVideoActivo(grab)}
-                  className={`p-4 rounded-2xl border cursor-pointer transition-all flex items-center justify-between gap-3 ${
-                    esSeleccionado 
-                      ? esOscuro
-                        ? 'bg-indigo-600/20 border-indigo-500/50 text-white' 
-                        : 'bg-indigo-50 border-indigo-500 text-indigo-950 shadow-sm'
-                      : esOscuro
-                        ? 'bg-slate-950/40 border-slate-800 text-slate-300 hover:bg-slate-800/40'
-                        : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
-                  }`}
-                >
-                  <div className="flex items-center gap-3 min-w-0">
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleCompletarSesion(grab.id);
-                      }}
-                      title={estaComp ? "Desmarcar completado (volver a en curso)" : "Marcar sesión como completada"}
-                      className="p-1 rounded-lg transition-transform hover:scale-110 cursor-pointer shrink-0"
-                    >
-                      {estaComp ? (
-                        <CheckCircle2 className="w-5 h-5 shrink-0 text-emerald-500" />
-                      ) : (
-                        <div className={`size-4.5 rounded-full border-2 shrink-0 ${
-                          esSeleccionado 
-                            ? 'border-indigo-500 hover:border-indigo-400' 
-                            : esOscuro ? 'border-slate-500 hover:border-indigo-400' : 'border-slate-400 hover:border-indigo-600'
-                        }`} />
-                      )}
-                    </button>
-                    <div className="min-w-0">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-500 block">
-                        {parteTexto}
-                      </span>
-                      <h4 className="font-bold text-xs mt-0.5 leading-snug truncate">
-                        {grab.titulo}
-                      </h4>
-                    </div>
-                  </div>
-                  <span className={`text-[10px] font-semibold shrink-0 ${
-                    esOscuro ? 'text-slate-500' : 'text-slate-400'
-                  }`}>
-                    {grab.duracion}
+            {/* Header del temario con avance integrado */}
+            <div className={`p-4 sm:p-5 border-b shrink-0 sticky top-0 z-10 backdrop-blur-md ${
+              esOscuro ? 'border-slate-800 bg-slate-900/95' : 'border-slate-200 bg-white/95 shadow-2xs'
+            }`}>
+              <div>
+                <h3 className={`font-bold text-base ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                  {esTaller ? 'Temario del taller' : 'Temario del curso'}
+                </h3>
+              </div>
+              
+              {/* Barra de progreso real calculada */}
+              <div className="mt-3">
+                <div className="flex items-center justify-between text-[11px] mb-1.5">
+                  <span className={esOscuro ? 'text-slate-400' : 'text-slate-500'}>
+                    Avance
+                  </span>
+                  <span className={`font-semibold ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
+                    {avancePorcentaje}% completado
                   </span>
                 </div>
-              );
-            })}
-          </div>
-        </div>
+                <div className={`w-full h-2 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-200'}`}>
+                  <div 
+                    className="h-full rounded-full bg-indigo-600 transition-all duration-500"
+                    style={{ width: `${avancePorcentaje}%` }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Lista Continua de Temas (Directamente los temas, sin módulos) */}
+            <div className="p-4 space-y-2 pb-8">
+              {cursoEstructurado.temas.map((tema: TemaCurso) => {
+                const esTemaSeleccionado = !examenActivoModal && (temaActual?.id === tema.id);
+                const esTemaCompletado = tema.completado || (tema.partes.length > 0 && tema.partes.every(p => completadosMap[p.id]));
+
+                return (
+                  <button
+                    key={tema.id}
+                    type="button"
+                    onClick={() => seleccionarTema(tema)}
+                    className={`w-full text-left p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold transition-all border cursor-pointer ${
+                      esTemaSeleccionado
+                        ? 'bg-indigo-600 text-white border-indigo-500 shadow-md font-bold'
+                        : esOscuro
+                          ? 'bg-slate-800/60 border-slate-700/60 text-slate-200 hover:bg-slate-800'
+                          : 'bg-slate-50 border-slate-200 text-slate-800 hover:bg-slate-100 shadow-2xs'
+                    }`}
+                  >
+                    <div className="shrink-0">
+                      {esTemaCompletado ? (
+                        <CheckCircle2 
+                          className={`w-4 h-4 shrink-0 ${
+                            esTemaSeleccionado 
+                              ? '[&>circle]:fill-white [&>circle]:stroke-white [&>path]:stroke-indigo-600 [&>path]:stroke-[2.5]' 
+                              : '[&>circle]:fill-emerald-500 [&>circle]:stroke-emerald-500 [&>path]:stroke-white [&>path]:stroke-[2.5]'
+                          }`} 
+                          strokeWidth={2.2} 
+                        />
+                      ) : (
+                        <CheckCircle2 
+                          className={`w-4 h-4 shrink-0 ${
+                            esTemaSeleccionado ? 'text-white/70' : esOscuro ? 'text-slate-500' : 'text-slate-400'
+                          }`} 
+                          strokeWidth={1.8} 
+                        />
+                      )}
+                    </div>
+                    
+                    <span className="truncate text-xs font-bold leading-tight uppercase flex-1 min-w-0">
+                      {tema.titulo.toUpperCase()}
+                    </span>
+
+                    {tema.partes.length > 1 && (
+                      <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md border shrink-0 ${
+                        esTemaSeleccionado
+                          ? 'bg-white/20 border-white/30 text-white'
+                          : esOscuro ? 'bg-slate-700/50 border-slate-600 text-slate-300' : 'bg-slate-200/80 border-slate-300 text-slate-600'
+                      }`}>
+                        {tema.partes.length} partes
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+
+              {/* Fila del Examen del Curso (Idéntica a Diplomados) */}
+              {(() => {
+                const esExamenActivo = Boolean(examenActivoModal);
+
+                return (
+                  <div 
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => {
+                      if (notaCurso !== undefined) {
+                        abrirVerIntento();
+                      } else {
+                        abrirModalExamen();
+                      }
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        if (notaCurso !== undefined) {
+                          abrirVerIntento();
+                        } else {
+                          abrirModalExamen();
+                        }
+                      }
+                    }}
+                    className={`mt-4 p-3 rounded-xl border transition-all cursor-pointer select-none space-y-2.5 ${
+                      esExamenActivo
+                        ? 'bg-amber-500 text-white border-amber-500 shadow-md font-bold'
+                        : esOscuro 
+                          ? 'bg-slate-800/60 border-slate-700/60 text-slate-200 hover:bg-slate-800 shadow-2xs' 
+                          : 'bg-slate-50 border-slate-200 text-slate-800 hover:bg-slate-100 shadow-2xs'
+                    }`}
+                  >
+                    {/* Fila Superior: Icono + Título + Subtítulo / Botón Rendir Examen */}
+                    <div className="flex items-center justify-between gap-2.5 min-w-0">
+                      <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                        <div className={`size-8 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
+                          esExamenActivo
+                            ? 'bg-white/20 text-white'
+                            : notaCurso !== undefined
+                              ? (notaCurso >= 12 ? 'bg-emerald-500/10 text-emerald-500' : 'bg-rose-500/10 text-rose-500')
+                              : 'bg-amber-500/15 text-amber-500'
+                        }`}>
+                          <FileText className={`w-4 h-4 ${esExamenActivo ? 'text-white' : ''}`} />
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <span className={`text-xs font-bold block truncate uppercase ${
+                            esExamenActivo
+                              ? 'text-white'
+                              : esOscuro ? 'text-slate-100' : 'text-slate-800'
+                          }`}>
+                            EXAMEN DEL CURSO
+                          </span>
+                          <span className={`text-[11px] block font-medium truncate ${
+                            esExamenActivo
+                              ? 'text-white/80'
+                              : 'text-slate-400'
+                          }`}>
+                            {notaCurso !== undefined
+                              ? `Nota: ${notaCurso.toString().padStart(2, '0')}/20 · ${notaCurso >= 12 ? 'Aprobado' : 'Desaprobado'}`
+                              : '1 intento · 30 min'
+                            }
+                          </span>
+                        </div>
+                      </div>
+
+                      {notaCurso === undefined && (
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            abrirModalExamen();
+                          }}
+                          className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all flex items-center justify-center shrink-0 cursor-pointer ${
+                            esExamenActivo
+                              ? 'bg-white text-amber-600 hover:bg-amber-50 shadow-xs'
+                              : 'bg-amber-500 hover:bg-amber-600 text-white shadow-amber-500/20 shadow-sm'
+                          }`}
+                        >
+                          <span>Rendir examen</span>
+                        </button>
+                      )}
+                    </div>
+
+                    {/* Fila Inferior: Botones de Acción (Cuando el examen ya fue rendido) */}
+                    {notaCurso !== undefined && (
+                      <div className={`pt-2 border-t flex items-center gap-2 ${
+                        esExamenActivo 
+                          ? 'border-white/20' 
+                          : esOscuro ? 'border-slate-700/60' : 'border-slate-200'
+                      }`}>
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            abrirVerIntento();
+                          }}
+                          className={`flex-1 text-xs font-bold px-2.5 py-1.5 rounded-xl border transition-colors flex items-center justify-center gap-1.5 cursor-pointer truncate ${
+                            esExamenActivo
+                              ? 'bg-white text-amber-600 border-white hover:bg-amber-50 shadow-xs'
+                              : esOscuro 
+                                ? 'bg-slate-800 border-slate-700 text-slate-200 hover:bg-slate-700' 
+                                : 'bg-white border-slate-300 text-slate-700 hover:bg-slate-100 shadow-2xs'
+                          }`}
+                        >
+                          <Eye className="w-3.5 h-3.5 shrink-0" />
+                          <span className="truncate">Ver intento</span>
+                        </button>
+
+                        {notaCurso >= 12 ? (
+                          <Link
+                            href="/dashboard/certificados"
+                            onClick={(e) => e.stopPropagation()}
+                            className={`flex-1 inline-flex items-center justify-center gap-1.5 font-bold text-xs px-2.5 py-1.5 rounded-xl transition-colors shadow-2xs cursor-pointer truncate ${
+                              esExamenActivo
+                                ? 'bg-white text-emerald-700 hover:bg-emerald-50'
+                                : 'bg-emerald-600 hover:bg-emerald-500 text-white'
+                            }`}
+                            title="Descargar certificado"
+                          >
+                            <Award className="w-3.5 h-3.5 shrink-0" />
+                            <span className="truncate">Certificado</span>
+                          </Link>
+                        ) : (
+                          <a
+                            href={`https://wa.me/51924400268?text=${encodeURIComponent(`Hola EDUMIN, revisé mi intento en el Examen de ${cursoEstructurado.titulo} con nota ${notaCurso}/20 y deseo pagar los S/ 25.00 para rendir el Examen Sustitutorio.`)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="flex-1 inline-flex items-center justify-center gap-1.5 font-bold text-xs px-2.5 py-1.5 rounded-xl transition-colors shadow-2xs cursor-pointer truncate bg-amber-600 hover:bg-amber-500 text-white"
+                          >
+                            <span>Sustitutorio (S/ 25)</span>
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                );
+              })()}
+            </div>
+          </aside>
+        )}
 
       </div>
+
     </div>
   );
 }

@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la historia de la gestión de proyectos, ¿qué pionero de la ingeniería industrial aplicó el razonamiento científico para mejorar la productividad y acuñó la frase 'lo importante no es trabajar más duro sino trabajar de manera más inteligente'?",
+    "opciones": [
+      {
+        "text": "Frederick Taylor",
+        "isCorrect": true,
+        "rationale": "Frederick Taylor promovió la optimización de procesos industriales aplicando el método científico para analizar y mejorar la forma de producir."
+      },
+      {
+        "text": "Henry Gantt",
+        "isCorrect": false,
+        "rationale": "Aunque fue socio de Taylor, Henry Gantt es famoso por desarrollar el diagrama gráfico de barras para la secuencia y avance de tareas navales."
+      },
+      {
+        "text": "Edward Deming",
+        "isCorrect": false,
+        "rationale": "Edward Deming fue un pionero posterior en la gestión de calidad total y la mejora continua en Japón, no el autor de dicha frase inicial."
+      },
+      {
+        "text": "Jeff De Luca",
+        "isCorrect": false,
+        "rationale": "Jeff De Luca es reconocido por desarrollar la metodología ágil FDD a mediados de la década de 1990, mucho después del origen industrial clásico."
+      },
+      {
+        "text": "Peter Coad",
+        "isCorrect": false,
+        "rationale": "Peter Coad colaboró en la creación de la metodología de desarrollo orientada a características (FDD), no en la ingeniería industrial del siglo XIX."
+      }
+    ],
+    "hint": "Se le considera el padre de la administración científica y estudió la eficiencia en las industrias junto a Henry Gantt.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son las tres restricciones tradicionales interconectadas que componen la llamada 'triple restricción' de un proyecto?",
+    "opciones": [
+      {
+        "text": "Tiempo, costo y alcance",
+        "isCorrect": true,
+        "rationale": "El tiempo necesario, los costos presupuestados y el alcance fijado constituyen las tres limitaciones fundamentales que definen el marco operativo del proyecto."
+      },
+      {
+        "text": "Riesgo, calidad y recursos",
+        "isCorrect": false,
+        "rationale": "Aunque son elementos clave de la gestión, la calidad es el resultado del equilibrio del triángulo y los riesgos representan la incertidumbre general."
+      },
+      {
+        "text": "Adquisiciones, comunicaciones e interesados",
+        "isCorrect": false,
+        "rationale": "Estas corresponden a áreas de conocimiento específicas dentro del PMBOK, pero no componen el triángulo clásico de restricciones primarias."
+      },
+      {
+        "text": "Integración, liderazgo y presupuesto",
+        "isCorrect": false,
+        "rationale": "El presupuesto forma parte del costo, pero la integración y el liderazgo son competencias y procesos de coordinación global."
+      },
+      {
+        "text": "Alcance, tecnología y personal",
+        "isCorrect": false,
+        "rationale": "El personal y la tecnología se agrupan dentro de la gestión de recursos, mientras que el costo y el tiempo quedan omitidos en esta combinación."
+      }
+    ],
+    "hint": "Conforman los tres lados de un triángulo cuyo equilibrio determina la calidad del entregable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes corresponden a grupos de procesos de la gestión de proyectos definidos en el marco tradicional del PMBOK?",
+    "opciones": [
+      {
+        "text": "Grupo de iniciación",
+        "isCorrect": true,
+        "rationale": "Define el propósito inicial del proyecto, identifica a los interesados clave y autoriza su comienzo formal."
+      },
+      {
+        "text": "Grupo de planeación",
+        "isCorrect": true,
+        "rationale": "Desarrolla el plan detallado con el alcance, cronograma, presupuesto y estrategias de ejecución."
+      },
+      {
+        "text": "Grupo de monitoreo y control",
+        "isCorrect": true,
+        "rationale": "Supervisa y fiscaliza el avance real para realizar los ajustes necesarios frente a desviaciones del plan."
+      },
+      {
+        "text": "Grupo de comercialización",
+        "isCorrect": false,
+        "rationale": "La comercialización es una función operativa de ventas de la empresa y no un grupo de procesos de dirección de proyectos."
+      },
+      {
+        "text": "Grupo de innovación tecnológica",
+        "isCorrect": false,
+        "rationale": "Aunque existen proyectos de innovación, este concepto no constituye una fase estándar de la matriz de procesos del PMBOK."
+      }
+    ],
+    "hint": "Representan las fases horizontales por las que transcurre el ciclo de vida de cualquier proyecto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué documento se elabora en la fase de iniciación para autorizar formalmente la existencia de un proyecto y definir sus objetivos iniciales?",
+    "opciones": [
+      {
+        "text": "Acta de constitución del proyecto",
+        "isCorrect": true,
+        "rationale": "El acta de constitución o Project Charter formaliza el inicio del proyecto, vinculándolo con los objetivos estratégicos de la organización."
+      },
+      {
+        "text": "Diagrama de Ishikawa",
+        "isCorrect": false,
+        "rationale": "Esta es una herramienta gráfica para el análisis de causas raíz de problemas, no un documento de autorización inicial."
+      },
+      {
+        "text": "Matriz RACI de responsabilidades",
+        "isCorrect": false,
+        "rationale": "La matriz RACI se utiliza para asignar roles específicos en las tareas durante la planificación y ejecución."
+      },
+      {
+        "text": "Estructura de Desglose del Trabajo (EDT/WBS)",
+        "isCorrect": false,
+        "rationale": "La EDT descompone jerárquicamente el alcance del proyecto durante la etapa de planificación, no en la iniciación."
+      },
+      {
+        "text": "Plan de gestión de adquisiciones",
+        "isCorrect": false,
+        "rationale": "Este plan detalla cómo se administrarán las compras y contrataciones externas una vez iniciada la planificación."
+      }
+    ],
+    "hint": "Es conocido en inglés como 'Project Charter' y otorga la autoridad al director del proyecto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Con qué término en inglés se designa a todas las personas, grupos u organizaciones que pueden afectar o verse afectados por las decisiones o resultados de un proyecto?",
+    "opciones": [
+      {
+        "text": "Stakeholders",
+        "isCorrect": true,
+        "rationale": "El término 'stakeholders' engloba a los interesados, clientes, patrocinadores y comunidades impactadas por el proyecto."
+      },
+      {
+        "text": "Product Owners",
+        "isCorrect": false,
+        "rationale": "El Product Owner es un rol específico en marcos ágiles como Scrum encargado de priorizar el backlog del producto."
+      },
+      {
+        "text": "Scrum Masters",
+        "isCorrect": false,
+        "rationale": "El Scrum Master es el facilitador del equipo en la metodología Scrum, no el término general para los grupos de interés."
+      },
+      {
+        "text": "Sprints",
+        "isCorrect": false,
+        "rationale": "Los Sprints son ciclos temporales cortos de trabajo en metodologías ágiles, no personas o grupos."
+      },
+      {
+        "text": "Buffers",
+        "isCorrect": false,
+        "rationale": "Un buffer es un margen o colchón de tiempo o presupuesto utilizado para mitigar incertidumbres."
+      }
+    ],
+    "hint": "Representa a las partes o grupos de interés que deben ser gestionados a lo largo del proyecto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Durante las primeras etapas del desarrollo de la dirección de proyectos a principios y mediados del siglo XX, ¿qué herramientas o métodos ayudaron a visualizar el flujo de tareas y controlar proyectos complejos?",
+    "opciones": [
+      {
+        "text": "Diagrama de Gantt",
+        "isCorrect": true,
+        "rationale": "Fue creado para documentar la secuencia lógica, dependencias y grado de avance de tareas en la construcción de navíos."
+      },
+      {
+        "text": "Método del camino crítico (CPM)",
+        "isCorrect": true,
+        "rationale": "Se desarrolló para coordinar proyectos militares e industriales complejos, ayudando a controlar la secuencia de tareas sin margen de retraso."
+      },
+      {
+        "text": "Inteligencia artificial generativa",
+        "isCorrect": false,
+        "rationale": "Es una tecnología informática contemporánea desarrollada a finales del siglo XX y principios del XXI."
+      },
+      {
+        "text": "Tableros virtuales de Jira",
+        "isCorrect": false,
+        "rationale": "Jira es una herramienta digital moderna de software para gestión de tareas y metodologías ágiles."
+      },
+      {
+        "text": "Algoritmos de aprendizaje profundo",
+        "isCorrect": false,
+        "rationale": "Pertenecen al campo moderno de la ciencia de datos y computación, muy posterior a las herramientas clásicas de la I Guerra Mundial."
+      }
+    ],
+    "hint": "Surgieron en industrias como la construcción naval y el sector militar antes de la era moderna de los años 50.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de trabajo Scrum, ¿qué es un 'Sprint'?",
+    "opciones": [
+      {
+        "text": "Una iteración corta y de duración fija en la que el equipo trabaja para entregar un incremento del producto.",
+        "isCorrect": true,
+        "rationale": "El Sprint es la unidad básica de trabajo en Scrum (generalmente de 1 a 4 semanas) donde se desarrollan funcionalidades concretas."
+      },
+      {
+        "text": "Una reunión diaria de 15 minutos para sincronizar las actividades individuales del equipo.",
+        "isCorrect": false,
+        "rationale": "Esa descripción corresponde al 'Daily Scrum' o reunión diaria de pie, no al Sprint completo."
+      },
+      {
+        "text": "La lista completa y desordenada de todas las ideas solicitadas por el cliente.",
+        "isCorrect": false,
+        "rationale": "La lista de requerimientos es el 'Product Backlog', del cual se seleccionan las tareas que formarán parte del Sprint."
+      },
+      {
+        "text": "Una fase de cierre definitivo del proyecto donde se evalúa el impacto social ambiental.",
+        "isCorrect": false,
+        "rationale": "El Sprint es un ciclo de desarrollo iterativo continuo durante la ejecución, no una etapa de cierre definitivo del proyecto."
+      },
+      {
+        "text": "Un contrato legal que impone penalizaciones financieras por retrasos operativos.",
+        "isCorrect": false,
+        "rationale": "Un Sprint es un marco operativo de trabajo colaborativo en metodologías ágiles, no un instrumento sancionatorio."
+      }
+    ],
+    "hint": "Es un bloque temporal de corta duración donde se entrega un incremento de valor utilizable.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Según los valores fundamentales del Manifiesto Ágil explicados en clase, ¿cuáles de los siguientes aspectos se priorizan sobre los procesos rígidos y las negociaciones estrictas?",
+    "opciones": [
+      {
+        "text": "Individuos e interacciones sobre procesos y herramientas",
+        "isCorrect": true,
+        "rationale": "Valora la comunicación humana y el trabajo en equipo por encima de la adherencia ciega a herramientas automáticas."
+      },
+      {
+        "text": "Colaboración con el cliente sobre negociación contractual",
+        "isCorrect": true,
+        "rationale": "Fomenta trabajar junto al cliente de forma transparente en lugar de limitarse a discutir cláusulas legales fijas."
+      },
+      {
+        "text": "Respuesta ante el cambio sobre seguir un plan",
+        "isCorrect": true,
+        "rationale": "Prioriza la capacidad de adaptación cuando surgen nuevos requisitos antes que mantener un plan desactualizado."
+      },
+      {
+        "text": "Documentación exhaustiva sobre software o producto funcional",
+        "isCorrect": false,
+        "rationale": "El Manifiesto Ágil establece lo contrario: prefiere entregar productos que funcionen antes que generar documentación extensiva."
+      },
+      {
+        "text": "Aislamiento del equipo técnico respecto a los usuarios finales",
+        "isCorrect": false,
+        "rationale": "Las metodologías ágiles exigen una comunicación diaria y continua con los interesados, no el aislamiento."
+      }
+    ],
+    "hint": "Buscan adaptar la gestión al factor humano, la satisfacción del cliente y la flexibilidad ante imprevistos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de un equipo Scrum, ¿cuál es la responsabilidad principal del 'Product Owner'?",
+    "opciones": [
+      {
+        "text": "Representar las necesidades del cliente y priorizar los elementos del Product Backlog.",
+        "isCorrect": true,
+        "rationale": "El Product Owner define qué se debe construir y asegura que el trabajo entregue el máximo valor al negocio."
+      },
+      {
+        "text": "Facilitar los procesos Scrum y remover los obstáculos que impidan avanzar al equipo.",
+        "isCorrect": false,
+        "rationale": "Esa es la función específica del 'Scrum Master', quien actúa como un líder que da servicio al equipo."
+      },
+      {
+        "text": "Escribir directamente las líneas de código del software y realizar las pruebas unitarias.",
+        "isCorrect": false,
+        "rationale": "Esa tarea corresponde al Equipo de Desarrollo (Developers), encargado del trabajo técnico operativo."
+      },
+      {
+        "text": "Aprobar los presupuestos corporativos globales del cliente ante el consejo directivo.",
+        "isCorrect": false,
+        "rationale": "El Product Owner prioriza las características del producto, pero las finanzas globales de la empresa corresponden a la alta gerencia."
+      },
+      {
+        "text": "Supervisar exclusivamente la asistencia física del personal a la oficina.",
+        "isCorrect": false,
+        "rationale": "Scrum se basa en la autogestión del equipo; el Product Owner no ejerce un rol de control de asistencia."
+      }
+    ],
+    "hint": "Es la voz del cliente dentro del proyecto y administra la lista priorizada de requerimientos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Qué metodología ágil utiliza un tablero visual dividido en columnas como 'Por hacer', 'En progreso' y 'Hecho' para gestionar el flujo de trabajo?",
+    "opciones": [
+      {
+        "text": "Kanban",
+        "isCorrect": true,
+        "rationale": "Kanban se enfoca en visualizar las tareas mediante tarjetas en columnas para controlar el trabajo en progreso (WIP)."
+      },
+      {
+        "text": "PERT",
+        "isCorrect": false,
+        "rationale": "PERT es una técnica de estimación probabilística del tiempo mediante redes de eventos, no un tablero visual por columnas."
+      },
+      {
+        "text": "Seis Sigma",
+        "isCorrect": false,
+        "rationale": "Seis Sigma es un enfoque estadístico centrado en la reducción de la variabilidad y defectos de fabricación."
+      },
+      {
+        "text": "Extreme Programming (XP)",
+        "isCorrect": false,
+        "rationale": "XP es una metodología enfocada en prácticas de ingeniería de software como la programación en parejas y pruebas continuas."
+      },
+      {
+        "text": "Cadena Crítica",
+        "isCorrect": false,
+        "rationale": "La Cadena Crítica enfoca la gestión del tiempo en las restricciones de recursos y uso de colchones (buffers)."
+      }
+    ],
+    "hint": "Nació en la industria automotriz japonesa para limitar el trabajo en proceso y evitar cuellos de botella.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Cuáles de los siguientes son los tres roles oficialmente definidos dentro de la estructura de un equipo Scrum?",
+    "opciones": [
+      {
+        "text": "Product Owner",
+        "isCorrect": true,
+        "rationale": "Encargado de gestionar el valor del producto y el Product Backlog."
+      },
+      {
+        "text": "Scrum Master",
+        "isCorrect": true,
+        "rationale": "Encargado de promover y respaldar el marco Scrum guiando al equipo."
+      },
+      {
+        "text": "Equipo de Desarrollo",
+        "isCorrect": true,
+        "rationale": "Los profesionales que realizan el trabajo de entregar un incremento funcional al final de cada Sprint."
+      },
+      {
+        "text": "Director General de Operaciones",
+        "isCorrect": false,
+        "rationale": "Es un cargo ejecutivo dentro de la jerarquía organizacional, no un rol interno del marco Scrum."
+      },
+      {
+        "text": "Comité de Auditoría Externa",
+        "isCorrect": false,
+        "rationale": "Es una entidad fiscalizadora independiente y no forma parte del equipo multifuncional Scrum."
+      }
+    ],
+    "hint": "Son las tres partes que componen un equipo multifuncional y autoorganizado en este marco de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuál es el pilar central de la metodología Lean aplicada a la gestión de proyectos?",
+    "opciones": [
+      {
+        "text": "Eliminar de forma continua los desperdicios para maximizar el valor entregado al cliente.",
+        "isCorrect": true,
+        "rationale": "La filosofía Lean se enfoca en identificar actividades que no agregan valor (desperdicios) y eliminarlas para ganar eficiencia."
+      },
+      {
+        "text": "Exigir planes de contratación rígidos que no permitan ningún ajuste posterior.",
+        "isCorrect": false,
+        "rationale": "Lean favorece la flexibilidad y los sistemas 'pull' guiados por la demanda real del cliente, no la rigidez."
+      },
+      {
+        "text": "Aumentar la cantidad de documentación e informes intermedios al máximo posible.",
+        "isCorrect": false,
+        "rationale": "El exceso de burocracia e informes no requeridos es considerado por Lean precisamente como un desperdicio de tiempo."
+      },
+      {
+        "text": "Sustituir por completo a las personas por sistemas informáticos automatizados.",
+        "isCorrect": false,
+        "rationale": "Lean valora y empodera a los equipos humanos como la fuente principal del conocimiento y la mejora continua."
+      },
+      {
+        "text": "Prohibir la interacción directa con el usuario final durante la producción.",
+        "isCorrect": false,
+        "rationale": "El valor en Lean se define siempre desde la perspectiva directa del cliente o usuario final."
+      }
+    ],
+    "hint": "Inspirada en el sistema de producción Toyota, busca optimizar procesos eliminando todo lo que no aporte valor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En una matriz de asignación de responsabilidades RACI, ¿qué rol desempeña la persona identificada con la letra 'A' (Accountable / Aprobador)?",
+    "opciones": [
+      {
+        "text": "Es el responsable final que autoriza la tarea y toma la decisión de si se aprueba o no.",
+        "isCorrect": true,
+        "rationale": "El Aprobador ('Accountable') debe velar por que la tarea cumpla los estándares y tiene la última palabra sobre su aceptación."
+      },
+      {
+        "text": "Es el profesional que realiza el trabajo operativo e implementa la tarea directamente.",
+        "isCorrect": false,
+        "rationale": "Quien ejecuta el trabajo se identifica con la letra 'R' (Responsible/Responsable)."
+      },
+      {
+        "text": "Es un especialista técnico que brinda asesoría o información previa a la ejecución.",
+        "isCorrect": false,
+        "rationale": "Quien aporta conocimiento experto sin poder de decisión se identifica con la letra 'C' (Consulted/Consultado)."
+      },
+      {
+        "text": "Es un participante que solo recibe actualizaciones sobre el estado final del entregable.",
+        "isCorrect": false,
+        "rationale": "Quien solo requiere mantenerse al tanto del avance sin intervenir se identifica con la letra 'I' (Informed/Informado)."
+      },
+      {
+        "text": "Es el patrocinador externo encargado de financiar la compra de suministros.",
+        "isCorrect": false,
+        "rationale": "La matriz RACI asigna roles sobre actividades operativas y de decisión, no la procedencia de fondos."
+      }
+    ],
+    "hint": "Es la persona que posee la autoridad final y aprueba los resultados de la tarea.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Cuáles de las siguientes corresponden a las siglas en español o inglés que forman el nombre de la matriz RACI?",
+    "opciones": [
+      {
+        "text": "Responsable (Responsible)",
+        "isCorrect": true,
+        "rationale": "Indica quién hace el trabajo o ejecuta la tarea."
+      },
+      {
+        "text": "Aprobador (Accountable)",
+        "isCorrect": true,
+        "rationale": "Indica quién autoriza y firma la aprobación final de la tarea."
+      },
+      {
+        "text": "Consultado (Consulted)",
+        "isCorrect": true,
+        "rationale": "Indica a quién se debe pedir opinión técnica antes de ejecutar la tarea."
+      },
+      {
+        "text": "Informado (Informed)",
+        "isCorrect": true,
+        "rationale": "Indica a quién se notifica sobre el progreso y resultado de la tarea."
+      },
+      {
+        "text": "Auditor (Auditor)",
+        "isCorrect": false,
+        "rationale": "La letra A en la matriz RACI representa 'Accountable' (Aprobador), no Auditor."
+      }
+    ],
+    "hint": "Se relacionan con los roles de ejecutor, decisor, asesor y receptor de información.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta gráfica representa las actividades del proyecto mediante barras horizontales situadas en un calendario para mostrar su secuencia y avance?",
+    "opciones": [
+      {
+        "text": "Diagrama de Gantt",
+        "isCorrect": true,
+        "rationale": "El Diagrama de Gantt ilustra de forma clara las fechas de inicio, finalización, duración y dependencias de cada tarea."
+      },
+      {
+        "text": "Diagrama de Ishikawa",
+        "isCorrect": false,
+        "rationale": "Conocido como diagrama de causa-efecto, se utiliza para analizar problemas y sus causas raíz."
+      },
+      {
+        "text": "Matriz RACI",
+        "isCorrect": false,
+        "rationale": "Es una tabla que asigna responsabilidades a las personas, no un gráfico cronológico de barras."
+      },
+      {
+        "text": "Histograma de frecuencias",
+        "isCorrect": false,
+        "rationale": "Es un gráfico estadístico que muestra la distribución de datos en intervalos, no una secuencia temporal de proyectos."
+      },
+      {
+        "text": "Diagrama de dispersión",
+        "isCorrect": false,
+        "rationale": "Se utiliza para analizar la relación matemática o correlación entre dos variables numéricas."
+      }
+    ],
+    "hint": "Es ampliamente utilizada en programas como Microsoft Project para planificar el tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la técnica PERT, ¿cuáles son los tres valores de estimación que se calculan para determinar la duración promedio esperada de una tarea?",
+    "opciones": [
+      {
+        "text": "Duración optimista, duración pesimista y duración más probable.",
+        "isCorrect": true,
+        "rationale": "PERT pondera el tiempo optimista ($o$), pesimista ($p$) y más probable ($m$) mediante la fórmula $t_e = \\frac{o + 4m + p}{6}$."
+      },
+      {
+        "text": "Duración inicial, duración intermedia y duración final.",
+        "isCorrect": false,
+        "rationale": "Estos términos se refieren a momentos del tiempo en el calendario, no a estimaciones del grado de incertidumbre."
+      },
+      {
+        "text": "Duración mínima, duración de contingencia y duración de holgura.",
+        "isCorrect": false,
+        "rationale": "La holgura y la contingencia son reservas o desviaciones, no las tres estimaciones primarias del método PERT."
+      },
+      {
+        "text": "Duración teórica, duración presupuestada y duración facturada.",
+        "isCorrect": false,
+        "rationale": "Son términos administrativos y contables, no valores probabilísticos de estimación técnica."
+      },
+      {
+        "text": "Duración corta, duración mediana y duración larga.",
+        "isCorrect": false,
+        "rationale": "Aunque alude a magnitudes, los términos conceptuales correctos definidos por la metodología son optimista, pesimista y más probable."
+      }
+    ],
+    "hint": "Consideran el escenario ideal, el peor escenario posible y el comportamiento más habitual.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Cuáles de los siguientes son elementos característicos de la gestión por Cadena Crítica?",
+    "opciones": [
+      {
+        "text": "Identificación de la secuencia de tareas que limita la duración del proyecto.",
+        "isCorrect": true,
+        "rationale": "Evalúa el camino de actividades determinantes al considerar tanto dependencias como disponibilidad de recursos."
+      },
+      {
+        "text": "Uso de buffers o colchones de tiempo para absorber las variaciones de las tareas.",
+        "isCorrect": true,
+        "rationale": "Añade reservas estratégicas al final de la cadena o de los alimentadores para no sobreestimar cada tarea individual."
+      },
+      {
+        "text": "Enfoque en la asignación eficiente de los recursos limitados.",
+        "isCorrect": true,
+        "rationale": "A diferencia del camino crítico tradicional, la Cadena Crítica considera los recursos como la restricción principal."
+      },
+      {
+        "text": "Eliminación completa de la necesidad de establecer fechas de inicio o fin.",
+        "isCorrect": false,
+        "rationale": "La Cadena Crítica es una metodología de programación que requiere controlar rigurosamente las fechas clave."
+      },
+      {
+        "text": "Prohibición total de usar cualquier margen de reserva o contingencia.",
+        "isCorrect": false,
+        "rationale": "Precisamente la base de esta técnica radica en retirar la holgura de cada tarea e integrarla en colchones (buffers) colectivos."
+      }
+    ],
+    "hint": "Busca evitar retrasos enfocándose en las limitaciones físicas de recursos y protegiendo las fechas mediante colchones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito del Mapeo del Flujo de Valor (Value Stream Mapping)?",
+    "opciones": [
+      {
+        "text": "Visualizar todo el proceso para identificar desperdicios y potenciar los pasos que aportan valor real.",
+        "isCorrect": true,
+        "rationale": "El VSM mapea el flujo de materiales e información desde el origen hasta el cliente para optimizar la eficiencia general."
+      },
+      {
+        "text": "Calcular la tasa de interés bancaria aplicable a los préstamos financieros.",
+        "isCorrect": false,
+        "rationale": "Es un cálculo financiero corporativo ajeno a las técnicas de diagramación de flujos de procesos."
+      },
+      {
+        "text": "Asignar salarios individuales a los miembros del equipo según su antigüedad.",
+        "isCorrect": false,
+        "rationale": "La escala salarial la administra el departamento de recursos humanos y no se gestiona con VSM."
+      },
+      {
+        "text": "Diseñar la infraestructura física de los servidores y redes de internet.",
+        "isCorrect": false,
+        "rationale": "El diseño de infraestructura es una disciplina técnica de sistemas, no un mapeo ágil de flujo de valor de procesos."
+      },
+      {
+        "text": "Registrar legalmente los logotipos e imágenes comerciales de la empresa.",
+        "isCorrect": false,
+        "rationale": "El registro de marcas forma parte del ámbito de propiedad intelectual y asesoría jurídica."
+      }
+    ],
+    "hint": "Permite diagramar visualmente todos los pasos del proceso para distinguir las actividades productivas de las innecesarias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de proyectos, ¿cómo se define conceptualmente un 'riesgo'?",
+    "opciones": [
+      {
+        "text": "Una evento incierto que, de ocurrir, puede tener un impacto positivo o negativo en los objetivos del proyecto.",
+        "isCorrect": true,
+        "rationale": "El riesgo representa incertidumbre (probabilidad); si se concreta positivamente es una oportunidad y si es negativo es una amenaza."
+      },
+      {
+        "text": "Un problema confirmado que ya se materializó al 100% y está generando daños.",
+        "isCorrect": false,
+        "rationale": "Un evento que ya ha ocurrido al 100% de certeza deja de ser un riesgo y se convierte en un problema activo."
+      },
+      {
+        "text": "La falta total de presupuesto asignado para iniciar la fase de planificación.",
+        "isCorrect": false,
+        "rationale": "La ausencia de fondos es un hecho o restricción dada, no la definición conceptual de riesgo."
+      },
+      {
+        "text": "Una multa o sanción administrativa aplicada de forma definitiva al proyecto.",
+        "isCorrect": false,
+        "rationale": "Una sanción concreta es la consecuencia materializada de un incumplimiento, no el riesgo abstracto previo."
+      },
+      {
+        "text": "Un error deliberado cometido de manera consciente por un colaborador del equipo.",
+        "isCorrect": false,
+        "rationale": "Un sabotaje o falta ética es una infracción grave, no la definición metodológica de la incertidumbre en proyectos."
+      }
+    ],
+    "hint": "Implica un grado de incertidumbre sobre un evento futuro que podría favorecer o perjudicar al proyecto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre un riesgo y un problema?",
+    "opciones": [
+      {
+        "text": "El riesgo es una probabilidad futura incierta, mientras que el problema es un riesgo que ya ocurrió al 100%.",
+        "isCorrect": true,
+        "rationale": "El riesgo analiza eventos futuros probables; cuando la probabilidad llega al 100% el evento es una realidad (problema)."
+      },
+      {
+        "text": "El riesgo es siempre un hecho positivo, mientras que el problema es neutro.",
+        "isCorrect": false,
+        "rationale": "Los riesgos suelen analizarse como amenazas negativas, aunque conceptualmente puedan ser también positivos."
+      },
+      {
+        "text": "El riesgo solo altera el costo, mientras que el problema solo altera el cronograma.",
+        "isCorrect": false,
+        "rationale": "Tanto los riesgos como los problemas pueden impactar cualquiera de las restricciones del proyecto (tiempo, costo, alcance)."
+      },
+      {
+        "text": "El riesgo le compete al cliente y el problema le compete al proveedor.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad de administrar riesgos y problemas es compartida por el equipo de gestión del proyecto."
+      },
+      {
+        "text": "No existe ninguna diferencia, ambos términos son sinónimos en la metodología.",
+        "isCorrect": false,
+        "rationale": "Son conceptos claramente distinguidos en la gestión por su grado de certeza y el tipo de acción requerida (preventiva vs correctiva)."
+      }
+    ],
+    "hint": "Tiene que ver con la probabilidad de ocurrencia: uno es incierto y el otro es un hecho presente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Para determinar la importancia o criticidad de un riesgo, ¿cuáles son las dos variables fundamentales que se multiplican entre sí?",
+    "opciones": [
+      {
+        "text": "Probabilidad de ocurrencia",
+        "isCorrect": true,
+        "rationale": "Mide qué tan posible es que la incertidumbre se convierta en una realidad (expresada en porcentaje o escala de 1 a 5)."
+      },
+      {
+        "text": "Impacto o severidad del evento",
+        "isCorrect": true,
+        "rationale": "Mide la magnitud del golpe positivo o negativo que sufriría el proyecto si el riesgo llegase a materializarse."
+      },
+      {
+        "text": "Nombre del proveedor del sistema informático",
+        "isCorrect": false,
+        "rationale": "Los datos identitarios de los proveedores son irrelevantes para la ecuación de criticidad del riesgo."
+      },
+      {
+        "text": "Antigüedad del edificio de las oficinas principales",
+        "isCorrect": false,
+        "rationale": "Es una variable del entorno que no forma parte de la fórmula matemática del valor monetario o importancia del riesgo."
+      },
+      {
+        "text": "Número de páginas del contrato firmado con el cliente",
+        "isCorrect": false,
+        "rationale": "La extensión de un documento legal no determina la probabilidad ni el impacto técnico de un riesgo."
+      }
+    ],
+    "hint": "Combinan la posibilidad de que el evento suceda con la fuerza del impacto que tendría.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Si el equipo de un proyecto contrata una póliza de seguro para que una compañía asuma las pérdidas financieras en caso de un siniestro, ¿qué estrategia de respuesta al riesgo está aplicando?",
+    "opciones": [
+      {
+        "text": "Transferir",
+        "isCorrect": true,
+        "rationale": "La transferencia traslada la responsabilidad financiera y el impacto del riesgo a una tercera parte, como una aseguradora."
+      },
+      {
+        "text": "Mitigar",
+        "isCorrect": false,
+        "rationale": "Mitigar implica reducir la probabilidad o el impacto del riesgo mediante acciones preventivas previas, no traspasarlo a un tercero."
+      },
+      {
+        "text": "Evitar",
+        "isCorrect": false,
+        "rationale": "Evitar exige eliminar por completo la causa o la actividad que genera el riesgo para que este no pueda suceder."
+      },
+      {
+        "text": "Aceptar",
+        "isCorrect": false,
+        "rationale": "Aceptar consiste en asumir el impacto del riesgo sin realizar acciones previas, utilizando reservas si se materializa."
+      },
+      {
+        "text": "Ocultar",
+        "isCorrect": false,
+        "rationale": "Ocultar no es una estrategia metodológica ni ética en la dirección profesional de proyectos."
+      }
+    ],
+    "hint": "Consiste en trasladar la responsabilidad y el impacto económico a un tercero mediante un contrato.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes corresponden a estrategias válidas para responder ante los riesgos en un proyecto?",
+    "opciones": [
+      {
+        "text": "Mitigar",
+        "isCorrect": true,
+        "rationale": "Busca disminuir la probabilidad de ocurrencia o la gravedad del impacto de un riesgo negativo."
+      },
+      {
+        "text": "Transferir",
+        "isCorrect": true,
+        "rationale": "Pasa el impacto y la gestión del riesgo a un tercero, como ocurre con un seguro o subcontrato."
+      },
+      {
+        "text": "Aceptar",
+        "isCorrect": true,
+        "rationale": "Se reconoce el riesgo y se decide asumir su impacto si ocurre, mediante reservas de contingencia."
+      },
+      {
+        "text": "Evitar",
+        "isCorrect": true,
+        "rationale": "Modifica el plan del proyecto para eliminar la amenaza o la condición que genera el riesgo."
+      },
+      {
+        "text": "Ignorar",
+        "isCorrect": false,
+        "rationale": "Ignorar o desatender conscientemente los riesgos identificados es una mala práctica que vulnera la gestión del proyecto."
+      }
+    ],
+    "hint": "Incluyen acciones para reducir, trasladar, cambiar el plan o asumir activamente la incertidumbre.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al cuantificar la reserva monetaria de contingencia mediante el producto de probabilidad por impacto, ¿cómo se combinan los valores de los eventos de riesgo positivos y negativos?",
+    "opciones": [
+      {
+        "text": "Se suman los valores monetarios de las amenazas (negativos) y se restan los valores de las oportunidades (positivos).",
+        "isCorrect": true,
+        "rationale": "Las contingencias suman fondos para cubrir posibles sobrecostos negativos y restan los ahorros previstos por riesgos positivos."
+      },
+      {
+        "text": "Se suman todos los valores de forma absoluta sin importar si son eventos positivos o negativos.",
+        "isCorrect": false,
+        "rationale": "Sumar los ahorros potenciales aumentaría falsamente el presupuesto en lugar de compensar los posibles gastos."
+      },
+      {
+        "text": "Se eliminan todos los eventos negativos y únicamente se presupuestan los eventos positivos.",
+        "isCorrect": false,
+        "rationale": "Descarta la cobertura de las amenazas del proyecto, dejando la reserva de contingencia sin protección frente a siniestros."
+      },
+      {
+        "text": "Se multiplican los impactos por cero para anular cualquier cálculo de contingencia.",
+        "isCorrect": false,
+        "rationale": "Multiplicar por cero eliminaría completamente la reserva financiera recomendada para emergencias."
+      },
+      {
+        "text": "Se dividen los costos de las oportunidades entre el número total de trabajadores.",
+        "isCorrect": false,
+        "rationale": "El cálculo del valor monetario esperado se realiza sobre la probabilidad e impacto de cada riesgo, no por distribución de personal."
+      }
+    ],
+    "hint": "Las amenazas añaden necesidad de presupuesto extra, mientras que las oportunidades representan potenciales ahorros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué técnica gráfica, conocida también como 'diagrama de espina de pescado', se aplica en la gestión de riesgos para analizar las causas raíz de un problema?",
+    "opciones": [
+      {
+        "text": "Diagrama de Ishikawa",
+        "isCorrect": true,
+        "rationale": "El diagrama de Ishikawa o de causa-efecto ayuda a categorizar y visualizar las causas raíz que pueden desencadenar un riesgo."
+      },
+      {
+        "text": "Matriz RACI",
+        "isCorrect": false,
+        "rationale": "Sirve para estructurar la asignación de roles y responsabilidades en el equipo, no para el análisis de causas raíz."
+      },
+      {
+        "text": "Tablero Kanban",
+        "isCorrect": false,
+        "rationale": "Permite controlar el flujo visual de trabajo en progreso, no encontrar la causa técnica de un problema."
+      },
+      {
+        "text": "Diagrama de Gantt",
+        "isCorrect": false,
+        "rationale": "Presenta el cronograma de tareas en el tiempo, no las relaciones causales de fallas o riesgos."
+      },
+      {
+        "text": "Análisis PERT",
+        "isCorrect": false,
+        "rationale": "Evalúa la duración probabilística de las actividades dentro de una red de proyectos."
+      }
+    ],
+    "hint": "Fue desarrollada por un pionero de la calidad japonés y relaciona causas agrupadas con un efecto central.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál fue el aporte fundamental de Henry Gantt al desarrollo histórico de la gerencia de proyectos a inicios del siglo XX?",
+    "opciones": [
+      {
+        "text": "Diseño de un diagrama gráfico que documenta la secuencia lógica, dependencias y grado de avance de las tareas.",
+        "isCorrect": true,
+        "rationale": "Henry Gantt desarrolló el diagrama de barras visual para representar el flujo lógico de trabajo, dependencias e hitos temporales en la construcción naval."
+      },
+      {
+        "text": "Formulación del concepto de Mapeo del Flujo de Valor para eliminar desperdicios industriales.",
+        "isCorrect": false,
+        "rationale": "El Mapeo del Flujo de Valor es una técnica derivada posteriormente del sistema de producción de Toyota y la filosofía Lean, no desarrollada por Gantt."
+      },
+      {
+        "text": "Invención del Método del Camino Crítico (CPM) para la logística militar en la Primera Guerra Mundial.",
+        "isCorrect": false,
+        "rationale": "El método del camino crítico se desarrolló más adelante, a mediados del siglo XX, durante la era moderna de la dirección de proyectos."
+      },
+      {
+        "text": "Fundación del Project Management Institute (PMI) y publicación de la primera guía del PMBOK.",
+        "isCorrect": false,
+        "rationale": "El PMI fue fundado en Estados Unidos en 1969 por un grupo de profesionales de diversas industrias, décadas después del aporte de Gantt."
+      },
+      {
+        "text": "Acuñación de la frase 'lo importante no es trabajar más duro, sino trabajar de manera más inteligente'.",
+        "isCorrect": false,
+        "rationale": "Dicha máxima sobre la eficiencia mediante el razonamiento científico fue acuñada por el ingeniero mecánico Frederick Taylor."
+      }
+    ],
+    "hint": "Piensa en la herramienta gráfica ideada originalmente para la construcción de embarcaciones navales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión tradicional de proyectos, ¿cómo se relaciona la denominada 'triple restricción' (alcance, tiempo y costo) con la calidad del entregable final?",
+    "opciones": [
+      {
+        "text": "El alcance, tiempo y costo delimitan las fronteras operativas que garantizan el cumplimiento de los estándares de calidad.",
+        "isCorrect": true,
+        "rationale": "La calidad está directamente acotada por el equilibrio del alcance planificado, el tiempo disponible en el cronograma y el presupuesto asignado."
+      },
+      {
+        "text": "La calidad se define como una variable independiente que puede ser incrementada sin modificar el presupuesto o la duración.",
+        "isCorrect": false,
+        "rationale": "La calidad depende dinámicamente de las otras tres restricciones; cualquier cambio en el alcance, tiempo o costo afecta directamente los estándares de calidad."
+      },
+      {
+        "text": "El alcance se modifica de manera automática ante variaciones del presupuesto para sostener la calidad sin alterar el tiempo.",
+        "isCorrect": false,
+        "rationale": "Las modificaciones en el alcance requieren un control estricto de cambios y renegociación contractual, no ocurren de manera automática."
+      },
+      {
+        "text": "La calidad determina el costo total, anulando por completo la influencia que ejerce el alcance del proyecto.",
+        "isCorrect": false,
+        "rationale": "El alcance define las características del entregable; por ende, influye activamente en el costo e impide que sea anulado."
+      },
+      {
+        "text": "La triple restricción se enfoca exclusivamente en la gestión de interesados, omitiendo las especificaciones del producto.",
+        "isCorrect": false,
+        "rationale": "Las restricciones se enfocan en los parámetros técnico-operativos del proyecto y sus entregables, no solo en las expectativas de los interesados."
+      }
+    ],
+    "hint": "Visualiza el equilibrio de un triángulo cuyos tres vértices determinan las características aceptables del resultado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el estándar del PMI, ¿cuál es la secuencia lógica de los cinco grupos de procesos que componen el ciclo de vida de un proyecto?",
+    "opciones": [
+      {
+        "text": "Grupo de Iniciación, Grupo de Planificación, Grupo de Ejecución, Grupo de Monitoreo y Control, y Grupo de Cierre.",
+        "isCorrect": true,
+        "rationale": "Esta es la secuencia horizontal del PMBOK que abarca desde la autorización y diseño formal hasta el balance final del proyecto."
+      },
+      {
+        "text": "Grupo de Planificación, Grupo de Iniciación, Grupo de Ejecución, Grupo de Control de Cambios y Grupo de Cierre.",
+        "isCorrect": false,
+        "rationale": "La planificación requiere una previa iniciación para formalizar el propósito del proyecto a través del acta de constitución."
+      },
+      {
+        "text": "Grupo de Conceptualización, Grupo de Diseño, Grupo de Desarrollo, Grupo de Pruebas y Grupo de Mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Dicha secuencia corresponde a fases del ciclo de desarrollo de software clásico y no a los grupos de procesos del marco PMBOK."
+      },
+      {
+        "text": "Grupo de Evaluación de Riesgos, Grupo de Presupuestación, Grupo de Ejecución, Grupo de Calidad y Grupo de Post-cierre.",
+        "isCorrect": false,
+        "rationale": "Riesgos, costos y calidad corresponden a áreas de conocimiento verticales que se distribuyen a lo largo de los cinco grupos de procesos estándar."
+      },
+      {
+        "text": "Grupo de Iniciación, Grupo de Definición de Alcance, Grupo de Asignación de Recursos, Grupo de Cierre y Grupo de Post-cierre.",
+        "isCorrect": false,
+        "rationale": "La definición de alcance y la asignación de recursos forman parte de las actividades contenidas formalmente dentro del grupo de planificación."
+      }
+    ],
+    "hint": "Inicia con la formalización estratégica y concluye con la entrega de lecciones aprendidas y cierre administrativo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el contexto de proyectos extractivos e industriales de gran escala, ¿qué criterios definen la etapa de post-cierre y el manejo de comunidades impactadas?",
+    "opciones": [
+      {
+        "text": "Buscar dejar el entorno ambiental en condiciones iguales o superiores a las que presentaba previo al inicio de operaciones.",
+        "isCorrect": true,
+        "rationale": "El post-cierre bajo estándares modernos exige la remediación ambiental para restaurar o mejorar los ecosistemas originales."
+      },
+      {
+        "text": "Transferir infraestructuras comunitarias, habitacionales o de salud al Estado o a las comunidades para su aprovechamiento continuo.",
+        "isCorrect": true,
+        "rationale": "Reutilizar campamentos u hospitales en beneficio de la población local fomenta el desarrollo socioeconómico sostenible."
+      },
+      {
+        "text": "Rehabilitar los espacios alterados y procurar la mejora técnica de las condiciones de las napas freáticas o del suelo.",
+        "isCorrect": true,
+        "rationale": "La tecnología minera y extractiva actual promueve técnicas de recuperación ambiental para estabilizar cuencas e hídricos locales."
+      },
+      {
+        "text": "Cesar la responsabilidad social de forma automática al término de la extracción sin rehabilitar los pasivos ambientales.",
+        "isCorrect": false,
+        "rationale": "Abandonar el área sin remediación vulnera el principio de sostenibilidad y las normativas de cierre de operaciones actuales."
+      },
+      {
+        "text": "Eliminar toda la infraestructura construida durante el proyecto, incluyendo escuelas y vías de acceso locales.",
+        "isCorrect": false,
+        "rationale": "Las obras civiles duraderas que agregan valor a la comunidad impactada se suelen transferir para su mantenimiento local."
+      }
+    ],
+    "hint": "Considera la responsabilidad social empresarial y los principios de sostenibilidad ambiental a largo plazo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la etapa de iniciación de un proyecto, ¿cuál es la función estratégica del Acta de Constitución (Project Charter)?",
+    "opciones": [
+      {
+        "text": "Autorizar formalmente la existencia del proyecto y conferir autoridad al director para aplicar recursos a las actividades.",
+        "isCorrect": true,
+        "rationale": "El Project Charter establece el propósito, objetivos de alto nivel e identifica a los principales interesados al otorgar poder de gestión."
+      },
+      {
+        "text": "Definir la lista completa de paquetes de trabajo que componen la Estructura de Desglose del Trabajo (EDT/WBS).",
+        "isCorrect": false,
+        "rationale": "El desglose detallado del trabajo es una herramienta operativa que se construye formalmente durante la fase de planificación."
+      },
+      {
+        "text": "Fijar un presupuesto rígido e inalterable que prohíbe el uso de contingencias durante la ejecución.",
+        "isCorrect": false,
+        "rationale": "El acta de constitución contiene estimaciones presupuestarias preliminares u homologadas, no el presupuesto detallado ni rígido."
+      },
+      {
+        "text": "Establecer la programación exacta de tareas utilizando diagramas de red y el cálculo del camino crítico.",
+        "isCorrect": false,
+        "rationale": "La secuenciación detallada de actividades y el camino crítico son productos del área de gestión del tiempo en la planificación."
+      },
+      {
+        "text": "Reemplazar los contratos formales con los proveedores de bienes y servicios externos mediante cláusulas operativas.",
+        "isCorrect": false,
+        "rationale": "El Project Charter es un documento interno de autorización estratégica y no constituye un instrumento de adquisición legal externa."
+      }
+    ],
+    "hint": "Es el documento que avala la asignación oficial de recursos y la figura del director de proyecto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de proyectos se argumenta que los errores no atendidos en etapas iniciales tienen un costo de corrección escalar. ¿A qué se debe esta propiedad?",
+    "opciones": [
+      {
+        "text": "A que un fallo no detectado en la planificación se multiplica de forma logarítmica en términos de costos durante la ejecución.",
+        "isCorrect": true,
+        "rationale": "Corregir un error en fases tardías implica deshacer trabajo completado, reordenar logística y modificar entregables, elevando enormemente el gasto."
+      },
+      {
+        "text": "A que los costos de corrección se mantienen lineales y constantes sin importar la etapa en que se identifique la falla.",
+        "isCorrect": false,
+        "rationale": "El costo de hacer cambios se incrementa a medida que el proyecto avanza debido al nivel de trabajo ya invertido e integrado."
+      },
+      {
+        "text": "A que los contratos impiden aplicar cambios presupuestarios una vez superado el grupo de procesos de iniciación.",
+        "isCorrect": false,
+        "rationale": "Los cambios presupuestarios se procesan mediante un sistema formal de control de cambios durante la ejecución del proyecto."
+      },
+      {
+        "text": "A que en la etapa de cierre los errores se perdonan automáticamente sin generar impacto económico para la organización.",
+        "isCorrect": false,
+        "rationale": "Un error descubierto en el cierre puede provocar la no aceptación del entregable por el cliente e incurrir en severas penalizaciones."
+      },
+      {
+        "text": "A que la planificación detallada es opcional cuando se aplican metodologías basadas en estándares tradicionales del PMI.",
+        "isCorrect": false,
+        "rationale": "El marco del PMI concede un peso crítico al grupo de planificación para prevenir fallos que afecten la ejecución."
+      }
+    ],
+    "hint": "Piensa en el efecto multiplicador que causa modificar los cimientos cuando la estructura ya está construida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según los principios formulados en el Manifiesto Ágil, ¿cuál de los siguientes enunciados representa un valor prioritario en la gestión de proyectos?",
+    "opciones": [
+      {
+        "text": "Colaboración con el cliente por encima de la negociación contractual.",
+        "isCorrect": true,
+        "rationale": "El Manifiesto Ágil otorga más valor a la construcción estrecha y colaborativa del producto con el cliente que a la rigidez contractual."
+      },
+      {
+        "text": "Seguimiento inflexible de un plan preconcebido por encima de la respuesta oportuna al cambio.",
+        "isCorrect": false,
+        "rationale": "El enfoque ágil prioriza responder al cambio dinámico del entorno por encima del apego estricto a un plan inflexible."
+      },
+      {
+        "text": "Documentación exhaustiva y detallada por encima del software o producto plenamente funcional.",
+        "isCorrect": false,
+        "rationale": "Se valora la entrega de productos o software que funcionen y agreguen valor real por encima de volúmenes burocráticos de documentación."
+      },
+      {
+        "text": "Procesos y herramientas estandarizados por encima de los individuos y sus interacciones mutuas.",
+        "isCorrect": false,
+        "rationale": "El primer valor ágil establece que los individuos y la calidad de sus interacciones humanas están por encima de los procesos."
+      },
+      {
+        "text": "Fijación del alcance mediante contratos rígidos para evitar la incorporación de nuevas solicitudes.",
+        "isCorrect": false,
+        "rationale": "El desarrollo ágil promueve la adaptabilidad ante requerimientos cambiantes para maximizar la satisfacción del usuario."
+      }
+    ],
+    "hint": "Busca el postulado que antepone la comunicación humana activa al cumplimiento burocrático de acuerdos contractuales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del marco de trabajo Scrum, ¿cuál es la función principal desempeñada por el rol del Product Owner?",
+    "opciones": [
+      {
+        "text": "Maximizar el valor del producto y optimizar la gestión del Product Backlog priorizando los requerimientos del negocio.",
+        "isCorrect": true,
+        "rationale": "El Product Owner representa la voz del cliente e interesados, definiendo qué características deben desarrollarse para aportar más valor."
+      },
+      {
+        "text": "Eliminar bloqueos operativos, hacer cumplir las reglas del marco Scrum y actuar como facilitador del equipo.",
+        "isCorrect": false,
+        "rationale": "Dichas responsabilidades corresponden al rol del Scrum Master, quien vela por el proceso y facilita las ceremonias del equipo."
+      },
+      {
+        "text": "Asignar las tareas individuales a cada desarrollador durante las reuniones diarias de sincronización.",
+        "isCorrect": false,
+        "rationale": "El equipo de desarrollo en Scrum es autoorganizado; ningún rol externo les asigna autoritariamente sus tareas diarias."
+      },
+      {
+        "text": "Supervisar las auditorías financieras externas y aprobar los contratos de adquisiciones en el modelo tradicional.",
+        "isCorrect": false,
+        "rationale": "El Product Owner se enfoca en el desarrollo iterativo del producto, no en funciones de auditoría contable ni legal ajenas a Scrum."
+      },
+      {
+        "text": "Desarrollar de forma exclusiva el código fuente y ejecutar las pruebas unitarias del software en cada iteración.",
+        "isCorrect": false,
+        "rationale": "El desarrollo técnico y la ejecución de pruebas corresponden integralmente al Equipo de Desarrollo (Developers)."
+      }
+    ],
+    "hint": "Es la figura encargada de representar las necesidades del cliente y gestionar la lista priorizada de características.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el desarrollo de un proyecto guiado por la metodología Scrum, ¿qué eventos constituyen la dinámica formal de inspección y adaptación?",
+    "opciones": [
+      {
+        "text": "Sprint Planning, donde se selecciona el trabajo del backlog y se define el objetivo para el siguiente ciclo.",
+        "isCorrect": true,
+        "rationale": "La reunión de planificación del Sprint sirve para acordar qué entregables se abordarán y cómo se lograrán durante el ciclo."
+      },
+      {
+        "text": "Daily Scrum, una reunión breve para sincronizar actividades diarias e identificar obstáculos del equipo.",
+        "isCorrect": true,
+        "rationale": "El Daily Scrum permite evaluar en 15 minutos el avance diario hacia el objetivo del Sprint y resolver bloqueos inmediatos."
+      },
+      {
+        "text": "Sprint Review, donde se presenta el incremento funcional a los interesados para recibir retroalimentación.",
+        "isCorrect": true,
+        "rationale": "La revisión del Sprint inspeciona el producto real construido frente a los clientes para adaptar el Product Backlog."
+      },
+      {
+        "text": "Sprint Retrospective, espacio dedicado a reflexionar sobre el proceso interno del equipo para planificar mejoras.",
+        "isCorrect": true,
+        "rationale": "La retrospectiva evalúa relaciones, procesos y herramientas para implantar ajustes continuos en el siguiente Sprint."
+      },
+      {
+        "text": "Auditoría de la Guía PMBOK, requerida antes de iniciar la codificación para homologar procesos tradicionales.",
+        "isCorrect": false,
+        "rationale": "Las auditorías formales de estándares tradicionales no constituyen ceremonias del marco de trabajo Scrum."
+      }
+    ],
+    "hint": "Selecciona las reuniones que organizan el ciclo de vida iterativo desde la planificación hasta la mejora continua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la implementación del método Kanban para la gestión de proyectos, ¿cuál es el objetivo del límite de Trabajo en Progreso (WIP Limit)?",
+    "opciones": [
+      {
+        "text": "Restringir la cantidad de tareas abiertas simultáneamente para evitar la sobrecarga y visibilizar cuellos de botella.",
+        "isCorrect": true,
+        "rationale": "Limitar el WIP asegura que el equipo termine tareas antes de iniciar otras nuevas, mejorando la fluidez del sistema."
+      },
+      {
+        "text": "Aumentar al máximo el volumen de tareas iniciadas en paralelo sin importar el estado de culminación.",
+        "isCorrect": false,
+        "rationale": "Iniciar muchas tareas sin completarlas genera multitarea ineficiente, ralentiza las entregas y oculta cuellos de botella."
+      },
+      {
+        "text": "Forzar al cliente a congelar de forma definitiva todas las solicitudes de modificación al Product Backlog.",
+        "isCorrect": false,
+        "rationale": "Kanban es un sistema flexible que permite ingresar nuevas tareas al backlog siempre que haya capacidad disponible en el flujo."
+      },
+      {
+        "text": "Eliminar la columna de tareas pendientes ('To-Do') del tablero para enfocarse únicamente en el trabajo terminado.",
+        "isCorrect": false,
+        "rationale": "El tablero Kanban requiere columnas transparentes para representar todo el proceso, desde el trabajo pendiente hasta el finalizado."
+      },
+      {
+        "text": "Sustituir al facilitador del proceso mediante un software de asignación automática de tiempos para cada operario.",
+        "isCorrect": false,
+        "rationale": "El límite WIP es una regla operativa acordada por el equipo para gestionar la capacidad, no un software reemplazante de roles."
+      }
+    ],
+    "hint": "Se relaciona con controlar cuántas tarjetas pueden ubicarse a la vez en la columna de ejecución activa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La filosofía Lean aplicada a la gestión de proyectos enfatiza el principio de eliminación de desperdicios y la cultura Kaizen. ¿Cómo se traducen estos conceptos?",
+    "opciones": [
+      {
+        "text": "En la remoción constante de procesos redundantes que no aportan valor directo, promoviendo pequeñas mejoras continuas.",
+        "isCorrect": true,
+        "rationale": "Lean busca maximizar el valor entregado al cliente optimizando el flujo de trabajo y reduciendo pérdidas a través de la mejora continua (Kaizen)."
+      },
+      {
+        "text": "En la acumulación de insumos y recursos materiales por adelantado para cubrir cualquier posible cambio de especificación.",
+        "isCorrect": false,
+        "rationale": "Acumular excesos de inventario o recursos sin uso representa un desperdicio explícito en la metodología Lean."
+      },
+      {
+        "text": "En la imposición de jornadas de trabajo prolongadas e intensas para incrementar la productividad a corto plazo.",
+        "isCorrect": false,
+        "rationale": "Aumentar la carga laboral sin optimizar procesos incrementa la tasa de errores y contraviene el concepto de ritmo sostenible."
+      },
+      {
+        "text": "En la congelación de los procesos organizacionales para evitar cualquier modificación durante el desarrollo.",
+        "isCorrect": false,
+        "rationale": "Kaizen implica adaptabilidad y mejora continua progresiva, oponiéndose a la rigidez o estancamiento de procesos."
+      },
+      {
+        "text": "En la transferencia de los riesgos técnicos a proveedores externos sin supervisión de calidad.",
+        "isCorrect": false,
+        "rationale": "Delegar trabajo sin control no elimina el desperdicio operativo ni fomenta la mejora continua de la cadena de valor."
+      }
+    ],
+    "hint": "Esta visión busca depurar las tareas superfluas y aplicar optimizaciones progresivas en el desempeño diario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al introducir metodologías ágiles en empresas tradicionales, la gestión del cambio es crítica para abordar la brecha generacional o tecnológica. ¿Cuál es el enfoque recomendado?",
+    "opciones": [
+      {
+        "text": "Integrar y capacitar gradualmente al personal, fomentando la colaboración y demostrando el valor práctico de las metodologías.",
+        "isCorrect": true,
+        "rationale": "La adopción exitosa requiere empatía, entrenamiento técnico e inclusión activa para superar la resistencia al cambio e involucrar la experiencia previa."
+      },
+      {
+        "text": "Remover de manera inmediata a los colaboradores experimentados que expresen dudas respecto a las nuevas herramientas.",
+        "isCorrect": false,
+        "rationale": "Prescindir abruptamente del talento experimentado destruye el conocimiento del negocio y debilita la cultura organizacional."
+      },
+      {
+        "text": "Imponer el uso obligatorio de terminología en inglés sin explicar la lógica técnica de cada ceremonia o marco de trabajo.",
+        "isCorrect": false,
+        "rationale": "La imposición de jerga sin comprensión sustantiva genera confusión, rechazo y adopciones superficiales no efectivas."
+      },
+      {
+        "text": "Permitir que el equipo continúe con sus prácticas habituales de forma aislada, evitando usar herramientas digitales.",
+        "isCorrect": false,
+        "rationale": "Ignorar la transformación impide la estandarización y anula los beneficios de transparencia y agilidad buscados."
+      },
+      {
+        "text": "Abolir todos los roles directivos tradicionales e instituir asignaciones automáticas de tareas por algoritmo.",
+        "isCorrect": false,
+        "rationale": "La gestión del cambio requiere liderazgo adaptativo y roles claros de facilitación, no la eliminación drástica de la gestión humana."
+      }
+    ],
+    "hint": "Implica la creación de entornos inclusivos donde el entrenamiento y la comunicación reducen la fricción cultural.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el diseño de una matriz RACI de asignación de responsabilidades, ¿qué papel desempeña la persona identificada con la letra 'A' (Accountable)?",
+    "opciones": [
+      {
+        "text": "Es la persona con la autoridad final que debe aprobar el trabajo y responder por el cumplimiento exitoso de la tarea.",
+        "isCorrect": true,
+        "rationale": "El rol Accountable (Aprobador/Responsable Único) aprueba el entregable y posee la responsabilidad sobre el resultado final de la actividad."
+      },
+      {
+        "text": "Es el operador técnico encargados de ejecutar físicamente las actividades operativas de la tarea.",
+        "isCorrect": false,
+        "rationale": "El ejecutor directo de la actividad corresponde a la letra 'R' (Responsible/Responsable de la ejecución)."
+      },
+      {
+        "text": "Es el experto externo al que se le solicita asesoría técnica previa antes de tomar una decisión.",
+        "isCorrect": false,
+        "rationale": "El asesor que imparte información de soporte técnico se identifica con la letra 'C' (Consulted/Consultado)."
+      },
+      {
+        "text": "Es el grupo de interesados al que únicamente se le notifica el avance de los resultados sin consulta.",
+        "isCorrect": false,
+        "rationale": "A quienes solo se les mantiene al tanto del progreso o finalización se les asigna la letra 'I' (Informed/Informado)."
+      },
+      {
+        "text": "Es el auditor financiero que calcula la reserva de contingencia presupuestaria del proyecto.",
+        "isCorrect": false,
+        "rationale": "La matriz RACI estructura roles operacionales y de decisión sobre entregables, no funciones contables específicas."
+      }
+    ],
+    "hint": "Representa al único individuo que aprueba el trabajo y rinde cuentas finales por su correcto desempeño.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la técnica de gestión por Cadena Crítica, ¿cuál es el propósito fundamental de posicionar colchones o 'buffers' de proyecto?",
+    "opciones": [
+      {
+        "text": "Proteger la fecha de entrega global del proyecto absorbiendo las variaciones e incertidumbres de las tareas críticas.",
+        "isCorrect": true,
+        "rationale": "Cadena Crítica remueve las holguras individuales de cada tarea y las concentra en colchones estratégicos para amortiguar el impacto de retrasos."
+      },
+      {
+        "text": "Ocultar la duración real de cada actividad para evitar que los proveedores ajusten sus costos a la baja.",
+        "isCorrect": false,
+        "rationale": "El uso de colchones responde a un cálculo de variabilidad técnica, no a una estrategia para engañar comercialmente a los proveedores."
+      },
+      {
+        "text": "Superponer todas las actividades del cronograma de forma paralela sin respetar las dependencias lógicas.",
+        "isCorrect": false,
+        "rationale": "La secuenciación de dependencias y limitaciones de recursos se respeta de manera rigurosa al calcular la cadena crítica."
+      },
+      {
+        "text": "Incrementar sistemáticamente el presupuesto para justificar la adquisición de maquinaria superfluas.",
+        "isCorrect": false,
+        "rationale": "Los buffers de presupuesto y tiempo buscan la optimización y control de variaciones, no el desperdicio injustificado."
+      },
+      {
+        "text": "Reemplazar el uso del Diagrama de Gantt en las reuniones de seguimiento con los patrocinadores.",
+        "isCorrect": false,
+        "rationale": "Cadena Crítica se complementa con la visualización gráfica de cronogramas y no elimina el seguimiento mediante diagramas de barras."
+      }
+    ],
+    "hint": "Sirven como amortiguadores concentrados de holgura para impedir que la variabilidad afecte el hito final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un proyecto presenta los siguientes datos para estimar la duración de una tarea mediante el método PERT: tiempo optimista ($O$) = 4 días, tiempo más probable ($M$) = 7 días y tiempo pesimista ($P$) = 16 días. ¿Cuál es la duración esperada ($T_e$)?",
+    "opciones": [
+      {
+        "text": "8 días.",
+        "isCorrect": true,
+        "rationale": "Aplicando la fórmula probabilística del método PERT: $T_e = \\frac{O + 4M + P}{6} = \\frac{4 + 4(7) + 16}{6} = \\frac{48}{6} = 8$ días."
+      },
+      {
+        "text": "9 días.",
+        "isCorrect": false,
+        "rationale": "Resultado obtenido por un cálculo erróneo en el promedio ponderado, sumando incorrectamente los ponderadores del tiempo más probable."
+      },
+      {
+        "text": "7 días.",
+        "isCorrect": false,
+        "rationale": "Este valor equivale únicamente al tiempo más probable ($M$) sin considerar la distribución asimétrica pesimista."
+      },
+      {
+        "text": "10 días.",
+        "isCorrect": false,
+        "rationale": "Valor derivado de calcular un promedio aritmético simple entre las tres estimaciones: $\\frac{4 + 7 + 16}{3} = 9.00$ o aproximado incorrectamente."
+      },
+      {
+        "text": "12 días.",
+        "isCorrect": false,
+        "rationale": "Ocurre si se pondera excesivamente la estimación pesimista en lugar de dividirse entre la constante estándar 6 del modelo PERT."
+      }
+    ],
+    "hint": "Aplica la ponderación del promedio beta probabilístico: $T_e = \\frac{O + 4M + P}{6}$.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al comparar las herramientas de visualización de proyectos, ¿qué ventajas operativas diferencian al Diagrama de Gantt frente a un Tablero Kanban?",
+    "opciones": [
+      {
+        "text": "El Diagrama de Gantt ilustra explícitamente el cronograma, la duración, fechas de inicio/fin y las dependencias entre tareas.",
+        "isCorrect": true,
+        "rationale": "Gantt destaca por representar la dimensión temporal, las fases continuas y el diagrama de red que determina el camino crítico."
+      },
+      {
+        "text": "El Tablero Kanban proporciona una visión transparente y ágil del estado del flujo de trabajo dividido en columnas de estado.",
+        "isCorrect": true,
+        "rationale": "Kanban permite gestionar visualmente las tarjetas de trabajo en progreso y detectar cuellos de botella en tiempo real."
+      },
+      {
+        "text": "El Tablero Kanban limita el trabajo en proceso (WIP) para mantener un flujo continuo y evitar la multitarea ineficiente.",
+        "isCorrect": true,
+        "rationale": "El control de WIP es una propiedad intrínseca de Kanban que optimiza la capacidad del equipo, a diferencia del enfoque temporal de Gantt."
+      },
+      {
+        "text": "El Diagrama de Gantt elimina la necesidad de contar con una fecha de entrega o un plazo presupuestal definido.",
+        "isCorrect": false,
+        "rationale": "Por el contrario, el diagrama de Gantt se estructura con base en la delimitación precisa de plazos y restricciones temporales."
+      },
+      {
+        "text": "Ambas herramientas son totalmente incompatibles y está prohibido combinarlas en un mismo proyecto.",
+        "isCorrect": false,
+        "rationale": "En la práctica moderna, muchas organizaciones integran vistas de Gantt para la planificación global con tableros Kanban para la gestión diaria."
+      }
+    ],
+    "hint": "Evalúa el enfoque temporal y de dependencias por un lado, frente al control del flujo de trabajo por el otro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial de implementar la técnica Value Stream Mapping (Mapeo del Flujo de Valor) en la gestión de proyectos?",
+    "opciones": [
+      {
+        "text": "Analizar exhaustivamente el flujo de materiales e información para identificar y eliminar actividades sin valor agregado.",
+        "isCorrect": true,
+        "rationale": "El Mapeo del Flujo de Valor examina cada paso del proceso operativo para depurar demoras, reprocesos y actividades innecesarias."
+      },
+      {
+        "text": "Asignar salarios individuales a los desarrolladores con base en las líneas de código producidas en el Sprint.",
+        "isCorrect": false,
+        "rationale": "El Mapeo del Flujo de Valor aborda procesos productivos e informativos institucionales, no la fijación salarial del personal."
+      },
+      {
+        "text": "Diseñar la matriz de comunicaciones para enviar correos electrónicos automatizados a todos los clientes.",
+        "isCorrect": false,
+        "rationale": "Esta técnica busca optimizar la cadena de valor operativa, no sustituir el plan de gestión de comunicaciones del proyecto."
+      },
+      {
+        "text": "Calcular la depreciación financiera de las computadoras asignadas a la oficina de gestión de proyectos.",
+        "isCorrect": false,
+        "rationale": "La depreciación de activos fijos es un procedimiento contable regular ajeno al mapeo analítico del flujo de valor."
+      },
+      {
+        "text": "Reemplazar los estudios de impacto ambiental requeridos por ley en proyectos mineros y petroleros.",
+        "isCorrect": false,
+        "rationale": "Los estudios ambientales son requisitos regulatorios obligatorios que no pueden ser omitidos mediante herramientas de eficiencia interna."
+      }
+    ],
+    "hint": "Busca la opción centrada en diagnosticar las etapas productivas para depurar los tiempos muertos y pérdidas de eficiencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al evaluar el entorno operativo antes de adoptar metodologías y herramientas de gestión, ¿qué factores institucionales deben ser analizados prioritariamente?",
+    "opciones": [
+      {
+        "text": "La naturaleza de la industria, la complejidad propia del proyecto, la cultura organizacional y la madurez del equipo.",
+        "isCorrect": true,
+        "rationale": "Seleccionar herramientas requiere coherencia con las restricciones legales de la industria, la cultura interna y la competencia técnica del personal."
+      },
+      {
+        "text": "Exclusivamente el costo comercial del software, adquiriendo siempre la plataforma de mayor precio en el mercado.",
+        "isCorrect": false,
+        "rationale": "Adquirir herramientas costosas sin analizar la madurez del equipo o las necesidades reales genera gastos ineficientes y rechazo operacional."
+      },
+      {
+        "text": "La moda tecnológica predominante en blogs de difusión, prescindiendo del entrenamiento técnico previo del equipo.",
+        "isCorrect": false,
+        "rationale": "Adoptar herramientas únicamente por tendencia de mercado sin considerar la viabilidad interna compromete el rendimiento del proyecto."
+      },
+      {
+        "text": "Las opiniones informales expresadas por proveedores externos sin considerar los objetivos estratégicos del cliente.",
+        "isCorrect": false,
+        "rationale": "La selección de herramientas responde a la estrategia institucional del proyecto, no al interés comercial de un proveedor particular."
+      },
+      {
+        "text": "La eliminación absoluta de procesos formales de planificación para acelerar el inicio de las tareas de campo.",
+        "isCorrect": false,
+        "rationale": "Prescindir de la planificación aumenta drásticamente la frecuencia e impacto de errores durante la ejecución."
+      }
+    ],
+    "hint": "Considera el ajuste situacional entre la herramienta, la cultura de la empresa y la preparación de los colaboradores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la gestión de proyectos, ¿cuál es la diferencia fundamental que distingue a un 'Riesgo' de un 'Problema'?",
+    "opciones": [
+      {
+        "text": "Un riesgo es un evento incierto con probabilidad de ocurrencia $< 100\\%$, mientras que un problema es un evento ya materializado ($100\\%$).",
+        "isCorrect": true,
+        "rationale": "El riesgo radica en el plano de la probabilidad futura (incertidumbre), mientras que el problema es una contingencia ocurrida que requiere acción inmediata."
+      },
+      {
+        "text": "Un riesgo siempre implica consecuencias financieras negativas, mientras que un problema representa una oportunidad de ahorro.",
+        "isCorrect": false,
+        "rationale": "Los riesgos pueden ser tanto negativos (amenazas) como positivos (oportunidades); los problemas son impactos que exigen remediación."
+      },
+      {
+        "text": "Un problema se analiza mediante el Valor Monetario Esperado, mientras que los riesgos se omiten de la planificación presupuestal.",
+        "isCorrect": false,
+        "rationale": "El Valor Monetario Esperado (EMV) se utiliza precisamente para calcular cuantitativamente el impacto probable de un riesgo."
+      },
+      {
+        "text": "Un riesgo es gestionado exclusivamente por el cliente, mientras que los problemas son responsabilidad de las entidades estatales.",
+        "isCorrect": false,
+        "rationale": "Tanto riesgos como problemas son administrados operativamente por el equipo de proyecto e integrados en sus herramientas de control."
+      },
+      {
+        "text": "Ambos conceptos son estrictamente equivalentes y la guía PMBOK los utiliza de manera indistinta sin diferenciación técnica.",
+        "isCorrect": false,
+        "rationale": "El PMBOK distingue claramente la condición probabilística del riesgo frente al hecho consumado que constituye un problema."
+      }
+    ],
+    "hint": "Analiza la diferencia en términos del grado de certeza o probabilidad estadística con la que se presenta el evento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Se estima un riesgo con una probabilidad de ocurrencia del $30\\%$ que provocaría un sobrecosto de $\\$10,000$ USD en repuestos. ¿Cuál es su Valor Monetario Esperado (EMV)?",
+    "opciones": [
+      {
+        "text": "$\\$3,000$ USD.",
+        "isCorrect": true,
+        "rationale": "El Valor Monetario Esperado para una amenaza se calcula multiplicando probabilidad por impacto: $0.30 \\times \\$10,000 = \\$3,000$ USD."
+      },
+      {
+        "text": "$\\$10,000$ USD.",
+        "isCorrect": false,
+        "rationale": "Este valor representa el impacto total si la contingencia ocurriese al $100\\%$ de certidumbre, omitiendo la probabilidad probabilística."
+      },
+      {
+        "text": "$\\$7,000$ USD.",
+        "isCorrect": false,
+        "rationale": "Resultado de sustraer erróneamente el valor del EMV del impacto absoluto en lugar de aplicar el producto simple."
+      },
+      {
+        "text": "$\\$300$ USD.",
+        "isCorrect": false,
+        "rationale": "Calculado por un error de escala decimal al multiplicar $0.03$ en lugar de la probabilidad dada del $30\\%$ ($0.30$)."
+      },
+      {
+        "text": "$\\$13,000$ USD.",
+        "isCorrect": false,
+        "rationale": "Resultante de sumar el impacto bruto al cálculo del EMV, lo que distorsiona la cuantificación presupuestal del riesgo."
+      }
+    ],
+    "hint": "Calcula el producto monetario directo entre el porcentaje de probabilidad probabilística y la cifra de impacto potencial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la planificación de respuesta a los riesgos del proyecto, ¿cuáles de las siguientes alternativas corresponden a estrategias frente a amenazas (riesgos negativos)?",
+    "opciones": [
+      {
+        "text": "Mitigar: implementar acciones preventivas para reducir la probabilidad o el impacto del riesgo a niveles aceptables.",
+        "isCorrect": true,
+        "rationale": "La mitigación actúa activamente reduciendo la severidad o la probabilidad de que una amenaza afecte al proyecto."
+      },
+      {
+        "text": "Transferir: traspasar la responsabilidad del impacto y el manejo de la amenaza a un tercero, como una aseguradora.",
+        "isCorrect": true,
+        "rationale": "La transferencia traslada el riesgo financiero u operativo a un tercero mediante pólizas, garantías o contratos."
+      },
+      {
+        "text": "Evitar: alterar las condiciones del plan del proyecto para eliminar totalmente la amenaza o la condición de exposición.",
+        "isCorrect": true,
+        "rationale": "Evitar exige modificar el alcance, la tecnología o el diseño para cancelar completamente el escenario de riesgo."
+      },
+      {
+        "text": "Aceptar: asumir las consecuencias de la amenaza mediante reservas de contingencia cuando no sea viable otra respuesta.",
+        "isCorrect": true,
+        "rationale": "La aceptación reconoce la existencia de la amenaza y destina una reserva asignada en caso de materializarse."
+      },
+      {
+        "text": "Ocultar: omitir el registro de la amenaza en la matriz de riesgos para mantener una imagen favorable ante los auditores.",
+        "isCorrect": false,
+        "rationale": "Ocultar riesgos contraviene los principios éticos de la gestión de proyectos y vulnera la transparencia del control operativo."
+      }
+    ],
+    "hint": "Selecciona los cuatro enfoques formales definidos por el PMI para tratar eventos que amenazan el logro de los objetivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un análisis cuantitativo identifica dos eventos: una amenaza con un EMV negativo de $\\$4,000$ USD y una oportunidad con un EMV positivo de $\\$1,500$ USD. ¿Cómo se ajusta la reserva de contingencia?",
+    "opciones": [
+      {
+        "text": "Se adiciona un monto neto de $\\$2,500$ USD como reserva de contingencia al presupuesto base del proyecto.",
+        "isCorrect": true,
+        "rationale": "La contingencia resulta de la suma algebraica de los EMV: el gasto probable de la amenaza se compensa parcialmente con el ahorro probable de la oportunidad ($\\$4,000 - \\$1,500 = \\$2,500$ USD)."
+      },
+      {
+        "text": "Se adicionan $\\$5,500$ USD al presupuesto base sumando los valores absolutos de ambos eventos.",
+        "isCorrect": false,
+        "rationale": "Las oportunidades no deben sumarse como sobrecostos; sus impactos positivos compensan económicamente a las reservas por amenazas."
+      },
+      {
+        "text": "Se restan $\\$2,500$ USD del presupuesto base por asumir que las oportunidades siempre superan a las amenazas.",
+        "isCorrect": false,
+        "rationale": "Restar dinero reduciría el presupuesto base por debajo de lo requerido para cubrir el balance neto de riesgos identificados."
+      },
+      {
+        "text": "Se descartan ambos montos debido a que los eventos positivos y negativos se anulan automáticamente de forma conceptual.",
+        "isCorrect": false,
+        "rationale": "No se anulan automáticamente a menos que sus EMV tengan exactamente la misma magnitud numérica, lo cual no ocurre en este caso."
+      },
+      {
+        "text": "Se transfieren $\\$4,000$ USD a la reserva de gestión gubernamental eliminando la contingencia operativa del proyecto.",
+        "isCorrect": false,
+        "rationale": "La reserva de contingencia aborda riesgos identificados del proyecto y se gestiona internamente dentro del presupuesto del proyecto."
+      }
+    ],
+    "hint": "Calcula el saldo neto considerando que las amenazas incrementan la reserva mientras que las oportunidades la reducen.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de las técnicas de identificación cualitativa de riesgos, ¿cuál es el procedimiento que distingue al método Delphi?",
+    "opciones": [
+      {
+        "text": "Consultar iterativamente a un panel de expertos mediante cuestionarios anónimos para lograr un consenso libre de sesgos de poder.",
+        "isCorrect": true,
+        "rationale": "La técnica Delphi mantiene el anonimato de los participantes para evitar que las figuras de autoridad condicionen las opiniones del grupo."
+      },
+      {
+        "text": "Reunir al equipo en una sala abierta donde el profesional de mayor jerarquía impone la lista final de contingencias.",
+        "isCorrect": false,
+        "rationale": "Ese procedimiento genera sesgos de autoridad y bloquea la identificación objetiva de riesgos, justo lo opuesto al principio Delphi."
+      },
+      {
+        "text": "Utilizar de manera exclusiva algoritmos probabilísticos simulados por computadora sin intervención humana.",
+        "isCorrect": false,
+        "rationale": "La técnica Delphi se fundamenta en el juicio experto y en la recolección de criterios cualitativos humanos."
+      },
+      {
+        "text": "Entrevistar únicamente a los proveedores externos para que ellos asuman la responsabilidad legal de los imprevistos.",
+        "isCorrect": false,
+        "rationale": "La técnica se aplica con diversos especialistas para diagnosticar riesgos del proyecto, no para trasladar responsabilidades contractuales."
+      },
+      {
+        "text": "Mapear las causas raíz utilizando exclusivamente diagramas de Espina de Pescado organizados por la gerencia.",
+        "isCorrect": false,
+        "rationale": "El diagrama de Espina de Pescado (Ishikawa) es otra técnica analítica distinta y no requiere el anonimato iterativo del método Delphi."
+      }
+    ],
+    "hint": "Consiste en la consulta a especialistas preservando su anonimato para evitar que el estatus influya en el criterio técnico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué atributo define a los 'riesgos emergentes' dentro del proceso de monitoreo continuo del proyecto?",
+    "opciones": [
+      {
+        "text": "Son riesgos que aparecen durante la ejecución debido a cambios en el entorno regulatorio, tecnológico o por interacción de factores.",
+        "isCorrect": true,
+        "rationale": "Los riesgos emergentes surgen progresivamente a medida que evoluciona el contexto del proyecto y requieren ser identificados e integrados a la matriz."
+      },
+      {
+        "text": "Son imprevistos identificados en la fase de iniciación que se resuelven de forma automática sin utilizar presupuesto.",
+        "isCorrect": false,
+        "rationale": "Ningún riesgo se resuelve de manera automática; además, los emergentes no fueron detectados en la iniciación inicial."
+      },
+      {
+        "text": "Representan errores puramente matemáticos Cometidos durante la elaboración del cronograma inicial en el software.",
+        "isCorrect": false,
+        "rationale": "Los errores de estimación en el cronograma constituyen fallos de cálculo, no riesgos emergentes del entorno."
+      },
+      {
+        "text": "Son eventos cuyo impacto es siempre beneficioso y reducen de manera obligatoria la duración total del proyecto.",
+        "isCorrect": false,
+        "rationale": "Los riesgos emergentes pueden manifestarse como amenazas severas o como oportunidades, no son siempre beneficiosos."
+      },
+      {
+        "text": "Son contingencias que se materializan exclusivamente durante la fase de cierre impidiendo la firma del acta final.",
+        "isCorrect": false,
+        "rationale": "Pueden emerger en cualquier momento del ciclo de vida del proyecto cuando muten las condiciones operativas o del entorno."
+      }
+    ],
+    "hint": "Son contingencias no vistas al inicio que emergen durante el desarrollo por la volatilidad del entorno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-30",
+    "diplomado": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Por qué la gestión de riesgos debe integrarse como un proceso dinámico durante todo el ciclo de vida del proyecto?",
+    "opciones": [
+      {
+        "text": "Porque la probabilidad y el impacto de los riesgos fluctúan continuamente a medida que el proyecto avanza.",
+        "isCorrect": true,
+        "rationale": "Las condiciones iniciales cambian con la ejecución, alterando la criticidad de los riesgos existentes en la matriz."
+      },
+      {
+        "text": "Porque permite reevaluar el registro de riesgos y descubrir nuevos riesgos emergentes en el contexto operativo.",
+        "isCorrect": true,
+        "rationale": "El monitoreo sistemático mantiene actualizada la lista de imprevistos e incorpora nuevas amenazas u oportunidades."
+      },
+      {
+        "text": "Porque garantiza la revisión periódica del saldo de las reservas de contingencia y su uso racional.",
+        "isCorrect": true,
+        "rationale": "Controlar los riesgos permite liberar fondos de contingencia no utilizados o solicitar adiciones justificadas puntualmente."
+      },
+      {
+        "text": "Porque exime al equipo de proyecto de cumplir con los requerimientos de calidad estipulados en el contrato.",
+        "isCorrect": false,
+        "rationale": "La gestión de riesgos busca asegurar el cumplimiento de la calidad y los entregables, no eximir de sus responsabilidades al equipo."
+      },
+      {
+        "text": "Porque permite suspender la comunicación regular con los patrocinadores durante la fase de ejecución.",
+        "isCorrect": false,
+        "rationale": "Al contrario, el control de riesgos exige mantener informados a los interesados sobre la evolución del perfil de riesgo del proyecto."
+      }
+    ],
+    "hint": "Piensa en el carácter fluctuante de la incertidumbre a lo largo del tiempo y la necesidad de ajustar las reservas.",
+    "activo": true
+  }
+]

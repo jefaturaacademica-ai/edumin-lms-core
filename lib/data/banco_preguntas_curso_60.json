@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué porcentaje aproximado del presupuesto anual del inventario o recursos en las organizaciones representan los costos de mantenimiento según lo presentado en el curso?",
+    "opciones": [
+      {
+        "text": "Entre el 25% y el 35%",
+        "isCorrect": true,
+        "rationale": "En la reingeniería organizacional moderna, la gestión de costos de mantenimiento se reconoce como un elemento crítico que abarca aproximadamente entre una cuarta parte y un tercio del presupuesto anual de inventario."
+      },
+      {
+        "text": "Entre el 5% y el 10%",
+        "isCorrect": false,
+        "rationale": "Este porcentaje es demasiado bajo y corresponde a visiones antiguas donde el mantenimiento se consideraba un gasto menor o secundario."
+      },
+      {
+        "text": "Entre el 10% y el 15%",
+        "isCorrect": false,
+        "rationale": "Representa una cifra inferior a la realidad operativa actual en industrias con alto nivel de activos."
+      },
+      {
+        "text": "Entre el 45% y el 60%",
+        "isCorrect": false,
+        "rationale": "Este rango sobreestima el peso del mantenimiento dentro del presupuesto global de la organización."
+      },
+      {
+        "text": "Entre el 70% y el 85%",
+        "isCorrect": false,
+        "rationale": "Un porcentaje tan elevado significaría que casi la totalidad de los recursos de la empresa se destinan únicamente a conservar activos, lo cual es inviable."
+      }
+    ],
+    "hint": "Considera que el mantenimiento representa entre una cuarta parte y un poco más de un tercio de los recursos de inventario anuales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué caracteriza al método de estimación analógica (o top-down) en la estimación de costos de mantenimiento?",
+    "opciones": [
+      {
+        "text": "Parte de lo general hacia lo específico apoyándose en la experiencia en proyectos previos cuando no hay estadística histórica detallada.",
+        "isCorrect": true,
+        "rationale": "El enfoque analógico o top-down cuestiona el costo desde un nivel macro para luego indagar en lo específico, basándose en la experiencia de proyectos guía."
+      },
+      {
+        "text": "Utiliza modelos estadísticos matemáticos rigurosos para calcular costos y tiempos de tareas individuales.",
+        "isCorrect": false,
+        "rationale": "La utilización de modelos estadísticos y parámetros matemáticos corresponde a la estimación paramétrica, no a la analógica."
+      },
+      {
+        "text": "Calcula el costo sumando únicamente las facturas de proveedores externos al final del año.",
+        "isCorrect": false,
+        "rationale": "Este procedimiento se refiere a un registro contable posterior y no a un método formal de estimación previa."
+      },
+      {
+        "text": "Requiere descomponer cada microtarea en horas hombre exactas antes de poder estimar el total.",
+        "isCorrect": false,
+        "rationale": "El método analógico justamente se utiliza cuando no se cuenta con un desglose estadístico detallado de cada microtarea."
+      },
+      {
+        "text": "Se aplica exclusivamente mediante algoritmos automatizados de inteligencia artificial sin intervención humana.",
+        "isCorrect": false,
+        "rationale": "El método top-down tradicional se fundamenta en la experiencia de expertos e historia proyectada, no en automatización exclusiva."
+      }
+    ],
+    "hint": "Este método va de lo global a lo particular y requiere experiencia previa en proyectos similares.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica principal de un costo fijo en la gestión del mantenimiento?",
+    "opciones": [
+      {
+        "text": "Permanece constante independientemente de las variaciones en el volumen de producción.",
+        "isCorrect": true,
+        "rationale": "Los costos fijos, como los sueldos base del personal contratado, deben pagarse regularmente sin importar si la planta produce a máxima capacidad o está detenida."
+      },
+      {
+        "text": "Aumenta o disminuye en proporción directa con la cantidad de unidades fabricadas.",
+        "isCorrect": false,
+        "rationale": "La variación directa con la producción es la definición fundamental de un costo variable, no de uno fijo."
+      },
+      {
+        "text": "Corresponde únicamente a imprevistos y reparaciones de emergencia no planificadas.",
+        "isCorrect": false,
+        "rationale": "Las emergencias generan costos variables e imprevistos, mientras que el costo fijo es predecible y estipulado."
+      },
+      {
+        "text": "Se refiere exclusivamente al consumo mensual de energía eléctrica de los motores.",
+        "isCorrect": false,
+        "rationale": "El consumo eléctrico varía según el nivel de operación de la maquinaria, por lo que se considera un costo variable."
+      },
+      {
+        "text": "Depende directamente del número de repuestos mecánicos cambiados en cada turno.",
+        "isCorrect": false,
+        "rationale": "El consumo de repuestos depende del desgaste y la actividad operativa, clasificándose como costo variable o directo."
+      }
+    ],
+    "hint": "Piensa en un desembolso regular que la empresa debe asumir así la planta se detenga temporalmente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes acciones constituyen técnicas efectivas para mitigar la incertidumbre y controlar costos en el mantenimiento?",
+    "opciones": [
+      {
+        "text": "Optimización de procesos internos mediante el mapeo para eliminar cuellos de botella.",
+        "isCorrect": true,
+        "rationale": "Mapear procesos permite identificar redundancias y puntos lentos, reduciendo directamente costos por ineficiencia."
+      },
+      {
+        "text": "Negociación de convenios a largo plazo y contratos flexibles con proveedores.",
+        "isCorrect": true,
+        "rationale": "Acordar precios fijos o descuentos por volumen evita fluctuaciones imprevistas en el costo de los insumos."
+      },
+      {
+        "text": "Capacitación continua del personal en metodologías ágiles y nuevas tecnologías.",
+        "isCorrect": true,
+        "rationale": "Un personal capacitado ejecuta tareas de forma más rápida y precisa, reduciendo tiempos de parada y errores humanos."
+      },
+      {
+        "text": "Aumento indiscriminado del inventario de repuestos para almacenar sin límite.",
+        "isCorrect": false,
+        "rationale": "Acumular inventario en exceso incrementa los costos de almacenamiento y el riesgo de deterioro de los componentes."
+      },
+      {
+        "text": "Eliminación completa de todas las inspecciones preventivas para ahorrar mano de obra.",
+        "isCorrect": false,
+        "rationale": "Suprimir las inspecciones preventivas incrementa la probabilidad de fallas catastróficas y eleva exponencialmente los costos a largo plazo."
+      }
+    ],
+    "hint": "Selecciona las prácticas que promueven la eficiencia de procesos, la previsibilidad de precios y el desarrollo del personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la elaboración de presupuestos, ¿cuál es la diferencia fundamental entre los gastos CAPEX y OPEX?",
+    "opciones": [
+      {
+        "text": "CAPEX refiere a inversiones en bienes de capital o activos, mientras OPEX abarca los gastos operativos y de mantenimiento corriente.",
+        "isCorrect": true,
+        "rationale": "El CAPEX (Capital Expenditure) se enfoca en la adquisición o mejora de activos fijos, mientras que el OPEX (Operational Expenditure) financia la operación cotidiana."
+      },
+      {
+        "text": "CAPEX se aplica solo al pago de salarios y OPEX únicamente a la compra de edificios.",
+        "isCorrect": false,
+        "rationale": "Los salarios corrientes forman parte del OPEX, mientras que la compra de edificios e infraestructura pertenece al CAPEX."
+      },
+      {
+        "text": "CAPEX es un presupuesto puramente mensual y OPEX se calcula cada diez años.",
+        "isCorrect": false,
+        "rationale": "La distinción entre CAPEX y OPEX se basa en la naturaleza de la erogación financiera y no en la periodicidad de su cálculo."
+      },
+      {
+        "text": "CAPEX aborda los costos indirectos de oficina y OPEX cubre los impuestos estatales.",
+        "isCorrect": false,
+        "rationale": "Esta clasificación confunde la naturaleza contable de las inversiones de capital con los gastos corrientes de funcionamiento."
+      },
+      {
+        "text": "CAPEX no requiere aprobación gerencial mientras que OPEX exige auditorías externas obligatorias.",
+        "isCorrect": false,
+        "rationale": "Por el contrario, el CAPEX suele requerir autorizaciones de alta dirección debido al volumen de inversión en activos que involucra."
+      }
+    ],
+    "hint": "Uno se relaciona con la compra de activos duraderos y el otro con los gastos necesarios para mantener la operación del día a día.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué indicador de desempeño presupuestario permite evaluar la diferencia entre el gasto real ejecutado y el monto originalmente planificado?",
+    "opciones": [
+      {
+        "text": "Variación del costo",
+        "isCorrect": true,
+        "rationale": "La variación del costo mide exactamente la diferencia aritmética entre el presupuesto presupuestado o planificado y el costo real ejecutado."
+      },
+      {
+        "text": "Retorno sobre la inversión (ROI)",
+        "isCorrect": false,
+        "rationale": "El ROI mide la rentabilidad generada en relación con el capital invertido, no la desviación presupuestaria de un gasto."
+      },
+      {
+        "text": "Tiempo medio entre fallas (MTBF)",
+        "isCorrect": false,
+        "rationale": "El MTBF es un indicador técnico de confiabilidad operativa, no una métrica de desviación financiera."
+      },
+      {
+        "text": "Índice de rotación de almacén",
+        "isCorrect": false,
+        "rationale": "Esta métrica evalúa la frecuencia con la que el inventario se renueva en un periodo, no el cumplimiento del presupuesto de ejecución."
+      },
+      {
+        "text": "Costo unitario de energía",
+        "isCorrect": false,
+        "rationale": "El costo unitario de energía mide la eficiencia en el consumo de un recurso específico, no el desfase global del presupuesto."
+      }
+    ],
+    "hint": "Busca el concepto que refleja el grado de desviación matemática entre lo proyectado y lo desembolsado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el enfoque central de la Gestión Basada en Actividades (ABM)?",
+    "opciones": [
+      {
+        "text": "Identificar y analizar las actividades que generan costos para optimizar el uso de recursos y mejorar la eficiencia operativa.",
+        "isCorrect": true,
+        "rationale": "El ABM busca gestionar la organización analizando a fondo las actividades generadoras de costos para eliminar ineficiencias y aportar valor."
+      },
+      {
+        "text": "Comprar la mayor cantidad de repuestos posibles independientemente de su uso.",
+        "isCorrect": false,
+        "rationale": "El ABM busca la optimización de recursos, lo que contrapone la acumulación injustificada de inventarios."
+      },
+      {
+        "text": "Evaluar únicamente el desempeño puntual de los vendedores de la empresa.",
+        "isCorrect": false,
+        "rationale": "El ABM abarca de manera integral los procesos operativos y de soporte, no se limita al área comercial."
+      },
+      {
+        "text": "Eliminar la necesidad de realizar mantenimientos preventivos en la planta.",
+        "isCorrect": false,
+        "rationale": "El ABM busca estructurar y costear adecuadamente las actividades de mantenimiento necesarias, no eliminarlas de forma arbitraria."
+      },
+      {
+        "text": "Reemplazar los sistemas contables por inspecciones visuales informales.",
+        "isCorrect": false,
+        "rationale": "El ABM se fundamenta en la precisión de los datos y el costeo estructurado, no en métodos informales."
+      }
+    ],
+    "hint": "Esta metodología de gestión utiliza la información de lo que se 'hace' en la empresa para tomar mejores decisiones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la clasificación del ABM, ¿cuál es la diferencia principal entre el ABM operativo y el ABM estratégico?",
+    "opciones": [
+      {
+        "text": "El ABM operativo busca aumentar la eficiencia eliminando actividades sin valor, mientras el estratégico analiza la rentabilidad de actividades para decisiones de alto nivel.",
+        "isCorrect": true,
+        "rationale": "El enfoque operativo optimiza la ejecución diaria de tareas, mientras el estratégico utiliza el ABC para definir la orientación del negocio, productos y clientes."
+      },
+      {
+        "text": "El ABM operativo lo realizan los accionistas y el estratégico los operadores de limpieza.",
+        "isCorrect": false,
+        "rationale": "Las decisiones estratégicas corresponden a la alta dirección, mientras que las operativas pertenecen a la gestión de planta y supervisión."
+      },
+      {
+        "text": "El ABM operativo calcula impuestos y el estratégico elabora contratos laborales.",
+        "isCorrect": false,
+        "rationale": "Esta afirmación asigna funciones administrativas ajenas al objetivo principal de optimización de actividades del ABM."
+      },
+      {
+        "text": "El ABM operativo se aplica solo a empresas de servicios y el estratégico a la minería.",
+        "isCorrect": false,
+        "rationale": "Ambas vertientes del ABM son aplicables a cualquier sector industrial o de servicios."
+      },
+      {
+        "text": "El ABM estratégico elimina todos los costos fijos y el operativo elimina los costos directos.",
+        "isCorrect": false,
+        "rationale": "Ninguno de los enfoques elimina categorías contables enteras; buscan optimizar y gestionar adecuadamente cada costo."
+      }
+    ],
+    "hint": "Uno se enfoca en hacer las tareas diarias con menor desperdicio y el otro en elegir qué actividades o líneas de negocio benefician más a la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Según el modelo ABM, ¿cuáles de las siguientes se clasifican como actividades primarias?",
+    "opciones": [
+      {
+        "text": "Logística interna para el almacenamiento y manejo de materiales.",
+        "isCorrect": true,
+        "rationale": "La logística interna está directamente vinculada a la cadena central de valor y transformación del negocio."
+      },
+      {
+        "text": "Operaciones directas de mantenimiento sobre los equipos de producción.",
+        "isCorrect": true,
+        "rationale": "Las operaciones sobre los activos principales forman parte del núcleo operativo o core business."
+      },
+      {
+        "text": "Servicio técnico postventa y atención al cliente.",
+        "isCorrect": true,
+        "rationale": "El servicio directo al cliente o soporte de producto final es una actividad primaria en la cadena de valor."
+      },
+      {
+        "text": "Contratación y capacitación de personal en el área de recursos humanos.",
+        "isCorrect": false,
+        "rationale": "La gestión del talento humano brinda soporte a las actividades principales, por lo que se clasifica como actividad de soporte."
+      },
+      {
+        "text": "Gestión financiera y contable de la empresa.",
+        "isCorrect": false,
+        "rationale": "El control financiero es indispensable pero actúa como una función transversal de soporte a la cadena primaria."
+      }
+    ],
+    "hint": "Piensa en las actividades que están ligadas de forma directa con el producto, la transformación y el servicio al cliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso de estudio de la planta de componentes electrónicos presentado en la Clase 2, ¿cuál fue la actividad que consumía la mayor parte del presupuesto de mantenimiento?",
+    "opciones": [
+      {
+        "text": "Reparación de la maquinaria",
+        "isCorrect": true,
+        "rationale": "En el desglose del caso, la reparación demandaba $20,000 y 100 horas de trabajo, representando el mayor consumo financiero y de recursos."
+      },
+      {
+        "text": "Inspección periódica",
+        "isCorrect": false,
+        "rationale": "La inspección registraba un costo de $10,000, inferior al monto gastado en reparaciones."
+      },
+      {
+        "text": "Limpieza de equipos",
+        "isCorrect": false,
+        "rationale": "La limpieza consumía $5,000, siendo una partida menor dentro del presupuesto analizado."
+      },
+      {
+        "text": "Gestión de repuestos",
+        "isCorrect": false,
+        "rationale": "La gestión administrativa de repuestos sumaba $3,000, representando el costo más bajo entre las actividades evaluadas."
+      },
+      {
+        "text": "Capacitación de personal externo",
+        "isCorrect": false,
+        "rationale": "La capacitación no figuraba como la partida principal de gasto directo en la tabla inicial del caso de estudio."
+      }
+    ],
+    "hint": "Revisa cuál de las cuatro actividades principales requería más horas hombre y generaba el desembolso más elevado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al analizar el costo por hora ($/hora) en el caso de estudio de la Clase 2 para la inspección ($10,000 / 50 h) y la reparación ($20,000 / 100 h), ¿qué conclusión importante se obtuvo?",
+    "opciones": [
+      {
+        "text": "Ambas actividades presentaban el mismo costo unitario ($200/hora), aunque la reparación requería más horas totales.",
+        "isCorrect": true,
+        "rationale": "Al dividir el costo total entre las horas consumidas, tanto la inspección como la reparación arrojaron una tasa idéntica de $200 por hora."
+      },
+      {
+        "text": "La inspección era diez veces más cara por hora que la reparación.",
+        "isCorrect": false,
+        "rationale": "El cálculo matemático demuestra que la tasa horaria de ambas actividades era idéntica."
+      },
+      {
+        "text": "La reparación costaba $50/hora y la gestión $500/hora.",
+        "isCorrect": false,
+        "rationale": "Estos valores no se corresponden con los datos divididos del caso práctico."
+      },
+      {
+        "text": "La limpieza resultó ser la actividad de mayor costo unitario por hora.",
+        "isCorrect": false,
+        "rationale": "La limpieza tenía un costo unitario de aproximadamente $166.67/hora, inferior a los $200/hora de la reparación."
+      },
+      {
+        "text": "No fue posible calcular el costo por hora debido a la falta de datos.",
+        "isCorrect": false,
+        "rationale": "El caso proporcionó las horas exactas y los costos asociados para realizar la división correctamente."
+      }
+    ],
+    "hint": "Realiza la división simple del costo total entre el número de horas para cada una de las dos actividades.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es un desafío o dificultad habitual al intentar implementar el ABM en una organización?",
+    "opciones": [
+      {
+        "text": "La resistencia al cambio por parte de los empleados y los costos o tiempos requeridos para la implementación.",
+        "isCorrect": true,
+        "rationale": "Adoptar nuevos esquemas de gestión suele enfrentar barreras culturales en el personal y requerir inversión inicial de tiempo y dinero."
+      },
+      {
+        "text": "La prohibición legal de analizar los costos de producción.",
+        "isCorrect": false,
+        "rationale": "No existen impedimentos legales para que una empresa analice y optimice sus procesos de costos internos."
+      },
+      {
+        "text": "La imposibilidad matemática de dividir costos entre horas de trabajo.",
+        "isCorrect": false,
+        "rationale": "Las operaciones aritméticas para asignar costos son sencillas y viables en cualquier entorno informático o manual."
+      },
+      {
+        "text": "El requisito obligatorio de despedir a todo el personal técnico antes de iniciar.",
+        "isCorrect": false,
+        "rationale": "El ABM busca capacitar y hacer más eficiente al personal existente, no prescindir de él."
+      },
+      {
+        "text": "La obligación de operar únicamente sin computadoras ni software.",
+        "isCorrect": false,
+        "rationale": "El ABM se apoya activamente en software como ERPs o Business Intelligence para agilizar el análisis."
+      }
+    ],
+    "hint": "Considera los factores humanos relacionados con los hábitos de trabajo y los recursos requeridos para poner en marcha un nuevo sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial del Costeo Basado en Actividades (ABC)?",
+    "opciones": [
+      {
+        "text": "Asignar con mayor precisión los costos indirectos y recursos a los productos o servicios mediante las actividades involucradas.",
+        "isCorrect": true,
+        "rationale": "El sistema ABC supera las falencias del costeo tradicional al distribuir los costos indirectos según el consumo real que hace cada actividad."
+      },
+      {
+        "text": "Dividir todos los gastos acumulados en partes exactamente iguales entre los trabajadores.",
+        "isCorrect": false,
+        "rationale": "Distribuir costos por igual ignoraría la realidad del consumo de recursos de cada actividad específica."
+      },
+      {
+        "text": "Ocultar las fallas operativas para presentar balances contables falsos.",
+        "isCorrect": false,
+        "rationale": "El ABC busca la máxima visibilidad y transparencia financiera de los procesos internos."
+      },
+      {
+        "text": "Eliminar la emisión de órdenes de trabajo en el departamento de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Las órdenes de trabajo son la fuente primordial de datos para alimentar el sistema ABC."
+      },
+      {
+        "text": "Calcular únicamente el pago de impuestos gubernamentales de fin de año.",
+        "isCorrect": false,
+        "rationale": "El ABC es una herramienta de gestión analítica interna, no un formulario de declaración de impuestos."
+      }
+    ],
+    "hint": "Busca la opción que resalta la asignación precisa de los costos indirectos hacia donde realmente se generan.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representa un 'Cost Driver' (inductor o generador de costo) en la metodología ABC?",
+    "opciones": [
+      {
+        "text": "Un factor o métrica cuantificable que causa o influye directamente en los costos de una actividad.",
+        "isCorrect": true,
+        "rationale": "Los cost drivers (como horas de inspección, número de repuestos o piezas procesadas) miden la intensidad de uso del recurso por parte de la actividad."
+      },
+      {
+        "text": "El chofer encargado de trasladar al personal técnico a la planta.",
+        "isCorrect": false,
+        "rationale": "Es una confusión literal del término en inglés; se trata de una variable de medida financiera y no de un puesto de trabajo."
+      },
+      {
+        "text": "Un software de diseño mecánico utilizado para dibujar motores.",
+        "isCorrect": false,
+        "rationale": "El cost driver es una métrica o causa de costo, no un programa informático de diseño CAD."
+      },
+      {
+        "text": "Una multa aplicada por la gerencia ante el retraso de una tarea.",
+        "isCorrect": false,
+        "rationale": "Aunque una multa es un gasto, no constituye la base de asignación de costos de las actividades del ABC."
+      },
+      {
+        "text": "Un tipo de motor eléctrico de alta eficiencia energética.",
+        "isCorrect": false,
+        "rationale": "Se trata de un concepto de gestión contable y no de un componente físico de maquinaria."
+      }
+    ],
+    "hint": "Es la variable o métrica utilizada para repartir el costo de acuerdo con 'cuánto' se utiliza de un recurso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son las tres herramientas básicas señaladas en la Clase 3 para respaldar la asignación de recursos y costos?",
+    "opciones": [
+      {
+        "text": "Diagramas de flujo de procesos.",
+        "isCorrect": true,
+        "rationale": "Permiten trazar secuencialmente las actividades e identificar en qué punto se consumen recursos."
+      },
+      {
+        "text": "Información y registros del sistema de contabilidad.",
+        "isCorrect": true,
+        "rationale": "La contabilidad suministra los datos sobre compras, salarios y gastos reales registrados en órdenes de trabajo."
+      },
+      {
+        "text": "Análisis exhaustivo de procesos para identificar valor y costos ocultos.",
+        "isCorrect": true,
+        "rationale": "Analizar al detalle cada etapa permite diferenciar las actividades productivas de los gastos innecesarios o redundantes."
+      },
+      {
+        "text": "Encuestas informales en redes sociales externas.",
+        "isCorrect": false,
+        "rationale": "Las encuestas de opinión pública no aportan datos rigurosos sobre la estructura interna de costos operativos."
+      },
+      {
+        "text": "Catálogos publicitarios impresos de maquinaria antigua.",
+        "isCorrect": false,
+        "rationale": "Los folletos comerciales no constituyen una herramienta analítica para la asignación de costos de la empresa."
+      }
+    ],
+    "hint": "Selecciona las opciones que integran la representación gráfica del proceso, los registros financieros y la evaluación analítica interna.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué el comportamiento anual del gasto de mantenimiento suele presentar picos pronunciados en lugar de ser una línea recta uniforme mensual?",
+    "opciones": [
+      {
+        "text": "Debido a la ejecución de paradas de planta programadas donde se concentran grandes desembolsos de recursos.",
+        "isCorrect": true,
+        "rationale": "En las paradas mayores se ejecutan intervenciones intensivas que elevan temporalmente los costos de repuestos y contratistas en meses específicos."
+      },
+      {
+        "text": "Porque los contadores modifican el valor del dinero cada mes de forma aleatoria.",
+        "isCorrect": false,
+        "rationale": "Los picos presupuestarios responden a eventos de mantenimiento planificados o fallas, no a inconsistencias de cálculo contable."
+      },
+      {
+        "text": "Porque el personal cobra su salario un solo mes al año.",
+        "isCorrect": false,
+        "rationale": "La nómina de sueldos es un gasto periódico mensual y no la causa de picos atípicos en compras de insumos."
+      },
+      {
+        "text": "Debido a que las máquinas se reemplazan por completo todos los meses.",
+        "isCorrect": false,
+        "rationale": "Las máquinas son activos de larga vida útil; el mantenimiento busca preservarlas, no reemplazarlas mensualmente."
+      },
+      {
+        "text": "Porque los repuestos solo se venden en el mercado durante el verano.",
+        "isCorrect": false,
+        "rationale": "La disponibilidad de suministros industriales es continua durante todo el año calendario."
+      }
+    ],
+    "hint": "Piensa en eventos masivos de revisión donde la planta se detiene temporalmente para ser intervenida a fondo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué indicador financiero ayuda a determinar si es más conveniente reparar un activo obsoleto o darlo de baja para adquirir uno nuevo?",
+    "opciones": [
+      {
+        "text": "Costo total de mantenimiento como porcentaje del valor de reemplazo del activo.",
+        "isCorrect": true,
+        "rationale": "Si el costo anual de mantener un equipo supera un porcentaje crítico (ej. 50%) de lo que costaría comprarlo nuevo, se justifica su reemplazo."
+      },
+      {
+        "text": "Consumo de agua potable dividido por el número de oficinas.",
+        "isCorrect": false,
+        "rationale": "El consumo de agua administrativa no guarda relación con la viabilidad técnica o económica de una máquina."
+      },
+      {
+        "text": "Número de llamadas telefónicas realizadas por el área de ventas.",
+        "isCorrect": false,
+        "rationale": "Las métricas comerciales no evalúan el deterioro técnico ni el costo acumulado de mantenimiento de un activo industrial."
+      },
+      {
+        "text": "Cantidad de folletos impresos en el departamento de marketing.",
+        "isCorrect": false,
+        "rationale": "Los gastos impresos de publicidad no aportan información sobre el ciclo de vida de los equipos productivos."
+      },
+      {
+        "text": "Distancia en kilómetros entre la planta y la capital del país.",
+        "isCorrect": false,
+        "rationale": "La ubicación geográfica fija no es un indicador de la rentabilidad del mantenimiento de una máquina específica."
+      }
+    ],
+    "hint": "Busca la relación porcentual entre lo que gastamos anualmente en repararlo y el precio de comprar la máquina nueva equivalente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el rol de un software CMMS y las herramientas de Business Intelligence (BI) en la gestión de costos bajo ABC?",
+    "opciones": [
+      {
+        "text": "Facilitar la captura de datos de órdenes de trabajo y visualizar desviaciones de costos mediante tableros de control.",
+        "isCorrect": true,
+        "rationale": "El CMMS recopila los datos operativos y el BI los procesa en dashboards para tomar decisiones analíticas rápidas."
+      },
+      {
+        "text": "Reemplazar físicamente a los operadores para realizar el trabajo mecánico de taller.",
+        "isCorrect": false,
+        "rationale": "Los programas informáticos gestionan y analizan información, pero la ejecución técnica requiere mano de obra calificada."
+      },
+      {
+        "text": "Eliminar la necesidad de pagar el consumo de energía eléctrica.",
+        "isCorrect": false,
+        "rationale": "El software ayuda a monitorear y optimizar el uso de energía, pero no exime a la empresa del pago del servicio."
+      },
+      {
+        "text": "Imprimir contratos de trabajo en papel para los proveedores.",
+        "isCorrect": false,
+        "rationale": "Aunque pueden gestionar documentos, su función principal en ABC es el análisis de datos y la visibilidad de costos."
+      },
+      {
+        "text": "Evitar de forma mágica que las piezas mecánicas sufran desgaste con el tiempo.",
+        "isCorrect": false,
+        "rationale": "El desgaste físico es inevitable; el software gestiona la información para intervenir antes de que ocurra la falla."
+      }
+    ],
+    "hint": "Piensa en el procesamiento digital de la información operativa para convertirla en gráficos e indicadores visuales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la filosofía del Mantenimiento Basado en la Condición (CBM)?",
+    "opciones": [
+      {
+        "text": "En ejecutar acciones de mantenimiento únicamente cuando el monitoreo de parámetros indica que el equipo lo requiere o muestra signos de degradación.",
+        "isCorrect": true,
+        "rationale": "El CBM evalúa variables en tiempo real (vibración, temperatura) para intervenir justo antes de la falla, evitando paradas innecesarias."
+      },
+      {
+        "text": "En esperar a que el equipo se rompa totalmente para iniciar la reparación de emergencia.",
+        "isCorrect": false,
+        "rationale": "Esperar la rotura total corresponde al mantenimiento reactivo o correctivo no planificado, que resulta altamente costoso."
+      },
+      {
+        "text": "En cambiar repuestos rigurosamente cada 30 días, sin importar si la máquina funcionó o no.",
+        "isCorrect": false,
+        "rationale": "Cambiar piezas a intervalos fijos de tiempo sin evaluar su estado real es la definición del mantenimiento preventivo tradicional."
+      },
+      {
+        "text": "En pintar la maquinaria mensualmente para que conserve un aspecto externo adecuado.",
+        "isCorrect": false,
+        "rationale": "El CBM monitorea variables de salud interna de los componentes y no meros aspectos estéticos del activo."
+      },
+      {
+        "text": "En comprar equipos nuevos cada año para evitar realizar cualquier tipo de revisión.",
+        "isCorrect": false,
+        "rationale": "El CBM busca justamente maximizar la vida útil de los activos existentes mediante un seguimiento inteligente."
+      }
+    ],
+    "hint": "Esta estrategia no se guía por el calendario ni por la falla final, sino por la medición continua de la 'salud' de la máquina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representa el intervalo $PF$ dentro de la curva de degradación de un activo?",
+    "opciones": [
+      {
+        "text": "El tiempo que transcurre entre la detección de una falla potencial ($P$) y la ocurrencia de la falla funcional ($F$).",
+        "isCorrect": true,
+        "rationale": "El intervalo $PF$ es la ventana de oportunidad operativa para intervenir el activo de forma planificada una vez detectado el primer síntoma."
+      },
+      {
+        "text": "El precio final pagado por la compra de un rodamiento sintético.",
+        "isCorrect": false,
+        "rationale": "Es un concepto metodológico que mide tiempo de respuesta ante la degradación y no el valor comercial de un repuesto."
+      },
+      {
+        "text": "La presión del fluido multiplicada por la frecuencia de rotación del motor.",
+        "isCorrect": false,
+        "rationale": "El intervalo $PF$ se mide en unidades de tiempo (horas, días) y representa la distancia temporal entre síntoma y ruptura."
+      },
+      {
+        "text": "El número de empleados necesarios para realizar una limpieza básica.",
+        "isCorrect": false,
+        "rationale": "Esta métrica no mide asignación de personal sino el tiempo disponible antes del colapso funcional del equipo."
+      },
+      {
+        "text": "El porcentaje de ganancia neta obtenido al vender el producto terminado.",
+        "isCorrect": false,
+        "rationale": "Se trata de un indicador de gestión de confiabilidad operativa y no de margen de venta comercial."
+      }
+    ],
+    "hint": "Es la ventana de tiempo que existe desde que detectamos el síntoma inicial hasta que la máquina deja de funcionar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes corresponden a técnicas comúnmente aplicadas en el Mantenimiento Basado en la Condición (CBM)?",
+    "opciones": [
+      {
+        "text": "Análisis de vibraciones mediante acelerómetros.",
+        "isCorrect": true,
+        "rationale": "Permite identificar desalineaciones, desbalanceos o desgastes prematuros en elementos rotativos."
+      },
+      {
+        "text": "Termografía infrarroja para detectar variaciones de temperatura.",
+        "isCorrect": true,
+        "rationale": "Identifica puntos calientes anormales en tableros eléctricos y rozamientos excesivos en componentes mecánicos."
+      },
+      {
+        "text": "Ultrasonido pasivo o activo para la detección de fugas e inspección.",
+        "isCorrect": true,
+        "rationale": "Captura frecuencias de sonido inaudibles para el oído humano producidas por fugas de aire/gas o fricción."
+      },
+      {
+        "text": "Pruebas destructivas de tracción rompiendo la maquinaria en uso.",
+        "isCorrect": false,
+        "rationale": "Las pruebas destructivas inhabilitan el activo, mientras que el CBM utiliza ensayos no destructivos que permiten mantener la máquina operando."
+      },
+      {
+        "text": "Sondeos telefónicos de satisfacción comercial.",
+        "isCorrect": false,
+        "rationale": "Las encuestas telefónicas no registran parámetros físicos de diagnóstico en maquinaria industrial."
+      }
+    ],
+    "hint": "Selecciona las metodologías no invasivas que miden variables físicas como calor, ondas mecánicas o sonido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el monitoreo de condición de un activo, ¿cuál es la diferencia entre un umbral de advertencia y un umbral crítico?",
+    "opciones": [
+      {
+        "text": "El de advertencia indica que se debe prestar atención e incrementar el monitoreo, mientras que el crítico exige una intervención urgente.",
+        "isCorrect": true,
+        "rationale": "La advertencia alerta sobre una desviación inicial de los parámetros normales, mientras que el nivel crítico advierte la cercanía inminente de la falla."
+      },
+      {
+        "text": "El de advertencia apaga la planta automáticamente y el crítico es una llamada telefónica informal.",
+        "isCorrect": false,
+        "rationale": "Es el umbral crítico el que suele gatillar paradas de emergencia o acciones inmediatas para evitar desastres."
+      },
+      {
+        "text": "El umbral crítico se aplica solo a herramientas manuales y el de advertencia a edificios.",
+        "isCorrect": false,
+        "rationale": "Ambos niveles de umbral se configuran para cualquier parámetro físico relevante en activos industriales."
+      },
+      {
+        "text": "El umbral de advertencia se calcula en dólares y el crítico en metros por segundo.",
+        "isCorrect": false,
+        "rationale": "Ambos umbrales miden la misma variable física (ej. grados Celsius o mm/s de vibración) en diferentes niveles de severidad."
+      },
+      {
+        "text": "El umbral crítico asegura que el equipo funciona al 100% sin riesgo alguno.",
+        "isCorrect": false,
+        "rationale": "Alcanzar el nivel crítico implica que el equipo está en alto riesgo de sufrir una falla funcional."
+      }
+    ],
+    "hint": "Uno te avisa para que 'vigiles más de cerca' el equipo y el otro demanda 'actuar de inmediato'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es un ERP (Enterprise Resource Planning) y qué beneficio aporta su integración con el sistema de mantenimiento?",
+    "opciones": [
+      {
+        "text": "Es un sistema integral que conecta el mantenimiento con compras, finanzas y recursos humanos para unificar la gestión del negocio.",
+        "isCorrect": true,
+        "rationale": "El ERP centraliza la información de toda la empresa, permitiendo que las necesidades de mantenimiento se reflejen automáticamente en repuestos y presupuesto."
+      },
+      {
+        "text": "Un sensor físico de contacto que mide el nivel de aceite en cajas reductoras.",
+        "isCorrect": false,
+        "rationale": "El ERP es una plataforma de software empresarial y no un dispositivo físico de medición."
+      },
+      {
+        "text": "Un tipo especial de grasa sintética utilizada en rodamientos pesados.",
+        "isCorrect": false,
+        "rationale": "No se trata de un insumo lubricante sino de un sistema informático de planificación de recursos."
+      },
+      {
+        "text": "Una herramienta manual utilizada por los técnicos para desmontar bombas.",
+        "isCorrect": false,
+        "rationale": "Se refiere a una solución de software organizacional, no a un útil de trabajo de taller."
+      },
+      {
+        "text": "Un reglamento gubernamental sobre el cobro de arbitrios municipales.",
+        "isCorrect": false,
+        "rationale": "Es una herramienta de gestión empresarial privada y no una normativa fiscal externa."
+      }
+    ],
+    "hint": "Se trata de la plataforma de software 'macro' que conecta a todos los departamentos de la empresa (SAP u Oracle son ejemplos).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una ventaja económica directa de pasar de un mantenimiento preventivo rígido basado en tiempo al CBM?",
+    "opciones": [
+      {
+        "text": "Se evita el reemplazo prematuro de componentes en buen estado y se eliminan intervenciones innecesarias.",
+        "isCorrect": true,
+        "rationale": "Al monitorear la salud real del componente, se aprovecha toda su vida útil sin retirarlo antes de tiempo solo por cumplir una fecha fija del calendario."
+      },
+      {
+        "text": "Se reduce el pago de la tarifa de energía eléctrica a cero en toda la fábrica.",
+        "isCorrect": false,
+        "rationale": "El CBM optimiza el uso de la maquinaria, pero las máquinas siguen consumiendo energía para operar."
+      },
+      {
+        "text": "Se elimina por completo la obligación de contratar técnicos o ingenieros.",
+        "isCorrect": false,
+        "rationale": "El CBM requiere personal capacitado para analizar los datos y tomar decisiones diagnósticas."
+      },
+      {
+        "text": "Se exime a la empresa de presentar declaraciones contables anuales.",
+        "isCorrect": false,
+        "rationale": "Las normativas tributarias y contables se mantienen independientes de la estrategia de mantenimiento de planta."
+      },
+      {
+        "text": "Garantiza que la maquinaria nunca requiera repuestos durante 50 años.",
+        "isCorrect": false,
+        "rationale": "Los componentes mecánicos se wearán eventualmente; el CBM gestiona de manera óptima el momento exacto de su cambio."
+      }
+    ],
+    "hint": "Piensa en lo que sucede cuando cambias una pieza solo 'por si acaso' en una fecha fija versus cuando la cambias 'al medir que se ha desgastado'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el contenido abordado en el curso, ¿en cuáles de los siguientes sectores o industrias se aplica el CBM con alto impacto?",
+    "opciones": [
+      {
+        "text": "Sector energético, en el monitoreo de turbinas y generadores.",
+        "isCorrect": true,
+        "rationale": "En las centrales eléctricas, evitar fallas catastróficas en turbinas mediante CBM es clave para garantizar el suministro continuo."
+      },
+      {
+        "text": "Minería, tanto en equipos de tajo abierto como de socavón.",
+        "isCorrect": true,
+        "rationale": "La maquinaria pesada minera requiere monitoreo constante para prevenir paradas que interrumpan las metas de extracción."
+      },
+      {
+        "text": "Sector médico, en el diagnóstico y respaldo de equipos hospitalarios críticos.",
+        "isCorrect": true,
+        "rationale": "En entornos de salud, la confiabilidad absoluta de los equipos de soporte vital es una necesidad crítica."
+      },
+      {
+        "text": "Oficinas administrativas sin ningún tipo de equipo o servicio técnico.",
+        "isCorrect": false,
+        "rationale": "Las instalaciones sin activos productivos ni maquinaria crítica no requieren sistemas de monitoreo de condición."
+      },
+      {
+        "text": "Comercio ambulatorio sin bienes de capital ni tecnología.",
+        "isCorrect": false,
+        "rationale": "El CBM está diseñado para entornos intensivos en activos mecánicos, eléctricos o electrónicos que justifiquen la tecnología."
+      }
+    ],
+    "hint": "Selecciona las industrias que operan con maquinaria pesada, generación eléctrica o equipos donde una falla representa un riesgo crítico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la estimación de costos de mantenimiento industrial, ¿cuál es la diferencia conceptual clave entre el método de estimación paramétrica y el método analógico (Top-down)?",
+    "opciones": [
+      {
+        "text": "La estimación paramétrica utiliza modelos estadísticos y datos históricos formalizados, mientras que la analógica se basa en la experiencia previa de proyectos similares cuando no existe estadística histórica detallada.",
+        "isCorrect": true,
+        "rationale": "El método paramétrico se fundamenta en relaciones estadísticas entre variables históricas para calcular costos y recursos, en tanto que el enfoque analógico recurre a la interpelación general e intuitiva respaldada por proyectos semejantes anteriores."
+      },
+      {
+        "text": "La estimación paramétrica analiza el proyecto desde el detalle más específico hacia lo general, mientras que la analógica interpela el costo comenzando estrictamente desde el nivel operativo.",
+        "isCorrect": false,
+        "rationale": "La estimación analógica es precisamente la que parte de lo general hacia lo particular (Top-down), invirtiendo el orden expresado en esta premisa."
+      },
+      {
+        "text": "La estimación analógica calcula la duración y recursos mediante algoritmos de inteligencia artificial, mientras que la paramétrica depende del criterio cualitativo del supervisor.",
+        "isCorrect": false,
+        "rationale": "El enfoque analógico depende del juicio basado en experiencia previa y no de algoritmos automatizados, mientras que el paramétrico es de carácter cuantitativo e estadístico."
+      },
+      {
+        "text": "La estimación paramétrica es aplicable únicamente para costos indirectos fijos, mientras que la analógica se restringe al cálculo de costos directos variables.",
+        "isCorrect": false,
+        "rationale": "Ambos métodos de estimación se pueden emplear para calcular tanto costos directos como indirectos, fijos o variables, según el alcance del proyecto."
+      },
+      {
+        "text": "La estimación analógica se utiliza exclusivamente para activos de tecnología 4.0, mientras que la paramétrica se aplica a mantenimientos reactivos tradicionales.",
+        "isCorrect": false,
+        "rationale": "La elección entre estimación paramétrica o analógica depende de la disponibilidad de datos estadísticos históricos, no del nivel tecnológico del activo."
+      }
+    ],
+    "hint": "Considere qué método requiere bases de datos estadísticos cuantitativos y cuál se aplica cuando solo se dispone de la analogía con proyectos pasados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la intervención mayor de una bomba centrífuga en una planta industrial, se incurre en diversos desembolsos. ¿Cuál de los siguientes rubros se clasifica técnicamente como un costo indirecto de dicha actividad de mantenimiento?",
+    "opciones": [
+      {
+        "text": "El sueldo del supervisor de mantenimiento que distribuye su jornada supervisando múltiples intervenciones simultáneas en la planta.",
+        "isCorrect": true,
+        "rationale": "Dado que el supervisor no interviene directamente de forma exclusiva en la bomba y distribuye su tiempo entre varias tareas, su costo hora-hombre debe prorratearse entre distintas actividades, constituyendo un costo indirecto."
+      },
+      {
+        "text": "La remuneración por horas hombre del técnico mecánico dedicado exclusivamente al desmontaje y cambio de rodamientos de la bomba.",
+        "isCorrect": false,
+        "rationale": "La mano de obra del técnico dedicado directamente al mantenimiento físico de ese equipo específico representa un costo directo del proceso."
+      },
+      {
+        "text": "El costo de los sellos mecánicos y repuestos específicos instalados en la bomba durante la intervención.",
+        "isCorrect": false,
+        "rationale": "Los repuestos instalados de manera exclusiva en un activo específico forman parte directa del costo asignable a la orden de trabajo."
+      },
+      {
+        "text": "La contratación de un servicio especializado externo de balanceo dinámico exclusivo para el impulsor de dicha bomba.",
+        "isCorrect": false,
+        "rationale": "Un servicio de terceros contratado específicamente para reparar un componente puntual del activo intervenido califica como costo directo."
+      },
+      {
+        "text": "El consumo de repuestos e insumos consumibles utilizados directamente en el reacondicionamiento del equipo.",
+        "isCorrect": false,
+        "rationale": "Los insumos empleados directamente sobre el equipo intervenido se contabilizan como un desembolso directo de la actividad."
+      }
+    ],
+    "hint": "Piense en qué recurso no interviene físicamente sobre la máquina ni dedica su tiempo exclusivamente a un solo trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la gestión financiera del mantenimiento, ¿cuáles de las siguientes estrategias y técnicas permiten mitigar la incertidumbre y optimizar los costos operativos? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Negociar acuerdos a largo plazo y contratos flexibles con proveedores solicitando descuentos por volumen.",
+        "isCorrect": true,
+        "rationale": "Establecer convenios a largo plazo con proveedores amortigua las oscilaciones de precios del mercado y asegura tarifas más bajas por volumen de compra."
+      },
+      {
+        "text": "Implementar la automatización de tareas repetitivas mediante software o aplicaciones para reducir errores humanos y reprocesos.",
+        "isCorrect": true,
+        "rationale": "La automatización de procesos administrativos o de captura de datos disminuye la probabilidad de fallas humanas y optimiza el uso del tiempo laboral."
+      },
+      {
+        "text": "Aplicar políticas de control e inventario Just in Time (JIT) para evitar el exceso de stock y el deterioro de repuestos almacenados.",
+        "isCorrect": true,
+        "rationale": "La gestión del inventario en tiempo real limita el almacenamiento innecesario de piezas sensibles al daño, liberando capital de trabajo."
+      },
+      {
+        "text": "Invertir en la capacitación continua del personal técnico en metodologías ágiles y nuevas tecnologías.",
+        "isCorrect": true,
+        "rationale": "El desarrollo de competencias técnicas agiliza la ejecución de actividades de mantenimiento y reduce significativamente los tiempos de parada."
+      },
+      {
+        "text": "Mantener una alta dependencia de un proveedor único exclusivo para garantizar la estabilidad de los precios a corto plazo.",
+        "isCorrect": false,
+        "rationale": "Depender de un solo proveedor incrementa la vulnerabilidad ante desabastecimientos y fluctuaciones unilaterales de costos."
+      }
+    ],
+    "hint": "Evalúe las prácticas que reducen desperdicios, mejoran la negociación contractual y fortalecen las capacidades operativas internas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa manufacturera presenta fluctuaciones estacionales severas en sus niveles de producción a lo largo del año. ¿Por qué se recomienda un presupuesto flexible en lugar de un presupuesto fijo para la gestión de costos de mantenimiento en este contexto?",
+    "opciones": [
+      {
+        "text": "Porque el presupuesto flexible se ajusta dinámicamente según las variaciones en los niveles de actividad operacional, permitiendo un análisis de rendimiento más preciso.",
+        "isCorrect": true,
+        "rationale": "El presupuesto flexible adecua las proyecciones de gasto conforme varía el volumen operativo, facilitando un control financiero realista frente a demandas cambiantes."
+      },
+      {
+        "text": "Porque el presupuesto fijo exige la reasignación mensual de activos fijos mediante inversiones de capital (CAPEX).",
+        "isCorrect": false,
+        "rationale": "La rigidez del presupuesto fijo no se relaciona con la reasignación de activos fijos, sino con la imposibilidad de reajustar las metas de gasto operativo."
+      },
+      {
+        "text": "Porque el presupuesto flexible congela los costos operativos (OPEX) permitiendo desviaciones financieras sin requerir justificación técnica.",
+        "isCorrect": false,
+        "rationale": "Un presupuesto flexible no congela los costos ni exime de justificación financiera, sino que adapta las variaciones esperadas a los picos de actividad."
+      },
+      {
+        "text": "Porque el presupuesto fijo incrementa la variabilidad del costo directo por unidad producida al adaptarse a los picos de demanda.",
+        "isCorrect": false,
+        "rationale": "El presupuesto fijo no se adapta a los cambios en el nivel de actividad de producción; permanece inalterado independientemente del volumen real."
+      },
+      {
+        "text": "Porque el presupuesto flexible elimina por completo la necesidad de realizar auditorías de costos al cierre de cada ejercicio.",
+        "isCorrect": false,
+        "rationale": "Todo presupuesto requiere seguimiento y auditoría contable para verificar la eficacia y eficiencia en la ejecución de los recursos."
+      }
+    ],
+    "hint": "Piense en qué tipo de presupuesto permite modificar las metas financieras cuando la producción sube o baja drásticamente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al realizar la auditoría financiera del presupuesto anual de mantenimiento, el área contable observa que los desembolsos no se distribuyeron de forma lineal ($100,000 mensuales), sino que presentan un pico pronunciado en un mes específico. ¿A qué fenómeno técnico operativo se debe principalmente este comportamiento?",
+    "opciones": [
+      {
+        "text": "A la ejecución de una parada de planta anual programada, donde se concentran los mayores gastos de repuestos, servicios externos y mano de obra.",
+        "isCorrect": true,
+        "rationale": "Las paradas de planta anuales implican intervenciones intensivas de mantenimiento mayor donde se ejecutan de golpe importantes desembolsos presupuestarios."
+      },
+      {
+        "text": "A un error del planificador al subestimar sistemáticamente los costos fijos indirectos de la organización.",
+        "isCorrect": false,
+        "rationale": "El comportamiento estacional en curva S con picos puntuales es una realidad operativa habitual debido a paradas mayores, no necesariamente un error de estimación."
+      },
+      {
+        "text": "A la depreciación acelerada de las herramientas de mantenimiento ocurrida durante el primer trimestre del año.",
+        "isCorrect": false,
+        "rationale": "La depreciación de herramientas es un costo de registro contable no monetario directo que no genera picos súbitos de flujo de caja operativo."
+      },
+      {
+        "text": "A la conversión intempestiva de los costos variables operativos en gastos de inversión de capital (CAPEX).",
+        "isCorrect": false,
+        "rationale": "Los picos en la ejecución presupuestaria corresponden a gastos operativos u órdenes de trabajo de mantenimiento, no a una reclasificación contable a CAPEX."
+      },
+      {
+        "text": "A la falta de integración de indicadores OKR dentro de la matriz de evaluación del desempeño operativo.",
+        "isCorrect": false,
+        "rationale": "La ausencia de metodologías de objetivos no explica la concentración física y financiera de gastos que provoca una parada programada."
+      }
+    ],
+    "hint": "Recuerde qué evento operativo anual concentra intervenciones masivas de repuestos y servicios externos en un intervalo reducido de tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la elaboración del presupuesto de mantenimiento industrial, es crucial diferenciar los gastos de inversión (CAPEX) de los gastos operativos (OPEX). ¿Cuáles de las siguientes partidas corresponden correctamente a la categoría de OPEX? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Compra de lubricantes, aceites y grasas consumibles para las rutinas de mantenimiento preventivo.",
+        "isCorrect": true,
+        "rationale": "Los lubricantes e insumos necesarios para mantener las máquinas operativas se consideran gastos de explotación y operación diaria (OPEX)."
+      },
+      {
+        "text": "Pago de salarios al personal técnico y horas extraordinarias dedicadas a reparaciones de rutina.",
+        "isCorrect": true,
+        "rationale": "Los desembolsos periódicos en nómina y remuneraciones por tiempo extra constituyen parte del gasto operativo recurrente."
+      },
+      {
+        "text": "Adquisición de repuestos menores y filtros para el reemplazo programado en los equipos.",
+        "isCorrect": true,
+        "rationale": "Los repuestos menores de consumo continuo forman parte de la partida de costos operativos necesarios para preservar el activo."
+      },
+      {
+        "text": "Adquisición de un equipo mayor nuevo para reemplazar un activo totalmente obsoleto.",
+        "isCorrect": false,
+        "rationale": "La compra de una maquinaria sustitutiva completa implica una adición de capital que se clasifica contablemente como CAPEX."
+      },
+      {
+        "text": "Compra de una herramienta de diagnóstico de alta tecnología y elevado valor comercial como un durómetro especializado.",
+        "isCorrect": false,
+        "rationale": "La adquisición de bienes de capital duraderos o instrumental de alto costo representa un gasto de capital (CAPEX) y no un gasto operativo diario."
+      }
+    ],
+    "hint": "Identifique las partidas de consumo continuo o gasto corriente asociadas a la preservación del equipo, diferenciándolas de las compras de activos fijos duraderos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La gestión basada en actividades (ABM) se divide en dos enfoques principales. ¿Cuál es el objetivo primordial del ABM operativo dentro de la gestión de costos de mantenimiento?",
+    "opciones": [
+      {
+        "text": "Analizar el costo de cada actividad para aumentar la eficiencia operativa, optimizando las actividades que generan valor y eliminando las que no lo aportan.",
+        "isCorrect": true,
+        "rationale": "El ABM operativo busca la optimización de los procesos mediante la identificación profunda de las tareas que aportan valor agregado y la eliminación de ineficiencias o desperdicios."
+      },
+      {
+        "text": "Evaluar la rentabilidad estratégica de los clientes externos y definir los precios finales de venta del producto en el mercado.",
+        "isCorrect": false,
+        "rationale": "El análisis de rentabilidad comercial de clientes y fijación estratégica de precios finales corresponde al enfoque del ABM estratégico."
+      },
+      {
+        "text": "Determinar exclusivamente la viabilidad del presupuesto de capital (CAPEX) para la adquisición de nuevas plantas industriales.",
+        "isCorrect": false,
+        "rationale": "La evaluación de viabilidad de grandes proyectos de infraestructura es una tarea de presupuestación de capital superior y no la función básica del ABM operativo."
+      },
+      {
+        "text": "Congelar la asignación de costos indirectos para evitar la fluctuación en los estados financieros anuales.",
+        "isCorrect": false,
+        "rationale": "El ABM no congela la asignación de costos indirectos, sino que utiliza el costeo ABC para entender su comportamiento y causa raíz."
+      },
+      {
+        "text": "Sustituir los sistemas contables tradicionales por modelos de auditoría financiera externa trimestral.",
+        "isCorrect": false,
+        "rationale": "El ABM operativo es un modelo de gestión interna de procesos y no reemplaza la contabilidad legal ni la auditoría financiera externa."
+      }
+    ],
+    "hint": "Diferencie el enfoque estratégico (enfocado en rentabilidad de productos/clientes) del enfoque operativo (enfocado en eficiencia de procesos e ineficiencias).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del marco del ABM, las actividades de una organización se clasifican en primarias y de soporte. ¿Cuál de las siguientes opciones representa una actividad de soporte en el contexto de mantenimiento?",
+    "opciones": [
+      {
+        "text": "La gestión de compras e importación de repuestos e insumos realizada por el área de logística.",
+        "isCorrect": true,
+        "rationale": "Las tareas de aprovisionamiento, compras y contratación administrativa proporcionan los insumos necesarios para que Mantenimiento opere, constituyendo actividades de soporte."
+      },
+      {
+        "text": "La ejecución del mantenimiento mecánico directo sobre la línea central de producción.",
+        "isCorrect": false,
+        "rationale": "La ejecución física de tareas sobre el activo productivo principal califica como una actividad primaria directamente ligada al proceso operativo fundamental."
+      },
+      {
+        "text": "El almacenamiento y manipulación interna inmediata de los insumos en el taller de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "La manipulación directa de materiales y la logística interna operativa están alineadas directamente con las operaciones del proceso primario."
+      },
+      {
+        "text": "La prestación del servicio técnico postventa en las instalaciones del cliente final.",
+        "isCorrect": false,
+        "rationale": "La atención de servicios de postventa es una actividad primaria en la cadena de valor en contacto directo con el producto final entregado."
+      },
+      {
+        "text": "La mecanización interna del componente principal de una máquina en la línea de fabricación.",
+        "isCorrect": false,
+        "rationale": "La intervención o fabricación directa de partes clave en la línea productiva forma parte de las actividades operativas primarias."
+      }
+    ],
+    "hint": "Busque la tarea que no interviene físicamente sobre la maquinaria pero proporciona la gestión de insumos e infraestructura requerida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la metodología ABM, ¿qué función cumple el sistema de 'Costeo Basado en Actividades' (ABC) en relación con el tratamiento de los desembolsos de la empresa?",
+    "opciones": [
+      {
+        "text": "Distribuir de manera precisa los costos indirectos entre las actividades que realmente los generan, en lugar de prorratearlos arbitrariamente.",
+        "isCorrect": true,
+        "rationale": "El ABC actúa como el motor cuantitativo de cálculo que distribuye los costos indirectos hacia las actividades según el consumo real de recursos mediante inductores."
+      },
+      {
+        "text": "Asignar de forma fija los costos directos de mano de obra sin considerar el tiempo real dedicado a la tarea.",
+        "isCorrect": false,
+        "rationale": "El sistema ABC no fija valores arbitrarios de mano de obra, sino que asigna los desembolsos según las horas e inductores consumidos por cada tarea."
+      },
+      {
+        "text": "Sumar únicamente los costos consumibles directos ignorando los gastos administrativos y de supervisión.",
+        "isCorrect": false,
+        "rationale": "El propósito principal del ABC es visibilizar e incorporar de forma precisa los costos indirectos y administrativos, no ignorarlos."
+      },
+      {
+        "text": "Convertir los gastos de operación (OPEX) en activos fijos depreciables a largo plazo.",
+        "isCorrect": false,
+        "rationale": "El ABC es una técnica de asignación de costos y no altera la naturaleza contable de un gasto operativo hacia un activo capitalizable."
+      },
+      {
+        "text": "Eliminar los inductores de costo para simplificar el reporte financiero hacia la alta gerencia.",
+        "isCorrect": false,
+        "rationale": "Los inductores de costo son el pilar fundamental del método ABC para realizar una asignación objetiva de desembolsos."
+      }
+    ],
+    "hint": "Recuerde cómo el método ABC aborda los costos generales e indirectos que la contabilidad tradicional reparte mediante prorrateos genéricos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el caso de estudio de la planta de componentes electrónicos evaluado mediante ABM, se determinaron los siguientes datos: Inspección ($10,000 / 50 h), Reparación ($20,000 / 100 h), Limpieza ($5,000 / 30 h) y Gestión ($3,000 / 20 h). ¿Qué conclusión relevante se obtuvo al analizar la tarifa por hora de cada actividad?",
+    "opciones": [
+      {
+        "text": "Que la tarifa por hora de inspección ($200/h) es idéntica a la de reparación ($200/h), evidenciando que inspeccionar consume recursos tan costosos por hora como reparar.",
+        "isCorrect": true,
+        "rationale": "Al calcular el ratio dividiendo el costo total entre el tiempo consumido ($10,000/50 h = $200/h y $20,000/100 h = $200/h), se revela que la hora de inspección resulta ser económicamente tan costosa como la de reparación."
+      },
+      {
+        "text": "Que la gestión de repuestos es la actividad con la tarifa por hora más elevada de todo el departamento de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "El costo por hora de la actividad de gestión equivale a $150/h ($3,000/20 h), valor que es inferior al costo por hora de inspección y reparación."
+      },
+      {
+        "text": "Que la limpieza de equipos representa el 50% del gasto total del presupuesto operativo.",
+        "isCorrect": false,
+        "rationale": "El gasto en limpieza representa $5,000 sobre un presupuesto total de $38,000, lo que equivale a aproximadamente un 13.1% del total y no al 50%."
+      },
+      {
+        "text": "Que reducir las horas de inspección disminuye de forma automática el costo unitario de las reparaciones a $50/h.",
+        "isCorrect": false,
+        "rationale": "El costo unitario de cada actividad depende de sus propios inductores y tarifas de recursos, no de una reducción lineal directa entre rubros."
+      },
+      {
+        "text": "Que la reparación presenta un costo por hora significativamente menor que el costo por hora de las actividades de limpieza.",
+        "isCorrect": false,
+        "rationale": "La reparación ($200/h) presenta una tarifa horaria superior a la de limpieza ($166.67/h)."
+      }
+    ],
+    "hint": "Divida el costo financiero total entre el número de horas consumidas para cada una de las actividades del taller.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la implementación de un esquema de monitoreo continuo dentro del enfoque ABM, las frecuencias de revisión se establecen según el nivel táctico y operativo. ¿Cuáles de las siguientes combinaciones de frecuencia y alcance son correctas? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Monitoreo diario enfocado en el seguimiento de actividades críticas e indicadores operativos inmediatos.",
+        "isCorrect": true,
+        "rationale": "El control diario permite detectar desviaciones de forma instantánea en aquellas tareas que condicionan la continuidad de las operaciones."
+      },
+      {
+        "text": "Monitoreo semanal enfocado en el análisis de tendencias de costos e identificación de ineficiencias en los procesos.",
+        "isCorrect": true,
+        "rationale": "El horizonte semanal resulta idóneo para observar desviaciones de tendencia y ajustar de forma ágil la asignación de recursos antes del cierre mensual."
+      },
+      {
+        "text": "Monitoreo mensual para la evaluación del desempeño frente al presupuesto e integración de sistemas.",
+        "isCorrect": true,
+        "rationale": "El corte mensual se alinea con la presentación formal de estados financieros y la medición global de efectividad frente a presupuestos aprobados."
+      },
+      {
+        "text": "Monitoreo anual destinado a la revisión integral de procesos y planificación estratégica futura.",
+        "isCorrect": true,
+        "rationale": "El análisis anual consolida las lecciones aprendidas y permite proyectar la reestructuración de modelos presupuestarios a largo plazo."
+      },
+      {
+        "text": "Monitoreo diario exclusivo para la revaluación de activos de capital y ajuste de tablas de depreciación.",
+        "isCorrect": false,
+        "rationale": "El cálculo de depreciación y revaluación patrimonial de activos fijos responde a cierres contables periódicos y no requiere revisión diaria."
+      }
+    ],
+    "hint": "Considere qué periodicidad corresponde a la supervisión operativa del taller y cuál a las tendencias semanales o cierres contables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al implementar la gestión basada en actividades (ABM) en un entorno industrial, la dirección suele enfrentar barreras organizacionales no técnicas. ¿Cuál es la principal causa de la resistencia al cambio observada en el personal e incluso en las jefaturas?",
+    "opciones": [
+      {
+        "text": "El arraigo a paradigmas tradicionales de trabajo y el temor a que la visibilidad detallada de ineficiencias afecte el desempeño percibido.",
+        "isCorrect": true,
+        "rationale": "La resistencia al cambio suele originarse por el apego a la rutina preconcebida y el recelo que genera la transparencia que aporta el ABM al exponer costos y tiempos improductivos."
+      },
+      {
+        "text": "La inexistencia de plataformas de software ERP con módulos financieros en el mercado global.",
+        "isCorrect": false,
+        "rationale": "Existen múltiples herramientas comerciales consolidadas de ERP y BI, por lo que la causa principal no radica en la falta de software."
+      },
+      {
+        "text": "El exceso de precisión matemática en las herramientas estadísticas que impide tomar decisiones ágiles.",
+        "isCorrect": false,
+        "rationale": "La precisión analítica es una fortaleza del ABM; la barrera radica en factores del comportamiento humano y cultura organizacional."
+      },
+      {
+        "text": "La exigencia legal de reducir de inmediato la nómina de trabajadores tras identificar las tareas de soporte.",
+        "isCorrect": false,
+        "rationale": "El ABM busca la optimización de procesos y redistribución eficiente de recursos, no el despido legal obligatorio de empleados."
+      },
+      {
+        "text": "La incompatibilidad entre las métricas de mantenimiento y los objetivos corporativos de calidad.",
+        "isCorrect": false,
+        "rationale": "El ABM busca alinear las actividades de mantenimiento con los objetivos corporativos para mejorar la eficiencia y rentabilidad."
+      }
+    ],
+    "hint": "Reflexione sobre cómo reaccionan las personas cuando un nuevo sistema expone formalmente los tiempos muertos e ineficiencias de su gestión habitual.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el desarrollo de un modelo de Costeo Basado en Actividades (ABC) para mantenimiento, ¿qué función desempeñan los inductores de costos o 'cost drivers'?",
+    "opciones": [
+      {
+        "text": "Constituyen la base de medida cuantitativa que vincula el consumo de recursos de una actividad con el objeto de costo o producto final.",
+        "isCorrect": true,
+        "rationale": "Los inductores de costo miden la intensidad con que cada actividad utiliza los recursos o cómo los activos consumen dichas actividades (por ejemplo, horas de trabajo u órdenes de mantenimiento)."
+      },
+      {
+        "text": "Permiten congelar los costos directos de repuestos independientemente de las condiciones del mercado.",
+        "isCorrect": false,
+        "rationale": "Los inductores de costo no congelan precios ni precios de compra de insumos en el mercado."
+      },
+      {
+        "text": "Representan la depreciación contable de los edificios e instalaciones administrativas de la empresa.",
+        "isCorrect": false,
+        "rationale": "La depreciación de infraestructuras es un rubro o recurso a asignar, no la variable o métrica inductora de consumo."
+      },
+      {
+        "text": "Eliminan la necesidad de registrar las horas efectivamente trabajadas por los técnicos de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Las horas trabajadas suelen actuar precisamente como uno de los inductores clave que requiere ser registrado."
+      },
+      {
+        "text": "Garantizan que todos los desembolsos de la planta se clasifiquen automáticamente como gastos de capital (CAPEX).",
+        "isCorrect": false,
+        "rationale": "El inductor de costo sirve para medir el consumo real y distribuir valores de costo, no para reclasificar OPEX en CAPEX."
+      }
+    ],
+    "hint": "Considere cuál es el factor medible (como horas, número de órdenes, número de intervenciones) que explica por qué una actividad gasta dinero.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando los desembolsos en intervenciones de un activo antiguo crecen de forma continua, se utiliza la relación entre el costo total de mantenimiento y el valor de reemplazo. ¿A partir de qué límite porcentual se justifica técnicamente la sustitución completa del equipo en lugar de seguir reparándolo?",
+    "opciones": [
+      {
+        "text": "Cuando el costo anual de mantenimiento alcanza o supera el 40% al 50% del valor de sustitución por un activo nuevo.",
+        "isCorrect": true,
+        "rationale": "Cuando el gasto anual en mantener una máquina alcanza entre el 40% y 50% de lo que costaría adquirir una nueva, la inversión en mantenimiento deja de ser viable frente al reemplazo."
+      },
+      {
+        "text": "Cuando el costo anual de mantenimiento representa exactamente el 5% del valor de sustitución.",
+        "isCorrect": false,
+        "rationale": "Un gasto del 5% del valor de reemplazo se considera un estándar operativo aceptable y normal en la preservación de activos."
+      },
+      {
+        "text": "Cuando el gasto en lubricación supera al costo de la mano de obra en un 10%.",
+        "isCorrect": false,
+        "rationale": "La proporción entre insumos de lubricación y sueldo técnico no determina la decisión estratégica de sustitución de un bien de capital."
+      },
+      {
+        "text": "Cuando el activo ha completado un año calendario desde su puesta en marcha inicial.",
+        "isCorrect": false,
+        "rationale": "La vida útil de los equipos industriales abarca normalmente múltiples años; un año de operación no justifica la baja del activo."
+      },
+      {
+        "text": "Cuando el costo indirecto asignado al taller se iguala a la depreciación acumulada de la planta.",
+        "isCorrect": false,
+        "rationale": "El indicador de reemplazo relaciona el gasto de mantenimiento directamente con el valor comercial de compra del equipo nuevo equivalente."
+      }
+    ],
+    "hint": "Recuerde qué porcentaje del valor de compra de una máquina nueva debe alcanzar el gasto anual de mantenimiento para considerar obsoleta la máquina antigua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para asignar de forma rigurosa los recursos a las actividades en un esquema de costeo ABC en mantenimiento, la metodología recomienda apoyarse en tres herramientas operativas fundamentales. ¿Cuáles son estas herramientas? (Seleccione exactamente 3 opciones)",
+    "opciones": [
+      {
+        "text": "Los diagramas de flujo de procesos.",
+        "isCorrect": true,
+        "rationale": "El trazado de diagramas de flujo permite delimitar cada etapa secuencial del proceso y visibilizar los puntos de consumo de recursos."
+      },
+      {
+        "text": "El registro e información proveniente de la contabilidad de costos.",
+        "isCorrect": true,
+        "rationale": "La contabilidad suministra los libros y asientos contables requeridos para cuantificar monetariamente los recursos consumidos."
+      },
+      {
+        "text": "El análisis detallado del mapa de valor de los procesos.",
+        "isCorrect": true,
+        "rationale": "El análisis de procesos examina cada tarea para diferenciar las que aportan valor de aquellas que generan costos improductivos."
+      },
+      {
+        "text": "La matriz de evaluación de riesgos cualitativa de mercado.",
+        "isCorrect": false,
+        "rationale": "La matriz de riesgos de mercado es un instrumento de planificación comercial externa y no una herramienta de asignación interna en ABC."
+      },
+      {
+        "text": "Las encuestas cualitativas de clima organizacional.",
+        "isCorrect": false,
+        "rationale": "Las encuestas de clima miden la percepción laboral y no constituyen una herramienta directa de costeo de actividades."
+      }
+    ],
+    "hint": "Considere la herramienta gráfica de secuencia, la fuente de registros contables monetarios y el análisis enfocado en identificar ineficiencias en los procesos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la evaluación de una línea de fabricación mediante ABC se determinaron los siguientes costos mensuales: Inspecciones (100 eventos a $20 c/u), Reparaciones menores (150 eventos a $20 c/u), Lubricación/Ajustes (100 eventos a $15 c/u) y Capacitación ($1,000 por trimestre). ¿A cuánto asciende el costo total mensual consolidado de estas actividades?",
+    "opciones": [
+      {
+        "text": "$6,833.33",
+        "isCorrect": true,
+        "rationale": "Calculando mensualmente: Inspección = 100 * $20 = $2,000; Reparación = 150 * $20 = $3,000; Lubricación = 100 * $15 = $1,500; Capacitación prorrateada al mes = $1,000 / 3 = $333.33. La suma total mensual equivale a $2,000 + $3,000 + $1,500 + $333.33 = $6,833.33."
+      },
+      {
+        "text": "$7,500.00",
+        "isCorrect": false,
+        "rationale": "Este valor se obtiene al sumar el costo trimestral completo de la capacitación ($1,000) de forma directa sin convertirlo a su equivalente mensual."
+      },
+      {
+        "text": "$6,500.00",
+        "isCorrect": false,
+        "rationale": "Esta suma omite por completo el costo proporcional correspondiente a la partida de capacitación del personal."
+      },
+      {
+        "text": "$8,000.00",
+        "isCorrect": false,
+        "rationale": "Este resultado es fruto de un cálculo erróneo que sobreestima las horas e inductores de lubricación y capacitación."
+      },
+      {
+        "text": "$5,833.33",
+        "isCorrect": false,
+        "rationale": "Este valor no refleja la suma exacta de los cuatro rubros analizados al descontar arbitrariamente gastos de reparación."
+      }
+    ],
+    "hint": "Sume los gastos mensuales de inspección, reparación y lubricación, y asegúrese de convertir el desembolso de capacitación trimestral a su equivalente mensual.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Los 'costos ocultos' en la gestión de mantenimiento, como los reprocesos por mala ejecución, los desperdicios o las paradas por desabastecimiento, no agregan valor pero consumen recursos. ¿Cuál es el procedimiento más efectivo para identificarlos según la metodología ABC?",
+    "opciones": [
+      {
+        "text": "Mapear el flujo del proceso junto con el personal operativo e implementar el seguimiento directo mediante indicadores clave (KPI).",
+        "isCorrect": true,
+        "rationale": "Involucrar a los técnicos que ejecutan el trabajo e inspeccionar el mapa de procesos permite detectar ineficiencias y cuellos de botella que pasan desapercibidos en los informes generales."
+      },
+      {
+        "text": "Aumentar indiscriminadamente las existencias en almacén para evitar desabastecimientos sin analizar el costo de mantenimiento de stock.",
+        "isCorrect": false,
+        "rationale": "El exceso de inventario incrementa los costos de almacenamiento y riesgo de deterioro, constituyendo en sí mismo un costo oculto adicional."
+      },
+      {
+        "text": "Eliminar por completo las ordenes de trabajo escritas para agilizar el tiempo de respuesta del personal.",
+        "isCorrect": false,
+        "rationale": "Prescindir del registro formal impida rastrear el tiempo real consumido y oculta aún más las ineficiencias del proceso."
+      },
+      {
+        "text": "Reemplazar las rutinas de lubricación programada por intervenciones reactivas a demanda.",
+        "isCorrect": false,
+        "rationale": "Abandonar el mantenimiento preventivo planificado incrementa exponencialmente las fallas catastróficas y los costos no visibilizados de parada."
+      },
+      {
+        "text": "Subcontratar la totalidad del personal sin fijar niveles de servicio o métricas de desempeño.",
+        "isCorrect": false,
+        "rationale": "La tercerización no supervisada suele ocultar sobrecostos por bajas eficiencias y reprocesos no garantizados."
+      }
+    ],
+    "hint": "Considere quién conoce en detalle las demoras del taller y qué herramientas analíticas permiten visibilizar cuellos de botella.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "El desarrollo de un modelo ABC en el taller de mantenimiento aporta información valiosa para decisiones estratégicas organizacionales. ¿En cuáles de los siguientes escenarios operacionales resulta ser una herramienta determinante? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Evaluación financiera para decidir entre ejecutar mantenimiento preventivo o asumir correctivos de emergencia.",
+        "isCorrect": true,
+        "rationale": "El ABC visibiliza el costo integral de las intervenciones de emergencia, facilitando la comparación objetiva frente al costo de prevenir."
+      },
+      {
+        "text": "Análisis de viabilidad para decidir entre la ejecución con personal propio o la subcontratación de servicios especializados.",
+        "isCorrect": true,
+        "rationale": "Permite comparar de forma precisa el costo real total de la hora-hombre interna frente a la tarifa ofrecida por un proveedor externo."
+      },
+      {
+        "text": "Optimización del inventario de repuestos al asignar los costos reales de almacenamiento y gestión a ítems específicos.",
+        "isCorrect": true,
+        "rationale": "Asigna el costo de logística e inmovilización a repuestos según su tasa de rotación e impacto en el proceso."
+      },
+      {
+        "text": "Eliminación autocrática de los impuestos corporativos locales.",
+        "isCorrect": false,
+        "rationale": "El modelo ABC es un marco de gestión interna y no tiene facultad para modificar u omitir obligaciones tributarias legales."
+      },
+      {
+        "text": "Cancelación de las pólizas de seguro contra incendios de la planta para bajar costos fijos.",
+        "isCorrect": false,
+        "rationale": "La cancelación de seguros expone a la empresa a riesgos catastróficos inaceptables y no constituye una práctica de optimización sustentable."
+      }
+    ],
+    "hint": "Seleccione las decisiones operativas de taller que implican comparar costos reales de ejecución interna, subcontratación o conservación de inventarios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el principio operativo fundamental del Mantenimiento Basado en la Condición (CBM) en la Industria 4.0?",
+    "opciones": [
+      {
+        "text": "Intervenir el activo únicamente cuando la medición y monitoreo continuo de variables físicas indique una degradación o probabilidad de falla.",
+        "isCorrect": true,
+        "rationale": "El CBM supedita la acción física de mantenimiento al estado de salud real del equipo, evaluado mediante la medición continua de parámetros operativos."
+      },
+      {
+        "text": "Reemplazar piezas mecánicas respetando un intervalo fijo de horas de calendario, sin importar el estado de desgaste de la pieza.",
+        "isCorrect": false,
+        "rationale": "La sustitución predeterminada por intervalo de tiempo fijo sin verificar el estado real describe al mantenimiento preventivo tradicional por calendario."
+      },
+      {
+        "text": "Operar la maquinaria de forma continua hasta la rotura del componente para maximizar la producción a corto plazo.",
+        "isCorrect": false,
+        "rationale": "Permitir la rotura imprevista del componente corresponde al mantenimiento correctivo reactivo puro."
+      },
+      {
+        "text": "Realizar la revisión completa de los sistemas eléctricos cada vez que la temperatura ambiente supere un valor arbitrario.",
+        "isCorrect": false,
+        "rationale": "El CBM se basa en parámetros físicos internos del activo y no en reglas fijas supeditadas únicamente al clima exterior."
+      },
+      {
+        "text": "Desconectar los sensores IoT durante los picos de producción para no saturar los registros en el sistema CMMS.",
+        "isCorrect": false,
+        "rationale": "El CBM requiere la captura continua de datos precisamente en momentos de alta carga para monitorear el estado operativo."
+      }
+    ],
+    "hint": "Considere qué criterio rige la decisión de intervenir una máquina en CBM: ¿la fecha fijada en el calendario o la condición física medida?",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el ámbito de la confiabilidad de activos y la metodología CBM, ¿qué representa el intervalo P-F dentro de la curva de degradación de un equipo?",
+    "opciones": [
+      {
+        "text": "El margen de tiempo que transcurre entre la detección de una falla potencial (P) y el momento en que se produce la falla funcional (F).",
+        "isCorrect": true,
+        "rationale": "El intervalo P-F mide la ventana temporal disponible desde que un parámetro anómalo es detectable hasta que el equipo pierde su capacidad de cumplir su función."
+      },
+      {
+        "text": "El tiempo total que tarda el departamento de compras en cotizar un repuesto en el mercado internacional.",
+        "isCorrect": false,
+        "rationale": "El intervalo P-F es un parámetro físico de comportamiento del activo frente a la falla, no un plazo burocrático de logística."
+      },
+      {
+        "text": "La diferencia matemática entre la vida útil estimada por el fabricante y la vida útil real lograda en planta.",
+        "isCorrect": false,
+        "rationale": "Esta diferencia representa la desviación en la longevidad del activo, no el margen entre la detección de la anomalía y la detención por falla."
+      },
+      {
+        "text": "El número de horas requeridas por el técnico para reparar un componente una vez ocurrida la rotura.",
+        "isCorrect": false,
+        "rationale": "El tiempo de reparación de una rotura se denomina Tiempo Medio de Reparación (MTTR), no intervalo P-F."
+      },
+      {
+        "text": "El período de garantía de los sensores de vibración e instrumentos instalados en la máquina.",
+        "isCorrect": false,
+        "rationale": "La garantía comercial de los sensores no guarda relación con la curva de degradación física del activo inspeccionado."
+      }
+    ],
+    "hint": "Identifique el lapso que transcurre desde que las herramientas detectan el síntoma inicial de degradación hasta la parada total del equipo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al utilizar un acelerómetro para el monitoreo de vibraciones mecánicas en un equipo rotativo, ¿qué tipo de fallas específicas permite identificar el análisis espectral de la señal procesada?",
+    "opciones": [
+      {
+        "text": "Anomalías dinámicas como desbalance de masa, desalineación de ejes, holguras mecánicas y severidad de desgaste en rodamientos.",
+        "isCorrect": true,
+        "rationale": "El espectro de vibración descompone las frecuencias mecánicas identificando patrones característicos de desalineamiento, holguras o picaduras en rodamientos."
+      },
+      {
+        "text": "Fugas microscópicas de aire comprimido o fluidos a alta presión en tuberías estáticas.",
+        "isCorrect": false,
+        "rationale": "La detección de fugas en tuberías estáticas se aborda mediante técnicas de ultrasonido acústico y no mediante análisis espectral de acelerómetros."
+      },
+      {
+        "text": "Puntos calientes provocados por falso contacto o alta resistencia en tableros eléctricos.",
+        "isCorrect": false,
+        "rationale": "El diagnóstico de puntos calientes en tableros eléctricos se realiza mediante termografía infrarroja."
+      },
+      {
+        "text": "Grado de contaminación por humedad o partículas sólidas en el aceite dieléctrico de transformadores.",
+        "isCorrect": false,
+        "rationale": "El estado de aceites se determina mediante ensayos fisicoquímicos y conteo de partículas en laboratorio tribológico."
+      },
+      {
+        "text": "Espesor remanente de pared por corrosión interna en recipientes a presión.",
+        "isCorrect": false,
+        "rationale": "La medición de espesores se efectúa típicamente con ultrasonido de pulso-eco, no mediante espectrometría de aceleración vibratoria."
+      }
+    ],
+    "hint": "Piense en los problemas mecánicos propios de componentes en rotación, como ejes, acoplamientos y rodamientos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Las distintas tecnologías de monitoreo en CBM permiten diagnosticar modos de falla específicos. ¿Cuáles de las siguientes asociaciones entre técnica de monitoreo y su aplicación directa son correctas? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Termografía infrarroja para la localización de puntos calientes y conexiones sueltas en sistemas eléctricos.",
+        "isCorrect": true,
+        "rationale": "La radiación infrarroja captura las diferencias de temperatura en conectores e interruptores provocadas por alta resistencia eléctrica."
+      },
+      {
+        "text": "Ultrasonido de alta frecuencia para la detección de fugas de gas a presión y evaluación no destructiva de soldaduras.",
+        "isCorrect": true,
+        "rationale": "Las fugas de gas a alta presión generan emisiones acústicas ultrasónicas de alta frecuencia detectables por sensores no destructivos especializados."
+      },
+      {
+        "text": "Análisis tribológico de partículas de desgaste en muestras de aceite para determinar el deterioro interno de cajas reductoras.",
+        "isCorrect": true,
+        "rationale": "El recuento y caracterización de virutas metálicas en el lubricante identifica la tasa de desgaste en engranajes antes del fallo final."
+      },
+      {
+        "text": "Termografía infrarroja para medir cuantitativamente el recuento de partículas metálicas suspendidas en un fluido hidráulico.",
+        "isCorrect": false,
+        "rationale": "La termografía mide la emisión de temperatura radiante superficial; no puede realizar un conteo de partículas en fluidos."
+      },
+      {
+        "text": "Análisis de vibraciones como método primario para medir la resistencia dieléctrica de un cable subterráneo.",
+        "isCorrect": false,
+        "rationale": "El análisis de vibraciones evalúa dinámicas mecánicas y no propiedades de aislamiento de corriente eléctrica."
+      }
+    ],
+    "hint": "Asocie correctamente el calor con cámaras térmicas, las fugas de presión con ondas acústicas y el desgaste de engranajes con análisis de lubricante.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de un sistema de monitoreo en tiempo real, se configuran límites para las variables operativas. ¿Cuál es la diferencia operacional clave entre un 'umbral de advertencia' y un 'umbral crítico'?",
+    "opciones": [
+      {
+        "text": "El umbral de advertencia indica la necesidad de intensificar la inspección sin detener el activo, mientras que el umbral crítico exige una acción o parada inmediata.",
+        "isCorrect": true,
+        "rationale": "La advertencia alerta al personal para incrementar el seguimiento y planificar el mantenimiento, mientras que el valor crítico indica un riesgo alto que requiere intervención urgente."
+      },
+      {
+        "text": "El umbral de advertencia detiene automáticamente la máquina de forma intempestiva, mientras que el crítico envía un reporte semanal.",
+        "isCorrect": false,
+        "rationale": "Las paradas automáticas o intervenciones urgentes responden al alcance de umbrales críticos, no a simples advertencias iniciales."
+      },
+      {
+        "text": "El umbral crítico se aplica solo a equipos auxiliares de baja prioridad, mientras que el de advertencia se reserva para equipos críticos.",
+        "isCorrect": false,
+        "rationale": "Ambos tipos de umbrales se establecen en la configuración de parámetros de cualquier activo crítico del proceso."
+      },
+      {
+        "text": "El umbral de advertencia mide parámetros mecánicos y el umbral crítico mide variables exclusivamente financieras.",
+        "isCorrect": false,
+        "rationale": "Ambos umbrales corresponden a mediciones físicas de operación del equipo (temperatura, vibración, presión)."
+      },
+      {
+        "text": "No existe diferencia operacional; son conceptos equivalentes que se utilizan como sinónimos en los sistemas SCADA.",
+        "isCorrect": false,
+        "rationale": "La distinción entre advertencia y crítico es la base para escalar las alarmas y definir la severidad de la respuesta operativa."
+      }
+    ],
+    "hint": "Piense en qué nivel de alerta requiere solo vigilancia reforzada y cuál obliga a detener inmediatamente la operación antes de la rotura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En un entorno de Industria 4.0, se integra el software de gestión de mantenimiento (CMMS) con el sistema de planificación de recursos empresariales (ERP). ¿Cuál es el beneficio directo de esta integración en el ámbito del control de costos?",
+    "opciones": [
+      {
+        "text": "Vincular los datos de mantenimiento con las áreas de Finanzas, Compras y Nómina, garantizando visibilidad en tiempo real de los costos reales y el presupuesto.",
+        "isCorrect": true,
+        "rationale": "La integración entre el CMMS y el ERP unifica la información técnica con los estados financieros, alineando las órdenes de trabajo con los presupuestos y la gestión de compras."
+      },
+      {
+        "text": "Prescindir de la instalación de instrumental o sensores en la maquinaria productiva.",
+        "isCorrect": false,
+        "rationale": "La integración de sistemas de gestión de software no reemplaza la necesidad física de capturar datos de los activos mediante sensores."
+      },
+      {
+        "text": "Sustituir la supervisión en campo por la eliminación automática del almacén físico de repuestos.",
+        "isCorrect": false,
+        "rationale": "La integración optimiza el inventario del almacén, pero no elimina la existencia necesaria de stock físico ni la supervisión técnica en planta."
+      },
+      {
+        "text": "Convertir las horas extra del personal técnico en deducciones tributarias de exportación.",
+        "isCorrect": false,
+        "rationale": "El objetivo de conectar el CMMS al ERP es controlar costos operativos y planificar recursos, no alterar normas tributarias corporativas."
+      },
+      {
+        "text": "Garantizar que los repuestos e insumos consumidos tengan un costo financiero nulo.",
+        "isCorrect": false,
+        "rationale": "La integración registra con precisión el valor financiero de los insumos; no anula ni elimina el costo real de los repuestos."
+      }
+    ],
+    "hint": "Considere la ventaja de que la orden de trabajo técnica 'converse' de forma directa con los libros de contabilidad, compras y almacén del ERP.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-60",
+    "diplomado": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al comparar la gestión de Mantenimiento Basado en la Condición (CBM) frente al Mantenimiento Preventivo Tradicional por calendario, ¿cuáles de las siguientes opciones representan ventajas operativas y financieras reales del CBM? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Maximizar la vida útil efectiva de las piezas al prevenir la sustitución prematura de componentes que aún se encuentran en buen estado.",
+        "isCorrect": true,
+        "rationale": "Al reemplazar los repuestos según su estado real medido y no por un intervalo fijo de horas, se aprovecha toda la vida útil del componente."
+      },
+      {
+        "text": "Optimizar los desembolsos de mantenimiento al intervenir la maquinaria únicamente cuando los datos confirman la existencia de degradación.",
+        "isCorrect": true,
+        "rationale": "Evita gastos innecesarios de mano de obra y repuestos en intervenciones preventivas fijas programadas cuando el equipo no presenta desgaste."
+      },
+      {
+        "text": "Minimizar el impacto de paradas no programadas al detectar la falla potencial con suficiente tiempo dentro del intervalo P-F.",
+        "isCorrect": true,
+        "rationale": "Identificar el inicio de la degradación otorga tiempo para programar la detención de la máquina sin interrumpir intempestivamente la producción."
+      },
+      {
+        "text": "Prescindir de cualquier tipo de capacitación o formación técnica especializada para el personal técnico.",
+        "isCorrect": false,
+        "rationale": "El CBM exige un mayor nivel de formación en interpretación de gráficos, datos de sensores y metodologías diagnósticas."
+      },
+      {
+        "text": "Requerir una inversión inicial nula en hardware, sensores y licencias de software de monitoreo.",
+        "isCorrect": false,
+        "rationale": "La implementación de CBM exige una inversión inicial en tecnología de instrumentación, conectividad e infraestructura digital."
+      }
+    ],
+    "hint": "Seleccione las ventajas referidas a la extensión de la vida útil, intervención justa a tiempo y reducción de fallas catastróficas inesperadas.",
+    "activo": true
+  }
+]

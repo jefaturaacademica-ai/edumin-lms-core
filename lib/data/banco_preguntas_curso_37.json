@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del Internet de las Cosas (IoT) en el entorno de Big Data?",
+    "opciones": [
+      {
+        "text": "La interconexión y recopilación de datos de dispositivos físicos mediante una red de comunicación.",
+        "isCorrect": true,
+        "rationale": "El IoT se fundamenta en conectar sensores y objetos cotidianos a la red para transmitir y recopilar información en tiempo real."
+      },
+      {
+        "text": "El almacenamiento exclusivo de archivos de texto en servidores locales de la empresa.",
+        "isCorrect": false,
+        "rationale": "El IoT abarca una red amplia de dispositivos físicos interactivos, no solo el almacenamiento local de documentos."
+      },
+      {
+        "text": "La sustitución completa de la intervención humana en la toma de decisiones financieras.",
+        "isCorrect": false,
+        "rationale": "IoT facilita la recolección de datos operativos y de sensores, pero no reemplaza la toma de decisiones estratégicas humanas."
+      },
+      {
+        "text": "La encriptación de datos financieros únicamente en cajeros automáticos bancarios.",
+        "isCorrect": false,
+        "rationale": "Aunque la seguridad es relevante, la definición central de IoT es la conectividad e intercambio de datos entre diversos dispositivos."
+      },
+      {
+        "text": "La eliminación de la necesidad de usar antenas de conectividad como la red 5G.",
+        "isCorrect": false,
+        "rationale": "El IoT depende activamente de redes de transmisión de alta velocidad como el 5G para transferir datos velozmente."
+      }
+    ],
+    "hint": "Piensa en cómo los electrodomésticos, relojes inteligentes y sensores se comunican entre sí a través de internet.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con lo expuesto en la Clase 01, ¿cuál es el rol principal de la gestión de datos (Data Management)?",
+    "opciones": [
+      {
+        "text": "Organizar, limpiar y estructurar los datos para que el experto en la materia los analice.",
+        "isCorrect": true,
+        "rationale": "El Data Management se encarga del ordenamiento y la preparación técnica de los datos para facilitar la posterior toma de decisiones por el especialista."
+      },
+      {
+        "text": "Reemplazar completamente al experto de negocio en la interpretación de los resultados.",
+        "isCorrect": false,
+        "rationale": "El administrador de datos prepara la información, pero requiere del experto del dominio para interpretar el porqué de los resultados."
+      },
+      {
+        "text": "Generar ventas directas de hardware a los clientes finales.",
+        "isCorrect": false,
+        "rationale": "La gestión de datos es un proceso interno de información, no una actividad de comercialización de equipos."
+      },
+      {
+        "text": "Eliminar todos los registros históricos anteriores a un año para ahorrar memoria.",
+        "isCorrect": false,
+        "rationale": "Los datos históricos son fundamentales para identificar tendencias y entrenar modelos predictivos, por lo que no se borran arbitrariamente."
+      },
+      {
+        "text": "Redactar contratos laborales para el área de recursos humanos.",
+        "isCorrect": false,
+        "rationale": "Las tareas administrativas de recursos humanos son ajenas a las funciones técnicas del Data Management."
+      }
+    ],
+    "hint": "Esta función prepara la 'materia prima' de datos dejándola limpia para que el especialista del negocio extraiga valor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial de la gobernanza de datos (Data Governance) en una organización?",
+    "opciones": [
+      {
+        "text": "Establecer políticas, reglamentos y normativas para garantizar la calidad, integridad y privacidad legal de los datos.",
+        "isCorrect": true,
+        "rationale": "La gobernanza define el marco normativo y ético de uso de los datos, evitando infracciones legales y fugas de información confidencial."
+      },
+      {
+        "text": "Aumentar la velocidad del procesador físico de las computadoras personales.",
+        "isCorrect": false,
+        "rationale": "La gobernanza se enfoca en aspectos normativos y cualitativos de la información, no en el rendimiento del hardware."
+      },
+      {
+        "text": "Comprar licencias de software de diseño gráfico para todo el personal.",
+        "isCorrect": false,
+        "rationale": "La adquisición de herramientas de diseño no guarda relación con las políticas de uso y protección de datos."
+      },
+      {
+        "text": "Crear respaldos únicamente de imágenes y videos compartidos en redes sociales.",
+        "isCorrect": false,
+        "rationale": "La gobernanza cubre toda la información institucional sensible, especialmente datos personales y financieros, no solo contenido multimedia."
+      },
+      {
+        "text": "Publicar abiertamente en internet la base de datos de los clientes sin restricción.",
+        "isCorrect": false,
+        "rationale": "Hacer pública información confidencial violaría directamente las normativas de gobernanza y privacidad de datos."
+      }
+    ],
+    "hint": "Se vincula con las normas, el cumplimiento legal y la mitigación de riesgos por mal uso de información privada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta de Inteligencia Artificial presentada en la Clase 01 destaca por ofrecer un enfoque investigativo que cita fuentes verificables como tesis y noticias?",
+    "opciones": [
+      {
+        "text": "Perplexity",
+        "isCorrect": true,
+        "rationale": "Perplexity combina la búsqueda web con modelos de lenguaje, entregando respuestas respaldadas por citas y enlaces de fuentes originales."
+      },
+      {
+        "text": "Leonardo AI",
+        "isCorrect": false,
+        "rationale": "Leonardo AI es una plataforma enfocada en la generación y edición de imágenes sintéticas, no en investigación documental."
+      },
+      {
+        "text": "Excel",
+        "isCorrect": false,
+        "rationale": "Excel es una hoja de cálculo tradicional de procesamiento numérico y de datos, no un motor de IA investigativo."
+      },
+      {
+        "text": "MySQL",
+        "isCorrect": false,
+        "rationale": "MySQL es un sistema de gestión de bases de datos relacionales, no una interfaz de consulta con IA generativa."
+      },
+      {
+        "text": "Power BI",
+        "isCorrect": false,
+        "rationale": "Power BI es una herramienta orientada al análisis de negocio y visualización de datos en tableros interactivos."
+      }
+    ],
+    "hint": "Esta IA actúa como un buscador inteligente que coloca referencias numeradas y enlaces directos a las páginas web consultadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera el análisis de Big Data contribuye al sector de la manufactura y la maquinaria industrial?",
+    "opciones": [
+      {
+        "text": "Permitiendo estimar el tiempo de falla de los equipos a través del análisis de datos históricos para programar mantenimiento preventivo.",
+        "isCorrect": true,
+        "rationale": "El monitoreo continuo e histórico de sensores permite identificar patrones de desgaste y prevenir averías costosas mediante mantenimiento predictivo."
+      },
+      {
+        "text": "Garantizando que las máquinas nunca requieran lubricación ni energía eléctrica.",
+        "isCorrect": false,
+        "rationale": "Los datos ayudan a predecir fallas, pero no eliminan las leyes físicas de desgaste mecánico o insumo energético."
+      },
+      {
+        "text": "Reemplazando la necesidad de adquirir insumos o materias primas en la fábrica.",
+        "isCorrect": false,
+        "rationale": "El análisis optimiza el uso de insumos, pero no los sustituye por elementos intangibles."
+      },
+      {
+        "text": "Eliminando por completo el uso de sensores de temperatura en los motores.",
+        "isCorrect": false,
+        "rationale": "Los sensores son justamente la fuente principal de recolección de datos para alimentar los modelos predictivos."
+      },
+      {
+        "text": "Aumentando el costo operativo de las máquinas de forma intencionada.",
+        "isCorrect": false,
+        "rationale": "El objetivo empresarial de implementar Big Data es reducir costos operativos y tiempos de parada no planificados."
+      }
+    ],
+    "hint": "Consiste en saber cuándo una máquina puede averiarse antes de que suceda la falla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a aplicaciones prácticas del Internet de las Cosas (IoT) explicadas en el curso?",
+    "opciones": [
+      {
+        "text": "Relojes inteligentes que miden la frecuencia cardíaca y la actividad diaria del usuario.",
+        "isCorrect": true,
+        "rationale": "Los dispositivos vestibles (wearables) recopilan constantes vitales y las transmiten a aplicaciones móviles en tiempo real."
+      },
+      {
+        "text": "Sensores en la agricultura que miden la humedad del suelo para optimizar los periodos de riego.",
+        "isCorrect": true,
+        "rationale": "La agricultura de precisión utiliza sensores de terreno conectados para regar automáticamente solo cuando es necesario."
+      },
+      {
+        "text": "Etiquetas RFID en contenedores de transporte para conocer su contenido sin necesidad de abrirlos.",
+        "isCorrect": true,
+        "rationale": "La tecnología RFID transmite datos del paquete por radiofrecuencia para agilizar el control logístico."
+      },
+      {
+        "text": "Documentos impresos en papel guardados dentro de un archivador físico.",
+        "isCorrect": false,
+        "rationale": "Los archivos impresos carecen de conectividad digital o sensores integrados para formar parte de la red de IoT."
+      },
+      {
+        "text": "Calculadoras de bolsillo que no poseen conexión a internet ni bluetooth.",
+        "isCorrect": false,
+        "rationale": "Un dispositivo sin capacidad de transmisión o recepción de datos en red no entra en la categoría de IoT."
+      }
+    ],
+    "hint": "Selecciona las alternativas que involucren objetos físicos con sensores o conectividad a una red de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple el procesamiento de Lenguaje Natural (PLN) en los sistemas de Inteligencia Artificial?",
+    "opciones": [
+      {
+        "text": "Permitir a las computadoras entender, interpretar y responder al texto o voz humana de manera fluida.",
+        "isCorrect": true,
+        "rationale": "El PLN conecta la comunicación humana cotidiana con el código de las máquinas, facilitando interacciones mediante chatbots y redactores automáticos."
+      },
+      {
+        "text": "Medir físicamente el consumo de voltios de una batería de litio.",
+        "isCorrect": false,
+        "rationale": "El análisis eléctrico es una medición de ingeniería de hardware, no una tarea de procesamiento lingüístico."
+      },
+      {
+        "text": "Aumentar la memoria RAM física disponible en un disco duro.",
+        "isCorrect": false,
+        "rationale": "El PLN es un área del software y la inteligencia artificial, no una modificación física del hardware informático."
+      },
+      {
+        "text": "Fabricar piezas metálicas por medio de impresión en 3D.",
+        "isCorrect": false,
+        "rationale": "La manufactura aditiva es una tecnología de producción industrial distinta al procesamiento de texto e idioma."
+      },
+      {
+        "text": "Reemplazar los cables de fibra óptica por señales de radio analógicas.",
+        "isCorrect": false,
+        "rationale": "El PLN se enfoca en la interpretación del idioma humano, independientemente del medio físico de telecomunicaciones."
+      }
+    ],
+    "hint": "Es la tecnología responsable de que chatbots como ChatGPT o asistentes como Siri comprendan lo que les escribes o les hablas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es crucial considerar la 'Ley de Protección de Datos Personales' al gestionar bases de datos de clientes?",
+    "opciones": [
+      {
+        "text": "Para evitar sanciones legales y proteger la privacidad e intimidad de la información confidencial de las personas.",
+        "isCorrect": true,
+        "rationale": "El cumplimiento normativo salvaguarda los derechos de los usuarios y previene contingencias legales para la empresa."
+      },
+      {
+        "text": "Para obligar a los clientes a comprar productos de manera mensual.",
+        "isCorrect": false,
+        "rationale": "Las leyes de privacidad buscan resguardar los derechos de los usuarios, no forzar transacciones comerciales."
+      },
+      {
+        "text": "Para acelerar la descarga de videos desde servidores internacionales.",
+        "isCorrect": false,
+        "rationale": "Las leyes establecen marcos regulatorios, no modifican el ancho de banda o la velocidad de red."
+      },
+      {
+        "text": "Para que los datos de los usuarios se borren automáticamente cada tres días.",
+        "isCorrect": false,
+        "rationale": "La ley exige un tratamiento adecuado y consentimiento, no el borrado arbitrario en periodos fijos de tiempo."
+      },
+      {
+        "text": "Para transferir libremente números de tarjetas de crédito sin encriptación.",
+        "isCorrect": false,
+        "rationale": "Transferir datos de crédito sin protección contraviene explícitamente los principios de seguridad de la ley de datos."
+      }
+    ],
+    "hint": "Involucra aspectos éticos, derechos del ciudadano y el cumplimiento de las regulaciones estatales sobre la privacidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el beneficio directo del uso de Big Data en el comercio electrónico y retail?",
+    "opciones": [
+      {
+        "text": "Personalizar las recomendaciones de compras de acuerdo a los gustos y comportamientos previos del cliente.",
+        "isCorrect": true,
+        "rationale": "El análisis de datos de navegación y compras anteriores permite sugerir productos específicos altamente afines a cada perfil de usuario."
+      },
+      {
+        "text": "Aumentar el precio de todos los productos en un 500% de manera aleatoria.",
+        "isCorrect": false,
+        "rationale": "El objetivo del retail analítico es mejorar la experiencia y satisfacción del cliente, no distorsionar precios al azar."
+      },
+      {
+        "text": "Eliminar la necesidad de entregar productos físicamente al comprador.",
+        "isCorrect": false,
+        "rationale": "El comercio electrónico sigue necesitando redes logísticas para la entrega física de productos tangibles."
+      },
+      {
+        "text": "Garantizar que todos los usuarios tengan la misma clave de acceso.",
+        "isCorrect": false,
+        "rationale": "Asignar claves idénticas rompería los esquemas básicos de ciberseguridad y autenticación."
+      },
+      {
+        "text": "Evitar que los usuarios naveguen por la tienda durante los fines de semana.",
+        "isCorrect": false,
+        "rationale": "Las plataformas buscan maximizar la disponibilidad continuada las 24 horas del día, todos los días."
+      }
+    ],
+    "hint": "Consiste en mostrarle al comprador sugerencias basadas en lo que suele buscar o añadir a su carrito.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué herramientas o lenguajes se mencionan en la Clase 01 para la consolidación, integración y análisis de tablas de datos?",
+    "opciones": [
+      {
+        "text": "Power BI",
+        "isCorrect": true,
+        "rationale": "Power BI permite conectar y combinar diversas fuentes de datos para transformarlas en tableros analíticos."
+      },
+      {
+        "text": "SQL",
+        "isCorrect": true,
+        "rationale": "SQL es el lenguaje estándar utilizado para consultar, unir e integrar tablas de bases de datos."
+      },
+      {
+        "text": "Microsoft Paint",
+        "isCorrect": false,
+        "rationale": "Paint es un editor gráfico elemental y no una herramienta de modelado o procesamiento de datos."
+      },
+      {
+        "text": "Adobe Photoshop",
+        "isCorrect": false,
+        "rationale": "Photoshop es un software enfocado en el diseño y retoque fotográfico, no en la gestión de estructuras de datos."
+      },
+      {
+        "text": "Bloc de notas de Windows (como motor de base de datos relacional)",
+        "isCorrect": false,
+        "rationale": "Un editor de texto plano carece de motores de integración relacional o procesamiento analítico masivo."
+      }
+    ],
+    "hint": "Elige las herramientas asociadas al lenguaje de consulta relacional y al software de inteligencia de negocios (BI).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Para qué tipo de tareas se utiliza la herramienta 'Leonardo AI', mostrada durante la primera clase?",
+    "opciones": [
+      {
+        "text": "Generar y sintetizar imágenes digitales a partir de indicaciones en texto (prompts).",
+        "isCorrect": true,
+        "rationale": "Leonardo AI es un motor generativo orientado a la creación de recursos visuales e imágenes personalizadas a través de descripciones textuales."
+      },
+      {
+        "text": "Calcular la nómina salarial de una empresa minera.",
+        "isCorrect": false,
+        "rationale": "El cálculo de planillas de sueldos requiere sistemas contables o de ERP, no herramientas generativas de imágenes."
+      },
+      {
+        "text": "Escribir código en lenguaje ensamblador para microcontroladores.",
+        "isCorrect": false,
+        "rationale": "Aunque existen IAs para código, Leonardo AI se enfoca específicamente en generación visual."
+      },
+      {
+        "text": "Monitorear la temperatura de un motor diésel en tiempo real.",
+        "isCorrect": false,
+        "rationale": "El monitoreo térmico es función de sistemas SCADA e IoT, no de plataformas generativas de diseño gráfico."
+      },
+      {
+        "text": "Traducir llamadas de voz telefónicas sin conexión a internet.",
+        "isCorrect": false,
+        "rationale": "La traducción de audio corresponde a herramientas de PLN y reconocimiento de voz."
+      }
+    ],
+    "hint": "Fue la herramienta utilizada en clase para crear un modelo visual de una 'casa inteligente'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿De qué manera contribuye la tecnología de red 5G al avance del Big Data y del IoT?",
+    "opciones": [
+      {
+        "text": "Ofreciendo mayor velocidad de transmisión y capacidad para conectar múltiples dispositivos enviando flujos masivos de datos simultáneamente.",
+        "isCorrect": true,
+        "rationale": "La alta velocidad y baja latencia del 5G permiten la circulación fluida de volúmenes gigantescos de información desde millones de sensores."
+      },
+      {
+        "text": "Reemplazando la necesidad de contar con almacenamiento en la nube o bases de datos.",
+        "isCorrect": false,
+        "rationale": "El 5G es una red de transporte de datos; los datos siguen requiriendo infraestructura donde ser guardados."
+      },
+      {
+        "text": "Haciendo que las computadoras funcionen sin requerir consumo de energía eléctrica.",
+        "isCorrect": false,
+        "rationale": "La conectividad 5G no modifica los requisitos de alimentación de hardware."
+      },
+      {
+        "text": "Eliminando la presencia de virus y software malicioso en internet.",
+        "isCorrect": false,
+        "rationale": "La red 5G mejora el ancho de banda, pero la ciberseguridad requiere protocolos independientes."
+      },
+      {
+        "text": "Reduciendo el tamaño físico de los monitores de escritorio.",
+        "isCorrect": false,
+        "rationale": "Las características de la red no influyen en la escala o dimensiones de las pantallas."
+      }
+    ],
+    "hint": "Se relaciona con el ancho de banda y la velocidad con la que los datos viajan por el aire.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de las características del Big Data (las 4 'V'), ¿a qué se refiere el término 'Volumen'?",
+    "opciones": [
+      {
+        "text": "A la cantidad masiva e inmensa de datos creados, procesados y almacenados cada segundo.",
+        "isCorrect": true,
+        "rationale": "El Volumen mide la escala cuantitativa de la información en magnitudes como terabytes, petabytes o exabytes."
+      },
+      {
+        "text": "Al nivel de sonido con el que una computadora reproduce una canción.",
+        "isCorrect": false,
+        "rationale": "En ciencias de la computación y Big Data, el término no refiere al nivel de intensidad acústica."
+      },
+      {
+        "text": "A la velocidad exacta con la que viaja un paquete de red por fibra óptica.",
+        "isCorrect": false,
+        "rationale": "La rapidez de transferencia corresponde a la dimensión de 'Velocidad', no a la de 'Volumen'."
+      },
+      {
+        "text": "Al grado de veracidad y limpieza que tienen las fuentes de datos.",
+        "isCorrect": false,
+        "rationale": "La veracidad y exactitud corresponden a la dimensión de 'Calidad' de los datos."
+      },
+      {
+        "text": "A la diversidad de formatos como imágenes, audio y texto.",
+        "isCorrect": false,
+        "rationale": "La heterogeneidad de formatos de datos define a la 'Variedad'."
+      }
+    ],
+    "hint": "Piensa en términos como terabytes, petabytes o exabytes acumulados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué define a los 'datos estructurados' en las bases de datos tradicionales?",
+    "opciones": [
+      {
+        "text": "Son datos organizados claramente en tablas compuestas por filas y columnas bien definidas.",
+        "isCorrect": true,
+        "rationale": "Los datos estructurados siguen un esquema prefijado (como una tabla de SQL) donde cada campo tiene un tipo de dato especificado."
+      },
+      {
+        "text": "Son archivos de video en alta definición que no tienen ninguna etiqueta.",
+        "isCorrect": false,
+        "rationale": "Los archivos de video son el ejemplo clásico de datos no estructurados debido a su formato binario complejo."
+      },
+      {
+        "text": "Son correos electrónicos con textos largos escritas sin ningún orden específico.",
+        "isCorrect": false,
+        "rationale": "El texto libre de correos se categoriza como dato no estructurado o semiestructurado."
+      },
+      {
+        "text": "Son notas de voz grabadas desde la aplicación de WhatsApp.",
+        "isCorrect": false,
+        "rationale": "El audio continuo es un dato no estructurado que requiere procesamiento adicional para extraer información."
+      },
+      {
+        "text": "Son registros de sensores que se pierden automáticamente después de un segundo.",
+        "isCorrect": false,
+        "rationale": "La estructura depende de cómo se organiza la información en tablas o esquemas, no de su persistencia temporal."
+      }
+    ],
+    "hint": "Son el tipo de datos que encuentras de forma natural dentro de una hoja de cálculo o tabla de SQL.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con lo visto en la Clase 02, ¿cuál de los siguientes es un ejemplo de 'datos semiestructurados'?",
+    "opciones": [
+      {
+        "text": "Archivos en formato JSON o XML.",
+        "isCorrect": true,
+        "rationale": "Los archivos JSON y XML poseen organizadores internos (marcas o claves-valor) pero no están encasillados en tablas rígidas relacionales."
+      },
+      {
+        "text": "Una tabla de clientes en MySQL con nombres y teléfonos organizados.",
+        "isCorrect": false,
+        "rationale": "Las tablas relacionales tradicionales son ejemplos estrictos de datos estructurados."
+      },
+      {
+        "text": "Una fotografía almacenada en formato JPG sin metadatos.",
+        "isCorrect": false,
+        "rationale": "Las fotos e imágenes corresponden a la categoría de datos no estructurados."
+      },
+      {
+        "text": "Una pintura al óleo física colgada en un museo.",
+        "isCorrect": false,
+        "rationale": "Los objetos físicos del mundo real no constituyen datos digitales procesables directamente."
+      },
+      {
+        "text": "Un archivo de música grabado en formato MP3.",
+        "isCorrect": false,
+        "rationale": "Los archivos de audio son considerados datos no estructurados."
+      }
+    ],
+    "hint": "Son formatos muy usados en aplicaciones web que utilizan etiquetas o pares de clave-valor sin ser tablas fijas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere la 'Velocidad' como una de las 'V' fundamentales de Big Data?",
+    "opciones": [
+      {
+        "text": "A la rapidez con la que se generan, transmiten y procesan los datos en tiempo real.",
+        "isCorrect": true,
+        "rationale": "La velocidad abarca el flujo continuo de datos y la capacidad del sistema para responder con mínima latencia a los eventos."
+      },
+      {
+        "text": "Al tamaño medido en gigabytes de un disco duro externo.",
+        "isCorrect": false,
+        "rationale": "La medición del espacio físico ocupado hace referencia a la dimensión de Volumen."
+      },
+      {
+        "text": "Al número total de empleados en el departamento de sistemas.",
+        "isCorrect": false,
+        "rationale": "La cantidad de personal no guarda relación con la tasa de procesamiento de la infraestructura tecnológica."
+      },
+      {
+        "text": "A la variedad de marcas de servidores instalados en la oficina.",
+        "isCorrect": false,
+        "rationale": "La variedad de hardware no define el concepto funcional de velocidad de flujo de datos."
+      },
+      {
+        "text": "A la exactitud gramatical de los documentos redactados.",
+        "isCorrect": false,
+        "rationale": "La precisión o exactitud del contenido se vincula a la dimensión de Calidad de los datos."
+      }
+    ],
+    "hint": "Se relaciona con el tiempo de respuesta instantáneo requerido para alertas o recomendaciones en vivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué atributos definen la 'Calidad' (Quality) de los datos según lo explicado en la Clase 02?",
+    "opciones": [
+      {
+        "text": "Precisión (que reflejen la realidad exacta).",
+        "isCorrect": true,
+        "rationale": "La precisión asegura que los datos medidos o registrados correspondan rigurosamente con los hechos reales."
+      },
+      {
+        "text": "Completitud (que no existan vacíos o datos faltantes críticos).",
+        "isCorrect": true,
+        "rationale": "La completitud garantiza la inexistencia de vacíos de datos que entorpezcan las funciones de los algoritmos."
+      },
+      {
+        "text": "Consistencia (que sigan un formato uniforme sin contradicciones).",
+        "isCorrect": true,
+        "rationale": "La consistencia exige la estandarización de formatos (como el orden de fechas) a lo largo del sistema."
+      },
+      {
+        "text": "Colorimetría (que las tablas tengan colores atractivos a la vista).",
+        "isCorrect": false,
+        "rationale": "Los componentes estéticos o de color no influyen en la validez técnica y calidad subyacente de la data."
+      },
+      {
+        "text": "Antigüedad (mientras más antiguo y obsoleto sea el dato, mejor).",
+        "isCorrect": false,
+        "rationale": "Los datos obsoletos pierden relevancia operativa y no son indicativos de buena calidad para predecir el presente."
+      }
+    ],
+    "hint": "Busca aquellos términos que aseguren que los datos sean correctos, completos y sin contradicciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función destacada del motor de procesamiento 'Apache Spark' en entornos de Big Data?",
+    "opciones": [
+      {
+        "text": "Procesar y analizar grandes volúmenes de datos masivos en memoria y en paralelo a alta velocidad.",
+        "isCorrect": true,
+        "rationale": "Spark es un marco computacional distribuido que acelera drásticamente el análisis de datos mediante el procesamiento paralelo en memoria."
+      },
+      {
+        "text": "Actuar como un programa antivirus de uso personal.",
+        "isCorrect": false,
+        "rationale": "Spark es un motor de computación distribuida para análisis de datos, no un software de seguridad de endpoints."
+      },
+      {
+        "text": "Diseñar diapositivas animadas para presentaciones comerciales.",
+        "isCorrect": false,
+        "rationale": "La creación de presentaciones corresponde a suites de ofimática, no a frameworks de Big Data."
+      },
+      {
+        "text": "Imprimir documentos en papel de forma remota.",
+        "isCorrect": false,
+        "rationale": "Apache Spark opera virtualmente en clústeres de servidores y no administra colas de impresión física."
+      },
+      {
+        "text": "Servir como un navegador web idéntico a Google Chrome.",
+        "isCorrect": false,
+        "rationale": "Spark no es un navegador cliente, sino un motor interno para procesamiento masivo de datos."
+      }
+    ],
+    "hint": "Esta herramienta resalta por realizar cálculos en paralelo dentro de la memoria RAM de múltiples servidores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la Clase 02, ¿qué base de datos NoSQL utiliza la compañía Meta (Facebook) para manejar volúmenes masivos de datos e interacciones de usuarios?",
+    "opciones": [
+      {
+        "text": "Cassandra",
+        "isCorrect": true,
+        "rationale": "Cassandra es una base de datos NoSQL altamente escalable, elegida para la gestión de grandes volúmenes de datos distribuidos en tiempo real."
+      },
+      {
+        "text": "Microsoft Access",
+        "isCorrect": false,
+        "rationale": "Access es un sistema de escritorio para proyectos pequeños, incapaz de soportar la escala masiva de Facebook."
+      },
+      {
+        "text": "Bloc de notas",
+        "isCorrect": false,
+        "rationale": "Un archivo plano no cuenta con mecanismos de indexación ni infraestructura distribuida."
+      },
+      {
+        "text": "FoxPro",
+        "isCorrect": false,
+        "rationale": "FoxPro es una tecnología legacy no diseñada para la arquitectura distribuida del Big Data moderno."
+      },
+      {
+        "text": "SQLite para monousuario",
+        "isCorrect": false,
+        "rationale": "SQLite se orienta a aplicaciones locales embebidas, no a atender millones de conexiones concurrentes."
+      }
+    ],
+    "hint": "Lleva el nombre de una conocida figura mitológica y es célebre por su alta escalabilidad en sistemas distribuidos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué componente del ecosistema Hadoop (HDFS) permite el almacenamiento distribuido de petabytes de datos en múltiples servidores?",
+    "opciones": [
+      {
+        "text": "Hadoop Distributed File System (HDFS)",
+        "isCorrect": true,
+        "rationale": "HDFS fragmenta los archivos grandes en bloques y los distribuye de manera redundante a través de un clúster de computadoras."
+      },
+      {
+        "text": "Unidad de Disco Flexible de 3.5 pulgadas",
+        "isCorrect": false,
+        "rationale": "Los disquetes son medios de almacenamiento obsoletos con capacidades mínimas del orden de los megabytes."
+      },
+      {
+        "text": "Memoria pendrive de 4 GB",
+        "isCorrect": false,
+        "rationale": "Las memorias portátiles USB convencionales no tienen la escala ni la arquitectura para gestionar petabytes."
+      },
+      {
+        "text": "Unidad de CD-ROM grabable",
+        "isCorrect": false,
+        "rationale": "Los CD-ROMs poseen almacenamiento óptico limitado a cientos de megabytes por disco."
+      },
+      {
+        "text": "Registro de memoria caché de la CPU",
+        "isCorrect": false,
+        "rationale": "La memoria caché de un procesador almacena apenas megabytes para instrucciones inmediatas del chip."
+      }
+    ],
+    "hint": "Son las siglas de un sistema de archivos distribuido diseñado específicamente para el ecosistema Hadoop.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes corresponden a algoritmos de Machine Learning mencionados en la Clase 02?",
+    "opciones": [
+      {
+        "text": "Regresión Logística",
+        "isCorrect": true,
+        "rationale": "Es un algoritmo clásico utilizado principalmente para problemas de clasificación binaria."
+      },
+      {
+        "text": "Árboles de Decisión",
+        "isCorrect": true,
+        "rationale": "Es una técnica de modelado predictivo basada en reglas que dividen los datos en ramas lógicas."
+      },
+      {
+        "text": "Random Forest",
+        "isCorrect": true,
+        "rationale": "Es un método de ensamble de múltiples árboles de decisión que mejora la precisión predictiva."
+      },
+      {
+        "text": "Regla de tres simple aritmética",
+        "isCorrect": false,
+        "rationale": "Es una operación matemática elemental, no un algoritmo de aprendizaje automático sobre datos."
+      },
+      {
+        "text": "Abaco manual",
+        "isCorrect": false,
+        "rationale": "El ábaco es un instrumento de cálculo físico tradicional, ajeno a los algoritmos computacionales de ML."
+      }
+    ],
+    "hint": "Selecciona las opciones que hagan referencia a modelos estadísticos o computacionales de entrenamiento de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta se describe en la Clase 02 como un buscador 'turbo' capaz de indexar y consultar publicaciones antiguas en plataformas como Twitter al instante?",
+    "opciones": [
+      {
+        "text": "Elasticsearch",
+        "isCorrect": true,
+        "rationale": "Elasticsearch es un motor de búsqueda y analítica distribuido que permite realizar consultas de texto completo en milisegundos."
+      },
+      {
+        "text": "Paint",
+        "isCorrect": false,
+        "rationale": "Paint no realiza indexación de texto ni búsquedas en servidores remotos."
+      },
+      {
+        "text": "WinRAR",
+        "isCorrect": false,
+        "rationale": "WinRAR es una utilidad de compresión de archivos, no un buscador analítico indexado."
+      },
+      {
+        "text": "Windows Media Player",
+        "isCorrect": false,
+        "rationale": "Windows Media Player se encarga de la reproducción de archivos multimedia locales."
+      },
+      {
+        "text": "Calculadora de Windows",
+        "isCorrect": false,
+        "rationale": "La calculadora procesa operaciones aritméticas estándar y no realiza búsquedas de texto distribuido."
+      }
+    ],
+    "hint": "Su nombre combina el concepto de flexibilidad o elasticidad con la función de búsqueda.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tecnología en tiempo real utiliza la aplicación WhatsApp para gestionar la mensajería instantánea según lo mencionado en clase?",
+    "opciones": [
+      {
+        "text": "Redis",
+        "isCorrect": true,
+        "rationale": "Redis funciona como un almacén de estructuras de datos en memoria de clave-valor que ofrece latencias mínimas ideales para mensajería en vivo."
+      },
+      {
+        "text": "Un envío de cartas por correo postal físico",
+        "isCorrect": false,
+        "rationale": "El servicio postal físico toma días en concretar entregas y no representa una plataforma digital."
+      },
+      {
+        "text": "Cintas magnéticas VHS",
+        "isCorrect": false,
+        "rationale": "Las cintas VHS son formatos analógicos de grabación de video, no bases de datos digitales."
+      },
+      {
+        "text": "Archivos PDF estáticos e impresos",
+        "isCorrect": false,
+        "rationale": "Los documentos PDF son estáticos y no gestionan la comunicación activa en tiempo real."
+      },
+      {
+        "text": "Cámaras fotográficas réflex de rollo",
+        "isCorrect": false,
+        "rationale": "Los equipos fotográficos analógicos procesan luz sobre película química, sin funciones de red."
+      }
+    ],
+    "hint": "Es una base de datos en memoria muy popular por su extrema velocidad clave-valor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Para qué se utilizan las Redes Neuronales Convolucionales (CNN / SNN) en el sector minero y en vehículos autónomos?",
+    "opciones": [
+      {
+        "text": "Para el procesamiento de imágenes, visión por computadora e identificación de patrones visuales.",
+        "isCorrect": true,
+        "rationale": "Las redes neuronales convolucionales analizan capas de imágenes para detectar bordes, texturas, terreno minero u obstáculos en la vía."
+      },
+      {
+        "text": "Para calcular impuestos contables al cierre de año.",
+        "isCorrect": false,
+        "rationale": "Las tareas tributarias se rigen por fórmulas contables simples y no por modelos de visión artificial."
+      },
+      {
+        "text": "Para enviar correos masivos de cobranza a clientes morosos.",
+        "isCorrect": false,
+        "rationale": "El envío masivo de correos es una automatización de mailing, no una tarea de visión por computadora."
+      },
+      {
+        "text": "Para formatear discos duros dañados físicamente.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento físico del disco se efectúa con herramientas del sistema operativo a bajo nivel."
+      },
+      {
+        "text": "Para reproducir pistas de audio mp3 en altavoces bluetooth.",
+        "isCorrect": false,
+        "rationale": "La transmisión de audio por bluetooth no requiere el uso de arquitecturas de visión por computadora."
+      }
+    ],
+    "hint": "Tienen la capacidad de reconocer bordes, objetos y formas dentro de mapas o tomas de cámara.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la detección de fraudes bancarios en milisegundos, ¿cuál es la razón principal para usar modelos de Machine Learning con datos en tiempo real?",
+    "opciones": [
+      {
+        "text": "Analizar la transacción en el instante y bloquear la tarjeta si el patrón de consumo resulta atípico, antes de que se complete la compra.",
+        "isCorrect": true,
+        "rationale": "El procesamiento inmediato compara la transacción actual contra el perfil habitual del cliente para prevenir pérdidas monetarias en el momento exacto."
+      },
+      {
+        "text": "Esperar tres meses para avisarle al usuario que su tarjeta fue robada.",
+        "isCorrect": false,
+        "rationale": "Un aviso retrasado por meses invalida la efectividad de la prevención del fraude bancario."
+      },
+      {
+        "text": "Obligar a todos los clientes a pagar sus saldos en efectivo físico de inmediato.",
+        "isCorrect": false,
+        "rationale": "Los modelos de detección previenen transacciones fraudulentas, no alteran los términos de pago del contrato."
+      },
+      {
+        "text": "Borrar el dinero de la cuenta del cliente de forma permanente.",
+        "isCorrect": false,
+        "rationale": "El propósito del sistema de seguridad es proteger los fondos del usuario, no eliminarlos."
+      },
+      {
+        "text": "Aumentar automáticamente el límite de crédito en transacciones sospechosas.",
+        "isCorrect": false,
+        "rationale": "Elevar el límite ante una operación sospechosa incrementaría el riesgo y la pérdida financiera."
+      }
+    ],
+    "hint": "Consiste en identificar hábitos inusuales en las compras (como un gasto extraño en otra ciudad) para detener el fraude al instante.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del Internet de las Cosas (IoT) en el entorno industrial y operativo según lo presentado en el curso?",
+    "opciones": [
+      {
+        "text": "La captura y transmisión continua de datos en tiempo real mediante sensores y redes de conectividad.",
+        "isCorrect": true,
+        "rationale": "El IoT fundamenta su valor operativo en conectar objetos físicos mediante sensores a redes de comunicación para transmitir y recopilar datos constantemente."
+      },
+      {
+        "text": "El almacenamiento masivo y definitivo de archivos tabulares estructurados en servidores locales.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento masivo es tarea de repositorios como Data Warehouses o bases de datos, no de la arquitectura de captura de IoT."
+      },
+      {
+        "text": "La ejecución exclusiva de análisis predictivos mediante modelos de aprendizaje supervisado.",
+        "isCorrect": false,
+        "rationale": "El IoT suministra la materia prima de datos, pero no se encarga de entrenar ni ejecutar de forma exclusiva modelos de Machine Learning."
+      },
+      {
+        "text": "La encriptación de datos transaccionales para prevenir ataques cibernéticos en aplicaciones móviles.",
+        "isCorrect": false,
+        "rationale": "Aunque la seguridad es relevante, el propósito básico de IoT es la interconexión e intercambio de datos entre dispositivos, no la encriptación bancaria."
+      },
+      {
+        "text": "La reducción automatizada del consumo de ancho de banda mediante la compresión de video.",
+        "isCorrect": false,
+        "rationale": "La compresión de datos es una técnica auxiliar de procesamiento, no el objetivo funcional del ecosistema de dispositivos conectados."
+      }
+    ],
+    "hint": "Piense en la función básica que realizan los sensores físicos distribuidos al conectarse a una red.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de Data Management, ¿qué aspecto distingue fundamentalmente a la Gobernanza de Datos (Data Governance)?",
+    "opciones": [
+      {
+        "text": "La compra e instalación física de servidores y discos duros de alta velocidad.",
+        "isCorrect": false,
+        "rationale": "La adquisición de infraestructura es una responsabilidad de TI o hardware, no de la gobernanza conceptual de datos."
+      },
+      {
+        "text": "La definición de políticas, regulaciones y normativas para garantizar la integridad, privacidad y uso ético de la información.",
+        "isCorrect": true,
+        "rationale": "La gobernanza establece el marco normativo, los controles de privacidad y las reglas organizacionales sobre cómo deben manejarse los datos."
+      },
+      {
+        "text": "El diseño de la interfaz visual de usuario para tableros interactivos en Power BI.",
+        "isCorrect": false,
+        "rationale": "El diseño de interfaces y reportes corresponde a la capa de inteligencia de negocios y visualización."
+      },
+      {
+        "text": "La ejecución de algoritmos de procesamiento de lenguaje natural para categorizar documentos.",
+        "isCorrect": false,
+        "rationale": "El análisis de texto mediante procesamiento de lenguaje natural es una técnica analítica, no una función de gobernanza y control normativo."
+      },
+      {
+        "text": "La limpieza manual de registros duplicados en archivos de hojas de cálculo.",
+        "isCorrect": false,
+        "rationale": "La limpieza operativa de registros es parte de la gestión de calidad o preparación de datos, no del nivel estratégico de gobernanza."
+      }
+    ],
+    "hint": "Considere la dimensión que establece reglamentos, políticas de privacidad y normativas legales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué característica técnica diferencia principalmente a Perplexity AI de otros modelos de lenguaje generativo convencionales?",
+    "opciones": [
+      {
+        "text": "Su capacidad para generar imágenes tridimensionales de alta fidelidad técnica a partir de texto.",
+        "isCorrect": false,
+        "rationale": "La generación de imágenes tridimensionales corresponde a herramientas de diseño generativo visual, no a Perplexity AI."
+      },
+      {
+        "text": "Su enfoque en la investigación con integración directa de fuentes verificables y referencias académicas o de prensa en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Perplexity AI destaca por rastrear la web en tiempo real y citar explícitamente las fuentes y enlaces de donde extrae sus respuestas."
+      },
+      {
+        "text": "El uso exclusivo de modelos de redes neuronales convolucionales para el procesamiento de audio.",
+        "isCorrect": false,
+        "rationale": "Perplexity es un motor de búsqueda y respuestas basado en texto e investigación, no un modelo centrado en audio convolucional."
+      },
+      {
+        "text": "La imposibilidad de conectarse a internet para garantizar un procesamiento totalmente fuera de línea.",
+        "isCorrect": false,
+        "rationale": "A diferencia de operar offline, Perplexity utiliza la conectividad web continua para respaldar sus respuestas con fuentes actualizadas."
+      },
+      {
+        "text": "Su diseño exclusivo para la programación y compilación automatizada de código en lenguaje C++.",
+        "isCorrect": false,
+        "rationale": "Aunque puede interpretar código, su fortaleza principal es el motor de búsqueda conversacional fundamentado en fuentes citation-backed."
+      }
+    ],
+    "hint": "Recuerde qué motor analítico ofrece citas y enlaces directos a las páginas web de donde extrae la información.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes aplicaciones representan casos válidos de integración del Big Data e IoT en la cadena de suministro y manufactura?",
+    "opciones": [
+      {
+        "text": "Monitoreo en tiempo real del estado de la carga mediante etiquetas RFID sin necesidad de abrir contenedores.",
+        "isCorrect": true,
+        "rationale": "Las etiquetas de radiofrecuencia (RFID) permiten identificar el contenido y ubicación de lotes de transporte de forma remota y automatizada."
+      },
+      {
+        "text": "Predicción del mantenimiento correctivo o vida útil de maquinaria industrial a partir de sensores de vibración y temperatura.",
+        "isCorrect": true,
+        "rationale": "La captura continua de métricas operativas en componentes mecánicos alimenta modelos para anticipar fallas de equipos."
+      },
+      {
+        "text": "Ajuste automático de rutas logísticas y tiempos de entrega analizando datos de tráfico en tiempo real.",
+        "isCorrect": true,
+        "rationale": "La analítica de flujos de datos geográficos permite optimizar el desplazamiento de flotas de transporte según la congestión de las vías."
+      },
+      {
+        "text": "Eliminación completa de la necesidad de almacenamiento físico en plantas de producción.",
+        "isCorrect": false,
+        "rationale": "El Big Data optimiza el inventario y la logística, pero no elimina la necesidad física de almacenes y stock de materias primas."
+      },
+      {
+        "text": "Sustitución de todas las normativas legales de transporte por algoritmos de Machine Learning.",
+        "isCorrect": false,
+        "rationale": "Las tecnologías de analítica apoyan la toma de decisiones pero no reemplazan los marcos normativos ni las leyes de tránsito."
+      }
+    ],
+    "hint": "Identifique las opciones que combinan captura de datos por sensores con la optimización de procesos operativos reales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué el marco normativo de protección de datos personales impone limitaciones severas sobre el uso empresarial de Big Data?",
+    "opciones": [
+      {
+        "text": "Porque prohíbe el uso de procesadores informáticos que superen ciertas velocidades de cálculo.",
+        "isCorrect": false,
+        "rationale": "La legislación no regula la capacidad de cómputo del hardware, sino el tratamiento legal e informado de la información personal."
+      },
+      {
+        "text": "Para evitar la divulgación no autorizada de información sensible y proteger a los ciudadanos ante suplantaciones o sesgos indebidos.",
+        "isCorrect": true,
+        "rationale": "Las leyes de protección de datos buscan salvaguardar los derechos fundamentales de privacidad y evitar el mal uso de identificadores personales."
+      },
+      {
+        "text": "Porque los algoritmos de analítica predictiva requieren aprobación previa de patentes antes de procesar cualquier tabla.",
+        "isCorrect": false,
+        "rationale": "Los algoritmos comerciales no requieren patentes individuales previas para ejecutar análisis sobre conjuntos de datos autorizados."
+      },
+      {
+        "text": "Para obligar a todas las empresas a almacenar sus datos exclusivamente en discos físicos impresos en papel.",
+        "isCorrect": false,
+        "rationale": "Las normativas promueven la seguridad digital y la gobernanza, no el retorno a formatos físicos e ineficientes."
+      },
+      {
+        "text": "Porque restringe el almacenamiento de datos únicamente a instituciones del sector público.",
+        "isCorrect": false,
+        "rationale": "El sector privado puede procesar datos personales siempre que cumpla con los principios de consentimiento, finalidad y seguridad legal."
+      }
+    ],
+    "hint": "Reflexione sobre la necesidad de resguardar la identidad, privacidad y derechos de los titulares de la información.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué medida técnica contribuye directamente a la sostenibilidad ecológica de los centros de datos masivos (Data Centers)?",
+    "opciones": [
+      {
+        "text": "Aumentar indefinidamente la temperatura ambiente de las salas de servidores sin ventilación.",
+        "isCorrect": false,
+        "rationale": "Elevar la temperatura sin control destruye los componentes electrónicos por sobrecalentamiento."
+      },
+      {
+        "text": "La implementación de sistemas de enfriamiento natural y el abastecimiento mediante fuentes de energía renovable.",
+        "isCorrect": true,
+        "rationale": "El enfriamiento eficiente (como centros sumergidos o uso de clima exterior) y energías limpias reducen la huella de carbono del cómputo intensivo."
+      },
+      {
+        "text": "El desecho semanal de los componentes informáticos para evitar la acumulación de archivos antiguos.",
+        "isCorrect": false,
+        "rationale": "El reemplazo prematuro de hardware genera chatarra electrónica masiva y es contrario a la sostenibilidad ambiental."
+      },
+      {
+        "text": "La duplicación de la energía eléctrica consumida mediante el uso de generadores a diésel permanentes.",
+        "isCorrect": false,
+        "rationale": "El uso continuo de combustibles fósiles incrementa significativamente las emisiones contaminantes."
+      },
+      {
+        "text": "La prohibición absoluta del trabajo remoto en empresas que gestionan infraestructuras digitales.",
+        "isCorrect": false,
+        "rationale": "El trabajo remoto suele reducir las emisiones derivadas del transporte diario, contribuyendo positivamente a las metas ambientales."
+      }
+    ],
+    "hint": "Busque la estrategia que optimiza el consumo térmico y utiliza recursos energéticos limpios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Con respecto a la plataforma de inferencia Groq presentada en clase, ¿cuáles de sus características operativas son correctas?",
+    "opciones": [
+      {
+        "text": "Permite seleccionar y alternar entre diversos modelos lingüísticos como Llama, DeepSeek o Mistral.",
+        "isCorrect": true,
+        "rationale": "Groq actúa como un entorno capaz de desplegar e interactuar con diferentes arquitecturas de lenguaje de código abierto."
+      },
+      {
+        "text": "Ofrece una velocidad de procesamiento e inferencia extremadamente alta en comparación con interfaces tradicionales.",
+        "isCorrect": true,
+        "rationale": "La infraestructura optimizada de Groq destaca por generar tokens de respuesta de manera casi instantánea."
+      },
+      {
+        "text": "Facilita la estructuración de respuestas en formato de tablas si se le especifica en las instrucciones del prompt.",
+        "isCorrect": true,
+        "rationale": "Al responder a prompts condicionados, la herramienta puede tabular datos para su posterior análisis o exportación."
+      },
+      {
+        "text": "Requiere obligatoriamente la instalación local de servidores físicos de gran escala en la computadora del usuario.",
+        "isCorrect": false,
+        "rationale": "Groq opera mediante servicios en la nube a los que se accede mediante navegador web o API, no requiere infraestructura local."
+      },
+      {
+        "text": "Se limita exclusivamente a editar archivos de audio en formato MP3.",
+        "isCorrect": false,
+        "rationale": "Groq está diseñado para el procesamiento acelerado de inferencia de modelos de lenguaje y texto, no para la edición de audio."
+      }
+    ],
+    "hint": "Considere la versatilidad de modelos de lenguaje que ofrece esta plataforma y la rapidez de su motor de inferencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del área de la Inteligencia Artificial, ¿qué rol cumple el Procesamiento de Lenguaje Natural (PLN / NLP)?",
+    "opciones": [
+      {
+        "text": "Convertir señales eléctricas analógicas de motores mecánicos en corriente continua.",
+        "isCorrect": false,
+        "rationale": "Esta es una función electromecánica o de potencia, no de la inteligencia artificial orientada al lenguaje."
+      },
+      {
+        "text": "Permitir que las computadoras interpreten, analicen y generen lenguaje humano en forma de texto o voz.",
+        "isCorrect": true,
+        "rationale": "El PLN facilita la comunicación humano-máquina mediante la comprensión contextual y la síntesis del lenguaje hablado o escrito."
+      },
+      {
+        "text": "Diseñar físicamente los circuitos integrados de las tarjetas gráficas (GPU).",
+        "isCorrect": false,
+        "rationale": "El diseño de hardware semiconductor pertenece a la ingeniería microelectrónica."
+      },
+      {
+        "text": "Garantizar que las bases de datos relacionales no consuman espacio en disco duro.",
+        "isCorrect": false,
+        "rationale": "El PLN no altera la física del almacenamiento en disco de los gestores de bases de datos."
+      },
+      {
+        "text": "Monitorear la temperatura de los servidores mediante sensores fotoeléctricos.",
+        "isCorrect": false,
+        "rationale": "El monitoreo térmico es una aplicación industrial de IoT y sensores físicos, no de PLN."
+      }
+    ],
+    "hint": "Piense en la disciplina encargada de romper la barrera de comunicación entre el idioma humano y las máquinas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la técnica de Integración de Datos cuando se trabaja con múltiples fuentes de información heterogéneas?",
+    "opciones": [
+      {
+        "text": "En borrar todos los datos antiguos para almacenar únicamente la información generada en la última hora.",
+        "isCorrect": false,
+        "rationale": "La integración busca consolidar información, no destruir históricos operativos válidos."
+      },
+      {
+        "text": "En consolidar y unificar datos provenientes de distintos orígenes con una estructura lógica coherente para su análisis.",
+        "isCorrect": true,
+        "rationale": "Integrar datos implica combinar tablas, archivos o flujos dispares en una vista o repositorio unificado sin perder consistencia."
+      },
+      {
+        "text": "En convertir todos los números decimales de una base de datos en números enteros sin redondear.",
+        "isCorrect": false,
+        "rationale": "La alteración arbitraria de tipos numéricos destruye la precisión de los datos y no constituye integración."
+      },
+      {
+        "text": "En restringir el acceso a los archivos de datos para que solo puedan ser leídos por un usuario a la vez.",
+        "isCorrect": false,
+        "rationale": "El control de concurrencia o bloqueo de archivos es una función del gestor de base de datos, no la integración de fuentes."
+      },
+      {
+        "text": "En traducir automáticamente todas las variables al idioma inglés antes de guardarlas.",
+        "isCorrect": false,
+        "rationale": "La integración se refiere a la arquitectura y esquema lógico de los datos, no a la traducción idiomática del texto."
+      }
+    ],
+    "hint": "Considere la necesidad de unir tablas o archivos dispersos en un único esquema analítico significativo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos constituyen componentes fundamentales en la infraestructura de recolección de datos mediante IoT?",
+    "opciones": [
+      {
+        "text": "Sensores que capturan variables físicas como temperatura, humedad o vibración.",
+        "isCorrect": true,
+        "rationale": "Los sensores son los elementos de entrada encargados de traducir variables del mundo físico en señales digitales."
+      },
+      {
+        "text": "Redes de conectividad (WiFi, 5G, RFID) para la transmisión continua de datos.",
+        "isCorrect": true,
+        "rationale": "Las redes de datos proporcionan la vía de comunicación de alta velocidad para desplazar las lecturas hacia los servidores."
+      },
+      {
+        "text": "Dispositivos actuadores o controladores capaces de reaccionar en base a las señales analizadas.",
+        "isCorrect": true,
+        "rationale": "Los actuadores ejecutan acciones físicas o correcciones automáticas derivadas de la analítica de los datos recibidos."
+      },
+      {
+        "text": "Impresoras térmicas de matriz de puntos obligatorias en cada nodo.",
+        "isCorrect": false,
+        "rationale": "El registro e intercambio en IoT es digital e inalámbrico, por lo que las impresoras físicas no son componentes esenciales de la arquitectura."
+      },
+      {
+        "text": "Formularios físicos impresos para la recopilación manual de firmas.",
+        "isCorrect": false,
+        "rationale": "El IoT busca automatizar digitalmente el flujo de datos, eliminando la intervención de registros manuales en papel."
+      }
+    ],
+    "hint": "Elija las opciones que corresponden al hardware de medición, la red de transporte y los dispositivos de respuesta automatizada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al analizar la dimensión de **Volumen** en el marco de las 4 V del Big Data, ¿qué escala de medida representa $1,000\\text{ Terabytes}$?",
+    "opciones": [
+      {
+        "text": "Un Gigabyte ($1\\text{ GB}$).",
+        "isCorrect": false,
+        "rationale": "Un Gigabyte equivale a $1,024\\text{ Megabytes}$, un orden de magnitud muy inferior a un Terabyte."
+      },
+      {
+        "text": "Un Petabyte ($1\\text{ PB}$).",
+        "isCorrect": true,
+        "rationale": "En la jerarquía del almacenamiento digital, $1,000$ (o $1,024$) Terabytes conforman exactamente un Petabyte."
+      },
+      {
+        "text": "Un Exabyte ($1\\text{ EB}$).",
+        "isCorrect": false,
+        "rationale": "Un Exabyte equivale a $1,000\\text{ Petabytes}$ (o aproximadamente un millón de Terabytes)."
+      },
+      {
+        "text": "Un Zettabyte ($1\\text{ ZB}$).",
+        "isCorrect": false,
+        "rationale": "Un Zettabyte representa $1,000\\text{ Exabytes}$, ubicándose en la cúspide de la escala global de almacenamiento."
+      },
+      {
+        "text": "Un Kilobyte ($1\\text{ KB}$).",
+        "isCorrect": false,
+        "rationale": "El Kilobyte es una unidad básica equivalente a $1,024$ Bytes."
+      }
+    ],
+    "hint": "Recuerde la progresión ordinal de almacenamiento: Gigabyte $\\rightarrow$ Terabyte $\\rightarrow$ ? $\\rightarrow$ Exabyte.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué categoría de datos corresponden los archivos de registros de servidores en formato JSON o XML?",
+    "opciones": [
+      {
+        "text": "Datos completamente estructurados.",
+        "isCorrect": false,
+        "rationale": "Los datos estructurados se limitan a tablas relacionales rígidas con columnas y tipos de datos estables (SQL)."
+      },
+      {
+        "text": "Datos semiestructurados.",
+        "isCorrect": true,
+        "rationale": "Los datos semiestructurados no están organizados en tablas fijas pero poseen marcadores, etiquetas o claves (como pares clave-valor) que definen su jerarquía."
+      },
+      {
+        "text": "Datos no estructurados.",
+        "isCorrect": false,
+        "rationale": "Los datos no estructurados carecen por completo de un esquema de organización o etiquetas, como videos, audios o fotos brutas."
+      },
+      {
+        "text": "Datos analógicos no digitalizados.",
+        "isCorrect": false,
+        "rationale": "Los archivos JSON y XML son inherentemente digitales y de texto plano estandarizado."
+      },
+      {
+        "text": "Datos exclusivamente geográficos de forma vectorial.",
+        "isCorrect": false,
+        "rationale": "Aunque JSON puede contener coordenadas, el formato en sí abarca estructuras genéricas y no es exclusivo de datos cartográficos."
+      }
+    ],
+    "hint": "Identifique el tipo de datos que no tiene esquemas rígidos de tabla relacional pero incluye etiquetas y claves jerárquicas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Considere la siguiente estructura sintáctica:\n\n```json\n{\n  \"id\": 1024,\n  \"sensor\": \"vibracion_molino_01\",\n  \"estado\": \"operativo\",\n  \"lecturas\": [12.4, 11.8, 13.1]\n}\n```\n\n¿Qué formato de intercambio de datos representa este fragmento y cuál es su beneficio principal en arquitecturas Big Data?",
+    "opciones": [
+      {
+        "text": "Es una tabla SQL relacional; su ventaja es que impide la adición de nuevos campos sin reiniciar el servidor.",
+        "isCorrect": false,
+        "rationale": "El código mostrado es una estructura basada en texto flexible de pares clave-valor, no una tabla SQL relacional."
+      },
+      {
+        "text": "Es un formato JSON; su ventaja es la flexibilidad para transmitir estructuras de pares clave-valor y listas sin un esquema rígido prediseñado.",
+        "isCorrect": true,
+        "rationale": "JSON destaca por ser liviano, altamente legible por máquinas y humanos, facilitando el transporte de datos con esquemas variables."
+      },
+      {
+        "text": "Es un binario ejecutable; su ventaja es que solo puede ser procesado por procesadores de red neuronal.",
+        "isCorrect": false,
+        "rationale": "Se trata de un formato de texto ASCII/UTF-8 estándar, no de código binario ejecutable."
+      },
+      {
+        "text": "Es un archivo vectorial CAD; su ventaja es la representación tridimensional de piezas mecánicas.",
+        "isCorrect": false,
+        "rationale": "No contiene vectores geométricos ni instrucciones de renderizado gráfico de modelado tridimensional."
+      },
+      {
+        "text": "Es un protocolo encriptado SSH; su ventaja es bloquear las conexiones a la red de sensores.",
+        "isCorrect": false,
+        "rationale": "JSON es un formato de estructuración de datos, no un protocolo informático de comunicación o túnel criptográfico."
+      }
+    ],
+    "hint": "Observe el uso de llaves `{}`, corchetes `[]` para listas y pares clave-valor entre comillas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de las 4 V del Big Data, ¿a qué refiere el concepto de **Velocidad**?",
+    "opciones": [
+      {
+        "text": "A la rapidez con la que se pueden enviar documentos impresos mediante correo postal.",
+        "isCorrect": false,
+        "rationale": "El término aplica a la infraestructura digital y al tiempo de procesamiento de cómputo, no a mensajería física."
+      },
+      {
+        "text": "A la frecuencia y celeridad con la que se generan, transmiten y deben procesarse los flujos de datos en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Velocidad implica la capacidad del sistema de ingerir, analizar y responder a ráfagas de datos en milisegundos o con latencia mínima."
+      },
+      {
+        "text": "Al tiempo total que le toma a un técnico instalar un disco duro en el servidor.",
+        "isCorrect": false,
+        "rationale": "La velocidad del Big Data mide el flujo analítico de información digital, no el tiempo de montaje manual de hardware."
+      },
+      {
+        "text": "A la velocidad máxima a la que se desplaza un camión minero en la mina a tajo abierto.",
+        "isCorrect": false,
+        "rationale": "Aunque se midan datos de vehículos, la V de Velocidad refiere a la tasa de procesamiento de la analítica de datos."
+      },
+      {
+        "text": "A la cantidad de megabytes que se pueden eliminar por segundo de una base de datos de respaldo.",
+        "isCorrect": false,
+        "rationale": "Eliminar datos no constituye el enfoque del procesamiento en tiempo real para generar valor predictivo."
+      }
+    ],
+    "hint": "Piense en el análisis inmediato de eventos para tomar decisiones (como la detección de fraude en tarjetas).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la consecuencia directa de entrenar un modelo de Machine Learning con datos de **baja calidad** (con inconsistencias, sesgos o valores nulos no tratados)?",
+    "opciones": [
+      {
+        "text": "El modelo aumentará automáticamente su precisión y corregirá los errores por sí solo.",
+        "isCorrect": false,
+        "rationale": "Los modelos matemáticos dependen estrictamente de la calidad del conjunto de entrada; si la entrada es errónea, la salida será defectuosa (Garbage In, Garbage Out)."
+      },
+      {
+        "text": "El modelo generará predicciones erróneas o sesgadas, comprometiendo la confiabilidad de las decisiones operativas.",
+        "isCorrect": true,
+        "rationale": "La mala calidad de datos corrompe el aprendizaje de patrones en los algoritmos, derivando en inferencias fallidas."
+      },
+      {
+        "text": "La velocidad de procesamiento del servidor aumentará en un $300\\%$.",
+        "isCorrect": false,
+        "rationale": "La mala calidad de los datos no mejora ni acelera la eficiencia técnica del hardware de procesamiento."
+      },
+      {
+        "text": "Los datos estructurados se convertirán automáticamente en archivos de imagen PNG.",
+        "isCorrect": false,
+        "rationale": "La calidad de los datos afecta la veracidad y los valores de las variables, pero no altera sus formatos informáticos."
+      },
+      {
+        "text": "El sistema se conectará espontáneamente a redes satellitales sin autorización.",
+        "isCorrect": false,
+        "rationale": "Los datos erróneos no otorgan facultades de conectividad física ni alteran los protocolos de red."
+      }
+    ],
+    "hint": "Recuerde el axioma fundamental de la ciencia de datos: 'Si entra basura, sale basura'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a algoritmos de **Aprendizaje Supervisado** utilizados en la construcción de modelos predictivos?",
+    "opciones": [
+      {
+        "text": "Regresión Lineal.",
+        "isCorrect": true,
+        "rationale": "La Regresión Lineal requiere variables de entrada y una variable objetivo continua etiquetada para ajustar su recta de estimación."
+      },
+      {
+        "text": "Bosques Aleatorios (Random Forest).",
+        "isCorrect": true,
+        "rationale": "Random Forest combina múltiples árboles de decisión entrenados sobre subconjuntos de datos etiquetados para clasificación o regresión."
+      },
+      {
+        "text": "Máquinas de Vectores de Soporte (SVM).",
+        "isCorrect": true,
+        "rationale": "SVM se utiliza ampliamente en problemas supervisados para encontrar el hiperplano óptimo de separación entre clases."
+      },
+      {
+        "text": "Agrupamiento K-Means (K-Means Clustering).",
+        "isCorrect": false,
+        "rationale": "K-Means es un algoritmo de aprendizaje **no supervisado** enfocado en encontrar agrupaciones naturales sin etiquetas previas."
+      },
+      {
+        "text": "Algoritmos Generativos Adversarios (GANs) en modo de síntesis pura.",
+        "isCorrect": false,
+        "rationale": "Las arquitecturas avanzadas de redes generativas suelen operar bajo esquemas no supervisados o autosupervisados para sintetizar muestras."
+      }
+    ],
+    "hint": "Seleccione las técnicas que requieren obligatoriamente datos etiquetados con una variable objetivo (target).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué arquitectura de red neuronal es la más idónea para tareas de **visión por computadora**, como el análisis de imágenes satelitales o inspección fotográfica de minerales?",
+    "opciones": [
+      {
+        "text": "Redes Neuronales Recurrentes (RNN).",
+        "isCorrect": false,
+        "rationale": "Las RNN están optimizadas para datos secuenciales y series temporales o texto, no para procesamiento espacial bidimensional de píxeles."
+      },
+      {
+        "text": "Redes Neuronales Convolucionales (CNN / SNN).",
+        "isCorrect": true,
+        "rationale": "Las CNN utilizan filtros convolucionales capaces de extraer características espaciales (bordes, texturas, patrones) en imágenes de forma jerárquica."
+      },
+      {
+        "text": "Perceptrón Multicapa sin capas ocultas.",
+        "isCorrect": false,
+        "rationale": "Un perceptrón simple carece de la capacidad de abstraer la complejidad espacial y dimensional de imágenes complejas."
+      },
+      {
+        "text": "Algoritmos de regresión logística binomial.",
+        "isCorrect": false,
+        "rationale": "La regresión logística calcula probabilidades lineales directas y no es una arquitectura profunda adaptada al análisis matricial de píxeles."
+      },
+      {
+        "text": "Sistemas expertos basados puramente en reglas `IF-THEN` en texto.",
+        "isCorrect": false,
+        "rationale": "Las reglas lógicas no pueden procesar la variabilidad continua y dimensional del nivel de píxel en fotografías reales."
+      }
+    ],
+    "hint": "Piense en la arquitectura profunda especializada en extraer patrones espaciales y texturas mediante filtros matriciales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un geólogo necesita segmentar automáticamente diferentes muestras de suelo según sus propiedades físicas sin contar con etiquetas previas de clasificación. ¿Qué enfoque metodológico debe emplear?",
+    "opciones": [
+      {
+        "text": "Regresión lineal múltiple etiquetada.",
+        "isCorrect": false,
+        "rationale": "La regresión lineal requiere una variable continua conocida como objetivo etiquetado de entrenamiento."
+      },
+      {
+        "text": "Algoritmos de Agrupamiento (Clustering) No Supervisado como K-Means.",
+        "isCorrect": true,
+        "rationale": "El clustering busca agrupaciones y patrones intrínsecos en los datos en función de la proximidad o similitud sin requerir etiquetas previas."
+      },
+      {
+        "text": "Clasificación binaria mediante regresión logística supervisada.",
+        "isCorrect": false,
+        "rationale": "La clasificación supervisada requiere que el conjunto de entrenamiento incluya las categorías objetivo bien definidas."
+      },
+      {
+        "text": "Traducción automatizada mediante procesamiento de lenguaje natural.",
+        "isCorrect": false,
+        "rationale": "El procesamiento de lenguaje natural analiza texto, no atributos continuos de muestras geológicas."
+      },
+      {
+        "text": "Verificación manual mediante hojas de cálculo individuales.",
+        "isCorrect": false,
+        "rationale": "La verificación manual no aprovecha la potencia de los algoritmos de Machine Learning para descubrir estructuras complejas automáticamente."
+      }
+    ],
+    "hint": "Busque la técnica no supervisada diseñada para encontrar grupos (clusters) basados en la similitud de los datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué rol cumple el marco de trabajo **Apache Hadoop HDFS** en la infraestructura de Big Data?",
+    "opciones": [
+      {
+        "text": "Es una interfaz gráfica para crear presentaciones interactivas en la nube.",
+        "isCorrect": false,
+        "rationale": "Hadoop HDFS es una infraestructura de almacenamiento a bajo nivel, no una herramienta de diseño gráfico."
+      },
+      {
+        "text": "Es un sistema de archivos distribuido que permite almacenar volúmenes masivos de datos (Petabytes) en clústeres de computadoras.",
+        "isCorrect": true,
+        "rationale": "HDFS (Hadoop Distributed File System) divide archivos grandes en bloques y los distribuye réplicamente a través de un clúster de máquinas."
+      },
+      {
+        "text": "Es un motor de renderizado de video tridimensional en tiempo real.",
+        "isCorrect": false,
+        "rationale": "Hadoop no está diseñado para el procesamiento gráfico o renderizado de animaciones 3D."
+      },
+      {
+        "text": "Es un sensor físico que mide la vibración en fajas transportadoras.",
+        "isCorrect": false,
+        "rationale": "HDFS es una solución de software de almacenamiento distribuido, no un hardware o sensor mecánico."
+      },
+      {
+        "text": "Es un protocolo exclusivo para enviar correos electrónicos encriptados.",
+        "isCorrect": false,
+        "rationale": "Los protocolos de correo (SMTP/IMAP) operan de forma completamente independiente a los sistemas de archivos distribuidos de Big Data."
+      }
+    ],
+    "hint": "Identifique la tecnología de almacenamiento masivo basada en la distribución de bloques en múltiples nodos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes herramientas tecnológicas están diseñadas específicamente para el **procesamiento analítico en tiempo real** o flujos continuos de datos (Streaming)?",
+    "opciones": [
+      {
+        "text": "Apache Kafka.",
+        "isCorrect": true,
+        "rationale": "Apache Kafka actúa como una plataforma distribuida de transmisión de eventos de alta velocidad para la ingesta de datos en tiempo real."
+      },
+      {
+        "text": "Apache Flink.",
+        "isCorrect": true,
+        "rationale": "Apache Flink es un motor de procesamiento de flujo de datos (stream processing) de muy baja latencia."
+      },
+      {
+        "text": "Spark Streaming / Structured Streaming.",
+        "isCorrect": true,
+        "rationale": "El módulo de streaming de Apache Spark permite procesar flujos de datos continuos utilizando la abstracción de micro-batches o procesamiento por eventos."
+      },
+      {
+        "text": "Microsoft Excel en modo offline.",
+        "isCorrect": false,
+        "rationale": "Excel es una herramienta estática de escritorio y no está diseñada para la ingesta y analítica distribuida de streams continuos a escala."
+      },
+      {
+        "text": "Archivos impresos guardados en carpetas físicas.",
+        "isCorrect": false,
+        "rationale": "Los medios físicos impresos son totalmente incompatibles con el concepto tecnológico de streaming digital."
+      }
+    ],
+    "hint": "Seleccione los motores de software diseñados para ingestar y procesar eventos continuos e ininterrumpidos de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué escenarios analíticos destaca la utilización de la base de datos NoSQL **MongoDB**?",
+    "opciones": [
+      {
+        "text": "En el almacenamiento relacional estricto con esquemas fijos de tablas vinculadas por claves primarias e intermedias exclusivamente.",
+        "isCorrect": false,
+        "rationale": "Las estructuras rígidas son propias de motores SQL relacionales tradicionales como MySQL o PostgreSQL."
+      },
+      {
+        "text": "En la gestión flexible de datos no estructurados o semiestructurados mediante documentos orientados a formatos tipo JSON/BSON.",
+        "isCorrect": true,
+        "rationale": "MongoDB es una base de datos NoSQL orientada a documentos que permite guardar datos flexibles cuya estructura puede evolucionar dinámicamente."
+      },
+      {
+        "text": "En la compilación de scripts en ensamblador para microcontroladores industriales.",
+        "isCorrect": false,
+        "rationale": "MongoDB es un motor de base de datos, no un compilador de código fuente de bajo nivel."
+      },
+      {
+        "text": "En la creación automatizada de maquetas impresas en tecnología 3D.",
+        "isCorrect": false,
+        "rationale": "No tiene relación con la fabricación aditiva ni la gestión de impresoras tridimensionales."
+      },
+      {
+        "text": "En la sustitución total de las redes de fibra óptica por cables coaxiales.",
+        "isCorrect": false,
+        "rationale": "MongoDB es una capa de software de base de datos y no interviene en las decisiones de infraestructura física de telecomunicaciones."
+      }
+    ],
+    "hint": "Piense en el motor NoSQL destacado por guardar información organizada en colecciones de documentos flexibles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple la herramienta **Elasticsearch** dentro del ecosistema de Big Data?",
+    "opciones": [
+      {
+        "text": "La compresión de videos en alta definición para su reproducción en redes sociales.",
+        "isCorrect": false,
+        "rationale": "Elasticsearch no es un codec de codificación ni compresión de archivos multimedia."
+      },
+      {
+        "text": "La ejecución de búsquedas analíticas ultrarrápidas e indexación de grandes volúmenes de texto y registros (logs).",
+        "isCorrect": true,
+        "rationale": "Elasticsearch es un motor de búsqueda y analítica distribuido de código abierto orientado a consultar datos de texto y métricas en segundos."
+      },
+      {
+        "text": "El control físico del nivel de combustible en tanques de almacenamiento de camiones.",
+        "isCorrect": false,
+        "rationale": "El monitoreo de tanques se realiza mediante sensores mecánicos e hidrostáticos de IoT, no mediante Elasticsearch directo."
+      },
+      {
+        "text": "La encriptación de claves bancarias mediante tarjetas inteligentes de contacto.",
+        "isCorrect": false,
+        "rationale": "Elasticsearch es un motor de búsqueda e indexación, no un módulo HSM de seguridad bancaria."
+      },
+      {
+        "text": "La generación de simulaciones electromagnéticas para antenas de radio.",
+        "isCorrect": false,
+        "rationale": "El modelado electromagnético requiere software especializado de simulación física, distante de las funciones de un motor de búsqueda."
+      }
+    ],
+    "hint": "Considere la herramienta utilizada para consultar y filtrar velozmente millones de tweets, registros o documentos de texto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿De qué manera la combinación de Big Data y Machine Learning previene el **fraude financiero** en instituciones bancarias?",
+    "opciones": [
+      {
+        "text": "Analizando patrones de consumo del usuario e identificando desviaciones o anomalías atípicas en milisegundos.",
+        "isCorrect": true,
+        "rationale": "Los modelos comparan la ubicación y comportamiento actual de la transacción contra el perfil histórico acumulado del usuario."
+      },
+      {
+        "text": "Bloqueando de manera preventiva operaciones cuyo monto, ubicación o frecuencia resulten highly sospechosas.",
+        "isCorrect": true,
+        "rationale": "La velocidad de inferencia en tiempo real permite detener la transacción antes de que se liquide la transferencia robada."
+      },
+      {
+        "text": "Evaluando los datos históricos de transacciones similares para calcular el riesgo operacional continuo.",
+        "isCorrect": true,
+        "rationale": "El procesamiento en masa de antecedentes históricos alimenta las reglas de clasificación de patrones sospechosos."
+      },
+      {
+        "text": "Imprimiendo todos los comprobantes de pago en papel de seguridad al final de cada mes.",
+        "isCorrect": false,
+        "rationale": "El control en papel no previene el fraude digital inmediato que ocurre en milisegundos durante compras electrónicas."
+      },
+      {
+        "text": "Aumentando la tasa de interés de las tarjetas de crédito de forma aleatoria.",
+        "isCorrect": false,
+        "rationale": "Las tasas de interés corresponden a políticas de riesgo financiero comercial, no a mecanismos analíticos de prevención de fraudes."
+      }
+    ],
+    "hint": "Identifique cómo el análisis de patrones históricos y la evaluación en tiempo real bloquean transacciones atípicas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la principal ventaja técnica de utilizar **Apache Spark** sobre Hadoop MapReduce para el procesamiento distribuido de datos?",
+    "opciones": [
+      {
+        "text": "Que Apache Spark no requiere memoria RAM y funciona únicamente con disquetes.",
+        "isCorrect": false,
+        "rationale": "Spark requiere y utiliza intensivamente la memoria RAM para alcanzar su elevada velocidad de procesamiento."
+      },
+      {
+        "text": "Su capacidad de realizar el procesamiento de datos directamente en memoria RAM (in-memory computing), logrando velocidades significativamente mayores.",
+        "isCorrect": true,
+        "rationale": "Al almacenar y procesar los estados intermedios en memoria RAM en lugar de escribir continuamente en disco duro, Spark acelera el análisis masivo."
+      },
+      {
+        "text": "Que Apache Spark elimina la necesidad de usar lenguajes de programación.",
+        "isCorrect": false,
+        "rationale": "Spark requiere el desarrollo de código utilizando lenguajes como Python (PySpark), Scala, Java o SQL."
+      },
+      {
+        "text": "Que solo puede ejecutarse en una sola computadora personal sin conexión a la red.",
+        "isCorrect": false,
+        "rationale": "Spark es un motor inherentemente distribuido diseñado para trabajar sobre clústeres masivos de computadoras."
+      },
+      {
+        "text": "Que convierte automáticamente las bases de datos en archivos de audio de voz.",
+        "isCorrect": false,
+        "rationale": "Spark es un motor computacional analítico, no un sintetizador de audio."
+      }
+    ],
+    "hint": "Piense en la innovación computacional que evita escribir resultados intermedios de forma repetida en el disco duro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-37",
+    "diplomado": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el sector de la minería, ¿cómo contribuye el procesamiento de datos masivos e imágenes mediante Machine Learning al desarrollo de la **exploración geológica**?",
+    "opciones": [
+      {
+        "text": "Reemplazando los estudios de campo y la legislación minera por modelos teóricos sin validación.",
+        "isCorrect": false,
+        "rationale": "La analítica complementa la labor geológica y requiere validación de campo; no sustituye los marcos legales vigentes."
+      },
+      {
+        "text": "Identificando patrones mineralógicos en imágenes satelitales y datos geofísicos para delimitar zonas con potencial yacimiento.",
+        "isCorrect": true,
+        "rationale": "El Machine Learning analiza múltiples capas de datos espectrales y geofísicos para enfocar las perforaciones en zonas con alta probabilidad de mineralización."
+      },
+      {
+        "text": "Multiplicando por diez el peso físico de los minerales extraídos del tajo.",
+        "isCorrect": false,
+        "rationale": "Las herramientas digitales procesan información y no alteran las propiedades de la masa ni la física de los minerales de la naturaleza."
+      },
+      {
+        "text": "Garantizando que las rocas no sufran desgaste durante el proceso de chancado.",
+        "isCorrect": false,
+        "rationale": "La conminución es un proceso mecánico; el análisis de datos supervisa el proceso pero no elimina el desgaste físico de los equipos."
+      },
+      {
+        "text": "Generando informes escritos exclusivamente en formato de texto no estructurado sin gráficos.",
+        "isCorrect": false,
+        "rationale": "La analítica moderna integra representaciones cartográficas, modelos tridimensionales de bloques y visualizaciones interactivas."
+      }
+    ],
+    "hint": "Piense en cómo el análisis de capas espectrales y geofísicas ayuda a predecir la presencia de zonas mineralizadas.",
+    "activo": true
+  }
+]

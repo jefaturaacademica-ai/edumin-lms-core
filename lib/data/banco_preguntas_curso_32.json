@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del ecosistema Big Data dentro de los procesos productivos e industriales?",
+    "opciones": [
+      {
+        "text": "Recopilar, almacenar, procesar, analizar y visualizar grandes volúmenes de datos de diversas fuentes para la toma de decisiones.",
+        "isCorrect": true,
+        "rationale": "El Big Data integra múltiples subcomponentes para procesar conjuntos masivos de datos heterogéneos que superan las capacidades tradicionales, permitiendo generar información útil para tomar decisiones."
+      },
+      {
+        "text": "Reemplazar completamente el trabajo de los ingenieros mediante la automatización de la maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "El Big Data proporciona herramientas analíticas para apoyar y optimizar la toma de decisiones, pero no busca sustituir la supervisión humana especializada."
+      },
+      {
+        "text": "Almacenar únicamente tablas en formato Excel para reducir los costos administrativos de la empresa.",
+        "isCorrect": false,
+        "rationale": "Los sistemas de Big Data están diseñados para manejar volúmenes masivos no estructurados o semiestructurados que superan con creces las hojas de cálculo tradicionales."
+      },
+      {
+        "text": "Monitorear exclusivamente las redes sociales corporativas sin interactuar con sensores operativos de planta.",
+        "isCorrect": false,
+        "rationale": "Las fuentes de datos en Big Data incluyen sensores IoT, datos de maquinaria y geológicos, no limitándose solo a redes sociales."
+      },
+      {
+        "text": "Crear algoritmos cerrados de hardware que funcionan sin conexión a Internet ni acceso a redes locales.",
+        "isCorrect": false,
+        "rationale": "La ingesta y distribución de Big Data requiere conectividad continua a través de clústeres, redes locales o servicios en la nube."
+      }
+    ],
+    "hint": "Piensa en el flujo completo desde que se recolecta el dato crudo de distintas fuentes hasta que se transforma en información útil para decidir.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué secuencia se procesan habitualmente los datos dentro de la estructura general del ecosistema Big Data?",
+    "opciones": [
+      {
+        "text": "Recolección de datos -> Almacenamiento -> Procesamiento -> Análisis -> Visualización / Toma de decisiones.",
+        "isCorrect": true,
+        "rationale": "Esta secuencia representa el flujo estándar donde los datos primero se capturan, luego se guardan, se transforman, se analizan minuciosamente y finalmente se presentan de forma gráfica para decidir."
+      },
+      {
+        "text": "Visualización -> Análisis -> Procesamiento -> Almacenamiento -> Recolección.",
+        "isCorrect": false,
+        "rationale": "La visualización es la etapa final del flujo analítico; no se puede visualizar ni analizar información antes de recolectarla y procesarla."
+      },
+      {
+        "text": "Almacenamiento -> Recolección -> Visualización -> Procesamiento -> Análisis.",
+        "isCorrect": false,
+        "rationale": "No es posible almacenar datos antes de haber realizado su recolección desde los dispositivos o sensores de origen."
+      },
+      {
+        "text": "Análisis -> Visualización -> Recolección -> Almacenamiento -> Procesamiento.",
+        "isCorrect": false,
+        "rationale": "El análisis requiere que los datos hayan sido procesados previamente; colocarlo al inicio invierte el orden lógico."
+      },
+      {
+        "text": "Procesamiento -> Recolección -> Análisis -> Visualización -> Almacenamiento.",
+        "isCorrect": false,
+        "rationale": "El procesamiento opera sobre datos recopilados y almacenados, por lo que no puede anteceder a la recolección."
+      }
+    ],
+    "hint": "Considera el ciclo lógico en el que viaja la información desde la fuente física hasta la pantalla del analista.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes pilares forman parte de las denominadas '5 V del Big Data'?",
+    "opciones": [
+      {
+        "text": "Volumen",
+        "isCorrect": true,
+        "rationale": "El volumen se refiere a la inmensa cantidad de datos generados que superan la capacidad de sistemas tradicionales de almacenamiento."
+      },
+      {
+        "text": "Velocidad",
+        "isCorrect": true,
+        "rationale": "La velocidad alude a la rapidez con la que se generan, transmiten y procesan los datos en tiempo real o casi real."
+      },
+      {
+        "text": "Variedad",
+        "isCorrect": true,
+        "rationale": "La variedad contempla la diversidad de tipos de datos, incluidos estructurados, semiestructurados y no estructurados."
+      },
+      {
+        "text": "Veracidad",
+        "isCorrect": true,
+        "rationale": "La veracidad se relaciona con la exactitud, limpieza y confiabilidad de los datos recolectados."
+      },
+      {
+        "text": "Virtualización estricta",
+        "isCorrect": false,
+        "rationale": "Aunque se utilicen entornos virtuales, la 'Virtualización estricta' no es una de las 5 V fundamentales del modelo de Big Data."
+      }
+    ],
+    "hint": "Identifica los conceptos que inician con la letra V y describen la cantidad, rapidez, tipos y calidad de los datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple la etapa de ingesta de datos (Data Ingestion) dentro de la arquitectura de Big Data?",
+    "opciones": [
+      {
+        "text": "Capturar y recopilar datos desde diversas fuentes (sensores, registros, APIs) para enviarlos a los sistemas centralizados.",
+        "isCorrect": true,
+        "rationale": "La ingesta es la puerta de entrada encargada de recibir flujos de datos en tiempo real o por lotes desde orígenes heterogéneos y canalizarlos al clúster."
+      },
+      {
+        "text": "Diseñar dashboards e informes gráficos interactivos para la gerencia general.",
+        "isCorrect": false,
+        "rationale": "La creación de dashboards corresponde a la etapa final de visualización de datos, no a la ingesta."
+      },
+      {
+        "text": "Definir los aspectos legales y las leyes de privacidad de una corporación.",
+        "isCorrect": false,
+        "rationale": "Las políticas legales y normativas corresponden al dominio de la gobernanza de datos."
+      },
+      {
+        "text": "Eliminar físicamente los servidores primarios cuando ocurre una falla en el sistema.",
+        "isCorrect": false,
+        "rationale": "La gestión de hardware ante fallos es un proceso de infraestructura y tolerancia a fallos, no de ingesta."
+      },
+      {
+        "text": "Convertir todos los datos en texto plano exclusivamente para guardarlos en hojas de cálculo.",
+        "isCorrect": false,
+        "rationale": "La ingesta respeta y procesa diversos formatos originales de transmisión sin reducirlos necesariamente a texto plano."
+      }
+    ],
+    "hint": "Relaciona este término con la captación o entrada de flujos continuos de datos al sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una diferencia clave entre las bases de datos NoSQL y las bases de datos relacionales SQL tradicionales?",
+    "opciones": [
+      {
+        "text": "Las bases de datos NoSQL permiten almacenar datos no estructurados o flexibles sin requerir un esquema rígido de tablas y filas.",
+        "isCorrect": true,
+        "rationale": "A diferencia del esquema estricto relacional de SQL, las soluciones NoSQL están optimizadas para escalabilidad masiva y modelos flexibles como documentos o columnas."
+      },
+      {
+        "text": "Las bases de datos SQL no pueden almacenar números enteros ni cadenas de texto.",
+        "isCorrect": false,
+        "rationale": "Las bases de datos SQL manejan eficientemente números, cadenas y fechas dentro de sus tablas estructuradas."
+      },
+      {
+        "text": "Las bases de datos NoSQL solo funcionan si se instalan en un único ordenador personal sin conexión a red.",
+        "isCorrect": false,
+        "rationale": "Las soluciones NoSQL destacan precisamente por su capacidad de distribuirse a través de grandes clústeres de servidores."
+      },
+      {
+        "text": "Las bases de datos SQL no requieren ningún tipo de servidor para ejecutarse.",
+        "isCorrect": false,
+        "rationale": "Los sistemas gestores de bases de datos relacionales SQL requieren servidores o motores de procesamiento activos."
+      },
+      {
+        "text": "NoSQL es un lenguaje exclusivo para programar interfaces gráficas de usuario.",
+        "isCorrect": false,
+        "rationale": "NoSQL hace referencia a modelos de almacenamiento de bases de datos no relacionales, no a un lenguaje de interfaz gráfica."
+      }
+    ],
+    "hint": "Enfócate en la estructura del almacenamiento y la rigidez o flexibilidad de los esquemas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el aprendizaje supervisado dentro de las técnicas de Inteligencia Artificial empleadas en Big Data?",
+    "opciones": [
+      {
+        "text": "El modelo se entrena utilizando datos previamente etiquetados donde se le guía hacia la respuesta esperada.",
+        "isCorrect": true,
+        "rationale": "En el aprendizaje supervisado, el algoritmo aprende a partir de ejemplos de entrada acompañados de sus etiquetas o resultados correctos."
+      },
+      {
+        "text": "El algoritmo aprende de manera totalmente autónoma sin recibir ningún dato histórico ni instrucción.",
+        "isCorrect": false,
+        "rationale": "El aprendizaje a partir de patrones ocultos sin etiquetas previas corresponde al aprendizaje no supervisado."
+      },
+      {
+        "text": "Consiste en la revisión manual de cada registro numérico por parte de un operador humano.",
+        "isCorrect": false,
+        "rationale": "El aprendizaje supervisado es un proceso algorítmico automatizado, no una revisión manual renglón por renglón."
+      },
+      {
+        "text": "Es un método de almacenamiento físico que destruye los datos después de ser leídos.",
+        "isCorrect": false,
+        "rationale": "El aprendizaje supervisado es una técnica de análisis de aprendizaje automático, no un mecanismo de borrado de almacenamiento."
+      },
+      {
+        "text": "Se limita a formatear tablas de Excel de manera automática sin construir modelos predictivos.",
+        "isCorrect": false,
+        "rationale": "Su objetivo es construir modelos matemáticos capaces de predecir o clasificar nuevos datos basándose en el entrenamiento previo."
+      }
+    ],
+    "hint": "Piensa en un proceso de enseñanza en el que el modelo conoce de antemano el 'resultado correcto' o etiqueta de cada ejemplo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ocurre en una base de datos distribuida en la nube cuando uno de los nodos del clúster sufre una falla?",
+    "opciones": [
+      {
+        "text": "Otros nodos del clúster asumen el control y permiten continuar la operación gracias a la replicación de datos.",
+        "isCorrect": true,
+        "rationale": "La arquitectura distribuida y la replicación garantizan tolerancia a fallos, permitiendo que la disponibilidad de los datos no se interrumpa si un nodo falla."
+      },
+      {
+        "text": "Todo el sistema de la empresa colapsa y se pierden definitivamente los datos almacenados.",
+        "isCorrect": false,
+        "rationale": "La replicación entre múltiples nodos evita la pérdida definitiva de la información y la caída total del sistema."
+      },
+      {
+        "text": "Se borran automáticamente las copias de seguridad de todos los demás servidores.",
+        "isCorrect": false,
+        "rationale": "La falla de un nodo activa mecanismos de respaldo y conmutación por error, no la eliminación de copias."
+      },
+      {
+        "text": "La base de datos convierte automáticamente todos los archivos en imágenes comprimidas sin texto.",
+        "isCorrect": false,
+        "rationale": "La tolerancia a fallos mantiene la integridad y el formato original de los datos en los nodos activos."
+      },
+      {
+        "text": "Se requiere apagar manualmente la red eléctrica central de toda la organización.",
+        "isCorrect": false,
+        "rationale": "Los sistemas distribuidos gestionan las fallas de manera transparente y automática sin intervención física drástica."
+      }
+    ],
+    "hint": "Considera el concepto de 'tolerancia a fallos' y la presencia de copias redundantes (réplicas).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes características corresponden a un Data Lake en comparación con un Data Warehouse?",
+    "opciones": [
+      {
+        "text": "Almacena datos en su formato original o crudo (raw data).",
+        "isCorrect": true,
+        "rationale": "A diferencia de un Data Warehouse que exige datos estructurados, el Data Lake recibe datos sin procesar en su formato nativo."
+      },
+      {
+        "text": "Puede albergar datos estructurados, semiestructurados y no estructurados.",
+        "isCorrect": true,
+        "rationale": "El Data Lake destaca por su capacidad de consolidar archivos de texto, imágenes, videos y tablas en un solo lugar."
+      },
+      {
+        "text": "Permite almacenar grandes volúmenes de datos a escala de petabytes sin definir un esquema previo estricto.",
+        "isCorrect": true,
+        "rationale": "Aplica el principio de 'lectura en esquema', permitiendo guardar primero los datos masivos y definir su estructura al consultarlos."
+      },
+      {
+        "text": "Exige obligatoriamente que todos los datos se organicen exclusivamente en filas y columnas antes de ser guardados.",
+        "isCorrect": false,
+        "rationale": "Exigir tablas relacionales estrictas antes de guardar es una característica propia del Data Warehouse tradicional."
+      },
+      {
+        "text": "Está limitado a almacenar un máximo de 10 Gigabytes de información total.",
+        "isCorrect": false,
+        "rationale": "Los Data Lakes están diseñados para escalar de forma elástica a volúmenes masivos de petabytes."
+      }
+    ],
+    "hint": "Piensa en el repositorio centralizado que guarda los datos exactamente como llegan de la fuente, sin filtros estrictos previos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de implementar algoritmos de compresión como Gzip o Snappy en el almacenamiento de datos en la nube?",
+    "opciones": [
+      {
+        "text": "Reducir el tamaño de los datos almacenados para optimizar el espacio y mejorar el rendimiento en la transferencia.",
+        "isCorrect": true,
+        "rationale": "La compresión disminuye la huella de almacenamiento físico y acelera los tiempos de transmisión entre los nodos de la red."
+      },
+      {
+        "text": "Cambiar el idioma de los registros de texto al inglés automáticamente.",
+        "isCorrect": false,
+        "rationale": "Los algoritmos de compresión trabajan sobre la representación binaria de los datos, no realizan traducciones de idioma."
+      },
+      {
+        "text": "Aumentar exponencialmente el peso de los archivos para ocupar más espacio en disco.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la compresión es reducir el peso de los archivos, no incrementarlo."
+      },
+      {
+        "text": "Encriptar la información para que sea imposible desglosarla mediante algoritmos públicos.",
+        "isCorrect": false,
+        "rationale": "Aunque reduce la visibilidad directa, la función primordial de Gzip o Snappy es la eficiencia de espacio y velocidad, no el cifrado criptográfico."
+      },
+      {
+        "text": "Eliminar todas las columnas numéricas de las bases de datos relacionales.",
+        "isCorrect": false,
+        "rationale": "La compresión preserva la totalidad de la información original de los datos al descomprimirlos."
+      }
+    ],
+    "hint": "Asocia estos términos con la reducción del volumen de los archivos y el ahorro de espacio en disco.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo maneja el Sistema de Archivos Distribuidos de Hadoop (HDFS) los archivos de gran tamaño?",
+    "opciones": [
+      {
+        "text": "Divide los archivos masivos en bloques de tamaño fijo y los distribuye entre los distintos nodos del clúster.",
+        "isCorrect": true,
+        "rationale": "HDFS fragmenta los datos en bloques para almacenarlos de forma redundante y paralela en múltiples computadoras del sistema."
+      },
+      {
+        "text": "Guarda todo el archivo indiviso en la memoria RAM de un solo ordenador personal.",
+        "isCorrect": false,
+        "rationale": "Archivos que superan terabytes no caben en un solo equipo; HDFS requiere fragmentarlos y distribuirlos."
+      },
+      {
+        "text": "Envía los archivos impresos en papel a una central física de almacenamiento de documentos.",
+        "isCorrect": false,
+        "rationale": "HDFS es una solución netamente digital y distribuida de almacenamiento informático."
+      },
+      {
+        "text": "Rechaza automáticamente cualquier archivo que supere los 5 Megabytes de peso.",
+        "isCorrect": false,
+        "rationale": "HDFS está diseñado específicamente para procesar y almacenar archivos de gran volumen (Gigabytes o Terabytes)."
+      },
+      {
+        "text": "Transforma los archivos binarios en carpetas comprimidas de audio mp3.",
+        "isCorrect": false,
+        "rationale": "HDFS conserva la naturaleza binaria u origen del archivo sin alterar su codificación a formatos multimedia ajenos."
+      }
+    ],
+    "hint": "Recuerda el concepto de fragmentación en 'bloques' que se reparten en varios servidores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tecnología NoSQL se destaca por organizar la información mediante estructuras basadas en documentos clave-valor estilo JSON?",
+    "opciones": [
+      {
+        "text": "MongoDB",
+        "isCorrect": true,
+        "rationale": "MongoDB es una base de datos orientada a documentos que almacena la información en formato BSON (JSON binario) estructurado en parejas clave-valor."
+      },
+      {
+        "text": "Microsoft Access 97",
+        "isCorrect": false,
+        "rationale": "Microsoft Access es un sistema gestor de bases de datos relacionales de escritorio tradicional, no NoSQL orientada a documentos."
+      },
+      {
+        "text": "Apache HTTP Server",
+        "isCorrect": false,
+        "rationale": "Apache HTTP Server es un servidor web, no un motor de base de datos NoSQL."
+      },
+      {
+        "text": "Oracle SQL Developer",
+        "isCorrect": false,
+        "rationale": "Oracle SQL Developer es un entorno de desarrollo para bases de datos relacionales SQL."
+      },
+      {
+        "text": "PowerPoint",
+        "isCorrect": false,
+        "rationale": "PowerPoint es una herramienta de edición de presentaciones, no una base de datos."
+      }
+    ],
+    "hint": "Busca la base de datos NoSQL muy popular cuyo nombre inicia con 'Mongo'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumplen los algoritmos de consenso como Paxos o Raft en los sistemas distribuidos en la nube?",
+    "opciones": [
+      {
+        "text": "Garantizar la coherencia y el acuerdo unánime entre las distintas réplicas de nodos respecto al estado de los datos.",
+        "isCorrect": true,
+        "rationale": "Los algoritmos de consenso aseguran que todos los nodos distribuidos coincidan en el mismo valor o estado de información, manteniendo la consistencia."
+      },
+      {
+        "text": "Disminuir automáticamente la velocidad de la red eléctrica para ahorrar dinero.",
+        "isCorrect": false,
+        "rationale": "Paxos y Raft son protocolos lógicos de software para sincronizar datos, no controladores de energía."
+      },
+      {
+        "text": "Traducir los manuales de usuario a diferentes idiomas internacionales.",
+        "isCorrect": false,
+        "rationale": "Estos algoritmos gestionan la consistencia de datos en redes de computadoras, no la traducción de texto lingüístico."
+      },
+      {
+        "text": "Eliminar los virus informáticos mediante el escaneo de correo electrónico.",
+        "isCorrect": false,
+        "rationale": "No son soluciones antivirus, sino mecanismos de sincronización de estado entre réplicas distribuidas."
+      },
+      {
+        "text": "Generar imágenes tridimensionales a partir de registros de voz.",
+        "isCorrect": false,
+        "rationale": "Paxos y Raft se enfocan en la lógica de consenso de datos distribuida, no en la generación de imágenes 3D."
+      }
+    ],
+    "hint": "Observa la palabra 'consenso', que implica ponerse de acuerdo sobre qué información es la correcta entre varios servidores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica distintiva de la interfaz de usuario de Apache NiFi para construir flujos de datos?",
+    "opciones": [
+      {
+        "text": "Es una interfaz gráfica e intuitiva basada en arrastrar y conectar procesadores visuales de datos.",
+        "isCorrect": true,
+        "rationale": "Apache NiFi permite diseñar canalizaciones completas mediante una interfaz web visual donde se arrastran y enlazan componentes sin requerir programación compleja."
+      },
+      {
+        "text": "Requiere escribir manualmente código ensamblador en una pantalla de consola sin gráficos.",
+        "isCorrect": false,
+        "rationale": "Apache NiFi se destaca justamente por evitar la consola pura mediante una potente interfaz visual gráfica."
+      },
+      {
+        "text": "Funciona únicamente ingresando comandos mediante llamadas telefónicas automatizadas.",
+        "isCorrect": false,
+        "rationale": "Es un software accesible mediante navegadores web estándar, no un sistema de comandos de voz telefónico."
+      },
+      {
+        "text": "Solo permite ver archivos de texto plano sin opción de interconectar componentes.",
+        "isCorrect": false,
+        "rationale": "Su gran valor reside en conectar fuentes, transformadores y destinos de datos mediante conectores visuales."
+      },
+      {
+        "text": "Es una aplicación exclusiva para dispositivos móviles sin soporte para computadoras de escritorio.",
+        "isCorrect": false,
+        "rationale": "Se administra centralizadamente a través de navegadores web en computadoras y servidores."
+      }
+    ],
+    "hint": "Recuerda que NiFi facilita el trabajo mediante diagramas de flujo interactivos con elementos que se conectan visualmente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ventaja competitiva ofrece la herramienta Talend Open Studio en el desarrollo de procesos ETL (Extracción, Transformación y Carga)?",
+    "opciones": [
+      {
+        "text": "Es una solución de código abierto con un entorno gráfico que simplifica la integración sin exigir amplia experiencia en código.",
+        "isCorrect": true,
+        "rationale": "Talend Open Studio proporciona generadores de código y componentes visuales que agilizan las tareas ETL sin escribir código desde cero."
+      },
+      {
+        "text": "Es un programa comercial privado que obliga a pagar licencias millonarias desde el primer día de prueba.",
+        "isCorrect": false,
+        "rationale": "La versión Open Studio es de código abierto y de uso gratuito para la comunidad de desarrolladores."
+      },
+      {
+        "text": "Solo se puede ejecutar en calculadoras científicas de bolsillo.",
+        "isCorrect": false,
+        "rationale": "Talend es una plataforma robusta orientada a entornos informáticos empresariales y de Big Data."
+      },
+      {
+        "text": "Impide la conexión con bases de datos SQL y entornos en la nube.",
+        "isCorrect": false,
+        "rationale": "Talend incluye cientos de conectores nativos para bases de datos relacionales, NoSQL, APIs y la nube."
+      },
+      {
+        "text": "Su única función es editar fotos y videos promocionales.",
+        "isCorrect": false,
+        "rationale": "Talend es una plataforma especializada en integración, transformación y calidad de datos."
+      }
+    ],
+    "hint": "Enfócate en su naturaleza de código abierto (Open Studio) y su facilidad de uso gráfico para procesos ETL.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué posibilidades de análisis y visualización aporta Power BI al entorno empresarial de Big Data?",
+    "opciones": [
+      {
+        "text": "Creación de dashboards e informes interactivos altamente visuales.",
+        "isCorrect": true,
+        "rationale": "Power BI destaca por su capacidad para transformar datos en paneles dinámicos y gráficos fáciles de interpretar por la gestión."
+      },
+      {
+        "text": "Conexión con diversas fuentes de datos, incluidas bases relacionales y servicios en la nube.",
+        "isCorrect": true,
+        "rationale": "Permite unificar datos provenientes de archivos locales, bases SQL, servicios Azure o fuentes de Big Data."
+      },
+      {
+        "text": "Uso de indicadores clave de rendimiento (KPIs) dinámicos para monitoreo de negocio.",
+        "isCorrect": true,
+        "rationale": "Facilita el seguimiento de métricas y objetivos empresariales mediante tarjetas e indicadores dinámicos."
+      },
+      {
+        "text": "Reemplazar los sistemas físicos de almacenamiento distribuido de un clúster de servidores.",
+        "isCorrect": false,
+        "rationale": "Power BI es una herramienta de inteligencia de negocios y visualización, no una infraestructura de almacenamiento de archivos masivos."
+      },
+      {
+        "text": "Eliminar la necesidad de tener conectividad de red para consultar bases de datos remotas.",
+        "isCorrect": false,
+        "rationale": "Para conectarse con orígenes de datos remotos o en la nube, Power BI requiere la infraestructura de red correspondiente."
+      }
+    ],
+    "hint": "Identifica las fortalezas de Power BI orientadas a la presentación de paneles gráficos e indicadores corporativos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica principal de Apache Spark que le otorga una alta velocidad en el procesamiento analítico de Big Data?",
+    "opciones": [
+      {
+        "text": "Realiza el procesamiento de datos principalmente en memoria RAM en lugar de escribir constantemente en disco.",
+        "isCorrect": true,
+        "rationale": "El motor en memoria de Apache Spark reduce drásticamente los tiempos de lectura/escritura en disco, haciéndolo hasta 100 veces más rápido que esquemas tradicionales."
+      },
+      {
+        "text": "Obliga a procesar la información dato por dato de forma estrictamente secuencial en un solo hilo.",
+        "isCorrect": false,
+        "rationale": "Spark es un motor de procesamiento altamente distribuido y paralelo, no secuencial."
+      },
+      {
+        "text": "Funciona guardando los resultados intermedios en cintas magnéticas de respaldo.",
+        "isCorrect": false,
+        "rationale": "Escribir en medios físicos lentos ahogaría la velocidad; Spark aprovecha la memoria volátil ultrarrápida."
+      },
+      {
+        "text": "Desactiva las funciones matemáticos avanzadas para evitar el consumo de procesador.",
+        "isCorrect": false,
+        "rationale": "Spark integra bibliotecas avanzadas para consultas SQL, análisis de grafos y Machine Learning masivo."
+      },
+      {
+        "text": "Solo procesa archivos de texto que tengan menos de 100 caracteres en total.",
+        "isCorrect": false,
+        "rationale": "Está diseñado para procesar petabytes de datos en clústeres distribuidos."
+      }
+    ],
+    "hint": "Piensa en el componente de hardware volátil ultrarrápido (RAM) que evita lecturas lentas de disco.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumplen servicios administrados como Google BigQuery o Amazon Redshift en proyectos de Big Data?",
+    "opciones": [
+      {
+        "text": "Proporcionar almacenes de datos (Data Warehouses) en la nube para ejecutar consultas analíticas complejas sobre gran escala.",
+        "isCorrect": true,
+        "rationale": "Tanto BigQuery como Redshift están optimizados para realizar análisis en la nube mediante consultas SQL sobre volúmenes masivos de datos."
+      },
+      {
+        "text": "Diseñar logotipos vectoriales para la marca corporativa.",
+        "isCorrect": false,
+        "rationale": "Son soluciones analíticas de gestión de datos masivos, no aplicaciones de diseño gráfico."
+      },
+      {
+        "text": "Administrar físicamente el cableado de fibra óptica de la oficina.",
+        "isCorrect": false,
+        "rationale": "Son servicios totalmente gestionados en la nube donde el usuario no administra el cableado ni el hardware subyacente."
+      },
+      {
+        "text": "Convertir señales de radio analógicas en archivos de texto en español.",
+        "isCorrect": false,
+        "rationale": "Su función principal es el almacenamiento de datos y su análisis mediante SQL a gran escala."
+      },
+      {
+        "text": "Reemplazar los sistemas operativos de todas las computadoras personales.",
+        "isCorrect": false,
+        "rationale": "Son plataformas analíticas en la nube que corren sobre la infraestructura de sus respectivos proveedores, no sistemas operativos de cliente."
+      }
+    ],
+    "hint": "Relaciona estas herramientas de Google y Amazon con el almacenamiento de datos corporativo analítico (Data Warehousing).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se basa el paradigma de procesamiento clásico denominado Hadoop MapReduce?",
+    "opciones": [
+      {
+        "text": "Divide una tarea masiva en subproblemas más pequeños (Map) y luego combina los resultados parciales (Reduce).",
+        "isCorrect": true,
+        "rationale": "MapReduce distribuye el trabajo en dos fases principales: filtrar/ordenar datos en paralelo (Map) y agregar/resumir las respuestas (Reduce)."
+      },
+      {
+        "text": "Mapea las coordenadas geográficas de los edificios corporativos y reduce los salarios del personal.",
+        "isCorrect": false,
+        "rationale": "MapReduce es un modelo de programación para cómputo distribuido, no tiene relación con cartografía ni nóminas."
+      },
+      {
+        "text": "Genera mapas conceptuales a mano y los escanea en formato PDF.",
+        "isCorrect": false,
+        "rationale": "Es un algoritmo computacional distribuido que se ejecuta automáticamente en un clúster."
+      },
+      {
+        "text": "Comprime imágenes fotográficas hasta eliminarlas por completo del sistema.",
+        "isCorrect": false,
+        "rationale": "El objetivo de MapReduce es procesar y resumir grandes conjuntos de datos, no destruir archivos de imagen."
+      },
+      {
+        "text": "Ejecuta únicamente consultas en bases de datos relacionales de un solo ordenador personal.",
+        "isCorrect": false,
+        "rationale": "MapReduce fue concebido para procesar datos distribuidos a gran escala a través de cientos o miles de nodos."
+      }
+    ],
+    "hint": "Considera las dos etapas implícitas en su nombre: mapear/distribuir las tareas y luego consolidar o reducir los resultados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el escalamiento horizontal (scaling out) en una infraestructura de Big Data?",
+    "opciones": [
+      {
+        "text": "Incorporar más servidores o nodos al clúster existente para distribuir equitativamente la carga de trabajo.",
+        "isCorrect": true,
+        "rationale": "El escalado horizontal expande la capacidad añadiendo nuevos equipos a la red en lugar de reemplazar los componentes internos de una sola máquina."
+      },
+      {
+        "text": "Aumentar únicamente la memoria RAM del procesador central de un solo servidor sin agregar más equipos.",
+        "isCorrect": false,
+        "rationale": "Aumentar recursos de una sola máquina (RAM, CPU) corresponde al escalamiento vertical (scaling up)."
+      },
+      {
+        "text": "Cambiar el tamaño físico del chasis de los ordenadores a una posición acostada.",
+        "isCorrect": false,
+        "rationale": "El término 'horizontal' describe la arquitectura lógica de agregar nodos en paralelo, no la posición física del equipo."
+      },
+      {
+        "text": "Reducir la cantidad de usuarios permitidos para acceder a la base de datos.",
+        "isCorrect": false,
+        "rationale": "El propósito del escalamiento es aumentar la capacidad de procesamiento de datos y usuarios, no restringirla."
+      },
+      {
+        "text": "Desconectar los cables de red para trabajar de forma aislada.",
+        "isCorrect": false,
+        "rationale": "El escalamiento horizontal requiere que todos los nodos añadidos estén fuertemente interconectados por red."
+      }
+    ],
+    "hint": "Diferencia entre potenciar un único servidor (vertical) y sumar más servidores interconectados en grupo (horizontal).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes dimensiones corresponden a criterios esenciales para evaluar la Calidad de los Datos?",
+    "opciones": [
+      {
+        "text": "Precisión (los datos reflejan fielmente la realidad sin errores de escritura).",
+        "isCorrect": true,
+        "rationale": "La precisión garantiza que el valor registrado corresponda de forma exacta al hecho o medición del mundo real."
+      },
+      {
+        "text": "Completitud (los campos necesarios contienen información y no están vacíos de forma inadecuada).",
+        "isCorrect": true,
+        "rationale": "La completitud verifica que no existan ausencias o vacíos críticos de datos requeridos para el análisis."
+      },
+      {
+        "text": "Consistencia (los datos no presentan contradicciones entre diferentes tablas o sistemas).",
+        "isCorrect": true,
+        "rationale": "La consistencia asegura que el mismo dato mantenga coherencia idéntica en cualquier punto de la organización."
+      },
+      {
+        "text": "Actualidad (los datos están al día y disponibles en el momento oportuno).",
+        "isCorrect": true,
+        "rationale": "La actualidad o frescura del dato implica que la información responda a los plazos requeridos para tomar decisiones valiosas."
+      },
+      {
+        "text": "Complejidad innecesaria (alterar los valores para que sean difíciles de interpretar por los analistas).",
+        "isCorrect": false,
+        "rationale": "La complejidad innecesaria perjudica el análisis y no constituye una dimensión de calidad deseable."
+      }
+    ],
+    "hint": "Selecciona las dimensiones que garantizan que el dato sea exacto, no tenga vacíos, sea coherente y esté actualizado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la técnica de enmascaramiento de datos (data masking) aplicada a la seguridad de la información?",
+    "opciones": [
+      {
+        "text": "Ocultar o reemplazar datos sensibles (como números de identificación o nombres) por valores ficticios o caracteres especiales.",
+        "isCorrect": true,
+        "rationale": "El enmascaramiento protege la privacidad de la información confidencial permitiendo que los desarrolladores o analistas trabajen con datos estructurados de prueba sin ver los valores reales."
+      },
+      {
+        "text": "Aumentar el brillo del monitor para evitar que otras personas lean la pantalla.",
+        "isCorrect": false,
+        "rationale": "El enmascaramiento es un proceso lógico de modificación o transformación del dato a nivel de software."
+      },
+      {
+        "text": "Destruir físicamente los discos duros mediante fuego o químicos.",
+        "isCorrect": false,
+        "rationale": "No es la destrucción del soporte físico, sino una técnica de protección e higienización lógica de datos."
+      },
+      {
+        "text": "Imprimir los datos en blanco y negro en lugar de utilizar tintas a color.",
+        "isCorrect": false,
+        "rationale": "El término no guarda relación con la impresión física ni las paletas de colores."
+      },
+      {
+        "text": "Publicar abiertamente todas las contraseñas en la página web corporativa.",
+        "isCorrect": false,
+        "rationale": "Publicar contraseñas vulneraría drásticamente la seguridad, al contrario del objetivo del enmascaramiento."
+      }
+    ],
+    "hint": "Piensa en poner una 'máscara' sobre datos confidenciales (por ejemplo, cambiar un DNI real por 'XXXX-1234').",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere el concepto de interoperabilidad en el contexto del Big Data?",
+    "opciones": [
+      {
+        "text": "La capacidad de diferentes plataformas, aplicaciones y sistemas para intercambiar y trabajar con datos de manera conjunta y transparente.",
+        "isCorrect": true,
+        "rationale": "La interoperabilidad permite que tecnologías diversas (NoSQL, SQL, motores de procesamiento y sensores) se entiendan e intercambien información sin fricción."
+      },
+      {
+        "text": "La regla que obliga a utilizar una única marca de ordenador personal en toda la empresa.",
+        "isCorrect": false,
+        "rationale": "La interoperabilidad busca conectar sistemas heterogéneos, no imponer el monopolio de un solo fabricante de hardware."
+      },
+      {
+        "text": "La velocidad a la que un operador humano puede escribir comandos en la pantalla.",
+        "isCorrect": false,
+        "rationale": "Es una propiedad de acoplamiento e integración técnica entre sistemas, no la agilidad dactilar humana."
+      },
+      {
+        "text": "Un mecanismo de apagado automático de los servidores durante los fines de semana.",
+        "isCorrect": false,
+        "rationale": "No hace referencia a rutinas de suspensión de energía, sino al intercambio continuo de datos."
+      },
+      {
+        "text": "La prohibición absoluta de compartir información entre dos departamentos de la misma empresa.",
+        "isCorrect": false,
+        "rationale": "La interoperabilidad busca facilitar el intercambio fluido y seguro de información, no prohibirlo."
+      }
+    ],
+    "hint": "Conecta la palabra 'interoperar' con la capacidad de colaborar e intercambiar datos entre sistemas heterogéneos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué rol desempeña Apache Kafka en las arquitecturas modernas de Big Data e interoperabilidad?",
+    "opciones": [
+      {
+        "text": "Actúa como una plataforma distribuida de transmisión de eventos que conecta emisores y receptores de flujos de datos en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Apache Kafka funciona como el 'sistema nervioso central' permitiendo publicar, suscribirse y procesar flujos de eventos entre múltiples aplicaciones de forma desacoplada."
+      },
+      {
+        "text": "Funciona como un editor de texto básico para la redacción de cartas comerciales.",
+        "isCorrect": false,
+        "rationale": "Apache Kafka es un motor de transmisión distribuido de alto rendimiento para flujos masivos de datos."
+      },
+      {
+        "text": "Es un programa que escanea e imprime facturas físicas en papel.",
+        "isCorrect": false,
+        "rationale": "Kafka administra eventos de software de manera digital en tiempo real, sin relación con impresión física."
+      },
+      {
+        "text": "Sirve para bloquear permanentemente las conexiones a Internet de los usuarios.",
+        "isCorrect": false,
+        "rationale": "Su fin es facilitar el flujo continuo e interconectado de datos entre aplicaciones, no bloquear redes."
+      },
+      {
+        "text": "Es un reproductor de archivos de música streaming para uso personal.",
+        "isCorrect": false,
+        "rationale": "Aunque gestiona datos estilo 'streaming', se refiere a eventos de datos informáticos empresariales, no a archivos comerciales de música."
+      }
+    ],
+    "hint": "Asocia esta herramienta con la mensajería y la intermediación de flujos de datos ('streaming de eventos') en tiempo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué estándar de cifrado simétrico por bloques se utiliza ampliamente para proteger datos en reposo en la nube (por ejemplo, AES-256)?",
+    "opciones": [
+      {
+        "text": "AES (Advanced Encryption Standard)",
+        "isCorrect": true,
+        "rationale": "AES (Advanced Encryption Standard) con claves de 256 bits es uno de los esquemas de encriptación simétrica más seguros y utilizados para proteger archivos y bases de datos."
+      },
+      {
+        "text": "MP3",
+        "isCorrect": false,
+        "rationale": "MP3 es un formato de compresión de audio digital, no un algoritmo criptográfico de seguridad."
+      },
+      {
+        "text": "HTML5",
+        "isCorrect": false,
+        "rationale": "HTML5 es el lenguaje de marcado estándar para la estructura de páginas web, no un estándar de cifrado."
+      },
+      {
+        "text": "JPEG",
+        "isCorrect": false,
+        "rationale": "JPEG es un formato estandarizado de compresión de imágenes fijas."
+      },
+      {
+        "text": "PDF",
+        "isCorrect": false,
+        "rationale": "PDF es un formato de almacenamiento de documentos digitales legibles."
+      }
+    ],
+    "hint": "Busca el acrónimo de tres letras que representa el Estándar de Cifrado Avanzado (Advanced Encryption Standard).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué problemas en los datos pueden afectar negativamente la calidad si no se aplican rutinas de depuración y limpieza?",
+    "opciones": [
+      {
+        "text": "Registros duplicados provenientes de múltiples fuentes sin consolidar.",
+        "isCorrect": true,
+        "rationale": "La duplicidad de datos sesga los análisis e incrementa innecesariamente el consumo de almacenamiento."
+      },
+      {
+        "text": "Valores nulos o ausentes en campos críticos para el cálculo.",
+        "isCorrect": true,
+        "rationale": "La presencia de valores ausentes puede arruinar el entrenamiento de modelos analíticos o de aprendizaje automático."
+      },
+      {
+        "text": "Inconsistencias de formato (por ejemplo, fechas en orden DD/MM/AAAA mezcladas con MM/DD/AAAA).",
+        "isCorrect": true,
+        "rationale": "La falta de estandarización en formatos impide la correcta agregación y comparación de la información."
+      },
+      {
+        "text": "Uso excesivo de copias de seguridad correctamente encriptadas y validadas.",
+        "isCorrect": false,
+        "rationale": "Contar con respaldos cifrados y validados es una buena práctica de seguridad y continuidad, no un defecto de calidad."
+      },
+      {
+        "text": "Sincronización perfecta y en tiempo real de los sensores IoT.",
+        "isCorrect": false,
+        "rationale": "La sincronización perfecta es el estado ideal deseado, no un problema de calidad de datos."
+      }
+    ],
+    "hint": "Selecciona las anomalías u obstáculos como la presencia de repetidos, vacíos y formatos contradictorios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el orden secuencial correcto de los componentes técnicos que conforman el flujo general en un ecosistema Big Data, desde la captura inicial hasta la toma de decisiones?",
+    "opciones": [
+      {
+        "text": "Almacenamiento -> Recolección -> Análisis -> Procesamiento -> Visualización",
+        "isCorrect": false,
+        "rationale": "El almacenamiento no puede preceder a la recolección, ya que primero deben capturarse los datos de las fuentes antes de estructurar su guardado."
+      },
+      {
+        "text": "Recolección (Ingesta) -> Almacenamiento -> Procesamiento -> Análisis -> Visualización y Gobernanza",
+        "isCorrect": true,
+        "rationale": "Sigue la secuencia lógica donde los datos se capturan mediante la ingesta, se guardan en estructuras adecuadas, se transforman en el procesamiento, se interpretan en el análisis y se exponen en la visualización bajo políticas de gobernanza."
+      },
+      {
+        "text": "Procesamiento -> Recolección -> Visualización -> Almacenamiento -> Gobernanza",
+        "isCorrect": false,
+        "rationale": "El procesamiento requiere de datos previamente recolectados y almacenados, por lo que no puede colocarse en la primera etapa."
+      },
+      {
+        "text": "Análisis -> Recolección -> Procesamiento -> Almacenamiento -> Visualización",
+        "isCorrect": false,
+        "rationale": "El análisis se realiza sobre datos que ya han sido procesados y transformados, imposibilitando su ejecución al inicio del flujo."
+      },
+      {
+        "text": "Ingesta -> Análisis -> Almacenamiento -> Visualización -> Procesamiento",
+        "isCorrect": false,
+        "rationale": "Analizar datos crudos inmediatamente después de la ingesta sin un procesamiento y almacenamiento previo genera inconsistencias y problemas de rendimiento."
+      }
+    ],
+    "hint": "El flujo inicia en el punto de contacto con las fuentes de datos (sensores, redes) y avanza progresivamente hacia la preparación, consulta y exposición.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la industria minera, la monitorización mediante sensores IoT en fajas transportadoras o maquinaria pesada demanda capacidades específicas. ¿Qué desafíos técnicos justifican el uso de arquitecturas Big Data en tiempo real para este sector?",
+    "opciones": [
+      {
+        "text": "Altas velocidades de generación de datos que requieren alertas inmediatas para prevenir eventos como fallas mecánicas o deslizamientos de taludes.",
+        "isCorrect": true,
+        "rationale": "La detección temprana de fallas críticas evita paralizaciones costosas o accidentes de seguridad mediante el procesamiento en milisegundos."
+      },
+      {
+        "text": "Necesidad de limitar todo el almacenamiento a tablas relacionales rígidas de tipo SQL tradicional.",
+        "isCorrect": false,
+        "rationale": "Los datos mineros incluyen imágenes, lecturas de sensores y geolocalización que superan la rigidez de los esquemas relacionales tradicionales."
+      },
+      {
+        "text": "Gran volumen y variedad de datos heterogéneos provenientes de sensores de vibración, imágenes satelitales y datos meteorológicos.",
+        "isCorrect": true,
+        "rationale": "La diversidad de formatos exige plataformas capaces de integrar y homogeneizar fuentes que van desde lecturas numéricas hasta archivos gráficos."
+      },
+      {
+        "text": "Operación en zonas remotas con infraestructura de red limitada que exige modelos híbridos de procesamiento local y en la nube.",
+        "isCorrect": true,
+        "rationale": "La ubicación geográfica de los yacimientos obliga a procesar ciertos datos en el borde (edge) antes de su sincronización masiva a la nube."
+      },
+      {
+        "text": "Eliminación completa de los protocolos de ciberseguridad mediante la automatización de la maquinaria.",
+        "isCorrect": false,
+        "rationale": "La automatización incrementa la exposición a ciberataques, haciendo que la ciberseguridad y gobernanza sean aún más exigentes."
+      }
+    ],
+    "hint": "Evalúe las características operativas del entorno minero respecto al volumen, velocidad, variedad de datos y limitaciones geográficas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple la característica de 'Veracidad' dentro del modelo de las 5V del Big Data?",
+    "opciones": [
+      {
+        "text": "Garantizar la capacidad física de almacenar petabytes de información en discos de estado sólido.",
+        "isCorrect": false,
+        "rationale": "La capacidad de almacenamiento masivo responde a la dimensión de 'Volumen' y no a la validez del dato."
+      },
+      {
+        "text": "Asegurar que los datos recolectados sean precisos, limpios y confiables para evitar decisiones operativas erróneas.",
+        "isCorrect": true,
+        "rationale": "La veracidad aborda el nivel de confianza, fidelidad y limpieza de la información capturada frente a ruidos o sensores defectuosos."
+      },
+      {
+        "text": "Convertir todos los archivos no estructurados exclusivamente a formato de texto plano sin etiquetas.",
+        "isCorrect": false,
+        "rationale": "La veracidad no implica homogeneizar el formato a texto plano, sino validar que el contenido registrado represente fielmente la realidad."
+      },
+      {
+        "text": "Medir el valor económico neto derivado de la venta de datos a terceros.",
+        "isCorrect": false,
+        "rationale": "El rendimiento económico o de negocio derivado del análisis corresponde a la dimensión de 'Valor'."
+      },
+      {
+        "text": "Garantizar que la transmisión de datos se realice únicamente mediante redes cableadas locales.",
+        "isCorrect": false,
+        "rationale": "La veracidad es independiente del medio de transporte físico, enfocándose en la calidad intrínseca de los datos."
+      }
+    ],
+    "hint": "Esta 'V' del Big Data se concentra en la calidad, exactitud y grado de confianza que ofrecen los datos recopilados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la fase de ingesta de datos de alta velocidad, ¿cuál es el rol principal de herramientas como Apache Kafka?",
+    "opciones": [
+      {
+        "text": "Diseñar dashboards e informes visuales interactivos para la gerencia general.",
+        "isCorrect": false,
+        "rationale": "Apache Kafka es un intermediario de mensajería para flujos de datos, no una herramienta de inteligencia de negocios o visualización."
+      },
+      {
+        "text": "Capturar y transmitir flujos masivos de datos en tiempo real actuando como un bus de mensajería desacoplado entre fuentes y destinos.",
+        "isCorrect": true,
+        "rationale": "Permite recibir eventos a alta velocidad desde miles de orígenes y distribuirlos de manera confiable hacia plataformas de almacenamiento o procesamiento."
+      },
+      {
+        "text": "Reemplazar completamente el almacenamiento definitivo en sistemas de archivos distribuidos o Data Lakes.",
+        "isCorrect": false,
+        "rationale": "Kafka gestiona la transmisión y retención temporal de flujos (streaming), pero no reemplaza el almacenamiento persistente de largo plazo."
+      },
+      {
+        "text": "Ejecutar algoritmos de aprendizaje profundo directamente en el firmware de los sensores.",
+        "isCorrect": false,
+        "rationale": "Su función se limita a la ingesta y transporte de eventos, dejando el cómputo analítico avanzado a motores como Spark o Flink."
+      },
+      {
+        "text": "Establecer las normativas jurídicas y legales del tratamiento de datos en la empresa.",
+        "isCorrect": false,
+        "rationale": "Las normativas corresponden al ámbito de la gobernanza corporativa y no a una plataforma tecnológica de ingesta."
+      }
+    ],
+    "hint": "Piense en la plataforma que actúa como un distribuidor central de eventos en tiempo real (streaming) con baja latencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones representan tipos de datos NO estructurados o semiestructurados en un entorno industrial?",
+    "opciones": [
+      {
+        "text": "Tablas relacionales SQL estructuradas estrictamente en filas y columnas con tipos de datos fijos.",
+        "isCorrect": false,
+        "rationale": "Las tablas relacionales tradicionales son el ejemplo clásico de datos totalmente estructurados con esquema rígido."
+      },
+      {
+        "text": "Fotografías e imágenes de alta resolución capturadas por drones para inspección geológica.",
+        "isCorrect": true,
+        "rationale": "Los archivos de imagen carecen de una estructura relacional interna en filas/columnas, constituyendo datos no estructurados."
+      },
+      {
+        "text": "Documentos de registros operativos formateados en JSON o XML con estructura de pares clave-valor o etiquetas.",
+        "isCorrect": true,
+        "rationale": "Los formatos JSON y XML contienen esquemas flexibles y autodescriptivos que se clasifican como datos semiestructurados."
+      },
+      {
+        "text": "Archivos de video en tiempo real provenientes de cámaras de vigilancia operacionales.",
+        "isCorrect": true,
+        "rationale": "El contenido audiovisual es un flujo binario complejo sin tabla relacional implícita, catalogado como no estructurado."
+      },
+      {
+        "text": "Bases de datos transaccionales de nómina organizadas con llaves primarias y foráneas rígidas.",
+        "isCorrect": false,
+        "rationale": "Las bases de nómina relacionales siguen esquemas SQL estructurados previamente definidos."
+      }
+    ],
+    "hint": "Los datos estructurados responden a esquemas rígidos de filas y columnas; los demás presentan formatos binarios, libres o esquemas autodescriptivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la ventaja fundamental de las bases de datos NoSQL frente a las relacionales tradicionales en aplicaciones de Big Data?",
+    "opciones": [
+      {
+        "text": "Obligan a que todos los registros mantengan exactamente el mismo número y tipo de campos.",
+        "isCorrect": false,
+        "rationale": "La rigidez del esquema es propia de las bases de datos relacionales SQL, lo cual limita la adaptabilidad NoSQL."
+      },
+      {
+        "text": "Ofrecen esquemas flexibles y la capacidad de escalar horizontalmente mediante la adición de nodos para manejar datos masivos e impredecibles.",
+        "isCorrect": true,
+        "rationale": "Su arquitectura desacoplada del esquema rígido facilita distribuir datos no estructurados entre múltiples servidores sin degradar el rendimiento."
+      },
+      {
+        "text": "Garantizan que las operaciones se ejecuten siempre en un único servidor central sin réplicas.",
+        "isCorrect": false,
+        "rationale": "Las bases NoSQL están diseñadas intrínsecamente para distribuirse en múltiples servidores o clústeres."
+      },
+      {
+        "text": "Eliminan la necesidad de utilizar almacenamiento en memoria caché o discos duraderos.",
+        "isCorrect": false,
+        "rationale": "Las soluciones NoSQL hacen un uso intensivo de la memoria y el almacenamiento persistente según su especialización."
+      },
+      {
+        "text": "Impiden el procesamiento de datos que provengan de fuentes basadas en texto o JSON.",
+        "isCorrect": false,
+        "rationale": "Muchas bases NoSQL, como las orientadas a documentos, están optimizadas precisamente para almacenar y consultar formatos como JSON."
+      }
+    ],
+    "hint": "Considere la flexibilidad para modificar la estructura de los datos sin migrar esquemas y el crecimiento distribuido agregando servidores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de bases de datos en la nube, ¿cuál es el concepto y beneficio clave de una 'arquitectura distribuida'?",
+    "opciones": [
+      {
+        "text": "Concentrar todos los procesos en un solo procesador físico para evitar la duplicidad de cómputos.",
+        "isCorrect": false,
+        "rationale": "Concentrar todo en un solo procesador genera un punto único de falla y limita la capacidad total de procesamiento."
+      },
+      {
+        "text": "Repartir el almacenamiento y el cómputo entre múltiples nodos o servidores interconectados, garantizando escalabilidad y tolerancia a fallos.",
+        "isCorrect": true,
+        "rationale": "Al distribuir la carga en varios nodos, si un servidor falla, los demás continúan operando el sistema sin interrupciones del servicio."
+      },
+      {
+        "text": "Prohibir que los usuarios accedan a los datos desde diferentes ubicaciones geográficas.",
+        "isCorrect": false,
+        "rationale": "Una arquitectura distribuida favorece la accesibilidad global y no la restricción geográfica."
+      },
+      {
+        "text": "Transformar automáticamente código de programación en gráficos publicitarios de forma nativa.",
+        "isCorrect": false,
+        "rationale": "La distribución de arquitectura atañe a la infraestructura de almacenamiento y cómputo, no a la edición de diseño gráfico."
+      },
+      {
+        "text": "Restringir la velocidad de procesamiento para igualarla al componente de hardware más antiguo.",
+        "isCorrect": false,
+        "rationale": "Los sistemas distribuidos buscan optimizar el rendimiento global equilibrando las cargas entre sus componentes."
+      }
+    ],
+    "hint": "Piense en cómo el trabajo compartido entre múltiples máquinas evita que el sistema colapse si un componente individual falla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes algoritmos son utilizados en entornos de datos distribuidos para garantizar la coherencia y el consenso entre las réplicas de los nodos?",
+    "opciones": [
+      {
+        "text": "Paxos",
+        "isCorrect": true,
+        "rationale": "Es uno de los algoritmos clásicos de consenso distribuido diseñado para acordar valores entre nodos no fiables."
+      },
+      {
+        "text": "Raft",
+        "isCorrect": true,
+        "rationale": "Es un algoritmo de consenso diseñado para ser más comprensible que Paxos, ampliamente utilizado para gestionar registros replicados."
+      },
+      {
+        "text": "Snappy",
+        "isCorrect": false,
+        "rationale": "Snappy es un algoritmo enfocado en la compresión de datos de alta velocidad, no en el consenso distribuido."
+      },
+      {
+        "text": "Gzip",
+        "isCorrect": false,
+        "rationale": "Gzip es un formato y algoritmo de compresión de archivos, ajeno a la coordinación lógica de réplicas."
+      },
+      {
+        "text": "MapReduce",
+        "isCorrect": false,
+        "rationale": "MapReduce es un modelo de programación para procesar grandes conjuntos de datos en paralelo, no un algoritmo de consenso."
+      }
+    ],
+    "hint": "Diferencie los algoritmos encargados de que los nodos 'se pongan de acuerdo' sobre el estado de un dato de aquellos usados para comprimir o procesar archivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué diferencia sustancial existe entre el almacenamiento de objetos (como Amazon S3) y el almacenamiento en bloques (como Amazon EBS)?",
+    "opciones": [
+      {
+        "text": "El almacenamiento de objetos gestiona datos con metadatos e identificadores únicos siendo ideal para archivos masivos no estructurados, mientras que el de bloques divide el espacio en volúmenes fijos de baja latencia para bases de datos.",
+        "isCorrect": true,
+        "rationale": "Objetos escala masivamente a menor costo agrupando metadatos, mientras que bloques simula discos duros de alto rendimiento montados directamente en instancias."
+      },
+      {
+        "text": "El almacenamiento en bloques se utiliza exclusivamente para guardar correos electrónicos y el de objetos para alojar aplicaciones web.",
+        "isCorrect": false,
+        "rationale": "Ambos tipos son de propósito general dentro de sus respectivas arquitecturas de almacenamiento y no se limitan a esos casos."
+      },
+      {
+        "text": "El almacenamiento de objetos no permite la réplica entre zonas de disponibilidad en la nube.",
+        "isCorrect": false,
+        "rationale": "Servicios como S3 replican los objetos automáticamente en múltiples zonas de disponibilidad dentro de una región."
+      },
+      {
+        "text": "El almacenamiento en bloques no requiere ningún tipo de sistema de archivos para operar.",
+        "isCorrect": false,
+        "rationale": "Los volúmenes de bloques requieren ser formateados con un sistema de archivos (como ext4 o NTFS) para ser utilizados por un sistema operativo."
+      },
+      {
+        "text": "El almacenamiento de objetos procesa exclusivamente consultas analíticas mediante lenguaje SQL nativo sin servidores.",
+        "isCorrect": false,
+        "rationale": "S3 es un repositorio estático de objetos; la ejecución de consultas SQL requiere motores analíticos externos como Athena o Redshift."
+      }
+    ],
+    "hint": "Uno destaca por su flexibilidad para guardar archivos ilimitados con metadatos personalizados; el otro actúa como un disco duro adjunto de alta velocidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica operativa definitoria de un Data Lake en comparación con un Data Warehouse tradicional?",
+    "opciones": [
+      {
+        "text": "El Data Lake almacena únicamente información cuantitativa que ha sido filtrada y consolidada en tablas SQL.",
+        "isCorrect": false,
+        "rationale": "El filtrado previo y la consolidación estricta en tablas relacionales describe el funcionamiento de un Data Warehouse."
+      },
+      {
+        "text": "El Data Lake retiene grandes volúmenes de datos en su formato original o crudo (sin un esquema previo obligatorio al guardar).",
+        "isCorrect": true,
+        "rationale": "Aplica el enfoque 'schema-on-read', permitiendo almacenar datos estructurados, semiestructurados o no estructurados tal como se capturan."
+      },
+      {
+        "text": "El Data Lake prohíbe el uso de técnicas de aprendizaje automático sobre sus registros guardados.",
+        "isCorrect": false,
+        "rationale": "Al almacenar datos crudos e integrales, los Data Lakes son la fuente principal para entrenar modelos de Machine Learning."
+      },
+      {
+        "text": "El Data Warehouse está optimizado exclusivamente para guardar archivos multimedia de audio y video de alta fidelidad.",
+        "isCorrect": false,
+        "rationale": "Los Data Warehouses tradicionales están diseñados para datos estructurados y no para archivos multimedia sin procesar."
+      },
+      {
+        "text": "El Data Lake requiere que todos los datos entrantes sean convertidos a código binario ejecutable antes de guardarse.",
+        "isCorrect": false,
+        "rationale": "Admite los archivos en sus formatos nativos (csv, json, parquet, imágenes, etc.) sin forzar una compilación previa."
+      }
+    ],
+    "hint": "Considere la diferencia entre almacenar datos guardando su estado 'bruto u original' frente al almacenamiento preparado previamente bajo esquemas rígidos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes asociaciones entre la solución NoSQL y su modelo de almacenamiento de datos son correctas?",
+    "opciones": [
+      {
+        "text": "MongoDB -> Base de datos orientada a documentos (formatos JSON/BSON).",
+        "isCorrect": true,
+        "rationale": "Almacena datos en documentos flexibles de estructura similar a JSON llamados BSON."
+      },
+      {
+        "text": "Apache Cassandra -> Base de datos orientada a columnas distribuidas de gran escala.",
+        "isCorrect": true,
+        "rationale": "Está diseñada para manejar grandes volúmenes de datos estructurados en familias de columnas distribuidas."
+      },
+      {
+        "text": "Redis -> Almacenamiento en memoria de tipo clave-valor de ultra baja latencia.",
+        "isCorrect": true,
+        "rationale": "Estructura los datos mediante pares clave-valor manteniéndolos en memoria para acceso inmediato."
+      },
+      {
+        "text": "Neo4j -> Base de datos orientada a grafos para representar relaciones mediante nodos y aristas.",
+        "isCorrect": true,
+        "rationale": "Especializada en modelar y consultar redes complejas e interconexiones mediante la teoría de grafos."
+      },
+      {
+        "text": "Amazon RDS -> Base de datos NoSQL dedicada exclusivamente a almacenar imágenes vectoriales.",
+        "isCorrect": false,
+        "rationale": "Amazon RDS es un servicio administrado para bases de datos relacionales tradicionales (SQL), no una solución NoSQL gráfica."
+      }
+    ],
+    "hint": "Revise la especialización de cada motor NoSQL: documentos, familias de columnas, clave-valor y grafos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la arquitectura Hadoop, ¿cuál es el cometido fundamental del componente HDFS (Hadoop Distributed File System)?",
+    "opciones": [
+      {
+        "text": "Crear dashboards interactivos para aplicaciones móviles.",
+        "isCorrect": false,
+        "rationale": "HDFS es una capa de infraestructura de archivos, no un entorno de diseño visual para el usuario final."
+      },
+      {
+        "text": "Fragmentar archivos en bloques de gran tamaño y distribuirlos con réplicas a través del almacenamiento de los nodos del clúster.",
+        "isCorrect": true,
+        "rationale": "Asegura la persistencia masiva de datos dividiendo los archivos y replicándolos entre servidores comerciales para tolera fallos."
+      },
+      {
+        "text": "Ejecutar consultas SQL tradicionales sobre tablas transaccionales en un único servidor dedicado.",
+        "isCorrect": false,
+        "rationale": "HDFS maneja el almacenamiento distribuido de archivos, mientras que motores relacionales o SQL distribuidos corren capas arriba."
+      },
+      {
+        "text": "Garantizar la conexión bluetooth de dispositivos móviles en campo.",
+        "isCorrect": false,
+        "rationale": "No tiene relación con tecnologías de comunicación inalámbrica de corto alcance."
+      },
+      {
+        "text": "Comprimir todos los archivos de texto eliminando sus palabras clave.",
+        "isCorrect": false,
+        "rationale": "HDFS preserva la integridad del contenido de los archivos fragmentados sin alterar o eliminar su texto."
+      }
+    ],
+    "hint": "Es la capa base del sistema de archivos distribuido responsable de particionar, guardar y replicar los bloques de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función operativa principal de herramientas de integración de datos como Talend o Apache NiFi?",
+    "opciones": [
+      {
+        "text": "Reemplazar los sistemas operativos de los servidores del clúster.",
+        "isCorrect": false,
+        "rationale": "Son aplicaciones de capa superior para gestión de datos y no sustituyen sistemas operativos como Linux o Windows."
+      },
+      {
+        "text": "Facilitar los procesos de extracción, transformación, limpieza y carga (ETL/Dataflow) entre múltiples fuentes heterogéneas.",
+        "isCorrect": true,
+        "rationale": "Automatizan el recorrido técnico del dato conectando orígenes disímiles con destinos de almacenamiento o procesamiento."
+      },
+      {
+        "text": "Servir como compiladores exclusivos para programas desarrollados en C++.",
+        "isCorrect": false,
+        "rationale": "No son entornos de desarrollo o compilación para lenguajes de bajo nivel, sino gestores de flujos de datos."
+      },
+      {
+        "text": "Sustituir los motores de bases de datos relacionales eliminando las llaves primarias.",
+        "isCorrect": false,
+        "rationale": "Interactúan con bases relacionales para mover datos, pero no sustituyen su motor interno de almacenamiento."
+      },
+      {
+        "text": "Monitorear la temperatura física de los procesadores del servidor central.",
+        "isCorrect": false,
+        "rationale": "El monitoreo de hardware corresponde a herramientas de infraestructura, no a plataformas de integración de datos."
+      }
+    ],
+    "hint": "Son herramientas orientadas a construir 'tuberías' o flujos (dataflows/ETL) para transportar y adaptar datos de un punto a otro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes características corresponden a las capacidades de Apache NiFi en la gestión de flujos de datos?",
+    "opciones": [
+      {
+        "text": "Ofrece una interfaz gráfica interactiva orientada a procesadores mediante arrastrar y soltar (drag-and-drop).",
+        "isCorrect": true,
+        "rationale": "Su lienzo web permite diseñar pipelines visualmente mediante componentes interconectados sin codificación compleja."
+      },
+      {
+        "text": "Admite la gestión de flujos de datos tanto en tiempo real (streaming) como en lotes (batch).",
+        "isCorrect": true,
+        "rationale": "Permite ajustar procesadores para capturar eventos continuos evento por evento o consolidarlos periódicamente."
+      },
+      {
+        "text": "Proporciona trazabilidad detallada del origen y modificaciones del dato (Data Provenance).",
+        "isCorrect": true,
+        "rationale": "Registra el historial completo de cada evento que atraviesa el flujo, permitiendo auditar dónde se creó, transformó o enrutó."
+      },
+      {
+        "text": "Exige escribir manualmente miles de líneas de código fuente en ensamblador para construir flujos sencillos.",
+        "isCorrect": false,
+        "rationale": "Su diseño está pensado precisamente para minimizar la codificación manual mediante procesadores preconfigurados."
+      },
+      {
+        "text": "Funciona únicamente de manera local sin posibilidad de conectarse a entornos en la nube o bases de datos externas.",
+        "isCorrect": false,
+        "rationale": "NiFi incluye conectores nativos para los principales proveedores de nube (AWS, Azure, GCP) y sistemas de archivos masivos."
+      }
+    ],
+    "hint": "Considere la facilidad de su interfaz visual, el soporte para streaming o lotes y el seguimiento auditable del camino del dato.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué difiere la salida principal generada por Apache NiFi o Talend respecto a la producida por Power BI?",
+    "opciones": [
+      {
+        "text": "NiFi y Talend estructuran diagramas y pipelines de movimiento técnico del dato, mientras que Power BI produce dashboards gráficos interactivos de analítica de negocio.",
+        "isCorrect": true,
+        "rationale": "Las primeras gestionan el transporte, transformación y enrutamiento (backend/ETL), mientras que Power BI explota esos datos procesados en interfaces de toma de decisiones (BI)."
+      },
+      {
+        "text": "Power BI solo administra archivos en cintas magnéticas y NiFi crea gráficos de barras impresos.",
+        "isCorrect": false,
+        "rationale": "Power BI procesa datos para reportes analíticos digitales y NiFi gestiona flujos informáticos en red."
+      },
+      {
+        "text": "Talend elimina los gráficos de pastel mientras que Power BI borra los archivos fuente de la nube.",
+        "isCorrect": false,
+        "rationale": "Ninguna de las herramientas elimina la información de origen por defecto; operan sobre lecturas e integraciones."
+      },
+      {
+        "text": "No existe ninguna diferencia; las tres herramientas ejecutan exactamente el mismo código ejecutable sin interfaz visual.",
+        "isCorrect": false,
+        "rationale": "Tienen propósitos y capas de la arquitectura analítica completamente distintas."
+      },
+      {
+        "text": "Power BI es un motor de búsqueda de archivos locales y NiFi es una red social corporativa.",
+        "isCorrect": false,
+        "rationale": "Power BI es una suite de Business Intelligence y NiFi es un orquestador de flujos de datos."
+      }
+    ],
+    "hint": "Distinga entre las plataformas que mueven y transforman la arquitectura del dato frente a la herramienta que expone indicadores ejecutivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro de la suite Power BI para analítica de datos, ¿cuáles de las siguientes funciones componen su arquitectura de trabajo?",
+    "opciones": [
+      {
+        "text": "Power Query para la conexión, transformación y limpieza automatizada de los datos.",
+        "isCorrect": true,
+        "rationale": "Es el motor ETL integrado que permite modelar y preparar las consultas antes de cargarlas al modelo analítico."
+      },
+      {
+        "text": "Lenguaje DAX (Data Analysis Expressions) para la creación de medidas y cálculos analíticos avanzados.",
+        "isCorrect": true,
+        "rationale": "Proporciona funciones avanzadas para construir métricas dinámicas e inteligencia de tiempo dentro del modelo de datos."
+      },
+      {
+        "text": "Diseño de paneles y reportes gráficos interactivos enriquecidos con indicadores clave (KPIs).",
+        "isCorrect": true,
+        "rationale": "Permite publicar visualizaciones dinámicas donde los usuarios filtran y exploran la información de negocio."
+      },
+      {
+        "text": "Conectividad nativa a orígenes de datos diversos (bases relacionales, archivos, servicios Cloud).",
+        "isCorrect": true,
+        "rationale": "Facilita consolidar información proveniente de múltiples plataformas heterogéneas en un solo informe."
+      },
+      {
+        "text": "Sustitución completa del almacenamiento distribuido HDFS para guardar archivos de video sin procesar.",
+        "isCorrect": false,
+        "rationale": "Power BI es una capa de visualización e inteligencia de negocios, no un sistema de archivos para almacenamiento pesado de multimedia."
+      }
+    ],
+    "hint": "Piense en el ciclo de Power BI: preparar la información, definir fórmulas y métricas analíticas y visualizar informes dinámicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la ventaja de rendimiento clave de Apache Spark en comparación con el modelo tradicional Hadoop MapReduce?",
+    "opciones": [
+      {
+        "text": "Spark ejecuta el procesamiento manteniendo los datos intermedios en memoria RAM, reduciendo drásticamente las lecturas/escrituras en disco.",
+        "isCorrect": true,
+        "rationale": "Su cómputo 'in-memory' acelera significativamente los algoritmos iterativos y la analítica en tiempo real frente a los accesos continuos a disco de MapReduce."
+      },
+      {
+        "text": "Spark elimina el uso de memoria RAM para depender únicamente de cintas magnéticas de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Es todo lo contrario: basa su velocidad en el aprovechamiento máximo de la memoria RAM disponible."
+      },
+      {
+        "text": "Spark prohíbe la ejecución de programas escritos en Python o R.",
+        "isCorrect": false,
+        "rationale": "Proporciona APIs nativas muy utilizadas para Python (PySpark), R, Scala y Java."
+      },
+      {
+        "text": "MapReduce procesa los datos en tiempo real mientras que Spark solo procesa datos históricos de forma lenta.",
+        "isCorrect": false,
+        "rationale": "MapReduce está orientado al cómputo en lotes tradicional, mientras que Spark destaca por su capacidad streaming y alta velocidad."
+      },
+      {
+        "text": "Spark limita su uso a un solo servidor físico impidiendo su distribución en clústeres.",
+        "isCorrect": false,
+        "rationale": "Spark está diseñado intrínsecamente para ejecutarse de manera distribuida en grandes clústeres de cómputo."
+      }
+    ],
+    "hint": "Considere dónde conserva Spark los conjuntos de datos intermedios (RDDs/DataFrames) mientras realiza operaciones analíticas de varias etapas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué rol operativo desempeñan las soluciones Cloud Data Warehouse como Google BigQuery o Amazon Redshift?",
+    "opciones": [
+      {
+        "text": "Actuar como motores de bases de datos embebidos en teléfonos móviles sin conexión a internet.",
+        "isCorrect": false,
+        "rationale": "Son servicios en la nube altamente escalables pensados para analítica masiva y no para dispositivos móviles offline."
+      },
+      {
+        "text": "Permitir la ejecución de consultas analíticas complejas mediante SQL sobre escala de petabytes con alta velocidad y rendimiento administrado.",
+        "isCorrect": true,
+        "rationale": "Arovechan arquitecturas masivamente paralelas en la nube para responder consultas de Business Intelligence sobre volúmenes gigantescos."
+      },
+      {
+        "text": "Sustituir las tuberías físicas de ventilación en los centros de datos locales.",
+        "isCorrect": false,
+        "rationale": "No tienen ninguna relación con los componentes mecánicos de climatización física."
+      },
+      {
+        "text": "Servir como editores vectoriales de gráficos para diseñadores publicitarios.",
+        "isCorrect": false,
+        "rationale": "Son plataformas de almacenamiento y consulta de datos relacionales orientadas al análisis de negocio."
+      },
+      {
+        "text": "Desactivar la encriptación de datos para evitar latencias en la red pública.",
+        "isCorrect": false,
+        "rationale": "Integran esquemas de seguridad y cifrado por defecto tanto para datos almacenados como en tránsito."
+      }
+    ],
+    "hint": "Son almacenes de datos analíticos masivos en la nube diseñados para procesar grandes volúmenes con SQL.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se diferencia la escalabilidad vertical (scaling up) de la escalabilidad horizontal (scaling out)?",
+    "opciones": [
+      {
+        "text": "La escalabilidad vertical añade más servidores a un clúster existente, mientras que la horizontal reemplaza la memoria de un solo equipo.",
+        "isCorrect": false,
+        "rationale": "Invierte los conceptos: añadir más servidores es el principio de la escalabilidad horizontal."
+      },
+      {
+        "text": "La escalabilidad vertical incrementa la potencia física (CPU, RAM) de un único servidor, mientras que la horizontal distribuye el trabajo agregando más servidores o nodos al clúster.",
+        "isCorrect": true,
+        "rationale": "Escalar en vertical potencia la máquina individual hasta su límite físico, mientras que escalar en horizontal añade más máquinas distribuidas."
+      },
+      {
+        "text": "La escalabilidad horizontal solo funciona con discos mecánicos antiguos y la vertical con almacenamiento en la nube.",
+        "isCorrect": false,
+        "rationale": "Ambos modelos de escalabilidad son independientes del tipo de disco y aplican a entornos locales o Cloud."
+      },
+      {
+        "text": "La escalabilidad vertical es ilimitada y económica, mientras que la horizontal se topa rápidamente con un techo de hardware.",
+        "isCorrect": false,
+        "rationale": "La escalabilidad vertical tiene un límite físico rígido y muy costoso; la horizontal ofrece un crecimiento virtualmente ilimitado."
+      },
+      {
+        "text": "No existe diferencia; ambos términos significan apagar los servidores durante la noche.",
+        "isCorrect": false,
+        "rationale": "Son dos estrategias arquitectónicas de expansión de recursos informáticos conceptualmente opuestas."
+      }
+    ],
+    "hint": "Reflexione si la estrategia para crecer consiste en 'repotenciar una sola máquina' o en 'agregar más máquinas al grupo'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para determinar que un conjunto de datos cumple con los estándares de 'Calidad de Datos' en Big Data, ¿cuáles de las siguientes dimensiones se deben verificar?",
+    "opciones": [
+      {
+        "text": "Precisión: los valores deben reflejar la realidad del evento medido sin errores ni sesgos de captura.",
+        "isCorrect": true,
+        "rationale": "Mide que la información registrada se ajuste exactamente al hecho real u operacional ocurrido."
+      },
+      {
+        "text": "Completitud: las entidades analizadas deben incluir todos los campos obligatorios sin vacíos de información o nulos crónicos.",
+        "isCorrect": true,
+        "rationale": "Evalúa que los registros contengan la totalidad de los datos necesarios para evitar análisis parciales o ambiguos."
+      },
+      {
+        "text": "Consistencia: los datos no deben presentar contradicciones entre diferentes sistemas ni tablas de la organización.",
+        "isCorrect": true,
+        "rationale": "Garantiza que la información mantenga coherencia lógica independientemente del origen o la vista consultada."
+      },
+      {
+        "text": "Actualidad (Oportunidad): la información debe estar actualizada y estar disponible en el tiempo requerido para tomar la decisión.",
+        "isCorrect": true,
+        "rationale": "Valora que la latencia del dato no invalide su uso operativo o estratégico dentro del negocio."
+      },
+      {
+        "text": "Corrupción intencional: la alteración aleatoria de valores numéricos para confundir los motores analíticos.",
+        "isCorrect": false,
+        "rationale": "La alteración de valores destruye la calidad del dato, siendo un fallo de integridad y no un atributo deseable."
+      }
+    ],
+    "hint": "Seleccione las dimensiones que aseguran que los datos sean exactos, integrales, coherentes y vigentes para el análisis.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la baja calidad en los datos de entrada perjudica a las aplicaciones impulsadas por modelos de Machine Learning?",
+    "opciones": [
+      {
+        "text": "Porque los algoritmos de Machine Learning auto-corrigen por completo cualquier tipo de incoherencia sin alterar sus resultados.",
+        "isCorrect": false,
+        "rationale": "Los modelos estadísticos no adivinan la realidad; procesan las entradas recibidas y si estas contienen inconsistencias, fallarán."
+      },
+      {
+        "text": "Porque los modelos aprenden patrones directamente de los datos; si estos son erróneos o incompletos, los resultados y predicciones generados serán sesgados o incorrectos.",
+        "isCorrect": true,
+        "rationale": "Bajo la regla 'Garbage In, Garbage Out', la precisión de cualquier algoritmo depende de la validez de los datos de entrenamiento."
+      },
+      {
+        "text": "Porque la presencia de datos vacíos destruye físicamente las tarjetas de red de los clústeres.",
+        "isCorrect": false,
+        "rationale": "El impacto del dato erróneo es de naturaleza lógica y matemática en el modelo, no genera daño electromecánico al hardware."
+      },
+      {
+        "text": "Porque la calidad de los datos solo influye en la interfaz de usuario pero no altera las fórmulas matemáticas del algoritmo.",
+        "isCorrect": false,
+        "rationale": "Los parámetros matemáticos del modelo se calculan a partir de los valores del conjunto de datos, viéndose directamente afectados."
+      },
+      {
+        "text": "Porque los modelos de Machine Learning no utilizan ningún tipo de datos históricos para su entrenamiento.",
+        "isCorrect": false,
+        "rationale": "La analítica predictiva y el aprendizaje automático se apoyan en conjuntos de datos representativos para aprender patrones."
+      }
+    ],
+    "hint": "Considere la regla analítica general: si la información con la que se entrena un modelo contiene errores, las conclusiones predictivas también los tendrán.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del pilar de Seguridad y Privacidad en Big Data, ¿cuáles de los siguientes mecanismos están dirigidos a proteger la información sensible?",
+    "opciones": [
+      {
+        "text": "Cifrado o encriptación de datos tanto en reposo (almacenamiento) como en tránsito (red).",
+        "isCorrect": true,
+        "rationale": "Asegura que los archivos robados o interceptados no puedan ser leídos sin la clave de descifrado correspondiente."
+      },
+      {
+        "text": "Control de acceso basado en roles (RBAC) y mecanismos de autenticación multifactor (MFA).",
+        "isCorrect": true,
+        "rationale": "Restringe la entrada a los datos de modo que cada usuario únicamente visualice la información acorde a sus privilegios otorgados."
+      },
+      {
+        "text": "Técnicas de enmascaramiento y anonimización de datos para disimular identidades personales.",
+        "isCorrect": true,
+        "rationale": "Sustituyen información crítica por identificadores ficticios para permitir análisis estadísticos sin comprometer identidades."
+      },
+      {
+        "text": "Monitoreo, registro de auditoría y detección de comportamientos anómalos en el clúster.",
+        "isCorrect": true,
+        "rationale": "Rastrea quién accedió a qué datos y cuándo, permitiendo identificar intentos imprevistos o brechas de seguridad."
+      },
+      {
+        "text": "Desactivación permanente de las contraseñas para acelerar el trabajo de los analistas de datos.",
+        "isCorrect": false,
+        "rationale": "Eliminar la validación de credenciales anula la confidencialidad de la infraestructura, exponiéndola a intrusiones."
+      }
+    ],
+    "hint": "Seleccione las defensas técnicas orientadas a proteger la confidencialidad, privacidad e integridad ante accesos no autorizados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere el término 'Interoperabilidad' en el marco de las arquitecturas Big Data?",
+    "opciones": [
+      {
+        "text": "A la obligación de utilizar componentes de un único fabricante de hardware en toda la empresa.",
+        "isCorrect": false,
+        "rationale": "La interoperabilidad busca la integración entre diversos entornos y no la dependencia exclusiva de un proveedor (vendor lock-in)."
+      },
+      {
+        "text": "A la capacidad de diferentes plataformas, sistemas, formatos y aplicaciones para comunicarse e intercambiar datos de manera fluida y coherente.",
+        "isCorrect": true,
+        "rationale": "Permite que herramientas heterogéneas (sensores, nubes, motores NoSQL, BI) compartan información sin incompatibilidades."
+      },
+      {
+        "text": "Al proceso informático de formatear discos duros cuando se satura la memoria intermedia.",
+        "isCorrect": false,
+        "rationale": "Formatear unidades es una operación de mantenimiento de almacenamiento que no guarda relación con la integración de sistemas."
+      },
+      {
+        "text": "A la medición del tiempo total que tarda un operador en escribir un informe en procesador de texto.",
+        "isCorrect": false,
+        "rationale": "Mide la comunicación técnica entre aplicaciones informáticas y no la velocidad de escritura del usuario."
+      },
+      {
+        "text": "A la prohibición absoluta de compartir datos entre los departamentos de una misma organización.",
+        "isCorrect": false,
+        "rationale": "La interoperabilidad impulsa la colaboración e intercambio fluido entre sistemas, no el aislamiento de información."
+      }
+    ],
+    "hint": "Piense en la facultad de conectar piezas tecnológicas distintas (sensores, bases de datos, nubes) para que trabajen en conjunto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En un entorno heterogéneo de Big Data, ¿cuáles de los siguientes componentes o estándares facilitan la interoperabilidad entre aplicaciones?",
+    "opciones": [
+      {
+        "text": "Uso de Interfaces de Programación de Aplicaciones (APIs) estandarizadas.",
+        "isCorrect": true,
+        "rationale": "Establecen contratos de comunicación claros para que sistemas desarrollados en tecnologías distintas intercambien servicios."
+      },
+      {
+        "text": "Formatos de intercambio autodescriptivos e independientes como JSON, XML o Avro.",
+        "isCorrect": true,
+        "rationale": "Estructuran la información sin requerir que las aplicaciones compartan el mismo motor interno de base de datos."
+      },
+      {
+        "text": "Plataformas de transmisión de mensajes como Apache Kafka para desacoplar sistemas emisores y receptores.",
+        "isCorrect": true,
+        "rationale": "Permiten que diferentes productores y consumidores de datos se conecten de manera asíncrona mediante un canal intermedio."
+      },
+      {
+        "text": "Herramientas de mapeo y transformación de datos que conectan esquemas disímiles.",
+        "isCorrect": true,
+        "rationale": "Traducen las estructuras de datos de un sistema origen a la representación requerida por el sistema destino."
+      },
+      {
+        "text": "Protocolos cerrados de comunicación propietarios no documentados.",
+        "isCorrect": false,
+        "rationale": "Los protocolos cerrados no documentados impiden la integración con herramientas de terceros, destruyendo la interoperabilidad."
+      }
+    ],
+    "hint": "Identifique las tecnologías y estándares que actúan como traductores, conectores y canales de comunicación abiertos entre plataformas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-32",
+    "diplomado": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un equipo de analítica necesita implementar una solución para ingestar y procesar en tiempo real flujos continuos de datos provenientes de miles de sensores, garantizando baja latencia, escalabilidad horizontal y tolerancia a fallos. ¿Qué combinación tecnológica responde adecuadamente a este requerimiento?",
+    "opciones": [
+      {
+        "text": "Archivos locales de Excel compartidos mediante correo electrónico manual.",
+        "isCorrect": false,
+        "rationale": "El procesamiento manual de hojas de cálculo colapsa ante la escala de miles de eventos continuos en tiempo real."
+      },
+      {
+        "text": "Apache Kafka para la ingesta/transmisión continua, combinado con Apache Spark Streaming sobre un almacenamiento distribuido.",
+        "isCorrect": true,
+        "rationale": "Kafka absorbe los eventos en tiempo real a alta velocidad y Spark Streaming los procesa de manera escalable e in-memory sobre el clúster."
+      },
+      {
+        "text": "Una base de datos SQL de un solo servidor sin copias de respaldo ni conectores de red.",
+        "isCorrect": false,
+        "rationale": "Un único servidor relacional genera un cuello de botella de escritura y carece de tolerancia ante fallos."
+      },
+      {
+        "text": "Impresiones de registros en papel tabulado ordenados en carpetas físicas.",
+        "isCorrect": false,
+        "rationale": "El registro físico en papel es incompatible con la analítica digital automatizada de baja latencia."
+      },
+      {
+        "text": "Almacenamiento pasivo en discos ópticos grabables no reescribibles.",
+        "isCorrect": false,
+        "rationale": "Los discos ópticos pasivos no ofrecen el rendimiento de lectura/escritura ni la flexibilidad que exige el procesamiento streaming."
+      }
+    ],
+    "hint": "Considere la arquitectura estándar de la industria para procesar flujos masivos e ininterrumpidos de eventos en tiempo real (streaming).",
+    "activo": true
+  }
+]

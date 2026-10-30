@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la fase del ciclo de producción industrial en la que los insumos y materias primas se transforman en productos terminados mediante el uso de maquinaria y mano de obra?",
+    "opciones": [
+      {
+        "text": "Procesamiento",
+        "isCorrect": true,
+        "rationale": "El procesamiento representa la etapa central de transformación física o química donde se agregan valor e insumos a través del trabajo operativo y mecánico."
+      },
+      {
+        "text": "Entrada de materiales",
+        "isCorrect": false,
+        "rationale": "La entrada de materiales se limita a la selección, recepción y adquisición de las materias primas antes de sufrir modificaciones."
+      },
+      {
+        "text": "Control de calidad",
+        "isCorrect": false,
+        "rationale": "El control de calidad consiste en la evaluación de los estándares del producto resultante o en proceso, no en la transformación en sí."
+      },
+      {
+        "text": "Distribución y logística",
+        "isCorrect": false,
+        "rationale": "La distribución y logística se encarga del empaquetado, transporte y entrega del producto terminado al cliente final."
+      },
+      {
+        "text": "Almacenamiento primario",
+        "isCorrect": false,
+        "rationale": "El almacenamiento primario es el resguardo temporal de insumos previos a su ingreso a las líneas de producción."
+      }
+    ],
+    "hint": "Considere la etapa donde ocurre la conversión activa de los ingredientes o insumos en el bien final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué método de gestión de inventarios prioriza la salida y utilización de los productos más antiguos para evitar pérdidas por caducidad u obsolescencia?",
+    "opciones": [
+      {
+        "text": "Método FIFO (First In, First Out)",
+        "isCorrect": true,
+        "rationale": "El método FIFO asegura que lo primero en entrar al almacén sea lo primero en salir, protegiendo los artículos perecederos contra el vencimiento."
+      },
+      {
+        "text": "Método LIFO (Last In, First Out)",
+        "isCorrect": false,
+        "rationale": "El método LIFO prioriza la salida de los productos más recientes, lo cual suele aplicarse cuando los costos de reposición aumentan constantemente."
+      },
+      {
+        "text": "Modelo EOQ (Cantidad Económica de Pedido)",
+        "isCorrect": false,
+        "rationale": "El modelo EOQ determina el tamaño óptimo de pedido lote por lote para minimizar costos de almacenamiento y pedido, no el orden de salida."
+      },
+      {
+        "text": "Análisis ABC",
+        "isCorrect": false,
+        "rationale": "El análisis ABC clasifica el inventario según el valor financiero o rotación del artículo, sin dictar la secuencia cronológica de salida."
+      },
+      {
+        "text": "Just in Time (JIT)",
+        "isCorrect": false,
+        "rationale": "Just in Time busca reducir el stock almacenado al mínimo recibiendo insumos justo cuando se necesitan, sin enfocarse en la rotación de stock antiguo acumulado."
+      }
+    ],
+    "hint": "Piense en la regla donde el primer lote que ingresa a la bodega es el primero en ser despachado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la clasificación de inventarios mediante el Análisis ABC, ¿qué caracteriza a los productos pertenecientes a la Categoría A?",
+    "opciones": [
+      {
+        "text": "Representan el mayor valor financiero o alta rotación, requiriendo un control de inventario más riguroso.",
+        "isCorrect": true,
+        "rationale": "Los artículos de categoría A son de prioridad máxima debido a su impacto económico sustancial en la empresa, demandando supervisión estricta."
+      },
+      {
+        "text": "Constituyen la mayor cantidad física de unidades en almacén pero tienen un valor económico mínimo.",
+        "isCorrect": false,
+        "rationale": "La acumulación de gran volumen físico con bajo valor económico corresponde típicamente a la categoría C."
+      },
+      {
+        "text": "Son productos obsoletos que deben desecharse de manera inmediata.",
+        "isCorrect": false,
+        "rationale": "La clasificación ABC categoriza inventario activo según su importancia comercial y no por su estado de deterioro o desecho."
+      },
+      {
+        "text": "Tienen una importancia moderada y una rotación intermedia en el flujo operativo.",
+        "isCorrect": false,
+        "rationale": "El impacto moderado y la rotación intermedia son los rasgos distintivos de la categoría B."
+      },
+      {
+        "text": "Son insumos importados que están exentos de controles de auditoría interna.",
+        "isCorrect": false,
+        "rationale": "El origen del producto no define su categoría ABC, y todos los artículos estratégicos requieren auditoría."
+      }
+    ],
+    "hint": "Recuerde el principio de Pareto aplicado al valor y prioridad dentro de la clasificación de mercancías.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones representan etapas fundamentales dentro del ciclo de producción industrial?",
+    "opciones": [
+      {
+        "text": "Entrada de materiales e insumos",
+        "isCorrect": true,
+        "rationale": "Constituye el punto de partida del ciclo productivo al reunir las materias primas requeridas para la elaboración."
+      },
+      {
+        "text": "Procesamiento y transformación de la materia prima",
+        "isCorrect": true,
+        "rationale": "Abarca la conversión operativa directa mediante maquinaria y mano de obra para crear el producto deseado."
+      },
+      {
+        "text": "Control de calidad de los bienes elaborados",
+        "isCorrect": true,
+        "rationale": "Garantiza la verificación de que el producto cumpla los parámetros estandarizados antes de salir a comercialización."
+      },
+      {
+        "text": "Distribución y logística de despacho al cliente",
+        "isCorrect": true,
+        "rationale": "Cierra el ciclo operativo asegurando el traslado del bien terminado hacia los puntos de venta o consumidores finales."
+      },
+      {
+        "text": "Liquidación concursal de los activos fijos",
+        "isCorrect": false,
+        "rationale": "La liquidación concursal es un procedimiento legal de cierre financiero y no forma parte del ciclo de producción ordinario."
+      }
+    ],
+    "hint": "Identifique las fases secuenciales que abarcan desde el ingreso de materia prima hasta la entrega del producto final al consumidor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal de implementar la estrategia de inventarios Just in Time (JIT)?",
+    "opciones": [
+      {
+        "text": "Minimizar los niveles de inventario recibiendo materiales únicamente en el momento en que se necesitan.",
+        "isCorrect": true,
+        "rationale": "El modelo JIT busca eliminar los desperdicios y costos de almacenamiento recibiendo suministros de forma sincronizada con la producción."
+      },
+      {
+        "text": "Acumular grandes volúmenes de stock de seguridad para prevenir fluctuaciones de mercado.",
+        "isCorrect": false,
+        "rationale": "Acumular exceso de stock es contrario a la filosofía JIT, la cual considera el inventario excesivo como un desperdicio económico."
+      },
+      {
+        "text": "Priorizar la salida de los insumos más recientes adquiridos por la planta.",
+        "isCorrect": false,
+        "rationale": "Priorizar los insumos más recientes describe la lógica contable del método LIFO, no la filosofía operativa JIT."
+      },
+      {
+        "text": "Sustituir la inspección de calidad por auditorías financieras semestrales.",
+        "isCorrect": false,
+        "rationale": "JIT requiere un control de calidad sumamente estricto desde el origen y no reemplaza las inspecciones con revisiones contables."
+      },
+      {
+        "text": "Calcular la tasa de interés requerida para la compra de bienes de capital.",
+        "isCorrect": false,
+        "rationale": "Las tasas de interés corresponden al área financiera y no constituyen la meta operativa de la gestión JIT."
+      }
+    ],
+    "hint": "Piense en la eliminación de bodegas de almacenamiento masivo mediante la recepción puntual de suministros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué norma internacional es reconocida por estandarizar los requisitos para la implementación de un Sistema de Gestión de Calidad (SGC)?",
+    "opciones": [
+      {
+        "text": "ISO 9001",
+        "isCorrect": true,
+        "rationale": "La norma ISO 9001 establece los criterios mundiales para la gestión de calidad enfocada en procesos eficientes y la satisfacción del cliente."
+      },
+      {
+        "text": "ISO 14001",
+        "isCorrect": false,
+        "rationale": "La norma ISO 14001 está orientada específicamente a la gestión ambiental y la sostenibilidad de las operaciones."
+      },
+      {
+        "text": "ISO 45001",
+        "isCorrect": false,
+        "rationale": "La norma ISO 45001 se centra en la prevención de riesgos y la gestión de la seguridad y salud en el trabajo."
+      },
+      {
+        "text": "ISO 27001",
+        "isCorrect": false,
+        "rationale": "La norma ISO 27001 norma los sistemas de gestión de la seguridad de la información digital."
+      },
+      {
+        "text": "ISO 50001",
+        "isCorrect": false,
+        "rationale": "La norma ISO 50001 trata sobre el uso eficiente y la gestión de la energía en instalaciones."
+      }
+    ],
+    "hint": "Es la norma estándar más famosa de la familia ISO enfocada en la satisfacción del cliente e innovación de procesos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la filosofía japonesa Kaizen dentro del entorno de Lean Manufacturing?",
+    "opciones": [
+      {
+        "text": "En impulsar la mejora continua mediante pequeñas acciones diarias que involucran a todo el personal.",
+        "isCorrect": true,
+        "rationale": "Kaizen propone una evolución constante e incremental donde la participación activa de cada trabajador genera progresos sostenibles."
+      },
+      {
+        "text": "En realizar una reingeniería radical e intempestiva eliminando todas las instalaciones existentes.",
+        "isCorrect": false,
+        "rationale": "Kaizen fomenta cambios graduales e incrementales diarios, a diferencia de la reingeniería drástica de procesos."
+      },
+      {
+        "text": "En automatizar el 100% de la fábrica prescindiendo completamente del talento humano.",
+        "isCorrect": false,
+        "rationale": "Kaizen valora profundamente el aporte humano y el conocimiento práctico de los operarios para resolver problemas."
+      },
+      {
+        "text": "En aumentar la cantidad de puestos de control final antes del despacho comercial.",
+        "isCorrect": false,
+        "rationale": "Aumentar inspecciones finales alienta la detección tardía en lugar de la mejora continua del proceso en la fuente."
+      },
+      {
+        "text": "En delegar las decisiones operativas exclusivamente a asesores o consultores externos.",
+        "isCorrect": false,
+        "rationale": "La filosofía Kaizen sostiene que el propio personal interno que realiza la labor diaria es el más facultado para proponer mejoras."
+      }
+    ],
+    "hint": "Reflexione sobre el significado etimológico de cambiar para mejorar de forma constante y colectiva.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial de aplicar la metodología Six Sigma en los procesos industriales?",
+    "opciones": [
+      {
+        "text": "Reducir la variabilidad y minimizar los defectos a niveles estadísticamente insignificantes.",
+        "isCorrect": true,
+        "rationale": "Six Sigma busca la estabilidad del proceso utilizando herramientas estadísticas para limitar los defectos a menos de 3.4 por millón de oportunidades."
+      },
+      {
+        "text": "Aumentar el volumen de materias primas almacenadas en bodega de producción.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento masivo de materia prima no reduce la variabilidad del proceso productivo."
+      },
+      {
+        "text": "Eliminar la necesidad de realizar capacitaciones técnicas al personal operacional.",
+        "isCorrect": false,
+        "rationale": "Six Sigma exige un riguroso entrenamiento de los colaboradores en roles analíticos como Green Belts o Black Belts."
+      },
+      {
+        "text": "Incrementar el tiempo de ciclo en las líneas de ensamblaje automatizado.",
+        "isCorrect": false,
+        "rationale": "Aumentar los tiempos de ciclo innecesariamente genera retrasos y no contribuye a reducir los defectos del producto."
+      },
+      {
+        "text": "Sustituir las auditorías de calidad por balances de liquidez financiera.",
+        "isCorrect": false,
+        "rationale": "La liquidez financiera es una métrica contable que no evalúa la precisión o variabilidad de los atributos técnicos del producto."
+      }
+    ],
+    "hint": "Asocie esta metodología con el uso de la estadística para lograr la estabilidad operacional y la ausencia de errores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes etapas corresponden a la metodología DMAIC empleada en Six Sigma para optimizar procesos?",
+    "opciones": [
+      {
+        "text": "Definir el problema y los requisitos del cliente",
+        "isCorrect": true,
+        "rationale": "Establece con claridad el alcance del proyecto, los objetivos clave y las necesidades críticas de calidad (CTQ)."
+      },
+      {
+        "text": "Medir el desempeño actual del proceso recolectando datos",
+        "isCorrect": true,
+        "rationale": "Permite cuantificar la magnitud de las fallas existentes y establecer una línea base sobre el estado real de la operación."
+      },
+      {
+        "text": "Analizar los datos para identificar la causa raíz de los defectos",
+        "isCorrect": true,
+        "rationale": "Utiliza herramientas analíticas y estadísticas para determinar el origen exacto de las desviaciones encontradas."
+      },
+      {
+        "text": "Mejorar el proceso mediante la implementación de soluciones",
+        "isCorrect": true,
+        "rationale": "Se orienta a desarrollar, probar y poner en marcha acciones correctivas para erradicar las causas detectadas."
+      },
+      {
+        "text": "Aumentar intencionalmente la variabilidad del ensamblaje",
+        "isCorrect": false,
+        "rationale": "Aumentar la variabilidad deteriora la calidad, lo cual contradice el propósito de Six Sigma."
+      }
+    ],
+    "hint": "Recuerde el acrónimo en inglés que guía el ciclo analítico para la solución de problemas en procesos existentes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la Gestión de Calidad Total (TQM), ¿qué principio es indispensable para consolidar una cultura organizacional enfocada en la excelencia?",
+    "opciones": [
+      {
+        "text": "El compromiso e involucramiento activo de todos los empleados y el liderazgo de la dirección.",
+        "isCorrect": true,
+        "rationale": "TQM requiere una visión sistémica donde cada integrante de la empresa asume la responsabilidad de la calidad en su puesto."
+      },
+      {
+        "text": "La delegación exclusiva del control de calidad en los gerentes financieros.",
+        "isCorrect": false,
+        "rationale": "Centralizar la responsabilidad únicamente en finanzas ignora la interacción operativa del resto de los colaboradores."
+      },
+      {
+        "text": "El rechazo a la retroalimentación o sugerencias provenientes de los usuarios finales.",
+        "isCorrect": false,
+        "rationale": "TQM sitúa la satisfacción del cliente como el eje rector de todas las decisiones operativas."
+      },
+      {
+        "text": "La ejecución de inspecciones únicamente cuando se detectan reclamos masivos.",
+        "isCorrect": false,
+        "rationale": "Esperar reclamos masivos es una postura reactiva que choca con la cultura preventiva de TQM."
+      },
+      {
+        "text": "La erradicación de las reuniones de trabajo en equipo e intercambio de ideas.",
+        "isCorrect": false,
+        "rationale": "El trabajo en equipo y los círculos de calidad son componentes fundamentales del modelo TQM."
+      }
+    ],
+    "hint": "Considere qué nivel de participación humana requiere un modelo denominado Total.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tecnología propia de la Calidad 4.0 permite procesar e interpretar enormes volúmenes de datos operativos para predecir tendencias y fallos?",
+    "opciones": [
+      {
+        "text": "Big Data",
+        "isCorrect": true,
+        "rationale": "El análisis de Big Data posibilita la gestión de masivos conjuntos de datos para anticipar variaciones y optimizar parámetros en tiempo real."
+      },
+      {
+        "text": "Hoja de verificación manual",
+        "isCorrect": false,
+        "rationale": "Las hojas de verificación manuales registran pocos datos de forma artesanal y carecen de capacidad analítica masiva."
+      },
+      {
+        "text": "Diagrama de Ishikawa",
+        "isCorrect": false,
+        "rationale": "El diagrama de Ishikawa es una técnica cualitativa y visual de causa-efecto, no una herramienta tecnológica masiva."
+      },
+      {
+        "text": "Diagrama de Gantt estático",
+        "isCorrect": false,
+        "rationale": "El gráfico de Gantt planifica cronogramas de proyectos pero no analiza volúmenes masivos de datos en tiempo real."
+      },
+      {
+        "text": "Contabilidad por partida doble",
+        "isCorrect": false,
+        "rationale": "La contabilidad por partida doble es un método de registro financiero, ajeno al procesamiento predictivo de datos operacionales."
+      }
+    ],
+    "hint": "Piense en el término en inglés que hace referencia al manejo y analítica de datos a gran escala.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal del Internet de las Cosas (IoT) en el marco de la Calidad 4.0?",
+    "opciones": [
+      {
+        "text": "Interconectar sensores e instrumentos para monitorear variables de producción en tiempo real.",
+        "isCorrect": true,
+        "rationale": "El IoT permite que las máquinas capturen y transmitan datos continuos como temperatura o presión, generando alertas tempranas."
+      },
+      {
+        "text": "Sustituir los contratos laborales por acuerdos de palabra entre directivos.",
+        "isCorrect": false,
+        "rationale": "Las relaciones contractuales legales no forman parte de la arquitectura técnica del IoT."
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar software de gestión en la planta.",
+        "isCorrect": false,
+        "rationale": "El IoT requiere y se integra con sistemas informáticos para procesar las lecturas de sus sensores."
+      },
+      {
+        "text": "Reducir el mantenimiento preventivo para ahorrar costos inmediatos.",
+        "isCorrect": false,
+        "rationale": "El IoT fortalece y perfecciona el mantenimiento predictivo para prevenir averías repentinas."
+      },
+      {
+        "text": "Supervisar las finanzas personales de los consumidores finales.",
+        "isCorrect": false,
+        "rationale": "El IoT industrial se enfoca en el control de equipos y procesos productivos dentro de las plantas operativas."
+      }
+    ],
+    "hint": "Piense en el uso de sensores inteligentes instalados en la maquinaria para transmitir información constante sobre su estado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué aspecto aborda específicamente la norma ISO 45001 dentro de la gestión de operaciones industriales?",
+    "opciones": [
+      {
+        "text": "La prevención de accidentes laborales y la gestión de la Seguridad y Salud en el Trabajo.",
+        "isCorrect": true,
+        "rationale": "ISO 45001 busca crear entornos de trabajo seguros, previniendo lesiones, enfermedades ocupacionales y riesgos operativos."
+      },
+      {
+        "text": "La reducción del impacto ambiental por emisiones de carbono exclusivamente.",
+        "isCorrect": false,
+        "rationale": "La gestión del impacto ambiental corresponde a los lineamientos definidos en la norma ISO 14001."
+      },
+      {
+        "text": "El diseño de envases y empaquetado reciclable para alimentos.",
+        "isCorrect": false,
+        "rationale": "El diseño ecológico de empaques se asocia a la gestión ambiental o normas específicas de ecodiseño."
+      },
+      {
+        "text": "La estandarización de criterios puramente contables y tributarios.",
+        "isCorrect": false,
+        "rationale": "Las normas ISO operacionales no dictan reglamentaciones tributarias o contables."
+      },
+      {
+        "text": "El control de velocidad de vehículos de mensajería externa.",
+        "isCorrect": false,
+        "rationale": "Aunque involucra seguridad vial en ciertos contextos, la norma abarca la gestión integral de la SST dentro de la organización."
+      }
+    ],
+    "hint": "Asocie esta norma con la integridad física de los colaboradores y el bienestar laboral dentro de la planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la norma internacional orientada a establecer un Sistema de Gestión Ambiental (SGA) eficiente?",
+    "opciones": [
+      {
+        "text": "ISO 14001",
+        "isCorrect": true,
+        "rationale": "ISO 14001 proporciona un marco normativo para mitigar los aspectos ambientales negativos y promover la sostenibilidad."
+      },
+      {
+        "text": "ISO 9001",
+        "isCorrect": false,
+        "rationale": "ISO 9001 está orientada a la calidad de los procesos y productos para la satisfacción del cliente."
+      },
+      {
+        "text": "ISO 45001",
+        "isCorrect": false,
+        "rationale": "ISO 45001 rige la seguridad y salud en el trabajo."
+      },
+      {
+        "text": "ISO 31000",
+        "isCorrect": false,
+        "rationale": "ISO 31000 brinda directrices para la gestión integral de riesgos de la empresa."
+      },
+      {
+        "text": "ISO 22000",
+        "isCorrect": false,
+        "rationale": "ISO 22000 especifica los requisitos para la inocuidad de los alimentos."
+      }
+    ],
+    "hint": "Esta norma ayuda a controlar los residuos, el consumo de energía y la huella ecológica de la industria.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Para qué sirve primordialmente la herramienta de calidad conocida como Diagrama de Ishikawa o Espiga de Pescado?",
+    "opciones": [
+      {
+        "text": "Para identificar y categorizar de forma visual las causas raíz de un determinado problema.",
+        "isCorrect": true,
+        "rationale": "El diagrama de Ishikawa clasifica las causas en áreas como Mano de Obra, Maquinaria, Métodos y Materiales para llegar al origen del problema."
+      },
+      {
+        "text": "Para calcular las ganancias financieras derivadas de las ventas del mes.",
+        "isCorrect": false,
+        "rationale": "El cálculo de ganancias es un procedimiento contable que no utiliza la estructura causa-efecto de Ishikawa."
+      },
+      {
+        "text": "Para medir el nivel de temperatura en los hornos de cocción.",
+        "isCorrect": false,
+        "rationale": "Las mediciones físicas directas se ejecutan mediante sensores o termómetros, no a través de diagramas cualitativos."
+      },
+      {
+        "text": "Para registrar de manera automatizada las horas de entrada de los empleados.",
+        "isCorrect": false,
+        "rationale": "El control de asistencia utiliza relojes marcadores o sistemas biométricos."
+      },
+      {
+        "text": "Para ordenar alfabéticamente el catálogo de productos disponibles.",
+        "isCorrect": false,
+        "rationale": "Clasificar un catálogo es un ordenamiento administrativo que no investiga causas de defectos."
+      }
+    ],
+    "hint": "Piense en la herramienta que agrupa factores como materia prima, métodos y máquinas para analizar el origen de un error.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la premisa básica en la que se fundamenta el Diagrama de Pareto en el control de calidad?",
+    "opciones": [
+      {
+        "text": "El 80% de los defectos o problemas suele ser generado por un 20% de las causas principales.",
+        "isCorrect": true,
+        "rationale": "El principio de Pareto o regla 80/20 establece que unos pocos factores vitales provocan la mayoría de las desviaciones de calidad."
+      },
+      {
+        "text": "Todos los problemas en una fábrica tienen exactamente el mismo nivel de importancia.",
+        "isCorrect": false,
+        "rationale": "Pareto demuestra precisamente lo contrario: que los problemas deben priorizarse porque no tienen el mismo impacto."
+      },
+      {
+        "text": "El 100% de la producción debe presentar variaciones impredecibles.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la gestión de calidad es reducir la variabilidad y no aceptarla como inevitable."
+      },
+      {
+        "text": "Los costos operacionales deben distribuirse equitativamente entre los clientes.",
+        "isCorrect": false,
+        "rationale": "El cálculo tarifario de costos no se deriva de la ley de distribución de defectos de Pareto."
+      },
+      {
+        "text": "Las inspecciones de calidad deben durar el 80% del tiempo total de fabricación.",
+        "isCorrect": false,
+        "rationale": "Dedicar el 80% del tiempo a inspeccionar generaría una gran ineficiencia operativa."
+      }
+    ],
+    "hint": "Recuerde la famosa regla del 80/20 utilizada para priorizar la solución de inconvenientes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el ciclo de mejora continua PHVA (Planear, Hacer, Verificar, Actuar), ¿cuál es el propósito de la etapa 'Verificar'?",
+    "opciones": [
+      {
+        "text": "Evaluar los resultados obtenidos comparándolos con los objetivos y metas planteadas.",
+        "isCorrect": true,
+        "rationale": "En 'Verificar' se analiza el impacto de las acciones ejecutadas para confirmar si se redujo el problema según lo planificado."
+      },
+      {
+        "text": "Diseñar desde cero las políticas generales de la organización.",
+        "isCorrect": false,
+        "rationale": "El diseño de directrices e hipótesis iniciales corresponde a la etapa de 'Planear'."
+      },
+      {
+        "text": "Poner en práctica las soluciones en una prueba piloto o a gran escala.",
+        "isCorrect": false,
+        "rationale": "La ejecución práctica de los cambios proyectados pertenece a la fase 'Hacer'."
+      },
+      {
+        "text": "Estandarizar e institucionalizar los cambios que tuvieron éxito.",
+        "isCorrect": false,
+        "rationale": "Estandarizar y aplicar correcciones definitivas forma parte de la fase 'Actuar'."
+      },
+      {
+        "text": "Sancionar económicamente a los colaboradores que cometieron fallas.",
+        "isCorrect": false,
+        "rationale": "La fase de verificación busca evaluar objetivamente los datos de desempeño del proceso, no aplicar sanciones."
+      }
+    ],
+    "hint": "Es el paso donde se efectúa el seguimiento y la medición mediante indicadores para comprobar el progreso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones constituyen herramientas tradicionales para el control estadístico y análisis de la calidad?",
+    "opciones": [
+      {
+        "text": "Diagrama de Ishikawa (Causa y Efecto)",
+        "isCorrect": true,
+        "rationale": "Sirve para explorar de forma organizada las razones potenciales de una falla de calidad."
+      },
+      {
+        "text": "Histograma de frecuencias",
+        "isCorrect": true,
+        "rationale": "Muestra la distribución gráfica de un conjunto de datos para detectar variaciones e irregularidades."
+      },
+      {
+        "text": "Gráficos de Control",
+        "isCorrect": true,
+        "rationale": "Permiten monitorear la estabilidad de un proceso a lo largo del tiempo observando límites superiores e inferiores."
+      },
+      {
+        "text": "Diagrama de Pareto",
+        "isCorrect": true,
+        "rationale": "Ayuda a identificar gráficamente los pocos problemas significativos frente a los muchos triviales."
+      },
+      {
+        "text": "Estado de Resultados y Pérdidas Contables",
+        "isCorrect": false,
+        "rationale": "El Estado de Resultados es un informe financiero gerencial, no una herramienta clásica de control estadístico de procesos de calidad."
+      }
+    ],
+    "hint": "Seleccione los gráficos e instrumentos técnicos desarrollados históricamente para monitorear y analizar variaciones en la producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la gestión de Seguridad y Salud en el Trabajo, ¿qué representan las siglas IPERC?",
+    "opciones": [
+      {
+        "text": "Identificación de Peligros, Evaluación de Riesgos y Medidas de Control",
+        "isCorrect": true,
+        "rationale": "IPERC es la matriz fundamental que permite detectar situaciones peligrosas, cuantificar sus riesgos y establecer controles preventivos."
+      },
+      {
+        "text": "Inspección de Productos, Evaluación de Recambios y Control de Calidad",
+        "isCorrect": false,
+        "rationale": "Esta interpretación inventada mezcla términos de calidad comercial ajenos a la matriz preventiva de seguridad laboral."
+      },
+      {
+        "text": "Indicador de Productividad, Eficiencia, Rentabilidad y Costos",
+        "isCorrect": false,
+        "rationale": "Estos términos se refieren a métricas económico-financieras y no a la gestión de peligros en los lugares de trabajo."
+      },
+      {
+        "text": "Integración de Procesos, Estrategia, Recursos y Capacitación",
+        "isCorrect": false,
+        "rationale": "Son conceptos administrativos generales que no corresponden a la sigla técnica de evaluación de riesgos ocupacionales."
+      },
+      {
+        "text": "Inventario Permanente, Evaluación de Requerimientos y Control de Compras",
+        "isCorrect": false,
+        "rationale": "Corresponde a conceptos inventados relativos a la logística de almacén y no a la prevención de accidentes."
+      }
+    ],
+    "hint": "Es la herramienta legal de seguridad empleada para prevenir accidentes laborales analizando el entorno operacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son los tres factores fundamentales que evalúa la métrica OEE (Overall Equipment Effectiveness) para medir la eficiencia global de la maquinaria?",
+    "opciones": [
+      {
+        "text": "Disponibilidad, Rendimiento y Calidad",
+        "isCorrect": true,
+        "rationale": "La métrica OEE multiplica el porcentaje de tiempo operativo (Disponibilidad), la velocidad de procesamiento (Rendimiento) y las unidades sin defectos (Calidad)."
+      },
+      {
+        "text": "Costo, Peso y Volumen de insumos",
+        "isCorrect": false,
+        "rationale": "El peso, costo y volumen miden características físicas y económicas del producto pero no el desempeño operativo de una máquina."
+      },
+      {
+        "text": "Temperatura, Presión y Humedad ambiental",
+        "isCorrect": false,
+        "rationale": "Corresponden a condiciones ambientales o variables de proceso, no a las tres dimensiones estandarizadas de la fórmula OEE."
+      },
+      {
+        "text": "Ventas, Ganancias e Impuestos anuales",
+        "isCorrect": false,
+        "rationale": "Son indicadores del rendimiento financiero global de la corporación y no del desempeño directo del equipo."
+      },
+      {
+        "text": "Asistencia, Puntualidad y Rotación de colaboradores",
+        "isCorrect": false,
+        "rationale": "Evalúan aspectos de la gestión del talento humano y no la efectividad mecánica de los equipos de producción."
+      }
+    ],
+    "hint": "Piense en las tres dimensiones clave que miden si una máquina está funcionando cuando debe, a la velocidad correcta y sin producir fallos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representa el Takt Time en el diseño de un sistema de producción Lean?",
+    "opciones": [
+      {
+        "text": "El ritmo al que se debe fabricar un producto para satisfacer exactamente la tasa de demanda del cliente.",
+        "isCorrect": true,
+        "rationale": "El Takt Time marca el 'latido' de la producción, sincronizando el tiempo disponible de trabajo con el volumen solicitado por el mercado."
+      },
+      {
+        "text": "El tiempo total que permanece la materia prima guardada en los almacenes.",
+        "isCorrect": false,
+        "rationale": "El tiempo de permanencia en bodega mide la rotación del inventario y no la velocidad teórica de manufactura según la demanda."
+      },
+      {
+        "text": "La suma de las horas extra pagadas al personal durante un periodo.",
+        "isCorrect": false,
+        "rationale": "Las horas extra representan costos de nómina y no un cálculo de cadencia de producción."
+      },
+      {
+        "text": "El tiempo requerido para transportar el producto hasta la tienda final.",
+        "isCorrect": false,
+        "rationale": "El transporte hasta el cliente es parte del tiempo de tránsito logístico, distinto del cálculo interno de producción."
+      },
+      {
+        "text": "La duración máxima permitida de las reuniones del equipo directivo.",
+        "isCorrect": false,
+        "rationale": "La duración de reuniones ejecutivas es un hábito administrativo ajeno al ritmo de la línea de producción."
+      }
+    ],
+    "hint": "Considere la palabra alemana que significa 'marcar el ritmo' o la cadencia necesaria para no sobreproducir ni retrasar entregas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta de gestión visual utiliza tarjetas o señaIizaciones para regular el flujo de producción según la demanda real?",
+    "opciones": [
+      {
+        "text": "Kanban",
+        "isCorrect": true,
+        "rationale": "Kanban utiliza tarjetas visuales para autorizar el paso y producción de materiales únicamente cuando la etapa siguiente lo requiere."
+      },
+      {
+        "text": "Balanced Scorecard",
+        "isCorrect": false,
+        "rationale": "El Balanced Scorecard es un cuadro de mando estratégico gerencial y no un sistema de tarjetas en el piso de planta."
+      },
+      {
+        "text": "Diagrama de dispersión",
+        "isCorrect": false,
+        "rationale": "El diagrama de dispersión es una gráfica estadística para estudiar la correlación entre dos variables."
+      },
+      {
+        "text": "Auditoría Financiera",
+        "isCorrect": false,
+        "rationale": "La auditoría financiera examina la veracidad de los libros contables, sin operar como control visual del flujo productivo."
+      },
+      {
+        "text": "Matriz Ansoff",
+        "isCorrect": false,
+        "rationale": "La matriz Ansoff determina estrategias de crecimiento de mercado y productos a nivel corporativo."
+      }
+    ],
+    "hint": "Es un término japonés que se traduce como 'tarjeta visual' o 'letrero', utilizado para reponer materiales bajo un sistema tirado (pull).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a categorías comunes de Indicadores Clave de Desempeño (KPIs) en las organizaciones?",
+    "opciones": [
+      {
+        "text": "KPIs Financieros (como el rendimiento sobre activos o margen neto)",
+        "isCorrect": true,
+        "rationale": "Cuantifican el resultado económico, la viabilidad financiera y la rentabilidad obtenida por los procesos."
+      },
+      {
+        "text": "KPIs Operacionales (como el tiempo de ciclo o eficiencia de materiales)",
+        "isCorrect": true,
+        "rationale": "Miden la productividad interna, la utilización de insumos y la velocidad de los flujos de trabajo."
+      },
+      {
+        "text": "KPIs de Gestión del Talento Humano (como la tasa de rotación o productividad por colaborador)",
+        "isCorrect": true,
+        "rationale": "Evalúan la estabilidad del equipo, la capacitación y el desempeño de las personas dentro del entorno laboral."
+      },
+      {
+        "text": "KPIs de Calidad (como la tasa de defectos o entregas conformes a la primera)",
+        "isCorrect": true,
+        "rationale": "Miden la presencia de errores y el nivel de precisión técnica en los productos o servicios ofrecidos."
+      },
+      {
+        "text": "KPIs de Adivinación Especulativa",
+        "isCorrect": false,
+        "rationale": "Los indicadores deben basarse en datos medibles y verificados, no en especulaciones o supersticiones."
+      }
+    ],
+    "hint": "Piense en los diferentes ámbitos de la empresa que requieren medición: finanzas, operaciones, colaboradores y estándar del producto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la utilidad principal de implementar soluciones de Business Intelligence (BI), tales como Power BI, en el monitoreo de métricas industriales?",
+    "opciones": [
+      {
+        "text": "Centralizar y transformar datos masivos en paneles visuales e interactivos para facilitar la toma de decisiones estratégicas.",
+        "isCorrect": true,
+        "rationale": "Las herramientas de BI permiten conectar múltiples fuentes de datos para presentar tableros de control (dashboards) en tiempo real."
+      },
+      {
+        "text": "Reemplazar físicamente la maquinaria pesada en las instalaciones.",
+        "isCorrect": false,
+        "rationale": "Las herramientas informáticas de BI analizan datos pero no realizan trabajo mecánico o físico de fabricación."
+      },
+      {
+        "text": "Eliminar la necesidad de establecer objetivos de calidad.",
+        "isCorrect": false,
+        "rationale": "El BI requiere que existan objetivos predefinidos para comparar el rendimiento real frente a las metas."
+      },
+      {
+        "text": "Redactar contratos legales automatizados sin revisión humana.",
+        "isCorrect": false,
+        "rationale": "La elaboración y fiscalización de acuerdos legales sobrepasa el propósito analítico de la inteligencia de negocios."
+      },
+      {
+        "text": "Inhabilitar las alarmas de seguridad en la planta de manufactura.",
+        "isCorrect": false,
+        "rationale": "Las plataformas de BI buscan mejorar el control operativo y no desactivar los protocolos de seguridad industrial."
+      }
+    ],
+    "hint": "Considere el valor de resumir datos de distintas áreas en gráficos de control ejecutivos y dinámicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tipo de auditoría de recursos se enfoca específicamente en evaluar la asignación adecuada, el desempeño, la estabilidad y la capacitación de los colaboradores?",
+    "opciones": [
+      {
+        "text": "Auditoría de Talento Humano",
+        "isCorrect": true,
+        "rationale": "Esta auditoría analiza cómo se gestiona el capital humano, verificando competencias, programas de formación e indicadores de rotación."
+      },
+      {
+        "text": "Auditoría Financiera",
+        "isCorrect": false,
+        "rationale": "La auditoría financiera examina únicamente los estados contables, presupuestos e inversiones monetarias."
+      },
+      {
+        "text": "Auditoría de Cumplimiento Ambiental",
+        "isCorrect": false,
+        "rationale": "Se concentra en el cumplimiento de leyes ecológicas y manejo de vertimientos o residuos."
+      },
+      {
+        "text": "Auditoría de Mantenimiento Mecánico",
+        "isCorrect": false,
+        "rationale": "Evalúa el estado físico y programas de revisión de la maquinaria e instalaciones."
+      },
+      {
+        "text": "Auditoría Metrológica",
+        "isCorrect": false,
+        "rationale": "Verifica la calibración de los instrumentos de medición métrica y pesaje."
+      }
+    ],
+    "hint": "Reflexione sobre el área encargada de la gestión del personal, las competencias laborales y la productividad de los empleados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa manufacturera observa que las materias primas se transforman adecuadamente mediante maquinaria, pero se generan constantes reclamos porque los productos empacados no cumplen los estándares de sabor y textura esperados. ¿En qué etapa del ciclo de producción se está presentando la falla principal?",
+    "opciones": [
+      {
+        "text": "Control de calidad",
+        "isCorrect": true,
+        "rationale": "La verificación de la textura, el sabor y los estándares adecuados antes del empaque y distribución corresponde a la evaluación del control de calidad para evitar insatisfacción en el usuario final."
+      },
+      {
+        "text": "Entrada de materiales",
+        "isCorrect": false,
+        "rationale": "La selección y adquisición de insumos fue realizada sin reportarse defectos en los ingredientes iniciales, por lo que la falencia se manifiesta en la verificación del producto transformado."
+      },
+      {
+        "text": "Procesamiento",
+        "isCorrect": false,
+        "rationale": "El procesamiento cubre la mezcla, horneado o maquinado físico, el cual se llevó a cabo pero no fue evaluado correctamente bajo los parámetros exigidos."
+      },
+      {
+        "text": "Distribución y logística",
+        "isCorrect": false,
+        "rationale": "La logística se encarga del empaque, transporte y envío final hacia los clientes, función posterior al aseguramiento de los atributos físicos e higiénicos del producto."
+      },
+      {
+        "text": "Planificación estratégica de ventas",
+        "isCorrect": false,
+        "rationale": "La planificación comercial define la demanda esperada y los precios, no la inspección técnica de las características físicas u organolépticas del producto fabricado."
+      }
+    ],
+    "hint": "Identifica la fase encargada de evaluar si el producto terminado cumple con las especificaciones exigidas antes de enviarlo al cliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una planta procesadora de alimentos perecederos busca reducir las pérdidas económicas provocadas por la caducidad y obsolescencia de los insumos almacenados en bodega. ¿Qué método de gestión de inventarios es el más adecuado para esta situación?",
+    "opciones": [
+      {
+        "text": "Método FIFO (First In, First Out)",
+        "isCorrect": true,
+        "rationale": "Este enfoque prioriza la salida de los insumos más antiguos almacenados, evitando que se deterioren o alcancen su fecha de vencimiento dentro de la bodega."
+      },
+      {
+        "text": "Método LIFO (Last In, First Out)",
+        "isCorrect": false,
+        "rationale": "Utilizar los insumos más recientes dejaría estancados los productos antiguos en el almacén, incrementando el riesgo de vencimiento en bienes perecederos."
+      },
+      {
+        "text": "Modelo EOQ (Economic Order Quantity)",
+        "isCorrect": false,
+        "rationale": "El modelo EOQ determina el tamaño óptimo de pedido para minimizar costos de almacenamiento y emisión de órdenes, pero no norma el orden físico cronológico de salida."
+      },
+      {
+        "text": "Análisis ABC enfocado únicamente en la Zona C",
+        "isCorrect": false,
+        "rationale": "La clasificación ABC prioriza el control según el valor monetario o rotación, pero por sí sola no garantiza el flujo cronológico físico de materiales perecederos."
+      },
+      {
+        "text": "Método de reabastecimiento periódico fijo",
+        "isCorrect": false,
+        "rationale": "Programar pedidos a intervalos fijos no resuelve la política de rotación física de los materiales que ya se encuentran dentro del almacén."
+      }
+    ],
+    "hint": "Piensa en la regla de rotación que asegura que lo primero que entra a la bodega sea lo primero en consumirse.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Un gerente de operaciones desea implementar estrategias eficientes para optimizar la gestión de inventarios y reducir costos de almacenamiento. ¿Cuáles de las siguientes acciones aplican principios de los métodos JIT, EOQ o Análisis ABC?",
+    "opciones": [
+      {
+        "text": "Solicitar materias primas a los proveedores únicamente en el momento exacto en que se requieren para la producción, minimizando el stock en almacén.",
+        "isCorrect": true,
+        "rationale": "La filosofía Just-in-Time busca reducir el inventario al mínimo al sincronizar las entregas exactas de insumos con las necesidades inmediatas de fabricación."
+      },
+      {
+        "text": "Calcular matemáticamente la cantidad de pedido que equilibre los costos de mantener inventario con los costos de emitir órdenes de compra.",
+        "isCorrect": true,
+        "rationale": "El modelo EOQ determina la cantidad de pedido óptima para minimizar la suma total de costos operativos de almacenamiento y reabastecimiento."
+      },
+      {
+        "text": "Clasificar los productos en categorías según su valor monetario y nivel de rotación para aplicar un control más riguroso a los artículos de mayor impacto.",
+        "isCorrect": true,
+        "rationale": "El análisis ABC prioriza la atención administrativa y el control analítico sobre los artículos de tipo A, que representan la mayor parte del valor monetario."
+      },
+      {
+        "text": "Acumular un alto stock de seguridad de todos los artículos de manera indiferenciada para evitar cualquier paro de planta.",
+        "isCorrect": false,
+        "rationale": "Mantener inventarios excesivos sin segmentación incrementa significativamente los costos de almacenamiento y contradice la optimización del capital de trabajo."
+      },
+      {
+        "text": "Priorizar siempre la salida de los insumos recién ingresados al almacén sobre los insumos antiguos para acelerar las ventas.",
+        "isCorrect": false,
+        "rationale": "Dar salida a los insumos más recientes incrementa el riesgo de obsolescencia de los materiales antiguos, lo cual resulta perjudicial para el control de insumos."
+      }
+    ],
+    "hint": "Considera las metodologías que equilibran la cantidad óptima de pedido, la sincronización de entregas sin excesos y la segmentación por impacto económico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante un análisis de fallas en una línea de empaque, el equipo utiliza un Diagrama de Ishikawa para categorizar las causas raíz de los problemas detectados. ¿Cuáles son las categorías principales que estructuran tradicionalmente esta herramienta?",
+    "opciones": [
+      {
+        "text": "Mano de obra, maquinaria, materiales, métodos, medio ambiente y medición",
+        "isCorrect": true,
+        "rationale": "La espiga de pescado o Diagrama de Ishikawa organiza las causas potenciales agrupándolas en los pilares operativos estándar conocidos como las 6M."
+      },
+      {
+        "text": "Planear, hacer, verificar, actuar, controlar y analizar",
+        "isCorrect": false,
+        "rationale": "Esta secuencia corresponde a las etapas del ciclo de mejora continua PHVA y metodologías de gestión, no a las categorías de agrupación del diagrama causa-efecto."
+      },
+      {
+        "text": "Definir, medir, analizar, mejorar, controlar y validar",
+        "isCorrect": false,
+        "rationale": "Esta estructura pertenece a las fases de la metodología Six Sigma (DMAIC/DMADV) para la reducción de variabilidad de procesos."
+      },
+      {
+        "text": "Entradas, procesamiento, control de calidad, empaque, almacenamiento y distribución",
+        "isCorrect": false,
+        "rationale": "Estos elementos describen la secuencia cronológica del ciclo de producción industrial y no las categorías analíticas de la espiga de pescado."
+      },
+      {
+        "text": "Calidad, tiempo, costo, flexibilidad, innovación y sostenibilidad",
+        "isCorrect": false,
+        "rationale": "Estos conceptos son dimensiones estratégicas de la competitividad operativa, no los ejes de clasificación de causas en el diagrama causa-efecto."
+      }
+    ],
+    "hint": "Recuerda las categorías conocidas como las '6M' utilizadas para agrupar las causas en la espiga de pescado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un analista de procesos evalúa un indicador que calcula el porcentaje de productos defectuosos generados en relación con el total de unidades fabricadas en un lote. De acuerdo con el propósito de los KPIs de gestión, ¿qué función cumple primordialmente esta medición?",
+    "opciones": [
+      {
+        "text": "Medir el comportamiento del objetivo del proceso para determinar si se avanza hacia el cumplimiento de las especificaciones",
+        "isCorrect": true,
+        "rationale": "Un KPI evalúa cuantitativamente el desempeño del proceso frente a metas preestablecidas para guiar la toma de decisiones correctivas."
+      },
+      {
+        "text": "Contar únicamente la cantidad total de empleados asignados a la línea de ensamble",
+        "isCorrect": false,
+        "rationale": "La cantidad de personal es una métrica descriptiva simple, mientras que un KPI relaciona variables para evaluar el cumplimiento de un objetivo especifico."
+      },
+      {
+        "text": "Eliminar de forma automatizada las fallas mecánicas de las máquinas sin intervención humana",
+        "isCorrect": false,
+        "rationale": "Los indicadores son herramientas de diagnóstico e información analítica, no mecanismos físicos de reparación automatizada."
+      },
+      {
+        "text": "Garantizar la aprobación inmediata de auditorías internacionales sin requerir registros documentales",
+        "isCorrect": false,
+        "rationale": "Las auditorías exigen evidencia verificable de cumplimiento y trazabilidad continua, no solo la formulación teórica de un indicador."
+      },
+      {
+        "text": "Sustituir por completo las herramientas del control estadístico de procesos",
+        "isCorrect": false,
+        "rationale": "Los KPIs se nutren del monitoreo continuo y de las herramientas estadísticas, complementando el control en lugar de sustituirlo."
+      }
+    ],
+    "hint": "Considera que los KPIs sirven para monitorear si el resultado final del proceso cumple las metas planteadas respecto a la calidad esperada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Una planta industrial logró implementar con éxito mejoras en sus métodos de trabajo y medición de recursos. ¿Cuáles de las siguientes opciones representan beneficios directos derivados de esta optimización operativa?",
+    "opciones": [
+      {
+        "text": "Incremento de la productividad gracias a la optimización de los flujos de trabajo y la reducción de reprocesos.",
+        "isCorrect": true,
+        "rationale": "Eliminar pasos innecesarios y fallas operativas permite producir más unidades con la misma cantidad de recursos en menor tiempo."
+      },
+      {
+        "text": "Reducción de los costos operativos al disminuir el desperdicio de materias primas y las mermas de producción.",
+        "isCorrect": true,
+        "rationale": "La eficiencia en la utilización de insumos evita compras excesivas y pérdidas financieras asociadas a material desechado."
+      },
+      {
+        "text": "Aumento en la satisfacción del cliente mediante la entrega oportuna de productos con altos estándares de calidad.",
+        "isCorrect": true,
+        "rationale": "Procesos estandarizados y controlados garantizan productos confiables que se entregan dentro de los plazos comprometidos."
+      },
+      {
+        "text": "Eliminación total de la necesidad de realizar auditorías internas y controles normativos.",
+        "isCorrect": false,
+        "rationale": "Las mejoras operativas no eximen a las organizaciones de mantener controles continuos ni de cumplir con auditorías periódicas."
+      },
+      {
+        "text": "Incremento en los costos de almacenamiento debido a la acumulación deliberada de productos rechazados.",
+        "isCorrect": false,
+        "rationale": "La optimización busca minimizar los inventarios obsoletos y corregir los defectos en lugar de tolerar su almacenamiento."
+      }
+    ],
+    "hint": "Identifica los impactos positivos en el costo, la eficiencia en el uso de insumos y el cumplimiento ante las expectativas del mercado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La dirección de una empresa adopta la filosofía japonesa Kaizen como parte de su estrategia de Lean Manufacturing. ¿Cuál es la premisa fundamental que guía el comportamiento organizacional bajo esta filosofía?",
+    "opciones": [
+      {
+        "text": "Realizar pequeñas mejoras continuas y progresivas cada día con la participación de todos los trabajadores",
+        "isCorrect": true,
+        "rationale": "Kaizen promueve la optimización constante a través de pequeños cambios diarios impulsados por todo el equipo humano de la empresa."
+      },
+      {
+        "text": "Esperar transformaciones radicales aisladas impulsadas exclusivamente por consultores externos",
+        "isCorrect": false,
+        "rationale": "Kaizen se fundamenta en el cambio continuo e interno desde la base operativa y no en eventos de reingeniería aislados."
+      },
+      {
+        "text": "Reemplazar anualmente toda la maquinaria de la planta sin evaluar los datos de rendimiento",
+        "isCorrect": false,
+        "rationale": "Kaizen busca maximizar la eficiencia de los recursos existentes mediante mejoras metodológicas antes de realizar inversiones masivas de capital."
+      },
+      {
+        "text": "Enfocarse únicamente en maximizar las ganancias individuales de la alta dirección",
+        "isCorrect": false,
+        "rationale": "La filosofía Kaizen posee un enfoque integrador donde prima el beneficio colectivo y la colaboración sinérgica."
+      },
+      {
+        "text": "Diseñar productos totalmente nuevos ignorando las fallas de los procesos productivos actuales",
+        "isCorrect": false,
+        "rationale": "Kaizen se centra en perfeccionar y corregir los procesos existentes día a día para eliminar desperdicios en la operación actual."
+      }
+    ],
+    "hint": "Reflexiona sobre la etimología 'cambio a mejor' prolongado de manera constante en el tiempo con la colaboración de todo el personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una fábrica de componentes mecánicos identifica un alto índice de variabilidad en las dimensiones de sus piezas. Para resolver este problema en un proceso existente, deciden aplicar la estructura DMAIC de Six Sigma. ¿Cuál es el orden lógico correcto de las etapas de esta metodología?",
+    "opciones": [
+      {
+        "text": "Definir, Medir, Analizar, Mejorar (Improve) y Controlar",
+        "isCorrect": true,
+        "rationale": "DMAIC sigue la secuencia lógica de especificar el problema/cliente, cuantificar el desempeño, hallar la causa raíz, implementar soluciones y sostener los resultados."
+      },
+      {
+        "text": "Diseñar, Medir, Analizar, Verificar y Desarrollar",
+        "isCorrect": false,
+        "rationale": "Esta combinación confunde etapas de metodologías de diseño (DMADV) y no respeta la estructura estándar de DMAIC."
+      },
+      {
+        "text": "Planear, Hacer, Verificar, Actuar y Controlar",
+        "isCorrect": false,
+        "rationale": "Esta descripción corresponde al ciclo Deming (PHVA) adicionando un término, no a la metodología Six Sigma."
+      },
+      {
+        "text": "Medir, Definir, Controlar, Analizar y Mejorar",
+        "isCorrect": false,
+        "rationale": "No se puede medir de forma precisa ni analizar sin antes haber definido con claridad el problema y los requisitos del cliente."
+      },
+      {
+        "text": "Analizar, Definir, Mejorar, Medir y Controlar",
+        "isCorrect": false,
+        "rationale": "El análisis de datos no puede anteceder a la recolección métrica ni a la definición de los parámetros del proceso."
+      }
+    ],
+    "hint": "Piensa en el acrónimo en inglés que inicia definiendo el problema, mide el estado actual, analiza causas, aplica la mejora y finalmente controla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "El equipo de ingeniería de calidad evalúa si debe aplicar la metodología DMAIC o la variante DMADV (o DFSS). ¿En cuáles de las siguientes situaciones es adecuado seleccionar DMADV en lugar de DMAIC?",
+    "opciones": [
+      {
+        "text": "Al momento de diseñar e introducir al mercado un producto completamente nuevo que no existe en la línea de producción.",
+        "isCorrect": true,
+        "rationale": "DMADV (Define, Measure, Analyze, Design, Verify) se aplica específicamente para la creación de nuevos productos o procesos optimizados desde su origen."
+      },
+      {
+        "text": "Cuando un proceso existente ha sido mejorado al máximo con DMAIC pero sigue sin cumplir los niveles de calidad exigidos por el cliente.",
+        "isCorrect": true,
+        "rationale": "Si un proceso actual alcanza su límite operacional sin lograr la calidad requerida, se requiere rediseñarlo desde cero utilizando DMADV."
+      },
+      {
+        "text": "Para verificar la validez y desempeño de un prototipo de diseño antes de iniciar la fabricación a gran escala.",
+        "isCorrect": true,
+        "rationale": "La fase final de DMADV incluye la verificación del diseño en fase piloto para prevenir la aparición de defectos en producción masiva."
+      },
+      {
+        "text": "Para corregir desajustes menores en el calibrado de una máquina que lleva años operando en la planta.",
+        "isCorrect": false,
+        "rationale": "Ajustes periódicos o correcciones puntuales en procesos vigentes deben abordarse mediante la metodología DMAIC."
+      },
+      {
+        "text": "Para eliminar el uso de herramientas estadísticas en la toma de decisiones sobre calidad.",
+        "isCorrect": false,
+        "rationale": "Ambas metodologías Six Sigma se basan rigurosamente en el análisis de datos estadísticos cuantitativos."
+      }
+    ],
+    "hint": "Selecciona los escenarios donde se busca diseñar un producto/proceso nuevo desde cero o rediseñar totalmente uno existente insatisfactorio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la Gestión de Calidad Total (TQM), una empresa de electrodomésticos fomenta la participación activa de todos los empleados y el trabajo en equipo. ¿Por qué es fundamental el compromiso de todo el personal en este enfoque?",
+    "opciones": [
+      {
+        "text": "Porque la calidad se concibe como una responsabilidad global donde cada nivel organizacional contribuye a la satisfacción del cliente",
+        "isCorrect": true,
+        "rationale": "TQM promueve una cultura integrada donde desde la alta dirección hasta los operarios aplican la mejora continua en sus labores cotidianas."
+      },
+      {
+        "text": "Porque permite trasladar toda la responsabilidad de los defectos exclusivamente al departamento de compras",
+        "isCorrect": false,
+        "rationale": "TQM rechaza la culpabilidad aislada y busca la colaboración transversal de todas las áreas operativas."
+      },
+      {
+        "text": "Porque evita la necesidad de capacitar al personal en normativas de seguridad e inspección",
+        "isCorrect": false,
+        "rationale": "La participación activa en TQM exige capacitar continuamente al personal para que identifique y corrija anomalías."
+      },
+      {
+        "text": "Porque automatiza el 100% de los procesos eliminando la interacción humana en la planta",
+        "isCorrect": false,
+        "rationale": "Aunque TQM utiliza tecnología, el factor humano y la cultura organizacional son los pilares de esta filosofía."
+      },
+      {
+        "text": "Porque limita las decisiones operativas únicamente a la intuición del personal administrativo",
+        "isCorrect": false,
+        "rationale": "TQM exige que la toma de decisiones se fundamente en hechos, datos objetivos y trabajo en equipo."
+      }
+    ],
+    "hint": "Considera que TQM transforma la calidad en una filosofía cultural integradora que abarca a la totalidad de los miembros de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una planta procesadora de carne instala sensores de Internet de las Cosas (IoT) en sus cámaras de refrigeración. Si la temperatura excede los límites térmicos permitidos, el sistema envía una alerta automática a los supervisores. ¿Qué ventaja operativa brinda principalmente esta aplicación de Calidad 4.0?",
+    "opciones": [
+      {
+        "text": "Monitorear variables en tiempo real para intervenir inmediatamente y prevenir el deterioro de la materia prima",
+        "isCorrect": true,
+        "rationale": "Los sensores IoT transmiten datos continuos permitiendo la detección temprana de desviaciones antes de que se generen mermas irreparables."
+      },
+      {
+        "text": "Reemplazar la necesidad de contar con un sistema de gestión ambiental ISO 14001",
+        "isCorrect": false,
+        "rationale": "Las herramientas tecnológicas complementan la recolección de datos, pero no sustituyen el cumplimiento del marco normativo ambiental."
+      },
+      {
+        "text": "Aumentar deliberadamente el tiempo de ciclo en las líneas de empaque de alimentos",
+        "isCorrect": false,
+        "rationale": "El objetivo de la digitalización es optimizar los tiempos de respuesta y producción, no ralentizarlos."
+      },
+      {
+        "text": "Eliminar la recolección de datos históricos para la toma de decisiones estratégicas",
+        "isCorrect": false,
+        "rationale": "El IoT genera grandes volúmenes de datos que nutren los análisis históricos y predictivos de la planta."
+      },
+      {
+        "text": "Garantizar la venta automática de los productos sin requerir controles de distribución",
+        "isCorrect": false,
+        "rationale": "El monitoreo térmico asegura la calidad física en almacén, pero no gestiona la comercialización o logística comercial."
+      }
+    ],
+    "hint": "Piensa en el beneficio de detectar cambios térmicos al instante para evitar pérdidas de insumos perecederos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Una corporación industrial integra Inteligencia Artificial (IA) y Big Data en sus líneas de manufactura avanzada. ¿Cuáles de las siguientes funciones representan aplicaciones directas de estas tecnologías para la calidad predictiva?",
+    "opciones": [
+      {
+        "text": "Analizar grandes volúmenes de datos históricos de sensores para predecir cuándo una máquina requerirá mantenimiento antes de que falle.",
+        "isCorrect": true,
+        "rationale": "La combinación de Big Data e IA permite identificar patrones de desgaste operativo para programar mantenimientos predictivos."
+      },
+      {
+        "text": "Utilizar sistemas de visión artificial impulsados por algoritmos para inspeccionar automáticamente micro-defectos en piezas ensambladas.",
+        "isCorrect": true,
+        "rationale": "La IA aplicada a la visión computacional permite evaluar imágenes a alta velocidad y detectar imperfecciones imperceptibles para el ojo humano."
+      },
+      {
+        "text": "Detectar tendencias de defectos recurrentes en la producción mediante el procesamiento masivo de datos en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Big Data procesa información proveniente de múltiples etapas productivas para identificar correlaciones complejas entre variables y defectos."
+      },
+      {
+        "text": "Reemplazar completamente los estándares de auditoría legal por apreciaciones subjetivas.",
+        "isCorrect": false,
+        "rationale": "La tecnología 4.0 busca incrementar la precisión cuantitativa y objetiva, respaldando las auditorías normativas."
+      },
+      {
+        "text": "Incrementar el uso de registros físicos en papel para el almacenamiento de parámetros de maquinaria.",
+        "isCorrect": false,
+        "rationale": "La transformación digital impulsa la migración hacia entornos cero papel y bases de datos centralizadas en la nube."
+      }
+    ],
+    "hint": "Selecciona las alternativas que involucran la detección automática de patrones, inspección por visión y predicción de fallas mediante análisis masivo de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa auditada bajo la norma ISO 9001:2015 identifica en la Cláusula 6 (Planificación) la necesidad de anticiparse a posibles desviaciones operativas. ¿Qué enfoque clave exige la norma en esta etapa para asegurar la calidad?",
+    "opciones": [
+      {
+        "text": "La gestión de riesgos y la identificación de oportunidades para prevenir fallas en los procesos",
+        "isCorrect": true,
+        "rationale": "La ISO 9001:2015 introduce el pensamiento basado en riesgos para planificar acciones preventivas que aseguren los resultados previstos."
+      },
+      {
+        "text": "La inspección final del 100% de los productos destruyendo los lotes defectuosos",
+        "isCorrect": false,
+        "rationale": "El enfoque moderno prioriza la prevención en la planificación sobre la detección destructiva al final de la línea."
+      },
+      {
+        "text": "El despido inmediato de los operarios que cometan errores no intencionados",
+        "isCorrect": false,
+        "rationale": "La norma promueve la capacitación, la mejora de los métodos de trabajo y la búsqueda de causa raíz, no sanciones arbitrarias."
+      },
+      {
+        "text": "La eliminación de la política de calidad enunciada por la alta dirección",
+        "isCorrect": false,
+        "rationale": "La política de calidad debe estar alineada con la dirección estratégica y servir como marco para los objetivos de la Cláusula 6."
+      },
+      {
+        "text": "La cancelación de todas las auditorías internas de desempeño operativo",
+        "isCorrect": false,
+        "rationale": "Las auditorías internas son un requisito obligatorio estipulado en la Cláusula 9 para evaluar la conformidad del sistema."
+      }
+    ],
+    "hint": "Piensa en el principio que busca evaluar qué podría salir mal antes de que ocurra para implementar medidas preventivas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un equipo de SST en un proyecto minero elabora la matriz IPERC para identificar peligros, evaluar riesgos y establecer controles operativos. ¿Con qué norma internacional de gestión se relaciona directamente este procedimiento preventivo?",
+    "opciones": [
+      {
+        "text": "ISO 45001 (Sistema de Gestión de la Seguridad y Salud en el Trabajo)",
+        "isCorrect": true,
+        "rationale": "La matriz IPERC es la herramienta fundamental exigida bajo el marco de la ISO 45001 para la prevención de accidentes y enfermedades ocupacionales."
+      },
+      {
+        "text": "ISO 9001 (Sistema de Gestión de la Calidad)",
+        "isCorrect": false,
+        "rationale": "La ISO 9001 se orienta a la estandarización de procesos para la satisfacción del cliente, no específicamente a la salud ocupacional del trabajador."
+      },
+      {
+        "text": "ISO 14001 (Sistema de Gestión Ambiental)",
+        "isCorrect": false,
+        "rationale": "La ISO 14001 se enfoca en controlar y mitigar los impactos ambientales derivados de la actividad industrial."
+      },
+      {
+        "text": "ISO 2859-1 (Planes de muestreo para inspección por atributos)",
+        "isCorrect": false,
+        "rationale": "Esta norma especifica tablas y procedimientos estadísticos para la aceptación o rechazo de lotes de producción."
+      },
+      {
+        "text": "ISO 50001 (Sistema de Gestión de la Energía)",
+        "isCorrect": false,
+        "rationale": "Esta regulación aborda la eficiencia energética y el consumo de recursos térmicos o eléctricos en la industria."
+      }
+    ],
+    "hint": "Identifica la norma enfocada en proteger la integridad física de los trabajadores y prevenir riesgos laborales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante el desarrollo de un nuevo componente automotriz, los ingenieros emplean el Despliegue de la Función de la Calidad (QFD) y el Análisis de Modo y Efecto de Fallas (FMEA). ¿Cuál es el propósito de integrar estas herramientas en la fase de diseño?",
+    "opciones": [
+      {
+        "text": "Traducir las necesidades del cliente en especificaciones técnicas y prevenir fallas potenciales antes de la producción",
+        "isCorrect": true,
+        "rationale": "El QFD recoge la 'voz del cliente' para definir el diseño, mientras que el FMEA identifica modos de falla hipotéticos para implementar controles tempranos."
+      },
+      {
+        "text": "Duplicar la cantidad de piezas físicas necesarias para ensamblar el producto final",
+        "isCorrect": false,
+        "rationale": "El diseño eficiente busca la estandarización y reducción de componentes para simplificar el ensamblaje y disminuir costos."
+      },
+      {
+        "text": "Ocultar los defectos del prototipo para acelerar su lanzamiento al mercado",
+        "isCorrect": false,
+        "rationale": "El prototipado y las herramientas de diseño buscan hacer visibles las fallas potenciales para corregirlas con anticipación."
+      },
+      {
+        "text": "Aumentar el desperdicio de materia prima durante las pruebas piloto",
+        "isCorrect": false,
+        "rationale": "Las herramientas de diseño para la calidad minimizan las mermas al optimizar los parámetros del proceso antes de la producción masiva."
+      },
+      {
+        "text": "Sustituir la capacitación técnica de los ingenieros de diseño",
+        "isCorrect": false,
+        "rationale": "Estas metodologías son marcos de trabajo analíticos que requieren ser operados por ingenieros capacitados."
+      }
+    ],
+    "hint": "Considera la herramienta que escucha la voz del cliente y la que analiza cuantitativamente cómo y por qué podría fallar un diseño.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Un jefe de planta requiere monitorear la variabilidad de un proceso y priorizar las causas que generan el 80% de las pérdidas por mermas. ¿Cuáles de las siguientes herramientas clásicas de calidad debe seleccionar para este análisis?",
+    "opciones": [
+      {
+        "text": "Diagrama de Pareto, para identificar y concentrar los esfuerzos en el 20% de las causas críticas que generan la mayoría de los problemas.",
+        "isCorrect": true,
+        "rationale": "El principio de Pareto (80/20) permite priorizar los pocos problemas vitales sobre los muchos triviales."
+      },
+      {
+        "text": "Gráficos de Control, para monitorear la estabilidad del proceso en el tiempo mediante límites superiores e inferiores.",
+        "isCorrect": true,
+        "rationale": "Los gráficos de control permiten detectar si la variabilidad de un proceso se debe a causas comunes o especiales."
+      },
+      {
+        "text": "Histograma, para representar visualmente la distribución y frecuencia de un conjunto de datos continuos de calidad.",
+        "isCorrect": true,
+        "rationale": "El histograma muestra la forma de la distribución, el centro y la dispersión de los datos medidos en la producción."
+      },
+      {
+        "text": "Matriz IPERC de riesgos laborales de oficina.",
+        "isCorrect": false,
+        "rationale": "La matriz IPERC es un instrumento de gestión de seguridad y salud en el trabajo, no una de las 7 herramientas estadísticas clásicas de calidad."
+      },
+      {
+        "text": "Diagrama de flujo de caja financiero trimestral.",
+        "isCorrect": false,
+        "rationale": "El flujo de caja evalúa liquidez financiera contable y no forma parte del conjunto estadístico de calidad de procesos."
+      }
+    ],
+    "hint": "Selecciona las opciones que forman parte del grupo tradicional de 7 herramientas estadísticas para control de calidad (frecuencia, estabilidad e importancia relativa).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En una ensambladora de componentes críticos para la industria aeroespacial, se requiere verificar que ninguna pieza defectuosa pase a la siguiente fase de montaje. Debido al alto riesgo involucrado, ¿qué tipo de inspección es obligatorio aplicar?",
+    "opciones": [
+      {
+        "text": "Inspección 100% total y exhaustiva",
+        "isCorrect": true,
+        "rationale": "En sectores de alto riesgo como la aviación o medicina, se revisa la totalidad de las unidades para garantizar cero defectos, asumiendo su mayor costo operativo."
+      },
+      {
+        "text": "Inspección por muestreo aleatorio simple",
+        "isCorrect": false,
+        "rationale": "El muestreo acepta un margen de error estadístico en el lote, lo cual resulta inaceptable para piezas aeronáuticas críticas."
+      },
+      {
+        "text": "Inspección únicamente al momento de la entrega final en tienda",
+        "isCorrect": false,
+        "rationale": "Verificar el producto al final no evita que se ensamblen componentes defectuosos en etapas intermedias de alto costo."
+      },
+      {
+        "text": "Inspección visual informal sin registro documental",
+        "isCorrect": false,
+        "rationale": "Las industrias reguladas exigen registros auditables y procedimientos rigurosos de medición."
+      },
+      {
+        "text": "Muestreo por atributos con nivel de calidad aceptable elevado",
+        "isCorrect": false,
+        "rationale": "Aunque reduce costos, el muestreo por atributos tolera la presencia de unidades defectuosas en el lote aceptado."
+      }
+    ],
+    "hint": "Piensa en el nivel de revisión que evalúa cada una de las unidades producidas sin dejar ninguna fuera de la comprobación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Una fábrica de envases plásticos aplica el ciclo PHVA para resolver problemas recurrentes de deformación en las botellas. ¿Cuáles de las siguientes acciones corresponden correctamente a las fases de este ciclo de mejora continua?",
+    "opciones": [
+      {
+        "text": "En 'Planear', identificar el problema de deformación y analizar las causas para diseñar una estrategia de solución.",
+        "isCorrect": true,
+        "rationale": "La fase de planificación define el problema, analiza causas raíz y establece el plan de acción con objetivos claros."
+      },
+      {
+        "text": "En 'Verificar', medir los resultados de la prueba piloto mediante gráficos para evaluar si se redujo el defecto.",
+        "isCorrect": true,
+        "rationale": "La verificación compara los datos obtenidos tras la implementación contra los objetivos previstos en la planificación."
+      },
+      {
+        "text": "En 'Actuar', estandarizar el nuevo procedimiento de horneado si la prueba fue exitosa o corregir desviaciones si no se logró el objetivo.",
+        "isCorrect": true,
+        "rationale": "La fase de actuación adopta oficialmente las mejoras eficaces o ajusta el plan para iniciar un nuevo ciclo."
+      },
+      {
+        "text": "En 'Hacer', cancelar de inmediato todas las capacitaciones de los operarios de moldes.",
+        "isCorrect": false,
+        "rationale": "La fase de ejecución (Hacer) lleva a cabo el plan diseñado, lo cual suele incluir la formación técnica del personal."
+      },
+      {
+        "text": "En 'Planear', ignorar los datos históricos de producción y basarse únicamente en suposiciones.",
+        "isCorrect": false,
+        "rationale": "La planificación requiere el diagnóstico objetivo respaldado en datos e indicadores confiables."
+      }
+    ],
+    "hint": "Elige las opciones que describen correctamente el diagnóstico inicial (Planear), el análisis de resultados (Verificar) y la estandarización/corrección final (Actuar).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un ingeniero de mantenimiento calcula la métrica OEE para una línea de producción automatizada. ¿Cuáles son las tres variables fundamentales que se multiplican para obtener este porcentaje de eficiencia global?",
+    "opciones": [
+      {
+        "text": "Disponibilidad, Rendimiento y Calidad",
+        "isCorrect": true,
+        "rationale": "El indicador $OEE = Disponibilidad \\times Rendimiento \\times Calidad$ mide las pérdidas operativas por paradas, velocidad reducida y piezas defectuosas."
+      },
+      {
+        "text": "Tiempo de ciclo, Costo unitario y Rotación de inventario",
+        "isCorrect": false,
+        "rationale": "Estos indicadores corresponden a finanzas y logística, no a la fórmula estándar del OEE."
+      },
+      {
+        "text": "Número de trabajadores, Horas extra y Salario promedio",
+        "isCorrect": false,
+        "rationale": "Estas variables describen la gestión de costos de mano de obra y no el rendimiento tecnológico de los equipos."
+      },
+      {
+        "text": "Temperatura del horno, Presión de vapor y Voltaje eléctrico",
+        "isCorrect": false,
+        "rationale": "Estos son parámetros físicos de operación de máquinas específicas, no los factores del indicador global OEE."
+      },
+      {
+        "text": "Ventas totales, Margen bruto y Retorno sobre activos (ROA)",
+        "isCorrect": false,
+        "rationale": "Esta combinación representa métricas financieras corporativas de alto nivel."
+      }
+    ],
+    "hint": "Recuerda que la OEE evalúa el tiempo que la máquina funcionó, la velocidad a la que produjo y la proporción de piezas buenas fabricadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa busca equilibrar el ritmo de fabricación de sus productos con la velocidad de compra exigida por los clientes en el mercado. ¿Qué métrica de Lean Manufacturing debe calcularse para definir este ritmo de producción?",
+    "opciones": [
+      {
+        "text": "Takt Time",
+        "isCorrect": true,
+        "rationale": "El Takt Time establece el ritmo de producción necesario para satisfacer exactamente la demanda del cliente ($Takt\\ Time = \\frac{Tiempo\\ disponible}{Demanda\\ del\\ cliente}$)."
+      },
+      {
+        "text": "Cycle Time (Tiempo de ciclo)",
+        "isCorrect": false,
+        "rationale": "El tiempo de ciclo mide lo que tarda realmente el proceso en fabricar una unidad, el cual debe ajustarse al Takt Time."
+      },
+      {
+        "text": "Lead Time (Tiempo de entrega)",
+        "isCorrect": false,
+        "rationale": "El Lead Time es el tiempo total transcurrido desde que el cliente realiza el pedido hasta que lo recibe físicamente."
+      },
+      {
+        "text": "Diagrama de Gantt",
+        "isCorrect": false,
+        "rationale": "El diagrama de Gantt es una herramienta de cronograma para la planificación de proyectos, no una métrica de ritmo de demanda."
+      },
+      {
+        "text": "Análisis PESTEL",
+        "isCorrect": false,
+        "rationale": "PESTEL evalúa factores macroambientales externos (políticos, económicos, sociales, etc.), no ritmos operativos de línea."
+      }
+    ],
+    "hint": "Identifica el término alemán que significa 'ritmo' o 'compás', utilizado en Lean para sincronizar la producción con las compras del cliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "El departamento de recursos humanos y operaciones evalúa los indicadores clave de desempeño de la planta. ¿Cuáles de las siguientes opciones corresponden a KPIs operacionales o de talento humano descritos en el curso?",
+    "opciones": [
+      {
+        "text": "Tasa de rotación de personal, que mide la estabilidad de la planilla e identifica posibles problemas en el clima laboral.",
+        "isCorrect": true,
+        "rationale": "Una alta rotación de personal señala insatisfacción o fallas en los procesos de selección y retención."
+      },
+      {
+        "text": "Tiempo de ciclo (Cycle Time), que cuantifica el tiempo total requerido para completar una actividad o proceso productivo.",
+        "isCorrect": true,
+        "rationale": "El tiempo de ciclo evalúa la velocidad operacional en la ejecución de una tarea estándar."
+      },
+      {
+        "text": "Productividad por empleado, que relaciona el volumen de producción total obtenido entre el número de trabajadores asignados.",
+        "isCorrect": true,
+        "rationale": "Este KPI mide la eficiencia de la mano de obra en la generación de bienes o servicios."
+      },
+      {
+        "text": "Margen neto de ganancias tras deducción de impuestos corporativos.",
+        "isCorrect": false,
+        "rationale": "El margen neto es un indicador estrictamente financiero corporativo, no un KPI operacional directo ni de gestión de talento."
+      },
+      {
+        "text": "Índice de radiación solar ambiental en el exterior de la fábrica.",
+        "isCorrect": false,
+        "rationale": "Las condiciones climáticas externas no representan un indicador clave de rendimiento interno de las personas o procesos."
+      }
+    ],
+    "hint": "Busca métricas que evalúen la estabilidad laboral, el volumen producido por trabajador y el tiempo de ejecución de las tareas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La alta dirección de una corporación industrial utiliza un Cuadro de Mando Integral (Balanced Scorecard) combinado con herramientas de Business Intelligence como Power BI. ¿Cuál es el objetivo principal de consolidar estas métricas en un tablero interactivo?",
+    "opciones": [
+      {
+        "text": "Evaluar el desempeño global desde perspectivas financieras, operativas, de clientes y aprendizaje para la toma estratégica de decisiones",
+        "isCorrect": true,
+        "rationale": "El BSC y los tableros de BI unifican indicadores multidisciplinarios en tiempo real para respaldar decisiones basadas en datos."
+      },
+      {
+        "text": "Eliminar la necesidad de presentar estados financieros a los accionistas",
+        "isCorrect": false,
+        "rationale": "Las herramientas de BI mejoran la visualización interna de datos, pero no sustituyen las obligaciones contables y legales de la empresa."
+      },
+      {
+        "text": "Impedir que los supervisores de planta accedan a la información de productividad",
+        "isCorrect": false,
+        "rationale": "El propósito de los tableros digitales es democratizar y transparentar la información clave para mejorar el control."
+      },
+      {
+        "text": "Reemplazar el mantenimiento físico de las máquinas de la planta",
+        "isCorrect": false,
+        "rationale": "El análisis de datos ayuda a programar el mantenimiento predictivo, pero no sustituye la ejecución técnica del mantenimiento."
+      },
+      {
+        "text": "Garantizar que todos los productos se fabriquen sin utilizar energía eléctrica",
+        "isCorrect": false,
+        "rationale": "La inteligencia de negocios monitorea consumos energéticos, pero no elimina el uso de energía en los procesos manufactureros."
+      }
+    ],
+    "hint": "Considera que el Balanced Scorecard analiza la organización equilibrando aspectos financieros, de mercado, procesos internos y desarrollo del personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa contrata una auditoría operativa para examinar la gestión de sus activos y materias primas en la planta. ¿Cuál es el propósito central de este tipo de auditoría interna?",
+    "opciones": [
+      {
+        "text": "Evaluar la eficiencia, efectividad y cumplimiento en la utilización de los recursos dentro de los procesos de producción",
+        "isCorrect": true,
+        "rationale": "La auditoría operativa examina si los recursos (materiales, equipos, tiempo) se emplean según los estándares y sin desperdicios."
+      },
+      {
+        "text": "Modificar unilateralmente las leyes laborales vigentes en el país",
+        "isCorrect": false,
+        "rationale": "Ninguna auditoría privada posee facultades legislativas para alterar el marco regulatorio estatal."
+      },
+      {
+        "text": "Aumentar el precio de venta de los productos de forma arbitraria sin analizar el mercado",
+        "isCorrect": false,
+        "rationale": "Las auditorías evalúan el desempeño interno de los procesos, no fijan las estrategias comerciales de precios."
+      },
+      {
+        "text": "Diseñar logotipos publicitarios para campañas de redes sociales",
+        "isCorrect": false,
+        "rationale": "Esta tarea corresponde al departamento de marketing y diseño, ajeno al alcance de una auditoría de recursos."
+      },
+      {
+        "text": "Sustituir la inspección de calidad en la línea de ensamble por una revisión contable",
+        "isCorrect": false,
+        "rationale": "La auditoría operativa verifica los métodos de trabajo y control, complementando la calidad sin eliminar las pruebas en línea."
+      }
+    ],
+    "hint": "Piensa en la revisión sistemática que verifica si los insumos, maquinaria y métodos se están utilizando eficientemente según las metas planificadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Un auditor interno de calidad y seguridad utiliza herramientas de verificación durante la inspección de una planta industrial. ¿Cuáles de las siguientes afirmaciones describen correctamente la función de los checklists y las matrices de riesgo?",
+    "opciones": [
+      {
+        "text": "Los checklists de auditoría estructuran la verificación sistemática del cumplimiento de los estándares normativos en el puesto de trabajo.",
+        "isCorrect": true,
+        "rationale": "Una lista de chequeo asegura que no se omita ningún punto crítico de inspección durante la auditoría."
+      },
+      {
+        "text": "La matriz de riesgos permite evaluar la probabilidad y el impacto de eventos adversos asociados a la gestión de recursos.",
+        "isCorrect": true,
+        "rationale": "La matriz prioriza los riesgos operacionales para determinar dónde implementar controles preventivos urgentes."
+      },
+      {
+        "text": "La aplicación conjunta de estas herramientas facilita el seguimiento de hallazgos y la definición de acciones correctivas.",
+        "isCorrect": true,
+        "rationale": "Documentar desviaciones mediante checklists y evaluar su severidad con la matriz guía la elaboración de planes de mejora."
+      },
+      {
+        "text": "La matriz de riesgos garantiza que ningún accidente pueda ocurrir bajo ninguna circunstancia.",
+        "isCorrect": false,
+        "rationale": "Las herramientas de riesgo mitigan y controlan la probabilidad de eventos, pero no ofrecen una garantía absoluta e infalible de cero riesgo."
+      },
+      {
+        "text": "Los checklists reemplazan la obligación de contar con registros documentados de capacitación.",
+        "isCorrect": false,
+        "rationale": "Las listas de verificación son instrumentos de evaluación que constatan la presencia de registros, no sustitutos de los mismos."
+      }
+    ],
+    "hint": "Selecciona las opciones que destacan la revisión estructurada mediante listas de comprobación y la jerarquización del impacto/probabilidad de fallas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-29",
+    "diplomado": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una fábrica de calzado enfrenta pérdidas por un 15% de cuero desperdiciado, demoras de 2 minutos por par en ensamble y un 8% de fallas en costuras. Tras aplicar 5S, ajustar el Takt Time, capacitar personal y realizar auditorías basadas en ISO 9001, ¿cuál es el resultado integral esperado?",
+    "opciones": [
+      {
+        "text": "Reducción de mermas de material, disminución del tiempo de ciclo, descenso en la tasa de defectos y mejora en la productividad",
+        "isCorrect": true,
+        "rationale": "La integración sistemática de herramientas Lean, capacitación y control normativo ataca directamente los desperdicios, tiempos muertos y fallas de calidad."
+      },
+      {
+        "text": "Aumento inmediato del 50% en el desperdicio de cuero y duplicación de costos de almacenamiento",
+        "isCorrect": false,
+        "rationale": "Las acciones implementadas buscan erradicar el desperdicio y optimizar el inventario, no incrementar las mermas."
+      },
+      {
+        "text": "Eliminación total del personal operativo reemplazándolo al 100% por robots en 24 horas",
+        "isCorrect": false,
+        "rationale": "El caso demuestra que la reestructuración combina capacitación del talento humano existente con optimización tecnológica gradual."
+      },
+      {
+        "text": "Cancelación de las reuniones semanales de seguimiento e indicadores de calidad",
+        "isCorrect": false,
+        "rationale": "La mejora continua exige sostener reuniones periódicas de monitoreo para evaluar el avance de los KPIs."
+      },
+      {
+        "text": "Desconexión de todos los sensores de monitoreo en tiempo real de la planta",
+        "isCorrect": false,
+        "rationale": "La auditoría y el control continuo se respaldan en la captura de datos en tiempo real, no en su desuso."
+      }
+    ],
+    "hint": "Reflexiona sobre la meta combinada de reducir desperdicios de materia prima, acelerar el ensamble y disminuir reclamos por costuras defectuosas.",
+    "activo": true
+  }
+]

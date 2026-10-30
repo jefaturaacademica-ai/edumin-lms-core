@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la naturaleza jurídica y operativa de la norma ISO 14001 para las empresas en el Perú?",
+    "opciones": [
+      {
+        "text": "Es una norma de adopción voluntaria y opcional que la empresa puede implementar para mejorar su gestión ambiental y competitividad.",
+        "isCorrect": true,
+        "rationale": "La adopción de cualquier norma ISO es de carácter voluntario, a diferencia de las regulaciones legales nacionales que sí son de cumplimiento obligatorio."
+      },
+      {
+        "text": "Es un mandato legal obligatorio para todas las empresas formalmente constituidas en el territorio peruano.",
+        "isCorrect": false,
+        "rationale": "Las leyes peruanas exigen cumplir normas de seguridad y salud en el trabajo o aspectos ambientales puntuales, pero no la certificación ISO 14001."
+      },
+      {
+        "text": "Es un reglamento técnico dictado únicamente para empresas del sector público y municipalidades.",
+        "isCorrect": false,
+        "rationale": "La norma es aplicable a cualquier tipo de organización, privada o pública, y no está restringida ni impuesta por el Estado."
+      },
+      {
+        "text": "Es una certificación obligatoria que se exige antes de otorgar la licencia de funcionamiento municipal a un negocio.",
+        "isCorrect": false,
+        "rationale": "Las licencias municipales responden a regulaciones edilicias y de zonificación, no a la certificación voluntaria en estándares internacionales."
+      },
+      {
+        "text": "Es una norma tributaria que exime del pago de impuestos a las organizaciones que la implementan.",
+        "isCorrect": false,
+        "rationale": "Implementar la norma genera beneficios competitivos y operativos, pero no constituye un beneficio directo de exoneración tributaria."
+      }
+    ],
+    "hint": "Considera la diferencia entre las exigencias legales estatales y los estándares de certificación internacional que las empresas eligen adoptar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del Ciclo de Deming aplicado a la ISO 14001, ¿qué representan las siglas PHVA?",
+    "opciones": [
+      {
+        "text": "Planificar, Hacer, Verificar y Actuar.",
+        "isCorrect": true,
+        "rationale": "Representa la secuencia lógica del ciclo de mejora continua que rige la estructura de los sistemas de gestión ISO."
+      },
+      {
+        "text": "Prevenir, Homologar, Validar y Auditar.",
+        "isCorrect": false,
+        "rationale": "Aunque estos términos forman parte de la gestión, no corresponden a la definición de la metodología central PHVA."
+      },
+      {
+        "text": "Proyectar, Hacer, Valorar y Archivar.",
+        "isCorrect": false,
+        "rationale": "Archivar no es una fase activa del ciclo de mejora continua, el cual requiere tomar medidas correctivas o preventivas en la última etapa."
+      },
+      {
+        "text": "Presupuestar, Habilitar, Vigilar y Analizar.",
+        "isCorrect": false,
+        "rationale": "Los componentes 'presupuestar' y 'vigilar' son actividades específicas, pero no definen las etapas principales del estándar."
+      },
+      {
+        "text": "Procesar, Herramientar, Verfeccionar y Acreditar.",
+        "isCorrect": false,
+        "rationale": "Estos términos no coinciden con la terminología estandarizada del ciclo conceptual de gestión de procesos."
+      }
+    ],
+    "hint": "Identifica las cuatro fases secuenciales que componen la espiral de mejora continua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la norma legal marco en materia ambiental citada en las fuentes para el contexto peruano?",
+    "opciones": [
+      {
+        "text": "Ley General del Ambiente (Ley N° 28611).",
+        "isCorrect": true,
+        "rationale": "Es la norma legal marco en el Perú que establece los principios y normas básicas para asegurar el derecho a un ambiente saludable."
+      },
+      {
+        "text": "Ley de Seguridad y Salud en el Trabajo (Ley N° 29783).",
+        "isCorrect": false,
+        "rationale": "Esta ley regula la prevención de riesgos laborales y salud ocupacional, no el marco ambiental general."
+      },
+      {
+        "text": "Ley General de Inspección del Trabajo (Ley N° 28806).",
+        "isCorrect": false,
+        "rationale": "Esta norma se enfoca en la fiscalización de las relaciones laborales y de seguridad ocupacional a través de SUNAFIL."
+      },
+      {
+        "text": "Decreto Supremo 005-2012-TR.",
+        "isCorrect": false,
+        "rationale": "Este decreto corresponde al reglamento de la Ley de Seguridad y Salud en el Trabajo, no a la legislación ambiental ambiental marco."
+      },
+      {
+        "text": "Ley General de Contrataciones del Estado (Ley N° 30225).",
+        "isCorrect": false,
+        "rationale": "Regula los procesos de adquisición pública, aunque pueda tomar en cuenta certificaciones ambientales como factor de puntuación."
+      }
+    ],
+    "hint": "Busca la ley nacional cuyo nombre alude directamente al cuidado integral del medio ambiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la utilidad principal de incluir un flujograma al final de un procedimiento documentado de la norma ISO?",
+    "opciones": [
+      {
+        "text": "Sintetizar y facilitar la comprensión rápida del procedimiento para que los colaboradores entiendan la secuencia de pasos.",
+        "isCorrect": true,
+        "rationale": "El flujograma esquematiza en pocas páginas o diagramas un texto extenso, ayudando a interiorizar el mensaje y la secuencia operativa."
+      },
+      {
+        "text": "Reemplazar por completo la necesidad de contar con registros de auditoría.",
+        "isCorrect": false,
+        "rationale": "El flujograma es una representación visual del procedimiento, no un registro que evidencie la ejecución de tareas."
+      },
+      {
+        "text": "Servir como la única prueba válida en un juicio de fiscalización ambiental.",
+        "isCorrect": false,
+        "rationale": "Las fiscalizaciones revisan la evidencia objetiva y los informes de monitoreo, no únicamente un diagrama de flujo."
+      },
+      {
+        "text": "Cumplir con un requisito contable para el cálculo del presupuesto de la empresa.",
+        "isCorrect": false,
+        "rationale": "El flujograma responde a la gestión de procesos y comunicación interna, no a finalidades financieras o contables."
+      },
+      {
+        "text": "Eliminar la responsabilidad de la Alta Dirección en la revisión de políticas.",
+        "isCorrect": false,
+        "rationale": "El esquema de un proceso no transfiere ni anula los compromisos de liderazgo asumidos por la gerencia."
+      }
+    ],
+    "hint": "Piensa en el formato visual que ayuda a transmitir una secuencia de pasos larga a un trabajador de manera directa y sencilla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos constituyen beneficios directos o ventajas competitivas de implementar la norma ISO 14001 en una empresa?",
+    "opciones": [
+      {
+        "text": "Facilidad para acceder a financiamiento o préstamos con entidades como el Banco Mundial.",
+        "isCorrect": true,
+        "rationale": "Las instituciones financieras internacionales valoran el respaldo formal del cuidado ambiental para otorgar créditos o inversiones."
+      },
+      {
+        "text": "Mejor posicionamiento e imagen corporativa para contratar con grandes empresas y mineras.",
+        "isCorrect": true,
+        "rationale": "Las grandes corporaciones exigen a sus contratistas demostrar que cuidan el entorno para ser homologados e ingresar a sus operaciones."
+      },
+      {
+        "text": "Mayor puntaje en licitaciones y concursos públicos con el Estado.",
+        "isCorrect": true,
+        "rationale": "Contar con certificaciones internacionales de gestión otorga un valor agregado en los criterios de evaluación de compras públicas."
+      },
+      {
+        "text": "Exención automática de cumplir los Límites Máximos Permisibles (LMP) fijados por ley.",
+        "isCorrect": false,
+        "rationale": "La certificación ISO no exonera del cumplimiento estricto de las obligaciones legales ambientales vigentes."
+      },
+      {
+        "text": "Eliminación completa de la necesidad de realizar monitoreos ambientales periódicos.",
+        "isCorrect": false,
+        "rationale": "Al contrario, la norma exige el seguimiento y la medición constante de las emisiones y aspectos ambientales."
+      }
+    ],
+    "hint": "Selecciona las opciones que refieran a ventajas de reputación, licitación y financiamiento frente a terceros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué organismo fiscalizador ambiental en el Perú es mencionado como el encargado de supervisar las obligaciones y sancionar excesos en los límites de emisión?",
+    "opciones": [
+      {
+        "text": "Organismo de Evaluación y Fiscalización Ambiental (OEFA).",
+        "isCorrect": true,
+        "rationale": "OEFA es la entidad competente para fiscalizar, auditar y sancionar el cumplimiento de los compromisos ambientales en los distintos sectores."
+      },
+      {
+        "text": "Superintendencia Nacional de Fiscalización Laboral (SUNAFIL).",
+        "isCorrect": false,
+        "rationale": "SUNAFIL fiscaliza materias sociolaborales y de seguridad ocupacional, no la normativa ambiental general."
+      },
+      {
+        "text": "Instituto Nacional de Defensa de la Competencia y de la Protección de la Propiedad Intelectual (INDECOPI).",
+        "isCorrect": false,
+        "rationale": "INDECOPI vela por la libre competencia y la protección al consumidor, no por el control de la contaminación ambiental."
+      },
+      {
+        "text": "Servicio Nacional de Sanidad Agraria (SENASA).",
+        "isCorrect": false,
+        "rationale": "SENASA enfoca su labor en la sanidad animal y vegetal, no en la fiscalización industrial de límites ambientales generales."
+      },
+      {
+        "text": "Superintendencia Nacional de Servicios de Saneamiento (SUNASS).",
+        "isCorrect": false,
+        "rationale": "SUNASS regula los servicios de agua potable y alcantarillado, no el sistema general de fiscalización de OEFA."
+      }
+    ],
+    "hint": "Recuerda las siglas de la entidad peruana adscrita al MINAM responsable de la fiscalización ambiental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis de causas de un incidente ambiental, ¿cuál es la orientación principal que busca la metodología de los '5 Porqués'?",
+    "opciones": [
+      {
+        "text": "Llegar a la causa raíz profundizando en las fallas del proceso para evitar que el evento vuelva a ocurrir.",
+        "isCorrect": true,
+        "rationale": "La metodología indaga sistemáticamente hasta encontrar la deficiencia procedimental o estructural de fondo, sin detenerse en explicaciones superficiales."
+      },
+      {
+        "text": "Identificar al trabajador culpable para aplicarle una sanción disciplinaria inmediata.",
+        "isCorrect": false,
+        "rationale": "Las metodologías de investigación buscan mejorar el proceso y prevenir la recurrencia, no buscar chivos expiatorios."
+      },
+      {
+        "text": "Justificar ante la autoridad que el accidente fue un evento fortuito imposible de prever.",
+        "isCorrect": false,
+        "rationale": "Su fin no es el deslinde de responsabilidades legales, sino el diagnóstico objetivo de fallas operativas."
+      },
+      {
+        "text": "Reducir el presupuesto asignado al mantenimiento preventivo de la planta.",
+        "isCorrect": false,
+        "rationale": "El análisis de causa raíz suele poner en evidencia la necesidad de reforzar recursos o mantenimiento, no recortarlos."
+      },
+      {
+        "text": "Calcular de manera exacta el monto en soles de la multa administrativa que aplicará el Estado.",
+        "isCorrect": false,
+        "rationale": "La herramienta determina fallas lógicas de procesos, no fórmulas de sanción ni montos pecuniarios."
+      }
+    ],
+    "hint": "Enfócate en la meta preventiva que indaga la falla de origen en los procedimientos y no en la búsqueda de culpables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué evalúa fundamentalmente una Matriz de Aspectos e Impactos Ambientales?",
+    "opciones": [
+      {
+        "text": "Las actividades u operaciones que interactúan con el ambiente y las alteraciones que estas provocan en los recursos naturales.",
+        "isCorrect": true,
+        "rationale": "La matriz contrapone las acciones de la empresa (aspectos) con los cambios reales o potenciales que causan en el entorno (impactos)."
+      },
+      {
+        "text": "El nivel de ventas mensuales alcanzado por el departamento comercial.",
+        "isCorrect": false,
+        "rationale": "La matriz ambiental se enfoca en variables ecológicas y de proceso, no en la facturación comercial."
+      },
+      {
+        "text": "La escala salarial y los beneficios de los gerentes corporativos.",
+        "isCorrect": false,
+        "rationale": "Los temas salariales pertenecen a la gestión de recursos humanos y no a la evaluación de impactos ambientales."
+      },
+      {
+        "text": "El inventario físico de muebles y equipos informáticos de las oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "A menos que se evalúe la generación de residuos electrónicos, la matriz no es un mero inventario patrimonial de oficina."
+      },
+      {
+        "text": "La cantidad de licitaciones públicas ganadas durante el año fiscal.",
+        "isCorrect": false,
+        "rationale": "El desempeño en concursos públicos es un resultado de negocio, no una métrica de impacto sobre el ecosistema."
+      }
+    ],
+    "hint": "Diferencia entre el elemento de la actividad humana que interactúa con el medio y el cambio resultante en la naturaleza.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el Diagrama de Ishikawa (causa-efecto), ¿cuáles son las categorías comúnmente conocidas como las '6M'?",
+    "opciones": [
+      {
+        "text": "Método, Mano de obra, Materiales, Medio ambiente, Maquinaria y Medición.",
+        "isCorrect": true,
+        "rationale": "Son los seis pilares estándar organizados en la espina de pescado para agrupar las posibles causas de un problema."
+      },
+      {
+        "text": "Mercado, Moneda, Margen, Mantenimiento, Misión y Meta.",
+        "isCorrect": false,
+        "rationale": "Estos términos pertenecen a áreas de finanzas, estrategia y mercadotecnia, no a las 6M operativas del diagrama de causa-efecto."
+      },
+      {
+        "text": "Manejo, Movimiento, Memoria, Modelo, Modificación y Muestra.",
+        "isCorrect": false,
+        "rationale": "Aunque contienen la letra M, no forman parte del estándar del análisis de causa raíz creado por Ishikawa."
+      },
+      {
+        "text": "Matriz, Módulo, Métrica, Mapeo, Mantenimiento y Mitigación.",
+        "isCorrect": false,
+        "rationale": "Son palabras técnicas utilizadas en proyectos, pero no corresponden al conjunto de categorías de análisis de procesos."
+      },
+      {
+        "text": "Minera, Metalurgia, Molienda, Montaje, Muestreo y Monitor.",
+        "isCorrect": false,
+        "rationale": "Son conceptos operacionales específicos de un rubro minero, no las dimensiones universales de las 6M."
+      }
+    ],
+    "hint": "Recuerda los seis factores operativos básicos representados en las espinas principales del diagrama de pescado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el periodo habitual de validez que tiene un certificado ISO 14001 una vez concedido por una casa certificadora?",
+    "opciones": [
+      {
+        "text": "3 años, condicionado a auditorías anuales de seguimiento.",
+        "isCorrect": true,
+        "rationale": "La certificación otorga una vigencia de tres años, durante los cuales la empresa debe pasar por verificaciones o auditorías periódicas de seguimiento."
+      },
+      {
+        "text": "10 años sin necesidad de posteriores revisiones.",
+        "isCorrect": false,
+        "rationale": "Ningún certificado de sistema de gestión ISO otorga un plazo tan extenso sin revisiones periódicas."
+      },
+      {
+        "text": "6 meses, requiriendo renovación dos veces por año.",
+        "isCorrect": false,
+        "rationale": "El plazo de seis meses resulta impráctico para la dinámica de recertificación de sistemas de gestión integrados."
+      },
+      {
+        "text": "Indefinido, mientras la empresa siga pagando su cuota municipal.",
+        "isCorrect": false,
+        "rationale": "El certificado vence necesariamente a los tres años y no depende del pago de arbitrios o licencias municipales."
+      },
+      {
+        "text": "1 año, expirando automáticamente sin opción a auditorías de seguimiento.",
+        "isCorrect": false,
+        "rationale": "El ciclo de certificación es trienal; al año corresponde una auditoría de seguimiento, no el vencimiento del certificado completo."
+      }
+    ],
+    "hint": "Piensa en el ciclo estándar trienal utilizado por las casas certificadoras internacionales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes componentes o factores ambientales son evaluados comúnmente ante posibles impactos de las actividades industriales?",
+    "opciones": [
+      {
+        "text": "Calidad del aire y emisiones atmosféricas.",
+        "isCorrect": true,
+        "rationale": "El componente aire es susceptible de ser alterado por partículas en suspensión, gases de combustión o ruido."
+      },
+      {
+        "text": "Recursos hídricos (agua subterránea y superficial).",
+        "isCorrect": true,
+        "rationale": "El agua puede recibir efluentes o contaminantes que afectan su calidad bioquímica o su disponibilidad."
+      },
+      {
+        "text": "Calidad del suelo.",
+        "isCorrect": true,
+        "rationale": "El suelo es un receptor directo de residuos sólidos, vertimientos de hidrocarburos o sustancias peligrosas."
+      },
+      {
+        "text": "Conservación de la flora y fauna local.",
+        "isCorrect": true,
+        "rationale": "La biodiversidad biológica de la zona de influencia forma parte de los factores ambientales clave a proteger."
+      },
+      {
+        "text": "Nivel de volatilidad de la bolsa de valores internacional.",
+        "isCorrect": false,
+        "rationale": "La volatilidad bursátil es un indicador financiero global, no un elemento del medio ambiente físico o biológico."
+      }
+    ],
+    "hint": "Elige todos aquellos componentes naturales o biológicos descritos que conforman el medio ambiente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función o rol esencial de la Alta Dirección en relación con el sistema de gestión ambiental ISO 14001?",
+    "opciones": [
+      {
+        "text": "Demostrar liderazgo, respaldar la política ambiental y asignar los recursos necesarios.",
+        "isCorrect": true,
+        "rationale": "La gerencia debe comprometerse de manera activa, proveyendo los medios financieros y humanos, y guiando el cumplimiento estratégico."
+      },
+      {
+        "text": "Delegar totalmente la responsabilidad ambiental sin involucrarse en las auditorías.",
+        "isCorrect": false,
+        "rationale": "La norma exige expresamente que la Alta Dirección ejerza el liderazgo directo y rinda cuentas del sistema."
+      },
+      {
+        "text": "Abonar personalmente las multas pecuniarias que reciba la empresa.",
+        "isCorrect": false,
+        "rationale": "El liderazgo implica gestión y provisión de recursos organizacionales, no el pago de sanciones a título personal."
+      },
+      {
+        "text": "Redactar individualmente todos los procedimientos e instructivos técnicos de la planta.",
+        "isCorrect": false,
+        "rationale": "Los procedimientos detallados son elaborados por equipos multidisciplinarios e ingenieros de área, no en forma solitaria por la gerencia general."
+      },
+      {
+        "text": "Reemplazar los controles operativos por capacitaciones virtuales exclusivas para practicantes.",
+        "isCorrect": false,
+        "rationale": "El liderazgo debe ser transversal para toda la organización y exige implementar controles técnicos reales."
+      }
+    ],
+    "hint": "Considera el concepto de liderazgo que requiere proveer presupuestos, firmar compromisos estratégicos y dar el ejemplo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué se entiende por 'Límite Máximo Permisible' (LMP) en la regulación ambiental peruana?",
+    "opciones": [
+      {
+        "text": "La medida de la concentración máxima de elementos físicos o químicos permitida legalmente en las emisiones o efluentes de una actividad.",
+        "isCorrect": true,
+        "rationale": "Los LMP establecen la frontera legal que no debe ser sobrepasada por las descargas o emisiones de una empresa para evitar daños ambientales."
+      },
+      {
+        "text": "El número máximo de trabajadores que se permite contratar en una planta industrial.",
+        "isCorrect": false,
+        "rationale": "Los aforos o contratos laborales se rigen por normas de defensa civil o laborales, no por los LMP ambientales."
+      },
+      {
+        "text": "La cantidad mínima de residuos que una empresa debe producir obligatoriamente por día.",
+        "isCorrect": false,
+        "rationale": "Los LMP buscan restringir los contaminantes emitidos, no imponer mínimos de generación de desperdicios."
+      },
+      {
+        "text": "El valor máximo en soles que una empresa está autorizada a invertir en tecnología limpia.",
+        "isCorrect": false,
+        "rationale": "No existe un techo legal que limite el presupuesto que una empresa desee destinar al medio ambiente."
+      },
+      {
+        "text": "El estándar que define la ganancia máxima que puede obtener una corporación petrolera.",
+        "isCorrect": false,
+        "rationale": "Los LMP regulan aspectos físico-químicos contaminantes, no la rentabilidad o los márgenes comerciales."
+      }
+    ],
+    "hint": "Relaciona el término con la cantidad permitida de un contaminante liberado al agua, aire o suelo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Siguiendo la jerarquía de controles de riesgos ambientales, ¿cuál representa la medida preventiva de mayor jerarquía cuando es técnicamente viable?",
+    "opciones": [
+      {
+        "text": "Eliminación de la fuente o actividad que genera el aspecto ambiental adverso.",
+        "isCorrect": true,
+        "rationale": "La eliminación suprime por completo el riesgo de raíz, siendo la opción preferente frente a la sustitución o los controles de ingeniería."
+      },
+      {
+        "text": "Entrega de equipos de protección personal (EPP) a los trabajadores.",
+        "isCorrect": false,
+        "rationale": "El uso de EPP es la última barrera de protección y la menos eficaz para reducir el impacto directo en el ecosistema."
+      },
+      {
+        "text": "Dictado de charlas de capacitación de 5 minutos al inicio del turno.",
+        "isCorrect": false,
+        "rationale": "Los controles administrativos educan, pero no erradican físicamente la fuente contaminante."
+      },
+      {
+        "text": "Colocación de letreros y afiches informativos sobre el reciclaje.",
+        "isCorrect": false,
+        "rationale": "La señalización es una medida administrativa preventiva secundaria que no elimina el contaminante."
+      },
+      {
+        "text": "Elaboración de un informe de justificación para la gerencia.",
+        "isCorrect": false,
+        "rationale": "Redactar un documento interno no constituye una barrera física ni operativa en la jerarquía de controles."
+      }
+    ],
+    "hint": "Busca la acción que suprime por completo la causa o ingrediente contaminante antes de intentar contenerlo o usar protección.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes corresponden a parámetros o indicadores (KPIs) ambientales habitualmente monitoreados en el entorno industrial?",
+    "opciones": [
+      {
+        "text": "Concentración de gases como óxidos de azufre o monóxido de carbono en el aire.",
+        "isCorrect": true,
+        "rationale": "Mide las emisiones gaseosas para asegurar que no se excedan los estándares de calidad ambiental."
+      },
+      {
+        "text": "Nivel de Demanda Bioquímica de Oxígeno (DBO) en efluentes líquidos.",
+        "isCorrect": true,
+        "rationale": "Permite determinar el grado de contaminación orgánica presente en las aguas residuales que se descargan."
+      },
+      {
+        "text": "Volumen y frecuencia de generación de residuos sólidos peligrosos.",
+        "isCorrect": true,
+        "rationale": "Mide la cantidad de desechos que requieren un manejo especial para controlar el impacto en el almacenamiento y disposición."
+      },
+      {
+        "text": "Niveles de presión sonora o ruido ambiental medidos en decibeles.",
+        "isCorrect": true,
+        "rationale": "Permite vigilar que el ruido de la maquinaria no sobrepase los límites máximos que afectan el entorno."
+      },
+      {
+        "text": "Número de seguidores en las redes sociales de la empresa.",
+        "isCorrect": false,
+        "rationale": "El número de seguidores refleja el alcance comunicacional, pero no cuantifica un aspecto ambiental o contaminante físico."
+      }
+    ],
+    "hint": "Selecciona todos los indicadores técnicos que se usan para medir la contaminación o emisiones al agua, aire, suelo o ruido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental en el Perú entre la aplicación de la Ley de Seguridad y Salud en el Trabajo y un Sistema de Gestión Ambiental ISO 14001?",
+    "opciones": [
+      {
+        "text": "El sistema de seguridad laboral es obligatorio por ley para todas las empresas, mientras que ISO 14001 es de adopción voluntaria.",
+        "isCorrect": true,
+        "rationale": "La ley 29783 obliga a todo empleador a tener un sistema de SST; en cambio, tener la norma ISO 14001 es una decisión optativa."
+      },
+      {
+        "text": "La Ley de Seguridad se aplica a empresas mineras y la ISO 14001 solo a bancos y comercios.",
+        "isCorrect": false,
+        "rationale": "Ambos enfoques aplican a cualquier sector, diferenciándose en su obligatoriedad legal y no por el rubro."
+      },
+      {
+        "text": "La ISO 14001 exige multas pecuniarias dictadas por el Ministerio de Trabajo.",
+        "isCorrect": false,
+        "rationale": "Las multas las imponen los organismos estatales (OEFA, SUNAFIL), no la norma técnica internacional ISO."
+      },
+      {
+        "text": "La Ley de Seguridad es dictada por OEFA y la ISO 14001 por la municipalidad distrital.",
+        "isCorrect": false,
+        "rationale": "Las competencias estatales de SST corresponden a la autoridad laboral (MTPE/SUNAFIL), no a OEFA ni a los municipios."
+      },
+      {
+        "text": "No existe ninguna diferencia, ya que ambas son legalmente obligatorias para operar.",
+        "isCorrect": false,
+        "rationale": "La legislación peruana distingue con claridad los requisitos legales obligatorios de las certificaciones voluntarias de calidad o ambiente."
+      }
+    ],
+    "hint": "Recuerda cuál de los dos marcos es exigido por ley a todo empleador peruano bajo amenaza de sanción estatal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de una auditoría de certificación ISO 14001, ¿cómo se define formalmente una 'No Conformidad'?",
+    "opciones": [
+      {
+        "text": "Como el incumplimiento comprobado de un requisito establecido en la norma, la ley o la documentación interna.",
+        "isCorrect": true,
+        "rationale": "Se produce una No Conformidad cuando se constata objetivamente que no se cumple un punto exigido por la norma ISO o el sistema."
+      },
+      {
+        "text": "Como una sugerencia amigable del auditor para remodelar las oficinas corporativas.",
+        "isCorrect": false,
+        "rationale": "Las sugerencias o recomendaciones son observaciones u oportunidades de mejora, no hallazgos de incumplimiento formal."
+      },
+      {
+        "text": "Como el reclamo de un trabajador por disconformidad con su horario de almuerzo.",
+        "isCorrect": false,
+        "rationale": "Un reclamo laboral interno no representa una falla en el cumplimiento de un requisito de la norma ambiental."
+      },
+      {
+        "text": "Como la decisión de la gerencia de suspender las vacaciones de un empleado.",
+        "isCorrect": false,
+        "rationale": "Las decisiones administrativas internas de personal no constituyen 'no conformidades' del sistema ambiental."
+      },
+      {
+        "text": "Como la falta de pago de las cuotas del sindicato de trabajadores.",
+        "isCorrect": false,
+        "rationale": "Las obligaciones sindicales obedecen a la norma laboral colectiva y no a la auditoría de un estándar ambiental."
+      }
+    ],
+    "hint": "Visualiza el término que indica que un criterio o requisito formal no se está cumpliendo en la práctica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al formular un objetivo ambiental bajo el criterio SMART, ¿qué significa la característica de ser 'Medible'?",
+    "opciones": [
+      {
+        "text": "Que debe ser posible cuantificar su avance a través de indicadores concretos y números.",
+        "isCorrect": true,
+        "rationale": "Un objetivo medible exige contener cifras, porcentajes o métricas concretas que permitan verificar fehacientemente su cumplimiento."
+      },
+      {
+        "text": "Que debe ser una expresión abstracta sobre el amor por la naturaleza.",
+        "isCorrect": false,
+        "rationale": "Las expresiones generales o abstractas carecen de valor de medición para los sistemas de gestión."
+      },
+      {
+        "text": "Que debe aprobarse exclusivamente por el sindicato de la empresa.",
+        "isCorrect": false,
+        "rationale": "La cualidad de ser medible alude a la presencia de parámetros numéricos, no a la entidad de aprobación."
+      },
+      {
+        "text": "Que debe redactarse únicamente en el idioma inglés.",
+        "isCorrect": false,
+        "rationale": "El idioma en el que se formule el objetivo no determina su capacidad de ser cuantificado numéricamente."
+      },
+      {
+        "text": "Que no puede ser modificado por un periodo de diez años.",
+        "isCorrect": false,
+        "rationale": "La estabilidad temporal corresponde a la vigencia, no a la propiedad de cuantificación métrica."
+      }
+    ],
+    "hint": "Asocia este concepto con la presencia de datos numéricos o porcentajes de verificación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes acciones pertenecen propiamente a la etapa de 'Verificar' en el Ciclo PHVA de la ISO 14001?",
+    "opciones": [
+      {
+        "text": "Realizar la medición periódica de los indicadores ambientales y la evaluación de los controles operacionales.",
+        "isCorrect": true,
+        "rationale": "La comprobación de resultados mediante datos y métricas es la esencia del seguimiento en la etapa de verificación."
+      },
+      {
+        "text": "Ejecutar auditorías internas para revisar si el sistema se mantiene eficazmente.",
+        "isCorrect": true,
+        "rationale": "Las auditorías internas son el mecanismo sistemático para verificar el cumplimiento global del sistema."
+      },
+      {
+        "text": "Evaluar el grado de cumplimiento de los requisitos legales aplicables a la organización.",
+        "isCorrect": true,
+        "rationale": "Comparar el desempeño real contra la matriz legal forma parte del proceso de comprobación."
+      },
+      {
+        "text": "Redactar la versión inicial de la política ambiental durante la constitución de la empresa.",
+        "isCorrect": false,
+        "rationale": "Elaborar la política inicial forma parte de las decisiones de liderazgo y de la fase de planificación."
+      },
+      {
+        "text": "Instalar físicamente la maquinaria de producción por primera vez en la planta.",
+        "isCorrect": false,
+        "rationale": "La instalación y puesta en marcha pertenecen a la fase operativa de 'Hacer'."
+      }
+    ],
+    "hint": "Selecciona las opciones centradas en revisar, supervisar, auditar o comparar datos frente a lo esperado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Para asegurar la confiabilidad técnica de los datos en un plan de monitoreo ambiental, ¿qué condición deben cumplir los equipos de medición?",
+    "opciones": [
+      {
+        "text": "Estar debidamente calibrados y contar con sus certificados de calibración vigentes.",
+        "isCorrect": true,
+        "rationale": "La calibración garantiza que los equipos miden con precisión y que sus resultados resultan válidos ante una auditoría o fiscalización."
+      },
+      {
+        "text": "Ser de color verde para hacer juego con la temática ecológica.",
+        "isCorrect": false,
+        "rationale": "El color de la carcasa es un aspecto puramente estético y no influye en la precisión del instrumento."
+      },
+      {
+        "text": "Haber sido fabricados en el mismo año en que se realiza la auditoría.",
+        "isCorrect": false,
+        "rationale": "Un equipo de años anteriores es plenamente válido si cuenta con el mantenimiento y la calibración acreditada."
+      },
+      {
+        "text": "Pertenecer únicamente a una universidad pública.",
+        "isCorrect": false,
+        "rationale": "Las empresas pueden utilizar equipos propios o contratar laboratorios acreditados sin importar la propiedad de la marca."
+      },
+      {
+        "text": "Funcionar de manera continua sin requerir nunca mantenimiento.",
+        "isCorrect": false,
+        "rationale": "Todo instrumento de medición precisa de mantenimiento periódico y re-calibraciones periódicas para dar lecturas certeras."
+      }
+    ],
+    "hint": "Piensa en el procedimiento técnico que asegura que un instrumento de medición ofrece lecturas exactas y confiables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es la Política Ambiental de una organización dentro del marco de la ISO 14001?",
+    "opciones": [
+      {
+        "text": "La declaración formal de los compromisos, principios e intenciones ambientales respaldada por la Alta Dirección.",
+        "isCorrect": true,
+        "rationale": "Es el documento cumbre firmado por la gerencia donde la empresa asume compromisos concretos de protección y cumplimiento."
+      },
+      {
+        "text": "Un folleto publicitario diseñado exclusivamente para promocionar las ventas.",
+        "isCorrect": false,
+        "rationale": "Aunque fortalece la imagen corporativa, la política es un documento formal del sistema de gestión y no un anuncio publicitario."
+      },
+      {
+        "text": "El comprobante de pago emitido por el Ministerio del Ambiente.",
+        "isCorrect": false,
+        "rationale": "La política es una declaración de principios redactada por la organización, no una boleta o tasa administrativa."
+      },
+      {
+        "text": "Un contrato privado entre los trabajadores y el sindicato.",
+        "isCorrect": false,
+        "rationale": "La política emana del liderazgo de la empresa y abarca a todas las partes interesadas, no constituye un pacto colectivo."
+      },
+      {
+        "text": "El manual de instrucciones de uso de las maquinarias pesadas.",
+        "isCorrect": false,
+        "rationale": "Los manuales de uso son documentos técnicos específicos operacionales, no directivas estratégicas corporativas."
+      }
+    ],
+    "hint": "Busca el documento de máximo nivel firmado por la gerencia que establece el compromiso corporativo con el entorno.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué entidad gubernamental en el Perú se encarga de regular y otorgar licencias relativas al uso de recursos hídricos y vertimientos de agua?",
+    "opciones": [
+      {
+        "text": "Autoridad Nacional del Agua (ANA).",
+        "isCorrect": true,
+        "rationale": "La ANA es el ente rector encargado de gestionar y controlar la calidad y uso sostenible de las fuentes hídricas en el Perú."
+      },
+      {
+        "text": "Servicio Nacional de Meteorología e Hidrología del Perú (SENAMHI).",
+        "isCorrect": false,
+        "rationale": "SENAMHI brinda pronósticos climáticos y monitorea el tiempo, no aprueba derechos de agua ni autoriza vertimientos."
+      },
+      {
+        "text": "Superintendencia Nacional de Aduanas y de Administración Tributaria (SUNAT).",
+        "isCorrect": false,
+        "rationale": "SUNAT recauda tributos y administra aduanas, no tiene competencia sobre la regulación de vertimientos hídricos."
+      },
+      {
+        "text": "Instituto Geofísico del Perú (IGP).",
+        "isCorrect": false,
+        "rationale": "El IGP investiga fenómenos sísmicos y geofísicos, no administra la gestión regulatoria de los recursos hídricos."
+      },
+      {
+        "text": "Ministerio de Transportes y Comunicaciones (MTC).",
+        "isCorrect": false,
+        "rationale": "El MTC regula la infraestructura vial y las telecomunicaciones, no las licencias de vertimientos en efluentes."
+      }
+    ],
+    "hint": "Identifica las siglas de la entidad peruana adscrita al MIDAGRI encargada de la administración del agua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes grupos o entidades constituyen 'partes interesadas' externas dentro del contexto de una empresa?",
+    "opciones": [
+      {
+        "text": "Organismos fiscalizadores del Estado (ej. OEFA).",
+        "isCorrect": true,
+        "rationale": "Los entes reguladores externos tienen un interés directo en verificar el cumplimiento normativo."
+      },
+      {
+        "text": "Comunidades locales y poblaciones vecinas a la operación.",
+        "isCorrect": true,
+        "rationale": "Los vecinos del área de influencia sufren directamente los efectos o se benefician de la gestión ambiental."
+      },
+      {
+        "text": "Clientes y contratistas de la cadena de valor.",
+        "isCorrect": true,
+        "rationale": "Exigen a la organización estándares adecuados para mantener relaciones comerciales o de homologación."
+      },
+      {
+        "text": "Municipalidad distrital o provincial del sector.",
+        "isCorrect": true,
+        "rationale": "Regula permisos, gestión de residuos municipales y la convivencia en la circunscripción."
+      },
+      {
+        "text": "El departamento de contabilidad interna de la propia empresa.",
+        "isCorrect": false,
+        "rationale": "El área de contabilidad es una parte interesada interna, no una entidad o grupo externo."
+      }
+    ],
+    "hint": "Selecciona todas las personas, grupos o instituciones que operan fuera de la estructura interna del negocio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito principal de llevar a cabo una 'Pre-auditoría' o auditoría interna preliminar antes de la auditoría de certificación oficial?",
+    "opciones": [
+      {
+        "text": "Evaluar de manera previa el grado de cumplimiento de los requisitos e identificar brechas para corregirlas a tiempo.",
+        "isCorrect": true,
+        "rationale": "La pre-auditoría permite diagnosticar el estado del sistema, detectar fallas antes de que venga el auditor externo y aplicar acciones correctivas."
+      },
+      {
+        "text": "Sustituir formalmente a la entidad certificadora internacional para ahorrar el costo del certificado.",
+        "isCorrect": false,
+        "rationale": "Una pre-auditoría no otorga la certificación internacional formal ante el mercado."
+      },
+      {
+        "text": "Asegurar que la empresa quede legalmente blindada ante cualquier fiscalización tributaria.",
+        "isCorrect": false,
+        "rationale": "El proceso de verificación ambiental no influye ni otorga inmunidad en materia fiscal o tributaria."
+      },
+      {
+        "text": "Incurrir en gastos presupuestales para evitar pagar dividendos a los accionistas.",
+        "isCorrect": false,
+        "rationale": "La pre-auditoría es una inversión operativa de control preventivo, no una maniobra financiera de evasión."
+      },
+      {
+        "text": "Despedir a los colaboradores que no hayan memorizado el manual de calidad.",
+        "isCorrect": false,
+        "rationale": "El objetivo es evaluar y fortalecer la madurez del proceso, no implementar medidas punitivas de personal."
+      }
+    ],
+    "hint": "Piensa en el ensayo previo que ayuda a detectar errores y brechas antes de rendir el examen oficial de certificación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere la perspectiva de 'Ciclo de Vida' incorporada en la norma ISO 14001?",
+    "opciones": [
+      {
+        "text": "A considerar y controlar los impactos ambientales en todas las etapas, desde las materias primas hasta la disposición final.",
+        "isCorrect": true,
+        "rationale": "Implica analizar la huella ambiental no solo dentro de la fábrica, sino considerando insumos, transporte, uso y desecho final del producto."
+      },
+      {
+        "text": "Al cálculo de la esperanza de vida promedio de los empleados de la organización.",
+        "isCorrect": false,
+        "rationale": "La esperanza de vida humana es un dato demográfico o de salud, no el análisis del producto que exige la norma."
+      },
+      {
+        "text": "A la vigencia que tienen las licencias comerciales otorgadas por el gobierno distrital.",
+        "isCorrect": false,
+        "rationale": "El concepto no trata de trámites administrativos, sino de la trazabilidad ecológica de los bienes y servicios producidos."
+      },
+      {
+        "text": "Al tiempo que tarda una maquinaria en depreciarse contablemente en los libros de la empresa.",
+        "isCorrect": false,
+        "rationale": "La depreciación económica es un criterio financiero, muy diferente a la trazabilidad ambiental del ciclo de vida."
+      },
+      {
+        "text": "A la duración de la jornada laboral diaria de 8 horas estipulada por ley.",
+        "isCorrect": false,
+        "rationale": "El turno de trabajo regula las horas laborales de las personas, no el recorrido del producto o servicio en el ecosistema."
+      }
+    ],
+    "hint": "Enfócate en la trazabilidad que abarca desde la extracción de insumos naturales hasta que el producto es desechado o reciclado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el carácter legal de la norma ISO 14001 para las empresas en el contexto peruano y qué ventaja estratégica principal ofrece su implementación?",
+    "opciones": [
+      {
+        "text": "Es de cumplimiento voluntario y otorga ventajas como preferencia en licitaciones complejas y acceso a préstamos de entidades como el Banco Mundial.",
+        "isCorrect": true,
+        "rationale": "La norma ISO 14001 no es fiscalizable por ley en Perú, pero brinda diferenciación competitiva y respaldo financiero internacional a las organizaciones que la adoptan."
+      },
+      {
+        "text": "Es de carácter obligatorio para todas las PYMEs y grandes empresas, garantizando la exoneración del pago de impuestos ambientales estatales.",
+        "isCorrect": false,
+        "rationale": "Ninguna norma ISO es obligatoria por ley general en Perú, ni exime a las empresas del pago de tributos o multas reguladas."
+      },
+      {
+        "text": "Es obligatoria exclusivamente para el sector minero-energético como reemplazo total del Estudio de Impacto Ambiental (EIA).",
+        "isCorrect": false,
+        "rationale": "El Estudio de Impacto Ambiental es un instrumento legal obligatorio e independiente de la ISO 14001, la cual sigue siendo voluntaria."
+      },
+      {
+        "text": "Es voluntaria, pero su principal función es sustituir las fiscalizaciones ambientales realizadas por el organismo estatal OEFA.",
+        "isCorrect": false,
+        "rationale": "Tener la certificación ISO 14001 no reemplaza las atribuciones fiscalizadoras ni las sanciones administrativas del OEFA."
+      },
+      {
+        "text": "Es obligatoria únicamente para empresas que manejan residuos sólidos no peligrosos en zonas urbanas.",
+        "isCorrect": false,
+        "rationale": "La gestión de residuos sólidos está normada por ley, pero certificar un SGA bajo ISO 14001 es siempre una decisión libre de la empresa."
+      }
+    ],
+    "hint": "Diferencia entre las exigencias legales estatales directas y las certificaciones internacionales que asumen las empresas por competitividad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco del ciclo de mejora continua (PHVA) aplicado a un Sistema de Gestión Ambiental (SGA), ¿en qué fase se lleva a cabo la evaluación de los indicadores de desempeño (KPIs) y los monitoreos de efluentes o emisiones?",
+    "opciones": [
+      {
+        "text": "Planificar",
+        "isCorrect": false,
+        "rationale": "En la etapa de planificación se establecen las metas, programas y objetivos ambientales, pero no se miden los resultados de la ejecución."
+      },
+      {
+        "text": "Hacer",
+        "isCorrect": false,
+        "rationale": "La fase de hacer abarca la ejecución de las actividades y procedimientos programados, mas no el análisis sistemático de los indicadores."
+      },
+      {
+        "text": "Verificar",
+        "isCorrect": true,
+        "rationale": "La fase de verificar consiste precisamente en el seguimiento, la medición mediante indicadores y el cotejo de datos frente a los objetivos previstos."
+      },
+      {
+        "text": "Actuar",
+        "isCorrect": false,
+        "rationale": "En la etapa de actuar se toman decisiones y acciones correctivas a partir de las desviaciones detectadas durante la verificación."
+      },
+      {
+        "text": "Liderar",
+        "isCorrect": false,
+        "rationale": "El liderazgo es un eje transversal en la norma que impulsa el ciclo PHVA, pero no constituye una fase de medición operativa de KPIs en la estructura PHVA."
+      }
+    ],
+    "hint": "Piensa en el paso en el cual se revisan las cifras recolectadas para saber si se alcanzaron las metas trazadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el marco legal ambiental y laboral peruano, ¿cuál es la diferencia fundamental entre la gestión ambiental bajo ISO 14001 y el Sistema de Gestión de Seguridad y Salud en el Trabajo (SGSST)?",
+    "opciones": [
+      {
+        "text": "El SGSST exige comités paritarios y es de carácter strictly obligatorio por ley para todas las empresas, mientras que el SGA bajo ISO 14001 es voluntario.",
+        "isCorrect": true,
+        "rationale": "En Perú la normativa legal de seguridad exige obligatoriamente un sistema de gestión a toda organización, a diferencia de la gestión ambiental que no exige un SGA obligatorio general."
+      },
+      {
+        "text": "El SGA bajo ISO 14001 requiere la aprobación del Ministerio de Trabajo, mientras que el SGSST requiere auditorías exclusivas de OEFA.",
+        "isCorrect": false,
+        "rationale": "El OEFA fiscaliza el cumplimiento ambiental y no la seguridad laboral; además la ISO 14001 no la aprueba el Ministerio de Trabajo."
+      },
+      {
+        "text": "El SGSST se aplica exclusivamente en empresas mineras, mientras que la ISO 14001 aplica a todos los sectores económicos.",
+        "isCorrect": false,
+        "rationale": "La ley de Seguridad y Salud en el Trabajo aplica transversalmente a todos los sectores económicos en Perú, no solo a la minería."
+      },
+      {
+        "text": "Ambos sistemas son voluntarios y solo se diferencian en que la ISO 14001 no requiere asignación de recursos económicos.",
+        "isCorrect": false,
+        "rationale": "El SGSST es legalmente obligatorio y la ISO 14001 sí requiere una inversión de recursos económicos para su implementación."
+      },
+      {
+        "text": "La ISO 14001 exige un libro de actas registrado en el Ministerio de Energía y Minas, a diferencia del SGSST que no requiere registros.",
+        "isCorrect": false,
+        "rationale": "Es el SGSST el que cuenta con registros obligatorios por norma legal, mientras que la ISO 14001 no exige libros registrados en dicho ministerio."
+      }
+    ],
+    "hint": "Considera qué sistema exige imperativamente el Estado peruano a cualquier empleador frente a cuál es una decisión corporativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para asegurar la comprensión y la continuidad operativa en la aplicación de los procedimientos de un SGA bajo la ISO 14001, ¿cuáles de los siguientes elementos deben acompañar a la documentación según lo expuesto en el curso?",
+    "opciones": [
+      {
+        "text": "Un flujograma sintético que resuma el procedimiento en una representación gráfica para los colaboradores.",
+        "isCorrect": true,
+        "rationale": "El flujograma condensa documentos extensos en un gráfico de fácil interpretación que facilita la capacitación e interiorización del personal."
+      },
+      {
+        "text": "Indicadores ambientales (KPIs) específicos para vigilar el correcto aprovechamiento de recursos y cumplimiento de controles.",
+        "isCorrect": true,
+        "rationale": "Los KPIs permiten monitorear objetivamente si los procedimientos operativos están logrando la reducción de impactos trazada."
+      },
+      {
+        "text": "Una exención explícita de sanciones legales ante fiscalizaciones del OEFA en caso de fallas operativas.",
+        "isCorrect": false,
+        "rationale": "Ningún documento interno de un SGA puede eximir a una empresa de las fiscalizaciones o sanciones de los organismos estatales."
+      },
+      {
+        "text": "Un registro de antecedentes penales de cada trabajador involucrado en el manejo de residuos.",
+        "isCorrect": false,
+        "rationale": "El perfil administrativo de los trabajadores no forma parte de los requisitos documentales de los procedimientos del SGA."
+      },
+      {
+        "text": "Una declaración jurada notarial de no emisión de gases contaminantes firmada por la municipalidad.",
+        "isCorrect": false,
+        "rationale": "Las municipalidades no emiten declaraciones notariales de exención de gases para los procedimientos internos de un SGA."
+      }
+    ],
+    "hint": "Identifica los instrumentos prácticos mencionados para simplificar procesos extensos y medir su eficacia continua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al investigar la causa raíz de un derrame no deseado mediante la metodología de los '5 Porqués', ¿cuál es el enfoque metodológico correcto que debe seguir el equipo de investigación?",
+    "opciones": [
+      {
+        "text": "Cuestionar la secuencia lógica del proceso hasta identificar las fallas de planificación o gestión que originaron la desviación, sin buscar culpar a un individuo.",
+        "isCorrect": true,
+        "rationale": "Los 5 Porqués buscan profundizar en las falencias del proceso, la capacitación o la infraestructura, no señalar culpables individuales."
+      },
+      {
+        "text": "Identificar al trabajador responsable de la maniobra para asignarle la responsabilidad pecuniaria de la sanción.",
+        "isCorrect": false,
+        "rationale": "Atribuir la culpa a un trabajador interrumpe la investigación y no resuelve la causa raíz organizacional que permitió el evento."
+      },
+      {
+        "text": "Detener el análisis en el primer 'porqué' cuando se comprueba que un equipo falló por desgaste mecánico.",
+        "isCorrect": false,
+        "rationale": "Quedarse en la falla mecánica impide descubrir por qué falló el plan de mantenimiento preventivo o la inspección previa."
+      },
+      {
+        "text": "Aplicar la técnica únicamente para redactar el informe sancionador dirigido a la municipalidad local.",
+        "isCorrect": false,
+        "rationale": "Esta herramienta metodológica sirve para corregir desviaciones del sistema interno, no para fines meramente punitivos externos."
+      },
+      {
+        "text": "Reemplazar los datos técnicos medidos en campo por suposiciones generales del comité de gerencia.",
+        "isCorrect": false,
+        "rationale": "La metodología requiere basarse en hechos reales y evidencias de campo verificables para trazar la cadena de causalidad."
+      }
+    ],
+    "hint": "Piensa en el principio analítico que busca corregir la falla del sistema en lugar de sancionar al personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la aplicación del Diagrama de Ishikawa (Causa-Efecto) con el enfoque de las 6M para un incidente de contaminación ambiental, ¿en qué categoría se clasifican los eventos originados por sismos o cambios climáticos extremos?",
+    "opciones": [
+      {
+        "text": "Mano de obra",
+        "isCorrect": false,
+        "rationale": "Mano de obra agrupa las causas asociadas al desempeño, competencia o capacitación del personal involucrado."
+      },
+      {
+        "text": "Maquinaria",
+        "isCorrect": false,
+        "rationale": "Maquinaria contempla las fallas inherentes a los equipos, herramientas o infraestructura mecánica."
+      },
+      {
+        "text": "Medio Ambiente",
+        "isCorrect": true,
+        "rationale": "La categoría Medio Ambiente incluye factores de entorno exterior, variaciones climáticas, temperatura y fenómenos naturales impredecibles."
+      },
+      {
+        "text": "Método",
+        "isCorrect": false,
+        "rationale": "Método refiere a las deficiencias en los instructivos, procedimientos escritos o secuencias de trabajo estandarizadas."
+      },
+      {
+        "text": "Medición",
+        "isCorrect": false,
+        "rationale": "Medición abarca los errores vinculados a los instrumentos de lectura, calibración o recolección de datos."
+      }
+    ],
+    "hint": "Relaciona las fuerzas del entorno natural y del clima con una de las 'M' del diagrama de espina de pescado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con lo establecido en las regulaciones de fiscalización ambiental para sectores como la construcción u operaciones industriales, ¿cuál es el Límite Máximo Permisible (LMP) en ruido ambiental operativo citado en clase?",
+    "opciones": [
+      {
+        "text": "$50\\text{ dB}$",
+        "isCorrect": false,
+        "rationale": "Los $50\\text{ dB}$ corresponden a estándares más restrictivos para zonas de protección especial o residenciales nocturnas."
+      },
+      {
+        "text": "$65\\text{ dB}$",
+        "isCorrect": false,
+        "rationale": "Los $65\\text{ dB}$ corresponden comúnmente al límite máximo recomendado para entornos de oficinas o áreas administrativas."
+      },
+      {
+        "text": "$85\\text{ dB}$",
+        "isCorrect": true,
+        "rationale": "El valor de $85\\text{ dB}$ es el límite máximo permisible establecido para ruido en entornos operativos e industriales."
+      },
+      {
+        "text": "$100\\text{ dB}$",
+        "isCorrect": false,
+        "rationale": "Un nivel de $100\\text{ dB}$ supera los umbrales de seguridad acústica y generaría daños auditivos severos e inmediatos."
+      },
+      {
+        "text": "$120\\text{ dB}$",
+        "isCorrect": false,
+        "rationale": "Los $120\\text{ dB}$ representan el umbral del dolor y rebasan cualquier estándar ambiental de operación continua."
+      }
+    ],
+    "hint": "Recuerda la cifra de decibeles estandarizada para prevenir daño en áreas de trabajo operativo y construcción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a controles técnicos o administrativos en la jerarquía de mitigación de aspectos e impactos ambientales?",
+    "opciones": [
+      {
+        "text": "Capacitación periódica del personal en segregación de residuos sólidos y respuesta ante derrames.",
+        "isCorrect": true,
+        "rationale": "Las capacitaciones son medidas organizativas que fortalecen la competencia del personal, clasificándose como controles administrativos."
+      },
+      {
+        "text": "Instalación de barreras de aislamiento acústico en talleres para confinar las emisiones sonoras.",
+        "isCorrect": true,
+        "rationale": "Las modificaciones físicas o de infraestructura destinadas a contener o mitigar el impacto corresponden a controles de ingeniería o técnicos."
+      },
+      {
+        "text": "Elaboración y difusión de procedimientos operativos estandarizados con sus respectivos flujogramas.",
+        "isCorrect": true,
+        "rationale": "La documentación instructiva y la estandarización de procesos constituyen barreras administrativas para guiar la operación."
+      },
+      {
+        "text": "Ignorar la medición de emisiones cuando los equipos se encuentren operando a su máxima capacidad.",
+        "isCorrect": false,
+        "rationale": "Omitir el monitoreo contradice los principios del control operacional y la mejora continua del SGA."
+      },
+      {
+        "text": "Delegar la responsabilidad del cumplimiento legal ambiental exclusivamente a las comunidades vecinas.",
+        "isCorrect": false,
+        "rationale": "El cumplimiento legal y el control operacional recaen íntegramente sobre la organización titular de la actividad."
+      }
+    ],
+    "hint": "Diferencia entre las acciones de ingeniería en infraestructura y los métodos instruccionales de gestión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto peruano, ¿qué función cumple la Autoridad Nacional del Agua (ANA) respecto a la fiscalización y control ambiental de empresas industriales o mineras?",
+    "opciones": [
+      {
+        "text": "Otorgar certificaciones ISO 14001 a empresas que reduzcan su consumo de combustible fósil.",
+        "isCorrect": false,
+        "rationale": "La ANA no es una entidad certificadora de normas ISO, sino una entidad pública reguladora del recurso hídrico."
+      },
+      {
+        "text": "Emitir autorizaciones y normar las disposiciones sobre el vertimiento de efluentes hacia cuerpos de agua naturales.",
+        "isCorrect": true,
+        "rationale": "La ANA gestiona, protege y fiscaliza el uso y vertimiento de efluentes residuales sobre fuentes hídricas naturales."
+      },
+      {
+        "text": "Fijar las tarifas de electricidad aplicables a las plantas de procesamiento minero.",
+        "isCorrect": false,
+        "rationale": "La regulación tarifaria energética le compete a organismos como OSINERGMIN, no a la ANA."
+      },
+      {
+        "text": "Administrar los registros de antecedentes laborales del personal técnico de laboratorio.",
+        "isCorrect": false,
+        "rationale": "La gestión de datos laborales de técnicos no está dentro de las competencias de la autoridad del agua."
+      },
+      {
+        "text": "Aprobar de forma exclusiva los estudios de impacto ambiental de proyectos pesqueros urbanos.",
+        "isCorrect": false,
+        "rationale": "La evaluación global de impactos ambientales en ciertos sectores corresponde al SENACE o ministerios del sector."
+      }
+    ],
+    "hint": "Enfócate en la entidad del Estado responsable de velar por la conservación y calidad de los recursos hídricos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la vigencia estándar de la certificación ISO 14001 una vez obtenida y con qué frecuencia se deben llevar a cabo las auditorías de seguimiento?",
+    "opciones": [
+      {
+        "text": "Vigencia de 1 año con auditorías de seguimiento mensual.",
+        "isCorrect": false,
+        "rationale": "Una vigencia de un año exigiría procesos de certificación continuos e insostenibles económicamente."
+      },
+      {
+        "text": "Vigencia de 3 años con auditorías de seguimiento anuales.",
+        "isCorrect": true,
+        "rationale": "El certificado se otorga por un trienio, manteniéndose mediante evaluaciones de seguimiento cada 12 meses."
+      },
+      {
+        "text": "Vigencia indeterminada sin requerimiento de auditorías posteriores.",
+        "isCorrect": false,
+        "rationale": "Las certificaciones ISO requieren la verificación constante de la mejora continua y caducan si no se renuevan."
+      },
+      {
+        "text": "Vigencia de 5 años con seguimiento únicamente al término del período.",
+        "isCorrect": false,
+        "rationale": "El plazo de cinco años excede la estructura trienal definida por los organismos de acreditación internacionales."
+      },
+      {
+        "text": "Vigencia de 10 años sujeta a inspecciones extraordinarias de la municipalidad.",
+        "isCorrect": false,
+        "rationale": "Las municipalidades no administran el esquema de recertificación ni el ciclo de los certificados ISO."
+      }
+    ],
+    "hint": "Recuerda el período trienal habitual del certificado y el intervalo en el que el auditor regresa para el control.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué acciones evidencian un verdadero liderazgo y compromiso tangible por parte de la Alta Dirección según la Cláusula 5 de la ISO 14001?",
+    "opciones": [
+      {
+        "text": "Garantizar la asignación de recursos financieros y humanos para la implementación y sostenibilidad del SGA.",
+        "isCorrect": true,
+        "rationale": "Proveer los presupuestos necesarios para equipos, capacitaciones e infraestructura es el pilar del compromiso directivo."
+      },
+      {
+        "text": "Establecer y firmar una política ambiental alineada con el contexto estratégico de la organización.",
+        "isCorrect": true,
+        "rationale": "La Alta Dirección debe formalizar las intenciones y principios de la empresa a través de una política ambiental clara."
+      },
+      {
+        "text": "Participar activamente en la revisión por la dirección y en el seguimiento de los objetivos estratégicos.",
+        "isCorrect": true,
+        "rationale": "El liderazgo exige involucrarse directamente en la evaluación periódica del desempeño del sistema."
+      },
+      {
+        "text": "Delegar completamente toda responsabilidad legal y operativa en el supervisor junior de seguridad.",
+        "isCorrect": false,
+        "rationale": "La rendición de cuentas y la responsabilidad máxima del SGA son indelegables de la Alta Dirección."
+      },
+      {
+        "text": "Ocultar los informes de incumplimiento legal ante auditorías internas para no afectar la imagen.",
+        "isCorrect": false,
+        "rationale": "Manipular evidencias contraviene la transparencia y los principios éticos exigidos por la norma."
+      }
+    ],
+    "hint": "Busca aquellas actividades donde los ejecutivos principales respaldan presupuestal y estratégicamente el SGA.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la metodología SMART, ¿cuál de los siguientes enunciados representa un objetivo ambiental correctamente redactado para un SGA?",
+    "opciones": [
+      {
+        "text": "Ser una empresa ecológica que promueva el amor por la naturaleza durante el año.",
+        "isCorrect": false,
+        "rationale": "Este enunciado es una expresión de deseo vaga y carece de indicadores numéricos y límites temporales."
+      },
+      {
+        "text": "Reducir el consumo de energía eléctrica de la planta en un $15\\%$ durante los próximos 12 meses respecto al año anterior.",
+        "isCorrect": true,
+        "rationale": "Cumple los criterios SMART al ser específico ($15\\%$ de energía), medible, alcanzable, relevante y delimitado en el tiempo (12 meses)."
+      },
+      {
+        "text": "Capacitar a todo el personal del país en todos los temas ambientales posibles tan pronto como se pueda.",
+        "isCorrect": false,
+        "rationale": "Carece de un alcance definido, una meta cuantificable y una fecha límite precisa."
+      },
+      {
+        "text": "Eliminar por completo la generación de cualquier tipo de residuo sólido a partir del día de mañana.",
+        "isCorrect": false,
+        "rationale": "Es una meta que no resulta alcanzable operacionalmente en el plazo de un solo día."
+      },
+      {
+        "text": "Comprar la mayor cantidad de kits antiderrames que permita el presupuesto disponible.",
+        "isCorrect": false,
+        "rationale": "No precisa la cantidad requerida ni especifica el indicador de desempeño a evaluar."
+      }
+    ],
+    "hint": "Busca la meta que especifique una cifra medible de reducción y un plazo de tiempo concreto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué implica incorporar una 'perspectiva de ciclo de vida' al identificar y evaluar los aspectos ambientales de los productos o servicios en la ISO 14001?",
+    "opciones": [
+      {
+        "text": "Evaluar los impactos ambientales únicamente durante la fase de fabricación dentro de las instalaciones de la planta.",
+        "isCorrect": false,
+        "rationale": "Limitarse a la fabricación ignora los impactos previos en la extracción y los posteriores en el uso y disposición."
+      },
+      {
+        "text": "Considerar las etapas consecutivas e interrelacionadas del producto, desde la adquisición de materias primas hasta su disposición final o reciclaje.",
+        "isCorrect": true,
+        "rationale": "La perspectiva de ciclo de vida extiende el control e influencia ambiental a la cadena de valor completa (de la cuna a la tumba)."
+      },
+      {
+        "text": "Calcular la esperanza de vida laboral de los trabajadores que manipulan sustancias peligrosas.",
+        "isCorrect": false,
+        "rationale": "La salud ocupacional del personal no define la metodología del ciclo de vida del producto o servicio."
+      },
+      {
+        "text": "Garantizar que el producto tenga una vida útil superior a los 50 años independientemente de su uso.",
+        "isCorrect": false,
+        "rationale": "El ciclo de vida del SGA se refiere a la gestión de impactos en sus etapas, no a la duración comercial del objeto."
+      },
+      {
+        "text": "Analizar la vida útil de la maquinaria industrial para determinar el momento de su venta como chatarra.",
+        "isCorrect": false,
+        "rationale": "Se refiere al análisis ambiental de los bienes y servicios ofrecidos, no únicamente a la depreciación de activos fijados."
+      }
+    ],
+    "hint": "Piensa en el recorrido integral que realiza un producto desde la extracción de insumos hasta su fin de vida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la gestión del riesgo de la norma ISO 14001, ¿cómo se definen respectivamente un 'riesgo ambiental' y una 'oportunidad ambiental'?",
+    "opciones": [
+      {
+        "text": "El riesgo es el efecto de la incertidumbre sobre los objetivos, mientras que la oportunidad es una circunstancia que puede conducir a la mejora del desempeño.",
+        "isCorrect": true,
+        "rationale": "La ISO 14001 define el riesgo como la desviación de lo esperado (positivo o negativo) por incertidumbre, y la oportunidad como un factor para potenciar beneficios."
+      },
+      {
+        "text": "El riesgo es una multa confirmada por OEFA, mientras que la oportunidad es la condonación del pago de dicha sanción.",
+        "isCorrect": false,
+        "rationale": "Las multas son consecuencias de incumplimientos, no la definición conceptual de riesgo bajo la norma ISO."
+      },
+      {
+        "text": "El riesgo es la presencia de trabajadores no capacitados y la oportunidad es el despido del personal infractor.",
+        "isCorrect": false,
+        "rationale": "Las acciones sobre la gestión humana no corresponden a las definiciones conceptuales del enfoque basado en riesgos."
+      },
+      {
+        "text": "El riesgo abarca exclusivamente los desastres naturales y la oportunidad aplica únicamente a la compra de terrenos.",
+        "isCorrect": false,
+        "rationale": "El concepto de riesgo en el SGA es más amplio e incluye aspectos operativos, legales y estratégicos."
+      },
+      {
+        "text": "Ambos conceptos son sinónimos y hacen referencia al cumplimiento estricto de las ordenanzas municipales.",
+        "isCorrect": false,
+        "rationale": "Riesgo u oportunidad tienen sentidos opuestos en la evaluación: uno representa amenazas/incertidumbre y el otro ventajas a aprovechar."
+      }
+    ],
+    "hint": "Identifica la opción que distingue el impacto de la incertidumbre sobre metas frente a escenarios favorables de mejora.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes situaciones representan errores o debilidades comunes que suelen generar no conformidades durante una auditoría de certificación ISO 14001 en Perú?",
+    "opciones": [
+      {
+        "text": "Mantener matrices de requisitos legales ambientales desactualizadas respecto a los nuevos decretos supremos.",
+        "isCorrect": true,
+        "rationale": "La falta de actualización legal impide garantizar el cumplimiento de las nuevas exigencias aplicables al sector."
+      },
+      {
+        "text": "Omitir en la matriz de cumplimiento las normativas o permisos específicos emitidos por gobiernos regionales.",
+        "isCorrect": true,
+        "rationale": "No contemplar las regulaciones regionales o locales aplicables a la zona de operación vulnera el alcance legal del SGA."
+      },
+      {
+        "text": "Presentar procedimientos documentados cuyo contenido no corresponde con la práctica real en campo.",
+        "isCorrect": true,
+        "rationale": "El auditor evalúa la primacía de la realidad; la contradicción entre el papel y la práctica origina no conformidades."
+      },
+      {
+        "text": "Publicar la política ambiental en un formato visible dentro de las instalaciones de la empresa.",
+        "isCorrect": false,
+        "rationale": "Difundir la política es un requisito de la norma y constituye una buena práctica obligatoria."
+      },
+      {
+        "text": "Realizar calibraciones periódicas de los instrumentos de monitoreo de aire y agua.",
+        "isCorrect": false,
+        "rationale": "Calibrar los equipos asegura la confiabilidad de las mediciones y es un cumplimiento conforme del sistema."
+      }
+    ],
+    "hint": "Busca aquellas fallas vinculadas al desfasaje legal, vacíos regionales y discrepancias entre texto y operación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al analizar el contexto de la organización (Cláusula 4) para un proyecto en el sector minero o hidrocarburos en Perú, ¿cuál de los siguientes grupos representa una parte interesada externa crítica?",
+    "opciones": [
+      {
+        "text": "El departamento de contabilidad y finanzas de la misma oficina central.",
+        "isCorrect": false,
+        "rationale": "Contabilidad constituye una parte interesada interna de la estructura de la empresa."
+      },
+      {
+        "text": "Las comunidades locales o poblaciones asentadas en el área de influencia directa del proyecto.",
+        "isCorrect": true,
+        "rationale": "Las comunidades adyacentes son partes interesadas externas fundamentales para la licencia social y la gestión ambiental."
+      },
+      {
+        "text": "El equipo de auditores internos contratados por la gerencia para la pre-auditoría.",
+        "isCorrect": false,
+        "rationale": "Los auditores internos actúan a nombre de la organización para evaluar el sistema, operando en el plano interno."
+      },
+      {
+        "text": "Los proveedores de insumos de papelería para las oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "Aunque son externos, no representan la parte interesada externa crítica en el impacto socioambiental del proyecto."
+      },
+      {
+        "text": "El comité de seguridad y salud en el trabajo constituido en la planta.",
+        "isCorrect": false,
+        "rationale": "El comité paritario representa al personal interno en materia laboral y no es un actor externo."
+      }
+    ],
+    "hint": "Enfócate en la población que convive con el entorno natural en la zona donde se ejecuta la actividad minero-energética.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito técnico de elaborar una 'Evaluación de Línea Base' antes de estructurar formalmente el Sistema de Gestión Ambiental bajo la ISO 14001?",
+    "opciones": [
+      {
+        "text": "Garantizar la obtención automática del certificado sin necesidad de someterse a auditorías externas.",
+        "isCorrect": false,
+        "rationale": "Ningún estudio previo otorga un certificado sin la correspondiente auditoría del organismo acreditado."
+      },
+      {
+        "text": "Diagnosticar la situación inicial de la empresa en cuanto a cumplimiento legal y aspectos ambientales para identificar las brechas existentes.",
+        "isCorrect": true,
+        "rationale": "La línea base establece la radiografía inicial sobre la cual se planificarán los objetivos, metas y recursos del SGA."
+      },
+      {
+        "text": "Sancionar económicamente a los jefes de área que no hayan registrado sus residuos de papelería.",
+        "isCorrect": false,
+        "rationale": "La evaluación inicial es un instrumento de diagnóstico estratégico, no un mecanismo punitivo interno."
+      },
+      {
+        "text": "Reemplazar las pólizas de seguro contra accidentes ambientales contratadas con terceros.",
+        "isCorrect": false,
+        "rationale": "El diagnóstico técnico de partida no sustituye la cobertura ni las pólizas financieras de seguro."
+      },
+      {
+        "text": "Aprobar el presupuesto financiero de la empresa para los próximos diez ejercicios fiscales.",
+        "isCorrect": false,
+        "rationale": "La línea base ambiental no determina ni aprueba el presupuesto corporativo de largo plazo."
+      }
+    ],
+    "hint": "Piensa en el estudio que permite conocer 'dónde estamos situados' para planificar las mejoras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se articula la exigencia de la ISO 14001 con el cumplimiento de las obligaciones legales ambientales peruanas?",
+    "opciones": [
+      {
+        "text": "La ISO 14001 ignora las leyes locales y se rige únicamente por convenios internacionales no ratificados.",
+        "isCorrect": false,
+        "rationale": "La norma exige de forma explícita identificar y cumplir todos los requisitos legales aplicables del país."
+      },
+      {
+        "text": "El SGA exige el cumplimiento legal como requisito obligatorio básico, posicionándose habitualmente un paso adelante al incluir compromisos voluntarios más estrictos.",
+        "isCorrect": true,
+        "rationale": "La ISO 14001 toma la norma legal como la base mínima e impulsa a la empresa a establecer estándares superiores de desempeño."
+      },
+      {
+        "text": "Si una empresa certifica ISO 14001, queda eximida legalmente de cumplir los límites máximos permisibles (LMP) nacionales.",
+        "isCorrect": false,
+        "rationale": "Los LMP son de obligatorio cumplimiento por ley y la certificación en ningún caso invalida las exigencias del Estado."
+      },
+      {
+        "text": "Las leyes peruanas prohíben que las empresas adopten normas ISO si operan en territorio nacional.",
+        "isCorrect": false,
+        "rationale": "El Estado peruano promueve la adopción de estándares internacionales voluntarias que refuercen la gestión."
+      },
+      {
+        "text": "El cumplimiento de la ley es opcional dentro de la norma ISO si la gerencia justifica falta de presupuesto.",
+        "isCorrect": false,
+        "rationale": "El compromiso con el cumplimiento legal es innegociable en la Cláusula 6 de la norma ISO 14001."
+      }
+    ],
+    "hint": "Considera cómo se relaciona el marco legal del país como 'piso mínimo' respecto a los estándares adicionales de la norma.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del monitoreo de agentes ambientales en operaciones industriales y mineras, ¿cuáles de los siguientes parámetros son evaluados con frecuencia para verificar el desempeño ambiental?",
+    "opciones": [
+      {
+        "text": "Concentraciones de dióxido de azufre ($SO_2$) y gases de combustión en el aire.",
+        "isCorrect": true,
+        "rationale": "El $SO_2$ y los gases de combustión son parámetros clave fiscalizados para medir la calidad del aire y emisiones."
+      },
+      {
+        "text": "Demanda Bioquímica de Oxígeno (DBO) y presencia de metales en cuerpos de agua o vertimientos.",
+        "isCorrect": true,
+        "rationale": "La DBO y los metales pesados son indicadores obligatorios para evaluar la contaminación de efluentes líquidos."
+      },
+      {
+        "text": "Volúmenes de generación y clasificación de residuos sólidos peligrosos y no peligrosos.",
+        "isCorrect": true,
+        "rationale": "El tonelaje y tipo de residuos generados son métricas fundamentales en las declaraciones anuales del SGA."
+      },
+      {
+        "text": "Nivel de satisfacción de los accionistas con el dividendo financiero trimestral.",
+        "isCorrect": false,
+        "rationale": "El rendimiento de las acciones es una métrica financiera corporativa, no un parámetro de monitoreo ambiental."
+      },
+      {
+        "text": "Número de seguidores en las redes sociales institucionales de la empresa.",
+        "isCorrect": false,
+        "rationale": "El alcance comunicacional en redes no constituye un parámetro técnico de medición física de contaminación."
+      }
+    ],
+    "hint": "Selecciona los parámetros físicos y químicos que miden la contaminación en aire, agua y residuos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En caso de detectar una desviación o exceso en los Límites Máximos Permisibles (LMP) durante el monitoreo de un efluente industrial, ¿qué acción debe gatillar inmediatamente el SGA?",
+    "opciones": [
+      {
+        "text": "Aumentar el caudal de producción para diluir la muestra en el siguiente reporte.",
+        "isCorrect": false,
+        "rationale": "Intentar diluir o alterar las muestras constituye una práctica ilegal e incurre en faltas graves."
+      },
+      {
+        "text": "Iniciar el procedimiento de no conformidad para investigar la causa raíz, aplicar la acción correctiva e implementar controles.",
+        "isCorrect": true,
+        "rationale": "Ante una superación de LMP, el sistema exige documentar el hallazgo, encontrar la causa e implementar la corrección técnica."
+      },
+      {
+        "text": "Destruir los registros de monitoreo antes de la llegada de los auditores o fiscalizadores.",
+        "isCorrect": false,
+        "rationale": "La ocultación de registros atenta contra los principios de trazabilidad y conducta ética exigidos."
+      },
+      {
+        "text": "Modificar el estándar legal en el documento interno para hacer parecer que la cifra es conforme.",
+        "isCorrect": false,
+        "rationale": "Los LMP son fijados por el Estado y una empresa no puede cambiar los valores legales en sus documentos."
+      },
+      {
+        "text": "Suspender las operaciones de forma definitiva sin informar a la alta dirección.",
+        "isCorrect": false,
+        "rationale": "La desviación requiere investigación y acción correctiva inmediata, no el abandono de la operación sin gestión."
+      }
+    ],
+    "hint": "Recuerda el mecanismo formal que exige la ISO cuando se identifica el incumplimiento de una meta o límite.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal de realizar simulacros de emergencia ambiental (por ejemplo, ante un derrame de hidrocarburos) dentro de una planta operativa?",
+    "opciones": [
+      {
+        "text": "Verificar la velocidad y eficacia de respuesta del personal, el estado de los kits antiderrames y la viabilidad del plan de contingencia.",
+        "isCorrect": true,
+        "rationale": "Los simulacros permiten poner a prueba el entrenamiento, el equipamiento técnico y la efectividad práctica del procedimiento de emergencia."
+      },
+      {
+        "text": "Cumplir con un requisito fotográfico para el folleto publicitario de la empresa.",
+        "isCorrect": false,
+        "rationale": "Las emergencias ambientales requieren validación técnica, no meros actos de difusión comercial."
+      },
+      {
+        "text": "Evitar la compra de equipos de protección personal nuevos utilizando materiales vencidos.",
+        "isCorrect": false,
+        "rationale": "El uso de equipos vencidos o defectuosos pone en riesgo la seguridad de las brigadas."
+      },
+      {
+        "text": "Demostrar a la municipalidad que la planta no utiliza ningún tipo de sustancia química.",
+        "isCorrect": false,
+        "rationale": "El simulacro se realiza precisamente porque se utilizan sustancias peligrosas y existe riesgo de eventos."
+      },
+      {
+        "text": "Exonerar a la empresa del pago de indemnizaciones ante eventuales daños a terceros.",
+        "isCorrect": false,
+        "rationale": "Hacer simulacros no exime a la organización de sus responsabilidades civiles o legales ante impactos reales."
+      }
+    ],
+    "hint": "Enfócate en la preparación técnica de las brigadas y la evaluación práctica de los insumos de contención.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para asegurar la confiabilidad legal y técnica de los monitoreos ambientales (aire, agua, ruido) ante la autoridad y los auditores, ¿qué requisitos indispensables deben cumplir los instrumentos de medición?",
+    "opciones": [
+      {
+        "text": "Contar con certificados de calibración vigentes emitidos por laboratorios o entidades autorizadas.",
+        "isCorrect": true,
+        "rationale": "La trazabilidad y exactitud del dato dependen de certificados de calibración al día."
+      },
+      {
+        "text": "Ser operados por personal técnico capacitado y con competencias verificadas en los protocolos de toma de muestra.",
+        "isCorrect": true,
+        "rationale": "El error humano en la manipulación o toma de muestra invalida los resultados del análisis."
+      },
+      {
+        "text": "Estar pintados del mismo color que los tachos de segregación de residuos de la planta.",
+        "isCorrect": false,
+        "rationale": "El acabado estético o color del instrumento no influye en la precisión técnica de la lectura."
+      },
+      {
+        "text": "Haber sido fabricados en el mismo año en que se realiza la auditoría de recertificación.",
+        "isCorrect": false,
+        "rationale": "Los equipos no requieren ser de fabricación del año, sino estar correctamente mantenidos y calibrados."
+      },
+      {
+        "text": "Contar con una autorización firmada por el Sindicato de Trabajadores.",
+        "isCorrect": false,
+        "rationale": "La validez metrológica de un equipo depende de los patrones de calibración, no del visto bueno sindical."
+      }
+    ],
+    "hint": "Considera los aspectos metrológicos e instrumentales que otorgan validez científica a la lectura de un parámetro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es fundamental que la elaboración y revisión de los procedimientos del SGA cuente con un enfoque multidisciplinario e involucre a las distintas áreas operativas?",
+    "opciones": [
+      {
+        "text": "Porque el área de Medio Ambiente no tiene autorización para redactar documentos según la ISO.",
+        "isCorrect": false,
+        "rationale": "El área ambiental sí puede redactar, pero si lo hace aisladamente generará documentos poco viables operativamente."
+      },
+      {
+        "text": "Porque las operaciones diarias involucran logística, mantenimiento y producción, requiriendo que los controles sean viables y aceptados por quienes los ejecutan.",
+        "isCorrect": true,
+        "rationale": "La integración multidisciplinaria asegura que los controles ambientales sean técnicamente factibles de aplicar en la rutina real de trabajo."
+      },
+      {
+        "text": "Para reducir el sueldo del personal que no participe en las reuniones de redacción.",
+        "isCorrect": false,
+        "rationale": "La elaboración participativa del SGA no tiene fines punitivos ni salariales."
+      },
+      {
+        "text": "Porque la norma obliga a que cada documento sea firmado por más de 100 trabajadores.",
+        "isCorrect": false,
+        "rationale": "La norma exige asignación de responsabilidades y aprobación formal, no firmas masivas de todo el personal."
+      },
+      {
+        "text": "Para evitar tener que hacer capacitaciones posteriores al personal operativo.",
+        "isCorrect": false,
+        "rationale": "Aun cuando el documento sea multidisciplinario, la capacitación continúa siendo obligatoria."
+      }
+    ],
+    "hint": "Piensa en el principio que busca que los procedimientos se adapten a la realidad del trabajo diario en planta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de las licitaciones públicas y megaproyectos de infraestructura con el Estado peruano, ¿qué impacto directo tiene contar con la certificación ISO 14001?",
+    "opciones": [
+      {
+        "text": "Exime a la contratista de presentar la fianza bancaria de fiel cumplimiento.",
+        "isCorrect": false,
+        "rationale": "Las garantías financieras del contrato siguen siendo obligatorias por la ley de contrataciones del Estado."
+      },
+      {
+        "text": "Otorga puntaje técnico adicional en la evaluación de la propuesta, incrementando las probabilidades de adjudicación frente a competidores.",
+        "isCorrect": true,
+        "rationale": "Las certificaciones internacionales validadas otorgan mayor puntaje en las bases técnicas de los concursos públicos."
+      },
+      {
+        "text": "Permite fijar libremente el precio final del contrato sin someterse a la oferta económica.",
+        "isCorrect": false,
+        "rationale": "La certificación no altera la evaluación económica regulada por los procesos de licitación."
+      },
+      {
+        "text": "Garantiza que el Estado asuma el costo de las multas si se produce un desastre ambiental.",
+        "isCorrect": false,
+        "rationale": "El titular de la actividad o contratista mantiene siempre la responsabilidad legal y de pago por daños."
+      },
+      {
+        "text": "Permite iniciar las obras de construcción sin contar con permisos municipales de edificación.",
+        "isCorrect": false,
+        "rationale": "Las licencias urbanas y municipales son obligatorias e independientes de las certificaciones que tenga la empresa."
+      }
+    ],
+    "hint": "Enfócate en la ventaja de calificación técnica que obtienen las empresas durante los concursos de contratación pública.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-65",
+    "diplomado": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué rol cumple la Matriz de Requisitos Legales Ambientales dentro de la estructura de un Sistema de Gestión Ambiental en Perú?",
+    "opciones": [
+      {
+        "text": "Servir como catálogo publicitario para la venta de servicios de consultoría externa.",
+        "isCorrect": false,
+        "rationale": "La matriz es un instrumento interno de control operativo y legal, no un catálogo comercial."
+      },
+      {
+        "text": "Identificar, sistematizar y evaluar el nivel de cumplimiento de todas las leyes, decretos y normas aplicables a la empresa.",
+        "isCorrect": true,
+        "rationale": "La matriz legal vincula la normativa vigente con las operaciones de la organización para asegurar su seguimiento y cumplimiento."
+      },
+      {
+        "text": "Reemplazar los contratos de trabajo celebrados con los colaboradores de la empresa.",
+        "isCorrect": false,
+        "rationale": "Los contratos de trabajo pertenecen al ámbito laboral y no se sustituyen por la matriz legal ambiental."
+      },
+      {
+        "text": "Consignar únicamente las ordenanzas aprobadas por países extranjeros donde no se opera.",
+        "isCorrect": false,
+        "rationale": "La matriz debe contemplar la legislación aplicable en el territorio y sector donde se ubican las operaciones."
+      },
+      {
+        "text": "Registrar exclusivamente las cotizaciones de compra de insumos de limpieza.",
+        "isCorrect": false,
+        "rationale": "Las compras de insumos se gestionan en registros contables o de abastecimiento, no en la matriz legal ambiental."
+      }
+    ],
+    "hint": "Piensa en la herramienta donde se consolidan los Decretos Supremos y Leyes para verificar periódicamente si se están cumpliendo.",
+    "activo": true
+  }
+]

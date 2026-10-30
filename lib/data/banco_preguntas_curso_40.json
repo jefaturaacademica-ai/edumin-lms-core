@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica principal de los costos fijos dentro de un proceso de producción industrial?",
+    "opciones": [
+      {
+        "text": "Permanecen constantes en su totalidad sin importar las variaciones en el volumen de producción.",
+        "isCorrect": true,
+        "rationale": "Los costos fijos no cambian de forma directa ante fluctuaciones en la cantidad producida dentro de un rango operativo."
+      },
+      {
+        "text": "Aumentan o disminuyen en proporción directa a la cantidad de unidades fabricadas.",
+        "isCorrect": false,
+        "rationale": "Esa variación proporcional a la cantidad fabricada define a los costos variables y no a los fijos."
+      },
+      {
+        "text": "Se asignan de manera exacta e individual a un solo producto terminado.",
+        "isCorrect": false,
+        "rationale": "La capacidad de asignación exacta a un producto diferencia a los costos directos de los indirectos, no a los fijos de los variables."
+      },
+      {
+        "text": "Dependen exclusivamente de las comisiones generadas por las ventas mensuales.",
+        "isCorrect": false,
+        "rationale": "Las comisiones por venta son un costo variable dependiente del rendimiento comercial, no un costo fijo."
+      },
+      {
+        "text": "Se eliminan por completo cuando la fábrica opera al máximo de su capacidad instalada.",
+        "isCorrect": false,
+        "rationale": "Los costos fijos se mantienen para sostener la infraestructura sin importar el nivel de uso de la planta."
+      }
+    ],
+    "hint": "Piensa en gastos como el alquiler de la planta, los cuales no cambian si se producen diez o mil unidades.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de los siguientes elementos se clasifica típicamente como un costo variable en una fábrica de muebles?",
+    "opciones": [
+      {
+        "text": "La madera utilizada para la confección de las mesas y sillas.",
+        "isCorrect": true,
+        "rationale": "El consumo de materia prima directa escala proporcionalmente con el número de unidades fabricadas."
+      },
+      {
+        "text": "El alquiler mensual del local donde funciona la planta de producción.",
+        "isCorrect": false,
+        "rationale": "El arrendamiento es una erogación periódica fija que no cambia con el volumen de piezas producidas."
+      },
+      {
+        "text": "El salario básico mensual del gerente general de la empresa.",
+        "isCorrect": false,
+        "rationale": "El sueldo administrativo es constante y no depende del nivel de actividad productiva."
+      },
+      {
+        "text": "La prima anual del seguro contra incendios del almacén.",
+        "isCorrect": false,
+        "rationale": "Las pólizas de seguro se estipulan como compromisos fijos de la organización."
+      },
+      {
+        "text": "La cuota fija mensual de mantenimiento del sistema informático.",
+        "isCorrect": false,
+        "rationale": "Las tarifas fijas estipuladas por contrato no varían según las unidades manufacturadas."
+      }
+    ],
+    "hint": "Identifica qué insumo se requiere en mayor cantidad a medida que aumenta el volumen de fabricación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define un costo indirecto de fabricación?",
+    "opciones": [
+      {
+        "text": "Aquel costo necesario para la producción que no se puede atribuir fácilmente a un único producto específico.",
+        "isCorrect": true,
+        "rationale": "Los costos indirectos benefician al proceso productivo general y deben distribuirse mediante bases de asignación entre varios productos."
+      },
+      {
+        "text": "Aquel insumo físico que forma parte cuantificable del producto final terminado.",
+        "isCorrect": false,
+        "rationale": "Los insumos rastreables y cuantificables en la unidad final constituyen costos directos de materia prima."
+      },
+      {
+        "text": "Aquel gasto exclusivo del departamento de ventas y comercialización externa.",
+        "isCorrect": false,
+        "rationale": "Los gastos de distribución y venta son costos operativos o del periodo, no de fabricación."
+      },
+      {
+        "text": "Aquel pago correspondiente a los intereses de préstamos bancarios de la empresa.",
+        "isCorrect": false,
+        "rationale": "Los intereses por financiamiento pertenecen a la categoría de costos financieros."
+      },
+      {
+        "text": "Aquel valor que cambia de manera perfectamente lineal con la mano de obra obrera.",
+        "isCorrect": false,
+        "rationale": "El cambio lineal en relación con los obreros describe el comportamiento de la mano de obra directa."
+      }
+    ],
+    "hint": "Considera costos generales como la supervisión o la luz de la planta, que benefician a toda la producción por igual.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a ejemplos de costos semivariables en el contexto industrial?",
+    "opciones": [
+      {
+        "text": "El servicio de energía eléctrica de una planta con tarifa base fija más costo según consumo de maquinaria.",
+        "isCorrect": true,
+        "rationale": "Posee un cargo mínimo obligatorio combinado con un tramo variable en función del nivel de operación de las máquinas."
+      },
+      {
+        "text": "El salario de un vendedor compuesto por un sueldo básico fijo más comisiones por ventas.",
+        "isCorrect": true,
+        "rationale": "Integra un componente fijo garantizado y una parte variable dependiente del volumen comercial alcanzado."
+      },
+      {
+        "text": "El mantenimiento de maquinaria con cuota preventiva fija más adicionales por horas extra de uso.",
+        "isCorrect": true,
+        "rationale": "Suma un cobro programado regular a un variable impulsado por la intensidad del uso productivo."
+      },
+      {
+        "text": "El costo del cuero consumido exclusivamente en la fabricación de calzado.",
+        "isCorrect": false,
+        "rationale": "El material directo utilizado estrictamente en cada unidad es un costo variable puro."
+      },
+      {
+        "text": "El valor del alquiler mensual estipulado en un contrato de arrendamiento a largo plazo.",
+        "isCorrect": false,
+        "rationale": "El canon de arrendamiento formalizado por contrato representa un costo fijo puro."
+      }
+    ],
+    "hint": "Busca aquellos gastos que contengan tanto una parte base constante como una parte que escala con la actividad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de las funciones de la empresa, ¿cuál es la orientación de los costos administrativos?",
+    "opciones": [
+      {
+        "text": "Atender la dirección, gestión y manejo de las operaciones generales de la organización.",
+        "isCorrect": true,
+        "rationale": "Los costos administrativos respaldan la gestión corporativa y la toma de decisiones ejecutivas generales."
+      },
+      {
+        "text": "Cubrir la transformación física de la materia prima en bienes terminados.",
+        "isCorrect": false,
+        "rationale": "La transformación física de materiales corresponde estrictamente a los costos de producción."
+      },
+      {
+        "text": "Pagar fletes y campañas publicitarias para comercializar el producto.",
+        "isCorrect": false,
+        "rationale": "El transporte y la promoción corresponden a la función de distribución y ventas."
+      },
+      {
+        "text": "Pagar los intereses devengados por financiamiento y créditos bancarios.",
+        "isCorrect": false,
+        "rationale": "Las erogaciones por financiamiento crediticio pertenecen a la categoría de costos financieros."
+      },
+      {
+        "text": "Adquirir repuestos específicos para la maquinaria de la planta de ensamblaje.",
+        "isCorrect": false,
+        "rationale": "Los repuestos de máquinas de ensamblaje forman parte de los costos indirectos de fabricación."
+      }
+    ],
+    "hint": "Asocia esta función con los sueldos del personal de gerencia y el soporte de oficinas centrales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué efecto ocurre en el costo fijo unitario cuando el volumen de producción de una planta disminuye?",
+    "opciones": [
+      {
+        "text": "El costo fijo por unidad aumenta.",
+        "isCorrect": true,
+        "rationale": "Al repartir el mismo monto fijo total entre un menor número de unidades, cada producto asume una cuota mayor."
+      },
+      {
+        "text": "El costo fijo por unidad disminuye.",
+        "isCorrect": false,
+        "rationale": "El costo fijo unitario se reduce únicamente cuando el número de unidades producidas se incrementa."
+      },
+      {
+        "text": "El costo fijo por unidad permanece exactamente igual.",
+        "isCorrect": false,
+        "rationale": "Lo que permanece igual es el costo fijo total; la cuota unitaria varía inversamente con la cantidad."
+      },
+      {
+        "text": "El costo fijo unitario se vuelve igual a cero.",
+        "isCorrect": false,
+        "rationale": "Los costos fijos se mantienen vigentes independientemente de la cantidad producida."
+      },
+      {
+        "text": "El costo fijo total disminuye automáticamente.",
+        "isCorrect": false,
+        "rationale": "El desembolso fijo total no depende de la cantidad producida y por ende no se reduce al bajar la producción."
+      }
+    ],
+    "hint": "Aplica la división de un monto total constante entre una menor cantidad de piezas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representa la demanda proyectada al elaborar un presupuesto de producción?",
+    "opciones": [
+      {
+        "text": "La estimación de unidades de producto que la empresa prevé vender en un periodo determinado.",
+        "isCorrect": true,
+        "rationale": "Constituye el punto de partida del presupuesto de producción basado en estudios de mercado e historial de ventas."
+      },
+      {
+        "text": "La cantidad de sobrantes o mermas generadas al final del proceso operativo.",
+        "isCorrect": false,
+        "rationale": "Los residuos o mermas representan desperdicios de producción y no las proyecciones de venta."
+      },
+      {
+        "text": "El presupuesto de efectivo reservado exclusivamente para imprevistos laborales.",
+        "isCorrect": false,
+        "rationale": "Las reservas monetarias son fondos de contingencia en el presupuesto financiero."
+      },
+      {
+        "text": "El número máximo de horas que una máquina puede trabajar sin requerir mantenimiento.",
+        "isCorrect": false,
+        "rationale": "La capacidad operativa máxima de un equipo se relaciona con la gestión de mantenimiento."
+      },
+      {
+        "text": "El total de facturas pendientes de cobro a clientes mayoristas.",
+        "isCorrect": false,
+        "rationale": "Las cuentas por cobrar corresponden a la gestión financiera de tesorería."
+      }
+    ],
+    "hint": "Tiene que ver con los cálculos del área comercial sobre lo que el mercado solicitará.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la premisa fundamental del sistema de presupuestación basado en actividades (ABC)?",
+    "opciones": [
+      {
+        "text": "Las actividades consumen recursos y los productos o servicios consumen actividades.",
+        "isCorrect": true,
+        "rationale": "El modelo ABC establece que los costos se originan en las tareas realizadas y estas son requeridas por los productos."
+      },
+      {
+        "text": "Todos los costos indirectos deben repartirse según el número de horas mano de obra de forma equitativa.",
+        "isCorrect": false,
+        "rationale": "Esa asignación simplista basada en una sola tasa pertenece al sistema tradicional y no al costeo por actividades."
+      },
+      {
+        "text": "Los costos fijos deben convertirse automáticamente en costos variables para el presupuesto.",
+        "isCorrect": false,
+        "rationale": "El modelo ABC reasigna y rastrea el consumo de costos, pero no altera la naturaleza técnica de los mismos."
+      },
+      {
+        "text": "El presupuesto se calcula incrementando un porcentaje fijo al costo histórico del año anterior.",
+        "isCorrect": false,
+        "rationale": "El ajuste porcentual sobre históricos define al presupuesto incremental tradicional."
+      },
+      {
+        "text": "Se omiten los gastos administrativos para centrarse en los insumos directos.",
+        "isCorrect": false,
+        "rationale": "El método ABC incluye las actividades de apoyo y administrativas dentro de su mapa de procesos."
+      }
+    ],
+    "hint": "Relaciona la cadena de consumo: Recursos $\\rightarrow$ Actividades $\\rightarrow$ Productos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la metodología ABC, ¿qué caracteriza a las actividades primarias de una empresa?",
+    "opciones": [
+      {
+        "text": "Están directamente vinculadas con la producción o entrega de los bienes y servicios finales.",
+        "isCorrect": true,
+        "rationale": "Las actividades primarias agregan valor directo en la creación y comercialización del producto."
+      },
+      {
+        "text": "Son exclusivamente tareas de apoyo como recursos humanos y contabilidad general.",
+        "isCorrect": false,
+        "rationale": "Las funciones de soporte institucional constituyen actividades secundarias."
+      },
+      {
+        "text": "Son gastos no operativos que solo afectan la partida de impuestos anuales.",
+        "isCorrect": false,
+        "rationale": "Las obligaciones tributarias son pasivos normativos, no actividades operativas primarias."
+      },
+      {
+        "text": "Representan únicamente las compras de activos fijos como terrenos e inmuebles.",
+        "isCorrect": false,
+        "rationale": "Las adquisiciones de bienes de capital son inversiones de infraestructura."
+      },
+      {
+        "text": "Se realizan al margen del objeto social y la operación comercial de la empresa.",
+        "isCorrect": false,
+        "rationale": "Las actividades primarias son la razón de ser de la operación del negocio."
+      }
+    ],
+    "hint": "Se refieren a los procesos centrales de manufactura y distribución directa del negocio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes corresponden a ventajas clave de aplicar un presupuesto basado en actividades (ABC)?",
+    "opciones": [
+      {
+        "text": "Permite una asignación más precisa y realista de los costos indirectos a cada producto.",
+        "isCorrect": true,
+        "rationale": "Al utilizar inductores de costo específicos por actividad, elimina subsidios cruzados entre productos."
+      },
+      {
+        "text": "Facilita la identificación de actividades que no agregan valor para su posterior eliminación.",
+        "isCorrect": true,
+        "rationale": "Visibiliza las ineficiencias y desperdicios dentro del flujo operativo de la empresa."
+      },
+      {
+        "text": "Mejora la toma de decisiones de fijación de precios basándose en costos reales por proceso.",
+        "isCorrect": true,
+        "rationale": "Al reflejar con precisión el costo acumulado, permite establecer precios acordes al margen requerido."
+      },
+      {
+        "text": "Garantiza la eliminación automática de todos los impuestos aplicables a la fábrica.",
+        "isCorrect": false,
+        "rationale": "La metodología contable interna no exime a la empresa de sus cargas tributarias."
+      },
+      {
+        "text": "Evita tener que realizar inventarios físicos en los almacenes.",
+        "isCorrect": false,
+        "rationale": "El presupuesto por actividades complementa la gestión operativa, sin reemplazar los controles de inventario."
+      }
+    ],
+    "hint": "Selecciona los beneficios orientados a la precisión de costos, eficiencia de procesos y fijación de precios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuándo se considera que una variación en el presupuesto de producción es 'desfavorable'?",
+    "opciones": [
+      {
+        "text": "Cuando los costos reales superan a los presupuestados o los ingresos reales son menores a los esperados.",
+        "isCorrect": true,
+        "rationale": "Cualquier desviación que reduzca la utilidad respecto a lo planificado representa un resultado perjudicial o desfavorable."
+      },
+      {
+        "text": "Cuando los costos reales son significativamente menores a los gastos estimados inicialmente.",
+        "isCorrect": false,
+        "rationale": "Gastar menos dinero de lo previsto preserva el margen y constituye una variación favorable."
+      },
+      {
+        "text": "Cuando los ingresos reales superan ampliamente las proyecciones planteadas por ventas.",
+        "isCorrect": false,
+        "rationale": "Obtener mayores ingresos genera una variación positiva en el estado financiero."
+      },
+      {
+        "text": "Cuando el presupuesto real ejecutado es exactamente igual al $100\\%$ de la meta calculada.",
+        "isCorrect": false,
+        "rationale": "La coincidencia exacta demuestra un cumplimiento perfecto del presupuesto sin desviaciones."
+      },
+      {
+        "text": "Cuando los clientes pagan por adelantado todas las órdenes de compra solicitadas.",
+        "isCorrect": false,
+        "rationale": "El cobro anticipado mejora la liquidez y la disponibilidad de caja."
+      }
+    ],
+    "hint": "Reflexiona sobre el impacto financiero que causa gastar más de la cuenta o vender menos de lo planeado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representa el índice de ejecución presupuestaria?",
+    "opciones": [
+      {
+        "text": "Un indicador que compara la proporción entre el gasto o ingreso real frente al monto presupuestado.",
+        "isCorrect": true,
+        "rationale": "Mide el nivel de avance y adherencia cuantitativa de la ejecución real con respecto a la meta financiera."
+      },
+      {
+        "text": "El tiempo total que le toma a la maquinaria completar una orden de trabajo.",
+        "isCorrect": false,
+        "rationale": "La duración de la orden mide el tiempo de ciclo de producción."
+      },
+      {
+        "text": "La suma total de activos fijos tangibles propiedad de la empresa.",
+        "isCorrect": false,
+        "rationale": "Los activos tangibles forman parte de la estructura patrimonial en el balance general."
+      },
+      {
+        "text": "El cálculo de la inflación acumulada del sector industrial durante un año.",
+        "isCorrect": false,
+        "rationale": "La inflación es un indicador macroeconómico externo."
+      },
+      {
+        "text": "El número de empleados contratados durante una campaña específica.",
+        "isCorrect": false,
+        "rationale": "La cantidad de contrataciones mide la rotación o crecimiento de la plantilla de personal."
+      }
+    ],
+    "hint": "Esta métrica evalúa en qué porcentaje se ha cumplido lo planificado en la práctica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial de la filosofía de inventarios Justo a Tiempo (Just-in-Time / JIT)?",
+    "opciones": [
+      {
+        "text": "Producir o abastecer la cantidad exacta requerida, en el momento preciso y lugar adecuado, reduciendo desperdicios.",
+        "isCorrect": true,
+        "rationale": "El sistema JIT busca minimizar el almacenamiento innecesario operando bajo la demanda real del cliente."
+      },
+      {
+        "text": "Acumular grandes volúmenes de materias primas en bodega para prevenir desabastecimientos por huelgas.",
+        "isCorrect": false,
+        "rationale": "Crear grandes reservas representa el modelo tradicional de inventario de seguridad, opuesto al JIT."
+      },
+      {
+        "text": "Comprar insumos en lotes gigantescos para maximizar únicamente los descuentos por volumen.",
+        "isCorrect": false,
+        "rationale": "Las compras masivas incrementan los costos de almacenamiento e inmovilizan capital, algo contrario al JIT."
+      },
+      {
+        "text": "Mantener el almacén al $100\\%$ de su capacidad física para impresionar a los auditores.",
+        "isCorrect": false,
+        "rationale": "Saturar el espacio genera costos inútiles e ineficiencias en la manipulación."
+      },
+      {
+        "text": "Sustituir por completo la mano de obra humana mediante la compra de robots.",
+        "isCorrect": false,
+        "rationale": "El sistema JIT se enfoca en el flujo y sincronización del proceso, no necesariamente en la automatización total."
+      }
+    ],
+    "hint": "Busca la opción que resalte la producción por demanda real (sistema Pull) y la erradicación del almacenamiento ocioso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la clasificación ABC de inventarios basada en el principio de Pareto, ¿qué caracteriza a los productos de Tipo A?",
+    "opciones": [
+      {
+        "text": "Representan un alto porcentaje del valor monetario total del inventario pero un bajo porcentaje de las unidades físicas.",
+        "isCorrect": true,
+        "rationale": "Típicamente representan alrededor del $80\\%$ del valor económico acumulado y solo un $15\\%$ a $20\\%$ de los artículos."
+      },
+      {
+        "text": "Constituyen la mayor parte del volumen físico de la bodega pero tienen un valor financiero insignificante.",
+        "isCorrect": false,
+        "rationale": "La abundancia física con bajo impacto monetario caracteriza a las existencias de Tipo C."
+      },
+      {
+        "text": "Son productos defectuosos u obsoletos que deben desecharse de inmediato.",
+        "isCorrect": false,
+        "rationale": "Los productos dañados son mermas y no forman parte de la estratificación Pareto operativa."
+      },
+      {
+        "text": "Son artículos cuyo control y conteo físico solo se realiza una vez cada tres años.",
+        "isCorrect": false,
+        "rationale": "Por su elevado valor económico, las existencias Tipo A exigen conteos cíclicos muy frecuentes."
+      },
+      {
+        "text": "Corresponden a suministros de oficina menores como clips y papelería general.",
+        "isCorrect": false,
+        "rationale": "Los insumos de oficina de bajo costo forman parte de las categorías triviales o Tipo C."
+      }
+    ],
+    "hint": "Recuerda la regla del 80/20: pocos artículos concentran la mayor parte de la inversión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una de las consecuencias desfavorables de mantener un inventario excesivo en almacén?",
+    "opciones": [
+      {
+        "text": "Generación de capital ocioso e incremento en los costos de almacenamiento y riesgo de obsolescencia.",
+        "isCorrect": true,
+        "rationale": "El exceso de stock inmoviliza fondos líquidos que podrían usarse en otras áreas y expone los bienes al deterioro."
+      },
+      {
+        "text": "Disminución inmediata de las tarifas de la energía eléctrica contratada en la planta.",
+        "isCorrect": false,
+        "rationale": "Tener más carga en bodega no disminuye las tarifas eléctricas ni el consumo del local."
+      },
+      {
+        "text": "Eliminación automática de las cuotas de depreciación de la maquinaria.",
+        "isCorrect": false,
+        "rationale": "La depreciación de los activos de producción no depende del volumen acumulado en el almacén."
+      },
+      {
+        "text": "Aumento directo en las ventas globales del mercado sin importar el precio final.",
+        "isCorrect": false,
+        "rationale": "Acumular stock no garantiza mayor demanda comercial de parte de los clientes."
+      },
+      {
+        "text": "Reducción de los tiempos de transporte terrestre de materias primas.",
+        "isCorrect": false,
+        "rationale": "Los tiempos logísticos de los proveedores no se reducen por almacenar más productos internamente."
+      }
+    ],
+    "hint": "Piensa en el dinero detenido en las cajas guardadas y en la posibilidad de que los productos se dañen o pasen de moda.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes variables forman parte directa de los costos de almacenamiento de un inventario?",
+    "opciones": [
+      {
+        "text": "El alquiler y mantenimiento del espacio físico de la bodega.",
+        "isCorrect": true,
+        "rationale": "Constituye la erogación por la infraestructura destinada a resguardar la mercadería."
+      },
+      {
+        "text": "El pago de pólizas de seguro para proteger la mercadería contra robos o incendios.",
+        "isCorrect": true,
+        "rationale": "Representa el costo financiero asignado a la cobertura de riesgos sobre los activos guardados."
+      },
+      {
+        "text": "Los costos derivados del deterioro, mermas u obsolescencia de los productos guardados.",
+        "isCorrect": true,
+        "rationale": "Es la pérdida económica que sufre el inventario retenido durante un tiempo en bodega."
+      },
+      {
+        "text": "Las comisiones pagadas a los vendedores por cerrar contratos comerciales.",
+        "isCorrect": false,
+        "rationale": "Las comisiones comerciales forman parte del costo de distribución y ventas."
+      },
+      {
+        "text": "Los intereses cobrados por el banco debido al retraso en el pago de tarjetas corporativas.",
+        "isCorrect": false,
+        "rationale": "Los cargos por mora bancaria representan gastos financieros ajenos a la custodia de bienes."
+      }
+    ],
+    "hint": "Elige aquellas partidas asociadas a resguardar, mantener y asegurar la mercancía en las instalaciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué evalúa el indicador de rotación de inventarios?",
+    "opciones": [
+      {
+        "text": "El número de veces que el inventario se vende y se repone dentro de un periodo determinado.",
+        "isCorrect": true,
+        "rationale": "Mide el dinamismo comercial del stock y la velocidad con la que se recupera la inversión en bienes."
+      },
+      {
+        "text": "La distancia en kilómetros recorridos por los camiones de reparto.",
+        "isCorrect": false,
+        "rationale": "El kilometraje evalúa el desempeño del transporte logístico exterior."
+      },
+      {
+        "text": "El número total de trabajadores asignados exclusivamente al turno nocturno de la fábrica.",
+        "isCorrect": false,
+        "rationale": "El recuento de obreros nocturnos es una métrica de administración de personal."
+      },
+      {
+        "text": "La cantidad de combustible consumida por los montacargas en un día.",
+        "isCorrect": false,
+        "rationale": "El consumo de combustible mide la eficiencia de los equipos de manipulación."
+      },
+      {
+        "text": "El margen de utilidad neta de las acciones de la empresa en la bolsa.",
+        "isCorrect": false,
+        "rationale": "Las métricas bursátiles corresponden al análisis financiero bursátil global."
+      }
+    ],
+    "hint": "Relaciona la velocidad con la que la mercancía entra, sale vendida y vuelve a comprarse.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué implicación operativa suele tener un valor excesivamente alto en los Días de Inventario Disponible (DIO)?",
+    "opciones": [
+      {
+        "text": "Indica una baja rotación del producto y una acumulación prolongada de stock en el almacén.",
+        "isCorrect": true,
+        "rationale": "Un mayor número de días significa que la mercadería permanece estancada en bodega durante más tiempo antes de salir."
+      },
+      {
+        "text": "Demuestra una velocidad de ventas vertiginosa con riesgo inminente de desabastecimiento.",
+        "isCorrect": false,
+        "rationale": "Las ventas muy rápidas reducen los días de inventario a números mínimos."
+      },
+      {
+        "text": "Garantiza que la empresa no está pagando gastos de seguros ni almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Retener la mercancía durante más días incrementa los gastos de seguro y espacio."
+      },
+      {
+        "text": "Muestra que todas las máquinas de la planta se encuentran totalmente inactivas.",
+        "isCorrect": false,
+        "rationale": "El indicador DIO mide el estancamiento de los bienes guardados, no la parada directa de una máquina."
+      },
+      {
+        "text": "Confirma que el $100\\%$ de los clientes pagó sus productos al contado.",
+        "isCorrect": false,
+        "rationale": "Las condiciones de pago son gestionadas por el área de cobranzas y no por la permanencia del stock."
+      }
+    ],
+    "hint": "Analiza qué le ocurre a la mercadería si el contador de días estancada en estantería sigue creciendo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la gestión industrial, ¿cómo se diferencia la eficacia de la eficiencia?",
+    "opciones": [
+      {
+        "text": "La eficacia se centra en alcanzar los objetivos planeados, mientras que la eficiencia busca optimizar los recursos empleados.",
+        "isCorrect": true,
+        "rationale": "La eficacia responde a la consecución del resultado esperado, y la eficiencia a la minimización del uso de recursos para lograrlo."
+      },
+      {
+        "text": "La eficacia mide el ahorro monetario e insumos, mientras que la eficiencia se refiere al número de productos dañados.",
+        "isCorrect": false,
+        "rationale": "El ahorro de recursos describe a la eficiencia, invirtiendo los conceptos planteados."
+      },
+      {
+        "text": "La eficacia aplica únicamente a las máquinas y la eficiencia es exclusiva del personal directivo.",
+        "isCorrect": false,
+        "rationale": "Ambos conceptos se aplican transversalmente a personas, procesos y maquinaria."
+      },
+      {
+        "text": "Ambos términos significan exactamente lo mismo y se usan indiferentemente en ingeniería.",
+        "isCorrect": false,
+        "rationale": "Son conceptos cuantitativamente distintos: uno mide el logro de metas y el otro el consumo de insumos."
+      },
+      {
+        "text": "La eficacia requiere el uso de sistemas ERP mientras que la eficiencia se calcula de forma manual.",
+        "isCorrect": false,
+        "rationale": "La herramienta de cálculo utilizada no altera las definiciones teóricas de estas métricas."
+      }
+    ],
+    "hint": "Asocia eficacia con 'lograr el objetivo' y eficiencia con 'usar el mínimo de recursos'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la expresión matemática básica para calcular la productividad de un sistema?",
+    "opciones": [
+      {
+        "text": "$\\text{Productividad} = \\frac{\\text{Productos o Resultados Obtenidos}}{\\text{Recursos Totales Empleados}}$",
+        "isCorrect": true,
+        "rationale": "Refleja el cociente entre las salidas logradas en el proceso y las entradas requeridas para generarlas."
+      },
+      {
+        "text": "$\\text{Productividad} = \\text{Recursos Totales} \\times \\text{Horas de Parada de Planta}$",
+        "isCorrect": false,
+        "rationale": "Multiplicar recursos por tiempos de inactividad no genera un indicador de rendimiento de salidas."
+      },
+      {
+        "text": "$\\text{Productividad} = \\frac{\\text{Gastos Fijos}}{\\text{Precio de Venta del Producto}}$",
+        "isCorrect": false,
+        "rationale": "Dividir gastos entre precio ayuda a estimar unidades en el punto de equilibrio, no la productividad."
+      },
+      {
+        "text": "$\\text{Productividad} = \\text{Ingresos de Ventas} - \\text{Costo Fijo de Alquiler}$",
+        "isCorrect": false,
+        "rationale": "Restar un costo específico de los ingresos arroja un margen de utilidad parcial."
+      },
+      {
+        "text": "$\\text{Productividad} = \\frac{\\text{Horas Muertas}}{\\text{Número de Empleados}}$",
+        "isCorrect": false,
+        "rationale": "La relación de horas muertas por operario representa una métrica de ineficiencia o inactividad."
+      }
+    ],
+    "hint": "Determina la relación entre lo producido (salidas) y lo consumido (entradas).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de las siguientes acciones promueve de manera directa el incremento de la productividad laboral?",
+    "opciones": [
+      {
+        "text": "La capacitación continua del personal y la adopción de un buen clima organizacional.",
+        "isCorrect": true,
+        "rationale": "El desarrollo de habilidades sumado a un ambiente laboral propicio incrementa la rapidez y calidad del trabajo."
+      },
+      {
+        "text": "Aumentar indefinidamente las horas muertas y los tiempos de espera entre procesos.",
+        "isCorrect": false,
+        "rationale": "Aumentar tiempos improductivos degrada la eficiencia del personal."
+      },
+      {
+        "text": "Desconectar los sistemas automatizados para volver a métodos artesanales lentos.",
+        "isCorrect": false,
+        "rationale": "Prescindir de tecnologías alarga los ciclos productivos y merma la productividad por hora."
+      },
+      {
+        "text": "Eliminar todos los canales de comunicación interna entre supervisores y operarios.",
+        "isCorrect": false,
+        "rationale": "Romper la comunicación interna genera desorganización y errores constantes."
+      },
+      {
+        "text": "Suspender los programas de mantenimiento preventivo de la planta.",
+        "isCorrect": false,
+        "rationale": "Cancelar el mantenimiento incrementa las fallas mecánicas e interrumpe la labor obrera."
+      }
+    ],
+    "hint": "Considera medidas orientadas al desarrollo técnico y la motivación del equipo humano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué factores resultan fundamentales para evaluar y optimizar la eficiencia de la maquinaria en una fábrica?",
+    "opciones": [
+      {
+        "text": "La ejecución oportuna de programas de mantenimiento preventivo y predictivo.",
+        "isCorrect": true,
+        "rationale": "Previene interrupciones no programadas y extiende la vida útil de los activos productivos."
+      },
+      {
+        "text": "La capacitación técnica de los operarios para la manipulación correcta de las máquinas.",
+        "isCorrect": true,
+        "rationale": "Reduce fallas operativas humanas y maximiza el ritmo seguro de procesamiento."
+      },
+      {
+        "text": "La gestión eficiente de la energía consumida durante el funcionamiento de los equipos.",
+        "isCorrect": true,
+        "rationale": "Optimiza los gastos operativos por consumo de electricidad u otros energéticos."
+      },
+      {
+        "text": "El cambio continuo de logotipo comercial en los envases cada semana.",
+        "isCorrect": false,
+        "rationale": "Las modificaciones estéticas de la marca no modifican la eficiencia técnica de las máquinas."
+      },
+      {
+        "text": "El incremento voluntario de mermas y desperdicios de material en cada turno.",
+        "isCorrect": false,
+        "rationale": "Producir más desperdicios deteriora el aprovechamiento de los insumos."
+      }
+    ],
+    "hint": "Identifica los aspectos vinculados al estado mecánico, uso operativo correcto y gasto energético de los activos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué representa un sistema de gestión ERP (Planificación de Recursos Empresariales)?",
+    "opciones": [
+      {
+        "text": "Un software integrado que unifica y automatiza los datos de las distintas áreas de la empresa.",
+        "isCorrect": true,
+        "rationale": "Conecta contabilidad, inventarios, compras, producción y personal en una única plataforma compartida."
+      },
+      {
+        "text": "Una máquina física destinada exclusivamente al corte automatizado de madera.",
+        "isCorrect": false,
+        "rationale": "Un ERP es una solución de software de gestión, no un equipo mecánico de corte."
+      },
+      {
+        "text": "Un contrato de arrendamiento exclusivo para el transporte de materias primas.",
+        "isCorrect": false,
+        "rationale": "Las contrataciones logísticas son acuerdos comerciales de servicio externo."
+      },
+      {
+        "text": "Un indicador financiero que mide únicamente las cuotas de depreciación impositiva.",
+        "isCorrect": false,
+        "rationale": "La depreciación es una partida contable y no una plataforma informática integral."
+      },
+      {
+        "text": "Un curso presencial obligatorio sobre seguridad industrial para operarios.",
+        "isCorrect": false,
+        "rationale": "La capacitación en seguridad es una actividad formativa en prevención de riesgos."
+      }
+    ],
+    "hint": "Piensa en el programa informático central que conecta a todos los departamentos de la compañía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En un sistema ERP como Odoo, ¿en qué consiste la característica de 'modularidad'?",
+    "opciones": [
+      {
+        "text": "Permite implementar solo los módulos específicos que la empresa necesita e ir añadiendo otros a medida que crece.",
+        "isCorrect": true,
+        "rationale": "Brinda flexibilidad para activar funciones (ventas, compras, inventario) en forma progresiva según la demanda del negocio."
+      },
+      {
+        "text": "Obliga a la empresa a usar todos los módulos del software desde el primer día de manera obligatoria.",
+        "isCorrect": false,
+        "rationale": "La modularidad evita sistemas rígidos que fuercen la adopción de herramientas innecesarias."
+      },
+      {
+        "text": "Exige cambiar de computadoras y servidores físicos cada seis meses.",
+        "isCorrect": false,
+        "rationale": "Las actualizaciones del sistema informático no requieren la renovación periódica de componentes de hardware."
+      },
+      {
+        "text": "Impide completamente la comunicación de datos con la base de datos de contabilidad.",
+        "isCorrect": false,
+        "rationale": "La función básica de un ERP es integrar la contabilidad con el resto de las operaciones."
+      },
+      {
+        "text": "Bloquea el acceso a usuarios que no pertenezcan al departamento de sistemas.",
+        "isCorrect": false,
+        "rationale": "Los ERP asignan permisos a empleados de diversos departamentos en función de su rol."
+      }
+    ],
+    "hint": "Asocia el concepto con bloques o piezas que se pueden agregar gradualmente según la necesidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el beneficio primordial de contar con datos centralizados y en tiempo real dentro de un ERP?",
+    "opciones": [
+      {
+        "text": "Facilitar la toma de decisiones estratégicas basadas en información precisa y libre de duplicaciones.",
+        "isCorrect": true,
+        "rationale": "Tener la información sincronizada y al instante permite a la gerencia responder con rapidez a problemas u oportunidades."
+      },
+      {
+        "text": "Incrementar el tiempo manual que requiere el personal para consolidar carpetas en físico.",
+        "isCorrect": false,
+        "rationale": "La automatización informática reduce el trabajo manual de papeleo."
+      },
+      {
+        "text": "Aumentar los costos de papelería en el área de recepción de facturas.",
+        "isCorrect": false,
+        "rationale": "La digitalización disminuye la dependencia del papel físico en las oficinas."
+      },
+      {
+        "text": "Impedir que la gerencia conozca el nivel real del stock en los almacenes.",
+        "isCorrect": false,
+        "rationale": "La visibilidad en tiempo real permite conocer las existencias exactas en bodega."
+      },
+      {
+        "text": "Garantizar que no sea necesario realizar mantenimiento a las instalaciones eléctricas.",
+        "isCorrect": false,
+        "rationale": "La administración de software no reemplaza el mantenimiento físico de las redes eléctricas de la planta."
+      }
+    ],
+    "hint": "Considera cómo impacta la disponibilidad inmediata de cifras reales en la gestión ejecutiva.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En una planta industrial de manufactura, ¿cuál es la característica principal que diferencia a los costos fijos de los costos variables respecto al volumen de producción?",
+    "opciones": [
+      {
+        "text": "Los costos fijos permanecen constantes en su monto total independientemente de las unidades producidas, mientras que los costos variables totales cambian en proporción directa al volumen de producción.",
+        "isCorrect": true,
+        "rationale": "El costo fijo total no se altera ante fluctuaciones en la producción dentro de un rango relevante, mientras que el costo variable total incrementa o disminuye proporcionalmente a la cantidad fabricada."
+      },
+      {
+        "text": "Los costos fijos aumentan por unidad a medida que sube la producción, mientras que los costos variables por unidad aumentan cuando la producción baja.",
+        "isCorrect": false,
+        "rationale": "Al aumentar la producción, el costo fijo unitario disminuye por la distribución de la carga entre más unidades; no aumenta."
+      },
+      {
+        "text": "Los costos fijos pueden asignarse de forma directa a una sola pieza, mientras que los costos variables solo se distribuyen mediante prorrateo.",
+        "isCorrect": false,
+        "rationale": "La clasificación de costo directo e indirecto se basa en la identificación con el producto, no en su variabilidad respecto al volumen."
+      },
+      {
+        "text": "Los costos fijos se eliminan por completo cuando la planta detiene temporalmente sus operaciones, mientras que los variables persisten.",
+        "isCorrect": false,
+        "rationale": "Incluso si la planta detiene su producción por completo, los costos fijos (como el alquiler del local) deben seguir pagándose."
+      },
+      {
+        "text": "Los costos fijos corresponden únicamente a compras de materias primas, mientras que los variables corresponden al pago de alquileres y seguros.",
+        "isCorrect": false,
+        "rationale": "Las materias primas son costos variables y los alquileres son costos fijos, por lo que las definiciones están invertidas."
+      }
+    ],
+    "hint": "Considere qué sucede con la factura total del alquiler frente a la compra total de insumos cuando la fábrica duplica sus unidades fabricadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál de los siguientes rubros se clasifica estrictamente como un costo indirecto de fabricación (CIF) en una planta confeccionista de ropa?",
+    "opciones": [
+      {
+        "text": "La tela principal de algodón empleada para cortar los patrones de las camisas.",
+        "isCorrect": false,
+        "rationale": "La tela principal es la materia prima directa, ya que se identifica de forma precisa e íntegra en cada unidad terminada."
+      },
+      {
+        "text": "El salario pagado por destajo a los operarios de las máquinas de coser.",
+        "isCorrect": false,
+        "rationale": "El pago por pieza a operarios de ensamblaje constituye mano de obra directa."
+      },
+      {
+        "text": "El salario mensual del supervisor general de la planta de producción.",
+        "isCorrect": true,
+        "rationale": "El sueldo del supervisor supervisa múltiples líneas de producción y no se atribuye exactamente a una sola prenda, constituyendo mano de obra indirecta o CIF."
+      },
+      {
+        "text": "Los botones y cierres específicos utilizados en un lote particular de pantalones.",
+        "isCorrect": false,
+        "rationale": "Los insumos específicos rastreables por pieza se consideran materiales directos."
+      },
+      {
+        "text": "El costo del empaque primario impreso para cada unidad individual de producto.",
+        "isCorrect": false,
+        "rationale": "El empaque primario rastreable por unidad es un costo directo de empaque y no un gasto indirecto general."
+      }
+    ],
+    "hint": "Busque el elemento que beneficia a toda la operación de fabricación pero cuyo costo no puede asignarse de forma exacta a una sola unidad confeccionada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes servicios o insumos presentan habitualmente un comportamiento de costo semivariable (o mixto) en una instalación industrial?",
+    "opciones": [
+      {
+        "text": "Factura de energía eléctrica con un cargo fijo por conexión y un cargo variable por consumo de kilovatios-hora.",
+        "isCorrect": true,
+        "rationale": "Combina una cuota base constante con una tarifa que se incrementa según el uso de las máquinas en planta."
+      },
+      {
+        "text": "Sueldo de un vendedor compuesto por un salario básico mensual más comisiones por volumen de ventas alcanzado.",
+        "isCorrect": true,
+        "rationale": "Presenta una parte fija asegurada y un componente variable ligado al desempeño comercial."
+      },
+      {
+        "text": "Servicio de mantenimiento de maquinaria con una tarifa plana de revisión preventiva más un cobro extra por horas de reparación por desgaste.",
+        "isCorrect": true,
+        "rationale": "Tiene una cuota periódica fija y un gasto flotante que depende de la intensidad de uso de los equipos."
+      },
+      {
+        "text": "El alquiler fijo mensual pactado en contrato sobre el terreno de la fábrica.",
+        "isCorrect": false,
+        "rationale": "El alquiler puro es un costo estrictamente fijo que no varía con el nivel de uso o producción."
+      },
+      {
+        "text": "La materia prima de acero comprada a un precio fijo por kilogramo sin cuotas base.",
+        "isCorrect": false,
+        "rationale": "La materia prima pura sin componentes de cuota fija es un costo totalmente variable."
+      }
+    ],
+    "hint": "Identifique las opciones que contienen una estructura dual: una base mínima asegurada independientemente de la actividad y un adicional sujeto al volumen de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si una planta industrial experimenta una reducción drástica en su volumen de producción durante un mes determinado, ¿qué ocurre con sus costos fijos unitarios?",
+    "opciones": [
+      {
+        "text": "El costo fijo unitario aumenta, debido a que el mismo monto fijo total se divide entre una menor cantidad de unidades fabricadas.",
+        "isCorrect": true,
+        "rationale": "Al haber menos unidades para absorber la misma carga de costos fijos globales, la porción que le corresponde a cada producto es mayor."
+      },
+      {
+        "text": "El costo fijo unitario disminuye, porque la empresa gasta menos dinero en sus instalaciones.",
+        "isCorrect": false,
+        "rationale": "El desembolso total de costo fijo no cambia, por lo que dividir ese monto entre menos unidades hace que el costo unitario suba, no que baje."
+      },
+      {
+        "text": "El costo fijo unitario se mantiene exactamente igual, ya que los costos fijos nunca cambian bajo ninguna circunstancia.",
+        "isCorrect": false,
+        "rationale": "El costo fijo *total* permanece constante, pero el costo fijo *unitario* fluctúa inversamente con el volumen de producción."
+      },
+      {
+        "text": "El costo fijo unitario pasa a convertirse automáticamente en un costo variable directo de fabricación.",
+        "isCorrect": false,
+        "rationale": "El volumen de producción no altera la clasificación conceptual ni la naturaleza del costo."
+      },
+      {
+        "text": "El costo fijo unitario se reduce a cero, puesto que la ineficiencia es absorbida por el área financiera.",
+        "isCorrect": false,
+        "rationale": "Las ineficiencias de volumen incrementan el costo unitario de absorción en lugar de anularlo."
+      }
+    ],
+    "hint": "Piense en la operación matemática de dividir una cantidad constante (costo fijo total) por un divisor cada vez más pequeño (unidades producidas).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué categoría funcional deben registrarse las comisiones pagadas a los asesores comerciales y los fletes para la distribución del producto terminado?",
+    "opciones": [
+      {
+        "text": "Costos de distribución y ventas.",
+        "isCorrect": true,
+        "rationale": "Estos gastos están dirigidos de manera directa a la comercialización, promoción y entrega del producto al cliente final."
+      },
+      {
+        "text": "Costos directos de fabricación.",
+        "isCorrect": false,
+        "rationale": "Los costos de fabricación ocurren dentro del proceso productivo, mientras que las comisiones y fletes de entrega ocurren en la etapa posterior de comercialización."
+      },
+      {
+        "text": "Costos financieros.",
+        "isCorrect": false,
+        "rationale": "Los costos financieros se derivan del pago de intereses o financiamiento bancario, no de la comercialización de bienes."
+      },
+      {
+        "text": "Costos de administración general.",
+        "isCorrect": false,
+        "rationale": "Los gastos administrativos corresponden a la dirección operativa central (como contabilidad o recursos humanos) y no al área de ventas."
+      },
+      {
+        "text": "Gastos generales de planta (CIF).",
+        "isCorrect": false,
+        "rationale": "Los CIF forman parte de la transformación en planta, mientras que los fletes de salida y comisiones corresponden a la gestión externa de ventas."
+      }
+    ],
+    "hint": "Diferencie los desembolsos ocurridos dentro del taller de transformación de aquellos necesarios para colocar la mercancía en manos del comprador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con la contabilidad de costos industriales, ¿cuáles de los siguientes componentes integran el costo de producción total de un producto?",
+    "opciones": [
+      {
+        "text": "Materia prima directa (MPD).",
+        "isCorrect": true,
+        "rationale": "Es el primer elemento esencial, consistente en los insumos principales transformados en el producto."
+      },
+      {
+        "text": "Mano de obra directa (MOD).",
+        "isCorrect": true,
+        "rationale": "Constituye el segundo elemento fundamental, representando el esfuerzo humano directo involucrado en la fabricación."
+      },
+      {
+        "text": "Costos indirectos de fabricación (CIF).",
+        "isCorrect": true,
+        "rationale": "Es el tercer elemento clave, que agrupa suministros indirectos, supervisión y servicios de planta necesarios."
+      },
+      {
+        "text": "Intereses de préstamos bancarios de capital de trabajo.",
+        "isCorrect": false,
+        "rationale": "Los intereses forman parte de los gastos financieros de la empresa y no del costo de manufactura del producto."
+      },
+      {
+        "text": "Honorarios del auditor contable externo de la sede corporativa.",
+        "isCorrect": false,
+        "rationale": "Los honorarios de auditoría de la sede son gastos administrativos y no se integran al costo de transformación."
+      }
+    ],
+    "hint": "Recuerde los tres ejes o pilares fundamentales que conforman el costo de manufactura en un estado de costos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia fundamental entre la contabilidad financiera y la contabilidad de costos (o administrativa) respecto a sus usuarios y regulación?",
+    "opciones": [
+      {
+        "text": "La contabilidad financiera emite informes estandarizados regulados para usuarios externos, mientras que la contabilidad de costos genera información interna para la toma de decisiones presupuestarias y operativas.",
+        "isCorrect": true,
+        "rationale": "La contabilidad financiera sigue normas (como las NIIF/NIC) para reportar a bancos y reguladores, mientras que la contabilidad de costos sirve a la gerencia interna de manera flexible."
+      },
+      {
+        "text": "La contabilidad financiera solo registra presupuestos futuros, mientras que la contabilidad de costos analiza únicamente transacciones de años pasados.",
+        "isCorrect": false,
+        "rationale": "Es la contabilidad administrativa/costos la que se enfoca intensamente en presupuestos y proyecciones futuras, mientras que la financiera es histórica."
+      },
+      {
+        "text": "La contabilidad financiera solo se aplica a empresas pesadas, mientras que la contabilidad de costos es exclusiva para negocios minoristas.",
+        "isCorrect": false,
+        "rationale": "Ambos sistemas se aplican en cualquier tipo de organización, independientemente de su sector económico."
+      },
+      {
+        "text": "La contabilidad de costos está obligada por ley a publicarse en diarios oficiales, mientras que la financiera es secreta.",
+        "isCorrect": false,
+        "rationale": "La contabilidad administrativa es de uso confidencial interno, mientras que los estados financieros suelen ser requeridos por entidades externas públicas o privadas."
+      },
+      {
+        "text": "No existe ninguna diferencia; ambos términos son completamente sinónimos en la gestión empresarial.",
+        "isCorrect": false,
+        "rationale": "Aunque comparten datos primarios, persiguen propósitos, reglamentaciones y audiencias objetivo marcadamente distintas."
+      }
+    ],
+    "hint": "Considere quién consulta los reportes: un banco que otorga un crédito frente a un gerente de planta que evalúa precios de lote.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para determinar la cantidad requerida de unidades a fabricar dentro del presupuesto de producción, ¿cuál es la fórmula lógica que relaciona ventas proyectadas e inventarios?",
+    "opciones": [
+      {
+        "text": "Unidades a producir = Ventas proyectadas + Inventario final deseado - Inventario inicial disponible.",
+        "isCorrect": true,
+        "rationale": "Permite cubrir la demanda esperada de ventas y dejar el inventario de reserva requerido, descontando las existencias con las que ya se cuenta al inicio."
+      },
+      {
+        "text": "Unidades a producir = Ventas proyectadas - Inventario final deseado + Inventario inicial disponible.",
+        "isCorrect": false,
+        "rationale": "Restar el inventario final deseado dejaría a la empresa sin el stock de seguridad requerido al término del periodo."
+      },
+      {
+        "text": "Unidades a producir = (Ventas proyectadas + Inventario inicial) / Inventario final.",
+        "isCorrect": false,
+        "rationale": "No existe una relación de división entre estas variables para hallar las necesidades de volumen de producción."
+      },
+      {
+        "text": "Unidades a producir = Ventas proyectadas × Margen de utilidad bruta deseado.",
+        "isCorrect": false,
+        "rationale": "El margen de utilidad es un indicador monetario de ganancia, no una fórmula de balance de masa de unidades físicas."
+      },
+      {
+        "text": "Unidades a producir = Inventario inicial disponible - Inventario final deseado.",
+        "isCorrect": false,
+        "rationale": "Esta fórmula ignora por completo la variable principal que desencadena la actividad productiva: la demanda o ventas proyectadas."
+      }
+    ],
+    "hint": "Sume lo que necesita entregar al cliente más lo que desea guardar en almacén, y reste lo que ya tiene guardado desde el mes anterior.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son ventajas operativas y financieras clave de implementar el Presupuesto Basado en Actividades (ABC) en un entorno industrial?",
+    "opciones": [
+      {
+        "text": "Permite asignar los costos indirectos con mayor precisión según las actividades reales que consumen recursos.",
+        "isCorrect": true,
+        "rationale": "A diferencia de los prorrateos tradicionales genéricos, el enfoque ABC rastrea el costo de cada actividad hacia el producto según sus generadores (drivers)."
+      },
+      {
+        "text": "Ayuda a identificar y reducir tareas que no agregan valor al producto final, disminuyendo desperdicios.",
+        "isCorrect": true,
+        "rationale": "Al desglosar el proceso en actividades específicas, la gerencia puede detectar ineficiencias o duplicidades y eliminarlas."
+      },
+      {
+        "text": "Facilita una toma de decisiones estratégica fundamentada en el costo real por línea de producto.",
+        "isCorrect": true,
+        "rationale": "Proporciona información sobre la rentabilidad real de productos complejos que consumen más actividades de soporte."
+      },
+      {
+        "text": "Garantiza la eliminación automática de todos los impuestos corporativos de la empresa.",
+        "isCorrect": false,
+        "rationale": "El método ABC es una herramienta de gestión interna y no modifica las obligaciones tributarias impuestas por ley."
+      },
+      {
+        "text": "Exime a la empresa de calcular el costo de la mano de obra directa.",
+        "isCorrect": false,
+        "rationale": "El método ABC sigue requiriendo el cómputo de la mano de obra directa; de hecho, refina su imputación por actividad."
+      }
+    ],
+    "hint": "Enfoque su análisis en cómo el método ABC desagrega los procesos en tareas específicas para visibilizar el origen exacto de los costos indirectos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el control presupuestario continuo de costos, ¿cuándo se califica formalmente una variación en el costo real como 'desfavorable'?",
+    "opciones": [
+      {
+        "text": "Cuando los costos reales ejecutados superan el monto que había sido presupuestado para el periodo.",
+        "isCorrect": true,
+        "rationale": "Una variación es desfavorable cuando el desembolso real gastado es mayor que el límite planificado, o cuando los ingresos reales son menores a lo previsto."
+      },
+      {
+        "text": "Cuando el costo real gastado es significativamente menor al presupuesto planificado.",
+        "isCorrect": false,
+        "rationale": "Gastar menos de lo presupuestado manteniendo la producción representa una variación favorable o ahorro."
+      },
+      {
+        "text": "Cuando la empresa aumenta sus utilidades netas por encima del $20\\%$ estimado.",
+        "isCorrect": false,
+        "rationale": "Un aumento inesperado en utilidades se considera un resultado favorable en el análisis financiero."
+      },
+      {
+        "text": "Cuando los insumos de materia prima se compran a un precio con descuento por volumen.",
+        "isCorrect": false,
+        "rationale": "Obtener insumos a un precio menor genera una variación favorable en el costo de materiales."
+      },
+      {
+        "text": "Cuando el volumen de ventas reales duplica la estimación del estudio de mercado.",
+        "isCorrect": false,
+        "rationale": "Superar las expectativas de ventas es una desviación favorable respecto a los ingresos proyectados."
+      }
+    ],
+    "hint": "Piense en el impacto para las finanzas cuando la facturación real de insumos excede el techo límite asignado en el plan económico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué fórmula expresa de manera correcta el indicador conocido como Índice de Ejecución Presupuestaria de Gastos?",
+    "opciones": [
+      {
+        "text": "$\\text{Índice de Ejecución} = \\left( \\frac{\\text{Gasto Real Executado}}{\\text{Gasto Presupuestado}} \\right) \\times 100\\%$",
+        "isCorrect": true,
+        "rationale": "Mide el porcentaje consumido del presupuesto asignado, comparando directamente la ejecución real frente a la meta o límite planificado."
+      },
+      {
+        "text": "$\\text{Índice de Ejecución} = \\left( \\frac{\\text{Gasto Presupuestado}}{\\text{Utilidad Neta}} \\right) \\times 100\\%$",
+        "isCorrect": false,
+        "rationale": "Esta proporción no mide la ejecución del presupuesto, sino la relación entre presupuesto y ganancia."
+      },
+      {
+        "text": "$\\text{Índice de Ejecución} = \\text{Gasto Real Executado} \\times \\text{Ventas Totales}$",
+        "isCorrect": false,
+        "rationale": "Multiplicar un gasto por los ingresos no arroja un porcentaje de cumplimiento presupuestario."
+      },
+      {
+        "text": "$\\text{Índice de Ejecución} = \\text{Inventario Final} - \\text{Inventario Inicial}$",
+        "isCorrect": false,
+        "rationale": "Esta resta calcula la variación de inventarios físicos y no la ejecución financiera del presupuesto."
+      },
+      {
+        "text": "$\\text{Índice de Ejecución} = \\left( \\frac{\\text{Horas Hombre Trabadas}}{\\text{Costo Fijo Total}} \\right) \\times 100\\%$",
+        "isCorrect": false,
+        "rationale": "Mezcla variables operativas con costos fijos de planta, lo cual no corresponde al índice presupuestario."
+      }
+    ],
+    "hint": "Identifique la razón matemática que divide lo que realmente se gastó entre el techo presupuestal previsto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes situaciones justifican técnicamente la aplicación de un ajuste continuo o reprogramación en el presupuesto operativo de una empresa?",
+    "opciones": [
+      {
+        "text": "Incrementos imprevistos y significativos en los precios internacionales de las materias primas primarias.",
+        "isCorrect": true,
+        "rationale": "La fluctuación en el costo de los insumos afecta las proyecciones de costo de venta, obligando a reprogramar las partidas de gasto."
+      },
+      {
+        "text": "Aumentos salariales decretados por regulaciones gubernamentales o negociaciones colectivas de trabajo.",
+        "isCorrect": true,
+        "rationale": "Un cambio obligatorio en la tarifa laboral altera los costos directos e indirectos fijados originalmente."
+      },
+      {
+        "text": "Cambios macroeconómicos severos como inflación acelerada o devaluación de la moneda local.",
+        "isCorrect": true,
+        "rationale": "Altera el poder adquisitivo del presupuesto y el costo real de los suministros importados o servicios."
+      },
+      {
+        "text": "La decisión gerencial de invertir en una nueva línea de negocio o proyecto tecnológico no contemplado.",
+        "isCorrect": true,
+        "rationale": "Las reorientaciones estratégicas exigen redistribuir o ampliar las asignaciones presupuestarias."
+      },
+      {
+        "text": "El cumplimiento exacto de todas las metas planificadas sin desviación alguna.",
+        "isCorrect": false,
+        "rationale": "Si las ejecuciones coinciden exactamente con lo planificado, no se requiere reprogramar el presupuesto."
+      }
+    ],
+    "hint": "Considere eventos tanto internos como del entorno externo que alteren significativamente las premisas de costos o ingresos con las que se diseñó el plan original.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la filosofía Justo a Tiempo (JIT), ¿en qué consiste esencialmente el principio de producción impulsada por demanda o sistema 'Pull'?",
+    "opciones": [
+      {
+        "text": "La producción o reabastecimiento se desencadena únicamente cuando existe una demanda real y confirmada por parte del cliente interno o externo.",
+        "isCorrect": true,
+        "rationale": "El sistema 'Pull' o de arrastre evita fabricar para almacenar; el consumo final 'jala' la necesidad de fabricar el lote previo de forma exacta."
+      },
+      {
+        "text": "La planta fabrica a máxima capacidad continua para llenar los almacenes de productos terminados antes de que comiencen las ventas.",
+        "isCorrect": false,
+        "rationale": "Eso describe el sistema tradicional 'Push' (empuje), el cual acumula inventarios masivos y genera capital ocioso."
+      },
+      {
+        "text": "Los proveedores envían materiales de forma fija el primer día de cada año, independientemente del ritmo de la fábrica.",
+        "isCorrect": false,
+        "rationale": "El JIT exige entregas frecuentes y pequeñas sincronizadas al ritmo diario, no entregas anuales masivas."
+      },
+      {
+        "text": "Se eliminan todos los controles de calidad para acelerar el paso de las piezas por el taller.",
+        "isCorrect": false,
+        "rationale": "El JIT requiere calidad perfecta en origen, ya que al no haber stock de amortiguación, una pieza defectuosa detiene la línea."
+      },
+      {
+        "text": "Se obliga a los clientes a pagar por adelantado cinco meses antes de iniciar el diseño del producto.",
+        "isCorrect": false,
+        "rationale": "El sistema 'Pull' regula el flujo de producción físico según la demanda, no las políticas comerciales de financiamiento anticipado."
+      }
+    ],
+    "hint": "Contraste la acción de 'empujar' mercancía hacia el almacén contra la de 'jalar' piezas desde la fábrica sólo cuando el comprador lo requiere.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al realizar la categorización ABC para conteos cíclicos de inventario basada en el valor monetario acumulado (Principio de Pareto), ¿qué características definen a los artículos del 'Grupo A'?",
+    "opciones": [
+      {
+        "text": "Representan un porcentaje menor en cantidad de SKUs (aprox. $20\\%$-$30\\%$) pero concentran el mayor porcentaje del valor total del inventario (aprox. $70\\%$-$80\\%$).",
+        "isCorrect": true,
+        "rationale": "Los artículos A son 'pocos vitales': un número reducido de códigos concentra la gran mayoría del capital invertido en el almacén."
+      },
+      {
+        "text": "Representan el $80\\%$ del número de ítems físicos y solo equivalen al $5\\%$ del valorizado económico.",
+        "isCorrect": false,
+        "rationale": "Esta descripción corresponde a los artículos de 'Grupo C' (muchos triviales)."
+      },
+      {
+        "text": "Son insumos que deben recontarse únicamente una vez cada cinco años debido a su nula importancia.",
+        "isCorrect": false,
+        "rationale": "Al concentrar el valor económico, los productos A requieren la frecuencia de conteo cíclico más alta (mensual o semanal)."
+      },
+      {
+        "text": "Son materiales que carecen de código de identificación y no se registran en el sistema de la empresa.",
+        "isCorrect": false,
+        "rationale": "Todos los ítems en inventario deben estar identificados; los de tipo A tienen el control y trazabilidad más rigurosa."
+      },
+      {
+        "text": "Son productos obsoletos que deben desecharse de inmediato para liberar espacio.",
+        "isCorrect": false,
+        "rationale": "La clasificación ABC categoriza inventario activo por su valor de rotación/costo, no por su condición de chatarra."
+      }
+    ],
+    "hint": "Recuerde la Ley del 80/20: una pequeña fracción de códigos representa la mayor tajada del dinero guardado en bodega.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes constituyen beneficios directos de aplicar conteos cíclicos programados en lugar de depender únicamente de un inventario general masivo anual?",
+    "opciones": [
+      {
+        "text": "Permite mantener una alta exactitud en los registros de inventario (indicador ERI) de forma continua durante todo el año.",
+        "isCorrect": true,
+        "rationale": "Detecta y corrige discrepancias de stock entre el sistema informático y el físico de manera periódica sin esperar a fin de año."
+      },
+      {
+        "text": "Evita la necesidad de paralizar completamente las operaciones de la fábrica o tienda para hacer un conteo total.",
+        "isCorrect": true,
+        "rationale": "Los conteos cíclicos se efectúan en lotes pequeños diariamente o semanalmente sin interrumpir la producción habitual."
+      },
+      {
+        "text": "Facilita la identificación temprana de causas de pérdidas, mermas o desorden en el almacén.",
+        "isCorrect": true,
+        "rationale": "Al investigar las diferencias de inmediato, se rastrea la causa raíz (errores de despacho, extravíos) a tiempo."
+      },
+      {
+        "text": "Garantiza que la empresa nunca más tenga que pagar sueldos al personal de compras.",
+        "isCorrect": false,
+        "rationale": "La gestión de compras sigue siendo indispensable; los conteos precisos ayudan a compras a hacer pedidos con datos reales."
+      },
+      {
+        "text": "Aumenta automáticamente el precio de venta de los productos terminados en el mercado.",
+        "isCorrect": false,
+        "rationale": "La precisión de inventario mejora el control interno pero no altera el precio de mercado exigido por los clientes."
+      }
+    ],
+    "hint": "Piense en el impacto operacional de auditar porciones de almacén de forma rutinaria frente al caos de cerrar la fábrica tres días para contar hasta el último tornillo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "A pesar de liberar capital de trabajo y disminuir costos de almacenamiento, ¿cuál es el riesgo operacional latente de llevar los inventarios a niveles mínimos extremos?",
+    "opciones": [
+      {
+        "text": "Aumentar la vulnerabilidad frente a rupturas de stock (desabastecimiento) ante retrasos de proveedores o picos inesperados de demanda.",
+        "isCorrect": true,
+        "rationale": "Al no contar con un colchón o stock de seguridad suficiente, cualquier falla logística o aumento de pedidos detiene las ventas o las líneas de ensamblaje."
+      },
+      {
+        "text": "Incrementar el costo impositivo por exceso de almacenamiento de productos terminados.",
+        "isCorrect": false,
+        "rationale": "Al haber niveles mínimos de stock, el costo de almacenamiento disminuye, no aumenta."
+      },
+      {
+        "text": "Perder de forma automática la certificación de calidad de la planta industrial.",
+        "isCorrect": false,
+        "rationale": "Las certificaciones evalúan la estandarización de procesos y calidad, no el volumen de inventarios acumulado."
+      },
+      {
+        "text": "Obligar a las máquinas a operar al doble de su velocidad nominal máxima.",
+        "isCorrect": false,
+        "rationale": "El nivel de stock en bodega no altera las especificaciones mecánicas de velocidad de los equipos."
+      },
+      {
+        "text": "Duplicar el pago de alquileres por espacio de almacén desocupado.",
+        "isCorrect": false,
+        "rationale": "Tener espacio libre en almacén no duplica la tarifa del alquiler contratado."
+      }
+    ],
+    "hint": "Considere qué sucede si una camioneta del proveedor se avería y la fábrica se queda sin materia prima para operar en el turno tarde.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis de costos de almacenamiento de inventario, ¿a qué corresponde el concepto de 'Costo de Oportunidad del Capital'?",
+    "opciones": [
+      {
+        "text": "Al rendimiento o beneficio económico que la empresa deja de percibir por mantener dinero inmovilizado en existencias en lugar de invertirlo en proyectos rentables.",
+        "isCorrect": true,
+        "rationale": "El capital atado a cajas guardadas en almacén tiene un costo financiero implícito al no poder usarse para otras actividades de mayor retorno."
+      },
+      {
+        "text": "Al pago del recibo mensual de energía eléctrica consumida por los aires acondicionados de la bodega.",
+        "isCorrect": false,
+        "rationale": "La energía eléctrica es un costo directo o indirecto de servicio público, no el costo de oportunidad del capital."
+      },
+      {
+        "text": "Al salario liquidado a las personas que manejan los montacargas en el almacén.",
+        "isCorrect": false,
+        "rationale": "El sueldo de los montacarguistas es un costo laboral de manipulación o mano de obra de almacén."
+      },
+      {
+        "text": "A la prima pagada a la compañía aseguradora para proteger la infraestructura contra incendios.",
+        "isCorrect": false,
+        "rationale": "La prima de seguro representa un gasto de prima o protección de activos, no la tasa de oportunidad de la inversión."
+      },
+      {
+        "text": "Al descuento del $10\\%$ otorgado por el proveedor cuando se paga al contado de inmediato.",
+        "isCorrect": false,
+        "rationale": "Es un descuento financiero por pronto pago, lo cual difiere del costo de oportunidad del capital inmovilizado."
+      }
+    ],
+    "hint": "Piense en el dilema financiero: comprar miles de piezas para guardar dos años en un rincón versus usar ese dinero para abrir una nueva sucursal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial del modelo matemático de Cantidad Económica de Pedido (EOQ / CEP) en la gestión de compras de suministros?",
+    "opciones": [
+      {
+        "text": "Encontrar el tamaño de lote de compra que minimice la suma de los costos totales de hacer pedidos y los costos totales de mantener inventario.",
+        "isCorrect": true,
+        "rationale": "El EOQ equilibra el costo de emitir órdenes (que baja si se pide en lotes grandes) con el costo de almacenamiento (que sube al almacenar lotes grandes)."
+      },
+      {
+        "text": "Determinar el número máximo de empleados que deben contratarse en el departamento de contabilidad.",
+        "isCorrect": false,
+        "rationale": "El modelo EOQ gestiona volúmenes óptimos de pedido de compra, no la contratación de personal contable."
+      },
+      {
+        "text": "Aumentar al máximo posible el costo de envío de los proveedores para obtener deducciones de impuestos.",
+        "isCorrect": false,
+        "rationale": "El objetivo de la gestión de costos es minimizar desembolsos, no incrementarlos."
+      },
+      {
+        "text": "Calcular la velocidad exacta a la que debe girar el motor de las cortadoras en el taller.",
+        "isCorrect": false,
+        "rationale": "Las fórmulas mecánicas de corte nada tienen que ver con el modelo logístico de inventarios EOQ."
+      },
+      {
+        "text": "Eliminar por completo el uso de sistemas informáticos en el área de abastecimiento.",
+        "isCorrect": false,
+        "rationale": "El EOQ es una fórmula matemática que suele integrarse en los sistemas informáticos para automatizar compras."
+      }
+    ],
+    "hint": "Busque la alternativa que mencione el punto de equilibrio donde se cruzan y minimizan las curvas del costo de pedir y el costo de almacenar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes afirmaciones representan interpretaciones correctas de los indicadores de rotación de inventarios y días de inventario (DIO)?",
+    "opciones": [
+      {
+        "text": "Un índice de rotación alto indica que el inventario se vende y renueva rápidamente, reduciendo el riesgo de obsolescencia.",
+        "isCorrect": true,
+        "rationale": "Significa que la mercancía fluye ágilmente de la bodega hacia las ventas, minimizando el capital estancado."
+      },
+      {
+        "text": "Un indicador de Días de Inventario (DIO) elevado sugiere que los productos permanecen mucho tiempo almacenados antes de venderse.",
+        "isCorrect": true,
+        "rationale": "El DIO mide la permanencia promedio de un producto en bodega; valores altos reflejan baja rotación o sobrestock."
+      },
+      {
+        "text": "La rotación de inventarios se calcula dividiendo el costo de ventas entre el valor promedio del inventario en el periodo.",
+        "isCorrect": true,
+        "rationale": "Es la fórmula estándar utilizada para cuantificar las veces que el stock rota totalmente en un lapso determinado."
+      },
+      {
+        "text": "Una rotación igual a cero es el objetivo supremo de eficiencia de cualquier planta industrial moderna.",
+        "isCorrect": false,
+        "rationale": "Una rotación cero implica que no se vendió absolutamente nada de inventario, lo cual es síntoma de quiebre comercial."
+      },
+      {
+        "text": "Los días de inventario (DIO) deben ser siempre superiores a 365 días para garantizar estabilidad.",
+        "isCorrect": false,
+        "rationale": "Guardar producto más de un año incrementa desmesuradamente los costos de almacenamiento y deterioro."
+      }
+    ],
+    "hint": "Evalúe el significado de que la mercancía 'gire' varias veces al año comparado con el tiempo (días) que reposa sin moverse en los anaqueles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis de la gestión operativa, ¿cómo se articulan conceptualmente los términos 'Eficiencia' y 'Eficacia' para alcanzar la 'Efectividad'?",
+    "opciones": [
+      {
+        "text": "La eficacia consiste en alcanzar los objetivos programados, la eficiencia en optimizar el uso de los recursos empleados, y la efectividad resulta de ser simultáneamente eficiente y eficaz.",
+        "isCorrect": true,
+        "rationale": "La efectividad es el logro integral: cumplir la meta prevista (eficacia) minimizando los desperdicios o insumos consumidos (eficiencia)."
+      },
+      {
+        "text": "La eficacia mide el consumo de gasolina de los vehículos, mientras que la eficiencia mide la cantidad de trabajadores contratados.",
+        "isCorrect": false,
+        "rationale": "Mezcla ejemplos puntuales de insumos sin definir los conceptos generales de logro de objetivos y uso de recursos."
+      },
+      {
+        "text": "La eficiencia significa ganar un juego a cualquier costo y la eficacia significa suspender el juego.",
+        "isCorrect": false,
+        "rationale": "La eficiencia se enfoca en el ahorro adecuado de recursos al realizar la tarea, no en ignorar los costos."
+      },
+      {
+        "text": "No existe diferencia alguna entre eficiencia y eficacia; son exactamente la misma medición física.",
+        "isCorrect": false,
+        "rationale": "Son conceptos formalmente diferenciados en ingeniería industrial y administración de operaciones."
+      },
+      {
+        "text": "La efectividad significa trabajar sin utilizar tecnología y la eficacia significa usar únicamente trabajo manual.",
+        "isCorrect": false,
+        "rationale": "La efectividad mide el impacto global del cumplimiento meta-recurso y no el grado de adopción tecnológica."
+      }
+    ],
+    "hint": "Recuerde la analogía deportiva: ganar el partido (meta) tirando la menor cantidad de lanzamientos o gastando la menor energía posible (recursos).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la fórmula para calcular el indicador de Productividad Laboral expresado en términos de volumen de producción por horas-hombre?",
+    "opciones": [
+      {
+        "text": "$\\text{Productividad Laboral} = \\frac{\\text{Unidades Totales Producidas}}{\\text{Total de Horas-Hombre Trabajadas}}$",
+        "isCorrect": true,
+        "rationale": "Mide cuánta cantidad física de producto es capaz de generar la fuerza laboral por cada hora de trabajo invertida."
+      },
+      {
+        "text": "$\\text{Productividad Laboral} = \\text{Total de Horas-Hombre} \\times \\text{Precio del Alquiler}$",
+        "isCorrect": false,
+        "rationale": "Multiplicar horas de mano de obra por el precio del alquiler no calcula la productividad laboral."
+      },
+      {
+        "text": "$\\text{Productividad Laboral} = \\frac{\\text{Costo Fijo Total}}{\\text{Horas de Mantenimiento}}$",
+        "isCorrect": false,
+        "rationale": "Esta relación mide un ratio de costos indirectos por hora de mantenimiento, no la productividad de la mano de obra."
+      },
+      {
+        "text": "$\\text{Productividad Laboral} = \\text{Unidades Defectuosas} + \\text{Unidades Vendidas}$",
+        "isCorrect": false,
+        "rationale": "Sumar unidades producidas no establece un cociente frente a los recursos consumidos (horas laborales)."
+      },
+      {
+        "text": "$\\text{Productividad Laboral} = \\frac{\\text{Gasto de Luz}}{\\text{Número de Vendedores}}$",
+        "isCorrect": false,
+        "rationale": "Relaciona el gasto energético con la fuerza comercial, omitiendo la producción física y el tiempo trabajado."
+      }
+    ],
+    "hint": "Exprese en el numerador la producción física obtenida y en el denominador el recurso de tiempo laboral utilizado para producirla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes medidas contribuyen a incrementar la productividad laboral en una fábrica industrial de manera sostenible?",
+    "opciones": [
+      {
+        "text": "Capacitación continua del personal en mejores técnicas operativas y uso de maquinaria.",
+        "isCorrect": true,
+        "rationale": "Trabajadores mejor capacitados cometen menos errores, operan más rápido y aprovechan mejor la tecnología."
+      },
+      {
+        "text": "Optimización de la ergonomía, la salud ocupacional y el clima laboral dentro de la planta.",
+        "isCorrect": true,
+        "rationale": "Un ambiente seguro y positivo reduce ausentismos, fatiga y accidentes, mejorando el rendimiento sostenido."
+      },
+      {
+        "text": "Implementación de incentivos o bonificaciones alineados a metas de calidad y volumen.",
+        "isCorrect": true,
+        "rationale": "Los esquemas de incentivos estimulan el compromiso del trabajador con la consecución de las metas de producción."
+      },
+      {
+        "text": "Proporcionar herramientas de trabajo adecuadas y mantener los insumos disponibles sin interrupción.",
+        "isCorrect": true,
+        "rationale": "Evita tiempos muertos causados por falta de herramientas o esperas por material en las estaciones de ensamblaje."
+      },
+      {
+        "text": "Eliminar los períodos de descanso reglamentarios e imponer jornadas de 20 horas diarias sin interrupción.",
+        "isCorrect": false,
+        "rationale": "La fatiga extrema incrementa drásticamente los errores, accidentes y reduce severamente la productividad real."
+      }
+    ],
+    "hint": "Seleccione los factores que mejoran la destreza, motivación, seguridad y continuidad de trabajo de los operarios sin destruirlos por fatiga.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito fundamental de aplicar un programa riguroso de mantenimiento preventivo en la maquinaria industrial?",
+    "opciones": [
+      {
+        "text": "Anticipar y prevenir averías inesperadas para extender la vida útil de los equipos y reducir paradas no programadas en la producción.",
+        "isCorrect": true,
+        "rationale": "Al intervenir la máquina antes de que falle, se evitan costosos tiempos muertos en la línea y reparaciones de emergencia caras."
+      },
+      {
+        "text": "Esperar a que la máquina se rompa por completo para recién llamar al servicio técnico especializado.",
+        "isCorrect": false,
+        "rationale": "Eso define al mantenimiento correctivo o reactivo, el cual suele provocar graves interrupciones de producción y altos costos."
+      },
+      {
+        "text": "Garantizar que los contadores públicos no tengan que registrar la depreciación de los activos.",
+        "isCorrect": false,
+        "rationale": "La depreciación es un asiento contable obligatorio de ley que ocurre independientemente del programa de mantenimiento."
+      },
+      {
+        "text": "Aumentar el consumo de energía eléctrica de la fábrica al doble de su capacidad instalada.",
+        "isCorrect": false,
+        "rationale": "Un equipo bien mantenido funciona de forma más eficiente y consume *menos* energía que uno dañado o desajustado."
+      },
+      {
+        "text": "Reemplazar a la totalidad de la mano de obra humana por sensores pasivos.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento cuida los activos físicos; no elimina automáticamente a todos los operarios de la planta."
+      }
+    ],
+    "hint": "Diferencie entre actuar *antes* de que ocurra la falla funcional de la máquina versus reparar *después* de que el equipo se detuvo por rotura.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función central de un sistema informático de Planificación de Recursos Empresariales (ERP) como SAP u Odoo en una industria?",
+    "opciones": [
+      {
+        "text": "Integrar y centralizar los flujos de información y procesos de todas las áreas (compras, inventarios, producción, finanzas, ventas) en una única base de datos.",
+        "isCorrect": true,
+        "rationale": "Un ERP conecta todos los departamentos para que operen con información sincronizada en tiempo real, eliminando islas de información."
+      },
+      {
+        "text": "Funcionar exclusivamente como un procesador de texto para redactar cartas comerciales.",
+        "isCorrect": false,
+        "rationale": "Un ERP es una plataforma de gestión integral de negocios, no un simple editor de documentos de oficina."
+      },
+      {
+        "text": "Reemplazar la necesidad de contar con una planta física de producción.",
+        "isCorrect": false,
+        "rationale": "El ERP gestiona la información digital de la empresa; las operaciones de transformación física siguen requiriendo infraestructura."
+      },
+      {
+        "text": "Eliminar la obligación legal de pagar impuestos corporativos ante la autoridad tributaria.",
+        "isCorrect": false,
+        "rationale": "Los sistemas ERP ayudan a calcular tributos con exactitud, pero no eximen del cumplimiento de leyes fiscales."
+      },
+      {
+        "text": "Diseñar logotipos e imágenes publicitarias para las redes sociales de la compañía.",
+        "isCorrect": false,
+        "rationale": "Esa tarea corresponde a software de diseño gráfico y marketing digital, no al motor ERP central."
+      }
+    ],
+    "hint": "Visualice al ERP como el 'sistema nervioso central' o 'director de orquesta' que conecta contabilidad, almacén, taller y ventas en tiempo real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-40",
+    "diplomado": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes módulos o capacidades de un sistema ERP aportan valor directo en la trazabilidad y optimización de los costos industriales?",
+    "opciones": [
+      {
+        "text": "Módulo de gestión de inventarios y almacenes para el control de existencias en tiempo real.",
+        "isCorrect": true,
+        "rationale": "Permite registrar ingresos, salidas y mermas de insumos con trazabilidad precisa de costos de almacenamiento."
+      },
+      {
+        "text": "Módulo de planificación de la producción y listas de materiales (BOM).",
+        "isCorrect": true,
+        "rationale": "Permite costear con exactitud la estructura de ingredientes/partes necesarias para ensamblar cada producto."
+      },
+      {
+        "text": "Módulo de contabilidad y costos para la consolidación de presupuestos y variaciones.",
+        "isCorrect": true,
+        "rationale": "Registra las desviaciones de gastos y calcula el costo de ventas real frente al estimado."
+      },
+      {
+        "text": "Módulo de gestión de compras para renegociar órdenes y evaluar desempeño de proveedores.",
+        "isCorrect": true,
+        "rationale": "Facilita la adquisición eficiente de materias primas al mejor precio comercial y tiempo de entrega."
+      },
+      {
+        "text": "Módulo de videojuegos de simulación para entretenimiento del personal en horas de trabajo.",
+        "isCorrect": false,
+        "rationale": "Los sistemas ERP empresariales no incluyen módulos de entretenimiento dentro de sus funciones de gestión."
+      }
+    ],
+    "hint": "Identifique las herramientas modulares del ERP que rastrean materias primas, costos de receta (BOM), compras y asientos contables de fabricación.",
+    "activo": true
+  }
+]

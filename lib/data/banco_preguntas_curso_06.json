@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según lo presentado en el curso, ¿cuál es la característica principal del precio del producto comercializado por una empresa minera tradicional?",
+    "opciones": [
+      {
+        "text": "Se vende concentrado de minerales a un precio fijado por el mercado internacional como un commodity.",
+        "rationale": "Las empresas mineras venden principalmente concentrados cuyo valor depende de las cotizaciones internacionales del mercado y no de un precio fijado unilateralmente por la minera.",
+        "isCorrect": true
+      },
+      {
+        "text": "Se comercializan productos manufacturados a un precio fijado libremente por el departamento de ventas de la minera.",
+        "rationale": "Las mineras generalmente no imponen el precio de sus minerales, ya que funcionan bajo la dinámica de precios del mercado global de materias primas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Se vende mineral procesado a un costo fijo regulado de forma permanente por el gobierno local.",
+        "rationale": "El precio de los minerales fluctúa de acuerdo con ciclos de oferta y demanda en mercados internacionales y no por tarifas locales fijas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Se exportan únicamente barras refinadas a tarifas acordadas en contratos individuales con compradores locales.",
+        "rationale": "Aunque existen barras refinadas, la forma más común de venta en minería en países como Perú es el concentrado en bruto sujeto a precios internacionales.",
+        "isCorrect": false
+      },
+      {
+        "text": "Se alquilan las vetas mineras a terceros fijando tarifas de arrendamiento mensual congeladas.",
+        "rationale": "El modelo de negocio minero estándar consiste en extraer y vender el mineral o concentrado, no en arrendar las vetas.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en la naturaleza de los minerales como commodities en los mercados globales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de abastecimiento e inventarios en minería, ¿quién determina principalmente la calidad requerida de un producto o repuesto?",
+    "opciones": [
+      {
+        "text": "El usuario o área operativa de la mina que requiere el insumo.",
+        "rationale": "La calidad idónea está definida por la necesidad específica del usuario u operación en la mina, evitando pagar más por especificaciones innecesarias.",
+        "isCorrect": true
+      },
+      {
+        "text": "El comprador de logística evaluando únicamente el producto de mayor precio.",
+        "rationale": "Comprar lo más costoso no garantiza que sea lo adecuado para la operación; la calidad requerida depende de la especificación técnica del usuario.",
+        "isCorrect": false
+      },
+      {
+        "text": "El proveedor internacional que tenga la marca más prestigiosa del mercado.",
+        "rationale": "El proveedor ofrece alternativas, pero es la minera a través de su área usuaria quien define el estándar técnico necesario.",
+        "isCorrect": false
+      },
+      {
+        "text": "El departamento de contabilidad basándose únicamente en el margen bruto.",
+        "rationale": "Contabilidad gestiona el registro y presupuesto financiero, pero no determina las características ni calidad técnica de los insumos operativos.",
+        "isCorrect": false
+      },
+      {
+        "text": "El transportista encargado de trasladar el material a la unidad minera.",
+        "rationale": "El transportista presta un servicio de movilización de carga y no interviene en la definición de especificaciones técnicas.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera qué área utiliza directamente el producto en el trabajo diario del socavón o tajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro de las estrategias para optimizar la fuerza laboral en la logística minera, ¿cuáles de las siguientes acciones contribuyen a mejorar el desempeño y la eficiencia en costos?",
+    "opciones": [
+      {
+        "text": "Iniciar programas de capacitación profesional continua para los colaboradores en herramientas clave.",
+        "rationale": "La formación en herramientas como ERP, Excel o Power BI fortalece el desempeño técnico del personal en la toma de decisiones.",
+        "isCorrect": true
+      },
+      {
+        "text": "Promover la capacitación cruzada y el trabajo en equipo dentro de las áreas operativas.",
+        "rationale": "La capacitación cruzada permite flexibilidad operativa y mejor aprovechamiento de los recursos humanos disponibles.",
+        "isCorrect": true
+      },
+      {
+        "text": "Contratar y capacitar mano de obra local para asumir cargos de responsabilidad.",
+        "rationale": "Involucrar a las comunidades locales mediante capacitación genera compromiso social y optimiza el desarrollo operativo regional.",
+        "isCorrect": true
+      },
+      {
+        "text": "Prohibir la rotación de puestos para mantener a cada comprador en una sola línea de por vida.",
+        "rationale": "La rotación periódica de líneas de compra permite que el personal conozca diversas áreas de la minera y enriquezca su gestión.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminar todo tipo de apoyo económico o becas para estudios de especialización.",
+        "rationale": "Apoyar la especialización del personal motiva a los trabajadores y fomenta la generación de valor agregado en la empresa.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica las iniciativas que impulsan el desarrollo continuo y la versatilidad del equipo humano.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el control de inventarios de almacenes mineros, ¿qué representa el indicador conocido como ERI?",
+    "opciones": [
+      {
+        "text": "Exactitud de Registros de Inventarios.",
+        "rationale": "El ERI mide el nivel de coincidencia entre los registros del sistema informático y el conteo físico real en el almacén.",
+        "isCorrect": true
+      },
+      {
+        "text": "Evaluación de Riesgo Industrial.",
+        "rationale": "Aunque la evaluación de riesgos es clave en minería, la sigla ERI en el contexto de inventarios corresponde a la precisión del registro.",
+        "isCorrect": false
+      },
+      {
+        "text": "Estimación de Requerimientos de Importación.",
+        "rationale": "La estimación de importaciones se relaciona con la planificación de compras, no con la exactitud física del inventario.",
+        "isCorrect": false
+      },
+      {
+        "text": "Efectividad de Repuestos Inmovilizados.",
+        "rationale": "Este concepto no corresponde a un KPI estándar de precisión física en almacén.",
+        "isCorrect": false
+      },
+      {
+        "text": "Estado de Recepción de Insumos.",
+        "rationale": "El ERI enfoca su medición en la concordancia del stock disponible, no en el estado de recepción inicial.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Reflexiona sobre el indicador que evalúa si lo que está en el sistema coincide con lo que está físicamente en el estante.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando el precio internacional de los minerales atraviesa un periodo de alza, ¿cuál es la respuesta operativa habitual de las empresas mineras?",
+    "opciones": [
+      {
+        "text": "Desarrollan depósitos minerales marginales de alto costo y menor ley respaldadas por los altos precios de la materia prima.",
+        "rationale": "Los precios altos permiten rentabilizar yacimientos o zonas de menor ley que en periodos de precios bajos no serían viables.",
+        "isCorrect": true
+      },
+      {
+        "text": "Detienen por completo la producción en mina para acumular stock sin vender.",
+        "rationale": "En ciclos de alza las mineras buscan maximizar la producción y venta para aprovechar los márgenes favorables.",
+        "isCorrect": false
+      },
+      {
+        "text": "Recortan de forma drástica todo el personal logístico y de compras.",
+        "rationale": "El recorte estricto de costos operativos ocurre principalmente como respuesta natural en periodos de caída de precios.",
+        "isCorrect": false
+      },
+      {
+        "text": "Congelan la compra de repuestos y cancelan los presupuestos de inversión CAPEX.",
+        "rationale": "Durante los ciclos de alza aumenta la actividad productiva y la inversión en capital y repuestos necesarios.",
+        "isCorrect": false
+      },
+      {
+        "text": "Fijan por contrato precios de venta congelados por debajo del mercado internacional.",
+        "rationale": "Las mineras buscan vender a precios de mercado para aprovechar las cotizaciones internacionales en ascenso.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en cómo reaccionan las mineras para aprovechar los márgenes cuando los commodities se aprecian.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de abastecimiento, ¿cuál es el objetivo fundamental del modelo Justo a Tiempo (Just in Time)?",
+    "opciones": [
+      {
+        "text": "Sincronizar el suministro de materiales con la demanda exacta de producción para minimizar el inventario almacenado.",
+        "rationale": "El modelo busca que los insumos y repuestos lleguen justo cuando se necesitan, reduciendo costos financieros y de almacenamiento.",
+        "isCorrect": true
+      },
+      {
+        "text": "Acumular grandes volúmenes de inventario para cubrir la operación de los próximos cinco años.",
+        "rationale": "La acumulación masiva de inventario contraviene el principio del Justo a Tiempo, generando altos costos de almacenamiento e inmovilización.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminar por completo el uso de órdenes de compra formalizadas en el sistema.",
+        "rationale": "El Justo a Tiempo requiere una coordinación logística rigurosa e integración de pedidos, no la eliminación del control formal.",
+        "isCorrect": false
+      },
+      {
+        "text": "Comprar insumos únicamente cuando los proveedores internacionales ofrezcan descuentos por remate.",
+        "rationale": "Las compras oportunas bajo el Justo a Tiempo dependen de la necesidad operativa programada, no de oportunidades de saldo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Mantener todos los insumos almacenados en depósitos fuera del país sin fecha de despacho.",
+        "rationale": "Tener insumos sin fecha de despacho programada impediría abastecer a tiempo las necesidades del proceso de extracción.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera la relación directa entre el momento en que se requiere un insumo y el momento en que debe llegar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En una clasificación de inventarios bajo el criterio ABC, ¿qué caracteriza a los artículos incluidos en la Categoría A?",
+    "opciones": [
+      {
+        "text": "Representan materiales de alto valor económico y/o alta criticidad que requieren la mayor atención y control constante.",
+        "rationale": "Los artículos A son los de mayor impacto en costos o continuidad de operaciones, por lo que exigen supervisión diaria y estricta.",
+        "isCorrect": true
+      },
+      {
+        "text": "Son insumos de ínfimo costo y bajo consumo que no requieren seguimiento en el sistema.",
+        "rationale": "Los artículos de bajo costo y baja prioridad corresponden normalmente a la categoría C.",
+        "isCorrect": false
+      },
+      {
+        "text": "Conforman el 80% de la cantidad total de ítems físicos del almacén pero con valor marginal.",
+        "rationale": "En volumen físico los artículos A suelen representar un porcentaje menor de ítems, pero concentran el mayor valor monetario o impacto.",
+        "isCorrect": false
+      },
+      {
+        "text": "Son artículos obsoletos que deben ser desechados inmediatamente sin evaluación.",
+        "rationale": "La categoría A identifica insumos activos prioritarios, no materiales en estado de obsolescencia.",
+        "isCorrect": false
+      },
+      {
+        "text": "Son repuestos que únicamente se adquieren mediante fondos de caja chica.",
+        "rationale": "Los ítems A suelen implicar compras de alto valor o contratos estratégicos, no desembolsos menores de caja chica.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerda el principio de Pareto aplicado al control de stock prioritario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Al calcular los Días de Inventario Disponible de un artículo o catálogo, ¿cuáles de los siguientes datos son requeridos en el cálculo?",
+    "opciones": [
+      {
+        "text": "El valor del inventario promedio del periodo.",
+        "rationale": "El inventario promedio refleja el stock medio mantenido sobre el cual se evalúa la cobertura en días.",
+        "isCorrect": true
+      },
+      {
+        "text": "El costo de los bienes vendidos o consumo acumulado.",
+        "rationale": "El consumo o costo de bienes vendidos permite determinar la tasa de salida para calcular la duración del stock.",
+        "isCorrect": true
+      },
+      {
+        "text": "El número de días comprendidos en el periodo de análisis.",
+        "rationale": "Se requiere la cantidad de días del periodo (como 365 días al año) para convertir la tasa de rotación a días de disponibilidad.",
+        "isCorrect": true
+      },
+      {
+        "text": "La distancia exacta en kilómetros desde la oficina central hasta el puerto.",
+        "rationale": "La distancia en kilómetros afecta los fletes, pero no es un parámetro numérico dentro de la fórmula de días de inventario.",
+        "isCorrect": false
+      },
+      {
+        "text": "El sueldo total acumulado de los operadores de maquinaría pesada.",
+        "rationale": "La nómina operativa de mina no forma parte del cálculo del indicador de días de stock de materiales.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en las variables financieras y temporales necesarias para determinar la cobertura del stock actual.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión logística minera, ¿cuál es la función principal del 'stock de seguridad'?",
+    "opciones": [
+      {
+        "text": "Proteger la operación contra variaciones imprevistas en la demanda o retrasos en la entrega de proveedores.",
+        "rationale": "El stock de seguridad sirve como amortiguador para evitar paradas operativas ante eventos inesperados o cuellos de botella logísticos.",
+        "isCorrect": true
+      },
+      {
+        "text": "Sustituir de forma permanente los pedidos de reposición regular.",
+        "rationale": "El stock de seguridad no reemplaza la reposición programada, sino que actúa como reserva ante eventualidades.",
+        "isCorrect": false
+      },
+      {
+        "text": "Aumentar voluntariamente los costos de almacenamiento sin justificación técnica.",
+        "rationale": "El objetivo de la logística es optimizar costos; el stock de seguridad se justifica para mitigar el alto costo de una parada no programada.",
+        "isCorrect": false
+      },
+      {
+        "text": "Garantizar que todos los insumos de oficina permanezcan almacenados por más de diez años.",
+        "rationale": "El stock de seguridad enfoca prioritariamente insumos y repuestos críticos para la producción, no útiles administrativos de larga estancia.",
+        "isCorrect": false
+      },
+      {
+        "text": "Ocultar sobrantes de inventario no registrados en el sistema de la minera.",
+        "rationale": "El stock de seguridad es una reserva planificada y registrada transparentemente en el sistema.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en la protección preventiva ante demoras en el transporte o picos imprevistos de consumo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Para evitar que productos perecibles o consumibles con fecha de caducidad se deterioren en el almacén, ¿qué estrategia de rotación se aplica preferentemente?",
+    "opciones": [
+      {
+        "text": "FEFO (First Expired, First Out / Primero en vencer, primero en salir).",
+        "rationale": "El método FEFO prioriza el despacho de los productos cuyo vencimiento está más cercano, previniendo pérdidas por caducidad.",
+        "isCorrect": true
+      },
+      {
+        "text": "LIFO (Last In, First Out / Último en entrar, primero en salir).",
+        "rationale": "LIFO despacha lo más reciente, lo que provocaría que los lotes más antiguos con vencimiento próximo queden retenidos y se deterioren.",
+        "isCorrect": false
+      },
+      {
+        "text": "Despacho por orden alfabético de marca del fabricante.",
+        "rationale": "El orden alfabético de marcas no toma en cuenta la fecha de caducidad de los insumos perecibles.",
+        "isCorrect": false
+      },
+      {
+        "text": "Salida exclusiva según el peso físico del embalaje.",
+        "rationale": "El peso del empaque no guarda relación con la caducidad química o física del material.",
+        "isCorrect": false
+      },
+      {
+        "text": "Almacenamiento indefinido al fondo del anaquel sin rotación.",
+        "rationale": "Dejar el producto al fondo del anaquel provoca su obsolescencia y pérdida económica por vencimiento.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica las siglas que hacen referencia directa a la fecha de expiración del insumo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué es un ERP (Enterprise Resource Planning) en el contexto de la infraestructura informática de una minera?",
+    "opciones": [
+      {
+        "text": "Un sistema de software integral que conecta y unifica los procesos operativos, financieros y logísticos de la empresa.",
+        "rationale": "El ERP centraliza la base de datos de la organización, integrando módulos como compras, almacenes, mantenimiento y finanzas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Un vehículo autónomo diseñado exclusivamente para la limpieza de socavones.",
+        "rationale": "Un ERP es una plataforma de software de gestión, no un equipo mecánico o vehículo físico de operación.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un sensor ambiental para medir la humedad en los polvorines subterráneos.",
+        "rationale": "Los sensores ambientales corresponden a tecnología IoT (Internet de las Cosas), no a un sistema de planificación de recursos ERP.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un contrato estandarizado de flete marítimo para el concentrado de cobre.",
+        "rationale": "El ERP gestiona la información administrativa y de recursos, no representa un documento de flete marítimo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un escáner portátil utilizado únicamente para pesar camiones en la balanza.",
+        "rationale": "Las balanzas usan software o periféricos específicos de pesaje que pueden conectarse al ERP, pero el ERP es el sistema central integral.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera el sistema informático principal (como SAP u Oracle) que conecta los datos de todas las áreas de la compañía.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de un sistema WMS (Warehouse Management System) en un almacén minero?",
+    "opciones": [
+      {
+        "text": "Optimizar operativamente y en tiempo real la recepción, asignación de ubicaciones, picking y despacho de materiales.",
+        "rationale": "El WMS gestiona en detalle el flujo interno, el orden en anaqueles y los movimientos de mercadería dentro del almacén.",
+        "isCorrect": true
+      },
+      {
+        "text": "Calcular la nómina salarial y los impuestos corporativos de la empresa.",
+        "rationale": "Las funciones contables y de nómina son gestionadas por módulos del ERP o software administrativo, no por el WMS.",
+        "isCorrect": false
+      },
+      {
+        "text": "Diseñar los mapas de exploración geológica en tajo abierto.",
+        "rationale": "El diseño de exploración utiliza software geológico especializado (como Vulcan o Maptek), no un sistema de gestión de almacenes.",
+        "isCorrect": false
+      },
+      {
+        "text": "Procesar las solicitudes de concesión minera ante las autoridades de gobierno.",
+        "rationale": "Los trámites legales y de concesiones corresponden al área legal y corporativa, ajenos al WMS logístico.",
+        "isCorrect": false
+      },
+      {
+        "text": "Monitorear el consumo de combustible de las camionetas en la ciudad.",
+        "rationale": "El control de flotas urbanas se realiza con GPS y software de transporte, mientras que el WMS se enfoca en las operaciones dentro de las instalaciones del almacén.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Enfócate en la herramienta diseñada específicamente para controlar las tareas físicas e internas del espacio de almacenamiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes características corresponden a beneficios directos de la adopción de tecnología Blockchain en la cadena de suministro de almacenes mineros?",
+    "opciones": [
+      {
+        "text": "Proporcionar un registro inmutable y descentralizado de cada transacción de materiales.",
+        "rationale": "Blockchain asegura que las transacciones registradas no puedan alterarse, garantizando la integridad de la información logística.",
+        "isCorrect": true
+      },
+      {
+        "text": "Asegurar la trazabilidad y autenticidad de repuestos desde el fabricante hasta la mina.",
+        "rationale": "Permite verificar que un repuesto crítico proviene de un proveedor certificado y no es una copia no autorizada.",
+        "isCorrect": true
+      },
+      {
+        "text": "Facilitar procesos de auditoría al contar con registros transparentes y verificables.",
+        "rationale": "Al contar con datos auditables e inalterables, se reduce el tiempo necesario para conciliaciones e inspecciones.",
+        "isCorrect": true
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar vehículos de carga para transportar mercancía.",
+        "rationale": "Blockchain administra y valida información digital, no sustituye el transporte físico de mercancías.",
+        "isCorrect": false
+      },
+      {
+        "text": "Reemplazar el uso de catálogos de materiales y codificación de ítems.",
+        "rationale": "Los catálogos y códigos de materiales siguen siendo la base requerida para identificar las piezas que se registran en la red.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Selecciona las opciones vinculadas a la seguridad, transparencia e inalterabilidad de los registros digitales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tipo de almacén especial en las operaciones mineras en el Perú está regulado estrictamente por la SUCAMEC?",
+    "opciones": [
+      {
+        "text": "Polvorines para el almacenamiento de explosivos y materiales relacionados.",
+        "rationale": "La SUCAMEC regula la infraestructura, medidas de seguridad y operación de polvorines permanentes, provisionales o móviles.",
+        "isCorrect": true
+      },
+      {
+        "text": "Almacenes de útiles de oficina y papelería administrativa.",
+        "rationale": "Los útiles de oficina no representan insumos fiscalizados de riesgo regulados por la SUCAMEC.",
+        "isCorrect": false
+      },
+      {
+        "text": "Depósitos de ropa de cama para los campamentos de personal.",
+        "rationale": "La vestimenta y equipamiento de campamento están libres de la regulación sobre armas y explosivos de SUCAMEC.",
+        "isCorrect": false
+      },
+      {
+        "text": "Talleres de mantenimiento informático y de servidores.",
+        "rationale": "Los centros informáticos no corresponden a almacenes de insumos explosivos sometidos a fiscalización de SUCAMEC.",
+        "isCorrect": false
+      },
+      {
+        "text": "Almacenes de suministros de cafetería y víveres secos.",
+        "rationale": "Los alimentos se regulan bajo normas sanitarias, no bajo el control de explosivos de SUCAMEC.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Reflexiona sobre la entidad gubernamental encargada de controlar el uso y almacenamiento de explosivos de uso civil.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué tecnología de identificación utiliza etiquetas con chips de radiofrecuencia para realizar trazabilidad y conteos de inventario sin necesidad de visión directa directa ítem por ítem?",
+    "opciones": [
+      {
+        "text": "RFID (Radio Frequency Identification).",
+        "rationale": "Las etiquetas RFID emiten señales de radiofrecuencia que permiten a lectores o pistolas escaneo masivo e instantáneo a distancia.",
+        "isCorrect": true
+      },
+      {
+        "text": "Código de barras unidimensional tradicional.",
+        "rationale": "El código de barras exige lectura óptica directa ítem por ítem apuntando con un láser a la etiqueta.",
+        "isCorrect": false
+      },
+      {
+        "text": "Nivel topográfico óptico manual.",
+        "rationale": "El nivel topográfico se utiliza en mediciones de terreno e ingeniería, no para rastrear cajas o insumos en estantes.",
+        "isCorrect": false
+      },
+      {
+        "text": "Planilla física en papel bond.",
+        "rationale": "Las planillas en papel son registros manuales propensos a error y no emplean tecnología de ondas de radio.",
+        "isCorrect": false
+      },
+      {
+        "text": "Termómetro infrarrojo de contacto directo.",
+        "rationale": "El termómetro sirve para medir temperatura corporal o de equipos, no para identificar códigos de stock.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Identifica las siglas de la tecnología que transmite datos mediante ondas de radio a un escáner especial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Según la normativa aplicable a la custodia de explosivos en minería, ¿cuáles de las siguientes corresponden a clasificaciones oficiales de polvorines?",
+    "opciones": [
+      {
+        "text": "Polvorines permanentes.",
+        "rationale": "Son estructuras fijas construidas de material noble o contenedores diseñados para almacenamiento continuo de larga duración.",
+        "isCorrect": true
+      },
+      {
+        "text": "Polvorines provisionales de permanencia temporal.",
+        "rationale": "Son instalaciones destinadas al almacenamiento temporal durante la jornada de trabajo o etapas específicas de la obra.",
+        "isCorrect": true
+      },
+      {
+        "text": "Polvorines móviles.",
+        "rationale": "Son unidades de almacenamiento concebidas para ser trasladadas a medida que avanzan los frentes de trabajo o proyectos de corta duración.",
+        "isCorrect": true
+      },
+      {
+        "text": "Polvorines recreativos comunitarios.",
+        "rationale": "No existen polvorines con fines de entretenimiento o uso recreativo sin control estricto.",
+        "isCorrect": false
+      },
+      {
+        "text": "Polvorines de venta libre al por menor.",
+        "rationale": "El manejo de explosivos está estrictamente fiscalizado y prohíbe la comercialización libre o al por menor sin autorización especial.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Elige las categorías normativas que dependen de la movilidad y el tiempo de permanencia de la instalación de explosivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de almacenes mineros, ¿con qué frecuencia mínima recomendada se debe llevar a cabo una auditoría física de inventario al 100% de los ítems?",
+    "opciones": [
+      {
+        "text": "Al menos una vez al año.",
+        "rationale": "La toma de inventario físico general al 100% es una práctica obligatoria y estándar que se realiza como mínimo una vez al año, usualmente en el cierre contable.",
+        "isCorrect": true
+      },
+      {
+        "text": "Una vez cada cinco años.",
+        "rationale": "Esperar cinco años para un inventario general acumularía grandes descuadres y pérdidas imposibles de controlar a tiempo.",
+        "isCorrect": false
+      },
+      {
+        "text": "Cada diez años únicamente si hay cambio de gerencia.",
+        "rationale": "El plazo de diez años resulta inviable para mantener la exactitud operativa y contable exigida en minería.",
+        "isCorrect": false
+      },
+      {
+        "text": "Diariamente durante el cambio de turno operativo.",
+        "rationale": "Un conteo al 100% diario paralizaría las operaciones del almacén; a diario se efectúan únicamente conteos cíclicos de una muestra de ítems.",
+        "isCorrect": false
+      },
+      {
+        "text": "Únicamente cuando la minera entra en proceso de cierre o quiebra.",
+        "rationale": "El inventario anual es parte de la gestión regular y continua de la empresa, no un evento exclusivo de cierre corporativo.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Recuerda la periodicidad exigida tanto operativamente como para el cierre de los estados financieros anuales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es una consecuencia directa de la falta de comunicación entre las áreas de Mantenimiento/Operaciones y el área de Logística?",
+    "opciones": [
+      {
+        "text": "Ocurrencia de compras de urgencia, pedidos duplicados o stock de repuestos inservibles por cambios de flota no avisados.",
+        "rationale": "La falta de coordinación provoca que Logística siga comprando insumos para equipos que saldrán de servicio o que deba hacer compras desesperadas ante fallas no programadas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Aumento automático del precio internacional de los minerales extraídos.",
+        "rationale": "Los precios internacionales de los minerales son fijados por el mercado global y no dependen de la comunicación interna de la empresa.",
+        "isCorrect": false
+      },
+      {
+        "text": "Aprobación instantánea de los estudios de impacto ambiental por el gobierno.",
+        "rationale": "Los trámites ambientales dependen de evaluaciones regulatorias oficiales y no de la comunicación interna de abastecimiento.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminación total del costo de flete en las importaciones marítimas.",
+        "rationale": "Los costos de flete internacional los cobran las navieras y no desaparecen por fallas de coordinación interna.",
+        "isCorrect": false
+      },
+      {
+        "text": "Cese de las obligaciones tributarias y contables de la unidad minera.",
+        "rationale": "Las obligaciones fiscales se rigen por las leyes tributarias del país y son ajenas a la fluidez del diálogo entre departamentos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en las compras apresuradas o la acumulación de repuestos que ya no sirven cuando el usuario no informa sus planes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se calcula y define el KPI denominado 'Nivel de Servicio' en la atención del almacén minero?",
+    "opciones": [
+      {
+        "text": "Porcentaje de órdenes o requerimientos completados correctamente y a tiempo en relación con el total de pedidos solicitados.",
+        "rationale": "El Nivel de Servicio mide la capacidad del almacén para despachar adecuadamente lo que los usuarios necesitan sin generar faltantes.",
+        "isCorrect": true
+      },
+      {
+        "text": "Número de camiones estacionados fuera del almacén esperando turno de carga.",
+        "rationale": "Los vehículos en espera reflejan congestión o tiempos de atención en bahía, no la tasa de atención satisfactoria del pedido.",
+        "isCorrect": false
+      },
+      {
+        "text": "Porcentaje de facturas de proveedores pagadas con descuento bancario por pronto pago.",
+        "rationale": "El pronto pago de facturas es un indicador de gestión de tesorería y finanzas, no de cumplimiento logístico de almacén.",
+        "isCorrect": false
+      },
+      {
+        "text": "Cantidad de metros cuadrados de terreno construidos en el campamento minero.",
+        "rationale": "La infraestructura del campamento corresponde al área de servicios generales o infraestructura civil.",
+        "isCorrect": false
+      },
+      {
+        "text": "Suma del peso total de la chatarra vendida durante el año operativo.",
+        "rationale": "La venta de chatarra forma parte de la disposición de activos obsoletos, no de la tasa de atención de pedidos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Relaciona la cantidad de requerimientos entregados conforme con el total de solicitudes enviadas por los usuarios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En la ejecución de una auditoría sistemática de almacenes en minería, ¿cuáles de las siguientes actividades forman parte del proceso?",
+    "opciones": [
+      {
+        "text": "Planificación definiendo el alcance, objetivos, equipo responsable y cronograma.",
+        "rationale": "Una auditoría estructurada requiere delimitar qué se va a revisar, quiénes participarán y en qué plazos.",
+        "isCorrect": true
+      },
+      {
+        "text": "Conteo físico, verificación de almacenamiento y detección de materiales obsoletos.",
+        "rationale": "La inspección sobre el terreno contrasta la existencia real de bienes y su estado de conservación.",
+        "isCorrect": true
+      },
+      {
+        "text": "Análisis de causa raíz de las discrepancias e informe final con plan de acción.",
+        "rationale": "El objetivo final de la auditoría es determinar el origen de los errores y formalizar soluciones correctivas para la gerencia.",
+        "isCorrect": true
+      },
+      {
+        "text": "Modificación unilateral de las cotizaciones de mercado de los commodities.",
+        "rationale": "La auditoría analiza procesos internos; no tiene la potestad ni capacidad de alterar los mercados financieros globales.",
+        "isCorrect": false
+      },
+      {
+        "text": "Despido automático e inmediato de todos los trabajadores sin investigación previa.",
+        "rationale": "Las medidas ante hallazgos de auditoría siguen un protocolo de análisis de causa y responsabilidades, no despidos ciegos sin análisis.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Enfócate en las fases de preparación, verificación sobre el terreno y análisis de hallazgos para la mejora continua.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué problema operativo se produce cuando el almacenero entrega materiales utilizando 'vales manuales' y no regulariza la salida en el sistema el mismo día?",
+    "opciones": [
+      {
+        "text": "Se genera un desfase entre el stock virtual del sistema y el stock físico real, mostrando disponibilidad falsa que evita compras oportunas.",
+        "rationale": "Si el sistema no refleja la salida del insumo, la plataforma asume que el ítem sigue en estante, provocando que no se dispare la orden de reposición necesaria.",
+        "isCorrect": true
+      },
+      {
+        "text": "Aumenta de forma inmediata la cotización internacional del oro y el cobre.",
+        "rationale": "Las cotizaciones bursátiles son ajenas al registro interno de vales de un almacén minero.",
+        "isCorrect": false
+      },
+      {
+        "text": "Se invalida de inmediato la licencia de funcionamiento ambiental de la mina.",
+        "rationale": "Las licencias ambientales se rigen por el cumplimiento de compromisos ambientales, no por el momento del registro de un vale de salida.",
+        "isCorrect": false
+      },
+      {
+        "text": "Duplica automáticamente el costo de las órdenes de compra emitidas el mes pasado.",
+        "rationale": "Las órdenes de compra emitidas anteriormente tienen valores comerciales pactados que no se modifican retroactivamente por un vale de salida.",
+        "isCorrect": false
+      },
+      {
+        "text": "Garantiza que ningún trabajador vuelva a cometer errores de tipeo.",
+        "rationale": "El uso diferido de vales manuales incrementa el riesgo de error humano e inconsistencia en los datos.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera la distorsión que se genera cuando el sistema informático muestra que hay material que físicamente ya fue retirado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué mide el indicador conocido como 'Tasa de Obsolescencia' en la gestión de inventarios?",
+    "opciones": [
+      {
+        "text": "La proporción del valor del inventario obsoleto o sin movimiento respecto al valor total del inventario en almacén.",
+        "rationale": "Permite cuantificar qué porcentaje del capital invertido en stock corresponde a materiales que ya no tienen uso o han quedado descontinuados.",
+        "isCorrect": true
+      },
+      {
+        "text": "La velocidad a la que transitan las camionetas en los caminos internos de la mina.",
+        "rationale": "La velocidad del transporte terrestre se monitorea mediante sistemas de gestión de flota y GPS, no por la tasa de obsolescencia de stock.",
+        "isCorrect": false
+      },
+      {
+        "text": "El tiempo que tarda el proveedor en enviar una cotización por correo electrónico.",
+        "rationale": "El tiempo de respuesta del proveedor en cotizaciones evalúa el desempeño del proveedor en la fase de procura.",
+        "isCorrect": false
+      },
+      {
+        "text": "El porcentaje de mineral extraído que se pierde durante la molienda.",
+        "rationale": "Las pérdidas en proceso de molienda corresponden a la eficiencia metalúrgica de planta concentradora.",
+        "isCorrect": false
+      },
+      {
+        "text": "La cantidad de órdenes de compra emitidas exclusivamente a proveedores locales.",
+        "rationale": "La distribución de compras por tipo de proveedor mide el desarrollo de proveedores locales, no la obsolescencia del material almacenado.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Evalúa el porcentaje del valor del stock que representa dinero inmovilizado en insumos que perdieron utilidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la etapa de planeamiento de una mina, ¿qué función cumple la estimación de reservas y leyes efectuada por los geólogos respecto a los presupuestos?",
+    "opciones": [
+      {
+        "text": "Dimensionar el volumen utilizable de recurso para ajustar la capacidad requerida y evaluar los escenarios de rentabilidad.",
+        "rationale": "El volumen y calidad (ley) del mineral determinan el dimensionamiento de la planta, compras necesarias y viabilidad económica del proyecto.",
+        "isCorrect": true
+      },
+      {
+        "text": "Elegir la marca de los uniformes administrativos de la oficina de la capital.",
+        "rationale": "La indumentaria de personal administrativo no guarda relación con los estudios de reservas geológicas de la mina.",
+        "isCorrect": false
+      },
+      {
+        "text": "Autorizar el pago de peajes urbanos de las camionetas de transporte de personal.",
+        "rationale": "El pago de peajes es un gasto operativo menor administrado por contabilidad o tesorería.",
+        "isCorrect": false
+      },
+      {
+        "text": "Decidir el menú diario de alimentos que se servirá en los comedores.",
+        "rationale": "El servicio de alimentación en campamentos lo gestiona el área de servicios generales o bienestar social.",
+        "isCorrect": false
+      },
+      {
+        "text": "Aprobar las licencias de conducir de los choferes de empresas contratistas.",
+        "rationale": "La validación de licencias de conducir corresponde al área de seguridad industrial y salud ocupacional.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Considera la importancia de saber cuánto mineral hay en el suelo para determinar la escala de inversión requerida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En una matriz de criticidad de insumos para almacenes mineros, ¿cuáles de los siguientes son factores clave para clasificar la importancia de un repuesto?",
+    "opciones": [
+      {
+        "text": "El nivel de impacto que provocaría su falta en la parada de la producción u operación.",
+        "rationale": "Si la carencia del repuesto paraliza un equipo crítico o la planta, el insumo se clasifica con la más alta prioridad.",
+        "isCorrect": true
+      },
+      {
+        "text": "El tiempo de reabastecimiento o tiempo de entrega (Lead Time) exigido por el proveedor.",
+        "rationale": "Insumos con tiempos de importación o fabricación prolongados requieren un seguimiento estrecho para evitar desabastecimiento.",
+        "isCorrect": true
+      },
+      {
+        "text": "La frecuencia de consumo o tasa de demanda estimada en el proceso productivo.",
+        "rationale": "Conocer la recurrencia con que la mina requiere el repuesto determina la estrategia de reposición adecuada.",
+        "isCorrect": true
+      },
+      {
+        "text": "El color exterior de la caja de cartón en la que el fabricante embala el producto.",
+        "rationale": "El aspecto del empaque secundario no condiciona el impacto técnico ni logístico del insumo en la operación.",
+        "isCorrect": false
+      },
+      {
+        "text": "El gusto estético personal del chofer que traslada el repuesto a la unidad.",
+        "rationale": "Las preferencias individuales del transportista no influyen en la matriz técnica de criticidad del repuesto.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Enfócate en los aspectos operacionales de interrupción de planta, plazos del proveedor y nivel de consumo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la finalidad estratégica de implementar programas de reconocimiento e incentivos al personal asociados a metas de control de costos?",
+    "opciones": [
+      {
+        "text": "Fomentar el compromiso y proactividad de los empleados en la identificación continua de eficiencias y ahorros operativos.",
+        "rationale": "Los incentivos motivan a los trabajadores a proponer e implementar mejoras que reduzcan el desperdicio y optimicen el gasto.",
+        "isCorrect": true
+      },
+      {
+        "text": "Incentivar el uso de piezas defectuosas para acelerar la rotación de compras en el sistema.",
+        "rationale": "Incentivar el uso de piezas defectuosas pone en peligro la seguridad del personal y daña la maquinaria.",
+        "isCorrect": false
+      },
+      {
+        "text": "Eliminar de forma definitiva los procesos de auditoría en los almacenes.",
+        "rationale": "Las auditorías son controles imprescindibles que se mantienen independientemente de los programas de incentivos.",
+        "isCorrect": false
+      },
+      {
+        "text": "Evitar que los compradores soliciten cotizaciones a proveedores formales.",
+        "rationale": "El control de costos promueve licitaciones y cotizaciones transparentes, nunca la supresión de la compulsa de precios.",
+        "isCorrect": false
+      },
+      {
+        "text": "Obligar al personal a trabajar sin utilizar sistemas informáticos de registro.",
+        "rationale": "El objetivo es maximizar la eficiencia mediante la adopción adecuada de tecnología, no retornar a registros informales.",
+        "isCorrect": false
+      }
+    ],
+    "hint": "Piensa en cómo el involucramiento y la motivación del equipo humano impulsan iniciativas de optimización de recursos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto operativo de la minería, los precios de venta de los concentrados de minerales son fijados por el mercado internacional al actuar como materias primas o commodities. Frente a esta condición, ¿por qué la gestión interna de la empresa concentra sus esfuerzos prioritariamente en la reducción de costos operativos?",
+    "opciones": [
+      {
+        "text": "Porque la empresa minera carece de control sobre los precios internacionales y solo puede optimizar sus propios costos para preservar el margen de rentabilidad.",
+        "isCorrect": true,
+        "rationale": "Al ser un commodity, el precio lo impone el mercado global; por ende, la única vía interna para mejorar la margen y sobrevivir a los ciclos a la baja es la eficiencia estricta en los costos de operación."
+      },
+      {
+        "text": "Porque la ley de corte de los minerales se ajusta automáticamente cada vez que los proveedores nacionales incrementan sus tarifas.",
+        "isCorrect": false,
+        "rationale": "La ley de corte es un parámetro técnico-económico que se modifica con los precios de mercado para definir la viabilidad del yacimiento, no una respuesta automática a tarifas locales."
+      },
+      {
+        "text": "Porque la legislación minera exige renegociar el precio del concentrado cuando los fletes marítimos sufren variaciones imprevistas.",
+        "isCorrect": false,
+        "rationale": "Los fletes incrementan el costo final de importación o exportación, pero la regulación no obliga a los compradores internacionales a alterar el precio spot del mineral."
+      },
+      {
+        "text": "Porque recortar los presupuestos de abastecimiento permite elevar el valor comercial asignado al concentrado en las refinerías.",
+        "isCorrect": false,
+        "rationale": "El valor del concentrado depende del contenido metálico y las maquilas de refinación, no de los recortes presupuestarios internos de la logística."
+      },
+      {
+        "text": "Porque los contratos de venta de concentrado exigen fijar los costos de producción con tres años de anticipación a la extracción.",
+        "isCorrect": false,
+        "rationale": "En la minería los costos son fluctuantes y sujetos a planificación continua; los contratos comerciales no obligan a congelar costos operativos internos."
+      }
+    ],
+    "hint": "Considere qué variables operativas están bajo el control directo de la administración de la mina y cuáles dependen del entorno global.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un estudio sobre grandes proyectos mineros en Australia reveló que cerca del 65% no logra entregar el valor estimado. ¿Qué práctica de gestión presupuestaria y de riesgos se propone para evitar estos desvíos en el capital de trabajo?",
+    "opciones": [
+      {
+        "text": "Límite absoluto de compras en función de las cotizaciones históricas de acero sin evaluar las reservas del socavón.",
+        "isCorrect": false,
+        "rationale": "Ignorar la dimensión de las reservas geológicas y centrarse solo en un insumo genera descalces críticos en el dimensionamiento de la mina."
+      },
+      {
+        "text": "Diseño de un presupuesto afinado integrando métricas reales de producción con escenarios probables de reservas geológicas y ley de mineral.",
+        "isCorrect": true,
+        "rationale": "Una gestión robusta requiere articular el gasto real (Capex/Opex) con el dimensionamiento de recursos que realizan los geólogos para anticipar la rentabilidad según la variabilidad de la mina."
+      },
+      {
+        "text": "Delegación exclusiva de las cotizaciones de equipos pesados al personal técnico de guardia para simplificar el flujo contable.",
+        "isCorrect": false,
+        "rationale": "La presupuestación Capex requiere planeamiento estructurado en coordinación con logística y pricing, no compras descentralizadas sin control formal."
+      },
+      {
+        "text": "Sustitución de los análisis de riesgos por adquisiciones masivas de insumos para congelar los costos operativos antes de iniciar la mina.",
+        "isCorrect": false,
+        "rationale": "Comprar masivamente sin análisis de escenarios incrementa los costos de almacenamiento y el riesgo de obsolescencia si la ley o la beta cambia."
+      },
+      {
+        "text": "Congelamiento del presupuesto operativo (Opex) independientemente de los cambios en el volumen producido diariamente.",
+        "isCorrect": false,
+        "rationale": "El presupuesto debe ser dinámico y considerar las fluctuaciones en la tasa de extracción y el desgaste de insumos según el volumen real."
+      }
+    ],
+    "hint": "Piense en la necesidad de conectar las métricas reales de gasto con la planificación geológica y de operaciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro de las estrategias para optimizar costos operacionales en compras mineras, ¿cuáles de los siguientes enfoques definen adecuadamente el criterio de calidad y la relación con los proveedores?",
+    "opciones": [
+      {
+        "text": "La calidad de un insumo o equipo está determinada por las necesidades específicas del usuario operativo y no necesariamente por ser la opción más costosa.",
+        "isCorrect": true,
+        "rationale": "El principio de calidad adecuada establece que el estándar lo define la aplicación técnica que requiere el usuario en la operación, evitando sobrecostos por bienes sobredimensionados."
+      },
+      {
+        "text": "Adquirir siempre la marca internacional de mayor precio en el mercado garantiza automáticamente la máxima eficiencia de la mina.",
+        "isCorrect": false,
+        "rationale": "Comprar la opción más cara sin evaluar si la operación requiere un desempeño inferior genera gasto innecesario e ineficiencia en el costo operativo."
+      },
+      {
+        "text": "Desarrollar proveedores que funcionen como socios estratégicos permite asegurar la atención expedita durante emergencias operativas.",
+        "isCorrect": true,
+        "rationale": "Contar con aliados estratégicos garantiza soporte técnico y abastecimiento prioritario en situaciones críticas como paradas no programadas."
+      },
+      {
+        "text": "Sustituir la evaluación técnica por licitaciones basadas de forma exclusiva en el precio monetario unitario más bajo.",
+        "isCorrect": false,
+        "rationale": "Guiarse únicamente por el precio unitario sin considerar rendimiento, garantía o soporte técnico puede incrementar el costo total de propiedad debido a fallas prematuras."
+      },
+      {
+        "text": "Efectuar pruebas operativas de campo para validar alternativas de menor costo antes de concretar compras masivas.",
+        "isCorrect": true,
+        "rationale": "Las pruebas en mina permiten verificar si un insumo o equipo alternativo cumple con el rendimiento exigido antes de comprometer el presupuesto corporativo."
+      }
+    ],
+    "hint": "Analice quién establece el estándar técnico necesario y qué tipo de vínculo comercial asegura respuesta en contingencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el control de almacenes e inventarios, se busca elevar el indicador de Exactitud de Registro de Inventario (ERI). ¿De qué manera la adopción de tecnologías como el escaneo de código de barras o RFID contribuye a este objetivo?",
+    "opciones": [
+      {
+        "text": "Aumentando automáticamente el valor monetario de los repuestos antiguos para compensar mermas.",
+        "isCorrect": false,
+        "rationale": "La tecnología de trazabilidad no altera la valoración contable de los bienes ni compensa pérdidas físicas."
+      },
+      {
+        "text": "Permitiendo la actualización en tiempo real del kardex e identificando la ubicación exacta física, reduciendo errores humanos de digitación.",
+        "isCorrect": true,
+        "rationale": "La captura automatizada de datos actualiza el ERP de inmediato y confirma la concordancia entre el stock físico y el sistema, optimizando el ERI."
+      },
+      {
+        "text": "Eliminando la necesidad de realizar inventarios físicos anuales exigidos por las normativas contables.",
+        "isCorrect": false,
+        "rationale": "Aunque la tecnología agiliza los conteos cíclicos, la auditoría y verificación física sigue siendo obligatoria para el cierre de estados financieros."
+      },
+      {
+        "text": "Sustituyendo los módulos de planeamiento de requerimientos por sensores automáticos que compran sin aprobación.",
+        "isCorrect": false,
+        "rationale": "La lectura de etiquetas mejora el control del almacén, pero las decisiones de compra deben pasar por validaciones de necesidad y presupuesto."
+      },
+      {
+        "text": "Garantizando que el desgaste mecánico de los componentes almacenados se detenga mientras permanezcan en rack.",
+        "isCorrect": false,
+        "rationale": "El código de barras o RFID aporta trazabilidad de datos, pero no evita el deterioro físico o la corrosión del material."
+      }
+    ],
+    "hint": "Piense en la velocidad de captura de datos y la eliminación del registro manual en papel.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando los precios internacionales de las materias primas están a la baja, las empresas mineras se ven obligadas a adaptar su secuencia de extracción. ¿Qué acción estratégica sobre la producción se implementa para sostener la rentabilidad?",
+    "opciones": [
+      {
+        "text": "Aumentar la extracción en depósitos marginales de alta profundidad para compensar la caída de ingresos con mayor volumen.",
+        "isCorrect": false,
+        "rationale": "Los depósitos marginales tienen altos costos y baja productividad, por lo que explotarlos en ciclo bajista acelera las pérdidas operativas."
+      },
+      {
+        "text": "Priorizar la producción en minas de bajo costo operativo y frenar gastos de capital en zonas con bajo potencial o alto costo.",
+        "isCorrect": true,
+        "rationale": "Ante precios bajos, la respuesta estratégica natural es concentrar el esfuerzo en unidades eficientes e incrementar la ley de corte para reducir costos."
+      },
+      {
+        "text": "Mantener sin cambios el presupuesto de gasto de capital en todos los yacimientos para no alterar la secuencia minera previa.",
+        "isCorrect": false,
+        "rationale": "Los ciclos bajistas exigen ajustar la planificación Capex/Opex para proteger la liquidez de la empresa minera."
+      },
+      {
+        "text": "Reducir la ley de corte para procesar mineral de menor calidad técnica en las plantas de lixiviación o flotación.",
+        "isCorrect": false,
+        "rationale": "Bajar la ley de corte implica procesar roca de menor contenido metálico, lo que incrementa el costo unitario de producción."
+      },
+      {
+        "text": "Aumentar los pedidos de repuestos críticos para acumularlos en el almacén antes de una posible recuperación de precios.",
+        "isCorrect": false,
+        "rationale": "Acumular stock de repuestos en ciclo bajista inmoviliza capital de trabajo y eleva el costo de almacenamiento de la compañía."
+      }
+    ],
+    "hint": "Considere qué yacimientos o zonas operativas generan un costo marginal más alto que el valor del mineral rescatado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La capacitación continua y el desarrollo de programas de retención laboral en logística minera influyen directamente en la reducción de costos operativos. ¿Qué prácticas ayudan a consolidar una cultura de eficiencia en el equipo de trabajo?",
+    "opciones": [
+      {
+        "text": "Promover la rotación periódica de las líneas de compra para que los compradores conozcan diversos tipos de familias de insumos.",
+        "isCorrect": true,
+        "rationale": "La rotación de líneas amplía el conocimiento técnico de los compradores, evitando sesgos y mejorando su capacidad de negociación integral."
+      },
+      {
+        "text": "Enviar al personal de abastecimiento a las unidades mineras para participar en tomas de inventario y conocer el uso real del insumo.",
+        "isCorrect": true,
+        "rationale": "El contacto directo con la operación en socavón o tajó permite al logístico entender el entorno de uso del repuesto y evitar errores de codificación."
+      },
+      {
+        "text": "Restringir la formación técnica del personal para impedir que migren a otras compañías mineras del sector.",
+        "isCorrect": false,
+        "rationale": "Evitar la capacitación degrada el desempeño operativo, incrementa los errores en la gestión de compras y perjudica el control de costos."
+      },
+      {
+        "text": "Implementar programas de capacitación cruzada y trabajo en equipo enfocados en el uso prudente de los recursos.",
+        "isCorrect": true,
+        "rationale": "La capacitación en gestión de recursos fomenta la alineación de metas operativas y operacionales de ahorro dentro del equipo."
+      },
+      {
+        "text": "Prohibir la interacción directa entre los compradores y los usuarios de mantenimiento durante la elaboración del presupuesto.",
+        "isCorrect": false,
+        "rationale": "Aislar a compras de las áreas operativas genera requisiciones erróneas, compras fuera de plazo e ineficiencias de inventario."
+      }
+    ],
+    "hint": "Piense en las metodologías que amplían la visión del comprador sobre el trabajo de campo en mina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "A pesar de sus beneficios teóricos para reducir el costo financiero y el espacio ocupado, ¿por qué el sistema Justo a Tiempo (JIT) no se puede aplicar de manera integral en operaciones mineras ubicadas en zonas remotas?",
+    "opciones": [
+      {
+        "text": "Porque el software ERP prohíbe la emisión de órdenes de compra con entregas programadas en ciclos menores a un mes.",
+        "isCorrect": false,
+        "rationale": "Los sistemas ERP son parametrizables y no imponen restricciones de tiempo por encima de la lógica operativa."
+      },
+      {
+        "text": "Debido a la alta exposición a riesgos de bloqueo de carreteras, desastres naturales o huelgas que exigen contar con un stock de seguridad.",
+        "isCorrect": true,
+        "rationale": "La ubicación remota y los riesgos imprevistos hacen que la falta de un amortiguador o stock de seguridad provoque paradas críticas de planta de altísimo costo."
+      },
+      {
+        "text": "Porque los fabricantes de maquinaria pesada obligan a las mineras a comprar sus repuestos con tres años de anticipación.",
+        "isCorrect": false,
+        "rationale": "Si bien existen repuestos de largo lead time, los fabricantes no imponen una cláusula uniforme de compra a tres años para todo el catálogo."
+      },
+      {
+        "text": "Porque la normativa aduanera impide el ingreso de materiales consumibles a campamentos situados a más de 3000 msnm.",
+        "isCorrect": false,
+        "rationale": "No existen restricciones aduaneras en función de la altitud geográfica de las operaciones mineras."
+      },
+      {
+        "text": "Porque el modelo JIT requiere obligatoriamente la instalación de almacenes robotizados con agvs en el interior de la mina.",
+        "isCorrect": false,
+        "rationale": "El JIT es una filosofía de sincronización de flujos de suministro y demanda, no una exigencia de automatización robótica específica."
+      }
+    ],
+    "hint": "Reflexione sobre la vulnerabilidad de las vías de acceso a la mina frente a factores climáticos y sociales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para evitar quiebres de stock mediante el método del Punto de Reorden (ROP), se utiliza el consumo promedio diario y el tiempo de entrega (lead time) del proveedor. ¿Cuál es la principal restricción al aplicar esta fórmula estática en el sector minero?",
+    "opciones": [
+      {
+        "text": "La fórmula del ROP requiere calcular integrales avanzadas que los sistemas de almacén actuales no logran procesar.",
+        "isCorrect": false,
+        "rationale": "El cálculo del ROP tradicional es una ecuación aritmética lineal simple basada en promedios y tiempo de reabastecimiento."
+      },
+      {
+        "text": "La variabilidad en el tiempo de entrega real y las fluctuaciones imprevistas en la demanda minera pueden invalidad el cálculo estático.",
+        "isCorrect": true,
+        "rationale": "Si el proveedor se retrasa o si el consumo en mina se dispara por un cambio operativo, el punto de reorden rígido se vuelve insuficiente y causa desabastecimiento."
+      },
+      {
+        "text": "El cálculo del ROP solo funciona en almacenes que utilicen exclusivamente contratos de consignación.",
+        "isCorrect": false,
+        "rationale": "El punto de reorden es una técnica general de gestión de inventarios aplicable tanto a stock propio como a modalidades de compra regular."
+      },
+      {
+        "text": "El ROP invalida automáticamente los acuerdos de nivel de servicio firmados con los contratistas de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "El ROP es un parámetro interno de reposición logística que complementa la relación con los contratistas operativos."
+      },
+      {
+        "text": "La metodología exige que el consumo diario sea exactamente de cero unidades durante los fines de semana.",
+        "isCorrect": false,
+        "rationale": "Las minas operan en régimen continuo (24/7), por lo que el consumo diario no se detiene los fines de semana."
+      }
+    ],
+    "hint": "Considere la estabilidad de las variables de demanda y la certeza en el plazo del proveedor en la minería real.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En una clasificación de inventarios de doble variable (Valor Económico vs. Criticidad u Operatividad), un repuesto como una manguera hidráulica para perforadora presenta un costo monetario bajo, pero su falla detiene el equipo. ¿En qué categoría estratégica debe clasificarse?",
+    "opciones": [
+      {
+        "text": "En la categoría 'C' no importante, debiendo comprarse únicamente cuando el equipo sufra una avería definitiva.",
+        "isCorrect": false,
+        "rationale": "Clasificar como 'C' un bien cuya falta paraliza un equipo crítico expone a la mina a extensas paradas no programadas."
+      },
+      {
+        "text": "En la categoría de Alta Criticidad (Categoría A / Crítico), requiriendo control estricto de disponibilidad a pesar de su bajo valor monetario.",
+        "isCorrect": true,
+        "rationale": "La criticidad operativa prima sobre el valor monetario; si la ausencia del insumo para la producción, el ítem debe ser gestionado con máxima prioridad de stock."
+      },
+      {
+        "text": "En la categoría de Obsolescencia Programada, debiendo registrarse como gasto administrativo directo sin código de material.",
+        "isCorrect": false,
+        "rationale": "Un insumo de consumo regular y de impacto en producción debe contar obligatoriamente con código y trazabilidad en almacén."
+      },
+      {
+        "text": "En la categoría de Bienes de Capital (Capex), amortizándose a lo largo de la vida útil de la perforadora.",
+        "isCorrect": false,
+        "rationale": "Una manguera es un insumo o repuesto consumible (Opex) y no califica como activo fijo o bien de capital."
+      },
+      {
+        "text": "En la categoría de Insumo no Recurrente, prohibiendo su almacenamiento en los talleres del socavón.",
+        "isCorrect": false,
+        "rationale": "Las mangueras hidráulicas son elementos de desgaste continuo y deben estar disponibles cerca del frente de trabajo."
+      }
+    ],
+    "hint": "Evalúe el impacto de la ausencia del insumo sobre la continuidad del proceso extractivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al definir la política de inventarios en una unidad minera, el stock de seguridad para insumos críticos suele calcularse en función de contingencias históricas (por ejemplo, cubrir 30 días de consumo). ¿Cuál es la razón operativa principal para esta dimensión de stock?",
+    "opciones": [
+      {
+        "text": "Evitar pagar impuestos de importación al mantener la mercadería inmovilizada dentro del almacén general.",
+        "isCorrect": false,
+        "rationale": "El stock de seguridad se mantiene para asegurar la continuidad operativa, no para exenciones tributarias de importación."
+      },
+      {
+        "text": "Garantizar la continuidad operacional durante el tiempo máximo estimado que han durado huelgas o interrupciones de transporte previas.",
+        "isCorrect": true,
+        "rationale": "El stock de seguridad se diseña para proteger la producción durante el período máximo esperado de aislamiento o desabastecimiento provocado por crisis históricas."
+      },
+      {
+        "text": "Cumplir con las exigencias del proveedor para otorgar descuentos por pronto pago en la adquisición de reactivos.",
+        "isCorrect": false,
+        "rationale": "Los descuentos comerciales se gestionan en las condiciones de compra y no determinan el volumen de seguridad ante riesgos de vía."
+      },
+      {
+        "text": "Asegurar que el almacenero no tenga que realizar tomas de inventario cíclicas durante el trimestre académico.",
+        "isCorrect": false,
+        "rationale": "El volumen de stock no exime al personal del almacén de realizar las verificaciones y tomas de inventario programadas."
+      },
+      {
+        "text": "Garantizar que todos los repuestos B y C se conviertan automáticamente en activos fijos de la compañía.",
+        "isCorrect": false,
+        "rationale": "Aumentar el stock de seguridad no modifica la naturaleza contable de los insumos ni los transforma en activos fijos."
+      }
+    ],
+    "hint": "Recuerde cómo la duración de eventos pasados como huelgas o bloqueos determina el nivel de protección de la mina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para medir la eficiencia en la gestión de almacenamiento e inventarios en minería, se utilizan diversos KPIs. ¿Cuáles de los siguientes ratios evalúan directamente la velocidad de reemplazo del stock y el horizonte temporal de cobertura?",
+    "opciones": [
+      {
+        "text": "Rotación de Inventario, calculada como el costo de los bienes vendidos dividido entre el inventario promedio.",
+        "isCorrect": true,
+        "rationale": "Este indicador mide cuántas veces se renueva el stock en un periodo; una mayor rotación eficiente reduce el capital inmovilizado."
+      },
+      {
+        "text": "Días de Inventario Disponible, calculado utilizando la inversa de la rotación multiplicada por los días del período (365).",
+        "isCorrect": true,
+        "rationale": "Muestra el tiempo estimado que duraría el stock actual para sostener la operación si no se realizara reposición alguna."
+      },
+      {
+        "text": "Índice de Maquila de Refinación, calculado dividiendo las toneladas de concentrado entre la potencia instalada del molino.",
+        "isCorrect": false,
+        "rationale": "Este es un parámetro operacional de procesamiento minero-metalúrgico, no un indicador logístico de control de inventario."
+      },
+      {
+        "text": "Nivel de Servicio de Almacén, que mide el porcentaje de solicitudes atendidas satisfactoriamente en tiempo y forma sobre el total requerido.",
+        "isCorrect": true,
+        "rationale": "Mide la capacidad operativa del almacén para despachar el stock requerido por los usuarios en el momento oportuno."
+      },
+      {
+        "text": "Tasa de Descuento de Flujo de Caja, que determina el rendimiento de las acciones de la minera en la bolsa de valores.",
+        "isCorrect": false,
+        "rationale": "La tasa de descuento es un indicador de finanzas corporativas para la valoración de proyectos de inversión, no un KPI de almacén."
+      }
+    ],
+    "hint": "Identifique las fórmulas que relacionan los costos de bienes vendidos o consumidos con el inventario promedio almacenado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante un proceso de verificación en una mina, se detecta que el sistema informático muestra 500 unidades de un insumo crítico, pero la inspección física en rack solo contabiliza 495. ¿Cuál de las siguientes causas explica una discrepancia de este tipo en el indicador ERI?",
+    "opciones": [
+      {
+        "text": "Cambios automáticos en la ley de mineral procesado en la planta de flotación.",
+        "isCorrect": false,
+        "rationale": "La ley de mineral afecta la metalurgia, pero no modifica los saldos físicos de artículos en las estanterías del almacén."
+      },
+      {
+        "text": "Retiros de material mediante vales provisionales o manuales en bodega que no fueron regularizados oportunamente en el sistema ERP.",
+        "isCorrect": true,
+        "rationale": "El despacho físico no registrado de inmediato en el software crea un desfase temporal entre el kardex digital y las existencias reales."
+      },
+      {
+        "text": "Aplicación rigurosa de la política PEPS (Primeras Entradas, Primeras Salidas) por parte del personal de despacho.",
+        "isCorrect": false,
+        "rationale": "El método PEPS ordena la secuencia física de salida del material, pero si se registra correctamente, no genera descuadres de cantidad."
+      },
+      {
+        "text": "Aumento en el costo FOB del insumo acordado durante la renegociación con el fabricante internacional.",
+        "isCorrect": false,
+        "rationale": "Las variaciones en el costo monetario afectan la valorización contable, pero no alteran el recuento físico de unidades del ERI."
+      },
+      {
+        "text": "Implementación de etiquetas RFID en todas las cajas almacenadas en el piso principal.",
+        "isCorrect": false,
+        "rationale": "La tecnología RFID ayuda a prevenir errores de recuento; la inconsistencia proviene de fallas de registro operativo humano."
+      }
+    ],
+    "hint": "Considere las prácticas informales de retiro de insumos durante turnos nocturnos o emergencias sin registro de salida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la arquitectura de sistemas de información logísticos, ¿cuál es la diferencia funcional clave entre un ERP (Enterprise Resource Planning) y un WMS (Warehouse Management System)?",
+    "opciones": [
+      {
+        "text": "El ERP solo administra la facturación electrónica, mientras que el WMS es responsable exclusivo del cálculo de impuestos aduaneros.",
+        "isCorrect": false,
+        "rationale": "El ERP abarca múltiples módulos operacionales (finanzas, compras, inventario general) y el WMS no es un sistema de aduanas."
+      },
+      {
+        "text": "El ERP conecta transversalmente múltiples procesos corporativos (compras, finanzas, contabilidad), mientras que el WMS optimiza la gestión operativa interna del almacén (ubicaciones, rutas de picking y despachos).",
+        "isCorrect": true,
+        "rationale": "El ERP proporciona la base de datos empresarial integrada, mientras que el WMS administra la ejecución y asignación física detallada dentro de las instalaciones del almacén."
+      },
+      {
+        "text": "El WMS reemplaza por completo la necesidad de contar con un sistema de contabilidad o de gestión de proveedores en la mina.",
+        "isCorrect": false,
+        "rationale": "El WMS es un software especializado para operaciones físicas de almacén y depende del ERP para la integración contable y comercial."
+      },
+      {
+        "text": "El ERP funciona únicamente mediante redes de sensores IoT, mientras que el WMS opera de forma manual en hojas de cálculo.",
+        "isCorrect": false,
+        "rationale": "Ambas son plataformas de software especializadas que pueden integrar tecnologías de automatización digital."
+      },
+      {
+        "text": "El ERP está diseñado para pequeñas empresas de servicios y el WMS es exclusivo para refinerías de metales preciosos.",
+        "isCorrect": false,
+        "rationale": "Tanto el ERP como el WMS son escalables y utilizados ampliamente en la mediana y gran minería a nivel global."
+      }
+    ],
+    "hint": "Diferencie el alcance integral de la gestión corporativa de la optimización del flujo y posición física en el almacén.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En almacenes mineros que resguardan insumos con requerimientos especiales (como ciertos reactivos, lubricantes o explosivos), ¿qué utilidad operativa aporta la integración de sensores de Internet de las Cosas (IoT)?",
+    "opciones": [
+      {
+        "text": "Sustituir la necesidad de obtener la autorización de la SUCAMEC para el uso de explosivos en el socavón.",
+        "isCorrect": false,
+        "rationale": "La supervisión ambiental por IoT no reemplaza el marco regulatorio ni las licencias legales emitidas por la autoridad estatal."
+      },
+      {
+        "text": "Permitir el monitoreo continuo en tiempo real de variables como temperatura y humedad, emitiendo alertas automáticas para evitar la degradación del producto.",
+        "isCorrect": true,
+        "rationale": "Los sensores IoT transmiten datos constantes a la nube, detectando desviaciones ambientales que comprometan la seguridad o efectividad técnica de los insumos sensibles."
+      },
+      {
+        "text": "Eliminar el costo de transporte marítimo al predecir la fecha exacta de desgaste de los molinos de bolas.",
+        "isCorrect": false,
+        "rationale": "El monitoreo por IoT mejora la conservación en el sitio, pero no influye en los fletes o costos de transporte de importación."
+      },
+      {
+        "text": "Generar automáticamente ordenes de pago a proveedores sin requerir la recepción física del material en garita.",
+        "isCorrect": false,
+        "rationale": "Las alertas de control ambiental no sustituyen el proceso de conformidad y recepción de mercadería en el ERP."
+      },
+      {
+        "text": "Modificar la estructura molecular de los lubricantes almacenados para extender su vida útil más allá de la fecha de vencimiento.",
+        "isCorrect": false,
+        "rationale": "El IoT monitorea condiciones del entorno, pero no altera la composición química interna de los insumos."
+      }
+    ],
+    "hint": "Piense en la necesidad de controlar factores ambientales de forma continua sin depender de revisiones manuales periódicas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La tecnología Blockchain se está incorporando en las cadenas de suministro mineras. ¿Cuáles de las siguientes opciones corresponden a beneficios directos de aplicar un libro mayor distribuido al control de repuestos críticos?",
+    "opciones": [
+      {
+        "text": "Asegurar la trazabilidad completa y verificar la autenticidad de los componentes originales frente a falsificaciones o repuestos piratas.",
+        "isCorrect": true,
+        "rationale": "Al registrar cada punto de la cadena de custodia en un bloque criptográfico inalterable, se garantiza que el repuesto proviene de un fabricante certificado."
+      },
+      {
+        "text": "Agilizar procesos de auditoría y reducir disputas documentarias mediante el uso de registros inmutables y contratos inteligentes.",
+        "isCorrect": true,
+        "rationale": "La información descentralizada y no modificable facilita la verificación de la conformidad de recepción entre compradores, proveedores y auditores."
+      },
+      {
+        "text": "Eliminar la necesidad de utilizar estanterías o racks para almacenar los repuestos en las instalaciones de la mina.",
+        "isCorrect": false,
+        "rationale": "El Blockchain aporta trazabilidad digital de datos, pero los bienes físicos requieren infraestructura física de almacenamiento."
+      },
+      {
+        "text": "Garantizar la exención total de aranceles de importación para cualquier equipo pesado adquirido en el extranjero.",
+        "isCorrect": false,
+        "rationale": "La tecnología de cadena de bloques no modifica el marco tributario ni las partidas arancelarias fijadas por la aduana."
+      },
+      {
+        "text": "Crear un registro transparente e inmutable de cada transacción desde la adquisición hasta la instalación final en el equipo minero.",
+        "isCorrect": true,
+        "rationale": "Permite auditar el historial operativo exacto de un repuesto crítico, confirmando cuándo se compró, almacenó e instaló."
+      }
+    ],
+    "hint": "Considere las propiedades de inmutabilidad de los datos y el rastreo desde el fabricante original hasta la mina.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la reglamentación aplicable a los polvorines de almacenamiento de explosivos regulados por la SUCAMEC (como la Resolución 453-2021), ¿cuál es un requisito obligatorio respecto a las condiciones del terreno e infraestructura?",
+    "opciones": [
+      {
+        "text": "Deben construirse obligatoriamente en el centro del campamento residencial para facilitar la vigilancia del personal de oficina.",
+        "isCorrect": false,
+        "rationale": "Las normativas exigen que los polvorines se mantengan a distancias de seguridad estrictas de edificaciones residenciales o vías públicas."
+      },
+      {
+        "text": "Ubicarse en terrenos firmes, secos, permeables y nivelados, manteniendo distancias de seguridad hacia vías transitadas y zonas habitadas.",
+        "isCorrect": true,
+        "rationale": "La norma busca prevenir accidentes fatales o activaciones no deseadas garantizando estabilidad del suelo, sequedad ambiental y aislamiento de áreas habitadas."
+      },
+      {
+        "text": "Contar con muros transparentes de vidrio templado para permitir la entrada directa de luz solar intensa a los detonadores.",
+        "isCorrect": false,
+        "rationale": "Los componentes explosivos deben resguardarse de la luz solar directa y de fuentes de calor o chispas por razones de seguridad."
+      },
+      {
+        "text": "Permitir el libre acceso a cualquier trabajador o visitante sin necesidad de autorización previa ni registro de garita.",
+        "isCorrect": false,
+        "rationale": "El acceso a polvorines es estrictamente restringido y autorizado únicamente a personal certificado por la autoridad competente."
+      },
+      {
+        "text": "Almacenar en la misma celda de resguardo los mecheros o detonadores junto con la dinamita a fin de optimizar el espacio.",
+        "isCorrect": false,
+        "rationale": "La normativa establece tablas de incompatibilidad estrictas que prohíben almacenar accesorios de voladura junto con explosivos primarios o secundarios."
+      }
+    ],
+    "hint": "Evalúe las exigencias técnicas destinadas a evitar la acumulación de humedad, inestabilidad del terreno y riesgos hacia zonas pobladas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Conforme al Decreto Legislativo 1048, ¿qué requisito ambiental sustancial debe cumplir un titular que opere un depósito de concentrado de minerales ubicado fuera de las áreas de la concesión o unidad minera?",
+    "opciones": [
+      {
+        "text": "Contar con un Estudio de Impacto Ambiental (EIA) previamente aprobado por la autoridad ambiental competente.",
+        "isCorrect": true,
+        "rationale": "Para depósitos fuera de la operación, la ley exige un instrumento de gestión ambiental formal (EIA) aprobado para mitigar la dispersión de material particulado y drenajes."
+      },
+      {
+        "text": "Obtener una dispensación verbal emitida por la municipalidad distrital más cercana.",
+        "isCorrect": false,
+        "rationale": "Las actividades con concentrados requieren evaluaciones de impacto ambiental formales emitidas por el sector de energía y minas, no acuerdos verbales locales."
+      },
+      {
+        "text": "Demostrar que el concentrado se transporta únicamente en bolsas de papel sin sellado hermético.",
+        "isCorrect": false,
+        "rationale": "El concentrado exige controles estricto de humedad y contención (como depósitos techados o herméticos) para evitar contaminación ambiental por polvo."
+      },
+      {
+        "text": "Procesar el mineral dentro del depósito utilizando cianuro antes de ser despachado a los puertos de embarque.",
+        "isCorrect": false,
+        "rationale": "Un depósito de concentrados es una instalación logística de almacenamiento, no una planta de beneficio químico."
+      },
+      {
+        "text": "Eximir al depósito de cualquier tipo de monitoreo de calidad de aire o suelo durante los años de operación.",
+        "isCorrect": false,
+        "rationale": "Los instrumentos ambientales obligan al titular a ejecutar programas periódicos de monitoreo de aire, agua y suelo."
+      }
+    ],
+    "hint": "Identifique el instrumento de gestión ambiental requerido ante el Ministerio de Energía y Minas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la gestión de depósitos para almacenamiento de hidrocarburos combustibles en unidades mineras, ¿cuáles de las siguientes medidas corresponden a exigencias técnicas y operativas de seguridad ambiental?",
+    "opciones": [
+      {
+        "text": "Construir diques de contención o cubetos con capacidad suficiente para retener eventuales derrames de los tanques.",
+        "isCorrect": true,
+        "rationale": "Los cubetos de contención son obligatorios para prevenir que fugas masivas de combustible contaminen cursos de agua o suelos adyacentes."
+      },
+      {
+        "text": "Someter a los tanques de almacenamiento a pruebas de hermeticidad e integridad estructural antes de su puesta en servicio.",
+        "isCorrect": true,
+        "rationale": "Las pruebas previas garantizan que los tanques nuevos o reparados soporten la carga hidráulica sin presentar filtraciones accidentales."
+      },
+      {
+        "text": "Permitir el drenaje directo de residuos de hidrocarburos a los ríos vecinos para evitar acumulación de presión.",
+        "isCorrect": false,
+        "rationale": "Verter hidrocarburos a fuentes de agua es una infracción ambiental grave que contamina los ecosistemas."
+      },
+      {
+        "text": "Disponer de planes de contingencia y kits antiderrames listos para ser operados por personal capacitado.",
+        "isCorrect": true,
+        "rationale": "La respuesta rápida ante emergencias mediante brigadas y material absorbente minimiza el impacto ambiental de un evento imprevisto."
+      },
+      {
+        "text": "Eliminar la señalización de advertencia de inflamabilidad para evitar llamar la atención de personal externo.",
+        "isCorrect": false,
+        "rationale": "La señalética de seguridad e inflamabilidad (códigos NFPA/NTP) es obligatoria para alertar sobre riesgos de incendio."
+      }
+    ],
+    "hint": "Considere la prevención de fugas hacia el suelo o fuentes hídricas y las pruebas estructurales obligatorias antes de operar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La falta de planificación e integración entre el área de mantenimiento y el departamento de compras origina problemas recurrentes en la gestión de abastecimiento. ¿Cuál es la consecuencia operativa inmediata de no contar con un plan preventivo de requerimientos?",
+    "opciones": [
+      {
+        "text": "Disminución automática de la rotación del inventario a cero unidades por año.",
+        "isCorrect": false,
+        "rationale": "Las compras de urgencia suelen consumirse de inmediato, aumentando la variabilidad pero no congelando la rotación global a cero."
+      },
+      {
+        "text": "Generación de compras de emergencia con fletes costosos, riesgo de recibir repuestos inadecuados y sobrecostos por paradas.",
+        "isCorrect": true,
+        "rationale": "Al comprar a última hora, la mina paga fletes aéreos o expresos elevados, se expone a proveedores sin evaluar y corre el riesgo de adquirir piezas no compatibles por la prisa."
+      },
+      {
+        "text": "Aumento inmediato de la exactitud del kardex registrado en el sistema WMS de la mina.",
+        "isCorrect": false,
+        "rationale": "Las urgencias generan desorden administrativo y despacho sin registro previo, degradando la exactitud del kardex."
+      },
+      {
+        "text": "Aproximación del valor del ERI al 100% debido a la reducción del volumen de insumos en stock.",
+        "isCorrect": false,
+        "rationale": "El ERI mide coincidencia física y lógica; el desorden de las compras urgentes suele bajar el indicador ERI."
+      },
+      {
+        "text": "Exención permanente de auditorías contables para los contratos de repuestos de origen extranjero.",
+        "isCorrect": false,
+        "rationale": "Las compras urgentes están sujetas a mayor escrutinio en auditoría por los sobrecostos y excepciones cometidas durante el proceso."
+      }
+    ],
+    "hint": "Analice cómo la prisa por reparar un equipo parado afecta los costos de adquisición y la selección del proveedor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando la gerencia de operaciones decide renovar la flota de maquinaria minera sin coordinar con el área logitudinal con meses de anticipación, ¿qué impacto directo sufre el stock almacenado para los equipos antiguos?",
+    "opciones": [
+      {
+        "text": "Los repuestos se transforman automáticamente en insumos universales utilizables en cualquier otra marca de maquinaria.",
+        "isCorrect": false,
+        "rationale": "La mayoría de componentes de maquinaria pesada son específicos por marca y modelo, no siendo intercambiables de forma universal."
+      },
+      {
+        "text": "El inventario asociado se vuelve inmediatamente obsoleto, obligando a generar provisiones contables y remates a bajo valor.",
+        "isCorrect": true,
+        "rationale": "Sin un periodo de transición para consumir los repuestos existentes, los lotes adquiridos quedan inutilizables y pasan a ser obsoletos, obligando a venderlos como chatarra."
+      },
+      {
+        "text": "El proveedor del equipo nuevo asume el costo total de los repuestos antiguos sin costo para la minera.",
+        "isCorrect": false,
+        "rationale": "Los fabricantes no absorben las pérdidas por sobrestock de modelos antiguos a menos que exista una cláusula comercial previa muy específica."
+      },
+      {
+        "text": "Aumenta la tasa de rotación del almacén al duplicar el número de repuestos registrados en el ERP.",
+        "isCorrect": false,
+        "rationale": "El stock inmovilizado sin demanda reduce dramáticamente el indicador de rotación global del almacén."
+      },
+      {
+        "text": "Se reducen a cero los costos de almacenamiento debido al decremento del volumen físico ocupado en estantería.",
+        "isCorrect": false,
+        "rationale": "Los repuestos obsoletos siguen ocupando racks y generando costos de mantenimiento hasta que sean dados de baja formalmente."
+      }
+    ],
+    "hint": "Considere el estado financiero en que quedan los lotes de repuestos adquiridos específicamente para la flota anterior.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Un KPI logístico bien formulado debe cumplir con la metodología SMART (Específico, Medible, Alcanzable, Relevante y con Límite de Tiempo). ¿Cuáles de las siguientes propuestas corresponden a metas SMART aplicadas a la gestión de almacenamiento?",
+    "opciones": [
+      {
+        "text": "Alcanzar un índice de Exactitud de Registro de Inventario (ERI) de 99% en el almacén central al cierre del presente ejercicio fiscal.",
+        "isCorrect": true,
+        "rationale": "Satisface los criterios SMART al especificar la métrica (ERI), el valor meta (99%), el alcance (almacén central) y el plazo (ejercicio fiscal)."
+      },
+      {
+        "text": "Comprar la mayor cantidad posible de repuestos durante los próximos años sin preocuparse por el presupuesto.",
+        "isCorrect": false,
+        "rationale": "Carece de especificidad, no es medible ni se alinea con objetivos estratégicos de optimización de costos."
+      },
+      {
+        "text": "Reducir el tiempo promedio del ciclo de pedido de importaciones locales de 30 días a 20 días en un plazo de seis meses.",
+        "isCorrect": true,
+        "rationale": "Define un indicador claro (tiempo de ciclo), un valor de reducción concreto (de 30 a 20 días) y un límite temporal determinado (6 meses)."
+      },
+      {
+        "text": "Intentar que los almaceneros trabajen más rápido para que las emergencias no causen paradas en la planta.",
+        "isCorrect": false,
+        "rationale": "Es un enunciado vago e impulsivo que no posee unidad de medida cuantitativa ni metas específicas."
+      },
+      {
+        "text": "Disminuir la tasa de obsolescencia de inventarios al 2% mediante auditorías cíclicas trimestrales durante el año en curso.",
+        "isCorrect": true,
+        "rationale": "Presenta una métrica específica (tasa de obsolescencia), una meta alcanzable (2%), el mecanismo (auditorías trimestrales) y la ventana de tiempo (año en curso)."
+      }
+    ],
+    "hint": "Busque enunciados que contengan métricas cuantitativas, un objetivo claro y un período o fecha límite de ejecución.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al ejecutar una auditoría logísticamente estructurada en un almacén minero, se identifican diferencias significativas entre las existencias físicas y el kardex. ¿Cuál es el propósito del análisis de 'Causa Raíz' dentro del informe de auditoría?",
+    "opciones": [
+      {
+        "text": "Sancionar económicamente a los proveedores que entregaron repuestos con empaques deteriorados.",
+        "isCorrect": false,
+        "rationale": "El análisis de causa raíz busca comprender el origen del error de proceso interno y no es un mecanismo de penalización comercial a terceros."
+      },
+      {
+        "text": "Determinar el motivo de origen de las variaciones (como errores de digitación, falta de capacitación o consumo no registrado) para implementar acciones correctivas permanentes.",
+        "isCorrect": true,
+        "rationale": "Permite identificar la falla de proceso subyacente que genera el descuadre y corregirla, evitando que el problema se repita en futuras auditorías."
+      },
+      {
+        "text": "Ajustar contablemente los saldos para eliminar las diferencias sin investigar las razones del extravío o desfase.",
+        "isCorrect": false,
+        "rationale": "Ajustar saldos a ciegas oculta problemas como robos sistemáticos o desorden de registros, perpetuando la ineficiencia."
+      },
+      {
+        "text": "Calcular automáticamente la ley de corte comercial que tendrá la mina en el siguiente semestre de operación.",
+        "isCorrect": false,
+        "rationale": "La ley de corte es un indicador minero extractivo no relacionado con las fallas de control de existencias en almacenes."
+      },
+      {
+        "text": "Proceder a la venta inmediata de la totalidad de insumos que hayan estado más de 10 días en estantería.",
+        "isCorrect": false,
+        "rationale": "La antigüedad del ítem no implica obsolescencia automática; el análisis busca corregir procesos de registro y control."
+      }
+    ],
+    "hint": "Piense en la necesidad de corregir las fallas de origen en lugar de limitarse a ajustar los saldos contables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El KPI denominado 'Tiempo de Inactividad por Faltantes' mide las horas de operación que pierde la maquinaria por la indisponibilidad de un repuesto crítico. ¿De qué manera este indicador respalda la toma de decisiones presupuestarias en la logística minera?",
+    "opciones": [
+      {
+        "text": "Demuestra que la compra de insumos no influye en la productividad global de las plantas concentradoras.",
+        "isCorrect": false,
+        "rationale": "El indicador prueba precisamente cómo las fallas de abastecimiento detienen la producción e imponen altos costos."
+      },
+      {
+        "text": "Permite monetizar el costo real de las paradas y comparar este impacto financiero contra la inversión en stock de seguridad o fletes de urgencia.",
+        "isCorrect": true,
+        "rationale": "Al traducir las horas perdidas en pérdidas económicas reales, la logística fundamenta la inversión en stock de seguridad o logística expresa para proteger la operación."
+      },
+      {
+        "text": "Invalida la necesidad de capacitar al personal de mantenimiento en el uso de herramientas informáticas ERP.",
+        "isCorrect": false,
+        "rationale": "Las paradas por faltante evidencian la necesidad de capacitar en planeamiento y registro oportuno de pedidos."
+      },
+      {
+        "text": "Permite clasificar todos los artículos del catálogo de la mina en la categoría C de baja prioridad.",
+        "isCorrect": false,
+        "rationale": "Los componentes cuya falta detiene la máquina deben clasificarse como de Alta Criticidad (Categoría A)."
+      },
+      {
+        "text": "Garantiza que la autoridad minera exonere a la empresa de presentar su plan anual de seguridad.",
+        "isCorrect": false,
+        "rationale": "Las métricas de disponibilidad operacional son controles logísticos internos y no eximen de las obligaciones regulatorias de seguridad."
+      }
+    ],
+    "hint": "Considere la cuantificación monetaria de las horas de parada para justificar costos de fletes aéreos o stocks de seguridad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En un entorno de operación donde ocurren imprevistos técnicos, un usuario exige la compra inmediata de un repuesto crítico por canal de urgencia. Para evitar imputaciones erróneas de responsabilidad sobre logística si el material no llega en horas o no encaja, ¿qué procedimiento de control debe ejecutarse?",
+    "opciones": [
+      {
+        "text": "Proceder a la compra mediante un acuerdo verbal telefónico sin solicitar correos o documentos de sustento.",
+        "isCorrect": false,
+        "rationale": "Las coordinaciones verbales carecen de valor de auditoría y dejan al comprador expuesto a responsabilidad si surgen errores en el pedido."
+      },
+      {
+        "text": "Exigir la autorización escrita o por correo del responsable de área según el procedimiento formal de compras de emergencia, manteniendo el respaldo documentado.",
+        "isCorrect": true,
+        "rationale": "El respaldo formal escrito (correo institucional/sistema) con la aprobación de la autoridad competente blinda al comprador y justifica el sobrecosto o riesgo asumido por la urgencia."
+      },
+      {
+        "text": "Rechazar de forma permanente cualquier solicitud de compra que no provenga de una licitación internacional de seis meses.",
+        "isCorrect": false,
+        "rationale": "Nevarse a gestionar compras de emergencia justificadas paraliza la operación y contraviene el rol de soporte de la logística."
+      },
+      {
+        "text": "Transferir el costo de la compra de emergencia a la cuenta bancaria personal del especialista logístico asignado.",
+        "isCorrect": false,
+        "rationale": "Las compras corporativas se financian con recursos corporativos a través de las cuentas presupuestadas de la empresa minera."
+      },
+      {
+        "text": "Ocultar la transacción en los informes trimestrales para evitar que la gerencia detecte la ocurrencia de urgencias.",
+        "isCorrect": false,
+        "rationale": "Ocultar transacciones vulnera los principios de auditoría interna y dificulta la corrección de fallas en el plan preventivo."
+      }
+    ],
+    "hint": "Considere la regla indispensable de respaldo documental formal previa a la colocación de la orden de compra.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-06",
+    "diplomado": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La acumulación de inventario obsoleto degrada la rentabilidad y satura la capacidad física de los almacenes mineros. ¿Qué acciones combinadas componen una estrategia efectiva para mitigar y prevenir la obsolescencia?",
+    "opciones": [
+      {
+        "text": "Estandarizar el catálogo de materiales unificando códigos de repuestos equivalentes de distintas marcas o fabricantes.",
+        "isCorrect": true,
+        "rationale": "La unificación de códigos para repuestos intercambiables evita compras duplicadas bajo diferentes marcas y reduce la variedad inútil de stock."
+      },
+      {
+        "text": "Establecer protocolos de comunicación obligatoria entre operaciones y logística antes de dar de baja o reemplazar una flota de equipos.",
+        "isCorrect": true,
+        "rationale": "Avisar con anticipación el retiro de un equipo permite consumir los repuestos en stock y suspender reórdenes, evitando que se vuelvan obsoletos."
+      },
+      {
+        "text": "Efectuar revisiones periódicas e inventarios cíclicos para identificar bienes sin movimiento y gestionar su remate, venta o devolución.",
+        "isCorrect": true,
+        "rationale": "La identificación oportuna de ítems sin rotación permite tomar acciones comerciales de recuperación antes de que se deterioren por completo."
+      },
+      {
+        "text": "Aumentar automáticamente los puntos de reorden de todos los repuestos sin considerar la antigüedad del parque automotor de la mina.",
+        "isCorrect": false,
+        "rationale": "Aumentar reórdenes de forma ciega incrementa el volumen de inventario inmovilizado y acelera la acumulación de obsoletos."
+      },
+      {
+        "text": "Prohibir la venta o reciclaje de repuestos de modelos descontinuados mantenidos en estanterías durante más de una década.",
+        "isCorrect": false,
+        "rationale": "Mantener retenidos bienes inutilizables genera costos permanentes de almacenamiento y priva a la empresa de recuperar capital mediante remate."
+      }
+    ],
+    "hint": "Piense en la estandarización de códigos de repuestos equivalentes y la coordinación previa a cambios de equipos.",
+    "activo": true
+  }
+]

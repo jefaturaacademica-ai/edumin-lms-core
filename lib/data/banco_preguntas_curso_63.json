@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué significan las siglas KPI en el contexto de la gestión de la cadena de suministro?",
+    "opciones": [
+      {
+        "text": "Key Performance Indicator",
+        "isCorrect": true,
+        "rationale": "Hace referencia a los indicadores claves de rendimiento utilizados para medir y optimizar la eficiencia en los procesos de producción y distribución."
+      },
+      {
+        "text": "Key Process Integration",
+        "isCorrect": false,
+        "rationale": "Aunque la integración de procesos es vital en logística, las siglas definen métricas de rendimiento y no la integración en sí."
+      },
+      {
+        "text": "Known Product Inspection",
+        "isCorrect": false,
+        "rationale": "La inspección de productos es una actividad operativa de calidad, pero no corresponde al significado del acrónimo KPI."
+      },
+      {
+        "text": "Knowledge Performance Index",
+        "isCorrect": false,
+        "rationale": "La gestión del conocimiento es importante, pero en la cadena de suministro los KPIs se orientan al rendimiento operativo."
+      },
+      {
+        "text": "Key Price Index",
+        "isCorrect": false,
+        "rationale": "El índice de precios es una métrica económica, mientras que el KPI evalúa el desempeño general de las operaciones."
+      }
+    ],
+    "hint": "Se refiere a las métricas cuantitativas clave que evalúan el rendimiento de los procesos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la metodología SMART para estructurar indicadores, ¿qué criterio asegura que un KPI pueda cuantificarse numéricamente?",
+    "opciones": [
+      {
+        "text": "Medible (Measurable)",
+        "isCorrect": true,
+        "rationale": "Permite determinar y estimar el indicador mediante datos cuantitativos concretos para realizar un seguimiento efectivo."
+      },
+      {
+        "text": "Específico (Specific)",
+        "isCorrect": false,
+        "rationale": "La especificidad define con claridad qué es lo que se va a medir, pero no garantiza por sí sola su cuantificación numérica."
+      },
+      {
+        "text": "Alcanzable (Achievable)",
+        "isCorrect": false,
+        "rationale": "Asegura que la meta establecida sea realista y alcanzable, mas no se refiere al cálculo cuantitativo del dato."
+      },
+      {
+        "text": "Temporal (Time-bound)",
+        "isCorrect": false,
+        "rationale": "Establece los parámetros o frecuencias temporales de medición, pero no la naturaleza medible de la cifra."
+      },
+      {
+        "text": "Relevante (Realistic)",
+        "isCorrect": false,
+        "rationale": "Garantiza que la métrica sea pertinente para los objetivos del negocio, sin enfocarse directamente en la formulación matemática."
+      }
+    ],
+    "hint": "Este principio garantiza que el indicador pueda ser determinado a través de datos y cifras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia funcional principal entre un hub logístico y un almacén tradicional?",
+    "opciones": [
+      {
+        "text": "El hub busca la rotación rápida liberando paquetes diariamente, mientras que el almacén los guarda en racks por periodos prolongados.",
+        "isCorrect": true,
+        "rationale": "El hub opera como un punto de tránsito de alta rotación que debe quedar despejado constantemente, a diferencia de un almacén que custodia mercancía a mediano o largo plazo."
+      },
+      {
+        "text": "El hub solo almacena materia prima, mientras que el almacén guarda únicamente productos terminados.",
+        "isCorrect": false,
+        "rationale": "Ambas instalaciones pueden gestionar diversos tipos de inventario; la distinción radica en la velocidad de rotación y tiempo de permanencia."
+      },
+      {
+        "text": "El hub opera exclusivamente con transporte aéreo, mientras que el almacén utiliza transporte terrestre.",
+        "isCorrect": false,
+        "rationale": "El modo de transporte no define a la instalación, ya que los hubs pueden recibir y despachar mercadería por vías terrestres o aéreas."
+      },
+      {
+        "text": "El hub no requiere de personal operario, mientras que el almacén depende del trabajo manual.",
+        "isCorrect": false,
+        "rationale": "Tanto los hubs como los almacenes requieren personal e infraestructura operativa para gestionar el movimiento de la carga."
+      },
+      {
+        "text": "El hub gestiona compras a proveedores, mientras que el almacén se encarga del servicio al cliente.",
+        "isCorrect": false,
+        "rationale": "Las compras y la atención al cliente son áreas funcionales independientes del tipo de centro físico de almacenamiento."
+      }
+    ],
+    "hint": "Piensa en el tiempo de permanencia del paquete dentro de las instalaciones y el uso de estructuras como los racks.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la fórmula utilizada para calcular el índice de rotación de inventario en un centro de almacenamiento?",
+    "opciones": [
+      {
+        "text": "Unidades despachadas divididas entre el inventario promedio.",
+        "isCorrect": true,
+        "rationale": "Esta relación permite conocer cuántas veces se renueva el capital o las existencias invertidas en el almacén a través de las salidas efectuadas."
+      },
+      {
+        "text": "Inventario total dividido entre el costo de almacenamiento por metro cuadrado.",
+        "isCorrect": false,
+        "rationale": "Relacionar existencias con costo por metro cuadrado mide densidad o gasto locativo, pero no la velocidad de salida de los productos."
+      },
+      {
+        "text": "Número de pedidos entregados a tiempo dividido entre las horas de trabajo.",
+        "isCorrect": false,
+        "rationale": "Esta métrica evalúa la productividad del reparto o despacho en el tiempo, no la rotación de las existencias almacenadas."
+      },
+      {
+        "text": "Total de devoluciones dividido entre la cantidad de productos vendidos.",
+        "isCorrect": false,
+        "rationale": "Esta proporción calcula la tasa de devolución de mercancía o falla de servicio, mas no el flujo del stock."
+      },
+      {
+        "text": "Ventas totales divididas entre la capacidad máxima de almacenamiento en racks.",
+        "isCorrect": false,
+        "rationale": "Comparar ventas con la capacidad física mide utilización de espacio, sin reflejar el movimiento medio del inventario."
+      }
+    ],
+    "hint": "Este indicador compara el volumen de productos que salen del almacén frente a las existencias medias conservadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En la clasificación ABC de inventarios, ¿qué características identifican a las mercancías clasificadas en la categoría A?",
+    "opciones": [
+      {
+        "text": "Representan los productos con mayor nivel de rotación y ventas.",
+        "isCorrect": true,
+        "rationale": "Los artículos tipo A se caracterizan por una alta demanda y salidas muy frecuentes en la operación comercial."
+      },
+      {
+        "text": "Deben ubicarse en zonas estratégicas del almacén para acortar recorridos de picking.",
+        "isCorrect": true,
+        "rationale": "Al colocarse cerca de las zonas de despacho, se reducen los tiempos de traslado y la manipulación por parte de los operarios."
+      },
+      {
+        "text": "Constituyen artículos de baja rotación que se almacenan al fondo de las instalaciones.",
+        "isCorrect": false,
+        "rationale": "Esa descripción corresponde a los productos tipo C, los cuales tienen baja demanda y menor impacto económico."
+      },
+      {
+        "text": "Requieren procesos exclusivos de maquila antes de ingresar al sistema.",
+        "isCorrect": false,
+        "rationale": "La maquila depende de requerimientos específicos del cliente o producto, no del nivel de rotación de la clasificación ABC."
+      },
+      {
+        "text": "Tienen un nivel de ventas cercano al 20% del volumen total del almacén.",
+        "isCorrect": false,
+        "rationale": "Los productos de clasificación A representan el porcentaje más alto de salida de mercancía, reservando porcentajes bajos para la clase C."
+      }
+    ],
+    "hint": "Identifica los atributos de los artículos con mayor flujo comercial y su localización prioritaria dentro del almacén.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué indicador mide la lealtad del cliente preguntando cuán probable es que recomiende la marca o servicio en una escala de 0 a 10?",
+    "opciones": [
+      {
+        "text": "Net Promoter Score (NPS)",
+        "isCorrect": true,
+        "rationale": "Evalúa la satisfacción general y la lealtad de los clientes a través de encuestas estandarizadas de calificación."
+      },
+      {
+        "text": "Customer Effort Score (CES)",
+        "isCorrect": false,
+        "rationale": "Mide el grado de esfuerzo que le toma al usuario resolver un problema o realizar una transacción, no su recomendación."
+      },
+      {
+        "text": "On-Time In-Full (OTIF)",
+        "isCorrect": false,
+        "rationale": "Es una métrica logística de nivel de servicio que evalúa la puntualidad y completitud de las entregas."
+      },
+      {
+        "text": "Tasa de rotación de inventario",
+        "isCorrect": false,
+        "rationale": "Corresponde a la gestión interna de existencias en el almacén y no a la percepción del consumidor."
+      },
+      {
+        "text": "Costo operativo por entrega",
+        "isCorrect": false,
+        "rationale": "Es un indicador de eficiencia financiera interna, sin vínculo directo con encuestas de recomendación al cliente."
+      }
+    ],
+    "hint": "Esta métrica clasifica a los clientes según su disposición a recomendar la empresa a otros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "El servicio logístico caracterizado por realizar la entrega del paquete al cliente el mismo día en que se genera la orden se denomina:",
+    "opciones": [
+      {
+        "text": "Same day",
+        "isCorrect": true,
+        "rationale": "Define la promesa de entrega ejecutada dentro de la misma jornada en la que se concreta la compra."
+      },
+      {
+        "text": "Next day",
+        "isCorrect": false,
+        "rationale": "Hace referencia a los despachos cuya promesa de entrega se cumple al día siguiente de la solicitud."
+      },
+      {
+        "text": "Last mile",
+        "isCorrect": false,
+        "rationale": "Se refiere al tramo final de la distribución hacia el destino del cliente, independientemente del plazo de entrega."
+      },
+      {
+        "text": "Picking prioritario",
+        "isCorrect": false,
+        "rationale": "Es la etapa de preparación física dentro del almacén y no la modalidad completa de entrega logística."
+      },
+      {
+        "text": "Cross-docking",
+        "isCorrect": false,
+        "rationale": "Es una técnica de consolidación y tránsito directo de mercancía sin almacenamiento previo."
+      }
+    ],
+    "hint": "Su nombre en inglés hace referencia directa a la entrega realizada durante la misma jornada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Cuando una empresa opera con flota de transporte propio, ¿cuáles de los siguientes elementos forman parte directa del costo de transporte?",
+    "opciones": [
+      {
+        "text": "Combustible utilizado por los vehículos.",
+        "isCorrect": true,
+        "rationale": "Representa uno de los insumos variables y directos más significativos en la operación de las unidades."
+      },
+      {
+        "text": "Gastos en peajes y seguros de la unidad.",
+        "isCorrect": true,
+        "rationale": "Constituyen desembolsos obligatorios y necesarios para la circulación y protección de la flota en ruta."
+      },
+      {
+        "text": "Depreciación de las unidades vehiculares.",
+        "isCorrect": true,
+        "rationale": "Refleja la pérdida de valor comercial del activo transporte a lo largo de su vida útil operativa."
+      },
+      {
+        "text": "Salarios de choferes y auxiliares de reparto.",
+        "isCorrect": true,
+        "rationale": "Corresponde a la mano de obra directa asignada a la conducción y entrega de los paquetes."
+      },
+      {
+        "text": "Alquiler del espacio por metro cuadrado en el almacén.",
+        "isCorrect": false,
+        "rationale": "Forma parte de la estructura de costos de almacenamiento e infraestructura, no del rubro de transporte."
+      }
+    ],
+    "hint": "Selecciona aquellos gastos vinculados de forma directa al funcionamiento, mantenimiento y personal de los vehículos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el proceso de almacenamiento logístico, ¿en qué consiste la actividad denominada \"maquila\"?",
+    "opciones": [
+      {
+        "text": "En la manipulación, desembalaje, verificación, etiquetado o reempaque especial de los productos antes de su salida.",
+        "isCorrect": true,
+        "rationale": "Implica una labor manual de acondicionamiento de la mercancía dentro del almacén para cumplir condiciones comerciales o del cliente."
+      },
+      {
+        "text": "En el cálculo de las rutas de distribución interprovincial de paquetes.",
+        "isCorrect": false,
+        "rationale": "Esa tarea se vincula con la planificación del transporte o ruteo, no con la manipulación física interna."
+      },
+      {
+        "text": "En la auditoría financiera de las facturas emitidas por proveedores de transporte.",
+        "isCorrect": false,
+        "rationale": "Corresponde a una función administrativa de contabilidad o gestión de pagos."
+      },
+      {
+        "text": "En la compra directa de materia prima a proveedores internacionales.",
+        "isCorrect": false,
+        "rationale": "Esta acción pertenece al proceso de aprovisionamiento y compras, no al acondicionamiento en almacén."
+      },
+      {
+        "text": "En el inventario anual de activos fijos e instalaciones de la planta.",
+        "isCorrect": false,
+        "rationale": "Forma parte del control patrimonial y no de la preparación operativa de mercancías para despacho."
+      }
+    ],
+    "hint": "Se trata de un servicio de acondicionamiento o preparación manual del producto previo a ser enviado o colocado en anaqueles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué herramienta tecnológica se destaca por permitir la integración de datos y la visualización de dashboards de KPIs en tiempo real?",
+    "opciones": [
+      {
+        "text": "Power BI",
+        "isCorrect": true,
+        "rationale": "Es una herramienta de inteligencia de negocios que se conecta a diversas fuentes de datos para presentar cuadros de mando dinámicos."
+      },
+      {
+        "text": "Kardex manual",
+        "isCorrect": false,
+        "rationale": "Es un registro físico tradicional que no posee capacidad de procesamiento automático ni actualización en tiempo real."
+      },
+      {
+        "text": "Hoja de recolección física",
+        "isCorrect": false,
+        "rationale": "Es un formato impreso de toma de datos que requiere digitación posterior y genera demoras en el reporte."
+      },
+      {
+        "text": "Sistema telefónico de call center",
+        "isCorrect": false,
+        "rationale": "Es un canal de comunicación con el cliente, no un software especializado en la integración de dashboards analíticos."
+      },
+      {
+        "text": "Código de barras impreso",
+        "isCorrect": false,
+        "rationale": "Funciona como un mecanismo de identificación de producto, mas no como un programa visualizador de indicadores."
+      }
+    ],
+    "hint": "Es una plataforma de inteligencia de negocios utilizada para crear tableros dinámicos e interactivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes eslabones forman parte del flujo de la cadena de suministro desde el inicio hasta la llegada al consumidor?",
+    "opciones": [
+      {
+        "text": "Aprovisionamiento de materia prima.",
+        "isCorrect": true,
+        "rationale": "Representa la fase inicial de captura de insumos requeridos para la fabricación o preparación de bienes."
+      },
+      {
+        "text": "Transporte logístico y centros de distribución.",
+        "isCorrect": true,
+        "rationale": "Facilitan el almacenamiento intermedio, la consolidación y el traslado de productos hacia diversos puntos geográficos."
+      },
+      {
+        "text": "Puntos de venta o entrega de última milla.",
+        "isCorrect": true,
+        "rationale": "Constituyen la etapa final donde el producto se pone a disposición del consumidor final o se entrega en su domicilio."
+      },
+      {
+        "text": "Evaluación de satisfacción del cliente post-entrega.",
+        "isCorrect": false,
+        "rationale": "Es una métrica o proceso posterior de servicio al cliente, no un eslabón físico de movimiento de productos."
+      },
+      {
+        "text": "Mantenimiento edilicio de las oficinas corporativas.",
+        "isCorrect": false,
+        "rationale": "Corresponde a un servicio administrativo de soporte interno ajeno al flujo directo de valor del producto."
+      }
+    ],
+    "hint": "Piensa en la red física que permite transformar y trasladar el producto desde su origen hasta las manos del comprador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué aspecto específico evalúa el indicador Customer Effort Score (CES)?",
+    "opciones": [
+      {
+        "text": "El grado de dificultad o facilidad que experimenta el cliente para realizar una interacción o resolver un problema.",
+        "isCorrect": true,
+        "rationale": "Mide qué tan fácil o complejo resultó para el usuario realizar gestiones como comprar, solicitar soporte o gestionar cambios."
+      },
+      {
+        "text": "El porcentaje de paquetes entregados dentro de las 24 horas posteriores a la compra.",
+        "isCorrect": false,
+        "rationale": "Ese aspecto se mide a través del indicador de cumplimiento de tiempos de entrega o servicio next day."
+      },
+      {
+        "text": "La cantidad de unidades devueltas por defectos de fábrica en la producción.",
+        "isCorrect": false,
+        "rationale": "Se calcula mediante la tasa de defectos o devoluciones en los controles de calidad."
+      },
+      {
+        "text": "El costo total en el que incurre la empresa para captar un nuevo cliente.",
+        "isCorrect": false,
+        "rationale": "Es una métrica comercial de adquisición de clientes, ajena a la evaluación del esfuerzo en interacciones del servicio."
+      },
+      {
+        "text": "La cantidad de llamadas atendidas por un operador telefónico en una jornada.",
+        "isCorrect": false,
+        "rationale": "Mide la productividad interna del personal del centro de llamadas, no la percepción de esfuerzo del cliente."
+      }
+    ],
+    "hint": "Mide si una gestión resultó sencilla o compleja desde la perspectiva del usuario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es fundamental medir la productividad en el proceso de picking en un almacén?",
+    "opciones": [
+      {
+        "text": "Para identificar demoras causadas por mala ubicación de mercancías o trayectos ineficientes de los operarios.",
+        "isCorrect": true,
+        "rationale": "Permite detectar ineficiencias en el recorrido y la preparación de pedidos, optimizando tiempos y costos operativos."
+      },
+      {
+        "text": "Para definir el precio final de venta al público en tiendas departamentales.",
+        "isCorrect": false,
+        "rationale": "El precio de venta se fija mediante márgenes comerciales y costos de adquisición, no por la velocidad del picking."
+      },
+      {
+        "text": "Para calcular el impuesto anual que debe pagar la empresa de distribución.",
+        "isCorrect": false,
+        "rationale": "Los impuestos corporativos dependen de las regulaciones tributarias y utilidades, no del rendimiento físico de almacén."
+      },
+      {
+        "text": "Para reducir el presupuesto destinado a los uniformes del personal operativo.",
+        "isCorrect": false,
+        "rationale": "Los gastos en indumentaria son costos fijos de seguridad e higiene sin relación con las tasas de picking."
+      },
+      {
+        "text": "Para reemplazar totalmente el uso de sistemas informáticos en el registro de inventarios.",
+        "isCorrect": false,
+        "rationale": "La medición de productividad busca mejorar el proceso mediante sistemas informáticos, no prescindir de ellos."
+      }
+    ],
+    "hint": "Analizar este proceso ayuda a detectar cuellos de botella en la preparación física de los pedidos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión operativa de la cadena de suministro, ¿cuál es la ventaja principal de aplicar medidas preventivas sobre las correctivas?",
+    "opciones": [
+      {
+        "text": "Evitan que los riesgos, fallas o daños lleguen a materializarse en la operación.",
+        "isCorrect": true,
+        "rationale": "La prevención actúa anticipadamente sobre las causas para impedir que los incidentes perjudiquen el servicio o generen pérdidas."
+      },
+      {
+        "text": "Tienen un costo financiero nulo para la organización en todo momento.",
+        "isCorrect": false,
+        "rationale": "Implementar medidas preventivas suele requerir inversiones en planificación o tecnología, aunque reduce gastos mayores a futuro."
+      },
+      {
+        "text": "Eliminan la necesidad de realizar auditorías de calidad a los proveedores.",
+        "isCorrect": false,
+        "rationale": "Las auditorías son justamente herramientas preventivas clave que deben sostenerse en el tiempo."
+      },
+      {
+        "text": "Permiten trabajar sin establecer metas numéricas en los indicadores de rendimiento.",
+        "isCorrect": false,
+        "rationale": "Para prevenir es indispensable contar con métricas precisas que alerten sobre desviaciones antes de un fallo."
+      },
+      {
+        "text": "Reemplazan por completo la necesidad de capacitar al personal en seguridad.",
+        "isCorrect": false,
+        "rationale": "La capacitación continua del equipo forma parte esencial de las estrategias de prevención operacional."
+      }
+    ],
+    "hint": "La prevención actúa antes de que ocurra la falla, a diferencia de la corrección que apaga incendios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué los proveedores son considerados \"socios estratégicos\" para la empresa contratante?",
+    "opciones": [
+      {
+        "text": "Porque su desempeño en plazos, costos y calidad afecta de forma directa la satisfacción del cliente final.",
+        "isCorrect": true,
+        "rationale": "Cualquier falla en los insumos o servicios brindados por un proveedor repercute negativamente en la oferta final de la empresa."
+      },
+      {
+        "text": "Porque asumen la responsabilidad legal total de las ventas de la empresa.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad de cara al cliente final recae legal y comercialmente sobre la empresa contratante."
+      },
+      {
+        "text": "Porque determinan la estructura organizativa interna de la alta gerencia.",
+        "isCorrect": false,
+        "rationale": "La estructura organizacional es definida internamente por los directivos y accionistas de la firma."
+      },
+      {
+        "text": "Porque financian el 100% de los proyectos de expansión tecnológica del cliente.",
+        "isCorrect": false,
+        "rationale": "Cada empresa gestiona sus propias inversiones de capital para desarrollo de infraestructura o tecnología."
+      },
+      {
+        "text": "Porque sustituyen completamente al personal propio en la toma de decisiones estratégicas.",
+        "isCorrect": false,
+        "rationale": "Los proveedores ejecutan servicios contratados, pero la toma de decisiones estratégicas se mantiene de forma interna."
+      }
+    ],
+    "hint": "El rendimiento del proveedor repercute directamente en la imagen y resultado que recibe el consumidor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Al evaluar el desempeño de un proveedor de servicios de transporte logístico, ¿qué indicadores son pertinentes de medir?",
+    "opciones": [
+      {
+        "text": "Porcentaje de entregas realizadas a tiempo.",
+        "isCorrect": true,
+        "rationale": "Garantiza verificar si la empresa contratada cumple con las promesas de entrega y horarios pactados."
+      },
+      {
+        "text": "Tasa de paquetes o mercancía dañada durante el traslado.",
+        "isCorrect": true,
+        "rationale": "Permite monitorear el cuidado y las buenas prácticas de manipulación de la carga en viaje."
+      },
+      {
+        "text": "Nivel de cumplimiento de los acuerdos contractuales establecidos.",
+        "isCorrect": true,
+        "rationale": "Mide el apego del transportista a los acuerdos de servicio, uniformidad, flota y penalidades fijadas."
+      },
+      {
+        "text": "Estado de resultados consolidado de los clientes finales.",
+        "isCorrect": false,
+        "rationale": "La información contable de los compradores finales no guarda relación con la eficiencia del transportista."
+      },
+      {
+        "text": "Cantidad de promociones publicitarias diseñadas por el transportista.",
+        "isCorrect": false,
+        "rationale": "Las campañas publicitarias corresponden al área de marketing y no al desempeño logístico del proveedor."
+      }
+    ],
+    "hint": "Enfócate en las métricas que monitorean la puntualidad, el cuidado de la carga y el respeto de las cláusulas fijadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué reporte financiero analiza los ingresos y costos operativos mensuales para determinar si un servicio logístico genera ganancias o pérdidas?",
+    "opciones": [
+      {
+        "text": "Estado de Pérdidas y Ganancias (P&L)",
+        "isCorrect": true,
+        "rationale": "Sintetiza la estructura de ingresos frente a los gastos operativos del periodo para revelar el margen de ganancia neto."
+      },
+      {
+        "text": "Diagrama de flujo de procesos (AS-IS)",
+        "isCorrect": false,
+        "rationale": "Es un documento esquemático operacional que mapea tareas, mas no consolida valores monetarios ni rentabilidad."
+      },
+      {
+        "text": "Matriz de clasificación ABC",
+        "isCorrect": false,
+        "rationale": "Clasifica productos según nivel de ventas o rotación en almacén, pero no muestra la estructura contable global."
+      },
+      {
+        "text": "Encuesta de satisfacción de clientes",
+        "isCorrect": false,
+        "rationale": "Mide la percepción cualitativa y lealtad de los usuarios, sin evaluar costos o balances contables."
+      },
+      {
+        "text": "Manual de procedimientos de operario",
+        "isCorrect": false,
+        "rationale": "Describe pasos de ejecución para tareas específicas sin incluir datos financieros o presupuestarios."
+      }
+    ],
+    "hint": "Es el estado financiero que resume las ventas y los gastos de un periodo para calcular el margen neto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué riesgo principal enfrenta una empresa de distribución al concentrar la mayoría de sus operaciones en un solo proveedor crítico?",
+    "opciones": [
+      {
+        "text": "Una alta vulnerabilidad operativa frente a posibles interrupciones en el suministro o servicio.",
+        "isCorrect": true,
+        "rationale": "Si el proveedor único falla, la empresa contratante carece de alternativas inmediatas para mantener sus entregas activas."
+      },
+      {
+        "text": "La duplicación innecesaria de costos de almacenamiento en diferentes hubs.",
+        "isCorrect": false,
+        "rationale": "La duplicación ocurre al diversificar infraestructura en exceso, no por depender de un único proveedor."
+      },
+      {
+        "text": "El incremento automático en el tiempo de procesamiento de órdenes en picking.",
+        "isCorrect": false,
+        "rationale": "La velocidad del picking depende de la distribución física en almacén y no de la concentración de la base de compras."
+      },
+      {
+        "text": "La imposibilidad de elaborar tableros de control en herramientas como Power BI.",
+        "isCorrect": false,
+        "rationale": "Los tableros analíticos pueden construirse independientemente de cuántos proveedores posea la compañía."
+      },
+      {
+        "text": "Un aumento obligatorio en la tasa de rotación de productos de categoría C.",
+        "isCorrect": false,
+        "rationale": "La rotación de mercancía tipo C se relaciona con la demanda comercial, no con el número de proveedores de servicio."
+      }
+    ],
+    "hint": "La dependencia exclusiva de un único actor deja la operación expuesta si este llega a fallar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Para que la toma de decisiones estratégicas basada en KPIs sea efectiva, ¿qué condiciones deben cumplir los datos recolectados?",
+    "opciones": [
+      {
+        "text": "Estar debidamente validados y verificados mediante fuentes confiables.",
+        "isCorrect": true,
+        "rationale": "Evita tomar decisiones sobre cifras distorsionadas o erróneas que pongan en riesgo la gestión de la empresa."
+      },
+      {
+        "text": "Reflejar la realidad de la operación en el periodo correspondiente.",
+        "isCorrect": true,
+        "rationale": "Garantiza que la dirección evalúe el desempeño auténtico y actual de la cadena de suministro."
+      },
+      {
+        "text": "Ser cuantificables y alineados a los objetivos del negocio.",
+        "isCorrect": true,
+        "rationale": "Asegura que los datos sirvan como métricas objetivas orientadas al cumplimiento de la estrategia organizacional."
+      },
+      {
+        "text": "Modificarse manualmente para cumplir siempre con las metas gerenciales.",
+        "isCorrect": false,
+        "rationale": "Alterar cifras para ocultar fallas invalida el propósito analítico de los KPIs y conduce a malas decisiones."
+      },
+      {
+        "text": "Mantenerse ocultos para los responsables directos de las áreas operativas.",
+        "isCorrect": false,
+        "rationale": "Ocultar la información impide que el personal involucrado ejecute las correcciones y mejoras necesarias."
+      }
+    ],
+    "hint": "Decide qué características garantizan que la información sea fidedigna, útil y congruente con el estado real del servicio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el rediseño de procesos y mejora continua, ¿qué representa el diagrama denominado \"AS-IS\"?",
+    "opciones": [
+      {
+        "text": "La representación detallada de cómo funciona el proceso en su estado actual.",
+        "isCorrect": true,
+        "rationale": "Documenta la realidad operativa presente para servir como punto de partida en la detección de fallas o cuellos de botella."
+      },
+      {
+        "text": "El modelo del proceso ideal que se proyecta implementar a futuro.",
+        "isCorrect": false,
+        "rationale": "El estado futuro optimizado se denomina modelo TO-BE en el rediseño de procesos."
+      },
+      {
+        "text": "La lista de sanciones aplicables a los proveedores por incumplimiento de plazos.",
+        "isCorrect": false,
+        "rationale": "Las sanciones corresponden a cláusulas de los acuerdos contractuales, no a mapas de procesos."
+      },
+      {
+        "text": "El presupuesto máximo autorizado para la adquisición de flotas de transporte.",
+        "isCorrect": false,
+        "rationale": "El presupuesto asignado es un documento de control financiero y no un diagrama de flujo procedimental."
+      },
+      {
+        "text": "El historial de encuestas de lealtad diligenciadas por los clientes.",
+        "isCorrect": false,
+        "rationale": "Corresponde a los registros del indicador NPS o informes del departamento de atención al cliente."
+      }
+    ],
+    "hint": "En inglés, este término se traduce literalmente como \"tal como es\" la situación presente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro del ciclo de optimización de la cadena de suministro, ¿qué define la fase del modelo \"TO-BE\"?",
+    "opciones": [
+      {
+        "text": "La visión y diseño del proceso mejorado que se aspira alcanzar tras corregir fallas.",
+        "isCorrect": true,
+        "rationale": "Establece la meta funcional del proceso optimizado una vez eliminados los cuellos de botella identificados previamente."
+      },
+      {
+        "text": "La descripción de las pérdidas financieras sufridas en el periodo anterior.",
+        "isCorrect": false,
+        "rationale": "Ese reporte corresponde al análisis contable del estado de pérdidas y ganancias P&L."
+      },
+      {
+        "text": "El inventario físico realizado manualmente al cierre de cada ejercicio fiscal.",
+        "isCorrect": false,
+        "rationale": "Es una técnica de auditoría de existencias y no una metodología de modelado de procesos futuros."
+      },
+      {
+        "text": "El registro de incidentes laborales ocurridos en la planta de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Forma parte de los reportes del área de seguridad y salud en el trabajo."
+      },
+      {
+        "text": "La tarifa cobrada al cliente por servicios de entrega en modalidad same day.",
+        "isCorrect": false,
+        "rationale": "Es un parámetro comercial de cobro y no la representación de la estructura optimizada de un proceso."
+      }
+    ],
+    "hint": "Este concepto representa el estado futuro deseado del proceso una vez aplicadas las mejoras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes acciones corresponden a etapas formales dentro del ciclo de mejora continua de procesos logísticos?",
+    "opciones": [
+      {
+        "text": "Evaluación de la situación actual del proceso.",
+        "isCorrect": true,
+        "rationale": "Diagnostica la realidad de la operación para entender su funcionamiento de partida."
+      },
+      {
+        "text": "Identificación de los problemas y cuellos de botella.",
+        "isCorrect": true,
+        "rationale": "Permite localizar los puntos exactos donde el flujo se detiene o pierde eficiencia."
+      },
+      {
+        "text": "Definición de objetivos claros y trazado de un plan de acción.",
+        "isCorrect": true,
+        "rationale": "Establece las metas a alcanzar y asigna responsables, plazos y recursos para las actividades."
+      },
+      {
+        "text": "Medición de la efectividad de las acciones implementadas.",
+        "isCorrect": true,
+        "rationale": "Valida mediante datos si las soluciones adoptadas generaron un impacto positivo real sobre los indicadores."
+      },
+      {
+        "text": "Eliminación de todos los controles de calidad para agilizar tiempos.",
+        "isCorrect": false,
+        "rationale": "Omitir los controles de calidad incrementa la tasa de defectos y arruina la percepción del servicio."
+      }
+    ],
+    "hint": "Selecciona aquellas actividades progresivas que permiten diagnosticar, planificar, ejecutar y evaluar mejoras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según los principios de la mejora continua, si un indicador de entregas alcanza un nivel positivo del 70%, ¿cuál debe ser la postura organizativa?",
+    "opciones": [
+      {
+        "text": "Buscar estrategias para incrementar el indicador y alcanzar niveles superiores de eficiencia.",
+        "isCorrect": true,
+        "rationale": "La mejora continua demanda no conformarse con resultados intermedios sino seguir buscando oportunidades de crecimiento."
+      },
+      {
+        "text": "Dar por concluido el seguimiento del KPI al haber superado el umbral mínimo.",
+        "isCorrect": false,
+        "rationale": "Abandonar el seguimiento provoca la pérdida de trazabilidad y el posible deterioro posterior del rendimiento."
+      },
+      {
+        "text": "Reducir el personal de distribución para abaratar costos operativos inmediatos.",
+        "isCorrect": false,
+        "rationale": "Recortar recursos sin análisis previo puede mermar la capacidad operativa e impactar negativamente en el 70% logrado."
+      },
+      {
+        "text": "Modificar la meta del indicador hacia un nivel más bajo para no exigir al equipo.",
+        "isCorrect": false,
+        "rationale": "Bajar las metas sin justificación atenta contra los principios de desarrollo e incremento paulatino de calidad."
+      },
+      {
+        "text": "Descontinuar el servicio de transporte para evitar variaciones en las métricas.",
+        "isCorrect": false,
+        "rationale": "Eliminar la operación no soluciona ineficiencias y destruye la oferta comercial de la compañía."
+      }
+    ],
+    "hint": "La mejora continua enseña que siempre existen oportunidades para seguir creciendo y no conformarse.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué problema surge cuando un servicio logístico se contrata utilizando un tarifario con costos operativos mal calculados?",
+    "opciones": [
+      {
+        "text": "El servicio puede generar pérdidas financieras continuas a la empresa pese a tener demanda.",
+        "isCorrect": true,
+        "rationale": "Si la tarifa cobrada no compensa los verdaderos costos de operación, cada entrega efectuada incrementa el saldo negativo."
+      },
+      {
+        "text": "El indicador de entregas en modalidad next day se incrementa automáticamente.",
+        "isCorrect": false,
+        "rationale": "La modalidad de entrega depende de los plazos logísticos pactados, no de la estructura de tarifas aprobada."
+      },
+      {
+        "text": "Los productos de clasificación A pasan a ser considerados de categoría C de inmediato.",
+        "isCorrect": false,
+        "rationale": "La clasificación ABC obedece a la rotación de ventas y no al margen monetario establecido en contratos."
+      },
+      {
+        "text": "Se elimina el riesgo financiero asociado a la liquidez de los proveedores.",
+        "isCorrect": false,
+        "rationale": "Los riesgos financieros de proveedores son independientes de los errores cometidos en el tarifario comercial propio."
+      },
+      {
+        "text": "Se automatiza por completo el registro de entradas y salidas en el sistema WMS.",
+        "isCorrect": false,
+        "rationale": "La automatización del WMS requiere desarrollo de software e integración, sin depender de fallos tarifarios."
+      }
+    ],
+    "hint": "Una tarifa por debajo del costo real provoca que cada transacción represente un saldo negativo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Por qué resulta indispensable documentar los procedimientos operativos dentro de un almacén o centro logístico?",
+    "opciones": [
+      {
+        "text": "Permite estandarizar las tareas para que sean ejecutadas con calidad constante.",
+        "isCorrect": true,
+        "rationale": "Al contar con instrucciones escritas, todos los operarios realizan las labores bajo un mismo estándar de calidad."
+      },
+      {
+        "text": "Facilita la capacitación e inducción de colaboradores nuevos en la empresa.",
+        "isCorrect": true,
+        "rationale": "Sirve como guía didáctica para que los nuevos empleados comprendan el flujo de trabajo sin depender del traspaso oral."
+      },
+      {
+        "text": "Ayuda a identificar con claridad los cuellos de botella presentes en la operación.",
+        "isCorrect": true,
+        "rationale": "Al plasmar el proceso formalmente, se hace más evidente detectar dónde ocurren retrasos o acumulaciones indebidas."
+      },
+      {
+        "text": "Garantiza la exención de impuestos en las compras a proveedores internacionales.",
+        "isCorrect": false,
+        "rationale": "Las exenciones impositivas dependen de normativas aduaneras y tributarias del estado, no de los manuales internos."
+      },
+      {
+        "text": "Reemplaza la necesidad de realizar mantenimiento preventivo a los vehículos.",
+        "isCorrect": false,
+        "rationale": "Documentar procesos administrativos o de almacenamiento no exime el mantenimiento mecánico de las unidades de transporte."
+      }
+    ],
+    "hint": "Mantener los procesos por escrito asegura consistencia en el trabajo, fácil transferencia de conocimiento e identificación de fallas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito fundamental de utilizar un Key Performance Indicator (KPI) en la gestión de la cadena de suministro?",
+    "opciones": [
+      {
+        "text": "Proporcionar una métrica definida y cuantificable para evaluar y optimizar el rendimiento de procesos operativos específicos.",
+        "isCorrect": true,
+        "rationale": "Un KPI busca medir objetivamente el desempeño de las operaciones para identificar áreas de mejora y respaldar el seguimiento continuo."
+      },
+      {
+        "text": "Sustituir la supervisión humana y la toma de decisiones directiva en la gestión de distribución.",
+        "isCorrect": false,
+        "rationale": "Los indicadores son herramientas analíticas de apoyo para la gestión operativa y estratégica, no reemplazos directos de la supervisión."
+      },
+      {
+        "text": "Establecer de forma rígida los precios de venta finales para los consumidores de última milla.",
+        "isCorrect": false,
+        "rationale": "La fijación de precios comerciales depende de políticas de mercado y costos, mientras que el KPI evalúa la eficiencia de los procesos."
+      },
+      {
+        "text": "Reemplazar la necesidad de implementar sistemas de gestión como ERP, WMS o TMS.",
+        "isCorrect": false,
+        "rationale": "Los sistemas de información como ERP o WMS son las plataformas que recopilan y procesan la información necesaria para calcular los KPIs."
+      },
+      {
+        "text": "Determinar sanciones de carácter penal inmediato para los colaboradores ante errores de inventario.",
+        "isCorrect": false,
+        "rationale": "Los KPIs se enfocan en la medición del rendimiento y la mejora de procesos, no en la aplicación de sanciones punitivas."
+      }
+    ],
+    "hint": "Piensa en cómo las mediciones objetivas ayudan a monitorear y mejorar la calidad de los procesos logísticos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al estructurar un KPI bajo la metodología SMART, ¿qué criterios indispensables deben integrarse en la definición del indicador?",
+    "opciones": [
+      {
+        "text": "Ser específico y estar claramente enfocado en el proceso o variable que se desea medir.",
+        "isCorrect": true,
+        "rationale": "La especificidad delimita con precisión el objeto de análisis para evitar ambigüedades en el seguimiento."
+      },
+      {
+        "text": "Ser medible de forma cuantitativa mediante datos e información disponible.",
+        "isCorrect": true,
+        "rationale": "La cuantificación es imprescindible para estimar objetivamente los resultados y compararlos contra metas prestablecidas."
+      },
+      {
+        "text": "Estar acotado a un límite de tiempo definido para evaluar su cumplimiento.",
+        "isCorrect": true,
+        "rationale": "Definir parámetros temporales (semanal, mensual, etc.) permite establecer la frecuencia del seguimiento y la trazabilidad."
+      },
+      {
+        "text": "Integrar más de diez variables de áreas no relacionadas en una sola fórmula matemática.",
+        "isCorrect": false,
+        "rationale": "Acumular un exceso de variables en un solo KPI resta claridad y dificulta la interpretación directa de la métrica."
+      },
+      {
+        "text": "Mantenerse inalterable a lo largo de los años sin posibilidad de ajuste operacional.",
+        "isCorrect": false,
+        "rationale": "Los indicadores deben revisarse y ajustarse periódicamente para adaptarse a los cambios en el entorno empresarial."
+      }
+    ],
+    "hint": "Considera las siglas de la metodología que garantiza que las métricas sean viables y relevantes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa logística ofrece esquemas de entrega como Same Day y Next Day. ¿Cómo impacta esta diversidad de servicios en la gestión de KPIs y costos operativos?",
+    "opciones": [
+      {
+        "text": "Genera variaciones en los costos operativos y requiere ajustar la promesa de entrega según el nivel de servicio pactado.",
+        "isCorrect": true,
+        "rationale": "Servicios más acelerados como el Same Day incrementan la exigencia operativa y el costo, exigiendo parámetros de medición diferenciados."
+      },
+      {
+        "text": "Elimina la necesidad de medir el tiempo de distribución al cobrar tarifas más elevadas.",
+        "isCorrect": false,
+        "rationale": "Independientemente del cobro, el tiempo de entrega sigue siendo la promesa clave que exige medición continua."
+      },
+      {
+        "text": "Automatiza por completo la preparación de pedidos en el almacén sin intervención humana.",
+        "isCorrect": false,
+        "rationale": "El tipo de servicio de despacho no automatiza de manera automática las labores físicas dentro del centro de distribución."
+      },
+      {
+        "text": "Fuerza a que todas las entregas regionales se realicen exclusivamente vía aérea.",
+        "isCorrect": false,
+        "rationale": "La elección del modo de transporte depende de la geografía, viabilidad operativa y costos pactados, no del tipo de indicador."
+      },
+      {
+        "text": "Garantiza una rotación de inventario cero en las instalaciones del proveedor.",
+        "isCorrect": false,
+        "rationale": "La velocidad de distribución no anula el mantenimiento de existencias en las instalaciones de almacenamiento."
+      }
+    ],
+    "hint": "Evalúa la relación entre la urgencia solicitada por el cliente, el costo cobrado y el plazo pactado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia operativa fundamental entre un Centro de Distribución tipo Hub y un Almacén convencional?",
+    "opciones": [
+      {
+        "text": "El Hub busca hacer rotar mercancía rápidamente para liberarse en plazos muy breves, mientras que el Almacén conserva existencias durante períodos más prolongados.",
+        "isCorrect": true,
+        "rationale": "Los Hubs operan bajo un flujo continuo de consolidación y tránsito rápido, a diferencia del almacenamiento estándar en racks a mediano plazo."
+      },
+      {
+        "text": "El Hub procesa únicamente materias primas importadas y el Almacén gestiona producto terminado local.",
+        "isCorrect": false,
+        "rationale": "Ambas instalaciones pueden manejar distintos tipos de mercancía; la diferencia radica en la dinámica de rotación y permanencia."
+      },
+      {
+        "text": "El Almacén no requiere personal de picking, mientras que en el Hub todo el trabajo es manual.",
+        "isCorrect": false,
+        "rationale": "Las labores de selección de pedidos pueden requerirse en ambas instalaciones dependiendo del modelo operativo."
+      },
+      {
+        "text": "El Hub atiende exclusivamente destinos en provincia y el Almacén atiende solo entregas locales.",
+        "isCorrect": false,
+        "rationale": "El alcance geográfico depende de la red logística de la empresa y no define la naturaleza técnica de la instalación."
+      },
+      {
+        "text": "El Almacén no puede utilizar sistemas informáticos de gestión de inventario.",
+        "isCorrect": false,
+        "rationale": "Tanto los almacenes como los hubs emplean herramientas tecnológicas (como WMS) para controlar sus operaciones."
+      }
+    ],
+    "hint": "Compara el tiempo de permanencia de las cargas y la velocidad requerida para liberar el espacio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al estructurar el KPI de costo operacional para una flota de transporte propia, ¿qué rubros deben ser incluidos en el cálculo integral?",
+    "opciones": [
+      {
+        "text": "Depreciación acumulada de las unidades vehiculares y pago de peajes.",
+        "isCorrect": true,
+        "rationale": "El desgaste del activo y los peajes son costos fijos y variables directamente ligados al tránsito de la flota."
+      },
+      {
+        "text": "Remuneraciones y beneficios del personal de choferes y auxiliares de reparto.",
+        "isCorrect": true,
+        "rationale": "El costo de la mano de obra contratada para la conducción y descarga constituye un componente central del gasto del transporte."
+      },
+      {
+        "text": "Combustible consumido, mantenimientos preventivos y seguros vehiculares.",
+        "isCorrect": true,
+        "rationale": "Los insumos operativos, las pólizas y los servicios mecánicos son rubros indispensables para la operatividad de los vehículos."
+      },
+      {
+        "text": "Alquiler por metro cuadrado de los racks de almacenamiento de materias primas.",
+        "isCorrect": false,
+        "rationale": "El arrendamiento de la infraestructura de almacenamiento corresponde a los costos de almacén, no a la operación del transporte."
+      },
+      {
+        "text": "Gastos de publicidad en redes sociales para la captación de nuevos clientes.",
+        "isCorrect": false,
+        "rationale": "Los gastos comerciales y de marketing están fuera de la estructura del costo logístico directo de transporte."
+      }
+    ],
+    "hint": "Identifica únicamente los egresos directamente atribuibles al funcionamiento y mantenimiento de las unidades móviles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El indicador de rotación de inventarios se determina mediante la relación entre las unidades despachadas y el inventario promedio. ¿Qué diagnóstico señala un índice de rotación bajo?",
+    "opciones": [
+      {
+        "text": "Existencia de riesgo de obsolescencia de mercancía o presencia de una política de compra especulativa con bajas ventas.",
+        "isCorrect": true,
+        "rationale": "Un valor bajo indica que las existencias permanecen mucho tiempo inmovilizadas, incrementando el riesgo de pérdida de valor o estancamiento."
+      },
+      {
+        "text": "Recuperación inmediata del capital invertido en el inventario mediante altas ventas.",
+        "isCorrect": false,
+        "rationale": "La rápida recuperación de capital es característica de una rotación elevada, no de una rotación baja."
+      },
+      {
+        "text": "Uso eficiente de los recursos de picking con mínima permanencia en racks.",
+        "isCorrect": false,
+        "rationale": "El estancamiento del inventario refleja ineficiencia en el flujo de salida, lo opuesto a un desempeño óptimo de despacho."
+      },
+      {
+        "text": "Mantenimiento de un flujo tenso de stock con niveles mínimos de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Un stock tenso implica una alta rotación donde el producto ingresa y sale a gran velocidad."
+      },
+      {
+        "text": "Cumplimiento automático del cien por ciento en las promesas de entrega.",
+        "isCorrect": false,
+        "rationale": "El indicador de rotación evalúa el movimiento de existencias, no la efectividad puntual de las entregas al cliente final."
+      }
+    ],
+    "hint": "Relaciona la escasa salida de mercancía acumulada con la salud económica de las existencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de almacenes mediante la clasificación ABC por rotación de existencias, ¿cuál es la ubicación estratégica recomendada para los productos de Categoría A?",
+    "opciones": [
+      {
+        "text": "En zonas próximas y de fácil acceso a las áreas de despacho para minimizar tiempos de recorrido en picking.",
+        "isCorrect": true,
+        "rationale": "Al ser los productos con mayor frecuencia de salida, ubicarlos cerca del despacho reduce desplazamientos inútiles del personal."
+      },
+      {
+        "text": "En las ubicaciones más elevadas y profundas del fondo del almacén.",
+        "isCorrect": false,
+        "rationale": "Colocar los productos de alta demanda en zonas de difícil acceso incrementaría innecesariamente los tiempos de preparación."
+      },
+      {
+        "text": "Junto a los productos obsoletos o de nula rotación para equilibrar el espacio.",
+        "isCorrect": false,
+        "rationale": "Los productos de baja o nula salida (Categoría C) deben ocupar zonas secundarias para no obstaculizar los flujos ágiles."
+      },
+      {
+        "text": "Distribuidos de manera aleatoria a lo largo de todas las hileras de racks.",
+        "isCorrect": false,
+        "rationale": "La ubicación aleatoria sin criterio de rotación destruye la eficiencia de las rutas de picking dentro del almacén."
+      },
+      {
+        "text": "En la zona de recepción de proveedores sin ingresar a la zona de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Los productos clasificados deben ubicarse en posiciones asignadas del almacén hasta su picking formal, respetando el control de stock."
+      }
+    ],
+    "hint": "Considera la distancia que recorre el operario para recoger los artículos solicitados con mayor frecuencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué relación cuantitativa se utiliza para calcular la productividad del proceso de picking en un almacén?",
+    "opciones": [
+      {
+        "text": "Unidades de carga o líneas procesadas por el operario sobre una unidad de tiempo trabajada.",
+        "isCorrect": true,
+        "rationale": "La productividad mide el volumen de trabajo de extracción concretado en relación con el tiempo invertido por el trabajador."
+      },
+      {
+        "text": "El costo del metro cuadrado de alquiler multiplicado por el número total de vehículos.",
+        "isCorrect": false,
+        "rationale": "Esa relación combina costos de infraestructura con transporte, ignorando la velocidad de extracción del picking."
+      },
+      {
+        "text": "El total de facturas emitidas por proveedores en comparación con las devoluciones recibidas.",
+        "isCorrect": false,
+        "rationale": "Esta métrica corresponde a la gestión administrativa de compras y servicio postventa, no a la actividad de almacenamiento."
+      },
+      {
+        "text": "El consumo de combustible de las unidades de reparto dividido entre las horas de turno.",
+        "isCorrect": false,
+        "rationale": "El gasto de combustible evalúa la eficiencia de la flota de distribución externa, no el rendimiento interno del almacén."
+      },
+      {
+        "text": "El número de estantes disponibles dividido entre el área total del terreno.",
+        "isCorrect": false,
+        "rationale": "Esa métrica evalúa la densidad de almacenamiento físico, pero no mide el rendimiento operativo de los trabajadores."
+      }
+    ],
+    "hint": "Evalúa la cantidad de trabajo de selección realizado respecto al tiempo que le toma al personal ejecutarlo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro de la gestión logística de almacenes, ¿cuáles de los siguientes rubros forman parte directa del costo de manipulación de materiales o maquila?",
+    "opciones": [
+      {
+        "text": "Mano de obra dedicada al desembalaje, verificación y reempaque de mercancías.",
+        "isCorrect": true,
+        "rationale": "Las horas de trabajo del personal enfocado en acondicionar el producto forman parte central del costo operacional de maquila."
+      },
+      {
+        "text": "Materiales e insumos empleados como etiquetas, precintos, bolsas y cajas de cartón.",
+        "isCorrect": true,
+        "rationale": "Los materiales consumidos directamente durante el empaque y sellado componen el gasto variable del acondicionamiento."
+      },
+      {
+        "text": "Depreciación o alquiler de maquinaria especializada para el sellado y empaque de unidades.",
+        "isCorrect": true,
+        "rationale": "El uso de equipos requeridos para la manipulación y preparación física de los artículos representa un costo técnico asociado."
+      },
+      {
+        "text": "Pagos por licencias de software para la gestión comercial en redes sociales.",
+        "isCorrect": false,
+        "rationale": "Los softwares comerciales de marketing no intervienen en el costo de manipulación física en el almacén."
+      },
+      {
+        "text": "Peajes pagados por las unidades tercerizadas durante la distribución interprovincial.",
+        "isCorrect": false,
+        "rationale": "Los peajes corresponden a los costos operativos del transporte y no a la manipulación dentro de la planta o almacén."
+      }
+    ],
+    "hint": "Filtra los recursos humanos, insumos y equipos requeridos para el acondicionado físico del empaque.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué aspecto de la experiencia del cliente mide el indicador denominado Customer Effort Score (CES)?",
+    "opciones": [
+      {
+        "text": "El nivel de dificultad o facilidad que experimenta el cliente al realizar gestiones como comprar o resolver una incidencia.",
+        "isCorrect": true,
+        "rationale": "El CES cuantifica el grado de esfuerzo percibido por el usuario en sus interacciones con el servicio prestado."
+      },
+      {
+        "text": "La distancia total recorrida por los vehículos desde el centro de distribución hasta el domicilio del comprador.",
+        "isCorrect": false,
+        "rationale": "La distancia recorrida es una métrica de ruta logística, no un indicador de percepción de esfuerzo del cliente."
+      },
+      {
+        "text": "El porcentaje de insumos rechazados durante la recepción en el área de control de calidad.",
+        "isCorrect": false,
+        "rationale": "El rechazo de insumos evalúa la calidad de la gestión de proveedores, no la interacción con el cliente final."
+      },
+      {
+        "text": "El margen de utilidad bruta acumulado en los servicios de distribución de última milla.",
+        "isCorrect": false,
+        "rationale": "El margen de utilidad evalúa la rentabilidad financiera del negocio, independiente del esfuerzo del cliente."
+      },
+      {
+        "text": "El tiempo de descanso asignado a los operarios durante el turno de picking.",
+        "isCorrect": false,
+        "rationale": "Los periodos de descanso corresponden a la gestión de recursos humanos y normas laborales internas."
+      }
+    ],
+    "hint": "Enfócate en la percepción del usuario sobre la simplicidad o complicación de sus trámites con la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el procedimiento adecuado para calcular el tiempo de entrega medio en una operación logística?",
+    "opciones": [
+      {
+        "text": "Dividir la suma de los tiempos transcurridos en todas las entregas individuales entre la cantidad total de pedidos despachados.",
+        "isCorrect": true,
+        "rationale": "El promedio del tiempo de entrega resulta de consolidar la duración de cada servicio entregado y dividirlo por el número de servicios."
+      },
+      {
+        "text": "Multiplicar las horas trabajadas en picking por el número de camiones registrados en la flota.",
+        "isCorrect": false,
+        "rationale": "Esa operación matemática combina variables heterogéneas que no representan la duración media del transporte."
+      },
+      {
+        "text": "Restar las horas de descanso de los choferes al tiempo global estipulado en el contrato comercial.",
+        "isCorrect": false,
+        "rationale": "El cálculo del tiempo de entrega debe basarse en el desempeño real de los despachos y no en deducciones contractuales arbitrarias."
+      },
+      {
+        "text": "Dividir la cantidad de galones de combustible entre el número de destinos de entrega.",
+        "isCorrect": false,
+        "rationale": "Esta fórmula indicaría rendimiento de combustible por destino, no el tiempo de tránsito de los envíos."
+      },
+      {
+        "text": "Sumar los valores del indicador NPS y dividirlos entre los días calendarios del mes.",
+        "isCorrect": false,
+        "rationale": "El NPS mide percepción y recomendación de clientes, lo cual no posee relación directa con las horas de tránsito físico."
+      }
+    ],
+    "hint": "Obtén el promedio aritmético entre la duración sumada de todos los envíos realizados y el número de envíos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "El Net Promoter Score (NPS) es una métrica relevante para evaluar el servicio. ¿Qué características definen la estructura y aplicación de este indicador?",
+    "opciones": [
+      {
+        "text": "Evalúa la satisfacción y lealtad del cliente mediante encuestas de recomendación.",
+        "isCorrect": true,
+        "rationale": "El indicador se basa en la disposición del usuario a recomendar la marca o servicio a otros potenciales clientes."
+      },
+      {
+        "text": "Utiliza una escala numérica de 0 a 10, donde 0 indica 'nada probable' y 10 'extremadamente probable'.",
+        "isCorrect": true,
+        "rationale": "Esta escala estándar permite clasificar a los encuestados en detractores, pasivos y promotores."
+      },
+      {
+        "text": "Brinda retroalimentación clave para identificar áreas de mejora en la atención y la experiencia del usuario.",
+        "isCorrect": true,
+        "rationale": "Los datos obtenidos orientan las acciones correctivas y preventivas del equipo de atención e incidencias."
+      },
+      {
+        "text": "Calcula de forma directa el costo de almacenamiento por metro cuadrado en el almacén.",
+        "isCorrect": false,
+        "rationale": "Los costos de almacenamiento se determinan mediante gastos financieros y metros cuadrados, sin vinculación con el NPS."
+      },
+      {
+        "text": "Establece la tasa de desgaste mecánico de los montacargas y apiladores.",
+        "isCorrect": false,
+        "rationale": "La tasa de desgaste técnico de equipos se mide mediante registros de mantenimiento y horas de uso."
+      }
+    ],
+    "hint": "Enfócate en la escala numérica utilizada y la medición de la lealtad del usuario a través de la recomendación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Si se identifica que el costo logístico total reduce significativamente el margen de ganancia, ¿qué estrategia resulta coherente para optimizar la eficiencia logitudinal?",
+    "opciones": [
+      {
+        "text": "Redimensionar la densidad de empaque por unidad vehicular y seleccionar almacenes en ubicaciones estratégicas cercanas a la demanda.",
+        "isCorrect": true,
+        "rationale": "Optimizar el volumen de carga y reducir las distancias de recorrido ataca directamente los costos de transporte y almacenamiento."
+      },
+      {
+        "text": "Eliminar de forma inmediata los sistemas WMS o TMS para evitar pagos de licencias tecnológicas.",
+        "isCorrect": false,
+        "rationale": "Remover los sistemas de gestión incrementaría los errores e ineficiencias operativas, elevando los costos globales."
+      },
+      {
+        "text": "Suprimir las actividades de control de calidad para acelerar las salidas de inventario.",
+        "isCorrect": false,
+        "rationale": "Eliminar el control de calidad generaría entregas defectuosas y devoluciones que incrementarían el costo final."
+      },
+      {
+        "text": "Obligar a los clientes a retirar personalmente todos los pedidos en la planta de fabricación.",
+        "isCorrect": false,
+        "rationale": "Eliminar el servicio de entrega deterioraría la propuesta de valor comercial y provocaría la pérdida masiva de clientes."
+      },
+      {
+        "text": "Mantener esquemas tarifarios deficitarios sin renegociar las condiciones con los clientes.",
+        "isCorrect": false,
+        "rationale": "Preservar tarifas que no cubren los costos operativos perpetúa las pérdidas financieras de la empresa."
+      }
+    ],
+    "hint": "Piensa en decisiones de ruteo, consolidación de volumen y consolidación geográfica de los almacenes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué resulta económicamente riesgoso mantener un servicio logístico con margen negativo apoyado únicamente en un gran volumen de clientes?",
+    "opciones": [
+      {
+        "text": "Porque las pérdidas unitarias acumuladas drenan la liquidez de la empresa y comprometen su viabilidad financiera a largo plazo.",
+        "isCorrect": true,
+        "rationale": "A mayor volumen en un servicio con margen negativo, mayor será la pérdida económica total generada para la organización."
+      },
+      {
+        "text": "Porque ocasiona una rotación inmediata del personal del área de desarrollo de sistemas.",
+        "isCorrect": false,
+        "rationale": "Las deficiencias en la rentabilidad de las tarifas afectan la salud financiera, no la rotación directa de personal de TI."
+      },
+      {
+        "text": "Porque exige la paralización automática de todos los vehículos de distribución por norma legal.",
+        "isCorrect": false,
+        "rationale": "Las decisiones de rentabilidad son de orden comercial y financiero interno, no contingencias legales automáticas."
+      },
+      {
+        "text": "Porque invalida el uso de metodologías de medición como el Customer Effort Score.",
+        "isCorrect": false,
+        "rationale": "Los indicadores de servicio pueden seguir midiéndose aun cuando la estructura de costos presente pérdidas."
+      },
+      {
+        "text": "Porque exige la compra inmediata de almacenes automatizados en el extranjero.",
+        "isCorrect": false,
+        "rationale": "Incurrir en pérdidas reduce la capacidad de inversión de la empresa, imposibilitando compras de infraestructura costosa."
+      }
+    ],
+    "hint": "Analiza las consecuencias de multiplicar pérdidas operativas por un volumen elevado de entregas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el valor principal que aporta la implementación de cuadros de mando (dashboards) en plataformas como Power BI o Excel?",
+    "opciones": [
+      {
+        "text": "Consolidar datos dispersos para brindar a la gestión una visualización clara, dinámica y en tiempo real del estado de los KPIs.",
+        "isCorrect": true,
+        "rationale": "Los dashboards facilitan la interpretación de métricas complejas, permitiendo un monitoreo continuo para la toma de decisiones."
+      },
+      {
+        "text": "Garantizar que ningún vehículo de reparto sufra fallas mecánicas en ruta.",
+        "isCorrect": false,
+        "rationale": "El software visualiza información de desempeño, pero no reemplaza el mantenimiento físico de los activos."
+      },
+      {
+        "text": "Reemplazar los recuentos físicos e inspecciones de inventario en las instalaciones.",
+        "isCorrect": false,
+        "rationale": "La visualización de datos requiere validación periódica sobre el terreno para garantizar la precisión de la información."
+      },
+      {
+        "text": "Aumentar el tiempo necesario para procesar registros con el fin de diferir las decisiones.",
+        "isCorrect": false,
+        "rationale": "El propósito de la automatización visual es reducir tiempos de análisis para reaccionar con agilidad."
+      },
+      {
+        "text": "Sustituir la responsabilidad directiva en la planificación estratégica del negocio.",
+        "isCorrect": false,
+        "rationale": "Los cuadros de mando apoyan el análisis del directivo, pero la toma de decisiones sigue siendo responsabilidad humana."
+      }
+    ],
+    "hint": "Considera cómo la integración y representación gráfica de datos agiliza el monitoreo directivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis de desempeño operacional, ¿por qué es prioritario aplicar acciones preventivas frente a las correctivas ante desviaciones en los KPIs?",
+    "opciones": [
+      {
+        "text": "Porque las acciones preventivas evitan que el riesgo se materialice, mientras que las correctivas se aplican cuando el daño ya ocurrió.",
+        "isCorrect": true,
+        "rationale": "Prevenir ahorra costos por fallas y protege la calidad del servicio al anticiparse a la ocurrencia de los problemas."
+      },
+      {
+        "text": "Porque las acciones correctivas generan mayores ahorros presupuestarios según la metodología SMART.",
+        "isCorrect": false,
+        "rationale": "Corregir fallas ya ocurridas suele ser más costoso debido a reprocesos, penalizaciones o pérdida de clientes."
+      },
+      {
+        "text": "Porque las medidas preventivas exigen la cancelación inmediata de contratos con proveedores.",
+        "isCorrect": false,
+        "rationale": "La prevención busca ajustar y controlar procesos, no necesariamente rescindir acuerdos comerciales de forma intempestiva."
+      },
+      {
+        "text": "Porque el uso de acciones correctivas invalida el historial de datos en los cuadros de mando.",
+        "isCorrect": false,
+        "rationale": "El historial de datos registra la realidad operativa indistintamente del tipo de acción aplicada."
+      },
+      {
+        "text": "Porque las acciones preventivas no requieren asignación de recursos ni personal responsable.",
+        "isCorrect": false,
+        "rationale": "Toda acción de mejora, preventiva o correctiva, requiere definir tareas, responsables y tiempos para su ejecución."
+      }
+    ],
+    "hint": "Compara el costo y el impacto de evitar una falla frente al gasto de reparar sus consecuencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Si un proveedor de transporte incurre continuamente en demoras de entrega y mala manipulación de la carga, ¿qué impactos negativos se generan sobre la empresa contratante?",
+    "opciones": [
+      {
+        "text": "Deterioro de la reputación corporativa y de la imagen de marca ante los clientes finales.",
+        "isCorrect": true,
+        "rationale": "El cliente final responsabiliza a la marca vendedora por las fallas del servicio de transporte contratado."
+      },
+      {
+        "text": "Incremento en las tasas de devoluciones y reclamos por productos entregados en mal estado.",
+        "isCorrect": true,
+        "rationale": "La manipulación deficiente causa daños físicos en la mercancía que derivan en rechazos y devoluciones."
+      },
+      {
+        "text": "Incumplimiento de las promesas de entrega contractuales asumidas con los compradores.",
+        "isCorrect": true,
+        "rationale": "Las demoras del transportista provocan el fallo directo en las fechas comprometidas con el cliente."
+      },
+      {
+        "text": "Aumento en la tasa de rotación de los productos clasificados como Categoría C.",
+        "isCorrect": false,
+        "rationale": "El mal desempeño del transporte daña el nivel de servicio pero no incrementa la demanda de mercancías de baja Salida."
+      },
+      {
+        "text": "Reducción en la tasa de depreciación de la infraestructura del centro de distribución.",
+        "isCorrect": false,
+        "rationale": "La depreciación de activos fijos de la planta es contable y no se altera por las demoras del proveedor de transporte."
+      }
+    ],
+    "hint": "Analiza las consecuencias directas sobre la percepción del cliente final y la integridad de los envíos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el seguimiento a proveedores, se monitorea la 'tasa de defectos'. ¿Qué situación operativa refleja un aumento constante en esta métrica?",
+    "opciones": [
+      {
+        "text": "Fallas recurrentes en el control de calidad o procesos del proveedor que afectan la idoneidad del insumo recibido.",
+        "isCorrect": true,
+        "rationale": "Un alza en defectos indica que el proveedor está enviando mercancía no conforme que no cumple con las especificaciones exigidas."
+      },
+      {
+        "text": "Aumento en el nivel de eficiencia en los tiempos de picking del almacén cliente.",
+        "isCorrect": false,
+        "rationale": "La recepción de productos defectuosos entorpece las operaciones internas en lugar de aumentar la eficiencia."
+      },
+      {
+        "text": "Uso óptimo de la capacidad de carga en la flota de distribución pesada.",
+        "isCorrect": false,
+        "rationale": "La tasa de defectos mide la calidad física de los ítems entregados, no la ocupación volumétrica de camiones."
+      },
+      {
+        "text": "Incremento en las puntuaciones obtenidas en las encuestas Net Promoter Score.",
+        "isCorrect": false,
+        "rationale": "El envío de productos defectuosos reduce la satisfacción del usuario, impactando negativamente en el NPS."
+      },
+      {
+        "text": "Reducción del costo operacional por metro cuadrado de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "Los defectos en mercancías generan costos de inspección y reproceso, elevando los gastos globales."
+      }
+    ],
+    "hint": "Vincula la presencia de anomalías en los lotes recibidos con los estándares del proveedor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Cuando un análisis financiero revela que un proveedor crítico posee alto endeudamiento y baja liquidez, ¿qué riesgos enfrenta la cadena de suministro de la empresa cliente?",
+    "opciones": [
+      {
+        "text": "Peligro de interrupción repentina en el suministro de insumos por insolvencia del proveedor.",
+        "isCorrect": true,
+        "rationale": "La falta de liquidez puede paralizar las compras y la producción del proveedor, cortando el abastecimiento."
+      },
+      {
+        "text": "Incapacidad del proveedor para cumplir con las remuneraciones de su personal, afectando la operatividad.",
+        "isCorrect": true,
+        "rationale": "Los problemas de caja suelen derivar en huelgas o falta de mano de obra en las instalaciones del proveedor."
+      },
+      {
+        "text": "Necesidad urgente de activar planes de contingencia o homologar proveedores alternativos.",
+        "isCorrect": true,
+        "rationale": "La vulnerabilidad del proveedor obliga a la empresa cliente a buscar opciones de resguardo para no paralizar la cadena."
+      },
+      {
+        "text": "Reducción automática de las tarifas de peajes aplicadas por el estado.",
+        "isCorrect": false,
+        "rationale": "Las tarifas reguladas por infraestructura no cambian en función del estado financiero de los proveedores privados."
+      },
+      {
+        "text": "Incremento de la precisión en los recuentos cíclicos de inventario del almacén.",
+        "isCorrect": false,
+        "rationale": "La precisión de inventario interna depende de los controles en almacén, no de la liquidez de terceros."
+      }
+    ],
+    "hint": "Analiza los problemas de continuidad operativa que origina la fragilidad económica de un socio clave.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión contractual con proveedores logísticos, ¿cuál es el objetivo primordial de acordar cláusulas de penalización asociadas al incumplimiento de KPIs?",
+    "opciones": [
+      {
+        "text": "Mitigar el impacto económico de los fallos del servicio y desincentivar el incumplimiento de los parámetros acordados.",
+        "isCorrect": true,
+        "rationale": "Las penalizaciones salvaguardan financieramente a la empresa ante interrupciones y exigen rigor operativo al proveedor."
+      },
+      {
+        "text": "Permitir el incremento unilateral de las tarifas sin auditoría previa.",
+        "isCorrect": false,
+        "rationale": "Las penalizaciones castigan el incumplimiento, no constituyen un mecanismo de alza de tarifas a favor del proveedor."
+      },
+      {
+        "text": "Eximir al proveedor de mantener coberturas de seguros para las mercancías.",
+        "isCorrect": false,
+        "rationale": "Las pólizas de seguro cubren contingencias de carga y son independientes de los descuentos por mal servicio."
+      },
+      {
+        "text": "Eliminar la obligación de realizar el seguimiento de entregas a tiempo.",
+        "isCorrect": false,
+        "rationale": "Para aplicar la penalización contractual es indispensable medir rigurosamente el incumplimiento del KPI."
+      },
+      {
+        "text": "Transferir la gestión contable de la empresa cliente a las oficinas del proveedor.",
+        "isCorrect": false,
+        "rationale": "Las relaciones operativas de servicios no modifican las responsabilidades legales o contables de las empresas."
+      }
+    ],
+    "hint": "Considera la protección económica ante fallas operativas y el fomento de la disciplina en el servicio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué es imprescindible que la información empleada para construir los KPIs sea verifca antes de respaldar decisiones estratégicas?",
+    "opciones": [
+      {
+        "text": "Porque datos erróneos o sesgados derivan en decisiones equivocadas que comprometen la rentabilidad y operación del negocio.",
+        "isCorrect": true,
+        "rationale": "La toma de decisiones estratégicas requiere un diagnóstico fiel de la realidad operacional para ser efectiva."
+      },
+      {
+        "text": "Porque las normas contables exigen cambiar los datos de los indicadores de manera semanal.",
+        "isCorrect": false,
+        "rationale": "La periodicidad de medición responde a la necesidad operativa, no a una imposición de cambio de datos."
+      },
+      {
+        "text": "Porque la verificación de KPIs sustituye la presentación de los estados financieros anuales.",
+        "isCorrect": false,
+        "rationale": "Los KPIs operativos complementan pero no reemplazan los informes de contabilidad formal exigidos por ley."
+      },
+      {
+        "text": "Porque los software ERP no pueden procesar números sin autorización previa de los clientes.",
+        "isCorrect": false,
+        "rationale": "Los ERP procesan transacciones de forma interna sin requerir validación comercial de los compradores."
+      },
+      {
+        "text": "Porque la metodología SMART exige que los datos se recopilen de forma únicamente manual.",
+        "isCorrect": false,
+        "rationale": "SMART es una metodología de definición de metas y promueve activamente la automatización de datos."
+      }
+    ],
+    "hint": "Considera la relación entre la exactitud del diagnóstico cuantitativo y el éxito de la estrategia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la metodología de mejora continua en la cadena de suministro, la fase inicial exige 'evaluar la situación actual' (As-Is). ¿Qué actividades son esenciales en esta etapa?",
+    "opciones": [
+      {
+        "text": "Mapear y documentar minuciosamente los flujos de trabajo tal como operan en la realidad.",
+        "isCorrect": true,
+        "rationale": "Documentar el estado actual permite comprender la secuencia real de actividades sin asumir supuestos."
+      },
+      {
+        "text": "Identificar las partes interesadas, roles y responsabilidades involucradas en el proceso.",
+        "isCorrect": true,
+        "rationale": "Mapear a los actores permite entender las interacciones humanas y operativas dentro del flujo."
+      },
+      {
+        "text": "Detectar los cuellos de botella y fallas recurrentes presentes en el flujo operativo vigente.",
+        "isCorrect": true,
+        "rationale": "Localizar los puntos críticos de congestión orienta el foco del plan de mejora posterior."
+      },
+      {
+        "text": "Adquirir de inmediato nuevas tecnologías sin analizar las causas raíz de los problemas.",
+        "isCorrect": false,
+        "rationale": "Comprar tecnología sin diagnosticar el proceso puede automatizar ineficiencias en lugar de resolverlas."
+      },
+      {
+        "text": "Celebrar la optimización de los indicadores antes de haber ejecutado cambios.",
+        "isCorrect": false,
+        "rationale": "El reconocimiento del logro ocurre al final de la metodología, tras verificar los resultados obtenidos."
+      }
+    ],
+    "hint": "Identifica las acciones analíticas requeridas para entender el estado presente antes de modificarlo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la mejora continua, ¿cuál es el propósito fundamental de estructurar el modelo 'To-Be' o proceso objetivo?",
+    "opciones": [
+      {
+        "text": "Diseñar la versión optimizada del proceso que elimina los cuellos de botella identificados en el estado actual.",
+        "isCorrect": true,
+        "rationale": "El modelo To-Be representa la meta deseada y establece las nuevas pautas de ejecución eficiente."
+      },
+      {
+        "text": "Restablecer exactamente las prácticas antiguas para evitar cambios en la rutina de trabajo.",
+        "isCorrect": false,
+        "rationale": "Volver a las prácticas previas perpetúa los problemas diagnosticados en la evaluación As-Is."
+      },
+      {
+        "text": "Ocultar las fallas operativas a la gerencia para evitar revisiones presupuestarias.",
+        "isCorrect": false,
+        "rationale": "El diseño de procesos busca la transparencia y la resolución structural de ineficiencias."
+      },
+      {
+        "text": "Reducir unilateralmente los salarios del personal de almacén para recortar costos fijos.",
+        "isCorrect": false,
+        "rationale": "La reingeniería de procesos se centra en flujos y actividades, no en medidas de recorte salarial."
+      },
+      {
+        "text": "Eliminar la documentación de los procedimientos para agilizar las tareas cotidianas.",
+        "isCorrect": false,
+        "rationale": "La mejora continua requiere formalizar y documentar el nuevo estándar para sostener el avance."
+      }
+    ],
+    "hint": "Contrapón el diagnóstico del estado presente con la visión optimizada que se pretende alcanzar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Tras desplegar las acciones del plan de mejora en la cadena de suministro, ¿qué paso es indispensable para garantizar la sostenibilidad de los avances?",
+    "opciones": [
+      {
+        "text": "Medir la efectividad comparando los nuevos KPIs contra el diagnóstico inicial y actualizar la documentación oficial del proceso.",
+        "isCorrect": true,
+        "rationale": "Verificar cuantitativamente el impacto y formalizar los nuevos procedimientos asegura que las mejoras perduren."
+      },
+      {
+        "text": "Descartar los manuales operacionales y permitir que cada operario elija su propio método.",
+        "isCorrect": false,
+        "rationale": "Estandarizar mediante documentación actualizada es vital para evitar el retorno a viejas ineficiencias."
+      },
+      {
+        "text": "Alterar las fórmulas de los KPIs semanalmente para proyectar siempre un cumplimiento positivo.",
+        "isCorrect": false,
+        "rationale": "Manipular métricas destruye la confiabilidad del análisis de desempeño."
+      },
+      {
+        "text": "Transferir la preparación de pedidos en los almacenes a los transportistas externos.",
+        "isCorrect": false,
+        "rationale": "Desplazar tareas clave a actores no capacitados distorsiona el flujo operativo y eleva el riesgo de error."
+      },
+      {
+        "text": "Suspender el monitoreo de indicadores para no saturar con métricas al equipo.",
+        "isCorrect": false,
+        "rationale": "Interrumpir el seguimiento impide comprobar si el cambio fue efectivo a lo largo del tiempo."
+      }
+    ],
+    "hint": "Piensa en la necesidad de comparar cuantitativamente los resultados y formalizar el estándar de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-63",
+    "diplomado": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Por qué razones la mejora continua en la cadena de suministro debe ser concebida como un ciclo permanente y no como un proyecto de ejecución única?",
+    "opciones": [
+      {
+        "text": "Los entornos de mercado, las tecnologías y las exigencias de los clientes cambian de forma constante.",
+        "isCorrect": true,
+        "rationale": "La dinámica comercial y tecnológica exige adaptar los procesos de manera ininterrumpida para no perder competitividad."
+      },
+      {
+        "text": "Siempre existen nuevas oportunidades para optimizar tiempos, recortar gastos y elevar la calidad del servicio.",
+        "isCorrect": true,
+        "rationale": "Incluso en procesos maduros se identifican eficiencias marginales mediante el monitoreo constante."
+      },
+      {
+        "text": "Permite ajustar la operación ante imprevistos, fluctuaciones en la demanda o crisis de suministro.",
+        "isCorrect": true,
+        "rationale": "La cultura de mejora fortalece la capacidad de respuesta y resiliencia del negocio frente a cambios del entorno."
+      },
+      {
+        "text": "Elimina la necesidad de realizar auditorías o controles periódicos de inventario en almacén.",
+        "isCorrect": false,
+        "rationale": "La mejora continua no suspende los controles, sino que perfecciona los mecanismos de auditoría."
+      },
+      {
+        "text": "Asegura la congelación definitiva de los costos operacionales sin sufrir variaciones por inflación.",
+        "isCorrect": false,
+        "rationale": "La mejora optimiza el uso de recursos, pero no anula factores macroeconómicos externos."
+      }
+    ],
+    "hint": "Considera la evolución dinámica del entorno logístico y la búsqueda incesante de competitividad.",
+    "activo": true
+  }
+]

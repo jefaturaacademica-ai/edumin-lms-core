@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Es obligatorio en el Perú que todas las empresas privadas implementen la norma ISO 14001?",
+    "opciones": [
+      {
+        "text": "No, la adopción de ISO 14001 es de carácter opcional y voluntario para las organizaciones.",
+        "isCorrect": true,
+        "rationale": "Las normas ISO son estándares internacionales de adhesión voluntaria que las empresas implementan por estrategia, financiamiento o ventaja competitiva, a diferencia de normativas legales obligatorias."
+      },
+      {
+        "text": "Sí, el Ministerio del Ambiente la exige obligatoriamente a todo tipo de empresa formal.",
+        "isCorrect": false,
+        "rationale": "El estado peruano exige el cumplimiento de leyes ambientales específicas y límites permisibles, pero no exige la certificación ISO 14001 a todas las empresas."
+      },
+      {
+        "text": "Sí, únicamente las empresas de servicios administrativos están exentas de cumplirla.",
+        "isCorrect": false,
+        "rationale": "Ningún sector está obligado legalmente a certificarse en ISO 14001; es una decisión voluntaria para cualquier rubro."
+      },
+      {
+        "text": "No, solo es obligatoria para el sector pesquero y textil.",
+        "isCorrect": false,
+        "rationale": "Aunque ciertos sectores tienen exigencias ambientales sectoriales estrictas, la norma ISO 14001 sigue siendo de adopción voluntaria."
+      },
+      {
+        "text": "Sí, es un requisito legal indispensable para obtener la licencia de funcionamiento municipal.",
+        "isCorrect": false,
+        "rationale": "Las licencias municipales dependen de normativas edilicias y de seguridad civil, no de certificaciones voluntarias ISO."
+      }
+    ],
+    "hint": "Considera la diferencia entre el cumplimiento de decretos legales del Estado y la adopción de estándares internacionales voluntarios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de un Sistema de Gestión Ambiental según ISO 14001, ¿qué representa la herramienta del flujograma dentro de un procedimiento operativo?",
+    "opciones": [
+      {
+        "text": "Un resumen visual y simplificado de los pasos operativos para facilitar la comprensión de los colaboradores.",
+        "isCorrect": true,
+        "rationale": "El flujograma sintetiza en una sola página gráfica la secuencia de un procedimiento extenso, permitiendo que los trabajadores asimilen y entiendan rápidamente sus responsabilidades."
+      },
+      {
+        "text": "Un informe financiero detallado que cuantifica el costo de la segregación de residuos.",
+        "isCorrect": false,
+        "rationale": "Los aspectos contables y presupuestarios se manejan en estados financieros o balances, no en diagramas de flujo de procesos."
+      },
+      {
+        "text": "La matriz legal completa de los decretos supremos aplicables a la organización.",
+        "isCorrect": false,
+        "rationale": "Los requisitos legales se estructuran en matrices de cumplimiento normativo y no en flujogramas de trabajo."
+      },
+      {
+        "text": "Un documento administrativo de más de 80 páginas con las políticas legales de la alta dirección.",
+        "isCorrect": false,
+        "rationale": "El propósito del flujograma es precisamente evitar la lectura de documentos extremadamente extensos mediante la síntesis gráfica."
+      },
+      {
+        "text": "Una certificación expedida por OEFA para validar los límites máximos permisibles.",
+        "isCorrect": false,
+        "rationale": "La OEFA es un ente fiscalizador gubernamental y no emite flujogramas internos para los procedimientos de una empresa."
+      }
+    ],
+    "hint": "Piensa en el formato gráfico que resume un documento extenso para que sea fácil de entender en capacitaciones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes son beneficios clave de implementar la norma ISO 14001 en una organización?",
+    "opciones": [
+      {
+        "text": "Facilita el acceso a créditos y préstamos del Banco Mundial u otras entidades financieras.",
+        "isCorrect": true,
+        "rationale": "Demostrar sostenibilidad ambiental mediante certificaciones reconocidas otorga ventajas y mejores condiciones al postular a financiamientos internacionales."
+      },
+      {
+        "text": "Mejora la imagen corporativa y otorga ventaja competitiva para licitar con grandes empresas.",
+        "isCorrect": true,
+        "rationale": "Las grandes corporaciones y el Estado exigen homologaciones y estándares ambientales para seleccionar a sus contratistas y proveedores."
+      },
+      {
+        "text": "Ayuda a demostrar ante clientes y partes interesadas la protección activa de la flora, fauna y el entorno.",
+        "isCorrect": true,
+        "rationale": "El sistema ambiental proporciona evidencias auditables de que la empresa gestiona sus impactos para minimizar el daño ecológico."
+      },
+      {
+        "text": "Exime totalmente a la empresa de ser fiscalizada por entidades reguladoras como OEFA.",
+        "isCorrect": false,
+        "rationale": "Contar con una ISO voluntaria no anula la facultad fiscalizadora ni las inspecciones de los organismos reguladores del Estado."
+      },
+      {
+        "text": "Reemplaza la obligación legal de contar con una matriz de requisitos legales locales.",
+        "isCorrect": false,
+        "rationale": "La norma ISO 14001 exige explícitamente identificar y cumplir las leyes locales en lugar de sustituirlas."
+      }
+    ],
+    "hint": "Selecciona las opciones que reflejan oportunidades comerciales, financieras y reputacionales sin anular las leyes vigentes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el límite máximo permisible de ruido ambiental operativo mencionado en las sesiones de gestión ambiental?",
+    "opciones": [
+      {
+        "text": "85 decibeles.",
+        "isCorrect": true,
+        "rationale": "En entornos operativamente ruidosos o de construcción, el límite permisible establecido para evitar daños es de 85 decibeles."
+      },
+      {
+        "text": "65 decibeles.",
+        "isCorrect": false,
+        "rationale": "Un nivel de 65 decibeles corresponde a límites en zonas administrativas o de oficinas, no al umbral operativo máximo."
+      },
+      {
+        "text": "100 decibeles.",
+        "isCorrect": false,
+        "rationale": "Los 100 decibeles exceden considerablemente los límites permisibles seguros de exposición ambiental."
+      },
+      {
+        "text": "45 decibeles.",
+        "isCorrect": false,
+        "rationale": "Este valor es típico de zonas residenciales nocturnas o áreas de silencio, muy por debajo de los entornos industriales."
+      },
+      {
+        "text": "120 decibeles.",
+        "isCorrect": false,
+        "rationale": "Exposiciones a 120 decibeles se aproximan al umbral del dolor y representan un riesgo severo inmediato."
+      }
+    ],
+    "hint": "Recuerda el valor numérico estándar de decibeles asociado a las operaciones industriales y de campo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el periodo de vigencia estándar del certificado de un Sistema de Gestión Ambiental bajo ISO 14001 antes de requerir una recertificación?",
+    "opciones": [
+      {
+        "text": "3 años.",
+        "isCorrect": true,
+        "rationale": "Las certificaciones de normas ISO se otorgan por un ciclo de tres años, sujeto a auditorías de seguimiento anuales."
+      },
+      {
+        "text": "1 año.",
+        "isCorrect": false,
+        "rationale": "Un año es la frecuencia con la que se realizan las auditorías de seguimiento, pero no la vigencia total del certificado."
+      },
+      {
+        "text": "5 años.",
+        "isCorrect": false,
+        "rationale": "El ciclo de renovación normativo establecido por casas certificadoras no se extiende a cinco años."
+      },
+      {
+        "text": "10 años.",
+        "isCorrect": false,
+        "rationale": "Un plazo de diez años no garantiza el control continuo ni la actualización frente a los cambios en la empresa."
+      },
+      {
+        "text": "De por vida, sin requerir renovación.",
+        "isCorrect": false,
+        "rationale": "Ningún certificado ISO es permanente; requiere mantenimiento y recertificación periódica."
+      }
+    ],
+    "hint": "Identifica el número de años que dura el ciclo completo de la certificación internacional.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del ciclo PHVA (Planificar, Hacer, Verificar, Actuar) de la ISO 14001, ¿cuáles actividades corresponden a la fase de 'Planificar'?",
+    "opciones": [
+      {
+        "text": "Establecer los objetivos y metas ambientales de la organización.",
+        "isCorrect": true,
+        "rationale": "La definición de objetivos es la piedra angular del diseño e intención del sistema durante la planificación."
+      },
+      {
+        "text": "Identificar los aspectos ambientales e impactos significativos de las actividades.",
+        "isCorrect": true,
+        "rationale": "El diagnóstico preliminar de aspectos e impactos permite determinar en qué puntos se enfocarán los recursos."
+      },
+      {
+        "text": "Ejecutar capacitaciones operativas diarias en el manejo de residuos en planta.",
+        "isCorrect": false,
+        "rationale": "La impartición e implementación operativa de capacitaciones corresponde a la fase de 'Hacer'."
+      },
+      {
+        "text": "Medir los indicadores mediante auditorías internas de desempeño.",
+        "isCorrect": false,
+        "rationale": "La medición de resultados e indicadores forma parte de la fase de 'Verificar'."
+      },
+      {
+        "text": "Aplicar acciones correctivas ante multas impuestas por desviaciones normativas.",
+        "isCorrect": false,
+        "rationale": "Tomar acciones para corregir problemas y desviaciones pertenece a la fase de 'Actuar'."
+      }
+    ],
+    "hint": "Busca las acciones vinculadas al diagnóstico inicial y la fijación de metas antes de la ejecución operativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la investigación de incidentes ambientales, ¿cuál es la finalidad principal de la técnica de los 'Cinco Porqué'?",
+    "opciones": [
+      {
+        "text": "Encontrar la causa raíz analizando las fallas del proceso en lugar de buscar un culpable individual.",
+        "isCorrect": true,
+        "rationale": "La metodología profundiza sistemáticamente en la secuencia de eventos hasta hallar las deficiencias del proceso para evitar que el evento vuelva a repetirse."
+      },
+      {
+        "text": "Determinar de forma inmediata a qué trabajador se le aplicará una sanción monetaria.",
+        "isCorrect": false,
+        "rationale": "Las metodologías de investigación buscan prevenir fallas en el proceso y no castigar de forma punitiva al personal."
+      },
+      {
+        "text": "Calcular el monto exacto de la multa en Unidades Impositivas Tributarias (UIT) que cobrará el estado.",
+        "isCorrect": false,
+        "rationale": "La cuantificación de multas legales la realizan los entes fiscalizadores externos mediante tablas normativas, no la herramienta de causa raíz."
+      },
+      {
+        "text": "Elaborar los planos de ingeniería estructural para una nueva planta minera.",
+        "isCorrect": false,
+        "rationale": "Los planos de ingeniería son entregables del diseño del proyecto, no herramientas de análisis de incidentes."
+      },
+      {
+        "text": "Sustituir la obligación de realizar monitoreos de calidad de aire y agua.",
+        "isCorrect": false,
+        "rationale": "Investigar una causa raíz no reemplaza la obligación legal de monitorear agentes ambientales."
+      }
+    ],
+    "hint": "Piensa en una herramienta que retrocede paso a paso en el proceso para entender la falla de fondo sin enfocarse en señalar a una persona.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué función cumple la matriz de evaluación de impactos ambientales dentro del sistema de gestión?",
+    "opciones": [
+      {
+        "text": "Identificar y cuantificar los aspectos ambientales para priorizar en cuáles intervenir con mayor prioridad.",
+        "isCorrect": true,
+        "rationale": "Al asignar valores numéricos a los aspectos e impactos, la organización puede determinar de manera técnica dónde canalizar sus recursos de mitigación."
+      },
+      {
+        "text": "Reemplazar el reporte anual obligatorio presentado ante el Sistema Nacional de Información Ambiental.",
+        "isCorrect": false,
+        "rationale": "Los informes normativos ante el estado son requerimientos legales que no quedan anulados por usar una matriz interna."
+      },
+      {
+        "text": "Calcular las remuneraciones y bonos del equipo directivo.",
+        "isCorrect": false,
+        "rationale": "La matriz evalúa riesgos y componentes del entorno, sin relación con el cálculo de nómina."
+      },
+      {
+        "text": "Garantizar la aprobación automática de los permisos de construcción de una mina.",
+        "isCorrect": false,
+        "rationale": "Los permisos los otorgan las autoridades competentes tras revisar los estudios ambientales formales, no una matriz organizacional aislada."
+      },
+      {
+        "text": "Registrar el horario de ingreso y salida del personal de fiscalización.",
+        "isCorrect": false,
+        "rationale": "El control de asistencia se lleva a cabo mediante sistemas de marcación y no mediante matrices de impacto ambiental."
+      }
+    ],
+    "hint": "Se trata del documento numérico donde se listan factores como agua, aire y suelo para calificar el nivel de daño potencial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito fundamental de la norma ISO 45001:2018?",
+    "opciones": [
+      {
+        "text": "Prevenir lesiones y deterioro de la salud relacionados con el trabajo, proporcionando lugares laborales seguros.",
+        "isCorrect": true,
+        "rationale": "El foco central de ISO 45001 es la salud física y mental de los trabajadores, enfocándose en la prevención de accidentes y enfermedades ocupacionales."
+      },
+      {
+        "text": "Aumentar únicamente la estética del producto comercializado para captar clientes.",
+        "isCorrect": false,
+        "rationale": "El diseño y estética del producto se enmarcan en la gestión comercial o de calidad, no en la seguridad ocupacional."
+      },
+      {
+        "text": "Supervisar exclusivamente la eficiencia en el consumo de energía en oficinas administrativas.",
+        "isCorrect": false,
+        "rationale": "El control del consumo energético se relaciona con sistemas de gestión ambiental (ISO 14001) o de energía (ISO 50001)."
+      },
+      {
+        "text": "Anular la legislación laboral del país para aplicar reglamentos internacionales privados.",
+        "isCorrect": false,
+        "rationale": "Las normas ISO se alinean y complementan las leyes locales, pero nunca las anulan ni reemplazan."
+      },
+      {
+        "text": "Garantizar la rentabilidad financiera inmediata de las inversiones bursátiles de la empresa.",
+        "isCorrect": false,
+        "rationale": "Aunque reduce costos indirectos por accidentes, su propósito directo no es la gestión de inversiones financieras."
+      }
+    ],
+    "hint": "Enfócate en la norma dedicada a proteger la integridad física y el bienestar de las personas en sus puestos de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere el concepto de 'Estructura de Alto Nivel' en las normas ISO modernas como la ISO 45001, 9001 y 14001?",
+    "opciones": [
+      {
+        "text": "A un formato estándar con cláusulas e hilos comunes que facilita la integración entre diferentes sistemas de gestión.",
+        "isCorrect": true,
+        "rationale": "La Estructura de Alto Nivel estandarizó los capítulos (del 1 al 10) para que implementar la trinorma sea coherente y sencillo."
+      },
+      {
+        "text": "Al organigrama jerárquico donde solo participan los gerentes generales.",
+        "isCorrect": false,
+        "rationale": "Hace referencia a la redacción y ordenamiento de las cláusulas normativas, no al organigrama gerencial."
+      },
+      {
+        "text": "A una plataforma de software exclusiva utilizada para fiscalización en minería.",
+        "isCorrect": false,
+        "rationale": "No es un programa informático, sino una guía de diseño editorial para redactar normas internacionales."
+      },
+      {
+        "text": "A la categoría máxima de sanciones económicas aplicadas por el Ministerio de Trabajo.",
+        "isCorrect": false,
+        "rationale": "La estructura normativa no guarda relación con la escala de multas administrativas del gobierno."
+      },
+      {
+        "text": "A una certificación que solo se otorga a grandes empresas multinacionales.",
+        "isCorrect": false,
+        "rationale": "Cualquier tipo de empresa, sin importar su tamaño, utiliza la misma estructura normada."
+      }
+    ],
+    "hint": "Recuerda el cambio normativo que unificó el capítulo 4 (Contexto), capítulo 5 (Liderazgo), etc., en todas las normas ISO.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con la jerarquía de controles de riesgos en seguridad ocupacional, ¿cuáles de las siguientes opciones corresponden a niveles de control válidos?",
+    "opciones": [
+      {
+        "text": "Eliminación del peligro.",
+        "isCorrect": true,
+        "rationale": "Remover el peligro por completo es el nivel de control más efectivo en la cúspide de la jerarquía."
+      },
+      {
+        "text": "Sustitución del proceso o material riesgoso.",
+        "isCorrect": true,
+        "rationale": "Cambiar un insumo peligroso por uno menos dañino reduce el riesgo de manera estructural."
+      },
+      {
+        "text": "Equipos de Protección Personal (EPP).",
+        "isCorrect": true,
+        "rationale": "El EPP se sitúa en la base de la jerarquía como última barrera de protección entre el trabajador y el riesgo residual."
+      },
+      {
+        "text": "Incremento de la jornada laboral para terminar antes el trabajo riesgoso.",
+        "isCorrect": false,
+        "rationale": "Aumentar la carga horaria incrementa la fatiga y la exposición al riesgo en lugar de controlarlo."
+      },
+      {
+        "text": "Cancelación de las auditorías de seguimiento presupuestadas.",
+        "isCorrect": false,
+        "rationale": "Eliminar la supervisión debilita el sistema de gestión e incrementa la probabilidad de accidentes."
+      }
+    ],
+    "hint": "Identifica tanto las barreras más efectivas (pirámide alta) como la última línea de defensa física entregada al trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la norma ISO 45001, ¿cuál es el rol indispensable de la Alta Dirección dentro del sistema de gestión?",
+    "opciones": [
+      {
+        "text": "Demostrar liderazgo, compromiso activo y garantizar la provisión de recursos necesarios.",
+        "isCorrect": true,
+        "rationale": "La gerencia debe encabezar el sistema asignando presupuesto, tiempo y liderando con el ejemplo para que el sistema funcione."
+      },
+      {
+        "text": "Delegar la responsabilidad absoluta al pasante de seguridad y desentenderse de los resultados.",
+        "isCorrect": false,
+        "rationale": "La Alta Dirección puede delegar funciones operativas, pero conserva la responsabilidad final de la rendición de cuentas."
+      },
+      {
+        "text": "Redactar personalmente todos los permisos escritos de trabajo de campo.",
+        "isCorrect": false,
+        "rationale": "Los permisos operativos los emite y supervisa el personal técnico calificado en el área de trabajo."
+      },
+      {
+        "text": "Prohibir la participación de los trabajadores en el Comité de Seguridad.",
+        "isCorrect": false,
+        "rationale": "La norma exige obligatoriamente promover la consulta y participación activa de los trabajadores."
+      },
+      {
+        "text": "Asistir a las inspecciones pero negarse a firmar la política de seguridad.",
+        "isCorrect": false,
+        "rationale": "Firmar y publicar la política de seguridad es una de las muestras primordiales de compromiso que exige la norma a la gerencia."
+      }
+    ],
+    "hint": "Relaciona esta respuesta con la figura del 'cerebro' que dirige el cuerpo y suministra los recursos económicos e institucionales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste una auditoría de 'primera parte'?",
+    "opciones": [
+      {
+        "text": "Es una auditoría interna realizada por la propia organización para evaluar su propio desempeño.",
+        "isCorrect": true,
+        "rationale": "Las auditorías de primera parte son autoevaluaciones internas que permiten detectar oportunidades de mejora antes de recibir visitas externas."
+      },
+      {
+        "text": "Es la evaluación que realizan los clientes a las instalaciones de sus proveedores.",
+        "isCorrect": false,
+        "rationale": "Las auditorías realizadas por clientes a proveedores se clasifican como auditorías de segunda parte."
+      },
+      {
+        "text": "Es la auditoría efectuada por un organismo acreditado independiente para otorgar la certificación.",
+        "isCorrect": false,
+        "rationale": "Las revisiones conducidas por entidades certificadoras externas son auditorías de tercera parte."
+      },
+      {
+        "text": "Es una inspección punitiva ejecutada por inspectores de fiscalización del Estado.",
+        "isCorrect": false,
+        "rationale": "Las fiscalizaciones gubernamentales corresponden a actuaciones administrativas de control regulatorio y no a auditorías internas de primera parte."
+      },
+      {
+        "text": "Es un examen teórico de selección de personal aplicado por Recursos Humanos.",
+        "isCorrect": false,
+        "rationale": "Las pruebas de selección evalúan conocimientos individuales de postulantes, no la madurez del sistema de gestión."
+      }
+    ],
+    "hint": "Asocia los números de partes: primera parte (la misma empresa), segunda parte (clientes) y tercera parte (certificadoras independientes).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes componentes son fundamentales al elaborar una matriz IPERC?",
+    "opciones": [
+      {
+        "text": "Identificación de los peligros en los puestos de trabajo.",
+        "isCorrect": true,
+        "rationale": "Listar todos los peligros presentes en las actividades operativas e instalaciones es el primer paso obligatorio."
+      },
+      {
+        "text": "Evaluación del riesgo considerando la probabilidad y la severidad del daño.",
+        "isCorrect": true,
+        "rationale": "Valorar cuantitativa o cualitativamente la combinación de probabilidad y consecuencia permite priorizar el riesgo."
+      },
+      {
+        "text": "Determinación de medidas de control acordes a la jerarquía de controles.",
+        "isCorrect": true,
+        "rationale": "Establecer controles específicos es el objetivo final de la matriz para reducir el riesgo a niveles aceptables."
+      },
+      {
+        "text": "Cálculo del reparto de utilidades netas del periodo fiscal.",
+        "isCorrect": false,
+        "rationale": "Los datos sobre rentabilidad tributaria y reparto de utilidades pertenecen a la contabilidad financiera."
+      },
+      {
+        "text": "Registro de la cuota de mercado alcanzada por los competidores.",
+        "isCorrect": false,
+        "rationale": "La matriz de riesgos se centra en la seguridad operacional, no en estudios de mercado corporativos."
+      }
+    ],
+    "hint": "Selecciona los tres pasos lógicos contenidos en las siglas de la herramienta: Identificar, Evaluar y Controlar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué diferencia existe entre una norma certificable como la ISO 45001 y una norma de directrices como la ISO 45002?",
+    "opciones": [
+      {
+        "text": "La ISO 45001 establece los requisitos evaluables para certificar, mientras que la ISO 45002 brinda orientación técnica sobre cómo aplicarlos.",
+        "isCorrect": true,
+        "rationale": "La 45001 indica 'qué se debe cumplir' para obtener el certificado, mientras que la 45002 es un documento guía de ayuda prácitca."
+      },
+      {
+        "text": "La ISO 45001 se aplica solo en minería y la ISO 45002 en oficinas.",
+        "isCorrect": false,
+        "rationale": "Ambas normas son aplicables a cualquier tipo de sector o tamaño de organización."
+      },
+      {
+        "text": "La ISO 45002 invalida y deroga de forma definitiva a la ISO 45001.",
+        "isCorrect": false,
+        "rationale": "La ISO 45002 no reemplaza a la 45001, sino que actúa como un manual de apoyo complementario."
+      },
+      {
+        "text": "La ISO 45001 es un código penal estatal y la ISO 45002 es un reglamento interno.",
+        "isCorrect": false,
+        "rationale": "Ninguna norma ISO es un código penal; ambas son estándares internacionales de gestión."
+      },
+      {
+        "text": "No existe diferencia alguna, ambas son idénticas en contenido.",
+        "isCorrect": false,
+        "rationale": "Existen diferencias normativas claras entre un estándar de requisitos auditales y una guía de recomendación."
+      }
+    ],
+    "hint": "Diferencia entre el documento que contiene los requisitos con los que te auditan y el documento que te brinda consejos para implementar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de las auditorías de sistemas de gestión, ¿por qué es indispensable el principio de 'independencia' del auditor?",
+    "opciones": [
+      {
+        "text": "Para asegurar la objetividad e imparcialidad, garantizando que el auditor no revise su propio trabajo.",
+        "isCorrect": true,
+        "rationale": "El principio evita conflictos de interés asegurando que quien audita no sea la misma persona que diseñó o ejecutó el proceso."
+      },
+      {
+        "text": "Para permitir que el auditor modifique las leyes del país según su criterio.",
+        "isCorrect": false,
+        "rationale": "Un auditor internacional evalúa la conformidad de un sistema, pero no posee atribuciones legislativas."
+      },
+      {
+        "text": "Para que el auditor emita informes sin requerir evidencias documentales.",
+        "isCorrect": false,
+        "rationale": "Todo hallazgo de auditoría debe fundamentarse estrictamente en evidencias objetivas."
+      },
+      {
+        "text": "Para impedir que los trabajadores expresen sus inquietudes durante las entrevistas.",
+        "isCorrect": false,
+        "rationale": "El auditor independiente debe entrevistarse libremente con los colaboradores para constatar la realidad operativa."
+      },
+      {
+        "text": "Para eximir a la empresa del pago por los servicios de auditoría.",
+        "isCorrect": false,
+        "rationale": "La independencia se refiere a la imparcialidad conceptual y operativa, no a la gratuidad del servicio."
+      }
+    ],
+    "hint": "Recuerda la analogía planteada en clase: una persona no puede ser 'juez y parte' al calificarse a sí misma.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se enfoca de manera principal la norma ISO 9001:2015?",
+    "opciones": [
+      {
+        "text": "En la gestión de la calidad para cumplir los requisitos del cliente y aumentar su satisfacción mediante procesos eficientes.",
+        "isCorrect": true,
+        "rationale": "La norma ISO 9001 orienta la organización hacia la consistencia de sus productos/servicios y la satisfacción del cliente."
+      },
+      {
+        "text": "En el manejo de contingencias ante derrames de hidrocarburos en el mar.",
+        "isCorrect": false,
+        "rationale": "Los aspectos medioambientales y derrames corresponden a la gestión de ISO 14001."
+      },
+      {
+        "text": "En la supervisión de las condiciones ergonómicas en actividades de construcción.",
+        "isCorrect": false,
+        "rationale": "La ergonomía y la salud de los trabajadores son materia de la norma ISO 45001."
+      },
+      {
+        "text": "En la prevención exclusiva de delitos de soborno y corrupción corporativa.",
+        "isCorrect": false,
+        "rationale": "La gestión antisoborno se regula específicamente mediante la norma ISO 37001."
+      },
+      {
+        "text": "En la certificación de la seguridad física de los servidores de correo electrónico.",
+        "isCorrect": false,
+        "rationale": "La seguridad de la información informática se gestiona a través de la norma ISO 27001."
+      }
+    ],
+    "hint": "Piensa en la norma dedicada al estándar de los productos, servicios y expectativas del cliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco de la cláusula 4.1 de ISO 9001, ¿cuáles de las siguientes opciones representan componentes del análisis de contexto mediante la herramienta FODA?",
+    "opciones": [
+      {
+        "text": "Fortalezas internas de la organización.",
+        "isCorrect": true,
+        "rationale": "Las fortalezas representan atributos internos positivos que le dan ventaja operativa a la empresa."
+      },
+      {
+        "text": "Debilidades internas que limitan el desempeño.",
+        "isCorrect": true,
+        "rationale": "Las debilidades reflejan aspectos internos deficientes que requieren ser corregidos."
+      },
+      {
+        "text": "Oportunidades externas del entorno que se pueden aprovechar.",
+        "isCorrect": true,
+        "rationale": "Las oportunidades son factores del entorno exterior que pueden beneficiar a la organización."
+      },
+      {
+        "text": "Amenazas externas que podrían afectar negativamente.",
+        "isCorrect": true,
+        "rationale": "Las amenazas representan riesgos del entorno exterior ante los cuales la empresa debe prepararse."
+      },
+      {
+        "text": "Factores de preferencia religiosa individual del auditor.",
+        "isCorrect": false,
+        "rationale": "Las creencias individuales no forman parte de los factores del contexto organizacional para la calidad."
+      }
+    ],
+    "hint": "Selecciona las cuatro dimensiones que componen directamente el acrónimo F-O-D-A.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la ISO 9001, ¿qué es el 'Alcance' del Sistema de Gestión de la Calidad?",
+    "opciones": [
+      {
+        "text": "La delimitación explícita de los productos, servicios, procesos y ubicaciones físicas que cubre el sistema.",
+        "isCorrect": true,
+        "rationale": "El alcance declara con precisión los límites operativos, geográficos y de productos sobre los cuales aplica la norma."
+      },
+      {
+        "text": "El catálogo completo de precios de venta de los productos ofertados.",
+        "isCorrect": false,
+        "rationale": "Los precios forman parte de las políticas comerciales de la empresa, no del alcance normativo."
+      },
+      {
+        "text": "La lista nominativa de todos los trabajadores contratados a tiempo parcial.",
+        "isCorrect": false,
+        "rationale": "La nómina de personal la administra el departamento de recursos humanos dentro del sistema de personal."
+      },
+      {
+        "text": "El monto total de dinero ahorrado tras implementar una mejora continua.",
+        "isCorrect": false,
+        "rationale": "El ahorro financiero es un resultado medible, pero no representa el documento de delimitación del alcance."
+      },
+      {
+        "text": "Un compromiso de exención de auditorías otorgado por la casa certificadora.",
+        "isCorrect": false,
+        "rationale": "El alcance no otorga excepciones de auditoría, sino que define sobre qué áreas se auditará."
+      }
+    ],
+    "hint": "Identifica la declaración documentada que responde a las preguntas: ¿qué productos/servicios se incluyen y en qué sedes físicas aplica?",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al redactar objetivos de calidad bajo la metodología SMART, ¿a qué cualidad hace referencia la letra 'M'?",
+    "opciones": [
+      {
+        "text": "Medible.",
+        "isCorrect": true,
+        "rationale": "Un objetivo debe poder cuantificarse numéricamente para saber con certeza si se logró o no la meta establecida."
+      },
+      {
+        "text": "Mercantil.",
+        "isCorrect": false,
+        "rationale": "Mercantil se refiere a temas de comercio formal y no al atributo numérico de un objetivo."
+      },
+      {
+        "text": "Mandatorio.",
+        "isCorrect": false,
+        "rationale": "Aunque debe cumplirse, la 'M' en las siglas en inglés/español de SMART se reserva para la medibilidad."
+      },
+      {
+        "text": "Máximo.",
+        "isCorrect": false,
+        "rationale": "Un objetivo se enfoca en un valor de meta definido, no necesariamente en el concepto de máximo absoluto."
+      },
+      {
+        "text": "Múltiple.",
+        "isCorrect": false,
+        "rationale": "Los objetivos deben ser precisos y enfocados, en lugar de dispersos o múltiples en un solo enunciado."
+      }
+    ],
+    "hint": "Piensa en el atributo que permite dar un valor numérico o indicador para evaluar el cumplimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Según el requisito de competencia del personal en ISO 9001, ¿sobre cuáles elementos debe fundamentarse la idoneidad de un trabajador?",
+    "opciones": [
+      {
+        "text": "Educación pertinente recibida.",
+        "isCorrect": true,
+        "rationale": "Los estudios académicos y profesionales acreditan la base cognitiva exigida por el puesto."
+      },
+      {
+        "text": "Formación o capacitación específica.",
+        "isCorrect": true,
+        "rationale": "Los cursos, talleres e inducciones refuerzan las habilidades requeridas para la tarea."
+      },
+      {
+        "text": "Experiencia laboral comprobable.",
+        "isCorrect": true,
+        "rationale": "La práctica previa en funciones similares demuestra la destreza del trabajador en el entorno real."
+      },
+      {
+        "text": "Grado de amistad o cercanía con la gerencia.",
+        "isCorrect": false,
+        "rationale": "Las relaciones personales son criterios subjetivos que no garantizan competencia técnica."
+      },
+      {
+        "text": "Preferencias políticas manifestadas por el colaborador.",
+        "isCorrect": false,
+        "rationale": "La ideología personal no tiene relación con el desempeño calificado de las funciones de un puesto."
+      }
+    ],
+    "hint": "Selecciona los tres pilares objetivos habitualmente evaluados en la hoja de vida (CV) frente al perfil de puesto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de la comunicación según ISO 9001, ¿cuáles son las 5 preguntas básicas que debe definir la matriz de comunicaciones?",
+    "opciones": [
+      {
+        "text": "Qué comunicar, cuándo comunicar, a quién comunicar, cómo comunicar y quién comunica.",
+        "isCorrect": true,
+        "rationale": "Estas cinco preguntas estructuran adecuadamente la distribución de la información para evitar vacíos o duplicidades."
+      },
+      {
+        "text": "Dónde comprar, cuánto pagar, a quién vender, por qué gastar y cuándo cerrar.",
+        "isCorrect": false,
+        "rationale": "Estas interrogantes se alinean a la gestión comercial y presupuestaria, no a la matriz de comunicación."
+      },
+      {
+        "text": "Qué sanción aplicar, a quién despedir, cuándo multar, cómo juzgar y quién ejecuta.",
+        "isCorrect": false,
+        "rationale": "El foco de la comunicación en calidad es transparente y formativo, no punitivo o disciplinario."
+      },
+      {
+        "text": "Por qué cotizar, cuándo auditar, a quién demandar, dónde almacenar y quién aprueba.",
+        "isCorrect": false,
+        "rationale": "Es un conjunto disperso de temas legales y logísticos que no responde al esquema ordenado de comunicaciones."
+      },
+      {
+        "text": "Cuántos productos fabricar, dónde exportar, qué precio fijar, cómo cobrar y quién paga.",
+        "isCorrect": false,
+        "rationale": "Corresponden a decisiones operativas de producción y finanzas corporativas."
+      }
+    ],
+    "hint": "Busca la alternativa que define el contenido, el tiempo, el receptor, el canal y el emisor de la información.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el control de la información documentada, ¿qué condición representa un documento impreso de trabajo que no posee sellos ni marcas de control de cambios?",
+    "opciones": [
+      {
+        "text": "Se considera una 'copia no controlada' cuya vigencia o actualización no está garantizada.",
+        "isCorrect": true,
+        "rationale": "Al imprimirse sin mecanismos de control, el documento puede quedar obsoleto si el archivo maestro digital se actualiza."
+      },
+      {
+        "text": "Se convierte automáticamente en una ley nacional de estricto cumplimiento.",
+        "isCorrect": false,
+        "rationale": "Las impresiones internas no tienen el rango de leyes estatales ni aplicabilidad pública."
+      },
+      {
+        "text": "Garantiza por sí solo que la empresa apruebe todas sus auditorías.",
+        "isCorrect": false,
+        "rationale": "Usar papeles sin sello de control suele ser motivo de hallazgos negativos en las auditorías."
+      },
+      {
+        "text": "Representa una prueba de auditoría de tercera parte irrebatible.",
+        "isCorrect": false,
+        "rationale": "Los auditores desconfían de hojas impresas sin verificación de versión vigente por riesgo de obsolescencia."
+      },
+      {
+        "text": "Anula inmediatamente la validez de la política de calidad de la organización.",
+        "isCorrect": false,
+        "rationale": "Un documento desactualizado genera una desviación puntual, pero no destruye la política general de la empresa."
+      }
+    ],
+    "hint": "Recuerda la leyenda que se coloca al pie de página cuando se imprime un procedimiento en papel.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante una auditoría, si se detecta un incumplimiento puntual, aislado y que no pone en riesgo sistémico al proceso, ¿cómo se clasifica el hallazgo?",
+    "opciones": [
+      {
+        "text": "No conformidad menor.",
+        "isCorrect": true,
+        "rationale": "Las desviaciones aisladas que no comprometen la totalidad del sistema ni la entrega del producto al cliente son no conformidades menores."
+      },
+      {
+        "text": "No conformidad mayor.",
+        "isCorrect": false,
+        "rationale": "La no conformidad mayor implica la ausencia total o el colapso sistémico de un requisito normativo."
+      },
+      {
+        "text": "Observación financiera crítica.",
+        "isCorrect": false,
+        "rationale": "Las observaciones financieras corresponden a auditorías contables o de tesorería, no a desviaciones de calidad."
+      },
+      {
+        "text": "Sanción estatal con arresto administrativo.",
+        "isCorrect": false,
+        "rationale": "Las auditorías de gestión no son procesos penales ni imponen privación de libertad."
+      },
+      {
+        "text": "Conformidad sobresaliente.",
+        "isCorrect": false,
+        "rationale": "Cualquier incumplimiento normativo es una desviación negativa, nunca una conformidad."
+      }
+    ],
+    "hint": "Diferencia entre una falla puntual y pequeña de un requisito frente a la ausencia total del control en toda la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al planificar cambios en el Sistema de Gestión de la Calidad (cláusula 6.3), ¿qué elemento debe considerar la empresa antes de ejecutar la modificación?",
+    "opciones": [
+      {
+        "text": "El propósito del cambio, sus consecuencias potenciales, la integridad del sistema y la disponibilidad de recursos.",
+        "isCorrect": true,
+        "rationale": "Planificar cambios requiere evaluar el impacto previsto, evitar que el sistema se vuelva inestable y asegurar que habrá medios para implementar la modificación."
+      },
+      {
+        "text": "La opinión no fundamentada del cliente de menor facturación de la empresa.",
+        "isCorrect": false,
+        "rationale": "Los cambios organizacionales se basan en análisis técnicos e integrales, no en opiniones aisladas sin sustento."
+      },
+      {
+        "text": "La destrucción inmediata de todos los archivos y registros históricos sin analizarlos.",
+        "isCorrect": false,
+        "rationale": "Eliminar la información documentada histórica destruye la trazabilidad y viola los requisitos de retención."
+      },
+      {
+        "text": "La suspensión temporal del pago de salarios al personal durante la transición.",
+        "isCorrect": false,
+        "rationale": "Los cambios en el sistema de gestión de calidad no justifican el incumplimiento de obligaciones laborales."
+      },
+      {
+        "text": "El cierre preventivo de las instalaciones durante un año lectivo completo.",
+        "isCorrect": false,
+        "rationale": "Los cambios deben gestionarse garantizando la continuidad operativa y la entrega consistente de servicios."
+      }
+    ],
+    "hint": "Busca la alternativa que evalúa el 'para qué se cambia', las 'consecuencias', la 'estabilidad' y los 'recursos necesarios'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa industrial peruana decide no certificar la norma ISO 14001:2015 para ahorrar costos de auditoría externa, pero continúa con sus operaciones regulares. ¿Cuál es la relación legal y operativa correcta respecto a la adopción de esta norma en el contexto peruano?",
+    "opciones": [
+      {
+        "text": "La certificación ISO 14001 es obligatoria para todas las empresas privadas, por lo que la empresa recibirá sanciones administrativas inmediatas de OEFA.",
+        "isCorrect": false,
+        "rationale": "Las normas ISO son estándares internacionales voluntarios; OEFA fiscaliza el cumplimiento del marco legal nacional, no la tenencia de certificaciones ISO."
+      },
+      {
+        "text": "La norma ISO 14001 es de adopción voluntaria, pero el cumplimiento de las normativas legales ambientales sectoriales e instrumentos de gestión es obligatorio.",
+        "isCorrect": true,
+        "rationale": "Diferenciar entre un sistema de gestión voluntario de valor agregado (como ISO 14001) y la obligación legal imperativa de cumplir la legislación ambiental sectorial es la base del marco regulatorio."
+      },
+      {
+        "text": "Al no certificarse en ISO 14001, la empresa queda eximida del cumplimiento de la Ley General del Ambiente (Ley N° 28611).",
+        "isCorrect": false,
+        "rationale": "La Ley General del Ambiente aplica a todas las actividades en el territorio nacional sin importar sus certificaciones privadas."
+      },
+      {
+        "text": "Implementar ISO 14001 reemplaza legalmente la presentación de los informes de monitoreo ambiental exigidos por los ministerios sectoriales.",
+        "isCorrect": false,
+        "rationale": "Tener una norma ISO no sustituye las obligaciones de reporte legal y regulatorio ante los entes fiscalizadores del Estado."
+      },
+      {
+        "text": "La norma ISO 14001 es obligatoria únicamente si la empresa sobrepasa las 500 UIT en facturación anual.",
+        "isCorrect": false,
+        "rationale": "La facturación o el tamaño de la empresa no modifican la naturaleza voluntaria de la norma ISO 14001."
+      }
+    ],
+    "hint": "Diferencie entre compromisos de estándares internacionales de adhesión opcional y las regulaciones ambientales de ley imperativa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante un incidente operativo en una planta procesadora se produjo el derrame de un producto químico peligroso en el suelo. Al aplicar la técnica de los '5 Porqués' para investigar el suceso, ¿cuál debe ser el enfoque técnico del equipo investigador?",
+    "opciones": [
+      {
+        "text": "Individualizar la responsabilidad en el operario de turno para aplicar sanciones disciplinarias de forma inmediata.",
+        "isCorrect": false,
+        "rationale": "Las metodologías de causa raíz buscan investigar fallas en los procesos e infraestructura en lugar de acusar a personas específicas."
+      },
+      {
+        "text": "Determinar si el producto químico tenía o no el rotulado de color exigido por la municipalidad distrital.",
+        "isCorrect": false,
+        "rationale": "Aunque el rotulado es parte del estándar, analizar un único detalle visible no profundiza en la cadena lógica causal del evento."
+      },
+      {
+        "text": "Rastrear las deficiencias subyacentes en el proceso, la capacitación y los controles que permitieron que ocurriera la falla.",
+        "isCorrect": true,
+        "rationale": "La técnica de los '5 Porqués' profundiza analíticamente a través de la secuencia de causas en el proceso organizativo hasta hallar la causa raíz sistémica."
+      },
+      {
+        "text": "Justificar el incidente como una contingencia inevitable derivada de condiciones climáticas externas imprevisibles.",
+        "isCorrect": false,
+        "rationale": "Buscar justificaciones externas impide implementar acciones correctivas eficaces que eviten la repetición del evento."
+      },
+      {
+        "text": "Demostrar cuantitativamente que el volumen derramado no supera los Límites Máximos Permisibles del sector.",
+        "isCorrect": false,
+        "rationale": "La medición del volumen sirve para evaluar el impacto, pero no explica las causas operativas que originaron el derrame."
+      }
+    ],
+    "hint": "Considere hacia dónde se orientan las metodologías analíticas de investigación de incidentes para evitar la recurrencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Una organización busca estructurar la fase de planificación de su Sistema de Gestión Ambiental según la ISO 14001. ¿Cuáles de los siguientes instrumentos y herramientas son fundamentales para evaluar y controlar las interacciones de la empresa con el entorno?",
+    "opciones": [
+      {
+        "text": "Matriz de aspectos e impactos ambientales para cuantificar y determinar la significancia de los riesgos.",
+        "isCorrect": true,
+        "rationale": "Permite identificar cómo las actividades interactúan con el ambiente y priorizar los impactos significativos que requieren controles prioritarios."
+      },
+      {
+        "text": "Matriz de requisitos legales ambientales para verificar el cumplimiento de normativas legales y decretos sectoriales.",
+        "isCorrect": true,
+        "rationale": "Asegura la identificación sistemática del marco legal aplicable y evalúa el grado de cumplimiento normativo de la organización."
+      },
+      {
+        "text": "Flujogramas en los procedimientos operacionales para resumir visualmente la secuencia de pasos y facilitar la capacitación del personal.",
+        "isCorrect": true,
+        "rationale": "Resumen de forma práctica los procedimientos extensos, facilitando que los colaboradores comprendan y ejecuten los controles operacionales."
+      },
+      {
+        "text": "Registro de accidentes laborales e indemnizaciones médicas según la Ley N° 29783.",
+        "isCorrect": false,
+        "rationale": "Corresponde al ámbito de seguridad y salud en el trabajo (SST) y no a la evaluación de aspectos e impactos en el medio ambiente."
+      },
+      {
+        "text": "Certificados de calibración comercial de las balanzas de empaque de productos terminados.",
+        "isCorrect": false,
+        "rationale": "Se relaciona con el control comercial o metrológico de calidad del producto, sin un enfoque en el desempeño ambiental."
+      }
+    ],
+    "hint": "Seleccione las herramientas específicas diseñadas para identificar interacciones ambientales, legislación aplicable y facilitar el entendimiento operativo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante un monitoreo en una operación minera se detecta que las emisiones de gases de combustión superan los valores establecidos por la normativa sectorial. Ante una fiscalización de OEFA, ¿qué consecuencia técnica y legal se deriva de este hallazgo?",
+    "opciones": [
+      {
+        "text": "El organismo fiscalizador invalida la supervisión si la empresa presenta su certificado ISO 14001 vigente.",
+        "isCorrect": false,
+        "rationale": "Contar con un certificado ISO no exonera a la empresa de las acciones de fiscalización ni de las sanciones por incumplir normas legales."
+      },
+      {
+        "text": "La empresa enfrenta procesos sancionadores por exceder los Límites Máximos Permisibles (LMP) y debe implementar medidas correctivas inmediatas.",
+        "isCorrect": true,
+        "rationale": "Exceder los LMP fijados por la legislación ambiental constituye un incumplimiento legal susceptible de multas y exige acciones de mitigación técnica."
+      },
+      {
+        "text": "Se extingue automáticamente la obligación legal de reportar los datos ambientales en el sistema oficial de información.",
+        "isCorrect": false,
+        "rationale": "La superación de los límites incrementa las obligaciones de reporte y seguimiento ante la autoridad ambiental."
+      },
+      {
+        "text": "La empresa queda obligada a suspender definitivamente sus operaciones mineras sin derecho a rectificación.",
+        "isCorrect": false,
+        "rationale": "Las autoridades establecen medidas administrativas y plazos de subsanación técnica antes de considerar el cierre definitivo."
+      },
+      {
+        "text": "El exceso en los parámetros ambientales se compensa automáticamente si se incrementan las horas de capacitación al personal.",
+        "isCorrect": false,
+        "rationale": "Capacitar al personal es una medida de soporte, pero no corrige directamente las desviaciones físicas de los parámetros de emisión."
+      }
+    ],
+    "hint": "Piense en las implicancias administrativas y operativas de sobrepasar los parámetros ambientales regulados por ley.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa del sector construcción genera mermas de solventes y aceites usados. Para cumplir adecuadamente con la reglamentación ambiental y la ISO 14001, ¿cuál es el procedimiento correcto para el manejo de estos residuos?",
+    "opciones": [
+      {
+        "text": "Mezclar los solventes con escombros inertes para entregarlos al servicio municipal de limpieza pública.",
+        "isCorrect": false,
+        "rationale": "Los residuos peligrosos no deben mezclarse con residuos no peligrosos ni disponerse a través del servicio municipal ordinario."
+      },
+      {
+        "text": "Segregar en recipientes normados, almacenar en condiciones seguras y gestionar la disposición con empresas operadoras de residuos autorizadas.",
+        "isCorrect": true,
+        "rationale": "Cumple los lineamientos de segregación por colores, almacenamiento impermeabilizado y trazabilidad legal de residuos peligrosos mediante empresas autorizadas."
+      },
+      {
+        "text": "Incinerar los solventes en fosas abiertas dentro de la obra para reducir el volumen de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "La quema no autorizada de residuos a cielo abierto genera contaminación atmosférica severa y está prohibida por ley."
+      },
+      {
+        "text": "Almacenar los aceites usados directamente sobre suelo descubierto hasta la finalización del proyecto.",
+        "isCorrect": false,
+        "rationale": "El almacenamiento sobre tierra sin impermeabilizar ni diques de contención genera riesgo directo de contaminación del suelo y aguas subterráneas."
+      },
+      {
+        "text": "Verter los residuos líquidos en las redes de alcantarillado público durante horas nocturnas.",
+        "isCorrect": false,
+        "rationale": "El vertido no autorizado de sustancias químicas al alcantarillado altera los sistemas de tratamiento y viola el marco legal."
+      }
+    ],
+    "hint": "Considere la clasificación de peligrosidad de las mermas químicas y la necesidad de empresas especializadas autorizadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la evaluación del desempeño ambiental de una empresa procesadora, ¿cuáles de los siguientes parámetros constituyen Indicadores Clave de Desempeño (KPIs) específicos para medir la efectividad del Sistema de Gestión Ambiental?",
+    "opciones": [
+      {
+        "text": "Concentración de dióxido de azufre ($SO_2$) en emisiones atmosféricas medidas en los puntos de control.",
+        "isCorrect": true,
+        "rationale": "Mide de manera directa la calidad de los gases de combustión emitidos a la atmósfera por las fuentes fijas de la planta."
+      },
+      {
+        "text": "Valores de Demanda Bioquímica de Oxígeno (DBO) en los efluentes vertidos a los cuerpos hídricos.",
+        "isCorrect": true,
+        "rationale": "Permite evaluar la cantidad de materia orgánica en las aguas residuales y el impacto del efluente tratado sobre los recursos hídricos."
+      },
+      {
+        "text": "Volumen de generación mensual de residuos peligrosos expresado en toneladas por unidad producida.",
+        "isCorrect": true,
+        "rationale": "Cuantifica la eficiencia en el uso de insumos químicos y la capacidad de la organización para reducir residuos peligrosos."
+      },
+      {
+        "text": "Tasa de rotación semestral del personal administrativo en la sede central.",
+        "isCorrect": false,
+        "rationale": "Corresponde a la gestión de talento humano y no mide aspectos de desempeño e impacto ambiental de las operaciones."
+      },
+      {
+        "text": "Número de llamadas atendidas por el área de atención de reclamos comerciales.",
+        "isCorrect": false,
+        "rationale": "Es un indicador operativo de la gestión de servicio al cliente o calidad comercial, desvinculado de los parámetros ambientales."
+      }
+    ],
+    "hint": "Identifique las métricas que cuantifican directa o indirectamente emisiones, vertimientos o residuos en el medio físico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa obtiene la certificación ISO 14001:2015 por parte de un organismo acreditado. ¿Cómo se estructura la vigencia y el ciclo de auditorías para mantener dicha certificación?",
+    "opciones": [
+      {
+        "text": "El certificado se otorga por única vez de manera indefinida y no requiere auditorías posteriores.",
+        "isCorrect": false,
+        "rationale": "Los certificados internacionales poseen un plazo determinado de validez y requieren revisiones periódicas."
+      },
+      {
+        "text": "El certificado tiene una validez de 3 años, sujeto a auditorías anuales de seguimiento y una auditoría de recertificación al final del periodo.",
+        "isCorrect": true,
+        "rationale": "Establece la estructura estándar de certificación que garantiza el cumplimiento continuo de la norma a lo largo del ciclo trienal."
+      },
+      {
+        "text": "La empresa debe rendir auditorías de recertificación completa cada 6 meses durante 5 años.",
+        "isCorrect": false,
+        "rationale": "Las auditorías de recertificación no se ejecutan semestralmente, sino al término del ciclo de vigencia del certificado."
+      },
+      {
+        "text": "Se requiere renovar la certificación trimestralmente ante el Ministerio del Ambiente.",
+        "isCorrect": false,
+        "rationale": "El Ministerio del Ambiente es un ente rector estatal y no gestiona la recertificación de auditorías ISO privadas."
+      },
+      {
+        "text": "La certificación se cancela automáticamente al término de 12 meses, debiendo repetir el diagnóstico de línea base completo.",
+        "isCorrect": false,
+        "rationale": "A los 12 meses corresponde una auditoría de seguimiento para verificar el mantenimiento del sistema, no la cancelación ni la repetición de la línea base."
+      }
+    ],
+    "hint": "Recuerde la duración estándar del certificado emitido por casas certificadoras y la periodicidad de las auditorías de seguimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la ISO 14001, al evaluar los aspectos ambientales la norma exige considerar una 'perspectiva de ciclo de vida'. ¿Qué implica operacionalmente esta exigencia?",
+    "opciones": [
+      {
+        "text": "Supervisar únicamente el impacto ambiental generado durante la entrega final del producto al cliente.",
+        "isCorrect": false,
+        "rationale": "Restringirse a la etapa final ignora los impactos asociados a las materias primas, producción y diseño."
+      },
+      {
+        "text": "Evaluar los aspectos ambientales desde la adquisición de materias primas, diseño, producción, transporte, uso y disposición final.",
+        "isCorrect": true,
+        "rationale": "Exige que la organización identifique los impactos en todas las etapas consecutivas e interrelacionadas del producto o servicio."
+      },
+      {
+        "text": "Garantizar que la maquinaria pesada opere durante al menos 20 años antes de proceder a su reemplazo.",
+        "isCorrect": false,
+        "rationale": "Hace referencia al ciclo de vida útil del activo físico, no a la perspectiva ambiental del producto o servicio solicitada por la norma."
+      },
+      {
+        "text": "Asegurar que la empresa mantenga sus operaciones comerciales de forma ininterrumpida por medio siglo.",
+        "isCorrect": false,
+        "rationale": "Confunde la vida institucional de la organización con el análisis del ciclo de vida de sus productos."
+      },
+      {
+        "text": "Traspasar toda la responsabilidad de gestión de residuos químicos a las comunidades aledañas a la planta.",
+        "isCorrect": false,
+        "rationale": "La perspectiva de ciclo de vida busca controlar o influir en los impactos, no eludir la responsabilidad ambiental organizativa."
+      }
+    ],
+    "hint": "Piense en la trayectoria completa que recorre un producto o servicio desde el origen de sus insumos hasta su fin de vida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la norma ISO 45001:2018, la Alta Dirección de una organización debe demostrar su liderazgo y compromiso con el SGSST. ¿Qué acción concreta refleja de manera clara este principio?",
+    "opciones": [
+      {
+        "text": "Delegar por completo la responsabilidad legal y operativa del SGSST en el jefe de SOMA sin asignación presupuestal.",
+        "isCorrect": false,
+        "rationale": "La Alta Dirección no puede desentenderse ni delegar de manera absoluta su responsabilidad en la provisión de recursos y rendición de cuentas."
+      },
+      {
+        "text": "Asegurar la disponibilidad de recursos, integrando la gestión de SST en los procesos estratégicos de negocio.",
+        "isCorrect": true,
+        "rationale": "Demuestra la implicación de la Alta Dirección al asignar presupuesto y alinear la seguridad con los objetivos estratégicos de la empresa."
+      },
+      {
+        "text": "Requerir que los colaboradores adquieran con sus propios medios los Equipos de Protección Personal.",
+        "isCorrect": false,
+        "rationale": "Es obligación legal y normativa del empleador proporcionar gratuitamente los EPP adecuados para las tareas."
+      },
+      {
+        "text": "Suspender las capacitaciones de seguridad en periodos de alta demanda para priorizar la producción.",
+        "isCorrect": false,
+        "rationale": "Postergar la formación compromete la prevención de riesgos y contradice el compromiso de la dirección con el SGSST."
+      },
+      {
+        "text": "Aprobar la política de SST en forma reservada sin comunicar sus compromisos al personal operativo.",
+        "isCorrect": false,
+        "rationale": "La política de SST debe ser difundida y accesible para asegurar la concientización de toda la organización."
+      }
+    ],
+    "hint": "Considere la función activa del liderazgo en la asignación estratégica de medios y la integración en el negocio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al elaborar la matriz de Identificación de Peligros, Evaluación de Riesgos y Medidas de Control (IPERC) conforme a las metodologías normadas en Perú (como la R.M. 050-2013-TR), ¿cuáles de los siguientes criterios evalúan la probabilidad de ocurrencia?",
+    "opciones": [
+      {
+        "text": "Índice de personas expuestas a las tareas y ambientes de trabajo.",
+        "isCorrect": true,
+        "rationale": "A mayor cantidad de trabajadores expuestos al peligro, se incrementa la probabilidad estadística de que ocurra un evento."
+      },
+      {
+        "text": "Índice de procedimientos de trabajo existentes e idoneidad de los mismos.",
+        "isCorrect": true,
+        "rationale": "Evalúa si la tarea cuenta con controles documentados y estandarizados que reduzcan la posibilidad de error u omisión."
+      },
+      {
+        "text": "Índice de capacitación, entrenamiento y competencia del personal involucrado.",
+        "isCorrect": true,
+        "rationale": "Considera el grado de conocimiento que tienen los colaboradores sobre los riesgos asociados a sus actividades."
+      },
+      {
+        "text": "Índice de ingresos financieros acumulados por la venta de productos.",
+        "isCorrect": false,
+        "rationale": "Mide el desempeño comercial de la empresa y no guarda relación con la estimación de riesgos operacionales."
+      },
+      {
+        "text": "Índice de satisfacción asignado por auditores de calidad sobre la presentación del producto.",
+        "isCorrect": false,
+        "rationale": "Evalúa atributos estéticos o comerciales de calidad, ajenos a la valoración de la frecuencia de accidentes o peligros de SST."
+      }
+    ],
+    "hint": "Seleccione los factores que modifican la frecuencia o la factibilidad de que se materialice una falla o accidente en la ejecución del trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una contratista realiza tres revisiones de su SGSST durante el año: una por su equipo interno de seguridad, otra ejecutada por la empresa titular del proyecto y una tercera por una casa certificadora. ¿Cómo se clasifican técnicamente estas auditorías?",
+    "opciones": [
+      {
+        "text": "La interna es de 3ª parte, la del titular es de 1ª parte y la de la casa certificadora es de 2ª parte.",
+        "isCorrect": false,
+        "rationale": "Intercambia erróneamente los roles de las auditorías internas, de clientes y de entidades certificadoras independientes."
+      },
+      {
+        "text": "La interna es de 1ª parte, la del cliente titular es de 2ª parte y la de la casa certificadora es de 3ª parte.",
+        "isCorrect": true,
+        "rationale": "Refleja adecuadamente la clasificación: 1ª parte (autoevaluación interna), 2ª parte (evaluación de cliente/homologación) y 3ª parte (certificación independiente)."
+      },
+      {
+        "text": "Todas son clasificadas como auditorías de 1ª parte al ejecutarse dentro de las mismas instalaciones.",
+        "isCorrect": false,
+        "rationale": "La clasificación depende de la entidad que audita y la relación con la organización, no de la ubicación física."
+      },
+      {
+        "text": "La de la casa certificadora es de 1ª parte y la del equipo interno es una inspección judicial.",
+        "isCorrect": false,
+        "rationale": "Las auditorías internas no son procesos judiciales y las de casas certificadoras corresponden a 3ª parte."
+      },
+      {
+        "text": "La revisión del cliente titular es de 3ª parte porque actúa como regulador estatal.",
+        "isCorrect": false,
+        "rationale": "Los clientes o empresas titulares que auditan a sus contratistas efectúan auditorías de 2ª parte, no de 3ª parte ni estatales."
+      }
+    ],
+    "hint": "Identifique la relación que existe entre el auditor y la organización (interna, cliente o ente independiente de certificación).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la implementación de la ISO 45001:2018, el equipo consultor utiliza de forma paralela la norma ISO 45002:2023. ¿Cuál es el propósito y la relación funcional entre ambos documentos?",
+    "opciones": [
+      {
+        "text": "La ISO 45002 invalida los requisitos de la ISO 45001:2018 estableciendo nuevas obligaciones obligatorias.",
+        "isCorrect": false,
+        "rationale": "La ISO 45002 no reemplaza ni invalida los requisitos de la norma principal, sino que actúa como texto complementario."
+      },
+      {
+        "text": "La ISO 45001 establece los requisitos auditables y certificables, mientras que la ISO 45002 proporciona directrices prácticas para su implementación.",
+        "isCorrect": true,
+        "rationale": "Describe la función de la ISO 45002 como una guía no certificable que ayuda a interpretar y aplicar los requisitos de la ISO 45001."
+      },
+      {
+        "text": "La ISO 45002 se encarga exclusivamente de certificar la calidad técnica de los equipos de protección individual.",
+        "isCorrect": false,
+        "rationale": "No es un estándar de producto o certificación de equipos, sino una norma de orientaciones para sistemas de gestión."
+      },
+      {
+        "text": "La ISO 45001 aplica a la gran minería y la ISO 45002 es para microempresas de servicios.",
+        "isCorrect": false,
+        "rationale": "Ambos documentos son generales y aplicables a cualquier tipo u organización sin distinción de tamaño o sector."
+      },
+      {
+        "text": "La ISO 45002 fija los montos de multas aplicables en caso de accidentes mortales.",
+        "isCorrect": false,
+        "rationale": "Las sanciones administrativas o multas económicas son definidas por el marco legal de cada país, no por guías ISO."
+      }
+    ],
+    "hint": "Diferencie entre una norma de requisitos normativos certificables y una norma de orientación y buenas prácticas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco de la preparación y respuesta ante emergencias de la ISO 45001, ¿cuáles de los siguientes elementos constituyen controles operativos necesarios para gestionar situaciones de crisis en planta?",
+    "opciones": [
+      {
+        "text": "Conformación, capacitación y equipamiento continuo de brigadas de emergencia.",
+        "isCorrect": true,
+        "rationale": "Asegura la presencia de personal capacitado para intervenir inmediatamente ante primeros auxilios, amagos de incendio o derrames."
+      },
+      {
+        "text": "Programación, ejecución y evaluación documentada de simulacros de evacuación.",
+        "isCorrect": true,
+        "rationale": "Permite probar la efectividad de las rutas, tiempos de respuesta y procedimientos previstos en el plan de emergencia."
+      },
+      {
+        "text": "Instalación de señalización luminosa de rutas de evacuación y ubicación de equipos de lucha contra incendios.",
+        "isCorrect": true,
+        "rationale": "Garantiza la visibilidad y rápida orientación del personal durante un evento que requiera evacuación acelerada."
+      },
+      {
+        "text": "Retención de salarios a los colaboradores que informen sobre condiciones subestándar.",
+        "isCorrect": false,
+        "rationale": "Sancionar el reporte de hallazgos genera desconfianza y oculta los riesgos, minando la prevención del sistema."
+      },
+      {
+        "text": "Retiro deliberado de extintores en las zonas de almacén para despejar los pasillos.",
+        "isCorrect": false,
+        "rationale": "Remover los equipos de respuesta incrementa la vulnerabilidad y contraviene las exigencias mínimas de seguridad."
+      }
+    ],
+    "hint": "Seleccione las medidas que fortalecen la capacidad de respuesta inmediata y la evacuación segura del personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un área operativa requiere contratar a un técnico electricista para intervenir tableros de alta tensión. El candidato cuenta con título técnico, pero no registra la formación en riesgo eléctrico exigida en el perfil del puesto (MOF). Según la ISO 45001, ¿cómo debe proceder la organización?",
+    "opciones": [
+      {
+        "text": "Autorizar el inicio de las tareas confiando en sus títulos académicos generales.",
+        "isCorrect": false,
+        "rationale": "Permitir trabajos de alto riesgo sin verificar la competencia requerida vulnera el control operativo y la seguridad."
+      },
+      {
+        "text": "Descartar definitivamente al postulante sin considerar opciones de entrenamiento previo.",
+        "isCorrect": false,
+        "rationale": "Si bien el perfil exige cumplimiento, la norma permite a la organización desarrollar planes para cerrar brechas de competencia."
+      },
+      {
+        "text": "Proporcionar la capacitación requerida en riesgo eléctrico y evaluar la eficacia de la formación antes de autorizar el trabajo.",
+        "isCorrect": true,
+        "rationale": "La norma exige tomar acciones para adquirir la competencia necesaria y verificar que el personal comprendió las medidas preventivas antes de operar."
+      },
+      {
+        "text": "Modificar el perfil del puesto eliminando el requisito de capacitación en riesgo eléctrico.",
+        "isCorrect": false,
+        "rationale": "Reducir los estándares del perfil para ajustar un candidato incrementa la exposición a accidentes graves."
+      },
+      {
+        "text": "Firmar un documento donde el trabajador exonere a la empresa de cualquier responsabilidad por accidentes.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad legal de garantizar un ambiente de trabajo seguro es indelegable por parte del empleador."
+      }
+    ],
+    "hint": "Analice el proceso de toma de acciones para cubrir vacíos de formación y la verificación posterior de la competencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En un taller de mecanizado, el ruido de los tornos expone a los operarios a niveles elevados de decibeles. Siguiendo strictly la 'Jerarquía de Controles' de la ISO 45001, ¿cuál es el orden normativo para evaluar las medidas de protección?",
+    "opciones": [
+      {
+        "text": "Entregar orejeras auditivas $\\rightarrow$ Rotar al personal $\\rightarrow$ Aislar la máquina $\\rightarrow$ Sustituir el torno.",
+        "isCorrect": false,
+        "rationale": "Comienza erróneamente por la protección personal, la cual debe ser la última barrera de control."
+      },
+      {
+        "text": "Eliminar/Sustituir el torno por uno silencioso $\\rightarrow$ Controles de ingeniería (encapsulado acústico) $\\rightarrow$ Controles administrativos $\\rightarrow$ Equipos de Protección Personal.",
+        "isCorrect": true,
+        "rationale": "Refleja el orden estipulado: combatir el riesgo en la fuente (eliminación/sustitución), aplicar barreras físicas (ingeniería), organizativas (administrativas) y finalmente EPP."
+      },
+      {
+        "text": "Publicar afiches informativos $\\rightarrow$ Entregar tapones $\\rightarrow$ Reemplazar las máquinas $\\rightarrow$ Eliminar las inspecciones.",
+        "isCorrect": false,
+        "rationale": "Anticipa la señalización y los EPP a la modificación física del equipo o la eliminación de la fuente de ruido."
+      },
+      {
+        "text": "Aplicar amonestaciones $\\rightarrow$ Proporcionar EPP $\\rightarrow$ Comprar maquinaria más ruidosa $\\rightarrow$ Suspender el monitoreo.",
+        "isCorrect": false,
+        "rationale": "No sigue la secuencia preventiva ni prioriza la reducción objetiva del agente físico en el entorno."
+      },
+      {
+        "text": "Pintar los pasillos $\\rightarrow$ Entregar orejeras $\\rightarrow$ Rotar turnos $\\rightarrow$ Encapsular la máquina.",
+        "isCorrect": false,
+        "rationale": "Coloca los controles de ingeniería al final del proceso en lugar de priorizarlos frente a las medidas administrativas y de EPP."
+      }
+    ],
+    "hint": "Inicie desde la medida de mayor efectividad (en la fuente del peligro) hacia la de menor efectividad (barrera en el trabajador).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Ocurre un incidente con atrapamiento parcial en una faja transportadora debido al retiro involuntario de su guarda de protección. Al tramitar la no conformidad bajo la ISO 45001, ¿qué paso es indispensable en la acción correctiva?",
+    "opciones": [
+      {
+        "text": "Colocar nuevamente la guarda sin indagar las razones por las cuales fue retirada.",
+        "isCorrect": false,
+        "rationale": "Corregir el síntoma inmediato sin investigar las causas profundas permite que el evento vuelva a ocurrir."
+      },
+      {
+        "text": "Determinar la causa raíz mediante técnicas analíticas e implementar medidas para evitar la repetición del evento.",
+        "isCorrect": true,
+        "rationale": "Define la esencia de la acción correctiva: identificar y eliminar los factores causales para impedir que la no conformidad se repita."
+      },
+      {
+        "text": "Despedir al operario involucrado para cerrar formalmente el expediente de investigación.",
+        "isCorrect": false,
+        "rationale": "Punir al trabajador no resuelve las deficiencias de diseño, mantenimiento o procedimiento de las guardas de seguridad."
+      },
+      {
+        "text": "Ocultar el reporte del incidente en los registros internos para no alterar las estadísticas.",
+        "isCorrect": false,
+        "rationale": "La falta de registro vulnera la transparencia del sistema e impide la mejora continua basada en datos reales."
+      },
+      {
+        "text": "Aumentar las metas de producción para compensar el tiempo empleado durante la paralización de la máquina.",
+        "isCorrect": false,
+        "rationale": "Incrementar la presión operativa sin solucionar la falla técnica eleva el riesgo de sufrir accidentes más severos."
+      }
+    ],
+    "hint": "Enfóquese en la diferencia entre una corrección inmediata de la falla y la erradicación de los factores que provocaron la desviación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa de servicios de consultoría digital que implementa la ISO 9001:2015 no utiliza instrumentos de medición física ni realiza calibraciones metrológicas. Al definir el alcance de su SGCN, ¿cómo debe proceder respecto a la cláusula 7.1.5.2 'Trazabilidad de las mediciones'?",
+    "opciones": [
+      {
+        "text": "Comprar patrones de medición de longitud para cumplir obligatoriamente con el requisito formal.",
+        "isCorrect": false,
+        "rationale": "Adquirir equipos innecesarios para el negocio genera costos superfluos que no aportan valor ni conformidad al servicio."
+      },
+      {
+        "text": "Declarar la no aplicabilidad de la cláusula 7.1.5.2 justificando que no afecta la conformidad del servicio ni la satisfacción del cliente.",
+        "isCorrect": true,
+        "rationale": "Permite excluir requisitos que no son aplicables debido a la naturaleza de las actividades, fundamentando las razones en la documentación del sistema."
+      },
+      {
+        "text": "Excluir de forma arbitraria la cláusula de Auditoría Interna argumentando reducción de costos.",
+        "isCorrect": false,
+        "rationale": "Requisitos centrales como las auditorías internas o la evaluación del desempeño son mandatorios e ineludibles."
+      },
+      {
+        "text": "Detener el proceso de implementación de ISO 9001 por no contar con equipos metrológicos.",
+        "isCorrect": false,
+        "rationale": "La norma está diseñada para adaptarse a empresas de servicios sin requerir la existencia de equipamiento industrial."
+      },
+      {
+        "text": "Solicitar una autorización de exención firmada por el Ministerio de Producción.",
+        "isCorrect": false,
+        "rationale": "Las justificaciones de no aplicabilidad las determina y sustenta la propia organización dentro de su SGCN sin intervención de ministerios."
+      }
+    ],
+    "hint": "Recuerde cómo justifica la norma ISO 9001 la exclusión de requisitos que no corresponden a las actividades operativas de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el análisis del contexto organizativo y partes interesadas según las cláusulas 4.1 y 4.2 de la ISO 9001:2015, ¿cuáles de las siguientes prácticas aseguran un abordaje alineado a los requisitos?",
+    "opciones": [
+      {
+        "text": "Desarrollar un análisis FODA/PESTEL identificando factores internos y externos clave.",
+        "isCorrect": true,
+        "rationale": "Estructura de forma clara las fortalezas, debilidades, oportunidades y amenazas frente al entorno económico, social y tecnológico."
+      },
+      {
+        "text": "Identificar a las partes interesadas relevantes y determinar sus necesidades y expectativas frente al sistema.",
+        "isCorrect": true,
+        "rationale": "Permite reconocer los requerimientos de clientes, reguladores, accionistas y trabajadores para garantizar su atención."
+      },
+      {
+        "text": "Realizar el seguimiento y la revisión periódica de la información sobre las cuestiones externas e internas.",
+        "isCorrect": true,
+        "rationale": "Asegura que el análisis del entorno se mantenga actualizado frente a los cambios del mercado o de la organización."
+      },
+      {
+        "text": "Copiar íntegramente la matriz de contexto de una empresa competidora sin adaptarla.",
+        "isCorrect": false,
+        "rationale": "Un documento clonado no refleja la realidad operativa ni los riesgos específicos de la propia empresa."
+      },
+      {
+        "text": "Ocultar las amenazas del mercado para evitar observaciones durante la auditoría externa.",
+        "isCorrect": false,
+        "rationale": "Omitir los riesgos reales impide tomar acciones preventivas y compromete la objetividad del análisis estratégico."
+      }
+    ],
+    "hint": "Seleccione las actividades que analizan sistemáticamente el entorno de negocio y las exigencias de los actores involucrados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una fábrica evalúa el riesgo en sus líneas de despacho mediante la metodología AMFE (Análisis Modal de Fallos y Efectos). Al analizar la falla de etiquetado asigna los siguientes valores: Severidad = 8, Ocurrencia = 7 y Detección = 9 (dificultad para detectarlo antes de la entrega). ¿Cuál es el Número de Prioridad de Riesgo (NPR)?",
+    "opciones": [
+      {
+        "text": "$NPR = 8 + 7 + 9 = 24$",
+        "isCorrect": false,
+        "rationale": "La fórmula del AMFE no utiliza la suma de sus variables para calcular el índice de prioridad."
+      },
+      {
+        "text": "$NPR = 8 \\times 7 \\times 9 = 504$",
+        "isCorrect": true,
+        "rationale": "El Número de Prioridad de Riesgo en la metodología AMFE se obtiene multiplicando la Severidad por la Ocurrencia por la Detección ($8 \\times 7 \\times 9 = 504$)."
+      },
+      {
+        "text": "$NPR = (8 \\times 7) / 9 = 6.22$",
+        "isCorrect": false,
+        "rationale": "No se divide entre el factor de detección; una alta dificultad de detección incrementa el riesgo total multiplicativamente."
+      },
+      {
+        "text": "$NPR = 8 \\times (7 + 9) = 128$",
+        "isCorrect": false,
+        "rationale": "No se suman la ocurrencia y la detección antes de multiplicar por la severidad."
+      },
+      {
+        "text": "$NPR = (8 + 7) \\times 9 = 135$",
+        "isCorrect": false,
+        "rationale": "Las tres variables deben multiplicarse en serie para reflejar la ponderación del riesgo."
+      }
+    ],
+    "hint": "Alique la fórmula matemática estandarizada del AMFE que combina multiplicativamente los tres factores de evaluación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El área de operaciones de un operador logístico busca estructurar un objetivo de la calidad bajo el enfoque SMART para el presente periodo. ¿Cuál de las siguientes formulaciones cumple con esta metodología?",
+    "opciones": [
+      {
+        "text": "Optimizar las entregas lo más que se pueda durante los próximos meses de operaciones.",
+        "isCorrect": false,
+        "rationale": "Carece de métricas específicas, metas cuantitativas e hitos de tiempo delimitados."
+      },
+      {
+        "text": "Reducir el tiempo promedio de despacho de mercancías de 48 a 24 horas en un plazo de 6 meses.",
+        "isCorrect": true,
+        "rationale": "Inicia con un verbo en infinitivo, es específico, cuantitativamente medible, alcanzable, relevante y delimitado en un tiempo definido."
+      },
+      {
+        "text": "Convertirse en la mejor empresa de transporte del país ganando reconocimientos.",
+        "isCorrect": false,
+        "rationale": "Corresponde a una declaración de visión u aspiración cualitativa, sin los parámetros numéricos o temporales del modelo SMART."
+      },
+      {
+        "text": "Atender a todos los clientes que ingresen a la oficina con la mejor amabilidad posible.",
+        "isCorrect": false,
+        "rationale": "Resulta ambiguo y subjetivo al no indicar indicadores cuantificables para verificar su cumplimiento."
+      },
+      {
+        "text": "Aumentar la facturación de la empresa sin asignar presupuesto para la contratación de personal.",
+        "isCorrect": false,
+        "rationale": "Incurre en falta de realismo al exigir un crecimiento operacional sin considerar los recursos necesarios."
+      }
+    ],
+    "hint": "Busque la alternativa que exprese un verbo en infinitivo, un valor numérico a alcanzar y un horizonte temporal claro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco de la planificación del SGCN (ISO 9001:2015), la empresa debe definir una matriz de comunicaciones interna y externa. ¿Cuáles son los atributos mínimos que deben conformar esta matriz?",
+    "opciones": [
+      {
+        "text": "Qué comunicar (el contenido o tema de la comunicación).",
+        "isCorrect": true,
+        "rationale": "Establece con claridad la información o el mensaje específico que requiere ser difundido."
+      },
+      {
+        "text": "Cuándo comunicar (la frecuencia o el momento oportuno de la transmisión).",
+        "isCorrect": true,
+        "rationale": "Define la oportunidad, periodicidad o los eventos desencadenantes para realizar la comunicación."
+      },
+      {
+        "text": "A quién comunicar (el destinatario o grupo receptor de la información).",
+        "isCorrect": true,
+        "rationale": "Identifica a las partes interesadas o colaboradores a los que va dirigida la comunicación."
+      },
+      {
+        "text": "Cómo comunicar y quién comunica (el medio o canal utilizado y el responsable del envío).",
+        "isCorrect": true,
+        "rationale": "Determina los formatos empleados (correos, reuniones, afiches) y asigna el rol responsable de emitir el mensaje."
+      },
+      {
+        "text": "El monto de inversión publicitaria gastado en campañas comerciales en medios impresos.",
+        "isCorrect": false,
+        "rationale": "Corresponde al presupuesto de marketing comercial y no constituye un campo obligatorio de la matriz de comunicación de la calidad."
+      }
+    ],
+    "hint": "Piense en las preguntas esenciales que estructuran un flujo de información controlado dentro de la organización.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una organización revisa la documentación de sus procesos operativos. Según la cláusula 7.5 de la ISO 9001:2015, ¿cuáles son los controles necesarios para la creación y actualización de la información documentada?",
+    "opciones": [
+      {
+        "text": "Permitir que cualquier operario edite el procedimiento en Word sin conservar historiales ni aprobaciones.",
+        "isCorrect": false,
+        "rationale": "Permitir ediciones no controladas genera incertidumbre en las operaciones y pérdida de trazabilidad."
+      },
+      {
+        "text": "Identificar el documento con código, título y versión; asegurar la revisión/aprobación por personal autorizado; y controlar su distribución.",
+        "isCorrect": true,
+        "rationale": "Garantiza la correcta identificación, idoneidad y disponibilidad de los documentos autorizados, evitando el uso de versiones obsoletas."
+      },
+      {
+        "text": "Imprimir los instructivos en hojas de reuso e informarlos únicamente de forma verbal.",
+        "isCorrect": false,
+        "rationale": "La transmisión puramente verbal carece del soporte documentado exigido para respaldar los procesos operacionales."
+      },
+      {
+        "text": "Mantener los procedimientos bajo reserva absoluta impidiendo el acceso al personal operativo.",
+        "isCorrect": false,
+        "rationale": "Impedir el acceso a los procedimientos a quienes ejecutan la tarea imposibilita la estandarización y el cumplimiento de los controles."
+      },
+      {
+        "text": "Modificar la fecha del documento todos los días para simular ante la auditoría una actualización continua.",
+        "isCorrect": false,
+        "rationale": "Alterar las fechas de revisión sin cambios reales destruye la integridad de la información documentada."
+      }
+    ],
+    "hint": "Considere la necesidad de mantener identificación, revisión adecuada y disponibilidad de las versiones oficiales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante una auditoría de calidad a una planta que genera miles de registros de inspección al mes, el auditor evalúa una muestra representativa de 30 archivos seleccionados al azar. ¿En qué principio se sustenta esta práctica?",
+    "opciones": [
+      {
+        "text": "El auditor está obligado a revisar el 100% de los archivos para respaldar sus conclusiones.",
+        "isCorrect": false,
+        "rationale": "Revisar la totalidad de los registros es técnicamente inviable en el tiempo asignado a una auditoría."
+      },
+      {
+        "text": "La recopilación de información se realiza mediante un muestreo apropiado para obtener evidencia objetiva y emitir hallazgos justificados.",
+        "isCorrect": true,
+        "rationale": "El muestreo representativo permite inferir razonablemente el grado de cumplimiento de los procesos mediante evidencia verificable en el tiempo disponible."
+      },
+      {
+        "text": "Si la muestra es conforme, el auditor debe redactar fallas supuestas para demostrar rigor.",
+        "isCorrect": false,
+        "rationale": "Los hallazgos de auditoría deben basarse estrictamente en evidencias observadas y no en suposiciones."
+      },
+      {
+        "text": "El auditor únicamente revisa los archivos seleccionados y presentados con anticipación por el auditado.",
+        "isCorrect": false,
+        "rationale": "Permitir que el auditado escoja exclusivamente la muestra invalida la imparcialidad del proceso de evaluación."
+      },
+      {
+        "text": "El muestreo aleatorio desvalida el informe de auditoría ante los organismos de acreditación.",
+        "isCorrect": false,
+        "rationale": "El muestreo es una práctica metodológica aceptada y normada internacionalmente en la auditoría de sistemas de gestión."
+      }
+    ],
+    "hint": "Considere las limitaciones de tiempo en las auditorías y la necesidad de usar muestras imparciales para extraer evidencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la auditoría a una empresa de transporte se constata que en todos los departamentos los colaboradores desconocen la política de la calidad y no existen actas de revisión por la dirección de los últimos dos años. ¿Cómo se debe clasificar este hallazgo?",
+    "opciones": [
+      {
+        "text": "Una oportunidad de mejora opcional que no requiere plan de acción formal.",
+        "isCorrect": false,
+        "rationale": "Ignorar la política y las revisiones por la dirección afecta directamente los pilares obligatorios del sistema."
+      },
+      {
+        "text": "Una No Conformidad Mayor, al detectarse una ausencia sistémica en el cumplimiento de requisitos clave de la norma.",
+        "isCorrect": true,
+        "rationale": "La falta total de implementación de requisitos fundamentales (como la concientización de la política y la revisión directiva) constituye una falla sistémica grave."
+      },
+      {
+        "text": "Una conformidad con recomendaciones de redacción.",
+        "isCorrect": false,
+        "rationale": "No existe conformidad cuando hay un incumplimiento evidente y generalizado de las cláusulas normativas."
+      },
+      {
+        "text": "Un cumplimiento satisfactorio al no registrarse quejas por escrito de los clientes.",
+        "isCorrect": false,
+        "rationale": "La ausencia de reclamos comerciales no compensa el incumplimiento interno de las exigencias del estándar ISO."
+      },
+      {
+        "text": "Una observación de rutina que debe rectificarse únicamente si el cliente lo solicita.",
+        "isCorrect": false,
+        "rationale": "Las no conformidades sistémicas demandan acciones correctivas inmediatas establecidas dentro del propio SGCN."
+      }
+    ],
+    "hint": "Evalúe el impacto que tiene la falta total de evidencia en cláusulas esenciales para la gobernanza del sistema de gestión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-66",
+    "diplomado": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El enfoque basado en procesos de la ISO 9001:2015 integra el ciclo Planificar-Hacer-Verificar-Actuar (PHVA). ¿Cuál es la función específica de la etapa 'Verificar' dentro de este esquema?",
+    "opciones": [
+      {
+        "text": "Establecer los objetivos del sistema y determinar los procesos necesarios para entregar resultados.",
+        "isCorrect": false,
+        "rationale": "Definir metas y delinear procesos corresponde a la etapa de Planificación (Planificar)."
+      },
+      {
+        "text": "Realizar el seguimiento y la medición de los procesos y productos/servicios respecto a las políticas, objetivos y requisitos, e informar los resultados.",
+        "isCorrect": true,
+        "rationale": "Define el propósito de Verificar: monitorear, medir y evaluar el desempeño real frente a los parámetros planificados."
+      },
+      {
+        "text": "Tomar acciones para mejorar continuamente el desempeño de los procesos cuando las metas no se alcanzan.",
+        "isCorrect": false,
+        "rationale": "Implementar medidas correctivas o de ajuste ante las desviaciones corresponde a la fase de Actuar."
+      },
+      {
+        "text": "Ejecutar las tareas operativas de producción según lo diseñado en los manuales.",
+        "isCorrect": false,
+        "rationale": "La ejecución física y operacional del proceso pertenece a la etapa de Hacer."
+      },
+      {
+        "text": "Elaborar por primera vez la matriz de riesgos estratégicos de la empresa.",
+        "isCorrect": false,
+        "rationale": "La identificación inicial de riesgos es una actividad estratégica enmarcada en la etapa de Planificar."
+      }
+    ],
+    "hint": "Asocie esta etapa con las actividades de medición, monitoreo del desempeño e informe de hallazgos frente a los objetivos previstos.",
+    "activo": true
+  }
+]

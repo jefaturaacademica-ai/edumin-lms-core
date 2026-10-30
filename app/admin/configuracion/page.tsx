@@ -100,17 +100,15 @@ export default function ConfiguracionRolesPage() {
 
       {/* Contenido Principal con Header Superior Institucional */}
       <div className="flex-1 flex flex-col overflow-hidden min-w-0 h-full">
-        <AdminHeader breadcrumb="Configuración y Roles (RBAC)" />
+        <AdminHeader breadcrumb="Configuración" />
         <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
           <div className="max-w-7xl mx-auto space-y-8">
           
           <div className="flex justify-between items-center">
             <div>
-              <h1 className="text-3xl font-bold text-slate-900">Configuración & Roles (RBAC)</h1>
-              <p className="text-slate-500 mt-1">Gestión de permisos de usuarios, control de accesos y reglas de paquetes.</p>
-            </div>
-            <div className="bg-slate-900 text-slate-300 text-xs px-4 py-2 rounded-2xl tabular-nums font-bold border border-slate-800">
-              🔒 Supabase RLS Protegido
+              <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+                Configuración y roles (RBAC)
+              </h1>
             </div>
           </div>
 
@@ -127,13 +125,13 @@ export default function ConfiguracionRolesPage() {
               onClick={() => setActiveTab('rbac')}
               className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 shrink-0 ${activeTab === 'rbac' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
             >
-              <UserCheck className="w-4 h-4" /> Control de Acceso RBAC ({usuarios.length} Usuarios)
+              <UserCheck className="w-4 h-4" /> Control de acceso RBAC ({usuarios.length} Usuarios)
             </button>
             <button
               onClick={() => setActiveTab('paquetes')}
               className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 shrink-0 ${activeTab === 'paquetes' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
             >
-              <Layers className="w-4 h-4" /> Configuración de Paquetes & Créditos
+              <Layers className="w-4 h-4" /> Configuración de paquetes y créditos
             </button>
             <button
               onClick={() => setActiveTab('simulador')}

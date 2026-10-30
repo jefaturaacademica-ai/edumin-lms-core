@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define la logística interna o intralogística dentro de una organización?",
+    "opciones": [
+      {
+        "text": "La organización del conjunto de flujos de materiales e información que ocurren dentro de las instalaciones de la empresa.",
+        "isCorrect": true,
+        "rationale": "La intralogística abarca todos los movimientos físicos de insumos y sus respectivos registros de información desde que ingresan hasta que se procesan o despachan internamente."
+      },
+      {
+        "text": "El transporte exclusivo de mercancías terminadas desde el almacén central hacia clientes en el extranjero.",
+        "isCorrect": false,
+        "rationale": "El transporte hacia clientes externos corresponde a la logística externa o de distribución, no a la logística interna."
+      },
+      {
+        "text": "La gestión financiera dedicada únicamente a la compra de activos fijos e inmuebles de la empresa.",
+        "isCorrect": false,
+        "rationale": "La adquisición de activos fijos es una función contable y financiera, no parte del flujo operativo de materiales de almacén."
+      },
+      {
+        "text": "La estrategia comercial de publicidad directa para captar nuevos clientes finales.",
+        "isCorrect": false,
+        "rationale": "Las campañas publicitarias corresponden al área de marketing y ventas, no al control operativo del inventario interno."
+      },
+      {
+        "text": "El mantenimiento correctivo de maquinarias en carreteras públicas fuera de la planta.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento de vehículos en vías públicas es una labor de servicios externos o mantenimiento de flota, no parte del flujo interno de materiales."
+      }
+    ],
+    "hint": "Enfócate en las actividades operativas y de registro que se desarrollan dentro de los límites físicos de la propia empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el primer bloque de tareas asociadas al proceso operativo de recepción de mercancías en un almacén?",
+    "opciones": [
+      {
+        "text": "Preparación para la recepción, que incluye la asignación previa de personal, equipos y verificación documental.",
+        "isCorrect": true,
+        "rationale": "Antes de que llegue la mercancía, es indispensable alistar los recursos humanos, herramientas de descarga y documentos previstos."
+      },
+      {
+        "text": "Ubicación definitiva e inmediata de la carga en las estanterías de máxima altura.",
+        "isCorrect": false,
+        "rationale": "La ubicación definitiva ocurre al final del proceso, tras haber verificado, inspeccionado y clasificado la mercancía."
+      },
+      {
+        "text": "Clasificación según el método PEPS/FIFO antes de descargar el vehículo de transporte.",
+        "isCorrect": false,
+        "rationale": "No se puede clasificar el producto por rotación sin antes haber realizado la descarga e inspección inicial."
+      },
+      {
+        "text": "Disposición final y destrucción de envases defectuosos.",
+        "isCorrect": false,
+        "rationale": "La disposición de residuos es una etapa posterior o de logística inversa, no el inicio de la recepción."
+      },
+      {
+        "text": "Despacho directo e inmediato de la carga al cliente final sin pasar por registro.",
+        "isCorrect": false,
+        "rationale": "Omitir el registro y la verificación inicial genera inconsistencias graves en el inventario del almacén."
+      }
+    ],
+    "hint": "Piensa en las acciones preparatorias que deben realizarse antes de que el vehículo de transporte desembarque los productos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes condiciones son indispensables para el almacenamiento seguro de materiales peligrosos (como explosivos y reactivos químicos) en operaciones mineras?",
+    "opciones": [
+      {
+        "text": "Disponer de áreas aisladas y debidamente señalizadas con acceso restringido únicamente a personal autorizado.",
+        "isCorrect": true,
+        "rationale": "El aislamiento y el control estricto de acceso previenen manipulaciones inadecuadas y reducen drásticamente el riesgo de accidentes grave."
+      },
+      {
+        "text": "Mantener sistemas de ventilación adecuada, control de temperatura y monitoreo ambiental.",
+        "isCorrect": true,
+        "rationale": "Las variables ambientales estables evitan reacciones químicas no deseadas, descomposición o volatilización de insumos peligrosos."
+      },
+      {
+        "text": "Contar con equipos de protección contra incendios, tales como extintores, rociadores y sistemas de alarma.",
+        "isCorrect": true,
+        "rationale": "Los sistemas de respuesta inmediata a emergencias son obligatorios por normativa de seguridad para contener amagos de incendio o fugas."
+      },
+      {
+        "text": "Ubicar los productos peligrosos junto a la zona de comedores y vestuarios para un acceso más rápido.",
+        "isCorrect": false,
+        "rationale": "Los materiales peligrosos nunca deben almacenarse cerca de áreas comunes o de personal para no exponer vidas humanas a intoxicaciones o explosiones."
+      },
+      {
+        "text": "Mezclar los explosivos con herramientas de mano no peligrosas para economizar espacio físico.",
+        "isCorrect": false,
+        "rationale": "La normativa prohíbe explícitamente mezclar materiales peligrosos con otros insumos no relacionados para evitar detonaciones accidentales."
+      }
+    ],
+    "hint": "Considera las exigencias de seguridad vial, ambiental y normativa para prevenir desastres en polvorines o almacenes químicos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué se considera que una mala gestión en la recepción de mercancías impacta negativamente a toda la instalación?",
+    "opciones": [
+      {
+        "text": "Porque es el punto de partida del flujo de materiales y los errores iniciales generan inconsistencias en el inventario y reducen la productividad posterior.",
+        "isCorrect": true,
+        "rationale": "Cualquier descuido al registrar cantidades o revisar estados al ingreso se arrastra en las etapas de almacenamiento y despacho."
+      },
+      {
+        "text": "Porque sustituye por completo la necesidad de contar con un diseño de distribución o layout de planta.",
+        "isCorrect": false,
+        "rationale": "La recepción es un proceso operativo; no reemplaza la planificación espacial ni la infraestructura del almacén."
+      },
+      {
+        "text": "Porque invalida automáticamente el uso de softwares de gestión de inventarios como el ERP o el WMS.",
+        "isCorrect": false,
+        "rationale": "Al contrario, una buena o mala recepción nutre directamente de datos al sistema informático de la empresa."
+      },
+      {
+        "text": "Porque elimina la obligación legal de cumplir con las normas de seguridad y salud en el trabajo.",
+        "isCorrect": false,
+        "rationale": "Las normativas de seguridad son de obligatorio cumplimiento en todo momento, independientemente de la eficiencia operativa."
+      },
+      {
+        "text": "Porque obliga a la empresa a contratar únicamente a proveedores internacionales.",
+        "isCorrect": false,
+        "rationale": "El origen local o internacional del proveedor no altera la importancia del control de ingreso en el almacén."
+      }
+    ],
+    "hint": "Reflexiona sobre el efecto en cadena que produce ingresar datos erróneos al inicio de un proceso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el almacenamiento de minerales extraídos y concentrados en minería, ¿cuál es el criterio de ubicación fundamental?",
+    "opciones": [
+      {
+        "text": "Almacenarlos en depósitos o pilas específicas que eviten su contaminación o mezcla con materiales no deseados.",
+        "isCorrect": true,
+        "rationale": "Mantener la pureza del mineral es vital para no alterar su valor comercial ni elevar los costos de procesamiento posterior."
+      },
+      {
+        "text": "Guardarlos en el mismo recinto cerrado de los explosivos para ahorrar espacio en la mina.",
+        "isCorrect": false,
+        "rationale": "Los concentrados de mineral y los explosivos requieren depósitos totalmente separados por razones operativas y de seguridad."
+      },
+      {
+        "text": "Colocarlos en cajas de cartónLiviano sobre estanterías de madera en zonas de alto tránsito.",
+        "isCorrect": false,
+        "rationale": "Los minerales se manejan a granel o en sacos industriales de gran tonelaje, no en cajas de cartón en pasillos comunes."
+      },
+      {
+        "text": "Exponerlos directamente a lluvias e intemperie sin ningún tipo de contención en zonas de clima variable.",
+        "isCorrect": false,
+        "rationale": "La lluvia y el viento pueden lavar o arrastrar el concentrado, alterando su calidad y generando contaminación ambiental."
+      },
+      {
+        "text": "Mezclarlos intencionalmente con lubricantes usados para facilitar su transporte por tuberías.",
+        "isCorrect": false,
+        "rationale": "Contaminar el mineral con aceites o hidrocarburos arruina los procesos químicos de flotación y lixiviación."
+      }
+    ],
+    "hint": "Considera el valor del mineral extraído y el riesgo de perder pureza si entra en contacto con otros elementos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la razón principal para establecer un plan estricto de rotación de materiales en un almacén que maneja insumos químicos?",
+    "opciones": [
+      {
+        "text": "Garantizar que los insumos más antiguos se utilicen primero, evitando su vencimiento o la pérdida de efectividad química.",
+        "isCorrect": true,
+        "rationale": "Muchos reactivos pierden sus propiedades con el tiempo; consumirlos según su antigüedad asegura el rendimiento en los procesos productivos."
+      },
+      {
+        "text": "Asegurar que los productos recién ingresados sean los únicos en despacharse mientras los viejos quedan acumulados.",
+        "isCorrect": false,
+        "rationale": "Despachar solo lo nuevo provocaría que los lotes antiguos caduquen en el almacén, generando pérdidas económicas."
+      },
+      {
+        "text": "Aumentar artificialmente el costo final de almacenamiento para elevar el precio de venta.",
+        "isCorrect": false,
+        "rationale": "La rotación busca reducir desperdicios y optimizar costos, no incrementar artificialmente los gastos."
+      },
+      {
+        "text": "Evitar el uso de etiquetas de identificación y códigos de barras en las botellas.",
+        "isCorrect": false,
+        "rationale": "La rotación eficiente requiere una identificación clara mediante etiquetas o códigos para saber qué lote salió primero."
+      },
+      {
+        "text": "Permitir que el personal reubique las estanterías físicas de forma aleatoria cada semana.",
+        "isCorrect": false,
+        "rationale": "Mover la infraestructura física sin control causa desorden y desorientación en la gestión diaria."
+      }
+    ],
+    "hint": "Piensa en el riesgo de obsolescencia o degradación que sufren las sustancias químicas al pasar mucho tiempo guardadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué se refiere el término \"Layout\" en el ámbito del diseño y organización de almacenes?",
+    "opciones": [
+      {
+        "text": "Al plano o diseño que representa la disposición física de las áreas, equipos y flujos de trabajo dentro de una instalación.",
+        "isCorrect": true,
+        "rationale": "El layout esquematiza la distribución espacial de los recintos de almacenamiento, zonas de tránsito y estaciones operativas."
+      },
+      {
+        "text": "Al software financiero utilizado para calcular el pago de impuestos y planillas.",
+        "isCorrect": false,
+        "rationale": "El layout es un concepto de diseño espacial e infraestructura, no una herramienta de contabilidad."
+      },
+      {
+        "text": "Al documento legal que autoriza la exportación de minerales a otros países.",
+        "isCorrect": false,
+        "rationale": "La autorización de exportación corresponde a trámites aduaneros y permisos gubernamentales."
+      },
+      {
+        "text": "Al catálogo impreso de ofertas que la empresa distribuye a los clientes finales.",
+        "isCorrect": false,
+        "rationale": "El catálogo comercial es una herramienta de ventas, no un esquema de distribución de planta."
+      },
+      {
+        "text": "Al registro de asistencia e ingreso diario de los trabajadores del turno mañana.",
+        "isCorrect": false,
+        "rationale": "El control de asistencia pertenece a la gestión de recursos humanos."
+      }
+    ],
+    "hint": "Asocia el término con la palabra en español 'distribución de planta' o 'esquema espacial'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la característica operativa principal de un sistema de estanterías compactas tipo \"Drive-through\"?",
+    "opciones": [
+      {
+        "text": "Permite el acceso a los carriles de almacenamiento tanto por la parte frontal como por la parte trasera.",
+        "isCorrect": true,
+        "rationale": "A diferencia del sistema Drive-in (unidireccional), el Drive-through ofrece entradas en ambos extremos, facilitando una rotación de stock más flexible."
+      },
+      {
+        "text": "Posee un fondo completamente cerrado que obliga a ingresar y salir por el mismo pasillo frontal.",
+        "isCorrect": false,
+        "rationale": "Tener un solo acceso frontal es la definición del sistema Drive-in, no del Drive-through."
+      },
+      {
+        "text": "Funciona mediante brazos horizontales sin fondo para sostener únicamente tubos de acero.",
+        "isCorrect": false,
+        "rationale": "Esa descripción corresponde a las estanterías de tipo Cantilever."
+      },
+      {
+        "text": "Utiliza rieles inclinados con rodillos para mover las cajas exclusivamente por gravedad.",
+        "isCorrect": false,
+        "rationale": "El movimiento por gravedad mediante rodillos inclinados identifica a las estanterías dinámicas."
+      },
+      {
+        "text": "Está fabricada en cartón desechable para almacenar elementos extremadamente livianos.",
+        "isCorrect": false,
+        "rationale": "Las estanterías industriales compactas son estructuras metálicas pesadas para soportar pallets."
+      }
+    ],
+    "hint": "Analiza el significado en inglés de 'through' (a través de), que implica cruzar la estructura de un lado al otro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Para qué tipo de materiales están diseñadas principalmente las estanterías de tipo \"Cantilever\"?",
+    "opciones": [
+      {
+        "text": "Materiales de gran longitud o formas irregulares, tales como tubos, barras de acero, vigas y maderas.",
+        "isCorrect": true,
+        "rationale": "Su estructura compuesta por columnas y brazos voladizos sin columnas frontales permite acoger objetos largos y volumétricos."
+      },
+      {
+        "text": "Alimentos perecederos envasados en pequeñas latas de conserva.",
+        "isCorrect": false,
+        "rationale": "Las latas pequeñas se acomodan mejor en estanterías convencionales o dinámicas sobre pallets o bandejas."
+      },
+      {
+        "text": "Líquidos inflamables almacenados en frascos frágiles de vidrio.",
+        "isCorrect": false,
+        "rationale": "Los frascos frágiles requieren estantes cerrados o gabinetes especiales para productos químicos."
+      },
+      {
+        "text": "Cajas de cartón con prendas de vestir de tamaño pequeño y estandarizado.",
+        "isCorrect": false,
+        "rationale": "Las cajas pequeñas se ubican en estanterías de picking manual o racks convencionales."
+      },
+      {
+        "text": "Bobinas de hilo textil de muy poco peso.",
+        "isCorrect": false,
+        "rationale": "Las bobinas suelen almacenarse en estanterías portabobinas diseñadas específicamente para ejes cilíndricos."
+      }
+    ],
+    "hint": "Visualiza estantes que no tienen postes frontales molestos, ideales para apoyar objetos largos en forma horizontal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste el principio de valuación y control de inventarios LIFO (Last In, First Out / UEPS)?",
+    "opciones": [
+      {
+        "text": "Los últimos productos en ingresar o ser fabricados son los primeros en ser vendidos o distribuidos.",
+        "isCorrect": true,
+        "rationale": "El método LIFO prioriza la salida de los lotes más recientes, dejando las unidades más antiguas retenidas en el inventario final."
+      },
+      {
+        "text": "Las unidades más antiguas en el almacén son obligatoriamente las primeras en despacharse.",
+        "isCorrect": false,
+        "rationale": "Priorizar la salida de las unidades antiguas corresponde al método FIFO o PEPS."
+      },
+      {
+        "text": "Todos los productos ingresados en el año se despachan al mismo tiempo sin importar la fecha.",
+        "isCorrect": false,
+        "rationale": "El control de inventarios requiere distinguir el orden cronológico de las entradas para costear las salidas."
+      },
+      {
+        "text": "Se descartan de inmediato los lotes nuevos para quedarse únicamente con el stock vencido.",
+        "isCorrect": false,
+        "rationale": "Ningún sistema de inventarios busca descartar mercadería nueva para conservar producto vencido."
+      },
+      {
+        "text": "El costo de las ventas se calcula tomando únicamente el precio promedio de los últimos diez años.",
+        "isCorrect": false,
+        "rationale": "LIFO utiliza los costos de las compras más recientes para valorar la salida del producto, no promedios decenales."
+      }
+    ],
+    "hint": "Traduce las siglas LIFO: 'Último en entrar, primero en salir'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la ventaja principal de aplicar el método FIFO (First In, First Out / PEPS) en un almacén de insumos?",
+    "opciones": [
+      {
+        "text": "Asegura la salida prioritaria de las unidades más antiguas, evitando que los productos se malogren o caduquen en stock.",
+        "isCorrect": true,
+        "rationale": "Al rotar primero lo que primero ingresó, se minimiza el riesgo de vencimiento en insumos con vida útil limitada."
+      },
+      {
+        "text": "Permite acumular indefinidamente los productos perecederos en la zona del fondo del almacén.",
+        "isCorrect": false,
+        "rationale": "Dejar guardados los productos perecederos provocaría su pérdida total por caducidad."
+      },
+      {
+        "text": "Garantiza que solo se despachen los artículos recién recibidos esa misma mañana.",
+        "isCorrect": false,
+        "rationale": "Despachar lo recién recibido dejando lo viejo corresponde a una lógica tipo LIFO, no FIFO."
+      },
+      {
+        "text": "Elimina la necesidad de registrar las fechas de ingreso de los lotes en el sistema.",
+        "isCorrect": false,
+        "rationale": "Para aplicar FIFO es indispensable conocer con exactitud la fecha de recepción de cada lote."
+      },
+      {
+        "text": "Reduce a cero el costo de adquisición de todas las materias primas.",
+        "isCorrect": false,
+        "rationale": "Los métodos de inventario organizan el flujo y el costo contable, pero no alteran el precio pagado al proveedor."
+      }
+    ],
+    "hint": "Asocia este método con la gestión de productos perecederos o con fecha de vencimiento ajustada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos forman parte de la jerarquía de envases, embalajes y accesorios de protección explicada en el curso?",
+    "opciones": [
+      {
+        "text": "Envase primario: contenedor en contacto directo con el producto.",
+        "isCorrect": true,
+        "rationale": "El envase primario tiene como función directa contener y proteger la integridad inmediata del producto."
+      },
+      {
+        "text": "Envase secundario: envoltorio que agrupa varios envases primarios para facilitar su manejo.",
+        "isCorrect": true,
+        "rationale": "Sirve para reunir múltiples unidades primarias en una presentación comercial o logística más práctica."
+      },
+      {
+        "text": "Pallet o parihuela: estructura rígida de base que permite apilar y mover grandes volúmenes con montacargas.",
+        "isCorrect": true,
+        "rationale": "El pallet estandariza la carga unitaria para su fácil manipulación con transelevadores o grúas horquilla."
+      },
+      {
+        "text": "Declaración jurada de impuestos anuales de la empresa.",
+        "isCorrect": false,
+        "rationale": "Es un documento tributario legal, no un nivel físico de empaque o embalaje."
+      },
+      {
+        "text": "Licencia de conducir del chofer de la grúa.",
+        "isCorrect": false,
+        "rationale": "Es un permiso personal de capacitación laboral, no un componente físico de protección de mercancía."
+      }
+    ],
+    "hint": "Identifica los elementos físicos que envuelven, agrupan o sostienen la carga física en el almacén.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la clasificación de inventarios bajo el método ABC, ¿qué caracteriza a los productos clasificados en el Grupo A?",
+    "opciones": [
+      {
+        "text": "Poseen un alto valor económico y registran una alta frecuencia de uso o rotación.",
+        "isCorrect": true,
+        "rationale": "Los artículos A representan la mayor inversión económica y la mayor actividad, requiriendo el control más estricto y la ubicación más accesible."
+      },
+      {
+        "text": "Son productos de bajo costo financiero y de uso muy esporádico u ocasional.",
+        "isCorrect": false,
+        "rationale": "Los productos de bajo costo y baja rotación corresponden a la categoría C."
+      },
+      {
+        "text": "Son desechos o residuos peligrosos que deben ser eliminados de inmediato.",
+        "isCorrect": false,
+        "rationale": "La clasificación ABC gestiona productos útiles en inventario, no la chatarra o residuos en desecho."
+      },
+      {
+        "text": "Representan insumos de valor moderado almacenados exclusivamente en el techo de las instalaciones.",
+        "isCorrect": false,
+        "rationale": "Los artículos de valor y uso moderado son del Grupo B y no se ubican de forma improvisada en el techo."
+      },
+      {
+        "text": "Son materiales que carecen de registro en el kardex o sistema informático.",
+        "isCorrect": false,
+        "rationale": "Todo material en el almacén debe estar registrado, especialmente los del Grupo A por su alto valor."
+      }
+    ],
+    "hint": "Recuerda el principio del 80/20 (Pareto): son los artículos más valiosos y de mayor movimiento en la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la premisa fundamental de la filosofía de gestión de inventarios Justo a Tiempo (Just in Time / JIT)?",
+    "opciones": [
+      {
+        "text": "Mantener únicamente el stock necesario para la operación inmediata, reduciendo al mínimo los inventarios acumulados y sus costos.",
+        "isCorrect": true,
+        "rationale": "JIT busca eliminar el almacenamiento innecesario ocios, programando entregas exactas de los proveedores para consumir al momento."
+      },
+      {
+        "text": "Comprar la máxima cantidad posible de mercancía para almacenarla durante varios años.",
+        "isCorrect": false,
+        "rationale": "Acumular grandes volúmenes genera costos elevados de almacenamiento y riesgo de obsolescencia, opuesto al JIT."
+      },
+      {
+        "text": "Eliminar por completo la comunicación y los contratos con los proveedores.",
+        "isCorrect": false,
+        "rationale": "El sistema JIT requiere, al contrario, una alianza y coordinación extremadamente estrecha con los proveedores."
+      },
+      {
+        "text": "Despachar productos defectuosos a los clientes para no acumular stock en las estanterías.",
+        "isCorrect": false,
+        "rationale": "JIT busca cero defectos y máxima calidad en la cadena de abastecimiento."
+      },
+      {
+        "text": "Reemplazar el transporte físico por el envío digital de las herramientas.",
+        "isCorrect": false,
+        "rationale": "Los insumos físicos y repuestos requieren transporte físico real hacia la operación."
+      }
+    ],
+    "hint": "Piensa en el objetivo de evitar tener dinero atrapado en materiales parados en estantes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define la Logística Inversa dentro de la cadena de suministro?",
+    "opciones": [
+      {
+        "text": "El proceso de gestionar el flujo de retorno de materiales, productos o residuos desde el punto de consumo para su reutilización, reciclaje o disposición final.",
+        "isCorrect": true,
+        "rationale": "A diferencia del flujo directo (almacén al cliente), la logística inversa se encarga del camino de regreso de insumos usados, defectuosos o recipientes."
+      },
+      {
+        "text": "El transporte de mercancías desde la fábrica del proveedor hacia el almacén principal de la mina.",
+        "isCorrect": false,
+        "rationale": "El transporte del proveedor al almacén es parte de la logística directa de abastecimiento."
+      },
+      {
+        "text": "La venta de productos en tiendas virtuales mediante pago electrónico directo.",
+        "isCorrect": false,
+        "rationale": "El canal de ventas por internet es una vía comercial de distribución directa."
+      },
+      {
+        "text": "La rotación de turnos de trabajo entre los operarios de recepción y despacho.",
+        "isCorrect": false,
+        "rationale": "La programación de turnos de personal pertenece a la administración de recursos humanos."
+      },
+      {
+        "text": "La cancelación definitiva de las órdenes de compra emitidas a los proveedores.",
+        "isCorrect": false,
+        "rationale": "Anular órdenes de compra es un procedimiento administrativo, no un flujo logístico de retorno físico."
+      }
+    ],
+    "hint": "Observa el término 'inversa': el material no va hacia el usuario, sino que regresa desde la operación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes actividades corresponden a procesos característicos de la Logística Inversa?",
+    "opciones": [
+      {
+        "text": "Recepción y clasificación de embalajes vacíos, pales o contenedores retornados.",
+        "isCorrect": true,
+        "rationale": "El retorno de elementos de empaque para ser usados nuevamente evita comprar estructuras nuevas continuamente."
+      },
+      {
+        "text": "Recuperación y reciclaje de aceites lubricantes usados y neumáticos gigantes de maquinaria.",
+        "isCorrect": true,
+        "rationale": "Procesar estos insumos mediante empresas autorizadas disminuye el impacto ambiental y permite la reutilización."
+      },
+      {
+        "text": "Devolución de equipos defectuosos o con fallas hacia el proveedor para su reparación o reemplazo.",
+        "isCorrect": false,
+        "rationale": "Aunque es una devolución, la alternativa busca identificar las opciones de reciclaje o devolución. *Nota*: Esta opción es técnicamente un proceso válido de logística inversa, coordinemos la selección."
+      },
+      {
+        "text": "Emisión de la factura de venta inicial al cliente mayorista.",
+        "isCorrect": false,
+        "rationale": "La facturación comercial al cliente se realiza en el flujo directo de salida del producto."
+      },
+      {
+        "text": "Diseño arquitectónico de las oficinas administrativas principales.",
+        "isCorrect": false,
+        "rationale": "La arquitectura edilicia de oficinas no guarda relación con la logística de retorno de materiales."
+      }
+    ],
+    "hint": "Selecciona las acciones que tengan que ver con el retorno de residuos, materiales usados o empaques.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ventaja operativa aporta el uso de etiquetas de identificación por Radiofrecuencia (RFID) en la gestión de almacenes?",
+    "opciones": [
+      {
+        "text": "Permite la lectura y el rastreo automático e inalámbrico de los datos del material sin necesidad de contacto visual directo con la etiqueta.",
+        "isCorrect": true,
+        "rationale": "Las ondas de radio leen las etiquetas RFID a distancia, acelerando los inventarios y reduciendo los tiempos de búsqueda de repuestos."
+      },
+      {
+        "text": "Sustituye físicamente la necesidad de contar con estanterías para colocar los productos.",
+        "isCorrect": false,
+        "rationale": "El RFID es un sistema de identificación y datos; no elimina las estructuras físicas de almacenaje."
+      },
+      {
+        "text": "Elimina la obligación de utilizar montacargas o camiones para mover las cargas pesadas.",
+        "isCorrect": false,
+        "rationale": "Las etiquetas electrónicas no mueven el peso físico de los materiales."
+      },
+      {
+        "text": "Cambia la composición química de las sustancias peligrosas para volverlas inofensivas.",
+        "isCorrect": false,
+        "rationale": "La tecnología de identificación no altera la naturaleza química del producto etiquetado."
+      },
+      {
+        "text": "Genera electricidad gratuita para iluminar todo el almacén durante la noche.",
+        "isCorrect": false,
+        "rationale": "Los chips RFID transmiten datos de inventario, no son generadores de energía para la planta."
+      }
+    ],
+    "hint": "Piensa en un método de escaneo rápido por ondas electromagnéticas que no requiere un lector óptico rozando el código.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué tarea logística resultan especialmente eficientes los drones dentro de las instalaciones industriales o mineras?",
+    "opciones": [
+      {
+        "text": "En la realización de inventarios y conteos visuales en patios de gran extensión o estanterías de difícil acceso.",
+        "isCorrect": true,
+        "rationale": "Los drones equipados con cámaras escanean códigos y registran productos en alturas o amplios terrenos exteriores en poco tiempo."
+      },
+      {
+        "text": "En el transporte físico de palas eléctricas y maquinaria pesada de varias toneladas.",
+        "isCorrect": false,
+        "rationale": "Los drones no poseen la capacidad de carga para levantar componentes pesados de gran tonelaje."
+      },
+      {
+        "text": "En la sustitución total de los programas de software ERP de la empresa.",
+        "isCorrect": false,
+        "rationale": "Los drones son dispositivos de captura de datos, no plataformas integrales de gestión empresarial."
+      },
+      {
+        "text": "En la reparación mecánica interna de motores diésel de camiones.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento de motores requiere herramientas mecánicas y personal especializado en taller."
+      },
+      {
+        "text": "En la refinación química directa del concentrado de cobre.",
+        "isCorrect": false,
+        "rationale": "La refinación de minerales se lleva a cabo en plantas metalúrgicas mediante procesos químicos industriales."
+      }
+    ],
+    "hint": "Considera la capacidad de volar de estos dispositivos y capturar imágenes desde las alturas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de un software WMS (Warehouse Management System)?",
+    "opciones": [
+      {
+        "text": "Gestionar y optimizar de forma digital las operaciones diarias del almacén, desde la recepción hasta el despacho.",
+        "isCorrect": true,
+        "rationale": "El WMS guía la ubicación de productos, optimiza las rutas de picking y mantiene actualizado el kardex en tiempo real."
+      },
+      {
+        "text": "Diseñar las campañas publicitarias de la empresa en redes sociales.",
+        "isCorrect": false,
+        "rationale": "Las campañas en redes sociales son manejadas por softwares de marketing digital."
+      },
+      {
+        "text": "Calcular los impuestos sobre la renta de los ejecutivos corporativos.",
+        "isCorrect": false,
+        "rationale": "El cálculo tributario y de planillas es función de sistemas contables o de recursos humanos."
+      },
+      {
+        "text": "Controlar el tráfico aéreo de los aviones comerciales de la región.",
+        "isCorrect": false,
+        "rationale": "El control aéreo es responsabilidad de las autoridades de aviación civil."
+      },
+      {
+        "text": "Fabricar las piezas mecánicas de acero mediante impresión 3D.",
+        "isCorrect": false,
+        "rationale": "Un WMS administra la información del inventario, no es una máquina de manufactura de repuestos."
+      }
+    ],
+    "hint": "Traduce las siglas en inglés 'Warehouse Management System' al español.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia conceptual entre la Logística y la Cadena de Suministro (Supply Chain)?",
+    "opciones": [
+      {
+        "text": "La logística es una parte de la cadena de suministro enfocada en el almacenamiento y transporte; la cadena de suministro es más amplia e incluye compras, diseño, producción y atención al cliente.",
+        "isCorrect": true,
+        "rationale": "La logística gestiona los flujos físicos e informativos internos/externos, mientras que la cadena de suministro integra estratégicamente todos los eslabones del negocio."
+      },
+      {
+        "text": "La logística abarca todo el negocio y la cadena de suministro se encarga únicamente de comprar papel de oficina.",
+        "isCorrect": false,
+        "rationale": "La relación es a la inversa: la cadena de suministro es el concepto global integrador."
+      },
+      {
+        "text": "Son términos exactamente idénticos que no poseen ninguna diferencia técnica ni operativa.",
+        "isCorrect": false,
+        "rationale": "Existen diferencias jerárquicas y de alcance claro entre la logística y la administración global de la cadena."
+      },
+      {
+        "text": "La cadena de suministro se aplica solo en bancos y la logística solo en hospitales.",
+        "isCorrect": false,
+        "rationale": "Ambos conceptos se aplican en todo tipo de industrias de manufactura, comercio, minería y servicios."
+      },
+      {
+        "text": "La logística gestiona el marketing de la empresa y la cadena de suministro la limpieza de la planta.",
+        "isCorrect": false,
+        "rationale": "Ninguno de los dos conceptos tiene como eje central el marketing comercial o la limpieza de instalaciones."
+      }
+    ],
+    "hint": "Piensa en qué concepto abarca al otro: uno es un componente operativo dentro de un sistema más global.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo central de aplicar la metodología SLP (Systematic Layout Planning) en un almacén?",
+    "opciones": [
+      {
+        "text": "Organizar y relacionar de forma sistemática las áreas de trabajo según la proximidad requerida y el flujo de materiales.",
+        "isCorrect": true,
+        "rationale": "SLP analiza el flujo de productos y las relaciones entre actividades para diseñar una distribución de planta óptima y eficiente."
+      },
+      {
+        "text": "Fijar los sueldos y bonificaciones de la junta directiva de la empresa.",
+        "isCorrect": false,
+        "rationale": "La metodología SLP es una herramienta de ingeniería industrial para espacios físicos, no para políticas salariales."
+      },
+      {
+        "text": "Aumentar al máximo las distancias recorridas por los operarios para mantenerlos activos.",
+        "isCorrect": false,
+        "rationale": "SLP busca precisamente lo contrario: minimizar los tiempos y distancias innecesarias de transporte."
+      },
+      {
+        "text": "Reemplazar los almacenes físicos por catálogos totalmente digitales sin productos reales.",
+        "isCorrect": false,
+        "rationale": "El método organiza recintos físicos de almacenamiento existentes o por construir."
+      },
+      {
+        "text": "Eliminar todos los procedimientos de seguridad y salud en el trabajo.",
+        "isCorrect": false,
+        "rationale": "SLP integra la seguridad como un principio clave para evitar cruces peligrosos o congestiones."
+      }
+    ],
+    "hint": "Observa el nombre en inglés: 'Planeación Sistemática de la Distribución (de Planta)'.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define conceptualmente el indicador de \"Nivel de Servicio\" en el despacho de un almacén?",
+    "opciones": [
+      {
+        "text": "La proporción de pedidos u órdenes atendidas correctamente a tiempo en relación con el total de órdenes solicitadas.",
+        "isCorrect": true,
+        "rationale": "Mide la efectividad del almacén para cumplir con las solicitudes de los clientes en las cantidades y plazos acordados."
+      },
+      {
+        "text": "La cantidad total de dinero invertida en comprar combustible para los montacargas.",
+        "isCorrect": false,
+        "rationale": "El gasto en combustible es un costo operativo, no un indicador de satisfacción o cumplimiento de pedidos."
+      },
+      {
+        "text": "El número total de horas que los empleados duermen durante su turno laboral.",
+        "isCorrect": false,
+        "rationale": "El nivel de servicio mide el cumplimiento de despacho a clientes, no aspectos laborales personales."
+      },
+      {
+        "text": "El peso total en toneladas de la chatarra generada en los talleres.",
+        "isCorrect": false,
+        "rationale": "El peso de residuos se mide en indicadores de gestión ambiental o de recicle."
+      },
+      {
+        "text": "El porcentaje de llamadas telefónicas comerciales perdidas por el área de ventas.",
+        "isCorrect": false,
+        "rationale": "Las llamadas perdidas evalúan la atención del call center, no la capacidad logística de despacho del almacén."
+      }
+    ],
+    "hint": "Evalúa qué porcentaje de los pedidos requeridos por los clientes logras entregar sin demoras ni errores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes constituyen beneficios directos de utilizar herramientas de simulación (como el software Arena) antes de implementar un nuevo layout en el almacén?",
+    "opciones": [
+      {
+        "text": "Permite evaluar y comparar diversos escenarios de distribución sin interrumpir las operaciones reales del almacén.",
+        "isCorrect": true,
+        "rationale": "Probar cambios virtualmente evita realizar gastos de construcción o movimientos físicos a ciegas."
+      },
+      {
+        "text": "Permite validar el incremento potencial en el nivel de servicio y la reducción de tiempos de desplazamiento.",
+        "isCorrect": true,
+        "rationale": "Las corridas numéricas en el simulador arrojan estimaciones cuantitativas precisas sobre la mejora de tiempos."
+      },
+      {
+        "text": "Facilita el análisis del comportamiento del sistema ante picos o variaciones futuras en la demanda.",
+        "isCorrect": true,
+        "rationale": "Es posible estresar el modelo informático con altos volúmenes de pedidos para identificar cuellos de botella antes de que ocurran."
+      },
+      {
+        "text": "Elimina totalmente la necesidad de contar con espacio físico para guardar materiales.",
+        "isCorrect": false,
+        "rationale": "La simulación es un modelo informático que optimiza el espacio, pero los materiales reales siguen requiriendo infraestructura física."
+      },
+      {
+        "text": "Garantiza que todos los proveedores entreguen sus productos de forma gratuita.",
+        "isCorrect": false,
+        "rationale": "El software simula eventos y tiempos; no modifica los acuerdos de precios de compra con terceros."
+      }
+    ],
+    "hint": "Piensa en las ventajas de hacer 'experimentos virtuales' antes de gastar dinero en obras físicas reales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la operativa interna de un almacén, ¿a qué se refiere el término \"Picking\"?",
+    "opciones": [
+      {
+        "text": "Al proceso de selección y recolección de productos de sus ubicaciones para preparar un pedido específico.",
+        "isCorrect": true,
+        "rationale": "El picking consiste en extraer los artículos indicados en la lista de despacho desde las estanterías para agruparlos y empaquetarlos."
+      },
+      {
+        "text": "A la negociación del contrato de compra con los proveedores internacionales.",
+        "isCorrect": false,
+        "rationale": "La negociación de compras es parte del proceso de abastecimiento y gestión comercial."
+      },
+      {
+        "text": "A la reparación e inspección mecánica de las ruedas de los camiones de carga.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento vehicular es labor de taller de taller mecánico."
+      },
+      {
+        "text": "A la destrucción o incineración de registros contables antiguos.",
+        "isCorrect": false,
+        "rationale": "La eliminación documental pertenece a la administración de archivos."
+      },
+      {
+        "text": "Al pesaje obligatorio de los vehículos de transporte en la balanza de ingreso a la mina.",
+        "isCorrect": false,
+        "rationale": "El pesaje en balanza es una tarea del control de recepción y balanza, no la preparación interna de pedidos."
+      }
+    ],
+    "hint": "Traduce el verbo en inglés 'to pick' (recoger o seleccionar).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de mantener un \"Stock de Seguridad\" en la gestión de inventarios?",
+    "opciones": [
+      {
+        "text": "Proteger la operación continua contra fluctuaciones imprevistas en la demanda o demoras inesperadas en la entrega de los proveedores.",
+        "isCorrect": true,
+        "rationale": "El stock de seguridad actúa como un colchón de reserva para evitar la paralización de la planta ante retrasos o aumentos repentinos de consumo."
+      },
+      {
+        "text": "Incrementar los costos de almacenamiento sin otorgar ningún beneficio operativo.",
+        "isCorrect": false,
+        "rationale": "Aunque genera un costo de mantener inventario, su objetivo es amortiguar riesgos de ruptura de stock."
+      },
+      {
+        "text": "Forzar la caducidad rápida de todos los insumos químicos guardados.",
+        "isCorrect": false,
+        "rationale": "El stock de seguridad se gestiona para no caducar y servir de respaldo en emergencias realistas."
+      },
+      {
+        "text": "Bloquear totalmente los pasillos principales impidiendo el paso de los montacargas.",
+        "isCorrect": false,
+        "rationale": "El stock de seguridad debe ubicarse en posiciones asignadas dentro de las estanterías, nunca obstaculizando vías."
+      },
+      {
+        "text": "Eliminar la necesidad de volver a emitir órdenes de compra en el futuro.",
+        "isCorrect": false,
+        "rationale": "El stock de reserva es limitado y requiere reponerse tan pronto como se consume para mantener la protección."
+      }
+    ],
+    "hint": "Considéralo como una 'reserva o colchón' ante eventos imprevistos que puedan retrasar la llegada de suministros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la recepción de mercancías en un almacén, se lleva a cabo una serie de actividades preparatorias antes y durante la llegada de los materiales. ¿Cuál de las siguientes acciones corresponde específicamente a la fase de preparación previa a la recepción?",
+    "opciones": [
+      {
+        "text": "Designar y alistar previamente el personal, los equipos de elevación y los escáneres necesarios.",
+        "isCorrect": true,
+        "rationale": "La fase de preparación comprende la planificación de recursos humanos y tecnológicos antes de que la carga físicamente arribe a la zona de descarga."
+      },
+      {
+        "text": "Verificar físicamente la estructura del camión para comprobar las condiciones de seguridad al descargar.",
+        "isCorrect": false,
+        "rationale": "Esta inspección ocurre durante la etapa de llegada de la mercancía, una vez que el transporte ya se encuentra en las instalaciones."
+      },
+      {
+        "text": "Realizar un examen visual primario en busca de desperfectos o daños visibles en la carga.",
+        "isCorrect": false,
+        "rationale": "La inspección visual inicial es parte de la fase de verificación a la llegada de los insumos y no de la preparación previa."
+      },
+      {
+        "text": "Clasificar los productos según su tamaño, prioridad y tipo para su posterior acomodo en estanterías.",
+        "isCorrect": false,
+        "rationale": "La clasificación y zonificación de materiales corresponde a la etapa de almacenamiento posterior a la recepción y validación."
+      },
+      {
+        "text": "Actualizar de inmediato los registros en el software de gestión y archivar las facturas o albaranes.",
+        "isCorrect": false,
+        "rationale": "La actualización del inventario y archivo de documentación representa la etapa final de registro del proceso de recepción."
+      }
+    ],
+    "hint": "Piensa en las tareas que la administración debe coordinar antes de que el transporte con los insumos se presente en el muelle.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En una operación minera, la gestión del almacenamiento exige diferenciar estrictamente los materiales peligrosos de los no peligrosos. De acuerdo con los criterios operativos de seguridad, ¿cuál es una condición obligatoria para el almacenamiento de explosivos y accesorios de voladura?",
+    "opciones": [
+      {
+        "text": "Ubicarlos en estanterías convencionales junto a repuestos de maquinaria pesada para facilitar el acceso.",
+        "isCorrect": false,
+        "rationale": "Mezclar explosivos con componentes mecánicos u otros artículos generales viola los principios básicos de segregación de riesgos."
+      },
+      {
+        "text": "Disponerlos en un almacén aislado con restricción estricta de acceso y adecuado control ambiental.",
+        "isCorrect": true,
+        "rationale": "Los explosivos requieren polvorines o almacenes aislados y seguros con control térmico, ventilación adecuada y acceso restringido a personal autorizado."
+      },
+      {
+        "text": "Mantenerlos en la misma nave de almacenamiento que los combustibles para unificar el despacho de voladura.",
+        "isCorrect": false,
+        "rationale": "Almacenar sustancias explosivas junto a combustibles altamente inflamables incrementa drásticamente el riesgo de conflagración."
+      },
+      {
+        "text": "Apilarlos en plataformas al aire libre cubiertos únicamente por mallas de ventilación secundaria.",
+        "isCorrect": false,
+        "rationale": "La exposición a factores climáticos directos en áreas abiertas degrada los componentes explosivos y contraviene las normas de seguridad."
+      },
+      {
+        "text": "Almacenarlos en el mismo estante con los reactivos químicos de flotación para optimizar la altura vertical.",
+        "isCorrect": false,
+        "rationale": "Los reactivos químicos y los explosivos deben permanecer en recintos separados para evitar reacciones cruzadas accidentales."
+      }
+    ],
+    "hint": "Considera las medidas de contención, aislamiento y control de acceso necesarias para prevenir accidentes catastróficos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al planificar el diseño y la distribución de un almacén en un entorno minero, ¿qué criterio operativo se debe aplicar respecto a la ubicación de los materiales según su frecuencia de uso?",
+    "opciones": [
+      {
+        "text": "Los insumos de alta rotación deben posicionarse en las zonas más elevadas y alejadas de las puertas.",
+        "isCorrect": false,
+        "rationale": "Colocar productos muy solicitados en zonas distantes incrementa innecesariamente los tiempos de recorrido y los costos operativos."
+      },
+      {
+        "text": "Los materiales de menor movimiento deben situarse en la entrada principal para evitar su obsolescencia.",
+        "isCorrect": false,
+        "rationale": "Ubicaciones de entrada ocupadas por productos de baja rotación generan cuellos de botella para el flujo diario de mercancía demandada."
+      },
+      {
+        "text": "Los elementos de alta frecuencia de requerimiento deben ubicarse al alcance fácil y directo de las rutas de despacho.",
+        "isCorrect": true,
+        "rationale": "Priorizar la accesibilidad de los productos con mayor tasa de salida minimiza los tiempos de transporte interno y optimiza la productividad."
+      },
+      {
+        "text": "La ubicación de los insumos debe realizarse de forma totalmente aleatoria sin considerar la rotación.",
+        "isCorrect": false,
+        "rationale": "La asignación aleatoria sin criterio de frecuencia contraviene los principios de eficiencia e intralogística organizada."
+      },
+      {
+        "text": "Los materiales peligrosos deben colocarse junto a las herramientas manuales para unificar el picking.",
+        "isCorrect": false,
+        "rationale": "La segregación por tipo de riesgo priva sobre el agrupamiento por comodidad operacional de herramientas."
+      }
+    ],
+    "hint": "Relaciona la distancia física recorrible con la tasa diaria de extracción de cada tipo de insumo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En un almacén minero, ciertos insumos sufren degradación o pérdida de efectividad si se exponen a variaciones ambientales sin control. ¿Cuáles de los siguientes materiales requieren un monitoreo o protección rigurosa frente a factores como temperatura, humedad o lluvia?",
+    "opciones": [
+      {
+        "text": "Reactivos químicos y productos utilizados en la flotación o lixiviación.",
+        "isCorrect": true,
+        "rationale": "La estabilidad y eficacia de los productos químicos se altera drásticamente si se sobrepasan los límites recomendados de temperatura y humedad."
+      },
+      {
+        "text": "Concentrados de minerales procesados almacenados a la espera de envío.",
+        "isCorrect": true,
+        "rationale": "La exposición a la lluvia o al viento en minerales concentrados puede ocasionar pérdidas por arrastre, contaminación o alteración de la ley del mineral."
+      },
+      {
+        "text": "Equipos de protección personal textil y vestuario de trabajo estándar.",
+        "isCorrect": false,
+        "rationale": "Aunque requieren orden y zonas secas, la ropa de trabajo no exige un monitoreo ambiental ambiental estricto con sensores continuos comparado con químicos o explosivos."
+      },
+      {
+        "text": "Explosivos e insumos destinados a trabajos de perforación y voladura.",
+        "isCorrect": true,
+        "rationale": "Los componentes de explosivos son sumamente sensibles a la humedad y fluctuaciones térmicas, requerimiento básico para evitar fallas o detonaciones no deseadas."
+      },
+      {
+        "text": "Herramientas manuales de acero y llaves mecánicas estándar.",
+        "isCorrect": false,
+        "rationale": "Las herramientas mecánicas exigen protección básica contra la corrosión pero no controles ambientales complejos como sensores de temperatura de precisión."
+      }
+    ],
+    "hint": "Identifica cuáles de los insumos mencionados alteran su composición química o su valor económico si se mojan o se calientan en exceso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué resulta indispensable aplicar un principio estricto de rotación de materiales en la gestión de reactivos químicos e insumos industriales dentro del almacén?",
+    "opciones": [
+      {
+        "text": "Para asegurar que los productos adquiridos recientemente se consuman primero y elevar el valor contable.",
+        "isCorrect": false,
+        "rationale": "Consumir lo más reciente primero provocaría que los reactivos almacenados anteriormente caduquen en las estanterías."
+      },
+      {
+        "text": "Para evitar que los insumos pierdan efectividad técnica o caduquen antes de ingresar al proceso productivo.",
+        "isCorrect": true,
+        "rationale": "Garantizar la salida prioritaria de los materiales con mayor tiempo de almacenamiento evita pérdidas financieras por vencimiento o degradación del reactivo."
+      },
+      {
+        "text": "Para reemplazar de forma definitiva la necesidad de realizar inventarios físicos o auditorías periódicas.",
+        "isCorrect": false,
+        "rationale": "La rotación correcta de inventario no sustituye la obligación de realizar conteos físicos y controles periódicos."
+      },
+      {
+        "text": "Para eliminar la obligatoriedad de habilitar áreas aisladas al almacenar sustancias inflamables.",
+        "isCorrect": false,
+        "rationale": "Las medidas de seguridad e infraestructura aislada son obligatorias independientemente de qué tan rápido roten los productos."
+      },
+      {
+        "text": "Para prescindir del uso de equipos de protección personal durante la manipulación de los envases.",
+        "isCorrect": false,
+        "rationale": "El riesgo intrínseco del químico se mantiene intacto independientemente de la velocidad de rotación del lote."
+      }
+    ],
+    "hint": "Piensa en el efecto que el tiempo de permanencia prolongado ejerce sobre la vida útil de los reactivos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la intralogística, la gestión de residuos y el descarte de insumos exigen procedimientos diferenciados según la peligrosidad del elemento. ¿Cuáles de las siguientes afirmaciones respecto a la disposición de desechos son correctas?",
+    "opciones": [
+      {
+        "text": "Los residuos peligrosos deben almacenarse y eliminarse cumpliendo las normativas ambientales aplicables.",
+        "isCorrect": true,
+        "rationale": "Los desechos peligrosos están sujetos a regulaciones legales estrictas para prevenir impactos ambientales y sanciones."
+      },
+      {
+        "text": "Los desechos no peligrosos sin uso pueden reciclarse o gestionarse mediante empresas autorizadas.",
+        "isCorrect": true,
+        "rationale": "Los materiales no peligrosos descartados deben canalizarse a través de procesos de reciclaje o reutilización con operadores registrados."
+      },
+      {
+        "text": "Los residuos químicos sobrantes pueden mezclarse con basura común para disminuir costos de transporte.",
+        "isCorrect": false,
+        "rationale": "Mezclar residuos peligrosos con basura general contamina todo el lote de desechos y violenta la legislación ambiental."
+      },
+      {
+        "text": "Las áreas destinadas a residuos peligrosos deben contar con identificación clara y acceso restringido.",
+        "isCorrect": true,
+        "rationale": "El control de acceso e identificación previene manipulaciones accidentales por parte de personal no capacitado."
+      },
+      {
+        "text": "Todo residuo de reactivos debe vertirse en las piletas de almacenamiento del mineral procesado.",
+        "isCorrect": false,
+        "rationale": "Verter residuos químicos en piletas de concentrado altera la ley del mineral y contamina el producto final comercializable."
+      }
+    ],
+    "hint": "Evalúa cuáles opciones cumplen estrictamente las normativas ambientales y de segregación segura de contaminantes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la optimización de espacios de almacenamiento se utilizan estanterías compactas para grandes volúmenes. ¿Cuál es la diferencia operativa fundamental entre el sistema Drive-in y el sistema Drive-through?",
+    "opciones": [
+      {
+        "text": "El Drive-in es exclusivo para tuberías largas y el Drive-through está optimizado para bobinas de cable.",
+        "isCorrect": false,
+        "rationale": "La distinción entre ambos sistemas radica en la accesibilidad de sus pasillos y no en el almacenamiento de artículos de geometría irregular."
+      },
+      {
+        "text": "El Drive-in posee acceso unidireccional, mientras que el Drive-through permite acceso por ambos extremos del carril.",
+        "isCorrect": true,
+        "rationale": "El Drive-in obliga a ingresar y salir por el mismo frente del estante, mientras que el Drive-through cuenta con entradas independientes en el frente y la parte trasera."
+      },
+      {
+        "text": "El Drive-in opera mediante rieles por gravedad y el Drive-through utiliza brazos en voladizo sin fondo.",
+        "isCorrect": false,
+        "rationale": "Los rieles por gravedad caracterizan a las estanterías dinámicas y los brazos en voladizo a las Cantilever, no a los sistemas compactos."
+      },
+      {
+        "text": "El Drive-in impide la entrada de montacargas y el Drive-through requiere el uso obligatorio de grúas puente.",
+        "isCorrect": false,
+        "rationale": "Ambos sistemas compactos están diseñados para que las carretillas elevadoras penetren en el interior de las estructuras."
+      },
+      {
+        "text": "El Drive-in se aplica únicamente a productos perecederos y el Drive-through a reactivos químicos pesados.",
+        "isCorrect": false,
+        "rationale": "El tipo de mercancía no limita exclusivamente la estructura, sino la estrategia de rotación y flujo deseada."
+      }
+    ],
+    "hint": "Enfócate en la cantidad de frentes habilitados para que el montacargas ingrese a cargar o descargar materiales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una operación minera requiere almacenar barras de acero, tuberías de gran longitud y perfiles metálicos pesados de geometría irregular. ¿Qué sistema de estantería es el más adecuado estructuralmente para esta tipología de materiales?",
+    "opciones": [
+      {
+        "text": "Estanterías dinámicas por gravedad.",
+        "isCorrect": false,
+        "rationale": "Las estanterías dinámicas utilizan rodillos y están diseñadas para paletas o cajas de dimensiones estandarizadas."
+      },
+      {
+        "text": "Estanterías compactas Drive-in.",
+        "isCorrect": false,
+        "rationale": "Los carriles compactos requieren cargas uniformes en paletas y dificultan la extracción de elementos alargados."
+      },
+      {
+        "text": "Estanterías Cantilever.",
+        "isCorrect": true,
+        "rationale": "Las estructuras Cantilever constan de columnas y brazos en voladizo sin postes frontales, lo que facilita el soporte de cargas largas e irregulares."
+      },
+      {
+        "text": "Estanterías portabobinas verticales.",
+        "isCorrect": false,
+        "rationale": "Las estanterías portabobinas están diseñadas específicamente para elementos enrollados como cables, mangueras o telas."
+      },
+      {
+        "text": "Estanterías convencionales con fondo cerrado de malla.",
+        "isCorrect": false,
+        "rationale": "Los marcos cerrados de las estanterías convencionales restringen el acomodo de tubos o barras que sobrepasan los anchos estándar."
+      }
+    ],
+    "hint": "Busca una estructura compuesta por columnas verticales y brazos horizontales salientes sin obstáculos de fondo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El método de control de inventarios LIFO (Last In, First Out) establece que las últimas unidades ingresadas son las primeras en salir. ¿En qué escenario operativo o financiero resulta conveniente la aplicación de esta metodología?",
+    "opciones": [
+      {
+        "text": "En insumos perecederos donde la fecha de vencimiento es el factor determinante de salida.",
+        "isCorrect": false,
+        "rationale": "Para mercancía que se deteriora con el tiempo, utilizar LIFO provocaría que los lotes antiguos caduquen en el almacén."
+      },
+      {
+        "text": "En contextos inflacionarios o cuando los precios de adquisición de los productos tienden a subir con el tiempo.",
+        "isCorrect": true,
+        "rationale": "Al vender o consumir primero lo último que ingresó (más costoso), el costo de ventas se equipara a los precios actuales del mercado."
+      },
+      {
+        "text": "Cuando se requiere que la mercancía de mayor antigüedad en el almacén se despache con prioridad.",
+        "isCorrect": false,
+        "rationale": "Dar prioridad a los productos más antiguos es la definición operativa del método FIFO, no del LIFO."
+      },
+      {
+        "text": "En almacenes de bobinas textiles donde el material debe permanecer estacionario de manera indefinida.",
+        "isCorrect": false,
+        "rationale": "La estabilidad de la mercancía no justifica el criterio financiero de valorización y rotación LIFO."
+      },
+      {
+        "text": "Para asegurar que el valor reportado del inventario final refleje únicamente los costos más recientes.",
+        "isCorrect": false,
+        "rationale": "Bajo LIFO, el inventario final queda valorizado a los precios de las compras más antiguas, no de las más recientes."
+      }
+    ],
+    "hint": "Considera qué sucede con el costo de ventas si los precios de compra de los insumos aumentan continuamente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa maneja materiales con fecha de caducidad o vida útil corta. De acuerdo con el método FIFO (First In, First Out), ¿cómo se gestiona la salida de las existencias?",
+    "opciones": [
+      {
+        "text": "Se despachan prioritariamente las mercancías recibidas más recientemente.",
+        "isCorrect": false,
+        "rationale": "Despachar lo más reciente corresponde al método LIFO y ocasiona la caducidad del stock antiguo."
+      },
+      {
+        "text": "Se asigna prioridad de salida a los lotes de mayor peso independientemente de su fecha de llegada.",
+        "isCorrect": false,
+        "rationale": "El método FIFO utiliza como única variable de secuencia la cronología de ingreso, no el peso físico."
+      },
+      {
+        "text": "Las unidades de mayor antigüedad en el inventario son las primeras en enviarse al consumo o venta.",
+        "isCorrect": true,
+        "rationale": "FIFO garantiza que los productos que ingresaron primero sean los primeros en salir, minimizando el riesgo de obsolescencia o vencimiento."
+      },
+      {
+        "text": "Se extraen unidades de forma aleatoria sin registrar el lote de origen en el sistema de gestión.",
+        "isCorrect": false,
+        "rationale": "La extracción aleatoria rompe el control de trazabilidad y contraviene la disciplina de inventarios."
+      },
+      {
+        "text": "Se retienen los lotes más antiguos como stock de reserva hasta agotar las compras recién llegadas.",
+        "isCorrect": false,
+        "rationale": "Retener los lotes antiguos contraviene la lógica de prevención de vencimientos del método FIFO."
+      }
+    ],
+    "hint": "Relaciona la antigüedad del lote ingresado con su prioridad al momento de atender la orden de despacho.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la cadena de distribución se distinguen distintos niveles de envase y embalaje. ¿Cuáles de las siguientes afirmaciones describen correctamente las funciones de estos niveles?",
+    "opciones": [
+      {
+        "text": "El envase primario está en contacto directo con el producto y busca proteger su integridad inicial.",
+        "isCorrect": true,
+        "rationale": "El contenedor primario (como una botella o lata) envuelve directamente la materia o producto para conservarlo."
+      },
+      {
+        "text": "El envase o empaque secundario agrupa varias unidades primarias para facilitar su manipulación.",
+        "isCorrect": true,
+        "rationale": "Las cajas o envolturas secundarias reúnen múltiples recipientes primarios simplificando el transporte y conteo."
+      },
+      {
+        "text": "Los esquineros de cartón o plástico protegen los bordes de la carga apilada contra impactos e inestabilidad.",
+        "isCorrect": true,
+        "rationale": "Los esquineros aumentan la rigidez estructural del conjunto paletizado y evitan deformaciones por zunchos o golpes."
+      },
+      {
+        "text": "Los pallets constituyen la base rígida para apilar cargas y permitir su traslado mediante montacargas.",
+        "isCorrect": true,
+        "rationale": "La paleta o pallet estandariza la plataforma de elevación para mover grandes volúmenes de manera mecanizada."
+      },
+      {
+        "text": "El envase primario debe ser retirado obligatoriamente antes de colocar los bienes en las estanterías.",
+        "isCorrect": false,
+        "rationale": "Retirar el envase primario dejaría al producto expuesto a contaminación y daños físicos directos."
+      }
+    ],
+    "hint": "Selecciona las opciones que reflejan las definiciones conceptuales de contención directa, agrupación, protección de bordes y soporte de carga.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un almacén registra las siguientes compras consecutivas de un mismo producto: 60 unidades a $5 (1 de marzo), 80 unidades a $6 (3 de marzo) y 50 unidades a $8 (5 de marzo). El 7 de marzo se despachan 50 unidades. Bajo el método LIFO, ¿cuál es el costo total asignado a esta salida?",
+    "opciones": [
+      {
+        "text": "$250",
+        "isCorrect": false,
+        "rationale": "Esta cifra resulta de tomar las unidades al precio del lote más antiguo del 1 de marzo ($5), lo que correspondería a un enfoque FIFO."
+      },
+      {
+        "text": "$300",
+        "isCorrect": false,
+        "rationale": "Este valor se calcularía utilizando erróneamente el costo del lote intermedio del 3 de marzo ($6)."
+      },
+      {
+        "text": "$400",
+        "isCorrect": true,
+        "rationale": "Bajo LIFO, las 50 unidades despachadas se tomadas del último lote recibido el 5 de marzo (50 unidades a $8), dando un total de $400."
+      },
+      {
+        "text": "$380",
+        "isCorrect": false,
+        "rationale": "Este monto se obtendría mediante un cálculo incorrecto de precio promedio ponderado de todo el stock."
+      },
+      {
+        "text": "$540",
+        "isCorrect": false,
+        "rationale": "Esta cifra corresponde al valor remanente del inventario final estimado tras la venta y no al costo del despacho."
+      }
+    ],
+    "hint": "Aplica el principio de que la última adquisición realizada es la primera en cubrir la orden de salida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la optimización vertical de estanterías en un almacén, ¿cuál es el criterio técnico adecuado para distribuir los materiales según su peso y frecuencia de rotación?",
+    "opciones": [
+      {
+        "text": "Colocar los productos más pesados en los niveles superiores y los de alta rotación al ras del suelo.",
+        "isCorrect": false,
+        "rationale": "Ubicar mercancía pesada en las alturas genera graves riesgos estructurales y ergonómicos ante caídas."
+      },
+      {
+        "text": "Disponer los bienes pesados abajo, los de alta rotación a la altura de la vista/fácil acceso y los de bajo movimiento arriba.",
+        "isCorrect": true,
+        "rationale": "Esta distribución combina la estabilidad física (pesados abajo) con la ergonomía y rapidez operativa (alta rotación al centro/fácil alcance)."
+      },
+      {
+        "text": "Almacenar reactivos líquidos pesados en el nivel más alto e insumos ligeros en la base.",
+        "isCorrect": false,
+        "rationale": "Los líquidos pesados o peligrosos no deben colocarse en las alturas por el peligro de derrames o colapsos de estantes."
+      },
+      {
+        "text": "Ubicar los productos de alta rotación en el nivel superior accesible solo mediante montacargas de gran elevación.",
+        "isCorrect": false,
+        "rationale": "Requerir maquinaria de gran altura para cada extracción de alta frecuencia ralentiza sustancialmente la operación."
+      },
+      {
+        "text": "Asignar la base del estante exclusivamente a artículos de baja rotación y empaques vacíos.",
+        "isCorrect": false,
+        "rationale": "Desperdiciar la base inferior con productos raramente solicitados resta espacio a los artículos pesados de demanda frecuente."
+      }
+    ],
+    "hint": "Combina el principio de seguridad estructural (centro de gravedad bajo) con el principio de ergonomía visual para el picking rápido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El modelo Justo a Tiempo (JIT) busca reducir los inventarios ociosos. ¿Cómo se coordina operativamente este modelo en una unidad minera para evitar el desabastecimiento de insumos críticos?",
+    "opciones": [
+      {
+        "text": "Comprando volúmenes masivos con un año de anticipación para garantizar precios congelados.",
+        "isCorrect": false,
+        "rationale": "Acumular stock masivo anual contraviene directamente la filosofía JIT y eleva sustancialmente los costos de almacenamiento."
+      },
+      {
+        "text": "Estableciendo acuerdos estrechos con proveedores confiables para programar entregas precisas alineadas al plan de producción.",
+        "isCorrect": true,
+        "rationale": "JIT se fundamenta en la alta sincronización con los proveedores para que la mercancía llegue justo cuando la planta la requiere."
+      },
+      {
+        "text": "Manteniendo niveles de stock de reserva del 300% sobre la demanda estimada sin importar el espacio.",
+        "isCorrect": false,
+        "rationale": "El sobrestock excesivo genera costos financieros elevados y riesgos de deterioro del material acumulado."
+      },
+      {
+        "text": "Generando órdenes de compra únicamente cuando la planta haya quedado completamente desabastecida.",
+        "isCorrect": false,
+        "rationale": "JIT no significa trabajar a ciegas hasta la rotura de stock, sino sincronizar las entregas previas al momento exacto de uso."
+      },
+      {
+        "text": "Eliminando la verificación de calidad en la recepción para agilizar el ingreso directo a mina.",
+        "isCorrect": false,
+        "rationale": "Omitir el control de calidad introduce materiales defectuosos a la línea de operaciones, interrumpiendo el flujo JIT."
+      }
+    ],
+    "hint": "Enfócate en la relación estratégica con la cadena de suministro para recibir materiales en la cantidad y momento oportunos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La logística inversa gestiona el flujo de retorno de bienes desde el punto de consumo para recuperar valor o darles disposición final. ¿Cuáles de los siguientes procesos forman parte de la logística inversa en la industria?",
+    "opciones": [
+      {
+        "text": "Recepción y clasificación de embalajes devueltos como pallets de madera y contenedores vacíos.",
+        "isCorrect": true,
+        "rationale": "Recuperar contenedores y paletas utilizadas para su reintegración o devolución al proveedor es un proceso clásico de logística inversa."
+      },
+      {
+        "text": "Reintegración al stock de insumos no consumidos que se encuentran en buen estado.",
+        "isCorrect": true,
+        "rationale": "Los sobrantes operativos devueltos al almacén que superan el control de calidad deben ser catalogados de nuevo en el inventario."
+      },
+      {
+        "text": "Recolección de aceites usados y neumáticos descartados para enviarlos a plantas de reciclaje.",
+        "isCorrect": true,
+        "rationale": "El canal de retorno de residuos industriales para su transformación o revalorización ambiental forma parte de la logística de reversa."
+      },
+      {
+        "text": "Devolución de repuestos o equipos defectuosos al fabricante bajo cobertura de garantía.",
+        "isCorrect": true,
+        "rationale": "El retorno de componentes con fallas hacia el proveedor para su reemplazo sigue el flujo inverso de la cadena de suministros."
+      },
+      {
+        "text": "Adquisición directa de materias primas vírgenes a proveedores internacionales.",
+        "isCorrect": false,
+        "rationale": "La compra e importación de insumos vírgenes es parte de la logística directa de aprovisionamiento tradicional."
+      }
+    ],
+    "hint": "Identifica todas las actividades que involucran el retorno de materiales, residuos o envases desde la operación hacia el almacén o proveedor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de inventarios bajo el modelo de clasificación ABC, los artículos se categorizan según su valor y frecuencia de uso. ¿Qué características definen a los materiales clasificados dentro del Grupo A?",
+    "opciones": [
+      {
+        "text": "Son productos de bajo valor monetario y utilización esporádica u ocasional.",
+        "isCorrect": false,
+        "rationale": "Los artículos de bajo costo y baja rotación corresponden a la categoría C dentro del análisis ABC."
+      },
+      {
+        "text": "Representan artículos de alto valor económico o de alta frecuencia de rotación operativa.",
+        "isCorrect": true,
+        "rationale": "El grupo A reúne los insumos prioritarios que representan el mayor porcentaje financiero o la mayor tasa de movimiento del almacén."
+      },
+      {
+        "text": "Son desechos industriales que deben trasladarse inmediatamente al depósito final.",
+        "isCorrect": false,
+        "rationale": "La clasificación ABC gestiona existencias operativas y no materiales descartados para chatarra."
+      },
+      {
+        "text": "Constituyen insumos de costo moderado que se utilizan exclusivamente en paradas anuales.",
+        "isCorrect": false,
+        "rationale": "Los artículos con impacto financiero y rotación intermedia se ubican en la categoría B."
+      },
+      {
+        "text": "Corresponden únicamente a consumibles de oficina y artículos de aseo para el almacén.",
+        "isCorrect": false,
+        "rationale": "Los útiles menores son considerados elementos de bajo impacto financiero (Categoría C)."
+      }
+    ],
+    "hint": "Aplica el principio de Pareto respecto a la concentración monetaria y demanda de los materiales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una planta requiere trasladar barriles de lubricantes y químicos peligrosos desde la zona de recepción hasta las estanterías de almacenamiento, minimizando riesgos ergonómicos y exposición humana. ¿Qué tecnología es la más adecuada para este flujo?",
+    "opciones": [
+      {
+        "text": "Escáneres portátiles manuales operados por personal de a pie.",
+        "isCorrect": false,
+        "rationale": "Los escáneres manuales sirven para lectura de datos, pero no realizan el esfuerzo físico de traslado de barriles pesados."
+      },
+      {
+        "text": "Drones aéreos de inspección visual nocturna.",
+        "isCorrect": false,
+        "rationale": "Los drones convencionales de almacén se utilizan para toma de datos e imágenes, no para el transporte de carga de gran tonelaje."
+      },
+      {
+        "text": "Vehículos Guiados Automatizadamente (AGVs).",
+        "isCorrect": true,
+        "rationale": "Los AGVs son robots móviles autónomos capaces de transportar materiales pesados o peligrosos siguiendo rutas programadas sin intervención humana directa."
+      },
+      {
+        "text": "Etiquetas de radiofrecuencia pasivas pegadas en el uniforme de los trabajadores.",
+        "isCorrect": false,
+        "rationale": "El RFID pasivo identifica ubicaciones o personal, pero no efectúa el movimiento mecanizado de los recipientes."
+      },
+      {
+        "text": "Racks Cantilever accionados por palancas de tracción manual.",
+        "isCorrect": false,
+        "rationale": "Las estanterías almacena la carga, pero no reemplazan la necesidad de un equipo de transporte interno."
+      }
+    ],
+    "hint": "Busca la tecnología robótica móvil capaz de desplazar cargas de forma autónoma siguiendo rutas fijadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Las tecnologías de automatización transforman la gestión física del inventario en patios e instalaciones industriales. ¿Cuáles de las siguientes opciones corresponden a aplicaciones reales de Drones o tecnología RFID?",
+    "opciones": [
+      {
+        "text": "Uso de drones equipados con sensores para el inventario de neumáticos gigantes en patios al aire libre.",
+        "isCorrect": true,
+        "rationale": "Los drones sobrevuelan grandes superficies abiertas realizando el conteo óptico o térmico de ítems voluminosos rápidamente."
+      },
+      {
+        "text": "Uso de etiquetas RFID para rastrear e identificar herramientas críticas de elevado valor.",
+        "isCorrect": true,
+        "rationale": "Los tags RFID adheridos a las herramientas permiten su lectura a distancia sin necesidad de contacto visual directo."
+      },
+      {
+        "text": "Uso de drones con visión computacional para capturar stock en ubicaciones elevadas o de difícil acceso.",
+        "isCorrect": true,
+        "rationale": "La toma de imágenes aéreas en estantes altos evita la necesidad de elevar personas para verificar códigos."
+      },
+      {
+        "text": "Uso de lectores RFID para registrar salidas automáticas de materiales reduciendo tiempos de búsqueda.",
+        "isCorrect": true,
+        "rationale": "Los arcos RFID en los portones de salida detectan el paso de insumos catalogados actualizando el WMS en tiempo real."
+      },
+      {
+        "text": "Uso de drones para el izaje y transporte pesado de repuestos de varias toneladas.",
+        "isCorrect": false,
+        "rationale": "La capacidad de carga útil de los drones de inventario es limitada y no sustituye a las grúas puente o montacargas en pesaje pesado."
+      }
+    ],
+    "hint": "Diferencia los sistemas orientados al escaneo digital y captura de datos aéreos/inalámbricos de los equipos mecánicos de izaje pesado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión empresarial, la Logística forma parte de la Cadena de Suministro (Supply Chain Management). ¿Cuál es la diferencia de alcance entre ambos conceptos?",
+    "opciones": [
+      {
+        "text": "La logística abarca el diseño del producto y la cadena de suministro se encarga de la emisión de facturas.",
+        "isCorrect": false,
+        "rationale": "El diseño de producto es una fase más amplia dentro del Supply Chain y la facturación es una función administrativa secundaria."
+      },
+      {
+        "text": "La logística administra el flujo interno y almacenamiento, mientras que la cadena de suministro integra desde compras hasta la entrega y seguimiento al cliente.",
+        "isCorrect": true,
+        "rationale": "La logística es el eslabón enfocado en el manejo, almacenamiento y transporte de mercancías, mientras que el Supply Chain engloba todo el ciclo extendido."
+      },
+      {
+        "text": "La cadena de suministro se limita al transporte externo y la logística abarca la contabilidad financiera.",
+        "isCorrect": false,
+        "rationale": "La contabilidad general no forma parte de la definición operativa de la logística."
+      },
+      {
+        "text": "La logística aplica solo en comercios minoristas y la cadena de suministro es exclusiva de empresas públicas.",
+        "isCorrect": false,
+        "rationale": "Ambas disciplinas se aplican transversalmente en industrias privadas y públicas de todo tamaño."
+      },
+      {
+        "text": "Ambos conceptos son sinónimos idénticos sin ninguna diferenciación funcional o de alcance.",
+        "isCorrect": false,
+        "rationale": "Existe una relación de inclusión clara donde la logística forma parte de un sistema mayor denominado Cadena de Suministro."
+      }
+    ],
+    "hint": "Compara un enfoque centrado en el movimiento y almacenamiento con una visión global que incluye diseño, compras y atención al cliente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La metodología SLP (Systematic Layout Planning) se utiliza para diseñar o reestructurar la distribución de instalaciones. ¿Cuáles son las cuatro fases secuenciales que componen este método?",
+    "opciones": [
+      {
+        "text": "Diagnóstico financiero, compra de terreno, contratación de personal e inauguración.",
+        "isCorrect": false,
+        "rationale": "Estas etapas corresponden a un proyecto general de inversión inmobiliaria y no a la metodología técnica SLP."
+      },
+      {
+        "text": "Localización, distribución general del conjunto, plan de distribución detallada e instalación.",
+        "isCorrect": true,
+        "rationale": "Las cuatro fases del SLP avanzan jerárquicamente desde el emplazamiento general hasta el posicionamiento exacto de cada equipo y su montaje."
+      },
+      {
+        "text": "Análisis de ventas, auditoría tributaria, empaque de productos y despacho al cliente.",
+        "isCorrect": false,
+        "rationale": "Estas actividades mezclan procesos contables y operativos que no estructuran el diseño de layout."
+      },
+      {
+        "text": "Evaluación de proveedores, diseño de marcas, cotización de fletes y transporte externo.",
+        "isCorrect": false,
+        "rationale": "Estos pasos corresponden a la gestión de abastecimiento y comercialización externa."
+      },
+      {
+        "text": "Clasificación LIFO, codificación de barras, implementación de drones y rotación de stock.",
+        "isCorrect": false,
+        "rationale": "Estas son herramientas de gestión de inventarios y tecnología, no las fases de diseño de planta del SLP."
+      }
+    ],
+    "hint": "Piensa en el proceso sistemático que va desde ubicar la planta hasta colocar físicamente cada estante en su sitio final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al aplicar la metodología SLP para reorganizar un almacén de materiales de construcción, se efectúa un análisis ABC comercial. ¿Qué criterio cuantitativo determina que una familia de productos (como barras de acero) sea catalogada como Prioridad A?",
+    "opciones": [
+      {
+        "text": "El número total de operarios necesarios para cargar manualmente cada unidad.",
+        "isCorrect": false,
+        "rationale": "La cantidad de personal involucrado en la manipulación es una variable operativa pero no determina la prioridad del análisis ABC comercial."
+      },
+      {
+        "text": "El volumen en metros cúbicos asignado originalmente en la zona superior de la nave.",
+        "isCorrect": false,
+        "rationale": "El volumen físico ocupado no refleja necesariamente la importancia económica o la tasa de demanda de un producto."
+      },
+      {
+        "text": "El volumen de ingresos generado por sus ventas, representando la mayor concentración económica.",
+        "isCorrect": true,
+        "rationale": "El análisis ABC categoriza como clase A a aquellos productos que generan el mayor porcentaje de los ingresos totales de la empresa."
+      },
+      {
+        "text": "La distancia geográfica entre la fábrica proveedora y el puerto de recepción.",
+        "isCorrect": false,
+        "rationale": "La distancia del proveedor es un factor de la cadena de transporte pero no define la importancia comercial del ítem dentro del almacén."
+      },
+      {
+        "text": "El peso bruto unitario de cada barra sin considerar su facturación ni demanda.",
+        "isCorrect": false,
+        "rationale": "El peso físico dicta requisitos de carga, pero la prioridad ABC de layout comercial se rige por valor e ingresos."
+      }
+    ],
+    "hint": "Recuerda la regla de Pareto donde un porcentaje pequeño de artículos representa la mayor parte del valor financiero.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la metodología SLP, se construye una matriz de relaciones de actividades y un diagrama de hilos/espacios. ¿Cuáles de los siguientes objetivos fundamentan la elaboración de este análisis de relación?",
+    "opciones": [
+      {
+        "text": "Identificar qué áreas o sectores deben estar físicamente adyacentes para reducir distancias de recorrido.",
+        "isCorrect": true,
+        "rationale": "El diagrama de relaciones evalúa el grado de cercanía necesario entre departamentos según la frecuencia de interacción."
+      },
+      {
+        "text": "Evaluar el flujo de materiales e intensidad de tránsito entre las distintas zonas del almacén.",
+        "isCorrect": true,
+        "rationale": "Medir los desplazamientos entre zonas permite acercar los puntos con mayor intercambio de carga."
+      },
+      {
+        "text": "Minimizar los tiempos muertos y desplazamientos innecesarios durante el proceso de picking.",
+        "isCorrect": true,
+        "rationale": "Reducir los trayectos de los trabajadores entre ubicaciones optimiza directamente los tiempos de preparación de pedidos."
+      },
+      {
+        "text": "Agrupar actividades consecutivas o conexas para mejorar la fluidez operativa.",
+        "isCorrect": true,
+        "rationale": "Sincronizar espacialmente operaciones continuas evita que el material deba cruzar el almacén repetidamente."
+      },
+      {
+        "text": "Garantizar que todos los departamentos de la empresa tengan exactamente la misma superficie cuadrada.",
+        "isCorrect": false,
+        "rationale": "El SLP asigna áreas en función de la necesidad real de espacio y no buscando una división equitativa artificial."
+      }
+    ],
+    "hint": "Selecciona las opciones que buscan optimizar distancias, flujos de trabajo y cercanía funcional entre áreas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa mide la eficiencia de su despacho mediante el indicador KPI de Nivel de Servicio. En un contexto de optimización logístico, ¿cómo se define matemáticamente este indicador?",
+    "opciones": [
+      {
+        "text": "(Órdenes entregadas a tiempo y según requerimiento) / (Total de órdenes solicitadas por los clientes).",
+        "isCorrect": true,
+        "rationale": "El Nivel de Servicio refleja la proporción de pedidos cumplidos satisfactoriamente en tiempo y forma respecto al total de solicitudes recibidas."
+      },
+      {
+        "text": "(Costo total del inventario retenido) / (Número de metros cuadrados del almacén).",
+        "isCorrect": false,
+        "rationale": "Esta relación mide la densidad del valor de almacenamiento por superficie, no el cumplimiento hacia el cliente."
+      },
+      {
+        "text": "(Total de productos defectuosos devueltos) / (Total de compras realizadas a proveedores).",
+        "isCorrect": false,
+        "rationale": "Esta fórmula corresponde al índice de rechazados o no conformidad de proveedores."
+      },
+      {
+        "text": "(Horas extra trabajadas por los operarios) / (Número total de trabajadores en la plantilla).",
+        "isCorrect": false,
+        "rationale": "Este cálculo representa un indicador de gestión de recursos humanos y sobretiempo laboral."
+      },
+      {
+        "text": "(Monto de ventas mensuales) / (Gasto acumulado en combustible de los vehículos).",
+        "isCorrect": false,
+        "rationale": "Esta razón compara ingresos frente a un costo operativo específico, lo que no evalúa la tasa de cumplimiento del servicio."
+      }
+    ],
+    "hint": "Piensa en la relación entre los pedidos despachados sin retraso frente a la totalidad de pedidos requeridos por el mercado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para validar una propuesta de reestructuración de layout antes de ejecutar inversiones físicas en infraestructura, se utiliza software de simulación como Arena. ¿Cuál es el propósito operativo de ejecutar estas simulaciones?",
+    "opciones": [
+      {
+        "text": "Sustituir el trabajo de los operarios de almacén por avatares digitales en la nómina.",
+        "isCorrect": false,
+        "rationale": "El software de simulación modela procesos estocásticos y no reemplaza la fuerza de trabajo física."
+      },
+      {
+        "text": "Probar el comportamiento del sistema ante múltiples escenarios y predecir numéricamente las mejoras en el Nivel de Servicio.",
+        "isCorrect": true,
+        "rationale": "Simular iteraciones permite experimentar con variables de tiempo y espacio para prever los resultados antes de modificar el almacén real."
+      },
+      {
+        "text": "Generar automáticamente la facturación electrónica y tramitar el cobro a los clientes.",
+        "isCorrect": false,
+        "rationale": "La facturación comercial es competencia de los sistemas ERP o de ventas, no de las herramientas de simulación discreta."
+      },
+      {
+        "text": "Eliminar la necesidad de calcular el stock de seguridad en el inventario de la empresa.",
+        "isCorrect": false,
+        "rationale": "La simulación ayuda a dimensionar parámetros, pero no elimina la necesidad del colchón de seguridad ante contingencias."
+      },
+      {
+        "text": "Diseñar los planos arquitectónicos tridimensionales para la venta inmobiliaria del predio.",
+        "isCorrect": false,
+        "rationale": "El objetivo de herramientas como Arena es el análisis de flujos, tiempos y colas, no el diseño arquitectónico publicitario."
+      }
+    ],
+    "hint": "Considera la ventaja de experimentar virtualmente con datos estadísticos para estimar el desempeño de un nuevo diseño sin gastar dinero.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-20",
+    "diplomado": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En la evaluación de un proyecto de mejora de distribución de almacén mediante SLP y herramientas de simulación, se comprueban diversos beneficios operativos. ¿Cuáles de los siguientes resultados se obtienen al implementar un layout optimizado?",
+    "opciones": [
+      {
+        "text": "Incremento sustancial en el porcentaje del Nivel de Servicio en las entregas a clientes.",
+        "isCorrect": true,
+        "rationale": "Un almacén bien distribuido procesa pedidos con mayor velocidad, elevando el porcentaje de entregas a tiempo."
+      },
+      {
+        "text": "Reducción significativa de las distancias de recorrido y tiempos de transporte interno.",
+        "isCorrect": true,
+        "rationale": "Reorganizar la posición de las mercancías según su rotación acorta los trayectos de los operarios y equipos."
+      },
+      {
+        "text": "Disminución del tiempo total requerido para la preparación y despacho de pedidos (picking).",
+        "isCorrect": true,
+        "rationale": "Ubicaciones lógicas y accesibles permiten completar las listas de selección en un menor número de minutos."
+      },
+      {
+        "text": "Mayor aprovechamiento de la capacidad volumétrica del almacén y mejor ordenamiento.",
+        "isCorrect": true,
+        "rationale": "El rediseño racionaliza las áreas disponibles eliminando cuellos de botella y zonas desaprovechadas."
+      },
+      {
+        "text": "Exención total del pago de impuestos y tributos comerciales ante los organismos reguladores.",
+        "isCorrect": false,
+        "rationale": "La reestructuración del espacio interno no altera de ninguna forma las obligaciones tributarias o legales de la empresa."
+      }
+    ],
+    "hint": "Selecciona las mejoras vinculadas a tiempos de recorrido, aprovechamiento de espacio, velocidad de picking y cumplimiento de pedidos.",
+    "activo": true
+  }
+]

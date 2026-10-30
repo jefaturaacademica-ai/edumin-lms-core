@@ -90,6 +90,7 @@ export default function AdminExamenesPage() {
   const [jsonParaImportar, setJsonParaImportar] = useState('');
   const [archivoCargadoNombre, setArchivoCargadoNombre] = useState<string | null>(null);
   const [resumenPreguntasImportar, setResumenPreguntasImportar] = useState<number | null>(null);
+  const [errorValidacionImport, setErrorValidacionImport] = useState<string | null>(null);
   const [importando, setImportando] = useState(false);
 
   const DIPLOMADOS_CINCO_MODULOS = ['DIP-08', 'DIP-13', 'DIP-17'];
@@ -343,7 +344,53 @@ export default function AdminExamenesPage() {
     setJsonParaImportar('');
     setArchivoCargadoNombre(null);
     setResumenPreguntasImportar(null);
+    setErrorValidacionImport(null);
     setShowImportModal(true);
+  };
+
+  // Función de validación estricta para preguntas importadas (requiere 5 alternativas exactas)
+  const validarContenidoJson = (contenido: string) => {
+    if (!contenido.trim()) {
+      setResumenPreguntasImportar(null);
+      setErrorValidacionImport(null);
+      return null;
+    }
+    try {
+      const parsed = JSON.parse(contenido);
+      const quizList = Array.isArray(parsed) ? parsed : (parsed.quiz || []);
+      if (!quizList.length) {
+        setErrorValidacionImport('No se encontraron preguntas en el archivo (debe ser un arreglo o contener la propiedad "quiz").');
+        setResumenPreguntasImportar(null);
+        return null;
+      }
+
+      for (let i = 0; i < quizList.length; i++) {
+        const q = quizList[i];
+        const opciones = q.answerOptions || q.opciones || [];
+        if (!Array.isArray(opciones) || opciones.length !== 5) {
+          const numOpts = Array.isArray(opciones) ? opciones.length : 0;
+          const prev = (q.question || q.pregunta || '').substring(0, 45);
+          setErrorValidacionImport(`Pregunta #${i + 1} ("${prev}..."): tiene ${numOpts} alternativa(s). Cada pregunta DEBE tener exactamente 5 alternativas.`);
+          setResumenPreguntasImportar(quizList.length);
+          return null;
+        }
+
+        const tieneCorrecta = opciones.some((o: any) => Boolean(o.isCorrect));
+        if (!tieneCorrecta) {
+          setErrorValidacionImport(`Pregunta #${i + 1}: no tiene ninguna alternativa marcada como correcta (isCorrect: true).`);
+          setResumenPreguntasImportar(quizList.length);
+          return null;
+        }
+      }
+
+      setErrorValidacionImport(null);
+      setResumenPreguntasImportar(quizList.length);
+      return quizList;
+    } catch (err: any) {
+      setErrorValidacionImport(`Formato JSON inválido: ${err.message}`);
+      setResumenPreguntasImportar(null);
+      return null;
+    }
   };
 
   // Manejar archivo .json subido
@@ -357,13 +404,7 @@ export default function AdminExamenesPage() {
       const content = event.target?.result as string;
       if (content) {
         setJsonParaImportar(content);
-        try {
-          const parsed = JSON.parse(content);
-          const list = Array.isArray(parsed) ? parsed : (parsed.quiz || []);
-          setResumenPreguntasImportar(list.length);
-        } catch {
-          setResumenPreguntasImportar(null);
-        }
+        validarContenidoJson(content);
       }
     };
     reader.readAsText(file);
@@ -376,16 +417,14 @@ export default function AdminExamenesPage() {
       return;
     }
 
+    const quizList = validarContenidoJson(jsonParaImportar);
+    if (!quizList) {
+      alert(errorValidacionImport || 'El archivo JSON no cumple con la regla de 5 alternativas por pregunta.');
+      return;
+    }
+
     setImportando(true);
     try {
-      const parsed = JSON.parse(jsonParaImportar);
-      const quizList = Array.isArray(parsed) ? parsed : (parsed.quiz || []);
-      if (!quizList.length) {
-        alert('No se encontraron preguntas en formato quiz en el archivo JSON.');
-        setImportando(false);
-        return;
-      }
-
       const nombreProg = todosLosProgramas.find(d => d.codigo === importDiplomado)?.nombre || importDiplomado;
 
       const itemsParaGuardar = quizList.map((q: any) => ({
@@ -394,8 +433,8 @@ export default function AdminExamenesPage() {
         modulo: importDiplomado.startsWith('CUR-') ? 'Examen del Curso' : importModulo,
         dificultad: q.difficulty || importDificultad,
         tipo: q.type === 'multiple_select' ? 'multiple_select' : 'multiple_choice',
-        pregunta: limpiarTextoCientificoPlano(q.question || ''),
-        opciones: (q.answerOptions || []).map((opt: any) => ({
+        pregunta: limpiarTextoCientificoPlano(q.question || q.pregunta || ''),
+        opciones: (q.answerOptions || q.opciones || []).map((opt: any) => ({
           text: limpiarTextoCientificoPlano(opt.text || ''),
           isCorrect: Boolean(opt.isCorrect),
           rationale: limpiarTextoCientificoPlano(opt.rationale || '')
@@ -415,6 +454,7 @@ export default function AdminExamenesPage() {
         setJsonParaImportar('');
         setArchivoCargadoNombre(null);
         setResumenPreguntasImportar(null);
+        setErrorValidacionImport(null);
 
         // Si importó a un programa o módulo, sincronizar la vista activa para ver los resultados
         setDiplomadoSeleccionado(importDiplomado);
@@ -431,7 +471,7 @@ export default function AdminExamenesPage() {
         alert(data.error || 'Error al importar');
       }
     } catch (err: any) {
-      alert('Error en formato JSON: ' + err.message);
+      alert('Error al procesar preguntas: ' + err.message);
     } finally {
       setImportando(false);
     }
@@ -469,6 +509,15 @@ export default function AdminExamenesPage() {
         <AdminHeader title="Evaluaciones y Banco de preguntas" />
 
         <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 space-y-6">
+          {/* Encabezado estandarizado */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+              <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mt-1 tracking-tight">
+                Evaluaciones y banco de preguntas
+              </h1>
+            </div>
+          </div>
+
           {/* Notificación de éxito */}
           {mensajeExito && (
             <div className="p-3.5 bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-500/40 rounded-xl text-emerald-800 dark:text-emerald-300 text-sm flex items-center justify-between shadow-sm animate-fadeIn">
@@ -1704,14 +1753,16 @@ export default function AdminExamenesPage() {
 
                   {archivoCargadoNombre ? (
                     <div className="space-y-1.5">
-                      <div className="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 mx-auto flex items-center justify-center">
-                        <FileText className="w-5 h-5" />
+                      <div className={`w-10 h-10 rounded-full mx-auto flex items-center justify-center ${errorValidacionImport ? 'bg-rose-500/20 text-rose-600 dark:text-rose-400' : 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400'}`}>
+                        {errorValidacionImport ? <AlertCircle className="w-5 h-5" /> : <FileText className="w-5 h-5" />}
                       </div>
                       <p className="text-xs font-bold text-slate-900 dark:text-white">
                         {archivoCargadoNombre}
                       </p>
-                      <p className="text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold">
-                        {resumenPreguntasImportar !== null ? `${resumenPreguntasImportar} preguntas listas para procesar` : 'Archivo JSON cargado'}
+                      <p className={`text-[11px] font-semibold ${errorValidacionImport ? 'text-rose-600 dark:text-rose-400' : 'text-emerald-600 dark:text-emerald-400'}`}>
+                        {errorValidacionImport 
+                          ? 'Archivo con errores de validación' 
+                          : (resumenPreguntasImportar !== null ? `${resumenPreguntasImportar} preguntas válidas (todas con 5 alternativas)` : 'Archivo JSON cargado')}
                       </p>
                       <span className="text-[10px] text-purple-600 dark:text-purple-400 hover:underline inline-block pt-1">
                         Clic para cambiar de archivo
@@ -1726,11 +1777,30 @@ export default function AdminExamenesPage() {
                         Haz clic para subir tu archivo .json de evaluación
                       </p>
                       <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                        Soporta archivos con formato <code className="text-purple-600 dark:text-purple-300 font-bold">quiz</code> o lista directa de preguntas
+                        Cada pregunta debe contener obligatoriamente sus <strong className="text-purple-600 dark:text-purple-300 font-bold">5 alternativas</strong>
                       </p>
                     </div>
                   )}
                 </label>
+
+                {/* Banner de error de validación */}
+                {errorValidacionImport && (
+                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-400 text-xs animate-in fade-in">
+                    <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-bold">Regla no cumplida: Se requieren 5 alternativas</p>
+                      <p className="text-[11px] mt-0.5 leading-relaxed">{errorValidacionImport}</p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Banner de validación correcta */}
+                {!errorValidacionImport && resumenPreguntasImportar !== null && (
+                  <div className="flex items-center gap-2 p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold animate-in fade-in">
+                    <CheckCircle2 className="w-4 h-4 shrink-0" />
+                    <span>{resumenPreguntasImportar} preguntas listas para importar (todas verificadas con 5 alternativas).</span>
+                  </div>
+                )}
 
                 {/* Editor / Pegado manual */}
                 <div className="space-y-1.5 pt-1">
@@ -1739,7 +1809,7 @@ export default function AdminExamenesPage() {
                       O revisa / pega el contenido JSON manualmente:
                     </label>
                     {resumenPreguntasImportar !== null && (
-                      <span className="text-[11px] font-bold text-purple-600 dark:text-purple-400">
+                      <span className={`text-[11px] font-bold ${errorValidacionImport ? 'text-rose-500' : 'text-emerald-600 dark:text-emerald-400'}`}>
                         {resumenPreguntasImportar} preguntas detectadas
                       </span>
                     )}
@@ -1750,13 +1820,7 @@ export default function AdminExamenesPage() {
                     onChange={(e) => {
                       const val = e.target.value;
                       setJsonParaImportar(val);
-                      try {
-                        const p = JSON.parse(val);
-                        const list = Array.isArray(p) ? p : (p.quiz || []);
-                        setResumenPreguntasImportar(list.length);
-                      } catch {
-                        setResumenPreguntasImportar(null);
-                      }
+                      validarContenidoJson(val);
                     }}
                     placeholder='{"quiz": [{"type": "multiple_choice", "question": "...", "answerOptions": [...]}]}'
                     className="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs tabular-nums text-emerald-300 placeholder-slate-600 focus:outline-none focus:border-purple-500"
@@ -1780,7 +1844,7 @@ export default function AdminExamenesPage() {
                 <button
                   type="button"
                   onClick={procesarImportacionJson}
-                  disabled={!jsonParaImportar.trim() || importando}
+                  disabled={!jsonParaImportar.trim() || importando || !!errorValidacionImport}
                   className="px-5 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold flex items-center gap-2 shadow-md shadow-purple-600/30 cursor-pointer transition-all disabled:opacity-50"
                 >
                   {importando ? <RotateCcw className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}

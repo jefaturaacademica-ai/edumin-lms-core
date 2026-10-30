@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de contratos de abastecimiento logístico, ¿qué representa el acrónimo 'NOS' (Not Out of Stock)?",
+    "opciones": [
+      {
+        "text": "Insumos y productos críticos que bajo ninguna circunstancia deben quedarse sin existencias en el almacén.",
+        "isCorrect": true,
+        "rationale": "El acrónimo 'NOS' identifica los materiales cuya falta paralizaría el proceso productivo, por lo que su disponibilidad debe garantizarse continuamente."
+      },
+      {
+        "text": "Un indicador de productos obsoletos que deben ser retirados de forma inmediata del inventario.",
+        "isCorrect": false,
+        "rationale": "Los productos obsoletos se gestionan mediante políticas de depuración o liquidación de stock, no bajo el concepto de insumos críticos de reposición."
+      },
+      {
+        "text": "Un nivel de ordenamiento secundario exclusivo para insumos de oficina y papelería.",
+        "isCorrect": false,
+        "rationale": "Aunque la papelería se consume regularmente, el concepto NOS se enfoca prioritariamente en insumos críticos para la continuidad operativa."
+      },
+      {
+        "text": "Una norma oficial que regula el transporte de mercancías peligrosas en minería.",
+        "isCorrect": false,
+        "rationale": "El transporte de mercancías peligrosas se rige por normativas técnicas sanitarias y de transporte, no por el acrónimo de gestión de inventarios NOS."
+      },
+      {
+        "text": "Un reporte financiero mensual que se envía a la bolsa de valores para justificar gastos.",
+        "isCorrect": false,
+        "rationale": "Los reportes a la bolsa de valores corresponden a estados financieros y memorias corporativas, no a la clasificación operativa de stock."
+      }
+    ],
+    "hint": "Piensa en aquellos materiales cuya ausencia detendría inmediatamente la producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando se formaliza un indicador clave de desempeño (KPI) dentro de un contrato logístico con un proveedor, ¿en qué concepto contractual se transforma?",
+    "opciones": [
+      {
+        "text": "En un Acuerdo de Nivel de Servicio (SLA, Service Level Agreement).",
+        "isCorrect": true,
+        "rationale": "Al plasmarse en el contrato, el KPI pasa de ser una métrica interna de seguimiento a un compromiso legal negociado entre las partes."
+      },
+      {
+        "text": "En un Punto de Reorden Automático (Reorder Point).",
+        "isCorrect": false,
+        "rationale": "El punto de reorden es un parámetro de nivel de inventario para disparar una compra, no la transformación jurídica de un KPI en un contrato."
+      },
+      {
+        "text": "En un Centro de Costos Asignado (SECO).",
+        "isCorrect": false,
+        "rationale": "El centro de costos es una clave de imputación contable interna para registrar gastos, independientemente de los indicadores contractuales."
+      },
+      {
+        "text": "En una Orden de Compra Abierta (OCA).",
+        "isCorrect": false,
+        "rationale": "La orden de compra es un documento mercantil de solicitud de bienes o servicios, no el acuerdo sobre niveles de desempeño."
+      },
+      {
+        "text": "En un Registro de Inspección Química (RIQ).",
+        "isCorrect": false,
+        "rationale": "El registro químico es un ensayo de laboratorio para verificar la pureza de un insumo, no el marco contractual global del nivel de servicio."
+      }
+    ],
+    "hint": "Se refiere al término en inglés para los acuerdos formales sobre el nivel de servicio exigido.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con lo presentado en el curso, ¿cuál es el porcentaje promedio de cumplimiento de entregas a tiempo (*Delivery on Time*) considerado un estándar de *benchmarking* adecuado en la industria latinoamericana?",
+    "opciones": [
+      {
+        "text": "Igual o superior al 95%.",
+        "isCorrect": true,
+        "rationale": "En la industria latinoamericana, los indicadores por encima del 95% se consideran excelentes y marcan el estándar de comparación deseado."
+      },
+      {
+        "text": "Entre 70% y 75%.",
+        "isCorrect": false,
+        "rationale": "Un cumplimiento del 70% a 75% genera desabastecimientos frecuentes y representa un alto riesgo para la operación logística."
+      },
+      {
+        "text": "Exactamente el 80%.",
+        "isCorrect": false,
+        "rationale": "Un 80% deja un margen del 20% de entregas tardías, lo cual requiere revisar la idoneidad del proveedor de insumos críticos."
+      },
+      {
+        "text": "Únicamente el 100% estricto sin margen de tolerancia.",
+        "isCorrect": false,
+        "rationale": "Aunque el 100% es el ideal, el parámetro real de mercado para calificar un desempeño como óptimo se sitúa a partir del 95%."
+      },
+      {
+        "text": "Menor al 60% si se trata de zonas de difícil acceso.",
+        "isCorrect": false,
+        "rationale": "Incluso en geografías complejas, un cumplimiento inferior al 60% resultaría inaceptable para mantener la continuidad productiva."
+      }
+    ],
+    "hint": "Cualquier indicador por debajo del 90% requiere revisar la idoneidad del proveedor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de costo total de propiedad (TCO) y salvaguarda de activos, ¿a partir de qué valor monetario aproximado del bien o equipo se recomienda exigir la contratación de un seguro específico de transporte y daños?",
+    "opciones": [
+      {
+        "text": "A partir de $10,000 USD.",
+        "isCorrect": true,
+        "rationale": "A partir de este umbral monetario, la pérdida o daño del equipo representa un impacto financiero considerable que justifica la prima del seguro."
+      },
+      {
+        "text": "A partir de $100 USD.",
+        "isCorrect": false,
+        "rationale": "Exigir pólizas individuales para montos tan bajos encarecería innecesariamente la gestión administrativa de consumibles menores."
+      },
+      {
+        "text": "A partir de $1,000 USD.",
+        "isCorrect": false,
+        "rationale": "Monto aún manejable en el presupuesto operativo corriente para asumir reposiciones sin saturar de pólizas la operación."
+      },
+      {
+        "text": "A partir de $500,000 USD únicamente.",
+        "isCorrect": false,
+        "rationale": "Esperar hasta el medio millón de dólares dejaría desprotegidos numerosos motores y piezas de mediano valor crítico para la planta."
+      },
+      {
+        "text": "Solo si el bien supera el $1,000,000 USD.",
+        "isCorrect": false,
+        "rationale": "Este límite es demasiado elevado y expondría a la empresa a graves pérdidas operativas no aseguradas en equipos intermedios."
+      }
+    ],
+    "hint": "Se trata de una cifra de cinco dígitos en dólares que marca el criterio para proteger la inversión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes certificaciones internacionales son recomendadas como base para evaluar la sostenibilidad ambiental y la seguridad laboral de un proveedor en la industria minera?",
+    "opciones": [
+      {
+        "text": "ISO 14000 (Gestión Ambiental).",
+        "isCorrect": true,
+        "rationale": "Acredita que el proveedor cuenta con una matriz de riesgos ambientales y procedimientos para mitigar su impacto en el entorno."
+      },
+      {
+        "text": "ISO 45000 (Seguridad y Salud en el Trabajo).",
+        "isCorrect": true,
+        "rationale": "Garantiza que la empresa proveedora cumple con estándares estructurados para la prevención de accidentes y cuidado ocupacional."
+      },
+      {
+        "text": "ISO 27001 (Seguridad de la Información).",
+        "isCorrect": false,
+        "rationale": "Esta norma se enfoca en sistemas de protección de datos e informática, no en la sostenibilidad ambiental o seguridad industrial de campo."
+      },
+      {
+        "text": "ISO 50001 (Gestión de la Energía).",
+        "isCorrect": false,
+        "rationale": "Aunque es valiosa para la eficiencia energética, las normas básicas de entrada solicitadas en minería son las de ambiente y seguridad laboral."
+      },
+      {
+        "text": "ISO 22000 (Inocuidad Alimentaria).",
+        "isCorrect": false,
+        "rationale": "Es una norma propia de la industria alimentaria y de bebidas, sin relación con el abastecimiento industrial o minero general."
+      }
+    ],
+    "hint": "Selecciona las normas enfocadas en el cuidado del medio ambiente y en la prevención de riesgos laborales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al negociar cláusulas de penalización por retrasos en contratos logísticos, ¿cuál es el porcentaje de descuento sugerido aplicado a la facturación mensual para no desfinanciar al proveedor?",
+    "opciones": [
+      {
+        "text": "Un 5% de la facturación mensual.",
+        "isCorrect": true,
+        "rationale": "El 5% mensual afecta económicamente al proveedor incentivando su cumplimiento, sin llegar a ahogarlo ni llevarlo a la quiebra."
+      },
+      {
+        "text": "Un 50% del valor total anual del contrato.",
+        "isCorrect": false,
+        "rationale": "Una sanción de esa magnitud resulta desproporcionada y provocaría que el proveedor abandone el servicio o incremente preventivamente sus tarifas."
+      },
+      {
+        "text": "Un 0.1% de la facturación anual.",
+        "isCorrect": false,
+        "rationale": "Un monto tan insignificante no genera el incentivo o dolor económico necesario para que el proveedor corrija sus fallas."
+      },
+      {
+        "text": "Un 25% quincenal cobrado por adelantado.",
+        "isCorrect": false,
+        "rationale": "Cobrar penalidades por adelantado distorsiona la facturación y perjudica la liquidez operativa del prestador de servicio."
+      },
+      {
+        "text": "El 100% del costo del camión de transporte.",
+        "isCorrect": false,
+        "rationale": "Confiscar el valor total del transporte por un retraso destruye la relación comercial y vuelve insostenible el contrato."
+      }
+    ],
+    "hint": "Busca un porcentaje moderado del facturado mensual que duela en el bolsillo sin romper el contrato.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal de la Responsabilidad Social Empresarial (RSE) y la sostenibilidad en las operaciones industriales y mineras?",
+    "opciones": [
+      {
+        "text": "Causar un impacto positivo en la sociedad y el medio ambiente, permitiendo al mismo tiempo alcanzar los objetivos empresariales.",
+        "isCorrect": true,
+        "rationale": "La RSE busca equilibrar el beneficio social y la protección ambiental con la sostenibilidad económica de la empresa a largo plazo."
+      },
+      {
+        "text": "Reemplazar el pago de impuestos estatales mediante donaciones directas en efectivo a los pobladores.",
+        "isCorrect": false,
+        "rationale": "La RSE no sustituye las obligaciones tributarias legales ni se reduce a la entrega asistencialista de dinero."
+      },
+      {
+        "text": "Construir únicamente obras de cemento sin involucrar a la comunidad en su desarrollo.",
+        "isCorrect": false,
+        "rationale": "El progreso social implica trabajar en conjunto con la comunidad y no limitarse a la infraestructura física impuesta unilateralmente."
+      },
+      {
+        "text": "Maximizar la extracción de mineral en el menor tiempo posible sin considerar el entorno.",
+        "isCorrect": false,
+        "rationale": "Ignorar el entorno ambiental y social genera alta conflictividad que termina paralizando la propia actividad extractiva."
+      },
+      {
+        "text": "Eliminar la necesidad de obtener permisos ambientales ante organismos fiscalizadores como la OEFA.",
+        "isCorrect": false,
+        "rationale": "La RSE complementa el cumplimiento regulatorio estricto, pero en ningún caso exime a la empresa de fiscalizaciones o licencias."
+      }
+    ],
+    "hint": "El enfoque correcto combina el bienestar ambiental/social con el cumplimiento de las metas del negocio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la seguridad industrial y ocupacional, ¿cuál es la distinción conceptual entre 'peligro' y 'riesgo'?",
+    "opciones": [
+      {
+        "text": "El peligro es la fuente o condición con potencial de causar daño, mientras que el riesgo es la probabilidad de entrar en contacto con dicho peligro y sufrir un daño.",
+        "isCorrect": true,
+        "rationale": "Esta diferenciación es fundamental: la fuente existente es el peligro, y la exposición o probabilidad de materializar el daño constituye el riesgo."
+      },
+      {
+        "text": "El peligro se refiere únicamente a fallas de origen humano, mientras que el riesgo corresponde a fallas mecánicas de los equipos.",
+        "isCorrect": false,
+        "rationale": "Tanto los peligros como los riesgos pueden originarse en condiciones ambientales, mecánicas o actos humanos inductivos."
+      },
+      {
+        "text": "El peligro es la probabilidad matemática de un evento y el riesgo es la consecuencia monetaria del mismo.",
+        "isCorrect": false,
+        "rationale": "La probabilidad matemática es el componente clave del riesgo, no del peligro."
+      },
+      {
+        "text": "El peligro se puede eliminar por completo en todas las actividades, mientras que el riesgo jamás se puede medir.",
+        "isCorrect": false,
+        "rationale": "Muchos peligros son inherentes a la actividad (como la energía eléctrica) y no se eliminan, mientras que los riesgos se miden y evalúan constantemente."
+      },
+      {
+        "text": "No existe diferencia conceptual entre ambos; los términos son sinónimos perfectos en la legislación peruana.",
+        "isCorrect": false,
+        "rationale": "La normativa de seguridad y salud en el trabajo distingue claramente la fuente (peligro) de la evaluación de exposición (riesgo)."
+      }
+    ],
+    "hint": "Un vehículo es la fuente de daño; manejarlo representa la exposición a la probabilidad de sufir un evento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con la metodología estándar de gestión de riesgos, ¿cuáles son las cuatro respuestas posibles para tratar un riesgo identificado?",
+    "opciones": [
+      {
+        "text": "Eliminar.",
+        "isCorrect": true,
+        "rationale": "Consiste en suprimir totalmente la fuente o la actividad que genera la exposición al riesgo."
+      },
+      {
+        "text": "Mitigar.",
+        "isCorrect": true,
+        "rationale": "Aplica medidas de control, capacitación o tecnología para reducir la probabilidad o el impacto del riesgo."
+      },
+      {
+        "text": "Transferir.",
+        "isCorrect": true,
+        "rationale": "Traspasa la responsabilidad o el impacto financiero a un tercero, por ejemplo mediante pólizas de seguro o subcontratación."
+      },
+      {
+        "text": "Aceptar.",
+        "isCorrect": true,
+        "rationale": "Se asume el riesgo de forma consciente cuando no es posible eliminarlo, mitigarlo más o transferirlo, preparando planes de contingencia."
+      },
+      {
+        "text": "Ocultar.",
+        "isCorrect": false,
+        "rationale": "Ocultar un riesgo no es una estrategia de gestión válida y constituye una falla grave contra la seguridad de las operaciones."
+      }
+    ],
+    "hint": "Son las cuatro alternativas de tratamiento que conforman el ciclo de gestión ante cualquier riesgo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando una empresa minera decide contratar a un proveedor especializado de transporte en lugar de adquirir y operar su propia flota de camiones, ¿qué tipo de respuesta al riesgo está aplicando principalmente?",
+    "opciones": [
+      {
+        "text": "Transferir el riesgo.",
+        "isCorrect": true,
+        "rationale": "Al subcontratar a un experto, la empresa transfiere a dicho tercero la responsabilidad operativa y el riesgo del mantenimiento o avería de la flota."
+      },
+      {
+        "text": "Eliminar el riesgo.",
+        "isCorrect": false,
+        "rationale": "El transporte por carretera sigue ocurriendo y la exposición al tráfico permanece, por lo que el riesgo no ha desaparecido del todo."
+      },
+      {
+        "text": "Aceptar el riesgo de forma pasiva.",
+        "isCorrect": false,
+        "rationale": "La empresa tomó una acción proactiva mediante un contrato para derivar la responsabilidad, en lugar de asumir el impacto directamente."
+      },
+      {
+        "text": "Ignorar el riesgo.",
+        "isCorrect": false,
+        "rationale": "La contratación de un tercero es una decisión consciente de gestión, todo lo contrario a ignorar las amenazas del transporte."
+      },
+      {
+        "text": "Duplicar el riesgo.",
+        "isCorrect": false,
+        "rationale": "La contratación busca optimizar y blindar la operación, no multiplicar las contingencias operativas."
+      }
+    ],
+    "hint": "Cedes la responsabilidad de la flota a una empresa especialista para que ella responda por el servicio.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito central de la certificación como Operador Económico Autorizado (OEA) en la cadena de suministro internacional?",
+    "opciones": [
+      {
+        "text": "Garantizar una cadena logística segura y blindada contra amenazas como el tráfico de drogas, lavado de activos y contrabando.",
+        "isCorrect": true,
+        "rationale": "La certificación OEA valida que la empresa cumple con rigurosos estándares de seguridad física y de personal en sus despachos."
+      },
+      {
+        "text": "Eliminar el pago de todos los impuestos y aranceles aduaneros de importación de maquinaria.",
+        "isCorrect": false,
+        "rationale": "Ser OEA agiliza los trámites de control aduanero pero no exime a la empresa de sus obligaciones tributarias de importación."
+      },
+      {
+        "text": "Permitir el transporte de insumos químicos peligrosos sin necesidad de permisos ni autorizaciones ambientales.",
+        "isCorrect": false,
+        "rationale": "Las autorizaciones de insumos fiscalizados y ambientales son obligatorias independientemente de contar con la certificación OEA."
+      },
+      {
+        "text": "Sustituir la obligación de contratar pólizas de seguro para la carga de exportación.",
+        "isCorrect": false,
+        "rationale": "La certificación no actúa como una póliza de indemnización comercial ante pérdidas o accidentes de carga."
+      },
+      {
+        "text": "Acreditar únicamente que la empresa cuenta con un sistema de gestión de calidad ISO 9001.",
+        "isCorrect": false,
+        "rationale": "Aunque se enfoca en calidad de procesos, el OEA es un estándar específico de seguridad física y aduanera frente a ilícitos."
+      }
+    ],
+    "hint": "Es un sello de confianza otorgado por las aduanas para prevenir actividades ilícitas en la carga.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En materia de seguridad física (*Security*) en almacenes, ¿cuál es la recomendación legal y práctica respecto a la orientación de las cámaras de videovigilancia para evitar observaciones por hostigamiento laboral?",
+    "opciones": [
+      {
+        "text": "Apuntar las cámaras a los puntos de ingreso y salida de los almacenes o estructuras.",
+        "isCorrect": true,
+        "rationale": "Orientar las cámaras a las puertas e ingresos justifica su uso como resguardo de infraestructura sin vigilar de forma persecutoria a los trabajadores en sus puestos."
+      },
+      {
+        "text": "Enfocar las cámaras de manera fija a los escritorios y rostros de los trabajadores durante toda la jornada.",
+        "isCorrect": false,
+        "rationale": "El monitoreo continuo e individualizado a puestos fijos ha sido calificado por jurisprudencia laboral como acto de hostigamiento."
+      },
+      {
+        "text": "Instalar cámaras ocultas sin informar al personal ni al comité de seguridad.",
+        "isCorrect": false,
+        "rationale": "La vigilancia oculta sin notificación violenta normativas de privacidad y transparencia en las relaciones laborales."
+      },
+      {
+        "text": "Ubicarlas únicamente en comedores y zonas de descanso de los trabajadores.",
+        "isCorrect": false,
+        "rationale": "Las zonas de descanso están protegidas en su privacidad y no corresponden a puntos de control de mercancías."
+      },
+      {
+        "text": "Mantener las cámaras apagadas durante los turnos en los que haya personal trabajando.",
+        "isCorrect": false,
+        "rationale": "Tener las cámaras apagadas anula la función de videovigilancia y resguardo patrimonial en tiempo real durante la operación."
+      }
+    ],
+    "hint": "Cuidan los accesos y perímetros del recinto en lugar de enfocar al operario de forma directa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la evolución histórica de la logística, ¿qué método de estructura de costos se consolidó en la década de 1970 con la llegada del enfoque financiero?",
+    "opciones": [
+      {
+        "text": "El costeo ABC (Activity-Based Costing / Costeo basado en actividades).",
+        "isCorrect": true,
+        "rationale": "En los 70 el interés financiero por controlar los excesos de inventario impulsó la división de costos mediante la metodología ABC."
+      },
+      {
+        "text": "El indicador de huella de carbono digital.",
+        "isCorrect": false,
+        "rationale": "La medición de huella de carbono es un indicador contemporáneo ligado a la sostenibilidad ambiental del siglo XXI."
+      },
+      {
+        "text": "El sistema informático blockchain para trazabilidad.",
+        "isCorrect": false,
+        "rationale": "Blockchain es una tecnología informática reciente desarrollada en la era de la transformación digital."
+      },
+      {
+        "text": "La certificación ISO 45000.",
+        "isCorrect": false,
+        "rationale": "Esta norma técnica internacional de salud y seguridad fue emitida décadas más tarde."
+      },
+      {
+        "text": "El índice de fidelidad del consumidor final (NPS).",
+        "isCorrect": false,
+        "rationale": "El Net Promoter Score pertenece al área de mercadotecnia y atención a clientes, no a la contabilidad financiera industrial de los 70."
+      }
+    ],
+    "hint": "Es un método de costeo que utiliza las tres primeras letras del abecedario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la gestión de la cadena de suministro, ¿qué representan las siglas B2B?",
+    "opciones": [
+      {
+        "text": "Business to Business (Relación comercial de negocio a negocio).",
+        "isCorrect": true,
+        "rationale": "B2B define las cadenas de abastecimiento donde una empresa provee de bienes, insumos o servicios a otra empresa."
+      },
+      {
+        "text": "Business to Buyer (Negocio a comprador minorista).",
+        "isCorrect": false,
+        "rationale": "El término estándar para la venta al consumidor final o comprador directo es B2C (Business to Consumer)."
+      },
+      {
+        "text": "Broker to Broker (Corredor a corredor).",
+        "isCorrect": false,
+        "rationale": "Se refiere a intermediación financiera de bolsa o corretaje, no a la cadena de suministro industrial."
+      },
+      {
+        "text": "Bank to Business (Banco a empresa).",
+        "isCorrect": false,
+        "rationale": "Corresponde al sector de servicios de crédito o bancarios, no al flujo logístico de bienes industriales."
+      },
+      {
+        "text": "Back to Back (Contrato respaldado de inmediato).",
+        "isCorrect": false,
+        "rationale": "Back to back es una modalidad de estructuración contractual o financiera, no el modelo de mercado entre empresas."
+      }
+    ],
+    "hint": "Se utiliza para describir transacciones e insumos comerciales entre dos empresas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del esquema organizativo de la logística, ¿cuáles son las tres grandes áreas operativas en las que se divide la gestión de la cadena de suministro?",
+    "opciones": [
+      {
+        "text": "Compras y abastecimiento.",
+        "isCorrect": true,
+        "rationale": "Área encargada de la relación con proveedores y adquisición de materias primas e insumos."
+      },
+      {
+        "text": "Soporte a la manufactura (Logística interna).",
+        "isCorrect": true,
+        "rationale": "Área enfocada en garantizar el flujo de insumos dentro de los almacenes y estaciones de trabajo en planta."
+      },
+      {
+        "text": "Distribución física.",
+        "isCorrect": true,
+        "rationale": "Área orientada al traslado y entrega de productos terminados hacia los clientes o mercados de destino."
+      },
+      {
+        "text": "Auditoría contable y tributación.",
+        "isCorrect": false,
+        "rationale": "Es una función administrativa y fiscal corporativa, no un área operativa directa del flujo de materiales."
+      },
+      {
+        "text": "Diseño de campañas publicitarias.",
+        "isCorrect": false,
+        "rationale": "Corresponde al departamento de marketing y ventas, no a la ejecución operativa del flujo logístico."
+      }
+    ],
+    "hint": "Abarca desde la entrada de insumos, el manejo dentro de planta, hasta la salida del producto final.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Para lograr la correcta automatización de una cadena de suministro mediante herramientas como ERP o WMS, ¿cuáles son los cuatro pilares fundamentales que deben estar implementados?",
+    "opciones": [
+      {
+        "text": "Sincronización.",
+        "isCorrect": true,
+        "rationale": "Asegura la estandarización, procedimentación y captura de tiempos en cada etapa del proceso logístico."
+      },
+      {
+        "text": "Integración.",
+        "isCorrect": true,
+        "rationale": "Permite concentrar la información y los módulos operativos en un repositorio o sistema único."
+      },
+      {
+        "text": "Optimización.",
+        "isCorrect": true,
+        "rationale": "Facilita la mejora continua de los flujos sobre la base de procesos estandarizados e integrados."
+      },
+      {
+        "text": "Colaboración.",
+        "isCorrect": true,
+        "rationale": "Promueve la interacción en red y la alineación entre todos los actores de la cadena."
+      },
+      {
+        "text": "Aislamiento de departamentos.",
+        "isCorrect": false,
+        "rationale": "El trabajo en compartimentos aislados destruye la visibilidad de la cadena y frustra los proyectos de automatización."
+      }
+    ],
+    "hint": "Son cuatro conceptos interrelacionados que garantizan que el software trabaje para la empresa y no al revés.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia sustancial entre el registro pasivo de ubicación y el monitoreo de mercancías en tiempo real?",
+    "opciones": [
+      {
+        "text": "El registro pasivo solo guarda datos históricos para consulta posterior, mientras que el monitoreo en tiempo real permite supervisar e intervenir proactivamente durante el trayecto.",
+        "isCorrect": true,
+        "rationale": "Monitorear implica vigilancia activa y capacidad de tomar decisiones o activar protocolos mientras el evento está ocurriendo."
+      },
+      {
+        "text": "El registro pasivo es obligatorio para transportes aéreos y el monitoreo en tiempo real solo se usa en barcos.",
+        "isCorrect": false,
+        "rationale": "La modalidad de monitoreo depende de la criticidad de la carga y la tecnología disponible, no del medio de transporte."
+      },
+      {
+        "text": "El monitoreo en tiempo real no requiere señal de GPS ni internet satelital.",
+        "isCorrect": false,
+        "rationale": "El monitoreo en tiempo real depende directamente de la conectividad y posicionamiento continuo mediante sensores o GPS."
+      },
+      {
+        "text": "El registro pasivo apaga automáticamente el motor del vehículo en caso de robo.",
+        "isCorrect": false,
+        "rationale": "El apagado de motor remoto es una función de control activo vinculada al monitoreo en tiempo real, no del simple registro histórico."
+      },
+      {
+        "text": "Ambos términos significan exactamente lo mismo y no existe diferencia en la práctica.",
+        "isCorrect": false,
+        "rationale": "Tener únicamente un mapa estático cargado en la computadora no equivale a la gestión activa de alertas del monitoreo."
+      }
+    ],
+    "hint": "Uno te permite actuar preventivamente en el momento; el otro solo te muestra lo que ya pasó.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la principal ventaja operativa de implementar tecnología RFID (Identificación por Radiofrecuencia) en la gestión de almacenes e inventarios?",
+    "opciones": [
+      {
+        "text": "Realizar conteos e inventarios masivos en minutos sin necesidad de escanear código por código a vista directa.",
+        "isCorrect": true,
+        "rationale": "Las ondas de radiofrecuencia leen múltiples etiquetas simultáneamente a corta/mediana distancia, reduciendo drásticamente los tiempos de inventario."
+      },
+      {
+        "text": "Garantizar que los camiones no consuman combustible durante sus viajes por carretera.",
+        "isCorrect": false,
+        "rationale": "El RFID es una tecnología de identificación inalámbrica de etiquetas, no un mecanismo de propulsión ni de eficiencia de motor."
+      },
+      {
+        "text": "Sustituir por completo el uso de seguros contra accidentes de transporte.",
+        "isCorrect": false,
+        "rationale": "Las etiquetas de radiofrecuencia identifican datos del paquete, pero no indemnizan financieramente ante un siniestro."
+      },
+      {
+        "text": "Eliminar la necesidad de contar con sistemas ERP como SAP u Oracle.",
+        "isCorrect": false,
+        "rationale": "El RFID actúa como un capturador de datos que requiere ser integrado precisamente a un ERP para actualizar los stocks."
+      },
+      {
+        "text": "Rastrear la ubicación de los barcos en medio del océano sin antenas cercanas.",
+        "isCorrect": false,
+        "rationale": "Para cobertura oceánica se emplean sistemas de rastreo satelital, no etiquetas de frecuencia RFID local."
+      }
+    ],
+    "hint": "Permite pasar una pistola lectora cerca de los paquetes y registrar decenas de existencias al instante.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el lenguaje contable y financiero de las empresas, ¿cuál es la diferencia de uso entre los términos 'costo' y 'gasto'?",
+    "opciones": [
+      {
+        "text": "'Costo' se utiliza para la contabilidad y control operativo interno, mientras que 'gasto' se emplea en los reportes y estados financieros de contabilidad externa.",
+        "isCorrect": true,
+        "rationale": "Internamente la empresa evalúa sus centros de costos (SECO), pero de cara a auditorías, bolsa y reportes externos se presenta como gasto."
+      },
+      {
+        "text": "'Costo' se refiere a las compras pagadas al contado y 'gasto' a las compras realizadas a crédito.",
+        "isCorrect": false,
+        "rationale": "La condición de pago (contado o crédito) no define la naturaleza contable del costo o gasto."
+      },
+      {
+        "text": "'Costo' es exclusivo del sueldo de los gerentes y 'gasto' corresponde al pago de fletes de transporte.",
+        "isCorrect": false,
+        "rationale": "Los fletes son componentes directos del costo logístico interno y los sueldos se clasifican según su área de imputación."
+      },
+      {
+        "text": "'Costo' representa una pérdida irrecuperable y 'gasto' es una inversión en activos fijos.",
+        "isCorrect": false,
+        "rationale": "La inversión en activos fijos se denomina CAPEX, distorsionando el significado de costo y gasto operacionales (OPEX)."
+      },
+      {
+        "text": "Ambos conceptos se usan indistintamente y está prohibido usar la palabra 'gasto' al negociar con proveedores.",
+        "isCorrect": false,
+        "rationale": "De cara a proveedores externos se habla de 'gasto' de transporte o servicio, lo que implica jurídicamente una contraprestación de pago."
+      }
+    ],
+    "hint": "Uno se asocia a los Centros de Costo (SECO) internos y el otro a las memorias financieras externas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes rubros corresponden a los cinco costos logísticos fundamentales identificados en la estructura operativa estándar?",
+    "opciones": [
+      {
+        "text": "Costo de stock.",
+        "isCorrect": true,
+        "rationale": "Representa el valor y el capital inmovilizado por mantener productos o insumos almacenados."
+      },
+      {
+        "text": "Costo de almacenaje.",
+        "isCorrect": true,
+        "rationale": "Corresponde a la infraestructura física, alquileres, racks y mantenimiento del espacio de depósito."
+      },
+      {
+        "text": "Costo de picking.",
+        "isCorrect": true,
+        "rationale": "Incluye la mano de obra, equipos y tiempo dedicado a la preparación y despacho de pedidos dentro del almacén."
+      },
+      {
+        "text": "Costo de envase y embalaje (Packaging).",
+        "isCorrect": true,
+        "rationale": "Engloba los materiales como cajas, parihuelas, sunchos y maderas para proteger la carga."
+      },
+      {
+        "text": "Costo de transporte.",
+        "isCorrect": true,
+        "rationale": "Comprende los fletes, combustible, mantenimiento de flota y peajes de traslado de mercancías."
+      }
+    ],
+    "hint": "Abarcan la tenencia del bien, el espacio físico, la preparación interna, los empaques de protección y el traslado exterior.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Dentro de la filosofía de gestión *Lean Logistics*, ¿a qué se refiere el concepto de origen japonés *Gemba*?",
+    "opciones": [
+      {
+        "text": "Ir al lugar real de trabajo donde ocurren las operaciones para observar de primera mano los procesos.",
+        "isCorrect": true,
+        "rationale": "Gemba promueve que los líderes y gestores dejen la oficina y acudan directamente al terreno operativo a identificar desperdicios."
+      },
+      {
+        "text": "Aumentar automáticamente el margen de ganancia del proveedor en un 10%.",
+        "isCorrect": false,
+        "rationale": "Gemba es un principio de gestión visual en planta y no una fórmula contractual de incremento de precios."
+      },
+      {
+        "text": "Comprar el software de simulación logística más costoso del mercado.",
+        "isCorrect": false,
+        "rationale": "El enfoque Gemba enfatiza la observación física directa por encima de las simulaciones teóricas de gabinete."
+      },
+      {
+        "text": "Reemplazar los contratos por acuerdos verbales sin validez legal.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones Gemba no eliminan la documentación de contratos ni los estándares de compliance."
+      },
+      {
+        "text": "Subcontratar todo el personal de almacén mediante agencias temporales.",
+        "isCorrect": false,
+        "rationale": "Gemba es una práctica de liderazgo operativo, no una política de contratación o tercerización de personal."
+      }
+    ],
+    "hint": "Consiste en salir del escritorio e ir al lugar de los hechos a ver cómo se trabaja realmente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "En el enfoque *Lean Logistics*, ¿cuáles de las siguientes situaciones se consideran desperdicios o 'Mudas' dentro del flujo de trabajo?",
+    "opciones": [
+      {
+        "text": "Tiempos de espera excesivos por firmas o autorización de formularios.",
+        "isCorrect": true,
+        "rationale": "El tiempo que un operario o chofer pasa esperando aprobaciones frena el flujo y constituye desperdicio de espera (*Waiting*)."
+      },
+      {
+        "text": "Movimientos innecesarios del personal para buscar herramientas o códigos.",
+        "isCorrect": false,
+        "rationale": "Caminar repetidamente por falta de orden o mala disposición en el puesto genera desperdicio de movimiento (*Motion*)."
+      },
+      {
+        "text": "Producir más cantidad de la solicitada o antes de tiempo.",
+        "isCorrect": true,
+        "rationale": "Producir por encima del requerimiento llena los almacenes y genera costos de inventario (*Overproduction*)."
+      },
+      {
+        "text": "Reprocesar productos por llegar defectuosos al almacén.",
+        "isCorrect": true,
+        "rationale": "Corregir fallas de calidad requiere doble trabajo y desperdicia recursos (*Defects*)."
+      },
+      {
+        "text": "Estandarizar las tareas del almacén mediante manuales claros.",
+        "isCorrect": false,
+        "rationale": "Estandarizar adecuadamente elimina la variabilidad y combate los desperdicios, por lo que es una buena práctica y no una muda."
+      }
+    ],
+    "hint": "Busca aquellas opciones que entorpecen la fluidez, acumulan excesos o requieren rehacer tareas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el modelo de Costeo Basado en Actividades (Costeo ABC), ¿cuál es la secuencia jerárquica para la asignación de costos indirectos a los productos?",
+    "opciones": [
+      {
+        "text": "Sección (Centro de costo) $\\rightarrow$ Actividad $\\rightarrow$ Inductor del costo $\\rightarrow$ Producto o servicio final.",
+        "isCorrect": true,
+        "rationale": "El costeo ABC desglosa los gastos asignando recursos a secciones, de ahí a las actividades que consumen estos recursos, utilizando inductores hacia el producto final."
+      },
+      {
+        "text": "Producto final $\\rightarrow$ Inductor del costo $\\rightarrow$ Sección $\\rightarrow$ Actividad.",
+        "isCorrect": false,
+        "rationale": "Esta secuencia invierte el flujo lógico, ya que los productos no asignan costos hacia las secciones administrativas."
+      },
+      {
+        "text": "Actividad $\\rightarrow$ Sección $\\rightarrow$ Producto final $\\rightarrow$ Inductor del costo.",
+        "isCorrect": false,
+        "rationale": "Las secciones (centros de costo) son la unidad organizativa primaria dentro del ERP que contiene a las actividades."
+      },
+      {
+        "text": "Inductor del costo $\\rightarrow$ Producto final $\\rightarrow$ Actividad $\\rightarrow$ Sección.",
+        "isCorrect": false,
+        "rationale": "El inductor es la medida cuantitativa que vincula la actividad con el producto, no el punto inicial del desglose."
+      },
+      {
+        "text": "Sección $\\rightarrow$ Producto final $\\rightarrow$ Inductor del costo $\\rightarrow$ Actividad.",
+        "isCorrect": false,
+        "rationale": "El costeo ABC exige pasar primero por la actividad que genera el costo antes de imputarlo al bien o servicio."
+      }
+    ],
+    "hint": "Va desde la unidad organizativa (centro de costo) pasando por lo que se hace (actividad) hasta lo que se obtiene.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Durante la negociación de tarifas y condiciones contractuales de servicios logísticos, ¿cuáles de las siguientes variables se consideran 'no negociables'?",
+    "opciones": [
+      {
+        "text": "Estándares y protocolos de seguridad y salud en el trabajo.",
+        "isCorrect": true,
+        "rationale": "Reducir exigencias de seguridad para bajar costos expone a la empresa a accidentes fatales y contingencias legales inaceptables."
+      },
+      {
+        "text": "Especificaciones técnicas de pureza o calidad de insumos críticos.",
+        "isCorrect": true,
+        "rationale": "Aceptar insumos con menor grado de pureza puede arruinar el proceso químico en planta o dañar la maquinaria principal."
+      },
+      {
+        "text": "Límites o restricciones legales de cumplimiento ambiental.",
+        "isCorrect": true,
+        "rationale": "El cumplimiento de la ley y las licencias ambientales no se pueden relajar mediante un acuerdo de precios."
+      },
+      {
+        "text": "El color secundario de la papelería del despacho.",
+        "isCorrect": false,
+        "rationale": "El aspecto del papel o elementos no funcionales son variables accesorias plenamente flexibles durante la negociación."
+      },
+      {
+        "text": "El formato exacto de la tipografía usada en las minutas de reunión.",
+        "isCorrect": false,
+        "rationale": "Los detalles estéticos de documentación interna no influyen en el riesgo u operatividad del contrato."
+      }
+    ],
+    "hint": "Son aquellos aspectos donde una concesión pone en riesgo vidas, la validez legal o el proceso productivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Si una planta industrial opera con capacidad ociosa (por ejemplo, al 90% de su capacidad) y recibe una solicitud de pedido adicional por el 10% restante, ¿por qué puede ser rentable aceptar un precio inferior al costo total de fabricación estándar, siempre que cubra los costos variables y deje margen?",
+    "opciones": [
+      {
+        "text": "Porque los costos fijos de la planta ya están totalmente cubiertos por la producción habitual del 90%, por lo que la producción adicional solo incrementa costos variables.",
+        "isCorrect": true,
+        "rationale": "La capacidad ociosa no genera costos fijos adicionales; cualquier ingreso marginal por encima del costo variable de ese lote suma al beneficio global."
+      },
+      {
+        "text": "Porque al usar capacidad ociosa los costos variables de la materia prima pasan a ser cero.",
+        "isCorrect": false,
+        "rationale": "Los insumos y materias primas consumidas en el lote adicional continúan generando costos variables directos."
+      },
+      {
+        "text": "Porque la ley de minería obliga a vender cualquier excedente a precio de remate.",
+        "isCorrect": false,
+        "rationale": "No existe una obligación legal de rematar producción; se trata de una decisión de margen de contribución comercial."
+      },
+      {
+        "text": "Porque los costos fijos aumentan exponencialmente cuando la planta llega al 100% de uso.",
+        "isCorrect": false,
+        "rationale": "Los costos fijos se mantienen constantes dentro del rango relevante de capacidad instalada."
+      },
+      {
+        "text": "Porque se elimina el costo de transporte de la mercancía producida.",
+        "isCorrect": false,
+        "rationale": "El flete y transporte de la nueva orden se mantiene como un costo operativo independientemente de la capacidad de planta."
+      }
+    ],
+    "hint": "Recuerda que los costos fijos (como alquileres o luz de planta) ya se pagaron con la producción que normalmente se vende.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión de abastecimiento para operaciones mineras e industriales de alta exigencia, la identificación de los insumos críticos catalogados como NOS (Not Out of Stock) es fundamental. ¿Cuál es el criterio operativo primario para clasificar un producto o insumo dentro de esta categoría?",
+    "opciones": [
+      {
+        "text": "Su alto costo unitario en el presupuesto anual de compras de la organización.",
+        "isCorrect": false,
+        "rationale": "El costo unitario elevado no determina por sí solo la criticidad de un insumo, ya que existen productos de bajo costo monetario cuya ausencia detiene por completo la producción."
+      },
+      {
+        "text": "La imposibilidad de sustituirlo localmente y el impacto directo de su desabastecimiento en la paralización inmediata del proceso productivo.",
+        "isCorrect": true,
+        "rationale": "La categoría NOS agrupa a aquellos elementos indispensables (como brocas de perforación o reactivos específicos) que, al agotarse, congelan la operación y generan pérdidas masivas."
+      },
+      {
+        "text": "El gran volumen físico que ocupa dentro de las instalaciones del almacén central.",
+        "isCorrect": false,
+        "rationale": "El volumen o dimensión de un producto condiciona su estrategia de almacenamiento, pero no su nivel de criticidad en la continuidad operativa."
+      },
+      {
+        "text": "La frecuencia mensual con la que es solicitado por las áreas administrativas y de soporte.",
+        "isCorrect": false,
+        "rationale": "La alta rotación en áreas administrativas no convierte a un consumible en un insumo crítico del proceso extractivo o de planta."
+      },
+      {
+        "text": "La exigencia legal por parte de organismos fiscalizadores ambientales para su tenencia en stock.",
+        "isCorrect": false,
+        "rationale": "Las exigencias ambientales imponen regulaciones de cumplimiento, pero la clasificación NOS se enfoca en la vulnerabilidad de la cadena de producción principal."
+      }
+    ],
+    "hint": "Piensa en las consecuencias directas sobre la continuidad operativa de la mina o planta si ese elemento llega a faltar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante el diseño de un contrato de suministro logístico, un indicador clave de desempeño (KPI) como la tasa de entregas a tiempo (Delivery On Time) se formaliza como un Service Level Agreement (SLA). Para evitar vacíos de interpretación temporal con el proveedor, ¿qué precisión técnica se debe estipular en la redacción del contrato?",
+    "opciones": [
+      {
+        "text": "Contabilizar el plazo de entrega exclusivamente en días hábiles de lunes a viernes.",
+        "isCorrect": false,
+        "rationale": "Contar solo días hábiles amplía drásticamente la ventana real de reposición, generando desfasajes no planificados en las operaciones continuas de mina."
+      },
+      {
+        "text": "Establecer la medición en días corridos o calendario para evitar desfasajes temporales de reposición.",
+        "isCorrect": true,
+        "rationale": "Especificar días calendario elimina ambigüedades sobre fines de semana o feriados, garantizando que el proveedor cumpla dentro del tiempo operativo real esperado."
+      },
+      {
+        "text": "Permitir un margen de tolerancia implícito de 15 días adicionales sin penalización.",
+        "isCorrect": false,
+        "rationale": "Otorgar márgenes tan amplios sin penalidad desvirtúa la naturaleza del SLA y compromete los puntos de reorden en el almacén."
+      },
+      {
+        "text": "Medir el cumplimiento únicamente al cierre del año fiscal de la empresa contratante.",
+        "isCorrect": false,
+        "rationale": "La evaluación anual impide tomar medidas correctivas oportunas ante incumplimientos mensuales o semanales."
+      },
+      {
+        "text": "Eximir de medición los periodos donde el proveedor declare problemas de personal.",
+        "isCorrect": false,
+        "rationale": "Los problemas internos de personal del contratista forman parte de su riesgo operativo y no deben invalidar el nivel de servicio acordado."
+      }
+    ],
+    "hint": "Considera el desfasaje operativo que se genera si el proveedor descuenta fines de semana en los tiempos de tránsito.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al contratar el suministro e instalación de maquinaria crítica de elevado valor financiero (como un motor principal de molino que supera los $10,000 USD), la gerencia logística busca proteger el flujo de caja y la operación. ¿Cuál es la práctica contractual recomendada respecto al Total Cost of Ownership (TCO) y la transferencia de riesgos?",
+    "opciones": [
+      {
+        "text": "Omitir la contratación de seguros para reducir el costo total de adquisición inicial.",
+        "isCorrect": false,
+        "rationale": "Ahorrar en la prima de seguro expone a la empresa a asumir pérdidas totales severas e interrupciones prolongadas ante un siniestro."
+      },
+      {
+        "text": "Exigir al proveedor una póliza de seguro que cubra el equipo, su transporte y manipulación hasta el punto final de montaje (posición final).",
+        "isCorrect": true,
+        "rationale": "Incluir el seguro obligatorio en la cadena de transporte y montaje garantiza el reemplazo inmediato del activo en caso de accidentes durante la descarga o posicionamiento."
+      },
+      {
+        "text": "Asumir como empresa compradora todo riesgo de transporte desde las instalaciones del fabricante extranjero.",
+        "isCorrect": false,
+        "rationale": "Asumir todos los riesgos en origen sin exigencia de pólizas al transportista sobrecarga la responsabilidad financiera de la minera."
+      },
+      {
+        "text": "Transferir el costo del seguro al presupuesto de mantenimiento preventivo de la planta.",
+        "isCorrect": false,
+        "rationale": "El costo del seguro de transporte y montaje forma parte del TCO del proyecto de inversión o compra, no del mantenimiento rutinario."
+      },
+      {
+        "text": "Reemplazar el seguro por una carta de garantía comercial de 30 días emitida por el fabricante.",
+        "isCorrect": false,
+        "rationale": "Las garantías comerciales cubren defectos de fabricación, pero no responden por daños físicos ocurridos durante el transporte y maniobras de grúa."
+      }
+    ],
+    "hint": "Evalúa el impacto financiero e interrupción operativa si el activo sufre un daño severo durante las maniobras de descarga.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para asegurar el cumplimiento de las metas logísticas sin desincentivar ni ahogar financieramente al contratista, ¿cómo deben estructurarse las penalidades por incumplimiento de SLAs en un contrato de abastecimiento?",
+    "opciones": [
+      {
+        "text": "Mediante una multa fija del 50% aplicable sobre el monto total del contrato anual ante cualquier fallo.",
+        "isCorrect": false,
+        "rationale": "Una multa desproporcionada sobre el contrato anual es financieramente inviable para el proveedor e incentiva el abandono inmediato del servicio."
+      },
+      {
+        "text": "Aplicando un porcentaje equitativo (por ejemplo, 5%) calculado sobre la facturación mensual del periodo en que ocurrió el incumplimiento.",
+        "isCorrect": true,
+        "rationale": "Imponer un porcentaje razonable sobre la facturación del mes afectado castiga el margen del proveedor sin quebrar su liquidez, incentivando la corrección del servicio."
+      },
+      {
+        "text": "Suscribiendo la retención permanente de todos los pagos pendientes al proveedor de por vida.",
+        "isCorrect": false,
+        "rationale": "Retener arbitrariamente todos los pagos devengados genera disputas legales inmediatas e interrumpe de forma permanente el suministro."
+      },
+      {
+        "text": "Duplicando el costo unitario de los insumos entregados con retraso como cobro automático.",
+        "isCorrect": false,
+        "rationale": "Duplicar el costo del insumo distorsiona los registros contables y no guarda proporción técnica con la métrica de tiempo fallida."
+      },
+      {
+        "text": "Convirtiendo el monto retenido en acciones de la empresa contratista sin derecho a reclamo.",
+        "isCorrect": false,
+        "rationale": "Las penalidades contractuales son mecanismos de compensación económica o descuento, no instrumentos de conversión patrimonial."
+      }
+    ],
+    "hint": "La sanción debe doler en el presupuesto del periodo afectado, pero sin incapacitar operativamente al proveedor.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Una empresa minera evalúa a varios proveedores logísticos que obtuvieron puntuaciones idénticas en el triángulo de selección (Costo, Calidad y Tiempo). Para dirimir la adjudicación incorporando criterios de sostenibilidad y gestión de riesgos, ¿qué certificaciones e indicadores contractuales resultan técnicamente pertinentes exigir?",
+    "opciones": [
+      {
+        "text": "Certificación ISO 14001 de gestión ambiental y evaluación de su matriz de riesgos ambientales.",
+        "isCorrect": true,
+        "rationale": "La norma ISO 14001 demuestra que el proveedor cuenta con procedimientos auditados para controlar su impacto en el entorno natural."
+      },
+      {
+        "text": "Certificación ISO 45001 de sistemas de gestión de la seguridad y salud en el trabajo.",
+        "isCorrect": true,
+        "rationale": "Garantizar estándares ISO 45001 asegura que el personal del contratista opera bajo un marco estricto de prevención de accidentes e incidentes."
+      },
+      {
+        "text": "Reportes auditados de huella de carbono y consumo eficiente de combustible en flota.",
+        "isCorrect": true,
+        "rationale": "El monitoreo de la huella de carbono refleja el compromiso de la contrata con las metas globales de descarbonización e indicadores ESG de la minera."
+      },
+      {
+        "text": "Declaración jurada simple de estar exento de multas comerciales durante los últimos 20 años.",
+        "isCorrect": false,
+        "rationale": "Una declaración jurada unilatetal sin respaldo auditado no sustituye una certificación técnica de sostenibilidad y gestión de riesgos."
+      },
+      {
+        "text": "Homologación informal emitida por un cliente minorista local no certificado.",
+        "isCorrect": false,
+        "rationale": "Las homologaciones informales sin metodologías estandarizadas carecen de validez técnica para certificar capacidades en gran minería."
+      }
+    ],
+    "hint": "Busca estándares internacionales auditables relacionados con el cuidado del medio ambiente, la seguridad ocupacional y el desempeño sostenible.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un especialista en logística evalúa la idoneidad de un proveedor crítico que presenta licencias y certificaciones impecables en papel. ¿Qué procedimiento de control de calidad del servicio es indispensable realizar antes de la firma final del contrato?",
+    "opciones": [
+      {
+        "text": "Aceptar los documentos en papel sin verificación técnica adicional por presunción de veracidad.",
+        "isCorrect": false,
+        "rationale": "Confiar ciegamente en expedientes impresos expone a la organización a contratar empresas 'cascarón' sin capacidad real instalada."
+      },
+      {
+        "text": "Realizar una auditoría presencial a las instalaciones del proveedor para comprobar su capacidad operativa real, infraestructura y métodos de trabajo.",
+        "isCorrect": true,
+        "rationale": "Inspeccionar las instalaciones del proveedor permite validar *in situ* la veracidad de sus equipos, stocks reales, orden de almacenes y solvencia operacional."
+      },
+      {
+        "text": "Reemplazar la auditoría técnica por una encuesta telefónica al representante comercial del proveedor.",
+        "isCorrect": false,
+        "rationale": "Las encuestas comerciales ofrecen sesgos de interés y no aportan evidencia técnica verificable del estado de la infraestructura."
+      },
+      {
+        "text": "Solicitar un descuento del 20% en la primera orden de compra a cambio de omitir la revisión técnica.",
+        "isCorrect": false,
+        "rationale": "Intercambiar revisiones de calidad por descuentos comerciales incrementa exponencialmente el riesgo de fallas catastróficas en el suministro."
+      },
+      {
+        "text": "Enviar un correo electrónico solicitando fotos tomadas por el propio proveedor.",
+        "isCorrect": false,
+        "rationale": "El material fotográfico enviado por el interesado no sustituye la verificación física objetiva realizada por un auditor calificado."
+      }
+    ],
+    "hint": "La infraestructura física y la capacidad de respuesta no siempre reflejan lo que se declara en un expediente formal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la Responsabilidad Social Empresarial (RSE) aplicada a operaciones mineras en zonas de influencia directa, ¿cuál de las siguientes estrategias genera un impacto social positivo sostenible y fortalece la licencia social de la empresa?",
+    "opciones": [
+      {
+        "text": "Entregar transferencias monetarias directas a los pobladores sin proyectos productivos asociados.",
+        "isCorrect": false,
+        "rationale": "Las entregas de dinero en efectivo fomentan la dependencia económica a corto plazo y no construyen desarrollo sostenible ni tejido social."
+      },
+      {
+        "text": "Co-construir infraestructura comunitaria dotando de materiales y capacitación para que la propia comunidad ejecute la obra.",
+        "isCorrect": true,
+        "rationale": "Involucrar directamente a los comuneros en la construcción y gestión de sus propios proyectos crea sentido de pertenencia y protege las obras ante eventuales conflictos."
+      },
+      {
+        "text": "Cercar el perímetro de la operación minera e ignorar las necesidades básicas del entorno social.",
+        "isCorrect": false,
+        "rationale": "Aislarse de las comunidades aledañas incrementa el descontento social y eleva el riesgo de paralizaciones por protestas."
+      },
+      {
+        "text": "Prometer obras de gran envergadura que exceden la capacidad presupuestal y operativa de la minera.",
+        "isCorrect": false,
+        "rationale": "Generar falsas expectativas o compromisos irrealizables destruye la confianza institucional y agrava la conflictividad futura."
+      },
+      {
+        "text": "Limitar la RSE únicamente a campañas publicitarias en medios de comunicación nacionales.",
+        "isCorrect": false,
+        "rationale": "La publicidad no sustituye la inversión social real en el territorio de influencia ni mitiga las carencias del entorno."
+      }
+    ],
+    "hint": "El sentido de pertenencia y valoración comunitaria surge cuando la población participa activamente en su propio desarrollo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el análisis de seguridad laboral y cadena de suministro, es vital distinguir operativamente entre los conceptos de Peligro y Riesgo. En el contexto del transporte de reactivos químicos en rutas de alta montaña, ¿cuál de las siguientes opciones describe correctamente un Riesgo?",
+    "opciones": [
+      {
+        "text": "El camión cisterna con capacidad para 30 toneladas de ácido sulfúrico.",
+        "isCorrect": false,
+        "rationale": "El camión o el tanque representan la fuente o elemento físico, no la probabilidad de ocurrencia de un evento dañino."
+      },
+      {
+        "text": "La pendiente pronunciada y la presencia de hielo sobre la carretera de acceso a la mina.",
+        "isCorrect": false,
+        "rationale": "Las condiciones de la vía y el clima constituyen factores ambientales de peligro (fuentes potenciales de daño)."
+      },
+      {
+        "text": "La probabilidad de que ocurra un volcamiento y derrame del químico al transitar en condiciones climáticas adversas.",
+        "isCorrect": true,
+        "rationale": "El riesgo es la combinación de la probabilidad de que se desencadene un evento adverso y la severidad del daño consecuente."
+      },
+      {
+        "text": "La sustancia química corrosiva contenida dentro del tanque del vehículo.",
+        "isCorrect": false,
+        "rationale": "La sustancia química es intrínsecamente un peligro por sus propiedades corrosivas, pero no el riesgo en sí."
+      },
+      {
+        "text": "La altitud geográfica de 4,500 metros sobre el nivel del mar.",
+        "isCorrect": false,
+        "rationale": "La altitud es una condición operativa del contexto ambiental en el que se desarrolla la actividad."
+      }
+    ],
+    "hint": "Considera la exposición y la posibilidad concreta de que una fuente potencial de daño se materialice en un evento adverso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una empresa de minería subterránea requiere transportar explosivos desde la costa hasta la unidad operativa. Dado el nivel de amenaza para la seguridad, decide contratar a un operador especializado en materiales peligrosos que asuma la responsabilidad total del traslado y sus pólizas. ¿Qué estrategia de tratamiento del riesgo está aplicando la minera?",
+    "opciones": [
+      {
+        "text": "Eliminación del riesgo.",
+        "isCorrect": false,
+        "rationale": "El riesgo solo se eliminaría si la mina dejara de utilizar explosivos por completo en sus procesos."
+      },
+      {
+        "text": "Transferencia del riesgo.",
+        "isCorrect": true,
+        "rationale": "Subcontratar el servicio con un tercero especializado que asume la responsabilidad y cuenta con seguros transfiere la carga del riesgo operacional y financiero."
+      },
+      {
+        "text": "Aceptación pasiva del riesgo.",
+        "isCorrect": false,
+        "rationale": "La aceptación pasiva implica no tomar medidas estratégicas y absorber directamente cualquier daño o costo emergente."
+      },
+      {
+        "text": "Mitigación interna del riesgo.",
+        "isCorrect": false,
+        "rationale": "La mitigación interna mantendría el transporte con flota e infraestructura propia buscando reducir accidentes."
+      },
+      {
+        "text": "Retención del riesgo.",
+        "isCorrect": false,
+        "rationale": "La retención implica financiar internamente las probables pérdidas sin utilizar seguros ni terceros contratados."
+      }
+    ],
+    "hint": "Revisa cuál de las cuatro respuestas al riesgo consiste en trasladar la responsabilidad y el impacto financiero a una entidad experta.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para mitigar los riesgos de seguridad física (Security) como robos organizados o sabotajes durante el transporte de insumos de alto valor (ej. barras doré o concentrados valiosos), ¿qué medidas tecnológicas y operativas deben implementarse?",
+    "opciones": [
+      {
+        "text": "Instalación de GPS con función de geocercas y capacidad de bloqueo remoto del motor.",
+        "isCorrect": true,
+        "rationale": "El uso de geocercas y apagado automático del motor inmoviliza la unidad ante desviaciones no autorizadas de la ruta estipulada."
+      },
+      {
+        "text": "Monitoreo en tiempo real con alertas automáticas ante paradas no programadas o desvíos de ruta.",
+        "isCorrect": true,
+        "rationale": "La vigilancia continua mediante plataformas de monitoreo permite activar protocolos de respuesta inmediata ante eventos sospechosos."
+      },
+      {
+        "text": "Coordinación y escolta con la Policía Nacional o empresas especializadas de seguridad armada.",
+        "isCorrect": true,
+        "rationale": "El resguardo físico armado disuade los intentos de asalto organizado en tramos viales de alto riesgo geográfico."
+      },
+      {
+        "text": "Eliminación de todo tipo de precinto o sello físico en las tolvas para acelerar el tránsito.",
+        "isCorrect": false,
+        "rationale": "Retirar precintos de seguridad facilita las mermas no detectadas y las infiltraciones delictivas en el trayecto."
+      },
+      {
+        "text": "Publicación en redes sociales del horario exacto y ruta de transporte para conocimiento público.",
+        "isCorrect": false,
+        "rationale": "Divulgar datos de ruta e itinerarios compromete gravemente la confidencialidad de la carga y expone el convoy a emboscadas."
+      }
+    ],
+    "hint": "Combina el control tecnológico a distancia con el resguardo físico calificado e impedimentos mecánicos/electrónicos de desplazamiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Cuando ocurre una falla logística de nivel catastrófico en una unidad minera (como la rotura del transformador principal que paraliza la planta concentradora), la comunicación debe ser inmediata y estructurada. ¿Qué herramienta organizativa permite definir con claridad quién aprueba, quién ejecuta, a quién se consulta y a quién se informa?",
+    "opciones": [
+      {
+        "text": "El diagrama de dispersión de Ishikawa.",
+        "isCorrect": false,
+        "rationale": "El diagrama de Ishikawa identifica causas raíz de problemas de calidad, pero no asigna roles institucionales de comunicación."
+      },
+      {
+        "text": "La matriz RACI (Responsible, Accountable, Consulted, Informed).",
+        "isCorrect": true,
+        "rationale": "La matriz RACI establece con precisión la cadena de mando, delimitando quién responde, quien autoriza, quién da soporte técnico y quién recibe reportes."
+      },
+      {
+        "text": "El gráfico de control de procesos estadísticos de Shewhart.",
+        "isCorrect": false,
+        "rationale": "Los gráficos de Shewhart analizan variaciones en procesos productivos continuos, no estructuras organizativas."
+      },
+      {
+        "text": "La tabla de amortización de activos fijos de la SUNAT.",
+        "isCorrect": false,
+        "rationale": "Las tablas tributarias regulan depreciaciones contables de bienes, careciendo de función funcional en crisis."
+      },
+      {
+        "text": "El análisis modal de fallos y efectos (AMEF) de mantenimiento.",
+        "isCorrect": false,
+        "rationale": "El AMEF evalúa modos de falla técnica en equipos, pero no establece los flujos de comunicación y gobierno corporativo."
+      }
+    ],
+    "hint": "Identifica la matriz utilizada para asignar roles y responsabilidades de gobernanza y comunicación entre los interesados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Ante la alta variabilidad climática en la sierra peruana (como la temporada de lluvias intensas que provoca huaycos), ¿cuál es la medida logística preventiva más efectiva para garantizar la continuidad operativa de la mina sin detener la producción?",
+    "opciones": [
+      {
+        "text": "Detener las compras de insumos hasta que culmine la temporada de lluvias.",
+        "isCorrect": false,
+        "rationale": "Parar las compras desabastece las áreas productivas y genera la detención forzosa del proceso de extracción."
+      },
+      {
+        "text": "Incrementar temporalmente el stock de seguridad de insumos críticos y establecer redundancia en las rutas de abastecimiento.",
+        "isCorrect": true,
+        "rationale": "Elevar el inventario crítico previo a la temporada crítica y coordinar rutas alternativas (redundancia) mitiga el impacto de los bloqueos de carretera."
+      },
+      {
+        "text": "Exigir a los transportistas que incrementen la velocidad de tránsito durante las tormentas.",
+        "isCorrect": false,
+        "rationale": "Aumentar la velocidad en condiciones climáticas severas eleva exponencialmente el riesgo de volcamiento y accidentes fatales."
+      },
+      {
+        "text": "Reducir los niveles de inventario al mínimo absoluto para evitar acumulación en almacén.",
+        "isCorrect": false,
+        "rationale": "Operar con inventarios mínimos durante eventos climáticos adversos interrumpe el abastecimiento ante el primer corte de ruta."
+      },
+      {
+        "text": "Cancelar los contratos de transporte de carga y contratar vuelos chárter para todo el volumen de carga pesada.",
+        "isCorrect": false,
+        "rationale": "Mover carga pesada o a granel por vía aérea resulta financieramente inviable e insostenible para el volumen minero."
+      }
+    ],
+    "hint": "Combina colchones de inventario planificados con opciones viales de respaldo (Plan B).",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La gestión logística ha evolucionado a lo largo de las décadas. En la década de 1990, con el auge de la informática y el desarrollo de software empresarial, ¿cuál fue el hito clave que transformó la administración de los inventarios y flujos logísticos?",
+    "opciones": [
+      {
+        "text": "La consolidación exclusiva de la manufactura masiva sin control de costos.",
+        "isCorrect": false,
+        "rationale": "La manufactura masiva aislada caracterizó las décadas de 1960 y 1970, previo a la integración digital."
+      },
+      {
+        "text": "La implementación masiva de sistemas integrados ERP (Enterprise Resource Planning) y WMS (Warehouse Management System).",
+        "isCorrect": true,
+        "rationale": "En los noventa, la irrupción de los ERP y WMS permitió centralizar la información de inventarios, compras y distribución en tiempo real."
+      },
+      {
+        "text": "El abandono total del transporte terrestre a favor del transporte ferroviario.",
+        "isCorrect": false,
+        "rationale": "El transporte multimodal continuó usando el camión como eje principal de conectividad de la última milla."
+      },
+      {
+        "text": "La sustitución de los almacenes físicos por plataformas puramente virtuales sin stock.",
+        "isCorrect": false,
+        "rationale": "Las operaciones mineras e industriales requieren necesariamente almacenamiento físico de consumibles e insumos."
+      },
+      {
+        "text": "El origen primario del trueque comercial entre empresas mineras.",
+        "isCorrect": false,
+        "rationale": "El comercio e intercambio monetario corporativo estaba plenamente consolidado décadas atrás."
+      }
+    ],
+    "hint": "Piensa en las herramientas informáticas que permitieron unificar la información operativa y financiera de las empresas en una sola base de datos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En una cadena de suministro industrial de tipo Business-to-Business (B2B) en el sector minero, ¿cómo interactúan los flujos de información y de materiales entre la empresa y sus proveedores?",
+    "opciones": [
+      {
+        "text": "El flujo de materiales va del cliente al proveedor, mientras que el flujo de información no existe.",
+        "isCorrect": false,
+        "rationale": "Los materiales fluyen desde la fuente de aprovisionamiento hacia la transformación, no en sentido inverso."
+      },
+      {
+        "text": "El flujo de información de la demanda viaja desde el cliente/empresa hacia los proveedores, mientras que el flujo de materiales y productos avanza desde los proveedores hacia la empresa.",
+        "isCorrect": true,
+        "rationale": "La información de requerimientos de la demanda retroalimenta la cadena hacia atrás, gatillando el despacho físico de materiales hacia adelante."
+      },
+      {
+        "text": "Ambos flujos se mueven exclusivamente de forma unidireccional desde la empresa contratante hacia el mercado final.",
+        "isCorrect": false,
+        "rationale": "Ignorar la retroalimentación de información imposibilita la alineación de compras de insumos a los proveedores."
+      },
+      {
+        "text": "Los materiales se mueven de manera aleatoria sin ningún tipo de intercambio de datos entre los actores.",
+        "isCorrect": false,
+        "rationale": "Sin flujo de datos estructurado se producen desabastecimientos o sobrestock constantes (efecto látigo)."
+      },
+      {
+        "text": "El flujo financiero reemplaza por completo la necesidad de trasladar insumos físicos.",
+        "isCorrect": false,
+        "rationale": "Las transacciones financieras soportan la transacción pero no sustituyen el traslado físico de mercancías."
+      }
+    ],
+    "hint": "La información sobre requerimientos retroalimenta el origen de la cadena, mientras que los insumos físicos avanzan para satisfacer dicha necesidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La automatización efectiva de una cadena de suministro no consiste únicamente en adquirir licencias informáticas avanzadas. Para que el sistema genere valor real, se requiere cumplir con cuatro pilares fundamentales en un orden lógico. ¿Cuál de las siguientes secuencias representa este proceso?",
+    "opciones": [
+      {
+        "text": "Comprar el software -> Eliminar personal -> Producir masivamente -> Vender.",
+        "isCorrect": false,
+        "rationale": "Instalar software sin estandarizar procesos conduce a automatizar el desorden y generar ineficiencias."
+      },
+      {
+        "text": "Sincronización (estandarización) -> Integración -> Optimización -> Colaboración.",
+        "isCorrect": true,
+        "rationale": "Primero se estandarizan y cronometran los procesos (sincronización), luego se consolidan en el sistema (integración), para poder mejorarlos (optimización) y compartirlos (colaboración)."
+      },
+      {
+        "text": "Colaboración -> Venta directa -> Fiscalización -> Contratación de personal.",
+        "isCorrect": false,
+        "rationale": "La colaboración interempresarial es la fase madura de una cadena de suministro, no su etapa inicial."
+      },
+      {
+        "text": "Imposición de multas -> Auditoría externa -> Automatización -> Cierre de almacenes.",
+        "isCorrect": false,
+        "rationale": "Las auditorías y multas no constituyen pilares metodológicos de integración y automatización de la red."
+      },
+      {
+        "text": "Subcontratación total -> Eliminación de datos -> Optimización -> Sincronización.",
+        "isCorrect": false,
+        "rationale": "Eliminar datos invalida cualquier posibilidad de análisis, optimización o control en un entorno digital."
+      }
+    ],
+    "hint": "Primero debes estandarizar y medir tus procesos antes de unificarlos en un sistema y buscar la mejora continua compartida.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un jefe de logística confunde tener una pantalla con puntos GPS estáticos con un verdadero sistema de monitoreo de mercancías. ¿Cuál es la diferencia técnica fundamental entre un registro de posición pasivo y un monitoreo activo en tiempo real?",
+    "opciones": [
+      {
+        "text": "El registro es más costoso que el monitoreo en tiempo real.",
+        "isCorrect": false,
+        "rationale": "El registro pasivo requiere menos infraestructura dedicada de personal que una central activa de monitoreo."
+      },
+      {
+        "text": "El registro es un seguimiento histórico reactivo, mientras que el monitoreo en tiempo real supervisa activamente y permite intervenir proactivamente para prevenir o mitigar un riesgo antes de que se concretice.",
+        "isCorrect": true,
+        "rationale": "El monitoreo activo implica observación continua y capacidad de acción inmediata (ej. apagar motor o desviar convoy), a diferencia de consultar un historial post-evento."
+      },
+      {
+        "text": "El monitoreo solo se puede realizar mediante llamadas telefónicas cada 24 horas al conductor.",
+        "isCorrect": false,
+        "rationale": "Las llamadas esporádicas no constituyen monitoreo automatizado en tiempo real ni brindan visibilidad continua."
+      },
+      {
+        "text": "El registro pasivo permite apagar el motor del camión de forma automática ante un desvío.",
+        "isCorrect": false,
+        "rationale": "La intervención remota del vehículo requiere una plataforma activa conectada con comandos de acción remota."
+      },
+      {
+        "text": "No existe ninguna diferencia operativa entre ambos conceptos.",
+        "isCorrect": false,
+        "rationale": "Confundir registro con monitoreo elimina la capacidad de respuesta preventiva ante emergencias viales."
+      }
+    ],
+    "hint": "La clave reside en la capacidad de tomar decisiones oportunas durante el desarrollo del evento, no después de que ocurrió la falla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Una empresa minera busca modernizar el control de inventarios de su almacén de repuestos críticos y herramientas de alto valor. ¿Qué tecnologías habilitadoras de monitoreo y trazabilidad ofrecen alta eficiencia operativa y lecturas masivas sin contacto visual directo?",
+    "opciones": [
+      {
+        "text": "Identificación por Radiofrecuencia (RFID) mediante etiquetas o tags y lectores.",
+        "isCorrect": true,
+        "rationale": "Los chips RFID permiten escanear cientos de ítems de forma masiva en segundos sin necesidad de apuntar línea de vista a cada etiqueta."
+      },
+      {
+        "text": "Sensores IoT (Internet of Things) de temperatura, humedad e impacto para carga sensible.",
+        "isCorrect": true,
+        "rationale": "Los sensores IoT transmiten alertas en tiempo real sobre las condiciones ambientales que podrían dañar componentes electrónicos o reactivos."
+      },
+      {
+        "text": "Sistemas de rastreo por GPS integrados a la plataforma WMS/ERP.",
+        "isCorrect": true,
+        "rationale": "Integrar el GPS al sistema central permite vincular la posición geográfica de la flota con el detalle de las órdenes de despacho."
+      },
+      {
+        "text": "Tarjetas de cartón físicas llenadas manualmente con lapicero al lado de los anaqueles (Kardex manual).",
+        "isCorrect": false,
+        "rationale": "El Kardex de papel es un registro artesanal propenso a errores humanos que no ofrece visibilidad digital en tiempo real."
+      },
+      {
+        "text": "Planillas de cálculo impresas no vinculadas a la red de la empresa.",
+        "isCorrect": false,
+        "rationale": "Las hojas impresas desconectadas generan duplicidad de datos y carecen de trazabilidad automática."
+      }
+    ],
+    "hint": "Busca herramientas digitales que permitan captura automática de datos a distancia y conectividad en tiempo real con los sistemas de gestión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante una crisis global o evento catastrófico no contemplado (como la paralización de fronteras por una pandemia), los contratos de abastecimiento rígidos pueden obligar a la empresa a seguir recibiendo stock no requerido. ¿Qué cláusula contractual de protección debe incluirse en los contratos logísticos para mitigar este riesgo?",
+    "opciones": [
+      {
+        "text": "Cláusula de incremento automático de compras del 20% mensual en situaciones de emergencia.",
+        "isCorrect": false,
+        "rationale": "Aumentar las compras obligatorias en una crisis agrava el problema de acumulación de inventario inmovilizado."
+      },
+      {
+        "text": "Cláusula de flexibilidad operativa y reducción drástica o suspensión temporal de la demanda ante eventos de fuerza mayor o crisis catastróficas.",
+        "isCorrect": true,
+        "rationale": "Incluir mecanismos de ajuste de volumen ante contingencias severas permite congelar temporalmente los despachos sin incurrir en penalidades."
+      },
+      {
+        "text": "Cláusula de pago por adelantado del 100% de los insumos de los próximos tres años.",
+        "isCorrect": false,
+        "rationale": "Comprometer pagos por adelantado destruye la liquidez de la empresa durante un periodo de inactividad operativa."
+      },
+      {
+        "text": "Cláusula de prohibición de comunicación entre la empresa contratante y el proveedor.",
+        "isCorrect": false,
+        "rationale": "Interrumpir la comunicación en medio de una crisis imposibilita la reprogramación de entregas e incrementa el desorden."
+      },
+      {
+        "text": "Cláusula de conversión de los insumos en donaciones obligatorias sin ajuste contable.",
+        "isCorrect": false,
+        "rationale": "Las compras industriales no pueden ser convertidas arbitrariamente en donaciones sin respaldo contable ni fiscal."
+      }
+    ],
+    "hint": "La empresa necesita una válvula de escape legal que le permita frenar el ingreso no planificado de inventario y proteger su liquidez.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la estructuración financiera de los costos logísticos, la contabilidad se divide en interna y externa. Cuando el área de logística gestiona sus partidas operativas y asigna consumos a un Centro de Costos (Seco) específico en el ERP, ¿qué tipo de marco contable está aplicando?",
+    "opciones": [
+      {
+        "text": "Contabilidad externa de pérdidas y ganancias para la bolsa de valores.",
+        "isCorrect": false,
+        "rationale": "Los reportes financieros para accionistas y bolsa consolidan información macro bajo rubros generales de gasto."
+      },
+      {
+        "text": "Contabilidad interna (o de gestión) enfocada en el control presupuestal administrativo.",
+        "isCorrect": true,
+        "rationale": "El seguimiento por centros de costo (Seco) responde a la contabilidad interna para controlar la ejecución presupuestal de cada área."
+      },
+      {
+        "text": "Contabilidad tributaria de auditoría anual obligatoria por la SUNAT.",
+        "isCorrect": false,
+        "rationale": "La contabilidad tributaria liquida impuestos corporativos sobre estados financieros auditados, no sobre Secos operativos."
+      },
+      {
+        "text": "Reporte de responsabilidad social empresarial para organismos internacionales.",
+        "isCorrect": false,
+        "rationale": "Los reportes RSE miden impacto socioambiental y sostenibilidad, no imputación presupuestaria en el ERP."
+      },
+      {
+        "text": "Facturación comercial directa al cliente final.",
+        "isCorrect": false,
+        "rationale": "El centro de costo es una herramienta analítica interna, no un comprobante de venta mercantil."
+      }
+    ],
+    "hint": "Los 'centros de costo' son subdivisiones administrativas utilizadas hacia el interior de la empresa para controlar quién gasta qué.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "La gerencia financiera solicita al departamento de logística un desglose analítico de los gastos logísticos para evitar 'ocultar' costos dentro del rubro general de almacenamiento. ¿Cuáles son los 5 costos logísticos directos que deben identificarse y gestionarse de forma independiente?",
+    "opciones": [
+      {
+        "text": "Costo de publicidad, costo de ventas, costo de patente, costo de auditoría y costo de comedor.",
+        "isCorrect": false,
+        "rationale": "Estos rubros pertenecen a gastos corporativos, comerciales y de recursos humanos, no a la operativa logística."
+      },
+      {
+        "text": "Costo de stock, costo de almacenaje, costo de picking, costo de envase/embalaje (packaging) y costo de transporte.",
+        "isCorrect": true,
+        "rationale": "Separar el capital inmovilizado (stock), la infraestructura (almacenaje), la manipulación (picking), la protección (packaging) y el flete (transporte) permite sincerar las ineficiencias."
+      },
+      {
+        "text": "Costo de uniformes, costo de energía de oficinas, costo de seguros médicos, costo telefónico y costo de capacitaciones.",
+        "isCorrect": false,
+        "rationale": "Son gastos administrativos generales de soporte, no categorías puras de la función logística."
+      },
+      {
+        "text": "Costo de importación, costo de exportación, costo de aranceles, costo de multas y costo de representación.",
+        "isCorrect": false,
+        "rationale": "Esta lista mezcla partidas de comercio exterior y penalidades, omitiendo las actividades internas del almacén."
+      },
+      {
+        "text": "Costo de exploración, costo de chancado, costo de flotación, costo de lixiviación y costo de fundición.",
+        "isCorrect": false,
+        "rationale": "Corresponden a las etapas de la cadena de procesamiento metalúrgico-minero, no a los costos logísticos."
+      }
+    ],
+    "hint": "Agrupa los gastos en las 5 etapas/actividades operativas propias del movimiento y resguardo de la carga en la cadena de suministro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Para calcular con precisión el costo de almacenaje de materiales a granel ($CAS$) en un hangar o cantera, se utiliza una fórmula específica que considera el costo anual por metro cuadrado ($C_A$), el espacio ocupado ($S$), los días de permanencia ($R$) y el volumen en masa ($P$). ¿Cuál es la estructura correcta de dicha ecuación?",
+    "opciones": [
+      {
+        "text": "CAS = C_A + S + P + R + 365",
+        "isCorrect": false,
+        "rationale": "Sumar los términos no refleja la proporcionalidad del espacio ni la ponderación del tiempo de permanencia."
+      },
+      {
+        "text": "CAS = \\frac{C_A \\times S \\times P \\times R}{365}",
+        "isCorrect": true,
+        "rationale": "La ecuación del costo de almacenaje a granel multiplica el costo unitario del espacio, los metros ocupados, el volumen/masa retenido y el tiempo expresado en días sobre la base anual de 365 días."
+      },
+      {
+        "text": "CAS = \\frac{365}{C_A \\times S \\times P}",
+        "isCorrect": false,
+        "rationale": "Colocar los días del año en el numerador invierte matemáticamente la tasa diaria de costo por almacenamiento."
+      },
+      {
+        "text": "CAS = C_A \\times 365 - (S + P + R)",
+        "isCorrect": false,
+        "rationale": "Restar variables físicas a un costo proyectado rompe la consistencia dimensional de la fórmula."
+      },
+      {
+        "text": "CAS = \\frac{S \\times P}{C_A \\times R}",
+        "isCorrect": false,
+        "rationale": "Ubicar el costo anual en el denominador reduce erróneamente el resultado al aumentar el valor de la infraestructura."
+      }
+    ],
+    "hint": "El costo se obtiene multiplicando los factores de costo unitario, espacio, masa y tiempo, divididos entre el número de días del año.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "La metodología Lean Logistics busca optimizar costos eliminando los desperdicios o mudas en las operaciones de almacén y transporte. ¿Cuáles de las siguientes situaciones corresponden a desperdicios definidos por esta filosofía?",
+    "opciones": [
+      {
+        "text": "Tiempos muertos y colas de espera (Waiting) de personal o camiones para ser atendidos.",
+        "isCorrect": true,
+        "rationale": "Las esperas improductivas consumen horas de trabajo sin generar avance en la preparación o recepción de pedidos."
+      },
+      {
+        "text": "Movimientos innecesarios (Motion) del operario para buscar información o herramientas dispersas.",
+        "isCorrect": true,
+        "rationale": "Caminar múltiples veces para consultar planillas físicas por falta de orden representa un desperdicio de ergonometría y tiempo."
+      },
+      {
+        "text": "Acumulación excesiva de inventario (Inventory) no alineada con la demanda real.",
+        "isCorrect": true,
+        "rationale": "El exceso de stock inmoviliza capital de trabajo e incrementa los costos de mantenimiento y riesgo de mermas."
+      },
+      {
+        "text": "Ejecución de procesos con estándares internacionales de seguridad comprobados.",
+        "isCorrect": false,
+        "rationale": "Cumplir con estándares de seguridad es una condición operativa indispensable que genera valor y protege las vidas."
+      },
+      {
+        "text": "Mantenimiento preventivo programado de montacargas según especificaciones del fabricante.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento preventivo extiende la vida útil de los activos y previene fallas catastróficas innecesarias."
+      }
+    ],
+    "hint": "Identifica aquellas actividades que consumen recursos o generan demoras sin añadir ningún valor al cliente o al proceso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la negociación de tarifas y condiciones contractuales con un proveedor estratégico de transporte de mineral, ¿cuál debe ser la postura del negociador logístico respecto a las cláusulas de seguridad y calidad del servicio?",
+    "opciones": [
+      {
+        "text": "Reducir los estándares de seguridad al mínimo con tal de obtener la tarifa más baja del mercado.",
+        "isCorrect": false,
+        "rationale": "Sacrificar exigencias de seguridad incrementa exponencialmente los accidentes fatales y las multas regulatorias."
+      },
+      {
+        "text": "Mantener las exigencias de seguridad y estándares de calidad como puntos no negociables, buscando eficiencia mediante la optimización conjunta de procesos y el beneficio mutuo (Ganar-Ganar).",
+        "isCorrect": true,
+        "rationale": "La seguridad e integridad del proceso son límites no negociables; los ahorros deben provenir de eliminar ineficiencias y colaboraciones de largo plazo."
+      },
+      {
+        "text": "Imponer una tarifa por debajo del costo operativo del proveedor sin importar su quiebra.",
+        "isCorrect": false,
+        "rationale": "Ahogar al proveedor compromete la sostenibilidad del servicio y genera quiebras que interrumpen la cadena."
+      },
+      {
+        "text": "Aceptar cualquier aumento de tarifa propuesto por el proveedor sin solicitar desglose de estructura de costos.",
+        "isCorrect": false,
+        "rationale": "Aceptar incrementos sin sustento técnico destruye la competitividad de los costos presupuestados."
+      },
+      {
+        "text": "Negociar los aspectos de seguridad únicamente en reuniones informales fuera de la empresa.",
+        "isCorrect": false,
+        "rationale": "Las condiciones de seguridad deben formalizarse con total transparencia institucional dentro de los marcos contractuales."
+      }
+    ],
+    "hint": "Las normas de seguridad y requisitos de calidad protegen la vida de las personas y la operación; no son sujetas a regateo económico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una mina tiene una capacidad ociosa del 10% en su planta de procesamiento. Un cliente ocasional ofrece comprar ese volumen excedente a un precio de $27 USD por unidad. El costo variable unitario de producción es $10 USD y el costo fijo promedio asignado es $30 USD por unidad (costo total tradicional = $40 USD). Desde la perspectiva del análisis de costos de oportunidad y costos fijos, ¿es conveniente aceptar el pedido?",
+    "opciones": [
+      {
+        "text": "No, porque el precio de $27 USD es menor al costo total de $40 USD y genera una pérdida neta de $13 USD por unidad.",
+        "isCorrect": false,
+        "rationale": "El cálculo tradicional de $40 USD comete el error de asignar costos fijos que la planta ya absorbió con su volumen habitual."
+      },
+      {
+        "text": "Sí, porque los costos fijos ya están absorbidos por la producción base, y el ingreso de $27 USD supera el costo variable de $10 USD, generando un margen de contribución positivo de $17 USD por unidad.",
+        "isCorrect": true,
+        "rationale": "Al existir capacidad ociosa, los costos fijos no se incrementan; por ende, cualquier precio superior al costo variable ($10 USD) aporta un margen limpio que amortiza la estructura general."
+      },
+      {
+        "text": "No, porque el cliente debería pagar al menos $50 USD para cubrir impuestos.",
+        "isCorrect": false,
+        "rationale": "El análisis marginal compara el ingreso incremental directo contra el costo marginal directo, sin inventar sobretasas irrealistas."
+      },
+      {
+        "text": "Sí, pero solo si el cliente acepta pagar una multa inicial del 50% por compra ocasional.",
+        "isCorrect": false,
+        "rationale": "Imponer multas comerciales a un cliente que absorbe capacidad ociosa destruye la oportunidad marginal de venta."
+      },
+      {
+        "text": "Es indiferente, ya que la capacidad ociosa no genera ningún impacto financiero en la empresa.",
+        "isCorrect": false,
+        "rationale": "Mantener capacidad ociosa desperdicia infraestructura ya pagada que podría aportar margen de contribución monetario."
+      }
+    ],
+    "hint": "Evalúa si los costos fijos cambiarán al producir ese 10% adicional o si ya fueron cubiertos por la producción normal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-14",
+    "diplomado": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Muchas empresas mineras e industriales estructuran su asignación de costos indirectos en los sistemas ERP mediante el método de Costeo Basado en Actividades (ABC). ¿Cuál es la secuencia lógica de imputación que sigue este modelo contable?",
+    "opciones": [
+      {
+        "text": "Producto -> Ventas -> Ganancia -> Impuestos.",
+        "isCorrect": false,
+        "rationale": "Esta secuencia describe una cadena de flujo financiero comercial, no la metodología de asignación de costos de producción."
+      },
+      {
+        "text": "Secciones (Centros de Costo) -> Actividades -> Inductores de Costo (Drivers) -> Productos / Servicios.",
+        "isCorrect": true,
+        "rationale": "El modelo ABC subdivide los recursos por áreas/secciones, mide las actividades consumidas, utiliza inductores (drivers) para prorratear y los asigna finalmente a los productos."
+      },
+      {
+        "text": "Proveedor -> Transporte -> Factura -> Cheque.",
+        "isCorrect": false,
+        "rationale": "Representa la secuencia del proceso administrativo de cuentas por pagar a proveedores."
+      },
+      {
+        "text": "Empleado -> Salario -> Descuento -> Netos.",
+        "isCorrect": false,
+        "rationale": "Corresponde al procesamiento estándar de planillas de pago de recursos humanos."
+      },
+      {
+        "text": "Almacén -> Scrap -> Pérdida -> Balance.",
+        "isCorrect": false,
+        "rationale": "Es el registro contable de castigo de inventario obsoleto o merma dentro de la contabilidad de activos."
+      }
+    ],
+    "hint": "El modelo identifica primero el área, luego la tarea específica realizada, el factor que desencadena el gasto y finalmente el producto o servicio resultante.",
+    "activo": true
+  }
+]

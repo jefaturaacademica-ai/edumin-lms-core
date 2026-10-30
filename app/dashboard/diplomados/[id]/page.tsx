@@ -2344,11 +2344,11 @@ export default function ReproductorClasesPage() {
                     </div>
                   )}
 
-                  {/* SECCIÓN TEMAS CLAVE */}
+                  {/* SECCIÓN PUNTOS CLAVE */}
                   {parteActiva.resumen.temasClave && parteActiva.resumen.temasClave.length > 0 && (
                     <div className="space-y-3 pt-4 border-t border-slate-200/60 dark:border-slate-800/60">
                       <h4 className={`text-xs font-black uppercase tracking-wider ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`}>
-                        Temas clave:
+                        Puntos clave:
                       </h4>
                       <ul className="space-y-2.5">
                         {parteActiva.resumen.temasClave.map((item, idx) => (

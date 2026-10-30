@@ -16,15 +16,15 @@ export interface ResumenData {
  * **Resumen:**
  * [Párrafo pedagógico]
  * 
- * **Temas clave:**
+ * **Puntos clave:** (o **Temas clave:**)
  * - **Concepto:** Explicación
  */
 export function parsearResumenTexto(texto?: string | null): ResumenData | null {
   if (!texto || typeof texto !== 'string' || !texto.trim()) return null;
 
-  // Extraer párrafo de resumen
-  const resumenMatch = texto.match(/\*\*Resumen:\*\*\s*([\s\S]*?)(?=\*\*Temas clave:\*\*|$)/i);
-  const temasMatch = texto.match(/\*\*Temas clave:\*\*\s*([\s\S]*?)(?=---|###|$)/i);
+  // Extraer párrafo de resumen y bloque de puntos/temas clave
+  const resumenMatch = texto.match(/\*\*Resumen:\*\*\s*([\s\S]*?)(?=\*\*(?:Puntos|Temas)\s+clave:\*\*|$)/i);
+  const temasMatch = texto.match(/\*\*(?:Puntos|Temas)\s+clave:\*\*\s*([\s\S]*?)(?=---|###|$)/i);
 
   const parrafo = resumenMatch ? resumenMatch[1].trim() : '';
   const lineasTemas = temasMatch 
