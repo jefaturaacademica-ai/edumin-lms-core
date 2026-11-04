@@ -17,8 +17,8 @@ export default function ReciboModal({
   if (!reciboImprimir) return null;
 
   return (
-    <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[10000] flex items-center justify-center p-4">
-      <div className="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl p-8 space-y-6 border border-slate-200 dark:border-slate-800 animate-in zoom-in-95 duration-200">
+    <div onClick={(e) => { if (e.target === e.currentTarget) onClose(); }} className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[10000] flex items-center justify-center p-4">
+      <div onClick={(e) => e.stopPropagation()} className="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl p-8 space-y-6 border border-slate-200 dark:border-slate-800 animate-in zoom-in-95 duration-200">
         <div className="flex justify-between items-start border-b border-slate-200 dark:border-slate-800 pb-4">
           <div>
             <h2 className="text-xl font-black text-slate-900 dark:text-white tracking-tight">EDUMIN LMS CORE</h2>

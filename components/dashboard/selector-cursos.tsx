@@ -150,8 +150,8 @@ export function SelectorCursos({ availableCredits, paquete, dni }: { availableCr
 
       {/* MODAL PARA ELEGIR EL DIPLOMADO (Única oportunidad) */}
       {modalDiplomadoAbierto && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in">
-          <div className="bg-white rounded-3xl w-full max-w-3xl max-h-[85vh] overflow-y-auto p-8 shadow-2xl relative">
+        <div onClick={(e) => { if (e.target === e.currentTarget) setModalDiplomadoAbierto(false); }} className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in">
+          <div onClick={(e) => e.stopPropagation()} className="bg-white rounded-3xl w-full max-w-3xl max-h-[85vh] overflow-y-auto p-8 shadow-2xl relative">
             <div className="flex justify-between items-center mb-4">
               <div>
                 <h3 className="text-2xl font-bold text-slate-900">Elige tu Diplomado Principal</h3>

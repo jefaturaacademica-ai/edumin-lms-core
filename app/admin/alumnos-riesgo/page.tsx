@@ -363,8 +363,8 @@ export default function AlumnosRiesgoPage() {
       {/* MODAL: CONFIGURAR DÍAS DE PRÓRROGA INDIVIDUAL             */}
       {/* ========================================================= */}
       {showProrrogaModal && alumnoSeleccionadoProrroga && (
-        <div className="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-[9999] flex items-center justify-center p-4">
-          <div className="bg-white w-full max-w-md rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 animate-in fade-in zoom-in-95 duration-200">
+        <div onClick={(e) => { if (e.target === e.currentTarget) setShowProrrogaModal(false); }} className="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-[9999] flex items-center justify-center p-4">
+          <div onClick={(e) => e.stopPropagation()} className="bg-white w-full max-w-md rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 animate-in fade-in zoom-in-95 duration-200">
             <div className="px-6 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50">
               <h3 className="text-base font-bold text-slate-900">Otorgar Prórroga Temporal</h3>
               <button onClick={() => setShowProrrogaModal(false)} className="p-1.5 hover:bg-slate-200 rounded-full transition-colors text-slate-500 cursor-pointer">

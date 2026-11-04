@@ -20,8 +20,7 @@ import {
   PlayCircle,
   X,
   FileText,
-  Wrench,
-  GraduationCap,
+GraduationCap,
   UserCheck,
   CircleDashed
 } from 'lucide-react';
@@ -32,6 +31,7 @@ import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
 import { ALL_DIPLOMADOS, getDiplomadoBySlug, getDiplomadoByTitleOrSlug, DiplomadoCompleto } from '@/lib/data/diplomadosData';
 import { parseDiplomadosFromProfile, formatearCodigoModulo, calcularAvanceModuloGranular } from '@/lib/utils/profileParser';
+import configuracionExamenesJson from '@/lib/data/configuracion_examenes.json';
 
 export default function DiplomadosPage() {
   const [paquete, setPaquete] = useState<string>('FULL');
@@ -60,85 +60,36 @@ export default function DiplomadosPage() {
   // Modal para ver detalles y temario de un diplomado
   const [modalDiplomado, setModalDiplomado] = useState<DiplomadoCompleto | null>(null);
 
-  // ESTADO DE SIMULACIÓN DEV (SOLO DESARROLLO INTERNO)
-  const [estadoSimuladoDev, setEstadoSimuladoDev] = useState<'sin_diplomado' | 'curso' | 'completado' | 'dos_diplomados'>('curso');
-  const [mostrarPanelDev, setMostrarPanelDev] = useState(true);
-
   // Filtros interactivos y buscador superior del catálogo
   const [busqueda, setBusqueda] = useState<string>('');
   const [categoriaFiltro, setCategoriaFiltro] = useState<string>('Todas');
   const [nivelFiltro, setNivelFiltro] = useState<string>('Todos');
 
-  // Datos completos de los diplomados habilitados activados desde los JSONs
-  const derechoMineroData = getDiplomadoBySlug('derecho-minero');
-  const planillasData = getDiplomadoBySlug('legislacion-laboral-y-elaboracion-de-planillas');
-  const seguridadSaludData = getDiplomadoBySlug('seguridad-y-salud-ocupacional-en-la-industria-y-mineria');
+  // Separación por estado y filtrado activo según píldora seleccionada
+  // Un diplomado está completado si y solo si todos sus módulos tienen 100% de avance (y examen aprobado si aplica)
+  const esDiplomadoCompletadoHelper = (diplomado: any) => {
+    if (!diplomado.modulos || diplomado.modulos.length === 0) return false;
+    const codDip = (diplomado.codigo || diplomado.id || '').toUpperCase();
+    return diplomado.modulos.every((m: any, idx: number) => {
+      const av = typeof m.avance === 'number' 
+        ? m.avance 
+        : calcularAvanceModuloGranular(m, idx, diplomado.completadosMap);
+      const modNom = m.nombre || m.codigo || `Módulo ${(idx + 1).toString().padStart(2, '0')}`;
+      const confItem = (configuracionExamenesJson as Record<string, any>)[`${codDip}_${modNom}`];
+      const noAplica = confItem?.aplica_examen === false;
+      if (noAplica) return av === 100;
+      const examRendido = Boolean(m.rendido || (m.nota !== undefined && m.nota !== null && Number(m.nota) > 0));
+      return av === 100 && examRendido;
+    });
+  };
 
-  // Construcción dinámica de diplomados activos según el Simulador Dev usando los JSONs
-  const diplomadosActivosSimulados = [
-    {
-      id: 'derecho-minero',
-      titulo: derechoMineroData?.titulo || 'DERECHO MINERO',
-      avance: estadoSimuladoDev === 'completado' ? 100 : 0,
-      imagen: derechoMineroData?.imagen || "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80",
-      modulos: (derechoMineroData?.modulos || []).map((m, idx) => {
-        const cod = formatearCodigoModulo(m.codigo, idx);
-        const nom = (m.nombre || '').toUpperCase();
-        return {
-          id: cod,
-          codigo: cod,
-          nombre: nom,
-          titulo: `${cod}: ${nom}`.toUpperCase(),
-          docente: m.docente
-        };
-      })
-    },
-    ...(estadoSimuladoDev === 'dos_diplomados' && planillasData ? [{
-      id: planillasData.slug,
-      titulo: planillasData.titulo.toUpperCase(),
-      avance: 20,
-      imagen: planillasData.imagen,
-      modulos: planillasData.modulos.map((m, idx) => {
-        const cod = formatearCodigoModulo(m.codigo, idx);
-        const nom = (m.nombre || '').toUpperCase();
-        return {
-          id: cod,
-          codigo: cod,
-          nombre: nom,
-          titulo: `${cod}: ${nom}`.toUpperCase(),
-          docente: m.docente
-        };
-      })
-    }] : []),
-    ...(estadoSimuladoDev === 'dos_diplomados' && seguridadSaludData ? [{
-      id: seguridadSaludData.slug,
-      titulo: seguridadSaludData.titulo.toUpperCase(),
-      avance: 100,
-      imagen: seguridadSaludData.imagen,
-      modulos: seguridadSaludData.modulos.map((m, idx) => {
-        const cod = formatearCodigoModulo(m.codigo, idx);
-        const nom = (m.nombre || '').toUpperCase();
-        return {
-          id: cod,
-          codigo: cod,
-          nombre: nom,
-          titulo: `${cod}: ${nom}`.toUpperCase(),
-          docente: m.docente
-        };
-      })
-    }] : [])
-  ];
-
-  const diplomadosActivosFinales = diplomadosEstudianteReal.length > 0 
-    ? diplomadosEstudianteReal 
-    : (estadoSimuladoDev === 'sin_diplomado' ? [] : diplomadosActivosSimulados);
-
-  const diplomadosEnProgreso = diplomadosActivosFinales.filter(d => d.avance < 100);
-  const diplomadosCompletados = diplomadosActivosFinales.filter(d => d.avance >= 100);
+  const diplomadosActivosFinales = diplomadosEstudianteReal;
+  const diplomadosEnProgreso = diplomadosActivosFinales.filter(d => !esDiplomadoCompletadoHelper(d));
+  const diplomadosCompletados = diplomadosActivosFinales.filter(d => esDiplomadoCompletadoHelper(d));
 
   const diplomadosMatriculadosMostrar = diplomadosActivosFinales.filter(d => {
-    if (filtroEstadoMatriculados === 'progreso') return d.avance < 100;
-    if (filtroEstadoMatriculados === 'completados') return d.avance >= 100;
+    if (filtroEstadoMatriculados === 'progreso') return !esDiplomadoCompletadoHelper(d);
+    if (filtroEstadoMatriculados === 'completados') return esDiplomadoCompletadoHelper(d);
     return true;
   });
 
@@ -255,7 +206,9 @@ export default function DiplomadosPage() {
                 id: matched.slug,
                 titulo: (liveDip?.titulo || matched.titulo).toUpperCase(),
                 avance: avanceFinal,
-                imagen: liveDip?.imagen || matched.imagen,
+                imagen: (liveDip?.imagen && !liveDip.imagen.includes('gestion-minera.webp'))
+                ? liveDip.imagen
+                : (matched.imagen || liveDip?.imagen || '/assets/images/daem/gestion-minera.webp'),
                 completadosMap: compMap,
                 modulos: modulosMap
               });
@@ -334,7 +287,11 @@ export default function DiplomadosPage() {
   const esIlimitado = paquete === 'ILIMITADO';
 
   if (loading) {
-    return <DashboardLoader />;
+    return (
+      <div className="w-full h-full min-h-[calc(100vh-5rem)] flex items-center justify-center">
+        <DashboardLoader minHeight="min-h-full" />
+      </div>
+    );
   }
 
   return (
@@ -350,13 +307,13 @@ export default function DiplomadosPage() {
         />
 
         {/* ZONA DIPLOMADOS ACTIVOS O ESTADO SIN DIPLOMADO */}
-        {estadoSimuladoDev === 'sin_diplomado' ? (
+        {diplomadosActivosFinales.length === 0 ? (
           <div className={`rounded-3xl p-8 text-center border shadow-sm ${esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}`}>
             <div className="size-16 mx-auto rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-500 grid place-items-center mb-4">
               <Award className="size-8" />
             </div>
             <h3 className={`text-xl font-bold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-              Aún no has seleccionado tu diplomado principal
+              Aún no cuentas con diplomados activos matriculados
             </h3>
             <p className={`mt-2 max-w-md mx-auto text-sm ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
               Tu cuenta posee créditos disponibles para habilitar tus diplomados de especialización. Explora nuestro catálogo oficial o canjea tu cupo activo.
@@ -438,7 +395,7 @@ export default function DiplomadosPage() {
                     ? 'bg-white/20 text-white' 
                     : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
                 }`}>
-                  {diplomadosActivosSimulados.length}
+                  {diplomadosActivosFinales.length}
                 </span>
               </button>
             </div>
@@ -466,16 +423,22 @@ export default function DiplomadosPage() {
               </div>
             ) : (
               <div className="space-y-6 animate-fadeIn">
-                {diplomadosMatriculadosMostrar.map((diplomado) => {
-                  const esCompletado = diplomado.avance >= 100;
+                                {diplomadosMatriculadosMostrar.map((diplomado) => {
+                  const esCompletado = esDiplomadoCompletadoHelper(diplomado);
                   const estaAbierto = diplomadosAbiertos[diplomado.id] !== false;
 
-                  // Conteo exacto de módulos completados
+                  // Conteo exacto de módulos completados (requiere 100% de clases y examen aprobado si aplica)
+                  const codDip = (diplomado.codigo || diplomado.id || '').toUpperCase();
                   const modulosCompletadosCount = diplomado.modulos.filter((m: any, idx: number) => {
                     const av = typeof m.avance === 'number' 
                       ? m.avance 
                       : calcularAvanceModuloGranular(m, idx, diplomado.completadosMap);
-                    return av === 100;
+                    const modNom = m.nombre || m.codigo || `Módulo ${(idx + 1).toString().padStart(2, '0')}`;
+                    const confItem = (configuracionExamenesJson as Record<string, any>)[`${codDip}_${modNom}`];
+                    const noAplica = confItem?.aplica_examen === false;
+                    if (noAplica) return av === 100;
+                    const examRendido = Boolean(m.rendido || (m.nota !== undefined && m.nota !== null && Number(m.nota) > 0));
+                    return av === 100 && examRendido;
                   }).length;
                   const porcentajeModulos = Math.round((modulosCompletadosCount / diplomado.modulos.length) * 100);
 
@@ -533,14 +496,17 @@ export default function DiplomadosPage() {
                               ? modulo.avance 
                               : calcularAvanceModuloGranular(modulo, idx, diplomado.completadosMap);
 
-                            const esModuloCompletado = avanceModulo === 100;
+                                                        // Verificar estado del examen del módulo
+                            const modNom = modulo.nombre || modulo.codigo || `Módulo ${(idx + 1).toString().padStart(2, '0')}`;
+                            const confItem = (configuracionExamenesJson as Record<string, any>)[`${codDip}_${modNom}`];
+                            const noAplica = confItem?.aplica_examen === false;
+
+                            const examenRendido = Boolean(modulo.rendido || (modulo.nota !== undefined && modulo.nota !== null && Number(modulo.nota) > 0));
+                            const examenAprobado = examenRendido && Number(modulo.nota) >= 12;
+                            const esModuloCompletado = noAplica ? avanceModulo === 100 : (avanceModulo === 100 && examenRendido);
+                            const tieneExamenPendiente = !noAplica && avanceModulo === 100 && !examenRendido;
                             const esModuloEnProgreso = avanceModulo > 0 && avanceModulo < 100;
                             const esModuloPorIniciar = avanceModulo === 0;
-
-                            // Verificar estado del examen del módulo
-                            const examenRendido = Boolean(modulo.rendido || (modulo.nota !== undefined && modulo.nota !== null && modulo.nota > 0));
-                            const examenAprobado = examenRendido && Number(modulo.nota) >= 12;
-                            const tieneExamenPendiente = esModuloCompletado && !examenRendido;
 
                             // Centralización de estilos e información por estado del módulo
                             const infoEstadoModulo = tieneExamenPendiente
@@ -852,8 +818,8 @@ export default function DiplomadosPage() {
 
       {/* MODAL DE DETALLES Y TEMARIO DEL DIPLOMADO */}
       {modalDiplomado && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-md overflow-y-auto animate-fadeIn">
-          <div 
+        <div onClick={(e) => { if (e.target === e.currentTarget) setModalDiplomado(null); }} className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-md overflow-y-auto animate-fadeIn">
+          <div onClick={(e) => e.stopPropagation()}
             className={`relative w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl border ${
               esOscuro ? 'bg-slate-900 border-slate-800 text-slate-100' : 'bg-white border-slate-200 text-slate-900'
             } my-8`}
@@ -1001,73 +967,7 @@ export default function DiplomadosPage() {
         </div>
       )}
 
-      {/* PANEL FLOTANTE DE SIMULACIÓN DEV (DESARROLLO INTERNO) */}
-      {mostrarPanelDev && (
-        <aside className="fixed bottom-5 right-5 z-40 bg-slate-900/95 text-white border border-slate-700/80 backdrop-blur-md p-4 rounded-2xl shadow-2xl max-w-xs space-y-3">
-          <div className="flex items-center justify-between pb-2 border-b border-slate-800">
-            <span className="text-xs font-bold text-amber-400 flex items-center gap-1.5">
-              <Wrench className="size-3.5" /> Simulador Dev (Interno)
-            </span>
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] text-slate-400 bg-slate-800 px-2 py-0.5 rounded-md tabular-nums">v1.0</span>
-              <button 
-                onClick={() => setMostrarPanelDev(false)}
-                className="text-slate-400 hover:text-white transition p-0.5 rounded-lg hover:bg-slate-800 cursor-pointer"
-                title="Cerrar panel de simulación"
-              >
-                <X className="size-4" />
-              </button>
-            </div>
-          </div>
-
-          <p className="text-[11px] text-slate-300">
-            Cambia de estado para probar la vista de diplomados:
-          </p>
-
-          <div className="space-y-1.5 text-xs">
-            <button
-              onClick={() => setEstadoSimuladoDev('sin_diplomado')}
-              className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between cursor-pointer ${
-                estadoSimuladoDev === 'sin_diplomado' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
-              }`}
-            >
-              <span>0 Diplomados (Sin fijar)</span>
-              {estadoSimuladoDev === 'sin_diplomado' && <CheckCircle2 className="size-3.5 text-white" />}
-            </button>
-
-            <button
-              onClick={() => setEstadoSimuladoDev('curso')}
-              className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between cursor-pointer ${
-                estadoSimuladoDev === 'curso' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
-              }`}
-            >
-              <span>1 Diplomado en Progreso (Derecho Minero 45%)</span>
-              {estadoSimuladoDev === 'curso' && <CheckCircle2 className="size-3.5 text-white" />}
-            </button>
-
-            <button
-              onClick={() => setEstadoSimuladoDev('completado')}
-              className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between cursor-pointer ${
-                estadoSimuladoDev === 'completado' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
-              }`}
-            >
-              <span>1 Diplomado Completado (100%)</span>
-              {estadoSimuladoDev === 'completado' && <CheckCircle2 className="size-3.5 text-white" />}
-            </button>
-
-            <button
-              onClick={() => setEstadoSimuladoDev('dos_diplomados')}
-              className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between cursor-pointer ${
-                estadoSimuladoDev === 'dos_diplomados' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
-              }`}
-            >
-              <span>3 Diplomados (2 en progreso + 1 completado)</span>
-              {estadoSimuladoDev === 'dos_diplomados' && <CheckCircle2 className="size-3.5 text-white" />}
-            </button>
-          </div>
-        </aside>
-      )}
-
+      
     </main>
   );
 }

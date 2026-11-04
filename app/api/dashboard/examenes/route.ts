@@ -5,6 +5,7 @@ import {
   obtenerIntentoNotasModulos,
   obtenerModulosConExamen
 } from '@/lib/services/examenesService';
+import { obtenerConfiguracionExamen } from '@/lib/services/examenesConfigService';
 
 /**
  * GET: Obtener las 10 preguntas sorteadas del banco, disponibilidad o el intento previo del estudiante
@@ -48,14 +49,38 @@ export async function GET(request: NextRequest) {
         modulo,
         dni
       });
+      const config = obtenerConfiguracionExamen(codigoDiplomado, modulo);
       return NextResponse.json({
         success: true,
-        intento: intentoPrevio
+        intento: intentoPrevio,
+        config: {
+          id: config.id,
+          aplica_examen: config.aplica_examen,
+          tiempo_minutos: config.tiempo_minutos,
+          cantidad_preguntas: config.cantidad_preguntas,
+          nota_minima: config.nota_minima,
+          intentos_permitidos: config.intentos_permitidos
+        }
+      });
+    }
+
+    const config = obtenerConfiguracionExamen(codigoDiplomado, modulo);
+
+    // Si no aplica examen
+    if (config.aplica_examen === false) {
+      return NextResponse.json({
+        success: true,
+        aplica_examen: false,
+        total: 0,
+        codigoDiplomado,
+        modulo,
+        config,
+        preguntas: []
       });
     }
 
     const cantidadStr = searchParams.get('cantidad');
-    const cantidad = cantidadStr ? parseInt(cantidadStr, 10) : 10;
+    const cantidad = cantidadStr ? parseInt(cantidadStr, 10) : config.cantidad_preguntas;
 
     const preguntas = await sortearPreguntasExamen({
       codigoDiplomado,
@@ -65,9 +90,18 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
+      aplica_examen: true,
       total: preguntas.length,
       codigoDiplomado,
       modulo,
+      config: {
+        id: config.id,
+        aplica_examen: config.aplica_examen,
+        tiempo_minutos: config.tiempo_minutos,
+        cantidad_preguntas: config.cantidad_preguntas,
+        nota_minima: config.nota_minima,
+        intentos_permitidos: config.intentos_permitidos
+      },
       preguntas
     });
   } catch (error: any) {

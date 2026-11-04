@@ -35,7 +35,7 @@ export default async function DashboardPage() {
   // Intentar obtener perfil con cliente admin para evitar bloqueos de RLS
   let { data: profile } = await admin
     .from("profiles")
-    .select("id, nombres, apellidos, dni_ce, email, paquete_adquirido, cuotas_pagadas, cupos_diplomados, diplomados, diplomado_1, diplomado_2, avance_porcentaje")
+    .select("id, nombres, apellidos, dni_ce, email, paquete_adquirido, cuotas_pagadas, cupos_diplomados, diplomados, diplomado_1, diplomado_2")
     .eq("id", user.id)
     .maybeSingle();
 
@@ -43,7 +43,7 @@ export default async function DashboardPage() {
   if (!profile && user.email) {
     const { data: profileByEmail } = await admin
       .from("profiles")
-      .select("id, nombres, apellidos, dni_ce, email, paquete_adquirido, cuotas_pagadas, cupos_diplomados, diplomados, diplomado_1, diplomado_2, avance_porcentaje")
+      .select("id, nombres, apellidos, dni_ce, email, paquete_adquirido, cuotas_pagadas, cupos_diplomados, diplomados, diplomado_1, diplomado_2")
       .eq("email", user.email)
       .maybeSingle();
     profile = profileByEmail;
@@ -69,7 +69,7 @@ export default async function DashboardPage() {
   const targetDip = parsedDips[0];
   const diplomadoNombre = targetDip?.titulo || (typeof safeProfile.diplomado_1 === 'string' && !safeProfile.diplomado_1.startsWith('DIPLOMADOS_LIST|') ? safeProfile.diplomado_1 : 'DERECHO MINERO');
   const diplomadoPrincipal = getDiplomadoByTitleOrSlug(diplomadoNombre);
-  const avanceEstudiante = targetDip?.avance ?? safeProfile.avance_porcentaje ?? 0;
+  const avanceEstudiante = targetDip?.avance ?? 0;
 
   // Cálculos de Créditos
   const releasedCredits = calculateReleasedCredits(

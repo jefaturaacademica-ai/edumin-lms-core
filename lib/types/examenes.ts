@@ -50,6 +50,26 @@ export interface ExamenModuloConfig {
   activo: boolean;
 }
 
+export interface ConfiguracionExamenItem {
+  id: string; // e.g. "DIP-01_Módulo 01", "CUR-01_Examen del Curso", "TAL-01_Examen del Taller"
+  codigo_programa: string;
+  nombre_programa: string;
+  tipo_programa: 'diplomado' | 'curso' | 'taller';
+  modulo: string;
+  aplica_examen: boolean;
+  tiempo_minutos: number;
+  cantidad_preguntas: number;
+  preguntas_facil: number;
+  preguntas_medio: number;
+  preguntas_dificil: number;
+  preguntas_opcion_unica?: number;
+  preguntas_opcion_multiple?: number;
+  nota_minima: number;
+  intentos_permitidos: number;
+  activo: boolean;
+  updated_at?: string;
+}
+
 export interface DetalleCalificacionPregunta {
   preguntaId: string;
   pregunta: string;

@@ -563,12 +563,15 @@ export async function POST(request: Request) {
       apellidos, 
       email, 
       telefono, 
+      fecha_nacimiento,
       paquete_adquirido, 
       tipo_pago, 
       cuotas_totales, 
       monto_total, 
       monto_cuota, 
-      diplomado_1 
+      diplomado_1,
+      cupos_diplomados_personalizados,
+      cupos_cursos_personalizados
     } = body;
 
     if (!dni_ce || !nombres || !apellidos || !email) {
@@ -666,40 +669,48 @@ export async function POST(request: Request) {
     ];
     const cursosSerialized = `CURSOS_LIST|${JSON.stringify(cursosJson)}`;
 
-    const paquete = (paquete_adquirido || 'COMPLETO').toUpperCase();
+    const paqueteInput = (paquete_adquirido || 'COMPLETO').toUpperCase().trim();
+    // Validar si el paquete es uno de los valores enum de postgres en profiles ('COMPLETO', 'FULL', 'ILIMITADO')
+    const esPaqueteEnumEstandar = ['COMPLETO', 'FULL', 'ILIMITADO'].includes(paqueteInput);
+    // Para la columna enum en profiles usamos el enum mapeado si es estándar o fallback a FULL/COMPLETO
+    const paqueteEnumDb = esPaqueteEnumEstandar ? paqueteInput : (paqueteInput.includes('ILIMITADO') ? 'ILIMITADO' : 'FULL');
+
     const esContado = tipo_pago === 'CONTADO';
-    const numCuotasTotales = esContado ? 1 : Number(cuotas_totales || (paquete === 'ILIMITADO' ? 5 : 3));
-    const montoTotalNum = Number(monto_total || (paquete === 'ILIMITADO' ? 1500 : (paquete === 'FULL' ? 900 : 540)));
+    const numCuotasTotales = esContado ? 1 : Number(cuotas_totales || (paqueteInput === 'ILIMITADO' ? 5 : 3));
+    const montoTotalNum = Number(monto_total || (paqueteInput === 'ILIMITADO' ? 1500 : (paqueteInput === 'FULL' ? 900 : 540)));
     const montoCuotaNum = esContado 
       ? montoTotalNum 
-      : Number(monto_cuota || (paquete === 'ILIMITADO' ? 300 : 180));
+      : Number(monto_cuota || (paqueteInput === 'ILIMITADO' ? 300 : 180));
+
+    // Determinar cupos según el paquete elegido
+    const cuposDiplomadosFinal = Number(cupos_diplomados_personalizados ?? (paqueteInput === 'ILIMITADO' ? 3 : 1));
+    const cuposCursosFinal = Number(cupos_cursos_personalizados ?? (paqueteInput === 'ILIMITADO' ? 15 : (paqueteInput === 'FULL' ? 5 : 3)));
 
     // 4. Insertar en profiles
+    const insertPayload: Record<string, any> = {
+      id: studentId,
+      dni_ce: normalizedDni,
+      nombres: nombres.trim(),
+      apellidos: apellidos.trim(),
+      email: normalizedEmail,
+      telefono: telefono ? telefono.trim() : '',
+      role: 'ESTUDIANTE',
+      paquete_adquirido: paqueteEnumDb,
+      tipo_pago: esContado ? 'CONTADO' : 'CUOTAS',
+      cuotas_pagadas: 1,
+      cuotas_totales: numCuotasTotales,
+      diplomado_1: dipTitulo,
+      cupos_diplomados: cuposDiplomadosFinal,
+      cupos_cursos: cuposCursosFinal,
+      diplomados: diplomadosSerialized,
+      cursos: cursosSerialized,
+      debe_cambiar_password: true,
+      fecha_nacimiento: fecha_nacimiento ? fecha_nacimiento.trim() : null
+    };
+
     const { data: newProfile, error: profileErr } = await admin
       .from('profiles')
-      .insert({
-        id: studentId,
-        dni_ce: normalizedDni,
-        nombres: nombres.trim(),
-        apellidos: apellidos.trim(),
-        email: normalizedEmail,
-        telefono: telefono ? telefono.trim() : '',
-        role: 'ESTUDIANTE',
-        paquete_adquirido: paquete,
-        tipo_pago: esContado ? 'CONTADO' : 'CUOTAS',
-        cuotas_pagadas: 1,
-        cuotas_totales: numCuotasTotales,
-        diplomado_1: dipTitulo,
-        cupos_diplomados: 1,
-        cupos_cursos: 1,
-        diplomados: diplomadosSerialized,
-        cursos: cursosSerialized,
-        debe_cambiar_password: true,
-        avance_porcentaje: 0,
-        nota_promedio: 0,
-        mes_inscripcion: new Date().toLocaleString('es-ES', { month: 'long' }),
-        canal_adquisicion: 'Matrícula Manual Panel Admin'
-      })
+      .insert(insertPayload)
       .select()
       .single();
 
@@ -772,9 +783,10 @@ export async function POST(request: Request) {
           dni_ce: normalizedDni,
           estudiante: `${nombres} ${apellidos}`,
           email: normalizedEmail,
-          paquete,
+          paquete: paqueteInput,
           tipo_pago: esContado ? 'CONTADO' : 'CUOTAS',
-          diplomado_1: dipTitulo
+          diplomado_1: dipTitulo,
+          fecha_nacimiento: fecha_nacimiento || null
         }
       });
     } catch (e) {

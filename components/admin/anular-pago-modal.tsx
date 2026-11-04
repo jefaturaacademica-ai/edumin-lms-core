@@ -29,8 +29,8 @@ export default function AnularPagoModal({
   };
 
   return (
-    <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[10000] flex items-center justify-center p-4">
-      <div className="bg-white dark:bg-slate-900 w-full max-w-md rounded-3xl shadow-2xl p-6 space-y-5 border border-slate-200 dark:border-slate-800 animate-in zoom-in-95 duration-200">
+    <div onClick={(e) => { if (e.target === e.currentTarget) onClose(); }} className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[10000] flex items-center justify-center p-4">
+      <div onClick={(e) => e.stopPropagation()} className="bg-white dark:bg-slate-900 w-full max-w-md rounded-3xl shadow-2xl p-6 space-y-5 border border-slate-200 dark:border-slate-800 animate-in zoom-in-95 duration-200">
         <div className="flex justify-between items-start border-b border-slate-100 dark:border-slate-800 pb-3">
           <div>
             <span className="bg-red-100 dark:bg-red-950/60 text-red-800 dark:text-red-300 font-black text-[10px] px-2.5 py-0.5 rounded-full uppercase border border-red-200 dark:border-red-800/50">

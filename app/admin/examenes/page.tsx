@@ -6,10 +6,12 @@ import {
   AlertCircle, Edit3, Trash2, Eye, Code, 
   RotateCcw, Sparkles, Check, X, HelpCircle, Layers,
   Copy, BookOpen, Clock, Award, ArrowUpDown, Upload, FileText,
-  ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, GraduationCap, BookMarked
+  ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, GraduationCap, BookMarked,
+  Sliders
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import AdminHeader from '@/components/admin/admin-header';
+import ConfiguracionExamenesTab from '@/components/admin/examenes/ConfiguracionExamenesTab';
 import { useTheme } from '@/context/theme-context';
 import { formatearTextoCientifico, limpiarTextoCientificoPlano } from '@/lib/utils/textoCientifico';
 import { PreguntaBanco, OpcionPregunta, TipoPregunta } from '@/lib/types/examenes';
@@ -47,15 +49,25 @@ const LISTA_CURSOS_OFICIALES = (CURSOS_RAW as any[]).map((c: any, index: number)
   nombre: (c.curso || c.nombre || '').trim().toUpperCase()
 }));
 
+// Lista oficial de talleres
+const LISTA_TALLERES_OFICIALES = [
+  { codigo: 'TAL-01', nombre: 'TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA' },
+  { codigo: 'TAL-02', nombre: 'TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO' }
+];
+
 export default function AdminExamenesPage() {
   const { esOscuro } = useTheme();
 
-  // Catálogos separados de diplomados y cursos
+  // Pestaña principal activa: 'banco' | 'configuracion'
+  const [activeMainTab, setActiveMainTab] = useState<'banco' | 'configuracion'>('banco');
+
+  // Catálogos separados de diplomados, cursos y talleres
   const [listaDiplomados, setListaDiplomados] = useState(LISTA_DIPLOMADOS_OFICIALES);
   const [listaCursos, setListaCursos] = useState(LISTA_CURSOS_OFICIALES);
+  const [listaTalleres, setListaTalleres] = useState(LISTA_TALLERES_OFICIALES);
 
   // Filtros de navegación
-  const [tipoPrograma, setTipoPrograma] = useState<'TODOS' | 'DIPLOMADOS' | 'CURSOS'>('TODOS');
+  const [tipoPrograma, setTipoPrograma] = useState<'TODOS' | 'DIPLOMADOS' | 'CURSOS' | 'TALLERES'>('TODOS');
   const [diplomadoSeleccionado, setDiplomadoSeleccionado] = useState('TODOS');
   const [moduloSeleccionado, setModuloSeleccionado] = useState('TODOS');
   const [filtroDificultad, setFiltroDificultad] = useState('TODOS');
@@ -101,6 +113,9 @@ export default function AdminExamenesPage() {
     if (diplomadoSeleccionado.startsWith('CUR-')) {
       return ['Examen del Curso'];
     }
+    if (diplomadoSeleccionado.startsWith('TAL-')) {
+      return ['Examen del Taller'];
+    }
     if (DIPLOMADOS_CINCO_MODULOS.includes(diplomadoSeleccionado)) {
       return ['Módulo 01', 'Módulo 02', 'Módulo 03', 'Módulo 04', 'Módulo 05'];
     }
@@ -110,6 +125,9 @@ export default function AdminExamenesPage() {
   const listaModulosImport = useMemo(() => {
     if (importDiplomado.startsWith('CUR-')) {
       return ['Examen del Curso'];
+    }
+    if (importDiplomado.startsWith('TAL-')) {
+      return ['Examen del Taller'];
     }
     if (DIPLOMADOS_CINCO_MODULOS.includes(importDiplomado)) {
       return ['Módulo 01', 'Módulo 02', 'Módulo 03', 'Módulo 04', 'Módulo 05'];
@@ -138,6 +156,13 @@ export default function AdminExamenesPage() {
             }));
             setListaCursos(cursos);
           }
+          if (Array.isArray(data.talleres) && data.talleres.length > 0) {
+            const talleres = data.talleres.map((t: any) => ({
+              codigo: t.codigo,
+              nombre: (t.titulo || t.nombre || '').trim().toUpperCase()
+            }));
+            setListaTalleres(talleres);
+          }
         }
       } catch {
         // Fallback a los catálogos oficiales ya cargados
@@ -148,8 +173,8 @@ export default function AdminExamenesPage() {
 
   // Catálogo unificado
   const todosLosProgramas = useMemo(() => {
-    return [...listaDiplomados, ...listaCursos];
-  }, [listaDiplomados, listaCursos]);
+    return [...listaDiplomados, ...listaCursos, ...listaTalleres];
+  }, [listaDiplomados, listaCursos, listaTalleres]);
 
   // Programa actual seleccionado
   const diplomadoActual = useMemo(() => {
@@ -166,9 +191,15 @@ export default function AdminExamenesPage() {
           nombre: 'Todos los Cursos de Especialización'
         };
       }
+      if (tipoPrograma === 'TALLERES') {
+        return {
+          codigo: 'TODOS',
+          nombre: 'Todos los Talleres'
+        };
+      }
       return {
         codigo: 'TODOS',
-        nombre: 'Todos los Diplomados y Cursos'
+        nombre: 'Todos los Diplomados, Cursos y Talleres'
       };
     }
     return todosLosProgramas.find(d => d.codigo === diplomadoSeleccionado) || {
@@ -531,8 +562,49 @@ export default function AdminExamenesPage() {
             </div>
           )}
 
-          {/* Contenedor en 2 Columnas: Columna de Filtros + Columna Banco de preguntas */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          {/* Navegación por Pestañas Principales */}
+          <div className="flex border-b border-slate-200 dark:border-slate-800 mb-6 gap-2">
+            <button 
+              onClick={() => setActiveMainTab('banco')} 
+              className={`pb-3 px-5 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 ${
+                activeMainTab === 'banco' 
+                  ? 'border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400' 
+                  : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'
+              }`}
+            >
+              <Layers className="size-4" />
+              <span>Banco de preguntas</span>
+              <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${
+                activeMainTab === 'banco'
+                  ? 'bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400'
+                  : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
+              }`}>
+                {preguntas.length}
+              </span>
+            </button>
+            <button 
+              onClick={() => setActiveMainTab('configuracion')} 
+              className={`pb-3 px-5 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 ${
+                activeMainTab === 'configuracion' 
+                  ? 'border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400' 
+                  : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'
+              }`}
+            >
+              <Sliders className="size-4" />
+              <span>Configuración de exámenes</span>
+              <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${
+                activeMainTab === 'configuracion'
+                  ? 'bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400'
+                  : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
+              }`}>
+                150
+              </span>
+            </button>
+          </div>
+
+          {activeMainTab === 'banco' ? (
+            /* Contenedor en 2 Columnas: Columna de Filtros + Columna Banco de preguntas */
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             {/* Columna Lateral: Filtro, Búsqueda y Acciones Rápidas */}
             <aside className="lg:col-span-4 xl:col-span-3 space-y-4 self-start">
               <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4 transition-colors">
@@ -598,12 +670,12 @@ export default function AdminExamenesPage() {
                   </div>
                 </div>
 
-                {/* 1. Selector de Tipo de Programa */}
+                {/* 1. Selector de tipo de programa */}
                 <div className="space-y-1.5">
                   <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">
-                    1. Modalidad / Tipo
+                    1. Modalidad / tipo
                   </label>
-                  <div className="grid grid-cols-3 gap-1 p-1 bg-slate-100 dark:bg-slate-950/80 rounded-xl border border-slate-200 dark:border-slate-800">
+                  <div className="grid grid-cols-4 gap-1 p-1 bg-slate-100 dark:bg-slate-950/80 rounded-xl border border-slate-200 dark:border-slate-800">
                     <button
                       type="button"
                       onClick={() => {
@@ -649,15 +721,30 @@ export default function AdminExamenesPage() {
                     >
                       <span>Cursos</span>
                     </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setTipoPrograma('TALLERES');
+                        setDiplomadoSeleccionado('TODOS');
+                        setModuloSeleccionado('TODOS');
+                      }}
+                      className={`py-1.5 px-2 text-[11px] font-bold rounded-lg transition-all text-center flex items-center justify-center gap-1 ${
+                        tipoPrograma === 'TALLERES'
+                          ? 'bg-purple-600 text-white shadow-xs'
+                          : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                      }`}
+                    >
+                      <span>Talleres</span>
+                    </button>
                   </div>
                 </div>
 
-                {/* 2. Selector según Tipo de Programa */}
+                {/* 2. Selector según tipo de programa */}
                 {tipoPrograma === 'DIPLOMADOS' && (
                   <>
                     <div className="space-y-1.5">
                       <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">
-                        2. Diplomado Oficial
+                        2. Diplomado oficial
                       </label>
                       <select
                         value={diplomadoSeleccionado}
@@ -698,7 +785,7 @@ export default function AdminExamenesPage() {
                   <>
                     <div className="space-y-1.5">
                       <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">
-                        2. Curso de Especialización
+                        2. Curso de especialización
                       </label>
                       <select
                         value={diplomadoSeleccionado}
@@ -720,20 +807,20 @@ export default function AdminExamenesPage() {
                     <div className="p-3 bg-blue-500/10 border border-blue-500/20 rounded-xl text-blue-800 dark:text-blue-300 space-y-1">
                       <p className="text-[11px] font-bold flex items-center gap-1.5">
                         <BookOpen className="w-3.5 h-3.5" />
-                        <span>Evaluación Única</span>
+                        <span>Evaluación única</span>
                       </p>
                       <p className="text-[11px] text-slate-600 dark:text-slate-400 leading-snug">
-                        En cursos aplica 1 solo examen por cada curso con 10 preguntas sorteadas del banco.
+                        En cursos aplica 1 solo examen por cada curso con preguntas sorteadas del banco de preguntas.
                       </p>
                     </div>
                   </>
                 )}
 
-                {tipoPrograma === 'TODOS' && (
+                {tipoPrograma === 'TALLERES' && (
                   <>
                     <div className="space-y-1.5">
                       <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">
-                        2. Programa Específico (Opcional)
+                        2. Taller
                       </label>
                       <select
                         value={diplomadoSeleccionado}
@@ -743,18 +830,60 @@ export default function AdminExamenesPage() {
                         }}
                         className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 cursor-pointer transition-colors"
                       >
-                        <option value="TODOS">Todos los diplomados y cursos ({todosLosProgramas.length})</option>
-                        <optgroup label="🎓 DIPLOMADOS OFICIALES">
+                        <option value="TODOS">Todos los talleres ({listaTalleres.length})</option>
+                        {listaTalleres.map(t => (
+                          <option key={t.codigo} value={t.codigo}>
+                            {t.codigo} - {t.nombre}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div className="p-3 bg-amber-500/10 border border-amber-500/20 rounded-xl text-amber-800 dark:text-amber-300 space-y-1">
+                      <p className="text-[11px] font-bold flex items-center gap-1.5">
+                        <BookOpen className="w-3.5 h-3.5" />
+                        <span>Banco de preguntas del taller</span>
+                      </p>
+                      <p className="text-[11px] text-slate-600 dark:text-slate-400 leading-snug">
+                        Cada taller cuenta con 50 preguntas registradas en el banco para cuando se requiera activar su examen.
+                      </p>
+                    </div>
+                  </>
+                )}
+
+                {tipoPrograma === 'TODOS' && (
+                  <>
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">
+                        2. Programa específico (opcional)
+                      </label>
+                      <select
+                        value={diplomadoSeleccionado}
+                        onChange={(e) => {
+                          setDiplomadoSeleccionado(e.target.value);
+                          setModuloSeleccionado('TODOS');
+                        }}
+                        className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 cursor-pointer transition-colors"
+                      >
+                        <option value="TODOS">Todos los diplomados, cursos y talleres ({todosLosProgramas.length})</option>
+                        <optgroup label="DIPLOMADOS OFICIALES">
                           {listaDiplomados.map(d => (
                             <option key={d.codigo} value={d.codigo}>
                               {d.codigo} - {d.nombre}
                             </option>
                           ))}
                         </optgroup>
-                        <optgroup label="📚 CURSOS DE ESPECIALIZACIÓN">
+                        <optgroup label="CURSOS DE ESPECIALIZACIÓN">
                           {listaCursos.map(c => (
                             <option key={c.codigo} value={c.codigo}>
                               {c.codigo} - {c.nombre}
+                            </option>
+                          ))}
+                        </optgroup>
+                        <optgroup label="TALLERES">
+                          {listaTalleres.map(t => (
+                            <option key={t.codigo} value={t.codigo}>
+                              {t.codigo} - {t.nombre}
                             </option>
                           ))}
                         </optgroup>
@@ -1315,13 +1444,16 @@ export default function AdminExamenesPage() {
               )}
             </section>
           </div>
+          ) : (
+            <ConfiguracionExamenesTab onNotificacion={mostrarNotificacion} />
+          )}
         </main>
       </div>
 
       {/* MODAL: Ver JSON de la Pregunta */}
       {showJsonModal && preguntaVerJson && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 dark:bg-black/80 backdrop-blur-sm animate-fadeIn">
-          <div className="w-full max-w-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[85vh]">
+        <div onClick={(e) => { if (e.target === e.currentTarget) setShowJsonModal(false); }} className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 dark:bg-black/80 backdrop-blur-sm animate-fadeIn">
+          <div onClick={(e) => e.stopPropagation()} className="w-full max-w-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[85vh]">
             <div className="p-4 sm:p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
               <div className="flex items-center gap-2.5">
                 <Code className="w-5 h-5 text-purple-600 dark:text-purple-400" />
@@ -1375,8 +1507,8 @@ export default function AdminExamenesPage() {
 
       {/* MODAL: Crear / Editar Pregunta */}
       {showEditModal && preguntaEditando && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 dark:bg-black/80 backdrop-blur-sm animate-fadeIn">
-          <div className="w-full max-w-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+        <div onClick={(e) => { if (e.target === e.currentTarget) setShowEditModal(false); }} className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 dark:bg-black/80 backdrop-blur-sm animate-fadeIn">
+          <div onClick={(e) => e.stopPropagation()} className="w-full max-w-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
             <div className="p-4 sm:p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
               <div className="flex items-center gap-2.5">
                 <Edit3 className="w-5 h-5 text-purple-600 dark:text-purple-400" />
@@ -1415,26 +1547,34 @@ export default function AdminExamenesPage() {
                       const cod = e.target.value;
                       const prog = todosLosProgramas.find(d => d.codigo === cod);
                       const esCur = cod.startsWith('CUR-');
+                      const esTal = cod.startsWith('TAL-');
                       setPreguntaEditando(prev => ({ 
                         ...prev!, 
                         codigo_diplomado: cod,
                         diplomado: prog?.nombre || cod,
-                        modulo: esCur ? 'Examen del Curso' : (prev?.modulo === 'Examen del Curso' ? 'Módulo 01' : (prev?.modulo || 'Módulo 01'))
+                        modulo: esCur ? 'Examen del Curso' : (esTal ? 'Examen del Taller' : ((prev?.modulo === 'Examen del Curso' || prev?.modulo === 'Examen del Taller') ? 'Módulo 01' : (prev?.modulo || 'Módulo 01')))
                       }));
                     }}
                     className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 transition-colors"
                   >
-                    <optgroup label="🎓 DIPLOMADOS OFICIALES">
+                    <optgroup label="Diplomados oficiales">
                       {listaDiplomados.map(d => (
                         <option key={d.codigo} value={d.codigo}>
                           {d.codigo} - {d.nombre}
                         </option>
                       ))}
                     </optgroup>
-                    <optgroup label="📚 CURSOS DE ESPECIALIZACIÓN">
+                    <optgroup label="Cursos de especialización">
                       {listaCursos.map(c => (
                         <option key={c.codigo} value={c.codigo}>
                           {c.codigo} - {c.nombre}
+                        </option>
+                      ))}
+                    </optgroup>
+                    <optgroup label="Talleres en vivo">
+                      {LISTA_TALLERES_OFICIALES.map(t => (
+                        <option key={t.codigo} value={t.codigo}>
+                          {t.codigo} - {t.nombre}
                         </option>
                       ))}
                     </optgroup>
@@ -1449,6 +1589,13 @@ export default function AdminExamenesPage() {
                       readOnly
                       value="Examen del Curso"
                       className="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-blue-600 dark:text-blue-400 cursor-not-allowed"
+                    />
+                  ) : (preguntaEditando.codigo_diplomado || '').startsWith('TAL-') ? (
+                    <input
+                      type="text"
+                      readOnly
+                      value="Examen del Taller"
+                      className="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-emerald-600 dark:text-emerald-400 cursor-not-allowed"
                     />
                   ) : (
                     <select
@@ -1635,8 +1782,8 @@ export default function AdminExamenesPage() {
 
       {/* MODAL: Importar preguntas desde archivo JSON */}
       {showImportModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 dark:bg-black/80 backdrop-blur-sm animate-fadeIn">
-          <div className="w-full max-w-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+        <div onClick={(e) => { if (e.target === e.currentTarget) setShowImportModal(false); }} className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 dark:bg-black/80 backdrop-blur-sm animate-fadeIn">
+          <div onClick={(e) => e.stopPropagation()} className="w-full max-w-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
             <div className="p-4 sm:p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
               <div className="flex items-center gap-2.5">
                 <Upload className="w-5 h-5 text-purple-600 dark:text-purple-400" />
@@ -1665,23 +1812,32 @@ export default function AdminExamenesPage() {
                         setImportDiplomado(val);
                         if (val.startsWith('CUR-')) {
                           setImportModulo('Examen del Curso');
-                        } else if (importModulo === 'Examen del Curso') {
+                        } else if (val.startsWith('TAL-')) {
+                          setImportModulo('Examen del Taller');
+                        } else if (importModulo === 'Examen del Curso' || importModulo === 'Examen del Taller') {
                           setImportModulo('Módulo 01');
                         }
                       }}
                       className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 transition-colors"
                     >
-                      <optgroup label="🎓 DIPLOMADOS OFICIALES">
+                      <optgroup label="Diplomados oficiales">
                         {listaDiplomados.map(d => (
                           <option key={d.codigo} value={d.codigo}>
                             {d.codigo} - {d.nombre}
                           </option>
                         ))}
                       </optgroup>
-                      <optgroup label="📚 CURSOS DE ESPECIALIZACIÓN">
+                      <optgroup label="Cursos de especialización">
                         {listaCursos.map(c => (
                           <option key={c.codigo} value={c.codigo}>
                             {c.codigo} - {c.nombre}
+                          </option>
+                        ))}
+                      </optgroup>
+                      <optgroup label="Talleres en vivo">
+                        {LISTA_TALLERES_OFICIALES.map(t => (
+                          <option key={t.codigo} value={t.codigo}>
+                            {t.codigo} - {t.nombre}
                           </option>
                         ))}
                       </optgroup>
@@ -1698,6 +1854,13 @@ export default function AdminExamenesPage() {
                         readOnly
                         value="Examen del Curso"
                         className="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-blue-600 dark:text-blue-400 cursor-not-allowed"
+                      />
+                    ) : importDiplomado.startsWith('TAL-') ? (
+                      <input
+                        type="text"
+                        readOnly
+                        value="Examen del Taller"
+                        className="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-emerald-600 dark:text-emerald-400 cursor-not-allowed"
                       />
                     ) : (
                       <select

@@ -8,11 +8,9 @@ import {
   PhoneCall, 
   Eye, 
   Printer, 
-  X, 
-  SlidersHorizontal,
-  Award,
-  GripVertical,
-  Calendar,
+  X,
+Award,
+Calendar,
   FileText
 } from 'lucide-react';
 import { useTheme } from '@/context/theme-context';
@@ -30,15 +28,8 @@ export default function PagosEstudiantePage() {
   // Estados de simulación dev (para pruebas manuales si se activa el simulador)
   const [modoPrueba, setModoPrueba] = useState<'al_dia' | 'completado' | 'bloqueo'>('al_dia');
   const [tipoPlan, setTipoPlan] = useState<'cuotas' | 'contado'>('cuotas');
-  const [usarSimulador, setUsarSimulador] = useState(false);
   
   const [pestanaActiva, setPestanaActiva] = useState<'cronograma' | 'historial'>('cronograma');
-  const [devToolbarVisible, setDevToolbarVisible] = useState(false);
-  
-  // Estado de posición para el panel dev
-  const [posicion, setPosicion] = useState<{ x: number; y: number } | null>(null);
-  const [arrastrando, setArrastrando] = useState(false);
-  const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
 
   // Estado para el modal de recibo imprimible
   const [reciboSeleccionado, setReciboSeleccionado] = useState<any>(null);
@@ -154,69 +145,10 @@ export default function PagosEstudiantePage() {
     return items;
   }, [pagosSupabase, profile]);
 
-  // Simuladores Dev auxiliares
-  const cronogramaAlDiaDev = [
-    { id: '1', cuota: 'Cuota 1 de 3', concepto: 'Matrícula + Primera Cuota Diplomado', monto: 300, fecha: '15/01/2026', comprobante: 'OP-882910', medio: 'Transferencia BCP', estado: 'Pagado' },
-    { id: '2', cuota: 'Cuota 2 de 3', concepto: 'Segunda Cuota Académica', monto: 300, fecha: '15/02/2026', comprobante: 'OP-934122', medio: 'Yape / Plin', estado: 'Pagado' },
-    { id: '3', cuota: 'Cuota 3 de 3', concepto: 'Tercera Cuota y Cancelación Final', monto: 300, fecha: '15/10/2026', comprobante: '-', medio: '-', estado: 'Por vencer' },
-  ];
-
-  const cronogramaCompletadoDev = [
-    { id: '1', cuota: 'Cuota 1 de 3', concepto: 'Matrícula + Primera Cuota Diplomado', monto: 300, fecha: '15/01/2026', comprobante: 'OP-882910', medio: 'Transferencia BCP', estado: 'Pagado' },
-    { id: '2', cuota: 'Cuota 2 de 3', concepto: 'Segunda Cuota Académica', monto: 300, fecha: '15/02/2026', comprobante: 'OP-934122', medio: 'Yape / Plin', estado: 'Pagado' },
-    { id: '3', cuota: 'Cuota 3 de 3', concepto: 'Tercera Cuota y Cancelación Total', monto: 300, fecha: '15/03/2026', comprobante: 'OP-991034', medio: 'PagoWeb Pasarela', estado: 'Pagado' },
-  ];
-
-  const cronogramaBloqueoDev = [
-    { id: '1', cuota: 'Cuota 1 de 3', concepto: 'Matrícula + Primera Cuota Diplomado', monto: 300, fecha: '15/01/2026', comprobante: 'OP-882910', medio: 'Transferencia BCP', estado: 'Pagado' },
-    { id: '2', cuota: 'Cuota 2 de 3', concepto: 'Segunda Cuota Académica', monto: 300, fecha: '15/02/2026', comprobante: '-', medio: '-', estado: 'Vencido' },
-    { id: '3', cuota: 'Cuota 3 de 3', concepto: 'Tercera Cuota Final', monto: 300, fecha: '15/03/2026', comprobante: '-', medio: '-', estado: 'Vencido' },
-  ];
-
-  const cronogramaActual = usarSimulador
-    ? (modoPrueba === 'completado' ? cronogramaCompletadoDev : modoPrueba === 'bloqueo' ? cronogramaBloqueoDev : cronogramaAlDiaDev)
-    : cronogramaRealSupabase;
+  const cronogramaActual = cronogramaRealSupabase;
 
   // Filtrar solo los comprobantes de cuotas pagadas o cargos extras para el Historial de Comprobantes
   const historialComprobantes = cronogramaActual.filter(item => item.estado === 'Pagado' || item.estado === 'APROBADO' || item.cuota === 'Cargo Extra');
-
-  // Lógica de arrastre para el panel flotante
-  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
-    const target = e.target as HTMLElement;
-    if (target.closest('button') || target.closest('a') || target.closest('input')) return;
-    
-    const rect = e.currentTarget.getBoundingClientRect();
-    setDragOffset({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
-    if (!posicion) {
-      setPosicion({ x: rect.left, y: rect.top });
-    }
-    setArrastrando(true);
-    e.currentTarget.setPointerCapture(e.pointerId);
-  };
-
-  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
-    if (!arrastrando) return;
-    const newX = e.clientX - dragOffset.x;
-    const newY = e.clientY - dragOffset.y;
-    const maxX = window.innerWidth - 100;
-    const maxY = window.innerHeight - 60;
-    setPosicion({
-      x: Math.max(10, Math.min(newX, maxX)),
-      y: Math.max(10, Math.min(newY, maxY)),
-    });
-  };
-
-  const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
-    if (arrastrando) {
-      setArrastrando(false);
-      try {
-        e.currentTarget.releasePointerCapture(e.pointerId);
-      } catch {}
-    }
-  };
 
   if (loading) {
     return <DashboardLoader />;
@@ -485,8 +417,8 @@ export default function PagosEstudiantePage() {
 
       {/* MODAL RECIBO IMPRIMIBLE */}
       {reciboSeleccionado && (
-        <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[10000] flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl p-8 space-y-6 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white">
+        <div onClick={(e) => { if (e.target === e.currentTarget) setReciboSeleccionado(null); }} className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[10000] flex items-center justify-center p-4">
+          <div onClick={(e) => e.stopPropagation()} className="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl p-8 space-y-6 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white">
             <div className="flex justify-between items-start border-b border-slate-200 dark:border-slate-800 pb-4">
               <div>
                 <h2 className="text-xl font-black tracking-tight">EDUMIN LMS CORE</h2>
@@ -543,71 +475,7 @@ export default function PagosEstudiantePage() {
         </div>
       )}
 
-      {/* PANEL FLOTANTE DE SIMULACIÓN DEV (OPCIONAL DESPLEGABLE) */}
-      <div 
-        onPointerDown={handlePointerDown}
-        onPointerMove={handlePointerMove}
-        onPointerUp={handlePointerUp}
-        style={{
-          position: posicion ? 'fixed' : 'fixed',
-          left: posicion ? `${posicion.x}px` : undefined,
-          top: posicion ? `${posicion.y}px` : undefined,
-        }}
-        className={`z-[9000] select-none touch-none ${!posicion ? 'bottom-6 right-6' : ''}`}
-      >
-        {!devToolbarVisible ? (
-          <button
-            onClick={() => setDevToolbarVisible(true)}
-            className="bg-indigo-600 text-white p-3 rounded-full shadow-2xl hover:bg-indigo-500 transition flex items-center gap-2 cursor-pointer border border-indigo-400/30"
-          >
-            <SlidersHorizontal className="w-5 h-5" />
-            <span className="text-xs font-bold pr-1">Simulador Dev</span>
-          </button>
-        ) : (
-          <div className="bg-slate-900/95 text-white p-4 rounded-2xl shadow-2xl border border-slate-800 backdrop-blur-md w-80 space-y-3">
-            <div className="flex items-center justify-between border-b border-slate-800 pb-2 cursor-grab active:cursor-grabbing">
-              <div className="flex items-center gap-2 text-indigo-400">
-                <GripVertical className="w-4 h-4 text-slate-500" />
-                <SlidersHorizontal className="w-4 h-4" />
-                <span className="text-xs font-bold uppercase tracking-wider text-white">Simulador Dev Pagos</span>
-              </div>
-              <button onClick={() => setDevToolbarVisible(false)} className="text-slate-400 hover:text-white cursor-pointer">
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-
-            <div className="space-y-2 text-xs">
-              <label className="flex items-center gap-2 cursor-pointer font-bold text-indigo-300">
-                <input 
-                  type="checkbox" 
-                  checked={usarSimulador} 
-                  onChange={(e) => setUsarSimulador(e.target.checked)} 
-                  className="rounded text-indigo-600"
-                />
-                Forzar datos simulados dev
-              </label>
-
-              {usarSimulador && (
-                <>
-                  <div>
-                    <label className="block text-[10px] text-slate-400 uppercase mb-1">Estado Financiero</label>
-                    <select
-                      value={modoPrueba}
-                      onChange={(e) => setModoPrueba(e.target.value as any)}
-                      className="w-full bg-slate-800 text-white p-2 rounded-xl text-xs border border-slate-700 font-bold"
-                    >
-                      <option value="al_dia">Al día (Puntual)</option>
-                      <option value="completado">100% Cancelado (No adeudo)</option>
-                      <option value="bloqueo">Cuota Vencida (Bloqueo)</option>
-                    </select>
-                  </div>
-                </>
-              )}
-            </div>
-          </div>
-        )}
-      </div>
-
+      
     </main>
   );
 }

@@ -641,14 +641,16 @@ export default function AvanzaCertificateRenderer({
       : '/assets/certificates/plantilla_avanza_modular_bg.png';
   }
 
-  const rawPrograma = (programa || 'DERECHO MINERO')
+  const progClean = (programa || '')
     .replace(/^Diplomado de Alta Especialización en\s*/i, '')
     .replace(/^Diplomado en\s*/i, '')
     .trim();
+  const rawPrograma = progClean || programa || 'DERECHO MINERO';
 
-  const rawModulo = (modulo || 'LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR')
+  const modClean = (modulo || '')
     .replace(/^Módulo\s*\d+[:\-\s]*/i, '')
     .trim();
+  const rawModulo = modClean || modulo || 'LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR';
 
   const tituloProgramaLimpio = ajustarConectorSinHuerfana(rawPrograma);
   const tituloModuloLimpio = ajustarConectorSinHuerfana(rawModulo);

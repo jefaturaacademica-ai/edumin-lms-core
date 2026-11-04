@@ -521,8 +521,8 @@ export default function PerfilEstudiante() {
 
         {/* MODAL DE EDICIÓN PARA VALIDACIÓN DE ADMINISTRACIÓN */}
         {modalAbierto && (
-          <div className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200 overflow-y-auto">
-            <div className={`rounded-3xl w-full max-w-2xl p-6 sm:p-8 shadow-2xl relative my-auto max-h-[90vh] overflow-y-auto animate-in zoom-in-95 duration-200 border ${esOscuro ? 'bg-slate-900 border-slate-800 text-slate-100' : 'bg-white border-slate-200 text-slate-900'}`}>
+          <div onClick={(e) => { if (e.target === e.currentTarget) setModalAbierto(false); }} className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200 overflow-y-auto">
+            <div onClick={(e) => e.stopPropagation()} className={`rounded-3xl w-full max-w-2xl p-6 sm:p-8 shadow-2xl relative my-auto max-h-[90vh] overflow-y-auto animate-in zoom-in-95 duration-200 border ${esOscuro ? 'bg-slate-900 border-slate-800 text-slate-100' : 'bg-white border-slate-200 text-slate-900'}`}>
               
               <button 
                 onClick={() => setModalAbierto(false)}
@@ -696,8 +696,8 @@ export default function PerfilEstudiante() {
 
         {/* MODAL DE CAMBIAR CONTRASEÑA */}
         {modalPasswordAbierto && (
-          <div className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200 overflow-y-auto">
-            <div className={`rounded-3xl w-full max-w-md p-6 sm:p-8 shadow-2xl relative my-auto max-h-[90vh] overflow-y-auto border ${esOscuro ? 'bg-slate-900 border-slate-800 text-slate-100' : 'bg-white border-slate-200 text-slate-900'}`}>
+          <div onClick={(e) => { if (e.target === e.currentTarget) { setModalPasswordAbierto(false); setPasswordExito(false); setPasswordError(''); } }} className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200 overflow-y-auto">
+            <div onClick={(e) => e.stopPropagation()} className={`rounded-3xl w-full max-w-md p-6 sm:p-8 shadow-2xl relative my-auto max-h-[90vh] overflow-y-auto border ${esOscuro ? 'bg-slate-900 border-slate-800 text-slate-100' : 'bg-white border-slate-200 text-slate-900'}`}>
               <button 
                 onClick={() => {
                   setModalPasswordAbierto(false);

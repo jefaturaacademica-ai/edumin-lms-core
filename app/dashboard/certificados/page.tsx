@@ -27,6 +27,7 @@ import {
 import { useTheme } from '@/context/theme-context';
 import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
 import { parseDiplomadosFromProfile, parseCursosFromProfile } from '@/lib/utils/profileParser';
+import configuracionExamenesJson from '@/lib/data/configuracion_examenes.json';
 import AvanzaCertificateRenderer from '@/components/certificates/AvanzaCertificateRenderer';
 import { generarUrlQRValidacion } from '@/lib/utils/certificateUtils';
 import { descargarCertificadoA4Pdf } from '@/lib/utils/certificatePdf';
@@ -36,17 +37,42 @@ export default function CertificadosPage() {
 
   // Perfil real del estudiante desde Supabase
   const [perfilEstudiante, setPerfilEstudiante] = useState<any>(null);
+  const [modelosCertificados, setModelosCertificados] = useState<any[]>([]);
+  const [certificadosEmitidosDb, setCertificadosEmitidosDb] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchMe = async () => {
       try {
-        const res = await fetch('/api/dashboard/me');
-        if (res.ok) {
-          const data = await res.json();
+        const [meRes, modelosRes] = await Promise.all([
+          fetch('/api/dashboard/me'),
+          fetch('/api/admin/certificaciones/modelos').catch(() => null)
+        ]);
+
+        if (modelosRes && modelosRes.ok) {
+          const modData = await modelosRes.json();
+          if (Array.isArray(modData.modelos)) {
+            setModelosCertificados(modData.modelos);
+          }
+        }
+
+        if (meRes.ok) {
+          const data = await meRes.json();
           if (data.profile) {
             setPerfilEstudiante(data.profile);
             if (data.profile.diplomado_1) {
               setDiplomadoSeleccionado(data.profile.diplomado_1);
+            }
+
+            const dni = data.profile.dni_ce || data.profile.dni;
+            if (dni) {
+              fetch(`/api/admin/certificaciones?dni=${encodeURIComponent(dni)}`)
+                .then(r => r.json())
+                .then(d => {
+                  if (Array.isArray(d.certificaciones)) {
+                    setCertificadosEmitidosDb(d.certificaciones);
+                  }
+                })
+                .catch(() => {});
             }
           }
         }
@@ -80,9 +106,10 @@ export default function CertificadosPage() {
   // Estados de Vista Previa de Certificado
   const [modalVistaPrevia, setModalVistaPrevia] = useState<{
     abierto: boolean;
+    id?: string;
     titulo: string;
     subtitulo: string;
-    categoria: string;
+    categoria?: string;
     fecha: string;
     codigo: string;
     horas?: string;
@@ -92,6 +119,81 @@ export default function CertificadosPage() {
   } | null>(null);
 
   const [copiadoLink, setCopiadoLink] = useState(false);
+
+  // Resolución dinámica del modelo o superplantilla oficial para la vista previa
+  const modeloActivo = useMemo(() => {
+    if (!modalVistaPrevia) return null;
+
+    const tipoEsperado = modalVistaPrevia.tipo === 'Diplomado' 
+      ? 'DIPLOMA' 
+      : modalVistaPrevia.tipo === 'Modular' 
+        ? 'MODULAR' 
+        : (modalVistaPrevia.tipo === 'Taller' ? 'TALLER' : 'CURSO');
+
+    // 1. Buscar coincidencia en BD de certificados emitidos
+    let certDb: any = null;
+    if (certificadosEmitidosDb.length > 0) {
+      certDb = certificadosEmitidosDb.find((c: any) => {
+        if (modalVistaPrevia.codigo && c.codigo_verificacion === modalVistaPrevia.codigo) return true;
+        if (modalVistaPrevia.tipo === 'Modular') {
+          return c.tipo === 'MODULAR' && (
+            c.modulo_titulo?.toLowerCase().includes(modalVistaPrevia.titulo.toLowerCase()) ||
+            modalVistaPrevia.titulo.toLowerCase().includes(c.modulo_titulo?.toLowerCase() || '')
+          );
+        }
+        if (c.tipo === tipoEsperado || (tipoEsperado === 'CURSO' && c.tipo === 'TALLER') || (tipoEsperado === 'TALLER' && c.tipo === 'CURSO')) {
+          return c.programa_titulo?.toLowerCase() === modalVistaPrevia.titulo.toLowerCase();
+        }
+        return false;
+      });
+    }
+
+    // 2. Buscar superplantilla configurada por el Administrador en Supabase
+    const modeloIdBuscado = modalVistaPrevia.modelo_id || certDb?.plantilla_snapshot?.modelo_id || certDb?.modelo_id;
+    let modeloSuperplantilla = (modelosCertificados || []).find((m: any) => m.id === modeloIdBuscado);
+
+    if (!modeloSuperplantilla && modelosCertificados && modelosCertificados.length > 0) {
+      // Buscar superplantilla global del tipo
+      modeloSuperplantilla = modelosCertificados.find((m: any) => 
+        String(m.tipo).toUpperCase() === tipoEsperado && 
+        (m.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' || m.esPredeterminado)
+      );
+
+      // Si es Taller y no hay específico, usar CURSO global
+      if (!modeloSuperplantilla && tipoEsperado === 'TALLER') {
+        modeloSuperplantilla = modelosCertificados.find((m: any) => 
+          String(m.tipo).toUpperCase() === 'CURSO' && 
+          (m.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' || m.esPredeterminado)
+        );
+      }
+
+      if (!modeloSuperplantilla) {
+        modeloSuperplantilla = modelosCertificados.find((m: any) => String(m.tipo).toUpperCase() === tipoEsperado);
+      }
+    }
+
+    // 3. Fusionar priorizando el diseño/coordenadas oficiales de la Superplantilla
+    const orientacionDefecto = (tipoEsperado === 'CURSO' || tipoEsperado === 'TALLER') ? 'vertical' : 'horizontal';
+    const orientacionFinal = modeloSuperplantilla?.orientacion || certDb?.plantilla_snapshot?.orientacion || orientacionDefecto;
+    const fondoFinal = modeloSuperplantilla?.imagenFondoUrl || certDb?.plantilla_snapshot?.imagenFondoUrl || 
+      (orientacionFinal === 'vertical' 
+        ? 'https://wluuomwkxywpfotbngwf.supabase.co/storage/v1/object/public/certificados/fondos/plantilla_1792606225470_g6hsm1j.webp'
+        : (tipoEsperado === 'DIPLOMA' 
+            ? '/assets/certificates/plantilla_avanza_diploma_bg.png' 
+            : '/assets/certificates/plantilla_avanza_modular_bg.png'));
+
+    const coordsFinal = modeloSuperplantilla?.disenoCoordenadas || certDb?.plantilla_snapshot?.disenoCoordenadas || null;
+
+    return {
+      ...(certDb?.plantilla_snapshot || {}),
+      ...(modeloSuperplantilla || {}),
+      orientacion: orientacionFinal,
+      imagenFondoUrl: fondoFinal,
+      disenoCoordenadas: coordsFinal,
+      incluyeQr: (modeloSuperplantilla?.incluyeQr ?? certDb?.plantilla_snapshot?.incluyeQr) !== false,
+      horas: modalVistaPrevia.horas || certDb?.horas_lectivas || modeloSuperplantilla?.horas || certDb?.plantilla_snapshot?.horas
+    };
+  }, [modalVistaPrevia, modelosCertificados, certificadosEmitidosDb]);
 
   // Nombre completo del estudiante desde Supabase
   const nombreEstudianteCompleto = perfilEstudiante
@@ -110,7 +212,7 @@ export default function CertificadosPage() {
       // Solo consideramos módulos aprobados con nota mínima de 12/20
       const modulosAprobados = modulos.filter((m: any) => {
         const nota = m.nota !== undefined ? Number(m.nota) : (m.completado ? 18 : 0);
-        return Boolean(m.completado) && nota >= 12;
+        return (Boolean(m.completado) || Boolean(m.codigo_cert)) && nota >= 12;
       });
       const modularesAprobados = modulosAprobados.length;
       const modularesTotales = Math.max(3, modulos.length || 3);
@@ -120,20 +222,23 @@ export default function CertificadosPage() {
       // REGLA ACADÉMICA ESTRICTA: El diploma general se otorga ÚNICAMENTE si aprueba los 3 módulos con nota >= 12
       const completado = modularesAprobados >= 3;
 
+      // Buscar si ya tiene certificado oficial de diploma en DB
+      const certDbDip = certificadosEmitidosDb.find(c => c.tipo === 'DIPLOMA' && c.programa_titulo?.toLowerCase() === d.titulo?.toLowerCase());
+
       return {
         id: d.id || d.slug || `dip-${idx + 1}`,
         titulo: d.titulo || 'Diplomado',
         modularesAprobados,
         modularesTotales,
-        promedio: d.promedio || promedio,
-        completado,
-        horas: d.horas || '325 horas académicas y 13 créditos académicos',
-        modelo_id: (d as any).modelo_id || 'mod-avanza-dip',
-        fecha: d.fecha || '15/03/2026',
-        codigo: d.codigo || `EDUMIN-DIP-${perfilEstudiante.dni_ce || '71234567'}-${(d.id || 'DIP').substring(0, 3).toUpperCase()}`
+        promedio: certDbDip?.nota_final !== undefined && certDbDip.nota_final !== null ? Number(certDbDip.nota_final) : (d.promedio || promedio),
+        completado: completado || Boolean(certDbDip),
+        horas: certDbDip?.horas_lectivas || d.horas || '325 horas académicas y 13 créditos académicos',
+        modelo_id: certDbDip?.plantilla_snapshot?.modelo_id || (d as any).modelo_id || 'mod-avanza-dip',
+        fecha: certDbDip?.fecha_emision ? String(certDbDip.fecha_emision) : (d.fecha || '15/03/2026'),
+        codigo: certDbDip?.codigo_verificacion || d.codigo || `EDUMIN-DIP-${perfilEstudiante.dni_ce || '71234567'}-${(d.id || 'DIP').substring(0, 3).toUpperCase()}`
       };
     });
-  }, [perfilEstudiante]);
+  }, [perfilEstudiante, certificadosEmitidosDb]);
 
   // 2. CERTIFICADOS MODULARES DINÁMICOS DESDE SUPABASE
   const certificadosModulares = useMemo(() => {
@@ -141,29 +246,66 @@ export default function CertificadosPage() {
 
     const rawDiplomados = parseDiplomadosFromProfile(perfilEstudiante);
     const result: any[] = [];
+    const codigosVistos = new Set<string>();
     let counter = 1;
 
+    // A. Módulos del perfil del estudiante
     rawDiplomados.forEach((d: any) => {
       (d.modulos || []).forEach((m: any) => {
         const nota = m.nota !== undefined ? Number(m.nota) : (m.completado ? 18 : 0);
-        // Solo emitir certificado modular si aprobó con nota >= 12
-        if (Boolean(m.completado) && nota >= 12) {
+        const estaAprobado = Boolean(m.completado) || Boolean(m.codigo_cert) || (nota >= 12 && m.rendido);
+        if (estaAprobado) {
+          const modNombre = m.nombre ? `${m.codigo || 'Módulo'}: ${m.nombre}` : (m.codigo || `Módulo ${counter}`);
+          const cod = m.codigo_cert || `EDUMIN-MOD-${perfilEstudiante.dni_ce || '71234567'}-${counter}`;
+
+          // Vincular con certificación emitida en base de datos si existe
+          const certDb = certificadosEmitidosDb.find(c => 
+            c.codigo_verificacion === cod || 
+            (c.tipo === 'MODULAR' && (
+              c.modulo_titulo?.toLowerCase().includes((m.nombre || '').toLowerCase()) ||
+              (m.nombre && (m.nombre || '').toLowerCase().includes(c.modulo_titulo?.toLowerCase() || ''))
+            ))
+          );
+
+          const codFinal = certDb?.codigo_verificacion || cod;
+          codigosVistos.add(codFinal);
+          if (m.nombre) codigosVistos.add(m.nombre.toLowerCase());
+
           result.push({
             id: counter++,
-            modulo: `${m.codigo || 'Módulo'}: ${m.nombre}`,
+            modulo: modNombre,
+            moduloNombreSolo: m.nombre || m.codigo,
             diplomado: d.titulo,
-            nota: nota,
-            horas: m.horas || '108 horas académicas',
-            modelo_id: (m as any).modelo_id || 'mod-avanza-mod',
-            fecha: m.fecha || '15/01/2026',
-            codigo: m.codigo_cert || `EDUMIN-MOD-${perfilEstudiante.dni_ce || '71234567'}-${counter}`
+            nota: certDb?.nota_final !== undefined && certDb.nota_final !== null ? Number(certDb.nota_final) : nota,
+            horas: certDb?.horas_lectivas || m.horas || '108 horas académicas',
+            modelo_id: certDb?.plantilla_snapshot?.modelo_id || (m as any).modelo_id || 'mod-avanza-mod',
+            fecha: certDb?.fecha_emision ? String(certDb.fecha_emision) : (m.fecha || '15/01/2026'),
+            codigo: codFinal
           });
         }
       });
     });
 
+    // B. Añadir cualquier certificación modular oficial emitida en BD que no estuviera ya listada
+    certificadosEmitidosDb.forEach((c: any) => {
+      if (c.tipo === 'MODULAR' && !codigosVistos.has(c.codigo_verificacion)) {
+        codigosVistos.add(c.codigo_verificacion);
+        result.push({
+          id: counter++,
+          modulo: c.modulo_titulo?.startsWith('Módulo') ? c.modulo_titulo : `Módulo: ${c.modulo_titulo}`,
+          moduloNombreSolo: c.modulo_titulo,
+          diplomado: c.programa_titulo,
+          nota: Number(c.nota_final) || 16,
+          horas: c.horas_lectivas || '108 horas académicas',
+          modelo_id: c.plantilla_snapshot?.modelo_id || 'mod-avanza-mod',
+          fecha: c.fecha_emision ? String(c.fecha_emision) : '15/01/2026',
+          codigo: c.codigo_verificacion
+        });
+      }
+    });
+
     return result;
-  }, [perfilEstudiante]);
+  }, [perfilEstudiante, certificadosEmitidosDb]);
 
   // Agrupación de modulares por diplomado
   const modularesPorDiplomado = useMemo(() => {
@@ -176,22 +318,78 @@ export default function CertificadosPage() {
     }, {});
   }, [certificadosModulares]);
 
-  // 3. CERTIFICADOS DE CURSOS DINÁMICOS DESDE SUPABASE
+  // 3. CERTIFICADOS DE CURSOS Y TALLERES DINÁMICOS DESDE SUPABASE
   const certificadosCursos = useMemo(() => {
     if (!perfilEstudiante) return [];
 
     const rawCursos = parseCursosFromProfile(perfilEstudiante);
-    return rawCursos.filter((c: any) => c.completado).map((c: any, idx: number) => ({
-      id: c.id || `cur-${idx + 1}`,
-      titulo: c.titulo,
-      categoria: c.categoria || 'Seguridad & SSOMA',
-      horas: c.horas || '24 Horas',
-      modelo_id: (c as any).modelo_id || 'mod-03',
-      fecha: c.fecha || '18/02/2026',
-      nota: c.nota,
-      codigo: c.codigo || `EDUMIN-CUR-${perfilEstudiante.dni_ce || '71234567'}-${idx + 1}`
-    }));
-  }, [perfilEstudiante]);
+    const result: any[] = [];
+    const codigosVistos = new Set<string>();
+
+    rawCursos
+      .filter((c: any) => {
+        const esCompletado = Boolean(c.completado) || Number(c.avance) >= 100 || Boolean(c.codigo_cert);
+        if (!esCompletado) return false;
+
+        const codNormalizado = (c.codigo || c.id || '').toUpperCase();
+        const confClaveCurso = `${codNormalizado}_Examen del curso`;
+        const confClaveTaller = `${codNormalizado}_Examen del taller`;
+        const configItem = (configuracionExamenesJson as Record<string, any>)[confClaveCurso] 
+          || (configuracionExamenesJson as Record<string, any>)[confClaveTaller];
+        const noAplicaExamen = configItem?.aplica_examen === false;
+
+        if (noAplicaExamen || c.nota === undefined || c.nota === null || c.codigo_cert) {
+          return true;
+        }
+
+        return Number(c.nota) >= 12;
+      })
+      .forEach((c: any, idx: number) => {
+        const certDb = certificadosEmitidosDb.find(cd => 
+          (c.codigo_cert && cd.codigo_verificacion === c.codigo_cert) ||
+          ((cd.tipo === 'CURSO' || cd.tipo === 'TALLER') && cd.programa_titulo?.toLowerCase() === c.titulo?.toLowerCase())
+        );
+
+        const esTaller = (c.tipo === 'TALLER' || c.id?.toLowerCase().startsWith('tal-') || c.codigo?.toLowerCase().startsWith('tal-') || c.titulo?.toUpperCase().includes('TALLER') || certDb?.tipo === 'TALLER');
+        const codFinal = certDb?.codigo_verificacion || c.codigo_cert || c.codigo || `EDUMIN-CUR-${perfilEstudiante.dni_ce || '71234567'}-${idx + 1}`;
+
+        codigosVistos.add(codFinal);
+        if (c.titulo) codigosVistos.add(c.titulo.toLowerCase());
+
+        result.push({
+          id: c.id || `cur-${idx + 1}`,
+          titulo: c.titulo,
+          tipo: (esTaller ? 'Taller' : 'Curso') as 'Curso' | 'Taller',
+          horas: certDb?.horas_lectivas || c.horas || (esTaller ? '16 horas académicas' : '24 horas académicas'),
+          modelo_id: certDb?.plantilla_snapshot?.modelo_id || (c as any).modelo_id || 'mod-226455',
+          fecha: certDb?.fecha_emision ? String(certDb.fecha_emision) : (c.fecha || '18/02/2026'),
+          nota: typeof certDb?.nota_final === 'number' && certDb.nota_final > 0 
+            ? Number(certDb.nota_final) 
+            : (typeof c.nota === 'number' && c.nota > 0 ? Number(c.nota) : undefined),
+          codigo: codFinal
+        });
+      });
+
+    // Añadir certificaciones de cursos o talleres emitidas en BD que no aparecían en el JSON
+    certificadosEmitidosDb.forEach((cd: any, idx: number) => {
+      if ((cd.tipo === 'CURSO' || cd.tipo === 'TALLER') && !codigosVistos.has(cd.codigo_verificacion) && !codigosVistos.has(cd.programa_titulo?.toLowerCase())) {
+        codigosVistos.add(cd.codigo_verificacion);
+        const esTaller = cd.tipo === 'TALLER' || cd.programa_titulo?.toUpperCase().includes('TALLER');
+        result.push({
+          id: cd.id || `db-cur-${idx + 1}`,
+          titulo: cd.programa_titulo,
+          tipo: (esTaller ? 'Taller' : 'Curso') as 'Curso' | 'Taller',
+          horas: cd.horas_lectivas || (esTaller ? '16 horas académicas' : '24 horas académicas'),
+          modelo_id: cd.plantilla_snapshot?.modelo_id || 'mod-226455',
+          fecha: cd.fecha_emision ? String(cd.fecha_emision) : '18/02/2026',
+          nota: typeof cd.nota_final === 'number' && cd.nota_final > 0 ? Number(cd.nota_final) : undefined,
+          codigo: cd.codigo_verificacion
+        });
+      }
+    });
+
+    return result;
+  }, [perfilEstudiante, certificadosEmitidosDb]);
 
   const [diplomadoSeleccionado, setDiplomadoSeleccionado] = useState('');
 
@@ -239,9 +437,11 @@ export default function CertificadosPage() {
   const abrirVistaPrevia = (certData: {
     titulo: string;
     subtitulo: string;
-    categoria: string;
+    categoria?: string;
     fecha: string;
     codigo: string;
+    horas?: string;
+    modelo_id?: string;
     nota?: number;
     tipo: 'Diplomado' | 'Modular' | 'Curso' | 'Taller';
   }) => {
@@ -719,26 +919,15 @@ export default function CertificadosPage() {
                   }`}
                 >
                   <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-widest">{curso.categoria}</span>
-                      {curso.nota ? (
-                        <span className="text-[11px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">
-                          Nota: {curso.nota}
-                        </span>
-                      ) : (
-                        <span className="text-[11px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">
-                          Acceso Gratuito
-                        </span>
-                      )}
-                    </div>
                     <h4 className={`text-xs font-bold uppercase leading-snug ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
                       {curso.titulo}
                     </h4>
 
-                    {/* Duración y Fecha en filas separadas */}
+                    {/* Duración, Fecha y Nota en el mismo formato limpio */}
                     <div className={`text-[11px] mt-3 space-y-1 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
                       <p>Duración: {curso.horas}</p>
                       <p>Fecha: {curso.fecha}</p>
+                      <p>Nota: {curso.nota !== undefined ? `${curso.nota} (Aprobado)` : 'Aprobado'}</p>
                     </div>
                   </div>
 
@@ -746,19 +935,42 @@ export default function CertificadosPage() {
                     <button 
                       onClick={() => abrirVistaPrevia({
                         titulo: curso.titulo,
-                        subtitulo: `DURACIÓN: ${curso.horas}`,
-                        categoria: curso.categoria,
+                        subtitulo: curso.titulo,
                         fecha: curso.fecha,
+                        horas: curso.horas,
                         codigo: curso.codigo,
                         nota: curso.nota,
-                        tipo: 'Curso'
+                        tipo: curso.tipo as any
                       })}
                       className="bg-slate-800 hover:bg-slate-700 text-slate-200 p-2.5 rounded-xl text-xs transition-colors border border-slate-700 cursor-pointer"
                       title="Vista Previa"
                     >
                       <Eye className="w-4 h-4" />
                     </button>
-                    <button className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-xl text-xs transition-colors flex items-center justify-center gap-2 shadow-sm cursor-pointer">
+                    <button 
+                      onClick={async () => {
+                        try {
+                          const orientacionFinal = modeloActivo?.orientacion || (curso.tipo === 'Curso' || curso.tipo === 'Taller' ? 'vertical' : 'horizontal');
+                          await descargarCertificadoA4Pdf({
+                            tipo: curso.tipo === 'Taller' ? 'TALLER' : 'CURSO',
+                            estudiante: nombreEstudianteCompleto || 'ESTUDIANTE EDUMIN',
+                            programa: curso.titulo,
+                            modulo: undefined,
+                            horas: curso.horas || '24 horas académicas',
+                            fecha: curso.fecha,
+                            codigo: curso.codigo,
+                            orientacion: orientacionFinal,
+                            imagenFondoUrl: modeloActivo?.imagenFondoUrl,
+                            diseno: modeloActivo?.disenoCoordenadas,
+                            incluyeQr: modeloActivo?.incluyeQr !== false
+                          }, `Certificado_${curso.codigo || 'EDUMIN'}_A4.pdf`);
+                        } catch (e) {
+                          console.error('Error al descargar certificado:', e);
+                          alert('Error al descargar el certificado en PDF.');
+                        }
+                      }}
+                      className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-xl text-xs transition-colors flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+                    >
                       <Download className="w-3.5 h-3.5" /> Descargar
                     </button>
                   </div>
@@ -770,193 +982,59 @@ export default function CertificadosPage() {
 
         {/* MODAL DE VISTA PREVIA DEL CERTIFICADO (DOCUMENTO INTERACTIVO FIDELIDAD A PLANTILLA MAESTRA A4) */}
         {modalVistaPrevia?.abierto && (() => {
-          const estilo = (function(tipo: string) {
-            const t = (tipo || '').toUpperCase();
-            if (t.includes('DIPLOM')) {
-              return {
-                marco: 'border-amber-600/40 bg-gradient-to-br from-amber-50 via-white to-amber-50/60 text-slate-900 shadow-amber-900/10',
-                tituloHeader: 'DIPLOMA DE ALTA ESPECIALIZACIÓN',
-                otorgamiento: 'Por haber cumplido y aprobado con excelencia los 3 módulos del programa oficial de:',
-                escuelaHeader: 'ESCUELA DE POSTGRADO & MINERÍA',
-                institucionHeader: 'INSTITUTO INTERNACIONAL EDUMIN',
-                horas: '120 horas cronológicas',
-                firmas: ['Director Académico', 'Coordinador General']
-              };
-            }
-            if (t.includes('MODULAR')) {
-              return {
-                marco: 'border-indigo-600/40 bg-gradient-to-br from-indigo-50/40 via-white to-blue-50/50 text-slate-900 shadow-indigo-900/10',
-                tituloHeader: 'CERTIFICADO MODULAR OFICIAL',
-                otorgamiento: 'Por haber completado satisfactoriamente la evaluación y contenidos del módulo:',
-                escuelaHeader: 'ESCUELA DE POSTGRADO & MINERÍA',
-                institucionHeader: 'INSTITUTO INTERNACIONAL EDUMIN',
-                horas: '40 horas cronológicas',
-                firmas: ['Director Académico']
-              };
-            }
-            if (t.includes('CURSO')) {
-              return {
-                marco: 'border-emerald-600/40 bg-gradient-to-br from-emerald-50/40 via-white to-teal-50/50 text-slate-900 shadow-emerald-900/10',
-                tituloHeader: 'CERTIFICADO DE ESPECIALIZACIÓN PROFESIONAL',
-                otorgamiento: 'Por su destacada participación y aprobación del curso técnico intensivo de:',
-                escuelaHeader: 'ESCUELA DE POSTGRADO & MINERÍA',
-                institucionHeader: 'INSTITUTO INTERNACIONAL EDUMIN',
-                horas: '24 horas cronológicas',
-                firmas: ['Director Académico', 'Docente Titular']
-              };
-            }
-            if (t.includes('CIP')) {
-              return {
-                marco: 'border-rose-700/40 bg-gradient-to-br from-rose-50/40 via-white to-amber-50/40 text-slate-900 shadow-rose-900/10',
-                tituloHeader: 'CERTIFICACIÓN CONVENIO OFICIAL CIP',
-                otorgamiento: 'En convenio interinstitucional con el Colegio de Ingenieros del Perú (CIP), acredita a:',
-                escuelaHeader: 'CONVENIO INSTITUCIONAL CIP & EDUMIN',
-                institucionHeader: 'COLEGIO DE INGENIEROS DEL PERÚ',
-                horas: '120 horas cronológicas',
-                firmas: ['Decano CIP Nacional', 'Director EDUMIN']
-              };
-            }
-            if (t.includes('MIAMI')) {
-              return {
-                marco: 'border-cyan-600/40 bg-gradient-to-br from-cyan-50/40 via-white to-indigo-50/40 text-slate-900 shadow-cyan-900/10',
-                tituloHeader: 'INTERNATIONAL CERTIFICATE OF COMPLETION',
-                otorgamiento: 'University international partner certificate awarded for professional excellence in:',
-                escuelaHeader: 'INTERNATIONAL PARTNERSHIP ACADEMY',
-                institucionHeader: 'SAN IGNACIO UNIVERSITY (MIAMI, FL)',
-                horas: '150 horas internacionales',
-                firmas: ['International Dean', 'Executive Director']
-              };
-            }
-            return {
-              marco: 'border-purple-600/40 bg-gradient-to-br from-purple-50/40 via-white to-indigo-50/50 text-slate-900 shadow-purple-900/10',
-              tituloHeader: 'CONSTANCIA DE TALLER PRÁCTICO EN VIVO',
-              otorgamiento: 'Por su asistencia y participación en el taller especializado de:',
-              escuelaHeader: 'ESCUELA DE POSTGRADO & MINERÍA',
-              institucionHeader: 'INSTITUTO INTERNACIONAL EDUMIN',
-              horas: '08 horas prácticas',
-              firmas: ['Director Académico']
-            };
-          })(modalVistaPrevia.tipo);
+          const orientacionFinal = modeloActivo?.orientacion || (modalVistaPrevia.tipo === 'Curso' || modalVistaPrevia.tipo === 'Taller' ? 'vertical' : 'horizontal');
+          const esVerticalModal = orientacionFinal === 'vertical';
 
           return (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in overflow-y-auto">
-              <div className={`rounded-3xl w-full max-w-2xl p-6 sm:p-8 shadow-2xl relative border space-y-6 my-6 ${
-                esOscuro ? 'bg-slate-900 text-white border-slate-800' : 'bg-white text-slate-900 border-slate-200'
-              }`}>
-                <button 
-                  onClick={() => setModalVistaPrevia(null)} 
-                  className="absolute right-6 top-6 text-slate-400 hover:text-white font-bold p-1 rounded-lg cursor-pointer"
-                >
-                  ✕
-                </button>
+            <div 
+              onClick={(e) => {
+                if (e.target === e.currentTarget) setModalVistaPrevia(null);
+              }}
+              className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-md animate-in fade-in overflow-y-auto"
+            >
+              <div 
+                onClick={(e) => e.stopPropagation()}
+                className={`rounded-3xl w-full ${esVerticalModal ? 'max-w-xl' : 'max-w-4xl'} p-5 sm:p-7 shadow-2xl relative border space-y-4 my-auto max-h-[96vh] flex flex-col justify-between ${
+                  esOscuro ? 'bg-slate-900 text-white border-slate-800' : 'bg-white text-slate-900 border-slate-200'
+                }`}
+              >
+                {/* Cabecera compacta y limpia */}
+                <div className="flex items-center justify-between gap-3 pb-1 border-b border-slate-100 dark:border-slate-800/80">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                      {modalVistaPrevia.tipo === 'Diplomado' ? 'Diploma Oficial' : modalVistaPrevia.tipo === 'Modular' ? 'Certificado Modular' : (modalVistaPrevia.tipo === 'Taller' ? 'Certificado de Taller' : 'Certificado de Curso')}
+                    </span>
+                    <span className="text-xs font-mono text-slate-400">
+                      CÓD.: {modalVistaPrevia.codigo}
+                    </span>
+                  </div>
 
-                <div className="flex items-center gap-3">
-                  <div className="size-10 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 grid place-items-center shrink-0">
-                    <Eye className="size-5" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold">Vista Previa del Certificado</h3>
-                    <p className="text-xs text-slate-400">Modelo Máster A4 aplicado dinámicamente según categoría.</p>
-                  </div>
+                  <button 
+                    onClick={() => setModalVistaPrevia(null)} 
+                    className="p-1.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-full transition-colors cursor-pointer"
+                    title="Cerrar (clic afuera o botón)"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
                 </div>
 
-                {/* CANVAS DIPLOMA/CERTIFICADO FIEL A LA PLANTILLA MAESTRA A4 */}
-                <div className="p-2 sm:p-4 bg-slate-950/90 rounded-2xl flex items-center justify-center">
-                  {modalVistaPrevia.tipo === 'Diplomado' || modalVistaPrevia.tipo === 'Modular' ? (
-                    <div className="w-full max-w-xl">
-                      <AvanzaCertificateRenderer
-                        tipo={modalVistaPrevia.tipo === 'Diplomado' ? 'DIPLOMA' : 'MODULAR'}
-                        estudiante={nombreEstudianteCompleto || 'ESTUDIANTE EDUMIN'}
-                        programa={modalVistaPrevia.tipo === 'Diplomado' ? modalVistaPrevia.titulo : modalVistaPrevia.subtitulo}
-                        modulo={modalVistaPrevia.tipo === 'Modular' ? modalVistaPrevia.titulo : undefined}
-                        horas={modalVistaPrevia.horas || (modalVistaPrevia.tipo === 'Diplomado' ? '325 horas académicas y 13 créditos académicos' : '108 horas académicas')}
-                        fecha={modalVistaPrevia.fecha}
-                        codigo={modalVistaPrevia.codigo}
-                      />
-                    </div>
-                  ) : (
-                    <div className={`rounded-2xl border-8 p-6 sm:p-8 relative text-center shadow-2xl transition-all overflow-hidden w-full ${
-                      estilo.marco
-                    }`}>
-                      {/* Header: Escuela + Instituto (izq) e Insignia EM (der) */}
-                      <div className="flex justify-between items-center border-b border-black/10 pb-3 mb-4">
-                        <div className="text-left">
-                          <span className="text-[9px] tabular-nums font-bold tracking-widest block opacity-70 text-slate-600">
-                            {estilo.escuelaHeader}
-                          </span>
-                          <h4 className="text-xs font-black text-slate-900">
-                            {estilo.institucionHeader}
-                          </h4>
-                        </div>
-                        <div className="size-8 rounded-full bg-indigo-600/10 border border-indigo-600/30 flex items-center justify-center text-indigo-700 font-black text-xs shrink-0">
-                          EM
-                        </div>
-                      </div>
-
-                      {/* Subtítulo Tipo de Certificado */}
-                      <span className="text-[10px] uppercase font-bold tracking-widest opacity-80 block text-slate-700">
-                        {estilo.tituloHeader}
-                      </span>
-
-                      <p className="text-[11px] opacity-70 mt-2 text-slate-600">Otorgado a favor de:</p>
-                      
-                      {/* Nombre Estudiante en Fuente Serif Elegante con subrayado dorado */}
-                      <h3 className="text-xl sm:text-2xl font-extrabold font-serif text-slate-900 my-2 underline decoration-amber-500 underline-offset-4">
-                        {nombreEstudianteCompleto || 'JUAN CARLOS QUISPE RAMOS'}
-                      </h3>
-                      <p className="text-[10px] opacity-60 tabular-nums text-slate-600">
-                        DNI / CE: {perfilEstudiante?.dni || '71234567'}
-                      </p>
-
-                      {/* Texto de Otorgamiento */}
-                      <p className="text-xs mt-3 px-4 leading-relaxed opacity-85 text-slate-700">
-                        {estilo.otorgamiento}
-                      </p>
-
-                      {/* Título del Programa / Curso en Mayúsculas Azules/Índigo */}
-                      <p className="text-sm sm:text-base font-black mt-1 uppercase px-4 text-indigo-950 tracking-wide">
-                        {modalVistaPrevia.titulo}
-                      </p>
-                      {modalVistaPrevia.subtitulo && (
-                        <p className="text-xs font-semibold text-slate-500 mt-0.5">{modalVistaPrevia.subtitulo}</p>
-                      )}
-
-                      {/* Pastillas de Métricas: Horas y Calificación */}
-                      <div className="my-4 flex items-center justify-center gap-4 text-xs font-bold text-slate-800">
-                        <span className="px-3 py-1 rounded-lg border border-black/10 bg-black/5">
-                          ⏱️ {estilo.horas}
-                        </span>
-                        {modalVistaPrevia.nota && (
-                          <span className="px-3 py-1 rounded-lg border border-black/10 bg-black/5">
-                            🏆 Calificación: {modalVistaPrevia.nota}
-                          </span>
-                        )}
-                      </div>
-
-                      {/* Footer del Certificado con Fechas, Firmas y Código QR */}
-                      <div className="mt-6 pt-4 border-t border-black/10 flex justify-between items-end text-[9px] opacity-80 text-slate-700">
-                        <div className="text-left tabular-nums">
-                          <p>Fecha de emisión: {modalVistaPrevia.fecha || '2026-10-06'}</p>
-                          <p className="font-bold mt-0.5 text-indigo-900">Código: {modalVistaPrevia.codigo}</p>
-                        </div>
-
-                        <div className="flex gap-4 sm:gap-6">
-                          {estilo.firmas.map((f: string, i: number) => (
-                            <div key={i} className="text-center">
-                              <div className="w-16 sm:w-20 border-b border-black/30 mb-1"></div>
-                              <span className="text-[8px] block font-bold text-slate-800">{f}</span>
-                              <span className="text-[7px] opacity-70 text-slate-500">EDUMIN LMS</span>
-                            </div>
-                          ))}
-                        </div>
-
-                        <div className="flex flex-col items-center p-1 bg-white text-slate-900 rounded-lg border border-slate-200 shadow-sm shrink-0">
-                          <QrCode className="w-7 h-7 text-slate-900" />
-                          <span className="text-[7px] tabular-nums mt-0.5 font-bold">VÁLIDO</span>
-                        </div>
-                      </div>
-                    </div>
-                  )}
+                {/* CANVAS DIPLOMA/CERTIFICADO OFICIAL RESPONSIVO HORIZONTAL / VERTICAL */}
+                <div className="p-2 sm:p-4 bg-slate-950/90 rounded-2xl flex items-center justify-center overflow-hidden my-auto">
+                  <div className={`w-full flex items-center justify-center ${esVerticalModal ? 'max-w-md' : 'max-w-3xl'}`}>
+                    <AvanzaCertificateRenderer
+                      tipo={modalVistaPrevia.tipo === 'Diplomado' ? 'DIPLOMA' : (modalVistaPrevia.tipo === 'Modular' ? 'MODULAR' : (modalVistaPrevia.tipo === 'Taller' ? 'TALLER' : 'CURSO'))}
+                      orientacion={orientacionFinal}
+                      estudiante={nombreEstudianteCompleto || 'ESTUDIANTE EDUMIN'}
+                      programa={modalVistaPrevia.tipo === 'Modular' ? (modalVistaPrevia.subtitulo || modalVistaPrevia.titulo) : modalVistaPrevia.titulo}
+                      modulo={modalVistaPrevia.tipo === 'Modular' ? modalVistaPrevia.titulo : undefined}
+                      horas={modalVistaPrevia.horas || (modalVistaPrevia.tipo === 'Diplomado' ? '325 horas académicas y 13 créditos académicos' : (modalVistaPrevia.tipo === 'Modular' ? '108 horas académicas' : '24 horas académicas'))}
+                      fecha={modalVistaPrevia.fecha}
+                      codigo={modalVistaPrevia.codigo}
+                      imagenFondoUrl={modeloActivo?.imagenFondoUrl}
+                      diseno={modeloActivo?.disenoCoordenadas}
+                      incluyeQr={modeloActivo?.incluyeQr !== false}
+                    />
+                  </div>
                 </div>
 
                 {/* ACCIONES DEL MODAL DE VISTA PREVIA */}
@@ -970,7 +1048,7 @@ export default function CertificadosPage() {
                     }`}
                   >
                     {copiadoLink ? <Check className="size-4" /> : <Copy className="size-4" />}
-                    {copiadoLink ? '¡Enlace Copiado!' : 'Copiar Enlace de Validación'}
+                    {copiadoLink ? '¡Enlace copiado!' : 'Copiar enlace de validación'}
                   </button>
 
                   <div className="flex items-center gap-2 w-full sm:w-auto">
@@ -985,15 +1063,17 @@ export default function CertificadosPage() {
                       onClick={async () => {
                         try {
                           await descargarCertificadoA4Pdf({
-                            tipo: modalVistaPrevia.tipo === 'Diplomado' ? 'DIPLOMA' : (modalVistaPrevia.tipo === 'Modular' ? 'MODULAR' : 'CURSO'),
+                            tipo: modalVistaPrevia.tipo === 'Diplomado' ? 'DIPLOMA' : (modalVistaPrevia.tipo === 'Modular' ? 'MODULAR' : (modalVistaPrevia.tipo === 'Taller' ? 'TALLER' : 'CURSO')),
                             estudiante: nombreEstudianteCompleto || 'ESTUDIANTE EDUMIN',
-                            programa: modalVistaPrevia.tipo === 'Diplomado' ? modalVistaPrevia.titulo : (modalVistaPrevia.subtitulo || modalVistaPrevia.titulo),
+                            programa: modalVistaPrevia.tipo === 'Modular' ? (modalVistaPrevia.subtitulo || modalVistaPrevia.titulo) : modalVistaPrevia.titulo,
                             modulo: modalVistaPrevia.tipo === 'Modular' ? modalVistaPrevia.titulo : undefined,
-                            horas: modalVistaPrevia.horas || (modalVistaPrevia.tipo === 'Diplomado' ? '325 horas académicas y 13 créditos académicos' : '108 horas académicas'),
+                            horas: modalVistaPrevia.horas || (modalVistaPrevia.tipo === 'Diplomado' ? '325 horas académicas y 13 créditos académicos' : (modalVistaPrevia.tipo === 'Modular' ? '108 horas académicas' : '24 horas académicas')),
                             fecha: modalVistaPrevia.fecha,
                             codigo: modalVistaPrevia.codigo || 'HNYNXT2',
-                            orientacion: 'horizontal',
-                            incluyeQr: true
+                            orientacion: orientacionFinal,
+                            imagenFondoUrl: modeloActivo?.imagenFondoUrl,
+                            diseno: modeloActivo?.disenoCoordenadas,
+                            incluyeQr: modeloActivo?.incluyeQr !== false
                           }, `Certificado_${modalVistaPrevia.codigo || 'EDUMIN'}_A4.pdf`);
                         } catch (e) {
                           console.error('Error al descargar certificado:', e);
@@ -1014,8 +1094,16 @@ export default function CertificadosPage() {
 
         {/* MODAL DE VALIDACIÓN UNIFICADO (CIP / MIAMI) */}
         {modalAbierto && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm animate-in fade-in">
-            <div className={`rounded-3xl w-full max-w-lg p-8 shadow-2xl relative border ${esOscuro ? 'bg-slate-900 text-white border-slate-800' : 'bg-white text-slate-900 border-slate-200'}`}>
+          <div 
+            onClick={(e) => {
+              if (e.target === e.currentTarget) setModalAbierto(false);
+            }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm animate-in fade-in"
+          >
+            <div 
+              onClick={(e) => e.stopPropagation()}
+              className={`rounded-3xl w-full max-w-lg p-8 shadow-2xl relative border ${esOscuro ? 'bg-slate-900 text-white border-slate-800' : 'bg-white text-slate-900 border-slate-200'}`}
+            >
               <button 
                 onClick={() => setModalAbierto(false)} 
                 className="absolute right-6 top-6 text-slate-400 hover:text-slate-200 font-bold p-1 rounded-lg cursor-pointer"

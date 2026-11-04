@@ -3064,8 +3064,16 @@ export default function CertificacionesAdminPage() {
 
       {/* MODAL: CAMBIAR MODELO DE CERTIFICADO ASIGNADO */}
       {certificadoParaCambiarModelo && (
-        <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[9999] flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col my-8">
+        <div 
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setCertificadoParaCambiarModelo(null);
+          }}
+          className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[9999] flex items-center justify-center p-4 overflow-y-auto"
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col my-8"
+          >
             <div className="px-6 py-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-800/50">
               <div className="flex items-center gap-2">
                 <LayoutTemplate className="w-5 h-5 text-purple-600" />
@@ -3180,8 +3188,16 @@ export default function CertificacionesAdminPage() {
 
       {/* MODAL 1: PREVISUALIZACIÓN DINÁMICA DE MODELO / SUPERPLANTILLA */}
       {modeloParaPrevisualizar && (
-        <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[9999] flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white dark:bg-slate-900 w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col my-8">
+        <div 
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setModeloParaPrevisualizar(null);
+          }}
+          className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[9999] flex items-center justify-center p-4 overflow-y-auto"
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className={`bg-white dark:bg-slate-900 w-full ${modeloParaPrevisualizar.orientacion === 'vertical' ? 'max-w-xl' : 'max-w-4xl'} rounded-3xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col my-8`}
+          >
             
             {/* Header del Modal */}
             <div className="px-6 py-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-800/50">
@@ -3266,7 +3282,7 @@ export default function CertificacionesAdminPage() {
 
             {/* Certificado Canvas A4 Simulado */}
             <div className="p-4 sm:p-6 bg-slate-950 flex items-center justify-center">
-              <div className={`w-full flex items-center justify-center ${modeloParaPrevisualizar.orientacion === 'vertical' ? 'max-w-sm' : 'max-w-xl'}`}>
+              <div className={`w-full flex items-center justify-center ${modeloParaPrevisualizar.orientacion === 'vertical' ? 'max-w-md' : 'max-w-3xl'}`}>
                 <AvanzaCertificateRenderer
                   tipo={modeloParaPrevisualizar.tipo}
                   orientacion={modeloParaPrevisualizar.orientacion || 'horizontal'}
@@ -3350,9 +3366,22 @@ export default function CertificacionesAdminPage() {
       
       {/* MODAL PARA HABILITAR / EMITIR CERTIFICADO MANUALMENTE A UN ESTUDIANTE */}
       {mostrarModalHabilitarManual && (
-        <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 overflow-y-auto">
-          <div className="min-h-full flex items-start sm:items-center justify-center p-4 py-8">
-            <div className="bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-200">
+        <div 
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setMostrarModalHabilitarManual(false);
+          }}
+          className="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 overflow-y-auto"
+        >
+          <div 
+            onClick={(e) => {
+              if (e.target === e.currentTarget) setMostrarModalHabilitarManual(false);
+            }}
+            className="min-h-full flex items-start sm:items-center justify-center p-4 py-8"
+          >
+            <div 
+              onClick={(e) => e.stopPropagation()}
+              className="bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-200"
+            >
             
             {/* Header del Modal */}
             <div className="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-gradient-to-r from-indigo-500/10 via-purple-500/5 to-transparent">
@@ -3706,8 +3735,16 @@ export default function CertificacionesAdminPage() {
 
       {/* MODAL 2: VISTA PREVIA Y DUPLICADO A4 DE CERTIFICADO EMITIDO */}
       {certificadoParaVer && (
-        <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[9999] flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white dark:bg-slate-900 w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col my-8">
+        <div 
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setCertificadoParaVer(null);
+          }}
+          className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[9999] flex items-center justify-center p-4 overflow-y-auto"
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className={`bg-white dark:bg-slate-900 w-full ${certificadoParaVer.plantilla_snapshot?.orientacion === 'vertical' || certificadoParaVer.tipo === 'CURSO' || certificadoParaVer.tipo === 'TALLER' ? 'max-w-xl' : 'max-w-4xl'} rounded-3xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col my-8`}
+          >
             
             {/* Header del Modal */}
             <div className="px-6 py-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-800/50">
@@ -3738,7 +3775,7 @@ export default function CertificacionesAdminPage() {
                 const disenoFinal = snapshot.disenoCoordenadas || modeloActual?.disenoCoordenadas;
 
                 return (
-                  <div className={`w-full flex items-center justify-center ${orientacionFinal === 'vertical' ? 'max-w-sm' : 'max-w-xl'}`}>
+                  <div className={`w-full flex items-center justify-center ${orientacionFinal === 'vertical' ? 'max-w-md' : 'max-w-3xl'}`}>
                     <AvanzaCertificateRenderer
                       tipo={certificadoParaVer.tipo}
                       orientacion={orientacionFinal}
@@ -3831,8 +3868,16 @@ export default function CertificacionesAdminPage() {
 
       {/* MODAL 3: ASIGNAR / VALIDAR SOLICITUD PENDIENTE CIP */}
       {solicitudSeleccionada && (
-        <div className="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-[9999] flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-slate-900 w-full max-w-md rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 dark:border-slate-800">
+        <div 
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setSolicitudSeleccionada(null);
+          }}
+          className="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-[9999] flex items-center justify-center p-4"
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white dark:bg-slate-900 w-full max-w-md rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 dark:border-slate-800"
+          >
             <div className="px-6 py-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-800/50">
               <h3 className="text-base font-bold text-slate-900 dark:text-white">Validar y adjuntar certificación</h3>
               <button onClick={() => setSolicitudSeleccionada(null)} className="p-1.5 hover:bg-slate-200 rounded-full transition-colors text-slate-500 cursor-pointer">
@@ -3895,8 +3940,16 @@ export default function CertificacionesAdminPage() {
 
       {/* MODAL 4: REGISTRAR CERTIFICACIÓN EXTERNA DIRECTA (NUEVA FUNCIÓN) */}
       {mostrarModalRegistroExterno && (
-        <div className="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-[9999] flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 dark:border-slate-800 my-8">
+        <div 
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setMostrarModalRegistroExterno(false);
+          }}
+          className="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-[9999] flex items-center justify-center p-4 overflow-y-auto"
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 dark:border-slate-800 my-8"
+          >
             <div className="px-6 py-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-800/50">
               <div className="flex items-center gap-2">
                 <Building2 className="w-5 h-5 text-indigo-600" />

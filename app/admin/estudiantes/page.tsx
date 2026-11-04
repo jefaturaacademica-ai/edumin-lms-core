@@ -14,6 +14,7 @@ import ReciboModal from '@/components/admin/recibo-modal';
 import EditarCronogramaModal from '@/components/admin/editar-cronograma-modal';
 import Ficha360Modal from '@/components/admin/ficha-360-modal';
 import { EstudianteCompleto } from '@/lib/data/mockStudents';
+import { PaqueteDefinicion, PAQUETES_DEFAULT } from '@/lib/types/paquetes';
 
 const DIPLOMADOS_EDUMIN = [
   "DIPLOMADO EN DERECHO MINERO",
@@ -61,7 +62,9 @@ export default function AdminEstudiantesPage() {
   const [nuevoApellidos, setNuevoApellidos] = useState('');
   const [nuevoEmail, setNuevoEmail] = useState('');
   const [nuevoTelefono, setNuevoTelefono] = useState('');
-  const [nuevoPaquete, setNuevoPaquete] = useState<'COMPLETO' | 'FULL' | 'ILIMITADO'>('COMPLETO');
+  const [nuevoFechaNacimiento, setNuevoFechaNacimiento] = useState('');
+  const [paquetesDisponibles, setPaquetesDisponibles] = useState<Record<string, PaqueteDefinicion>>(PAQUETES_DEFAULT);
+  const [nuevoPaquete, setNuevoPaquete] = useState<string>('COMPLETO');
   const [nuevoTipoPago, setNuevoTipoPago] = useState<'CONTADO' | 'CUOTAS'>('CUOTAS');
   const [nuevoCuotasTotales, setNuevoCuotasTotales] = useState(3);
   const [nuevoMontoTotal, setNuevoMontoTotal] = useState(540);
@@ -73,39 +76,63 @@ export default function AdminEstudiantesPage() {
   useEffect(() => {
     cargarEstudiantes();
     cargarCatalogo();
+    cargarConfigPaquetes();
   }, []);
 
+  const cargarConfigPaquetes = async () => {
+    try {
+      const res = await fetch('/api/admin/configuracion-paquetes');
+      if (res.ok) {
+        const data = await res.json();
+        if (data.paquetes && typeof data.paquetes === 'object') {
+          setPaquetesDisponibles(data.paquetes);
+        }
+      }
+    } catch (e) {
+      console.error('Error cargando paquetes configurados:', e);
+    }
+  };
+
   // Actualizar montos por defecto según paquete y tipo de pago
-  const handleCambioPaquete = (pkg: 'COMPLETO' | 'FULL' | 'ILIMITADO') => {
-    setNuevoPaquete(pkg);
-    if (pkg === 'COMPLETO') {
-      setNuevoMontoTotal(540);
-      setNuevoMontoCuota(nuevoTipoPago === 'CONTADO' ? 540 : 180);
-      setNuevoCuotasTotales(nuevoTipoPago === 'CONTADO' ? 1 : 3);
-    } else if (pkg === 'FULL') {
-      setNuevoMontoTotal(900);
-      setNuevoMontoCuota(nuevoTipoPago === 'CONTADO' ? 900 : 180);
-      setNuevoCuotasTotales(nuevoTipoPago === 'CONTADO' ? 1 : 3);
-    } else if (pkg === 'ILIMITADO') {
-      setNuevoMontoTotal(1500);
-      setNuevoMontoCuota(nuevoTipoPago === 'CONTADO' ? 1500 : 300);
-      setNuevoCuotasTotales(nuevoTipoPago === 'CONTADO' ? 1 : 5);
+  const handleCambioPaquete = (pkgKey: string) => {
+    setNuevoPaquete(pkgKey);
+    const def = paquetesDisponibles[pkgKey] || PAQUETES_DEFAULT[pkgKey] || {
+      precioContado: 540,
+      precioCuotas: 540,
+      cuotasSugeridas: 3
+    };
+
+    const precioBase = nuevoTipoPago === 'CONTADO' ? def.precioContado : def.precioCuotas;
+    setNuevoMontoTotal(precioBase);
+
+    if (nuevoTipoPago === 'CONTADO') {
+      setNuevoCuotasTotales(1);
+      setNuevoMontoCuota(precioBase);
+    } else {
+      const cuotas = def.cuotasSugeridas || 3;
+      setNuevoCuotasTotales(cuotas);
+      setNuevoMontoCuota(cuotas > 0 ? Math.round(precioBase / cuotas) : precioBase);
     }
   };
 
   const handleCambioTipoPago = (tipo: 'CONTADO' | 'CUOTAS') => {
     setNuevoTipoPago(tipo);
+    const def = paquetesDisponibles[nuevoPaquete] || PAQUETES_DEFAULT[nuevoPaquete] || {
+      precioContado: 540,
+      precioCuotas: 540,
+      cuotasSugeridas: 3
+    };
+
     if (tipo === 'CONTADO') {
+      setNuevoMontoTotal(def.precioContado);
       setNuevoCuotasTotales(1);
-      setNuevoMontoCuota(nuevoMontoTotal);
+      setNuevoMontoCuota(def.precioContado);
     } else {
-      if (nuevoPaquete === 'ILIMITADO') {
-        setNuevoCuotasTotales(5);
-        setNuevoMontoCuota(300);
-      } else {
-        setNuevoCuotasTotales(3);
-        setNuevoMontoCuota(180);
-      }
+      const precio = def.precioCuotas;
+      const cuotas = def.cuotasSugeridas || 3;
+      setNuevoMontoTotal(precio);
+      setNuevoCuotasTotales(cuotas);
+      setNuevoMontoCuota(cuotas > 0 ? Math.round(precio / cuotas) : precio);
     }
   };
 
@@ -153,6 +180,8 @@ export default function AdminEstudiantesPage() {
     setMensajeNuevo(null);
 
     try {
+      const defPaquete = paquetesDisponibles[nuevoPaquete] || PAQUETES_DEFAULT[nuevoPaquete];
+
       const res = await fetch('/api/admin/estudiantes', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -162,12 +191,15 @@ export default function AdminEstudiantesPage() {
           apellidos: nuevoApellidos.trim(),
           email: nuevoEmail.trim(),
           telefono: nuevoTelefono.trim(),
+          fecha_nacimiento: nuevoFechaNacimiento ? nuevoFechaNacimiento.trim() : null,
           paquete_adquirido: nuevoPaquete,
           tipo_pago: nuevoTipoPago,
           cuotas_totales: nuevoCuotasTotales,
           monto_total: nuevoMontoTotal,
           monto_cuota: nuevoMontoCuota,
-          diplomado_1: nuevoDiplomado1
+          diplomado_1: nuevoDiplomado1,
+          cupos_diplomados_personalizados: defPaquete?.creditosDiplomados,
+          cupos_cursos_personalizados: defPaquete?.creditosCursos
         })
       });
 
@@ -185,6 +217,7 @@ export default function AdminEstudiantesPage() {
         setNuevoApellidos('');
         setNuevoEmail('');
         setNuevoTelefono('');
+        setNuevoFechaNacimiento('');
 
         await cargarEstudiantes();
 
@@ -691,7 +724,7 @@ export default function AdminEstudiantesPage() {
                       />
                     </div>
 
-                    <div className="sm:col-span-2">
+                    <div>
                       <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                         Teléfono / WhatsApp (opcional)
                       </label>
@@ -706,6 +739,21 @@ export default function AdminEstudiantesPage() {
                         />
                       </div>
                     </div>
+
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                        Fecha de nacimiento (opcional)
+                      </label>
+                      <div className="relative">
+                        <Calendar className="w-4 h-4 text-slate-400 absolute left-3 top-3 pointer-events-none" />
+                        <input 
+                          type="date" 
+                          value={nuevoFechaNacimiento}
+                          onChange={(e) => setNuevoFechaNacimiento(e.target.value)}
+                          className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -716,59 +764,44 @@ export default function AdminEstudiantesPage() {
                   </h3>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
-                    <button
-                      type="button"
-                      onClick={() => handleCambioPaquete('COMPLETO')}
-                      className={`p-4 rounded-2xl border text-left transition cursor-pointer ${
-                        nuevoPaquete === 'COMPLETO'
-                          ? 'border-indigo-600 bg-indigo-50/50 dark:bg-indigo-950/40 ring-2 ring-indigo-600'
-                          : 'border-slate-200 dark:border-slate-800 hover:border-slate-300'
-                      }`}
-                    >
-                      <div className="font-bold text-xs text-slate-900 dark:text-white">COMPLETO</div>
-                      <div className="text-lg font-black text-indigo-600 dark:text-indigo-400 mt-1">S/ 540.00</div>
-                      <div className="text-[11px] text-slate-500 mt-2 space-y-0.5">
-                        <div>• 1 crédito de diplomado</div>
-                        <div>• 3 créditos de cursos</div>
-                        <div className="font-bold text-indigo-600 dark:text-indigo-300 pt-1">Total: 4 créditos EDUMIN</div>
-                      </div>
-                    </button>
+                    {Object.values(paquetesDisponibles).map((pkg) => {
+                      const esSeleccionado = nuevoPaquete === pkg.id;
+                      const totalCreditos = (pkg.creditosDiplomados || 0) + (pkg.creditosCursos || 0);
 
-                    <button
-                      type="button"
-                      onClick={() => handleCambioPaquete('FULL')}
-                      className={`p-4 rounded-2xl border text-left transition cursor-pointer ${
-                        nuevoPaquete === 'FULL'
-                          ? 'border-indigo-600 bg-indigo-50/50 dark:bg-indigo-950/40 ring-2 ring-indigo-600'
-                          : 'border-slate-200 dark:border-slate-800 hover:border-slate-300'
-                      }`}
-                    >
-                      <div className="font-bold text-xs text-slate-900 dark:text-white">FULL</div>
-                      <div className="text-lg font-black text-indigo-600 dark:text-indigo-400 mt-1">S/ 900.00</div>
-                      <div className="text-[11px] text-slate-500 mt-2 space-y-0.5">
-                        <div>• 1 crédito de diplomado</div>
-                        <div>• 5 créditos de cursos</div>
-                        <div className="font-bold text-indigo-600 dark:text-indigo-300 pt-1">Total: 6 créditos EDUMIN</div>
-                      </div>
-                    </button>
+                      return (
+                        <button
+                          key={pkg.id}
+                          type="button"
+                          onClick={() => handleCambioPaquete(pkg.id)}
+                          className={`p-4 rounded-2xl border text-left transition cursor-pointer relative ${
+                            esSeleccionado
+                              ? 'border-indigo-600 bg-indigo-50/50 dark:bg-indigo-950/40 ring-2 ring-indigo-600'
+                              : 'border-slate-200 dark:border-slate-800 hover:border-slate-300'
+                          }`}
+                        >
+                          <div className="flex justify-between items-start">
+                            <span className="font-bold text-xs text-slate-900 dark:text-white uppercase">{pkg.nombre}</span>
+                            {pkg.esPersonalizado && (
+                              <span className="text-[9px] font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 px-1.5 py-0.5 rounded">
+                                Personalizado
+                              </span>
+                            )}
+                          </div>
+                          
+                          <div className="text-lg font-black text-indigo-600 dark:text-indigo-400 mt-1">
+                            S/ {(nuevoTipoPago === 'CONTADO' ? pkg.precioContado : pkg.precioCuotas).toFixed(2)}
+                          </div>
 
-                    <button
-                      type="button"
-                      onClick={() => handleCambioPaquete('ILIMITADO')}
-                      className={`p-4 rounded-2xl border text-left transition cursor-pointer ${
-                        nuevoPaquete === 'ILIMITADO'
-                          ? 'border-indigo-600 bg-indigo-50/50 dark:bg-indigo-950/40 ring-2 ring-indigo-600'
-                          : 'border-slate-200 dark:border-slate-800 hover:border-slate-300'
-                      }`}
-                    >
-                      <div className="font-bold text-xs text-slate-900 dark:text-white">ILIMITADO</div>
-                      <div className="text-lg font-black text-indigo-600 dark:text-indigo-400 mt-1">S/ 1,500.00</div>
-                      <div className="text-[11px] text-slate-500 mt-2 space-y-0.5">
-                        <div>• 3 créditos de diplomados (base)</div>
-                        <div>• 15 créditos de cursos</div>
-                        <div className="font-bold text-indigo-600 dark:text-indigo-300 pt-1">Total: 18 créditos EDUMIN</div>
-                      </div>
-                    </button>
+                          <div className="text-[11px] text-slate-500 mt-2 space-y-0.5">
+                            <div>• {pkg.creditosDiplomados} {pkg.creditosDiplomados === 1 ? 'crédito de diplomado' : 'créditos de diplomados'}</div>
+                            <div>• {pkg.creditosCursos} créditos de cursos</div>
+                            <div className="font-bold text-indigo-600 dark:text-indigo-300 pt-1">
+                              Total: {totalCreditos} créditos EDUMIN
+                            </div>
+                          </div>
+                        </button>
+                      );
+                    })}
                   </div>
 
                   <div>

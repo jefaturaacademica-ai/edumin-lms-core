@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   CreditCard, ShieldCheck, Users, BookOpen, Settings, LogOut,
   Activity, CheckCircle2, AlertCircle, Search, UserCheck, Layers, Award, Save, RefreshCw, Server,
-  GraduationCap, Eye, ExternalLink, Database, Sparkles, Check
+  GraduationCap, Eye, ExternalLink, Database, Sparkles, Check, Plus, Trash2
 } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
 import { useRouter } from 'next/navigation';
@@ -12,6 +12,7 @@ import Link from 'next/link';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import AdminHeader from '@/components/admin/admin-header';
 import { LoginPersonalizacionTab } from '@/components/admin/configuracion/LoginPersonalizacionTab';
+import { PaqueteDefinicion, PAQUETES_DEFAULT } from '@/lib/types/paquetes';
 
 export default function ConfiguracionRolesPage() {
   const [activeTab, setActiveTab] = useState<'rbac' | 'paquetes' | 'simulador' | 'login'>('rbac');
@@ -20,12 +21,23 @@ export default function ConfiguracionRolesPage() {
   const [busqueda, setBusqueda] = useState('');
   const [mensajeExito, setMensajeExito] = useState<string | null>(null);
   
-  // Estado para la configuración de plantillas
-  const [paquetesConfig, setPaquetesConfig] = useState({
-    COMPLETO: { modulares: 3, diplomas: 1, cursos: 3, certCip: false },
-    FULL: { modulares: 3, diplomas: 1, cursos: 5, certCip: true },
-    ILIMITADO: { modulares: 10, diplomas: 5, cursos: 15, certCip: true }
-  });
+  // Estado para la configuración de plantillas de paquetes
+  const [paquetesConfig, setPaquetesConfig] = useState<Record<string, PaqueteDefinicion>>(PAQUETES_DEFAULT);
+  const [guardandoPaquetes, setGuardandoPaquetes] = useState(false);
+
+  // Modal / Formulario para crear un nuevo paquete personalizado
+  const [mostrarModalNuevoPaquete, setMostrarModalNuevoPaquete] = useState(false);
+  const [nuevoPkgId, setNuevoPkgId] = useState('');
+  const [nuevoPkgNombre, setNuevoPkgNombre] = useState('');
+  const [nuevoPkgDescripcion, setNuevoPkgDescripcion] = useState('');
+  const [nuevoPkgPrecioContado, setNuevoPkgPrecioContado] = useState(0);
+  const [nuevoPkgPrecioCuotas, setNuevoPkgPrecioCuotas] = useState(0);
+  const [nuevoPkgCuotas, setNuevoPkgCuotas] = useState(1);
+  const [nuevoPkgCreditosDip, setNuevoPkgCreditosDip] = useState(1);
+  const [nuevoPkgCreditosCur, setNuevoPkgCreditosCur] = useState(3);
+  const [nuevoPkgModulares, setNuevoPkgModulares] = useState(3);
+  const [nuevoPkgDiplomas, setNuevoPkgDiplomas] = useState(1);
+  const [nuevoPkgCertCip, setNuevoPkgCertCip] = useState(false);
 
   const router = useRouter();
   const supabase = createBrowserClient(
@@ -35,6 +47,7 @@ export default function ConfiguracionRolesPage() {
 
   useEffect(() => {
     cargarUsuarios();
+    cargarConfigPaquetes();
   }, []);
 
   const cargarUsuarios = async () => {
@@ -49,6 +62,20 @@ export default function ConfiguracionRolesPage() {
       console.error('Error cargando usuarios:', e);
     } finally {
       setCargando(false);
+    }
+  };
+
+  const cargarConfigPaquetes = async () => {
+    try {
+      const res = await fetch('/api/admin/configuracion-paquetes');
+      if (res.ok) {
+        const data = await res.json();
+        if (data.paquetes && typeof data.paquetes === 'object') {
+          setPaquetesConfig(data.paquetes);
+        }
+      }
+    } catch (e) {
+      console.error('Error cargando configuración de paquetes:', e);
     }
   };
 
@@ -73,14 +100,97 @@ export default function ConfiguracionRolesPage() {
     }
   };
 
-  const guardarConfigPaquetes = () => {
-    setMensajeExito('¡Plantillas de paquetes actualizadas con éxito!');
+  const guardarConfigPaquetes = async () => {
+    setGuardandoPaquetes(true);
+    try {
+      const res = await fetch('/api/admin/configuracion-paquetes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ paquetes: paquetesConfig })
+      });
+
+      if (res.ok) {
+        setMensajeExito('¡Plantillas de paquetes actualizadas y guardadas con éxito!');
+        setTimeout(() => setMensajeExito(null), 4000);
+      } else {
+        alert('No se pudo guardar la configuración de paquetes.');
+      }
+    } catch (e) {
+      console.error('Error guardando paquetes:', e);
+      alert('Error de red al guardar paquetes.');
+    } finally {
+      setGuardandoPaquetes(false);
+    }
+  };
+
+  const handleCrearNuevoPaquete = (e: React.FormEvent) => {
+    e.preventDefault();
+    const cleanId = nuevoPkgId.trim().toUpperCase().replace(/[^A-Z0-9_]/g, '_');
+    if (!cleanId) {
+      alert('Por favor ingrese un identificador válido para el paquete (Ej: BECA, CORPORATIVO)');
+      return;
+    }
+
+    const nuevoPaquete: PaqueteDefinicion = {
+      id: cleanId,
+      nombre: nuevoPkgNombre.trim() || `Paquete ${cleanId}`,
+      descripcion: nuevoPkgDescripcion.trim() || 'Paquete personalizado configurado desde administración.',
+      precioContado: Number(nuevoPkgPrecioContado) || 0,
+      precioCuotas: Number(nuevoPkgPrecioCuotas) || 0,
+      cuotasSugeridas: Number(nuevoPkgCuotas) || 1,
+      creditosDiplomados: Number(nuevoPkgCreditosDip) || 1,
+      creditosCursos: Number(nuevoPkgCreditosCur) || 0,
+      modulares: Number(nuevoPkgModulares) || 3,
+      diplomas: Number(nuevoPkgDiplomas) || 1,
+      certCip: Boolean(nuevoPkgCertCip),
+      esPersonalizado: true,
+      colorTag: 'emerald'
+    };
+
+    const updated = {
+      ...paquetesConfig,
+      [cleanId]: nuevoPaquete
+    };
+
+    setPaquetesConfig(updated);
+    setMostrarModalNuevoPaquete(false);
+    setNuevoPkgId('');
+    setNuevoPkgNombre('');
+    setNuevoPkgDescripcion('');
+    setNuevoPkgPrecioContado(0);
+    setNuevoPkgPrecioCuotas(0);
+
+    // Guardar inmediatamente
+    fetch('/api/admin/configuracion-paquetes', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ paquetes: updated })
+    });
+
+    setMensajeExito(`¡Paquete ${cleanId} creado con éxito y disponible para matrículas!`);
     setTimeout(() => setMensajeExito(null), 4000);
   };
 
-  const handleLogout = async () => {
-    await supabase.auth.signOut();
-    router.push('/login');
+  const handleEliminarPaquetePersonalizado = (pkgId: string) => {
+    if (['COMPLETO', 'FULL', 'ILIMITADO'].includes(pkgId)) {
+      alert('Los paquetes base COMPLETO, FULL e ILIMITADO no se pueden eliminar.');
+      return;
+    }
+
+    if (confirm(`¿Estás seguro de eliminar el paquete "${pkgId}"?`)) {
+      const copy = { ...paquetesConfig };
+      delete copy[pkgId];
+      setPaquetesConfig(copy);
+
+      fetch('/api/admin/configuracion-paquetes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ paquetes: copy })
+      });
+
+      setMensajeExito(`Paquete ${pkgId} eliminado correctamente.`);
+      setTimeout(() => setMensajeExito(null), 4000);
+    }
   };
 
   const usuariosFiltrados = usuarios.filter(u => {
@@ -98,289 +208,353 @@ export default function ConfiguracionRolesPage() {
       {/* Sidebar Unificado */}
       <AdminSidebar />
 
-      {/* Contenido Principal con Header Superior Institucional */}
+      {/* Main Content */}
       <div className="flex-1 flex flex-col overflow-hidden min-w-0 h-full">
-        <AdminHeader breadcrumb="Configuración" />
+        <AdminHeader breadcrumb="Configuración y Roles" />
+        
         <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
-          <div className="max-w-7xl mx-auto space-y-8">
-          
-          <div className="flex justify-between items-center">
+          <div className="max-w-7xl mx-auto space-y-6">
+
+          {/* Header */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
-              <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
-                Configuración y roles (RBAC)
+              <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mt-1 tracking-tight">
+                Configuración y Roles (RBAC)
               </h1>
+              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+                Administración de accesos de personal institucional, plantillas de paquetes y banners de acceso.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <button
+                onClick={cargarUsuarios}
+                disabled={cargando}
+                className="bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-800 px-4 py-2.5 rounded-xl font-bold text-xs shadow-sm transition flex items-center gap-2 cursor-pointer disabled:opacity-50"
+              >
+                <RefreshCw className={`w-4 h-4 ${cargando ? 'animate-spin' : ''}`} />
+                Actualizar lista ({usuarios.length})
+              </button>
             </div>
           </div>
 
+          {/* Notificación de Éxito */}
           {mensajeExito && (
-            <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 px-5 py-3 rounded-2xl flex items-center gap-3 shadow-sm">
-              <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
-              <span className="text-xs font-bold">{mensajeExito}</span>
+            <div className="p-4 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 rounded-2xl flex items-center gap-3 text-xs font-semibold animate-in fade-in duration-300">
+              <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
+              <span>{mensajeExito}</span>
             </div>
           )}
 
-          {/* Navegación por pestañas */}
-          <div className="flex border-b border-slate-200 overflow-x-auto">
+          {/* Pestañas de Navegación */}
+          <div className="flex border-b border-slate-200 dark:border-slate-800 gap-2 overflow-x-auto">
             <button
               onClick={() => setActiveTab('rbac')}
               className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 shrink-0 ${activeTab === 'rbac' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
             >
-              <UserCheck className="w-4 h-4" /> Control de acceso RBAC ({usuarios.length} Usuarios)
+              <Users className="w-4 h-4" /> Directorio de Usuarios y Roles ({usuarios.length})
             </button>
             <button
               onClick={() => setActiveTab('paquetes')}
               className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 shrink-0 ${activeTab === 'paquetes' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
             >
-              <Layers className="w-4 h-4" /> Configuración de paquetes y créditos
+              <Layers className="w-4 h-4" /> Configuración de paquetes y créditos ({Object.keys(paquetesConfig).length})
             </button>
             <button
               onClick={() => setActiveTab('simulador')}
-              className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 shrink-0 ${activeTab === 'simulador' ? 'border-emerald-600 text-emerald-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
+              className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 shrink-0 ${activeTab === 'simulador' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
             >
-              <GraduationCap className="w-4 h-4" /> Vista Estudiante FULL (Simulador)
+              <Eye className="w-4 h-4" /> Simulador de Alumno Full
             </button>
             <button
               onClick={() => setActiveTab('login')}
-              className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 shrink-0 ${activeTab === 'login' ? 'border-amber-500 text-amber-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
+              className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 shrink-0 ${activeTab === 'login' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
             >
-              <Sparkles className="w-4 h-4 text-amber-500" /> Personalización del Login
+              <Sparkles className="w-4 h-4" /> Personalización de Login
             </button>
           </div>
 
+          {/* CONTENIDOS DE LAS PESTAÑAS */}
+
           {activeTab === 'rbac' ? (
-            /* TAB: CONTROL RBAC DE USUARIOS */
-            <div className="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 space-y-6">
-              <div className="flex flex-col sm:flex-row justify-between items-center gap-4 border-b border-slate-100 pb-5">
-                <div>
-                  <h3 className="text-lg font-bold text-slate-900">Perfiles y Roles de Usuario</h3>
-                  <p className="text-xs text-slate-500">Asigna permisos de SUPERADMIN, ADMIN, DOCENTE o ESTUDIANTE.</p>
-                </div>
-
-                <div className="flex items-center gap-3 w-full sm:w-auto">
-                  <button
-                    onClick={cargarUsuarios}
-                    className="p-2 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded-xl text-xs font-bold transition cursor-pointer"
-                    title="Actualizar lista"
-                  >
-                    <RefreshCw className={`w-4 h-4 ${cargando ? 'animate-spin' : ''}`} />
-                  </button>
-
-                  <div className="relative flex-1 sm:w-64">
-                    <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">
-                      <Search className="size-4" />
-                    </span>
-                    <input 
-                      type="text"
-                      placeholder="Buscar usuario por DNI, Nombre o Email..."
-                      value={busqueda}
-                      onChange={(e) => setBusqueda(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600 text-slate-800"
-                    />
-                  </div>
+            /* TAB: GESTIÓN DE ROLES (RBAC) */
+            <div className="space-y-4">
+              <div className="flex justify-between items-center gap-4">
+                <div className="relative flex-1 max-w-md">
+                  <Search className="w-4 h-4 text-slate-400 absolute left-3 top-3 pointer-events-none" />
+                  <input
+                    type="text"
+                    placeholder="Buscar por nombre, correo, DNI o rol..."
+                    value={busqueda}
+                    onChange={(e) => setBusqueda(e.target.value)}
+                    className="w-full pl-9 pr-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                  />
                 </div>
               </div>
 
-              <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse">
-                  <thead>
-                    <tr className="border-b border-slate-100 text-slate-400 text-[10px] uppercase tracking-wider font-bold">
-                      <th className="pb-3 px-4">DNI / CE</th>
-                      <th className="pb-3 px-4">Usuario</th>
-                      <th className="pb-3 px-4">Paquete Asignado</th>
-                      <th className="pb-3 px-4">Rol de Sistema</th>
-                      <th className="pb-3 px-4 text-right">Acción de Rol</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100 text-xs">
-                    {usuariosFiltrados.length > 0 ? (
-                      usuariosFiltrados.map((u) => (
-                        <tr key={u.id} className="hover:bg-slate-50 transition-colors">
-                          <td className="py-4 px-4 tabular-nums font-bold text-indigo-600">{u.dni_ce}</td>
-                          <td className="py-4 px-4 font-bold text-slate-800">
+              <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left border-collapse text-xs">
+                    <thead>
+                      <tr className="border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/40 text-[10px] font-black uppercase tracking-wider text-slate-400">
+                        <th className="py-3 px-4">Usuario</th>
+                        <th className="py-3 px-4">DNI / CE</th>
+                        <th className="py-3 px-4">Correo Institucional</th>
+                        <th className="py-3 px-4">Paquete Asignado</th>
+                        <th className="py-3 px-4">Rol en el Sistema</th>
+                        <th className="py-3 px-4 text-right">Acción</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100 dark:divide-slate-800 font-medium">
+                      {usuariosFiltrados.map((u) => (
+                        <tr key={u.id} className="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition">
+                          <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">
                             {u.nombres} {u.apellidos}
-                            <div className="text-[10px] text-slate-400 font-normal">{u.email}</div>
                           </td>
-                          <td className="py-4 px-4 font-semibold text-slate-700">
-                            <span className="bg-slate-100 text-slate-700 px-2.5 py-1 rounded-lg text-[10px] font-bold">
+                          <td className="py-3 px-4 font-mono text-slate-500">
+                            {u.dni_ce}
+                          </td>
+                          <td className="py-3 px-4 text-slate-600 dark:text-slate-300">
+                            {u.email}
+                          </td>
+                          <td className="py-3 px-4">
+                            <span className="px-2 py-0.5 rounded-md text-[10px] font-black bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
                               {u.paquete_adquirido || 'Estándar'}
                             </span>
                           </td>
-                          <td className="py-4 px-4">
-                            <span className={`px-3 py-1 rounded-full text-[10px] font-black ${u.role === 'SUPERADMIN' ? 'bg-purple-100 text-purple-800' : u.role === 'ADMIN' ? 'bg-indigo-100 text-indigo-800' : u.role === 'DOCENTE' ? 'bg-emerald-100 text-emerald-800' : 'bg-slate-100 text-slate-800'}`}>
-                              {u.role}
-                            </span>
-                          </td>
-                          <td className="py-4 px-4 text-right">
+                          <td className="py-3 px-4">
                             <select
-                              value={u.role}
+                              value={u.role || 'ESTUDIANTE'}
                               onChange={(e) => cambiarRolUsuario(u.id, e.target.value)}
-                              className="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer"
+                              className={`px-2.5 py-1 rounded-lg text-xs font-bold border transition ${
+                                u.role === 'SUPERADMIN' 
+                                  ? 'bg-purple-50 text-purple-700 border-purple-200 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-800' 
+                                  : u.role === 'ADMIN'
+                                  ? 'bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-950/40 dark:text-indigo-300 dark:border-indigo-800'
+                                  : u.role === 'DOCENTE'
+                                  ? 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-800'
+                                  : 'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800'
+                              }`}
                             >
                               <option value="ESTUDIANTE">ESTUDIANTE</option>
                               <option value="DOCENTE">DOCENTE</option>
-                              <option value="ADMIN">ADMINISTRADOR</option>
-                              <option value="SUPERADMIN">SUPERADMIN</option>
+                              <option value="ADMIN">ADMIN (Secretaría)</option>
+                              <option value="SUPERADMIN">SUPERADMIN (Acceso Total)</option>
                             </select>
                           </td>
+                          <td className="py-3 px-4 text-right">
+                            <button
+                              onClick={() => cambiarRolUsuario(u.id, u.role === 'ADMIN' ? 'ESTUDIANTE' : 'ADMIN')}
+                              className="text-indigo-600 dark:text-indigo-400 hover:underline font-bold text-[11px] cursor-pointer"
+                            >
+                              Alternar Admin
+                            </button>
+                          </td>
                         </tr>
-                      ))
-                    ) : (
-                      <tr>
-                        <td colSpan={5} className="text-center py-10 text-slate-400 font-medium">
-                          No se encontraron usuarios coincidentes.
-                        </td>
-                      </tr>
-                    )}
-                  </tbody>
-                </table>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           ) : activeTab === 'paquetes' ? (
-            /* TAB: CONFIGURACIÓN DE PLANTILLAS Y PAQUETES */
+            /* TAB: CONFIGURACIÓN DE PAQUETES Y CRÉDITOS */
             <div className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                
-                {/* Paquete COMPLETO */}
-                <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 flex flex-col justify-between">
-                  <div>
-                    <div className="flex justify-between items-center mb-4">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">Paquete Standard</span>
-                      <Award className="w-5 h-5 text-indigo-600" />
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Paquete COMPLETO</h3>
-                    <p className="text-xs text-slate-500 mb-6">Reglas de emisión y límites de cursos para alumnos matriculados en modalidad Completo.</p>
-                    
-                    <div className="space-y-3 border-t border-slate-100 pt-4 text-xs font-medium">
-                      <div className="flex justify-between">
-                        <span className="text-slate-500">Certificados Modulares:</span>
-                        <input 
-                          type="number" 
-                          value={paquetesConfig.COMPLETO.modulares}
-                          onChange={(e) => setPaquetesConfig({ ...paquetesConfig, COMPLETO: { ...paquetesConfig.COMPLETO, modulares: parseInt(e.target.value) || 0 } })}
-                          className="w-16 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold"
-                        />
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-slate-500">Diploma General:</span>
-                        <input 
-                          type="number" 
-                          value={paquetesConfig.COMPLETO.diplomas}
-                          onChange={(e) => setPaquetesConfig({ ...paquetesConfig, COMPLETO: { ...paquetesConfig.COMPLETO, diplomas: parseInt(e.target.value) || 0 } })}
-                          className="w-16 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold"
-                        />
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-slate-500">Cursos Libres Incluidos:</span>
-                        <input 
-                          type="number" 
-                          value={paquetesConfig.COMPLETO.cursos}
-                          onChange={(e) => setPaquetesConfig({ ...paquetesConfig, COMPLETO: { ...paquetesConfig.COMPLETO, cursos: parseInt(e.target.value) || 0 } })}
-                          className="w-16 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold"
-                        />
-                      </div>
-                    </div>
-                  </div>
+              
+              {/* Barra de cabecera con botón de agregar paquete */}
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200 dark:border-slate-800">
+                <div>
+                  <h3 className="text-base font-bold text-slate-900 dark:text-white">Plantillas maestras de paquetes</h3>
+                  <p className="text-xs text-slate-500 mt-0.5">
+                    Define las reglas comerciales, precios sugeridos y créditos otorgados. Lo que configures aquí se reflejará en la pantalla de matrícula de nuevo estudiante.
+                  </p>
                 </div>
-
-                {/* Paquete FULL */}
-                <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 flex flex-col justify-between">
-                  <div>
-                    <div className="flex justify-between items-center mb-4">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md">Paquete Recomendado</span>
-                      <Award className="w-5 h-5 text-amber-500" />
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Paquete FULL</h3>
-                    <p className="text-xs text-slate-500 mb-6">Incluye más cursos libres y derecho a certificación digital del Colegio de Ingenieros.</p>
-                    
-                    <div className="space-y-3 border-t border-slate-100 pt-4 text-xs font-medium">
-                      <div className="flex justify-between">
-                        <span className="text-slate-500">Certificados Modulares:</span>
-                        <input 
-                          type="number" 
-                          value={paquetesConfig.FULL.modulares}
-                          onChange={(e) => setPaquetesConfig({ ...paquetesConfig, FULL: { ...paquetesConfig.FULL, modulares: parseInt(e.target.value) || 0 } })}
-                          className="w-16 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold"
-                        />
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-slate-500">Diploma General:</span>
-                        <input 
-                          type="number" 
-                          value={paquetesConfig.FULL.diplomas}
-                          onChange={(e) => setPaquetesConfig({ ...paquetesConfig, FULL: { ...paquetesConfig.FULL, diplomas: parseInt(e.target.value) || 0 } })}
-                          className="w-16 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold"
-                        />
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-slate-500">Cursos Libres Incluidos:</span>
-                        <input 
-                          type="number" 
-                          value={paquetesConfig.FULL.cursos}
-                          onChange={(e) => setPaquetesConfig({ ...paquetesConfig, FULL: { ...paquetesConfig.FULL, cursos: parseInt(e.target.value) || 0 } })}
-                          className="w-16 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold"
-                        />
-                      </div>
-                    </div>
-                  </div>
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={() => setMostrarModalNuevoPaquete(true)}
+                    className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl font-bold text-xs shadow-md transition inline-flex items-center gap-2 cursor-pointer"
+                  >
+                    <Plus className="w-4 h-4" /> + Crear paquete personalizado
+                  </button>
+                  <button
+                    onClick={guardarConfigPaquetes}
+                    disabled={guardandoPaquetes}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-xl font-bold text-xs shadow-md transition inline-flex items-center gap-2 cursor-pointer disabled:opacity-50"
+                  >
+                    <Save className="w-4 h-4" /> {guardandoPaquetes ? 'Guardando...' : 'Guardar cambios'}
+                  </button>
                 </div>
-
-                {/* Paquete ILIMITADO */}
-                <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200 flex flex-col justify-between">
-                  <div>
-                    <div className="flex justify-between items-center mb-4">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2.5 py-1 rounded-md">Acceso Total VIP</span>
-                      <Award className="w-5 h-5 text-purple-600" />
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Paquete ILIMITADO</h3>
-                    <p className="text-xs text-slate-500 mb-6">Progresión ilimitada por bloques con aprobación directa de módulos.</p>
-                    
-                    <div className="space-y-3 border-t border-slate-100 pt-4 text-xs font-medium">
-                      <div className="flex justify-between">
-                        <span className="text-slate-500">Certificados Modulares:</span>
-                        <input 
-                          type="number" 
-                          value={paquetesConfig.ILIMITADO.modulares}
-                          onChange={(e) => setPaquetesConfig({ ...paquetesConfig, ILIMITADO: { ...paquetesConfig.ILIMITADO, modulares: parseInt(e.target.value) || 0 } })}
-                          className="w-16 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold"
-                        />
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-slate-500">Diploma General:</span>
-                        <input 
-                          type="number" 
-                          value={paquetesConfig.ILIMITADO.diplomas}
-                          onChange={(e) => setPaquetesConfig({ ...paquetesConfig, ILIMITADO: { ...paquetesConfig.ILIMITADO, diplomas: parseInt(e.target.value) || 0 } })}
-                          className="w-16 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold"
-                        />
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-slate-500">Cursos Libres Incluidos:</span>
-                        <input 
-                          type="number" 
-                          value={paquetesConfig.ILIMITADO.cursos}
-                          onChange={(e) => setPaquetesConfig({ ...paquetesConfig, ILIMITADO: { ...paquetesConfig.ILIMITADO, cursos: parseInt(e.target.value) || 0 } })}
-                          className="w-16 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
               </div>
 
+              {/* Grid de Paquetes Configurados */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {Object.values(paquetesConfig).map((pkg) => {
+                  const esBase = ['COMPLETO', 'FULL', 'ILIMITADO'].includes(pkg.id);
+                  const colorTag = pkg.colorTag || (pkg.id === 'COMPLETO' ? 'indigo' : pkg.id === 'FULL' ? 'amber' : 'purple');
+
+                  return (
+                    <div 
+                      key={pkg.id} 
+                      className="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col justify-between relative group"
+                    >
+                      <div>
+                        <div className="flex justify-between items-center mb-3">
+                          <span className={`text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md ${
+                            colorTag === 'emerald'
+                              ? 'text-emerald-700 bg-emerald-50 dark:bg-emerald-950/50 dark:text-emerald-300'
+                              : colorTag === 'amber'
+                              ? 'text-amber-700 bg-amber-50 dark:bg-amber-950/50 dark:text-amber-300'
+                              : colorTag === 'purple'
+                              ? 'text-purple-700 bg-purple-50 dark:bg-purple-950/50 dark:text-purple-300'
+                              : 'text-indigo-700 bg-indigo-50 dark:bg-indigo-950/50 dark:text-indigo-300'
+                          }`}>
+                            {pkg.esPersonalizado ? 'Personalizado' : (pkg.id === 'COMPLETO' ? 'Paquete Estándar' : pkg.id === 'FULL' ? 'Recomendado' : 'Acceso VIP')}
+                          </span>
+
+                          <div className="flex items-center gap-1.5">
+                            <Award className="w-4 h-4 text-slate-400" />
+                            {!esBase && (
+                              <button
+                                title="Eliminar este paquete"
+                                onClick={() => handleEliminarPaquetePersonalizado(pkg.id)}
+                                className="text-slate-300 hover:text-rose-600 transition p-1 cursor-pointer"
+                              >
+                                <Trash2 className="w-4 h-4" />
+                              </button>
+                            )}
+                          </div>
+                        </div>
+
+                        <h3 className="text-xl font-black text-slate-900 dark:text-white mb-1">
+                          {pkg.nombre}
+                        </h3>
+                        <p className="text-xs text-slate-500 mb-4 line-clamp-2">
+                          {pkg.descripcion}
+                        </p>
+
+                        {/* Precios y Cuotas sugeridas */}
+                        <div className="bg-slate-50 dark:bg-slate-950/50 p-3 rounded-2xl mb-4 border border-slate-100 dark:border-slate-800 space-y-2 text-xs">
+                          <div className="flex justify-between items-center">
+                            <span className="text-slate-500 font-medium">Precio Contado:</span>
+                            <div className="flex items-center gap-1">
+                              <span className="text-xs text-slate-400">S/</span>
+                              <input 
+                                type="number" 
+                                value={pkg.precioContado}
+                                onChange={(e) => setPaquetesConfig({
+                                  ...paquetesConfig,
+                                  [pkg.id]: { ...pkg, precioContado: Number(e.target.value) || 0 }
+                                })}
+                                className="w-20 px-2 py-0.5 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 rounded-lg text-right font-black text-xs"
+                              />
+                            </div>
+                          </div>
+
+                          <div className="flex justify-between items-center">
+                            <span className="text-slate-500 font-medium">Cuotas Sugeridas:</span>
+                            <input 
+                              type="number" 
+                              value={pkg.cuotasSugeridas}
+                              onChange={(e) => setPaquetesConfig({
+                                ...paquetesConfig,
+                                [pkg.id]: { ...pkg, cuotasSugeridas: Number(e.target.value) || 1 }
+                              })}
+                              className="w-16 px-2 py-0.5 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 rounded-lg text-right font-bold text-xs"
+                            />
+                          </div>
+                        </div>
+                        
+                        {/* Reglas de Créditos y Certificados */}
+                        <div className="space-y-2.5 border-t border-slate-100 dark:border-slate-800 pt-4 text-xs font-medium">
+                          <div className="flex justify-between items-center">
+                            <span className="text-slate-600 dark:text-slate-300 font-bold">Créditos de Diplomados:</span>
+                            <input 
+                              type="number" 
+                              value={pkg.creditosDiplomados}
+                              onChange={(e) => setPaquetesConfig({
+                                ...paquetesConfig,
+                                [pkg.id]: { ...pkg, creditosDiplomados: Math.max(0, parseInt(e.target.value) || 0) }
+                              })}
+                              className="w-16 px-2 py-1 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 rounded-lg text-right font-black"
+                            />
+                          </div>
+
+                          <div className="flex justify-between items-center">
+                            <span className="text-slate-600 dark:text-slate-300 font-bold">Créditos de Cursos Libres:</span>
+                            <input 
+                              type="number" 
+                              value={pkg.creditosCursos}
+                              onChange={(e) => setPaquetesConfig({
+                                ...paquetesConfig,
+                                [pkg.id]: { ...pkg, creditosCursos: Math.max(0, parseInt(e.target.value) || 0) }
+                              })}
+                              className="w-16 px-2 py-1 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 rounded-lg text-right font-black"
+                            />
+                          </div>
+
+                          <div className="flex justify-between items-center">
+                            <span className="text-slate-500">Certificados Modulares:</span>
+                            <input 
+                              type="number" 
+                              value={pkg.modulares}
+                              onChange={(e) => setPaquetesConfig({
+                                ...paquetesConfig,
+                                [pkg.id]: { ...pkg, modulares: Math.max(0, parseInt(e.target.value) || 0) }
+                              })}
+                              className="w-16 px-2 py-1 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 rounded-lg text-right font-semibold"
+                            />
+                          </div>
+
+                          <div className="flex justify-between items-center">
+                            <span className="text-slate-500">Diploma General:</span>
+                            <input 
+                              type="number" 
+                              value={pkg.diplomas}
+                              onChange={(e) => setPaquetesConfig({
+                                ...paquetesConfig,
+                                [pkg.id]: { ...pkg, diplomas: Math.max(0, parseInt(e.target.value) || 0) }
+                              })}
+                              className="w-16 px-2 py-1 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 rounded-lg text-right font-semibold"
+                            />
+                          </div>
+
+                          <div className="flex justify-between items-center pt-2">
+                            <span className="text-slate-500">Certificación CIP Incluida:</span>
+                            <input 
+                              type="checkbox"
+                              checked={pkg.certCip}
+                              onChange={(e) => setPaquetesConfig({
+                                ...paquetesConfig,
+                                [pkg.id]: { ...pkg, certCip: e.target.checked }
+                              })}
+                              className="w-4 h-4 text-indigo-600 rounded cursor-pointer"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] text-slate-400">
+                        Código interno: <code className="font-mono font-bold text-slate-600 dark:text-slate-300">{pkg.id}</code>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Botón Guardar Inferior */}
               <div className="flex justify-end pt-4">
                 <button
                   onClick={guardarConfigPaquetes}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl font-bold text-xs shadow-md transition inline-flex items-center gap-2 cursor-pointer"
+                  disabled={guardandoPaquetes}
+                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl font-bold text-xs shadow-md transition inline-flex items-center gap-2 cursor-pointer disabled:opacity-50"
                 >
-                  <Save className="w-4 h-4" /> Guardar Configuración de Plantillas
+                  <Save className="w-4 h-4" /> {guardandoPaquetes ? 'Guardando...' : 'Guardar todas las plantillas'}
                 </button>
               </div>
             </div>
           ) : activeTab === 'simulador' ? (
             /* TAB: SIMULADOR DE VISTA ESTUDIANTE FULL */
             <div className="space-y-6">
-              {/* Tarjeta de Inicio Rápido de Simulación */}
               <div className="bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-950 rounded-3xl p-6 sm:p-8 border border-indigo-500/30 text-white shadow-xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
                   <GraduationCap className="w-64 h-64 text-indigo-400" />
@@ -400,121 +574,162 @@ export default function ConfiguracionRolesPage() {
                     Como administrador, puedes ingresar directamente al Aula Virtual (<code className="text-indigo-300 bg-white/10 px-1.5 py-0.5 rounded tabular-nums">/dashboard</code>). Tu sesión ejecutará automáticamente los privilegios de un alumno con <strong>Paquete FULL</strong>, con todas las cuotas al día, acceso irrestricto a los 3 módulos de <strong>Derecho Minero</strong> y opción de rendir exámenes y generar certificados.
                   </p>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                    <div className="p-3 rounded-2xl bg-white/5 border border-white/10">
-                      <p className="text-[10px] text-slate-400 uppercase font-bold">Programa asignado</p>
-                      <p className="text-xs font-bold text-white mt-0.5">Derecho Minero y Gestión Amb.</p>
-                    </div>
-                    <div className="p-3 rounded-2xl bg-white/5 border border-white/10">
-                      <p className="text-[10px] text-slate-400 uppercase font-bold">Paquete simulado</p>
-                      <p className="text-xs font-bold text-emerald-400 mt-0.5">FULL (Cursos + CIP)</p>
-                    </div>
-                    <div className="p-3 rounded-2xl bg-white/5 border border-white/10">
-                      <p className="text-[10px] text-slate-400 uppercase font-bold">Estado financiero</p>
-                      <p className="text-xs font-bold text-sky-400 mt-0.5">Habilitado 100%</p>
-                    </div>
-                  </div>
-
-                  <div className="pt-4 flex flex-wrap gap-3">
+                  <div className="pt-2 flex flex-wrap gap-3">
                     <Link
                       href="/dashboard"
-                      className="bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-6 py-3 rounded-2xl text-xs shadow-lg shadow-emerald-600/30 transition-all flex items-center gap-2"
+                      className="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-md transition inline-flex items-center gap-2"
                     >
-                      <GraduationCap className="w-4 h-4" />
-                      <span>Ingresar al Aula como Estudiante (FULL)</span>
-                      <span>→</span>
+                      <ExternalLink className="w-4 h-4" /> Entrar al Aula como Alumno Simulado
                     </Link>
 
                     <Link
-                      href="/dashboard/certificados"
-                      className="bg-white/10 hover:bg-white/20 text-white font-bold px-5 py-3 rounded-2xl text-xs border border-white/15 transition-all flex items-center gap-2"
+                      href="/dashboard/examenes"
+                      className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-5 py-2.5 rounded-xl font-bold text-xs transition inline-flex items-center gap-2"
                     >
-                      <Award className="w-4 h-4 text-amber-400" />
-                      <span>Ver Mis Certificados</span>
+                      <BookOpen className="w-4 h-4" /> Probar Exámenes
                     </Link>
-                  </div>
-                </div>
-              </div>
-
-              {/* Guía Técnica Supabase */}
-              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
-                <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
-                  <div className="size-10 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold">
-                    <Database className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="text-base font-bold text-slate-900">
-                      ¿Cómo configurar en Supabase un estudiante para Derecho Minero?
-                    </h3>
-                    <p className="text-xs text-slate-500">
-                      Guía directa para asignar diplomados, paquetes y roles desde el Table Editor de Supabase.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="space-y-4 text-xs text-slate-700">
-                  <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
-                    <p className="font-bold text-slate-900 flex items-center gap-2">
-                      <span className="size-5 rounded-full bg-indigo-600 text-white inline-flex items-center justify-center text-[10px]">1</span>
-                      Abre tu panel de Supabase y ve a la tabla:
-                    </p>
-                    <code className="block bg-slate-900 text-emerald-400 p-2.5 rounded-xl tabular-nums text-[11px]">
-                      Table Editor ➔ tabla "profiles"
-                    </code>
-                  </div>
-
-                  <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
-                    <p className="font-bold text-slate-900 flex items-center gap-2">
-                      <span className="size-5 rounded-full bg-indigo-600 text-white inline-flex items-center justify-center text-[10px]">2</span>
-                      Ubica al usuario (por su DNI o email) y edita las siguientes columnas:
-                    </p>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 font-sans">
-                      <div className="p-3 bg-white rounded-xl border border-slate-200">
-                        <span className="text-[10px] uppercase font-bold text-slate-400">Columna diplomado_1</span>
-                        <p className="tabular-nums text-indigo-600 font-bold text-xs mt-1">Derecho Minero</p>
-                        <p className="text-[11px] text-slate-500 mt-0.5">O el nombre oficial: <em>"Diplomado en Derecho Minero y Gestión Ambiental"</em>.</p>
-                      </div>
-
-                      <div className="p-3 bg-white rounded-xl border border-slate-200">
-                        <span className="text-[10px] uppercase font-bold text-slate-400">Columna role</span>
-                        <p className="tabular-nums text-indigo-600 font-bold text-xs mt-1">ESTUDIANTE</p>
-                        <p className="text-[11px] text-slate-500 mt-0.5">(Para administradores pon <code>ADMIN</code> o <code>SUPERADMIN</code>).</p>
-                      </div>
-
-                      <div className="p-3 bg-white rounded-xl border border-slate-200">
-                        <span className="text-[10px] uppercase font-bold text-slate-400">Columna paquete_adquirido</span>
-                        <p className="tabular-nums text-emerald-600 font-bold text-xs mt-1">FULL</p>
-                        <p className="text-[11px] text-slate-500 mt-0.5">Habilita acceso completo a cursos libres y certificaciones.</p>
-                      </div>
-
-                      <div className="p-3 bg-white rounded-xl border border-slate-200">
-                        <span className="text-[10px] uppercase font-bold text-slate-400">Columna cuotas_pagadas</span>
-                        <p className="tabular-nums text-sky-600 font-bold text-xs mt-1">6</p>
-                        <p className="text-[11px] text-slate-500 mt-0.5">Evita cualquier bloqueo por pago pendiente.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200/80 text-amber-900 space-y-1">
-                    <p className="font-bold flex items-center gap-1.5">
-                      <Sparkles className="size-4 text-amber-600" />
-                      Tip Inteligente de Sincronización:
-                    </p>
-                    <p className="text-[11px] leading-relaxed">
-                      El sistema cuenta con un parser inteligente. Cuando en <code className="bg-amber-100 px-1 rounded font-bold">diplomado_1</code> colocas <em>"Derecho Minero"</em>, la plataforma enlaza automáticamente sus 3 módulos oficiales con exámenes individuales (Módulo 1: Marco Legal y Regulación, Módulo 2: Fiscalización Ambiental, Módulo 3: Cierre de Minas y Sostenibilidad).
-                    </p>
                   </div>
                 </div>
               </div>
             </div>
           ) : (
+            /* TAB: PERSONALIZACIÓN DEL LOGIN */
             <LoginPersonalizacionTab />
           )}
 
+          </div>
+        </main>
+      </div>
+
+      {/* Modal para Crear Nuevo Paquete Personalizado */}
+      {mostrarModalNuevoPaquete && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200">
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
+            <h3 className="text-xl font-black text-slate-900 dark:text-white mb-2">
+              Crear Nuevo Paquete Personalizado
+            </h3>
+            <p className="text-xs text-slate-500 mb-6">
+              Configura un paquete para becas especiales, ventas corporativas o convenios empresariales.
+            </p>
+
+            <form onSubmit={handleCrearNuevoPaquete} className="space-y-4">
+              <div>
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  Código Identificador * (Ej: BECA, CORPORATIVO_CHINALCO)
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Ej: BECA"
+                  value={nuevoPkgId}
+                  onChange={(e) => setNuevoPkgId(e.target.value.toUpperCase())}
+                  className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-bold font-mono uppercase"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  Nombre descriptivo *
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Ej: Beca de Excelencia 100%"
+                  value={nuevoPkgNombre}
+                  onChange={(e) => setNuevoPkgNombre(e.target.value)}
+                  className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  Descripción breve
+                </label>
+                <input
+                  type="text"
+                  placeholder="Ej: Acceso a 1 diplomado y 2 cursos para estudiantes destacados."
+                  value={nuevoPkgDescripcion}
+                  onChange={(e) => setNuevoPkgDescripcion(e.target.value)}
+                  className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                    Precio Contado (S/)
+                  </label>
+                  <input
+                    type="number"
+                    value={nuevoPkgPrecioContado}
+                    onChange={(e) => setNuevoPkgPrecioContado(Number(e.target.value))}
+                    className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-bold"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                    Cuotas Sugeridas
+                  </label>
+                  <input
+                    type="number"
+                    min={1}
+                    max={6}
+                    value={nuevoPkgCuotas}
+                    onChange={(e) => setNuevoPkgCuotas(Number(e.target.value))}
+                    className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-bold"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                    Créditos Diplomados
+                  </label>
+                  <input
+                    type="number"
+                    min={0}
+                    value={nuevoPkgCreditosDip}
+                    onChange={(e) => setNuevoPkgCreditosDip(Number(e.target.value))}
+                    className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-bold"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                    Créditos Cursos Libres
+                  </label>
+                  <input
+                    type="number"
+                    min={0}
+                    value={nuevoPkgCreditosCur}
+                    onChange={(e) => setNuevoPkgCreditosCur(Number(e.target.value))}
+                    className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-bold"
+                  />
+                </div>
+              </div>
+
+              <div className="flex justify-end gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
+                <button
+                  type="button"
+                  onClick={() => setMostrarModalNuevoPaquete(false)}
+                  className="px-4 py-2 text-xs font-bold text-slate-500 hover:text-slate-700 cursor-pointer"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="submit"
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2 rounded-xl text-xs font-bold shadow-md cursor-pointer"
+                >
+                  Guardar y Habilitar Paquete
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-      </main>
-    </div>
+      )}
+
     </div>
   );
 }

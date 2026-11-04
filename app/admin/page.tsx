@@ -845,8 +845,8 @@ export default function AdminDashboard360() {
       {/* MODAL: CONSTANCIA DE NO ADEUDO IMPRIMIBLE */}
       {/* ========================================================= */}
       {mostrarConstanciaModal && alumnoSeleccionado && (
-        <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[10000] flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-slate-900 w-full max-w-xl rounded-3xl shadow-2xl p-10 space-y-6 border border-slate-200 dark:border-slate-800 text-center animate-in zoom-in-95 duration-200">
+        <div onClick={(e) => { if (e.target === e.currentTarget) setMostrarConstanciaModal(false); }} className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[10000] flex items-center justify-center p-4">
+          <div onClick={(e) => e.stopPropagation()} className="bg-white dark:bg-slate-900 w-full max-w-xl rounded-3xl shadow-2xl p-10 space-y-6 border border-slate-200 dark:border-slate-800 text-center animate-in zoom-in-95 duration-200">
             
             <div className="flex justify-center mb-2">
               <div className="p-3 bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 rounded-full">

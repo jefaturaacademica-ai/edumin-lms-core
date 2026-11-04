@@ -376,7 +376,17 @@ function reconstruirDiplomadosDesdeLecciones(leccionesRows: any[], cursosSupabas
       duracion: (cursoExistente?.horas || 325) + ' horas',
       horas: Number(cursoExistente?.horas) || 325,
       creditos: (cursoExistente?.creditos !== null && cursoExistente?.creditos !== undefined) ? Number(cursoExistente.creditos) : 13,
-      imagen: cursoExistente?.imagen || localDip?.imagen || ALL_DIPLOMADOS[idx]?.imagen || '/assets/images/daem/gestion-minera.webp',
+      imagen: (() => {
+        const catalogoMatch = ALL_DIPLOMADOS.find(d => 
+          d.slug === id || 
+          d.numId === parseCodeNumber(cod) || 
+          d.titulo.toUpperCase() === titulo.toUpperCase()
+        );
+        if (cursoExistente?.imagen && !cursoExistente.imagen.includes('gestion-minera.webp')) {
+          return cursoExistente.imagen;
+        }
+        return catalogoMatch?.imagen || cursoExistente?.imagen || localDip?.imagen || '/assets/images/daem/gestion-minera.webp';
+      })(),
       nivel: cursoExistente?.nivel || localDip?.nivel || 'Especialización',
       precio: cursoExistente?.precio || localDip?.precio || 150.00,
       modulos

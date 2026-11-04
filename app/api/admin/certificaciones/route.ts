@@ -61,6 +61,132 @@ export async function GET() {
           });
         });
       }
+
+      // 2. Sincronización automática de cursos/talleres/modulares completados desde profiles que falten en certificaciones
+      try {
+        const { data: profiles } = await admin
+          .from('profiles')
+          .select('id, dni_ce, nombres, apellidos, bloqueado, diplomados, cursos');
+
+        if (profiles && profiles.length > 0) {
+          for (const p of profiles) {
+            const dni = p.dni_ce;
+            if (!dni) continue;
+            const estudianteNombre = `${p.nombres || ''} ${p.apellidos || ''}`.trim() || 'Estudiante EDUMIN';
+
+            // Sincronizar modulares
+            const dips = parseDiplomadosFromProfile(p);
+            for (const d of dips) {
+              for (const m of d.modulos || []) {
+                const estaAprobado = Boolean(m.completado) || Boolean(m.codigo_cert) || (Number(m.nota) >= 12 && (m as any).rendido);
+                if (estaAprobado) {
+                  const modNombre = m.nombre || m.codigo || 'Módulo';
+                  const cod = m.codigo_cert || normalizarCodigoCertificado(generarCodigoUnicoCertificado());
+                  const key1 = cod;
+                  const key2 = `${dni}-MODULAR-${d.titulo}-${modNombre}`;
+                  if (!codigosExistentes.has(key1) && !codigosExistentes.has(key2)) {
+                    codigosExistentes.add(key1);
+                    codigosExistentes.add(key2);
+                    const nuevoCert = {
+                      codigo_verificacion: cod,
+                      profile_id: p.id,
+                      dni_ce: dni,
+                      estudiante_nombre: estudianteNombre,
+                      tipo: 'MODULAR',
+                      programa_titulo: d.titulo,
+                      modulo_titulo: modNombre,
+                      horas_lectivas: m.horas || '108 horas académicas',
+                      nota_final: typeof m.nota === 'number' && m.nota > 0 ? m.nota : 16,
+                      fecha_emision: m.fecha || new Date().toISOString().split('T')[0],
+                      estado_financiero_al_dia: !p.bloqueado,
+                      plantilla_snapshot: {
+                        modelo_id: 'mod-avanza-mod',
+                        horas: m.horas || '108 horas académicas',
+                        orientacion: 'horizontal',
+                        fechaEmision: m.fecha || new Date().toISOString().split('T')[0]
+                      }
+                    };
+                    await admin.from('certificaciones').insert(nuevoCert);
+                    realEmitidos.push({
+                      id: `sync-${cod}`,
+                      codigo: cod,
+                      tipo: 'MODULAR',
+                      estudiante: estudianteNombre,
+                      dni: dni,
+                      email: `${dni}@edumin.pe`,
+                      programa: d.titulo,
+                      modulo: modNombre,
+                      nota: typeof m.nota === 'number' && m.nota > 0 ? m.nota : 16,
+                      horas: m.horas || '108 horas académicas',
+                      fecha: m.fecha || new Date().toISOString().split('T')[0],
+                      estadoFinanciero: !p.bloqueado ? 'AL_DIA' : 'DEUDA_PENDIENTE',
+                      habilitado: !p.bloqueado,
+                      modelo_id: 'mod-avanza-mod',
+                      categoria: 'Diplomados Oficiales'
+                    });
+                  }
+                }
+              }
+            }
+
+            // Sincronizar cursos y talleres
+            const cursos = parseCursosFromProfile(p);
+            for (const c of cursos) {
+              const completado = Boolean(c.completado) || Number(c.avance) >= 100 || Boolean((c as any).codigo_cert);
+              if (completado) {
+                const esTaller = (c as any).tipo === 'TALLER' || c.id?.toLowerCase().startsWith('tal-') || c.codigo?.toLowerCase().startsWith('tal-') || c.titulo?.toUpperCase().includes('TALLER');
+                const tipoCert = esTaller ? 'TALLER' : 'CURSO';
+                const cod = (c as any).codigo_cert || normalizarCodigoCertificado(generarCodigoUnicoCertificado());
+                const key1 = cod;
+                const key2 = `${dni}-${tipoCert}-${c.titulo}-GENERAL`;
+                if (!codigosExistentes.has(key1) && !codigosExistentes.has(key2)) {
+                  codigosExistentes.add(key1);
+                  codigosExistentes.add(key2);
+                  const nuevoCert = {
+                    codigo_verificacion: cod,
+                    profile_id: p.id,
+                    dni_ce: dni,
+                    estudiante_nombre: estudianteNombre,
+                    tipo: tipoCert,
+                    programa_titulo: c.titulo,
+                    modulo_titulo: null,
+                    horas_lectivas: c.horas || (esTaller ? '16 horas académicas' : '24 horas académicas'),
+                    nota_final: typeof c.nota === 'number' && c.nota > 0 ? c.nota : null,
+                    fecha_emision: c.fecha || new Date().toISOString().split('T')[0],
+                    estado_financiero_al_dia: !p.bloqueado,
+                    plantilla_snapshot: {
+                      modelo_id: 'mod-226455',
+                      horas: c.horas || (esTaller ? '16 horas académicas' : '24 horas académicas'),
+                      orientacion: 'vertical',
+                      fechaEmision: c.fecha || new Date().toISOString().split('T')[0]
+                    }
+                  };
+                  await admin.from('certificaciones').insert(nuevoCert);
+                  realEmitidos.push({
+                    id: `sync-${cod}`,
+                    codigo: cod,
+                    tipo: tipoCert,
+                    estudiante: estudianteNombre,
+                    dni: dni,
+                    email: `${dni}@edumin.pe`,
+                    programa: c.titulo,
+                    modulo: null,
+                    nota: typeof c.nota === 'number' && c.nota > 0 ? c.nota : null,
+                    horas: c.horas || (esTaller ? '16 horas académicas' : '24 horas académicas'),
+                    fecha: c.fecha || new Date().toISOString().split('T')[0],
+                    estadoFinanciero: !p.bloqueado ? 'AL_DIA' : 'DEUDA_PENDIENTE',
+                    habilitado: !p.bloqueado,
+                    modelo_id: 'mod-226455',
+                    categoria: esTaller ? 'Talleres' : 'Cursos de Alta Especialización'
+                  });
+                }
+              }
+            }
+          }
+        }
+      } catch (errSync) {
+        console.warn('Advertencia en sincronización de perfiles con certificaciones:', errSync);
+      }
     } catch (err) {
       console.error('Error al consultar tabla certificaciones:', err);
     }
@@ -115,6 +241,38 @@ export async function POST(request: Request) {
       // 1. Guardar en tabla certificaciones
       let certId = `cert-man-${Date.now()}`;
       try {
+        let snapshotFinal = plantilla_snapshot || {};
+        if (!snapshotFinal.imagenFondoUrl || !snapshotFinal.disenoCoordenadas) {
+          try {
+            const { data: logData } = await admin
+              .from('audit_logs')
+              .select('detalles')
+              .eq('accion', 'CONFIG_MODELOS_CERTIFICADOS')
+              .order('created_at', { ascending: false })
+              .limit(1)
+              .maybeSingle();
+            const modelos = logData?.detalles?.modelos || [];
+            const mMatch = (modelo_id ? modelos.find((m: any) => m.id === modelo_id) : null) ||
+              modelos.find((m: any) => String(m.tipo).toUpperCase() === String(tipo || 'DIPLOMA').toUpperCase() && (m.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' || m.esPredeterminado)) ||
+              modelos.find((m: any) => String(m.tipo).toUpperCase() === String(tipo || 'DIPLOMA').toUpperCase());
+            if (mMatch) {
+              snapshotFinal = {
+                modelo_id: mMatch.id,
+                nombrePlantilla: mMatch.nombre,
+                horas: horasLectivas,
+                ciudad: 'Arequipa',
+                orientacion: mMatch.orientacion || (tipo === 'CURSO' ? 'vertical' : 'horizontal'),
+                imagenFondoUrl: mMatch.imagenFondoUrl,
+                disenoCoordenadas: mMatch.disenoCoordenadas,
+                incluyeQr: mMatch.incluyeQr !== false,
+                fechaEmision: fechaEmision
+              };
+            }
+          } catch {
+            // Ignorar fallback
+          }
+        }
+
         const { data: certInsertado, error: errInsert } = await admin
           .from('certificaciones')
           .insert({
@@ -129,8 +287,8 @@ export async function POST(request: Request) {
             fecha_emision: fechaEmision,
             estado_financiero_al_dia: estadoHabilitado,
             plantilla_snapshot: {
-              ...(plantilla_snapshot || {}),
-              modelo_id: modelo_id || plantilla_snapshot?.modelo_id || 'mod-avanza-dip',
+              ...snapshotFinal,
+              modelo_id: modelo_id || snapshotFinal.modelo_id || 'mod-avanza-dip',
               horas: horasLectivas
             }
           })

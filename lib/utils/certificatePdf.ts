@@ -309,14 +309,16 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
   const rawEstudiante = (data.estudiante || 'Quispe Ramos, Juan Carlos').trim();
   const nombreEstudiante = formatearNombreSegunEstilo(rawEstudiante, cfg.estudiante.formatoNombre);
 
-  const rawPrograma = (data.programa || 'DERECHO MINERO')
+  const progClean = (data.programa || '')
     .replace(/^Diplomado de Alta Especialización en\s*/i, '')
     .replace(/^Diplomado en\s*/i, '')
     .trim();
+  const rawPrograma = progClean || data.programa || 'DERECHO MINERO';
 
-  const rawModulo = (data.modulo || 'LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR')
+  const modClean = (data.modulo || '')
     .replace(/^Módulo\s*\d+[:\-\s]*/i, '')
     .trim();
+  const rawModulo = modClean || data.modulo || 'LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR';
 
   const esModular = String(data.tipo).toUpperCase() === 'MODULAR' && Boolean(data.modulo);
   const textoProgramaBase = esModular ? rawModulo : rawPrograma;

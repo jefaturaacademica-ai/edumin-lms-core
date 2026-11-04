@@ -7,6 +7,7 @@ import type {
   ResultadoEvaluacionExamen,
   DetalleCalificacionPregunta
 } from '@/lib/types/examenes';
+import { obtenerConfiguracionExamen } from '@/lib/services/examenesConfigService';
 
 function getSupabaseClient() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
@@ -376,6 +377,13 @@ export async function sortearPreguntasExamen(params: {
   cantidad?: number;
   distribucionDificultad?: { MEDIO?: number; ALTO?: number; FACIL?: number };
 }): Promise<PreguntaExamenEstudiante[]> {
+  const config = obtenerConfiguracionExamen(params.codigoDiplomado, params.modulo);
+
+  // Si esta evaluación está configurada para no aplicar examen
+  if (config.aplica_examen === false) {
+    return [];
+  }
+
   const preguntasBanco = await obtenerPreguntasBanco({
     codigoDiplomado: params.codigoDiplomado,
     modulo: params.modulo,
@@ -386,8 +394,12 @@ export async function sortearPreguntasExamen(params: {
     return [];
   }
 
-  const cantidadTotal = params.cantidad || CONFIGURACION_SORTEO_DIFICULTAD.totalPreguntas;
-  const distribucion = params.distribucionDificultad || CONFIGURACION_SORTEO_DIFICULTAD.distribucion;
+  const cantidadTotal = params.cantidad || config.cantidad_preguntas || CONFIGURACION_SORTEO_DIFICULTAD.totalPreguntas;
+  const distribucion = params.distribucionDificultad || {
+    FACIL: config.preguntas_facil,
+    MEDIO: config.preguntas_medio,
+    ALTO: config.preguntas_dificil
+  };
 
   // Helper para mezcla aleatoria uniforme (Fisher-Yates)
   const mezclar = (arr: PreguntaBanco[]) => {
@@ -399,23 +411,53 @@ export async function sortearPreguntasExamen(params: {
     return res;
   };
 
-  // Separar banco activo por dificultad
-  const bancoMedio = preguntasBanco.filter(p => (p.dificultad || 'MEDIO').toUpperCase() === 'MEDIO');
-  const bancoAlto = preguntasBanco.filter(p => ['ALTO', 'AVANZADO'].includes((p.dificultad || '').toUpperCase()));
+  // Cuotas de tipo de pregunta configuradas
+  const cuantasUnicaDeseadas = typeof config.preguntas_opcion_unica === 'number' 
+    ? config.preguntas_opcion_unica 
+    : (cantidadTotal - (config.preguntas_opcion_multiple ?? 3));
+  const cuantasMultipleDeseadas = typeof config.preguntas_opcion_multiple === 'number'
+    ? config.preguntas_opcion_multiple
+    : (cantidadTotal - cuantasUnicaDeseadas);
 
-  const cuantasMedioDeseadas = distribucion.MEDIO ?? 7;
-  const cuantasAltoDeseadas = distribucion.ALTO ?? 3;
+  // Separar banco activo por tipo de pregunta (opción única vs selección múltiple)
+  const bancoUnica = preguntasBanco.filter(p => p.tipo !== 'multiple_select');
+  const bancoMultiple = preguntasBanco.filter(p => p.tipo === 'multiple_select');
 
-  const medioMezcladas = mezclar(bancoMedio);
-  const altoMezcladas = mezclar(bancoAlto);
+  // Helper para seleccionar respetando dificultad proporcional dentro de cada tipo
+  const seleccionarConDificultad = (banco: PreguntaBanco[], cantidadDeseada: number) => {
+    if (banco.length === 0 || cantidadDeseada <= 0) return [];
+    if (banco.length <= cantidadDeseada) return mezclar(banco);
 
-  const seleccionadasMedio = medioMezcladas.slice(0, cuantasMedioDeseadas);
-  const seleccionadasAlto = altoMezcladas.slice(0, cuantasAltoDeseadas);
+    const facil = banco.filter(p => (p.dificultad || '').toUpperCase() === 'FACIL');
+    const medio = banco.filter(p => (p.dificultad || 'MEDIO').toUpperCase() === 'MEDIO');
+    const alto = banco.filter(p => ['ALTO', 'AVANZADO', 'DIFICIL'].includes((p.dificultad || '').toUpperCase()));
 
-  let seleccionadas = [...seleccionadasMedio, ...seleccionadasAlto];
+    const propFacil = (distribucion.FACIL ?? 0) / cantidadTotal;
+    const propAlto = (distribucion.ALTO ?? 3) / cantidadTotal;
 
-  // Si faltaron preguntas para completar la cantidad requerida (ej: si hay pocas de nivel alto),
-  // se completan automáticamente con las restantes preguntas activas disponibles
+    const nFacil = Math.round(cantidadDeseada * propFacil);
+    const nAlto = Math.round(cantidadDeseada * propAlto);
+    const nMedio = Math.max(0, cantidadDeseada - nFacil - nAlto);
+
+    const sFacil = mezclar(facil).slice(0, nFacil);
+    const sMedio = mezclar(medio).slice(0, nMedio);
+    const sAlto = mezclar(alto).slice(0, nAlto);
+
+    let res = [...sFacil, ...sMedio, ...sAlto];
+    if (res.length < cantidadDeseada) {
+      const ids = new Set(res.map(p => p.id));
+      const rest = mezclar(banco.filter(p => !ids.has(p.id)));
+      res = [...res, ...rest.slice(0, cantidadDeseada - res.length)];
+    }
+    return res.slice(0, cantidadDeseada);
+  };
+
+  const seleccionadasUnica = seleccionarConDificultad(bancoUnica, cuantasUnicaDeseadas);
+  const seleccionadasMultiple = seleccionarConDificultad(bancoMultiple, cuantasMultipleDeseadas);
+
+  let seleccionadas = [...seleccionadasUnica, ...seleccionadasMultiple];
+
+  // Si faltaron preguntas para completar la cantidad requerida, rellenar con las restantes activas
   if (seleccionadas.length < cantidadTotal) {
     const yaElegidasIds = new Set(seleccionadas.map(p => p.id));
     const restantes = mezclar(preguntasBanco.filter(p => !yaElegidasIds.has(p.id)));
@@ -423,7 +465,7 @@ export async function sortearPreguntasExamen(params: {
     seleccionadas = [...seleccionadas, ...restantes.slice(0, faltantes)];
   }
 
-  // Mezclar el examen final para intercalar niveles naturalmente
+  // Mezclar el examen final para intercalar tipos y niveles naturalmente
   const examenFinalMezclado = mezclar(seleccionadas.slice(0, cantidadTotal));
 
   // Transformar para el estudiante: eliminar respuestas correctas y rationales
@@ -540,7 +582,10 @@ export async function calificarExamen(params: {
   // Nota final sobre 20 calculada a partir de la suma de puntajes obtenidos
   const sumaPuntajes = detalles.reduce((acc, d) => acc + d.puntajeObtenido, 0);
   const notaFinal = Math.min(20, Math.round(sumaPuntajes * 10) / 10);
-  const notaAprobatoria = 12.00;
+  
+  // Consultar configuración personalizada para nota mínima
+  const configExamen = obtenerConfiguracionExamen(params.codigoDiplomado, params.modulo);
+  const notaAprobatoria = configExamen?.nota_minima ?? 12.00;
   const aprobado = notaFinal >= notaAprobatoria;
 
   const resultado: ResultadoEvaluacionExamen = {
@@ -640,7 +685,12 @@ export async function obtenerModulosConExamen(codigoDiplomado: string): Promise<
       if (!error && data && data.length > 0) {
         const set = new Set<string>();
         data.forEach((r: any) => {
-          if (r.modulo) set.add(r.modulo);
+          if (r.modulo) {
+            const conf = obtenerConfiguracionExamen(codigoDiplomado, r.modulo);
+            if (conf.aplica_examen !== false) {
+              set.add(r.modulo);
+            }
+          }
         });
         return Array.from(set);
       }
@@ -653,7 +703,50 @@ export async function obtenerModulosConExamen(codigoDiplomado: string): Promise<
   const locales = leerBancoLocal(codigoDiplomado);
   const set = new Set<string>();
   locales.filter(p => p.codigo_diplomado === codigoDiplomado && p.activo).forEach(p => {
-    if (p.modulo) set.add(p.modulo);
+    if (p.modulo) {
+      const conf = obtenerConfiguracionExamen(codigoDiplomado, p.modulo);
+      if (conf.aplica_examen !== false) {
+        set.add(p.modulo);
+      }
+    }
   });
   return Array.from(set);
+}
+
+/**
+ * Obtiene el conteo de preguntas disponibles por nivel de dificultad en el banco
+ */
+export async function obtenerConteoDificultadBanco(codigoDiplomado: string, modulo?: string): Promise<{
+  facil: number;
+  medio: number;
+  dificil: number;
+  opcion_unica: number;
+  opcion_multiple: number;
+  total: number;
+}> {
+  const preguntas = await obtenerPreguntasBanco({
+    codigoDiplomado,
+    modulo: modulo && modulo !== 'TODOS' ? modulo : undefined,
+    soloActivas: true
+  });
+  let facil = 0;
+  let medio = 0;
+  let dificil = 0;
+  let opcion_unica = 0;
+  let opcion_multiple = 0;
+
+  preguntas.forEach(p => {
+    const d = (p.dificultad || 'MEDIO').toUpperCase();
+    if (d === 'FACIL') facil++;
+    else if (['ALTO', 'AVANZADO', 'DIFICIL'].includes(d)) dificil++;
+    else medio++;
+
+    if (p.tipo === 'multiple_select') {
+      opcion_multiple++;
+    } else {
+      opcion_unica++;
+    }
+  });
+
+  return { facil, medio, dificil, opcion_unica, opcion_multiple, total: preguntas.length };
 }

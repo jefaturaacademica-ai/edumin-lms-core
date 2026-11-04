@@ -314,7 +314,7 @@ function ValidarCertificadoContent() {
                 >
                   {(() => {
                     const snap = certificado.plantilla_snapshot || {};
-                    const orientacionFinal = snap.orientacion || 'horizontal';
+                    const orientacionFinal = snap.orientacion || (certificado.tipo === 'CURSO' ? 'vertical' : 'horizontal');
                     return (
                       <div className={`w-full flex items-center justify-center relative ${orientacionFinal === 'vertical' ? 'max-w-sm' : 'max-w-xl'}`}>
                         <AvanzaCertificateRenderer
@@ -327,7 +327,8 @@ function ValidarCertificadoContent() {
                           fecha={certificado.fecha}
                           codigo={certificado.codigo}
                           imagenFondoUrl={snap.imagenFondoUrl}
-                          incluyeQr={true}
+                          diseno={snap.disenoCoordenadas}
+                          incluyeQr={snap.incluyeQr !== false}
                         />
 
                         {/* Capa protectora transparente */}

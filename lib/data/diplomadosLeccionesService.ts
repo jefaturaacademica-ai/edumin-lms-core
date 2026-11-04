@@ -218,13 +218,16 @@ export function obtenerRecursosConLinks(row: LeccionRow, numClase: number) {
   const recursos: any[] = [];
   const r = normalizeLeccionRow(row);
 
-  // 1. Material de clases (PDF)
+  // 1. Material de clases (Diapositivas / PDF / Presentación)
   if (r.PdfUrl) {
+    const esPpt = (r.PdfUrl || '').toLowerCase().includes('.pptx');
     recursos.push({
       id: `rec-pdf-${numClase}`,
       tipo: 'pdf',
-      titulo: 'Material de clases',
-      descripcion: 'Documento oficial con diapositivas y contenidos de la sesión · PDF',
+      titulo: 'Diapositivas de la clase',
+      descripcion: esPpt 
+        ? 'Diapositivas y presentación oficial de la sesión' 
+        : 'Diapositivas y contenidos oficiales de la sesión en PDF',
       archivo: r.PdfUrl,
       url: r.PdfUrl
     });

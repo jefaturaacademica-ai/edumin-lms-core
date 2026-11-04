@@ -16,8 +16,7 @@ import {
   BarChart2, 
   Clock, 
   Award,
-  Wrench,
-  X,
+X,
   CircleDashed,
   ArrowRight
 } from 'lucide-react';
@@ -25,6 +24,7 @@ import Link from 'next/link';
 import { createBrowserClient } from '@supabase/ssr';
 import { useTheme } from '@/context/theme-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
+import configuracionExamenesJson from '@/lib/data/configuracion_examenes.json';
 import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
 
 import { parseCursosFromProfile, parseDiplomadosFromProfile } from '@/lib/utils/profileParser';
@@ -42,10 +42,6 @@ export default function CursosPage() {
   const [mostrarCatalogoAdicional, setMostrarCatalogoAdicional] = useState(false);
   const [filtroEstadoMatriculados, setFiltroEstadoMatriculados] = useState<'todos' | 'progreso' | 'completados'>('progreso');
 
-  // ESTADO DE SIMULACIÓN DEV (SOLO DESARROLLO INTERNO)
-  const [estadoSimuladoDev, setEstadoSimuladoDev] = useState<'sin_cursos' | 'un_curso' | 'todos'>('todos');
-  const [mostrarPanelDev, setMostrarPanelDev] = useState(true);
-
   // Filtros interactivos y buscador superior
   const [busqueda, setBusqueda] = useState<string>('');
   const [ordenamiento, setOrdenamiento] = useState<string>('nuevo');
@@ -55,84 +51,34 @@ export default function CursosPage() {
   const [nivelFiltro, setNivelFiltro] = useState<string>('Todos');
   const [precioMaximo, setPrecioMaximo] = useState<number>(159);
 
-  // 1. Cursos matriculados (en progreso y completados)
-  const listaBaseCursosMatriculados = [
-    { 
-      id: 'manejo-epps', 
-      titulo: "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783", 
-      categoria: "Seguridad y prevención", 
-      duracion: "20 horas académicas", 
-      avance: 75,
-      imagen: "/assets/images/cursos/cur-01-manejo-de-epps-segun-la-norma-tecnica-peruana-ley-29783.jpg"
-    },
-    { 
-      id: 'big-data', 
-      titulo: "FUNDAMENTOS DE BIG DATA", 
-      categoria: "Inteligencia de datos", 
-      duracion: "25 horas académicas", 
-      avance: 40,
-      imagen: "/assets/images/cursos/cur-21-fundamentos-de-big-data.jpg"
-    },
-    { 
-      id: 'logistica-minera', 
-      titulo: "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA", 
-      categoria: "Logística y almacenes", 
-      duracion: "30 horas académicas", 
-      avance: 20,
-      imagen: "/assets/images/cursos/cur-07-logistica-y-distribucion-en-la-industria-y-mineria.jpg"
-    },
-    { 
-      id: 'riesgos-criticos', 
-      titulo: "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA", 
-      categoria: "Seguridad y prevención", 
-      duracion: "15 horas académicas", 
-      avance: 100,
-      imagen: "/assets/images/cursos/cur-10-gestion-de-trabajo-en-alto-riesgo-en-mineria.jpg"
-    },
-    { 
-      id: 'sistemas-hseq', 
-      titulo: "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)", 
-      categoria: "Legislación y normativa", 
-      duracion: "40 horas académicas", 
-      avance: 100,
-      imagen: "/assets/images/cursos/cur-66-sistemas-integrados-de-gestion-hseq-iso-9001-14001-45001.jpg"
-    },
-    { 
-      id: 'iso-14001', 
-      titulo: "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA", 
-      categoria: "Medio ambiente", 
-      duracion: "30 horas académicas", 
-      avance: 0,
-      imagen: "/assets/images/cursos/cur-65-requisitos-clave-de-iso-14001-y-como-aplicarlos-en-la-empresa.jpg"
-    },
-    { 
-      id: 'iso-9001', 
-      titulo: "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015", 
-      categoria: "Operaciones y procesos", 
-      duracion: "30 horas académicas", 
-      avance: 100,
-      imagen: "/assets/images/cursos/cur-42-implementacion-de-la-norma-iso-9001-2015.jpg"
+  // Helper para determinar si un curso está completado (100% avance o examen rendido según configuración)
+  const esCursoCompletadoHelper = (c: any) => {
+    const codNormalizado = (c.codigo || c.id || '').toUpperCase();
+    const confClaveCurso = `${codNormalizado}_Examen del curso`;
+    const confClaveTaller = `${codNormalizado}_Examen del taller`;
+    const configItem = (configuracionExamenesJson as Record<string, any>)[confClaveCurso] 
+      || (configuracionExamenesJson as Record<string, any>)[confClaveTaller];
+    const noAplicaExamen = configItem?.aplica_examen === false;
+
+    if (noAplicaExamen) {
+      return (Number(c.avance) >= 100) || Boolean(c.completado);
     }
-  ];
+    const examenRendido = Boolean(c.rendido || (c.nota !== undefined && c.nota !== null && Number(c.nota) > 0));
+    return (Number(c.avance) >= 100) && examenRendido;
+  };
 
   // Cursos reales cargados dinámicamente desde Supabase
   const [cursosEstudianteReal, setCursosEstudianteReal] = useState<any[]>([]);
 
-  const listaCursosMatriculados = cursosEstudianteReal.length > 0
-    ? cursosEstudianteReal
-    : (estadoSimuladoDev === 'sin_cursos'
-        ? []
-        : (estadoSimuladoDev === 'un_curso'
-            ? [listaBaseCursosMatriculados[0]]
-            : listaBaseCursosMatriculados));
+  const listaCursosMatriculados = cursosEstudianteReal;
 
   // Separación por estado y filtrado activo según píldora seleccionada
-  const cursosEnProgreso = listaCursosMatriculados.filter(c => c.avance < 100);
-  const cursosCompletados = listaCursosMatriculados.filter(c => c.avance >= 100);
+  const cursosEnProgreso = listaCursosMatriculados.filter(c => !esCursoCompletadoHelper(c));
+  const cursosCompletados = listaCursosMatriculados.filter(c => esCursoCompletadoHelper(c));
 
   const cursosMatriculadosMostrar = listaCursosMatriculados.filter(c => {
-    if (filtroEstadoMatriculados === 'progreso') return c.avance < 100;
-    if (filtroEstadoMatriculados === 'completados') return c.avance >= 100;
+    if (filtroEstadoMatriculados === 'progreso') return !esCursoCompletadoHelper(c);
+    if (filtroEstadoMatriculados === 'completados') return esCursoCompletadoHelper(c);
     return true;
   });
 
@@ -256,6 +202,8 @@ export default function CursosPage() {
                     categoria: catMatch?.categoria || 'Especialización',
                     duracion: catMatch?.duracion || '25 horas académicas',
                     avance: m.avance_porcentaje ?? 0,
+                    nota: m.nota,
+                    rendido: Boolean(m.rendido || (m.nota !== undefined && m.nota !== null && Number(m.nota) > 0)),
                     imagen: catMatch?.imagen || 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
                   });
                 }
@@ -276,6 +224,7 @@ export default function CursosPage() {
                   duracion: catMatch?.duracion || '25 horas académicas',
                   avance: cj.completado ? 100 : (typeof cj.avance === 'number' ? cj.avance : 0),
                   nota: cj.nota,
+                  rendido: Boolean((cj as any).rendido || (cj.nota !== undefined && cj.nota !== null && Number(cj.nota) > 0)),
                   imagen: catMatch?.imagen || 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
                 });
               }
@@ -325,7 +274,11 @@ export default function CursosPage() {
   }, []);
 
   if (loading) {
-    return <DashboardLoader />;
+    return (
+      <div className="w-full h-full min-h-[calc(100vh-5rem)] flex items-center justify-center">
+        <DashboardLoader minHeight="min-h-full" />
+      </div>
+    );
   }
 
   const resetearFiltros = () => {
@@ -481,8 +434,17 @@ export default function CursosPage() {
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
-                {cursosMatriculadosMostrar.map((curso) => {
-                  const esCompletado = curso.avance >= 100;
+                                {cursosMatriculadosMostrar.map((curso) => {
+                  const codNormalizado = (curso.codigo || curso.id || '').toUpperCase();
+                  const confClaveCurso = `${codNormalizado}_Examen del curso`;
+                  const confClaveTaller = `${codNormalizado}_Examen del taller`;
+                  const configItem = (configuracionExamenesJson as Record<string, any>)[confClaveCurso] 
+                    || (configuracionExamenesJson as Record<string, any>)[confClaveTaller];
+                  const noAplicaExamen = configItem?.aplica_examen === false;
+
+                  const examenRendido = Boolean(curso.rendido || (curso.nota !== undefined && curso.nota !== null && Number(curso.nota) > 0));
+                  const esCompletado = noAplicaExamen ? (curso.avance >= 100 || Boolean(curso.completado)) : (curso.avance >= 100 && examenRendido);
+                  const tieneExamenPendiente = !noAplicaExamen && curso.avance >= 100 && !examenRendido;
                   const esPorIniciar = curso.avance === 0;
 
                   // Centralización de estilos e información de estado
@@ -494,18 +456,29 @@ export default function CursosPage() {
                         duracionIconColor: 'text-emerald-400',
                         porcentajeColor: esOscuro ? 'text-emerald-400' : 'text-emerald-600',
                         barraBg: 'bg-emerald-600',
-                        botonBg: 'bg-emerald-600 group-hover:bg-emerald-700 shadow-emerald-600/20 text-white',
+                        botonBg: 'bg-emerald-600 group-hover:bg-emerald-700 shadow-emerald-600/20 text-white font-bold',
                         botonTexto: 'Repasar curso'
+                      }
+                    : tieneExamenPendiente
+                    ? {
+                        label: 'Examen pendiente',
+                        Icono: FileText,
+                        badgeBg: 'bg-amber-500/90 border-amber-400/30 text-white',
+                        duracionIconColor: 'text-amber-400',
+                        porcentajeColor: esOscuro ? 'text-amber-400' : 'text-amber-600',
+                        barraBg: 'bg-amber-500',
+                        botonBg: 'bg-amber-500 hover:bg-amber-600 shadow-amber-500/20 text-white font-bold',
+                        botonTexto: 'Dar examen'
                       }
                     : esPorIniciar
                     ? {
                         label: 'Por iniciar',
                         Icono: CircleDashed,
-                        badgeBg: 'bg-amber-500/90 border-amber-400/30 text-white',
-                        duracionIconColor: 'text-amber-400',
+                        badgeBg: 'bg-slate-700/90 border-slate-600/30 text-white',
+                        duracionIconColor: 'text-slate-400',
                         porcentajeColor: esOscuro ? 'text-slate-400' : 'text-slate-500',
                         barraBg: 'bg-slate-300 dark:bg-slate-700',
-                        botonBg: 'bg-amber-600 group-hover:bg-amber-700 shadow-amber-600/20 text-white',
+                        botonBg: 'bg-slate-700 group-hover:bg-slate-800 text-white font-bold',
                         botonTexto: 'Iniciar curso'
                       }
                     : {
@@ -515,7 +488,7 @@ export default function CursosPage() {
                         duracionIconColor: 'text-indigo-400',
                         porcentajeColor: esOscuro ? 'text-indigo-400' : 'text-indigo-600',
                         barraBg: 'bg-indigo-600',
-                        botonBg: 'bg-indigo-600 group-hover:bg-indigo-700 shadow-indigo-600/20 text-white',
+                        botonBg: 'bg-indigo-600 group-hover:bg-indigo-700 shadow-indigo-600/20 text-white font-bold',
                         botonTexto: 'Continuar curso'
                       };
 
@@ -770,63 +743,7 @@ export default function CursosPage() {
 
       </div>
 
-      {/* PANEL FLOTANTE DE SIMULACIÓN DEV (DESARROLLO INTERNO) */}
-      {mostrarPanelDev && (
-        <aside className="fixed bottom-5 right-5 z-40 bg-slate-900/95 text-white border border-slate-700/80 backdrop-blur-md p-4 rounded-2xl shadow-2xl max-w-xs space-y-3">
-          <div className="flex items-center justify-between pb-2 border-b border-slate-800">
-            <span className="text-xs font-bold text-amber-400 flex items-center gap-1.5">
-              <Wrench className="size-3.5" /> Simulador Dev (Interno)
-            </span>
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] text-slate-400 bg-slate-800 px-2 py-0.5 rounded-md tabular-nums">v1.0</span>
-              <button 
-                onClick={() => setMostrarPanelDev(false)}
-                className="text-slate-400 hover:text-white transition p-0.5 rounded-lg hover:bg-slate-800 cursor-pointer"
-                title="Cerrar panel de simulación"
-              >
-                <X className="size-4" />
-              </button>
-            </div>
-          </div>
-
-          <p className="text-[11px] text-slate-300">
-            Cambia de estado para probar la vista de cursos:
-          </p>
-
-          <div className="space-y-1.5 text-xs">
-            <button
-              onClick={() => setEstadoSimuladoDev('sin_cursos')}
-              className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between cursor-pointer ${
-                estadoSimuladoDev === 'sin_cursos' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
-              }`}
-            >
-              <span>0 Cursos (Sin matricular)</span>
-              {estadoSimuladoDev === 'sin_cursos' && <CheckCircle2 className="size-3.5 text-white" />}
-            </button>
-
-            <button
-              onClick={() => setEstadoSimuladoDev('un_curso')}
-              className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between cursor-pointer ${
-                estadoSimuladoDev === 'un_curso' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
-              }`}
-            >
-              <span>1 Curso en Progreso (75%)</span>
-              {estadoSimuladoDev === 'un_curso' && <CheckCircle2 className="size-3.5 text-white" />}
-            </button>
-
-            <button
-              onClick={() => setEstadoSimuladoDev('todos')}
-              className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between cursor-pointer ${
-                estadoSimuladoDev === 'todos' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
-              }`}
-            >
-              <span>6 Cursos (Vista Completa)</span>
-              {estadoSimuladoDev === 'todos' && <CheckCircle2 className="size-3.5 text-white" />}
-            </button>
-          </div>
-        </aside>
-      )}
-
+      
     </main>
   );
 }
