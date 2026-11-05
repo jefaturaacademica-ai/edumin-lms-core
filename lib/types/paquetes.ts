@@ -10,6 +10,10 @@ export interface PaqueteDefinicion {
   modulares: number;
   diplomas: number;
   certCip: boolean;
+  certInternacional?: boolean; // Certificación Internacional (Full e Ilimitado)
+  bolsaTrabajoRegular?: boolean; // Bolsa Regular (Completo, Full, Ilimitado)
+  bolsaTrabajoExclusiva?: boolean; // Bolsa Exclusiva (Full, Ilimitado)
+  dreambuilder?: boolean; // Portal Dreambuilder (los 3 por defecto)
   esPersonalizado?: boolean;
   colorTag?: string; // ej: 'indigo', 'amber', 'purple', 'emerald'
 }
@@ -27,6 +31,10 @@ export const PAQUETES_DEFAULT: Record<string, PaqueteDefinicion> = {
     modulares: 3,
     diplomas: 1,
     certCip: false,
+    certInternacional: false,
+    bolsaTrabajoRegular: true,
+    bolsaTrabajoExclusiva: false,
+    dreambuilder: true,
     esPersonalizado: false,
     colorTag: 'indigo'
   },
@@ -42,6 +50,10 @@ export const PAQUETES_DEFAULT: Record<string, PaqueteDefinicion> = {
     modulares: 3,
     diplomas: 1,
     certCip: true,
+    certInternacional: true,
+    bolsaTrabajoRegular: true,
+    bolsaTrabajoExclusiva: true,
+    dreambuilder: true,
     esPersonalizado: false,
     colorTag: 'amber'
   },
@@ -57,6 +69,10 @@ export const PAQUETES_DEFAULT: Record<string, PaqueteDefinicion> = {
     modulares: 10,
     diplomas: 5,
     certCip: true,
+    certInternacional: true,
+    bolsaTrabajoRegular: true,
+    bolsaTrabajoExclusiva: true,
+    dreambuilder: true,
     esPersonalizado: false,
     colorTag: 'purple'
   }

@@ -3,7 +3,6 @@ import {
   ArrowUpRight,
   BookOpenCheck,
   GraduationCap,
-  Layers3,
   Rocket,
   Sparkles,
   Briefcase,
@@ -11,13 +10,17 @@ import {
   CalendarDays,
   CheckCircle2,
   Play,
-  Award
+  Award,
+  Lock
 } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { calculateReleasedCredits } from "@/lib/utils/credits";
+import { calculateEduminCredits } from "@/lib/utils/credits";
 import { getDiplomadoByTitleOrSlug } from "@/lib/data/diplomadosData";
-import { parseDiplomadosFromProfile } from "@/lib/utils/profileParser";
+import { parseDiplomadosFromProfile, parseCursosFromProfile } from "@/lib/utils/profileParser";
+import { obtenerTallerParaDiplomado } from "@/lib/utils/tallerAsignado";
+import { obtenerConfiguracionPaquetes } from "@/lib/services/paquetesService";
+import { obtenerConfiguracionBienvenida } from "@/lib/services/bienvenidaService";
 import Link from "next/link";
 
 export const metadata = {
@@ -32,10 +35,10 @@ export default async function DashboardPage() {
 
   const admin = createAdminClient();
 
-  // Intentar obtener perfil con cliente admin para evitar bloqueos de RLS
+  // Intentar obtener perfil con cliente admin usando select("*") para garantizar todas las columnas sin fallar por nombres inexistentes
   let { data: profile } = await admin
     .from("profiles")
-    .select("id, nombres, apellidos, dni_ce, email, paquete_adquirido, cuotas_pagadas, cupos_diplomados, diplomados, diplomado_1, diplomado_2")
+    .select("*")
     .eq("id", user.id)
     .maybeSingle();
 
@@ -43,78 +46,211 @@ export default async function DashboardPage() {
   if (!profile && user.email) {
     const { data: profileByEmail } = await admin
       .from("profiles")
-      .select("id, nombres, apellidos, dni_ce, email, paquete_adquirido, cuotas_pagadas, cupos_diplomados, diplomados, diplomado_1, diplomado_2")
+      .select("*")
       .eq("email", user.email)
       .maybeSingle();
     profile = profileByEmail;
   }
 
+  // Si aún no se encuentra, buscar por DNI en user_metadata si existiese
+  if (!profile && user.user_metadata?.dni_ce) {
+    const { data: profileByDni } = await admin
+      .from("profiles")
+      .select("*")
+      .eq("dni_ce", String(user.user_metadata.dni_ce))
+      .maybeSingle();
+    profile = profileByDni;
+  }
+
   const safeProfile = profile || {
     id: user.id,
-    nombres: user.user_metadata?.nombres || user.email?.split('@')[0] || 'Estudiante',
+    role: 'ESTUDIANTE',
+    nombres: user.user_metadata?.nombres || 'Estudiante',
     apellidos: user.user_metadata?.apellidos || '',
-    dni_ce: 'Sin DNI',
+    dni_ce: user.user_metadata?.dni_ce || 'Sin DNI',
     email: user.email || '',
     paquete_adquirido: 'FULL',
     cuotas_pagadas: 1,
     cupos_diplomados: 0,
     diplomados: null,
+    cursos: null,
     diplomado_1: 'DERECHO MINERO',
-    diplomado_2: null,
-    avance_porcentaje: 0
+    diplomado_2: null
   };
 
-  // Resolver Diplomado real del estudiante desde Supabase
+  // Cargar configuraciones del sistema
+  const [paquetesConfig, bienvenidaConfig] = await Promise.all([
+    obtenerConfiguracionPaquetes(),
+    obtenerConfiguracionBienvenida()
+  ]);
+
+  const paqueteKey = (safeProfile.paquete_adquirido || 'FULL').toUpperCase();
+  const configPaqueteActual = paquetesConfig[paqueteKey] || paquetesConfig['FULL'];
+
+  // Obtener Diplomado principal real
   const parsedDips = parseDiplomadosFromProfile(safeProfile);
   const targetDip = parsedDips[0];
   const diplomadoNombre = targetDip?.titulo || (typeof safeProfile.diplomado_1 === 'string' && !safeProfile.diplomado_1.startsWith('DIPLOMADOS_LIST|') ? safeProfile.diplomado_1 : 'DERECHO MINERO');
   const diplomadoPrincipal = getDiplomadoByTitleOrSlug(diplomadoNombre);
   const avanceEstudiante = targetDip?.avance ?? 0;
 
-  // Cálculos de Créditos
-  const releasedCredits = calculateReleasedCredits(
-    safeProfile.paquete_adquirido,
-    safeProfile.cuotas_pagadas,
-  );
-  const availableCredits = Math.max(0, releasedCredits - (safeProfile.cupos_diplomados || 0));
-  
-  // Lógica de Beneficios Premium
-  const isPremium = safeProfile.paquete_adquirido === "FULL" || safeProfile.paquete_adquirido === "ILIMITADO";
-  const dreambuilderUrl = process.env.NEXT_PUBLIC_DREAMBUILDER_URL ?? "https://dreambuilder.com";
-  const bolsaTrabajoUrl = process.env.NEXT_PUBLIC_BOLSA_TRABAJO_URL ?? "https://chat.whatsapp.com/edumin-bolsa-exclusiva";
+  // Obtener Curso oficial real del estudiante
+  const parsedCursos = parseCursosFromProfile(safeProfile);
+  let cursoPrincipal: { titulo: string; sesionTexto?: string; avance: number; link: string } = {
+    titulo: '',
+    avance: 0,
+    link: '/dashboard/cursos'
+  };
 
-  // Motor Financiero
-  let costoTotal = 0;
-  let totalCuotas = 0;
-  
+  if (parsedCursos.length > 0) {
+    const c = parsedCursos[0];
+    cursoPrincipal = {
+      titulo: c.titulo,
+      avance: Number(c.avance || 0),
+      link: `/dashboard/cursos/${c.id || c.codigo || 'cur-01'}`
+    };
+  } else {
+    // Si no tiene cursos asignados aún, el taller oficial asignado según su diplomado
+    const tallerOficial = obtenerTallerParaDiplomado(diplomadoNombre);
+    cursoPrincipal = {
+      titulo: tallerOficial.titulo,
+      avance: 0,
+      link: `/dashboard/cursos/${tallerOficial.id}`
+    };
+  }
+
+  // Cálculos de Créditos EDUMIN centralizados
+  const eduminCredits = calculateEduminCredits({
+    paqueteAdquirido: safeProfile.paquete_adquirido || 'FULL',
+    cuotasPagadas: safeProfile.cuotas_pagadas || 1,
+    cuotasTotales: safeProfile.cuotas_totales || (safeProfile.paquete_adquirido === 'ILIMITADO' ? 5 : 3),
+    tipoPago: safeProfile.tipo_pago || 'CUOTAS',
+    diplomadosConsumidos: safeProfile.cupos_diplomados || Math.max(1, parsedDips.length),
+    cursosConsumidos: safeProfile.cupos_cursos || parsedCursos.length
+  });
+
+  // Consultar pagos reales del estudiante en Supabase para el widget de Estado de Cuenta
+  let pagosReales: any[] = [];
+  try {
+    const filterConditions: string[] = [`profile_id.eq.${safeProfile.id}`];
+    if (safeProfile.dni_ce && safeProfile.dni_ce !== 'Sin DNI') {
+      filterConditions.push(`dni_ce.eq.${safeProfile.dni_ce}`);
+      filterConditions.push(`metodo.ilike.%${safeProfile.dni_ce}%`);
+    }
+    const { data: pData } = await admin
+      .from('pagos')
+      .select('*')
+      .or(filterConditions.join(','))
+      .order('created_at', { ascending: true });
+    pagosReales = pData || [];
+  } catch (err) {
+    console.error('Error obteniendo pagos:', err);
+  }
+
+  // Motor Financiero Dinámico
+  let costoTotal = configPaqueteActual?.precioContado || 900;
+  let totalCuotas = configPaqueteActual?.cuotasSugeridas || 3;
   if (safeProfile.paquete_adquirido === 'COMPLETO') {
-    costoTotal = 540;
+    costoTotal = configPaqueteActual?.precioContado || 540;
     totalCuotas = 3;
   } else if (safeProfile.paquete_adquirido === 'FULL') {
-    costoTotal = 900;
+    costoTotal = configPaqueteActual?.precioContado || 900;
     totalCuotas = 3;
   } else if (safeProfile.paquete_adquirido === 'ILIMITADO') {
-    costoTotal = 1500;
+    costoTotal = configPaqueteActual?.precioContado || 1500;
     totalCuotas = 5;
   }
 
-  const cuotaMonto = totalCuotas > 0 ? costoTotal / totalCuotas : 0;
-  const cuotasEfectivas = Math.min(safeProfile.cuotas_pagadas || 0, totalCuotas);
-  const montoPagado = cuotasEfectivas * cuotaMonto;
-  const saldoPendiente = Math.max(0, costoTotal - montoPagado);
-  const deudaSaldada = saldoPendiente <= 0;
+  let montoPagado = 0;
+  let saldoPendiente = costoTotal;
+  let deudaSaldada = false;
+
+  if (pagosReales.length > 0) {
+    let totalAcumuladoPagado = 0;
+    let totalAcumuladoDeuda = 0;
+    let tieneDeudaExplicit = false;
+
+    pagosReales.forEach((p) => {
+      let pagadoFila = 0;
+      let deudaFila = 0;
+      let cuotasArray: string[] = [p.cuota_01, p.cuota_02, p.cuota_03, p.cuota_04, p.cuota_05, p.cuota_06];
+
+      if (typeof p.metodo === 'string' && p.metodo.startsWith('CREDITO_')) {
+        try {
+          const jsonStr = p.metodo.substring(p.metodo.indexOf('|') + 1).trim();
+          const parsed = JSON.parse(jsonStr);
+          if (Array.isArray(parsed.cuotas)) {
+            cuotasArray = parsed.cuotas;
+          }
+          if (parsed.total_pagado !== undefined) {
+            pagadoFila = Number(parsed.total_pagado) || 0;
+          }
+          if (parsed.total_deuda !== undefined) {
+            deudaFila = Number(parsed.total_deuda) || 0;
+            tieneDeudaExplicit = true;
+          }
+        } catch {
+          // ignore
+        }
+      }
+
+      if (pagadoFila === 0) {
+        pagadoFila = cuotasArray.reduce((acc, c) => {
+          return c && c !== 'no corresponde' ? acc + (Number(c) || 0) : acc;
+        }, 0);
+      }
+
+      if (pagadoFila === 0 && (p.estado === 'Pagado' || p.estado === 'APROBADO' || p.estado === 'Completado')) {
+        pagadoFila = Number(p.monto) || 0;
+      }
+
+      totalAcumuladoPagado += pagadoFila;
+
+      if (!tieneDeudaExplicit) {
+        const montoBase = Number(p.monto) || costoTotal;
+        deudaFila = Math.max(0, montoBase - pagadoFila);
+      }
+      totalAcumuladoDeuda += deudaFila;
+    });
+
+    montoPagado = totalAcumuladoPagado;
+    saldoPendiente = tieneDeudaExplicit ? totalAcumuladoDeuda : Math.max(0, costoTotal - montoPagado);
+    deudaSaldada = saldoPendiente <= 0;
+  } else {
+    // Estimación con base en cuotas_pagadas de su perfil
+    const cuotaMonto = totalCuotas > 0 ? costoTotal / totalCuotas : 0;
+    const cuotasEfectivas = Math.min(safeProfile.cuotas_pagadas || 0, totalCuotas);
+    montoPagado = cuotasEfectivas * cuotaMonto;
+    saldoPendiente = Math.max(0, costoTotal - montoPagado);
+    deudaSaldada = saldoPendiente <= 0;
+  }
 
   const fechaProximoPago = new Date();
   fechaProximoPago.setDate(15);
   fechaProximoPago.setMonth(fechaProximoPago.getMonth() + 1);
   const stringFechaPago = fechaProximoPago.toLocaleDateString('es-PE', { day: 'numeric', month: 'long', year: 'numeric' });
 
-  const nombreBienvenida = safeProfile.nombres
-    ? safeProfile.nombres
-        .split(/[._\s]+/)
-        .map((w: string) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
-        .join(' ')
-    : 'Estudiante';
+  // Extracción estricta del PRIMER NOMBRE del alumno
+  let primerNombre = 'Estudiante';
+  if (safeProfile.nombres && safeProfile.nombres.trim()) {
+    // Si contiene nombre real, tomar la primera palabra limpia
+    const parts = safeProfile.nombres.trim().split(/\s+/);
+    if (parts[0]) {
+      const clean = parts[0].replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ]/g, '');
+      if (clean.length > 1) {
+        primerNombre = clean.charAt(0).toUpperCase() + clean.slice(1).toLowerCase();
+      }
+    }
+  }
+
+  // Beneficios de bolsa de trabajo y portal según configuración de paquete
+  const bolsaTrabajoRegularHabilitada = configPaqueteActual?.bolsaTrabajoRegular !== false;
+  const bolsaTrabajoExclusivaHabilitada = Boolean(configPaqueteActual?.bolsaTrabajoExclusiva);
+  const dreambuilderHabilitado = configPaqueteActual?.dreambuilder !== false;
+
+  const dreambuilderUrl = process.env.NEXT_PUBLIC_DREAMBUILDER_URL ?? "https://dreambuilder.com";
+  const bolsaRegularUrl = process.env.NEXT_PUBLIC_BOLSA_REGULAR_URL ?? "https://chat.whatsapp.com/edumin-bolsa-regular";
+  const bolsaExclusivaUrl = process.env.NEXT_PUBLIC_BOLSA_TRABAJO_URL ?? "https://chat.whatsapp.com/edumin-bolsa-exclusiva";
 
   return (
     <main className="min-h-screen overflow-hidden bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 pb-20 transition-colors duration-150">
@@ -122,34 +258,15 @@ export default async function DashboardPage() {
       <section className="relative isolate overflow-hidden px-6 py-12 sm:px-10 lg:px-16 lg:py-16 border-b border-slate-800 bg-slate-950">
         <div 
           className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat opacity-100"
-          style={{ backgroundImage: `url('https://img.magnific.com/foto-gratis/retrato-ingenieros-horas-trabajo-sitio-trabajo_23-2151589536.jpg?semt=ais_hybrid&w=740&q=80')` }}
+          style={{ backgroundImage: `url('${bienvenidaConfig.imagenFondo || 'https://img.magnific.com/foto-gratis/retrato-ingenieros-horas-trabajo-sitio-trabajo_23-2151589536.jpg?semt=ais_hybrid&w=740&q=80'}')` }}
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-slate-950/85 via-slate-950/50 to-slate-950/90" />
 
         <div className="mx-auto max-w-6xl">
-          <div className="flex flex-col gap-7 lg:flex-row lg:items-end lg:justify-between">
-            <div className="max-w-3xl">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/20 px-3.5 py-1.5 text-sm font-semibold text-indigo-200 backdrop-blur-md shadow-sm">
-                <Sparkles className="size-4 text-indigo-400 animate-pulse" />
-                Tu espacio de crecimiento profesional
-              </div>
-              <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl drop-shadow-md">
-                ¡Hola, <span className="text-indigo-400 font-black">{nombreBienvenida}</span>, bienvenid@ a tu ruta de aprendizaje!
-              </h1>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-slate-200 font-medium drop-shadow">
-                Accede a tus programas de especialización en minería, seguridad, industria y negocios diseñados para potenciar tu perfil ejecutivo.
-              </p>
-            </div>
-            
-            <div className="inline-flex w-fit items-center gap-3 rounded-2xl border border-white/15 bg-slate-900/90 px-5 py-3.5 text-white shadow-xl backdrop-blur-xl ring-1 ring-white/10">
-              <Layers3 className="size-5 text-indigo-400" />
-              <div className="flex flex-col">
-                <span className="text-xs font-medium text-slate-400 uppercase tracking-wider">Paquete activo</span>
-                <span className="text-sm font-bold text-indigo-200 tracking-wide">
-                  {safeProfile.paquete_adquirido}
-                </span>
-              </div>
-            </div>
+          <div className="max-w-3xl">
+            <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl drop-shadow-md [text-wrap:balance]">
+              ¡Hola, <span className="text-indigo-400 font-black">{primerNombre}</span>, bienvenid@ a tu ruta de aprendizaje!
+            </h1>
           </div>
         </div>
       </section>
@@ -157,50 +274,40 @@ export default async function DashboardPage() {
       {/* SECCIÓN 1 (PRIMERA): PROGRESO ACADÉMICO */}
       <section className="mx-auto max-w-6xl px-6 sm:px-10 lg:px-16 pt-10">
         <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-sm border border-slate-200 dark:border-slate-800">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-            <div>
-              <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider block mb-1">Progreso Académico</span>
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Continuar donde te quedaste</h2>
-              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Retoma tus sesiones de estudio activas en tus programas y cursos cortos.</p>
-            </div>
-            
-            <div className="flex items-center gap-3">
-              <Link 
-                href="/dashboard/diplomados"
-                className="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition shadow-sm"
-              >
-                Ver mis Diplomados
-              </Link>
-              <Link 
-                href="/dashboard/cursos"
-                className="bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold px-4 py-2.5 rounded-xl transition"
-              >
-                Ver mis Cursos
-              </Link>
-            </div>
+          <div className="mb-6">
+            <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider block mb-1">
+              Progreso Académico
+            </span>
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
+              Continuar donde te quedaste
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            {/* Tarjeta de Diplomado (Dinamico de Supabase) */}
+            {/* Tarjeta de Mis Diplomados */}
             <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4 hover:border-indigo-300 dark:hover:border-indigo-500/40 transition">
               <div className="flex items-start gap-4">
                 <div className="size-12 rounded-xl bg-indigo-600 text-white grid place-items-center shrink-0 shadow-sm">
                   <Award className="size-6" />
                 </div>
-                <div>
-                  <span className="text-[10px] font-bold text-indigo-600 uppercase tracking-widest block">Programa Principal</span>
-                  <h3 className="font-bold text-base text-slate-900 dark:text-white mt-0.5 line-clamp-1">{diplomadoPrincipal.titulo}</h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-1">
+                <div className="flex-1 min-w-0">
+                  <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider block mb-0.5">
+                    Mis diplomados
+                  </span>
+                  <h3 className="font-bold text-base text-slate-900 dark:text-white mt-0.5 line-clamp-2 [text-wrap:balance]">
+                    {diplomadoPrincipal.titulo}
+                  </h3>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">
                     {diplomadoPrincipal.modulos[0] ? `${diplomadoPrincipal.modulos[0].codigo}: ${diplomadoPrincipal.modulos[0].nombre}` : 'Módulo I'}
                   </p>
                 </div>
               </div>
 
-              {/* Barra de Progreso Visual */}
+              {/* Barra de Avance */}
               <div className="space-y-1.5 pt-2">
                 <div className="flex justify-between text-xs font-bold">
-                  <span className="text-slate-600 dark:text-slate-400">Avance del programa</span>
+                  <span className="text-slate-600 dark:text-slate-400">Avance</span>
                   <span className="text-indigo-600 dark:text-indigo-400">{avanceEstudiante}%</span>
                 </div>
                 <div className="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
@@ -208,7 +315,14 @@ export default async function DashboardPage() {
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex items-center justify-end">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex items-center justify-between gap-2">
+                <Link 
+                  href="/dashboard/diplomados"
+                  className="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline inline-flex items-center gap-1"
+                >
+                  Ver mis Diplomados <ArrowUpRight className="size-3.5" />
+                </Link>
+
                 <Link 
                   href={`/dashboard/reproductor?slug=${diplomadoPrincipal.slug}`}
                   className="inline-flex items-center gap-2 text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-xl shadow-sm transition"
@@ -221,39 +335,49 @@ export default async function DashboardPage() {
               </div>
             </div>
 
-            {/* Tarjeta de Curso (Dinamico) */}
-            <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4 hover:border-indigo-300 dark:hover:border-indigo-500/40 transition">
+            {/* Tarjeta de Mis Cursos */}
+            <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4 hover:border-emerald-300 dark:hover:border-emerald-500/40 transition">
               <div className="flex items-start gap-4">
                 <div className="size-12 rounded-xl bg-emerald-600 text-white grid place-items-center shrink-0 shadow-sm">
                   <BookOpenCheck className="size-6" />
                 </div>
-                <div>
-                  <span className="text-[10px] font-bold text-emerald-600 uppercase tracking-widest block">Curso Asincrónico</span>
-                  <h3 className="font-bold text-base text-slate-900 dark:text-white mt-0.5">MANEJO DE EPPS Y RIESGOS EN MINERÍA</h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Sesión 2: Clasificación y Equipos</p>
+                <div className="flex-1 min-w-0">
+                  <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block mb-0.5">
+                    Mis cursos
+                  </span>
+                  <h3 className="font-bold text-base text-slate-900 dark:text-white mt-0.5 line-clamp-2 [text-wrap:balance]">
+                    {cursoPrincipal.titulo}
+                  </h3>
                 </div>
               </div>
 
-              {/* Barra de Progreso Visual */}
+              {/* Barra de Avance */}
               <div className="space-y-1.5 pt-2">
                 <div className="flex justify-between text-xs font-bold">
-                  <span className="text-slate-600 dark:text-slate-400">Avance del curso</span>
-                  <span className="text-emerald-600 dark:text-emerald-400">75%</span>
+                  <span className="text-slate-600 dark:text-slate-400">Avance</span>
+                  <span className="text-emerald-600 dark:text-emerald-400">{cursoPrincipal.avance}%</span>
                 </div>
                 <div className="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
-                  <div className="bg-emerald-600 h-full rounded-full" style={{ width: '75%' }} />
+                  <div className="bg-emerald-600 h-full rounded-full" style={{ width: `${cursoPrincipal.avance}%` }} />
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex items-center justify-end">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex items-center justify-between gap-2">
                 <Link 
                   href="/dashboard/cursos"
+                  className="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-1"
+                >
+                  Ver mis Cursos <ArrowUpRight className="size-3.5" />
+                </Link>
+
+                <Link 
+                  href={cursoPrincipal.link}
                   className="inline-flex items-center gap-2 text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl shadow-sm transition"
                 >
                   <span className="grid size-5 place-items-center rounded-full bg-white text-emerald-600">
                     <Play className="size-3 fill-emerald-600 ml-0.5" />
                   </span>
-                  Ver todos los cursos
+                  Continuar curso
                 </Link>
               </div>
             </div>
@@ -265,43 +389,61 @@ export default async function DashboardPage() {
       {/* SECCIÓN 2 (SEGUNDA): CRÉDITOS Y ESTADO DE CUENTA */}
       <section className="mx-auto grid max-w-6xl gap-6 px-6 py-10 sm:px-10 lg:grid-cols-3 lg:px-16 lg:py-10">
         
-        {/* Widget 1: Créditos disponibles */}
-        <article className="relative overflow-hidden rounded-3xl bg-white dark:bg-slate-900 p-7 shadow-sm ring-1 ring-slate-200 dark:ring-slate-800 sm:p-9 flex flex-col justify-between">
+        {/* Widget 1: Créditos EDUMIN disponibles */}
+        <article className="relative overflow-hidden rounded-3xl bg-white dark:bg-slate-900 p-7 shadow-sm ring-1 border border-slate-200 dark:border-slate-800 sm:p-9 flex flex-col justify-between">
           <div className="absolute -right-12 -top-12 size-44 rounded-full bg-indigo-100/50 dark:bg-indigo-950/40" />
           <div className="relative">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-sm font-bold uppercase tracking-[0.16em] text-indigo-600 dark:text-indigo-400">Créditos disponibles</p>
-                <h2 className="mt-3 text-5xl font-bold tracking-tighter text-slate-950 dark:text-white">{availableCredits}</h2>
+                <p className="text-sm font-bold uppercase tracking-[0.16em] text-indigo-600 dark:text-indigo-400">Créditos EDUMIN</p>
+                <h2 className="mt-3 text-5xl font-bold tracking-tighter text-slate-950 dark:text-white">
+                  {eduminCredits.total.disponibles}
+                </h2>
               </div>
               <div className="grid size-12 place-items-center rounded-2xl bg-indigo-600 text-white shadow-lg shadow-indigo-600/25">
                 <BookOpenCheck className="size-6" />
               </div>
             </div>
-            <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
-              {availableCredits > 0 ? (
-                <>Tienes <strong className="font-bold text-slate-950 dark:text-white">{availableCredits} cupos pendientes</strong> para canjear en tu diplomado.</>
-              ) : (
-                <>Has canjeado todos tus cupos disponibles de tu plan actual.</>
-              )}
-            </p>
-            <p className="mt-1 text-xs text-slate-400 dark:text-slate-500">
-              {releasedCredits} liberados por cuota · {safeProfile.cupos_diplomados || 0} usados
+
+            <div className="mt-4 space-y-2 text-xs text-slate-600 dark:text-slate-300">
+              <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-1.5">
+                <span>Diplomados pendientes:</span>
+                <strong className="font-bold text-slate-900 dark:text-white">
+                  {eduminCredits.diplomados.disponibles} cupo(s)
+                </strong>
+              </div>
+              <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-1.5">
+                <span>Cursos libres pendientes:</span>
+                <strong className="font-bold text-slate-900 dark:text-white">
+                  {eduminCredits.cursos.disponibles} cupo(s)
+                </strong>
+              </div>
+            </div>
+
+            <p className="mt-3 text-[11px] text-slate-400 dark:text-slate-500">
+              {eduminCredits.total.liberados} liberados por pagos · {eduminCredits.total.consumidos} canjeados
             </p>
           </div>
 
-          {availableCredits > 0 && (
+          {eduminCredits.total.disponibles > 0 ? (
             <Link
               href="/dashboard/canjear"
               className="mt-6 inline-flex h-12 w-full justify-center items-center gap-2 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 text-white px-4 text-xs font-extrabold uppercase tracking-wider shadow-lg shadow-indigo-600/30 transition hover:opacity-95"
             >
-              <Sparkles className="size-4 animate-bounce" /> ¡Quiero canjear mi beneficio pendiente!
+              <Sparkles className="size-4 animate-bounce" /> Canjear mis cursos y diplomados
+            </Link>
+          ) : (
+            <Link
+              href="/dashboard/canjear"
+              className="mt-6 inline-flex h-11 w-full justify-center items-center gap-2 rounded-2xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 px-4 text-xs font-bold transition"
+            >
+              Ver mis créditos canjeados
             </Link>
           )}
         </article>
 
-        {/* Widget 2: Estado Financiero (con botón a Mis Pagos) */}
-        <article className="relative overflow-hidden rounded-3xl bg-white dark:bg-slate-900 p-7 shadow-sm ring-1 ring-slate-200 dark:ring-slate-800 sm:p-9 flex flex-col justify-between">
+        {/* Widget 2: Estado Financiero */}
+        <article className="relative overflow-hidden rounded-3xl bg-white dark:bg-slate-900 p-7 shadow-sm border border-slate-200 dark:border-slate-800 sm:p-9 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between gap-3 mb-5">
               <div className="flex items-center gap-3">
@@ -331,8 +473,8 @@ export default async function DashboardPage() {
           <div className="mt-6 space-y-3">
             {deudaSaldada ? (
               <div className="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 px-4 py-3 rounded-xl text-sm font-semibold border border-emerald-100 dark:border-emerald-800/50">
-                <CheckCircle2 className="size-5" />
-                Cuenta al día. ¡Gracias!
+                <CheckCircle2 className="size-5 shrink-0" />
+                <span>Cuenta al día. ¡Gracias por tu puntualidad!</span>
               </div>
             ) : (
               <div className="flex items-center gap-3 bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 px-4 py-3 rounded-xl text-sm font-medium border border-amber-100 dark:border-amber-800/50">
@@ -350,9 +492,11 @@ export default async function DashboardPage() {
           </div>
         </article>
 
-        {/* Widget 3: Beneficios Premium */}
+        {/* Widget 3: Bolsa de Trabajo y Dreambuilder */}
         <div className="flex flex-col gap-4">
-          {isPremium && (
+          
+          {/* Tarjeta Dreambuilder */}
+          {dreambuilderHabilitado && (
             <article className="relative flex-1 overflow-hidden rounded-3xl bg-gradient-to-br from-violet-700 to-indigo-900 p-6 text-white shadow-md">
               <div className="absolute right-0 top-0 size-32 rounded-bl-full bg-white/5" />
               <div className="relative z-10 flex items-start justify-between">
@@ -360,7 +504,7 @@ export default async function DashboardPage() {
                   <h3 className="text-lg font-bold flex items-center gap-2">
                     <Rocket className="size-5 text-indigo-300" /> Dreambuilder
                   </h3>
-                  <p className="mt-1 text-xs text-indigo-200">Potencia tus objetivos profesionales.</p>
+                  <p className="mt-1 text-xs text-indigo-200">Potencia tus objetivos profesionales y emprendimiento.</p>
                 </div>
               </div>
               <a
@@ -374,30 +518,51 @@ export default async function DashboardPage() {
             </article>
           )}
 
-          {isPremium ? (
-            <article className="relative flex-1 overflow-hidden rounded-3xl bg-slate-900 p-6 text-white shadow-md border border-slate-800">
-              <div className="relative z-10">
-                <h3 className="text-lg font-bold flex items-center gap-2">
-                  <Briefcase className="size-5 text-emerald-400" /> Bolsa de Trabajo
-                </h3>
-                <p className="mt-1 text-xs text-slate-400 dark:text-slate-500">Ofertas exclusivas para tu paquete.</p>
-              </div>
-              <a
-                className="mt-4 inline-flex h-9 w-full items-center justify-center gap-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 px-4 text-sm font-bold text-white transition"
-                href={bolsaTrabajoUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Unirme al grupo VIP <ArrowUpRight className="size-4" />
-              </a>
-            </article>
-          ) : (
-            <article className="flex-1 rounded-3xl border border-dashed border-slate-300 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 flex flex-col items-center justify-center p-6 text-center">
-              <Briefcase className="size-8 text-slate-300 dark:text-slate-600 mb-2" />
-              <p className="text-sm font-semibold text-slate-600 dark:text-slate-300">Bolsa de Trabajo</p>
-              <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Beneficio disponible en paquetes FULL e ILIMITADO.</p>
-            </article>
-          )}
+          {/* Tarjeta de Bolsas de Trabajo (Regular y Exclusiva) */}
+          <article className="relative flex-1 overflow-hidden rounded-3xl bg-slate-900 p-6 text-white shadow-md border border-slate-800 flex flex-col justify-between">
+            <div>
+              <h3 className="text-lg font-bold flex items-center gap-2">
+                <Briefcase className="size-5 text-emerald-400" /> Bolsa de trabajo
+              </h3>
+              <p className="mt-1 text-xs text-slate-400">
+                Accede a convocatorias y vacantes laborales activas en minería e industria.
+              </p>
+            </div>
+
+            <div className="mt-4 space-y-2.5">
+              {/* Botón 1: Bolsa de Trabajo Regular */}
+              {bolsaTrabajoRegularHabilitada ? (
+                <a
+                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 px-4 text-xs font-bold text-white transition shadow-sm"
+                  href={bolsaRegularUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Bolsa de trabajo regular <ArrowUpRight className="size-4" />
+                </a>
+              ) : (
+                <div className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-slate-950/60 px-4 text-xs font-medium text-slate-500 border border-dashed border-slate-800 cursor-not-allowed">
+                  <Lock className="size-3.5" /> Bolsa de trabajo regular no disponible
+                </div>
+              )}
+
+              {/* Botón 2: Bolsa de Trabajo Exclusiva */}
+              {bolsaTrabajoExclusivaHabilitada ? (
+                <a
+                  className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 px-4 text-xs font-bold text-white transition shadow-sm"
+                  href={bolsaExclusivaUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Bolsa de trabajo exclusiva <ArrowUpRight className="size-4" />
+                </a>
+              ) : (
+                <div className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-slate-950/60 px-4 text-xs font-medium text-slate-500 border border-dashed border-slate-800 cursor-not-allowed">
+                  <Lock className="size-3.5" /> Bolsa de trabajo exclusiva (FULL / ILIMITADO)
+                </div>
+              )}
+            </div>
+          </article>
         </div>
       </section>
     </main>

@@ -42,14 +42,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     var m = document.cookie.match(new RegExp('(^| )edumin_theme=([^;]+)'));
                     if (m) mode = m[2];
                   }
-                  if (!mode) mode = 'oscuro';
-                  var isDark = true;
+                  if (!mode) mode = 'sistema';
+                  var isDark = false;
                   if (mode === 'claro') {
                     isDark = false;
-                  } else if (mode === 'sistema') {
-                    isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  } else {
+                  } else if (mode === 'oscuro') {
                     isDark = true;
+                  } else {
+                    // Modo 'sistema' (por defecto automático)
+                    isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
                   }
                   var root = document.documentElement;
                   if (isDark) {

@@ -8,6 +8,7 @@ import {
   Check, Mail, Phone, Hash, DollarSign, Calendar
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
+import { useTabSlug } from '@/lib/hooks/useTabSlug';
 import AdminHeader from '@/components/admin/admin-header';
 import AnularPagoModal from '@/components/admin/anular-pago-modal';
 import ReciboModal from '@/components/admin/recibo-modal';
@@ -42,7 +43,7 @@ const DIPLOMADOS_EDUMIN = [
 ];
 
 export default function AdminEstudiantesPage() {
-  const [activeTab, setActiveTab] = useState<'directorio' | 'nuevo'>('directorio');
+  const [activeTab, setActiveTab] = useTabSlug<'directorio' | 'nuevo'>('directorio', ['directorio', 'nuevo'] as const);
   const [estudiantes, setEstudiantes] = useState<EstudianteCompleto[]>([]);
   const [cargando, setCargando] = useState(true);
   

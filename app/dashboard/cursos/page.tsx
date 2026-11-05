@@ -34,6 +34,7 @@ export default function CursosPage() {
   const [paquete, setPaquete] = useState<string>('FULL');
   const [nombres, setNombres] = useState<string>('Estudiante');
   const [loading, setLoading] = useState(true);
+  const [creditosCursosDisponibles, setCreditosCursosDisponibles] = useState<number>(0);
 
   // Estado para el Modo Oscuro / Claro desde el ThemeContext global
   const { esOscuro } = useTheme();
@@ -182,6 +183,9 @@ export default function CursosPage() {
           const prof = data.profile;
           const matriculas = data.matriculas || [];
 
+          if (data.eduminCredits?.cursos?.disponibles !== undefined) {
+            setCreditosCursosDisponibles(data.eduminCredits.cursos.disponibles);
+          }
           if (prof) {
             if (prof.nombres) setNombres(prof.nombres);
             if (prof.paquete_adquirido) setPaquete(prof.paquete_adquirido.toUpperCase());
@@ -325,6 +329,8 @@ export default function CursosPage() {
           subtitle="Accede a tus cursos matriculados con seguimiento de avance o adquiere nuevas especializaciones."
         />
 
+
+
         {/* VISTA SEGÚN ESTADO DE CURSOS MATRICULADOS */}
         {listaCursosMatriculados.length === 0 ? (
           <div className={`rounded-3xl p-8 text-center border shadow-sm ${esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}`}>
@@ -412,7 +418,7 @@ export default function CursosPage() {
             </div>
 
             {/* GRILLA DE CURSOS FILTRADOS POR LA PÍLDORA SELECCIONADA */}
-            {cursosMatriculadosMostrar.length === 0 ? (
+            {cursosMatriculadosMostrar.length === 0 && (!creditosCursosDisponibles || filtroEstadoMatriculados === 'completados') ? (
               <div className={`rounded-3xl p-8 sm:p-10 text-center border shadow-sm ${esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}`}>
                 <div className="size-14 mx-auto rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 grid place-items-center mb-4">
                   <ShoppingBag className="size-7" />
@@ -434,6 +440,63 @@ export default function CursosPage() {
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
+                {/* TARJETA DE CRÉDITOS DISPONIBLES EN FORMATO EXACTO DE CURSO */}
+                {creditosCursosDisponibles > 0 && filtroEstadoMatriculados !== 'completados' && (
+                  <Link
+                    href="/dashboard/canjear"
+                    className={`group rounded-2xl overflow-hidden shadow-sm border border-dashed flex flex-col justify-between transition-all hover:shadow-md cursor-pointer ${
+                      esOscuro 
+                        ? 'bg-slate-900/90 border-indigo-500/50 hover:border-indigo-400' 
+                        : 'bg-white border-indigo-300 hover:border-indigo-500'
+                    }`}
+                  >
+                    {/* PORTADA CON EL MISMO TAMAÑO h-44 */}
+                    <div className="relative h-44 w-full bg-gradient-to-br from-indigo-900 via-indigo-950 to-slate-950 overflow-hidden flex flex-col items-center justify-center p-6 text-center">
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(99,102,241,0.25),transparent_70%)]" />
+                      <div className="size-14 rounded-2xl bg-indigo-600 text-white grid place-items-center shadow-lg shadow-indigo-600/30 mb-2 z-10 transition-transform duration-300 group-hover:scale-110">
+                        <Sparkles className="size-7 animate-pulse text-amber-300" />
+                      </div>
+                      <div className="absolute top-3 inset-x-3 flex flex-wrap items-center justify-between gap-1.5 pointer-events-none z-10">
+                        <span className="text-[11px] font-bold text-white bg-indigo-600/90 backdrop-blur-md px-2.5 py-1 rounded-lg border border-indigo-400/30 shrink-0">
+                          Créditos EDUMIN
+                        </span>
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-bold border backdrop-blur-md shrink-0 bg-amber-500/90 border-amber-400/30 text-white">
+                          <Tag className="size-3" /> {creditosCursosDisponibles} cupo(s)
+                        </span>
+                      </div>
+                    </div>
+                    {/* CUERPO CON MISMA ESTRUCTURA Y h-12 DEL TÍTULO */}
+                    <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                      <div className="space-y-3">
+                        <div className="h-12 flex items-start overflow-hidden">
+                          <h3 className={`text-base font-bold leading-snug line-clamp-2 uppercase ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                            CURSOS PENDIENTES POR ELEGIR
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="space-y-1.5 pt-2">
+                        <div className="flex items-center justify-between text-xs font-bold">
+                          <span className={esOscuro ? 'text-indigo-400 font-medium' : 'text-indigo-600 font-medium'}>
+                            Beneficio de tu plan
+                          </span>
+                          <span className="font-bold text-amber-500">
+                            {creditosCursosDisponibles} disponible(s)
+                          </span>
+                        </div>
+                        <p className={`text-xs leading-relaxed ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                          Elige tus especializaciones entre los 76 cursos oficiales del catálogo.
+                        </p>
+                      </div>
+                    </div>
+                    {/* BOTÓN ALINEADO IDÉNTICO */}
+                    <div className={`px-6 pb-6 pt-3 border-t flex items-center justify-end ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
+                      <div className="w-full sm:w-auto text-xs font-bold px-5 py-2.5 rounded-xl transition-all inline-flex items-center justify-center shadow-md bg-indigo-600 group-hover:bg-indigo-700 text-white shadow-indigo-600/25">
+                        <span>Elegir mis cursos</span>
+                        <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform group-hover:translate-x-0.5" />
+                      </div>
+                    </div>
+                  </Link>
+                )}
                                 {cursosMatriculadosMostrar.map((curso) => {
                   const codNormalizado = (curso.codigo || curso.id || '').toUpperCase();
                   const confClaveCurso = `${codNormalizado}_Examen del curso`;

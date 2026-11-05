@@ -9,11 +9,12 @@ import { createBrowserClient } from '@supabase/ssr';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import AdminSidebar from '@/components/admin/admin-sidebar';
+import { useTabSlug } from '@/lib/hooks/useTabSlug';
 import AdminHeader from '@/components/admin/admin-header';
 
 export default function AlumnosRiesgoPage() {
   const [busqueda, setBusqueda] = useState('');
-  const [filtroEstado, setFiltroEstado] = useState<'todos' | 'deuda' | 'bloqueado'>('todos');
+  const [filtroEstado, setFiltroEstado] = useTabSlug<'todos' | 'deuda' | 'bloqueado'>('todos', ['todos', 'deuda', 'bloqueado'] as const, 'filtro');
   const [mesSeleccionado, setMesSeleccionado] = useState<string>('todos');
   const [mensajeExito, setMensajeExito] = useState<string | null>(null);
   

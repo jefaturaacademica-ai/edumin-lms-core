@@ -10,9 +10,11 @@ type ProfileContextType = {
   paqueteContratado: string;
   role: string;
   fotoPerfil: string | null;
+  debeCambiarPassword: boolean;
   cargando: boolean;
   actualizarFotoPerfil: (nuevaFoto: string | null) => void;
   actualizarDatosUsuario: (datos: { nombres: string; apellidos: string; paqueteContratado?: string; dni?: string }) => void;
+  marcarPasswordActualizada: () => void;
   recargarPerfil: () => Promise<void>;
 };
 
@@ -24,9 +26,11 @@ const ProfileContext = createContext<ProfileContextType>({
   paqueteContratado: '',
   role: 'ESTUDIANTE',
   fotoPerfil: null,
+  debeCambiarPassword: false,
   cargando: true,
   actualizarFotoPerfil: () => {},
   actualizarDatosUsuario: () => {},
+  marcarPasswordActualizada: () => {},
   recargarPerfil: async () => {},
 });
 
@@ -37,7 +41,12 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
   const [paqueteContratado, setPaqueteContratado] = useState('');
   const [role, setRole] = useState('ESTUDIANTE');
   const [fotoPerfil, setFotoPerfil] = useState<string | null>(null);
+  const [debeCambiarPassword, setDebeCambiarPassword] = useState(false);
   const [cargando, setCargando] = useState(true);
+
+  const marcarPasswordActualizada = useCallback(() => {
+    setDebeCambiarPassword(false);
+  }, []);
 
   const recargarPerfil = useCallback(async () => {
     try {
@@ -59,6 +68,7 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
           setDni(userDni);
           setPaqueteContratado(paq);
           setRole(rol);
+          setDebeCambiarPassword(Boolean(profile.debe_cambiar_password));
 
           if (foto) {
             setFotoPerfil(foto);
@@ -138,9 +148,11 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
       paqueteContratado,
       role,
       fotoPerfil,
+      debeCambiarPassword,
       cargando,
       actualizarFotoPerfil,
       actualizarDatosUsuario,
+      marcarPasswordActualizada,
       recargarPerfil
     }}>
       {children}

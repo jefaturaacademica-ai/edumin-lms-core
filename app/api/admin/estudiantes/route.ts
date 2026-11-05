@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase/admin';
-import { parseDiplomadosFromProfile, parseCursosFromProfile, DiplomadoJSON } from '@/lib/utils/profileParser';
+import { parseDiplomadosFromProfile, parseCursosFromProfile, parseCreditosExtraFromProfile, DiplomadoJSON } from '@/lib/utils/profileParser';
 import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
 import { obtenerTallerParaDiplomado } from '@/lib/utils/tallerAsignado';
 
@@ -256,6 +256,7 @@ export async function GET() {
 
       // Parser JSON de Diplomados y Cursos
       const parsedDiplomados = parseDiplomadosFromProfile(p);
+      const creditosExtra = parseCreditosExtraFromProfile(p);
       const parsedCursos = parseCursosFromProfile(p);
       const diplomadosLista = parsedDiplomados.map(d => d.titulo);
 
@@ -293,6 +294,9 @@ export async function GET() {
         diplomados_json: parsedDiplomados,
         cursos_json: parsedCursos,
         diplomados_lista: diplomadosLista,
+        creditos_extra_diplomados: creditosExtra.creditosExtraDiplomados,
+        creditos_extra_cursos: creditosExtra.creditosExtraCursos,
+        fecha_nacimiento: p.fecha_nacimiento || null,
         avance_porcentaje: avanceCalculado,
         nota_promedio: p.nota_promedio ?? 0,
         ultima_conexion: p.ultima_conexion || 'Hace 1 hora',
@@ -317,6 +321,83 @@ export async function PATCH(request: Request) {
     const { studentId, dni_ce, action, diplomados, cursos } = body;
 
     const admin = createAdminClient();
+
+    if (action === 'update_perfil') {
+      const { nombres, apellidos, new_dni_ce, email, telefono, fecha_nacimiento, paquete_adquirido, bloqueado, prorroga_hasta } = body;
+
+      let profileQuery = admin.from('profiles').select('*');
+      if (studentId) profileQuery = profileQuery.eq('id', studentId);
+      else if (dni_ce) profileQuery = profileQuery.eq('dni_ce', dni_ce);
+      else return NextResponse.json({ error: 'Se requiere studentId o dni_ce.' }, { status: 400 });
+
+      const { data: currentProfile, error: pErr } = await profileQuery.maybeSingle();
+      if (pErr || !currentProfile) {
+        return NextResponse.json({ error: 'Perfil de estudiante no encontrado.' }, { status: 404 });
+      }
+
+      const updateData: any = {};
+      if (nombres !== undefined) updateData.nombres = String(nombres).trim();
+      if (apellidos !== undefined) updateData.apellidos = String(apellidos).trim();
+      if (new_dni_ce !== undefined) updateData.dni_ce = String(new_dni_ce).trim();
+      if (email !== undefined) updateData.email = String(email).trim().toLowerCase();
+      if (telefono !== undefined) updateData.telefono = String(telefono).trim();
+      if (fecha_nacimiento !== undefined) updateData.fecha_nacimiento = fecha_nacimiento ? String(fecha_nacimiento).trim() : null;
+      if (paquete_adquirido !== undefined) updateData.paquete_adquirido = String(paquete_adquirido).trim().toUpperCase();
+      if (bloqueado !== undefined) updateData.bloqueado = Boolean(bloqueado);
+      if (prorroga_hasta !== undefined) updateData.prorroga_hasta = prorroga_hasta || null;
+
+      const { data: updated, error: updateErr } = await admin
+        .from('profiles')
+        .update(updateData)
+        .eq('id', currentProfile.id)
+        .select()
+        .single();
+
+      if (updateErr) {
+        return NextResponse.json({ error: `Error al actualizar perfil: ${updateErr.message}` }, { status: 500 });
+      }
+
+      return NextResponse.json({ success: true, estudiante: updated });
+    }
+
+    if (action === 'update_creditos_extra') {
+      const { creditos_extra_diplomados, creditos_extra_cursos } = body;
+
+      let profileQuery = admin.from('profiles').select('*');
+      if (studentId) profileQuery = profileQuery.eq('id', studentId);
+      else if (dni_ce) profileQuery = profileQuery.eq('dni_ce', dni_ce);
+      else return NextResponse.json({ error: 'Se requiere studentId o dni_ce.' }, { status: 400 });
+
+      const { data: currentProfile, error: pErr } = await profileQuery.maybeSingle();
+      if (pErr || !currentProfile) {
+        return NextResponse.json({ error: 'Perfil de estudiante no encontrado.' }, { status: 404 });
+      }
+
+      const diplomadosListJson = parseDiplomadosFromProfile(currentProfile);
+      const extraDip = Math.max(0, Number(creditos_extra_diplomados) || 0);
+      const extraCur = Math.max(0, Number(creditos_extra_cursos) || 0);
+
+      const serialized = `DIPLOMADOS_CONFIG|${JSON.stringify({
+        creditos_extra_diplomados: extraDip,
+        creditos_extra_cursos: extraCur,
+        lista: diplomadosListJson
+      })}`;
+
+      const { data: updated, error: updateErr } = await admin
+        .from('profiles')
+        .update({
+          diplomados: serialized
+        })
+        .eq('id', currentProfile.id)
+        .select()
+        .single();
+
+      if (updateErr) {
+        return NextResponse.json({ error: `Error al actualizar créditos adicionales: ${updateErr.message}` }, { status: 500 });
+      }
+
+      return NextResponse.json({ success: true, estudiante: updated });
+    }
 
     if (action === 'update_diplomados') {
       let profileQuery = admin.from('profiles').select('*');
@@ -372,7 +453,14 @@ export async function PATCH(request: Request) {
         });
       }
 
-      const diplomadosSerialized = `DIPLOMADOS_LIST|${JSON.stringify(diplomadosListJson)}`;
+      const creditosExtra = parseCreditosExtraFromProfile(currentProfile);
+      const diplomadosSerialized = (creditosExtra.creditosExtraDiplomados > 0 || creditosExtra.creditosExtraCursos > 0)
+        ? `DIPLOMADOS_CONFIG|${JSON.stringify({
+            creditos_extra_diplomados: creditosExtra.creditosExtraDiplomados,
+            creditos_extra_cursos: creditosExtra.creditosExtraCursos,
+            lista: diplomadosListJson
+          })}`
+        : `DIPLOMADOS_LIST|${JSON.stringify(diplomadosListJson)}`;
 
       const { data: updated, error: updateErr } = await admin
         .from('profiles')
@@ -687,6 +775,8 @@ export async function POST(request: Request) {
     const cuposCursosFinal = Number(cupos_cursos_personalizados ?? (paqueteInput === 'ILIMITADO' ? 15 : (paqueteInput === 'FULL' ? 5 : 3)));
 
     // 4. Insertar en profiles
+    // Columnas exactas que existen en public.profiles de Supabase:
+    // id, role, dni_ce, email, nombres, apellidos, telefono, paquete_adquirido, cuotas_pagadas, cupos_diplomados, debe_cambiar_password, diplomados, cursos, fecha_nacimiento
     const insertPayload: Record<string, any> = {
       id: studentId,
       dni_ce: normalizedDni,
@@ -696,12 +786,8 @@ export async function POST(request: Request) {
       telefono: telefono ? telefono.trim() : '',
       role: 'ESTUDIANTE',
       paquete_adquirido: paqueteEnumDb,
-      tipo_pago: esContado ? 'CONTADO' : 'CUOTAS',
       cuotas_pagadas: 1,
-      cuotas_totales: numCuotasTotales,
-      diplomado_1: dipTitulo,
       cupos_diplomados: cuposDiplomadosFinal,
-      cupos_cursos: cuposCursosFinal,
       diplomados: diplomadosSerialized,
       cursos: cursosSerialized,
       debe_cambiar_password: true,

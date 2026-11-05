@@ -37,6 +37,7 @@ export default function DiplomadosPage() {
   const [paquete, setPaquete] = useState<string>('FULL');
   const [nombres, setNombres] = useState<string>('Estudiante');
   const [loading, setLoading] = useState(true);
+  const [creditosDipDisponibles, setCreditosDipDisponibles] = useState<number>(0);
   const { esOscuro } = useTheme();
 
   // Diplomados reales obtenidos dinámicamente desde Supabase
@@ -634,6 +635,68 @@ export default function DiplomadosPage() {
           </div>
         )}
 
+            {/* Tarjeta con formato de módulo al final del último diplomado */}
+            {creditosDipDisponibles > 0 && filtroEstadoMatriculados !== 'completados' && (
+              <div className="pt-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <Link
+                    href="/dashboard/canjear"
+                    className={`group rounded-2xl overflow-hidden shadow-sm border border-dashed flex flex-col justify-between transition-all hover:shadow-md cursor-pointer ${
+                      esOscuro 
+                        ? 'bg-slate-900/90 border-indigo-500/50 hover:border-indigo-400' 
+                        : 'bg-white border-indigo-300 hover:border-indigo-500'
+                    }`}
+                  >
+                    {/* Portada en formato h-44 */}
+                    <div className="relative h-44 w-full bg-gradient-to-br from-indigo-900 via-indigo-950 to-slate-950 overflow-hidden flex flex-col items-center justify-center p-6 text-center">
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(99,102,241,0.25),transparent_70%)]" />
+                      <div className="size-14 rounded-2xl bg-indigo-600 text-white grid place-items-center shadow-lg shadow-indigo-600/30 mb-2 z-10 transition-transform duration-300 group-hover:scale-110">
+                        <Sparkles className="size-7 animate-pulse text-amber-300" />
+                      </div>
+                      <div className="absolute top-3 inset-x-3 flex flex-wrap items-center justify-between gap-1.5 pointer-events-none z-10">
+                        <span className="text-[11px] font-bold text-white bg-indigo-600/90 backdrop-blur-md px-2.5 py-1 rounded-lg border border-indigo-400/30 shrink-0 uppercase tracking-wide">
+                          PROGRAMA DISPONIBLE
+                        </span>
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-bold border backdrop-blur-md shrink-0 bg-amber-500/90 border-amber-400/30 text-white">
+                          <Tag className="size-3" /> {creditosDipDisponibles} cupo(s)
+                        </span>
+                      </div>
+                    </div>
+                    {/* CUERPO CON ALINEACIÓN VERTICAL UNIFORME */}
+                    <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                      <div className="space-y-3">
+                        <div className="h-12 flex items-start overflow-hidden">
+                          <h3 className={`text-base font-bold leading-snug line-clamp-2 uppercase ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                            DIPLOMADO PENDIENTE POR ELEGIR
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="space-y-1.5 pt-2">
+                        <div className="flex items-center justify-between text-xs font-bold">
+                          <span className={esOscuro ? 'text-indigo-400 font-medium' : 'text-indigo-600 font-medium'}>
+                            Beneficio de tu plan
+                          </span>
+                          <span className="font-bold text-amber-500">
+                            {creditosDipDisponibles} disponible(s)
+                          </span>
+                        </div>
+                        <p className={`text-xs leading-relaxed ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                          Selecciona tu siguiente programa oficial entre los 22 diplomados de alta especialización.
+                        </p>
+                      </div>
+                    </div>
+                    {/* Pie de Tarjeta con 1 Botón */}
+                    <div className={`px-6 pb-6 pt-3 border-t flex items-center justify-end ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
+                      <div className="w-full sm:w-auto text-xs font-bold px-5 py-2.5 rounded-xl transition-all inline-flex items-center justify-center shadow-md bg-indigo-600 group-hover:bg-indigo-700 text-white shadow-indigo-600/25">
+                        <span>Elegir diplomado</span>
+                        <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform group-hover:translate-x-0.5" />
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            )}
+
         {/* SECCIÓN 2: BOTÓN DESPLEGABLE DE ADQUISICIÓN O CANJE */}
         <div className={`pt-6 border-t ${esOscuro ? 'border-slate-800' : 'border-slate-200'}`}>
           <div className={`text-white rounded-3xl p-8 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-800 ${esIlimitado ? 'bg-gradient-to-r from-slate-900 to-amber-950' : 'bg-gradient-to-r from-slate-900 to-indigo-950'}`}>
@@ -971,3 +1034,4 @@ export default function DiplomadosPage() {
     </main>
   );
 }
+

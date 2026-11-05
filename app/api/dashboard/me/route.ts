@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { calculateEduminCredits, calculateReleasedCredits } from '@/lib/utils/credits';
-import { parseDiplomadosFromProfile, parseCursosFromProfile } from '@/lib/utils/profileParser';
+import { parseDiplomadosFromProfile, parseCursosFromProfile, parseCreditosExtraFromProfile } from '@/lib/utils/profileParser';
 import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
 import { obtenerTallerParaDiplomado } from '@/lib/utils/tallerAsignado';
 
@@ -271,6 +271,7 @@ export async function GET() {
     });
 
     // Cálculo centralizado de Créditos EDUMIN
+    const creditosExtra = parseCreditosExtraFromProfile(profile);
     const eduminCredits = esAdmin 
       ? {
           paquete: 'ILIMITADO' as const,
@@ -287,7 +288,9 @@ export async function GET() {
           cuotasTotales: profile.cuotas_totales || (profile.paquete_adquirido === 'ILIMITADO' ? 5 : 3),
           tipoPago: profile.tipo_pago || (profile.cuotas_pagadas >= 3 ? 'CONTADO' : 'CUOTAS'),
           diplomadosConsumidos: profile.cupos_diplomados || Math.max(1, diplomados_json.length),
-          cursosConsumidos: profile.cupos_cursos || cursos_json.length
+          cursosConsumidos: profile.cupos_cursos || cursos_json.length,
+          creditosExtraDiplomados: creditosExtra.creditosExtraDiplomados,
+          creditosExtraCursos: creditosExtra.creditosExtraCursos
         });
 
     return NextResponse.json({

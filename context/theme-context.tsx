@@ -13,8 +13,8 @@ type ThemeContextType = {
 };
 
 const ThemeContext = createContext<ThemeContextType>({
-  modo: 'oscuro',
-  esOscuro: true,
+  modo: 'sistema',
+  esOscuro: false,
   mounted: false,
   setModoTema: () => {},
   toggleTema: () => {},
@@ -26,7 +26,7 @@ function resolverEsOscuro(mode: ThemeMode): boolean {
   if (typeof window !== 'undefined' && window.matchMedia) {
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
   }
-  return true;
+  return false;
 }
 
 function aplicarTemaAlDom(isDark: boolean, mode: ThemeMode) {
@@ -42,8 +42,8 @@ function aplicarTemaAlDom(isDark: boolean, mode: ThemeMode) {
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [modo, setModo] = useState<ThemeMode>('oscuro');
-  const [esOscuro, setEsOscuro] = useState<boolean>(true);
+  const [modo, setModo] = useState<ThemeMode>('sistema');
+  const [esOscuro, setEsOscuro] = useState<boolean>(false);
   const [mounted, setMounted] = useState<boolean>(false);
 
   const aplicarModo = useCallback((nuevoModo: ThemeMode) => {
@@ -62,7 +62,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setMounted(true);
-    let initialMode: ThemeMode = 'oscuro';
+    let initialMode: ThemeMode = 'sistema';
     try {
       const saved = (
         localStorage.getItem('edumin_theme_mode') ||

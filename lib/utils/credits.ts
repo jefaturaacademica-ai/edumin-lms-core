@@ -59,6 +59,8 @@ export function calculateEduminCredits(params: {
   tipoPago?: string; // 'CONTADO' | 'CUOTAS'
   diplomadosConsumidos?: number;
   cursosConsumidos?: number;
+  creditosExtraDiplomados?: number;
+  creditosExtraCursos?: number;
 }): EduminCreditsCalculation {
   const rawPkg = (params.paqueteAdquirido || 'COMPLETO').toUpperCase();
   const paquete: PaqueteAdquirido = (PAQUETES_ADQUIRIDOS as readonly string[]).includes(rawPkg)
@@ -137,6 +139,14 @@ export function calculateEduminCredits(params: {
     }
   }
 
+  const extraDip = Math.max(0, Number(params.creditosExtraDiplomados ?? 0));
+  const extraCur = Math.max(0, Number(params.creditosExtraCursos ?? 0));
+
+  dipContratados += extraDip;
+  curContratados += extraCur;
+  dipLiberados += extraDip;
+  curLiberados += extraCur;
+
   const dipDisponibles = Math.max(0, dipLiberados - dipConsumidos);
   const curDisponibles = Math.max(0, curLiberados - curConsumidos);
 
@@ -172,10 +182,12 @@ export function calculateEduminCredits(params: {
 export function calculateReleasedCredits(
   paqueteAdquirido: PaqueteAdquirido | string,
   cuotasPagadas: number,
+  creditosExtraDiplomados: number = 0
 ): number {
   const result = calculateEduminCredits({
     paqueteAdquirido,
     cuotasPagadas,
+    creditosExtraDiplomados
   });
   return result.diplomados.liberados;
 }

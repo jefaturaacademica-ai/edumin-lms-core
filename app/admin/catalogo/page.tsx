@@ -6,12 +6,13 @@ import {
   ShieldCheck, Activity, X, Layers, ChevronRight, UploadCloud, Plus, Loader2, AlertCircle, CheckCircle2, FileSpreadsheet, Download, Search, Edit3, Trash2, Code, Sparkles, Database, RefreshCw, RotateCcw, Folder, Table, PlayCircle, Video, FileText
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
+import { useTabSlug } from '@/lib/hooks/useTabSlug';
 import AdminHeader from '@/components/admin/admin-header';
 import * as XLSX from 'xlsx';
 import { convertirModulosALeccionRows } from '@/lib/data/diplomadosLeccionesService';
 
 export default function CatalogoAdminPage() {
-  const [activeTab, setActiveTab] = useState<'diplomados' | 'cursos' | 'talleres'>('diplomados');
+  const [activeTab, setActiveTab] = useTabSlug<'diplomados' | 'cursos' | 'talleres'>('diplomados', ['diplomados', 'cursos', 'talleres'] as const);
   
   // Modales
   const [showCreateModal, setShowCreateModal] = useState(false);

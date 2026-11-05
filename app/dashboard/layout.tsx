@@ -6,14 +6,16 @@ import { usePathname, useRouter } from 'next/navigation';
 import { Home, BookOpen, Award, LogOut, GraduationCap, Wallet, Menu, X, User } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
 import { ThemeProvider } from '@/context/theme-context';
-import { ProfileProvider } from '@/context/profile-context';
+import { ProfileProvider, useProfile } from '@/context/profile-context';
 import { UserProfileCard } from '@/components/navigation/UserProfileCard';
 import { ThemeMenuButton } from '@/components/navigation/ThemeMenuButton';
+import { ModalCambioPassword } from '@/components/auth/modal-cambio-password';
 
 function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { debeCambiarPassword, nombres, dni, marcarPasswordActualizada } = useProfile();
 
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -218,6 +220,15 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
           {children}
         </div>
       </div>
+
+      {/* Modal Flotante de Cambio / Confirmación de Contraseña */}
+      {debeCambiarPassword && (
+        <ModalCambioPassword 
+          nombres={nombres}
+          dni={dni}
+          onCompletado={marcarPasswordActualizada}
+        />
+      )}
     </div>
   );
 }

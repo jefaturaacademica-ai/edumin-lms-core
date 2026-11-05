@@ -10,6 +10,7 @@ import {
   Sliders
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
+import { useTabSlug } from '@/lib/hooks/useTabSlug';
 import AdminHeader from '@/components/admin/admin-header';
 import ConfiguracionExamenesTab from '@/components/admin/examenes/ConfiguracionExamenesTab';
 import { useTheme } from '@/context/theme-context';
@@ -59,7 +60,7 @@ export default function AdminExamenesPage() {
   const { esOscuro } = useTheme();
 
   // Pestaña principal activa: 'banco' | 'configuracion'
-  const [activeMainTab, setActiveMainTab] = useState<'banco' | 'configuracion'>('banco');
+  const [activeMainTab, setActiveMainTab] = useTabSlug<'banco' | 'configuracion'>('banco', ['banco', 'configuracion'] as const);
 
   // Catálogos separados de diplomados, cursos y talleres
   const [listaDiplomados, setListaDiplomados] = useState(LISTA_DIPLOMADOS_OFICIALES);

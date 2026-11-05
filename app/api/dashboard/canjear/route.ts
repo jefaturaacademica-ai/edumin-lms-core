@@ -3,7 +3,7 @@ import { createClient } from '@/lib/supabase/server';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { calculateReleasedCredits } from '@/lib/utils/credits';
 import { obtenerTallerParaDiplomado } from '@/lib/utils/tallerAsignado';
-import { parseCursosFromProfile, CursoJSON } from '@/lib/utils/profileParser';
+import { parseCursosFromProfile, parseCreditosExtraFromProfile, CursoJSON } from '@/lib/utils/profileParser';
 
 export async function POST(request: Request) {
   try {
@@ -35,9 +35,11 @@ export async function POST(request: Request) {
     }
 
     // 2. Verificar Créditos Disponibles
+    const creditosExtra = parseCreditosExtraFromProfile(profile);
     const releasedCredits = calculateReleasedCredits(
       profile.paquete_adquirido || 'FULL',
-      profile.cuotas_pagadas || 1
+      profile.cuotas_pagadas || 1,
+      creditosExtra.creditosExtraDiplomados
     );
     const cuposActuales = profile.cupos_diplomados || 0;
     const disponibles = Math.max(0, releasedCredits - cuposActuales);

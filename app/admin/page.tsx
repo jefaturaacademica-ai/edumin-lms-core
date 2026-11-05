@@ -14,9 +14,10 @@ import ReciboModal from '@/components/admin/recibo-modal';
 import EditarCronogramaModal from '@/components/admin/editar-cronograma-modal';
 import Ficha360Modal from '@/components/admin/ficha-360-modal';
 import { EstudianteCompleto } from '@/lib/data/mockStudents';
+import { useTabSlug } from '@/lib/hooks/useTabSlug';
 
 export default function AdminDashboard360() {
-  const [activeTab, setActiveTab] = useState<'analitica' | 'tesoreria'>('analitica');
+  const [activeTab, setActiveTab] = useTabSlug<'analitica' | 'tesoreria'>('analitica', ['analitica', 'tesoreria'] as const);
   const [estudiantes, setEstudiantes] = useState<EstudianteCompleto[]>([]);
   const [cargandoEstudiantes, setCargandoEstudiantes] = useState(true);
 

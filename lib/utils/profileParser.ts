@@ -68,7 +68,7 @@ export function parseDiplomadosFromProfile(profile: any): DiplomadoJSON[] {
   ];
 
   for (const candidate of strCandidates) {
-    if (typeof candidate === 'string' && candidate.startsWith('DIPLOMADOS_LIST|')) {
+    if (typeof candidate === 'string' && (candidate.startsWith('DIPLOMADOS_LIST|') || candidate.startsWith('DIPLOMADOS_CONFIG|'))) {
       try {
         const jsonStr = candidate.substring(candidate.indexOf('|') + 1).trim();
         const parsed = JSON.parse(jsonStr);
@@ -78,9 +78,15 @@ export function parseDiplomadosFromProfile(profile: any): DiplomadoJSON[] {
             slug: normalizeSlug(d.slug || d.id || d.titulo),
             id: normalizeSlug(d.id || d.slug || d.titulo)
           }));
+        } else if (parsed && Array.isArray(parsed.lista)) {
+          return parsed.lista.map((d: any) => ({
+            ...d,
+            slug: normalizeSlug(d.slug || d.id || d.titulo),
+            id: normalizeSlug(d.id || d.slug || d.titulo)
+          }));
         }
       } catch (e) {
-        console.error('Error parsing DIPLOMADOS_LIST JSON:', e);
+        console.error('Error parsing DIPLOMADOS JSON:', e);
       }
     }
   }
@@ -140,6 +146,7 @@ export function parseCursosFromProfile(profile: any): CursoJSON[] {
         const jsonStr = candidate.substring(candidate.indexOf('|') + 1).trim();
         const parsed = JSON.parse(jsonStr);
         if (Array.isArray(parsed)) return parsed;
+        if (parsed && Array.isArray(parsed.lista)) return parsed.lista;
       } catch (e) {
         console.error('Error parsing CURSOS_LIST JSON:', e);
       }
@@ -230,3 +237,27 @@ export function calcularAvanceModuloGranular(
   return Math.min(100, Math.round((completadasModulo / totalClasesModulo) * 100));
 }
 
+
+export function parseCreditosExtraFromProfile(profile: any): { creditosExtraDiplomados: number; creditosExtraCursos: number } {
+  if (!profile) return { creditosExtraDiplomados: 0, creditosExtraCursos: 0 };
+  const strCandidates = [profile.diplomados, profile.cursos];
+  let extraDip = 0;
+  let extraCur = 0;
+  for (const candidate of strCandidates) {
+    if (typeof candidate === 'string' && candidate.includes('|')) {
+      try {
+        const jsonStr = candidate.substring(candidate.indexOf('|') + 1).trim();
+        const parsed = JSON.parse(jsonStr);
+        if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+          if (parsed.creditos_extra_diplomados !== undefined) {
+            extraDip = Math.max(extraDip, Number(parsed.creditos_extra_diplomados) || 0);
+          }
+          if (parsed.creditos_extra_cursos !== undefined) {
+            extraCur = Math.max(extraCur, Number(parsed.creditos_extra_cursos) || 0);
+          }
+        }
+      } catch {}
+    }
+  }
+  return { creditosExtraDiplomados: extraDip, creditosExtraCursos: extraCur };
+}

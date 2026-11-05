@@ -74,18 +74,6 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(dashboardUrl);
   }
 
-  if (profile?.debe_cambiar_password && pathname !== UPDATE_CREDENTIALS_PATH) {
-    const updateCredentialsUrl = request.nextUrl.clone();
-    updateCredentialsUrl.pathname = UPDATE_CREDENTIALS_PATH;
-    return NextResponse.redirect(updateCredentialsUrl);
-  }
-
-  if (!profile?.debe_cambiar_password && pathname === LOGIN_PATH) {
-    const dashboardUrl = request.nextUrl.clone();
-    dashboardUrl.pathname = "/dashboard";
-    return NextResponse.redirect(dashboardUrl);
-  }
-
   return response;
 }
 

@@ -12,6 +12,7 @@ import {
   Shuffle, Type, Bold, Italic, Underline
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
+import { useTabSlug } from '@/lib/hooks/useTabSlug';
 import AdminHeader from '@/components/admin/admin-header';
 import AvanzaCertificateRenderer, { 
   DisenoCoordenadas, 
@@ -162,7 +163,7 @@ function ControlPasoNumero({
 }
 
 export default function CertificacionesAdminPage() {
-  const [activeTab, setActiveTab] = useState<'emitidos' | 'modelos' | 'editor' | 'cip' | 'emision'>('emitidos');
+  const [activeTab, setActiveTab] = useTabSlug<'emitidos' | 'modelos' | 'editor' | 'cip' | 'emision'>('emitidos', ['emitidos', 'modelos', 'editor', 'cip', 'emision'] as const);
   const [mensajeExito, setMensajeExito] = useState<string | null>(null);
   const [cargando, setCargando] = useState(true);
 

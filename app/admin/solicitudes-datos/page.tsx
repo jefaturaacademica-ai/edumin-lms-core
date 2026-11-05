@@ -7,6 +7,7 @@ import {
   GraduationCap, QrCode, Printer, Copy, Check, Filter, UserCog, Mail, Phone, Calendar
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
+import { useTabSlug } from '@/lib/hooks/useTabSlug';
 import AdminHeader from '@/components/admin/admin-header';
 
 export interface EstudiantePerfil {
@@ -23,7 +24,7 @@ export interface EstudiantePerfil {
 }
 
 export default function SolicitudesDatosAdminPage() {
-  const [activeTab, setActiveTab] = useState<'estudiantes' | 'solicitudes'>('estudiantes');
+  const [activeTab, setActiveTab] = useTabSlug<'estudiantes' | 'solicitudes'>('estudiantes', ['estudiantes', 'solicitudes'] as const);
   const [estudiantes, setEstudiantes] = useState<EstudiantePerfil[]>([]);
   const [solicitudes, setSolicitudes] = useState<any[]>([]);
   const [cargando, setCargando] = useState(true);
