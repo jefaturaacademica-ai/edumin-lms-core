@@ -214,17 +214,24 @@ export function generarFilasMaestrasIniciales(): LeccionRow[] {
 }
 
 // Construye la lista de recursos activos para una sesión: SÓLO incluye los campos que tienen links
+// Orden establecido:
+// 1. Material de la clase (PdfUrl)
+// 2. Material adicional (Material1 hasta Material8)
+// 3. Resumen en video (ResumenVideoUrl)
+// 4. Resumen en audio (ResumenAudioUrl)
+// 5. Resumen interactivo (ResumenInteractivo)
+// 6. Mapa mental (ResumenMapaMental)
 export function obtenerRecursosConLinks(row: LeccionRow, numClase: number) {
   const recursos: any[] = [];
   const r = normalizeLeccionRow(row);
 
-  // 1. Material de clases (Diapositivas / PDF / Presentación)
+  // 1. Material de la clase (Diapositivas / PDF / Documentos oficiales)
   if (r.PdfUrl) {
     const esPpt = (r.PdfUrl || '').toLowerCase().includes('.pptx');
     recursos.push({
       id: `rec-pdf-${numClase}`,
       tipo: 'pdf',
-      titulo: 'Diapositivas de la clase',
+      titulo: 'Material de la clase',
       descripcion: esPpt 
         ? 'Diapositivas y presentación oficial de la sesión' 
         : 'Diapositivas y contenidos oficiales de la sesión en PDF',
@@ -233,55 +240,7 @@ export function obtenerRecursosConLinks(row: LeccionRow, numClase: number) {
     });
   }
 
-  // 2. Resumen en video
-  if (r.ResumenVideoUrl) {
-    recursos.push({
-      id: `rec-video-resumen-${numClase}`,
-      tipo: 'video',
-      titulo: 'Resumen en video',
-      descripcion: 'Video sumario con los puntos más relevantes de la sesión',
-      archivo: r.ResumenVideoUrl,
-      url: r.ResumenVideoUrl
-    });
-  }
-
-  // 3. Resumen en audio
-  if (r.ResumenAudioUrl) {
-    recursos.push({
-      id: `rec-audio-${numClase}`,
-      tipo: 'audio',
-      titulo: 'Resumen en audio',
-      descripcion: 'Audio oficial o reproductor interactivo para estudio y repaso de la sesión',
-      archivo: r.ResumenAudioUrl,
-      url: r.ResumenAudioUrl
-    });
-  }
-
-  // 4. Resumen interactivo
-  if (r.ResumenInteractivo) {
-    recursos.push({
-      id: `rec-interactivo-${numClase}`,
-      tipo: 'interactivo',
-      titulo: 'Resumen interactivo',
-      descripcion: 'Guía interactiva de conceptos clave y validación dinámica',
-      archivo: r.ResumenInteractivo,
-      url: r.ResumenInteractivo
-    });
-  }
-
-  // 5. Mapa mental
-  if (r.ResumenMapaMental) {
-    recursos.push({
-      id: `rec-mapamental-${numClase}`,
-      tipo: 'mapamental',
-      titulo: 'Mapa mental',
-      descripcion: 'Esquema conceptual y mapa mental interactivo de la sesión',
-      archivo: r.ResumenMapaMental,
-      url: r.ResumenMapaMental
-    });
-  }
-
-  // 6. Materiales Adicionales (Material1 hasta Material8): sólo si tienen link
+  // 2. Material Adicional (Material1 hasta Material8): sólo si tienen link
   const materialesKeys: (keyof LeccionRow)[] = [
     'Material1', 'Material2', 'Material3', 'Material4',
     'Material5', 'Material6', 'Material7', 'Material8'
@@ -297,13 +256,61 @@ export function obtenerRecursosConLinks(row: LeccionRow, numClase: number) {
       recursos.push({
         id: `rec-mat-${numClase}-${numMat}`,
         tipo: esExcel ? 'excel' : (esPdf ? 'pdf' : 'material'),
-        titulo: `Material ${numMat}: ${esExcel ? 'Plantilla de Cálculo / Excel' : (esPdf ? 'Documento Complementario' : 'Recurso de Estudio')}`,
-        descripcion: `Material didáctico adicional ${numMat} configurado para la sesión`,
+        titulo: numMat === 1 ? 'Material adicional' : `Material adicional ${numMat}`,
+        descripcion: `Material complementario de estudio para profundizar la sesión`,
         archivo: val.trim(),
         url: val.trim()
       });
     }
   });
+
+  // 3. Resumen en video
+  if (r.ResumenVideoUrl) {
+    recursos.push({
+      id: `rec-video-resumen-${numClase}`,
+      tipo: 'video',
+      titulo: 'Resumen en video',
+      descripcion: 'Cápsula en video con los conceptos y puntos clave de la sesión',
+      archivo: r.ResumenVideoUrl,
+      url: r.ResumenVideoUrl
+    });
+  }
+
+  // 4. Resumen en audio
+  if (r.ResumenAudioUrl) {
+    recursos.push({
+      id: `rec-audio-${numClase}`,
+      tipo: 'audio',
+      titulo: 'Resumen en audio',
+      descripcion: 'Audio oficial o reproductor interactivo para estudio y repaso de la sesión',
+      archivo: r.ResumenAudioUrl,
+      url: r.ResumenAudioUrl
+    });
+  }
+
+  // 5. Resumen interactivo
+  if (r.ResumenInteractivo) {
+    recursos.push({
+      id: `rec-interactivo-${numClase}`,
+      tipo: 'interactivo',
+      titulo: 'Resumen interactivo',
+      descripcion: 'Guía interactiva de conceptos clave y validación dinámica',
+      archivo: r.ResumenInteractivo,
+      url: r.ResumenInteractivo
+    });
+  }
+
+  // 6. Mapa mental
+  if (r.ResumenMapaMental) {
+    recursos.push({
+      id: `rec-mapamental-${numClase}`,
+      tipo: 'mapamental',
+      titulo: 'Mapa mental',
+      descripcion: 'Esquema conceptual y mapa mental interactivo de la sesión',
+      archivo: r.ResumenMapaMental,
+      url: r.ResumenMapaMental
+    });
+  }
 
   return recursos;
 }

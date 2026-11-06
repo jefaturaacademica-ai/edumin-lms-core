@@ -40,7 +40,7 @@ export async function loginWithDni(
   const admin = createAdminClient();
   const { data: profile, error: profileError } = await admin
     .from("profiles")
-    .select("id, email, dni_ce, contrasena, role, bloqueado, nombres, apellidos")
+    .select("id, email, dni_ce, contrasena, role, bloqueado, nombres, apellidos, paquete_adquirido, diplomados, cursos")
     .eq("dni_ce", dni)
     .maybeSingle();
 
@@ -118,30 +118,44 @@ export async function loginWithDni(
   }
 
   // Detección de roles del usuario:
-  // Si el usuario es ADMIN o SUPERADMIN (como el usuario 11111111), posee 2 roles: Administrador y Estudiante
+  // Un usuario puede tener:
+  // 1 Rol Administrativo (SUPERADMIN, ADMIN, FINANCIERO)
+  // 1 Rol Académico (ESTUDIANTE, DOCENTE)
   const esAdmin = profile.role === "ADMIN" || profile.role === "SUPERADMIN";
   const esDocente = profile.role === "DOCENTE";
 
   if (esAdmin) {
-    const nombreCompleto = `${profile.nombres || ''} ${profile.apellidos || ''}`.trim() || 'Usuario';
-    return {
-      requiresRoleSelection: true,
-      userName: nombreCompleto,
-      userRoles: [
-        {
-          id: 'estudiante',
-          titulo: 'Ingresar como estudiante',
-          subtitulo: '',
-          ruta: '/dashboard',
-        },
-        {
-          id: 'admin',
-          titulo: 'Ingresar como administrador',
-          subtitulo: '',
-          ruta: '/admin',
-        },
-      ],
-    };
+    const tienePerfilEstudiante = Boolean(
+      profile.paquete_adquirido || 
+      (profile.diplomados && profile.diplomados !== '[]' && profile.diplomados !== '') || 
+      (profile.cursos && profile.cursos !== '[]' && profile.cursos !== '')
+    );
+
+    // Solo si tiene acceso dual (Administrador + Estudiante con matrícula) le sale el selector
+    if (tienePerfilEstudiante) {
+      const nombreCompleto = `${profile.nombres || ''} ${profile.apellidos || ''}`.trim() || 'Usuario';
+      return {
+        requiresRoleSelection: true,
+        userName: nombreCompleto,
+        userRoles: [
+          {
+            id: 'estudiante',
+            titulo: 'Ingresar como estudiante',
+            subtitulo: '',
+            ruta: '/dashboard',
+          },
+          {
+            id: 'admin',
+            titulo: 'Ingresar como administrador',
+            subtitulo: '',
+            ruta: '/admin',
+          },
+        ],
+      };
+    }
+
+    // Si es personal administrativo puro (sin rol de estudiante), entra directo a /admin
+    redirect("/admin");
   }
 
   // Si tiene un solo rol, redirige directamente sin mostrar selector

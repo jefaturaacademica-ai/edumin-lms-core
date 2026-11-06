@@ -116,11 +116,11 @@ export async function GET() {
   try {
     const admin = createAdminClient();
     
-    // Consultar perfiles de tipo ESTUDIANTE
+    // Consultar perfiles de tipo ESTUDIANTE o con acceso dual (ADMIN / SUPERADMIN con perfil académico)
     const { data: profiles, error } = await admin
       .from('profiles')
       .select('*')
-      .eq('role', 'ESTUDIANTE')
+      .in('role', ['ESTUDIANTE', 'ADMIN', 'SUPERADMIN'])
       .order('nombres', { ascending: true });
 
     if (error) {
@@ -323,7 +323,7 @@ export async function PATCH(request: Request) {
     const admin = createAdminClient();
 
     if (action === 'update_perfil') {
-      const { nombres, apellidos, new_dni_ce, email, telefono, fecha_nacimiento, paquete_adquirido, bloqueado, prorroga_hasta } = body;
+      const { nombres, apellidos, new_dni_ce, email, telefono, fecha_nacimiento, paquete_adquirido, bloqueado, prorroga_hasta, role } = body;
 
       let profileQuery = admin.from('profiles').select('*');
       if (studentId) profileQuery = profileQuery.eq('id', studentId);
@@ -345,6 +345,9 @@ export async function PATCH(request: Request) {
       if (paquete_adquirido !== undefined) updateData.paquete_adquirido = String(paquete_adquirido).trim().toUpperCase();
       if (bloqueado !== undefined) updateData.bloqueado = Boolean(bloqueado);
       if (prorroga_hasta !== undefined) updateData.prorroga_hasta = prorroga_hasta || null;
+      if (role !== undefined && ['ESTUDIANTE', 'ADMIN', 'DOCENTE', 'SUPERADMIN'].includes(String(role).trim().toUpperCase())) {
+        updateData.role = String(role).trim().toUpperCase();
+      }
 
       const { data: updated, error: updateErr } = await admin
         .from('profiles')

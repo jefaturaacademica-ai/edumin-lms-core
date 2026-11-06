@@ -9,7 +9,6 @@ import {
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import { useTabSlug } from '@/lib/hooks/useTabSlug';
-import AdminHeader from '@/components/admin/admin-header';
 import AnularPagoModal from '@/components/admin/anular-pago-modal';
 import ReciboModal from '@/components/admin/recibo-modal';
 import EditarCronogramaModal from '@/components/admin/editar-cronograma-modal';
@@ -419,7 +418,6 @@ export default function AdminEstudiantesPage() {
 
       {/* Contenido Principal con Header Superior */}
       <div className="flex-1 flex flex-col overflow-hidden min-w-0 h-full">
-        <AdminHeader breadcrumb="Estudiantes" />
         <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
           <div className="max-w-7xl mx-auto space-y-6">
           
@@ -563,8 +561,20 @@ export default function AdminEstudiantesPage() {
                               {est.dni_ce}
                             </td>
                             <td className="py-3 px-4">
-                              <div className="font-bold text-slate-900 dark:text-white">
-                                {est.nombres} {est.apellidos}
+                              <div className="flex items-center gap-2">
+                                <span className="font-bold text-slate-900 dark:text-white">
+                                  {est.nombres} {est.apellidos}
+                                </span>
+                                {est.role === 'ADMIN' && (
+                                  <span className="px-1.5 py-0.5 rounded text-[9px] font-black bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 shrink-0">
+                                    Admin
+                                  </span>
+                                )}
+                                {est.role === 'SUPERADMIN' && (
+                                  <span className="px-1.5 py-0.5 rounded text-[9px] font-black bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 shrink-0">
+                                    Superadmin
+                                  </span>
+                                )}
                               </div>
                               <div className="text-[11px] text-slate-400 font-normal">
                                 {est.email}

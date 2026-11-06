@@ -11,7 +11,6 @@ import {
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import { useTabSlug } from '@/lib/hooks/useTabSlug';
-import AdminHeader from '@/components/admin/admin-header';
 import ConfiguracionExamenesTab from '@/components/admin/examenes/ConfiguracionExamenesTab';
 import { useTheme } from '@/context/theme-context';
 import { formatearTextoCientifico, limpiarTextoCientificoPlano } from '@/lib/utils/textoCientifico';
@@ -538,7 +537,6 @@ export default function AdminExamenesPage() {
       <AdminSidebar />
 
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
-        <AdminHeader title="Evaluaciones y Banco de preguntas" />
 
         <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 space-y-6">
           {/* Encabezado estandarizado */}

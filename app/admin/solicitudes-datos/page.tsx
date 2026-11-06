@@ -8,7 +8,6 @@ import {
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import { useTabSlug } from '@/lib/hooks/useTabSlug';
-import AdminHeader from '@/components/admin/admin-header';
 
 export interface EstudiantePerfil {
   id: string;
@@ -191,7 +190,6 @@ export default function SolicitudesDatosAdminPage() {
 
       {/* Contenido Principal con Header Superior */}
       <div className="flex-1 flex flex-col overflow-hidden min-w-0 h-full">
-        <AdminHeader breadcrumb="Solicitudes de datos" />
         <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
           <div className="max-w-7xl mx-auto space-y-6">
           

@@ -3143,11 +3143,11 @@
               "clases": [
                 {
                   "titulo": "Clase 11: Parte 1",
-                  "videoUrl": "https://drive.google.com/file/d/15cSD6XukHSUNJxf-GOE6fP3nZIAncyCy/preview"
+                  "videoUrl": "https://drive.google.com/file/d/1CFEalGVB3EFy1_NHVlCyHXjGF8qQV8GT/preview"
                 },
                 {
                   "titulo": "Clase 12: Parte 2",
-                  "videoUrl": "https://drive.google.com/file/d/1CFEalGVB3EFy1_NHVlCyHXjGF8qQV8GT/preview"
+                  "videoUrl": "https://drive.google.com/file/d/1ImTWKKGBW7u43Y38b-hDrLwWWzJElSjC/preview"
                 }
               ]
             },
@@ -3156,11 +3156,15 @@
               "clases": [
                 {
                   "titulo": "Clase 13: Parte 1",
-                  "videoUrl": "https://drive.google.com/file/d/1ImTWKKGBW7u43Y38b-hDrLwWWzJElSjC/preview"
+                  "videoUrl": "https://drive.google.com/file/d/1MaUowHdNgqQfZHzE2ejrNAULEDNUpGlz/preview"
                 },
                 {
                   "titulo": "Clase 14: Parte 2",
-                  "videoUrl": "https://drive.google.com/file/d/1MaUowHdNgqQfZHzE2ejrNAULEDNUpGlz/preview"
+                  "videoUrl": "https://drive.google.com/file/d/1-eI3HEvNnSuzac4aDhkjGn_tNa9ec-oy/preview"
+                },
+                {
+                  "titulo": "Clase 14: Parte 3",
+                  "videoUrl": "https://drive.google.com/file/d/1iikfrVG40FdIzE6n53dep9dk5uvjdfYP/preview"
                 }
               ]
             }
@@ -3240,11 +3244,11 @@
               "titulo": "Tema 11: Aplicación Práctica y Zona de Preguntas",
               "clases": [
                 {
-                  "titulo": "Clase 21: Parte 3",
+                  "titulo": "Clase 21: Parte 1",
                   "videoUrl": "https://drive.google.com/file/d/1SLaEh4aXzshlZ1yCuo3OT6RZg82CeDpN/preview"
                 },
                 {
-                  "titulo": "Clase 22: Parte 4",
+                  "titulo": "Clase 22: Parte 2",
                   "videoUrl": "https://drive.google.com/file/d/1VF2SOzFZDgl5ZKT49IY7U1DRrGLvMA3V/preview"
                 }
               ]
@@ -4136,10 +4140,10 @@
               "titulo": "Tema 08: Sesión Práctica",
               "clases": [
                 {
-                  "titulo": "Clase 14: Parte 2"
+                  "titulo": "Clase 14: Parte 1"
                 },
                 {
-                  "titulo": "Clase 15: Parte 3"
+                  "titulo": "Clase 15: Parte 2"
                 }
               ]
             }
@@ -4221,10 +4225,10 @@
               "titulo": "Tema 12: Sesión Práctica",
               "clases": [
                 {
-                  "titulo": "Clase 22: Parte 4"
+                  "titulo": "Clase 22: Parte 1"
                 },
                 {
-                  "titulo": "Clase 23: Parte 5"
+                  "titulo": "Clase 23: Parte 2"
                 }
               ]
             }
@@ -5642,7 +5646,7 @@
               "titulo": "Tema 14: Clase Magistral",
               "clases": [
                 {
-                  "titulo": "Clase 19: Parte 2"
+                  "titulo": "Clase 19: Parte 1"
                 }
               ]
             }
@@ -5753,7 +5757,7 @@
               "titulo": "Tema 20: Clase Magistral",
               "clases": [
                 {
-                  "titulo": "Clase 28: Parte 3"
+                  "titulo": "Clase 28: Parte 1"
                 }
               ]
             }
@@ -5930,10 +5934,10 @@
               "titulo": "Tema 08: Aplicación Práctica y Zona de Preguntas",
               "clases": [
                 {
-                  "titulo": "Clase 15: Parte 3"
+                  "titulo": "Clase 15: Parte 1"
                 },
                 {
-                  "titulo": "Clase 16: Parte 4"
+                  "titulo": "Clase 16: Parte 2"
                 }
               ]
             }
@@ -6018,10 +6022,10 @@
               "titulo": "Tema 13: Aplicación Práctica y Zona de Preguntas",
               "clases": [
                 {
-                  "titulo": "Clase 22: Parte 5"
+                  "titulo": "Clase 22: Parte 1"
                 },
                 {
-                  "titulo": "Clase 23: Parte 6"
+                  "titulo": "Clase 23: Parte 2"
                 }
               ]
             }

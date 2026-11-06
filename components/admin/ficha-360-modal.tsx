@@ -5,7 +5,7 @@ import {
   X, Calendar, Plus, Settings, CreditCard, CheckCircle2, RefreshCw, 
   FileText, Download, Award, Send, AlertTriangle, DollarSign, Check,
   User, UserCheck, Phone, Mail, Sparkles, BookOpen, Clock, ShieldAlert,
-  ChevronRight, Layers, Lock, Unlock
+  ChevronRight, Layers, Lock, Unlock, ShieldCheck
 } from 'lucide-react';
 
 interface Ficha360ModalProps {
@@ -68,6 +68,7 @@ export default function Ficha360Modal({
   const [editTelefono, setEditTelefono] = useState<string>('');
   const [editFechaNacimiento, setEditFechaNacimiento] = useState<string>('');
   const [editPaquete, setEditPaquete] = useState<string>('FULL');
+  const [editRole, setEditRole] = useState<string>('ESTUDIANTE');
   const [editBloqueado, setEditBloqueado] = useState<boolean>(false);
   const [editProrroga, setEditProrroga] = useState<string>('');
   const [guardandoPerfil, setGuardandoPerfil] = useState<boolean>(false);
@@ -103,6 +104,7 @@ export default function Ficha360Modal({
       setEditTelefono(alumnoSeleccionado.telefono && alumnoSeleccionado.telefono !== 'Sin teléfono' ? alumnoSeleccionado.telefono : '');
       setEditFechaNacimiento(alumnoSeleccionado.fecha_nacimiento || '');
       setEditPaquete(alumnoSeleccionado.paquete_adquirido || 'FULL');
+      setEditRole(alumnoSeleccionado.role || 'ESTUDIANTE');
       setEditBloqueado(Boolean(alumnoSeleccionado.bloqueado));
       setEditProrroga(alumnoSeleccionado.prorroga_hasta || '');
       setExtraDip(alumnoSeleccionado.creditos_extra_diplomados || 0);
@@ -145,6 +147,7 @@ export default function Ficha360Modal({
           telefono: editTelefono.trim(),
           fecha_nacimiento: editFechaNacimiento.trim() || null,
           paquete_adquirido: editPaquete,
+          role: editRole,
           bloqueado: editBloqueado,
           prorroga_hasta: editProrroga || null
         })
@@ -490,6 +493,43 @@ export default function Ficha360Modal({
                         onChange={(e) => setEditProrroga(e.target.value)}
                         className="w-full px-3.5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold tabular-nums text-slate-900 dark:text-white outline-none focus:border-indigo-500 transition-colors"
                       />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Sección 4: Roles y permisos institucionales */}
+                <div className="bg-slate-50 dark:bg-slate-800/40 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
+                  <h4 className="text-xs font-black text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
+                    <ShieldCheck className="size-4 text-indigo-500" />
+                    Roles y Nivel de Acceso Institucional
+                  </h4>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                    <div>
+                      <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-400 uppercase mb-1">
+                        Asignación de rol en el sistema
+                      </label>
+                      <select
+                        value={editRole}
+                        onChange={(e) => setEditRole(e.target.value)}
+                        className="w-full px-3.5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white outline-none focus:border-indigo-500 transition-colors cursor-pointer"
+                      >
+                        <option value="ESTUDIANTE">Solo Estudiante (Acceso a campus virtual)</option>
+                        <option value="ADMIN">Estudiante + Administrador (Acceso dual)</option>
+                        <option value="DOCENTE">Docente (Gestión docente y notas)</option>
+                        <option value="SUPERADMIN">Superadministrador (Acceso total)</option>
+                      </select>
+                    </div>
+
+                    <div className="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 text-xs space-y-1">
+                      <span className="font-bold text-slate-800 dark:text-slate-200 block text-[11px]">
+                        {editRole === 'ADMIN' ? 'Acceso dual activo' : editRole === 'SUPERADMIN' ? 'Acceso total activo' : 'Acceso regular de estudiante'}
+                      </span>
+                      <p className="text-[10px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                        {editRole === 'ADMIN' || editRole === 'SUPERADMIN'
+                          ? 'El usuario conservará todos sus diplomados, cursos y pagos como alumno, y además podrá ingresar al panel de administración mediante el selector de perfil.'
+                          : 'El usuario ingresará directamente al campus virtual con sus credenciales institucionales.'}
+                      </p>
                     </div>
                   </div>
                 </div>

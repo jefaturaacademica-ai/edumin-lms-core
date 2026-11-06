@@ -339,12 +339,17 @@ export default function PerfilEstudiante() {
             {/* A su lado: Etiqueta del programa arriba -> Nombre -> Botones auxiliares */}
             <div className="min-w-0 flex-1 flex flex-col items-center sm:items-start text-center sm:text-left gap-2.5">
               
-              {/* 1. Arriba: Etiqueta del Programa */}
-              <div>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-400/30">
-                  <GraduationCap className="w-3.5 h-3.5 text-indigo-400" />
-                  <span>{paqueteContratado || 'Estudiante'}</span>
+              {/* 1. Arriba: Rol ("Estudiante") y Programa adquirido */}
+              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-emerald-300 bg-emerald-500/15 rounded-full border border-emerald-500/25">
+                  <span className="size-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                  <span>Estudiante</span>
                 </span>
+                {paqueteContratado && (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-400/30">
+                    <span>{paqueteContratado}</span>
+                  </span>
+                )}
               </div>
 
               {/* 2. El Nombre */}

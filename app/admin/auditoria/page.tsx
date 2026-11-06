@@ -9,7 +9,6 @@ import { createBrowserClient } from '@supabase/ssr';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import AdminSidebar from '@/components/admin/admin-sidebar';
-import AdminHeader from '@/components/admin/admin-header';
 
 export default function AuditoriaWebhooksPage() {
   const [logs, setLogs] = useState<any[]>([]);
@@ -90,7 +89,6 @@ export default function AuditoriaWebhooksPage() {
 
       {/* Contenido Principal con Header Superior */}
       <div className="flex-1 flex flex-col overflow-hidden min-w-0 h-full">
-        <AdminHeader breadcrumb="Auditoría" />
         <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
           <div className="max-w-7xl mx-auto space-y-8">
           

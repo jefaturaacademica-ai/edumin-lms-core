@@ -10,7 +10,8 @@ import {
   Settings, 
   Key, 
   LogOut, 
-  Check 
+  Check,
+  User
 } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
 
@@ -148,6 +149,18 @@ export default function InstitutionalUserDropdown({ className = '' }: Institutio
             </Link>
           </div>
 
+
+          {/* Mi perfil y datos personales */}
+          <div className="py-1">
+            <Link
+              href="/dashboard/perfil"
+              onClick={() => setDropdownOpen(false)}
+              className="flex items-center gap-2.5 px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium transition-colors"
+            >
+              <User className="size-4 text-slate-400" />
+              <span>Mi perfil y datos personales</span>
+            </Link>
+          </div>
           {/* 3. Configuración (ESTRICTAMENTE SOLO PARA ROL ADMIN / SUPERADMIN) */}
           {isRealAdmin && (
             <div className="py-1">

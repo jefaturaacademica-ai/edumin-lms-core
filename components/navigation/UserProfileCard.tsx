@@ -61,7 +61,7 @@ export function UserProfileCard({
           )}
         </div>
         <div className="min-w-0 flex-1">
-          {/* Fila 1: Nombre completamente despejado */}
+          {/* Fila 1: Nombre */}
           <h4 className="text-xs font-bold text-white truncate group-hover:text-indigo-400 transition-colors">
             {primerNombre} {primerApellido}
           </h4>
@@ -78,7 +78,7 @@ export function UserProfileCard({
   }
 
   // CASO 2: USUARIO CON 2 O MÁS ROLES (ADMIN / SUPERADMIN)
-  // Fila 1: Nombre despejado para nombres largos
+  // Fila 1: Nombre
   // Fila 2: Badge del rol actual + flecha para expandir el selector de roles
   return (
     <div ref={containerRef} className={`relative w-full select-none ${className}`}>
@@ -98,7 +98,7 @@ export function UserProfileCard({
         </div>
 
         <div className="min-w-0 flex-1">
-          {/* Fila 1: Nombre totalmente libre y despejado para nombres largos */}
+          {/* Fila 1: Nombre */}
           <h4 className="text-xs font-bold text-white truncate group-hover:text-indigo-400 transition-colors">
             {primerNombre} {primerApellido}
           </h4>
@@ -123,7 +123,7 @@ export function UserProfileCard({
         </div>
       </button>
 
-      {/* Menú Desplegable Exclusivo de Roles (Sin "Mi perfil", ya que está en el sidebar) */}
+      {/* Menú Desplegable Exclusivo de Cambio de Rol */}
       {open && (
         <div className="absolute left-0 right-0 top-full mt-2 bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-1.5 z-50 text-xs text-slate-200 animate-in fade-in zoom-in-95">
           <div className="px-2.5 py-1 text-[10px] font-bold text-slate-400 uppercase tracking-wider">
@@ -147,7 +147,7 @@ export function UserProfileCard({
             >
               <div className="flex items-center gap-2">
                 <GraduationCap className="size-4 text-slate-400" />
-                <span>Ver como Estudiante</span>
+                <span>Ver como estudiante</span>
               </div>
               <span className="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">
                 Ir →
@@ -172,7 +172,7 @@ export function UserProfileCard({
             >
               <div className="flex items-center gap-2">
                 <ShieldCheck className="size-4 text-slate-400" />
-                <span>Panel Administrador</span>
+                <span>Panel administrador</span>
               </div>
               <span className="text-[10px] font-bold text-indigo-400 bg-indigo-500/10 px-1.5 py-0.5 rounded border border-indigo-500/20">
                 Ir →

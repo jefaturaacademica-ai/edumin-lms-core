@@ -4,23 +4,31 @@ import React, { useState, useEffect } from 'react';
 import { 
   CreditCard, ShieldCheck, Users, BookOpen, Settings, LogOut,
   Activity, CheckCircle2, AlertCircle, Search, UserCheck, Layers, Award, Save, RefreshCw, Server,
-  GraduationCap, Eye, ExternalLink, Database, Sparkles, Check, Plus, Trash2
+  GraduationCap, Eye, ExternalLink, Database, Sparkles, Check, Plus, Trash2, Info, ArrowRightLeft
 } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import { useTabSlug } from '@/lib/hooks/useTabSlug';
-import AdminHeader from '@/components/admin/admin-header';
 import { LoginPersonalizacionTab } from '@/components/admin/configuracion/LoginPersonalizacionTab';
 import { PaqueteDefinicion, PAQUETES_DEFAULT } from '@/lib/types/paquetes';
+import { PermisosRolesTab } from '@/components/admin/configuracion/PermisosRolesTab';
+import { AsignarRolesModal } from '@/components/admin/configuracion/AsignarRolesModal';
+import { RolePermisoDefinicion, ROLES_PREDEFINIDOS } from '@/lib/types/roles';
+
 
 export default function ConfiguracionRolesPage() {
-  const [activeTab, setActiveTab] = useTabSlug<'rbac' | 'paquetes' | 'simulador' | 'login'>('rbac', ['rbac', 'paquetes', 'simulador', 'login'] as const);
+  const [activeTab, setActiveTab] = useTabSlug<'rbac' | 'permisos' | 'paquetes' | 'simulador' | 'login'>('rbac', ['rbac', 'permisos', 'paquetes', 'simulador', 'login'] as const);
   const [usuarios, setUsuarios] = useState<any[]>([]);
   const [cargando, setCargando] = useState(true);
   const [busqueda, setBusqueda] = useState('');
   const [mensajeExito, setMensajeExito] = useState<string | null>(null);
+  // Configuración de roles y permisos
+  const [rolesConfig, setRolesConfig] = useState<Record<string, RolePermisoDefinicion>>(ROLES_PREDEFINIDOS);
+  const [guardandoRolId, setGuardandoRolId] = useState<string | null>(null);
+  const [usuarioParaAsignar, setUsuarioParaAsignar] = useState<any | null>(null);
+
   
   // Estado para la configuración de plantillas de paquetes
   const [paquetesConfig, setPaquetesConfig] = useState<Record<string, PaqueteDefinicion>>(PAQUETES_DEFAULT);
@@ -57,6 +65,7 @@ export default function ConfiguracionRolesPage() {
 
   useEffect(() => {
     cargarUsuarios();
+    cargarConfigRoles();
     cargarConfigPaquetes();
     cargarConfigBienvenida();
   }, []);
@@ -139,8 +148,27 @@ export default function ConfiguracionRolesPage() {
       });
 
       if (res.ok) {
-        setUsuarios(prev => prev.map(u => u.id === userId ? { ...u, role: nuevoRol } : u));
-        setMensajeExito(`¡Rol actualizado exitosamente a ${nuevoRol}!`);
+        setUsuarios(prev => prev.map(u => {
+          if (u.id === userId) {
+            const activeRoles = ['ESTUDIANTE'];
+            if (nuevoRol === 'ADMIN') activeRoles.push('ADMIN');
+            else if (nuevoRol === 'SUPERADMIN') activeRoles.push('SUPERADMIN');
+            else if (nuevoRol === 'DOCENTE') activeRoles.push('DOCENTE');
+            return {
+              ...u,
+              role: nuevoRol,
+              roles: activeRoles,
+              esDual: nuevoRol === 'ADMIN' || nuevoRol === 'SUPERADMIN'
+            };
+          }
+          return u;
+        }));
+        const labelExito = nuevoRol === 'ADMIN' 
+          ? 'Estudiante + Administrador (Acceso dual activado)' 
+          : nuevoRol === 'ESTUDIANTE' 
+          ? 'Estudiante (Acceso a campus únicamente)' 
+          : nuevoRol;
+        setMensajeExito(`¡Permisos actualizados con éxito: ${labelExito}!`);
         setTimeout(() => setMensajeExito(null), 4000);
       } else {
         alert('No se pudo actualizar el rol en la base de datos.');
@@ -149,6 +177,117 @@ export default function ConfiguracionRolesPage() {
       console.error(e);
       alert('Error de comunicación con el servidor.');
     }
+  };
+
+  
+  const cargarConfigRoles = async () => {
+    try {
+      const res = await fetch('/api/admin/roles-config');
+      if (res.ok) {
+        const data = await res.json();
+        if (data.roles) setRolesConfig(data.roles);
+      }
+    } catch (e) {
+      console.error('Error cargando roles config:', e);
+    }
+  };
+
+  const handleGuardarPermisosRol = async (rolId: string, modulos: string[]) => {
+    setGuardandoRolId(rolId);
+    try {
+      const updated = {
+        ...rolesConfig,
+        [rolId]: {
+          ...rolesConfig[rolId],
+          modulosPermitidos: modulos
+        }
+      };
+      setRolesConfig(updated);
+
+      const res = await fetch('/api/admin/roles-config', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ roles: updated })
+      });
+
+      if (res.ok) {
+        setMensajeExito(`¡Permisos de ${rolesConfig[rolId]?.nombre || rolId} guardados exitosamente!`);
+        setTimeout(() => setMensajeExito(null), 4000);
+      } else {
+        alert('No se pudieron guardar los permisos.');
+      }
+    } catch (e) {
+      console.error(e);
+      alert('Error de red al guardar permisos.');
+    } finally {
+      setGuardandoRolId(null);
+    }
+  };
+
+  const handleCrearNuevoRol = async (nuevoRol: RolePermisoDefinicion) => {
+    const updated = {
+      ...rolesConfig,
+      [nuevoRol.id]: nuevoRol
+    };
+    setRolesConfig(updated);
+
+    const res = await fetch('/api/admin/roles-config', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ roles: updated })
+    });
+
+    if (res.ok) {
+      setMensajeExito(`¡Rol ${nuevoRol.nombre} creado y disponible para asignación!`);
+      setTimeout(() => setMensajeExito(null), 4000);
+    }
+  };
+
+  const handleEliminarRol = async (rolId: string) => {
+    if (rolesConfig[rolId]?.esSistema) {
+      alert('No se pueden eliminar los roles base del sistema.');
+      return;
+    }
+    if (!confirm(`¿Eliminar el rol "${rolesConfig[rolId]?.nombre || rolId}"?`)) return;
+
+    const copy = { ...rolesConfig };
+    delete copy[rolId];
+    setRolesConfig(copy);
+
+    await fetch('/api/admin/roles-config', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ roles: copy })
+    });
+
+    setMensajeExito('Rol eliminado correctamente.');
+    setTimeout(() => setMensajeExito(null), 4000);
+  };
+
+  const handleSuccessAsignarRoles = (userId: string, rolAdmin: string | null, rolAcad: string | null) => {
+    setUsuarios(prev => prev.map(u => {
+      if (u.id === userId) {
+        const rolesActivos: string[] = [];
+        if (rolAdmin) {
+          rolesActivos.push(rolesConfig[rolAdmin]?.nombre || rolAdmin);
+        }
+        if (rolAcad) {
+          rolesActivos.push(rolAcad === 'DOCENTE' ? 'Docente' : 'Estudiante');
+        }
+        return {
+          ...u,
+          rolAdministrativo: rolAdmin,
+          rolAcademico: rolAcad,
+          rolesActivos,
+          esDual: Boolean(rolAdmin && rolAcad)
+        };
+      }
+      return u;
+    }));
+
+    setUsuarioParaAsignar(null);
+    setMensajeExito('¡Roles de usuario actualizados correctamente!');
+    setTimeout(() => setMensajeExito(null), 4000);
   };
 
   const guardarConfigPaquetes = async () => {
@@ -249,12 +388,16 @@ export default function ConfiguracionRolesPage() {
   };
 
   const usuariosFiltrados = usuarios.filter(u => {
-    const q = busqueda.toLowerCase();
+    const q = busqueda.toLowerCase().trim();
+    if (!q) return true;
     const nom = `${u.nombres || ''} ${u.apellidos || ''}`.toLowerCase();
     const dni = (u.dni_ce || '').toLowerCase();
     const mail = (u.email || '').toLowerCase();
     const rol = (u.role || '').toLowerCase();
-    return nom.includes(q) || dni.includes(q) || mail.includes(q) || rol.includes(q);
+    const pkg = (u.paquete_adquirido || '').toLowerCase();
+    const esDual = u.role === 'ADMIN' || u.role === 'SUPERADMIN';
+    const matchDual = esDual && (q.includes('dual') || q.includes('admin') || q.includes('estudiante') || q.includes('selector'));
+    return nom.includes(q) || dni.includes(q) || mail.includes(q) || rol.includes(q) || pkg.includes(q) || matchDual;
   });
 
   return (
@@ -265,7 +408,6 @@ export default function ConfiguracionRolesPage() {
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col overflow-hidden min-w-0 h-full">
-        <AdminHeader breadcrumb="Configuración y Roles" />
         
         <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
           <div className="max-w-7xl mx-auto space-y-6">
@@ -309,6 +451,14 @@ export default function ConfiguracionRolesPage() {
             >
               <Users className="w-4 h-4" /> Directorio de Usuarios y Roles ({usuarios.length})
             </button>
+            
+            <button
+              onClick={() => setActiveTab('permisos')}
+              className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 shrink-0 ${activeTab === 'permisos' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
+            >
+              <ShieldCheck className="w-4 h-4" /> Permisos y roles del sistema ({Object.keys(rolesConfig).length})
+            </button>
+
             <button
               onClick={() => setActiveTab('paquetes')}
               className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 shrink-0 ${activeTab === 'paquetes' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
@@ -332,9 +482,10 @@ export default function ConfiguracionRolesPage() {
           {/* CONTENIDOS DE LAS PESTAÑAS */}
 
           {activeTab === 'rbac' ? (
-            /* TAB: GESTIÓN DE ROLES (RBAC) */
+            /* TAB: GESTIÓN DE USUARIOS Y ROLES (RBAC) */
             <div className="space-y-4">
-              <div className="flex justify-between items-center gap-4">
+              
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="relative flex-1 max-w-md">
                   <Search className="w-4 h-4 text-slate-400 absolute left-3 top-3 pointer-events-none" />
                   <input
@@ -344,6 +495,14 @@ export default function ConfiguracionRolesPage() {
                     onChange={(e) => setBusqueda(e.target.value)}
                     className="w-full pl-9 pr-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600"
                   />
+                </div>
+                <div className="text-xs font-bold text-slate-500 dark:text-slate-400">
+                  Total usuarios: <span className="text-slate-900 dark:text-white font-black">{usuariosFiltrados.length}</span>
+                  {usuarios.some(u => u.rolAdministrativo && u.rolAcademico) && (
+                    <span className="ml-2 px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 text-[10px]">
+                      {usuarios.filter(u => u.rolAdministrativo && u.rolAcademico).length} con acceso dual
+                    </span>
+                  )}
                 </div>
               </div>
 
@@ -355,63 +514,116 @@ export default function ConfiguracionRolesPage() {
                         <th className="py-3 px-4">Usuario</th>
                         <th className="py-3 px-4">DNI / CE</th>
                         <th className="py-3 px-4">Correo Institucional</th>
-                        <th className="py-3 px-4">Paquete Asignado</th>
-                        <th className="py-3 px-4">Rol en el Sistema</th>
+                        <th className="py-3 px-4">Rol Administrativo</th>
+                        <th className="py-3 px-4">Rol Académico</th>
+                        <th className="py-3 px-4">Roles Activos</th>
                         <th className="py-3 px-4 text-right">Acción</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100 dark:divide-slate-800 font-medium">
-                      {usuariosFiltrados.map((u) => (
-                        <tr key={u.id} className="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition">
-                          <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">
-                            {u.nombres} {u.apellidos}
-                          </td>
-                          <td className="py-3 px-4 font-mono text-slate-500">
-                            {u.dni_ce}
-                          </td>
-                          <td className="py-3 px-4 text-slate-600 dark:text-slate-300">
-                            {u.email}
-                          </td>
-                          <td className="py-3 px-4">
-                            <span className="px-2 py-0.5 rounded-md text-[10px] font-black bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
-                              {u.paquete_adquirido || 'Estándar'}
-                            </span>
-                          </td>
-                          <td className="py-3 px-4">
-                            <select
-                              value={u.role || 'ESTUDIANTE'}
-                              onChange={(e) => cambiarRolUsuario(u.id, e.target.value)}
-                              className={`px-2.5 py-1 rounded-lg text-xs font-bold border transition ${
-                                u.role === 'SUPERADMIN' 
-                                  ? 'bg-purple-50 text-purple-700 border-purple-200 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-800' 
-                                  : u.role === 'ADMIN'
-                                  ? 'bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-950/40 dark:text-indigo-300 dark:border-indigo-800'
-                                  : u.role === 'DOCENTE'
-                                  ? 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-800'
-                                  : 'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800'
-                              }`}
-                            >
-                              <option value="ESTUDIANTE">ESTUDIANTE</option>
-                              <option value="DOCENTE">DOCENTE</option>
-                              <option value="ADMIN">ADMIN (Secretaría)</option>
-                              <option value="SUPERADMIN">SUPERADMIN (Acceso Total)</option>
-                            </select>
-                          </td>
-                          <td className="py-3 px-4 text-right">
-                            <button
-                              onClick={() => cambiarRolUsuario(u.id, u.role === 'ADMIN' ? 'ESTUDIANTE' : 'ADMIN')}
-                              className="text-indigo-600 dark:text-indigo-400 hover:underline font-bold text-[11px] cursor-pointer"
-                            >
-                              Alternar Admin
-                            </button>
+                      {usuariosFiltrados.length === 0 ? (
+                        <tr>
+                          <td colSpan={7} className="py-8 text-center text-slate-400">
+                            No se encontraron usuarios con el criterio de búsqueda.
                           </td>
                         </tr>
-                      ))}
+                      ) : (
+                        usuariosFiltrados.map((u) => {
+                          const rolAdminDef = u.rolAdministrativo ? rolesConfig[u.rolAdministrativo] : null;
+                          const nombreAdmin = rolAdminDef?.nombre || u.rolAdministrativo;
+
+                          return (
+                            <tr key={u.id} className="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition">
+                              <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">
+                                {u.nombres} {u.apellidos}
+                              </td>
+                              <td className="py-3 px-4 font-mono text-slate-500">
+                                {u.dni_ce}
+                              </td>
+                              <td className="py-3 px-4 text-slate-600 dark:text-slate-300">
+                                {u.email}
+                              </td>
+                              <td className="py-3 px-4">
+                                {u.rolAdministrativo ? (
+                                  <span className={`px-2.5 py-0.5 rounded-lg text-xs font-bold border ${
+                                    u.rolAdministrativo === 'SUPERADMIN'
+                                      ? 'bg-purple-50 text-purple-700 border-purple-200 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-800'
+                                      : u.rolAdministrativo === 'FINANCIERO'
+                                      ? 'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800'
+                                      : 'bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-950/40 dark:text-indigo-300 dark:border-indigo-800'
+                                  }`}>
+                                    {nombreAdmin}
+                                  </span>
+                                ) : (
+                                  <span className="text-slate-400 font-medium text-xs">Ninguno</span>
+                                )}
+                              </td>
+                              <td className="py-3 px-4">
+                                {u.rolAcademico === 'ESTUDIANTE' ? (
+                                  <span className="px-2.5 py-0.5 rounded-lg text-xs font-bold bg-blue-50 text-blue-700 border border-blue-200 dark:bg-blue-950/40 dark:text-blue-300 dark:border-blue-800">
+                                    Estudiante
+                                  </span>
+                                ) : u.rolAcademico === 'DOCENTE' ? (
+                                  <span className="px-2.5 py-0.5 rounded-lg text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-800">
+                                    Docente
+                                  </span>
+                                ) : (
+                                  <span className="text-slate-400 font-medium text-xs">Ninguno</span>
+                                )}
+                              </td>
+                              <td className="py-3 px-4">
+                                {u.rolAdministrativo && u.rolAcademico ? (
+                                  <div className="space-y-0.5">
+                                    <span className="font-bold text-slate-800 dark:text-slate-200 text-xs">
+                                      {nombreAdmin} y {u.rolAcademico === 'DOCENTE' ? 'Docente' : 'Estudiante'}
+                                    </span>
+                                    <span className="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold block">
+                                      Acceso dual activo
+                                    </span>
+                                  </div>
+                                ) : u.rolAdministrativo ? (
+                                  <span className="font-bold text-slate-800 dark:text-slate-200 text-xs">
+                                    {nombreAdmin}
+                                  </span>
+                                ) : u.rolAcademico === 'ESTUDIANTE' ? (
+                                  <span className="font-bold text-slate-800 dark:text-slate-200 text-xs">
+                                    Estudiante
+                                  </span>
+                                ) : u.rolAcademico === 'DOCENTE' ? (
+                                  <span className="font-bold text-slate-800 dark:text-slate-200 text-xs">
+                                    Docente
+                                  </span>
+                                ) : (
+                                  <span className="text-slate-400 text-xs font-medium">Sin roles</span>
+                                )}
+                              </td>
+                              <td className="py-3 px-4 text-right">
+                                <button
+                                  onClick={() => setUsuarioParaAsignar(u)}
+                                  className="px-3 py-1.5 rounded-xl text-xs font-bold bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition cursor-pointer inline-flex items-center gap-1.5 shadow-sm"
+                                >
+                                  <ShieldCheck className="w-3.5 h-3.5" />
+                                  <span>Asignar roles</span>
+                                </button>
+                              </td>
+                            </tr>
+                          );
+                        })
+                      )}
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
+          ) : activeTab === 'permisos' ? (
+            /* TAB: CONFIGURACIÓN DE PERMISOS POR ROL */
+            <PermisosRolesTab
+              rolesConfig={rolesConfig}
+              onGuardarPermisos={handleGuardarPermisosRol}
+              onCrearNuevoRol={handleCrearNuevoRol}
+              onEliminarRol={handleEliminarRol}
+              guardandoRolId={guardandoRolId}
+            />
           ) : activeTab === 'paquetes' ? (
             /* TAB: CONFIGURACIÓN DE PAQUETES Y CRÉDITOS */
             <div className="space-y-6">
@@ -941,6 +1153,16 @@ export default function ConfiguracionRolesPage() {
         </div>
       )}
 
+    
+      {/* Modal para asignación de roles a usuario */}
+      {usuarioParaAsignar && (
+        <AsignarRolesModal
+          usuario={usuarioParaAsignar}
+          rolesConfig={rolesConfig}
+          onClose={() => setUsuarioParaAsignar(null)}
+          onSuccess={handleSuccessAsignarRoles}
+        />
+      )}
     </div>
   );
 }

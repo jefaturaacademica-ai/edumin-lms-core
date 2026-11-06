@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { 
@@ -22,6 +22,7 @@ import {
   Table,
   ExternalLink,
   Network,
+  Clapperboard,
   PanelRightClose,
   PanelRightOpen,
   Timer,
@@ -432,7 +433,7 @@ export default function ReproductorCursoPage() {
         recursos.push({
           id: `rec-mat1-${numTema}`,
           tipo: 'pdf',
-          titulo: 'Diapositivas de la clase',
+          titulo: 'Material de la clase',
           descripcion: 'Diapositivas y contenidos oficiales de la sesión en PDF',
           archivo: mat1,
           url: mat1
@@ -442,7 +443,7 @@ export default function ReproductorCursoPage() {
         recursos.push({
           id: `rec-mat2-${numTema}`,
           tipo: 'excel',
-          titulo: 'Plantilla de Trabajo / Complemento',
+          titulo: 'Material adicional',
           descripcion: 'Recurso complementario de estudio',
           archivo: mat2,
           url: mat2
@@ -1464,21 +1465,24 @@ export default function ReproductorCursoPage() {
                       {/* LADO IZQUIERDO: RECURSO ACTUAL (ÍCONO + TÍTULO) */}
                       <div className="flex items-center gap-3 min-w-0">
                         <div className={`size-9 rounded-xl grid place-items-center shrink-0 ${
+                          contenidoPrincipal === 'video_clase' ? 'bg-indigo-500/20 text-indigo-400' :
                           tipoRecurso === 'pdf' ? 'bg-rose-500/20 text-rose-500' :
+                          tipoRecurso === 'material' ? 'bg-cyan-500/20 text-cyan-400' :
                           tipoRecurso === 'excel' ? 'bg-emerald-500/20 text-emerald-500' :
-                          tipoRecurso === 'video' ? 'bg-indigo-500/20 text-indigo-400' :
+                          tipoRecurso === 'video' ? 'bg-amber-500/20 text-amber-400' :
                           tipoRecurso === 'audio' ? 'bg-purple-500/20 text-purple-400' :
-                          tipoRecurso === 'interactivo' ? 'bg-amber-500/20 text-amber-400' :
+                          tipoRecurso === 'interactivo' ? 'bg-emerald-500/20 text-emerald-400' :
                           tipoRecurso === 'mapamental' ? 'bg-teal-500/20 text-teal-400' :
                           'bg-cyan-500/20 text-cyan-400'
                         }`}>
-                          {tipoRecurso === 'pdf' && <FileText className="w-4.5 h-4.5" />}
-                          {tipoRecurso === 'excel' && <Table className="w-4.5 h-4.5" />}
-                          {tipoRecurso === 'video' && <Video className="w-4.5 h-4.5" />}
-                          {tipoRecurso === 'audio' && <Headphones className="w-4.5 h-4.5" />}
-                          {tipoRecurso === 'interactivo' && <Sparkles className="w-4.5 h-4.5" />}
-                          {tipoRecurso === 'mapamental' && <Network className="w-4.5 h-4.5" />}
-                          {tipoRecurso === 'material' && <Folder className="w-4.5 h-4.5" />}
+                          {contenidoPrincipal === 'video_clase' && <Video className="w-4.5 h-4.5" />}
+                          {contenidoPrincipal !== 'video_clase' && tipoRecurso === 'pdf' && <FileText className="w-4.5 h-4.5" />}
+                          {contenidoPrincipal !== 'video_clase' && tipoRecurso === 'material' && <Folder className="w-4.5 h-4.5" />}
+                          {contenidoPrincipal !== 'video_clase' && tipoRecurso === 'excel' && <Table className="w-4.5 h-4.5" />}
+                          {contenidoPrincipal !== 'video_clase' && tipoRecurso === 'video' && <Clapperboard className="w-4.5 h-4.5" />}
+                          {contenidoPrincipal !== 'video_clase' && tipoRecurso === 'audio' && <Headphones className="w-4.5 h-4.5" />}
+                          {contenidoPrincipal !== 'video_clase' && tipoRecurso === 'interactivo' && <Sparkles className="w-4.5 h-4.5" />}
+                          {contenidoPrincipal !== 'video_clase' && tipoRecurso === 'mapamental' && <Network className="w-4.5 h-4.5" />}
                         </div>
                         <div className="min-w-0">
                           <h3 className={`text-xs sm:text-sm font-bold truncate ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
@@ -1591,12 +1595,12 @@ export default function ReproductorCursoPage() {
                                       >
                                         <div className="shrink-0">
                                           {rec.tipo === 'pdf' && <FileText className="w-4 h-4 text-rose-400" />}
-                                          {rec.tipo === 'excel' && <Table className="w-4 h-4 text-emerald-400" />}
-                                          {rec.tipo === 'video' && <Video className="w-4 h-4 text-indigo-400" />}
-                                          {rec.tipo === 'audio' && <Headphones className="w-4 h-4 text-purple-400" />}
-                                          {rec.tipo === 'interactivo' && <Sparkles className="w-4 h-4 text-amber-400" />}
-                                          {rec.tipo === 'mapamental' && <Network className="w-4 h-4 text-teal-400" />}
                                           {rec.tipo === 'material' && <Folder className="w-4 h-4 text-cyan-400" />}
+                                          {rec.tipo === 'excel' && <Table className="w-4 h-4 text-emerald-400" />}
+                                          {rec.tipo === 'video' && <Clapperboard className="w-4 h-4 text-amber-400" />}
+                                          {rec.tipo === 'audio' && <Headphones className="w-4 h-4 text-purple-400" />}
+                                          {rec.tipo === 'interactivo' && <Sparkles className="w-4 h-4 text-emerald-400" />}
+                                          {rec.tipo === 'mapamental' && <Network className="w-4 h-4 text-teal-400" />}
                                         </div>
                                         <div className="flex-1 min-w-0">
                                           <span className="block truncate font-bold">{rec.titulo}</span>
@@ -2003,20 +2007,21 @@ export default function ReproductorCursoPage() {
                                   esRecursoActivo
                                     ? 'bg-indigo-600 text-white shadow-xs'
                                     : rec.tipo === 'pdf' ? 'bg-rose-500/20 text-rose-500' :
+                                      rec.tipo === 'material' ? 'bg-cyan-500/20 text-cyan-500' :
                                       rec.tipo === 'excel' ? 'bg-emerald-500/20 text-emerald-500' :
-                                      rec.tipo === 'video' ? 'bg-indigo-500/20 text-indigo-500' :
+                                      rec.tipo === 'video' ? 'bg-amber-500/20 text-amber-500' :
                                       rec.tipo === 'audio' ? 'bg-purple-500/20 text-purple-500' :
-                                      rec.tipo === 'interactivo' ? 'bg-amber-500/20 text-amber-500' :
+                                      rec.tipo === 'interactivo' ? 'bg-emerald-500/20 text-emerald-500' :
                                       rec.tipo === 'mapamental' ? 'bg-teal-500/20 text-teal-500' :
                                       'bg-cyan-500/20 text-cyan-500'
                                 }`}>
                                   {rec.tipo === 'pdf' && <FileText className="w-5 h-5" />}
+                                  {rec.tipo === 'material' && <Folder className="w-5 h-5" />}
                                   {rec.tipo === 'excel' && <Table className="w-5 h-5" />}
-                                  {rec.tipo === 'video' && <Video className="w-5 h-5" />}
+                                  {rec.tipo === 'video' && <Clapperboard className="w-5 h-5" />}
                                   {rec.tipo === 'audio' && <Headphones className="w-5 h-5" />}
                                   {rec.tipo === 'interactivo' && <Sparkles className="w-5 h-5" />}
                                   {rec.tipo === 'mapamental' && <Network className="w-5 h-5" />}
-                                  {rec.tipo === 'material' && <Folder className="w-5 h-5" />}
                                 </div>
                                 <div className="min-w-0">
                                   <h4 className={`font-bold text-xs sm:text-sm truncate ${esOscuro ? 'text-white' : 'text-slate-900'}`}>

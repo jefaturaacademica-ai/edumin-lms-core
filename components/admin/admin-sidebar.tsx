@@ -6,12 +6,13 @@ import { usePathname, useRouter } from 'next/navigation';
 import { 
   ShieldCheck, Users, BookOpen, Settings, LogOut,
   Activity, Award, UserCheck, Server, LayoutDashboard,
-  Menu, X, Sun, Moon, Sparkles, FileQuestion
+  Menu, X, Sun, Moon, Sparkles, FileQuestion, User
 } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
 import { useTheme } from '@/context/theme-context';
 import { UserProfileCard } from '@/components/navigation/UserProfileCard';
 import { ThemeMenuButton } from '@/components/navigation/ThemeMenuButton';
+import { useProfile } from '@/context/profile-context';
 
 export interface NavItem {
   href: string;
@@ -30,6 +31,7 @@ export default function AdminSidebar() {
   const pathname = usePathname();
   const router = useRouter();
   const { esOscuro, mounted, toggleTema } = useTheme();
+  const { role } = useProfile();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const supabase = createBrowserClient(
@@ -51,6 +53,7 @@ export default function AdminSidebar() {
       '/admin/auditoria': 'Auditoría y Webhooks',
       '/admin/configuracion': 'Configuración y Roles',
       '/admin/solicitudes-datos': 'Solicitudes de Datos',
+      '/admin/perfil': 'Mi perfil',
     };
 
     if (adminTitles[pathname]) {
@@ -139,8 +142,34 @@ export default function AdminSidebar() {
           color: 'text-slate-400'
         }
       ]
+    },
+    {
+      categoria: 'Mi cuenta',
+      items: [
+        {
+          href: '/admin/perfil',
+          label: 'Mi perfil',
+          icon: User,
+          color: 'text-indigo-400',
+          exact: true
+        }
+      ]
     }
   ];
+
+
+  // Filtrar grupos de navegación según permisos del rol administrativo:
+  // - SUPERADMIN: Todos los módulos del sidebar
+  // - ADMIN: Gestión académica, Finanzas y retención, Informes y datos
+  // - FINANCIERO: Exclusivamente Finanzas y retención
+  const navGroupsFiltrados = navGroups.map(group => {
+    if (role === 'FINANCIERO') {
+      if (group.categoria !== 'Finanzas y retención' && group.categoria !== 'Mi cuenta') return null;
+    } else if (role === 'ADMIN') {
+      if (group.categoria === 'Sistema y seguridad') return null;
+    }
+    return group;
+  }).filter(Boolean) as NavGroup[];
 
   return (
     <>
@@ -201,7 +230,7 @@ export default function AdminSidebar() {
         </div>
 
         <nav className="flex-1 py-3 px-3 space-y-4 overflow-y-auto">
-          {navGroups.map((grupo) => (
+          {navGroupsFiltrados.map((grupo) => (
             <div key={grupo.categoria} className="space-y-1">
               <div className="px-3 pt-1 pb-1 text-[10px] font-black uppercase tracking-wider text-slate-400">
                 {grupo.categoria}
@@ -272,7 +301,7 @@ export default function AdminSidebar() {
         
         {/* Navegación Desktop Categorizada */}
         <nav className="flex-1 py-4 px-3 space-y-4 overflow-y-auto">
-          {navGroups.map((grupo) => (
+          {navGroupsFiltrados.map((grupo) => (
             <div key={grupo.categoria} className="space-y-1">
               <div className="px-3 pt-1 pb-1 text-[10px] font-black uppercase tracking-wider text-slate-400/80 dark:text-slate-500">
                 {grupo.categoria}
