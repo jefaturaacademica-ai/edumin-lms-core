@@ -20,11 +20,11 @@ export interface PlantillaLogin {
 export const PLANTILLAS_PREDEFINIDAS: PlantillaLogin[] = [
   {
     id: 'navidad',
-    nombre: '🎄 Campaña Navideña / Fin de Año',
+    nombre: 'Campaña Navideña / Fin de Año',
     descripcion: 'Diseño festivo con tonos dorados, mensaje de fiestas y botón a WhatsApp.',
     html: `<div class="space-y-5 text-center sm:text-left bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-amber-950/40 border border-amber-500/30 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl relative overflow-hidden">
   <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-bold">
-    <span>✨ ¡Felices Fiestas! • EDUMIN</span>
+    <span>Felices Fiestas • EDUMIN</span>
   </div>
   <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
     Campaña de Especialización y Cierre de Año
@@ -41,11 +41,11 @@ export const PLANTILLAS_PREDEFINIDAS: PlantillaLogin[] = [
   },
   {
     id: 'inscripciones',
-    nombre: '🎓 Inscripciones y Nuevos Diplomados',
+    nombre: 'Inscripciones y Nuevos Diplomados',
     descripcion: 'Anuncio moderno en azul e índigo destacando inicio de clases y matrículas.',
     html: `<div class="space-y-5 text-center sm:text-left bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-indigo-950/40 border border-indigo-500/30 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl relative overflow-hidden">
   <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 text-xs font-bold">
-    <span>📢 Convocatoria Oficial Abierta</span>
+    <span>Convocatoria Oficial Abierta</span>
   </div>
   <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
     Nuevos Diplomados de Especialización Minera
@@ -62,11 +62,11 @@ export const PLANTILLAS_PREDEFINIDAS: PlantillaLogin[] = [
   },
   {
     id: 'comunicado',
-    nombre: '📌 Comunicado Institucional / Mantenimiento',
+    nombre: 'Comunicado Institucional / Mantenimiento',
     descripcion: 'Aviso formal para notificar fechas clave, horarios festivos o comunicados.',
     html: `<div class="space-y-4 text-center sm:text-left bg-slate-900/90 border border-rose-500/30 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl relative overflow-hidden">
   <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-500/20 border border-rose-400/30 text-rose-300 text-xs font-bold">
-    <span>⚠️ Comunicado Importante</span>
+    <span>Comunicado Importante</span>
   </div>
   <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight">
     Atención a la Comunidad Estudiantil

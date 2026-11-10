@@ -167,7 +167,7 @@ export default function ValidarCertificadoPage() {
                 </div>
                 <div>
                   <div className="inline-block bg-emerald-100 text-emerald-800 text-[10px] font-black px-2 py-0.5 rounded-md uppercase tracking-wider mb-1">
-                    ✓ Documento oficial verificado
+                    Documento oficial verificado
                   </div>
                   <h2 className="text-base sm:text-lg font-bold text-slate-900">
                     Certificado auténtico y registrado en EDUMIN

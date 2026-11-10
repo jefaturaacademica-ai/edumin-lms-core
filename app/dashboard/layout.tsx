@@ -115,24 +115,25 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
           <UserProfileCard currentView="estudiante" onNavigate={() => setMobileMenuOpen(false)} />
         </div>
 
-        <nav className="flex-1 py-4 px-4 space-y-2 overflow-y-auto">
+        <nav className="flex-1 py-4 px-4 space-y-2 overflow-y-auto sidebar-scroll">
           {menuItems.map((item) => {
             const Icon = item.icon;
-            const isActive = pathname === item.path;
+            const esCanjearEnInicio = item.path === '/dashboard' && (pathname === '/dashboard/canjear' || pathname?.startsWith('/dashboard/canjear') || pathname === '/canjear');
+            const isActive = pathname === item.path || esCanjearEnInicio;
             
             return (
               <Link 
                 key={item.name} 
                 href={item.path}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
+                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl border text-sm leading-5 transition-colors duration-150 outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-indigo-400/50 ${
                   isActive 
-                    ? 'bg-indigo-600/10 text-indigo-400 font-semibold border border-indigo-500/20' 
-                    : 'hover:bg-white/5 hover:text-white'
+                    ? 'bg-indigo-600/10 text-indigo-400 font-semibold border-indigo-500/20' 
+                    : 'border-transparent font-medium hover:bg-white/5 hover:text-white'
                 }`}
               >
-                <Icon className={`w-5 h-5 ${isActive ? 'text-indigo-400' : 'text-slate-500'}`} />
-                {item.name}
+                <Icon className={`w-5 h-5 shrink-0 ${isActive ? 'text-indigo-400' : 'text-slate-500'}`} />
+                <span className="truncate">{item.name}</span>
               </Link>
             );
           })}
@@ -145,7 +146,7 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
               setMobileMenuOpen(false);
               handleLogout();
             }}
-            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500/20 transition-colors border border-white/5 shadow-sm text-xs font-medium cursor-pointer"
+            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500/20 transition-colors border border-white/5 shadow-sm text-xs font-medium cursor-pointer outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-indigo-400/50"
           >
             <LogOut className="w-4 h-4" />
             <span>Cerrar sesión</span>
@@ -171,23 +172,24 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
         </div>
         
         {/* Links de Navegación Scrollable */}
-        <nav className="flex-1 py-6 px-4 space-y-2 overflow-y-auto">
+        <nav className="flex-1 py-6 px-4 space-y-2 overflow-y-auto sidebar-scroll">
           {menuItems.map((item) => {
             const Icon = item.icon;
-            const isActive = pathname === item.path;
+            const esCanjearEnInicio = item.path === '/dashboard' && (pathname === '/dashboard/canjear' || pathname?.startsWith('/dashboard/canjear') || pathname === '/canjear');
+            const isActive = pathname === item.path || esCanjearEnInicio;
             
             return (
               <Link 
                 key={item.name} 
                 href={item.path}
-                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
+                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl border text-sm leading-5 transition-colors duration-150 outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-indigo-400/50 ${
                   isActive 
-                    ? 'bg-indigo-600/10 text-indigo-400 font-semibold border border-indigo-500/20' 
-                    : 'hover:bg-white/5 hover:text-white'
+                    ? 'bg-indigo-600/10 text-indigo-400 font-semibold border-indigo-500/20' 
+                    : 'border-transparent font-medium hover:bg-white/5 hover:text-white'
                 }`}
               >
-                <Icon className={`w-5 h-5 ${isActive ? 'text-indigo-400' : 'text-slate-500'}`} />
-                {item.name}
+                <Icon className={`w-5 h-5 shrink-0 ${isActive ? 'text-indigo-400' : 'text-slate-500'}`} />
+                <span className="truncate">{item.name}</span>
               </Link>
             );
           })}
@@ -197,7 +199,7 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
         <div className="p-4 border-t border-white/5 shrink-0 flex items-center gap-2">
           <button 
             onClick={handleLogout}
-            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500/20 transition-colors border border-white/5 shadow-sm text-xs font-medium cursor-pointer"
+            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500/20 transition-colors border border-white/5 shadow-sm text-xs font-medium cursor-pointer outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-indigo-400/50"
           >
             <LogOut className="w-4 h-4" />
             <span>Cerrar sesión</span>

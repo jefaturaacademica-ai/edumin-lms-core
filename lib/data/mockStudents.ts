@@ -12,7 +12,8 @@ export interface EstudianteCompleto {
   monto_total_programa?: number;
   monto_total_pagado: number;
   deuda_total_pendiente: number;
-  cupos_diplomados: number;
+  cupos_diplomados?: number;
+  cupos_creditos?: any;
   diplomado_actual: string;
   diplomado_2?: string;
   mes_inscripcion: string;
@@ -20,6 +21,10 @@ export interface EstudianteCompleto {
   bloqueado: boolean;
   prorroga_hasta: string | null;
   role?: string;
+  roles?: {
+    administrativo?: string | null;
+    academico?: string | null;
+  } | null;
   creditos?: any[];
   solicitud_cip?: string;
   solicitud_datos?: string;

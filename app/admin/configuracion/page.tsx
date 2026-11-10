@@ -393,9 +393,14 @@ export default function ConfiguracionRolesPage() {
     const nom = `${u.nombres || ''} ${u.apellidos || ''}`.toLowerCase();
     const dni = (u.dni_ce || '').toLowerCase();
     const mail = (u.email || '').toLowerCase();
-    const rol = (u.role || '').toLowerCase();
+    const rol = [
+      u.roles?.administrativo || '',
+      u.roles?.academico || '',
+      ...(Array.isArray(u.rolesActivos) ? u.rolesActivos : []),
+      u.role || '',
+    ].join(' ').toLowerCase();
     const pkg = (u.paquete_adquirido || '').toLowerCase();
-    const esDual = u.role === 'ADMIN' || u.role === 'SUPERADMIN';
+    const esDual = Boolean(u.esDual || u.roles?.administrativo);
     const matchDual = esDual && (q.includes('dual') || q.includes('admin') || q.includes('estudiante') || q.includes('selector'));
     return nom.includes(q) || dni.includes(q) || mail.includes(q) || rol.includes(q) || pkg.includes(q) || matchDual;
   });
@@ -516,14 +521,13 @@ export default function ConfiguracionRolesPage() {
                         <th className="py-3 px-4">Correo Institucional</th>
                         <th className="py-3 px-4">Rol Administrativo</th>
                         <th className="py-3 px-4">Rol Académico</th>
-                        <th className="py-3 px-4">Roles Activos</th>
                         <th className="py-3 px-4 text-right">Acción</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100 dark:divide-slate-800 font-medium">
                       {usuariosFiltrados.length === 0 ? (
                         <tr>
-                          <td colSpan={7} className="py-8 text-center text-slate-400">
+                          <td colSpan={6} className="py-8 text-center text-slate-400">
                             No se encontraron usuarios con el criterio de búsqueda.
                           </td>
                         </tr>
@@ -571,38 +575,12 @@ export default function ConfiguracionRolesPage() {
                                   <span className="text-slate-400 font-medium text-xs">Ninguno</span>
                                 )}
                               </td>
-                              <td className="py-3 px-4">
-                                {u.rolAdministrativo && u.rolAcademico ? (
-                                  <div className="space-y-0.5">
-                                    <span className="font-bold text-slate-800 dark:text-slate-200 text-xs">
-                                      {nombreAdmin} y {u.rolAcademico === 'DOCENTE' ? 'Docente' : 'Estudiante'}
-                                    </span>
-                                    <span className="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold block">
-                                      Acceso dual activo
-                                    </span>
-                                  </div>
-                                ) : u.rolAdministrativo ? (
-                                  <span className="font-bold text-slate-800 dark:text-slate-200 text-xs">
-                                    {nombreAdmin}
-                                  </span>
-                                ) : u.rolAcademico === 'ESTUDIANTE' ? (
-                                  <span className="font-bold text-slate-800 dark:text-slate-200 text-xs">
-                                    Estudiante
-                                  </span>
-                                ) : u.rolAcademico === 'DOCENTE' ? (
-                                  <span className="font-bold text-slate-800 dark:text-slate-200 text-xs">
-                                    Docente
-                                  </span>
-                                ) : (
-                                  <span className="text-slate-400 text-xs font-medium">Sin roles</span>
-                                )}
-                              </td>
-                              <td className="py-3 px-4 text-right">
+                              <td className="py-3 px-4 text-right whitespace-nowrap">
                                 <button
                                   onClick={() => setUsuarioParaAsignar(u)}
-                                  className="px-3 py-1.5 rounded-xl text-xs font-bold bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition cursor-pointer inline-flex items-center gap-1.5 shadow-sm"
+                                  className="px-3 py-1.5 rounded-xl text-xs font-bold bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition cursor-pointer inline-flex items-center gap-1.5 shadow-sm whitespace-nowrap"
                                 >
-                                  <ShieldCheck className="w-3.5 h-3.5" />
+                                  <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
                                   <span>Asignar roles</span>
                                 </button>
                               </td>

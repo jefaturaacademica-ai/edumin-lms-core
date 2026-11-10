@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { 
   BookOpen, 
+  Lock, 
   CheckCircle2, 
   PlayCircle, 
   Sparkles, 
@@ -26,8 +27,9 @@ import { useTheme } from '@/context/theme-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 import configuracionExamenesJson from '@/lib/data/configuracion_examenes.json';
 import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
+import { TarjetaBloqueoOverlay } from '@/components/dashboard/TarjetaBloqueoOverlay';
 
-import { parseCursosFromProfile, parseDiplomadosFromProfile } from '@/lib/utils/profileParser';
+import { parseCursosFromProfile, parseDiplomadosFromProfile, filtrarCursosReales, esCursoTaller } from '@/lib/utils/profileParser';
 import { obtenerTallerParaDiplomado, TALLER_SOFT_SKILLS, TALLER_SEGURIDAD_BASADA } from '@/lib/utils/tallerAsignado';
 
 export default function CursosPage() {
@@ -35,6 +37,7 @@ export default function CursosPage() {
   const [nombres, setNombres] = useState<string>('Estudiante');
   const [loading, setLoading] = useState(true);
   const [creditosCursosDisponibles, setCreditosCursosDisponibles] = useState<number>(0);
+  const [cursosHabilitados, setCursosHabilitados] = useState<number>(999);
 
   // Estado para el Modo Oscuro / Claro desde el ThemeContext global
   const { esOscuro } = useTheme();
@@ -42,6 +45,7 @@ export default function CursosPage() {
   // Control del despliegue del catálogo y filtro por píldoras de estado
   const [mostrarCatalogoAdicional, setMostrarCatalogoAdicional] = useState(false);
   const [filtroEstadoMatriculados, setFiltroEstadoMatriculados] = useState<'todos' | 'progreso' | 'completados'>('progreso');
+  const [tarjetaBloqueoVisibleId, setTarjetaBloqueoVisibleId] = useState<string | null>(null);
 
   // Filtros interactivos y buscador superior
   const [busqueda, setBusqueda] = useState<string>('');
@@ -72,6 +76,7 @@ export default function CursosPage() {
   const [cursosEstudianteReal, setCursosEstudianteReal] = useState<any[]>([]);
 
   const listaCursosMatriculados = cursosEstudianteReal;
+  const listaSoloCursosReales = filtrarCursosReales(listaCursosMatriculados);
 
   // Separación por estado y filtrado activo según píldora seleccionada
   const cursosEnProgreso = listaCursosMatriculados.filter(c => !esCursoCompletadoHelper(c));
@@ -166,18 +171,31 @@ export default function CursosPage() {
     { titulo: "GERENCIA DE PROYECTOS DEL MANTENIMIENTO", categoria: "Mantenimiento industrial", duracion: "35 Horas Académicas", precio: 159, estado: "Más vendido", nivel: "Avanzado", imagen: "/assets/images/cursos/cur-59-gerencia-de-proyectos-del-mantenimiento.jpg" },
     { titulo: "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0", categoria: "Mantenimiento industrial", duracion: "30 Horas Académicas", precio: 159, estado: "Nuevo", nivel: "Intermedio", imagen: "/assets/images/cursos/cur-60-gestion-de-costos-del-mantenimiento-en-la-industria-4-0.jpg" },
     { titulo: "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES", categoria: "Operaciones y procesos", duracion: "30 Horas Académicas", precio: 159, estado: "Más vendido", nivel: "Intermedio", imagen: "/assets/images/cursos/cur-73-implementacion-de-lean-manufacturing-en-procesos-industriales.jpg" },
-    { titulo: "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA", categoria: "Talleres", duracion: "20 Horas Académicas", precio: 0, estado: "Especial", nivel: "Práctico", imagen: "/assets/images/cursos/tal-01-taller-de-soft-skills-en-la-industria-y-mineria.jpg" },
-    { titulo: "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO", categoria: "Talleres", duracion: "20 Horas Académicas", precio: 0, estado: "Especial", nivel: "Práctico", imagen: "/assets/images/cursos/tal-02-taller-de-seguridad-basada-en-el-comportamiento.jpg" }
+    { titulo: "TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA", categoria: "Taller", duracion: "20 Horas Académicas", precio: 0, estado: "Especial", nivel: "Práctico", imagen: "/assets/images/cursos/tal-01-taller-de-soft-skills-en-la-industria-y-mineria.jpg" },
+    { titulo: "TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO", categoria: "Taller", duracion: "20 Horas Académicas", precio: 0, estado: "Especial", nivel: "Práctico", imagen: "/assets/images/cursos/tal-02-taller-de-seguridad-basada-en-el-comportamiento.jpg" }
   ];
 
-  const listaCategorias = ["Todas", "Talleres", "Seguridad y prevención", "Legislación y normativa", "Logística y almacenes", "Inteligencia de datos", "Tecnología e innovación", "Operaciones y procesos", "Comercio exterior", "Mantenimiento industrial", "Medio ambiente"];
+  const listaCategorias = ["Todas", "Taller", "Seguridad y prevención", "Legislación y normativa", "Logística y almacenes", "Inteligencia de datos", "Tecnología e innovación", "Operaciones y procesos", "Comercio exterior", "Mantenimiento industrial", "Medio ambiente"];
   const listaEstados = ['Todos', 'Más vendido', 'Nuevo', 'Especial'];
   const listaNiveles = ['Todos', 'Principiante', 'Intermedio', 'Avanzado'];
 
   useEffect(() => {
     async function cargarPerfilYSupabase() {
       try {
-        const res = await fetch('/api/dashboard/me');
+        const [res, catRes] = await Promise.all([
+          fetch('/api/dashboard/me'),
+          fetch('/api/admin/catalogo').catch(() => null)
+        ]);
+
+        let liveCatalogoCursos: any[] = [];
+        if (catRes && catRes.ok) {
+          const catData = await catRes.json();
+          liveCatalogoCursos = [
+            ...(catData.cursosEspecializacion || []),
+            ...(catData.talleres || [])
+          ];
+        }
+
         if (res.ok) {
           const data = await res.json();
           const prof = data.profile;
@@ -186,6 +204,9 @@ export default function CursosPage() {
           if (data.eduminCredits?.cursos?.disponibles !== undefined) {
             setCreditosCursosDisponibles(data.eduminCredits.cursos.disponibles);
           }
+          if (data.eduminCredits?.cursos?.habilitados !== undefined) {
+            setCursosHabilitados(data.eduminCredits.cursos.habilitados);
+          }
           if (prof) {
             if (prof.nombres) setNombres(prof.nombres);
             if (prof.paquete_adquirido) setPaquete(prof.paquete_adquirido.toUpperCase());
@@ -193,79 +214,121 @@ export default function CursosPage() {
             const cursosEnrolados: any[] = [];
             const idsAgregados = new Set<string>();
 
-            // 1. Cursos matriculados explícitamente en la tabla matriculas
+            const buscarMatchCatalogo = (codigo?: string, titulo?: string, id?: string) => {
+              const codUp = String(codigo || id || '').toUpperCase();
+              const titNorm = (titulo || '').normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+              const liveMatch = liveCatalogoCursos.find((lc: any) =>
+                (codUp && String(lc.codigo || '').toUpperCase() === codUp) ||
+                (id && String(lc.id || '').toLowerCase() === String(id).toLowerCase()) ||
+                (titNorm && String(lc.titulo || '').normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase() === titNorm)
+              );
+              const localMatch = catalogoGeneralCursos.find(c =>
+                c.titulo.toUpperCase() === titulo?.toUpperCase() ||
+                (titNorm && c.titulo.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase() === titNorm)
+              );
+              return {
+                id: liveMatch?.id,
+                codigo: liveMatch?.codigo,
+                tipo: liveMatch?.tipo,
+                categoria: liveMatch?.categoria || localMatch?.categoria,
+                duracion: liveMatch?.duracion || localMatch?.duracion,
+                imagen: liveMatch?.imagen || localMatch?.imagen,
+                titulo: liveMatch?.titulo || titulo
+              };
+            };
+
+            // 1. Cursos y talleres del formato JSON de Supabase (orden cronológico de matrícula/canje)
+            const cursosJsonPerfil = Array.isArray(prof.cursos_json) && prof.cursos_json.length > 0
+              ? prof.cursos_json
+              : parseCursosFromProfile(prof);
+            cursosJsonPerfil.forEach((cj: any) => {
+              const catMatch = buscarMatchCatalogo(cj.codigo, cj.titulo, cj.id);
+              const idSlug = catMatch.id || cj.id || cj.codigo?.toLowerCase() || cj.titulo?.toLowerCase().replace(/[^a-z0-9]/g, '-');
+              if (!idsAgregados.has(idSlug)) {
+                idsAgregados.add(idSlug);
+                const tipoCat = String(catMatch.tipo || cj.tipo || '').toUpperCase();
+                const esTaller = Boolean(
+                  tipoCat === 'TALLER' ||
+                  esCursoTaller({ ...cj, id: idSlug, codigo: catMatch.codigo || cj.codigo, tipo: tipoCat })
+                );
+                cursosEnrolados.push({
+                  id: idSlug,
+                  codigo: catMatch.codigo || cj.codigo,
+                  titulo: catMatch.titulo || cj.titulo,
+                  tipo: esTaller ? 'TALLER' : 'CURSO',
+                  categoria: esTaller ? (catMatch.categoria || 'Taller') : (catMatch.categoria || cj.categoria || 'Seguridad y prevención'),
+                  duracion: catMatch.duracion || cj.duracion || (esTaller ? '20 Horas Académicas' : '40 horas'),
+                  avance: cj.completado ? 100 : (typeof cj.avance === 'number' ? cj.avance : 0),
+                  nota: cj.nota,
+                  rendido: Boolean((cj as any).rendido || (cj.nota !== undefined && cj.nota !== null && Number(cj.nota) > 0)),
+                  imagen: catMatch.imagen || cj.imagen || (esTaller ? '/assets/images/cursos/tal-02-taller-de-seguridad-basada-en-el-comportamiento.jpg' : 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'),
+                  esRegalo: esTaller
+                });
+              }
+            });
+
+            // 2. Cursos matriculados explícitamente en la tabla matriculas (respaldo si no estuvieran en el perfil)
             (matriculas || []).forEach((m: any) => {
-              if (m.tipo === 'CURSO' || m.tipo === 'curso' || m.tipo === 'TALLER') {
-                const idSlug = m.item_id || m.titulo.toLowerCase().replace(/[^a-z0-9]/g, '-');
+              if (m.tipo === 'CURSO' || m.tipo === 'curso' || m.tipo === 'TALLER' || m.tipo === 'taller') {
+                const catMatch = buscarMatchCatalogo(m.item_id, m.titulo, m.item_id);
+                const idSlug = catMatch.id || m.item_id || m.titulo.toLowerCase().replace(/[^a-z0-9]/g, '-');
                 if (!idsAgregados.has(idSlug)) {
                   idsAgregados.add(idSlug);
-                  const catMatch = catalogoGeneralCursos.find(c => c.titulo.toUpperCase() === m.titulo?.toUpperCase());
+                  const tipoCat = String(catMatch.tipo || m.tipo || '').toUpperCase();
+                  const esTaller = Boolean(tipoCat === 'TALLER' || m.es_regalo || idSlug.startsWith('tal-'));
                   cursosEnrolados.push({
                     id: idSlug,
-                    titulo: m.titulo || 'Curso de Especialización',
-                    categoria: catMatch?.categoria || 'Especialización',
-                    duracion: catMatch?.duracion || '25 horas académicas',
+                    codigo: catMatch.codigo,
+                    titulo: catMatch.titulo || m.titulo || 'Curso de Especialización',
+                    tipo: esTaller ? 'TALLER' : 'CURSO',
+                    categoria: catMatch.categoria || (esTaller ? 'Taller' : 'Seguridad y prevención'),
+                    duracion: catMatch.duracion || '20 Horas Académicas',
                     avance: m.avance_porcentaje ?? 0,
                     nota: m.nota,
                     rendido: Boolean(m.rendido || (m.nota !== undefined && m.nota !== null && Number(m.nota) > 0)),
-                    imagen: catMatch?.imagen || 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+                    imagen: catMatch.imagen || (esTaller ? '/assets/images/cursos/tal-02-taller-de-seguridad-basada-en-el-comportamiento.jpg' : 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'),
+                    esRegalo: esTaller
                   });
                 }
               }
             });
 
-            // 2. Cursos del formato JSON de Supabase
-            const cursosJsonPerfil = parseCursosFromProfile(prof);
-            cursosJsonPerfil.forEach((cj) => {
-              const idSlug = cj.id || cj.codigo.toLowerCase();
-              if (!idsAgregados.has(idSlug)) {
-                idsAgregados.add(idSlug);
-                const catMatch = catalogoGeneralCursos.find(c => c.titulo.toUpperCase() === cj.titulo.toUpperCase());
-                cursosEnrolados.push({
-                  id: idSlug,
-                  titulo: cj.titulo,
-                  categoria: catMatch?.categoria || 'Seguridad & SSOMA',
-                  duracion: catMatch?.duracion || '25 horas académicas',
-                  avance: cj.completado ? 100 : (typeof cj.avance === 'number' ? cj.avance : 0),
-                  nota: cj.nota,
-                  rendido: Boolean((cj as any).rendido || (cj.nota !== undefined && cj.nota !== null && Number(cj.nota) > 0)),
-                  imagen: catMatch?.imagen || 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-                });
-              }
+            // 3. Inyectar taller de regalo asignado según diplomados matriculados si no está en la lista
+            const diplomadosEstudiante = Array.isArray(prof.diplomados_json) && prof.diplomados_json.length > 0
+              ? prof.diplomados_json
+              : parseDiplomadosFromProfile(prof);
+            
+            const titulosDiplomados: string[] = [];
+            if (prof.diplomado_1) titulosDiplomados.push(prof.diplomado_1);
+            if (prof.diplomado_2) titulosDiplomados.push(prof.diplomado_2);
+            diplomadosEstudiante.forEach((d: any) => {
+              const t = d.titulo || d.slug;
+              if (t && !titulosDiplomados.includes(t)) titulosDiplomados.push(t);
             });
 
-            // 3. Garantizar la asignación del taller de regalo por cada diplomado del estudiante
-            const diplomadosEstudiante: string[] = [];
-            if (prof.diplomado_1) diplomadosEstudiante.push(prof.diplomado_1);
-            if (prof.diplomado_2) diplomadosEstudiante.push(prof.diplomado_2);
-            const diplomadosJson = parseDiplomadosFromProfile(prof);
-            diplomadosJson.forEach((d: any) => {
-              const tit = d.titulo || d.slug || d.id;
-              if (tit && !diplomadosEstudiante.includes(tit)) {
-                diplomadosEstudiante.push(tit);
-              }
-            });
-
-            diplomadosEstudiante.forEach((dipTitulo) => {
-              const tallerRegalo = obtenerTallerParaDiplomado(dipTitulo);
-              const idSlug = tallerRegalo.id;
-              if (!idsAgregados.has(idSlug)) {
-                idsAgregados.add(idSlug);
+            titulosDiplomados.forEach((dipTitulo: string) => {
+              const taller = obtenerTallerParaDiplomado(dipTitulo);
+              if (taller && !idsAgregados.has(taller.id.toLowerCase())) {
+                idsAgregados.add(taller.id.toLowerCase());
+                const catMatch = buscarMatchCatalogo(taller.codigo, taller.titulo, taller.id);
                 cursosEnrolados.push({
-                  id: idSlug,
-                  titulo: tallerRegalo.titulo,
-                  categoria: 'Talleres',
-                  duracion: tallerRegalo.duracion,
+                  id: taller.id,
+                  codigo: taller.codigo,
+                  titulo: catMatch.titulo || taller.titulo,
+                  tipo: 'TALLER',
+                  categoria: catMatch.categoria || 'Taller',
+                  duracion: catMatch.duracion || taller.duracion || '20 Horas Académicas',
                   avance: 0,
-                  imagen: tallerRegalo.imagen,
-                  esTaller: true
+                  nota: 0,
+                  rendido: false,
+                  imagen: catMatch.imagen || taller.imagen || '/assets/images/cursos/tal-02-taller-de-seguridad-basada-en-el-comportamiento.jpg',
+                  esRegalo: true
                 });
               }
             });
 
-            if (cursosEnrolados.length > 0) {
-              setCursosEstudianteReal(cursosEnrolados);
-            }
+            // Asignar todos los cursos y talleres enrolados
+            setCursosEstudianteReal(cursosEnrolados);
           }
         }
       } catch (err) {
@@ -418,7 +481,7 @@ export default function CursosPage() {
             </div>
 
             {/* GRILLA DE CURSOS FILTRADOS POR LA PÍLDORA SELECCIONADA */}
-            {cursosMatriculadosMostrar.length === 0 && (!creditosCursosDisponibles || filtroEstadoMatriculados === 'completados') ? (
+            {cursosMatriculadosMostrar.length === 0 ? (
               <div className={`rounded-3xl p-8 sm:p-10 text-center border shadow-sm ${esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}`}>
                 <div className="size-14 mx-auto rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 grid place-items-center mb-4">
                   <ShoppingBag className="size-7" />
@@ -430,74 +493,17 @@ export default function CursosPage() {
                   Explora nuestra oferta completa con los 76 cursos oficiales de alta especialización y adquiere nuevos programas para continuar tu ruta de aprendizaje.
                 </p>
                 <div className="mt-6 flex justify-center gap-3">
-                  <button
-                    onClick={() => setMostrarCatalogoAdicional(true)}
+                  <Link
+                    href="/dashboard/canjear?tab=cursos"
                     className="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold px-5 py-3 rounded-xl transition shadow-sm inline-flex items-center gap-2 cursor-pointer"
                   >
                     <ShoppingBag className="size-4" /> Explorar catálogo de cursos
-                  </button>
+                  </Link>
                 </div>
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
-                {/* TARJETA DE CRÉDITOS DISPONIBLES EN FORMATO EXACTO DE CURSO */}
-                {creditosCursosDisponibles > 0 && filtroEstadoMatriculados !== 'completados' && (
-                  <Link
-                    href="/dashboard/canjear"
-                    className={`group rounded-2xl overflow-hidden shadow-sm border border-dashed flex flex-col justify-between transition-all hover:shadow-md cursor-pointer ${
-                      esOscuro 
-                        ? 'bg-slate-900/90 border-indigo-500/50 hover:border-indigo-400' 
-                        : 'bg-white border-indigo-300 hover:border-indigo-500'
-                    }`}
-                  >
-                    {/* PORTADA CON EL MISMO TAMAÑO h-44 */}
-                    <div className="relative h-44 w-full bg-gradient-to-br from-indigo-900 via-indigo-950 to-slate-950 overflow-hidden flex flex-col items-center justify-center p-6 text-center">
-                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(99,102,241,0.25),transparent_70%)]" />
-                      <div className="size-14 rounded-2xl bg-indigo-600 text-white grid place-items-center shadow-lg shadow-indigo-600/30 mb-2 z-10 transition-transform duration-300 group-hover:scale-110">
-                        <Sparkles className="size-7 animate-pulse text-amber-300" />
-                      </div>
-                      <div className="absolute top-3 inset-x-3 flex flex-wrap items-center justify-between gap-1.5 pointer-events-none z-10">
-                        <span className="text-[11px] font-bold text-white bg-indigo-600/90 backdrop-blur-md px-2.5 py-1 rounded-lg border border-indigo-400/30 shrink-0">
-                          Créditos EDUMIN
-                        </span>
-                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-bold border backdrop-blur-md shrink-0 bg-amber-500/90 border-amber-400/30 text-white">
-                          <Tag className="size-3" /> {creditosCursosDisponibles} cupo(s)
-                        </span>
-                      </div>
-                    </div>
-                    {/* CUERPO CON MISMA ESTRUCTURA Y h-12 DEL TÍTULO */}
-                    <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                      <div className="space-y-3">
-                        <div className="h-12 flex items-start overflow-hidden">
-                          <h3 className={`text-base font-bold leading-snug line-clamp-2 uppercase ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                            CURSOS PENDIENTES POR ELEGIR
-                          </h3>
-                        </div>
-                      </div>
-                      <div className="space-y-1.5 pt-2">
-                        <div className="flex items-center justify-between text-xs font-bold">
-                          <span className={esOscuro ? 'text-indigo-400 font-medium' : 'text-indigo-600 font-medium'}>
-                            Beneficio de tu plan
-                          </span>
-                          <span className="font-bold text-amber-500">
-                            {creditosCursosDisponibles} disponible(s)
-                          </span>
-                        </div>
-                        <p className={`text-xs leading-relaxed ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                          Elige tus especializaciones entre los 76 cursos oficiales del catálogo.
-                        </p>
-                      </div>
-                    </div>
-                    {/* BOTÓN ALINEADO IDÉNTICO */}
-                    <div className={`px-6 pb-6 pt-3 border-t flex items-center justify-end ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
-                      <div className="w-full sm:w-auto text-xs font-bold px-5 py-2.5 rounded-xl transition-all inline-flex items-center justify-center shadow-md bg-indigo-600 group-hover:bg-indigo-700 text-white shadow-indigo-600/25">
-                        <span>Elegir mis cursos</span>
-                        <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform group-hover:translate-x-0.5" />
-                      </div>
-                    </div>
-                  </Link>
-                )}
-                                {cursosMatriculadosMostrar.map((curso) => {
+                {cursosMatriculadosMostrar.map((curso, cIdx) => {
                   const codNormalizado = (curso.codigo || curso.id || '').toUpperCase();
                   const confClaveCurso = `${codNormalizado}_Examen del curso`;
                   const confClaveTaller = `${codNormalizado}_Examen del taller`;
@@ -510,69 +516,86 @@ export default function CursosPage() {
                   const tieneExamenPendiente = !noAplicaExamen && curso.avance >= 100 && !examenRendido;
                   const esPorIniciar = curso.avance === 0;
 
-                  // Centralización de estilos e información de estado
-                  const infoEstado = esCompletado
+                  // Verificación de habilitación por cuotas pagadas (solo contando cursos reales por tipo !== 'TALLER')
+                  const esTaller = esCursoTaller(curso);
+                  const indexSoloCurso = esTaller ? -1 : listaSoloCursosReales.findIndex(cur => cur.id === curso.id);
+                  const estaBloqueadoPorCuotas = !esTaller && indexSoloCurso !== -1 && indexSoloCurso >= cursosHabilitados;
+
+                  const whatsappCuotaUrl = `https://wa.me/51984512809?text=${encodeURIComponent(
+                    `Hola EDUMIN, deseo orientación para pagar mi siguiente cuota y habilitar el curso: ${curso.titulo}.`
+                  )}`;
+
+                  // Centralización de estilos e información de estado (mismo color en badge, barra y botón)
+                  const infoEstado = estaBloqueadoPorCuotas
+                    ? {
+                        label: 'Bloqueado',
+                        Icono: Lock,
+                        badgeBg: 'bg-rose-600 border-rose-400/30 text-white',
+                        duracionIconColor: 'text-rose-400',
+                        porcentajeColor: esOscuro ? 'text-rose-400' : 'text-rose-600',
+                        barraBg: 'bg-rose-600',
+                        botonBg: 'bg-rose-600 hover:bg-rose-700 shadow-rose-600/20 text-white font-bold cursor-pointer',
+                        botonTexto: 'Pagar cuota'
+                      }
+                    : esCompletado
                     ? {
                         label: 'Completado',
                         Icono: CheckCircle2,
-                        badgeBg: 'bg-emerald-600/90 border-emerald-400/30 text-white',
+                        badgeBg: 'bg-emerald-600 border-emerald-400/30 text-white',
                         duracionIconColor: 'text-emerald-400',
                         porcentajeColor: esOscuro ? 'text-emerald-400' : 'text-emerald-600',
                         barraBg: 'bg-emerald-600',
                         botonBg: 'bg-emerald-600 group-hover:bg-emerald-700 shadow-emerald-600/20 text-white font-bold',
-                        botonTexto: 'Repasar curso'
+                        botonTexto: 'Repasar clases'
                       }
                     : tieneExamenPendiente
                     ? {
                         label: 'Examen pendiente',
                         Icono: FileText,
-                        badgeBg: 'bg-amber-500/90 border-amber-400/30 text-white',
+                        badgeBg: 'bg-amber-500 border-amber-300/40 text-white',
                         duracionIconColor: 'text-amber-400',
                         porcentajeColor: esOscuro ? 'text-amber-400' : 'text-amber-600',
                         barraBg: 'bg-amber-500',
-                        botonBg: 'bg-amber-500 hover:bg-amber-600 shadow-amber-500/20 text-white font-bold',
+                        botonBg: 'bg-amber-500 group-hover:bg-amber-600 shadow-amber-500/20 text-white font-bold',
                         botonTexto: 'Dar examen'
                       }
                     : esPorIniciar
                     ? {
                         label: 'Por iniciar',
                         Icono: CircleDashed,
-                        badgeBg: 'bg-slate-700/90 border-slate-600/30 text-white',
+                        badgeBg: 'bg-slate-700 border-slate-500/30 text-white',
                         duracionIconColor: 'text-slate-400',
-                        porcentajeColor: esOscuro ? 'text-slate-400' : 'text-slate-500',
-                        barraBg: 'bg-slate-300 dark:bg-slate-700',
+                        porcentajeColor: esOscuro ? 'text-slate-400' : 'text-slate-700',
+                        barraBg: 'bg-slate-700',
                         botonBg: 'bg-slate-700 group-hover:bg-slate-800 text-white font-bold',
-                        botonTexto: 'Iniciar curso'
+                        botonTexto: 'Iniciar clases'
                       }
                     : {
                         label: 'En progreso',
                         Icono: Clock,
-                        badgeBg: 'bg-indigo-500/90 border-indigo-400/30 text-white',
+                        badgeBg: 'bg-indigo-600 border-indigo-400/30 text-white',
                         duracionIconColor: 'text-indigo-400',
                         porcentajeColor: esOscuro ? 'text-indigo-400' : 'text-indigo-600',
                         barraBg: 'bg-indigo-600',
                         botonBg: 'bg-indigo-600 group-hover:bg-indigo-700 shadow-indigo-600/20 text-white font-bold',
-                        botonTexto: 'Continuar curso'
+                        botonTexto: 'Continuar clases'
                       };
 
                   const IconoEstado = infoEstado.Icono;
+                  const mostrarMensajeBloqueo = estaBloqueadoPorCuotas && tarjetaBloqueoVisibleId === curso.id;
 
-                  return (
-                    <Link
-                      key={curso.id}
-                      href={`/dashboard/cursos/${curso.id}`}
-                      className={`group rounded-2xl overflow-hidden shadow-sm border flex flex-col justify-between transition-all hover:shadow-md cursor-pointer ${
-                        esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
-                      }`}
-                    >
+                  const contenidoTarjetaCurso = (
+                    <>
                       {/* PORTADA CON ETIQUETAS */}
                       <div className="relative h-44 w-full bg-slate-800 overflow-hidden">
                         <img 
                           src={curso.imagen} 
                           alt={curso.titulo}
-                          className="object-cover w-full h-full opacity-90 transition-transform duration-300 group-hover:scale-105"
+                          className={`object-cover w-full h-full transition-transform duration-300 ${
+                            estaBloqueadoPorCuotas ? 'opacity-65' : 'opacity-90 group-hover:scale-105'
+                          }`}
                         />
-                        <div className="absolute top-3 inset-x-3 flex flex-wrap items-center justify-between gap-1.5 pointer-events-none">
+                        <div className="absolute top-3 inset-x-3 flex flex-wrap items-center justify-between gap-1.5 pointer-events-none z-10">
                           <span className="text-[11px] font-semibold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 shrink-0">
                             {curso.categoria}
                           </span>
@@ -580,6 +603,15 @@ export default function CursosPage() {
                             <IconoEstado className="size-3.5" /> {infoEstado.label}
                           </span>
                         </div>
+
+                        <TarjetaBloqueoOverlay
+                          visible={mostrarMensajeBloqueo}
+                          onAutoHide={() =>
+                            setTarjetaBloqueoVisibleId((prev) =>
+                              prev === curso.id ? null : prev
+                            )
+                          }
+                        />
                       </div>
 
                       {/* CUERPO CON ALINEACIÓN VERTICAL UNIFORME DE TODOS LOS ELEMENTOS */}
@@ -613,11 +645,46 @@ export default function CursosPage() {
 
                       {/* BOTÓN ALINEADO CON ÍCONO ÚNICO UNIFORME */}
                       <div className={`px-6 pb-6 pt-3 border-t flex items-center justify-end ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
-                        <div className={`w-full sm:w-auto text-xs font-bold px-5 py-2.5 rounded-xl transition-all inline-flex items-center justify-center shadow-sm ${infoEstado.botonBg}`}>
-                          <span>{infoEstado.botonTexto}</span>
-                          <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform group-hover:translate-x-0.5" />
-                        </div>
+                        {estaBloqueadoPorCuotas ? (
+                          <a
+                            href={whatsappCuotaUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className={`w-full sm:w-auto text-xs font-bold px-5 py-2.5 rounded-xl transition-all inline-flex items-center justify-center shadow-sm ${infoEstado.botonBg}`}
+                          >
+                            <span>{infoEstado.botonTexto}</span>
+                            <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform hover:translate-x-0.5" />
+                          </a>
+                        ) : (
+                          <div className={`w-full sm:w-auto text-xs font-bold px-5 py-2.5 rounded-xl transition-all inline-flex items-center justify-center shadow-sm ${infoEstado.botonBg}`}>
+                            <span>{infoEstado.botonTexto}</span>
+                            <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform group-hover:translate-x-0.5" />
+                          </div>
+                        )}
                       </div>
+                    </>
+                  );
+
+                  return estaBloqueadoPorCuotas ? (
+                    <div
+                      key={curso.id}
+                      onClick={() => setTarjetaBloqueoVisibleId(prev => prev === curso.id ? null : curso.id)}
+                      className={`group rounded-2xl overflow-hidden shadow-sm border flex flex-col justify-between transition-all hover:shadow-md cursor-pointer ${
+                        esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
+                      }`}
+                    >
+                      {contenidoTarjetaCurso}
+                    </div>
+                  ) : (
+                    <Link
+                      key={curso.id}
+                      href={`/dashboard/cursos/${curso.id}`}
+                      className={`group rounded-2xl overflow-hidden shadow-sm border flex flex-col justify-between transition-all hover:shadow-md cursor-pointer ${
+                        esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
+                      }`}
+                    >
+                      {contenidoTarjetaCurso}
                     </Link>
                   );
                 })}
@@ -626,187 +693,43 @@ export default function CursosPage() {
           </div>
         )}
 
-        {/* SECCIÓN 3: BOTÓN DESPLEGABLE DE ADQUISICIÓN DE MÁS CURSOS */}
+        {/* SECCIÓN 3: CATÁLOGO AMPLIADO Y CRÉDITOS DISPONIBLES */}
         <div className={`pt-6 border-t ${esOscuro ? 'border-slate-800' : 'border-slate-200'}`}>
           <div className="bg-gradient-to-r from-slate-900 to-indigo-950 text-white rounded-3xl p-8 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-800">
-            <div>
-              <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest block mb-1">Catálogo Ampliado EDUMIN</span>
-              <h3 className="text-xl font-bold">¿Deseas adquirir más cursos especializados?</h3>
-              <p className="text-xs text-slate-300 mt-1">Explora nuestra oferta completa con los 76 cursos oficiales de alta especialización.</p>
-            </div>
-            
-            <button
-              onClick={() => setMostrarCatalogoAdicional(!mostrarCatalogoAdicional)}
-              className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-3.5 rounded-2xl transition-all shadow-lg shadow-indigo-600/30 flex items-center gap-2 text-sm shrink-0"
-            >
-              <ShoppingBag className="w-4 h-4" />
-              {mostrarCatalogoAdicional ? 'Ocultar Catálogo' : 'Adquirir más cursos'}
-              {mostrarCatalogoAdicional ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-            </button>
-          </div>
-
-          {/* CONTENIDO DESPLEGABLE CON FILTROS Y BÚSQUEDA DEL CATÁLOGO */}
-          {mostrarCatalogoAdicional && (
-            <div className="mt-8 space-y-6 transition-all animate-fadeIn">
-              
-              <div className={`p-6 rounded-3xl shadow-sm border space-y-4 ${esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}`}>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-12 gap-4">
-                  
-                  {/* Buscador */}
-                  <div className="sm:col-span-12 lg:col-span-4">
-                    <label className={`block text-xs font-bold mb-1.5 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
-                      🔎 Búsqueda por Nombre o Tema
-                    </label>
-                    <div className="relative">
-                      <Search className="absolute left-4 top-3.5 w-4 h-4 text-slate-400" />
-                      <input 
-                        type="text"
-                        placeholder="Buscar cursos..."
-                        value={busqueda}
-                        onChange={(e) => setBusqueda(e.target.value)}
-                        className={`w-full border rounded-2xl pl-11 pr-4 py-2.5 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-600 shadow-sm ${
-                          esOscuro ? 'bg-slate-950 border-slate-800 text-white placeholder-slate-500' : 'bg-slate-50 border-slate-200 text-slate-900'
-                        }`}
-                      />
-                    </div>
-                  </div>
-
-                  {/* Filtro Categoría */}
-                  <div className="sm:col-span-4 lg:col-span-3">
-                    <label className={`block text-xs font-bold mb-1.5 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
-                      📁 Categoría
-                    </label>
-                    <select
-                      value={categoriaFiltro}
-                      onChange={(e) => setCategoriaFiltro(e.target.value)}
-                      className={`w-full border text-xs font-semibold p-2.5 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer ${
-                        esOscuro ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-800'
-                      }`}
-                    >
-                      {listaCategorias.map(cat => <option key={cat} value={cat}>{cat}</option>)}
-                    </select>
-                  </div>
-
-                  {/* Filtro Estado */}
-                  <div className="sm:col-span-4 lg:col-span-2">
-                    <label className={`block text-xs font-bold mb-1.5 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
-                      🏷️ Etiqueta
-                    </label>
-                    <select
-                      value={estadoFiltro}
-                      onChange={(e) => setEstadoFiltro(e.target.value)}
-                      className={`w-full border text-xs font-semibold p-2.5 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer ${
-                        esOscuro ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-800'
-                      }`}
-                    >
-                      {listaEstados.map(est => <option key={est} value={est}>{est}</option>)}
-                    </select>
-                  </div>
-
-                  {/* Filtro Nivel */}
-                  <div className="sm:col-span-4 lg:col-span-3">
-                    <label className={`block text-xs font-bold mb-1.5 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
-                      🎓 Nivel
-                    </label>
-                    <select
-                      value={nivelFiltro}
-                      onChange={(e) => setNivelFiltro(e.target.value)}
-                      className={`w-full border text-xs font-semibold p-2.5 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer ${
-                        esOscuro ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-800'
-                      }`}
-                    >
-                      {listaNiveles.map(niv => <option key={niv} value={niv}>{niv}</option>)}
-                    </select>
-                  </div>
-
-                </div>
-
-                <div className={`pt-3 flex items-center justify-end gap-3 border-t ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
-                  <button 
-                    onClick={resetearFiltros}
-                    className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white text-xs font-semibold px-4 py-2 transition-colors"
-                  >
-                    <RotateCcw className="w-3.5 h-3.5" /> Resetear filtros
-                  </button>
-                </div>
-              </div>
-
-              {/* GRILLA DE CURSOS EN CATÁLOGO */}
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {cursosFiltrados.length === 0 ? (
-                  <div className={`col-span-full rounded-3xl p-12 text-center border ${esOscuro ? 'bg-slate-900 border-slate-800 text-slate-400' : 'bg-white border-slate-200 text-slate-500'}`}>
-                    <p className="text-sm font-medium">No se encontraron cursos que coincidan con tu búsqueda.</p>
-                  </div>
-                ) : (
-                  cursosFiltrados.map((curso, idx) => (
-                    <article 
-                      key={idx} 
-                      className={`relative overflow-hidden rounded-3xl shadow-sm border flex flex-col justify-between transition-all hover:shadow-md ${
-                        esOscuro ? 'bg-slate-900 border-slate-800 hover:border-indigo-500/50' : 'bg-white border-slate-200 hover:border-indigo-300'
-                      }`}
-                    >
-                      <div className="relative h-44 w-full bg-slate-800">
-                        <img 
-                          src={curso.imagen} 
-                          alt={curso.titulo}
-                          className="object-cover w-full h-full opacity-90"
-                        />
-                        <div className="absolute top-3 inset-x-3 flex flex-wrap items-center justify-between gap-1.5 pointer-events-none">
-                          <span className="text-[10px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10 shrink-0">
-                            {curso.categoria}
-                          </span>
-                          <span className="text-[10px] font-bold text-amber-300 bg-amber-500/20 border border-amber-500/30 backdrop-blur-md px-2.5 py-1 rounded-full shrink-0">
-                            {curso.estado}
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="p-6">
-                        <div className="flex items-start justify-between gap-4 mb-3">
-                          <span className="text-[10px] font-bold text-indigo-400">
-                            {curso.nivel}
-                          </span>
-                          <span className={`text-xs font-bold ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                            {curso.duracion}
-                          </span>
-                        </div>
-
-                        <h3 className={`text-sm font-bold leading-snug ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                          {curso.titulo}
-                        </h3>
-
-                        <div className="mt-4 flex items-baseline gap-2">
-                          <span className="text-2xl font-black tabular-nums text-emerald-400">S/ {curso.precio}</span>
-                        </div>
-                      </div>
-
-                      <div className={`px-6 pb-6 pt-4 border-t flex items-center justify-between gap-3 ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
-                        <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-400">
-                          <Tag className="size-3" /> Oferta actual
-                        </span>
-
-                        <a
-                          href={`https://wa.me/51987654321?text=Hola,%20deseo%20adquirir%20el%20curso:%20${encodeURIComponent(curso.titulo)}`}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center gap-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2.5 text-xs font-bold transition shadow-sm shrink-0"
-                        >
-                          Adquirir curso
-                        </a>
-                      </div>
-                    </article>
-                  ))
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest block">Catálogo Ampliado EDUMIN</span>
+                {creditosCursosDisponibles > 0 && (
+                  <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[10px] font-black uppercase px-2 py-0.5 rounded-full">
+                    {creditosCursosDisponibles} {creditosCursosDisponibles === 1 ? 'crédito disponible' : 'créditos disponibles'}
+                  </span>
                 )}
               </div>
-
+              <h3 className="text-xl font-bold">
+                {creditosCursosDisponibles > 0 
+                  ? `Tienes ${creditosCursosDisponibles} ${creditosCursosDisponibles === 1 ? 'curso disponible' : 'cursos disponibles'} para canjear`
+                  : '¿Deseas adquirir más cursos de especialización?'}
+              </h3>
+              <p className="text-xs text-slate-300">
+                {creditosCursosDisponibles > 0
+                  ? 'Explora el catálogo oficial de los 76 cursos de especialización y elige el que impulse tu crecimiento profesional.'
+                  : 'Amplía tu paquete adquiriendo nuevos créditos de cursos de alta especialización para continuar tu ruta de aprendizaje.'}
+              </p>
             </div>
-          )}
+            
+            <Link
+              href="/dashboard/canjear?tab=cursos"
+              className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-3.5 rounded-2xl transition-all shadow-lg shadow-indigo-600/30 flex items-center gap-2 text-sm shrink-0 cursor-pointer"
+            >
+              <ShoppingBag className="w-4 h-4" />
+              <span>{creditosCursosDisponibles > 0 ? 'Canjear mis cursos' : 'Adquirir más cursos'}</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
 
       </div>
 
-      
-    </main>
+      </main>
   );
 }

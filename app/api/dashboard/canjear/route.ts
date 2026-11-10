@@ -1,9 +1,19 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { createAdminClient } from '@/lib/supabase/admin';
-import { calculateReleasedCredits } from '@/lib/utils/credits';
+import { calculateEduminCredits, derivePaymentStateForCredits } from '@/lib/utils/credits';
 import { obtenerTallerParaDiplomado } from '@/lib/utils/tallerAsignado';
-import { parseCursosFromProfile, parseCreditosExtraFromProfile, CursoJSON } from '@/lib/utils/profileParser';
+import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
+import {
+  parseDiplomadosFromProfile,
+  parseCursosFromProfile,
+  parseCuposCreditosFromProfile,
+  buildUpdatedCuposCreditos,
+  filtrarCursosReales,
+  CursoJSON,
+  DiplomadoJSON,
+  ModuloJSON
+} from '@/lib/utils/profileParser';
 
 export async function POST(request: Request) {
   try {
@@ -15,7 +25,7 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { seleccionados, programaTitulos } = body;
+    const { seleccionados, programaTitulos, tipo = 'DIPLOMADO' } = body;
 
     if (!Array.isArray(seleccionados) || seleccionados.length === 0) {
       return NextResponse.json({ error: 'Debe seleccionar al menos un programa para canjear.' }, { status: 400 });
@@ -34,31 +44,174 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Perfil de estudiante no encontrado.' }, { status: 404 });
     }
 
-    // 2. Verificar Créditos Disponibles
-    const creditosExtra = parseCreditosExtraFromProfile(profile);
-    const releasedCredits = calculateReleasedCredits(
-      profile.paquete_adquirido || 'FULL',
-      profile.cuotas_pagadas || 1,
-      creditosExtra.creditosExtraDiplomados
-    );
-    const cuposActuales = profile.cupos_diplomados || 0;
-    const disponibles = Math.max(0, releasedCredits - cuposActuales);
+    // 2. Verificar Créditos Disponibles desde `profiles.cupos_creditos` y pagos reales
+    const diplomadosActuales: DiplomadoJSON[] = parseDiplomadosFromProfile(profile);
+    const cursosPerfilActuales: CursoJSON[] = parseCursosFromProfile(profile);
+    const cuposActuales = parseCuposCreditosFromProfile(profile);
+
+    let rawPagos: any[] = [];
+    if (profile.dni_ce) {
+      const { data: pData } = await admin
+        .from('pagos')
+        .select('*')
+        .or(`profile_id.eq.${profile.id},dni_ce.eq.${profile.dni_ce},metodo.ilike.%${profile.dni_ce}%`)
+        .order('created_at', { ascending: true });
+      rawPagos = pData || [];
+    } else {
+      const { data: pData } = await admin
+        .from('pagos')
+        .select('*')
+        .eq('profile_id', profile.id)
+        .order('created_at', { ascending: true });
+      rawPagos = pData || [];
+    }
+
+    const paymentState = derivePaymentStateForCredits({
+      pagos: rawPagos,
+      profile,
+    });
+
+    const eduminCredits = calculateEduminCredits({
+      paqueteAdquirido: profile.paquete_adquirido || 'COMPLETO',
+      cuotasPagadas: paymentState.cuotasPagadas,
+      cuotasTotales: paymentState.cuotasTotales,
+      tipoPago: paymentState.tipoPago,
+      diplomadosConsumidos: diplomadosActuales.length,
+      cursosConsumidos: filtrarCursosReales(cursosPerfilActuales).length,
+      creditosExtraDiplomados: cuposActuales.diplomados.adicionales,
+      creditosExtraCursos: cuposActuales.cursos.adicionales
+    });
+
+    const esCurso = tipo === 'CURSO';
+    const disponibles = esCurso ? eduminCredits.cursos.disponibles : eduminCredits.diplomados.disponibles;
 
     if (seleccionados.length > disponibles) {
       return NextResponse.json({ 
-        error: `No posee suficientes cupos disponibles. Intenta canjear ${seleccionados.length} pero solo dispone de ${disponibles}.` 
+        error: `No posee suficientes créditos de ${esCurso ? 'cursos' : 'diplomados'} disponibles. Intenta canjear ${seleccionados.length} pero solo dispone de ${disponibles}.` 
       }, { status: 400 });
     }
 
-    // 3. Crear registros de matrículas en Supabase (Diplomados y Talleres de regalo)
     const nuevasMatriculas: any[] = [];
-    const cursosPerfilActuales: CursoJSON[] = parseCursosFromProfile(profile);
+
+    if (esCurso) {
+      // CANJE DE CURSOS LIBRES
+      const cursosNuevos = [...cursosPerfilActuales];
+
+      seleccionados.forEach((item: any) => {
+        const itemId = typeof item === 'object' ? item.id : String(item);
+        const itemTitulo = (programaTitulos && programaTitulos[itemId]) 
+          ? programaTitulos[itemId] 
+          : (typeof item === 'object' ? item.titulo || item.curso : `CURSO ${itemId}`);
+        const categoria = (typeof item === 'object' && item.categoria) ? item.categoria : 'Curso Libre';
+        const duracion = (typeof item === 'object' && item.duracion) ? item.duracion : '25 Horas Académicas';
+        const horas = (typeof item === 'object' && item.horas) ? item.horas : '25';
+        const imagen = (typeof item === 'object' && item.imagen) ? item.imagen : undefined;
+
+        nuevasMatriculas.push({
+          profile_id: profile.id,
+          dni_ce: profile.dni_ce,
+          item_id: String(itemId),
+          tipo: 'CURSO',
+          titulo: itemTitulo,
+          avance_porcentaje: 0,
+          estado: 'EN_CURSO'
+        });
+
+        if (!cursosNuevos.some(c => String(c.id) === String(itemId) || c.titulo?.toUpperCase() === itemTitulo?.toUpperCase())) {
+          cursosNuevos.push({
+            id: String(itemId),
+            codigo: (typeof item === 'object' && item.codigo) ? item.codigo : `CUR-${itemId}`,
+            titulo: itemTitulo,
+            tipo: 'CURSO',
+            nota: 0,
+            completado: false,
+            avance: 0,
+            categoria,
+            duracion,
+            horas,
+            imagen
+          });
+        }
+      });
+
+      const nuevosCuposCreditos = buildUpdatedCuposCreditos(profile, {
+        cursosCanjeados: filtrarCursosReales(cursosNuevos).length
+      });
+
+      const { error: updateError } = await admin
+        .from('profiles')
+        .update({
+          cursos: `CURSOS_LIST|${JSON.stringify(cursosNuevos)}`,
+          cupos_creditos: nuevosCuposCreditos
+        })
+        .eq('id', profile.id);
+
+      if (updateError) {
+        console.error('Error al actualizar profile.cursos:', updateError);
+        return NextResponse.json({ error: `Error al registrar curso: ${updateError.message}` }, { status: 500 });
+      }
+
+      try {
+        await admin.from('audit_logs').insert({
+          usuario_email: profile.email || user.email || 'alumno@edumin.pe',
+          accion: 'CANJE_CURSOS_CREDITO',
+          detalles: {
+            profile_id: profile.id,
+            dni_ce: profile.dni_ce,
+            estudiante: `${profile.nombres} ${profile.apellidos}`,
+            seleccionados,
+            cupos_consumidos: seleccionados.length,
+            total_cursos_enrolados: cursosNuevos.length
+          }
+        });
+      } catch (e) {
+        console.error(e);
+      }
+
+      return NextResponse.json({
+        success: true,
+        message: `¡${seleccionados.length} curso(s) libre(s) canjeado(s) exitosamente!`,
+        cuposConsumidos: seleccionados.length,
+        cuposDisponiblesRestantes: Math.max(0, disponibles - seleccionados.length),
+        matriculas: nuevasMatriculas
+      });
+    }
+
+    // CANJE DE DIPLOMADOS
+    const diplomadosNuevos = [...diplomadosActuales];
     const cursosNuevos = [...cursosPerfilActuales];
 
     seleccionados.forEach((itemId: string) => {
       const tituloProg = (programaTitulos && programaTitulos[itemId]) 
         ? programaTitulos[itemId] 
         : `DIPLOMADO EN ${itemId.toUpperCase().replace(/-/g, ' ')}`;
+
+      // Agregar a diplomados_json si no existe
+      if (!diplomadosNuevos.some(d => d.slug === itemId || d.id === itemId)) {
+        const dipInfo = getDiplomadoByTitleOrSlug(itemId) || getDiplomadoByTitleOrSlug(tituloProg);
+        const modulosList: ModuloJSON[] = (dipInfo?.modulos && dipInfo.modulos.length > 0)
+          ? dipInfo.modulos.map((m: any, mIdx: number) => ({
+              id: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
+              codigo: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
+              nombre: m.nombre || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
+              nota: 0,
+              completado: false
+            }))
+          : [
+              { id: 'Módulo 01', codigo: 'Módulo 01', nombre: 'Módulo 01', nota: 0, completado: false },
+              { id: 'Módulo 02', codigo: 'Módulo 02', nombre: 'Módulo 02', nota: 0, completado: false },
+              { id: 'Módulo 03', codigo: 'Módulo 03', nombre: 'Módulo 03', nota: 0, completado: false }
+            ];
+
+        diplomadosNuevos.push({
+          id: itemId,
+          slug: itemId,
+          titulo: tituloProg,
+          avance: 0,
+          completado: false,
+          modulos: modulosList
+        });
+      }
 
       // Matrícula del Diplomado
       nuevasMatriculas.push({
@@ -71,57 +224,45 @@ export async function POST(request: Request) {
         estado: 'EN_CURSO'
       });
 
-      // Taller de regalo asignado según la temática del diplomado
-      const tallerRegalo = obtenerTallerParaDiplomado(tituloProg);
-      const yaTieneTaller = cursosNuevos.some(c => c.id === tallerRegalo.id || c.codigo === tallerRegalo.codigo);
-      
-      if (!yaTieneTaller) {
-        nuevasMatriculas.push({
-          profile_id: profile.id,
-          dni_ce: profile.dni_ce,
-          item_id: tallerRegalo.id,
-          tipo: 'TALLER',
-          titulo: tallerRegalo.titulo,
-          avance_porcentaje: 0,
-          estado: 'EN_CURSO'
-        });
-
+      // Inyectar el taller de regalo incluido con este diplomado
+      const taller = obtenerTallerParaDiplomado(tituloProg);
+      if (taller && !cursosNuevos.some(c => c.id === taller.id || c.codigo === taller.codigo)) {
         cursosNuevos.push({
-          id: tallerRegalo.id,
-          codigo: tallerRegalo.codigo,
-          titulo: tallerRegalo.titulo,
+          id: taller.id,
+          codigo: taller.codigo,
+          titulo: taller.titulo,
           nota: 0,
           completado: false,
           avance: 0,
-          categoria: tallerRegalo.categoria,
-          duracion: tallerRegalo.duracion,
-          horas: tallerRegalo.horas
+          categoria: 'Talleres',
+          duracion: taller.duracion,
+          horas: '20',
+          tipo: 'TALLER',
+          esRegalo: true,
+          imagen: taller.imagen
         });
       }
     });
 
-    const { data: insertedMatriculas, error: insertError } = await admin
-      .from('matriculas')
-      .insert(nuevasMatriculas)
-      .select();
+    // 4. Actualizar cupos_creditos, diplomados y cursos (talleres de regalo) en profiles
+    const nuevosCuposCreditos = buildUpdatedCuposCreditos(profile, {
+      diplomadosCanjeados: diplomadosNuevos.length
+    });
+    const diplomadosSerialized = `DIPLOMADOS_LIST|${JSON.stringify(diplomadosNuevos)}`;
 
-    if (insertError) {
-      console.warn('Advertencia al insertar en tabla matriculas:', insertError.message);
-    }
-
-    // 4. Actualizar cupos_diplomados y cursos (talleres de regalo) en profiles
-    const nuevosCuposTotal = cuposActuales + seleccionados.length;
-    const cursosSerialized = `CURSOS_LIST|${JSON.stringify(cursosNuevos)}`;
-
-    await admin
+    const { error: updateError } = await admin
       .from('profiles')
-      .update({ 
-        cupos_diplomados: nuevosCuposTotal,
-        diplomado_2: profile.diplomado_2 || (seleccionados[0] ? seleccionados[0].toUpperCase() : null),
-        cursos: cursosSerialized,
-        cupos_cursos: (profile.cupos_cursos || 0) + (cursosNuevos.length - cursosPerfilActuales.length)
+      .update({
+        diplomados: diplomadosSerialized,
+        cupos_creditos: nuevosCuposCreditos,
+        cursos: `CURSOS_LIST|${JSON.stringify(cursosNuevos)}`
       })
       .eq('id', profile.id);
+
+    if (updateError) {
+      console.error('Error al actualizar diplomados en profile:', updateError);
+      return NextResponse.json({ error: `Error al registrar diplomado: ${updateError.message}` }, { status: 500 });
+    }
 
     // 5. Registrar auditoría
     try {
@@ -134,7 +275,7 @@ export async function POST(request: Request) {
           estudiante: `${profile.nombres} ${profile.apellidos}`,
           seleccionados,
           cupos_consumidos: seleccionados.length,
-          total_cupos_usados: nuevosCuposTotal
+          total_cupos_usados: nuevosCuposCreditos.diplomados.canjeados
         }
       });
     } catch (e) {
@@ -145,8 +286,8 @@ export async function POST(request: Request) {
       success: true,
       message: `¡${seleccionados.length} diplomado(s) canjeado(s) exitosamente!`,
       cuposConsumidos: seleccionados.length,
-      cuposDisponiblesRestantes: Math.max(0, releasedCredits - nuevosCuposTotal),
-      matriculas: insertedMatriculas || nuevasMatriculas
+      cuposDisponiblesRestantes: Math.max(0, disponibles - seleccionados.length),
+      matriculas: nuevasMatriculas
     });
   } catch (err: any) {
     console.error('Error en /api/dashboard/canjear:', err);

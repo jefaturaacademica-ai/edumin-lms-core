@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { 
@@ -1779,12 +1779,16 @@ export default function ReproductorClasesPage() {
                             {notaActual >= 12 ? 'Examen Aprobado (Mínimo 12/20)' : 'Examen Desaprobado (Requiere Sustitutorio)'}
                           </span>
                         </div>
-                        <span className={`text-xs font-bold px-3 py-1 rounded-full border ${
+                        <span className={`inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full border ${
                           notaActual >= 12
                             ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
                             : 'bg-rose-500/20 text-rose-400 border-rose-500/30'
                         }`}>
-                          {notaActual >= 12 ? 'Aprobado ✓' : 'Desaprobado ❌'}
+                          {notaActual >= 12 ? (
+                            <>Aprobado <Check className="w-3.5 h-3.5" /></>
+                          ) : (
+                            <>Desaprobado <X className="w-3.5 h-3.5" /></>
+                          )}
                         </span>
                       </div>
 
@@ -2148,7 +2152,7 @@ export default function ReproductorClasesPage() {
                                 <div className="flex-1 min-w-0">
                                   <span className="block truncate font-bold">Grabación de la clase</span>
                                 </div>
-                                {contenidoPrincipal === 'video_clase' && <span className="text-xs">✓</span>}
+                                {contenidoPrincipal === 'video_clase' && <Check className="w-3.5 h-3.5 shrink-0" />}
                               </button>
 
                               {/* Demás recursos de parteActiva */}
@@ -2189,7 +2193,7 @@ export default function ReproductorClasesPage() {
                                     <div className="flex-1 min-w-0">
                                       <span className="block truncate font-bold">{rec.titulo}</span>
                                     </div>
-                                    {esActivo && <span className="text-xs">✓</span>}
+                                    {esActivo && <Check className="w-3.5 h-3.5 shrink-0" />}
                                   </button>
                                 );
                               })}

@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { 
@@ -206,7 +206,7 @@ export default function ReproductorCursoPage() {
       const [meRes, catRes, leccRes] = await Promise.all([
         fetch('/api/dashboard/me').catch(() => null),
         fetch('/api/admin/catalogo').catch(() => null),
-        fetch(`/api/admin/diplomados-lecciones?slug=${encodeURIComponent(cursoId)}`).catch(() => null)
+        fetch(`/api/admin/diplomados-lecciones?slug=${encodeURIComponent(cursoId)}&tipo=curso`).catch(() => null)
       ]);
 
       let userDni = '71234567';
@@ -244,26 +244,50 @@ export default function ReproductorCursoPage() {
         }
       }
 
+      let resolvedCatItem: any = null;
       if (catRes && catRes.ok) {
         const catData = await catRes.json();
-        const todos = catData.cursos || catData.todos || catData.diplomados || [];
-        const targetNorm = cursoId.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-        const catItem = todos.find((c: any) => 
-          c.id === cursoId ||
-          (c.codigo && c.codigo.toLowerCase() === cursoId.toLowerCase()) ||
-          (c.titulo && c.titulo.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetNorm) ||
-          (c.titulo && c.titulo.toLowerCase().includes(targetNorm))
-        );
+        const todos = [
+          ...(catData.cursosEspecializacion || []),
+          ...(catData.talleres || []),
+          ...(catData.cursos || []),
+          ...(catData.todos || [])
+        ].filter((c: any) => c.tipo !== 'diplomado' && !String(c.codigo || '').toUpperCase().startsWith('DIP-'));
+        const norm = (s: string) => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+        const targetNorm = norm(cursoId);
+        const catItem =
+          todos.find((c: any) =>
+            String(c.id || '').toLowerCase() === cursoId.toLowerCase() ||
+            (c.codigo && c.codigo.toLowerCase() === cursoId.toLowerCase()) ||
+            (c.titulo && norm(c.titulo) === targetNorm)
+          ) ||
+          todos.find((c: any) => c.titulo && norm(c.titulo).includes(targetNorm));
         if (catItem) {
+          resolvedCatItem = catItem;
           setCursoCatalogo(catItem);
         }
       }
 
+      let leccionesValidas: LeccionRow[] = [];
       if (leccRes && leccRes.ok) {
         const leccData = await leccRes.json();
         if (leccData && Array.isArray(leccData.filas) && leccData.filas.length > 0) {
-          setLeccionesTabla(leccData.filas);
+          leccionesValidas = leccData.filas.filter((f: any) => !String(f.CodigoDiplomado || '').toUpperCase().startsWith('DIP-'));
         }
+      }
+
+      if (leccionesValidas.length === 0 && resolvedCatItem?.codigo) {
+        const retryRes = await fetch(`/api/admin/diplomados-lecciones?codigo=${encodeURIComponent(resolvedCatItem.codigo)}&tipo=curso`).catch(() => null);
+        if (retryRes && retryRes.ok) {
+          const retryData = await retryRes.json();
+          if (retryData && Array.isArray(retryData.filas) && retryData.filas.length > 0) {
+            leccionesValidas = retryData.filas.filter((f: any) => !String(f.CodigoDiplomado || '').toUpperCase().startsWith('DIP-'));
+          }
+        }
+      }
+
+      if (leccionesValidas.length > 0) {
+        setLeccionesTabla(leccionesValidas);
       }
     } catch (e) {
       console.error('Error al cargar datos del curso:', e);
@@ -276,7 +300,7 @@ export default function ReproductorCursoPage() {
     cargarDatosSupabase();
   }, [cargarDatosSupabase]);
 
-  // Resolver el código oficial de curso (ej: CUR-01, CUR-19...)
+  // Resolver el código oficial de curso (ej: CUR-01, CUR-19, TAL-01...)
   const codigoCursoActual: string = useMemo(() => {
     if (leccionesTabla && leccionesTabla[0]?.CodigoDiplomado) {
       return leccionesTabla[0].CodigoDiplomado;
@@ -288,7 +312,7 @@ export default function ReproductorCursoPage() {
     if (cursoCatalogo?.codigo) {
       return cursoCatalogo.codigo;
     }
-    return 'CUR-01';
+    return '';
   }, [leccionesTabla, cursoId, cursoCatalogo]);
 
   // Consultar notas_modulos en Supabase para saber si ya rindió el examen del curso y cargar configuración
@@ -776,23 +800,22 @@ export default function ReproductorCursoPage() {
         setDetallesCalificacionExamen(detalles || null);
         setPasoModalExamen('resultado');
 
-        if (aprobado) {
-          try {
-            await fetch('/api/dashboard/completar-leccion', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                cursoId: codigoCursoActual,
-                cursoTitulo: cursoEstructurado.titulo,
-                tipo: 'curso',
-                nota: Number(nota),
-                completado: true,
-                avancePorcentaje: 100
-              })
-            });
-          } catch (err) {
-            console.error('Error sincronizando aprobación de curso con perfil:', err);
-          }
+        try {
+          await fetch('/api/dashboard/completar-leccion', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              cursoId: codigoCursoActual,
+              cursoTitulo: cursoEstructurado.titulo,
+              tipo: 'curso',
+              nota: Number(nota),
+              rendido: true,
+              completado: Boolean(aprobado),
+              ...(aprobado ? { avancePorcentaje: 100 } : {})
+            })
+          });
+        } catch (err) {
+          console.error('Error sincronizando evaluación de curso con perfil:', err);
         }
       } else {
         alert('Hubo un problema al calificar el examen. Intente nuevamente.');
@@ -1564,7 +1587,7 @@ export default function ReproductorCursoPage() {
                                     <div className="flex-1 min-w-0">
                                       <span className="block truncate font-bold">Grabación de la clase</span>
                                     </div>
-                                    {contenidoPrincipal === 'video_clase' && <span className="text-xs">✓</span>}
+                                    {contenidoPrincipal === 'video_clase' && <Check className="w-3.5 h-3.5 shrink-0" />}
                                   </button>
 
                                   {/* Demás recursos de parteActiva */}
@@ -1605,7 +1628,7 @@ export default function ReproductorCursoPage() {
                                         <div className="flex-1 min-w-0">
                                           <span className="block truncate font-bold">{rec.titulo}</span>
                                         </div>
-                                        {esActivo && <span className="text-xs">✓</span>}
+                                        {esActivo && <Check className="w-3.5 h-3.5 shrink-0" />}
                                       </button>
                                     );
                                   })}

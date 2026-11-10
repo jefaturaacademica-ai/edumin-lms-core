@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { BookOpen, CheckCircle, Lock, Sparkles, Search, Award, Filter } from 'lucide-react';
+import { BookOpen, CheckCircle, Lock, Sparkles, Search, Award, Filter, AlertTriangle, X } from 'lucide-react';
 import { DIPLOMADOS_EDUMIN, CURSOS_CORTOS_EDUMIN } from '@/lib/data/catalogo';
 
 export function SelectorCursos({ availableCredits, paquete, dni }: { availableCredits: number; paquete: string; dni: string }) {
@@ -155,9 +155,14 @@ export function SelectorCursos({ availableCredits, paquete, dni }: { availableCr
             <div className="flex justify-between items-center mb-4">
               <div>
                 <h3 className="text-2xl font-bold text-slate-900">Elige tu Diplomado Principal</h3>
-                <p className="text-slate-500 text-sm">⚠️ Atención: Una vez seleccionado, el programa quedará fijo y no podrá cambiarse desde el portal.</p>
+                <p className="text-slate-500 text-sm flex items-center gap-1.5 mt-0.5">
+                  <AlertTriangle className="size-4 text-amber-500 shrink-0" />
+                  <span>Atención: Una vez seleccionado, el programa quedará fijo y no podrá cambiarse desde el portal.</span>
+                </p>
               </div>
-              <button onClick={() => setModalDiplomadoAbierto(false)} className="text-slate-400 hover:text-slate-600 font-bold text-lg">✕</button>
+              <button onClick={() => setModalDiplomadoAbierto(false)} aria-label="Cerrar" className="text-slate-400 hover:text-slate-600 p-1 rounded-lg cursor-pointer">
+                <X className="size-5" />
+              </button>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">

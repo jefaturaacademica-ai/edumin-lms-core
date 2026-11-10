@@ -113,10 +113,10 @@ export function AsignarRolesModal({
               onChange={(e) => setRolAdmin(e.target.value)}
               className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
             >
-              <option value="">Ninguno (Sin acceso al panel administrativo)</option>
+              <option value="">Ninguno</option>
               {rolesAdminList.map((r) => (
                 <option key={r.id} value={r.id}>
-                  {r.nombre} ({r.descripcion.length > 50 ? `${r.descripcion.substring(0, 50)}...` : r.descripcion})
+                  {r.nombre}
                 </option>
               ))}
             </select>
@@ -135,9 +135,9 @@ export function AsignarRolesModal({
               onChange={(e) => setRolAcad(e.target.value)}
               className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
             >
-              <option value="">Ninguno (Usuario institucional sin matrícula estudiantil)</option>
-              <option value="ESTUDIANTE">Estudiante (Acceso a campus virtual, cursos y diplomados)</option>
-              <option value="DOCENTE">Docente (Módulo docente y calificaciones)</option>
+              <option value="">Ninguno</option>
+              <option value="ESTUDIANTE">Estudiante</option>
+              <option value="DOCENTE">Docente</option>
             </select>
             <p className="text-[11px] text-slate-500">
               Define si el usuario puede acceder a la vista de alumno o dictado en el campus.

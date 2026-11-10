@@ -214,13 +214,16 @@ export async function POST(request: Request) {
 
       if (typeof avancePorcentaje === 'number') {
         targetCurso.avance = Math.max(0, Math.min(100, avancePorcentaje));
-      } else {
+      } else if (typeof body.nota !== 'number' || completado) {
         const isCompleted = completado !== undefined ? Boolean(completado) : !targetCurso.completado;
         targetCurso.avance = isCompleted ? 100 : 0;
       }
 
       if (typeof body.nota === 'number') {
         targetCurso.nota = body.nota;
+        (targetCurso as any).rendido = true;
+      } else if (body.rendido !== undefined) {
+        (targetCurso as any).rendido = Boolean(body.rendido);
       }
       const codProg = targetCurso.codigo || targetCurso.id || targetSlug;
       const modNombre = (codProg.toUpperCase().startsWith('TAL-') || targetSlug.includes('taller')) 

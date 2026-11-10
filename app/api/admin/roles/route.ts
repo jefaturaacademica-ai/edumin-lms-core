@@ -1,62 +1,32 @@
 import { NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase/admin';
+import { getPrimaryRoleFromProfile } from '@/lib/utils/profileParser';
 
 export async function GET() {
   try {
     const admin = createAdminClient();
     
-    // Obtener usuarios de profiles
+    // Obtener usuarios de profiles (roles duales directamente en profiles.roles)
     const { data: usuarios, error } = await admin
       .from('profiles')
-      .select('id, dni_ce, nombres, apellidos, email, role, paquete_adquirido')
+      .select('id, dni_ce, nombres, apellidos, email, roles, paquete_adquirido')
       .order('nombres', { ascending: true });
 
     if (error) {
       return NextResponse.json({ usuarios: [], error: error.message }, { status: 500 });
     }
 
-    // Obtener asignaciones detalladas de audit_logs más recientes
-    const { data: assignmentsLogs } = await admin
-      .from('audit_logs')
-      .select('detalles')
-      .eq('accion', 'ASIGNACION_ROLES_RBAC')
-      .order('created_at', { ascending: false })
-      .limit(200);
-
-    const assignmentsMap = new Map<string, { rolAdministrativo: string | null; rolAcademico: string | null }>();
-    if (assignmentsLogs) {
-      for (const log of assignmentsLogs) {
-        if (log.detalles?.userId && !assignmentsMap.has(log.detalles.userId)) {
-          assignmentsMap.set(log.detalles.userId, {
-            rolAdministrativo: log.detalles.rolAdministrativo ?? null,
-            rolAcademico: log.detalles.rolAcademico ?? null,
-          });
-        }
-      }
-    }
-
-    const formatted = (usuarios || []).map((u) => {
-      const explicit = assignmentsMap.get(u.id);
+    const formatted = (usuarios || []).map((u: any) => {
+      const rolesObj = (u.roles && typeof u.roles === 'object') ? u.roles : null;
 
       // Determinar Rol Administrativo (máximo 1)
-      let rolAdministrativo: string | null = null;
-      if (explicit && explicit.rolAdministrativo !== undefined) {
-        rolAdministrativo = explicit.rolAdministrativo;
-      } else {
-        if (u.role === 'SUPERADMIN') rolAdministrativo = 'SUPERADMIN';
-        else if (u.role === 'ADMIN') rolAdministrativo = 'ADMIN';
-        else rolAdministrativo = null;
-      }
+      const rolAdministrativo: string | null = rolesObj?.administrativo || null;
 
       // Determinar Rol Académico (máximo 1)
-      let rolAcademico: string | null = null;
-      if (explicit && explicit.rolAcademico !== undefined) {
-        rolAcademico = explicit.rolAcademico;
-      } else {
-        if (u.role === 'DOCENTE') rolAcademico = 'DOCENTE';
-        else if (u.role === 'ESTUDIANTE' || u.paquete_adquirido) rolAcademico = 'ESTUDIANTE';
-        else rolAcademico = null; // Usuario puramente administrativo sin rol de alumno
-      }
+      const rolAcademico: string | null =
+        rolesObj && rolesObj.academico !== undefined
+          ? (rolesObj.academico || null)
+          : (u.paquete_adquirido ? 'ESTUDIANTE' : null);
 
       // Lista limpia de nombres de roles activos para visualización
       const rolesActivos: string[] = [];
@@ -77,6 +47,7 @@ export async function GET() {
 
       return {
         ...u,
+        role: getPrimaryRoleFromProfile(u),
         rolAdministrativo,
         rolAcademico,
         rolesActivos,
@@ -123,28 +94,25 @@ export async function PATCH(request: Request) {
       return NextResponse.json({ error: 'El usuario debe tener al menos un rol asignado (administrativo o académico).' }, { status: 400 });
     }
 
-    // Determinar valor para la columna enum de Supabase (profiles.role)
-    let dbRole = 'ESTUDIANTE';
-    if (targetAdminRole === 'SUPERADMIN') {
-      dbRole = 'SUPERADMIN';
-    } else if (targetAdminRole) {
-      dbRole = 'ADMIN'; // Administrador o roles administrativos personalizados
-    } else if (targetAcadRole === 'DOCENTE') {
-      dbRole = 'DOCENTE';
-    } else {
-      dbRole = 'ESTUDIANTE';
-    }
+    const rolesPayload = {
+      administrativo: targetAdminRole || null,
+      academico: targetAcadRole || null,
+    };
 
     const { data: updatedUser, error } = await admin
       .from('profiles')
-      .update({ role: dbRole })
+      .update({
+        roles: rolesPayload,
+      })
       .eq('id', userId)
-      .select('id, dni_ce, nombres, apellidos, email, role')
+      .select('id, dni_ce, nombres, apellidos, email, roles')
       .single();
 
     if (error) {
       return NextResponse.json({ error: `Error al actualizar perfil en base de datos: ${error.message}` }, { status: 500 });
     }
+
+    const resolvedRole = getPrimaryRoleFromProfile(updatedUser);
 
     // Auditoría y persistencia de asignación exacta (1 rol administrativo + 1 rol académico)
     try {
@@ -156,7 +124,7 @@ export async function PATCH(request: Request) {
           targetEmail: updatedUser.email,
           rolAdministrativo: targetAdminRole || null,
           rolAcademico: targetAcadRole || null,
-          dbRole: updatedUser.role,
+          dbRole: resolvedRole,
           updated_at: new Date().toISOString()
         }
       });
@@ -168,6 +136,7 @@ export async function PATCH(request: Request) {
       success: true, 
       usuario: {
         ...updatedUser,
+        role: resolvedRole,
         rolAdministrativo: targetAdminRole || null,
         rolAcademico: targetAcadRole || null
       }

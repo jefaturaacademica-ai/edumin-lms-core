@@ -1106,9 +1106,10 @@ export default function CertificadosPage() {
             >
               <button 
                 onClick={() => setModalAbierto(false)} 
+                aria-label="Cerrar modal"
                 className="absolute right-6 top-6 text-slate-400 hover:text-slate-200 font-bold p-1 rounded-lg cursor-pointer"
               >
-                ✕
+                <X className="size-5" />
               </button>
 
               {solicitudEnviada ? (

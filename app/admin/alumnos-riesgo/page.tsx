@@ -251,7 +251,7 @@ export default function AlumnosRiesgoPage() {
                   onChange={(e) => setMesSeleccionado(e.target.value)}
                   className="px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer"
                 >
-                  <option value="todos">📅 Filtrar por Mes (Todos)</option>
+                  <option value="todos">Filtrar por Mes (Todos)</option>
                   <option value="julio">Julio</option>
                   <option value="agosto">Agosto</option>
                   <option value="septiembre">Septiembre</option>

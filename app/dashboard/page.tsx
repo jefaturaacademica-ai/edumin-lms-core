@@ -15,9 +15,14 @@ import {
 } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { calculateEduminCredits } from "@/lib/utils/credits";
+import { calculateEduminCredits, derivePaymentStateForCredits } from "@/lib/utils/credits";
 import { getDiplomadoByTitleOrSlug } from "@/lib/data/diplomadosData";
-import { parseDiplomadosFromProfile, parseCursosFromProfile } from "@/lib/utils/profileParser";
+import {
+  parseDiplomadosFromProfile,
+  parseCursosFromProfile,
+  parseCuposCreditosFromProfile,
+  filtrarCursosReales
+} from "@/lib/utils/profileParser";
 import { obtenerTallerParaDiplomado } from "@/lib/utils/tallerAsignado";
 import { obtenerConfiguracionPaquetes } from "@/lib/services/paquetesService";
 import { obtenerConfiguracionBienvenida } from "@/lib/services/bienvenidaService";
@@ -71,7 +76,11 @@ export default async function DashboardPage() {
     email: user.email || '',
     paquete_adquirido: 'FULL',
     cuotas_pagadas: 1,
-    cupos_diplomados: 0,
+    cupos_creditos: {
+      diplomados: { asignados: 1, adicionales: 0, canjeados: 0 },
+      cursos: { asignados: 5, adicionales: 0, canjeados: 0 },
+      compras_directas: []
+    },
     diplomados: null,
     cursos: null,
     diplomado_1: 'DERECHO MINERO',
@@ -119,17 +128,7 @@ export default async function DashboardPage() {
     };
   }
 
-  // Cálculos de Créditos EDUMIN centralizados
-  const eduminCredits = calculateEduminCredits({
-    paqueteAdquirido: safeProfile.paquete_adquirido || 'FULL',
-    cuotasPagadas: safeProfile.cuotas_pagadas || 1,
-    cuotasTotales: safeProfile.cuotas_totales || (safeProfile.paquete_adquirido === 'ILIMITADO' ? 5 : 3),
-    tipoPago: safeProfile.tipo_pago || 'CUOTAS',
-    diplomadosConsumidos: safeProfile.cupos_diplomados || Math.max(1, parsedDips.length),
-    cursosConsumidos: safeProfile.cupos_cursos || parsedCursos.length
-  });
-
-  // Consultar pagos reales del estudiante en Supabase para el widget de Estado de Cuenta
+  // Consultar pagos reales del estudiante en Supabase para el widget de Estado de Cuenta y créditos
   let pagosReales: any[] = [];
   try {
     const filterConditions: string[] = [`profile_id.eq.${safeProfile.id}`];
@@ -146,6 +145,24 @@ export default async function DashboardPage() {
   } catch (err) {
     console.error('Error obteniendo pagos:', err);
   }
+
+  // Cálculos de Créditos EDUMIN centralizados con `profiles.cupos_creditos` y estado real de pagos
+  const cupos = parseCuposCreditosFromProfile(safeProfile);
+  const paymentState = derivePaymentStateForCredits({
+    pagos: pagosReales,
+    profile: safeProfile,
+  });
+
+  const eduminCredits = calculateEduminCredits({
+    paqueteAdquirido: safeProfile.paquete_adquirido || 'FULL',
+    cuotasPagadas: paymentState.cuotasPagadas,
+    cuotasTotales: paymentState.cuotasTotales,
+    tipoPago: paymentState.tipoPago,
+    diplomadosConsumidos: cupos.diplomados.canjeados,
+    cursosConsumidos: filtrarCursosReales(parsedCursos).length,
+    creditosExtraDiplomados: cupos.diplomados.adicionales,
+    creditosExtraCursos: cupos.cursos.adicionales,
+  });
 
   // Motor Financiero Dinámico
   let costoTotal = configPaqueteActual?.precioContado || 900;

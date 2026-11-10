@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   BookOpen, Users, Settings, LogOut, 
-  ShieldCheck, Activity, X, Layers, ChevronRight, UploadCloud, Plus, Loader2, AlertCircle, CheckCircle2, FileSpreadsheet, Download, Search, Edit3, Trash2, Code, Sparkles, Database, RefreshCw, RotateCcw, Folder, Table, PlayCircle, Video, FileText
+  ShieldCheck, Activity, X, Layers, ChevronRight, ChevronDown, ChevronUp, UploadCloud, Plus, Loader2, AlertCircle, CheckCircle2, FileSpreadsheet, Download, Search, Edit3, Trash2, Code, Sparkles, Folder, Table, PlayCircle, Video, FileText
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import { useTabSlug } from '@/lib/hooks/useTabSlug';
@@ -26,13 +26,16 @@ export default function CatalogoAdminPage() {
   const [itemEditando, setItemEditando] = useState<any>(null);
   const [bulkModulesJson, setBulkModulesJson] = useState('');
 
+  // Estados de acordeón colapsable para edición limpia y ordenada (UI/UX progresiva)
+  const [moduloExpandido, setModuloExpandido] = useState<number | null>(null);
+  const [temaExpandido, setTemaExpandido] = useState<number | null>(null);
+  const [cursoTemaExpandido, setCursoTemaExpandido] = useState<number | null>(null);
+
   // Selección múltiple para eliminación en lote
   const [seleccionados, setSeleccionados] = useState<string[]>([]);
   
   // Estado de carga y mensajes
   const [cargandoSupabase, setCargandoSupabase] = useState(true);
-  const [sembrandoSupabase, setSembrandoSupabase] = useState(false);
-  const [sembrandoLecciones, setSembrandoLecciones] = useState(false);
   const [mensajeExito, setMensajeExito] = useState<string | null>(null);
 
   // Formulario de creación
@@ -66,61 +69,29 @@ export default function CatalogoAdminPage() {
       const res = await fetch('/api/admin/catalogo');
       if (res.ok) {
         const data = await res.json();
-        setCatalogoDiplomados(data.diplomados || []);
-        setCatalogoCursos(data.cursosEspecializacion || []);
-        setCatalogoTalleres(data.talleres || []);
+        const dips = (data.diplomados || []).filter((d: any) => 
+          (d.tipo === 'diplomado' || d.codigo?.toUpperCase().startsWith('DIP-')) &&
+          !d.codigo?.toUpperCase().startsWith('CUR-') &&
+          !d.codigo?.toUpperCase().startsWith('TAL-')
+        );
+        const curs = (data.cursosEspecializacion || []).filter((c: any) => 
+          (c.tipo === 'curso' || c.codigo?.toUpperCase().startsWith('CUR-')) &&
+          !c.codigo?.toUpperCase().startsWith('DIP-') &&
+          !c.codigo?.toUpperCase().startsWith('TAL-')
+        );
+        const tals = (data.talleres || []).filter((t: any) => 
+          (t.tipo === 'taller' || t.codigo?.toUpperCase().startsWith('TAL-')) &&
+          !t.codigo?.toUpperCase().startsWith('DIP-') &&
+          !t.codigo?.toUpperCase().startsWith('CUR-')
+        );
+        setCatalogoDiplomados(dips);
+        setCatalogoCursos(curs);
+        setCatalogoTalleres(tals);
       }
     } catch (err) {
       console.error('Error al cargar catálogo de Supabase:', err);
     } finally {
       setCargandoSupabase(false);
-    }
-  };
-
-  const sembrarCatalogoEnSupabase = async () => {
-    setSembrandoSupabase(true);
-    try {
-      const res = await fetch('/api/admin/catalogo', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'seed' })
-      });
-      const data = await res.json();
-      if (res.ok) {
-        setCatalogoDiplomados(data.diplomados || []);
-        setCatalogoCursos(data.cursosEspecializacion || []);
-        setCatalogoTalleres(data.talleres || []);
-        setMensajeExito("¡Catálogo de 100 productos (22 Diplomados, 76 Cursos y 2 Talleres) guardado en Supabase!");
-        setTimeout(() => setMensajeExito(null), 5000);
-      } else {
-        alert(`Error al sembrar: ${data.error}`);
-      }
-    } catch (e: any) {
-      alert(`Error de conexión: ${e.message}`);
-    } finally {
-      setSembrandoSupabase(false);
-    }
-  };
-
-  const sembrarTablaLeccionesSupabase = async () => {
-    setSembrandoLecciones(true);
-    try {
-      const res = await fetch('/api/admin/diplomados-lecciones', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'seed', replace: true })
-      });
-      const data = await res.json();
-      if (res.ok) {
-        setMensajeExito(data.message || '¡Tabla lecciones sembrada con éxito en Supabase (20 Columnas)!');
-        setTimeout(() => setMensajeExito(null), 5000);
-      } else {
-        alert(`Error al sembrar lecciones: ${data.error || 'Verifica que la tabla esté creada en Supabase SQL Editor.'}`);
-      }
-    } catch (e: any) {
-      alert(`Error de conexión: ${e.message}`);
-    } finally {
-      setSembrandoLecciones(false);
     }
   };
 
@@ -132,12 +103,12 @@ export default function CatalogoAdminPage() {
     
     try {
       const categoriaMap = {
-        diplomado: 'Diplomados Oficiales',
-        curso: 'Cursos de Alta Especialización',
-        taller: 'Talleres'
+        diplomado: 'Legal y cumplimiento',
+        curso: 'Seguridad y prevención',
+        taller: 'Taller'
       };
 
-      const numModulos = nuevoTipo === 'diplomado' ? Number(nuevoNumModulos) || 3 : 1;
+      const numModulos = nuevoTipo === 'diplomado' ? Number(nuevoNumModulos) || 3 : 0;
 
       const modulosIniciales = nuevoTipo === 'diplomado' ? Array.from({ length: numModulos }, (_, i) => {
         return {
@@ -180,10 +151,11 @@ export default function CatalogoAdminPage() {
           tipo: nuevoTipo,
           categoria: categoriaMap[nuevoTipo],
           num_modulos: numModulos,
-          taller_aplicable: nuevoTipo === 'diplomado' ? nuevoTallerAplicable : 'Ninguno',
+          taller_aplicable: nuevoTipo === 'diplomado' ? nuevoTallerAplicable : null,
           docente: nuevoDocente,
           horas: Number(nuevaDuracion) || 30,
           creditos: Number(nuevosCreditos) || 0,
+          nivel: null,
           precio: Number(nuevoPrecio) || 150.00,
           modulos: modsProcesados
         })
@@ -216,17 +188,21 @@ export default function CatalogoAdminPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           id: itemEditando.id,
+          tipo: itemEditando.tipo,
           codigo: itemEditando.codigo,
           version: itemEditando.version,
           ano: itemEditando.ano,
           titulo: itemEditando.titulo,
-          num_modulos: itemEditando.num_modulos,
-          taller_aplicable: itemEditando.taller_aplicable,
+          categoria: itemEditando.categoria,
+          nivel: itemEditando.nivel || null,
+          num_modulos: itemEditando.tipo === 'diplomado' ? itemEditando.num_modulos : 0,
+          taller_aplicable: itemEditando.tipo === 'diplomado' ? itemEditando.taller_aplicable : null,
           docente: itemEditando.docente,
           horas: itemEditando.horas !== undefined ? itemEditando.horas : 30,
           creditos: Number(itemEditando.creditos) || 0,
           precio: itemEditando.precio,
-          modulos: itemEditando.modulos || []
+          modulos: itemEditando.modulos || [],
+          lecciones: itemEditando.lecciones || []
         })
       });
 
@@ -338,12 +314,6 @@ export default function CatalogoAdminPage() {
           const resumenInteractivoVal = isObj ? (claseItem.resumenInteractivo || claseItem.ResumenInteractivo || '') : '';
           const material1Val = isObj ? (claseItem.material1 || claseItem.Material1 || excelUrlVal || '') : '';
           const material2Val = isObj ? (claseItem.material2 || claseItem.Material2 || '') : '';
-          const material3Val = isObj ? (claseItem.material3 || claseItem.Material3 || '') : '';
-          const material4Val = isObj ? (claseItem.material4 || claseItem.Material4 || '') : '';
-          const material5Val = isObj ? (claseItem.material5 || claseItem.Material5 || '') : '';
-          const material6Val = isObj ? (claseItem.material6 || claseItem.Material6 || '') : '';
-          const material7Val = isObj ? (claseItem.material7 || claseItem.Material7 || '') : '';
-          const material8Val = isObj ? (claseItem.material8 || claseItem.Material8 || '') : '';
 
           return {
             ...(isObj ? claseItem : {}),
@@ -360,13 +330,7 @@ export default function CatalogoAdminPage() {
             resumenAudioUrl: audioResumenVal,
             resumenInteractivo: resumenInteractivoVal,
             material1: material1Val,
-            material2: material2Val,
-            material3: material3Val,
-            material4: material4Val,
-            material5: material5Val,
-            material6: material6Val,
-            material7: material7Val,
-            material8: material8Val
+            material2: material2Val
           };
         });
 
@@ -541,56 +505,41 @@ export default function CatalogoAdminPage() {
     setItemEditando({ ...itemEditando, modulos: modsSecuenciados });
   };
 
-  const agregarClaseAdicionalAModulo = (mIdx: number) => {
+  // =========================================================
+  // HELPERS PARA TEMAS Y LECCIONES DE CURSOS Y TALLERES (SINCRONIZADOS CON SUPABASE)
+  // =========================================================
+  const actualizarLeccionCurso = (lIdx: number, campo: string, valor: string) => {
+    if (!itemEditando || !Array.isArray(itemEditando.lecciones)) return;
+    const nuevasLecciones = [...itemEditando.lecciones];
+    nuevasLecciones[lIdx] = {
+      ...nuevasLecciones[lIdx],
+      [campo]: valor
+    };
+    setItemEditando({ ...itemEditando, lecciones: nuevasLecciones });
+  };
+
+  const agregarTemaCurso = () => {
     if (!itemEditando) return;
-    const nuevosMods = itemEditando.modulos 
-      ? itemEditando.modulos.map((m: any) => ({ ...m, clasesAdicionales: [...(m.clasesAdicionales || [])] }))
-      : [];
-    
-    nuevosMods[mIdx].clasesAdicionales.push({
-      titulo: 'Clase Adicional: Sesión Especial',
+    const leccionesActuales = Array.isArray(itemEditando.lecciones) ? [...itemEditando.lecciones] : [];
+    const nuevoNum = (leccionesActuales.length + 1).toString().padStart(2, '0');
+    leccionesActuales.push({
+      id: `temp-${Date.now()}`,
+      tema: `Tema ${nuevoNum}: Nuevo Tema Oficial`,
+      sesion: 'Parte 1',
       videoUrl: '',
-      iframe_url: '',
-      pdf_url: '',
-      excel_url: ''
+      pdfUrl: '',
+      resumenVideoUrl: '',
+      resumenTexto: ''
     });
-    setItemEditando({ ...itemEditando, modulos: nuevosMods });
+    setItemEditando({ ...itemEditando, lecciones: leccionesActuales });
+    setCursoTemaExpandido(leccionesActuales.length - 1);
   };
 
-  const actualizarCampoClaseAdicional = (mIdx: number, caIdx: number, campo: string, valor: string) => {
-    if (!itemEditando) return;
-    const nuevosMods = itemEditando.modulos
-      ? itemEditando.modulos.map((m: any) => ({ ...m, clasesAdicionales: [...(m.clasesAdicionales || [])] }))
-      : [];
-    
-    const claseActual = nuevosMods[mIdx].clasesAdicionales[caIdx];
-    if (typeof claseActual === 'object' && claseActual !== null) {
-      claseActual[campo] = valor;
-      if (campo === 'iframe_url' || campo === 'videoUrl') {
-        claseActual.iframe_url = valor;
-        claseActual.videoUrl = valor;
-      }
-    } else {
-      nuevosMods[mIdx].clasesAdicionales[caIdx] = {
-        titulo: String(claseActual),
-        videoUrl: (campo === 'iframe_url' || campo === 'videoUrl') ? valor : '',
-        iframe_url: (campo === 'iframe_url' || campo === 'videoUrl') ? valor : '',
-        pdf_url: campo === 'pdf_url' ? valor : '',
-        excel_url: campo === 'excel_url' ? valor : ''
-      };
-    }
-    
-    setItemEditando({ ...itemEditando, modulos: nuevosMods });
-  };
-
-  const eliminarClaseAdicionalDeModulo = (mIdx: number, caIdx: number) => {
-    if (!itemEditando) return;
-    const nuevosMods = itemEditando.modulos
-      ? itemEditando.modulos.map((m: any) => ({ ...m, clasesAdicionales: [...(m.clasesAdicionales || [])] }))
-      : [];
-    
-    nuevosMods[mIdx].clasesAdicionales = nuevosMods[mIdx].clasesAdicionales.filter((_: any, idx: number) => idx !== caIdx);
-    setItemEditando({ ...itemEditando, modulos: nuevosMods });
+  const eliminarTemaCurso = (lIdx: number) => {
+    if (!itemEditando || !Array.isArray(itemEditando.lecciones)) return;
+    const nuevasLecciones = itemEditando.lecciones.filter((_: any, idx: number) => idx !== lIdx);
+    setItemEditando({ ...itemEditando, lecciones: nuevasLecciones });
+    if (cursoTemaExpandido === lIdx) setCursoTemaExpandido(null);
   };
 
   // =========================================================
@@ -682,22 +631,6 @@ export default function CatalogoAdminPage() {
     actualizarClasesCursoEditando(clasesActuales);
   };
 
-  const reiniciarAvanceAlumnos = async () => {
-    if (!confirm('¿Estás seguro de reiniciar el avance de TODOS los estudiantes a 0% en Supabase?')) return;
-    try {
-      const res = await fetch('/api/admin/reset-avance', { method: 'POST' });
-      const data = await res.json();
-      if (res.ok) {
-        setMensajeExito(data.message || '¡Avances reiniciados a 0%!');
-        setTimeout(() => setMensajeExito(null), 5000);
-      } else {
-        alert(`Error al reiniciar avances: ${data.error}`);
-      }
-    } catch (e: any) {
-      alert(`Error de red: ${e.message}`);
-    }
-  };
-
   // Exportar estructura actual de módulos, temas y sesiones a CSV / Excel con las 20 columnas oficiales
   const descargarEstructuraCsvExcel = () => {
     if (!itemEditando || !Array.isArray(itemEditando.modulos)) {
@@ -708,8 +641,7 @@ export default function CatalogoAdminPage() {
     const headers = [
       'CodigoDiplomado', 'Diplomado', 'Modulo', 'NombreModulo', 'Docente',
       'Tema', 'Sesion', 'VideoUrl', 'PdfUrl', 'ResumenVideoUrl', 'ResumenAudioUrl',
-      'ResumenInteractivo', 'Material1', 'Material2', 'Material3', 'Material4',
-      'Material5', 'Material6', 'Material7', 'Material8'
+      'ResumenInteractivo', 'Material1', 'Material2'
     ];
     const filas = convertirModulosALeccionRows(
       itemEditando.codigo || 'DIP-01',
@@ -733,13 +665,7 @@ export default function CatalogoAdminPage() {
         f.ResumenAudioUrl || '',
         f.ResumenInteractivo || '',
         f.Material1 || '',
-        f.Material2 || '',
-        f.Material3 || '',
-        f.Material4 || '',
-        f.Material5 || '',
-        f.Material6 || '',
-        f.Material7 || '',
-        f.Material8 || ''
+        f.Material2 || ''
       ]);
     });
 
@@ -781,13 +707,7 @@ export default function CatalogoAdminPage() {
       ResumenAudioUrl: f.ResumenAudioUrl || '',
       ResumenInteractivo: f.ResumenInteractivo || '',
       Material1: f.Material1 || '',
-      Material2: f.Material2 || '',
-      Material3: f.Material3 || '',
-      Material4: f.Material4 || '',
-      Material5: f.Material5 || '',
-      Material6: f.Material6 || '',
-      Material7: f.Material7 || '',
-      Material8: f.Material8 || ''
+      Material2: f.Material2 || ''
     }));
 
     const worksheet = XLSX.utils.json_to_sheet(data);
@@ -797,19 +717,18 @@ export default function CatalogoAdminPage() {
     XLSX.writeFile(workbook, nombreArchivo);
   };
 
-  // Descargar Plantilla Ejemplo CSV con 20 Columnas
+  // Descargar Plantilla Ejemplo CSV con las 14 Columnas oficiales
   const descargarPlantillaEjemploCsv = () => {
     const headers = [
       'CodigoDiplomado', 'Diplomado', 'Modulo', 'NombreModulo', 'Docente',
       'Tema', 'Sesion', 'VideoUrl', 'PdfUrl', 'ResumenVideoUrl', 'ResumenAudioUrl',
-      'ResumenInteractivo', 'Material1', 'Material2', 'Material3', 'Material4',
-      'Material5', 'Material6', 'Material7', 'Material8'
+      'ResumenInteractivo', 'Material1', 'Material2'
     ];
     const sampleRows = [
       headers,
-      ['DIP-01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Módulo 01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Ing. Manuel Aucapuri', 'Tema 01: Fundamentos Geotécnicos', 'Parte 1', 'https://drive.google.com/file/d/1/preview', 'https://.../separata.pdf', 'https://.../resumen.mp4', 'https://.../audio.mp3', 'https://.../interactivo.html', 'https://.../plantilla.xlsx', '', '', '', '', '', '', ''],
-      ['DIP-01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Módulo 01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Ing. Manuel Aucapuri', 'Tema 01: Fundamentos Geotécnicos', 'Parte 2', 'https://drive.google.com/file/d/2/preview', '', '', '', '', '', '', '', '', '', '', '', ''],
-      ['DIP-01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Módulo 02', 'MONITOREO GEOTÉCNICO', 'Ing. Mario Hilasaca', 'Tema 02: Instrumentación en Minas', 'Parte 1', 'https://drive.google.com/file/d/3/preview', '', '', '', '', '', '', '', '', '', '', '', '']
+      ['DIP-01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Módulo 01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Ing. Manuel Aucapuri', 'Tema 01: Fundamentos Geotécnicos', 'Parte 1', 'https://drive.google.com/file/d/1/preview', 'https://.../separata.pdf', 'https://.../resumen.mp4', 'https://.../audio.mp3', 'https://.../interactivo.html', 'https://.../plantilla.xlsx', ''],
+      ['DIP-01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Módulo 01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Ing. Manuel Aucapuri', 'Tema 01: Fundamentos Geotécnicos', 'Parte 2', 'https://drive.google.com/file/d/2/preview', '', '', '', '', '', ''],
+      ['DIP-01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Módulo 02', 'MONITOREO GEOTÉCNICO', 'Ing. Mario Hilasaca', 'Tema 02: Instrumentación en Minas', 'Parte 1', 'https://drive.google.com/file/d/3/preview', '', '', '', '', '', '']
     ];
 
     const csvContent = '\uFEFF' + sampleRows.map(row => 
@@ -842,13 +761,7 @@ export default function CatalogoAdminPage() {
         ResumenAudioUrl: 'https://.../audio.mp3',
         ResumenInteractivo: 'https://.../interactivo.html',
         Material1: 'https://.../plantilla.xlsx',
-        Material2: '',
-        Material3: '',
-        Material4: '',
-        Material5: '',
-        Material6: '',
-        Material7: '',
-        Material8: ''
+        Material2: ''
       },
       {
         CodigoDiplomado: 'DIP-01',
@@ -864,13 +777,7 @@ export default function CatalogoAdminPage() {
         ResumenAudioUrl: '',
         ResumenInteractivo: '',
         Material1: '',
-        Material2: '',
-        Material3: '',
-        Material4: '',
-        Material5: '',
-        Material6: '',
-        Material7: '',
-        Material8: ''
+        Material2: ''
       }
     ];
 
@@ -962,12 +869,6 @@ export default function CatalogoAdminPage() {
       const colResumenInteractivo = headerRow.findIndex(h => h.includes('interactivo') || h.includes('resumeninteractivo'));
       const colMat1 = headerRow.findIndex(h => h === 'material1' || h.includes('excel'));
       const colMat2 = headerRow.findIndex(h => h === 'material2');
-      const colMat3 = headerRow.findIndex(h => h === 'material3');
-      const colMat4 = headerRow.findIndex(h => h === 'material4');
-      const colMat5 = headerRow.findIndex(h => h === 'material5');
-      const colMat6 = headerRow.findIndex(h => h === 'material6');
-      const colMat7 = headerRow.findIndex(h => h === 'material7');
-      const colMat8 = headerRow.findIndex(h => h === 'material8');
 
       const modulesMap = new Map<string, any>();
 
@@ -1000,12 +901,6 @@ export default function CatalogoAdminPage() {
         const resumenInteractivo = colResumenInteractivo !== -1 && row[colResumenInteractivo] ? row[colResumenInteractivo].trim() : '';
         const mat1 = colMat1 !== -1 && row[colMat1] ? row[colMat1].trim() : '';
         const mat2 = colMat2 !== -1 && row[colMat2] ? row[colMat2].trim() : '';
-        const mat3 = colMat3 !== -1 && row[colMat3] ? row[colMat3].trim() : '';
-        const mat4 = colMat4 !== -1 && row[colMat4] ? row[colMat4].trim() : '';
-        const mat5 = colMat5 !== -1 && row[colMat5] ? row[colMat5].trim() : '';
-        const mat6 = colMat6 !== -1 && row[colMat6] ? row[colMat6].trim() : '';
-        const mat7 = colMat7 !== -1 && row[colMat7] ? row[colMat7].trim() : '';
-        const mat8 = colMat8 !== -1 && row[colMat8] ? row[colMat8].trim() : '';
 
         modObj.temasMap.get(rawTema)!.push({
           titulo: sesionTitle,
@@ -1020,12 +915,6 @@ export default function CatalogoAdminPage() {
           resumenInteractivo,
           material1: mat1,
           material2: mat2,
-          material3: mat3,
-          material4: mat4,
-          material5: mat5,
-          material6: mat6,
-          material7: mat7,
-          material8: mat8,
           excel_url: mat1,
           excelUrl: mat1
         });
@@ -1168,12 +1057,6 @@ export default function CatalogoAdminPage() {
             ResumenInteractivo: f.ResumenInteractivo || '',
             Material1: f.Material1 || '',
             Material2: f.Material2 || '',
-            Material3: f.Material3 || '',
-            Material4: f.Material4 || '',
-            Material5: f.Material5 || '',
-            Material6: f.Material6 || '',
-            Material7: f.Material7 || '',
-            Material8: f.Material8 || '',
           }));
         }
       }
@@ -1197,12 +1080,6 @@ export default function CatalogoAdminPage() {
               ResumenInteractivo: f.ResumenInteractivo || '',
               Material1: f.Material1 || '',
               Material2: f.Material2 || '',
-              Material3: f.Material3 || '',
-              Material4: f.Material4 || '',
-              Material5: f.Material5 || '',
-              Material6: f.Material6 || '',
-              Material7: f.Material7 || '',
-              Material8: f.Material8 || '',
             });
           });
         });
@@ -1222,14 +1099,13 @@ export default function CatalogoAdminPage() {
     }
   };
 
-  // Descarga Masiva del Catálogo Completo en CSV con 20 Columnas
+  // Descarga Masiva del Catálogo Completo en CSV
   const descargarCatalogoCompletoCsv = async () => {
     try {
       const headers = [
         'CodigoDiplomado', 'Diplomado', 'Modulo', 'NombreModulo', 'Docente',
         'Tema', 'Sesion', 'VideoUrl', 'PdfUrl', 'ResumenVideoUrl', 'ResumenAudioUrl',
-        'ResumenInteractivo', 'Material1', 'Material2', 'Material3', 'Material4',
-        'Material5', 'Material6', 'Material7', 'Material8'
+        'ResumenInteractivo', 'Material1', 'Material2'
       ];
       const rows: string[][] = [headers];
 
@@ -1264,13 +1140,7 @@ export default function CatalogoAdminPage() {
           f.ResumenAudioUrl || '',
           f.ResumenInteractivo || '',
           f.Material1 || '',
-          f.Material2 || '',
-          f.Material3 || '',
-          f.Material4 || '',
-          f.Material5 || '',
-          f.Material6 || '',
-          f.Material7 || '',
-          f.Material8 || ''
+          f.Material2 || ''
         ]);
       });
 
@@ -1293,7 +1163,7 @@ export default function CatalogoAdminPage() {
     }
   };
 
-  // Descargar Plantilla de Ejemplo en Excel (.XLSX) con las 20 Columnas
+  // Descargar Plantilla de Ejemplo en Excel (.XLSX)
   const descargarPlantillaCompletaExcelXlsx = () => {
     const sampleRows = [
       {
@@ -1310,13 +1180,7 @@ export default function CatalogoAdminPage() {
         ResumenAudioUrl: 'https://.../audio.mp3',
         ResumenInteractivo: 'https://.../actividad.html',
         Material1: 'https://.../separata.pdf',
-        Material2: 'https://.../plantilla.xlsx',
-        Material3: '',
-        Material4: '',
-        Material5: '',
-        Material6: '',
-        Material7: '',
-        Material8: ''
+        Material2: 'https://.../plantilla.xlsx'
       },
       {
         CodigoDiplomado: 'DIP-01',
@@ -1332,13 +1196,7 @@ export default function CatalogoAdminPage() {
         ResumenAudioUrl: '',
         ResumenInteractivo: '',
         Material1: '',
-        Material2: '',
-        Material3: '',
-        Material4: '',
-        Material5: '',
-        Material6: '',
-        Material7: '',
-        Material8: ''
+        Material2: ''
       }
     ];
 
@@ -1348,18 +1206,17 @@ export default function CatalogoAdminPage() {
     XLSX.writeFile(workbook, 'Plantilla_Catalogo_Diplomados_EDUMIN.xlsx');
   };
 
-  // Descargar Plantilla de Ejemplo en CSV con las 20 Columnas
+  // Descargar Plantilla de Ejemplo en CSV
   const descargarPlantillaCompletaCsv = () => {
     const headers = [
       'CodigoDiplomado', 'Diplomado', 'Modulo', 'NombreModulo', 'Docente',
       'Tema', 'Sesion', 'VideoUrl', 'PdfUrl', 'ResumenVideoUrl', 'ResumenAudioUrl',
-      'ResumenInteractivo', 'Material1', 'Material2', 'Material3', 'Material4',
-      'Material5', 'Material6', 'Material7', 'Material8'
+      'ResumenInteractivo', 'Material1', 'Material2'
     ];
     const sampleRows = [
       headers,
-      ['DIP-01', 'DERECHO MINERO', 'Módulo 01', 'LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR', 'Reginaldo Andía', 'Tema 01: Regulación Ambiental y Catastro Minero', 'Parte 1', 'https://drive.google.com/file/d/1YcuePTMFN2MTU1JsjCowwnGmcwgiPcOY/preview', 'https://.../separata.pdf', 'https://.../resumen.mp4', 'https://.../audio.mp3', 'https://.../actividad.html', 'https://.../separata.pdf', 'https://.../plantilla.xlsx', '', '', '', '', '', ''],
-      ['DIP-01', 'DERECHO MINERO', 'Módulo 01', 'LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR', 'Reginaldo Andía', 'Tema 01: Regulación Ambiental y Catastro Minero', 'Parte 2', 'https://drive.google.com/file/d/1FEf_erKQOT2VirpUQq7pr-oPU_Th3ZTy/preview', '', '', '', '', '', '', '', '', '', '', '', '']
+      ['DIP-01', 'DERECHO MINERO', 'Módulo 01', 'LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR', 'Reginaldo Andía', 'Tema 01: Regulación Ambiental y Catastro Minero', 'Parte 1', 'https://drive.google.com/file/d/1YcuePTMFN2MTU1JsjCowwnGmcwgiPcOY/preview', 'https://.../separata.pdf', 'https://.../resumen.mp4', 'https://.../audio.mp3', 'https://.../actividad.html', 'https://.../separata.pdf', 'https://.../plantilla.xlsx'],
+      ['DIP-01', 'DERECHO MINERO', 'Módulo 01', 'LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR', 'Reginaldo Andía', 'Tema 01: Regulación Ambiental y Catastro Minero', 'Parte 2', 'https://drive.google.com/file/d/1FEf_erKQOT2VirpUQq7pr-oPU_Th3ZTy/preview', '', '', '', '', '', '']
     ];
 
     const csvContent = '\uFEFF' + sampleRows.map(row => row.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(',')).join('\r\n');
@@ -1450,12 +1307,6 @@ export default function CatalogoAdminPage() {
       const colResumenInteractivo = headerRow.findIndex(h => h.includes('interactivo') || h.includes('resumeninteractivo'));
       const colMat1 = headerRow.findIndex(h => h === 'material1' || h.includes('excel'));
       const colMat2 = headerRow.findIndex(h => h === 'material2');
-      const colMat3 = headerRow.findIndex(h => h === 'material3');
-      const colMat4 = headerRow.findIndex(h => h === 'material4');
-      const colMat5 = headerRow.findIndex(h => h === 'material5');
-      const colMat6 = headerRow.findIndex(h => h === 'material6');
-      const colMat7 = headerRow.findIndex(h => h === 'material7');
-      const colMat8 = headerRow.findIndex(h => h === 'material8');
 
       const diplomadosMap = new Map<string, any>();
       const todasLasFilasTabla: any[] = [];
@@ -1512,12 +1363,6 @@ export default function CatalogoAdminPage() {
         const resumenInteractivo = colResumenInteractivo !== -1 && row[colResumenInteractivo] ? row[colResumenInteractivo].trim() : '';
         const mat1 = colMat1 !== -1 && row[colMat1] ? row[colMat1].trim() : '';
         const mat2 = colMat2 !== -1 && row[colMat2] ? row[colMat2].trim() : '';
-        const mat3 = colMat3 !== -1 && row[colMat3] ? row[colMat3].trim() : '';
-        const mat4 = colMat4 !== -1 && row[colMat4] ? row[colMat4].trim() : '';
-        const mat5 = colMat5 !== -1 && row[colMat5] ? row[colMat5].trim() : '';
-        const mat6 = colMat6 !== -1 && row[colMat6] ? row[colMat6].trim() : '';
-        const mat7 = colMat7 !== -1 && row[colMat7] ? row[colMat7].trim() : '';
-        const mat8 = colMat8 !== -1 && row[colMat8] ? row[colMat8].trim() : '';
 
         modObj.temasMap.get(rawTema)!.push({
           titulo: sesionTitle,
@@ -1532,12 +1377,6 @@ export default function CatalogoAdminPage() {
           resumenInteractivo,
           material1: mat1,
           material2: mat2,
-          material3: mat3,
-          material4: mat4,
-          material5: mat5,
-          material6: mat6,
-          material7: mat7,
-          material8: mat8,
           excel_url: mat1,
           excelUrl: mat1
         });
@@ -1557,12 +1396,6 @@ export default function CatalogoAdminPage() {
           ResumenInteractivo: resumenInteractivo || null,
           Material1: mat1 || null,
           Material2: mat2 || null,
-          Material3: mat3 || null,
-          Material4: mat4 || null,
-          Material5: mat5 || null,
-          Material6: mat6 || null,
-          Material7: mat7 || null,
-          Material8: mat8 || null,
           orden: rIdx + 1
         });
       });
@@ -1697,35 +1530,6 @@ export default function CatalogoAdminPage() {
             </div>
             
             <div className="flex flex-wrap items-center gap-2.5">
-              <button
-                type="button"
-                onClick={sembrarCatalogoEnSupabase}
-                disabled={sembrandoSupabase}
-                className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs shadow-md transition flex items-center gap-2 cursor-pointer disabled:opacity-50"
-              >
-                {sembrandoSupabase ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Database className="w-4 h-4" />}
-                Sincronizar a Supabase (100 Productos)
-              </button>
-
-              <button
-                type="button"
-                onClick={sembrarTablaLeccionesSupabase}
-                disabled={sembrandoLecciones}
-                className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs shadow-md transition flex items-center gap-2 cursor-pointer disabled:opacity-50"
-                title="Sincronizar la tabla lecciones con todos los temas, clases y videos de Google Drive"
-              >
-                {sembrandoLecciones ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Table className="w-4 h-4" />}
-                Sincronizar lecciones (20 Columnas)
-              </button>
-
-              <button
-                type="button"
-                onClick={reiniciarAvanceAlumnos}
-                className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs shadow-md transition flex items-center gap-2 cursor-pointer"
-              >
-                <RotateCcw className="w-4 h-4" /> Reiniciar Avance Alumnos (0%)
-              </button>
-
               {seleccionados.length > 0 && (
                 <button 
                   type="button"
@@ -1828,16 +1632,16 @@ export default function CatalogoAdminPage() {
                     
                     {activeTab === 'diplomados' ? (
                       <>
-                        <th className="pb-3 px-4">Versión</th>
-                        <th className="pb-3 px-4">Año</th>
                         <th className="pb-3 px-4">Nombre del Diplomado</th>
+                        <th className="pb-3 px-4">Categoría</th>
                         <th className="pb-3 px-4 text-center"># Módulos</th>
-                        <th className="pb-3 px-4">Taller Aplicable</th>
+                        <th className="pb-3 px-4">Taller</th>
                       </>
                     ) : (
                       <>
                         <th className="pb-3 px-4">Año</th>
                         <th className="pb-3 px-4">Nombre del Programa</th>
+                        <th className="pb-3 px-4">Categoría</th>
                         <th className="pb-3 px-4">Docente Asignado</th>
                       </>
                     )}
@@ -1847,7 +1651,13 @@ export default function CatalogoAdminPage() {
                 </thead>
                 <tbody className="divide-y divide-slate-100 text-xs">
                   {listaActual.length > 0 ? (
-                    listaActual.map((item) => (
+                    listaActual.map((item) => {
+                      const tieneTallerAsignado = Boolean(
+                        item.taller_aplicable &&
+                        item.taller_aplicable !== 'Ninguno' &&
+                        String(item.taller_aplicable).trim() !== ''
+                      );
+                      return (
                       <tr key={item.id} className="hover:bg-slate-50 transition-colors">
                         <td className="py-4 px-4 text-center">
                           <input 
@@ -1861,17 +1671,37 @@ export default function CatalogoAdminPage() {
 
                         {activeTab === 'diplomados' ? (
                           <>
-                            <td className="py-4 px-4 font-bold text-slate-600">{item.version || 'Versión 1'}</td>
-                            <td className="py-4 px-4 tabular-nums text-slate-600">{item.ano || 2026}</td>
                             <td className="py-4 px-4 font-bold text-slate-800">{item.titulo}</td>
+                            <td className="py-4 px-4">
+                              <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-200 whitespace-nowrap">
+                                {item.categoria || 'Sin categoría'}
+                              </span>
+                            </td>
                             <td className="py-4 px-4 font-bold text-slate-700 text-center">
                               <span className="bg-slate-100 px-2.5 py-1 rounded-md text-[11px]">
-                                {Array.isArray(item.modulos) && item.modulos.length > 0 ? `${item.modulos.length} Módulos` : `${item.num_modulos || 3} Módulos`}
+                                {Array.isArray(item.modulos) && item.modulos.length > 0 ? `${item.modulos.length} Módulos` : `${item.num_modulos ?? 3} Módulos`}
                               </span>
                             </td>
                             <td className="py-4 px-4">
-                              <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold ${item.taller_aplicable && item.taller_aplicable !== 'Ninguno' ? 'bg-amber-100 text-amber-800 border border-amber-200' : 'bg-slate-100 text-slate-500'}`}>
-                                {item.taller_aplicable || 'Ninguno'}
+                              <span
+                                title={tieneTallerAsignado ? item.taller_aplicable : 'Este diplomado no tiene un taller asignado'}
+                                className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold border whitespace-nowrap ${
+                                  tieneTallerAsignado
+                                    ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                                    : 'bg-amber-50 text-amber-800 border-amber-200'
+                                }`}
+                              >
+                                {tieneTallerAsignado ? (
+                                  <>
+                                    <CheckCircle2 className="size-3.5 text-emerald-600 shrink-0" />
+                                    Taller asignado
+                                  </>
+                                ) : (
+                                  <>
+                                    <AlertCircle className="size-3.5 text-amber-600 shrink-0" />
+                                    Sin taller asignado
+                                  </>
+                                )}
                               </span>
                             </td>
                           </>
@@ -1879,6 +1709,11 @@ export default function CatalogoAdminPage() {
                           <>
                             <td className="py-4 px-4 tabular-nums text-slate-600">{item.ano || 2026}</td>
                             <td className="py-4 px-4 font-bold text-slate-800">{item.titulo}</td>
+                            <td className="py-4 px-4">
+                              <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-slate-100 text-slate-700 border border-slate-200 whitespace-nowrap">
+                                {item.categoria || (item.tipo === 'taller' ? 'Taller' : 'Sin categoría')}
+                              </span>
+                            </td>
                             <td className="py-4 px-4 font-semibold text-indigo-600">{item.docente || 'Por asignar'}</td>
                           </>
                         )}
@@ -1886,10 +1721,32 @@ export default function CatalogoAdminPage() {
                         <td className="py-4 px-4 text-right">
                           <button 
                             onClick={() => { 
+                              setModuloExpandido(null);
+                              setTemaExpandido(null);
+                              setCursoTemaExpandido(null);
                               if (item.tipo === 'diplomado') {
                                 setItemEditando({ ...item, modulos: asegurarTemasYSecuenciarClases(item.modulos || []) });
                               } else {
-                                setItemEditando({ ...item });
+                                const leccionesInit = Array.isArray(item.lecciones) && item.lecciones.length > 0
+                                  ? [...item.lecciones]
+                                  : (Array.isArray(item.temas) && item.temas.length > 0
+                                      ? item.temas.map((t: string, idx: number) => ({
+                                          id: `temp-${idx + 1}`,
+                                          tema: t,
+                                          sesion: 'Parte 1',
+                                          videoUrl: '',
+                                          pdfUrl: '',
+                                          resumenVideoUrl: '',
+                                          resumenTexto: ''
+                                        }))
+                                      : [
+                                          { id: 'temp-1', tema: 'Tema 01: Fundamentos y marco normativo', sesion: 'Parte 1', videoUrl: '', pdfUrl: '', resumenVideoUrl: '', resumenTexto: '' },
+                                          { id: 'temp-2', tema: 'Tema 02: Procedimientos técnicos operativos', sesion: 'Parte 1', videoUrl: '', pdfUrl: '', resumenVideoUrl: '', resumenTexto: '' },
+                                          { id: 'temp-3', tema: 'Tema 03: Metodologías de control y mitigación', sesion: 'Parte 1', videoUrl: '', pdfUrl: '', resumenVideoUrl: '', resumenTexto: '' },
+                                          { id: 'temp-4', tema: 'Tema 04: Implementación práctica y evaluación', sesion: 'Parte 1', videoUrl: '', pdfUrl: '', resumenVideoUrl: '', resumenTexto: '' }
+                                        ]
+                                    );
+                                setItemEditando({ ...item, lecciones: leccionesInit });
                               }
                               setShowEditModal(true); 
                             }}
@@ -1899,10 +1756,11 @@ export default function CatalogoAdminPage() {
                           </button>
                         </td>
                       </tr>
-                    ))
+                      );
+                    })
                   ) : (
                     <tr>
-                      <td colSpan={activeTab === 'diplomados' ? 8 : 6} className="text-center py-12 text-slate-400 font-medium">
+                      <td colSpan={7} className="text-center py-12 text-slate-400 font-medium">
                         {cargandoSupabase ? 'Cargando catálogo desde Supabase...' : `No se encontraron registros para "${busqueda}".`}
                       </td>
                     </tr>
@@ -1924,9 +1782,20 @@ export default function CatalogoAdminPage() {
           <div onClick={(e) => e.stopPropagation()} className="bg-white w-full max-w-4xl rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] border border-slate-100 animate-in fade-in zoom-in-95 duration-200">
             <div className="px-8 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50">
               <div>
-                <span className="text-[10px] font-black uppercase tracking-wider text-indigo-600 bg-indigo-50 px-2.5 py-0.5 rounded-full border border-indigo-200">
-                  Edición de Catálogo Supabase
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className={`text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${
+                    itemEditando.tipo === 'diplomado' 
+                      ? 'text-indigo-700 bg-indigo-50 border-indigo-200' 
+                      : itemEditando.tipo === 'taller'
+                      ? 'text-amber-700 bg-amber-50 border-amber-200'
+                      : 'text-emerald-700 bg-emerald-50 border-emerald-200'
+                  }`}>
+                    {itemEditando.tipo === 'diplomado' ? 'Diplomado Oficial' : itemEditando.tipo === 'taller' ? 'Taller Práctico' : 'Curso de Alta Especialización'}
+                  </span>
+                  <span className="text-[10px] font-bold text-slate-500 uppercase">
+                    Código: <strong className="text-slate-800">{itemEditando.codigo}</strong>
+                  </span>
+                </div>
                 <h3 className="text-xl font-bold text-slate-900 mt-1">{itemEditando.titulo}</h3>
               </div>
               <button onClick={() => setShowEditModal(false)} className="p-2 hover:bg-slate-200 rounded-full transition-colors text-slate-500 cursor-pointer">
@@ -2003,16 +1872,38 @@ export default function CatalogoAdminPage() {
                   />
                 </div>
 
+                <div className="md:col-span-2">
+                  <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">Categoría</label>
+                  <input 
+                    type="text" 
+                    value={itemEditando.categoria || ''}
+                    onChange={(e) => setItemEditando({ ...itemEditando, categoria: e.target.value })}
+                    placeholder={itemEditando.tipo === 'taller' ? 'Taller' : 'Categoría oficial'}
+                    className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-900"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">Nivel (Opcional / Vacío)</label>
+                  <input 
+                    type="text" 
+                    value={itemEditando.nivel || ''}
+                    onChange={(e) => setItemEditando({ ...itemEditando, nivel: e.target.value })}
+                    placeholder="Vacío"
+                    className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-900"
+                  />
+                </div>
+
                 <div>
                   <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">Horas Académicas (Solo Número)</label>
                   <input 
                     type="number" 
-                    value={itemEditando.horas !== undefined && itemEditando.horas !== null ? itemEditando.horas : (itemEditando.tipo === 'diplomado' ? 325 : itemEditando.tipo === 'taller' ? 10 : 30)}
+                    value={itemEditando.horas !== undefined && itemEditando.horas !== null ? itemEditando.horas : (itemEditando.tipo === 'diplomado' ? 325 : itemEditando.tipo === 'taller' ? 20 : 40)}
                     onChange={(e) => {
                       const hVal = e.target.value === '' ? '' : Number(e.target.value);
                       setItemEditando({ ...itemEditando, horas: hVal, duracion: hVal ? hVal + ' horas' : '' });
                     }}
-                    placeholder={itemEditando.tipo === 'diplomado' ? '325' : itemEditando.tipo === 'taller' ? '10' : '30'}
+                    placeholder={itemEditando.tipo === 'diplomado' ? '325' : itemEditando.tipo === 'taller' ? '20' : '40'}
                     className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-900"
                   />
                 </div>
@@ -2036,7 +1927,7 @@ export default function CatalogoAdminPage() {
                         value={
                           itemEditando.taller_aplicable?.includes('TAL-01') || itemEditando.taller_aplicable?.includes('Soft') || itemEditando.taller_aplicable?.includes('Taller 1')
                             ? 'TAL-01: Taller de Soft Skills en la Industria y Minería'
-                            : itemEditando.taller_aplicable === 'Ninguno'
+                            : !itemEditando.taller_aplicable || itemEditando.taller_aplicable === 'Ninguno'
                             ? 'Ninguno'
                             : 'TAL-02: Taller de Seguridad Basada en el Comportamiento'
                         }
@@ -2063,15 +1954,17 @@ export default function CatalogoAdminPage() {
 
               </div>
 
-              {/* Sección de Módulos y Clases (Solo para Diplomados) */}
+              {/* Sección de Módulos y Temas (Solo para Diplomados con acordeón progresivo UIX) */}
               {itemEditando.tipo === 'diplomado' && (
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center border-b border-slate-200 pb-3">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-slate-200 pb-3">
                     <div>
                       <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                        <Layers className="w-4 h-4 text-indigo-600" /> Estructura de Módulos y Clases ({itemEditando.modulos ? itemEditando.modulos.length : 0})
+                        <Layers className="w-4 h-4 text-indigo-600" /> Estructura de Módulos ({itemEditando.modulos ? itemEditando.modulos.length : 0})
                       </h4>
-                      <p className="text-[11px] text-slate-500">Edita los nombres de módulo (ej. Módulo 01), docentes y clases correlativas continuas.</p>
+                      <p className="text-[11px] text-slate-500">
+                        Los módulos inician colapsados. Haz clic en &ldquo;Ver Temas&rdquo; para explorar y editar los temas y sesiones de cada módulo.
+                      </p>
                     </div>
 
                     <div className="flex flex-wrap gap-2">
@@ -2081,7 +1974,7 @@ export default function CatalogoAdminPage() {
                         className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-2xs"
                         title="Descargar estructura actual en formato nativo de Excel (.xlsx)"
                       >
-                        <FileSpreadsheet className="size-3.5" /> 📥 Descargar Excel (.xlsx)
+                        <FileSpreadsheet className="size-3.5" /> Descargar Excel (.xlsx)
                       </button>
                       <button
                         type="button"
@@ -2089,7 +1982,7 @@ export default function CatalogoAdminPage() {
                         className="bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-2xs"
                         title="Descargar estructura actual en formato CSV"
                       >
-                        <Download className="size-3.5" /> 📥 Descargar CSV
+                        <Download className="size-3.5" /> Descargar CSV
                       </button>
                       <button
                         type="button"
@@ -2097,7 +1990,7 @@ export default function CatalogoAdminPage() {
                         className="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-2xs"
                         title="Cargar archivo Excel (.xlsx / .xls) o CSV con módulos, temas y enlaces"
                       >
-                        <UploadCloud className="size-3.5" /> 📤 Importar Estructura (Excel/CSV)
+                        <UploadCloud className="size-3.5" /> Importar Estructura (Excel/CSV)
                       </button>
                       <button
                         type="button"
@@ -2109,312 +2002,259 @@ export default function CatalogoAdminPage() {
                     </div>
                   </div>
 
-                  {/* Lista de Módulos */}
+                  {/* Lista de Módulos (Acordeón Progresivo) */}
                   <div className="space-y-4">
                     {itemEditando.modulos && itemEditando.modulos.length > 0 ? (
-                      itemEditando.modulos.map((mod: any, mIdx: number) => (
-                        <div key={mIdx} className="bg-slate-50 border border-slate-200 p-5 rounded-2xl space-y-3">
-                          <div className="flex justify-between items-center gap-3">
-                            <div className="flex items-center gap-2 flex-1">
-                              <span className="bg-indigo-600 text-white tabular-nums font-bold px-3 py-1.5 rounded-lg text-xs shrink-0">
-                                {mod.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`}
-                              </span>
-                              <input 
-                                type="text"
-                                placeholder="Nombre del Módulo..."
-                                value={mod.nombre || ''}
-                                onChange={(e) => actualizarModuloEditando(mIdx, 'nombre', e.target.value)}
-                                className="flex-1 px-3 py-1.5 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-900"
-                              />
-                            </div>
-                            
-                            <div className="w-48">
-                              <input 
-                                type="text"
-                                placeholder="Docente del Módulo..."
-                                value={mod.docente || ''}
-                                onChange={(e) => actualizarModuloEditando(mIdx, 'docente', e.target.value)}
-                                className="w-full px-3 py-1.5 bg-white border border-slate-200 rounded-xl text-xs font-semibold text-indigo-700"
-                              />
-                            </div>
+                      itemEditando.modulos.map((mod: any, mIdx: number) => {
+                        const estaModuloAbierto = moduloExpandido === mIdx;
+                        const cantTemas = Array.isArray(mod.temas) ? mod.temas.length : 0;
 
-                            <button
-                              type="button"
-                              onClick={() => eliminarModuloEditando(mIdx)}
-                              className="text-red-500 hover:bg-red-50 p-1.5 rounded-lg transition cursor-pointer"
-                              title="Eliminar este módulo"
-                            >
-                              <Trash2 className="size-4" />
-                            </button>
-                          </div>
-
-                          {/* SECCIÓN DE TEMAS Y SESIONES DEL MÓDULO */}
-                          <div className="bg-white p-4 rounded-xl border border-slate-200 space-y-4">
-                            <div className="flex justify-between items-center pb-2 border-b border-slate-100">
-                              <div>
-                                <span className="text-xs font-bold text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
-                                  <Folder className="size-4 text-indigo-600" /> Temas y Sesiones de {mod.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`} ({mod.temas ? mod.temas.length : 0} temas)
+                        return (
+                          <div key={mIdx} className="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden transition-all shadow-xs">
+                            {/* Cabecera del Módulo: Nombre, Docente y Botón para desplegar Temas */}
+                            <div className="p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-3 bg-white border-b border-slate-100">
+                              <div className="flex items-center gap-2 flex-1">
+                                <span className="bg-indigo-600 text-white tabular-nums font-bold px-3 py-1.5 rounded-lg text-xs shrink-0">
+                                  {mod.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`}
                                 </span>
-                                <p className="text-[10px] text-slate-500 mt-0.5">Cada tema agrupa 1, 2, 3 o más sesiones/clases de forma dinámica.</p>
+                                <input 
+                                  type="text"
+                                  placeholder="Nombre del Módulo..."
+                                  value={mod.nombre || ''}
+                                  onChange={(e) => actualizarModuloEditando(mIdx, 'nombre', e.target.value)}
+                                  className="flex-1 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-900 focus:bg-white"
+                                />
                               </div>
-                              <button
-                                type="button"
-                                onClick={() => agregarTemaAModulo(mIdx)}
-                                className="text-xs font-bold bg-indigo-50 hover:bg-indigo-100 text-indigo-700 px-3 py-1.5 rounded-xl border border-indigo-200 transition flex items-center gap-1 cursor-pointer shadow-xs"
-                              >
-                                <Plus className="size-3.5" /> + Agregar Tema
-                              </button>
+                              
+                              <div className="w-full md:w-56">
+                                <input 
+                                  type="text"
+                                  placeholder="Docente del Módulo..."
+                                  value={mod.docente || ''}
+                                  onChange={(e) => actualizarModuloEditando(mIdx, 'docente', e.target.value)}
+                                  className="w-full px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-indigo-700 focus:bg-white"
+                                />
+                              </div>
+
+                              <div className="flex items-center gap-2 shrink-0">
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    setModuloExpandido(estaModuloAbierto ? null : mIdx);
+                                    setTemaExpandido(null);
+                                  }}
+                                  className={`px-3 py-1.5 rounded-xl border text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${
+                                    estaModuloAbierto
+                                      ? 'bg-indigo-50 border-indigo-200 text-indigo-700'
+                                      : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
+                                  }`}
+                                >
+                                  {estaModuloAbierto ? <ChevronUp className="size-4" /> : <ChevronDown className="size-4" />}
+                                  <span>{estaModuloAbierto ? 'Ocultar Temas' : `Ver Temas (${cantTemas})`}</span>
+                                </button>
+
+                                <button
+                                  type="button"
+                                  onClick={() => eliminarModuloEditando(mIdx)}
+                                  className="text-red-500 hover:bg-red-50 p-1.5 rounded-lg transition cursor-pointer"
+                                  title="Eliminar este módulo"
+                                >
+                                  <Trash2 className="size-4" />
+                                </button>
+                              </div>
                             </div>
 
-                            {/* LISTA DE TEMAS DEL MÓDULO */}
-                            <div className="space-y-4">
-                              {mod.temas && mod.temas.length > 0 ? (
-                                mod.temas.map((temaObj: any, tIdx: number) => {
-                                  const cantSesiones = Array.isArray(temaObj.clases) ? temaObj.clases.length : 0;
+                            {/* CUERPO DEL MÓDULO: SE MUESTRA SOLO SI ESTÁ EXPANDIDO */}
+                            {estaModuloAbierto && (
+                              <div className="p-4 sm:p-5 space-y-4 bg-slate-50/50">
+                                <div className="flex justify-between items-center pb-2 border-b border-slate-200">
+                                  <div>
+                                    <span className="text-xs font-bold text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
+                                      <Folder className="size-4 text-indigo-600" /> Temas y Sesiones de {mod.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`} ({cantTemas} temas)
+                                    </span>
+                                    <p className="text-[10px] text-slate-500 mt-0.5">Haz clic en &ldquo;Editar Contenido&rdquo; de un tema para ver o modificar sus enlaces, videos y materiales.</p>
+                                  </div>
+                                  <button
+                                    type="button"
+                                    onClick={() => agregarTemaAModulo(mIdx)}
+                                    className="text-xs font-bold bg-indigo-50 hover:bg-indigo-100 text-indigo-700 px-3 py-1.5 rounded-xl border border-indigo-200 transition flex items-center gap-1 cursor-pointer shadow-xs"
+                                  >
+                                    <Plus className="size-3.5" /> + Agregar Tema
+                                  </button>
+                                </div>
 
-                                  return (
-                                    <div key={tIdx} className="p-4 bg-slate-50/80 border border-slate-200 rounded-xl space-y-3">
-                                      {/* Cabecera del Tema */}
-                                      <div className="flex items-center justify-between gap-3 bg-white p-2.5 rounded-lg border border-slate-200 shadow-2xs">
-                                        <div className="flex items-center gap-2 flex-1">
-                                          <span className="bg-indigo-100 text-indigo-800 font-bold px-2.5 py-1 rounded-md text-[11px] shrink-0 tabular-nums">
-                                            Tema {tIdx + 1}
-                                          </span>
-                                          <input
-                                            type="text"
-                                            value={temaObj.titulo || ''}
-                                            placeholder="Título del Tema (ej: Tema 01: Introducción a la Minería)..."
-                                            onChange={(e) => actualizarTituloTema(mIdx, tIdx, e.target.value)}
-                                            className="flex-1 px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-bold text-slate-900"
-                                          />
-                                        </div>
+                                {/* LISTA DE TEMAS DEL MÓDULO */}
+                                <div className="space-y-3">
+                                  {mod.temas && mod.temas.length > 0 ? (
+                                    mod.temas.map((temaObj: any, tIdx: number) => {
+                                      const cantSesiones = Array.isArray(temaObj.clases) ? temaObj.clases.length : 0;
+                                      const estaTemaAbierto = temaExpandido === tIdx;
 
-                                        <div className="flex items-center gap-2">
-                                          <span className="text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-1 rounded-md">
-                                            {cantSesiones} {cantSesiones === 1 ? 'sesión' : 'sesiones'}
-                                          </span>
-                                          <button
-                                            type="button"
-                                            onClick={() => agregarSesionATema(mIdx, tIdx)}
-                                            className="text-[11px] font-bold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-lg border border-emerald-200 transition flex items-center gap-1 cursor-pointer"
-                                          >
-                                            <Plus className="size-3" /> Agregar Sesión
-                                          </button>
-                                          <button
-                                            type="button"
-                                            onClick={() => eliminarTemaDeModulo(mIdx, tIdx)}
-                                            className="text-slate-400 hover:text-red-500 p-1 transition cursor-pointer"
-                                            title="Eliminar tema entero"
-                                          >
-                                            <Trash2 className="size-4" />
-                                          </button>
-                                        </div>
-                                      </div>
+                                      return (
+                                        <div key={tIdx} className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
+                                          {/* Cabecera del Tema */}
+                                          <div className="p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-white">
+                                            <div className="flex items-center gap-2 flex-1">
+                                              <span className="bg-indigo-100 text-indigo-800 font-bold px-2.5 py-1 rounded-md text-[11px] shrink-0 tabular-nums">
+                                                Tema {tIdx + 1}
+                                              </span>
+                                              <input
+                                                type="text"
+                                                value={temaObj.titulo || ''}
+                                                placeholder="Título del Tema (ej: Tema 01: Marco Legal)..."
+                                                onChange={(e) => actualizarTituloTema(mIdx, tIdx, e.target.value)}
+                                                className="flex-1 px-3 py-1 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold text-slate-900 focus:bg-white"
+                                              />
+                                            </div>
 
-                                      {/* LISTA DE SESIONES DE ESTE TEMA */}
-                                      <div className="space-y-3 pl-2 border-l-2 border-indigo-200">
-                                        {Array.isArray(temaObj.clases) && temaObj.clases.length > 0 ? (
-                                          temaObj.clases.map((claseObj: any, sIdx: number) => {
-                                            const tituloClase = typeof claseObj === 'object' && claseObj !== null ? claseObj.titulo : String(claseObj);
-                                            const iframeUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.iframe_url || claseObj.videoUrl || '') : '';
-                                            const videoResumenUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.videoResumenUrl || claseObj.resumenVideoUrl || '') : '';
-                                            const audioResumenUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.audioResumenUrl || claseObj.resumenAudioUrl || '') : '';
-                                            const pdfUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.pdf_url || claseObj.pdfUrl || '') : '';
-                                            const resumenInteractivo = typeof claseObj === 'object' && claseObj !== null ? (claseObj.resumenInteractivo || '') : '';
+                                            <div className="flex items-center gap-2 shrink-0">
+                                              <span className="text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-1 rounded-md">
+                                                {cantSesiones} {cantSesiones === 1 ? 'sesión' : 'sesiones'}
+                                              </span>
+                                              <button
+                                                type="button"
+                                                onClick={() => setTemaExpandido(estaTemaAbierto ? null : tIdx)}
+                                                className={`text-[11px] font-bold px-2.5 py-1 rounded-lg border transition flex items-center gap-1 cursor-pointer ${
+                                                  estaTemaAbierto 
+                                                    ? 'bg-indigo-600 text-white border-indigo-600'
+                                                    : 'bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border-indigo-200'
+                                                }`}
+                                              >
+                                                {estaTemaAbierto ? <ChevronUp className="size-3" /> : <ChevronDown className="size-3" />}
+                                                <span>{estaTemaAbierto ? 'Cerrar' : 'Editar Contenidos'}</span>
+                                              </button>
+                                              <button
+                                                type="button"
+                                                onClick={() => agregarSesionATema(mIdx, tIdx)}
+                                                className="text-[11px] font-bold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-lg border border-emerald-200 transition flex items-center gap-1 cursor-pointer"
+                                                title="Agregar otra sesión/clase a este tema"
+                                              >
+                                                <Plus className="size-3" /> Sesión
+                                              </button>
+                                              <button
+                                                type="button"
+                                                onClick={() => eliminarTemaDeModulo(mIdx, tIdx)}
+                                                className="text-slate-400 hover:text-red-500 p-1 transition cursor-pointer"
+                                                title="Eliminar tema entero"
+                                              >
+                                                <Trash2 className="size-4" />
+                                              </button>
+                                            </div>
+                                          </div>
 
-                                            return (
-                                              <div key={sIdx} className="p-3 bg-white border border-slate-200 rounded-xl space-y-2 shadow-2xs">
-                                                <div className="flex items-center gap-2">
-                                                  <span className="text-[10px] font-bold text-slate-400 tabular-nums">Sesión {sIdx + 1}:</span>
-                                                  <input
-                                                    type="text"
-                                                    value={tituloClase}
-                                                    placeholder="Título de la sesión/clase..."
-                                                    onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'titulo', e.target.value)}
-                                                    className="flex-1 px-3 py-1 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold text-slate-800 tabular-nums"
-                                                  />
-                                                  <button
-                                                    type="button"
-                                                    onClick={() => eliminarSesionDeTema(mIdx, tIdx, sIdx)}
-                                                    className="text-slate-400 hover:text-red-500 p-1 transition cursor-pointer"
-                                                    title="Eliminar sesión"
-                                                  >
-                                                    <X className="size-3.5" />
-                                                  </button>
-                                                </div>
+                                          {/* CONTENIDOS Y SESIONES DEL TEMA (SOLO SI ESTÁ ABIERTO) */}
+                                          {estaTemaAbierto && (
+                                            <div className="p-3.5 bg-slate-50 border-t border-slate-100 space-y-3">
+                                              <div className="space-y-3 pl-2 border-l-2 border-indigo-300">
+                                                {Array.isArray(temaObj.clases) && temaObj.clases.length > 0 ? (
+                                                  temaObj.clases.map((claseObj: any, sIdx: number) => {
+                                                    const tituloClase = typeof claseObj === 'object' && claseObj !== null ? claseObj.titulo : String(claseObj);
+                                                    const iframeUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.iframe_url || claseObj.videoUrl || '') : '';
+                                                    const videoResumenUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.videoResumenUrl || claseObj.resumenVideoUrl || '') : '';
+                                                    const audioResumenUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.audioResumenUrl || claseObj.resumenAudioUrl || '') : '';
+                                                    const pdfUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.pdf_url || claseObj.pdfUrl || '') : '';
+                                                    const resumenInteractivo = typeof claseObj === 'object' && claseObj !== null ? (claseObj.resumenInteractivo || '') : '';
 
-                                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 pt-1 border-t border-slate-100">
-                                                  <div>
-                                                    <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">📹 Video Principal (VideoUrl)</label>
-                                                    <input
-                                                      type="text"
-                                                      placeholder="https://drive.google.com/file/d/.../preview"
-                                                      value={iframeUrl}
-                                                      onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'iframe_url', e.target.value)}
-                                                      className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 tabular-nums"
-                                                    />
-                                                  </div>
-                                                  <div>
-                                                    <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">📄 Documento PDF (PdfUrl)</label>
-                                                    <input
-                                                      type="text"
-                                                      placeholder="https://.../separata.pdf"
-                                                      value={pdfUrl}
-                                                      onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'pdf_url', e.target.value)}
-                                                      className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 tabular-nums"
-                                                    />
-                                                  </div>
-                                                  <div>
-                                                    <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">🎬 Resumen Video (ResumenVideoUrl)</label>
-                                                    <input
-                                                      type="text"
-                                                      placeholder="https://.../resumen.mp4"
-                                                      value={videoResumenUrl}
-                                                      onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'videoResumenUrl', e.target.value)}
-                                                      className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 tabular-nums"
-                                                    />
-                                                  </div>
-                                                  <div>
-                                                    <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">🎧 Resumen Audio (ResumenAudioUrl)</label>
-                                                    <input
-                                                      type="text"
-                                                      placeholder="https://.../audio.mp3"
-                                                      value={audioResumenUrl}
-                                                      onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'audioResumenUrl', e.target.value)}
-                                                      className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 tabular-nums"
-                                                    />
-                                                  </div>
-                                                  <div className="md:col-span-2">
-                                                    <label className="block text-[9px] font-bold text-indigo-600 uppercase tracking-wider mb-0.5">✨ Resumen Interactivo (ResumenInteractivo)</label>
-                                                    <input
-                                                      type="text"
-                                                      placeholder="https://.../actividad_interactiva.html"
-                                                      value={resumenInteractivo}
-                                                      onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'resumenInteractivo', e.target.value)}
-                                                      className="w-full px-2.5 py-1 bg-white border border-indigo-200 rounded-lg text-[11px] text-indigo-800 tabular-nums"
-                                                    />
-                                                  </div>
-                                                </div>
-
-                                                {/* Materiales Adicionales Material1 a Material8 */}
-                                                <div className="pt-2 border-t border-slate-100">
-                                                  <div className="flex items-center justify-between mb-1">
-                                                    <label className="block text-[9px] font-bold text-slate-600 uppercase tracking-wider">
-                                                      📦 Materiales Adicionales (Material1 a Material8)
-                                                    </label>
-                                                    <span className="text-[9px] text-slate-400 italic">Sólo los que tengan link se mostrarán al alumno</span>
-                                                  </div>
-                                                  <div className="grid grid-cols-2 md:grid-cols-4 gap-1.5">
-                                                    {[1, 2, 3, 4, 5, 6, 7, 8].map((matNum) => {
-                                                      const matKey = `material${matNum}`;
-                                                      const matVal = typeof claseObj === 'object' && claseObj !== null ? (claseObj[matKey] || (matNum === 1 ? claseObj.excel_url : '') || '') : '';
-                                                      return (
-                                                        <div key={matNum} className="relative">
-                                                          <span className="absolute left-2 top-1.5 text-[8px] font-black text-slate-400 tabular-nums">M{matNum}</span>
+                                                    return (
+                                                      <div key={sIdx} className="p-3 bg-white border border-slate-200 rounded-xl space-y-2 shadow-2xs">
+                                                        <div className="flex items-center gap-2">
+                                                          <span className="text-[10px] font-bold text-slate-400 tabular-nums">Sesión {sIdx + 1}:</span>
                                                           <input
                                                             type="text"
-                                                            placeholder={`Material ${matNum}...`}
-                                                            value={matVal}
-                                                            onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, matKey, e.target.value)}
-                                                            className="w-full pl-6 pr-2 py-1 bg-slate-50 border border-slate-200 rounded-lg text-[10px] text-slate-700 tabular-nums"
+                                                            value={tituloClase}
+                                                            placeholder="Título de la sesión/clase..."
+                                                            onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'titulo', e.target.value)}
+                                                            className="flex-1 px-3 py-1 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold text-slate-800 tabular-nums"
                                                           />
+                                                          <button
+                                                            type="button"
+                                                            onClick={() => eliminarSesionDeTema(mIdx, tIdx, sIdx)}
+                                                            className="text-slate-400 hover:text-red-500 p-1 transition cursor-pointer"
+                                                            title="Eliminar sesión"
+                                                          >
+                                                            <X className="size-3.5" />
+                                                          </button>
                                                         </div>
-                                                      );
-                                                    })}
-                                                  </div>
-                                                </div>
+
+                                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 pt-1 border-t border-slate-100">
+                                                          <div>
+                                                            <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">Video Principal (VideoUrl)</label>
+                                                            <input
+                                                              type="text"
+                                                              placeholder="https://drive.google.com/file/d/... o YouTube"
+                                                              value={iframeUrl}
+                                                              onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'iframe_url', e.target.value)}
+                                                              className="w-full px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-lg text-[11px] text-slate-700 tabular-nums"
+                                                            />
+                                                          </div>
+
+                                                          <div>
+                                                            <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">Material de Clase (PDF / Diapositivas)</label>
+                                                            <input
+                                                              type="text"
+                                                              placeholder="https://.../material.pdf"
+                                                              value={pdfUrl}
+                                                              onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'pdf_url', e.target.value)}
+                                                              className="w-full px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-lg text-[11px] text-slate-700 tabular-nums"
+                                                            />
+                                                          </div>
+
+                                                          <div>
+                                                            <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">Video Resumen / IA</label>
+                                                            <input
+                                                              type="text"
+                                                              placeholder="https://edumin-edu.github.io/recursos/videos/..."
+                                                              value={videoResumenUrl}
+                                                              onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'videoResumenUrl', e.target.value)}
+                                                              className="w-full px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-lg text-[11px] text-slate-700 tabular-nums"
+                                                            />
+                                                          </div>
+
+                                                          <div>
+                                                            <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">Audio Resumen (Podcast)</label>
+                                                            <input
+                                                              type="text"
+                                                              placeholder="https://.../podcast.mp3"
+                                                              value={audioResumenUrl}
+                                                              onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'audioResumenUrl', e.target.value)}
+                                                              className="w-full px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-lg text-[11px] text-slate-700 tabular-nums"
+                                                            />
+                                                          </div>
+
+                                                          <div className="md:col-span-2">
+                                                            <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">Resumen Interactivo / Puntos Clave</label>
+                                                            <input
+                                                              type="text"
+                                                              placeholder="Resumen o puntos clave de la sesión formativa..."
+                                                              value={resumenInteractivo}
+                                                              onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'resumenInteractivo', e.target.value)}
+                                                              className="w-full px-2.5 py-1 bg-slate-50 border border-slate-200 rounded-lg text-[11px] text-slate-700"
+                                                            />
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    );
+                                                  })
+                                                ) : (
+                                                  <p className="text-[10px] text-slate-400 italic py-1">No hay sesiones agregadas en este tema aún.</p>
+                                                )}
                                               </div>
-                                            );
-                                          })
-                                        ) : (
-                                          <p className="text-[10px] text-slate-400 italic py-1">No hay sesiones agregadas en este tema aún.</p>
-                                        )}
-                                      </div>
+                                            </div>
+                                          )}
+                                        </div>
+                                      );
+                                    })
+                                  ) : (
+                                    <div className="text-center py-4 bg-slate-50 border border-slate-200 rounded-xl">
+                                      <p className="text-xs text-slate-500 font-medium">Este módulo no tiene temas ni sesiones agregadas aún.</p>
                                     </div>
-                                  );
-                                })
-                              ) : (
-                                <div className="text-center py-4 bg-slate-50 border border-slate-200 rounded-xl">
-                                  <p className="text-xs text-slate-500 font-medium">Este módulo no tiene temas ni sesiones agregadas aún.</p>
+                                  )}
                                 </div>
-                              )}
-                            </div>
+                              </div>
+                            )}
                           </div>
-
-                             {/* Editor de Clases Adicionales del Módulo */}
-                             <div className="pt-3 border-t border-slate-200 mt-3">
-                               <div className="flex items-center justify-between mb-2">
-                                 <span className="text-[11px] font-bold text-amber-600 uppercase tracking-wider flex items-center gap-1">
-                                   ⭐ Clases Adicionales del Módulo
-                                 </span>
-                                 <button
-                                   type="button"
-                                   onClick={() => agregarClaseAdicionalAModulo(mIdx)}
-                                   className="text-[10px] font-bold bg-amber-100 hover:bg-amber-200 text-amber-800 px-2.5 py-1 rounded-lg transition cursor-pointer flex items-center gap-1"
-                                 >
-                                   <Plus className="size-3" /> Agregar Clase Adicional
-                                 </button>
-                               </div>
-
-                               {Array.isArray(mod.clasesAdicionales) && mod.clasesAdicionales.length > 0 ? (
-                                 <div className="space-y-2">
-                                   {mod.clasesAdicionales.map((cAdic: any, caIdx: number) => {
-                                     const adicTitle = typeof cAdic === 'object' ? (cAdic.titulo || '') : String(cAdic);
-                                     const adicVideo = typeof cAdic === 'object' ? (cAdic.videoUrl || cAdic.iframe_url || '') : '';
-                                     const adicPdf = typeof cAdic === 'object' ? (cAdic.pdf_url || cAdic.pdfUrl || '') : '';
-
-                                     return (
-                                       <div key={caIdx} className="p-3 bg-amber-50/60 border border-amber-200/80 rounded-xl space-y-2">
-                                         <div className="flex items-center gap-2">
-                                           <span className="text-xs font-bold text-amber-700 shrink-0">⭐</span>
-                                           <input
-                                             type="text"
-                                             placeholder="Título de la clase adicional..."
-                                             value={adicTitle}
-                                             onChange={(e) => actualizarCampoClaseAdicional(mIdx, caIdx, 'titulo', e.target.value)}
-                                             className="flex-1 px-2.5 py-1 bg-white border border-amber-200 rounded-lg text-xs font-bold text-slate-800 tabular-nums"
-                                           />
-                                           <button
-                                             type="button"
-                                             onClick={() => eliminarClaseAdicionalDeModulo(mIdx, caIdx)}
-                                             className="text-amber-700 hover:text-red-600 p-1 transition cursor-pointer"
-                                             title="Eliminar clase adicional"
-                                           >
-                                             <X className="size-3.5" />
-                                           </button>
-                                         </div>
-                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 pt-1">
-                                           <div>
-                                             <label className="block text-[9px] font-bold text-amber-700 uppercase tracking-wider mb-0.5">📹 Video Drive / iFrame</label>
-                                             <input
-                                               type="text"
-                                               placeholder="https://drive.google.com/file/d/.../preview"
-                                               value={adicVideo}
-                                               onChange={(e) => actualizarCampoClaseAdicional(mIdx, caIdx, 'iframe_url', e.target.value)}
-                                               className="w-full px-2.5 py-1 bg-white border border-amber-200 rounded-lg text-[11px] text-slate-700 tabular-nums"
-                                             />
-                                           </div>
-                                           <div>
-                                             <label className="block text-[9px] font-bold text-amber-700 uppercase tracking-wider mb-0.5">📄 Material PDF</label>
-                                             <input
-                                               type="text"
-                                               placeholder="https://.../material.pdf"
-                                               value={adicPdf}
-                                               onChange={(e) => actualizarCampoClaseAdicional(mIdx, caIdx, 'pdf_url', e.target.value)}
-                                               className="w-full px-2.5 py-1 bg-white border border-amber-200 rounded-lg text-[11px] text-slate-700 tabular-nums"
-                                             />
-                                           </div>
-                                         </div>
-                                       </div>
-                                     );
-                                   })}
-                                 </div>
-                               ) : (
-                                 <p className="text-[10px] text-slate-400 italic">No hay clases adicionales configuradas en este módulo.</p>
-                               )}
-                             </div>
-                          </div>
-                      ))
+                        );
+                      })
                     ) : (
                       <div className="text-center py-8 bg-slate-50 border border-slate-200 rounded-2xl">
                         <p className="text-xs text-slate-500 font-medium">Este diplomado aún no tiene módulos configurados.</p>
@@ -2424,136 +2264,166 @@ export default function CatalogoAdminPage() {
                 </div>
               )}
 
-              {/* Sección de Clases y Partes (Solo para Cursos y Talleres) */}
+              {/* Sección de Temas y Contenidos Oficiales (Solo para Cursos y Talleres) */}
               {itemEditando.tipo !== 'diplomado' && (() => {
-                const partes = obtenerClasesCursoEditando(itemEditando);
+                const lecciones = Array.isArray(itemEditando.lecciones) ? itemEditando.lecciones : [];
+                const esTaller = itemEditando.tipo === 'taller';
+
                 return (
                   <div className="space-y-4">
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-200 pb-3">
                       <div>
                         <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                          <PlayCircle className="w-4 h-4 text-indigo-600" />
-                          Estructura de Clases ({partes.length} / 6 Partes)
+                          <Folder className="w-4 h-4 text-emerald-600" />
+                          Temario y Contenidos Oficiales ({lecciones.length} Temas registrados)
                         </h4>
                         <p className="text-[11px] text-slate-500">
-                          Los Cursos de Alta Especialización y Talleres no tienen módulos; constan directamente de 1 a 6 partes (Parte 1 a Parte 6).
+                          {esTaller
+                            ? 'Talleres prácticos oficiales: edita los temas, videos, grabaciones y materiales sincronizados con Supabase.'
+                            : 'Cursos de Alta Especialización: edita los temas oficiales, enlaces multimedia y resúmenes de Supabase.'}
                         </p>
                       </div>
 
                       <button
                         type="button"
-                        onClick={agregarParteCurso}
-                        disabled={partes.length >= 6}
-                        className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer ${
-                          partes.length >= 6
-                            ? 'bg-slate-200 text-slate-400 cursor-not-allowed'
-                            : 'bg-emerald-600 hover:bg-emerald-700 text-white'
-                        }`}
+                        onClick={agregarTemaCurso}
+                        className="bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer"
                       >
-                        <Plus className="size-3.5" /> + Agregar Parte ({partes.length < 6 ? `Parte ${partes.length + 1}` : 'Máximo 6 alcanzado'})
+                        <Plus className="size-3.5" /> + Agregar Tema
                       </button>
                     </div>
 
-                    {partes.length > 0 ? (
-                      <div className="space-y-4">
-                        {partes.map((parte: any, pIdx: number) => {
-                          const parteNum = pIdx + 1;
-                          const videoVal = typeof parte === 'object' ? (parte.videoUrl || parte.iframe_url || '') : '';
-                          const mat1Val = typeof parte === 'object' ? (parte.material1 || parte.pdfUrl || '') : '';
-                          const mat2Val = typeof parte === 'object' ? (parte.material2 || parte.excelUrl || '') : '';
+                    {lecciones.length > 0 ? (
+                      <div className="space-y-3">
+                        {lecciones.map((lec: any, lIdx: number) => {
+                          const estaAbierto = cursoTemaExpandido === lIdx;
+                          const temaTitulo = lec.tema || lec.Tema || `Tema ${(lIdx + 1).toString().padStart(2, '0')}`;
+                          const sesionVal = lec.sesion || lec.Sesion || 'Parte 1';
+                          const videoVal = lec.videoUrl || lec.VideoUrl || '';
+                          const pdfVal = lec.pdfUrl || lec.PdfUrl || '';
+                          const resumenVideoVal = lec.resumenVideoUrl || lec.ResumenVideoUrl || '';
+                          const resumenTextoVal = lec.resumenTexto || lec.ResumenTexto || '';
 
                           return (
-                            <div key={pIdx} className="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-5 space-y-3 shadow-xs">
-                              <div className="flex items-center justify-between border-b border-slate-200/80 pb-2.5">
-                                <div className="flex items-center gap-2">
-                                  <span className="bg-indigo-600 text-white tabular-nums font-black text-xs px-2.5 py-1 rounded-lg">
-                                    Parte {parteNum}
+                            <div key={lIdx} className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-2xs transition-all">
+                              {/* Fila del Tema: Resumen colapsado */}
+                              <div className="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white border-b border-slate-100">
+                                <div className="flex items-center gap-2.5 flex-1 min-w-0">
+                                  <span className="bg-emerald-600 text-white font-bold px-2.5 py-1 rounded-lg text-[11px] shrink-0 tabular-nums">
+                                    Tema {(lIdx + 1).toString().padStart(2, '0')}
                                   </span>
-                                  <span className="text-xs font-bold text-slate-800">
-                                    Clase Completa {parteNum}
-                                  </span>
-                                </div>
-
-                                <button
-                                  type="button"
-                                  onClick={() => eliminarParteCurso(pIdx)}
-                                  className="text-red-500 hover:bg-red-50 px-2 py-1 rounded-lg text-xs font-semibold transition flex items-center gap-1 cursor-pointer"
-                                  title="Eliminar esta parte"
-                                >
-                                  <Trash2 className="size-3.5" />
-                                  <span>Eliminar</span>
-                                </button>
-                              </div>
-
-                              <div className="space-y-3">
-                                {/* Link completo de la clase */}
-                                <div>
-                                  <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1">
-                                    <Video className="size-3.5 text-indigo-600" />
-                                    Link de la Clase Completa (Google Drive / YouTube / Vimeo / MP4)
-                                  </label>
                                   <input
                                     type="text"
-                                    placeholder="https://drive.google.com/file/d/.../view o https://youtu.be/..."
-                                    value={videoVal}
-                                    onChange={(e) => actualizarCampoParteCurso(pIdx, 'videoUrl', e.target.value)}
-                                    className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs tabular-nums text-slate-800"
+                                    value={temaTitulo}
+                                    placeholder="Título del tema de especialización..."
+                                    onChange={(e) => actualizarLeccionCurso(lIdx, 'tema', e.target.value)}
+                                    className="flex-1 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-900 focus:bg-white"
                                   />
                                 </div>
 
-                                {/* Materiales 1 y 2 */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
-                                  <div>
-                                    <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1">
-                                      <FileText className="size-3.5 text-indigo-600" />
-                                      Material 1 (Diapositivas PDF / HTML / GitHub Pages)
-                                    </label>
-                                    <input
-                                      type="text"
-                                      placeholder="https://... (PDF, HTML interactivo o repo GitHub)"
-                                      value={mat1Val}
-                                      onChange={(e) => actualizarCampoParteCurso(pIdx, 'material1', e.target.value)}
-                                      className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs tabular-nums text-slate-800"
-                                    />
-                                    <span className="text-[10px] text-slate-400 mt-0.5 block">
-                                      Para ver o descargar (admite PDF, HTML interactivo o repositorio GitHub Pages)
-                                    </span>
+                                <div className="flex items-center gap-2 shrink-0">
+                                  <button
+                                    type="button"
+                                    onClick={() => setCursoTemaExpandido(estaAbierto ? null : lIdx)}
+                                    className={`px-3 py-1.5 rounded-xl border text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${
+                                      estaAbierto
+                                        ? 'bg-emerald-600 text-white border-emerald-600'
+                                        : 'bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border-emerald-200'
+                                    }`}
+                                  >
+                                    {estaAbierto ? <ChevronUp className="size-3.5" /> : <ChevronDown className="size-3.5" />}
+                                    <span>{estaAbierto ? 'Cerrar' : 'Editar Contenidos'}</span>
+                                  </button>
+
+                                  <button
+                                    type="button"
+                                    onClick={() => eliminarTemaCurso(lIdx)}
+                                    className="text-slate-400 hover:text-red-500 p-1.5 rounded-lg transition cursor-pointer"
+                                    title="Eliminar este tema"
+                                  >
+                                    <Trash2 className="size-4" />
+                                  </button>
+                                </div>
+                              </div>
+
+                              {/* Detalle expandido del Tema: Videos, Materiales, Resúmenes */}
+                              {estaAbierto && (
+                                <div className="p-4 sm:p-5 bg-slate-50/70 border-t border-slate-100 space-y-4">
+                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                    <div>
+                                      <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">
+                                        Video de Clase / Enlace de Grabación (VideoUrl)
+                                      </label>
+                                      <input
+                                        type="text"
+                                        placeholder="https://www.youtube.com/embed/... o Drive"
+                                        value={videoVal}
+                                        onChange={(e) => actualizarLeccionCurso(lIdx, 'videoUrl', e.target.value)}
+                                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 tabular-nums"
+                                      />
+                                    </div>
+
+                                    <div>
+                                      <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">
+                                        Material de Clase (PDF / PPTX / Diapositivas)
+                                      </label>
+                                      <input
+                                        type="text"
+                                        placeholder="https://edumin-edu.github.io/recursos/archivos/?curso=..."
+                                        value={pdfVal}
+                                        onChange={(e) => actualizarLeccionCurso(lIdx, 'pdfUrl', e.target.value)}
+                                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 tabular-nums"
+                                      />
+                                    </div>
+
+                                    <div>
+                                      <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">
+                                        Video Resumen / Cápsula IA (ResumenVideoUrl)
+                                      </label>
+                                      <input
+                                        type="text"
+                                        placeholder="https://edumin-edu.github.io/recursos/videos/?curso=..."
+                                        value={resumenVideoVal}
+                                        onChange={(e) => actualizarLeccionCurso(lIdx, 'resumenVideoUrl', e.target.value)}
+                                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 tabular-nums"
+                                      />
+                                    </div>
+
+                                    <div>
+                                      <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">
+                                        Sesión / Parte
+                                      </label>
+                                      <input
+                                        type="text"
+                                        placeholder="Parte 1"
+                                        value={sesionVal}
+                                        onChange={(e) => actualizarLeccionCurso(lIdx, 'sesion', e.target.value)}
+                                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-semibold text-slate-800"
+                                      />
+                                    </div>
                                   </div>
 
                                   <div>
-                                    <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1">
-                                      <FileText className="size-3.5 text-indigo-600" />
-                                      Material 2 (Diapositivas PDF / HTML / GitHub Pages)
+                                    <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">
+                                      Resumen y Puntos Clave del Tema (Markdown / Texto)
                                     </label>
-                                    <input
-                                      type="text"
-                                      placeholder="https://... (PDF, HTML interactivo o repo GitHub)"
-                                      value={mat2Val}
-                                      onChange={(e) => actualizarCampoParteCurso(pIdx, 'material2', e.target.value)}
-                                      className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs tabular-nums text-slate-800"
+                                    <textarea
+                                      rows={4}
+                                      placeholder="Resumen del tema y puntos clave tratados en la sesión..."
+                                      value={resumenTextoVal}
+                                      onChange={(e) => actualizarLeccionCurso(lIdx, 'resumenTexto', e.target.value)}
+                                      className="w-full p-3 bg-white border border-slate-200 rounded-xl text-xs font-medium text-slate-800 leading-relaxed"
                                     />
-                                    <span className="text-[10px] text-slate-400 mt-0.5 block">
-                                      Opcional. Se mostrará sólo si contiene un link.
-                                    </span>
                                   </div>
                                 </div>
-                              </div>
+                              )}
                             </div>
                           );
                         })}
                       </div>
                     ) : (
-                      <div className="text-center py-8 bg-slate-50 border border-slate-200 rounded-2xl space-y-3">
-                        <p className="text-xs text-slate-500 font-medium">
-                          Este programa aún no tiene partes configuradas. Puedes agregar entre 1 y 6 partes.
-                        </p>
-                        <button
-                          type="button"
-                          onClick={agregarParteCurso}
-                          className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-xl text-xs font-bold transition inline-flex items-center gap-1.5 shadow-sm cursor-pointer"
-                        >
-                          <Plus className="size-3.5" /> + Agregar Parte 1
-                        </button>
+                      <div className="text-center py-8 bg-slate-50 border border-slate-200 rounded-2xl">
+                        <p className="text-xs text-slate-500 font-medium">Este curso aún no tiene temas registrados en la tabla lecciones de Supabase.</p>
                       </div>
                     )}
                   </div>
@@ -2623,7 +2493,7 @@ export default function CatalogoAdminPage() {
               {/* Opción A: Subir Archivo Excel / CSV */}
               <div className="space-y-2">
                 <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider">
-                  📁 Opción A: Cargar Archivo Excel (.XLSX / .XLS) o CSV
+                  Opción A: Cargar Archivo Excel (.XLSX / .XLS) o CSV
                 </label>
                 <input 
                   type="file" 
@@ -2641,7 +2511,7 @@ export default function CatalogoAdminPage() {
               {/* Opción B: Pegar contenido del Excel directamente */}
               <div className="space-y-2">
                 <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider">
-                  📋 Opción B: Pegar Líneas de Texto en Formato CSV / Excel
+                  Opción B: Pegar Líneas de Texto en Formato CSV / Excel
                 </label>
                 <textarea 
                   rows={6}

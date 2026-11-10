@@ -135,7 +135,7 @@ export default function EditarCronogramaModal({
             </div>
             {!coincide && (
               <p className="text-[10px] text-amber-700 dark:text-amber-400 font-normal">
-                ⚠️ La suma de las cuotas (S/ {sumaCalculada.toFixed(2)}) debe ser igual al total del crédito (S/ {editMontoTotal.toFixed(2)}) para poder guardar.
+                La suma de las cuotas (S/ {sumaCalculada.toFixed(2)}) debe ser igual al total del crédito (S/ {editMontoTotal.toFixed(2)}) para poder guardar.
               </p>
             )}
           </div>

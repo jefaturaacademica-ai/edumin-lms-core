@@ -128,13 +128,13 @@ function getLocalCatalogoData() {
       ano: 2026,
       titulo,
       tipo: 'diplomado',
-      categoria: 'Diplomados Oficiales',
+      categoria: ALL_DIPLOMADOS[index]?.categoria || 'Legal y cumplimiento',
       num_modulos: modulosFormateados.length || 3,
       taller_aplicable: `${obtenerTallerParaDiplomado(titulo)?.codigo}: ${obtenerTallerParaDiplomado(titulo)?.titulo}`,
       docente: docenteDiplomado,
       duracion: '120 horas',
       imagen: ALL_DIPLOMADOS[index]?.imagen || '/assets/images/daem/gestion-minera.webp',
-      nivel: 'Especialización',
+      nivel: null,
       precio: 150.00,
       modulos: modulosFormateados
     });
@@ -155,12 +155,12 @@ function getLocalCatalogoData() {
       titulo: c.curso.toUpperCase(),
       tipo: 'curso',
       categoria: c.categoria || 'Seguridad y prevención',
-      num_modulos: 1,
-      taller_aplicable: 'Ninguno',
+      num_modulos: 0,
+      taller_aplicable: null,
       docente: docenteAsignado,
       duracion: '40 horas',
       imagen: `/assets/images/cursos/${id}-${(c.curso || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}.jpg`,
-      nivel: 'Especialización',
+      nivel: null,
       precio: 150.00,
       modulos: []
     });
@@ -175,13 +175,13 @@ function getLocalCatalogoData() {
       ano: 2026,
       titulo: 'TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA',
       tipo: 'taller',
-      categoria: 'Talleres',
-      num_modulos: 1,
-      taller_aplicable: 'Ninguno',
+      categoria: 'Taller',
+      num_modulos: 0,
+      taller_aplicable: null,
       docente: '',
       duracion: '20 horas',
-      imagen: '/assets/images/daem/gestion-minera.webp',
-      nivel: 'Práctico',
+      imagen: '/assets/images/cursos/tal-01-taller-de-soft-skills-en-la-industria-y-mineria.jpg',
+      nivel: null,
       precio: 100.00,
       modulos: []
     },
@@ -192,13 +192,13 @@ function getLocalCatalogoData() {
       ano: 2026,
       titulo: 'TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO',
       tipo: 'taller',
-      categoria: 'Talleres',
-      num_modulos: 1,
-      taller_aplicable: 'Ninguno',
+      categoria: 'Taller',
+      num_modulos: 0,
+      taller_aplicable: null,
       docente: '',
       duracion: '20 horas',
-      imagen: '/assets/images/daem/gestion-minera.webp',
-      nivel: 'Práctico',
+      imagen: '/assets/images/cursos/tal-02-taller-de-seguridad-basada-en-el-comportamiento.jpg',
+      nivel: null,
       precio: 100.00,
       modulos: []
     }
@@ -302,17 +302,23 @@ function reconstruirDiplomadosDesdeLecciones(leccionesRows: any[], cursosSupabas
 
   for (const row of (leccionesRows || [])) {
     const norm = normalizeLeccionRow(row);
-    const cod = (norm.CodigoDiplomado || 'DIP-01').toUpperCase();
+    const cod = (norm.CodigoDiplomado || '').toUpperCase();
+    if (!cod.startsWith('DIP-')) continue; // Filtrar estrictamente: SOLO DIPLOMADOS
     if (!filasPorCodigo.has(cod)) {
       filasPorCodigo.set(cod, []);
     }
     filasPorCodigo.get(cod)!.push(norm);
   }
 
-  // Obtenemos todos los 22 códigos oficiales para asegurar que ninguno desaparezca
+  // Obtenemos todos los códigos oficiales de diplomados (DIP-) desde lecciones, diplomados_y_cursos y fallback local
+  const codigosSupabaseDip = (cursosSupabase || [])
+    .filter((c: any) => (c.tipo === 'diplomado' || String(c.codigo || c.id || '').toUpperCase().startsWith('DIP-')) && !String(c.id || '').includes('dip-dip'))
+    .map((c: any) => (c.codigo || `DIP-${String(c.id).replace(/[^0-9]/g, '').padStart(2, '0')}`).toUpperCase());
+
   const codigosOficiales = Array.from(new Set([
-    ...localDiplomados.map((d: any) => d.codigo?.toUpperCase()).filter(Boolean),
-    ...Array.from(filasPorCodigo.keys())
+    ...localDiplomados.map((d: any) => d.codigo?.toUpperCase()).filter((c: string) => c && c.startsWith('DIP-')),
+    ...codigosSupabaseDip.filter((c: string) => c && c.startsWith('DIP-')),
+    ...Array.from(filasPorCodigo.keys()).filter((c: string) => c.startsWith('DIP-'))
   ])).sort((a, b) => parseCodeNumber(a) - parseCodeNumber(b));
 
   return codigosOficiales.map((cod, idx) => {
@@ -360,6 +366,8 @@ function reconstruirDiplomadosDesdeLecciones(leccionesRows: any[], cursosSupabas
       titulo = (firstRow.Diplomado || `DIPLOMADO ${cod}`).trim().toUpperCase();
     }
 
+    const docenteFinal = cursoExistente?.docente || docenteDiplomado;
+
     return {
       id: cursoExistente?.id || id,
       codigo: cod,
@@ -367,12 +375,12 @@ function reconstruirDiplomadosDesdeLecciones(leccionesRows: any[], cursosSupabas
       ano: cursoExistente?.ano || localDip?.ano || 2026,
       titulo,
       tipo: 'diplomado',
-      categoria: 'Diplomados Oficiales',
-      num_modulos: modulos.length || cursoExistente?.num_modulos || 3,
-      taller_aplicable: (cursoExistente?.taller_aplicable && cursoExistente.taller_aplicable !== 'Ninguno') 
-        ? cursoExistente.taller_aplicable 
+      categoria: cursoExistente?.categoria || localDip?.categoria || 'Legal y cumplimiento',
+      num_modulos: cursoExistente?.num_modulos ?? (modulos.length || 3),
+      taller_aplicable: cursoExistente
+        ? (cursoExistente.taller_aplicable || 'Ninguno')
         : `${obtenerTallerParaDiplomado(titulo)?.codigo}: ${obtenerTallerParaDiplomado(titulo)?.titulo}`,
-      docente: docenteDiplomado,
+      docente: docenteFinal,
       duracion: (cursoExistente?.horas || 325) + ' horas',
       horas: Number(cursoExistente?.horas) || 325,
       creditos: (cursoExistente?.creditos !== null && cursoExistente?.creditos !== undefined) ? Number(cursoExistente.creditos) : 13,
@@ -387,8 +395,8 @@ function reconstruirDiplomadosDesdeLecciones(leccionesRows: any[], cursosSupabas
         }
         return catalogoMatch?.imagen || cursoExistente?.imagen || localDip?.imagen || '/assets/images/daem/gestion-minera.webp';
       })(),
-      nivel: cursoExistente?.nivel || localDip?.nivel || 'Especialización',
-      precio: cursoExistente?.precio || localDip?.precio || 150.00,
+      nivel: cursoExistente?.nivel ?? null,
+      precio: cursoExistente?.precio ?? localDip?.precio ?? 150.00,
       modulos
     };
   });
@@ -419,7 +427,8 @@ export async function GET() {
     const { data: leccionesRows, error: leccionesError } = await admin
       .from('lecciones')
       .select('*')
-      .order('orden', { ascending: true });
+      .order('orden', { ascending: true })
+      .limit(5000);
 
     let diplomados: any[] = [];
     if (!leccionesError && Array.isArray(leccionesRows) && leccionesRows.length > 0) {
@@ -430,40 +439,76 @@ export async function GET() {
 
     // 3. Mapear Cursos de Especialización y Talleres desde public.cursos
     const otrosCursosMapeados = (cursos || []).filter((c: any) => {
-      const tipo = c.tipo || (c.categoria === 'Diplomados Oficiales' || (c.id && c.id.startsWith('dip-')) ? 'diplomado' : c.categoria === 'Talleres' || (c.id && c.id.startsWith('tal-')) ? 'taller' : 'curso');
-      return tipo !== 'diplomado';
+      const cod = (c.codigo || c.id || '').toUpperCase();
+      const tipo = (c.tipo || '').toLowerCase();
+      const cat = (c.categoria || '').toLowerCase();
+      const esDip = tipo === 'diplomado' || cod.startsWith('DIP-') || cat.includes('diplomado');
+      return !esDip;
     }).map((c: any, index: number) => {
-      let tipo = c.tipo;
-      if (!tipo) {
-        if (c.categoria === 'Talleres' || (c.id && c.id.startsWith('tal-'))) tipo = 'taller';
-        else tipo = 'curso';
+      let tipo = (c.tipo || '').toLowerCase();
+      const codRaw = (c.codigo || c.id || '').toUpperCase();
+      if (tipo === 'taller' || codRaw.startsWith('TAL-') || c.categoria?.toLowerCase().includes('taller')) {
+        tipo = 'taller';
+      } else {
+        tipo = 'curso';
       }
 
       const localItem = local.todos.find(item => item.id === c.id || item.titulo === c.titulo);
+      const codigoNormalizado = (c.codigo || localItem?.codigo || (tipo === 'taller' ? `TAL-${(index + 1).toString().padStart(2, '0')}` : `CUR-${(index + 1).toString().padStart(2, '0')}`)).toUpperCase();
+
+      // Extraer temas y lecciones oficiales reales desde la tabla lecciones de Supabase
+      const filasCurso = (leccionesRows || []).filter((r: any) => {
+        const codR = (r.CodigoDiplomado || '').toUpperCase();
+        const titR = (r.Diplomado || '').trim().toUpperCase();
+        const titC = (c.titulo || '').trim().toUpperCase();
+        return codR === codigoNormalizado || (titR && titR === titC);
+      });
+
+      const temasOficiales: string[] = [];
+      const leccionesDetalladas = filasCurso.map((r: any) => {
+        const t = (r.Tema || '').trim();
+        if (t && !temasOficiales.includes(t)) {
+          temasOficiales.push(t);
+        }
+        return {
+          id: r.id,
+          tema: r.Tema || '',
+          sesion: r.Sesion || 'Parte 1',
+          videoUrl: r.VideoUrl || '',
+          pdfUrl: r.PdfUrl || '',
+          resumenVideoUrl: r.ResumenVideoUrl || '',
+          resumenAudioUrl: r.ResumenAudioUrl || '',
+          resumenTexto: r.ResumenTexto || '',
+          material1: r.Material1 || '',
+          material2: r.Material2 || ''
+        };
+      });
 
       return {
         id: c.id,
-        codigo: c.codigo || localItem?.codigo || (tipo === 'taller' ? `TAL-${(index + 1).toString().padStart(2, '0')}` : `CUR-${(index + 1).toString().padStart(2, '0')}`),
+        codigo: codigoNormalizado,
         version: c.version || localItem?.version || 'Versión 1',
         ano: c.ano || localItem?.ano || 2026,
         titulo: c.titulo,
         tipo,
-        categoria: c.categoria || localItem?.categoria || (tipo === 'taller' ? 'Talleres' : 'Cursos de Alta Especialización'),
-        num_modulos: c.num_modulos || localItem?.num_modulos || 1,
-        taller_aplicable: c.taller_aplicable || localItem?.taller_aplicable || 'Ninguno',
+        categoria: c.categoria || localItem?.categoria || (tipo === 'taller' ? 'Taller' : 'Cursos de Alta Especialización'),
+        num_modulos: (c.num_modulos !== undefined && c.num_modulos !== null) ? Number(c.num_modulos) : 0,
+        taller_aplicable: c.taller_aplicable ?? null,
         docente: c.docente || localItem?.docente || '',
-        duracion: ((c.horas !== null && c.horas !== undefined) ? c.horas : (tipo === 'taller' ? 10 : 30)) + ' horas',
-        horas: (c.horas !== null && c.horas !== undefined && c.horas !== '') ? Number(c.horas) : (tipo === 'taller' ? 10 : 30),
+        duracion: ((c.horas !== null && c.horas !== undefined) ? c.horas : (tipo === 'taller' ? 20 : 40)) + ' horas',
+        horas: (c.horas !== null && c.horas !== undefined && c.horas !== '') ? Number(c.horas) : (tipo === 'taller' ? 20 : 40),
         creditos: (c.creditos !== null && c.creditos !== undefined && c.creditos !== '') ? Number(c.creditos) : (tipo === 'diplomado' ? 13 : null),
         imagen: c.imagen || '/assets/images/daem/gestion-minera.webp',
-        nivel: c.nivel || (tipo === 'taller' ? 'Práctico' : 'Especialización'),
-        precio: c.precio || (tipo === 'taller' ? 100.00 : 150.00),
-        modulos: (c.modulos && Array.isArray(c.modulos) && c.modulos.length > 0) ? c.modulos : (localItem?.modulos || [])
+        nivel: c.nivel ?? null,
+        precio: c.precio ?? (tipo === 'taller' ? 100.00 : 150.00),
+        modulos: [],
+        temas: temasOficiales,
+        lecciones: leccionesDetalladas
       };
     });
 
-    const cursosEspecializacion = otrosCursosMapeados.filter(c => c.tipo === 'curso');
-    const talleres = otrosCursosMapeados.filter(c => c.tipo === 'taller');
+    const cursosEspecializacion = otrosCursosMapeados.filter(c => c.tipo === 'curso' && !c.codigo?.startsWith('TAL-') && !c.codigo?.startsWith('DIP-'));
+    const talleres = otrosCursosMapeados.filter(c => c.tipo === 'taller' && !c.codigo?.startsWith('CUR-') && !c.codigo?.startsWith('DIP-'));
 
     const todos = [
       ...diplomados,
@@ -472,10 +517,11 @@ export async function GET() {
     ];
 
     return NextResponse.json({
-      cursos: todos,
+      cursos: cursosEspecializacion.length > 0 ? cursosEspecializacion : local.cursosEspecializacion,
       diplomados: diplomados.length > 0 ? diplomados : local.diplomados,
       cursosEspecializacion: cursosEspecializacion.length > 0 ? cursosEspecializacion : local.cursosEspecializacion,
       talleres: talleres.length > 0 ? talleres : local.talleres,
+      todos,
       totales: {
         diplomados: diplomados.length || local.diplomados.length,
         cursos: cursosEspecializacion.length || local.cursosEspecializacion.length,
@@ -526,7 +572,7 @@ export async function POST(request: Request) {
         let tipo = c.tipo;
         if (!tipo) {
           if (c.categoria === 'Diplomados Oficiales' || (c.id && c.id.startsWith('dip-'))) tipo = 'diplomado';
-          else if (c.categoria === 'Talleres' || (c.id && c.id.startsWith('tal-'))) tipo = 'taller';
+          else if (c.categoria === 'Taller' || c.categoria === 'Talleres' || (c.id && c.id.startsWith('tal-'))) tipo = 'taller';
           else tipo = 'curso';
         }
 
@@ -539,13 +585,14 @@ export async function POST(request: Request) {
           ano: c.ano || localItem?.ano || 2026,
           titulo: c.titulo,
           tipo,
-          categoria: c.categoria || localItem?.categoria,
-          num_modulos: c.num_modulos || localItem?.num_modulos || 3,
-          taller_aplicable: c.taller_aplicable || localItem?.taller_aplicable || 'Ninguno',
+          categoria: c.categoria || localItem?.categoria || (tipo === 'taller' ? 'Taller' : ''),
+          num_modulos: tipo === 'diplomado' ? (c.num_modulos || localItem?.num_modulos || 3) : 0,
+          taller_aplicable: tipo === 'diplomado' ? (c.taller_aplicable || localItem?.taller_aplicable || null) : null,
           docente: c.docente || localItem?.docente || '',
-          duracion: c.duracion || '40 horas',
-          precio: c.precio || 150.00,
-          modulos: (c.modulos && Array.isArray(c.modulos) && c.modulos.length > 0) ? c.modulos : (localItem?.modulos || [])
+          horas: c.horas ?? (tipo === 'diplomado' ? 325 : tipo === 'taller' ? 20 : 40),
+          nivel: c.nivel ?? null,
+          precio: c.precio ?? 150.00,
+          modulos: []
         };
       });
 
@@ -563,36 +610,36 @@ export async function POST(request: Request) {
 
     const { 
       id, codigo, version, ano, titulo, tipo, categoria, 
-      num_modulos, taller_aplicable, docente, precio, modulos 
+      num_modulos, taller_aplicable, docente, precio, modulos, nivel 
     } = body;
 
     if (!titulo) {
       return NextResponse.json({ error: 'El título del programa es requerido' }, { status: 400 });
     }
 
-    const tipoNormalizado = tipo || (categoria === 'Diplomados Oficiales' ? 'diplomado' : categoria === 'Talleres' ? 'taller' : 'curso');
+    const tipoNormalizado = tipo || (categoria === 'Taller' || categoria === 'Talleres' ? 'taller' : categoria === 'Diplomados Oficiales' ? 'diplomado' : 'curso');
     const codigoGen = codigo ? codigo.toUpperCase() : (tipoNormalizado === 'diplomado' ? 'DIP-99' : tipoNormalizado === 'taller' ? 'TAL-99' : 'CUR-99');
     const numDigits = codigoGen.replace(/[^0-9]/g, '');
     const idGen = id || (tipoNormalizado === 'diplomado' && numDigits ? `dip-${numDigits.padStart(2, '0')}` : `${tipoNormalizado}-${codigoGen.toLowerCase().replace(/[^a-z0-9]/g, '')}`);
 
-    const productoData = {
+    const productoData: any = {
       id: idGen,
       codigo: codigoGen,
       version: version || 'Versión 1',
       ano: Number(ano) || 2026,
       titulo: titulo.toUpperCase(),
       tipo: tipoNormalizado,
-      categoria: categoria || (tipoNormalizado === 'diplomado' ? 'Diplomados Oficiales' : tipoNormalizado === 'taller' ? 'Talleres' : 'Cursos de Alta Especialización'),
-      num_modulos: Number(num_modulos) || (modulos ? modulos.length : 3),
-      taller_aplicable: taller_aplicable || 'Ninguno',
+      categoria: categoria || (tipoNormalizado === 'diplomado' ? 'Legal y cumplimiento' : tipoNormalizado === 'taller' ? 'Taller' : 'Seguridad y prevención'),
+      num_modulos: tipoNormalizado === 'diplomado' ? (Number(num_modulos) || (Array.isArray(modulos) ? modulos.length : 3)) : 0,
+      taller_aplicable: tipoNormalizado === 'diplomado'
+        ? (taller_aplicable || `${obtenerTallerParaDiplomado(titulo)?.codigo}: ${obtenerTallerParaDiplomado(titulo)?.titulo}`)
+        : null,
       docente: docente || '',
-      duracion: body.duracion || (body.horas ? body.horas + ' horas' : (tipoNormalizado === 'diplomado' ? '325 horas' : tipoNormalizado === 'taller' ? '10 horas' : '30 horas')),
-      horas: (body.horas !== undefined && body.horas !== null && body.horas !== '') ? Number(body.horas) : (tipoNormalizado === 'diplomado' ? 325 : tipoNormalizado === 'taller' ? 10 : 30),
+      horas: (body.horas !== undefined && body.horas !== null && body.horas !== '') ? String(Number(body.horas)) : (tipoNormalizado === 'diplomado' ? '325' : tipoNormalizado === 'taller' ? '20' : '40'),
       creditos: (body.creditos !== undefined && body.creditos !== null && body.creditos !== '') ? Number(body.creditos) : (tipoNormalizado === 'diplomado' ? 13 : null),
       imagen: '/assets/images/daem/gestion-minera.webp',
-      nivel: 'Especialización',
-      precio: Number(precio) || 150.00,
-      modulos: Array.isArray(modulos) ? modulos : []
+      nivel: nivel !== undefined && nivel !== '' ? nivel : null,
+      precio: Number(precio) || 150.00
     };
 
     let { data, error } = await admin
@@ -607,7 +654,6 @@ export async function POST(request: Request) {
         id: productoData.id,
         titulo: productoData.titulo,
         categoria: productoData.categoria,
-        duracion: productoData.duracion,
         imagen: productoData.imagen,
         nivel: productoData.nivel,
         precio: productoData.precio
@@ -642,9 +688,9 @@ export async function PUT(request: Request) {
   try {
     const body = await request.json();
     const { 
-      id, codigo, version, ano, titulo, num_modulos, 
+      id, codigo, version, ano, titulo, categoria, nivel, num_modulos, 
       taller_aplicable, docente, precio, modulos,
-      duracion, horas, creditos 
+      horas, creditos, tipo 
     } = body;
 
     if (!id) {
@@ -652,26 +698,26 @@ export async function PUT(request: Request) {
     }
 
     const admin = createAdminClient();
+    const esDiplomado = tipo === 'diplomado' || String(id).startsWith('dip-');
 
     const updateFields: any = {};
     if (codigo !== undefined) updateFields.codigo = codigo.toUpperCase();
     if (version !== undefined) updateFields.version = version;
     if (ano !== undefined) updateFields.ano = Number(ano);
     if (titulo !== undefined) updateFields.titulo = titulo.toUpperCase();
-    if (num_modulos !== undefined) updateFields.num_modulos = Number(num_modulos);
-    if (taller_aplicable !== undefined) updateFields.taller_aplicable = taller_aplicable;
+    if (categoria !== undefined) updateFields.categoria = categoria;
+    if (nivel !== undefined) updateFields.nivel = nivel === '' ? null : nivel;
+    if (num_modulos !== undefined) updateFields.num_modulos = esDiplomado ? Number(num_modulos) : 0;
+    if (taller_aplicable !== undefined) updateFields.taller_aplicable = esDiplomado ? taller_aplicable : null;
     if (docente !== undefined) updateFields.docente = docente;
     if (precio !== undefined) updateFields.precio = Number(precio);
-    if (duracion !== undefined) updateFields.duracion = duracion;
     if (horas !== undefined) {
-      updateFields.horas = horas !== null && horas !== '' ? Number(horas) : null;
-      // duracion column removed
+      updateFields.horas = horas !== null && horas !== '' ? String(Number(horas)) : null;
     }
     if (creditos !== undefined) {
       updateFields.creditos = (creditos !== null && creditos !== '') ? Number(creditos) : null;
     }
-    if (modulos !== undefined) {
-      updateFields.modulos = modulos;
+    if (esDiplomado && Array.isArray(modulos)) {
       updateFields.num_modulos = modulos.length;
     }
 
@@ -702,6 +748,24 @@ export async function PUT(request: Request) {
       if (tipoProd === 'diplomado' || id.startsWith('dip-')) {
         const leccionRows = convertirModulosALeccionRows(cod, tit, modulos);
         await syncLeccionesEnSupabase(admin, cod, leccionRows);
+      }
+    }
+
+    // Si se enviaron lecciones específicas (para cursos o talleres), sincronizar directamente en la tabla lecciones de Supabase
+    if (Array.isArray(body.lecciones) && body.lecciones.length > 0) {
+      for (const l of body.lecciones) {
+        if (l.id) {
+          const updateLec: any = {};
+          if (l.tema !== undefined || l.Tema !== undefined) updateLec.Tema = (l.tema !== undefined ? l.tema : l.Tema)?.trim();
+          if (l.sesion !== undefined || l.Sesion !== undefined) updateLec.Sesion = (l.sesion !== undefined ? l.sesion : l.Sesion)?.trim();
+          if (l.videoUrl !== undefined || l.VideoUrl !== undefined) updateLec.VideoUrl = (l.videoUrl !== undefined ? l.videoUrl : l.VideoUrl)?.trim();
+          if (l.pdfUrl !== undefined || l.PdfUrl !== undefined) updateLec.PdfUrl = (l.pdfUrl !== undefined ? l.pdfUrl : l.PdfUrl)?.trim();
+          if (l.resumenVideoUrl !== undefined || l.ResumenVideoUrl !== undefined) updateLec.ResumenVideoUrl = (l.resumenVideoUrl !== undefined ? l.resumenVideoUrl : l.ResumenVideoUrl)?.trim();
+          if (l.resumenTexto !== undefined || l.ResumenTexto !== undefined) updateLec.ResumenTexto = (l.resumenTexto !== undefined ? l.resumenTexto : l.ResumenTexto);
+          if (Object.keys(updateLec).length > 0) {
+            await admin.from('lecciones').update(updateLec).eq('id', l.id);
+          }
+        }
       }
     }
 

@@ -72,7 +72,7 @@ export default function AnularPagoModal({
               className="w-full p-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-red-500 outline-none"
             />
             <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-1">
-              ⚠️ Esta anulación actualizará Supabase, registrará auditoría forense y disparará una alerta a n8n.
+              Esta anulación actualizará Supabase, registrará auditoría forense y disparará una alerta a n8n.
             </p>
           </div>
 

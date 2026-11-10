@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { 
-  Users, Search, RefreshCw, Eye, ShieldCheck, 
+  Users, Search, RefreshCw, Eye, 
   CheckCircle2, AlertTriangle, UserCheck, GraduationCap, Download,
   UserPlus, Plus, Sparkles, BookOpen, CreditCard, AlertCircle, ArrowRight,
   Check, Mail, Phone, Hash, DollarSign, Calendar
@@ -17,28 +17,28 @@ import { EstudianteCompleto } from '@/lib/data/mockStudents';
 import { PaqueteDefinicion, PAQUETES_DEFAULT } from '@/lib/types/paquetes';
 
 const DIPLOMADOS_EDUMIN = [
-  "DIPLOMADO EN DERECHO MINERO",
+  "DERECHO MINERO",
   "ESPECIALISTA EN COMERCIO INTERNACIONAL: GESTIÓN ADUANERA Y LOGÍSTICA",
-  "DIPLOMADO EN GEOLOGÍA MINERA",
-  "DIPLOMADO EN GEOMETALURGIA",
-  "DIPLOMADO EN GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL",
-  "DIPLOMADO EN GEOTECNIA MINERA",
-  "DIPLOMADO EN GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-  "DIPLOMADO EN GERENCIA ESTRATÉGICA Y LIDERAZGO DE EQUIPOS EN LA MINERÍA",
-  "DIPLOMADO EN GESTIÓN AMBIENTAL PARA EL SECTOR MINERO E INDUSTRIAL",
-  "DIPLOMADO EN GESTIÓN DE CONTROL OPERATIVO EN PROCESOS MINEROS",
-  "DIPLOMADO EN GESTIÓN DE OPERACIONES INDUSTRIALES",
-  "DIPLOMADO EN GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-  "DIPLOMADO EN GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-  "DIPLOMADO EN GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-  "DIPLOMADO EN GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-  "DIPLOMADO EN GESTIÓN MINERA",
-  "DIPLOMADO EN LEGISLACIÓN LABORAL Y ELABORACIÓN DE PLANILLAS",
-  "DIPLOMADO EN MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-  "DIPLOMADO EN PREVENCIÓN DE LA CONFLICTIVIDAD, RIESGOS SOCIALES Y RESPONSABILIDAD SOCIAL",
-  "DIPLOMADO EN SEGURIDAD INDUSTRIAL",
-  "DIPLOMADO EN SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-  "DIPLOMADO EN SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA"
+  "GEOLOGÍA MINERA",
+  "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL",
+  "GEOMETALURGIA",
+  "GEOTECNIA MINERA",
+  "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
+  "GERENCIA ESTRATÉGICA Y LIDERAZGO DE EQUIPOS EN LA MINERÍA",
+  "GESTIÓN AMBIENTAL PARA EL SECTOR MINERO E INDUSTRIAL",
+  "GESTIÓN DE CONTROL OPERATIVO EN PROCESOS MINEROS",
+  "GESTIÓN DE OPERACIONES INDUSTRIALES",
+  "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
+  "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
+  "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
+  "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
+  "GESTIÓN MINERA",
+  "LEGISLACIÓN LABORAL Y ELABORACIÓN DE PLANILLAS",
+  "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
+  "PREVENCIÓN DE LA CONFLICTIVIDAD, RIESGOS SOCIALES Y RESPONSABILIDAD SOCIAL MINERA",
+  "SEGURIDAD INDUSTRIAL",
+  "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
+  "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA"
 ];
 
 export default function AdminEstudiantesPage() {
@@ -141,7 +141,14 @@ export default function AdminEstudiantesPage() {
       const res = await fetch('/api/admin/catalogo');
       if (res.ok) {
         const data = await res.json();
-        setCatalogoFull(data.cursos || []);
+        const todos = Array.isArray(data.todos)
+          ? data.todos
+          : [
+              ...(data.diplomados || []),
+              ...(data.cursosEspecializacion || data.cursos || []),
+              ...(data.talleres || [])
+            ];
+        setCatalogoFull(todos);
       }
     } catch (e) {
       console.error('Error al cargar catálogo en estudiantes:', e);
@@ -561,27 +568,15 @@ export default function AdminEstudiantesPage() {
                               {est.dni_ce}
                             </td>
                             <td className="py-3 px-4">
-                              <div className="flex items-center gap-2">
-                                <span className="font-bold text-slate-900 dark:text-white">
-                                  {est.nombres} {est.apellidos}
-                                </span>
-                                {est.role === 'ADMIN' && (
-                                  <span className="px-1.5 py-0.5 rounded text-[9px] font-black bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 shrink-0">
-                                    Admin
-                                  </span>
-                                )}
-                                {est.role === 'SUPERADMIN' && (
-                                  <span className="px-1.5 py-0.5 rounded text-[9px] font-black bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 shrink-0">
-                                    Superadmin
-                                  </span>
-                                )}
+                              <div className="font-bold text-slate-900 dark:text-white">
+                                {est.nombres} {est.apellidos}
                               </div>
                               <div className="text-[11px] text-slate-400 font-normal">
                                 {est.email}
                               </div>
                             </td>
                             <td className="py-3 px-4 max-w-[200px] truncate text-slate-700 dark:text-slate-300">
-                              {est.diplomado_actual || 'DIPLOMADO EN DERECHO MINERO'}
+                              {est.diplomado_actual || 'DERECHO MINERO'}
                             </td>
                             <td className="py-3 px-4">
                               <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
@@ -826,9 +821,16 @@ export default function AdminEstudiantesPage() {
                         onChange={(e) => setNuevoDiplomado1(e.target.value)}
                         className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-600"
                       >
-                        {DIPLOMADOS_EDUMIN.map((dip, idx) => (
-                          <option key={idx} value={dip}>{dip}</option>
-                        ))}
+                        {(() => {
+                          const dipsCatalogo = (catalogoFull || [])
+                            .filter((d: any) => d && (d.tipo === 'diplomado' || String(d.codigo || d.id || '').toUpperCase().startsWith('DIP-')))
+                            .map((d: any) => String(d.titulo || d.nombre || '').trim().toUpperCase())
+                            .filter(Boolean);
+                          const opciones = dipsCatalogo.length > 0 ? dipsCatalogo : DIPLOMADOS_EDUMIN;
+                          return opciones.map((dip, idx) => (
+                            <option key={idx} value={dip}>{dip}</option>
+                          ));
+                        })()}
                       </select>
                     </div>
                     <p className="text-[11px] text-slate-400 mt-1">

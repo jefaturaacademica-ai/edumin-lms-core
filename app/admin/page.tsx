@@ -151,7 +151,7 @@ export default function AdminDashboard360() {
     }, 0);
 
     if (Math.abs(sumaCuotas - editMontoTotal) > 0.01) {
-      alert(`⚠️ Error de Validación: La suma de las cuotas (S/ ${sumaCuotas.toFixed(2)}) debe ser igual al total del programa (S/ ${editMontoTotal.toFixed(2)}). Por favor ajusta los montos antes de guardar el cronograma.`);
+      alert(`Error de Validación: La suma de las cuotas (S/ ${sumaCuotas.toFixed(2)}) debe ser igual al total del programa (S/ ${editMontoTotal.toFixed(2)}). Por favor ajusta los montos antes de guardar el cronograma.`);
       return;
     }
 
@@ -393,7 +393,7 @@ export default function AdminDashboard360() {
 
                   {/* Filtro Mes */}
                   <div>
-                    <label className="block text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">📅 Mes Registro</label>
+                    <label className="block text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Mes Registro</label>
                     <select 
                       value={filtroMes} 
                       onChange={(e) => setFiltroMes(e.target.value)}
@@ -408,7 +408,7 @@ export default function AdminDashboard360() {
 
                   {/* Filtro Paquete */}
                   <div>
-                    <label className="block text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">📦 Paquete Adquirido</label>
+                    <label className="block text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Paquete Adquirido</label>
                     <select 
                       value={filtroPaquete} 
                       onChange={(e) => setFiltroPaquete(e.target.value)}
@@ -423,7 +423,7 @@ export default function AdminDashboard360() {
 
                   {/* Filtro Estado Financiero */}
                   <div>
-                    <label className="block text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">💳 Estado Pago</label>
+                    <label className="block text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Estado Pago</label>
                     <select 
                       value={filtroEstado} 
                       onChange={(e) => setFiltroEstado(e.target.value)}
@@ -441,7 +441,7 @@ export default function AdminDashboard360() {
 
                   {/* Filtro Riesgo Churn */}
                   <div>
-                    <label className="block text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">⚠️ Riesgo Deserción</label>
+                    <label className="block text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Riesgo Deserción</label>
                     <select 
                       value={filtroRiesgoChurn} 
                       onChange={(e) => setFiltroRiesgoChurn(e.target.value)}

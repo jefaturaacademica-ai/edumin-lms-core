@@ -637,7 +637,7 @@ function ReproductorContent() {
                         }`}
                       >
                         <CheckCircle2 className="w-4 h-4" />
-                        {mod.completado ? '✔ Módulo Completado (100%)' : 'Marcar Módulo Completo'}
+                        {mod.completado ? 'Módulo Completado (100%)' : 'Marcar Módulo Completo'}
                       </button>
                     </div>
                   </div>

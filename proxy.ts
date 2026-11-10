@@ -5,7 +5,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 const LOGIN_PATH = "/login";
 const UPDATE_CREDENTIALS_PATH = "/actualizar-credenciales";
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   let response = NextResponse.next({ request });
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const publishableKey =
@@ -60,12 +60,12 @@ export async function middleware(request: NextRequest) {
   const admin = createAdminClient();
   const { data: profile } = await admin
     .from("profiles")
-    .select("role, debe_cambiar_password")
+    .select("roles, debe_cambiar_password")
     .eq("id", user.id)
     .maybeSingle();
 
-  const userRole = (profile?.role || "ESTUDIANTE").toUpperCase();
-  const isPrivilegedAdmin = userRole === "ADMIN" || userRole === "SUPERADMIN";
+  const rolesObj = profile?.roles && typeof profile.roles === "object" ? (profile.roles as any) : null;
+  const isPrivilegedAdmin = Boolean(rolesObj?.administrativo);
 
   // Si un estudiante o usuario sin privilegios intenta entrar a /admin, bloquear y redirigir al aula virtual
   if (isAdminRoute && !isPrivilegedAdmin) {

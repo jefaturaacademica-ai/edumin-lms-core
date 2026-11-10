@@ -605,18 +605,34 @@ export async function calificarExamen(params: {
       const modNorm = params.modulo;
       const nombreDip = todasDelModulo[0]?.diplomado || 'DIPLOMADO';
 
-      const { data: existente } = await sb
+      const tipoPrograma = params.codigoDiplomado.toUpperCase().startsWith('CUR')
+        ? 'curso'
+        : params.codigoDiplomado.toUpperCase().startsWith('TAL')
+        ? 'taller'
+        : 'diplomado';
+      const matchMod = modNorm.match(/\d+/);
+      const moduloNumero = matchMod ? parseInt(matchMod[0], 10) : (tipoPrograma === 'diplomado' ? 1 : 0);
+
+      let queryExistente = sb
         .from('notas_modulos')
         .select('id')
         .eq('dni_ce', dniLimpio)
-        .eq('diplomado_numero', params.codigoDiplomado)
-        .eq('modulo_nombre', modNorm)
-        .limit(1);
+        .eq('diplomado_numero', params.codigoDiplomado);
+
+      if (tipoPrograma === 'diplomado' && moduloNumero > 0) {
+        queryExistente = queryExistente.eq('modulo_numero', moduloNumero);
+      } else {
+        queryExistente = queryExistente.eq('modulo_nombre', modNorm);
+      }
+
+      const { data: existente } = await queryExistente.limit(1);
 
       const payloadNotas = {
         dni_ce: dniLimpio,
         diplomado_numero: params.codigoDiplomado,
         diplomado_nombre: nombreDip,
+        tipo_programa: tipoPrograma,
+        modulo_numero: moduloNumero,
         modulo_nombre: modNorm,
         nota: notaFinal,
         estado: aprobado ? 'APROBADO' : 'DESAPROBADO',
@@ -649,12 +665,25 @@ export async function obtenerIntentoNotasModulos(params: {
   try {
     const sb = getSupabaseClient();
     if (sb) {
-      const { data } = await sb
+      const matchMod = (params.modulo || '').match(/\d+/);
+      const moduloNumero = matchMod ? parseInt(matchMod[0], 10) : null;
+      const esCursoOTaller = /^(CUR|TAL)/i.test(params.codigoDiplomado);
+
+      let query = sb
         .from('notas_modulos')
         .select('*')
         .eq('dni_ce', params.dni)
-        .eq('diplomado_numero', params.codigoDiplomado)
-        .eq('modulo_nombre', params.modulo)
+        .eq('diplomado_numero', params.codigoDiplomado);
+
+      if (esCursoOTaller) {
+        query = query.or(`modulo_nombre.eq.${params.modulo},modulo_numero.eq.0`);
+      } else if (moduloNumero !== null) {
+        query = query.or(`modulo_numero.eq.${moduloNumero},modulo_nombre.eq.${params.modulo}`);
+      } else {
+        query = query.eq('modulo_nombre', params.modulo);
+      }
+
+      const { data } = await query
         .order('updated_at', { ascending: false })
         .limit(1);
 

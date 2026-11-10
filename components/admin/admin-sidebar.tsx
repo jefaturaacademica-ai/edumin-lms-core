@@ -44,7 +44,7 @@ export default function AdminSidebar() {
 
     const adminTitles: Record<string, string> = {
       '/admin': 'Dashboard y Finanzas 360°',
-      '/admin/catalogo': 'Catálogo y Programas',
+      '/admin/catalogo': 'Catálogo',
       '/admin/examenes': 'Evaluaciones',
       '/admin/estudiantes': 'Estudiantes',
       '/admin/certificaciones': 'Certificaciones',
@@ -73,7 +73,7 @@ export default function AdminSidebar() {
       items: [
         {
           href: '/admin/catalogo',
-          label: 'Catálogo y programas',
+          label: 'Catálogo',
           icon: BookOpen,
           color: 'text-indigo-400'
         },
@@ -229,7 +229,7 @@ export default function AdminSidebar() {
           <UserProfileCard currentView="admin" onNavigate={() => setMobileOpen(false)} />
         </div>
 
-        <nav className="flex-1 py-3 px-3 space-y-4 overflow-y-auto">
+        <nav className="flex-1 py-3 px-3 space-y-4 overflow-y-auto sidebar-scroll">
           {navGroupsFiltrados.map((grupo) => (
             <div key={grupo.categoria} className="space-y-1">
               <div className="px-3 pt-1 pb-1 text-[10px] font-black uppercase tracking-wider text-slate-400">
@@ -248,7 +248,7 @@ export default function AdminSidebar() {
                       key={item.href}
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className={`w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-xs font-bold ${
+                      className={`w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-colors duration-150 text-xs font-bold outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-indigo-400/50 ${
                         isActive 
                           ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30' 
                           : 'text-slate-300 hover:bg-slate-800 hover:text-white'
@@ -271,7 +271,7 @@ export default function AdminSidebar() {
               setMobileOpen(false);
               handleLogout();
             }}
-            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500/20 transition-colors border border-white/5 shadow-sm text-xs font-medium cursor-pointer"
+            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500/20 transition-colors border border-white/5 shadow-sm text-xs font-medium cursor-pointer outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-indigo-400/50"
           >
             <LogOut className="w-4 h-4" />
             <span>Cerrar sesión</span>
@@ -300,7 +300,7 @@ export default function AdminSidebar() {
         </div>
         
         {/* Navegación Desktop Categorizada */}
-        <nav className="flex-1 py-4 px-3 space-y-4 overflow-y-auto">
+        <nav className="flex-1 py-4 px-3 space-y-4 overflow-y-auto sidebar-scroll">
           {navGroupsFiltrados.map((grupo) => (
             <div key={grupo.categoria} className="space-y-1">
               <div className="px-3 pt-1 pb-1 text-[10px] font-black uppercase tracking-wider text-slate-400/80 dark:text-slate-500">
@@ -318,7 +318,7 @@ export default function AdminSidebar() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl transition-all text-xs font-bold ${
+                      className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl transition-colors duration-150 text-xs font-bold outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-indigo-400/50 ${
                         isActive 
                           ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30' 
                           : 'text-slate-300 hover:bg-slate-800/80 hover:text-white'
@@ -338,7 +338,7 @@ export default function AdminSidebar() {
         <div className="p-4 border-t border-white/5 shrink-0 flex items-center gap-2">
           <button 
             onClick={handleLogout}
-            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500/20 transition-colors border border-white/5 shadow-sm text-xs font-medium cursor-pointer"
+            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500/20 transition-colors border border-white/5 shadow-sm text-xs font-medium cursor-pointer outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-indigo-400/50"
           >
             <LogOut className="w-4 h-4" />
             <span>Cerrar sesión</span>

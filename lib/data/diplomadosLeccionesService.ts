@@ -20,12 +20,6 @@ export interface LeccionRow {
   ResumenTexto?: string | null;
   Material1?: string | null;
   Material2?: string | null;
-  Material3?: string | null;
-  Material4?: string | null;
-  Material5?: string | null;
-  Material6?: string | null;
-  Material7?: string | null;
-  Material8?: string | null;
   orden?: number;
 }
 
@@ -65,12 +59,6 @@ export function normalizeLeccionRow(r: any): LeccionRow {
     ResumenTexto: (r.ResumenTexto ?? r.resumenTexto ?? r.resumentexto ?? r.resumen_texto ?? '').trim() || null,
     Material1: (r.Material1 ?? r.material1 ?? r.excelUrl ?? r.excel_url ?? '').trim() || null,
     Material2: (r.Material2 ?? r.material2 ?? '').trim() || null,
-    Material3: (r.Material3 ?? r.material3 ?? '').trim() || null,
-    Material4: (r.Material4 ?? r.material4 ?? '').trim() || null,
-    Material5: (r.Material5 ?? r.material5 ?? '').trim() || null,
-    Material6: (r.Material6 ?? r.material6 ?? '').trim() || null,
-    Material7: (r.Material7 ?? r.material7 ?? '').trim() || null,
-    Material8: (r.Material8 ?? r.material8 ?? '').trim() || null,
     orden: typeof r.orden === 'number' ? r.orden : 0
   };
 
@@ -157,12 +145,6 @@ export function generarFilasMaestrasIniciales(): LeccionRow[] {
             ResumenMapaMental: isObj ? (claseItem.resumenMapaMental || claseItem.ResumenMapaMental || claseItem.mapaMentalUrl || null) : null,
             Material1: isObj ? (claseItem.material1 || null) : null,
             Material2: isObj ? (claseItem.material2 || null) : null,
-            Material3: isObj ? (claseItem.material3 || null) : null,
-            Material4: isObj ? (claseItem.material4 || null) : null,
-            Material5: isObj ? (claseItem.material5 || null) : null,
-            Material6: isObj ? (claseItem.material6 || null) : null,
-            Material7: isObj ? (claseItem.material7 || null) : null,
-            Material8: isObj ? (claseItem.material8 || null) : null,
             orden: ordenGlobal++
           });
 
@@ -196,12 +178,6 @@ export function generarFilasMaestrasIniciales(): LeccionRow[] {
           ResumenMapaMental: isObj ? (caItem.resumenMapaMental || caItem.mapaMentalUrl || null) : null,
           Material1: null,
           Material2: null,
-          Material3: null,
-          Material4: null,
-          Material5: null,
-          Material6: null,
-          Material7: null,
-          Material8: null,
           orden: ordenGlobal++
         });
 
@@ -216,7 +192,7 @@ export function generarFilasMaestrasIniciales(): LeccionRow[] {
 // Construye la lista de recursos activos para una sesión: SÓLO incluye los campos que tienen links
 // Orden establecido:
 // 1. Material de la clase (PdfUrl)
-// 2. Material adicional (Material1 hasta Material8)
+// 2. Material adicional (Material1 y Material2)
 // 3. Resumen en video (ResumenVideoUrl)
 // 4. Resumen en audio (ResumenAudioUrl)
 // 5. Resumen interactivo (ResumenInteractivo)
@@ -240,11 +216,8 @@ export function obtenerRecursosConLinks(row: LeccionRow, numClase: number) {
     });
   }
 
-  // 2. Material Adicional (Material1 hasta Material8): sólo si tienen link
-  const materialesKeys: (keyof LeccionRow)[] = [
-    'Material1', 'Material2', 'Material3', 'Material4',
-    'Material5', 'Material6', 'Material7', 'Material8'
-  ];
+  // 2. Material Adicional (Material1 y Material2): sólo si tienen link
+  const materialesKeys: (keyof LeccionRow)[] = ['Material1', 'Material2'];
 
   materialesKeys.forEach((k, idx) => {
     const val = r[k];
@@ -355,13 +328,7 @@ export function convertirFilasAListaModulos(filas: LeccionRow[]) {
         resumenMapaMental: r.ResumenMapaMental,
         resumenTexto: r.ResumenTexto,
         material1: r.Material1,
-        material2: r.Material2,
-        material3: r.Material3,
-        material4: r.Material4,
-        material5: r.Material5,
-        material6: r.Material6,
-        material7: r.Material7,
-        material8: r.Material8
+        material2: r.Material2
       });
     } else {
       if (!modObj.temasMap.has(r.Tema)) {
@@ -378,13 +345,7 @@ export function convertirFilasAListaModulos(filas: LeccionRow[]) {
         resumenMapaMental: r.ResumenMapaMental,
         resumenTexto: r.ResumenTexto,
         material1: r.Material1,
-        material2: r.Material2,
-        material3: r.Material3,
-        material4: r.Material4,
-        material5: r.Material5,
-        material6: r.Material6,
-        material7: r.Material7,
-        material8: r.Material8
+        material2: r.Material2
       });
     }
   });
@@ -435,12 +396,6 @@ export function convertirModulosALeccionRows(codigoDiplomado: string, tituloDipl
         const resumenMapaMental = isObj ? (claseObj.resumenMapaMental || claseObj.ResumenMapaMental || claseObj.mapaMentalUrl || '') : '';
         const material1 = isObj ? (claseObj.material1 || claseObj.Material1 || claseObj.excel_url || claseObj.excelUrl || '') : '';
         const material2 = isObj ? (claseObj.material2 || claseObj.Material2 || '') : '';
-        const material3 = isObj ? (claseObj.material3 || claseObj.Material3 || '') : '';
-        const material4 = isObj ? (claseObj.material4 || claseObj.Material4 || '') : '';
-        const material5 = isObj ? (claseObj.material5 || claseObj.Material5 || '') : '';
-        const material6 = isObj ? (claseObj.material6 || claseObj.Material6 || '') : '';
-        const material7 = isObj ? (claseObj.material7 || claseObj.Material7 || '') : '';
-        const material8 = isObj ? (claseObj.material8 || claseObj.Material8 || '') : '';
 
         rows.push({
           CodigoDiplomado: codigoDiplomado,
@@ -458,12 +413,6 @@ export function convertirModulosALeccionRows(codigoDiplomado: string, tituloDipl
           ResumenMapaMental: resumenMapaMental || null,
           Material1: material1 || null,
           Material2: material2 || null,
-          Material3: material3 || null,
-          Material4: material4 || null,
-          Material5: material5 || null,
-          Material6: material6 || null,
-          Material7: material7 || null,
-          Material8: material8 || null,
           orden: orden++
         });
       });
@@ -481,12 +430,6 @@ export function convertirModulosALeccionRows(codigoDiplomado: string, tituloDipl
         const resumenMapaMental = isObj ? (ca.resumenMapaMental || ca.ResumenMapaMental || ca.mapaMentalUrl || '') : '';
         const material1 = isObj ? (ca.material1 || ca.Material1 || ca.excel_url || ca.excelUrl || '') : '';
         const material2 = isObj ? (ca.material2 || ca.Material2 || '') : '';
-        const material3 = isObj ? (ca.material3 || ca.Material3 || '') : '';
-        const material4 = isObj ? (ca.material4 || ca.Material4 || '') : '';
-        const material5 = isObj ? (ca.material5 || ca.Material5 || '') : '';
-        const material6 = isObj ? (ca.material6 || ca.Material6 || '') : '';
-        const material7 = isObj ? (ca.material7 || ca.Material7 || '') : '';
-        const material8 = isObj ? (ca.material8 || ca.Material8 || '') : '';
 
         rows.push({
           CodigoDiplomado: codigoDiplomado,
@@ -504,12 +447,6 @@ export function convertirModulosALeccionRows(codigoDiplomado: string, tituloDipl
           ResumenMapaMental: resumenMapaMental || null,
           Material1: material1 || null,
           Material2: material2 || null,
-          Material3: material3 || null,
-          Material4: material4 || null,
-          Material5: material5 || null,
-          Material6: material6 || null,
-          Material7: material7 || null,
-          Material8: material8 || null,
           orden: orden++
         });
       });

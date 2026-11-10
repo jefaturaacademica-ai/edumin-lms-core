@@ -13,7 +13,9 @@ import {
   RotateCcw,
   FileCode,
   ExternalLink,
-  Layers
+  Layers,
+  X,
+  Lightbulb
 } from 'lucide-react';
 import { PLANTILLAS_PREDEFINIDAS, type ModoLoginContenido } from '@/lib/types/loginBanner';
 
@@ -139,9 +141,10 @@ export function LoginPersonalizacionTab() {
           <button 
             type="button" 
             onClick={() => setMensaje(null)}
-            className="text-slate-400 hover:text-slate-600 cursor-pointer text-sm"
+            aria-label="Cerrar mensaje"
+            className="text-slate-400 hover:text-slate-600 cursor-pointer p-1"
           >
-            ✕
+            <X className="size-4" />
           </button>
         </div>
       )}
@@ -349,8 +352,9 @@ export function LoginPersonalizacionTab() {
                 spellCheck={false}
                 className="w-full bg-slate-950 text-emerald-400 tabular-nums text-xs p-4 rounded-xl border border-slate-800 focus:border-indigo-500 outline-none resize-y leading-relaxed shadow-inner"
               />
-              <p className="text-[11px] text-slate-400 leading-relaxed">
-                💡 <strong>Tip:</strong> Puedes usar clases estándar de Tailwind CSS (como <code>bg-amber-500</code>, <code>rounded-2xl</code>, <code>text-white</code>, <code>font-bold</code>), imágenes con etiquetas <code>&lt;img&gt;</code> y enlaces con <code>&lt;a target=&quot;_blank&quot;&gt;</code>.
+              <p className="text-[11px] text-slate-400 leading-relaxed flex items-start gap-1.5">
+                <Lightbulb className="size-3.5 text-amber-500 shrink-0 mt-0.5" />
+                <span><strong>Tip:</strong> Puedes usar clases estándar de Tailwind CSS (como <code>bg-amber-500</code>, <code>rounded-2xl</code>, <code>text-white</code>, <code>font-bold</code>), imágenes con etiquetas <code>&lt;img&gt;</code> y enlaces con <code>&lt;a target=&quot;_blank&quot;&gt;</code>.</span>
               </p>
             </div>
 
@@ -414,10 +418,13 @@ export function LoginPersonalizacionTab() {
       <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xs">
         <div className="text-xs text-slate-600 text-center sm:text-left">
           <p className="font-bold text-slate-900">Estado actual seleccionado:</p>
-          <p className="text-slate-500">
-            {modo === 'contactos' && '✓ Mostrando tarjetas oficiales de ayuda y WhatsApp.'}
-            {modo === 'html' && `✓ Mostrando campaña personalizada ${tituloCampana ? `("${tituloCampana}")` : ''}.`}
-            {modo === 'vacio' && '✓ Mostrando únicamente el video institucional sin tarjetas.'}
+          <p className="text-slate-500 flex items-center justify-center sm:justify-start gap-1.5">
+            <CheckCircle2 className="size-3.5 text-emerald-600 shrink-0" />
+            <span>
+              {modo === 'contactos' && 'Mostrando tarjetas oficiales de ayuda y WhatsApp.'}
+              {modo === 'html' && `Mostrando campaña personalizada ${tituloCampana ? `("${tituloCampana}")` : ''}.`}
+              {modo === 'vacio' && 'Mostrando únicamente el video institucional sin tarjetas.'}
+            </span>
           </p>
         </div>
 

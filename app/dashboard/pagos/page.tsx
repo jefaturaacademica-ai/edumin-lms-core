@@ -249,7 +249,7 @@ export default function PagosEstudiantePage() {
                   </span>
                 </div>
                 <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                  ⚠️ Atención: Regulariza tu cuota pendiente para reactivar tu campus
+                  Atención: Regulariza tu cuota pendiente para reactivar tu campus
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
                   Registras una cuota vencida. Regulariza tu pago vía WhatsApp o solicita una prórroga de pago con tu asesor financiero.

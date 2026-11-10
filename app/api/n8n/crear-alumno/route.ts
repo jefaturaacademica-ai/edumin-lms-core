@@ -33,12 +33,15 @@ export async function POST(request: Request) {
     const studentId = authData.user.id;
     const paqueteUpper = (paquete_adquirido || 'PRO').toUpperCase();
 
+    const cuposDipBase = paqueteUpper === 'ILIMITADO' ? 3 : 1;
+    const cuposCurBase = paqueteUpper === 'ILIMITADO' ? 15 : (paqueteUpper === 'FULL' || paqueteUpper === 'PREMIUM' ? 5 : 3);
+
     // 4. Crear el perfil en la tabla profiles
     const { error: profileError } = await admin
       .from('profiles')
       .insert({
         id: studentId,
-        role: 'ESTUDIANTE',
+        roles: { administrativo: null, academico: 'ESTUDIANTE' },
         dni_ce: dni_ce.trim(),
         email: email.trim().toLowerCase(),
         nombres: nombres.trim(),
@@ -47,7 +50,11 @@ export async function POST(request: Request) {
         paquete_adquirido: paqueteUpper,
         diplomado_1: programa || 'Diplomado en Seguridad y Salud Ocupacional en Minería',
         cuotas_pagadas: 1, // Entra con la 1ra cuota pagada
-        cupos_diplomados: 0,
+        cupos_creditos: {
+          diplomados: { asignados: cuposDipBase, adicionales: 0, canjeados: 0 },
+          cursos: { asignados: cuposCurBase, adicionales: 0, canjeados: 0 },
+          compras_directas: []
+        },
         debe_cambiar_password: true
       });
 

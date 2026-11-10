@@ -95,23 +95,6 @@ export async function POST() {
       }
     }
 
-    // 4. Intentar actualizar tablas matriculas si existen
-    try {
-      await admin
-        .from('matriculas')
-        .update({ avance_porcentaje: 0 });
-    } catch {
-      // Ignorar si la tabla/columna no está disponible
-    }
-
-    try {
-      await admin
-        .from('matriculas_cursos')
-        .update({ avance_porcentaje: 0 });
-    } catch {
-      // Ignorar si no está disponible
-    }
-
     return NextResponse.json({
       success: true,
       updatedCount,

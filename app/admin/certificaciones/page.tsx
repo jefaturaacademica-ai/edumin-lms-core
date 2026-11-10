@@ -2522,7 +2522,7 @@ export default function CertificacionesAdminPage() {
                               </div>
 
                               <div className="p-2 bg-emerald-50 dark:bg-emerald-950/40 rounded-lg border border-emerald-200 dark:border-emerald-800 text-[10px] text-emerald-800 dark:text-emerald-300 leading-snug">
-                                <span className="font-bold block">✓ Texto puro y sin duplicados:</span>
+                                <span className="font-bold block">Texto puro y sin duplicados:</span>
                                 Se imprime como texto limpio sin cuadros de fondo. Los códigos se generan con algoritmo Crockford Base32 (34 mil millones de variantes) con índice UNIQUE garantizado en base de datos.
                               </div>
 
@@ -2596,7 +2596,7 @@ export default function CertificacionesAdminPage() {
                         <Eye className="w-3.5 h-3.5 text-indigo-400" /> Vista previa lienzo A4 {editorOrientacion === 'vertical' ? 'Vertical (21.0×29.7 cm)' : 'Horizontal (29.7×21.0 cm)'}
                       </span>
                       <p className="text-[11px] text-slate-500">
-                        ✨ Arrastra cualquier variable directamente sobre el lienzo para ubicarla libremente
+                        Arrastra cualquier variable directamente sobre el lienzo para ubicarla libremente
                       </p>
                     </div>
 
@@ -3640,7 +3640,7 @@ export default function CertificacionesAdminPage() {
                     >
                       {modelosCertificados.map((m) => (
                         <option key={m.id} value={m.id}>
-                          {m.nombre} {m.esPredeterminado ? '★ (Oficial Activa)' : ''}
+                          {m.nombre} {m.esPredeterminado ? '(Oficial Activa)' : ''}
                         </option>
                       ))}
                     </select>

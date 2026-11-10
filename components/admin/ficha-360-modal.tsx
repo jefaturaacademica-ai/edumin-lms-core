@@ -5,7 +5,7 @@ import {
   X, Calendar, Plus, Settings, CreditCard, CheckCircle2, RefreshCw, 
   FileText, Download, Award, Send, AlertTriangle, DollarSign, Check,
   User, UserCheck, Phone, Mail, Sparkles, BookOpen, Clock, ShieldAlert,
-  ChevronRight, Layers, Lock, Unlock, ShieldCheck
+  ChevronRight, Layers, Lock, Unlock, Trash2
 } from 'lucide-react';
 
 interface Ficha360ModalProps {
@@ -68,7 +68,6 @@ export default function Ficha360Modal({
   const [editTelefono, setEditTelefono] = useState<string>('');
   const [editFechaNacimiento, setEditFechaNacimiento] = useState<string>('');
   const [editPaquete, setEditPaquete] = useState<string>('FULL');
-  const [editRole, setEditRole] = useState<string>('ESTUDIANTE');
   const [editBloqueado, setEditBloqueado] = useState<boolean>(false);
   const [editProrroga, setEditProrroga] = useState<string>('');
   const [guardandoPerfil, setGuardandoPerfil] = useState<boolean>(false);
@@ -80,19 +79,78 @@ export default function Ficha360Modal({
   const [guardandoCreditosExtra, setGuardandoCreditosExtra] = useState<boolean>(false);
   const [mensajeCreditosExtra, setMensajeCreditosExtra] = useState<{ texto: string; tipo: 'exito' | 'error' } | null>(null);
 
-  // Sub-filtro para Avance Académico: 'todos' | 'diplomados' | 'cursos'
-  const [filtroAcademico, setFiltroAcademico] = useState<'todos' | 'diplomados' | 'cursos'>('todos');
+  // Sub-filtro para Avance Académico: 'todos' | 'diplomados' | 'cursos' | 'talleres'
+  const [filtroAcademico, setFiltroAcademico] = useState<'todos' | 'diplomados' | 'cursos' | 'talleres'>('todos');
 
   // Estado local para módulo de Cargos Extras
   const [conceptoExtra, setConceptoExtra] = useState<string>('Examen Sustitutorio');
   const [montoExtra, setMontoExtra] = useState<string>('25.00');
 
-  // Estado local para asignador de diplomados y cursos
+  // Estado local para asignador de diplomados, cursos y talleres
   const [nuevoDiplomadoSeleccionado, setNuevoDiplomadoSeleccionado] = useState<string>('');
   const [cargandoDiplomadoAccion, setCargandoDiplomadoAccion] = useState(false);
   const [nuevoCursoSeleccionado, setNuevoCursoSeleccionado] = useState<string>('');
   const [cargandoCursoAccion, setCargandoCursoAccion] = useState(false);
-  const [reiniciandoExamenModulo, setReiniciandoExamenModulo] = useState<string | null>(null);
+  const [nuevoTallerSeleccionado, setNuevoTallerSeleccionado] = useState<string>('');
+  const [cargandoTallerAccion, setCargandoTallerAccion] = useState(false);
+  const [reiniciandoExamenKey, setReiniciandoExamenKey] = useState<string | null>(null);
+
+  // Catálogo oficial sincronizado con Supabase (diplomados con módulos reales, cursos y talleres)
+  const [catalogoFetched, setCatalogoFetched] = useState<any[]>([]);
+  const propCatalogoList = Array.isArray(catalogoDiplomados) ? catalogoDiplomados : [];
+  const propTieneDiplomadosConModulos = propCatalogoList.some(
+    (item: any) =>
+      item &&
+      (item.tipo === 'diplomado' || String(item.codigo || '').toUpperCase().startsWith('DIP-')) &&
+      Array.isArray(item.modulos) &&
+      item.modulos.length > 0
+  );
+
+  useEffect(() => {
+    if (propTieneDiplomadosConModulos) return;
+
+    let cancelado = false;
+    fetch('/api/admin/catalogo')
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (cancelado || !data) return;
+        const todos = Array.isArray(data.todos)
+          ? data.todos
+          : [
+              ...(data.diplomados || []),
+              ...(data.cursosEspecializacion || data.cursos || []),
+              ...(data.talleres || [])
+            ];
+        if (todos.length > 0) {
+          setCatalogoFetched(todos);
+        }
+      })
+      .catch((err) => console.error('Error cargando catálogo oficial en Ficha 360:', err));
+
+    return () => {
+      cancelado = true;
+    };
+  }, [propTieneDiplomadosConModulos]);
+
+  // Configuración oficial de exámenes (para saber si un módulo, curso o taller aplica examen o no)
+  const [configsExamenes, setConfigsExamenes] = useState<any[]>([]);
+
+  useEffect(() => {
+    let cancelado = false;
+    fetch('/api/admin/examenes/configuracion')
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (cancelado || !data) return;
+        if (Array.isArray(data.data)) {
+          setConfigsExamenes(data.data);
+        }
+      })
+      .catch((err) => console.error('Error cargando configuración de exámenes en Ficha 360:', err));
+
+    return () => {
+      cancelado = true;
+    };
+  }, []);
 
   // Inicializar estado cuando cambia el alumno seleccionado
   useEffect(() => {
@@ -104,7 +162,6 @@ export default function Ficha360Modal({
       setEditTelefono(alumnoSeleccionado.telefono && alumnoSeleccionado.telefono !== 'Sin teléfono' ? alumnoSeleccionado.telefono : '');
       setEditFechaNacimiento(alumnoSeleccionado.fecha_nacimiento || '');
       setEditPaquete(alumnoSeleccionado.paquete_adquirido || 'FULL');
-      setEditRole(alumnoSeleccionado.role || 'ESTUDIANTE');
       setEditBloqueado(Boolean(alumnoSeleccionado.bloqueado));
       setEditProrroga(alumnoSeleccionado.prorroga_hasta || '');
       setExtraDip(alumnoSeleccionado.creditos_extra_diplomados || 0);
@@ -147,7 +204,6 @@ export default function Ficha360Modal({
           telefono: editTelefono.trim(),
           fecha_nacimiento: editFechaNacimiento.trim() || null,
           paquete_adquirido: editPaquete,
-          role: editRole,
           bloqueado: editBloqueado,
           prorroga_hasta: editProrroga || null
         })
@@ -209,21 +265,38 @@ export default function Ficha360Modal({
     await onRegistrarPago(undefined, { concepto: conceptoExtra, monto: montoNum });
   };
 
-  const handleResetExamenModulo = async (diplomadoTitulo: string, moduloCodigo: string) => {
-    const confirmMsg = `¿Desea reiniciar el intento de examen del "${moduloCodigo}" en "${diplomadoTitulo}" para el alumno ${alumnoSeleccionado.nombres} ${alumnoSeleccionado.apellidos}?\n\nEsto borrará la nota anterior y permitirá al alumno rendir su examen sustitutorio (S/ 25.00).`;
+  const handleResetExamen = async (params: {
+    key: string;
+    tipoPrograma: 'diplomado' | 'curso' | 'taller';
+    programaTitulo: string;
+    programaCodigo?: string;
+    programaId?: string;
+    moduloCodigo?: string;
+  }) => {
+    const etiquetaObjetivo =
+      params.tipoPrograma === 'diplomado'
+        ? `"${params.moduloCodigo}" en "${params.programaTitulo}"`
+        : `"${params.programaTitulo}"`;
+
+    const confirmMsg = `¿Desea borrar el intento de examen de ${etiquetaObjetivo} para ${alumnoSeleccionado.nombres} ${alumnoSeleccionado.apellidos}?\n\nEsto eliminará la nota registrada y permitirá al alumno volver a rendir su examen.`;
     if (!window.confirm(confirmMsg)) return;
 
     try {
-      setReiniciandoExamenModulo(moduloCodigo);
+      setReiniciandoExamenKey(params.key);
       const res = await fetch('/api/admin/estudiantes', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           action: 'reset_examen_modulo',
+          tipoPrograma: params.tipoPrograma,
           studentId: alumnoSeleccionado.id,
           dni_ce: alumnoSeleccionado.dni_ce,
-          diplomadoTitulo,
-          moduloCodigo
+          diplomadoTitulo: params.tipoPrograma === 'diplomado' ? params.programaTitulo : undefined,
+          diplomadoCodigo: params.tipoPrograma === 'diplomado' ? params.programaCodigo : undefined,
+          moduloCodigo: params.moduloCodigo,
+          cursoTitulo: params.tipoPrograma !== 'diplomado' ? params.programaTitulo : undefined,
+          cursoCodigo: params.tipoPrograma !== 'diplomado' ? params.programaCodigo : undefined,
+          cursoId: params.tipoPrograma !== 'diplomado' ? params.programaId : undefined
         })
       });
 
@@ -232,12 +305,12 @@ export default function Ficha360Modal({
         throw new Error(err.error || 'Error al reiniciar');
       }
 
-      alert('Intento de examen reiniciado correctamente. El alumno ya puede rendir su examen sustitutorio.');
+      alert('Intento de examen borrado correctamente. El alumno ya puede rendir nuevamente su examen.');
       onRefetchEstudiantes?.();
     } catch (err: any) {
       alert(`Error: ${err.message || 'No se pudo reiniciar el intento de examen.'}`);
     } finally {
-      setReiniciandoExamenModulo(null);
+      setReiniciandoExamenKey(null);
     }
   };
 
@@ -493,43 +566,6 @@ export default function Ficha360Modal({
                         onChange={(e) => setEditProrroga(e.target.value)}
                         className="w-full px-3.5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold tabular-nums text-slate-900 dark:text-white outline-none focus:border-indigo-500 transition-colors"
                       />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Sección 4: Roles y permisos institucionales */}
-                <div className="bg-slate-50 dark:bg-slate-800/40 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
-                  <h4 className="text-xs font-black text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
-                    <ShieldCheck className="size-4 text-indigo-500" />
-                    Roles y Nivel de Acceso Institucional
-                  </h4>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-                    <div>
-                      <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-400 uppercase mb-1">
-                        Asignación de rol en el sistema
-                      </label>
-                      <select
-                        value={editRole}
-                        onChange={(e) => setEditRole(e.target.value)}
-                        className="w-full px-3.5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white outline-none focus:border-indigo-500 transition-colors cursor-pointer"
-                      >
-                        <option value="ESTUDIANTE">Solo Estudiante (Acceso a campus virtual)</option>
-                        <option value="ADMIN">Estudiante + Administrador (Acceso dual)</option>
-                        <option value="DOCENTE">Docente (Gestión docente y notas)</option>
-                        <option value="SUPERADMIN">Superadministrador (Acceso total)</option>
-                      </select>
-                    </div>
-
-                    <div className="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 text-xs space-y-1">
-                      <span className="font-bold text-slate-800 dark:text-slate-200 block text-[11px]">
-                        {editRole === 'ADMIN' ? 'Acceso dual activo' : editRole === 'SUPERADMIN' ? 'Acceso total activo' : 'Acceso regular de estudiante'}
-                      </span>
-                      <p className="text-[10px] text-slate-500 dark:text-slate-400 leading-relaxed">
-                        {editRole === 'ADMIN' || editRole === 'SUPERADMIN'
-                          ? 'El usuario conservará todos sus diplomados, cursos y pagos como alumno, y además podrá ingresar al panel de administración mediante el selector de perfil.'
-                          : 'El usuario ingresará directamente al campus virtual con sus credenciales institucionales.'}
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -864,24 +900,70 @@ export default function Ficha360Modal({
             </div>
           )}
 
-          {/* TAB 4: AVANCE ACADÉMICO SEPARADO (DIPLOMADOS Y CURSOS) Y CRÉDITOS EXTRA */}
+          {/* TAB 4: AVANCE ACADÉMICO SEPARADO (DIPLOMADOS, CURSOS Y TALLERES) Y CRÉDITOS EXTRA */}
           {modalTab === 'academico' && (() => {
+            const normStr = (s?: string | null) =>
+              (s || '')
+                .toLowerCase()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '');
+
+            const stripDipPrefix = (s?: string | null) =>
+              normStr(s).replace(/^(diplomado-en-|especialista-en-)/, '');
+
+            const esTallerItem = (c: any) => {
+              if (!c) return false;
+              const tipo = String(c.tipo || '').toUpperCase();
+              const id = String(c.id || '').toLowerCase();
+              const cod = String(c.codigo || '').toLowerCase();
+              const cat = String(c.categoria || '').toLowerCase();
+              const tit = String(c.titulo || '').toLowerCase();
+              return (
+                tipo === 'TALLER' ||
+                cat.includes('taller') ||
+                id.startsWith('tal-') ||
+                cod.startsWith('tal-') ||
+                tit.startsWith('taller de') ||
+                Boolean(c.esRegalo)
+              );
+            };
+
+            const catalogoActivo = propTieneDiplomadosConModulos
+              ? propCatalogoList
+              : catalogoFetched.length > 0
+              ? catalogoFetched
+              : propCatalogoList;
+
             const listDiplomadosExistentes = (
               alumnoSeleccionado.diplomados_lista && alumnoSeleccionado.diplomados_lista.length > 0
                 ? alumnoSeleccionado.diplomados_lista
                 : (alumnoSeleccionado.diplomados_json || []).map((d: any) => d.titulo)
             ) as string[];
 
-            const listCursosExistentes = (
-              (alumnoSeleccionado.cursos_json || []).map((c: any) => c.titulo || c.codigo)
-            ) as string[];
+            const allCursosYTalleresJson = Array.isArray(alumnoSeleccionado.cursos_json)
+              ? alumnoSeleccionado.cursos_json
+              : [];
 
-            const listaDiplomados = listDiplomadosExistentes;
-            const listaCursos = listCursosExistentes;
+            const cursosRealesJson = allCursosYTalleresJson.filter((c: any) => !esTallerItem(c));
+            const talleresJson = allCursosYTalleresJson.filter((c: any) => esTallerItem(c));
 
-            // 22 diplomados oficiales del catálogo
-            const titulosCatalogo22 = (catalogoDiplomados || [])
-              .filter((d: any) => d && (d.tipo === 'diplomado' || String(d.id).startsWith('dip-') || String(d.categoria).includes('Diplomados')))
+            const listCursosExistentes = cursosRealesJson.map((c: any) => c.titulo || c.codigo) as string[];
+            const listTalleresExistentes = talleresJson.map((t: any) => t.titulo || t.codigo) as string[];
+
+            // Catálogo oficial desde Supabase separado por tipo
+            const catalogoDiplomadosOficiales = catalogoActivo.filter(
+              (d: any) => d && (d.tipo === 'diplomado' || String(d.codigo || d.id || '').toUpperCase().startsWith('DIP-'))
+            );
+            const catalogoCursosOficiales = catalogoActivo.filter(
+              (d: any) => d && (d.tipo === 'curso' || String(d.codigo || d.id || '').toUpperCase().startsWith('CUR-'))
+            );
+            const catalogoTalleresOficiales = catalogoActivo.filter(
+              (d: any) => d && (d.tipo === 'taller' || String(d.codigo || d.id || '').toUpperCase().startsWith('TAL-'))
+            );
+
+            const titulosCatalogo22 = catalogoDiplomadosOficiales
               .map((d: any) => (d.titulo || d.nombre || '').trim().toUpperCase())
               .filter(Boolean);
 
@@ -910,11 +992,20 @@ export default function Ficha360Modal({
               "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA"
             ];
 
-            // 76 Cursos oficiales del catálogo
-            const titulosCursos76 = (catalogoDiplomados || [])
-              .filter((d: any) => d && (d.tipo === 'curso' || String(d.id).startsWith('cur-') || String(d.categoria).includes('Cursos')))
-              .map((d: any) => (d.titulo || d.nombre || '').trim().toUpperCase())
-              .filter(Boolean);
+            const opcionesCursos76 = catalogoCursosOficiales.map((d: any, idx: number) => ({
+              codigo: d.codigo || `CUR-${(idx + 1).toString().padStart(2, '0')}`,
+              titulo: (d.titulo || d.nombre || '').trim().toUpperCase()
+            })).filter((c: any) => Boolean(c.titulo));
+
+            const opcionesTalleres = catalogoTalleresOficiales.length > 0
+              ? catalogoTalleresOficiales.map((t: any, idx: number) => ({
+                  codigo: t.codigo || `TAL-${(idx + 1).toString().padStart(2, '0')}`,
+                  titulo: (t.titulo || t.nombre || '').trim().toUpperCase()
+                }))
+              : [
+                  { codigo: 'TAL-01', titulo: 'TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA' },
+                  { codigo: 'TAL-02', titulo: 'TALLER DE SEGURIDAD BASADA EN EL COMPORTAMIENTO' }
+                ];
 
             const handleGuardarDiplomadosSubmit = async (nuevosDips: string[]) => {
               setCargandoDiplomadoAccion(true);
@@ -944,8 +1035,13 @@ export default function Ficha360Modal({
               }
             };
 
-            const handleGuardarCursosSubmit = async (nuevosCursos: string[]) => {
-              setCargandoCursoAccion(true);
+            const handleGuardarCursosYTalleresSubmit = async (
+              itemsActualizados: any[],
+              tipoActualizado: 'cursos' | 'talleres'
+            ) => {
+              if (tipoActualizado === 'cursos') setCargandoCursoAccion(true);
+              else setCargandoTallerAccion(true);
+
               try {
                 const res = await fetch('/api/admin/estudiantes', {
                   method: 'PATCH',
@@ -954,21 +1050,26 @@ export default function Ficha360Modal({
                     action: 'update_cursos',
                     studentId: alumnoSeleccionado.id,
                     dni_ce: alumnoSeleccionado.dni_ce,
-                    cursos: nuevosCursos
+                    cursos: itemsActualizados
                   })
                 });
 
                 if (res.ok) {
-                  alert('Cursos de especialización actualizados en la base de datos.');
+                  alert(
+                    tipoActualizado === 'cursos'
+                      ? 'Cursos de especialización actualizados en la base de datos.'
+                      : 'Talleres actualizados en la base de datos.'
+                  );
                   if (onRefetchEstudiantes) onRefetchEstudiantes();
                 } else {
                   const errData = await res.json();
-                  alert(`Error al actualizar cursos: ${errData.error}`);
+                  alert(`Error al actualizar: ${errData.error}`);
                 }
               } catch (e: any) {
                 alert(`Error de conexión: ${e.message}`);
               } finally {
-                setCargandoCursoAccion(false);
+                if (tipoActualizado === 'cursos') setCargandoCursoAccion(false);
+                else setCargandoTallerAccion(false);
               }
             };
 
@@ -977,7 +1078,7 @@ export default function Ficha360Modal({
                 alert('Por favor selecciona un diplomado de la lista.');
                 return;
               }
-              if (listDiplomadosExistentes.includes(nuevoDiplomadoSeleccionado)) {
+              if (listDiplomadosExistentes.some(d => stripDipPrefix(d) === stripDipPrefix(nuevoDiplomadoSeleccionado))) {
                 alert('El alumno ya tiene asignado este diplomado.');
                 return;
               }
@@ -997,19 +1098,49 @@ export default function Ficha360Modal({
                 alert('Por favor selecciona un curso de la lista.');
                 return;
               }
-              if (listCursosExistentes.includes(nuevoCursoSeleccionado)) {
+              if (listCursosExistentes.some(c => normStr(c) === normStr(nuevoCursoSeleccionado))) {
                 alert('El alumno ya tiene asignado este curso.');
                 return;
               }
-              const actualizados = [...listCursosExistentes, nuevoCursoSeleccionado];
-              handleGuardarCursosSubmit(actualizados);
+              const actualizados = [...cursosRealesJson, { titulo: nuevoCursoSeleccionado, tipo: 'CURSO' }, ...talleresJson];
+              handleGuardarCursosYTalleresSubmit(actualizados, 'cursos');
               setNuevoCursoSeleccionado('');
             };
 
             const handleQuitarCursoExistente = (indexAQuitar: number) => {
               if (!window.confirm('¿Desea desvincular este curso del estudiante?')) return;
-              const actualizados = listCursosExistentes.filter((_, idx) => idx !== indexAQuitar);
-              handleGuardarCursosSubmit(actualizados);
+              const cursosRestantes = cursosRealesJson.filter((_: any, idx: number) => idx !== indexAQuitar);
+              handleGuardarCursosYTalleresSubmit([...cursosRestantes, ...talleresJson], 'cursos');
+            };
+
+            const handleAgregarNuevoTaller = () => {
+              if (!nuevoTallerSeleccionado) {
+                alert('Por favor selecciona un taller de la lista.');
+                return;
+              }
+              if (listTalleresExistentes.some(t => normStr(t) === normStr(nuevoTallerSeleccionado))) {
+                alert('El alumno ya tiene asignado este taller.');
+                return;
+              }
+              const tallerCat = catalogoTalleresOficiales.find((t: any) => normStr(t.titulo) === normStr(nuevoTallerSeleccionado));
+              const actualizados = [
+                ...cursosRealesJson,
+                ...talleresJson,
+                {
+                  titulo: nuevoTallerSeleccionado,
+                  codigo: tallerCat?.codigo,
+                  id: tallerCat?.id,
+                  tipo: 'TALLER'
+                }
+              ];
+              handleGuardarCursosYTalleresSubmit(actualizados, 'talleres');
+              setNuevoTallerSeleccionado('');
+            };
+
+            const handleQuitarTallerExistente = (indexAQuitar: number) => {
+              if (!window.confirm('¿Desea desvincular este taller del estudiante?')) return;
+              const talleresRestantes = talleresJson.filter((_: any, idx: number) => idx !== indexAQuitar);
+              handleGuardarCursosYTalleresSubmit([...cursosRealesJson, ...talleresRestantes], 'talleres');
             };
 
             // Créditos base según el paquete del alumno
@@ -1021,10 +1152,198 @@ export default function Ficha360Modal({
             const totalCurContratados = baseCur + extraCur;
 
             const dipConsumidos = listDiplomadosExistentes.length;
-            const curConsumidos = listCursosExistentes.length;
+            const curConsumidos = cursosRealesJson.length;
 
             const dipDisponibles = Math.max(0, totalDipContratados - dipConsumidos);
             const curDisponibles = Math.max(0, totalCurContratados - curConsumidos);
+
+            const obtenerEstadoExamenConfig = (
+              codigoPrograma: string,
+              tipoPrograma: 'diplomado' | 'curso' | 'taller',
+              moduloCodigo?: string,
+              nombrePrograma?: string
+            ): { aplicaExamen: boolean; notaMinima: number } => {
+              const codNorm = normStr(codigoPrograma);
+              const nomNorm = normStr(nombrePrograma);
+              const modNorm = normStr(moduloCodigo);
+
+              const porPrograma = configsExamenes.filter((cfg: any) => {
+                const cCod = normStr(cfg.codigo_programa);
+                const cNom = normStr(cfg.nombre_programa);
+                return (codNorm && cCod === codNorm) || (nomNorm && cNom === nomNorm);
+              });
+
+              let matchCfg: any = null;
+              if (porPrograma.length > 0) {
+                if (tipoPrograma === 'diplomado' && modNorm) {
+                  matchCfg =
+                    porPrograma.find((cfg: any) => normStr(cfg.modulo) === modNorm) ||
+                    porPrograma.find((cfg: any) => normStr(cfg.id).endsWith(`-${modNorm}`)) ||
+                    null;
+                } else {
+                  matchCfg = porPrograma[0];
+                }
+              }
+
+              if (matchCfg) {
+                return {
+                  aplicaExamen: matchCfg.aplica_examen !== false,
+                  notaMinima: Number(matchCfg.nota_minima ?? 12)
+                };
+              }
+
+              return {
+                aplicaExamen: tipoPrograma !== 'taller',
+                notaMinima: 12
+              };
+            };
+
+            // Renderizador compartido de tarjetas para Cursos y Talleres (con nota, estado y borrar intento)
+            const renderTarjetaProgramaIndividual = (
+              item: any,
+              idx: number,
+              kind: 'curso' | 'taller',
+              onRemove: (idx: number) => void
+            ) => {
+              const catList = kind === 'taller' ? catalogoTalleresOficiales : catalogoCursosOficiales;
+              const catMatch = catList.find((d: any) =>
+                (item.codigo && d.codigo && normStr(d.codigo) === normStr(item.codigo)) ||
+                (item.id && d.id && normStr(d.id) === normStr(item.id)) ||
+                (item.titulo && d.titulo && normStr(d.titulo) === normStr(item.titulo))
+              );
+
+              const titulo = item.titulo || catMatch?.titulo || item.codigo || (kind === 'taller' ? `Taller ${idx + 1}` : `Curso ${idx + 1}`);
+              const codigo = catMatch?.codigo || item.codigo || (kind === 'taller' ? `TAL-0${idx + 1}` : `CUR-0${idx + 1}`);
+              const programaId = catMatch?.id || item.id || codigo.toLowerCase();
+
+              const { aplicaExamen, notaMinima } = obtenerEstadoExamenConfig(codigo, kind, undefined, titulo);
+
+              const haRendido = Boolean(
+                item.rendido ||
+                (item.nota !== undefined && item.nota !== null && Number(item.nota) > 0)
+              );
+              const tieneNota = haRendido && item.nota !== undefined && item.nota !== null;
+              const notaNum = tieneNota ? Number(item.nota) : null;
+              const avanceRaw = Math.min(100, Math.max(0, Number(item.avance) || 0));
+              const estaAprobado = aplicaExamen
+                ? Boolean(item.completado) || (notaNum !== null && notaNum >= notaMinima)
+                : Boolean(item.completado) || avanceRaw >= 100;
+              const avancePct = estaAprobado ? 100 : avanceRaw;
+              const resetKey = `${kind}:${codigo}:${titulo}`;
+              const estaReiniciando = reiniciandoExamenKey === resetKey;
+
+              const esVerde = kind === 'curso';
+
+              return (
+                <div
+                  key={`${codigo}-${idx}`}
+                  className="border border-slate-200 dark:border-slate-800 rounded-2xl p-4 sm:p-5 bg-white dark:bg-slate-900 space-y-3 shadow-sm"
+                >
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
+                    <div className="flex flex-wrap items-center gap-2 min-w-0">
+                      <span
+                        className={`text-white font-bold text-[10px] px-2.5 py-0.5 rounded-full shrink-0 ${
+                          esVerde ? 'bg-emerald-600' : 'bg-amber-600'
+                        }`}
+                      >
+                        {kind === 'taller' ? `Taller ${idx + 1}` : `Curso ${idx + 1}`}
+                      </span>
+                      <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 shrink-0">
+                        {codigo}
+                      </span>
+                      {kind === 'taller' && item.esRegalo && (
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 shrink-0">
+                          Incluido en matrícula
+                        </span>
+                      )}
+                      <h5 className="font-black text-xs sm:text-sm text-slate-900 dark:text-white truncate">
+                        {titulo}
+                      </h5>
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={() => onRemove(idx)}
+                      title={`Desvincular ${kind}`}
+                      className="text-slate-400 hover:text-rose-600 p-1.5 rounded-lg hover:bg-rose-50 dark:hover:bg-rose-950/40 transition self-end sm:self-center shrink-0 cursor-pointer"
+                    >
+                      <Trash2 className="size-3.5" />
+                    </button>
+                  </div>
+
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <div className="flex flex-wrap items-center gap-2">
+                      {/* Estado de culminación */}
+                      <span
+                        className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold border ${
+                          estaAprobado
+                            ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800'
+                            : haRendido || avancePct > 0
+                            ? 'bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800'
+                            : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700'
+                        }`}
+                      >
+                        {estaAprobado ? (
+                          <>
+                            <CheckCircle2 className="size-3.5" /> Finalizado
+                          </>
+                        ) : haRendido || avancePct > 0 ? (
+                          <>
+                            <Clock className="size-3.5" /> En curso ({avancePct}%)
+                          </>
+                        ) : (
+                          'Sin iniciar'
+                        )}
+                      </span>
+
+                      {/* Estado y nota del examen (respetando configuración aplica_examen) */}
+                      {haRendido && notaNum !== null ? (
+                        <span
+                          className={`font-bold px-2.5 py-1 rounded-lg text-[11px] border tabular-nums ${
+                            notaNum >= notaMinima
+                              ? 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800'
+                              : 'bg-rose-100 dark:bg-rose-950/60 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-800'
+                          }`}
+                        >
+                          {notaNum >= notaMinima
+                            ? `Examen aprobado · Nota: ${notaNum.toString().padStart(2, '0')}/20`
+                            : `Examen desaprobado · Nota: ${notaNum.toString().padStart(2, '0')}/20`}
+                        </span>
+                      ) : !aplicaExamen ? (
+                        <span className="bg-slate-100 dark:bg-slate-800/80 text-slate-500 dark:text-slate-400 font-bold px-2.5 py-1 rounded-lg text-[11px] border border-slate-200 dark:border-slate-700">
+                          No aplica examen
+                        </span>
+                      ) : (
+                        <span className="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold px-2.5 py-1 rounded-lg text-[11px] border border-slate-200 dark:border-slate-700">
+                          Examen pendiente
+                        </span>
+                      )}
+                    </div>
+
+                    {haRendido && (
+                      <button
+                        type="button"
+                        disabled={estaReiniciando}
+                        onClick={() =>
+                          handleResetExamen({
+                            key: resetKey,
+                            tipoPrograma: kind,
+                            programaTitulo: titulo,
+                            programaCodigo: codigo,
+                            programaId
+                          })
+                        }
+                        className="bg-rose-600 hover:bg-rose-700 text-white font-bold text-[11px] px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+                        title="Borrar intento de examen para permitir que el alumno vuelva a rendirlo"
+                      >
+                        <RefreshCw className={`w-3.5 h-3.5 ${estaReiniciando ? 'animate-spin' : ''}`} />
+                        <span>{estaReiniciando ? 'Borrando...' : 'Borrar intento'}</span>
+                      </button>
+                    )}
+                  </div>
+                </div>
+              );
+            };
 
             return (
               <div className="space-y-6">
@@ -1197,51 +1516,62 @@ export default function Ficha360Modal({
                   </div>
                 </div>
 
-                {/* SUB-TABS PARA SEPARAR DIPLOMADOS Y CURSOS */}
-                <div className="flex border-b border-slate-200 dark:border-slate-800 gap-2">
+                {/* SUB-TABS PARA SEPARAR DIPLOMADOS, CURSOS Y TALLERES */}
+                <div className="flex border-b border-slate-200 dark:border-slate-800 gap-2 overflow-x-auto no-scrollbar">
                   <button
                     type="button"
                     onClick={() => setFiltroAcademico('todos')}
-                    className={`pb-2.5 px-4 font-bold text-xs transition border-b-2 cursor-pointer ${
+                    className={`pb-2.5 px-4 font-bold text-xs transition border-b-2 cursor-pointer whitespace-nowrap ${
                       filtroAcademico === 'todos'
                         ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400'
                         : 'border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
                     }`}
                   >
-                    Ver todo ({listaDiplomados.length + listaCursos.length})
+                    Ver todo ({listDiplomadosExistentes.length + cursosRealesJson.length + talleresJson.length})
                   </button>
                   <button
                     type="button"
                     onClick={() => setFiltroAcademico('diplomados')}
-                    className={`pb-2.5 px-4 font-bold text-xs transition border-b-2 cursor-pointer ${
+                    className={`pb-2.5 px-4 font-bold text-xs transition border-b-2 cursor-pointer whitespace-nowrap ${
                       filtroAcademico === 'diplomados'
                         ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400'
                         : 'border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
                     }`}
                   >
-                    Diplomados ({listaDiplomados.length})
+                    Diplomados ({listDiplomadosExistentes.length})
                   </button>
                   <button
                     type="button"
                     onClick={() => setFiltroAcademico('cursos')}
-                    className={`pb-2.5 px-4 font-bold text-xs transition border-b-2 cursor-pointer ${
+                    className={`pb-2.5 px-4 font-bold text-xs transition border-b-2 cursor-pointer whitespace-nowrap ${
                       filtroAcademico === 'cursos'
-                        ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400'
+                        ? 'border-emerald-600 text-emerald-600 dark:text-emerald-400'
                         : 'border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
                     }`}
                   >
-                    Cursos y talleres ({listaCursos.length})
+                    Cursos ({cursosRealesJson.length})
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setFiltroAcademico('talleres')}
+                    className={`pb-2.5 px-4 font-bold text-xs transition border-b-2 cursor-pointer whitespace-nowrap ${
+                      filtroAcademico === 'talleres'
+                        ? 'border-amber-600 text-amber-600 dark:text-amber-400'
+                        : 'border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
+                    }`}
+                  >
+                    Talleres ({talleresJson.length})
                   </button>
                 </div>
 
-                {/* BLOQUE DIPLOMADOS: ASIGNADOR Y LISTADO DETALLADO */}
+                {/* BLOQUE DIPLOMADOS: ASIGNADOR Y AVANCE POR MÓDULOS */}
                 {(filtroAcademico === 'todos' || filtroAcademico === 'diplomados') && (
                   <div className="space-y-4">
                     <div className="bg-slate-50 dark:bg-slate-800/40 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-800 pb-3">
                         <div>
                           <span className="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest block">
-                            Catálogo oficial de 22 diplomados
+                            Catálogo oficial de diplomados
                           </span>
                           <h4 className="text-base font-black text-slate-900 dark:text-white">
                             Asignar diplomado a {alumnoSeleccionado.nombres}
@@ -1260,8 +1590,14 @@ export default function Ficha360Modal({
                         >
                           <option value="">Seleccionar diplomado del catálogo</option>
                           {titulosOficiales22.map((t, idx) => (
-                            <option key={idx} value={t} disabled={listDiplomadosExistentes.includes(t)}>
-                              {listDiplomadosExistentes.includes(t) ? `${t} (Ya asignado)` : `[DIP-${(idx + 1).toString().padStart(2, '0')}] ${t}`}
+                            <option
+                              key={idx}
+                              value={t}
+                              disabled={listDiplomadosExistentes.some(d => stripDipPrefix(d) === stripDipPrefix(t))}
+                            >
+                              {listDiplomadosExistentes.some(d => stripDipPrefix(d) === stripDipPrefix(t))
+                                ? `${t} (Ya asignado)`
+                                : `[DIP-${(idx + 1).toString().padStart(2, '0')}] ${t}`}
                             </option>
                           ))}
                         </select>
@@ -1278,167 +1614,262 @@ export default function Ficha360Modal({
                       </div>
 
                       {/* Chips de diplomados vinculados con botón de quitar */}
-                      <div className="flex flex-wrap gap-2 pt-1">
-                        {listDiplomadosExistentes.map((dipName, dIdx) => (
-                          <div key={dIdx} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-1.5 flex items-center gap-2 text-xs font-semibold text-slate-800 dark:text-slate-200 shadow-2xs">
-                            <span className="text-[10px] bg-indigo-600 text-white px-1.5 py-0.5 rounded font-bold">Diplomado {dIdx + 1}</span>
-                            <span>{dipName}</span>
-                            <button
-                              type="button"
-                              onClick={() => handleQuitarDiplomadoExistente(dIdx)}
-                              title="Desvincular diplomado"
-                              className="text-slate-400 hover:text-red-500 p-0.5 rounded hover:bg-slate-100 dark:hover:bg-slate-800 transition"
-                            >
-                              <X className="size-3.5" />
-                            </button>
-                          </div>
-                        ))}
-                      </div>
+                      {listDiplomadosExistentes.length > 0 && (
+                        <div className="flex flex-wrap gap-2 pt-1">
+                          {listDiplomadosExistentes.map((dipName, dIdx) => (
+                            <div key={dIdx} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-1.5 flex items-center gap-2 text-xs font-semibold text-slate-800 dark:text-slate-200 shadow-2xs">
+                              <span className="text-[10px] bg-indigo-600 text-white px-1.5 py-0.5 rounded font-bold">Diplomado {dIdx + 1}</span>
+                              <span>{dipName}</span>
+                              <button
+                                type="button"
+                                onClick={() => handleQuitarDiplomadoExistente(dIdx)}
+                                title="Desvincular diplomado"
+                                className="text-slate-400 hover:text-red-500 p-0.5 rounded hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
+                              >
+                                <X className="size-3.5" />
+                              </button>
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
 
-                    {/* Módulos y avance de cada diplomado */}
+                    {/* Módulos y avance por módulo de cada diplomado (nombres oficiales de Supabase) */}
                     <div className="space-y-4">
-                      {listaDiplomados.map((nombreDipStr, dipIdx) => {
-                        const nombreAlumnoDip = nombreDipStr.toLowerCase().trim();
-                        const dipObj = (catalogoDiplomados || []).find((d: any) => 
-                          d && typeof d.nombre === 'string' && d.nombre.toLowerCase().trim() === nombreAlumnoDip
-                        ) || (catalogoDiplomados || [])[dipIdx % (catalogoDiplomados.length || 1)];
+                      {listDiplomadosExistentes.length === 0 ? (
+                        <div className="bg-slate-50 dark:bg-slate-800/20 border border-dashed border-slate-200 dark:border-slate-800 rounded-2xl p-6 text-center text-xs text-slate-500">
+                          El estudiante no tiene diplomados asignados actualmente.
+                        </div>
+                      ) : (
+                        listDiplomadosExistentes.map((nombreDipStr, dipIdx) => {
+                          const userDipInfo = (alumnoSeleccionado.diplomados_json || []).find(
+                            (d: any) =>
+                              stripDipPrefix(d.titulo) === stripDipPrefix(nombreDipStr) ||
+                              stripDipPrefix(d.slug) === stripDipPrefix(nombreDipStr)
+                          );
 
-                        const userDipInfo = (alumnoSeleccionado.diplomados_json || []).find((d: any) => d.titulo === nombreDipStr);
-                        const avanceDip = userDipInfo?.avance ?? 0;
+                          // Emparejar contra catálogo oficial de Supabase (usando titulo, codigo o slug sin prefijo)
+                          const dipObj = catalogoDiplomadosOficiales.find((d: any) => {
+                            const catTitle = d.titulo || d.nombre || '';
+                            return (
+                              (userDipInfo?.codigo && d.codigo && normStr(d.codigo) === normStr(userDipInfo.codigo)) ||
+                              normStr(catTitle) === normStr(nombreDipStr) ||
+                              stripDipPrefix(catTitle) === stripDipPrefix(nombreDipStr)
+                            );
+                          });
 
-                        const modulosArray = (dipObj && dipObj.modulos && dipObj.modulos.length > 0) ? dipObj.modulos : [
-                          { titulo: 'Módulo 01: Fundamentos y Marco Teórico', clases: [{ titulo: 'Clase 01: Introducción General', duracion: '45 min' }, { titulo: 'Clase 02: Normativa Legal', duracion: '50 min' }] },
-                          { titulo: 'Módulo 02: Gestión Operativa y Control', clases: [{ titulo: 'Clase 03: Herramientas Operativas', duracion: '60 min' }, { titulo: 'Clase 04: Control de Riesgos', duracion: '55 min' }] },
-                          { titulo: 'Módulo 03: Proyectos Avanzados', clases: [{ titulo: 'Clase 05: Casos Prácticos', duracion: '90 min' }] }
-                        ];
+                          // Usar los módulos oficiales desde Supabase (`lecciones` vía /api/admin/catalogo)
+                          const modulosArray =
+                            dipObj && Array.isArray(dipObj.modulos) && dipObj.modulos.length > 0
+                              ? dipObj.modulos
+                              : Array.isArray(userDipInfo?.modulos)
+                              ? userDipInfo.modulos
+                              : [];
 
-                        let claseContador = 1;
+                          const modulosAprobadosCount = modulosArray.filter((m: any, mIdx: number) => {
+                            const modCodigoKey = m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
+                            const { aplicaExamen, notaMinima } = obtenerEstadoExamenConfig(
+                              dipObj?.codigo || userDipInfo?.codigo || '',
+                              'diplomado',
+                              modCodigoKey,
+                              nombreDipStr
+                            );
+                            const userModInfo =
+                              (userDipInfo?.modulos || []).find(
+                                (um: any) =>
+                                  normStr(um.codigo) === normStr(modCodigoKey) ||
+                                  normStr(um.id) === normStr(modCodigoKey) ||
+                                  (um.nombre && m.nombre && normStr(um.nombre) === normStr(m.nombre))
+                              ) || userDipInfo?.modulos?.[mIdx];
+                            const nota = userModInfo?.nota !== undefined && userModInfo?.nota !== null ? Number(userModInfo.nota) : null;
+                            return aplicaExamen
+                              ? Boolean(userModInfo?.completado) || (nota !== null && nota >= notaMinima)
+                              : Boolean(userModInfo?.completado) || Boolean((userDipInfo?.completadosMap || {})[modCodigoKey]);
+                          }).length;
 
-                        return (
-                          <div key={dipIdx} className="border border-slate-200 dark:border-slate-800 rounded-2xl p-5 bg-white dark:bg-slate-900 space-y-4 shadow-sm">
-                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
-                              <div className="flex items-center gap-2">
-                                <span className="bg-indigo-600 text-white font-bold text-[10px] px-2.5 py-0.5 rounded-full shrink-0">
-                                  Diplomado {dipIdx + 1}
+                          const avanceDip =
+                            modulosArray.length > 0
+                              ? Math.round((modulosAprobadosCount / modulosArray.length) * 100)
+                              : (userDipInfo?.avance ?? 0);
+
+                          return (
+                            <div key={dipIdx} className="border border-slate-200 dark:border-slate-800 rounded-2xl p-5 bg-white dark:bg-slate-900 space-y-4 shadow-sm">
+                              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
+                                <div className="flex items-center gap-2 min-w-0">
+                                  <span className="bg-indigo-600 text-white font-bold text-[10px] px-2.5 py-0.5 rounded-full shrink-0">
+                                    Diplomado {dipIdx + 1}
+                                  </span>
+                                  <h5 className="font-black text-sm text-slate-900 dark:text-white truncate">{nombreDipStr}</h5>
+                                </div>
+                                <span className="text-[11px] tabular-nums font-bold text-slate-500 dark:text-slate-400 shrink-0">
+                                  {dipObj?.codigo || userDipInfo?.codigo || `DIP-0${dipIdx + 1}`} · {modulosAprobadosCount}/{modulosArray.length} módulos aprobados
                                 </span>
-                                <h5 className="font-black text-sm text-slate-900 dark:text-white">{nombreDipStr}</h5>
                               </div>
-                              <span className="text-[10px] tabular-nums text-slate-400">
-                                Código: {dipObj?.codigo || `DIP-0${dipIdx + 1}`} | Módulos: {modulosArray.length}
-                              </span>
-                            </div>
 
-                            {/* Barra de progreso visual */}
-                            <div className="space-y-1">
-                              <div className="flex justify-between text-[10px] font-bold text-slate-500 dark:text-slate-400">
-                                <span>Progreso académico del diplomado</span>
-                                <span className="text-indigo-600 dark:text-indigo-400 tabular-nums">{avanceDip}% completado</span>
+                              {/* Barra de progreso visual del diplomado */}
+                              <div className="space-y-1">
+                                <div className="flex justify-between text-[10px] font-bold text-slate-500 dark:text-slate-400">
+                                  <span>Avance general del diplomado</span>
+                                  <span className="text-indigo-600 dark:text-indigo-400 tabular-nums">{avanceDip}% completado</span>
+                                </div>
+                                <div className="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                                  <div className="h-full bg-indigo-600 rounded-full transition-all" style={{ width: `${avanceDip}%` }}></div>
+                                </div>
                               </div>
-                              <div className="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
-                                <div className="h-full bg-indigo-600 rounded-full transition-all" style={{ width: `${avanceDip}%` }}></div>
-                              </div>
-                            </div>
 
-                            <div className="space-y-3">
-                              {modulosArray.map((m: any, mIdx: number) => {
-                                const modTitle = m.titulo || m.nombre || `Módulo 0${mIdx + 1}`;
-                                const modCodigoKey = m.codigo || `Módulo 0${mIdx + 1}`;
-
-                                const userModInfo = (userDipInfo?.modulos || []).find((um: any) =>
-                                  um.codigo === modCodigoKey ||
-                                  um.id === modCodigoKey ||
-                                  (um.nombre && m.titulo && um.nombre.toLowerCase().includes(m.titulo.toLowerCase()))
-                                ) || userDipInfo?.modulos?.[mIdx];
-
-                                const tieneNota = userModInfo?.nota !== undefined && userModInfo?.nota !== null;
-                                const notaNum = tieneNota ? Number(userModInfo.nota) : null;
-                                const estaAprobado = userModInfo?.completado || (notaNum !== null && notaNum >= 12);
-                                const haRendido = Boolean(userModInfo?.rendido || tieneNota);
-                                const estaReiniciando = reiniciandoExamenModulo === modCodigoKey;
-
-                                const clases = m.clases || [];
-                                return (
-                                  <div key={mIdx} className="bg-slate-50 dark:bg-slate-800/40 rounded-xl p-3.5 border border-slate-200 dark:border-slate-800 space-y-2">
-                                    <div className="flex flex-wrap justify-between items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-2">
-                                      <span className="font-bold text-xs text-slate-800 dark:text-slate-200">{modTitle}</span>
-                                      
-                                      <div className="flex items-center gap-2">
-                                        {haRendido && notaNum !== null ? (
-                                          <span className={`font-bold px-2 py-0.5 rounded text-[10px] border ${
-                                            estaAprobado
-                                              ? 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800'
-                                              : 'bg-rose-100 dark:bg-rose-950/60 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-800'
-                                          }`}>
-                                            {estaAprobado ? `Aprobado (Nota: ${notaNum.toString().padStart(2, '0')}/20)` : `Desaprobado (Nota: ${notaNum.toString().padStart(2, '0')}/20)`}
-                                          </span>
-                                        ) : (
-                                          <span className="bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold px-2 py-0.5 rounded text-[10px]">
-                                            Pendiente de examen
-                                          </span>
-                                        )}
-
-                                        {haRendido && (
-                                          <button
-                                            type="button"
-                                            disabled={estaReiniciando}
-                                            onClick={() => handleResetExamenModulo(nombreDipStr, modCodigoKey)}
-                                            className="bg-rose-600 hover:bg-rose-700 text-white font-bold text-[10px] px-2.5 py-1 rounded-md transition-colors flex items-center gap-1 cursor-pointer disabled:opacity-50"
-                                            title="Borrar intento de examen para permitir que el alumno rinda su examen sustitutorio (S/ 25)"
-                                          >
-                                            <RefreshCw className={`w-3 h-3 ${estaReiniciando ? 'animate-spin' : ''}`} />
-                                            <span>{estaReiniciando ? 'Reiniciando...' : 'Borrar intento / Sustitutorio (S/ 25)'}</span>
-                                          </button>
-                                        )}
-                                      </div>
-                                    </div>
-
-                                    <div className="space-y-1 pl-1">
-                                      {clases.length > 0 ? (
-                                        clases.map((c: any, cIdx: number) => {
-                                          const currentClaseNum = claseContador++;
-                                          const rawTitle = typeof c === 'string' ? c : (c.titulo || `Clase ${currentClaseNum.toString().padStart(2, '0')}`);
-                                          const tituloFinal = rawTitle.includes('Clase') ? rawTitle : `Clase ${currentClaseNum.toString().padStart(2, '0')}: ${rawTitle}`;
-                                          return (
-                                            <div key={cIdx} className="text-xs text-slate-600 dark:text-slate-300 flex items-center justify-between bg-white dark:bg-slate-900 p-2 rounded-lg border border-slate-100 dark:border-slate-800 font-medium">
-                                              <span className="flex items-center gap-2">
-                                                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-                                                {tituloFinal}
-                                              </span>
-                                              <span className="text-[10px] text-slate-400 tabular-nums">{c.duracion || '45 min'}</span>
-                                            </div>
-                                          );
-                                        })
-                                      ) : (
-                                        <div className="text-[11px] text-slate-400 italic">Clases programadas según temario oficial.</div>
-                                      )}
-                                    </div>
+                              {/* Estado por cada módulo (sin desglose de temas/clases) */}
+                              <div className="space-y-2.5">
+                                {modulosArray.length === 0 ? (
+                                  <div className="text-xs text-slate-400 italic p-3 bg-slate-50 dark:bg-slate-800/30 rounded-xl">
+                                    No se encontraron módulos registrados para este diplomado en el catálogo oficial.
                                   </div>
-                                );
-                              })}
+                                ) : (
+                                  modulosArray.map((m: any, mIdx: number) => {
+                                    const modCodigoKey = m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
+                                    const nombreOficialModulo = (m.nombre || m.titulo || '').trim();
+                                    const modTitle =
+                                      nombreOficialModulo && !/^m[oó]dulo\s*\d+/i.test(nombreOficialModulo)
+                                        ? `${modCodigoKey}: ${nombreOficialModulo}`
+                                        : (nombreOficialModulo || modCodigoKey);
+
+                                    const userModInfo =
+                                      (userDipInfo?.modulos || []).find(
+                                        (um: any) =>
+                                          normStr(um.codigo) === normStr(modCodigoKey) ||
+                                          normStr(um.id) === normStr(modCodigoKey) ||
+                                          (um.nombre && nombreOficialModulo && normStr(um.nombre) === normStr(nombreOficialModulo))
+                                      ) || userDipInfo?.modulos?.[mIdx];
+
+                                    const { aplicaExamen, notaMinima } = obtenerEstadoExamenConfig(
+                                      dipObj?.codigo || userDipInfo?.codigo || '',
+                                      'diplomado',
+                                      modCodigoKey,
+                                      nombreDipStr
+                                    );
+
+                                    const haRendido = Boolean(
+                                      userModInfo?.rendido ||
+                                      (userModInfo?.nota !== undefined && userModInfo?.nota !== null && Number(userModInfo.nota) > 0)
+                                    );
+                                    const tieneNota = haRendido && userModInfo?.nota !== undefined && userModInfo?.nota !== null;
+                                    const notaNum = tieneNota ? Number(userModInfo.nota) : null;
+                                    const estaAprobado = aplicaExamen
+                                      ? Boolean(userModInfo?.completado) || (notaNum !== null && notaNum >= notaMinima)
+                                      : Boolean(userModInfo?.completado) || Boolean((userDipInfo?.completadosMap || {})[modCodigoKey]);
+                                    const enProgreso = !estaAprobado && (haRendido || Boolean((userDipInfo?.completadosMap || {})[modCodigoKey]));
+
+                                    const resetKey = `dip:${dipObj?.codigo || nombreDipStr}:${modCodigoKey}`;
+                                    const estaReiniciando = reiniciandoExamenKey === resetKey;
+
+                                    return (
+                                      <div
+                                        key={mIdx}
+                                        className="bg-slate-50 dark:bg-slate-800/40 rounded-xl p-3.5 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+                                      >
+                                        <div className="min-w-0 space-y-0.5">
+                                          <div className="flex items-center gap-2">
+                                            {estaAprobado ? (
+                                              <CheckCircle2 className="size-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                                            ) : haRendido ? (
+                                              <AlertTriangle className="size-4 text-rose-500 shrink-0" />
+                                            ) : (
+                                              <Clock className="size-4 text-slate-400 shrink-0" />
+                                            )}
+                                            <span className="font-bold text-xs text-slate-900 dark:text-white">
+                                              {modTitle}
+                                            </span>
+                                          </div>
+                                          {m.docente && (
+                                            <p className="text-[11px] text-slate-500 dark:text-slate-400 pl-6">
+                                              Docente: {m.docente}
+                                            </p>
+                                          )}
+                                        </div>
+
+                                        <div className="flex flex-wrap items-center gap-2 pl-6 sm:pl-0 shrink-0">
+                                          <span
+                                            className={`px-2 py-0.5 rounded-md text-[10px] font-bold border ${
+                                              estaAprobado
+                                                ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800'
+                                                : enProgreso
+                                                ? 'bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800'
+                                                : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700'
+                                            }`}
+                                          >
+                                            {estaAprobado ? 'Módulo terminado' : enProgreso ? 'En curso' : 'Pendiente'}
+                                          </span>
+
+                                          {haRendido && notaNum !== null ? (
+                                            <span
+                                              className={`font-bold px-2.5 py-0.5 rounded-md text-[10px] border tabular-nums ${
+                                                notaNum >= notaMinima
+                                                  ? 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800'
+                                                  : 'bg-rose-100 dark:bg-rose-950/60 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-800'
+                                              }`}
+                                            >
+                                              {notaNum >= notaMinima
+                                                ? `Aprobado · Nota: ${notaNum.toString().padStart(2, '0')}/20`
+                                                : `Desaprobado · Nota: ${notaNum.toString().padStart(2, '0')}/20`}
+                                            </span>
+                                          ) : !aplicaExamen ? (
+                                            <span className="bg-slate-100 dark:bg-slate-800/80 text-slate-500 dark:text-slate-400 font-bold px-2 py-0.5 rounded-md text-[10px] border border-slate-200 dark:border-slate-700">
+                                              No aplica examen
+                                            </span>
+                                          ) : (
+                                            <span className="bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold px-2 py-0.5 rounded-md text-[10px]">
+                                              Examen pendiente
+                                            </span>
+                                          )}
+
+                                          {haRendido && (
+                                            <button
+                                              type="button"
+                                              disabled={estaReiniciando}
+                                              onClick={() =>
+                                                handleResetExamen({
+                                                  key: resetKey,
+                                                  tipoPrograma: 'diplomado',
+                                                  programaTitulo: nombreDipStr,
+                                                  programaCodigo: dipObj?.codigo || userDipInfo?.codigo,
+                                                  moduloCodigo: modCodigoKey
+                                                })
+                                              }
+                                              className="bg-rose-600 hover:bg-rose-700 text-white font-bold text-[10px] px-2.5 py-1 rounded-md transition-colors flex items-center gap-1 cursor-pointer disabled:opacity-50"
+                                              title="Borrar intento de examen para permitir que el alumno rinda su examen sustitutorio"
+                                            >
+                                              <RefreshCw className={`w-3 h-3 ${estaReiniciando ? 'animate-spin' : ''}`} />
+                                              <span>{estaReiniciando ? 'Borrando...' : 'Borrar intento'}</span>
+                                            </button>
+                                          )}
+                                        </div>
+                                      </div>
+                                    );
+                                  })
+                                )}
+                              </div>
                             </div>
-                          </div>
-                        );
-                      })}
+                          );
+                        })
+                      )}
                     </div>
                   </div>
                 )}
 
-                {/* BLOQUE CURSOS: ASIGNADOR Y LISTADO DETALLADO */}
+                {/* BLOQUE CURSOS: ASIGNADOR Y AVANCE/EXÁMENES DE CURSOS */}
                 {(filtroAcademico === 'todos' || filtroAcademico === 'cursos') && (
                   <div className="space-y-4">
                     <div className="bg-slate-50 dark:bg-slate-800/40 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-800 pb-3">
                         <div>
                           <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block">
-                            Catálogo oficial de 76 cursos especializados
+                            Catálogo oficial de cursos especializados
                           </span>
                           <h4 className="text-base font-black text-slate-900 dark:text-white">
-                            Asignar cursos a {alumnoSeleccionado.nombres}
+                            Cursos de {alumnoSeleccionado.nombres}
                           </h4>
                         </div>
                         <span className="text-xs bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full border border-emerald-500/20 font-bold shrink-0">
-                          {listCursosExistentes.length} curso(s) inscritos
+                          {cursosRealesJson.length} curso(s) inscritos
                         </span>
                       </div>
 
@@ -1449,9 +1880,15 @@ export default function Ficha360Modal({
                           className="flex-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-xs font-bold rounded-xl p-3 outline-none focus:border-emerald-500 transition-colors w-full"
                         >
                           <option value="">Seleccionar curso de especialización</option>
-                          {titulosCursos76.map((t, idx) => (
-                            <option key={idx} value={t} disabled={listCursosExistentes.includes(t)}>
-                              {listCursosExistentes.includes(t) ? `${t} (Ya asignado)` : `[CUR-${(idx + 1).toString().padStart(2, '0')}] ${t}`}
+                          {opcionesCursos76.map((c: any, idx: number) => (
+                            <option
+                              key={idx}
+                              value={c.titulo}
+                              disabled={listCursosExistentes.some(lc => normStr(lc) === normStr(c.titulo))}
+                            >
+                              {listCursosExistentes.some(lc => normStr(lc) === normStr(c.titulo))
+                                ? `${c.titulo} (Ya asignado)`
+                                : `[${c.codigo}] ${c.titulo}`}
                             </option>
                           ))}
                         </select>
@@ -1466,25 +1903,83 @@ export default function Ficha360Modal({
                           <span>{cargandoCursoAccion ? 'Guardando...' : 'Añadir curso'}</span>
                         </button>
                       </div>
+                    </div>
 
-                      {/* Chips de cursos matriculados con opción de desvincular */}
-                      <div className="flex flex-wrap gap-2 pt-1">
-                        {listCursosExistentes.map((curName, cIdx) => (
-                          <div key={cIdx} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-1.5 flex items-center gap-2 text-xs font-semibold text-slate-800 dark:text-slate-200 shadow-2xs">
-                            <span className="text-[10px] bg-emerald-600 text-white px-1.5 py-0.5 rounded font-bold">Curso {cIdx + 1}</span>
-                            <span>{curName}</span>
-                            <button
-                              type="button"
-                              onClick={() => handleQuitarCursoExistente(cIdx)}
-                              title="Desvincular curso"
-                              className="text-slate-400 hover:text-red-500 p-0.5 rounded hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+                    {cursosRealesJson.length === 0 ? (
+                      <div className="bg-slate-50 dark:bg-slate-800/20 border border-dashed border-slate-200 dark:border-slate-800 rounded-2xl p-6 text-center text-xs text-slate-500">
+                        El estudiante no tiene cursos de especialización inscritos actualmente.
+                      </div>
+                    ) : (
+                      <div className="space-y-3">
+                        {cursosRealesJson.map((cursoItem: any, cIdx: number) =>
+                          renderTarjetaProgramaIndividual(cursoItem, cIdx, 'curso', handleQuitarCursoExistente)
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* BLOQUE TALLERES: SEPARADO DE CURSOS, CON NOTA Y BORRAR INTENTO */}
+                {(filtroAcademico === 'todos' || filtroAcademico === 'talleres') && (
+                  <div className="space-y-4">
+                    <div className="bg-slate-50 dark:bg-slate-800/40 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-800 pb-3">
+                        <div>
+                          <span className="text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest block">
+                            Catálogo oficial de talleres prácticos
+                          </span>
+                          <h4 className="text-base font-black text-slate-900 dark:text-white">
+                            Talleres de {alumnoSeleccionado.nombres}
+                          </h4>
+                        </div>
+                        <span className="text-xs bg-amber-500/10 text-amber-700 dark:text-amber-400 px-3 py-1 rounded-full border border-amber-500/20 font-bold shrink-0">
+                          {talleresJson.length} taller(es) asignados
+                        </span>
+                      </div>
+
+                      <div className="flex flex-col sm:flex-row gap-3 items-center">
+                        <select
+                          value={nuevoTallerSeleccionado}
+                          onChange={(e) => setNuevoTallerSeleccionado(e.target.value)}
+                          className="flex-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-xs font-bold rounded-xl p-3 outline-none focus:border-amber-500 transition-colors w-full"
+                        >
+                          <option value="">Seleccionar taller oficial</option>
+                          {opcionesTalleres.map((t: any, idx: number) => (
+                            <option
+                              key={idx}
+                              value={t.titulo}
+                              disabled={listTalleresExistentes.some(lt => normStr(lt) === normStr(t.titulo))}
                             >
-                              <X className="size-3.5" />
-                            </button>
-                          </div>
-                        ))}
+                              {listTalleresExistentes.some(lt => normStr(lt) === normStr(t.titulo))
+                                ? `${t.titulo} (Ya asignado)`
+                                : `[${t.codigo}] ${t.titulo}`}
+                            </option>
+                          ))}
+                        </select>
+
+                        <button
+                          type="button"
+                          disabled={cargandoTallerAccion || !nuevoTallerSeleccionado}
+                          onClick={handleAgregarNuevoTaller}
+                          className="bg-amber-600 hover:bg-amber-500 disabled:opacity-50 text-white px-5 py-3 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto shrink-0 shadow-sm"
+                        >
+                          <Plus className="size-4" />
+                          <span>{cargandoTallerAccion ? 'Guardando...' : 'Añadir taller'}</span>
+                        </button>
                       </div>
                     </div>
+
+                    {talleresJson.length === 0 ? (
+                      <div className="bg-slate-50 dark:bg-slate-800/20 border border-dashed border-slate-200 dark:border-slate-800 rounded-2xl p-6 text-center text-xs text-slate-500">
+                        El estudiante no tiene talleres asignados actualmente.
+                      </div>
+                    ) : (
+                      <div className="space-y-3">
+                        {talleresJson.map((tallerItem: any, tIdx: number) =>
+                          renderTarjetaProgramaIndividual(tallerItem, tIdx, 'taller', handleQuitarTallerExistente)
+                        )}
+                      </div>
+                    )}
                   </div>
                 )}
 

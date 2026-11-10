@@ -158,49 +158,6 @@ export async function guardarConfiguracionExamen(config: ConfiguracionExamenItem
   };
 
   const guardadoLocal = guardarConfigsLocales(dict);
-
-  // Intentar sincronizar en segundo plano con Supabase diplomados_y_cursos si existe
-  try {
-    const sb = getSupabaseAdmin();
-    if (sb) {
-      const { data: cursoRow } = await sb
-        .from('diplomados_y_cursos')
-        .select('id, modulos')
-        .eq('codigo', config.codigo_programa)
-        .maybeSingle();
-
-      if (cursoRow && Array.isArray(cursoRow.modulos)) {
-        const modulosActualizados = cursoRow.modulos.map((m: any) => {
-          const modName = (m.codigo || m.nombre || '').toLowerCase().replace(/ó/g, 'o');
-          const targetMod = config.modulo.toLowerCase().replace(/ó/g, 'o');
-          if (modName.includes(targetMod) || targetMod.includes(modName)) {
-            return {
-              ...m,
-              examen_config: {
-                aplica_examen: config.aplica_examen,
-                tiempo_minutos: config.tiempo_minutos,
-                cantidad_preguntas: config.cantidad_preguntas,
-                preguntas_facil: config.preguntas_facil,
-                preguntas_medio: config.preguntas_medio,
-                preguntas_dificil: config.preguntas_dificil,
-                nota_minima: config.nota_minima,
-                intentos_permitidos: config.intentos_permitidos
-              }
-            };
-          }
-          return m;
-        });
-
-        await sb
-          .from('diplomados_y_cursos')
-          .update({ modulos: modulosActualizados })
-          .eq('codigo', config.codigo_programa);
-      }
-    }
-  } catch (err) {
-    console.warn('Sincronización opcional de examen_config en Supabase diplomados_y_cursos omitida:', err);
-  }
-
   return guardadoLocal;
 }
 

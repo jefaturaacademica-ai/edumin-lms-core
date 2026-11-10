@@ -60,7 +60,8 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
           const ape = profile.apellidos || '';
           const userDni = profile.dni_ce || profile.dni || '';
           const paq = profile.paquete_adquirido || 'PROGRAMA FULL';
-          const rol = profile.role || 'ESTUDIANTE';
+          const rolesObj = profile.roles && typeof profile.roles === 'object' ? profile.roles : null;
+          const rol = rolesObj?.administrativo || rolesObj?.academico || profile.role || 'ESTUDIANTE';
           const foto = profile.foto_perfil || null;
 
           setNombres(nom);

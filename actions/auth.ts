@@ -40,7 +40,7 @@ export async function loginWithDni(
   const admin = createAdminClient();
   const { data: profile, error: profileError } = await admin
     .from("profiles")
-    .select("id, email, dni_ce, contrasena, role, bloqueado, nombres, apellidos, paquete_adquirido, diplomados, cursos")
+    .select("id, email, dni_ce, contrasena, roles, bloqueado, nombres, apellidos, paquete_adquirido, diplomados, cursos")
     .eq("dni_ce", dni)
     .maybeSingle();
 
@@ -63,48 +63,45 @@ export async function loginWithDni(
 
   // Sincronizar o asegurar la existencia del usuario en auth.users de Supabase
   const userEmail = profile.email || `${profile.dni_ce}@edumin.pe`;
-  const { data: authUserData, error: getUserError } = await admin.auth.admin.getUserById(profile.id);
 
-  if (getUserError || !authUserData?.user) {
-    // Si no existe el usuario en auth.users con profile.id, lo creamos
-    const { error: createError } = await admin.auth.admin.createUser({
-      id: profile.id,
-      email: userEmail,
-      password: password,
-      email_confirm: true,
-      user_metadata: { dni_ce: profile.dni_ce },
-    });
-
-    if (createError) {
-      console.error("Error al crear usuario en Supabase Auth:", createError.message);
-    }
-  } else {
-    // Si ya existe el usuario en auth.users, actualizamos su contraseña al password ingresado
-    const { error: updateError } = await admin.auth.admin.updateUserById(profile.id, {
-      password: password,
-      email: userEmail,
-      email_confirm: true,
-    });
-
-    if (updateError) {
-      console.error("Error al actualizar contraseña en Supabase Auth:", updateError.message);
-    }
-  }
-
-  // Iniciar sesión con Supabase Auth nativo para escribir las cookies de sesión (HTTP-only)
+  // 1. Intentar iniciar sesión directamente con Supabase Auth primero.
+  // Evitamos invocar updateUserById indiscriminadamente porque actualizar la clave
+  // invalida automáticamente todos los tokens y sesiones activas en otros navegadores/dispositivos.
   const supabase = await createClient();
   let { error: signInError } = await supabase.auth.signInWithPassword({
     email: userEmail,
     password: password,
   });
 
+  // 2. Solo si falla el inicio de sesión directo, verificamos o sincronizamos auth.users
   if (signInError) {
-    // Reintentar sincronización de contraseña en auth.users
-    await admin.auth.admin.updateUserById(profile.id, {
-      password: password,
-      email: userEmail,
-      email_confirm: true,
-    });
+    const { data: authUserData, error: getUserError } = await admin.auth.admin.getUserById(profile.id);
+
+    if (getUserError || !authUserData?.user) {
+      // Si no existe el usuario en auth.users con profile.id, lo creamos
+      const { error: createError } = await admin.auth.admin.createUser({
+        id: profile.id,
+        email: userEmail,
+        password: password,
+        email_confirm: true,
+        user_metadata: { dni_ce: profile.dni_ce },
+      });
+
+      if (createError) {
+        console.error("Error al crear usuario en Supabase Auth:", createError.message);
+      }
+    } else {
+      // Si ya existe pero la contraseña no coincidía en auth.users, la actualizamos
+      const { error: updateError } = await admin.auth.admin.updateUserById(profile.id, {
+        password: password,
+        email: userEmail,
+        email_confirm: true,
+      });
+
+      if (updateError) {
+        console.error("Error al sincronizar contraseña en Supabase Auth:", updateError.message);
+      }
+    }
 
     const retryRes = await supabase.auth.signInWithPassword({
       email: userEmail,
@@ -117,19 +114,13 @@ export async function loginWithDni(
     }
   }
 
-  // Detección de roles del usuario:
-  // Un usuario puede tener:
-  // 1 Rol Administrativo (SUPERADMIN, ADMIN, FINANCIERO)
-  // 1 Rol Académico (ESTUDIANTE, DOCENTE)
-  const esAdmin = profile.role === "ADMIN" || profile.role === "SUPERADMIN";
-  const esDocente = profile.role === "DOCENTE";
+  // Detección de roles del usuario desde `profiles.roles` (dual: administrativo + académico):
+  const rolesObj = profile.roles && typeof profile.roles === "object" ? (profile.roles as any) : null;
+  const esAdmin = Boolean(rolesObj?.administrativo);
+  const esDocente = rolesObj?.academico === "DOCENTE";
 
   if (esAdmin) {
-    const tienePerfilEstudiante = Boolean(
-      profile.paquete_adquirido || 
-      (profile.diplomados && profile.diplomados !== '[]' && profile.diplomados !== '') || 
-      (profile.cursos && profile.cursos !== '[]' && profile.cursos !== '')
-    );
+    const tienePerfilEstudiante = rolesObj?.academico === "ESTUDIANTE";
 
     // Solo si tiene acceso dual (Administrador + Estudiante con matrícula) le sale el selector
     if (tienePerfilEstudiante) {

@@ -1,8 +1,33 @@
 import { NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase/admin';
-import { parseDiplomadosFromProfile, parseCursosFromProfile, parseCreditosExtraFromProfile, DiplomadoJSON } from '@/lib/utils/profileParser';
+import {
+  parseDiplomadosFromProfile,
+  parseCursosFromProfile,
+  parseCreditosExtraFromProfile,
+  parseCuposCreditosFromProfile,
+  buildUpdatedCuposCreditos,
+  getPrimaryRoleFromProfile,
+  filtrarCursosReales,
+  DiplomadoJSON
+} from '@/lib/utils/profileParser';
 import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
-import { obtenerTallerParaDiplomado } from '@/lib/utils/tallerAsignado';
+import { obtenerTallerParaDiplomado, TALLER_SOFT_SKILLS, TALLER_SEGURIDAD_BASADA } from '@/lib/utils/tallerAsignado';
+import fs from 'fs';
+import path from 'path';
+
+function normKey(s?: string | null): string {
+  if (!s) return '';
+  return String(s)
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function stripDipPrefixNorm(s?: string | null): string {
+  return normKey(s).replace(/^(diplomado-en-|especialista-en-)/, '');
+}
 
 function parseCreditoRow(pag: any, auditLogs: any[]) {
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CARGO_EXTRA|')) {
@@ -116,17 +141,24 @@ export async function GET() {
   try {
     const admin = createAdminClient();
     
-    // Consultar perfiles de tipo ESTUDIANTE o con acceso dual (ADMIN / SUPERADMIN con perfil académico)
-    const { data: profiles, error } = await admin
+    // Consultar perfiles activos (estudiantes o cuentas administrativas con acceso dual)
+    const { data: rawProfiles, error } = await admin
       .from('profiles')
       .select('*')
-      .in('role', ['ESTUDIANTE', 'ADMIN', 'SUPERADMIN'])
       .order('nombres', { ascending: true });
 
     if (error) {
       console.error('Error al consultar profiles:', error);
       return NextResponse.json({ estudiantes: [], error: error.message }, { status: 500 });
     }
+
+    const profiles = (rawProfiles || []).filter((p: any) => {
+      const rolesObj = p.roles && typeof p.roles === 'object' ? p.roles : null;
+      if (rolesObj) {
+        return rolesObj.academico === 'ESTUDIANTE' || Boolean(rolesObj.administrativo);
+      }
+      return Boolean(p.paquete_adquirido);
+    });
 
     // Consultar filas de créditos y cargos en public.pagos
     const { data: pagos } = await admin
@@ -139,6 +171,33 @@ export async function GET() {
       .from('audit_logs')
       .select('*')
       .order('created_at', { ascending: false });
+
+    // Consultar notas_modulos y catálogo oficial para enriquecer notas e intentos de examen (diplomados, cursos y talleres)
+    const [{ data: notasModulosRows }, { data: catalogoRows }] = await Promise.all([
+      admin
+        .from('notas_modulos')
+        .select('id, dni_ce, diplomado_numero, diplomado_nombre, tipo_programa, modulo_numero, modulo_nombre, nota, estado, updated_at')
+        .order('updated_at', { ascending: false }),
+      admin
+        .from('diplomados_y_cursos')
+        .select('id, codigo, titulo, tipo')
+    ]);
+
+    const notasPorDni = new Map<string, any[]>();
+    (notasModulosRows || []).forEach((n: any) => {
+      const k = String(n.dni_ce || '').trim();
+      if (!k) return;
+      if (!notasPorDni.has(k)) notasPorDni.set(k, []);
+      notasPorDni.get(k)!.push(n);
+    });
+
+    const catalogoByTitulo = new Map<string, any>();
+    (catalogoRows || []).forEach((c: any) => {
+      if (c.titulo) {
+        catalogoByTitulo.set(normKey(c.titulo), c);
+        catalogoByTitulo.set(stripDipPrefixNorm(c.titulo), c);
+      }
+    });
 
     // Mapear estudiantes con soporte de múltiples créditos
     const estudiantes = (profiles || []).map((p: any) => {
@@ -256,8 +315,78 @@ export async function GET() {
 
       // Parser JSON de Diplomados y Cursos
       const parsedDiplomados = parseDiplomadosFromProfile(p);
-      const creditosExtra = parseCreditosExtraFromProfile(p);
+      const cupos = parseCuposCreditosFromProfile(p);
       const parsedCursos = parseCursosFromProfile(p);
+      const notasAlumno = notasPorDni.get(String(p.dni_ce || '').trim()) || [];
+
+      // Enriquecer módulos de diplomados con intentos reales guardados en notas_modulos
+      parsedDiplomados.forEach((d: any) => {
+        const catDip = catalogoByTitulo.get(normKey(d.titulo)) || catalogoByTitulo.get(stripDipPrefixNorm(d.titulo));
+        if (catDip?.titulo) d.titulo = catDip.titulo;
+        if (!d.codigo && catDip?.codigo) d.codigo = catDip.codigo;
+        const dipCodeNorm = normKey(d.codigo || catDip?.codigo);
+        const dipTitleNorm = stripDipPrefixNorm(d.titulo);
+
+        if (Array.isArray(d.modulos)) {
+          d.modulos.forEach((m: any, mIdx: number) => {
+            const modNum = mIdx + 1;
+            const modCodeNorm = normKey(m.codigo || m.id);
+            const notaMatch = notasAlumno.find((n: any) => {
+              const tipo = String(n.tipo_programa || '').toLowerCase();
+              const numUpper = String(n.diplomado_numero || '').toUpperCase();
+              if (tipo && tipo !== 'diplomado' && !numUpper.startsWith('DIP')) return false;
+              const matchesDip =
+                (dipCodeNorm && normKey(n.diplomado_numero) === dipCodeNorm) ||
+                (dipTitleNorm && stripDipPrefixNorm(n.diplomado_nombre) === dipTitleNorm);
+              if (!matchesDip) return false;
+              return (
+                Number(n.modulo_numero) === modNum ||
+                (modCodeNorm && normKey(n.modulo_nombre) === modCodeNorm)
+              );
+            });
+
+            if (notaMatch) {
+              m.nota = Number(notaMatch.nota ?? m.nota ?? 0);
+              (m as any).rendido = true;
+              m.completado = Boolean(m.completado || notaMatch.estado === 'APROBADO' || Number(notaMatch.nota) >= 12);
+              (m as any).fecha_examen = notaMatch.updated_at;
+            }
+          });
+        }
+      });
+
+      // Enriquecer cursos y talleres con código oficial del catálogo y sus intentos en notas_modulos
+      parsedCursos.forEach((c: any) => {
+        const prevCodeNorm = normKey(c.codigo);
+        const catItem = catalogoByTitulo.get(normKey(c.titulo)) || catalogoByTitulo.get(stripDipPrefixNorm(c.titulo));
+        if (catItem) {
+          if (catItem.codigo) c.codigo = catItem.codigo;
+          if (!c.id && catItem.id) c.id = catItem.id;
+          if (!c.tipo && catItem.tipo) c.tipo = catItem.tipo.toUpperCase();
+        }
+        const cCodeNorm = normKey(c.codigo);
+        const cIdNorm = normKey(c.id);
+        const cTitleNorm = normKey(c.titulo);
+
+        const notaMatch = notasAlumno.find((n: any) => {
+          const nNumNorm = normKey(n.diplomado_numero);
+          const nTitleNorm = normKey(n.diplomado_nombre);
+          return (
+            (cCodeNorm && nNumNorm === cCodeNorm) ||
+            (prevCodeNorm && nNumNorm === prevCodeNorm) ||
+            (cIdNorm && nNumNorm === cIdNorm) ||
+            (cTitleNorm && nTitleNorm === cTitleNorm)
+          );
+        });
+
+        if (notaMatch) {
+          c.nota = Number(notaMatch.nota ?? c.nota ?? 0);
+          (c as any).rendido = true;
+          c.completado = Boolean(c.completado || notaMatch.estado === 'APROBADO' || Number(notaMatch.nota) >= 12);
+          (c as any).fecha_examen = notaMatch.updated_at;
+        }
+      });
+
       const diplomadosLista = parsedDiplomados.map(d => d.titulo);
 
       // Avance real calculado desde módulos completados del diplomado principal
@@ -277,7 +406,8 @@ export async function GET() {
         apellidos: p.apellidos,
         email: p.email,
         telefono: p.telefono || 'Sin teléfono',
-        role: p.role,
+        role: getPrimaryRoleFromProfile(p),
+        roles: p.roles || null,
         paquete_adquirido: p.paquete_adquirido || 'FULL',
         cuotas_pagadas: cuotasPagadas,
         cuotas_totales: totalCuotasAplicables,
@@ -294,8 +424,9 @@ export async function GET() {
         diplomados_json: parsedDiplomados,
         cursos_json: parsedCursos,
         diplomados_lista: diplomadosLista,
-        creditos_extra_diplomados: creditosExtra.creditosExtraDiplomados,
-        creditos_extra_cursos: creditosExtra.creditosExtraCursos,
+        cupos_creditos: cupos,
+        creditos_extra_diplomados: cupos.diplomados.adicionales,
+        creditos_extra_cursos: cupos.cursos.adicionales,
         fecha_nacimiento: p.fecha_nacimiento || null,
         avance_porcentaje: avanceCalculado,
         nota_promedio: p.nota_promedio ?? 0,
@@ -346,7 +477,12 @@ export async function PATCH(request: Request) {
       if (bloqueado !== undefined) updateData.bloqueado = Boolean(bloqueado);
       if (prorroga_hasta !== undefined) updateData.prorroga_hasta = prorroga_hasta || null;
       if (role !== undefined && ['ESTUDIANTE', 'ADMIN', 'DOCENTE', 'SUPERADMIN'].includes(String(role).trim().toUpperCase())) {
-        updateData.role = String(role).trim().toUpperCase();
+        const upperRole = String(role).trim().toUpperCase();
+        const curRoles = (currentProfile.roles && typeof currentProfile.roles === 'object') ? currentProfile.roles : {};
+        updateData.roles = {
+          administrativo: (upperRole === 'ADMIN' || upperRole === 'SUPERADMIN') ? upperRole : null,
+          academico: upperRole === 'DOCENTE' ? 'DOCENTE' : (curRoles.academico || 'ESTUDIANTE'),
+        };
       }
 
       const { data: updated, error: updateErr } = await admin
@@ -380,16 +516,16 @@ export async function PATCH(request: Request) {
       const extraDip = Math.max(0, Number(creditos_extra_diplomados) || 0);
       const extraCur = Math.max(0, Number(creditos_extra_cursos) || 0);
 
-      const serialized = `DIPLOMADOS_CONFIG|${JSON.stringify({
-        creditos_extra_diplomados: extraDip,
-        creditos_extra_cursos: extraCur,
-        lista: diplomadosListJson
-      })}`;
+      const nuevosCuposCreditos = buildUpdatedCuposCreditos(currentProfile, {
+        diplomadosAdicionales: extraDip,
+        cursosAdicionales: extraCur,
+      });
 
       const { data: updated, error: updateErr } = await admin
         .from('profiles')
         .update({
-          diplomados: serialized
+          cupos_creditos: nuevosCuposCreditos,
+          diplomados: `DIPLOMADOS_LIST|${JSON.stringify(diplomadosListJson)}`
         })
         .eq('id', currentProfile.id)
         .select()
@@ -416,8 +552,12 @@ export async function PATCH(request: Request) {
       const existingDiplomados = parseDiplomadosFromProfile(currentProfile);
       const existingMap = new Map<string, DiplomadoJSON>();
       existingDiplomados.forEach(d => {
-        const key = (d.titulo || d.slug || d.id || '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
-        existingMap.set(key, d);
+        if (d.titulo) {
+          existingMap.set(normKey(d.titulo), d);
+          existingMap.set(stripDipPrefixNorm(d.titulo), d);
+        }
+        if (d.slug) existingMap.set(stripDipPrefixNorm(d.slug), d);
+        if (d.id) existingMap.set(stripDipPrefixNorm(d.id), d);
       });
 
       let diplomadosListJson: DiplomadoJSON[] = [];
@@ -425,9 +565,14 @@ export async function PATCH(request: Request) {
       if (Array.isArray(diplomados)) {
         diplomadosListJson = diplomados.map((titleStr: string) => {
           const title = String(titleStr).trim();
-          const key = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-          if (existingMap.has(key)) {
-            return existingMap.get(key)!;
+          const key = normKey(title);
+          const strippedKey = stripDipPrefixNorm(title);
+          const matchedExisting = existingMap.get(key) || existingMap.get(strippedKey);
+          if (matchedExisting) {
+            return {
+              ...matchedExisting,
+              titulo: title.replace(/^DIPLOMADO EN\s+/i, '').trim().toUpperCase()
+            };
           }
           const matchedData = getDiplomadoByTitleOrSlug(title);
           const matchedTitle = matchedData?.titulo || title;
@@ -456,19 +601,16 @@ export async function PATCH(request: Request) {
         });
       }
 
-      const creditosExtra = parseCreditosExtraFromProfile(currentProfile);
-      const diplomadosSerialized = (creditosExtra.creditosExtraDiplomados > 0 || creditosExtra.creditosExtraCursos > 0)
-        ? `DIPLOMADOS_CONFIG|${JSON.stringify({
-            creditos_extra_diplomados: creditosExtra.creditosExtraDiplomados,
-            creditos_extra_cursos: creditosExtra.creditosExtraCursos,
-            lista: diplomadosListJson
-          })}`
-        : `DIPLOMADOS_LIST|${JSON.stringify(diplomadosListJson)}`;
+      const diplomadosSerialized = `DIPLOMADOS_LIST|${JSON.stringify(diplomadosListJson)}`;
+      const nuevosCuposCreditos = buildUpdatedCuposCreditos(currentProfile, {
+        diplomadosCanjeados: diplomadosListJson.length
+      });
 
       const { data: updated, error: updateErr } = await admin
         .from('profiles')
         .update({
-          diplomados: diplomadosSerialized
+          diplomados: diplomadosSerialized,
+          cupos_creditos: nuevosCuposCreditos
         })
         .eq('id', currentProfile.id)
         .select()
@@ -503,26 +645,84 @@ export async function PATCH(request: Request) {
         return NextResponse.json({ error: 'Perfil de estudiante no encontrado.' }, { status: 404 });
       }
 
+      // Cargar catálogo oficial desde Supabase + fallback local para asignar códigos reales (CUR-XX / TAL-XX)
+      const { data: catDb } = await admin.from('diplomados_y_cursos').select('id, codigo, titulo, tipo, categoria, duracion, horas, imagen');
+      const catalogoMap = new Map<string, any>();
+      (catDb || []).forEach((item: any) => {
+        if (item.titulo) catalogoMap.set(normKey(item.titulo), item);
+        if (item.codigo) catalogoMap.set(normKey(item.codigo), item);
+        if (item.id) catalogoMap.set(normKey(item.id), item);
+      });
+
+      try {
+        const cursosPath = path.join(process.cwd(), 'lib/data/cursos.json');
+        if (fs.existsSync(cursosPath)) {
+          const rawCursos = JSON.parse(fs.readFileSync(cursosPath, 'utf-8'));
+          (Array.isArray(rawCursos) ? rawCursos : []).forEach((c: any, idx: number) => {
+            const numStr = (idx + 1).toString().padStart(2, '0');
+            const tituloUp = String(c.curso || '').trim().toUpperCase();
+            if (tituloUp && !catalogoMap.has(normKey(tituloUp))) {
+              catalogoMap.set(normKey(tituloUp), {
+                id: `cur-${numStr}`,
+                codigo: `CUR-${numStr}`,
+                titulo: tituloUp,
+                tipo: 'curso',
+                categoria: c.categoria || 'Cursos de Alta Especialización',
+                duracion: '40 horas',
+                horas: '40 horas académicas'
+              });
+            }
+          });
+        }
+      } catch {
+        // ignore fallback read error
+      }
+
+      [TALLER_SOFT_SKILLS, TALLER_SEGURIDAD_BASADA].forEach(t => {
+        if (!catalogoMap.has(normKey(t.titulo))) catalogoMap.set(normKey(t.titulo), t);
+        if (!catalogoMap.has(normKey(t.codigo))) catalogoMap.set(normKey(t.codigo), t);
+      });
+
       const existingCursos = parseCursosFromProfile(currentProfile);
       const existingCursosMap = new Map<string, any>();
       existingCursos.forEach(c => {
-        const key = (c.titulo || c.id || c.codigo || '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
-        existingCursosMap.set(key, c);
+        if (c.titulo) existingCursosMap.set(normKey(c.titulo), c);
+        if (c.codigo) existingCursosMap.set(normKey(c.codigo), c);
+        if (c.id) existingCursosMap.set(normKey(c.id), c);
       });
 
       let cursosListJson: any[] = [];
 
       if (Array.isArray(cursos)) {
-        cursosListJson = cursos.map((titleStr: string, idx: number) => {
-          const title = String(titleStr).trim();
-          const key = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-          if (existingCursosMap.has(key)) {
-            return existingCursosMap.get(key)!;
+        cursosListJson = cursos.map((item: any, idx: number) => {
+          const isObj = typeof item === 'object' && item !== null;
+          const title = String(isObj ? (item.titulo || item.codigo || '') : item).trim();
+          const key = normKey(title);
+          const existing = existingCursosMap.get(key) || (isObj && item.codigo ? existingCursosMap.get(normKey(item.codigo)) : undefined);
+          const catMatch = catalogoMap.get(key) || (isObj && item.codigo ? catalogoMap.get(normKey(item.codigo)) : undefined);
+
+          if (existing) {
+            return {
+              ...existing,
+              id: catMatch?.id || existing.id,
+              codigo: catMatch?.codigo || existing.codigo,
+              tipo: existing.tipo || (catMatch?.tipo ? String(catMatch.tipo).toUpperCase() : undefined)
+            };
           }
+
+          const esTallerItem =
+            (isObj && String(item.tipo || '').toUpperCase() === 'TALLER') ||
+            String(catMatch?.tipo || '').toUpperCase() === 'TALLER' ||
+            String(catMatch?.codigo || '').toUpperCase().startsWith('TAL-') ||
+            title.toUpperCase().startsWith('TALLER DE');
+
           return {
-            id: `cur-${(idx + 1).toString().padStart(2, '0')}`,
-            codigo: `CUR-${(idx + 1).toString().padStart(2, '0')}`,
-            titulo: title,
+            id: catMatch?.id || (isObj && item.id) || `cur-${(idx + 1).toString().padStart(2, '0')}`,
+            codigo: catMatch?.codigo || (isObj && item.codigo) || `CUR-${(idx + 1).toString().padStart(2, '0')}`,
+            titulo: catMatch?.titulo || title,
+            categoria: catMatch?.categoria || (esTallerItem ? 'Taller' : 'Cursos de Alta Especialización'),
+            duracion: catMatch?.duracion || (esTallerItem ? '20 horas' : '40 horas'),
+            tipo: esTallerItem ? 'TALLER' : 'CURSO',
             nota: 0,
             completado: false,
             avance: 0
@@ -531,11 +731,15 @@ export async function PATCH(request: Request) {
       }
 
       const cursosSerialized = `CURSOS_LIST|${JSON.stringify(cursosListJson)}`;
+      const nuevosCuposCreditos = buildUpdatedCuposCreditos(currentProfile, {
+        cursosCanjeados: filtrarCursosReales(cursosListJson).length
+      });
 
       const { data: updated, error: updateErr } = await admin
         .from('profiles')
         .update({
-          cursos: cursosSerialized
+          cursos: cursosSerialized,
+          cupos_creditos: nuevosCuposCreditos
         })
         .eq('id', currentProfile.id)
         .select()
@@ -549,7 +753,17 @@ export async function PATCH(request: Request) {
     }
 
     if (action === 'reset_examen_modulo') {
-      const { diplomadoTitulo, diplomadoSlug, moduloCodigo } = body;
+      const {
+        tipoPrograma = 'diplomado',
+        diplomadoTitulo,
+        diplomadoSlug,
+        diplomadoCodigo,
+        moduloCodigo,
+        cursoTitulo,
+        cursoCodigo,
+        cursoId
+      } = body;
+
       if (!studentId && !dni_ce) {
         return NextResponse.json({ error: 'Se requiere studentId o dni_ce.' }, { status: 400 });
       }
@@ -563,23 +777,112 @@ export async function PATCH(request: Request) {
         return NextResponse.json({ error: 'Perfil de estudiante no encontrado.' }, { status: 404 });
       }
 
+      const tipoNorm = String(tipoPrograma || 'diplomado').toLowerCase();
+
+      if (tipoNorm === 'curso' || tipoNorm === 'taller') {
+        const cursosListJson = parseCursosFromProfile(profile);
+        const targetKey = normKey(cursoTitulo || cursoCodigo || cursoId);
+        const targetCodeKey = normKey(cursoCodigo);
+        const targetIdKey = normKey(cursoId);
+
+        const targetCurso = cursosListJson.find((c: any) =>
+          (targetCodeKey && normKey(c.codigo) === targetCodeKey) ||
+          (targetIdKey && normKey(c.id) === targetIdKey) ||
+          (targetKey && normKey(c.titulo) === targetKey)
+        );
+
+        if (targetCurso) {
+          delete (targetCurso as any).nota;
+          (targetCurso as any).rendido = false;
+          targetCurso.completado = false;
+        }
+
+        const cursosSerialized = `CURSOS_LIST|${JSON.stringify(cursosListJson)}`;
+        const { data: updated, error: updErr } = await admin
+          .from('profiles')
+          .update({ cursos: cursosSerialized })
+          .eq('id', profile.id)
+          .select()
+          .single();
+
+        if (updErr) {
+          return NextResponse.json({ error: `Error al reiniciar examen: ${updErr.message}` }, { status: 500 });
+        }
+
+        // Eliminar intento guardado en notas_modulos para que el alumno pueda volver a rendirlo
+        try {
+          const dniTarget = String(profile.dni_ce || dni_ce || '').trim();
+          const { data: notasExistentes } = await admin
+            .from('notas_modulos')
+            .select('id, diplomado_numero, diplomado_nombre')
+            .eq('dni_ce', dniTarget);
+
+          const idsBorrar = (notasExistentes || [])
+            .filter((n: any) => {
+              const nNum = normKey(n.diplomado_numero);
+              const nNom = normKey(n.diplomado_nombre);
+              return (
+                (targetCodeKey && nNum === targetCodeKey) ||
+                (targetIdKey && nNum === targetIdKey) ||
+                (targetKey && (nNom === targetKey || nNum === targetKey)) ||
+                (targetCurso?.codigo && nNum === normKey(targetCurso.codigo))
+              );
+            })
+            .map((n: any) => n.id);
+
+          if (idsBorrar.length > 0) {
+            await admin.from('notas_modulos').delete().in('id', idsBorrar);
+          }
+        } catch (e) {
+          console.warn('No se pudo limpiar notas_modulos de curso/taller:', e);
+        }
+
+        try {
+          await admin.from('audit_logs').insert({
+            usuario_email: 'admin@edumin.pe',
+            accion: 'REINICIAR_INTENTO_EXAMEN_SUSTITUTORIO',
+            detalles: {
+              studentId: profile.id,
+              dni_ce: profile.dni_ce,
+              tipoPrograma: tipoNorm,
+              programa: cursoTitulo || cursoCodigo || cursoId,
+              tarifa_sustitutorio: 'S/ 25.00'
+            }
+          });
+        } catch (e) {
+          console.error('Error registrando auditoría:', e);
+        }
+
+        return NextResponse.json({
+          success: true,
+          estudiante: updated,
+          message: 'Intento de examen reiniciado correctamente.'
+        });
+      }
+
       let diplomadosListJson: DiplomadoJSON[] = parseDiplomadosFromProfile(profile);
-      const targetSlug = (diplomadoSlug || diplomadoTitulo || '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      const targetSlug = stripDipPrefixNorm(diplomadoSlug || diplomadoTitulo || '');
+      const targetDipCodeNorm = normKey(diplomadoCodigo);
 
       const targetDip = diplomadosListJson.find(d =>
-        (d.slug && d.slug.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlug) ||
-        (d.id && d.id.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlug) ||
-        (d.titulo && d.titulo.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlug)
+        (targetDipCodeNorm && normKey(d.codigo) === targetDipCodeNorm) ||
+        (d.slug && stripDipPrefixNorm(d.slug) === targetSlug) ||
+        (d.id && stripDipPrefixNorm(d.id) === targetSlug) ||
+        (d.titulo && stripDipPrefixNorm(d.titulo) === targetSlug)
       );
 
+      let modIndexMatched = -1;
       if (targetDip && Array.isArray(targetDip.modulos)) {
         // Encontrar módulo objetivo
-        const mod = targetDip.modulos.find((m: any) =>
+        const modIdx = targetDip.modulos.findIndex((m: any) =>
           m.codigo === moduloCodigo ||
           m.id === moduloCodigo ||
+          normKey(m.codigo) === normKey(moduloCodigo) ||
           (moduloCodigo && m.nombre && m.nombre.toLowerCase().includes(moduloCodigo.toLowerCase())) ||
           (moduloCodigo && m.titulo && m.titulo.toLowerCase().includes(moduloCodigo.toLowerCase()))
         );
+        modIndexMatched = modIdx;
+        const mod = modIdx >= 0 ? targetDip.modulos[modIdx] : undefined;
 
         if (mod) {
           delete (mod as any).nota;
@@ -612,6 +915,38 @@ export async function PATCH(request: Request) {
       const { data: updated, error: updErr } = await updateQuery.select().single();
       if (updErr) {
         return NextResponse.json({ error: `Error al reiniciar examen: ${updErr.message}` }, { status: 500 });
+      }
+
+      // Eliminar intento correspondiente en notas_modulos de Supabase
+      try {
+        const dniTarget = String(profile.dni_ce || dni_ce || '').trim();
+        const modMatch = String(moduloCodigo || '').match(/\d+/);
+        const modNumTarget = modMatch ? parseInt(modMatch[0], 10) : (modIndexMatched >= 0 ? modIndexMatched + 1 : null);
+
+        const { data: notasExistentes } = await admin
+          .from('notas_modulos')
+          .select('id, diplomado_numero, diplomado_nombre, modulo_numero, modulo_nombre')
+          .eq('dni_ce', dniTarget);
+
+        const idsBorrar = (notasExistentes || [])
+          .filter((n: any) => {
+            const matchesDip =
+              (targetDipCodeNorm && normKey(n.diplomado_numero) === targetDipCodeNorm) ||
+              (targetSlug && stripDipPrefixNorm(n.diplomado_nombre) === targetSlug) ||
+              (targetDip?.codigo && normKey(n.diplomado_numero) === normKey(targetDip.codigo));
+            if (!matchesDip) return false;
+            return (
+              (modNumTarget !== null && Number(n.modulo_numero) === modNumTarget) ||
+              (moduloCodigo && normKey(n.modulo_nombre) === normKey(moduloCodigo))
+            );
+          })
+          .map((n: any) => n.id);
+
+        if (idsBorrar.length > 0) {
+          await admin.from('notas_modulos').delete().in('id', idsBorrar);
+        }
+      } catch (e) {
+        console.warn('No se pudo limpiar notas_modulos de diplomado:', e);
       }
 
       // Registrar auditoría de reseteo para examen sustitutorio
@@ -712,9 +1047,10 @@ export async function POST(request: Request) {
       studentId = authUser.user.id;
     }
 
-    // 3. Preparar diplomado inicial
-    const dipTitulo = diplomado_1 || 'DIPLOMADO EN DERECHO MINERO';
-    const dipData = getDiplomadoByTitleOrSlug(dipTitulo);
+    // 3. Preparar diplomado inicial usando el título oficial sin prefijo redundante
+    const rawDipTitulo = String(diplomado_1 || 'DERECHO MINERO').trim();
+    const dipData = getDiplomadoByTitleOrSlug(rawDipTitulo);
+    const dipTitulo = dipData?.titulo || rawDipTitulo.replace(/^DIPLOMADO EN\s+/i, '').trim().toUpperCase();
     const modulosList = dipData?.modulos && dipData.modulos.length > 0
       ? dipData.modulos.map((m: any, mIdx: number) => ({
           id: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
@@ -777,9 +1113,7 @@ export async function POST(request: Request) {
     const cuposDiplomadosFinal = Number(cupos_diplomados_personalizados ?? (paqueteInput === 'ILIMITADO' ? 3 : 1));
     const cuposCursosFinal = Number(cupos_cursos_personalizados ?? (paqueteInput === 'ILIMITADO' ? 15 : (paqueteInput === 'FULL' ? 5 : 3)));
 
-    // 4. Insertar en profiles
-    // Columnas exactas que existen en public.profiles de Supabase:
-    // id, role, dni_ce, email, nombres, apellidos, telefono, paquete_adquirido, cuotas_pagadas, cupos_diplomados, debe_cambiar_password, diplomados, cursos, fecha_nacimiento
+    // 4. Insertar en profiles usando `roles` y `cupos_creditos` JSONB
     const insertPayload: Record<string, any> = {
       id: studentId,
       dni_ce: normalizedDni,
@@ -787,10 +1121,14 @@ export async function POST(request: Request) {
       apellidos: apellidos.trim(),
       email: normalizedEmail,
       telefono: telefono ? telefono.trim() : '',
-      role: 'ESTUDIANTE',
+      roles: { administrativo: null, academico: 'ESTUDIANTE' },
       paquete_adquirido: paqueteEnumDb,
       cuotas_pagadas: 1,
-      cupos_diplomados: cuposDiplomadosFinal,
+      cupos_creditos: {
+        diplomados: { asignados: cuposDiplomadosFinal, adicionales: 0, canjeados: diplomadosJson.length },
+        cursos: { asignados: cuposCursosFinal, adicionales: 0, canjeados: 0 },
+        compras_directas: []
+      },
       diplomados: diplomadosSerialized,
       cursos: cursosSerialized,
       debe_cambiar_password: true,

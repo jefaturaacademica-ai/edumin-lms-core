@@ -5,17 +5,18 @@ export async function GET() {
   try {
     const admin = createAdminClient();
     
-    const { data: profiles, error } = await admin
+    const { data: rawProfiles, error } = await admin
       .from('profiles')
       .select('*')
-      .eq('role', 'ESTUDIANTE')
       .order('nombres', { ascending: true });
 
     if (error) {
       return NextResponse.json({ estudiantes: [], error: error.message }, { status: 500 });
     }
 
-    return NextResponse.json({ estudiantes: profiles || [] });
+    const profiles = (rawProfiles || []).filter((p: any) => p.roles?.academico === 'ESTUDIANTE');
+
+    return NextResponse.json({ estudiantes: profiles });
   } catch (err: any) {
     return NextResponse.json({ error: err.message || 'Error al obtener alumnos en riesgo' }, { status: 500 });
   }

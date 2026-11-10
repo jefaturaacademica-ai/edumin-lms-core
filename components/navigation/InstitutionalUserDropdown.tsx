@@ -53,8 +53,8 @@ export default function InstitutionalUserDropdown({ className = '' }: Institutio
         if (res.ok) {
           const data = await res.json();
           if (data.profile) {
-            if (data.profile.role) {
-              setUserRole(String(data.profile.role).toUpperCase());
+            if (data.profile.roles?.administrativo || data.profile.roles?.academico || data.profile.role) {
+              setUserRole(String(data.profile.roles?.administrativo || data.profile.roles?.academico || data.profile.role).toUpperCase());
             }
             if (data.profile.nombres) {
               setUserName(`${data.profile.nombres} ${data.profile.apellidos || ''}`.trim());

@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
 import { calculateReleasedCredits } from "@/lib/utils/credits";
+import { parseCuposCreditosFromProfile, buildUpdatedCuposCreditos } from "@/lib/utils/profileParser";
 
 export type MatriculaResult = {
   success: boolean;
@@ -39,7 +40,7 @@ export async function matricularCurso(
           nombres: string;
           paquete_adquirido: string;
           cuotas_pagadas: number;
-          cupos_diplomados: number;
+          cupos_creditos: any;
         }
       | null = null;
 
@@ -48,7 +49,7 @@ export async function matricularCurso(
     for (let attempt = 0; attempt < MAX_UPDATE_ATTEMPTS; attempt += 1) {
       const { data: profile, error: profileError } = await admin
         .from("profiles")
-        .select("id, role, dni_ce, nombres, paquete_adquirido, cuotas_pagadas, cupos_diplomados")
+        .select("id, roles, dni_ce, nombres, paquete_adquirido, cuotas_pagadas, cupos_creditos, diplomados, cursos")
         .eq("id", user.id)
         .maybeSingle();
 
@@ -56,28 +57,34 @@ export async function matricularCurso(
         return { success: false, message: "No fue posible obtener tu perfil." };
       }
 
-      if (profile.role !== "ESTUDIANTE") {
+      const esEstudiante = (profile.roles as any)?.academico === "ESTUDIANTE";
+      if (!esEstudiante) {
         return { success: false, message: "Sólo los estudiantes pueden realizar matrículas." };
       }
 
+      const cupos = parseCuposCreditosFromProfile(profile);
       const releasedCredits = calculateReleasedCredits(
         profile.paquete_adquirido,
         profile.cuotas_pagadas,
+        cupos.diplomados.adicionales,
       );
 
-      if (releasedCredits - profile.cupos_diplomados <= 0) {
+      if (releasedCredits - cupos.diplomados.canjeados <= 0) {
         return {
           success: false,
           message: "No tienes créditos disponibles. Registra una nueva cuota para continuar.",
         };
       }
 
+      const nuevosCupos = buildUpdatedCuposCreditos(profile, {
+        diplomadosCanjeados: cupos.diplomados.canjeados + 1,
+      });
+
       const { data: updatedProfile, error: updateError } = await admin
         .from("profiles")
-        .update({ cupos_diplomados: profile.cupos_diplomados + 1 })
+        .update({ cupos_creditos: nuevosCupos })
         .eq("id", profile.id)
-        .eq("cupos_diplomados", profile.cupos_diplomados)
-        .select("dni_ce, nombres, paquete_adquirido, cuotas_pagadas, cupos_diplomados")
+        .select("dni_ce, nombres, paquete_adquirido, cuotas_pagadas, cupos_creditos")
         .maybeSingle();
 
       if (updateError) {
@@ -112,7 +119,7 @@ export async function matricularCurso(
               dni_ce: enrolledStudent.dni_ce,
               paquete: enrolledStudent.paquete_adquirido,
               cuotas_pagadas: enrolledStudent.cuotas_pagadas,
-              cupos_diplomados: enrolledStudent.cupos_diplomados,
+              cupos_creditos: enrolledStudent.cupos_creditos,
             },
             curso: { id: cursoId, nombre: nombreCurso },
           }),

@@ -4,11 +4,43 @@ export interface ModuloJSON {
   id: string;
   codigo: string;
   nombre: string;
-  nota: number;
-  completado: boolean;
+  nota?: number;
+  completado?: boolean;
   codigo_cert?: string;
   fecha?: string;
   horas?: string;
+}
+
+export interface CuposCreditosCategoria {
+  asignados: number;
+  adicionales: number;
+  canjeados: number;
+}
+
+export interface CuposCreditosJSON {
+  diplomados: CuposCreditosCategoria;
+  cursos: CuposCreditosCategoria;
+  compras_directas?: any[];
+}
+
+export interface ProfileRolesJSON {
+  administrativo: string | null;
+  academico: string | null;
+}
+
+/**
+ * Obtiene un rol principal compatible para vistas/autorización rápida a partir
+ * de `profiles.roles` (JSONB) con fallback al antiguo `profile.role`.
+ */
+export function getPrimaryRoleFromProfile(profile: any): string {
+  const rolesObj = profile?.roles && typeof profile.roles === 'object' ? profile.roles : null;
+  if (rolesObj) {
+    if (rolesObj.administrativo === 'SUPERADMIN') return 'SUPERADMIN';
+    if (rolesObj.administrativo) return 'ADMIN';
+    if (rolesObj.academico === 'DOCENTE') return 'DOCENTE';
+    if (rolesObj.academico === 'ESTUDIANTE') return 'ESTUDIANTE';
+  }
+  return profile?.role ? String(profile.role).toUpperCase() : 'ESTUDIANTE';
 }
 
 export interface DiplomadoJSON {
@@ -37,6 +69,13 @@ export interface CursoJSON {
   duracion?: string;
   horas?: string;
   fecha?: string;
+  imagen?: string;
+  tipo?: string;
+  esRegalo?: boolean;
+  color?: string;
+  leccionesTotal?: number;
+  leccionesCompletadas?: number;
+  activo?: boolean;
 }
 
 export function parseDiplomadosFromProfile(profile: any): DiplomadoJSON[] {
@@ -133,6 +172,9 @@ export function parseCursosFromProfile(profile: any): CursoJSON[] {
   if (Array.isArray(profile.cursos)) {
     return profile.cursos;
   }
+  if (Array.isArray(profile.cursos_json)) {
+    return profile.cursos_json;
+  }
 
   const strCandidates = [
     profile.cursos,
@@ -141,14 +183,25 @@ export function parseCursosFromProfile(profile: any): CursoJSON[] {
   ];
 
   for (const candidate of strCandidates) {
-    if (typeof candidate === 'string' && candidate.startsWith('CURSOS_LIST|')) {
-      try {
-        const jsonStr = candidate.substring(candidate.indexOf('|') + 1).trim();
-        const parsed = JSON.parse(jsonStr);
-        if (Array.isArray(parsed)) return parsed;
-        if (parsed && Array.isArray(parsed.lista)) return parsed.lista;
-      } catch (e) {
-        console.error('Error parsing CURSOS_LIST JSON:', e);
+    if (typeof candidate === 'string') {
+      const trimmed = candidate.trim();
+      if (trimmed.startsWith('CURSOS_LIST|')) {
+        try {
+          const jsonStr = trimmed.substring(trimmed.indexOf('|') + 1).trim();
+          const parsed = JSON.parse(jsonStr);
+          if (Array.isArray(parsed)) return parsed;
+          if (parsed && Array.isArray(parsed.lista)) return parsed.lista;
+        } catch (e) {
+          console.error('Error parsing CURSOS_LIST JSON:', e);
+        }
+      } else if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+        try {
+          const parsed = JSON.parse(trimmed);
+          if (Array.isArray(parsed)) return parsed;
+          if (parsed && Array.isArray(parsed.lista)) return parsed.lista;
+        } catch (e) {
+          // ignore
+        }
       }
     }
   }
@@ -240,9 +293,24 @@ export function calcularAvanceModuloGranular(
 
 export function parseCreditosExtraFromProfile(profile: any): { creditosExtraDiplomados: number; creditosExtraCursos: number } {
   if (!profile) return { creditosExtraDiplomados: 0, creditosExtraCursos: 0 };
-  const strCandidates = [profile.diplomados, profile.cursos];
+
+  if (profile.cupos_creditos && typeof profile.cupos_creditos === 'object') {
+    const dipAdic = Math.max(0, Number(profile.cupos_creditos?.diplomados?.adicionales) || 0);
+    const curAdic = Math.max(0, Number(profile.cupos_creditos?.cursos?.adicionales) || 0);
+    return { creditosExtraDiplomados: dipAdic, creditosExtraCursos: curAdic };
+  }
+
   let extraDip = 0;
   let extraCur = 0;
+
+  if (profile.creditos_extra_diplomados !== undefined && profile.creditos_extra_diplomados !== null) {
+    extraDip = Math.max(extraDip, Number(profile.creditos_extra_diplomados) || 0);
+  }
+  if (profile.creditos_extra_cursos !== undefined && profile.creditos_extra_cursos !== null) {
+    extraCur = Math.max(extraCur, Number(profile.creditos_extra_cursos) || 0);
+  }
+
+  const strCandidates = [profile.diplomados, profile.cursos];
   for (const candidate of strCandidates) {
     if (typeof candidate === 'string' && candidate.includes('|')) {
       try {
@@ -260,4 +328,109 @@ export function parseCreditosExtraFromProfile(profile: any): { creditosExtraDipl
     }
   }
   return { creditosExtraDiplomados: extraDip, creditosExtraCursos: extraCur };
+}
+
+/**
+ * Obtiene la estructura centralizada `cupos_creditos` desde `profiles`,
+ * con respaldo automático para perfiles aún no migrados.
+ */
+export function parseCuposCreditosFromProfile(profile: any): CuposCreditosJSON {
+  const pkg = String(profile?.paquete_adquirido || 'COMPLETO').toUpperCase();
+  const defaultDip = pkg === 'ILIMITADO' ? 3 : 1;
+  const defaultCur = pkg === 'ILIMITADO' ? 15 : pkg === 'FULL' ? 5 : 3;
+
+  const parsedDipCount = parseDiplomadosFromProfile(profile).length;
+  const parsedCursosRealesCount = filtrarCursosReales(parseCursosFromProfile(profile)).length;
+  const tieneListaDip = parsedDipCount > 0 || Array.isArray(profile?.diplomados) || (typeof profile?.diplomados === 'string' && profile.diplomados.includes('|'));
+  const tieneListaCur = parsedCursosRealesCount > 0 || Array.isArray(profile?.cursos) || (typeof profile?.cursos === 'string' && profile.cursos.includes('|'));
+
+  const existing = profile?.cupos_creditos;
+  if (existing && typeof existing === 'object') {
+    return {
+      diplomados: {
+        asignados: Math.max(0, Number(existing.diplomados?.asignados ?? profile?.cupos_diplomados ?? defaultDip)),
+        adicionales: Math.max(0, Number(existing.diplomados?.adicionales ?? 0)),
+        canjeados: tieneListaDip
+          ? parsedDipCount
+          : Math.max(0, Number(existing.diplomados?.canjeados ?? 0)),
+      },
+      cursos: {
+        asignados: Math.max(0, Number(existing.cursos?.asignados ?? defaultCur)),
+        adicionales: Math.max(0, Number(existing.cursos?.adicionales ?? 0)),
+        canjeados: tieneListaCur
+          ? parsedCursosRealesCount
+          : Math.max(0, Number(existing.cursos?.canjeados ?? 0)),
+      },
+      compras_directas: Array.isArray(existing.compras_directas) ? existing.compras_directas : [],
+    };
+  }
+
+  return {
+    diplomados: {
+      asignados: Math.max(0, Number(profile?.cupos_diplomados ?? defaultDip)),
+      adicionales: 0,
+      canjeados: parsedDipCount,
+    },
+    cursos: {
+      asignados: defaultCur,
+      adicionales: 0,
+      canjeados: parsedCursosRealesCount,
+    },
+    compras_directas: [],
+  };
+}
+
+export function buildUpdatedCuposCreditos(
+  profile: any,
+  updates: {
+    diplomadosAsignados?: number;
+    diplomadosAdicionales?: number;
+    diplomadosCanjeados?: number;
+    cursosAsignados?: number;
+    cursosAdicionales?: number;
+    cursosCanjeados?: number;
+  }
+): CuposCreditosJSON {
+  const current = parseCuposCreditosFromProfile(profile);
+  return {
+    diplomados: {
+      asignados: updates.diplomadosAsignados !== undefined ? Math.max(0, updates.diplomadosAsignados) : current.diplomados.asignados,
+      adicionales: updates.diplomadosAdicionales !== undefined ? Math.max(0, updates.diplomadosAdicionales) : current.diplomados.adicionales,
+      canjeados: updates.diplomadosCanjeados !== undefined ? Math.max(0, updates.diplomadosCanjeados) : current.diplomados.canjeados,
+    },
+    cursos: {
+      asignados: updates.cursosAsignados !== undefined ? Math.max(0, updates.cursosAsignados) : current.cursos.asignados,
+      adicionales: updates.cursosAdicionales !== undefined ? Math.max(0, updates.cursosAdicionales) : current.cursos.adicionales,
+      canjeados: updates.cursosCanjeados !== undefined ? Math.max(0, updates.cursosCanjeados) : current.cursos.canjeados,
+    },
+    compras_directas: current.compras_directas || [],
+  };
+}
+
+/**
+ * Determina si un elemento del perfil es un taller de regalo (no consume créditos de cursos)
+ */
+export function esCursoTaller(c: any): boolean {
+  if (!c) return false;
+  const tipo = String(c.tipo || '').toUpperCase();
+  const id = String(c.id || '').toLowerCase();
+  const cod = String(c.codigo || '').toLowerCase();
+  const cat = String(c.categoria || '').toLowerCase();
+  const tit = String(c.titulo || '').toLowerCase();
+  return Boolean(
+    tipo === 'TALLER' ||
+    cat.includes('taller') ||
+    id.startsWith('tal-') ||
+    cod.startsWith('tal-') ||
+    tit.startsWith('taller de') ||
+    c.esRegalo
+  );
+}
+
+/**
+ * Filtra únicamente los cursos reales, excluyendo talleres y regalos complementarios
+ */
+export function filtrarCursosReales(cursos: any[]): CursoJSON[] {
+  if (!Array.isArray(cursos)) return [];
+  return cursos.filter(c => Boolean(c) && !esCursoTaller(c));
 }

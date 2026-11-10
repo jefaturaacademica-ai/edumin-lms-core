@@ -5,29 +5,24 @@ import {
   normalizeLeccionRow, 
   generarFilasMaestrasIniciales 
 } from '@/lib/data/diplomadosLeccionesService';
-import { getDiplomadoBySlug, getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
+import { getDiplomadoBySlug } from '@/lib/data/diplomadosData';
+import { CATALOGO_CURSOS } from '@/lib/data/catalogoGeneral';
+
+function normSlug(str: string): string {
+  return (str || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
 
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
     const codigoParam = searchParams.get('codigo')?.trim();
     const slugParam = searchParams.get('slug')?.trim();
-
-    // Resolver Código de Diplomado o Curso (DIP-01..22, CUR-01..76, TAL-..) a partir de slugParam si no se envió codigoParam
-    let targetCodigo = codigoParam;
-    if (!targetCodigo && slugParam) {
-      const matchPrefix = slugParam.match(/^(dip|cur|tal)-?(\d+)$/i);
-      if (matchPrefix) {
-        const pfx = matchPrefix[1].toUpperCase();
-        const num = matchPrefix[2].padStart(2, '0');
-        targetCodigo = `${pfx}-${num}`;
-      } else {
-        const matched = getDiplomadoBySlug(slugParam) || getDiplomadoByTitleOrSlug(slugParam);
-        if (matched && matched.numId) {
-          targetCodigo = `DIP-${matched.numId.toString().padStart(2, '0')}`;
-        }
-      }
-    }
+    const tipoParam = searchParams.get('tipo')?.trim().toLowerCase(); // 'curso' | 'diplomado' | undefined
 
     let admin: any = null;
     try {
@@ -36,31 +31,99 @@ export async function GET(request: Request) {
       console.warn('No se pudo inicializar createAdminClient, usando fallback local:', e);
     }
 
-    if (admin) {
-      let query = admin
+    // Resolver Código Oficial (DIP-XX, CUR-XX, TAL-XX) de forma estricta (sin caer jamás en DIP-01 por defecto)
+    let targetCodigo = codigoParam ? codigoParam.toUpperCase() : '';
+
+    if (!targetCodigo && slugParam) {
+      const matchPrefix = slugParam.match(/^(dip|cur|tal)-?(\d+)(?:-|$)/i);
+      if (matchPrefix) {
+        const pfx = matchPrefix[1].toUpperCase();
+        const num = matchPrefix[2].padStart(2, '0');
+        targetCodigo = `${pfx}-${num}`;
+      } else {
+        const slugClean = normSlug(slugParam);
+
+        // 1. Buscar en diplomados_y_cursos de Supabase por id, código o título normalizado
+        if (admin) {
+          const { data: catRows } = await admin
+            .from('diplomados_y_cursos')
+            .select('id, codigo, titulo, tipo');
+          if (Array.isArray(catRows)) {
+            const filtradasPorTipo = tipoParam === 'curso'
+              ? catRows.filter((r: any) => r.tipo !== 'diplomado' && !String(r.codigo || '').toUpperCase().startsWith('DIP-'))
+              : tipoParam === 'diplomado'
+              ? catRows.filter((r: any) => r.tipo === 'diplomado' || String(r.codigo || '').toUpperCase().startsWith('DIP-'))
+              : catRows;
+
+            const exactMatch = filtradasPorTipo.find((r: any) =>
+              String(r.id || '').toLowerCase() === slugParam.toLowerCase() ||
+              String(r.codigo || '').toLowerCase() === slugParam.toLowerCase() ||
+              normSlug(r.titulo || '') === slugClean
+            );
+            if (exactMatch?.codigo) {
+              targetCodigo = exactMatch.codigo.toUpperCase();
+            }
+          }
+        }
+
+        // 2. Buscar en catálogo local de cursos/talleres si aplica
+        if (!targetCodigo && tipoParam !== 'diplomado') {
+          if (slugClean.includes('soft-skills')) targetCodigo = 'TAL-01';
+          else if (slugClean.includes('seguridad-basada-en-el-comportamiento')) targetCodigo = 'TAL-02';
+          else {
+            const curMatch = CATALOGO_CURSOS.find((c) => normSlug(c.titulo) === slugClean || c.codigo.toLowerCase() === slugParam.toLowerCase());
+            if (curMatch) targetCodigo = curMatch.codigo.toUpperCase();
+          }
+        }
+
+        // 3. Buscar coincidencia exacta de slug de diplomado (sin fallback a ALL_DIPLOMADOS[0])
+        if (!targetCodigo && tipoParam !== 'curso') {
+          const matchedDip = getDiplomadoBySlug(slugParam);
+          if (matchedDip && matchedDip.numId) {
+            targetCodigo = `DIP-${matchedDip.numId.toString().padStart(2, '0')}`;
+          }
+        }
+      }
+    }
+
+    // Salvaguarda: el reproductor de cursos/talleres nunca debe cargar un diplomado (DIP-)
+    if (tipoParam === 'curso' && targetCodigo.startsWith('DIP-')) {
+      return NextResponse.json({ success: true, tablaCreada: true, total: 0, filas: [] });
+    }
+
+    if (admin && targetCodigo) {
+      const { data, error } = await admin
+        .from('lecciones')
+        .select('*')
+        .ilike('CodigoDiplomado', targetCodigo)
+        .order('orden', { ascending: true });
+
+      if (!error && Array.isArray(data) && data.length > 0) {
+        const normalized = data.map(normalizeLeccionRow);
+        return NextResponse.json({
+          success: true,
+          tablaCreada: true,
+          total: normalized.length,
+          filas: normalized
+        });
+      }
+
+      // Si targetCodigo está resuelto pero aún no hay filas en lecciones, no devolver otros cursos/diplomados
+      if (!error) {
+        return NextResponse.json({
+          success: true,
+          tablaCreada: true,
+          total: 0,
+          filas: []
+        });
+      }
+    } else if (admin && !slugParam && !codigoParam) {
+      const { data, error } = await admin
         .from('lecciones')
         .select('*')
         .order('orden', { ascending: true });
-
-      if (targetCodigo) {
-        query = query.ilike('CodigoDiplomado', targetCodigo);
-      }
-
-      const { data, error } = await query;
-
       if (!error && Array.isArray(data) && data.length > 0) {
-        let normalized = data.map(normalizeLeccionRow);
-
-        // Si se buscó sin targetCodigo o como salvaguarda adicional de filtrado por slug
-        if (slugParam && !targetCodigo) {
-          const sLower = slugParam.toLowerCase().replace(/[^a-z0-9]/g, '');
-          normalized = normalized.filter(r => {
-            const dipSlug = r.Diplomado.toLowerCase().replace(/[^a-z0-9]/g, '');
-            const codSlug = r.CodigoDiplomado.toLowerCase().replace(/[^a-z0-9]/g, '');
-            return dipSlug.includes(sLower) || sLower.includes(dipSlug) || codSlug.includes(sLower) || sLower.includes(codSlug);
-          });
-        }
-
+        const normalized = data.map(normalizeLeccionRow);
         return NextResponse.json({
           success: true,
           tablaCreada: true,
@@ -79,9 +142,10 @@ export async function GET(request: Request) {
     } else if (slugParam) {
       const sLower = slugParam.toLowerCase().replace(/[^a-z0-9]/g, '');
       filtradas = maestros.filter(m => {
+        if (tipoParam === 'curso' && m.CodigoDiplomado.toUpperCase().startsWith('DIP-')) return false;
         const dipSlug = m.Diplomado.toLowerCase().replace(/[^a-z0-9]/g, '');
         const codSlug = m.CodigoDiplomado.toLowerCase().replace(/[^a-z0-9]/g, '');
-        return dipSlug.includes(sLower) || sLower.includes(dipSlug) || codSlug.includes(sLower) || sLower.includes(codSlug);
+        return dipSlug === sLower || codSlug === sLower;
       });
     }
 

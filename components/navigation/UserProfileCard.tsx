@@ -50,7 +50,7 @@ export function UserProfileCard({
       <Link
         href="/dashboard/perfil"
         onClick={handleLinkClick}
-        className={`flex items-center gap-3 p-2.5 rounded-2xl bg-white/5 hover:bg-white/10 transition-all border border-white/5 group shadow-sm select-none ${className}`}
+        className={`flex items-center gap-3 p-2.5 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors border border-white/5 group shadow-sm select-none outline-none focus:outline-none focus-visible:ring-1 focus-visible:ring-indigo-400/50 ${className}`}
         title="Ver mi perfil"
       >
         <div className="relative size-10 rounded-full bg-gradient-to-tr from-indigo-600 to-cyan-500 text-white font-extrabold flex items-center justify-center text-xs shadow-md ring-2 ring-indigo-400/30 shrink-0 overflow-hidden">

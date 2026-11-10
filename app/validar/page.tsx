@@ -221,7 +221,7 @@ function ValidarCertificadoContent() {
                 <div>
                   <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-[10px] font-black px-2 py-0.5 rounded-md uppercase tracking-wider mb-1">
                     {esEscaneoQr && <QrIcon className="w-3 h-3 text-emerald-700" />}
-                    <span>✓ Documento oficial verificado</span>
+                    <span>Documento oficial verificado</span>
                   </div>
                   <h2 className="text-base sm:text-lg font-bold text-slate-900">
                     Certificado auténtico y registrado en EDUMIN

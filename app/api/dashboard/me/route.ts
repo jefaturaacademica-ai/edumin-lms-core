@@ -1,8 +1,14 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { createAdminClient } from '@/lib/supabase/admin';
-import { calculateEduminCredits, calculateReleasedCredits } from '@/lib/utils/credits';
-import { parseDiplomadosFromProfile, parseCursosFromProfile, parseCreditosExtraFromProfile } from '@/lib/utils/profileParser';
+import { calculateEduminCredits, derivePaymentStateForCredits } from '@/lib/utils/credits';
+import {
+  parseDiplomadosFromProfile,
+  parseCursosFromProfile,
+  parseCuposCreditosFromProfile,
+  getPrimaryRoleFromProfile,
+  filtrarCursosReales
+} from '@/lib/utils/profileParser';
 import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
 import { obtenerTallerParaDiplomado } from '@/lib/utils/tallerAsignado';
 
@@ -88,6 +94,39 @@ function parseCreditoRow(pag: any) {
   };
 }
 
+async function enriquecerCursosConTipoCatalogo(admin: any, cursos: any[]) {
+  if (!Array.isArray(cursos) || cursos.length === 0) return cursos;
+  const { data: catRows } = await admin
+    .from('diplomados_y_cursos')
+    .select('id, codigo, titulo, tipo');
+
+  if (!Array.isArray(catRows) || catRows.length === 0) return cursos;
+
+  const porClave = new Map<string, any>();
+  catRows.forEach((r: any) => {
+    if (r.id) porClave.set(String(r.id).trim().toLowerCase(), r);
+    if (r.codigo) porClave.set(String(r.codigo).trim().toLowerCase(), r);
+    if (r.titulo) porClave.set(String(r.titulo).trim().toLowerCase(), r);
+  });
+
+  return cursos.map((c: any) => {
+    if (!c) return c;
+    const match =
+      porClave.get(String(c.id || '').trim().toLowerCase()) ||
+      porClave.get(String(c.codigo || '').trim().toLowerCase()) ||
+      porClave.get(String(c.titulo || '').trim().toLowerCase());
+
+    if (!match?.tipo) return c;
+    const tipoNorm = String(match.tipo).toUpperCase();
+    const esTallerDb = tipoNorm === 'TALLER';
+    return {
+      ...c,
+      tipo: esTallerDb ? 'TALLER' : tipoNorm,
+      ...(esTallerDb ? { esRegalo: true } : {}),
+    };
+  });
+}
+
 export async function GET() {
   try {
     const supabase = await createClient();
@@ -111,7 +150,7 @@ export async function GET() {
         
         const parsedPagos = (rawPagos || []).map(p => parseCreditoRow(p));
         const diplomados_json = parseDiplomadosFromProfile(pByDni);
-        const cursos_json = parseCursosFromProfile(pByDni);
+        let cursos_json = parseCursosFromProfile(pByDni);
 
         const dipTitulosDemo: string[] = [];
         if (pByDni.diplomado_1) dipTitulosDemo.push(pByDni.diplomado_1);
@@ -120,36 +159,57 @@ export async function GET() {
           const t = d.titulo || d.slug;
           if (t && !dipTitulosDemo.includes(t)) dipTitulosDemo.push(t);
         });
-        dipTitulosDemo.forEach((dt) => {
-          const tr = obtenerTallerParaDiplomado(dt);
-          if (!cursos_json.some(c => c.id === tr.id || c.codigo === tr.codigo)) {
+// Inyectar el taller que viene incluido en cada diplomado matriculado
+        dipTitulosDemo.forEach(dipTitulo => {
+          const taller = obtenerTallerParaDiplomado(dipTitulo);
+          if (taller && !cursos_json.some((c: any) => c.id === taller.id || c.codigo === taller.codigo)) {
             cursos_json.push({
-              id: tr.id,
-              codigo: tr.codigo,
-              titulo: tr.titulo,
+              id: taller.id,
+              codigo: taller.codigo,
+              titulo: taller.titulo,
+              tipo: 'TALLER',
+              categoria: 'Taller',
+              esRegalo: true,
+              duracion: taller.duracion,
+              imagen: taller.imagen,
+              color: 'slate',
               nota: 0,
               completado: false,
               avance: 0,
-              categoria: tr.categoria,
-              duracion: tr.duracion,
-              horas: tr.horas
+              leccionesTotal: 1,
+              leccionesCompletadas: 0,
+              activo: true
             });
           }
         });
 
+        cursos_json = await enriquecerCursosConTipoCatalogo(admin, cursos_json);
+
+        const paymentStateDemo = derivePaymentStateForCredits({
+          pagos: rawPagos || [],
+          profile: pByDni,
+        });
+        const cuposDemo = parseCuposCreditosFromProfile(pByDni);
+
         const eduminCredits = calculateEduminCredits({
           paqueteAdquirido: pByDni.paquete_adquirido || 'COMPLETO',
-          cuotasPagadas: pByDni.cuotas_pagadas || 1,
-          cuotasTotales: pByDni.cuotas_totales || 1,
-          tipoPago: pByDni.tipo_pago || 'CONTADO',
-          diplomadosConsumidos: pByDni.cupos_diplomados || Math.max(1, diplomados_json.length),
-          cursosConsumidos: pByDni.cupos_cursos || cursos_json.length
+          cuotasPagadas: paymentStateDemo.cuotasPagadas,
+          cuotasTotales: paymentStateDemo.cuotasTotales,
+          tipoPago: paymentStateDemo.tipoPago,
+          diplomadosConsumidos: cuposDemo.diplomados.canjeados,
+          cursosConsumidos: filtrarCursosReales(cursos_json).length,
+          creditosExtraDiplomados: cuposDemo.diplomados.adicionales,
+          creditosExtraCursos: cuposDemo.cursos.adicionales,
         });
 
         return NextResponse.json({
           user: { id: pByDni.id, email: pByDni.email },
           profile: {
             ...pByDni,
+            role: getPrimaryRoleFromProfile(pByDni),
+            cuotas_pagadas: paymentStateDemo.cuotasPagadas,
+            cuotas_totales: paymentStateDemo.cuotasTotales,
+            tipo_pago: paymentStateDemo.tipoPago,
             diplomados_json,
             cursos_json
           },
@@ -208,19 +268,10 @@ export async function GET() {
 
     const parsedPagos = rawPagos.map(p => parseCreditoRow(p));
 
-    // 3. Obtener Matrículas si existe la tabla
-    let matriculasData: any[] = [];
-    try {
-      const { data: mData } = await admin
-        .from('matriculas_cursos')
-        .select('*')
-        .or(`profile_id.eq.${profile.id},dni_ce.eq.${profile.dni_ce}`);
-      matriculasData = mData || [];
-    } catch {
-      // ignore table missing
-    }
+    // 3. Las matrículas viven centralizadas en `profiles.diplomados` y `profiles.cursos`
+    const matriculasData: any[] = [];
 
-    const esAdmin = profile.role === 'ADMIN' || profile.role === 'SUPERADMIN';
+    const esAdmin = Boolean(profile.roles?.administrativo);
     if (esAdmin) {
       profile.paquete_adquirido = profile.paquete_adquirido || 'FULL';
       profile.cuotas_pagadas = profile.cuotas_pagadas || 6;
@@ -244,7 +295,7 @@ export async function GET() {
         }))
       }];
     }
-    const cursos_json = parseCursosFromProfile(profile);
+    let cursos_json = parseCursosFromProfile(profile);
 
     const dipTitulosProfile: string[] = [];
     if (profile.diplomado_1) dipTitulosProfile.push(profile.diplomado_1);
@@ -253,50 +304,67 @@ export async function GET() {
       const t = d.titulo || d.slug;
       if (t && !dipTitulosProfile.includes(t)) dipTitulosProfile.push(t);
     });
-    dipTitulosProfile.forEach((dt) => {
-      const tr = obtenerTallerParaDiplomado(dt);
-      if (!cursos_json.some(c => c.id === tr.id || c.codigo === tr.codigo)) {
+
+    // Inyectar el taller que viene incluido en cada diplomado matriculado
+    dipTitulosProfile.forEach(dipTitulo => {
+      const taller = obtenerTallerParaDiplomado(dipTitulo);
+      if (taller && !cursos_json.some((c: any) => c.id === taller.id || c.codigo === taller.codigo)) {
         cursos_json.push({
-          id: tr.id,
-          codigo: tr.codigo,
-          titulo: tr.titulo,
+          id: taller.id,
+          codigo: taller.codigo,
+          titulo: taller.titulo,
+          tipo: 'TALLER',
+          categoria: 'Taller',
+          esRegalo: true,
+          duracion: taller.duracion,
+          imagen: taller.imagen,
+          color: 'slate',
           nota: 0,
           completado: false,
           avance: 0,
-          categoria: tr.categoria,
-          duracion: tr.duracion,
-          horas: tr.horas
+          leccionesTotal: 1,
+          leccionesCompletadas: 0,
+          activo: true
         });
       }
     });
 
-    // Cálculo centralizado de Créditos EDUMIN
-    const creditosExtra = parseCreditosExtraFromProfile(profile);
-    const eduminCredits = esAdmin 
-      ? {
-          paquete: 'ILIMITADO' as const,
-          esContado: true,
-          cuotasPagadas: 5,
-          cuotasTotales: 5,
-          diplomados: { contratados: 10, liberados: 10, consumidos: 0, disponibles: 10 },
-          cursos: { contratados: 15, liberados: 15, consumidos: 0, disponibles: 15 },
-          total: { contratados: 25, liberados: 25, consumidos: 0, disponibles: 25 }
-        }
-      : calculateEduminCredits({
-          paqueteAdquirido: profile.paquete_adquirido || 'COMPLETO',
-          cuotasPagadas: profile.cuotas_pagadas || 1,
-          cuotasTotales: profile.cuotas_totales || (profile.paquete_adquirido === 'ILIMITADO' ? 5 : 3),
-          tipoPago: profile.tipo_pago || (profile.cuotas_pagadas >= 3 ? 'CONTADO' : 'CUOTAS'),
-          diplomadosConsumidos: profile.cupos_diplomados || Math.max(1, diplomados_json.length),
-          cursosConsumidos: profile.cupos_cursos || cursos_json.length,
-          creditosExtraDiplomados: creditosExtra.creditosExtraDiplomados,
-          creditosExtraCursos: creditosExtra.creditosExtraCursos
-        });
+    cursos_json = await enriquecerCursosConTipoCatalogo(admin, cursos_json);
+
+    // Cálculo centralizado de Créditos EDUMIN desde `profiles.cupos_creditos`
+    const cupos = parseCuposCreditosFromProfile(profile);
+    const tieneDatosEstudiante = Boolean(
+      profile.paquete_adquirido || 
+      (profile.diplomados && profile.diplomados !== '[]' && profile.diplomados !== '') ||
+      cupos.diplomados.adicionales > 0 ||
+      cupos.cursos.adicionales > 0
+    );
+
+    const paymentState = derivePaymentStateForCredits({
+      pagos: rawPagos,
+      profile,
+      esAdminSinDatos: esAdmin && !tieneDatosEstudiante,
+    });
+
+    const eduminCredits = calculateEduminCredits({
+      paqueteAdquirido: profile.paquete_adquirido || (esAdmin && !tieneDatosEstudiante ? 'ILIMITADO' : 'COMPLETO'),
+      cuotasPagadas: paymentState.cuotasPagadas,
+      cuotasTotales: paymentState.cuotasTotales,
+      tipoPago: paymentState.tipoPago,
+      diplomadosConsumidos: cupos.diplomados.canjeados,
+      cursosConsumidos: filtrarCursosReales(cursos_json).length,
+      creditosExtraDiplomados: cupos.diplomados.adicionales,
+      creditosExtraCursos: cupos.cursos.adicionales
+    });
 
     return NextResponse.json({
       user,
       profile: {
         ...profile,
+        role: getPrimaryRoleFromProfile(profile),
+        cuotas_pagadas: paymentState.cuotasPagadas,
+        cuotas_totales: paymentState.cuotasTotales,
+        tipo_pago: paymentState.tipoPago,
         diplomados_json,
         cursos_json
       },
