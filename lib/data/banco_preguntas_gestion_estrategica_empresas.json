@@ -2,7 +2,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de operaciones industriales en minería instala sensores IoT de alta frecuencia para monitorear presión y temperatura en tiempo real y predecir fallas mecánicas. A medida que la red de sensores escala, la infraestructura local en Excel colapsa por la carga de datos. ¿Cuál es el cambio arquitectónico primario que permite gestionar la velocidad y el volumen masivo manteniendo la capacidad de ejecutarse en tiempo real?",
@@ -39,7 +39,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una entidad microfinanciera analiza el comportamiento crediticio de un millón de clientes utilizando modelos de regresión. Durante el preprocesamiento, detectan registros con variables faltantes y la necesidad de combinar transacciones bancarias en tiempo real con datos históricos. ¿Cómo aplica la dimensión de 'Veracidad' de las 5V de Big Data en este contexto?",
@@ -76,7 +76,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa busca integrar sus sistemas de Punto de Venta (POS), Planificación de Recursos Empresariales (ERP) y Gestión de Relaciones con Clientes (CRM) dentro de un ecosistema analítico de Big Data. ¿Qué características y aportes analíticos corresponden a estos sistemas transaccionales?",
@@ -113,7 +113,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de analistas necesita procesar streaming continuo de datos desde transmisores SCADA en una planta hidroeléctrica, donde la latencia de respuesta para activar alarmas automáticas debe ser mínima. Al evaluar entre Apache Hadoop y Apache Spark, ¿por qué Spark es la elección técnicamente adecuada para esta necesidad?",
@@ -150,7 +150,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa de logística transporta carga sensible mediante una flota monitoreada por GPS y sensores biométricos de los conductores. Para cumplir con normativas de protección de datos personales (como la Ley 29733) y mitigar riesgos de seguridad operacional, ¿qué medidas deben aplicarse en el diseño del pipeline de ingestión?",
@@ -187,7 +187,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la auditoría de un pipeline IoT que recolecta lecturas de temperatura industrial, se requiere verificar si los registros recibidos en la base de datos sufrieron manipulaciones durante el trayecto desde el sensor. ¿Cómo implementa el hashing esta verificación dentro del flujo?",
@@ -224,7 +224,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un ingeniero configura la recolección automática en una planta industrial. Los PLCs transmiten métricas mediante un servidor OPC, mientras que sensores ambientales dispersos utilizan un protocolo ligero basado en el modelo publicador-suscriptor hacia un broker. ¿Qué protocolo es el más adecuado para estos sensores IoT dispersos y qué principio de datos se vulnera si los registros almacenados no se utilizan para tomar decisiones?",
@@ -261,7 +261,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un analista utiliza la herramienta Orange Data Mining para explorar interactivamente la base de datos de producción de una planta. ¿Qué ventajas y limitaciones técnicas caracterizan a Orange en el marco de la analítica de datos?",
@@ -298,7 +298,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se busca automatizar la extracción periódica de tablas de producción minera publicadas en un portal web público que no ofrece una API oficial. ¿Cuál es el método inicial más directo en la librería Pandas y cuál es la alternativa recomendada si la estructura HTML del sitio es muy compleja?",
@@ -335,7 +335,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un analista consume una API REST meteorológica comercial para integrar datos de radiación solar en tiempo real. Durante la ejecución en bucle de su script en Python, el servidor retorna la respuesta HTTP `status_code == 429`. ¿Qué significa este código y cómo se debe ajustar el procedimiento?",
@@ -372,7 +372,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al explorar un dataset censal de empleo y demografía (CPS), el analista nota que la variable `Industry` presenta un porcentaje elevado de valores faltantes (NA), mientras que raza y ciudadanía están completas. Aplicando los principios de calidad y contexto, ¿qué consideraciones deben guiar el tratamiento de estos datos ausentes?",
@@ -409,7 +409,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se requiere automatizar la ingesta periódica de indicadores macroeconómicos desde un servicio web que devuelve respuestas estructuradas en formato JSON anidado. ¿Qué función de la librería Pandas permite aplanar este JSON anidado directamente en un DataFrame de dos dimensiones?",
@@ -446,7 +446,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un arquitecto de datos debe seleccionar el repositorio central para una empresa minera. Se requiere almacenar datos brutos heterogéneos (imágenes de drones, audios, archivos CSV) y, al mismo tiempo, ejecutar consultas analíticas de alta velocidad con esquemas gobernados y transacciones ACID sin duplicar los repositorios físicos. ¿Qué arquitectura de almacenamiento moderna cumple con esta definición híbrida?",
@@ -483,7 +483,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un pipeline analítico procesa terabytes de datos diarios. El equipo compara el uso de archivos planos CSV frente al formato columnar Parquet y el formato orientado a filas Avro. ¿Qué afirmaciones describen correctamente las características de estos formatos?",
@@ -520,7 +520,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa de telecomunicaciones necesita procesar dos flujos: la detección inmediata de fraudes en llamadas en curso y el procesamiento consolidado mensual de la facturación histórica. Para ello evalúa las arquitecturas de datos Lambda y Kappa. ¿Qué diferencia fundamental define la elección entre ambas?",
@@ -557,7 +557,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al construir un Data Lake en la nube (como Google Cloud Storage o Amazon S3) para procesar datos con PySpark y Pandas, ¿qué buenas prácticas de seguridad, estructuración y control operativo deben implementarse?",
@@ -594,7 +594,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un análisis estratégico se busca relacionar el nivel educativo y la tasa de desempleo por estado. El analista dispone de la variable categórica ordinal de educación ('no high school', 'high school', 'some college', 'associate degree') y desea obtener una métrica numérica promediable para compararla. ¿Qué técnica de transformación en Pandas permite lograr esta medición y qué tipo de análisis constituye?",
@@ -631,7 +631,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo de analistas explora la distribución de trabajadores por sector industrial utilizando la función `crosstab` de Pandas. ¿Qué ventajas aporta calcular proporciones normalizadas en la tabla cruzada en lugar de utilizar conteos absolutos?",
@@ -668,7 +668,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una cadena de tiendas evalúa comercializar insumos agrícolas y herramientas rurales. Al analizar la variable `Metro Area Code` en el dataset demográfico censal, detectan que el 26% de los registros presenta valor faltante (NA). Aplicando el principio de contexto, ¿qué conclusión de negocio se deriva de este hallazgo?",
@@ -705,7 +705,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un director de operaciones requiere distinguir la articulación adecuada entre Data Science, Big Data y Data Analytics para definir la asignación de recursos en su gerencia. ¿Cuál es la delimitación conceptual correcta entre estas tres áreas?",
@@ -742,7 +742,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una organización desea evolucionar su arquitectura analítica desde reportes descriptivos hacia capacidades predictivas y prescriptivas para la gestión crediticia. ¿Qué principios y herramientas caracterizan a estas etapas analíticas avanzadas?",
@@ -779,7 +779,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el pipeline analítico de una plataforma e-commerce, se estructuran las 5 etapas estándar de la arquitectura moderna de Big Data. ¿Cuál es la secuencia lógica y funcional de estas etapas dentro de la canalización de datos?",
@@ -816,7 +816,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de datos debe integrar streams heterogéneos de eventos en tiempo real (audio de call center, video de seguridad y telemetría) mediante flujos dinámicos. Buscan una herramienta de código abierto con interfaz gráfica que permita diseñar el enrutamiento y transformación sin escribir código. ¿Qué herramienta de la suite Apache debe seleccionarse?",
@@ -853,7 +853,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una institución financiera decide migrar un almacenamiento de diez años de transacciones alojadas en una base de datos relacional PostgreSQL hacia un clúster de Hadoop (HDFS) para ejecutar análisis por lotes. ¿Qué herramienta del ecosistema Apache está específicamente optimizada para realizar esta transferencia masiva basada en consultas relacionales?",
@@ -890,7 +890,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al comparar Apache NiFi y Apache Sqoop para el diseño de la arquitectura de ingestión corporativa, el equipo evalúa las diferencias operativas y de rendimiento entre ambas soluciones. ¿Qué afirmaciones representan comparaciones técnicamente correctas?",
@@ -927,7 +927,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la gestión estratégica y el paradigma de Big Data, ¿cuál de las siguientes opciones describe con precisión el concepto de 'Veracidad' dentro de las 5V?",
@@ -964,7 +964,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa busca categorizar sus activos de información antes de diseñar su arquitectura de datos. ¿Cuáles de los siguientes elementos corresponden a datos semiestructurados o no estructurados?",
@@ -1001,7 +1001,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al escalar una infraestructura de Big Data para procesar grandes volúmenes de información, ¿por qué se prefiere el almacenamiento distribuido (escalabilidad horizontal) sobre el escalamiento vertical?",
@@ -1038,7 +1038,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una corporación analiza si utilizar Apache Hadoop o Apache Spark para su nueva plataforma de analítica. ¿En qué escenario técnico es Apache Spark sustancialmente superior a Hadoop?",
@@ -1075,7 +1075,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En un flujo de ingesta de datos IoT de sensores industriales, se requiere asegurar que las lecturas no hayan sido manipuladas o alteradas durante la transmisión. ¿Qué técnica permite verificar la integridad de estos registros?",
@@ -1112,7 +1112,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el modelo de programación distribuida MapReduce, ¿cuáles de las siguientes funciones describen adecuadamente sus etapas fundamentales de procesamiento?",
@@ -1149,7 +1149,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al diseñar una estrategia analítica empresarial, se deben observar tres principios esenciales sobre los datos. ¿Cuáles de las siguientes afirmaciones reflejan adecuadamente estos principios?",
@@ -1186,7 +1186,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para integrar datos en tiempo real provenientes de autómatas programables (PLC) e instrumentos de planta hacia plataformas analíticas, ¿cuál es el estándar cliente-servidor industrial ampliamente utilizado?",
@@ -1223,7 +1223,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al trabajar en un prototipo analítico rápido utilizando Orange Data Mining para explorar mediciones de masa en una línea de envasado, ¿cuál es la secuencia metodológica antes de interpretar distribuciones?",
@@ -1260,7 +1260,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al automatizar la extracción de información externa desde servicios web mediante APIs, ¿qué mecanismo implementan comúnmente los proveedores para evitar la saturación de sus infraestructura?",
@@ -1297,7 +1297,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante la etapa de exploración de un dataset censal y demográfico, se identifican diversos valores faltantes (NA). ¿Cuáles de las siguientes decisiones de preparación son metodológicamente válidas?",
@@ -1334,7 +1334,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En un estudio basado en microdatos censales, se requiere evaluar formalmente la hipótesis de si un subgrupo demográfico está sobre-representado en cierto sector industrial. ¿Cuál es el procedimiento riguroso?",
@@ -1371,7 +1371,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para optimizar la velocidad de lectura y reducir costos en un Data Lake donde se ejecutan consultas analíticas masivas por columnas sobre petabytes de datos, ¿qué formato es el más adecuado?",
@@ -1408,7 +1408,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una organización busca integrar datos estructurados financieros con datos no estructurados de telemetría e imágenes, requiriendo gobernanza, esquemas flexibles y consultas ACID. ¿Qué arquitectura es la más idónea?",
@@ -1445,7 +1445,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Una arquitectura de datos moderna para Big Data requiere articular distintas capas analíticas. ¿Cuáles de los siguientes componentes y herramientas corresponden a las etapas de esta arquitectura?",
@@ -1482,7 +1482,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una corporación retail analiza sus ventas históricas y descubre que en tres regiones las ventas cayeron un 25%. Si el equipo evalúa correlaciones para entender las causas de esta disminución, ¿qué tipo de análisis ejecuta?",
@@ -1519,7 +1519,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco del análisis de datos con Pandas, se desea evaluar la relación entre el nivel educativo (categoría ordinal) y la condición de empleo por región. ¿Qué procedimiento permite este estudio cuantitativo?",
@@ -1556,7 +1556,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para que un análisis de datos se traduzca en decisiones estratégicas de alto impacto en una organización, ¿cuáles de las siguientes condiciones metodológicas deben cumplirse al transformar patrones en hallazgos?",
@@ -1593,7 +1593,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la relación conceptual adecuada entre Data Science, Data Analytics y Big Data según la arquitectura disciplinar expuesta en el diplomado?",
@@ -1630,7 +1630,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al diseñar la arquitectura para un sistema de detección de fraudes transaccionales que requiere análisis en tiempo real pero también re-procesamiento de históricos masivos, ¿qué arquitectura es la adecuada?",
@@ -1667,7 +1667,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Cuando las analíticas descriptivas simples resultan insuficientes para resolver un problema complejo de segmentación o predicción, se recurre a técnicas avanzadas. ¿Cuáles de los siguientes métodos son habituales?",
@@ -1704,7 +1704,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una organización de movilidad urbana necesita capturar flujos continuos de datos heterogéneos (video de cámaras, archivos de audio y telemetría) y procesarlos visualmente. ¿Qué herramienta es adecuada para esta ingesta?",
@@ -1741,7 +1741,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un banco requiere ejecutar diariamente una extracción masiva por lotes desde su base de datos relacional transaccional (RDBMS) hacia su clúster Hadoop (HDFS) para análisis posterior. ¿Qué herramienta está orientada a este propósito?",
@@ -1778,7 +1778,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al seleccionar una herramienta entre Apache NiFi y Apache Sqoop, ¿cuál es el criterio diferenciador clave basado en la naturaleza de los datos y el modo de procesamiento?",
@@ -1815,7 +1815,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para que la adopción de Big Data en grandes corporaciones o PYMEs sea exitosa y sostenible, ¿cuáles de las siguientes dimensiones de gobernanza y cultura de datos son indispensables?",
@@ -1852,7 +1852,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un analista de retención en una empresa de telecomunicaciones construye un Árbol de Decisión para predecir el abandono (churn). Al analizar las reglas generadas, observa que un segmento de clientes presenta un elevado número de quejas del servicio pero una facturación mensual baja (< 100 USD), y la predicción indica que el cliente 'se queda'. ¿Cuál es la interpretación técnica y operativa más precisa de este hallazgo?",
@@ -1889,7 +1889,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa comercializadora desea simular un dataset sintético mensual para predecir ventas considerando el impacto estacional de las lluvias. ¿Qué prácticas metodológicas son indispensables al generar y estructurar esta serie temporal para modelado predictivo?",
@@ -1926,7 +1926,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la fase de validación de un modelo de Regresión Logística interactivo en Python para evaluar el riesgo crediticio, se configura el parámetro max\\_iter = 1000. ¿Cuál es la razón técnica principal para ajustar este valor respecto al valor predeterminado (100)?",
@@ -1963,7 +1963,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de analistas de datos presenta un informe gerencial afirmando que 'aumentar la inversión publicitaria garantiza un incremento exacto del 15% en ventas', basándose únicamente en una línea de tendencia simple dibujada entre ambas variables. ¿Qué error de interpretación metodológica comete el equipo según las buenas prácticas de análisis predictivo?",
@@ -2000,7 +2000,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al realizar el Análisis Exploratorio de Datos (EDA) sobre la base histórica del Titanic (891 registros), se detecta que la variable 'Age' contiene 177 valores nulos, mientras que la variable 'Cabin' presenta 687 valores nulos. ¿Cuál es la estrategia de tratamiento de datos más adecuada para maximizar el poder predictivo del modelo?",
@@ -2037,7 +2037,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la preparación del dataset del Titanic antes de entrenar un modelo supervisado, el equipo decide transformar variables categóricas y evaluar su impacto. ¿Qué decisiones de ingeniería de características son técnicamente válidas según lo expuesto en el diplomado?",
@@ -2074,7 +2074,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Después de limpiar un dataframe y entrenar un modelo predictivo en Google Colab, la gerencia solicita poder ejecutar predicciones en un servidor local desacoplado sin volver a ejecutar todo el script de análisis exploratorio. ¿Cuál es el procedimiento técnico estándar para lograr esta portabilidad?",
@@ -2111,7 +2111,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Para seleccionar las variables predictoras del modelo de supervivencia, se calcula la matriz de correlación de Pearson y se visualiza con un mapa de calor (heatmap). Se observa que 'PassengerId' presenta una correlación de -0.005 con 'Survived', mientras que 'Sex' tiene una correlación de -0.54. Si se establece un umbral de selección de |r| \\ge 0.10, ¿cuál debe ser la decisión sobre estas variables?",
@@ -2148,7 +2148,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al ejecutar la función `train_test_split(X, y, test_size=0.20, random_state=2024)`, ¿cuál es el impacto técnico exacto de configurar el parámetro `random_state` con un valor entero fijo?",
@@ -2185,7 +2185,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un modelo de clasificación supervisada entrenado sobre una base de datos desbalanceada arroja un Accuracy = 92%, pero su F1-score para la clase minoritaria de interés es de apenas 18%. ¿Qué análisis e implicaciones técnicas se derivan de esta discrepancia de métricas?",
@@ -2222,7 +2222,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Para poner a disposición de los usuarios de negocio el modelo predictivo del Titanic sin requerir que ejecuten código en Python, el equipo desarrolla una aplicación con la librería `Streamlit`. ¿Cuál es la arquitectura funcional de esta aplicación?",
@@ -2259,7 +2259,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una cadena de tiendas departamentales busca implementar un sistema de recomendación para su plataforma e-commerce. Evalúan la técnica de **Filtrado Colaborativo basado en Usuarios** frente al **Filtrado Basado en Contenido**. ¿Qué limitación propia del Filtrado Basado en Contenido debe considerar el equipo de arquitectura de datos?",
@@ -2296,7 +2296,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un analista de prevención de fraude bancario compara los algoritmos de clustering K-Means y DBSCAN para detectar transacciones anómalas en tarjetas de crédito. ¿Qué diferencias operativas y técnicas entre ambos métodos son correctas?",
@@ -2333,7 +2333,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el desarrollo de una red neuronal convolucional en Keras/TensorFlow para clasificar imágenes de inspección de calidad (piezas en buen estado vs. defectuosas), se aplica la siguiente transformación sobre las matrices de píxeles: `X = X / 255.0`. ¿Cuál es la justificación matemática de este paso de preprocesamiento?",
@@ -2370,7 +2370,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el entrenamiento de una red neuronal con Keras para un problema de clasificación de imágenes, la herramienta **TensorBoard** muestra que la pérdida de entrenamiento (loss) disminuye continuamente hacia cero, mientras que la pérdida de validación (val\\_loss) comienza a crecer notablemente a partir de la época 15. ¿Qué diagnóstico técnico se deriva de este comportamiento y cuál es la solución operativa adecuada?",
@@ -2407,7 +2407,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la optimización de procesos basada en datos mediante el ciclo **PDCA (Planificar-Hacer-Verificar-Actuar)**, una planta industrial integra un modelo predictivo para anticipar cuellos de botella en la línea de ensamble. ¿En qué etapa del ciclo se ubica la implementación de una **prueba piloto** a pequeña escala para validar el modelo sin poner en riesgo la operación global?",
@@ -2444,7 +2444,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo de analítica proyecta la demanda mensual de un retail evaluando un modelo de regresión. Obtienen un MAE = 150\\ unidades y un RMSE = 420\\ unidades. ¿Qué interpretación diagnóstica aportan estas métricas de error combinadas sobre las predicciones del modelo?",
@@ -2481,7 +2481,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un sistema de mantenimiento predictivo para turbinas industriales, se instalan sensores de vibración y temperatura. Dado que los fallos reales en la maquinaria ocurren con muy poca frecuencia (< 1% de las lecturas), el equipo decide implementar el algoritmo **Isolation Forest**. ¿Cuál es el fundamento de este algoritmo para la detección de anomalías operativas?",
@@ -2518,7 +2518,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la resolución del caso práctico de deserción de clientes (*telco churn*) con un dataframe masivo (~185,000 registros), el análisis revela que únicamente el 15% de los clientes se han fugado (1), mientras que el 85% permanece retenido (0). Un modelo *baseline* arroja un Accuracy = 85%. ¿Por qué la gerencia **no** debe validar este modelo como exitoso?",
@@ -2555,7 +2555,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el pipeline de preparación de datos para el modelo de abandono en telecomunicaciones, se aplican técnicas de limpieza y selección de predictores. ¿Qué operaciones de filtrado y transformación descritas en el caso de estudio son metódicamente correctas?",
@@ -2592,7 +2592,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al integrar el modelo serializado de Churn (`.pkl`) dentro de una interfaz gráfica desarrollada para los analistas de la central telefónica, el sistema permite mover barras deslizantes (sliders) con los datos del cliente y muestra al instante un valor numérico entre 0.00 y 1.00 acompañado de un mensaje. ¿A qué componente técnico corresponde este valor cuantitativo continuo?",
@@ -2629,7 +2629,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de Process Mining (Minería de Procesos), una entidad bancaria extrae los registros de auditoría (event\\ logs) de su sistema de aprobación de créditos. Para poder procesar esta traza de eventos mediante librerías como `pm4py`, ¿cuáles son las tres columnas mínimas obligatorias que debe contener la estructura de datos?",
@@ -2666,7 +2666,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un analista de procesos evalúa diferentes algoritmos de descubrimiento de procesos sobre los logs de atención a clientes. Compara **Alpha Miner**, **Inductive Miner** y **Heuristic Miner**. ¿Qué características y diferencias metodológicas entre estos algoritmos son correctas?",
@@ -2703,7 +2703,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al realizar la verificación de conformidad (*conformance checking*) reproduciendo las trazas de un proceso real sobre una Red de Petri construida, el sistema arroja una métrica de **Fitness = 0.65** y una **Precisión = 0.98**. ¿Cuál es la interpretación de este escenario de evaluación y qué ajuste estratégico se sugiere?",
@@ -2740,7 +2740,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una organización del sector logístico busca automatizar la detección de desviaciones operativas en tiempo real. Configura un pipeline que ingiere datos desde Apache Kafka, ejecuta algoritmos en `pm4py`, calcula la calidad del modelo mediante F-Measure (FM\\ score) y genera alertas inmediatas. ¿Qué ventaja operativa clave aporta esta integración avanzada entre Minería de Procesos y Automatización?",
@@ -2777,7 +2777,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de los métodos predictivos para la toma de decisiones, ¿cuál es la diferencia conceptual y funcional entre un Árbol de Decisión y la Regresión Logística según lo expuesto en la Clase 09?",
@@ -2814,7 +2814,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el ciclo de vida de un proyecto predictivo, ¿cuál es la recomendación metodológica correcta referente al particionado de datos y la configuración del entrenamiento en Regresión Logística?",
@@ -2851,7 +2851,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Según lo desarrollado en la Clase 09, ¿cuáles de las siguientes acciones constituyen decisiones analíticas o buenas prácticas operativas en proyectos de análisis predictivo?",
@@ -2888,7 +2888,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de la jerarquía de la Inteligencia Artificial y el Machine Learning revisada en la Clase 10, ¿cómo se tipifica el problema planteado al analizar el dataset del Titanic para predecir la supervivencia (Survived = 0/1)?",
@@ -2925,7 +2925,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la fase de preprocesamiento y limpieza del dataset Titanic, ¿cuál fue el tratamiento y criterio técnico aplicado ante los valores nulos detectados en las columnas Age y Cabin?",
@@ -2962,7 +2962,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "A partir del Análisis Exploratorio de Datos (EDA) realizado sobre el dataset Titanic en la Clase 10, ¿cuáles de las siguientes observaciones reflejan cuantitativamente los hallazgos explicativos del evento?",
@@ -2999,7 +2999,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la preparación de variables categóricas para modelos numéricos (Clase 10), ¿cuál es la razón técnica para transformar la columna Sex a una representación binaria numérica (ej. Sex2: 1 para masculino, 0 para femenino)?",
@@ -3036,7 +3036,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al realizar la selección de características basada en la matriz de correlación en la Clase 11, ¿qué criterio técnico justifica la elección entre el coeficiente de Pearson y el de Spearman?",
@@ -3073,7 +3073,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el entrenamiento de un modelo supervisado de clasificación (Clase 11), ¿cuál es el propósito de utilizar el parámetro random_state al invocar train_test_split?",
@@ -3110,7 +3110,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar un modelo de clasificación binaria mediante su Matriz de Confusión (Clase 11), ¿cómo se define la métrica F1-score y cuál es su relevancia práctica?",
@@ -3147,7 +3147,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el ámbito de la analítica no supervisada abordada en las Clases 11 y 12, ¿cuáles de las siguientes características diferencian al algoritmo DBSCAN de K-Means?",
@@ -3184,7 +3184,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Según el panorama de algoritmos de clasificación revisado en la Clase 12, ¿cuál es la ventaja operativa de Random Forest sobre un Árbol de Decisión individual en problemas empresariales?",
@@ -3221,7 +3221,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de los Sistemas de Recomendación (Clase 12), ¿cuál es la limitación principal del enfoque de Recomendación Basada en Contenido en comparación con el Filtrado Colaborativo?",
@@ -3258,7 +3258,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el pipeline práctico de preparación de imágenes para redes neuronales en TensorFlow/Keras (Clase 12 - Proyecto Perros y Gatos), ¿cuál es el objetivo de redimensionar las fotos (ej. a 50x50), convertirlas a escala de grises y dividir los píxeles entre 255?",
@@ -3295,7 +3295,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Con base en la Clase 12 sobre TensorFlow y Keras, ¿cuáles de los siguientes enunciados describen adecuadamente los componentes de monitorización, almacenamiento e interpretabilidad de estos modelos?",
@@ -3332,7 +3332,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la Optimización de Procesos basada en datos (Clase 13), ¿cómo interactúa el ciclo PDCA (Planificar-Hacer-Verificar-Actuar) con las herramientas de Machine Learning?",
@@ -3369,7 +3369,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Con respecto a la estructuración de indicadores en las empresas (Clase 13), ¿cuál es una característica distintiva de un KPI SMART y cuál es su tipificación jerárquica nivel táctico?",
@@ -3406,7 +3406,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la evaluación de modelos de regresión lineal para series de tiempo y pronósticos de venta (Clase 13), ¿cuáles de las siguientes métricas de error y diagnósticos son técnicamente válidos?",
@@ -3443,7 +3443,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el caso práctico de predicción de abandono de clientes (Churn) en telecomunicaciones (Clase 14), el dataset presentó un desbalance masivo (~84% fugados vs ~16% retenidos o viceversa). ¿Qué precaución metodológica se debe tener al evaluar el modelo?",
@@ -3480,7 +3480,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el filtrado y selección de predictores en el caso Telco (Clase 14), ¿cuál fue el criterio aplicado para descartar variables como Customer ID, DNI, o atributos con correlación cercana a 0 (ej. tipo de dispositivo = 0.008)?",
@@ -3517,7 +3517,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Acerca de la implementación del prototipo interactivo en Streamlit y la serialización con Joblib (Clase 14), ¿cuáles de los siguientes pasos forman parte de la arquitectura técnica estándar para despliegue de modelos?",
@@ -3554,7 +3554,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el desarrollo de un modelo de Regresión Logística (Clase 14), ¿cómo se interpreta operativamente la salida obtenida mediante la función predict_proba() para la toma de decisiones de negocio?",
@@ -3591,7 +3591,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de Process Mining (Minería de Procesos) presentado en la Clase Adicional, ¿cuáles son los tres atributos mínimos e indispensables que debe contener un registro de eventos (Event Log)?",
@@ -3628,7 +3628,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al comparar los algoritmos de descubrimiento de procesos Alpha Miner, Inductive Miner y Heuristic Miner (Clase Adicional), ¿cuál es la fortaleza principal del Heuristic Miner frente a datos del mundo real que presentan ruido y comportamientos infrecuentes?",
@@ -3665,7 +3665,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Con base en la Clase Adicional sobre Minería de Procesos, evaluación de modelos con pm4py y métricas de calidad, ¿cuáles de las siguientes afirmaciones reflejan los conceptos y el trade-off de validación de procesos?",
@@ -3702,7 +3702,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa de e-commerce planea desplegar un modelo de recomendación que responderá a millones de peticiones por día. Al evaluar el costo total de propiedad (TCO), el equipo nota que un modelo basado en Transformers profundos ofrece una mejora marginal de precisión del 1.2% frente a un modelo ligero de clasificación. Considerando la economía de inferencia y las restricciones operativas, ¿qué decisión estratégica se alinea mejor con las recomendaciones operativas del pipeline?",
@@ -3739,7 +3739,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un banco implementa una red neuronal multicapa (MLP) para el scoring crediticio de personas. Para entrenarla rápidamente, el equipo crea un target sintético aplicando la regla rígida: 'Aprobar si Deuda/Ingreso < 0.3 y Pagos Atrasados == 0'. Al evaluar el modelo en un piloto con clientes reales, el rendimiento decae drásticamente. ¿A qué se debe principalmente este problema de discrepancia?",
@@ -3776,7 +3776,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una planta minera desea implementar un sistema de mantenimiento predictivo para motores críticos mediante redes neuronales. Sin embargo, la frecuencia histórica de fallas reales es inferior al 0.05% de los registros operativos. ¿Qué estrategias metodológicas se recomiendan para mitigar este obstáculo en el pipeline de datos?",
@@ -3813,7 +3813,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un área de operaciones logísticas procesa diariamente miles de reportes de fallas textuales escritos por supervisores de planta. Se requiere clasificar automáticamente si el ticket pertenece al área Mecánica, Eléctrica o Hidráulica para procesarlo en menos de dos segundos. ¿Cuál arquitectura resulta más adecuada considerando el balance entre agilidad y captura del contexto?",
@@ -3850,7 +3850,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al implementar asistentes conversacionales basados en modelos preentrenados (LLMs) dentro del sector farmacéutico o médico, se exigen salvaguardas éticas y operativas estrictas. ¿Qué prácticas reducen efectivamente los riesgos asociados a 'alucinaciones' e inexactitudes normativas?",
@@ -3887,7 +3887,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el preprocesamiento de reseñas de clientes para análisis de sentimientos con una red LSTM en Keras, el equipo aplica las funciones `tokenizer.fit_on_texts()`, `texts_to_sequences()` y `pad_sequences()`. Si se configura un `maxlen=50` con `padding='post'`, ¿cuál es el efecto técnico exacto sobre las secuencias de entrada?",
@@ -3924,7 +3924,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un grupo industrial busca optimizar el rendimiento de un horno eléctrico considerando variables termodinámicas físicas e interacciones imprevistas con el operador humano. ¿Cómo deben combinarse los enfoques de modelado determinístico y probabilístico para este caso?",
@@ -3961,7 +3961,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar un portafolio de proyectos de inversión energética en un entorno volátil, el equipo financiero aplica un análisis de sensibilidad frente al riesgo país. Observan que variaciones pequeñas en el riesgo alteran drásticamente el Valor Actual Neto (VAN). Ante este nivel de incertidumbre, ¿qué tipo de estrategia de decisión estratégica se recomienda adoptar?",
@@ -3998,7 +3998,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En una simulación de Monte Carlo con 1,000 corridas para evaluar el ROI ajustado de una cartera de 100 proyectos de inversión, se observa que el 40% de los proyectos que mostraban ROI estimado positivo pasan a tener un ROI ajustado negativo tras incorporar volatilidad. ¿Cómo deben interpretarse estos resultados para la toma de decisiones?",
@@ -4035,7 +4035,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una cadena minorista desea modernizar su Cuadro de Mando Integral para convertirlo en un 'Dashboard 4.0'. ¿Cuáles son las tres condiciones tecnológicas esenciales que deben integrarse para cumplir con este concepto según la metodología aprendida?",
@@ -4072,7 +4072,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al diseñar una vista resumen para comparar 4 tiendas retail a través de 5 KPIs con diferentes unidades (Margen%, NPS, Tiempo de Entrega en horas, Capacitación en horas, Tasa de Reclamos%), el analista opta por un gráfico Radar. Sin embargo, los directivos se confunden con la interpretación. ¿Qué paso técnico previo se omitió o qué alternativa visual es más robusta?",
@@ -4109,7 +4109,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un fondo de inversión utiliza una simulación de Monte Carlo en Python para evaluar un portafolio de activos que incluye bonos, acciones y criptomonedas. Al analizar los histogramas de retornos simulados y las métricas de riesgo, ¿qué elementos son determinantes para ajustar la asignación de capital?",
@@ -4146,7 +4146,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un modelo de clasificación con Redes Neuronales para predecir la rotación de empleados en una empresa de tecnología, la matriz de confusión revela un alto número de Falsos Negativos (empleados que el modelo predijo que se quedarían, pero que terminaron renunciando). ¿Qué impacto operativo produce este error y qué ajuste debe realizarse?",
@@ -4183,7 +4183,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un modelo de Deep Learning diseñado para predecir las ventas semanales por tienda en una cadena de retail utiliza variables como 'Precio', 'Promoción' (0/1), 'Categoría de Tienda' (Urbana/Rural) y 'Mes'. Durante el preprocesamiento, ¿cuál es el procedimiento estándar correcto con pandas y scikit-learn antes de alimentar la red?",
@@ -4220,7 +4220,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo de analistas utiliza Orange Data Mining para experimentar rápidamente con clasificadores de fallas en equipos mineros antes de escribir código en Python. ¿Cuáles son las ventajas operativas de incluir Orange dentro de la fase de experimentación del pipeline?",
@@ -4257,7 +4257,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una planta embotelladora, un modelo de Deep Learning ajusta automáticamente la velocidad de la línea de producción basándose en el nivel de inventario, demanda proyectada y riesgo de falla de las máquinas. Sin embargo, se detecta que ante un corte momentáneo de red, el sistema adaptativo comenzó a acelerar las máquinas sin control. ¿Qué falla de diseño provocó esta contingencia y cómo debe corregirse?",
@@ -4294,7 +4294,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa de e-commerce busca predecir el riesgo binario de 'Rotura de Stock' en sus depósitos mediante una red neuronal MLP secuencial en Keras. El conjunto de datos presenta 98% de casos sin rotura y solo 2% con rotura de stock. Tras el primer entrenamiento, la precisión (accuracy) reporta un 98%, pero el modelo no detecta ninguna rotura real. ¿Qué acción técnica es la adecuada para corregir este comportamiento?",
@@ -4331,7 +4331,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un modelo predictivo de abandono de clientes (churn) en una empresa de servicios fue desplegado con éxito hace seis meses con un F1-score del 88%. Sin embargo, la gerencia nota que durante el último mes la tasa de detección cayó al 55%. ¿Qué factores operativos justifican la necesidad urgente de orquestar un reentrenamiento o retiro del modelo?",
@@ -4368,7 +4368,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se busca construir un detector de fraude en transacciones de tarjetas de crédito utilizando el dataset clásico de Kaggle (284,807 filas, con 492 casos de fraude, aprox. 0.17%). Si se decide aplicar la técnica SMOTE para equilibrar el conjunto de datos, ¿en qué momento del pipeline debe ejecutarse SMOTE para evitar la fuga de datos (data leakage)?",
@@ -4405,7 +4405,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un científico de datos entrena un modelo de clasificación Random Forest para detección de fraude y genera el archivo `modelo.pkl`. Para crear un micro-dashboard interactivo y público de prueba sin costos de nube profesional, decide desplegar un Space en Hugging Face. ¿Cuáles son los tres archivos mínimos obligatorios que debe subir al repositorio de Hugging Face para que la app en Gradio/Streamlit funcione correctamente?",
@@ -4442,7 +4442,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa agrícola busca monitorear la vibración y temperatura de 50 bombas de agua aisladas mediante sensores IoT basándose en microcontroladores ESP32. Para evitar pagar elevados costos de servicios cloud masivos, diseñan una arquitectura local eficiente. ¿Qué componentes y protocolos permiten ejecutar este flujo de inferencia y almacenamiento?",
@@ -4479,7 +4479,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un modelo de Red Neuronal Profunda entrenado para la detección de anomalías en procesos térmicos muestra una pérdida de entrenamiento (`loss`) del 0.02, mientras que la pérdida de validación (`val_loss`) asciende a 0.48 al cabo de 100 épocas. ¿Qué fenómeno ocurre y qué técnica de regularización es adecuada para mitigarlo?",
@@ -4516,7 +4516,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una corporación industrial decide desplegar sus modelos de Deep Learning en la nube utilizando Google Cloud Platform (GCP) e integrar prácticas formales de MLOps. ¿Qué componentes del ecosistema y buenas prácticas garantizan la trazabilidad y automatización del ciclo de vida?",
@@ -4553,7 +4553,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un analista analiza un dataset tabular estructurado de 50,000 registros para predecir el reclamo de seguros. Duda entre utilizar un ensamble de árboles (Gradient Boosting / XGBoost / Random Forest) o desplegar una Red Neuronal Profunda (Deep Learning) con Transformers tabulares. Considerando el rendimiento computacional, tiempo de ajuste y estado del arte para datos tabulares, ¿cuál es la recomendación técnica fundamentada?",
@@ -4590,7 +4590,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Para cumplir con las auditorías en el sector bancario, una entidad debe justificar exactamente cómo un modelo de Machine Learning decide la denegación de préstamos a clientes. ¿Qué criterio operacional se debe aplicar al elegir el modelo de clasificación para garantizar la máxima transparencia exigida por los reguladores?",
@@ -4627,7 +4627,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la preparación de datos para el entrenamiento de un perceptrón multicapa en predicción de ventas, ¿cuál es el propósito operativo fundamental de aplicar la función `train_test_split` con una proporción 80/20 y fijar el parámetro `random_state=42`?",
@@ -4664,7 +4664,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al evaluar el despliegue de redes neuronales en producción, ¿cuáles de las siguientes afirmaciones describen correctamente la relación económica y técnica entre el entrenamiento y la inferencia?",
@@ -4701,7 +4701,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el preprocesamiento de características numéricas antes de alimentar una red neuronal de capas densas, ¿por qué es indispensable aplicar un escalado de variables como `StandardScaler`?",
@@ -4738,7 +4738,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el procesamiento de lenguaje natural (NLP) para análisis de texto empresarial, ¿qué mecanismo estructural permite a las capas LSTM superar las limitaciones de las redes recurrentes tradicionales (RNN simples)?",
@@ -4775,7 +4775,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Dentro del pipeline de preprocesamiento de texto para alimentar un modelo de clasificación de sentimientos con Keras, ¿cuáles de las siguientes tareas son técnicamente obligatorias?",
@@ -4812,7 +4812,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En proyectos donde la escasez de observaciones reales limita el entrenamiento de modelos de clasificación de texto empresarial, ¿qué consideración ética y operativa se debe tener al utilizar datos sintéticos generados por Grandes Modelos de Lenguaje (LLMs)?",
@@ -4849,7 +4849,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la toma de decisiones estratégicas basadas en datos, ¿cuál es la diferencia conceptual clave entre evaluar un escenario bajo 'riesgo' y uno bajo 'incertidumbre'?",
@@ -4886,7 +4886,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al seleccionar herramientas de análisis dentro del ciclo de vida de la ciencia de datos, ¿cuáles de las siguientes características distinguen a los modelos determinísticos de los probabilísticos?",
@@ -4923,7 +4923,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Según las metodologías formales de análisis de sensibilidad descritas por autores como Andrea Saltelli, ¿cuál es el objetivo primordial de aplicar esta técnica sobre un modelo de simulación de negocio?",
@@ -4960,7 +4960,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la evolución de un Cuadro de Mando Integral (CMI) hacia un Dashboard 4.0, ¿cuáles son las cuatro dimensiones estratégicas tradicionales que deben integrarse dinámicamente con los datos de operaciones?",
@@ -4997,7 +4997,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para que un tablero ejecutivo sea clasificado formalmente como un 'Dashboard 4.0' según los contenidos del curso, ¿qué condiciones tecnológicas clave deben satisfacerse?",
@@ -5034,7 +5034,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al diseñar visualizaciones comparativas entre diferentes unidades de negocio dentro de un dashboard, ¿cuál es la principal limitación técnica del gráfico tipo radar ('telaraña') frente al uso de múltiples diagramas de caja (boxplots)?",
@@ -5071,7 +5071,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la jerarquía organizativa para el diseño de tableros de control, ¿cuál es la diferencia de enfoque entre un dashboard operacional y uno estratégico?",
@@ -5108,7 +5108,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Cuando se evalúa un modelo de clasificación para predecir la rotación de personal (HR attrition) versus uno para mantenimiento predictivo de maquinaria, ¿por qué difiere la importancia asignada a los Falsos Positivos y Falsos Negativos?",
@@ -5145,7 +5145,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el flujo de trabajo analítico dentro de la herramienta didáctica Orange Data Mining, ¿cuál es la ventaja operativa del widget `Test & Score` al comparar múltiples modelos de Machine Learning sobre un mismo conjunto de datos?",
@@ -5182,7 +5182,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Respecto a la cantidad de datos necesaria para entrenar un modelo predictivo, ¿cuál es la diferencia práctica discutida en clase entre aplicaciones de comportamiento humano (RRHH/Marketing) y sistemas mecánicos homogéneos?",
@@ -5219,7 +5219,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para un problema de optimización de cadena de suministro con riesgo de rotura de stock frente a uno de mantenimiento predictivo, ¿cuáles métricas de clasificación deben priorizarse según el criterio operativo de negocio?",
@@ -5256,7 +5256,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la orquestación de operaciones dinámicas, ¿cuál es la ventaja clave de implementar un sistema adaptativo integrado con retroalimentación (feedback loop) frente al uso exclusivo de reglas de negocio fijas?",
@@ -5293,7 +5293,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En conjuntos de datos fuertemente desbalanceados como la detección de fraude en tarjetas de crédito (donde la clase positiva representa menos del 1%), ¿cómo opera la técnica SMOTE (Synthetic Minority Over-sampling Technique) para mejorar el entrenamiento?",
@@ -5330,7 +5330,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al desplegar un prototipo interactivo de Machine Learning en un servidor gratuito como Hugging Face Spaces utilizando Gradio o Streamlit, ¿cuáles son los archivos indispensables que deben subirse al repositorio?",
@@ -5367,7 +5367,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En un entorno de fábrica inteligente con dispositivos IoT, ¿cuál es la arquitectura de arquitectura ligera recomendada para capturar variables sensoriales y ejecutar predicciones de mantenimiento con baja latencia?",
@@ -5404,7 +5404,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la resolución de problemas de optimización operativa como la programación de secuencias en líneas de ensamblaje (Flowshop Scheduling), ¿cuál es la diferencia de enfoque entre utilizar algoritmos metaheurísticos clásicos versus modelos de Machine Learning?",
@@ -5441,7 +5441,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el entrenamiento de un perceptrón multicapa profundo, ¿cuál es la función de la técnica de regularización denominada 'Dropout'?",
@@ -5478,7 +5478,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el marco de las buenas prácticas de MLOps y la gestión del ciclo de vida de los modelos predictivos corporativos, ¿cuáles de las siguientes actividades son fundamentales para mantener la utilidad del modelo a lo largo del tiempo?",
@@ -5515,7 +5515,7 @@
   {
     "codigo_diplomado": "DIP-12",
     "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al seleccionar una arquitectura de red neuronal adecuada para un problema empresarial específico, ¿cuál es la regla de correspondencia idónea entre el tipo de datos y la topología de la red?",

@@ -380,3 +380,60 @@ export function derivePaymentStateForCredits(params: {
     tipoPago: esContadoFallback ? 'CONTADO' : 'CUOTAS',
   };
 }
+
+export interface EvaluacionReglasCertificados {
+  sinRestriccionPago: boolean;
+  cuotasPagadas: number;
+  cuotasTotales: number;
+  limiteModularesPorCuota: number;
+}
+
+/**
+ * Reglas centralizadas para liberación y bloqueo por cuotas de certificados:
+ * - Contado, pago total en 1ra cuota o última cuota pagada (sin deuda): sin restricciones.
+ * - En cuotas con saldo pendiente:
+ *   - Certificados modulares: 1ra cuota = 1 modular, 2da cuota = 2 modulares, N cuotas = N modulares
+ *     (se habilitan en el orden cronológico en que el estudiante aprobó cada módulo).
+ *   - Diploma General: requiere aprobar todos los módulos del diplomado Y no tener restricciones de pago.
+ *   - Talleres de regalo: se certifican al completar el taller, sin restricción por cuotas.
+ */
+export function evaluarReglasCertificados(params: {
+  cuotasPagadas?: number | null;
+  cuotasTotales?: number | null;
+  tipoPago?: string | null;
+  esContado?: boolean | null;
+}): EvaluacionReglasCertificados {
+  const cuotasPagadas = Math.max(0, Math.floor(Number(params.cuotasPagadas ?? 0)));
+  const cuotasTotales = Math.max(1, Math.floor(Number(params.cuotasTotales ?? 1)));
+  const sinRestriccionPago = Boolean(
+    params.esContado ||
+      params.tipoPago === 'CONTADO' ||
+      (cuotasTotales > 0 && cuotasPagadas >= cuotasTotales)
+  );
+
+  return {
+    sinRestriccionPago,
+    cuotasPagadas,
+    cuotasTotales,
+    limiteModularesPorCuota: sinRestriccionPago ? Number.POSITIVE_INFINITY : cuotasPagadas,
+  };
+}
+
+/**
+ * Convierte fechas ISO o DD/MM/YYYY a timestamp en ms para ordenar módulos aprobados cronológicamente.
+ */
+export function parseFechaCertificadoMs(fecha?: string | null): number | null {
+  if (!fecha || typeof fecha !== 'string') return null;
+  const trimmed = fecha.trim();
+  if (!trimmed) return null;
+
+  const ddmmyyyy = trimmed.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+  if (ddmmyyyy) {
+    const [, dd, mm, yyyy] = ddmmyyyy;
+    const ms = Date.UTC(Number(yyyy), Number(mm) - 1, Number(dd));
+    return Number.isNaN(ms) ? null : ms;
+  }
+
+  const ms = Date.parse(trimmed);
+  return Number.isNaN(ms) ? null : ms;
+}

@@ -1,4 +1,5 @@
 import diplomadosTodosJson from './diplomados_todos.json';
+import { formatearCodigoModulo } from '@/lib/utils/profileParser';
 
 export interface RawModuloJSON {
   codigo?: string;
@@ -38,11 +39,7 @@ export interface DiplomadoCompleto {
 }
 
 function obtenerEtiquetaModulo(rawCodigo: string, index: number): string {
-  const romanos = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
-  const match = (rawCodigo || '').match(/\d+/);
-  const num = match ? parseInt(match[0], 10) : index + 1;
-  const romano = romanos[num - 1] || `${num}`;
-  return `MÓDULO ${romano}`;
+  return formatearCodigoModulo(rawCodigo, index);
 }
 
 function normalizarModulo(mod: RawModuloJSON, index: number): ModuloDetalle {

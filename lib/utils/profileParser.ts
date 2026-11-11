@@ -90,7 +90,15 @@ export function parseDiplomadosFromProfile(profile: any): DiplomadoJSON[] {
       .replace(/^-+|-+$/g, '');
   };
 
-  // 1. Si existe la propiedad `diplomados` (array o string)
+  // 1. Si existe la propiedad `diplomados` o `diplomados_json` (array ya parseado/enriquecido)
+  if (Array.isArray(profile.diplomados_json)) {
+    return profile.diplomados_json.map((d: any) => ({
+      ...d,
+      slug: normalizeSlug(d.slug || d.id || d.titulo),
+      id: normalizeSlug(d.id || d.slug || d.titulo)
+    }));
+  }
+
   if (Array.isArray(profile.diplomados)) {
     return profile.diplomados.map((d: any) => ({
       ...d,
@@ -141,16 +149,16 @@ export function parseDiplomadosFromProfile(profile: any): DiplomadoJSON[] {
       const matchedSlug = matchedData?.slug || title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
       const modulosList = matchedData?.modulos && matchedData.modulos.length > 0
         ? matchedData.modulos.map((m: any, mIdx: number) => ({
-            id: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
-            codigo: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
-            nombre: m.nombre || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
+            id: formatearCodigoModulo(m.codigo, mIdx),
+            codigo: formatearCodigoModulo(m.codigo, mIdx),
+            nombre: m.nombre || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`,
             nota: 0,
             completado: false
           }))
         : [
-            { id: 'mod-01', codigo: 'Módulo 01', nombre: `Módulo 01 de ${matchedTitle}`, nota: 0, completado: false },
-            { id: 'mod-02', codigo: 'Módulo 02', nombre: `Módulo 02 de ${matchedTitle}`, nota: 0, completado: false },
-            { id: 'mod-03', codigo: 'Módulo 03', nombre: `Módulo 03 de ${matchedTitle}`, nota: 0, completado: false }
+            { id: 'MÓDULO 01', codigo: 'MÓDULO 01', nombre: `MÓDULO 01 DE ${matchedTitle}`, nota: 0, completado: false },
+            { id: 'MÓDULO 02', codigo: 'MÓDULO 02', nombre: `MÓDULO 02 DE ${matchedTitle}`, nota: 0, completado: false },
+            { id: 'MÓDULO 03', codigo: 'MÓDULO 03', nombre: `MÓDULO 03 DE ${matchedTitle}`, nota: 0, completado: false }
           ];
 
       fallbackList.push({
@@ -210,39 +218,47 @@ export function parseCursosFromProfile(profile: any): CursoJSON[] {
 }
 
 export function formatearCodigoModulo(codigo?: string, index?: number): string {
-  if (!codigo) {
+  const raw = String(codigo || '').trim();
+  if (!raw) {
     const num = (index ?? 0) + 1;
     return `MÓDULO ${num.toString().padStart(2, '0')}`;
   }
 
-  // Si ya contiene Módulo 01, Módulo 1, etc.
-  const matchMod = codigo.match(/Mó?dulo\s*0*(\d+)/i);
+  // Números arábigos con palabra Módulo (ej. "Módulo 1", "Módulo 01", "MÓDULO 12")
+  const matchMod = raw.match(/^M[óo]dulo\s*0*(\d+)$/i);
   if (matchMod) {
     const num = parseInt(matchMod[1], 10);
     return `MÓDULO ${num.toString().padStart(2, '0')}`;
   }
 
-  // Si es del tipo M01, M02, M1, M2
-  const matchM = codigo.match(/^M0*(\d+)$/i);
+  // Prefijo corto M01 / mod-01 / M1
+  const matchM = raw.match(/^(?:M|mod)[-_]?0*(\d+)$/i);
   if (matchM) {
     const num = parseInt(matchM[1], 10);
     return `MÓDULO ${num.toString().padStart(2, '0')}`;
   }
 
-  // Si es solo número (1, 2, 3)
-  const matchNum = codigo.match(/^\d+$/);
+  // Solo número arábigo ("1", "02", "10")
+  const matchNum = raw.match(/^\d+$/);
   if (matchNum) {
     const num = parseInt(matchNum[0], 10);
     return `MÓDULO ${num.toString().padStart(2, '0')}`;
   }
 
-  // Romanos (MÓDULO I, MÓDULO II, MÓDULO III)
-  if (/III/i.test(codigo)) return 'MÓDULO 03';
-  if (/II/i.test(codigo)) return 'MÓDULO 02';
-  if (/I/i.test(codigo)) return 'MÓDULO 01';
+  // Romanos heredados únicamente si el token completo es romano ("MÓDULO I", "II", etc.)
+  // Evita falsos positivos con palabras como "MÓDULO ÚNICO" que contienen la letra I.
+  const matchRom = raw.match(/^(?:M[ÓO]DULO\s+)?(XII|XI|X|IX|VIII|VII|VI|IV|V|III|II|I)$/i);
+  if (matchRom) {
+    const mapaRomano: Record<string, number> = {
+      I: 1, II: 2, III: 3, IV: 4, V: 5, VI: 6,
+      VII: 7, VIII: 8, IX: 9, X: 10, XI: 11, XII: 12
+    };
+    const n = mapaRomano[matchRom[1].toUpperCase()];
+    if (n) return `MÓDULO ${n.toString().padStart(2, '0')}`;
+  }
 
-  const num = (index ?? 0) + 1;
-  return `MÓDULO ${num.toString().padStart(2, '0')}`;
+  // Cualquier etiqueta personalizada proveniente de Supabase (ej. "MÓDULO ÚNICO") se respeta tal cual en mayúsculas
+  return raw.toUpperCase();
 }
 
 export function calcularAvanceModuloGranular(

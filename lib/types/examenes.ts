@@ -97,4 +97,6 @@ export interface ResultadoEvaluacionExamen {
   totalPreguntas: number;
   totalAciertos: number;
   detalles: DetalleCalificacionPregunta[];
+  fechaInicio?: string | null;
+  fechaFin?: string | null;
 }

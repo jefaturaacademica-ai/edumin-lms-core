@@ -2,7 +2,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la evaluación de estabilidad del talud de un tajo abierto, el equipo técnico debe decidir entre un enfoque puramente geotécnico y uno geomecánico para caracterizar el terreno. ¿Cuál de las siguientes afirmaciones describe con mayor precisión la frontera conceptual y operativa entre ambas disciplinas según los fundamentos del diplomado?",
@@ -39,7 +39,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un consultor presenta un informe técnico para la certificación de un proyecto minero a cielo abierto. Al auditar la sección de modelamiento geotécnico, ¿qué criterios permiten distinguir la validez de un modelo con sustento físico-matemático frente a uno puramente empírico? (Seleccione todas las opciones que apliquen)",
@@ -76,7 +76,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño geotécnico ambiental de un botadero de desmonte considerado para la condición de cierre definitivo (horizonte a 500 años), ¿cuál es la razón principal por la que los factores de aceleración sísmica pseudoestática difieren de los usados en la etapa operativa (horizonte a 100 años)?",
@@ -113,7 +113,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se extrae una muestra in situ de suelo con un volumen total V = 0.30 m³, peso húmedo W = 5500 N y peso seco W_s = 4911 N. Asumiendo g = 9.81 m/s², determine el contenido de humedad w e interprete el efecto de una saturación posterior por lluvia.",
@@ -150,7 +150,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un ingeniero geotécnico evalúa el grado de compactación de un depósito de relaves utilizando la Densidad Relativa (D_n o D_r). ¿Qué principios mecánicos y operacionales son correctos en esta evaluación? (Seleccione todas las opciones que apliquen)",
@@ -187,7 +187,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una temporada de intensas lluvias en la sierra, un talud de suelo en una vía de acceso minera sufre un colapso lento por el fenómeno de 'suelo caminante'. ¿Cuál es el mecanismo hidro-mecánico subyacente que desencadena esta inestabilidad sin manifestar una falla súbita inicial?",
@@ -224,7 +224,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un ensayo triaxial de laboratorio consolidado no drenado (CU) con medición de presión de poros u, se analiza la resistencia al corte de un suelo. ¿Cómo altera la presión de poros la representación en la envolvente de falla de Mohr-Coulomb?",
@@ -261,7 +261,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al caracterizar una muestra de suelo de cobertura para la cimentación de una infraestructura minera, el tamizado arroja un pasante por la malla N° 200 (P₂₀₀) del 62%. ¿Qué deducciones e implicaciones geotécnicas son correctas? (Seleccione todas las opciones que apliquen)",
@@ -298,7 +298,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al inspeccionar el frente de avance de un túnel, el especialista geotécnico observa que la matriz rocosa presenta un grado de meteorización 'desintegrada'. ¿Qué comportamiento mecánico caracteriza a este estado de la matriz según los estándares de descripción geotécnica?",
@@ -335,7 +335,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un informe de factibilidad geotécnica exige la verificación de estabilidad pseudoestática para los taludes de un tajo abierto. Si la vida útil de la operación minera está proyectada en 15 años, pero el diseño debe sustentarse ante la autoridad ambiental para la fase de cierre definitivo, ¿qué horizonte sísmico de retorno y qué vigencia de la data primaria son requeridos normativamente?",
@@ -372,7 +372,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el programa de ensayos de laboratorio para determinar las propiedades mecánicas de especímenes de roca intacta, se ejecutan pruebas de compresión uniaxial y tracción indirecta. ¿Qué condiciones procedimentales y normativas (ASTM/ISRM) deben garantizarse? (Seleccione todas las opciones que apliquen)",
@@ -409,7 +409,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un talud rocoso intensamente fracturado en una vía de acceso principal sufre caídas recurrentes de bloques desencadenadas por la presión de agua e intemperismo. ¿Cuál es la combinación de medidas de control geotécnico más integral para estabilizar la pared y prevenir la erosión del material superficial?",
@@ -446,7 +446,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al implementar un modelo constitutivo avanzado tipo *Hardening Soil* en un análisis por elementos finitos para evaluar la deformación de un suelo en una excavación, se deben ingresar parámetros de rigidez dependientes del esfuerzo. ¿Qué comportamiento físico representa el módulo E_{ur} en dicho modelo?",
@@ -483,7 +483,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante un programa de investigaciones geotécnicas in situ mediante ensayos de Penetración Estándar (SPT) y Penetración de Cono (CPT), se recolectan datos para caracterizar una cimentación. ¿Qué criterios de interpretación son tónicamente válidos? (Seleccione todas las opciones que apliquen)",
@@ -520,7 +520,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el análisis de respuesta dinámica y susceptibilidad a la licuefacción de arenas saturadas y relaves bajo sismos severos, ¿qué modelo constitutivo avanzado está diseñado específicamente para simular la generación de presión de poros cíclica y ablandamiento del material?",
@@ -557,7 +557,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se proyecta la construcción de un botadero sobre un depósito de arcilla blanda normalmente consolidada de alta compresibilidad. Al implementar el modelo *Soft Soil* en la simulación, ¿qué recomendación de secuencia constructiva es indispensable para evitar una falla por corte no drenado durante el llenado?",
@@ -594,7 +594,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo de diseño geotécnico analiza herramientas de software (Slide, Plaxis, RS3, Geo5) para modelar la estabilidad de un tajo y una galería subterránea. ¿Qué capacidades y limitaciones técnicas son correctas? (Seleccione todas las opciones que apliquen)",
@@ -631,7 +631,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El concepto de 'memoria del suelo' en el comportamiento de materiales elastoplásticos se evidencia experimentalmente en laboratorio mediante:",
@@ -668,7 +668,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al caracterizar una junta en el macizo rocoso mediante el Coeficiente de Rugosidad de la Discontinuidad (JRC), se comparan los perfiles con la escala tipológica de Patton/Barton. ¿Cómo afecta un valor elevado de JRC a la resistencia al corte de la discontinuidad bajo bajos niveles de esfuerzo normal?",
@@ -705,7 +705,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "La permeabilidad secundaria en macizos rocosos fracturados gobierna el flujo del agua subterránea a través de las discontinuidades. Según las formulaciones hidráulicas básicas (K_f \\propto \\frac{A³}{U_f}), ¿qué factores incrementan críticamente el flujo de agua y la inestabilidad? (Seleccione todas las opciones que apliquen)",
@@ -742,7 +742,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al procesar los datos de orientación de discontinuidades en el software Dips, se identifica un grupo concentrado de polos cuya familia de juntas buza en la misma dirección que la cara del talud, con un ángulo de buzamiento menor que la pendiente del talud pero mayor que el ángulo de fricción de la junta. ¿Qué mecanismo de falla es mecánicamente viable?",
@@ -779,7 +779,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una estación geomecánica de campo se miden los espaciados medios entre tres familias ortogonales de discontinuidades: E₁ = 0.05 m, E₂ = 0.10 m y E₃ = 0.20 m. Calcule el volumen medio de bloque (V_B) estimado de la masa rocosa e indique su categoría.",
@@ -816,7 +816,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para estimar la calidad geomecánica de un macizo rocoso en campo se utiliza frecuentemente la relación empírica RQD = 110 - 2.5 J_b, donde J_b es el número de juntas por metro cúbico. ¿Qué limitaciones y consideraciones críticas aplican a esta fórmula? (Seleccione todas las opciones que apliquen)",
@@ -853,7 +853,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un macizo rocoso presenta un sistema de discontinuidades que configura bloques con dimensiones fuertemente asimétricas (alto índice de achatamiento y elongación). Al realizar los cálculos de los factores de forma \nα₂\n y \nα₃\n, se obtiene un factor de forma de bloque \nβ = 45\n. ¿A qué categoría geométrica corresponde este bloque?",
@@ -890,7 +890,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al realizar la auditoría de un estudio de caracterización geomecánica elaborado bajo las pautas del Anexo 40 de la normativa minera, el revisor identifica discrepancias en las coordenadas de las estaciones geomecánicas entre la base de datos de campo y el plano final. ¿Qué verificación técnica y procedimental debe exigirse para garantizar la trazabilidad?",
@@ -927,7 +927,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la diferencia fundamental en el enfoque conceptual entre el análisis geotécnico de suelos y el análisis geomecánico de un macizo rocoso?",
@@ -964,7 +964,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el diseño de un depósito de relaves en la región andina de Perú, se deben definir las aceleraciones sísmicas de diseño. ¿Qué criterio temporal estandarizado se aplica para diferenciar la etapa operativa frente a la etapa de cierre?",
@@ -1001,7 +1001,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo de ingeniería requiere recopilar información técnica pública validada para construir la línea base geomecánica de un proyecto *Greenfield* en Perú. ¿Cuáles de las siguientes fuentes documentales y plataformas son adecuadas para este propósito?",
@@ -1038,7 +1038,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al caracterizar un suelo para una cimentación minera, ¿cómo se clasifican propiedades como la cohesión efectiva (c'), el ángulo de fricción interna (\\phi') y la resistencia al corte no drenada (S_u)?",
@@ -1075,7 +1075,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la temporada de lluvias intensas en una mina a cielo abierto, los taludes de suelo experimentan una falla por deslizamiento. Desde la perspectiva de las relaciones gravimétricas y volumétricas, ¿cuál es el mecanismo principal que desencadena este fenómeno?",
@@ -1112,7 +1112,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué diferencias fundamentales de comportamiento mecánico deben considerarse al comparar un depósito de suelo no consolidado con un macizo rocoso fracturado?",
@@ -1149,7 +1149,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En un ensayo triaxial consolidado no drenado (CU) con medición de presión de poros, se obtiene la envolvente de falla de Mohr-Coulomb. Si el esfuerzo normal efectivo en el plano de falla es \\sigma_n', la cohesión efectiva es c' y el ángulo de fricción efectiva es \\phi', ¿cuál es la expresión correcta para la resistencia al corte (\\tau)?",
@@ -1186,7 +1186,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Se requiere evaluar el espesor de la capa de suelo orgánico y la profundidad del techo rocoso a lo largo del trazo de una carretera de acceso minero de 15 km. ¿Qué combinación eficiente de métodos de exploración de campo se debe emplear según el alcance de profundidad y costo?",
@@ -1223,7 +1223,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con el criterio del tamiz N° 200 (0.075 mm), ¿cuáles de las siguientes afirmaciones describen correctamente el comportamiento geotécnico diferencial entre suelos granulares y finos?",
@@ -1260,7 +1260,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al analizar la estabilidad de un corte de talud en un depósito de suelo homogéneo de gran profundidad frente a un macizo rocoso fuertemente fracturado por familias de diaclasas persistentes, ¿cuál es la distinción principal entre los modos de falla dominantes?",
@@ -1297,7 +1297,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para determinar la resistencia a la compresión simple (\\sigma_c o UCS) de una matriz rocosa intacta en el laboratorio, ¿cuál es la relación geométrica estándar altura/diámetro (L/D) que debe cumplir la probeta cilíndrica según la normativa técnica?",
@@ -1334,7 +1334,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante el logeo geomecánico de un testigo de perforación diamantina, se evalúa el grado de alteración/meteorización de la matriz rocosa. ¿Cuáles de los siguientes descriptores concuerdan con la clasificación estandarizada de meteorización?",
@@ -1371,7 +1371,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Se requiere realizar la simulación numérica por elementos finitos de una excavación profunda en un suelo granular donde la rigidez varía significativamente con el nivel de esfuerzos y se requiere diferenciar la rigidez en carga primaria (E₅₀) de la rigidez en recarga/descarga (E_{ur}). ¿Qué modelo constitutivo elastoplástico es el más adecuado?",
@@ -1408,7 +1408,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al ejecutar un análisis de estabilidad no drenado a corto plazo para una cimentación sobre un depósito de suelo fino saturado, ¿por qué razón técnica se recomienda fijar el ángulo de dilatancia (\\psi) en cero (\\psi = 0°)?",
@@ -1445,7 +1445,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "El ensayo de penetración estándar (SPT) es ampliamente utilizado para la caracterización geotécnica de suelos granulares. ¿Cuáles de los siguientes parámetros procedimentales y correlaciones son técnicamente correctos?",
@@ -1482,7 +1482,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué capacidad técnica adicional aporta el modelo *Hardening Soil con Small Strain* (HS_{small}) en comparación con el modelo *Hardening Soil* convencional durante la evaluación de vibraciones o cargas cíclicas de baja amplitud?",
@@ -1519,7 +1519,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar la consolidación a largo plazo de una presa de relaves cimentada sobre limos orgánicos y arcillas normalmente consolidadas, ¿cuál es la característica principal del modelo *Soft Soil*?",
@@ -1556,7 +1556,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Los softwares especializados en geotecnia como Plaxis, Soilworks y Rocscience (Slide/RS3) son herramientas fundamentales en ingeniería minera. ¿Cuáles de las siguientes capacidades de análisis representan funcionalidades estándar de estas herramientas?",
@@ -1593,7 +1593,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el análisis geomecánico de juntas, el Índice de Rugosidad de la Discontinuidad (JRC, por sus siglas en inglés) es un parámetro clave introducido por Barton. ¿Cómo influye este índice en la resistencia al corte de una discontinuidad sin relleno?",
@@ -1630,7 +1630,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Mediante la proyección estereográfica de datos de orientación de discontinuidades (rumbo y buzamiento), se identifican concentraciones de polos agrupados. Si en un talud se detectan dos familias de discontinuidades cuya línea de intersección buza hacia la cara libre del talud con una inclinación mayor que el ángulo de fricción pero menor que la pendiente del talud, ¿qué modo de falla geomecánico es potencialmente crítico?",
@@ -1667,7 +1667,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "La permeabilidad secundaria en un macizo rocoso está gobernada principalmente por la red de discontinuidades. De acuerdo con la ley cúbica para el flujo en fracturas limpias, ¿cuáles de las siguientes relaciones físicas son correctas?",
@@ -1704,7 +1704,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la caracterización de un macizo rocoso, el número de discontinuidades por unidad de volumen se denomina número de juntas volumétrico (J_v). Si un macizo rocoso presenta tres familias de juntas con espaciados medios de S₁ = 0.5 m, S₂ = 0.2 m y S₃ = 1.0 m (despreciando juntas aleatorias), ¿cuál es el valor aproximado del J_v?",
@@ -1741,7 +1741,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Palmström propuso una relación empírica para estimar el *Rock Quality Designation* (RQD) a partir del recuento de juntas volumétrico (J_v) en macizos rocosos donde no se dispone de testigos de perforación. ¿Cuál es la ecuación empírica aproximada y su limitación operacional?",
@@ -1778,7 +1778,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para asegurar la trazabilidad y la validez técnica de una estación geomecánica de campo o un logeo de testigos de perforación en minería, ¿cuáles de los siguientes requerimientos normativos e institucionales deben incluirse en el informe técnico final?",
@@ -1815,7 +1815,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al diseñar las medidas de estabilización para un talud en un tajo abierto con elevada presencia de agua subterránea y discontinuidades desfavorables, ¿cuál es el principio técnico del uso combinado de drenajes subhorizontales y sistemas de sostenimiento con pernos de anclaje?",
@@ -1852,7 +1852,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño de un tajo a cielo abierto, un equipo geotécnico evalúa modificar el ángulo global de talud para reducir el volumen de desmonte. Si la relación de desbroce (*stripping ratio*) pasa de un valor aceptable de 2.0:1 a uno mayor a 3.5:1 debido al aplanamiento excesivo del talud por criterios conservadores de estabilidad, ¿cuál es la consecuencia técnica y operativa directa sobre el proyecto?",
@@ -1889,7 +1889,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante las fases iniciales de investigación geotécnica previa para una obra de infraestructura minera masiva, ¿cuáles de las siguientes preguntas guía y criterios operacionales son esenciales para la recolección y aseguramiento de calidad de los datos de campo?",
@@ -1926,7 +1926,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la caracterización geotécnica de un trazado vial minero se identifican depósitos de suelos orgánicos y arcillas altamente plásticas. De acuerdo con el comportamiento mecánico de estos materiales, ¿qué respuesta geotécnica debe anticiparse en el diseño de las cimentaciones?",
@@ -1963,7 +1963,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un ensayo geofísico de prospección sísmica registra variaciones importantes en la velocidad de propagación de ondas a través del subsuelo. Al interpretar los datos para un modelo geomecánico, ¿cuál es la principal limitación inherente a este método que exige su validación mediante sondajes directos?",
@@ -2000,7 +2000,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la etapa de ingeniería básica para el trazado de un túnel minero y la ubicación de sus portales de acceso, ¿cuáles de los siguientes criterios geotécnicos deben evaluarse para mitigar colapsos en el inicio de las labores?",
@@ -2037,7 +2037,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la fase de diseño presupuestario para la construcción de una caverna subterránea de chancado en roca caliza fracturada con acuíferos confinados, ¿cuál es la previsión financiera promedio requerida según la práctica geotécnica por concepto de manejo de drenaje e impermeabilización?",
@@ -2074,7 +2074,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo geotécnico debe seleccionar entre el ensayo de penetración estándar (SPT) y el ensayo de penetración estática con cono y medición de presión de poros (CPTU) para caracterizar un depósito de relaves finos saturados. ¿Qué ventaja crítica ofrece el CPTU frente al SPT en esta aplicación particular?",
@@ -2111,7 +2111,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante la ejecución de una campaña de reconocimiento mediante penetrómetros dinámicos súper pesados (tipo DPSH/PCH), ¿cuáles de las siguientes situaciones constituyen criterios técnicos de rechazo o de interrupción inmediata del ensayo?",
@@ -2148,7 +2148,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se ejecuta una prueba de disipación de presión de poros con piezocono (CPTU) a 15 m de profundidad en un depósito geotécnico. Si el tiempo requerido para alcanzar el 50% de disipación (t₅₀) es extremadamente elevado (varias horas), ¿qué conclusión técnica directa sobre el material se deriva de este resultado?",
@@ -2185,7 +2185,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un estudio geotécnico de cimentaciones se requiere corregir el valor de golpes de campo de un ensayo SPT a un valor estándar normalizado N₆₀. Si la masa de golpeo del equipo presenta pérdidas de energía por rozamiento en las guías y deformación elástica de las barras, ¿por qué es indispensable aplicar la corrección por energía y otros factores empíricos (C_H, C_R, C_B, S)?",
@@ -2222,7 +2222,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al redactar un informe geotécnico definitivo de auditoría para la autoridad fiscalizadora tras una contingencia en un talud minero, ¿cuáles de los siguientes requisitos procedimentales y normativos deben estar formalmente sustentados?",
@@ -2259,7 +2259,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un análisis de monitoreo energético regional frente a tronaduras (voladuras) en un tajo abierto, se registran ondas elásticas que rebotan en interfaces subterráneas en tiempos del orden de 0.4 s. ¿Cuál es el objetivo principal de instrumentar y procesar esta respuesta dinámica en las cresterías del tajo?",
@@ -2296,7 +2296,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un levantamiento geofísico en un depósito coluvial saturado, se registran velocidades de onda primaria V_p = 1500 m/s y de onda secundaria V_s \\approx 0 m/s en un estrato intermedio. ¿Qué interpretación física directa responde a este comportamiento cinemático de las ondas elásticas?",
@@ -2333,7 +2333,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un ingeniero geotécnico requiere determinar el perfil de velocidades de onda de corte (V_s) en los primeros 30 m de suelo para clasificar la respuesta sísmica del sitio donde se fundará una planta concentradora. ¿Cuáles de las siguientes técnicas geofísicas in situ son apropiadas para alcanzar este objetivo específico?",
@@ -2370,7 +2370,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se proyecta el monitoreo topográfico de deformaciones en la cresta de una presa de relaves. Si el objetivo técnico requiere una precisión submilimétrica en la componente vertical para detectar asentamientos incipientes antes del primer llenado, ¿qué técnica de nivelación es la más adecuada?",
@@ -2407,7 +2407,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una presa de relaves de 80 m de altura se instala un sistema de inclinometría para registrar movimientos profundos. Durante el procedimiento de lectura con la sonda *probe*, el especialista orienta la muesca principal del tubo en la dirección probable de movimiento y toma la primera serie de lecturas A+. ¿Por qué es estrictamente necesario rotar la sonda 180° y repetir la lectura en la posición A- a lo largo de todo el tubo?",
@@ -2444,7 +2444,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Tras ocurrir un evento catastrófico en un estallido de carga líquida (*sudden burst*) en un frente subterráneo durante la estación de lluvias, las investigaciones del organismo regulador revelaron fallas organizacionales e instrumentales clave. ¿Cuáles de los siguientes factores contribuyeron de manera directa a la falla del sistema de prevención?",
@@ -2481,7 +2481,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el monitoreo hidrogeológico de una presa de relaves, se debe elegir entre piezómetros de tubo abierto tipo Casa Grande y piezómetros de cuerda vibrante para medir presiones de poros profundas con rápida variación estacional. ¿Por qué el piezómetro de cuerda vibrante es superior para esta aplicación?",
@@ -2518,7 +2518,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Considere un talud en macizo rocoso donde se calcula un esfuerzo cortante actuante \\tau = 2.0 MPa. Si el criterio de diseño exige un Factor de Seguridad FS = 1.5, ¿cuál es el valor del esfuerzo cortante permisible \\tau_{permisible} que debe autorizarse para garantizar dicho margen de seguridad?",
@@ -2555,7 +2555,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un talud de 50 m de altura con inclinación de 60° se ubica en una zona de alta sismicidad con un valor de aceleración máxima del terreno PGA = 0.20 g. Al ejecutar un análisis de estabilidad pseudoestático mediante el método de rebanadas, ¿cómo afecta la inclusión de la fuerza sísmica horizontal al Factor de Seguridad (FS)?",
@@ -2592,7 +2592,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Cuando un análisis de estabilidad estático o pseudoestático en un talud complejo revela un Factor de Seguridad marginal (1.0 < FS < 1.2), ¿cuáles de las siguientes medidas geotécnicas de mitigación y modelación avanzada son procedentes para estabilizar la ladera?",
@@ -2629,7 +2629,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un proyecto minero requiere monitorear los desplazamientos tridimensionales (verticales y horizontales en dos ejes ortogonales) a lo largo de una perforación profunda en el estribo de una presa de relaves. ¿Qué instrumento especializado combina las funciones de un inclinómetro y un extensómetro incremental?",
@@ -2666,7 +2666,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al realizar un análisis hidromecánico acoplado (tipo Biot) mediante elementos finitos (RS2) e importar las presiones de poros a un software de equilibrio límite (Slide2) para la fase de construcción rápida de un dique de relaves, ¿qué fenómenos físicos y numéricos deben ser considerados?",
@@ -2703,7 +2703,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el control de convergencias en un túnel subterráneo sujeto a altas presiones litostáticas, se utilizan extensómetros de cinta y *crackmeters* digitales. Si se detecta una tasa de deformación que acelera de manera no lineal en el tiempo sin llegar a estabilizarse, ¿cuál es la decisión técnica inmediata que debe adoptar el responsable de la seguridad geotécnica?",
@@ -2740,7 +2740,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de monitoreo monitorea un inclinar instalado al pie de una presa. El sistema automático de transmisión arroja repentinamente un pico de deformación de 50 mm en un solo intervalo de 5 minutos, sin que otros instrumentos adyacentes (piezómetros, extensómetros) registren variación alguna. ¿Cuál debe ser el primer paso del protocolo de diagnóstico antes de emitir una alerta general de evacuación?",
@@ -2777,7 +2777,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño de minados a cielo abierto, ¿cuál es el efecto económico directo de un diseño con ángulos de talud excesivamente tendidos (bajos) sobre el *stripping ratio* y la viabilidad del proyecto?",
@@ -2814,7 +2814,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante las fases iniciales de un estudio geotécnico de prospección y reconocimiento previa, ¿cuáles de las siguientes actividades y preguntas guía son esenciales para garantizar la calidad de la base de datos?",
@@ -2851,7 +2851,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la clasificación descriptiva de materiales de origen terroso u orgánico en campo, ¿cuál es el comportamiento geotécnico esperado en suelos orgánicos o biogénicos en comparación con suelos duros?",
@@ -2888,7 +2888,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al caracterizar las condiciones hidrogeológicas para un proyecto de obras subterráneas, ¿cuál es la diferencia conceptual y operativa entre los ensayos in situ de tipo Lefranc y los ensayos tipo Lugeon?",
@@ -2925,7 +2925,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Dentro de las técnicas indirectas de investigación geofísica, ¿cuáles de los siguientes métodos se basan en medir el contraste de propiedades eléctricas o electromagnéticas del subsuelo?",
@@ -2962,7 +2962,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño de portales para túneles y excavaciones subterráneas, ¿por qué los primeros metros de excavación superficial representan una de las etapas críticas de inestabilidad geotécnica?",
@@ -2999,7 +2999,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al comparar el ensayo de penetración estática con cono (CPT/CPTU) frente al ensayo de penetración dinámica estándar (SPT), ¿cuál constituye una ventaja operativa fundamental del CPTU en caracterización de suelos?",
@@ -3036,7 +3036,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la ejecución práctica del ensayo SPT y de penetrómetros dinámicos súper pesados (como el PCH o DPSH), ¿cuáles de las siguientes condiciones constituyen criterios normativos de finalización o rechazo de la prueba?",
@@ -3073,7 +3073,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un ensayo CPTU en un estrato de suelo fino arcilloso saturado, se detiene el avance del cono a una profundidad determinada para realizar una prueba de disipación de presión de poros. ¿Qué parámetro hidrogeológico e interpretativo se deriva al monitorear la caída de la sobrepresión de poros en el tiempo hasta alcanzar el 50% (t₅₀)?",
@@ -3110,7 +3110,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la práctica geotécnica internacional, el número de golpes de campo (N) obtenido del ensayo SPT se normaliza al valor N₆₀. ¿Qué representa físicamente el subíndice '60' en esta corrección?",
@@ -3147,7 +3147,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la gestión de un programa de monitoreo geotécnico operativo, ¿cuáles de los siguientes pasos forman parte de la secuencia metodológica lógica para transformar datos brutos en decisiones de ingeniería sustentables?",
@@ -3184,7 +3184,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Aunque los métodos geofísicos posibilitan explorar grandes volúmenes de terreno a un costo relativo menor, presentan limitaciones inherentes. ¿Cuál es la principal restricción conceptual en la interpretación de perfiles geofísicos?",
@@ -3221,7 +3221,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el estudio de las ondas sísmicas aplicadas a la prospección geotécnica, ¿cuál es la característica diferenciadora fundamental de las ondas de corte o secundarias (S) frente a las ondas de compresión o primarias (P)?",
@@ -3258,7 +3258,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la caracterización geotécnica de sitios para infraestructura minera mediante pruebas sísmicas in situ, ¿cuáles de los siguientes ensayos se realizan dentro de pozos de perforación para medir las velocidades de onda V_p y V_s a distintas profundidades?",
@@ -3295,7 +3295,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al planificar el diseño de un sistema de instrumentación geotécnica para el monitoreo de una presa de relaves o talud minero, ¿cuál es el criterio rector para la selección de los sensores y la frecuencia de lectura?",
@@ -3332,7 +3332,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el monitoreo de deformaciones profundas mediante inclinometría en presas o taludes, ¿cómo se logra determinar la magnitud y dirección del vector de desplazamiento horizontal a lo largo del perfil en profundidad?",
@@ -3369,7 +3369,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para la medición de asentamientos y desplazamientos en masa en diferentes horizontes del subsuelo, ¿cuáles de los siguientes equipos corresponden a extensómetros de auscultación profunda?",
@@ -3406,7 +3406,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la auscultación de presiones de agua subterránea, ¿cuál es la principal ventaja operativa de los piezómetros de cuerda vibrante en comparación con los piezómetros abiertos de tipo Casagrande?",
@@ -3443,7 +3443,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Considere un talud en rocas altamente fracturadas donde el esfuerzo cortante disponible en el plano crítico es \\tau = 2.0 MPa. Si la ingeniería del proyecto exige diseñar el talud bajo un Factor de Seguridad FS = 1.5, ¿cuál es el valor del esfuerzo cortante permisible (\\tau_{permisible}) que debe utilizarse para el cálculo de deformaciones según la proporcionalidad directa?",
@@ -3480,7 +3480,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al realizar la evaluación de la estabilidad de un talud bajo condiciones estáticas y pseudoestáticas, ¿cuáles de las siguientes variables deben ser incorporadas explícitamente en las ecuaciones de equilibrio de fuerzas/momentos para reflejar la presencia de nivel freático y sismicidad?",
@@ -3517,7 +3517,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el método simplificado de rebanadas de Bishop para el análisis de estabilidad de taludes con falla circular, ¿cuál es la hipótesis simplificadora clave que diferencia a este método frente al método de Fellenius (Ordinario)?",
@@ -3554,7 +3554,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para el control geotécnico de presas de relave o grandes terraplenes, se requiere auscultar deformaciones tridimensionales continuas a lo largo de un mismo eje de perforación. ¿Qué combinación de tecnología instrumental proporciona esta capacidad integrada?",
@@ -3591,7 +3591,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Cuando se realiza un modelado numérico avanzado de un depósito de relaves o dique de materiales finos mediante el acoplamiento hidromecánico (ej. con RS2 y Slide2), ¿cuáles de los siguientes aspectos son críticos para reflejar con realismo el comportamiento del depósito ante cargas de construcción?",
@@ -3628,7 +3628,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el crecimiento o recrecimiento de un dique de contención de relaves, ¿cuál es el efecto geotécnico inmediato de aplicar un ritmo de construcción excesivamente acelerado (ej. elevar la cresta en 7 días en lugar de 30 días) sin dar tiempo al drenaje del material de cimentación?",
@@ -3665,7 +3665,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el análisis de fallas históricas y accidentes en minería subterránea e instalaciones de superficie (como los ocurridos por irrupciones de agua o colapsos de relaveras), ¿qué lección organizacional e instrumental clave destaca la importancia del factor humano en el monitoreo geotécnico?",
@@ -3702,7 +3702,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un modelo hidrogeológico preliminar para un nuevo proyecto a tajo abierto indica que el agua subterránea proveniente del acuífero fracturado del yacimiento cubrirá aproximadamente el 15% de la demanda total de la planta concentradora. El equipo de proyecto evalúa si este aporte es suficiente para prescindir de fuentes externas. ¿Cuál es la evaluación técnica más adecuada respecto al balance hídrico del yacimiento?",
@@ -3739,7 +3739,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante las pruebas de puesta en marcha de una planta de flotación, el agua recuperada del depósito de relaves muestra concentraciones residuales de reactivos químicos que alteran la selectividad del proceso. ¿Qué medidas operativas y de gestión de agua son técnicamente recomendables para mitigar este impacto?",
@@ -3776,7 +3776,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la estación de bombeo de captación de un río que alimenta a una operación minera (como en el caso Tintaya con el río Salado), se registran fallas prematuras e incautación de impulsores por desgaste abrasivo durante la época de lluvias. ¿Qué parámetro físico-químico del influente genera este problema y qué estructura de control se debe implementar?",
@@ -3813,7 +3813,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una planta de beneficio de oro por lixiviación en pilas y procesamiento de relaves, la caracterización química muestra concentraciones de cianuro total en el efluente de relaves de 1100 mg/L, mientras que la norma ambiental establece un límite de 50 mg/L. ¿Qué estrategia de gestión y tratamiento es la más adecuada para abordar esta brecha?",
@@ -3850,7 +3850,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En un complejo hidrometalúrgico que integra SX-EW y fundición pirometalúrgica, se generan influentes líquidos con características complejas. ¿Qué prácticas operativas son indispensables para el manejo de los sangrados (bleeding) y las aguas de lavado de gases?",
@@ -3887,7 +3887,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el depósito de relaves de una planta concentradora, la pulpa descargada presenta un 30% de sólidos con una densidad de pulpa de 1.65 g/cm³. Sin embargo, la presencia de finos coloidales impide la correcta sedimentación del agua clara. Para optimizar la estabilidad física de la relavera y la recuperación de agua, ¿qué control operativo y rango de densidad de operación se recomienda?",
@@ -3924,7 +3924,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la caracterización de suelos para el trazado de un camino de acarreo minero, el estudio estratigráfico identifica un horizonte superficial oscuro, rico en materia orgánica y nutrientes, de 40 cm de espesor. ¿A qué horizonte pertenece este material y cuál es el procedimiento geotécnico y ambiental correcto para su manejo?",
@@ -3961,7 +3961,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un laboratorio de geotecnia analiza muestras de suelo para el diseño de una plataforma de cimentación. Los ensayos determinan la granulometría y los límites de Atterberg. ¿Qué principios rigen el sistema USCS y el ensayo del Límite Líquido de Casagrande?",
@@ -3998,7 +3998,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el análisis mineralógico de una arcilla utilizada en el núcleo impermeable de un dique, se detecta un alto porcentaje de montmorillonita. ¿Qué riesgo geotécnico presenta este mineral en presencia de variaciones del contenido de humedad?",
@@ -4035,7 +4035,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un talud compuesto por suelo limo-arcilloso en una zona minera sufre un periodo de lluvias intensas y prolongadas hasta alcanzar el 100% de grado de saturación (S_r = 100%). ¿Cuál es la consecuencia directa sobre las presiones internas y la resistencia al corte del terreno?",
@@ -4072,7 +4072,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para mitigar la formación de cárcavas, erosión de laderas y transporte masivo de sedimentos hacia una laguna comunitarias, un equipo técnico diseña obras de control físico y biológico. ¿Qué intervenciones son técnicamente efectivas para este propósito?",
@@ -4109,7 +4109,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la construcción de un terraplén para una vía de acarreo se requiere mover 10000 m³ de material desde una cantera. El ingeniero residente debe calcular las necesidades de transporte y compactación. ¿Cómo se comporta el volumen del suelo durante este proceso según las curvas de hinchamiento y compactación?",
@@ -4146,7 +4146,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El informe oficial de INGEMMET sobre un evento de inestabilidad en la zona de Patás / Cerro La Estrella evalúa pendientes de 25° a 45°, rocas alteradas (areniscas, lutitas, calizas) y precipitaciones de 185 mm. ¿Cómo se clasifican estos factores dentro del análisis de peligro geológico?",
@@ -4183,7 +4183,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En un sistema de monitoreo geotécnico operacional de taludes que integra radares (IVIS / GroundProof), estaciones totales con prismas y umbrales de alerta, ¿qué acciones operativas están mandatadas al declararse un nivel de Alerta Naranja?",
@@ -4220,7 +4220,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El procesamiento de datos de monitoreo satelital InSAR en una mina a tajo abierto detecta una deformación acumulada de 17.5 mm en un sector del talud este, con una aceleración de 10 mm registrada en los últimos 6 días. ¿Cómo debe interpretar el equipo de geotecnia esta información para la toma de decisiones?",
@@ -4257,7 +4257,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El colapso de una presa de relaves construida por el método de aguas arriba (como el desastre de Brumadinho) se atribuye contractualmente a la falla por licuación estática. ¿Qué condición de gestión hídrica e intersticial desencadena este mecanismo de falla colapsiva?",
@@ -4294,7 +4294,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al cruzar las variables de frecuencia de ocurrencia y severidad de consecuencias en una matriz de evaluación de riesgos por deslizamientos, una quebrada activa presenta un nivel de riesgo 'Inadmisible' (Nivel 3). ¿Qué respuestas institucionales y técnicas se deben desencadenar según los estándares de gestión de emergencias?",
@@ -4331,7 +4331,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Tras un desprendimiento de rocas en un sector de la mina que destruye 1 km de tuberías de agua potable comunitaria y bloquea el acceso a campos agrícolas, la empresa debe aplicar una estrategia de gestión post-contingencia. ¿Cuál es el procedimiento integral para restaurar la operatividad y la licencia social?",
@@ -4368,7 +4368,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño del sistema de drenaje de un proyecto de infraestructura minera o vial, se compara la conveniencia de implementar un sistema combinado (pluvial y sanitario) versus un sistema separado. Sabiendo que los caudales pluviales máximos superan entre 50 y 200 veces los volúmenes sanitarios domésticos, ¿cuál es la razón técnica decisiva para elegir redes separadas?",
@@ -4405,7 +4405,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En una cuenca agrícola baja adyacente a un proyecto industrial, el mal manejo del drenaje provoca la elevación del nivel freático hasta la zona radicular de los cultivos, desencadenando procesos de salinización. ¿Qué mecanismos físicos y agronómicos explican el deterioro de estos suelos?",
@@ -4442,7 +4442,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera planea la descarga regulada de sus efluentes tratados (que cumplen con los estándares C3/C4 para riego y bebida de animales) hacia un cuerpo de agua léntico (laguna natural). ¿Qué diseño de estructura de vertido debe implementarse en el punto final para evitar la erosión del lecho y lograr una adecuada mezcla?",
@@ -4479,7 +4479,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el Plan de Gestión de Aguas para la construcción de una gran plataforma industrial (como en el caso del Aeropuerto de Chinchero o explanadas mineras), se requiere categorizar los flujos en 'aguas de contacto' y 'aguas de no contacto'. ¿Cuál es el criterio para esta distinción y qué manejo hidráulico exige cada una?",
@@ -4516,7 +4516,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para el control de escorrentías en un proyecto con un sistema de 20 pozas de sedimentación y 3.5 km de cunetas provisionales, ¿qué especificaciones de materiales, obras de disipación y mantenimiento aseguran la operatividad del sistema durante la temporada lluviosa?",
@@ -4553,7 +4553,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un evento hidrológico extraordinario, la escorrentía no controlada de una plataforma de construcción ingresa a un canal de riego comunal, incrementando la turbidez (TSS) y obstruyendo las tomas de agua agrícolas. ¿Qué acción de gobernanza y concertación debe ejecutar el equipo de Gestión Social y Medio Ambiente?",
@@ -4590,7 +4590,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "A la luz de los aprendizajes derivados de colapsos catastróficos de depósitos de relaves (como Samarco/Fundão o Brumadinho), ¿qué tecnologías de disposición y prácticas de diseño reducen sustancialmente el riesgo de falla por saturación masiva?",
@@ -4627,7 +4627,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la planificación hídrica para proyectos mineros de gran escala, ¿cuál es el aporte promedio típico que representa el agua subterránea proveniente del propio yacimiento respecto a la demanda total del proceso de minado y procesamiento?",
@@ -4664,7 +4664,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al contextualizar la gestión del agua por cuencas en el Perú, ¿qué proporción representa aproximadamente el consumo de agua del sector minero en comparación con el sector agrícola?",
@@ -4701,7 +4701,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué acciones preventivas y de relacionamiento socioambiental resultan eficientes para mitigar conflictos hídricos durante la etapa de exploración minera?",
@@ -4738,7 +4738,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de la filosofía operacional de 'descarga cero' en plantas de procesamiento minero, ¿cómo se gestionan las aguas recuperadas de presas de relaves que contienen reactivos residuales?",
@@ -4775,7 +4775,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el manejo operativo de depósitos de relaves, ¿cuáles son los parámetros típicos de densidad y porcentaje de sólidos de una pulpa de relave convencional al momento de su descarga?",
@@ -4812,7 +4812,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué efluentes o influentes característicos de las operaciones de lixiviación (SX-EW) y pirometalurgia requieren medidas específicas de contención y acondicionamiento?",
@@ -4849,7 +4849,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al analizar el comportamiento de suelos finos sometidos a saturación, ¿por qué los limos saturados resultan especialmente problemáticos para la cimentación de estructuras?",
@@ -4886,7 +4886,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la mecánica de suelos aplicada a la evaluación de taludes, ¿qué representa el Límite Líquido (LL) obtenido mediante la copa de Casagrande?",
@@ -4923,7 +4923,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Respecto a la composición trifásica del suelo, ¿cuáles de las siguientes proposiciones describen correctamente la relación entre el grado de saturación (S_r) y el espacio poroso?",
@@ -4960,7 +4960,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la caracterización hidrológica de suelos para obras de drenaje y agricultura, ¿cómo se define la lámina de 'Agua Disponible' para un horizonte vegetal?",
@@ -4997,7 +4997,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un evento de precipitación intensa, ¿cuál es el mecanismo físico principal por el cual la saturación completa del suelo desencadena deslizamientos de ladera?",
@@ -5034,7 +5034,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué técnicas físicas y de bioingeniería resultan eficaces para disipar la energía hidrodinámica de la escorrentía superficial y controlar la erosión en microcuencas?",
@@ -5071,7 +5071,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el estudio geotécnico e hidrogeológico del desprendimiento de ladera en el Cerro La Estrella (Patás), ¿cuál fue señalado como el factor desencadenante primario de la falla del macizo?",
@@ -5108,7 +5108,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de un protocolo operacional de monitoreo geotécnico con radar de deformación de taludes, ¿qué acción inmediata corresponde ejecutar al decretarse el 'Nivel de Alerta Naranja'?",
@@ -5145,7 +5145,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué factores antrópicos identificados en estudios de campo agravan la susceptibilidad a deslizamientos y caídas de rocas en laderas de fuerte pendiente?",
@@ -5182,7 +5182,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el desastre geotécnico de la represa de relaves de Brumadinho (Brasil, 2019), ¿cuál fue la causa física determinante asociada al estado de saturación del material depositado?",
@@ -5219,7 +5219,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al aplicar una matriz cualitativa de evaluación de riesgos donde un peligro hidrológico alcanza un nivel 'Inadmisible' (Consecuencia Muy Alta y Recurrencia Alta), ¿cuál es el protocolo administrativo y técnico requerido?",
@@ -5256,7 +5256,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Dentro de la clasificación cinemática de los movimientos en masa inducidos por la saturación de terrenos, ¿qué diferencias caracterizan a las 'caídas' frente a los 'derrumbes'?",
@@ -5293,7 +5293,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la razón técnica por la cual los proyectos de infraestructura deben diseñar redes de drenaje pluvial separadas de las redes de drenaje sanitario o doméstico?",
@@ -5330,7 +5330,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco normativo ambiental para el vertido o reuso de efluentes tratados, ¿qué condicionante aplica para las aguas categorizadas bajo el estándar C3 o C4?",
@@ -5367,7 +5367,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué estructuras y elementos de conducción resultan indispensables para un sistema de drenaje pluvial eficiente en vías de acceso y plataformas operativas?",
@@ -5404,7 +5404,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de un Plan de Gestión de Aguas para un proyecto de construcción u operación de gran escala, ¿cuál es la diferencia conceptual entre 'aguas de contacto' y 'aguas no de contacto'?",
@@ -5441,7 +5441,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la función operativa de las pozas de sedimentación dentro del esquema de drenaje provisional de una obra geotécnica en época de lluvias?",
@@ -5478,7 +5478,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes consecuencias hidrogeotécnicas e hidrológicas pueden derivarse de la saturación no controlada y la falta de drenaje interno en depósitos de relaves o materiales sueltos?",
@@ -5515,7 +5515,7 @@
   {
     "codigo_diplomado": "DIP-06",
     "diplomado": "GEOTECNIA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el plan de mantenimiento preventivo para el sistema de drenaje temporal de un proyecto expuesto a temporadas de lluvia, ¿cuál es el criterio de inspección y limpieza recomendado?",

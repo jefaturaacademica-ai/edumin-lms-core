@@ -1,6 +1,7 @@
 import { createAdminClient } from '@/lib/supabase/admin';
 import diplomadosTodosJson from './diplomados_todos.json';
 import { getDriveVideoForClass } from './driveVideos';
+import { formatearCodigoModulo } from '@/lib/utils/profileParser';
 
 export interface LeccionRow {
   id?: string;
@@ -42,10 +43,11 @@ export function normalizeLeccionRow(r: any): LeccionRow {
     };
   }
 
+  const rawModulo = (r.Modulo ?? r.modulo ?? '').trim();
   const out: LeccionRow = {
     CodigoDiplomado: (r.CodigoDiplomado ?? r.codigoDiplomado ?? r.codigodiplomado ?? r.codigo_diplomado ?? '').trim(),
     Diplomado: (r.Diplomado ?? r.diplomado ?? '').trim(),
-    Modulo: (r.Modulo ?? r.modulo ?? '').trim(),
+    Modulo: rawModulo ? formatearCodigoModulo(rawModulo) : '',
     NombreModulo: (r.NombreModulo ?? r.nombreModulo ?? r.nombremodulo ?? r.nombre_modulo ?? '').trim(),
     Docente: (r.Docente ?? r.docente ?? '').trim(),
     Tema: (r.Tema ?? r.tema ?? '').trim(),
@@ -87,7 +89,7 @@ export function generarFilasMaestrasIniciales(): LeccionRow[] {
     let totalClasesDip = 0;
 
     modulos.forEach((mod: any, mIdx: number) => {
-      const codigoMod = `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
+      const codigoMod = formatearCodigoModulo(mod.codigo, mIdx);
       let nombreMod = (mod.nombre || '').trim();
       let docenteMod = (mod.docente || '').trim();
 
@@ -302,7 +304,7 @@ export function convertirFilasAListaModulos(filas: LeccionRow[]) {
 
   filas.forEach((f) => {
     const r = normalizeLeccionRow(f);
-    const modKey = r.Modulo || 'Módulo 01';
+    const modKey = r.Modulo || 'MÓDULO 01';
 
     if (!modulosMap.has(modKey)) {
       modulosMap.set(modKey, {
@@ -374,8 +376,8 @@ export function convertirModulosALeccionRows(codigoDiplomado: string, tituloDipl
   let orden = 1;
 
   modulos.forEach((mod: any, mIdx: number) => {
-    const codigoMod = mod.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
-    const nombreMod = mod.nombre || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`;
+    const codigoMod = formatearCodigoModulo(mod.codigo, mIdx);
+    const nombreMod = mod.nombre || codigoMod;
     const docenteMod = mod.docente || '';
     const temas = Array.isArray(mod.temas) && mod.temas.length > 0
       ? mod.temas

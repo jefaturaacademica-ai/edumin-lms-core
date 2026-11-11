@@ -190,17 +190,20 @@ export async function POST(request: Request) {
       if (!diplomadosNuevos.some(d => d.slug === itemId || d.id === itemId)) {
         const dipInfo = getDiplomadoByTitleOrSlug(itemId) || getDiplomadoByTitleOrSlug(tituloProg);
         const modulosList: ModuloJSON[] = (dipInfo?.modulos && dipInfo.modulos.length > 0)
-          ? dipInfo.modulos.map((m: any, mIdx: number) => ({
-              id: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
-              codigo: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
-              nombre: m.nombre || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
-              nota: 0,
-              completado: false
-            }))
+          ? dipInfo.modulos.map((m: any, mIdx: number) => {
+              const modCod = m.codigo || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`;
+              return {
+                id: modCod,
+                codigo: modCod,
+                nombre: m.nombre || modCod,
+                nota: 0,
+                completado: false
+              };
+            })
           : [
-              { id: 'Módulo 01', codigo: 'Módulo 01', nombre: 'Módulo 01', nota: 0, completado: false },
-              { id: 'Módulo 02', codigo: 'Módulo 02', nombre: 'Módulo 02', nota: 0, completado: false },
-              { id: 'Módulo 03', codigo: 'Módulo 03', nombre: 'Módulo 03', nota: 0, completado: false }
+              { id: 'MÓDULO 01', codigo: 'MÓDULO 01', nombre: 'MÓDULO 01', nota: 0, completado: false },
+              { id: 'MÓDULO 02', codigo: 'MÓDULO 02', nombre: 'MÓDULO 02', nota: 0, completado: false },
+              { id: 'MÓDULO 03', codigo: 'MÓDULO 03', nombre: 'MÓDULO 03', nota: 0, completado: false }
             ];
 
         diplomadosNuevos.push({

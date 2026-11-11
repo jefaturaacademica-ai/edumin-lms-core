@@ -2,7 +2,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una planta piloto diseñó su circuito de molienda y flotación basándose exclusivamente en un único compósito global que mezcló todos los testigos de perforación del yacimiento. Al entrar en operación industrial en un bloque específico del tajo con alteración argílica y alta dureza, la recuperación cayó 25% y el molino SAG se saturó de pebbles. ¿Cuál fue el error conceptual previo en la caracterización geometalúrgica que originó esta contingencia?",
@@ -39,7 +39,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el desarrollo de un proyecto minero Greenfield polimetálico de alta dureza, el equipo técnico evalúa la incorporación de molinos de rodillos de alta presión (HPGR) antes de la molienda secundaria. ¿Qué beneficios operativos e hidrometalúrgicos/conminutivos sustentan geometalúrgicamente esta decisión?",
@@ -76,7 +76,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una planta concentradora reporta un desgaste inusualmente acelerado y prematuro en los forros e impulsores del molino de bolas, obligando a paradas no programadas cada tres meses. El proveedor de fundición demuestra que la calidad metalúrgica del acero cumple con la norma. ¿Qué análisis de caracterización geometalúrgica debe realizarse para diagnosticar la causa raíz operacional?",
@@ -113,7 +113,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Para transformar una Unidad Geológica tradicional (basada únicamente en litología y ley) en una Unidad Geometalúrgica (UGM) operativa y predictiva para el plan de minado, ¿cuál es el procedimiento metodológico indispensable que debe ejecutarse?",
@@ -150,7 +150,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una operación a cielo abierto se presenta una contingencia grave: el molino SAG sufre frecuentes atrancamientos por presencia de 'bolones' masivos, la chancadora primaria reduce su throughput en 30% y se han reportado eventos de 'tiro cortado' en el frente minado. ¿Qué acción de integración geometalúrgica desde la mina es la solución técnica prioritaria?",
@@ -187,7 +187,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante las pruebas de caracterización mineralógica de las espumas Rougher en una planta concentradora polimetálica (Cu-Au), se descubre la presencia de oro nativo granular en partículas libres. Sin embargo, este oro no flota adecuadamente y se pierde en las colas. ¿Qué modificación al circuito metalúrgico se justifica técnicamente para capturar este valor agregado?",
@@ -224,7 +224,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En un circuito de flotación Rougher de cobre se detecta una caída abrupta en la recuperación. El diagnóstico metalúrgico señala una interferencia fisicoquímica en la pulpa provocada por alteraciones iónicas que impiden la formación del ángulo de contacto necesario entre la burbuja y la partícula. ¿Qué factores de la pulpa deben evaluarse inmediatamente?",
@@ -261,7 +261,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una operación minera invirtió en optimizar el diseño de perforación y voladura mediante telemetría y perfiles de dureza en mina. ¿Qué patrón de resultados operacionales en la concentradora confirma el retorno económico y la efectividad geometalúrgica de la medida?",
@@ -298,7 +298,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un sistema experto de control automatizado de molienda instalado en una concentradora, las adiciones de agua y la densidad de pulpa comienzan a oscilar salvajemente, desestabilizando el P₈₀ hacia la flotación. El área de control de procesos diagnostica una degradación en el sistema. ¿Cuál es el procedimiento técnico inmediato para restablecer el control?",
@@ -335,7 +335,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una corporación minera decide trasladar su sala de control principal (Remote Operations Center) a una ciudad distante a más de 800 km de la operación. ¿Qué salvaguardas de infraestructura tecnológica y protocolos de contingencia deben implementarse para prevenir paradas catastróficas ante caídas de red o ciberataques?",
@@ -372,7 +372,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un estudio de simulación de flotación geometalúrgica con el simulador IGS, se requiere estimar parámetros cinéticos de flotabilidad (R_{\\max}, K, α) para 700 muestras que carecen de ensayos MFT directos. ¿Qué algoritmo de Machine Learning supervisado ofreció los mejores resultados al gestionar la alta dimensionalidad y entregar intervalos de incertidumbre?",
@@ -409,7 +409,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la conciliación mensual entre el modelo predictivo de Machine Learning y la operación real de la concentradora, se observa que el modelo falló significativamente al predecir el consumo de reactivos en un sector recién minado del tajo. La auditoría reveló que faltaba una variable crítica en la base de datos de entrenamiento. ¿Cuál fue la omisión más probable?",
@@ -446,7 +446,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una mina a cielo abierto se registraron 5 eventos de 'tiro cortado' en menos de un año. La investigación ICAM descartó defectos en el explosivo suministrado. El análisis geometalúrgico reveló que se aplicaba un factor de carga uniforme en rocas con dureza highly variable. ¿Cómo se resolvió este problema de seguridad y operación bajo el enfoque Mind-to-Mill?",
@@ -483,7 +483,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo de minería y planta debe justificar ante la gerencia general un aumento en el presupuesto de explosivos para optimizar la fragmentación en mina. ¿Qué argumentos técnicos sustentados en la integración Mind-to-Mill respaldan económicamente este mayor gasto en mina?",
@@ -520,7 +520,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una operación subterránea que busca maximizar la productividad de avance por disparo, mitigar riesgos de manipulación de explosivos en ambientes húmedos y reducir las emisiones de gases nocivos post-voladura, ¿qué combinación tecnológica de conminución primaria es la más recomendada?",
@@ -557,7 +557,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "La ley de cabeza de mineral de cobre en un yacimiento cae imprevistamente de 1.0% a 0.8% Cu. Para evitar pérdidas de caja, la alta dirección exige mantener las toneladas de metal fino producido al día sin modificar la infraestructura de la planta concentradora. ¿Cuál es la estrategia operativa geometalúrgica aplicable?",
@@ -594,7 +594,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la mina Constancia, la correlación entre la resistencia a la compresión simple (UCS) y el índice de potencia SAG (SPI) mostró fuertes inconsistencias en ciertos bancos. ¿Cómo se resolvió operacionalmente el diseño de voladura para asegurar un producto granulométrico homogéneo hacia la chancadora?",
@@ -631,7 +631,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para verificar en planta el impacto real de un nuevo diseño de voladura applied en un polígono específico sobre el throughput (t/h) y la respuesta del molino SAG, ¿qué herramientas y metodologías de trazabilidad descritas en el caso Constancia deben integrarse?",
@@ -668,7 +668,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la perforación en un banco que presenta discontinuidades geológicas y cavernas no detectadas, el sistema automatizado de la perforadora registra un pico anómalo e instantáneo de velocidad de penetración (>500 m/h). ¿Qué medida preventiva debe aplicar el camión fábrica al cargar este taladro?",
@@ -705,7 +705,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una concentradora decide adoptar la tecnología de 'flotación de gruesos' (p. ej. Hydrofloat) para tratar partículas con bajo grado de liberación en el circuito Rougher. Para obtener un concentrado final que cumpla con la ley comercial sin necesidad de sobremoler todo el mineral de la planta, ¿cuál es el esquema de proceso correcto?",
@@ -742,7 +742,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "¿Por qué la sustitución de agua dulce por agua de mar sin desalinizar modifica sustancialmente la ventana operacional en el circuito de flotación de sulfuros?",
@@ -779,7 +779,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una mina polimetálica produce un concentrado de cobre con elevados contenidos de oro y plata. La fundición liquida el concentrado aplicando deducciones severas por maquila y no reconoce el valor total de los metales preciosos. ¿Qué alternativa de procesamiento respaldada por la geometalurgia maximiza el valor comercial del depósito?",
@@ -816,7 +816,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al negociar un contrato de compraventa de concentrados de cobre (Offtake\\ Agreement) con un comercializador (dealer) o fundición, ¿cuáles cláusulas y especificaciones técnicas afectan directamente el cálculo del Valor Neto del Concentrado (VNC)?",
@@ -853,7 +853,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la estimación y reporte público de Recursos y Reservas Minerales según códigos internacionales estandarizados (como el Código JORC), ¿cuál es la diferencia conceptual determinante entre un Recurso Mineral y una Reserva Mineral?",
@@ -890,7 +890,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al diseñar el plan de minado y la evaluación técnico-económica para un yacimiento subterráneo, el equipo geometalúrgico debe construir un 'modelo de planificación diluido'. ¿Qué variables geomecánicas, volumétricas y operativas deben integrarse en esta modelación?",
@@ -927,7 +927,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es el propósito fundamental de definir Unidades Geometalúrgicas (UGM) a partir de bloques geológicos previamente delimitados en un yacimiento?",
@@ -964,7 +964,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Históricamente, ¿por qué la práctica tradicional de elaborar compósitos mezclando perforaciones de todo el yacimiento causaba fallas en la operación de las plantas concentradoras?",
@@ -1001,7 +1001,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué efectos técnico-operativos genera la implementación del rodillo de molienda de alta presión (HPGR) en la preparación de minerales duros?",
@@ -1038,7 +1038,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Cuando una caracterización geometalúrgica identifica un alto contenido de partículas duras y afiladas como el cuarzo relicto, ¿cuál es la consecuencia operacional directa en el circuito de molienda?",
@@ -1075,7 +1075,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la conminución moderna, ¿cuál es el objetivo clave del denominado 'chancado químico' ejecutado en la mina?",
@@ -1112,7 +1112,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles son consecuencias negativas directas de diseñar un proyecto minero sin considerar la zonificación (zonas oxidada, mixta y de sulfuros)?",
@@ -1149,7 +1149,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la flotación de sulfuros, ¿de qué manera la presencia descontrolada de sales solubles (alteraciones iónicas) en la pulpa perjudica el proceso?",
@@ -1186,7 +1186,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué práctica operacional combinada reduce el riesgo de paradas no programadas por atoros de bolones o ingreso de piezas metálicas en la chancadora primaria?",
@@ -1223,7 +1223,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿En qué momento operativo se considera que un sistema de control automático en una planta concentradora evoluciona hacia una Inteligencia Artificial operativa?",
@@ -1260,7 +1260,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Cuando el cuarto de control de una planta concentradora se ubica de forma remota en una ciudad lejana, ¿qué estrategias garantizan la continuidad operativa ante fallas de conectividad?",
@@ -1297,7 +1297,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el modelamiento geometalúrgico avanzado de parámetros cinéticos (MFT), ¿cuál es la ventaja principal de utilizar el Proceso Gaussiano Bayesiano con variables latentes?",
@@ -1334,7 +1334,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la construcción de un modelo geometalúrgico, ¿por qué es indispensable aplicar transformaciones matemáticas a variables como la recuperación metalúrgica antes de poblar el modelo de bloques?",
@@ -1371,7 +1371,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Bajo el enfoque moderno 'Mind to Mill' (de la mina a la planta), ¿cómo se redefine conceptualmente la primera etapa de conminución?",
@@ -1408,7 +1408,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la investigación de eventos recurrentes de tiros cortados en voladura, ¿qué hallazgos técnicos permitieron erradicar esta falla operacional?",
@@ -1445,7 +1445,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con los estudios de elasticidad de tonelaje en molinos semiautógenos (SAG), ¿qué ocurre al incrementar el factor de potencia de voladura en mina?",
@@ -1482,7 +1482,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es una ventaja operativa crítica del uso de hidrogeles bombeables sensibilizados en frente frente al ANFO en minería subterránea?",
@@ -1519,7 +1519,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la mina Constancia, ¿cuál fue la finalidad operacional de incorporar trazadores físicos en taladros específicos de voladura?",
@@ -1556,7 +1556,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al caracterizar un banco de minado, ¿qué razones justifican no basar el diseño de voladura únicamente en el valor geotécnico de compresión simple (UCS)?",
@@ -1593,7 +1593,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño de un circuito de flotación, ¿cuál es la razón técnica para incorporar una etapa de remolienda en las fracciones mixtas o de la etapa scavenger?",
@@ -1630,7 +1630,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Cuando los sensores de una perforadora detectan picos anómalos de velocidad de penetración que indican la presencia de cavernas en el taladro, ¿qué acción operacional se debe ejecutar?",
@@ -1667,7 +1667,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la comercialización de concentrados de cobre, la sílice (SiO₂) es penalizada si supera ciertos límites. Sin embargo, ¿qué contradicción técnica existe entre la concentradora y la fundición respecto a este compuesto?",
@@ -1704,7 +1704,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes variables forman parte directa del cálculo del Valor Neto del Concentrado (VNC) en contratos de compraventa?",
@@ -1741,7 +1741,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es el requisito indispensable para transformar un Recurso Mineral (medido o indicado) en una Reserva Mineral según los códigos internacionales de reporte (como JORC)?",
@@ -1778,7 +1778,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la auditoría y certificación de recursos y reservas minerales, ¿cuál es el rol del profesional geólogo competente (Persona Competente)?",
@@ -1815,7 +1815,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la conversión de recursos a reservas para un proyecto subterráneo, ¿qué aspectos deben integrarse en el modelo de planificación diluido?",
@@ -1852,7 +1852,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la planificación de un bloque minero, el equipo técnico intenta calcular la recuperación metalúrgica global promediando aritméticamente las recuperaciones individuales de los sub-bloques componentes. ¿Por qué es conceptualmente erróneo este procedimiento y cómo debe resolverse en el modelamiento geometalúrgico?",
@@ -1889,7 +1889,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la etapa de control de calidad (QA/QC) de un yacimiento aurífero de vetas filonianas, se detecta un elevado 'efecto pepita' (nugget effect) en los datos analíticos. ¿Qué problema operativo ocasiona este fenómeno si no se gestiona adecuadamente durante la estimación?",
@@ -1926,7 +1926,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al caracterizar la 'roca total' (rock as a whole) de un testigo de perforación mediante mineralogía cuantitativa, ¿qué recursos o subproductos comerciales potenciales pueden identificarse además del metal principal?",
@@ -1963,7 +1963,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se observa una variación estadística superior al 5% de error permisible entre la recuperación estimada en pruebas de laboratorio de ciclo y la recuperación real registrada en la planta concentradora. ¿A qué falla en la construcción del modelo geometalúrgico se atribuye comúnmente este desvío?",
@@ -2000,7 +2000,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un programa de perforación diamantina se obtienen intervalos de muestreo de testigo con longitudes desiguales (0.5 m, 1.2 m, 2.0 m). Antes de realizar la variografía e interpolación por Kriging, ¿qué proceso de regularización de datos debe ejecutarse obligatoriamente y por qué?",
@@ -2037,7 +2037,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo geometalúrgico busca definir dominios de estimación a partir de una base de datos masiva que incluye geología, geoquímica y datos metalúrgicos. ¿Cuáles de los siguientes pasos forman parte del flujo secuencial riguroso para construir dichos dominios?",
@@ -2074,7 +2074,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la definición del modelo de bloques para un yacimiento pórfido, se debate entre utilizar celdas de 90 × 90 × 90 m o celdas de 20 × 20 × 5 m. ¿Qué impacto directo tiene seleccionar un tamaño de bloque excesivamente grande sobre la operación minero-metalúrgica?",
@@ -2111,7 +2111,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al construir el variograma experimental para un yacimiento controlado por vetas subverticales con rumbo Norte-Sur, el profesional ignora el análisis direccional e impone un modelo omnidireccional. ¿Qué consecuencia geoestadística tiene este error en la estimación de recursos?",
@@ -2148,7 +2148,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la preparación de mineral competente para lixiviación en pilas, se opta por un circuito de chancado asistido por rodillos de alta presión (HPGR) en lugar de chancado convencional. ¿Cuál es el mecanismo microestructural que explica la mejora en la cinética de extracción del lixiviante?",
@@ -2185,7 +2185,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un yacimiento de oro en explotación transita de la zona oxidada a la zona mixta (óxidos + sulfuros). ¿Qué contingencias operacionales y metalúrgicas deben anticiparse en el circuito de lixiviación con cianuro si no se reajusta el modelo?",
@@ -2222,7 +2222,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Para la estimación geoestadística de bloques mediante Kriging, se define un 'elipsoide de búsqueda'. ¿Cuál es la función matemática y geométrica de este componente en el proceso de cálculo?",
@@ -2259,7 +2259,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un depósito de relaves antiguo presenta leyes residuales atractivas de metales valiosos. Al plantear su reprocesamiento rentable, ¿qué secuencia de caracterización y proceso es la más indicada según la práctica geometalúrgica moderna?",
@@ -2296,7 +2296,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Existe una confusión habitual en la industria entre los procesos de Electroobtención (Electrowinning, EW) y Electrorrefinación (Electrorefining, ER). ¿Cuál es la distinción técnica fundamental referente a su alimentación (feedstock) y la naturaleza de sus ánodos?",
@@ -2333,7 +2333,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Si el mineral extraído presenta alteraciones argílicas no identificadas previamente y llega al circuito de extracción por solventes y electroobtención (SX-EW), ¿qué complicaciones operacionales graves genera la presencia de arcillas y finos en el PLS?",
@@ -2370,7 +2370,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una nave de electrorrefinación de cobre, se observa la formación masiva de crecimientos cristalinos puntiagudos (dendritas) sobre la superficie de los cátodos. ¿Cuál es el riesgo operativo inmediato y qué consecuencia comercial genera?",
@@ -2407,7 +2407,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el proceso hidrometalúrgico del Zinc, tras la tostación de la esfalerita (\nZnS) se forman ferritas de zinc (\nZnFe₂O₄) insolubles en lixiviación neutra. Para recuperar este zinc se aplica una lixiviación ácida caliente que disuelve también el hierro. ¿Cuál es la finalidad de ajustar posteriormente el pH con calcina en la etapa de purificación?",
@@ -2444,7 +2444,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una planta concentradora decide utilizar agua totalmente desmineralizada (ultra pura) libre de sales iónicas en sus circuitos de procesamiento. ¿Qué problema fisicoquímico desfavorable se manifiesta sobre el equilibrio de los procesos de lixiviación o flotación?",
@@ -2481,7 +2481,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la gestión hídrica integral de un proyecto minero-metalúrgico, el agua debe evaluarse en tres escalas operativas: Macro, Meso y Micro. ¿Qué componentes corresponden correctamente a estas escalas según el enfoque geometalúrgico?",
@@ -2518,7 +2518,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se cuenta con una presa de relaves físicamente estable y cerrada perimetralmente. Sin embargo, contiene soluciones con reactivos no degradados y metales disueltos. ¿Por qué la mera estabilidad física de la estructura es insuficiente para mitigar el riesgo ecológico?",
@@ -2555,7 +2555,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño del circuito de conminución y clasificación de una planta concentradora, el área de metalurgia propone incrementar sustancialmente la finura de molienda para liberar la mineralización útil. ¿Qué compensación (trade-off) crítica se genera respecto al recurso hídrico?",
@@ -2592,7 +2592,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se investiga la lixiviación aurífera aplicando el sistema sinérgico glicina-cianuro en muestras de mineral refractario con sulfuros (pirita/calcopirita). ¿Cuál es el pH operacional óptimo identificado en las pruebas experimentales para maximizar la extracción de oro y minimizar el consumo del reactivo?",
@@ -2629,7 +2629,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Frente a la lixiviación convencional usando únicamente cianuro de sodio, ¿cuáles de los siguientes beneficios técnicos, ambientales y económicos han sido validados al aplicar el sistema combinado glicina-cianuro?",
@@ -2666,7 +2666,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Para que el sistema de lixiviación con glicina sea económicamente viable a escala industrial, es fundamental no desechar la glicina gastada en el relave. ¿Qué mecanismo o tecnología se plantea para su regeneración y reutilización en el circuito?",
@@ -2703,7 +2703,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el estudio geometalúrgico del mineral de Okongate, la caracterización microscópica reveló la presencia de 'oro grueso libre' en las fracciones granulométricas superiores mallas gruesas. ¿Qué modificación crítica se debe incorporar en el circuito de proceso antes de enviar la pulpa a lixiviación?",
@@ -2740,7 +2740,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al llevar a cabo pruebas experimentales de lixiviación con glicina-cianuro en el laboratorio, se diferencia entre 'pruebas de botella abiertas' y 'pruebas de ciclo'. ¿Por qué las pruebas de botella abiertas no reflejan directamente el consumo operacional real de glicina fresca en una planta industrial?",
@@ -2777,7 +2777,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto del modelamiento espacial de atributos geometalúrgicos, ¿cuál es la diferencia fundamental entre una variable aditiva y una variable no aditiva al momento de realizar la estimación por bloques?",
@@ -2814,7 +2814,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro del marco del modelamiento geometalúrgico predictivo, ¿cuál es el margen de variación estadística aceptado operativamente entre los resultados de recuperación obtenidos en pruebas de laboratorio y el rendimiento real en planta industrial?",
@@ -2851,7 +2851,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la etapa de adquisición de datos y Análisis Exploratorio de Datos (EDA) para un modelo geoestadístico, ¿cuál es la función principal de la implementación de protocolos de Aseguramiento y Control de Calidad (QA/QC)?",
@@ -2888,7 +2888,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la caracterización analítica y control de yacimientos auríferos tipo veta (filonianos), ¿cuáles de los siguientes factores representan problemas concretos que dificultan la representatividad de los ensayos de laboratorio y la estimación del recurso?",
@@ -2925,7 +2925,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la metodología de modelamiento geometalúrgico por bloques, ¿cuál es la definición y función operativa de un bloque geometalúrgico en el modelo de reservas?",
@@ -2962,7 +2962,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al aplicar técnicas estadísticas multivariadas para clasificar y predecir dominios de alteración o mineralización, ¿qué método computacional suele ofrecer estimaciones más precisas para formar clústeres y asociaciones espaciales complejas?",
@@ -2999,7 +2999,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el tratamiento de datos de sondajes previo al modelamiento geoestadístico, ¿cuál es el objetivo fundamental de la compositación (compositing) de las muestras y qué error metodológico se debe evitar?",
@@ -3036,7 +3036,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para poder construir un modelo de sondajes tridimensional dentro de un software de modelamiento geológico (como Target o Leapfrog), ¿cuáles son los archivos o tablas estructuradas de datos de ingreso estrictamente indispensables?",
@@ -3073,7 +3073,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el tratamiento hidrometalúrgico de un yacimiento, ¿qué comportamiento operacional y económico caracteriza típicamente a la 'zona mixta' (óxidos + sulfuros) en comparación con la zona puramente oxidada?",
@@ -3110,7 +3110,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al realizar el análisis variográfico para evaluar la continuidad espacial de una variable, ¿cuál es la utilidad práctica del denominado 'variograma de fondo de pozo' (downhole\\ variogram o long\\ lag)?",
@@ -3147,7 +3147,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el procesamiento hidrometalúrgico, ¿cuál es el efecto físico-mecánico clave que genera la molienda por alta presión (HPGR) en las partículas de mineral para favorecer la lixiviación?",
@@ -3184,7 +3184,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Existen diferencias fundamentales entre los procesos electrometalúrgicos de Electroobtención (Electrowinning\\ -\\ EW) y Electrorrefinación (Electrorefining\\ -\\ ER). ¿Cuáles de las siguientes proposiciones describen correctamente estas diferencias operativas y de materia prima?",
@@ -3221,7 +3221,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la hidrometalurgia del zinc a partir de concentrados de esfalerita (blenda), ¿cuál es el propósito de realizar una lixiviación ácida caliente y qué función cumple la precipitación de la jarosita?",
@@ -3258,7 +3258,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el funcionamiento de las plantas de Extracción por Solventes (SX) e Intercambio Iónico, ¿cuál es la causa principal de la formación del denominado 'crudo' (crud) y qué problema operativo ocasiona?",
@@ -3295,7 +3295,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la operación de naves electrolíticas de electroobtención o electrorrefinación, ¿cuál es la causa física que produce cortocircuitos por crecimiento dendrítico en los cátodos y qué consecuencia conlleva?",
@@ -3332,7 +3332,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "La presencia de cationes y aniones contaminantes (como magnesio, sodio o cloruros) en el electrolito afecta severamente el proceso electrolítico. ¿Cuáles de los siguientes efectos negativos representan problemas operacionales provocados por estos iones disueltos?",
@@ -3369,7 +3369,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión integrada del recurso hídrico para minería, ¿cómo se estructuran los tres niveles de escala operacionales (macro, meso y micro) para la toma de decisiones?",
@@ -3406,7 +3406,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Desde el punto de vista de la fisicoquímica de soluciones en procesos metalúrgicos, ¿por qué el uso de agua completamente desmineralizada o ultrapura puede resultar perjudicial al ser introducida en ciertos circuitos?",
@@ -3443,7 +3443,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la elaboración de un balance hídrico y contabilidad del agua en operaciones minero-metalúrgicas, ¿cuáles de las siguientes prácticas y aspectos son fundamentales para asegurar la sustentabilidad operativa?",
@@ -3480,7 +3480,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la lixiviación limpia de oro desde minerales refractarios o con presencia de cobre, ¿cuál es el principio de acción sinérgica que ofrece el sistema lixiviante glicina-cianuro?",
@@ -3517,7 +3517,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con las pruebas experimentales y la optimización del sistema sinérgico glicina-cianuro para lixiviación aurífera, ¿cuál es la condición de pH óptimo que maximiza la recuperación y minimiza el cianuro residual?",
@@ -3554,7 +3554,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la evaluación de tecnologías hidrometalúrgicas sostenibles, ¿cuáles son las principales ventajas ambientales y operativas del uso de glicina frente al tratamiento tradicional con cianuro puro?",
@@ -3591,7 +3591,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "La zonificación geológica de un yacimiento aurífero (zona oxidada, zona supergénica/mixta y zona hipógena) influye drásticamente en la respuesta metalúrgica. ¿Cuáles de las siguientes afirmaciones explican esta relación durante la lixiviación?",
@@ -3628,7 +3628,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la estimación geoestadística de bloques de un yacimiento, ¿cuál es la función principal del denominado 'elipsoide de búsqueda'?",
@@ -3665,7 +3665,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante el diseño experimental de pruebas de lixiviación en botella para evaluar el sistema sinérgico glicina-cianuro, ¿cuáles de las siguientes variables corresponden a variables independientes controladas para optimizar la extracción de oro?",
@@ -3702,7 +3702,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de geología y metalurgia evalúa un yacimiento de sulfuros donde las pruebas tradicionales basadas en compósitos de sondajes predecían un desempeño óptimo en flotación. Sin embargo, al iniciar la explotación, la planta reporta caídas drásticas de recuperación y un excesivo consumo energético. ¿Qué error metodológico asociado a la evaluación tradicional explica esta discrepancia según el enfoque de 'Roca Total'?",
@@ -3739,7 +3739,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante la caracterización de una zona de alteración en un yacimiento aurífero, se detecta la presencia de marcacita y arcillas expansivas en proporciones superiores al 15%. ¿Cuáles de los siguientes efectos operativos y económicos deben anticiparse en los circuitos de procesamiento?",
@@ -3776,7 +3776,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la metodología para definir Ensambles Mineralógicos-Texturales (EMT) y Unidades Geometalúrgicas (UGM), ¿cuál es el procedimiento correcto para evitar la extrapolación errónea de datos metalúrgicos en el modelo de bloques?",
@@ -3813,7 +3813,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Para caracterizar mineralógicamente miles de muestras de sondaje de forma rápida y costo-efectiva en un programa masivo, ¿cuál es la combinación estratégica de técnicas analíticas recomendada?",
@@ -3850,7 +3850,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una operación minera decide implementar la estrategia de 'comminución en origen' (conminución en mina). ¿Qué ajuste práctico en la fase de extracción permite optimizar el rendimiento del molino SAG y elevar la capacidad de tratamiento de la planta?",
@@ -3887,7 +3887,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el caso de estudio del pórfido de oro La Colosa, se procesó una base de datos geoquímica multivariable con más de 60 a 100 elementos medidos por ICP. ¿Qué objetivos y procedimientos permitieron traducir estos datos analíticos masivos en modelos predictivos de dureza y recuperación?",
@@ -3924,7 +3924,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al analizar la correlación entre mineralogía y comportamiento mecánico en un pórfido de cobre-oro, ¿cuál es la respuesta típica de comminución frente a zonas dominadas por magnetita y feldespato potásico en comparación con zonas con alta densidad de sulfuros y fililización?",
@@ -3961,7 +3961,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un modelo geometalúrgico ha estimado una recuperación del 91% para un dominio específico. Durante la explotación de dicho frente, la planta registra de manera continua una recuperación del 83%. ¿Qué acción inmediata dentro del ciclo geometalúrgico debe ejecutarse para resolver la discrepancia?",
@@ -3998,7 +3998,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la transferencia de resultados del laboratorio a la escala industrial, los metalurgistas aplican factores de escalamiento (λ, κ). ¿Cuál es la razón fundamental para requerir estos factores en la validación del modelo geometalúrgico?",
@@ -4035,7 +4035,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante el preprocesamiento y aseguramiento de calidad de datos (QA/QC) para alimentar un modelo predictivo geometalúrgico, ¿cuáles de las siguientes validaciones son obligatorias según los principios geoestadísticos y composicionales?",
@@ -4072,7 +4072,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un modelo geometalúrgico integrado en tiempo real detecta que el mineral que ingresará a la molienda en las próximas tres horas presenta un incremento del 40% en dureza (SPI) y una presencia elevada de arcillas sericíticas. ¿Qué decisión automatizada debe tomar la planta sustentada en el modelo fenomenológico?",
@@ -4109,7 +4109,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera intenta exportar una 'receta' de mezcla de colectores de flotación altamente exitosa en un pórfido de cobre en Chile para aplicarla directamente en un proyecto de skarn en Perú. ¿Por qué esta práctica representa un elevado riesgo operativo desde la perspectiva geometalúrgica?",
@@ -4146,7 +4146,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un proyecto minero en etapa de factibilidad cuenta con un modelo de recursos detallado pero solo ha ejecutado 10 ensayos de variabilidad de conminución (SPI/BWI) en un yacimiento de 50 millones de toneladas. ¿Cuál es el impacto directo de esta escasez de datos sobre la incertidumbre del plan de producción?",
@@ -4183,7 +4183,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al modelar variables geometalúrgicas no aditivas, como ciertos índices de conminución o la recuperación máxima de flotación (R_{max}), ¿qué estrategias geoestadísticas deben aplicarse para lograr una interpolación espacial matemáticamente sólida?",
@@ -4220,7 +4220,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la evaluación geoestadística de un dominio geometalúrgico, un profesional analiza un gráfico SWAT (ventana móvil) y detecta una tendencia con una pendiente pronunciada y saltos abruptos en la media de la dureza a lo largo de un eje espacial. ¿Qué principio geoestadístico se está violando y qué ajuste se requiere?",
@@ -4257,7 +4257,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un escenario macroeconómico donde el precio del cobre experimenta una alza extraordinaria sostenida, la gerencia de operaciones debate cómo maximizar el valor de la compañía. Basándose en los principios analizados en el diplomado, ¿cuál es la estrategia operativa óptima en mina y planta?",
@@ -4294,7 +4294,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un Análisis Exploratorio de Datos (EDA) en un proyecto de cobre-oro, el geometalurgista examina un gráfico de probabilidad acumulada logarítmica para la ley de concentrado de dos dominios geológicos. Se observa una inflexión marcada y dos pendientes totalmente distintas. ¿Qué decisión de modelamiento se deriva de esta observación?",
@@ -4331,7 +4331,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el desarrollo de un modelo predictivo mediante Regresión Lineal Múltiple en software como Orange para predecir el Work Index a partir de leyes químicas (Fe, Mg, Si), ¿por qué es indispensable particionar la base de datos en conjuntos de Entrenamiento ('Training') y Prueba ('Test')?",
@@ -4368,7 +4368,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una planta de lixiviación en pilas de minerales oxidados de cobre, el ensayo de consumo de ácido en botellas (isopH a 72 horas) es crítico para la viabilidad. Si una UGM presenta un consumo de ácido superior a 45\\ kg/t impulsado por gangas de carbonato (Mg, Ca), ¿cuál es el impacto económico y operacional de no haber cartografiado este bloque?",
@@ -4405,7 +4405,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la aplicación del algoritmo de agrupación K-Means para generar UGMs preliminares basadas en múltiples predictores químicos y físicos, ¿cómo resuelve el algoritmo la asignación de muestras en espacios multivariables de alta dimensionalidad donde la intuición humana no puede operar?",
@@ -4442,7 +4442,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una planta concentradora de cobre se produce una alteración severa en la flotación: la espuma en las celdas 'rougher' se muestra excesivamente cargada pero inestable, y la recuperación cae vertiginosamente. Los análisis de laboratorio demorarán 48 horas. Basándose en la resolución práctica de contingencias en planta, ¿qué medida de diagnóstico y control inmediato debe ejecutar el equipo?",
@@ -4479,7 +4479,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al comparar los métodos clásicos de optimización de tajos abiertos, Cono Flotante y Lerch-Grossmann, para definir el envolvente económico de una mina, ¿cuáles son las características técnicas y diferencias clave entre ambas metodologías?",
@@ -4516,7 +4516,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la optimización económica del yacimiento marginal aurífero Coimolache (multi-PIT), ¿cuál fue la innovación metodológica presentada para calcular el envolvente económico y maximizar el Valor Presente Neto (VPN) frente a la metodología tradicional?",
@@ -4553,7 +4553,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de la planificación operativa de un proyecto minero multi-PIT (múltiples tajos pequeños), ¿qué ventaja estratégica ofrece desarrollar la secuencia de minado de modo que uno de los primeros tajos agotados sea utilizado inmediatamente como depósito de estéril ('backfilling')?",
@@ -4590,7 +4590,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Frente a un cambio imprevisto en las características físicas y mineralógicas del mineral que ingresa a planta, ¿cuáles son los roles e interacciones del Equipo Multidisciplinario de Geometalurgia para reaccionar eficazmente sin paralizar la operación?",
@@ -4627,7 +4627,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la geometalurgia holística, ¿cuál es la deficiencia conceptual de los enfoques tradicionales basados únicamente en compósitos en comparación con el paradigma de 'Roca Total'?",
@@ -4664,7 +4664,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes variables críticas y metodologías de muestreo son indispensables para construir un modelo geometalúrgico de bloques confiable?",
@@ -4701,7 +4701,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la metodología recomendada para estructurar ensayos metalúrgicos representativos sin caer en las distorsiones de los compósitos tradicionales?",
@@ -4738,7 +4738,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la caracterización de un yacimiento aurífero, se detecta la presencia de marcacita en proporciones del 7% al 8%. ¿Qué efecto operativo inmediato genera esta especie en el circuito?",
@@ -4775,7 +4775,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el proyecto La Colosa, la base de datos geoquímica por espectrometría ICP contenía decenas de variables de elementos traza. ¿Qué herramienta estadística se utilizó para condensar esta información y predecir parámetros de conminución?",
@@ -4812,7 +4812,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes afirmaciones describen correctamente las diferencias de comportamiento geometalúrgico entre la trituración (chancado) y la molienda?",
@@ -4849,7 +4849,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la caracterización geometalúrgica de frentes de minado, ¿cuál es el criterio fundamental para definir clústeres representativos y evitar desviaciones en la planta?",
@@ -4886,7 +4886,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué estrategia operativa permite convertir camiones de mineral marginal o de alta dureza en bloques rentables antes de su llegada a la planta de procesamiento?",
@@ -4923,7 +4923,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la finalidad operacional de construir un modelo geometalúrgico predictivo de bloques en comparación con un modelo de recursos tradicional?",
@@ -4960,7 +4960,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de los siguientes procedimientos corresponden a la etapa de aseguramiento y preprocesamiento de datos (QA/QC) en bases de datos geometalúrgicas?",
@@ -4997,7 +4997,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Se identifica en el plan de minado un bloque con alta ley pero con una resistencia mecánica extremadamente elevada (250 MPa). Según los criterios de decisión integrada, ¿cuál es la acción operativa más eficiente?",
@@ -5034,7 +5034,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Por qué resulta riesgoso extrapolar reactivos o 'recetas metalúrgicas' exitosas de una operación minera a otra con tipología similar?",
@@ -5071,7 +5071,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el modelamiento espacial de la flotación, cuando la recuperación máxima (R_{\\max}) presenta una alta correlación con la ley pero requiere mayor precisión, ¿qué técnica geoestadística se aplica?",
@@ -5108,7 +5108,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes condiciones son necesarias para garantizar la hipótesis de estacionalidad al definir Dominios Geometalúrgicos en un modelo geoestadístico?",
@@ -5145,7 +5145,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué impacto directo tiene sobre la certidumbre del plan de producción la densidad de pruebas de variabilidad de conminución y concentración ejecutadas en el depósito?",
@@ -5182,7 +5182,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Ante una coyuntura macroeconómica de precios de cotización excepcionalmente altos para un commodity metálico, ¿cuál es la respuesta de gestión operativa óptima sustentada en la geometalurgia?",
@@ -5219,7 +5219,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto del Análisis Exploratorio de Datos (EDA) geometalúrgico, ¿cuál es el objetivo fundamental de utilizar diagramas de caja (*boxplots*) y gráficos probabilísticos acumulados?",
@@ -5256,7 +5256,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Cuando la frecuencia de ensayos directos de conminución (como el *Work Index*) es muy baja en la base de datos, ¿qué estrategia y condiciones metodológicas permiten estimar dicha variable a corto plazo?",
@@ -5293,7 +5293,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto del modelamiento para lixiviación de cobre, ¿cuál es el procedimiento iterativo empleado por el algoritmo *k-means* para formar clústeres preliminares de consumo de ácido en espacios multidimensionales?",
@@ -5330,7 +5330,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al entrenar un modelo predictivo supervisado (como una regresión para predecir *Work Index*), ¿por qué es indispensable particionar la base de datos mediante técnicas como *Data Sample* (ej. 80% entrenamiento y 20% prueba)?",
@@ -5367,7 +5367,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Ante una alteración inesperada en el circuito de flotación Rougher (espuma inestable, baja recuperación y carga iónica atípica) y sin tiempo para análisis diferidos, ¿cuál es la medida correctiva directa en planta?",
@@ -5404,7 +5404,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es el principio de funcionamiento del algoritmo clásico del Cono Flotante en la optimización económica de tajos abiertos?",
@@ -5441,7 +5441,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En yacimientos marginales o de corta vida útil (como el caso Coimolache), ¿cuáles son los impactos de incorporar explícitamente los costos de inversión (sostenimiento) y de cierre dentro del cálculo de la envolvente económica del tajo?",
@@ -5478,7 +5478,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la función del equipo multidisciplinario geometalúrgico (Geólogo, Minero, Metalurgista y Mantenedor) en la gestión diaria de las operaciones?",
@@ -5515,7 +5515,7 @@
   {
     "codigo_diplomado": "DIP-05",
     "diplomado": "GEOMETALURGIA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la estrategia de minado *multi-pit* aplicada a yacimientos de oro marginales, ¿qué beneficio operativo y económico clave se logra al minar aceleradamente un tajo inicial de dimensiones reducidas?",

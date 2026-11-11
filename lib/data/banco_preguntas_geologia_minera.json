@@ -2,7 +2,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar un yacimiento mineralizado para decidir entre minado a tajo abierto o minado subterráneo, ¿cuál es el criterio económico y geométrico determinante para seleccionar la explotación a tajo abierto?",
@@ -39,7 +39,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué factores geomecánicos y de diseño son esenciales para garantizar la estabilidad de las cavidades en el método de cámaras y pilares (room and pillar)?",
@@ -76,7 +76,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿En qué consiste el principio operativo del método de arranque por cráteres invertidos o cuchillos?",
@@ -113,7 +113,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "La dilución reduce el tenor del mineral y perjudica la recuperación metalúrgica. ¿Cuáles de los siguientes elementos constituyen fuentes directas de dilución o medidas operativas para su control en vetas angostas?",
@@ -150,7 +150,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el método subterráneo *Shrinkage* (almacenamiento por tajos), ¿cuál es el principio operativo referente al mineral fragmentado dentro del caserón?",
@@ -187,7 +187,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "A pesar de sus reducidos costos operativos, el método *Shrinkage* presenta restricciones técnicas importantes. ¿Cuáles constituyen desventajas directas descritas para este método?",
@@ -224,7 +224,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la característica distintiva del método de corte y relleno descendente (*undercut and fill*) en cuanto a la secuencia de minado y soporte?",
@@ -261,7 +261,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el diseño de un sistema de relleno hidráulico subterráneo, ¿qué parámetros granulométricos y físicos resultan críticos para garantizar el drenaje y la estabilidad del material depositado?",
@@ -298,7 +298,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cómo se define la Geometalurgia en el ámbito de la planificación y explotación minera?",
@@ -335,7 +335,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Los sistemas de extracción en minería se dividen en continuos y discontinuos. ¿Qué características y equipos corresponden a los sistemas de extracción continua?",
@@ -372,7 +372,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es una ventaja operativa clave del uso de drones (VANTs) georreferenciados en la minería moderna?",
@@ -409,7 +409,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "La selección adecuada de la flota de maquinaria es determinante en la estructura de costos de una mina. ¿Qué criterios garantizan una gestión técnica y económica eficiente en la selección de equipos?",
@@ -446,7 +446,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál fue la razón principal de visibilidad e identidad industrial por la que Caterpillar adoptó el color amarillo (*Highway Yellow*) en su maquinaria a partir de 1931?",
@@ -483,7 +483,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Los minicargadores destacan por su versatilidad en obras civiles y apoyo minero. ¿Qué características técnicas definen su sistema de tracción e hidráulica?",
@@ -520,7 +520,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En tractores sobre orugas de gran tonelaje (bulldozers), ¿cuál es la función operativa específica del *ripper* o escarificador ubicado en la parte posterior?",
@@ -557,7 +557,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para la conformación de vías, plataformas y taludes se utilizan diversos rodillos compactadores. ¿Cuáles de las siguientes relaciones entre el equipo y su aplicación son correctas?",
@@ -594,7 +594,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la diferencia conceptual estratégica más significativa al migrar del marco de la norma técnica OHSAS 18001 al estándar ISO 45001 en la minería?",
@@ -631,7 +631,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "A diferencia de los accidentes agudos, las enfermedades ocupacionales se desarrollan de forma paulatina. ¿Cuáles constituyen patologías laborales crónicas en minería o falencias habituales en su control?",
@@ -668,7 +668,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En las actividades de perforación y voladura en minería subterránea o de superficie, ¿qué constituye técnicamente un \"tiro cortado\"?",
@@ -705,7 +705,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Un tirocortado representa un peligro extremo de explosión accidental durante la remoción de escombros. ¿Qué medidas de ingeniería o ajustes en la voladura ayudan a prevenir o controlar este riesgo?",
@@ -742,7 +742,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Según la gestión de riesgos y normativas del sector minero (e ISO 45001), ¿cuál es el orden normativo de la Jerarquía de Controles aplicable a los peligros identificados?",
@@ -779,7 +779,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la evaluación operativa de riesgos, ¿qué diferencias y funciones caracterizan al IPERC Base frente al IPERC Continuo?",
@@ -816,7 +816,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al analizar las curvas acumuladas de seguridad de una mina, ¿qué advertencia operacional crítica refleja el disparo repentino de la frecuencia de incidentes con tiempo perdido y su cruce con la curva de tendencia mensual?",
@@ -853,7 +853,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "La fatiga y la somnolencia representan causas principales de volcaduras y choques en el transporte minero. ¿Qué controles de ingeniería y administrativos ayudan a gestionar este riesgo fatal?",
@@ -890,7 +890,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de exploración geológica requiere realizar una calicata no rutinaria de 5 m de profundidad para muestreo de suelos. ¿Qué exigencia técnica y de seguridad es obligatoria según la reglamentación minera?",
@@ -927,7 +927,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué propiedad física del subsuelo mide la magnetometría y para qué aplicación principal se utiliza dentro de la prospección geológica?",
@@ -964,7 +964,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Dentro de la etapa inicial de prospección y exploración en superficie, ¿cuáles de las siguientes técnicas corresponden a métodos directos de muestreo para exponer o recuperar fragmentos de rocas y estructuras?",
@@ -1001,7 +1001,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño de accesos y banquetas para tajo a cielo abierto durante actividades de exploración y explotación, ¿cuál es el ángulo de pendiente recomendado para favorecer bancos autosostenibles?",
@@ -1038,7 +1038,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la diferencia técnica fundamental entre un sondaje orientado y un sondaje no orientado en perforación diamantina?",
@@ -1075,7 +1075,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la prospección geofísica mediante el método de resistividad eléctrica, ¿cómo se interpreta la presencia de una anomalía con valores marcadamente bajos de resistividad en el subsuelo?",
@@ -1112,7 +1112,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué factores litológicos y mineralógicos influyen de manera directa en la acidez del agua y la variación de la permeabilidad en un acuífero?",
@@ -1149,7 +1149,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "A nivel regional en los Andes sudamericanos, ¿qué asociación metalogenética general se observa respecto al régimen magmático y la distribución de yacimientos minerales?",
@@ -1186,7 +1186,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la caracterización hidrogeoquímica del subsuelo, ¿qué impacto directo genera la prevalencia de ambientes anóxicos sobre los procesos biogeoquímicos?",
@@ -1223,7 +1223,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con los principios fundamentales del muestreo geológico, ¿cuáles son los tres estándares esenciales que garantizan la validez de una muestra para la estimación de recursos?",
@@ -1260,7 +1260,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el proceso de preparación física de muestras minerales en el laboratorio analítico, ¿a qué tamaño de malla se pulveriza la alícuota cuarteada antes del ensaye por vía seca o química?",
@@ -1297,7 +1297,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la prospección de placeres auríferos aluviales mediante batea o puruña, ¿cuál es la práctica operativa recomendada durante el lavado para evitar la pérdida por arrastre del oro fino?",
@@ -1334,7 +1334,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué criterios morfológicos permiten diferenciar el oro primario de veta del oro aluvial transportado en un depósito de placer?",
@@ -1371,7 +1371,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el muestreo de canales en minería subterránea, ¿cuál es el objetivo técnico de limpiar la superficie del canal con rotomartillo antes de recolectar la muestra?",
@@ -1408,7 +1408,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes situaciones representan fuentes directas de error sistemático o contaminación en las campañas de muestreo en mina y campo?",
@@ -1445,7 +1445,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En los mapas temáticos de interpretación geoquímica y modelamiento de leyes en mina, ¿qué rango o categoría de material representa convencionalmente el color magenta?",
@@ -1482,7 +1482,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la prospección geoquímica de suelos mediante calicatas, ¿de qué horizonte del perfil de suelo se extrae la muestra representativa descartando la cobertura orgánica?",
@@ -1519,7 +1519,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la función principal de insertar muestras duplicadas, blancas y estándares (materiales de referencia certificados) en los lotes enviados al laboratorio analítico?",
@@ -1556,7 +1556,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para transformar un modelo de recursos geológicos teóricos en un modelo de reservas económicamente explotables, ¿qué factores técnicos y operativos deben ser integrados?",
@@ -1593,7 +1593,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la construcción de modelos geológicos 3D, ¿por qué es estricto e indispensable contar con el levantamiento topográfico de precisión de las bocaminas y collares de sondajes?",
@@ -1630,7 +1630,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿De qué manera influye la variación en la ley de corte (cutoff) dentro del modelo de bloques durante la estimación de reservas de un yacimiento?",
@@ -1667,7 +1667,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué alteración hidrotermal y asociación mineralógica caracterizan típicamente al núcleo de un depósito de tipo pórfido de cobre formado a altas temperaturas?",
@@ -1704,7 +1704,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Por qué la presencia de arcillas expansivas del grupo de la montmorillonita representa un factor crítico dentro de los modelos geometalúrgicos de un yacimiento?",
@@ -1741,7 +1741,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Bajo las exigencias de estándares internacionales como la norma canadiense NI 43-101, ¿cuál es el requisito indispensable respecto a la firma y responsabilidad de los informes públicos de recursos minerales?",
@@ -1778,7 +1778,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con el grado de certidumbre geológica en la estimación de recursos minerales, ¿cuáles de las siguientes descripciones corresponden correctamente a sus categorías normativas?",
@@ -1815,7 +1815,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión y optimización de presupuestos durante las campañas de exploración geológica en campo, ¿cómo se aplica de forma operativa la regla de Pareto (80/20)?",
@@ -1852,7 +1852,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es el criterio determinante para clasificar una sustancia sólida como mineral dentro del ámbito de la geología minera formal, excluyendo materiales amorfos o sintéticos?",
@@ -1889,7 +1889,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un evento eruptivo, los volcanes emiten productos sólidos, líquidos y gaseosos. ¿Qué característica distingue a las bombas volcánicas de otros piroclastos?",
@@ -1926,7 +1926,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la caracterización mineralógica mediante microscopía petrográfica, ¿cuál de las siguientes propiedades se evalúa específicamente bajo luz polarizada plana (PPL)?",
@@ -1963,7 +1963,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Las rocas volcánicas presentan características texturales y composicionales ligadas a la velocidad de enfriamiento y al contenido de sílice. ¿Cuáles de las siguientes afirmaciones describen correctamente a las riolitas y andesitas?",
@@ -2000,7 +2000,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la fase de prospección y exploración geológica, ¿cuál es la función principal de los denominados \"minerales guía\"?",
@@ -2037,7 +2037,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "El metamorfismo de contacto se diferencia fundamentalmente del metamorfismo regional por cuál de los siguientes factores dominantes?",
@@ -2074,7 +2074,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la evaluación de peligros geológicos en el sector de la mina La Estrella, ¿qué combinación de factores condicionantes determinó la mala calidad geotécnica del macizo rocoso y su alta susceptibilidad a caídas y derrumbes?",
@@ -2111,7 +2111,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Las rocas sedimentarias se clasifican según su origen y ambiente deposicional. ¿Cuáles de las siguientes aseveraciones respecto a las rocas sedimentarias y sus procesos son correctas?",
@@ -2148,7 +2148,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la circulación de fluidos hidrotermales en la corteza, ¿cuál de las siguientes dinámicas físico-químicas provoca la precipitación acelerada de menas metálicas en fracturas o venas?",
@@ -2185,7 +2185,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "La alteración argílica intermedia se caracteriza desde el punto de vista mineralógico por presentar ¿cuál de los siguientes ensambles característicos?",
@@ -2222,7 +2222,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "El enriquecimiento supergénico en un yacimiento de sulfuros de cobre actúa mediante cuál de los siguientes mecanismos geoquímicos?",
@@ -2259,7 +2259,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el análisis de depósitos minerales y estudios ambientales como el caso del proyecto La Esperanza, las brechas hidrotermales representan estructuras clave. ¿Cuáles de las siguientes afirmaciones sobre las brechas hidrotermales son verdaderas?",
@@ -2296,7 +2296,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué característica distingue a los yacimientos hipotermales de los yacimientos epitermales?",
@@ -2333,7 +2333,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En un sistema de pórfido metalífero, ¿qué proceso físico-químico desencadena la formación de redes de vetillas (*stockwork*) e hidrofracturamiento en la roca encajante?",
@@ -2370,7 +2370,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Con base en los casos de estudio de yacimientos en Perú abordados en el curso, ¿cuáles de las siguientes asociaciones entre yacimiento, tipo genético y mineralogía son correctas?",
@@ -2407,7 +2407,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Por qué las condiciones de clima semiárido con bajas tasas de erosión resultan óptimas para la preservación de perfiles de enriquecimiento supergénico de cobre?",
@@ -2444,7 +2444,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "La clasificación genética de Lindgren (1913) para yacimientos minerales se destaca históricamente por haber introducido explícitamente cuál de los siguientes parámetros?",
@@ -2481,7 +2481,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "La dolomitización es un proceso diagenético posdeposicional en rocas carbonatadas que involucra ¿cuál de las siguientes transformaciones químicas y estructurales?",
@@ -2518,7 +2518,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Los depósitos de placer concentran minerales pesados y resistentes mediante procesos exógenos. ¿Cuáles de las siguientes afirmaciones sobre los placeres son correctas?",
@@ -2555,7 +2555,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Los depósitos de sulfuros magmáticos alojados en rocas máficas y ultramáficas representan la fuente principal a nivel mundial de cuál de los siguientes grupos de elementos estratégicos?",
@@ -2592,7 +2592,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "La franja de pórfidos cupríferos del sur del Perú (Arequipa-Moquegua-Tacna) que alberga yacimientos como Cerro Verde, Toquepala, Cuajone y Quellaveco se caracteriza geocronológicamente por emplazarse en cuál de los siguientes intervalos?",
@@ -2629,7 +2629,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un sistema porfídico de cobre típico exhibe una zonación concéntrica de alteración hidrotermal. ¿Cuál es el núcleo de alteración característico en la zona central profunda del intrusivo mineralizador?",
@@ -2666,7 +2666,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Los yacimientos epitermales se dividen en estados de sulfidización alta, intermedia y baja. ¿Cuáles de las siguientes características distinguen a los yacimientos epitermales de alta sulfuración?",
@@ -2703,7 +2703,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la etapa de exploración y evaluación hídrica de un proyecto minero, ¿cuál es una medida técnica fundamental para proteger los acuíferos locales y garantizar la estabilidad geotécnica?",
@@ -2740,7 +2740,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el contexto de la transición energética global, el territorio peruano alberga un notable potencial en minerales estratégicos. ¿Cuáles de los siguientes minerales presentes en Perú desempeñan un rol crítico en este escenario tecnológico?",
@@ -2777,7 +2777,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un yacimiento vetiforme con potencia heterogénea y presencia de rocas encajonantes moderadamente inestables, el equipo de planeamiento busca minimizar la dilución operativa provocada por la sobre-rotura de la perforación. ¿Qué medida de ajuste operacional en el diseño de sección es recomendada para mitigar este efecto?",
@@ -2814,7 +2814,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la evaluación para seleccionar el método de minado en un cuerpo masivo competente con vetas verticales discontinuas, se analiza la viabilidad del minado por niveles con taladros largos (longholes). ¿Cuál es una restricción operacional o condición crítica asociada a este método?",
@@ -2851,7 +2851,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al dimensionar la red de pilares de sostenimiento natural para una explotación subterránea por cámaras y pilares (room and pillar), ¿qué factores geomecánicos y litológicos deben ponderarse para prevenir el colapso del macizo rocoso?",
@@ -2888,7 +2888,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una unidad minera analiza la factibilidad económica de un yacimiento aurífero. Si la ley promedio calculada baja sensiblemente debido a dilución en los frentes pero el volumen mineralizado es masivo y de bajo costo de desmonte superficial, ¿cuál es la decisión metodológica óptima?",
@@ -2925,7 +2925,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se requiere seleccionar el método de explotación para una veta angosta (1.30 m de potencia) con un buzamiento de 75°, cajas medianamente competentes y mineral no oxidado. ¿Por qué el método de avance por almacenamiento provisional (shrinkage stoping) resulta técnicamente aplicable?",
@@ -2962,7 +2962,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una mina subterránea que utiliza el método de corte y relleno descendente (undercut and fill) bajo condiciones de macizo incompetente, se decide vaciar un nivel completo construyendo una losa de concreto. ¿Qué procedimiento técnico es indispensable antes de proceder al minado del bloque inferior adyacente?",
@@ -2999,7 +2999,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un planificador geotécnico evalúa el empleo de relleno en pasta no newtoniana en reemplazo del relleno hidráulico convencional para el sellado de tajos explotados. ¿Qué propiedades operativas y mecánicas caracterizan a esta tecnología?",
@@ -3036,7 +3036,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Tras la conclusión de las operaciones de extracción en un sector subterráneo, quedan abiertas bocaminas, chimeneas de ventilación y tajeos comunicados a la superficie. ¿Cuál es el procedimiento de remediación ambiental exigido para transformar estos activos en pasivos mineros controlados?",
@@ -3073,7 +3073,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño del ciclo operacional de una mina subterránea de mediana escala, se evalúa reemplazar una flota de camiones convencionales por un sistema de transporte continuo mediante fajas o minadoras. ¿Qué condición del yacimiento justifica tarse por esta inversión tecnológica?",
@@ -3110,7 +3110,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un departamento de mantenimiento detecta que la flota de camiones subterráneos de 30 t presenta fallas prematuras en los diferenciales y consumo excesivo de combustible diésel. ¿Qué error operacional en la gestión de flota suele ser la causa raíz de este problema?",
@@ -3147,7 +3147,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al planificar la adquisición de maquinaria pesada para un proyecto minero de gran escala, la gerencia analiza realizar un proceso de benchmarking integral. ¿Qué criterios de selección técnica y económica deben priorizarse?",
@@ -3184,7 +3184,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un operador de un jumbo de perforación en interior mina decide puentear (cortar) el cable del sensor de bloqueo de seguridad de la cabina para evitar que la máquina se apague al abrir la puerta. ¿Qué consecuencia inmediata genera esta acción sobre la seguridad operacional?",
@@ -3221,7 +3221,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el sistema de transmisión hidrostática de un minicargador operando a alta exigencia en planta, se observa que la temperatura del aceite del circuito cerrado alcanza niveles críticos de sobrecalentamiento. ¿Qué mecanismo del sistema hidráulico ha fallado o está mal regulado?",
@@ -3258,7 +3258,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para la conformación y acabado final de las bases granulares en la construcción de una rampa principal de acceso, la supervisión exige el uso de rodillos vibratorios autopropulsados. ¿Qué efectos técnicos produce la vibración combinada con la masa del equipo durante la compactación?",
@@ -3295,7 +3295,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la industria de maquinaria pesada, la adopción del color amarillo (Highway Yellow en 1931 y Caterpillar Yellow en 1979) revolucionó los estándares de seguridad en frentes de trabajo. ¿Cuál es el sustento físico y perceptual de esta estandarización?",
@@ -3332,7 +3332,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un bulldozer montado sobre orugas requiere habilitar una vía de acceso en un terreno altamente consolidado con presencia de macizo rocoso duro no fragmentado. ¿Cuál es la secuencia técnica correcta para ejecutar esta tarea sin dañar la estructura de la máquina?",
@@ -3369,7 +3369,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Tras ocurrir un colisión mortal en un tajo abierto por la interacción entre una camioneta de supervisión y un camión minero de 300 t, la investigación causal revela deficiencias en las zonas de visibilidad (puntos ciegos) y fallas en las comunicaciones. ¿A qué categoría de causas corresponden estos hallazgos según las metodologías de análisis sistémico?",
@@ -3406,7 +3406,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En un proyecto de voladura en tajo abierto con presencia de macizos rocosos heterogéneos y agua, se registran eventos recurrentes de tiros cortados que ponen en riesgo las palas de extracción. ¿Qué medidas técnicas y de control geotécnico reducen eficazmente este riesgo?",
@@ -3443,7 +3443,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al auditar el Sistema de Gestión de Seguridad y Salud Ocupacional de una unidad minera bajo el marco legal peruano (DS 024-2016-EM y Ley 29783) y el estándar ISO 45001, ¿cómo se integra el cumplimiento legal dentro de la matriz IPERC?",
@@ -3480,7 +3480,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una unidad minera registra un incremento sostenido de bajas laborales por dorsalgias, hernias discales y neumoconiosis en trabajadores con más de 15 años de servicio. Sin embargo, los reportes oficiales mensuales indicaban cero accidentes con tiempo perdido (I.F. = 0). ¿Qué falencia estructural del sistema de vigilancia médica explica este contraste?",
@@ -3517,7 +3517,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la jerarquía de controles de seguridad para la ejecución de un mantenimiento dentro de un espacio confinado con presencia de polvos y energía eléctrica expuesta, ¿cuál representa la aplicación de un control de ingeniería según los estándares ISO 45001?",
@@ -3554,7 +3554,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una campaña de exploración geológica, se programa la ejecución de una calicata no rutinaria de 5.0 m de profundidad en un suelo detrítico inestable. ¿Cuál es la secuencia procedimental obligatoria para autorizar e iniciar esta labor de alto riesgo?",
@@ -3591,7 +3591,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el proceso de rediseño organizacional implementado en operaciones como Tintaya y Tinaja para transformar la cultura de seguridad, ¿qué decisiones administrativas y de liderazgo demostraron ser efectivas para reducir los índices de frecuencia?",
@@ -3628,7 +3628,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el seguimiento estadístico de los indicadores de un plan de seguridad, el departamento de prevención observa un cruce ascendente en las curvas acumuladas de incidentes con potencial de daño y eventos leves. De acuerdo con el análisis predictivo de tendencias, ¿qué evento se anticipa si no se aplican medidas correctivas?",
@@ -3665,7 +3665,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Para mitigar el riesgo de accidentes mortales por somnolencia y fatiga en conductores de camiones de acarreo en rutas nocturnas de larga distancia, ¿cuál representa la combinación técnica de controles de ingeniería y administrativos recomendada?",
@@ -3702,7 +3702,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de exploración investiga un área cubierta por depósitos volcánicos recientes de 80 m de potencia. Las mediciones gravimétricas muestran un alto gravimétrico positivo, pero la sísmica de refracción indica variaciones discontinuas en las velocidades de onda. ¿Cuál es la decisión metodológica más prudente para validar la existencia de un cuerpo mineralizado denso en profundidad antes de perforar?",
@@ -3739,7 +3739,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la fase de exploración en un proyecto de mediana minería, se planea iniciar trabajos de voladura para habilitar una trinchera y requiere uso de explosivos, además de captación de agua en una quebrada cercana. ¿Qué permisos y entidades fiscalizadoras se deben gestionar prioritariamente para cumplir el marco legal y ambiental?",
@@ -3776,7 +3776,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Se está diseñando un acceso y tajeo exploratorio a cielo abierto en roca moderadamente fracturada. ¿Qué parámetros de diseño operativo y geotécnico se deben aplicar para asegurar la estabilidad de los bancos y el drenaje adecuado del tajo?",
@@ -3813,7 +3813,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una campaña de perforación diamantina profunda con máquina tipo Explorer, se detecta que la broca ha sufrido reperforación (sobreforado) en una zona con alta alternancia de minerales blandos y duros. ¿Qué impacto crítico tiene este problema en el logueo y la evaluación posterior?",
@@ -3850,7 +3850,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la caracterización hidrogeológica de un acuífero fisurado expuesto a posible contaminación por plumas de lixiviados industriales, se obtienen perfiles de resistividad eléctrica aparente y mediciones de polarización inducida (IP). ¿Qué combinación de anomalías físicas confirma la presencia de un horizonte saturado con elevada salinidad o contaminantes iónicos?",
@@ -3887,7 +3887,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el monitoreo geoquímico del agua en un acuífero profundo, se observa la transición abrupta de una zona aeróbica a una zona con condiciones anóxicas severas, influenciada por microorganismos. ¿Qué comportamiento redox y mineralógico se espera respecto a los sulfatos y la acidez del fluido?",
@@ -3924,7 +3924,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo de prospección realiza la evaluación exploratoria en zonas marinas y costeras buscando concentraciones minerales. ¿Qué factores geomorfológicos y dinámicos deben evaluarse diferencialmente con respecto a la prospección terrestre tradicional?",
@@ -3961,7 +3961,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se busca localizar intrusiones kimberlíticas que albergan diamantes o cuerpos porfídicos profundos. ¿Por qué es indispensable combinar magnetometría de alta resolución con muestreos mineralógicos especializados en lugar de usar un muestreo litogeoquímico genérico?",
@@ -3998,7 +3998,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el muestreo de canales en una veta estrecha con cajas altamente fracturadas, el muestreador comete el error de picar selectivamente solo los tramos de cuarzo blando, evitando el material de cuarzo masivo duro o los contactos con la caja. ¿Qué error analítico y sesgo técnico genera esta práctica?",
@@ -4035,7 +4035,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un geólogo explora un depósito placer de oro aluvial en la cuenca de un río. ¿Qué observaciones morfológicas del mineral y criterios sedimentológicos permiten deducir que la fuente primaria (veta origen) se encuentra muy cercana al punto de muestreo?",
@@ -4072,7 +4072,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se envía un lote de muestras de testigos de perforación al laboratorio analítico. ¿Cuál es el procedimiento estandarizado de preparación física de la muestra previo a la determinación de la ley por absorción atómica (AAS) o espectrometría ICP?",
@@ -4109,7 +4109,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la evaluación de una escombrera/desmonte antiguo y de acopios en conos de acarreo para alimentar la planta concentradora, ¿qué método de muestreo operativo garantiza la representatividad del material heterogéneo y evita el sesgo por segregación de finos en la superficie?",
@@ -4146,7 +4146,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de muestreadores ingresa a un frente subterráneo recubierto de hollín, aceite de perforación y fragmentos sueltos. ¿Cuál es el orden estricto de procedimiento para ejecutar el muestreo de canales garantizando la seguridad y evitando la dilución o contaminación de la muestra?",
@@ -4183,7 +4183,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para cumplir con un programa riguroso de control de calidad (QA/QC) en la exploración de una estructura vetiforme subterránea antes de auditar las reservas, ¿qué acciones sobre el manejo de muestras y duplicados deben ejecutarse obligatoriamente?",
@@ -4220,7 +4220,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se muestrea una cancha de mineral proveniente de un frente subterráneo utilizando una malla sistemática. Los resultados del análisis químico compuesto muestran leyes de 8 oz/TC de Ag, 3% de Pb y 5% de Zn. Al calcular el valor por tonelada (NSR), se obtiene un valor de 140 USD/tonelada, frente a un costo operativo total de 95 USD/tonelada. ¿Qué decisión operativa se debe tomar?",
@@ -4257,7 +4257,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la presentación de un mapa geoquímico estructurado de leyes de oro para un plano de minado, se utiliza una escala estandarizada de colores. Si un tramo muestreado en una galería presenta una ley de 9.38 g/t Au (considerada de alta ley económica), ¿con qué color debe ser representado en el plano según el estándar técnico expuesto?",
@@ -4294,7 +4294,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la auditoría del laboratorio químico de un proyecto de exploración, se detecta que las muestras de 'blanco de fina granulometría' (blanks) insertadas sistemáticamente tras zonas de alta ley presentan valores anómalos de oro y cobre. ¿Qué fallo crítico en el proceso de laboratorio revela esta anomalía?",
@@ -4331,7 +4331,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa minera junior requiere publicar sus estimaciones de recursos minerales en un informe técnico de dominio público para cotizar en la bolsa de valores. ¿Qué requisitos normativos institucionales y de validación externa (ej. norma NI\\ 43-101) deben cumplirse obligatoriamente?",
@@ -4368,7 +4368,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al realizar el análisis de sensibilidad de un modelo de bloques para un yacimiento, se modifica el valor de la 'ley de corte' (cut-off) aumentándolo significativamente debido a un alza esperada en los costos de combustible y energía. ¿Cuál es el impacto directo de esta modificación en las curvas tonelaje-ley del recurso estimable?",
@@ -4405,7 +4405,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un modelo geológico teórico tridimensional estima un excelente volumen de reservas de cobre. Sin embargo, al iniciar las pruebas en la planta metalúrgica se observa que la recuperación real cae drásticamente debido a que los procesos de flotación diseñados para sulfuros primarios están recibiendo mezcla con minerales oxidados y arcillas. ¿Qué fallo de integración metodológica ocurrió entre el modelo y la operación?",
@@ -4442,7 +4442,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la evaluación de un pórfido de cobre-oro, se identifica una zona central con alteración potásica (biotita secundaria y feldespato potásico) y una zonación externa propilítica. Durante el procesamiento estadístico para estimar recursos por kriging, el geólogo comete el error de mezclar los datos de ensayo de la zona potásica de alta ley con los datos de la zona propilítica sin definir bordes. ¿Qué principio fundamental del modelado estadístico ha sido violado?",
@@ -4479,7 +4479,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Se está delimitando la unidad de estimación en un yacimiento de reemplazamiento tipo Skarn con alta complejidad estructural. ¿Qué factores geológicos y estructurales se deben integrar para construir dominios geológicos tridimensionales sólidos?",
@@ -4516,7 +4516,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el logueo de sondajes de un yacimiento cuprífero con presencia de arcillas del grupo de la montmorillonita, el área geotécnica y metalúrgica advierte sobre riesgos graves en la operación. ¿Cuál es el comportamiento de esta arcilla que afecta negativamente tanto el manejo de testigos como el proceso de molienda/recuperación en planta?",
@@ -4553,7 +4553,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se requiere convertir un bloque de 'Recursos Indicados' en 'Reservas Probables' para bancarizar el estudio de factibilidad de una mina subterránea. ¿Qué requisito técnico-operativo y económico es indispensable demostrar adicionalmente?",
@@ -4590,7 +4590,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un jefe de exploración en una mediana minera cuenta con un presupuesto limitado para la campaña de campo. Aplicando el principio de optimización presupuestaria 80/20 y estrategias de gestión eficiente expuestas en el módulo, ¿cómo debe organizar el trabajo de logueo y muestreo para maximizar el avance sin perder calidad de datos?",
@@ -4627,7 +4627,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un levantamiento geológico de campo en una zona intensamente meteorizada, un geólogo encuentra muestras con una fuerte pátina de alteración rojiza. ¿Qué propiedad física debe evaluar prioritariamente en el lugar para evitar confusiones en la identificación de la especie mineralógica?",
@@ -4664,7 +4664,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una erupción volcánica explosiva emite diversos materiales piroclásticos y gaseosos que impactan la salud pública y las actividades mineras regionales. ¿Qué productos sólidos y consecuencias asociadas se identifican técnicamente en estos eventos?",
@@ -4701,7 +4701,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una colada riolítica de enfriamiento rápido en superficie, ¿cuál es el mecanismo petrogenético que explica la coexistencia de grandes fenocristales inmersos en una matriz de grano fino o microlítica?",
@@ -4738,7 +4738,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al analizar una lámina delgada mediante un microscopio petrográfico de luz polarizada, ¿qué observaciones y propiedades se determinan al alternar entre luz polarizada plana (PPL) y nicoles cruzados (XPL)?",
@@ -4775,7 +4775,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Tras un desprendimiento de rocas en un macizo calizo de la Formación Chambará que afectó accesos y parcelas agrícolas cercanas a una operación minera, un informe de evaluación de peligros determinó que el evento fue condicionado principalmente por:",
@@ -4812,7 +4812,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En un estudio de susceptibilidad a movimientos en masa en laderas andinas con pendientes de 25° a 45°, ¿cuáles de los siguientes elementos actúan como factores desencadenantes e incrementan el riesgo geotécnico?",
@@ -4849,7 +4849,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el mapeo de una aureola de metamorfismo de contacto alrededor de una intrusión diorítica, se identifica un cuerpo no foliado de textura sacaroidea formado predominantemente por cristales recristalizados de calcita. ¿Cuál es el protolito de esta roca metamórfica?",
@@ -4886,7 +4886,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para garantizar la densidad, compactación y estabilidad geotécnica en la construcción del dique de contención de una presa de relaves con método de eje central, ¿qué controles granulométricos y mineralógicos son críticos?",
@@ -4923,7 +4923,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un sistema hidrotermal magmático, cuando los fluidos mineralizantes ascienden rápidamente a través de fracturas abiertas experimentando ebullición y una caída brusca de presión, ¿cuál es la consecuencia principal sobre la geometría y ley del depósito resultante?",
@@ -4960,7 +4960,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "La alteración hidrotermal refleja la interacción química entre fluidos térmicos y la roca encajante. ¿Qué asociaciones mineralógicas caracterizan a los distintos ensambles de alteración?",
@@ -4997,7 +4997,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera formal adquiere una concesión con antecedentes de explotación artesanal, donde existen acumulaciones de relaves con mercurio por uso de kimbaletes. ¿Qué enfoque técnico e integral se recomienda para abordar este escenario de pasivo socioambiental?",
@@ -5034,7 +5034,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la caracterización litoestructural de un depósito polimetálico emplazado en el Batolito de la Costa que corta secuencias carbonatadas como la Formación Jumasha, ¿qué rasgos litológicos e indicadores de mineralización son observables?",
@@ -5071,7 +5071,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al comparar un pórfido cuprífero (Cu – Mo) con un pórfido de tungsteno-estaño (W – Sn), ¿cuál es la diferencia petrológica fundamental en cuanto al origen y estado redox del magma generador?",
@@ -5108,7 +5108,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En un depósito porfídico de cobre, ¿qué condiciones climáticas, estructurales y petrológicas se requieren para el desarrollo y preservación de un perfil de enriquecimiento secundario supergénico?",
@@ -5145,7 +5145,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un yacimiento hidrotermal que se formó a profundidades someras (desde decenas hasta pocos cientos de metros), en rangos de temperatura entre 120 y 300°C y asociado a campos volcánicos terciarios con texturas de relleno de fisuras y brechas, se clasifica como:",
@@ -5182,7 +5182,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "El uso de microorganismos acidófilos como *Acidithiobacillus ferrooxidans* en la minería moderna ofrece soluciones tecnológicas avanzadas. ¿En qué procesos se aplican estas biotecnologías?",
@@ -5219,7 +5219,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al comparar la clasificación genológica de yacimientos minerales de Niggli con la propuesta por Waldemar Lindgren, ¿cuál es el rasgo distintivo del sistema de Lindgren?",
@@ -5256,7 +5256,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la dinámica de un río serpenteante que erosiona un filón aurífero aguas arriba, ¿en qué sectores del lecho y mediante qué mecanismos se favorece la acumulación de un placer aluvial?",
@@ -5293,7 +5293,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un geólogo explora un depósito de pepitas de oro acumuladas en la ladera justo por encima del afloramiento de una veta aurífera, sin que haya intervenido un transporte hídrico fluvial significativo. ¿Cómo se clasifica genéticamente este tipo de placer?",
@@ -5330,7 +5330,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante el proceso de dolomitización de una biocaliza marina, las soluciones ricas en magnesio interactúan con la calcita original. ¿Qué transformaciones petrofísicas y mineralógicas ocurren en la roca hospedante?",
@@ -5367,7 +5367,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Los depósitos de pórfidos cupríferos gigantes del sur del Perú, como Cerro Verde, Toquepala, Cuajone y Quellaveco, se caracterizan por haberse emplazado principalmente en una franja metalogenética definida por cuál intervalo temporal geológico?",
@@ -5404,7 +5404,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En un sistema de pórfido cuprífero clásico bien conservado, ¿qué características estructurales y de alteración concéntrica se observan desde el núcleo intrusivo hacia la periferia y la parte superior?",
@@ -5441,7 +5441,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un depósito mineralizado tipo epitermal que presenta fluidos magmáticos altamente ácidos, alteración argílica avanzada con cuarzo oco (vuggy silica), y mena de oro-plata asociada a enargita y pirita, corresponde a la categoría de:",
@@ -5478,7 +5478,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante la fase de exploración y diseño del programa de monitoreo hídrico ambiental de un proyecto minero en la cordillera, ¿qué acciones y datos geológicos son indispensables para proteger los acuíferos y prevenir contingencias?",
@@ -5515,7 +5515,7 @@
   {
     "codigo_diplomado": "DIP-03",
     "diplomado": "GEOLOGÍA MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Ante un escenario donde una comunidad local bloquea el acceso a un proyecto de exploración aduciendo que el agua de un arroyo ha cambiado a color rojizo, ¿cuál es la respuesta técnica y estratégica adecuada por parte del equipo del proyecto?",

@@ -65,8 +65,14 @@ function getLocalCatalogoData() {
         }
       }
 
-      // Código de Módulo formateado como "Módulo 01", "Módulo 02", etc.
-      const codigoModulo = `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
+      // Código de Módulo estandarizado ("MÓDULO 01", "MÓDULO 02", o etiqueta personalizada como "MÓDULO ÚNICO")
+      const codigoModulo = m.codigo && String(m.codigo).trim()
+        ? (
+            /^M[óo]dulo\s*0*(\d+)$/i.test(String(m.codigo).trim())
+              ? `MÓDULO ${String(m.codigo).trim().match(/\d+/)![0].padStart(2, '0')}`
+              : String(m.codigo).trim().toUpperCase()
+          )
+        : `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`;
 
       // Clases numeradas secuencialmente (ej. Clase 1, Clase 2... Módulo 2 empieza en Clase 4, etc.)
       const clasesFormat = (Array.isArray(m.clases) ? m.clases : []).map((claseItem: any) => {

@@ -10,6 +10,7 @@ import {
   DISENO_DEFAULT_VERTICAL,
   ajustarConectorSinHuerfana,
   obtenerFontFamily,
+  fuenteSoportaCursiva,
   formatearFechaSegunEstilo,
   calcularTamanoPxCanvas,
   resolverTamanoQrPt,
@@ -213,18 +214,30 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
         document.fonts.load('normal 24px "Outfit"'),
         document.fonts.load('bold 36px "Montserrat"'),
         document.fonts.load('normal 24px "Montserrat"'),
+        document.fonts.load('italic bold 36px "Montserrat"'),
+        document.fonts.load('italic normal 24px "Montserrat"'),
         document.fonts.load('bold 36px "Inter"'),
         document.fonts.load('normal 24px "Inter"'),
+        document.fonts.load('italic bold 36px "Inter"'),
+        document.fonts.load('italic normal 24px "Inter"'),
         document.fonts.load('bold 36px "Cinzel"'),
         document.fonts.load('normal 24px "Cinzel"'),
         document.fonts.load('bold 36px "Playfair Display"'),
         document.fonts.load('normal 24px "Playfair Display"'),
+        document.fonts.load('italic bold 36px "Playfair Display"'),
+        document.fonts.load('italic normal 24px "Playfair Display"'),
         document.fonts.load('bold 36px "Cormorant Garamond"'),
         document.fonts.load('normal 24px "Cormorant Garamond"'),
+        document.fonts.load('italic bold 36px "Cormorant Garamond"'),
+        document.fonts.load('italic normal 24px "Cormorant Garamond"'),
         document.fonts.load('bold 36px "Lora"'),
         document.fonts.load('normal 24px "Lora"'),
+        document.fonts.load('italic bold 36px "Lora"'),
+        document.fonts.load('italic normal 24px "Lora"'),
         document.fonts.load('bold 36px "Roboto"'),
         document.fonts.load('normal 24px "Roboto"'),
+        document.fonts.load('italic bold 36px "Roboto"'),
+        document.fonts.load('italic normal 24px "Roboto"'),
         document.fonts.ready
       ]);
     } catch {}
@@ -316,7 +329,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
   const rawPrograma = progClean || data.programa || 'DERECHO MINERO';
 
   const modClean = (data.modulo || '')
-    .replace(/^Módulo\s*\d+[:\-\s]*/i, '')
+    .replace(/^(?:M[óo]dulo\s*(?:\d+|[IVX]+|ÚNICO))[:\-\s]*/i, '')
     .trim();
   const rawModulo = modClean || data.modulo || 'LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR';
 
@@ -366,7 +379,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
     const fontEstudiante = obtenerFontFamily(cfg.estudiante.fuente, '"Times New Roman", Times, Georgia, serif');
     const colorEstudiante = cfg.estudiante.color || '#000000';
     const esNegrita = !!cfg.estudiante.negrita;
-    const esCursiva = !!cfg.estudiante.cursiva;
+    const esCursiva = !!cfg.estudiante.cursiva && fuenteSoportaCursiva(cfg.estudiante.fuente);
 
     let fontSize = calcularTamanoPxCanvas(
       cfg.estudiante.tamanoFuente || (isLandscape ? 36 : 28),
@@ -411,7 +424,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
     const fontProg = obtenerFontFamily(cfg.programa.fuente, '"Montserrat", "Segoe UI", Arial, sans-serif');
     const colorProg = cfg.programa.color || '#000000';
     const esNegritaProg = !!cfg.programa.negrita;
-    const esCursivaProg = !!cfg.programa.cursiva;
+    const esCursivaProg = !!cfg.programa.cursiva && fuenteSoportaCursiva(cfg.programa.fuente);
 
     const baseProgPt = cfg.programa.tamanoFuente || (isLandscape ? 22 : 18);
     const anchoProgPt = (cfg.programa.anchoMaximoCm || (isLandscape ? 25.5 : 18.5)) / anchoA4Cm * (isLandscape ? 841.89 : 595.28);
@@ -471,11 +484,11 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
       canvasW
     );
 
-    ctx.font = buildCanvasFont(fontSizeHoras, fontHoras, !!cfg.horas.negrita, !!cfg.horas.cursiva);
+    ctx.font = buildCanvasFont(fontSizeHoras, fontHoras, !!cfg.horas.negrita, !!cfg.horas.cursiva && fuenteSoportaCursiva(cfg.horas.fuente));
     let measuredHorasW = ctx.measureText(horasTexto).width;
     if (measuredHorasW > maxHorasW && maxHorasW > 0) {
       fontSizeHoras = Math.max(10, Math.floor(fontSizeHoras * (maxHorasW / measuredHorasW)));
-      ctx.font = buildCanvasFont(fontSizeHoras, fontHoras, !!cfg.horas.negrita, !!cfg.horas.cursiva);
+      ctx.font = buildCanvasFont(fontSizeHoras, fontHoras, !!cfg.horas.negrita, !!cfg.horas.cursiva && fuenteSoportaCursiva(cfg.horas.fuente));
     }
 
     ctx.fillStyle = colorHoras;
@@ -505,11 +518,11 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
       canvasW
     );
 
-    ctx.font = buildCanvasFont(fontSizeCred, fontCred, !!cfg.creditos.negrita, !!cfg.creditos.cursiva);
+    ctx.font = buildCanvasFont(fontSizeCred, fontCred, !!cfg.creditos.negrita, !!cfg.creditos.cursiva && fuenteSoportaCursiva(cfg.creditos.fuente));
     let measuredCredW = ctx.measureText(creditosTexto).width;
     if (measuredCredW > maxCredW && maxCredW > 0) {
       fontSizeCred = Math.max(10, Math.floor(fontSizeCred * (maxCredW / measuredCredW)));
-      ctx.font = buildCanvasFont(fontSizeCred, fontCred, !!cfg.creditos.negrita, !!cfg.creditos.cursiva);
+      ctx.font = buildCanvasFont(fontSizeCred, fontCred, !!cfg.creditos.negrita, !!cfg.creditos.cursiva && fuenteSoportaCursiva(cfg.creditos.fuente));
     }
 
     ctx.fillStyle = colorCred;
@@ -579,11 +592,11 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
     );
 
     ctx.fillStyle = colorFecha;
-    ctx.font = buildCanvasFont(fontSizeFecha, fontFecha, !!cfg.fecha.negrita, !!cfg.fecha.cursiva);
+    ctx.font = buildCanvasFont(fontSizeFecha, fontFecha, !!cfg.fecha.negrita, !!cfg.fecha.cursiva && fuenteSoportaCursiva(cfg.fecha.fuente));
     let measuredFechaW = ctx.measureText(fechaTextoFinal).width;
     if (measuredFechaW > maxFechaW && maxFechaW > 0) {
       fontSizeFecha = Math.max(9, Math.floor(fontSizeFecha * (maxFechaW / measuredFechaW)));
-      ctx.font = buildCanvasFont(fontSizeFecha, fontFecha, !!cfg.fecha.negrita, !!cfg.fecha.cursiva);
+      ctx.font = buildCanvasFont(fontSizeFecha, fontFecha, !!cfg.fecha.negrita, !!cfg.fecha.cursiva && fuenteSoportaCursiva(cfg.fecha.fuente));
     }
 
     ctx.textAlign = cfg.fecha.alineacion;
@@ -612,11 +625,11 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
       canvasW
     );
 
-    ctx.font = buildCanvasFont(fontSizeCod, fontCod, !!cfg.codigo.negrita, !!cfg.codigo.cursiva);
+    ctx.font = buildCanvasFont(fontSizeCod, fontCod, !!cfg.codigo.negrita, !!cfg.codigo.cursiva && fuenteSoportaCursiva(cfg.codigo.fuente));
     let measuredCodW = ctx.measureText(textoCod).width;
     if (measuredCodW > maxCodW && maxCodW > 0) {
       fontSizeCod = Math.max(9, Math.floor(fontSizeCod * (maxCodW / measuredCodW)));
-      ctx.font = buildCanvasFont(fontSizeCod, fontCod, cfg.codigo.negrita !== false, !!cfg.codigo.cursiva);
+      ctx.font = buildCanvasFont(fontSizeCod, fontCod, cfg.codigo.negrita !== false, !!cfg.codigo.cursiva && fuenteSoportaCursiva(cfg.codigo.fuente));
     }
 
     ctx.textAlign = cfg.codigo.alineacion;

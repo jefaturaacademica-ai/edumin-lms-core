@@ -5,6 +5,7 @@ import {
   BookOpen, 
   Lock, 
   CheckCircle2, 
+  XCircle,
   PlayCircle, 
   Sparkles, 
   FileText, 
@@ -56,7 +57,7 @@ export default function CursosPage() {
   const [nivelFiltro, setNivelFiltro] = useState<string>('Todos');
   const [precioMaximo, setPrecioMaximo] = useState<number>(159);
 
-  // Helper para determinar si un curso está completado (100% avance o examen rendido según configuración)
+  // Helper para determinar si un curso pasa a Completados (100% avance Y examen aprobado si aplica)
   const esCursoCompletadoHelper = (c: any) => {
     const codNormalizado = (c.codigo || c.id || '').toUpperCase();
     const confClaveCurso = `${codNormalizado}_Examen del curso`;
@@ -64,12 +65,14 @@ export default function CursosPage() {
     const configItem = (configuracionExamenesJson as Record<string, any>)[confClaveCurso] 
       || (configuracionExamenesJson as Record<string, any>)[confClaveTaller];
     const noAplicaExamen = configItem?.aplica_examen === false;
+    const notaMinima = Number(configItem?.nota_minima ?? 12);
 
     if (noAplicaExamen) {
       return (Number(c.avance) >= 100) || Boolean(c.completado);
     }
     const examenRendido = Boolean(c.rendido || (c.nota !== undefined && c.nota !== null && Number(c.nota) > 0));
-    return (Number(c.avance) >= 100) && examenRendido;
+    const examenAprobado = examenRendido && c.nota !== undefined && c.nota !== null && Number(c.nota) >= notaMinima;
+    return (Number(c.avance) >= 100) && examenAprobado;
   };
 
   // Cursos reales cargados dinámicamente desde Supabase
@@ -510,9 +513,14 @@ export default function CursosPage() {
                   const configItem = (configuracionExamenesJson as Record<string, any>)[confClaveCurso] 
                     || (configuracionExamenesJson as Record<string, any>)[confClaveTaller];
                   const noAplicaExamen = configItem?.aplica_examen === false;
+                  const notaMinimaCurso = Number(configItem?.nota_minima ?? 12);
 
                   const examenRendido = Boolean(curso.rendido || (curso.nota !== undefined && curso.nota !== null && Number(curso.nota) > 0));
-                  const esCompletado = noAplicaExamen ? (curso.avance >= 100 || Boolean(curso.completado)) : (curso.avance >= 100 && examenRendido);
+                  const examenAprobado = examenRendido && curso.nota !== undefined && curso.nota !== null && Number(curso.nota) >= notaMinimaCurso;
+                  const examenDesaprobado = !noAplicaExamen && examenRendido && !examenAprobado;
+
+                  const esCompletado = noAplicaExamen ? (curso.avance >= 100 || Boolean(curso.completado)) : (curso.avance >= 100 && examenAprobado);
+                  const esDesaprobado100 = !noAplicaExamen && curso.avance >= 100 && examenDesaprobado;
                   const tieneExamenPendiente = !noAplicaExamen && curso.avance >= 100 && !examenRendido;
                   const esPorIniciar = curso.avance === 0;
 
@@ -524,18 +532,32 @@ export default function CursosPage() {
                   const whatsappCuotaUrl = `https://wa.me/51984512809?text=${encodeURIComponent(
                     `Hola EDUMIN, deseo orientación para pagar mi siguiente cuota y habilitar el curso: ${curso.titulo}.`
                   )}`;
+                  const whatsappSustitutorioUrl = `https://wa.me/51924400268?text=${encodeURIComponent(
+                    `Hola EDUMIN, desaprobé el Examen de ${curso.titulo}. Deseo adquirir el Examen Sustitutorio.`
+                  )}`;
 
-                  // Centralización de estilos e información de estado (mismo color en badge, barra y botón)
+                  // Centralización de estilos e información de estado (Bloqueado = purple, Desaprobado = rose)
                   const infoEstado = estaBloqueadoPorCuotas
                     ? {
                         label: 'Bloqueado',
                         Icono: Lock,
+                        badgeBg: 'bg-purple-600 border-purple-400/30 text-white',
+                        duracionIconColor: 'text-purple-400',
+                        porcentajeColor: esOscuro ? 'text-purple-400' : 'text-purple-600',
+                        barraBg: 'bg-purple-600',
+                        botonBg: 'bg-purple-600 hover:bg-purple-700 shadow-purple-600/20 text-white font-bold cursor-pointer',
+                        botonTexto: 'Pagar cuota'
+                      }
+                    : esDesaprobado100
+                    ? {
+                        label: 'Examen desaprobado',
+                        Icono: XCircle,
                         badgeBg: 'bg-rose-600 border-rose-400/30 text-white',
                         duracionIconColor: 'text-rose-400',
                         porcentajeColor: esOscuro ? 'text-rose-400' : 'text-rose-600',
                         barraBg: 'bg-rose-600',
                         botonBg: 'bg-rose-600 hover:bg-rose-700 shadow-rose-600/20 text-white font-bold cursor-pointer',
-                        botonTexto: 'Pagar cuota'
+                        botonTexto: 'Pagar sustitutorio'
                       }
                     : esCompletado
                     ? {
@@ -666,17 +688,79 @@ export default function CursosPage() {
                     </>
                   );
 
-                  return estaBloqueadoPorCuotas ? (
-                    <div
-                      key={curso.id}
-                      onClick={() => setTarjetaBloqueoVisibleId(prev => prev === curso.id ? null : curso.id)}
-                      className={`group rounded-2xl overflow-hidden shadow-sm border flex flex-col justify-between transition-all hover:shadow-md cursor-pointer ${
-                        esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
-                      }`}
-                    >
-                      {contenidoTarjetaCurso}
-                    </div>
-                  ) : (
+                  if (estaBloqueadoPorCuotas) {
+                    return (
+                      <div
+                        key={curso.id}
+                        onClick={() => setTarjetaBloqueoVisibleId(prev => prev === curso.id ? null : curso.id)}
+                        className={`group rounded-2xl overflow-hidden shadow-sm border flex flex-col justify-between transition-all hover:shadow-md cursor-pointer ${
+                          esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
+                        }`}
+                      >
+                        {contenidoTarjetaCurso}
+                      </div>
+                    );
+                  }
+
+                  if (esDesaprobado100) {
+                    return (
+                      <div
+                        key={curso.id}
+                        className={`group rounded-2xl overflow-hidden shadow-sm border flex flex-col justify-between transition-all hover:shadow-md ${
+                          esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
+                        }`}
+                      >
+                        <Link href={`/dashboard/cursos/${curso.id}?accion=examen`} className="flex-1 flex flex-col cursor-pointer">
+                          <div className="relative h-44 w-full bg-slate-800 overflow-hidden">
+                            <img
+                              src={curso.imagen}
+                              alt={curso.titulo}
+                              className="object-cover w-full h-full transition-transform duration-300 opacity-90 group-hover:scale-105"
+                            />
+                            <div className="absolute top-3 inset-x-3 flex flex-wrap items-center justify-between gap-1.5 pointer-events-none z-10">
+                              <span className="text-[11px] font-semibold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 shrink-0">
+                                {curso.categoria}
+                              </span>
+                              <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-semibold border backdrop-blur-md shrink-0 ${infoEstado.badgeBg}`}>
+                                <IconoEstado className="size-3.5" /> {infoEstado.label}
+                              </span>
+                            </div>
+                          </div>
+                          <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                            <div className="space-y-3">
+                              <div className="h-12 flex items-start overflow-hidden">
+                                <h3 className={`text-base font-bold leading-snug line-clamp-2 text-balance uppercase ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                                  {curso.titulo.toUpperCase()}
+                                </h3>
+                              </div>
+                            </div>
+                            <div className="space-y-1.5 pt-2">
+                              <div className="flex items-center justify-between text-xs font-bold">
+                                <span className={esOscuro ? 'text-slate-400 font-medium' : 'text-slate-500 font-medium'}>Avance</span>
+                                <span className={`font-bold ${infoEstado.porcentajeColor}`}>{curso.avance}% completado</span>
+                              </div>
+                              <div className={`w-full h-2 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-100'}`}>
+                                <div className={`h-full rounded-full transition-all duration-500 ${infoEstado.barraBg}`} style={{ width: `${curso.avance}%` }} />
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+                        <div className={`px-6 pb-6 pt-3 border-t flex items-center justify-end ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
+                          <a
+                            href={whatsappSustitutorioUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`w-full sm:w-auto text-xs font-bold px-5 py-2.5 rounded-xl transition-all inline-flex items-center justify-center shadow-sm ${infoEstado.botonBg}`}
+                          >
+                            <span>{infoEstado.botonTexto}</span>
+                            <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform hover:translate-x-0.5" />
+                          </a>
+                        </div>
+                      </div>
+                    );
+                  }
+
+                  return (
                     <Link
                       key={curso.id}
                       href={`/dashboard/cursos/${curso.id}`}

@@ -2,7 +2,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la empresa Ecoplast se estableció el objetivo SMART de reducir en 25% las quejas vecinales por ruido nocturno. Al elaborar el plan de acción 5W2H, el responsable catalogó el costo de la supervisión de campo nocturna como 'costo hundido' bajo el elemento 'How much' (0.00), sin asignar presupuesto ni horas-hombre adicionales. Durante la ejecución, los supervisores se negaron a realizar el monitoreo in situ alegando sobrecarga laboral. ¿Qué falla de planificación estratégica HSEQ describe esta situación?",
@@ -39,7 +39,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una organización del sector industrial busca estructurar la fase de Planificación (P) de su Sistema Integrado de Gestión HSEQ articulando el diagnóstico del entorno con la gestión del riesgo. ¿Cuáles de los siguientes insumos y metodologías deben integrarse prioritariamente para asegurar una planificación estratégica alineada con las normas ISO 9001, 14001 y 45001?",
@@ -76,7 +76,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo consultor presenta la propuesta de objetivo para una empresa química: 'Optimizar la gestión de seguridad y calidad en la planta durante el presente periodo fiscal'. ¿Por qué esta formulación no cumple con los criterios exigidos para la planificación en sistemas HSEQ?",
@@ -113,7 +113,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la descarga de insumos químicos en una minera, ocurre un derrame severo. La investigación reveló que existía un procedimiento documentado y el operador completó la lista de chequeo; sin embargo, no evaluó la estabilidad del terreno blando antes de presurizar la manguera. ¿Qué concepto práctico de la fase 'Hacer' falló en esta intervención?",
@@ -150,7 +150,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un auditor HSEQ identifica que el 100% de los formatos de inspección pre-operacional están firmados al final de la jornada laboral, pero los registros de cuasi-incidentes son nulos y las fallas en equipos van en aumento. ¿Qué metodologías e indicadores deben implementarse en la fase de 'Verificar' para medir la ejecución real y evitar el 'cumplimiento documentario'?",
@@ -187,7 +187,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una planta procesadora de alimentos, las auditorías de verificación detectaron fallos recurrentes en la desinfección de bandejas. Tras investigar las causas con los '5 porqués', se elaboró un nuevo estándar operativo, se brindaron charlas de 5 minutos y se estableció una rotación de supervisores, logrando reducir las fallas en un 70%. ¿Cuál es la acción que corresponde ejecutar en la etapa 'Actuar' para garantizar la sostenibilidad de este logro?",
@@ -224,7 +224,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa de transporte gestionaba su proceso de 'Mantenimiento Vehicular' midiendo el número de lubricantes cambiados y el cumplimiento del programa de talleres. Bajo un enfoque de gestión por procesos orientado a resultados HSEQ, ¿cómo debe rediseñarse el propósito e indicadores de este proceso?",
@@ -261,7 +261,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la caracterización de procesos clave dentro de un Sistema Integrado de Gestión HSEQ, ciertos procesos son calificados como 'críticos' porque su falla compromete directamente los objetivos estratégicos. ¿Cuáles de los siguientes procesos cumplen con esta condición según el enfoque HSEQ?",
@@ -298,7 +298,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al caracterizar el proceso de 'Inducción y Capacitación' para operarios de minería, el área HSEQ busca evaluar la verdadera efectividad del proceso más allá del cumplimiento de asistencia. ¿Qué combinación de métrica y metodología de verificación en campo debe establecerse?",
@@ -335,7 +335,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la empresa Andes Seguros Industriales, dedicada al mantenimiento en altura para minería, se detectó que el proceso de gestión de EPP era informal: pedidos por WhatsApp, inventario desactualizado y un accidente por arnés vencido. Al rediseñar el mapa de procesos, ¿dónde y bajo qué clasificación debe ubicarse la 'Gestión de EPP'?",
@@ -372,7 +372,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una organización está reestructurando su mapa de procesos para elevar la madurez de su Sistema Integrado de Gestión. ¿Cuáles de los siguientes beneficios directos aporta un mapa de procesos correctamente diseñado y validado con los líderes operacionales?",
@@ -409,7 +409,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la caracterización del proceso de gestión de EPP en Andes Seguros Industriales, surgió un conflicto entre el área HSEQ y el área de Almacén/Compras respecto a la asignación de responsabilidades. De acuerdo con las buenas prácticas de gestión por procesos, ¿cómo deben dividirse los roles entre ambos actores?",
@@ -446,7 +446,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El reporte semanal de fallas en una línea de empaque refleja los siguientes datos consolidados de defectos: Golpeado: 222, Rayado: 181, Quebrado: 42, Astillado: 15, Mal ensamble: 10, Quemado: 5 (Total de defectos = 475). Al aplicar el Diagrama de Pareto para priorizar acciones de mejora, ¿qué conclusión de gestión se deriva del análisis?",
@@ -483,7 +483,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En un almacén de sustancias químicas se investigó un derrame severo utilizando el Diagrama de Ishikawa (Causa-Efecto). Durante el levantamiento se hallaron las siguientes evidencias: bidones sin tapa hermética, ausencia de canaletas de contención, operarios sin capacitación en respuesta a derrames y falta de procedimiento de recepción. ¿Cómo deben clasificarse correctamente estas causas en la matriz de las 6 M's?",
@@ -520,7 +520,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un supervisor de seguridad consolida diariamente las tarjetas de observación de actos y condiciones inseguras mediante una Hoja de Verificación (Checklist). ¿Cuál es la utilidad principal de esta recolección ordenada de datos dentro del conjunto de herramientas de calidad?",
@@ -557,7 +557,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El área de atención al cliente de una empresa distribuidora analiza la duración de las llamadas de reclamos (datos continuos en minutos). Para identificar la concentración de los tiempos y evaluar si el proceso está centrado en un 'target' objetivo de 15 minutos, ¿qué herramienta analítica es la más adecuada y qué ventaja ofrece respecto al gráfico de barras tradicional?",
@@ -594,7 +594,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En una planta industrial, el Gerente HSEQ realiza el seguimiento semanal del indicador de ausentismo laboral mediante una Gráfica de Control que incluye la media, el Límite de Control Superior (LCS) y el Límite de Control Inferior (LCI). ¿Cuáles de los siguientes eventos representan anomalías que exigen una intervención sistémica e investigación inmediata?",
@@ -631,7 +631,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo HSEQ gráfica en un Diagrama de Dispersión la 'Tasa de Rotación de Personal' (Variable X) frente al 'Número de Defectos de Calidad en Planta' (Variable Y) registrando datos de los últimos 12 meses. El gráfico muestra una marcada tendencia ascendente de izquierda a derecha, pero presenta un punto muy alejado ('outlier') en el mes de Julio. ¿Cómo debe interpretarse este resultado para la toma de decisiones?",
@@ -668,7 +668,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un supervisor de operaciones impone el cumplimiento de las normas HSEQ recurriendo exclusivamente a memorándums sancionadores, amonestaciones escritas y amenazas de despido. Según la clasificación de los Niveles de Liderazgo de John Maxwell, ¿en qué nivel se encuentra operando este supervisor y cuál es el efecto esperado en la cultura?",
@@ -705,7 +705,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Desde la ontología del liderazgo ('Ser - Hacer - Tener'), se analiza el impacto del comportamiento del líder HSEQ en la cultura organizacional. ¿Cuáles de las siguientes afirmaciones describen los efectos negativos de 'liderar desde la transacción o la sanción' en comparación con 'liderar desde la coherencia y los valores'?",
@@ -742,7 +742,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un Director HSEQ busca realizar un diagnóstico cualitativo profundo para identificar barreras culturales, tolerancias no declaradas y diferencias de percepción por sesgo de jerarquía o edad dentro de las operaciones de la empresa. ¿Qué herramienta cualitativa es la más idónea para este propósito según el temario?",
@@ -779,7 +779,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una planta industrial, los trabajadores ocultan los cuasi-incidentes y los errores de producción por temor a perder un bono mensual y ser reprendidos públicamente por la jefatura. De acuerdo con la tipología del Modelo de Cultura de James Reason, ¿cómo se clasifica esta cultura organizacional?",
@@ -816,7 +816,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Se observa que los operarios de una minera utilizan rigurosamente sus EPP completos únicamente cuando el supervisor HSEQ camina por la zona de trabajo; sin embargo, durante el turno nocturno los arneses permanecen sin conectar. Analizando este comportamiento bajo el modelo de Edgar Schein (Artefactos, Valores Declarados, Supuestos Básicos), ¿qué conclusiones son correctas?",
@@ -853,7 +853,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Estudios presentados en el diplomado señalan que aproximadamente el 70% de los Sistemas Integrados de Gestión HSEQ fracasan o se abandonan dentro de los primeros 3 años de implementación. ¿Cuál es la causa principal de este alto índice de fracaso atribuible a la dinámica organizacional?",
@@ -890,7 +890,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para asegurar la sostenibilidad del Sistema Integrado de Gestión HSEQ y evitar caer en el 'cumplimiento burocrático', el equipo gerencial debe monitorear indicadores de impacto real. ¿Cuáles de los siguientes indicadores demuestran un compromiso cultural y proactivo con la sostenibilidad?",
@@ -927,7 +927,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la planificación de un sistema integrado HSEQ mediante la metodología 5W2H para dar respuesta a un objetivo SMART, ¿cómo debe registrarse conceptualmente el componente \"How much\" (Cuánto)?",
@@ -964,7 +964,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes herramientas y enfoques constituyen insumos fundamentales para el análisis del contexto y la planificación inicial en un SIG integrado HSEQ?",
@@ -1001,7 +1001,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al derivar los controles operativos desde la matriz HIPER-SE hacia el plan de acción, ¿cuál es el orden normativo que debe regir la jerarquía de controles?",
@@ -1038,7 +1038,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Según el modelo de esfuerzo en el ciclo PHVA/DEMI presentado en clase, ¿cuál es la distribución teórica de dedicación por etapa y cuál suele ser la fase más abandonada en las organizaciones?",
@@ -1075,7 +1075,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para superar el \"cumplimiento documentario\" reactivo y medir la ejecución real en campo durante la etapa de Verificar, ¿qué prácticas e indicadores resultan efectivos?",
@@ -1112,7 +1112,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la etapa de \"Actuar\" del ciclo PHVA, ¿cuál es la diferencia fundamental entre las acciones de \"Ajustar\" y \"Estandarizar\"?",
@@ -1149,7 +1149,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al rediseñar el proceso de \"Gestión de Residuos\" desde una perspectiva tradicional hacia un enfoque orientado a resultados HSEQ, ¿qué cambio de objetivo e indicador debe aplicarse?",
@@ -1186,7 +1186,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de los siguientes procesos son considerados generalmente como \"críticos\" para salvaguardar los objetivos estratégicos de un SIG HSEQ?",
@@ -1223,7 +1223,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para verificar la eficacia real del proceso de inducción operativa HSEQ y evitar los \"falsos positivos\" que genera la evaluación teórica inmediata, ¿qué método de medición se recomienda?",
@@ -1260,7 +1260,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al construir un Mapa de Procesos, ¿cuál es el criterio clave expresado en clase para clasificar una actividad como proceso clave/operativo o de soporte?",
@@ -1297,7 +1297,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de los siguientes elementos representan beneficios de diseñar e implementar un Mapa de Procesos alineado con la estrategia HSEQ?",
@@ -1334,7 +1334,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la caracterización del proceso de Gestión de Equipos de Protección Personal (EPP), ¿cómo se deben delimitar las responsabilidades entre el área HSEQ y el responsable operativo (Almacén/Logística)?",
@@ -1371,7 +1371,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Se consolida un registro de fallas en empaque: Golpeado (222), Rayado (181), Quebrado (42), Astillado (20), Mal ensamble (15), Quemado (5). Al aplicar el Diagrama de Pareto, ¿cuál es el propósito del porcentaje acumulado?",
@@ -1408,7 +1408,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En un análisis de causa raíz con el Diagrama de Ishikawa para investigar un derrame de productos químicos en un almacén, ¿cuáles de las siguientes clasificaciones corresponden a las 6 M's?",
@@ -1445,7 +1445,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la función principal de la Hoja de Verificación (Checklist) dentro del conjunto de las siete herramientas básicas de la calidad?",
@@ -1482,7 +1482,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué característica distingue técnicamente a un Histograma de un gráfico de barras simple y cuál es su utilidad en el análisis HSEQ?",
@@ -1519,7 +1519,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Respecto a la Gráfica de Control y al Diagrama de Dispersión, ¿cuáles de las siguientes afirmaciones describen correctamente su aplicación en sistemas HSEQ?",
@@ -1556,7 +1556,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la simbología estándar de un Diagrama de Flujo (Flujograma), ¿qué representa la figura de un rombo y cuál es su implicación operativa?",
@@ -1593,7 +1593,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un supervisor de seguridad logra que el personal cumpla con las normas HSEQ no por exigencia del organigrama ni por temor a sanciones, sino por la confianza construida en campo y la escucha activa. Según los niveles de liderazgo de John Maxwell, ¿en qué nivel se ubica?",
@@ -1630,7 +1630,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué atributos diferencian a una \"Cultura Preventiva/Proactiva\" de una \"Cultura de Cumplimiento\" dentro del desarrollo de un SIG HSEQ?",
@@ -1667,7 +1667,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Desde la ontología del liderazgo (\"Ser, Hacer, Tener\"), ¿cuál es la consecuencia de gestionar un sistema HSEQ basándose predominantemente en un enfoque transaccional o condicionado?",
@@ -1704,7 +1704,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un trabajador comete un error operativo e ignora el reporte del incidente, encubriéndolo con el respaldo de su equipo por temor a ser sancionado. Según el modelo de James Reason, ¿a qué tipo de cultura corresponde este comportamiento?",
@@ -1741,7 +1741,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para diagnosticar de manera integral la cultura organizacional HSEQ en una empresa, ¿cuáles de las siguientes herramientas de medición cualitativa y cuantitativa deben combinarse?",
@@ -1778,7 +1778,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa posee software especializado y certificaciones ISO al día; sin embargo, el personal utiliza el EPP únicamente cuando ingresa el supervisor. Según el modelo de Edgar Schein (Artefactos, Valores declarados, Supuestos básicos), ¿qué nivel está frenando la sostenibilidad real del sistema?",
@@ -1815,7 +1815,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para lograr que la transformación de la cultura HSEQ sea sostenible en el tiempo sin depender exclusivamente de la supervisión del área de HSEQ, ¿cuál es la estrategia fundamental recomendada al cierre del módulo?",
@@ -1852,7 +1852,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una planta metalmecánica evalúa su contexto organizacional integrando los resultados de la matriz AMOFI (análisis interno) y la matriz PESTEL (análisis externo). Al cruzar los hallazgos, la gerencia identifica una alta convergencia entre la obsolescencia tecnológica de sus tornos CNC (debilidad interna) y el incremento de exigencias de precisión en el mercado automotriz (amenaza/oportunidad externa). ¿Cuál debe ser el enfoque prioritario de la organización bajo el pensamiento basado en procesos y la filosofía Lean de la norma ISO 9001:2015?",
@@ -1889,7 +1889,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa de ingeniería y construcción decide ampliar el alcance de su Sistema de Gestión de la Calidad (ISO 9001:2015) para incluir una nueva división de desarrollo de software especializado para maquinaria minera. Para determinar y formalizar correctamente el alcance del SGC, ¿qué factores deben ser considerados y mantenidos como información documentada?",
@@ -1926,7 +1926,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la integración de la cadena de valor hacia atrás (proveedores) bajo los principios de ISO 9001, una empresa importadora de repuestos industriales busca mitigar riesgos reputacionales y operativos. ¿Qué conjunto de condiciones mínimas debe verificar y exigir la organización en la homologación de sus proveedores críticos?",
@@ -1963,7 +1963,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una planta de ensamblaje de muebles para retail, se realiza un Análisis Modal de Fallos y Efectos (ANFE / FMEA) en la fase de diseño para solucionar devoluciones recurrentes por piezas faltantes. En una de las líneas, se determina que la falta de un juego de pernos críticos tiene un Impacto (I) = 8, una Ocurrencia (O) = 4 y una Detección (D) = 5, lo que genera un Número de Prioridad de Riesgo (NPR) = 160. Según los criterios de ISO 9001:2015 sobre gestión de riesgos y planificación (Cláusula 6), ¿cuál es la acción estratégica más adecuada?",
@@ -2000,7 +2000,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una corporación agroindustrial decide migrar su sistema ERP y reestructurar sus flujos de trabajo de almacén. Para cumplir rigurosamente con la Cláusula 6.3 (Planificación de los cambios) de la ISO 9001:2015 y mitigar la resistencia del personal, la organización debe implementar las siguientes medidas:",
@@ -2037,7 +2037,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una preauditoría interna en una empresa de logística de carga, el auditor observa que en el área de despacho los operadores utilizan fotocopias borrosas de un procedimiento de empaque de fecha 2018, las cuales tienen anotaciones manuscritas con tachaduras hechas por el jefe de turno. Sin embargo, en la intranet de la empresa figura la Versión 4.0 aprobada en 2025. ¿Cómo debe catalogarse esta situación según la Cláusula 7.5 (Información documentada) y la gestión de control documentario?",
@@ -2074,7 +2074,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa de transporte interprovincial de pasajeros presenta incidentes recurrentes de somnolencia al volante en rutas nocturnas de 14 horas de viaje continuo. Al analizar el SGSST bajo ISO 45001:2018, la alta dirección busca implementar controles operacionales eficaces. ¿Qué combinación de medidas operativas responde de manera integral a la jerarquía de controles y al abordaje de riesgos de la norma?",
@@ -2111,7 +2111,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una contratista del sector construcción opera en el Perú bajo el estándar ISO 45001:2018 y la Ley Ley 29783 de Seguridad y Salud en el Trabajo. Para estructurar los mecanismos de consulta y participación activa de los trabajadores (Cláusula 5.4 de ISO 45001 y marco nacional), ¿qué instrumentos deben estar obligatoriamente implementados y evidenciados?",
@@ -2148,7 +2148,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una operación minera a 4,500 m.s.n.m., se identifican riesgos severos asociados al desprendimiento de rocas en galerías subterráneas y cuadros de hipoxia/cianosis en trabajadores de reciente ingreso. Aplicando el enfoque proactivo de ISO 45001 y las mejores prácticas del sector, ¿cuál es la secuencia prioritaria de intervención operativa?",
@@ -2185,7 +2185,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una planta de embotellamiento automatizada, un técnico de mantenimiento ingresa a la celda de un robot paletizador sin realizar el procedimiento de Bloqueo y Etiquetado (LOTO - Lockout/Tagout), con el objetivo de destrabar una caja en 'menos de un minuto'. La máquina se activa automáticamente y causa atrapamiento. Tras investigar el incidente bajo ISO 45001 (Cláusula 8 y 10), ¿qué falla sistémica crítica se evidencia en el control operacional?",
@@ -2222,7 +2222,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un banco comercial implementa un programa integral de salud ocupacional dentro de su SGSST (ISO 45001:2018) enfocado en prevenir el desgaste profesional (burnout) y los trastornos musculoesqueléticos en su personal de atención al cliente. Para evaluar el desempeño de este sistema según la Cláusula 9 (Evaluación del desempeño), ¿qué indicadores combinados (proceso y logro) demuestran de forma objetiva la eficacia de las medidas?",
@@ -2259,7 +2259,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la matriz IPERC de un proyecto de construcción de un puente, el trabajo de izaje de vigas cerca de líneas eléctricas de alta tensión es clasificado como Riesgo Alto. Aplicando estrictamente la Jerarquía de Controles de la ISO 45001:2018, ¿cuál es el orden secuencial correcto que la supervisión de SST debe priorizar para la planificación de esta tarea?",
@@ -2296,7 +2296,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera informal que operaba mediante pozos abiertos y uso descontrolado de mercurio en Madre de Dios inicia un proceso de formalización e implementación de un Sistema de Gestión Ambiental basado en ISO 14001:2015. Al realizar el diagnóstico de sus aspectos e impactos ambientales, ¿qué acción urgente es indispensable desde la perspectiva de la gestión de riesgos ambientales y cumplimiento legal?",
@@ -2333,7 +2333,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una corporación minera diseña el Plan de Cierre de Mina (Mine Closure Plan) de una unidad de cobre bajo el enfoque de Ciclo de Vida de la norma ISO 14001:2015. Para asegurar una transición sostenible y un impacto social positivo perdurable en la comunidad local, ¿qué acciones deben integrarse desde la fase operativa?",
@@ -2370,7 +2370,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una planta concentradora monitorea su desempeño ambiental bajo ISO 14001:2015 registrando los siguientes datos de consumo específico de agua por tonelada de mineral procesado: Año 1: 1.2 m³/t, Año 2: 1.0 m³/t, Año 3: 0.9 m³/t, Año 4: 0.84 m³/t. Asimismo, la tasa de reciclaje de efluentes aumentó del 50% al 82%. ¿Cómo debe interpretar la gerencia ambiental estos KPIs dentro del ciclo PHVA?",
@@ -2407,7 +2407,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una controversial zona minera en los Andes peruanos, pobladores locales denuncian que la operación de una planta hidrometalúrgica está envenenando el río con metales pesados (cobre, selenio y molibdeno). Sin embargo, los estudios hydrogeológicos del Estudio de Impacto Ambiental (EIA) de línea base demuestran que las rocas volcánicas de la cuenca liberan naturalmente estos iones a la napa freática (origen geogénico). Frente a esta contingencia social y técnica under ISO 14001, ¿cuál es la respuesta técnica y transparente que debe ofrecer la organización?",
@@ -2444,7 +2444,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Conforme a la Ley General del Ambiente del Perú (Ley 28611) y la estructura de la ISO 14001:2015, los instrumentos de gestión ambiental establecen límites y responsabilidades sobre la contaminación industrial. ¿Qué mecanismos legales y normativos regulan el desempeño ambiental de las empresas?",
@@ -2481,7 +2481,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera despliega tecnologías de Minería Inteligente (redes 5G, flota de camiones autónomos no tripulados y analítica de datos en la nube). Esta automatización reduce en un 80% la presencia de trabajadores en zonas de alto riesgo subterráneo e incrementa la productividad en un 25%. No obstante, el centro de datos masivo incrementa el consumo de energía eléctrica de la planta. Bajo la Cláusula 6.1 (Riesgos y Oportunidades) de ISO 14001:2015, ¿cómo debe gestionarse esta situación?",
@@ -2518,7 +2518,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una auditoría interna HSEQ realizada a un terminal logístico de químicos, el auditor observa que en la zona de almacenamiento de solventes no existen kits anti-derrames ni bandejas de contención secundaria. Sin embargo, en la lista de verificación mensual el inspector del área había marcado 'Cumple al 100%' sin haber ido al almacén. ¿Qué hallazgo y metodología de causa raíz debe estructurar el auditor interno conforme a ISO 19011?",
@@ -2555,7 +2555,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante la ejecución de una auditoría interna en una flota de tractocamiones, el auditor detecta que las facturas de consumo de diésel presentan exactamente el mismo monto y la misma hora de llenado manuscrita para tres vehículos que operaban simultáneamente en tres regiones geográficas distintas (Cusco, Piura y Lima). De acuerdo con los principios éticos y la técnica de investigación de la ISO 19011, ¿cuáles son las acciones correctas que debe seguir el auditor?",
@@ -2592,7 +2592,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión corporativa de un Sistema Integrado HSEQ, se suele confundir el alcance del Programa de Auditoría con el del Plan de Auditoría. ¿Cuál es la distinción operativa y estructural correcta entre ambos conceptos según ISO 19011?",
@@ -2629,7 +2629,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la reunión de apertura de una auditoría interna integrada HSEQ en una fábrica de alimentos, el Gerente de Operaciones manifiesta enérgicamente que no permitirá el ingreso del equipo auditor a la planta de envasado primario porque 'están con exceso de trabajo y las auditorías solo hacen perder el tiempo'. ¿Cómo debe reaccionar el Auditor Líder garantizando el tono profesional y los criterios de ISO 19011?",
@@ -2666,7 +2666,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante la verificación en terreno de un taller de pintura industrial, el auditor interno observa que dos trabajadores están manipulando poliuretano y solventes agresivos sin usar sus respiradores de doble cartucho para vapores orgánicos, a pesar de que hay un letrero que indica su uso obligatorio. Al entrevistar a los operarios, estos responden que 'los cartuchos están saturados desde hace dos meses y el almacén no tiene repuestos'. ¿Qué técnicas de recolección de evidencia y contrastación debe aplicar el auditor?",
@@ -2703,7 +2703,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un auditor interno redacta el informe final de un hallazgo detectado en el área de maestranza. ¿Cuál de las siguientes opciones representa la redacción de un hallazgo de No Conformidad redactado de manera objetiva, precisa y basada en evidencias conforme a los estándares de ISO 19011?",
@@ -2740,7 +2740,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Las normas ISO 9001:2015, ISO 14001:2015 e ISO 45001:2018 están construidas bajo la Estructura de Alto Nivel (HLS / Anexo SL). ¿Qué ventajas operativas aporta esta arquitectura unificada al momento de diseñar y auditar un Sistema Integrado de Gestión (SIG HSEQ)?",
@@ -2777,7 +2777,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro del diagnóstico estratégico del contexto organizacional en un Sistema de Gestión de la Calidad (ISO 9001:2015), ¿cuál es la secuencia metodológica recomendada para el uso coordinado de las herramientas de análisis?",
@@ -2814,7 +2814,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el marco de la integración 'hacia atrás' de la cadena de valor en ISO 9001:2015, ¿cuáles de los siguientes criterios deben exigirse a los proveedores para garantizar la trazabilidad y la mitigación de riesgos operativos?",
@@ -2851,7 +2851,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con lo expuesto en el módulo sobre los fundamentos de ISO 9001:2015, ¿cómo debe entenderse conceptualmente la 'Calidad' en el ámbito empresarial?",
@@ -2888,7 +2888,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al aplicar la metodología ANFE / FMEA para la evaluación cuantitativa del riesgo en la fase de diseño o planificación de un proceso, ¿cuál es la fórmula empleada para calcular el Índice de Prioridad de Riesgo?",
@@ -2925,7 +2925,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Conforme a la Cláusula 6.3 de ISO 9001:2015 (Planificación de los cambios), ¿qué elemento crítico debe asegurar la organización antes de implementar una modificación en su SGC?",
@@ -2962,7 +2962,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el marco de la Cláusula 7.5 de ISO 9001:2015 sobre el Control de la Información Documentada, ¿cuáles de las siguientes actividades de gestión son obligatorias para garantizar su idoneidad y protección?",
@@ -2999,7 +2999,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al articular la norma internacional ISO 45001:2018 con el marco legal peruano de Seguridad y Salud en el Trabajo (Ley 29783 y su Reglamento DS 005-2012-TR), ¿cuál es la relación jerárquica y operativa correcta entre ambas normativas?",
@@ -3036,7 +3036,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el marco del Capítulo 5 de la ISO 45001:2018, ¿cuáles de los siguientes mecanismos representan formas efectivas de consulta y participación activa de los trabajadores en el SGSST?",
@@ -3073,7 +3073,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con los datos cualitativos y cuantitativos expuestos en las sesiones del diplomado, ¿cuál es uno de los principales retornos financieros/operativos al implementar la ISO 45001 en empresas con alto riesgo de accidentabilidad?",
@@ -3110,7 +3110,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la aplicación del ciclo PHVA dentro del Capítulo 8 (Operación) de la ISO 45001:2018, ¿a qué fase corresponde la implementación del sistema de Bloqueo y Etiquetado (LOTO) durante el mantenimiento de maquinaria industrial?",
@@ -3147,7 +3147,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de la evaluación del desempeño del SGSST (Capítulo 9 de ISO 45001), ¿cómo se interpreta y calcula técnicamente el Índice de Frecuencia (IF) de accidentes de trabajo?",
@@ -3184,7 +3184,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al analizar el Contexto de la Organización (Capítulo 4 de ISO 45001 / ISO 14001) para un proyecto minero situado a más de 4,000 metros sobre el nivel del mar, ¿cuáles de las siguientes variables representan condiciones internas o externas críticas que deben ser gestionadas?",
@@ -3221,7 +3221,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco conceptual de la norma ISO 14001:2015, ¿cuál es la distinción técnica exacta entre 'Aspecto Ambiental' e 'Impacto Ambiental'?",
@@ -3258,7 +3258,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la versión 2015 de la norma ISO 14001, ¿cuáles de los siguientes enfoques y términos fueron incorporados o reforzados significativamente frente a versiones anteriores?",
@@ -3295,7 +3295,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el caso práctico analizado de Minera Yanacocha / Cerro Verde respecto al monitoreo de desempeño ambiental, ¿qué indicador de ecoeficiencia demostró una mejora sostenible tras la implementación del Sistema de Gestión Ambiental?",
@@ -3332,7 +3332,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro del marco normativo ambiental peruano (Ley General del Ambiente N.º 28611), ¿cuál es la diferencia conceptual y operativa entre un Límite Máximo Permisible (LMP) y un Estándar de Calidad Ambiental (ECA)?",
@@ -3369,7 +3369,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el desarrollo e instrumentación de un Estudio de Impacto Ambiental (EIA) para proyectos de gran envergadura en el Perú, ¿qué requerimiento técnico es esencial para garantizar la veracidad de la Línea Base ambiental y social?",
@@ -3406,7 +3406,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la gestión de relaciones comunitarias y responsabilidad social estratégica para operaciones mineras o de infraestructura, ¿cuáles de las siguientes prácticas facilitan la construcción de una 'licencia social para operar' sostenible?",
@@ -3443,7 +3443,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Según la norma ISO 19011 (Directrices para la auditoría de los sistemas de gestión), ¿cuál es la diferencia fundamental entre el 'Programa de Auditoría' y el 'Plan de Auditoría'?",
@@ -3480,7 +3480,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante la ejecución de una auditoría interna HSEQ, los hallazgos deben clasificarse rigurosamente en función de la evidencia recopilada frente a los criterios. ¿Cuáles de las siguientes corresponden a clasificaciones válidas de hallazgos?",
@@ -3517,7 +3517,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con los principios éticos establecidos en ISO 19011 para la conducción de auditorías internas HSEQ, ¿qué conducta debe caracterizar la actuación del auditor durante la toma de evidencias en terreno?",
@@ -3554,7 +3554,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al realizar entrevistas durante una auditoría interna HSEQ, ¿cómo debe adaptar el auditor técnico sus preguntas según el nivel jerárquico del auditado (Alta Dirección vs. Personal Operativo)?",
@@ -3591,7 +3591,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al redactar una No Conformidad en el informe final de auditoría HSEQ, ¿cuáles son los tres elementos estructurales e indispensables que deben figurar explícitamente en el texto para garantizar su validez técnica?",
@@ -3628,7 +3628,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la etapa posterior a la auditoría, al evaluar una No Conformidad detectada, ¿cuáles de las siguientes herramientas y pasos metodológicos son requeridos para gestionar la causa raíz y cerrar el ciclo de manera efectiva?",
@@ -3665,7 +3665,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al adoptar la Estructura de Alto Nivel (HLS) compartida por ISO 9001, ISO 14001 e ISO 45001, ¿cuál es la principal ventaja operativa para una empresa que busca un Sistema Integrado de Gestión (SIG HSEQ)?",
@@ -3702,7 +3702,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el caso práctico de Minera Andec, empresa certificada en ISO 9001 pero con incidentes de caídas de rocas sin investigación formal, comité de seguridad inactivo, rebose de poza de sedimentación sin notificar y falta de vigilancia médica a contratistas durante 12 meses, ¿cuál pilar fue identificado como el más débil en el diagnóstico situacional y qué riesgo operacional inmediato genera sobre la organización?",
@@ -3739,7 +3739,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un gerente de HSEQ necesita justificar ante la Alta Dirección la inversión en la gestión de costos de no calidad e incidentes. Basándose en los datos expuestos en clase (OIT y ASQ) e ilustrados mediante casos de contingencias (como accidentes sin SOAT/SCTR o contaminación de lotes de agua), ¿qué argumento económico refleja de manera más precisa el impacto de una gestión deficiente?",
@@ -3776,7 +3776,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué ventajas operativas y estructurales obtiene una empresa que decide implementar un Sistema Integrado HSEQ partiendo de una certificación previa en ISO 9001? (Seleccione todas las que apliquen)",
@@ -3813,7 +3813,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una organización donde el área de Seguridad depende de Recursos Humanos, Calidad responde a Operaciones y Medio Ambiente está centralizado en una jefatura independiente, se evidencia duplicidad de formatos, fricciones interáreas y aprobaciones manuales lentas. ¿Qué medida táctica prioritaria se recomienda para reestructurar la productividad operativa?",
@@ -3850,7 +3850,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una mediana empresa con 230 trabajadores opera con tres normas ISO implementadas por equipos independientes, lo que genera altos costos en consultorías externas y no conformidades repetidas. ¿Cuáles son los primeros pasos prácticos (*paso cero* y subsiguientes) recomendados para iniciar una integración efectiva? (Seleccione todas las que apliquen)",
@@ -3887,7 +3887,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la sección de Liderazgo dentro de un Sistema Integrado de Gestión, la Alta Dirección debe demostrar su compromiso mediante acciones concretas. Para cubrir los 6 puntos clave exigidos por la norma en esta sección, ¿qué combinación de elementos debe asegurar la dirección?",
@@ -3924,7 +3924,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una corporación minera multinacional posee filiales en tres países con diferentes niveles de madurez operativa y regulaciones locales muy heterogéneas. ¿Qué enfoque de integración es el más adecuado para mantener la gobernanza corporativa permitiendo al mismo tiempo la flexibilidad local necesaria?",
@@ -3961,7 +3961,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "El responsable de un Sistema Integrado de Gestión desea convencer al Directorio para invertir en un software de gestión HSEQ que reemplace los archivos en Excel y formatos impresos. Según lo abordado en clase, ¿qué estrategias prácticas son efectivas para sustentar la inversión tecnológica? (Seleccione todas las que apliquen)",
@@ -3998,7 +3998,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la aplicación del modelo detallado de integración por etapas en una empresa manufacturera, el equipo concluye la Fase 1 (Diagnóstico y análisis de brechas). Al pasar a la Fase 2 (Priorización de procesos clave), ¿cuál es el criterio metodológico para seleccionar qué procesos integrar en primer lugar?",
@@ -4035,7 +4035,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una planta industrial se observa que los operarios usan correctamente su EPP y firman los registros preoperativos obligatorios. Sin embargo, en el análisis de un caso práctico (NIRPOD), se descubre que el personal oculta derrames menores y no reporta fallas mecánicas porque predomina el temor a ser sancionados o detener la producción. ¿Cómo se clasifican estas manifestaciones en los niveles de cultura organizacional?",
@@ -4072,7 +4072,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una organización presenta un enfoque extremo en el cumplimiento de metas de ventas y volumen de producción. Se toleran desviaciones menores en seguridad si permiten terminar a tiempo el lote comercial, y el personal experimenta agotamiento (*burnout*). Al diagnosticar esta cultura según las tipologías revisadas en clase, ¿qué tipo cultural prevalece y qué acción debe tomar el liderazgo?",
@@ -4109,7 +4109,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el análisis de los estilos de liderazgo aplicados al SIG HSEQ, un supervisor busca migrar de un estilo 'Operativo' hacia un estilo 'Transformacional'. ¿Qué acciones y enfoques caracterizan al Liderazgo Transformacional? (Seleccione todas las que apliquen)",
@@ -4146,7 +4146,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la redacción e interpretación práctica de la información documentada bajo las versiones actuales de la ISO (Anexo SL), un auditor observa las frases 'mantener información documentada' y 'conservar información documentada'. ¿Cuál es la interpretación operativa correcta que debe aplicar el equipo SIG?",
@@ -4183,7 +4183,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al estructurar la Cláusula 6 (Planificación) dentro de un Sistema Integrado HSEQ, ¿qué diferencias y especificidades normativas deben considerarse al abordar la gestión de riesgos en las tres normas? (Seleccione todas las que apliquen)",
@@ -4220,7 +4220,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un Gerente de HSEQ presenta el siguiente objetivo para el plan anual de gestión: 'Fomentar la conciencia de seguridad y la mejora continua en todo el personal durante el presente año'. Al evaluarlo frente a los criterios SMART y las buenas prácticas de auditoría, ¿por qué resulta inadecuado y cómo debe corregirse?",
@@ -4257,7 +4257,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al aplicar la metodología AMFE (Análisis de Modo y Efecto de Fallas) para evaluar un riesgo operacional ('Contratación deficiente de personal operario'), el equipo asigna: Impacto = 7, Ocurrencia = 2, Detección = 2. Tras un evento no deseado de renuncias intempestivas que obliga a contrataciones de emergencia sin inducción, la Ocurrencia sube a 8 y la Detección empeora a 4. ¿Qué decisión metodológica procede respecto al NPR (Número de Prioridad de Riesgo)?",
@@ -4294,7 +4294,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un auditor interno detecta que en el área de operaciones circulan versiones impresas no controladas de un procedimiento de trabajo, las cuales no poseen historial de cambios y fueron firmadas únicamente por la misma persona que las elaboró (quien además las aprobó). ¿Qué reglas de control documentario y elaboración de procedimientos se han infringido? (Seleccione todas las que apliquen)",
@@ -4331,7 +4331,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño de un procedimiento integrado de Comunicación Interna y Externa compatible con los estándares HSEQ (e ISO 37301/37001), ¿cuál es la combinación obligatoria de preguntas que debe responder estructuradamente la matriz de comunicaciones?",
@@ -4368,7 +4368,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la estructuración del Mapa de Procesos de la empresa bajo el requisito 4.4 de las normas ISO, surge un debate sobre la ubicación de los procesos del Sistema Integrado de Gestión (Calidad, Seguridad y Salud, Medio Ambiente). ¿En qué nivel jerárquico del mapa de procesos deben situarse y cuál es la justificación técnica?",
@@ -4405,7 +4405,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo directivo se prepara para una auditoría de certificación de su Sistema Integrado. Para demostrar objetivamente el Liderazgo y Compromiso de la Alta Dirección (Cláusula 5) ante el auditor externo, ¿cuáles de las siguientes evidencias son totalmente válidas y verificables? (Seleccione todas las que apliquen)",
@@ -4442,7 +4442,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Previo a afrontar un proceso de certificación, una empresa planifica su ciclo de auditorías. ¿Cuáles de las siguientes afirmaciones describen correctamente los tipos de auditoría, roles y reglas de ejecución según lo visto en clase? (Seleccione todas las que apliquen)",
@@ -4479,7 +4479,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa mantiene su Política Integrada publicada en su página web. Durante la auditoría de seguimiento del segundo año, el auditor nota que la empresa inauguró una nueva sede operativa y expandió su línea de negocio a servicios pesados, pero la política sigue intacta, sin firma actualizada ni registro de revisión. ¿Qué análisis procedimental aplica a esta situación?",
@@ -4516,7 +4516,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Con las recientes enmiendas normativas en las normas ISO armonizadas relativas al Cambio Climático (Cláusulas 4.1 y 4.2) y su vinculación con los Objetivos de Desarrollo Sostenible (ODS 9 y ODS 13), ¿cómo debe actuar una organización para evidenciar el cumplimiento de este requisito en su Sistema Integrado?",
@@ -4553,7 +4553,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un auditor interno detecta que un registro de asistencia a una capacitación crítica sobre 'Seguridad en Operación de Maquinaria Pesada' del 15 de abril de 2025 carece de las firmas de tres operarios. Al redactar el hallazgo de No Conformidad en el informe final, ¿cuál de los siguientes enunciados cumple estrictamente con la estructura técnica requerida?",
@@ -4590,7 +4590,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Tras la emisión de una No Conformidad durante una auditoría debido a la recurrencia de derrames de químicos en el almacén central, la empresa debe gestionar la Acción Correctiva correspondiente under el enfoque de las versiones actuales de la ISO. ¿Cuál es la secuencia metodológica obligatoria que debe ejecutarse?",
@@ -4627,7 +4627,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con estimaciones de organismos internacionales como la OIT e investigaciones de la ASQ mencionadas en la gestión HSEQ, ¿cuál es el impacto económico directo e indirecto de una deficiente gestión de la seguridad y la calidad en una organización?",
@@ -4664,7 +4664,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el diagnóstico situacional de un Sistema Integrado de Gestión donde la organización presenta alta variabilidad en entregas, caídas de rocas sin investigación formal y falta de control en efluentes ambientales, ¿cuál es la implicación metodológica de no abordar las debilidades en los pilares más críticos?",
@@ -4701,7 +4701,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Dentro del marco normativo y complementario aplicable a la gestión HSEQ, ¿cuáles de las siguientes afirmaciones describen correctamente la función específica de las normas de referencia ISO?",
@@ -4738,7 +4738,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el proceso de planificación para integrar los sistemas de gestión en una organización con múltiples áreas descentralizadas, ¿cuál es considerado el 'Paso Cero' indispensable antes de implementar cambios operacionales o de rediseño documental?",
@@ -4775,7 +4775,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una organización operaba sus sistemas de calidad, seguridad y medio ambiente mediante tres equipos independientes, lo que generaba solicitudes duplicadas de información ante las auditorías. ¿Qué beneficio operativo primario se alcanza al unificar la estructura del sistema?",
@@ -4812,7 +4812,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al estructurar la sección de liderazgo para el rediseño de un Sistema Integrado de Gestión HSEQ, ¿qué elementos deben quedar expresamente cubiertos según los requisitos normativos?",
@@ -4849,7 +4849,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa pequeña con bajo nivel de madurez organizacional y recursos financieros limitados desea incorporar las normas ISO 14001 e ISO 45001 sobre su actual certificación ISO 9001. ¿Cuál es el enfoque de integración metodológica más adecuado según la teoría de sistemas de gestión?",
@@ -4886,7 +4886,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al presentar una propuesta de inversión para la adquisición de un software de gestión HSEQ ante la alta dirección, ¿cuál es la estrategia más efectiva para sustentar la viabilidad del proyecto?",
@@ -4923,7 +4923,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Dentro de un Sistema Integrado de Gestión HSEQ, existen procedimientos que por su naturaleza normativa son transversales. ¿Cuáles de los siguientes procesos pueden estructurarse mediante un procedimiento único integrador?",
@@ -4960,7 +4960,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la cultura organizacional aplicada a los sistemas HSEQ, se identifica que los operarios llenan los registros de preuso de equipos 'por temor a recibir un memorandum de sanción' y no por convicción sobre su seguridad. ¿A qué componente de la cultura organizacional corresponde este comportamiento?",
@@ -4997,7 +4997,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una organización demuestra una alta flexibilidad ante exigencias del mercado y fomenta la innovación constante en sus servicios de calidad, pero frecuentemente presenta caos documental, falta de claridad en controles operacionales y omisión en reportes ambientales. ¿Qué tipo de cultura organizacional predomina en este escenario?",
@@ -5034,7 +5034,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "El liderazgo en la gestión HSEQ puede ejercerse desde un estilo meramente operativo o un estilo transformacional. ¿Cuáles de las siguientes conductas representan manifestaciones propias del liderazgo transformacional?",
@@ -5071,7 +5071,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la terminología actual de las normas ISO basadas en el Anexo SL (como ISO 9001:2015 e ISO 45001:2018), se unificó el concepto de documentación. ¿Cómo debe interpretarse tácticamente la diferencia entre 'mantener' y 'conservar' información documentada?",
@@ -5108,7 +5108,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al planificar la gestión de riesgos conforme a la Cláusula 6 bajo el Anexo SL, ¿qué diferencia sustancial existe entre el enfoque de riesgo en ISO 9001 respecto a ISO 14001 e ISO 45001?",
@@ -5145,7 +5145,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al redactar los objetivos integrados dentro de un Sistema de Gestión HSEQ conforme a la metodología SMART, ¿qué características deben cumplirse obligatoriamente para garantizar su validez normativamente y ante auditoría?",
@@ -5182,7 +5182,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la evaluación cualitativa/cuantitativa de un riesgo de proceso mediante la metodología AMFE (Análisis Modal de Fallos y Efectos), se evalúa un evento con puntuaciones de Impacto = 7, Ocurrencia = 2 y Detección = 2. ¿Cuál es el Número de Prioridad de Riesgo (NPR) calculated y qué acción prioritaria se deriva si la fórmula es NPR = Impacto × Ocurrencia × Detección?",
@@ -5219,7 +5219,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al redactar la estructura formal de un procedimiento dentro del Sistema Integrado de Gestión, se requiere garantizar la validez legal e interna del documento. ¿Qué condición de control de información documentada es indispensable antes de distribuir la nueva versión en planta?",
@@ -5256,7 +5256,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al diseñar un procedimiento de comunicación (interna y externa) bajo un enfoque integrado HSEQ y normas complementarias como ISO 37001, ¿qué elementos deben quedar expresamente especificados en la matriz de comunicaciones?",
@@ -5293,7 +5293,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una auditoría externa de certificación, el auditor solicita evidencias del involucramiento de la Alta Dirección en el Sistema Integrado de Gestión. ¿Cuál de los siguientes elementos constituye una evidencia objetiva y sólida de su compromiso según el estándar ISO?",
@@ -5330,7 +5330,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al estructurar el mapa de procesos de una organización bajo la cláusula 4.4 de las normas ISO, ¿dónde deben ubicarse metodológicamente los procesos transversales de Calidad, Seguridad y Medio Ambiente?",
@@ -5367,7 +5367,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para lograr que la cultura organizacional avance hacia niveles proactivos o generativos (según el Modelo Hudson) en materia de seguridad y comportamiento en planta, ¿qué acciones prácticas han demostrado mayor efectividad operativamente?",
@@ -5404,7 +5404,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Con las recientes adendas sobre cambio climático incorporadas a las normas ISO de sistemas de gestión (cláusulas 4.1 y 4.2), ¿cómo debe reflejarse este requisito en la estrategia HSEQ de la empresa para cumplir con la Responsabilidad Social Empresarial y los ODS (ej. ODS 13 Acción por el Clima)?",
@@ -5441,7 +5441,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el desarrollo de una auditoría externa de certificación (tercera parte), se define la estructura del equipo auditor. ¿Cuál es la diferencia fundamental entre la función de un 'Experto Técnico' y la del 'Auditor Líder'?",
@@ -5478,7 +5478,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el muestreo de evidencias en una auditoría interna, se identifica que en un grupo de 10 trabajadores revisados, ninguno cuenta con la inducción ni los registros de capacitación exigidos para operar un equipo crítico de elevación. ¿Cómo debe clasificarse metodológicamente este hallazgo?",
@@ -5515,7 +5515,7 @@
   {
     "codigo_diplomado": "DIP-07",
     "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al redactar de forma técnica y rigurosa el informe de una No Conformidad detectada durante la auditoría para su posterior tratamiento y acción correctiva, ¿qué elementos deben estar obligatoriamente presentes en la descripción del hallazgo?",

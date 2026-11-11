@@ -2,7 +2,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una planta industrial de manufactura, se detecta que una prensa hidráulica carece de resguardo fijo en las partes móviles de atrapamiento. Si un operario trabaja diariamente frente a esta máquina sin protección, ¿cómo deben clasificarse técnicamente el elemento y la situación según los conceptos del SG-SST?",
@@ -39,7 +39,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con la Ley 29783 y su reglamento en el Perú, ¿cuáles de los siguientes documentos e instrumentos de gestión deben ser exhibidos obligatoriamente por el empleador en un lugar visible del centro de trabajo?",
@@ -76,7 +76,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El área de logística de una empresa adquiere un lote de cascos y lentes de protección a un precio 60% inferior al del mercado. Durante una inspección, el Jefe de Seguridad descubre que los productos carecen de certificación de calidad y trazabilidad de importación. Frente a este escenario, ¿cuál es el análisis de gestión de SST más acertado?",
@@ -113,7 +113,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una organización decide adoptar el enfoque transformador de 'Visión Cero'. Durante una reunión directiva, surge un debate sobre la diferencia entre buscar 'Cero Accidentes' versus 'Cero Daño'. ¿Qué alternativa expresa con mayor exactitud la cobertura del concepto de 'Cero Daño'?",
@@ -150,7 +150,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Conforme a la Resolución Ministerial 312-2011 y las normas complementarias sobre exámenes médicos ocupacionales (EMO) en el Perú, ¿cuáles de las siguientes afirmaciones sobre su periodicidad y financiamiento son correctas?",
@@ -187,7 +187,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un taller de maestranza industrial, el monitoreo de agentes físicos registra un nivel continuo de ruido ambiental de 91 dB(A). De acuerdo con la normativa nacional sobre límites de exposición a ruido, ¿cuál es el tiempo máximo de exposición permitido para un trabajador sin protección auditiva en dicha área?",
@@ -224,7 +224,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el archivo pasivo del Sistema de Gestión de SST, la normativa peruana exige conservar determinados registros por plazos diferenciados según la naturaleza de la información. Si una empresa debe archivar los registros de Enfermedades Ocupacionales y los registros de Accidentes de Trabajo e Incidentes Peligrosos, ¿cuáles son los plazos mínimos de conservación exigidos por ley?",
@@ -261,7 +261,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa del sector manufacturero cuenta con 150 trabajadores en planilla y un sindicato conformado por trabajadores representativos. ¿Cuáles de las siguientes condiciones legales deben cumplirse para la conformación e instalación de su Comité de Seguridad y Salud en el Trabajo (CSST)?",
@@ -298,7 +298,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Tras una evaluación psicosocial en una línea de ensamblaje, se detecta un índice de ausentismo del 25%, rotación del 15% y frecuentes cuadros de ansiedad debido a jornadas excesivas con horas extras obligatorias. ¿Qué medida de control de gestión resulta más efectiva e integral para abordar esta contingencia?",
@@ -335,7 +335,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa decide migrar de la norma OHSAS 18001 al estándar internacional ISO 45001:2018. Durante la etapa de diagnóstico, la alta dirección consulta sobre el cambio cualitativo más sustancial entre ambos marcos. ¿Cuál es la respuesta técnicamente correcta?",
@@ -372,7 +372,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante la fase de implementación de un Sistema de Gestión de SST bajo la norma ISO 45001, la gestión del cambio suele enfrentar diversos perfiles de conducta organizacional. ¿Cuáles de las siguientes opciones describen adecuadamente las reacciones típicas registradas y sus estrategias de manejo recomendadas?",
@@ -409,7 +409,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño de medidas preventivas ante el peligro de atrapamiento por fajas transportadoras energizadas, la empresa evalúa diversas alternativas. Ordenando las opciones según la Jerarquía de Controles de Riesgo (de la más efectiva a la menos efectiva), ¿cuál es la secuencia correcta?",
@@ -446,7 +446,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Conforme a los lineamientos de la norma ISO 31000:2018 para la gestión del riesgo en organizaciones industriales, ¿cuáles de los siguientes constituyen principios y etapas fundamentales del proceso de valoración del riesgo?",
@@ -483,7 +483,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una fábrica de componentes plásticos sufre paradas operativas continuas debido al desabastecimiento de polipropileno por parte de su único proveedor. Desde la perspectiva de la gestión integral del riesgo bajo ISO 31000 y su impacto en SST, ¿qué análisis es el más representativo?",
@@ -520,7 +520,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al estructurar un Sistema Integrado de Gestión ('Trinorma') que abarque Calidad (ISO 9001), Medio Ambiente (ISO 14001) y SST (ISO 45001), ¿cuál es la recomendación metodológica principal para garantizar una integración fluida y sostenible?",
@@ -557,7 +557,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "La norma de gestión ambiental ISO 14001:2015 exige a las organizaciones industriales identificar sus aspectos ambientales e impactos asociados. ¿Cuáles de las siguientes exigencias y conceptos corresponden a la aplicación de esta norma?",
@@ -594,7 +594,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una parada de planta, un contratista debe efectuar el mantenimiento interno de un tanque de almacenamiento de combustible. Para autorizar la ejecución de la tarea de forma segura, ¿cuál es la articulación correcta entre el Análisis de Trabajo Seguro (ATS) y el Permiso Escrito para Trabajos de Alto Riesgo (PETAR)?",
@@ -631,7 +631,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al realizar trabajos en caliente (como soldadura o corte por oxicorte) cerca de áreas con almacenamiento de materiales inflamables, ¿cuáles de las siguientes medidas de control técnico y de protección individual son obligatorias?",
@@ -668,7 +668,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un operario debe realizar la pintura de una estructura metálica a una altura de 4.50 metros. Durante la inspección del andamio antes del inicio de la jornada, se observa que la estructura no cuenta con rodapiés ni diagonales de traba y carece de la tarjeta de inspección. ¿Qué acción corresponde aplicar según el sistema de semáforo de andamios?",
@@ -705,7 +705,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un operador de montacargas, conociendo la prohibición expresa en el RISST y habiendo recibido inducción, decide conducir el equipo bajo los efectos del alcohol y a exceso de velocidad dentro del almacén, volcando la maquinaria y sufriendo fracturas en la pierna. ¿Cómo se tipifica técnicamente este hecho frente al sistema previsional y de SST?",
@@ -742,7 +742,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En caso de ocurrir un accidente mortal o un incidente peligroso en una planta industrial, ¿cuáles son los plazos y procedimientos legales de notificación que la empresa debe cumplir en el Perú?",
@@ -779,7 +779,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al investigar el colapso de un andamio que dejó un trabajador herido, el equipo investigador identifica que el perno de sujeción cedió (causa inmediata) debido a que no se realizaban inspecciones preventivas y la empresa carecía de un procedimiento escrito para trabajos en altura (causas básicas). ¿Cuál es el propósito fundamental de identificar las causas básicas o raíz?",
@@ -816,7 +816,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante el proceso de investigación de un accidente laboral, el equipo investigador (profesional SST, jefe inmediato, representante del CSST y trabajador) debe seguir principios técnicos rigurosos. ¿Cuáles de las siguientes afirmaciones representan buenas prácticas y preguntas clave del proceso?",
@@ -853,7 +853,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco del sistema de notificaciones del Ministerio de Trabajo y Promoción del Empleo (MTPE) en el Perú, ¿cuál es el procedimiento administrativo estandarizado para registrar un accidente mortal por parte de la entidad empleadora?",
@@ -890,7 +890,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Ante la ocurrencia de un accidente de trabajo grave que derive en invalidez o fallecimiento, se pueden desencadenar diferentes tipos de responsabilidad legal para la empresa. ¿Cuáles de las siguientes afirmaciones respecto al marco de responsabilidades y tutela legal son correctas?",
@@ -927,7 +927,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la Seguridad y Salud en el Trabajo, una empresa industrial instala una máquina con partes móviles expuestas. ¿Cómo se clasifican técnicamente la presencia de esta maquinaria y la acción de un operario al acercarse a manipularla sin protección?",
@@ -964,7 +964,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una microempresa (MIPYME) requiere organizar la documentación de su Sistema de Gestión de Seguridad y Salud en el Trabajo (SG-SST). Según lo establecido en la Ley 29783 y sus reglamentos, ¿qué característica aplica a sus registros obligatorios?",
@@ -1001,7 +1001,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con los datos estadísticos del sector manufacturero presentados en el módulo, ¿cuáles de las siguientes opciones corresponden a factores o consecuencias críticas en la accidentabilidad laboral?",
@@ -1038,7 +1038,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro del enfoque transformador de 'Visión Cero', ¿qué diferencia fundamental existe entre el concepto tradicional de 'Cero Accidentes' y el concepto de 'Cero Daño'?",
@@ -1075,7 +1075,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar los riesgos de proyección de partículas en un área de esmerilado, la empresa decide instalar sistemas de extracción localizada y mamparas físicas en lugar de confiar únicamente en el uso de lentes de seguridad. ¿Qué nivel de la jerarquía de controles se está aplicando principalmente al instalar las mamparas y la extracción?",
@@ -1112,7 +1112,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con los criterios normativos de tiempo-exposición para el control del ruido ocupacional, ¿cuáles de las siguientes combinaciones de límite de tiempo y nivel sonoras son correctas?",
@@ -1149,7 +1149,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una fiscalización se observa que los contratos consignan jornadas de 8 horas, pero la constatación física demuestra que los operarios realizan 14 horas de labor continua sin pausas ni EPP adecuado. ¿Qué principio de la Ley 29783 aplica la autoridad para sancionar basándose en los hechos reales constatados?",
@@ -1186,7 +1186,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un centro de trabajo organiza el archivo de los registros de su SG-SST. Tratándose del registro de enfermedades ocupacionales, ¿cuál es el plazo mínimo legal en el que se deben conservar estos documentos en el archivo pasivo?",
@@ -1223,7 +1223,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En una empresa del sector privado con 45 trabajadores, se debe conformar el Comité de Seguridad y Salud en el Trabajo (CSST). ¿Cuáles de las siguientes afirmaciones sobre su constitución y estructura son correctas?",
@@ -1260,7 +1260,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al migrar de la antigua norma OHSAS 18001 al estándar internacional ISO 45001:2018, ¿cuál de los siguientes aspectos representa un cambio conceptual y estructural relevante?",
@@ -1297,7 +1297,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la implantación de un sistema de gestión de SST, la dirección detecta que ciertos mandos medios muestran una resistencia simulando cumplimiento mientras boicotean las inspecciones. Según la gestión del cambio analizada, ¿cuál es la estrategia inicial recomendada?",
@@ -1334,7 +1334,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Bajo la estructura de alto nivel de la norma ISO 45001, ¿cuáles de las siguientes cláusulas o componentes forman parte de sus requisitos de gestión?",
@@ -1371,7 +1371,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una planta industrial evalúa el riesgo de interrupción en el suministro de materia prima crítica que utiliza para su producción. De acuerdo con las opciones de tratamiento de la norma ISO 31000, ¿cuál de las siguientes acciones representa un mecanismo de transferencia del riesgo?",
@@ -1408,7 +1408,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al aplicar el principio de Pareto (20/80) en la priorización de riesgos en una planta de manufactura, ¿cuál es el criterio operativo correcto que debe seguir el equipo de prevención?",
@@ -1445,7 +1445,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con la clasificación de riesgos en entornos industriales revisada en el módulo, ¿cuáles de las siguientes opciones corresponden a factores de riesgo físico o químico?",
@@ -1482,7 +1482,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco del desarrollo sostenible, ¿cuál es el propósito central de la norma ISO 14001:2015 en una organización industrial?",
@@ -1519,7 +1519,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa decide estructurar un Sistema Integrado de Gestión (SIG) bajo el enfoque 'trinorma' (ISO 9001, ISO 14001, ISO 45001). ¿Qué norma se recomienda utilizar habitualmente como pilar o columna vertebral inicial?",
@@ -1556,7 +1556,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con el análisis de la norma ISO 14001, ¿cuáles de los siguientes constituyen beneficios operacionales o estratégicos derivados de la implementación de un Sistema de Gestión Ambiental?",
@@ -1593,7 +1593,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con los estándares y reglamentos técnicos sobre trabajos de alto riesgo, ¿a partir de qué altura sobre el nivel del suelo o superficie de apoyo de los pies se considera técnicamente un trabajo en altura que exige PETAR y sistemas anticaídas?",
@@ -1630,7 +1630,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la inspección operativa de andamios mediante el sistema de tarjetas de colores (semáforo), ¿cuáles de las siguientes interpretaciones de estado son correctas?",
@@ -1667,7 +1667,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Ante la ocurrencia de un accidente de trabajo mortal o un incidente peligroso en el centro laboral, ¿cuál es el plazo máximo legal que tiene el empleador para efectuar la notificación en la plataforma del Ministerio de Trabajo?",
@@ -1704,7 +1704,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante la investigación de un accidente laboral, las causas se estructuran en inmediatas y básicas. ¿Cuáles de las siguientes opciones corresponden a la categoría de causas básicas (factores personales o de trabajo)?",
@@ -1741,7 +1741,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al llevar a cabo la investigación de un accidente de trabajo en una empresa, ¿cuál es el propósito rector que debe orientar el proceso?",
@@ -1778,7 +1778,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la recolección de datos y elaboración del informe de investigación de un accidente, la técnica exige responder a seis preguntas básicas para reconstruir los hechos. ¿Cuál de los siguientes grupos contiene dichas preguntas clave?",
@@ -1815,7 +1815,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Tras investigarse la caída de un operario desde un nivel elevado (>2 m) debido a la ausencia de protecciones colectivas en el borde de un forjado, ¿cuáles de las siguientes medidas correctivas y preventivas prioritarias se deben implementar?",
@@ -1852,7 +1852,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una inspección en un almacén industrial, el inspector observa que la riel de una puerta corredera sobresale al ras del suelo generando un peligro continuo de tropezón. La jefatura presenta un procedimiento formal firmado donde se indica que 'el área es de tránsito exclusivo para personal entrenado que conoce la infraestructura'. ¿Qué principio de la Ley de Seguridad y Salud en el Trabajo (Ley N.º 29783) prioriza la condición física real observada sobre la documentación presentada?",
@@ -1889,7 +1889,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un operario sufre una fractura expuesta de fémur al ser atrapado por el engranaje de un molino industrial que carecía de guarda de protección. ¿Cuáles de las siguientes acciones constituyen obligaciones inmediatas y exigibles del empleador según el marco normativo peruano?",
@@ -1926,7 +1926,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una planta procesadora planifica la instalación de un nuevo sistema de calderas automatizadas que cambiará la dinámica operativa y la exposición a presiones extremas. De acuerdo con los requisitos de la norma ISO 45001:2018, ¿cómo debe gestionar la organización esta modificación para asegurar el desempeño en SST?",
@@ -1963,7 +1963,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa del sector minero subcontrata a una firma especializada para la mantención de sus fajas transportadoras. Bajo los lineamientos del sistema ISO 45001:2018 y la normativa de SST, ¿cuáles de las siguientes premisas regulan la relación con los contratistas?",
@@ -2000,7 +2000,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un proyecto de infraestructura civil, las condiciones geotécnicas y climáticas varían sustancialmente día a día debido a filtraciones imprevistas. ¿Qué modalidad del instrumento IPERC debe ser elaborada obligatoriamente por el equipo operativo antes de ejecutar cada tarea diaria?",
@@ -2037,7 +2037,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al realizar la reevaluación de una Matriz IPERC en una planta química donde se identificó riesgo de intoxicación por vapores orgánicos, la empresa decide instalar un sistema de extracción localizada con filtros de carbón activado. ¿A qué nivel de la jerarquía de controles corresponde esta medida?",
@@ -2074,7 +2074,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un operador de montacargas colisiona contra un estante al girar a alta velocidad en un pasillo estrecho. La investigación revela que el trabajador operaba con prisa porque la supervisión le exigió completar el despacho de pallets en la mitad del tiempo estándar sin considerar el espacio disponible. En el análisis causal de accidentes, ¿cómo se clasifican la velocidad excesiva y la exigencia de cuotas imposibles?",
@@ -2111,7 +2111,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al utilizar la metodología ICAM (Modelo del Queso Suizo) para la investigación de un atrapamiento grave en una prensa industrial, el equipo auditor analiza la cadena de fallos. ¿Cuáles de los siguientes elementos corresponden a los niveles de análisis requeridos por este modelo?",
@@ -2148,7 +2148,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un taller de confecciones con 15 trabajadores, tres operarios presentan tos persistente y dificultad respiratoria por inhalación continua de pelusa sintética. La empresa no cuenta con un médico ocupacional propio por su tamaño. ¿Cuál es el procedimiento normativo y ético que debe seguir la dirección?",
@@ -2185,7 +2185,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la entrada de un almacén de reactivos se identifica un contenedor cilíndrico marcado con el rombo NFPA 704 con los siguientes valores: Salud: 3, Inflamabilidad: 4, Inestabilidad: 2, y en el cuadrante blanco el símbolo W atravesado por una barra horizontal. ¿Cómo debe interpretar el personal operativo estos riesgos?",
@@ -2222,7 +2222,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un camión cisterna sufre una fisura menor durante la descarga de un solvente corrosivo en un taller. El personal decide utilizar el Kit Antiderrames de la estación. ¿Cuáles de las siguientes acciones y procedimientos corresponden al uso correcto de este recurso?",
@@ -2259,7 +2259,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el mantenimiento preventivo de una cisterna de almacenamiento de combustible catalogada como Espacio Confinado Clase A, ¿cuáles son los parámetros críticos de la atmósfera y el protocolo de ingreso requerido?",
@@ -2296,7 +2296,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la excavación de una zanja de 3.2 metros de profundidad en un terreno arcilloso con presencia de lluvias y tránsito de maquinaria pesada a 1 metro del borde, se detecta un alto riesgo de colapso. ¿Cuál es la medida técnica de control prioritaria para evitar el sepultamiento de los trabajadores?",
@@ -2333,7 +2333,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el grave accidente radiológico ocurrido en Yanango (1999), un técnico recogió una fuente huérfana de Iridio-192 (192Ir) no señalizada y la guardó en el bolsillo de su pantalón. ¿Cuál fue la lección fundamental sobre los controles operacionales frente a fuentes de radiación ionizante?",
@@ -2370,7 +2370,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un accidente fatal ocurre en una constructora cuando un andamio no normado colapsa con dos operarios. En el marco legal peruano y las directrices de la ISO 45001, ¿cuáles son las consecuencias y responsabilidades atribuidas a la gerencia y a la organización?",
@@ -2407,7 +2407,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Ocurre un accidente de trabajo incapacitante que requiere 15 días de descanso médico para el trabajador afectado. De acuerdo con el reglamento de la Ley de Seguridad y Salud en el Trabajo en el Perú, ¿cuál es el plazo y el canal mediante el cual el empleador debe reportar formalmente este evento?",
@@ -2444,7 +2444,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El departamento de compras de una empresa industrial pretende adquirir un lote de calzado de seguridad de bajo costo que carece de certificación dieléctrica para los electricistas del área de mantenimiento. Aplicando las exigencias de la ISO 45001 sobre el control de procesos de compra, ¿qué acción debe ejecutar el Comité de SST?",
@@ -2481,7 +2481,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un proceso de fiscalización por un incidente en un taller, un trabajador sostiene que jamás fue informado sobre las normas del Reglamento Interno de Seguridad y Salud en el Trabajo (RISST). La empresa demuestra ante el inspector el envío del documento mediante correo institucional con acuse de recibo y doble verificación digital. ¿Qué valor tiene esta prueba en el marco del sistema de gestión?",
@@ -2518,7 +2518,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al aplicar la evaluación de ergonomía en un puesto administrativo de digitación mediante el Método ROSA (Rapid Office Strain Assessment), el evaluador obtiene una puntuación final de 7. ¿Cuál es la interpretación técnica de este resultado y la acción requerida?",
@@ -2555,7 +2555,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un grupo de telefonistas realiza su labor en postura sedente continua durante jornadas de 8 horas sin alternar posturas. ¿Cuáles son los riesgos biomecánicos y efectos fisiológicos directamente asociados al trabajo estático y sedentario prolongado?",
@@ -2592,7 +2592,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un Comité de Ergonomía analiza la tasa de lesiones en una planta que utiliza maquinaria industrial importada. La evaluación revela que los mandos y palancas quedan fuera del alcance de los operarios locales debido a la diferencia en la estatura promedio del país de origen de los equipos. ¿Cuál es la barrera más habitual que impide la modificación directa de esta maquinaria?",
@@ -2629,7 +2629,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un operario sufre un accidente de trabajo que le produce la amputación de dos falanges en la mano derecha. Tras culminar su tratamiento de rehabilitación y obtener el alta médica con incapacidad parcial permanente, la empresa pretende reducir su sueldo argumentando que 'ya no puede realizar el mismo volumen de producción que sus compañeros'. ¿Qué establece la Ley N.º 29783 sobre este caso?",
@@ -2666,7 +2666,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una microempresa (MIPE) que cuenta con 11 trabajadores consulta sobre las flexibilizaciones documentales contempladas en las modificaciones a la Ley de SST (Ley 30222). ¿Cuál es el tratamiento simplificado que la ley permite a este tipo de organizaciones?",
@@ -2703,7 +2703,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En un almacén pesquero, la administración decide recortar el presupuesto de equipamiento entregando botas de seguridad usadas e impermeables usados a los trabajadores temporales que ingresan a la planta. ¿Qué riesgos y contravenciones normativas genera esta práctica?",
@@ -2740,7 +2740,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una planta industrial ocurre una explosión por acumulación de gas propano que causa quemaduras graves en dos técnicos. ¿Cuál es el plazo estricto establecido por el reglamento de la Ley de SST para reportar de forma obligatoria este incidente peligroso o accidente grave a la plataforma del Ministerio de Trabajo?",
@@ -2777,7 +2777,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una inspección de seguridad en una planta industrial, un inspector observa la presencia de una riel de puerta corrediza sobresaliente al ras del suelo que provoca tropezones constantes en los trabajadores. Aunque los manuales de la empresa indican formalmente que las vías de circulación están 'completamente libres de obstáculos', ¿qué principio fundamental de la Ley N.º 29783 exige priorizar la condición física real observada sobre lo documentado?",
@@ -2814,7 +2814,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con el marco legal peruano (Ley N.º 29783 y su Reglamento DS N.º 005-2012-TR), ¿cuál es el rango de miembros estipulado por ley para la constitución de un Comité de Seguridad y Salud en el Trabajo en empresas con 20 o más trabajadores, considerando la adición proporcional por número de colaboradores?",
@@ -2851,7 +2851,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "A diferencia del enfoque normativo clásico de OHSAS 18001, enfocado prioritariamente en el control de peligros internos y procedimientos, ¿cuál de los siguientes aspectos representa una innovación estructural clave de la norma ISO 45001:2018?",
@@ -2888,7 +2888,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Dentro de la planificación operativa de la norma ISO 45001:2018, la organización debe aplicar la jerarquía de controles de SST. ¿Cuáles de las siguientes medidas corresponden correctamente a controles de ingeniería y controles administrativos dentro de esta jerarquía?",
@@ -2925,7 +2925,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una planta minera planea introducir un nuevo reactivo químico en su proceso de flotación y reactivar una línea de molienda que permaneció fuera de servicio durante dos años. ¿Qué tipo de matriz de Identificación de Peligros, Evaluación de Riesgos y Medidas de Control (IPERC) debe elaborar la empresa antes de iniciar estas operaciones?",
@@ -2962,7 +2962,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la metodología cuantitativa de la matriz IPERC, la estimación del nivel de riesgo se determina mediante la combinación de dos variables cuantitativas. Asimismo, en la elaboración del Mapa de Riesgos, ¿cuáles son estas dos variables y qué código de color estandarizado se emplea para ubicar los equipos de primeros auxilios?",
@@ -2999,7 +2999,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la investigación de un accidente incapacitante donde un trabajador sufrió la atrapadura de su mano en una faja transportadora, se determinó que la máquina no tenía la guarda metálica de protección (condición subestándar) y que el trabajador operaba a una velocidad superior a la permitida (acto subestándar). ¿A qué categoría dentro del modelo de causalidad pertenecen estos hallazgos inmediatos?",
@@ -3036,7 +3036,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al investigar un accidente laboral complejo mediante metodologías sistemáticas como el Modelo ICAM (Queso Suizo) y el Diagrama de Ishikawa, ¿cuáles de los siguientes elementos forman parte de la estructura conceptual de análisis de estas herramientas?",
@@ -3073,7 +3073,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En un almacén de reactivos químicos, un cilindro de almacenamiento exhibe un rotulado NFPA 704 con el número 4 en el cuadrante azul y el número 3 en el cuadrante rojo. ¿Qué interpretación técnica precisa debe realizar el personal antes de manipular este recipiente?",
@@ -3110,7 +3110,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el marco del almacenamiento, transporte y comunicación de peligros de sustancias químicas según la clasificación de la ONU y el Sistema Globalmente Armonizado (SGA), ¿cuáles de las siguientes aseveraciones son normativamente correctas?",
@@ -3147,7 +3147,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con los estándares operativos de seguridad industrial para trabajos críticos, un trabajo en altura se define normativamente a partir de un desnivel determinado, mientras que un espacio confinado de Clase A se caracteriza por un nivel de riesgo atmosférico específico. ¿Cuáles son estas dos definiciones técnicas?",
@@ -3184,7 +3184,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para garantizar la integridad física en la ejecución de trabajos críticos como excavación de zanjas y manipulación de fuentes de radiación ionizante, ¿qué medidas preventivas obligatorias deben cumplirse de forma estricta?",
@@ -3221,7 +3221,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa principal del sector industrial subcontrata a una firma especializada para efectuar el mantenimiento de sus calderas de vapor. Según la norma ISO 45001:2018 y la Ley N.º 29783, ¿cuál es el alcance legal y operacional de la empresa titular sobre los trabajadores contratistas?",
@@ -3258,7 +3258,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Conforme a los procedimientos del Reglamento de la Ley de SST y sus plataformas administrativas, ante la ocurrencia de un accidente de trabajo mortal o un incidente peligroso, ¿cuál es el plazo máximo obligatorio y el medio para remitir el reporte oficial a la autoridad de trabajo (Ministerio de Trabajo/SUNAFIL)?",
@@ -3295,7 +3295,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la evaluación de la salud ocupacional e higiene industrial, los agentes de riesgo en el puesto de trabajo se clasifican por su naturaleza física, química o biológica. ¿Cuáles de las siguientes opciones corresponden a una clasificación técnicamente correcta de estos agentes?",
@@ -3332,7 +3332,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "El desarrollo de un incendio en una instalación industrial requiere la coexistencia de los elementos del 'triángulo del fuego'. ¿Cuáles son estos tres elementos y qué acción básica exige la gestión operativa de SST respecto al personal y los extintores portátiles?",
@@ -3369,7 +3369,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un ergonomista necesita evaluar la carga física y postura en un puesto administrativo de oficina que involucra el uso continuo de computadora, pantalla, mouse, teclado, teléfono y silla. ¿Cuál es el método de evaluación ergonómica validado y específico para este tipo de estación de trabajo?",
@@ -3406,7 +3406,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "El trabajo estático y la postura sedente prolongada generan alteraciones en el sistema musculoesquelético y vascular. ¿Cuáles de las siguientes afirmaciones y medidas correctivas concuerdan con los principios de la ergonomía aplicada?",
@@ -3443,7 +3443,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al realizar la manipulación manual de una carga pesada ubicada en el suelo, ¿cuál es la técnica biomecánica correcta para levantarla sin generar fuerzas de cizallamiento en la zona lumbar?",
@@ -3480,7 +3480,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la implementación de un Sistema de Gestión de SST basado en la norma ISO 45001 y la filosofía Kaizen, se aplica el ciclo PHVA (Planear, Hacer, Verificar, Actuar). ¿Qué actividades caracterizan fundamentalmente a la etapa de 'Verificar'?",
@@ -3517,7 +3517,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "La Ley N.º 30222 introdujo modificaciones a la Ley N.º 29783 para facilitar la gestión preventiva en micro y pequeñas empresas (MIPEs). ¿Qué flexibilización administrativa específica se concedió a estas unidades económicas respecto a sus registros obligatorios?",
@@ -3554,7 +3554,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Según la legislación en Seguridad y Salud en el Trabajo, ¿cuáles de los siguientes constituyen derechos irrenunciables garantizados a los trabajadores?",
@@ -3591,7 +3591,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la investigación de un suceso mediante la técnica analítica de los '5 Porqués', ¿cuál es el procedimiento metodológico que debe seguir el equipo investigador y cuál es su objetivo final?",
@@ -3628,7 +3628,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Antes de emitir el permiso de trabajo para autorizar el ingreso de un operario a un espacio confinado (como una cisterna o pozo), ¿cuáles son las medidas preventivas y los equipos críticos que deben ser verificados en el punto de acceso de forma obligatoria?",
@@ -3665,7 +3665,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el control operativo de sustancias químicas y atención de derrames en el lugar de trabajo, ¿qué elementos y prácticas operativas garantizan una respuesta segura y ambientalmente responsable?",
@@ -3702,7 +3702,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una fiscalización inopinada del OEFA a una unidad minera, los supervisores detectan un piezómetro sin monitorear cerca de una poza de relaves donde se sospecha filtración a aguas subterráneas. Al revisar la normativa nacional, se observa que no existe un Estándar de Calidad Ambiental (ECA) específico para agua subterránea o sedimentos en ese componente. ¿Cómo puede actuar legalmente el OEFA para ordenar medidas en este escenario?",
@@ -3739,7 +3739,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un titular minero sostiene ante el OEFA que no es fiscalizable por el vertimiento de sólidos en suspensión en un efluente debido a que su Instrumento de Gestión Ambiental (IGA) aprobado declara un 'circuito 100% cerrado con recirculación total de agua'. Los fiscalizadores comprobaron una descarga efectiva en cuerpo receptor. ¿Cuál es el criterio técnico-jurídico aplicable?",
@@ -3776,7 +3776,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Con el objetivo de mantener la preparación operativa frente a fiscalizaciones inopinadas del OEFA y responder adecuadamente a contingencias, ¿qué prácticas recomendadas deben implementar los profesionales de gestión SOMA según la legislación ambiental?",
@@ -3813,7 +3813,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una Entidad de Fiscalización Ambiental (EFA) local aprueba en su Plan EFA un total de 300 supervisiones anuales. Al finalizar el año, por restricciones presupuestales y falta de personal técnico, solo ejecutó 30 supervisiones (10%). ¿Qué consecuencia legal e institucional genera este incumplimiento sistemático?",
@@ -3850,7 +3850,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una corporación minera adquiere el 100% de las acciones de una unidad operativa en marcha. Tras la compra, el OEFA realiza una inspección y detecta un pasivo ambiental no declarado y mandatos de remediación no cumplidos por el dueño anterior. ¿Quién asume la responsabilidad administrativa ante la autoridad fiscalizadora?",
@@ -3887,7 +3887,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante una supervisión, la Dirección de Supervisión del OEFA verifica que una planta industrial superó los Límites Máximos Permisibles (LMP) de efluentes. Antes de que se inicie el Procedimiento Administrativo Sancionador (PAS), la empresa subsana el problema corrigiendo la falla técnica y acredita que los efluentes están dentro de norma. ¿Qué consecuencias jurídicas y procedimentales se derivan de esta actuación?",
@@ -3924,7 +3924,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una planta concentradora cuenta con un IGA aprobado en el año 2008 en base al ECA de Aire vigente en ese momento (DS 074-2001). En el año 2017 se aprobó un nuevo ECA de Aire (DS 003-2017) con valores más estrictos para material particulado. Durante una fiscalización, se observa que las emisiones de la planta superan el ECA del 2017 pero cumplen con el ECA del 2008. ¿Cómo debe evaluarse el cumplimiento legal de esta instalación?",
@@ -3961,7 +3961,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En un taller de mantenimiento minero ocurre una fuga de 1,000 litros de diésel que se infiltra en un área de suelo de 1,000 m² hasta una profundidad de 10 cm. Para atender este sitio contaminado conforme al DS 012-2017 y el ECA Suelo (DS 011-2017), ¿qué acciones y principios técnicos son de obligatorio cumplimiento?",
@@ -3998,7 +3998,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una operación minero-metalúrgica trata aguas ácidas mediante neutralización con cal en un sistema activo, generando un volumen masivo de lodos de precipitación con alto contenido de metales pesados. ¿Cuál es el manejo exigido para este subproducto no deseado antes de su disposición final?",
@@ -4035,7 +4035,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la medición de ruido ambiental efectuada por el OEFA en el exterior de una planta procesadora colindante con viviendas, se registra un nivel de presión sonora equivalente (LA_{eq}) de 66.9 dB durante el horario diurno. La zonificación del área está clasificada como Zona Residencial (ECA = 60 dB). El titular argumenta que la medición es nula porque el ruido fue provocado por el tráfico vehicular externo. ¿Qué requisito técnico-procedimental determina la validez del procedimiento sancionador?",
@@ -4072,7 +4072,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Con la promulgación de la Ley Nº 31316 sobre Contaminación Lumínica y el marco general del Sistema de Evaluación del Impacto Ambiental (DS 019-2009), ¿qué restricciones y reglas aplican a los proyectos y sus modificaciones?",
@@ -4109,7 +4109,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un inversionista obtiene la Certificación Ambiental (Resolución de aprobación del EIA) para una planta industrial. Por dificultades financieras, el proyecto paraliza su etapa de obras y no inicia la construcción durante 3 años y 6 meses. No se solicitó prórroga previa. ¿Cuál es el estado legal del título habilitante?",
@@ -4146,7 +4146,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un titular presenta una Evaluación Ambiental Preliminar (EVAP) para un proyecto de procesamiento químico cuyo proceso no figura expresamente tipificado en el Anexo 2 (Listado de inclusión) del Reglamento del SEIA. ¿Cómo debe proceder el SENACE o el sector competente para determinar la ruta de evaluación?",
@@ -4183,7 +4183,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para evitar que un Estudio de Impacto Ambiental Semi-Detallado (EIA-sd) sea observado o rechazado por el SENACE durante la fase de evaluación técnica, ¿qué aspectos metodológicos y operacionales deben asegurarse en la elaboración del expediente?",
@@ -4220,7 +4220,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la revisión de admisibilidad formal de un EIA-d a través de la plataforma digital, la autoridad advierte que el titular adjuntó los documentos en formato PDF y los comprobantes de pago, pero omitió el archivo vectorial espacial (KMZ/SHP) exigido. Bajo las reglas del Decreto Supremo 013-2024, ¿cuál es el procedimiento administrativo que corresponde?",
@@ -4257,7 +4257,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el caso práctico del EIA-d del proyecto minero Magistral, la planta de procesos contempla la recirculación hídrica. Sin embargo, el análisis técnico del balance de masa demostró que no es viable recircular el 100% del agua de flotación sin tratamiento previo. ¿Cuál es la razón físico-química subyacente señalada en el expediente?",
@@ -4294,7 +4294,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Respecto a los mecanismos de Participación Ciudadana exigidos en el proceso de evaluación de un EIA-d (Categoría III), ¿qué principios legales y consecuencias operativas rigen su ejecución?",
@@ -4331,7 +4331,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la evaluación de un EIA, se descubre que la consultora ambiental copió textualmente la descripción de la línea de base biológica y geológica de un proyecto ubicado en otra provincia, adaptando falsamente las coordenadas. ¿Cuál es el impacto de esta falta en el procedimiento de certificación ambiental?",
@@ -4368,7 +4368,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una organización certificada bajo ISO 14001:2015 toma conocimiento de la publicación de un Decreto Supremo que añade el monitoreo de Arsenio y Cromo en PM10 para su sector industrial. Aplicando el ciclo PDCA y las cláusulas del estándar ISO, ¿cuál es la secuencia correcta de acciones que la empresa debe ejecutar?",
@@ -4405,7 +4405,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En una unidad minera ocurre la rotura involuntaria de un conducto de relaves que alcanza un río local. Considerando la normativa ambiental peruana y la cláusula de preparación y respuesta ante emergencias de la norma ISO 14001, ¿qué obligaciones dobles (legales y del SGA) debe activar el equipo de liderazgo ambiental?",
@@ -4442,7 +4442,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un auditor interno de ISO 14001 revisa la gestión legal de una instalación extractiva. El responsable ambiental muestra una carpeta con 200 leyes impresas bajadas del diario oficial, pero no cuenta con extractos técnicos que definan la aplicabilidad por parámetro, no hay asignación de responsables por norma ni evidencia de evaluación periódica del cumplimiento. ¿Cómo debe calificar el auditor esta situación?",
@@ -4479,7 +4479,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un ingeniero SOMA debe capacitar al personal técnico y de campo en el procedimiento de muestreo hídrico y reporte de contingencias aplicando el método de 4 pasos 'Entrenamiento en Acción'. ¿Cuál es la secuencia lógica y operativa que debe seguir para garantizar la efectividad del aprendizaje?",
@@ -4516,7 +4516,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al diseñar sesiones de entrenamiento ambiental y de seguridad para cuadrillas operativas en planta, el capacitador identifica la presencia de distintos estilos de aprendizaje (visual, kinestésico y auditivo). ¿Qué combinaciones didácticas resultan efectivas según el método de formación de entrenadores?",
@@ -4553,7 +4553,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un grupo de fiscalizadores del OEFA se presenta un domingo por la mañana en una instalación industrial. El personal de seguridad de la puerta les deniega el acceso argumentando que el Ingeniero de Guardia no está autorizado para firmar actas y que la gerencia solo atiende de lunes a viernes. ¿Qué consecuencia legal genera esta conducta?",
@@ -4590,7 +4590,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Dentro de un Procedimiento Administrativo Sancionador (PAS) tramitado ante el OEFA, ¿qué causales eximentes de responsabilidad y mecanismos de defensa legal puede invocar el administrado con sustento técnico probatorio?",
@@ -4627,7 +4627,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la distinción institucional y temporal fundamental entre el rol del SENACE y el del OEFA dentro del Sistema Nacional de Gestión Ambiental en el Perú?",
@@ -4664,7 +4664,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En una fiscalización donde se observan indicios de alteración en sedimentos o aguas subterráneas, pero no existe un Estándar de Calidad Ambiental (ECA) normado expresamente en la legislación nacional para dicho parámetro, ¿qué principio de la Ley General del Ambiente faculta al OEFA a exigir medidas de protección técnica?",
@@ -4701,7 +4701,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Conforme a la Ley General del Ambiente (Ley N.º 28611), ¿cuáles de los siguientes constituyen derechos ambientales fundamentales reconocidos en el marco legal peruano?",
@@ -4738,7 +4738,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un proyecto de exploración minera contempla la habilitación de 35 plataformas de perforación en una zona sin sensibilidad ambiental extrema. Según las tipologías reglamentarias de evaluación de impacto ambiental, ¿qué instrumento preventivo corresponde aplicar?",
@@ -4775,7 +4775,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué ocurre con las obligaciones, mandatos administrativos y pasivos ambientales de una unidad minera cuando la empresa titular es vendida o pasa por un proceso de reestructuración societaria?",
@@ -4812,7 +4812,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el desarrollo de un Procedimiento Administrativo Sancionador (PAS) iniciado por OEFA, el administrado decide impugnar la resolución de primera instancia que le impuso una multa. ¿Ante qué órgano se tramita el recurso de apelación para agotar la vía administrativa?",
@@ -4849,7 +4849,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la diferencia conceptual determinante entre un Estándar de Calidad Ambiental (ECA) y un Límite Máximo Permisible (LMP)?",
@@ -4886,7 +4886,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar el impacto del material particulado, ¿por qué el de fracción respirable PM_{2.5} representa un peligro significativamente mayor para la salud humana que el PM₁₀?",
@@ -4923,7 +4923,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño estándar de una red de monitoreo de calidad del aire para un proyecto extractivo, ¿cuál es la ubicación mínima recomendada para las estaciones con respecto a la dirección prevalente del viento?",
@@ -4960,7 +4960,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con el Reglamento de Estándares Nacionales de Calidad Ambiental para Ruido (Decreto Supremo N.º 085-2003-PCM), ¿cuáles son los límites máximos de presión sonora equivalente (LA_{eq}) en decibelios para una Zona Residencial en horario diurno y nocturno, respectivamente?",
@@ -4997,7 +4997,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la Ley N.º 31316 (Ley de Prevención y Control de la Contaminación Lumínica), ¿cuál de las siguientes restricciones aplica a los elementos de publicidad exterior que utilizan pantallas electrónicas o tecnología LED?",
@@ -5034,7 +5034,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Conforme al Reglamento del SEIA (DS 019-2009-MINAM), ¿cuál es el plazo normativo de vigencia de la Certificación Ambiental para iniciar las obras del proyecto antes de caducar, y cuánto es el periodo máximo de ampliación posible?",
@@ -5071,7 +5071,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Cuando un titular propone un proyecto de inversión que no se encuentra explícitamente tipificado en el Anexo 2 del Reglamento del SEIA, debe presentar una Evaluación Ambiental Preliminar (EVAP). ¿Cuáles son los tres caminos de clasificación posibles que emitirá la autoridad?",
@@ -5108,7 +5108,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Respecto a los compromisos asumidos voluntariamente por un titular minero o industrial durante las audiencias públicas dentro del Plan de Participación Ciudadana (PPC), ¿cuáles de las siguientes premisas son técnicamente correctas?",
@@ -5145,7 +5145,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la gestión operativa de una planta concentradora, ¿por qué no siempre es técnicamente viable recircular el 100% del agua de proceso proveniente del depósito de relaves hacia el circuito de flotación?",
@@ -5182,7 +5182,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿En qué consiste el mecanismo de garantía financiera exigido por la Ley de Cierre de Minas (Ley N.º 28090) a las titulares de unidades de minería en explotación?",
@@ -5219,7 +5219,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la implementación de un Sistema de Gestión Ambiental bajo la norma ISO 14001:2015 en una unidad operativa, ¿cuál es el objetivo central de elaborar un \"extracto técnico\" para cada norma legal identificada?",
@@ -5256,7 +5256,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Ante la ocurrencia de un evento de contingencia o emergencia ambiental operacional (como el derrame de un reactivo o la falla de una tubería de efluentes), ¿cuáles son los plazos reglamentarios estrictos fijados para la presentación de los reportes ante el OEFA?",
@@ -5293,7 +5293,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco del método de \"Entrenamiento en Acción\" de 4 pasos para la formación de capacitadores técnicos en seguridad y medio ambiente (Train the Trainers), ¿cuál es la secuencia metodológica correcta?",
@@ -5330,7 +5330,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el Paso 3 (Dirigir la prueba de habilidades) en la capacitación del personal operativo sobre manejo de efluentes o control de derrames, ¿cuál debe ser la finalidad y naturaleza de la evaluación según el enfoque del capacitador SOMA?",
@@ -5367,7 +5367,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Dentro del catálogo de modalidades de supervisión que ejecuta el OEFA sobre las actividades industriales y extractivas, ¿cuáles de las siguientes corresponden a clasificaciones operativas de supervisión?",
@@ -5404,7 +5404,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Cuando una Entidad de Fiscalización Ambiental (EFA) realiza una supervisión bajo la modalidad de gabinete debido a limitaciones presupuestales de desplazamiento de campo, ¿en qué principio del procedimiento administrativo se sustenta el análisis de los reportes enviados por la empresa?",
@@ -5441,7 +5441,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el derecho administrativo sancionador ambiental peruano, el exceso de un Límite Máximo Permisible (LMP) se configura bajo el régimen de responsabilidad objetiva. ¿Qué factor constituye una causa eximente que rompería el nexo causal liberando de responsabilidad administrativa al titular?",
@@ -5478,7 +5478,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué medida o consecuencia institucional puede aplicarse sobre una Entidad de Fiscalización Ambiental (EFA) de nivel local o regional que incumple reiteradamente y sin justificación las metas programadas en su Plan EFA?",
@@ -5515,7 +5515,7 @@
   {
     "codigo_diplomado": "DIP-20",
     "diplomado": "SEGURIDAD INDUSTRIAL",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un titular minero sostiene en su defensa ante el OEFA que no ha ejecutado las actividades de reforestación contempladas en su Plan de Cierre progresivo debido a que la mina operará por 15 años adicionales. ¿Cuál es el criterio técnico-jurídico que aplica la autoridad fiscalizadora al evaluar este argumento?",

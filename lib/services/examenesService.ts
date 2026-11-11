@@ -8,6 +8,7 @@ import type {
   DetalleCalificacionPregunta
 } from '@/lib/types/examenes';
 import { obtenerConfiguracionExamen } from '@/lib/services/examenesConfigService';
+import { formatearCodigoModulo } from '@/lib/utils/profileParser';
 
 function getSupabaseClient() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
@@ -201,7 +202,10 @@ export async function obtenerPreguntasBanco(filtros?: {
       }
 
       if (filtros?.modulo && filtros.modulo !== 'TODOS') {
-        query = query.ilike('modulo', `%${filtros.modulo.replace('Modulo', 'Módulo')}%`);
+        const modBusqueda = /examen\s+del\s+(curso|taller)/i.test(filtros.modulo)
+          ? filtros.modulo.trim()
+          : formatearCodigoModulo(filtros.modulo);
+        query = query.ilike('modulo', `%${modBusqueda}%`);
       }
       if (filtros?.dificultad && filtros.dificultad !== 'TODOS') {
         query = query.eq('dificultad', filtros.dificultad);
@@ -263,10 +267,18 @@ export async function guardarPreguntaBanco(pregunta: Partial<PreguntaBanco>): Pr
   const sb = getSupabaseClient();
   const id = pregunta.id;
 
+  const rawModulo = (pregunta.modulo || '').trim();
+  const esCursoOTallerMod = /examen\s+del\s+(curso|taller)/i.test(rawModulo);
+  const moduloNormalizado = !rawModulo
+    ? 'MÓDULO 01'
+    : esCursoOTallerMod
+      ? rawModulo
+      : formatearCodigoModulo(rawModulo);
+
   const payload = {
     codigo_diplomado: pregunta.codigo_diplomado || 'DIP-01',
     diplomado: pregunta.diplomado || 'DERECHO MINERO',
-    modulo: pregunta.modulo || 'Módulo 01',
+    modulo: moduloNormalizado,
     dificultad: pregunta.dificultad || 'MEDIO',
     tipo: pregunta.tipo || 'multiple_choice',
     pregunta: pregunta.pregunta || '',
@@ -402,7 +414,7 @@ export async function sortearPreguntasExamen(params: {
   };
 
   // Helper para mezcla aleatoria uniforme (Fisher-Yates)
-  const mezclar = (arr: PreguntaBanco[]) => {
+  const mezclar = <T,>(arr: T[]): T[] => {
     const res = [...arr];
     for (let i = res.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -468,7 +480,7 @@ export async function sortearPreguntasExamen(params: {
   // Mezclar el examen final para intercalar tipos y niveles naturalmente
   const examenFinalMezclado = mezclar(seleccionadas.slice(0, cantidadTotal));
 
-  // Transformar para el estudiante: eliminar respuestas correctas y rationales
+  // Transformar para el estudiante: eliminar respuestas correctas/rationales y mezclar alternativas al azar
   return examenFinalMezclado.map(p => ({
     id: p.id,
     codigo_diplomado: p.codigo_diplomado,
@@ -476,12 +488,29 @@ export async function sortearPreguntasExamen(params: {
     tipo: p.tipo,
     dificultad: p.dificultad,
     pregunta: p.pregunta,
-    opciones: (p.opciones || []).map((opt, idx) => ({
-      indice: idx,
-      text: opt.text
-    })),
+    opciones: mezclar(
+      (p.opciones || []).map((opt, idx) => ({
+        indice: idx,
+        text: opt.text
+      }))
+    ),
     hint: p.hint
   }));
+}
+
+function extraerNumeroModuloExamen(modulo?: string | null): number | null {
+  const txt = (modulo || '').trim();
+  if (!txt) return null;
+  const matchNum = txt.match(/\d+/);
+  if (matchNum) return parseInt(matchNum[0], 10);
+  const matchRom = txt.match(/\b(XII|XI|X|IX|VIII|VII|VI|V|IV|III|II|I)\b/i);
+  if (matchRom) {
+    const mapa: Record<string, number> = {
+      I: 1, II: 2, III: 3, IV: 4, V: 5, VI: 6, VII: 7, VIII: 8, IX: 9, X: 10, XI: 11, XII: 12
+    };
+    return mapa[matchRom[1].toUpperCase()] ?? null;
+  }
+  return null;
 }
 
 /**
@@ -493,7 +522,11 @@ export async function calificarExamen(params: {
   modulo: string;
   dni: string;
   respuestasUsuario: Record<string, number | number[]>; // preguntaId -> indice o indices marcados
+  fechaInicio?: string | null;
+  fechaFin?: string | null;
 }): Promise<ResultadoEvaluacionExamen> {
+  const fechaFinVal = params.fechaFin || new Date().toISOString();
+  const fechaInicioVal = params.fechaInicio || fechaFinVal;
   const preguntasIds = Object.keys(params.respuestasUsuario);
   
   // Obtener las preguntas originales con sus respuestas correctas
@@ -594,7 +627,9 @@ export async function calificarExamen(params: {
     notaAprobatoria: notaAprobatoria,
     totalPreguntas: totalPreguntas,
     totalAciertos: aciertosTotales,
-    detalles: detalles
+    detalles: detalles,
+    fechaInicio: fechaInicioVal,
+    fechaFin: fechaFinVal
   };
 
   // Guardar en public.notas_modulos de Supabase (sin requerir tablas extras)
@@ -610,24 +645,18 @@ export async function calificarExamen(params: {
         : params.codigoDiplomado.toUpperCase().startsWith('TAL')
         ? 'taller'
         : 'diplomado';
-      const matchMod = modNorm.match(/\d+/);
-      const moduloNumero = matchMod ? parseInt(matchMod[0], 10) : (tipoPrograma === 'diplomado' ? 1 : 0);
+      const moduloNumExtraido = extraerNumeroModuloExamen(modNorm);
+      const moduloNumero = moduloNumExtraido ?? (tipoPrograma === 'diplomado' ? 1 : 0);
 
-      let queryExistente = sb
-        .from('notas_modulos')
-        .select('id')
-        .eq('dni_ce', dniLimpio)
-        .eq('diplomado_numero', params.codigoDiplomado);
+      const respuestasConTiempo = {
+        ...params.respuestasUsuario,
+        __meta_tiempo: {
+          fecha_inicio: fechaInicioVal,
+          fecha_fin: fechaFinVal
+        }
+      };
 
-      if (tipoPrograma === 'diplomado' && moduloNumero > 0) {
-        queryExistente = queryExistente.eq('modulo_numero', moduloNumero);
-      } else {
-        queryExistente = queryExistente.eq('modulo_nombre', modNorm);
-      }
-
-      const { data: existente } = await queryExistente.limit(1);
-
-      const payloadNotas = {
+      const payloadBaseNotas = {
         dni_ce: dniLimpio,
         diplomado_numero: params.codigoDiplomado,
         diplomado_nombre: nombreDip,
@@ -636,15 +665,52 @@ export async function calificarExamen(params: {
         modulo_nombre: modNorm,
         nota: notaFinal,
         estado: aprobado ? 'APROBADO' : 'DESAPROBADO',
-        respuestas: params.respuestasUsuario,
+        respuestas: respuestasConTiempo,
         detalles_examen: detalles,
-        updated_at: new Date().toISOString()
+        updated_at: fechaFinVal
       };
 
-      if (existente && existente.length > 0) {
-        await sb.from('notas_modulos').update(payloadNotas).eq('id', existente[0].id);
-      } else {
-        await sb.from('notas_modulos').insert([payloadNotas]);
+      const payloadNotasConFechas = {
+        ...payloadBaseNotas,
+        fecha_inicio: fechaInicioVal,
+        fecha_fin: fechaFinVal
+      };
+
+      let insertPayload: Record<string, unknown> = payloadNotasConFechas;
+      let { error: insertErr } = await sb.from('notas_modulos').insert([insertPayload]);
+
+      // Si las columnas fecha_inicio/fecha_fin aún no existen en la BD, reintentar sin ellas
+      // manteniendo __meta_tiempo dentro de respuestas JSONB.
+      if (
+        insertErr &&
+        (String(insertErr.message || '').includes('fecha_inicio') ||
+          String(insertErr.message || '').includes('fecha_fin') ||
+          insertErr.code === 'PGRST204')
+      ) {
+        insertPayload = payloadBaseNotas;
+        const retryRes = await sb.from('notas_modulos').insert([insertPayload]);
+        insertErr = retryRes.error;
+      }
+
+      if (insertErr) {
+        let queryExistente = sb
+          .from('notas_modulos')
+          .select('id')
+          .eq('dni_ce', dniLimpio)
+          .eq('diplomado_numero', params.codigoDiplomado);
+
+        if (tipoPrograma === 'diplomado' && moduloNumero > 0) {
+          queryExistente = queryExistente.eq('modulo_numero', moduloNumero);
+        } else {
+          queryExistente = queryExistente.eq('modulo_nombre', modNorm);
+        }
+
+        const { data: existente } = await queryExistente.limit(1);
+        if (existente && existente.length > 0) {
+          await sb.from('notas_modulos').update(insertPayload).eq('id', existente[0].id);
+        } else {
+          console.warn('Error al insertar en notas_modulos:', insertErr);
+        }
       }
     }
   } catch (err) {
@@ -655,18 +721,17 @@ export async function calificarExamen(params: {
 }
 
 /**
- * Obtener el último intento y retroalimentación guardados en notas_modulos
+ * Consultar todos los intentos guardados en notas_modulos para un programa/módulo específico.
  */
-export async function obtenerIntentoNotasModulos(params: {
+export async function obtenerEstadoIntentosExamen(params: {
   codigoDiplomado: string;
   modulo: string;
   dni: string;
-}): Promise<any | null> {
+}): Promise<{ intentosRealizados: number; ultimoIntento: any | null }> {
   try {
     const sb = getSupabaseClient();
     if (sb) {
-      const matchMod = (params.modulo || '').match(/\d+/);
-      const moduloNumero = matchMod ? parseInt(matchMod[0], 10) : null;
+      const moduloNumero = extraerNumeroModuloExamen(params.modulo);
       const esCursoOTaller = /^(CUR|TAL)/i.test(params.codigoDiplomado);
 
       let query = sb
@@ -683,18 +748,65 @@ export async function obtenerIntentoNotasModulos(params: {
         query = query.eq('modulo_nombre', params.modulo);
       }
 
-      const { data } = await query
-        .order('updated_at', { ascending: false })
-        .limit(1);
-
-      if (data && data.length > 0) {
-        return data[0];
-      }
+      const { data } = await query.order('updated_at', { ascending: false });
+      const rows = Array.isArray(data) ? data : [];
+      const rawRow = rows[0] || null;
+      const metaTiempo =
+        rawRow?.respuestas && typeof rawRow.respuestas === 'object' && !Array.isArray(rawRow.respuestas)
+          ? (rawRow.respuestas as Record<string, { fecha_inicio?: string; fecha_fin?: string } | undefined>).__meta_tiempo
+          : null;
+      const ultimoIntento = rawRow
+        ? {
+            ...rawRow,
+            fecha_inicio: rawRow.fecha_inicio || metaTiempo?.fecha_inicio || null,
+            fecha_fin: rawRow.fecha_fin || metaTiempo?.fecha_fin || rawRow.updated_at || null
+          }
+        : null;
+      return {
+        intentosRealizados: rows.length,
+        ultimoIntento
+      };
     }
   } catch (e) {
-    console.warn('Error al obtener intento de notas_modulos:', e);
+    console.warn('Error al consultar estado de intentos en notas_modulos:', e);
   }
-  return null;
+  return { intentosRealizados: 0, ultimoIntento: null };
+}
+
+/**
+ * Obtener el último intento y retroalimentación guardados en notas_modulos
+ */
+export async function obtenerIntentoNotasModulos(params: {
+  codigoDiplomado: string;
+  modulo: string;
+  dni: string;
+}): Promise<any | null> {
+  const estado = await obtenerEstadoIntentosExamen(params);
+  return estado.ultimoIntento;
+}
+
+/**
+ * Obtener todos los intentos guardados de un estudiante para un programa (ej. DIP-01 o CUR-29)
+ */
+export async function obtenerIntentosPorPrograma(params: {
+  codigoDiplomado: string;
+  dni: string;
+}): Promise<any[]> {
+  try {
+    const sb = getSupabaseClient();
+    if (sb && params.codigoDiplomado && params.dni) {
+      const { data } = await sb
+        .from('notas_modulos')
+        .select('id, diplomado_numero, modulo_numero, modulo_nombre, nota, estado, updated_at')
+        .eq('dni_ce', params.dni)
+        .eq('diplomado_numero', params.codigoDiplomado)
+        .order('updated_at', { ascending: false });
+      return Array.isArray(data) ? data : [];
+    }
+  } catch (e) {
+    console.warn('Error al obtener intentos por programa:', e);
+  }
+  return [];
 }
 
 

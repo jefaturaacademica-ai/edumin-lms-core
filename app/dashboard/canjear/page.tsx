@@ -1147,7 +1147,7 @@ export default function CanjearBeneficiosPage() {
                       >
                         <div className="flex items-center justify-between">
                           <span className="text-[11px] font-bold text-indigo-600 dark:text-indigo-400 uppercase">
-                            {(mod.codigo || `MÓDULO 0${mIdx + 1}`).toUpperCase()}
+                            {(mod.codigo || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`).toUpperCase()}
                           </span>
                           {mod.docente && (
                             <span className="text-[10px] text-slate-400">

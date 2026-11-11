@@ -2,7 +2,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía minera ha instalado sensores IoT en sus molinos SAG para capturar datos de vibración y temperatura en tiempo real, almacenándolos directamente en un Data Lake en la nube. Sin embargo, tras seis meses de operación, el equipo de mantenimiento reporta que no se ha logrado reducir las paradas no programadas ni se han generado ahorros. De acuerdo con el pipeline de digitalización expuesto en la Clase 01, ¿qué etapa del flujo de trabajo está fallando o se ha omitido?",
@@ -39,7 +39,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "La gerencia de una planta concentradora busca justificar un proyecto de digitalización integral ante el directorio y los organismos reguladores ambientales (OEFA). ¿Cuáles de los siguientes beneficios estratégicos y operacionales están directamente fundamentados en la trazabilidad de datos y la digitalización según la Clase 01?",
@@ -76,7 +76,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una celda de flotación, las mediciones tradicionales de reactivos no logran predecir las desviaciones en la recuperación de cobre debido a variaciones en la granulometría de la espuma. ¿Qué tecnología emergente de la Clase 01 permite monitorear dinámicamente la estabilidad y tamaño de burbuja sin contacto físico directo?",
@@ -113,7 +113,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un ejecutivo minero sostiene que la compra aislada de una licencia de software con inteligencia artificial convierte automáticamente a su empresa en una operación de 'Minería 4.0'. ¿Qué argumento técnico expuesto en la Clase 01 desmiente esta postura?",
@@ -150,7 +150,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El área de perforación de una mina a tajo abierto logró incrementar su productividad en un 10% tras aplicar algoritmos predictivos. Sin embargo, la gerencia financiera requiere aislar el impacto económico exclusivo de la solución tecnológica frente a variables externas (como cambios en la flota o en los turnos). ¿Qué indicador financiero central definido en la Clase 02 debe calcularse?",
@@ -187,7 +187,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un proyecto de optimización de acarreo mediante algoritmos predictivos enfrenta un fuerte rechazo por parte de los operadores de camión, quienes temen ser reemplazados y desconfían de las recomendaciones del sistema. Según la Clase 02, ¿cuáles de las siguientes acciones forman parte de una estrategia integral de gestión del cambio y metodologías de adopción?",
@@ -224,7 +224,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "A diferencia de la industria del retail, que orienta sus esfuerzos digitales hacia la experiencia del cliente final, una empresa minera con presupuesto limitado debe decidir dónde enfocar sus primeras iniciativas analíticas para obtener el mayor valor. Según la Clase 02, ¿dónde se ubica el núcleo prioritario de aplicación?",
@@ -261,7 +261,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una planta concentradora antigua (brownfield) que utiliza controladores PLC heredados con lógica de contactos busca conectar sus datos de vibración a la nube para ejecutar mantenimiento predictivo. ¿Cuál es el principal obstáculo técnico y de seguridad identificado en la Clase 02 para esta integración?",
@@ -298,7 +298,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de analítica entrena un modelo de Machine Learning para predecir la tasa de desgaste de los forros de un molino. No obstante, ingresaron al modelo lecturas de sensores descalibrados y con pérdidas frecuentes de señal, dando como resultado un programa de mantenimiento erróneo. ¿Qué principio fundamental de trabajo con datos expuesto en la Clase 03 se ha violado?",
@@ -335,7 +335,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El departamento de ingeniería de una mina presenta una maqueta 3D en la que se observa la geometría de la ruta de camiones. Afirman que han construido un 'Gemelo Digital'. De acuerdo con la Clase 03, ¿qué condición técnica indispensable le falta a esta maqueta para calificar verdaderamente como Gemelo Digital?",
@@ -372,7 +372,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "El equipo de Data Science de una unidad minera debe estructurar su estrategia de modelos analíticos para la planta de lixiviación. Según la Clase 03, ¿cuáles de las siguientes relaciones entre los tipos de analítica y su objetivo operativo son correctas?",
@@ -409,7 +409,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un joven ingeniero desea prototipar un algoritmo para predecir cuellos de botella en la flotación de cobre, pero la empresa le niega la extracción de datos de planta por políticas de confidencialidad. ¿Qué recurso alternativo recomendado en la Clase 03 le permite acceder a conjuntos de datos industriales reales para practicar y validar sus modelos?",
@@ -446,7 +446,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El tablero de control diseñado para la Superintendencia de Planta presenta 40 gráficos simultáneos, incluye submenús jerárquicos y tarda más de 8 minutos en actualizar sus datos debido a consultas no optimizadas a la base de datos. Los supervisores prefieren no usarlo. ¿Qué principio de diseño para 'Dashboards 4.0' expuesto en la Clase 04 se debe aplicar para solucionar este problema?",
@@ -483,7 +483,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El área de Logística requiere automatizar el procesamiento de 5,000 facturas mensuales de proveedores, extrayendo datos de documentos PDF e ingresándolos automáticamente a SAP para reducir errores de tipeo. ¿Qué categoría tecnológica de automatización descrita en la Clase 04 corresponde a este requerimiento?",
@@ -520,7 +520,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "La gerencia de operaciones evalúa implementar Visión por Computadora y Deep Learning en distintas áreas de la mina. Según la Clase 04, ¿cuáles de las siguientes situaciones representan casos de uso técnicamente viables y de alto impacto para esta tecnología?",
@@ -557,7 +557,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al aplicar la metodología de transformación digital 6A de McKinsey en un proyecto de analítica para flotación, la empresa llega a la etapa de 'Actuar' (Scale/Act). De acuerdo con la Clase 04, ¿cuál debe ser el enfoque operativo prioritario en esta etapa?",
@@ -594,7 +594,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una corporación minera inaugura un Centro Integrado de Operaciones (CIO) en Lima desde el cual monitorea y controla a distancia la planta concentradora de una mina ubicada en Cusco. El jefe de proyecto afirma: 'Al tener este centro remoto operando en vivo, ya contamos con un Gemelo Digital completo de la planta'. ¿Por qué esta afirmación es técnicamente errónea según la Clase 05?",
@@ -631,7 +631,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para operar una flota de camiones gigante de manera 100% autónoma en un tajo abierto expuesto a condiciones severas de polvo denso, niebla nocturna y alta montaña, ¿qué combinación de sensórica e infraestructura de red es indispensable según la Clase 05?",
@@ -668,7 +668,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un circuito de molienda SAG se busca minimizar el consumo energético por tonelada y evitar sobrecargas que detengan el molino. Dado que la velocidad del molino, el flujo de agua, la densidad de pulpa y la dureza del mineral interactúan fuertemente entre sí, los controladores PID tradicionales fallan. ¿Qué técnica de Control Avanzado de Procesos (APC) expuesta en la Clase 05 se debe implementar?",
@@ -705,7 +705,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El equipo de arquitectura de sistemas de una mina necesita conectar la información del sistema de ejecución de producción (MES, Nivel 3) con el sistema de planificación de recursos empresariales (ERP/SAP, Nivel 4). ¿Qué combinación de estándar internacional, protocolo de comunicación y formato de plantilla expuesta en la Clase 05 asegura la interoperabilidad cibersegura?",
@@ -742,7 +742,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un debate sobre el impacto de la Inteligencia Artificial en el empleo minero, un grupo de estudiantes teme que los ingenieros de minas sean reemplazados por algoritmos en los próximos años. De acuerdo con la visión del docente expuesta en la Clase 05, ¿cómo se define correctamente esta transición profesional?",
@@ -779,7 +779,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una mina conecta sus redes de control operacional (OT) directamente a un repositorio en la nube para entrenar algoritmos de Machine Learning. Tres semanas después, un ciberataque de ransomware cifra los servidores SCADA y detiene la planta por cuatro días. De acuerdo con la Clase 06, ¿qué falla de gobernanza y arquitectura de ciberseguridad facilitó esta paralización?",
@@ -816,7 +816,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "El departamento de Recursos Humanos de una corporación minera analiza el impacto de la transformación digital en su fuerza laboral. Basándose en los conceptos de reskilling, vulnerabilidad de perfiles y evolución del empleo presentados en la Clase 06, ¿cuáles de las siguientes afirmativas representan análisis correctos?",
@@ -853,7 +853,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una contratista minera no desea comprar una flota de camiones de acarreo para evitar el desembolso de capital (Capex). En su lugar, acuerda un contrato con el fabricante (OEM) donde este mantiene la propiedad de la flota, monitorea el estado del equipo en tiempo real mediante plataformas cloud, realiza el mantenimiento predictivo y cobra a la mina en función de la cantidad de toneladas métricas efectivamente movidas. ¿Qué modelo de negocio inteligente expuesto en la Clase 06 se está aplicando?",
@@ -890,7 +890,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un comité de transformación digital en una empresa minera debe definir su hoja de ruta (roadmap) tecnológica para los próximos tres años, contando con 12 proyectos propuestos. ¿Qué metodología de jerarquización y secuencia operativa se recomienda en la Clase 06 para minimizar riesgos y asegurar un retorno financiero temprano?",
@@ -927,7 +927,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el diseño de un proyecto de digitalización minera, la gerencia busca transformar los datos operativos crudos provenientes de los sensores de planta en decisiones industriales inteligentes. ¿Cuál es la secuencia lógica completa que compone el pipeline de digitalización descrito en el diplomado?",
@@ -964,7 +964,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al optimizar el proceso de flotación en una planta concentradora, surge la discusión sobre reemplazar completamente los modelos físico-matemáticos tradicionales por algoritmos de Machine Learning. ¿Cuál es la recomendación técnica expresada en el diplomado para abordar esta integración?",
@@ -1001,7 +1001,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué herramientas y protocolos tecnológicos se recomiendan en el diplomado para habilitar la ingesta, integración y visualización eficiente de datos masivos en el pipeline digital minero?",
@@ -1038,7 +1038,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿De qué manera la trazabilidad digital continua generada a lo largo del pipeline operativo beneficia estratégicamente a una empresa minera ante organismos reguladores como OEFA o en auditorías corporativas?",
@@ -1075,7 +1075,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro del contexto de adopción tecnológica en la minería peruana, ¿cuál es reconocido como el principal factor humano que genera resistencia al cambio operacional al implementar tecnologías 4.0?",
@@ -1112,7 +1112,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la minería regional, las iniciativas de analítica avanzada e inteligencia artificial deben justificar cuantitativamente su valor. ¿Qué resultados de impacto económico y operativo se han documentado en casos emblemáticos como Antamina?",
@@ -1149,7 +1149,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar el éxito financiero de un proyecto de digitalización en minería, se utiliza el KPI denominado ROT (Retorno de Inversión en Tecnología). ¿Cuál es el principal desafío metodológico para su cálculo preciso en mina?",
@@ -1186,7 +1186,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué estrategias organizacionales y operativas son recomendadas en el curso para superar las barreras de adopción tecnológica (como sistemas legacy y falta de talento) en minas operativas?",
@@ -1223,7 +1223,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "El trabajo profesional con Big Data en la industria extractiva se rige por principios fundamentales de ingeniería de datos. ¿Cuáles corresponden a los tres principios críticos explicados en la clase 3?",
@@ -1260,7 +1260,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el desarrollo de la analítica avanzada para plantas mineras, ¿cómo se relacionan jerárquica y operativamente los modelos predictivos con los modelos prescriptivos?",
@@ -1297,7 +1297,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "A diferencia de un simulador de eventos discretos convencional (que modela ciclos operativos mediante distribuciones estadísticas), ¿cuál es la característica distintiva fundamental de un Gemelo Digital (Digital Twin)?",
@@ -1334,7 +1334,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿En qué áreas operativas de una unidad minera se aplican con alto retorno de inversión los modelos de Big Data y analítica avanzada?",
@@ -1371,7 +1371,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño de un Tablero de Control (Dashboard 4.0) orientado a la alta gerencia minera, ¿cuál es la regla de oro recomendada respecto a la cantidad y estructura de las métricas visualizadas?",
@@ -1408,7 +1408,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "La visión artificial impulsada por Deep Learning resuelve problemas complejos en operaciones mineras. ¿Qué casos de uso industriales representativos corresponden a esta tecnología?",
@@ -1445,7 +1445,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro del espectro de automatización, ¿cuál es la diferencia conceptual clara entre la Automatización Robótica de Procesos (RPA) y la Robótica Física/Autónoma?",
@@ -1482,7 +1482,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "La metodología 6A de McKinsey constituye un marco estructurado para guiar la transformación digital. ¿Cuál es el enfoque secuencial de sus fases de implementación según lo revisado en el diplomado?",
@@ -1519,7 +1519,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "La implementación segura de un Sistema de Acarreo Autónomo (AHS) en minería a cielo abierto requiere la integración de múltiples capas tecnológicas. ¿Cuáles son componentes indispensables de esta arquitectura?",
@@ -1556,7 +1556,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Aunque suelen confundirse, los Centros de Control Remoto (CCR) y los Gemelos Digitales cumplen roles operacionales distintos. ¿Cómo se define la interacción técnica entre ambos?",
@@ -1593,7 +1593,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En circuitos complejos como la molienda SAG o la flotación, el Control Avanzado de Procesos (APC) supera al control PID convencional. ¿Cuál es la ventaja operativa del Control Predictivo Basado en Modelos (MPC)?",
@@ -1630,7 +1630,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para lograr una integración fluida entre el nivel de campo (SCADA), el nivel de ejecución de producción (MES) y el nivel de planificación corporativa (ERP), ¿qué estándar y protocolo internacional se recomiendan para garantizar la interoperabilidad?",
@@ -1667,7 +1667,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿En qué consiste la transformación hacia el modelo \"Equipment as a Service\" (EaaS) que están adoptando los principales proveedores de maquinaria y soluciones mineras 4.0?",
@@ -1704,7 +1704,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "La convergencia entre las redes de Tecnología de la Información (IT) y Tecnología de Operación (OT) expone a las minas a riesgos de ciberataques (como ransomware). ¿Qué medidas de ciberseguridad y gobernanza son indispensables?",
@@ -1741,7 +1741,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con los análisis de impacto laboral en la Cuarta Revolución Industrial presentados en el diplomado, ¿cuál es la tendencia observada respecto a la vulnerabilidad de puestos de trabajo ante la automatización?",
@@ -1778,7 +1778,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al estructurar la Hoja de Ruta de Transformación Digital (HRTD) para un yacimiento minero, ¿cuál es el orden metodológico recomendado de las fases de ejecución?",
@@ -1815,7 +1815,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "La digitalización minera desempeña un rol crucial en la sostenibilidad ambiental y el relacionamiento comunitario. ¿De qué manera la sensorización en tiempo real y las plataformas de datos benefician la licencia social para operar?",
@@ -1852,7 +1852,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera necesita almacenar volúmenes masivos de datos crudos heterogéneos (imágenes de cámaras de inspección, payloads JSON de sensores IoT y archivos CSV de telemetría vehicular), proyectando a mediano plazo migrar hacia análisis avanzados gobernados con calidad certificada. ¿Qué arquitectura de almacenamiento es la más recomendada para equilibrar un bajo costo de ingesta inicial con una gobernanza progresiva?",
@@ -1889,7 +1889,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante la auditoría a un sistema analítico de molienda SAG, se detecta que los modelos predictivos entregan conclusiones erróneas debido a fallas de calibración en los sensores de entrada y desalineaciones de formato. ¿Cuáles de las siguientes acciones constituyen controles técnicos de gobierno de datos para resolver estas deficiencias?",
@@ -1926,7 +1926,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de ciencia de datos en minería diseña un pipeline para procesar terabytes de datos de telemetría vehicular. Requieren historizar todos los datos crudos sin pérdida para futuros reentrenamientos de inteligencia artificial y aprovechar la capacidad de procesamiento elástico en la nube. ¿Qué modelo de arquitectura de procesamiento es el más adecuado y por qué?",
@@ -1963,7 +1963,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un algoritmo de mantenimiento predictivo indica fallas inminentes en una chancadora primaria, pero la inspección física demuestra que el equipo opera en condiciones óptimas. La investigación revela que un sensor descalibrado envía lecturas de temperatura con un desvío sistemático de +35°C sin documentación de metadatos. ¿Qué principio fundamental del manejo de datos se vio vulnerado?",
@@ -2000,7 +2000,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el centro integrado de operaciones de una unidad minera, se requiere visualizar alertas de colisión de flota en tiempo real con latencia inferior a 100 ms y, simultáneamente, generar reportes consolidados de producción al cierre de cada turno de 12 horas. ¿Qué arquitectura analítica permite satisfacer ambos requerimientos operacionales?",
@@ -2037,7 +2037,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una planta concentradora sufre constantes distracciones en los operadores debido a la activación simultánea de decenas de alarmas no prioritarias durante pequeñas perturbaciones del proceso. ¿Qué estándares y prácticas de diseño industrial deben aplicarse para optimizar las interfaces y la gestión de alarmas?",
@@ -2074,7 +2074,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un modelo de aprendizaje automático diseñado para predecir entrabamientos en una chancadora comienza a perder precisión progresivamente tras seis meses de operación, a pesar de que el código del modelo no ha sufrido modificaciones. ¿A qué fenómeno técnico se debe esta degradación y cómo se debe gestionar según MLOps?",
@@ -2111,7 +2111,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "La vicepresidencia de operaciones requiere evaluar el desempeño histórico interanual de la recuperación metalúrgica y proyectar la vida útil de los activos principales a 5 años para tomar decisiones de inversión de capital (CAPEX). ¿Qué tipo de cuadro de mando y horizonte temporal corresponde a esta exigencia?",
@@ -2148,7 +2148,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se requiere integrar los datos de telemetría de una nueva flota de perforadoras hidromecánicas a la plataforma analítica de la mina. Los equipos cuentan con controladores modernos y se exige implementar un estándar industrial que proporcione un modelo semántico de activos, tipado de variables y comunicaciones seguras sin mapeos ad-hoc por fabricante. ¿Cuál es el protocolo indicado?",
@@ -2185,7 +2185,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para interconectar la red de operaciones de planta (OT) con la plataforma Cloud corporativa sin exponer los sistemas de control crítico a ciberataques, el equipo de TI aplica los lineamientos de la norma ISA/IEC 62443 y la arquitectura de Confianza Cero (Zero Trust). ¿Cuáles de los siguientes componentes e intervenciones son obligatorios?",
@@ -2222,7 +2222,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el monitoreo de una flota de camiones de acarreo en una mina a tajo abierto, se requiere ejecutar algoritmos de visión computacional para prevenir fatiga en conductores. Debido a las limitaciones de ancho de banda satelital, resulta imposible transmitir el video en vivo a la nube. ¿Cómo se debe distribuir la carga computacional según las arquitecturas IoT modernas?",
@@ -2259,7 +2259,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un conjunto de sensores inalámbricos IoT montados en un depósito de relaves remite datos de presión de poros mediante redes celulares inestables. Se debe garantizar que cada medición crítica llegue al broker de mensajería MQTT al menos una vez, tolerando retransmisiones por caídas de señal. ¿Qué nivel de Calidad de Servicio (QoS) en MQTT es el indicado?",
@@ -2296,7 +2296,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía minera enfrenta severos conflictos de integración porque las lecturas del laboratorio químico (LIMS) no se correlacionan automáticamente con los consumos de reactivos registradas en el ERP ni con los eventos de proceso del SCADA. ¿Qué estándar estructurado permite definir los flujos de información y modelos de interfaz entre estos niveles operacionales y de negocio?",
@@ -2333,7 +2333,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el desarrollo de un pipeline en Python para predecir fallas en motores de flotación, se observa un desbalance extremo: de 150,000 muestras procesadas, únicamente 90 corresponden a eventos reales de falla (y=1). ¿Cuáles de las siguientes intervenciones metodológicas son correctas para evitar sesgos en el entrenamiento?",
@@ -2370,7 +2370,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "La gerencia de mantenimiento desea alinear su plan de mantenimiento predictivo con el sistema de gestión de activos corporativo e implementar una taxonomía estandarizada para registrar fallas y tiempos de reparación en sus equipos pesados. ¿Qué par de estándares ISO proporciona el marco estratégico y la estructura técnica de datos requerida?",
@@ -2407,7 +2407,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la arquitectura de mensajería para el sistema MES de una planta concentradora, se requiere implementar un protocolo que ofrezca encolamiento avanzado de mensajes (advanced queuing), garantías estricta de enrutamiento entre múltiples consumidores empresariales y resiliencia ante transacciones concurrentes. ¿Qué protocolo se adapta mejor a esta necesidad?",
@@ -2444,7 +2444,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una planta de procesamiento implementa la norma ISO 50001 para auditar sus consumos eléctricos. Para determinar si el ahorro reportado en los molinos de bolas se debe a la optimización de los variadores de frecuencia y no a que el mineral ingresado era más blando, se instalan medidores dedicados por motor e integran variables geológicas en un modelo analítico. ¿Cómo se denomina esta práctica?",
@@ -2481,7 +2481,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa minera ubicada en una cuenca con escasez hídrica desarrolla un gemelo digital hídrico bajo los principios de la norma ISO 14046. ¿Qué funciones y capacidades técnicas debe integrar este sistema para demostrar cumplimiento regulatorio y optimizar el proceso?",
@@ -2518,7 +2518,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco del desarrollo de una faja transportadora que atraviesa territorios comunales, la gerencia de sostenibilidad aplica la matriz de gestión de interesados (Interés vs. Poder). Se identifica a una asociación de ganaderos locales que posee un interés extremadamente elevado por el uso del agua, pero un bajo poder de veto político directo. ¿Qué estrategia de relacionamiento se debe implementar?",
@@ -2555,7 +2555,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al ingestar un dataset de telemetría de motores para mantenimiento predictivo, un ingeniero observa que el sensor de corriente registró valores de 10,000 A en un motor pequeño cuya escala nominal máxima es de 100 A, y varios registros de vibración figuran como `NaN`. ¿Cuál es el tratamiento técnico más adecuado antes del modelado?",
@@ -2592,7 +2592,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una mina de gran escala desea rediseñar la gestión del ciclo de vida de sus componentes pesados (motores diésel de volquetes y mandos finales), pasando del descarte tradicional a un programa de reacondicionamiento estandarizado con garantías equivalentes a las de fábrica. ¿Qué concepto de economía circular (ISO 59004) aplica y cuál es su beneficio clave?",
@@ -2629,7 +2629,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para cumplir con las exigencias del estándar GRI 2021 (Sector Minero) y publicar métricas ESG auditables ante fondos de inversión internacionales, la dirección de transformación digital decide automatizar la consolidación de reportes. ¿Qué elementos deben integrarse en el pipeline de datos para garantizar la validez del informe?",
@@ -2666,7 +2666,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una mina implementa una aplicación web comunitaria para recolectar peticiones y monitorear la percepción social en los pueblos aledaños a la operación. Durante el diseño del pipeline de datos, el equipo legal advierte que se deben cumplir estrictamente los marcos normativos de protección de datos personales (como la Ley 29733 en Perú). ¿Qué salvaguarda técnica es obligatoria implementar?",
@@ -2703,7 +2703,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "La operación de una planta concentradora busca resolver un dilema operativo: incrementar la recuperación de agua en los espesadores de relaves requiere aumentar el consumo de potencia en las bombas de pulpa y la adición de floculantes. ¿Qué instrumentos y metodologías se deben combinar para optimizar este trade-off hídrico-energético?",
@@ -2740,7 +2740,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se finaliza el pipeline de datos para el monitoreo de 3 motores AC durante 14 días con 2,016 muestras registradas cada 10 minutos (corriente RMS, voltaje RMS, vibración RMS y tipos de fallo). Para asegurar que este repositorio pueda ser consumido eficientemente tanto por herramientas de analítica masiva (Big Data) como por visores web livianos, ¿qué formato de almacenamiento comprimido e interoperable se debe utilizar según las mejores prácticas?",
@@ -2777,7 +2777,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de analítica en una planta concentradora observa que los sensores de temperatura del molino SAG reportan lecturas numéricas constantes pero sin unidades registradas ni calibración reciente, lo que genera conclusiones erróneas en el modelo predictivo. ¿Qué combinación de principios de la disciplina de datos descritos en el programa se está vulnerando principalmente en este escenario?",
@@ -2814,7 +2814,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el diseño de la arquitectura de datos para una operación minera con grandes volúmenes de datos crudos e ininterrumpidos procedentes de sensores IoT y cámaras, se decide implementar un enfoque ELT (Extract, Load, Transform) en lugar de un ETL tradicional. ¿Cuál es la razón técnica fundamental para esta elección?",
@@ -2851,7 +2851,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Una planta concentradora detecta lecturas divergentes de temperatura en un chuletero al comparar una termocupla con un pirómetro infrarrojo. ¿Qué dimensiones de la calidad de datos y controles técnicos de gobierno deben evaluarse según el marco conceptual presentado?",
@@ -2888,7 +2888,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Por qué en la industria minera predomina el uso de Data Lakes con una evolución progresiva hacia arquitecturas Lakehouse, en lugar de adoptar exclusivamente Data Warehouses tradicionales?",
@@ -2925,7 +2925,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el monitoreo de flotas de acarreo y dispatch minero, se requiere procesar eventos inmediatos para alertas críticas de velocidad y, en paralelo, consolidar históricos para auditorías al cierre de turno. ¿Qué arquitectura responde de forma óptima a estas exigencias combinadas?",
@@ -2962,7 +2962,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes características corresponden a la formulación y uso de dashboards operacionales en comparación con los tácticos y estratégicos?",
@@ -2999,7 +2999,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la integración de telemetría desde sensores IoT hacia plataformas de agregación en minería, se utiliza el protocolo MQTT. ¿Cuál es su rol principal en comparación con herramientas como Apache Kafka o Apache Airflow?",
@@ -3036,7 +3036,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Tras desplegar un modelo de Machine Learning para predecir fallas en chancadoras, se observa un deterioro progresivo en la precisión de las inferencias al cabo de varios meses. ¿A qué fenómeno técnico se debe esto y cómo lo aborda la disciplina MLOps?",
@@ -3073,7 +3073,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al interconectar controladores PLC y sistemas DCS con plataformas analíticas corporativas, ¿cuál es la ventaja estructurante de OPC UA sobre soluciones de transporte simple según la arquitectura de automatización?",
@@ -3110,7 +3110,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con el estándar ISA/IEC 62443 y los principios de Zero Trust para la integración entre redes industriales (OT) y corporativas (TI) en minería, ¿cuáles de las siguientes prácticas son técnicamente correctas?",
@@ -3147,7 +3147,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la función crítica de desplegar una capa de procesamiento en el borde (Edge Computing) entre la instrumentación de campo y la infraestructura en la Nube en una operación minera remota?",
@@ -3184,7 +3184,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una operación minera evalúa utilizar LoRaWAN para el monitoreo de condición en pozos de piezometría distantes. ¿Cuál es la restricción técnica determinante que debe considerarse en su diseño arquitectónico frente a la red física cableada?",
@@ -3221,7 +3221,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la integración de los sistemas SCADA, MES y ERP en una empresa minera, ¿qué función cumple la aplicación del estándar ISA-95?",
@@ -3258,7 +3258,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante la etapa de preprocesamiento de telemetría para entrenar un modelo predictivo de mantenimiento, ¿cuáles de las siguientes prácticas son metodológicamente correctas?",
@@ -3295,7 +3295,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al desarrollar un modelo para identificar eventos de falla raros en palas eléctricas, se detecta un desbalance extremo de clases (0.1% de muestras con falla). Si se decide aplicar SMOTE (Synthetic Minority Over-sampling Technique), ¿qué precaución metodológica debe cumplirse?",
@@ -3332,7 +3332,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿De qué manera la adopción del marco ISO 55000 aporta valor a una estrategia de mantenimiento predictivo basada en analítica avanzada?",
@@ -3369,7 +3369,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera busca reducir su consumo específico de energía en la etapa de conminución. ¿Qué acción técnica responde directamente a los lineamientos de la norma ISO 50001 y a la estrategia de medición submétrica?",
@@ -3406,7 +3406,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para asegurar que los datos de monitoreo de efluentes hídricos (pH, metales, turbidez) sean legal y técnicamente defendibles ante las autoridades regulatorias, ¿qué elementos integran la cadena de custodia digital?",
@@ -3443,7 +3443,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el desarrollo de un proyecto minero, el área de asuntos corporativos clasifica a los actores locales. ¿Cuál es la finalidad analítica de organizar a los interesados en una matriz de poder-interés y actitud?",
@@ -3480,7 +3480,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En plantas concentradoras ubicadas en zonas áridas, existe una relación de equilibrio o 'trade-off' entre la gestión de energía y la de agua. ¿Cómo se manifiesta técnicamente esta interdependencia en la operación?",
@@ -3517,7 +3517,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía minera implementa un programa de remanufactura de componentes mayores de la flota de acarreo (motores, transmisiones) en lugar de descartarlos. ¿Bajo qué marco normativo y metodológico se evalúa cuantitativamente el impacto ambiental evitado en todo el ciclo de vida?",
@@ -3554,7 +3554,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes afirmaciones describen la aplicación de los marcos GRI y SASB/ISSB en la arquitectura de datos de una empresa minera digitalizada?",
@@ -3591,7 +3591,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al desplegar una aplicación móvil para la recolección de percepciones y monitoreo ambiental participativo con comunidades vecinas, ¿qué exigencia técnica en materia de datos debe integrarse en el diseño según la Ley de Protección de Datos Personales?",
@@ -3628,7 +3628,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la etapa de ingesta e integración de datos de sensores en un motor eléctrico, se identifica un registro puntual de temperatura de 2500\\°C en un rodamiento. ¿Cuál es el procedimiento técnico correcto a ejecutar en el pipeline de datos?",
@@ -3665,7 +3665,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En un pipeline de digitalización para mantenimiento predictivo y sostenibilidad, se exportan datasets procesados a distintos formatos de archivo. ¿Cuáles son los criterios de selección de formato según el uso previsto?",
@@ -3702,7 +3702,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una unidad minera busca integrar sus datos desde los sensores de instrumentación en planta hasta su sistema ERP corporativo para reducir silos informativos. Sin embargo, el equipo técnico debate sobre incluir un 'Nivel Cloud' explícito por encima del ERP en su arquitectura. Según las extensiones modernas del estándar ISA-95 descritas en el módulo, ¿cuál es la justificación conceptual más sólida para utilizar un nivel de nube o Data Lake sin romper la continuidad operacional?",
@@ -3739,7 +3739,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la gobernanza de datos para una empresa minera, se requiere estructurar roles organizacionales para el dominio de datos de la planta concentradora. Un superintendente de planta argumenta que el 'Data Steward' (Administrador de datos) debe ser un técnico de TI. Sin embargo, basándose en la interpretación correcta del rol, ¿cuál es la asignación y responsabilidad principal del Data Steward?",
@@ -3776,7 +3776,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo directivo evalúa implementar el marco Balanced Scorecard (Cuadro de Mando Integral) en una operación minera de cobre para conectar los datos operativos con la estrategia corporativa. ¿Cuáles de las siguientes afirmaciones describen correctamente las relaciones causales e indicadores de este modelo según los estándares del diplomado?",
@@ -3813,7 +3813,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la revisión trimestral de un cuadro de mando integral, la gerencia de operaciones detecta que el KPI estratégico 'Costo por Tonelada Mantenida' ha superado la meta presupuestada en un 18%. ¿Cuál es el procedimiento metodológico recomendado para la toma de decisiones correctivas grounded en la gobernanza de datos?",
@@ -3850,7 +3850,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un ingeniero de procesos recibe un lote de datos de sensores de temperatura y vibración de un molino SAG. Antes de entrenar un modelo predictivo, observa que faltan lecturas durante ciertas horas de la noche y que hay valores fuera de rango físico. Según la norma ISO 25012 y las prácticas de gestión de datos, ¿cómo se diferencian las dimensiones de Exactitud e Integridad en este contexto?",
@@ -3887,7 +3887,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el desarrollo de un proyecto de digitalización para la flota de acarreo, el equipo distingue entre las etapas de 'Perfilado de Datos' y 'Preprocesamiento de Datos' dentro del pipeline. ¿Cuáles de las siguientes características corresponden a la etapa de Perfilado de Datos?",
@@ -3924,7 +3924,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al diseñar un sistema de alerta temprana para la detención no programada de motores de corriente continua en una faja transportadora, la gerencia exige priorizar la explicabilidad técnica. ¿Qué enfoque de modelamiento analítico se debe intentar primero antes de recurrir a modelos complejos de Machine Learning o 'cajas negras'?",
@@ -3961,7 +3961,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de ciencia de datos implementa un proyecto de optimización de reactivos en celdas de flotación utilizando la metodología CRISP-DM. Tras entrenar y validar varios algoritmos con datos históricos, obtienen una precisión del 94%. Según el ciclo de vida CRISP-DM, ¿cuál es el paso obligatorio inmediatamente anterior al despliegue (Deployment) en planta?",
@@ -3998,7 +3998,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una planta concentradora mediana existe un sistema SCADA antiguo (legacy) que utiliza un protocolo propietario indocumentado para el control de celdas. La gerencia no dispone del presupuesto para reemplazar el hardware de control, pero requiere integrar estos datos al sistema MES corporativo. ¿Cuál es la estrategia de arquitectura orientada a servicios (SOA) e interoperabilidad más viable para resolver este cuello de botella?",
@@ -4035,7 +4035,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para mitigar la resistencia cultural durante la implementación de un nuevo sistema de despacho dinámico en la flota de camiones de mina, la empresa decide aplicar el modelo de gestión del cambio ADKAR. ¿Cuáles de las siguientes acciones corresponden correctamente a las fases de este modelo?",
@@ -4072,7 +4072,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una mina a tajo abierto planea desplegar una flota de camiones de acarreo 100% autónomos. Para asegurar la interoperabilidad entre el sistema de gestión de flota (FMS), los vehículos de distintos fabricantes y los sistemas de despacho, ¿qué norma internacional específica de la industria define la interfaz abierta para sistemas autónomos y gestión de flotas?",
@@ -4109,7 +4109,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un proyecto de modernización digital en una concentradora, el equipo de TI intenta imponer una nueva plataforma analítica sin consultar a los jefes de turno de planta. Como resultado, los supervisores continúan tomando decisiones basándose en sus anotaciones en cuadernos físicos e ignoran los paneles digitales. ¿Qué lección de gestión del cambio organizacional explica este fracaso de adopción?",
@@ -4146,7 +4146,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un ciberatacante logra acceder a la red corporativa de una empresa minera mediante un correo de phishing y busca escalar privilegios hacia la red de control industrial (OT) para modificar los set-points de presión en las bombas de relaves. Según la arquitectura de seguridad defensiva recomendada en el estándar IEC 62443, ¿qué elemento de diseño de red previene que la intrusión en la red de TI comprometa los PLC de planta?",
@@ -4183,7 +4183,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una operación minera subterránea sufre un ataque de ransomware que cifra los servidores principales del sistema de despacho de ventilación y acarreo. Para garantizar la 'Resiliencia Operacional' y la continuidad del negocio según las recomendaciones del diplomado, ¿cuáles de las siguientes medidas de contingencia deben estar preparadas?",
@@ -4220,7 +4220,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de proyectos debe presentar el caso de negocio para la instalación de sensores IoT y analítica en un circuito de molienda. El costo de capital inicial (CAPEX) es de $1.5M USD. Para convencer al Chief Financial Officer (CFO), el equipo utiliza un 'Árbol de Valor' (Value Driver Tree). ¿Cómo ayuda esta herramienta a justificar la inversión financiera?",
@@ -4257,7 +4257,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el caso real de Antamina citado en el diplomado, la empresa implementó un proyecto de control avanzado de molienda e instrumentación especializada con una inversión aproximada de 5 millones de dólares. ¿Cuáles fueron los resultados operativos y financieros reales logrados que justificaron un periodo de recuperación (payback) inferior a cuatro meses?",
@@ -4294,7 +4294,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una planta de beneficio, el operador del sistema SCADA observa una desviación crítica en la densidad de pulpa. El sistema genera una recomendación mediante un algoritmo de Machine Learning. Sin embargo, para realizar el ajuste el operador debe validar la acción en la consola en un lapso no mayor a 3 minutos; de lo contrario, la celda se sobrellena. ¿A qué concepto de la toma de decisiones en tiempo real se refiere esta limitación temporal?",
@@ -4331,7 +4331,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un Centro Integrado de Operaciones (IOC) moderno busca balancear los dos pilares fundamentales del valor operativo en minería: Eficiencia Operativa y Seguridad. ¿Cuáles de las siguientes estrategias y herramientas permiten integrar ambos pilares sin generar conflicto de intereses en la gestión de datos?",
@@ -4368,7 +4368,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la toma de decisiones en tiempo real, el ciclo UDA (por sus siglas en español u OODA loop en inglés) es un marco ampliamente adoptado en salas de control y centros de operaciones integrados (IOC). ¿Cuál es la secuencia lógica correcta de sus cuatro etapas?",
@@ -4405,7 +4405,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una mina de oro en declinación de ley busca justificar la implementación de modelos geometalúrgicos avanzados y analítica predictiva ante su junta directiva. ¿Cómo impacta directamente el enfoque Data-Driven en la optimización del CAPEX y en la resiliencia financiera frente a la volatilidad del precio internacional del metal?",
@@ -4442,7 +4442,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El proyecto Quellaveco (Anglo American) es reconocido como un hito de 'Mina 100% Digital' diseñada desde el inicio con un Centro Integrado de Operaciones (CIO) ubicado en Lima. ¿Cuál de las siguientes afirmaciones describe una ventaja estratégica y operacional clave lograda al concebir la mina digital desde su diseño 'Greenfield'?",
@@ -4479,7 +4479,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "A diferencia de las minas 'Greenfield', una mina madura y antigua decide iniciar su transformación digital mediante una estrategia por etapas focalizada en 'Software y Analítica Avanzada' (como en el caso de Antamina). ¿Cuáles de las siguientes son ventajas inherentes a esta estrategia incremental?",
@@ -4516,7 +4516,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la auditoría continua operacional y la gestión del riesgo, la gerencia de una unidad minera implementa indicadores KRIs (Key Risk Indicators) en sus paneles de control. ¿Cómo se relaciona un KRI con la prevención de fallas operacionales y la mejora permanente bajo el ciclo de Deming (PDCA)?",
@@ -4553,7 +4553,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la parte práctica del diplomado, se desarrolla un pipeline completo de análisis de datos para el consumo energético de un molino. El flujo establecido consiste en usar Python/Colab para el entrenamiento del modelo de machine learning, R (RStudio/Posit) para la curación de datos y análisis exploratorio (EDA), y Power BI para el dashboard ejecutivo. ¿Cuál es la razón técnica para combinar estas tres herramientas en el pipeline?",
@@ -4590,7 +4590,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un profesional de la industria minera busca consolidar su carrera ejecutiva y técnica en la transformación digital de operaciones. De las siguientes certificaciones internacionales mencionadas en el diplomado, ¿cuáles están directamente alineadas con la gestión profesional de datos, la Sostenibilidad corporativa y la eficiencia de activos?",
@@ -4627,7 +4627,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la norma ISA-95 y las arquitecturas de automatización en minería, ¿cuál es la consideración conceptual sobre la incorporación del nivel Cloud en la pirámide tradicional?",
@@ -4664,7 +4664,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes opciones describen adecuadamente los roles de gobernanza de datos en una organización minera?",
@@ -4701,7 +4701,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la representación gráfica estandarizada de un Mapa Estratégico en el Balanced Scorecard, ¿qué color se asocia tradicionalmente a la perspectiva Financiera?",
@@ -4738,7 +4738,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la diferencia sustancial entre una métrica operativa y un Indicador Clave de Desempeño (KPI) dentro de la cultura de gestión de datos?",
@@ -4775,7 +4775,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con el modelo ISO 25012 y la gestión de calidad de datos en minería, ¿a qué se refiere la dimensión de 'Exactitud'?",
@@ -4812,7 +4812,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles son las diferencias conceptuales entre Linaje de Datos, Catalogación y Procedencia (Provenance) en entornos mineros highly regulados?",
@@ -4849,7 +4849,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la protección de activos digitales en minería, ¿cuál es la distinción fundamental entre Privacidad y Seguridad de la Información?",
@@ -4886,7 +4886,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es el orden secuencial correcto de las seis fases propuestas por la metodología CRISP-DM para proyectos de minería de datos?",
@@ -4923,7 +4923,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al abordar un proyecto de integración de sistemas legados aislados en una mina antigua, ¿cuál es la recomendación técnica para evitar reemplazos masivos de hardware?",
@@ -4960,7 +4960,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes fases corresponden al modelo de gestión del cambio ADKAR aplicado a la adopción de nuevas tecnologías en faena?",
@@ -4997,7 +4997,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué estándar internacional reciente define la interfaz abierta de datos para la gestión de flotas y sistemas de transporte autónomo en minería?",
@@ -5034,7 +5034,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la teoría de gestión del cambio de Kurt Lewin, ¿cuáles son los tres pasos secuenciales del proceso de transformación organizacional?",
@@ -5071,7 +5071,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de una arquitectura de ciberseguridad industrial basada en el modelo de zonas y niveles (IEC 62443), ¿cuál es la función principal de una DMZ (Zona Desmilitarizada)?",
@@ -5108,7 +5108,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué herramienta metodológica permite vincular de manera gráfica y matemática las mejoras en KPIs operativos con los resultados financieros en el estado de ganancias y pérdidas?",
@@ -5145,7 +5145,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la evaluación financiera de proyectos analíticos Data-Driven en minería, ¿cuáles de las siguientes dinámicas de costo son verdaderas?",
@@ -5182,7 +5182,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la ciberresiliencia operacional, ¿cuál es la medida preventiva indispensable para garantizar la continuidad operativa ante un ataque de Ransomware en el sistema de despacho?",
@@ -5219,7 +5219,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la toma de decisiones en tiempo real y el ciclo UDA (Observar, Orientar, Decidir, Actuar), ¿cómo se define el término 'Timing'?",
@@ -5256,7 +5256,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la metodología operativa ejecutada en los Centros de Operaciones Integrados (IOC) para realizar revisiones frecuentes de KPIs y correcciones cada dos horas?",
@@ -5293,7 +5293,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿A través de qué mecanismos la digitalización de procesos puede generar impacto financiero directo en las métricas de negocio?",
@@ -5330,7 +5330,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión integrada de operaciones, ¿cuál es la relación correcta entre la Eficiencia Operativa y la Seguridad Minera?",
@@ -5367,7 +5367,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el caso práctico de la mina Quellaveco (Yabeco), ¿cuál fue su enfoque distintivo en el diseño de su arquitectura digital?",
@@ -5404,7 +5404,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En minas maduras con sistemas legados e infraestructura existente (como Antamina), ¿cuál es la estrategia recomendada de bajo costo para iniciar la transformación digital?",
@@ -5441,7 +5441,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles son las diferencias operativas entre el Monitoreo Continuo y la Auditoría Continua de datos?",
@@ -5478,7 +5478,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al estructurar un modelo de madurez digital para una operación minera, ¿qué combinación de marcos de trabajo se recomienda utilizar para abarcar la infraestructura y la estandarización de procesos?",
@@ -5515,7 +5515,7 @@
   {
     "codigo_diplomado": "DIP-18",
     "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la ejecución práctica de un pipeline de datos que combina múltiples herramientas, ¿cuál es el rol asignado a Python, R y Power BI dentro del flujo de trabajo presentado?",

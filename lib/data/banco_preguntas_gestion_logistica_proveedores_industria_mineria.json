@@ -2,7 +2,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía minera requiere homologar con urgencia a un contratista para el transporte de sustancias peligrosas (MAPEL) en una unidad operativa remota. Si la gerencia busca minimizar el tiempo de inicio de operaciones sin asumir riesgos financieros elevados por insolvencia del proveedor, ¿qué estrategia de selección y homologación es la más adecuada?",
@@ -39,7 +39,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo de logística minera diseña la estrategia de mitigación de riesgos de abastecimiento para insumos de voladura y reactivos críticos en una operación que trabaja 24/7. ¿Cuáles de las siguientes decisiones corresponden a prácticas de abastecimiento multifuente y control de riesgos recomendadas?",
@@ -76,7 +76,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar dos ofertas para el suministro de cascos de protección y calzado de seguridad para personal de socavón, la propuesta A ofrece un precio unitario 30% menor pero con menor ergonomía y vida útil de 6 meses. La propuesta B ofrece un producto de mayor costo unitario, ergonómico y con vida útil probada de 18 meses. ¿Qué principio de gestión de costos justifica la elección de la propuesta B?",
@@ -113,7 +113,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un contratista especializado en armado de andamios y trabajos en altura se dispone a ingresar a una unidad minera. ¿Qué documentación y vigencia específica debe validar el área de logística y seguridad operacional antes de autorizar el inicio de labores?",
@@ -150,7 +150,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el desglose presupuestario de una campaña de perforación de exploración, un supervisor analiza los costos de consumo de herramientas manuales y accesorios. Si el proyecto contempla 75,000 pies de perforación total y cada broca/taladro tiene una vida útil promedio de 19,685 pies, mientras que un atacador de madera dura 30 días y una barretilla 120 días, ¿cómo debe estructurarse el cálculo de costos?",
@@ -187,7 +187,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "A diferencia de la industria manufacturera convencional, la gestión comercial y de abastecimiento en la minería invierte el flujo tradicional de decisiones. ¿Qué factores del entorno macroeconómico e industrial fundamentan esta particularidad?",
@@ -224,7 +224,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un lote de 500 toneladas de concentrado de cobre debe ser despachado a puerto para su exportación. Con el fin de cumplir con la Norma Técnica de Muestreo (Indecopi) y evitar penalidades comerciales o riesgo de licuefacción durante el transporte marítimo, ¿qué control logístico y operativo es obligatorio?",
@@ -261,7 +261,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un analista de logística intenta aplicar un modelo de Planificación de Requerimiento de Materiales (MRP) tradicional de una planta ensambladora a una operación minera subterránea. ¿Qué diferencia estructural en la gestión de SKU y Bill of Materials (BOM) provocará errores en el sistema si no se realiza un ajuste?",
@@ -298,7 +298,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera necesita contratar el servicio de excavación de zanjas y desarrollo de galerías subterráneas en una zona con alta variabilidad geológica, donde es muy probable que el metrado planificado sufra modificaciones durante la ejecución. ¿Qué modalidad contractual es la más conveniente para evitar disputas por costos?",
@@ -335,7 +335,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Como parte de un análisis SPEN sobre la categoría de arrendamiento de equipos de transporte pesado, el área de logística revisa la fórmula de reajuste de precios de los contratos vigentes. ¿Qué variables macroeconómicas y componentes de costo directo deben incluirse para reflejar la realidad del servicio?",
@@ -372,7 +372,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la evaluación previa de un postor para un contrato de mantenimiento de planta, el comité de licitación consulta la Ficha RUC (SUNAT) del proveedor. ¿Qué información extraída de esta fuente pública sirve como indicador directo de la estabilidad de la empresa y la formalidad de su personal?",
@@ -409,7 +409,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un proceso de licitación para la construcción de un depósito de relaves, la propuesta técnica-económica del Postor A tiene el precio más bajo pero no cumple con los años de colegiatura requeridos para el Ingeniero Residente según los Términos de Referencia (TDR). El Postor B excede en 5% el costo estimado pero cumple estrictamente con el equipo técnico y la metodología exigida. ¿Cómo debe proceder el comité de evaluación al adjudicar la Buena Pro?",
@@ -446,7 +446,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un contrato de mantenimiento del sistema de control y automatización (PLC/SCADA) de la planta concentradora, se suscribe un acuerdo de nivel de servicio (SLA). Si se genera una parada no programada de la chancadora primaria catalogada como de severidad 'Crítica', ¿cuál es el tiempo de respuesta estándar que debe exigir la administración de contrato al proveedor?",
@@ -483,7 +483,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un administrador de contrato evalúa el desempeño de una empresa contratista encargada del mantenimiento de la flota de perforadoras jumbos. ¿Qué métricas integradas deben monitorearse en el SLA para determinar la Eficiencia General del Equipo (OEE)?",
@@ -520,7 +520,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al formular la estructura de costos para la contratación tercerizada de personal especializado en una unidad minera ubicada a más de 4,000 msnm en una zona aislada, la empresa contratista aplica un sobrecosto salarial para cubrir la mano de obra foránea. ¿De cuánto es el porcentaje promedio estandarizado de incremento por riesgo/zona remota sobre el sueldo básico que se traslada al costo operativo?",
@@ -557,7 +557,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un analista logístico registra un pedido de traslado (Stock Transfer Order) en el sistema SAP MM desde el almacén central de la mina hacia un almacén satélite de proyecto. El sistema bloquea la transacción notificando una inconsistencia en los niveles organizacionales. ¿Qué combinación jerárquica debe verificar el usuario para corregir el documento?",
@@ -594,7 +594,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el diseño de la infraestructura de almacenamiento dentro de una unidad minera, el jefe de almacenes debe clasificar y acondicionar áreas diferenciadas para productos químicos, líquidos reactivos y materiales explosivos. ¿Qué requisitos operativos y regulatorios deben aplicarse en estas instalaciones?",
@@ -631,7 +631,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una pala hidráulica en una mina a tajo abierto sufre una falla en su motor principal. La hora de parada no programada representa una pérdida operacional severa. Para mitigar el impacto de este tipo de eventos en componentes críticos de alto valor sin incurrir en un sobrestock millonario de motores nuevos, ¿qué estrategia de inventarios debe aplicarse?",
@@ -668,7 +668,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al estructurar la Ficha Técnica para el KPI 'Exactitud de Registro de Inventario' (ERI) en el almacén de repuestos, el equipo logístico nota que la generación recurrente de pedidos emergentes genera un sobrecosto promedio del 30% en las compras. ¿Qué componente de la Ficha Técnica es indispensable para medir la efectividad de las medidas de control adoptadas a lo largo del tiempo?",
@@ -705,7 +705,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la auditoría de costos de una planta de procesamiento de minerales, se comparan los índices de consumo unitario con los valores de diseño del proyecto. ¿Cuáles de las siguientes métricas representan indicadores exactos por proceso minero?",
@@ -742,7 +742,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un examen de control interno en un almacén minero regional, se descubre que una misma persona realiza la codificación de insumos, la recepción física de la mercadería, el despacho a los contratistas y la autorización de baja de inventario por obsolescencia. ¿Qué principio de gestión se contraviene y cómo debe resolverse?",
@@ -779,7 +779,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la aplicación del modelo probabilístico de inventarios para optimizar el lote de producción de mineral en la minera Sauter (con una demanda D = 623,452 toneladas, un costo de preparación K = 2,777.82 y costo de retención H = 8.60), se calculan iteraciones sucesivas para hallar la cantidad óptima Y y el punto de reorden R. Si Y₁ \\approx 20,000 toneladas en el primer cálculo, ¿cuándo se da por terminado el proceso iterativo?",
@@ -816,7 +816,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un consultor logístico evalúa una red de minería artesanal e informal que abastece a una planta de beneficio de 200 toneladas/día. ¿Qué características diferencian operativamente a esta cadena de suministro frente a la gran minería sistematizada?",
@@ -853,7 +853,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la fase de expansión de una operación subterránea, la minera requiere instalar un sistema de ventilación de gran caudal y electrobombas de achique. La red eléctrica pública local solo suministra baja tensión insuficiente para la demanda del proyecto (900 kW). ¿Qué solución logística y presupuestaria debe implementarse?",
@@ -890,7 +890,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la ejecución del proyecto de expansión del tajo en una unidad minera, el contratista principal presenta un reclamo exigiendo mayor plazo e incremento presupuestario debido a demoras en la importación de repuestos para chancado. Bajo la estructura de gobernanza de control de proyectos RPCS-R10, ¿cuál es el procedimiento formal para evaluar este impacto?",
@@ -927,7 +927,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la evaluación financiera y de solvencia de proveedores de bienes o servicios estratégicos para el sector minero, ¿cuál es la recomendación técnica expresada respecto a los niveles de endeudamiento e historial crediticio del proveedor?",
@@ -964,7 +964,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante el proceso de homologación de contratistas y proveedores para operaciones mineras, ¿cuáles de los siguientes documentos y certificaciones técnicos y de seguridad son requeridos formalmente?",
@@ -1001,7 +1001,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para mitigar los riesgos de desabastecimiento y paradas no programadas en minería, ¿cuál es el tiempo de reposición recomendado para compras gestionadas con proveedores internacionales?",
@@ -1038,7 +1038,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el seguimiento y evaluación del desempeño de los proveedores contratados para la cadena de suministro industrial y minera, ¿cuáles de los siguientes indicadores clave (KPIs) permiten medir la fiabilidad en la entrega y la calidad del servicio?",
@@ -1075,7 +1075,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la estructuración de costos de la actividad minera, ¿cuál es la diferencia fundamental en la aplicación presupuestal entre el CAPEX y el OPEX?",
@@ -1112,7 +1112,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la implementación del Plan de Requerimiento de Materiales (MRP) a corto plazo, ¿cuál es una diferencia operativa sustancial entre el sector minero y la industria manufacturera convencional?",
@@ -1149,7 +1149,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "A diferencia de la industria tradicional, el proceso de compras en las empresas mineras está condicionado jerárquicamente por el mercado de metales. ¿Cuáles de los siguientes elementos influyen directamente en la planificación de la producción y en las decisiones logísticas?",
@@ -1186,7 +1186,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el control de calidad de minerales para exportación según la norma técnica Indecopi 342.23, ¿cuál es el procedimiento estandarizado para la extracción de muestras en lotes superiores a 30 toneladas?",
@@ -1223,7 +1223,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro del marco legal de la minería en el Perú (TUO de la Ley General de Minería), ¿cuál es el alcance jurídico de un contrato de cesión minera?",
@@ -1260,7 +1260,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la metodología de evaluación de proveedores y optimización de adquisiciones conocida como análisis SPEN, ¿cuál es la primera acción diagnóstica que debe realizar el área logística?",
@@ -1297,7 +1297,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante un proceso formal de licitación para la adjudicación de obras y servicios mineros, ¿cuáles de las siguientes especificaciones y formatos son exigidos habitualmente en la propuesta técnica?",
@@ -1334,7 +1334,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al celebrar un contrato bajo la modalidad de \"suma global\" (precio fijo) para la construcción de una planta en mina, ¿cómo se distribuye el riesgo económico ante eventuales imprevistos operativos?",
@@ -1371,7 +1371,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la elaboración de un acuerdo de nivel de servicio técnico (SLAT), ¿cuál es el objetivo de clasificar los eventos según su nivel de gravedad (crítico, urgente, monitor, informativo)?",
@@ -1408,7 +1408,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Debido a la ubicación remota y escala de las operaciones mineras, ¿cuáles de las siguientes prácticas caracterizan la gestión de flotas e inventarios en estos entornos?",
@@ -1445,7 +1445,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Ante controversias o discrepancias de interpretación en la ejecución de contratos mineros en el Perú, ¿cuál es el mecanismo obligatorio de resolución habitualmente establecido en las cláusulas contractuales?",
@@ -1482,7 +1482,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la fórmula utilizada para calcular el indicador de Exactitud del Registro de Inventarios (ERI) en la gestión de almacenes mineros?",
@@ -1519,7 +1519,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para lograr una gestión logística integral alineada con las finanzas y la producción en una operación minera, ¿cuáles de los siguientes módulos del sistema SAP son clave para la trazabilidad operativa?",
@@ -1556,7 +1556,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la clasificación ABC/CRALI de inventarios mineros, ¿qué estrategia de stock se debe aplicar a componentes críticos como los motores de palas hidráulicas?",
@@ -1593,7 +1593,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con las buenas prácticas de diseño de indicadores clave de gestión (KPIs) en minería, ¿cuáles son los elementos requeridos que deben figurar en su ficha técnica formal?",
@@ -1630,7 +1630,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el control del proceso de voladura y fragmentación de roca en minería subterránea, ¿cuáles de los siguientes indicadores permiten evaluar la eficiencia técnica y el costo operativo?",
@@ -1667,7 +1667,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Cuando se realizan \"pedidos emergentes\" o urgentes por falta de planificación en el almacenamiento de repuestos mineros, ¿cuál es el impacto financiero promedio estimado sobre el costo del insumo?",
@@ -1704,7 +1704,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al aplicar un modelo probabilístico de inventarios para determinar el punto de reorden (R) y la cantidad óptima de pedido (Y) en una empresa minera como Sauter, ¿cuál es el procedimiento iterativo adecuado?",
@@ -1741,7 +1741,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la estructuración operativa de una planta de beneficio para minería artesanal que procesa carbón activado y concentrados de oro, ¿cuáles de los siguientes equipos y sistemas resultan indispensables?",
@@ -1778,7 +1778,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el plan de control de un proyecto de expansión minera (bajo directrices de gobernanza como RPCS-R10), ¿cuál es el propósito técnico de definir \"cuentas de control\"?",
@@ -1815,7 +1815,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En operaciones mineras subterráneas aisladas de la red eléctrica nacional, ¿por qué es crítico el dimensionamiento de grupos electrógenos y sistemas de media tensión?",
@@ -1852,7 +1852,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Andes Copper S.A. planea exportar 50,000 toneladas de concentrado de cobre a China desde el puerto del Callao. Al evaluar la gestión logística y los riesgos de transporte internacional, la empresa debe elegir la estrategia contractual de transporte y seguro que optimice los costos y minimice la exposición a imprevistos en alta mar. ¿Cuál es la razón determinante por la que la empresa optaría por una venta bajo Incoterm CIF en lugar de FOB en este escenario minero?",
@@ -1889,7 +1889,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa minera ha sufrido retrasos recurrentes y fraudes documentales en la certificación de origen de sus exportaciones minerales. Para resolver esto, implementa un sistema basado en Blockchain e IoT. ¿Cuáles de las siguientes medidas y beneficios corresponden operativamente a la arquitectura de esta solución tecnológica según la práctica minera descrita?",
@@ -1926,7 +1926,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un embarque de concentrados, el departamento de logística omite consignar el Incoterm acordado en el conocimiento de embarque (Bill of Lading). Ocurre un siniestro marítimo en tránsito. ¿Cuál es la consecuencia directa de esta omisión documental en el ámbito operativo y legal?",
@@ -1963,7 +1963,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un importador de insumos mineros requiere trasladar por vía marítima un lote de repuestos con un volumen total de 12 m³ y un peso real de 10 toneladas. Si la tarifa marítima es de 40 USD/tonelada o su equivalente volumétrico según la equivalencia estándar marítima (1 t = 1 m³), ¿cuál será el flete total cobrado por el transportista marítimo?",
@@ -2000,7 +2000,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un importador realiza su primera importación de reactivos químicos con un valor FOB de 50,000 USD. Al calcular la liquidación aduanera en SUNAT, la empresa se sorprende al ver un cobro por concepto de Percepción del IGV. ¿Cuál es la característica y el impacto financiero de esta figura fiscal en la primera operación de importación?",
@@ -2037,7 +2037,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para mitigar los riesgos en una compra internacional de maquinaria pesada con entrega a 60 días, el comprador y el vendedor acuerdan utilizar una Carta de Crédito. ¿Cuáles de las siguientes condiciones otorgan la máxima seguridad financiera y operativa al exportador frente al riesgo de impagado e imprevistos?",
@@ -2074,7 +2074,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera analiza la adquisición de una flota de camiones de acarreo. A diferencia de las compras OPEX, ¿cuál es el enfoque analítico multidimensional obligatorio al evaluar esta decisión CAPEX?",
@@ -2111,7 +2111,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el desarrollo de una nueva planta de beneficio, la gerencia minera busca minimizar la exposición al riesgo de diseño y construcción, optando por una modalidad donde un solo contratista entregue la infraestructura completamente operativa 'llave en mano'. ¿Qué modelo contractual cumple con este requerimiento?",
@@ -2148,7 +2148,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Históricamente se han registrado fracasos operacionales en minería debido a especificaciones técnicas incompletas o evaluaciones financieras superficiales en licitaciones CAPEX. ¿Cuáles de las siguientes prácticas son medidas de prevención efectivas recomendadas para evitar estos fallos?",
@@ -2185,7 +2185,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la licitación para la adquisición de dos distribuidores dinámicos de pulpa a 4,800 msnm, el equipo evaluador aplicó una ponderación de 50% Técnica y 50% Económica. Dentro de la evaluación técnica (600/1000 puntos base), el subcriterio de 'Equipo Mecánico' ponderó un 65%. ¿Qué aspecto operativo justifica la alta rigurosidad en las hojas de datos de esta disciplina técnica?",
@@ -2222,7 +2222,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante la elaboración del borrador contractual para un equipo minero crítico, se definen las garantías y penalidades para proteger la operación. ¿Cuáles de los siguientes componentes deben incluirse obligatoriamente según las buenas prácticas contractuales mineras?",
@@ -2259,7 +2259,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al comparar las propuestas económicas de cuatro fabricantes para un suministro CAPEX, un postor presenta un precio FOB inicial significativamente menor. Sin embargo, al calcular el Costo Total de Pertenencia (TCO), el equipo de compras determina que este proveedor no es el más competitivo. ¿Qué factores integrados en el TCO revelaron esta desventaja?",
@@ -2296,7 +2296,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Para la gestión de insumos de alto consumo (como bolas de molienda o reactivos), la minera busca minimizar su capital de trabajo y asegurar la disponibilidad inmediata (JIT). ¿Qué esquema contractual OPEX permite que la propiedad del inventario sea del proveedor dentro de los almacenes de la mina hasta su consumo real?",
@@ -2333,7 +2333,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la etapa de preselección para una licitación OPEX de gran volumen, la empresa utiliza una solicitud RFI (Request for Information). ¿Cuáles son los objetivos principales y herramientas aplicadas en esta etapa previa?",
@@ -2370,7 +2370,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una licitación de bolas de molienda, se reciben ofertas internacionales en término FOB y ofertas locales 'Puesto en Mina'. Para lograr una comparación homogénea y objetiva, ¿qué procedimiento técnico debe ejecutar el área de compras antes de asignar los puntajes económicos?",
@@ -2407,7 +2407,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la licitación de un insumo altamente peligroso como el cianuro de sodio, la ponderación técnica es de 40% y la económica de 60%. Dentro del 40% técnico, se evalúan aspectos vinculados a la seguridad y apoyo operativo. ¿Cuáles de los siguientes rubros forman parte de esta evaluación técnica especializada?",
@@ -2444,7 +2444,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la evaluación de ofertas para la compra de tanques de lixiviación con agitadores, el equipo de compras detectó que el fabricante de las estructuras de calderería cotizaba los agitadores a un precio desproporcionadamente alto frente al fabricante original del agitador. ¿Qué decisión estratégica de adjudicación se tomó para maximizar el ahorro del proyecto?",
@@ -2481,7 +2481,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la fase final para adjudicar un contrato millonario de reactivos o medios de molienda, la minera condiciona la adjudicación definitiva a los resultados de una prueba industrial en mina. ¿Cuáles de los siguientes procedimientos garantizan la validez y transparencia de esta prueba?",
@@ -2518,7 +2518,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El departamento de logística de una empresa decide implementar un FODA Matemático para priorizar sus iniciativas de mejora. ¿Cuál es la diferencia metodológica fundamental entre este enfoque y la matriz FODA tradicional cualitativa?",
@@ -2555,7 +2555,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la construcción de la Matriz Analítica para la Formación de Estrategias (MAFE), se cruzan las variables internas y externas para definir planes de acción. ¿Cuáles de las siguientes combinaciones metodológicas son correctas según su objetivo estratégico?",
@@ -2592,7 +2592,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Tras completar la matriz MAFE, una gerencia logística obtiene un listado de 15 estrategias formuladas. Al disponer de presupuesto y personal limitado para el año fiscal, ¿cómo determina cuantitativamente cuáles estrategias debe ejecutar en primer lugar?",
@@ -2629,7 +2629,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al categorizar el catálogo de insumos de una operación minera mediante la Matriz de Kraljic, un especialista evalúa dos variables fundamentales para ubicar cada ítem en los cuadrantes correspondientes. ¿Cuáles son estas dos dimensiones?",
@@ -2666,7 +2666,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa minera ha clasificado sus materiales en los cuatro cuadrantes de Kraljic. ¿Cuáles de las siguientes asociaciones entre cuadrante, tipo de producto y estrategia de compra son correctas?",
@@ -2703,7 +2703,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Para implementar de forma efectiva las decisiones derivadas del FODA y Kraljic, la dirección de logística construye un Mapa Estratégico articulado en cuatro perspectivas. ¿Cómo se alinean estas perspectivas desde la base operativa hasta el impacto final?",
@@ -2740,7 +2740,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una empresa minera con un catálogo superior a 18,000 SKUs, el equipo de compras enfrenta dificultades para parametrizar ítem por ítem en la matriz de Kraljic. ¿Qué metodología de simplificación técnica se recomienda aplicar previamente para gestionar eficientemente la matriz?",
@@ -2777,7 +2777,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la exportación marítima de minerales a granel, ¿cuál es la diferencia fundamental entre el término FOB (Free On Board) y el término CIF (Cost, Insurance and Freight) en cuanto a la transferencia del riesgo y la cobertura de costos?",
@@ -2814,7 +2814,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una auditoría a los procesos de exportación de una minera, se detecta que varios Conocimientos de Embarque (Bill of Lading - B/L) omitieron la inclusión del Incoterm acordado. ¿Cuál es la consecuencia operativa y legal directa de esta omisión frente a un siniestro marítimo?",
@@ -2851,7 +2851,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el caso práctico de exportación de concentrados de cobre de la empresa Andes Copper S.A. a China, ¿cuáles de los siguientes instrumentos tributarios y operativos permitieron optimizar los costos y mejorar la eficiencia del proceso exportador?",
@@ -2888,7 +2888,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al realizar la liquidación aduanera de importación ante la SUNAT, ¿cuál es el orden y método correcto de cálculo escalonado para determinar los tributos e impuestos aplicables sobre la mercancía?",
@@ -2925,7 +2925,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un importador traslada un lote de insumos por vía marítima cuyo volumen total es de 12 m³ y su peso real es de 10 toneladas. Sabiendo que la equivalencia estándar marítima es de 1 t = 1 m³ y la tarifa del flete es de 40 USD/t, ¿por qué monto facturará la empresa de transporte y cuál es el criterio aplicado?",
@@ -2962,7 +2962,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un profesional de compras mineras realiza por primera vez la importación de un lote de repuestos especializados. Al llegar la DUA a la aduana, se percata de un costo financiero no previsto derivado del régimen de Percepciones del IGV. ¿Cuál es la característica operativa de este pago anticipado en la primera importación?",
@@ -2999,7 +2999,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes características corresponden a la naturaleza contable, financiera y de evaluación de proyectos en compras de capital (CAPEX) a diferencia de los gastos operativos (OPEX)?",
@@ -3036,7 +3036,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía minera requiere construir una nueva planta de procesamiento y busca una modalidad contractual donde el contratista asuma de manera integral el diseño, adquisición de equipos y construcción bajo el esquema 'llave en mano', transfiriéndole la mayor parte del riesgo de ejecución. ¿Qué modelo contractual se ajusta estrictamente a esta necesidad?",
@@ -3073,7 +3073,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el análisis de licitaciones CAPEX mineras, se identifican diversos errores críticos que generan sobrecostos, paralización de activos o litigios contractuales. ¿Cuáles de los siguientes eventos constituyen fallas de especificación técnica y evaluación en procesos CAPEX documentadas en el sector?",
@@ -3110,7 +3110,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En una licitación CAPEX para la adquisición de distribuidores dinámicos y de pulpa en un proyecto minero ubicado a 4,800 m.s.n.m., ¿cuál es el propósito fundamental del Requerimiento Técnico General (RT) y qué aspectos ambientales críticos regula?",
@@ -3147,7 +3147,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Dentro de la estructura de ponderación técnica para la compra de equipos mecánicos pesados en minería, se suele desglosar el puntaje en diversos subcriterios predefinidos. ¿Cuáles de los siguientes corresponden a subcriterios evaluados dentro del componente técnico?",
@@ -3184,7 +3184,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al calcular el Costo Total de Propiedad (TCO) en la licitación de equipos pesados de capital, ¿qué elementos deben ser cotizados y desglosados explícitamente más allá del precio de venta base de la máquina?",
@@ -3221,7 +3221,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "A diferencia del CAPEX, las licitaciones OPEX abarcan bienes y servicios recurrentes. ¿Qué mecanismo contractual avanzado de almacenamiento y suministro permite a la minera diferir el pago del insumo hasta su consumo efectivo y reducir el costo financiero de mantener inventario en planta?",
@@ -3258,7 +3258,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Antes de enviar las bases comerciales y técnicas de una licitación OPEX de alto valor (Request for Proposal - RFP), la gestión de logística suele implementar una etapa previa de RFI (Request for Information). ¿Cuál es el objetivo principal de este filtro preliminar?",
@@ -3295,7 +3295,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el caso práctico de licitación de bolas de molienda de acero, la empresa adjudicó de manera condicional el contrato sujeto a pruebas industriales en planta. ¿En qué consistió dicho protocolo de validación técnica previo a la adjudicación definitiva?",
@@ -3332,7 +3332,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante la licitación de suministro de cianuro de sodio para la recuperación de oro, la seguridad y el embalaje cobran una relevancia estratégica superior al promedio. ¿Qué alternativas de envasado seguro y modalidades de entrega son aceptadas habitualmente en las bases de este concurso crítico?",
@@ -3369,7 +3369,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el caso práctico de compra de tanques mayores y tanques de destrucción con agitadores, el equipo de compras identificó inconsistencias de precios entre las propuestas recibidas. ¿Qué decisión estratégica de adjudicación se tomó para maximizar la generación de ahorros sin comprometer la calidad técnica?",
@@ -3406,7 +3406,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Cuando se reciben ofertas comerciales expresadas en Incoterm FOB puerto de origen y otras en formato Puesto en Almacén de Mina, ¿qué procedimiento técnico debe realizar el área de logística para homogenizar la comparación en la matriz económica?",
@@ -3443,7 +3443,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "A diferencia del FODA cualitativo tradicional, ¿cuál es el procedimiento paso a paso para determinar los pesos relativos de las fortalezas, debilidades, oportunidades y amenazas dentro de sus respectivos cuadrantes en el FODA matemático?",
@@ -3480,7 +3480,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la Matriz Analítica de Formación de Estrategias (MAFE), la intersección entre las Oportunidades externas y las Debilidades internas genera las denominadas Estrategias DO. ¿Cuál es la orientación táctica de estas estrategias?",
@@ -3517,7 +3517,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una vez formuladas las estrategias en la matriz MAFE (FO, DO, FA, DA), ¿cómo se obtiene el valor cuantitativo ponderado de cada estrategia para estructurar el ranking de ejecución gerencial?",
@@ -3554,7 +3554,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "La Matriz de Kraljic clasifica los bienes y servicios adquiridos por una organización en cuatro cuadrantes estratégicos. ¿Cuáles son los dos ejes fundamentales sobre los que se construye esta matriz y qué variables determinan su posición?",
@@ -3591,7 +3591,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera identifica que el reactivo químico de flotación presenta un alto impacto en los costes de la planta concentradora pero existe una severa restricción de oferta global con únicamente dos fabricantes internacionales homologados. ¿En qué cuadrante de Kraljic se ubica este insumo y cuál es la estrategia de abastecimiento recomendada?",
@@ -3628,7 +3628,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes combinaciones de características y estrategias corresponden correctamente a los cuadrantes Rutinarios y Palancas (Apalancados) en la Matriz de Kraljic?",
@@ -3665,7 +3665,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Tras realizar el análisis FODA del área logística e integrar la clasificación Kraljic, el área construye un Mapa Estratégico enfocado en la mejora continua. ¿Cómo se vinculan las perspectivas del mapa estratégico desde la base operativa hasta el impacto directivo final?",
@@ -3702,7 +3702,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una operación minera remota experimenta frecuentes interrupciones por demoras en la importación de repuestos críticos con tiempos de espera de 10 a 90 días. ¿Qué combinación de sistemas de planificación y estrategia de inventario es la más adecuada para garantizar la continuidad operacional sin generar costos innecesarios en insumos de baja rotación?",
@@ -3739,7 +3739,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la gestión del transporte de cargas sobredimensionadas y materiales peligrosos hacia la faena minera, ¿cuáles de las siguientes medidas operativas mitigan directamente los riesgos de retrasos, pérdidas y sanciones regulatorias?",
@@ -3776,7 +3776,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía minera desea iniciar su transformación hacia Minería 4.0 mediante la integración de gemelos digitales y pilotaje autónomo. De acuerdo con las recomendaciones del sector, ¿cuál debe ser el primer paso metodológico antes de adquirir la plataforma digital única?",
@@ -3813,7 +3813,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la evaluación técnica de métodos de explotación para yacimientos masivos de baja ley a gran profundidad, como el caso de División El Teniente, ¿qué método destaca por su eficiencia económica al aprovechar la gravedad, aunque exige un estricto control de subsidencia y riesgos hidráulicos?",
@@ -3850,7 +3850,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante la operación bajo el método Block Caving en minería subterránea profunda, ¿cuáles de las siguientes situaciones representan riesgos críticos de operación y qué medidas preventivas se aplican?",
@@ -3887,7 +3887,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el circuito de beneficio de una planta concentradora, el proceso de flotación genera pulpa con concentrado de mineral y colas (relaves). ¿Qué desempeño estándar se espera en las etapas finales de espesado y filtrado respecto a la humedad del concentrado y la recuperación de agua?",
@@ -3924,7 +3924,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un Gerente de Logística Minera debe decidir la arquitectura tecnológica para el nuevo WMS de una faena ubicada en una zona de difícil acceso. ¿Cuál es el argumento estratégico clave para optar por un WMS en la nube (SaaS) frente a un WMS independiente (On-Premise)?",
@@ -3961,7 +3961,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para optimizar la preparación de pedidos y reducir las distancias de recorrido dentro del almacén central de una mina, ¿qué principios de localización física de materiales dictan las mejores prácticas logísticas?",
@@ -3998,7 +3998,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el control de despacho de concentrados o minerales valiosos a la salida de la mina, se realiza un pesaje de la unidad de transporte antes y después del carguío. Si el sistema detecta una discrepancia significativa entre el peso neto medido en balanza y el peso teórico calculado por el WMS, ¿qué riesgo operativo o ilícito se pone en evidencia?",
@@ -4035,7 +4035,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la resolución de un caso práctico de distribución espacial de almacén minero, un equipo propone almacenar en el mismo sector techado los cajones de dinamita junto a los tanques de combustible diésel para optimizar el área construida. Desde el punto de vista normativo y de seguridad, ¿cómo se califica esta decisión?",
@@ -4072,7 +4072,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la evaluación de tecnologías avanzadas para la preparación de pedidos y toma de inventarios en depósitos mineros, ¿cuáles son los beneficios operativos demostrados de la integración de Pick-to-Voice y el uso de Drones?",
@@ -4109,7 +4109,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al aplicar la Inteligencia Artificial (IA) integrada al WMS para la gestión dinámica de un almacén en mina, ¿cuál es la función principal del algoritmo en la distribución de las ubicaciones físicas?",
@@ -4146,7 +4146,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco regulatorio peruano para insumos químicos fiscalizados (IQVF), una empresa minera maneja reactivos como ácido sulfúrico y cianuro de sodio. ¿Cuáles son las dos normativas y entidades que articulan el control para evitar el desvío hacia el narcotráfico y la minería ilegal?",
@@ -4183,7 +4183,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una compañía minera requiere construir y operar un nuevo polvorín principal en su unidad productiva. De acuerdo con los procedimientos administrativos de la SUCAMEC (TUPA), ¿cuáles son requisitos obligatorios para obtener la autorización correspondiente?",
@@ -4220,7 +4220,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Ante un accidente durante el transporte terrestre de cianuro en ruta, las cuadrillas de emergencia y el personal de logística minera deben actuar como primeros respondedores. Según la Guía de Respuesta en Caso de Emergencia (Libro Naranja) y la norma NFPA 704, ¿cuál es el procedimiento inicial correcto?",
@@ -4257,7 +4257,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la recepción de una importación de reactivos químicos fiscalizados (IQF) en el almacén de la mina, se detecta un 'sobrante' (físico recibido mayor a lo declarado en la DAM). De acuerdo con el procedimiento aduanero e IQVF en Perú, ¿cuál es la acción legal y operativa inmediata que debe ejecutar el titular minero?",
@@ -4294,7 +4294,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En una auditoría de gestión logística integral basada en estándares trinorma (ISO 9001, ISO 14001 e ISO 45001), ¿cuáles de los siguientes focos de verificación responden correctamente al ámbito de aplicación de cada norma?",
@@ -4331,7 +4331,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una unidad minera instala un tanque de almacenamiento de diésel de 10,000 galones para sus camiones de acarreo. Según el Decreto Supremo 052-93 y la supervisión de OSINERGMIN, ¿cuál es la exigencia constructiva obligatoria para la contención secundaria en caso de ruptura del tanque?",
@@ -4368,7 +4368,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la evaluación de riesgos operacionales del almacén de repuestos, se determina que el evento 'caída del sistema ERP/WMS durante la recepción' tiene una Gravedad de nivel 4 (Significativa) y una Probabilidad de nivel 4 (Probable). Aplicando la matriz estándar de evaluación de 5 x 5 (Impacto = Gravedad x Probabilidad), ¿en qué categoría queda clasificado este riesgo y qué nivel de respuesta exige?",
@@ -4405,7 +4405,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "A diferencia del FODA tradicional cualitativo, ¿cuál es el avance metodológico sustancial que ofrece la técnica del 'FODA Matemático' en la toma de decisiones estratégicas de la cadena de suministro?",
@@ -4442,7 +4442,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la fase de elaboración de la Matriz Analítica de Formación de Estrategias (MAFE) dentro del FODA Matemático, ¿cuáles son las reglas metodológicas esenciales para la formulación de líneas de acción?",
@@ -4479,7 +4479,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la construcción de una matriz simétrica de comparación pareada para determinar la ponderación relativa de 5 Fortalezas (F1 a F5), se excluye la diagonal principal (comparación del factor consigo mismo). ¿Cuántas comparaciones pareadas individuales se deben ejecutar en total en la mitad superior de la matriz?",
@@ -4516,7 +4516,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un comprador minero evalúa tres proveedores de pintura industrial para cubrir 18,500 m² de estructuras. El Proveedor A cobra 45 por galón (rendimiento 30 m²/galón, duración 2 años, avance del pintor 15 m²/h). La mano de obra cuesta 12/h. ¿Cuál es el Costo Total Anualizado de esta opción considerando el redondeo de galones al entero superior?",
@@ -4553,7 +4553,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al estructurar la estrategia de abastecimiento minero utilizando la Matriz de Kraljic, ¿cuáles de las siguientes combinaciones entre la categoría de insumos y la estrategia de compras son correctas?",
@@ -4590,7 +4590,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el análisis de Costo Total de Pertenencia (TCO) para la selección de un molino de molienda primaria a 5 años, el Proveedor X ofrece un precio de compra de 1.2 millones con una probabilidad anual de falla catastrófica del 15% (costo por parada operacional y reparación estimado en 800,000 por evento). El Proveedor Y ofrece el mismo equipo a $1.5 millones pero con una probabilidad de falla del 2%. ¿Cómo influye el riesgo probabilístico de parada en la decisión final de TCO?",
@@ -4627,7 +4627,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la función principal del sistema DRP (Distribution Resource Planning) dentro de la planificación logística minera?",
@@ -4664,7 +4664,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Por qué se recomienda separar técnicamente el sistema de gestión de activos fijos respecto al ERP comercial o de inventarios en una operación minera?",
@@ -4701,7 +4701,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto del transporte logístico minero, ¿qué requerimiento operacional regulado exige el traslado terrestre de cargas sobredimensionadas e insumos peligrosos?",
@@ -4738,7 +4738,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En operaciones subterráneas por *Block Caving* como la División El Teniente, ¿cuál es uno de los riesgos operacionales más críticos derivados de un exceso de humedad en el mineral quebrado?",
@@ -4775,7 +4775,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la secuencia de procesos metalúrgicos utilizada para obtener cátodos de cobre de alta pureza (99.99%) a partir de mineral de lixiviación?",
@@ -4812,7 +4812,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué normas internacionales de información financiera y contables regulan de forma específica el reconocimiento, tratamiento y cierre de activos en la industria minera?",
@@ -4849,7 +4849,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué ventaja estratégica clave ofrece un WMS alojado en la nube (SaaS) frente a una instalación *On-premise* en operaciones mineras remotas?",
@@ -4886,7 +4886,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la diferencia operativa fundamental entre el uso de códigos de barras y la tecnología RFID en el control de almacenes?",
@@ -4923,7 +4923,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el control de despachos e integración de transporte, ¿cuál es la razón técnica de realizar el pesaje del camión antes y después del proceso de carga?",
@@ -4960,7 +4960,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la diferencia conceptual entre 'automatización' e 'informatización' en el ámbito de la gestión de almacenes?",
@@ -4997,7 +4997,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Desde la perspectiva normativa y de diseño de almacén, ¿cuál es la regla fundamental respecto al almacenamiento de materiales peligrosos como explosivos y reactivos?",
@@ -5034,7 +5034,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes tecnologías de la Industria 4.0 están orientadas directamente a asistir al operario durante la preparación de pedidos y conteos en almacén?",
@@ -5071,7 +5071,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco del control de Insumos Químicos y Bienes Fiscalizados (IQVF), ¿cuál es la obligación periódica que los titulares mineros deben cumplir ante la SUNAT?",
@@ -5108,7 +5108,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el procedimiento administrativo ante SUCAMEC para autorizar un polvorín (TUPA Ítem 20), ¿cuál es un requisito técnico-dimensional de la infraestructura?",
@@ -5145,7 +5145,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Según el Reglamento de Seguridad y Salud Ocupacional en Minería (DS 024-2016-EM), ¿cuál es la herramienta clave para la identificación continua de peligros en el lugar de trabajo?",
@@ -5182,7 +5182,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Ante la recepción de Insumos Químicos Fiscalizados con un SOBRANTE respecto a la Declaración Aduanera de Mercancías, ¿qué procedimiento inmediato exige la norma aduanera/SUNAT?",
@@ -5219,7 +5219,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Según la regulación de OSINERGMIN y el DS 052-93-EM, ¿cuál es una condición de seguridad obligatoria para tanques de almacenamiento de combustible en faenas mineras?",
@@ -5256,7 +5256,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes metodologías son utilizadas en las auditorías operativas para determinar la causa raíz de incidencias en la logística minera?",
@@ -5293,7 +5293,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la metodología del FODA Matemático, ¿cómo se obtiene la ponderación relativa de cada factor dentro de su mismo grupo en la Etapa 2?",
@@ -5330,7 +5330,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al construir la Matriz Analítica de Formación de Estrategias (MAFE) en el FODA Matemático, ¿qué regla metodológica evita dejar variables aisladas?",
@@ -5367,7 +5367,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cómo se calcula el puntaje ponderado individual de un factor en la Etapa 4 del FODA Matemático?",
@@ -5404,7 +5404,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar proveedores mediante el enfoque de Costo Total de Pertenencia (TCO), ¿qué factores deben integrar el análisis además de la factura de compra inicial?",
@@ -5441,7 +5441,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para mitigar los riesgos de desabastecimiento en minas remotas, ¿cuáles de las siguientes soluciones logísticas son aplicadas con éxito?",
@@ -5478,7 +5478,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de la segmentación de la Matriz de Kraljic, ¿cuál es la estrategia recomendada para insumos clasificados como 'Cuello de Botella'?",
@@ -5515,7 +5515,7 @@
   {
     "codigo_diplomado": "DIP-15",
     "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar la compra de un equipo crítico como un molino, ¿por qué un modelo con un precio inicial más bajo puede resultar en un TCO significativamente mayor?",

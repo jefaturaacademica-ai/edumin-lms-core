@@ -2,7 +2,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una operación minera de cobre escala sus resultados de planta piloto utilizando compositos globales de perforación que mezclaron todas las alteraciónes del yacimiento. Al ingresar al Bloque B (zona potásica con presencia de cobre nativo granular y arcillas), la recuperación en flotación cae un 18% con respecto al modelo. ¿Cuál fue el error de caracterización geometalúrgica cometido?",
@@ -39,7 +39,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un proyecto de lixiviación de minerales duros de cobre y oro, la gerencia evalúa la incorporación de una chancadora de rodillos de alta presión (HPGR) previa a las pilas. ¿Cuál es el mecanismo físico principal por el cual el HPGR incrementa la recuperación y reduce el consumo energético posterior?",
@@ -76,7 +76,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un ensayo cinético de laboratorio en un mineral complejo revela que la bornita flota a una velocidad muy alta (90% de recuperación en 4 minutos), mientras que la calcopirita presenta una cinética lenta (16 minutos) debido a interferencias por sales solubles. ¿Qué ajuste de diseño operacional se justifica según estos datos?",
@@ -113,7 +113,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una mina a tajo abierto se reportan cinco eventos de 'tiro cortado' en un año y un atasco continuo en la chancadora primaria por bolones de roca extremadamente dura (250 MPa). La investigación revela que se utiliza un factor de carga de explosivo uniforme en toda la malla. ¿Cuál es la solución geometalúrgica correcta?",
@@ -150,7 +150,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una concentradora sufre el desgaste acelerado de los forros de su molino SAG cada 2.5 meses (cuando lo programado eran 7 meses). El análisis mineralógico indica la presencia recurrente de cuarzo relicto con un índice de trabajo de 14.5 kWh/t y aristas afiladas. ¿Qué acción conjunta deben tomar geología, mina y planta?",
@@ -187,7 +187,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el estudio de factibilidad para el depósito de relaves de un proyecto de 100,000 t/día, la caracterización mineralógica revela un alto contenido de arcillas esmectíticas y sericita en la UGM predominante. ¿Cuál es el principal riesgo operativo en el depósito y la medida de ingeniería de relaves requerida?",
@@ -224,7 +224,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una planta concentradora ha migrado su sala de control a una ciudad distante (1,000 km) apoyada en un sistema experto con IA que ajusta agua, tonelaje y densidad de pulpa. Si de manera imprevista ingresa al circuito un frente de mineral suave pero cargado de talco y arcillas solubles no parametrizadas en el modelo inicial, ¿cuál es la vulnerabilidad operacional inmediata?",
@@ -261,7 +261,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo geometalúrgico necesita estimar parámetros cinéticos MFT (R_{\\max}, K, α) para 1,000 bloques en su modelo, pero por restricciones presupuestarias solo realizó pruebas de laboratorio en 300 muestras. Dado que la recuperación al mezclar bloques es una variable NO aditiva, ¿cuál es el procedimiento metodológico correcto para poblar el modelo de bloques?",
@@ -298,7 +298,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el caso real de implementación de Machine Learning en la concentradora de Antamina para incrementar la producción equivalente de cobre, ¿cuáles fueron factores operativos y de gobernanza clave que garantizaron el éxito del proyecto?",
@@ -335,7 +335,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Frente a un escenario prolongado de caída en el precio internacional del cobre, una minera necesita mantener su generación de flujo de caja sin poder aumentar la capacidad física de su molino SAG. ¿Cómo ayuda la estrategia de 'Conminución en Mina' (Mind-to-Mill) a cumplir este objetivo?",
@@ -372,7 +372,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un análisis comparativo entre un circuito de molienda SAG y un circuito con prensas de rodillos de alta presión (HPGR), se mide la elasticidad del tonelaje respecto al aumento del factor de potencia de voladura (10% de incremento en explosivos). ¿Cómo difiere la respuesta entre ambas tecnologías?",
@@ -409,7 +409,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Históricamente en la operación Tintaya, la implementación de la metodología LMAR y el rediseño de equipos de trabajo interdisciplinarios lograron un incremento del 30% en la producción sin realizar inversiones significativas en CapEx. ¿Cuál fue el factor clave dentro de la organización que permitió este resultado?",
@@ -446,7 +446,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un gestor de compras evalúa propuestas para el suministro de cal viva (CaO) para una planta concentradora aislada a 4,500 m s.n.m. El Proveedor A presenta el precio más bajo por tonelada FOB en puerto. El Proveedor B ofrece una tarifa más alta pues incluye transporte especializado hasta la mina, garantía de porcentaje de CaO útil (>85%), tiempo de apagado rápido y logística de stock de reserva local. Aplicando el Criterio del Costo Total de Propiedad (TCO), ¿por qué la oferta de B es superior?",
@@ -483,7 +483,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al gestionar un almacén minero que custodia combustibles, explosivos (emulsión encartuchada) y repuestos mecánicos de alta criticidad, ¿qué principios y controles de inventario deben aplicarse obligatoriamente para mitigar riesgos financieros y de seguridad?",
@@ -520,7 +520,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el proyecto de integración de la empresa comunal 'Transportes Chiloroya' para el acarreo de concentrado de cobre (449 km hacia el puerto de Matarani), la empresa minera aplicó la metáfora organizativa del 'triángulo' (cocina, cocineros y receta). ¿Qué garantizó esta estructura durante casi dos años sin accidentes graves?",
@@ -557,7 +557,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Utilizando la Matriz de Compras de Kraljic, una minera necesita definir estrategias de abastecimiento para dos bienes: tarjetas electrónicas propietarias de un molino SAG (un solo proveedor internacional) y Diésel 2 para la flota de camiones (múltiples distribuidores locales). ¿Cómo se clasifican ambos bienes y qué estrategia aplica a cada uno?",
@@ -594,7 +594,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una planta concentradora sufre constantes gastos extraordinarios y quiebres de stock en reactivos de flotación debido al 'Efecto Látigo' (Bullwhip Effect) en su cadena de suministro. ¿Cuál es el origen de este fenómeno y la mejor práctica para mitigarlo?",
@@ -631,7 +631,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al estructurar la Matriz de Riesgos (5 × 5) para el proceso logístico de exportación de concentrados (desde la salida de planta hasta el embarque en puerto), el evento 'Bloqueo prolongado de vías por conflictos sociales' obtiene una valoración de Gravedad = 4 (Importante) y Probabilidad = 4 (Probable), resultando un Impacto de 16 (Nivel Alto - Zona Roja). ¿Qué protocolo exige la metodología?",
@@ -668,7 +668,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la pirámide de automatización de una operación minera 4.0, los sensores de vibración y temperatura de un chancador primario detectan una anomalía estructural en el rodaje principal. ¿Qué capa del sistema procesa estos datos masivos (Big Data) e IA para generar automáticamente la orden de trabajo de mantenimiento y la solicitud de repuestos?",
@@ -705,7 +705,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una mina a tajo abierto implementa camiones autónomos (AHS) y crea un 'Gemelo Digital' (Digital Twin) de la ruta de acarreo. Durante la operación, se evalúa modificar la pendiente de una rampa principal. ¿Qué beneficio directo ofrece el Gemelo Digital en la toma de decisiones?",
@@ -742,7 +742,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión logística de transporte de suministros mineros, la aplicación de algoritmos de Machine Learning y 'Predictive Analytics' permite resolver el problema recurrente de los 'viajes en vacío' (retornos sin carga) de las flotas de transporte. ¿Cómo logra el sistema optimizar esta variable?",
@@ -779,7 +779,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el caso práctico de la Minera Malaventura, el equipo analizó la clasificación de 'Dinamita y Explosivos' e 'Insumos de Combustible'. ¿Por qué la dinamita se ubica en el cuadrante Estratégico mientras que el combustible se clasifica normalmente como Palanca?",
@@ -816,7 +816,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un comité de evaluación de compras analiza tres propuestas para la adquisición de un Molino SAG utilizando el modelo de Costo Total de Pertenencia (CTP) a 5 años. El Proveedor 2 presenta el menor costo inicial (Inversión + Mantenimiento estándar). Sin embargo, al incorporar las tasas de probabilidad de falla, el costo por parada (80,000/evento) y el costo de overhaul (80% del valor del equipo), el Proveedor 3 resulta ser la opción más económica. ¿Por qué se produce este cambio?",
@@ -853,7 +853,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la evaluación CTP para la compra de elementos de sostenimiento (Split Sets), el Proveedor A cotiza \\10/unidad entregado en almacén mina con una tasa de falla por lote del 5%. El Proveedor C cotiza \\12/unidad, pero garantiza controles de rendimiento, capacitación técnica continua y una tasa de falla de solo el 1%. ¿Cómo impacta la tasa de fallas en el costo total del contrato anual?",
@@ -890,7 +890,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una gerencia de logística minera establece como meta estratégica colocar hasta el 80% de sus SKUs repetitivos bajo contratos marco estandarizados (máster) con proveedores homologados. ¿Cuál es el principal beneficio operacional y comercial de esta política?",
@@ -927,7 +927,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la consecuencia operativa principal de utilizar un compósito único global de todas las perforaciones para realizar pruebas piloto metalúrgicas durante la fase de diseño de una planta concentradora?",
@@ -964,7 +964,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En los circuitos de preparación y molienda, ¿cuál es el mecanismo físico principal por el cual el equipo HPGR (High Pressure Grinding Rolls) optimiza la eficiencia energética y la recuperación en etapas posteriores?",
@@ -1001,7 +1001,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué parámetros y mediciones cinéticas o físicas resultan fundamentales para transformar una unidad geológica tradicional en una Unidad Geometalúrgica (UGM)?",
@@ -1038,7 +1038,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿En qué consiste la técnica de 'chancado químico' aplicada dentro de la estrategia de integración entre mina y concentradora?",
@@ -1075,7 +1075,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el proceso de flotación de sulfuros, ¿cuál es el efecto negativo principal de una concentración elevada no controlada de sales solubles en la pulpa?",
@@ -1112,7 +1112,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes razones justifican la necesidad de considerar la zonificación (óxidos, mixtos y sulfuros) desde las etapas tempranas del diseño de un proyecto minero?",
@@ -1149,7 +1149,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la automatización industrial en plantas concentradoras, ¿qué hito indica la transición de un control automático tradicional por PLC a un sistema con Inteligencia Artificial operativa?",
@@ -1186,7 +1186,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la estimación de parámetros cinéticos de flotación (MFT) mediante aprendizaje automático para alimentar simuladores como IGS, ¿cuáles de los siguientes pasos metodológicos son indispensables?",
@@ -1223,7 +1223,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué consecuencia negativa se desencadena en la operación cuando la alta dirección decide alterar arbitrariamente el plan de minado para 'descremar' el yacimiento extrayendo zonas no planificadas de alta ley?",
@@ -1260,7 +1260,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el enfoque integrador 'de la mina a la planta' (*Mind to Mill*), ¿cuál es la razón económica principal para incrementar la energía aplicada en la voladura dentro del tajo?",
@@ -1297,7 +1297,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes representan ventajas técnicas operativas comprobadas de la tecnología de detonadores electrónicos frente a los sistemas pirotécnicos tradicionales?",
@@ -1334,7 +1334,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al investigar una recurrencia imprevista de 'tiros cortados' en una operación a tajo abierto, ¿cuál fue la causa técnica fundamental detectada mediante el análisis geometalúrgico?",
@@ -1371,7 +1371,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión de adquisiciones y contratos mineros, ¿por qué la metodología del Costo Total de Propiedad (TCO) supera al criterio del menor precio de compra inicial?",
@@ -1408,7 +1408,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el caso de éxito de la empresa comunal de transportes Chiloroya para el traslado de concentrado mineral, ¿cuáles fueron los factores estratégicos que aseguraron el cumplimiento de los estándares operativos y de seguridad?",
@@ -1445,7 +1445,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la norma administrativa y contable aplicable a los bienes físicos adquiridos de forma excepcional a través del fondo de caja chica en una mina?",
@@ -1482,7 +1482,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cómo se define el 'efecto látigo' (*bullwhip effect*) dentro de la cadena de suministro minera y cuál es su causa originaria?",
@@ -1519,7 +1519,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la estructuración de una Matriz de Riesgos 5x5 para el análisis de flujos logísticos o de procesos mineros, ¿cuáles de las siguientes pautas metodológicas son correctas?",
@@ -1556,7 +1556,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de la gestión de almacenes e inventarios mediante la metodología de clasificación ABC, ¿qué patrón distingue a los repuestos e insumos clasificados dentro de la Zona A?",
@@ -1593,7 +1593,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la Pirámide de Automatización de una operación minera 4.0, ¿cuál es la función de la capa MES (*Manufacturing Execution System*) en relación con los niveles SCADA y ERP?",
@@ -1630,7 +1630,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de los siguientes constituyen beneficios directos observados al implementar flotas de acarreo con camiones 100% autónomos en grandes operaciones a tajo abierto?",
@@ -1667,7 +1667,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la utilidad técnica principal de desarrollar un Gemelo Digital (*Digital Twin*) en el contexto del procesamiento de minerales en planta?",
@@ -1704,7 +1704,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la Matriz de Clasificación de Compras de Kraljic, ¿cuáles son las características y la estrategia recomendada para los insumos ubicados en el cuadrante de 'Cuellos de Botella'?",
@@ -1741,7 +1741,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para los insumos y servicios clasificados dentro del cuadrante 'Estratégicos' en la gestión de compras, ¿cuáles son las prácticas de abastecimiento más recomendadas?",
@@ -1778,7 +1778,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar licitaciones para adquirir un molino SAG mediante el modelo de Costo Total de Pertenencia (CTP), un proveedor presenta el precio de compra inicial más barato, pero es descartado frente a otra opción más costosa en la compra. ¿Cuál es la razón técnica que valida esta decisión?",
@@ -1815,7 +1815,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al aplicar la evaluación CTP (Costo Total de Pertenencia) en la licitación anual para el suministro de elementos de sostenimiento subterráneo (Split Sets), ¿qué componentes de costo deben incorporarse obligatoriamente más allá del precio unitario del producto puesto en mina?",
@@ -1852,7 +1852,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera proyecta instalar una planta de procesamiento de minerales de mediana escala y un sistema de tratamiento de agua potable en su concesión. De acuerdo con el marco del Sistema Nacional de Evaluación de Impacto Ambiental y el Artículo 36 de su reglamento, ¿cuál es la categoría ambiental que le corresponde a este proyecto?",
@@ -1889,7 +1889,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el marco de la ejecución de monitoreos ambientales participativos para evaluar la calidad del agua y del aire en el área de influencia de una operación minera, ¿qué acciones metodológicas y operativas aseguran la credibilidad de los datos frente a la población local?",
@@ -1926,7 +1926,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la etapa operativa de un proyecto minero a tajo abierto, el tránsito constante de camiones pesados genera descontento por dispersión de material particulado. Al analizar la delimitación del área de influencia a raíz de las crecientes demandas comunales, ¿cómo debe proceder la gestión ambiental y social según lo aprendido en casos como Las Bambas?",
@@ -1963,7 +1963,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de gestión ambiental se prepara para recibir una fiscalización inopinada por parte de OEFA y ANA sobre la calidad de los efluentes de su planta de beneficio. ¿Qué plataforma legal oficial del Estado peruano se recomienda utilizar para verificar de manera actualizada los ECA y los Límites Máximos Permisibles (LMP) aplicables?",
@@ -2000,7 +2000,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al estructurar el Plan de Cierre de Minas para una unidad minera en explotación con presencia de minerales sulfurados, ¿cuáles de los siguientes compromisos técnicos y legales deben ser incorporados obligatoriamente para garantizar la estabilidad poscierre?",
@@ -2037,7 +2037,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una concesión minera formal donde coexisten grupos de mineros artesanales e informales que explotan vetas de alta ley con métodos rudimentarios, ¿qué estrategia de integración operacional recomendada comercialmente permite formalizar la cadena productiva y reducir la conflictividad local?",
@@ -2074,7 +2074,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al elaborar una Matriz de Riesgos Sociales para un proyecto minero, el equipo detecta dos situaciones: A) El bloqueo puntual de un acceso secundario por una familia reclamos específicos durante 2 horas; B) Un deslizamiento de talud por lluvias intensas cerca al campamento comunal. ¿Cómo deben catalogarse operacionalmente según la relación entre probabilidad y consecuencia?",
@@ -2111,7 +2111,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una compañía minera requiere negociar los derechos de servidumbre y uso de tierras sobre un terreno comunal donde simultáneamente tres familias presentan escrituras de propiedad privada ancestral. ¿Qué principios legales y procedimentales deben regir el proceso de negociación?",
@@ -2148,7 +2148,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un distrito minero de los Andes peruanos, el gobierno local ha acumulado fondos significativos por Canon Minero pero solo logra ejecutar el 35% de su presupuesto anual, generando protestas comunales contra la empresa por la persistente falta de obras públicas. ¿Qué enfoque estratégico de responsabilidad social responde de manera sostenible a esta problemática?",
@@ -2185,7 +2185,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un conflicto en fase de crisis, con bloqueos de vías e intentos de toma de instalaciones, la alta gerencia debe designar al vocero de la empresa para participar en una mesa de trabajo convocada de emergencia. ¿Qué perfil y atributos organizacionales debe reunir la persona seleccionada?",
@@ -2222,7 +2222,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Ante una protesta comunal prolongada que mantiene paralizado el transporte de concentrados por más de 30 días, el Comité de Crisis de la minera identifica que la logística de los manifestantes está sostenida por proveedores locales de alimentos y transporte. ¿Qué acciones de gestión de conflictos se deben activar en esta fase?",
@@ -2259,7 +2259,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de un conflicto socioambiental activo, una serie de publicaciones falsas (fake news) en redes sociales acusa a la mina de haber provocado la muerte de ganado por derrame de cianuro en la cabecera de cuenca. ¿Qué medida de comunicación de crisis debe implementarse para mitigar el daño reputacional?",
@@ -2296,7 +2296,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la zona minera de Pataz, las operaciones de una empresa formal sufren constantes bloqueos de vías y ataques por parte de bandas delictivas asociadas al robo de mineral. Al verse sobrepasada la capacidad de respuesta policial estándar, la empresa adopta una estrategia no convencional de seguridad patrimonial. ¿En qué consistió esta medida basada en el uso del capital social?",
@@ -2333,7 +2333,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el marco de la gestión de la Seguridad y Salud Ocupacional (DS 024-2016-EM y sus modificatorias), ¿cuáles de los siguientes componentes son de aplicación obligatoria para la prevención de riesgos operativos críticos en minería subterránea?",
@@ -2370,7 +2370,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el control de ingreso en la garita principal de una unidad operativa, un funcionario de alto nivel se niega a someterse a la prueba de alcotest argumentando urgencia en la supervisión. ¿Qué procedimiento debe aplicar el personal de seguridad en cumplimiento de las políticas de tolerancia cero?",
@@ -2407,7 +2407,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de mantenimiento se dispone a realizar la reparación interna de un tanque de almacenamiento de reactivos químicos. ¿Cuáles son los controles críticos indispensables que deben verificarse antes de emitir la autorización de trabajo de alto riesgo?",
@@ -2444,7 +2444,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Ante el colapso imprevisto de una presa de agua no operativa fuera de la concesión debido a precipitaciones extraordinarias, la empresa activa su estructura de respuesta. ¿Cómo se diferencian las fases operacional y post-evento según la gestión de emergencias?",
@@ -2481,7 +2481,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una inspección geotécnica a las labores de minado subterráneo, el fiscalizador observa falta de sostenimiento en el techo de una galería con presencia de roca fracturada. ¿Qué tipo de programa de supervisión especializada es el responsable directo de auditar y prevenir esta contingencia?",
@@ -2518,7 +2518,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un proyecto minero en fase de construcción asumió formalmente en su EIA el compromiso de contratar un 50% de mano de obra local. Sin embargo, al iniciar las obras, la auditoría del área social revela que en la comunidad solo existe un 20% de pobladores calificados para los puestos requeridos, manteniendo el KPI en color rojo persistente. ¿Cómo debe corregirse legal y operativamente esta situación?",
@@ -2555,7 +2555,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Con el fin de incrementar la atracción y retención del talento humano en un campamento minero ubicado sobre los 4,000 m.s.n.m. con régimen atípico 20x10, ¿cuáles de las siguientes medidas de Gestión del Talento impactan directamente en la reducción de la tasa de rotación voluntaria?",
@@ -2592,7 +2592,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un operador de grúa en la planta concentradora muestra cambios drásticos en su conducta, distracción severa e irritabilidad durante las charlas de cinco minutos, tras haber sufrido la pérdida repentina de un familiar directo. ¿Cómo debe proceder el área de SOMA y Recursos Humanos aplicando la vigilancia psicosocial?",
@@ -2629,7 +2629,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una visita de inspección de un dirigente sindical al centro Médico Ocupacional de la mina, este exige la entrega de las copias completas de las historias clínicas y exámenes de ingreso de diez trabajadores de su gremio. ¿Qué respuesta legal debe brindar el médico responsable del área de Salud Ocupacional?",
@@ -2666,7 +2666,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa minera Júnior desea iniciar actividades de exploración diamantina y necesita determinar la categoría del instrumento ambiental requerido según el Reglamento de Protección Ambiental para las Actividades de Exploración Minera. ¿Cuáles de los siguientes umbrales regulatorios determinan el tipo de estudio correspondiente?",
@@ -2703,7 +2703,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la etapa final del ciclo de vida de una mina, la empresa enfrenta la etapa de cierre definitivo y surgen reclamos de la comunidad sobre actas de compromisos firmadas hace más de 15 años durante las primeras Asambleas de instalación. ¿Qué práctica de gestión documental y legal previene la reactivación de estos conflictos históricos?",
@@ -2740,7 +2740,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante un proceso de fiscalización conjunta en campo por parte de SUNAFIL y OEFA a una mina de mediana escala, la autoridad detecta infracciones vinculadas al incumplimiento de compromisos ambientales y faltas graves a la seguridad de los trabajadores. ¿Cuáles son las medidas administrativas y sanciones a las que se expone el titular minero según la gravedad de los hallazgos?",
@@ -2777,7 +2777,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con el Reglamento del Sistema Nacional de Evaluación de Impacto Ambiental (SEIA), ¿qué categoría de estudio ambiental corresponde a un proyecto minero o de inversión previsto para generar impactos ambientales negativos moderados?",
@@ -2814,7 +2814,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante la fase de caracterización de la línea base y la formulación del plan de monitoreo ambiental en operaciones mineras, ¿cuáles de los siguientes componentes deben ser objeto de evaluación técnica continua?",
@@ -2851,7 +2851,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la evaluación de impacto ambiental para la descarga de efluentes, ¿cuál es el propósito técnico central de aplicar modelos de dispersión de Demanda Bioquímica de Oxígeno (DBO) y oxígeno disuelto en cuerpos receptores?",
@@ -2888,7 +2888,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Respecto a la reglamentación del Plan de Cierre de Minas, ¿cuál es el objetivo fundamental de este instrumento de gestión ambiental y el alcance de su fase de postcierre?",
@@ -2925,7 +2925,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Conforme a la normativa ambiental del sector minero, ¿cuáles de los siguientes Instrumentos de Gestión Ambiental (IGAs) son exigibles según las fases de desarrollo del proyecto?",
@@ -2962,7 +2962,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la gestión normativa sectorial en el Perú, ¿cuál es la utilidad práctica de la plataforma digital conocida como SPIG (SPIJ) para los profesionales del ámbito minero?",
@@ -2999,7 +2999,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al estructurar una Matriz de Riesgos Sociales para una operación minera, ¿de qué manera se obtiene el valor cuantitativo o nivel de riesgo asociado a un posible evento de conflicto?",
@@ -3036,7 +3036,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Bajo el enfoque de gestión moderna en minería, ¿qué principios y características diferencian el concepto de 'Valor Compartido' respecto de la beneficencia tradicional o asistencialismo?",
@@ -3073,7 +3073,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco del relacionamiento con comunidades campesinas, ¿cuál es el rol y el valor jerárquico de la Asamblea Comunal en la aprobación de convenios sobre el uso de tierras de propiedad comunal?",
@@ -3110,7 +3110,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Según el monitoreo sistemático de conflictos que efectúa la Defensoría del Pueblo en el Perú, ¿qué tipo o categoría de conflicto representa la gran mayoría de los casos registrados a nivel nacional?",
@@ -3147,7 +3147,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el análisis procedimental del ciclo de vida de un conflicto socioambiental, ¿cuáles de las siguientes fases corresponden a la dinámica de su desarrollo operativo?",
@@ -3184,7 +3184,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la sociología de conflictos en minería, ¿a qué se refiere el concepto de 'vasos comunicantes' utilizado para analizar las dinámicas de protesta comunitaria?",
@@ -3221,7 +3221,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la norma reglamentaria sectorial vigente en el Perú que establece los estándares, obligaciones y procedimientos específicos de Seguridad y Salud Ocupacional en Minería?",
@@ -3258,7 +3258,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la gestión preventiva de la seguridad minera, ¿cuáles son los tres componentes metodológicos secuenciales indispensables que integran la herramienta IPERC (HIPERCE)?",
@@ -3295,7 +3295,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco del derecho laboral y la prevención de riesgos en minería, ¿en qué consiste la facultad denominada 'Derecho de Negativa al Trabajo'?",
@@ -3332,7 +3332,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de la clasificación operativa prevista en el Plan de Respuesta a Emergencias de una mina, ¿cómo se define una contingencia clasificada como 'Nivel Bajo'?",
@@ -3369,7 +3369,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para desarrollar trabajos en 'Espacios Confinados' dentro de una unidad minera, ¿cuáles de los siguientes controles de seguridad resultan de obligatorio cumplimiento?",
@@ -3406,7 +3406,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la diferencia sustancial de enfoque temporal y operativo entre un Plan de Emergencia y un Plan de Contingencia frente a un desborde socioambiental?",
@@ -3443,7 +3443,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Si una empresa minera estableció en su EIA la meta de contratar el 50% de mano de obra local, pero en la práctica se comprueba que no existe suficiente personal calificado en el área, ¿cuál es el procedimiento formal de gestión aconsejado?",
@@ -3480,7 +3480,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el análisis de la gestión de recursos humanos en la minería, ¿cuáles de los siguientes factores socio-laborales influyen de manera crítica en los índices de rotación y deserción en campamentos remotos?",
@@ -3517,7 +3517,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿En qué consiste la orientación estratégica denominada 'Minería Verde' y qué demanda de la gestión del talento humano?",
@@ -3554,7 +3554,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con el marco de regulación ambiental minera para actividades de exploración, ¿qué instrumento ambiental específico debe tramitarse para un proyecto que contempla la ejecución de hasta 20 plataformas de perforación?",
@@ -3591,7 +3591,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con las potestades de fiscalización de organismos como OEFA, OSINERGMIN y SUNAFIL, ¿cuáles de las siguientes causales objetivas pueden desencadenar la clausura o paralización de una operación minera?",
@@ -3628,7 +3628,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la ejecución de trabajos en altura, ¿a qué cuadro médico crítico se expone un trabajador si queda suspendido e inmóvil en su arnés tras sufrir una caída?",
@@ -3665,7 +3665,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la función principal de implementar un sistema formal de 'Compliance Laboral' en una empresa del sector minero?",
@@ -3702,7 +3702,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un gerente de proyectos mineros debe seleccionar la metodología de gestión adecuada para dos subproyectos contemporáneos: (1) la ampliación de una planta de flotación con un CAPEX de 20 millones de dólares y especificaciones de ingeniería prefijadas, y (2) el desarrollo e implementación de un software con sensores IoT para mantenimiento predictivo. ¿Cuál es la justificación técnica correcta para la elección metodológica de ambos subproyectos?",
@@ -3739,7 +3739,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante la fase de planificación de la expansión de una unidad minera, el equipo del proyecto debe estructurar la línea base del alcance y formalizar el acta constitutiva. ¿Qué elementos deben quedar rigurosamente asentados en esta documentación técnica inicial?",
@@ -3776,7 +3776,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un proyecto de optimización logística de 6 meses en mina, surgen interferencias con contratistas de obras colindantes. Para evitar solapamientos operativos y sobrecostos por reprocesos, la gerencia revisa las funciones del equipo. ¿Qué distinción de roles se debe mantener entre el ingeniero de proyectos y el administrador de proyectos?",
@@ -3813,7 +3813,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una gerencia de operaciones evalúa dos alternativas para el suministro de agua procesada: la Opción A (Planta Nueva) requiere una inversión de 5,000,000 con un 70% de probabilidad de éxito generando 10,000,000 en ganancias netas acumuladas y un 30% de probabilidad de falla con una pérdida de 2,000,000. La Opción B (Actualizar Planta Existente) requiere 2,000,000 con un 80% de probabilidad de éxito (4,000,000 de ganancia) y un 20% de probabilidad de fallo (1,000,000 de pérdida). ¿Cuál es el Valor Monetario Esperado (VME) del flujo de retorno neto de la Opción A frente a la Opción B y cuál opción maximiza el valor monetario?",
@@ -3850,7 +3850,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el software Microsoft Project, el equipo de proyectos fijó la línea base al inicio del proyecto. Al día 45 de seguimiento, se registra un retraso imprevisto de 10 días en una tarea crítica de montaje electromecánico. ¿Cómo se debe gestionar el software para ajustar la reprogramación sin perder la trazabilidad del plan original?",
@@ -3887,7 +3887,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un consorcio minero diseña el plan de gestión de riesgos para el transporte de insumos químicos peligrosos (ácido sulfúrico) hacia una mina en alta montaña. Con base en la Clase 18, ¿cuáles de las siguientes medidas corresponden a estrategias de mitigación o transferencia de riesgo correctamente aplicadas?",
@@ -3924,7 +3924,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo evaluador de proyectos presenta un proyecto de profundización de tajo con un CAPEX inicial de 6,700,000 en el Año 0. El modelo proyecta flujos netos que generan un Valor Actual Neto (VAN) de 1,200,000 a una tasa de descuento de oportunidad del 27% anual, con una Tasa Interna de Retorno (TIR) calculada del 50.23%. ¿Cómo debe interpretar el directorio estos resultados para la toma de decisiones?",
@@ -3961,7 +3961,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se requiere evaluar el periodo de recuperación (Payback) para la adquisición de una flota de camiones con una inversión inicial de 1,200,000. Los flujos de caja netos anuales proyectados son: Año 1 = 300,000; Año 2 = 400,000; Año 3 = 300,000; Año 4 = $500,000. Calcule el tiempo exacto en que se alcanza el punto de equilibrio financiero del capital desembolsado.",
@@ -3998,7 +3998,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la estructuración presupuestal de una mina subterránea, un proyectista debe clasificar las partidas en CAPEX y OPEX. ¿Cuáles de las siguientes asignaciones están formuladas correctamente según la Clase 19?",
@@ -4035,7 +4035,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una minera analiza la construcción de un complejo de procesamiento evaluando tres tamaños posibles (Pequeño, Mediano, Grande) ante dos estados de demanda del mercado (Fuerte con P = 0.60; Débil con P = 0.40). La matriz de retornos (VAN en millones de USD) es la siguiente:\n\n* **Complejo Pequeño:** Demanda Fuerte = 20M ; Demanda Débil = 10M\n* **Complejo Mediano:** Demanda Fuerte = 40M ; Demanda Débil = -5M\n* **Complejo Grande:** Demanda Fuerte = 70M ; Demanda Débil = -30M\n\n¿Cuál es el Valor Esperado (VE) de cada alternativa y qué tamaño de complejo debe elegirse mediante este criterio?",
@@ -4072,7 +4072,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un análisis mediante simulación de Monte Carlo con el software Crystal Ball para un proyecto cuprífero a 5 años, el valor medio del VAN obtenido es de 15,500,000 con una desviación estándar de 5,000,000. Asumiendo una distribución normal y definiendo el valor crítico de rentabilidad nula en 0, ¿cuál es el valor del índice de fiabilidad (\nβ$) y qué significa para la decisión de inversión?",
@@ -4109,7 +4109,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al realizar un análisis de sensibilidad en el modelo financiero de una mina a tajo abierto polymetálica, ¿cuáles de las siguientes variables suelen presentar el mayor grado de sensibilidad e impacto directo sobre la fluctuación del VAN y la TIR?",
@@ -4146,7 +4146,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El gerente de planeamiento de una mina subterránea requiere determinar la combinación óptima de extracción de dos tajos para maximizar el VAN total del proyecto, sujeto a restricciones de capacidad máxima de la planta concentradora (50,000 t/día), límite de presupuesto de energía (120 MW) y horas máquina disponibles. ¿Qué herramienta especializada de Excel permite resolver este problema de optimización bajo restricciones?",
@@ -4183,7 +4183,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el presupuesto operativo de una rampa negativa de avance anual de 1,800 metros en mina subterránea, cada disparo utiliza una sección de perforación con jumbo de 2 brazos con 46 taladros y una longitud de 12 pies, alcanzando 508 pies perforados totales por disparo para avanzar 3.1 metros lineales reales. Si el costo unitario de perforación es de $0.040 por pie perforado, ¿cuál es el costo de perforación por disparo y el costo por metro lineal avanzado?",
@@ -4220,7 +4220,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el proceso de lixiviación, una planta presenta variaciones imprevistas en la concentración de ácido sulfúrico que perjudican la recuperación. Para realizar el análisis de causa raíz, el equipo aplica el diagrama de Ishikawa (Espina de Pescado). ¿En qué categoría de las 6M debe clasificarse la subcausa 'Pureza inconsistente del lote entregado por el proveedor de reactivos'?",
@@ -4257,7 +4257,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo de investigación de incidentes en minería evalúa el colapso de un sistema de ventilación mediante el método del Árbol de Fallas (FTA) e Ishikawa. De acuerdo con la Clase 21, ¿qué principios metodológicos rigen el correcto diagnóstico de causas y gestión de desvíos?",
@@ -4294,7 +4294,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Empresa Los Andes S.A. produce 10,000 toneladas de concentrado de cobre con un costo directo total de 1,600,000 y costos indirectos de 800,000. Aplicando el Costeo Basado en Actividades (ABC), los indirectos se distribuyen así: Extracción (350,000), Procesamiento (250,000) y Transporte (150,000). Si los costos directos específicos asignados son Extracción = 600,000; Procesamiento = 800,000; Transporte = 200,000, ¿cuál es el costo total consolidado de la actividad de Procesamiento y su representatividad frente al costo total operativo ($2,350,000)?",
@@ -4331,7 +4331,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un estudio de rendimiento de acarreo subterráneo entre cámaras de producción, se comparan dos equipos Scoop: el Scoop A tarda 12 minutos en cargar y trasladar una cámara de 6 m³, mientras que el Scoop B tarda 18 minutos en cargar y trasladar una cámara de 12 m³. ¿Cuál equipo demuestra mayor eficiencia operacional medida en minutos por metro cúbico (min/m³)?",
@@ -4368,7 +4368,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para mitigar la volatilidad financiera y estructurar el control presupuestal de una operación minera, la gerencia de finanzas decide combinar herramientas de cobertura y análisis de sensibilidad en flujo de caja. Con base en la Clase 22, ¿qué acciones y prácticas se recomiendan?",
@@ -4405,7 +4405,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera junior posee un proyecto de exploración de cobre con un presupuesto estimado de inversión de $500 millones, pero no desea diluir el accionariado de sus fundadores ni incurrir en compromisos de deuda bancaria con pagos fijos periódicos durante la etapa inicial de desarrollo. ¿Qué modalidad de financiamiento se adecúa mejor a estos requerimientos?",
@@ -4442,7 +4442,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera mediana en Perú registra ventas trimestrales sujetas a cálculo por S/. 1,525,000. De acuerdo con el margen operativo obtenido en el trimestre, la norma de Regalía Minera establece la aplicación de una tasa efectiva del 6.25%. ¿A cuánto asciende el monto a pagar por concepto de regalía minera al Estado en dicho trimestre?",
@@ -4479,7 +4479,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una auditoría contable internacional examina los estados financieros de una minera para respaldar su cotización en la Bolsa de Valores de Toronto. ¿Qué Normas Internacionales de Información Financiera (NIIF / IFRS) regulan específicamente las partidas mineras señaladas en la Clase 23?",
@@ -4516,7 +4516,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa de transportes requiere presupuestar el costo por kilómetro para el traslado de concentrado en volquetes desde una unidad minera ubicada a 3,800 m.s.n.m. en carretera no afirmada con pendientes superiores al 5%. Si el costo base sin ajustar sobre carretera asfaltada plana en la costa es de $0.028 por km, y el coeficiente de ajuste por altitud, pendiente y tipo de vía es de 5.7, ¿cuál es el costo por kilómetro ajustado para la ruta minera?",
@@ -4553,7 +4553,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un gerente de cadena de suministro evalúa el desempeño logístico de entregas de un proveedor de reactivos para la planta de lixiviación usando el indicador OTIF (On Time In Full). De un total de 100 pedidos programados en el año, 25 sufrieron retrasos en la fecha solicitada, 10 se entregaron con cantidades incompletas y 5 llegaron con envases dañados (coincidiendo 2 de ellos en ser tardíos e incompletos). Si únicamente 65 pedidos cumplieron strictly con ser a tiempo, completos y sin daños, ¿cuál es el porcentaje OTIF y cuál es el diagnóstico operativo?",
@@ -4590,7 +4590,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El administrador de un proyecto minero requiere identificar exactamente qué monto de inversión inicial (CAPEX) reduce el Valor Actual Neto (VAN) del modelo financiero a cero. ¿Qué herramienta de Excel permite configurar la celda de resultado (VAN) con el valor `0` cambiando la celda de la inversión inicial?",
@@ -4627,7 +4627,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un superintendente evalúa dos intervenciones en la unidad minera: el lavado periódico del área de chancado y la ampliación de la capacidad de procesamiento de la planta concentradora. ¿Cuál es la distinción metodológica correcta entre ambas actividades?",
@@ -4664,7 +4664,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué características distinguen a los modelos de gestión predictivos (en cascada) frente a los modelos ágiles (como Scrum) en el contexto de proyectos mineros?",
@@ -4701,7 +4701,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la estructura operativa de gestión de un proyecto minero, ¿cuál es la diferencia funcional principal entre el rol del Ingeniero de Proyectos y el Administrador de Proyectos?",
@@ -4738,7 +4738,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de la gestión de proyectos mineros, ¿cuál es la distinción conceptual fundamental entre el término 'incertidumbre' y el término 'riesgo'?",
@@ -4775,7 +4775,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la etapa de análisis y evaluación cuantitativa de riesgos para un proyecto de infraestructura minera, ¿qué herramientas y técnicas son utilizadas para cuantificar el impacto financiero y la probabilidad?",
@@ -4812,7 +4812,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es el propósito técnico fundamental de establecer y guardar una 'Línea Base' en un software de gestión de proyectos como Microsoft Project antes de iniciar la ejecución de la obra minera?",
@@ -4849,7 +4849,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la evaluación financiera de una propuesta para instalar una faja transportadora en una mina subterránea, un proyectista obtiene un Valor Actual Neto (VAN) mayor a cero utilizando la tasa de descuento exigida por el directorio. ¿Cómo se debe interpretar operacionalmente este resultado?",
@@ -4886,7 +4886,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al estructurar el modelo financiero de una unidad de minado, es necesario clasificar correctamente las erogaciones en CAPEX u OPEX. ¿Cuáles de las siguientes opciones describen adecuadamente las características de estas categorías?",
@@ -4923,7 +4923,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un proyecto de automatización del sistema de bombeo de mina requiere una inversión inicial y presenta un periodo de recuperación (Payback) de 8 meses. ¿Cuál es la principal limitación técnica del Payback como único criterio de decisión financiera?",
@@ -4960,7 +4960,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es el objetivo primordial de realizar un análisis de sensibilidad sobre el flujo de caja de un proyecto minero previo a la aprobación del directorio?",
@@ -4997,7 +4997,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la planificación estratégica minera se construyen escenarios optimista, pesimista y realista. ¿Qué utilidades operativas y analíticas aporta este enfoque multidimensional?",
@@ -5034,7 +5034,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al ejecutar una simulación Monte Carlo para el VAN de un proyecto minero a 5 años, el software arroja una distribución de resultados con una media de 2.5 millones de dólares y un índice de fiabilidad β que equivale a un 98.27% de probabilidad de obtener VAN > 0$. ¿Cómo debe interpretar el proyectista esta información?",
@@ -5071,7 +5071,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el control presupuestal de una operación subterránea, ¿cómo se clasifican los costos asociados a los cartuchos de dinamita y la mano de obra del perforista, en comparación con el combustible de los vehículos de soporte administrativo?",
@@ -5108,7 +5108,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Ante la recurrencia de fallas operativas en el sistema de acarreo subterráneo, el equipo de gestión decide aplicar herramientas metodológicas para identificar las causas raíz del problema. ¿Qué herramientas son idóneas para este propósito diagnóstico?",
@@ -5145,7 +5145,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el proceso de lixiviación se detecta una variación no deseada en la concentración de ácido sulfúrico que afecta la recuperación de cobre. Al aplicar la metodología de los '5 Porqués' para investigar la causa subyacente, ¿cuál es la regla operativa principal que debe seguir el equipo técnico?",
@@ -5182,7 +5182,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "La gerencia de una empresa minera decide implementar el sistema de Costeo Basado en Actividades (ABC) para la asignación de costos indirectos de producción. ¿Cuál es el principio rector de esta metodología en comparación con los sistemas tradicionales?",
@@ -5219,7 +5219,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Dentro del control de gestión minero, los Centros de Coste permiten agrupar gastos e ingresos para evaluar la eficiencia operacional. ¿Cómo se clasifican y diferencian funcionalmente estos centros?",
@@ -5256,7 +5256,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Frente a la alta volatilidad en los precios internacionales de los metales y el costo del combustible, una compañía minera decide adoptar mecanismos de protección en sus presupuestos de operación. ¿Qué instrumento financiero o estrategia es habitualmente utilizado con este propósito?",
@@ -5293,7 +5293,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía minera requiere financiar $500 millones de dólares para la construcción de una nueva mina de cobre. Al comparar el financiamiento mediante 'Deuda Bancaria / Bonos' frente a la emisión de 'Acciones (Capital)', ¿cuál es una ventaja decisiva del financiamiento por deuda?",
@@ -5330,7 +5330,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Las empresas mineras que buscan cotizar en bolsas de valores internacionales deben presentar sus estados financieros ajustados a normas contables globales. ¿Qué Normas Internacionales de Información Financiera (NIIF / IFRS) aplican específicamente a aspectos clave de la industria extractiva?",
@@ -5367,7 +5367,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con la legislación minera peruana, ¿sobre qué base se calcula el pago trimestral de la Regalía Minera para los titulares de concesiones de la mediana y gran minería?",
@@ -5404,7 +5404,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño del presupuesto de transporte de minerales desde la mina hacia el puerto, se determinan costos fijos y variables por kilómetro. ¿Qué efecto tiene la conducción por carreteras no asfaltadas en regiones de alta montaña (>2500 m.s.n.m. y pendientes elevadas) sobre el costeo del flete?",
@@ -5441,7 +5441,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa proveedora de insumos mineros evalúa su desempeño logístico mediante el indicador OTIF (On Time In Full). ¿Qué condiciones deben cumplirse de manera simultánea para que un pedido sea contabilizado como exitoso según este indicador?",
@@ -5478,7 +5478,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar la sensibilidad de un proyecto de expansión en Excel, un analista financiero desea determinar exactamente cuánto debe reducirse la inversión inicial para alcanzar una Tasa Interna de Retorno (TIR) objetivo del 15%. ¿Qué herramienta de análisis de hipótesis de Excel es la más idónea y directa para este procedimiento?",
@@ -5515,7 +5515,7 @@
   {
     "codigo_diplomado": "DIP-16",
     "diplomado": "GESTIÓN MINERA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un administrador de proyectos mineros ejecuta un análisis de escenarios mediante el Administrador de Escenarios en Excel, comparando los casos 'Normal', 'Auge' y 'Crítico'. Al finalizar las simulaciones de prueba en las celdas cambiantes, ¿cuál es la buena práctica recomendada antes de emitir el reporte gerencial definitivo?",

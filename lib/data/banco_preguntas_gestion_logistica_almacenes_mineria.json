@@ -2,7 +2,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una operación minera de gran escala analiza sus políticas de inventario de repuestos críticos y consumibles para evitar paralizaciones no programadas. ¿Cuál es el porcentaje estándar del stock de seguridad en minería y qué justificación operativa respalda este nivel frente a sectores como el retail o la industria general?",
@@ -39,7 +39,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo de logística minera coordina la importación de una pala eléctrica despiezada de gran tonelaje desde el extranjero. ¿Qué factores operativos, aduaneros y de transporte caracterizan esta fase del abastecimiento internacional?",
@@ -76,7 +76,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el minado en una operación subterránea de gran profundidad, la gerencia de operaciones evalúa mitigar los riesgos de desprendimiento de rocas y sismicidad inducida. ¿Qué combinación de patrón de voladura e insumo crítico con estricto control de seguridad se aplica en este escenario?",
@@ -113,7 +113,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al clasificar los insumos en la Matriz de Kraljic para definir estrategias de abastecimiento, la jefatura de compras identifica un reactivo químico importado sin sustitutos cercanos, proveído por un único fabricante global. ¿En qué categoría se ubica este ítem y qué política de inventario corresponde?",
@@ -150,7 +150,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de evaluación de yacimientos analiza la factibilidad técnica para explotar un cuerpo mineralizado masivo cercano a la superficie. ¿Qué condición geológica y operativa determina la selección del método de tajo abierto por sobre la minería subterránea?",
@@ -187,7 +187,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa evalúa cambiar el método de extracción en una mina subterránea profunda hacia métodos de hundimiento por gravedad (Block Caving o Sublevel Caving). ¿Qué parámetros operacionales y económicos caracterizan a estos métodos frente a los selectivos por relleno?",
@@ -224,7 +224,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Ante el incumplimiento contractual y paralización repentina del servicio por parte del proveedor único de transporte de concentrado, ¿qué estrategia de contingencia logística y resguardo contractual debió estructurar la mina previamente?",
@@ -261,7 +261,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el proceso operativo de voladura dentro de una mina a tajo abierto ubicada cerca de zonas pobladas, se busca controlar las vibraciones del terreno y minimizar la dispersión de polvo. ¿Qué insumo y secuencia de retardo se aplican técnicamente?",
@@ -298,7 +298,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una corporación minera proyecta la adquisición de una nueva flota de camiones de extracción autónomos, el plan de cierre ambiental y la negociación de acuerdos comunitarios para una concesión de 30 años. ¿En qué nivel de planificación se enmarcan estas acciones?",
@@ -335,7 +335,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para prevenir paradas de planta no programadas por falta de suministros, la jefatura de abastecimiento monitorea los 'insumos críticos'. ¿Qué productos califican en esta categoría y qué documentación es obligatoria para su gestión logística?",
@@ -372,7 +372,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un planner de logística debe estimar la demanda proyectada de mallas de clasificación para el mes de agosto aplicando el método de Promedio Móvil Simple con una ventana de n = 3 meses. Si los consumos reales registrados fueron de 120 unidades en mayo, 135 unidades en junio y 150 unidades en julio, ¿cuál es el pronóstico para agosto?",
@@ -409,7 +409,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión de mantenimiento predictivo de la flota pesada, el área de logística necesita anticipar las compras de repuestos para una intervención mayor programada a las 5,000 horas de trabajo. ¿Qué instrumento de medición del equipo proporciona este dato operativo para calcular el tiempo de pedido?",
@@ -446,7 +446,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "La dirección financiera de una empresa minera decide incorporar una flota de camionetas operativas mediante la modalidad de arrendamiento operativo (renting) en lugar de la compra directa de los vehículos. ¿Cuál es el impacto financiero de esta decisión sobre el Estado de Pérdidas y Ganancias?",
@@ -483,7 +483,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo de ingeniería de procesos aplica la metodología Seis Sigma (ciclo DMAIC) para reducir la variabilidad en los tiempos del ciclo de acarreo. ¿Qué criterios de validación y medición estadística deben cumplirse para certificar el éxito del proyecto?",
@@ -520,7 +520,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al analizar la cronología de tiempos de una pala hidráulica, el reporte indica que las Horas Operacionales Efectivas (HOP) representan el 60% del Tiempo Cronológico Total (TCR), pese a que la disponibilidad mecánica es del 85%. ¿Qué categoría de desglose temporal explica esta diferencia sin representar una avería de taller?",
@@ -557,7 +557,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño de voladura para la excavación de una rampa subterránea de 3.5 m × 3.5 m en roca tenaz, la malla contempla 50 taladros (44 cargados y 6 de alivio). ¿Cuál es la función operativa indispensable que cumplen los 6 taladros de alivio que se dejan sin cargar?",
@@ -594,7 +594,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al planificar la flota de acarreo para mover mineral de cobre extraído tras una voladura, la gerencia aplica un factor de esponjamiento del 50%. Si el bloque de mineral 'in situ' medía 1,000 m³, ¿qué volumen esponjado deberá movilizar la flota de camiones hacia la planta?",
@@ -631,7 +631,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una unidad minera ubicada en la sierra sur implementa un sistema de transporte bimodal (camión-tren) para enviar concentrado de cobre hasta el puerto de exportación. ¿Qué beneficios operacionales, ambientales y económicos caracterizan a esta solución multimodal?",
@@ -668,7 +668,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el protocolo de comercialización internacional de oro fundido en barras (doré), se aplica el procedimiento de 'Deep Sampling' para determinar la ley exacta del metal antes del cierre de precio ('fixing'). ¿En qué consiste específicamente esta técnica?",
@@ -705,7 +705,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En operaciones mineras remotas de alta montaña, el control de recepción y despacho de combustible diésel presenta vulnerabilidades por merma y registros manuales erróneos. ¿Qué tecnología automatizada se implementa en los tanques y cisternas para monitorear el consumo en tiempo real 'sin papel'?",
@@ -742,7 +742,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un convoy de camiones cisterna debe transportar ácido sulfúrico concentrado (>80%) hacia una planta de lixiviación. De acuerdo con el Reglamento de Transporte de Materiales Peligrosos (D.S. 021) y el Libro Naranja de la ONU, ¿a qué clase de riesgo pertenece y qué código UN de identificación debe exhibir?",
@@ -779,7 +779,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al diseñar el almacén de reactivos e insumos peligrosos (MATPEL) para una planta concentradora, el área de logística debe aplicar estrictos criterios de segregación. ¿Qué requerimientos de infraestructura y seguridad son obligatorios?",
@@ -816,7 +816,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un operador logístico 3PL diseña la ruta de transporte para suministrar insumos peligrosos (MATPEL) a una unidad minera. Para dar cumplimiento a la regulación de seguridad vial y control de fatiga del conductor, ¿qué esquema de conducción y horario de tránsito por zonas urbanas debe programarse?",
@@ -853,7 +853,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al seleccionar el método cuantitativo para pronosticar la demanda de repuestos mineros cuyo consumo reciente ha presentado variaciones imprevistas por paradas de mantenimiento, la jefatura de almacenes adopta la Suavización Exponencial sobre el Promedio Móvil Simple. ¿Cuál es la razón técnica de esta elección?",
@@ -890,7 +890,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con el Protocolo de Control de Riesgos Críticos para el manejo de materiales peligrosos (MATPEL), el personal en terreno debe contar con certificaciones según su nivel de exposición. ¿Qué competencias y responsabilidades distinguen a los Niveles 1, 2 y 3 de formación MAPEL?",
@@ -927,7 +927,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la razón principal por la cual el stock de seguridad asignado en las operaciones mineras (entre 6% y 10%) es considerablemente superior al utilizado en el sector retail o en la industria general?",
@@ -964,7 +964,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión de insumos para los procesos de lixiviación de minerales, ¿qué regulación y código específico rige la custodia, rotulado y manipulación de reactivos químicos críticos como el ácido sulfúrico?",
@@ -1001,7 +1001,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué características operativas y herramientas son esenciales en la gestión logística integral para soportar las exigencias de la minería continua?",
@@ -1038,7 +1038,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al aplicar la Matriz de Kraljic en la gestión del abastecimiento minero, ¿cómo se definen y gestionan los productos clasificados en la categoría de 'cuello de botella'?",
@@ -1075,7 +1075,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la condición geológico-económica determinante para seleccionar el método de explotación a tajo abierto en lugar de la minería subterránea?",
@@ -1112,7 +1112,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de los siguientes elementos son considerados componentes críticos y consumibles de alta prioridad para la continuidad operativa de la explotación y el acarreo?",
@@ -1149,7 +1149,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la minería subterránea de gran escala, ¿qué característica distingue a los métodos de explotación por hundimiento como el *block caving* o *sublevel caving*?",
@@ -1186,7 +1186,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Tras la extracción de roca en un proyecto a tajo abierto, ¿cuál es el destino logístico y de procesamiento inmediato que se le da al mineral clasificado como 'lixiviable'?",
@@ -1223,7 +1223,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es el enfoque principal y el horizonte temporal que caracteriza al planeamiento táctico dentro de la cadena de suministro minera?",
@@ -1260,7 +1260,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la gestión de pronósticos de demanda de insumos para operaciones mineras, ¿cuáles de las siguientes directrices y técnicas son recomendadas para iniciar el modelado operacional?",
@@ -1297,7 +1297,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al aplicar la técnica de pronóstico por Promedio Móvil Simple para la demanda de un insumo, ¿qué efecto genera la elección de un número de periodos n más elevado (por ejemplo, n = 6 frente a n = 3)?",
@@ -1334,7 +1334,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el cálculo del 'Punto de Pedido' (*Reorder Point*) para un insumo crítico en una mina remota, ¿cuáles son las dos variables clave que deben coordinarse obligatoriamente?",
@@ -1371,7 +1371,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro del desglose del control de tiempos operacionales en mina, ¿a qué categoría corresponden las horas en las que el equipo está mecánicamente expedito pero detenido por falta de operador o espera de programación?",
@@ -1408,7 +1408,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al implementar un proyecto de Seis Sigma bajo el ciclo DMAIC en los procesos logísticos de la mina, ¿qué requisitos y objetivos deben cumplirse para validar el éxito de la mejora?",
@@ -1445,7 +1445,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño geométrico de voladura subterránea para una rampa, si se determina operar en un macizo rocoso de tipo 'tenaz', ¿cuál es el comportamiento esperado en el diseño de la malla de perforación?",
@@ -1482,7 +1482,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué representa el indicador OEE (*Overall Equipment Efficiency*) en la gestión logístico-operativa de cargadores y excavadoras pesadas?",
@@ -1519,7 +1519,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cómo afecta el 'factor de esponjamiento' de la roca fragmentada por voladura a la planificación del transporte y la selección de la flota de camiones?",
@@ -1556,7 +1556,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles son las ventajas operativas y ambientales clave que impulsaron la implementación del sistema bimodal (camión-tren) para el transporte de concentrados minerales en el sur del Perú?",
@@ -1593,7 +1593,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En los protocolos de ensayo e inspección para la comercialización internacional de barras de oro refinado, ¿en qué consiste la técnica de *Deep Sampling*?",
@@ -1630,7 +1630,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es el propósito operativo de implementar sistemas automatizados de control de combustible con tecnología de identificación por radiofrecuencia (RFID) en la logística *Input* de la mina?",
@@ -1667,7 +1667,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para la gestión de repuestos e insumos estratégicos en inventarios situados en campamentos mineros aislados, ¿qué nivel de stock de seguridad y seguimiento se recomienda para ítems 'cuello de botella' o 'estratégicos'?",
@@ -1704,7 +1704,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con las normativas internacionales de transporte de materiales peligrosos (MATPEL), ¿cuáles de las siguientes corresponden a clasificaciones oficiales de peligro según la ONU?",
@@ -1741,7 +1741,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Por razones de seguridad operacional e industrial, ¿cuál es la distancia de separación física recomendada para la ubicación de los almacenes de MATPEL respecto a las áreas de trabajo en caliente y oficinas principales?",
@@ -1778,7 +1778,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión del transporte de carga peligrosa (MATPEL) por carreteras públicas, ¿cuál es el régimen de conducción y descanso obligatorio establecido para prevenir accidentes causados por fatiga del conductor?",
@@ -1815,7 +1815,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al estructurar una plantilla de costeo para el transporte terrestre de materiales e insumos mineros, ¿cuáles de los siguientes ítems deben ser clasificados técnicamente dentro del rubro de 'costos variables'?",
@@ -1852,7 +1852,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un almacén central de una unidad minera presenta graves cuellos de botella y congestión en las zonas de picking durante las horas pico de cambio de turno, debido a que el área de preparación de pedidos interfiere constantemente con el ingreso de carga pesada. Evaluando los principios de diseño de layout, ¿cuál de las siguientes reestructuraciones operativas resuelve de manera óptima esta interferencia?",
@@ -1889,7 +1889,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión logística de reactivos para procesos de lixiviación continua (operación 365 días al año), se debe elegir la estrategia de suministro productivo adecuada. ¿Qué combinación de alineamiento operativo y stock de seguridad garantiza la continuidad sin incurrir en costos desproporcionados de capital inmovilizado?",
@@ -1926,7 +1926,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un proyecto de reorganización espacial y operacional de un almacén minero de repuestos logró recuperar 44 m² de área libre y aumentar la valorización del espacio disponible. ¿Qué beneficios operativos y cuantitativos adicionales se derivan directamente de un reordenamiento eficiente según la experiencia del sector?",
@@ -1963,7 +1963,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera evalúa la adquisición de repuestos críticos de largo tiempo de reposición (lead time importado superior a 6 meses) y alta frecuencia de fallas en sensores de planta. ¿Qué tipo de almacén y estrategia de gestión debe implementarse para mitigar el riesgo de paradas de planta?",
@@ -2000,7 +2000,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al realizar la clasificación ABC del inventario de un almacén minero mediante la valorización del consumo anual, la teoría sugiere una distribución 80/20. Sin embargo, en la práctica minera se observa frecuentemente una distribución acumulada del 85/15. ¿A qué se debe esta variación y cómo afecta las decisiones de control?",
@@ -2037,7 +2037,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una operación minera gestiona 500 posiciones de almacén. En un esquema sin clasificación ABC, se realizan pedidos uniformes que generan 6,000 órdenes de compra anuales. Al implementar un modelo cuantitativo basado en ABC, se segmenta la frecuencia de pedido (Categoría A cada 5 días, B cada 20 días y C cada 60 días). ¿Cuál es el impacto financiero y operativo directo de esta transformación?",
@@ -2074,7 +2074,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el diagnóstico de un almacén minero de campo, se detecta que existen 45 unidades de un componente crítico en el sistema digital ERP, pero físicamente solo se hallan 44 en la bodega. Asimismo, se encuentran motores registrados como stock activo que ya fueron instalados en la planta concentradora hace semanas. ¿Qué fallas en la gestión documental y procedimental explican estas anomalías?",
@@ -2111,7 +2111,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un jefe de logística debe ajustar la política de stock de seguridad para un catálogo de repuestos importados de categoría A cuyos lead times varían entre 5 y 9 meses debido a fletes marítimos y trámites aduaneros. De acuerdo con los criterios operativos analizados, ¿cuáles de las siguientes medidas son correctas para proteger la continuidad de la operación?",
@@ -2148,7 +2148,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un periodo de alta volatilidad de precios en repuestos de acero y alta inflación, la gerencia financiera de una minera busca maximizar la utilidad contable reflejada en el ejercicio, mientras que la jefatura de logística prefiere un método que refleje los costos de reposición más recientes para recuperar costos operacionales. ¿Qué métodos de valoración de inventarios satisfacen, respectivamente, estas dos posturas?",
@@ -2185,7 +2185,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se requiere calcular la Cantidad Económica de Pedido (EOQ) y el Punto de Reorden (R) para un insumo de perforación. La demanda anual (D) es de 1,000 unidades, el costo por emitir una orden (S) es de \\10, el costo anual de mantener por unidad (H) es de \\2.50, la operación trabaja 365 días al año y el tiempo de entrega (L) del proveedor es de 7 días. ¿Cuáles son los valores óptimos aproximados de EOQ y R?",
@@ -2222,7 +2222,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un comprador minero evalúa tres tramos de precio con descuento por volumen para un reactivo con demanda de 25,000 unidades anuales y costo fijo de orden K = \\40. Tramo 1 (1 a 750 un): \\15; Tramo 2 (751 a 999 un): \\14; Tramo 3 (\\ge 1,000 un): \\13. El costo de mantenimiento H es el 20% del costo unitario. El cálculo teórico arroja EOQ ajustados de 816 unidades para el tramo 2 y 877 unidades para el tramo 3. ¿Qué tamaño de lote (Q) debe seleccionarse tras evaluar el costo total?",
@@ -2259,7 +2259,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "La gestión de inventarios en minería debe hacer frente a imprevistos severos como cierres de carreteras, huelgas de transporte o variaciones bruscas en los tiempos de tránsito internacional. ¿Qué funciones operativas cumple el stock de seguridad ('colchón de inventario') ante estos escenarios en unidades mineras aisladas?",
@@ -2296,7 +2296,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una operación minera de gran escala decide integrar un sistema WMS (Warehouse Management System) con su ERP corporativo (SAP MM/PP). Durante el análisis de procesos, el área de TI propone reemplazar completamente el ERP por el WMS para la planificación de compras. ¿Por qué es técnicamente errónea esta decisión y cómo deben coordinarse ambos sistemas?",
@@ -2333,7 +2333,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una auditoría de control de inventarios en un almacén minero, se miden los indicadores ERI (Exactitud del Registro de Inventarios) y ERU (Exactitud de Ubicación). Tras muestrear 100 posiciones, se encuentra que 60 coincidían exactamente en cantidad y datos, pero 25 artículos estaban colocados en anaqueles distintos a los asignados en el WMS por prisa del operario. ¿Qué reflejan los resultados y cuál es la acción inmediata?",
@@ -2370,7 +2370,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se evalúa el nivel de servicio logístico hacia los contratistas de mantenimiento mediante el indicador OTIF (On-Time In-Full). Durante un mes se atendieron 52 pedidos globales. Se determinó que 22 pedidos se entregaron strictly a tiempo y 16 pedidos se entregaron completos y sin daños. Únicamente 10 pedidos cumplieron ambas condiciones simultáneamente. ¿Cuál es el valor del OTIF y qué decisión estratégica debe tomarse?",
@@ -2407,7 +2407,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la gestión financiera de un almacén minero, el control de los costos de almacenamiento e indicadores de cobertura es fundamental para evitar la inmovilización ineficiente de capital. ¿Cuáles de las siguientes afirmaciones representan fórmulas o aplicaciones correctas de estos KPI?",
@@ -2444,7 +2444,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al recibir un embarque de sustancias químicas corrosivas en el almacén de una unidad minera, el encargado de recepción debe verificar el etiquetado bajo el Sistema Globalmente Armonizado (SGA / GHS). ¿Qué combinación de elementos en la etiqueta garantiza la identificación adecuada de los peligros e instrucciones de seguridad según esta normativa internacional?",
@@ -2481,7 +2481,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el almacenamiento prolongado de ácido sulfúrico concentrado en una planta de lixiviación, se requiere diseñar la zona de acopio para prevenir desastres ambientales o laborales. Según las buenas prácticas de almacenamiento de MATPEL, ¿qué infraestructura y medidas operativas de contención son indispensables?",
@@ -2518,7 +2518,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un jefe de almacén con 25 años de experiencia en la minera rechaza la implementación de un nuevo sistema de gestión con lectores RFID y un módulo ISO 45001, argumentando que 'siempre se ha trabajado en papel sin accidentes'. ¿Cómo debe la gerencia abordar esta resistencia al cambio para lograr una cultura preventiva de éxito?",
@@ -2555,7 +2555,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para asegurar el cumplimiento de la gestión de Hojas de Datos de Seguridad (MSDS / SDS) de insumos químicos peligrosos en el almacén, se deben definir responsabilidades claras. De acuerdo con los procedimientos mineros analizados, ¿cuáles de las siguientes funciones corresponden al área de Compras y Logística y al Proveedor?",
@@ -2592,7 +2592,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una auditoría interna de cumplimiento normativo (DS 024-2016-EM y modificaciones en minería), se evalúa la eficacia de las inspecciones planeadas en el almacén central. Se detecta que existen observaciones repetitivas de desorden en estanterías que no fueron subsanadas en el plazo asignado. ¿Qué elemento de la gestión de auditoría está fallando y cuál es el procedimiento para cerrarlo?",
@@ -2629,7 +2629,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la minería sostenible y los planes de gestión integral de residuos sólidos (Ley General del Ambiente), un almacén minero debe gestionar un volumen considerable de aceites usados, cartones, plásticos de embalaje y chatarra metálica. ¿Qué estrategia de valorización y segregación debe aplicarse según la codificación estándar de colores?",
@@ -2666,7 +2666,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una corporación minera busca reducir la huella de carbono de sus operaciones logísticas en zonas remotas de alta montaña mediante la digitalización y optimización del transporte de suministros. ¿Qué solución tecnológica aplicada a la flota de camiones y al almacén contribuye directamente a este objetivo de sostenibilidad?",
@@ -2703,7 +2703,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el marco de la economía circular aplicable a la logística de almacenes mineros, existen residuos de proceso que pueden ser valorizados en lugar de desecharse. ¿Cuáles de los siguientes ejemplos representan procesos válidos de reaprovechamiento y valorización dentro de la faena minera o mediante terceros autorizados?",
@@ -2740,7 +2740,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un inspector de la autoridad fiscalizadora minera realiza una auditoría sorpresa al almacén central y detecta un derrame no reportado de 200 litros de reactivo líquido en la zona de maniobras, sin la demarcación de seguridad ni la hoja de seguridad (MSDS) en el punto de trabajo. ¿Qué acción de contingencia y corrección inmediata debe ejecutar la jefatura?",
@@ -2777,7 +2777,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de la gestión estratégica de almacenes mineros, ¿cuál es la característica operativa fundamental que distingue al centro de suministro productivo frente a los centros de consolidación o ruptura?",
@@ -2814,7 +2814,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión de inventarios para componentes de alta criticidad, ¿cuál es el criterio principal para configurar y justificar un almacén de seguridad en faena?",
@@ -2851,7 +2851,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Un diseño de distribución en planta (layout) optimizado en formato de flujo en línea o en U dentro de un almacén minero aporta cuáles de los siguientes beneficios directos?",
@@ -2888,7 +2888,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el procedimiento formal de recepción de materiales de proyecto en una mina, ¿cuál es la regla de aceptación válida respecto a las certificaciones de calidad de materiales equivalentes o lotes?",
@@ -2925,7 +2925,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al realizar un análisis ABC de inventarios bajo el enfoque valorativo en minería, ¿cuál es el criterio estándar para delimitar la Categoría A?",
@@ -2962,7 +2962,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al comparar la gestión de pedidos sin clasificación ABC frente a un esquema optimizado con análisis ABC, ¿qué efectos cuantitativos y operacionales se logran en la bodega minera?",
@@ -2999,7 +2999,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de la gestión documental de almacenes, ¿cuál es el propósito primordial de mantener la trazabilidad completa desde la recepción hasta la expedición?",
@@ -3036,7 +3036,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el almacenamiento seguro de materiales peligrosos (MATPEL) en faenas mineras, ¿cuál es el requisito técnico indispensable respecto a la compatibilidad de productos?",
@@ -3073,7 +3073,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar métodos de valoración de inventarios bajo escenarios de precios de insumos con alta volatilidad o inflación, ¿qué efecto contable y operativo produce la aplicación del método UEPS (LIFO)?",
@@ -3110,7 +3110,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el modelo matemático de la Cantidad Económica de Pedido (EOQ), expresado como Q = \\sqrt{\\frac{2DS}{H}}, ¿qué representa el parámetro H y cómo influye en el tamaño de lote resultante?",
@@ -3147,7 +3147,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para calcular correctamente el Punto de Reorden (ROP) de un repuesto operativo minero cuya demanda diaria es de 10 unidades y el tiempo de reposición del proveedor local es de 15 días, ¿cuáles de los siguientes enunciados son matemáticamente y operativamente válidos?",
@@ -3184,7 +3184,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Cuando un proveedor ofrece descuentos por volumen en la compra de reactivos, ¿cuál es el procedimiento analítico correcto para seleccionar el tamaño de lote óptimo aplicando el modelo EOQ?",
@@ -3221,7 +3221,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la arquitectura tecnológica de un almacén minero moderno, ¿cuál es la función diferencial de un sistema WMS (Warehouse Management System) respecto a un ERP corporativo (ej. SAP MM)?",
@@ -3258,7 +3258,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para verificar el nivel de control en un almacén minero se utilizan los indicadores ERI (Exactitud de Registro de Inventario) y ERU (Exactitud de Registro de Ubicación). ¿Cuáles afirmaciones caracterizan a estas métricas?",
@@ -3295,7 +3295,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Se requiere medir el indicador OTIF (On-Time In-Full) en el suministro de repuestos. Si de 100 pedidos evaluados, 80 llegaron dentro del *lead time* pactado, 70 se entregaron completos y sin daños, y solo 60 cumplieron ambas condiciones simultáneamente, ¿cuál es el porcentaje OTIF resultante?",
@@ -3332,7 +3332,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el flujo operativo guiado por un software WMS utilizando dispositivos móviles, ¿cuál es el procedimiento estándar para ejecutar una Orden de Trabajo (OT) de picking sin errores de registro?",
@@ -3369,7 +3369,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con el marco normativo minero (DS 024-2016-EM y su modificación DS 023-2017-EM) e ISO 45001, ¿cuál es una obligación legal e institucional del titular minero en la gestión de almacenes?",
@@ -3406,7 +3406,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Bajo el Sistema Globalmente Armonizado (SGA / GHS), ¿cuáles son elementos obligatorios presentes en la etiqueta de un contenedor de producto químico peligroso en almacén?",
@@ -3443,7 +3443,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Respecto al manejo de la Hoja de Datos de Seguridad (MSDS / SDS) en la cadena de abastecimiento logístico, ¿cuál es la responsabilidad operativa del área de compras y almacén?",
@@ -3480,7 +3480,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de la prevención de pérdidas y gestión de riesgos en instalaciones de almacenamiento minero, ¿qué medida de control técnico mitiga el riesgo de derrame masivo de productos químicos líquidos como el ácido sulfúrico?",
@@ -3517,7 +3517,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la implementación de nuevas tecnologías de almacenamiento y sistemas de gestión en faenas mineras tradicionales, ¿cuáles son prácticas de liderazgo para superar la resistencia operativa de los supervisores y jefes veteranos?",
@@ -3554,7 +3554,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un proceso de auditoría interna de la cadena logística y de almacenes en minería, ¿cuál es la función principal de la verificación de evidencias objetivas por parte de los auditores?",
@@ -3591,7 +3591,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la sostenibilidad y logística verde aplicada a almacenes mineros, ¿cuál de las siguientes acciones contribuye directamente a la reducción de la huella ambiental de la operación?",
@@ -3628,7 +3628,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la elaboración de un procedimiento operativo estandarizado para la recepción de materiales peligrosos (MATPEL) en una mina, ¿cuáles de los siguientes pasos formales son obligatorios antes de dar ingreso al stock?",
@@ -3665,7 +3665,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al diseñar un depósito dedicado al almacenamiento de sustancias químicas corrosivas e inflamables, ¿cuál es la medida preventiva clave para evitar incendios de origen eléctrico dentro de la nave?",
@@ -3702,7 +3702,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el comisionamiento del proyecto Tamomayo, una bomba de trasvase de reactivos se quemó inmediatamente tras ser conectada a la red eléctrica del campamento. La investigación reveló que la bomba fue comprada para un voltaje de 220 V, mientras que la red operativa del yacimiento trabaja a 440 V. Operaciones culpa a Logística por efectuar la compra errónea, mientras que Logística afirma que se ciñó a la solicitud del usuario. En el marco de la gestión de riesgos en compras mineras, ¿dónde radica la falla de origen y qué mecanismo preventivo debió aplicarse?",
@@ -3739,7 +3739,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de logística minera evalúa 5 fortalezas (F₁ a F₅) para priorizar inversiones en el almacén central. Al aplicar la matriz FODA matemático de doble entrada para obtener los pesos relativos mediante comparación por pares en la diagonal superior, ¿cuántas comparaciones pareadas individuales se ejecutan en total y cómo se determina el peso ponderado de cada factor?",
@@ -3776,7 +3776,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una unidad minera ha culminado la etapa de cuantificación de factores FODA y procede a construir la Matriz Analítica de Formación de Estrategias (MAFe). ¿Cuáles de las siguientes directrices metodológicas son obligatorias para la elaboración y jerarquización de las estrategias en esta matriz?",
@@ -3813,7 +3813,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una licitación para el suministro de ácido sulfúrico en una mina subterránea, el análisis cuantitativo arrojó una estrategia DO orientada a la 'automatización del monitoreo de inventarios para mitigar la dependencia de un único proveedor logístico'. Si la Debilidad D₁ (dependencia logística) obtuvo un puntaje ponderado de 1.8 y la Oportunidad O₂ (implementación de sensores IoT) obtuvo 1.6, ¿cuál es el valor consolidado de la estrategia y cuál es la decisión gerencial recomendada?",
@@ -3850,7 +3850,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Según los fundamentos expuestos sobre las limitaciones del FODA clásico en el ámbito empresarial, ¿por qué la metodología tradicional suele fallar al guiar decisiones estratégicas complejas en la cadena de suministro minera?",
@@ -3887,7 +3887,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un analista de riesgo en un almacén minero evalúa la eventualidad 'falla prolongada del sistema informático de inventarios por cortes de energía'. Asigna una Gravedad de nivel 4 (Importante) y una Probabilidad de nivel 4 (Probable) debido a la inestabilidad de la red eléctrica local. De acuerdo con la matriz de evaluación 5 × 5, ¿cuál es el valor del impacto del riesgo y qué nivel de acción prioritaria exige?",
@@ -3924,7 +3924,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En un proceso de homologación de contratistas mineros, se utiliza una herramienta de IA avanzada para procesar 10 memorias anuales corporativas y extraer ratios financieros comparativos. ¿Qué buenas prácticas operativas y precauciones metodológicas se deben observar al aplicar esta tecnología?",
@@ -3961,7 +3961,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar el riesgo de paralización de la flota de camiones de acarreo por desabastecimiento de neumáticos gigantes, se determina que la probabilidad de ocurrencia durante el año es del 20%. Si la detención operativa representa una pérdida económica directa estimada en \\1,500,000 USD$, ¿cuál es el Valor Esperado Monetario (EMV) de este riesgo y cómo debe interpretarse?",
@@ -3998,7 +3998,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía minera con operaciones en yacimientos subterráneos de alta montaña evalúa la arquitectura de su nuevo Warehouse Management System (WMS). Requiere alta capacidad de personalización, control absoluto de los datos en servidores locales por temas de conectividad intermitente, pero asume mayores costos de mantenimiento e infraestructura propia. ¿Qué tipo de WMS responde a estas características?",
@@ -4035,7 +4035,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la reorganización física del almacén central de una mina, el jefe de logística debe asignar la ubicación de tres tipos de insumos: cajas de brocas de perforación (alta rotación), balones de oxígeno comprimido y cilindros de petróleo diésel. Aplicando los principios normativos y de eficiencia operativa, ¿cuál es la disposición física correcta?",
@@ -4072,7 +4072,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al momento de consolidar y despachar una plataforma con repuestos hacia el yacimiento, el sistema WMS coordina las fases de empaque y despacho. ¿Qué controles operativos y principios logísticos garantizan la integridad de la expedición y previenen pérdidas patrimoniales?",
@@ -4109,7 +4109,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un almacén minero recibe simultáneamente 15 solicitudes de pedido urgentes para el mantenimiento preventivo de la planta concentradora. Cada solicitud contiene pequeñas cantidades de los mismos tipos de retenes, pernos y empaquetaduras. Para minimizar los tiempos de recorrido de los operarios, ¿qué estrategia de picking debe ejecutar el WMS?",
@@ -4146,7 +4146,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una operación logística que gestiona miles de transacciones de repuestos por turno, se reemplazan las terminales de radiofrecuencia de mano (PDA) por sistemas de instrucción interactiva por voz (Voice Picking). ¿Cuál es la ventaja operativa directa que justifica el retorno de inversión de esta tecnología?",
@@ -4183,7 +4183,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una unidad minera evalúa dar el salto de un almacén 'informatizado' a uno 'totalmente automatizado'. ¿Cuáles de los siguientes elementos distinguen conceptual y técnicamente a la automatización avanzada frente a la mera informatización?",
@@ -4220,7 +4220,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el inventario anual de la cancha de repuestos pesados al aire libre, se despliegan drones equipados con visión artificial y lectores RFID. ¿Qué impacto operacional inmediato ofrece esta solución frente al método de conteo manual con escaleras y checklists de papel?",
@@ -4257,7 +4257,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el diseño de la distribución interna de un almacén minero principal, se debe zonificar el espacio para almacenar 500 galones de aceite lubricante en cilindros, 2 toneladas de nitrato de amonio (anfo) en sacos y 100 cajas de Epp ordinarios. ¿Qué criterio técnico de zonificación debe aplicarse obligatoriamente?",
@@ -4294,7 +4294,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Ocurre un accidente mortal en la rampa de acceso a la mina subterránea debido al volcamiento de un camión de transporte de personal operado por una empresa contratista. De acuerdo con el reglamento de SST en minería y la fiscalización de SUNAFIL, ¿cuáles son las implicancias legales inmediatas para el titular minero?",
@@ -4331,7 +4331,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera utiliza cianuro de sodio y ácido sulfúrico en su planta de beneficio. Para mantener el Registro para el Control de Bienes Fiscalizados ante la SUNAT sin incurrir en infracciones que paralicen el suministro, ¿qué exigencias administrativas y operativas debe cumplir de manera rigurosa?",
@@ -4368,7 +4368,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Se planifica el traslado terrestre de reactivos corrosivos (Clase 8 ONU) hacia la mina. De acuerdo con el Reglamento del MTC y los estándares de seguridad vial, ¿qué requisitos técnicos y documentales son obligatorios para la unidad y el conductor?",
@@ -4405,7 +4405,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una unidad minera requiere instalar un tanque atmosférico vertical de 10,000 galones de diésel para autoconsumo de sus equipos de acarreo. ¿Cuál es la exigencia técnica de contención ambiental obligatoria según la normativa reguladora del sector hidrocarburos (OSINERGMIN)?",
@@ -4442,7 +4442,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante las operaciones de mantenimiento se generan trapos impregnados de grasa, baterías usadas y envases vacíos de reactivos químicos. Aplicando la normativa de gestión integral de residuos sólidos y el código de colores estandarizado en Perú, ¿cuáles de las siguientes acciones son jurídicamente y operativamente correctas?",
@@ -4479,7 +4479,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En cumplimiento del Reglamento Ministerial que prohíbe el uso de aceites con Bifenilos Policlorados (PCB) en transformadores eléctricos por su alta toxicidad ambiental, la mina debe retirar 4 transformadores antiguos. ¿Cuál es el procedimiento logístico inverso legal que debe ejecutar el área de compras y almacén?",
@@ -4516,7 +4516,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al analizar la posición de la Gestión de Almacenes y Aprovisionamiento dentro de la Cadena de Valor de Michael Porter en una empresa minera de commodities (donde el precio de venta es fijado internacionalmente por el mercado), ¿cómo genera la logística una ventaja competitiva sostenible?",
@@ -4553,7 +4553,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una inspección de almacén se analiza el riesgo de 'despacho de reactivos sin la Hoja de Datos de Seguridad (MSDS)'. El equipo asigna una Gravedad de nivel 3 (Moderada) porque puede generar observaciones administrativas, y una Probabilidad de nivel 2 (No es probable) debido a los controles existentes. ¿En qué rango de impacto se ubica este riesgo y cuál es su tratamiento en la matriz?",
@@ -4590,7 +4590,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Tras completar la Matriz 5 × 5, dos riesgos resultaron en la zona roja (Alto Impacto): 'Falla de equipos de manipulación pesada' (15) y 'Caída del sistema informático WMS/ERP' (16). ¿Qué requisitos debe cumplir el Plan de Acción de Mitigación para asegurar el control de estos riesgos críticos?",
@@ -4627,7 +4627,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál de las siguientes situaciones representa un ejemplo característico de riesgo interno originado dentro de la gestión de la cadena de suministro en una operación minera?",
@@ -4664,7 +4664,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la metodología del FODA matemático, ¿cuál es la razón técnica para utilizar únicamente la diagonal superior de la matriz de doble entrada al comparar los factores de una misma categoría?",
@@ -4701,7 +4701,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el desarrollo de proyectos logísticos en minería, ¿qué factores suelen originar fricciones y reprocesos entre las áreas de Ingeniería, Operaciones y Logística?",
@@ -4738,7 +4738,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para priorizar estratégicamente decisiones de compras críticas en minería (como la adquisición masiva de reactivos), ¿cómo se calcula el puntaje ponderado de un factor en el análisis FODA matemático?",
@@ -4775,7 +4775,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En una matriz de gestión de riesgos de 5x5 aplicable a logística minera, ¿cómo se determina el valor de impacto del riesgo y qué rango numérico exige planificación prioritaria inmediata (color rojo)?",
@@ -4812,7 +4812,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al utilizar herramientas de Inteligencia Artificial para procesar de forma masiva documentos extensos (como memorias anuales de mineras), ¿qué buenas prácticas deben implementarse para garantizar la fiabilidad del informe generado?",
@@ -4849,7 +4849,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "El concepto de Valor Esperado Monetario (EMV) en la evaluación cuantitativa de riesgos se distingue de la matriz cualitativa 5x5 porque:",
@@ -4886,7 +4886,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de la Matriz Analítica de Formación de Estrategias (MAFe), ¿cuál es la regla fundamental al diseñar estrategias en el cuadrante Fortalezas-Oportunidades (FO)?",
@@ -4923,7 +4923,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar la adquisición de un sistema WMS (Warehouse Management System) para una unidad minera remota, ¿cuál es una desventaja operativa característica de las soluciones independientes 'on-premise' frente a las soluciones en la nube (SaaS)?",
@@ -4960,7 +4960,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Dentro de las mejores prácticas de distribución interna en almacenes mineros, ¿qué criterios justifican la ubicación física de un insumo cerca de las zonas de recepción y despacho?",
@@ -4997,7 +4997,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la fase de despacho de mercancías desde el almacén minero hacia la unidad operativa, ¿cuál es el objetivo técnico de realizar un control comparativo entre el peso teórico y el peso real del transporte?",
@@ -5034,7 +5034,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Cuando un pedido registrado en el WMS abarca insumos almacenados en distintas zonas de la bodega subterránea y requiere la intervención simultánea de varios operarios, el sistema debe ejecutar:",
@@ -5071,7 +5071,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión moderna de almacenamiento minero, ¿cuál es una ventaja operativa principal derivada de la integración de drones con visión computacional y sensores RFID para el control de existencias?",
@@ -5108,7 +5108,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Las tecnologías de picking guiado por voz ('Voice Picking') integradas al WMS aportan ventajas competitivas en los almacenes debido a que:",
@@ -5145,7 +5145,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al analizar la adopción de tecnologías en centros de distribución mineros, ¿cuál es la diferencia conceptual clave entre 'informatizar' y 'automatizar' un almacén?",
@@ -5182,7 +5182,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la elaboración del diseño interno (layout) de un almacén central para una unidad minera, el criterio primordial para determinar la zonificación de reactivos químicos corrosivos o explosivos debe ser:",
@@ -5219,7 +5219,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco regulatorio peruano para el control de Insumos Químicos y Bienes Fiscalizados (IQBF) en minería, ¿cuál es la función de fiscalización administrativa que ejerce la SUNAT?",
@@ -5256,7 +5256,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "El transporte terrestre de materiales y residuos peligrosos (Matpel) hacia una operación minera exige el cumplimiento de múltiples capas regulatorias. ¿Qué requisitos técnicos y documentales son obligatorios para la unidad de transporte?",
@@ -5293,7 +5293,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Ante la ocurrencia de un derrame imprevisto de cianuro de sodio en la vía de acceso a la mina, ¿cuál es la primera acción de reconocimiento y seguridad que debe adoptar el personal del vehículo o primeros respondedores?",
@@ -5330,7 +5330,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para operar legalmente un tanque de almacenamiento de combustible diésel para autoconsumo en una unidad minera, el titular del proyecto debe contar obligatoriamente con:",
@@ -5367,7 +5367,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con el Reglamento de Seguridad y Salud Ocupacional en Minería, ¿qué obligaciones recaen directamente sobre el empleador minero para fomentar la prevención de accidentes?",
@@ -5404,7 +5404,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la logística inversa y gestión ambiental en minería, cuando se requiere dar de baja y retirar transformadores eléctricos que contienen aceites con Bifenilos Policlorados (PCB), el área de logística debe:",
@@ -5441,7 +5441,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al aplicar el modelo de la Cadena de Valor de Michael Porter a la gestión logística minera, ¿de qué manera una logística de entrada eficiente se traduce en una ventaja competitiva para la empresa?",
@@ -5478,7 +5478,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante una auditoría operativa e inspección de seguridad a un almacén de materiales en una unidad minera, ¿qué herramientas y métodos de diagnóstico permiten comprobar la veracidad de los procedimientos documentados?",
@@ -5515,7 +5515,7 @@
   {
     "codigo_diplomado": "DIP-14",
     "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Tras calcular el impacto de un riesgo en el flujo de almacén mediante la fórmula Impacto = Gravedad × Probabilidad, si el riesgo resulta clasificado en el rango de 'Alto Impacto' (zona roja), la acción inmediata requerida consiste en:",

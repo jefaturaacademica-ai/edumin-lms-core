@@ -127,6 +127,110 @@ async function enriquecerCursosConTipoCatalogo(admin: any, cursos: any[]) {
   });
 }
 
+async function enriquecerConNotasModulos(
+  admin: any,
+  dniCe: string | null | undefined,
+  diplomados: any[],
+  cursos: any[]
+) {
+  const dni = String(dniCe || '').trim();
+  if (!dni) return;
+
+  try {
+    const [{ data: notasRows }, { data: catRows }] = await Promise.all([
+      admin
+        .from('notas_modulos')
+        .select('diplomado_numero, diplomado_nombre, tipo_programa, modulo_numero, modulo_nombre, nota, estado, updated_at')
+        .eq('dni_ce', dni)
+        .order('updated_at', { ascending: false }),
+      admin
+        .from('diplomados_y_cursos')
+        .select('id, codigo, titulo')
+    ]);
+
+    if (!Array.isArray(notasRows) || notasRows.length === 0) return;
+
+    const norm = (s?: string) =>
+      String(s || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/^diplomado\s+(en\s+)?/i, '')
+        .replace(/[^a-z0-9]/g, '');
+
+    const catPorClave = new Map<string, any>();
+    (catRows || []).forEach((r: any) => {
+      if (r.id) catPorClave.set(norm(r.id), r);
+      if (r.codigo) catPorClave.set(norm(r.codigo), r);
+      if (r.titulo) catPorClave.set(norm(r.titulo), r);
+    });
+
+    // Enriquecer módulos de diplomados desde notas_modulos
+    diplomados.forEach((d: any) => {
+      const cat = catPorClave.get(norm(d.codigo)) || catPorClave.get(norm(d.slug)) || catPorClave.get(norm(d.id)) || catPorClave.get(norm(d.titulo));
+      if (!d.codigo && cat?.codigo) d.codigo = cat.codigo;
+      const dipCodNorm = norm(d.codigo || cat?.codigo);
+      const dipTitNorm = norm(d.titulo);
+
+      if (Array.isArray(d.modulos)) {
+        d.modulos.forEach((m: any, mIdx: number) => {
+          const modNum = mIdx + 1;
+          const modKeyNorm = norm(m.codigo || m.id);
+          const match = notasRows.find((n: any) => {
+            const tipo = String(n.tipo_programa || '').toLowerCase();
+            const numUpper = String(n.diplomado_numero || '').toUpperCase();
+            if (tipo && tipo !== 'diplomado' && !numUpper.startsWith('DIP')) return false;
+            const matchDip =
+              (dipCodNorm && norm(n.diplomado_numero) === dipCodNorm) ||
+              (dipTitNorm && norm(n.diplomado_nombre) === dipTitNorm);
+            if (!matchDip) return false;
+            return (
+              Number(n.modulo_numero) === modNum ||
+              (modKeyNorm && norm(n.modulo_nombre) === modKeyNorm)
+            );
+          });
+          if (match) {
+            m.nota = Number(match.nota ?? m.nota ?? 0);
+            m.rendido = true;
+            m.completado = Boolean(m.completado || match.estado === 'APROBADO');
+            if (match.updated_at) {
+              m.fecha_examen = match.updated_at;
+              if (!m.fecha) {
+                m.fecha = String(match.updated_at).split('T')[0];
+              }
+            }
+          }
+        });
+      }
+    });
+
+    // Enriquecer cursos/talleres desde notas_modulos
+    cursos.forEach((c: any) => {
+      const cat = catPorClave.get(norm(c.codigo)) || catPorClave.get(norm(c.id)) || catPorClave.get(norm(c.titulo));
+      if (!c.codigo && cat?.codigo) c.codigo = cat.codigo;
+      const keys = [norm(c.codigo), norm(c.id), norm(cat?.codigo), norm(c.titulo)].filter(Boolean);
+      const match = notasRows.find((n: any) => {
+        const nNum = norm(n.diplomado_numero);
+        const nTit = norm(n.diplomado_nombre);
+        return keys.includes(nNum) || keys.includes(nTit);
+      });
+      if (match) {
+        c.nota = Number(match.nota ?? c.nota ?? 0);
+        c.rendido = true;
+        c.completado = Boolean(c.completado || match.estado === 'APROBADO');
+        if (match.updated_at) {
+          c.fecha_examen = match.updated_at;
+          if (!c.fecha) {
+            c.fecha = String(match.updated_at).split('T')[0];
+          }
+        }
+      }
+    });
+  } catch (err) {
+    console.warn('No se pudo enriquecer perfil con notas_modulos:', err);
+  }
+}
+
 export async function GET() {
   try {
     const supabase = await createClient();
@@ -184,6 +288,7 @@ export async function GET() {
         });
 
         cursos_json = await enriquecerCursosConTipoCatalogo(admin, cursos_json);
+        await enriquecerConNotasModulos(admin, pByDni.dni_ce, diplomados_json, cursos_json);
 
         const paymentStateDemo = derivePaymentStateForCredits({
           pagos: rawPagos || [],
@@ -287,9 +392,9 @@ export async function GET() {
         titulo: defaultDip.titulo,
         avance: 0,
         modulos: defaultDip.modulos.map((m: any, mIdx: number) => ({
-          id: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
-          codigo: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
-          nombre: m.nombre || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
+          id: m.codigo || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`,
+          codigo: m.codigo || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`,
+          nombre: m.nombre || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`,
           nota: 0,
           completado: false
         }))
@@ -330,6 +435,7 @@ export async function GET() {
     });
 
     cursos_json = await enriquecerCursosConTipoCatalogo(admin, cursos_json);
+    await enriquecerConNotasModulos(admin, profile.dni_ce, diplomados_json, cursos_json);
 
     // Cálculo centralizado de Créditos EDUMIN desde `profiles.cupos_creditos`
     const cupos = parseCuposCreditosFromProfile(profile);

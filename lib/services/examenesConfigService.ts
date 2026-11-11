@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { createClient } from '@supabase/supabase-js';
 import type { ConfiguracionExamenItem } from '@/lib/types/examenes';
+import { formatearCodigoModulo } from '@/lib/utils/profileParser';
 
 const CONFIG_FILE_PATH = path.join(process.cwd(), 'lib', 'data', 'configuracion_examenes.json');
 
@@ -99,20 +100,24 @@ export function obtenerConfiguracionExamen(codigoPrograma: string, modulo?: stri
   const codNorm = (codigoPrograma || '').trim().toUpperCase();
   const dict = leerConfigsLocales();
 
-  // 1. Búsqueda exacta por ID (e.g. "DIP-01_Módulo 01")
+  // 1. Búsqueda exacta por ID (e.g. "DIP-01_MÓDULO 01")
   const modNorm = (modulo || '').trim();
   const keyExacta = `${codNorm}_${modNorm}`;
   if (dict[keyExacta]) {
     return dict[keyExacta];
   }
 
-  // 2. Búsqueda flexible por código y coincidencia de módulo
+  // 2. Búsqueda flexible por código y coincidencia de módulo (arábigo 2 dígitos, sin tildes o texto exacto como MÓDULO ÚNICO)
   const items = Object.values(dict).filter(i => i.codigo_programa.toUpperCase() === codNorm);
   if (items.length > 0) {
     if (modNorm) {
-      const match = items.find(i => 
-        i.modulo.toLowerCase().replace(/ó/g, 'o') === modNorm.toLowerCase().replace(/ó/g, 'o')
-      );
+      const modCanon = formatearCodigoModulo(modNorm);
+      const limpiar = (s: string) =>
+        s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+      const match = items.find(i => {
+        const modItemCanon = formatearCodigoModulo(i.modulo);
+        return limpiar(i.modulo) === limpiar(modNorm) || limpiar(modItemCanon) === limpiar(modCanon);
+      });
       if (match) return match;
     }
     // Si solo hay una configuración para el curso/taller
@@ -128,7 +133,7 @@ export function obtenerConfiguracionExamen(codigoPrograma: string, modulo?: stri
     codigo_programa: codNorm,
     nombre_programa: codNorm,
     tipo_programa: esTaller ? 'taller' : esCurso ? 'curso' : 'diplomado',
-    modulo: modNorm || (esCurso ? 'Examen del Curso' : esTaller ? 'Examen del Taller' : 'Módulo 01'),
+    modulo: modNorm ? (esCurso || esTaller ? modNorm : formatearCodigoModulo(modNorm)) : (esCurso ? 'Examen del Curso' : esTaller ? 'Examen del Taller' : 'MÓDULO 01'),
     aplica_examen: !esTaller, // Los talleres por defecto NO aplican examen
     tiempo_minutos: 30,
     cantidad_preguntas: 10,

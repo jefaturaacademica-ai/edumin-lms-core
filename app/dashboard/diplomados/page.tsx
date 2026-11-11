@@ -6,6 +6,7 @@ import {
   Lock, 
   Award, 
   CheckCircle2, 
+  XCircle,
   Sparkles, 
   ShieldCheck, 
   Tag, 
@@ -71,7 +72,7 @@ export default function DiplomadosPage() {
   const [nivelFiltro, setNivelFiltro] = useState<string>('Todos');
 
   // Separación por estado y filtrado activo según píldora seleccionada
-  // Un diplomado está completado si y solo si todos sus módulos tienen 100% de avance (y examen aprobado si aplica)
+  // Un diplomado pasa a Completados si y solo si tiene 100% de avance Y aprobó todos sus módulos
   const esDiplomadoCompletadoHelper = (diplomado: any) => {
     if (!diplomado.modulos || diplomado.modulos.length === 0) return false;
     const codDip = (diplomado.codigo || diplomado.id || '').toUpperCase();
@@ -79,12 +80,14 @@ export default function DiplomadosPage() {
       const av = typeof m.avance === 'number' 
         ? m.avance 
         : calcularAvanceModuloGranular(m, idx, diplomado.completadosMap);
-      const modNom = m.nombre || m.codigo || `Módulo ${(idx + 1).toString().padStart(2, '0')}`;
-      const confItem = (configuracionExamenesJson as Record<string, any>)[`${codDip}_${modNom}`];
+      const modCodKey = formatearCodigoModulo(m.codigo, idx);
+      const confItem = (configuracionExamenesJson as Record<string, any>)[`${codDip}_${modCodKey}`];
       const noAplica = confItem?.aplica_examen === false;
+      const notaMinima = Number(confItem?.nota_minima ?? 12);
       if (noAplica) return av === 100;
       const examRendido = Boolean(m.rendido || (m.nota !== undefined && m.nota !== null && Number(m.nota) > 0));
-      return av === 100 && examRendido;
+      const examAprobado = examRendido && m.nota !== undefined && m.nota !== null && Number(m.nota) >= notaMinima;
+      return av === 100 && examAprobado;
     });
   };
 
@@ -216,6 +219,7 @@ export default function DiplomadosPage() {
 
               listMap.push({
                 id: matched.slug,
+                codigo: liveDip?.codigo || dipJson?.codigo || '',
                 titulo: (liveDip?.titulo || matched.titulo).toUpperCase(),
                 avance: avanceFinal,
                 imagen: (liveDip?.imagen && !liveDip.imagen.includes('gestion-minera.webp'))
@@ -466,12 +470,14 @@ export default function DiplomadosPage() {
                     const av = typeof m.avance === 'number' 
                       ? m.avance 
                       : calcularAvanceModuloGranular(m, idx, diplomado.completadosMap);
-                    const modNom = m.nombre || m.codigo || `Módulo ${(idx + 1).toString().padStart(2, '0')}`;
-                    const confItem = (configuracionExamenesJson as Record<string, any>)[`${codDip}_${modNom}`];
+                    const modCodKey = formatearCodigoModulo(m.codigo, idx);
+                    const confItem = (configuracionExamenesJson as Record<string, any>)[`${codDip}_${modCodKey}`];
                     const noAplica = confItem?.aplica_examen === false;
+                    const notaMinima = Number(confItem?.nota_minima ?? 12);
                     if (noAplica) return av === 100;
                     const examRendido = Boolean(m.rendido || (m.nota !== undefined && m.nota !== null && Number(m.nota) > 0));
-                    return av === 100 && examRendido;
+                    const examAprobado = examRendido && m.nota !== undefined && m.nota !== null && Number(m.nota) >= notaMinima;
+                    return av === 100 && examAprobado;
                   }).length;
                   const porcentajeModulos = Math.round((modulosCompletadosCount / diplomado.modulos.length) * 100);
 
@@ -498,7 +504,7 @@ export default function DiplomadosPage() {
                         {/* Contenedor derecho: badge Bloqueado si aplica, o barra de avance de módulos */}
                         <div className="flex items-center justify-between sm:justify-end gap-4 shrink-0">
                           {estaBloqueadoPorCuota ? (
-                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-rose-600 text-white shadow-sm border border-rose-400/30">
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-purple-600 text-white shadow-sm border border-purple-400/30">
                               <Lock className="size-3.5" /> Bloqueado por cuota
                             </span>
                           ) : (
@@ -536,33 +542,53 @@ export default function DiplomadosPage() {
                               : calcularAvanceModuloGranular(modulo, idx, diplomado.completadosMap);
 
                                                         // Verificar estado del examen del módulo
-                            const modNom = modulo.nombre || modulo.codigo || `Módulo ${(idx + 1).toString().padStart(2, '0')}`;
-                            const confItem = (configuracionExamenesJson as Record<string, any>)[`${codDip}_${modNom}`];
+                            const modCodKey = formatearCodigoModulo(modulo.codigo, idx);
+                            const confItem = (configuracionExamenesJson as Record<string, any>)[`${codDip}_${modCodKey}`];
                             const noAplica = confItem?.aplica_examen === false;
+                            const notaMinimaMod = Number(confItem?.nota_minima ?? 12);
 
                             const examenRendido = Boolean(modulo.rendido || (modulo.nota !== undefined && modulo.nota !== null && Number(modulo.nota) > 0));
-                            const examenAprobado = examenRendido && Number(modulo.nota) >= 12;
-                            const esModuloCompletado = noAplica ? avanceModulo === 100 : (avanceModulo === 100 && examenRendido);
+                            const examenAprobado = examenRendido && modulo.nota !== undefined && modulo.nota !== null && Number(modulo.nota) >= notaMinimaMod;
+                            const examenDesaprobado = !noAplica && examenRendido && !examenAprobado;
+
+                            // El estado Desaprobado solo aplica cuando ya llegó al 100% de avance de clases.
+                            // Si va en < 100% (ej. 70%), sigue mostrando "Continuar clases" (En progreso).
+                            const esModuloCompletado = noAplica ? avanceModulo === 100 : (avanceModulo === 100 && examenAprobado);
+                            const esModuloDesaprobado100 = !noAplica && avanceModulo === 100 && examenDesaprobado;
                             const tieneExamenPendiente = !noAplica && avanceModulo === 100 && !examenRendido;
-                            const esModuloEnProgreso = avanceModulo > 0 && avanceModulo < 100;
                             const esModuloPorIniciar = avanceModulo === 0;
 
                             const whatsappCuotaUrl = `https://wa.me/51984512809?text=${encodeURIComponent(
                               `Hola EDUMIN, deseo orientación para pagar mi siguiente cuota y habilitar el diplomado: ${diplomado.titulo}.`
                             )}`;
+                            const whatsappSustitutorioUrl = `https://wa.me/51924400268?text=${encodeURIComponent(
+                              `Hola EDUMIN, desaprobé el ${modCodKey} de ${diplomado.titulo}. Deseo adquirir el Examen Sustitutorio.`
+                            )}`;
 
-                            // Centralización de estilos e información por estado del módulo (mismo color en badge, barra y botón)
+                            // Centralización de estilos e información por estado del módulo (Bloqueado = purple, Desaprobado = rose)
                             const infoEstadoModulo = estaBloqueadoPorCuota
                               ? {
                                   label: 'Bloqueado',
                                   Icono: Lock,
+                                  badgeBg: 'bg-purple-600 border-purple-400/30 text-white',
+                                  duracionIconColor: 'text-purple-400',
+                                  porcentajeColor: esOscuro ? 'text-purple-400' : 'text-purple-600',
+                                  barraBg: 'bg-purple-600',
+                                  botonBg: 'bg-purple-600 hover:bg-purple-700 shadow-purple-600/20 text-white font-bold cursor-pointer',
+                                  botonTexto: 'Pagar cuota',
+                                  enlaceHref: whatsappCuotaUrl
+                                }
+                              : esModuloDesaprobado100
+                              ? {
+                                  label: 'Examen desaprobado',
+                                  Icono: XCircle,
                                   badgeBg: 'bg-rose-600 border-rose-400/30 text-white',
                                   duracionIconColor: 'text-rose-400',
                                   porcentajeColor: esOscuro ? 'text-rose-400' : 'text-rose-600',
                                   barraBg: 'bg-rose-600',
                                   botonBg: 'bg-rose-600 hover:bg-rose-700 shadow-rose-600/20 text-white font-bold cursor-pointer',
-                                  botonTexto: 'Pagar cuota',
-                                  enlaceHref: whatsappCuotaUrl
+                                  botonTexto: 'Pagar sustitutorio',
+                                  enlaceHref: `/dashboard/diplomados/${diplomado.id}?modulo=${modulo.id}&accion=examen`
                                 }
                               : tieneExamenPendiente
                               ? {
@@ -688,6 +714,17 @@ export default function DiplomadosPage() {
                                       <span>{infoEstadoModulo.botonTexto}</span>
                                       <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform hover:translate-x-0.5" />
                                     </a>
+                                  ) : esModuloDesaprobado100 ? (
+                                    <a
+                                      href={whatsappSustitutorioUrl}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      onClick={(e) => e.stopPropagation()}
+                                      className={`w-full sm:w-auto text-xs font-bold px-5 py-2.5 rounded-xl transition-all inline-flex items-center justify-center shadow-sm ${infoEstadoModulo.botonBg}`}
+                                    >
+                                      <span>{infoEstadoModulo.botonTexto}</span>
+                                      <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform hover:translate-x-0.5" />
+                                    </a>
                                   ) : (
                                     <div className={`w-full sm:w-auto text-xs font-bold px-5 py-2.5 rounded-xl transition-all inline-flex items-center justify-center shadow-sm ${infoEstadoModulo.botonBg}`}>
                                       <span>{infoEstadoModulo.botonTexto}</span>
@@ -698,17 +735,79 @@ export default function DiplomadosPage() {
                               </>
                             );
 
-                            return estaBloqueadoPorCuota ? (
-                              <div
-                                key={modulo.id}
-                                onClick={() => setTarjetaBloqueoVisibleId(prev => prev === cardBloqueoKey ? null : cardBloqueoKey)}
-                                className={`group rounded-2xl overflow-hidden shadow-sm border flex flex-col justify-between transition-all hover:shadow-md cursor-pointer ${
-                                  esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
-                                }`}
-                              >
-                                {contenidoTarjetaModulo}
-                              </div>
-                            ) : (
+                            if (estaBloqueadoPorCuota) {
+                              return (
+                                <div
+                                  key={modulo.id}
+                                  onClick={() => setTarjetaBloqueoVisibleId(prev => prev === cardBloqueoKey ? null : cardBloqueoKey)}
+                                  className={`group rounded-2xl overflow-hidden shadow-sm border flex flex-col justify-between transition-all hover:shadow-md cursor-pointer ${
+                                    esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
+                                  }`}
+                                >
+                                  {contenidoTarjetaModulo}
+                                </div>
+                              );
+                            }
+
+                            if (esModuloDesaprobado100) {
+                              return (
+                                <div
+                                  key={modulo.id}
+                                  className={`group rounded-2xl overflow-hidden shadow-sm border flex flex-col justify-between transition-all hover:shadow-md ${
+                                    esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
+                                  }`}
+                                >
+                                  <Link href={infoEstadoModulo.enlaceHref} className="flex-1 flex flex-col cursor-pointer">
+                                    <div className="relative h-44 w-full bg-slate-800 overflow-hidden">
+                                      <img
+                                        src={diplomado.imagen}
+                                        alt={modulo.titulo}
+                                        className="object-cover w-full h-full transition-transform duration-300 opacity-90 group-hover:scale-105"
+                                      />
+                                      <div className="absolute top-3 inset-x-3 flex flex-wrap items-center justify-between gap-1.5 pointer-events-none z-10">
+                                        <span className="text-[11px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 shrink-0 uppercase tracking-wide">
+                                          {formatearCodigoModulo(modulo.codigo || modulo.id, idx).toUpperCase()}
+                                        </span>
+                                        <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-semibold border backdrop-blur-md shrink-0 ${infoEstadoModulo.badgeBg}`}>
+                                          <IconoEstadoMod className="size-3.5" /> {infoEstadoModulo.label}
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                                      <div className="space-y-3">
+                                        <div className="h-12 flex items-start overflow-hidden">
+                                          <h3 className={`text-base font-bold leading-snug line-clamp-2 text-balance uppercase ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                                            {modulo.titulo.toUpperCase()}
+                                          </h3>
+                                        </div>
+                                      </div>
+                                      <div className="space-y-1.5 pt-2">
+                                        <div className="flex items-center justify-between text-xs font-bold">
+                                          <span className={esOscuro ? 'text-slate-400 font-medium' : 'text-slate-500 font-medium'}>Avance</span>
+                                          <span className={`font-bold ${infoEstadoModulo.porcentajeColor}`}>{avanceModulo}% completado</span>
+                                        </div>
+                                        <div className={`w-full h-2 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-100'}`}>
+                                          <div className={`h-full rounded-full transition-all duration-500 ${infoEstadoModulo.barraBg}`} style={{ width: `${avanceModulo}%` }} />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </Link>
+                                  <div className={`px-6 pb-6 pt-3 border-t flex items-center justify-end ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
+                                    <a
+                                      href={whatsappSustitutorioUrl}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className={`w-full sm:w-auto text-xs font-bold px-5 py-2.5 rounded-xl transition-all inline-flex items-center justify-center shadow-sm ${infoEstadoModulo.botonBg}`}
+                                    >
+                                      <span>{infoEstadoModulo.botonTexto}</span>
+                                      <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform hover:translate-x-0.5" />
+                                    </a>
+                                  </div>
+                                </div>
+                              );
+                            }
+
+                            return (
                               <Link
                                 key={modulo.id} 
                                 href={infoEstadoModulo.enlaceHref}

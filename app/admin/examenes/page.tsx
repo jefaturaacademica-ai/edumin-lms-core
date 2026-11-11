@@ -97,7 +97,7 @@ export default function AdminExamenesPage() {
   const [showImportModal, setShowImportModal] = useState(false);
   const [importTipoPrograma, setImportTipoPrograma] = useState<'DIPLOMADO' | 'CURSO'>('DIPLOMADO');
   const [importDiplomado, setImportDiplomado] = useState('DIP-01');
-  const [importModulo, setImportModulo] = useState('Módulo 01');
+  const [importModulo, setImportModulo] = useState('MÓDULO 01');
   const [importDificultad, setImportDificultad] = useState('MEDIO');
   const [jsonParaImportar, setJsonParaImportar] = useState('');
   const [archivoCargadoNombre, setArchivoCargadoNombre] = useState<string | null>(null);
@@ -108,7 +108,7 @@ export default function AdminExamenesPage() {
   const DIPLOMADOS_CINCO_MODULOS = ['DIP-08', 'DIP-13', 'DIP-17'];
   const listaModulos = useMemo(() => {
     if (diplomadoSeleccionado === 'TODOS' || !diplomadoSeleccionado) {
-      return ['Módulo 01', 'Módulo 02', 'Módulo 03', 'Módulo 04', 'Módulo 05'];
+      return ['MÓDULO 01', 'MÓDULO 02', 'MÓDULO 03', 'MÓDULO 04', 'MÓDULO 05'];
     }
     if (diplomadoSeleccionado.startsWith('CUR-')) {
       return ['Examen del Curso'];
@@ -117,9 +117,9 @@ export default function AdminExamenesPage() {
       return ['Examen del Taller'];
     }
     if (DIPLOMADOS_CINCO_MODULOS.includes(diplomadoSeleccionado)) {
-      return ['Módulo 01', 'Módulo 02', 'Módulo 03', 'Módulo 04', 'Módulo 05'];
+      return ['MÓDULO 01', 'MÓDULO 02', 'MÓDULO 03', 'MÓDULO 04', 'MÓDULO 05'];
     }
-    return ['Módulo 01', 'Módulo 02', 'Módulo 03'];
+    return ['MÓDULO 01', 'MÓDULO 02', 'MÓDULO 03'];
   }, [diplomadoSeleccionado]);
 
   const listaModulosImport = useMemo(() => {
@@ -130,9 +130,9 @@ export default function AdminExamenesPage() {
       return ['Examen del Taller'];
     }
     if (DIPLOMADOS_CINCO_MODULOS.includes(importDiplomado)) {
-      return ['Módulo 01', 'Módulo 02', 'Módulo 03', 'Módulo 04', 'Módulo 05'];
+      return ['MÓDULO 01', 'MÓDULO 02', 'MÓDULO 03', 'MÓDULO 04', 'MÓDULO 05'];
     }
-    return ['Módulo 01', 'Módulo 02', 'Módulo 03'];
+    return ['MÓDULO 01', 'MÓDULO 02', 'MÓDULO 03'];
   }, [importDiplomado]);
 
   // Cargar catálogo dinámico de diplomados y cursos si está disponible
@@ -305,7 +305,7 @@ export default function AdminExamenesPage() {
     const dipObj = todosLosProgramas.find(d => d.codigo === codDip);
     const nombreDip = dipObj?.nombre || codDip;
     const esCurso = codDip.startsWith('CUR-');
-    const mod = esCurso ? 'Examen del Curso' : (moduloSeleccionado !== 'TODOS' ? moduloSeleccionado : 'Módulo 01');
+    const mod = esCurso ? 'Examen del Curso' : (moduloSeleccionado !== 'TODOS' ? moduloSeleccionado : 'MÓDULO 01');
 
     setPreguntaEditando({
       codigo_diplomado: codDip,
@@ -370,7 +370,7 @@ export default function AdminExamenesPage() {
     const esCurso = codDip.startsWith('CUR-');
     setImportTipoPrograma(esCurso ? 'CURSO' : 'DIPLOMADO');
     setImportDiplomado(codDip);
-    setImportModulo(esCurso ? 'Examen del Curso' : (moduloSeleccionado !== 'TODOS' ? moduloSeleccionado : 'Módulo 01'));
+    setImportModulo(esCurso ? 'Examen del Curso' : (moduloSeleccionado !== 'TODOS' ? moduloSeleccionado : 'MÓDULO 01'));
     setImportDificultad(filtroDificultad !== 'TODOS' ? filtroDificultad : 'MEDIO');
     setJsonParaImportar('');
     setArchivoCargadoNombre(null);
@@ -1551,7 +1551,7 @@ export default function AdminExamenesPage() {
                         ...prev!, 
                         codigo_diplomado: cod,
                         diplomado: prog?.nombre || cod,
-                        modulo: esCur ? 'Examen del Curso' : (esTal ? 'Examen del Taller' : ((prev?.modulo === 'Examen del Curso' || prev?.modulo === 'Examen del Taller') ? 'Módulo 01' : (prev?.modulo || 'Módulo 01')))
+                        modulo: esCur ? 'Examen del Curso' : (esTal ? 'Examen del Taller' : ((prev?.modulo === 'Examen del Curso' || prev?.modulo === 'Examen del Taller') ? 'MÓDULO 01' : (prev?.modulo || 'MÓDULO 01')))
                       }));
                     }}
                     className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 transition-colors"
@@ -1603,8 +1603,8 @@ export default function AdminExamenesPage() {
                       className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 transition-colors"
                     >
                       {(DIPLOMADOS_CINCO_MODULOS.includes(preguntaEditando.codigo_diplomado || diplomadoSeleccionado)
-                        ? ['Módulo 01', 'Módulo 02', 'Módulo 03', 'Módulo 04', 'Módulo 05']
-                        : ['Módulo 01', 'Módulo 02', 'Módulo 03']
+                        ? ['MÓDULO 01', 'MÓDULO 02', 'MÓDULO 03', 'MÓDULO 04', 'MÓDULO 05']
+                        : ['MÓDULO 01', 'MÓDULO 02', 'MÓDULO 03']
                       ).map(m => (
                         <option key={m} value={m}>{m}</option>
                       ))}
@@ -1814,7 +1814,7 @@ export default function AdminExamenesPage() {
                         } else if (val.startsWith('TAL-')) {
                           setImportModulo('Examen del Taller');
                         } else if (importModulo === 'Examen del Curso' || importModulo === 'Examen del Taller') {
-                          setImportModulo('Módulo 01');
+                          setImportModulo('MÓDULO 01');
                         }
                       }}
                       className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 transition-colors"

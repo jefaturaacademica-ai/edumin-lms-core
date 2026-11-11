@@ -2,13 +2,47 @@ import { NextRequest, NextResponse } from 'next/server';
 import { 
   sortearPreguntasExamen, 
   calificarExamen, 
-  obtenerIntentoNotasModulos,
+  obtenerEstadoIntentosExamen,
+  obtenerIntentosPorPrograma,
   obtenerModulosConExamen
 } from '@/lib/services/examenesService';
-import { obtenerConfiguracionExamen } from '@/lib/services/examenesConfigService';
+import {
+  obtenerConfiguracionExamen,
+  obtenerTodasConfiguraciones
+} from '@/lib/services/examenesConfigService';
+import { createClient } from '@/lib/supabase/server';
+import { createAdminClient } from '@/lib/supabase/admin';
+
+async function resolverDniEstudiante(dniParam?: string | null): Promise<string> {
+  try {
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+    if (user) {
+      const admin = createAdminClient();
+      const { data: p } = await admin
+        .from('profiles')
+        .select('dni_ce')
+        .eq('id', user.id)
+        .maybeSingle();
+      if (p?.dni_ce) return String(p.dni_ce).trim();
+
+      if (user.email) {
+        const { data: pEmail } = await admin
+          .from('profiles')
+          .select('dni_ce')
+          .eq('email', user.email)
+          .maybeSingle();
+        if (pEmail?.dni_ce) return String(pEmail.dni_ce).trim();
+      }
+    }
+  } catch {
+    // Fallback a parámetro explícito
+  }
+  return (dniParam || '71234567').trim();
+}
 
 /**
- * GET: Obtener las 10 preguntas sorteadas del banco, disponibilidad o el intento previo del estudiante
+ * GET: Obtener preguntas sorteadas del banco, disponibilidad o intentos previos del estudiante
  */
 export async function GET(request: NextRequest) {
   try {
@@ -16,7 +50,7 @@ export async function GET(request: NextRequest) {
     const codigoDiplomado = searchParams.get('codigoDiplomado');
     const modulo = searchParams.get('modulo');
     const accion = searchParams.get('accion');
-    const dni = searchParams.get('dni') || '71234567';
+    const dni = await resolverDniEstudiante(searchParams.get('dni'));
 
     if (!codigoDiplomado) {
       return NextResponse.json({
@@ -25,13 +59,47 @@ export async function GET(request: NextRequest) {
       }, { status: 400 });
     }
 
-    // Consultar qué módulos tienen preguntas disponibles para este diplomado
+    // Consultar qué módulos tienen preguntas disponibles y su configuración para este diplomado
     if (accion === 'disponibilidad') {
-      const modulos = await obtenerModulosConExamen(codigoDiplomado);
+      const [modulos, configs] = await Promise.all([
+        obtenerModulosConExamen(codigoDiplomado),
+        obtenerTodasConfiguraciones({ codigo_programa: codigoDiplomado })
+      ]);
+      const configsPorModulo: Record<string, {
+        aplica_examen: boolean;
+        tiempo_minutos: number;
+        cantidad_preguntas: number;
+        nota_minima: number;
+        intentos_permitidos: number;
+      }> = {};
+      configs.forEach(c => {
+        configsPorModulo[c.modulo] = {
+          aplica_examen: c.aplica_examen,
+          tiempo_minutos: c.tiempo_minutos,
+          cantidad_preguntas: c.cantidad_preguntas,
+          nota_minima: c.nota_minima,
+          intentos_permitidos: c.intentos_permitidos
+        };
+      });
       return NextResponse.json({
         success: true,
         codigoDiplomado,
-        modulosConPreguntas: modulos
+        modulosConPreguntas: modulos,
+        configsPorModulo
+      });
+    }
+
+    // Consultar todos los intentos guardados en notas_modulos para este programa
+    if (accion === 'mis_intentos') {
+      const intentos = await obtenerIntentosPorPrograma({
+        codigoDiplomado,
+        dni
+      });
+      return NextResponse.json({
+        success: true,
+        codigoDiplomado,
+        dni,
+        intentos
       });
     }
 
@@ -42,29 +110,31 @@ export async function GET(request: NextRequest) {
       }, { status: 400 });
     }
 
-    // Si pide consultar el intento guardado en notas_modulos
+    const config = obtenerConfiguracionExamen(codigoDiplomado, modulo);
+    const configPublica = {
+      id: config.id,
+      aplica_examen: config.aplica_examen,
+      tiempo_minutos: config.tiempo_minutos,
+      cantidad_preguntas: config.cantidad_preguntas,
+      nota_minima: config.nota_minima,
+      intentos_permitidos: config.intentos_permitidos
+    };
+
+    // Consultar el intento guardado y conteo de intentos en notas_modulos
     if (accion === 'ver_intento') {
-      const intentoPrevio = await obtenerIntentoNotasModulos({
+      const { intentosRealizados, ultimoIntento } = await obtenerEstadoIntentosExamen({
         codigoDiplomado,
         modulo,
         dni
       });
-      const config = obtenerConfiguracionExamen(codigoDiplomado, modulo);
       return NextResponse.json({
         success: true,
-        intento: intentoPrevio,
-        config: {
-          id: config.id,
-          aplica_examen: config.aplica_examen,
-          tiempo_minutos: config.tiempo_minutos,
-          cantidad_preguntas: config.cantidad_preguntas,
-          nota_minima: config.nota_minima,
-          intentos_permitidos: config.intentos_permitidos
-        }
+        intento: ultimoIntento,
+        intentosRealizados,
+        intentosPermitidos: config.intentos_permitidos ?? 1,
+        config: configPublica
       });
     }
-
-    const config = obtenerConfiguracionExamen(codigoDiplomado, modulo);
 
     // Si no aplica examen
     if (config.aplica_examen === false) {
@@ -74,7 +144,30 @@ export async function GET(request: NextRequest) {
         total: 0,
         codigoDiplomado,
         modulo,
-        config,
+        config: configPublica,
+        preguntas: []
+      });
+    }
+
+    // Verificar si el estudiante ya agotó sus intentos permitidos
+    const intentosPermitidos = config.intentos_permitidos ?? 1;
+    const { intentosRealizados, ultimoIntento } = await obtenerEstadoIntentosExamen({
+      codigoDiplomado,
+      modulo,
+      dni
+    });
+
+    if (intentosRealizados >= intentosPermitidos && ultimoIntento) {
+      return NextResponse.json({
+        success: true,
+        aplica_examen: true,
+        intentoAgotado: true,
+        intentosRealizados,
+        intentosPermitidos,
+        intento: ultimoIntento,
+        codigoDiplomado,
+        modulo,
+        config: configPublica,
         preguntas: []
       });
     }
@@ -91,17 +184,13 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       success: true,
       aplica_examen: true,
+      intentoAgotado: false,
+      intentosRealizados,
+      intentosPermitidos,
       total: preguntas.length,
       codigoDiplomado,
       modulo,
-      config: {
-        id: config.id,
-        aplica_examen: config.aplica_examen,
-        tiempo_minutos: config.tiempo_minutos,
-        cantidad_preguntas: config.cantidad_preguntas,
-        nota_minima: config.nota_minima,
-        intentos_permitidos: config.intentos_permitidos
-      },
+      config: configPublica,
       preguntas
     });
   } catch (error: any) {
@@ -111,12 +200,12 @@ export async function GET(request: NextRequest) {
 }
 
 /**
- * POST: Enviar respuestas del estudiante, calcular calificación y retornar desglose con rationale
+ * POST: Enviar respuestas del estudiante, validar intentos disponibles, calcular calificación y guardar en Supabase
  */
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { codigoDiplomado, modulo, dni, respuestasUsuario } = body;
+    const { codigoDiplomado, modulo, dni: dniBody, respuestasUsuario, fechaInicio } = body;
 
     if (!codigoDiplomado || !modulo || !respuestasUsuario) {
       return NextResponse.json({
@@ -125,11 +214,33 @@ export async function POST(request: NextRequest) {
       }, { status: 400 });
     }
 
+    const dni = await resolverDniEstudiante(dniBody);
+    const config = obtenerConfiguracionExamen(codigoDiplomado, modulo);
+    const intentosPermitidos = config.intentos_permitidos ?? 1;
+
+    const { intentosRealizados, ultimoIntento } = await obtenerEstadoIntentosExamen({
+      codigoDiplomado,
+      modulo,
+      dni
+    });
+
+    if (intentosRealizados >= intentosPermitidos && ultimoIntento) {
+      return NextResponse.json({
+        success: false,
+        intentoAgotado: true,
+        intento: ultimoIntento,
+        error: 'Ya agotaste el límite de intentos permitidos para este examen.'
+      }, { status: 409 });
+    }
+
+    const fechaFin = new Date().toISOString();
     const resultado = await calificarExamen({
       codigoDiplomado,
       modulo,
-      dni: dni || '71234567',
-      respuestasUsuario
+      dni,
+      respuestasUsuario,
+      fechaInicio: typeof fechaInicio === 'string' && fechaInicio ? fechaInicio : null,
+      fechaFin
     });
 
     return NextResponse.json({

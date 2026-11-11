@@ -30,17 +30,23 @@ export type FormatoNombreEstudiante = 'apellidos-nombres' | 'nombres-apellidos' 
 export type ModoHorasCreditos = 'horas-y-creditos' | 'solo-horas' | 'solo-creditos' | 'personalizado';
 
 export const FUENTES_CERTIFICADO = [
-  { id: 'serif-institucional', nombre: 'Times New Roman', fontFamily: '"Times New Roman", Times, Georgia, serif' },
-  { id: 'serif-elegante', nombre: 'Georgia', fontFamily: 'Georgia, "Times New Roman", serif' },
-  { id: 'serif-titular', nombre: 'Playfair Display', fontFamily: '"Playfair Display", Georgia, serif' },
-  { id: 'serif-romana', nombre: 'Cinzel', fontFamily: '"Cinzel", Georgia, "Times New Roman", serif' },
-  { id: 'serif-cormorant', nombre: 'Cormorant Garamond', fontFamily: '"Cormorant Garamond", Garamond, Georgia, serif' },
-  { id: 'serif-lora', nombre: 'Lora', fontFamily: '"Lora", Georgia, serif' },
-  { id: 'sans-outfit', nombre: 'Outfit', fontFamily: '"Outfit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' },
-  { id: 'sans-moderna', nombre: 'Montserrat', fontFamily: '"Montserrat", "Segoe UI", Arial, sans-serif' },
-  { id: 'sans-formal', nombre: 'Inter', fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' },
-  { id: 'sans-roboto', nombre: 'Roboto', fontFamily: '"Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }
+  { id: 'serif-institucional', nombre: 'Times New Roman', fontFamily: '"Times New Roman", Times, Georgia, serif', soportaCursiva: true },
+  { id: 'serif-elegante', nombre: 'Georgia', fontFamily: 'Georgia, "Times New Roman", serif', soportaCursiva: true },
+  { id: 'serif-titular', nombre: 'Playfair Display', fontFamily: '"Playfair Display", Georgia, serif', soportaCursiva: true },
+  { id: 'serif-romana', nombre: 'Cinzel', fontFamily: '"Cinzel", Georgia, "Times New Roman", serif', soportaCursiva: false },
+  { id: 'serif-cormorant', nombre: 'Cormorant Garamond', fontFamily: '"Cormorant Garamond", Garamond, Georgia, serif', soportaCursiva: true },
+  { id: 'serif-lora', nombre: 'Lora', fontFamily: '"Lora", Georgia, serif', soportaCursiva: true },
+  { id: 'sans-outfit', nombre: 'Outfit', fontFamily: '"Outfit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', soportaCursiva: false },
+  { id: 'sans-moderna', nombre: 'Montserrat', fontFamily: '"Montserrat", "Segoe UI", Arial, sans-serif', soportaCursiva: true },
+  { id: 'sans-formal', nombre: 'Inter', fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif', soportaCursiva: true },
+  { id: 'sans-roboto', nombre: 'Roboto', fontFamily: '"Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', soportaCursiva: true }
 ] as const;
+
+export function fuenteSoportaCursiva(fuenteId?: TipoFuenteCertificado): boolean {
+  if (!fuenteId) return true;
+  const match = FUENTES_CERTIFICADO.find(f => f.id === fuenteId);
+  return match ? match.soportaCursiva : true;
+}
 
 // Dimensiones de referencia física estándar A4 en puntos tipográficos (72 pt / pulgada)
 export const A4_ANCHO_PT_HORIZONTAL = 841.89; // 29.7 cm
@@ -97,7 +103,7 @@ export function medirAnchoTextoPt(
   if (!ctx) return texto.length * (tamanoPt * 0.62);
 
   const fontFam = obtenerFontFamily(fuenteId, '"Times New Roman", Times, Georgia, serif');
-  const style = esCursiva ? 'italic ' : '';
+  const style = esCursiva && fuenteSoportaCursiva(fuenteId) ? 'italic ' : '';
   const weight = esNegrita ? 'bold ' : 'normal ';
   ctx.font = `${style}${weight}${tamanoPt}px ${fontFam}`;
   return ctx.measureText(texto).width;
@@ -648,7 +654,7 @@ export default function AvanzaCertificateRenderer({
   const rawPrograma = progClean || programa || 'DERECHO MINERO';
 
   const modClean = (modulo || '')
-    .replace(/^Módulo\s*\d+[:\-\s]*/i, '')
+    .replace(/^(?:M[óo]dulo\s*(?:\d+|[IVX]+|ÚNICO))[:\-\s]*/i, '')
     .trim();
   const rawModulo = modClean || modulo || 'LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR';
 
@@ -904,7 +910,7 @@ export default function AvanzaCertificateRenderer({
       {/* Carga e inyección explícita de Google Fonts para garantizar Outfit, Playfair, Cinzel, Cormorant, Lora, etc. */}
       <link 
         rel="stylesheet" 
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&display=swap" 
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" 
       />
       {/* Guía si no tiene fondo */}
       {!bgImg && (
@@ -963,7 +969,7 @@ export default function AvanzaCertificateRenderer({
               fontSize: calcularTamanoCqw(tamanoEstudiantePt, orientacion),
               color: cfg.estudiante.color || '#000000',
               fontWeight: cfg.estudiante.negrita ? 'bold' : 'normal',
-              fontStyle: cfg.estudiante.cursiva ? 'italic' : 'normal',
+              fontStyle: cfg.estudiante.cursiva && fuenteSoportaCursiva(cfg.estudiante.fuente) ? 'italic' : 'normal',
               textDecoration: cfg.estudiante.subrayado ? 'underline' : 'none',
               textAlign: cfg.estudiante.alineacion
             }}
@@ -1007,7 +1013,7 @@ export default function AvanzaCertificateRenderer({
               fontSize: calcularTamanoCqw(tamanoProgPt, orientacion),
               color: cfg.programa.color || '#000000',
               fontWeight: cfg.programa.negrita ? 'bold' : 'normal',
-              fontStyle: cfg.programa.cursiva ? 'italic' : 'normal',
+              fontStyle: cfg.programa.cursiva && fuenteSoportaCursiva(cfg.programa.fuente) ? 'italic' : 'normal',
               textDecoration: cfg.programa.subrayado ? 'underline' : 'none',
               lineHeight: cfg.programa.interlineado || 1.25,
               textAlign: cfg.programa.alineacion
@@ -1049,7 +1055,7 @@ export default function AvanzaCertificateRenderer({
             fontFamily: obtenerFontFamily(cfg.horas.fuente, '"Segoe UI", Arial, sans-serif'),
             color: cfg.horas.color || '#000000',
             fontWeight: cfg.horas.negrita ? 'bold' : 'normal',
-            fontStyle: cfg.horas.cursiva ? 'italic' : 'normal',
+            fontStyle: cfg.horas.cursiva && fuenteSoportaCursiva(cfg.horas.fuente) ? 'italic' : 'normal',
             textDecoration: cfg.horas.subrayado ? 'underline' : 'none'
           }}
         >
@@ -1095,7 +1101,7 @@ export default function AvanzaCertificateRenderer({
             fontFamily: obtenerFontFamily(cfg.creditos.fuente, '"Segoe UI", Arial, sans-serif'),
             color: cfg.creditos.color || '#000000',
             fontWeight: cfg.creditos.negrita ? 'bold' : 'normal',
-            fontStyle: cfg.creditos.cursiva ? 'italic' : 'normal',
+            fontStyle: cfg.creditos.cursiva && fuenteSoportaCursiva(cfg.creditos.fuente) ? 'italic' : 'normal',
             textDecoration: cfg.creditos.subrayado ? 'underline' : 'none'
           }}
         >
@@ -1185,7 +1191,7 @@ export default function AvanzaCertificateRenderer({
               fontSize: calcularTamanoCqw(tamanoFechaPt, orientacion),
               color: cfg.fecha.color || '#000000',
               fontWeight: cfg.fecha.negrita ? 'bold' : 'normal',
-              fontStyle: cfg.fecha.cursiva ? 'italic' : 'normal',
+              fontStyle: cfg.fecha.cursiva && fuenteSoportaCursiva(cfg.fecha.fuente) ? 'italic' : 'normal',
               textDecoration: cfg.fecha.subrayado ? 'underline' : 'none',
               textAlign: cfg.fecha.alineacion
             }}
@@ -1230,7 +1236,7 @@ export default function AvanzaCertificateRenderer({
               color: cfg.codigo.color || '#000000',
               fontFamily: obtenerFontFamily(cfg.codigo.fuente, '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'),
               fontWeight: cfg.codigo.negrita ? 'bold' : 'normal',
-              fontStyle: cfg.codigo.cursiva ? 'italic' : 'normal',
+              fontStyle: cfg.codigo.cursiva && fuenteSoportaCursiva(cfg.codigo.fuente) ? 'italic' : 'normal',
               textDecoration: cfg.codigo.subrayado ? 'underline' : 'none',
               textAlign: cfg.codigo.alineacion
             }}

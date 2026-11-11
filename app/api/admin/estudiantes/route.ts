@@ -578,17 +578,20 @@ export async function PATCH(request: Request) {
           const matchedTitle = matchedData?.titulo || title;
           const matchedSlug = matchedData?.slug || key;
           const modulosList = matchedData?.modulos && matchedData.modulos.length > 0
-            ? matchedData.modulos.map((m: any, mIdx: number) => ({
-                id: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
-                codigo: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
-                nombre: m.nombre || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
-                nota: 0,
-                completado: false
-              }))
+            ? matchedData.modulos.map((m: any, mIdx: number) => {
+                const modCod = m.codigo || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`;
+                return {
+                  id: modCod,
+                  codigo: modCod,
+                  nombre: m.nombre || modCod,
+                  nota: 0,
+                  completado: false
+                };
+              })
             : [
-                { id: 'mod-01', codigo: 'Módulo 01', nombre: `Módulo 01 de ${matchedTitle}`, nota: 0, completado: false },
-                { id: 'mod-02', codigo: 'Módulo 02', nombre: `Módulo 02 de ${matchedTitle}`, nota: 0, completado: false },
-                { id: 'mod-03', codigo: 'Módulo 03', nombre: `Módulo 03 de ${matchedTitle}`, nota: 0, completado: false }
+                { id: 'MÓDULO 01', codigo: 'MÓDULO 01', nombre: `MÓDULO 01 DE ${matchedTitle}`, nota: 0, completado: false },
+                { id: 'MÓDULO 02', codigo: 'MÓDULO 02', nombre: `MÓDULO 02 DE ${matchedTitle}`, nota: 0, completado: false },
+                { id: 'MÓDULO 03', codigo: 'MÓDULO 03', nombre: `MÓDULO 03 DE ${matchedTitle}`, nota: 0, completado: false }
               ];
 
           return {
@@ -759,10 +762,26 @@ export async function PATCH(request: Request) {
         diplomadoSlug,
         diplomadoCodigo,
         moduloCodigo,
+        moduloIndex,
         cursoTitulo,
         cursoCodigo,
         cursoId
       } = body;
+
+      const extraerNumMod = (txt?: string | null): number | null => {
+        const s = String(txt || '').trim();
+        if (!s) return null;
+        const mNum = s.match(/\d+/);
+        if (mNum) return parseInt(mNum[0], 10);
+        const mRom = s.match(/\b(XII|XI|X|IX|VIII|VII|VI|V|IV|III|II|I)\b/i);
+        if (mRom) {
+          const mapa: Record<string, number> = {
+            I: 1, II: 2, III: 3, IV: 4, V: 5, VI: 6, VII: 7, VIII: 8, IX: 9, X: 10, XI: 11, XII: 12
+          };
+          return mapa[mRom[1].toUpperCase()] ?? null;
+        }
+        return null;
+      };
 
       if (!studentId && !dni_ce) {
         return NextResponse.json({ error: 'Se requiere studentId o dni_ce.' }, { status: 400 });
@@ -784,17 +803,25 @@ export async function PATCH(request: Request) {
         const targetKey = normKey(cursoTitulo || cursoCodigo || cursoId);
         const targetCodeKey = normKey(cursoCodigo);
         const targetIdKey = normKey(cursoId);
+        const targetNum = String(cursoCodigo || cursoId || '').match(/\d+/)?.[0] || '';
 
-        const targetCurso = cursosListJson.find((c: any) =>
-          (targetCodeKey && normKey(c.codigo) === targetCodeKey) ||
-          (targetIdKey && normKey(c.id) === targetIdKey) ||
-          (targetKey && normKey(c.titulo) === targetKey)
-        );
+        const targetCurso = cursosListJson.find((c: any) => {
+          const cId = normKey(c.id);
+          const cCod = normKey(c.codigo);
+          const cTit = normKey(c.titulo);
+          return (
+            (targetCodeKey && (cCod === targetCodeKey || cId === targetCodeKey)) ||
+            (targetIdKey && (cId === targetIdKey || cCod === targetIdKey)) ||
+            (targetNum && (cId === String(parseInt(targetNum, 10)) || cCod === `cur${targetNum.padStart(2, '0')}` || cCod === `tal${targetNum.padStart(2, '0')}`)) ||
+            (targetKey && cTit === targetKey)
+          );
+        });
 
         if (targetCurso) {
           delete (targetCurso as any).nota;
           (targetCurso as any).rendido = false;
           targetCurso.completado = false;
+          delete (targetCurso as any).fecha_examen;
         }
 
         const cursosSerialized = `CURSOS_LIST|${JSON.stringify(cursosListJson)}`;
@@ -871,16 +898,24 @@ export async function PATCH(request: Request) {
         (d.titulo && stripDipPrefixNorm(d.titulo) === targetSlug)
       );
 
+      const modNumFromParam = extraerNumMod(moduloCodigo) ?? (typeof moduloIndex === 'number' ? moduloIndex + 1 : null);
       let modIndexMatched = -1;
       if (targetDip && Array.isArray(targetDip.modulos)) {
-        // Encontrar módulo objetivo
-        const modIdx = targetDip.modulos.findIndex((m: any) =>
-          m.codigo === moduloCodigo ||
-          m.id === moduloCodigo ||
-          normKey(m.codigo) === normKey(moduloCodigo) ||
-          (moduloCodigo && m.nombre && m.nombre.toLowerCase().includes(moduloCodigo.toLowerCase())) ||
-          (moduloCodigo && m.titulo && m.titulo.toLowerCase().includes(moduloCodigo.toLowerCase()))
-        );
+        // Encontrar módulo objetivo (soportando arábigo "Módulo 01", romano "MÓDULO I", nombre o índice)
+        let modIdx = targetDip.modulos.findIndex((m: any) => {
+          const mNum = extraerNumMod(m.codigo || m.id);
+          return (
+            m.codigo === moduloCodigo ||
+            m.id === moduloCodigo ||
+            normKey(m.codigo) === normKey(moduloCodigo) ||
+            (modNumFromParam !== null && mNum === modNumFromParam) ||
+            (moduloCodigo && m.nombre && m.nombre.toLowerCase().includes(moduloCodigo.toLowerCase())) ||
+            (moduloCodigo && m.titulo && m.titulo.toLowerCase().includes(moduloCodigo.toLowerCase()))
+          );
+        });
+        if (modIdx < 0 && typeof moduloIndex === 'number' && moduloIndex >= 0 && moduloIndex < targetDip.modulos.length) {
+          modIdx = moduloIndex;
+        }
         modIndexMatched = modIdx;
         const mod = modIdx >= 0 ? targetDip.modulos[modIdx] : undefined;
 
@@ -888,13 +923,18 @@ export async function PATCH(request: Request) {
           delete (mod as any).nota;
           (mod as any).rendido = false;
           mod.completado = false;
+          delete (mod as any).fecha_examen;
         }
 
-        // Limpiar de completadosMap si existe
-        if ((targetDip as any).completadosMap && moduloCodigo) {
-          delete (targetDip as any).completadosMap[moduloCodigo];
+        // Limpiar de completadosMap si existe (tanto en formato arábigo como romano)
+        if ((targetDip as any).completadosMap) {
+          if (moduloCodigo) delete (targetDip as any).completadosMap[moduloCodigo];
           if (mod?.id) delete (targetDip as any).completadosMap[mod.id];
           if (mod?.codigo) delete (targetDip as any).completadosMap[mod.codigo];
+          if (modNumFromParam !== null) {
+            delete (targetDip as any).completadosMap[`Módulo ${modNumFromParam.toString().padStart(2, '0')}`];
+            delete (targetDip as any).completadosMap[`MÓDULO ${modNumFromParam.toString().padStart(2, '0')}`];
+          }
         }
 
         // Recalcular avance
@@ -920,8 +960,7 @@ export async function PATCH(request: Request) {
       // Eliminar intento correspondiente en notas_modulos de Supabase
       try {
         const dniTarget = String(profile.dni_ce || dni_ce || '').trim();
-        const modMatch = String(moduloCodigo || '').match(/\d+/);
-        const modNumTarget = modMatch ? parseInt(modMatch[0], 10) : (modIndexMatched >= 0 ? modIndexMatched + 1 : null);
+        const modNumTarget = modNumFromParam ?? (modIndexMatched >= 0 ? modIndexMatched + 1 : null);
 
         const { data: notasExistentes } = await admin
           .from('notas_modulos')
@@ -935,8 +974,9 @@ export async function PATCH(request: Request) {
               (targetSlug && stripDipPrefixNorm(n.diplomado_nombre) === targetSlug) ||
               (targetDip?.codigo && normKey(n.diplomado_numero) === normKey(targetDip.codigo));
             if (!matchesDip) return false;
+            const nModNum = extraerNumMod(n.modulo_nombre) ?? (Number(n.modulo_numero) > 0 ? Number(n.modulo_numero) : null);
             return (
-              (modNumTarget !== null && Number(n.modulo_numero) === modNumTarget) ||
+              (modNumTarget !== null && (Number(n.modulo_numero) === modNumTarget || nModNum === modNumTarget)) ||
               (moduloCodigo && normKey(n.modulo_nombre) === normKey(moduloCodigo))
             );
           })
@@ -1052,17 +1092,20 @@ export async function POST(request: Request) {
     const dipData = getDiplomadoByTitleOrSlug(rawDipTitulo);
     const dipTitulo = dipData?.titulo || rawDipTitulo.replace(/^DIPLOMADO EN\s+/i, '').trim().toUpperCase();
     const modulosList = dipData?.modulos && dipData.modulos.length > 0
-      ? dipData.modulos.map((m: any, mIdx: number) => ({
-          id: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
-          codigo: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
-          nombre: m.nombre || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
-          nota: 0,
-          completado: false
-        }))
+      ? dipData.modulos.map((m: any, mIdx: number) => {
+          const modCod = m.codigo || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`;
+          return {
+            id: modCod,
+            codigo: modCod,
+            nombre: m.nombre || modCod,
+            nota: 0,
+            completado: false
+          };
+        })
       : [
-          { id: 'mod-01', codigo: 'Módulo 01', nombre: `Módulo 01 de ${dipTitulo}`, nota: 0, completado: false },
-          { id: 'mod-02', codigo: 'Módulo 02', nombre: `Módulo 02 de ${dipTitulo}`, nota: 0, completado: false },
-          { id: 'mod-03', codigo: 'Módulo 03', nombre: `Módulo 03 de ${dipTitulo}`, nota: 0, completado: false }
+          { id: 'MÓDULO 01', codigo: 'MÓDULO 01', nombre: `MÓDULO 01 DE ${dipTitulo}`, nota: 0, completado: false },
+          { id: 'MÓDULO 02', codigo: 'MÓDULO 02', nombre: `MÓDULO 02 DE ${dipTitulo}`, nota: 0, completado: false },
+          { id: 'MÓDULO 03', codigo: 'MÓDULO 03', nombre: `MÓDULO 03 DE ${dipTitulo}`, nota: 0, completado: false }
         ];
 
     const diplomadosJson = [

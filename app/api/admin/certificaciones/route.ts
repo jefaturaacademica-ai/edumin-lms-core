@@ -3,9 +3,22 @@ import { createAdminClient } from '@/lib/supabase/admin';
 import { parseDiplomadosFromProfile, parseCursosFromProfile } from '@/lib/utils/profileParser';
 import { generarCodigoUnicoCertificado, formatearNombreCertificado, normalizarCodigoCertificado } from '@/lib/utils/certificateUtils';
 
-export async function GET() {
+export async function GET(request?: Request) {
   try {
     const admin = createAdminClient();
+    const dniParam = request?.url ? new URL(request.url).searchParams.get('dni')?.trim() : null;
+
+    if (dniParam) {
+      const { data: certsDni } = await admin
+        .from('certificaciones')
+        .select('*')
+        .eq('dni_ce', dniParam)
+        .order('created_at', { ascending: false });
+
+      return NextResponse.json({
+        certificaciones: Array.isArray(certsDni) ? certsDni : []
+      });
+    }
 
     const { data: profiles } = await admin
       .from('profiles')

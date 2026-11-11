@@ -272,6 +272,7 @@ export default function Ficha360Modal({
     programaCodigo?: string;
     programaId?: string;
     moduloCodigo?: string;
+    moduloIndex?: number;
   }) => {
     const etiquetaObjetivo =
       params.tipoPrograma === 'diplomado'
@@ -294,6 +295,7 @@ export default function Ficha360Modal({
           diplomadoTitulo: params.tipoPrograma === 'diplomado' ? params.programaTitulo : undefined,
           diplomadoCodigo: params.tipoPrograma === 'diplomado' ? params.programaCodigo : undefined,
           moduloCodigo: params.moduloCodigo,
+          moduloIndex: params.moduloIndex,
           cursoTitulo: params.tipoPrograma !== 'diplomado' ? params.programaTitulo : undefined,
           cursoCodigo: params.tipoPrograma !== 'diplomado' ? params.programaCodigo : undefined,
           cursoId: params.tipoPrograma !== 'diplomado' ? params.programaId : undefined
@@ -1667,7 +1669,7 @@ export default function Ficha360Modal({
                               : [];
 
                           const modulosAprobadosCount = modulosArray.filter((m: any, mIdx: number) => {
-                            const modCodigoKey = m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
+                            const modCodigoKey = m.codigo || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`;
                             const { aplicaExamen, notaMinima } = obtenerEstadoExamenConfig(
                               dipObj?.codigo || userDipInfo?.codigo || '',
                               'diplomado',
@@ -1725,10 +1727,10 @@ export default function Ficha360Modal({
                                   </div>
                                 ) : (
                                   modulosArray.map((m: any, mIdx: number) => {
-                                    const modCodigoKey = m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
+                                    const modCodigoKey = m.codigo || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`;
                                     const nombreOficialModulo = (m.nombre || m.titulo || '').trim();
                                     const modTitle =
-                                      nombreOficialModulo && !/^m[oó]dulo\s*\d+/i.test(nombreOficialModulo)
+                                      nombreOficialModulo && !/^m[oó]dulo\s*(\d+|[ivx]+|único)/i.test(nombreOficialModulo)
                                         ? `${modCodigoKey}: ${nombreOficialModulo}`
                                         : (nombreOficialModulo || modCodigoKey);
 
@@ -1779,11 +1781,6 @@ export default function Ficha360Modal({
                                               {modTitle}
                                             </span>
                                           </div>
-                                          {m.docente && (
-                                            <p className="text-[11px] text-slate-500 dark:text-slate-400 pl-6">
-                                              Docente: {m.docente}
-                                            </p>
-                                          )}
                                         </div>
 
                                         <div className="flex flex-wrap items-center gap-2 pl-6 sm:pl-0 shrink-0">
@@ -1831,7 +1828,8 @@ export default function Ficha360Modal({
                                                   tipoPrograma: 'diplomado',
                                                   programaTitulo: nombreDipStr,
                                                   programaCodigo: dipObj?.codigo || userDipInfo?.codigo,
-                                                  moduloCodigo: modCodigoKey
+                                                  moduloCodigo: modCodigoKey,
+                                                  moduloIndex: mIdx
                                                 })
                                               }
                                               className="bg-rose-600 hover:bg-rose-700 text-white font-bold text-[10px] px-2.5 py-1 rounded-md transition-colors flex items-center gap-1 cursor-pointer disabled:opacity-50"

@@ -131,9 +131,9 @@ export async function POST(request: Request) {
           avance: 0,
           completadosMap: {},
           modulos: [
-            { id: 'Módulo 01', codigo: 'Módulo 01', nombre: 'Módulo 01', nota: 0, completado: false },
-            { id: 'Módulo 02', codigo: 'Módulo 02', nombre: 'Módulo 02', nota: 0, completado: false },
-            { id: 'Módulo 03', codigo: 'Módulo 03', nombre: 'Módulo 03', nota: 0, completado: false }
+            { id: 'MÓDULO 01', codigo: 'MÓDULO 01', nombre: 'MÓDULO 01', nota: 0, completado: false },
+            { id: 'MÓDULO 02', codigo: 'MÓDULO 02', nombre: 'MÓDULO 02', nota: 0, completado: false },
+            { id: 'MÓDULO 03', codigo: 'MÓDULO 03', nombre: 'MÓDULO 03', nota: 0, completado: false }
           ]
         };
         diplomadosList.push(targetDip);
@@ -183,7 +183,7 @@ export async function POST(request: Request) {
 
         // Sincronizar estado de cada módulo desde completadosMap
         targetDip.modulos.forEach((m: any, mIdx: number) => {
-          const modKey = m.codigo || m.id || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
+          const modKey = m.codigo || m.id || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`;
           if ((targetDip as any).completadosMap[modKey] !== undefined) {
             m.completado = Boolean((targetDip as any).completadosMap[modKey]);
           }
@@ -315,8 +315,9 @@ export async function POST(request: Request) {
         // A. Revisar cada módulo completado (por examen aprobado o por clases 100% si no aplica examen)
         for (let mIdx = 0; mIdx < targetDip.modulos.length; mIdx++) {
           const modItem = targetDip.modulos[mIdx];
-          const moduloNombreFinal = modItem.nombre || modItem.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
-          const confMod = obtenerConfiguracionExamen(codDip, moduloNombreFinal);
+          const modCodCfg = modItem.codigo || modItem.id || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`;
+          const moduloNombreFinal = modItem.nombre || modCodCfg;
+          const confMod = obtenerConfiguracionExamen(codDip, modCodCfg);
           const noAplicaExamen = confMod?.aplica_examen === false;
           const tieneNotaAprobada = typeof modItem.nota === 'number' && modItem.nota >= 12;
           const esModuloAprobado = tieneNotaAprobada || (noAplicaExamen && modItem.completado);
@@ -383,7 +384,7 @@ export async function POST(request: Request) {
         // B. Verificar si todos los módulos están completados para emitir Diploma General
         const modulosValidos = targetDip.modulos.filter((m: any, mIdx: number) => {
           if (!m.completado) return false;
-          const cMod = obtenerConfiguracionExamen(codDip, m.nombre || m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`);
+          const cMod = obtenerConfiguracionExamen(codDip, m.codigo || m.id || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`);
           if (cMod?.aplica_examen === false) return true;
           return typeof m.nota === 'number' && m.nota >= 12;
         });

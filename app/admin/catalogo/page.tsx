@@ -9,6 +9,7 @@ import AdminSidebar from '@/components/admin/admin-sidebar';
 import { useTabSlug } from '@/lib/hooks/useTabSlug';
 import * as XLSX from 'xlsx';
 import { convertirModulosALeccionRows } from '@/lib/data/diplomadosLeccionesService';
+import { formatearCodigoModulo } from '@/lib/utils/profileParser';
 
 export default function CatalogoAdminPage() {
   const [activeTab, setActiveTab] = useTabSlug<'diplomados' | 'cursos' | 'talleres'>('diplomados', ['diplomados', 'cursos', 'talleres'] as const);
@@ -112,7 +113,7 @@ export default function CatalogoAdminPage() {
 
       const modulosIniciales = nuevoTipo === 'diplomado' ? Array.from({ length: numModulos }, (_, i) => {
         return {
-          codigo: `Módulo ${(i + 1).toString().padStart(2, '0')}`,
+          codigo: `MÓDULO ${(i + 1).toString().padStart(2, '0')}`,
           nombre: `MÓDULO ${(i + 1).toString().padStart(2, '0')}`,
           docente: nuevoDocente,
           temas: [
@@ -227,7 +228,7 @@ export default function CatalogoAdminPage() {
     let contadorTemaGlobal = 1;
 
     return modulos.map((mod: any, mIdx: number) => {
-      const codigoModulo = `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
+      const codigoModulo = formatearCodigoModulo(mod.codigo, mIdx);
       let temasInput = Array.isArray(mod.temas) && mod.temas.length > 0 ? mod.temas : null;
 
       if (!temasInput) {
@@ -359,7 +360,7 @@ export default function CatalogoAdminPage() {
     const nuevoNum = actualMods.length + 1;
 
     const nuevoMod = {
-      codigo: `Módulo ${nuevoNum.toString().padStart(2, '0')}`,
+      codigo: `MÓDULO ${nuevoNum.toString().padStart(2, '0')}`,
       nombre: `MÓDULO ${nuevoNum.toString().padStart(2, '0')}: NUEVO MÓDULO`,
       docente: itemEditando.docente || 'Reginaldo Andía',
       temas: [
@@ -726,9 +727,9 @@ export default function CatalogoAdminPage() {
     ];
     const sampleRows = [
       headers,
-      ['DIP-01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Módulo 01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Ing. Manuel Aucapuri', 'Tema 01: Fundamentos Geotécnicos', 'Parte 1', 'https://drive.google.com/file/d/1/preview', 'https://.../separata.pdf', 'https://.../resumen.mp4', 'https://.../audio.mp3', 'https://.../interactivo.html', 'https://.../plantilla.xlsx', ''],
-      ['DIP-01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Módulo 01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Ing. Manuel Aucapuri', 'Tema 01: Fundamentos Geotécnicos', 'Parte 2', 'https://drive.google.com/file/d/2/preview', '', '', '', '', '', ''],
-      ['DIP-01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Módulo 02', 'MONITOREO GEOTÉCNICO', 'Ing. Mario Hilasaca', 'Tema 02: Instrumentación en Minas', 'Parte 1', 'https://drive.google.com/file/d/3/preview', '', '', '', '', '', '']
+      ['DIP-01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'MÓDULO 01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Ing. Manuel Aucapuri', 'Tema 01: Fundamentos Geotécnicos', 'Parte 1', 'https://drive.google.com/file/d/1/preview', 'https://.../separata.pdf', 'https://.../resumen.mp4', 'https://.../audio.mp3', 'https://.../interactivo.html', 'https://.../plantilla.xlsx', ''],
+      ['DIP-01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'MÓDULO 01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'Ing. Manuel Aucapuri', 'Tema 01: Fundamentos Geotécnicos', 'Parte 2', 'https://drive.google.com/file/d/2/preview', '', '', '', '', '', ''],
+      ['DIP-01', 'GEOTECNIA Y MECÁNICA DE ROCAS', 'MÓDULO 02', 'MONITOREO GEOTÉCNICO', 'Ing. Mario Hilasaca', 'Tema 02: Instrumentación en Minas', 'Parte 1', 'https://drive.google.com/file/d/3/preview', '', '', '', '', '', '']
     ];
 
     const csvContent = '\uFEFF' + sampleRows.map(row => 
@@ -750,7 +751,7 @@ export default function CatalogoAdminPage() {
       {
         CodigoDiplomado: 'DIP-01',
         Diplomado: 'GEOTECNIA Y MECÁNICA DE ROCAS',
-        Modulo: 'Módulo 01',
+        Modulo: 'MÓDULO 01',
         NombreModulo: 'GEOTECNIA Y MECÁNICA DE ROCAS',
         Docente: 'Ing. Manuel Aucapuri',
         Tema: 'Tema 01: Fundamentos Geotécnicos',
@@ -766,7 +767,7 @@ export default function CatalogoAdminPage() {
       {
         CodigoDiplomado: 'DIP-01',
         Diplomado: 'GEOTECNIA Y MECÁNICA DE ROCAS',
-        Modulo: 'Módulo 01',
+        Modulo: 'MÓDULO 01',
         NombreModulo: 'GEOTECNIA Y MECÁNICA DE ROCAS',
         Docente: 'Ing. Manuel Aucapuri',
         Tema: 'Tema 01: Fundamentos Geotécnicos',
@@ -873,10 +874,10 @@ export default function CatalogoAdminPage() {
       const modulesMap = new Map<string, any>();
 
       dataRows.forEach((row) => {
-        const rawMod = colModulo !== -1 && row[colModulo] ? row[colModulo] : 'Módulo 01';
+        const rawMod = colModulo !== -1 && row[colModulo] ? row[colModulo] : 'MÓDULO 01';
         if (!rawMod) return;
 
-        const modKey = rawMod.trim();
+        const modKey = formatearCodigoModulo(rawMod.trim());
         if (!modulesMap.has(modKey)) {
           modulesMap.set(modKey, {
             codigo: modKey,
@@ -1169,7 +1170,7 @@ export default function CatalogoAdminPage() {
       {
         CodigoDiplomado: 'DIP-01',
         Diplomado: 'DERECHO MINERO',
-        Modulo: 'Módulo 01',
+        Modulo: 'MÓDULO 01',
         NombreModulo: 'LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR',
         Docente: 'Reginaldo Andía',
         Tema: 'Tema 01: Regulación Ambiental y Catastro Minero',
@@ -1185,7 +1186,7 @@ export default function CatalogoAdminPage() {
       {
         CodigoDiplomado: 'DIP-01',
         Diplomado: 'DERECHO MINERO',
-        Modulo: 'Módulo 01',
+        Modulo: 'MÓDULO 01',
         NombreModulo: 'LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR',
         Docente: 'Reginaldo Andía',
         Tema: 'Tema 01: Regulación Ambiental y Catastro Minero',
@@ -1335,7 +1336,9 @@ export default function CatalogoAdminPage() {
         }
 
         const dipObj = diplomadosMap.get(codeKey)!;
-        const rawMod = colMod !== -1 && row[colMod] ? row[colMod].trim() : 'Módulo 01';
+        const rawMod = colMod !== -1 && row[colMod] && row[colMod].trim()
+          ? formatearCodigoModulo(row[colMod].trim())
+          : 'MÓDULO 01';
         const nombreModVal = colNombreMod !== -1 && row[colNombreMod] ? row[colNombreMod].trim() : rawMod;
         const docenteVal = colDocente !== -1 && row[colDocente] ? row[colDocente].trim() : '';
         
@@ -1445,7 +1448,7 @@ export default function CatalogoAdminPage() {
           const clasesFlat = temasArr.flatMap((t: any) => t.clases);
 
           return {
-            codigo: `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
+            codigo: formatearCodigoModulo(m.codigo, mIdx),
             nombre: m.nombre || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`,
             docente: m.docente || '',
             temas: temasArr,
@@ -2015,7 +2018,7 @@ export default function CatalogoAdminPage() {
                             <div className="p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-3 bg-white border-b border-slate-100">
                               <div className="flex items-center gap-2 flex-1">
                                 <span className="bg-indigo-600 text-white tabular-nums font-bold px-3 py-1.5 rounded-lg text-xs shrink-0">
-                                  {mod.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`}
+                                  {formatearCodigoModulo(mod.codigo, mIdx)}
                                 </span>
                                 <input 
                                   type="text"
@@ -2070,7 +2073,7 @@ export default function CatalogoAdminPage() {
                                 <div className="flex justify-between items-center pb-2 border-b border-slate-200">
                                   <div>
                                     <span className="text-xs font-bold text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
-                                      <Folder className="size-4 text-indigo-600" /> Temas y Sesiones de {mod.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`} ({cantTemas} temas)
+                                      <Folder className="size-4 text-indigo-600" /> Temas y Sesiones de {formatearCodigoModulo(mod.codigo, mIdx)} ({cantTemas} temas)
                                     </span>
                                     <p className="text-[10px] text-slate-500 mt-0.5">Haz clic en &ldquo;Editar Contenido&rdquo; de un tema para ver o modificar sus enlaces, videos y materiales.</p>
                                   </div>
@@ -2515,7 +2518,7 @@ export default function CatalogoAdminPage() {
                 </label>
                 <textarea 
                   rows={6}
-                  placeholder={`"Modulo","NombreModulo","Docente","Tema","Sesion","VideoUrl","VideoResumenUrl","AudioResumenUrl","PdfUrl","ExcelUrl"\n"Módulo 01","GEOTECNIA","Ing. Aucapuri","Tema 01: Fundamentos","Clase 1: Introducción","https://drive.google.com/file/d/1/preview","","","",""`}
+                  placeholder={`"Modulo","NombreModulo","Docente","Tema","Sesion","VideoUrl","VideoResumenUrl","AudioResumenUrl","PdfUrl","ExcelUrl"\n"MÓDULO 01","GEOTECNIA","Ing. Aucapuri","Tema 01: Fundamentos","Clase 1: Introducción","https://drive.google.com/file/d/1/preview","","","",""`}
                   value={bulkModulesJson}
                   onChange={(e) => setBulkModulesJson(e.target.value)}
                   className="w-full p-4 bg-slate-900 text-emerald-400 tabular-nums text-xs rounded-2xl border border-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-600"

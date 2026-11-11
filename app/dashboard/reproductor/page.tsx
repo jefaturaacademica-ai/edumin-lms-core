@@ -46,7 +46,7 @@ function ReproductorContent() {
     moduloIndex?: number;
     completada?: boolean;
   }>({
-    titulo: 'MÓDULO I: DERECHO MINERO',
+    titulo: 'MÓDULO 01: DERECHO MINERO',
     subtitulo: 'Clase 1: Introducción y Marcos Regularios',
     iframe_url: '',
     pdf_url: '',
@@ -131,8 +131,8 @@ function ReproductorContent() {
 
           return {
             id: idx + 1,
-            codigo: m.codigo || `Módulo ${(idx + 1).toString().padStart(2, '0')}`,
-            nombre: m.nombre || `MóDULO ${(idx + 1).toString().padStart(2, '0')}`,
+            codigo: m.codigo || `MÓDULO ${(idx + 1).toString().padStart(2, '0')}`,
+            nombre: m.nombre || `MÓDULO ${(idx + 1).toString().padStart(2, '0')}`,
             docente: m.docente || fallbackProgram.modulos[0]?.docente || 'Docente EDUMIN',
             completado: isComp,
             clases: clasesList

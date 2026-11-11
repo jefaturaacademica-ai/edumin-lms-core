@@ -1,10 +1,10 @@
 {
-  "DIP-01_Módulo 01": {
-    "id": "DIP-01_Módulo 01",
+  "DIP-01_MÓDULO 01": {
+    "id": "DIP-01_MÓDULO 01",
     "codigo_programa": "DIP-01",
     "nombre_programa": "DERECHO MINERO",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -18,12 +18,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-01_Módulo 02": {
-    "id": "DIP-01_Módulo 02",
+  "DIP-01_MÓDULO 02": {
+    "id": "DIP-01_MÓDULO 02",
     "codigo_programa": "DIP-01",
     "nombre_programa": "DERECHO MINERO",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -37,31 +37,31 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-01_Módulo 03": {
-    "id": "DIP-01_Módulo 03",
+  "DIP-01_MÓDULO 03": {
+    "id": "DIP-01_MÓDULO 03",
     "codigo_programa": "DIP-01",
     "nombre_programa": "DERECHO MINERO",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
-    "tiempo_minutos": 30,
+    "tiempo_minutos": 5,
     "cantidad_preguntas": 10,
     "preguntas_facil": 0,
     "preguntas_medio": 7,
     "preguntas_dificil": 3,
+    "preguntas_opcion_unica": 7,
+    "preguntas_opcion_multiple": 3,
     "nota_minima": 12,
     "intentos_permitidos": 1,
     "activo": true,
-    "updated_at": "2026-11-02T19:24:57.857Z",
-    "preguntas_opcion_unica": 7,
-    "preguntas_opcion_multiple": 3
+    "updated_at": "2026-11-11T15:04:07.090Z"
   },
-  "DIP-02_Módulo 01": {
-    "id": "DIP-02_Módulo 01",
+  "DIP-02_MÓDULO 01": {
+    "id": "DIP-02_MÓDULO 01",
     "codigo_programa": "DIP-02",
     "nombre_programa": "ESPECIALISTA EN COMERCIO INTERNACIONAL: GESTIÓN ADUANERA Y LOGÍSTICA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -75,12 +75,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-02_Módulo 02": {
-    "id": "DIP-02_Módulo 02",
+  "DIP-02_MÓDULO 02": {
+    "id": "DIP-02_MÓDULO 02",
     "codigo_programa": "DIP-02",
     "nombre_programa": "ESPECIALISTA EN COMERCIO INTERNACIONAL: GESTIÓN ADUANERA Y LOGÍSTICA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -94,12 +94,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-02_Módulo 03": {
-    "id": "DIP-02_Módulo 03",
+  "DIP-02_MÓDULO 03": {
+    "id": "DIP-02_MÓDULO 03",
     "codigo_programa": "DIP-02",
     "nombre_programa": "ESPECIALISTA EN COMERCIO INTERNACIONAL: GESTIÓN ADUANERA Y LOGÍSTICA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -113,12 +113,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-03_Módulo 01": {
-    "id": "DIP-03_Módulo 01",
+  "DIP-03_MÓDULO 01": {
+    "id": "DIP-03_MÓDULO 01",
     "codigo_programa": "DIP-03",
     "nombre_programa": "GEOLOGÍA MINERA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -132,12 +132,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-03_Módulo 02": {
-    "id": "DIP-03_Módulo 02",
+  "DIP-03_MÓDULO 02": {
+    "id": "DIP-03_MÓDULO 02",
     "codigo_programa": "DIP-03",
     "nombre_programa": "GEOLOGÍA MINERA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -151,12 +151,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-03_Módulo 03": {
-    "id": "DIP-03_Módulo 03",
+  "DIP-03_MÓDULO 03": {
+    "id": "DIP-03_MÓDULO 03",
     "codigo_programa": "DIP-03",
     "nombre_programa": "GEOLOGÍA MINERA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -170,12 +170,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-04_Módulo 01": {
-    "id": "DIP-04_Módulo 01",
+  "DIP-04_MÓDULO 01": {
+    "id": "DIP-04_MÓDULO 01",
     "codigo_programa": "DIP-04",
     "nombre_programa": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -189,12 +189,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-04_Módulo 02": {
-    "id": "DIP-04_Módulo 02",
+  "DIP-04_MÓDULO 02": {
+    "id": "DIP-04_MÓDULO 02",
     "codigo_programa": "DIP-04",
     "nombre_programa": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -208,12 +208,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-04_Módulo 03": {
-    "id": "DIP-04_Módulo 03",
+  "DIP-04_MÓDULO 03": {
+    "id": "DIP-04_MÓDULO 03",
     "codigo_programa": "DIP-04",
     "nombre_programa": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -227,12 +227,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-05_Módulo 01": {
-    "id": "DIP-05_Módulo 01",
+  "DIP-05_MÓDULO 01": {
+    "id": "DIP-05_MÓDULO 01",
     "codigo_programa": "DIP-05",
     "nombre_programa": "GEOMETALURGIA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -246,12 +246,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-05_Módulo 02": {
-    "id": "DIP-05_Módulo 02",
+  "DIP-05_MÓDULO 02": {
+    "id": "DIP-05_MÓDULO 02",
     "codigo_programa": "DIP-05",
     "nombre_programa": "GEOMETALURGIA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -265,12 +265,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-05_Módulo 03": {
-    "id": "DIP-05_Módulo 03",
+  "DIP-05_MÓDULO 03": {
+    "id": "DIP-05_MÓDULO 03",
     "codigo_programa": "DIP-05",
     "nombre_programa": "GEOMETALURGIA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 5,
@@ -284,12 +284,12 @@
     "activo": true,
     "updated_at": "2026-11-03T15:53:46.785Z"
   },
-  "DIP-06_Módulo 01": {
-    "id": "DIP-06_Módulo 01",
+  "DIP-06_MÓDULO 01": {
+    "id": "DIP-06_MÓDULO 01",
     "codigo_programa": "DIP-06",
     "nombre_programa": "GEOTECNIA MINERA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -303,12 +303,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-06_Módulo 02": {
-    "id": "DIP-06_Módulo 02",
+  "DIP-06_MÓDULO 02": {
+    "id": "DIP-06_MÓDULO 02",
     "codigo_programa": "DIP-06",
     "nombre_programa": "GEOTECNIA MINERA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -322,12 +322,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-06_Módulo 03": {
-    "id": "DIP-06_Módulo 03",
+  "DIP-06_MÓDULO 03": {
+    "id": "DIP-06_MÓDULO 03",
     "codigo_programa": "DIP-06",
     "nombre_programa": "GEOTECNIA MINERA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -341,12 +341,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-07_Módulo 01": {
-    "id": "DIP-07_Módulo 01",
+  "DIP-07_MÓDULO 01": {
+    "id": "DIP-07_MÓDULO 01",
     "codigo_programa": "DIP-07",
     "nombre_programa": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -360,12 +360,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-07_Módulo 02": {
-    "id": "DIP-07_Módulo 02",
+  "DIP-07_MÓDULO 02": {
+    "id": "DIP-07_MÓDULO 02",
     "codigo_programa": "DIP-07",
     "nombre_programa": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -379,12 +379,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-07_Módulo 03": {
-    "id": "DIP-07_Módulo 03",
+  "DIP-07_MÓDULO 03": {
+    "id": "DIP-07_MÓDULO 03",
     "codigo_programa": "DIP-07",
     "nombre_programa": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -398,12 +398,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-08_Módulo 01": {
-    "id": "DIP-08_Módulo 01",
+  "DIP-08_MÓDULO 01": {
+    "id": "DIP-08_MÓDULO 01",
     "codigo_programa": "DIP-08",
     "nombre_programa": "GERENCIA ESTRATÉGICA Y LIDERAZGO DE EQUIPOS EN LA MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -417,12 +417,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-08_Módulo 02": {
-    "id": "DIP-08_Módulo 02",
+  "DIP-08_MÓDULO 02": {
+    "id": "DIP-08_MÓDULO 02",
     "codigo_programa": "DIP-08",
     "nombre_programa": "GERENCIA ESTRATÉGICA Y LIDERAZGO DE EQUIPOS EN LA MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -436,12 +436,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-08_Módulo 03": {
-    "id": "DIP-08_Módulo 03",
+  "DIP-08_MÓDULO 03": {
+    "id": "DIP-08_MÓDULO 03",
     "codigo_programa": "DIP-08",
     "nombre_programa": "GERENCIA ESTRATÉGICA Y LIDERAZGO DE EQUIPOS EN LA MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -455,12 +455,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-08_Módulo 04": {
-    "id": "DIP-08_Módulo 04",
+  "DIP-08_MÓDULO 04": {
+    "id": "DIP-08_MÓDULO 04",
     "codigo_programa": "DIP-08",
     "nombre_programa": "GERENCIA ESTRATÉGICA Y LIDERAZGO DE EQUIPOS EN LA MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -474,12 +474,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-08_Módulo 05": {
-    "id": "DIP-08_Módulo 05",
+  "DIP-08_MÓDULO 05": {
+    "id": "DIP-08_MÓDULO 05",
     "codigo_programa": "DIP-08",
     "nombre_programa": "GERENCIA ESTRATÉGICA Y LIDERAZGO DE EQUIPOS EN LA MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -493,12 +493,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-09_Módulo 01": {
-    "id": "DIP-09_Módulo 01",
+  "DIP-09_MÓDULO 01": {
+    "id": "DIP-09_MÓDULO 01",
     "codigo_programa": "DIP-09",
     "nombre_programa": "GESTIÓN AMBIENTAL PARA EL SECTOR MINERO E INDUSTRIAL",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -512,12 +512,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-09_Módulo 02": {
-    "id": "DIP-09_Módulo 02",
+  "DIP-09_MÓDULO 02": {
+    "id": "DIP-09_MÓDULO 02",
     "codigo_programa": "DIP-09",
     "nombre_programa": "GESTIÓN AMBIENTAL PARA EL SECTOR MINERO E INDUSTRIAL",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -531,12 +531,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-09_Módulo 03": {
-    "id": "DIP-09_Módulo 03",
+  "DIP-09_MÓDULO 03": {
+    "id": "DIP-09_MÓDULO 03",
     "codigo_programa": "DIP-09",
     "nombre_programa": "GESTIÓN AMBIENTAL PARA EL SECTOR MINERO E INDUSTRIAL",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -550,12 +550,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-10_Módulo 01": {
-    "id": "DIP-10_Módulo 01",
+  "DIP-10_MÓDULO 01": {
+    "id": "DIP-10_MÓDULO 01",
     "codigo_programa": "DIP-10",
     "nombre_programa": "GESTIÓN DE CONTROL OPERATIVO EN PROCESOS MINEROS",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -569,12 +569,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-10_Módulo 02": {
-    "id": "DIP-10_Módulo 02",
+  "DIP-10_MÓDULO 02": {
+    "id": "DIP-10_MÓDULO 02",
     "codigo_programa": "DIP-10",
     "nombre_programa": "GESTIÓN DE CONTROL OPERATIVO EN PROCESOS MINEROS",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -588,12 +588,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-10_Módulo 03": {
-    "id": "DIP-10_Módulo 03",
+  "DIP-10_MÓDULO 03": {
+    "id": "DIP-10_MÓDULO 03",
     "codigo_programa": "DIP-10",
     "nombre_programa": "GESTIÓN DE CONTROL OPERATIVO EN PROCESOS MINEROS",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -607,12 +607,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-11_Módulo 01": {
-    "id": "DIP-11_Módulo 01",
+  "DIP-11_MÓDULO 01": {
+    "id": "DIP-11_MÓDULO 01",
     "codigo_programa": "DIP-11",
     "nombre_programa": "GESTIÓN DE OPERACIONES INDUSTRIALES",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -626,12 +626,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-11_Módulo 02": {
-    "id": "DIP-11_Módulo 02",
+  "DIP-11_MÓDULO 02": {
+    "id": "DIP-11_MÓDULO 02",
     "codigo_programa": "DIP-11",
     "nombre_programa": "GESTIÓN DE OPERACIONES INDUSTRIALES",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -645,12 +645,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-11_Módulo 03": {
-    "id": "DIP-11_Módulo 03",
+  "DIP-11_MÓDULO 03": {
+    "id": "DIP-11_MÓDULO 03",
     "codigo_programa": "DIP-11",
     "nombre_programa": "GESTIÓN DE OPERACIONES INDUSTRIALES",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -664,12 +664,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-12_Módulo 01": {
-    "id": "DIP-12_Módulo 01",
+  "DIP-12_MÓDULO 01": {
+    "id": "DIP-12_MÓDULO 01",
     "codigo_programa": "DIP-12",
     "nombre_programa": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -683,12 +683,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-12_Módulo 02": {
-    "id": "DIP-12_Módulo 02",
+  "DIP-12_MÓDULO 02": {
+    "id": "DIP-12_MÓDULO 02",
     "codigo_programa": "DIP-12",
     "nombre_programa": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -702,12 +702,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-12_Módulo 03": {
-    "id": "DIP-12_Módulo 03",
+  "DIP-12_MÓDULO 03": {
+    "id": "DIP-12_MÓDULO 03",
     "codigo_programa": "DIP-12",
     "nombre_programa": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -721,12 +721,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-13_Módulo 01": {
-    "id": "DIP-13_Módulo 01",
+  "DIP-13_MÓDULO 01": {
+    "id": "DIP-13_MÓDULO 01",
     "codigo_programa": "DIP-13",
     "nombre_programa": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -740,12 +740,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-13_Módulo 02": {
-    "id": "DIP-13_Módulo 02",
+  "DIP-13_MÓDULO 02": {
+    "id": "DIP-13_MÓDULO 02",
     "codigo_programa": "DIP-13",
     "nombre_programa": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -759,12 +759,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-13_Módulo 03": {
-    "id": "DIP-13_Módulo 03",
+  "DIP-13_MÓDULO 03": {
+    "id": "DIP-13_MÓDULO 03",
     "codigo_programa": "DIP-13",
     "nombre_programa": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -778,12 +778,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-13_Módulo 04": {
-    "id": "DIP-13_Módulo 04",
+  "DIP-13_MÓDULO 04": {
+    "id": "DIP-13_MÓDULO 04",
     "codigo_programa": "DIP-13",
     "nombre_programa": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -797,12 +797,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-13_Módulo 05": {
-    "id": "DIP-13_Módulo 05",
+  "DIP-13_MÓDULO 05": {
+    "id": "DIP-13_MÓDULO 05",
     "codigo_programa": "DIP-13",
     "nombre_programa": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -816,12 +816,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-14_Módulo 01": {
-    "id": "DIP-14_Módulo 01",
+  "DIP-14_MÓDULO 01": {
+    "id": "DIP-14_MÓDULO 01",
     "codigo_programa": "DIP-14",
     "nombre_programa": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -835,12 +835,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-14_Módulo 02": {
-    "id": "DIP-14_Módulo 02",
+  "DIP-14_MÓDULO 02": {
+    "id": "DIP-14_MÓDULO 02",
     "codigo_programa": "DIP-14",
     "nombre_programa": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -854,12 +854,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-14_Módulo 03": {
-    "id": "DIP-14_Módulo 03",
+  "DIP-14_MÓDULO 03": {
+    "id": "DIP-14_MÓDULO 03",
     "codigo_programa": "DIP-14",
     "nombre_programa": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -873,12 +873,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-15_Módulo 01": {
-    "id": "DIP-15_Módulo 01",
+  "DIP-15_MÓDULO 01": {
+    "id": "DIP-15_MÓDULO 01",
     "codigo_programa": "DIP-15",
     "nombre_programa": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -892,12 +892,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-15_Módulo 02": {
-    "id": "DIP-15_Módulo 02",
+  "DIP-15_MÓDULO 02": {
+    "id": "DIP-15_MÓDULO 02",
     "codigo_programa": "DIP-15",
     "nombre_programa": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -911,12 +911,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-15_Módulo 03": {
-    "id": "DIP-15_Módulo 03",
+  "DIP-15_MÓDULO 03": {
+    "id": "DIP-15_MÓDULO 03",
     "codigo_programa": "DIP-15",
     "nombre_programa": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -930,12 +930,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-16_Módulo 01": {
-    "id": "DIP-16_Módulo 01",
+  "DIP-16_MÓDULO 01": {
+    "id": "DIP-16_MÓDULO 01",
     "codigo_programa": "DIP-16",
     "nombre_programa": "GESTIÓN MINERA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -949,12 +949,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-16_Módulo 02": {
-    "id": "DIP-16_Módulo 02",
+  "DIP-16_MÓDULO 02": {
+    "id": "DIP-16_MÓDULO 02",
     "codigo_programa": "DIP-16",
     "nombre_programa": "GESTIÓN MINERA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -968,12 +968,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-16_Módulo 03": {
-    "id": "DIP-16_Módulo 03",
+  "DIP-16_MÓDULO 03": {
+    "id": "DIP-16_MÓDULO 03",
     "codigo_programa": "DIP-16",
     "nombre_programa": "GESTIÓN MINERA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -987,12 +987,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-17_Módulo 01": {
-    "id": "DIP-17_Módulo 01",
+  "DIP-17_MÓDULO 01": {
+    "id": "DIP-17_MÓDULO 01",
     "codigo_programa": "DIP-17",
     "nombre_programa": "LEGISLACIÓN LABORAL Y ELABORACIÓN DE PLANILLAS",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1006,12 +1006,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-17_Módulo 02": {
-    "id": "DIP-17_Módulo 02",
+  "DIP-17_MÓDULO 02": {
+    "id": "DIP-17_MÓDULO 02",
     "codigo_programa": "DIP-17",
     "nombre_programa": "LEGISLACIÓN LABORAL Y ELABORACIÓN DE PLANILLAS",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1025,12 +1025,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-17_Módulo 03": {
-    "id": "DIP-17_Módulo 03",
+  "DIP-17_MÓDULO 03": {
+    "id": "DIP-17_MÓDULO 03",
     "codigo_programa": "DIP-17",
     "nombre_programa": "LEGISLACIÓN LABORAL Y ELABORACIÓN DE PLANILLAS",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1044,12 +1044,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-17_Módulo 04": {
-    "id": "DIP-17_Módulo 04",
+  "DIP-17_MÓDULO 04": {
+    "id": "DIP-17_MÓDULO 04",
     "codigo_programa": "DIP-17",
     "nombre_programa": "LEGISLACIÓN LABORAL Y ELABORACIÓN DE PLANILLAS",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1063,12 +1063,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-17_Módulo 05": {
-    "id": "DIP-17_Módulo 05",
+  "DIP-17_MÓDULO 05": {
+    "id": "DIP-17_MÓDULO 05",
     "codigo_programa": "DIP-17",
     "nombre_programa": "LEGISLACIÓN LABORAL Y ELABORACIÓN DE PLANILLAS",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1082,12 +1082,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-18_Módulo 01": {
-    "id": "DIP-18_Módulo 01",
+  "DIP-18_MÓDULO 01": {
+    "id": "DIP-18_MÓDULO 01",
     "codigo_programa": "DIP-18",
     "nombre_programa": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1101,12 +1101,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-18_Módulo 02": {
-    "id": "DIP-18_Módulo 02",
+  "DIP-18_MÓDULO 02": {
+    "id": "DIP-18_MÓDULO 02",
     "codigo_programa": "DIP-18",
     "nombre_programa": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1120,12 +1120,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-18_Módulo 03": {
-    "id": "DIP-18_Módulo 03",
+  "DIP-18_MÓDULO 03": {
+    "id": "DIP-18_MÓDULO 03",
     "codigo_programa": "DIP-18",
     "nombre_programa": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1139,12 +1139,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-19_Módulo 01": {
-    "id": "DIP-19_Módulo 01",
+  "DIP-19_MÓDULO 01": {
+    "id": "DIP-19_MÓDULO 01",
     "codigo_programa": "DIP-19",
     "nombre_programa": "PREVENCIÓN DE LA CONFLICTIVIDAD, RIESGOS SOCIALES Y RESPONSABILIDAD SOCIAL MINERA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1158,12 +1158,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-19_Módulo 02": {
-    "id": "DIP-19_Módulo 02",
+  "DIP-19_MÓDULO 02": {
+    "id": "DIP-19_MÓDULO 02",
     "codigo_programa": "DIP-19",
     "nombre_programa": "PREVENCIÓN DE LA CONFLICTIVIDAD, RIESGOS SOCIALES Y RESPONSABILIDAD SOCIAL MINERA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1177,12 +1177,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-19_Módulo 03": {
-    "id": "DIP-19_Módulo 03",
+  "DIP-19_MÓDULO 03": {
+    "id": "DIP-19_MÓDULO 03",
     "codigo_programa": "DIP-19",
     "nombre_programa": "PREVENCIÓN DE LA CONFLICTIVIDAD, RIESGOS SOCIALES Y RESPONSABILIDAD SOCIAL MINERA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1196,12 +1196,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-20_Módulo 01": {
-    "id": "DIP-20_Módulo 01",
+  "DIP-20_MÓDULO 01": {
+    "id": "DIP-20_MÓDULO 01",
     "codigo_programa": "DIP-20",
     "nombre_programa": "SEGURIDAD INDUSTRIAL",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1215,12 +1215,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-20_Módulo 02": {
-    "id": "DIP-20_Módulo 02",
+  "DIP-20_MÓDULO 02": {
+    "id": "DIP-20_MÓDULO 02",
     "codigo_programa": "DIP-20",
     "nombre_programa": "SEGURIDAD INDUSTRIAL",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1234,12 +1234,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-20_Módulo 03": {
-    "id": "DIP-20_Módulo 03",
+  "DIP-20_MÓDULO 03": {
+    "id": "DIP-20_MÓDULO 03",
     "codigo_programa": "DIP-20",
     "nombre_programa": "SEGURIDAD INDUSTRIAL",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1253,12 +1253,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-21_Módulo 01": {
-    "id": "DIP-21_Módulo 01",
+  "DIP-21_MÓDULO 01": {
+    "id": "DIP-21_MÓDULO 01",
     "codigo_programa": "DIP-21",
     "nombre_programa": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1272,12 +1272,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-21_Módulo 02": {
-    "id": "DIP-21_Módulo 02",
+  "DIP-21_MÓDULO 02": {
+    "id": "DIP-21_MÓDULO 02",
     "codigo_programa": "DIP-21",
     "nombre_programa": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1291,12 +1291,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-21_Módulo 03": {
-    "id": "DIP-21_Módulo 03",
+  "DIP-21_MÓDULO 03": {
+    "id": "DIP-21_MÓDULO 03",
     "codigo_programa": "DIP-21",
     "nombre_programa": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1310,12 +1310,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-22_Módulo 01": {
-    "id": "DIP-22_Módulo 01",
+  "DIP-22_MÓDULO 01": {
+    "id": "DIP-22_MÓDULO 01",
     "codigo_programa": "DIP-22",
     "nombre_programa": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1329,12 +1329,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-22_Módulo 02": {
-    "id": "DIP-22_Módulo 02",
+  "DIP-22_MÓDULO 02": {
+    "id": "DIP-22_MÓDULO 02",
     "codigo_programa": "DIP-22",
     "nombre_programa": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,
@@ -1348,12 +1348,12 @@
     "preguntas_opcion_unica": 7,
     "preguntas_opcion_multiple": 3
   },
-  "DIP-22_Módulo 03": {
-    "id": "DIP-22_Módulo 03",
+  "DIP-22_MÓDULO 03": {
+    "id": "DIP-22_MÓDULO 03",
     "codigo_programa": "DIP-22",
     "nombre_programa": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
     "tipo_programa": "diplomado",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "aplica_examen": true,
     "tiempo_minutos": 30,
     "cantidad_preguntas": 10,

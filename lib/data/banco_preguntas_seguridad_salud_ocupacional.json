@@ -2,7 +2,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera es auditada por la autoridad competente y se le solicita exhibir los registros de exámenes médicos ocupacionales de un trabajador diagnosticado con neumoconiosis hace dos años, así como los registros de capacitaciones y de monitoreos de polvo de los últimos ocho años. De acuerdo con el marco legal de la Ley N.º 29783, ¿cuál es la obligación legal de almacenamiento que debe cumplir la empresa para estos archivos pasivos?",
@@ -39,7 +39,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una inspección laboral tras un accidente grave, la empresa presenta actas de inducción y entrega de Equipos de Protección Personal (EPP) firmadas por el trabajador accidentado. Sin embargo, los testimonios y las condiciones de campo demuestran que el trabajador operaba una maquinaria sin la capacitación práctica requerida y con un EPP inadecuado para el riesgo real. ¿Qué principio del derecho laboral y de la Ley N.º 29783 aplica la autoridad de fiscalización en este escenario?",
@@ -76,7 +76,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el caso práctico del accidente en la Mina San Antonio, un operador de maquinaria sufrió un aplastamiento en la pierna tras ser impactado por un volquete. ¿Cuáles de los siguientes factores internos y fallas en el Sistema de Gestión de SST contribuyeron directamente a la ocurrencia de esta fatalidad potencial?",
@@ -113,7 +113,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa contratista del sector energía incrementa su nómina de 85 a 135 trabajadores en planilla. En función de la Ley N.º 29783 y su Reglamento, ¿cómo debe reestructurarse su órgano bipartito de consulta y participación en seguridad?",
@@ -150,7 +150,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un trabajador administrativo de una empresa de servicios decide renunciar voluntariamente. Al solicitar la entrega de su certificado de trabajo, la gerencia de Recursos Humanos le exige realizar obligatoriamente un Examen Médico Ocupacional (EMO) de retiro a su propio costo. ¿Qué dispone la normativa legal vigente respecto a los exámenes médicos de salida?",
@@ -187,7 +187,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Con relación a la evolución legislativa de la Ley N.º 29783 en el Perú, ¿cuáles de los siguientes enunciados reflejan correctamente los cambios introducidos por sus normas modificatorias y complementarias (Ley N.º 30222, D.S. N.º 006-2014-TR y Ley N.º 31246)?",
@@ -224,7 +224,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el caso práctico de fiscalización a la mina subterránea en Cerro de Pasco, se obtuvieron los siguientes datos de monitoreo en la galería principal de desarrollo:\n- Nivel de ruido: 92 dB (Límite: 85 dB)\n- Polvo respirable: 4.0 mg/m³ (Límite: 2.5 mg/m³)\n- Temperatura WBGT: 30°C (Límite: 28°C)\n- Velocidad del aire: 0.3 m/s (Límite mínimo: 0.5 m/s)\n- Vibración cuerpo entero: 12 m/s² (Límite: 8 m/s²)\n\n¿Qué acción inmediata exige el D.S. 024-2016-EM ante el hallazgo concurrente de estos parámetros fuera de límite?",
@@ -261,7 +261,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un titular minero busca reducir la elevada concentración de ruido en la planta de chancado primario. Para ello, analiza las siguientes opciones:\n1. Proveer tapones auditivos de alta atenuación a los operadores.\n2. Encapsular la chancadora mediante paneles con aislamiento acústico.\n3. Implementar un programa de rotación del personal cada 2 horas.\n4. Sustituir el motor actual por uno de tecnología silenciosa de última generación.\n5. Eliminar el proceso de chancado de la cadena productiva.\n\nDe acuerdo con la jerarquía de controles establecida en el D.S. 024-2016-EM, ¿cuál es el orden correcto de aplicación de estas medidas, desde la más efectiva hasta la menos efectiva?",
@@ -298,7 +298,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En las operaciones mineras sujetas al D.S. 024-2016-EM y sus modificatorias, el uso del instrumento IPERC Continuo es obligatorio antes de iniciar cualquier tarea operativa. ¿Cuáles de las siguientes afirmaciones caracterizan adecuadamente la aplicación correcta de este instrumento en campo?",
@@ -335,7 +335,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una operación minera a cielo abierto, la empresa diseña una nueva vía de transporte interna por la que circularán camiones gigantes de acarreo de 4 metros de ancho. Según el artículo 162 del Reglamento de Seguridad y Salud Ocupacional en Minería (D.S. 024-2016-EM), ¿cuáles deben ser las dimensiones mínimas para el ancho de esta carretera si se diseña para doble sentido y para un solo sentido, respectivamente?",
@@ -372,7 +372,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el desarrollo de una galería en minería subterránea sin rieles, un equipo de trabajadores se dispone a realizar la labor de desatado de rocas en un techo ubicado a una altura de 3.2 metros. ¿Cuál es la disposición técnica legalmente obligatoria según el D.S. 024-2016-EM y sus modificatorias para la ejecución del desatado de rocas sueltas?",
@@ -409,7 +409,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "El D.S. 023-2017-EM y las modificatorias posteriores al D.S. 024-2016-EM introdujeron ajustes técnicos para agilizar la gestión operativa en minería. ¿Cuáles de las siguientes medidas corresponden a modificaciones oficiales vigentes en la reglamentación minera?",
@@ -446,7 +446,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la guardia nocturna en una mina a 4,200 msnm, un operador de camión gigante con un régimen de trabajo de 14 días continuos de turno de 12 horas sufre un despiste en una rampa de bajada. La investigación descarta fallas mecánicas y determina fatiga acumulada y microsueño. De acuerdo con las mejores prácticas y los lineamientos de fatiga y somnolencia en el sector, ¿cuál es la falla en el control operacional?",
@@ -483,7 +483,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una auditoría en la empresa minera Andina S.A., se descubre que el jefe de logística adquirió un lote de arneses de seguridad sin certificación técnica reconocida y cascos con fonoabsorbentes de baja atenuación para abaratar el presupuesto del área en un 40%. Desde el punto de vista de la gestión de riesgos y la responsabilidad legal de SST, ¿cuál es la implicancia directa de esta decisión?",
@@ -520,7 +520,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la evaluación de la matriz HIPER del taller de mantenimiento mecánico de una unidad minera, el peligro de 'manipulación de solventes químicos volátiles' presenta una probabilidad 'Media' y una severidad 'Catastrófica' (Nivel de Riesgo Alto). ¿Cuál es la estrategia de intervención que debe priorizar el equipo de seguridad según los principios de la Ley N.º 29783?",
@@ -557,7 +557,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En un servicio de comida dentro de un campamento minero, la administración pagó a un proveedor para obtener certificados de fumigación, limpieza de ductos de evacuación de grasa y prueba de hermeticidad de gas, sin que los servicios se ejecutaran en la realidad. Meses después, la acumulación de hollín y grasa provocó un incendio con atrapamiento de personal. ¿Qué implicancias legales y conceptuales de la gestión de SST se evidencian en este caso?",
@@ -594,7 +594,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una supervisora de área reporta que de forma constante es ignorada en las reuniones de coordinación, se le retiran las funciones operativas asignadas en su contrato, se le reubica a un escritorio aislado cerca a un depósito sin carga laboral y se le dirigen comentarios despectivos sobre su vestimenta en presencia de subordinados. ¿Cómo se tipifica esta conducta dentro del marco de la seguridad y salud en el trabajo y los riesgos psicosociales?",
@@ -631,7 +631,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un trabajador es sometido a un proceso continuo de hostigamiento laboral por parte de su gerente, lo que le produce un cuadro severo de ansiedad y depresión diagnosticado médicamente. Ante la inacción de la empresa que no activó los protocolos de investigación, el trabajador decide recurrir a la vía legal. ¿Qué acciones y derechos le asisten conforme a la doctrina y jurisprudencia del trabajo?",
@@ -668,7 +668,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para sostener con éxito una denuncia por acoso laboral (mobbing) o de actos de hostilidad dentro del marco de la Ley N.º 29783 ante la empresa o SUNAFIL, ¿cuáles de los siguientes elementos constituyen medios probatorios válidos y recomendaciones procedimentales clave?",
@@ -705,7 +705,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un frente de excavación subterránea, tras realizar un disparo de voladura, los sensores portátiles registran niveles de oxígeno del 16.5% y una presencia de monóxido de carbono (CO) de 80 ppm. De acuerdo con las disposiciones del D.S. 024-2016-EM para la gestión de atmósferas en minería subterránea, ¿cuál es la medida de control de ingeniería obligatoria que debe activarse inmediatamente?",
@@ -742,7 +742,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un grupo de conductores de camiones cisterna que transportan concentrado de mineral labora bajo un régimen atípico con jornadas diarias de 14 horas continuas de conducción. A pesar de mantener posturas ergonómicas en sus asientos con amortiguación, varios conductores han desarrollado lumbalgia crónica e incapacidad temporal. Desde la perspectiva de la evaluación ergonómica en minería, ¿cuál es el factor determinante que generó estas lesiones?",
@@ -779,7 +779,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un Sistema de Gestión de Seguridad y Salud en el Trabajo eficiente en el sector minero debe contar con un Plan de Respuesta ante Emergencias probado periódicamente. ¿Cuáles de los siguientes componentes son indispensables para medir y garantizar la efectividad de dicho plan según la normativa minera?",
@@ -816,7 +816,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una mina remota en los Andes, los trabajadores del turno nocturno reportan tratos degradantes, burlas por su origen étnico y apodos humillantes emitidos de forma repetida por el residente de obra. Adicionalmente, se les amenaza con no otorgarles la bajada de descanso si no cumplen metas adicionales fuera de convenio. ¿Cómo se clasifica esta situación y qué medidas preventivas inmediatas debe implementar la empresa?",
@@ -853,7 +853,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "El régimen de aislamiento, el trabajo por turnos atípicos (ej. 14x7) y la lejanía familiar en los campamentos mineros generan riesgos psicosociales que pueden derivar en depresión, adicciones o rotación de personal. ¿Cuáles de las siguientes medidas corresponden a intervenciones organizacionales recomendadas para mitigar estos riesgos psicosociales?",
@@ -890,7 +890,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el montaje de una estructura metálica a una altura de 4.5 metros en una planta de procesamiento minero, un técnico realiza labores apoyado sobre una escalera portátil sin punto de anclaje, sin arnés y sin la presencia de un vigía. ¿Qué disposición normativa respecto a los trabajos en altura está siendo transgredida según los estándares de seguridad industrial y minera?",
@@ -927,7 +927,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con lo establecido en el marco del Sistema de Gestión de Seguridad y Salud en el Trabajo bajo la Ley N.º 29783, ¿cuál es el plazo legal mínimo obligatorio para la conservación de los archivos pasivos relacionados con registros de enfermedades ocupacionales?",
@@ -964,7 +964,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el contexto del marco legal de la Ley N.º 29783, ¿cuáles de los siguientes enunciados reflejan adecuadamente la aplicación de los principios de prevención y de primacía de la realidad?",
@@ -1001,7 +1001,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Respecto al liderazgo e implementación del Sistema de Gestión de Seguridad y Salud en el Trabajo (SGSST), ¿qué criterio aplica el marco normativo peruano cuando el empleador delega funciones operativas de SST a terceros o supervisores?",
@@ -1038,7 +1038,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con el Reglamento de la Ley N.º 29783 (D.S. 005-2012-TR), ¿cuál es el criterio numérico que determina la obligación de conformar un Comité de Seguridad y Salud en el Trabajo en lugar de un Supervisor de SST?",
@@ -1075,7 +1075,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En relación con la normativa sobre Exámenes Médicos Ocupacionales (EMO) y sus modificatorias (Ley 30222), ¿qué aspectos son correctos respecto a sus costos, obligatoriedad y salvaguardas legales?",
@@ -1112,7 +1112,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Conforme a las pautas del sistema de fiscalización laboral administrado por la SUNAFIL, ¿qué calificación legal recibe la omisión del registro del Comité o Supervisor de SST en el aplicativo T-Registro?",
@@ -1149,7 +1149,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "El Reglamento de Seguridad y Salud Ocupacional en Minería (Decreto Supremo 024-2016-EM) define su ámbito de aplicación de manera específica. ¿A cuáles de los siguientes escenarios operacionales alcanza directamente?",
@@ -1186,7 +1186,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al aplicar la metodología de gestión operacional y la jerarquía de controles según el D.S. 024-2016-EM, ¿cuáles de las siguientes proposiciones describen correctamente los criterios normativos?",
@@ -1223,7 +1223,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un monitoreo de agentes físicos y ambientales en una galería subterránea arroja los siguientes datos: nivel de ruido en chancado de 92 dB y velocidad del aire en el frente de 0.3 m/s. ¿Qué diagnóstico se establece conforme a los estándares mínimos del sector minero?",
@@ -1260,7 +1260,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Conforme a lo dispuesto en el Artículo 162 del Reglamento de Seguridad y Salud Ocupacional en Minería (D.S. 024-2016-EM), ¿cuál debe ser el ancho mínimo en vías de doble sentido en operaciones a cielo abierto respecto al vehículo de mayor dimensión?",
@@ -1297,7 +1297,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Con base en las modificatorias del reglamento minero (como el D.S. 023-2017-EM), ¿cuáles de los siguientes requerimientos técnicos sobre desatado y sostenimiento de rocas en subterránea son de estricto cumplimiento?",
@@ -1334,7 +1334,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la conducción de maquinaria pesada en campamentos mineros ubicados sobre los 4000 m.s.n.m., ¿qué combinación de factores incrementa drásticamente el riesgo de somnolencia operacional según el análisis técnico del curso?",
@@ -1371,7 +1371,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la Clase 05 se debatió el impacto del 'fraude documental' y la falta de mantenimiento real en instalaciones operativas. ¿Qué consecuencia crítica se deriva directamente de estas negligencias empresariales en materia de SST?",
@@ -1408,7 +1408,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Dentro de la matriz de evaluación de riesgos (HIPER) del sector minero e industrial, ¿cuáles de las siguientes correspondencias entre el peligro identificado y su categoría de riesgo son correctas?",
@@ -1445,7 +1445,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En caso de ocurrir un derrame accidental de un reactivo químico peligroso (como cianuro o ácidos) en el área de procesos, ¿qué documento técnico debe consultarse de forma obligatoria e inmediata para guiar la respuesta, el uso de EPP específico y la aplicación de antídotos?",
@@ -1482,7 +1482,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la seguridad y salud ocupacional, ¿cuál es el rasgo definitorio fundamental que distingue al acoso laboral (*mobbing*) de un conflicto interpersonal ocasional en el trabajo?",
@@ -1519,7 +1519,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Con relación al marco de protección frente al acoso laboral y hostigamiento, ¿cuáles de las siguientes medidas corresponden a obligaciones legales que la empresa debe implementar activamente?",
@@ -1556,7 +1556,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Cuando una empresa privada se niega a tramitar o investigar una denuncia interna de acoso laboral vulnerando el debido proceso, ¿qué atribución legal posee la Superintendencia Nacional de Fiscalización Laboral (SUNAFIL)?",
@@ -1593,7 +1593,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar la matriz IPERC para una tarea de mantenimiento eléctrico en un espacio confinado, se identifica una combinación de Probabilidad Alta y Severidad Crítica (mortal). De acuerdo con la lógica del sistema, ¿cuál es la acción requerida?",
@@ -1630,7 +1630,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para prevenir episodios de asfixia o intoxicación por gases nocivos e inodoros durante las operaciones de perforación y voladura en subterránea, ¿cuáles de las siguientes medidas son controles técnicos obligatorios?",
@@ -1667,7 +1667,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Antes de autorizar el inicio de labores sobre andamios a una altura superior a los 1.80 metros, ¿cuál es el procedimiento normativo de verificación que debe cumplirse en la zona de trabajo?",
@@ -1704,7 +1704,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el marco de la evaluación de ergonomía en operaciones de larga duración, ¿cuáles de los siguientes factores contribuyen directamente a la aparición de trastornos musculoesqueléticos en los trabajadores?",
@@ -1741,7 +1741,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Se afirma que un Plan de Respuesta ante Emergencias resulta insuficiente si permanece únicamente como un documento aprobado en archivo. ¿Qué acción técnica permite validar su efectividad y corregir fallas operativas?",
@@ -1778,7 +1778,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "El trabajo en campamentos mineros bajo regímenes atípicos extensos puede desatar riesgos psicosociales que afectan la salud mental del personal. ¿Cuáles de las siguientes medidas son de intervención oportuna según el módulo?",
@@ -1815,7 +1815,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Conforme a las disposiciones del reglamento de minería, ¿cuál es la razón técnica y de seguridad por la cual el desatado manual de rocas en socavón debe realizarse strictly por dos personas?",
@@ -1852,7 +1852,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera polimetálica subterránea presenta elevados índices de accidentabilidad. La investigación revela fallas críticas en la actualización del IPERC, falta de involucramiento de la alta dirección y barreras lingüísticas con operadores quechuahablantes que no comprenden los procedimientos en castellano. ¿Qué conjunto de medidas de la norma ISO 45001 resuelve de raíz esta problemática?",
@@ -1889,7 +1889,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía minera experimenta pérdidas financieras por la interrupción de camiones con concentrado en la ruta hacia el puerto y, simultáneamente, sufre penalizaciones por discrepancias en la ley del mineral comercializado. ¿Qué combinación de normas ISO aborda de manera directa ambas contingencias operativas?",
@@ -1926,7 +1926,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante la fase de planificación del cierre de un proyecto minero subterráneo, el equipo técnico debe estructurar el plan correspondiente conforme al marco normativo de la Ley 28090 (modificada por la Ley 31347) y el estándar internacional ISO 24419. ¿Cuáles de las siguientes acciones son obligatorias para garantizar la estabilidad física y ambiental de la zona?",
@@ -1963,7 +1963,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un frente de excavación subterránea, un grupo de mineros observa una deformación anómala en la estructura del sostenimiento con riesgo inminente de colapso. Al informar al supervisor de turno, este les ordena continuar bajo amenaza de descuento salarial. Respaldados por el Convenio 155 de la OIT sobre seguridad y salud de los trabajadores, ¿cuál es el procedimiento legal que asiste a los operarios?",
@@ -2000,7 +2000,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el análisis histórico de la tragedia del Castillo Lourdes (Cerro de Pasco, 1979), se determinó que la caída libre de la jaula de transporte de personal con el resultado de siete fallecidos obedeció a la desconexión simultánea de barreras humanas y técnicas. ¿Qué factor crítico impidió que las 'leonas' o uñas de seguridad lograran frenar el descenso de la jaula tras la ruptura del cable de acero?",
@@ -2037,7 +2037,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En una unidad minera subterránea con alta filtración de agua ácida (como el caso Arcata), los trabajadores expuestos en las galerías de extracción presentan una recurrencia de dermatosis (pie de atleta) y problemas ergonómicos severos por operar maquinaria importada adaptada a Biotipos extranjeros. De acuerdo con las recomendaciones de higiene industrial y ergonomía OIT, ¿qué medidas integrales deben aplicarse?",
@@ -2074,7 +2074,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía del sector minero-metalúrgico decide unificar sus sistemas de gestión de Calidad (ISO 9001), Medio Ambiente (ISO 14001) y Seguridad Ocupacional (ISO 45001) bajo una estructura Trinorma HSEQ. Durante la fase inicial, se identifica una profusión de procedimientos duplicados e ineficiencias entre departamentos. ¿Cuál es el enfoque metodológico clave para asegurar una integración fluida en doce meses?",
@@ -2111,7 +2111,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el taller de mantenimiento mecánico de una mina a tajo abierto, se registran caídas de herramientas, derrames de aceite no contenidos y pérdidas de tiempo en la ubicación de repuestos. Se instruye la aplicación del método de las 5S dentro del programa de calidad total. ¿Cuál es el orden secuencial correcto de las actividades que debe ejecutar el personal?",
@@ -2148,7 +2148,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una planta concentradora que procesa mineral de cobre busca asegurar el cumplimiento de la norma ambiental ISO 14001 frente a los organismos fiscalizadores. ¿Cuáles de los siguientes controles operativos atacan directamente los aspectos e impactos ambientales más significativos de este tipo de operación?",
@@ -2185,7 +2185,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el desarrollo de una cultura de gestión por procesos y enfoque horizontal en una minera subterránea, se redefine la relación entre el área de Geología, la Planta Concentradora y el Departamento de Ventas. ¿Cómo se transforma la responsabilidad sobre la calidad del concentrado final bajo este modelo?",
@@ -2222,7 +2222,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el avance de un túnel de exploración a 4,500 msnm, se identifican peligros de estallido de rocas por presiones geomecánicas, presencia de gases asfixiantes (CO, H₂S) y deficiencia de oxígeno. Aplicando la jerarquía de controles del enfoque basado en riesgos (ISO 31000 e IPERC), ¿cuál es la secuencia estricta que debe seguir la supervisión?",
@@ -2259,7 +2259,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una unidad de minería subterránea se encuentra en su fase madura de producción. Para dar cumplimiento a la responsabilidad social y a las exigencias medioambientales de la norma ISO 14001 y los lineamientos de la ISO 26000 sobre partes interesadas, ¿qué acciones de cierre y gobernanza comunitaria deben ejecutarse progresivamente?",
@@ -2296,7 +2296,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una fiscalización ambiental bajo el marco del Decreto Legislativo 1278 (Ley de Gestión Integral de Residuos Sólidos), los inspectores detectan que en la zona de campamento de un proyecto minero los aceites usados de talleres se mezclan con envases de plástico y restos orgánicos en un foso a cielo abierto. ¿Cuál es el requerimiento legal e inmediato que debe subsanar la empresa?",
@@ -2333,7 +2333,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la fase de movimiento de tierras para la construcción de una plataforma de lixiviación, los operadores de las excavadoras descubren muros de piedra tallada y fragmentos cerámicos de origen preincaico dentro de la concesión minera. ¿Cuál es la conducta obligatoria a seguir según el marco legal de protección del patrimonio cultural?",
@@ -2370,7 +2370,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "El estudio de desastres socioambientales históricos como el derrame de mercurio en Choropampa (2000) y la contaminación metalúrgica prolongada en La Oroya entrega lecciones críticas sobre la fiscalización estatal y la gestión de contingencias. ¿Cuáles de las siguientes conclusiones se desprenden de la evaluación técnica de estos casos?",
@@ -2407,7 +2407,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una corporación minera internacional busca evaluar el nivel de madurez y el impacto de su estrategia de Responsabilidad Social Empresarial (RSE) en las comunidades campesinas del área de influencia directa. Para ello, requiere una matriz de evaluación articulada según la norma ISO 26000. ¿Qué tipología de indicadores debe integrarse para obtener una medición válida e integral?",
@@ -2444,7 +2444,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro del procedimiento de Consulta Previa normado por el Convenio 169 de la OIT y la legislación peruana, el Estado planifica un proceso de diálogo intercultural con una comunidad originaria respecto a la concesión de una etapa de explotación minera en su territorio. ¿Cuál es el requisito conceptual indispensables para la validez de este proceso?",
@@ -2481,7 +2481,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "El proyecto minero Las Bambas requirió la reubicación de la población de Fuera Bamba para habilitar la excavación del tajo abierto. Este proceso dio origen al reasentamiento poblacional en Nueva Fuera Bamba. ¿Cuáles de los siguientes pilares de gestión social permitieron estructurar esta reubicación dentro de un marco de sostenibilidad según el modelo presentado?",
@@ -2518,7 +2518,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una unidad subterránea de la región Arequipa, se desencadenó un incendio en la galería de transporte debido a un cortocircuito en un cable electrificado desgastado. El siniestro provocó la muerte por asfixia de 27 trabajadores. Al analizar la cadena de fallas en la gestión de seguridad y salud, ¿cuál de los siguientes factores organizacionales facilitó la escala trágica del accidente?",
@@ -2555,7 +2555,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "La unidad minera San Rafael (Minsur), ubicada a más de 4,500 msnm en Puno, es destacada globalmente por registrar cero accidentes fatales durante varios años consecutivos e implementar la trazabilidad completa del estaño mediante tecnología Blockchain. ¿Qué pilar operativo de su sistema de gestión explica este desempeño de clase mundial?",
@@ -2592,7 +2592,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "El transporte masivo de concentrado de mineral a través del Corredor Vial del Sur ha desencadenado recurrentes paralizaciones y conflictos socioambientales con las comunidades campesinas de la zona. De acuerdo con el análisis operativo de esta problemática, ¿cuáles de los siguientes factores agravaron la tensión social en este caso?",
@@ -2629,7 +2629,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un taller mecánico proveedor de repuestos para equipos mineros opera con un plantel de 12 trabajadores. El propietario desea regularizar su Sistema de Gestión de SST frente a una inspección de la autoridad laboral (SUNAFIL) bajo el esquema simplificado que le faculta la ley. ¿Cuál es el procedimiento administrativo y documental estricto que debe presentar?",
@@ -2666,7 +2666,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de mantenimiento eléctrico debe ingresar a un centro de transformación subterráneo ubicado dentro de un espacio confinado para reemplazar un transformador dañado. Las líneas principales han sido cortadas en el interruptor cabecera. ¿Qué riesgos específicos de alta severidad persisten y deben ser evaluados en el PETAR antes de autorizar el ingreso?",
@@ -2703,7 +2703,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el plan de cierre definitivo de una mina subterránea, la empresa debe garantizar que los componentes de la operación no generen pasivos ambientales ni colapsos mecánicos en los años posteriores al cese de actividades. De acuerdo con las normas de ingeniería ambiental y la ISO 24419, ¿cuáles de las siguientes actividades aseguran la estabilidad física y química a largo plazo?",
@@ -2740,7 +2740,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un campamento minero ubicado a 4,800 msnm alberga a 3,000 trabajadores en régimen atípico de jornadas acumulativas. Para sostener la continuidad de las operaciones sin interrupciones logísticas ni emergencias sanitarias digestivas que paralicen la mano de obra, ¿qué articulación normativa debe implementar la administración de la mina?",
@@ -2777,7 +2777,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la implementación de la norma ISO 45001 y la legislación nacional de seguridad y salud en el trabajo, ¿cuál es la disposición técnico-legal relativa a la conservación y archivo de los reportes e investigaciones de accidentes de trabajo?",
@@ -2814,7 +2814,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una unidad minera busca asegurar la continuidad operativa garantizando la protección física del combustible e insumos desde la planta proveedora hasta la mina, la inocuidad alimentaria en sus comedores de campamento y la confiabilidad analítica en los ensayos de ley de mineral. ¿Qué combinación de normas ISO aplica específicamente a estas tres áreas, respectivamente?",
@@ -2851,7 +2851,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la evaluación del sistema de SST en la mina Colpa Sac (Huachocolpa), se identificó un elevado índice de incidentes debido al comportamiento operativo del personal y fallas en las herramientas de gestión. ¿Cuál fue un factor sociocultural crítico detectado que limitaba la efectividad de las capacitaciones del IPERC?",
@@ -2888,7 +2888,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con el Convenio 155 de la Organización Internacional del Trabajo (OIT) sobre seguridad y salud de los trabajadores, ¿qué derecho asistencial clave se le reconoce al trabajador ante la presencia de una situación operativa de alto riesgo?",
@@ -2925,7 +2925,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al definir la asignación de Equipos de Protección Personal (EPP) en una mina subterránea bajo los lineamientos del IPERC y la norma ISO 45001, ¿cuáles de las siguientes afirmaciones representan criterios técnicos correctos?",
@@ -2962,7 +2962,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el análisis del fatal accidente ocurrido en el Castillo Lourdes de Cerro de Pasco (1979), donde fallecieron 7 trabajadores tras la caída libre de la jaula, ¿qué conjunción de fallas humanas y técnicas desencadenó la catástrofe?",
@@ -2999,7 +2999,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En una empresa minera, ¿cuál es el propósito central de implementar un Sistema Integrado de Gestión (Trinorma) compuesto por las normas ISO 9001, ISO 14001 e ISO 45001?",
@@ -3036,7 +3036,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro del pilar de gestión operativa y cultura de calidad, ¿cuál es el beneficio directo derivado de la correcta aplicación del método de las 5S (Seiri, Seiton, Seiso, Seiketsu, Shitsuke) en talleres y labores de mantenimiento minero?",
@@ -3073,7 +3073,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la norma ISO 14001 aplicada a las operaciones de beneficio de minerales, ¿qué aspecto ambiental significativo requiere un monitoreo sistemático para prevenir la contaminación de los cuerpos de agua superficiales y subterráneos?",
@@ -3110,7 +3110,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la administración moderna de empresas mineras, ¿cómo transforma el enfoque basado en procesos a la organización en comparación con el modelo tradicional jerárquico-vertical?",
@@ -3147,7 +3147,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al integrar la gestión de riesgos basada en la ISO 31000 con la tecnología de 'minería de procesos', ¿cuál es la principal ventaja técnica para la supervisión de operaciones mineras?",
@@ -3184,7 +3184,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con la norma ISO 24419 y el marco normativo minero, ¿cuáles de las siguientes acciones y características son propias de un Plan de Cierre de Minas integral?",
@@ -3221,7 +3221,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Bajo las disposiciones del Decreto Legislativo 1278 (Ley de Gestión Integral de Residuos Sólidos) en el sector minero, ¿cuál es el principio prioritario que deben aplicar los generadores de residuos?",
@@ -3258,7 +3258,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro del Sistema Nacional de Gestión Ambiental en Perú, ¿cuál es la competencia institucional específica de la Autoridad Nacional del Agua (ANA) en relación con las operaciones mineras?",
@@ -3295,7 +3295,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "El desastre ambiental ocurrido en Choropampa en el año 2000 evidenció fallas críticas en la gestión del transporte de materiales peligrosos. ¿Qué sustancia altamente tóxica se derramó y qué factor físico agravó la contaminación en la población local?",
@@ -3332,7 +3332,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar la madurez y efectividad de un programa de Responsabilidad Social Empresarial (RSE) en una unidad minera mediante los lineamientos de la ISO 26000, ¿qué caracteriza a los indicadores de 'profundidad'?",
@@ -3369,7 +3369,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el proceso normativo de Consulta Previa promovido por el Estado peruano con pueblos indígenas u originarios en el ámbito minero, ¿cuál es la finalidad fundamental del diálogo intercultural?",
@@ -3406,7 +3406,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el proceso de reasentamiento poblacional de la comunidad de Fuera Bamba debido al desarrollo del proyecto minero Las Bambas, ¿qué elemento clave caracterizó la concertación y ejecución del traslado hacia Nueva Fuera Bamba?",
@@ -3443,7 +3443,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la investigación del trágico incendio en una mina subterránea de Arequipa que causó la muerte por asfixia de 27 trabajadores, ¿cuál fue la falla organizacional previa directamente vinculada a la inspección deficiente del riesgo eléctrico?",
@@ -3480,7 +3480,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "La unidad minera San Rafael de Minsur (Puno) es reconocida internacionalmente por sus elevados estándares de seguridad operacional (sistema MinSegur) y sostenibilidad. ¿Qué innovación tecnológica y operativa destaca en su proceso de concentración de estaño?",
@@ -3517,7 +3517,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el proyecto minero Las Bambas, ¿cuál fue el cambio operativo en la logística de transporte de mineral adoptado en 2015 que desencadenó un prolongado conflicto socioambiental con las comunidades del corredor vial?",
@@ -3554,7 +3554,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En una operación minera ubicada en una zona remota de alta montaña, ¿qué aspectos operativos quedan cubiertos respectivamente bajo la implementación conjunta de las normas ISO 28000 e ISO 22000?",
@@ -3591,7 +3591,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para una pequeña empresa contratista minera que cuenta con menos de 20 trabajadores, ¿cuál es el procedimiento normativo simplificado para formalizar la representación de la seguridad y salud en el trabajo ante la autoridad inspectiva (SUNAFIL)?",
@@ -3628,7 +3628,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Dentro del reglamento de seguridad minera, ¿cuáles de las siguientes actividades están clasificadas explícitamente como 'trabajos de alto riesgo' y requieren Permiso Escrito para Trabajos de Alto Riesgo (PETAR) junto con señalización preventiva específica derivada del IPERC?",
@@ -3665,7 +3665,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el análisis comparativo del sector minero en el Perú, ¿cuál es una diferencia fundamental entre la minería informal en proceso de formalización (REINFO) y la minería ilegal?",
@@ -3702,7 +3702,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un titular minero planifica el calendario de auditorías externas de su sistema de gestión de seguridad y salud en el trabajo. De acuerdo con el Reglamento de Seguridad y Salud Ocupacional en Minería expuesto en las fuentes, ¿cuál es el plazo y la frecuencia legalmente exigida para la ejecución de la auditoría externa en esta industria?",
@@ -3739,7 +3739,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una inspección interna planeada en una unidad minera subterránea, la representación del sindicato exige participar con derecho a voto en el libro de observaciones del Comité de SST. De acuerdo con la normativa del sector analizada en la clase, ¿cuál es la posición legal y procedimental correcta que debe asumir la gerencia de SST?",
@@ -3776,7 +3776,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un ingeniero de higiene ocupacional debe definir la estrategia de monitoreo de polvo respirable y ruido en una planta concentradora. Para evitar decisiones arbitrarias y asegurar blindaje legal y técnico con un 95% de confianza en las evaluaciones de salud, ¿qué enfoque debe aplicar según las exigencias del sector minero?",
@@ -3813,7 +3813,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante la investigación de un accidente grave ocurrido por colisión de un minicargador en una galería subterránea, el equipo investigador evalúa el impacto de los factores ambientales en el entorno de trabajo. ¿Qué elementos y herramientas de evaluación ambiental deben integrarse obligatoriamente según el marco legal y reglamentario minero?",
@@ -3850,7 +3850,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de investigación analiza la caída de un trabajador desde una plataforma durante el mantenimiento de un huinche. Al contrastar la documentación operativa, se detecta que el procedimiento escrito de trabajo seguro (PETS) vigente no contempla el uso de línea de vida para dicha altura, aunque la matriz IPER-C sí lo clasifica como riesgo alto. ¿Qué falla sistémica revela este hallazgo?",
@@ -3887,7 +3887,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un inspector de seguridad audita el programa anual de capacitación tras un incidente en la zona de chancado. La empresa presenta listas de asistencia firmadas, pero no cuenta con evaluaciones de entendimiento ni registros de verificación de la aplicación práctica del procedimiento en el puesto de trabajo. ¿Cómo se califica legal y administrativamente esta condición?",
@@ -3924,7 +3924,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un Titular Minero actualiza su Plan de Respuesta ante Emergencias para la operación de un nuevo tajo abierto. Un grupo de contratistas ingresará a prestar servicios de perforación en una zona geológicamente inestable dentro de la mina. De acuerdo con las disposiciones del sector, ¿cómo debe gestionarse la integración de los contratistas en el plan rector?",
@@ -3961,7 +3961,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una inspección técnica evalúa los preparativos para emergencias en una mina subterránea de socavón. Al revisar el cumplimiento del artículo 151 y anexos del reglamento minero, ¿qué condiciones mínimas y obligatorias deben comprobarse en las estaciones de refugio?",
@@ -3998,7 +3998,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una fiscalización en una unidad de minería subterránea, el inspector solicita las evidencias de ejecución de los simulacros de emergencia. De acuerdo con el artículo 155 del Reglamento de Seguridad y Salud Ocupacional en Minería (D.S. 024), ¿con qué frecuencia mínima obligatoria deben ejecutarse los simulacros de emergencia y las pruebas de alarma?",
@@ -4035,7 +4035,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El gerente de seguridad de una mina subterránea busca analizar un escenario complejo de incendio en la huinchería principal, evaluando las causas raíz, los eventos gatillantes, las barreras de prevención y los controles de mitigación para evitar la propagación de gases. ¿Qué herramienta de análisis avanzado es la más recomendada en las fuentes para visualizar de forma clara la relación causa-evento-consecuencia?",
@@ -4072,7 +4072,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un especialista de seguridad utiliza un Modelo de Lenguaje Grande (LLM) para estructurar el primer borrador del Plan de Emergencias de una planta de beneficio. Para garantizar que el resultado sea técnicamente válido, legalmente alineado con el D.S. 024 y libre de \"alucinaciones\" de la IA, ¿qué buenas prácticas de interacción y validación debe seguir obligatoriamente?",
@@ -4109,7 +4109,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El área de SST prepara el Plan Anual de Formación y Capacitación. Para cumplir con la normativa y asegurar que los cursos respondan de manera directa a la prevención de accidentes en los puestos de mayor severidad, ¿cuál debe ser la fuente o insumo primario para seleccionar los temas de capacitación?",
@@ -4146,7 +4146,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la auditoría del plan de formación, se revisan los registros digitalizados obtenidos a través de herramientas como Google Forms. El auditor observa que se registraron la asistencia y las calificaciones de los exámenes, pero no existe trazabilidad sobre la aplicación práctica del aprendizaje en el puesto de trabajo. ¿Qué acción debe implementar el responsable de SST para cerrar esta brecha?",
@@ -4183,7 +4183,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un especialista en SST utiliza una herramienta de inteligencia artificial para elaborar una tabla en Excel con el cronograma del plan anual de capacitación, integrando nombres, DNI, cargo, curso, estado de aprobación y porcentaje de cumplimiento de KPIs. ¿Cuál es el riesgo principal de confiar ciegamente en la tabla generada por la IA sin un cotejo documental previo?",
@@ -4220,7 +4220,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una operación minera a tajo abierto adopta un enfoque de \"Gestión de SST 4.0\" para la supervisión diaria de la seguridad. ¿Qué tecnologías e instrumentos se consideran parte de este esquema de supervisión conectada en el lugar de trabajo según lo abordado en clase?",
@@ -4257,7 +4257,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un supervisor de SST inicia su turno en la mina y se encuentra con las siguientes situaciones simultáneas: la investigación de un accidente grave ocurrido al final del turno anterior, la redacción del informe mensual de estadísticas para el comité, la firma de permisos de trabajo para un mantenimiento programado y la actualización del logo en la portada del reglamento interno. Al aplicar la Matriz de Eisenhower sugerida mediante un prompt de IA para priorizar sus tareas, ¿cuál debe ser clasificada como \"Urgente e Importante\" para atención inmediata?",
@@ -4294,7 +4294,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una caminata de seguridad en la planta de chancado, un supervisor utiliza la cámara de su teléfono móvil con una aplicación de IA generativa (como Gemini) para analizar una estructura. La aplicación detecta que una pasarela elevada carece de rodapiés y barandas intermedias, clasificándolo como una condición subestándar. ¿Cuál es el paso operativo correcto que debe dar el supervisor a continuación?",
@@ -4331,7 +4331,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa minera recibe una visita no programada de inspectores de SUNAFIL, mientras que simultáneamente un auditor independiente realiza la evaluación del sistema de gestión y el equipo interno ejecuta una inspección planeada. Para evitar confusiones operativas, ¿cuáles son las diferencias fundamentales entre estas tres actividades?",
@@ -4368,7 +4368,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una inspección inopinada en el frente de avance de una mina subterránea, el supervisor de SST detecta una zona de mampostería inestable con alto riesgo de colapso de rocas sin sostenimiento aplicado. El jefe de mina se opone a detener la labor argumentando que se perderá la cuota de producción del día. De acuerdo con el artículo 57 de la Ley 29783 y los principios del sector, ¿cómo debe actuar el supervisor de SST?",
@@ -4405,7 +4405,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un inspector de SUNAFIL se presenta en la garita principal de una unidad minera para realizar una fiscalización especial por denuncia de condiciones inseguras. La gerencia le pide al personal de seguridad que haga esperar al inspector en recepción mientras ordenan los documentos del taller. ¿Cuál es el plazo máximo de espera que establece la normativa para permitir el ingreso del inspector antes de incurrir en una infracción por obstrucción?",
@@ -4442,7 +4442,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Ocurre un incidente donde un camión volquete rozó una tubería de alta presión dentro de la planta concentradora, sin causar heridos pero generando daños materiales menores. La supervisión sugiere no investigar el evento por no haber registrado trabajadores lesionados. ¿Por qué es un error crítico de gestión omitir la investigación de este incidente?",
@@ -4479,7 +4479,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el informe final de un accidente por atrapamiento en una faja transportadora, la comisión investigadora concluye que la causa raíz fue \"la negligencia y descuido del operador por no prestar atención al procedimiento\". Al auditar la calidad de esta investigación, ¿qué sesgo o error metodológico se evidencia en dicha conclusión?",
@@ -4516,7 +4516,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Tras concluir una auditoría interna del sistema de gestión de SST, la empresa minera registra varias no conformidades menores y observaciones. ¿Qué herramienta de control interno se debe implementar para asegurar la trazabilidad, asignación de responsables, plazos de cierre y cálculo de porcentajes de avance de las acciones correctivas?",
@@ -4553,7 +4553,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un simulacro inopinado de fuga de amoniaco en la planta de reactivos, se observa que los trabajadores de una empresa contratista de mantenimiento no evacuaron porque desconocían los códigos de alarma y las rutas hacia los puntos de reunión. Al fiscalizar la responsabilidad del Titular Minero, ¿cuál es la determinación legal aplicable?",
@@ -4590,7 +4590,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una gerencia de SST en minería busca migrar de un enfoque tradicional reactivo a un modelo de \"Gestión Proactiva 4.0\". ¿Qué acciones y pilares caracterizan esta transformación cultural y tecnológica según el contenido del módulo?",
@@ -4627,7 +4627,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Según la normativa de seguridad y salud ocupacional en minería, ¿cuál es la función específica que cumple el libro de observaciones del Comité de Seguridad y Salud en el Trabajo, diferenciado del libro de actas?",
@@ -4664,7 +4664,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante las inspecciones operativas en áreas mineras donde se emplea radiación ionizante para la evaluación de minerales, ¿qué instrumento y unidad de control son indispensables para medir de forma continua la exposición acumulada del personal?",
@@ -4701,7 +4701,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la industria minera, la determinación de los puntos de monitoreo ocupacional mediante el enfoque de Grupo de Exposición Similar (GES) busca fundamentar técnicamente la vigilancia de la salud. ¿Qué nivel de confianza estadístico exige la metodología para respaldar sus resultados?",
@@ -4738,7 +4738,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En trabajos de excavaciones y zanjas dentro de operaciones mineras o de construcción donde la normativa sectorial carece de máxima precisión, ¿qué medidas de protección o criterios técnicos deben aplicarse para mitigar el riesgo de colapso del terreno?",
@@ -4775,7 +4775,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la investigación de un accidente laboral acaecido en una labor subterránea, ¿cuál es el objetivo primordial de evaluar los factores ambientales como la iluminación, ventilación, ruido y gases contaminantes?",
@@ -4812,7 +4812,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al investigar un accidente grave, el equipo investigador revisa los Procedimientos Escritos de Trabajo Seguro (PETS) aplicables a la tarea. ¿Qué hallazgo documental evidencia una falla crítica en el sistema de gestión y no un mero descuido puntual del trabajador?",
@@ -4849,7 +4849,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué elementos forman parte imprescindible de la fase de recolección de evidencia técnica y documental durante la investigación de un accidente minero?",
@@ -4886,7 +4886,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro del marco regulatorio de seguridad en minería, ¿cuál es la distinción fundamental entre los reglamentos sectoriales de seguridad y salud ocupacional (como el Decreto Supremo 024) y las normas técnicas (como las normas ISO o NFPA)?",
@@ -4923,7 +4923,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con el artículo 148 del reglamento de seguridad minera, ¿cuál es la exigencia sobre la actualización del Plan de Preparación y Respuesta ante Emergencias?",
@@ -4960,7 +4960,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "El artículo 155 del reglamento de seguridad minera establece un requisito práctico para evaluar el plan de respuesta y probar las alarmas. ¿Con qué periodicidad obligatoria se deben ejecutar los simulacros de emergencia?",
@@ -4997,7 +4997,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Cuando diversas empresas contratistas realizan actividades dentro de una unidad minera, ¿cómo debe gestionarse la respuesta ante emergencias para garantizar la unidad de mando y la eficacia operativa?",
@@ -5034,7 +5034,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la operación de minería subterránea, ¿qué requisitos indispensables exige el reglamento (Artículo 151) respecto a las estaciones de refugio para casos de atrapamiento o presencia de gases tóxicos?",
@@ -5071,7 +5071,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al conformar y capacitar a las brigadas de emergencia en operaciones mineras, ¿qué aspectos técnicos, médicos y documentales deben verificarse obligatoriamente respecto a sus integrantes?",
@@ -5108,7 +5108,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al utilizar Modelos de Lenguaje (LLM) como herramientas de apoyo para estructurar un Plan de Respuesta ante Emergencias, ¿cuál es la regla metodológica fundamental para evitar errores causados por las 'alucinaciones' del algoritmo?",
@@ -5145,7 +5145,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para que un Plan Anual de Formación y Capacitación en SST responda a la prevención efectiva de los accidentes en la operación, ¿cuál debe ser su insumo técnico primario según la gestión preventiva?",
@@ -5182,7 +5182,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En una auditoría del sistema de gestión de SST, ¿qué requisitos son indispensables para acreditar la validez legal y técnica de las capacitaciones ejecutadas?",
@@ -5219,7 +5219,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al integrar formularios digitales automatizados (como Google Forms) para la toma de asistencias y evaluaciones del Plan de Capacitación, ¿cuál es el beneficio directo para la gestión de SST?",
@@ -5256,7 +5256,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la Gestión 4.0 en la industria minera, ¿cómo evoluciona el rol tradicional del supervisor de SST con la incorporación de tecnologías como sensores, drones e Inteligencia Artificial?",
@@ -5293,7 +5293,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al organizar la jornada de un supervisor de SST mediante la matriz de prioridad (Eisenhower) asistida por IA, ¿cuál de las siguientes situaciones debe clasificarse como 'Urgente e Importante' para su atención inmediata?",
@@ -5330,7 +5330,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante una inspección en planta o mina, ¿qué funcionalidades ofrecen las aplicaciones de Inteligencia Artificial multimodal utilizadas en teléfonos móviles?",
@@ -5367,7 +5367,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para obtener un procedimiento de trabajo seguro (PETS) útil y ajustado a la normativa mediante una LLM, ¿cuál es la estructura de un *prompt* correctamente redactado?",
@@ -5404,7 +5404,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la diferencia sustancial en cuanto al propósito y carácter entre una Auditoría de SST y una Fiscalización realizada por la autoridad laboral (SUNAFIL)?",
@@ -5441,7 +5441,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una inspección interna, el supervisor de SST detecta un fallo estructural en el sistema de sostenimiento que representa un riesgo inminente de derrumbe. Según el principio de prevención y la ley de SST, ¿cuál es la medida inmediata?",
@@ -5478,7 +5478,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Ante la llegada inopinada de un inspector de SUNAFIL a una unidad minera, ¿qué principios y conductas deben regir la atención de la visita de fiscalización?",
@@ -5515,7 +5515,7 @@
   {
     "codigo_diplomado": "DIP-21",
     "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al investigar un accidente laboral, ¿por qué la metodología moderna prohíbe cerrar las conclusiones señalando únicamente como causa el 'acto inseguro' o descuido del trabajador?",

@@ -2,7 +2,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un diagnóstico operativo en una unidad de producción minera e industrial, la gerencia detecta fallos de entrega y cuellos de botella. Para delimitar responsabilidades entre los equipos de planta, almacén y estrategia corporativa, se busca definir con precisión el alcance funcional de las áreas. ¿Cuál de las siguientes afirmaciones describe con precisión la diferenciación funcional entre Operaciones, Logística y Cadena de Suministro (Supply Chain)?",
@@ -39,7 +39,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una corporación minera busca mitigar riesgos operativos y de reputación mediante la integración de su cadena de suministro hacia atrás (proveedores) y hacia adelante (clientes/entorno). ¿Cuáles de las siguientes acciones representan prácticas efectivas de integración estratégica según los principios de Supply Chain Management?",
@@ -76,7 +76,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un agroexportador de arándanos en el sur del Perú enfrenta un bloqueo indefinido de la Panamericana debido a conflictos sociales. Dado que el arándano es un producto altamente perecedero con alto contenido de agua, ¿qué decisión logística y estratégica minimiza el impacto económico y asegura el flujo del producto hacia el mercado de destino?",
@@ -113,7 +113,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la cadena de acopio de leche fresca de la empresa Gloria, que abarca a más de 15,000 ganaderos a nivel nacional, la empresa ha registrado históricamente tasas de rechazo de materia prima de hasta un 20% por defectos organolépticos o físico-químicos. ¿Qué mecanismo operativo y tecnológico utiliza la empresa en el proceso de recolección para salvaguardar la calidad del producto final y gestionar contractualmente a los proveedores?",
@@ -150,7 +150,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Empresas como Yobel SCM han optimizado el cumplimiento de pedidos y la productividad en sus centros de distribución mediante la implementación de Pick to Light y procesos estructurados de picking y packing. ¿Cuáles de las siguientes afirmaciones caracterizan correctamente las ventajas tecnológicas y operativas de esta metodología?",
@@ -187,7 +187,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el análisis de la infraestructura logística de transporte en el Perú, el Corredor Andino Central y la Vía Interoceánica Sur (Irsas Sur) presentan índices elevados de siniestralidad operacional e interrupciones. Adicionalmente, se identifica el accionar de convoyes de contrabando conocidos como 'la serpiente'. ¿Qué impacto directo genera esta problemática de infraestructura y seguridad sobre la gestión de la cadena de suministro nacional?",
@@ -224,7 +224,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una corporación industrial evalúa la arquitectura de sus sistemas de información logísticos. Requiere una herramienta estratégica para realizar simulaciones de contingencias (*what-if*), proyectar demandas futuras y optimizar restricciones de capacidad, la cual debe estar integrada a la columna vertebral financiera y administrativa de la empresa (ERP). ¿Cuál es la articulación tecnológica correcta entre estos sistemas?",
@@ -261,7 +261,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la gestión de inventarios y cumplimiento de compromisos operativos en empresas B2B (ej. minería) y B2C (ej. retail), el uso de buffers (factores de corrección) y el análisis de indicadores como OTIF, MAPE y cobertura resultan críticos. ¿Cuáles de las siguientes afirmaciones representan interpretaciones analíticas correctas sobre estos conceptos?",
@@ -298,7 +298,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Dos empresas de retail aplican estrategias de comercialización distintas: la Empresa A opera bajo un modelo enfocado en el ticket promedio y volumen masivo (ej. tienda de vestuario como H&M), mientras que la Empresa B comercializa artículos de alto valor unitario con baja frecuencia de compra (ej. artículos de cuero de Renzo Costa). ¿Cómo influyen estas decisiones estratégicas en la gestión de sus inventarios y redes logísticas?",
@@ -335,7 +335,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la evaluación de riesgos operacionales en un centro de distribución minero, el equipo técnico analiza la probabilidad y gravedad del riesgo: 'Falla total del sistema ERP durante el proceso de despacho'. Se asigna una escala estandarizada 5 × 5 con una Gravedad de 4 (Grave) y una Probabilidad de 4 (Probable). ¿Cuál es el valor del puntaje de riesgo (Risk Rating) y en qué categoría de severidad se clasifica para la toma de decisiones?",
@@ -372,7 +372,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión de riesgos en SCM, el método del Valor Monetario Esperado (EMV por sus siglas en inglés) permite monetizar el impacto potencial mediante la fórmula EMV = Probabilidad × Pérdida Monetaria Estimada. Sin embargo, en la práctica operativa minera e industrial, el profesor señala una limitación crítica del EMV. ¿Cuál es esa limitación y qué recomendación se debe seguir cuando el costeo resulta altamente subjetivo?",
@@ -409,7 +409,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En una operación minera de socavón, la geología cambiante genera variaciones drásticas en el consumo de elementos de sostenimiento (ej. splitsets, mallas y cimbras). Un cambio en el tipo de roca redujo el consumo programado de splitsets de 20,000 a 8,000 unidades mensuales, afectando el contrato con el proveedor. ¿Cuáles de las siguientes representan categorías de riesgo presentes en este escenario y sus respectivas implicaciones?",
@@ -446,7 +446,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el flujo operativo de recepción y almacenamiento en una unidad minera, se han presentado retrasos constantes por 'Entregas de mercadería con documentación errónea o incompleta por parte de proveedores'. Para mitigar este riesgo de severidad media/alta en el plan de acción, ¿cuál es la medida correctiva y preventiva más ágil y efectiva recomendada en los talleres de SCM?",
@@ -483,7 +483,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Cuando una empresa administra un catálogo masivo con más de 30,000 SKUs de repuestos e insumos (como en el sector minero), realizar una matriz de riesgo individual para cada artículo resulta ineficiente. ¿Cómo se debe aplicar la metodología ABC / Pareto para optimizar la gestión de riesgos en el almacenamiento y abastecimiento?",
@@ -520,7 +520,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el ejercicio práctico de evaluación de riesgos del proceso de compras (procurement) expuesto por los grupos de trabajo, se identificó que el punto de mayor impacto financiero e interrupción operativa radica en 'Errores de consignación de datos en la Orden de Compra (precios, cantidades, moneda o especificaciones técnicas)'. ¿Qué medida de control en el plan de acción elimina eficazmente esta vulnerabilidad en la emisión de OCs?",
@@ -557,7 +557,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Las filosofías operativas de manufactura delgada (Lean Production) y Just-in-Time (JIT) buscan minimizar al máximo las reservas de inventario para eliminar desperdicios. Sin embargo, en la gestión de la cadena de suministro minera, la adopción pura del JIT es categóricamente rechazada por los expertos. ¿Cuál es la razón fundamental que impide la aplicación del JIT en la logística de repuestos críticos para la minería?",
@@ -594,7 +594,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Frente a perturbaciones globales y locales (pandemias, guerras, cierres de puertos, bloqueos de carreteras), las cadenas de suministro modernas deben ser diseñadas bajo el principio de resiliencia. ¿Cuáles de las siguientes medidas operativas y estratégicas fortalecen la resiliencia de la red logística de una empresa?",
@@ -631,7 +631,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una gerencia logística decide analizar una base de datos de compras corporativas de más de 37,000 registros utilizando herramientas de Inteligencia Artificial y analítica avanzada para clasificar sus SKUs estratégicos mediante la Matriz de Kraljic. ¿Cuál es la ventaja práctica directa de aplicar IA en este tipo de procesamiento masivo de datos frente al análisis analógico convencional?",
@@ -668,7 +668,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una compañía minera desea seleccionar e implementar un sistema de gestión de almacenes (WMS por sus siglas en inglés) para modernizar sus centros de distribución principales. ¿Cuáles de los siguientes criterios deben ser considerados prioritarios durante el proceso de evaluación de la solución tecnológica según las buenas prácticas expuestas?",
@@ -705,7 +705,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la medición y control de la cadena de suministro, es indispensable diferenciar la jerarquía de los indicadores en estratégicos, tácticos y operativos. ¿Cuál de las siguientes clasificaciones asigna correctamente cada indicador con su respectivo nivel jerárquico de gestión?",
@@ -742,7 +742,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un Gerente de Logística contrasta los indicadores de desempeño de su organización con los benchmarks de la industria expuestos en la Clase 07. ¿Cuáles de los siguientes valores representan metas y benchmarks internacionales estándar de la industria logísticos y de cadena de suministro?",
@@ -779,7 +779,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el proceso de Planificación de Ventas y Operaciones (S&OP), la empresa busca alinear mensualmente los planes de marketing, ventas, operaciones, compras y finanzas. Durante una sesión, el equipo de ventas presenta una proyección de incremento del 40% en demanda por una promoción agresiva, pero el área operativa advierte que la planta se encuentra al 95% de utilización de capacidad. ¿Cuál es el rol del S&OP ante esta brecha?",
@@ -816,7 +816,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El diseño de la red de distribución en regiones con geografías complejas y comunidades aisladas en el Perú (ej. la provincia de La Unión en Arequipa o zonas altoandinas) enfrenta severas limitaciones de infraestructura carretera y conectividad eléctrica. ¿Cómo debe estructurarse la estrategia de reposición logística y atención de demanda en estos entornos de baja conectividad?",
@@ -853,7 +853,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión operativa de retail y distribución, existe una regla práctica empírica para calcular el inventario objetivo sostenedor en el almacén de tránsito a partir de la exhibición en el piso de venta para productos de alta rotación. ¿Cuál es esa relación proporcional recomendada?",
@@ -890,7 +890,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la gestión contractual de abastecimiento con proveedores de insumos sensibles o de alta variabilidad de calidad, la empresa contratante debe establecer controles estrictos para evitar reincidencias de productos defectuosos. ¿Cuáles de las siguientes acciones representan prácticas adecuadas de control contractual y penalidades a proveedores según lo analizado en el diplomado?",
@@ -927,7 +927,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la diferencia fundamental entre operaciones, logística y cadena de suministro (Supply Chain) según los fundamentos conceptuales de la gestión logística?",
@@ -964,7 +964,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de la gestión de la cadena de suministro se identifican tres flujos principales (materiales, información y capital). ¿Qué abarca específicamente el flujo inverso dentro de la dimensión de materiales?",
@@ -1001,7 +1001,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes acciones corresponden a una estrategia de integración hacia atrás en la cadena de suministro?",
@@ -1038,7 +1038,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el análisis de cadenas de suministro de productos perecibles y sensibles como el arándano de exportación, ¿cuál es el factor crítico de riesgo operativo y la medida logística de mitigación recomendada ante cierres de vías?",
@@ -1075,7 +1075,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la cadena logística de recolección de leche fresca de la empresa Gloria, ¿qué procedimiento práctico de control de calidad se realiza antes de autorizar el ingreso del insumo a la planta de procesamiento?",
@@ -1112,7 +1112,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la ventaja funcional determinante de la tecnología *Pick to Light* frente al método de picking tradicional con escáner portátil de código de barras?",
@@ -1149,7 +1149,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con los casos de empresas peruanas y tendencias de digitalización analizados en el curso, ¿cuáles de las siguientes aseveraciones son correctas respecto a tecnologías e indicadores aplicados?",
@@ -1186,7 +1186,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la jerarquía organizativa de la planificación de la cadena de suministro, ¿cuáles son los horizontes temporales de planeamiento estandarizados para los niveles Estratégico, Táctico y Operativo respectivamente?",
@@ -1223,7 +1223,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cómo se articulan funcionalmente los sistemas de Planificación Avanzada (APS) con los sistemas ERP (Enterprise Resource Planning) en la gestión logística integral?",
@@ -1260,7 +1260,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión de contingencias e imprevistos logísticos, ¿cuál es la diferencia crítica de impacto ante un quiebre de stock entre un entorno B2C (retail) y un entorno B2B (operaciones mineras)?",
@@ -1297,7 +1297,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la metodología de evaluación de riesgos en la cadena de suministro, ¿cuál es la fórmula estándar para calcular la puntuación de riesgo (*risk rating*) y cuál es el rango que delimita la categoría de 'Riesgo Alto' en una matriz 5 × 5?",
@@ -1334,7 +1334,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Respecto a la técnica del Valor Monetario Esperado (EMV por sus siglas en inglés) para la cuantificación del riesgo, ¿cuáles de las siguientes afirmaciones describen correctamente sus características o limitaciones?",
@@ -1371,7 +1371,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la construcción de una matriz de riesgos 5 × 5 en Excel para un proceso logístico, ¿qué procedimiento práctico se debe seguir cuando dos riesgos distintos obtienen la misma puntuación y se ubican en la misma casilla de probabilidad y gravedad?",
@@ -1408,7 +1408,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la unidad minera analizada en el caso de la Clase 05, una variación inesperada en la dureza de la roca provocó que el consumo de *splitsets* descendiera de 20,000 a 8,000 unidades mensuales, generando tensión contractual. ¿A qué categoría de riesgo de la cadena de suministro pertenece este evento?",
@@ -1445,7 +1445,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Cuando un almacén industrial o minero administra miles de códigos (SKUs), ¿cuál es la recomendación metodológica para realizar la evaluación de riesgos de abastecimiento de manera eficiente y rigurosa?",
@@ -1482,7 +1482,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con el modelo conceptual de la cadena de suministro, ¿cuáles son los cinco eslabones fundamentales que estructuran su ciclo de gestión?",
@@ -1519,7 +1519,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Por qué la estrategia de producción e inventario *Just-in-Time* (JIT) resulta inapropiada como política general de almacenamiento en el sector minero?",
@@ -1556,7 +1556,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Frente a interrupciones en la cadena de suministro global y volatilidades del mercado, ¿cuáles de las siguientes estrategias incrementan la resiliencia operativa?",
@@ -1593,7 +1593,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con lo expuesto sobre el uso de tecnologías analíticas emergentes, ¿cuál es una aplicación práctica e inmediata de la Inteligencia Artificial (IA) en la gestión estratégica de abastecimiento?",
@@ -1630,7 +1630,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál de las siguientes combinaciones clasifica adecuadamente los indicadores logísticos en los niveles Estratégico, Táctico y Operativo respectivamente?",
@@ -1667,7 +1667,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es el objetivo principal y la periodicidad típica del proceso de Planificación de Ventas y Operaciones (S&OP)?",
@@ -1704,7 +1704,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con los benchmarks y referencias cuantitativas expuestas en el módulo, ¿cuáles de los siguientes objetivos métricos corresponden a estándares deseables en la gestión de Supply Chain?",
@@ -1741,7 +1741,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto geográfico y territorial del Perú, ¿de qué manera impactan las limitaciones de conectividad e infraestructura en provincias aisladas (como La Unión en Arequipa) en el diseño de abastecimiento local?",
@@ -1778,7 +1778,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el caso de la empresa Yobel expuesto en el módulo, ¿cuál fue uno de los logros operativos verificables tras la implementación de sistemas de trazabilidad y *Pick to Light* en su cadena de cosmética y farmacia?",
@@ -1815,7 +1815,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante el ejercicio práctico de mapeo y evaluación de riesgos en un flujo de compras (requerimiento, cotización, evaluación, emisión de orden y seguimiento), ¿cuáles de las siguientes situaciones fueron identificadas como riesgos típicos en las etapas de **requerimiento** y **emisión de orden de compra**?",
@@ -1852,7 +1852,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera analiza la adquisición de una flota de camiones de acarreo. El proveedor A ofrece un precio de compra 15% menor que el proveedor B, pero exige repuestos exclusivos con altos costos logísticos de importación y un mantenimiento preventivo más costoso. El proveedor B ofrece repuestos estandarizados, soporte local continuo y mayor eficiencia energética. Evaluando esta situación bajo el enfoque del Costo Total de Propiedad (TCO) en un horizonte de 8 años, ¿cuál es la decisión estratégicamente correcta y su justificación?",
@@ -1889,7 +1889,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un área de compras en una mina subterránea busca migrar de un enfoque transaccional tradicional a una función estratégica orientada a la creación de valor. ¿Qué acciones concretas demuestran esta transformación operativa según los principios de la gestión moderna de abastecimiento?",
@@ -1926,7 +1926,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión de inventarios para una operación minera remota, se presenta la disyuntiva entre mantener un nivel de servicio del 99% en repuestos críticos o reducir el capital de trabajo inmovilizado. ¿Cómo ayuda la implementación de herramientas avanzadas de Inteligencia Artificial y Machine Learning integradas al ERP a resolver este dilema?",
@@ -1963,7 +1963,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al comparar los modelos logísticos de exportación de concentrado de Cerro Verde y Las Bambas, se observan diferencias estructurales significativas en la gestión del riesgo de interrupción del suministro. ¿Qué factor explica la mayor resiliencia operacional de Cerro Verde frente a los bloqueos de transporte?",
@@ -2000,7 +2000,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una unidad minera ubicada en la sierra central enfrenta tensiones sociales debido a la percepción de inequidad en las adjudicaciones de contratos locales. Para reestructurar el programa de Compras Locales con enfoque ESG y evitar impactos socioeconómicos adversos, ¿qué prácticas deben implementar?",
@@ -2037,7 +2037,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la planificación del aprovisionamiento estratégico de neumáticos OTR para la flota de camiones de extracción en una mina de gran altitud, la gerencia de abastecimiento debe seleccionar la estrategia que mejor balancee el TCO, la resiliencia operativa y la sostenibilidad ambiental (ESG). ¿Cuál de las siguientes propuestas de sourcing es la más adecuada?",
@@ -2074,7 +2074,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de abastecimiento requiere contratar el diseño, construcción y puesta en marcha de un sistema automatizado de mezcla de reactivos químicos para la planta concentradora. La especificación requiere innovación tecnológica y metodologías no estandarizadas. ¿Qué documento de licitación debe emitirse prioritariamente al mercado proveedor para este fin?",
@@ -2111,7 +2111,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se presenta el siguiente listado de inventario en una operación minera con 1,000 ítems registrados. Al realizar la ordenación descendente por el Costo de Stock Promedio (calculado como Costo Unitario × Stock Promedio), se observa que los primeros 120 ítems acumulan el 78.5% del valor monetario total del inventario. Según la metodología ABC / Ley de Pareto, ¿cómo deben clasificarse estos 120 ítems y qué política de gestión corresponde aplicar?",
@@ -2148,7 +2148,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un analista de abastecimiento realiza un Pareto basado exclusivamente en la 'Demanda Promedio Mensual en Unidades' para clasificar repuestos de mantenimiento de planta. ¿Qué precauciones técnicas debe considerar antes de establecer políticas finales de compra e inventario basadas únicamente en este resultado?",
@@ -2185,7 +2185,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Se evalúan dos insumos para una mina: los explosivos/emulsiones y los repuestos específicos para el sistema electrónico de Perforadoras Autónomas. Ambos presentan un alto riesgo de suministro por contar con un número extremadamente reducido de proveedores en el mercado local. Sin embargo, las emulsiones tienen un gasto anual masivo mientras que las placas electrónicas tienen un valor de consumo anual moderado pero indispensable. Según la Matriz de Kraljic, ¿cuál es la clasificación exacta de cada uno?",
@@ -2222,7 +2222,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la metodología tridimensional para construir la Matriz de Kraljic avanzada, el equipo de abastecimiento debe definir los ejes y drivers cuantitativos para segmentar las categorías de compra. ¿Qué elementos estructuran correctamente esta representación tridimensional?",
@@ -2259,7 +2259,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una categoría de compra como el 'Combustible diésel para maquinaria pesada' ha sido clasificada en el cuadrante Apalancado (Palancas) debido a su alto impacto financiero pero amplia disponibilidad de proveedores y distribuidores en el mercado. ¿Cuál es la estrategia de contratación más eficaz para maximizar el valor de la empresa en este cuadrante?",
@@ -2296,7 +2296,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía minera va a adjudicar un contrato estratégico de transporte de material concentrado. Durante la evaluación técnica y legal de un proveedor candidato, se detecta que posee una flota moderna pero no presenta estados financieros auditados del último ejercicio ni el plan de gestión de SST (ISO 45001). ¿Qué decisión debe tomar el comité de homologación siguiendo los Estándares de Homologación de Proveedores?",
@@ -2333,7 +2333,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el marco de la gestión de riesgos en la evaluación de proveedores para minería e industria, ¿cuáles de las siguientes medidas corresponden a buenas prácticas de auditoría in situ y monitoreo continuo?",
@@ -2370,7 +2370,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar dos ofertas para la compra de un transformador eléctrico de alta potencia para una subestación minera, se presentan los siguientes datos:\n- Proveedor A: Precio 100,000. Costo de instalación y flete: 20,000. Consumo energético estimado en vida útil: 80,000. Mantenimiento previsto: 15,000.\n- Proveedor B: Precio 120,000. Costo de instalación y flete: 10,000. Consumo energético estimado (alta eficiencia): 45,000. Mantenimiento previsto: 10,000.\n\nAplicando el criterio cuantitativo del Costo Total de Pertenencia (TCO), ¿cuál es la decisión de selección y la diferencia de TCO a favor de la opción óptima?",
@@ -2407,7 +2407,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un entorno minero sujeto a regulaciones anticorrupción (ISO 37001) y escrutinio público, el proceso de Due Diligence (debida diligencia) en la evaluación de proveedores busca prevenir riesgos de cumplimiento y legales. ¿Qué verificación específica es fundamental realizar dentro de este proceso?",
@@ -2444,7 +2444,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una gerencia de abastecimiento está diseñando un cuestionario estandarizado de homologación adaptado a la criticidad de sus proveedores. ¿Qué secciones clave y documentos de respaldo deben solicitarse para evaluar de forma integral la capacidad y sostenibilidad del proveedor?",
@@ -2481,7 +2481,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una simulación de auditoría de homologación entre la gerencia de compras de una mina y un proveedor local de mantenimiento de bombas hidráulicas, el auditor detecta que el proveedor no posee la certificación ISO 9001 formal, pero demuestra 10 años de servicio intachable con cero no conformidades, personal técnico altamente calificado y procedimientos operativos documentados detalladamente. ¿Cuál es el criterio de decisión más adecuado por parte del auditor?",
@@ -2518,7 +2518,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El departamento de compras de una operación minera gestiona 15,000 SKUs de repuestos e insumos mediante órdenes de compra individuales y spot. Esta modalidad genera un elevado costo operativo administrativo y una saturación en el área de recepción de almacenaje. ¿Qué estrategia de abastecimiento debe aplicarse para resolver este problema estructural?",
@@ -2555,7 +2555,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de una empresa minera se evalúa la adquisición de dos insumos de operación mediante la Matriz de Kraljic: 'Bolas de molienda de acero' y 'Reactivos de flotación personalizados'. Las bolas de acero son ofrecidas por múltiples fundiciones nacionales e internacionales competitivas; los reactivos son suministrados por una sola firma que posee la patente tecnológica. ¿Cómo afecta esta condición a las estrategias de compra de ambos insumos?",
@@ -2592,7 +2592,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un análisis financiero en la gestión de compras demuestra que reducir el número de órdenes de compra emitidas anualmente (pasando de 20,000 a 4,000 órdenes al año) mediante el uso de contratos marco y simplificación de procesos genera beneficios directos en la cadena de suministro. ¿Cuáles son estos beneficios?",
@@ -2629,7 +2629,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al aplicar la metodología del FODA Matemático para evaluar la posición estratégica del área de logística de una empresa minera, se construye una matriz de doble entrada dentro del cuadrante de Fortalezas que contiene 5 factores. ¿Cómo se determina cuantitativamente el 'Peso Relativo' (ponderación entre 0 y 1) de cada uno de los factores evaluados?",
@@ -2666,7 +2666,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una vez obtenidos los puntajes ponderados de los factores en la matriz del FODA Matemático, la gerencia pasa a la formulación de estrategias mediante la Matriz Analítica de Formulación de Estrategias (MAFE). ¿Cuáles de las siguientes reglas de formulación y cruce de factores deben respetarse estrictamente?",
@@ -2703,7 +2703,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el resultado final de una matriz MAFE basada en FODA Matemático, el equipo obtiene un listado de 20 estrategias formuladas con sus respectivos puntajes ponderados acumulados. Dado que la empresa cuenta con recursos financieros y humanos limitados para la ejecución, ¿cuál es la recomendación metodológica para la priorización y selección de estrategias?",
@@ -2740,7 +2740,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un superintendente de abastecimiento desea implementar herramientas tecnológicas avanzadas para automatizar la gestión de cotizaciones repetitivas y análisis de datos en la cadena de aprovisionamiento, pero el presupuesto de la unidad operativa es acotado. ¿Cuál es el enfoque estratégico más práctico y de alto retorno de inversión (ROI) recomendado para la gestión cotidiana?",
@@ -2777,7 +2777,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la diferencia fundamental entre la gestión de compras tradicional basada en transacciones y la gestión estratégica de compras en la industria minera?",
@@ -2814,7 +2814,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco del Sourcing Estratégico, ¿qué impacto económico y operacional se busca lograr a diferencia del abastecimiento táctico convencional?",
@@ -2851,7 +2851,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Qué decisiones estratégicas y tecnológicas permiten pasar de una gestión de inventarios reactiva a una predictiva en la industria minera?",
@@ -2888,7 +2888,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al comparar los casos de estudio de Cerro Verde y Las Bambas, ¿cuál es el factor diferenciador crítico en sus cadenas de suministro y resiliencia operacional?",
@@ -2925,7 +2925,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles de las siguientes prácticas forman parte de la integración de criterios ESG y compras sostenibles en la cadena de suministro minera?",
@@ -2962,7 +2962,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un programa masivo de compras locales en zonas de influencia minera puede generar efectos colaterales no deseados. ¿Qué medida estratégica permite mitigar la inflación localizada y la dependencia económica post-mina?",
@@ -2999,7 +2999,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el proceso de adquisición de bienes y servicios para la mina, ¿cuándo es adecuado utilizar una Solicitud de Propuesta (RFP) en lugar de una Solicitud de Cotización (RFQ)?",
@@ -3036,7 +3036,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el desarrollo del análisis Pareto para la clasificación ABC de inventarios por costo de stock promedio, ¿cuál es el procedimiento para determinar el porcentaje de costo acumulado de un artículo?",
@@ -3073,7 +3073,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al realizar una clasificación ABC basada en la demanda promedio mensual en lugar del costo de inventario, ¿qué consideraciones técnicas se deben tomar en cuenta?",
@@ -3110,7 +3110,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la Matriz de Kraljic original propuesta en 1983, ¿qué variables definen los ejes horizontal y vertical para segmentar las compras?",
@@ -3147,7 +3147,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para una categoría ubicada en el cuadrante 'Cuello de Botella' (bajo impacto financiero, alto riesgo de suministro), ¿cuál es la estrategia principal que debe implementar el comprador?",
@@ -3184,7 +3184,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la construcción metodológica de una Matriz de Kraljic tridimensional (modelo de burbujas), ¿cuáles de los siguientes pasos son indispensables para posicionar las categorías?",
@@ -3221,7 +3221,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es el propósito fundamental del proceso de homologación de proveedores en la cadena de suministro de una operación minera?",
@@ -3258,7 +3258,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar la adquisición de un activo minero crítico (como una flota de camiones o una perforadora de gran alcance), ¿qué elementos integra el análisis del Costo Total de Propiedad (TCO)?",
@@ -3295,7 +3295,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Dentro de la gestión de auditorías a proveedores para la homologación, ¿cuáles representan tipos de auditoría y criterios de priorización correctos?",
@@ -3332,7 +3332,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué herramienta preventiva de la gestión de riesgos permite analizar la reputación, solvencia financiera, historial legal y eventual presencia de Personas Políticamente Expuestas (PEPs) en un proveedor?",
@@ -3369,7 +3369,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para evitar la exclusión de pequeñas empresas y proveedores locales que aportan agilidad pero carecen de certificaciones internacionales, ¿cuál es el enfoque recomendado en la homologación?",
@@ -3406,7 +3406,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el diseño de un cuestionario integral para la evaluación y homologación de proveedores mineros, ¿qué bloques temáticos clave deben incluirse?",
@@ -3443,7 +3443,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión de contrataciones para compras recurrentes de alta rotación, ¿cuál es el beneficio operativo inmediato de implementar contratos marco u órdenes abiertas?",
@@ -3480,7 +3480,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la aplicación de la Matriz de Kraljic al caso de una empresa de servicios de perforación minera (Caso Geotech), ¿dónde deben ubicarse las brocas diamantadas, barras de perforación y casing?",
@@ -3517,7 +3517,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para mitigar la acumulación de inventario muerto u obsoleto y optimizar el catálogo de materiales en una operación minera, ¿qué acciones de homologación y consolidación de SKUs son recomendadas?",
@@ -3554,7 +3554,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la metodología del FODA matemático, ¿cuál es la función de construir una matriz de comparación por pares dentro de cada cuadrante (Fortalezas, Debilidades, Oportunidades, Amenazas)?",
@@ -3591,7 +3591,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cómo se determina el puntaje de prioridad de una estrategia formulada en la Matriz Analítica de Formulación de Estrategias (MAFE) dentro del FODA matemático?",
@@ -3628,7 +3628,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la Matriz MAFE (FODA matemático), ¿cuáles de las siguientes representan combinaciones estratégicas válidas y sus objetivos de formulación?",
@@ -3665,7 +3665,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Desde la perspectiva de la productividad del comprador, ¿cuál es el enfoque práctico recomendado para la adopción de herramientas de Inteligencia Artificial en la gestión de compras e inventarios?",
@@ -3702,7 +3702,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un proyecto de expansión en una mina de la sierra central peruana, un transformador crítico importado terminó por error en el puerto de Buenaventura en Colombia debido a una falla del agente embarcador. ¿Qué medida preventiva contractual y operativa debió implementarse para mitigar este riesgo de desvío e impacto en el lucro cesante?",
@@ -3739,7 +3739,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la cadena de suministro minera, la fase *downstream* comprende fundición, refinación y comercialización. ¿Por qué representa esta fase un desafío crítico en términos de trazabilidad y gobernanza ESG para las empresas comercializadoras?",
@@ -3776,7 +3776,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un almacén central minero recibe por error un lote de reactivos de flotación con especificaciones técnicas incorrectas durante una parada de planta programada. ¿Qué acciones inmediatas deben coordinarse para mitigar la parálisis operativa y gestionar la contingencia?",
@@ -3813,7 +3813,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el caso de la mina Las Bambas, el cambio del diseño operativo original (mineducto) hacia el transporte de concentrado por carretera pública transformó radicalmente la resiliencia de su cadena de suministro. ¿Cuál fue el impacto estructural de esta decisión sobre el entorno sociopolítico del proyecto?",
@@ -3850,7 +3850,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera polimetálica enfrenta una coyuntura de caída en los precios internacionales del cobre y devaluación del Sol peruano frente al Dólar estadounidense. ¿Cuál es el efecto combinado directo de esta fluctuación económica en la estructura de costos de importación y seguros de la empresa?",
@@ -3887,7 +3887,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Ante el estallido de un conflicto socioambiental que bloquea la única vía de acceso a una unidad minera en producción, el equipo de crisis debe formular una estrategia de negociación en la mesa de diálogo. ¿Qué elementos clave deben formar parte de la propuesta para reestablecer la continuidad logística sin comprometer la gobernanza de la empresa?",
@@ -3924,7 +3924,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un analista de demand planning utiliza modelos de Inteligencia Artificial para pronosticar las compras anuales de Bolas de Acero. Al cargar el archivo de consumo histórico, obtiene proyecciones distorsionadas con volúmenes desproporcionados de pedido. ¿Cuál es la causa raíz de esta falla y qué principio debe aplicarse para corregirla?",
@@ -3961,7 +3961,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un operador logístico busca presentar una propuesta de almacenamiento para componentes mineros de baja rotación en un nodo cercano al Puerto de Matarani. ¿Cuál es el argumento de costo total de propiedad (TCO) y propuesta de valor más sólida para convencer a la minera de descentralizar este inventario?",
@@ -3998,7 +3998,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al comparar la automatización tradicional de almacenes con la robótica autónoma moderna para el manejo de componentes en un centro de distribución minero, ¿cuál es la diferencia tecnológica fundamental en su desempeño operativo?",
@@ -4035,7 +4035,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un Gerente de Logística busca justificar ante la Vicepresidencia un proyecto de consolidación de compras de MRO para repuestos de molienda actualmente comprados de forma semanal. ¿Qué fuentes directas de ahorro e impactos financieros deben cuantificarse en el caso de negocio?",
@@ -4072,7 +4072,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el procesamiento de mineral de cobre en la concentradora de BHP (utilizando Microsoft Azure Machine Learning), ¿cómo aporta la IA un beneficio operativo cuantificable en la operación diaria de la planta?",
@@ -4109,7 +4109,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al desplegar una arquitectura de Internet de las Cosas (IoT) para telemetría y monitoreo de condiciones en una mina subterránea a más de 4,000 msnm con socavones profundos, ¿cuál es el desafío técnico de infraestructura más crítico y su solución adecuada?",
@@ -4146,7 +4146,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un Jefe de Importaciones debe liderar una licitación masiva de repuestos críticos. Decide utilizar asistentes de IA para acelerar la preparación de la licitación. ¿Cuál es la secuencia lógica correcta de solicitudes (prompts) que debe ejecutar para obtener un resultado preciso e integrar los criterios de Costo Total de Propiedad (TCO)?",
@@ -4183,7 +4183,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "A medida que las mineras adoptan sensores IoT, gemelos digitales y modelos de mantenimiento predictivo, la operación comienza a generar terabytes de datos diarios. ¿Cómo se transforma la gestión del valor cuando los datos operativos se convierten en 'activos digitales monetizables'?",
@@ -4220,7 +4220,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión de inventarios MRO en minería, el 'dilema del Gerente de Logística' radica en balancear la inversión en capital de trabajo contra la parada no planificada de planta. ¿Cómo debe aplicarse la matriz combinada ABC / VED (Vital, Essential, Desirable) para definir la política de stock de seguridad de un repuesto de muy alto valor pero de criticidad vital?",
@@ -4257,7 +4257,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera decide evolucionar de un proceso táctico de Planeamiento de Ventas y Operaciones (S&OP) hacia una Planeación Integrada de Negocios (IBP). ¿Cuál es la diferencia fundamental en el alcance analítico de esta transición?",
@@ -4294,7 +4294,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Para el mega proyecto Toromocho, situado a más de 4,500 msnm, se requirió mover componentes sobredimensionados e hiperpesados desde la fábrica en Shanghai hasta el asiento minero. ¿Por qué la empresa seleccionó a Noatum Logistics bajo un esquema de operador 4PL en lugar de contratar múltiples transportistas 3PL?",
@@ -4331,7 +4331,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "El indicador OTIF (*On-Time In-Full*) es considerado la 'prueba ácida' de la excelencia en la cadena de suministro minera. ¿Cuáles de las siguientes situaciones representan fallas directas en el cumplimiento del OTIF que impactan la operación?",
@@ -4368,7 +4368,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El Comité Ejecutivo del proyecto Greenfield APU Ausangate (ubicado en una zona remota de Cusco a más de 4,200 msnm, sin conexión ferroviaria) debe decidir la estrategia de contratación logística para la fase de construcción del campamento. ¿Cuál es la justificación estratégica para seleccionar un esquema 4PL sobre un modelo 3PL tradicional?",
@@ -4405,7 +4405,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "A pesar de externalizar la logística de transporte y almacenamiento mediante contratos 3PL o 4PL, las grandes empresas mineras en el Perú mantienen la función de compras (*procurement*) como una gestión interna *core*. ¿Cuál es la razón técnica y de control de negocio que justifica esta decisión?",
@@ -4442,7 +4442,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un estudio sobre la madurez de la cadena de suministro minera identifica diversas barreras que frenan la transformación digital e impiden la adopción de gemelos digitales y sistemas autónomos. ¿Cuáles de los siguientes elementos representan barreras de carácter estructural y de talento dentro de las operaciones?",
@@ -4479,7 +4479,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el proceso de selección de proveedores para repuestos críticos, una minera encomienda a la firma SGS un proceso formal de homologación. ¿Cuál es el producto entregable y cuál su utilidad práctica para las licitaciones convocadas por el área de Logística?",
@@ -4516,7 +4516,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la toma de un inventario físico general en el almacén de una unidad minera en socavón, el auditor detecta una diferencia sustancial: faltan 50 herramientas de corte que físicamente no están en los anaqueles. Al investigar, se descubre que fueron entregadas al turno de noche mediante un vale manual que no se digitó en el ERP por caída del sistema. ¿Cómo debe tratarse técnicamente esta discrepancia?",
@@ -4553,7 +4553,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una Gerencia de Logística debe evaluar la compra de una flota de palas mecánicas para una operación a tajo abierto. La alternativa A presenta un costo inicial de adquisición (CapEx) un 20% más bajo que la alternativa B. Sin embargo, al realizar la corrida del Costo Total de Propiedad (TCO) a 8 años, la alternativa B resulta un 15% más económica. ¿Qué factores explican este resultado en el TCO?",
@@ -4590,7 +4590,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para proceder con la baja contable y disposición final de un lote de neumáticos gigantes fuera de uso y reactivos químicos caducados, la empresa minera debe cumplir con el procedimiento exigido por las normas tributarias (SUNAT) y ambientales. ¿Cuáles de los siguientes requisitos son indispensables para validar el expediente de destrucción?",
@@ -4627,7 +4627,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál de las siguientes afirmaciones describe de manera precisa la función e interdependencia de los flujos esenciales dentro de una cadena de suministro global?",
@@ -4664,7 +4664,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el contexto de la cadena de suministro en el sector minero, ¿cuáles de las siguientes actividades corresponden a la fase de aguas arriba (upstream)?",
@@ -4701,7 +4701,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al aplicar la evaluación del Costo Total de Propiedad (TCO) para la adquisición o alquiler de equipos pesados en minería, ¿cuál es el objetivo primordial de esta metodología?",
@@ -4738,7 +4738,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión logística de empresas mineras que operan en entornos con alta conflictividad social, ¿cuál es la razón estratégica para mantener inventarios de seguridad críticos de mayor duración?",
@@ -4775,7 +4775,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el caso del corredor minero de Las Bambas, ¿cuál fue la consecuencia logística y social determinante provocada por la modificación del diseño original del proyecto (cambio de mineducto a transporte terrestre masivo)?",
@@ -4812,7 +4812,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Las variables del entorno macroeconómico ejercen una presión directa sobre los costos y la rentabilidad minera. ¿Cuáles de las siguientes interacciones representan de forma correcta estos efectos económicos?",
@@ -4849,7 +4849,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En materia de sostenibilidad e integridad en la cadena de suministro de minerales, ¿qué beneficio ofrece la implementación de tecnología blockchain, como en el caso de la trazabilidad del estaño?",
@@ -4886,7 +4886,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la diferencia conceptual fundamental entre la automatización tradicional y la robótica autónoma moderna aplicada a la logística minera?",
@@ -4923,7 +4923,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "El proceso de homologación de proveedores en el sector minero es una práctica de gestión de riesgos. ¿Cuáles de los siguientes aspectos son evaluados rigurosamente dentro de este procedimiento?",
@@ -4960,7 +4960,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una de las estrategias operativas en la gestión de compras mineras para reducir el costo por emisión de orden y obtener mejores condiciones comerciales es:",
@@ -4997,7 +4997,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿De qué manera la integración del Internet de las Cosas (IoT) con algoritmos de Inteligencia Artificial optimiza la logística y el mantenimiento en las operaciones mineras?",
@@ -5034,7 +5034,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con los estudios de caso presentados en la industria minera, ¿cuáles son beneficios cuantificables derivados de la aplicación exitosa de Inteligencia Artificial en la cadena de suministro?",
@@ -5071,7 +5071,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En minas subterráneas o zonas remotas donde la conectividad terrestre convencional es limitada o nula, ¿qué solución tecnológica se despliega para garantizar la transmisión de datos IoT?",
@@ -5108,7 +5108,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la diferencia fundamental entre el proceso táctico S&OP (Sales and Operations Planning) y la evolución estratégica IBP (Integrated Business Planning) en la planificación de la cadena minera?",
@@ -5145,7 +5145,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el marco de la gestión logística moderna, la decisión entre contratar un operador 3PL (Third-Party Logistics) o un 4PL (Fourth-Party Logistics) depende de la complejidad de la operación. ¿Cuáles de las siguientes características distinguen a un modelo 4PL?",
@@ -5182,7 +5182,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el caso práctico de logística compleja para el proyecto Toromocho (transporte de componentes sobredimensionados desde Shanghái hasta la mina a 4,500 msnm), ¿cuál fue la contribución clave del modelo de gestión tipo 4PL?",
@@ -5219,7 +5219,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "El indicador logístico conocido como OTIF (On-Time In-Full) es considerado la 'prueba ácida' del servicio en la cadena de suministro. ¿Por qué razón su cumplimiento exigente es crítico en la minería?",
@@ -5256,7 +5256,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al encarar un proyecto de transformación digital en la logística minera, ¿cuál de los siguientes factores suele constituir una barrera organizacional y cultural significativa?",
@@ -5293,7 +5293,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la evolución futura de la cadena de suministro en la industria minera, convergen varias tendencias de diseño. ¿Cuáles de las siguientes opciones corresponden a estos principios emergentes?",
@@ -5330,7 +5330,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Cuando una empresa minera requiere adquirir componentes o repuestos highly especializados cuya fabricación no existe a nivel nacional, ¿cuál es el procedimiento logístico estándar?",
@@ -5367,7 +5367,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la evaluación del caso práctico para la decisión estratégica en el proyecto Greenfield 'APU Ausangate' (ubicado en Cusco a gran altitud y sin infraestructura de acceso previa), ¿cuál fue el argumento principal para recomendar un modelo 4PL sobre un 3PL tradicional?",
@@ -5404,7 +5404,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al planificar y ejecutar un Inventario General al 100% en un almacén minero, ¿cuál de las siguientes acciones operativas es indispensable para garantizar la precisión del conteo físico?",
@@ -5441,7 +5441,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante el proceso de conciliación de inventarios se detectan con frecuencia discrepancias entre el conteo físico y el sistema ERP. ¿Cuáles de las siguientes opciones son causas administrativas típicas de estas diferencias?",
@@ -5478,7 +5478,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Cuando una empresa minera requiere dar de baja definitiva materiales obsoletos, dañados o inservibles de sus almacenes, ¿qué procedimiento técnico-legal se debe seguir para sustentar la disposición ante auditorías internas y la SUNAT?",
@@ -5515,7 +5515,7 @@
   {
     "codigo_diplomado": "DIP-22",
     "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un Sistema de Gestión de Almacenes (WMS - Warehouse Management System) optimiza las operaciones logísticas internas en comparación con un control manual. ¿Cuál de las siguientes funciones es característica de un WMS avanzado?",

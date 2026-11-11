@@ -2,7 +2,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un jefe de mantenimiento en una operación minera remota solicita la compra urgente de repuestos para una pala hidráulica. Ante la falta de disponibilidad de repuestos OEM (Original Equipment Manufacturer), la jefatura de compras propone adquirir un repuesto alterno de menor precio. ¿Cuál es el procedimiento recomendado para mitigar los riesgos operativos y legales antes de concretar la adjudicación?",
@@ -39,7 +39,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante la evaluación de ofertas para el suministro de insumos de alta criticidad en un yacimiento a 4,500 msnm, el comprador analiza las propuestas en el cuadro comparativo. ¿Qué combinación de factores debe evaluarse integralmente para determinar el costo real de la propuesta, más allá del precio unitario bruto?",
@@ -76,7 +76,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una mina subterránea presenta acumulación de solicitudes de pedido (Solpets) urgentes. El equipo de abastecimiento decide reestructurar la clasificación de criticidad de los materiales. ¿Cómo deben ponderarse e interactuar los niveles de criticidad frente a una parada imminente de la operación?",
@@ -113,7 +113,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una firma de auditoría externa (como PwC o EY) evalúa los procesos de licitación de una empresa contratista minera y detecta una no conformidad grave en la adjudicación de un contrato masivo. ¿Cuál es la causa principal descrita en la gestión de compras que desencadena este tipo de hallazgo y sanción?",
@@ -150,7 +150,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un comprador adquirió por error un lote de componentes mecánicos por USD 120,000 que no cumplen las especificaciones de la flota actual. El proveedor internacional rechaza la devolución por haber vencido el plazo contractual. ¿Qué alternativas comerciales y de logística inversa son viables para mitigar la pérdida financiera?",
@@ -187,7 +187,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El jefe de supply chain busca transformar las compras reactivas de la mina en un modelo estratégico de gestión por categorías (Category Management). ¿Qué beneficio operativo y de control justifica la segmentación de requerimientos en familias como economatos, neumáticos o combustibles?",
@@ -224,7 +224,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la planificación de un mantenimiento mayor programado para junio, el planificador de compras proyecta la llegada de un lote crítico de filtros para la última semana de mayo. Para evitar la parálisis del servicio si surge un retraso parcial, ¿qué práctica de gestión de tiempos de entrega e hitos intermedios se recomienda aplicar?",
@@ -261,7 +261,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera establece políticas para la emisión de solicitudes de cotización con el objetivo de garantizar la libre competencia y transparencia. Según las prácticas analizadas, ¿cuáles son los umbrales estándar sobre el número de proveedores a cotizar en función del monto económico de la transacción?",
@@ -298,7 +298,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Se presenta un cuello de botella en el Centro de Recepción y Despacho de Carga (CRDC) ubicado en Lima, debido a la sobreacumulación de insumos no críticos junto a repuestos de alta criticidad destinados a la mina. ¿Qué fallas de gestión generan este problema y cuál es la solución operativa adecuada?",
@@ -335,7 +335,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la auditoría de una licitación de reactivos químicos por USD 500,000, el auditor detecta que las cotizaciones incluidas en el cuadro comparativo presentan fechas de emisión distanciadas por más de tres semanas. ¿Por qué este hecho constituye una observación grave de auditoría?",
@@ -372,7 +372,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una operación minera evalúa cambiar de proveedor de neumáticos para sus camiones de extracción (Haul Trucks). El nuevo postor ofrece un precio unitario menor. ¿Cómo debe estructurarse el protocolo de testing en campo para tomar una decisión comercial objetiva basada en desempeño real?",
@@ -409,7 +409,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una mina a tajo abierto que opera con un sistema de control de flota (Dispatch), ¿de qué manera la información en tiempo real provista por esta tecnología influye en la gestión de abastecimiento de insumos como combustible y lubricantes?",
@@ -446,7 +446,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa minera migra su ERP hacia SAP S/4HANA. Durante la implementación, surge resistencia al cambio por parte de los compradores y almaceneros acostumbrados a procesos manuales. ¿Qué combinación de estrategias de gestión de personas y roles es adecuada para consolidar la adopción del sistema?",
@@ -483,7 +483,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un gestor de compras debe elegir la modalidad de contratación adecuada para tres necesidades: 1) Consumo continuo e ininterrumpido de diésel; 2) Repuestos de alto valor y fabricación especial mantenidos en el almacén de la mina por el proveedor; 3) Abastecimiento de EPPs por un año a precio fijo. ¿Cuál es la combinación contractual correcta?",
@@ -520,7 +520,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante una inspección en mina, se detecta que un operador de equipo pesado ingresó a laborar con un Certificado Médico Ocupacional vencido y una restricción no evaluada para trabajos en altura. ¿Cuáles son las consecuencias administrativas y la política aplicable en la operación?",
@@ -557,7 +557,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el proceso de Due Diligence a un nuevo proveedor que postuló a un contrato masivo de transporte, el área de Compliance detecta que sus accionistas presentan investigaciones abiertas por lavado de activos y contrabando. ¿Qué acción debe ejecutar el equipo de compras?",
@@ -594,7 +594,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una mina importó 15 camiones mineros por USD 1.5 millones. Debido a un error en la revisión de documentos, la Orden de Compra indicaba el modelo 'L507C', pero la factura comercial y el conocimiento de embarque (BL) consignaron 'L507', resultando en la llegada de unidades con especificaciones incorrectas. ¿Qué lección y medida correctiva comercial se desprende de este caso?",
@@ -631,7 +631,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al arribar un embarque de repuestos para la chancadora en la aduana marítima, la autoridad tributaria asigna 'Canal Rojo' a la Declaración Aduanera de Mercancías (DAM). ¿Qué implica operativamente esta asignación para la programación del abastecimiento?",
@@ -668,7 +668,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un usuario requiere la reparación de un molino de bolas. En la reunión con compras se debate qué parámetro del 'Triángulo de Hierro' (Alcance, Tiempo y Costo) debe primar. En una situación de emergencia operacional, ¿cuál es el argumento técnico que respalda la ponderación de estos parámetros?",
@@ -705,7 +705,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una contrata local postula para ingresar a la cartera de proveedores de una minera. Durante la revisión del expediente de homologación, el comprador valida los requisitos legales indispensables. ¿Qué documentos constituyen el paquete mínimo obligatorio exigido en el sector?",
@@ -742,7 +742,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Tras evaluar a un proveedor de servicios de mantenimiento para subestaciones eléctricas, el sistema de evaluación arroja una calificación en semáforo de nivel 'Ámbar' (score entre 60% y 79%). ¿Qué decisión de gestión corresponde adoptar según los procedimientos del sector?",
@@ -779,7 +779,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Debido a una falla de fabricación, un proveedor entrega una máquina sustituta de mayor capacidad para no paralizar la mina. El proveedor pretende cobrar una diferencia de USD 10,000, pero la minera rechaza pagar un valor superior al contrato original. La gerencia asume la diferencia para mantener la relación operativa. ¿Cómo debe clasificarse contablemente dicha diferencia no trasladable al cliente?",
@@ -816,7 +816,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El Gerente de Supply Chain observa que el indicador LOTIF (Lottime In Full) de la categoría de repuestos para perforación se ubica en 68%, frente a la meta del 85%. ¿Qué diagnóstico integral revela este resultado sobre la cadena de abastecimiento?",
@@ -853,7 +853,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un informe de auditoría muestra que el 'Nivel de Urgencias' en las solicitudes de compra de mantenimiento mecánico se incrementó del 5% al 35% en el trimestre. ¿Cuáles son las consecuencias operativas de este incremento sobre la gestión de abastecimiento?",
@@ -890,7 +890,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una minera adquiere componentes especializados en Europa para la expansión de su planta concentradora. Para asegurar el cumplimiento de las fechas de entrega y evitar desfases en la ruta crítica del proyecto, la jefatura de compras activa la función de 'Expediting'. ¿En qué consiste esta labor?",
@@ -927,7 +927,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión logística minera, ¿cuál es la función principal de mantener actualizada la Lista Maestra de Proveedores (cartela de proveedores)?",
@@ -964,7 +964,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al momento de tomar decisiones complejas de compra en minería, como elegir entre componentes OEM y repuestos alternativos, ¿cuál debe ser el rol del gestor logístico?",
@@ -1001,7 +1001,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Las operaciones mineras ubicadas en zonas geográficas alejadas e inhóspitas enfrentan constantes desafíos de abastecimiento. ¿Qué impacto directo genera esta condición sobre la gestión de contratos y compras?",
@@ -1038,7 +1038,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el abastecimiento crítico de insumos clave como el combustible para la flota minera, ¿qué medida de contingencia operacional se aplica frente al bloqueo prolongado de carreteras?",
@@ -1075,7 +1075,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Cuando un repuesto adquirido por error no es aceptado para devolución por el proveedor original debido al vencimiento del plazo, ¿cuáles de las siguientes alternativas representan soluciones operativas viables para recuperar valor?",
@@ -1112,7 +1112,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para evitar reclamos por entregas equivocadas y compras de emergencia mal especificadas, ¿cuál es la mejor práctica de comunicación entre el área de compras y los usuarios internos (como mantenimiento)?",
@@ -1149,7 +1149,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la principal ventaja estratégica y operativa de implementar la gestión de compras estructurada por familias o categorías?",
@@ -1186,7 +1186,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al planificar las compras de repuestos para mantenimientos mayores con ciclos de fabricación largos, ¿qué estrategia de seguimiento de lead time se aplica para no retrasar el inicio de los trabajos?",
@@ -1223,7 +1223,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué función cumple un Centro de Recepción y Distribución de Carga (CRDC) especializado en reparaciones mayores dentro de la logística minera?",
@@ -1260,7 +1260,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante un proceso de licitación o cotización de compras, ¿cuáles de las siguientes prácticas son obligatorias para mantener la transparencia ante una auditoría?",
@@ -1297,7 +1297,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el proceso de evaluación mediante pruebas en campo (testing) de insumos consumibles críticos, como los neumáticos de equipos mineros, ¿cuál es el criterio determinante para la decisión de compra?",
@@ -1334,7 +1334,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Desde el enfoque de la gestión de compras y abastecimiento en la industria minera, ¿cómo se define el concepto de \"calidad\"?",
@@ -1371,7 +1371,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el ámbito contractual de compras, ¿cuál es la característica fundamental que define a un contrato bajo la modalidad de consignación?",
@@ -1408,7 +1408,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En un organigrama matricial del área de abastecimiento, ¿cuáles son las responsabilidades clave asociadas al rol del Category Manager (Gestor de Categoría)?",
@@ -1445,7 +1445,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Desde la perspectiva de seguridad y normativas de Salud Ocupacional (ISO 45001 / legislación minera), ¿cuál es el alcance legal de la declaración de \"No Apto\" en un Certificado Médico Ocupacional?",
@@ -1482,7 +1482,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Tras la ocurrencia de un accidente laboral grave por falla de insumos en operación, ¿cuáles de los siguientes elementos son fiscalizados dentro de la trazabilidad del área de compras?",
@@ -1519,7 +1519,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el proceso de importación de repuestos o bienes cuyo valor FOB supera el umbral legal determinado por la autoridad tributaria (ej. $2,000 USD), ¿qué requisito de comercio exterior es obligatorio para realizar el trámite de despacho?",
@@ -1556,7 +1556,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En las adquisiciones internacionales frecuentes para proyectos mineros, ¿por qué los especialistas recomiendan evitar el uso habitual del Incoterm EXW (Ex Works)?",
@@ -1593,7 +1593,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro del denominado \"Triángulo de Hierro\" de la gestión de proyectos y compras (Alcance, Tiempo y Costo), ¿por qué el Alcance se considera el parámetro primario al definir un requerimiento?",
@@ -1630,7 +1630,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el sector minero, ¿cuáles de los siguientes documentos forman parte de los requisitos mínimos obligatorios que un proveedor debe presentar para iniciar su proceso formal de homologación?",
@@ -1667,7 +1667,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Qué mide específicamente el indicador clave de desempeño LOTIF (Logtime In Full) en la cadena de abastecimiento minera?",
@@ -1704,7 +1704,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el control de gestión de compras, ¿qué alerta operacional representa un incremento continuo en el KPI de \"Nivel de Urgencias\"?",
@@ -1741,7 +1741,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Por qué el factor geográfico y las condiciones climáticas son considerados variables críticas en la logística de compras para yacimientos mineros?",
@@ -1778,7 +1778,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la operación continua de un yacimiento a tajo abierto, ¿cuál es la función estratégica del sistema tecnológico Dispatch?",
@@ -1815,7 +1815,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 01",
+    "modulo": "MÓDULO 01",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Frente a un caso comprobado de discrepancia en la importación de repuestos donde el proveedor despachó un modelo distinto al ordenado, ¿qué acción contable y comercial se aplica si la devolución física inmediata resulta inviable?",
@@ -1852,7 +1852,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un gerente de logística minera evalúa dos formas de clasificar sus repuestos mediante la Ley de Pareto: una basada en el costo financiero del stock promedio y otra basada en la demanda promedio mensual. Si un insumo muestra una rotación extremadamente alta pero un valor monetario unitario insignificante, ¿qué decisión estratégica de abastecimiento debe tomar la empresa basándose en la comparación de ambas clasificaciones?",
@@ -1889,7 +1889,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía minera requiere adquirir reactivos químicos altamente especializados que tienen un impacto financiero moderado en el presupuesto total de compras, pero su oferta en el mercado está monopolizada por dos fabricantes globales con procesos de importación complejos. Según la Matriz de Kraljic, ¿cuál es la categoría correspondiente y la estrategia de compras primaria recomendada?",
@@ -1926,7 +1926,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar tres proveedores de bombas de pulpa en un horizonte de 5 años, el Proveedor A ofrece un costo de equipo de 150,000 en almacén e instalación de 3,000, pero presenta un 30% de probabilidad de falla a partir del año 2 que aumenta un 10% anual, implicando costos de parada de 80,000 por evento tras expirar su garantía de 4 años. El Proveedor B ofrece el equipo por 180,000 (transporte e instalación incluidos) con garantía total de 5 años y probabilidad de falla nula en garantía. Si los mantenimientos preventivos anuales son de 15,000 para A y 25,000 para B, ¿cuál es la recomendación financiera bajo el modelo de Costo Total de Pertenencia (TCO)?",
@@ -1963,7 +1963,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo de abastecimiento minero analiza implementar el mecanismo de Subasta Inversa para la adquisición anual de insumos de operación. De acuerdo con las buenas prácticas operativas de compras mineras, ¿qué condiciones deben cumplirse para garantizar la efectividad y validez de una subasta inversa?",
@@ -2000,7 +2000,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la renegociación del contrato de transporte de concentrado, la empresa transportista dominante de la zona amenaza con paralizar el servicio si no se le concede un incremento del 25% en la tarifa por tonelada. La minera ha desarrollado previamente un plan con un consorcio de empresas locales capacitadas que pueden asumir el 80% de la flota requerida a tarifa de mercado en 7 días. ¿Qué principio táctico sobre el BATNA (M-A-A-N) aplica la minera en esta situación?",
@@ -2037,7 +2037,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una minera requiere comprar pernos de sostenimiento. La mina exige pago a 90 días por liquidez de capital de trabajo (posición), mientras que el fabricante sostiene que necesita flujo de caja inmediato para cubrir la compra de materia prima (posición). Aplicando el modelo de negociación de Harvard de enfocar intereses y buscar opciones de mutuo beneficio, ¿cuál de las siguientes soluciones refleja este enfoque?",
@@ -2074,7 +2074,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la licitación anual de 10,000 toneladas de cianuro de sodio para una unidad minera aurífera, el Proveedor 1 ofrece entrega 'puesto en Callao' a menor precio unitario, mientras que el Proveedor 2 ofrece la modalidad 'puesto en mina' con gestión integral de permisos, transporte especializado y almacenamiento autorizado. Sabiendo que el almacén central de la mina en Lima no posee permisos para descarga de cianuro y que el material es altamente fiscalizado, ¿por qué la oferta del Proveedor 2 resulta estratégicamente superior para la minera?",
@@ -2111,7 +2111,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una compañía minera firma un contrato de abastecimiento bajo la modalidad de consignación para repuestos de molinos en su unidad operativa. ¿Qué características y obligaciones operativas corresponden legal y comercialmente a esta modalidad contractual?",
@@ -2148,7 +2148,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El departamento de abastecimiento de una empresa minera evalúa clasificar las compras entre CAPEX (Capital Expenditure) y OPEX (Operating Expenditure). Se analiza la adquisición de un camión minero de 100 toneladas, los repuestos de mantenimiento diario del motor y la construcción de la rampa principal de acceso a la mina. ¿Cuál es la clasificación contable y operativa correcta para estos tres elementos?",
@@ -2185,7 +2185,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al comparar dos volquetes para acarreo en mina subterránea, el Volquete A exige un CAPEX de 400,000 con un costo operativo de 45/hora y una productividad de 60 m³/hora. El Volquete B exige un CAPEX de 500,000, un costo operativo de 35/hora y una productividad de 75 m³/hora. Ambos tienen una vida útil estimada de 10,000 horas. ¿Cuál es la metodología financiera correcta para evaluar ambas alternativas?",
@@ -2222,7 +2222,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la estructuración de las bases para una licitación minera de alto valor (CAPEX), el equipo interfuncional diseña el proceso de RFI (Request for Information) y RFP (Request for Proposal). ¿Cuáles de las siguientes acciones aseguran la transparencia y la auditoría del proceso?",
@@ -2259,7 +2259,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la licitación para la adquisición de una planta de preparación de lechada de cal para un proyecto minero, se establece una matriz de ponderación de 50% Técnica y 50% Económica. El Proveedor X obtiene 900/1000 puntos en la evaluación técnica con una oferta económica de 2,500,000. El Proveedor Y obtiene 750/1000 puntos técnicos pero presenta un precio de 2,000,000. Si la fórmula otorga el máximo puntaje económico (1000 pts) al precio más bajo y ajusta proporcionalmente los demás (P_{econ} = \\frac{Precio Mínimo}{Precio Oferta} × 1000), ¿cuál es la decisión de adjudicación correcta?",
@@ -2296,7 +2296,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante el proceso de fabricación de equipos mecánicos para una planta de procesos en mina (CAPEX), la empresa compradora exige un Plan de Aseguramiento de Calidad (QA/QC) e inspecciones en taller. ¿Qué elementos y documentos son indispensables para validar la entrega técnica según los hitos de fabricación?",
@@ -2333,7 +2333,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera exige un proceso formal de homologación de proveedores a través de una entidad certificadora independiente para sus contratistas de movimiento de tierras y transporte. ¿Cuál es el propósito principal de este requerimiento?",
@@ -2370,7 +2370,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Dentro del proceso de evaluación y homologación de proveedores en el sector minero, la auditoría realizada por una entidad certificadora externa contratada por el cliente corresponde a una evaluación de Segunda Parte. ¿Qué factores son evaluados durante este proceso?",
@@ -2407,7 +2407,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "De acuerdo con el procedimiento formal de homologación de Minera Poderosa ejecutado por la certificadora InvestiXacto, un proveedor realiza el pago inicial pero no completa la carga de evidencias y formularios dentro de los 10 días hábiles otorgados tras recibir sus credenciales. ¿Cuál es la consecuencia administrativa estipulada en dicho procedimiento?",
@@ -2444,7 +2444,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un proveedor de mantenimiento obtiene un puntaje final de 62% en su proceso de homologación anual, situándose en el Nivel o Categoría C. Según las reglas de calificación de proveedores mineros, ¿qué implica este resultado y qué alternativa de subsanación tiene el proveedor?",
@@ -2481,7 +2481,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía minera opera en una zona alejada y aplica la estrategia de desarrollo de proveedores basada en 'anillos de influencia'. Al requerir servicios de transporte de personal y obras menores de movimiento de tierras, ¿cuál es el orden jerárquico de priorización para la contratación sostenible?",
@@ -2518,7 +2518,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En las experiencias de desarrollo de proveedores locales en minería (casos como Antapacay o Yanacocha), se implementaron programas con instituciones gubernamentales para cerrar brechas técnicas. ¿Qué impactos se derivan de estas iniciativas?",
@@ -2555,7 +2555,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "La empresa Solution Tech evalúa tres propuestas comerciales para el suministro de 200 unidades de un repuesto operativo. El equipo interfuncional (Logística, Finanzas y Operaciones) establece la siguiente escala de ponderación: Precio (40%), Plazo de Entrega (20%), Calidad (15%), Forma de Pago (15%) e Informes Financieros/Solvencia (10%). ¿Por qué es necesario que las ponderaciones se determinen en equipo interfuncional y sumen 100%?",
@@ -2592,7 +2592,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la evaluación de proveedores de filtros de combustible para maquinaria pesada (Caso Catlin), el Proveedor A ofrece repuestos originales con descuento del 19%, entrega en 7 días y crédito a 30 días. El Proveedor B ofrece filtros alternativos de buena calidad con entrega inmediata (1 día) pero menor crédito. Si la flota de mina enfrenta un riesgo inminente de parada por falta de stock en almacén, ¿qué decisión combinada de abastecimiento es la más adecuada?",
@@ -2629,7 +2629,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un comprador minero evalúa emitir una Orden de Compra Abierta (Blanket Purchase Order) o celebrar un Contrato Marco de Abastecimiento por 2 años para insumos de consumo repetitivo. ¿En qué escenario es preferible optar por una Orden de Compra Abierta?",
@@ -2666,7 +2666,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un proveedor de bolas de molienda presenta una oferta cuyo precio por tonelada es 8% superior al de un competidor extranjero que importa desde Asia. Sin embargo, el proveedor local ofrece mantener un stock de seguridad de 30 días en un almacén cercano a la mina, entregas en 24 horas y asistencia técnica semanal en planta para optimizar el consumo. ¿Cómo debe evaluar el área de compras el 'valor agregado' de esta propuesta?",
@@ -2703,7 +2703,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Tras finalizar la licitación de un sistema de bombeo de agua por $1.8 millones de dólares, la Auditoría Interna solicita la trazabilidad completa del proceso de adjudicación. ¿Qué paquete documental debe presentar el comprador para respaldar la transparencia de la decisión?",
@@ -2740,7 +2740,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante el proceso de evaluación de ofertas para la compra de insumos críticos de operación (OPEX), la verificación de la solvencia financiera e historial comercial del proveedor resulta un factor determinante. ¿Qué herramientas e informes permiten comprobar la salud financiera y la capacidad de respuesta del postor?",
@@ -2777,7 +2777,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la clasificación ABC o Ley de Pareto aplicada a la gestión de inventarios y compras en minería, ¿cuál es la característica fundamental que define a los artículos clasificados en la Categoría A?",
@@ -2814,7 +2814,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Según la Matriz de Kraljic, ¿cuáles de las siguientes combinaciones de características y estrategias son correctas para los diferentes cuadrantes de insumos o servicios?",
@@ -2851,7 +2851,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la minería, los repuestos específicos de maquinaria pesada que poseen un costo reducido dentro del presupuesto total pero son comercializados por un único fabricante autorizado se clasifican en la Matriz de Kraljic como:",
@@ -2888,7 +2888,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al aplicar el modelo de Costo Total de Pertenencia (TCO) para la selección de equipos en mina, ¿por qué un equipo con un precio inicial de compra significativamente menor puede terminar siendo la opción más costosa al cabo de un horizonte de 5 años?",
@@ -2925,7 +2925,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿Cuáles son las condiciones operativas y comerciales indispensables para ejecutar exitosamente una subasta inversa en la compra de insumos mineros?",
@@ -2962,7 +2962,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la evaluación de contratistas mediante la Matriz de Comparación de Criterios (como en el caso de Silver S.A.), ¿cómo se obtiene la calificación final ponderada de cada proveedor?",
@@ -2999,7 +2999,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Con base en el Modelo de Negociación basado en Principios de Harvard, ¿qué comportamientos y pilares deben primar al negociar contratos de abastecimiento minero?",
@@ -3036,7 +3036,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la función estratégica del BATNA (Mejor Alternativa a un Acuerdo Negociado o M-A-A-N) durante una negociación compras en minería?",
@@ -3073,7 +3073,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante un proceso de licitación minera, un proveedor suele ser descalificado o perder la adjudicación debido a errores estratégicos y operacionales. ¿Cuáles de los siguientes factores representan causas comunes de esta pérdida?",
@@ -3110,7 +3110,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el abastecimiento continuo de reactivos críticos (como el cianuro de sodio), ¿cuál es el beneficio principal de estructurar un contrato bajo la modalidad de consignación en la unidad minera?",
@@ -3147,7 +3147,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En los contratos de suministro anual en minería, ¿cuál es el propósito operativo y legal de exigir una Carta Fianza de Fiel Cumplimiento equivalente al 10% del valor contractual?",
@@ -3184,7 +3184,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al clasificar las adquisiciones mineras en gastos de capital (CAPEX) y gastos operativos (OPEX), ¿cuál de las siguientes afirmaciones refleja correctamente su tratamiento financiero y contable?",
@@ -3221,7 +3221,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el abastecimiento estratégico moderno en minería, ¿por qué se han integrado los principios del ICMM y la evaluación de riesgos ESG/ASG en la selección de proveedores?",
@@ -3258,7 +3258,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la secuencia formal de un proceso de licitación para la compra de un equipo minero de gran envergadura, ¿cuál es la diferencia técnica entre un RFI (Request for Information) y un RFP (Request for Proposal)?",
@@ -3295,7 +3295,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la licitación técnico-económica de una planta industrial minera (como la planta de preparación de lechada de cal), si se establece un modelo de ponderación con 50% para el factor técnico y 50% para el económico, ¿cómo debe procesarse la evaluación técnica para garantizar objetividad?",
@@ -3332,7 +3332,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el manejo de licitaciones formales en minería, ¿cuál es la norma de transparencia que rige la fase de 'Ronda de Consultas y Respuestas' entre el comprador y los participantes?",
@@ -3369,7 +3369,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿En qué consiste la auditoría de homologación de proveedores clasificada como de 'Segunda Parte'?",
@@ -3406,7 +3406,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Durante un proceso integral de homologación de proveedores para una compañía minera, ¿cuáles de los siguientes bloques son evaluados minuciosamente por las firmas auditoras?",
@@ -3443,7 +3443,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Si una empresa proveedora obtiene una calificación del 50% (Categoría D) en su informe final de homologación, ¿cuál es la implicancia comercial inmediata frente al cliente minero?",
@@ -3480,7 +3480,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "De acuerdo con el procedimiento práctico de homologación (como el aplicado en Minera Poderosa a través de firmas certificadoras), ¿cuáles de las siguientes reglas operativas y financieras son correctas?",
@@ -3517,7 +3517,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión de abastecimiento en zonas de operación minera, ¿cuál es el beneficio socioeconómico y operacional de desarrollar a los 'Proveedores Locales' mediante el enfoque de anillos de influencia?",
@@ -3554,7 +3554,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "El ciclo integral de la gestión de proveedores abarca múltiples etapas estratégicas de interacción continua. ¿Cuáles de las siguientes representan fases activas de este ciclo?",
@@ -3591,7 +3591,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el Método de Ponderación de Factores para la selección de proveedores, ¿por qué es indispensable que la suma de los pesos porcentuales asignados a los criterios de evaluación sea exactamente igual al 100% (o 1.00)?",
@@ -3628,7 +3628,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera requiere evaluar tres ofertas para adquirir 200 unidades del producto Alfa. La Empresa A cotiza a 235 soles/unidad con un 2% de descuento y entrega con embalaje y flete incluidos. La Empresa B cotiza a 250 soles/unidad con un 5% de descuento, pero cobra 100 soles por embalaje y 250 soles por flete por todo el lote. ¿Cuál es el precio unitario final real que debe considerar el analista para comparar ambas ofertas en igualdad de condiciones?",
@@ -3665,7 +3665,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 02",
+    "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el caso práctico de compra de filtros para maquinaria minera (Caso Catlin), la empresa seleccionó a Ferreiros como su proveedor principal por ofrecer repuestos originales, excelente descuento, pago a 30 días y transporte incluido en compras planificadas. Sin embargo, el comité decidió mantener a un segundo proveedor (Cummins) dentro de su plan operativo. ¿Cuál es la justificación logística de mantener esta 'Opción o Plan B'?",
@@ -3702,7 +3702,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una operación minera ubicada en una zona remota de alta montaña sufre paradas no programadas en la planta concentradora debido a desabastecimientos recurrentes de componentes críticos de fajas transportadoras. El gerente de logística decide modernizar el almacén central implementando un sistema WMS acoplado a direcciones virtuales y transelevadores con lanzaderas dobles. ¿Cuál es el impacto primario de esta solución tecnológica sobre los costos logísticos y la operatividad del almacén?",
@@ -3739,7 +3739,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo de gestión logística en minería analiza la estructura de costos de manipulación e instalaciones en su almacén central de repuestos. ¿Qué factores generan un incremento directo en el costo total de manipulación y picking que justifican medidas de optimización física y tecnológica?",
@@ -3776,7 +3776,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una auditoría de inventarios en una planta de beneficio de oro, se detecta un descuadre no registrado entre el stock físico y los registros del sistema ERP respecto a radios de comunicación y EPPs, además de fajas transportadoras deterioradas por estar almacenadas a la intemperie. ¿Cómo deben clasificarse y gestionarse estas desviaciones operativas?",
@@ -3813,7 +3813,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera planea reestructurar integralmente su presupuesto anual de operaciones tras sufrir interrupciones severas por conflictos sociales e hiperinflación en las tarifas de flete. ¿Qué tipo de presupuesto es el más adecuado para reevaluar la necesidad y alcance de cada recurso operativo sin considerar los antecedentes históricos distorsionados?",
@@ -3850,7 +3850,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Al evaluar el desempeño del inventario de repuestos críticos en un periodo de 6 meses, la jefatura de logística registra un saldo de inventario final de 13,550,500 USD y ventas/consumos acumulados del periodo de 67,752,500 USD (promedio mensual de $11,292,083 USD). ¿Cuál es la rotación de existencias expresada en meses y qué interpretación logística se deriva de este resultado?",
@@ -3887,7 +3887,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una planta concentradora de cobre sufrió tres paradas de emergencia debido a deficiencias en la calidad e insatisfacción de pedidos de reactivos de flotación. Para establecer un control riguroso mediante la metodología SMART y el ciclo Deming en el área de recepción, ¿qué métricas e intervenciones operativas se deben implementar?",
@@ -3924,7 +3924,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión de inventarios para una mina subterránea, ¿cuál es la fórmula precisa para calcular la Tasa de Contracción de Inventario y qué impacto financiero genera un nivel elevado de este indicador?",
@@ -3961,7 +3961,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un campamento minero consume un promedio diario de 1,000 unidades de kits de filtración para su maquinaria pesada. El proveedor tarda normalmente 4 días en entregar un pedido, pero debido a bloqueos de carretera el plazo máximo de entrega puede extenderse a 9 días. ¿Cuál es el Stock de Seguridad necesario para evitar la rotura de stock y cuál es el Punto de Pedido (ROP) aplicable?",
@@ -3998,7 +3998,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "El director de logística de una empresa minera evalúa a tres proveedores especializados en transporte de carga pesada desde el puerto hasta una unidad operativa a 4,200 m.s.n.m. ¿Qué métricas integradas de transporte debe utilizar para realizar un benchmarking técnico y económico riguroso?",
@@ -4035,7 +4035,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un mes operativo se despacharon 52 viajes de transporte hacia la mina. Las auditorías indican que 44 envíos llegaron a tiempo; sin embargo, 3 de esos envíos puntuales presentaron empaques rotos e ítems faltantes. Adicionalmente, 5 envíos llegaron con retraso pero completos, y 3 envíos llegaron con retraso e incompletos. ¿Cuáles son las tasas de Entregas a Tiempo, Entregas Conformes y el indicador OTIF (Entregas Perfectas) de esta operación?",
@@ -4072,7 +4072,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la evaluación de adquisición de un Molino SAG para un proyecto de expansión, se presentan tres ofertas comerciales con un horizonte de evaluación de 5 años:\n- Proveedor 1: Equipo a 180,000 USD (fábrica), garantía de 5 años, mantenimiento anual de 25,000 USD, flete pagado por el proveedor (10,000 USD) e instalación de 5,000 USD. Presenta tasa de falla despreciable durante la garantía.\n- Proveedor 2: Equipo puesto en mina a 150,000 USD, garantía de 4 años, mantenimiento anual de 15,000 USD e instalación de 3,000 USD. Presenta un 30% de probabilidad de falla desde el año 2, con costo de reparación del 80% del valor del equipo, 20,000 USD de transporte e idas al taller y 80,000 USD/mes por parada de planta.\n- Proveedor 3: Equipo puesto en mina a 200,000 USD, garantía de 3 años, mantenimiento anual de 10,000 USD e instalación de 1,000 USD.\n¿Cómo altera la incorporación del costo probabilístico de fallas y paradas de planta la decisión de selección bajo el modelo TCO (Total Cost of Ownership)?",
@@ -4109,7 +4109,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera licita el suministro anual de 180,000 elementos de sostenimiento (esplícets) para sus labores subterráneas:\n- Proveedor 1: 2.95 USD/unidad en fábrica + 0.40 USD/unidad de transporte al almacén (3.35 USD total puesto). Tasa de fallas en instalación = 5%.\n- Proveedor 2: 3.25 USD/unidad puesto en almacén. Tasa de fallas en instalación = 10%.\n- Proveedor 3: 3.45 USD/unidad puesto en almacén (incluye capacitaciones mensuales valorizadas en 1,000 USD y controles en sitio de $500 USD). Tasa de fallas en instalación = 1%.\nAl ajustar la compra anual para cubrir la demanda neta efectiva absorbiendo las pérdidas por fallas, ¿cuál es el resultado de la evaluación comercial?",
@@ -4146,7 +4146,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un equipo de abastecimiento minero prepara la importación de repuestos para su flota de palas mecánicas bajo distintos Incoterms 2020. Al calcular la estructura tributaria aduanera y el costo puesto en Perú, ¿qué afirmaciones reflejan correctamente la conformación de la base imponible y los impuestos aplicables?",
@@ -4183,7 +4183,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una unidad minera debe ejecutar el pintado anticorrosivo de 18,500 m² de estructuras en su planta concentradora y evalúa tres propuestas de suministro e instalación:\n- Proveedor A: 40/galón, Rendimiento = 25 m²/galón, Duración = 3 años. Pintor = 15 m²/h a 12/h.\n- Proveedor B: 55/galón, Rendimiento = 35 m²/galón, Duración = 5 años. Pintor = 18 m²/h a 12/h.\n- Proveedor C: 32/galón, Rendimiento = 20 m²/galón, Duración = 2 años. Pintor = 12 m²/h a 12/h.\n¿Cuál es la decisión más eficiente desde la perspectiva del Costo Anual Equivalente bajo el enfoque TCO?",
@@ -4220,7 +4220,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un gerente de importaciones evalúa tres navieras (Mares Line, NYK, Panalpina) para el transporte de contenedores desde Shanghái a Callao mediante una Matriz de Comparación de Criterios (flete, tiempo de tránsito, frecuencia de salidas, días libres de sobrestadía y recargo BAF). ¿Cuál es la principal ventaja metodológica de utilizar esta matriz con comparación por pares frente a un análisis TCO estrictamente monetario?",
@@ -4257,7 +4257,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un departamento de compras sufre el incumplimiento de un proveedor crítico de repuestos para perforadoras que, tras recibir un adelanto del 30%, deja de responder comunicaciones y demora la entrega. Según las mejores prácticas de gestión de compras y mitigación de riesgos, ¿qué acciones inmediatas y tácticas de escalamiento se deben ejecutar?",
@@ -4294,7 +4294,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo de finanzas mineras evalúa la naturaleza presupuestaria de dos proyectos:\n1. Construcción de una chimenea de ventilación principal y reparación total (overhaul) del motor de un camión minero de 150 toneladas.\n2. Adquisición mensual de nitrato de amonio, pernos de roca y combustible para las labores operativas de extracción.\n¿Cuál es la clasificación contable adecuada de estas erogaciones y su tratamiento financiero?",
@@ -4331,7 +4331,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera evalúa adquirir una Motoniveladora A con las siguientes condiciones:\n- Precio de Adquisición = 500,000 USD; Vida Útil = 15,000 horas; Valor de Rescate (40%) = 200,000 USD.\n- Financiamiento: 70% del valor a 72 meses, generando un costo financiero de interés total de 142,000 USD.\n- Costo directo de operación (combustible, reparaciones, llantas, operador) = 45.00 USD/hora.\n¿Cuál es el Costo de Posesión por hora de la Motoniveladora A y su Costo Total combinado por hora?",
@@ -4368,7 +4368,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante un proceso formal de licitación CAPEX para la compra de distribuidores de pulpa en un proyecto minero, la junta de evaluación establece un peso del 50% técnico y 50% económico. ¿Qué requisitos formales y de gestión contractual se deben exigir a los postores para asegurar la transparencia e irrestricta comparabilidad de las propuestas?",
@@ -4405,7 +4405,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una licitación OPEX para el suministro de 2,400 toneladas de cianuro de sodio distribuidas entre cuatro unidades mineras, se reciben las siguientes ofertas en segunda ronda:\n- Proveedor H: 2,100/t puesto en mina. Puntaje técnico = 80/100.\n- Proveedor CH: 1,950/t puesto en mina. Puntaje técnico = 50/100 (descalificado técnicamente por deficiencias en el plan de contingencia del código de cianuro).\n- Proveedor HE: $2,050/t puesto en mina. Puntaje técnico = 75/100.\nCon una ponderación de 60% económico y 40% técnico, ¿por qué la adjudicación recae en el Proveedor H a pesar de presentar un precio por tonelada mayor al del Proveedor CH?",
@@ -4442,7 +4442,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un administrador de contratos supervisa un acuerdo de suministro de reactivos por 24 meses para una planta de lixiviación. ¿Qué cláusulas contractuales y mecanismos de control deben incorporarse para penalizar desviaciones del proveedor y salvaguardar la continuidad operacional?",
@@ -4479,7 +4479,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una mina adquiere equipos de laboratorio en Alemania bajo el término Incoterms 2020 CIP Callao. Durante la travesía marítima, una marejada destruye la carga dentro del contenedor. ¿Quién asume la responsabilidad del riesgo por daño en el mar y cuál es la obligación del vendedor respecto a la póliza según la regla CIP?",
@@ -4516,7 +4516,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una carga de repuestos importados presenta un Valor de Factura FOB de 36,550 USD. Los gastos de importación netos de IGV (flete, seguro, almacenaje, agente aduanero y transporte local) suman 10,450 USD. ¿Cuál es el Factor de Distribución/Prorrateo de esta carga y el costo unitario puesto en almacén de un ítem cuyo valor FOB en factura es de $250 USD?",
@@ -4553,7 +4553,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un departamento de importaciones evalúa la contratación anual entre dos agencias de aduana con el siguiente perfil operativo:\n- Meses normales (8 meses): 25 operaciones/mes, CIF = 18,000 USD/operación.\n- Meses de campaña (4 meses): 68 operaciones/mes, CIF = 25,000 USD/operación.\n- Agencia 1: Comisión = 0.40% sobre CIF (Mínimo 90 USD/op). Gastos operativos fijos = 50 USD/embarque.\n- Agencia 2: Comisión = 0.35% sobre CIF (Mínimo 100 USD/op). Gastos operativos fijos = 65 USD/embarque.\n¿Qué comportamiento de los cobros mínimos y gastos fijos determina la menor tarifa anual global?",
@@ -4590,7 +4590,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una minera importa bombas de drenaje para su socavón por vía marítima. La carga tiene un volumen de 12 m³ y un peso físico real de 10 toneladas métricas. ¿Cómo aplica la línea naviera el cálculo del flete facturable y qué medidas documentales y legales son indispensables antes de retirar la carga en el puerto?",
@@ -4627,7 +4627,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión avanzada de almacenamiento para proyectos mineros e industriales, ¿cuál es la función principal de integrar direcciones virtuales en un Sistema de Gestión de Almacenes (WMS) combinado con equipos automatizados como lanzaderas dobles?",
@@ -4664,7 +4664,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Un análisis de los costos de pedidos en aprovisionamiento minero revela que las especificaciones técnicas inadecuadas generan serios impactos económicos. ¿Qué consecuencias directas se derivan de compras con requerimientos técnicos deficientes?",
@@ -4701,7 +4701,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Tras una interrupción operativa severa o una reestructuración estratégica, la gerencia decide reevaluar integralmente las necesidades operativas partiendo desde cero, sin tomar como base los presupuestos de ejercicios anteriores. ¿Qué tipo de presupuesto responde a esta metodología?",
@@ -4738,7 +4738,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Dentro del control presupuestario logístico, los costos ocultos pueden erosionar la rentabilidad minera. ¿Cuáles de los siguientes eventos constituyen ejemplos de costos ocultos en la gestión de almacenamiento y suministros?",
@@ -4775,7 +4775,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la formulación presupuestaria de obras civiles e infraestructura minera, los Gastos Generales y la Utilidad del contratista se calculan habitualmente como un porcentaje aplicado sobre:",
@@ -4812,7 +4812,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para que un indicador clave de desempeño (KPI) en la cadena de suministro cumpla con la característica SMART de ser 'Medible', debe satisfacer cuál de las siguientes condiciones:",
@@ -4849,7 +4849,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la evaluación del desempeño de inventarios dentro de un almacén central minero, ¿cuáles de las siguientes métricas son esenciales para medir la eficiencia del capital de trabajo y la integridad física del stock?",
@@ -4886,7 +4886,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la recepción física de mercancías críticas en el área de recibo de un almacén minero, ¿cuál es el procedimiento operativo correcto para evitar errores en el control de inventarios y fundamentar reclamos oportunos?",
@@ -4923,7 +4923,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un insumo de molienda tiene un consumo medio diario de 200 unidades. El plazo habitual de entrega del proveedor es de 5 días, pero debido a factores climáticos puede extenderse hasta un máximo de 8 días. ¿Cuál es el nivel de stock de seguridad requerido para prevenir una rotura de stock?",
@@ -4960,7 +4960,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al analizar la gestión logística de flotas de transporte pesado que abastecen frentes mineros remotos, ¿qué indicadores permiten evaluar de forma conjunta la eficiencia técnica del transporte y la puntualidad del servicio?",
@@ -4997,7 +4997,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Si un operador logístico registra en un periodo determinado un 84.6% de entregas a tiempo y un 78.8% de entregas conformes, ¿qué representa el indicador perfeccionado OTIF (On-Time In-Full)?",
@@ -5034,7 +5034,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al aplicar el análisis de Costo Total de Pertenencia (TCO) para adquirir maquinaria pesada minera (como un Molino SAG), ¿por qué seleccionar la propuesta con el menor precio de compra inicial puede ser financieramente erróneo?",
@@ -5071,7 +5071,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la evaluación económica bajo el enfoque TCO para suministros de sostenimiento (como elementos de fortificación o Esplícets), ¿qué ajustes deben realizarse para homogeneizar y comparar ofertas de distintos proveedores?",
@@ -5108,7 +5108,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al estructurar la comparación de propuestas comerciales en compras mineras, los términos Incoterms son críticos dentro del modelo TCO debido a que definen:",
@@ -5145,7 +5145,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Se evalúa la compra de pintura anticorrosiva para plantas concentradoras. El Proveedor A ofrece un galón económico que dura 2 años, mientras que el Proveedor B cotiza un galón más costoso pero con durabilidad garantizada de 5 años. ¿Qué métrica del TCO permite tomar la decisión óptima?",
@@ -5182,7 +5182,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "¿En qué escenarios es recomendable aplicar una Matriz de Comparación de Criterios Cualitativos en lugar de basar la decisión únicamente en un modelo de TCO monetario?",
@@ -5219,7 +5219,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la liquidación aduanera y costo logístico de importaciones, el 'factor de distribución' o 'factor de prorrateo' se define como la razón entre el costo total de importación (puesto en almacén) y el valor FOB total. ¿Cuál es su utilidad?",
@@ -5256,7 +5256,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la contabilidad de costos y en la planeación financiera minera, las inversiones en obras de infraestructura de larga duración y adquisiciones de equipos mayores (como la ampliación de una planta concentradora) se clasifican como:",
@@ -5293,7 +5293,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al estructurar el análisis financiero del costo total por hora de un equipo pesado minero (como una motoniveladora), ¿qué componentes deben sumarse strictly para determinar el Costo de Posesión?",
@@ -5330,7 +5330,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante un proceso de licitación CAPEX para la compra de un distribuidor dinámico de pulpa, ¿cuál es el objetivo principal de emitir un documento RFI (Request for Information) antes de publicar las bases finales del RFP (Request for Proposal)?",
@@ -5367,7 +5367,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la licitación de suministros químicos críticos como el cianuro de sodio para procesos de lixiviación, además de la oferta económica, ¿qué requisito técnico y de seguridad es de presentación obligatoria y causal de descalificación en caso de omisión?",
@@ -5404,7 +5404,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al elaborar un cuadro comparativo para adjudicar un contrato OPEX de bolas de molienda destinadas a varias minas, ¿qué costos deben agregarse al precio en fábrica (EXW) para calcular el costo total puesto en destino?",
@@ -5441,7 +5441,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la estructura de costos operativos de una unidad minera subterránea, los insumos de consumo directo como explosivos, emulsiones y aceros de perforación utilizados en los frentes de avance se clasifican como:",
@@ -5478,7 +5478,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Bajo las reglas Incoterms 2020 para transporte marítimo, ¿cuál es la diferencia fundamental entre la regla CFR (Cost and Freight) y la regla CIF (Cost, Insurance and Freight)?",
@@ -5515,7 +5515,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 03",
+    "modulo": "MÓDULO 03",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el comercio internacional de mercancías y en la gestión de importaciones, ¿qué funciones cumple el conocimiento de embarque marítimo conocido como Bill of Lading (BL)?",
@@ -5552,7 +5552,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un yacimiento minero opera con una capacidad diaria de explotación de 6,000 toneladas/día y posee una concesión de 2,500 hectáreas. Durante un proceso de licitación para la contratación de un operador logístico integral, ¿cuál es el encuadre clasificado de esta unidad y qué requerimientos de homologación exigirá prioritariamente al contratista?",
@@ -5589,7 +5589,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un analista de inventarios en una mina de concentrado de cobre debe estructurar el plan maestro de reabastecimiento. ¿Cuál de los siguientes insumos presenta una demanda estrictamente dependiente de la producción y cuál debe ser la estrategia de respuesta logística recomendada?",
@@ -5626,7 +5626,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un supervisor de almacén en una mina subterránea debe definir el sistema de control de inventarios para repuestos críticos de alta especificidad y costo elevado (ej. componentes de motores de perforación jumbo). ¿Qué combinación de modelo de inventario y política de reposición es la más adecuada para este escenario?",
@@ -5663,7 +5663,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante el proceso de Planificación Ventas y Operaciones (S&OP), una compañía minera proyecta que la demanda del mercado superará la capacidad disponible de la planta concentradora en un 30% durante el próximo trimestre. ¿Qué opción de ajuste transitorio ofrece una solución operativa factible sin comprometer inversiones fijas permanentes?",
@@ -5700,7 +5700,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera analiza la integración de sus procesos logísticos. Al discutir la diferencia estratégica entre un software WMS (Warehouse Management System) y un ERP (Enterprise Resource Planning) como SAP HANA, ¿cuál es el argumento central que justifica la implementación del ERP?",
@@ -5737,7 +5737,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al diseñar el layout e infraestructura de un almacén para una operación minera situada en una zona remota con clima adverso, ¿cuáles de las siguientes consideraciones técnicas son indispensables para garantizar la seguridad y continuidad de las operaciones?",
@@ -5774,7 +5774,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera evalúa la opción de subcontratar la gestión de sus almacenes y la logística de distribución interna con un operador logístico 3PL. ¿Qué combinación de ventaja estratégica y riesgo potencial enfrenta la mina con esta modalidad?",
@@ -5811,7 +5811,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En un escenario de inflación persistente y alza sostenida en los precios de adquisición del combustible diésel para la flota de minado, ¿qué impacto financiero genera la aplicación del método de valorización de inventarios LIFO (UEPS) en comparación con el método FIFO (PEPS)?",
@@ -5848,7 +5848,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una operación minera registra una demanda anual constante de D = 12,000 unidades de un filtro industrial. El costo fijo por emitir cada orden de compra es de S = \\150 y el costo anual de mantener una unidad en el almacén es de H = \\10. ¿Cuál es la Cantidad Óptima de Pedido (EOQ) y qué ocurre con el costo de mantenimiento de inventario si se decide duplicar arbitrariamente dicho lote óptimo?",
@@ -5885,7 +5885,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una taller central minero produce internamente componentes a razón de una tasa de producción p = 200 unidades/día. La demanda del área de operaciones es de d = 50 unidades/día. La demanda anual total es D = 10,000 unidades, el costo de preparación de maquinaria es S = \\400 y el costo de mantenimiento anual por unidad es H = \\5. En el modelo de Lote Económico de Producción (POQ), ¿cómo afecta la recepción o producción parcial al nivel de inventario máximo en comparación con el modelo EOQ estándar de entrega instantánea?",
@@ -5922,7 +5922,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al realizar una clasificación de inventarios ABC sobre un universo de 1,000 ítems de un almacén minero, se identifica que el 15% de los SKUs concentra el 80% del valor de consumo anual (Categoría A). ¿Cuáles de las siguientes políticas de gestión deben aplicarse a esta categoría?",
@@ -5959,7 +5959,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una transacción de venta internacional de concentrado de cobre comercializado bajo el Incoterm CIF (Cost, Insurance and Freight) con destino a un puerto asiático, ¿en qué momento exacto se transmite el riesgo sobre la mercancía del vendedor al comprador y a quién le corresponde contratar la póliza de seguro marítimo?",
@@ -5996,7 +5996,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la recepción de concentrados de mineral en los depósitos portuarios previos al embarque marítimo, ¿cuál es el propósito técnico fundamental de realizar un riguroso muestreo para determinar el Porcentaje de Humedad y el Peso Neto Seco (PNS)?",
@@ -6033,7 +6033,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un reporte de gestión de almacén indica que el costo de bienes vendidos (COGS) anual fue de \\6,000,000, mientras que el valor promedio del inventario mantenido durante el año fue de \\1,200,000. Adicionalmente, se detecta que \\72,000$ del saldo final corresponden a repuestos en estado obsoleto o deteriorado. ¿Cuáles son los valores correctos de la Rotación de Inventarios (en veces y en días) y el porcentaje del indicador de Vejez del Inventario?",
@@ -6070,7 +6070,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Para el transporte de un componente sobredimensionado y pesado (ej. la virola de un molino SAG) hacia un yacimiento ubicado en los Andes, la empresa transportista realiza un análisis de 'Ruta Crítica'. ¿Cuáles de los siguientes elementos deben ser evaluados en dicho estudio de ingeniería de transporte?",
@@ -6107,7 +6107,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía minera evalúa si debe adquirir y operar una flota propia de camiones para el transporte de concentrado o subcontratar dicho servicio mediante licitación con transportistas especializados. ¿Cuál de los siguientes motivos representa el argumento central para optar por la subcontratación del servicio?",
@@ -6144,7 +6144,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión de distribución física internacional de concentrados de cobre, la gerencia analiza transportar el producto a granel directo en las bodegas del buque o unitarizarlo previamente en sacos flexibles 'Big Bag'. ¿En cuál de las siguientes situaciones operativas se justifica la elección de los Big Bags frente al embarque a granel masivo?",
@@ -6181,7 +6181,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un analista de costos logísticos estructura el presupuesto operativo para la flota de transporte terrestre. ¿Cuál de las siguientes alternativas representa una clasificación correcta de los costos fijos y variables en la operación del transporte?",
@@ -6218,7 +6218,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un almacén minero posee una capacidad volumétrica bruta instalada de 10,000 m³ en racks y estanterías. Aplicando los criterios de buenas prácticas logísticas que consideran el factor de espacio no utilizable (holguras para maniobra de montacargas, pasillos y distancia técnica al techo), ¿cuál es la capacidad neta utilizable recomendada y qué riesgo se asume al operar al 100% de la capacidad bruta?",
@@ -6255,7 +6255,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un insumo de consumo continuo en la planta de beneficio presenta un consumo diario promedio de CP = 80 unidades, un consumo máximo diario de CMX = 120 unidades y un consumo mínimo diario de CMN = 50 unidades. El tiempo de reposición del proveedor (TR) es de 8 días. Aplicando el modelo de Máximos y Mínimos, ¿cuáles son los valores de la Existencia Mínima o de Seguridad (EMN), el Punto de Pedido (PP) y la Existencia Máxima (EMX)?",
@@ -6292,7 +6292,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la gestión de la cadena de suministro en minería, ¿cuál de los siguientes flujos corresponde a una operación formal de Logística Inversa y qué beneficio directo aporta a la unidad operativa?",
@@ -6329,7 +6329,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una planta concentradora tiene un consumo constante de reactivo de flotación de 150 unidades/día. El plazo de entrega del proveedor (Lead\\ Time) es de 10 días. Debido a la vulnerabilidad de la carretera de acceso frente a factores climáticos, la gerencia establece un Inventario de Seguridad (SS) obligatorio de 300 unidades. ¿A qué nivel de inventario (ROP) el ERP debe emitir automáticamente la orden de compra para reabastecer el reactivo?",
@@ -6366,7 +6366,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una operación minera registra una demanda anual de D = 800,000 unidades de un consumible. El costo por emitir una orden es S = \\20,000 y el costo anual de mantener cada unidad es H = \\15. Asumiendo un año comercial de 365 días, ¿cuál es el lote óptimo (Q^*), el número de pedidos anuales y la cadencia aproximada en días entre pedidos?",
@@ -6403,7 +6403,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el seguimiento del KPI de Lead Time y cumplimiento de proveedores en el área de compras mineras, se identifica que el Proveedor X presenta un Lead Time promedio real de 72 horas (frente a un límite contractual de 24 horas) y una Tasa de Error en entregas del 75%. ¿Qué acción de gestión logística debe adoptarse prioritariamente?",
@@ -6440,7 +6440,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la gestión logístico-operativa de la flota de camiones que transporta concentrado, la telemetría GPS reporta que una unidad presenta un rendimiento de combustible significativamente inferior (8.5 km/galón) al rendimiento estándar de la ruta (14.5 km/galón). ¿Cuáles de las siguientes causas operativas deben ser investigadas para corregir la desviación?",
@@ -6477,7 +6477,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la minería peruana, la clasificación de las operaciones en gran, mediana, pequeña minería y minería artesanal se basa en umbrales específicos de extensión de concesión (hectáreas) y capacidad de extracción diaria (toneladas/día). ¿Cuáles son los umbrales normativos que caracterizan a la Gran Minería frente a la Mediana Minería según lo expuesto en clase?",
@@ -6514,7 +6514,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la administración de la demanda en una unidad minera, ¿cuál de los siguientes insumos representa un ejemplo de demanda dependiente y cuál es la razón de dicha clasificación?",
@@ -6551,7 +6551,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al comparar los sistemas de control de inventarios de cantidad fija de pedido (Modelo Q / EOQ) y de periodo fijo (Modelo P / Revisión periódica), ¿cuál es una característica operativa crítica que diferencia al Modelo P?",
@@ -6588,7 +6588,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "La planificación jerárquica de la producción comprende distintas etapas interconectadas. ¿Cuáles de las siguientes opciones corresponden a fases o herramientas formales que vinculan la estrategia de producción con la capacidad y ejecución operativa según el marco técnico expuesto?",
@@ -6625,7 +6625,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante la evolución de los sistemas de información orientados a la manufactura y logística, ¿qué avance diferenció conceptual y funcionalmente a los sistemas MRP II de sus predecesores MRP de los años 70?",
@@ -6662,7 +6662,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la planificación del diseño de almacenes para operaciones mineras, ¿qué factores físico-operativos condicionan directamente la infraestructura y la tipología de almacenamiento seleccionada?",
@@ -6699,7 +6699,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa minera evalúa subcontratar el almacenamiento y la gestión de sus repuestos no críticos a un operador logístico especializado (3PL) mediante un esquema de pago por posición ocupada. ¿Cuál representa una ventaja financiera y operativa clave de esta decisión frente a mantener un almacén propio?",
@@ -6736,7 +6736,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En un entorno de inflación con precios de adquisición crecientes de un insumo clave, ¿qué impacto genera la aplicación del método FIFO (PEPS) en comparación con el método LIFO (UEPS) sobre el valor reportado del inventario final y el costo de ventas?",
@@ -6773,7 +6773,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la gestión logística de unidades mineras, se estima que el costo anual de mantener o manejar inventario oscila habitualmente alrededor del 26% del valor total inmovilizado. ¿Cuál de los siguientes rubros representa el componente de mayor peso porcentual dentro de este costo global de mantenimiento?",
@@ -6810,7 +6810,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el modelo de Cantidad de Orden de Producción (POQ o EOQ con recepción parcial), donde un insumo se produce o entrega de forma continua a una tasa p mientras se consume a una tasa diaria d (p > d), ¿cómo se modifica la fórmula de la cantidad óptima de pedido Q^* respecto al EOQ estándar?",
@@ -6847,7 +6847,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "La logística comercial minera abarca la cadena física desde la captación en mina hasta el punto de entrega convenido. ¿Cuáles de los siguientes procesos forman parte de las etapas operativas para el despacho y embarque de concentrados mineros descritas en el curso?",
@@ -6884,7 +6884,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Para que un indicador genérico sea considerado un KPI (Key Performance Indicator) efectivo dentro del cuadro de mando logístico de una minera, ¿qué condición metodológica fundamental debe cumplir obligatoriamente?",
@@ -6921,7 +6921,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al comparar el transporte ferroviario frente al transporte por carretera para el traslado masivo de concentrado de mineral desde la mina hacia el puerto de embarque, ¿cuál es la principal ventaja operativa y económica del ferrocarril en trayectos de larga distancia?",
@@ -6958,7 +6958,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la gestión de transporte de mercancías críticas o sobredimensionadas en el sector minero, ¿qué medidas operativas y de seguridad se implementan para mitigar riesgos durante los desplazamientos de convoyes por carretera?",
@@ -6995,7 +6995,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "El concentrado de cobre en polvo exportado en grandes bolsas de tejido sintético resistente dotadas de eslingas para elevación se clasifica técnicamente dentro de la distribución física como:",
@@ -7032,7 +7032,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la diferencia operativa fundamental entre una estrategia de Cross-docking y una Plataforma de Consolidación dentro de la red de distribución logística?",
@@ -7069,7 +7069,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un analista de almacén calcula el volumen total disponible de racks en un depósito de repuestos obteniendo un espacio bruto de 1.200 m³. Siguiendo las buenas prácticas de dimensionamiento que consideran un factor de espacio no utilizable (holguras, pasillos y manipulación) del 25%, ¿cuál es la capacidad neta real de almacenamiento operativo de dicho depósito?",
@@ -7106,7 +7106,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una empresa proveedora de insumos mineros registra en su estado financiero anual un costo de ventas de \\2.400.000 y mantiene un valor promedio de inventario de \\300.000. Asumiendo un año comercial de 360 días, ¿cuál es la rotación de inventario expresada en número de veces y en días de cobertura promedio?",
@@ -7143,7 +7143,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un almacén minero aplica la técnica de Máximos y Mínimos para gestionar un repuesto crítico. Presenta los siguientes datos: Consumo mínimo diario (CMN) = 10 unidades, Consumo máximo diario (CMX) = 25 unidades, Consumo medio diario (CP) = 18 unidades, Tiempo de reposición (TR) = 5 días. ¿Cuáles son la Existencia Mínima de seguridad (EMN) y el Punto de Pedido (PP)?",
@@ -7180,7 +7180,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Al realizar la clasificación de inventarios por el método ABC basado en la rotación (movimientos/ventas anuales) mediante una hoja de cálculo, ¿cuál es el procedimiento correcto para determinar la pertenencia de un producto a la Categoría A?",
@@ -7217,7 +7217,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la evaluación del desempeño de proveedores de suministros mediante el KPI de Lead Time (Tiempo de Abastecimiento), ¿cuál es la métrica clave que evalúa la confiabilidad del proveedor más allá de la duración en horas/días del tránsito?",
@@ -7254,7 +7254,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Una planta de beneficio requiere 800.000 unidades anuales de un reactivo de flotación. El costo de emitir un pedido es de \\20.000 y el costo de mantener una unidad en almacén es de \\15 por año. Aplicando la fórmula de Wilson (Q^* = \\sqrt{\\frac{2 · D · S}{H}}), ¿cuál es la Cantidad Óptima de Pedido (Q^*) redondeada y el número aproximado de pedidos al año?",
@@ -7291,7 +7291,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En un modelo de inventario determinístico con consumo continuo, una empresa minera consume 15 toneladas diarias de cal. El proveedor tarda 7 días en entregar el producto desde la emisión de la orden y el stock de seguridad fijado es de 200 toneladas. ¿A qué nivel de stock (Punto de Reorden - ROP) debe lanzarse la orden de compra?",
@@ -7328,7 +7328,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Dentro del monitoreo del control interno de inventarios mediante KPIs, ¿cuáles de las siguientes métricas permiten identificar problemas de inmovilización excesiva de capital, deterioro físico o riesgos de obsolescencia?",
@@ -7365,7 +7365,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 04",
+    "modulo": "MÓDULO 04",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el sector minero, ¿cuál de las siguientes operaciones constituye un ejemplo directo de aplicación de la Logística Inversa?",
@@ -7402,7 +7402,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un comprador del sector minero aprueba sistemáticamente órdenes de compra a favor de una contratista a precios sensiblemente superiores a los del mercado, recibiendo a cambio beneficios personales indirectos que no quedan reflejados en la contabilidad oficial de la empresa. Desde la perspectiva teórica de la función de compras y la gestión de fraude, ¿cómo se clasifica y caracteriza este comportamiento?",
@@ -7439,7 +7439,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una jefatura de compras en una unidad minera familiar requiere autorizar contrataciones de emergencia de repuestos críticos para evitar la paralización de la planta concentradora. ¿Qué procedimiento recomendado permite proteger al comprador frente a futuras auditorías y prevenir conflictos de interés bajo normas tácitas y formales?",
@@ -7476,7 +7476,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Un área de logística decide modernizar su modelo de gestión para alinearse con los valores estratégicos, operativos y éticos promovidos por la organización. ¿Cuáles de las siguientes acciones representan una alineación correcta con estos principios y rompen con prácticas obsoletas?",
@@ -7513,7 +7513,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una operación minera subterránea, un jefe de mantenimiento exige de forma intransigente la compra exclusiva de una marca específica de pernos de fricción (split sets) a un proveedor único, alegando fallas de seguridad en otras alternativas. Tras una rotación de personal, se descubre que las muestras enviadas por competidores eran sometidas intencionadamente a condiciones extremas e inadecuadas para provocar su ruptura. ¿Qué falla de control interno y qué riesgo ético se evidencian en esta situación?",
@@ -7550,7 +7550,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Las empresas mineras Antamina y Buenaventura cuentan con marcos normativos rigurosos en sus códigos de conducta y políticas antisoborno. ¿Cuáles de las siguientes disposiciones son obligatorias para sus colaboradores y proveedores según sus regulaciones internas?",
@@ -7587,7 +7587,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En una unidad operativa del Grupo Buenaventura, se descubrió que una asistente del área de compras utilizó información privilegiada para constituir una empresa familiar que ganó múltiples licitaciones de servicios. ¿Qué medida preventiva y correctiva posterior a la investigación es la más idónea para evitar la recurrencia de este patrón de nepotismo y competencia desleal?",
@@ -7624,7 +7624,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía minera busca certificar su Sistema de Gestión Ambiental (SGA) bajo la norma ISO 14001:2015 para mitigar riesgos en sus operaciones de procesamiento de minerales. Al estructurar el sistema basado en la metodología PHVA (Planificar, Hacer, Verificar, Actuar), ¿cuál de las siguientes acciones corresponde a la fase de 'Operación' de acuerdo con los capítulos documentables de la norma?",
@@ -7661,7 +7661,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una empresa proveedora de servicios logísticos mineros decide adoptar las directrices de Responsabilidad Social Corporativa expresadas en la norma ISO 26000. ¿Qué características y principios distinguen a este estándar internacional en su aplicación práctica?",
@@ -7698,7 +7698,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la ISO 26000, una minera realiza un análisis de materialidad e implementa programas de desarrollo comunitario e incentivos sociales para empresas de la zona de influencia. ¿Cuál es el beneficio directo sobre la sostenibilidad operativa que obtiene la compañía al integrar estos factores?",
@@ -7735,7 +7735,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un equipo multidisciplinario evalúa la publicación del Reporte de Sostenibilidad Anual de un grupo minero utilizando la metodología Global Reporting Initiative (GRI). Durante el proceso, el área de finanzas sugiere ocultar un incidente de derrame de efluentes de bajo impacto y sus sanciones asociadas para evitar una reacción negativa de los accionistas. ¿Qué principio de calidad de la información establecido en la guía GRI se estaría vulnerando directamente al acatar la sugerencia de finanzas?",
@@ -7772,7 +7772,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Al estructurar una memoria de sostenibilidad formal bajo los Estándares GRI, la organización debe seguir pasos rigurosos de materialidad y reporte. ¿Cuáles de las siguientes acciones son obligatorias para garantizar la validez del informe?",
@@ -7809,7 +7809,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la homologación de la cadena de abastecimiento bajo el estándar GRI 308 (Evaluación Ambiental de Proveedores) y GRI 414 (Evaluación Social de Proveedores), el gerente de compras observa que imponer barreras de homologación ambiental extremas provocará la quiebra inmediata de contratistas locales comunitarios. ¿Qué decisión estratégica basada en las recomendaciones de gestión de proveedores debe tomar?",
@@ -7846,7 +7846,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una multinacional minera identifica que uno de sus principales proveedores de transporte terrestre incurre reiteradamente en infracciones sobre jornadas laborales y mantenimiento de flota, lo cual genera riesgos de accidentes fatales en la comunidad. Según las Directrices de la OCDE para Empresas Multinacionales y los Principios Rectores de la ONU, ¿cuál es la conducta esperada antes de tomar la decisión extrema de romper la relación comercial?",
@@ -7883,7 +7883,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Durante un proceso de Debida Diligencia Reforzada (Know Your Customer / Know Your Supplier) para la contratación de un servicio de consultoría estratégica en compras, el analista de cumplimiento detecta que el representante legal del postor es hermano de un alto funcionario público del Ministerio de Energía y Minas (Persona Expuesta Políticamente - PEP). ¿Qué medidas de control e indicadores de alerta deben aplicarse en este caso?",
@@ -7920,7 +7920,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El departamento de Auditoría Interna de una mina formula su Plan Anual de Auditoría para el proceso de compras basándose en las Normas Internacionales del IIA y la metodología COSO ERM. Si el objetivo es enfocar los recursos de auditoría en las áreas de mayor impacto operacional, ¿qué criterio metodológico debe seguir la jefatura de auditoría?",
@@ -7957,7 +7957,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía minera implementa el Sistema de Gestión Antisoborno bajo la norma ISO 37001. Durante la aplicación del requisito 8.2 (Debida Diligencia), el oficial de cumplimiento analiza una propuesta para adjudicar un contrato millonario a un agente intermediario de aduanas que exige un pago de comisión significativamente superior a los promedios del mercado y rehúsa firmar la cláusula antisoborno. ¿Cómo debe ser abordada esta situación según la norma?",
@@ -7994,7 +7994,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "El alta formal de un nuevo proveedor estratégico dentro de una empresa minera exige una secuencia estricta de coordinación interáreas para blindar las contrataciones frente a riesgos corporativos. ¿Qué funciones corresponden a cada área participante según las buenas prácticas de debida diligencia?",
@@ -8031,7 +8031,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una firma de exploración minera decide subcontratar el alquiler de una flota de camiones sin efectuar un proceso de debida diligencia previo. Meses después, la fiscalía incauta los vehículos al descubrir que la empresa proveedora pertenecía a una red de minería ilegal y lavado de activos, paralizando la exploración de la minera. ¿Qué tipos de riesgos se materializaron directamente en este caso debido a la negligencia de compras?",
@@ -8068,7 +8068,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una fiscalización ambiental sorpresiva, la autoridad requiere a la gerencia minera demostrar el cumplimiento legal de los monitoreos de efluentes de los últimos tres años. La empresa utiliza la plataforma SaaS BOK Compliance / BioKey. ¿Cómo agiliza esta herramienta tecnológica la respuesta del área auditada?",
@@ -8105,7 +8105,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "Una auditoría de sostenibilidad integral evalúa los tres ejes (económico, ambiental y social) de una minera de socavón mediante métricas cuantificables. ¿Cuáles de los siguientes conjuntos de métricas representan indicadores válidos para esta evaluación?",
@@ -8142,7 +8142,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Un fondo de inversión internacional evalúa inyectar capital en una minera de cobre y exige la entrega de un informe de sostenibilidad bajo el enfoque de 'Doble Materialidad'. ¿Cómo se estructura este análisis para integrar la visión combinada de los estándares GRI y SASB?",
@@ -8179,7 +8179,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En la evaluación de compras sostenibles, el análisis del Ciclo de Vida (ACV) de las materias primas es clave para prevenir el 'greenwashing' o blanqueo ecológico. ¿Qué elementos diferenciadores caracterizan un proyecto genuinamente sostenible frente a un intento de greenwashing?",
@@ -8216,7 +8216,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "El mercado global de compras mineras enfrenta una acelerada ola de Fusiones y Adquisiciones (M&A) entre grandes proveedores de insumos para metales de transición (litio, cobalto, níquel). ¿Qué impacto directo genera esta concentración del mercado proveedor sobre la gestión estratégica de compras de las empresas mineras?",
@@ -8253,7 +8253,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
     "pregunta": "En el contexto de la minería moderna promovido en foros como el CONAMIN y las tendencias de compras para el 2024, las jefaturas de abastecimiento deben aplicar técnicas de optimización del gasto como el Pareto y el Costo Total de Pertenencia (TCO). ¿Cuáles de las siguientes opciones aplican correctamente estos enfoques estratégicos?",
@@ -8290,7 +8290,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "ALTO",
     "tipo": "multiple_choice",
     "pregunta": "Una compañía minera desea optimizar sus procesos de transporte, almacenamiento y control de flota mediante la integración de soluciones tecnológicas avanzadas como las desarrolladas por empresas especializadas (ejemplo MS4M) y herramientas ERP/WMS en la nube. ¿Cuál es el beneficio directo de aplicar visión computacional, IoT y asistentes digitales de voz en el almacén central y la flota de la mina?",
@@ -8327,7 +8327,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cuál es la diferencia fundamental entre el Código de Ética y el Código de Conducta en la gestión de una organización?",
@@ -8364,7 +8364,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el área de compras corporativas, ¿cómo se distingue la extracción directa de valor de la extracción indirecta en el marco de actos fraudulentos?",
@@ -8401,7 +8401,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Un comprador en una empresa minera descubre que una empresa licitante pertenece al cónyuge de un compañero del área de Logística. Según las mejores prácticas anticorrupción y los códigos de conducta corporativos, ¿cuál es el procedimiento correcto?",
@@ -8438,7 +8438,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la gestión logística minera, ¿qué elementos son fundamentales para realizar un proceso de debida diligencia y homologación de proveedores conforme a los estándares de empresas como Buenaventura o Minsur?",
@@ -8475,7 +8475,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante una auditoría interna en una mina, se detecta que un jefe de área exige sistemáticamente la adquisición de un perno de fricción específico a un único proveedor, enviando las muestras de competidores a pruebas bajo condiciones extremas para provocar su falla. ¿Qué riesgo ético y operacional representa esta conducta?",
@@ -8512,7 +8512,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Dentro de un Sistema de Gestión Ambiental (SGA) bajo la norma ISO 14001:2015 en el sector minero, ¿cuál es el propósito de integrar la perspectiva del ciclo de vida en la planificación operacional?",
@@ -8549,7 +8549,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "La norma ISO 26000 concibe la Responsabilidad Social Corporativa como una práctica integral sustentada en materias fundamentales. ¿Cuáles de las siguientes corresponden a materias fundamentales definidas por este estándar?",
@@ -8586,7 +8586,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el contexto de la gestión social e inclusiva en empresas e instituciones, ¿cómo se define el término \"aporofobia\" y cuál es su implicación ética?",
@@ -8623,7 +8623,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿Cómo se estructuran los Estándares GRI de Sostenibilidad y cuál es el rol que cumplen los Estándares Sectoriales?",
@@ -8660,7 +8660,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Al elaborar un reporte de sostenibilidad enfocado en la gestión de la cadena de suministro mediante los estándares GRI 308 (Ambiental) y GRI 414 (Social), ¿qué informaciones deben ser divulgadas?",
@@ -8697,7 +8697,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la construcción de un reporte de sostenibilidad conforme a las pautas de GRI, ¿qué representan los ejes horizontal y vertical en la Matriz de Materialidad?",
@@ -8734,7 +8734,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Según las Directrices de la OCDE para Empresas Multinacionales y los Principios Rectores de la ONU, ¿cuál es la naturaleza del proceso de Debida Diligencia?",
@@ -8771,7 +8771,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "El marco metodológico de Debida Diligencia propuesto por la OCDE se compone de seis pasos integrados. ¿Cuáles de las siguientes acciones corresponden a pasos fundamentales de este proceso?",
@@ -8808,7 +8808,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el marco de la prevención de lavado de activos e integridad comercial, ¿cuál es el procedimiento requerido ante la detección de una Persona Expuesta Políticamente (PEP) en la estructura de un proveedor?",
@@ -8845,7 +8845,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "El requisito 8.2 de la norma ISO 37001 (Sistema de Gestión Antisoborno) aborda el proceso de debida diligencia. ¿Sobre qué tres ámbitos específicos exige evaluar la naturaleza y alcance del riesgo de soborno?",
@@ -8882,7 +8882,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En la evaluación de integridad de socios de negocio según la ISO 37001 y las normativas sobre responsabilidad administrativa de personas jurídicas, ¿cuáles de las siguientes situaciones se consideran banderas rojas (\"red flags\")?",
@@ -8919,7 +8919,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "Durante auditorías de conformidad legal y ambiental, el uso de plataformas tecnológicas especializadas tipo SaaS (como BOK Compliance / BioKey) permite estructurar la matriz de requisitos. ¿Cuál es la ventaja operativa principal de asociar las evidencias digitales directamente a cada norma?",
@@ -8956,7 +8956,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "Para evaluar la sostenibilidad de la cadena de abastecimiento en el sector minero, ¿cuáles de las siguientes métricas e indicadores son relevantes?",
@@ -8993,7 +8993,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En el reporte de sostenibilidad corporativo, ¿qué diferencia sustancial existe entre el enfoque del Global Reporting Initiative (GRI) y el del Sustainability Accounting Standards Board (SASB) al estructurar la \"doble materialidad\"?",
@@ -9030,7 +9030,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "En el análisis de reportes de sostenibilidad de mineras (como Volcan, Antamina o Barrick), ¿cuáles de las siguientes secciones e indicadores son recurrentes en los capítulos socioambientales?",
@@ -9067,7 +9067,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "¿De qué manera la transición energética global hacia energías renovables e industria electromóvil impacta la gestión estratégica de compras en el sector minero?",
@@ -9104,7 +9104,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la optimización del gasto en logística minera, ¿por qué la evaluación mediante el Costo Total de Pertenencia (TCO) resulta más ventajosa que seleccionar ofertas basándose solo en el precio inicial?",
@@ -9141,7 +9141,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "El desarrollo de soluciones tecnológicas peruanas para la minería, como los sistemas de gestión de flota de la empresa MS4M, demuestra que la innovación en el sector logra posicionarse internacionalmente mediante:",
@@ -9178,7 +9178,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
     "pregunta": "La transformación digital de las cadenas de suministro mineras e industriales involucra la adopción de tecnologías avanzadas. ¿Cuáles de las siguientes aplicaciones representan usos reales de estas herramientas?",
@@ -9215,7 +9215,7 @@
   {
     "codigo_diplomado": "DIP-13",
     "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
-    "modulo": "Módulo 05",
+    "modulo": "MÓDULO 05",
     "dificultad": "MEDIO",
     "tipo": "multiple_choice",
     "pregunta": "En la formulación de un plan estratégico para la gestión de compras y logística en minería, ¿cuál es el objetivo de combinar herramientas como FODA/PESTEL, matrices de evaluación (MEFI/MEFE) y objetivos SMART?",

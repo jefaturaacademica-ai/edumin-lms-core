@@ -5,7 +5,7 @@
       "diplomado": "DERECHO MINERO",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR",
           "docente": "Reginaldo Andía",
           "temas": [
@@ -81,7 +81,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "JURISDICCIÓN MINERA, REGULACIÓN LABORAL Y NORMATIVAS DE SEGURIDAD",
           "docente": "Reginaldo Andía",
           "temas": [
@@ -153,7 +153,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "GESTIÓN CONTRACTUAL, CONCESIONES Y RESPONSABILIDADES DE LOS TITULARES MINEROS",
           "docente": "Andrea Tejada",
           "temas": [
@@ -230,7 +230,7 @@
       "diplomado": "ESPECIALISTA EN COMERCIO INTERNACIONAL: GESTIÓN ADUANERA Y LOGÍSTICA",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "REGULACIÓN DEL COMERCIO INTERNACIONAL EN EE. UU. Y CHINA: NORMATIVA Y DESAFÍOS LEGALES",
           "docente": "Ivette Alvarez",
           "temas": [
@@ -302,7 +302,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "OPTIMIZACIÓN DE LA GESTIÓN ADUANERA EN EL PROCESO DE IMPORTACIÓN",
           "docente": "Gabriel Rosaperez",
           "temas": [
@@ -395,7 +395,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "GESTIÓN INTEGRAL DE LA LOGÍSTICA EN EL COMERCIO INTERNACIONAL",
           "docente": "Gabriel Rosaperez",
           "temas": [
@@ -493,7 +493,7 @@
       "diplomado": "GEOLOGÍA MINERA",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "FUNDAMENTOS DE GEOLOGÍA MINERA",
           "docente": "Juan Briones",
           "temas": [
@@ -565,7 +565,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "EXPLORACIÓN GEOLÓGICA Y EVALUACIÓN DE RECURSOS MINERALES",
           "docente": "Mauricio Riveros",
           "temas": [
@@ -637,7 +637,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "OPERACIONES MINERAS Y GESTIÓN AMBIENTAL",
           "docente": "Mauricio Riveros Manuel Aucapuri",
           "temas": [
@@ -714,7 +714,7 @@
       "diplomado": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "PRINCIPIOS Y APLICACIONES DE LA GEOMECÁNICA EN MINERÍA",
           "docente": "Mauricio Riveros",
           "temas": [
@@ -799,7 +799,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "GEOMECÁNICA SUBTERRÁNEA: COMPORTAMIENTO DE ROCAS Y SUELOS EN MINERÍA",
           "docente": "Diego Astuyauri",
           "temas": [
@@ -892,7 +892,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "GEOTECNIA APLICADA EN MINERÍA A CIELO ABIERTO",
           "docente": "Mauricio Riveros",
           "temas": [
@@ -982,7 +982,7 @@
       "diplomado": "GEOMETALURGIA",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "MÉTODOS DE SEPARACIÓN Y CONCENTRACIÓN DE MINERALES",
           "docente": "Manuel Aucapuri",
           "temas": [
@@ -1052,7 +1052,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "INNOVACIÓN EN GEOESTADÍSTICA Y METALURGIA AVANZADA: DE LA TEORÍA A LA PRÁCTICA",
           "docente": "Manuel Aucapuri",
           "temas": [
@@ -1118,7 +1118,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "ESTRATEGIAS GEOMETALÚRGICAS Y REDUCCIÓN DE COSTOS EN OPERACIONES MINERAS",
           "docente": "Manuel Aucapuri",
           "temas": [
@@ -1189,7 +1189,7 @@
       "diplomado": "GEOTECNIA MINERA",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "GEOTECNIA DE SUELOS Y ROCAS",
           "docente": "Diego Astuyauri",
           "temas": [
@@ -1282,7 +1282,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "MONITOREO GEOTÉCNICO",
           "docente": "Diego Astuyauri",
           "temas": [
@@ -1375,7 +1375,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "ANÁLISIS HIDROGEOLÓGICO",
           "docente": "Juan Briones",
           "temas": [
@@ -1473,7 +1473,7 @@
       "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "INTRODUCCIÓN A LOS SISTEMAS DE GESTIÓN HSEQ",
           "docente": "María Jesús Burga",
           "temas": [
@@ -1566,7 +1566,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "INTERPRETACIÓN DE LAS NORMAS ISO 9001, ISO 45001 E ISO 14001",
           "docente": "Javier Rivera",
           "temas": [
@@ -1659,7 +1659,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "DOCUMENTACIÓN DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
           "docente": "María Jesús Burga Stephano Luque",
           "temas": [
@@ -1757,7 +1757,7 @@
       "diplomado": "GERENCIA ESTRATÉGICA Y LIDERAZGO DE EQUIPOS EN LA MINERÍA",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "PANORAMA DE LA INDUSTRIA MINERA",
           "docente": "",
           "temas": [
@@ -1869,7 +1869,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "LIDERAZGO GERENCIAL EN LA INDUSTRIA MINERA",
           "docente": "",
           "temas": [
@@ -1981,7 +1981,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "GESTIÓN ESTRATÉGICA Y CADENA DE SUMINISTRO",
           "docente": "",
           "temas": [
@@ -2121,7 +2121,7 @@
           ]
         },
         {
-          "codigo": "Módulo 04",
+          "codigo": "MÓDULO 04",
           "nombre": "GESTIÓN DE COMPRAS Y COMERCIO INTERNACIONAL",
           "docente": "",
           "temas": [
@@ -2193,7 +2193,7 @@
           ]
         },
         {
-          "codigo": "Módulo 05",
+          "codigo": "MÓDULO 05",
           "nombre": "EVALUACIÓN Y AUDITORÍA DE PROVEEDORES",
           "docente": "",
           "temas": [
@@ -2270,7 +2270,7 @@
       "diplomado": "GESTIÓN AMBIENTAL PARA EL SECTOR MINERO E INDUSTRIAL",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "GESTIÓN AMBIENTAL APLICADA A ENTORNOS INDUSTRIALES Y MINEROS",
           "docente": "Juan Briones",
           "temas": [
@@ -2355,7 +2355,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "HERRAMIENTAS TÉCNICAS DE CONTROL Y GESTIÓN AMBIENTAL OPERATIVA",
           "docente": "Raul Jacinto",
           "temas": [
@@ -2448,7 +2448,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "ESTRATEGIAS DE SOSTENIBILIDAD Y MEJORA AMBIENTAL CONTINUA",
           "docente": "Juan Briones",
           "temas": [
@@ -2546,7 +2546,7 @@
       "diplomado": "GESTIÓN DE CONTROL OPERATIVO EN PROCESOS MINEROS",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "GESTIÓN EN OPERACIONES MINERAS PRODUCTIVAS",
           "docente": "Aida Ramirez",
           "temas": [
@@ -2612,7 +2612,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "OPTIMIZACIÓN Y AUTOMATIZACIÓN DE LOS PROCESOS EN LAS OPERACIONES MINERAS",
           "docente": "Javier Rivera",
           "temas": [
@@ -2697,7 +2697,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "PLANIFICACIÓN ESTRATÉGICA Y GESTIÓN DE RIESGOS EN LAS OPERACIONES MINERAS",
           "docente": "Mario Hilasaca",
           "temas": [
@@ -2787,7 +2787,7 @@
       "diplomado": "GESTIÓN DE OPERACIONES INDUSTRIALES",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "SOFT SKILLS EN LA INDUSTRIA",
           "docente": "Aida Ramirez",
           "temas": [
@@ -2853,7 +2853,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "LA GESTIÓN DE OPERACIONES INDUSTRIALES",
           "docente": "Javier Rivera",
           "temas": [
@@ -2938,7 +2938,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "PLANEACIÓN Y CONTROL DE LA PRODUCCIÓN",
           "docente": "Mario Hilasaca",
           "temas": [
@@ -3028,7 +3028,7 @@
       "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "BIG DATA: DESDE LA RECOLECCIÓN DE DATOS A LA VISUALIZACIÓN DE INFORMES",
           "docente": "José Chávez",
           "temas": [
@@ -3121,7 +3121,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "ANÁLISIS PREDICTIVO PARA LA TOMA DE DECISIONES ESTRATÉGICAS",
           "docente": "Carlos Gauret",
           "temas": [
@@ -3197,7 +3197,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "REDES NEURONALES Y DEEP LEARNING",
           "docente": "José Chávez",
           "temas": [
@@ -3295,7 +3295,7 @@
       "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "INTRODUCCIÓN A LA GESTIÓN DE COMPRAS EN LA MINERÍA",
           "docente": "",
           "temas": [
@@ -3392,7 +3392,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "ESTRATEGIAS DE COMPRAS Y NEGOCIACIÓN EN MINERÍA",
           "docente": "",
           "temas": [
@@ -3496,7 +3496,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "ANÁLISIS PRESUPUESTARIO Y DE LA GESTIÓN DE COMPRAS",
           "docente": "",
           "temas": [
@@ -3600,7 +3600,7 @@
           ]
         },
         {
-          "codigo": "Módulo 04",
+          "codigo": "MÓDULO 04",
           "nombre": "LOGÍSTICA Y GESTIÓN DE INVENTARIOS EN MINERÍA",
           "docente": "",
           "temas": [
@@ -3704,7 +3704,7 @@
           ]
         },
         {
-          "codigo": "Módulo 05",
+          "codigo": "MÓDULO 05",
           "nombre": "RESPONSABILIDAD SOCIAL Y SOSTENIBILIDAD EN COMPRAS MINERAS",
           "docente": "",
           "temas": [
@@ -3813,7 +3813,7 @@
       "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "GESTIÓN LOGÍSTICA INTEGRAL EN MINERÍA",
           "docente": "Mario Hilasaca",
           "temas": [
@@ -3879,7 +3879,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "GESTIÓN ESTRATÉGICA DE ALMACENES EN ENTORNOS MINEROS",
           "docente": "Mario Hilasaca",
           "temas": [
@@ -3945,7 +3945,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "TECNOLOGÍA, INNOVACIÓN Y SOSTENIBILIDAD EN LOGÍSTICA MINERA",
           "docente": "Gonzalo González",
           "temas": [
@@ -4016,7 +4016,7 @@
       "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "COSTOS Y PRESUPUESTOS DE ALMACENES EN INDUSTRIA Y MINERIA",
           "docente": "Mario Hilasaca",
           "temas": [
@@ -4095,7 +4095,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "ESTRATEGIAS GLOBALES EN COMPRAS INTERNACIONALES",
           "docente": "Gonzalo González",
           "temas": [
@@ -4180,7 +4180,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "IDENTIFICACIÓN Y GESTIÓN AVANZADA DE RIESGOS EN LA LOGÍSTICA MINERA",
           "docente": "Gonzalo González",
           "temas": [
@@ -4270,7 +4270,7 @@
       "diplomado": "GESTIÓN MINERA",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "OPERACIONES MINERAS: GEOLOGÍA, LOGÍSTICA Y PLANTA",
           "docente": "Manuel Aucapuri",
           "temas": [
@@ -4363,7 +4363,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "MEDIO AMBIENTE, RESPONSABILIDAD SOCIAL Y SEGURIDAD EN LA MINERÍA",
           "docente": "Juan Briones",
           "temas": [
@@ -4456,7 +4456,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "GESTIÓN DE PROYECTOS Y FINANZAS EN LA MINERÍA",
           "docente": "Mario Hilasaca",
           "temas": [
@@ -4554,7 +4554,7 @@
       "diplomado": "LEGISLACIÓN LABORAL Y ELABORACIÓN DE PLANILLAS",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "INTRODUCCIÓN A LA LEGISLACIÓN LABORAL EN PERÚ",
           "docente": "",
           "temas": [
@@ -4658,7 +4658,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "REGULACIÓN ESPECÍFICA EN LA LEGISLACIÓN LABORAL PERUANA",
           "docente": "",
           "temas": [
@@ -4736,7 +4736,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "TEMAS AVANZADOS DE LEGISLACIÓN LABORAL",
           "docente": "",
           "temas": [
@@ -4821,7 +4821,7 @@
           ]
         },
         {
-          "codigo": "Módulo 04",
+          "codigo": "MÓDULO 04",
           "nombre": "PLANILLAS Y OBLIGACIONES LABORALES",
           "docente": "",
           "temas": [
@@ -4944,7 +4944,7 @@
           ]
         },
         {
-          "codigo": "Módulo 05",
+          "codigo": "MÓDULO 05",
           "nombre": "ELABORACIÓN DE PLANILLA Y REGISTRO EN PLAME, T-REGISTRO Y AFPNET",
           "docente": "",
           "temas": [
@@ -5039,7 +5039,7 @@
       "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "TRANSFORMACIÓN DIGITAL EN LA MINERÍA: TECNOLOGÍAS EMERGENTES, TENDENCIAS Y NUEVAS OPORTUNIDADES",
           "docente": "José Chávez",
           "temas": [
@@ -5105,7 +5105,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "DIGITALIZACIÓN DE PROCESOS MINEROS",
           "docente": "José Chávez",
           "temas": [
@@ -5171,7 +5171,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "GESTIÓN Y TOMA DE DECISIONES BASADA EN DATOS",
           "docente": "José Chávez",
           "temas": [
@@ -5242,7 +5242,7 @@
       "diplomado": "PREVENCIÓN DE LA CONFLICTIVIDAD, RIESGOS SOCIALES Y RESPONSABILIDAD SOCIAL MINERA",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "PREVENCIÓN EFECTIVA DE CONFLICTOS SOCIALES Y GESTIÓN DE RIESGOS SOCIALES EN PROYECTOS",
           "docente": "Javier Rivera",
           "temas": [
@@ -5308,7 +5308,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "COMUNICACIÓN EFECTIVA PARA LA PREVENCIÓN DE CONFLICTOS Y LA CONSTRUCCIÓN DE CONSENSOS",
           "docente": "Javier Rivera",
           "temas": [
@@ -5374,7 +5374,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "GESTIÓN DE RELACIONES COMUNITARIAS Y RESOLUCIÓN DE CONFLICTOS",
           "docente": "Raul Jacinto",
           "temas": [
@@ -5464,7 +5464,7 @@
       "diplomado": "SEGURIDAD INDUSTRIAL",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "GESTIÓN DE OPERACIONES INDUSTRIALES",
           "docente": "Alberto Mendoza",
           "temas": [
@@ -5562,7 +5562,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "SEGURIDAD INDUSTRIAL Y PREVENCIÓN DE RIESGOS",
           "docente": "Esteban Hermoza",
           "temas": [
@@ -5694,7 +5694,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "NORMATIVA DE SEGURIDAD Y MEDIO AMBIENTE",
           "docente": "Raul Jacinto",
           "temas": [
@@ -5804,7 +5804,7 @@
       "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "NORMATIVA EN INDUSTRIA Y MINERÍA",
           "docente": "Alberto Mendoza",
           "temas": [
@@ -5889,7 +5889,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "NORMATIVA INTERNACIONAL Y GESTIÓN DEL MEDIO AMBIENTE",
           "docente": "Esteban Hermoza",
           "temas": [
@@ -5974,7 +5974,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "INSPECCIÓN, INVESTIGACIÓN Y RESPUESTA A EMERGENCIAS EN MINERÍA",
           "docente": "Carlos Dominguez Gonzalo Carrero",
           "temas": [
@@ -6065,7 +6065,7 @@
       "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
       "modulos": [
         {
-          "codigo": "Módulo 01",
+          "codigo": "MÓDULO 01",
           "nombre": "GESTIÓN ESTRATÉGICA DE LA LOGÍSTICA Y LA CADENA DE SUMINISTRO EN MINERÍA",
           "docente": "Javier Rivera",
           "temas": [
@@ -6144,7 +6144,7 @@
           ]
         },
         {
-          "codigo": "Módulo 02",
+          "codigo": "MÓDULO 02",
           "nombre": "GESTIÓN ESTRATÉGICA DE LA LOGÍSTICA Y LA CADENA DE SUMINISTRO EN MINERÍA",
           "docente": "Gonzalo González",
           "temas": [
@@ -6229,7 +6229,7 @@
           ]
         },
         {
-          "codigo": "Módulo 03",
+          "codigo": "MÓDULO 03",
           "nombre": "EL ENTORNO INTERNACIONAL, TENDENCIAS Y MEJORES PRÁCTICAS",
           "docente": "Gonzalo González",
           "temas": [

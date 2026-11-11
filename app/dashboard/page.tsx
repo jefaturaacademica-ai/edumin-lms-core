@@ -316,7 +316,7 @@ export default async function DashboardPage() {
                     {diplomadoPrincipal.titulo}
                   </h3>
                   <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">
-                    {diplomadoPrincipal.modulos[0] ? `${diplomadoPrincipal.modulos[0].codigo}: ${diplomadoPrincipal.modulos[0].nombre}` : 'Módulo I'}
+                    {diplomadoPrincipal.modulos[0] ? `${diplomadoPrincipal.modulos[0].codigo}: ${diplomadoPrincipal.modulos[0].nombre}` : 'MÓDULO 01'}
                   </p>
                 </div>
               </div>
