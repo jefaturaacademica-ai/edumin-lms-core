@@ -116,7 +116,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "De acuerdo con el análisis de los factores de riesgo disergonómico en sectores industriales y mineros, ¿cuáles de las siguientes condiciones contribuyen directamente al desarrollo de lesiones osteomusculares? (Seleccione todas las que correspondan)",
+    "pregunta": "De acuerdo con el análisis de los factores de riesgo disergonómico en sectores industriales y mineros, ¿cuáles de las siguientes condiciones contribuyen directamente al desarrollo de lesiones osteomusculares?",
     "opciones": [
       {
         "text": "Manipulación manual de cargas que superen los pesos máximos recomendados o requieran levantamientos desde el suelo.",
@@ -227,7 +227,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Al proyectar e implementar puestos de trabajo ergonómicos en áreas industriales o de oficina, ¿cuáles de las siguientes pautas técnicas corresponden a un correcto diseño de estaciones ajustables? (Seleccione todas las que correspondan)",
+    "pregunta": "Al proyectar e implementar puestos de trabajo ergonómicos en áreas industriales o de oficina, ¿cuáles de las siguientes pautas técnicas corresponden a un correcto diseño de estaciones ajustables?",
     "opciones": [
       {
         "text": "Evitar posturas fijas prolongadas promoviendo superficies o componentes adaptables en altura e inclinación.",
@@ -338,7 +338,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Para mitigar la carga postural en actividades de trabajo administrativo prolongado, ¿qué especificaciones técnicas debe cumplir una silla ergonómica de oficina según las buenas prácticas operativas? (Seleccione todas las que correspondan)",
+    "pregunta": "Para mitigar la carga postural en actividades de trabajo administrativo prolongado, ¿qué especificaciones técnicas debe cumplir una silla ergonómica de oficina según las buenas prácticas operativas?",
     "opciones": [
       {
         "text": "Contar con una base estable provista de 5 puntos de apoyo con ruedas para evitar vuelcos y facilitar la movilidad.",
@@ -486,7 +486,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "De acuerdo con el marco regulatorio sobre la prevención de los efectos nocivos de la radiación solar (Ley N° 30102 en el Perú), ¿cuáles son las obligaciones que debe cumplir el empleador para el personal con exposición a radiación UV al aire libre? (Seleccione todas las que correspondan)",
+    "pregunta": "De acuerdo con el marco regulatorio sobre la prevención de los efectos nocivos de la radiación solar (Ley N° 30102 en el Perú), ¿cuáles son las obligaciones que debe cumplir el empleador para el personal con exposición a radiación UV al aire libre?",
     "opciones": [
       {
         "text": "Suministrar fotoprotectores solares con el nivel de protección adecuado y disponer puntos de aplicación en áreas operativas.",
@@ -523,7 +523,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "En el marco de la evaluación de riesgos psicosociales en las organizaciones, ¿cuáles de las siguientes opciones corresponden a factores de riesgo o dimensiones psicosociales evaluadas en el trabajo? (Seleccione todas las que correspondan)",
+    "pregunta": "En el marco de la evaluación de riesgos psicosociales en las organizaciones, ¿cuáles de las siguientes opciones corresponden a factores de riesgo o dimensiones psicosociales evaluadas en el trabajo?",
     "opciones": [
       {
         "text": "Exigencias psicológicas cuantitativas y ritmos de trabajo acelerados con plazos ajustados.",
@@ -708,7 +708,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "De acuerdo con la legislación sobre Seguridad y Salud en el Trabajo, ¿cuáles de las siguientes condiciones regulan la constitución y funcionamiento del Comité de SST (CSST)? (Seleccione todas las que correspondan)",
+    "pregunta": "De acuerdo con la legislación sobre Seguridad y Salud en el Trabajo, ¿cuáles de las siguientes condiciones regulan la constitución y funcionamiento del Comité de SST (CSST)?",
     "opciones": [
       {
         "text": "Es obligatorio para todo empleador que cuente con 20 o más trabajadores a su cargo.",
@@ -819,7 +819,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Durante la investigación de un accidente de trabajo para determinar las causas básicas y sistemáticas, ¿qué instrumentos y registros del sistema de gestión deben ser analizados? (Seleccione todas las que correspondan)",
+    "pregunta": "Durante la investigación de un accidente de trabajo para determinar las causas básicas y sistemáticas, ¿qué instrumentos y registros del sistema de gestión deben ser analizados?",
     "opciones": [
       {
         "text": "La matriz de Identificación de Peligros, Evaluación de Riesgos y Medidas de Control (IPERC) correspondiente al puesto.",
@@ -893,7 +893,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Para realizar una evaluación objetiva y periódica del bienestar y clima laboral en la empresa, ¿qué acciones estratégicas se recomienda implementar desde la gestión de recursos humanos y salud ocupacional? (Seleccione todas las que correspondan)",
+    "pregunta": "Para realizar una evaluación objetiva y periódica del bienestar y clima laboral en la empresa, ¿qué acciones estratégicas se recomienda implementar desde la gestión de recursos humanos y salud ocupacional?",
     "opciones": [
       {
         "text": "Aplicar encuestas periódicas de clima laboral para identificar factores de insatisfacción, sobrecarga o tensión en las distintas áreas.",

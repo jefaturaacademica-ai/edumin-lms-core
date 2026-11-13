@@ -1004,7 +1004,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "En la ejecución de un overhaul completo a un motor Diésel de gran minería, ¿cuáles de los siguientes elementos forman parte de los recursos materiales y de infraestructura necesarios? (Seleccione todas las opciones correspondientes)",
+    "pregunta": "En la ejecución de un overhaul completo a un motor Diésel de gran minería, ¿cuáles de los siguientes elementos forman parte de los recursos materiales y de infraestructura necesarios?",
     "opciones": [
       {
         "text": "Repuestos mecánicos como metales de bancada, anillos de pistón y metales de biela.",
@@ -1115,7 +1115,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "En el desarrollo de un proyecto de mantenimiento mayor en una unidad minera, ¿cuáles de los siguientes actores constituyen stakeholders directos? (Seleccione todas las opciones correspondientes)",
+    "pregunta": "En el desarrollo de un proyecto de mantenimiento mayor en una unidad minera, ¿cuáles de los siguientes actores constituyen stakeholders directos?",
     "opciones": [
       {
         "text": "Las comunidades locales ubicadas en la zona de influencia del yacimiento.",
@@ -1300,7 +1300,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de los siguientes aspectos se consideran componentes esenciales que deben ser definidos en un Plan de Gestión de Comunicaciones? (Seleccione todas las opciones correspondientes)",
+    "pregunta": "¿Cuáles de los siguientes aspectos se consideran componentes esenciales que deben ser definidos en un Plan de Gestión de Comunicaciones?",
     "opciones": [
       {
         "text": "La identificación clara de las partes interesadas y los destinatarios específicos de cada reporte.",
@@ -1485,7 +1485,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "En el marco de la gestión ágil de proyectos, ¿cuáles de las siguientes métricas son utilizadas para evaluar el desempeño y avance del equipo? (Seleccione todas las opciones correspondientes)",
+    "pregunta": "En el marco de la gestión ágil de proyectos, ¿cuáles de las siguientes métricas son utilizadas para evaluar el desempeño y avance del equipo?",
     "opciones": [
       {
         "text": "La Velocidad del equipo (Velocity), que mide la cantidad de trabajo completado en cada ciclo o sprint.",
@@ -1670,7 +1670,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles son las funciones primordiales que desempeñan los sensores de Internet de las Cosas (IoT) instalados en la maquinaria pesada minera? (Seleccione todas las opciones correspondientes)",
+    "pregunta": "¿Cuáles son las funciones primordiales que desempeñan los sensores de Internet de las Cosas (IoT) instalados en la maquinaria pesada minera?",
     "opciones": [
       {
         "text": "Monitorear continuamente en tiempo real variables como vibración, temperatura, nivel de gases y presión.",
@@ -1781,7 +1781,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Durante la planificación de una Parada de Planta (Overhaul Mayor), ¿cuáles de los siguientes frentes operacionales deben ser gestionados de forma rigurosa? (Seleccione todas las opciones correspondientes)",
+    "pregunta": "Durante la planificación de una Parada de Planta (Overhaul Mayor), ¿cuáles de los siguientes frentes operacionales deben ser gestionados de forma rigurosa?",
     "opciones": [
       {
         "text": "El abastecimiento oportuno de repuestos de largo tiempo de entrega (lead time) y consumibles críticos.",

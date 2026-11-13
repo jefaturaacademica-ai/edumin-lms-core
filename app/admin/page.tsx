@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   CreditCard, Search, ShieldCheck, Users, BookOpen, Settings, LogOut,
-  CheckCircle2, Activity, DollarSign, Calendar, FileText, Check, AlertCircle, 
+  CheckCircle2, Activity, Coins, Calendar, FileText, Check, AlertCircle, 
   Tag, Download, Clock, UserCheck, Award, FileCheck, Server, RefreshCw,
   TrendingUp, AlertTriangle, Filter, Eye, Phone, MessageSquare, Send, Sparkles, BarChart3, GraduationCap, ArrowUpRight, Zap, X, Plus
 } from 'lucide-react';
@@ -464,7 +464,7 @@ export default function AdminDashboard360() {
                   <div className="flex justify-between items-center">
                     <p className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Recaudación Filtrada</p>
                     <div className="p-2.5 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 rounded-2xl">
-                      <DollarSign className="size-5" />
+                      <Coins className="size-5" />
                     </div>
                   </div>
                   {cargandoEstudiantes ? (

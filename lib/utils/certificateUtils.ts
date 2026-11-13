@@ -186,3 +186,24 @@ export function formatearFechaEmision(fechaStr?: string, ciudad = 'Arequipa'): s
 
   return `Fecha de emisión: ${ciudad}, ${textoLimpio}`;
 }
+
+/**
+ * Redondea una nota académica al entero más cercano para emisión oficial en certificados.
+ * Devuelve null si no existe nota numérica válida.
+ */
+export function redondearNotaCertificado(nota?: number | string | null): number | null {
+  if (nota === undefined || nota === null || nota === '') return null;
+  const num = Number(nota);
+  if (!Number.isFinite(num) || num <= 0) return null;
+  return Math.round(num);
+}
+
+/**
+ * Formatea una nota de certificado siempre a 2 dígitos enteros redondeados (ej: 8.6 -> "09", 12.5 -> "13", 20 -> "20").
+ * Devuelve null si el certificado no aplica examen / no tiene nota.
+ */
+export function formatearNotaCertificado(nota?: number | string | null): string | null {
+  const redondeada = redondearNotaCertificado(nota);
+  if (redondeada === null) return null;
+  return String(redondeada).padStart(2, '0');
+}

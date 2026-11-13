@@ -63,7 +63,9 @@ export async function GET(request?: Request) {
             email: `${c.dni_ce}@edumin.pe`,
             programa: c.programa_titulo,
             modulo: c.modulo_titulo,
-            nota: Number(c.nota_final) || 18,
+            nota: c.nota_final !== null && c.nota_final !== undefined && Number(c.nota_final) > 0
+              ? Math.round(Number(c.nota_final))
+              : null,
             horas: c.horas_lectivas || (c.tipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas y 13 créditos académicos'),
             fecha: c.fecha_emision ? String(c.fecha_emision) : new Date().toISOString().split('T')[0],
             estadoFinanciero: c.estado_financiero_al_dia ? 'AL_DIA' : 'DEUDA_PENDIENTE',
@@ -77,6 +79,90 @@ export async function GET(request?: Request) {
 
       // 2. Sincronización automática de cursos/talleres/modulares completados desde profiles que falten en certificaciones
       try {
+        let modelosConfig: any[] = [];
+        try {
+          const { data: tableModelos, error: tErr } = await admin
+            .from('modelos_certificados')
+            .select('*')
+            .order('created_at', { ascending: false });
+          if (!tErr && Array.isArray(tableModelos) && tableModelos.length > 0) {
+            modelosConfig = tableModelos;
+          } else {
+            const { data: logData } = await admin
+              .from('audit_logs')
+              .select('detalles')
+              .eq('accion', 'CONFIG_MODELOS_CERTIFICADOS')
+              .order('created_at', { ascending: false })
+              .limit(1)
+              .maybeSingle();
+            if (logData?.detalles?.modelos && Array.isArray(logData.detalles.modelos)) {
+              modelosConfig = logData.detalles.modelos;
+            }
+          }
+        } catch {
+          // Ignorar fallback de modelos
+        }
+
+        const resolverModeloVigente = (tipo: string, productoTitulo?: string, productoId?: string) => {
+          const tipoUpper = tipo.toUpperCase();
+          if (productoTitulo || productoId) {
+            const porProducto = modelosConfig.find((m: any) =>
+              String(m.tipo).toUpperCase() === tipoUpper &&
+              m.asignacionAlcance === 'PRODUCTO_ESPECIFICO' &&
+              ((productoTitulo && m.recursoAsignadoNombre?.toLowerCase().includes(productoTitulo.toLowerCase())) ||
+               (productoId && m.recursoAsignadoId === productoId))
+            );
+            if (porProducto) return porProducto;
+          }
+          const superplantilla = modelosConfig.find((m: any) =>
+            String(m.tipo).toUpperCase() === tipoUpper &&
+            (m.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' || m.esPredeterminado)
+          );
+          if (superplantilla) return superplantilla;
+          if (tipoUpper === 'TALLER') {
+            const cursoGlobal = modelosConfig.find((m: any) =>
+              String(m.tipo).toUpperCase() === 'CURSO' &&
+              (m.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' || m.esPredeterminado)
+            );
+            if (cursoGlobal) return cursoGlobal;
+          }
+          return modelosConfig.find((m: any) => String(m.tipo).toUpperCase() === tipoUpper) || null;
+        };
+
+        const resolverCreditosModelo = (modelo: any, tipo: string): string | null => {
+          const dis = modelo?.disenoCoordenadas;
+          if (dis?.creditos?.visible !== true) return null;
+          const val = String(dis?.creditos?.creditosValor || modelo?.creditos || '').trim();
+          const num = val.match(/\d+/)?.[0] || (tipo === 'DIPLOMA' ? '13' : '4');
+          const sufijo = String(dis?.creditos?.sufijo ?? dis?.creditos?.sufijoCreditos ?? '').trim() || 'créditos académicos';
+          return `${num} ${sufijo}`;
+        };
+
+        const construirSnapshot = (
+          modelo: any,
+          fallbackId: string,
+          fallbackOrientacion: 'horizontal' | 'vertical',
+          horasVal: string,
+          fechaVal: string,
+          creditosVal?: string | null
+        ) => ({
+          ...(modelo ? {
+            modelo_id: modelo.id,
+            nombre: modelo.nombre,
+            orientacion: modelo.orientacion || fallbackOrientacion,
+            imagenFondoUrl: modelo.imagenFondoUrl,
+            disenoCoordenadas: modelo.disenoCoordenadas,
+            incluyeQr: modelo.incluyeQr !== false,
+          } : {
+            modelo_id: fallbackId,
+            orientacion: fallbackOrientacion,
+            incluyeQr: true,
+          }),
+          horas: horasVal,
+          ...(creditosVal ? { creditos: creditosVal } : {}),
+          fechaEmision: fechaVal,
+        });
+
         const { data: profiles } = await admin
           .from('profiles')
           .select('id, dni_ce, nombres, apellidos, bloqueado, diplomados, cursos');
@@ -100,6 +186,12 @@ export async function GET(request?: Request) {
                   if (!codigosExistentes.has(key1) && !codigosExistentes.has(key2)) {
                     codigosExistentes.add(key1);
                     codigosExistentes.add(key2);
+                    const modeloVigenteMod = resolverModeloVigente('MODULAR', d.titulo, d.id);
+                    const horasMod = m.horas || modeloVigenteMod?.horas || '108 horas académicas';
+                    const creditosMod = resolverCreditosModelo(modeloVigenteMod, 'MODULAR');
+                    const fechaMod = m.fecha || new Date().toISOString().split('T')[0];
+                    const snapshotMod = construirSnapshot(modeloVigenteMod, 'mod-avanza-mod', 'horizontal', horasMod, fechaMod, creditosMod);
+
                     const nuevoCert = {
                       codigo_verificacion: cod,
                       profile_id: p.id,
@@ -108,18 +200,18 @@ export async function GET(request?: Request) {
                       tipo: 'MODULAR',
                       programa_titulo: d.titulo,
                       modulo_titulo: modNombre,
-                      horas_lectivas: m.horas || '108 horas académicas',
-                      nota_final: typeof m.nota === 'number' && m.nota > 0 ? m.nota : 16,
-                      fecha_emision: m.fecha || new Date().toISOString().split('T')[0],
+                      horas_lectivas: horasMod,
+                      creditos: creditosMod,
+                      nota_final: typeof m.nota === 'number' && m.nota > 0 ? Math.round(m.nota) : 16,
+                      fecha_emision: fechaMod,
                       estado_financiero_al_dia: !p.bloqueado,
-                      plantilla_snapshot: {
-                        modelo_id: 'mod-avanza-mod',
-                        horas: m.horas || '108 horas académicas',
-                        orientacion: 'horizontal',
-                        fechaEmision: m.fecha || new Date().toISOString().split('T')[0]
-                      }
+                      plantilla_snapshot: snapshotMod
                     };
-                    await admin.from('certificaciones').insert(nuevoCert);
+                    const { error: errInsMod } = await admin.from('certificaciones').insert(nuevoCert);
+                    if (errInsMod && /creditos/i.test(errInsMod.message || '')) {
+                      const { creditos: _omit, ...sinCreditos } = nuevoCert;
+                      await admin.from('certificaciones').insert(sinCreditos);
+                    }
                     realEmitidos.push({
                       id: `sync-${cod}`,
                       codigo: cod,
@@ -129,12 +221,13 @@ export async function GET(request?: Request) {
                       email: `${dni}@edumin.pe`,
                       programa: d.titulo,
                       modulo: modNombre,
-                      nota: typeof m.nota === 'number' && m.nota > 0 ? m.nota : 16,
-                      horas: m.horas || '108 horas académicas',
-                      fecha: m.fecha || new Date().toISOString().split('T')[0],
+                      nota: typeof m.nota === 'number' && m.nota > 0 ? Math.round(m.nota) : 16,
+                      horas: horasMod,
+                      fecha: fechaMod,
                       estadoFinanciero: !p.bloqueado ? 'AL_DIA' : 'DEUDA_PENDIENTE',
                       habilitado: !p.bloqueado,
-                      modelo_id: 'mod-avanza-mod',
+                      modelo_id: snapshotMod.modelo_id,
+                      plantilla_snapshot: snapshotMod,
                       categoria: 'Diplomados Oficiales'
                     });
                   }
@@ -155,6 +248,12 @@ export async function GET(request?: Request) {
                 if (!codigosExistentes.has(key1) && !codigosExistentes.has(key2)) {
                   codigosExistentes.add(key1);
                   codigosExistentes.add(key2);
+                  const modeloVigenteCur = resolverModeloVigente(tipoCert, c.titulo, c.id);
+                  const horasCur = c.horas || modeloVigenteCur?.horas || (esTaller ? '16 horas académicas' : '24 horas académicas');
+                  const creditosCur = resolverCreditosModelo(modeloVigenteCur, tipoCert);
+                  const fechaCur = c.fecha || new Date().toISOString().split('T')[0];
+                  const snapshotCur = construirSnapshot(modeloVigenteCur, 'mod-226455', 'vertical', horasCur, fechaCur, creditosCur);
+
                   const nuevoCert = {
                     codigo_verificacion: cod,
                     profile_id: p.id,
@@ -163,18 +262,18 @@ export async function GET(request?: Request) {
                     tipo: tipoCert,
                     programa_titulo: c.titulo,
                     modulo_titulo: null,
-                    horas_lectivas: c.horas || (esTaller ? '16 horas académicas' : '24 horas académicas'),
-                    nota_final: typeof c.nota === 'number' && c.nota > 0 ? c.nota : null,
-                    fecha_emision: c.fecha || new Date().toISOString().split('T')[0],
+                    horas_lectivas: horasCur,
+                    creditos: creditosCur,
+                    nota_final: typeof c.nota === 'number' && c.nota > 0 ? Math.round(c.nota) : null,
+                    fecha_emision: fechaCur,
                     estado_financiero_al_dia: !p.bloqueado,
-                    plantilla_snapshot: {
-                      modelo_id: 'mod-226455',
-                      horas: c.horas || (esTaller ? '16 horas académicas' : '24 horas académicas'),
-                      orientacion: 'vertical',
-                      fechaEmision: c.fecha || new Date().toISOString().split('T')[0]
-                    }
+                    plantilla_snapshot: snapshotCur
                   };
-                  await admin.from('certificaciones').insert(nuevoCert);
+                  const { error: errInsCur } = await admin.from('certificaciones').insert(nuevoCert);
+                  if (errInsCur && /creditos/i.test(errInsCur.message || '')) {
+                    const { creditos: _omit, ...sinCreditos } = nuevoCert;
+                    await admin.from('certificaciones').insert(sinCreditos);
+                  }
                   realEmitidos.push({
                     id: `sync-${cod}`,
                     codigo: cod,
@@ -184,12 +283,13 @@ export async function GET(request?: Request) {
                     email: `${dni}@edumin.pe`,
                     programa: c.titulo,
                     modulo: null,
-                    nota: typeof c.nota === 'number' && c.nota > 0 ? c.nota : null,
-                    horas: c.horas || (esTaller ? '16 horas académicas' : '24 horas académicas'),
-                    fecha: c.fecha || new Date().toISOString().split('T')[0],
+                    nota: typeof c.nota === 'number' && c.nota > 0 ? Math.round(c.nota) : null,
+                    horas: horasCur,
+                    fecha: fechaCur,
                     estadoFinanciero: !p.bloqueado ? 'AL_DIA' : 'DEUDA_PENDIENTE',
                     habilitado: !p.bloqueado,
-                    modelo_id: 'mod-226455',
+                    modelo_id: snapshotCur.modelo_id,
+                    plantilla_snapshot: snapshotCur,
                     categoria: esTaller ? 'Talleres' : 'Cursos de Alta Especialización'
                   });
                 }
@@ -248,7 +348,9 @@ export async function POST(request: Request) {
 
       const fechaEmision = fecha || new Date().toISOString().split('T')[0];
       const horasLectivas = horas || (tipo === 'MODULAR' ? '108 horas académicas' : (tipo === 'DIPLOMA' ? '325 horas académicas y 13 créditos académicos' : '24 horas cronológicas'));
-      const notaFinal = Number(nota) || 18;
+      const notaFinal = nota !== undefined && nota !== null && nota !== '' && Number(nota) > 0
+        ? Math.round(Number(nota))
+        : null;
       const estadoHabilitado = habilitado !== false;
 
       // 1. Guardar en tabla certificaciones
@@ -346,7 +448,7 @@ export async function POST(request: Request) {
                 );
                 if (targetMod) {
                   targetMod.completado = true;
-                  targetMod.nota = notaFinal;
+                  if (notaFinal !== null) targetMod.nota = notaFinal;
                   targetMod.codigo_cert = codigoGenerado;
                   (targetMod as any).fecha_emision = fechaEmision;
                   (targetMod as any).modelo_id = modelo_id;
@@ -363,7 +465,7 @@ export async function POST(request: Request) {
               curTarget.completado = true;
               curTarget.codigo = codigoGenerado;
               curTarget.fecha = fechaEmision;
-              curTarget.nota = notaFinal;
+              if (notaFinal !== null) curTarget.nota = notaFinal;
               curTarget.horas = horasLectivas;
               (curTarget as any).modelo_id = modelo_id;
               await admin.from('profiles').update({

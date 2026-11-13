@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
+import { DisableNumberWheel } from "@/components/ui/disable-number-wheel";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -67,7 +68,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col font-sans bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100" suppressHydrationWarning>{children}</body>
+      <body className="min-h-full flex flex-col font-sans bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100" suppressHydrationWarning>
+        <DisableNumberWheel />
+        {children}
+      </body>
     </html>
   );
 }

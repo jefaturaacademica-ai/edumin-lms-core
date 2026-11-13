@@ -175,12 +175,12 @@ export default function AdminSidebar() {
     <>
       {/* Header Móvil (Pantallas < md) */}
       <header className="md:hidden bg-slate-950 text-slate-100 border-b border-slate-900 px-4 py-3 flex items-center justify-between sticky top-0 z-40 w-full shrink-0">
-        <Link href="/admin" className="flex items-center gap-2">
-          <ShieldCheck className="w-7 h-7 text-indigo-500" />
-          <div className="flex flex-col">
-            <span className="font-black text-sm text-white tracking-tight leading-none">EDUMIN ADMIN</span>
-            <span className="text-[9px] tabular-nums text-emerald-400 font-bold">Plataforma Ejecutiva</span>
-          </div>
+        <Link href="/admin" className="flex items-center">
+          <img 
+            src="/logo-blanco.png" 
+            alt="Edumin Logo" 
+            className="h-9 w-auto object-contain" 
+          />
         </Link>
 
         <div className="flex items-center gap-2">
@@ -209,13 +209,13 @@ export default function AdminSidebar() {
         }`}
       >
         <div className="p-4 border-b border-white/5 shrink-0 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <ShieldCheck className="w-7 h-7 text-indigo-500 shrink-0" />
-            <div>
-              <h2 className="text-sm font-black text-white tracking-tight leading-none">ADMIN PRO</h2>
-              <span className="text-[9px] tabular-nums text-emerald-400 font-bold">EDUMIN LMS v1.0</span>
-            </div>
-          </div>
+          <Link href="/admin" onClick={() => setMobileOpen(false)} className="flex items-center">
+            <img 
+              src="/logo-blanco.png" 
+              alt="Edumin Logo" 
+              className="h-9 w-auto object-contain" 
+            />
+          </Link>
           <button
             onClick={() => setMobileOpen(false)}
             className="p-2 rounded-xl text-slate-400 hover:bg-white/10 hover:text-white transition-colors cursor-pointer"
@@ -284,14 +284,14 @@ export default function AdminSidebar() {
       {/* Sidebar Fijo Desktop */}
       <aside className="w-64 h-screen bg-slate-950 text-slate-300 flex flex-col hidden md:flex shrink-0 z-20 border-r border-slate-900 sticky top-0">
         {/* Header Logo Desktop */}
-        <div className="p-5 flex items-center justify-between border-b border-white/5 shrink-0">
-          <div className="flex items-center gap-3">
-            <ShieldCheck className="w-8 h-8 text-indigo-500 shrink-0" />
-            <div>
-              <h2 className="text-xl font-black text-white tracking-tight leading-none">ADMIN PRO</h2>
-              <span className="text-[9px] tabular-nums font-bold text-emerald-400 tracking-wider">EDUMIN LMS v1.0</span>
-            </div>
-          </div>
+        <div className="p-5 flex items-center justify-start border-b border-white/5 shrink-0">
+          <Link href="/admin" className="flex items-center">
+            <img 
+              src="/logo-blanco.png" 
+              alt="Edumin Logo" 
+              className="h-12 w-auto object-contain" 
+            />
+          </Link>
         </div>
 
         {/* Tarjeta Admin Desktop */}

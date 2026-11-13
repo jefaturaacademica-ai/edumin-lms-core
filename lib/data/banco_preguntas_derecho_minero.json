@@ -1966,7 +1966,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "En el caso práctico de extracción de agregados para la construcción en la provincia de La Concepción (Junín), ¿qué elementos determinaron la configuración de la conducta ilícita y las sanciones aplicadas a los imputados? (Seleccione las opciones correctas)",
+    "pregunta": "En el caso práctico de extracción de agregados para la construcción en la provincia de La Concepción (Junín), ¿qué elementos determinaron la configuración de la conducta ilícita y las sanciones aplicadas a los imputados?",
     "opciones": [
       {
         "text": "La extracción de piedra chancada y arena se realizó sin contar con el título de concesión no metálica ni autorizaciones sobre el subsuelo.",
@@ -2188,7 +2188,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Con relación a la notificación de accidentes laborales mortales e incidentes peligrosos en el sector minero, ¿cuáles de las siguientes obligaciones resultan exigibles al empleador conforme a ley? (Seleccione las opciones correctas)",
+    "pregunta": "Con relación a la notificación de accidentes laborales mortales e incidentes peligrosos en el sector minero, ¿cuáles de las siguientes obligaciones resultan exigibles al empleador conforme a ley?",
     "opciones": [
       {
         "text": "El reporte ante la autoridad de trabajo mediante el sistema informático SAT o mesa de partes debe realizarse dentro del plazo perentorio de 24 horas o el mismo día.",
@@ -2299,7 +2299,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "En el sector minero, ¿cuáles de las siguientes reglas rigen la constitución y funcionamiento del Comité de Seguridad y Salud Ocupacional según el Reglamento sectorial? (Seleccione las opciones correctas)",
+    "pregunta": "En el sector minero, ¿cuáles de las siguientes reglas rigen la constitución y funcionamiento del Comité de Seguridad y Salud Ocupacional según el Reglamento sectorial?",
     "opciones": [
       {
         "text": "Es de constitución obligatoria en toda unidad minera o de producción que cuente con 20 o más trabajadores.",
@@ -2484,7 +2484,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Respecto al uso de trajes de trabajo, vestuarios y protocolos de higiene en el sector minero, ¿cuáles de las siguientes normas resultan de observancia obligatoria para las empresas? (Seleccione las opciones correctas)",
+    "pregunta": "Respecto al uso de trajes de trabajo, vestuarios y protocolos de higiene en el sector minero, ¿cuáles de las siguientes normas resultan de observancia obligatoria para las empresas?",
     "opciones": [
       {
         "text": "Los mamelucos o prendas de trabajo deben contar con bandas reflectantes o luminosas para garantizar visibilidad en áreas operativas y socavón.",
@@ -2632,7 +2632,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "En relación con las características jurídicas del Contrato de Transferencia de Concesión Minera, ¿cuáles de las siguientes afirmaciones son correctas? (Seleccione las opciones correctas)",
+    "pregunta": "En relación con las características jurídicas del Contrato de Transferencia de Concesión Minera, ¿cuáles de las siguientes afirmaciones son correctas?",
     "opciones": [
       {
         "text": "Es un contrato traslaticio nominado previsto en la ley que debe formalizarse por escritura pública e inscribirse en el Registro de Derechos Mineros.",
@@ -2743,7 +2743,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Con relación a las figuras contractuales de Opción Minera y Riesgo Compartido (Joint Venture), ¿cuáles de las siguientes proposiciones son correctas según la Ley General de Minería? (Seleccione las opciones correctas)",
+    "pregunta": "Con relación a las figuras contractuales de Opción Minera y Riesgo Compartido (Joint Venture), ¿cuáles de las siguientes proposiciones son correctas según la Ley General de Minería?",
     "opciones": [
       {
         "text": "El contrato de opción en minería tiene un plazo máximo legal inprorrogable de 5 años de duración conforme a ley.",

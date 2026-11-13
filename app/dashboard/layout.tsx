@@ -160,12 +160,14 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
       <aside className="w-64 h-screen bg-slate-950 text-slate-300 flex flex-col hidden md:flex border-r border-slate-900 sticky top-0 shrink-0">
         {/* Header / Logo + Avatar */}
         <div className="p-5 flex flex-col gap-4 border-b border-white/5 shrink-0">
-          <div className="flex items-center justify-center">
-            <img 
-              src="/logo-blanco.png" 
-              alt="Edumin Logo" 
-              className="h-12 w-auto object-contain" 
-            />
+          <div className="flex items-center justify-start">
+            <Link href="/dashboard" className="flex items-center">
+              <img 
+                src="/logo-blanco.png" 
+                alt="Edumin Logo" 
+                className="h-12 w-auto object-contain" 
+              />
+            </Link>
           </div>
           
           <UserProfileCard currentView="estudiante" />

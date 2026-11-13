@@ -3,9 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import { 
   X, Calendar, Plus, Settings, CreditCard, CheckCircle2, RefreshCw, 
-  FileText, Download, Award, Send, AlertTriangle, DollarSign, Check,
+  FileText, Download, Award, Send, AlertTriangle, Check, Coins, Receipt, Wallet,
   User, UserCheck, Phone, Mail, Sparkles, BookOpen, Clock, ShieldAlert,
-  ChevronRight, Layers, Lock, Unlock, Trash2
+  ChevronRight, Layers, Lock, Unlock, Trash2, ChevronDown, ChevronUp
 } from 'lucide-react';
 
 interface Ficha360ModalProps {
@@ -15,7 +15,7 @@ interface Ficha360ModalProps {
   onOpenEditCronograma?: () => void;
   onAbrirCronograma?: (cred?: any) => void;
   onSetPagoParaAnular: (pag: any) => void;
-  onRegistrarPago: (cuotaIdxParam?: number, cargoExtraParam?: { concepto: string; monto: number }) => Promise<void>;
+  onRegistrarPago: (cuotaIdxParam?: number, cargoExtraParam?: { concepto: string; monto: number }, datosExtraParam?: { nro_recibo?: string; nro_operacion?: string }) => Promise<void>;
   montoPago: string;
   setMontoPago: (val: string) => void;
   comprobante: string;
@@ -86,7 +86,61 @@ export default function Ficha360Modal({
   const [conceptoExtra, setConceptoExtra] = useState<string>('Examen Sustitutorio');
   const [montoExtra, setMontoExtra] = useState<string>('25.00');
 
-  // Estado local para asignador de diplomados, cursos y talleres
+  // Estado para formulario colapsable de pago manual y cargo extra
+  const [mostrarFormPago, setMostrarFormPago] = useState<boolean>(false);
+  const [mostrarFormCargoExtra, setMostrarFormCargoExtra] = useState<boolean>(false);
+  const [cuotaIdxSeleccionada, setCuotaIdxSeleccionada] = useState<number | null>(null);
+  const [nroOperacion, setNroOperacion] = useState<string>('');
+  const [fotoError, setFotoError] = useState<boolean>(false);
+
+  useEffect(() => {
+    setFotoError(false);
+  }, [alumnoSeleccionado?.id]);
+
+  const supabasePublicUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://wluuomwkxywpfotbngwf.supabase.co';
+  const fotoEstudiante = (!fotoError && (alumnoSeleccionado?.foto_perfil || alumnoSeleccionado?.avatar_url))
+    ? (alumnoSeleccionado.foto_perfil || alumnoSeleccionado.avatar_url)
+    : (!fotoError && alumnoSeleccionado?.id 
+        ? `${supabasePublicUrl}/storage/v1/object/public/avatars/${alumnoSeleccionado.id}/avatar.jpg`
+        : null);
+
+  // Actualizar monto sugerido según la cuota pendiente del estudiante al abrir o cambiar de crédito
+  useEffect(() => {
+    if (alumnoSeleccionado) {
+      const creditos = alumnoSeleccionado.creditos || [];
+      const cred = creditos[selectedCreditoIdx] || creditos[0];
+      if (cred) {
+        const cuotasRaw = cred.cuotas || [];
+        const planRaw = cred.plan_cuotas || null;
+        const activas = cuotasRaw
+          .map((val: string, idx: number) => ({ val, idx }))
+          .filter((item: { val: string; idx: number }) => item.val !== 'no corresponde');
+        const totalCuotas = Math.max(1, activas.length);
+        const basePlan = Math.round(Number(cred.monto || 0) / totalCuotas);
+
+        // Buscar la primera cuota pendiente
+        const pendientes = activas.map(({ val, idx }: { val: string; idx: number }) => {
+          const plan = planRaw?.[idx] ? Number(planRaw[idx]) : basePlan;
+          const pagado = Number(val) || 0;
+          const pendiente = Math.max(0, plan - pagado);
+          return { idx, plan, pagado, pendiente };
+        }).filter((c: { idx: number; plan: number; pagado: number; pendiente: number }) => c.pendiente > 0 || c.pagado === 0);
+
+        if (pendientes.length > 0) {
+          const next = pendientes[0];
+          const deudaTotal = Number(cred.total_deuda ?? 0);
+          const sugerido = pendientes.length === 1 && deudaTotal > 0 ? deudaTotal : (next.pendiente > 0 ? next.pendiente : next.plan);
+          setMontoPago(String(sugerido > 0 ? sugerido : basePlan));
+        } else if (Number(cred.total_deuda) > 0) {
+          setMontoPago(String(Number(cred.total_deuda)));
+        } else {
+          setMontoPago(String(basePlan));
+        }
+      } else if (alumnoSeleccionado.monto_cuota) {
+        setMontoPago(String(Math.round(Number(alumnoSeleccionado.monto_cuota))));
+      }
+    }
+  }, [alumnoSeleccionado, selectedCreditoIdx, setMontoPago]);
   const [nuevoDiplomadoSeleccionado, setNuevoDiplomadoSeleccionado] = useState<string>('');
   const [cargandoDiplomadoAccion, setCargandoDiplomadoAccion] = useState(false);
   const [nuevoCursoSeleccionado, setNuevoCursoSeleccionado] = useState<string>('');
@@ -325,8 +379,7 @@ export default function Ficha360Modal({
 
   const tabsConfig: TabItem[] = [
     { id: 'datos', label: 'Datos del estudiante', icon: User },
-    { id: 'cronograma', label: 'Cronograma de pagos', icon: Calendar },
-    { id: 'creditos', label: 'Cargos extras', icon: Plus, badge: cargosExtras.length },
+    { id: 'cronograma', label: 'Cronograma y Finanzas', icon: Calendar, badge: Number(alumnoSeleccionado.deuda_total_pendiente || 0) > 0 ? `Deuda: S/ ${Number(alumnoSeleccionado.deuda_total_pendiente).toFixed(0)}` : 'Al día' },
     { id: 'academico', label: 'Avance académico', icon: Award, badge: `${alumnoSeleccionado.avance_porcentaje || 0}%` },
     { id: 'retencion', label: 'Deserción cero', icon: Send, badge: alumnoSeleccionado.nivel_riesgo_churn }
   ];
@@ -335,33 +388,51 @@ export default function Ficha360Modal({
     <div onClick={(e) => { if (e.target === e.currentTarget) onClose(); }} className="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-[9999] flex items-center justify-center p-3 sm:p-4">
       <div onClick={(e) => e.stopPropagation()} className="bg-white dark:bg-slate-900 w-full max-w-5xl rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh] border border-slate-200 dark:border-slate-800 transition-colors animate-in fade-in zoom-in-95 duration-200">
         
-        {/* Header Modal */}
+        {/* Header Modal con Foto de Perfil */}
         <div className="px-6 sm:px-8 py-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-900 text-white">
-          <div className="min-w-0 pr-4">
-            <div className="flex flex-wrap items-center gap-2 mb-1.5">
-              <span className="text-[10px] font-black uppercase tracking-wider bg-indigo-600 text-white px-2.5 py-0.5 rounded-full shrink-0">
-                Ficha 360° del estudiante
-              </span>
-              <span className="text-xs tabular-nums font-bold text-slate-300 shrink-0">
-                DNI / CE: {alumnoSeleccionado.dni_ce}
-              </span>
-              {alumnoSeleccionado.deuda_total_pendiente === 0 && (
-                <span className="text-[10px] font-bold bg-emerald-500 text-white px-2 py-0.5 rounded-full flex items-center gap-1 shrink-0">
-                  <CheckCircle2 className="size-3" /> Sin deuda pendiente
-                </span>
-              )}
-              {alumnoSeleccionado.bloqueado && (
-                <span className="text-[10px] font-bold bg-rose-500 text-white px-2 py-0.5 rounded-full flex items-center gap-1 shrink-0">
-                  <Lock className="size-3" /> Acceso bloqueado
+          <div className="flex items-center gap-4 min-w-0 pr-4">
+            {/* Foto de perfil del estudiante o iniciales por defecto (Formato Circular idéntico al Sidebar) */}
+            <div className="size-14 sm:size-16 rounded-full bg-gradient-to-tr from-indigo-500 via-indigo-600 to-cyan-400 text-white text-lg sm:text-xl font-black flex items-center justify-center shadow-lg ring-2 ring-indigo-500/40 shrink-0 overflow-hidden select-none">
+              {fotoEstudiante && !fotoError ? (
+                <img 
+                  src={fotoEstudiante} 
+                  alt={alumnoSeleccionado.nombres} 
+                  className="w-full h-full object-cover rounded-full" 
+                  onError={() => setFotoError(true)}
+                />
+              ) : (
+                <span>
+                  {(alumnoSeleccionado.nombres?.[0] || 'A').toUpperCase()}{(alumnoSeleccionado.apellidos?.[0] || '').toUpperCase()}
                 </span>
               )}
             </div>
-            <h3 className="text-xl sm:text-2xl font-black text-white truncate">
-              {alumnoSeleccionado.nombres} {alumnoSeleccionado.apellidos}
-            </h3>
-            <p className="text-xs text-slate-300 truncate mt-0.5">
-              {alumnoSeleccionado.email} • {alumnoSeleccionado.telefono || 'Sin teléfono'} • Paquete: <strong className="text-amber-400">{alumnoSeleccionado.paquete_adquirido}</strong>
-            </p>
+
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                <span className="text-[10px] font-black uppercase tracking-wider bg-indigo-600 text-white px-2.5 py-0.5 rounded-full shrink-0">
+                  Ficha 360° del estudiante
+                </span>
+                <span className="text-xs tabular-nums font-bold text-slate-300 shrink-0">
+                  DNI / CE: {alumnoSeleccionado.dni_ce}
+                </span>
+                {alumnoSeleccionado.deuda_total_pendiente === 0 && (
+                  <span className="text-[10px] font-bold bg-emerald-500 text-white px-2 py-0.5 rounded-full flex items-center gap-1 shrink-0">
+                    <CheckCircle2 className="size-3" /> Sin deuda pendiente
+                  </span>
+                )}
+                {alumnoSeleccionado.bloqueado && (
+                  <span className="text-[10px] font-bold bg-rose-500 text-white px-2 py-0.5 rounded-full flex items-center gap-1 shrink-0">
+                    <Lock className="size-3" /> Acceso bloqueado
+                  </span>
+                )}
+              </div>
+              <h3 className="text-lg sm:text-2xl font-black text-white truncate">
+                {alumnoSeleccionado.nombres} {alumnoSeleccionado.apellidos}
+              </h3>
+              <p className="text-xs text-slate-300 truncate mt-0.5">
+                {alumnoSeleccionado.email} • {alumnoSeleccionado.telefono || 'Sin teléfono'} • Paquete: <strong className="text-amber-400">{alumnoSeleccionado.paquete_adquirido}</strong>
+              </p>
+            </div>
           </div>
 
           <button 
@@ -597,7 +668,9 @@ export default function Ficha360Modal({
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
                   <div>
                     <span className="tabular-nums text-[10px] text-slate-400 uppercase block">Pagaré Nº</span>
-                    <strong className="tabular-nums text-sm text-slate-900 dark:text-white">2026-I-000{alumnoSeleccionado.dni_ce.substring(0, 4)}</strong>
+                    <strong className="tabular-nums text-sm text-slate-900 dark:text-white">
+                      {creditoSeleccionado?.nro_pagare || `2026-I-000${alumnoSeleccionado.dni_ce.substring(0, 4)}`}
+                    </strong>
                   </div>
                   <div>
                     <span className="tabular-nums text-[10px] text-slate-400 uppercase block">Programa inscrito</span>
@@ -616,7 +689,13 @@ export default function Ficha360Modal({
                 <div className="flex gap-2">
                   <button
                     type="button"
-                    onClick={onOpenEditCronograma}
+                    onClick={() => {
+                      if (onAbrirCronograma) {
+                        onAbrirCronograma(creditoSeleccionado);
+                      } else if (onOpenEditCronograma) {
+                        onOpenEditCronograma();
+                      }
+                    }}
                     className="bg-indigo-600 hover:bg-indigo-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-sm"
                   >
                     <Settings className="size-3.5" /> Editar cronograma
@@ -671,234 +750,447 @@ export default function Ficha360Modal({
                 </div>
               )}
 
-              {/* Tabla de Cuotas (Cuota 01 a Cuota 06) */}
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
-                    <Calendar className="size-4 text-indigo-600 dark:text-indigo-400" /> Desglose de cuotas
-                  </h4>
-                  <span className="text-[10px] text-slate-400 tabular-nums">Sincronizado con Supabase</span>
-                </div>
+              {/* Barra de Acciones del Cronograma y Botón para Registrar Pago */}
+              {(() => {
+                const cuotasRaw = creditoSeleccionado?.cuotas || ['0', '0', '0', 'no corresponde', 'no corresponde', 'no corresponde'];
+                const planCuotasRaw = creditoSeleccionado?.plan_cuotas || null;
+                const cuotasActivas = cuotasRaw
+                  .map((val: string, idx: number) => ({ val, idx }))
+                  .filter((item: { val: string; idx: number }) => item.val !== 'no corresponde');
+                const cuotasAMostrar = cuotasActivas.length > 0 ? cuotasActivas : [{ val: '0', idx: 0 }];
+                const totalMontoCredito = Number(creditoSeleccionado?.monto || 0);
+                const totalDeudaCredito = Number(creditoSeleccionado?.total_deuda ?? totalMontoCredito);
+                const planCuotaBase = Math.round(totalMontoCredito / Math.max(1, cuotasAMostrar.length));
 
-                <div className="overflow-x-auto border border-slate-200 dark:border-slate-800 rounded-2xl bg-white dark:bg-slate-900 shadow-sm">
-                  <table className="w-full text-left border-collapse text-xs">
-                    <thead>
-                      <tr className="bg-slate-50 dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-                        <th className="py-2.5 px-4 text-center">Cuota</th>
-                        <th className="py-2.5 px-4">Concepto</th>
-                        <th className="py-2.5 px-4">Monto / Valor</th>
-                        <th className="py-2.5 px-4">Estado cuota</th>
-                        <th className="py-2.5 px-4 text-right">Acciones</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-slate-100 dark:divide-slate-800 font-medium">
-                      {(() => {
-                        const cuotasObj = creditoSeleccionado?.cuotas || ['0', '0', '0', 'no corresponde', 'no corresponde', 'no corresponde'];
+                const pendingCuotasList = cuotasAMostrar.map(({ val, idx }: { val: string; idx: number }) => {
+                  const plan = planCuotasRaw?.[idx] ? Number(planCuotasRaw[idx]) : planCuotaBase;
+                  const pagado = Number(val) || 0;
+                  const pendiente = Math.max(0, plan - pagado);
+                  return { idx, plan, pagado, pendiente };
+                }).filter((c: { idx: number; plan: number; pagado: number; pendiente: number }) => c.pendiente > 0 || c.pagado === 0);
 
-                        return cuotasObj.map((cuotaVal: string, idx: number) => {
-                          const nroFmt = (idx + 1).toString().padStart(2, '0');
-                          const esNoCorresponde = cuotaVal === 'no corresponde';
-                          const montoNum = Number(cuotaVal) || 0;
-                          const estaPagada = !esNoCorresponde && montoNum > 0;
+                const nextPendingCuota = pendingCuotasList[0] || null;
 
-                          return (
-                            <tr key={idx} className={esNoCorresponde ? 'bg-slate-50/50 dark:bg-slate-950/50 opacity-60' : estaPagada ? 'bg-emerald-50/30 dark:bg-emerald-950/20' : 'hover:bg-slate-50 dark:hover:bg-slate-800/40'}>
-                              <td className="py-3 px-4 font-bold text-center text-slate-700 dark:text-slate-300">Cuota {nroFmt}</td>
-                              <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">
-                                Cuota {nroFmt} - {alumnoSeleccionado.diplomado_actual}
-                              </td>
-                              <td className="py-3 px-4 tabular-nums font-bold text-slate-800 dark:text-slate-200">
-                                {esNoCorresponde ? (
-                                  <span className="text-slate-400 italic">no corresponde</span>
-                                ) : (
-                                  `S/ ${montoNum.toFixed(2)}`
-                                )}
-                              </td>
-                              <td className="py-3 px-4 font-bold">
-                                {esNoCorresponde ? (
-                                  <span className="bg-slate-100 dark:bg-slate-800 text-slate-400 text-[10px] px-2.5 py-0.5 rounded-full border border-slate-200 dark:border-slate-700">
-                                    no corresponde
-                                  </span>
-                                ) : estaPagada ? (
-                                  <span className="bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-[10px] px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800">
-                                    Pagado (S/ {montoNum.toFixed(2)})
-                                  </span>
-                                ) : (
-                                  <span className="bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 text-[10px] px-2.5 py-0.5 rounded-full border border-amber-200 dark:border-amber-800">
-                                    Pendiente (S/ 0.00)
-                                  </span>
-                                )}
-                              </td>
-                              <td className="py-3 px-4 text-right">
-                                {!esNoCorresponde && (
-                                  estaPagada ? (
+                return (
+                  <div className="space-y-4">
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-slate-50 dark:bg-slate-800/40 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2.5 bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 rounded-xl shrink-0">
+                          <CreditCard className="size-5" />
+                        </div>
+                        <div>
+                          <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
+                            Gestión de Cobranzas y Recibos
+                          </h4>
+                          <p className="text-[11px] text-slate-500 dark:text-slate-400">
+                            {nextPendingCuota 
+                              ? `Siguiente por cobrar: Cuota ${(nextPendingCuota.idx + 1).toString().padStart(2, '0')} (S/ ${(pendingCuotasList.length === 1 && totalDeudaCredito > 0 ? totalDeudaCredito : nextPendingCuota.pendiente).toFixed(2)})`
+                              : (totalDeudaCredito === 0 ? '¡Crédito cancelado al 100%!' : 'No hay cuotas pendientes.')
+                            }
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto justify-end">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setMostrarFormCargoExtra(!mostrarFormCargoExtra);
+                            if (!mostrarFormCargoExtra) setMostrarFormPago(false);
+                          }}
+                          className={`px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer ${
+                            mostrarFormCargoExtra
+                              ? 'bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200'
+                              : 'bg-indigo-600 hover:bg-indigo-700 text-white'
+                          }`}
+                        >
+                          <Plus className="size-4" />
+                          <span>{mostrarFormCargoExtra ? 'Cerrar cargo extra' : 'Añadir cargo extra'}</span>
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={() => {
+                            if (!mostrarFormPago) {
+                              if (nextPendingCuota) {
+                                setCuotaIdxSeleccionada(nextPendingCuota.idx);
+                                const sug = pendingCuotasList.length === 1 && totalDeudaCredito > 0 ? totalDeudaCredito : (nextPendingCuota.pendiente > 0 ? nextPendingCuota.pendiente : nextPendingCuota.plan);
+                                setMontoPago(String(sug > 0 ? sug : nextPendingCuota.plan));
+                              }
+                              onSetPagoIdParaValidar(creditoSeleccionado?.id || null);
+                              setMostrarFormCargoExtra(false);
+                            }
+                            setMostrarFormPago(!mostrarFormPago);
+                          }}
+                          className={`px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer ${
+                            mostrarFormPago
+                              ? 'bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200'
+                              : 'bg-emerald-600 hover:bg-emerald-700 text-white'
+                          }`}
+                        >
+                          {mostrarFormPago ? <ChevronUp className="size-4" /> : <Coins className="size-4" />}
+                          <span>{mostrarFormPago ? 'Ocultar pago' : 'Registrar pago de cuota'}</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Formulario Desplegable de Cargo Extra */}
+                    {mostrarFormCargoExtra && (
+                      <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border-2 border-indigo-500/30 dark:border-indigo-500/20 shadow-md space-y-4 animate-in fade-in duration-200">
+                        <div className="flex justify-between items-center pb-2 border-b border-slate-100 dark:border-slate-800">
+                          <div className="flex items-center gap-2">
+                            <span className="bg-indigo-100 dark:bg-indigo-950/60 text-indigo-800 dark:text-indigo-300 font-black text-[10px] px-2.5 py-0.5 rounded-full uppercase">
+                              Nuevo Cargo
+                            </span>
+                            <h4 className="font-bold text-slate-900 dark:text-white text-xs">
+                              Añadir Cargo Extra / Adicional al Estudiante
+                            </h4>
+                          </div>
+                          <button 
+                            type="button" 
+                            onClick={() => setMostrarFormCargoExtra(false)}
+                            className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs font-bold cursor-pointer"
+                          >
+                            Cerrar
+                          </button>
+                        </div>
+
+                        <form 
+                          onSubmit={async (e) => {
+                            await handleAgregarCargoSubmit(e);
+                            setMostrarFormCargoExtra(false);
+                          }} 
+                          className="grid grid-cols-1 sm:grid-cols-12 gap-3 items-end"
+                        >
+                          <div className="sm:col-span-6">
+                            <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                              Concepto del cargo extra
+                            </label>
+                            <input 
+                              type="text"
+                              value={conceptoExtra}
+                              onChange={(e) => setConceptoExtra(e.target.value)}
+                              placeholder="Ej. Examen Sustitutorio, Mora, Certificado físico"
+                              className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none"
+                              required
+                            />
+                          </div>
+                          <div className="sm:col-span-3">
+                            <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                              Monto (S/)
+                            </label>
+                            <input 
+                              type="number"
+                              step="0.01"
+                              value={montoExtra}
+                              onChange={(e) => setMontoExtra(e.target.value)}
+                              className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-black text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none"
+                              required
+                            />
+                          </div>
+                          <div className="sm:col-span-3 flex gap-2">
+                            <button
+                              type="submit"
+                              disabled={cargandoPago}
+                              className="bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white px-4 py-2 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer shadow-sm w-full"
+                            >
+                              {cargandoPago ? <RefreshCw className="size-3.5 animate-spin" /> : <Plus className="size-3.5" />}
+                              <span>Registrar cargo</span>
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    )}
+
+                    {/* Formulario Desplegable de Pago Manual */}
+                    {mostrarFormPago && (
+                      <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border-2 border-emerald-500/30 dark:border-emerald-500/20 shadow-md space-y-4 animate-in fade-in duration-200">
+                        <div className="flex justify-between items-center pb-2 border-b border-slate-100 dark:border-slate-800">
+                          <div className="flex items-center gap-2">
+                            <span className="bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-black text-[10px] px-2.5 py-0.5 rounded-full uppercase">
+                              Nuevo Abono
+                            </span>
+                            <h4 className="font-bold text-slate-900 dark:text-white text-xs">
+                              {cuotaIdxSeleccionada !== null 
+                                ? `Abonando a: Cuota ${(cuotaIdxSeleccionada + 1).toString().padStart(2, '0')} - ${alumnoSeleccionado.diplomado_actual}`
+                                : `Abonando a: Cuota ${(nextPendingCuota ? nextPendingCuota.idx + 1 : 1).toString().padStart(2, '0')}`
+                              }
+                            </h4>
+                          </div>
+                          <button 
+                            type="button" 
+                            onClick={() => setMostrarFormPago(false)}
+                            className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs font-bold"
+                          >
+                            Cerrar
+                          </button>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                          <div>
+                            <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                              Monto pagado (S/)
+                            </label>
+                            <input 
+                              type="number"
+                              step="0.5"
+                              value={montoPago}
+                              onChange={(e) => setMontoPago(e.target.value)}
+                              className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-black text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500 outline-none"
+                            />
+                            <span className="text-[10px] text-slate-400 mt-0.5 block">
+                              Acepta abono parcial o pago mayor
+                            </span>
+                          </div>
+
+                          <div>
+                            <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                              Método de pago
+                            </label>
+                            <select
+                              value={metodo}
+                              onChange={(e) => {
+                                setMetodo(e.target.value);
+                                if (e.target.value === 'Efectivo en Caja') {
+                                  setNroOperacion('N/A');
+                                } else if (nroOperacion === 'N/A') {
+                                  setNroOperacion('');
+                                }
+                              }}
+                              className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500 outline-none"
+                            >
+                              <option value="Yape / Plin">Yape / Plin</option>
+                              <option value="Transferencia BCP">Transferencia BCP</option>
+                              <option value="Tarjeta BBVA / Interbank">Tarjeta BBVA / Interbank</option>
+                              <option value="Efectivo en Caja">Efectivo en Caja</option>
+                            </select>
+                          </div>
+
+                          <div>
+                            <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                              Nº Recibo / Boleta (Institucional)
+                            </label>
+                            <input 
+                              type="text"
+                              value={comprobante}
+                              onChange={(e) => setComprobante(e.target.value)}
+                              placeholder="REC-2026-00124"
+                              className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs tabular-nums font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500 outline-none"
+                            />
+                            <span className="text-[10px] text-slate-400 mt-0.5 block">
+                              Emisión formal (aplica a todo pago)
+                            </span>
+                          </div>
+
+                          <div>
+                            <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">
+                              Nº Operación Bancaria (Voucher)
+                            </label>
+                            <input 
+                              type="text"
+                              disabled={metodo === 'Efectivo en Caja'}
+                              value={metodo === 'Efectivo en Caja' ? 'No aplica (Efectivo)' : nroOperacion}
+                              onChange={(e) => setNroOperacion(e.target.value)}
+                              placeholder="OP-123456"
+                              className={`w-full px-3 py-2 border rounded-xl text-xs tabular-nums font-bold focus:ring-2 focus:ring-emerald-500 outline-none ${
+                                metodo === 'Efectivo en Caja'
+                                  ? 'bg-slate-100 dark:bg-slate-800/60 text-slate-400 border-slate-200 dark:border-slate-800 italic cursor-not-allowed'
+                                  : 'bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white border-slate-200 dark:border-slate-700'
+                              }`}
+                            />
+                            <span className="text-[10px] text-slate-400 mt-0.5 block">
+                              Código de transacción bancaria / Yape
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="flex gap-2 justify-end pt-1">
+                          <button
+                            type="button"
+                            onClick={() => setMostrarFormPago(false)}
+                            className="px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-xl text-xs font-bold transition cursor-pointer"
+                          >
+                            Cancelar
+                          </button>
+                          <button
+                            onClick={async () => {
+                              onSetPagoIdParaValidar(creditoSeleccionado?.id || null);
+                              await onRegistrarPago(
+                                cuotaIdxSeleccionada !== null ? cuotaIdxSeleccionada : undefined,
+                                undefined,
+                                {
+                                  nro_recibo: comprobante,
+                                  nro_operacion: metodo === 'Efectivo en Caja' ? 'N/A' : (nroOperacion || comprobante)
+                                }
+                              );
+                              setMostrarFormPago(false);
+                            }}
+                            disabled={cargandoPago || Number(montoPago) <= 0}
+                            className="bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed text-white px-5 py-2 rounded-xl font-bold text-xs shadow-md transition flex items-center justify-center gap-2 cursor-pointer"
+                          >
+                            {cargandoPago ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Coins className="w-4 h-4" />}
+                            <span>{cargandoPago ? 'Procesando pago...' : `Registrar pago (S/ ${Number(montoPago || 0).toFixed(2)})`}</span>
+                          </button>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Tabla de Cuotas (Cuota 01 a Cuota 06 Dinámica) */}
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                          <Calendar className="size-4 text-indigo-600 dark:text-indigo-400" /> Desglose de cuotas
+                        </h4>
+                        <span className="text-[10px] text-slate-400 tabular-nums">Sincronizado con Supabase</span>
+                      </div>
+
+                      <div className="overflow-x-auto border border-slate-200 dark:border-slate-800 rounded-2xl bg-white dark:bg-slate-900 shadow-sm">
+                        <table className="w-full text-left border-collapse text-xs">
+                          <thead>
+                            <tr className="bg-slate-50 dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+                              <th className="py-2.5 px-4 text-center">Cuota</th>
+                              <th className="py-2.5 px-4">Concepto</th>
+                              <th className="py-2.5 px-4">Monto Programado</th>
+                              <th className="py-2.5 px-4">Pagado</th>
+                              <th className="py-2.5 px-4">Estado cuota</th>
+                              <th className="py-2.5 px-4 text-right">Acciones</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-slate-100 dark:divide-slate-800 font-medium">
+                            {cuotasAMostrar.map(({ val: cuotaVal, idx }: { val: string; idx: number }) => {
+                              const nroFmt = (idx + 1).toString().padStart(2, '0');
+                              const pagadoNum = Number(cuotaVal) || 0;
+                              const planNum = planCuotasRaw?.[idx] ? Number(planCuotasRaw[idx]) : planCuotaBase;
+                              const pendienteNum = Math.max(0, planNum - pagadoNum);
+                              const estaTotalmentePagada = pagadoNum >= planNum && planNum > 0;
+                              const esPagoParcial = pagadoNum > 0 && pagadoNum < planNum;
+
+                              return (
+                                <tr key={idx} className={estaTotalmentePagada ? 'bg-emerald-50/30 dark:bg-emerald-950/20' : esPagoParcial ? 'bg-sky-50/30 dark:bg-sky-950/20' : 'hover:bg-slate-50 dark:hover:bg-slate-800/40'}>
+                                  <td className="py-3 px-4 font-bold text-center text-slate-700 dark:text-slate-300">
+                                    Cuota {nroFmt}
+                                  </td>
+                                  <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">
+                                    Cuota {nroFmt} - {alumnoSeleccionado.diplomado_actual}
+                                  </td>
+                                  <td className="py-3 px-4 tabular-nums font-bold text-slate-800 dark:text-slate-200">
+                                    S/ {planNum.toFixed(2)}
+                                  </td>
+                                  <td className="py-3 px-4 tabular-nums font-bold text-emerald-600 dark:text-emerald-400">
+                                    S/ {pagadoNum.toFixed(2)}
+                                  </td>
+                                  <td className="py-3 px-4 font-bold">
+                                    {estaTotalmentePagada ? (
+                                      <span className="bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-[10px] px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800 inline-flex items-center gap-1">
+                                        <CheckCircle2 className="size-3" /> Pagado (S/ {pagadoNum.toFixed(2)})
+                                      </span>
+                                    ) : esPagoParcial ? (
+                                      <span className="bg-sky-100 dark:bg-sky-950/60 text-sky-800 dark:text-sky-300 text-[10px] px-2.5 py-0.5 rounded-full border border-sky-200 dark:border-sky-800 inline-flex items-center gap-1">
+                                        Abono parcial (S/ {pagadoNum.toFixed(2)} / S/ {planNum.toFixed(2)})
+                                      </span>
+                                    ) : (
+                                      <span className="bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 text-[10px] px-2.5 py-0.5 rounded-full border border-amber-200 dark:border-amber-800 inline-flex items-center gap-1">
+                                        Pendiente (S/ {planNum.toFixed(2)})
+                                      </span>
+                                    )}
+                                  </td>
+                                  <td className="py-3 px-4 text-right">
+                                    <div className="flex items-center justify-end gap-2">
+                                      {pagadoNum > 0 && (
+                                        <button
+                                          type="button"
+                                          onClick={() => onSetPagoParaAnular({ id: creditoSeleccionado?.id, dni_ce: alumnoSeleccionado.dni_ce, cuota_index: idx, monto: pagadoNum })}
+                                          className="text-[10px] text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300 font-bold underline cursor-pointer"
+                                        >
+                                          Anular
+                                        </button>
+                                      )}
+                                      {!estaTotalmentePagada && (
+                                        <button
+                                          type="button"
+                                          onClick={() => {
+                                            setCuotaIdxSeleccionada(idx);
+                                            const montoASugerir = pendingCuotasList.length === 1 && totalDeudaCredito > 0 
+                                              ? totalDeudaCredito 
+                                              : (pendienteNum > 0 ? pendienteNum : planNum);
+                                            setMontoPago(String(montoASugerir > 0 ? montoASugerir : planNum));
+                                            onSetPagoIdParaValidar(creditoSeleccionado?.id || null);
+                                            setMostrarFormPago(true);
+                                          }}
+                                          disabled={cargandoPago}
+                                          className="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1 rounded-lg text-[10px] font-bold transition shadow-sm cursor-pointer inline-flex items-center gap-1"
+                                        >
+                                          <CreditCard className="size-3" /> Registrar pago
+                                        </button>
+                                      )}
+                                    </div>
+                                  </td>
+                                </tr>
+                              );
+                            })}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    {/* Historial Integrado de Cargos Extras */}
+                    <div className="space-y-3 pt-4 border-t border-slate-200 dark:border-slate-800">
+                      <div className="flex justify-between items-center">
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                          <Plus className="size-4 text-indigo-600 dark:text-indigo-400" /> Historial de cargos extras registrados
+                        </h4>
+                        <span className="text-[10px] text-slate-400 tabular-nums font-semibold">
+                          {cargosExtras.length} cargo{cargosExtras.length === 1 ? '' : 's'} adicional{cargosExtras.length === 1 ? '' : 'es'}
+                        </span>
+                      </div>
+
+                      {cargosExtras.length === 0 ? (
+                        <div className="bg-slate-50 dark:bg-slate-800/20 border border-dashed border-slate-200 dark:border-slate-800 rounded-2xl p-5 text-center text-xs text-slate-400 font-medium">
+                          No se registran cargos adicionales para este estudiante.
+                        </div>
+                      ) : (
+                        <div className="overflow-x-auto border border-slate-200 dark:border-slate-800 rounded-2xl bg-white dark:bg-slate-900 shadow-sm">
+                          <table className="w-full text-left border-collapse text-xs">
+                            <thead>
+                              <tr className="bg-slate-50 dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+                                <th className="py-2.5 px-4">Concepto</th>
+                                <th className="py-2.5 px-4">Monto</th>
+                                <th className="py-2.5 px-4">Fecha</th>
+                                <th className="py-2.5 px-4">Estado</th>
+                                <th className="py-2.5 px-4 text-right">Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+                              {cargosExtras.map((cargo: any, idx: number) => (
+                                <tr key={idx} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 font-medium">
+                                  <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">{cargo.concepto || 'Cargo adicional'}</td>
+                                  <td className="py-3 px-4 tabular-nums font-bold text-slate-800 dark:text-slate-200">S/ {Number(cargo.monto || 0).toFixed(2)}</td>
+                                  <td className="py-3 px-4 text-slate-500 dark:text-slate-400">{cargo.created_at ? new Date(cargo.created_at).toLocaleDateString('es-PE') : '-'}</td>
+                                  <td className="py-3 px-4">
+                                    <span className="bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-[10px] px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800 font-bold">
+                                      {cargo.estado || 'Aprobado'}
+                                    </span>
+                                  </td>
+                                  <td className="py-3 px-4 text-right">
                                     <button
                                       type="button"
-                                      onClick={() => onSetPagoParaAnular({ id: creditoSeleccionado?.id, dni_ce: alumnoSeleccionado.dni_ce, cuota_index: idx, monto: montoNum })}
+                                      onClick={() => onSetPagoParaAnular({ id: cargo.id, dni_ce: alumnoSeleccionado.dni_ce, is_cargo_extra: true, monto: cargo.monto })}
                                       className="text-[10px] text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300 font-bold underline cursor-pointer"
                                     >
-                                      Anular cuota
+                                      Anular cargo
                                     </button>
-                                  ) : (
-                                    <button
-                                      type="button"
-                                      onClick={async () => {
-                                        const defMonto = creditoSeleccionado ? (creditoSeleccionado.monto / Math.max(1, creditoSeleccionado.cuotas.filter((x: string) => x !== 'no corresponde').length)) : 150;
-                                        setMontoPago(defMonto.toString());
-                                        onSetPagoIdParaValidar(creditoSeleccionado?.id || null);
-                                        await onRegistrarPago(idx);
-                                      }}
-                                      disabled={cargandoPago}
-                                      className="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1 rounded-lg text-[10px] font-bold transition shadow-sm cursor-pointer inline-flex items-center gap-1"
-                                    >
-                                      {cargandoPago ? <RefreshCw className="size-3 animate-spin" /> : <CheckCircle2 className="size-3" />} Validar pago
-                                    </button>
-                                  )
-                                )}
-                              </td>
-                            </tr>
-                          );
-                        });
-                      })()}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              {/* Formulario Rápido de Pago Manual */}
-              <div className="bg-slate-50 dark:bg-slate-800/40 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
-                <h4 className="font-bold text-slate-900 dark:text-white text-xs uppercase tracking-wider flex items-center gap-2">
-                  <CreditCard className="w-4 h-4 text-indigo-600 dark:text-indigo-400" /> Registrar nuevo pago y generar recibo
-                </h4>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  <div>
-                    <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Monto pagado (S/)</label>
-                    <input 
-                      type="number"
-                      value={montoPago}
-                      onChange={(e) => setMontoPago(e.target.value)}
-                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white"
-                    />
+                                  </td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                  <div>
-                    <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Nº comprobante / operación</label>
-                    <input 
-                      type="text"
-                      value={comprobante}
-                      onChange={(e) => setComprobante(e.target.value)}
-                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs tabular-nums font-bold text-slate-900 dark:text-white"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Método de pago</label>
-                    <select
-                      value={metodo}
-                      onChange={(e) => setMetodo(e.target.value)}
-                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white"
-                    >
-                      <option value="Yape / Plin">Yape / Plin</option>
-                      <option value="Transferencia BCP">Transferencia BCP</option>
-                      <option value="Tarjeta BBVA / Interbank">Tarjeta BBVA / Interbank</option>
-                      <option value="Efectivo en Caja">Efectivo en Caja</option>
-                    </select>
-                  </div>
-                </div>
+                );
+              })()}
 
-                <button
-                  onClick={() => onRegistrarPago()}
-                  disabled={cargandoPago}
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-md transition flex items-center justify-center gap-2 cursor-pointer w-full"
-                >
-                  {cargandoPago ? <RefreshCw className="w-4 h-4 animate-spin" /> : <DollarSign className="w-4 h-4" />}
-                  <span>{cargandoPago ? 'Procesando pago...' : 'Registrar pago'}</span>
-                </button>
-              </div>
-
-            </div>
-          )}
-
-          {/* TAB 3: CARGOS EXTRAS */}
-          {modalTab === 'creditos' && (
-            <div className="space-y-6">
-              <div className="bg-slate-50 dark:bg-slate-800/40 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4">
-                <h4 className="font-bold text-slate-900 dark:text-white text-xs uppercase tracking-wider flex items-center gap-2">
-                  <Plus className="w-4 h-4 text-indigo-600 dark:text-indigo-400" /> Añadir cargo extra al estudiante
-                </h4>
-
-                <form onSubmit={handleAgregarCargoSubmit} className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-end">
-                  <div>
-                    <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Concepto</label>
-                    <input 
-                      type="text"
-                      value={conceptoExtra}
-                      onChange={(e) => setConceptoExtra(e.target.value)}
-                      placeholder="Ej. Examen Sustitutorio, Mora"
-                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Monto (S/)</label>
-                    <input 
-                      type="number"
-                      step="0.01"
-                      value={montoExtra}
-                      onChange={(e) => setMontoExtra(e.target.value)}
-                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white"
-                      required
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    disabled={cargandoPago}
-                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 cursor-pointer shadow-sm disabled:opacity-50"
-                  >
-                    {cargandoPago ? <RefreshCw className="size-3 animate-spin" /> : <Plus className="size-3" />}
-                    <span>Añadir cargo</span>
-                  </button>
-                </form>
-              </div>
-
-              {/* Historial de Cargos Extras */}
-              <div className="space-y-3">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
-                  Historial de cargos extras registrados
-                </h4>
-
-                {cargosExtras.length === 0 ? (
-                  <div className="bg-slate-50 dark:bg-slate-800/20 border border-dashed border-slate-200 dark:border-slate-800 rounded-2xl p-6 text-center text-xs text-slate-500">
-                    No se registran cargos adicionales para este estudiante.
-                  </div>
-                ) : (
-                  <div className="overflow-x-auto border border-slate-200 dark:border-slate-800 rounded-2xl bg-white dark:bg-slate-900 shadow-sm">
-                    <table className="w-full text-left border-collapse text-xs">
-                      <thead>
-                        <tr className="bg-slate-50 dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-[10px] uppercase font-bold tracking-wider">
-                          <th className="py-2.5 px-4">Concepto</th>
-                          <th className="py-2.5 px-4">Monto</th>
-                          <th className="py-2.5 px-4">Fecha</th>
-                          <th className="py-2.5 px-4">Estado</th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
-                        {cargosExtras.map((cargo: any, idx: number) => (
-                          <tr key={idx} className="hover:bg-slate-50 dark:hover:bg-slate-800/40">
-                            <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">{cargo.concepto || 'Cargo adicional'}</td>
-                            <td className="py-3 px-4 tabular-nums font-bold text-slate-800 dark:text-slate-200">S/ {Number(cargo.monto || 0).toFixed(2)}</td>
-                            <td className="py-3 px-4 text-slate-500 dark:text-slate-400">{cargo.created_at ? new Date(cargo.created_at).toLocaleDateString('es-PE') : '-'}</td>
-                            <td className="py-3 px-4">
-                              <span className="bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-[10px] px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800 font-bold">
-                                {cargo.estado || 'Aprobado'}
-                              </span>
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                )}
-              </div>
             </div>
           )}
 

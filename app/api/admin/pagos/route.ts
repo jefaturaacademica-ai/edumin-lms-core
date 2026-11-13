@@ -34,15 +34,27 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
   let total_pagado = Number(pag.total_pagado || pag['total pagado'] || 0);
   let explicitDeuda: number | undefined = undefined;
   let parsedFromMetodo = false;
+  let plan_cuotas: string[] | null = null;
+  let nro_pagare: string | undefined = pag.nro_pagare || undefined;
+  let nro_recibo: string | undefined = pag.nro_recibo || undefined;
+  let nro_operacion: string | undefined = pag.nro_operacion || undefined;
+  let comprobante: string | undefined = pag.comprobante || undefined;
 
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CREDITO_')) {
     try {
       const jsonStr = pag.metodo.substring(pag.metodo.indexOf('|') + 1).trim();
       const parsed = JSON.parse(jsonStr);
       num_credito = parsed.num_credito || num_credito;
+      if (parsed.nro_pagare) nro_pagare = parsed.nro_pagare;
+      if (parsed.ultimo_pago?.nro_recibo) nro_recibo = parsed.ultimo_pago.nro_recibo;
+      if (parsed.ultimo_pago?.nro_operacion) nro_operacion = parsed.ultimo_pago.nro_operacion;
+      if (parsed.ultimo_pago?.comprobante) comprobante = parsed.ultimo_pago.comprobante;
       if (Array.isArray(parsed.cuotas)) {
         cuotas = parsed.cuotas;
         parsedFromMetodo = true;
+      }
+      if (Array.isArray(parsed.plan_cuotas)) {
+        plan_cuotas = parsed.plan_cuotas;
       }
       if (parsed.total_pagado !== undefined) {
         total_pagado = Number(parsed.total_pagado);
@@ -60,6 +72,8 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
     if (auditEntry?.detalles) {
       num_credito = auditEntry.detalles.num_credito || num_credito;
       cuotas = auditEntry.detalles.cuotas || cuotas;
+      if (auditEntry.detalles.nro_pagare) nro_pagare = auditEntry.detalles.nro_pagare;
+      if (Array.isArray(auditEntry.detalles.plan_cuotas)) plan_cuotas = auditEntry.detalles.plan_cuotas;
       if (auditEntry.detalles.total_pagado !== undefined) total_pagado = Number(auditEntry.detalles.total_pagado);
       if (auditEntry.detalles.total_deuda !== undefined) explicitDeuda = Number(auditEntry.detalles.total_deuda);
     }
@@ -85,11 +99,16 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
     profile_id: pag.profile_id,
     dni_ce: pag.dni_ce,
     num_credito,
+    nro_pagare,
+    nro_recibo,
+    nro_operacion,
+    comprobante,
     monto: montoTotal,
     metodo: pag.metodo && !pag.metodo.startsWith('CREDITO_') ? pag.metodo : 'Por Pagar',
     estado: total_deuda === 0 ? 'Completado' : (pag.estado || 'Pendiente'),
     created_at: pag.created_at,
     cuotas,
+    plan_cuotas,
     'cuota 01': cuotas[0],
     'cuota 02': cuotas[1],
     'cuota 03': cuotas[2],
@@ -147,6 +166,8 @@ export async function POST(request: Request) {
     const montoPago = Number(body.monto) || 150.00;
     const metodo = body.metodo || "Yape / Plin";
     const comprobante = body.comprobante || `OP-${Math.floor(100000 + Math.random() * 900000)}`;
+    const nro_recibo = typeof body.nro_recibo === 'string' ? body.nro_recibo.trim() : (body.recibo || '');
+    const nro_operacion = typeof body.nro_operacion === 'string' ? body.nro_operacion.trim() : (body.operacion || '');
     const pagoId = body.pago_id || null;
     const numCredito = Number(body.num_credito) || 1;
     const cuotaIndex = body.cuota_index !== undefined ? Number(body.cuota_index) : null;
@@ -172,13 +193,31 @@ export async function POST(request: Request) {
 
     // CASO ESPECIAL: REGISTRAR CARGO EXTRA (Examen sustitutorio, mora, etc.)
     if (isCargoExtra) {
-      const { data: newCargo, error: cargoErr } = await admin.from("pagos").insert({
+      const extraPayload: Record<string, any> = {
         profile_id: student.id,
         dni_ce: student.dni_ce,
         monto: montoPago,
         metodo: `CARGO_EXTRA|${conceptoCargo}`,
         estado: "APROBADO"
-      }).select().single();
+      };
+      if (nro_recibo) extraPayload.nro_recibo = nro_recibo;
+      if (nro_operacion) extraPayload.nro_operacion = nro_operacion;
+      if (comprobante) extraPayload.comprobante = comprobante;
+
+      let newCargo: any = null;
+      let cargoErr: any = null;
+      try {
+        const res = await admin.from("pagos").insert(extraPayload).select().single();
+        newCargo = res.data;
+        cargoErr = res.error;
+      } catch {
+        delete extraPayload.nro_recibo;
+        delete extraPayload.nro_operacion;
+        delete extraPayload.comprobante;
+        const res = await admin.from("pagos").insert(extraPayload).select().single();
+        newCargo = res.data;
+        cargoErr = res.error;
+      }
 
       if (cargoErr) {
         return NextResponse.json({ error: `Error al insertar cargo extra: ${cargoErr.message}` }, { status: 500 });
@@ -195,7 +234,9 @@ export async function POST(request: Request) {
             concepto: conceptoCargo,
             monto: montoPago,
             metodo,
-            comprobante
+            comprobante,
+            nro_recibo,
+            nro_operacion
           }
         });
       } catch (e) {
@@ -216,7 +257,10 @@ export async function POST(request: Request) {
               dni_ce: student.dni_ce,
               concepto: conceptoCargo,
               monto: montoPago,
-              comprobante
+              metodo,
+              comprobante,
+              nro_recibo,
+              nro_operacion
             }),
             cache: "no-store",
             signal: AbortSignal.timeout(10_000)
@@ -282,16 +326,46 @@ export async function POST(request: Request) {
       parsedCredito = parseCreditoRow(newPago, auditLogs || []);
     } else {
       const updatedCuotas = [...parsedCredito.cuotas];
+      const planCuotas = Array.isArray(parsedCredito.plan_cuotas) ? parsedCredito.plan_cuotas : null;
       
       let targetIdx = cuotaIndex;
       if (targetIdx === null || targetIdx < 0 || targetIdx > 5) {
-        targetIdx = updatedCuotas.findIndex((val: string) => val !== 'no corresponde' && Number(val) === 0);
+        // Encontrar la primera cuota que aún tenga saldo pendiente
+        targetIdx = updatedCuotas.findIndex((val: string, idx: number) => {
+          if (val === 'no corresponde') return false;
+          const planVal = planCuotas?.[idx] ? Number(planCuotas[idx]) : 0;
+          const pagadoVal = Number(val) || 0;
+          return planVal > 0 ? pagadoVal < planVal : pagadoVal === 0;
+        });
         if (targetIdx === -1) {
           targetIdx = 0;
         }
       }
 
-      updatedCuotas[targetIdx] = String(montoPago);
+      // Distribución inteligente (cascada): abona a la cuota seleccionada y si sobra dinero pasa a la siguiente
+      const cuotasActivasCount = updatedCuotas.filter(c => c !== 'no corresponde').length;
+      const cuotaEsperadaFallback = Math.round(parsedCredito.monto / Math.max(1, cuotasActivasCount));
+
+      let montoRestante = montoPago;
+
+      for (let i = targetIdx; i < updatedCuotas.length; i++) {
+        if (updatedCuotas[i] === 'no corresponde') continue;
+        if (montoRestante <= 0) break;
+
+        const planCuota = planCuotas?.[i] ? Number(planCuotas[i]) : cuotaEsperadaFallback;
+        const yaPagado = Number(updatedCuotas[i]) || 0;
+        const pendienteCuota = Math.max(0, planCuota - yaPagado);
+
+        const esUltimaCuotaActiva = updatedCuotas.slice(i + 1).every(c => c === 'no corresponde');
+
+        if (esUltimaCuotaActiva || montoRestante <= pendienteCuota || pendienteCuota === 0) {
+          updatedCuotas[i] = String(yaPagado + montoRestante);
+          montoRestante = 0;
+        } else {
+          updatedCuotas[i] = String(yaPagado + pendienteCuota);
+          montoRestante -= pendienteCuota;
+        }
+      }
 
       const newTotalPagado = updatedCuotas.reduce((sum: number, val: string) => {
         return val !== 'no corresponde' ? sum + (Number(val) || 0) : sum;
@@ -301,15 +375,37 @@ export async function POST(request: Request) {
 
       const metadataMetodo = `CREDITO_${parsedCredito.num_credito}|${JSON.stringify({
         num_credito: parsedCredito.num_credito,
+        nro_pagare: parsedCredito.nro_pagare || undefined,
         cuotas: updatedCuotas,
+        plan_cuotas: parsedCredito.plan_cuotas || null,
         total_pagado: newTotalPagado,
-        total_deuda: newTotalDeuda
+        total_deuda: newTotalDeuda,
+        ultimo_pago: {
+          monto: montoPago,
+          metodo,
+          nro_recibo,
+          nro_operacion,
+          comprobante,
+          fecha: new Date().toISOString()
+        }
       })}`;
 
-      await admin.from("pagos").update({
+      const updatePayload: Record<string, any> = {
         metodo: metadataMetodo,
         estado: newTotalDeuda === 0 ? "Completado" : "Pendiente"
-      }).eq("id", parsedCredito.id);
+      };
+      if (nro_recibo) updatePayload.nro_recibo = nro_recibo;
+      if (nro_operacion) updatePayload.nro_operacion = nro_operacion;
+      if (comprobante) updatePayload.comprobante = comprobante;
+
+      try {
+        await admin.from("pagos").update(updatePayload).eq("id", parsedCredito.id);
+      } catch {
+        delete updatePayload.nro_recibo;
+        delete updatePayload.nro_operacion;
+        delete updatePayload.comprobante;
+        await admin.from("pagos").update(updatePayload).eq("id", parsedCredito.id);
+      }
 
       parsedCredito.cuotas = updatedCuotas;
       parsedCredito.total_pagado = newTotalPagado;
@@ -331,7 +427,9 @@ export async function POST(request: Request) {
           total_deuda: parsedCredito.total_deuda,
           monto_pagado: montoPago,
           metodo,
-          comprobante
+          comprobante,
+          nro_recibo,
+          nro_operacion
         }
       });
     } catch (err) {
@@ -507,8 +605,8 @@ export async function PATCH(request: Request) {
     }
 
     // ACCIÓN 2: EDITAR CRONOGRAMA DE UN CRÉDITO ESPECÍFICO CON VALIDACIÓN DE SUMA
-    if (body.action === "editar_cronograma") {
-      const { pago_id, dni_ce, num_credito, monto_total, cuotas } = body;
+    if (body.action === "editar_cronograma" || (body.cuotas && !body.action)) {
+      const { pago_id, dni_ce, num_credito, monto_total, cuotas, nro_pagare } = body;
 
       const { data: creditRow } = pago_id
         ? await admin.from("pagos").select("*").eq("id", pago_id).maybeSingle()
@@ -518,10 +616,11 @@ export async function PATCH(request: Request) {
         return NextResponse.json({ error: "Crédito no encontrado para editar cronograma." }, { status: 404 });
       }
 
+      const prevParsed = parseCreditoRow(creditRow, []);
       const totalMontoCredito = Number(monto_total) || Number(creditRow.monto) || 0;
-      const cuotasArray: string[] = Array.isArray(cuotas) ? cuotas : ['0', 'no corresponde', 'no corresponde', 'no corresponde', 'no corresponde', 'no corresponde'];
+      const planCuotasArray: string[] = Array.isArray(cuotas) ? cuotas : ['0', 'no corresponde', 'no corresponde', 'no corresponde', 'no corresponde', 'no corresponde'];
 
-      const sumaCuotas = cuotasArray.reduce((acc: number, val: string) => {
+      const sumaCuotas = planCuotasArray.reduce((acc: number, val: string) => {
         return val !== 'no corresponde' ? acc + (Number(val) || 0) : acc;
       }, 0);
 
@@ -531,24 +630,43 @@ export async function PATCH(request: Request) {
         }, { status: 400 });
       }
 
-      const totalPagadoCalculado = cuotasArray.reduce((acc: number, val: string) => {
+      // Preservar los pagos reales que ya realizó el alumno en cada cuota
+      const prevCuotas = [...prevParsed.cuotas];
+      const updatedCuotas = planCuotasArray.map((pVal, idx) => {
+        if (pVal === 'no corresponde') return 'no corresponde';
+        const prevP = prevCuotas[idx];
+        return prevP && prevP !== 'no corresponde' ? prevP : '0';
+      });
+
+      const totalPagadoCalculado = updatedCuotas.reduce((acc: number, val: string) => {
         return val !== 'no corresponde' && Number(val) > 0 ? acc + Number(val) : acc;
       }, 0);
 
       const totalDeudaCalculada = Math.max(0, totalMontoCredito - totalPagadoCalculado);
+      const nroPagareFinal = nro_pagare || prevParsed.nro_pagare;
 
       const metadataMetodo = `CREDITO_${num_credito || creditRow.num_credito || 1}|${JSON.stringify({
         num_credito: num_credito || creditRow.num_credito || 1,
-        cuotas: cuotasArray,
+        nro_pagare: nroPagareFinal || undefined,
+        cuotas: updatedCuotas,
+        plan_cuotas: planCuotasArray,
         total_pagado: totalPagadoCalculado,
         total_deuda: totalDeudaCalculada
       })}`;
 
-      await admin.from("pagos").update({
+      const updatePayload: Record<string, any> = {
         monto: totalMontoCredito,
         metodo: metadataMetodo,
         estado: totalDeudaCalculada === 0 ? "Completado" : "Pendiente"
-      }).eq("id", creditRow.id);
+      };
+      if (nroPagareFinal) updatePayload.nro_pagare = nroPagareFinal;
+
+      try {
+        await admin.from("pagos").update(updatePayload).eq("id", creditRow.id);
+      } catch {
+        delete updatePayload.nro_pagare;
+        await admin.from("pagos").update(updatePayload).eq("id", creditRow.id);
+      }
 
       try {
         await admin.from("audit_logs").insert({
@@ -558,7 +676,8 @@ export async function PATCH(request: Request) {
             pago_id: creditRow.id,
             dni_ce: creditRow.dni_ce,
             monto_total: totalMontoCredito,
-            cuotas: cuotasArray,
+            cuotas: updatedCuotas,
+            plan_cuotas: planCuotasArray,
             total_pagado: totalPagadoCalculado,
             total_deuda: totalDeudaCalculada
           }
@@ -577,5 +696,102 @@ export async function PATCH(request: Request) {
   } catch (error: any) {
     console.error("Error en PATCH pagos:", error);
     return NextResponse.json({ error: error.message || "Error interno al actualizar pago." }, { status: 500 });
+  }
+}
+
+export async function DELETE(request: Request) {
+  try {
+    const body = await request.json();
+    const admin = createAdminClient();
+
+    const { pago_id, dni_ce, num_credito, cuota_index, motivo_anulacion, is_cargo_extra } = body;
+    const motivoFinal = (motivo_anulacion && String(motivo_anulacion).trim()) || "Anulación manual administrativa desde ficha 360";
+
+    const { data: targetCredit } = pago_id
+      ? await admin.from("pagos").select("*").eq("id", pago_id).maybeSingle()
+      : await admin.from("pagos").select("*").eq("dni_ce", dni_ce).order("created_at", { ascending: true }).limit(1).maybeSingle();
+
+    if (!targetCredit) {
+      return NextResponse.json({ error: "Registro de pago no encontrado para anulación." }, { status: 404 });
+    }
+
+    // Si es un cargo extra suelto, marcar estado Anulado
+    if (is_cargo_extra || (typeof targetCredit.metodo === 'string' && targetCredit.metodo.startsWith('CARGO_EXTRA|'))) {
+      await admin.from("pagos").update({ estado: "ANULADO" }).eq("id", targetCredit.id);
+
+      try {
+        await admin.from("audit_logs").insert({
+          usuario_email: "admin@edumin.pe",
+          accion: "ANULACION_CARGO_EXTRA",
+          detalles: {
+            pago_id: targetCredit.id,
+            dni_ce: targetCredit.dni_ce,
+            motivo_anulacion: motivoFinal
+          }
+        });
+      } catch (e) {
+        console.error(e);
+      }
+
+      return NextResponse.json({
+        success: true,
+        message: "Cargo extra anulado exitosamente en Supabase."
+      });
+    }
+
+    const { data: auditLogs } = await admin.from("audit_logs").select("*").order("created_at", { ascending: false });
+    const parsedCredito = parseCreditoRow(targetCredit, auditLogs || []);
+
+    const idxToReset = cuota_index !== undefined && cuota_index !== null ? Number(cuota_index) : 0;
+    const updatedCuotas = [...parsedCredito.cuotas];
+    if (idxToReset >= 0 && idxToReset < updatedCuotas.length && updatedCuotas[idxToReset] !== 'no corresponde') {
+      updatedCuotas[idxToReset] = '0';
+    }
+
+    const newTotalPagado = updatedCuotas.reduce((sum: number, val: string) => {
+      return val !== 'no corresponde' ? sum + (Number(val) || 0) : sum;
+    }, 0);
+
+    const newTotalDeuda = Math.max(0, parsedCredito.monto - newTotalPagado);
+
+    const metadataMetodo = `CREDITO_${parsedCredito.num_credito}|${JSON.stringify({
+      num_credito: parsedCredito.num_credito,
+      cuotas: updatedCuotas,
+      total_pagado: newTotalPagado,
+      total_deuda: newTotalDeuda
+    })}`;
+
+    await admin.from("pagos").update({
+      metodo: metadataMetodo,
+      estado: newTotalDeuda === 0 ? "Completado" : "Pendiente"
+    }).eq("id", parsedCredito.id);
+
+    // Auditoría forense
+    try {
+      await admin.from("audit_logs").insert({
+        usuario_email: "admin@edumin.pe",
+        accion: "ANULACION_PAGO_CON_JUSTIFICACION",
+        detalles: {
+          pago_id: parsedCredito.id,
+          dni_ce: parsedCredito.dni_ce,
+          num_credito: parsedCredito.num_credito,
+          cuota_index: idxToReset,
+          motivo_anulacion: motivoFinal,
+          cuotas: updatedCuotas,
+          total_pagado: newTotalPagado,
+          total_deuda: newTotalDeuda
+        }
+      });
+    } catch (e) {
+      console.error(e);
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: "Cuota anulada exitosamente en el cronograma."
+    });
+  } catch (error: any) {
+    console.error("Error en DELETE /api/admin/pagos:", error);
+    return NextResponse.json({ error: error.message || "Error al anular pago" }, { status: 500 });
   }
 }

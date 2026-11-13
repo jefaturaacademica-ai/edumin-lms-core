@@ -62,15 +62,27 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
   let total_pagado = Number(pag.total_pagado || pag['total pagado'] || 0);
   let explicitDeuda: number | undefined = undefined;
   let parsedFromMetodo = false;
+  let plan_cuotas: string[] | null = null;
+  let nro_pagare: string | undefined = pag.nro_pagare || undefined;
+  let nro_recibo: string | undefined = pag.nro_recibo || undefined;
+  let nro_operacion: string | undefined = pag.nro_operacion || undefined;
+  let comprobante: string | undefined = pag.comprobante || undefined;
 
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CREDITO_')) {
     try {
       const jsonStr = pag.metodo.substring(pag.metodo.indexOf('|') + 1).trim();
       const parsed = JSON.parse(jsonStr);
       num_credito = parsed.num_credito || num_credito;
+      if (parsed.nro_pagare) nro_pagare = parsed.nro_pagare;
+      if (parsed.ultimo_pago?.nro_recibo) nro_recibo = parsed.ultimo_pago.nro_recibo;
+      if (parsed.ultimo_pago?.nro_operacion) nro_operacion = parsed.ultimo_pago.nro_operacion;
+      if (parsed.ultimo_pago?.comprobante) comprobante = parsed.ultimo_pago.comprobante;
       if (Array.isArray(parsed.cuotas)) {
         cuotas = parsed.cuotas;
         parsedFromMetodo = true;
+      }
+      if (Array.isArray(parsed.plan_cuotas)) {
+        plan_cuotas = parsed.plan_cuotas;
       }
       if (parsed.total_pagado !== undefined) {
         total_pagado = Number(parsed.total_pagado);
@@ -88,6 +100,8 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
     if (auditEntry?.detalles) {
       num_credito = auditEntry.detalles.num_credito || num_credito;
       cuotas = auditEntry.detalles.cuotas || cuotas;
+      if (auditEntry.detalles.nro_pagare) nro_pagare = auditEntry.detalles.nro_pagare;
+      if (Array.isArray(auditEntry.detalles.plan_cuotas)) plan_cuotas = auditEntry.detalles.plan_cuotas;
       if (auditEntry.detalles.total_pagado !== undefined) total_pagado = Number(auditEntry.detalles.total_pagado);
       if (auditEntry.detalles.total_deuda !== undefined) explicitDeuda = Number(auditEntry.detalles.total_deuda);
     }
@@ -113,11 +127,16 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
     profile_id: pag.profile_id,
     dni_ce: pag.dni_ce,
     num_credito,
+    nro_pagare,
+    nro_recibo,
+    nro_operacion,
+    comprobante,
     monto: montoTotal,
     metodo: pag.metodo && !pag.metodo.startsWith('CREDITO_') ? pag.metodo : 'Por Pagar',
     estado: total_deuda === 0 ? 'Completado' : (pag.estado || 'Pendiente'),
     created_at: pag.created_at,
     cuotas,
+    plan_cuotas,
     'cuota 01': cuotas[0],
     'cuota 02': cuotas[1],
     'cuota 03': cuotas[2],
@@ -172,16 +191,20 @@ export async function GET() {
       .select('*')
       .order('created_at', { ascending: false });
 
-    // Consultar notas_modulos y catálogo oficial para enriquecer notas e intentos de examen (diplomados, cursos y talleres)
-    const [{ data: notasModulosRows }, { data: catalogoRows }] = await Promise.all([
+    // Consultar notas_modulos, catálogo oficial y avatars en Supabase Storage
+    const [{ data: notasModulosRows }, { data: catalogoRows }, { data: avatarFolders }] = await Promise.all([
       admin
         .from('notas_modulos')
         .select('id, dni_ce, diplomado_numero, diplomado_nombre, tipo_programa, modulo_numero, modulo_nombre, nota, estado, updated_at')
         .order('updated_at', { ascending: false }),
       admin
         .from('diplomados_y_cursos')
-        .select('id, codigo, titulo, tipo')
+        .select('id, codigo, titulo, tipo'),
+      admin.storage.from('avatars').list().catch(() => ({ data: [] }))
     ]);
+
+    const avatarUserIds = new Set(((avatarFolders as any[]) || []).map((f: any) => f.name));
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://wluuomwkxywpfotbngwf.supabase.co';
 
     const notasPorDni = new Map<string, any[]>();
     (notasModulosRows || []).forEach((n: any) => {
@@ -220,11 +243,16 @@ export async function GET() {
           profile_id: p.id,
           dni_ce: p.dni_ce,
           num_credito: 1,
+          nro_pagare: undefined,
+          nro_recibo: undefined,
+          nro_operacion: undefined,
+          comprobante: undefined,
           monto: montoBase,
           metodo: 'Por Pagar',
           estado: 'Pendiente',
           created_at: new Date().toISOString(),
           cuotas: cuotasDefault,
+          plan_cuotas: null,
           'cuota 01': cuotasDefault[0],
           'cuota 02': cuotasDefault[1],
           'cuota 03': cuotasDefault[2],
@@ -406,6 +434,7 @@ export async function GET() {
         apellidos: p.apellidos,
         email: p.email,
         telefono: p.telefono || 'Sin teléfono',
+        foto_perfil: p.foto_perfil || p.avatar_url || (avatarUserIds.has(p.id) ? `${supabaseUrl}/storage/v1/object/public/avatars/${p.id}/avatar.jpg` : null),
         role: getPrimaryRoleFromProfile(p),
         roles: p.roles || null,
         paquete_adquirido: p.paquete_adquirido || 'FULL',

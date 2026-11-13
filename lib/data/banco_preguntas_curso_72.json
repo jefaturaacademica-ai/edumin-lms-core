@@ -301,7 +301,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "FACIL",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de las siguientes opciones corresponden a dimensiones de riesgo psicosocial en el entorno laboral? (Seleccione todas las que apliquen)",
+    "pregunta": "¿Cuáles de las siguientes opciones corresponden a dimensiones de riesgo psicosocial en el entorno laboral?",
     "opciones": [
       {
         "text": "Carga de trabajo excesiva y exigencias emocionales intensas.",
@@ -634,7 +634,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "FACIL",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de las siguientes condiciones son indispensables para que un Programa de Asistencia al Empleado (PAE) sea utilizado eficazmente por el personal? (Seleccione todas las que apliquen)",
+    "pregunta": "¿Cuáles de las siguientes condiciones son indispensables para que un Programa de Asistencia al Empleado (PAE) sea utilizado eficazmente por el personal?",
     "opciones": [
       {
         "text": "Garantía de confidencialidad 100% absoluta sin excepciones.",
@@ -856,7 +856,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "FACIL",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles son los componentes de la estructura básica para formular un 'Mensaje Yo' en la comunicación asertiva? (Seleccione todas las que apliquen)",
+    "pregunta": "¿Cuáles son los componentes de la estructura básica para formular un 'Mensaje Yo' en la comunicación asertiva?",
     "opciones": [
       {
         "text": "Expresar la emoción propia hablándo desde la primera persona ('Yo me siento...').",

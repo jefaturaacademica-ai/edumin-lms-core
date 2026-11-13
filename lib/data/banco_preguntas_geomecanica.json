@@ -1929,7 +1929,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Durante la caracterización geomecánica de probetas de roca intacta en el laboratorio, se ejecutan diversos ensayos mecánicos para parametrizar la matriz rocosa. ¿Cuáles de las siguientes afirmaciones respecto a la ejecución e interpretación de estos ensayos son correctas? (Seleccione todas las que apliquen)",
+    "pregunta": "Durante la caracterización geomecánica de probetas de roca intacta en el laboratorio, se ejecutan diversos ensayos mecánicos para parametrizar la matriz rocosa. ¿Cuáles de las siguientes afirmaciones respecto a la ejecución e interpretación de estos ensayos son correctas?",
     "opciones": [
       {
         "text": "El ensayo de tracción es altamente sensible a la presencia de microfisuras, rellenos y diaclasas preexistentes en la muestra.",
@@ -2003,7 +2003,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "En una mina subterránea que atraviesa una secuencia sedimentaria plegada de gran escala (megascópica), el área de geomecánica realiza el mapeo de la zona de charnela del pliegue. ¿Qué características estructurales y de comportamiento mecánico presenta esta zona de acuerdo con los fundamentos del curso? (Seleccione todas las que apliquen)",
+    "pregunta": "En una mina subterránea que atraviesa una secuencia sedimentaria plegada de gran escala (megascópica), el área de geomecánica realiza el mapeo de la zona de charnela del pliegue. ¿Qué características estructurales y de comportamiento mecánico presenta esta zona de acuerdo con los fundamentos del curso?",
     "opciones": [
       {
         "text": "Representa la zona de máxima curvatura de la estructura plegada donde convergen los flancos o limbos.",
@@ -2114,7 +2114,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "El departamento de geomecánica de una unidad minera evalúa el uso de métodos de medición in situ e instrumentación para parametrizar el campo de esfuerzos naturales e inducidos. ¿Cuáles de las siguientes afirmaciones sobre estas técnicas son correctas según el material del módulo? (Seleccione todas las que apliquen)",
+    "pregunta": "El departamento de geomecánica de una unidad minera evalúa el uso de métodos de medición in situ e instrumentación para parametrizar el campo de esfuerzos naturales e inducidos. ¿Cuáles de las siguientes afirmaciones sobre estas técnicas son correctas según el material del módulo?",
     "opciones": [
       {
         "text": "Las celdas de sobreperforación (*over-coring*) miden deformaciones de alivio y requieren conocer los módulos elásticos de la matriz rocosa para calcular los esfuerzos.",
@@ -2262,7 +2262,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "En el análisis de estabilidad de excavaciones en roca se emplea el criterio de rotura no lineal de Hoek-Brown. ¿Cuáles de las siguientes afirmaciones respecto a la formulación y aplicación práctica de este criterio son correctas? (Seleccione todas las que apliquen)",
+    "pregunta": "En el análisis de estabilidad de excavaciones en roca se emplea el criterio de rotura no lineal de Hoek-Brown. ¿Cuáles de las siguientes afirmaciones respecto a la formulación y aplicación práctica de este criterio son correctas?",
     "opciones": [
       {
         "text": "Permite estimar la resistencia del macizo rocoso correlacionando la resistencia uniaxial de la roca sana (\\sigma_{ci}) con el índice GSI (o GCI) y el factor de daño por voladura D.",
@@ -2336,7 +2336,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "En el contexto de excavaciones subterráneas profundas, el comportamiento inestable del macizo rocoso puede desencadenar mecanismos de falla frágil o deformacional. ¿Cuáles de las siguientes opciones describen correctamente estos fenómenos según el módulo? (Seleccione todas las que apliquen)",
+    "pregunta": "En el contexto de excavaciones subterráneas profundas, el comportamiento inestable del macizo rocoso puede desencadenar mecanismos de falla frágil o deformacional. ¿Cuáles de las siguientes opciones describen correctamente estos fenómenos según el módulo?",
     "opciones": [
       {
         "text": "El *spalling* se manifiesta como un desconchamiento y descamado progresivo en las paredes debido a la concentración de esfuerzos compresivos en rocas débiles o profundas.",
@@ -2447,7 +2447,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Al incorporar la línea de nivel freático dentro de un modelo geotécnico de estabilidad en el programa *Slide*, ¿cuáles de los siguientes efectos mecánicos ocurren en el cálculo del Factor de Seguridad de las superficies analizadas? (Seleccione todas las que apliquen)",
+    "pregunta": "Al incorporar la línea de nivel freático dentro de un modelo geotécnico de estabilidad en el programa *Slide*, ¿cuáles de los siguientes efectos mecánicos ocurren en el cálculo del Factor de Seguridad de las superficies analizadas?",
     "opciones": [
       {
         "text": "La presión de poros del agua (u) reduce directamente la fuerza normal efectiva en la base de la superficie de deslizamiento (F_N' = F_N - u).",
@@ -2595,7 +2595,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "En el diseño del sostenimiento subterráneo de una excavación en roca de calidad mala a regular, se combina el uso de refuerzo activo con soporte pasivo. ¿Cuáles de las siguientes opciones describen correctamente el comportamiento de estos elementos? (Seleccione todas las que apliquen)",
+    "pregunta": "En el diseño del sostenimiento subterráneo de una excavación en roca de calidad mala a regular, se combina el uso de refuerzo activo con soporte pasivo. ¿Cuáles de las siguientes opciones describen correctamente el comportamiento de estos elementos?",
     "opciones": [
       {
         "text": "Los pernos de roca pretensados o anclados actúan como refuerzo activo, confinando el macizo y aumentando la resistencia al corte en las discontinuidades.",
@@ -2706,7 +2706,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Durante la selección de sistemas de sostenimiento para excavaciones subterráneas se evalúan diversos tipos de pernos y métodos tradicionales. ¿Cuáles de las siguientes afirmaciones respecto a las características de estos sistemas son correctas? (Seleccione todas las que apliquen)",
+    "pregunta": "Durante la selección de sistemas de sostenimiento para excavaciones subterráneas se evalúan diversos tipos de pernos y métodos tradicionales. ¿Cuáles de las siguientes afirmaciones respecto a las características de estos sistemas son correctas?",
     "opciones": [
       {
         "text": "Los pernos mecánicos de expansión brindan un anclaje puntual e instalación rápida para soporte temporal, pero su efectividad disminuye en rocas blandas o muy fracturadas.",

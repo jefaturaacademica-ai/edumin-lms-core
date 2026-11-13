@@ -1,5 +1,62 @@
 import { NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase/admin';
+import { evaluarReglasCertificados, parseFechaCertificadoMs } from '@/lib/utils/credits';
+
+async function verificarHabilitacionCertificado(admin: ReturnType<typeof createAdminClient>, certData: any): Promise<boolean> {
+  if (certData.habilitado === false || certData.estado === 'Retenido_Deuda' || certData.estado === 'Anulado' || certData.estado_financiero_al_dia === false) {
+    return false;
+  }
+
+  const tipoUpper = String(certData.tipo || '').toUpperCase();
+  if (tipoUpper !== 'MODULAR' && tipoUpper !== 'DIPLOMA') {
+    return true;
+  }
+
+  if (!certData.dni_ce) return true;
+
+  try {
+    const { data: profile } = await admin
+      .from('profiles')
+      .select('id, dni_ce, bloqueado, cuotas_pagadas, cuotas_totales, tipo_pago')
+      .eq('dni_ce', certData.dni_ce)
+      .maybeSingle();
+
+    if (!profile) return true;
+    const reglas = evaluarReglasCertificados({
+      cuotasPagadas: profile.cuotas_pagadas,
+      cuotasTotales: profile.cuotas_totales,
+      tipoPago: profile.tipo_pago,
+    });
+    if (reglas.sinRestriccionPago) return true;
+
+    if (tipoUpper === 'DIPLOMA') {
+      return reglas.cuotasPagadas >= reglas.cuotasTotales;
+    }
+
+    // MODULAR: verificar posición cronológica frente al límite habilitado por cuota
+    const { data: modularesDni } = await admin
+      .from('certificaciones')
+      .select('codigo_verificacion, fecha_emision, created_at')
+      .eq('dni_ce', certData.dni_ce)
+      .eq('tipo', 'MODULAR');
+
+    if (Array.isArray(modularesDni) && modularesDni.length > 0) {
+      const ordenados = [...modularesDni].sort((a: any, b: any) => {
+        const msA = parseFechaCertificadoMs(a.created_at || a.fecha_emision) ?? 0;
+        const msB = parseFechaCertificadoMs(b.created_at || b.fecha_emision) ?? 0;
+        return msA - msB;
+      });
+      const rank = ordenados.findIndex((m: any) => m.codigo_verificacion === certData.codigo_verificacion);
+      if (rank >= 0) {
+        return rank < reglas.limiteModularesPorCuota;
+      }
+    }
+  } catch {
+    // Si falla la consulta auxiliar, respetar estado_financiero_al_dia ya validado arriba
+  }
+
+  return true;
+}
 
 export async function GET(
   request: Request,
@@ -77,23 +134,26 @@ export async function GET(
       };
     };
 
-    if (cert) {
-      const certificadoCompleto = await enriquecerCertificado(cert);
-      return NextResponse.json({
-        valido: true,
-        certificado: certificadoCompleto
-      });
-    }
-
-    // 2. Si no lo encuentra por código exacto, probar búsqueda insensible a mayúsculas
-    const { data: certList } = await admin
+    const certEncontrado = cert || (await admin
       .from('certificaciones')
       .select('*')
       .ilike('codigo_verificacion', `%${codigoNormalizado}%`)
-      .limit(1);
+      .limit(1)).data?.[0] || null;
 
-    if (certList && certList.length > 0) {
-      const certificadoCompleto = await enriquecerCertificado(certList[0]);
+    if (certEncontrado) {
+      const estaHabilitado = await verificarHabilitacionCertificado(admin, certEncontrado);
+      if (!estaHabilitado) {
+        return NextResponse.json(
+          {
+            valido: false,
+            bloqueado: true,
+            error: 'Este certificado aún se encuentra bloqueado por cuota pendiente y no ha sido habilitado oficialmente.'
+          },
+          { status: 403 }
+        );
+      }
+
+      const certificadoCompleto = await enriquecerCertificado(certEncontrado);
       return NextResponse.json({
         valido: true,
         certificado: certificadoCompleto

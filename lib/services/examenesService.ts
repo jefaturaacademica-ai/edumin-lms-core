@@ -189,41 +189,61 @@ export async function obtenerPreguntasBanco(filtros?: {
   try {
     const sb = getSupabaseClient();
     if (sb) {
-      let query = sb.from('banco_preguntas').select('*').order('created_at', { ascending: false }).limit(5000);
+      const pageSize = 1000;
+      const acumulado: PreguntaBanco[] = [];
+      let from = 0;
+      let queryError: any = null;
 
-      if (filtros?.codigoDiplomado && filtros.codigoDiplomado !== 'TODOS') {
-        query = query.eq('codigo_diplomado', filtros.codigoDiplomado);
-      } else if (filtros?.tipoPrograma === 'DIPLOMADOS') {
-        query = query.ilike('codigo_diplomado', 'DIP-%');
-      } else if (filtros?.tipoPrograma === 'CURSOS') {
-        query = query.ilike('codigo_diplomado', 'CUR-%');
-      } else if (filtros?.tipoPrograma === 'TALLERES') {
-        query = query.ilike('codigo_diplomado', 'TAL-%');
-      }
+      while (from < 20000) {
+        let query = sb
+          .from('banco_preguntas')
+          .select('*')
+          .order('created_at', { ascending: false })
+          .range(from, from + pageSize - 1);
 
-      if (filtros?.modulo && filtros.modulo !== 'TODOS') {
-        const modBusqueda = /examen\s+del\s+(curso|taller)/i.test(filtros.modulo)
-          ? filtros.modulo.trim()
-          : formatearCodigoModulo(filtros.modulo);
-        query = query.ilike('modulo', `%${modBusqueda}%`);
-      }
-      if (filtros?.dificultad && filtros.dificultad !== 'TODOS') {
-        query = query.eq('dificultad', filtros.dificultad);
-      }
-      if (filtros?.tipo && filtros.tipo !== 'TODOS') {
-        query = query.eq('tipo', filtros.tipo);
-      }
-      if (filtros?.soloActivas) {
-        query = query.eq('activo', true);
-      }
-
-      const { data, error } = await query;
-      if (!error && data && data.length > 0) {
-        if (filtros?.busqueda && filtros.busqueda.trim()) {
-          const term = filtros.busqueda.toLowerCase();
-          return data.filter(p => p.pregunta.toLowerCase().includes(term));
+        if (filtros?.codigoDiplomado && filtros.codigoDiplomado !== 'TODOS') {
+          query = query.eq('codigo_diplomado', filtros.codigoDiplomado);
+        } else if (filtros?.tipoPrograma === 'DIPLOMADOS') {
+          query = query.ilike('codigo_diplomado', 'DIP-%');
+        } else if (filtros?.tipoPrograma === 'CURSOS') {
+          query = query.ilike('codigo_diplomado', 'CUR-%');
+        } else if (filtros?.tipoPrograma === 'TALLERES') {
+          query = query.ilike('codigo_diplomado', 'TAL-%');
         }
-        return data;
+
+        if (filtros?.modulo && filtros.modulo !== 'TODOS') {
+          const modBusqueda = /examen\s+del\s+(curso|taller)/i.test(filtros.modulo)
+            ? filtros.modulo.trim()
+            : formatearCodigoModulo(filtros.modulo);
+          query = query.ilike('modulo', `%${modBusqueda}%`);
+        }
+        if (filtros?.dificultad && filtros.dificultad !== 'TODOS') {
+          query = query.eq('dificultad', filtros.dificultad);
+        }
+        if (filtros?.tipo && filtros.tipo !== 'TODOS') {
+          query = query.eq('tipo', filtros.tipo);
+        }
+        if (filtros?.soloActivas) {
+          query = query.eq('activo', true);
+        }
+        if (filtros?.busqueda && filtros.busqueda.trim()) {
+          query = query.ilike('pregunta', `%${filtros.busqueda.trim()}%`);
+        }
+
+        const { data, error } = await query;
+        if (error) {
+          queryError = error;
+          break;
+        }
+        if (!data || data.length === 0) break;
+
+        acumulado.push(...data);
+        if (data.length < pageSize) break;
+        from += pageSize;
+      }
+
+      if (!queryError && (acumulado.length > 0 || Boolean(filtros?.busqueda?.trim()))) {
+        return acumulado;
       }
     }
   } catch (e) {

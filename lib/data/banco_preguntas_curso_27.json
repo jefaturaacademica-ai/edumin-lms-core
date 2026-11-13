@@ -967,7 +967,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Dentro de la convergencia tecnológica de la Automatización 4.0, ¿cuáles de las siguientes tecnologías provienen del ámbito de IT pero potencian directamente la toma de decisiones en OT? (Seleccione todas las que apliquen)",
+    "pregunta": "Dentro de la convergencia tecnológica de la Automatización 4.0, ¿cuáles de las siguientes tecnologías provienen del ámbito de IT pero potencian directamente la toma de decisiones en OT?",
     "opciones": [
       {
         "text": "Analítica de datos masivos (Big Data y Data Science).",
@@ -1078,7 +1078,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "La implementación de soluciones de IIoT y analítica predictiva en equipos mineros de alto valor ofrece beneficios operativos directos. ¿Cuáles de los siguientes son ejemplos de dichos beneficios? (Seleccione todas las que apliquen)",
+    "pregunta": "La implementación de soluciones de IIoT y analítica predictiva en equipos mineros de alto valor ofrece beneficios operativos directos. ¿Cuáles de los siguientes son ejemplos de dichos beneficios?",
     "opciones": [
       {
         "text": "Reducción imprevista de paradas de planta mediante la detección temprana de desgaste en componentes críticos.",
@@ -1189,7 +1189,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Para el monitoreo de infraestructura crítica y la evaluación de riesgos geotécnicos en operaciones mineras, ¿qué soluciones robóticas y de teledetección se aplican activamente? (Seleccione todas las que apliquen)",
+    "pregunta": "Para el monitoreo de infraestructura crítica y la evaluación de riesgos geotécnicos en operaciones mineras, ¿qué soluciones robóticas y de teledetección se aplican activamente?",
     "opciones": [
       {
         "text": "Drones (VAV) equipados con sensores LiDAR para mapear la estabilidad de taludes en tajos abiertos.",
@@ -1263,7 +1263,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Al llevar a cabo proyectos de modernización hacia la Automatización 4.0 en plantas concentradoras existentes, las empresas enfrentan diversos retos técnicos. ¿Cuáles de los siguientes representan barreras habituales? (Seleccione todas las que apliquen)",
+    "pregunta": "Al llevar a cabo proyectos de modernización hacia la Automatización 4.0 en plantas concentradoras existentes, las empresas enfrentan diversos retos técnicos. ¿Cuáles de los siguientes representan barreras habituales?",
     "opciones": [
       {
         "text": "La dificultad de integrar sistemas heredados (equipos 'Legacy') que utilizan protocolos de comunicación obsoletos o propietarios.",
@@ -1374,7 +1374,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "La creación de centros unificados de teleoperación en grandes ciudades (como Lima o Arequipa) para minas ubicadas en la sierra o selva ofrece ventajas importantes. ¿Cuáles son algunas de ellas? (Seleccione todas las que apliquen)",
+    "pregunta": "La creación de centros unificados de teleoperación en grandes ciudades (como Lima o Arequipa) para minas ubicadas en la sierra o selva ofrece ventajas importantes. ¿Cuáles son algunas de ellas?",
     "opciones": [
       {
         "text": "Mejora las condiciones de seguridad y salud del personal al distanciarlo de condiciones climáticas y geográficas extremas.",
@@ -1448,7 +1448,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Qué ventajas técnicas fundamentales diferencian al estándar moderno OPC UA (Unified Architecture) del estándar clásico OPC DA (Data Access)? (Seleccione todas las que apliquen)",
+    "pregunta": "¿Qué ventajas técnicas fundamentales diferencian al estándar moderno OPC UA (Unified Architecture) del estándar clásico OPC DA (Data Access)?",
     "opciones": [
       {
         "text": "OPC UA es independiente del sistema operativo, permitiendo su implementación en Linux, Windows, Android o embebidos, superando la dependencia exclusiva de Windows (DCOM).",
@@ -1522,7 +1522,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "De acuerdo con las guías de buenas prácticas para el diseño de interfaces HMI en salas de control, ¿cómo se deben aplicar los colores en las pantallas? (Seleccione todas las que apliquen)",
+    "pregunta": "De acuerdo con las guías de buenas prácticas para el diseño de interfaces HMI en salas de control, ¿cómo se deben aplicar los colores en las pantallas?",
     "opciones": [
       {
         "text": "Utilizar fondos en tonos de gris neutro para reducir el cansancio visual durante jornadas prolongadas de monitoreo.",
@@ -1596,7 +1596,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Qué tendencias tecnológicas caracterizan la evolución moderna de las interfaces Hombre-Máquina (HMI) en el contexto 4.0? (Seleccione todas las que apliquen)",
+    "pregunta": "¿Qué tendencias tecnológicas caracterizan la evolución moderna de las interfaces Hombre-Máquina (HMI) en el contexto 4.0?",
     "opciones": [
       {
         "text": "Adopción de dispositivos móviles industriales (tablets) que permiten supervisar el proceso directamente en campo.",
@@ -1670,7 +1670,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Un controlador PID clásico combina tres acciones matemáticas sobre la señal de error. ¿Qué función específica aporta cada una de estas componentes? (Seleccione todas las que apliquen)",
+    "pregunta": "Un controlador PID clásico combina tres acciones matemáticas sobre la señal de error. ¿Qué función específica aporta cada una de estas componentes?",
     "opciones": [
       {
         "text": "La acción Proporcional (P) genera una respuesta de salida directamente proporcional a la magnitud del error presente.",
@@ -1744,7 +1744,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de las siguientes afirmaciones describen correctamente diferencias de arquitectura entre un PLC tradicional y un Sistema de Control Distribuido (DCS)? (Seleccione todas las que apliquen)",
+    "pregunta": "¿Cuáles de las siguientes afirmaciones describen correctamente diferencias de arquitectura entre un PLC tradicional y un Sistema de Control Distribuido (DCS)?",
     "opciones": [
       {
         "text": "Los PLC nacieron para el control discreto y de celdas específicas, mientras que los DCS se diseñaron desde el origen para controlar plantas de proceso continuo a gran escala.",
@@ -1818,7 +1818,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "En el marco del Control de Calidad automatizado en plantas de procesamiento de minerales, ¿qué herramientas de Control Estadístico de Procesos (SPC) se integran habitualmente en los sistemas informáticos? (Seleccione todas las que apliquen)",
+    "pregunta": "En el marco del Control de Calidad automatizado en plantas de procesamiento de minerales, ¿qué herramientas de Control Estadístico de Procesos (SPC) se integran habitualmente en los sistemas informáticos?",
     "opciones": [
       {
         "text": "Gráficos de Control de Proceso para verificar que las variables se mantengan dentro de los Límites de Control Superior e Inferior.",

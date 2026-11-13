@@ -116,7 +116,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "FACIL",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de las siguientes corresponden a etapas del flujo general del ecosistema Big Data? (Seleccione las opciones que apliquen)",
+    "pregunta": "¿Cuáles de las siguientes corresponden a etapas del flujo general del ecosistema Big Data?",
     "opciones": [
       {
         "text": "Captura o recolección de datos desde fuentes diversas.",
@@ -301,7 +301,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "FACIL",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de los siguientes forman parte de los tipos de aprendizaje automático en Inteligencia Artificial expuestos en el curso? (Seleccione las opciones que apliquen)",
+    "pregunta": "¿Cuáles de los siguientes forman parte de los tipos de aprendizaje automático en Inteligencia Artificial expuestos en el curso?",
     "opciones": [
       {
         "text": "Aprendizaje supervisado.",
@@ -412,7 +412,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "FACIL",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de las siguientes representan fuentes válidas de datos para el ecosistema de Big Data en minería? (Seleccione las opciones que apliquen)",
+    "pregunta": "¿Cuáles de las siguientes representan fuentes válidas de datos para el ecosistema de Big Data en minería?",
     "opciones": [
       {
         "text": "Sensores IoT de temperatura y vibración en maquinaria.",
@@ -560,7 +560,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "FACIL",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de las siguientes herramientas son utilizadas para la visualización de datos y creación de dashboards analíticos en minería? (Seleccione las opciones que apliquen)",
+    "pregunta": "¿Cuáles de las siguientes herramientas son utilizadas para la visualización de datos y creación de dashboards analíticos en minería?",
     "opciones": [
       {
         "text": "Power BI",
@@ -782,7 +782,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "FACIL",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de las siguientes sentencias forman parte del lenguaje de manipulación de datos (DML) en SQL? (Seleccione las opciones que apliquen)",
+    "pregunta": "¿Cuáles de las siguientes sentencias forman parte del lenguaje de manipulación de datos (DML) en SQL?",
     "opciones": [
       {
         "text": "INSERT",

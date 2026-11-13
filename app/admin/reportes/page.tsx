@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   CreditCard, ShieldCheck, Users, BookOpen, Settings, LogOut,
-  Activity, Download, FileSpreadsheet, DollarSign, TrendingUp, AlertTriangle, CheckCircle2, Server, RefreshCw
+  Activity, Download, FileSpreadsheet, Coins, TrendingUp, AlertTriangle, CheckCircle2, Server, RefreshCw
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 
@@ -148,7 +148,7 @@ export default function ReportesPage() {
               <div className="flex justify-between items-center">
                 <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Recaudación Registrada</p>
                 <div className="p-2.5 bg-emerald-50 text-emerald-600 rounded-2xl">
-                  <DollarSign className="size-5" />
+                  <Coins className="size-5" />
                 </div>
               </div>
               <h3 className="text-3xl font-black tabular-nums text-slate-900 mt-3">S/ {kpis.totalRecaudado.toFixed(2)}</h3>

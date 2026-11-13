@@ -425,10 +425,10 @@ export default function CursosPage() {
               {/* EN PROGRESO (ÍNDIGO AL ACTIVAR) */}
               <button
                 onClick={() => setFiltroEstadoMatriculados('progreso')}
-                className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer whitespace-nowrap shrink-0 ${
+                className={`px-4 py-2.5 rounded-2xl text-xs font-bold border transition-colors flex items-center gap-2 cursor-pointer whitespace-nowrap shrink-0 ${
                   filtroEstadoMatriculados === 'progreso'
-                    ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
-                    : (esOscuro ? 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200')
+                    ? 'bg-indigo-600 text-white border-transparent shadow-md shadow-indigo-600/20'
+                    : (esOscuro ? 'bg-slate-900 text-slate-400 border-slate-800 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100')
                 }`}
               >
                 <Clock className="w-3.5 h-3.5 shrink-0" />
@@ -445,10 +445,10 @@ export default function CursosPage() {
               {/* COMPLETADOS (ESMERALDA AL ACTIVAR) */}
               <button
                 onClick={() => setFiltroEstadoMatriculados('completados')}
-                className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer whitespace-nowrap shrink-0 ${
+                className={`px-4 py-2.5 rounded-2xl text-xs font-bold border transition-colors flex items-center gap-2 cursor-pointer whitespace-nowrap shrink-0 ${
                   filtroEstadoMatriculados === 'completados'
-                    ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
-                    : (esOscuro ? 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200')
+                    ? 'bg-emerald-600 text-white border-transparent shadow-md shadow-emerald-600/20'
+                    : (esOscuro ? 'bg-slate-900 text-slate-400 border-slate-800 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100')
                 }`}
               >
                 <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
@@ -465,10 +465,10 @@ export default function CursosPage() {
               {/* TODOS (SLATE/NEUTRO AL ACTIVAR) */}
               <button
                 onClick={() => setFiltroEstadoMatriculados('todos')}
-                className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer whitespace-nowrap shrink-0 ${
+                className={`px-4 py-2.5 rounded-2xl text-xs font-bold border transition-colors flex items-center gap-2 cursor-pointer whitespace-nowrap shrink-0 ${
                   filtroEstadoMatriculados === 'todos'
-                    ? 'bg-slate-800 text-white dark:bg-slate-700 shadow-md shadow-slate-900/20'
-                    : (esOscuro ? 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200')
+                    ? 'bg-slate-800 text-white dark:bg-slate-700 border-transparent shadow-md shadow-slate-900/20'
+                    : (esOscuro ? 'bg-slate-900 text-slate-400 border-slate-800 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100')
                 }`}
               >
                 <BookOpen className="w-3.5 h-3.5 shrink-0" />

@@ -1004,7 +1004,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de las siguientes afirmaciones representan características o algoritmos propios del aprendizaje NO supervisado? (Seleccione todas las que correspondan).",
+    "pregunta": "¿Cuáles de las siguientes afirmaciones representan características o algoritmos propios del aprendizaje NO supervisado?",
     "opciones": [
       {
         "text": "Opera con conjuntos de datos no etiquetados donde el modelo busca estructuras o patrones ocultos por asociación.",
@@ -1115,7 +1115,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "De acuerdo con lo expuesto sobre las aplicaciones del aprendizaje automático, ¿en qué escenarios se aplica el Machine Learning predictivo o de reconocimiento dentro del transporte y la minería? (Seleccione todas las que correspondan).",
+    "pregunta": "De acuerdo con lo expuesto sobre las aplicaciones del aprendizaje automático, ¿en qué escenarios se aplica el Machine Learning predictivo o de reconocimiento dentro del transporte y la minería?",
     "opciones": [
       {
         "text": "Predicciones en tiempo real a partir de datos captados por sensores en herramientas y perforadoras.",
@@ -1226,7 +1226,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de las siguientes tecnologías o marcos de trabajo están específicamente diseñados para el procesamiento de flujos de datos masivos en tiempo real (streaming)? (Seleccione todas las que correspondan).",
+    "pregunta": "¿Cuáles de las siguientes tecnologías o marcos de trabajo están específicamente diseñados para el procesamiento de flujos de datos masivos en tiempo real (streaming)?",
     "opciones": [
       {
         "text": "Apache Kafka.",
@@ -1300,7 +1300,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de las siguientes herramientas y bibliotecas se utilizan específicamente para la validación, limpieza y monitoreo de la calidad de los datos en entornos de Big Data y Machine Learning? (Seleccione todas las que correspondan).",
+    "pregunta": "¿Cuáles de las siguientes herramientas y bibliotecas se utilizan específicamente para la validación, limpieza y monitoreo de la calidad de los datos en entornos de Big Data y Machine Learning?",
     "opciones": [
       {
         "text": "Apache Griffin.",
@@ -1448,7 +1448,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Qué ventajas clave ofrece Apache Spark en comparación con el modelo MapReduce tradicional de Hadoop para el procesamiento de Big Data? (Seleccione todas las que correspondan).",
+    "pregunta": "¿Qué ventajas clave ofrece Apache Spark en comparación con el modelo MapReduce tradicional de Hadoop para el procesamiento de Big Data?",
     "opciones": [
       {
         "text": "Capacidad de realizar procesamiento de datos en memoria RAM, lo que acelera drásticamente las operaciones iterativas.",
@@ -1522,7 +1522,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Dentro de las herramientas para Machine Learning y Big Data en la nube de Google Cloud Platform (GCP), ¿cuáles de los siguientes componentes cumplen funciones clave en el almacenamiento, análisis o entrenamiento de modelos? (Seleccione todas las que correspondan).",
+    "pregunta": "Dentro de las herramientas para Machine Learning y Big Data en la nube de Google Cloud Platform (GCP), ¿cuáles de los siguientes componentes cumplen funciones clave en el almacenamiento, análisis o entrenamiento de modelos?",
     "opciones": [
       {
         "text": "BigQuery para el análisis masivo de datos y consultas SQL ultrarrápidas en la nube.",
@@ -1633,7 +1633,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles son las características fundamentales de la escalabilidad HORIZONTAL en entornos de Big Data y Machine Learning? (Seleccione todas las que correspondan).",
+    "pregunta": "¿Cuáles son las características fundamentales de la escalabilidad HORIZONTAL en entornos de Big Data y Machine Learning?",
     "opciones": [
       {
         "text": "Consiste en añadir más computadoras o nodos interconectados a un clúster para repartir el trabajo.",
@@ -1707,7 +1707,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Para garantizar un entorno seguro en la gestión de datos masivos y Machine Learning, ¿cuáles de los siguientes pilares de la seguridad de la información deben cumplirse rigurosamente? (Seleccione todas las que correspondan).",
+    "pregunta": "Para garantizar un entorno seguro en la gestión de datos masivos y Machine Learning, ¿cuáles de los siguientes pilares de la seguridad de la información deben cumplirse rigurosamente?",
     "opciones": [
       {
         "text": "Confidencialidad: garantizar que solo las personas o sistemas autorizados tengan acceso a la información.",
@@ -1781,7 +1781,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de las siguientes herramientas, estándares o lenguajes facilitan la INTEROPERABILIDAD y la integración fluida entre sistemas y plataformas heterogéneas? (Seleccione todas las que correspondan).",
+    "pregunta": "¿Cuáles de las siguientes herramientas, estándares o lenguajes facilitan la INTEROPERABILIDAD y la integración fluida entre sistemas y plataformas heterogéneas?",
     "opciones": [
       {
         "text": "Apache Kafka para el desacoplamiento y transmisión distribuida de mensajes entre distintas aplicaciones.",

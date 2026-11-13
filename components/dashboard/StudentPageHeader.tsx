@@ -6,7 +6,7 @@ import { LucideIcon } from 'lucide-react';
 interface StudentPageHeaderProps {
   icon: LucideIcon;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   iconClassName?: string;
   children?: React.ReactNode;
 }
@@ -27,9 +27,11 @@ export function StudentPageHeader({
           }`} />
           <span>{title}</span>
         </h1>
-        <p className="mt-2 text-xs sm:text-sm max-w-2xl leading-relaxed text-slate-500 dark:text-slate-400">
-          {subtitle}
-        </p>
+        {subtitle && (
+          <p className="mt-2 text-xs sm:text-sm max-w-2xl leading-relaxed text-slate-500 dark:text-slate-400">
+            {subtitle}
+          </p>
+        )}
       </div>
       {children && (
         <div className="flex items-center gap-3 shrink-0">

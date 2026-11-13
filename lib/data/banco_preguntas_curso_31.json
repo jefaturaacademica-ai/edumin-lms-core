@@ -116,7 +116,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "FACIL",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de los siguientes elementos forman parte de las fuentes de datos utilizadas en la arquitectura de una organización? (Seleccione todas las que correspondan)",
+    "pregunta": "¿Cuáles de los siguientes elementos forman parte de las fuentes de datos utilizadas en la arquitectura de una organización?",
     "opciones": [
       {
         "text": "Bases de datos transaccionales SQL y NoSQL.",
@@ -375,7 +375,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "FACIL",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de las siguientes representan buenas prácticas de seguridad de datos vistas en el curso? (Seleccione todas las que correspondan)",
+    "pregunta": "¿Cuáles de las siguientes representan buenas prácticas de seguridad de datos vistas en el curso?",
     "opciones": [
       {
         "text": "Cifrado de datos sensibles con algoritmos robustos.",
@@ -560,7 +560,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "FACIL",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles son beneficios de mantener la integridad de los datos en la gestión empresarial? (Seleccione todas las que correspondan)",
+    "pregunta": "¿Cuáles son beneficios de mantener la integridad de los datos en la gestión empresarial?",
     "opciones": [
       {
         "text": "Generación de reportes financieros exactos y confiables.",
@@ -782,7 +782,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "FACIL",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de las siguientes afirmaciones sobre las APIs (Application Programming Interfaces) son correctas? (Seleccione todas las que correspondan)",
+    "pregunta": "¿Cuáles de las siguientes afirmaciones sobre las APIs (Application Programming Interfaces) son correctas?",
     "opciones": [
       {
         "text": "Permiten que dos sistemas o aplicaciones distintas se comuniquen e intercambien datos.",

@@ -1004,7 +1004,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "En la gestión financiera del mantenimiento, ¿cuáles de las siguientes estrategias y técnicas permiten mitigar la incertidumbre y optimizar los costos operativos? (Seleccione todas las que correspondan)",
+    "pregunta": "En la gestión financiera del mantenimiento, ¿cuáles de las siguientes estrategias y técnicas permiten mitigar la incertidumbre y optimizar los costos operativos?",
     "opciones": [
       {
         "text": "Negociar acuerdos a largo plazo y contratos flexibles con proveedores solicitando descuentos por volumen.",
@@ -1115,7 +1115,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "En la elaboración del presupuesto de mantenimiento industrial, es crucial diferenciar los gastos de inversión (CAPEX) de los gastos operativos (OPEX). ¿Cuáles de las siguientes partidas corresponden correctamente a la categoría de OPEX? (Seleccione todas las que correspondan)",
+    "pregunta": "En la elaboración del presupuesto de mantenimiento industrial, es crucial diferenciar los gastos de inversión (CAPEX) de los gastos operativos (OPEX). ¿Cuáles de las siguientes partidas corresponden correctamente a la categoría de OPEX?",
     "opciones": [
       {
         "text": "Compra de lubricantes, aceites y grasas consumibles para las rutinas de mantenimiento preventivo.",
@@ -1300,7 +1300,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "En la implementación de un esquema de monitoreo continuo dentro del enfoque ABM, las frecuencias de revisión se establecen según el nivel táctico y operativo. ¿Cuáles de las siguientes combinaciones de frecuencia y alcance son correctas? (Seleccione todas las que correspondan)",
+    "pregunta": "En la implementación de un esquema de monitoreo continuo dentro del enfoque ABM, las frecuencias de revisión se establecen según el nivel táctico y operativo. ¿Cuáles de las siguientes combinaciones de frecuencia y alcance son correctas?",
     "opciones": [
       {
         "text": "Monitoreo diario enfocado en el seguimiento de actividades críticas e indicadores operativos inmediatos.",
@@ -1448,7 +1448,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Para asignar de forma rigurosa los recursos a las actividades en un esquema de costeo ABC en mantenimiento, la metodología recomienda apoyarse en tres herramientas operativas fundamentales. ¿Cuáles son estas herramientas? (Seleccione exactamente 3 opciones)",
+    "pregunta": "Para asignar de forma rigurosa los recursos a las actividades en un esquema de costeo ABC en mantenimiento, la metodología recomienda apoyarse en tres herramientas operativas fundamentales. ¿Cuáles son estas herramientas?",
     "opciones": [
       {
         "text": "Los diagramas de flujo de procesos.",
@@ -1559,7 +1559,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "El desarrollo de un modelo ABC en el taller de mantenimiento aporta información valiosa para decisiones estratégicas organizacionales. ¿En cuáles de los siguientes escenarios operacionales resulta ser una herramienta determinante? (Seleccione todas las que correspondan)",
+    "pregunta": "El desarrollo de un modelo ABC en el taller de mantenimiento aporta información valiosa para decisiones estratégicas organizacionales. ¿En cuáles de los siguientes escenarios operacionales resulta ser una herramienta determinante?",
     "opciones": [
       {
         "text": "Evaluación financiera para decidir entre ejecutar mantenimiento preventivo o asumir correctivos de emergencia.",
@@ -1707,7 +1707,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Las distintas tecnologías de monitoreo en CBM permiten diagnosticar modos de falla específicos. ¿Cuáles de las siguientes asociaciones entre técnica de monitoreo y su aplicación directa son correctas? (Seleccione todas las que correspondan)",
+    "pregunta": "Las distintas tecnologías de monitoreo en CBM permiten diagnosticar modos de falla específicos. ¿Cuáles de las siguientes asociaciones entre técnica de monitoreo y su aplicación directa son correctas?",
     "opciones": [
       {
         "text": "Termografía infrarroja para la localización de puntos calientes y conexiones sueltas en sistemas eléctricos.",
@@ -1818,7 +1818,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Al comparar la gestión de Mantenimiento Basado en la Condición (CBM) frente al Mantenimiento Preventivo Tradicional por calendario, ¿cuáles de las siguientes opciones representan ventajas operativas y financieras reales del CBM? (Seleccione todas las que correspondan)",
+    "pregunta": "Al comparar la gestión de Mantenimiento Basado en la Condición (CBM) frente al Mantenimiento Preventivo Tradicional por calendario, ¿cuáles de las siguientes opciones representan ventajas operativas y financieras reales del CBM?",
     "opciones": [
       {
         "text": "Maximizar la vida útil efectiva de las piezas al prevenir la sustitución prematura de componentes que aún se encuentran en buen estado.",

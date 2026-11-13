@@ -1041,7 +1041,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Qué impactos sistémicos y ambientales se desatan cuando el Drenaje Ácido de Roca (DAR) solubiliza metales pesados en una cuenca hídrica? (Seleccione todas las opciones que correspondan)",
+    "pregunta": "¿Qué impactos sistémicos y ambientales se desatan cuando el Drenaje Ácido de Roca (DAR) solubiliza metales pesados en una cuenca hídrica?",
     "opciones": [
       {
         "text": "Corrosión acelerada del concreto y acero presente en la infraestructura de puentes, canales y tuberías.",
@@ -1152,7 +1152,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles son exigencias técnicas y operativas clave introducidas por el Estándar Global de la Industria sobre Gestión de Relaves (GISTM)? (Seleccione todas las opciones que correspondan)",
+    "pregunta": "¿Cuáles son exigencias técnicas y operativas clave introducidas por el Estándar Global de la Industria sobre Gestión de Relaves (GISTM)?",
     "opciones": [
       {
         "text": "Nombramiento directo de un directivo de alto nivel corporativo como responsable final de la seguridad de las instalaciones de relaves.",
@@ -1300,7 +1300,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles son los tres análisis geotécnicos progresivos obligatorios para validar la seguridad física de una presa de relaves ante un evento sísmico? (Seleccione todas las opciones que correspondan)",
+    "pregunta": "¿Cuáles son los tres análisis geotécnicos progresivos obligatorios para validar la seguridad física de una presa de relaves ante un evento sísmico?",
     "opciones": [
       {
         "text": "Análisis estático para verificar la estabilidad de la estructura bajo la acción exclusiva de las cargas por peso propio.",
@@ -1411,7 +1411,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "De acuerdo con el paradigma actual expuesto para la minería en el Perú, ¿cuáles son los ejes estratégicos que definen la viabilidad operativa de un proyecto minero? (Seleccione todas las opciones que correspondan)",
+    "pregunta": "De acuerdo con el paradigma actual expuesto para la minería en el Perú, ¿cuáles son los ejes estratégicos que definen la viabilidad operativa de un proyecto minero?",
     "opciones": [
       {
         "text": "Alineamiento con el marco legal estricto, incluyendo leyes de cierre progresivo y constitución de garantías financieras reales.",
@@ -1522,7 +1522,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "En la biotecnología de rehabilitación mediante 'Tecnosuelos' aplicados a relaves (como en el proyecto Los Rosales), ¿cuáles son los roles principales que cumple la adición de biochar? (Seleccione todas las opciones que correspondan)",
+    "pregunta": "En la biotecnología de rehabilitación mediante 'Tecnosuelos' aplicados a relaves (como en el proyecto Los Rosales), ¿cuáles son los roles principales que cumple la adición de biochar?",
     "opciones": [
       {
         "text": "Elevar el pH del sustrato actuando como un neutralizante contra la acidez intrínseca.",
@@ -1633,7 +1633,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "En el caso de estudio de Antamina (cabecera de cuenca a más de 4300 m s.n.m.), ¿qué elementos garantizan la seguridad e integridad de la presa de relaves más alta del país? (Seleccione todas las opciones que correspondan)",
+    "pregunta": "En el caso de estudio de Antamina (cabecera de cuenca a más de 4300 m s.n.m.), ¿qué elementos garantizan la seguridad e integridad de la presa de relaves más alta del país?",
     "opciones": [
       {
         "text": "Implementación estricta y adopción integral del Estándar Global de la Industria sobre Gestión de Relaves (GISTM).",
@@ -1744,7 +1744,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Dentro del espectro de deshidratación de residuos mineros, ¿qué características diferencian a la tecnología de relaves en pasta respecto a la tecnología de relaves filtrados? (Seleccione todas las opciones que correspondan)",
+    "pregunta": "Dentro del espectro de deshidratación de residuos mineros, ¿qué características diferencian a la tecnología de relaves en pasta respecto a la tecnología de relaves filtrados?",
     "opciones": [
       {
         "text": "Los relaves en pasta se transportan mediante bombeo de alta presión en tuberías debido a su comportamiento de fluido no newtoniano (70%-80% sólidos).",

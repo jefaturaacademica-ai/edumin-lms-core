@@ -3779,7 +3779,7 @@
     "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "¿Qué ventajas operativas y estructurales obtiene una empresa que decide implementar un Sistema Integrado HSEQ partiendo de una certificación previa en ISO 9001? (Seleccione todas las que apliquen)",
+    "pregunta": "¿Qué ventajas operativas y estructurales obtiene una empresa que decide implementar un Sistema Integrado HSEQ partiendo de una certificación previa en ISO 9001?",
     "opciones": [
       {
         "text": "Cuenta con una base documentada transversal y un ciclo de mejora continua (PHVA) previamente establecido.",
@@ -3853,7 +3853,7 @@
     "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Una mediana empresa con 230 trabajadores opera con tres normas ISO implementadas por equipos independientes, lo que genera altos costos en consultorías externas y no conformidades repetidas. ¿Cuáles son los primeros pasos prácticos (*paso cero* y subsiguientes) recomendados para iniciar una integración efectiva? (Seleccione todas las que apliquen)",
+    "pregunta": "Una mediana empresa con 230 trabajadores opera con tres normas ISO implementadas por equipos independientes, lo que genera altos costos en consultorías externas y no conformidades repetidas. ¿Cuáles son los primeros pasos prácticos (*paso cero* y subsiguientes) recomendados para iniciar una integración efectiva?",
     "opciones": [
       {
         "text": "Asegurar el liderazgo y compromiso visible de la Alta Dirección como paso previo a cualquier cambio operativo.",
@@ -3964,7 +3964,7 @@
     "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "El responsable de un Sistema Integrado de Gestión desea convencer al Directorio para invertir en un software de gestión HSEQ que reemplace los archivos en Excel y formatos impresos. Según lo abordado en clase, ¿qué estrategias prácticas son efectivas para sustentar la inversión tecnológica? (Seleccione todas las que apliquen)",
+    "pregunta": "El responsable de un Sistema Integrado de Gestión desea convencer al Directorio para invertir en un software de gestión HSEQ que reemplace los archivos en Excel y formatos impresos. Según lo abordado en clase, ¿qué estrategias prácticas son efectivas para sustentar la inversión tecnológica?",
     "opciones": [
       {
         "text": "Realizar un diagnóstico previo para calcular el ahorro potencial en tiempo, reprocesos y horas-hombre dedicadas al control documental manual.",
@@ -4112,7 +4112,7 @@
     "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "En el análisis de los estilos de liderazgo aplicados al SIG HSEQ, un supervisor busca migrar de un estilo 'Operativo' hacia un estilo 'Transformacional'. ¿Qué acciones y enfoques caracterizan al Liderazgo Transformacional? (Seleccione todas las que apliquen)",
+    "pregunta": "En el análisis de los estilos de liderazgo aplicados al SIG HSEQ, un supervisor busca migrar de un estilo 'Operativo' hacia un estilo 'Transformacional'. ¿Qué acciones y enfoques caracterizan al Liderazgo Transformacional?",
     "opciones": [
       {
         "text": "Bajar a terreno para entender las desviaciones de proceso escuchando activamente a los trabajadores.",
@@ -4186,7 +4186,7 @@
     "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Al estructurar la Cláusula 6 (Planificación) dentro de un Sistema Integrado HSEQ, ¿qué diferencias y especificidades normativas deben considerarse al abordar la gestión de riesgos en las tres normas? (Seleccione todas las que apliquen)",
+    "pregunta": "Al estructurar la Cláusula 6 (Planificación) dentro de un Sistema Integrado HSEQ, ¿qué diferencias y especificidades normativas deben considerarse al abordar la gestión de riesgos en las tres normas?",
     "opciones": [
       {
         "text": "La ISO 9001 enfoca el riesgo de manera más general en los procesos y metas del negocio, mientras que la ISO 45001 exige la identificación formal de peligros y evaluación de riesgos (IPERC).",
@@ -4297,7 +4297,7 @@
     "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Un auditor interno detecta que en el área de operaciones circulan versiones impresas no controladas de un procedimiento de trabajo, las cuales no poseen historial de cambios y fueron firmadas únicamente por la misma persona que las elaboró (quien además las aprobó). ¿Qué reglas de control documentario y elaboración de procedimientos se han infringido? (Seleccione todas las que apliquen)",
+    "pregunta": "Un auditor interno detecta que en el área de operaciones circulan versiones impresas no controladas de un procedimiento de trabajo, las cuales no poseen historial de cambios y fueron firmadas únicamente por la misma persona que las elaboró (quien además las aprobó). ¿Qué reglas de control documentario y elaboración de procedimientos se han infringido?",
     "opciones": [
       {
         "text": "Violación del principio de imparcialidad y objetividad: quien elabora el procedimiento no debe ser la misma persona que lo aprueba.",
@@ -4408,7 +4408,7 @@
     "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Un equipo directivo se prepara para una auditoría de certificación de su Sistema Integrado. Para demostrar objetivamente el Liderazgo y Compromiso de la Alta Dirección (Cláusula 5) ante el auditor externo, ¿cuáles de las siguientes evidencias son totalmente válidas y verificables? (Seleccione todas las que apliquen)",
+    "pregunta": "Un equipo directivo se prepara para una auditoría de certificación de su Sistema Integrado. Para demostrar objetivamente el Liderazgo y Compromiso de la Alta Dirección (Cláusula 5) ante el auditor externo, ¿cuáles de las siguientes evidencias son totalmente válidas y verificables?",
     "opciones": [
       {
         "text": "Actas de reuniones trimestrales de dirección firmadas, donde se analicen indicadores HSEQ y se asignen recursos para la mejora.",
@@ -4445,7 +4445,7 @@
     "modulo": "MÓDULO 03",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Previo a afrontar un proceso de certificación, una empresa planifica su ciclo de auditorías. ¿Cuáles de las siguientes afirmaciones describen correctamente los tipos de auditoría, roles y reglas de ejecución según lo visto en clase? (Seleccione todas las que apliquen)",
+    "pregunta": "Previo a afrontar un proceso de certificación, una empresa planifica su ciclo de auditorías. ¿Cuáles de las siguientes afirmaciones describen correctamente los tipos de auditoría, roles y reglas de ejecución según lo visto en clase?",
     "opciones": [
       {
         "text": "La auditoría de primera parte es la auditoría interna ejecutada por la propia organización o por consultores contratados para evaluar su propio sistema.",

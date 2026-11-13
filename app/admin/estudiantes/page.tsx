@@ -5,7 +5,7 @@ import {
   Users, Search, RefreshCw, Eye, 
   CheckCircle2, AlertTriangle, UserCheck, GraduationCap, Download,
   UserPlus, Plus, Sparkles, BookOpen, CreditCard, AlertCircle, ArrowRight,
-  Check, Mail, Phone, Hash, DollarSign, Calendar
+  Check, Mail, Phone, Hash, Coins, Calendar
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import { useTabSlug } from '@/lib/hooks/useTabSlug';
@@ -261,19 +261,29 @@ export default function AdminEstudiantesPage() {
   const [reciboImprimir, setReciboImprimir] = useState<any | null>(null);
   const [mostrarEditarCronogramaModal, setMostrarEditarCronogramaModal] = useState<boolean>(false);
   const [editMontoTotal, setEditMontoTotal] = useState<number>(1500);
+  const [editNroPagare, setEditNroPagare] = useState<string>('');
   const [editCuotas6, setEditCuotas6] = useState<{ val: string }[]>(Array(6).fill({ val: 'no corresponde' }));
   const [enviandoAlertaWhatsApp, setEnviandoAlertaWhatsApp] = useState<boolean>(false);
 
-  const registrarPago = async (cuotaIdxParam?: number, cargoExtraParam?: { concepto: string; monto: number }) => {
+  const registrarPago = async (
+    cuotaIdxParam?: number, 
+    cargoExtraParam?: { concepto: string; monto: number },
+    datosExtraParam?: { nro_recibo?: string; nro_operacion?: string }
+  ) => {
     if (!alumnoSeleccionado) return;
     setCargandoPago(true);
     setMensaje(null);
     try {
+      const nroReciboFinal = datosExtraParam?.nro_recibo || comprobante;
+      const nroOperacionFinal = datosExtraParam?.nro_operacion || (metodo === 'Efectivo en Caja' ? 'N/A' : comprobante);
+
       const payload: any = {
         dni_ce: alumnoSeleccionado.dni_ce,
         monto: cargoExtraParam ? cargoExtraParam.monto : Number(montoPago),
         metodo: cargoExtraParam ? `Cargo Extra: ${cargoExtraParam.concepto}` : metodo,
-        comprobante: cargoExtraParam ? `CARGO-${Math.floor(100000 + Math.random() * 900000)}` : comprobante,
+        comprobante: cargoExtraParam ? `CARGO-${Math.floor(100000 + Math.random() * 900000)}` : nroReciboFinal,
+        nro_recibo: cargoExtraParam ? `REC-CARGO-${Math.floor(100000 + Math.random() * 900000)}` : nroReciboFinal,
+        nro_operacion: cargoExtraParam ? 'N/A' : nroOperacionFinal,
         pago_id: pagoIdParaValidar,
         descuento: Number(descuento)
       };
@@ -328,7 +338,7 @@ export default function AdminEstudiantesPage() {
         })
       });
 
-      const data = await res.json();
+      const data = await res.json().catch(() => ({}));
 
       if (res.ok) {
         setPagoParaAnular(null);
@@ -352,9 +362,11 @@ export default function AdminEstudiantesPage() {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          action: 'editar_cronograma',
           dni_ce: alumnoSeleccionado.dni_ce,
           pago_id: creditoActual?.id,
           num_credito: creditoActual?.num_credito || 1,
+          nro_pagare: editNroPagare,
           monto_total: editMontoTotal,
           cuotas: editCuotas6.map(c => c.val)
         })
@@ -568,11 +580,22 @@ export default function AdminEstudiantesPage() {
                               {est.dni_ce}
                             </td>
                             <td className="py-3 px-4">
-                              <div className="font-bold text-slate-900 dark:text-white">
-                                {est.nombres} {est.apellidos}
-                              </div>
-                              <div className="text-[11px] text-slate-400 font-normal">
-                                {est.email}
+                              <div className="flex items-center gap-2.5">
+                                <div className="size-8 rounded-full bg-gradient-to-tr from-indigo-500 via-indigo-600 to-cyan-400 text-white text-[11px] font-black flex items-center justify-center shrink-0 overflow-hidden ring-1 ring-slate-200 dark:ring-slate-700 select-none">
+                                  {est.foto_perfil ? (
+                                    <img src={est.foto_perfil} alt={est.nombres} className="w-full h-full object-cover rounded-full" />
+                                  ) : (
+                                    <span>{(est.nombres?.[0] || 'A').toUpperCase()}{(est.apellidos?.[0] || '').toUpperCase()}</span>
+                                  )}
+                                </div>
+                                <div className="min-w-0">
+                                  <div className="font-bold text-slate-900 dark:text-white truncate">
+                                    {est.nombres} {est.apellidos}
+                                  </div>
+                                  <div className="text-[11px] text-slate-400 font-normal truncate">
+                                    {est.email}
+                                  </div>
+                                </div>
                               </div>
                             </td>
                             <td className="py-3 px-4 max-w-[200px] truncate text-slate-700 dark:text-slate-300">
@@ -979,9 +1002,70 @@ export default function AdminEstudiantesPage() {
           onClose={() => setAlumnoSeleccionado(null)}
           onAbrirCronograma={(cred: any) => {
             if (cred) {
-              setEditMontoTotal(cred.monto_total || alumnoSeleccionado.monto_total_programa || 1500);
-              if (cred.cuotas_desglose && cred.cuotas_desglose.length > 0) {
-                setEditCuotas6(cred.cuotas_desglose.map((val: string) => ({ val })));
+              const totalMonto = Number(cred.monto || cred.monto_total || alumnoSeleccionado.monto_total_programa || 900);
+              setEditMontoTotal(totalMonto);
+              setEditNroPagare(cred.nro_pagare || ('2026-I-000' + (alumnoSeleccionado.dni_ce || '').substring(0, 4)));
+
+              // Priorizar plan_cuotas si ya fue guardado previamente, de lo contrario cuotas / cuotas_desglose
+              const rawPlan = Array.isArray(cred.plan_cuotas) && cred.plan_cuotas.length > 0 ? cred.plan_cuotas : null;
+              const rawCuotas = Array.isArray(cred.cuotas) && cred.cuotas.length > 0 
+                ? cred.cuotas 
+                : (Array.isArray(cred.cuotas_desglose) && cred.cuotas_desglose.length > 0 ? cred.cuotas_desglose : null);
+
+              const fuenteCuotas = rawPlan || rawCuotas;
+
+              if (fuenteCuotas) {
+                const indicesCorresponden: number[] = [];
+                fuenteCuotas.forEach((c: any, i: number) => {
+                  if (c !== 'no corresponde' && i < 6) indicesCorresponden.push(i);
+                });
+
+                // Si todos vinieron como "no corresponde", inferir cuotas reales o sugerir 2 cuotas
+                if (indicesCorresponden.length === 0) {
+                  indicesCorresponden.push(0, 1);
+                }
+
+                const numCuotas = Math.max(1, indicesCorresponden.length);
+                const cuotaPromedio = Math.round(totalMonto / numCuotas);
+
+                const arr = Array(6).fill(null).map((_, i) => {
+                  if (!indicesCorresponden.includes(i)) {
+                    return { val: 'no corresponde' };
+                  }
+                  const rawVal = fuenteCuotas ? fuenteCuotas[i] : null;
+                  const numVal = Number(rawVal) || 0;
+                  // Si no hay plan previo y la cuota está en 0 (pendiente de pago), sugerir el desglose
+                  if ((!rawVal || rawVal === 'no corresponde' || numVal === 0) && !rawPlan) {
+                    if (i === 0 && Number(cred.total_pagado || 0) > 0) {
+                      return { val: String(cred.total_pagado) };
+                    }
+                    if (i === 1 && Number(cred.total_pagado || 0) > 0 && totalMonto > Number(cred.total_pagado || 0)) {
+                      return { val: String(totalMonto - Number(cred.total_pagado)) };
+                    }
+                    return { val: String(cuotaPromedio) };
+                  }
+                  return { val: String(rawVal) };
+                });
+
+                // Si la suma no cuadra con totalMonto (ej. por redondeos o cuota pendiente ajustada), ajustar la última cuota activa
+                let sumaActual = arr.reduce((acc, it) => it.val !== 'no corresponde' ? acc + (Number(it.val) || 0) : acc, 0);
+                const diferencia = totalMonto - sumaActual;
+                if (diferencia !== 0 && indicesCorresponden.length > 0) {
+                  const lastIdx = indicesCorresponden[indicesCorresponden.length - 1];
+                  const lastVal = Number(arr[lastIdx].val) || 0;
+                  arr[lastIdx] = { val: String(Math.max(0, lastVal + diferencia)) };
+                }
+
+                setEditCuotas6(arr);
+              } else {
+                setEditCuotas6([
+                  { val: String(totalMonto) },
+                  { val: 'no corresponde' },
+                  { val: 'no corresponde' },
+                  { val: 'no corresponde' },
+                  { val: 'no corresponde' },
+                  { val: 'no corresponde' }
+                ]);
               }
             }
             setMostrarEditarCronogramaModal(true);
@@ -1029,6 +1113,8 @@ export default function AdminEstudiantesPage() {
         selectedCreditoIdx={selectedCreditoIdx}
         editMontoTotal={editMontoTotal}
         setEditMontoTotal={setEditMontoTotal}
+        editNroPagare={editNroPagare}
+        setEditNroPagare={setEditNroPagare}
         editCuotas6={editCuotas6}
         setEditCuotas6={setEditCuotas6}
         onClose={() => setMostrarEditarCronogramaModal(false)}

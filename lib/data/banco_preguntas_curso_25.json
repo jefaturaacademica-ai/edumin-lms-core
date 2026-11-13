@@ -1041,7 +1041,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de las siguientes aplicaciones corresponden a casos reales de uso del Internet de las Cosas (IoT) en la gestión de operaciones mineras? (Seleccione todas las que correspondan)",
+    "pregunta": "¿Cuáles de las siguientes aplicaciones corresponden a casos reales de uso del Internet de las Cosas (IoT) en la gestión de operaciones mineras?",
     "opciones": [
       {
         "text": "Monitoreo remoto en tiempo real del kilometraje y estado mecánico de maquinaria pesada.",
@@ -1226,7 +1226,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Qué metodologías o herramientas cuantitativas se emplean en la evaluación de riesgos financieros y logísticos para la toma de decisiones en la minería 4.0? (Seleccione todas las que correspondan)",
+    "pregunta": "¿Qué metodologías o herramientas cuantitativas se emplean en la evaluación de riesgos financieros y logísticos para la toma de decisiones en la minería 4.0?",
     "opciones": [
       {
         "text": "Simulación de Montecarlo para predecir variaciones de demanda e inventario.",
@@ -1374,7 +1374,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿Cuáles de las siguientes constituyen medidas efectivas de mitigación de riesgos de ciberseguridad en la infraestructura de la minería 4.0? (Seleccione todas las que correspondan)",
+    "pregunta": "¿Cuáles de las siguientes constituyen medidas efectivas de mitigación de riesgos de ciberseguridad en la infraestructura de la minería 4.0?",
     "opciones": [
       {
         "text": "Implementación de autenticación multifactor (MFA) y gestión estricta de accesos.",
@@ -1485,7 +1485,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "En un sistema de instrumentación y monitoreo minero 4.0, ¿cuáles de las siguientes afirmaciones sobre los sensores inteligentes son correctas? (Seleccione todas las que correspondan)",
+    "pregunta": "En un sistema de instrumentación y monitoreo minero 4.0, ¿cuáles de las siguientes afirmaciones sobre los sensores inteligentes son correctas?",
     "opciones": [
       {
         "text": "Absorben variables físicas del entorno (como humedad, temperatura o presión) y las convierten en señales eléctricas medibles.",
@@ -1596,7 +1596,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "¿De qué manera la visión por computadora (procesamiento de imágenes con IA) contribuye al control de procesos y la seguridad en minería? (Seleccione todas las que correspondan)",
+    "pregunta": "¿De qué manera la visión por computadora (procesamiento de imágenes con IA) contribuye al control de procesos y la seguridad en minería?",
     "opciones": [
       {
         "text": "Detección automática de material o roca no deseada en fajas transportadoras mediante cámaras entrenadas.",
@@ -1744,7 +1744,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "De acuerdo con el caso práctico de mantenimiento en camiones de acarreo (como el analizado en la minera Cerro Verde), ¿cuáles son beneficios directos del uso de Machine Learning y sensores integrados? (Seleccione todas las que correspondan)",
+    "pregunta": "De acuerdo con el caso práctico de mantenimiento en camiones de acarreo (como el analizado en la minera Cerro Verde), ¿cuáles son beneficios directos del uso de Machine Learning y sensores integrados?",
     "opciones": [
       {
         "text": "Reducción aproximada del 20% en los costos de mantenimiento correctivo al predecir averías imprevistas.",
@@ -1818,7 +1818,7 @@
     "modulo": "Examen del Curso",
     "dificultad": "MEDIO",
     "tipo": "multiple_select",
-    "pregunta": "Al configurar las 'Instrucciones Personalizadas' (Custom Instructions) en un modelo de lenguaje para la gestión minera, ¿qué parámetros es recomendable especificar para asegurar un alto rigor técnico? (Seleccione todas las que correspondan)",
+    "pregunta": "Al configurar las 'Instrucciones Personalizadas' (Custom Instructions) en un modelo de lenguaje para la gestión minera, ¿qué parámetros es recomendable especificar para asegurar un alto rigor técnico?",
     "opciones": [
       {
         "text": "El rol profesional del usuario y su área de especialización (ej. Ingeniero de Minas, Jefe de Seguridad o Analista de Datos).",

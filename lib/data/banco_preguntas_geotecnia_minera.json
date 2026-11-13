@@ -42,7 +42,7 @@
     "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Un consultor presenta un informe técnico para la certificación de un proyecto minero a cielo abierto. Al auditar la sección de modelamiento geotécnico, ¿qué criterios permiten distinguir la validez de un modelo con sustento físico-matemático frente a uno puramente empírico? (Seleccione todas las opciones que apliquen)",
+    "pregunta": "Un consultor presenta un informe técnico para la certificación de un proyecto minero a cielo abierto. Al auditar la sección de modelamiento geotécnico, ¿qué criterios permiten distinguir la validez de un modelo con sustento físico-matemático frente a uno puramente empírico?",
     "opciones": [
       {
         "text": "Los modelos físico-matemáticos se fundamentan en leyes constitutivas y ecuaciones de conservación, mientras que los empíricos extrapolan relaciones observadas de bases de datos.",
@@ -153,7 +153,7 @@
     "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Un ingeniero geotécnico evalúa el grado de compactación de un depósito de relaves utilizando la Densidad Relativa (D_n o D_r). ¿Qué principios mecánicos y operacionales son correctos en esta evaluación? (Seleccione todas las opciones que apliquen)",
+    "pregunta": "Un ingeniero geotécnico evalúa el grado de compactación de un depósito de relaves utilizando la Densidad Relativa (D_n o D_r). ¿Qué principios mecánicos y operacionales son correctos en esta evaluación?",
     "opciones": [
       {
         "text": "La densidad relativa relaciona la relación de vacíos in situ (e) con las relaciones de vacíos en sus estados más suelto (e_{max}) y más denso (e_{min}).",
@@ -264,7 +264,7 @@
     "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Al caracterizar una muestra de suelo de cobertura para la cimentación de una infraestructura minera, el tamizado arroja un pasante por la malla N° 200 (P₂₀₀) del 62%. ¿Qué deducciones e implicaciones geotécnicas son correctas? (Seleccione todas las opciones que apliquen)",
+    "pregunta": "Al caracterizar una muestra de suelo de cobertura para la cimentación de una infraestructura minera, el tamizado arroja un pasante por la malla N° 200 (P₂₀₀) del 62%. ¿Qué deducciones e implicaciones geotécnicas son correctas?",
     "opciones": [
       {
         "text": "El suelo se clasifica como fino bajo los criterios P200 (pasante > 50%), indicando que su respuesta mecánica estará dominada por cohesión y plasticidad.",
@@ -375,7 +375,7 @@
     "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "En el programa de ensayos de laboratorio para determinar las propiedades mecánicas de especímenes de roca intacta, se ejecutan pruebas de compresión uniaxial y tracción indirecta. ¿Qué condiciones procedimentales y normativas (ASTM/ISRM) deben garantizarse? (Seleccione todas las opciones que apliquen)",
+    "pregunta": "En el programa de ensayos de laboratorio para determinar las propiedades mecánicas de especímenes de roca intacta, se ejecutan pruebas de compresión uniaxial y tracción indirecta. ¿Qué condiciones procedimentales y normativas (ASTM/ISRM) deben garantizarse?",
     "opciones": [
       {
         "text": "En el ensayo de tracción indirecta (método brasileño), la relación longitud/diámetro (L/D) típica del disco de prueba debe ser cercana a 0.5.",
@@ -486,7 +486,7 @@
     "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Durante un programa de investigaciones geotécnicas in situ mediante ensayos de Penetración Estándar (SPT) y Penetración de Cono (CPT), se recolectan datos para caracterizar una cimentación. ¿Qué criterios de interpretación son tónicamente válidos? (Seleccione todas las opciones que apliquen)",
+    "pregunta": "Durante un programa de investigaciones geotécnicas in situ mediante ensayos de Penetración Estándar (SPT) y Penetración de Cono (CPT), se recolectan datos para caracterizar una cimentación. ¿Qué criterios de interpretación son tónicamente válidos?",
     "opciones": [
       {
         "text": "El valor de golpes N del SPT debe normalizarse (N₆₀) considerando la eficiencia energética del sistema y la presión de sobrecapa para aplicar correlaciones de densidad relativa.",
@@ -597,7 +597,7 @@
     "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Un equipo de diseño geotécnico analiza herramientas de software (Slide, Plaxis, RS3, Geo5) para modelar la estabilidad de un tajo y una galería subterránea. ¿Qué capacidades y limitaciones técnicas son correctas? (Seleccione todas las opciones que apliquen)",
+    "pregunta": "Un equipo de diseño geotécnico analiza herramientas de software (Slide, Plaxis, RS3, Geo5) para modelar la estabilidad de un tajo y una galería subterránea. ¿Qué capacidades y limitaciones técnicas son correctas?",
     "opciones": [
       {
         "text": "Programas como Plaxis 3D y RS3 emplean elementos finitos, permitiendo simular deformaciones, esfuerzos no lineales y fases constructivas.",
@@ -708,7 +708,7 @@
     "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "La permeabilidad secundaria en macizos rocosos fracturados gobierna el flujo del agua subterránea a través de las discontinuidades. Según las formulaciones hidráulicas básicas (K_f \\propto \\frac{A³}{U_f}), ¿qué factores incrementan críticamente el flujo de agua y la inestabilidad? (Seleccione todas las opciones que apliquen)",
+    "pregunta": "La permeabilidad secundaria en macizos rocosos fracturados gobierna el flujo del agua subterránea a través de las discontinuidades. Según las formulaciones hidráulicas básicas (K_f \\propto \\frac{A³}{U_f}), ¿qué factores incrementan críticamente el flujo de agua y la inestabilidad?",
     "opciones": [
       {
         "text": "La abertura de la discontinuidad (A), dado que la permeabilidad de la junta es proporcional al cubo de su abertura.",
@@ -819,7 +819,7 @@
     "modulo": "MÓDULO 01",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Para estimar la calidad geomecánica de un macizo rocoso en campo se utiliza frecuentemente la relación empírica RQD = 110 - 2.5 J_b, donde J_b es el número de juntas por metro cúbico. ¿Qué limitaciones y consideraciones críticas aplican a esta fórmula? (Seleccione todas las opciones que apliquen)",
+    "pregunta": "Para estimar la calidad geomecánica de un macizo rocoso en campo se utiliza frecuentemente la relación empírica RQD = 110 - 2.5 J_b, donde J_b es el número de juntas por metro cúbico. ¿Qué limitaciones y consideraciones críticas aplican a esta fórmula?",
     "opciones": [
       {
         "text": "Es una ecuación empírica aproximada cuya validez matemática está acotada a rangos específicos de J_b (típicamente entre 4 y 44).",

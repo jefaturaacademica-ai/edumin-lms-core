@@ -1892,7 +1892,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Una planta industrial genera parihuelas de madera usadas y recortes metálicos aprovechables que desea gestionar como 'material de descarte' para evitar que califiquen como residuos sólidos. ¿Cuáles de las siguientes condiciones son requisitos legales y técnicos para validar esta condición? (Seleccione todas las que correspondan)",
+    "pregunta": "Una planta industrial genera parihuelas de madera usadas y recortes metálicos aprovechables que desea gestionar como 'material de descarte' para evitar que califiquen como residuos sólidos. ¿Cuáles de las siguientes condiciones son requisitos legales y técnicos para validar esta condición?",
     "opciones": [
       {
         "text": "El material debe dirigirse directamente de la actividad generadora a otra actividad productiva sin ser considerado previamente como residuo.",
@@ -2003,7 +2003,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Una empresa industrial está diseñando su Almacén Central de Residuos Peligrosos. Según el Decreto Supremo 014-2017-MINAM (Artículos 51 y 52), ¿cuáles de los siguientes requisitos técnicos y administrativos son de cumplimiento obligatorio? (Seleccione todas las que correspondan)",
+    "pregunta": "Una empresa industrial está diseñando su Almacén Central de Residuos Peligrosos. Según el Decreto Supremo 014-2017-MINAM (Artículos 51 y 52), ¿cuáles de los siguientes requisitos técnicos y administrativos son de cumplimiento obligatorio?",
     "opciones": [
       {
         "text": "Contar con piso de concreto impermeabilizado, techo de protección climática y sistema de contención perimetral (muro/bordillo de 30–40 cm).",
@@ -2114,7 +2114,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Una unidad minera procesa 1,400 t/día de mineral con un consumo de agua de proceso de 1.5 m³/t. Desea evaluar su huella hídrica y aplicar estrategias de optimización. ¿Cuáles de las siguientes afirmaciones son correctas según la metodología de balance y normativa peruana? (Seleccione todas las que correspondan)",
+    "pregunta": "Una unidad minera procesa 1,400 t/día de mineral con un consumo de agua de proceso de 1.5 m³/t. Desea evaluar su huella hídrica y aplicar estrategias de optimización. ¿Cuáles de las siguientes afirmaciones son correctas según la metodología de balance y normativa peruana?",
     "opciones": [
       {
         "text": "La huella hídrica azul representa el volumen de agua dulce consumida (extracción de fuentes superficiales o subterráneas sin retorno).",
@@ -2225,7 +2225,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Se requiere tratar un caudal de 108 m³/h de Drenaje Ácido de Mina (DAM) mediante neutralización activa y refino biológico. ¿Cuáles de las siguientes operaciones unitarias y fenómenos ocurren en este sistema de tratamiento? (Seleccione todas las que correspondan)",
+    "pregunta": "Se requiere tratar un caudal de 108 m³/h de Drenaje Ácido de Mina (DAM) mediante neutralización activa y refino biológico. ¿Cuáles de las siguientes operaciones unitarias y fenómenos ocurren en este sistema de tratamiento?",
     "opciones": [
       {
         "text": "La adición de lechada de cal viva aumenta el pH a valores alcalinos (8–9), provocando la precipitación de metales pesados como hidróxidos metálicos insolubles.",
@@ -2336,7 +2336,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Una zona industrial con alta circulación de camiones diésel y procesos de combustión presenta elevadas emisiones de NO₂ e hidrocarburos no quemados. ¿Cuáles de las siguientes afirmaciones explican los procesos fotoquímicos y consecuencias ambientales asociadas? (Seleccione todas las que correspondan)",
+    "pregunta": "Una zona industrial con alta circulación de camiones diésel y procesos de combustión presenta elevadas emisiones de NO₂ e hidrocarburos no quemados. ¿Cuáles de las siguientes afirmaciones explican los procesos fotoquímicos y consecuencias ambientales asociadas?",
     "opciones": [
       {
         "text": "La radiación solar fotoliza el NO₂ liberando oxígeno atómico (O), el cual reacciona con el O₂ atmosférico para formar ozono troposférico (O₃).",
@@ -2447,7 +2447,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "En un sistema de control de emisiones de un proceso industrial que genera alto contenido de material particulado y gases calientes, se evalúa la secuencia de equipos de limpieza. ¿Cuáles de los siguientes principios de selección y operación son correctos? (Seleccione todas las que correspondan)",
+    "pregunta": "En un sistema de control de emisiones de un proceso industrial que genera alto contenido de material particulado y gases calientes, se evalúa la secuencia de equipos de limpieza. ¿Cuáles de los siguientes principios de selección y operación son correctos?",
     "opciones": [
       {
         "text": "Los ciclones actúan como separadores inerciales previos para remover partículas gruesas y proteger los filtros de mangas posteriores.",
@@ -2558,7 +2558,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Un titular minero diseña el Plan de Cierre para un depósito de desmonte potencialmente generador de acidez (PAG). ¿Cuáles de las siguientes medidas técnicas atienden los tres pilares de estabilidad (física, química e hidrológica)? (Seleccione todas las que correspondan)",
+    "pregunta": "Un titular minero diseña el Plan de Cierre para un depósito de desmonte potencialmente generador de acidez (PAG). ¿Cuáles de las siguientes medidas técnicas atienden los tres pilares de estabilidad (física, química e hidrológica)?",
     "opciones": [
       {
         "text": "Estabilidad Física: Reperfilado de taludes a pendientes seguras (relación 1.5–2H:1V) para prevenir derrumbes y deslizamientos de masa.",
@@ -2669,7 +2669,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Durante la fiscalización de un pad de lixiviación en proceso de cierre, el supervisor detecta que las termofusiones de la geomembrana de cobertura están despegadas en varios tramos y expuestas a la radiación solar directa. ¿Cuáles son las consecuencias técnicas y responsabilidades asociadas? (Seleccione todas las que correspondan)",
+    "pregunta": "Durante la fiscalización de un pad de lixiviación en proceso de cierre, el supervisor detecta que las termofusiones de la geomembrana de cobertura están despegadas en varios tramos y expuestas a la radiación solar directa. ¿Cuáles son las consecuencias técnicas y responsabilidades asociadas?",
     "opciones": [
       {
         "text": "La falla en las soldaduras permite la percolación de agua de lluvia, generando lixiviados contaminantes que vulneran la estabilidad química del componente.",
@@ -2743,7 +2743,7 @@
     "modulo": "MÓDULO 02",
     "dificultad": "ALTO",
     "tipo": "multiple_select",
-    "pregunta": "Una unidad minera ha concluido las obras físicas de cierre de sus desmonteras y pasa a la etapa de poscierre. ¿Cuáles de los siguientes parámetros, plazos y actividades corresponden al monitoreo y mantenimiento obligatorio en esta etapa final? (Seleccione todas las que correspondan)",
+    "pregunta": "Una unidad minera ha concluido las obras físicas de cierre de sus desmonteras y pasa a la etapa de poscierre. ¿Cuáles de los siguientes parámetros, plazos y actividades corresponden al monitoreo y mantenimiento obligatorio en esta etapa final?",
     "opciones": [
       {
         "text": "El monitoreo de poscierre se ejecuta por un periodo mínimo intensivo de 5 años, pudiendo ser ampliado por la autoridad si persisten riesgos ambientales.",

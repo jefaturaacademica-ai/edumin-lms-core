@@ -337,10 +337,16 @@ export async function POST(request: Request) {
               .eq('modulo_titulo', moduloNombreFinal)
               .maybeSingle();
 
+            const disMod = modeloMod?.disenoCoordenadas;
+            const creditosMod = disMod?.creditos?.visible === true
+              ? `${String(disMod?.creditos?.creditosValor || modeloMod?.creditos || '4').match(/\d+/)?.[0] || '4'} ${String(disMod?.creditos?.sufijo ?? disMod?.creditos?.sufijoCreditos ?? '').trim() || 'créditos académicos'}`
+              : null;
+
             const snapshotModular = {
               modelo_id: modeloMod?.id || 'mod-avanza-mod',
               nombrePlantilla: modeloMod?.nombre || 'Superplantilla Oficial Avanza & EDUMIN - Certificado Modular',
               horas: modItem.horas || modeloMod?.horas || '108 horas académicas',
+              ...(creditosMod ? { creditos: creditosMod } : {}),
               ciudad: 'Arequipa',
               orientacion: modeloMod?.orientacion || 'horizontal',
               imagenFondoUrl: modeloMod?.imagenFondoUrl || '/assets/certificates/plantilla_avanza_modular_bg.png',
@@ -354,29 +360,33 @@ export async function POST(request: Request) {
               await admin
                 .from('certificaciones')
                 .update({
-                  nota_final: typeof modItem.nota === 'number' && modItem.nota > 0 ? modItem.nota : null,
+                  nota_final: typeof modItem.nota === 'number' && modItem.nota > 0 ? Math.round(modItem.nota) : null,
                   fecha_emision: fechaEmisionHoy,
                   estado_financiero_al_dia: !profile.bloqueado,
                   ...(!tieneSnapshotCompleto ? { plantilla_snapshot: snapshotModular } : {})
                 })
                 .eq('id', certModExistente.id);
             } else {
-              await admin
-                .from('certificaciones')
-                .insert({
-                  codigo_verificacion: codVerifModular,
-                  profile_id: profile.id,
-                  dni_ce: profile.dni_ce,
-                  estudiante_nombre: nombreEstudianteOficial,
-                  tipo: 'MODULAR',
-                  programa_titulo: targetDip.titulo,
-                  modulo_titulo: moduloNombreFinal,
-                  horas_lectivas: modItem.horas || modeloMod?.horas || '108 horas académicas',
-                  nota_final: typeof modItem.nota === 'number' && modItem.nota > 0 ? modItem.nota : null,
-                  fecha_emision: fechaEmisionHoy,
-                  estado_financiero_al_dia: !profile.bloqueado,
-                  plantilla_snapshot: snapshotModular
-                });
+              const payloadMod = {
+                codigo_verificacion: codVerifModular,
+                profile_id: profile.id,
+                dni_ce: profile.dni_ce,
+                estudiante_nombre: nombreEstudianteOficial,
+                tipo: 'MODULAR',
+                programa_titulo: targetDip.titulo,
+                modulo_titulo: moduloNombreFinal,
+                horas_lectivas: modItem.horas || modeloMod?.horas || '108 horas académicas',
+                creditos: creditosMod,
+                nota_final: typeof modItem.nota === 'number' && modItem.nota > 0 ? Math.round(modItem.nota) : null,
+                fecha_emision: fechaEmisionHoy,
+                estado_financiero_al_dia: !profile.bloqueado,
+                plantilla_snapshot: snapshotModular
+              };
+              const { error: errMod } = await admin.from('certificaciones').insert(payloadMod);
+              if (errMod && /creditos/i.test(errMod.message || '')) {
+                const { creditos: _omit, ...sinCred } = payloadMod;
+                await admin.from('certificaciones').insert(sinCred);
+              }
             }
           }
         }
@@ -409,10 +419,16 @@ export async function POST(request: Request) {
             .eq('programa_titulo', targetDip.titulo)
             .maybeSingle();
 
+          const disDip = modeloDip?.disenoCoordenadas;
+          const creditosDip = disDip?.creditos?.visible !== false
+            ? `${String(disDip?.creditos?.creditosValor || modeloDip?.creditos || '13').match(/\d+/)?.[0] || '13'} ${String(disDip?.creditos?.sufijo ?? disDip?.creditos?.sufijoCreditos ?? '').trim() || 'créditos académicos'}`
+            : null;
+
           const snapshotDiploma = {
             modelo_id: modeloDip?.id || 'mod-avanza-dip',
             nombrePlantilla: modeloDip?.nombre || 'Superplantilla Oficial Avanza & EDUMIN - Diploma de Alta Especialización',
             horas: modeloDip?.horas || '325 horas académicas y 13 créditos académicos',
+            ...(creditosDip ? { creditos: creditosDip } : {}),
             ciudad: 'Arequipa',
             orientacion: modeloDip?.orientacion || 'horizontal',
             imagenFondoUrl: modeloDip?.imagenFondoUrl || '/assets/certificates/plantilla_avanza_diploma_bg.png',
@@ -433,22 +449,26 @@ export async function POST(request: Request) {
               })
               .eq('id', certDipExistente.id);
           } else {
-            await admin
-              .from('certificaciones')
-              .insert({
-                codigo_verificacion: codVerifDip,
-                profile_id: profile.id,
-                dni_ce: profile.dni_ce,
-                estudiante_nombre: nombreEstudianteOficial,
-                tipo: 'DIPLOMA',
-                programa_titulo: targetDip.titulo,
-                modulo_titulo: null,
-                horas_lectivas: modeloDip?.horas || '325 horas académicas y 13 créditos académicos',
-                nota_final: promedio,
-                fecha_emision: fechaEmisionHoy,
-                estado_financiero_al_dia: !profile.bloqueado,
-                plantilla_snapshot: snapshotDiploma
-              });
+            const payloadDip = {
+              codigo_verificacion: codVerifDip,
+              profile_id: profile.id,
+              dni_ce: profile.dni_ce,
+              estudiante_nombre: nombreEstudianteOficial,
+              tipo: 'DIPLOMA',
+              programa_titulo: targetDip.titulo,
+              modulo_titulo: null,
+              horas_lectivas: modeloDip?.horas || '325 horas académicas y 13 créditos académicos',
+              creditos: creditosDip,
+              nota_final: promedio,
+              fecha_emision: fechaEmisionHoy,
+              estado_financiero_al_dia: !profile.bloqueado,
+              plantilla_snapshot: snapshotDiploma
+            };
+            const { error: errDip } = await admin.from('certificaciones').insert(payloadDip);
+            if (errDip && /creditos/i.test(errDip.message || '')) {
+              const { creditos: _omit, ...sinCred } = payloadDip;
+              await admin.from('certificaciones').insert(sinCred);
+            }
           }
         }
       } catch (certErr) {
@@ -471,10 +491,16 @@ export async function POST(request: Request) {
           .eq('programa_titulo', targetCurso.titulo)
           .maybeSingle();
 
+        const disCur = modeloCurso?.disenoCoordenadas;
+        const creditosCur = disCur?.creditos?.visible === true
+          ? `${String(disCur?.creditos?.creditosValor || modeloCurso?.creditos || '2').match(/\d+/)?.[0] || '2'} ${String(disCur?.creditos?.sufijo ?? disCur?.creditos?.sufijoCreditos ?? '').trim() || 'créditos académicos'}`
+          : null;
+
         const snapshotCurso = {
           modelo_id: modeloCurso?.id || 'mod-226455',
           nombrePlantilla: modeloCurso?.nombre || 'Certificado global para cursos cortos',
           horas: targetCurso.horas || modeloCurso?.horas || '24 horas académicas',
+          ...(creditosCur ? { creditos: creditosCur } : {}),
           ciudad: 'Arequipa',
           orientacion: modeloCurso?.orientacion || 'vertical',
           imagenFondoUrl: modeloCurso?.imagenFondoUrl || 'https://wluuomwkxywpfotbngwf.supabase.co/storage/v1/object/public/certificados/fondos/plantilla_1792606225470_g6hsm1j.webp',
@@ -488,29 +514,33 @@ export async function POST(request: Request) {
           await admin
             .from('certificaciones')
             .update({
-              nota_final: typeof targetCurso.nota === 'number' && targetCurso.nota > 0 ? targetCurso.nota : null,
+              nota_final: typeof targetCurso.nota === 'number' && targetCurso.nota > 0 ? Math.round(targetCurso.nota) : null,
               fecha_emision: fechaEmisionHoy,
               estado_financiero_al_dia: !profile.bloqueado,
               ...(!tieneSnapshotCompleto ? { plantilla_snapshot: snapshotCurso } : {})
             })
             .eq('id', certCursoExistente.id);
         } else {
-          await admin
-            .from('certificaciones')
-            .insert({
-              codigo_verificacion: codVerifCurso,
-              profile_id: profile.id,
-              dni_ce: profile.dni_ce,
-              estudiante_nombre: nombreEstudianteOficial,
-              tipo: 'CURSO',
-              programa_titulo: targetCurso.titulo,
-              modulo_titulo: null,
-              horas_lectivas: targetCurso.horas || modeloCurso?.horas || '24 horas académicas',
-              nota_final: typeof targetCurso.nota === 'number' && targetCurso.nota > 0 ? targetCurso.nota : null,
-              fecha_emision: fechaEmisionHoy,
-              estado_financiero_al_dia: !profile.bloqueado,
-              plantilla_snapshot: snapshotCurso
-            });
+          const payloadCur = {
+            codigo_verificacion: codVerifCurso,
+            profile_id: profile.id,
+            dni_ce: profile.dni_ce,
+            estudiante_nombre: nombreEstudianteOficial,
+            tipo: 'CURSO',
+            programa_titulo: targetCurso.titulo,
+            modulo_titulo: null,
+            horas_lectivas: targetCurso.horas || modeloCurso?.horas || '24 horas académicas',
+            creditos: creditosCur,
+            nota_final: typeof targetCurso.nota === 'number' && targetCurso.nota > 0 ? Math.round(targetCurso.nota) : null,
+            fecha_emision: fechaEmisionHoy,
+            estado_financiero_al_dia: !profile.bloqueado,
+            plantilla_snapshot: snapshotCurso
+          };
+          const { error: errCur } = await admin.from('certificaciones').insert(payloadCur);
+          if (errCur && /creditos/i.test(errCur.message || '')) {
+            const { creditos: _omit, ...sinCred } = payloadCur;
+            await admin.from('certificaciones').insert(sinCred);
+          }
         }
       } catch (certCursoErr) {
         console.error('Error insertando certificado de curso en certificaciones:', certCursoErr);

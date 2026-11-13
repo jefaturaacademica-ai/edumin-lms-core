@@ -5,6 +5,8 @@ export interface EstudianteCompleto {
   apellidos: string;
   email: string;
   telefono: string;
+  foto_perfil?: string | null;
+  avatar_url?: string | null;
   paquete_adquirido: 'COMPLETO' | 'FULL' | 'ILIMITADO' | '100% CONTADO' | 'CONTADO' | string;
   cuotas_pagadas: number;
   cuotas_totales: number;

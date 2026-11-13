@@ -624,6 +624,71 @@ export default function CertificacionesAdminPage() {
     setTimeout(() => setMensajeExito(null), 4000);
   };
 
+  // Forzar manualmente la actualización del diseño de un certificado ya emitido usando la última versión de su plantilla
+  const forzarActualizacionDisenoCertificado = async (cert: any) => {
+    const tipoUpper = String(cert.tipo || 'DIPLOMA').toUpperCase();
+    const modeloIdActual = cert.plantilla_snapshot?.modelo_id || cert.modelo_id;
+    const modeloVigente =
+      modelosCertificados.find(m => m.id === modeloIdActual) ||
+      modelosCertificados.find(m => String(m.tipo).toUpperCase() === tipoUpper && (m.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' || m.esPredeterminado)) ||
+      (tipoUpper === 'TALLER'
+        ? modelosCertificados.find(m => String(m.tipo).toUpperCase() === 'CURSO' && (m.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' || m.esPredeterminado))
+        : undefined) ||
+      modelosCertificados.find(m => String(m.tipo).toUpperCase() === tipoUpper) ||
+      modelosCertificados[0];
+
+    if (!modeloVigente) return;
+
+    const confirmado = window.confirm(
+      `¿Deseas actualizar manualmente el diseño del certificado ${cert.codigo} (${cert.estudiante}) aplicando la última versión de "${modeloVigente.nombre}"?\n\nEsto reemplazará el diseño guardado originalmente en el certificado emitido.`
+    );
+    if (!confirmado) return;
+
+    const snapshotActualizado = {
+      ...modeloVigente,
+      modelo_id: modeloVigente.id,
+      horas: cert.horas || modeloVigente.horas,
+      fechaEmision: cert.fecha
+    };
+
+    try {
+      await fetch('/api/admin/certificaciones', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id: cert.id,
+          codigo: cert.codigo,
+          modelo_id: modeloVigente.id,
+          horas: cert.horas,
+          fecha: cert.fecha,
+          dni: cert.dni,
+          estudiante: cert.estudiante,
+          programa: cert.programa,
+          modulo: cert.modulo,
+          tipo: cert.tipo,
+          nota: cert.nota,
+          plantilla_snapshot: snapshotActualizado
+        })
+      });
+
+      setCertificadosEmitidos(prev => prev.map(c => {
+        if (c.id === cert.id || c.codigo === cert.codigo) {
+          return {
+            ...c,
+            modelo_id: modeloVigente.id,
+            plantilla_snapshot: snapshotActualizado
+          };
+        }
+        return c;
+      }));
+
+      setMensajeExito(`¡Diseño actualizado manualmente para ${cert.codigo}! Ahora usa la última versión de "${modeloVigente.nombre}".`);
+      setTimeout(() => setMensajeExito(null), 4500);
+    } catch (e) {
+      console.error('Error forzando actualización de diseño:', e);
+    }
+  };
+
   const ejecutarEmisionMasiva = () => {
     const modeloElegido = modelosCertificados.find(m => m.id === modeloEmisionMasiva) || modelosCertificados[0];
     setMensajeExito(`¡Emisión masiva completada! Se procesaron y validaron los certificados para los alumnos con nota >= 12 en "${diplomadoEmisionMasiva || 'Diplomado'}" aplicando la plantilla "${modeloElegido.nombre}".`);
@@ -1479,6 +1544,14 @@ export default function CertificacionesAdminPage() {
                             <td className="py-3.5 px-4 text-right">
                               <div className="flex items-center justify-end gap-1.5">
                                 <button
+                                  onClick={() => forzarActualizacionDisenoCertificado(cert)}
+                                  className="p-1.5 bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 hover:bg-amber-100 dark:hover:bg-amber-900 rounded-xl transition cursor-pointer"
+                                  title="Actualizar diseño con la última plantilla vigente"
+                                >
+                                  <RefreshCw className="w-4 h-4" />
+                                </button>
+
+                                <button
                                   onClick={() => {
                                     setCertificadoParaCambiarModelo(cert);
                                     setModeloSeleccionadoParaCert(cert.modelo_id || (cert.tipo === 'MODULAR' ? 'mod-avanza-mod' : 'mod-avanza-dip'));
@@ -1596,9 +1669,9 @@ export default function CertificacionesAdminPage() {
                     className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group"
                   >
                     {/* Miniatura A4 del Modelo (refleja fielmente el diseño, fondo y coordenadas modificadas) */}
-                    <div className="p-4 bg-slate-950 flex items-center justify-center relative min-h-[195px] overflow-hidden">
+                    <div className="p-4 bg-gradient-to-br from-slate-200/80 via-slate-100 to-indigo-100/60 dark:bg-none dark:bg-slate-950 border-b border-slate-200/80 dark:border-slate-800 flex items-center justify-center relative min-h-[195px] overflow-hidden">
                       <div 
-                        className={`relative shadow-xl pointer-events-none select-none transition-transform duration-300 ${
+                        className={`relative shadow-lg dark:shadow-xl pointer-events-none select-none transition-transform duration-300 ${
                           modelo.orientacion === 'vertical' ? 'w-[145px]' : 'w-[230px]'
                         }`}
                       >
@@ -1621,7 +1694,7 @@ export default function CertificacionesAdminPage() {
                           incluyeQr={modelo.incluyeQr !== false}
                           diseno={modelo.disenoCoordenadas}
                           modoArrastrable={false}
-                          className="rounded-lg border border-slate-700/80 shadow-md"
+                          className="rounded-lg border border-slate-300/80 dark:border-slate-700/80 shadow-md"
                         />
                       </div>
 
@@ -1635,7 +1708,7 @@ export default function CertificacionesAdminPage() {
                           <button
                             type="button"
                             onClick={() => establecerComoPredeterminado(modelo)}
-                            className="bg-slate-900/90 hover:bg-emerald-600 text-slate-300 hover:text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow transition cursor-pointer flex items-center gap-1 border border-slate-700"
+                            className="bg-white/95 dark:bg-slate-900/90 hover:bg-emerald-600 text-slate-700 dark:text-slate-300 hover:text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow transition cursor-pointer flex items-center gap-1 border border-slate-300 dark:border-slate-700"
                             title="Establecer como la plantilla oficial activa para certificados automáticos"
                           >
                             <Check className="w-3 h-3" /> Hacer Oficial
@@ -3789,6 +3862,7 @@ export default function CertificacionesAdminPage() {
                 const orientacionFinal = snapshot.orientacion || modeloActual?.orientacion || 'horizontal';
                 const imagenFondoFinal = snapshot.imagenFondoUrl !== undefined ? snapshot.imagenFondoUrl : modeloActual?.imagenFondoUrl;
                 const disenoFinal = snapshot.disenoCoordenadas || modeloActual?.disenoCoordenadas;
+                const incluyeQrFinal = snapshot.incluyeQr !== undefined ? snapshot.incluyeQr !== false : (modeloActual?.incluyeQr !== false);
 
                 return (
                   <div className={`w-full flex items-center justify-center ${orientacionFinal === 'vertical' ? 'max-w-md' : 'max-w-3xl'}`}>
@@ -3802,7 +3876,7 @@ export default function CertificacionesAdminPage() {
                       fecha={certificadoParaVer.fecha}
                       codigo={certificadoParaVer.codigo}
                       imagenFondoUrl={imagenFondoFinal}
-                      incluyeQr={true}
+                      incluyeQr={incluyeQrFinal}
                       diseno={disenoFinal}
                     />
                   </div>
@@ -3834,6 +3908,7 @@ export default function CertificacionesAdminPage() {
                       const orientacionFinal = snapshot.orientacion || modeloActual?.orientacion || 'horizontal';
                       const imagenFondoFinal = snapshot.imagenFondoUrl !== undefined ? snapshot.imagenFondoUrl : modeloActual?.imagenFondoUrl;
                       const disenoFinal = snapshot.disenoCoordenadas || modeloActual?.disenoCoordenadas;
+                      const incluyeQrFinal = snapshot.incluyeQr !== undefined ? snapshot.incluyeQr !== false : (modeloActual?.incluyeQr !== false);
 
                       await descargarCertificadoA4Pdf({
                         tipo: certificadoParaVer.tipo,
@@ -3845,7 +3920,7 @@ export default function CertificacionesAdminPage() {
                         fecha: certificadoParaVer.fecha,
                         codigo: certificadoParaVer.codigo,
                         imagenFondoUrl: imagenFondoFinal,
-                        incluyeQr: true,
+                        incluyeQr: incluyeQrFinal,
                         diseno: disenoFinal
                       }, `Certificado_${certificadoParaVer.codigo}_${certificadoParaVer.dni}.pdf`);
                     } catch (e) {

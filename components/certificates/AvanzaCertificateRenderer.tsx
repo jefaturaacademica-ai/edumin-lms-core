@@ -1119,7 +1119,7 @@ export default function AvanzaCertificateRenderer({
       )}
 
       {/* 4. CÓDIGO QR 1:1 CON VALIDADOR */}
-      {cfg.qr.visible && (
+      {incluyeQr && cfg.qr.visible && (
         <div 
           onMouseDown={(e) => handleIniciarArrastre('qr', e)}
           onTouchStart={(e) => handleIniciarArrastre('qr', e)}
@@ -1127,7 +1127,7 @@ export default function AvanzaCertificateRenderer({
             e.stopPropagation();
             if (onSeleccionarElemento) onSeleccionarElemento('qr');
           }}
-          className={`absolute z-20 flex flex-col items-center justify-center bg-white p-1 rounded-lg border border-slate-200 aspect-square transition-all duration-150 ${
+          className={`absolute z-20 flex flex-col items-center justify-center bg-white p-[0.35cqw] rounded-[0.45cqw] border border-slate-200/80 aspect-square transition-all duration-150 ${
             modoArrastrable ? 'cursor-grab active:cursor-grabbing pointer-events-auto' : 'pointer-events-auto'
           } ${
             elementoActivo === 'qr' ? 'outline outline-2 outline-indigo-500 outline-offset-4 rounded-lg bg-indigo-500/[0.04]' : ''
